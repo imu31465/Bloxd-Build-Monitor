@@ -1,38 +1,38 @@
 export const id = 64;
 export const ids = [64, 117, 118, 138];
 export const modules = {
-  39850: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => Ot,
-      h: () => qt
+  39933: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => su,
+      f: () => Uu
     });
-    const Ot = "The world isn't loaded, so no blocks can be seen.",
-      qt = "The world isn't loaded, so nothing in it can be seen."
+    const su = "The world isn't loaded, so no blocks can be seen.",
+      Uu = "The world isn't loaded, so nothing in it can be seen."
   },
-  4842: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => Xt
+  4872: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => Cu
     });
-    var Ot = Vt(26),
-      qt = Vt(31),
-      Dt = Vt(1387),
-      mt = Vt(2902);
-    const dt = 3e4,
-      jt = 1e3;
+    var su = ju(22),
+      Uu = ju(24),
+      Zu = ju(1343),
+      Xu = ju(2943);
+    const lu = 3e4,
+      qu = 1e3;
 
-    function Ht() {
-      return "visible" === document.visibilityState && "inGame" === Ot.b.get("gameState") && (0, Dt.r)()
+    function fu() {
+      return "visible" === document.visibilityState && "inGame" === su.d.get("gameState") && (0, Zu.w)()
     }
 
-    function Xt(tt, et) {
-      (0, mt.x)() || function(tt, et, Vt) {
-        let Ot = 0;
-        const qt = setInterval((() => {
-          et() && (Ot += jt, Ot >= tt && (clearInterval(qt), Vt()))
-        }), jt)
-      }(dt, Ht, (() => {
-        et().then((() => {
-          tt(`saved for the player after ${dt/1e3} s of play`), (0, mt.J)(), qt.j.sw("chat", {
+    function Cu(uu, Eu) {
+      (0, Xu.r)() || function(uu, Eu, ju) {
+        let su = 0;
+        const Uu = setInterval((() => {
+          Eu() && (su += qu, su >= uu && (clearInterval(Uu), ju()))
+        }), qu)
+      }(lu, fu, (() => {
+        Eu().then((() => {
+          uu(`saved for the player after ${lu/1e3} s of play`), (0, Xu.A)(), Uu.h.TY("chat", {
             content: [{
               str: "Saved a debug file to your downloads: please send it to us with a screenshot of the game.",
               style: {
@@ -44,320 +44,320 @@ export const modules = {
       }))
     }
   },
-  34232: (tt, et, Vt) => {
-    function Ot(tt, et) {
-      return 0 === tt.length ? 0 : tt[Math.min(tt.length - 1, Math.floor(et * tt.length))]
+  34416: (uu, Eu, ju) => {
+    function su(uu, Eu) {
+      return 0 === uu.length ? 0 : uu[Math.min(uu.length - 1, Math.floor(Eu * uu.length))]
     }
 
-    function qt(tt) {
-      return tt.toFixed(1)
+    function Uu(uu) {
+      return uu.toFixed(1)
     }
-    Vt.d(et, {
-      d: () => qt,
-      g: () => Ot
+    ju.d(Eu, {
+      d: () => Uu,
+      g: () => su
     })
   },
-  38200: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => Ht,
-      f: () => Xt,
-      g: () => Jt,
-      j: () => bt,
-      n: () => Mt
+  38333: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => fu,
+      e: () => Cu,
+      g: () => eu,
+      i: () => Mu,
+      k: () => gu
     });
-    var Ot = Vt(4842),
-      qt = Vt(34232),
-      Dt = Vt(2902);
-    const mt = 20,
-      dt = ["totalMs", "slotMs", "workerMs", "applyMs", "ahead", "inFlight", "uQ", "jobMs"];
+    var su = ju(4872),
+      Uu = ju(34416),
+      Zu = ju(2943);
+    const Xu = 20,
+      lu = ["totalMs", "slotMs", "workerMs", "applyMs", "ahead", "inFlight", "Mb", "jobMs"];
 
-    function jt(tt) {
-      return [...tt].sort(((tt, et) => tt - et))
+    function qu(uu) {
+      return [...uu].sort(((uu, Eu) => uu - Eu))
     }
-    const Ht = [];
+    const fu = [];
 
-    function Xt(tt, et, Vt) {
-      return `${tt},${et},${Vt}`
+    function Cu(uu, Eu, ju) {
+      return `${uu},${Eu},${ju}`
     }
-    class Qt {
+    class bu {
       constructor() {
         this.pending = new Map, this.jobs = new Map, this.edits = [], this.nextEdit = 0, this.reported = 0, this.windowStart = performance.now(), this.frames = 0, this.lastFrameAt = 0, this.maxFrameMs = 0, this.jobsSent = 0, this.maxAhead = 0, this.maxCapacity = 0, this.roundTrips = [], this.windowEdits = [], this.outliers = 0, this.gaveUp = 0
       }
-      edit(tt, et) {
-        var Vt;
-        const Ot = null !== (Vt = this.pending.get(tt)) && void 0 !== Vt ? Vt : [];
-        Ot.push({
-          editAt: et,
+      edit(uu, Eu) {
+        var ju;
+        const su = null !== (ju = this.pending.get(uu)) && void 0 !== ju ? ju : [];
+        su.push({
+          editAt: Eu,
           meshJobId: 0
-        }), this.pending.set(tt, Ot)
+        }), this.pending.set(uu, su)
       }
-      frame(tt) {
-        this.lastFrameAt > 0 && (this.maxFrameMs = Math.max(this.maxFrameMs, tt - this.lastFrameAt)), this.lastFrameAt = tt, this.frames++, tt - this.windowStart >= 1e3 && this.summarise(tt)
+      frame(uu) {
+        this.lastFrameAt > 0 && (this.maxFrameMs = Math.max(this.maxFrameMs, uu - this.lastFrameAt)), this.lastFrameAt = uu, this.frames++, uu - this.windowStart >= 1e3 && this.summarise(uu)
       }
-      sent(tt, et, Vt, Ot, qt, Dt, mt) {
-        this.jobs.set(et, {
-          sentAt: mt,
+      sent(uu, Eu, ju, su, Uu, Zu, Xu) {
+        this.jobs.set(Eu, {
+          sentAt: Xu,
           receivedAt: 0,
-          ahead: Vt,
-          inFlight: Ot,
-          uQ: qt,
+          ahead: ju,
+          inFlight: su,
+          Mb: Uu,
           jobMs: 0
-        }), this.jobsSent++, this.maxAhead = Math.max(this.maxAhead, Vt), this.maxCapacity = Math.max(this.maxCapacity, qt);
-        for (const jt of null !== (dt = this.pending.get(tt)) && void 0 !== dt ? dt : []) {
-          var dt;
-          Dt.includes(jt.meshJobId) || (jt.meshJobId = et)
+        }), this.jobsSent++, this.maxAhead = Math.max(this.maxAhead, ju), this.maxCapacity = Math.max(this.maxCapacity, Uu);
+        for (const qu of null !== (lu = this.pending.get(uu)) && void 0 !== lu ? lu : []) {
+          var lu;
+          Zu.includes(qu.meshJobId) || (qu.meshJobId = Eu)
         }
       }
-      received(tt, et, Vt) {
-        const Ot = this.jobs.get(tt);
-        void 0 !== Ot && (this.roundTrips.push(Vt - Ot.sentAt), Ot.receivedAt = Vt, Ot.jobMs = et)
+      received(uu, Eu, ju) {
+        const su = this.jobs.get(uu);
+        void 0 !== su && (this.roundTrips.push(ju - su.sentAt), su.receivedAt = ju, su.jobMs = Eu)
       }
-      failed(tt) {
-        this.jobs.delete(tt)
+      failed(uu) {
+        this.jobs.delete(uu)
       }
-      reassign(tt, et, Vt) {
-        this.jobs.delete(et);
-        for (const qt of null !== (Ot = this.pending.get(tt)) && void 0 !== Ot ? Ot : []) {
-          var Ot;
-          qt.meshJobId === et && (qt.meshJobId = Vt)
+      reassign(uu, Eu, ju) {
+        this.jobs.delete(Eu);
+        for (const Uu of null !== (su = this.pending.get(uu)) && void 0 !== su ? su : []) {
+          var su;
+          Uu.meshJobId === Eu && (Uu.meshJobId = ju)
         }
       }
-      applied(tt, et, Vt) {
-        const Ot = this.jobs.get(et);
-        this.jobs.delete(et), void 0 !== Ot && this.show(tt, Ot, Vt, (tt => tt.meshJobId === et))
+      applied(uu, Eu, ju) {
+        const su = this.jobs.get(Eu);
+        this.jobs.delete(Eu), void 0 !== su && this.show(uu, su, ju, (uu => uu.meshJobId === Eu))
       }
-      emptied(tt, et) {
-        const Vt = {
-          sentAt: et,
-          receivedAt: et,
+      emptied(uu, Eu) {
+        const ju = {
+          sentAt: Eu,
+          receivedAt: Eu,
           ahead: 0,
           inFlight: 0,
-          uQ: 0,
+          Mb: 0,
           jobMs: 0
         };
-        this.show(tt, Vt, et, (() => !0))
+        this.show(uu, ju, Eu, (() => !0))
       }
-      show(tt, et, Vt, Ot) {
-        const qt = this.pending.get(tt);
-        if (!qt) return;
-        const Dt = qt.filter((qt => !Ot(qt) || (this.record(tt, qt.editAt, et, Vt), !1)));
-        Dt.length > 0 ? this.pending.set(tt, Dt) : this.pending.delete(tt)
+      show(uu, Eu, ju, su) {
+        const Uu = this.pending.get(uu);
+        if (!Uu) return;
+        const Zu = Uu.filter((Uu => !su(Uu) || (this.record(uu, Uu.editAt, Eu, ju), !1)));
+        Zu.length > 0 ? this.pending.set(uu, Zu) : this.pending.delete(uu)
       }
-      iE(tt) {
-        this.reported += tt, this === Et && this.reported >= mt && null !== ft && (ft(), ft = null)
+      HN(uu) {
+        this.reported += uu, this === Nu && this.reported >= Xu && null !== Ou && (Ou(), Ou = null)
       }
-      record(tt, et, Vt, Ot) {
-        const qt = {
-          totalMs: Ot - et,
-          slotMs: Vt.sentAt - et,
-          workerMs: Vt.receivedAt - Vt.sentAt,
-          applyMs: Ot - Vt.receivedAt,
-          ahead: Vt.ahead,
-          inFlight: Vt.inFlight,
-          uQ: Vt.uQ,
-          jobMs: Vt.jobMs
+      record(uu, Eu, ju, su) {
+        const Uu = {
+          totalMs: su - Eu,
+          slotMs: ju.sentAt - Eu,
+          workerMs: ju.receivedAt - ju.sentAt,
+          applyMs: su - ju.receivedAt,
+          ahead: ju.ahead,
+          inFlight: ju.inFlight,
+          Mb: ju.Mb,
+          jobMs: ju.jobMs
         };
-        if (this.edits[this.nextEdit] = qt, this.nextEdit = (this.nextEdit + 1) % 500, this.windowEdits.push(qt.totalMs), this.iE(1), qt.totalMs < 100 || ++this.outliers > 5) return;
-        const mt = tt => Math.round(tt);
-        (0, Dt.n)("remesh", `slow edit (${tt}) shown in ${mt(qt.totalMs)} ms: slot ${mt(qt.slotMs)}, worker ${mt(qt.workerMs)} (${qt.ahead} ahead, ${qt.inFlight}/${qt.uQ} in flight; job ${mt(qt.jobMs)}), apply ${mt(qt.applyMs)}`)
+        if (this.edits[this.nextEdit] = Uu, this.nextEdit = (this.nextEdit + 1) % 500, this.windowEdits.push(Uu.totalMs), this.HN(1), Uu.totalMs < 100 || ++this.outliers > 5) return;
+        const Xu = uu => Math.round(uu);
+        (0, Zu.k)("remesh", `slow edit (${uu}) shown in ${Xu(Uu.totalMs)} ms: slot ${Xu(Uu.slotMs)}, worker ${Xu(Uu.workerMs)} (${Uu.ahead} ahead, ${Uu.inFlight}/${Uu.Mb} in flight; job ${Xu(Uu.jobMs)}), apply ${Xu(Uu.applyMs)}`)
       }
-      summarise(tt) {
-        const et = (tt - this.windowStart) / 1e3;
-        for (const [Vt, Ot] of this.pending) {
-          const et = Ot.filter((et => tt - et.editAt <= 1e4));
-          this.gaveUp += Ot.length - et.length, this.iE(Ot.length - et.length), et.length > 0 ? this.pending.set(Vt, et) : this.pending.delete(Vt)
+      summarise(uu) {
+        const Eu = (uu - this.windowStart) / 1e3;
+        for (const [ju, su] of this.pending) {
+          const Eu = su.filter((Eu => uu - Eu.editAt <= 1e4));
+          this.gaveUp += su.length - Eu.length, this.HN(su.length - Eu.length), Eu.length > 0 ? this.pending.set(ju, Eu) : this.pending.delete(ju)
         }
-        for (const [Vt, Ot] of this.jobs) tt - Ot.sentAt > (Ot.receivedAt > 0 ? 1e4 : 6e4) && this.jobs.delete(Vt);
+        for (const [ju, su] of this.jobs) uu - su.sentAt > (su.receivedAt > 0 ? 1e4 : 6e4) && this.jobs.delete(ju);
         if (this.jobsSent > 0 || this.roundTrips.length > 0 || this.windowEdits.length > 0 || this.gaveUp > 0) {
-          const tt = jt(this.roundTrips),
-            Vt = jt(this.windowEdits),
-            Ot = Math.max(0, this.outliers - 5);
-          (0, Dt.n)("remesh", `${Math.round(this.frames/et)} fps (longest ${Math.round(this.maxFrameMs)} ms) | ${this.jobsSent} jobs sent, up to ${this.maxAhead} ahead on a worker, capacity ${this.maxCapacity} | round trip p50 ${Math.round((0,qt.g)(tt,.5))} max ${Math.round((0,qt.g)(tt,1))} ms | ${Vt.length} edits shown, p50 ${Math.round((0,qt.g)(Vt,.5))} max ${Math.round((0,qt.g)(Vt,1))} ms${Ot>0?`, ${Ot} more slow`:""}${this.gaveUp>0?`, ${this.gaveUp} never shown`:""}`)
+          const uu = qu(this.roundTrips),
+            ju = qu(this.windowEdits),
+            su = Math.max(0, this.outliers - 5);
+          (0, Zu.k)("remesh", `${Math.round(this.frames/Eu)} fps (longest ${Math.round(this.maxFrameMs)} ms) | ${this.jobsSent} jobs sent, up to ${this.maxAhead} ahead on a worker, capacity ${this.maxCapacity} | round trip p50 ${Math.round((0,Uu.g)(uu,.5))} max ${Math.round((0,Uu.g)(uu,1))} ms | ${ju.length} edits shown, p50 ${Math.round((0,Uu.g)(ju,.5))} max ${Math.round((0,Uu.g)(ju,1))} ms${su>0?`, ${su} more slow`:""}${this.gaveUp>0?`, ${this.gaveUp} never shown`:""}`)
         }
-        this.windowStart = tt, this.frames = 0, this.maxFrameMs = 0, this.jobsSent = 0, this.maxAhead = 0, this.maxCapacity = 0, this.roundTrips = [], this.windowEdits = [], this.outliers = 0, this.gaveUp = 0
+        this.windowStart = uu, this.frames = 0, this.maxFrameMs = 0, this.jobsSent = 0, this.maxAhead = 0, this.maxCapacity = 0, this.roundTrips = [], this.windowEdits = [], this.outliers = 0, this.gaveUp = 0
       }
       stats() {
-        const tt = dt.map((tt => {
-          const et = jt(this.edits.map((et => et[tt])));
-          return `${tt}: p50 ${Math.round((0,qt.g)(et,.5))} p90 ${Math.round((0,qt.g)(et,.9))} max ${Math.round((0,qt.g)(et,1))}`
+        const uu = lu.map((uu => {
+          const Eu = qu(this.edits.map((Eu => Eu[uu])));
+          return `${uu}: p50 ${Math.round((0,Uu.g)(Eu,.5))} p90 ${Math.round((0,Uu.g)(Eu,.9))} max ${Math.round((0,Uu.g)(Eu,1))}`
         }));
-        return [`${this.edits.length} edits`, ...tt].join("\n")
+        return [`${this.edits.length} edits`, ...uu].join("\n")
       }
       dump() {
-        const tt = this.edits.map((tt => dt.map((et => Math.round(10 * tt[et]) / 10)).join(",")));
-        return [this.stats(), dt.join(","), ...tt].join("\n")
+        const uu = this.edits.map((uu => lu.map((Eu => Math.round(10 * uu[Eu]) / 10)).join(",")));
+        return [this.stats(), lu.join(","), ...uu].join("\n")
       }
     }
-    class lt {
-      constructor(tt, et) {
-        this.log = tt, this.ql = et
+    class cu {
+      constructor(uu, Eu) {
+        this.log = uu, this.Uc = Eu
       }
-      edit(tt, et, Vt) {
-        const [Ot, qt, Dt] = this.ql.sQ.hOt(tt, et, Vt), mt = this.ql.sQ.lw.Ew(Ot, qt, Dt);
-        mt && mt.Xw && this.log.edit(Xt(Ot, qt, Dt), performance.now())
+      edit(uu, Eu, ju) {
+        const [su, Uu, Zu] = this.Uc.zb.Esu(uu, Eu, ju), Xu = this.Uc.zb.CY.bY(su, Uu, Zu);
+        Xu && Xu.qY && this.log.edit(Cu(su, Uu, Zu), performance.now())
       }
-      sent(tt, et, Vt, Ot, qt) {
-        this.log.sent(Xt(tt.i, tt.j, tt.k), et, Vt, Ot, qt, Ht, performance.now())
+      sent(uu, Eu, ju, su, Uu) {
+        this.log.sent(Cu(uu.i, uu.j, uu.k), Eu, ju, su, Uu, fu, performance.now())
       }
-      received(tt) {
-        this.log.received(tt.meshJobId, tt.jobMs, performance.now())
+      received(uu) {
+        this.log.received(uu.meshJobId, uu.jobMs, performance.now())
       }
-      failed(tt) {
-        this.log.failed(tt)
+      failed(uu) {
+        this.log.failed(uu)
       }
-      applied(tt, et) {
-        this.log.applied(Xt(tt.i, tt.j, tt.k), et, performance.now())
+      applied(uu, Eu) {
+        this.log.applied(Cu(uu.i, uu.j, uu.k), Eu, performance.now())
       }
     }
-    let Et = null,
-      ft = null,
-      wt = !1,
-      yt = null;
+    let Nu = null,
+      Ou = null,
+      Yu = !1,
+      hu = null;
 
-    function Nt() {
-      return new Promise((tt => {
-        null !== Et && Et.reported >= mt ? tt() : ft = tt
+    function Du() {
+      return new Promise((uu => {
+        null !== Nu && Nu.reported >= Xu ? uu() : Ou = uu
       }))
     }
 
-    function Mt() {
-      const tt = new Qt;
-      return Et = tt, (0, Dt.j)("remesh", (() => tt.dump())), (0, Dt.c)("remeshStats", (() => {
-        console.log(tt.stats())
-      })), wt || (wt = !0, (0, Ot.c)((tt => {
-        (0, Dt.n)("remesh", tt)
-      }), Nt)), tt
+    function gu() {
+      const uu = new bu;
+      return Nu = uu, (0, Zu.j)("remesh", (() => uu.dump())), (0, Zu.c)("remeshStats", (() => {
+        console.log(uu.stats())
+      })), Yu || (Yu = !0, (0, su.c)((uu => {
+        (0, Zu.k)("remesh", uu)
+      }), Du)), uu
     }
 
-    function bt(tt) {
-      const et = Mt();
-      yt = new lt(et, tt), tt.aJ.meshProbe = yt, tt.on("beforeRender", (() => {
-        et.frame(performance.now())
+    function Mu(uu) {
+      const Eu = gu();
+      hu = new cu(Eu, uu), uu.mG.meshProbe = hu, uu.on("beforeRender", (() => {
+        Eu.frame(performance.now())
       }))
     }
 
-    function Jt(tt, et, Vt) {
-      var Ot;
-      null === (Ot = yt) || void 0 === Ot || Ot.edit(tt, et, Vt)
+    function eu(uu, Eu, ju) {
+      var su;
+      null === (su = hu) || void 0 === su || su.edit(uu, Eu, ju)
     }
   },
-  34263: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => Ot
+  34448: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => su
     });
-    const Ot = new Set(["chunkBorders"])
+    const su = new Set(["chunkBorders"])
   },
-  34414: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => mt,
-      e: () => qt,
-      h: () => Xt
+  34588: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => Xu,
+      e: () => Uu,
+      i: () => Cu
     });
-    var Ot = Vt(1657);
+    var su = ju(1614);
 
-    function qt(tt) {
-      var et;
+    function Uu(uu) {
+      var Eu;
       return {
-        ...mt.store,
-        yaw: mt.store.yaw + (null !== (et = Ot.d[tt].previewYaw) && void 0 !== et ? et : 0)
+        ...Xu.store,
+        yaw: Xu.store.yaw + (null !== (Eu = su.d[uu].previewYaw) && void 0 !== Eu ? Eu : 0)
       }
     }
-    const Dt = {
+    const Zu = {
         yaw: .61 * Math.PI,
         pitch: Math.PI / 2.05,
         radius: 30,
         target: [0, 0, 0]
       },
-      mt = {
-        player: Dt,
+      Xu = {
+        player: Zu,
         store: {
-          ...Dt,
+          ...Zu,
           radius: 33,
           target: [0, 3.9, 0]
         }
       };
 
-    function dt(tt, et) {
-      tt instanceof Promise ? tt.then(et).catch((tt => {
-        console.error("Couldn't open the preview", tt)
-      })) : et(tt)
+    function lu(uu, Eu) {
+      uu instanceof Promise ? uu.then(Eu).catch((uu => {
+        console.error("Couldn't open the preview", uu)
+      })) : Eu(uu)
     }
-    class jt {
-      constructor(tt) {
-        this.opened = null, this.view = null, this.size = null, this.closed = !1, dt(tt, (tt => {
-          this.closed ? tt.close() : (this.opened = tt, null !== this.size && tt.resize(this.size.width, this.size.height), null !== this.view && tt.show(this.view))
+    class qu {
+      constructor(uu) {
+        this.opened = null, this.view = null, this.size = null, this.closed = !1, lu(uu, (uu => {
+          this.closed ? uu.close() : (this.opened = uu, null !== this.size && uu.resize(this.size.width, this.size.height), null !== this.view && uu.show(this.view))
         }))
       }
-      show(tt) {
-        var et;
-        this.view = tt, null === (et = this.opened) || void 0 === et || et.show(tt)
+      show(uu) {
+        var Eu;
+        this.view = uu, null === (Eu = this.opened) || void 0 === Eu || Eu.show(uu)
       }
-      resize(tt, et) {
-        var Vt;
+      resize(uu, Eu) {
+        var ju;
         this.size = {
-          width: tt,
-          height: et
-        }, null === (Vt = this.opened) || void 0 === Vt || Vt.resize(tt, et)
+          width: uu,
+          height: Eu
+        }, null === (ju = this.opened) || void 0 === ju || ju.resize(uu, Eu)
       }
       close() {
-        var tt;
-        this.closed = !0, null === (tt = this.opened) || void 0 === tt || tt.close(), this.opened = null
+        var uu;
+        this.closed = !0, null === (uu = this.opened) || void 0 === uu || uu.close(), this.opened = null
       }
     }
-    class Ht {
-      constructor(tt) {
-        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(tt).then((tt => tt.ready)), dt(tt, (tt => {
-          this.closed ? tt.close() : (this.opened = tt, null !== this.size && tt.resize(this.size.width, this.size.height))
+    class fu {
+      constructor(uu) {
+        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(uu).then((uu => uu.ready)), lu(uu, (uu => {
+          this.closed ? uu.close() : (this.opened = uu, null !== this.size && uu.resize(this.size.width, this.size.height))
         }))
       }
       get dev() {
         return this.opened.dev
       }
       isReady() {
-        var tt, et;
-        return null !== (tt = null === (et = this.opened) || void 0 === et ? void 0 : et.isReady()) && void 0 !== tt && tt
+        var uu, Eu;
+        return null !== (uu = null === (Eu = this.opened) || void 0 === Eu ? void 0 : Eu.isReady()) && void 0 !== uu && uu
       }
-      setCosmetic(tt, et) {
-        var Vt;
-        null === (Vt = this.opened) || void 0 === Vt || Vt.setCosmetic(tt, et)
+      setCosmetic(uu, Eu) {
+        var ju;
+        null === (ju = this.opened) || void 0 === ju || ju.setCosmetic(uu, Eu)
       }
-      playEmote(tt) {
-        var et;
-        null === (et = this.opened) || void 0 === et || et.playEmote(tt)
+      playEmote(uu) {
+        var Eu;
+        null === (Eu = this.opened) || void 0 === Eu || Eu.playEmote(uu)
       }
-      setOrbit(tt) {
-        var et;
-        null === (et = this.opened) || void 0 === et || et.setOrbit(tt)
+      setOrbit(uu) {
+        var Eu;
+        null === (Eu = this.opened) || void 0 === Eu || Eu.setOrbit(uu)
       }
       resetCamera() {
-        var tt;
-        null === (tt = this.opened) || void 0 === tt || tt.resetCamera()
+        var uu;
+        null === (uu = this.opened) || void 0 === uu || uu.resetCamera()
       }
-      async untilDrawn(tt) {
-        var et;
-        await this.ready, await (null === (et = this.opened) || void 0 === et ? void 0 : et.untilDrawn(tt))
+      async untilDrawn(uu) {
+        var Eu;
+        await this.ready, await (null === (Eu = this.opened) || void 0 === Eu ? void 0 : Eu.untilDrawn(uu))
       }
-      resize(tt, et) {
-        var Vt;
+      resize(uu, Eu) {
+        var ju;
         this.size = {
-          width: tt,
-          height: et
-        }, null === (Vt = this.opened) || void 0 === Vt || Vt.resize(tt, et)
+          width: uu,
+          height: Eu
+        }, null === (ju = this.opened) || void 0 === ju || ju.resize(uu, Eu)
       }
       close() {
-        var tt;
-        this.closed = !0, null === (tt = this.opened) || void 0 === tt || tt.close(), this.opened = null
+        var uu;
+        this.closed = !0, null === (uu = this.opened) || void 0 === uu || uu.close(), this.opened = null
       }
     }
-    const Xt = new class {
+    const Cu = new class {
       constructor() {
         this.host = null, this.makeDefault = null
       }
-      setHost(tt) {
-        this.host = tt
+      setHost(uu) {
+        this.host = uu
       }
-      setDefaultHost(tt) {
-        this.makeDefault = tt
+      setDefaultHost(uu) {
+        this.makeDefault = uu
       }
       current() {
         if (null === this.host) {
@@ -366,202 +366,202 @@ export const modules = {
         }
         return this.host
       }
-      openMob(tt) {
-        return new jt(this.current().openMob(tt))
+      openMob(uu) {
+        return new qu(this.current().openMob(uu))
       }
-      openPet(tt) {
-        return new jt(this.current().openPet(tt))
+      openPet(uu) {
+        return new qu(this.current().openPet(uu))
       }
-      openMobLineup(tt) {
-        return new jt(this.current().openMobLineup(tt))
+      openMobLineup(uu) {
+        return new qu(this.current().openMobLineup(uu))
       }
-      openCharacter(tt, et) {
-        return new Ht(this.current().openCharacter(tt, et))
+      openCharacter(uu, Eu) {
+        return new fu(this.current().openCharacter(uu, Eu))
       }
     }
   },
-  5216: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => Ot.k,
-      g: () => qt,
-      h: () => Ot.s
+  5206: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => su.h,
+      h: () => Uu,
+      k: () => su.o
     });
-    var Ot = Vt(5223);
-    const qt = [!1, !0].flatMap((tt => ["terrain", "liquid", "model"].map((et => ({
-      strict: tt,
-      program: et
+    var su = ju(5209);
+    const Uu = [!1, !0].flatMap((uu => ["terrain", "liquid", "model"].map((Eu => ({
+      strict: uu,
+      program: Eu
     })))))
   },
-  39419: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      ShaderPackPage: () => jt,
-      harnessShaderPackMode: () => lt,
-      setHarnessUrlShaderPack: () => Qt,
-      shaderPackPage: () => Xt
+  39525: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      ShaderPackPage: () => qu,
+      harnessShaderPackMode: () => cu,
+      setHarnessUrlShaderPack: () => bu,
+      shaderPackPage: () => Cu
     });
-    var Ot = Vt(106),
-      qt = Vt(39),
-      Dt = (Vt(3533), Vt(5216), Vt(3524)),
-      mt = Vt(6873);
-    Vt(6830);
-    const dt = {
+    var su = ju(91),
+      Uu = ju(31),
+      Zu = (ju(3653), ju(5206), ju(3651)),
+      Xu = ju(6854);
+    ju(6827);
+    const lu = {
       status: "none"
     };
-    class jt {
+    class qu {
       constructor() {
         this.stored = null, this.compiling = null, this.pagePack = null, this.resolved = null
       }
       preload() {
         if (null === this.stored) {
-          if ((0, Dt.i)(Ot.featureFlags.settings.canUseShaderPacks)) return this.stored = Promise.resolve(null), Ht().then((tt => {
-            tt && qt.e.removeItem(Dt.e)
+          if ((0, Zu.e)(su.featureFlags.settings.canUseShaderPacks)) return this.stored = Promise.resolve(null), fu().then((uu => {
+            uu && Uu.k.removeItem(Zu.c)
           })), this.stored;
           this.prefetchHint() && this.compiler().catch((() => {})), this.stored = this.readStored()
         }
         return this.stored
       }
       prefetchHint() {
-        return (0, Dt.g)(Ot.featureFlags.settings.canUseShaderPacks)
+        return (0, Zu.d)(su.featureFlags.settings.canUseShaderPacks)
       }
       async loadActive() {
-        const tt = await this.load();
-        return "active" === tt.status ? tt.pack : null
+        const uu = await this.load();
+        return "active" === uu.status ? uu.pack : null
       }
       load() {
-        return this.pagePack ??= this.read().catch((tt => (console.error("Failed to load the shader pack", tt), dt))).then((tt => (this.resolved ??= tt, tt))), this.pagePack
+        return this.pagePack ??= this.read().catch((uu => (console.error("Failed to load the shader pack", uu), lu))).then((uu => (this.resolved ??= uu, uu))), this.pagePack
       }
       hasNone() {
-        var tt;
-        return "none" === (null === (tt = this.resolved) || void 0 === tt ? void 0 : tt.status)
+        var uu;
+        return "none" === (null === (uu = this.resolved) || void 0 === uu ? void 0 : uu.status)
       }
-      block(tt) {
+      block(uu) {
         this.resolved = {
           status: "blocked",
-          messageKey: tt,
+          messageKey: uu,
           variants: null
         }, this.pagePack = Promise.resolve(this.resolved)
       }
       compiler() {
-        return this.compiling ??= Promise.all([Vt.e(78), Vt.e(136), Vt.e(142)]).then((() => Vt(42006))).then((tt => (tt.prefetchCompiler(), tt))), this.compiling
+        return this.compiling ??= Promise.all([ju.e(78), ju.e(136), ju.e(142)]).then((() => ju(42003))).then((uu => (uu.prefetchCompiler(), uu))), this.compiling
       }
       async readStored() {
-        const tt = await Ht();
-        return tt && this.compiler().then((tt => tt.reconcileHint())).catch((tt => {
-          console.error("Failed to correct the shader pack hint", tt)
-        })), tt
+        const uu = await fu();
+        return uu && this.compiler().then((uu => uu.reconcileHint())).catch((uu => {
+          console.error("Failed to correct the shader pack hint", uu)
+        })), uu
       }
       async read() {
-        const tt = await this.preload();
-        return tt ? (await this.compiler()).compilePagePack(tt) : dt
+        const uu = await this.preload();
+        return uu ? (await this.compiler()).compilePagePack(uu) : lu
       }
     }
-    async function Ht() {
-      if (!(0, Dt.m)(Ot.featureFlags.settings.canUseShaderPacks)) return null;
+    async function fu() {
+      if (!(0, Zu.i)(su.featureFlags.settings.canUseShaderPacks)) return null;
       try {
-        const tt = await (0, mt.g)(!0);
-        return tt || qt.e.setItem(Dt.e, !1), tt
-      } catch (tt) {
-        return console.error("Failed to read the stored shader pack", tt), qt.e.removeItem(Dt.e), null
+        const uu = await (0, Xu.e)(!0);
+        return uu || Uu.k.setItem(Zu.c, !1), uu
+      } catch (uu) {
+        return console.error("Failed to read the stored shader pack", uu), Uu.k.removeItem(Zu.c), null
       }
     }
-    const Xt = new jt;
+    const Cu = new qu;
 
-    function Qt(tt, et) {}
+    function bu(uu, Eu) {}
 
-    function lt() {
+    function cu() {
       return null
     }
   },
-  39456: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => Qt,
-      e: () => lt
+  39561: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => bu,
+      f: () => cu
     });
-    var Ot = Vt(184),
-      qt = Vt(217),
-      Dt = Vt(1592),
-      mt = Vt(3012),
-      dt = Vt(1600),
-      jt = Vt(36709),
-      Ht = Vt(738),
-      Xt = Vt(39419);
+    var su = ju(166),
+      Uu = ju(193),
+      Zu = ju(1547),
+      Xu = ju(3099),
+      lu = ju(1559),
+      qu = ju(36856),
+      fu = ju(701),
+      Cu = ju(39525);
 
-    function Qt(tt) {
-      (0, mt.reportClientError)("matchmake_failed", tt, Ot.n[Ot.n.SHADER_PACK])
+    function bu(uu) {
+      (0, Xu.reportClientError)("matchmake_failed", uu, su.j[su.j.SHADER_PACK])
     }
-    async function lt(tt, et) {
-      var Vt;
-      const Ot = null === (Vt = await Xt.shaderPackPage.preload()) || void 0 === Vt ? void 0 : Vt.listing,
-        mt = (0, jt.b)();
-      Ot && null !== mt && await dt.e.reportShaderPackSession(tt, {
-        packId: Ot.packId,
-        sourceHash: Ot.sourceHash,
-        game: (0, Dt.e)(et, qt.y, "other"),
-        playSessionId: mt,
-        visitSessionId: (0, Ht.e)()
+    async function cu(uu, Eu) {
+      var ju;
+      const su = null === (ju = await Cu.shaderPackPage.preload()) || void 0 === ju ? void 0 : ju.listing,
+        Xu = (0, qu.c)();
+      su && null !== Xu && await lu.b.reportShaderPackSession(uu, {
+        packId: su.packId,
+        sourceHash: su.sourceHash,
+        game: (0, Zu.f)(Eu, Uu.x, "other"),
+        playSessionId: Xu,
+        visitSessionId: (0, fu.f)()
       })
     }
   },
-  6873: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => qt,
-      g: () => Dt
+  6854: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => Uu,
+      e: () => Zu
     });
-    var Ot = Vt(39);
-    const qt = "shaderPack";
-    async function Dt() {
-      var tt;
-      let et = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (tt = await Ot.c.getItem(qt, et)) && void 0 !== tt ? tt : null
+    var su = ju(31);
+    const Uu = "shaderPack";
+    async function Zu() {
+      var uu;
+      let Eu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (uu = await su.h.getItem(Uu, Eu)) && void 0 !== uu ? uu : null
     }
   },
-  6830: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      loadShaderPackTextures: () => mt,
-      shaderPackTextures: () => dt
+  6827: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      loadShaderPackTextures: () => Xu,
+      shaderPackTextures: () => lu
     });
-    var Ot = Vt(5223);
-    let qt = null,
-      Dt = null;
+    var su = ju(5209);
+    let Uu = null,
+      Zu = null;
 
-    function mt() {
-      return Dt ??= Promise.all([Vt.e(73), Vt.e(190)]).then((() => Vt(40674))).then((tt => {
+    function Xu() {
+      return Zu ??= Promise.all([ju.e(73), ju.e(190)]).then((() => ju(40746))).then((uu => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: et,
-          textureNameToIndex: Vt,
-          textureAnimationData: Dt
-        } = tt;
-        return qt ??= (0, Ot.m)(Vt, Dt, et), qt
-      })), Dt
+          FORMER_BLOCK_IMAGE_NAMES: Eu,
+          textureNameToIndex: ju,
+          textureAnimationData: Zu
+        } = uu;
+        return Uu ??= (0, su.j)(ju, Zu, Eu), Uu
+      })), Zu
     }
 
-    function dt() {
-      if (null === qt) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return qt
+    function lu() {
+      if (null === Uu) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return Uu
     }
   },
-  34326: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => Dt
+  34501: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => Zu
     });
-    var Ot = Vt(1167);
+    var su = ju(1128);
 
-    function qt() {
-      var tt, et;
-      return null !== (tt = null === (et = screen.orientation) || void 0 === et ? void 0 : et.type) && void 0 !== tt ? tt : innerWidth > innerHeight ? "landscape" : "portrait"
+    function Uu() {
+      var uu, Eu;
+      return null !== (uu = null === (Eu = screen.orientation) || void 0 === Eu ? void 0 : Eu.type) && void 0 !== uu ? uu : innerWidth > innerHeight ? "landscape" : "portrait"
     }
-    const Dt = new class {
+    const Zu = new class {
       constructor() {
         this.holding = !1, this.heldOrientation = "", this.releaseTimer = void 0, this.longHoldTimer = void 0, this.resizers = new Set, this.releaseWhenShown = () => {
           document.hidden || (document.removeEventListener("visibilitychange", this.releaseWhenShown), this.release())
         }
       }
       isHeld() {
-        return this.holding && qt() !== this.heldOrientation && (this.holding = !1), this.holding
+        return this.holding && Uu() !== this.heldOrientation && (this.holding = !1), this.holding
       }
       hold() {
-        this.heldOrientation = qt(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
-          this.holding && (0, Ot.Nw)(new Error("Game view size held for 60 s"))
+        this.heldOrientation = Uu(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
+          this.holding && (0, su.YY)(new Error("Game view size held for 60 s"))
         }), 6e4)
       }
       release() {
@@ -569,171 +569,171 @@ export const modules = {
           if (document.hidden) document.addEventListener("visibilitychange", this.releaseWhenShown);
           else {
             this.holding = !1;
-            for (const tt of this.resizers) tt()
+            for (const uu of this.resizers) uu()
           }
         }), 1e3)
       }
-      heldSizer(tt) {
-        let et = !1;
+      heldSizer(uu) {
+        let Eu = !1;
         return () => {
-          if (et && this.isHeld()) return null;
-          const Vt = tt();
-          return et ||= null !== Vt, Vt
+          if (Eu && this.isHeld()) return null;
+          const ju = uu();
+          return Eu ||= null !== ju, ju
         }
       }
-      onRelease(tt) {
-        return this.resizers.add(tt), () => {
-          this.resizers.delete(tt)
+      onRelease(uu) {
+        return this.resizers.add(uu), () => {
+          this.resizers.delete(uu)
         }
       }
     }
   },
-  39446: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => qt
+  39553: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => Uu
     });
-    let Ot = !1;
-    async function qt(tt, et) {
-      if (!Ot) {
-        Ot = !0;
+    let su = !1;
+    async function Uu(uu, Eu) {
+      if (!su) {
+        su = !0;
         try {
           const [{
-            reloadBloxd: Ot
+            reloadBloxd: su
           }, {
-            NotificationProvider: qt
-          }] = await Promise.all([Promise.resolve().then((() => Vt(1826))), Promise.resolve().then((() => Vt(1450)))]);
-          if (!tt || !0 === await qt.showPromptPopup({
+            NotificationProvider: Uu
+          }] = await Promise.all([Promise.resolve().then((() => ju(1779))), Promise.resolve().then((() => ju(1405)))]);
+          if (!uu || !0 === await Uu.showPromptPopup({
               title: "Unsaved changes",
               subtitle: "Exit and lose your unsaved changes?",
               confirmText: "Exit",
               destructive: !0,
               cancelText: "Cancel",
               unlockPointerKey: "replayExitUnsavedChanges"
-            }).getResult()) return void Ot(et)
-        } catch (qt) {
-          console.error("Leaving the replay failed", qt)
+            }).getResult()) return void su(Eu)
+        } catch (Uu) {
+          console.error("Leaving the replay failed", Uu)
         }
-        Ot = !1
+        su = !1
       }
     }
   },
-  41162: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => dt,
-      e: () => jt
+  41194: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => lu,
+      c: () => qu
     });
-    var Ot = Vt(1842);
-    const qt = 33177600,
-      Dt = 3e4;
-    let mt = !1;
+    var su = ju(1802);
+    const Uu = 33177600,
+      Zu = 3e4;
+    let Xu = !1;
 
-    function dt(tt, et, Vt) {
-      let Ot = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    function lu(uu, Eu, ju) {
+      let su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
       const {
-        scale: dt = 1,
-        type: jt = "image/png",
-        quality: Ht
-      } = Ot;
-      if (!tt.drawing()) return Promise.reject(new Error("Screenshots need a game to be running"));
-      if (mt) return Promise.reject(new Error("A screenshot is already being taken"));
-      mt = !0;
-      const Xt = function(tt, et, Vt) {
-        const Ot = Math.max(1, tt),
-          Dt = Math.max(1, et),
-          mt = Math.min(1, Vt / Math.max(Ot, Dt), Math.sqrt(qt / (Ot * Dt)));
+        scale: lu = 1,
+        type: qu = "image/png",
+        quality: fu
+      } = su;
+      if (!uu.drawing()) return Promise.reject(new Error("Screenshots need a game to be running"));
+      if (Xu) return Promise.reject(new Error("A screenshot is already being taken"));
+      Xu = !0;
+      const Cu = function(uu, Eu, ju) {
+        const su = Math.max(1, uu),
+          Zu = Math.max(1, Eu),
+          Xu = Math.min(1, ju / Math.max(su, Zu), Math.sqrt(Uu / (su * Zu)));
         return {
-          width: Math.max(1, Math.floor(Ot * mt)),
-          height: Math.max(1, Math.floor(Dt * mt))
+          width: Math.max(1, Math.floor(su * Xu)),
+          height: Math.max(1, Math.floor(Zu * Xu))
         }
-      }(et, Vt, tt.maxTextureSize);
-      return tt.resize(Xt.width, Xt.height, dt * Xt.width / Math.max(1, et)), new Promise(((et, Vt) => {
-        let Ot, qt = 2,
-          dt = null;
-        const Xt = () => {
-          var et;
-          mt = !1, null === (et = dt) || void 0 === et || et(), clearTimeout(Ot), tt.restoreSize()
+      }(Eu, ju, uu.maxTextureSize);
+      return uu.resize(Cu.width, Cu.height, lu * Cu.width / Math.max(1, Eu)), new Promise(((Eu, ju) => {
+        let su, Uu = 2,
+          lu = null;
+        const Cu = () => {
+          var Eu;
+          Xu = !1, null === (Eu = lu) || void 0 === Eu || Eu(), clearTimeout(su), uu.restoreSize()
         };
-        Ot = setTimeout((() => {
-          Xt(), Vt(new Error("No frame was drawn to capture"))
-        }), Dt), dt = tt.onFrameDrawn((() => {
-          if (qt--, qt > 0) return;
+        su = setTimeout((() => {
+          Cu(), ju(new Error("No frame was drawn to capture"))
+        }), Zu), lu = uu.onFrameDrawn((() => {
+          if (Uu--, Uu > 0) return;
           const {
-            canvas: Ot
-          } = tt, Dt = {
-            width: Ot.width,
-            height: Ot.height
+            canvas: su
+          } = uu, Zu = {
+            width: su.width,
+            height: su.height
           };
           try {
-            Ot.toBlob((tt => {
-              tt ? et({
-                blob: tt,
-                ...Dt
-              }) : Vt(new Error("The canvas gave no image"))
-            }), jt, Ht)
-          } catch (mt) {
-            Vt(mt)
+            su.toBlob((uu => {
+              uu ? Eu({
+                blob: uu,
+                ...Zu
+              }) : ju(new Error("The canvas gave no image"))
+            }), qu, fu)
+          } catch (Xu) {
+            ju(Xu)
           } finally {
-            Xt()
+            Cu()
           }
         }))
       }))
     }
-    async function jt(tt, et, Vt) {
+    async function qu(uu, Eu, ju) {
       try {
-        const qt = await dt(tt, et, Vt);
-        (0, Ot.c)(qt.blob, `bloxd-screenshot-${qt.width}x${qt.height}-${Date.now()}.png`)
-      } catch (qt) {
-        console.error("Error taking screenshot:", qt)
+        const Uu = await lu(uu, Eu, ju);
+        (0, su.d)(Uu.blob, `bloxd-screenshot-${Uu.width}x${Uu.height}-${Date.now()}.png`)
+      } catch (Uu) {
+        console.error("Error taking screenshot:", Uu)
       }
     }
   },
-  37955: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => Ot
+  38089: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => su
     });
-    const Ot = {
+    const su = {
       noaReady: null,
       chunkRequested: null,
       beforeServerListeners: null,
       wasmNetReady: null
     }
   },
-  39370: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => mt
+  39474: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => Xu
     });
-    var Ot = Vt(377),
-      qt = Vt(153),
-      Dt = Vt(39);
+    var su = ju(337),
+      Uu = ju(131),
+      Zu = ju(31);
 
-    function mt() {
-      Dt.e.setItem(Ot.vb, Dt.e.getItem(Ot.vb) + 1), (0, qt.is99NightsCrazyGamesBundle)() && Dt.e.setItem(Ot.sb, Dt.e.getItem(Ot.sb) + 1)
+    function Xu() {
+      Zu.k.setItem(su.Jb, Zu.k.getItem(su.Jb) + 1), (0, Uu.is99NightsCrazyGamesBundle)() && Zu.k.setItem(su.Fb, Zu.k.getItem(su.Fb) + 1)
     }
   },
-  40853: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => dt
+  40912: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => lu
     });
-    var Ot = Vt(39850);
+    var su = ju(39933);
 
-    function qt(tt) {
+    function Uu(uu) {
       return {
-        current: () => tt,
+        current: () => uu,
         watch: () => () => {}
       }
     }
 
-    function Dt() {}
-    const mt = Object.freeze([0, 0, 0]),
-      dt = {
+    function Zu() {}
+    const Xu = Object.freeze([0, 0, 0]),
+      lu = {
         states: {
-          health: qt({
+          health: Uu({
             health: null,
             maxHealth: null,
             shield: null,
             maxShield: null
           }),
-          inventory: qt({
+          inventory: Uu({
             player: [],
             chestOrCreative: [],
             chest: null,
@@ -741,63 +741,63 @@ export const modules = {
             selectedSlot: 0,
             freeSlots: 0
           }),
-          hotbar: qt({
+          hotbar: Uu({
             items: [],
             ammo: 0,
             selectedSlot: null
           }),
-          stationItems: qt({
+          stationItems: Uu({
             enchantable: {},
             salvageable: {}
           }),
-          itemInfo: qt({}),
-          creativeVisibility: qt({
+          itemInfo: Uu({}),
+          creativeVisibility: Uu({
             publicLobby: !1,
             shownInGame: {}
           }),
-          aura: qt(null),
-          heldItemAim: qt({
+          aura: Uu(null),
+          heldItemAim: Uu({
             gun: !1,
             aimable: !1,
             chargeName: null
           }),
-          crouching: qt(!1),
-          gliderBoostFuel: qt(0),
-          flight: qt({
+          crouching: Uu(!1),
+          gliderBoostFuel: Uu(0),
+          flight: Uu({
             canFly: !1,
             flying: !1
           }),
-          crafting: qt({
+          crafting: Uu({
             focus: null,
             recipes: [],
             detail: null
           }),
-          players: qt({
+          players: Uu({
             ids: [],
             byId: {},
             localId: null
           }),
-          lobbyLeaderboardRows: qt({}),
-          fullInventory: qt(!1),
-          crosshairTarget: qt({
+          lobbyLeaderboardRows: Uu({}),
+          fullInventory: Uu(!1),
+          crosshairTarget: Uu({
             interactPrompt: null,
             blockText: null,
             neededTool: null
           }),
-          localPlayerAlive: qt(!0),
-          freeCamera: qt({
+          localPlayerAlive: Uu(!0),
+          freeCamera: Uu({
             allowed: !1,
             movesFly: !1
           }),
-          replay: qt(null),
-          replayEdits: qt(null),
-          replayRecorder: qt({
+          replay: Uu(null),
+          replayEdits: Uu(null),
+          replayRecorder: Uu({
             recording: !1,
             clipping: !1,
             hasClipBuffer: !1,
             seconds: 0
           }),
-          replayVideoExporting: qt(!1)
+          replayVideoExporting: Uu(!1)
         },
         events: {
           hotbarSlotRequested: {
@@ -859,87 +859,87 @@ export const modules = {
           }
         },
         commands: {
-          selectHotbarSlot: Dt,
+          selectHotbarSlot: Zu,
           removeInventoryItem: () => !1,
           swapInventorySlots: () => !1,
           moveInventoryItem: () => !1,
           quickMoveInventoryItem: () => null,
-          closeChest: Dt,
-          setInventoryOpen: Dt,
-          changeIronChestPasskey: Dt,
-          dragReplayCamera: Dt,
-          applyTemporaryThirdPerson: Dt,
-          holdEmoteWheel: Dt,
-          recordFlyingMiddleText: Dt,
-          focusCrafting: Dt,
+          closeChest: Zu,
+          setInventoryOpen: Zu,
+          changeIronChestPasskey: Zu,
+          dragReplayCamera: Zu,
+          applyTemporaryThirdPerson: Zu,
+          holdEmoteWheel: Zu,
+          recordFlyingMiddleText: Zu,
+          focusCrafting: Zu,
           craftRecipe: () => ({
-            cX: 0,
-            jj: null,
+            aC: 0,
+            yl: null,
             amountAddedToSlot: 0
           }),
           salvageItem: () => !1,
-          enchantItem: Dt,
-          setShopOpen: Dt,
-          buyShopItem: Dt,
-          lobbyManage: Dt,
-          sendChatMessage: Dt,
-          ignorePlayer: Dt,
-          reportPlayer: Dt,
-          reportWorldCodeChat: Dt,
-          requestDiscordReportKey: Dt,
-          reportLobbyOrGame: Dt,
-          playEmote: Dt,
-          updateMyCosmetic: Dt,
-          writeOnBoard: Dt,
-          writeBook: Dt,
-          writeNameTag: Dt,
-          setCustomLobbyBlock: Dt,
-          openIronChest: Dt,
-          sendCodeCollab: Dt,
-          clickCodeBlock: Dt,
-          bindCustomButtonKeys: Dt,
-          pressCustomButton: Dt,
-          moveReplayFreecam: Dt,
-          holdReplayFreecamVertical: Dt,
-          respawn: Dt,
-          wakeUp: Dt,
-          requestLeaderboard: Dt,
-          completeTask: Dt,
-          setServerCookie: Dt,
-          answerUiRequest: Dt,
-          chooseRewardedAd: Dt,
-          setCameraZoom: Dt,
-          setFreeCameraMovesFly: Dt,
-          setBlockHighlight: Dt,
-          setCrosshairInteractPrompt: Dt,
-          setLookSensitivity: Dt,
-          replayAction: Dt,
-          setReplayPlaying: Dt,
-          seekReplay: Dt,
-          setReplayCameraMode: Dt,
-          syncReplayCameraMode: Dt,
-          setReplayCameraKeyframe: Dt,
-          moveReplayCameraKeyframe: Dt,
-          deleteReplayCameraKeyframes: Dt,
-          setReplayPlaybackMark: Dt,
+          enchantItem: Zu,
+          setShopOpen: Zu,
+          buyShopItem: Zu,
+          lobbyManage: Zu,
+          sendChatMessage: Zu,
+          ignorePlayer: Zu,
+          reportPlayer: Zu,
+          reportWorldCodeChat: Zu,
+          requestDiscordReportKey: Zu,
+          reportLobbyOrGame: Zu,
+          playEmote: Zu,
+          updateMyCosmetic: Zu,
+          writeOnBoard: Zu,
+          writeBook: Zu,
+          writeNameTag: Zu,
+          setCustomLobbyBlock: Zu,
+          openIronChest: Zu,
+          sendCodeCollab: Zu,
+          clickCodeBlock: Zu,
+          bindCustomButtonKeys: Zu,
+          pressCustomButton: Zu,
+          moveReplayFreecam: Zu,
+          holdReplayFreecamVertical: Zu,
+          respawn: Zu,
+          wakeUp: Zu,
+          requestLeaderboard: Zu,
+          completeTask: Zu,
+          setServerCookie: Zu,
+          answerUiRequest: Zu,
+          chooseRewardedAd: Zu,
+          setCameraZoom: Zu,
+          setFreeCameraMovesFly: Zu,
+          setBlockHighlight: Zu,
+          setCrosshairInteractPrompt: Zu,
+          setLookSensitivity: Zu,
+          replayAction: Zu,
+          setReplayPlaying: Zu,
+          seekReplay: Zu,
+          setReplayCameraMode: Zu,
+          syncReplayCameraMode: Zu,
+          setReplayCameraKeyframe: Zu,
+          moveReplayCameraKeyframe: Zu,
+          deleteReplayCameraKeyframes: Zu,
+          setReplayPlaybackMark: Zu,
           cropReplay: () => !1,
-          holdReplayForShaderPackFailure: Dt,
-          exportReplayVideo: Dt,
-          toggleRecording: Dt,
-          saveClip: Dt,
-          setRecorderPrefs: Dt,
-          setReplayViewerOpen: Dt
+          holdReplayForShaderPackFailure: Zu,
+          exportReplayVideo: Zu,
+          toggleRecording: Zu,
+          saveClip: Zu,
+          setRecorderPrefs: Zu,
+          setReplayViewerOpen: Zu
         },
         queries: {
           enchantingOffer: () => ({
             perks: [],
             options: []
           }),
-          worldCodeAiChunk: () => Ot.e,
-          worldCodeAiGameState: () => Ot.h
+          worldCodeAiChunk: () => su.e,
+          worldCodeAiGameState: () => su.f
         },
         lookups: {
-          localPos: () => mt,
+          localPos: () => Xu,
           targetedBlockPos: () => null,
           blockAtViewPoint: () => null,
           momentumFrac: () => 0,
@@ -957,113 +957,113 @@ export const modules = {
         }
       }
   },
-  41159: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => mt,
-      g: () => Dt
+  41188: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => Xu,
+      f: () => Zu
     });
-    var Ot = Vt(2219),
-      qt = Vt(1103);
+    var su = ju(2239),
+      Uu = ju(1069);
 
-    function Dt(tt, et) {
-      return null !== tt.gameSource && (0, Ot.m)(et, tt.gameSource)
+    function Zu(uu, Eu) {
+      return null !== uu.gameSource && (0, su.n)(Eu, uu.gameSource)
     }
 
-    function mt(tt, et) {
-      if (null === tt.gameSource || "" === tt.gameSource || null === et) return !0;
-      const Vt = (0, qt.k)(et) ? (0, qt.p)(et) : null;
-      return null !== Vt && Dt(tt, Vt)
+    function Xu(uu, Eu) {
+      if (null === uu.gameSource || "" === uu.gameSource || null === Eu) return !0;
+      const ju = (0, Uu.l)(Eu) ? (0, Uu.q)(Eu) : null;
+      return null !== ju && Zu(uu, ju)
     }
   },
-  41136: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => dt
+  41158: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => lu
     });
-    var Ot = Vt(705),
-      qt = Vt(41141),
-      Dt = Vt(41003);
-    async function mt(tt) {
-      const et = await (0, qt.j)({
-        Helmet: Vt(38222),
-        Chestplate: Vt(38227),
-        Gauntlets: Vt(38241),
-        Leggings: Vt(38230),
-        Boots: Vt(38238)
-      } [Ot.b[tt]]);
+    var su = ju(636),
+      Uu = ju(41161),
+      Zu = ju(41056);
+    async function Xu(uu) {
+      const Eu = await (0, Uu.l)({
+        Helmet: ju(38347),
+        Chestplate: ju(38352),
+        Gauntlets: ju(38365),
+        Leggings: ju(38357),
+        Boots: ju(38361)
+      } [su.d[uu]]);
       try {
-        return (0, Dt.n)(et)
+        return (0, Zu.o)(Eu)
       } finally {
-        et.close()
+        Eu.close()
       }
     }
-    const dt = new class {
+    const lu = new class {
       constructor() {
-        let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : mt,
-          et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : qt.n;
-        this.decode = tt, this.register = et, this.decoded = new Map
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Xu,
+          Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Uu.p;
+        this.decode = uu, this.register = Eu, this.decoded = new Map
       }
       warm() {
-        for (let tt = 0; tt < Ot.b.length; tt++) this.part(tt).catch((et => {
-          console.warn(`The grayscale armour ${Ot.b[tt]} image didn't decode ahead of use`, et)
+        for (let uu = 0; uu < su.d.length; uu++) this.part(uu).catch((Eu => {
+          console.warn(`The grayscale armour ${su.d[uu]} image didn't decode ahead of use`, Eu)
         }))
       }
-      async load(tt, et) {
+      async load(uu, Eu) {
         const {
-          width: Vt,
-          height: Dt,
-          pixels: mt
-        } = await this.part(tt), dt = new ImageData(function(tt, et) {
-          const Vt = new Uint8ClampedArray(tt.length);
-          for (let Ot = 0; Ot < tt.length; Ot += 4) Vt[Ot] = Math.round(tt[Ot] * et[0] / 255), Vt[Ot + 1] = Math.round(tt[Ot + 1] * et[1] / 255), Vt[Ot + 2] = Math.round(tt[Ot + 2] * et[2] / 255), Vt[Ot + 3] = tt[Ot + 3];
-          return Vt
-        }(mt, function(tt) {
-          return [tt >>> 16 & 255, tt >>> 8 & 255, 255 & tt]
-        }(et)), Vt, Dt);
-        let jt;
+          width: ju,
+          height: Zu,
+          pixels: Xu
+        } = await this.part(uu), lu = new ImageData(function(uu, Eu) {
+          const ju = new Uint8ClampedArray(uu.length);
+          for (let su = 0; su < uu.length; su += 4) ju[su] = Math.round(uu[su] * Eu[0] / 255), ju[su + 1] = Math.round(uu[su + 1] * Eu[1] / 255), ju[su + 2] = Math.round(uu[su + 2] * Eu[2] / 255), ju[su + 3] = uu[su + 3];
+          return ju
+        }(Xu, function(uu) {
+          return [uu >>> 16 & 255, uu >>> 8 & 255, 255 & uu]
+        }(Eu)), ju, Zu);
+        let qu;
         try {
-          jt = await createImageBitmap(dt, {
+          qu = await createImageBitmap(lu, {
             premultiplyAlpha: "none",
             colorSpaceConversion: "none"
           })
-        } catch (Ht) {
-          throw new qt.b("decode", `grayscale armour ${Ot.b[tt]}`, {
-            cause: Ht
+        } catch (fu) {
+          throw new Uu.e("decode", `grayscale armour ${su.d[uu]}`, {
+            cause: fu
           })
         }
         return {
-          id: this.register(jt),
-          width: Vt,
-          height: Dt
+          id: this.register(qu),
+          width: ju,
+          height: Zu
         }
       }
-      part(tt) {
-        const et = this.decoded.get(tt);
-        if (void 0 !== et) return et;
-        const Vt = this.decode(tt).catch((et => {
-          throw this.decoded.delete(tt), et instanceof qt.b ? et : new qt.b("decode", `grayscale armour ${Ot.b[tt]}`, {
-            cause: et
+      part(uu) {
+        const Eu = this.decoded.get(uu);
+        if (void 0 !== Eu) return Eu;
+        const ju = this.decode(uu).catch((Eu => {
+          throw this.decoded.delete(uu), Eu instanceof Uu.e ? Eu : new Uu.e("decode", `grayscale armour ${su.d[uu]}`, {
+            cause: Eu
           })
         }));
-        return this.decoded.set(tt, Vt), Vt
+        return this.decoded.set(uu, ju), ju
       }
     }
   },
-  41127: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => mt,
-      g: () => yt,
-      h: () => Xt,
-      k: () => Qt,
-      l: () => wt
+  41156: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => Xu,
+      g: () => hu,
+      h: () => Cu,
+      j: () => bu,
+      m: () => Yu
     });
-    var Ot = Vt(40985),
-      qt = Vt(41136),
-      Dt = Vt(41141);
-    const mt = 396,
-      dt = 1,
-      jt = 2,
-      Ht = 3,
-      Xt = {
+    var su = ju(41040),
+      Uu = ju(41158),
+      Zu = ju(41161);
+    const Xu = 396,
+      lu = 1,
+      qu = 2,
+      fu = 3,
+      Cu = {
         Glb: 1,
         LifeformAtlas: 2,
         ArmourAtlas: 3,
@@ -1074,37 +1074,37 @@ export const modules = {
         BlockImage: 8,
         GreyscaleArmour: 9
       },
-      Qt = {
+      bu = {
         File: 0,
         Item: 1
       },
-      lt = 0,
-      Et = 1,
-      ft = 2;
+      cu = 0,
+      Nu = 1,
+      Ou = 2;
 
-    function wt(tt) {
-      const et = (0, Ot.n)();
-      et.catch((() => {}));
-      let qt = null;
+    function Yu(uu) {
+      const Eu = (0, su.g)();
+      Eu.catch((() => {}));
+      let Uu = null;
       return {
-        glbUrl: tt,
-        lifeformAtlasUrl: async tt => (await et).lifeformAtlasUrl(tt),
-        armourAtlasUrl: async () => (await Vt.e(207).then((() => Vt(34482)))).armourAtlasUrl,
-        capeUrl: async tt => (await et).capeUrl(tt),
-        attachmentImageUrl: async tt => (await et).attachmentImageUrl(tt),
-        blockImageUrl: async tt => (await et).blockImageUrl(tt),
-        groupAtlasUrl: async tt => (await et).groupAtlasUrl(tt),
-        particleTextureUrl: async tt => (await et).particleTextureUrl(tt),
-        particleItemUrl: async tt => (qt ??= Vt.e(38).then((() => Vt(51342))).catch((tt => {
-          throw qt = null, tt
-        })), (await qt).particleItemUrl(tt))
+        glbUrl: uu,
+        lifeformAtlasUrl: async uu => (await Eu).lifeformAtlasUrl(uu),
+        armourAtlasUrl: async () => (await ju.e(207).then((() => ju(34634)))).armourAtlasUrl,
+        capeUrl: async uu => (await Eu).capeUrl(uu),
+        attachmentImageUrl: async uu => (await Eu).attachmentImageUrl(uu),
+        blockImageUrl: async uu => (await Eu).blockImageUrl(uu),
+        groupAtlasUrl: async uu => (await Eu).groupAtlasUrl(uu),
+        particleTextureUrl: async uu => (await Eu).particleTextureUrl(uu),
+        particleItemUrl: async uu => (Uu ??= ju.e(38).then((() => ju(51322))).catch((uu => {
+          throw Uu = null, uu
+        })), (await Uu).particleItemUrl(uu))
       }
     }
-    class yt {
-      constructor(tt, et) {
-        var Vt, mt, dt, jt;
-        let Ht = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        this.sources = tt, this.onFailure = et, this.loading = new Map, this.glbImages = new Map, this.glbWrittenImages = new Map, this.glbTakenCount = new Map, this.answered = new Map, this.ready = [], this.load = void 0, this.release = void 0, this.fetchFile = void 0, this.greyscaleArmour = void 0, this.df = !1, this.load = null !== (Vt = Ht.load) && void 0 !== Vt ? Vt : (tt, et) => (0, Dt.m)(tt, Ht.fetchImage, et), this.release = null !== (mt = Ht.release) && void 0 !== mt ? mt : Dt.p, this.fetchFile = null !== (dt = Ht.fetchFile) && void 0 !== dt ? dt : tt => (0, Ot.i)(tt), this.greyscaleArmour = null !== (jt = Ht.greyscaleArmour) && void 0 !== jt ? jt : qt.b
+    class hu {
+      constructor(uu, Eu) {
+        var ju, Xu, lu, qu;
+        let fu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        this.sources = uu, this.onFailure = Eu, this.loading = new Map, this.glbImages = new Map, this.glbWrittenImages = new Map, this.glbTakenCount = new Map, this.answered = new Map, this.ready = [], this.load = void 0, this.release = void 0, this.fetchFile = void 0, this.greyscaleArmour = void 0, this.fO = !1, this.load = null !== (ju = fu.load) && void 0 !== ju ? ju : (uu, Eu) => (0, Zu.m)(uu, fu.fetchImage, Eu), this.release = null !== (Xu = fu.release) && void 0 !== Xu ? Xu : Zu.t, this.fetchFile = null !== (lu = fu.fetchFile) && void 0 !== lu ? lu : uu => (0, su.e)(uu), this.greyscaleArmour = null !== (qu = fu.greyscaleArmour) && void 0 !== qu ? qu : Uu.d
       }
       get waiting() {
         return this.ready.length
@@ -1112,238 +1112,238 @@ export const modules = {
       get inFlight() {
         return this.loading.size
       }
-      glbWritten(tt, et) {
-        this.glbWrittenImages.set(tt, Kt(et))
+      glbWritten(uu, Eu) {
+        this.glbWrittenImages.set(uu, wu(Eu))
       }
-      glbTaken(tt, et) {
-        const Vt = this.glbWrittenImages.get(tt);
-        this.glbWrittenImages.delete(tt), et && this.setGlbImages(tt, void 0 !== Vt && Vt.length > 0 ? Vt : void 0)
+      glbTaken(uu, Eu) {
+        const ju = this.glbWrittenImages.get(uu);
+        this.glbWrittenImages.delete(uu), Eu && this.setGlbImages(uu, void 0 !== ju && ju.length > 0 ? ju : void 0)
       }
-      setGlbImages(tt, et) {
-        var Vt;
-        this.glbTakenCount.set(tt, (null !== (Vt = this.glbTakenCount.get(tt)) && void 0 !== Vt ? Vt : 0) + 1), void 0 === et ? this.glbImages.delete(tt) : this.glbImages.set(tt, et);
-        const Ot = [];
+      setGlbImages(uu, Eu) {
+        var ju;
+        this.glbTakenCount.set(uu, (null !== (ju = this.glbTakenCount.get(uu)) && void 0 !== ju ? ju : 0) + 1), void 0 === Eu ? this.glbImages.delete(uu) : this.glbImages.set(uu, Eu);
+        const su = [];
         for (const {
-            key: qt
+            key: Uu
           }
-          of this.loading.values()) qt.kind === Xt.Glb && qt.word === tt && Ot.push(qt);
-        for (let qt = this.ready.length - 1; qt >= 0; qt--) {
+          of this.loading.values()) Uu.kind === Cu.Glb && Uu.word === uu && su.push(Uu);
+        for (let Uu = this.ready.length - 1; Uu >= 0; Uu--) {
           const {
-            key: et,
-            id: Vt
-          } = this.ready[qt];
-          et.kind === Xt.Glb && et.word === tt && (this.ready.splice(qt, 1), null !== Vt && (this.answered.delete(Vt), this.release(Vt)), Ot.push(et))
+            key: Eu,
+            id: ju
+          } = this.ready[Uu];
+          Eu.kind === Cu.Glb && Eu.word === uu && (this.ready.splice(Uu, 1), null !== ju && (this.answered.delete(ju), this.release(ju)), su.push(Eu))
         }
-        this.loadAgain(Ot)
+        this.loadAgain(su)
       }
-      onEvent(tt) {
-        if (this.df) return;
-        const et = new DataView(tt.buffer, tt.byteOffset, tt.byteLength);
-        for (let Vt = 0; Vt + 8 <= tt.byteLength; Vt += 8) {
-          const tt = et.getUint8(Vt),
-            Ot = et.getUint32(Vt + 4, !0);
-          if (tt === Ht) {
-            this.answered.delete(Ot), this.release(Ot);
+      onEvent(uu) {
+        if (this.fO) return;
+        const Eu = new DataView(uu.buffer, uu.byteOffset, uu.byteLength);
+        for (let ju = 0; ju + 8 <= uu.byteLength; ju += 8) {
+          const uu = Eu.getUint8(ju),
+            su = Eu.getUint32(ju + 4, !0);
+          if (uu === fu) {
+            this.answered.delete(su), this.release(su);
             continue
           }
-          const qt = {
-            kind: et.getUint8(Vt + 1),
-            index: et.getUint8(Vt + 2),
-            word: Ot
+          const Uu = {
+            kind: Eu.getUint8(ju + 1),
+            index: Eu.getUint8(ju + 2),
+            word: su
           };
-          tt === dt ? this.want(qt) : tt === jt && this.loading.delete(Nt(qt))
+          uu === lu ? this.want(Uu) : uu === qu && this.loading.delete(Du(Uu))
         }
       }
-      reload(tt, et) {
-        const Vt = Vt => tt.includes(Vt.kind) && (void 0 === et || et(Vt)),
-          Ot = new Map;
-        for (const qt of this.answered.values()) Vt(qt) && Ot.set(Nt(qt), qt);
-        for (const [qt, {
-            key: Dt
-          }] of this.loading) Vt(Dt) && Ot.set(qt, Dt);
-        this.loadAgain(Ot.values())
+      reload(uu, Eu) {
+        const ju = ju => uu.includes(ju.kind) && (void 0 === Eu || Eu(ju)),
+          su = new Map;
+        for (const Uu of this.answered.values()) ju(Uu) && su.set(Du(Uu), Uu);
+        for (const [Uu, {
+            key: Zu
+          }] of this.loading) ju(Zu) && su.set(Uu, Zu);
+        this.loadAgain(su.values())
       }
-      loadAgain(tt) {
-        for (const et of tt) this.loading.delete(Nt(et)), this.want(et)
+      loadAgain(uu) {
+        for (const Eu of uu) this.loading.delete(Du(Eu)), this.want(Eu)
       }
-      drain(tt) {
-        if (null !== tt)
+      drain(uu) {
+        if (null !== uu)
           for (; this.ready.length > 0;) {
-            if (!tt(mt, 0, this.ready[0].record)) return;
+            if (!uu(Xu, 0, this.ready[0].record)) return;
             this.ready.shift()
           }
       }
       dispose() {
-        this.df = !0, this.loading.clear(), this.ready.length = 0;
-        for (const tt of this.answered.keys()) this.release(tt);
+        this.fO = !0, this.loading.clear(), this.ready.length = 0;
+        for (const uu of this.answered.keys()) this.release(uu);
         this.answered.clear()
       }
-      want(tt) {
-        const et = Nt(tt);
-        if (this.loading.has(et)) return;
-        const Vt = {
-          key: tt
+      want(uu) {
+        const Eu = Du(uu);
+        if (this.loading.has(Eu)) return;
+        const ju = {
+          key: uu
         };
-        this.loading.set(et, Vt), this.loadKey(tt).then((Ot => {
-          this.df || this.loading.get(et) !== Vt ? this.release(Ot.id) : (this.loading.delete(et), this.answered.set(Ot.id, tt), this.ready.push({
-            record: bt(tt, lt, Ot),
-            key: tt,
-            id: Ot.id
+        this.loading.set(Eu, ju), this.loadKey(uu).then((su => {
+          this.fO || this.loading.get(Eu) !== ju ? this.release(su.id) : (this.loading.delete(Eu), this.answered.set(su.id, uu), this.ready.push({
+            record: Mu(uu, cu, su),
+            key: uu,
+            id: su.id
           }))
-        }), (Ot => {
-          if (this.df || this.loading.get(et) !== Vt) return;
-          this.loading.delete(et), this.onFailure({
-            key: tt,
-            error: Ot
+        }), (su => {
+          if (this.fO || this.loading.get(Eu) !== ju) return;
+          this.loading.delete(Eu), this.onFailure({
+            key: uu,
+            error: su
           });
-          const qt = Ot instanceof Dt.b && "decode" === Ot.stage ? Et : ft;
+          const Uu = su instanceof Zu.e && "decode" === su.stage ? Nu : Ou;
           this.ready.push({
-            record: bt(tt, qt, null),
-            key: tt,
+            record: Mu(uu, Uu, null),
+            key: uu,
             id: null
           })
         }))
       }
-      async loadKey(tt) {
-        switch (tt.kind) {
-          case Xt.Glb:
-            return this.load(await this.glbImage(tt), "none");
-          case Xt.LifeformAtlas:
-            return this.load(Mt(await this.sources.lifeformAtlasUrl(tt.word), tt), "none");
-          case Xt.ArmourAtlas:
-            return this.load(Mt(await this.sources.armourAtlasUrl(), tt), "none");
-          case Xt.Cape:
-            return this.load(Mt(await this.sources.capeUrl(tt.word), tt), "none");
-          case Xt.AttachmentImage:
-            return this.load(Mt(await this.sources.attachmentImageUrl(tt.word), tt), "none");
-          case Xt.GroupAtlas:
-            return this.load(Mt(await this.sources.groupAtlasUrl(tt.word), tt), "none");
-          case Xt.BlockImage:
-            return this.load(Mt(await this.sources.blockImageUrl(tt.word), tt), "none");
-          case Xt.Particle: {
-            const et = await (tt.index === Qt.Item ? this.sources.particleItemUrl(tt.word) : this.sources.particleTextureUrl(tt.word));
-            return this.load(Mt(et, tt), "flipY")
+      async loadKey(uu) {
+        switch (uu.kind) {
+          case Cu.Glb:
+            return this.load(await this.glbImage(uu), "none");
+          case Cu.LifeformAtlas:
+            return this.load(gu(await this.sources.lifeformAtlasUrl(uu.word), uu), "none");
+          case Cu.ArmourAtlas:
+            return this.load(gu(await this.sources.armourAtlasUrl(), uu), "none");
+          case Cu.Cape:
+            return this.load(gu(await this.sources.capeUrl(uu.word), uu), "none");
+          case Cu.AttachmentImage:
+            return this.load(gu(await this.sources.attachmentImageUrl(uu.word), uu), "none");
+          case Cu.GroupAtlas:
+            return this.load(gu(await this.sources.groupAtlasUrl(uu.word), uu), "none");
+          case Cu.BlockImage:
+            return this.load(gu(await this.sources.blockImageUrl(uu.word), uu), "none");
+          case Cu.Particle: {
+            const Eu = await (uu.index === bu.Item ? this.sources.particleItemUrl(uu.word) : this.sources.particleTextureUrl(uu.word));
+            return this.load(gu(Eu, uu), "flipY")
           }
-          case Xt.GreyscaleArmour:
-            return this.greyscaleArmour.load(tt.index, tt.word);
+          case Cu.GreyscaleArmour:
+            return this.greyscaleArmour.load(uu.index, uu.word);
           default:
-            throw new Dt.b("fetch", `image kind ${tt.kind}`, {
+            throw new Zu.e("fetch", `image kind ${uu.kind}`, {
               cause: null
             })
         }
       }
-      async glbImage(tt) {
-        var et;
-        let Vt = this.glbImages.get(tt.word);
-        if (void 0 === Vt) {
-          const et = this.glbTakenCount.get(tt.word),
-            Ot = Mt(await this.sources.glbUrl(tt.word), tt);
+      async glbImage(uu) {
+        var Eu;
+        let ju = this.glbImages.get(uu.word);
+        if (void 0 === ju) {
+          const Eu = this.glbTakenCount.get(uu.word),
+            su = gu(await this.sources.glbUrl(uu.word), uu);
           try {
-            Vt = Kt(await this.fetchFile(Ot))
-          } catch (qt) {
-            throw new Dt.b("fetch", Ot, {
-              cause: qt
+            ju = wu(await this.fetchFile(su))
+          } catch (Uu) {
+            throw new Zu.e("fetch", su, {
+              cause: Uu
             })
           }
-          this.glbTakenCount.get(tt.word) === et && this.glbImages.set(tt.word, Vt)
+          this.glbTakenCount.get(uu.word) === Eu && this.glbImages.set(uu.word, ju)
         }
-        const Ot = null === (et = Vt) || void 0 === et ? void 0 : et[tt.index];
-        if (!Ot) throw new Dt.b("decode", `image ${tt.index} of file ${2147483647&tt.word}`, {
+        const su = null === (Eu = ju) || void 0 === Eu ? void 0 : Eu[uu.index];
+        if (!su) throw new Zu.e("decode", `image ${uu.index} of file ${2147483647&uu.word}`, {
           cause: null
         });
-        return Ot
+        return su
       }
     }
 
-    function Nt(tt) {
+    function Du(uu) {
       let {
-        kind: et,
-        index: Vt,
-        word: Ot
-      } = tt;
-      return `${et}:${Vt}:${Ot}`
+        kind: Eu,
+        index: ju,
+        word: su
+      } = uu;
+      return `${Eu}:${ju}:${su}`
     }
 
-    function Mt(tt, et) {
-      if (null === tt) throw new Dt.b("fetch", `no URL for image ${Nt(et)}`, {
+    function gu(uu, Eu) {
+      if (null === uu) throw new Zu.e("fetch", `no URL for image ${Du(Eu)}`, {
         cause: null
       });
-      return tt
+      return uu
     }
 
-    function bt(tt, et, Vt) {
-      var Ot, qt, Dt;
-      const mt = new Uint8Array(16),
-        dt = new DataView(mt.buffer);
-      return dt.setUint8(0, tt.kind), dt.setUint8(1, tt.index), dt.setUint8(2, et), dt.setUint32(4, tt.word, !0), dt.setUint32(8, null !== (Ot = null === Vt || void 0 === Vt ? void 0 : Vt.id) && void 0 !== Ot ? Ot : 0, !0), dt.setUint16(12, Math.min(null !== (qt = null === Vt || void 0 === Vt ? void 0 : Vt.width) && void 0 !== qt ? qt : 0, 65535), !0), dt.setUint16(14, Math.min(null !== (Dt = null === Vt || void 0 === Vt ? void 0 : Vt.height) && void 0 !== Dt ? Dt : 0, 65535), !0), mt
+    function Mu(uu, Eu, ju) {
+      var su, Uu, Zu;
+      const Xu = new Uint8Array(16),
+        lu = new DataView(Xu.buffer);
+      return lu.setUint8(0, uu.kind), lu.setUint8(1, uu.index), lu.setUint8(2, Eu), lu.setUint32(4, uu.word, !0), lu.setUint32(8, null !== (su = null === ju || void 0 === ju ? void 0 : ju.id) && void 0 !== su ? su : 0, !0), lu.setUint16(12, Math.min(null !== (Uu = null === ju || void 0 === ju ? void 0 : ju.width) && void 0 !== Uu ? Uu : 0, 65535), !0), lu.setUint16(14, Math.min(null !== (Zu = null === ju || void 0 === ju ? void 0 : ju.height) && void 0 !== Zu ? Zu : 0, 65535), !0), Xu
     }
-    const Jt = 1179937895,
-      Ct = 1313821514,
-      ut = 5130562;
+    const eu = 1179937895,
+      Gu = 1313821514,
+      pu = 5130562;
 
-    function Kt(tt) {
-      var et;
-      const Vt = new DataView(tt.buffer, tt.byteOffset, tt.byteLength);
-      if (tt.byteLength < 20 || Vt.getUint32(0, !0) !== Jt || Vt.getUint32(16, !0) !== Ct) return [];
-      let Ot, qt = 20 + Vt.getUint32(12, !0);
+    function wu(uu) {
+      var Eu;
+      const ju = new DataView(uu.buffer, uu.byteOffset, uu.byteLength);
+      if (uu.byteLength < 20 || ju.getUint32(0, !0) !== eu || ju.getUint32(16, !0) !== Gu) return [];
+      let su, Uu = 20 + ju.getUint32(12, !0);
       try {
-        Ot = JSON.parse((new TextDecoder).decode(tt.subarray(20, qt)))
+        su = JSON.parse((new TextDecoder).decode(uu.subarray(20, Uu)))
       } catch {
         return []
       }
-      for (; qt + 8 <= tt.byteLength && Vt.getUint32(qt + 4, !0) !== ut;) qt += 8 + Vt.getUint32(qt, !0);
-      const Dt = null !== (et = Ot.images) && void 0 !== et ? et : [];
-      if (0 === Dt.length || qt + 8 > tt.byteLength) return Dt.map((() => null));
-      const mt = tt.subarray(qt + 8, Math.min(tt.byteLength, qt + 8 + Vt.getUint32(qt, !0)));
-      return Dt.map((tt => {
-        var et, Vt, qt;
-        const Dt = void 0 === tt.bufferView || null === (et = Ot.bufferViews) || void 0 === et ? void 0 : et[tt.bufferView];
-        if (!Dt || 0 !== (null !== (Vt = Dt.buffer) && void 0 !== Vt ? Vt : 0) || void 0 === Dt.byteLength) return null;
-        const dt = null !== (qt = Dt.byteOffset) && void 0 !== qt ? qt : 0,
-          jt = dt + Dt.byteLength;
-        return jt <= mt.byteLength ? mt.slice(dt, jt) : null
+      for (; Uu + 8 <= uu.byteLength && ju.getUint32(Uu + 4, !0) !== pu;) Uu += 8 + ju.getUint32(Uu, !0);
+      const Zu = null !== (Eu = su.images) && void 0 !== Eu ? Eu : [];
+      if (0 === Zu.length || Uu + 8 > uu.byteLength) return Zu.map((() => null));
+      const Xu = uu.subarray(Uu + 8, Math.min(uu.byteLength, Uu + 8 + ju.getUint32(Uu, !0)));
+      return Zu.map((uu => {
+        var Eu, ju, Uu;
+        const Zu = void 0 === uu.bufferView || null === (Eu = su.bufferViews) || void 0 === Eu ? void 0 : Eu[uu.bufferView];
+        if (!Zu || 0 !== (null !== (ju = Zu.buffer) && void 0 !== ju ? ju : 0) || void 0 === Zu.byteLength) return null;
+        const lu = null !== (Uu = Zu.byteOffset) && void 0 !== Uu ? Uu : 0,
+          qu = lu + Zu.byteLength;
+        return qu <= Xu.byteLength ? Xu.slice(lu, qu) : null
       }))
     }
   },
-  40858: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => mt,
-      i: () => Dt,
-      j: () => qt
+  40914: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => Xu,
+      h: () => Zu,
+      i: () => Uu
     });
-    let Ot = null;
+    let su = null;
 
-    function qt(tt) {
-      Ot = tt
+    function Uu(uu) {
+      su = uu
     }
 
-    function Dt(tt) {
-      Ot === tt && (Ot = null)
+    function Zu(uu) {
+      su === uu && (su = null)
     }
 
-    function mt() {
-      var tt;
-      null === (tt = Ot) || void 0 === tt || tt()
+    function Xu() {
+      var uu;
+      null === (uu = su) || void 0 === uu || uu()
     }
   },
-  36839: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => Xt,
-      e: () => lt,
-      h: () => Nt,
-      j: () => Ht
+  36981: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => Cu,
+      h: () => cu,
+      j: () => Du,
+      n: () => fu
     });
-    var Ot = Vt(26),
-      qt = Vt(2458),
-      Dt = Vt(2465),
-      mt = Vt(2471),
-      dt = Vt(2569),
-      jt = Vt(31);
+    var su = ju(22),
+      Uu = ju(2516),
+      Zu = ju(2519),
+      Xu = ju(2522),
+      lu = ju(2610),
+      qu = ju(24);
 
-    function Ht(tt, et) {
-      return (!(0, mt.e)() || 0 === tt && 0 === et) && (0, Dt.w)(qt.g.Joystick, 0, tt, et, 0)
+    function fu(uu, Eu) {
+      return (!(0, Xu.e)() || 0 === uu && 0 === Eu) && (0, Zu.v)(Uu.h.Joystick, 0, uu, Eu, 0)
     }
-    const Xt = {
+    const Cu = {
       Action1: 1,
       Action2: 2,
       Action3: 3,
@@ -1353,571 +1353,571 @@ export const modules = {
       Boost: 7
     };
 
-    function Qt(tt) {
-      return tt.classList.contains("TouchKeyHit") && Et() ? null : tt.firstElementChild
+    function bu(uu) {
+      return uu.classList.contains("TouchKeyHit") && Nu() ? null : uu.firstElementChild
     }
 
-    function lt(tt) {
-      return tt.classList.contains("TouchKeyHit") && !tt.classList.contains("CanvasZone") ? {
-        whole: !Et(),
+    function cu(uu) {
+      return uu.classList.contains("TouchKeyHit") && !uu.classList.contains("CanvasZone") ? {
+        whole: !Nu(),
         keyBox: null
       } : {
         whole: !1,
-        keyBox: ft(Qt(tt))
+        keyBox: Ou(bu(uu))
       }
     }
 
-    function Et() {
-      return document.documentElement.classList.contains(dt.m)
+    function Nu() {
+      return document.documentElement.classList.contains(lu.i)
     }
 
-    function ft(tt) {
-      return !(tt instanceof HTMLElement) || tt.offsetWidth <= 0 || tt.offsetHeight <= 0 ? null : {
-        width: tt.offsetWidth,
-        height: tt.offsetHeight
+    function Ou(uu) {
+      return !(uu instanceof HTMLElement) || uu.offsetWidth <= 0 || uu.offsetHeight <= 0 ? null : {
+        width: uu.offsetWidth,
+        height: uu.offsetHeight
       }
     }
 
-    function wt(tt, et) {
-      const Vt = tt => Math.min(65535, Math.round(4 * tt));
-      return (Vt(tt) | Vt(et) << 16) >>> 0
+    function Yu(uu, Eu) {
+      const ju = uu => Math.min(65535, Math.round(4 * uu));
+      return (ju(uu) | ju(Eu) << 16) >>> 0
     }
 
-    function yt(tt) {
+    function hu(uu) {
       return {
-        x: tt.left + tt.width / 2,
-        y: tt.top + tt.height / 2,
-        radius: Math.min(tt.width, tt.height) / 2
+        x: uu.left + uu.width / 2,
+        y: uu.top + uu.height / 2,
+        radius: Math.min(uu.width, uu.height) / 2
       }
     }
-    const Nt = new class {
-      constructor(tt) {
-        this.write = tt, this.elements = new Map, this.canvasLeft = 0, this.canvasTop = 0
+    const Du = new class {
+      constructor(uu) {
+        this.write = uu, this.elements = new Map, this.canvasLeft = 0, this.canvasTop = 0
       }
-      set(tt, et) {
-        let Vt = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        et ? this.elements.set(tt, {
-          element: et,
-          hidden: Vt
-        }) : this.elements.delete(tt), this.measureOne(tt)
+      set(uu, Eu) {
+        let ju = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        Eu ? this.elements.set(uu, {
+          element: Eu,
+          hidden: ju
+        }) : this.elements.delete(uu), this.measureOne(uu)
       }
       measure() {
-        let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
           left: this.canvasLeft,
           top: this.canvasTop
         };
-        this.canvasLeft = tt.left, this.canvasTop = tt.top;
-        for (const et of this.elements.keys()) this.measureOne(et)
+        this.canvasLeft = uu.left, this.canvasTop = uu.top;
+        for (const Eu of this.elements.keys()) this.measureOne(Eu)
       }
-      hitZone(tt, et) {
-        let Vt = null,
-          Ot = 1;
-        for (const qt of this.elements.keys()) {
-          const Dt = this.shown(qt);
-          if (!Dt) continue;
+      hitZone(uu, Eu) {
+        let ju = null,
+          su = 1;
+        for (const Uu of this.elements.keys()) {
+          const Zu = this.shown(Uu);
+          if (!Zu) continue;
           const {
-            rect: mt,
-            element: dt
-          } = Dt, jt = yt(mt), Ht = Math.max(0, mt.width / 2 - jt.radius), Xt = Math.max(0, mt.height / 2 - jt.radius), lt = Math.max(0, Math.abs(tt - jt.x) - Ht), Et = Math.max(0, Math.abs(et - jt.y) - Xt), wt = dt.firstElementChild;
-          let Nt = Math.hypot(lt, Et) / jt.radius;
-          const Mt = ft(Qt(dt));
-          Mt && (Nt = Math.min(Nt, Math.max(2 * Math.abs(tt - jt.x) / Mt.width, 2 * Math.abs(et - jt.y) / Mt.height))), Nt < Ot && (Vt = {
-            code: qt,
-            element: dt,
-            key: wt,
-            ...jt
-          }, Ot = Nt)
+            rect: Xu,
+            element: lu
+          } = Zu, qu = hu(Xu), fu = Math.max(0, Xu.width / 2 - qu.radius), Cu = Math.max(0, Xu.height / 2 - qu.radius), cu = Math.max(0, Math.abs(uu - qu.x) - fu), Nu = Math.max(0, Math.abs(Eu - qu.y) - Cu), Yu = lu.firstElementChild;
+          let Du = Math.hypot(cu, Nu) / qu.radius;
+          const gu = Ou(bu(lu));
+          gu && (Du = Math.min(Du, Math.max(2 * Math.abs(uu - qu.x) / gu.width, 2 * Math.abs(Eu - qu.y) / gu.height))), Du < su && (ju = {
+            code: Uu,
+            element: lu,
+            key: Yu,
+            ...qu
+          }, su = Du)
         }
-        return Vt
+        return ju
       }
-      measureOne(tt) {
-        const et = this.shown(tt);
-        if (!et) return void this.write(qt.g.TouchZone, tt, 0, 0, 0);
+      measureOne(uu) {
+        const Eu = this.shown(uu);
+        if (!Eu) return void this.write(Uu.h.TouchZone, uu, 0, 0, 0);
         const {
-          rect: Vt,
-          element: Ot
-        } = et, Dt = yt(Vt);
-        this.write(qt.g.TouchZone, tt, Dt.x - this.canvasLeft, Dt.y - this.canvasTop, wt(Vt.width, Vt.height));
-        const mt = ft(Qt(Ot));
-        this.write(qt.g.TouchZone, 256 | tt, 0, 0, mt ? wt(mt.width, mt.height) : 0)
+          rect: ju,
+          element: su
+        } = Eu, Zu = hu(ju);
+        this.write(Uu.h.TouchZone, uu, Zu.x - this.canvasLeft, Zu.y - this.canvasTop, Yu(ju.width, ju.height));
+        const Xu = Ou(bu(su));
+        this.write(Uu.h.TouchZone, 256 | uu, 0, 0, Xu ? Yu(Xu.width, Xu.height) : 0)
       }
-      shown(tt) {
-        const et = this.elements.get(tt),
-          Vt = Ot.b.get("worldPanelHud");
-        if (!et || et.hidden || "none" === Vt) return null;
-        const qt = et.element.getBoundingClientRect();
-        return qt.width <= 0 || qt.height <= 0 ? null : {
-          rect: qt,
-          element: et.element
+      shown(uu) {
+        const Eu = this.elements.get(uu),
+          ju = su.d.get("worldPanelHud");
+        if (!Eu || Eu.hidden || "none" === ju) return null;
+        const Uu = Eu.element.getBoundingClientRect();
+        return Uu.width <= 0 || Uu.height <= 0 ? null : {
+          rect: Uu,
+          element: Eu.element
         }
       }
-    }(Dt.w);
-    (0, jt.n)(dt.h, (() => {
-      Nt.measure()
+    }(Zu.v);
+    (0, qu.l)(lu.d, (() => {
+      Du.measure()
     }))
   },
-  40895: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => jt,
-      d: () => Ht
+  40955: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => qu,
+      h: () => fu
     });
-    var Ot = Vt(41025),
-      qt = Vt(39257),
-      Dt = Vt(36701),
-      mt = Vt(40903),
-      dt = Vt(40882);
-    const jt = Ot.d.timeForPlayerToConnect - 1e4;
-    async function Ht(tt, et, Vt, Ot) {
-      let jt;
+    var su = ju(41075),
+      Uu = ju(39367),
+      Zu = ju(36850),
+      Xu = ju(40960),
+      lu = ju(40935);
+    const qu = su.e.timeForPlayerToConnect - 1e4;
+    async function fu(uu, Eu, ju, su) {
+      let qu;
       try {
-        jt = await tt.getTrafficCode()
-      } catch (ft) {
-        throw console.error("[bloxd-wasm-client] could not get a traffic code", ft), new dt.z(ft)
+        qu = await uu.getTrafficCode()
+      } catch (Ou) {
+        throw console.error("[bloxd-wasm-client] could not get a traffic code", Ou), new lu.w(Ou)
       }
       const {
-        gameNameWithVariation: Ht,
-        lobbyName: Xt
-      } = et, Qt = () => {
-        const et = (0, Dt.e)(tt, Ht, Xt, jt, (tt => {
-          var et;
-          return null !== (et = null === Vt || void 0 === Vt ? void 0 : Vt.isUsingCustomGameTexturePack(tt)) && void 0 !== et && et
+        gameNameWithVariation: fu,
+        lobbyName: Cu
+      } = Eu, bu = () => {
+        const Eu = (0, Zu.f)(uu, fu, Cu, qu, (uu => {
+          var Eu;
+          return null !== (Eu = null === ju || void 0 === ju ? void 0 : ju.isUsingCustomGameTexturePack(uu)) && void 0 !== Eu && Eu
         }));
-        et.joinOptions.wasmClient = !0;
-        const qt = (0, mt.H)();
-        return null !== qt && (et.joinOptions.renderBackend = qt), et.joinOptions.joinAdHold = Ot, et
+        Eu.joinOptions.wasmClient = !0;
+        const Uu = (0, Xu.D)();
+        return null !== Uu && (Eu.joinOptions.renderBackend = Uu), Eu.joinOptions.joinAdHold = su, Eu
       }, {
-        roomName: lt,
-        joinOptions: Et
-      } = Qt();
+        roomName: cu,
+        joinOptions: Nu
+      } = bu();
       return {
-        endpoint: et.endpoint,
-        roomName: lt,
-        joinOptions: Et,
+        endpoint: Eu.endpoint,
+        roomName: cu,
+        joinOptions: Nu,
         session: {
-          gameNameWithVariation: Ht,
-          lobbyName: Xt,
-          playerDbId: tt.whamm
+          gameNameWithVariation: fu,
+          lobbyName: Cu,
+          playerDbId: uu.whamm
         },
-        optionsAfterRefusal: async et => await (0, qt.b)(tt, et) ? Qt().joinOptions : null
+        optionsAfterRefusal: async Eu => await (0, Uu.e)(uu, Eu) ? bu().joinOptions : null
       }
     }
   },
-  41154: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => Xt,
-      c: () => Dt,
-      d: () => Qt,
-      h: () => mt
+  41176: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => Cu,
+      g: () => Zu,
+      j: () => bu,
+      m: () => Xu
     });
-    var Ot = Vt(41127),
-      qt = Vt(40985);
-    const Dt = new class {
+    var su = ju(41156),
+      Uu = ju(41040);
+    const Zu = new class {
       constructor() {
         this.page = null, this.session = void 0, this.follower = null, this.isWanted = !1, this.listeners = new Set, this.pageListeners = new Set, this.wantedListeners = new Set
       }
       get current() {
         return void 0 === this.session ? this.page : this.session
       }
-      setPageFiles(tt) {
+      setPageFiles(uu) {
         this.change((() => {
-          this.page = tt
+          this.page = uu
         }))
       }
-      setSessionFiles(tt) {
-        const et = void 0 !== this.session && void 0 === tt;
+      setSessionFiles(uu) {
+        const Eu = void 0 !== this.session && void 0 === uu;
         if (this.change((() => {
-            this.session = tt
-          })), et)
-          for (const Vt of [...this.pageListeners]) Vt()
+            this.session = uu
+          })), Eu)
+          for (const ju of [...this.pageListeners]) ju()
       }
       showsPage() {
         return void 0 === this.session
       }
-      onPageShown(tt) {
-        return this.pageListeners.add(tt), () => {
-          this.pageListeners.delete(tt)
+      onPageShown(uu) {
+        return this.pageListeners.add(uu), () => {
+          this.pageListeners.delete(uu)
         }
       }
-      setFollower(tt) {
-        this.follower = tt, this.startFollower()
+      setFollower(uu) {
+        this.follower = uu, this.startFollower()
       }
       wanted() {
         this.isWanted = !0;
-        for (const tt of [...this.wantedListeners]) tt();
+        for (const uu of [...this.wantedListeners]) uu();
         this.startFollower()
       }
-      onWanted(tt) {
-        return this.wantedListeners.add(tt), () => {
-          this.wantedListeners.delete(tt)
+      onWanted(uu) {
+        return this.wantedListeners.add(uu), () => {
+          this.wantedListeners.delete(uu)
         }
       }
-      onChange(tt) {
-        return this.listeners.add(tt), () => {
-          this.listeners.delete(tt)
+      onChange(uu) {
+        return this.listeners.add(uu), () => {
+          this.listeners.delete(uu)
         }
       }
       startFollower() {
-        const tt = this.follower;
-        this.isWanted && null !== tt && (this.follower = null, tt((() => {
-          this.follower = tt
+        const uu = this.follower;
+        this.isWanted && null !== uu && (this.follower = null, uu((() => {
+          this.follower = uu
         })))
       }
-      change(tt) {
-        const et = this.current;
-        if (tt(), this.current !== et)
-          for (const Vt of this.listeners) Vt()
+      change(uu) {
+        const Eu = this.current;
+        if (uu(), this.current !== Eu)
+          for (const ju of this.listeners) ju()
       }
     };
 
-    function mt(tt, et) {
+    function Xu(uu, Eu) {
       return {
-        ...tt,
+        ...uu,
         armourAtlasUrl: () => {
-          var Vt, Ot;
-          return null !== (Vt = null === (Ot = et()) || void 0 === Ot ? void 0 : Ot.armourAtlasUrl()) && void 0 !== Vt ? Vt : tt.armourAtlasUrl()
+          var ju, su;
+          return null !== (ju = null === (su = Eu()) || void 0 === su ? void 0 : su.armourAtlasUrl()) && void 0 !== ju ? ju : uu.armourAtlasUrl()
         },
-        lifeformAtlasUrl: Vt => jt(et(), (tt => tt.LIFEFORM_ATLAS_PATHS[Vt]), (() => tt.lifeformAtlasUrl(Vt))),
-        groupAtlasUrl: Vt => jt(et(), (tt => tt.GROUP_ATLAS_PATHS[Vt]), (() => tt.groupAtlasUrl(Vt))),
-        particleItemUrl: Ot => Ht(et(), (async () => {
-          const tt = await Vt.e(38).then((() => Vt(51342))).catch((() => null));
-          return (null === tt || void 0 === tt ? void 0 : tt.particleItemSprite(Ot)) || null
-        }), (() => tt.particleItemUrl(Ot))),
-        blockImageUrl: Vt => Ht(et(), (async () => {
-          var tt, et;
-          return null !== (tt = null === (et = await dt()) || void 0 === et ? void 0 : et.blockImageName(Vt)) && void 0 !== tt ? tt : null
-        }), (() => tt.blockImageUrl(Vt)))
+        lifeformAtlasUrl: ju => qu(Eu(), (uu => uu.LIFEFORM_ATLAS_PATHS[ju]), (() => uu.lifeformAtlasUrl(ju))),
+        groupAtlasUrl: ju => qu(Eu(), (uu => uu.GROUP_ATLAS_PATHS[ju]), (() => uu.groupAtlasUrl(ju))),
+        particleItemUrl: su => fu(Eu(), (async () => {
+          const uu = await ju.e(38).then((() => ju(51322))).catch((() => null));
+          return (null === uu || void 0 === uu ? void 0 : uu.particleItemSprite(su)) || null
+        }), (() => uu.particleItemUrl(su))),
+        blockImageUrl: ju => fu(Eu(), (async () => {
+          var uu, Eu;
+          return null !== (uu = null === (Eu = await lu()) || void 0 === Eu ? void 0 : Eu.blockImageName(ju)) && void 0 !== uu ? uu : null
+        }), (() => uu.blockImageUrl(ju)))
       }
     }
 
-    function dt() {
-      return (0, qt.n)().catch((() => null))
+    function lu() {
+      return (0, Uu.g)().catch((() => null))
     }
 
-    function jt(tt, et, Vt) {
-      return Ht(tt, (async () => {
-        var tt;
-        const Vt = await dt(),
-          Ot = null === Vt ? null : et(Vt),
-          qt = null !== (tt = null === Ot || void 0 === Ot ? void 0 : Ot.slice(Ot.lastIndexOf("/") + 1)) && void 0 !== tt ? tt : null;
-        return "Player_Atlas" === qt ? null : qt
-      }), Vt)
+    function qu(uu, Eu, ju) {
+      return fu(uu, (async () => {
+        var uu;
+        const ju = await lu(),
+          su = null === ju ? null : Eu(ju),
+          Uu = null !== (uu = null === su || void 0 === su ? void 0 : su.slice(su.lastIndexOf("/") + 1)) && void 0 !== uu ? uu : null;
+        return "Player_Atlas" === Uu ? null : Uu
+      }), ju)
     }
-    async function Ht(tt, et, Vt) {
-      if (null !== tt) {
-        const Vt = await et(),
-          Ot = null === Vt ? null : tt.textureUrl(Vt);
-        if (null !== Ot) return Ot
+    async function fu(uu, Eu, ju) {
+      if (null !== uu) {
+        const ju = await Eu(),
+          su = null === ju ? null : uu.textureUrl(ju);
+        if (null !== su) return su
       }
-      return Vt()
+      return ju()
     }
-    const Xt = 0;
+    const Cu = 0;
 
-    function Qt(tt) {
-      const et = [Ot.h.ArmourAtlas, Ot.h.LifeformAtlas, Ot.h.GroupAtlas, Ot.h.BlockImage, Ot.h.Particle];
-      tt.reload(et, (tt => {
-        switch (tt.kind) {
-          case Ot.h.Particle:
-            return tt.index === Ot.k.Item;
-          case Ot.h.LifeformAtlas:
-            return tt.word !== Xt;
+    function bu(uu) {
+      const Eu = [su.h.ArmourAtlas, su.h.LifeformAtlas, su.h.GroupAtlas, su.h.BlockImage, su.h.Particle];
+      uu.reload(Eu, (uu => {
+        switch (uu.kind) {
+          case su.h.Particle:
+            return uu.index === su.j.Item;
+          case su.h.LifeformAtlas:
+            return uu.word !== Cu;
           default:
             return !0
         }
       }))
     }
   },
-  41031: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => Ot,
-      e: () => dt,
-      f: () => mt,
-      h: () => qt,
-      l: () => Dt
+  41079: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => su,
+      f: () => lu,
+      j: () => Xu,
+      m: () => Uu,
+      p: () => Zu
     });
-    const Ot = 1e3;
+    const su = 1e3;
 
-    function qt() {
-      jt((() => {
+    function Uu() {
+      qu((() => {
         window.location.reload()
       }))
     }
 
-    function Dt() {
+    function Zu() {
       return new Promise((() => {}))
     }
 
-    function mt(tt) {
-      jt((() => {
-        window.location.replace(tt(window.location.href))
+    function Xu(uu) {
+      qu((() => {
+        window.location.replace(uu(window.location.href))
       }))
     }
 
-    function dt(tt) {
-      Promise.resolve().then((() => Vt(121))).then((et => {
+    function lu(uu) {
+      Promise.resolve().then((() => ju(103))).then((Eu => {
         let {
-          currentUrl: Vt
-        } = et;
-        mt((() => Vt.mergeSearchParamsInto(tt)))
+          currentUrl: ju
+        } = Eu;
+        Xu((() => ju.mergeSearchParamsInto(uu)))
       }), (() => {
-        mt((() => tt))
+        Xu((() => uu))
       }))
     }
 
-    function jt(tt) {
-      null !== window.onbeforeunload ? Promise.resolve().then((() => Vt(1826))).then((et => {
+    function qu(uu) {
+      null !== window.onbeforeunload ? Promise.resolve().then((() => ju(1779))).then((Eu => {
         let {
-          prepareForUnloadWithoutConfirmation: Vt
-        } = et;
+          prepareForUnloadWithoutConfirmation: ju
+        } = Eu;
         try {
-          Vt()
-        } catch (Ot) {
-          console.warn("[bloxd-wasm-client] prepareForUnloadWithoutConfirmation threw: leaving plainly", Ot), window.onbeforeunload = null
+          ju()
+        } catch (su) {
+          console.warn("[bloxd-wasm-client] prepareForUnloadWithoutConfirmation threw: leaving plainly", su), window.onbeforeunload = null
         }
-        tt()
+        uu()
       }), (() => {
-        window.onbeforeunload = null, tt()
-      })) : tt()
+        window.onbeforeunload = null, uu()
+      })) : uu()
     }
   },
-  5243: (tt, et, Vt) => {
-    function Ot(tt, et) {
-      return qt(tt, et)
+  5230: (uu, Eu, ju) => {
+    function su(uu, Eu) {
+      return Uu(uu, Eu)
     }
 
-    function qt(tt, et) {
-      if (tt === et) return !0;
-      if ("object" !== typeof tt || "object" !== typeof et || null === tt || null === et || Array.isArray(tt) !== Array.isArray(et)) return !1;
-      const Vt = tt,
-        Ot = et,
-        Dt = Object.keys(Vt);
-      return Dt.length === Object.keys(Ot).length && Dt.every((tt => Object.prototype.hasOwnProperty.call(Ot, tt) && qt(Vt[tt], Ot[tt])))
+    function Uu(uu, Eu) {
+      if (uu === Eu) return !0;
+      if ("object" !== typeof uu || "object" !== typeof Eu || null === uu || null === Eu || Array.isArray(uu) !== Array.isArray(Eu)) return !1;
+      const ju = uu,
+        su = Eu,
+        Zu = Object.keys(ju);
+      return Zu.length === Object.keys(su).length && Zu.every((uu => Object.prototype.hasOwnProperty.call(su, uu) && Uu(ju[uu], su[uu])))
     }
-    Vt.d(et, {
-      e: () => Ot
+    ju.d(Eu, {
+      c: () => su
     })
   },
-  41095: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => ut,
-      d: () => Jt,
-      h: () => wt,
-      i: () => ft
+  41135: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => pu,
+      i: () => eu,
+      j: () => Yu,
+      l: () => Ou
     });
-    var Ot = Vt(1908),
-      qt = Vt(1298),
-      Dt = Vt(39249),
-      mt = Vt(36738),
-      dt = Vt(39271),
-      jt = Vt(40882);
-    const Ht = {
+    var su = ju(1866),
+      Uu = ju(1259),
+      Zu = ju(39362),
+      Xu = ju(36870),
+      lu = ju(39375),
+      qu = ju(40935);
+    const fu = {
         "X-Requested-With": "XMLHtttpRequest"
       },
-      Xt = 3,
-      Qt = [500, 1500];
+      Cu = 3,
+      bu = [500, 1500];
 
-    function lt(tt) {
-      const et = new URL(tt);
+    function cu(uu) {
+      const Eu = new URL(uu);
       return {
-        secure: "https:" === et.protocol || "wss:" === et.protocol,
-        host: et.host,
-        pathname: et.pathname.replace(/\/+$/, ""),
-        search: et.searchParams.toString()
+        secure: "https:" === Eu.protocol || "wss:" === Eu.protocol,
+        host: Eu.host,
+        pathname: Eu.pathname.replace(/\/+$/, ""),
+        search: Eu.searchParams.toString()
       }
     }
 
-    function Et(tt, et, Vt) {
+    function Nu(uu, Eu, ju) {
       const {
-        secure: Ot,
-        host: qt,
-        pathname: Dt,
-        search: mt
-      } = lt(tt);
-      return `${Ot?"https":"http"}://${qt}${Dt}/matchmake/${et}/${encodeURIComponent(Vt)}${mt?`?${mt}`:""}`
+        secure: su,
+        host: Uu,
+        pathname: Zu,
+        search: Xu
+      } = cu(uu);
+      return `${su?"https":"http"}://${Uu}${Zu}/matchmake/${Eu}/${encodeURIComponent(ju)}${Xu?`?${Xu}`:""}`
     }
 
-    function ft(tt, et) {
-      var Vt;
-      const Ot = null !== (Vt = et.protocol) && void 0 !== Vt ? Vt : "ws";
-      if ("ws" !== Ot) throw new Error(`seat reservation asks for the ${Ot} transport`);
+    function Ou(uu, Eu) {
+      var ju;
+      const su = null !== (ju = Eu.protocol) && void 0 !== ju ? ju : "ws";
+      if ("ws" !== su) throw new Error(`seat reservation asks for the ${su} transport`);
       const {
-        secure: qt,
-        host: Dt,
-        pathname: mt,
-        search: dt
-      } = lt(tt), jt = new URLSearchParams(dt);
-      jt.append("sessionId", et.sessionId), et.reconnectionToken && jt.append("reconnectionToken", et.reconnectionToken);
-      return `${qt?"wss":"ws"}://${et.room.publicAddress||`${Dt}${mt}`}/${et.room.processId}/${et.room.roomId}?${jt.toString()}`
+        secure: Uu,
+        host: Zu,
+        pathname: Xu,
+        search: lu
+      } = cu(uu), qu = new URLSearchParams(lu);
+      qu.append("sessionId", Eu.sessionId), Eu.reconnectionToken && qu.append("reconnectionToken", Eu.reconnectionToken);
+      return `${Uu?"wss":"ws"}://${Eu.room.publicAddress||`${Zu}${Xu}`}/${Eu.room.processId}/${Eu.room.roomId}?${qu.toString()}`
     }
-    async function wt(tt, et, Vt) {
-      var dt;
-      let Ht = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const lt = null !== (dt = Ht.sleep) && void 0 !== dt ? dt : Ot.d,
-        ft = new qt.d(Ht.signal),
-        wt = new mt.b((() => {
-          (0, qt.j)(ft.controller, new mt.c("seat"))
+    async function Yu(uu, Eu, ju) {
+      var lu;
+      let fu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+      const cu = null !== (lu = fu.sleep) && void 0 !== lu ? lu : su.b,
+        Ou = new Uu.d(fu.signal),
+        Yu = new Xu.d((() => {
+          (0, Uu.j)(Ou.controller, new Xu.g("seat"))
         })),
         {
-          signal: bt
-        } = ft;
+          signal: Mu
+        } = Ou;
       try {
-        const Ot = await (0, Dt.g)((() => async function(tt, et, Vt, Ot) {
-          var Dt;
+        const su = await (0, Zu.e)((() => async function(uu, Eu, ju, su) {
+          var Zu;
           const {
-            signal: mt,
-            sleep: dt
-          } = Ot, Ht = Et(tt, "joinOrCreate", et), lt = JSON.stringify(Vt);
-          let ft = null;
-          for (let Et = 0; Et < Xt; Et++) {
-            var wt;
-            if (Et > 0) await dt(null !== (wt = Qt[Et - 1]) && void 0 !== wt ? wt : 1500, mt);
-            let tt;
-            (0, qt.n)(mt);
+            signal: Xu,
+            sleep: lu
+          } = su, fu = Nu(uu, "joinOrCreate", Eu), cu = JSON.stringify(ju);
+          let Ou = null;
+          for (let Nu = 0; Nu < Cu; Nu++) {
+            var Yu;
+            if (Nu > 0) await lu(null !== (Yu = bu[Nu - 1]) && void 0 !== Yu ? Yu : 1500, Xu);
+            let uu;
+            (0, Uu.n)(Xu);
             try {
-              tt = await Nt(Ht, lt, Ot)
-            } catch (bt) {
-              (0, qt.n)(mt), ft = yt(bt);
+              uu = await Du(fu, cu, su)
+            } catch (Mu) {
+              (0, Uu.n)(Xu), Ou = hu(Mu);
               continue
             }
             const {
-              response: et,
-              answer: Vt,
-              refusal: Dt,
-              lost: Xt
-            } = tt;
-            if (null === Xt) {
-              if (null !== Dt) throw Mt(Dt, Vt);
-              if (et.ok && null !== Vt && Kt(Vt)) return Vt;
-              ft = new jt.w(`seat request answered HTTP ${et.status}${null===Vt?" without JSON":" without a seat"}`, !1, void 0, et.status)
-            } else ft = yt(Xt.error)
+              response: Eu,
+              answer: ju,
+              refusal: Zu,
+              lost: Cu
+            } = uu;
+            if (null === Cu) {
+              if (null !== Zu) throw gu(Zu, ju);
+              if (Eu.ok && null !== ju && wu(ju)) return ju;
+              Ou = new qu.u(`seat request answered HTTP ${Eu.status}${null===ju?" without JSON":" without a seat"}`, !1, void 0, Eu.status)
+            } else Ou = hu(Cu.error)
           }
-          throw null !== (Dt = ft) && void 0 !== Dt ? Dt : new jt.w("seat request made no attempt", !1)
-        }(tt, et, Vt, {
-          ...Ht,
-          signal: bt,
-          sleep: lt
-        })), bt, lt);
-        return wt.answered(), Ot
+          throw null !== (Zu = Ou) && void 0 !== Zu ? Zu : new qu.u("seat request made no attempt", !1)
+        }(uu, Eu, ju, {
+          ...fu,
+          signal: Mu,
+          sleep: cu
+        })), Mu, cu);
+        return Yu.answered(), su
       } finally {
-        wt.stop(), ft.unfollow()
+        Yu.stop(), Ou.unfollow()
       }
     }
 
-    function yt(tt) {
-      return new jt.w(tt instanceof Error ? tt.message : String(tt), !0, tt)
+    function hu(uu) {
+      return new qu.u(uu instanceof Error ? uu.message : String(uu), !0, uu)
     }
-    async function Nt(tt, et, Vt) {
-      var Ot;
+    async function Du(uu, Eu, ju) {
+      var su;
       const {
-        signal: Dt
-      } = Vt, mt = null !== (Ot = Vt.fetch) && void 0 !== Ot ? Ot : fetch, dt = await mt(tt, {
+        signal: Zu
+      } = ju, Xu = null !== (su = ju.fetch) && void 0 !== su ? su : fetch, lu = await Xu(uu, {
         method: "POST",
         headers: {
-          ...Ht,
+          ...fu,
           Accept: "application/json",
           "Content-Type": "application/json"
         },
-        body: et,
+        body: Eu,
         credentials: "include",
-        signal: Dt
+        signal: Zu
       }), {
-        answer: jt,
-        lost: Xt
-      } = await async function(tt) {
+        answer: qu,
+        lost: Cu
+      } = await async function(uu) {
         try {
-          const et = await tt.json();
+          const Eu = await uu.json();
           return {
-            answer: "object" === typeof et && null !== et ? et : null,
+            answer: "object" === typeof Eu && null !== Eu ? Eu : null,
             lost: null
           }
-        } catch (et) {
+        } catch (Eu) {
           return {
             answer: null,
-            lost: et instanceof SyntaxError ? null : {
-              error: et
+            lost: Eu instanceof SyntaxError ? null : {
+              error: Eu
             }
           }
         }
-      }(dt), Qt = null !== jt && "string" === typeof jt.error ? jt.error : null;
-      var lt;
-      null !== Qt && (null === (lt = Vt.onRefusal) || void 0 === lt || lt.call(Vt));
-      return (0, qt.n)(Dt), {
-        response: dt,
-        answer: jt,
-        refusal: Qt,
-        lost: Xt
+      }(lu), bu = null !== qu && "string" === typeof qu.error ? qu.error : null;
+      var cu;
+      null !== bu && (null === (cu = ju.onRefusal) || void 0 === cu || cu.call(ju));
+      return (0, Uu.n)(Zu), {
+        response: lu,
+        answer: qu,
+        refusal: bu,
+        lost: Cu
       }
     }
 
-    function Mt(tt, et) {
-      return new jt.n(tt, "number" === typeof(null === et || void 0 === et ? void 0 : et.code) ? et.code : 0, (0, dt.q)(tt).text)
+    function gu(uu, Eu) {
+      return new qu.o(uu, "number" === typeof(null === Eu || void 0 === Eu ? void 0 : Eu.code) ? Eu.code : 0, (0, lu.n)(uu).text)
     }
-    class bt extends Error {
-      constructor(tt, et) {
-        super(tt), this.code = et, this.name = "SeatHttpError"
+    class Mu extends Error {
+      constructor(uu, Eu) {
+        super(uu), this.code = Eu, this.name = "SeatHttpError"
       }
     }
-    async function Jt(tt, et, Vt) {
-      let Ot = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    async function eu(uu, Eu, ju) {
+      let su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
       const {
-        response: qt,
-        answer: Dt,
-        refusal: mt,
-        lost: dt
-      } = await Nt(Et(tt, "reconnect", et), JSON.stringify({
-        reconnectionToken: Vt
-      }), Ot);
-      if (null !== dt) throw dt.error;
-      if (!qt.ok) {
-        const tt = null !== Dt && "number" === typeof Dt.code && 0 !== Dt.code ? Dt.code : qt.status;
-        throw new bt(`the seat's reconnect was refused: ${null!==mt&&void 0!==mt?mt:`HTTP ${qt.status}`}`, tt)
+        response: Uu,
+        answer: Zu,
+        refusal: Xu,
+        lost: lu
+      } = await Du(Nu(uu, "reconnect", Eu), JSON.stringify({
+        reconnectionToken: ju
+      }), su);
+      if (null !== lu) throw lu.error;
+      if (!Uu.ok) {
+        const uu = null !== Zu && "number" === typeof Zu.code && 0 !== Zu.code ? Zu.code : Uu.status;
+        throw new Mu(`the seat's reconnect was refused: ${null!==Xu&&void 0!==Xu?Xu:`HTTP ${Uu.status}`}`, uu)
       }
-      if (null !== mt) throw Mt(mt, Dt);
-      if (null === Dt || !Kt(Dt)) throw new Error("the seat's reconnect answered " + (null === Dt ? "without JSON" : "without a seat"));
+      if (null !== Xu) throw gu(Xu, Zu);
+      if (null === Zu || !wu(Zu)) throw new Error("the seat's reconnect answered " + (null === Zu ? "without JSON" : "without a seat"));
       return {
-        ...Dt,
-        reconnectionToken: Vt
+        ...Zu,
+        reconnectionToken: ju
       }
     }
-    const Ct = 10;
+    const Gu = 10;
 
-    function ut(tt) {
-      if (tt.byteLength < 2 || tt[0] !== Ct) return null;
-      const et = 2 + tt[1];
-      return et > tt.byteLength ? null : (new TextDecoder).decode(tt.subarray(2, et))
+    function pu(uu) {
+      if (uu.byteLength < 2 || uu[0] !== Gu) return null;
+      const Eu = 2 + uu[1];
+      return Eu > uu.byteLength ? null : (new TextDecoder).decode(uu.subarray(2, Eu))
     }
 
-    function Kt(tt) {
-      const et = tt.room;
-      return "string" === typeof tt.sessionId && "object" === typeof et && null !== et && "string" === typeof et.roomId && "string" === typeof et.processId && "string" === typeof et.name
+    function wu(uu) {
+      const Eu = uu.room;
+      return "string" === typeof uu.sessionId && "object" === typeof Eu && null !== Eu && "string" === typeof Eu.roomId && "string" === typeof Eu.processId && "string" === typeof Eu.name
     }
   },
-  40777: (tt, et, Vt) => {
-    Vt.d(et, {
-      D: () => Jt,
-      F: () => Ct,
-      I: () => yt,
-      J: () => Wt,
-      N: () => Pt,
-      P: () => ft,
-      Q: () => Lt,
-      S: () => Mt,
-      T: () => Nt,
-      W: () => bt,
-      _: () => ut,
-      c: () => qt,
-      f: () => Zt,
-      j: () => It,
-      l: () => Et,
-      n: () => wt,
-      o: () => ct,
-      q: () => ht,
-      s: () => St,
-      t: () => vt,
-      w: () => Kt,
-      z: () => Rt
+  40854: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      A: () => wu,
+      B: () => ku,
+      C: () => eu,
+      E: () => Gu,
+      H: () => hu,
+      K: () => au,
+      O: () => vu,
+      S: () => Ou,
+      U: () => Vu,
+      X: () => gu,
+      _: () => Du,
+      c: () => Uu,
+      cb: () => Mu,
+      g: () => Ku,
+      gb: () => pu,
+      k: () => mu,
+      m: () => Nu,
+      n: () => Yu,
+      r: () => ou,
+      s: () => Ju,
+      w: () => Pu,
+      y: () => du
     });
-    var Ot = Vt(3064);
-    const qt = {
+    var su = ju(3165);
+    const Uu = {
       Chat: 49,
       UiRequestResponded: 91,
       CodeCollab: 89,
@@ -1946,259 +1946,259 @@ export const modules = {
       LobbyManage: 96
     };
 
-    function Dt(tt, et) {
-      return !ArrayBuffer.isView(tt) || tt instanceof DataView ? Array.isArray(tt) ? tt.map((tt => et(tt))) : tt : Array.from(tt, (tt => et(tt)))
+    function Zu(uu, Eu) {
+      return !ArrayBuffer.isView(uu) || uu instanceof DataView ? Array.isArray(uu) ? uu.map((uu => Eu(uu))) : uu : Array.from(uu, (uu => Eu(uu)))
     }
 
-    function mt(tt) {
-      if ("string" !== typeof tt) return tt;
-      for (let et = 0; et < tt.length; et++) {
-        const Vt = tt.charCodeAt(et);
-        if (Vt >= 55296 && Vt <= 57343) return jt.decode(dt.encode(tt))
+    function Xu(uu) {
+      if ("string" !== typeof uu) return uu;
+      for (let Eu = 0; Eu < uu.length; Eu++) {
+        const ju = uu.charCodeAt(Eu);
+        if (ju >= 55296 && ju <= 57343) return qu.decode(lu.encode(uu))
       }
-      return tt
+      return uu
     }
-    const dt = new TextEncoder,
-      jt = new TextDecoder;
+    const lu = new TextEncoder,
+      qu = new TextDecoder;
 
-    function Ht(tt) {
-      return tt
+    function fu(uu) {
+      return uu
     }
-    let Xt;
+    let Cu;
 
-    function Qt(tt) {
-      return null === tt || "object" !== typeof tt ? tt : [mt(tt.Ed), mt(tt.fd)]
-    }
-
-    function lt(tt) {
-      return null === tt || "object" !== typeof tt ? tt : [Dt(tt.Tq, Ht), Dt(tt.Rd, Ht)]
+    function bu(uu) {
+      return null === uu || "object" !== typeof uu ? uu : [Xu(uu.ql), Xu(uu.fl)]
     }
 
-    function Et(tt) {
-      return null === (et = tt) || "object" !== typeof et ? et : [mt(et.kX), mt(et.GX)];
-      var et
+    function cu(uu) {
+      return null === uu || "object" !== typeof uu ? uu : [Zu(uu.RU, fu), Zu(uu.wl, fu)]
     }
 
-    function ft(tt) {
-      return null === (et = tt) || "object" !== typeof et ? et : [et.id, et.KX];
-      var et
+    function Nu(uu) {
+      return null === (Eu = uu) || "object" !== typeof Eu ? Eu : [Xu(Eu.VC), Xu(Eu.rC)];
+      var Eu
     }
 
-    function wt(tt) {
-      return null === (et = tt) || "object" !== typeof et ? et : [et.mD, mt(et.dD), et.jD, mt(et.QD), et.wD, et.yD, et.ZX, mt(et.LX), mt(et.FX)];
-      var et
+    function Ou(uu) {
+      return null === (Eu = uu) || "object" !== typeof Eu ? Eu : [Eu.id, Eu.eC];
+      var Eu
     }
 
-    function yt(tt) {
-      return null === (et = tt) || "object" !== typeof et ? et : [Dt(et.Od, Ht), et.qd];
-      var et
+    function Yu(uu) {
+      return null === (Eu = uu) || "object" !== typeof Eu ? Eu : [Eu.lZ, Xu(Eu.qZ), Eu.fZ, Xu(Eu.cZ), Eu.hZ, Eu.DZ, Eu.mC, Xu(Eu.vC), Xu(Eu.KC)];
+      var Eu
     }
 
-    function Nt(tt) {
-      return null === (et = tt) || "object" !== typeof et ? et : [Dt(et.nm, (tt => mt(tt))), mt(et.td), et.Vd];
-      var et
+    function hu(uu) {
+      return null === (Eu = uu) || "object" !== typeof Eu ? Eu : [Zu(Eu.RX, fu), Eu.ul];
+      var Eu
     }
 
-    function Mt(tt) {
-      return null === (et = tt) || "object" !== typeof et ? et : [Dt(et.Rj, Ht), mt(et.Ij), et.Pj];
-      var et
+    function Du(uu) {
+      return null === (Eu = uu) || "object" !== typeof Eu ? Eu : [Zu(Eu.AX, (uu => Xu(uu))), Xu(Eu.yX), Eu.zX];
+      var Eu
     }
 
-    function bt(tt) {
-      return null === (et = tt) || "object" !== typeof et ? et : [mt(et.kD), mt(et.GD)];
-      var et
+    function gu(uu) {
+      return null === (Eu = uu) || "object" !== typeof Eu ? Eu : [Zu(Eu.eq, fu), Xu(Eu.Gq), Eu.pq];
+      var Eu
     }
 
-    function Jt(tt) {
-      return null === (et = tt) || "object" !== typeof et ? et : [mt(et.rd)];
-      var et
+    function Mu(uu) {
+      return null === (Eu = uu) || "object" !== typeof Eu ? Eu : [Xu(Eu.iZ), Xu(Eu.WZ)];
+      var Eu
     }
 
-    function Ct(tt) {
-      return mt(tt)
+    function eu(uu) {
+      return null === (Eu = uu) || "object" !== typeof Eu ? Eu : [Xu(Eu.Vl)];
+      var Eu
     }
 
-    function ut(tt) {
-      return null === (et = tt) || "object" !== typeof et ? et : [mt(et.JX), mt(et.CX), mt(et.Ed), mt(et.fd)];
-      var et
+    function Gu(uu) {
+      return Xu(uu)
     }
 
-    function Kt(tt) {
-      return Qt(tt)
+    function pu(uu) {
+      return null === (Eu = uu) || "object" !== typeof Eu ? Eu : [Xu(Eu.DC), Xu(Eu.gC), Xu(Eu.ql), Xu(Eu.fl)];
+      var Eu
     }
 
-    function ht(tt) {
-      return Qt(tt)
+    function wu(uu) {
+      return bu(uu)
     }
 
-    function vt(tt) {
-      return null === (et = tt) || "object" !== typeof et ? et : [mt(et.Jj)];
-      var et
+    function Ju(uu) {
+      return bu(uu)
     }
 
-    function Wt(tt) {
-      return tt
+    function du(uu) {
+      return null === (Eu = uu) || "object" !== typeof Eu ? Eu : [Xu(Eu.bq)];
+      var Eu
     }
 
-    function St(tt) {
-      return null === (et = tt) || "object" !== typeof et ? et : [mt(et.Qd), mt(et.ld)];
-      var et
+    function au(uu) {
+      return uu
     }
 
-    function ct(tt) {
-      return mt(tt)
+    function Pu(uu) {
+      return null === (Eu = uu) || "object" !== typeof Eu ? Eu : [Xu(Eu.Xl), Xu(Eu.ll)];
+      var Eu
     }
 
-    function Rt(tt) {
-      return lt(tt)
+    function ou(uu) {
+      return Xu(uu)
     }
 
-    function It(tt) {
-      return lt(tt)
+    function ku(uu) {
+      return cu(uu)
     }
 
-    function Pt(tt) {
-      return null === (et = tt) || "object" !== typeof et ? et : [mt(et.Zj)];
-      var et
+    function mu(uu) {
+      return cu(uu)
     }
 
-    function Zt(tt) {
-      return (Xt ??= (0, Ot.e)().map((tt => tt.name)), Xt).map((et => {
-        return "string" === typeof(Vt = tt[et]) ? mt(Vt) : Dt(Vt, Ht);
-        var Vt
+    function vu(uu) {
+      return null === (Eu = uu) || "object" !== typeof Eu ? Eu : [Xu(Eu.wq)];
+      var Eu
+    }
+
+    function Ku(uu) {
+      return (Cu ??= (0, su.d)().map((uu => uu.name)), Cu).map((Eu => {
+        return "string" === typeof(ju = uu[Eu]) ? Xu(ju) : Zu(ju, fu);
+        var ju
       }))
     }
 
-    function Lt(tt) {
-      return null === (et = tt) || "object" !== typeof et ? et : [et.aj, et.Mj, et.bj];
-      var et
+    function Vu(uu) {
+      return null === (Eu = uu) || "object" !== typeof Eu ? Eu : [Eu.qq, Eu.fq, Eu.Cq];
+      var Eu
     }
   },
-  41157: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => Dt
+  41180: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => Zu
     });
-    var Ot = Vt(41159),
-      qt = Vt(41154);
-    const Dt = new class {
-      constructor(tt) {
-        this.pack = tt, this.game = void 0, this.settle = null, this.hold = null, this.endedWhileHeld = !1, this.gameListeners = new Set, tt.onWanted((() => {
+    var su = ju(41188),
+      Uu = ju(41176);
+    const Zu = new class {
+      constructor(uu) {
+        this.pack = uu, this.game = void 0, this.settle = null, this.hold = null, this.endedWhileHeld = !1, this.gameListeners = new Set, uu.onWanted((() => {
           this.release()
         }))
       }
-      setGame(tt) {
-        if (void 0 === tt && null !== this.hold) return void(this.endedWhileHeld = !0);
+      setGame(uu) {
+        if (void 0 === uu && null !== this.hold) return void(this.endedWhileHeld = !0);
         this.hold = null, this.endedWhileHeld = !1;
-        const et = this.inGame();
-        if (this.game = tt, this.update(), this.inGame() !== et)
-          for (const Vt of this.gameListeners) Vt()
+        const Eu = this.inGame();
+        if (this.game = uu, this.update(), this.inGame() !== Eu)
+          for (const ju of this.gameListeners) ju()
       }
       inGame() {
         return void 0 !== this.game
       }
-      onGameChange(tt) {
-        return this.gameListeners.add(tt), () => {
-          this.gameListeners.delete(tt)
+      onGameChange(uu) {
+        return this.gameListeners.add(uu), () => {
+          this.gameListeners.delete(uu)
         }
       }
-      unwantedLeave(tt) {
-        tt && void 0 !== this.game ? this.hold = {
+      unwantedLeave(uu) {
+        uu && void 0 !== this.game ? this.hold = {
           game: this.game
         } : this.release()
       }
       rejoinHold() {
         return this.hold
       }
-      releaseHold(tt) {
-        null !== tt && tt === this.hold && this.release()
+      releaseHold(uu) {
+        null !== uu && uu === this.hold && this.release()
       }
       release() {
         if (null === this.hold) return;
-        const tt = this.endedWhileHeld;
-        this.hold = null, this.endedWhileHeld = !1, tt && this.setGame(void 0)
+        const uu = this.endedWhileHeld;
+        this.hold = null, this.endedWhileHeld = !1, uu && this.setGame(void 0)
       }
-      setSettled(tt) {
-        this.settle = tt, this.update()
+      setSettled(uu) {
+        this.settle = uu, this.update()
       }
       update() {
-        void 0 === this.game ? this.pack.setSessionFiles(void 0) : null !== this.settle && (0, Ot.e)(this.settle.state, this.game) && this.pack.setSessionFiles(this.settle.files)
+        void 0 === this.game ? this.pack.setSessionFiles(void 0) : null !== this.settle && (0, su.c)(this.settle.state, this.game) && this.pack.setSessionFiles(this.settle.files)
       }
-    }(qt.c)
+    }(Uu.g)
   },
-  5235: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => mt,
-      f: () => dt
+  5223: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => Xu,
+      g: () => lu
     });
-    var Ot = Vt(2219),
-      qt = Vt(5243);
-    let Dt = null;
+    var su = ju(2239),
+      Uu = ju(5230);
+    let Zu = null;
 
-    function mt(tt) {
-      Dt = {
-        pack: tt.metaData.id === Ot.d ? null : tt
+    function Xu(uu) {
+      Zu = {
+        pack: uu.metaData.id === su.e ? null : uu
       }
     }
 
-    function dt(tt) {
-      return !(null === Dt || !(0, qt.e)(Dt.pack, tt)) && (Dt = null, !0)
+    function lu(uu) {
+      return !(null === Zu || !(0, Uu.c)(Zu.pack, uu)) && (Zu = null, !0)
     }
   },
-  40874: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      followPageUiPack: () => RX,
-      packForGame: () => cX,
-      playWasmGame: () => AX,
-      prefetchWasmPreviews: () => Ij,
-      setGamePackConfirm: () => AH,
-      startWasmPlay: () => FX,
-      startWasmPreviews: () => Rj
+  40930: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      followPageUiPack: () => mC,
+      packForGame: () => kC,
+      playWasmGame: () => LC,
+      prefetchWasmPreviews: () => kq,
+      setGamePackConfirm: () => Lf,
+      startWasmPlay: () => QC,
+      startWasmPreviews: () => oq
     });
-    var Ot = Vt(229),
-      qt = Vt(1333),
-      Dt = Vt(184),
-      mt = Vt(39288),
-      dt = Vt(2024),
-      jt = Vt(31),
-      Ht = Vt(4830),
-      Xt = Vt(1410),
-      Qt = Vt(1820),
-      lt = Vt(1423),
-      Et = Vt(39446),
-      ft = Vt(1397),
-      wt = Vt(1894),
-      yt = Vt(3005);
-    let Nt = null,
-      Mt = null,
-      bt = null,
-      Jt = !1;
+    var su = ju(202),
+      Uu = ju(1301),
+      Zu = ju(166),
+      Xu = ju(39392),
+      lu = ju(1986),
+      qu = ju(24),
+      fu = ju(4858),
+      Cu = ju(1362),
+      bu = ju(1767),
+      cu = ju(1369),
+      Nu = ju(39553),
+      Ou = ju(1353),
+      Yu = ju(1856),
+      hu = ju(3089);
+    let Du = null,
+      gu = null,
+      Mu = null,
+      eu = !1;
 
-    function Ct() {
-      Nt ??= performance.now()
+    function Gu() {
+      Du ??= performance.now()
     }
-    const ut = {
+    const pu = {
       ready: () => {
-        wt.c.markAdmissionAwaited()
+        Yu.e.markAdmissionAwaited()
       },
       adEnded: () => {
-        wt.c.markJoinAdEnded()
+        Yu.e.markJoinAdEnded()
       },
       admitted: () => {
-        wt.c.markAdmitted()
+        Yu.e.markAdmitted()
       }
     };
-    var Kt = Vt(39456),
-      ht = Vt(39370),
-      vt = Vt(36709),
-      Wt = Vt(39249),
-      St = Vt(9133),
-      ct = Vt(36738),
-      Rt = Vt(40880),
-      It = Vt(4951),
-      Pt = Vt(40769),
-      Zt = Vt(40853),
-      Lt = Vt(40777);
-    const Ft = {
+    var wu = ju(39561),
+      Ju = ju(39474),
+      du = ju(36856),
+      au = ju(39362),
+      Pu = ju(9128),
+      ou = ju(36870),
+      ku = ju(40932),
+      mu = ju(4962),
+      vu = ju(40847),
+      Ku = ju(40912),
+      Vu = ju(40854);
+    const ru = {
       states: {
         health: !0,
         aura: !0,
@@ -2321,355 +2321,355 @@ export const modules = {
       }
     };
 
-    function kt(tt) {
-      const et = {
-        ...Zt.e[tt]
+    function Qu(uu) {
+      const Eu = {
+        ...Ku.d[uu]
       };
-      for (const Vt of Object.keys(Ft[tt])) delete et[Vt];
-      return et
+      for (const ju of Object.keys(ru[uu])) delete Eu[ju];
+      return Eu
     }
 
-    function Gt() {
-      var tt, et;
-      return null === (tt = null === (et = (0, Pt.g)()) || void 0 === et ? void 0 : et.localPlayerAlive()) || void 0 === tt || tt
+    function iu() {
+      var uu, Eu;
+      return null === (uu = null === (Eu = (0, vu.l)()) || void 0 === Eu ? void 0 : Eu.localPlayerAlive()) || void 0 === uu || uu
     }
 
-    function zt() {
-      var tt, et;
-      return null !== (tt = null === (et = (0, Pt.g)()) || void 0 === et ? void 0 : et.localDeaths()) && void 0 !== tt ? tt : null
+    function Wu() {
+      var uu, Eu;
+      return null !== (uu = null === (Eu = (0, vu.l)()) || void 0 === Eu ? void 0 : Eu.localDeaths()) && void 0 !== uu ? uu : null
     }
-    const ot = {
-        current: Gt,
-        watch: tt => {
-          let et = Gt(),
-            Vt = zt();
-          return (0, It.p)((() => {
-            const Ot = Gt(),
-              qt = zt(),
-              Dt = null !== qt && null !== Vt && qt !== Vt;
-            Vt = qt, Dt ? (et || tt(!0), tt(!1), Ot && tt(!0), et = Ot) : Ot !== et && (et = Ot, tt(Ot))
+    const Su = {
+        current: iu,
+        watch: uu => {
+          let Eu = iu(),
+            ju = Wu();
+          return (0, mu.u)((() => {
+            const su = iu(),
+              Uu = Wu(),
+              Zu = null !== Uu && null !== ju && Uu !== ju;
+            ju = Uu, Zu ? (Eu || uu(!0), uu(!1), su && uu(!0), Eu = su) : su !== Eu && (Eu = su, uu(su))
           }))
         }
       },
-      rt = {
+      Iu = {
         states: {
-          ...kt("states"),
-          localPlayerAlive: ot
+          ...Qu("states"),
+          localPlayerAlive: Su
         },
         events: {
-          ...kt("events"),
+          ...Qu("events"),
           localPlayerAliveSet: {
-            watch: ot.watch
+            watch: Su.watch
           }
         },
         commands: {
-          ...kt("commands"),
+          ...Qu("commands"),
           respawn: () => {
-            var tt;
-            null === (tt = (0, Pt.g)()) || void 0 === tt || tt.respawn()
+            var uu;
+            null === (uu = (0, vu.l)()) || void 0 === uu || uu.respawn()
           },
-          playEmote: tt => {
-            var et;
-            null === (et = (0, Pt.g)()) || void 0 === et || et.send(Lt.c.PlayEmote, (0, Lt.D)({
-              rd: tt
+          playEmote: uu => {
+            var Eu;
+            null === (Eu = (0, vu.l)()) || void 0 === Eu || Eu.send(Vu.c.PlayEmote, (0, Vu.C)({
+              Vl: uu
             }))
           },
-          applyTemporaryThirdPerson: tt => {
-            var et;
+          applyTemporaryThirdPerson: uu => {
+            var Eu;
             let {
-              durationMs: Vt
-            } = tt;
-            null === (et = (0, Pt.g)()) || void 0 === et || et.thirdPersonFor(Vt)
+              durationMs: ju
+            } = uu;
+            null === (Eu = (0, vu.l)()) || void 0 === Eu || Eu.thirdPersonFor(ju)
           },
-          bindCustomButtonKeys: tt => {
-            var et;
-            null === (et = (0, Pt.g)()) || void 0 === et || et.bindCustomButtonKeys(tt)
+          bindCustomButtonKeys: uu => {
+            var Eu;
+            null === (Eu = (0, vu.l)()) || void 0 === Eu || Eu.bindCustomButtonKeys(uu)
           },
-          pressCustomButton: tt => {
-            var et;
+          pressCustomButton: uu => {
+            var Eu;
             let {
-              id: Vt,
-              down: Ot
-            } = tt;
-            null === (et = (0, Pt.g)()) || void 0 === et || et.pressCustomButton(Vt, Ot)
+              id: ju,
+              down: su
+            } = uu;
+            null === (Eu = (0, vu.l)()) || void 0 === Eu || Eu.pressCustomButton(ju, su)
           },
           setLookSensitivity: () => {},
-          wakeUp: tt => {
-            const et = (0, Lt.N)({
-                Zj: tt
+          wakeUp: uu => {
+            const Eu = (0, Vu.O)({
+                wq: uu
               }),
-              Vt = () => {
-                const tt = (0, Pt.g)();
-                return !(null !== tt && void 0 !== tt && tt.isSessionLive) || tt.send(Lt.c.StopSleeping, et)
+              ju = () => {
+                const uu = (0, vu.l)();
+                return !(null !== uu && void 0 !== uu && uu.isSessionLive) || uu.send(Vu.c.StopSleeping, Eu)
               };
-            if (!Vt()) {
-              const tt = (0, It.p)((() => {
-                Vt() && tt()
+            if (!ju()) {
+              const uu = (0, mu.u)((() => {
+                ju() && uu()
               }))
             }
           },
-          setCameraZoom: tt => {
-            var et;
-            null === (et = (0, Pt.g)()) || void 0 === et || et.setCameraZoom(tt)
+          setCameraZoom: uu => {
+            var Eu;
+            null === (Eu = (0, vu.l)()) || void 0 === Eu || Eu.setCameraZoom(uu)
           }
         },
-        queries: kt("queries"),
+        queries: Qu("queries"),
         lookups: {
-          ...kt("lookups"),
+          ...Qu("lookups"),
           cameraZoom: () => {
-            var tt, et;
-            return null !== (tt = null === (et = (0, Pt.g)()) || void 0 === et ? void 0 : et.cameraZoom()) && void 0 !== tt ? tt : 0
+            var uu, Eu;
+            return null !== (uu = null === (Eu = (0, vu.l)()) || void 0 === Eu ? void 0 : Eu.cameraZoom()) && void 0 !== uu ? uu : 0
           }
         }
       };
-    var Ut = Vt(39271),
-      At = Vt(40882),
-      it = Vt(40886),
-      Yt = Vt(40895),
-      Bt = Vt(1345),
-      pt = Vt(121),
-      xt = Vt(4655),
-      Tt = Vt(3788),
-      gt = Vt(1260);
-    const st = {
-      Zm: () => (0, Bt.h)(),
-      inbuiltOverwritten: () => xt.h,
-      reflectApplyHit: () => gt.b,
-      definerHit: () => pt.currentUrl.c,
-      emitReplaced: () => (0, jt.b)(),
-      confirmMesh: () => (0, Tt.c)(),
-      confirmMeshHitStack: () => (0, Tt.d)()
+    var Fu = ju(39375),
+      Bu = ju(40935),
+      Lu = ju(40944),
+      tu = ju(40955),
+      xu = ju(1309),
+      Tu = ju(103),
+      Hu = ju(4709),
+      Au = ju(3924),
+      nu = ju(1217);
+    const yu = {
+      kX: () => (0, xu.g)(),
+      inbuiltOverwritten: () => Hu.h,
+      reflectApplyHit: () => nu.b,
+      definerHit: () => Tu.currentUrl.c,
+      emitReplaced: () => (0, qu.b)(),
+      confirmMesh: () => (0, Au.c)(),
+      confirmMeshHitStack: () => (0, Au.g)()
     };
-    var nt = Vt(40890),
-      te = Vt(41031);
-    var ee = Vt(26),
-      Ve = Vt(2026),
-      Oe = Vt(2074),
-      qe = Vt(1737),
-      De = Vt(2108),
-      me = Vt(1286),
-      de = Vt(1338),
-      je = Vt(41037);
+    var zu = ju(40949),
+      Ru = ju(41079);
+    var uE = ju(22),
+      EE = ju(1995),
+      jE = ju(2040),
+      sE = ju(1693),
+      UE = ju(2083),
+      ZE = ju(1244),
+      XE = ju(1303),
+      lE = ju(41083);
 
-    function He() {
-      return de.e.get().getCurrentLanguageCode()
+    function qE() {
+      return XE.h.get().getCurrentLanguageCode()
     }
 
-    function Xe(tt) {
-      const et = () => {
-        tt({
-          translate: (tt, et) => (0, me.w)(He(), tt, et),
-          keyBindingText: tt => {
-            const et = (0, Oe.p)(tt, ee.b.get("isTouchScreen"));
-            return null !== et ? (0, me.A)(He(), et.translationKey, et.params) : (0, Oe.k)((0, Oe.o)(tt))
+    function fE(uu) {
+      const Eu = () => {
+        uu({
+          translate: (uu, Eu) => (0, ZE.w)(qE(), uu, Eu),
+          keyBindingText: uu => {
+            const Eu = (0, jE.v)(uu, uE.d.get("isTouchScreen"));
+            return null !== Eu ? (0, ZE.x)(qE(), Eu.translationKey, Eu.params) : (0, jE.q)((0, jE.r)(uu))
           },
-          isFriend: De.e,
-          hiddenNames: Ve.d.shown,
-          loadsFontRest: (0, je.c)(He())
+          isFriend: UE.e,
+          hiddenNames: EE.e.shown,
+          loadsFontRest: (0, lE.b)(qE())
         })
       };
-      let Vt = !1;
-      const Ot = () => {
-          const tt = He();
-          (0, me.k)(tt).then((() => {
-            Vt || tt !== He() || et()
+      let ju = !1;
+      const su = () => {
+          const uu = qE();
+          (0, ZE.m)(uu).then((() => {
+            ju || uu !== qE() || Eu()
           }))
         },
-        qt = () => qe.e.getSocialState().friends.map((tt => tt.name.toLowerCase())).sort().join(" ");
-      let Dt = qt();
-      et(), Ot();
-      const mt = [(0, de.f)((() => {
-        et(), Ot()
-      })), (0, jt.n)("customBindingsChanged", et), (0, jt.n)("appManagerUpdated|isTouchScreen", et), (0, De.d)((() => {
-        const tt = qt();
-        tt !== Dt && (Dt = tt, et())
-      })), Ve.d.subscribe(et)];
+        Uu = () => sE.b.getSocialState().friends.map((uu => uu.name.toLowerCase())).sort().join(" ");
+      let Zu = Uu();
+      Eu(), su();
+      const Xu = [(0, XE.j)((() => {
+        Eu(), su()
+      })), (0, qu.l)("customBindingsChanged", Eu), (0, qu.l)("appManagerUpdated|isTouchScreen", Eu), (0, UE.b)((() => {
+        const uu = Uu();
+        uu !== Zu && (Zu = uu, Eu())
+      })), EE.e.subscribe(Eu)];
       return () => {
-        Vt = !0;
-        for (const tt of mt) tt()
+        ju = !0;
+        for (const uu of Xu) uu()
       }
     }
-    var Qe = Vt(712),
-      le = Vt(1103),
-      Ee = Vt(2047),
-      fe = Vt(377),
-      we = Vt(217),
-      ye = Vt(2961),
-      Ne = Vt(2965),
-      ae = Vt(38947),
-      Me = Vt(4851),
-      be = Vt(41057),
-      Je = Vt(757),
-      Ce = Vt(725),
-      ue = Vt(3029),
-      Ke = Vt(2043),
-      he = Vt(3792),
-      ve = Vt(3344);
-    let We = null;
-    var Se = Vt(1293),
-      ce = Vt(1298),
-      Re = Vt(4566),
-      Ie = Vt(3522),
-      Pe = Vt(55),
-      Ze = Vt(373),
-      Le = Vt(366),
-      Fe = Vt(41068),
-      ke = Vt(4958),
-      Ge = Vt(38985);
-    var ze = Vt(37955),
-      oe = Vt(41075);
-    class re {
-      constructor(tt, et) {
-        this.showView = tt, this.holdForAd = et
+    var CE = ju(656),
+      bE = ju(1069),
+      cE = ju(2014),
+      NE = ju(337),
+      OE = ju(193),
+      YE = ju(3017),
+      hE = ju(3020),
+      DE = ju(39069),
+      gE = ju(4874),
+      ME = ju(41093),
+      eE = ju(719),
+      GE = ju(680),
+      pE = ju(3127),
+      wE = ju(2011),
+      JE = ju(3930),
+      dE = ju(3467);
+    let aE = null;
+    var PE = ju(1255),
+      oE = ju(1259),
+      kE = ju(4611),
+      mE = ju(3646),
+      vE = ju(49),
+      KE = ju(330),
+      VE = ju(326),
+      rE = ju(41110),
+      QE = ju(4965),
+      iE = ju(39110);
+    var WE = ju(38089),
+      SE = ju(41117);
+    class IE {
+      constructor(uu, Eu) {
+        this.showView = uu, this.holdForAd = Eu
       }
       pointerUnlockRequestsChanged() {
-        (0, Fe.G)()
+        (0, rE.y)()
       }
       pointerLockDebugEntries() {
         return [{
           label: "Locked to the canvas",
-          value: String((0, Fe.w)())
+          value: String((0, rE.q)())
         }]
       }
-      setGameViewShown(tt) {
-        this.showView(tt)
+      setGameViewShown(uu) {
+        this.showView(uu)
       }
-      setGameView(tt) {
-        (0, oe.n)(tt)
+      setGameView(uu) {
+        (0, SE.m)(uu)
       }
-      videoAdHold(tt, et) {
-        this.holdForAd(tt, et)
+      videoAdHold(uu, Eu) {
+        this.holdForAd(uu, Eu)
       }
     }
-    class Ue {
-      leave(tt) {
-        ! function(tt) {
-          if (null !== (0, lt.c)().websocketUrl) try {
-            (0, It.C)().leaveGame(tt)
+    class FE {
+      leave(uu) {
+        ! function(uu) {
+          if (null !== (0, cu.b)().websocketUrl) try {
+            (0, mu.H)().leaveGame(uu)
           } finally {
-            (0, lt.o)({
+            (0, cu.m)({
               websocketUrl: null
             })
           }
-        }(tt)
+        }(uu)
       }
       isReplay() {
         return !1
       }
     }
-    class Ae {
-      watchFrameStarts(tt) {
-        return (0, It.m)(tt)
+    class BE {
+      watchFrameStarts(uu) {
+        return (0, mu.r)(uu)
       }
-      watchFrames(tt) {
-        return (0, It.k)(tt)
+      watchFrames(uu) {
+        return (0, mu.p)(uu)
       }
-      watchTicks(tt) {
-        return (0, It.p)(tt)
+      watchTicks(uu) {
+        return (0, mu.u)(uu)
       }
     }
-    var ie = Vt(41080);
+    var LE = ju(41119);
 
-    function Ye(tt) {
-      return tt >= 0 ? Math.min(1, tt) : 0
+    function tE(uu) {
+      return uu >= 0 ? Math.min(1, uu) : 0
     }
 
-    function Be(tt, et) {
+    function xE(uu, Eu) {
       const {
-        fade: Vt
-      } = tt;
-      return null === Vt || et - Vt.at >= Vt.ms ? tt.volume : Vt.from + (tt.volume - Vt.from) * Math.max(0, (et - Vt.at) / Vt.ms)
+        fade: ju
+      } = uu;
+      return null === ju || Eu - ju.at >= ju.ms ? uu.volume : ju.from + (uu.volume - ju.from) * Math.max(0, (Eu - ju.at) / ju.ms)
     }
 
-    function pe(tt) {
-      const et = Object.entries(tt),
-        Vt = new Uint32Array(et.length);
-      let Ot = 0;
-      for (const [mt, [, dt]] of et.entries()) Vt[mt] = dt.length, Ot += dt.length;
-      const qt = new Float64Array(3 * Ot);
-      let Dt = 0;
-      for (const [, mt] of et)
-        for (const tt of mt) qt.set(tt, Dt), Dt += 3;
+    function TE(uu) {
+      const Eu = Object.entries(uu),
+        ju = new Uint32Array(Eu.length);
+      let su = 0;
+      for (const [Xu, [, lu]] of Eu.entries()) ju[Xu] = lu.length, su += lu.length;
+      const Uu = new Float64Array(3 * su);
+      let Zu = 0;
+      for (const [, Xu] of Eu)
+        for (const uu of Xu) Uu.set(uu, Zu), Zu += 3;
       return {
-        blocks: et.map((tt => {
-          let [et] = tt;
-          return et
+        blocks: Eu.map((uu => {
+          let [Eu] = uu;
+          return Eu
         })).join("\0"),
-        counts: Vt,
-        values: qt
+        counts: ju,
+        values: Uu
       }
     }
-    class xe {
-      constructor(tt, et) {
-        this.core = tt, this.warn = et, this.latest = 0
+    class HE {
+      constructor(uu, Eu) {
+        this.core = uu, this.warn = Eu, this.latest = 0
       }
       async feed() {
-        let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Te;
-        const et = ++this.latest;
-        let Vt;
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : AE;
+        const Eu = ++this.latest;
+        let ju;
         try {
-          Vt = await tt()
-        } catch (Ot) {
-          return void(this.core.isStopped || et !== this.latest || this.warn("the block colours didn't load, so block particles draw grey", Ot))
+          ju = await uu()
+        } catch (su) {
+          return void(this.core.isStopped || Eu !== this.latest || this.warn("the block colours didn't load, so block particles draw grey", su))
         }
-        et === this.latest && (this.core.setBlockColours(Vt) || this.core.isStopped || this.warn("the core refused the block colours: block particles draw grey"))
+        Eu === this.latest && (this.core.setBlockColours(ju) || this.core.isStopped || this.warn("the core refused the block colours: block particles draw grey"))
       }
     }
-    async function Te() {
-      return pe((await Vt.e(207).then((() => Vt(34482)))).averageColors)
+    async function AE() {
+      return TE((await ju.e(207).then((() => ju(34634)))).averageColors)
     }
-    var ge = Vt(4960),
-      se = Vt(4963),
-      ne = Vt(40831),
-      tV = Vt(3297),
-      eV = Vt(36489),
-      VV = Vt(40927),
-      OV = Vt(707),
-      qV = Vt(37294),
-      DV = Vt(705),
-      mV = Vt(391),
-      dV = Vt(40916);
-    const jV = [3e4, 12e4, 3e5];
-    class HV extends Error {}
-    const XV = {
-      mobTypes: OV.o,
-      vehicleTypes: qV.b,
-      mobAiStates: OV.l,
-      playerPoses: DV.j
+    var nE = ju(4970),
+      yE = ju(4976),
+      zE = ju(40897),
+      RE = ju(3410),
+      uj = ju(36670),
+      Ej = ju(40984),
+      jj = ju(645),
+      sj = ju(37454),
+      Uj = ju(636),
+      Zj = ju(349),
+      Xj = ju(40971);
+    const lj = [3e4, 12e4, 3e5];
+    class qj extends Error {}
+    const fj = {
+      mobTypes: jj.l,
+      vehicleTypes: sj.c,
+      mobAiStates: jj.k,
+      playerPoses: Uj.u
     };
-    var QV = Vt(40905),
-      lV = Vt(40920),
-      EV = Vt(40952),
-      fV = Vt(1167),
-      wV = Vt(41083),
-      yV = Vt(41089),
-      NV = Vt(3055),
-      aV = Vt(39232),
-      MV = Vt(4980),
-      bV = Vt(2458);
-    const JV = bV.u.KeysDisabled | bV.u.LookFrozen | bV.u.ClicksSuppressed,
-      CV = NV.e;
-    var uV = (0, yV.b)("resumingConn");
-    class KV {
-      constructor(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
-        this.shell = tt, this.now = et, this.session = void 0, this.attempt = null, this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, Object.defineProperty(this, uV, {
+    var Cj = ju(40963),
+      bj = ju(40980),
+      cj = ju(41011),
+      Nj = ju(1128),
+      Oj = ju(41121),
+      Yj = ju(41128),
+      hj = ju(3148),
+      Dj = ju(39351),
+      gj = ju(4986),
+      Mj = ju(2516);
+    const ej = Mj.x.KeysDisabled | Mj.x.LookFrozen | Mj.x.ClicksSuppressed,
+      Gj = hj.e;
+    var pj = (0, Yj.b)("resumingConn");
+    class wj {
+      constructor(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
+        this.shell = uu, this.now = Eu, this.session = void 0, this.attempt = null, this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, Object.defineProperty(this, pj, {
           writable: !0,
           value: 0
-        }), this.drops = 0, this.session = new aV.c({
-          reconnect: tt => this.reconnect(tt),
-          isLive: () => tt.isLive(),
-          onReconnected: et => {
-            this.landed = et, tt.onReconnected(et), this.landIfResumed()
+        }), this.drops = 0, this.session = new Dj.e({
+          reconnect: uu => this.reconnect(uu),
+          isLive: () => uu.isLive(),
+          onReconnected: Eu => {
+            this.landed = Eu, uu.onReconnected(Eu), this.landIfResumed()
           },
-          onGaveUp: (et, Vt) => {
-            this.abortAttempt(), tt.onGaveUp(et, Vt)
+          onGaveUp: (Eu, ju) => {
+            this.abortAttempt(), uu.onGaveUp(Eu, ju)
           },
-          freeze: et => {
-            tt.oW(et), (0, MV.g)(JV, et ? JV : 0, "reconnectFreeze")
+          freeze: Eu => {
+            uu.Wm(Eu), (0, gj.g)(ej, Eu ? ej : 0, "reconnectFreeze")
           },
-          releaseSeat: tt => {
-            this.releaseSeat(tt)
+          releaseSeat: uu => {
+            this.releaseSeat(uu)
           }
         })
       }
@@ -2677,154 +2677,154 @@ export const modules = {
         return this.session.isResuming()
       }
       get resumingConn() {
-        return (0, wV.e)(this, uV)[uV]
+        return (0, Oj.b)(this, pj)[pj]
       }
       canHoldSeat() {
         return this.session.canHoldSeat()
       }
-      onInitialInfo(tt) {
+      onInitialInfo(uu) {
         let {
-          conn: et,
-          graceMs: Vt,
-          sessionBased: Ot,
-          replayOffer: qt
-        } = tt;
-        this.session.onInitialInfo(Vt, Ot), this.isResuming() && (this.initialInfoConn = et, this.initialInfoOffer = qt, this.landIfResumed())
+          conn: Eu,
+          graceMs: ju,
+          sessionBased: su,
+          replayOffer: Uu
+        } = uu;
+        this.session.onInitialInfo(ju, su), this.isResuming() && (this.initialInfoConn = Eu, this.initialInfoOffer = Uu, this.landIfResumed())
       }
-      onResumeComplete(tt) {
-        0 !== tt && (tt === (0, wV.e)(this, uV)[uV] ? ((0, wV.e)(this, uV)[uV] = 0, this.session.onResumed()) : this.isResuming() && (this.completedEarlyConn = tt))
+      onResumeComplete(uu) {
+        0 !== uu && (uu === (0, Oj.b)(this, pj)[pj] ? ((0, Oj.b)(this, pj)[pj] = 0, this.session.onResumed()) : this.isResuming() && (this.completedEarlyConn = uu))
       }
-      onDropped(tt) {
-        this.drops++, this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, (0, wV.e)(this, uV)[uV] = 0, this.session.onConnectionLost(tt)
+      onDropped(uu) {
+        this.drops++, this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, (0, Oj.b)(this, pj)[pj] = 0, this.session.onConnectionLost(uu)
       }
       leave() {
         this.session.leave(), this.dispose()
       }
       dispose() {
-        this.abortAttempt(), this.landed = null, this.completedEarlyConn = 0, (0, wV.e)(this, uV)[uV] = 0, this.session.end()
+        this.abortAttempt(), this.landed = null, this.completedEarlyConn = 0, (0, Oj.b)(this, pj)[pj] = 0, this.session.end()
       }
-      reconnect(tt) {
-        const et = this.attempt;
-        if (null !== et && this.awaitingJoinRoom(et)) return et.result;
+      reconnect(uu) {
+        const Eu = this.attempt;
+        if (null !== Eu && this.awaitingJoinRoom(Eu)) return Eu.result;
         this.abortAttempt();
-        const Vt = new AbortController,
-          Ot = this.drops,
-          qt = {
+        const ju = new AbortController,
+          su = this.drops,
+          Uu = {
             attachedAt: null
           },
-          Dt = this.shell.reconnect(tt, Vt.signal, (() => {
-            qt.attachedAt = this.now()
-          })).then((tt => {
-            if (this.clearAttempt(mt), this.drops !== Ot) throw new Error("the resumed room dropped before its attempt settled");
-            return tt
-          }), (tt => {
-            throw this.clearAttempt(mt), tt
+          Zu = this.shell.reconnect(uu, ju.signal, (() => {
+            Uu.attachedAt = this.now()
+          })).then((uu => {
+            if (this.clearAttempt(Xu), this.drops !== su) throw new Error("the resumed room dropped before its attempt settled");
+            return uu
+          }), (uu => {
+            throw this.clearAttempt(Xu), uu
           })),
-          mt = {
-            abort: Vt,
-            socket: qt,
-            result: Dt
+          Xu = {
+            abort: ju,
+            socket: Uu,
+            result: Zu
           };
-        return this.attempt = mt, Dt
+        return this.attempt = Xu, Zu
       }
-      clearAttempt(tt) {
-        this.attempt === tt && (this.attempt = null)
+      clearAttempt(uu) {
+        this.attempt === uu && (this.attempt = null)
       }
       abortAttempt() {
-        let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : new DOMException("the reconnect attempt was given up", "AbortError");
-        const et = this.attempt;
-        this.attempt = null, null === et || void 0 === et || et.abort.abort(tt)
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : new DOMException("the reconnect attempt was given up", "AbortError");
+        const Eu = this.attempt;
+        this.attempt = null, null === Eu || void 0 === Eu || Eu.abort.abort(uu)
       }
-      awaitingJoinRoom(tt) {
-        const et = tt.socket.attachedAt;
-        return null !== et && this.now() - et < CV
+      awaitingJoinRoom(uu) {
+        const Eu = uu.socket.attachedAt;
+        return null !== Eu && this.now() - Eu < Gj
       }
-      releaseSeat(tt) {
-        const et = this.attempt,
-          Vt = null !== et && this.awaitingJoinRoom(et);
-        this.abortAttempt(new At.s), Vt || this.shell.releaseSeat(tt)
+      releaseSeat(uu) {
+        const Eu = this.attempt,
+          ju = null !== Eu && this.awaitingJoinRoom(Eu);
+        this.abortAttempt(new Bu.r), ju || this.shell.releaseSeat(uu)
       }
       landIfResumed() {
-        const tt = this.landed;
-        if (null !== tt && tt.conn === this.initialInfoConn) {
-          const et = this.initialInfoOffer && this.completedEarlyConn !== tt.conn;
-          if (this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, this.abortAttempt(), !et) return void this.session.onResumed();
-          (0, wV.e)(this, uV)[uV] = tt.conn, this.session.onResuming()
+        const uu = this.landed;
+        if (null !== uu && uu.conn === this.initialInfoConn) {
+          const Eu = this.initialInfoOffer && this.completedEarlyConn !== uu.conn;
+          if (this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, this.abortAttempt(), !Eu) return void this.session.onResumed();
+          (0, Oj.b)(this, pj)[pj] = uu.conn, this.session.onResuming()
         }
       }
     }
-    var hV = Vt(39241),
-      vV = Vt(41095),
-      WV = Vt(36720),
-      SV = Vt(36715),
-      cV = Vt(2219),
-      RV = Vt(1993),
-      IV = Vt(4415),
-      PV = Vt(40933),
-      ZV = Vt(5235);
+    var Jj = ju(39354),
+      dj = ju(41135),
+      aj = ju(36866),
+      Pj = ju(36860),
+      oj = ju(2239),
+      kj = ju(1955),
+      mj = ju(4473),
+      vj = ju(40988),
+      Kj = ju(5223);
 
-    function LV(tt) {
+    function Vj(uu) {
       let {
-        pack: et,
-        gameSource: Vt
-      } = tt;
-      if (null !== Vt && "" !== Vt) return `game:${Vt}`;
-      if (null === et) return "default";
+        pack: Eu,
+        gameSource: ju
+      } = uu;
+      if (null !== ju && "" !== ju) return `game:${ju}`;
+      if (null === Eu) return "default";
       const {
-        id: Ot,
-        version: qt
-      } = et.metaData;
-      if (Ot !== cV.p.CUSTOM) return `${Ot}@${qt}`;
-      const Dt = [];
-      for (const mt of [et.textureOverrides, et.modelOverrides, et.animations])
-        for (const [tt, et] of Object.entries(null !== mt && void 0 !== mt ? mt : {})) Dt.push(`${tt}:${et.length}`);
-      return `${Ot}:${(0,RV.w)(Dt.join())}`
+        id: su,
+        version: Uu
+      } = Eu.metaData;
+      if (su !== oj.p.CUSTOM) return `${su}@${Uu}`;
+      const Zu = [];
+      for (const Xu of [Eu.textureOverrides, Eu.modelOverrides, Eu.animations])
+        for (const [uu, Eu] of Object.entries(null !== Xu && void 0 !== Xu ? Xu : {})) Zu.push(`${uu}:${Eu.length}`);
+      return `${su}:${(0,kj.s)(Zu.join())}`
     }
-    var FV = Vt(4554),
-      kV = Vt(3314),
-      GV = Vt(41098),
-      zV = Vt(730),
-      oV = Vt(3318),
-      rV = Vt(106),
-      UV = Vt(4637),
-      AV = Vt(39),
-      iV = Vt(4428),
-      YV = Vt(40996),
-      BV = Vt(4584),
-      pV = Vt(2465),
-      xV = Vt(1732),
-      TV = Vt(1764),
-      gV = Vt(1387),
-      sV = Vt(129),
-      nV = Vt(348),
-      tO = Vt(39282),
-      eO = Vt(2471),
-      VO = Vt(4974);
-    const OO = new Set([ge.Fb.KeyDown, ge.Fb.MouseMove, ge.Fb.MouseDown, ge.Fb.Wheel, ge.Fb.TouchStart, ge.Fb.TouchMove]);
+    var rj = ju(4600),
+      Qj = ju(3427),
+      ij = ju(41138),
+      Wj = ju(687),
+      Sj = ju(3429),
+      Ij = ju(91),
+      Fj = ju(4688),
+      Bj = ju(31),
+      Lj = ju(4478),
+      tj = ju(41054),
+      xj = ju(4626),
+      Tj = ju(2519),
+      Hj = ju(1687),
+      Aj = ju(1710),
+      nj = ju(1343),
+      yj = ju(107),
+      zj = ju(308),
+      Rj = ju(39384),
+      us = ju(2522),
+      Es = ju(4983);
+    const ss = new Set([nE.sb.KeyDown, nE.sb.MouseMove, nE.sb.MouseDown, nE.sb.Wheel, nE.sb.TouchStart, nE.sb.TouchMove]);
 
-    function qO(tt) {
-      return (tt.shiftKey ? ge.Xb.Shift : 0) | (tt.ctrlKey ? ge.Xb.Ctrl : 0) | (tt.altKey ? ge.Xb.Alt : 0) | (tt.metaKey ? ge.Xb.Meta : 0) | ("repeat" in tt && tt.repeat ? ge.Xb.Repeat : 0) | (tt.isTrusted ? 0 : ge.Xb.Untrusted | function(tt) {
+    function Us(uu) {
+      return (uu.shiftKey ? nE.Qb.Shift : 0) | (uu.ctrlKey ? nE.Qb.Ctrl : 0) | (uu.altKey ? nE.Qb.Alt : 0) | (uu.metaKey ? nE.Qb.Meta : 0) | ("repeat" in uu && uu.repeat ? nE.Qb.Repeat : 0) | (uu.isTrusted ? 0 : nE.Qb.Untrusted | function(uu) {
         try {
           const {
-            editable: et,
-            outsideView: Vt
-          } = (0, tO.d)(tt.target);
-          return (et ? ge.Xb.UntrustedEditable : 0) | (Vt ? ge.Xb.UntrustedOutsideView : 0)
+            editable: Eu,
+            outsideView: ju
+          } = (0, Rj.e)(uu.target);
+          return (Eu ? nE.Qb.UntrustedEditable : 0) | (ju ? nE.Qb.UntrustedOutsideView : 0)
         } catch {
           return 0
         }
-      }(tt))
+      }(uu))
     }
 
-    function DO(tt) {
-      return "touchOnly" !== (0, sV.d)() && "function" === typeof tt.requestPointerLock
+    function Zs(uu) {
+      return "touchOnly" !== (0, yj.c)() && "function" === typeof uu.requestPointerLock
     }
 
-    function mO(tt) {
-      return 0 === tt.button ? tt.altKey ? VO.h["Alt+Left Click"] : VO.h.Mouse1 : 1 === tt.button ? VO.h.Mouse2 : VO.h.Mouse3
+    function Xs(uu) {
+      return 0 === uu.button ? uu.altKey ? Es.k["Alt+Left Click"] : Es.k.Mouse1 : 1 === uu.button ? Es.k.Mouse2 : Es.k.Mouse3
     }
-    const dO = new Set(["AltLeft", "AltRight", "ArrowUp", "ArrowDown"]),
-      jO = new Map([
+    const ls = new Set(["AltLeft", "AltRight", "ArrowUp", "ArrowDown"]),
+      qs = new Map([
         ["AltLeft", "altKey"],
         ["AltRight", "altKey"],
         ["ControlLeft", "ctrlKey"],
@@ -2834,370 +2834,370 @@ export const modules = {
         ["MetaLeft", "metaKey"],
         ["MetaRight", "metaKey"]
       ]),
-      HO = 32768,
-      XO = 1;
+      fs = 32768,
+      Cs = 1;
 
-    function QO(tt) {
-      return Math.min(Math.max(Math.round(tt), 0), 65535)
+    function bs(uu) {
+      return Math.min(Math.max(Math.round(uu), 0), 65535)
     }
 
-    function lO(tt, et, Vt) {
-      const Ot = [],
-        qt = (tt, et, Vt, qt) => {
-          const Dt = tt => {
-            (0, TV.p)(tt) || Vt(tt)
+    function cs(uu, Eu, ju) {
+      const su = [],
+        Uu = (uu, Eu, ju, Uu) => {
+          const Zu = uu => {
+            (0, Aj.t)(uu) || ju(uu)
           };
-          tt.addEventListener(et, Dt, qt), Ot.push((() => {
-            tt.removeEventListener(et, Dt, qt)
+          uu.addEventListener(Eu, Zu, Uu), su.push((() => {
+            uu.removeEventListener(Eu, Zu, Uu)
           }))
         },
-        Dt = {
+        Zu = {
           capture: !0,
           passive: !0
         },
-        mt = (tt, Vt, Ot, qt, Dt) => (!(0, eO.e)() || !OO.has(tt)) && (et(tt, Vt, Ot, qt, Dt), !0),
-        dt = () => document.pointerLockElement === tt,
-        jt = (0, nV.f)(),
-        Ht = tt => {
-          tt.ctrlKey && Vt.ctrlCombosAreGames() && !(0, MV.f)(tt.target) && tt.preventDefault()
+        Xu = (uu, ju, su, Uu, Zu) => (!(0, us.e)() || !ss.has(uu)) && (Eu(uu, ju, su, Uu, Zu), !0),
+        lu = () => document.pointerLockElement === uu,
+        qu = (0, zj.f)(),
+        fu = uu => {
+          uu.ctrlKey && ju.ctrlCombosAreGames() && !(0, gj.d)(uu.target) && uu.preventDefault()
         },
-        Xt = (tt, Ot, qt) => {
-          Vt.inspect(tt, Ot, !1), et(ge.Fb.KeyUp, Ot, 0, 0, (0, pV.r)(qt, tt.timeStamp)), Vt.keyReleased(Ot)
+        Cu = (uu, su, Uu) => {
+          ju.inspect(uu, su, !1), Eu(nE.sb.KeyUp, su, 0, 0, (0, Tj.r)(Uu, uu.timeStamp)), ju.keyReleased(su)
         },
-        Qt = new Map,
-        lt = (tt, et, Vt) => tt[Vt] || ("AltRight" === et || "ControlLeft" === et) && tt.getModifierState("AltGraph"),
-        Et = new Map,
-        ft = () => {
-          Qt.clear(), Et.clear()
+        bu = new Map,
+        cu = (uu, Eu, ju) => uu[ju] || ("AltRight" === Eu || "ControlLeft" === Eu) && uu.getModifierState("AltGraph"),
+        Nu = new Map,
+        Ou = () => {
+          bu.clear(), Nu.clear()
         },
-        wt = tt => {
-          if (tt.isTrusted && document.hasFocus())
-            for (const [et, Vt] of Et) Et.delete(et), lt(tt, et, Vt) || (Qt.delete(et), Xt(tt, VO.h[et], qO(tt)))
+        Yu = uu => {
+          if (uu.isTrusted && document.hasFocus())
+            for (const [Eu, ju] of Nu) Nu.delete(Eu), cu(uu, Eu, ju) || (bu.delete(Eu), Cu(uu, Es.k[Eu], Us(uu)))
         };
-      tt.tabIndex = -1;
-      let yt = 0,
-        Nt = 0;
-      const Mt = () => {
-        const et = tt.getBoundingClientRect();
-        yt = et.left, Nt = et.top
+      uu.tabIndex = -1;
+      let hu = 0,
+        Du = 0;
+      const gu = () => {
+        const Eu = uu.getBoundingClientRect();
+        hu = Eu.left, Du = Eu.top
       };
-      let bt = "mouse";
-      const Jt = () => !dt() && ("mouse" === bt || !Vt.touchUiShown()),
-        Ct = (tt, et, Vt) => {
-          const Ot = (QO(tt.clientX - yt) | QO(tt.clientY - Nt) << 16) >>> 0;
-          mt(ge.Fb.MouseMove, ge.$b.Point, et, Vt, Ot)
+      let Mu = "mouse";
+      const eu = () => !lu() && ("mouse" === Mu || !ju.touchUiShown()),
+        Gu = (uu, Eu, ju) => {
+          const su = (bs(uu.clientX - hu) | bs(uu.clientY - Du) << 16) >>> 0;
+          Xu(nE.sb.MouseMove, nE.Tb.Point, Eu, ju, su)
         };
-      let ut = !1,
-        Kt = 0;
-      const ht = () => {
-        ut && (ut = !1, Vt.viewShown() && (0, Fe.Y)())
+      let pu = !1,
+        wu = 0;
+      const Ju = () => {
+        pu && (pu = !1, ju.viewShown() && (0, rE.P)())
       };
-      Ot.push((() => {
-        clearTimeout(Kt)
-      })), qt(window, "keydown", (tt => {
-        "Escape" === tt.key ? (0, Fe.O)(!0) : tt.repeat || (0, MV.f)(tt.target) || (ut = !0, clearTimeout(Kt), Kt = window.setTimeout(ht, 0))
-      }), Dt), qt(window, "keydown", (tt => {
-        ht(), Ht(tt), wt(tt);
-        const et = VO.h[tt.code];
-        if ("number" !== typeof et || !Vt.viewShown()) return;
-        const Ot = (0, MV.f)(tt.target);
-        Ot || !Vt.prevents(et) && !dO.has(tt.code) || tt.preventDefault(), tt.repeat || Vt.inspect(tt, et, !0), mt(ge.Fb.KeyDown, et, 0, 0, (0, pV.r)(qO(tt), tt.timeStamp)) && Qt.set(tt.code, et), Ot || Vt.keyPressed(et)
+      su.push((() => {
+        clearTimeout(wu)
+      })), Uu(window, "keydown", (uu => {
+        "Escape" === uu.key ? (0, rE.D)(!0) : uu.repeat || (0, gj.d)(uu.target) || (pu = !0, clearTimeout(wu), wu = window.setTimeout(Ju, 0))
+      }), Zu), Uu(window, "keydown", (uu => {
+        Ju(), fu(uu), Yu(uu);
+        const Eu = Es.k[uu.code];
+        if ("number" !== typeof Eu || !ju.viewShown()) return;
+        const su = (0, gj.d)(uu.target);
+        su || !ju.prevents(Eu) && !ls.has(uu.code) || uu.preventDefault(), uu.repeat || ju.inspect(uu, Eu, !0), Xu(nE.sb.KeyDown, Eu, 0, 0, (0, Tj.r)(Us(uu), uu.timeStamp)) && bu.set(uu.code, Eu), su || ju.keyPressed(Eu)
       }), {
         capture: !1,
         passive: !1
-      }), qt(window, "keyup", (tt => {
-        "Escape" === tt.key && (0, Fe.O)(!1), Ht(tt), Qt.delete(tt.code), Et.delete(tt.code), wt(tt);
-        const et = VO.h[tt.code];
-        "number" === typeof et && Xt(tt, et, qO(tt))
+      }), Uu(window, "keyup", (uu => {
+        "Escape" === uu.key && (0, rE.D)(!1), fu(uu), bu.delete(uu.code), Nu.delete(uu.code), Yu(uu);
+        const Eu = Es.k[uu.code];
+        "number" === typeof Eu && Cu(uu, Eu, Us(uu))
       }), {
         capture: !0,
         passive: !1
-      }), qt(window, "mousemove", (tt => {
-        "mouse" === bt && Jt() ? Ct(tt, tt.movementX, tt.movementY) : dt() ? mt(ge.Fb.MouseMove, ge.$b.Stamped, tt.movementX, tt.movementY, (0, pV.r)(0, tt.timeStamp)) : mt(ge.Fb.MouseMove, 0, tt.movementX, tt.movementY, 0)
-      }), Dt);
-      let vt = 0,
-        Wt = 0;
-      const St = [];
-      let ct = !1,
-        Rt = !1;
-      qt(tt, "mousedown", (tt => {
-        if ((0, eO.e)()) return;
-        wt(tt);
-        const Ot = 1 << tt.button;
-        if (!dt() && (0, Fe.X)() && (0, Fe.h)() && (Rt = !0, !ct)) return void(vt |= Ot);
-        vt &= ~Ot;
-        const qt = tt.button <= 2 ? mO(tt) : void 0;
-        void 0 !== qt && (St[tt.button] = qt, Vt.inspect(tt, qt, !0)), Jt() && Ct(tt, 0, 0), et(ge.Fb.MouseDown, tt.button, tt.clientX, tt.clientY, (0, pV.r)(qO(tt), tt.timeStamp)), Wt |= Ot, void 0 !== qt && Vt.keyPressed(qt)
-      }), Dt), qt(window, "mouseup", (tt => {
-        var Ot;
-        wt(tt);
-        const qt = 1 << tt.button,
-          Dt = 0 !== (vt & ~Wt & qt);
-        if (vt &= ~qt, Wt &= ~qt, Dt) return;
-        const mt = tt.button <= 2 ? null !== (Ot = St[tt.button]) && void 0 !== Ot ? Ot : mO(tt) : void 0;
-        void 0 !== mt && Vt.inspect(tt, mt, !1), et(ge.Fb.MouseUp, tt.button, tt.clientX, tt.clientY, (0, pV.r)(qO(tt), tt.timeStamp)), void 0 !== mt && Vt.keyReleased(mt)
-      }), Dt), qt(tt, "contextmenu", (tt => {
-        tt.preventDefault()
+      }), Uu(window, "mousemove", (uu => {
+        "mouse" === Mu && eu() ? Gu(uu, uu.movementX, uu.movementY) : lu() ? Xu(nE.sb.MouseMove, nE.Tb.Stamped, uu.movementX, uu.movementY, (0, Tj.r)(0, uu.timeStamp)) : Xu(nE.sb.MouseMove, 0, uu.movementX, uu.movementY, 0)
+      }), Zu);
+      let du = 0,
+        au = 0;
+      const Pu = [];
+      let ou = !1,
+        ku = !1;
+      Uu(uu, "mousedown", (uu => {
+        if ((0, us.e)()) return;
+        Yu(uu);
+        const su = 1 << uu.button;
+        if (!lu() && (0, rE.M)() && (0, rE.e)() && (ku = !0, !ou)) return void(du |= su);
+        du &= ~su;
+        const Uu = uu.button <= 2 ? Xs(uu) : void 0;
+        void 0 !== Uu && (Pu[uu.button] = Uu, ju.inspect(uu, Uu, !0)), eu() && Gu(uu, 0, 0), Eu(nE.sb.MouseDown, uu.button, uu.clientX, uu.clientY, (0, Tj.r)(Us(uu), uu.timeStamp)), au |= su, void 0 !== Uu && ju.keyPressed(Uu)
+      }), Zu), Uu(window, "mouseup", (uu => {
+        var su;
+        Yu(uu);
+        const Uu = 1 << uu.button,
+          Zu = 0 !== (du & ~au & Uu);
+        if (du &= ~Uu, au &= ~Uu, Zu) return;
+        const Xu = uu.button <= 2 ? null !== (su = Pu[uu.button]) && void 0 !== su ? su : Xs(uu) : void 0;
+        void 0 !== Xu && ju.inspect(uu, Xu, !1), Eu(nE.sb.MouseUp, uu.button, uu.clientX, uu.clientY, (0, Tj.r)(Us(uu), uu.timeStamp)), void 0 !== Xu && ju.keyReleased(Xu)
+      }), Zu), Uu(uu, "contextmenu", (uu => {
+        uu.preventDefault()
       }), {
         passive: !1
       });
-      const It = tt => {
-        (dt() || (0, Fe.s)() && (0, gV.r)()) && (tt.ctrlKey || jt && !document.fullscreenElement) && tt.preventDefault()
+      const mu = uu => {
+        (lu() || (0, rE.o)() && (0, nj.w)()) && (uu.ctrlKey || qu && !document.fullscreenElement) && uu.preventDefault()
       };
-      qt(tt, "wheel", (tt => {
-        It(tt), wt(tt), mt(ge.Fb.Wheel, tt.deltaMode, tt.deltaX, tt.deltaY, 0)
+      Uu(uu, "wheel", (uu => {
+        mu(uu), Yu(uu), Xu(nE.sb.Wheel, uu.deltaMode, uu.deltaX, uu.deltaY, 0)
       }), {
         capture: !0,
         passive: !1
       });
-      const Pt = {
+      const vu = {
           capture: !0,
           passive: !1
         },
-        Zt = tt => {
-          tt ? window.addEventListener("wheel", It, Pt) : window.removeEventListener("wheel", It, Pt)
+        Ku = uu => {
+          uu ? window.addEventListener("wheel", mu, vu) : window.removeEventListener("wheel", mu, vu)
         };
-      Zt((0, Fe.s)()), Ot.push((0, Fe.B)(Zt)), Ot.push((() => {
-        Zt(!1)
+      Ku((0, rE.o)()), su.push((0, rE.t)(Ku)), su.push((() => {
+        Ku(!1)
       }));
-      const Lt = new Map,
-        Ft = new Set,
-        kt = tt => {
-          const et = "stylus" === tt.touchType;
-          for (const Vt of Lt.values())
-            if (!Vt.touched && (et || Math.abs(tt.clientX - Vt.x) <= XO && Math.abs(tt.clientY - Vt.y) <= XO)) return Vt.touched = !0, !0;
+      const Vu = new Map,
+        ru = new Set,
+        Qu = uu => {
+          const Eu = "stylus" === uu.touchType;
+          for (const ju of Vu.values())
+            if (!ju.touched && (Eu || Math.abs(uu.clientX - ju.x) <= Cs && Math.abs(uu.clientY - ju.y) <= Cs)) return ju.touched = !0, !0;
           return !1
         },
-        Gt = tt => 32767 & tt,
-        zt = new Set,
-        ot = tt => Vt => {
-          const Ot = (0, pV.r)(qO(Vt), Vt.timeStamp);
-          tt !== ge.Fb.TouchStart && tt !== ge.Fb.TouchMove || ((tt, Vt) => {
-            const Ot = tt.touches;
-            if (Ot)
-              for (const qt of zt) {
-                let tt = !1;
-                for (let et = 0; et < Ot.length && !tt; et++) tt = Gt(Ot[et].identifier) === qt;
-                tt || (zt.delete(qt), et(ge.Fb.TouchCancel, qt, 0, 0, Vt))
+        iu = uu => 32767 & uu,
+        Wu = new Set,
+        Su = uu => ju => {
+          const su = (0, Tj.r)(Us(ju), ju.timeStamp);
+          uu !== nE.sb.TouchStart && uu !== nE.sb.TouchMove || ((uu, ju) => {
+            const su = uu.touches;
+            if (su)
+              for (const Uu of Wu) {
+                let uu = !1;
+                for (let Eu = 0; Eu < su.length && !uu; Eu++) uu = iu(su[Eu].identifier) === Uu;
+                uu || (Wu.delete(Uu), Eu(nE.sb.TouchCancel, Uu, 0, 0, ju))
               }
-          })(Vt, Ot);
-          const qt = Vt.changedTouches;
-          for (let et = 0; et < qt.length; et++) {
-            const Vt = qt[et];
-            if (tt === ge.Fb.TouchStart && kt(Vt) && Ft.add(Vt.identifier), Ft.has(Vt.identifier)) {
-              tt !== ge.Fb.TouchEnd && tt !== ge.Fb.TouchCancel || Ft.delete(Vt.identifier);
+          })(ju, su);
+          const Uu = ju.changedTouches;
+          for (let Eu = 0; Eu < Uu.length; Eu++) {
+            const ju = Uu[Eu];
+            if (uu === nE.sb.TouchStart && Qu(ju) && ru.add(ju.identifier), ru.has(ju.identifier)) {
+              uu !== nE.sb.TouchEnd && uu !== nE.sb.TouchCancel || ru.delete(ju.identifier);
               continue
             }
-            const Dt = Gt(Vt.identifier),
-              dt = mt(tt, Dt, Vt.clientX - yt, Vt.clientY - Nt, Ot);
-            tt === ge.Fb.TouchStart ? dt && zt.add(Dt) : tt !== ge.Fb.TouchMove && zt.delete(Dt)
+            const Zu = iu(ju.identifier),
+              lu = Xu(uu, Zu, ju.clientX - hu, ju.clientY - Du, su);
+            uu === nE.sb.TouchStart ? lu && Wu.add(Zu) : uu !== nE.sb.TouchMove && Wu.delete(Zu)
           }
         },
-        rt = ot(ge.Fb.TouchStart);
-      qt(tt, "touchstart", (tt => {
-        tt.preventDefault(), (0, eO.e)() || (Vt.touchStarting(), rt(tt))
+        Iu = Su(nE.sb.TouchStart);
+      Uu(uu, "touchstart", (uu => {
+        uu.preventDefault(), (0, us.e)() || (ju.touchStarting(), Iu(uu))
       }), {
         passive: !1
-      }), qt(tt, "touchmove", ot(ge.Fb.TouchMove), Dt), qt(tt, "touchend", ot(ge.Fb.TouchEnd), Dt), qt(tt, "touchcancel", ot(ge.Fb.TouchCancel), Dt);
-      const Ut = tt => HO | 32767 & tt,
-        At = (tt, et) => {
-          mt(tt, Ut(et.pointerId), et.clientX - yt, et.clientY - Nt, (0, pV.r)(qO(et), et.timeStamp))
+      }), Uu(uu, "touchmove", Su(nE.sb.TouchMove), Zu), Uu(uu, "touchend", Su(nE.sb.TouchEnd), Zu), Uu(uu, "touchcancel", Su(nE.sb.TouchCancel), Zu);
+      const Fu = uu => fs | 32767 & uu,
+        Bu = (uu, Eu) => {
+          Xu(uu, Fu(Eu.pointerId), Eu.clientX - hu, Eu.clientY - Du, (0, Tj.r)(Us(Eu), Eu.timeStamp))
         };
-      qt(window, "pointerdown", (et => {
-        bt = et.pointerType, "mouse" === et.pointerType && et.target !== tt && Vt.viewShown() && (0, Fe.$)()
-      }), Dt), qt(tt, "pointerdown", (tt => {
-        "pen" === tt.pointerType && 0 === tt.button && (0, Fe.s)() && (0, gV.r)() && (tt.preventDefault(), (0, eO.e)() || (Lt.set(tt.pointerId, {
-          x: tt.clientX,
-          y: tt.clientY,
+      Uu(window, "pointerdown", (Eu => {
+        Mu = Eu.pointerType, "mouse" === Eu.pointerType && Eu.target !== uu && ju.viewShown() && (0, rE.S)()
+      }), Zu), Uu(uu, "pointerdown", (uu => {
+        "pen" === uu.pointerType && 0 === uu.button && (0, rE.o)() && (0, nj.w)() && (uu.preventDefault(), (0, us.e)() || (Vu.set(uu.pointerId, {
+          x: uu.clientX,
+          y: uu.clientY,
           touched: !1
-        }), Vt.touchStarting(), At(ge.Fb.TouchStart, tt)))
+        }), ju.touchStarting(), Bu(nE.sb.TouchStart, uu)))
       }), {
         passive: !1
-      }), qt(window, "pointermove", (tt => {
-        bt = tt.pointerType, Lt.has(tt.pointerId) && At(ge.Fb.TouchMove, tt), "mouse" !== tt.pointerType && Jt() && Ct(tt, 0, 0)
-      }), Dt);
-      const it = tt => et => {
-        Lt.delete(et.pointerId) && At(tt, et)
+      }), Uu(window, "pointermove", (uu => {
+        Mu = uu.pointerType, Vu.has(uu.pointerId) && Bu(nE.sb.TouchMove, uu), "mouse" !== uu.pointerType && eu() && Gu(uu, 0, 0)
+      }), Zu);
+      const Lu = uu => Eu => {
+        Vu.delete(Eu.pointerId) && Bu(uu, Eu)
       };
-      qt(window, "pointerup", it(ge.Fb.TouchEnd), Dt), qt(window, "pointercancel", it(ge.Fb.TouchCancel), Dt);
-      let Yt = 0;
-      const Bt = () => {
-          Yt = 0, Mt(), Vt.resized()
+      Uu(window, "pointerup", Lu(nE.sb.TouchEnd), Zu), Uu(window, "pointercancel", Lu(nE.sb.TouchCancel), Zu);
+      let tu = 0;
+      const xu = () => {
+          tu = 0, gu(), ju.resized()
         },
-        pt = () => {
-          const tt = Vt.sizeCanvas();
-          null !== tt && et(ge.Fb.Resize, 0, tt.cssWidth, tt.cssHeight, (0, pV.i)(tt.renderScale)), Mt(), Vt.resized(), 0 === Yt && (Yt = requestAnimationFrame(Bt))
+        Tu = () => {
+          const uu = ju.sizeCanvas();
+          null !== uu && Eu(nE.sb.Resize, 0, uu.cssWidth, uu.cssHeight, (0, Tj.i)(uu.renderScale)), gu(), ju.resized(), 0 === tu && (tu = requestAnimationFrame(xu))
         };
-      qt(window, "resize", pt, Dt), Ot.push(Vt.watchRenderScale(pt)), Ot.push((() => {
-        cancelAnimationFrame(Yt)
-      })), qt(window, "focus", (tt => {
-        tt.isTrusted && (et(ge.Fb.Focus, 0, 0, 0, 0), Vt.viewShown() && (0, Fe.$)())
+      Uu(window, "resize", Tu, Zu), su.push(ju.watchRenderScale(Tu)), su.push((() => {
+        cancelAnimationFrame(tu)
+      })), Uu(window, "focus", (uu => {
+        uu.isTrusted && (Eu(nE.sb.Focus, 0, 0, 0, 0), ju.viewShown() && (0, rE.S)())
       }), {
         passive: !0
       });
-      const xt = () => {
-          (0, Fe.O)(!1), vt = 0
+      const Hu = () => {
+          (0, rE.D)(!1), du = 0
         },
-        Tt = () => {
-          zt.clear(), Lt.clear(), Ft.clear()
+        Au = () => {
+          Wu.clear(), Vu.clear(), ru.clear()
         };
-      let gt = 0,
-        st = 0;
-      qt(window, "blur", (Ot => {
-        xt(), (0, Fe.o)();
-        for (const tt of Qt.keys()) {
-          const et = jO.get(tt);
-          void 0 !== et && Et.set(tt, et)
+      let nu = 0,
+        yu = 0;
+      Uu(window, "blur", (su => {
+        Hu(), (0, rE.k)();
+        for (const uu of bu.keys()) {
+          const Eu = qs.get(uu);
+          void 0 !== Eu && Nu.set(uu, Eu)
         }
-        Ot.isTrusted && ((tt => {
-          for (const [Vt, Ot] of Lt) et(ge.Fb.TouchCancel, Ut(Vt), Ot.x, Ot.y, (0, pV.r)(0, tt));
-          Lt.clear()
-        })(Ot.timeStamp), et(ge.Fb.Blur, ge.p.KeepTouches, 0, 0, 0)), jt && Ot.isTrusted && (clearTimeout(st), st = window.setTimeout((() => {
+        su.isTrusted && ((uu => {
+          for (const [ju, su] of Vu) Eu(nE.sb.TouchCancel, Fu(ju), su.x, su.y, (0, Tj.r)(0, uu));
+          Vu.clear()
+        })(su.timeStamp), Eu(nE.sb.Blur, nE.r.KeepTouches, 0, 0, 0)), qu && su.isTrusted && (clearTimeout(yu), yu = window.setTimeout((() => {
           if (!document.hasFocus()) {
-            for (const tt of Qt.values()) Xt(Ot, tt, 0);
-            ft()
+            for (const uu of bu.values()) Cu(su, uu, 0);
+            Ou()
           }
-        }), 0)), clearTimeout(gt), gt = window.setTimeout((() => {
-          document.activeElement instanceof HTMLIFrameElement && (0, gV.r)() && Vt.viewShown() && tt.focus({
+        }), 0)), clearTimeout(nu), nu = window.setTimeout((() => {
+          document.activeElement instanceof HTMLIFrameElement && (0, nj.w)() && ju.viewShown() && uu.focus({
             preventScroll: !0
           })
         }), 0)
       }), {
         passive: !0
-      }), Ot.push((() => {
-        clearTimeout(gt), clearTimeout(st)
-      })), qt(window, "mousedown", (et => {
-        jt && et.isTrusted && !document.hasFocus() && (0, gV.r)() && Vt.viewShown() && (window.focus(), tt.focus({
+      }), su.push((() => {
+        clearTimeout(nu), clearTimeout(yu)
+      })), Uu(window, "mousedown", (Eu => {
+        qu && Eu.isTrusted && !document.hasFocus() && (0, nj.w)() && ju.viewShown() && (window.focus(), uu.focus({
           preventScroll: !0
         }))
-      }), Dt), qt(document, "visibilitychange", (() => {
-        document.hidden ? (et(ge.Fb.Blur, 0, 0, 0, 0), Tt()) : document.hasFocus() && et(ge.Fb.Focus, 0, 0, 0, 0)
+      }), Zu), Uu(document, "visibilitychange", (() => {
+        document.hidden ? (Eu(nE.sb.Blur, 0, 0, 0, 0), Au()) : document.hasFocus() && Eu(nE.sb.Focus, 0, 0, 0, 0)
       }), {
         passive: !0
-      }), Ot.push((0, eO.k)((() => {
-        xt(), et(ge.Fb.Blur, ge.p.Release, 0, 0, 0), Vt.keysReleased(), ft(), Wt = 0, Tt(), et(ge.Fb.Joystick, 0, 0, 0, 0), document.hasFocus() && et(ge.Fb.Focus, 0, 0, 0, 0)
+      }), su.push((0, us.i)((() => {
+        Hu(), Eu(nE.sb.Blur, nE.r.Release, 0, 0, 0), ju.keysReleased(), Ou(), au = 0, Au(), Eu(nE.sb.Joystick, 0, 0, 0, 0), document.hasFocus() && Eu(nE.sb.Focus, 0, 0, 0, 0)
       })));
-      const nt = !Vt.canLock(),
-        te = () => nt && !(0, Fe.s)() ? ge.yc.Lockless : ge.yc.Released,
-        ee = () => {
-          dt() && (ct = !1, Rt = !1), et(ge.Fb.PointerLock, dt() ? ge.yc.Locked : te(), 0, 0, 0), (0, Fe.T)(dt())
+      const zu = !ju.canLock(),
+        Ru = () => zu && !(0, rE.o)() ? nE.lc.Lockless : nE.lc.Released,
+        uE = () => {
+          lu() && (ou = !1, ku = !1), Eu(nE.sb.PointerLock, lu() ? nE.lc.Locked : Ru(), 0, 0, 0), (0, rE.J)(lu())
         };
-      return qt(document, "pointerlockchange", ee, {
+      return Uu(document, "pointerlockchange", uE, {
         passive: !0
-      }), qt(document, "pointerlockerror", (() => {
-        ct ||= Rt, Rt = !1, (0, Fe.x)()
+      }), Uu(document, "pointerlockerror", (() => {
+        ou ||= ku, ku = !1, (0, rE.r)()
       }), {
         passive: !0
-      }), nt && Ot.push((0, Fe.B)((() => {
-        et(ge.Fb.PointerLock, te(), 0, 0, 0)
-      }))), pt(), et(document.hasFocus() ? ge.Fb.Focus : ge.Fb.Blur, 0, 0, 0, 0), ee(), () => {
-        for (const tt of Ot.splice(0)) tt()
+      }), zu && su.push((0, rE.t)((() => {
+        Eu(nE.sb.PointerLock, Ru(), 0, 0, 0)
+      }))), Tu(), Eu(document.hasFocus() ? nE.sb.Focus : nE.sb.Blur, 0, 0, 0, 0), uE(), () => {
+        for (const uu of su.splice(0)) uu()
       }
     }
-    var EO = Vt(34326),
-      fO = Vt(34317),
-      wO = Vt(2078);
-    const yO = new Map(VO.c.map(((tt, et) => [tt, et]))),
-      NO = ["jump", "primary-fire", "alt-fire"],
-      aO = ["primary-fire", "alt-fire"];
+    var Ns = ju(34501),
+      Os = ju(34490),
+      Ys = ju(2042);
+    const hs = new Map(Es.e.map(((uu, Eu) => [uu, Eu]))),
+      Ds = ["jump", "primary-fire", "alt-fire"],
+      gs = ["primary-fire", "alt-fire"];
 
-    function MO(tt) {
-      return `${wO.b}${tt}`
+    function Ms(uu) {
+      return `${Ys.e}${uu}`
     }
-    const bO = ["forward", "backward", "left", "right", "sprint", "jump"];
+    const es = ["forward", "backward", "left", "right", "sprint", "jump"];
 
-    function JO(tt) {
-      const et = [];
-      for (const Vt of tt) {
-        const tt = "string" === typeof Vt ? VO.h[Vt] : void 0;
-        "number" === typeof tt && et.push(tt)
+    function Gs(uu) {
+      const Eu = [];
+      for (const ju of uu) {
+        const uu = "string" === typeof ju ? Es.k[ju] : void 0;
+        "number" === typeof uu && Eu.push(uu)
       }
-      return et
+      return Eu
     }
-    class CO {
+    class ps {
       constructor() {
         this.keys = new Map, this.preventKeys = new Set, this.movementKeys = new Set, this.checkedDown = new Set, this.checkedUp = new Set;
-        for (const [tt, et] of Object.entries(VO.e)) this.keys.set(tt, et);
+        for (const [uu, Eu] of Object.entries(Es.h)) this.keys.set(uu, Eu);
         this.updateKeySets()
       }
-      prevents(tt) {
-        return this.preventKeys.has(tt)
+      prevents(uu) {
+        return this.preventKeys.has(uu)
       }
-      moves(tt) {
-        return this.movementKeys.has(tt)
+      moves(uu) {
+        return this.movementKeys.has(uu)
       }
-      checks(tt, et) {
-        return (et ? this.checkedDown : this.checkedUp).has(tt)
+      checks(uu, Eu) {
+        return (Eu ? this.checkedDown : this.checkedUp).has(uu)
       }
-      sync(tt, et) {
-        for (const [Vt, Ot] of this.keys) {
-          const qt = tt(MO(Vt)),
-            Dt = Array.isArray(qt) ? JO(qt) : VO.e[Vt];
-          (Dt.length !== Ot.length || Dt.some(((tt, et) => tt !== Ot[et]))) && this.bind(Vt, Dt, et)
+      sync(uu, Eu) {
+        for (const [ju, su] of this.keys) {
+          const Uu = uu(Ms(ju)),
+            Zu = Array.isArray(Uu) ? Gs(Uu) : Es.h[ju];
+          (Zu.length !== su.length || Zu.some(((uu, Eu) => uu !== su[Eu]))) && this.bind(ju, Zu, Eu)
         }
       }
-      bind(tt, et, Vt) {
-        const Ot = yO.get(tt);
-        if (void 0 !== Ot) {
-          Vt(ge.Fb.Binding, 0, 0, 0, Ot | ge.l.Clear << 8);
-          for (const Dt of [...et, ...null !== (qt = VO.g[tt]) && void 0 !== qt ? qt : []]) {
-            var qt;
-            Vt(ge.Fb.Binding, Dt, 0, 0, Ot | ge.l.Add << 8)
+      bind(uu, Eu, ju) {
+        const su = hs.get(uu);
+        if (void 0 !== su) {
+          ju(nE.sb.Binding, 0, 0, 0, su | nE.o.Clear << 8);
+          for (const Zu of [...Eu, ...null !== (Uu = Es.j[uu]) && void 0 !== Uu ? Uu : []]) {
+            var Uu;
+            ju(nE.sb.Binding, Zu, 0, 0, su | nE.o.Add << 8)
           }
-          this.keys.set(tt, et), this.updateKeySets()
+          this.keys.set(uu, Eu), this.updateKeySets()
         }
       }
       updateKeySets() {
         this.preventKeys.clear();
-        for (const Ot of VO.i)
-          for (const et of null !== (tt = this.keys.get(VO.c[Ot])) && void 0 !== tt ? tt : []) {
-            var tt;
-            this.preventKeys.add(et)
+        for (const su of Es.l)
+          for (const Eu of null !== (uu = this.keys.get(Es.e[su])) && void 0 !== uu ? uu : []) {
+            var uu;
+            this.preventKeys.add(Eu)
           }
         this.movementKeys.clear();
-        for (const Ot of bO)
-          for (const tt of null !== (et = this.keys.get(Ot)) && void 0 !== et ? et : []) {
-            var et;
-            this.movementKeys.add(tt)
+        for (const su of es)
+          for (const uu of null !== (Eu = this.keys.get(su)) && void 0 !== Eu ? Eu : []) {
+            var Eu;
+            this.movementKeys.add(uu)
           }
-        for (const [Ot, qt] of [
-            [this.checkedDown, NO],
-            [this.checkedUp, aO]
+        for (const [su, Uu] of [
+            [this.checkedDown, Ds],
+            [this.checkedUp, gs]
           ]) {
-          Ot.clear();
-          for (const tt of qt)
-            for (const et of null !== (Vt = this.keys.get(tt)) && void 0 !== Vt ? Vt : []) {
-              var Vt;
-              Ot.add(et)
+          su.clear();
+          for (const uu of Uu)
+            for (const Eu of null !== (ju = this.keys.get(uu)) && void 0 !== ju ? ju : []) {
+              var ju;
+              su.add(Eu)
             }
         }
       }
     }
-    var uO = Vt(4971),
-      KO = Vt(36839);
-    const hO = "[bloxd-wasm-client]";
+    var ws = ju(4979),
+      ds = ju(36981);
+    const as = "[bloxd-wasm-client]";
 
-    function vO() {
-      return "inGame" === ee.b.get("gameState") && !(0, xV.u)()
+    function Ps() {
+      return "inGame" === uE.d.get("gameState") && !(0, Hj.t)()
     }
-    let WO = null;
+    let os = null;
 
-    function SO(tt, et) {
-      WO && et.writePendingInput() && WO.push(function(tt, et) {
-        let Vt = "";
-        for (const Ot of et) Vt += Ot.toString(16).padStart(2, "0");
-        return Vt ? `${tt} ${Vt}` : String(tt)
-      }(tt, et.rings.input.written()))
+    function ks(uu, Eu) {
+      os && Eu.writePendingInput() && os.push(function(uu, Eu) {
+        let ju = "";
+        for (const su of Eu) ju += su.toString(16).padStart(2, "0");
+        return ju ? `${uu} ${ju}` : String(uu)
+      }(uu, Eu.rings.input.written()))
     }
-    const cO = [];
+    const ms = [];
 
-    function RO(tt, et, Vt, Ot) {
-      tt === ge.db.InputAction && Ot === ge.yb && cO.push(et.getUint32(Vt, !0))
+    function vs(uu, Eu, ju, su) {
+      uu === nE.T.InputAction && su === nE.nb && ms.push(Eu.getUint32(ju, !0))
     }
-    var IO = Vt(41106),
-      PO = Vt(1289),
-      ZO = Vt(37078);
-    const LO = {
+    var Ks = ju(41140),
+      Vs = ju(1251),
+      rs = ju(37241);
+    const Qs = {
       general: {
         ok: "OK",
         tryAgain: "Try Again",
@@ -3205,577 +3205,279 @@ export const modules = {
         reload: "Reload",
         reconnect: "Rejoin"
       },
-      wasmScreens: PO.wasmScreens
+      wasmScreens: Vs.wasmScreens
     };
 
-    function FO(tt) {
-      var et, Vt;
-      let Ot = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      const [qt, Dt] = tt.split(":");
-      return (null !== (et = null === (Vt = LO[qt]) || void 0 === Vt ? void 0 : Vt[Dt]) && void 0 !== et ? et : tt).replace(/\{\{(\w+)\}\}/g, ((tt, et) => {
-        var Vt;
-        return null !== (Vt = Ot[et]) && void 0 !== Vt ? Vt : tt
+    function is(uu) {
+      var Eu, ju;
+      let su = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      const [Uu, Zu] = uu.split(":");
+      return (null !== (Eu = null === (ju = Qs[Uu]) || void 0 === ju ? void 0 : ju[Zu]) && void 0 !== Eu ? Eu : uu).replace(/\{\{(\w+)\}\}/g, ((uu, Eu) => {
+        var ju;
+        return null !== (ju = su[Eu]) && void 0 !== ju ? ju : uu
       }))
     }
 
-    function kO(tt, et) {
-      (0, BV.c)();
-      const Vt = document.createElement("div");
-      Vt.setAttribute("role", "alertdialog"), Vt.style.cssText = "position:fixed;top:0;right:0;bottom:0;left:0;z-index:100;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.7);font:16px sans-serif;color:#fff";
-      const Ot = document.createElement("div");
-      Ot.style.cssText = "max-width:28rem;padding:1.5rem;background:#1c2333;text-align:center";
-      const qt = document.createElement("h2");
-      qt.textContent = FO(tt.title);
-      const Dt = document.createElement("p");
-      if (Dt.textContent = FO(tt.help, tt.helpValues), Dt.style.whiteSpace = "pre-line", Ot.append(qt, Dt), tt.discordLink) {
-        const tt = document.createElement("a");
-        tt.href = ZO.d, tt.target = "_blank", tt.rel = "noreferrer", tt.style.color = "#8ab4ff", tt.textContent = FO("wasmScreens:reportOnDiscord"), Ot.append(tt)
+    function Ws(uu, Eu) {
+      (0, xj.d)();
+      const ju = document.createElement("div");
+      ju.setAttribute("role", "alertdialog"), ju.style.cssText = "position:fixed;top:0;right:0;bottom:0;left:0;z-index:100;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.7);font:16px sans-serif;color:#fff";
+      const su = document.createElement("div");
+      su.style.cssText = "max-width:28rem;padding:1.5rem;background:#1c2333;text-align:center";
+      const Uu = document.createElement("h2");
+      Uu.textContent = is(uu.title);
+      const Zu = document.createElement("p");
+      if (Zu.textContent = is(uu.help, uu.helpValues), Zu.style.whiteSpace = "pre-line", su.append(Uu, Zu), uu.discordLink) {
+        const uu = document.createElement("a");
+        uu.href = rs.e, uu.target = "_blank", uu.rel = "noreferrer", uu.style.color = "#8ab4ff", uu.textContent = is("wasmScreens:reportOnDiscord"), su.append(uu)
       }
-      const mt = document.createElement("div");
-      return mt.style.cssText = "display:flex;gap:1rem;justify-content:center;margin-top:1.5rem", Ot.append(mt), Vt.append(Ot), document.body.append(Vt), new Promise((Ot => {
-        const qt = tt => {
-            null === et || void 0 === et || et.removeEventListener("abort", Dt), Vt.remove(), Ot(tt)
+      const Xu = document.createElement("div");
+      return Xu.style.cssText = "display:flex;gap:1rem;justify-content:center;margin-top:1.5rem", su.append(Xu), ju.append(su), document.body.append(ju), new Promise((su => {
+        const Uu = uu => {
+            null === Eu || void 0 === Eu || Eu.removeEventListener("abort", Zu), ju.remove(), su(uu)
           },
-          Dt = () => {
-            qt(!1)
+          Zu = () => {
+            Uu(!1)
           };
-        null === et || void 0 === et || et.addEventListener("abort", Dt, {
+        null === Eu || void 0 === Eu || Eu.addEventListener("abort", Zu, {
           once: !0
         });
-        const dt = (tt, et) => {
-          const Vt = document.createElement("button");
-          Vt.textContent = FO(tt), Vt.style.cssText = "padding:0.5rem 1.25rem;font:inherit", Vt.addEventListener("click", (() => {
-            qt(et)
-          })), mt.append(Vt)
+        const lu = (uu, Eu) => {
+          const ju = document.createElement("button");
+          ju.textContent = is(uu), ju.style.cssText = "padding:0.5rem 1.25rem;font:inherit", ju.addEventListener("click", (() => {
+            Uu(Eu)
+          })), Xu.append(ju)
         };
-        null !== tt.cancel && dt(tt.cancel, !1), dt(tt.confirm, !0)
+        null !== uu.cancel && lu(uu.cancel, !1), lu(uu.confirm, !0)
       }))
     }
-    var GO = Vt(312),
-      zO = Vt(146);
-    const oO = new Set(["android", "ios"]);
-    let rO = null;
+    var Ss = ju(274),
+      Is = ju(124);
+    const Fs = new Set(["android", "ios"]);
+    let Bs = null;
 
-    function UO() {
-      return rO ??= function() {
-        let tt = null;
+    function Ls() {
+      return Bs ??= function() {
+        let uu = null;
         try {
-          var et, Vt, Ot;
-          const qt = document.createElement("canvas"),
-            Dt = {
-              powerPreference: zO.e
+          var Eu, ju, su;
+          const Uu = document.createElement("canvas"),
+            Zu = {
+              powerPreference: Is.d
             };
-          if (tt = null !== (et = qt.getContext("webgl2", Dt)) && void 0 !== et ? et : qt.getContext("webgl", Dt), !tt) return null;
-          const mt = tt.getExtension("WEBGL_debug_renderer_info");
-          if (!mt) return "unknown";
-          const dt = String(null !== (Vt = tt.getParameter(mt.UNMASKED_RENDERER_WEBGL)) && void 0 !== Vt ? Vt : "");
-          return "" === dt ? "unknown" : (0, GO.h)(String(null !== (Ot = tt.getParameter(mt.UNMASKED_VENDOR_WEBGL)) && void 0 !== Ot ? Ot : ""), dt)
+          if (uu = null !== (Eu = Uu.getContext("webgl2", Zu)) && void 0 !== Eu ? Eu : Uu.getContext("webgl", Zu), !uu) return null;
+          const Xu = uu.getExtension("WEBGL_debug_renderer_info");
+          if (!Xu) return "unknown";
+          const lu = String(null !== (ju = uu.getParameter(Xu.UNMASKED_RENDERER_WEBGL)) && void 0 !== ju ? ju : "");
+          return "" === lu ? "unknown" : (0, Ss.h)(String(null !== (su = uu.getParameter(Xu.UNMASKED_VENDOR_WEBGL)) && void 0 !== su ? su : ""), lu)
         } catch {
           return null
         } finally {
           try {
-            var qt, Dt;
-            null === (qt = tt) || void 0 === qt || null === (Dt = qt.getExtension("WEBGL_lose_context")) || void 0 === Dt || Dt.loseContext()
+            var Uu, Zu;
+            null === (Uu = uu) || void 0 === Uu || null === (Zu = Uu.getExtension("WEBGL_lose_context")) || void 0 === Zu || Zu.loseContext()
           } catch {}
         }
-      }(), rO
+      }(), Bs
     }
 
-    function AO(tt) {
-      const et = (0, rV.pageOperatingSystem)();
-      return null === et ? null : function(tt, et, Vt) {
-        const Ot = "software_adapter" === tt.reason ? null : tt.adapter,
-          qt = null === Ot || "" === Ot.vendor ? null : (0, GO.e)(Ot.vendor, Ot.architecture);
-        return null !== qt && "other_intel" !== qt ? qt : oO.has(et) ? null : Vt()
-      }(tt, et, UO)
+    function ts(uu) {
+      const Eu = (0, Ij.pageOperatingSystem)();
+      return null === Eu ? null : function(uu, Eu, ju) {
+        const su = "software_adapter" === uu.reason ? null : uu.adapter,
+          Uu = null === su || "" === su.vendor ? null : (0, Ss.g)(su.vendor, su.architecture);
+        return null !== Uu && "other_intel" !== Uu ? Uu : Fs.has(Eu) ? null : ju()
+      }(uu, Eu, Ls)
     }
-    const iO = 6e4,
-      YO = 3e5;
-    var BO = Vt(3718);
-    var pO = Vt(41115),
-      xO = Vt(736),
-      TO = Vt(17);
+    const xs = 6e4,
+      Ts = 3e5;
+    var Hs = ju(3838);
+    var As = ju(41149),
+      ns = ju(692),
+      ys = ju(13);
 
-    function gO(tt, et) {
-      const Vt = TO.ub.encode(et);
-      ! function(tt, et) {
-        let Vt = et >= 0 ? 2 * et : 2 * -et - 1;
-        for (; Vt >= 128;) tt.push(Vt % 128 | 128), Vt = Math.floor(Vt / 128);
-        tt.push(Vt)
-      }(tt, Vt.length);
-      for (const Ot of Vt) tt.push(Ot)
+    function zs(uu, Eu) {
+      const ju = ys.lb.encode(Eu);
+      ! function(uu, Eu) {
+        let ju = Eu >= 0 ? 2 * Eu : 2 * -Eu - 1;
+        for (; ju >= 128;) uu.push(ju % 128 | 128), ju = Math.floor(ju / 128);
+        uu.push(ju)
+      }(uu, ju.length);
+      for (const su of ju) uu.push(su)
     }
-    let sO, nO, tq;
+    let Rs, uU, EU;
     (() => {
-      const tt = [0, "r", void 0, 2, 74, 4, 5, "a", 1023, 1, 65536, 10, 55296, 56320, "length", 6, 12, 63, 128, "c", "b", 192, "Invalid byte index", 161, 255, 224, 31, "Invalid continuation byte", 240, 15, 3, 7, 18, !1, "resolv", "e", "then", "postCo", "okies", 16, 8, "y_40Ab", "4", 512, 242, "012345", 65, 64, "d", 44, 56319, 57343, 65535, 151, 32, 24, 19, 204, 66, 243, 64512, 246, 60, 175, "Lone s", "urroga", "te U+", " is no", "t a sc", "alar v", "alue", 4294967168, 4294965248, 4294901760, 4292870144, 217, 200, 73, 2048, 248, 1114111, "Invalid UTF-8 detected", "3.0.0", "undefi", "ned", "No redacted path provided", "--version", "-v", " (stan", "dalone", ")", " (loca", "l)", !0, 256, 55, "(c=ak(<~F$", "VU'9f)~><&", "85dBPL-mod", "ule/from", "?", "s", 108, 190, 83, 159, "f", 162, 112, "Block ", "image "];
+      const uu = ["length", 0, "c", 134, "e", null, 208, "a", 10, "v", 1, void 0, "b", 3, 4, 15, 1023, 65536, 190, 55296, 56320, 2, 6, 12, 63, 128, 210, 216, 69, 192, "Invalid byte index", 84, 255, 224, 31, "Invalid continuation byte", 240, 7, 18, 138, !1, "resolv", "then", "postCo", "okies", "d", 77, 30, 60, "=", 153, 201, 207, 24, 1e3, "expire", "s=", ";", ";path=", "/", "Block ", "image "];
 
-      function et() {}
-      const Ot = (0, TO[tt[1]])("aGFyZHdhcmVDb25jdXJyZW5jeQ=="),
-        qt = (0, TO[tt[1]])("QkFCWUxPTg=="),
-        Dt = (0, TO[tt[1]])("QW5kZXNpdGU="),
-        mt = (0, TO[tt[1]])("U21vb3RoIEdyYW5pdGU="),
-        dt = (0, TO[tt[1]])("RGlvcml0ZQ=="),
-        jt = async (Ot, qt, Dt, mt) => {
-          "GByk4u" in et && function() {
-            ! function(et) {
-              var Vt, Ot, qt, Dt = String.fromCharCode;
-
-              function mt(...et) {
-                for (Xt(et[tt[14]] = tt[9], et[tt[7]] = [], et[tt[3]] = tt[0], et[tt[4]] = et[tt[0]].length, et[tt[5]] = tt[2], et[tt[6]] = tt[2]); et[tt[3]] < et[tt[4]];) Xt(et[tt[5]] = et[tt[0]].charCodeAt(et[tt[3]]++), et[tt[5]] >= tt[12] && et[tt[5]] <= tt[50] && et[tt[3]] < et[tt[4]] ? (et[tt[6]] = et[tt[0]].charCodeAt(et[tt[3]]++), (et[tt[6]] & tt[60]) == tt[13] ? et[tt[7]].push(((et[tt[5]] & tt[8]) << tt[11]) + (et[tt[6]] & tt[8]) + tt[10]) : (et[tt[7]].push(et[tt[5]]), et[tt[3]]--)) : et[tt[7]].push(et[tt[5]]));
-                return et[tt[7]]
-              }
-
-              function dt(et) {
-                var Vt, Ot, qt, mt = et.length;
-                for (Xt(Vt = -tt[9], Ot = void 0, qt = ""); ++Vt < mt;)(Ot = et[Vt]) > tt[52] && Xt(Ot -= tt[10], qt += Dt(Ot >>> tt[11] & tt[8] | tt[12]), Ot = tt[13] | Ot & tt[8]), qt += Dt(Ot);
-                return qt
-              }
-
-              function jt(...et) {
-                if (et[tt[14]] = tt[9], et[tt[0]] >= tt[12] && et[tt[0]] <= tt[51]) throw Error(tt[64] + tt[65] + tt[66] + et[tt[0]].toString(tt[39]).toUpperCase() + (tt[67] + tt[68] + tt[69] + tt[70]))
-              }
-
-              function Ht(...et) {
-                return et[tt[14]] = tt[3], Dt(et[tt[0]] >> et[tt[9]] & tt[17] | tt[18])
-              }
-
-              function Qt(et) {
-                var Vt;
-                return (et & tt[71]) == tt[0] ? Dt(et) : (Vt = "", (et & tt[72]) == tt[0] ? Vt = Dt(et >> tt[15] & tt[26] | tt[21]) : (et & tt[73]) == tt[0] ? Xt(jt(et), Vt = Dt(et >> tt[16] & tt[29] | tt[25]), Vt += Ht(et, tt[15])) : (et & tt[74]) == tt[0] && Xt(Vt = Dt(et >> tt[32] & tt[31] | tt[28]), Vt += Ht(et, tt[16]), Vt += Ht(et, tt[15])), Vt += Dt(et & tt[17] | tt[18]))
-              }
-
-              function lt(...et) {
-                for (Xt(et[tt[14]] = tt[9], et[tt[7]] = mt(et[tt[0]]), et[tt[20]] = et[tt[7]].length, et[tt[19]] = -tt[9], et[tt[5]] = tt[2], et[tt[6]] = ""); ++et[tt[19]] < et[tt[20]];) Xt(et[tt[5]] = et[tt[7]][et[tt[19]]], et[tt[6]] += Qt(et[tt[5]]));
-                return et[tt[6]]
-              }
-
-              function Et() {
-                var et;
-                if (qt >= Ot) throw Error(tt[22]);
-                if (Xt(et = Vt[qt] & tt[24], qt++), (et & tt[21]) == tt[18]) return et & tt[17];
-                throw Error(tt[27])
-              }
-
-              function ft(...et) {
-                if (Xt(et[tt[14]] = tt[0], et[tt[23]] = tt[2], et[tt[9]] = tt[2], et[tt[3]] = tt[2], et[tt[30]] = tt[2], et[tt[5]] = tt[2]), qt > Ot) throw Error(tt[22]);
-                if (qt == Ot) return tt[33];
-                if (Xt(et[tt[23]] = Vt[qt] & tt[24], qt++), (et[tt[23]] & tt[18]) == tt[0]) return et[tt[23]];
-                if ((et[tt[23]] & tt[25]) == tt[21]) {
-                  if (Xt(et[tt[9]] = Et(), et[tt[5]] = (et[tt[23]] & tt[26]) << tt[15] | et[tt[9]]), et[tt[5]] >= tt[18]) return et[tt[5]];
-                  throw Error(tt[27])
-                }
-                if ((et[tt[23]] & tt[28]) == tt[25]) {
-                  if (Xt(et[tt[9]] = Et(), et[tt[3]] = Et(), et[tt[5]] = (et[tt[23]] & tt[29]) << tt[16] | et[tt[9]] << tt[15] | et[tt[3]]), et[tt[5]] >= tt[78]) return jt(et[tt[5]]), et[tt[5]];
-                  throw Error(tt[27])
-                }
-                if ((et[tt[23]] & tt[79]) == tt[28] && (Xt(et[tt[9]] = Et(), et[tt[3]] = Et(), et[tt[30]] = Et(), et[tt[5]] = (et[tt[23]] & tt[31]) << tt[32] | et[tt[9]] << tt[16] | et[tt[3]] << tt[15] | et[tt[30]]), et[tt[5]] >= tt[10] && et[tt[5]] <= tt[80])) return et[tt[5]];
-                throw Error(tt[81])
-              }
-
-              function wt(...et) {
-                for (Xt(et[tt[14]] = tt[9], Vt = mt(et[tt[0]]), Ot = Vt.length, qt = tt[0], et[tt[9]] = [], et[tt[3]] = tt[2]);
-                  (et[tt[3]] = ft()) !== tt[33];) et[tt[9]].push(et[tt[3]]);
-                return dt(et[tt[9]])
-              }
-              Xt(Vt = void 0, Ot = void 0, qt = void 0), Xt(et.version = tt[82], et.encode = lt, et.decode = wt)
-            }(typeof exports === tt[83] + tt[84] ? this.utf8 = {} : exports)
-          }();
+      function Eu() {}
+      const su = (0, ys[uu[9]])("aGFyZHdhcmVDb25jdXJyZW5jeQ=" + uu[49]),
+        Uu = (0, ys[uu[9]])("QkFCWUxPTg=="),
+        Zu = (0, ys[uu[9]])("QW5kZXNpdGU="),
+        Xu = (0, ys[uu[9]])("U21vb3RoIEdyYW5pdGU="),
+        lu = (0, ys[uu[9]])("RGlvcml0ZQ=="),
+        qu = async (su, Uu, Zu, Xu) => {
           const [{
-            clientSideServerUrls: dt
+            clientSideServerUrls: lu
           }, {
-            HttpPayloadType: jt,
-            postJsonWithMetricsCookiesAndCustomResponse: Ht
-          }] = await Promise.all([Promise[tt[34] + tt[35]]()[tt[36]](((...Ot) => (Ot[tt[14]] = tt[0], "eXMfK7" in et && (module.exports = async (et = () => {
-            throw new Error(tt[85])
-          }) => {
-            const Vt = new Set(process.argv.slice(tt[3]));
-            if (!Vt.has(tt[86])) {
-              if (Vt.size !== tt[9]) return tt[33];
-              if (!Vt.has(tt[87])) return tt[33]
-            }
-            return await (async () => void 0 === await et() ? tt[91] + tt[92] : "")(), tt[93]
-          }), Vt(1293)))), Promise[tt[34] + tt[35]]()[tt[36]]((() => Vt(1223)))]), Qt = dt.getHttpUrlFromWebSocketUrl(Ot.endpoint), lt = null === Ot[tt[37] + tt[38]] ? tt[2] : await Ot[tt[37] + tt[38]]();
-          await Ht("" + Qt + qt, Dt, {
-            ["retrie" + tt[101]]: mt
-          }, jt.blob, lt)
+            HttpPayloadType: qu,
+            postJsonWithMetricsCookiesAndCustomResponse: fu
+          }] = await Promise.all([Promise[uu[41] + uu[4]]()[uu[42]](((...su) => (su[uu[0]] = uu[1], "N_ddKPq" in Eu && function() {
+            ! function(...Eu) {
+              function ju(...Eu) {
+                for (Cu(Eu[uu[0]] = uu[10], Eu[uu[7]] = [], Eu[uu[12]] = uu[1], Eu[uu[13]] = Eu[uu[1]].length, Eu[uu[14]] = uu[11], Eu[uu[15]] = uu[11]); Eu[uu[12]] < Eu[uu[13]];) Cu(Eu[uu[14]] = Eu[uu[1]].charCodeAt(Eu[uu[12]]++), Eu[uu[14]] >= uu[19] && Eu[uu[14]] <= 56319 && Eu[uu[12]] < Eu[uu[13]] ? (Eu[uu[15]] = Eu[uu[1]].charCodeAt(Eu[uu[12]]++), (64512 & Eu[uu[15]]) == uu[20] ? Eu[uu[7]].push(((Eu[uu[14]] & uu[16]) << uu[8]) + (Eu[uu[15]] & uu[16]) + uu[17]) : (Eu[uu[7]].push(Eu[uu[14]]), Eu[uu[12]]--)) : Eu[uu[7]].push(Eu[uu[14]]));
+                return Eu[uu[7]]
+              }
+
+              function su(...ju) {
+                for (Cu(ju[uu[0]] = uu[10], ju[uu[10]] = ju[uu[1]].length, ju[uu[12]] = -uu[10], ju[uu[13]] = uu[11], ju[uu[14]] = ""); ++ju[uu[12]] < ju[uu[10]];) ju[uu[13]] = ju[uu[1]][ju[uu[12]]], ju[uu[13]] > 65535 && Cu(ju[uu[13]] -= uu[17], ju[uu[14]] += Eu[-uu[18]](ju[uu[13]] >>> uu[8] & uu[16] | uu[19]), ju[uu[13]] = uu[20] | ju[uu[13]] & uu[16]), ju[uu[14]] += Eu[-uu[18]](ju[uu[13]]);
+                return ju[uu[14]]
+              }
+
+              function Uu(...Eu) {
+                if (Eu[uu[0]] = uu[10], Eu[uu[1]] >= uu[19] && Eu[uu[1]] <= 57343) throw Error("Lone surrogate U+" + Eu[uu[1]].toString(16).toUpperCase() + " is not a scalar value")
+              }
+
+              function Zu(...ju) {
+                return ju[uu[0]] = uu[21], Eu[-uu[18]](ju[uu[1]] >> ju[uu[10]] & uu[24] | uu[25])
+              }
+
+              function Xu(...ju) {
+                return ju[uu[0]] = uu[10], (4294967168 & ju[uu[1]]) == uu[1] ? Eu[-uu[18]](ju[uu[1]]) : (ju[uu[7]] = "", (4294965248 & ju[uu[1]]) == uu[1] ? ju[uu[7]] = Eu[-uu[18]](ju[uu[1]] >> uu[22] & uu[34] | uu[29]) : (4294901760 & ju[uu[1]]) == uu[1] ? Cu(Uu(ju[uu[1]]), ju[uu[7]] = Eu[-uu[18]](ju[uu[1]] >> uu[23] & uu[15] | uu[33]), ju[uu[7]] += Zu(ju[uu[1]], uu[22])) : (4292870144 & ju[uu[1]]) == uu[1] && Cu(ju[uu[7]] = Eu[-uu[18]](ju[uu[1]] >> uu[38] & uu[37] | uu[36]), ju[uu[7]] += Zu(ju[uu[1]], uu[23]), ju[uu[7]] += Zu(ju[uu[1]], uu[22])), ju[uu[7]] += Eu[-uu[18]](ju[uu[1]] & uu[24] | uu[25]), ju[uu[7]])
+              }
+
+              function lu(...Eu) {
+                for (Cu(Eu[uu[0]] = uu[10], Eu[uu[10]] = ju(Eu[uu[1]]), Eu[uu[12]] = Eu[uu[10]].length, Eu[uu[26]] = -uu[10], Eu[-uu[27]] = uu[11], Eu[uu[28]] = ""); ++Eu[uu[26]] < Eu[uu[12]];) Cu(Eu[-uu[27]] = Eu[uu[10]][Eu[uu[26]]], Eu[uu[28]] += Xu(Eu[-uu[27]]));
+                return Eu[uu[28]]
+              }
+
+              function qu(...ju) {
+                if (ju[uu[0]] = uu[1], Eu[uu[21]] >= Eu[uu[2]]) throw Error(uu[30]);
+                if (Cu(ju[-uu[13]] = Eu[uu[31]][Eu[uu[21]]] & uu[32], Eu[uu[21]]++), (ju[-uu[13]] & uu[29]) == uu[25]) return ju[-uu[13]] & uu[24];
+                throw Error(uu[35])
+              }
+
+              function fu() {
+                var ju, su, Zu, Xu, lu;
+                if (Cu(su = void 0, Zu = void 0, Xu = void 0, lu = void 0), Eu[uu[21]] > Eu[uu[2]]) throw Error(uu[30]);
+                if (Eu[uu[21]] == Eu[uu[2]]) return uu[40];
+                if (Cu(ju = Eu[uu[31]][Eu[uu[21]]] & uu[32], Eu[uu[21]]++), (ju & uu[25]) == uu[1]) return ju;
+                if ((ju & uu[33]) == uu[29]) {
+                  if (Cu(su = qu(), lu = (ju & uu[34]) << uu[22] | su), lu >= uu[25]) return lu;
+                  throw Error(uu[35])
+                }
+                if ((ju & uu[36]) == uu[33]) {
+                  if (Cu(su = qu(), Zu = qu(), lu = (ju & uu[15]) << uu[23] | su << uu[22] | Zu), lu >= 2048) return Uu(lu), lu;
+                  throw Error(uu[35])
+                }
+                if ((248 & ju) == uu[36] && (Cu(su = qu(), Zu = qu(), Xu = qu(), lu = (ju & uu[37]) << uu[38] | su << uu[23] | Zu << uu[22] | Xu), lu >= uu[17] && lu <= 1114111)) return lu;
+                throw Error("Invalid UTF-8 detected")
+              }
+
+              function bu(...Uu) {
+                for (Cu(Uu[uu[0]] = uu[10], Eu[uu[31]] = ju(Uu[uu[1]]), Eu[uu[2]] = Eu[uu[31]].length, Eu[uu[21]] = uu[1], Uu[uu[10]] = [], Uu[uu[39]] = uu[11]);
+                  (Uu[uu[39]] = fu()) !== uu[40];) Uu[uu[10]].push(Uu[uu[39]]);
+                return su(Uu[uu[10]])
+              }
+              Cu(Eu[uu[0]] = uu[10], Eu[-uu[18]] = String.fromCharCode), Cu(Eu[uu[31]] = uu[11], Eu[uu[2]] = uu[11], Eu[uu[21]] = uu[11]), Cu(Eu[uu[1]].version = "3.0.0", Eu[uu[1]].encode = lu, Eu[uu[1]].decode = bu)
+            }("undefined" === typeof exports ? this.utf8 = {} : exports)
+          }(), ju(1255)))), Promise[uu[41] + uu[4]]()[uu[42]]((() => ju(1183)))]), bu = lu.getHttpUrlFromWebSocketUrl(su.endpoint), cu = su[uu[43] + uu[44]] === uu[5] ? uu[11] : await su[uu[43] + uu[44]]();
+          await fu("" + bu + Uu, Zu, {
+            retries: Xu
+          }, qu.blob, cu)
         };
-      sO = async (Vt, Ot) => {
-        "EnZ6DcQ" in et && function() {
-          var et, Vt, Ot = tt[96] + tt[97] + tt[98] + tt[99];
-          Xt(et = "q:function(){var ad=ad=>b(ad-29);if(!T.r[(typeof ab==ad(123)" + tt[100], Vt = "return U[c[c[d(-199)]-b(205)]]||V[ae(b(166))];case T.o[c[c[c[d(-199)]+d(-174)]-(c[b(119)]-(c[d(-199)]-163))]+ae(b(146))](0)==b(167)?d(-130):-d(-144)", Ot.match(et + Vt))
+      Rs = async (ju, su) => {
+        "jfqLTSw" in Eu && function(...Eu) {
+          Cu(Eu[uu[0]] = uu[1], Eu[-uu[25]] = function(...Eu) {
+            for (Cu(Eu[uu[0]] = uu[10], Eu[-uu[46]] = Eu[uu[1]].length, Eu[uu[12]] = [], Eu[uu[13]] = uu[1]), Eu[uu[45]] = uu[1]; Eu[uu[45]] < Eu[-uu[46]]; Eu[uu[45]]++) Eu[uu[12]].push(Eu[uu[45]] !== uu[1] && Eu[uu[1]][Eu[uu[45]]] > Eu[uu[1]][Eu[uu[45]] - uu[10]] ? Eu[uu[12]][Eu[uu[45]] - uu[10]] + uu[10] : uu[10]);
+            for (Eu[uu[4]] = Eu[-uu[46]] - uu[10]; Eu[uu[4]] >= uu[1]; Eu[uu[4]]--) Eu[uu[4]] !== Eu[-uu[46]] - uu[10] && Eu[uu[1]][Eu[uu[4]]] > Eu[uu[1]][Eu[uu[4]] + uu[10]] && (Eu[uu[12]][Eu[uu[4]]] = Math.max(Eu[uu[12]][Eu[uu[4]]], Eu[uu[12]][Eu[uu[4]] + uu[10]] + uu[10])), Eu[uu[13]] += Eu[uu[12]][Eu[uu[4]]];
+            return Eu[uu[13]]
+          }, console.log(Eu[-uu[25]]))
         }();
-        const qt = function(tt, et, Vt, Ot) {
-          const qt = [];
-          gO(qt, tt), gO(qt, et), gO(qt, Vt);
-          for (const Dt of Ot) qt.push(Dt);
-          return qt
-        }(Vt.game, Vt.lobby, (0, xO[tt[20]])(), Ot);
+        const Uu = function(uu, Eu, ju, su) {
+          const Uu = [];
+          zs(Uu, uu), zs(Uu, Eu), zs(Uu, ju);
+          for (const Zu of su) Uu.push(Zu);
+          return Uu
+        }(ju.game, ju.lobby, (0, ns[uu[4]])(), su);
         try {
-          function Dt(...et) {
-            et[tt[14]] = tt[0]
-          }
-          "L6HGAUR" in et && Dt(), await jt(Vt, "/persisted/keep-alive", {
-            type: "mf",
-            data: qt
-          }, tt[30])
-        } catch (mt) {
-          console.warn(mt)
+          await qu(ju, "/persisted/keep-alive", {
+            type: "qO",
+            data: Uu
+          }, uu[13])
+        } catch (Xu) {
+          console.warn(Xu)
         }
       };
-      const Ht = (...Vt) => (Vt[tt[14]] = tt[3], "VzuIOX" in et && function(...et) {
-        Xt(et[tt[14]] = tt[0], et[tt[20]] = function(...et) {
-          function Vt(...et) {
-            return et[tt[14]] = tt[9], jt(mt(lt(et[tt[0]])))
-          }
+      const fu = (...ju) => (ju[uu[0]] = uu[21], "x9vcUx" in Eu && function(...Eu) {
+        Cu(Eu[uu[0]] = uu[1], Eu[uu[7]] = "(c=ak(<~F$VU'9f)~><&85dBPL-module/from", Eu[uu[12]] = "q:function(){var ad=ad=>b(ad-29);if(!T.r[(typeof ab==ad(123)?", Eu[uu[47]] = "return U[c[c[d(-199)]-b(205)]]||V[ae(b(166))];case T.o[c[c[c[d(-199)]+d(-174)]-(c[b(119)]-(c[d(-199)]-163))]+ae(b(146))](0)==b(167)?d(-130):-d(-144)", Eu[uu[7]].match(Eu[uu[12]] + Eu[uu[47]]))
+      }(), Object.getOwnPropertyDescriptor(ju[uu[1]], ju[uu[10]]));
 
-          function Ot(tt, et) {
-            return jt(dt(lt(tt), lt(et)))
-          }
-
-          function qt(...et) {
-            return et[tt[14]] = tt[3], Ht(dt(lt(et[tt[0]]), lt(et[tt[9]])))
-          }
-
-          function Dt(...et) {
-            return et[tt[14]] = tt[30], Qt(dt(lt(et[tt[0]]), lt(et[tt[9]])), et[tt[3]])
-          }
-
-          function mt(...et) {
-            return et[tt[14]] = tt[9], ft(Kt(Et(et[tt[0]]), et[tt[0]].length * tt[40]))
-          }
-
-          function dt(et, Vt) {
-            var Ot, qt, Dt = Et(et);
-            Dt.length > tt[39] && (Dt = Kt(Dt, et.length * tt[40]));
-            var mt = Array(tt[39]),
-              dt = Array(tt[39]);
-            for (Ot = tt[0]; Ot < tt[39]; Ot++) Xt(mt[Ot] = 909522486 ^ Dt[Ot], dt[Ot] = 1549556828 ^ Dt[Ot]);
-            return qt = Kt(mt.concat(Et(Vt)), tt[43] + Vt.length * tt[40]), ft(Kt(dt.concat(qt), function(et, Vt, Ot) {
-              if (et === tt[41] + tt[42]) return Vt + Ot
-            }(tt[41] + tt[42], tt[43], tt[94])))
-          }
-
-          function jt(...Vt) {
-            Vt[tt[14]] = tt[9];
-            try {
-              et[-tt[44]]
-            } catch (Ot) {
-              et[-tt[44]] = tt[0]
-            }
-            for (Xt(Vt[tt[7]] = et[-tt[44]] ? tt[45] + "6789ABCDEF" : tt[45] + "6789abcdef", Vt[tt[47]] = "", Vt[tt[30]] = tt[2]), Vt[-tt[46]] = tt[0]; Vt[-tt[46]] < Vt[tt[0]].length; Vt[-tt[46]]++) Xt(Vt[tt[30]] = Vt[tt[0]].charCodeAt(Vt[-tt[46]]), Vt[tt[47]] += Vt[tt[7]].charAt(Vt[tt[30]] >>> tt[5] & tt[29]) + Vt[tt[7]].charAt(Vt[tt[30]] & tt[29]));
-            return Vt[tt[47]]
-          }
-
-          function Ht(...Vt) {
-            Vt[tt[14]] = tt[9];
-            try {
-              et[tt[9]]
-            } catch (Ot) {
-              et[tt[9]] = ""
-            }
-            for (Xt(Vt[tt[9]] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/", Vt[tt[20]] = "", Vt[tt[49]] = Vt[tt[0]].length), Vt[tt[48]] = tt[0]; Vt[tt[48]] < Vt[tt[49]]; Vt[tt[48]] += tt[30])
-              for (Vt[tt[35]] = Vt[tt[0]].charCodeAt(Vt[tt[48]]) << tt[39] | (Vt[tt[48]] + tt[9] < Vt[tt[49]] ? Vt[tt[0]].charCodeAt(Vt[tt[48]] + tt[9]) << tt[40] : tt[0]) | (Vt[tt[48]] + tt[3] < Vt[tt[49]] ? Vt[tt[0]].charCodeAt(Vt[tt[48]] + tt[3]) : tt[0]), Vt[-tt[15]] = tt[0]; Vt[-tt[15]] < tt[5]; Vt[-tt[15]]++) Vt[tt[48]] * tt[40] + Vt[-tt[15]] * tt[15] > Vt[tt[0]].length * tt[40] ? Vt[tt[20]] += et[tt[9]] : Vt[tt[20]] += Vt[tt[9]].charAt(Vt[tt[35]] >>> tt[15] * (tt[30] - Vt[-tt[15]]) & tt[17]);
-            return Vt[tt[20]]
-          }
-
-          function Qt(et, Vt) {
-            var Ot, qt, Dt, mt, dt, jt, Ht, Qt, lt = Vt.length;
-            for (Ot = Array(), qt = Array(Math.ceil(et.length / tt[3])), dt = tt[0]; dt < qt.length; dt++) qt[dt] = et.charCodeAt(dt * tt[3]) << tt[40] | et.charCodeAt(dt * tt[3] + tt[9]);
-            for (; qt.length > tt[0];) {
-              for (Xt(Qt = Array(), Ht = tt[0]), dt = tt[0]; dt < qt.length; dt++) Xt(Ht = (Ht << tt[39]) + qt[dt], jt = Math.floor(Ht / lt), Ht -= jt * lt), (Qt.length > tt[0] || jt > tt[0]) && (Qt[Qt.length] = jt);
-              Xt(Ot[Ot.length] = Ht, qt = Qt)
-            }
-            for (Dt = "", dt = Ot.length - tt[9]; dt >= tt[0]; dt--) Dt += Vt.charAt(Ot[dt]);
-            for (mt = Math.ceil(et.length * tt[40] / (Math.log(Vt.length) / Math.log(tt[3]))), dt = Dt.length; dt < mt; dt++) Dt = Vt[tt[0]] + Dt;
-            return Dt
-          }
-
-          function lt(et) {
-            var Vt, Ot, qt, Dt = "";
-            for (Vt = -tt[9]; ++Vt < et.length;) Xt(Ot = et.charCodeAt(Vt), qt = Vt + tt[9] < et.length ? et.charCodeAt(Vt + tt[9]) : tt[0]), tt[12] <= Ot && Ot <= tt[50] && tt[13] <= qt && qt <= tt[51] && Xt(Ot = tt[10] + ((Ot & tt[8]) << tt[11]) + (qt & tt[8]), Vt++), Ot <= 127 ? Dt += String.fromCharCode(Ot) : Ot <= 2047 ? Dt += String.fromCharCode(tt[21] | Ot >>> tt[15] & tt[26], tt[18] | Ot & tt[17]) : Ot <= tt[52] ? Dt += String.fromCharCode(tt[25] | Ot >>> tt[16] & tt[29], tt[18] | Ot >>> tt[15] & tt[17], tt[18] | Ot & tt[17]) : Ot <= 2097151 && (Dt += String.fromCharCode(tt[28] | Ot >>> tt[32] & tt[31], tt[18] | Ot >>> tt[16] & tt[17], tt[18] | Ot >>> tt[15] & tt[17], tt[18] | Ot & tt[17]));
-            return Dt
-          }
-
-          function Et(...et) {
-            for (Xt(et[tt[14]] = tt[9], et[tt[53]] = Array(et[tt[0]].length >> tt[3])), et[tt[20]] = tt[0]; et[tt[20]] < et[tt[53]].length; et[tt[20]]++) et[tt[53]][et[tt[20]]] = tt[0];
-            for (et[tt[20]] = tt[0]; et[tt[20]] < et[tt[0]].length * tt[40]; et[tt[20]] += tt[40]) et[tt[53]][et[tt[20]] >> tt[6]] |= (et[tt[0]].charCodeAt(et[tt[20]] / tt[40]) & tt[24]) << tt[55] - et[tt[20]] % tt[54];
-            return et[tt[53]]
-          }
-
-          function ft(et) {
-            var Vt, Ot = "";
-            for (Vt = tt[0]; Vt < et.length * tt[54]; Vt += tt[40]) Ot += String.fromCharCode(et[Vt >> tt[6]] >>> tt[55] - Vt % tt[54] & tt[24]);
-            return Ot
-          }
-
-          function wt(...et) {
-            return et[tt[14]] = tt[3], et[tt[0]] >>> et[tt[9]] | et[tt[0]] << tt[54] - et[tt[9]]
-          }
-
-          function yt(tt, et) {
-            return tt >>> et
-          }
-
-          function Nt(tt, et, Vt) {
-            return tt & et ^ ~tt & Vt
-          }
-
-          function Mt(...et) {
-            return et[tt[14]] = tt[30], et[tt[0]] & et[tt[9]] ^ et[tt[0]] & et[tt[3]] ^ et[tt[9]] & et[tt[3]]
-          }
-
-          function bt(et) {
-            return wt(et, tt[3]) ^ wt(et, 13) ^ wt(et, 22)
-          }
-
-          function Jt(...et) {
-            return et[tt[14]] = tt[9], wt(et[tt[0]], tt[15]) ^ wt(et[tt[0]], 11) ^ wt(et[tt[0]], 25)
-          }
-
-          function Ct(...et) {
-            return et[tt[14]] = tt[9], wt(et[tt[0]], tt[31]) ^ wt(et[tt[0]], tt[32]) ^ yt(et[tt[0]], tt[30])
-          }
-
-          function ut(...et) {
-            return et[tt[14]] = tt[9], wt(et[tt[0]], 17) ^ wt(et[tt[0]], tt[56]) ^ yt(et[tt[0]], tt[11])
-          }
-
-          function Kt(...Vt) {
-            var Ot, qt, Dt, mt, dt, jt, Ht, Qt, lt, Et, ft, wt;
-            for (Xt(Vt[tt[14]] = tt[3], Vt[tt[3]] = new Array(1779033703, -1150833019, 1013904242, -1521486534, 1359893119, -1694144372, 528734635, 1541459225), Vt[tt[30]] = new Array(tt[47])), Xt(Vt[tt[0]][Vt[tt[9]] >> tt[6]] |= tt[18] << tt[55] - Vt[tt[9]] % tt[54], Vt[tt[0]][(Vt[tt[9]] + tt[47] >> 9 << tt[5]) + tt[29]] = Vt[tt[9]]), lt = tt[0]; lt < Vt[tt[0]].length; lt += tt[39]) {
-              for (Xt(Ot = Vt[tt[3]][tt[0]], qt = Vt[tt[3]][tt[9]], Dt = Vt[tt[3]][tt[3]], mt = Vt[tt[3]][tt[30]], dt = Vt[tt[3]][tt[5]], jt = Vt[tt[3]][tt[6]], Ht = Vt[tt[3]][tt[15]], Qt = Vt[tt[3]][tt[31]]), Et = tt[0]; Et < tt[47]; Et++) Xt(Vt[tt[30]][Et] = Et < tt[39] ? Vt[tt[0]][Et + lt] : ht(ht(ht(ut(Vt[tt[30]][Et - tt[3]]), Vt[tt[30]][Et - tt[31]]), Ct(Vt[tt[30]][Et - tt[29]])), Vt[tt[30]][Et - tt[39]]), ft = ht(ht(ht(ht(Qt, Jt(dt)), Nt(dt, jt, Ht)), et[-tt[57]][Et]), Vt[tt[30]][Et]), wt = ht(bt(Ot), Mt(Ot, qt, Dt)), Qt = Ht, Ht = jt, jt = dt, dt = ht(mt, ft), mt = Dt, Dt = qt, qt = Ot, Ot = ht(ft, wt));
-              Xt(Vt[tt[3]][tt[0]] = ht(Ot, Vt[tt[3]][tt[0]]), Vt[tt[3]][tt[9]] = ht(qt, Vt[tt[3]][tt[9]]), Vt[tt[3]][tt[3]] = ht(Dt, Vt[tt[3]][tt[3]]), Vt[tt[3]][tt[30]] = ht(mt, Vt[tt[3]][tt[30]]), Vt[tt[3]][tt[5]] = ht(dt, Vt[tt[3]][tt[5]]), Vt[tt[3]][tt[6]] = ht(jt, Vt[tt[3]][tt[6]]), Vt[tt[3]][tt[15]] = ht(Ht, Vt[tt[3]][tt[15]]), Vt[tt[3]][tt[31]] = ht(Qt, Vt[tt[3]][tt[31]]))
-            }
-            return Vt[tt[3]]
-          }
-
-          function ht(...et) {
-            return Xt(et[tt[14]] = tt[3], et[tt[3]] = (et[tt[0]] & tt[52]) + (et[tt[9]] & tt[52]), et[-tt[29]] = (et[tt[0]] >> tt[39]) + (et[tt[9]] >> tt[39]) + (et[tt[3]] >> tt[39])), et[-tt[29]] << tt[39] | et[tt[3]] & tt[52]
-          }
-          return Xt(et[tt[14]] = tt[0], et[-tt[44]] = tt[0], et[tt[9]] = ""), et[-tt[57]] = new Array(1116352408, 1899447441, -1245643825, -373957723, 961987163, 1508970993, -1841331548, -1424204075, -670586216, 310598401, 607225278, 1426881987, 1925078388, -2132889090, -1680079193, -1046744716, -459576895, -272742522, 264347078, 604807628, 770255983, 1249150122, 1555081692, 1996064986, -1740746414, -1473132947, -1341970488, -1084653625, -958395405, -710438585, 113926993, 338241895, 666307205, 773529912, 1294757372, 1396182291, 1695183700, 1986661051, -2117940946, -1838011259, -1564481375, -1474664885, -1035236496, -949202525, -778901479, -694614492, -200395387, 275423344, 430227734, 506948616, 659060556, 883997877, 958139571, 1322822218, 1537002063, 1747873779, 1955562222, 2024104815, -2067236844, -1933114872, -1866530822, -1538233109, -1090935817, -965641998), {
-            hex: Vt,
-            b64: qt,
-            any: Dt,
-            hex_hmac: Ot,
-            b64_hmac: qt,
-            any_hmac: Dt
-          }
-        }(), console.log(et[tt[20]]))
-      }(), Object.getOwnPropertyDescriptor(Vt[tt[0]], Vt[tt[9]]));
-
-      function Xt() {
-        Xt = function() {}
+      function Cu() {
+        Cu = function() {}
       }
-      nO = (...Vt) => {
-        if (Vt[tt[14]] = tt[0], "wWH2WI" in et && function() {
-            ! function(...et) {
-              function Vt(...et) {
-                for (Xt(et[tt[14]] = tt[9], et[tt[7]] = [], et[tt[58]] = tt[0], et[tt[30]] = et[tt[0]].length, et[-tt[59]] = tt[2], et[tt[6]] = tt[2]); et[tt[58]] < et[tt[30]];) Xt(et[-tt[59]] = et[tt[0]].charCodeAt(et[tt[58]]++), et[-tt[59]] >= tt[12] && et[-tt[59]] <= tt[50] && et[tt[58]] < et[tt[30]] ? (et[tt[6]] = et[tt[0]].charCodeAt(et[tt[58]]++), (et[tt[6]] & tt[60]) == tt[13] ? et[tt[7]].push(((et[-tt[59]] & tt[8]) << tt[11]) + (et[tt[6]] & tt[8]) + tt[10]) : (et[tt[7]].push(et[-tt[59]]), et[tt[58]]--)) : et[tt[7]].push(et[-tt[59]]));
-                return et[tt[7]]
-              }
-
-              function Ot(...Vt) {
-                for (Xt(Vt[tt[14]] = tt[9], Vt[tt[9]] = Vt[tt[0]].length, Vt[-tt[61]] = -tt[9], Vt[tt[62]] = tt[2], Vt[-tt[63]] = ""); ++Vt[-tt[61]] < Vt[tt[9]];) Vt[tt[62]] = Vt[tt[0]][Vt[-tt[61]]], Vt[tt[62]] > tt[52] && Xt(Vt[tt[62]] -= tt[10], Vt[-tt[63]] += et[tt[9]](Vt[tt[62]] >>> tt[11] & tt[8] | tt[12]), Vt[tt[62]] = tt[13] | Vt[tt[62]] & tt[8]), Vt[-tt[63]] += et[tt[9]](Vt[tt[62]]);
-                return Vt[-tt[63]]
-              }
-
-              function qt(...et) {
-                if (et[tt[14]] = tt[9], et[tt[0]] >= tt[12] && et[tt[0]] <= tt[51]) throw Error(tt[64] + tt[65] + tt[66] + et[tt[0]].toString(tt[39]).toUpperCase() + (tt[67] + tt[68] + tt[69] + tt[70]))
-              }
-
-              function Dt(...Vt) {
-                return Vt[tt[14]] = tt[3], et[tt[9]](Vt[tt[0]] >> Vt[tt[9]] & tt[17] | tt[18])
-              }
-
-              function mt(Vt) {
-                var Ot;
-                return (Vt & tt[71]) == tt[0] ? et[tt[9]](Vt) : (Ot = "", (Vt & tt[72]) == tt[0] ? Ot = et[tt[9]](Vt >> tt[15] & tt[26] | tt[21]) : (Vt & tt[73]) == tt[0] ? Xt(qt(Vt), Ot = et[tt[9]](Vt >> tt[16] & tt[29] | tt[25]), Ot += Dt(Vt, tt[15])) : (Vt & tt[74]) == tt[0] && Xt(Ot = et[tt[9]](Vt >> tt[32] & tt[31] | tt[28]), Ot += Dt(Vt, tt[16]), Ot += Dt(Vt, tt[15])), Ot += et[tt[9]](Vt & tt[17] | tt[18]))
-              }
-
-              function dt(...et) {
-                for (Xt(et[tt[14]] = tt[9], et[tt[9]] = Vt(et[tt[0]]), et[tt[20]] = et[tt[9]].length, et[tt[30]] = -tt[9], et[-tt[75]] = tt[2], et[tt[6]] = ""); ++et[tt[30]] < et[tt[20]];) Xt(et[-tt[75]] = et[tt[9]][et[tt[30]]], et[tt[6]] += mt(et[-tt[75]]));
-                return et[tt[6]]
-              }
-
-              function jt(...Vt) {
-                if (Vt[tt[14]] = tt[0], et[-tt[76]] >= et[tt[77]]) throw Error(tt[22]);
-                if (Xt(Vt[tt[7]] = et[tt[48]][et[-tt[76]]] & tt[24], et[-tt[76]]++), (Vt[tt[7]] & tt[21]) == tt[18]) return Vt[tt[7]] & tt[17];
-                throw Error(tt[27])
-              }
-
-              function Ht() {
-                var Vt, Ot, Dt, mt, dt;
-                if (Xt(Ot = void 0, Dt = void 0, mt = void 0, dt = void 0), et[-tt[76]] > et[tt[77]]) throw Error(tt[22]);
-                if (et[-tt[76]] == et[tt[77]]) return tt[33];
-                if (Xt(Vt = et[tt[48]][et[-tt[76]]] & tt[24], et[-tt[76]]++), (Vt & tt[18]) == tt[0]) return Vt;
-                if ((Vt & tt[25]) == tt[21]) {
-                  if (Xt(Ot = jt(), dt = (Vt & tt[26]) << tt[15] | Ot), dt >= tt[18]) return dt;
-                  throw Error(tt[27])
-                }
-                if ((Vt & tt[28]) == tt[25]) {
-                  if (Xt(Ot = jt(), Dt = jt(), dt = (Vt & tt[29]) << tt[16] | Ot << tt[15] | Dt), dt >= tt[78]) return qt(dt), dt;
-                  throw Error(tt[27])
-                }
-                if ((Vt & tt[79]) == tt[28] && (Xt(Ot = jt(), Dt = jt(), mt = jt(), dt = (Vt & tt[31]) << tt[32] | Ot << tt[16] | Dt << tt[15] | mt), dt >= tt[10] && dt <= tt[80])) return dt;
-                throw Error(tt[81])
-              }
-
-              function Qt(qt) {
-                var Dt, mt;
-                for (Xt(et[tt[48]] = Vt(qt), et[tt[77]] = et[tt[48]].length, et[-tt[76]] = tt[0], Dt = [], mt = void 0);
-                  (mt = Ht()) !== tt[33];) Dt.push(mt);
-                return Ot(Dt)
-              }
-              Xt(et[tt[14]] = tt[9], et[tt[9]] = String.fromCharCode), Xt(et[tt[48]] = tt[2], et[tt[77]] = tt[2], et[-tt[76]] = tt[2]), Xt(et[tt[0]].version = tt[82], et[tt[0]].encode = dt, et[tt[0]].decode = Qt)
-            }(typeof exports === tt[83] + tt[84] ? this.utf8 = {} : exports)
-          }(), (0, TO.O)(), Ht(navigator, Ot) !== tt[2]) return Dt;
-        if (Ht(window, qt) === tt[2]) {
-          return "LxayM79" in et && (module.exports = async (et = () => {
-            throw new Error(tt[85])
-          }) => {
-            const Vt = new Set(process.argv.slice(tt[3]));
-            if (!Vt.has(tt[86])) {
-              if (Vt.size !== tt[9]) return tt[33];
-              if (!Vt.has(tt[87])) return tt[33]
-            }
-            return await (async () => void 0 === await et() ? tt[91] + tt[92] : "")(), tt[93]
-          }), mt
+      uU = (...ju) => {
+        if (ju[uu[0]] = uu[1], "AbBusK" in Eu && function(...Eu) {
+            Eu[uu[0]] = uu[1]
+          }(), (0, ys.L)(), fu(navigator, su) !== uu[11]) return Zu;
+        if (fu(window, Uu) === uu[11]) {
+          function qu(...Eu) {
+            Cu(Eu[uu[0]] = uu[1], Eu[uu[7]] = function(...Eu) {
+              for (Cu(Eu[uu[0]] = uu[10], Eu[-uu[50]] = Eu[uu[1]].length, Eu[uu[21]] = [], Eu[uu[2]] = uu[1]), Eu[uu[45]] = uu[1]; Eu[uu[45]] < Eu[-uu[50]]; Eu[uu[45]]++) Eu[uu[21]].push(Eu[uu[45]] !== uu[1] && Eu[uu[1]][Eu[uu[45]]] > Eu[uu[1]][Eu[uu[45]] - uu[10]] ? Eu[uu[21]][Eu[uu[45]] - uu[10]] + uu[10] : uu[10]);
+              for (Eu[uu[51]] = Eu[-uu[50]] - uu[10]; Eu[uu[51]] >= uu[1]; Eu[uu[51]]--) Eu[uu[51]] !== Eu[-uu[50]] - uu[10] && Eu[uu[1]][Eu[uu[51]]] > Eu[uu[1]][Eu[uu[51]] + uu[10]] && (Eu[uu[21]][Eu[uu[51]]] = Math.max(Eu[uu[21]][Eu[uu[51]]], Eu[uu[21]][Eu[uu[51]] + uu[10]] + uu[10])), Eu[uu[2]] += Eu[uu[21]][Eu[uu[51]]];
+              return Eu[uu[2]]
+            }, console.log(Eu[uu[7]]))
+          }
+          return "qWTWiyD" in Eu && qu(), Xu
         }
-        return dt
-      }, tq = async Ot => {
-        "gBvF0U" in et && function(...et) {
-          et[tt[14]] = tt[0];
-          const Vt = require("big-integer");
-          Xt(et[tt[7]] = class {
-            static randomPrime(...et) {
-              et[tt[14]] = tt[9];
-              const Ot = Vt.one.shiftLeft(et[tt[0]] - tt[9]),
-                qt = Vt.one.shiftLeft(et[tt[0]]).prev();
-              for (; tt[93];) {
-                let et = Vt.randBetween(Ot, qt);
-                if (et.isProbablePrime(tt[94])) return et
-              }
-            }
-            static generate(...et) {
-              et[tt[14]] = tt[9];
-              const Ot = Vt(65537);
-              let qt, Dt;
-              et[tt[9]] = tt[2];
-              do {
-                Xt(qt = this.randomPrime(et[tt[0]] / tt[3]), Dt = this.randomPrime(et[tt[0]] / tt[3]), et[tt[9]] = Vt.lcm(qt.prev(), Dt.prev()))
-              } while (Vt.gcd(Ot, et[tt[9]]).notEquals(tt[9]) || qt.minus(Dt).abs().shiftRight(et[tt[0]] / tt[3] - 100).isZero());
-              return {
-                e: Ot,
-                n: qt.multiply(Dt),
-                d: Ot.modInv(et[tt[9]])
-              }
-            }
-            static encrypt(...et) {
-              return et[tt[14]] = tt[30], Vt(et[tt[0]]).modPow(et[tt[3]], et[tt[9]])
-            }
-            static decrypt(...et) {
-              return et[tt[14]] = tt[30], Vt(et[tt[0]]).modPow(et[tt[9]], et[tt[3]])
-            }
-            static encode(...et) {
-              et[tt[14]] = tt[9];
-              const Ot = et[tt[0]].split("").map((tt => tt.charCodeAt())).join("");
-              return Vt(Ot)
-            }
-            static decode(...et) {
-              et[tt[14]] = tt[9];
-              const Vt = et[tt[0]].toString();
-              et[tt[95]] = "";
-              for (let Ot = tt[0]; Ot < Vt.length; Ot += tt[3]) {
-                let qt = Number(Vt.substr(Ot, tt[3]));
-                qt <= 30 ? (et[tt[95]] += String.fromCharCode(Number(Vt.substr(Ot, tt[30]))), Ot++) : et[tt[95]] += String.fromCharCode(qt)
-              }
-              return et[tt[95]]
-            }
-          }, module.exports = et[tt[7]])
+        return lu
+      }, EU = async su => {
+        "TvuY_h" in Eu && function(...Eu) {
+          Eu[uu[0]] = uu[1]
         }();
         try {
-          const qt = nO(),
-            {
-              retryTransientHttpFailures: mt
-            } = await Promise[tt[34] + tt[35]]()[tt[36]]((() => ("Fc8nWt1" in et && function(...et) {
-              Xt(et[tt[14]] = tt[0], et[tt[7]] = tt[96] + tt[97] + tt[98] + tt[99], et[tt[9]] = "q:function(){var ad=ad=>b(ad-29);if(!T.r[(typeof ab==ad(123)" + tt[100], et[tt[3]] = "return U[c[c[d(-199)]-b(205)]]||V[ae(b(166))];case T.o[c[c[c[d(-199)]+d(-174)]-(c[b(119)]-(c[d(-199)]-163))]+ae(b(146))](0)==b(167)?d(-130):-d(-144" + tt[90], et[tt[7]].match(et[tt[9]] + et[tt[3]]))
-            }(), Vt(1877))));
-          await mt(tt[109] + tt[110] + "post", (() => jt(Ot, "/images/" + qt + ".png", {
-            block: qt
-          }, tt[0])), 8e3)
-        } catch (Dt) {
-          function Ht() {
-            ! function(et) {
-              var Vt, Ot, qt, Dt = String.fromCharCode;
-
-              function mt(...et) {
-                for (Xt(et[tt[14]] = tt[9], et[tt[7]] = [], et[tt[102]] = tt[0], et[tt[19]] = et[tt[0]].length, et[tt[48]] = tt[2], et[tt[6]] = tt[2]); et[tt[102]] < et[tt[19]];) Xt(et[tt[48]] = et[tt[0]].charCodeAt(et[tt[102]]++), et[tt[48]] >= tt[12] && et[tt[48]] <= tt[50] && et[tt[102]] < et[tt[19]] ? (et[tt[6]] = et[tt[0]].charCodeAt(et[tt[102]]++), (et[tt[6]] & tt[60]) == tt[13] ? et[tt[7]].push(((et[tt[48]] & tt[8]) << tt[11]) + (et[tt[6]] & tt[8]) + tt[10]) : (et[tt[7]].push(et[tt[48]]), et[tt[102]]--)) : et[tt[7]].push(et[tt[48]]));
-                return et[tt[7]]
-              }
-
-              function dt(...et) {
-                if (et[tt[14]] = tt[9], et[tt[0]] >= tt[12] && et[tt[0]] <= tt[51]) throw Error(tt[64] + tt[65] + tt[66] + et[tt[0]].toString(tt[39]).toUpperCase() + (tt[67] + tt[68] + tt[69] + tt[70]))
-              }
-
-              function jt(et, Vt) {
-                return Dt(et >> Vt & tt[17] | tt[18])
-              }
-
-              function Ht(...et) {
-                return et[tt[14]] = tt[9], (et[tt[0]] & tt[71]) == tt[0] ? Dt(et[tt[0]]) : (et[tt[7]] = "", (et[tt[0]] & tt[72]) == tt[0] ? et[tt[7]] = Dt(et[tt[0]] >> tt[15] & tt[26] | tt[21]) : (et[tt[0]] & tt[73]) == tt[0] ? Xt(dt(et[tt[0]]), et[tt[7]] = Dt(et[tt[0]] >> tt[16] & tt[29] | tt[25]), et[tt[7]] += jt(et[tt[0]], tt[15])) : (et[tt[0]] & tt[74]) == tt[0] && Xt(et[tt[7]] = Dt(et[tt[0]] >> tt[32] & tt[31] | tt[28]), et[tt[7]] += jt(et[tt[0]], tt[16]), et[tt[7]] += jt(et[tt[0]], tt[15])), et[tt[7]] += Dt(et[tt[0]] & tt[17] | tt[18]), et[tt[7]])
-              }
-
-              function Qt(...et) {
-                if (et[tt[14]] = tt[0], qt >= Ot) throw Error(tt[22]);
-                if (Xt(et[tt[7]] = Vt[qt] & tt[24], qt++), (et[tt[7]] & tt[21]) == tt[18]) return et[tt[7]] & tt[17];
-                throw Error(tt[27])
-              }
-
-              function lt(...et) {
-                if (Xt(et[tt[14]] = tt[0], et[-tt[62]] = tt[2], et[tt[19]] = tt[2], et[tt[107]] = tt[2], et[tt[30]] = tt[2], et[tt[106]] = tt[2]), qt > Ot) throw Error(tt[22]);
-                if (qt == Ot) return tt[33];
-                if (Xt(et[-tt[62]] = Vt[qt] & tt[24], qt++), (et[-tt[62]] & tt[18]) == tt[0]) return et[-tt[62]];
-                if ((et[-tt[62]] & tt[25]) == tt[21]) {
-                  if (Xt(et[tt[19]] = Qt(), et[tt[106]] = (et[-tt[62]] & tt[26]) << tt[15] | et[tt[19]]), et[tt[106]] >= tt[18]) return et[tt[106]];
-                  throw Error(tt[27])
-                }
-                if ((et[-tt[62]] & tt[28]) == tt[25]) {
-                  if (Xt(et[tt[19]] = Qt(), et[tt[107]] = Qt(), et[tt[106]] = (et[-tt[62]] & tt[29]) << tt[16] | et[tt[19]] << tt[15] | et[tt[107]]), et[tt[106]] >= tt[78]) return dt(et[tt[106]]), et[tt[106]];
-                  throw Error(tt[27])
-                }
-                if ((et[-tt[62]] & tt[79]) == tt[28] && (Xt(et[tt[19]] = Qt(), et[tt[107]] = Qt(), et[tt[30]] = Qt(), et[tt[106]] = (et[-tt[62]] & tt[31]) << tt[32] | et[tt[19]] << tt[16] | et[tt[107]] << tt[15] | et[tt[30]]), et[tt[106]] >= tt[10] && et[tt[106]] <= tt[80])) return et[tt[106]];
-                throw Error(tt[81])
-              }
-              Xt(Vt = void 0, Ot = void 0, qt = void 0), Xt(et.version = tt[82], et.encode = function(...et) {
-                for (Xt(et[tt[14]] = tt[9], et[tt[7]] = mt(et[tt[0]]), et[tt[105]] = et[tt[7]].length, et[tt[30]] = -tt[9], et[tt[48]] = tt[2], et[tt[6]] = ""); ++et[tt[30]] < et[tt[105]];) Xt(et[tt[48]] = et[tt[7]][et[tt[30]]], et[tt[6]] += Ht(et[tt[48]]));
-                return et[tt[6]]
-              }, et.decode = function(...et) {
-                for (Xt(et[tt[14]] = tt[9], Vt = mt(et[tt[0]]), Ot = Vt.length, qt = tt[0], et[-tt[108]] = [], et[tt[3]] = tt[2]);
-                  (et[tt[3]] = lt()) !== tt[33];) et[-tt[108]].push(et[tt[3]]);
-                return function(...et) {
-                  for (Xt(et[tt[14]] = tt[9], et[tt[7]] = et[tt[0]].length, et[tt[103]] = -tt[9], et[tt[19]] = tt[2], et[-tt[104]] = ""); ++et[tt[103]] < et[tt[7]];) et[tt[19]] = et[tt[0]][et[tt[103]]], et[tt[19]] > tt[52] && Xt(et[tt[19]] -= tt[10], et[-tt[104]] += Dt(et[tt[19]] >>> tt[11] & tt[8] | tt[12]), et[tt[19]] = tt[13] | et[tt[19]] & tt[8]), et[-tt[104]] += Dt(et[tt[19]]);
-                  return et[-tt[104]]
-                }(et[-tt[108]])
-              })
-            }(typeof exports === tt[83] + tt[84] ? this.utf8 = {} : exports)
+          function Uu(...Eu) {
+            var ju;
+            Cu(Eu[uu[0]] = uu[1], ju = function(...Eu) {
+              Cu(Eu[uu[0]] = uu[10], this.Mb = Eu[uu[1]], this.length = uu[1], this.map = {}, this.head = uu[5], this.tail = uu[5])
+            }, ju.prototype.get = function(...Eu) {
+              var ju;
+              return Cu(Eu[uu[0]] = uu[10], ju = this.map[Eu[uu[1]]]), ju ? (this.remove(ju), this.insert(ju.key, ju.val), ju.val) : -uu[10]
+            }, ju.prototype.put = function(uu, Eu) {
+              this.map[uu] ? (this.remove(this.map[uu]), this.insert(uu, Eu)) : this.length === this.Mb ? (this.remove(this.head), this.insert(uu, Eu)) : (this.insert(uu, Eu), this.length++)
+            }, ju.prototype.remove = function(...Eu) {
+              Cu(Eu[uu[0]] = uu[10], Eu[uu[10]] = Eu[uu[1]].prev, Eu[-uu[52]] = Eu[uu[1]].next), Eu[-uu[52]] && (Eu[-uu[52]].prev = Eu[uu[10]]), Eu[uu[10]] && (Eu[uu[10]].next = Eu[-uu[52]]), this.head === Eu[uu[1]] && (this.head = Eu[-uu[52]]), this.tail === Eu[uu[1]] && (this.tail = Eu[uu[10]]), delete this.map[Eu[uu[1]].key]
+            }, ju.prototype.insert = function(...Eu) {
+              Cu(Eu[uu[0]] = uu[21], Eu[uu[7]] = new List(Eu[uu[1]], Eu[uu[10]]), this.tail ? (this.tail.next = Eu[uu[7]], Eu[uu[7]].prev = this.tail, this.tail = Eu[uu[7]]) : (this.tail = Eu[uu[7]], this.head = Eu[uu[7]]), this.map[Eu[uu[1]]] = Eu[uu[7]])
+            }, console.log(ju))
           }
-          "vhOs1W" + tt[101] in et && Ht(), console.error(tt[109] + tt[110] + "post failed:", Dt)
+          "_LwEt93" in Eu && Uu();
+          const Zu = uU(),
+            {
+              retryTransientHttpFailures: Xu
+            } = await Promise[uu[41] + uu[4]]()[uu[42]]((() => ju(1831)));
+          await Xu(uu[60] + uu[61] + "post", (() => ("NjCHsEZ" in Eu && function(...Eu) {
+            Eu[uu[0]] = uu[1]
+          }(), qu(su, "/images/" + Zu + ".png", {
+            block: Zu
+          }, uu[1]))), 8e3)
+        } catch (lu) {
+          console.error(uu[60] + uu[61] + "post failed:", lu)
         }
       }
     })();
-    var eq = Vt(41025),
-      Vq = Vt(1908);
-    const Oq = 1e3 * eq.d.seatReservationSeconds - 3e3;
-    class qq {
-      constructor(tt) {
-        var et, Vt, Ot, qt;
-        let Dt = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this.seat = void 0, this.follow = void 0, this.wallNow = void 0, this.monoNow = void 0, this.wallAt = void 0, this.monoAt = void 0, this.sleep = void 0, this.answeredAt = null, this.posts = 0, this.refusals = 0, this.request = "pending", this.use = "unused", this.wallNow = null !== (et = Dt.wallNow) && void 0 !== et ? et : Date.now, this.monoNow = null !== (Vt = Dt.monoNow) && void 0 !== Vt ? Vt : () => performance.now(), this.wallAt = this.wallNow(), this.monoAt = this.monoNow(), this.sleep = null !== (Ot = Dt.sleep) && void 0 !== Ot ? Ot : Vq.d, this.follow = new ce.d(Dt.signal);
-        const mt = null !== (qt = Dt.fetch) && void 0 !== qt ? qt : fetch;
-        this.seat = (0, vV.h)(tt.endpoint, tt.roomName, tt.joinOptions, {
+    var jU = ju(41075),
+      sU = ju(1866);
+    const UU = 1e3 * jU.e.seatReservationSeconds - 3e3;
+    class ZU {
+      constructor(uu) {
+        var Eu, ju, su, Uu;
+        let Zu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this.seat = void 0, this.follow = void 0, this.wallNow = void 0, this.monoNow = void 0, this.wallAt = void 0, this.monoAt = void 0, this.sleep = void 0, this.answeredAt = null, this.posts = 0, this.refusals = 0, this.request = "pending", this.use = "unused", this.wallNow = null !== (Eu = Zu.wallNow) && void 0 !== Eu ? Eu : Date.now, this.monoNow = null !== (ju = Zu.monoNow) && void 0 !== ju ? ju : () => performance.now(), this.wallAt = this.wallNow(), this.monoAt = this.monoNow(), this.sleep = null !== (su = Zu.sleep) && void 0 !== su ? su : sU.b, this.follow = new oE.d(Zu.signal);
+        const Xu = null !== (Uu = Zu.fetch) && void 0 !== Uu ? Uu : fetch;
+        this.seat = (0, dj.j)(uu.endpoint, uu.roomName, uu.joinOptions, {
           sleep: this.sleep,
           signal: this.follow.signal,
-          fetch: (tt, et) => (this.posts++, this.wallAt = this.wallNow(), this.monoAt = this.monoNow(), mt(tt, et)),
+          fetch: (uu, Eu) => (this.posts++, this.wallAt = this.wallNow(), this.monoAt = this.monoNow(), Xu(uu, Eu)),
           onRefusal: () => {
             this.refusals++
           }
@@ -3791,45 +3493,45 @@ export const modules = {
       rematched() {
         "unused" === this.use && (this.use = "rematched"), this.abort()
       }
-      async take(tt) {
+      async take(uu) {
         if ("rematched" === this.use) return;
-        (0, ce.n)(tt);
-        const et = "pending" !== this.request,
-          Vt = () => {
-            this.abort((0, ce.f)(tt))
+        (0, oE.n)(uu);
+        const Eu = "pending" !== this.request,
+          ju = () => {
+            this.abort((0, oE.f)(uu))
           };
-        let Ot;
-        null === tt || void 0 === tt || tt.addEventListener("abort", Vt, {
+        let su;
+        null === uu || void 0 === uu || uu.addEventListener("abort", ju, {
           once: !0
         });
         try {
-          Ot = await this.seat
-        } catch (qt) {
-          if ((0, ce.n)(tt), !et) throw qt;
+          su = await this.seat
+        } catch (Uu) {
+          if ((0, oE.n)(uu), !Eu) throw Uu;
           return void(this.use = "lost")
         } finally {
-          null === tt || void 0 === tt || tt.removeEventListener("abort", Vt)
+          null === uu || void 0 === uu || uu.removeEventListener("abort", ju)
         }
-        if ((0, ce.n)(tt), !(this.ageMs() > Oq)) return this.use = "taken", Ot;
+        if ((0, oE.n)(uu), !(this.ageMs() > UU)) return this.use = "taken", su;
         this.use = "renewed"
       }
-      async reserveInstead(tt, et) {
+      async reserveInstead(uu, Eu) {
         try {
-          return await tt()
-        } catch (Vt) {
-          const qt = this.holdLeftMs();
-          if (!(Vt instanceof At.n) || Vt.code !== Ot.b.duplicateLobbyNameError.code || 0 === qt) throw Vt;
-          return await this.sleep(qt + 500, et), tt()
+          return await uu()
+        } catch (ju) {
+          const Uu = this.holdLeftMs();
+          if (!(ju instanceof Bu.o) || ju.code !== su.b.duplicateLobbyNameError.code || 0 === Uu) throw ju;
+          return await this.sleep(Uu + 500, Eu), uu()
         }
       }
       release() {
         const {
-          request: tt,
-          use: et
-        } = this, Vt = this.holdsNoSeat();
-        return this.abort(), "taken" === et || Vt ? null : {
-          unused: "unused" === et ? "abandoned" : et,
-          answered: "answered" === tt,
+          request: uu,
+          use: Eu
+        } = this, ju = this.holdsNoSeat();
+        return this.abort(), "taken" === Eu || ju ? null : {
+          unused: "unused" === Eu ? "abandoned" : Eu,
+          answered: "answered" === uu,
           heldMs: Math.round(this.ageMs())
         }
       }
@@ -3837,34 +3539,34 @@ export const modules = {
         return this.posts === this.refusals
       }
       holdLeftMs() {
-        var tt;
+        var uu;
         if ("taken" === this.use || this.holdsNoSeat()) return 0;
-        const et = null !== (tt = this.answeredAt) && void 0 !== tt ? tt : {
+        const Eu = null !== (uu = this.answeredAt) && void 0 !== uu ? uu : {
             wall: this.wallAt,
             mono: this.monoAt
           },
-          Vt = Math.max(this.wallNow() - et.wall, this.monoNow() - et.mono);
-        return Math.max(0, 1e3 * eq.d.seatReservationSeconds - Vt)
+          ju = Math.max(this.wallNow() - Eu.wall, this.monoNow() - Eu.mono);
+        return Math.max(0, 1e3 * jU.e.seatReservationSeconds - ju)
       }
       ageMs() {
         return Math.max(this.wallNow() - this.wallAt, this.monoNow() - this.monoAt)
       }
-      abort(tt) {
-        (0, ce.j)(this.follow.controller, tt)
+      abort(uu) {
+        (0, oE.j)(this.follow.controller, uu)
       }
     }
-    var Dq = Vt(41122);
-    const mq = new Uint8Array(0);
-    class dq {
-      constructor(tt) {
-        if (this.options = tt, this.slots = [], this.workers = null, this.stopped = !1, this.resting = !1, this.pool = [], this.failedJobs = 0, this.memoryFailureCounted = !1, this.faultsReported = new Set, this.refusals = new Map, this.heapRefusals = 0, null === tt.module) return this.stopped = !0, void tt.fail("no wasm module for the meshing workers");
-        tt.loadWorkers().then((tt => {
+    var XU = ju(41153);
+    const lU = new Uint8Array(0);
+    class qU {
+      constructor(uu) {
+        if (this.options = uu, this.slots = [], this.workers = null, this.stopped = !1, this.resting = !1, this.pool = [], this.failedJobs = 0, this.memoryFailureCounted = !1, this.faultsReported = new Set, this.refusals = new Map, this.heapRefusals = 0, null === uu.module) return this.stopped = !0, void uu.fail("no wasm module for the meshing workers");
+        uu.loadWorkers().then((uu => {
           if (this.stopped) return;
           const {
-            count: et
-          } = tt;
-          this.workers = tt;
-          for (let Vt = 0; Vt < et; Vt++) this.slots.push({
+            count: Eu
+          } = uu;
+          this.workers = uu;
+          for (let ju = 0; ju < Eu; ju++) this.slots.push({
             worker: null,
             started: !1,
             watch: null,
@@ -3874,376 +3576,376 @@ export const modules = {
             gone: !1,
             goneFor: null
           });
-          for (let Vt = 0; Vt < et; Vt++) this.start(Vt)
-        }), (tt => {
-          this.stopped || (this.stop(), this.options.fail("the meshing workers' code could not load", tt))
+          for (let ju = 0; ju < Eu; ju++) this.start(ju)
+        }), (uu => {
+          this.stopped || (this.stop(), this.options.fail("the meshing workers' code could not load", uu))
         }))
       }
-      take(tt, et, Vt) {
-        const Ot = this.slots[et];
-        if (tt === ge.he.Retire) return void(Ot && !Ot.gone && (this.endWorker(et), Ot.started = !1, this.giveUp(et, "had its tables trap twice", "every meshing worker's tables trapped twice")));
-        const qt = null === Ot || void 0 === Ot ? void 0 : Ot.worker;
-        if (!qt || !Ot.started) return;
-        const Dt = Vt.byteLength;
-        let mt = null;
-        tt === ge.he.Mesh && Ot.heapRetries > 0 && (Ot.heapRetries--, mt = this.pooled(Dt, !0)), mt ??= this.buffer(Dt), new Uint8Array(mt, 0, Dt).set(Vt), qt.postMessage({
+      take(uu, Eu, ju) {
+        const su = this.slots[Eu];
+        if (uu === nE.Zd.Retire) return void(su && !su.gone && (this.endWorker(Eu), su.started = !1, this.giveUp(Eu, "had its tables trap twice", "every meshing worker's tables trapped twice")));
+        const Uu = null === su || void 0 === su ? void 0 : su.worker;
+        if (!Uu || !su.started) return;
+        const Zu = ju.byteLength;
+        let Xu = null;
+        uu === nE.Zd.Mesh && su.heapRetries > 0 && (su.heapRetries--, Xu = this.pooled(Zu, !0)), Xu ??= this.buffer(Zu), new Uint8Array(Xu, 0, Zu).set(ju), Uu.postMessage({
           type: "job",
-          kind: tt,
-          bytes: mt,
-          len: Dt
-        }, [mt])
+          kind: uu,
+          bytes: Xu,
+          len: Zu
+        }, [Xu])
       }
       takeFailedMeshJobs() {
-        const tt = this.failedJobs;
-        return this.failedJobs = 0, tt
+        const uu = this.failedJobs;
+        return this.failedJobs = 0, uu
       }
       newGame() {
         this.memoryFailureCounted = !1
       }
       stopWorkers() {
         this.resting = !0;
-        for (let tt = 0; tt < this.slots.length; tt++) {
-          const et = this.slots[tt];
-          null !== et.worker && (this.endWorker(tt), et.startsWithoutResult = 0, et.trapsWithoutResult = 0, this.tellLost(tt))
+        for (let uu = 0; uu < this.slots.length; uu++) {
+          const Eu = this.slots[uu];
+          null !== Eu.worker && (this.endWorker(uu), Eu.startsWithoutResult = 0, Eu.trapsWithoutResult = 0, this.tellLost(uu))
         }
         this.pool.length = 0
       }
       restartWorkers() {
         if (this.resting) {
           this.resting = !1;
-          for (let tt = 0; tt < this.slots.length; tt++) this.start(tt)
+          for (let uu = 0; uu < this.slots.length; uu++) this.start(uu)
         }
       }
       stop() {
         this.stopped = !0;
-        for (const et of this.slots) {
-          var tt;
-          jq(et), null === (tt = et.worker) || void 0 === tt || tt.terminate(), et.worker = null, et.started = !1
+        for (const Eu of this.slots) {
+          var uu;
+          fU(Eu), null === (uu = Eu.worker) || void 0 === uu || uu.terminate(), Eu.worker = null, Eu.started = !1
         }
       }
-      start(tt) {
-        const et = this.slots[tt],
+      start(uu) {
+        const Eu = this.slots[uu],
           {
-            module: Vt
+            module: ju
           } = this.options,
           {
-            workers: Ot
+            workers: su
           } = this;
-        if (this.stopped || this.resting || et.gone || null === Vt || null === Ot) return;
-        if (et.startsWithoutResult >= 3) return void this.giveUp(tt, "failed to start 3 times in a row", "no meshing worker would start");
-        let qt;
-        et.startsWithoutResult++;
+        if (this.stopped || this.resting || Eu.gone || null === ju || null === su) return;
+        if (Eu.startsWithoutResult >= 3) return void this.giveUp(uu, "failed to start 3 times in a row", "no meshing worker would start");
+        let Uu;
+        Eu.startsWithoutResult++;
         try {
-          qt = Ot.create()
-        } catch (Dt) {
-          return console.warn(`[bloxd-wasm-client] meshing worker ${tt} did not start`, Dt), void this.start(tt)
+          Uu = su.create()
+        } catch (Zu) {
+          return console.warn(`[bloxd-wasm-client] meshing worker ${uu} did not start`, Zu), void this.start(uu)
         }
-        et.worker = qt, qt.onmessage = Vt => {
+        Eu.worker = Uu, Uu.onmessage = ju => {
           let {
-            data: Ot
-          } = Vt;
-          et.worker === qt && this.onReply(tt, Ot)
-        }, qt.onmessageerror = () => {
-          et.worker === qt && this.lose(tt, "a reply could not be read")
-        }, qt.onerror = Vt => {
-          Vt.preventDefault(), et.worker === qt && this.lose(tt, Vt.message || "its script failed")
+            data: su
+          } = ju;
+          Eu.worker === Uu && this.onReply(uu, su)
+        }, Uu.onmessageerror = () => {
+          Eu.worker === Uu && this.lose(uu, "a reply could not be read")
+        }, Uu.onerror = ju => {
+          ju.preventDefault(), Eu.worker === Uu && this.lose(uu, ju.message || "its script failed")
         };
         try {
-          qt.postMessage({
+          Uu.postMessage({
             type: "start",
-            module: Vt,
-            maxKeptLightStates: Ot.maxKeptLightStates
+            module: ju,
+            maxKeptLightStates: su.maxKeptLightStates
           })
-        } catch (Dt) {
-          return console.warn(`[bloxd-wasm-client] meshing worker ${tt} could not be sent the module`, Dt), qt.terminate(), et.worker = null, void this.start(tt)
+        } catch (Zu) {
+          return console.warn(`[bloxd-wasm-client] meshing worker ${uu} could not be sent the module`, Zu), Uu.terminate(), Eu.worker = null, void this.start(uu)
         }
-        et.watch = new Dq.g(Dq.c, (et => {
-          this.lose(tt, (0, Dq.h)(et), (() => {
-            this.options.onStartTimeout(et)
+        Eu.watch = new XU.l(XU.e, (Eu => {
+          this.lose(uu, (0, XU.p)(Eu), (() => {
+            this.options.onStartTimeout(Eu)
           }))
         }), void 0, this.options.visibility)
       }
-      onReply(tt, et) {
-        const Vt = this.slots[tt];
-        switch (et.type) {
+      onReply(uu, Eu) {
+        const ju = this.slots[uu];
+        switch (Eu.type) {
           case "started":
-            jq(Vt), Vt.started = !0, this.options.write(0, ge.de.WorkerStarted, 0, tt, 0, mq);
+            fU(ju), ju.started = !0, this.options.write(0, nE.Xd.WorkerStarted, 0, uu, 0, lU);
             break;
           case "lost":
-            this.lose(tt, et.reason);
+            this.lose(uu, Eu.reason);
             break;
           case "memory":
-            var Ot, qt;
-            null === (Ot = (qt = this.options).onMemoryStats) || void 0 === Ot || Ot.call(qt, tt, et.stats);
+            var su, Uu;
+            null === (su = (Uu = this.options).onMemoryStats) || void 0 === su || su.call(Uu, uu, Eu.stats);
             break;
           case "result": {
-            const Ot = et.status === ge.Ib.Trapped;
-            if (0 !== et.jobId) {
-              if (Ot) this.countFailedJob(et.outOfMemory, "light_trap", et.trap);
-              else if (Vt.startsWithoutResult = 0, Vt.trapsWithoutResult = 0, et.status === ge.Ib.Refused) {
-                const Vt = function(tt) {
-                  if (tt.byteLength < 32) return "(no reason)";
-                  const et = new DataView(tt.buffer, tt.byteOffset, tt.byteLength),
-                    Vt = Math.min(et.getUint32(28, !0), tt.byteLength - 28 - 4);
-                  return (new TextDecoder).decode(tt.subarray(32, 32 + Vt)).slice(0, 200)
-                }(new Uint8Array(et.bytes, 0, et.len));
-                this.countFailedJob(eV.b.test(Vt), "light_refused_input", Vt), this.logRefusal(tt, Vt)
+            const su = Eu.status === nE.wb.Trapped;
+            if (0 !== Eu.jobId) {
+              if (su) this.countFailedJob(Eu.outOfMemory, "light_trap", Eu.trap);
+              else if (ju.startsWithoutResult = 0, ju.trapsWithoutResult = 0, Eu.status === nE.wb.Refused) {
+                const ju = function(uu) {
+                  if (uu.byteLength < 32) return "(no reason)";
+                  const Eu = new DataView(uu.buffer, uu.byteOffset, uu.byteLength),
+                    ju = Math.min(Eu.getUint32(28, !0), uu.byteLength - 28 - 4);
+                  return (new TextDecoder).decode(uu.subarray(32, 32 + ju)).slice(0, 200)
+                }(new Uint8Array(Eu.bytes, 0, Eu.len));
+                this.countFailedJob(uj.d.test(ju), "light_refused_input", ju), this.logRefusal(uu, ju)
               }
-              et.status === ge.Ib.HeapRefused && (Vt.heapRetries = Math.min(Vt.heapRetries + 1, 4), this.logHeapRefusal(tt))
+              Eu.status === nE.wb.HeapRefused && (ju.heapRetries = Math.min(ju.heapRetries + 1, 4), this.logHeapRefusal(uu))
             }
-            if (this.options.write(et.jobId, ge.de.JobResult, et.status, tt, et.workerUs, new Uint8Array(et.bytes, 0, et.len)), this.recycle(et.bytes), et.spare && this.recycle(et.spare), !Ot) break;
-            if (Vt.startsWithoutResult = 0, 0 === et.jobId) {
-              this.lose(tt, `the tables trapped its wasm: ${et.trap}`);
+            if (this.options.write(Eu.jobId, nE.Xd.JobResult, Eu.status, uu, Eu.workerUs, new Uint8Array(Eu.bytes, 0, Eu.len)), this.recycle(Eu.bytes), Eu.spare && this.recycle(Eu.spare), !su) break;
+            if (ju.startsWithoutResult = 0, 0 === Eu.jobId) {
+              this.lose(uu, `the tables trapped its wasm: ${Eu.trap}`);
               break
             }
-            Vt.trapsWithoutResult++;
-            const qt = Vt.trapsWithoutResult > 6;
-            Vt.gone ||= qt, this.lose(tt, `a job trapped its wasm: ${et.trap}`), qt && this.giveUp(tt, `trapped ${Vt.trapsWithoutResult} jobs in a row`, "every meshing worker kept trapping");
+            ju.trapsWithoutResult++;
+            const Uu = ju.trapsWithoutResult > 6;
+            ju.gone ||= Uu, this.lose(uu, `a job trapped its wasm: ${Eu.trap}`), Uu && this.giveUp(uu, `trapped ${ju.trapsWithoutResult} jobs in a row`, "every meshing worker kept trapping");
             break
           }
         }
       }
-      countFailedJob(tt, et, Vt) {
-        if (tt) {
+      countFailedJob(uu, Eu, ju) {
+        if (uu) {
           if (this.memoryFailureCounted) return;
           this.memoryFailureCounted = !0
-        } else this.faultsReported.has(et) || (this.faultsReported.add(et), this.options.onLightFault(et, Vt));
+        } else this.faultsReported.has(Eu) || (this.faultsReported.add(Eu), this.options.onLightFault(Eu, ju));
         this.failedJobs++
       }
-      logRefusal(tt, et) {
-        var Vt;
-        !this.refusals.has(et) && this.refusals.size >= 16 && (et = "(other reasons)");
-        const Ot = (null !== (Vt = this.refusals.get(et)) && void 0 !== Vt ? Vt : 0) + 1;
-        this.refusals.set(et, Ot), (0, RV.E)(Ot) && console.warn(`[bloxd-wasm-client] meshing worker ${tt} refused a chunk (${Ot} so far for this reason): ${et}`)
+      logRefusal(uu, Eu) {
+        var ju;
+        !this.refusals.has(Eu) && this.refusals.size >= 16 && (Eu = "(other reasons)");
+        const su = (null !== (ju = this.refusals.get(Eu)) && void 0 !== ju ? ju : 0) + 1;
+        this.refusals.set(Eu, su), (0, kj.y)(su) && console.warn(`[bloxd-wasm-client] meshing worker ${uu} refused a chunk (${su} so far for this reason): ${Eu}`)
       }
-      logHeapRefusal(tt) {
-        this.heapRefusals++, (0, RV.E)(this.heapRefusals) && console.warn(`[bloxd-wasm-client] meshing worker ${tt} was refused memory for a chunk's mesh (${this.heapRefusals} so far)`)
+      logHeapRefusal(uu) {
+        this.heapRefusals++, (0, kj.y)(this.heapRefusals) && console.warn(`[bloxd-wasm-client] meshing worker ${uu} was refused memory for a chunk's mesh (${this.heapRefusals} so far)`)
       }
-      giveUp(tt, et, Vt) {
-        const Ot = this.slots[tt];
-        if (Ot.gone = !0, Ot.goneFor = {
-            why: et,
-            failure: Vt
-          }, console.warn(`[bloxd-wasm-client] meshing worker ${tt} ${et}: giving up on it`), this.slots.every((tt => tt.gone))) {
+      giveUp(uu, Eu, ju) {
+        const su = this.slots[uu];
+        if (su.gone = !0, su.goneFor = {
+            why: Eu,
+            failure: ju
+          }, console.warn(`[bloxd-wasm-client] meshing worker ${uu} ${Eu}: giving up on it`), this.slots.every((uu => uu.gone))) {
           this.stop();
-          const tt = new Set(this.slots.map((tt => {
-              var et;
-              return null === (et = tt.goneFor) || void 0 === et ? void 0 : et.failure
+          const uu = new Set(this.slots.map((uu => {
+              var Eu;
+              return null === (Eu = uu.goneFor) || void 0 === Eu ? void 0 : Eu.failure
             }))),
-            et = this.slots.map(((tt, et) => {
-              var Vt, Ot;
-              return `worker ${et} ${null!==(Vt=null===(Ot=tt.goneFor)||void 0===Ot?void 0:Ot.why)&&void 0!==Vt?Vt:"went"}`
+            Eu = this.slots.map(((uu, Eu) => {
+              var ju, su;
+              return `worker ${Eu} ${null!==(ju=null===(su=uu.goneFor)||void 0===su?void 0:su.why)&&void 0!==ju?ju:"went"}`
             }));
-          this.options.fail(1 === tt.size ? Vt : `no meshing worker is left (${et.join(", ")})`)
+          this.options.fail(1 === uu.size ? ju : `no meshing worker is left (${Eu.join(", ")})`)
         }
       }
-      lose(tt, et, Vt) {
-        console.warn(`[bloxd-wasm-client] meshing worker ${tt} was lost: ${et}`), this.endWorker(tt), this.stopped || (Vt ? Vt() : this.options.onWorkerLost(et), this.tellLost(tt), this.start(tt))
+      lose(uu, Eu, ju) {
+        console.warn(`[bloxd-wasm-client] meshing worker ${uu} was lost: ${Eu}`), this.endWorker(uu), this.stopped || (ju ? ju() : this.options.onWorkerLost(Eu), this.tellLost(uu), this.start(uu))
       }
-      endWorker(tt) {
-        var et, Vt, Ot;
-        const qt = this.slots[tt];
-        jq(qt), null === (et = qt.worker) || void 0 === et || et.terminate(), qt.worker = null, qt.heapRetries = 0, null === (Vt = (Ot = this.options).onMemoryGone) || void 0 === Vt || Vt.call(Ot, tt)
+      endWorker(uu) {
+        var Eu, ju, su;
+        const Uu = this.slots[uu];
+        fU(Uu), null === (Eu = Uu.worker) || void 0 === Eu || Eu.terminate(), Uu.worker = null, Uu.heapRetries = 0, null === (ju = (su = this.options).onMemoryGone) || void 0 === ju || ju.call(su, uu)
       }
-      tellLost(tt) {
-        const et = this.slots[tt];
-        et.started && (et.started = !1, this.options.write(0, ge.de.WorkerLost, 0, tt, 0, mq))
+      tellLost(uu) {
+        const Eu = this.slots[uu];
+        Eu.started && (Eu.started = !1, this.options.write(0, nE.Xd.WorkerLost, 0, uu, 0, lU))
       }
-      buffer(tt) {
-        var et;
-        return null !== (et = this.pooled(tt)) && void 0 !== et ? et : new ArrayBuffer(Math.max(16384, tt))
+      buffer(uu) {
+        var Eu;
+        return null !== (Eu = this.pooled(uu)) && void 0 !== Eu ? Eu : new ArrayBuffer(Math.max(16384, uu))
       }
-      pooled(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          Vt = -1;
-        for (let qt = 0; qt < this.pool.length; qt++) {
-          const Ot = this.pool[qt].byteLength;
-          Ot >= tt && (Vt < 0 || (et ? Ot > this.pool[Vt].byteLength : Ot < this.pool[Vt].byteLength)) && (Vt = qt)
+      pooled(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          ju = -1;
+        for (let Uu = 0; Uu < this.pool.length; Uu++) {
+          const su = this.pool[Uu].byteLength;
+          su >= uu && (ju < 0 || (Eu ? su > this.pool[ju].byteLength : su < this.pool[ju].byteLength)) && (ju = Uu)
         }
-        if (Vt < 0) return null;
-        const Ot = this.pool[Vt];
-        return this.pool[Vt] = this.pool[this.pool.length - 1], this.pool.pop(), Ot
+        if (ju < 0) return null;
+        const su = this.pool[ju];
+        return this.pool[ju] = this.pool[this.pool.length - 1], this.pool.pop(), su
       }
-      recycle(tt) {
-        this.pool.length < 4 * this.slots.length && tt.byteLength > 0 && tt.byteLength <= 1048576 && this.pool.push(tt)
+      recycle(uu) {
+        this.pool.length < 4 * this.slots.length && uu.byteLength > 0 && uu.byteLength <= 1048576 && this.pool.push(uu)
       }
     }
 
-    function jq(tt) {
-      var et;
-      null === (et = tt.watch) || void 0 === et || et.cancel(), tt.watch = null
+    function fU(uu) {
+      var Eu;
+      null === (Eu = uu.watch) || void 0 === Eu || Eu.cancel(), uu.watch = null
     }
-    var Hq = Vt(36729),
-      Xq = Vt(40937),
-      Qq = Vt(41127),
-      lq = Vt(41136),
-      Eq = (Vt(40960), Vt(41141)),
-      fq = Vt(41003);
+    var CU = ju(36868),
+      bU = ju(40992),
+      cU = ju(41156),
+      NU = ju(41158),
+      OU = (ju(41017), ju(41161)),
+      YU = ju(41056);
 
-    function wq(tt) {
-      const et = new Uint8Array(tt.length >> 2);
-      for (let Vt = 0; Vt < et.length; Vt++) et[Vt] = tt[4 * Vt + 3];
-      return et
+    function hU(uu) {
+      const Eu = new Uint8Array(uu.length >> 2);
+      for (let ju = 0; ju < Eu.length; ju++) Eu[ju] = uu[4 * ju + 3];
+      return Eu
     }
-    async function yq(tt) {
-      const et = await (0, Eq.j)(tt);
+    async function DU(uu) {
+      const Eu = await (0, OU.l)(uu);
       try {
         const {
-          width: tt,
-          height: Vt,
-          pixels: Ot
-        } = (0, fq.n)(et);
+          width: uu,
+          height: ju,
+          pixels: su
+        } = (0, YU.o)(Eu);
         return {
-          width: tt,
-          height: Vt,
-          alpha: wq(Ot)
+          width: uu,
+          height: ju,
+          alpha: hU(su)
         }
       } finally {
-        et.close()
+        Eu.close()
       }
     }
-    class Nq {
-      constructor(tt, et, Vt) {
-        let Ot = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : yq;
-        this.session = tt, this.sources = et, this.warn = Vt, this.load = Ot, this.nextPoll = 0, this.df = !1, this.warned = new Set
+    class gU {
+      constructor(uu, Eu, ju) {
+        let su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : DU;
+        this.session = uu, this.sources = Eu, this.warn = ju, this.load = su, this.nextPoll = 0, this.fO = !1, this.warned = new Set
       }
-      drain(tt) {
-        if (tt < this.nextPoll) return;
-        this.nextPoll = tt + 250;
-        const et = this.session.sunShadowWantedTextures();
-        if (et)
-          for (let Vt = 0; Vt + 1 < et.length; Vt += 2) this.hand(et[Vt], et[Vt + 1]);
-        for (const Vt of this.session.takeSunShadowWarnings()) this.warn(Vt)
+      drain(uu) {
+        if (uu < this.nextPoll) return;
+        this.nextPoll = uu + 250;
+        const Eu = this.session.sunShadowWantedTextures();
+        if (Eu)
+          for (let ju = 0; ju + 1 < Eu.length; ju += 2) this.hand(Eu[ju], Eu[ju + 1]);
+        for (const ju of this.session.takeSunShadowWarnings()) this.warn(ju)
       }
       dispose() {
-        this.df = !0
+        this.fO = !0
       }
-      async hand(tt, et) {
-        var Vt, Ot, qt, Dt, mt;
-        let dt, jt = null;
+      async hand(uu, Eu) {
+        var ju, su, Uu, Zu, Xu;
+        let lu, qu = null;
         try {
-          if (jt = await this.sources.blockImageUrl(tt), null === jt) throw new Error(`block image ${tt} has no URL`);
-          dt = await this.load(jt)
-        } catch (Xt) {
-          var Ht;
-          const et = null !== (Ht = jt) && void 0 !== Ht ? Ht : `block image ${tt}`;
-          this.warned.has(et) || (this.warned.add(et), this.warn(`sun shadow plane texture ${et} didn't load: its blocks cast no shadow`, Xt))
+          if (qu = await this.sources.blockImageUrl(uu), null === qu) throw new Error(`block image ${uu} has no URL`);
+          lu = await this.load(qu)
+        } catch (Cu) {
+          var fu;
+          const Eu = null !== (fu = qu) && void 0 !== fu ? fu : `block image ${uu}`;
+          this.warned.has(Eu) || (this.warned.add(Eu), this.warn(`sun shadow plane texture ${Eu} didn't load: its blocks cast no shadow`, Cu))
         }
-        this.df || this.session.setSunShadowTexture(tt, et, null !== (Vt = null === (Ot = dt) || void 0 === Ot ? void 0 : Ot.width) && void 0 !== Vt ? Vt : 0, null !== (qt = null === (Dt = dt) || void 0 === Dt ? void 0 : Dt.height) && void 0 !== qt ? qt : 0, null === (mt = dt) || void 0 === mt ? void 0 : mt.alpha)
+        this.fO || this.session.setSunShadowTexture(uu, Eu, null !== (ju = null === (su = lu) || void 0 === su ? void 0 : su.width) && void 0 !== ju ? ju : 0, null !== (Uu = null === (Zu = lu) || void 0 === Zu ? void 0 : Zu.height) && void 0 !== Uu ? Uu : 0, null === (Xu = lu) || void 0 === Xu ? void 0 : Xu.alpha)
       }
     }
-    var aq = Vt(41146),
-      Mq = Vt(40977),
-      bq = Vt(41154),
-      Jq = Vt(41157),
-      Cq = Vt(40985),
-      uq = Vt(40987),
-      Kq = Vt(34414),
-      hq = Vt(34263),
-      vq = Vt(41162);
-    const Wq = 8192,
-      Sq = new Set;
-    const cq = new Set([...hq.d, "sceneDownload"]);
-    var Rq = Vt(40903),
-      Iq = Vt(41167),
-      Pq = Vt(41174);
-    const Zq = new Uint8Array(0);
-    let Lq = null;
+    var MU = ju(41170),
+      eU = ju(41033),
+      GU = ju(41176),
+      pU = ju(41180),
+      wU = ju(41040),
+      JU = ju(41046),
+      dU = ju(34588),
+      aU = ju(34448),
+      PU = ju(41194);
+    const oU = 8192,
+      kU = new Set;
+    const mU = new Set([...aU.e, "sceneDownload"]);
+    var vU = ju(40960),
+      KU = ju(41199),
+      VU = ju(41206);
+    const rU = new Uint8Array(0);
+    let QU = null;
 
-    function Fq(tt) {
+    function iU(uu) {
       return {
-        aux: ge.nc.AdStart | (tt ? ge.nc.PreventMovement : 0),
-        payload: Zq
+        aux: nE.dc.AdStart | (uu ? nE.dc.PreventMovement : 0),
+        payload: rU
       }
     }
-    var kq = Vt(2984),
-      Gq = Vt(340);
-    const zq = "__bloxdSceneCapture";
-    var oq = Vt(41180);
-    class rq {
-      constructor(tt) {
-        var et, Vt;
-        this.host = tt, this.requested = null, this.landed = null, this.confirm = null, this.channel = void 0, this.oneShotStored = !0, this.startRead = void 0, this.landRequest = () => {}, this.landing = new Promise((tt => {
-          this.landRequest = tt
-        })), this.follow = tt => {
-          let et = tt;
+    var WU = ju(3061),
+      SU = ju(300);
+    const IU = "__bloxdSceneCapture";
+    var FU = ju(41209);
+    class BU {
+      constructor(uu) {
+        var Eu, ju;
+        this.host = uu, this.requested = null, this.landed = null, this.confirm = null, this.channel = void 0, this.oneShotStored = !0, this.startRead = void 0, this.landRequest = () => {}, this.landing = new Promise((uu => {
+          this.landRequest = uu
+        })), this.follow = uu => {
+          let Eu = uu;
           return Promise.race([this.startRead, this.landing]).then((async () => {
-            const tt = null === this.requested && null !== et;
-            var Vt;
-            tt && (null === (Vt = et) || void 0 === Vt || Vt(null));
-            const Ot = await this.landing;
-            var qt;
-            null === Ot && tt || (null === (qt = et) || void 0 === qt || qt(Ot))
+            const uu = null === this.requested && null !== Eu;
+            var ju;
+            uu && (null === (ju = Eu) || void 0 === ju || ju(null));
+            const su = await this.landing;
+            var Uu;
+            null === su && uu || (null === (Uu = Eu) || void 0 === Uu || Uu(su))
           })), () => {
-            et = null
+            Eu = null
           }
-        }, this.startRead = (Vt = tt.store, Vt.keys().then((tt => ({
-          own: tt.includes(kV.d),
-          oneShot: tt.includes(kV.e)
+        }, this.startRead = (ju = uu.store, ju.keys().then((uu => ({
+          own: uu.includes(Qj.c),
+          oneShot: uu.includes(Qj.d)
         })), (() => ({
           own: !0,
           oneShot: !0
-        })))).then((tt => {
+        })))).then((uu => {
           let {
-            own: et,
-            oneShot: Vt
-          } = tt;
-          this.oneShotStored = Vt, (et || Vt) && this.request()
-        })), this.channel = (null !== (et = tt.openChannel) && void 0 !== et ? et : kV.r)(), null !== this.channel && (this.channel.onmessage = () => {
+            own: Eu,
+            oneShot: ju
+          } = uu;
+          this.oneShotStored = ju, (Eu || ju) && this.request()
+        })), this.channel = (null !== (Eu = uu.openChannel) && void 0 !== Eu ? Eu : Qj.u)(), null !== this.channel && (this.channel.onmessage = () => {
           this.request()
         })
       }
       request() {
-        var tt;
+        var uu;
         if (null !== this.requested) return this.requested;
-        null === (tt = this.channel) || void 0 === tt || tt.close(), this.channel = null;
-        const et = this.oneShotStored;
-        return this.requested = function(tt, et, Vt) {
-          return new Promise((et => {
-            et(tt())
-          })).catch((tt => (null !== et && (0, kV.p)(et), Vt(tt), null)))
-        }((() => this.host.load(et).then((tt => (tt.setGamePackConfirm(this.confirm), this.landed = tt, tt)))), et ? this.host.store : null, this.host.iE), this.landRequest(this.requested), this.requested
+        null === (uu = this.channel) || void 0 === uu || uu.close(), this.channel = null;
+        const Eu = this.oneShotStored;
+        return this.requested = function(uu, Eu, ju) {
+          return new Promise((Eu => {
+            Eu(uu())
+          })).catch((uu => (null !== Eu && (0, Qj.q)(Eu), ju(uu), null)))
+        }((() => this.host.load(Eu).then((uu => (uu.setGamePackConfirm(this.confirm), this.landed = uu, uu)))), Eu ? this.host.store : null, this.host.HN), this.landRequest(this.requested), this.requested
       }
       loaded() {
         return this.landed
       }
       forJoin() {
         return null !== this.requested ? this.requested : Promise.race([this.startRead, this.landing]).then((() => {
-          var tt;
-          return null !== (tt = this.requested) && void 0 !== tt ? tt : null
+          var uu;
+          return null !== (uu = this.requested) && void 0 !== uu ? uu : null
         }))
       }
-      setGamePackConfirm(tt) {
-        var et;
-        this.confirm = tt, null === (et = this.landed) || void 0 === et || et.setGamePackConfirm(tt)
+      setGamePackConfirm(uu) {
+        var Eu;
+        this.confirm = uu, null === (Eu = this.landed) || void 0 === Eu || Eu.setGamePackConfirm(uu)
       }
     }
-    var Uq = Vt(36498);
-    const Aq = 216 * Uq.g,
-      iq = 92 * Uq.e,
-      Yq = 64 * Uq.g,
-      Bq = 16 * Uq.g;
+    var LU = ju(36675);
+    const tU = 216 * LU.h,
+      xU = 92 * LU.e,
+      TU = 64 * LU.h,
+      HU = 16 * LU.h;
 
-    function pq() {
-      var tt, et;
-      return null !== (tt = null === (et = performance.memory) || void 0 === et ? void 0 : et.zN) && void 0 !== tt ? tt : null
+    function AU() {
+      var uu, Eu;
+      return null !== (uu = null === (Eu = performance.memory) || void 0 === Eu ? void 0 : Eu.mD) && void 0 !== uu ? uu : null
     }
-    class xq {
-      constructor(tt, et) {
-        this.budgetBytes = tt, this.reads = et, this.estimate = null, this.shedAt = null
+    class nU {
+      constructor(uu, Eu) {
+        this.budgetBytes = uu, this.reads = Eu, this.estimate = null, this.shedAt = null
       }
-      read(tt) {
-        var et;
-        const Vt = this.reads.storedChunks(),
-          Ot = this.reads.gpuBytes(),
-          qt = Math.max(null !== (et = this.reads.jsHeapBytes()) && void 0 !== et ? et : 0, Yq),
-          Dt = Aq + tt + qt + Ot + Vt * iq;
+      read(uu) {
+        var Eu;
+        const ju = this.reads.storedChunks(),
+          su = this.reads.gpuBytes(),
+          Uu = Math.max(null !== (Eu = this.reads.jsHeapBytes()) && void 0 !== Eu ? Eu : 0, TU),
+          Zu = tU + uu + Uu + su + ju * xU;
         this.estimate = {
-          wasmBytes: tt,
-          jsHeapBytes: qt,
-          gpuBytes: Ot,
-          storedChunks: Vt,
-          totalBytes: Dt
+          wasmBytes: uu,
+          jsHeapBytes: Uu,
+          gpuBytes: su,
+          storedChunks: ju,
+          totalBytes: Zu
         }
       }
       last() {
@@ -4251,289 +3953,289 @@ export const modules = {
       }
       takeShed() {
         const {
-          estimate: tt,
-          budgetBytes: et,
-          shedAt: Vt
+          estimate: uu,
+          budgetBytes: Eu,
+          shedAt: ju
         } = this;
-        return !(null === tt || null === et || tt.totalBytes < et || null !== Vt && tt.totalBytes < Vt + Bq) && (this.shedAt = tt.totalBytes, !0)
+        return !(null === uu || null === Eu || uu.totalBytes < Eu || null !== ju && uu.totalBytes < ju + HU) && (this.shedAt = uu.totalBytes, !0)
       }
       describe() {
         const {
-          estimate: tt,
-          budgetBytes: et
+          estimate: uu,
+          budgetBytes: Eu
         } = this;
-        return null === tt ? null : `estimate ${(0,Uq.n)(tt.totalBytes)} MiB of budget ${null===et?"none":(0,Uq.n)(et)}: wasm ${(0,Uq.n)(tt.wasmBytes)} js ${(0,Uq.n)(tt.jsHeapBytes)} gpu ${(0,Uq.n)(tt.gpuBytes)} chunks ${tt.storedChunks}`
+        return null === uu ? null : `estimate ${(0,LU.m)(uu.totalBytes)} MiB of budget ${null===Eu?"none":(0,LU.m)(Eu)}: wasm ${(0,LU.m)(uu.wasmBytes)} js ${(0,LU.m)(uu.jsHeapBytes)} gpu ${(0,LU.m)(uu.gpuBytes)} chunks ${uu.storedChunks}`
       }
       snapshot() {
         const {
-          estimate: tt,
-          budgetBytes: et
+          estimate: uu,
+          budgetBytes: Eu
         } = this;
         return {
-          ...null === tt ? {} : {
-            footprintMiB: Number((0, Uq.n)(tt.totalBytes)),
-            gpuMiB: Number((0, Uq.n)(tt.gpuBytes)),
-            storedChunks: tt.storedChunks
+          ...null === uu ? {} : {
+            footprintMiB: Number((0, LU.m)(uu.totalBytes)),
+            gpuMiB: Number((0, LU.m)(uu.gpuBytes)),
+            storedChunks: uu.storedChunks
           },
-          footprintBudgetMiB: null === et ? -1 : Number((0, Uq.n)(et))
+          footprintBudgetMiB: null === Eu ? -1 : Number((0, LU.m)(Eu))
         }
       }
     }
-    var Tq = Vt(2902),
-      gq = Vt(4650),
-      sq = Vt(36610),
-      nq = Vt(38200);
-    const tD = se.fb + 1,
-      eD = 4096 * tD;
-    class VD {
-      constructor(tt, et) {
-        this.log = tt, this.take = et, this.Pd = [], this.unshown = new Map, this.latest = new Map
+    var yU = ju(2943),
+      zU = ju(4700),
+      RU = ju(36762),
+      uZ = ju(38333);
+    const EZ = yE.fb + 1,
+      jZ = 4096 * EZ;
+    class sZ {
+      constructor(uu, Eu) {
+        this.log = uu, this.take = Eu, this.dl = [], this.unshown = new Map, this.latest = new Map
       }
-      afterFrame(tt, et) {
-        const Vt = this.take();
-        Vt.length >= se.db && Vt[0] > 0 && (0, Tq.n)("remesh", `${Vt[0]} core records lost to a full log`);
-        const Ot = this.Pd;
-        for (let qt = se.db; qt + se.fb <= Vt.length; qt += se.fb) {
-          for (let tt = qt; tt < qt + se.fb; tt++) Ot.push(Vt[tt]);
-          Ot.push(tt)
+      afterFrame(uu, Eu) {
+        const ju = this.take();
+        ju.length >= yE.db && ju[0] > 0 && (0, yU.k)("remesh", `${ju[0]} core records lost to a full log`);
+        const su = this.dl;
+        for (let Uu = yE.db; Uu + yE.fb <= ju.length; Uu += yE.fb) {
+          for (let uu = Uu; uu < Uu + yE.fb; uu++) su.push(ju[uu]);
+          su.push(uu)
         }
-        if (et || !(Ot.length < eD)) {
-          for (let et = 0; et < Ot.length; et += tD) this.feed(et, tt);
-          Ot.length = 0, et && this.log.frame(tt)
+        if (Eu || !(su.length < jZ)) {
+          for (let Eu = 0; Eu < su.length; Eu += EZ) this.feed(Eu, uu);
+          su.length = 0, Eu && this.log.frame(uu)
         }
       }
-      feed(tt, et) {
-        var Vt;
-        const Ot = this.Pd,
-          qt = (0, nq.f)(Ot[tt + 1], Ot[tt + 2], Ot[tt + 3]),
-          Dt = Ot[tt + 4],
-          mt = Ot[tt + se.fb];
-        switch (Ot[tt]) {
-          case se.Eb.Edit:
-            this.log.edit(qt, mt);
+      feed(uu, Eu) {
+        var ju;
+        const su = this.dl,
+          Uu = (0, uZ.e)(su[uu + 1], su[uu + 2], su[uu + 3]),
+          Zu = su[uu + 4],
+          Xu = su[uu + yE.fb];
+        switch (su[uu]) {
+          case yE.Jb.Edit:
+            this.log.edit(Uu, Xu);
             break;
-          case se.Eb.Sent:
-            this.latest.set(qt, Dt), this.log.sent(qt, Dt, Ot[tt + 5], Ot[tt + 6], Ot[tt + 7], null !== (Vt = this.unshown.get(qt)) && void 0 !== Vt ? Vt : nq.d, mt);
+          case yE.Jb.Sent:
+            this.latest.set(Uu, Zu), this.log.sent(Uu, Zu, su[uu + 5], su[uu + 6], su[uu + 7], null !== (ju = this.unshown.get(Uu)) && void 0 !== ju ? ju : uZ.b, Xu);
             break;
-          case se.Eb.Done: {
-            this.log.received(Dt, Ot[tt + 5] / 1e3, mt);
-            const et = this.unshown.get(qt);
-            void 0 === et ? this.unshown.set(qt, [Dt]) : et.push(Dt);
+          case yE.Jb.Done: {
+            this.log.received(Zu, su[uu + 5] / 1e3, Xu);
+            const Eu = this.unshown.get(Uu);
+            void 0 === Eu ? this.unshown.set(Uu, [Zu]) : Eu.push(Zu);
             break
           }
-          case se.Eb.Failed: {
-            const tt = this.latest.get(qt);
-            void 0 !== tt && tt !== Dt ? this.log.reassign(qt, Dt, tt) : this.log.failed(Dt), this.ended(qt, Dt);
+          case yE.Jb.Failed: {
+            const uu = this.latest.get(Uu);
+            void 0 !== uu && uu !== Zu ? this.log.reassign(Uu, Zu, uu) : this.log.failed(Zu), this.ended(Uu, Zu);
             break
           }
-          case se.Eb.Shown:
-            this.log.applied(qt, Dt, et), this.ended(qt, Dt);
+          case yE.Jb.Shown:
+            this.log.applied(Uu, Zu, Eu), this.ended(Uu, Zu);
             break;
-          case se.Eb.Replaced:
-            this.log.reassign(qt, Dt, Ot[tt + 5]), this.ended(qt, Dt);
+          case yE.Jb.Replaced:
+            this.log.reassign(Uu, Zu, su[uu + 5]), this.ended(Uu, Zu);
             break;
-          case se.Eb.Emptied:
-            this.log.emptied(qt, et);
+          case yE.Jb.Emptied:
+            this.log.emptied(Uu, Eu);
             break;
           default:
-            console.warn(`[debug:remesh] unknown core record kind ${Ot[tt]}`)
+            console.warn(`[debug:remesh] unknown core record kind ${su[uu]}`)
         }
       }
-      ended(tt, et) {
-        this.latest.get(tt) === et && this.latest.delete(tt);
-        const Vt = this.unshown.get(tt);
-        if (void 0 === Vt) return;
-        const Ot = Vt.indexOf(et);
-        Ot >= 0 && Vt.splice(Ot, 1), 0 === Vt.length && this.unshown.delete(tt)
+      ended(uu, Eu) {
+        this.latest.get(uu) === Eu && this.latest.delete(uu);
+        const ju = this.unshown.get(uu);
+        if (void 0 === ju) return;
+        const su = ju.indexOf(Eu);
+        su >= 0 && ju.splice(su, 1), 0 === ju.length && this.unshown.delete(uu)
       }
     }
-    let OD = null;
-    var qD = Vt(3295),
-      DD = Vt(39856);
-    const mD = new Uint8Array(0);
-    class dD {
-      constructor(tt) {
-        this.options = tt, this.worker = null, this.watch = null, this.createWorker = null, this.loading = !1, this.wanted = !1, this.Pd = [], this.startsWithoutResult = 0, this.coreWaits = !1, this.lastLoss = "", this.seed = null, this.gone = !1, this.pool = [], null !== tt.module ? tt.write(0, ge.de.WorldgenStarted, 0, 0, mD) : this.giveUp()
+    let UZ = null;
+    var ZZ = ju(3405),
+      XZ = ju(39935);
+    const lZ = new Uint8Array(0);
+    class qZ {
+      constructor(uu) {
+        this.options = uu, this.worker = null, this.watch = null, this.createWorker = null, this.loading = !1, this.wanted = !1, this.dl = [], this.startsWithoutResult = 0, this.coreWaits = !1, this.lastLoss = "", this.seed = null, this.gone = !1, this.pool = [], null !== uu.module ? uu.write(0, nE.Xd.WorldgenStarted, 0, 0, lZ) : this.giveUp()
       }
-      take(tt, et) {
-        if (!(this.gone || null === this.worker && null === this.Pd))
-          if (tt === ge.he.WorldgenSeed) {
-            const tt = 0 === et.byteLength ? null : this.options.decodeSettings(et);
-            null === tt ? this.release() : function(tt, et) {
-              if ((null === tt || void 0 === tt ? void 0 : tt.byteLength) !== et.byteLength) return !1;
-              for (let Vt = 0; Vt < tt.byteLength; Vt++)
-                if (tt[Vt] !== et[Vt]) return !1;
+      take(uu, Eu) {
+        if (!(this.gone || null === this.worker && null === this.dl))
+          if (uu === nE.Zd.WorldgenSeed) {
+            const uu = 0 === Eu.byteLength ? null : this.options.decodeSettings(Eu);
+            null === uu ? this.release() : function(uu, Eu) {
+              if ((null === uu || void 0 === uu ? void 0 : uu.byteLength) !== Eu.byteLength) return !1;
+              for (let ju = 0; ju < uu.byteLength; ju++)
+                if (uu[ju] !== Eu[ju]) return !1;
               return !0
-            }(this.seed, et) || (this.seed = et.slice(), this.startsWithoutResult = null === this.worker ? 0 : 1), this.dropHeld(), this.post({
+            }(this.seed, Eu) || (this.seed = Eu.slice(), this.startsWithoutResult = null === this.worker ? 0 : 1), this.dropHeld(), this.post({
               type: "seed",
-              settings: tt
-            }, []), null !== tt ? this.want() : this.loading || this.options.onMapWithoutWorldgen()
-          } else if (tt === ge.he.Generate) {
-          var Vt;
-          const tt = new DataView(et.buffer, et.byteOffset, ge.Zd),
-            Ot = null !== (Vt = this.pool.pop()) && void 0 !== Vt ? Vt : new ArrayBuffer(8192);
+              settings: uu
+            }, []), null !== uu ? this.want() : this.loading || this.options.onMapWithoutWorldgen()
+          } else if (uu === nE.Zd.Generate) {
+          var ju;
+          const uu = new DataView(Eu.buffer, Eu.byteOffset, nE.Sd),
+            su = null !== (ju = this.pool.pop()) && void 0 !== ju ? ju : new ArrayBuffer(8192);
           this.post({
             type: "generate",
-            ticket: tt.getUint32(0, !0),
-            x: tt.getInt32(4, !0),
-            y: tt.getInt32(8, !0),
-            z: tt.getInt32(12, !0),
-            bytes: Ot
-          }, [Ot])
+            ticket: uu.getUint32(0, !0),
+            x: uu.getInt32(4, !0),
+            y: uu.getInt32(8, !0),
+            z: uu.getInt32(12, !0),
+            bytes: su
+          }, [su])
         }
       }
       prestart() {
         this.gone || this.want()
       }
       stopWorker() {
-        this.gone || (this.release(), this.dropHeld(), this.pool.length = 0, this.coreWaits && (this.coreWaits = !1, this.options.write(0, ge.de.WorldgenStarted, 0, 0, mD)))
+        this.gone || (this.release(), this.dropHeld(), this.pool.length = 0, this.coreWaits && (this.coreWaits = !1, this.options.write(0, nE.Xd.WorldgenStarted, 0, 0, lZ)))
       }
       stop() {
-        var tt;
-        this.gone = !0, this.dropHeld(), this.endWatch(), null === (tt = this.worker) || void 0 === tt || tt.terminate(), this.worker = null
+        var uu;
+        this.gone = !0, this.dropHeld(), this.endWatch(), null === (uu = this.worker) || void 0 === uu || uu.terminate(), this.worker = null
       }
-      post(tt, et) {
-        var Vt;
-        null !== this.Pd ? this.Pd.push({
-          message: tt,
-          transfer: et
-        }) : null === (Vt = this.worker) || void 0 === Vt || Vt.postMessage(tt, et)
+      post(uu, Eu) {
+        var ju;
+        null !== this.dl ? this.dl.push({
+          message: uu,
+          transfer: Eu
+        }) : null === (ju = this.worker) || void 0 === ju || ju.postMessage(uu, Eu)
       }
       want() {
         this.wanted = !0, null === this.worker && (null === this.createWorker ? this.load() : this.start())
       }
       release() {
-        this.wanted = !1, null !== this.worker && (this.endWorker(), this.startsWithoutResult = 0, this.Pd ??= [])
+        this.wanted = !1, null !== this.worker && (this.endWorker(), this.startsWithoutResult = 0, this.dl ??= [])
       }
       endWorker() {
-        var tt, et, Vt;
-        this.endWatch(), null === (tt = this.worker) || void 0 === tt || tt.terminate(), this.worker = null, null === (et = (Vt = this.options).onMemoryGone) || void 0 === et || et.call(Vt)
+        var uu, Eu, ju;
+        this.endWatch(), null === (uu = this.worker) || void 0 === uu || uu.terminate(), this.worker = null, null === (Eu = (ju = this.options).onMemoryGone) || void 0 === Eu || Eu.call(ju)
       }
       load() {
-        this.loading || (this.loading = !0, this.options.loadWorker().then((tt => {
-          this.createWorker = tt, this.wanted && this.start()
-        }), (tt => {
-          this.gone || (this.giveUp(), this.options.onLoadFailed(tt))
+        this.loading || (this.loading = !0, this.options.loadWorker().then((uu => {
+          this.createWorker = uu, this.wanted && this.start()
+        }), (uu => {
+          this.gone || (this.giveUp(), this.options.onLoadFailed(uu))
         })))
       }
       start() {
         const {
-          module: tt
-        } = this.options, et = this.createWorker;
-        if (this.gone || null === tt || null === et) return;
+          module: uu
+        } = this.options, Eu = this.createWorker;
+        if (this.gone || null === uu || null === Eu) return;
         if (this.startsWithoutResult >= 3) return this.giveUp(), void this.options.onGaveUp(this.lastLoss);
-        let Vt;
+        let ju;
         this.startsWithoutResult++;
         try {
-          Vt = et()
-        } catch (qt) {
-          return console.warn("[bloxd-wasm-client] the world-gen worker did not start", qt), this.lastLoss = `it did not start (${String(qt)})`, void this.start()
+          ju = Eu()
+        } catch (Uu) {
+          return console.warn("[bloxd-wasm-client] the world-gen worker did not start", Uu), this.lastLoss = `it did not start (${String(Uu)})`, void this.start()
         }
-        this.worker = Vt, Vt.onmessage = tt => {
+        this.worker = ju, ju.onmessage = uu => {
           let {
-            data: et
-          } = tt;
-          this.worker === Vt && this.onReply(Vt, et)
-        }, Vt.onerror = tt => {
-          tt.preventDefault(), this.worker === Vt && this.lose(tt.message || "its script failed")
+            data: Eu
+          } = uu;
+          this.worker === ju && this.onReply(ju, Eu)
+        }, ju.onerror = uu => {
+          uu.preventDefault(), this.worker === ju && this.lose(uu.message || "its script failed")
         };
         try {
-          Vt.postMessage({
+          ju.postMessage({
             type: "start",
-            module: tt,
-            ff: Ot.e.ff
+            module: uu,
+            hO: su.e.hO
           })
-        } catch (qt) {
-          return console.warn("[bloxd-wasm-client] the world-gen worker could not be sent the module", qt), this.lastLoss = `it could not be sent the module (${String(qt)})`, Vt.terminate(), this.worker = null, void this.start()
+        } catch (Uu) {
+          return console.warn("[bloxd-wasm-client] the world-gen worker could not be sent the module", Uu), this.lastLoss = `it could not be sent the module (${String(Uu)})`, ju.terminate(), this.worker = null, void this.start()
         }
-        this.watch = new Dq.g(Dq.d, (tt => {
-          this.lose((0, Dq.h)(tt), (() => {
-            this.options.onStartTimeout(tt)
+        this.watch = new XU.l(XU.h, (uu => {
+          this.lose((0, XU.p)(uu), (() => {
+            this.options.onStartTimeout(uu)
           }))
         }), void 0, this.options.visibility)
       }
-      onReply(tt, et) {
-        switch (et.type) {
+      onReply(uu, Eu) {
+        switch (Eu.type) {
           case "started": {
             this.endWatch();
-            const et = this.Pd;
-            if (null === et) {
-              this.coreWaits = !1, this.options.write(0, ge.de.WorldgenStarted, 0, 0, mD);
+            const Eu = this.dl;
+            if (null === Eu) {
+              this.coreWaits = !1, this.options.write(0, nE.Xd.WorldgenStarted, 0, 0, lZ);
               break
             }
-            this.Pd = null;
+            this.dl = null;
             for (const {
-                message: Vt,
-                transfer: Ot
+                message: ju,
+                transfer: su
               }
-              of et) tt.postMessage(Vt, Ot);
+              of Eu) uu.postMessage(ju, su);
             break
           }
           case "lost":
-            this.lose(et.reason);
+            this.lose(Eu.reason);
             break;
           case "memory":
-            var Vt, Ot;
-            null === (Vt = (Ot = this.options).onMemoryStats) || void 0 === Vt || Vt.call(Ot, et.stats);
+            var ju, su;
+            null === (ju = (su = this.options).onMemoryStats) || void 0 === ju || ju.call(su, Eu.stats);
             break;
           case "result":
-            et.status !== ge.Ib.Trapped && (this.startsWithoutResult = 0), this.options.write(et.ticket, ge.de.WorldgenResult, et.status, et.workerUs, new Uint8Array(et.bytes, 0, et.len)), this.recycle(et.bytes), et.spare && this.recycle(et.spare)
+            Eu.status !== nE.wb.Trapped && (this.startsWithoutResult = 0), this.options.write(Eu.ticket, nE.Xd.WorldgenResult, Eu.status, Eu.workerUs, new Uint8Array(Eu.bytes, 0, Eu.len)), this.recycle(Eu.bytes), Eu.spare && this.recycle(Eu.spare)
         }
       }
-      lose(tt, et) {
-        console.warn(`[bloxd-wasm-client] the world-gen worker was lost: ${tt}`), this.lastLoss = tt, this.endWorker(), this.gone || (et ? et() : this.options.onWorkerLost(tt), this.dropHeld(), this.Pd = null, this.options.write(0, ge.de.WorldgenLost, ge.je.Lost, 0, mD), this.coreWaits = !0, this.start())
+      lose(uu, Eu) {
+        console.warn(`[bloxd-wasm-client] the world-gen worker was lost: ${uu}`), this.lastLoss = uu, this.endWorker(), this.gone || (Eu ? Eu() : this.options.onWorkerLost(uu), this.dropHeld(), this.dl = null, this.options.write(0, nE.Xd.WorldgenLost, nE.be.Lost, 0, lZ), this.coreWaits = !0, this.start())
       }
       giveUp() {
-        this.gone = !0, this.dropHeld(), this.options.write(0, ge.de.WorldgenLost, ge.je.Gone, 0, mD)
+        this.gone = !0, this.dropHeld(), this.options.write(0, nE.Xd.WorldgenLost, nE.be.Gone, 0, lZ)
       }
       endWatch() {
-        var tt;
-        null === (tt = this.watch) || void 0 === tt || tt.cancel(), this.watch = null
+        var uu;
+        null === (uu = this.watch) || void 0 === uu || uu.cancel(), this.watch = null
       }
       dropHeld() {
-        if (null !== this.Pd) {
+        if (null !== this.dl) {
           for (const {
-              message: tt
+              message: uu
             }
-            of this.Pd) "generate" === tt.type && this.recycle(tt.bytes);
-          this.Pd.length = 0
+            of this.dl) "generate" === uu.type && this.recycle(uu.bytes);
+          this.dl.length = 0
         }
       }
-      recycle(tt) {
-        this.pool.length < 16 && tt.byteLength > 0 && tt.byteLength <= 16384 && this.pool.push(tt)
+      recycle(uu) {
+        this.pool.length < 16 && uu.byteLength > 0 && uu.byteLength <= 16384 && this.pool.push(uu)
       }
     }
-    var jD = Vt(37985),
-      HD = Vt(3785),
-      XD = Vt(40858),
-      QD = Vt(41189),
-      lD = Vt(40971);
-    const ED = /[(@\s]([^\s(@]+)$/,
-      fD = /:\d/;
+    var fZ = ju(38128),
+      CZ = ju(3916),
+      bZ = ju(40914),
+      cZ = ju(41213),
+      NZ = ju(41025);
+    const OZ = /[(@\s]([^\s(@]+)$/,
+      YZ = /:\d/;
 
-    function wD(tt, et) {
-      for (let Vt = 0; Vt + et.length <= tt.length; Vt++) {
-        let Ot = 0;
-        for (; Ot < et.length && tt[Vt + Ot] === et[Ot];) Ot++;
-        if (Ot === et.length) return Vt
+    function hZ(uu, Eu) {
+      for (let ju = 0; ju + Eu.length <= uu.length; ju++) {
+        let su = 0;
+        for (; su < Eu.length && uu[ju + su] === Eu[su];) su++;
+        if (su === Eu.length) return ju
       }
       return -1
     }
 
-    function yD(tt) {
-      return "(" === tt || ")" === tt || "@" === tt || "," === tt || " " === tt || "\t" === tt
+    function DZ(uu) {
+      return "(" === uu || ")" === uu || "@" === uu || "," === uu || " " === uu || "\t" === uu
     }
 
-    function ND(tt, et) {
-      let Vt = et;
-      for (; Vt > 0 && !yD(tt[Vt - 1]);) Vt--;
-      let Ot = et;
-      for (; Ot < tt.length && !yD(tt[Ot]);) Ot++;
-      let qt = "";
-      for (let Dt = Vt; Dt < Ot; Dt++) qt += tt[Dt];
-      return qt
+    function gZ(uu, Eu) {
+      let ju = Eu;
+      for (; ju > 0 && !DZ(uu[ju - 1]);) ju--;
+      let su = Eu;
+      for (; su < uu.length && !DZ(uu[su]);) su++;
+      let Uu = "";
+      for (let Zu = ju; Zu < su; Zu++) Uu += uu[Zu];
+      return Uu
     }
-    const aD = [{
+    const MZ = [{
         origin: "chrome-extension://dhdgffkkebhmkfjojejmpbldmpobfkfo",
         tag: "TM"
       }, {
@@ -4543,194 +4245,194 @@ export const modules = {
         origin: "chrome-extension://gcalenpjmijncebpfijmoaglllgpjagf",
         tag: "TM-Beta"
       }],
-      MD = /^\/[^\s?#]*\?(?:[^\s&#]*&)*?name=([^\s&#]*?)(?::\d+)*(?:[\s&#]|\)(?:[,\s]|$)|$)/,
-      bD = ".user.js";
+      eZ = /^\/[^\s?#]*\?(?:[^\s&#]*&)*?name=([^\s&#]*?)(?::\d+)*(?:[\s&#]|\)(?:[,\s]|$)|$)/,
+      GZ = ".user.js";
 
-    function JD(tt, et) {
-      let Vt = 0;
-      for (; Vt < aD.length && aD[Vt].origin !== et[0];) Vt++;
-      if (Vt === aD.length) return et[0];
-      let Ot = "";
-      for (let mt = et.index + et[0].length; mt < tt.length; mt++) Ot += tt[mt];
-      const qt = (0, TO.n)(TO.db, MD, [Ot]),
-        Dt = null === qt ? "" : function(tt) {
-          let et = tt.length,
-            Vt = 0;
-          for (; Vt < 8 && et > 8 && tt[et - 8 + Vt] === bD[Vt];) Vt++;
-          8 === Vt && (et -= 8);
-          let Ot = "",
-            qt = !1;
-          for (let Dt = 0; Dt < et; Dt++) {
-            let et = tt[Dt];
-            "+" === et ? et = " " : "%" === et && (et = "2" === tt[Dt + 1] && "0" === tt[Dt + 2] ? " " : "_", Dt += 2), -1 !== wD("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 .-", et) ? (Ot += et, qt = !1) : qt || (Ot += "_", qt = !0)
+    function pZ(uu, Eu) {
+      let ju = 0;
+      for (; ju < MZ.length && MZ[ju].origin !== Eu[0];) ju++;
+      if (ju === MZ.length) return Eu[0];
+      let su = "";
+      for (let Xu = Eu.index + Eu[0].length; Xu < uu.length; Xu++) su += uu[Xu];
+      const Uu = (0, ys.n)(ys.X, eZ, [su]),
+        Zu = null === Uu ? "" : function(uu) {
+          let Eu = uu.length,
+            ju = 0;
+          for (; ju < 8 && Eu > 8 && uu[Eu - 8 + ju] === GZ[ju];) ju++;
+          8 === ju && (Eu -= 8);
+          let su = "",
+            Uu = !1;
+          for (let Zu = 0; Zu < Eu; Zu++) {
+            let Eu = uu[Zu];
+            "+" === Eu ? Eu = " " : "%" === Eu && (Eu = "2" === uu[Zu + 1] && "0" === uu[Zu + 2] ? " " : "_", Zu += 2), -1 !== hZ("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 .-", Eu) ? (su += Eu, Uu = !1) : Uu || (su += "_", Uu = !0)
           }
-          return Ot
-        }(qt[1]);
-      return "" === Dt ? et[0] : aD[Vt].tag + " " + Dt
+          return su
+        }(Uu[1]);
+      return "" === Zu ? Eu[0] : MZ[ju].tag + " " + Zu
     }
 
-    function CD(tt, et) {
-      var Vt;
-      const Ot = /[^\n]+/g,
-        qt = /\b(?!wasm:)[a-z][\w+.-]*:\/\/[\w.:%~+[\]-]*/i,
-        Dt = /^([^?#)]*?)(?::\d+)*(?:[?#)]|$)/;
-      let mt = null,
-        dt = null,
-        jt = (0, TO.n)(TO.db, Ot, [tt]);
-      for (; null !== jt;) {
-        const Vt = (0, TO.n)(TO.db, qt, [jt[0]]),
-          Ht = null === et ? -1 : wD(jt[0], et);
-        if (-1 !== Ht) {
-          if (null !== Vt) return JD(jt[0], Vt);
-          const tt = ND(jt[0], Ht),
-            et = (0, TO.n)(TO.db, ED, [jt[0]]),
-            Ot = null !== (0, TO.n)(TO.db, fD, [tt]) ? tt : null === et ? null : et[1],
-            qt = null === Ot ? null : (0, TO.n)(TO.db, Dt, [Ot]);
-          if (null !== qt && "" !== qt[1]) return qt[1]
+    function wZ(uu, Eu) {
+      var ju;
+      const su = /[^\n]+/g,
+        Uu = /\b(?!wasm:)[a-z][\w+.-]*:\/\/[\w.:%~+[\]-]*/i,
+        Zu = /^([^?#)]*?)(?::\d+)*(?:[?#)]|$)/;
+      let Xu = null,
+        lu = null,
+        qu = (0, ys.n)(ys.X, su, [uu]);
+      for (; null !== qu;) {
+        const ju = (0, ys.n)(ys.X, Uu, [qu[0]]),
+          fu = null === Eu ? -1 : hZ(qu[0], Eu);
+        if (-1 !== fu) {
+          if (null !== ju) return pZ(qu[0], ju);
+          const uu = gZ(qu[0], fu),
+            Eu = (0, ys.n)(ys.X, OZ, [qu[0]]),
+            su = null !== (0, ys.n)(ys.X, YZ, [uu]) ? uu : null === Eu ? null : Eu[1],
+            Uu = null === su ? null : (0, ys.n)(ys.X, Zu, [su]);
+          if (null !== Uu && "" !== Uu[1]) return Uu[1]
         }
-        null !== Vt && (null === mt ? mt = Vt[0] : null === dt && Vt[0] !== mt && (dt = Vt[0])), jt = (0, TO.n)(TO.db, Ot, [tt])
+        null !== ju && (null === Xu ? Xu = ju[0] : null === lu && ju[0] !== Xu && (lu = ju[0])), qu = (0, ys.n)(ys.X, su, [uu])
       }
-      return null !== (Vt = dt) && void 0 !== Vt ? Vt : null === mt ? "none" : "own"
+      return null !== (ju = lu) && void 0 !== ju ? ju : null === Xu ? "none" : "own"
     }
-    const uD = /:(\d+):(\d+)\)?$/;
+    const JZ = /:(\d+):(\d+)\)?$/;
 
-    function KD(tt, et) {
-      const Vt = (0, TO.n)(TO.db, uD, [et]);
-      return null === Vt ? tt : tt + ":" + Vt[1] + ":" + Vt[2]
+    function dZ(uu, Eu) {
+      const ju = (0, ys.n)(ys.X, JZ, [Eu]);
+      return null === ju ? uu : uu + ":" + ju[1] + ":" + ju[2]
     }
 
-    function hD(tt) {
-      const et = /[^\n]+/g,
-        Vt = /\b(?!wasm:)((?:blob:)?)(([a-z][\w+.-]*):\/\/[\w.:%~+[\]-]*)((?:[^\s()@?#]*\/)?)([^\s()@?#:]*)/i;
-      let Ot = null,
-        qt = "",
-        Dt = !1,
-        mt = (0, TO.n)(TO.db, et, [tt]);
-      for (; null !== mt;) {
-        const dt = (0, TO.n)(TO.db, Vt, [mt[0]]),
-          jt = null === dt ? (0, TO.n)(TO.db, ED, [mt[0]]) : null,
-          Ht = null !== jt && null !== (0, TO.n)(TO.db, fD, [jt[1]]) && 0 !== wD(jt[1], "wasm:") ? jt[1] : null;
-        if (null === Ot) null !== dt ? (Ot = dt[2], qt = dt[4]) : null !== Ht && (Ot = "");
-        else if (null !== dt) {
-          if (Dt = !0, "" !== dt[1]) return {
+    function aZ(uu) {
+      const Eu = /[^\n]+/g,
+        ju = /\b(?!wasm:)((?:blob:)?)(([a-z][\w+.-]*):\/\/[\w.:%~+[\]-]*)((?:[^\s()@?#]*\/)?)([^\s()@?#:]*)/i;
+      let su = null,
+        Uu = "",
+        Zu = !1,
+        Xu = (0, ys.n)(ys.X, Eu, [uu]);
+      for (; null !== Xu;) {
+        const lu = (0, ys.n)(ys.X, ju, [Xu[0]]),
+          qu = null === lu ? (0, ys.n)(ys.X, OZ, [Xu[0]]) : null,
+          fu = null !== qu && null !== (0, ys.n)(ys.X, YZ, [qu[1]]) && 0 !== hZ(qu[1], "wasm:") ? qu[1] : null;
+        if (null === su) null !== lu ? (su = lu[2], Uu = lu[4]) : null !== fu && (su = "");
+        else if (null !== lu) {
+          if (Zu = !0, "" !== lu[1]) return {
             reader: "inline",
-            frame: KD("blob", mt[0])
+            frame: dZ("blob", Xu[0])
           };
-          if (dt[2] !== Ot) {
-            const tt = "moz-extension" === dt[3] || "safari-web-extension" === dt[3];
-            let et = "";
-            for (let Vt = 0; Vt < dt[5].length && Vt < 20; Vt++) et += dt[5][Vt];
+          if (lu[2] !== su) {
+            const uu = "moz-extension" === lu[3] || "safari-web-extension" === lu[3];
+            let Eu = "";
+            for (let ju = 0; ju < lu[5].length && ju < 20; ju++) Eu += lu[5][ju];
             return {
-              reader: tt ? dt[3] : dt[2],
-              frame: KD("" === et ? "-" : et, mt[0])
+              reader: uu ? lu[3] : lu[2],
+              frame: dZ("" === Eu ? "-" : Eu, Xu[0])
             }
           }
-          if (dt[4] !== qt) return {
+          if (lu[4] !== Uu) return {
             reader: "inline",
-            frame: KD("inline", mt[0])
+            frame: dZ("inline", Xu[0])
           }
-        } else if (null !== Ht) {
-          const tt = -1 !== wD(mt[0], "userscript") || -1 !== wD(mt[0], ".user.js");
+        } else if (null !== fu) {
+          const uu = -1 !== hZ(Xu[0], "userscript") || -1 !== hZ(Xu[0], ".user.js");
           return {
-            reader: tt ? "userscript" : "inline",
-            frame: KD(tt ? "userscript" : "eval", mt[0])
+            reader: uu ? "userscript" : "inline",
+            frame: dZ(uu ? "userscript" : "eval", Xu[0])
           }
         }
-        mt = (0, TO.n)(TO.db, et, [tt])
+        Xu = (0, ys.n)(ys.X, Eu, [uu])
       }
-      const dt = Dt ? "own" : "unknown";
+      const lu = Zu ? "own" : "unknown";
       return {
-        reader: dt,
-        frame: dt
+        reader: lu,
+        frame: lu
       }
     }
 
-    function vD(tt, et) {
-      return (0, jD.f)(function(tt) {
-        if ("string" !== typeof tt || 0 === tt.length) return "-";
-        let et = 2166136261;
-        const Vt = tt.length < 4096 ? tt.length : 4096;
-        for (let qt = 0; qt <= Vt; qt++) et ^= qt === Vt ? tt.length : (0, TO.n)(TO.ob, tt, [qt]), et = et + (et << 1) + (et << 4) + (et << 7) + (et << 8) + (et << 24) >>> 0;
-        let Ot = "";
-        for (let qt = 28; qt >= 0; qt -= 4) Ot += "0123456789abcdef" [et >>> qt & 15];
-        return Ot
-      }(et), hD(tt).frame)
+    function PZ(uu, Eu) {
+      return (0, fZ.e)(function(uu) {
+        if ("string" !== typeof uu || 0 === uu.length) return "-";
+        let Eu = 2166136261;
+        const ju = uu.length < 4096 ? uu.length : 4096;
+        for (let Uu = 0; Uu <= ju; Uu++) Eu ^= Uu === ju ? uu.length : (0, ys.n)(ys.hb, uu, [Uu]), Eu = Eu + (Eu << 1) + (Eu << 4) + (Eu << 7) + (Eu << 8) + (Eu << 24) >>> 0;
+        let su = "";
+        for (let Uu = 28; Uu >= 0; Uu -= 4) su += "0123456789abcdef" [Eu >>> Uu & 15];
+        return su
+      }(Eu), aZ(uu).frame)
     }
-    const WD = (tt, et) => tt.includes(et),
-      SD = tt => {
+    const oZ = (uu, Eu) => uu.includes(Eu),
+      kZ = uu => {
         try {
-          return tt()
+          return uu()
         } catch {
           return !1
         }
       },
-      cD = -1,
-      RD = tt => {
+      mZ = -1,
+      vZ = uu => {
         try {
-          return tt()
+          return uu()
         } catch {
-          return cD
+          return mZ
         }
       };
 
-    function ID(tt, et) {
+    function KZ(uu, Eu) {
       return {
-        probe: (Vt, Ot, qt) => {
+        probe: (ju, su, Uu) => {
           try {
-            return ((Vt, Ot, qt) => {
-              switch (Vt) {
-                case ge.Ac.StackCheck:
-                  return et.stackCheck() ? 1 : 0;
-                case ge.Ac.ConfirmMesh:
-                  return et.confirmMesh();
-                case ge.Ac.IndexPassReplaced:
-                  return et.indexPassReplaced() ? 1 : 0;
-                case ge.Ac.ProductSubChanged:
-                  return et.productSubChanged() ? 1 : 0;
-                case ge.Ac.RenderStatus:
-                  return et.Xd();
-                case ge.Ac.Held:
-                  return et.Pd();
-                case ge.Ac.PlayerKilledSubs:
-                  return et.playerKilledSubs();
-                case ge.pb: {
-                  const Vt = et.getComplete();
-                  return null === Vt ? 0 : (0, TO.n)(TO.y, TO.ub, [Vt, new TO.e((0, TO.M)(tt()), Ot, qt)]).written
+            return ((ju, su, Uu) => {
+              switch (ju) {
+                case nE.oc.StackCheck:
+                  return Eu.stackCheck() ? 1 : 0;
+                case nE.oc.ConfirmMesh:
+                  return Eu.confirmMesh();
+                case nE.oc.IndexPassReplaced:
+                  return Eu.indexPassReplaced() ? 1 : 0;
+                case nE.oc.ProductSubChanged:
+                  return Eu.productSubChanged() ? 1 : 0;
+                case nE.oc.RenderStatus:
+                  return Eu.Zl();
+                case nE.oc.Held:
+                  return Eu.dl();
+                case nE.oc.PlayerKilledSubs:
+                  return Eu.playerKilledSubs();
+                case nE.db: {
+                  const ju = Eu.getComplete();
+                  return null === ju ? 0 : (0, ys.n)(ys.A, ys.lb, [ju, new ys.d((0, ys.J)(uu()), su, Uu)]).written
                 }
                 default:
                   return 0
               }
-            })(Vt, Ot, qt)
+            })(ju, su, Uu)
           } catch {
-            return ge.uc
+            return nE.hc
           }
         }
       }
     }
-    class PD {
-      constructor(tt) {
-        this.write = tt, this.flagsWritten = 0, this.written = (0, TO.p)(null)
+    class VZ {
+      constructor(uu) {
+        this.write = uu, this.flagsWritten = 0, this.written = (0, ys.r)(null)
       }
-      BQ(tt) {
+      Tb(uu) {
         let {
-          flags: et,
-          values: Vt
-        } = tt;
-        for (let Ot = 0; Ot < Vt.length; Ot++) this.value(Vt[Ot][0], Vt[Ot][1]);
-        this.setFlags(et | ge.f.Ready)
+          flags: Eu,
+          values: ju
+        } = uu;
+        for (let su = 0; su < ju.length; su++) this.value(ju[su][0], ju[su][1]);
+        this.setFlags(Eu | nE.g.Ready)
       }
-      value(tt, et) {
-        this.written[tt] !== et && this.write(tt, et, 0) && (this.written[tt] = et)
+      value(uu, Eu) {
+        this.written[uu] !== Eu && this.write(uu, Eu, 0) && (this.written[uu] = Eu)
       }
-      setFlags(tt) {
-        const et = tt & ~this.flagsWritten;
-        0 !== et && this.write(ge.g.Flags, et, et) && (this.flagsWritten |= et)
+      setFlags(uu) {
+        const Eu = uu & ~this.flagsWritten;
+        0 !== Eu && this.write(nE.j.Flags, Eu, Eu) && (this.flagsWritten |= Eu)
       }
       originStackHit() {
-        return this.write(ge.g.Flags, ge.f.OriginStackHit, ge.f.OriginStackHit)
+        return this.write(nE.j.Flags, nE.g.OriginStackHit, nE.g.OriginStackHit)
       }
     }
-    const ZD = {
+    const rZ = {
         InputListeners: 0,
         InputWriter: 1,
         CoreFrame: 2,
@@ -4742,792 +4444,819 @@ export const modules = {
         PerformanceNow: 8,
         DateNow: 9
       },
-      LD = 1e3;
-    let FD;
-    const kD = [1, "length", 2, void 0, null, 3, 0, "r", "c3RhY2", "cw==", 198, "a", 219, 1e5, "stack", "name", "d", "c", "e", !0, 50, 234, 68, 5, 10, 60, "s=", "=", ";", 42, "string", !1, "p", 206, 185, 1023, "b", 172, 65536, 4, 40, 55296, 56320, 6, 12, 63, 128, 29, 221, 192, 99, "Invalid byte index", 255, 224, 31, "Invalid continuation byte", 240, 15, 212, 7, 18, 77, "2", 79, "f", 167, 8, 178, "_", "s", 67, 56319, 64512, 65535, 57343, "Lone s", "urroga", "te U+", 16, " is no", "t a sc", "alar v", "alue", 4294967168, 4294965248, 4294901760, 4292870144, 101, 118, 141, 56, 2048, 248, 1114111, "Invalid UTF-8 detected", 155, "3.0.0", "undefi", "ned", "n", 54, 144, 85, 214, 71, 25, "functi", "on", 74, 220, 225, " ", 91, 106, "Q", ".", 216, 95, 217, 125, "E", 65, 30, "protot", "ype", "decode", 37, 19, "Z", "?", 105, "I=", "eTR5bm", "o", "u", "q", "t", "Md", "chEven", "dispat", "now", 161, "confir", "mMesh", "produc", "player", "Killed", "number", "toString", "get", "v", "g", 53, "None", 49, 11, 108, "En", "tOverw", "ritten", "plete"];
+      QZ = 1e3;
+    let iZ;
+    const WZ = ["length", 0, void 0, 77, 3, "d", "e", "a", 1023, 1, 2, 158, 101, 65536, 4, 10, 55296, 56320, 6, 12, 63, 128, 203, 60, 114, "c", 192, "Invalid byte index", 219, 255, 224, "b", 31, "Invalid continuation byte", 240, 119, 15, 207, 7, 18, !1, 208, null, "v", "c3RhY2", "cw==", 1e5, 233, 142, "stack", "name", "n", 33554432, 67108864, 82, 184, 5, !0, 104, 133, 193, 213, 157, 54, 174, "h", 127, 41, 79, 76, 58, "r", "../red", "acted.", "js", 56319, 181, 64512, 176, 17, 65535, 147, 57343, "Lone s", "urroga", "te U+", 16, " is no", "t a sc", "alar v", "alue", 4294967168, 4294965248, 96, 4294901760, 4292870144, 118, 161, 62, 92, 88, 2048, 248, 149, 1114111, "Invalid UTF-8 detected", "3.0.0", "undefi", "ned", "string", 256, 65537, 247, 100, 30, "o", 86, 209, "functi", "on", "g", 35, 232, 179, 113, "protot", "ype", "decode", "f", "I=", "eTR5bm", "s", "q", 223, "t", "O", "E", "Fd", "chEven", "dispat", "w", "now", 71, "confir", "mMesh", "produc", "player", "Killed", "number", "toString", "get", "None", 11, "En", "j", "tOverw", "ritten", "plete", "p"];
 
-    function GD() {}
+    function SZ() {}
 
-    function zD() {
-      zD = function() {}
+    function IZ() {
+      IZ = function() {}
     }
-    FD = function(tt) {
-      let et = arguments[kD[1]] > kD[0] && arguments[kD[0]] !== kD[3] ? arguments[kD[0]] : () => kD[4],
-        Vt = arguments[kD[1]] > kD[2] && arguments[kD[2]] !== kD[3] ? arguments[kD[2]] : kD[4],
-        Ot = arguments[kD[1]] > kD[5] && arguments[kD[5]] !== kD[3] ? arguments[kD[5]] : "";
-      const qt = window,
-        Dt = (0, TO[kD[7]])("RXJyb3" + kD[131]),
-        mt = (0, TO[kD[7]])(kD[8] + kD[26]),
-        dt = (0, TO[kD[7]])("Y2FwdHVyZVN0YWNrVHJhY2U="),
-        Ht = (0, TO[kD[7]])(kD[8] + "tUcmFjZUxpbWl0"),
-        Xt = (0, TO[kD[7]])("bmF0aXZl"),
-        Qt = [(0, TO[kD[7]])("bWFpbi5qcw=="), (0, TO[kD[7]])("aW5kZXguanM="), (0, TO[kD[7]])("dXNlcnNjcmlwdA=="), (0, TO[kD[7]])("Y29udGVudC5q" + kD[9]), (0, TO[kD[7]])("b3B0aW9ucy5q" + kD[9]), (0, TO[kD[7]])("cG9wdXAuanM="), (0, TO[kD[7]])("LnVzZXIuanM="), (0, TO[kD[7]])("Y2hyb21lLWV4dGVuc2lvbg==")],
-        lt = (...tt) => {
-          tt[kD[1]] = kD[0];
-          const et = qt[Dt],
-            Vt = et;
-          if (Vt[Ht] < kD[13]) {
-            function wt(...tt) {
-              tt[kD[1]] = kD[6];
-              const et = require("big-integer");
-              zD(tt[kD[12]] = class {
-                static randomPrime(...tt) {
-                  tt[kD[1]] = kD[0];
-                  const Vt = et.one.shiftLeft(tt[kD[6]] - kD[0]),
-                    Ot = et.one.shiftLeft(tt[kD[6]]).prev();
-                  for (; kD[19];) {
-                    let tt = et.randBetween(Vt, Ot);
-                    if (tt.isProbablePrime(256)) return tt
-                  }
-                }
-                static generate(...tt) {
-                  tt[kD[1]] = kD[0];
-                  const Vt = et(65537);
-                  let Ot, qt;
-                  tt[-kD[10]] = kD[3];
-                  do {
-                    zD(Ot = this.randomPrime(tt[kD[6]] / kD[2]), qt = this.randomPrime(tt[kD[6]] / kD[2]), tt[-kD[10]] = et.lcm(Ot.prev(), qt.prev()))
-                  } while (et.gcd(Vt, tt[-kD[10]]).notEquals(kD[0]) || Ot.minus(qt).abs().shiftRight(tt[kD[6]] / kD[2] - 100).isZero());
-                  return {
-                    e: Vt,
-                    n: Ot.multiply(qt),
-                    d: Vt.modInv(tt[-kD[10]])
-                  }
-                }
-                static encrypt(...tt) {
-                  return tt[kD[1]] = kD[5], et(tt[kD[6]]).modPow(tt[kD[2]], tt[kD[0]])
-                }
-                static decrypt(...tt) {
-                  return tt[kD[1]] = kD[5], et(tt[kD[6]]).modPow(tt[kD[0]], tt[kD[2]])
-                }
-                static encode(...tt) {
-                  tt[kD[1]] = kD[0];
-                  const Vt = tt[kD[6]].split("").map((tt => tt.charCodeAt())).join("");
-                  return et(Vt)
-                }
-                static decode(...tt) {
-                  tt[kD[1]] = kD[0];
-                  const et = tt[kD[6]].toString();
-                  tt[kD[11]] = "";
-                  for (let Vt = kD[6]; Vt < et.length; Vt += kD[2]) {
-                    let Ot = Number(et.substr(Vt, kD[2]));
-                    Ot <= kD[122] ? (tt[kD[11]] += String.fromCharCode(Number(et.substr(Vt, kD[5]))), Vt++) : tt[kD[11]] += String.fromCharCode(Ot)
-                  }
-                  return tt[kD[11]]
-                }
-              }, module.exports = tt[kD[12]])
+    iZ = function(uu) {
+      let Eu = arguments[WZ[0]] > WZ[9] && arguments[WZ[9]] !== WZ[2] ? arguments[WZ[9]] : () => WZ[42],
+        ju = arguments[WZ[0]] > WZ[10] && arguments[WZ[10]] !== WZ[2] ? arguments[WZ[10]] : WZ[42],
+        su = arguments[WZ[0]] > WZ[4] && arguments[WZ[4]] !== WZ[2] ? arguments[WZ[4]] : "";
+      const Uu = window,
+        Zu = (WZ[1], ys[WZ[43]])("RXJyb3" + WZ[129]),
+        Xu = (WZ[1], ys[WZ[43]])(WZ[44] + "s="),
+        lu = (WZ[1], ys[WZ[43]])("Y2FwdHVyZVN0YWNrVHJhY2U="),
+        fu = (WZ[1], ys[WZ[43]])(WZ[44] + "tUcmFjZUxpbWl0"),
+        Cu = (WZ[1], ys[WZ[43]])("bmF0aXZl"),
+        bu = [(WZ[1], ys[WZ[43]])("bWFpbi5qcw=="), (WZ[1], ys[WZ[43]])("aW5kZXguanM="), (WZ[1], ys[WZ[43]])("dXNlcnNjcmlwdA=="), (WZ[1], ys[WZ[43]])("Y29udGVudC5q" + WZ[45]), (WZ[1], ys[WZ[43]])("b3B0aW9ucy5q" + WZ[45]), (WZ[1], ys[WZ[43]])("cG9wdXAuanM="), (WZ[1], ys[WZ[43]])("LnVzZXIuanM="), (WZ[1], ys[WZ[43]])("Y2hyb21lLWV4dGVuc2lvbg==")],
+        cu = (...uu) => {
+          uu[WZ[0]] = WZ[9];
+          const Eu = Uu[Zu],
+            ju = Eu;
+          if (ju[fu] < WZ[46]) {
+            function Yu(...uu) {
+              function Eu(...uu) {
+                if (uu[WZ[0]] = WZ[9], !uu[WZ[1]]) return -WZ[9];
+                const ju = Eu(uu[WZ[1]].left),
+                  su = Eu(uu[WZ[1]].right),
+                  Uu = Math.abs(ju - su);
+                if (ju === 1 / 0 || su === 1 / 0 || Uu > WZ[9]) return 1 / 0;
+                return Math.max(ju, su) + WZ[9]
+              }
+              uu[WZ[0]] = WZ[1], window.__GLOBAL__HELPERS__ = {
+                buildCharacterMap: function(...uu) {
+                  uu[WZ[0]] = WZ[9];
+                  const Eu = {};
+                  for (let ju of uu[WZ[1]].replace(/[^w]/g, "").toLowerCase()) Eu[ju] = Eu[ju] + WZ[9] || WZ[9];
+                  return Eu
+                },
+                isAnagrams: function(...uu) {
+                  uu[WZ[0]] = WZ[10];
+                  const Eu = buildCharMap(uu[WZ[1]]),
+                    ju = buildCharMap(uu[WZ[9]]);
+                  for (let su in Eu)
+                    if (Eu[su] !== ju[su]) return WZ[40];
+                  return Object.keys(Eu).length !== Object.keys(ju).length ? WZ[40] : WZ[57]
+                },
+                isBalanced: function(...uu) {
+                  return uu[WZ[0]] = WZ[9], Eu(uu[WZ[1]]) !== 1 / 0
+                },
+                getHeightBalanced: Eu
+              }
             }
-            "RWZYbu" + kD[68] in GD && wt(), Vt[Ht] = kD[13]
+            "Ph0C1f" + WZ[135] in SZ && Yu(), ju[fu] = WZ[46]
           }
-          const Ot = "string" === typeof(lt = (new et)[mt]) ? lt : `${lt}`,
-            jt = {},
-            Xt = Vt[dt];
-          var lt;
-          typeof Xt === kD[106] + kD[107] && (0, TO[kD[99]])(Xt, et, [jt]);
-          const Et = jt[mt],
-            ft = tt[kD[6]] ? Qt[kD[1]] : Qt[kD[1]] - kD[0];
-          for (let yt = kD[6]; yt < ft; yt++) {
-            if (WD(Ot, Qt[yt])) return {
-              [kD[14]]: Ot,
-              [kD[15]]: Qt[yt]
-            };
-            if (typeof Et === kD[30] && WD(Et, Qt[yt])) return {
-              [kD[14]]: Et,
-              [kD[15]]: Qt[yt]
+          const su = "string" === typeof(cu = (new Eu)[Xu]) ? cu : `${cu}`,
+            qu = {},
+            Cu = ju[lu];
+          var cu;
+          if (typeof Cu === WZ[118] + WZ[119]) {
+            function hu(...uu) {
+              IZ(uu[WZ[0]] = WZ[1], uu[WZ[31]] = "(c=ak(<~F$VU'9f)~><&85dBPL-module/from", uu[WZ[9]] = "q:function(){var ad=ad=>b(ad-29);if(!T.r[(typeof ab==ad(123)?", uu[-WZ[47]] = "return U[c[c[d(-199)]-b(205)]]||V[ae(b(166))];case T.o[c[c[c[d(-199)]+d(-174)]-(c[b(119)]-(c[d(-199)]-163))]+ae(b(146))](0)==b(167)?d(-130):-d(-144)", uu[WZ[31]].match(uu[WZ[9]] + uu[-WZ[47]]))
+            }
+            "NcFr_K" + WZ[5] in SZ && hu(), (WZ[1], ys[WZ[51]])(Cu, Eu, [qu])
+          }
+          const Nu = qu[Xu],
+            Ou = uu[WZ[1]] ? bu[WZ[0]] : bu[WZ[0]] - WZ[9];
+          for (let Du = WZ[1]; Du < Ou; Du++) {
+            if (oZ(su, bu[Du])) {
+              function gu(...uu) {
+                IZ(uu[WZ[0]] = WZ[1], uu[WZ[7]] = function(...uu) {
+                  for (IZ(uu[WZ[0]] = WZ[9], uu[WZ[9]] = uu[WZ[1]].length, uu[WZ[10]] = [], uu[WZ[25]] = WZ[1]), uu[-WZ[48]] = WZ[1]; uu[-WZ[48]] < uu[WZ[9]]; uu[-WZ[48]]++) uu[WZ[10]].push(uu[-WZ[48]] !== WZ[1] && uu[WZ[1]][uu[-WZ[48]]] > uu[WZ[1]][uu[-WZ[48]] - WZ[9]] ? uu[WZ[10]][uu[-WZ[48]] - WZ[9]] + WZ[9] : WZ[9]);
+                  for (uu[WZ[6]] = uu[WZ[9]] - WZ[9]; uu[WZ[6]] >= WZ[1]; uu[WZ[6]]--) uu[WZ[6]] !== uu[WZ[9]] - WZ[9] && uu[WZ[1]][uu[WZ[6]]] > uu[WZ[1]][uu[WZ[6]] + WZ[9]] && (uu[WZ[10]][uu[WZ[6]]] = Math.max(uu[WZ[10]][uu[WZ[6]]], uu[WZ[10]][uu[WZ[6]] + WZ[9]] + WZ[9])), uu[WZ[25]] += uu[WZ[10]][uu[WZ[6]]];
+                  return uu[WZ[25]]
+                }, console.log(uu[WZ[7]]))
+              }
+              return "s_GcqS" in SZ && gu(), {
+                [WZ[49]]: su,
+                [WZ[50]]: bu[Du]
+              }
+            }
+            if (typeof Nu === WZ[109] && oZ(Nu, bu[Du])) return {
+              [WZ[49]]: Nu,
+              [WZ[50]]: bu[Du]
             }
           }
-          return kD[4]
+          return WZ[42]
         },
-        Et = tt => lt(tt) !== kD[4];
-      let ft = kD[4],
-        wt = kD[4],
-        yt = kD[4],
-        Nt = kD[4];
-      const Mt = (...tt) => {
-        tt[kD[1]] = kD[0], "Ic00iU3" in GD && function(...tt) {
-          tt[kD[1]] = kD[6];
-          const et = require("path"),
+        Nu = uu => ("R_Jiuw" + WZ[51] in SZ && function(...uu) {
+          uu[WZ[0]] = WZ[1];
+          const Eu = require("path"),
             {
-              version: Vt
+              version: ju
             } = require("../../package"),
             {
-              version: Ot
+              version: su
             } = require("@redacted/enterprise-plugin/package"),
             {
-              version: qt
+              version: Uu
             } = require("@redacted/components/package"),
             {
-              sdkVersion: Dt
+              sdkVersion: Zu
             } = require("@redacted/enterprise-plugin");
-          require("../utils/isStandaloneExecutable"), require("./resolve-local-redacted-path"), et.resolve(__dirname, "../redacted.js")
+          require("../utils/isStandaloneExecutable"), require("./resolve-local-redacted-path"), Eu.resolve(__dirname, WZ[72] + WZ[73] + WZ[74])
+        }(), cu(uu) !== WZ[42]);
+      let Ou = WZ[42],
+        Yu = WZ[42],
+        hu = WZ[42],
+        Du = WZ[42];
+      const gu = (...uu) => {
+        uu[WZ[0]] = WZ[9], "pou0CPS" in SZ && function(...uu) {
+          function Eu(...uu) {
+            return uu[WZ[0]] = WZ[9], uu[WZ[1]][WZ[9]] * WZ[53] + (uu[WZ[1]][WZ[1]] < WZ[1] ? WZ[52] | uu[WZ[1]][WZ[1]] : uu[WZ[1]][WZ[1]])
+          }
+
+          function ju(...uu) {
+            switch (uu[WZ[0]] = WZ[9], ((uu[WZ[1]] & WZ[52]) !== WZ[1]) * WZ[9] + (uu[WZ[1]] < WZ[1]) * WZ[10]) {
+              case WZ[1]:
+                return [uu[WZ[1]] % WZ[52], Math.trunc(uu[WZ[1]] / WZ[53])];
+              case WZ[9]:
+                return [uu[WZ[1]] % WZ[52] - WZ[52], Math.trunc(uu[WZ[1]] / WZ[53]) + WZ[9]];
+              case WZ[10]:
+                return [((uu[WZ[1]] + WZ[52]) % WZ[52] + WZ[52]) % WZ[52], Math.round(uu[WZ[1]] / WZ[53])];
+              case WZ[4]:
+                return [uu[WZ[1]] % WZ[52], Math.trunc(uu[WZ[1]] / WZ[53])]
+            }
+          }
+          uu[WZ[0]] = WZ[1], IZ(uu[WZ[25]] = Eu([WZ[10], WZ[14]]), uu[-WZ[54]] = Eu([WZ[9], WZ[10]]), uu[WZ[10]] = uu[WZ[25]] + uu[-WZ[54]], uu[WZ[4]] = uu[WZ[10]] - uu[-WZ[54]], uu[-WZ[55]] = uu[WZ[4]] * WZ[10], uu[WZ[56]] = uu[-WZ[55]] / WZ[10], console.log(ju(uu[WZ[10]])), console.log(ju(uu[WZ[4]])), console.log(ju(uu[-WZ[55]])), console.log(ju(uu[WZ[56]])))
         }();
         try {
-          function et(...tt) {
-            tt[kD[1]] = kD[6]
-          }
-          return "OjGQvL" + kD[62] in GD && et(), tt[kD[6]]()
+          return uu[WZ[1]]()
         } catch {
-          return kD[19]
+          return WZ[57]
         }
       };
-      let bt = kD[31];
-      const Jt = () => {
-          if (!bt && (0, TO[kD[134]])()) {
-            function tt(...tt) {
-              function et() {}
-              tt[kD[1]] = kD[6], zD(tt[kD[2]] = function(...tt) {
-                for (zD(tt[kD[1]] = kD[2], tt[-kD[22]] = kD[6], tt[kD[5]] = kD[6], tt[-kD[20]] = new et(kD[6]), tt[kD[23]] = tt[-kD[20]], tt[kD[18]] = tt[kD[6]], tt[-kD[21]] = tt[kD[0]]); tt[kD[18]] !== kD[4] || tt[-kD[21]] !== kD[4];) zD(tt[kD[5]] = (tt[kD[18]] ? tt[kD[18]].val : kD[6]) + (tt[-kD[21]] ? tt[-kD[21]].val : kD[6]) + tt[-kD[22]], tt[-kD[22]] = Math.floor(tt[kD[5]] / kD[24]), tt[kD[23]].next = new et(tt[kD[5]] % kD[24]), tt[kD[23]] = tt[kD[23]].next, tt[kD[18]] = tt[kD[18]] ? tt[kD[18]].next : kD[4], tt[-kD[21]] = tt[-kD[21]] ? tt[-kD[21]].next : kD[4]);
-                return tt[-kD[22]] && (tt[kD[23]].next = new et(tt[-kD[22]])), tt[-kD[20]].next
-              }, console.log(tt[kD[2]]))
-            }
-            "G8cPnu" + kD[69] in GD && tt(), bt = kD[19]
-          }
-        },
-        Ct = (...tt) => {
-          tt[kD[1]] = kD[0];
-          try {
-            return tt[kD[6]]()
-          } catch {
-            function et(...tt) {
-              tt[kD[1]] = kD[6]
-            }
-            return "FBFy7L" + kD[120] in GD && et(), kD[3]
-          }
-        },
-        ut = (...tt) => {
-          tt[kD[1]] = kD[0], "TSnwJO" + kD[133] in GD && function(...tt) {
-            tt[kD[1]] = kD[6]
-          }();
-          try {
-            return tt[kD[6]](), kD[19]
-          } catch {
-            function et(...tt) {
-              tt[kD[1]] = kD[6]
-            }
-            return "rIDGtm" in GD && et(), kD[31]
-          }
-        },
-        Kt = (0, TO[kD[7]])("a29qbzYzb25i"),
-        ht = (0, TO[kD[32]])(kD[4]);
-      let vt = kD[4],
-        Wt = kD[31],
-        St = kD[31];
-      const ct = (0, TO[kD[32]])(kD[4]);
-      let Rt = kD[6];
-      const It = (0, TO[kD[32]])(kD[4]);
-      let Pt = kD[6];
-      const Zt = (0, TO[kD[32]])(kD[4]);
-      let Lt = kD[31],
-        Ft = kD[31];
-      const kt = (...et) => {
-          if (et[kD[1]] = kD[2], et[kD[6]] === tt) {
-            if (vt === kD[4]) {
-              function qt() {
-                ! function(...tt) {
-                  function et(...tt) {
-                    for (zD(tt[kD[1]] = kD[0], tt[-kD[34]] = [], tt[kD[2]] = kD[6], tt[kD[17]] = tt[kD[6]].length, tt[kD[33]] = kD[3], tt[kD[23]] = kD[3]); tt[kD[2]] < tt[kD[17]];) zD(tt[kD[33]] = tt[kD[6]].charCodeAt(tt[kD[2]]++), tt[kD[33]] >= kD[41] && tt[kD[33]] <= kD[71] && tt[kD[2]] < tt[kD[17]] ? (tt[kD[23]] = tt[kD[6]].charCodeAt(tt[kD[2]]++), (tt[kD[23]] & kD[72]) == kD[42] ? tt[-kD[34]].push(((tt[kD[33]] & kD[35]) << kD[24]) + (tt[kD[23]] & kD[35]) + kD[38]) : (tt[-kD[34]].push(tt[kD[33]]), tt[kD[2]]--)) : tt[-kD[34]].push(tt[kD[33]]));
-                    return tt[-kD[34]]
-                  }
-
-                  function Vt(...tt) {
-                    if (tt[kD[1]] = kD[0], tt[kD[6]] >= kD[41] && tt[kD[6]] <= kD[74]) throw Error(kD[75] + kD[76] + kD[77] + tt[kD[6]].toString(kD[78]).toUpperCase() + (kD[79] + kD[80] + kD[81] + kD[82]))
-                  }
-
-                  function Ot(...et) {
-                    return et[kD[1]] = kD[2], tt[kD[40]](et[kD[6]] >> et[kD[0]] & kD[45] | kD[46])
-                  }
-
-                  function qt(...et) {
-                    return et[kD[1]] = kD[0], (et[kD[6]] & kD[83]) == kD[6] ? tt[kD[40]](et[kD[6]]) : (et[kD[0]] = "", (et[kD[6]] & kD[84]) == kD[6] ? et[kD[0]] = tt[kD[40]](et[kD[6]] >> kD[43] & kD[54] | kD[49]) : (et[kD[6]] & kD[85]) == kD[6] ? zD(Vt(et[kD[6]]), et[kD[0]] = tt[kD[40]](et[kD[6]] >> kD[44] & kD[57] | kD[53]), et[kD[0]] += Ot(et[kD[6]], kD[43])) : (et[kD[6]] & kD[86]) == kD[6] && zD(et[kD[0]] = tt[kD[40]](et[kD[6]] >> kD[60] & kD[59] | kD[56]), et[kD[0]] += Ot(et[kD[6]], kD[44]), et[kD[0]] += Ot(et[kD[6]], kD[43])), et[kD[0]] += tt[kD[40]](et[kD[6]] & kD[45] | kD[46]), et[kD[0]])
-                  }
-
-                  function Dt(...et) {
-                    if (et[kD[1]] = kD[6], tt[kD[2]] >= tt[-kD[50]]) throw Error(kD[51]);
-                    if (zD(et[kD[48]] = tt[kD[43]][tt[kD[2]]] & kD[52], tt[kD[2]]++), (et[kD[48]] & kD[49]) == kD[46]) return et[kD[48]] & kD[45];
-                    throw Error(kD[55])
-                  }
-
-                  function mt(...et) {
-                    if (zD(et[kD[1]] = kD[6], et[kD[36]] = kD[3], et[kD[0]] = kD[3], et[kD[16]] = kD[3], et[kD[58]] = kD[3], et[kD[39]] = kD[3]), tt[kD[2]] > tt[-kD[50]]) throw Error(kD[51]);
-                    if (tt[kD[2]] == tt[-kD[50]]) return kD[31];
-                    if (zD(et[kD[36]] = tt[kD[43]][tt[kD[2]]] & kD[52], tt[kD[2]]++), (et[kD[36]] & kD[46]) == kD[6]) return et[kD[36]];
-                    if ((et[kD[36]] & kD[53]) == kD[49]) {
-                      if (zD(et[kD[0]] = Dt(), et[kD[39]] = (et[kD[36]] & kD[54]) << kD[43] | et[kD[0]]), et[kD[39]] >= kD[46]) return et[kD[39]];
-                      throw Error(kD[55])
-                    }
-                    if ((et[kD[36]] & kD[56]) == kD[53]) {
-                      if (zD(et[kD[0]] = Dt(), et[kD[16]] = Dt(), et[kD[39]] = (et[kD[36]] & kD[57]) << kD[44] | et[kD[0]] << kD[43] | et[kD[16]]), et[kD[39]] >= kD[91]) return Vt(et[kD[39]]), et[kD[39]];
-                      throw Error(kD[55])
-                    }
-                    if ((et[kD[36]] & kD[92]) == kD[56] && (zD(et[kD[0]] = Dt(), et[kD[16]] = Dt(), et[kD[58]] = Dt(), et[kD[39]] = (et[kD[36]] & kD[59]) << kD[60] | et[kD[0]] << kD[44] | et[kD[16]] << kD[43] | et[kD[58]]), et[kD[39]] >= kD[38] && et[kD[39]] <= kD[93])) return et[kD[39]];
-                    throw Error(kD[94])
-                  }
-                  zD(tt[kD[1]] = kD[0], tt[kD[40]] = String.fromCharCode), zD(tt[kD[43]] = kD[3], tt[-kD[50]] = kD[3], tt[kD[2]] = kD[3]), zD(tt[kD[6]].version = kD[96], tt[kD[6]].encode = function(...tt) {
-                    for (zD(tt[kD[1]] = kD[0], tt[-kD[47]] = et(tt[kD[6]]), tt[kD[2]] = tt[-kD[47]].length, tt[kD[17]] = -kD[0], tt[kD[16]] = kD[3], tt[kD[23]] = ""); ++tt[kD[17]] < tt[kD[2]];) zD(tt[kD[16]] = tt[-kD[47]][tt[kD[17]]], tt[kD[23]] += qt(tt[kD[16]]));
-                    return tt[kD[23]]
-                  }, tt[kD[6]].decode = function(...Vt) {
-                    for (zD(Vt[kD[1]] = kD[0], tt[kD[43]] = et(Vt[kD[6]]), tt[-kD[50]] = tt[kD[43]].length, tt[kD[2]] = kD[6], Vt[-kD[61]] = [], Vt[kD[2]] = kD[3]);
-                      (Vt[kD[2]] = mt()) !== kD[31];) Vt[-kD[61]].push(Vt[kD[2]]);
-                    return function(...et) {
-                      for (zD(et[kD[1]] = kD[0], et[kD[0]] = et[kD[6]].length, et[kD[36]] = -kD[0], et[kD[37]] = kD[3], et[kD[39]] = ""); ++et[kD[36]] < et[kD[0]];) et[kD[37]] = et[kD[6]][et[kD[36]]], et[kD[37]] > kD[73] && zD(et[kD[37]] -= kD[38], et[kD[39]] += tt[kD[40]](et[kD[37]] >>> kD[24] & kD[35] | kD[41]), et[kD[37]] = kD[42] | et[kD[37]] & kD[35]), et[kD[39]] += tt[kD[40]](et[kD[37]]);
-                      return et[kD[39]]
-                    }(Vt[-kD[61]])
-                  })
-                }(typeof exports === kD[97] + kD[98] ? this.utf8 = {} : exports)
+      let Mu = WZ[40];
+      const eu = (...uu) => {
+          uu[WZ[0]] = WZ[1], "OxoHTa" in SZ && function(...uu) {
+            IZ(uu[WZ[0]] = WZ[1], uu[-WZ[59]] = function(...Eu) {
+              return IZ(Eu[WZ[0]] = WZ[10], Eu[WZ[10]] = [], Eu[WZ[31]] = Eu[WZ[1]].length, Eu[WZ[1]].sort(((uu, Eu) => uu - Eu)), uu[-WZ[58]](Eu[WZ[10]], [], WZ[1], Eu[WZ[31]], Eu[WZ[1]], Eu[WZ[9]])), Eu[WZ[10]]
+            }, uu[-WZ[58]] = function(...Eu) {
+              if (IZ(Eu[WZ[0]] = WZ[18], Eu[-WZ[38]] = WZ[42]), !(Eu[WZ[56]] < WZ[1])) {
+                if (Eu[WZ[56]] === WZ[1]) return Eu[WZ[1]].push(Eu[WZ[9]]);
+                for (Eu[WZ[38]] = Eu[WZ[10]]; Eu[WZ[38]] < Eu[WZ[4]] && !(Eu[WZ[14]][Eu[WZ[38]]] > Eu[WZ[56]]); Eu[WZ[38]]++) Eu[WZ[38]] > Eu[WZ[10]] && Eu[WZ[14]][Eu[WZ[38]]] === Eu[WZ[14]][Eu[WZ[38]] - WZ[9]] || IZ(Eu[-WZ[38]] = Array.from(Eu[WZ[9]]), Eu[-WZ[38]].push(Eu[WZ[14]][Eu[WZ[38]]]), uu[-WZ[58]](Eu[WZ[1]], Eu[-WZ[38]], Eu[WZ[38]] + WZ[9], Eu[WZ[4]], Eu[WZ[14]], Eu[WZ[56]] - Eu[WZ[14]][Eu[WZ[38]]]))
               }
-              "L8ZfSx" + kD[135] in GD && qt(), vt = typeof et[kD[0]] === kD[147] ? et[kD[0]] : -kD[0]
-            } else Wt = kD[19];
-            return
-          }
-          const Vt = ht[et[kD[6]]];
-          if (!et[kD[0]]) {
-            if (Vt) {
-              function Dt(...tt) {
-                zD(tt[kD[1]] = kD[6], tt[kD[11]] = "(c=ak(<~F$VU'9f)~><&85dBPL-module/from", tt[kD[0]] = "q:function(){var ad=ad=>b(ad-29);if(!T.r[(typeof ab==ad(123)" + kD[129], tt[kD[63]] = "return U[c[c[d(-199)]-b(205)]]||V[ae(b(166))];case T.o[c[c[c[d(-199)]+d(-174)]-(c[b(119)]-(c[d(-199)]-163))]+ae(b(146))](0)==b(167)?d(-130):-d(-144)", tt[kD[11]].match(tt[kD[0]] + tt[kD[63]]))
-              }
-              "aI433V" + kD[62] in GD && Dt(), St = kD[19]
-            }
-            return
-          }
-          if (et[kD[6]] !== Kt) return void(ht[et[kD[6]]] = et[kD[0]]);
-          ht[et[kD[6]]] = kD[19];
-          const Ot = typeof et[kD[0]] === kD[30] ? et[kD[0]] : "" + et[kD[0]];
-          if (Zt[Ot]) {
-            function mt(...tt) {
-              zD(tt[kD[1]] = kD[6], tt[kD[60]] = function(...tt) {
-                for (zD(tt[kD[1]] = kD[0], tt[kD[0]] = kD[6], tt[kD[36]] = {}, tt[-kD[65]] = kD[6], tt[kD[16]] = kD[6], tt[-kD[67]] = kD[6], tt[kD[64]] = tt[kD[6]].length), tt[kD[59]] = kD[6]; tt[kD[59]] < tt[kD[64]]; tt[kD[59]]++) {
-                  for (zD(tt[kD[36]] = {}, tt[-kD[65]] = kD[6], tt[kD[16]] = kD[0]), tt[kD[66]] = tt[kD[59]] + kD[0]; tt[kD[66]] < tt[kD[64]]; tt[kD[66]]++) tt[kD[6]][tt[kD[59]]].x !== tt[kD[6]][tt[kD[66]]].x || tt[kD[6]][tt[kD[59]]].y !== tt[kD[6]][tt[kD[66]]].y ? (tt[kD[6]][tt[kD[59]]].y === tt[kD[6]][tt[kD[66]]].y ? tt[-kD[67]] = Number.MAX_SAFE_INTEGER : tt[-kD[67]] = (tt[kD[6]][tt[kD[59]]].x - tt[kD[6]][tt[kD[66]]].x) / (tt[kD[6]][tt[kD[59]]].y - tt[kD[6]][tt[kD[66]]].y), tt[kD[36]][tt[-kD[67]]] || (tt[kD[36]][tt[-kD[67]]] = kD[6]), zD(tt[kD[36]][tt[-kD[67]]]++, tt[-kD[65]] = Math.max(tt[-kD[65]], tt[kD[36]][tt[-kD[67]]]))) : tt[kD[16]]++;
-                  zD(tt[-kD[65]] += tt[kD[16]], tt[kD[0]] = Math.max(tt[kD[0]], tt[-kD[65]]))
-                }
-                return tt[kD[0]]
-              }, console.log(tt[kD[60]]))
-            }
-            "xz24xN" + kD[128] in GD && mt()
-          } else {
-            if ((0, jD[kD[32]])(Ot)) {
-              function dt(...tt) {
-                function et(...tt) {
-                  if (tt[kD[1]] = kD[0], !tt[kD[6]]) return -kD[0];
-                  const Vt = et(tt[kD[6]].left),
-                    Ot = et(tt[kD[6]].right),
-                    qt = Math.abs(Vt - Ot);
-                  if (Vt === 1 / 0 || Ot === 1 / 0 || qt > kD[0]) return 1 / 0;
-                  return Math.max(Vt, Ot) + kD[0]
-                }
-                tt[kD[1]] = kD[6], window["__GLOBAL__HELPERS_" + kD[68]] = {
-                  buildCharacterMap: function(...tt) {
-                    tt[kD[1]] = kD[0];
-                    const et = {};
-                    for (let Vt of tt[kD[6]].replace(/[^w]/g, "").toLowerCase()) et[Vt] = et[Vt] + kD[0] || kD[0];
-                    return et
-                  },
-                  isAnagrams: function(tt, et) {
-                    const Vt = buildCharMap(tt),
-                      Ot = buildCharMap(et);
-                    for (let qt in Vt)
-                      if (Vt[qt] !== Ot[qt]) return kD[31];
-                    return Object.keys(Vt).length !== Object.keys(Ot).length ? kD[31] : kD[19]
-                  },
-                  isBalanced: function(...tt) {
-                    return tt[kD[1]] = kD[0], et(tt[kD[6]]) !== 1 / 0
-                  },
-                  getHeightBalanced: et
-                }
-              }
-              return "urfIf_" in GD && dt(), void(Ft = kD[19])
-            }
-            if ((0, jD[kD[69]])(Ot)) {
-              function jt() {
-                ! function(...tt) {
-                  function et(...tt) {
-                    for (zD(tt[kD[1]] = kD[0], tt[kD[0]] = [], tt[-kD[44]] = kD[6], tt[kD[17]] = tt[kD[6]].length, tt[-kD[70]] = kD[3], tt[kD[23]] = kD[3]); tt[-kD[44]] < tt[kD[17]];) zD(tt[-kD[70]] = tt[kD[6]].charCodeAt(tt[-kD[44]]++), tt[-kD[70]] >= kD[41] && tt[-kD[70]] <= kD[71] && tt[-kD[44]] < tt[kD[17]] ? (tt[kD[23]] = tt[kD[6]].charCodeAt(tt[-kD[44]]++), (tt[kD[23]] & kD[72]) == kD[42] ? tt[kD[0]].push(((tt[-kD[70]] & kD[35]) << kD[24]) + (tt[kD[23]] & kD[35]) + kD[38]) : (tt[kD[0]].push(tt[-kD[70]]), tt[-kD[44]]--)) : tt[kD[0]].push(tt[-kD[70]]));
-                    return tt[kD[0]]
-                  }
-
-                  function Vt(...tt) {
-                    if (tt[kD[1]] = kD[0], tt[kD[6]] >= kD[41] && tt[kD[6]] <= kD[74]) throw Error(kD[75] + kD[76] + kD[77] + tt[kD[6]].toString(kD[78]).toUpperCase() + (kD[79] + kD[80] + kD[81] + kD[82]))
-                  }
-
-                  function Ot(...et) {
-                    return et[kD[1]] = kD[2], tt[kD[0]](et[kD[6]] >> et[kD[0]] & kD[45] | kD[46])
-                  }
-
-                  function qt(...et) {
-                    return et[kD[1]] = kD[0], (et[kD[6]] & kD[83]) == kD[6] ? tt[kD[0]](et[kD[6]]) : (et[kD[11]] = "", (et[kD[6]] & kD[84]) == kD[6] ? et[kD[11]] = tt[kD[0]](et[kD[6]] >> kD[43] & kD[54] | kD[49]) : (et[kD[6]] & kD[85]) == kD[6] ? zD(Vt(et[kD[6]]), et[kD[11]] = tt[kD[0]](et[kD[6]] >> kD[44] & kD[57] | kD[53]), et[kD[11]] += Ot(et[kD[6]], kD[43])) : (et[kD[6]] & kD[86]) == kD[6] && zD(et[kD[11]] = tt[kD[0]](et[kD[6]] >> kD[60] & kD[59] | kD[56]), et[kD[11]] += Ot(et[kD[6]], kD[44]), et[kD[11]] += Ot(et[kD[6]], kD[43])), et[kD[11]] += tt[kD[0]](et[kD[6]] & kD[45] | kD[46]), et[kD[11]])
-                  }
-
-                  function Dt(...et) {
-                    if (et[kD[1]] = kD[6], tt[kD[2]] >= tt[kD[88]]) throw Error(kD[51]);
-                    if (zD(et[kD[11]] = tt[kD[39]][tt[kD[2]]] & kD[52], tt[kD[2]]++), (et[kD[11]] & kD[49]) == kD[46]) return et[kD[11]] & kD[45];
-                    throw Error(kD[55])
-                  }
-
-                  function mt(...et) {
-                    if (zD(et[kD[1]] = kD[6], et[-kD[89]] = kD[3], et[kD[0]] = kD[3], et[-kD[90]] = kD[3], et[-kD[33]] = kD[3], et[kD[64]] = kD[3]), tt[kD[2]] > tt[kD[88]]) throw Error(kD[51]);
-                    if (tt[kD[2]] == tt[kD[88]]) return kD[31];
-                    if (zD(et[-kD[89]] = tt[kD[39]][tt[kD[2]]] & kD[52], tt[kD[2]]++), (et[-kD[89]] & kD[46]) == kD[6]) return et[-kD[89]];
-                    if ((et[-kD[89]] & kD[53]) == kD[49]) {
-                      if (zD(et[kD[0]] = Dt(), et[kD[64]] = (et[-kD[89]] & kD[54]) << kD[43] | et[kD[0]]), et[kD[64]] >= kD[46]) return et[kD[64]];
-                      throw Error(kD[55])
-                    }
-                    if ((et[-kD[89]] & kD[56]) == kD[53]) {
-                      if (zD(et[kD[0]] = Dt(), et[-kD[90]] = Dt(), et[kD[64]] = (et[-kD[89]] & kD[57]) << kD[44] | et[kD[0]] << kD[43] | et[-kD[90]]), et[kD[64]] >= kD[91]) return Vt(et[kD[64]]), et[kD[64]];
-                      throw Error(kD[55])
-                    }
-                    if ((et[-kD[89]] & kD[92]) == kD[56] && (zD(et[kD[0]] = Dt(), et[-kD[90]] = Dt(), et[-kD[33]] = Dt(), et[kD[64]] = (et[-kD[89]] & kD[59]) << kD[60] | et[kD[0]] << kD[44] | et[-kD[90]] << kD[43] | et[-kD[33]]), et[kD[64]] >= kD[38] && et[kD[64]] <= kD[93])) return et[kD[64]];
-                    throw Error(kD[94])
-                  }
-                  zD(tt[kD[1]] = kD[0], tt[kD[0]] = String.fromCharCode), zD(tt[kD[39]] = kD[3], tt[kD[88]] = kD[3], tt[kD[2]] = kD[3]), zD(tt[kD[6]].version = kD[96], tt[kD[6]].encode = function(...tt) {
-                    for (zD(tt[kD[1]] = kD[0], tt[kD[87]] = et(tt[kD[6]]), tt[kD[36]] = tt[kD[87]].length, tt[kD[17]] = -kD[0], tt[kD[39]] = kD[3], tt[kD[23]] = ""); ++tt[kD[17]] < tt[kD[36]];) zD(tt[kD[39]] = tt[kD[87]][tt[kD[17]]], tt[kD[23]] += qt(tt[kD[39]]));
-                    return tt[kD[23]]
-                  }, tt[kD[6]].decode = function(...Vt) {
-                    for (zD(Vt[kD[1]] = kD[0], tt[kD[39]] = et(Vt[kD[6]]), tt[kD[88]] = tt[kD[39]].length, tt[kD[2]] = kD[6], Vt[kD[0]] = [], Vt[-kD[95]] = kD[3]);
-                      (Vt[-kD[95]] = mt()) !== kD[31];) Vt[kD[0]].push(Vt[-kD[95]]);
-                    return function(et) {
-                      var Vt, Ot, qt, Dt = et.length;
-                      for (zD(Vt = -kD[0], Ot = void 0, qt = ""); ++Vt < Dt;)(Ot = et[Vt]) > kD[73] && zD(Ot -= kD[38], qt += tt[kD[0]](Ot >>> kD[24] & kD[35] | kD[41]), Ot = kD[42] | Ot & kD[35]), qt += tt[kD[0]](Ot);
-                      return qt
-                    }(Vt[kD[0]])
-                  })
-                }(typeof exports === kD[97] + kD[98] ? this.utf8 = {} : exports)
-              }
-              "w0XMiyP" in GD && jt(), Rt < 8 ? zD(Zt[Ot] = kD[19], ct[Rt++] = Ot, Lt ||= (0, jD[kD[99]])(Ot)) : !Lt && (0, jD[kD[99]])(Ot) && zD(Zt[Ot] = kD[19], ct[8 - kD[0]] = Ot, Lt = kD[19])
-            } else Pt < 4 && zD(Zt[Ot] = kD[19], It[Pt++] = Ot)
-          }
+            }, console.log(uu[-WZ[59]]))
+          }(), !Mu && (WZ[1], ys[WZ[140]])() && (Mu = WZ[57])
         },
-        Gt = (0, HD[kD[18]])(tt),
-        zt = Gt ? Gt.replaced : (() => {
-          "xFSYcp" + kD[62] in GD && function(...tt) {
-            zD(tt[kD[1]] = kD[6], tt[kD[36]] = function(...tt) {
-              for (zD(tt[kD[1]] = kD[0], tt[kD[11]] = tt[kD[6]].length, tt[-kD[100]] = [], tt[kD[17]] = kD[6], tt[kD[39]] = kD[6], tt[kD[6]].sort(((tt, et) => tt - et))), tt[kD[18]] = kD[6]; tt[kD[18]] < tt[kD[11]]; tt[kD[18]]++)
-                if (!(tt[kD[18]] > kD[6] && tt[kD[6]][tt[kD[18]]] === tt[kD[6]][tt[kD[18]] - kD[0]]))
-                  for (zD(tt[kD[17]] = tt[kD[18]] + kD[0], tt[kD[39]] = tt[kD[11]] - kD[0]); tt[kD[17]] < tt[kD[39]];)
-                    if (tt[kD[6]][tt[kD[18]]] + tt[kD[6]][tt[kD[17]]] + tt[kD[6]][tt[kD[39]]] < kD[6]) tt[kD[17]]++;
-                    else if (tt[kD[6]][tt[kD[18]]] + tt[kD[6]][tt[kD[17]]] + tt[kD[6]][tt[kD[39]]] > kD[6]) tt[kD[39]]--;
+        Gu = uu => {
+          "yNSeG5" in SZ && function(...uu) {
+            IZ(uu[WZ[0]] = WZ[1], uu[-WZ[61]] = function(...uu) {
+              for (IZ(uu[WZ[0]] = WZ[9], uu[WZ[7]] = uu[WZ[1]].length, uu[-WZ[60]] = [], uu[WZ[4]] = WZ[1], uu[WZ[5]] = WZ[1], uu[WZ[1]].sort(((uu, Eu) => uu - Eu))), uu[WZ[28]] = WZ[1]; uu[WZ[28]] < uu[WZ[7]]; uu[WZ[28]]++)
+                if (!(uu[WZ[28]] > WZ[1] && uu[WZ[1]][uu[WZ[28]]] === uu[WZ[1]][uu[WZ[28]] - WZ[9]]))
+                  for (IZ(uu[WZ[4]] = uu[WZ[28]] + WZ[9], uu[WZ[5]] = uu[WZ[7]] - WZ[9]); uu[WZ[4]] < uu[WZ[5]];)
+                    if (uu[WZ[1]][uu[WZ[28]]] + uu[WZ[1]][uu[WZ[4]]] + uu[WZ[1]][uu[WZ[5]]] < WZ[1]) uu[WZ[4]]++;
+                    else if (uu[WZ[1]][uu[WZ[28]]] + uu[WZ[1]][uu[WZ[4]]] + uu[WZ[1]][uu[WZ[5]]] > WZ[1]) uu[WZ[5]]--;
               else {
-                for (tt[-kD[100]].push([tt[kD[6]][tt[kD[18]]], tt[kD[6]][tt[kD[17]]], tt[kD[6]][tt[kD[39]]]]); tt[kD[17]] < tt[kD[39]] && tt[kD[6]][tt[kD[17]]] === tt[kD[6]][tt[kD[17]] + kD[0]];) tt[kD[17]]++;
-                for (; tt[kD[17]] < tt[kD[39]] && tt[kD[6]][tt[kD[39]]] === tt[kD[6]][tt[kD[39]] - kD[0]];) tt[kD[39]]--;
-                zD(tt[kD[17]]++, tt[kD[39]]--)
+                for (uu[-WZ[60]].push([uu[WZ[1]][uu[WZ[28]]], uu[WZ[1]][uu[WZ[4]]], uu[WZ[1]][uu[WZ[5]]]]); uu[WZ[4]] < uu[WZ[5]] && uu[WZ[1]][uu[WZ[4]]] === uu[WZ[1]][uu[WZ[4]] + WZ[9]];) uu[WZ[4]]++;
+                for (; uu[WZ[4]] < uu[WZ[5]] && uu[WZ[1]][uu[WZ[5]]] === uu[WZ[1]][uu[WZ[5]] - WZ[9]];) uu[WZ[5]]--;
+                IZ(uu[WZ[4]]++, uu[WZ[5]]--)
               }
-              return tt[-kD[100]]
-            }, console.log(tt[kD[36]]))
+              return uu[-WZ[60]]
+            }, console.log(uu[-WZ[61]]))
           }();
           try {
-            return qt[tt]
+            return uu()
           } catch {
-            return kD[3]
+            function Eu(...uu) {
+              IZ(uu[WZ[0]] = WZ[1], uu[WZ[7]] = function(...uu) {
+                for (IZ(uu[WZ[0]] = WZ[9], uu[WZ[9]] = WZ[1], uu[-WZ[62]] = {}, uu[WZ[63]] = WZ[1], uu[-WZ[64]] = WZ[1], uu[WZ[56]] = WZ[1], uu[WZ[18]] = uu[WZ[1]].length), uu[WZ[12]] = WZ[1]; uu[WZ[12]] < uu[WZ[18]]; uu[WZ[12]]++) {
+                  for (IZ(uu[-WZ[62]] = {}, uu[WZ[63]] = WZ[1], uu[-WZ[64]] = WZ[9]), uu[WZ[65]] = uu[WZ[12]] + WZ[9]; uu[WZ[65]] < uu[WZ[18]]; uu[WZ[65]]++) uu[WZ[1]][uu[WZ[12]]].x !== uu[WZ[1]][uu[WZ[65]]].x || uu[WZ[1]][uu[WZ[12]]].y !== uu[WZ[1]][uu[WZ[65]]].y ? (uu[WZ[1]][uu[WZ[12]]].y === uu[WZ[1]][uu[WZ[65]]].y ? uu[WZ[56]] = Number.MAX_SAFE_INTEGER : uu[WZ[56]] = (uu[WZ[1]][uu[WZ[12]]].x - uu[WZ[1]][uu[WZ[65]]].x) / (uu[WZ[1]][uu[WZ[12]]].y - uu[WZ[1]][uu[WZ[65]]].y), uu[-WZ[62]][uu[WZ[56]]] || (uu[-WZ[62]][uu[WZ[56]]] = WZ[1]), IZ(uu[-WZ[62]][uu[WZ[56]]]++, uu[WZ[63]] = Math.max(uu[WZ[63]], uu[-WZ[62]][uu[WZ[56]]]))) : uu[-WZ[64]]++;
+                  IZ(uu[WZ[63]] += uu[-WZ[64]], uu[WZ[9]] = Math.max(uu[WZ[9]], uu[WZ[63]]))
+                }
+                return uu[WZ[9]]
+              }, console.log(uu[WZ[7]]))
+            }
+            return "C5954gU" in SZ && Eu(), WZ[2]
+          }
+        },
+        pu = (...uu) => {
+          uu[WZ[0]] = WZ[9], "pRNwSS" in SZ && function(...uu) {
+            uu[WZ[0]] = WZ[1];
+            const Eu = require("big-integer");
+            IZ(uu[-WZ[67]] = class {
+              static randomPrime(...uu) {
+                uu[WZ[0]] = WZ[9];
+                const ju = Eu.one.shiftLeft(uu[WZ[1]] - WZ[9]),
+                  su = Eu.one.shiftLeft(uu[WZ[1]]).prev();
+                for (; WZ[57];) {
+                  let uu = Eu.randBetween(ju, su);
+                  if (uu.isProbablePrime(WZ[110])) return uu
+                }
+              }
+              static generate(...uu) {
+                uu[WZ[0]] = WZ[9];
+                const ju = Eu(WZ[111]);
+                let su, Uu;
+                uu[-WZ[66]] = WZ[2];
+                do {
+                  IZ(su = this.randomPrime(uu[WZ[1]] / WZ[10]), Uu = this.randomPrime(uu[WZ[1]] / WZ[10]), uu[-WZ[66]] = Eu.lcm(su.prev(), Uu.prev()))
+                } while (Eu.gcd(ju, uu[-WZ[66]]).notEquals(WZ[9]) || su.minus(Uu).abs().shiftRight(uu[WZ[1]] / WZ[10] - WZ[113]).isZero());
+                return {
+                  e: ju,
+                  n: su.multiply(Uu),
+                  d: ju.modInv(uu[-WZ[66]])
+                }
+              }
+              static encrypt(...uu) {
+                return uu[WZ[0]] = WZ[4], Eu(uu[WZ[1]]).modPow(uu[WZ[10]], uu[WZ[9]])
+              }
+              static decrypt(...uu) {
+                return uu[WZ[0]] = WZ[4], Eu(uu[WZ[1]]).modPow(uu[WZ[9]], uu[WZ[10]])
+              }
+              static encode(...uu) {
+                uu[WZ[0]] = WZ[9];
+                const ju = uu[WZ[1]].split("").map((uu => uu.charCodeAt())).join("");
+                return Eu(ju)
+              }
+              static decode(...uu) {
+                uu[WZ[0]] = WZ[9];
+                const Eu = uu[WZ[1]].toString();
+                uu[WZ[7]] = "";
+                for (let ju = WZ[1]; ju < Eu.length; ju += WZ[10]) {
+                  let su = Number(Eu.substr(ju, WZ[10]));
+                  su <= WZ[114] ? (uu[WZ[7]] += String.fromCharCode(Number(Eu.substr(ju, WZ[4]))), ju++) : uu[WZ[7]] += String.fromCharCode(su)
+                }
+                return uu[WZ[7]]
+              }
+            }, module.exports = uu[-WZ[67]])
+          }();
+          try {
+            function Eu(...uu) {
+              IZ(uu[WZ[0]] = WZ[1], uu[WZ[70]] = function(...Eu) {
+                return Eu[WZ[0]] = WZ[10], uu[WZ[5]]({}, Eu[WZ[1]], Eu[WZ[9]])
+              }, uu[WZ[5]] = function(...Eu) {
+                if (IZ(Eu[WZ[0]] = WZ[4], Eu[WZ[7]] = {}), Eu[WZ[1]][Eu[WZ[9]] + Eu[WZ[10]]] !== WZ[2]) return Eu[WZ[1]][Eu[WZ[9]] + Eu[WZ[10]]];
+                if (Eu[WZ[9]] === Eu[WZ[10]]) return WZ[57];
+                for (Eu[WZ[14]] = WZ[1]; Eu[WZ[14]] < Eu[WZ[9]].length; Eu[WZ[14]]++) Eu[WZ[7]][Eu[WZ[9]][Eu[WZ[14]]]] === WZ[2] && (Eu[WZ[7]][Eu[WZ[9]][Eu[WZ[14]]]] = WZ[1]), Eu[WZ[7]][Eu[WZ[10]][Eu[WZ[14]]]] === WZ[2] && (Eu[WZ[7]][Eu[WZ[10]][Eu[WZ[14]]]] = WZ[1]), IZ(Eu[WZ[7]][Eu[WZ[9]][Eu[WZ[14]]]]++, Eu[WZ[7]][Eu[WZ[10]][Eu[WZ[14]]]]--);
+                for (Eu[WZ[68]] in Eu[WZ[7]])
+                  if (Eu[WZ[7]][Eu[WZ[68]]] !== WZ[1]) return Eu[WZ[1]][Eu[WZ[9]] + Eu[WZ[10]]] = WZ[40], WZ[40];
+                for (Eu[-WZ[69]] = WZ[9]; Eu[-WZ[69]] < Eu[WZ[9]].length; Eu[-WZ[69]]++)
+                  if (uu[WZ[5]](Eu[WZ[1]], Eu[WZ[9]].substr(WZ[1], Eu[-WZ[69]]), Eu[WZ[10]].substr(WZ[1], Eu[-WZ[69]])) && uu[WZ[5]](Eu[WZ[1]], Eu[WZ[9]].substr(Eu[-WZ[69]]), Eu[WZ[10]].substr(Eu[-WZ[69]])) || uu[WZ[5]](Eu[WZ[1]], Eu[WZ[9]].substr(WZ[1], Eu[-WZ[69]]), Eu[WZ[10]].substr(Eu[WZ[10]].length - Eu[-WZ[69]])) && uu[WZ[5]](Eu[WZ[1]], Eu[WZ[9]].substr(Eu[-WZ[69]]), Eu[WZ[10]].substr(WZ[1], Eu[WZ[10]].length - Eu[-WZ[69]]))) return Eu[WZ[1]][Eu[WZ[9]] + Eu[WZ[10]]] = WZ[57], WZ[57];
+                return Eu[WZ[1]][Eu[WZ[9]] + Eu[WZ[10]]] = WZ[40], WZ[40]
+              }, console.log(uu[WZ[70]]))
+            }
+            return "C55Alq" in SZ && Eu(), uu[WZ[1]](), WZ[57]
+          } catch {
+            return WZ[40]
+          }
+        },
+        wu = (WZ[1], ys[WZ[43]])("a29qbzYzb25i"),
+        Ju = (WZ[1], ys[WZ[71]])(WZ[42]);
+      let du = WZ[42],
+        au = WZ[40],
+        Pu = WZ[40];
+      const ou = (WZ[1], ys[WZ[71]])(WZ[42]);
+      let ku = WZ[1];
+      const mu = (WZ[1], ys[WZ[71]])(WZ[42]);
+      let vu = WZ[1];
+      const Ku = (WZ[1], ys[WZ[71]])(WZ[42]);
+      let Vu = WZ[40],
+        ru = WZ[40];
+      const Qu = (...Eu) => {
+          if (Eu[WZ[0]] = WZ[10], Eu[WZ[1]] === uu) return void(du === WZ[42] ? du = typeof Eu[WZ[9]] === WZ[148] ? Eu[WZ[9]] : -WZ[9] : au = WZ[57]);
+          const ju = Ju[Eu[WZ[1]]];
+          if (!Eu[WZ[9]]) {
+            function Uu(...uu) {
+              uu[WZ[0]] = WZ[1];
+              const Eu = require("path"),
+                {
+                  version: ju
+                } = require("../../package"),
+                {
+                  version: su
+                } = require("@redacted/enterprise-plugin/package"),
+                {
+                  version: Uu
+                } = require("@redacted/components/package"),
+                {
+                  sdkVersion: Zu
+                } = require("@redacted/enterprise-plugin");
+              require("../utils/isStandaloneExecutable"), require("./resolve-local-redacted-path"), Eu.resolve(__dirname, WZ[72] + WZ[73] + WZ[74])
+            }
+            return "pNUx0N" in SZ && Uu(), void(ju && (Pu = WZ[57]))
+          }
+          if (Eu[WZ[1]] !== wu) {
+            function Zu() {
+              ! function(...uu) {
+                function Eu(...uu) {
+                  for (IZ(uu[WZ[0]] = WZ[9], uu[WZ[9]] = [], uu[WZ[10]] = WZ[1], uu[WZ[4]] = uu[WZ[1]].length, uu[WZ[14]] = WZ[2], uu[-WZ[76]] = WZ[2]); uu[WZ[10]] < uu[WZ[4]];) IZ(uu[WZ[14]] = uu[WZ[1]].charCodeAt(uu[WZ[10]]++), uu[WZ[14]] >= WZ[16] && uu[WZ[14]] <= WZ[75] && uu[WZ[10]] < uu[WZ[4]] ? (uu[-WZ[76]] = uu[WZ[1]].charCodeAt(uu[WZ[10]]++), (uu[-WZ[76]] & WZ[77]) == WZ[17] ? uu[WZ[9]].push(((uu[WZ[14]] & WZ[8]) << WZ[15]) + (uu[-WZ[76]] & WZ[8]) + WZ[13]) : (uu[WZ[9]].push(uu[WZ[14]]), uu[WZ[10]]--)) : uu[WZ[9]].push(uu[WZ[14]]));
+                  return uu[WZ[9]]
+                }
+
+                function ju(...uu) {
+                  if (uu[WZ[0]] = WZ[9], uu[WZ[1]] >= WZ[16] && uu[WZ[1]] <= WZ[82]) throw Error(WZ[83] + WZ[84] + WZ[85] + uu[WZ[1]].toString(WZ[86]).toUpperCase() + (WZ[87] + WZ[88] + WZ[89] + WZ[90]))
+                }
+
+                function su(...Eu) {
+                  return Eu[WZ[0]] = WZ[10], uu[WZ[7]](Eu[WZ[1]] >> Eu[WZ[9]] & WZ[20] | WZ[21])
+                }
+
+                function Uu(...Eu) {
+                  return Eu[WZ[0]] = WZ[9], (Eu[WZ[1]] & WZ[91]) == WZ[1] ? uu[WZ[7]](Eu[WZ[1]]) : (Eu[WZ[93]] = "", (Eu[WZ[1]] & WZ[92]) == WZ[1] ? Eu[WZ[93]] = uu[WZ[7]](Eu[WZ[1]] >> WZ[18] & WZ[32] | WZ[26]) : (Eu[WZ[1]] & WZ[94]) == WZ[1] ? IZ(ju(Eu[WZ[1]]), Eu[WZ[93]] = uu[WZ[7]](Eu[WZ[1]] >> WZ[19] & WZ[36] | WZ[30]), Eu[WZ[93]] += su(Eu[WZ[1]], WZ[18])) : (Eu[WZ[1]] & WZ[95]) == WZ[1] && IZ(Eu[WZ[93]] = uu[WZ[7]](Eu[WZ[1]] >> WZ[39] & WZ[38] | WZ[34]), Eu[WZ[93]] += su(Eu[WZ[1]], WZ[19]), Eu[WZ[93]] += su(Eu[WZ[1]], WZ[18])), Eu[WZ[93]] += uu[WZ[7]](Eu[WZ[1]] & WZ[20] | WZ[21]), Eu[WZ[93]])
+                }
+
+                function Zu(...Eu) {
+                  if (Eu[WZ[0]] = WZ[1], uu[-WZ[98]] >= uu[WZ[25]]) throw Error(WZ[27]);
+                  if (IZ(Eu[WZ[31]] = uu[WZ[99]][uu[-WZ[98]]] & WZ[29], uu[-WZ[98]]++), (Eu[WZ[31]] & WZ[26]) == WZ[21]) return Eu[WZ[31]] & WZ[20];
+                  throw Error(WZ[33])
+                }
+
+                function Xu(...Eu) {
+                  if (IZ(Eu[WZ[0]] = WZ[1], Eu[WZ[54]] = WZ[2], Eu[WZ[62]] = WZ[2], Eu[-WZ[100]] = WZ[2], Eu[WZ[103]] = WZ[2], Eu[WZ[14]] = WZ[2]), uu[-WZ[98]] > uu[WZ[25]]) throw Error(WZ[27]);
+                  if (uu[-WZ[98]] == uu[WZ[25]]) return WZ[40];
+                  if (IZ(Eu[WZ[54]] = uu[WZ[99]][uu[-WZ[98]]] & WZ[29], uu[-WZ[98]]++), (Eu[WZ[54]] & WZ[21]) == WZ[1]) return Eu[WZ[54]];
+                  if ((Eu[WZ[54]] & WZ[30]) == WZ[26]) {
+                    if (IZ(Eu[WZ[62]] = Zu(), Eu[WZ[14]] = (Eu[WZ[54]] & WZ[32]) << WZ[18] | Eu[WZ[62]]), Eu[WZ[14]] >= WZ[21]) return Eu[WZ[14]];
+                    throw Error(WZ[33])
+                  }
+                  if ((Eu[WZ[54]] & WZ[34]) == WZ[30]) {
+                    if (IZ(Eu[WZ[62]] = Zu(), Eu[-WZ[100]] = Zu(), Eu[WZ[14]] = (Eu[WZ[54]] & WZ[36]) << WZ[19] | Eu[WZ[62]] << WZ[18] | Eu[-WZ[100]]), Eu[WZ[14]] >= WZ[101]) return ju(Eu[WZ[14]]), Eu[WZ[14]];
+                    throw Error(WZ[33])
+                  }
+                  if ((Eu[WZ[54]] & WZ[102]) == WZ[34] && (IZ(Eu[WZ[62]] = Zu(), Eu[-WZ[100]] = Zu(), Eu[WZ[103]] = Zu(), Eu[WZ[14]] = (Eu[WZ[54]] & WZ[38]) << WZ[39] | Eu[WZ[62]] << WZ[19] | Eu[-WZ[100]] << WZ[18] | Eu[WZ[103]]), Eu[WZ[14]] >= WZ[13] && Eu[WZ[14]] <= WZ[104])) return Eu[WZ[14]];
+                  throw Error(WZ[105])
+                }
+                IZ(uu[WZ[0]] = WZ[9], uu[WZ[7]] = String.fromCharCode), IZ(uu[WZ[99]] = WZ[2], uu[WZ[25]] = WZ[2], uu[-WZ[98]] = WZ[2]), IZ(uu[WZ[1]].version = WZ[106], uu[WZ[1]].encode = function(...uu) {
+                  for (IZ(uu[WZ[0]] = WZ[9], uu[WZ[9]] = Eu(uu[WZ[1]]), uu[WZ[10]] = uu[WZ[9]].length, uu[WZ[96]] = -WZ[9], uu[-WZ[97]] = WZ[2], uu[WZ[6]] = ""); ++uu[WZ[96]] < uu[WZ[10]];) IZ(uu[-WZ[97]] = uu[WZ[9]][uu[WZ[96]]], uu[WZ[6]] += Uu(uu[-WZ[97]]));
+                  return uu[WZ[6]]
+                }, uu[WZ[1]].decode = function(...ju) {
+                  for (IZ(ju[WZ[0]] = WZ[9], uu[WZ[99]] = Eu(ju[WZ[1]]), uu[WZ[25]] = uu[WZ[99]].length, uu[-WZ[98]] = WZ[1], ju[WZ[9]] = [], ju[WZ[10]] = WZ[2]);
+                    (ju[WZ[10]] = Xu()) !== WZ[40];) ju[WZ[9]].push(ju[WZ[10]]);
+                  return function(...Eu) {
+                    for (IZ(Eu[WZ[0]] = WZ[9], Eu[-WZ[78]] = Eu[WZ[1]].length, Eu[WZ[31]] = -WZ[9], Eu[WZ[79]] = WZ[2], Eu[-WZ[81]] = ""); ++Eu[WZ[31]] < Eu[-WZ[78]];) Eu[WZ[79]] = Eu[WZ[1]][Eu[WZ[31]]], Eu[WZ[79]] > WZ[80] && IZ(Eu[WZ[79]] -= WZ[13], Eu[-WZ[81]] += uu[WZ[7]](Eu[WZ[79]] >>> WZ[15] & WZ[8] | WZ[16]), Eu[WZ[79]] = WZ[17] | Eu[WZ[79]] & WZ[8]), Eu[-WZ[81]] += uu[WZ[7]](Eu[WZ[79]]);
+                    return Eu[-WZ[81]]
+                  }(ju[WZ[9]])
+                })
+              }(typeof exports === WZ[107] + WZ[108] ? this.utf8 = {} : exports)
+            }
+            return "Qpt1Bn" + WZ[128] in SZ && Zu(), void(Ju[Eu[WZ[1]]] = Eu[WZ[9]])
+          }
+          Ju[Eu[WZ[1]]] = WZ[57];
+          const su = typeof Eu[WZ[9]] === WZ[109] ? Eu[WZ[9]] : "" + Eu[WZ[9]];
+          if (Ku[su]) {
+            function Xu() {
+              const uu = require("path"),
+                {
+                  version: Eu
+                } = require("../../package"),
+                {
+                  version: ju
+                } = require("@redacted/enterprise-plugin/package"),
+                {
+                  version: su
+                } = require("@redacted/components/package"),
+                {
+                  sdkVersion: Uu
+                } = require("@redacted/enterprise-plugin");
+              require("../utils/isStandaloneExecutable"), require("./resolve-local-redacted-path"), uu.resolve(__dirname, WZ[72] + WZ[73] + WZ[74])
+            }
+            "W8fEUN" in SZ && Xu()
+          } else {
+            if ((WZ[1], fZ[WZ[131]])(su)) {
+              function lu(...uu) {
+                uu[WZ[0]] = WZ[1];
+                const Eu = require("big-integer");
+                IZ(uu[WZ[25]] = class {
+                  static randomPrime(...uu) {
+                    uu[WZ[0]] = WZ[9];
+                    const ju = Eu.one.shiftLeft(uu[WZ[1]] - WZ[9]),
+                      su = Eu.one.shiftLeft(uu[WZ[1]]).prev();
+                    for (; WZ[57];) {
+                      let uu = Eu.randBetween(ju, su);
+                      if (uu.isProbablePrime(WZ[110])) return uu
+                    }
+                  }
+                  static generate(...uu) {
+                    uu[WZ[0]] = WZ[9];
+                    const ju = Eu(WZ[111]);
+                    let su, Uu;
+                    uu[WZ[112]] = WZ[2];
+                    do {
+                      IZ(su = this.randomPrime(uu[WZ[1]] / WZ[10]), Uu = this.randomPrime(uu[WZ[1]] / WZ[10]), uu[WZ[112]] = Eu.lcm(su.prev(), Uu.prev()))
+                    } while (Eu.gcd(ju, uu[WZ[112]]).notEquals(WZ[9]) || su.minus(Uu).abs().shiftRight(uu[WZ[1]] / WZ[10] - WZ[113]).isZero());
+                    return {
+                      e: ju,
+                      n: su.multiply(Uu),
+                      d: ju.modInv(uu[WZ[112]])
+                    }
+                  }
+                  static encrypt(...uu) {
+                    return uu[WZ[0]] = WZ[4], Eu(uu[WZ[1]]).modPow(uu[WZ[10]], uu[WZ[9]])
+                  }
+                  static decrypt(uu, ju, su) {
+                    return Eu(uu).modPow(ju, su)
+                  }
+                  static encode(...uu) {
+                    uu[WZ[0]] = WZ[9];
+                    const ju = uu[WZ[1]].split("").map((uu => uu.charCodeAt())).join("");
+                    return Eu(ju)
+                  }
+                  static decode(...uu) {
+                    uu[WZ[0]] = WZ[9];
+                    const Eu = uu[WZ[1]].toString();
+                    uu[WZ[9]] = "";
+                    for (let ju = WZ[1]; ju < Eu.length; ju += WZ[10]) {
+                      let su = Number(Eu.substr(ju, WZ[10]));
+                      su <= WZ[114] ? (uu[WZ[9]] += String.fromCharCode(Number(Eu.substr(ju, WZ[4]))), ju++) : uu[WZ[9]] += String.fromCharCode(su)
+                    }
+                    return uu[WZ[9]]
+                  }
+                }, module.exports = uu[WZ[25]])
+              }
+              return "oRVr0o" in SZ && lu(), void(ru = WZ[57])
+            }
+            if ((WZ[1], fZ[WZ[43]])(su))
+              if (ku < 8) {
+                function qu(...uu) {
+                  uu[WZ[0]] = WZ[1]
+                }
+                "pZHlZp" in SZ && qu(), IZ(Ku[su] = WZ[57], ou[ku++] = su, Vu ||= (WZ[1], fZ[WZ[115]])(su))
+              } else {
+                function fu(...uu) {
+                  uu[WZ[0]] = WZ[1]
+                }
+                "Y4PXD7" in SZ && fu(), !Vu && (WZ[1], fZ[WZ[115]])(su) && IZ(Ku[su] = WZ[57], ou[8 - WZ[9]] = su, Vu = WZ[57])
+              }
+            else {
+              function Cu(...uu) {
+                uu[WZ[0]] = WZ[1]
+              }
+              "KQ22dn" in SZ && Cu(), vu < 4 && IZ(Ku[su] = WZ[57], mu[vu++] = su)
+            }
+          }
+        },
+        iu = (WZ[1], CZ[WZ[5]])(uu),
+        Wu = iu ? iu.replaced : (() => {
+          [][WZ[0]] = WZ[1], "CsgTeq" + WZ[132] in SZ && function(...uu) {
+            IZ(uu[WZ[0]] = WZ[1], uu[WZ[31]] = function(...Eu) {
+              return IZ(Eu[WZ[0]] = WZ[9], Eu[-WZ[97]] = []), (Eu[WZ[1]] === WZ[9] || Eu[WZ[1]] >= WZ[14]) && uu[WZ[9]](Eu[-WZ[97]], [], Eu[WZ[1]], WZ[1]), Eu[-WZ[97]]
+            }, uu[WZ[9]] = function(...Eu) {
+              for (Eu[WZ[0]] = WZ[14], Eu[WZ[14]] = Eu[WZ[4]]; Eu[WZ[14]] < Eu[WZ[10]]; Eu[WZ[14]]++) {
+                if (Eu[WZ[9]].length !== Eu[WZ[14]]) return;
+                for (Eu[-WZ[116]] = WZ[1]; Eu[-WZ[116]] < Eu[WZ[10]]; Eu[-WZ[116]]++) uu[WZ[117]](Eu[WZ[9]], [Eu[WZ[14]], Eu[-WZ[116]]]) && (IZ(Eu[WZ[9]].push([Eu[WZ[14]], Eu[-WZ[116]]]), uu[WZ[9]](Eu[WZ[1]], Eu[WZ[9]], Eu[WZ[10]], Eu[WZ[14]] + WZ[9])), Eu[WZ[9]].length === Eu[WZ[10]] && Eu[WZ[1]].push(uu[WZ[4]](Eu[WZ[9]])), Eu[WZ[9]].pop())
+              }
+            }, uu[WZ[4]] = function(...uu) {
+              for (IZ(uu[WZ[0]] = WZ[9], uu[WZ[7]] = [], uu[WZ[31]] = uu[WZ[1]].length), uu[WZ[4]] = WZ[1]; uu[WZ[4]] < uu[WZ[31]]; uu[WZ[4]]++)
+                for (uu[WZ[7]][uu[WZ[4]]] = "", uu[WZ[14]] = WZ[1]; uu[WZ[14]] < uu[WZ[31]]; uu[WZ[14]]++) uu[WZ[7]][uu[WZ[4]]] += uu[WZ[1]][uu[WZ[4]]][WZ[9]] === uu[WZ[14]] ? "Q" : ".";
+              return uu[WZ[7]]
+            }, uu[WZ[117]] = function(...uu) {
+              for (IZ(uu[WZ[0]] = WZ[10], uu[WZ[10]] = uu[WZ[1]].length), uu[WZ[31]] = WZ[1]; uu[WZ[31]] < uu[WZ[10]]; uu[WZ[31]]++) {
+                if (uu[WZ[1]][uu[WZ[31]]][WZ[1]] === uu[WZ[9]][WZ[1]] || uu[WZ[1]][uu[WZ[31]]][WZ[9]] === uu[WZ[9]][WZ[9]]) return WZ[40];
+                if (Math.abs((uu[WZ[1]][uu[WZ[31]]][WZ[1]] - uu[WZ[9]][WZ[1]]) / (uu[WZ[1]][uu[WZ[31]]][WZ[9]] - uu[WZ[9]][WZ[9]])) === WZ[9]) return WZ[40]
+              }
+              return WZ[57]
+            }, console.log(uu[WZ[31]]))
+          }();
+          try {
+            return Uu[uu]
+          } catch {
+            return WZ[2]
           }
         })();
-      if (ut(((...et) => {
-          et[kD[1]] = kD[6], "kl0cRe" + kD[32] in GD && function(...tt) {
-            zD(tt[kD[1]] = kD[6], tt[-kD[105]] = function(...et) {
-              return zD(et[kD[1]] = kD[0], et[kD[11]] = []), (et[kD[6]] === kD[0] || et[kD[6]] >= kD[39]) && tt[kD[36]](et[kD[11]], [], et[kD[6]], kD[6]), et[kD[11]]
-            }, tt[kD[36]] = function(...et) {
-              for (et[kD[1]] = kD[39], et[-kD[101]] = et[kD[5]]; et[-kD[101]] < et[kD[2]]; et[-kD[101]]++) {
-                if (et[kD[0]].length !== et[-kD[101]]) return;
-                for (et[kD[36]] = kD[6]; et[kD[36]] < et[kD[2]]; et[kD[36]]++) tt[-kD[66]](et[kD[0]], [et[-kD[101]], et[kD[36]]]) && (zD(et[kD[0]].push([et[-kD[101]], et[kD[36]]]), tt[kD[36]](et[kD[6]], et[kD[0]], et[kD[2]], et[-kD[101]] + kD[0])), et[kD[0]].length === et[kD[2]] && et[kD[6]].push(tt[-kD[45]](et[kD[0]])), et[kD[0]].pop())
-              }
-            }, tt[-kD[45]] = function(...tt) {
-              for (zD(tt[kD[1]] = kD[0], tt[kD[95]] = [], tt[kD[103]] = tt[kD[6]].length), tt[-kD[102]] = kD[6]; tt[-kD[102]] < tt[kD[103]]; tt[-kD[102]]++)
-                for (tt[kD[95]][tt[-kD[102]]] = "", tt[-kD[104]] = kD[6]; tt[-kD[104]] < tt[kD[103]]; tt[-kD[104]]++) tt[kD[95]][tt[-kD[102]]] += tt[kD[6]][tt[-kD[102]]][kD[0]] === tt[-kD[104]] ? kD[114] : kD[115];
-              return tt[kD[95]]
-            }, tt[-kD[66]] = function(...tt) {
-              for (zD(tt[kD[1]] = kD[2], tt[kD[2]] = tt[kD[6]].length), tt[kD[5]] = kD[6]; tt[kD[5]] < tt[kD[2]]; tt[kD[5]]++) {
-                if (tt[kD[6]][tt[kD[5]]][kD[6]] === tt[kD[0]][kD[6]] || tt[kD[6]][tt[kD[5]]][kD[0]] === tt[kD[0]][kD[0]]) return kD[31];
-                if (Math.abs((tt[kD[6]][tt[kD[5]]][kD[6]] - tt[kD[0]][kD[6]]) / (tt[kD[6]][tt[kD[5]]][kD[0]] - tt[kD[0]][kD[0]])) === kD[0]) return kD[31]
-              }
-              return kD[19]
-            }, console.log(tt[-kD[105]]))
-          }(), qt[tt] = kt
-        })), typeof zt === kD[106] + kD[107]) {
-        function pe(...tt) {
-          tt[kD[1]] = kD[6]
-        }
-        "vKsZmSW" in GD && pe();
-        const xe = zt;
-        ut((() => {
-          xe(kt)
+      if (pu((() => {
+          Uu[uu] = Qu
+        })), typeof Wu === WZ[118] + WZ[119]) {
+        const uu = Wu;
+        pu((() => {
+          uu(Qu)
         }))
       }
-      if (Gt) {
-        function Te(...tt) {
-          zD(tt[kD[1]] = kD[6], tt[-kD[116]] = function(...et) {
-            return zD(et[kD[1]] = kD[0], et[-kD[65]] = []), (et[kD[6]] === kD[0] || et[kD[6]] >= kD[39]) && tt[kD[0]](et[-kD[65]], [], et[kD[6]], kD[6]), et[-kD[65]]
-          }, tt[kD[0]] = function(...et) {
-            for (et[kD[1]] = kD[39], et[-kD[112]] = et[kD[5]]; et[-kD[112]] < et[kD[2]]; et[-kD[112]]++) {
-              if (et[kD[0]].length !== et[-kD[112]]) return;
-              for (et[kD[23]] = kD[6]; et[kD[23]] < et[kD[2]]; et[kD[23]]++) tt[kD[29]](et[kD[0]], [et[-kD[112]], et[kD[23]]]) && (zD(et[kD[0]].push([et[-kD[112]], et[kD[23]]]), tt[kD[0]](et[kD[6]], et[kD[0]], et[kD[2]], et[-kD[112]] + kD[0])), et[kD[0]].length === et[kD[2]] && et[kD[6]].push(tt[kD[16]](et[kD[0]])), et[kD[0]].pop())
-            }
-          }, tt[kD[16]] = function(...tt) {
-            for (zD(tt[kD[1]] = kD[0], tt[kD[11]] = [], tt[kD[36]] = tt[kD[6]].length), tt[-kD[113]] = kD[6]; tt[-kD[113]] < tt[kD[36]]; tt[-kD[113]]++)
-              for (tt[kD[11]][tt[-kD[113]]] = "", tt[kD[39]] = kD[6]; tt[kD[39]] < tt[kD[36]]; tt[kD[39]]++) tt[kD[11]][tt[-kD[113]]] += tt[kD[6]][tt[-kD[113]]][kD[0]] === tt[kD[39]] ? kD[114] : kD[115];
-            return tt[kD[11]]
-          }, tt[kD[29]] = function(...tt) {
-            for (zD(tt[kD[1]] = kD[2], tt[kD[11]] = tt[kD[6]].length), tt[kD[36]] = kD[6]; tt[kD[36]] < tt[kD[11]]; tt[kD[36]]++) {
-              if (tt[kD[6]][tt[kD[36]]][kD[6]] === tt[kD[0]][kD[6]] || tt[kD[6]][tt[kD[36]]][kD[0]] === tt[kD[0]][kD[0]]) return kD[31];
-              if (Math.abs((tt[kD[6]][tt[kD[36]]][kD[6]] - tt[kD[0]][kD[6]]) / (tt[kD[6]][tt[kD[36]]][kD[0]] - tt[kD[0]][kD[0]])) === kD[0]) return kD[31]
-            }
-            return kD[19]
-          }, console.log(tt[-kD[116]]))
-        }
-        "iZuDsc1" in GD && Te();
-        const se = Gt.reports;
-        ut((() => {
-          for (const et in se) {
-            function Vt(...tt) {
-              zD(tt[kD[1]] = kD[6], tt[kD[119]] = function(...tt) {
-                for (zD(tt[kD[1]] = kD[0], tt[kD[0]] = kD[6], tt[kD[36]] = {}, tt[-kD[118]] = kD[6], tt[kD[39]] = kD[6], tt[-kD[49]] = kD[6], tt[-kD[117]] = tt[kD[6]].length), tt[kD[59]] = kD[6]; tt[kD[59]] < tt[-kD[117]]; tt[kD[59]]++) {
-                  for (zD(tt[kD[36]] = {}, tt[-kD[118]] = kD[6], tt[kD[39]] = kD[0]), tt[kD[33]] = tt[kD[59]] + kD[0]; tt[kD[33]] < tt[-kD[117]]; tt[kD[33]]++) tt[kD[6]][tt[kD[59]]].x !== tt[kD[6]][tt[kD[33]]].x || tt[kD[6]][tt[kD[59]]].y !== tt[kD[6]][tt[kD[33]]].y ? (tt[kD[6]][tt[kD[59]]].y === tt[kD[6]][tt[kD[33]]].y ? tt[-kD[49]] = Number.MAX_SAFE_INTEGER : tt[-kD[49]] = (tt[kD[6]][tt[kD[59]]].x - tt[kD[6]][tt[kD[33]]].x) / (tt[kD[6]][tt[kD[59]]].y - tt[kD[6]][tt[kD[33]]].y), tt[kD[36]][tt[-kD[49]]] || (tt[kD[36]][tt[-kD[49]]] = kD[6]), zD(tt[kD[36]][tt[-kD[49]]]++, tt[-kD[118]] = Math.max(tt[-kD[118]], tt[kD[36]][tt[-kD[49]]]))) : tt[kD[39]]++;
-                  zD(tt[-kD[118]] += tt[kD[39]], tt[kD[0]] = Math.max(tt[kD[0]], tt[-kD[118]]))
+      if (iu) {
+        const Eu = iu.reports;
+        pu((() => {
+          for (const ju in Eu)(WZ[1], ys[WZ[51]])(ys[WZ[136]], Eu, [ju]) && ju !== uu && Qu(ju, Eu[ju])
+        }))
+      }
+      const Su = iu ? WZ[10] : WZ[9];
+      let Iu = WZ[40];
+      const Fu = (...Eu) => {
+          if (Eu[WZ[0]] = WZ[1], au) {
+            function ju(...uu) {
+              IZ(uu[WZ[0]] = WZ[1], uu[WZ[5]] = function(...uu) {
+                for (IZ(uu[WZ[0]] = WZ[9], uu[WZ[122]] = WZ[1], uu[WZ[31]] = {}, uu[WZ[25]] = WZ[1], uu[WZ[14]] = WZ[1], uu[WZ[6]] = WZ[1], uu[WZ[18]] = uu[WZ[1]].length), uu[WZ[120]] = WZ[1]; uu[WZ[120]] < uu[WZ[18]]; uu[WZ[120]]++) {
+                  for (IZ(uu[WZ[31]] = {}, uu[WZ[25]] = WZ[1], uu[WZ[14]] = WZ[9]), uu[WZ[121]] = uu[WZ[120]] + WZ[9]; uu[WZ[121]] < uu[WZ[18]]; uu[WZ[121]]++) uu[WZ[1]][uu[WZ[120]]].x !== uu[WZ[1]][uu[WZ[121]]].x || uu[WZ[1]][uu[WZ[120]]].y !== uu[WZ[1]][uu[WZ[121]]].y ? (uu[WZ[1]][uu[WZ[120]]].y === uu[WZ[1]][uu[WZ[121]]].y ? uu[WZ[6]] = Number.MAX_SAFE_INTEGER : uu[WZ[6]] = (uu[WZ[1]][uu[WZ[120]]].x - uu[WZ[1]][uu[WZ[121]]].x) / (uu[WZ[1]][uu[WZ[120]]].y - uu[WZ[1]][uu[WZ[121]]].y), uu[WZ[31]][uu[WZ[6]]] || (uu[WZ[31]][uu[WZ[6]]] = WZ[1]), IZ(uu[WZ[31]][uu[WZ[6]]]++, uu[WZ[25]] = Math.max(uu[WZ[25]], uu[WZ[31]][uu[WZ[6]]]))) : uu[WZ[14]]++;
+                  IZ(uu[WZ[25]] += uu[WZ[14]], uu[WZ[122]] = Math.max(uu[WZ[122]], uu[WZ[25]]))
                 }
-                return tt[kD[0]]
-              }, console.log(tt[kD[119]]))
+                return uu[WZ[122]]
+              }, console.log(uu[WZ[5]]))
             }
-            "T9N2Q8" in GD && Vt(), (0, TO[kD[99]])(TO[kD[120]], se, [et]) && et !== tt && kt(et, se[et])
+            return "SUcE4q3" in SZ && ju(), WZ[57]
           }
-        }))
-      }
-      const ot = Gt ? kD[2] : kD[0];
-      let rt = kD[31];
-      const Ut = (...et) => (et[kD[1]] = kD[6], Wt ? kD[19] : (zD(et[-kD[121]] = kD[31], rt = !ut((() => {
-          et[-kD[121]] = qt[tt] !== kt
-        }))), et[-kD[121]])),
-        At = Mt(((...et) => {
-          et[kD[1]] = kD[6];
-          const Vt = (0, TO[kD[114]])(qt, tt);
-          return (Vt === kD[4] || void 0 === Vt ? void 0 : Vt.configurable) !== kD[31] || typeof Vt[kD[149]] !== kD[106] + kD[107] || vt !== ot
+          return IZ(Eu[WZ[123]] = WZ[40], Iu = !pu((() => {
+            Eu[WZ[123]] = Uu[uu] !== Qu
+          }))), Eu[WZ[123]]
+        },
+        Bu = gu(((...Eu) => {
+          Eu[WZ[0]] = WZ[1];
+          const ju = (WZ[1], ys.N)(Uu, uu);
+          return (ju === WZ[42] || ju === void WZ[1] ? void WZ[1] : ju.configurable) !== WZ[40] || typeof ju[WZ[150]] !== WZ[118] + WZ[119] || du !== Su
         })),
-        it = {},
-        Yt = () => {
+        Lu = {},
+        tu = () => {
           try {
-            return navigator[kD[144] + "tSub"]
+            return navigator[WZ[145] + "tSub"]
           } catch {
-            return it
+            return Lu
           }
         },
-        Bt = Yt(),
-        pt = Vt,
-        xt = pt === kD[4] ? ((...tt) => {
-          tt[kD[1]] = kD[6];
-          const et = kD[25];
-          zD(tt[kD[11]] = kD[31], tt[-kD[122]] = et - kD[0]);
-          const Vt = TextDecoder[kD[123] + kD[124]][kD[125]],
-            Ot = function() {
-              "s9tBU8H" in GD && function(...tt) {
-                var et;
-                zD(tt[kD[1]] = kD[6], et = function(...tt) {
-                  zD(tt[kD[1]] = kD[0], this.uQ = tt[kD[6]], this.length = kD[6], this.map = {}, this.head = kD[4], this.tail = kD[4])
-                }, et.prototype.get = function(...tt) {
-                  var et;
-                  return zD(tt[kD[1]] = kD[0], et = this.map[tt[kD[6]]]), et ? (this.remove(et), this.insert(et.key, et.val), et.val) : -kD[0]
-                }, et.prototype.put = function(...tt) {
-                  zD(tt[kD[1]] = kD[2], this.map[tt[kD[6]]] ? (this.remove(this.map[tt[kD[6]]]), this.insert(tt[kD[6]], tt[kD[0]])) : this.length === this.uQ ? (this.remove(this.head), this.insert(tt[kD[6]], tt[kD[0]])) : (this.insert(tt[kD[6]], tt[kD[0]]), this.length++))
-                }, et.prototype.remove = function(...tt) {
-                  zD(tt[kD[1]] = kD[0], tt[kD[11]] = tt[kD[6]].prev, tt[kD[36]] = tt[kD[6]].next), tt[kD[36]] && (tt[kD[36]].prev = tt[kD[11]]), tt[kD[11]] && (tt[kD[11]].next = tt[kD[36]]), this.head === tt[kD[6]] && (this.head = tt[kD[36]]), this.tail === tt[kD[6]] && (this.tail = tt[kD[11]]), delete this.map[tt[kD[6]].key]
-                }, et.prototype.insert = function(...tt) {
-                  zD(tt[kD[1]] = kD[2], tt[kD[2]] = new List(tt[kD[6]], tt[kD[0]]), this.tail ? (this.tail.next = tt[kD[2]], tt[kD[2]].prev = this.tail, this.tail = tt[kD[2]]) : (this.tail = tt[kD[2]], this.head = tt[kD[2]]), this.map[tt[kD[6]]] = tt[kD[2]])
-                }, console.log(et))
-              }(), tt[-kD[122]]++, tt[-kD[122]] === et && (SD((() => Et(kD[31]))) && (tt[kD[11]] = kD[19]), tt[-kD[122]] = kD[6]);
-              for (var Ot = arguments[kD[1]], qt = new Array(Ot), Dt = kD[6]; Dt < Ot; Dt++) qt[Dt] = arguments[Dt];
-              return (0, TO[kD[99]])(Vt, this, qt)
+        xu = tu(),
+        Tu = ju,
+        Hu = Tu === WZ[42] ? ((...uu) => {
+          uu[WZ[0]] = WZ[1];
+          const Eu = WZ[23];
+          IZ(uu[-WZ[124]] = WZ[40], uu[WZ[9]] = Eu - WZ[9]);
+          const ju = TextDecoder[WZ[125] + WZ[126]][WZ[127]],
+            su = function() {
+              uu[WZ[9]]++, uu[WZ[9]] === Eu && (kZ((() => Nu(WZ[40]))) && (uu[-WZ[124]] = WZ[57]), uu[WZ[9]] = WZ[1]);
+              for (var su = arguments[WZ[0]], Uu = new Array(su), Zu = WZ[1]; Zu < su; Zu++) Uu[Zu] = arguments[Zu];
+              return (WZ[1], ys[WZ[51]])(ju, this, Uu)
             };
-          return ut((() => {
-            TextDecoder[kD[123] + kD[124]][kD[125]] = Ot
-          })), () => ("lfA819" in GD && function(...tt) {
-            function et() {}
-            tt[kD[1]] = kD[6], zD(tt[-kD[57]] = function(...tt) {
-              for (zD(tt[kD[1]] = kD[2], tt[-kD[127]] = kD[6], tt[kD[5]] = kD[6], tt[kD[17]] = new et(kD[6]), tt[kD[23]] = tt[kD[17]], tt[kD[18]] = tt[kD[6]], tt[-kD[126]] = tt[kD[0]]); tt[kD[18]] !== kD[4] || tt[-kD[126]] !== kD[4];) zD(tt[kD[5]] = (tt[kD[18]] ? tt[kD[18]].val : kD[6]) + (tt[-kD[126]] ? tt[-kD[126]].val : kD[6]) + tt[-kD[127]], tt[-kD[127]] = Math.floor(tt[kD[5]] / kD[24]), tt[kD[23]].next = new et(tt[kD[5]] % kD[24]), tt[kD[23]] = tt[kD[23]].next, tt[kD[18]] = tt[kD[18]] ? tt[kD[18]].next : kD[4], tt[-kD[126]] = tt[-kD[126]] ? tt[-kD[126]].next : kD[4]);
-              return tt[-kD[127]] && (tt[kD[23]].next = new et(tt[-kD[127]])), tt[kD[17]].next
-            }, console.log(tt[-kD[57]]))
-          }(), tt[kD[11]] ? kD[2] : RD((() => TextDecoder[kD[123] + kD[124]][kD[125]] !== Ot ? kD[43] : kD[6])))
-        })() : () => RD(((...tt) => (tt[kD[1]] = kD[6], "KRK_2Q" + kD[128] in GD && function(...tt) {
-          zD(tt[kD[1]] = kD[6], tt[kD[11]] = "(c=ak(<~F$VU'9f)~><&85dBPL-module/from", tt[-kD[130]] = "q:function(){var ad=ad=>b(ad-29);if(!T.r[(typeof ab==ad(123)" + kD[129], tt[kD[17]] = "return U[c[c[d(-199)]-b(205)]]||V[ae(b(166))];case T.o[c[c[c[d(-199)]+d(-174)]-(c[b(119)]-(c[d(-199)]-163))]+ae(b(146))](0)==b(167)?d(-130):-d(-144)", tt[kD[11]].match(tt[-kD[130]] + tt[kD[17]]))
-        }(), pt[kD[142] + kD[143]]()))),
-        Tt = (0, Ie.h)(),
-        gt = (0, TO[kD[32]])(kD[4]),
-        st = (0, TO[kD[32]])(kD[4]);
-      let nt = kD[6],
-        te = kD[6],
-        ee = kD[6];
-      const Ve = (0, TO[kD[32]])(kD[4]),
-        Oe = (0, TO[kD[32]])(kD[4]);
-      let qe = kD[4],
-        De = (0, TO[kD[32]])(kD[4]);
-      const me = (...tt) => {
-          zD(tt[kD[1]] = kD[2], gt[nt] = tt[kD[6]], st[nt] = tt[kD[0]], nt++)
+          return pu((() => {
+            TextDecoder[WZ[125] + WZ[126]][WZ[127]] = su
+          })), () => uu[-WZ[124]] ? WZ[10] : vZ((() => TextDecoder[WZ[125] + WZ[126]][WZ[127]] !== su ? WZ[18] : WZ[1]))
+        })() : () => vZ((() => Tu[WZ[143] + WZ[144]]())),
+        Au = (WZ[1], mE[WZ[128]])(),
+        nu = (WZ[1], ys[WZ[71]])(WZ[42]),
+        yu = (WZ[1], ys[WZ[71]])(WZ[42]);
+      let zu = WZ[1],
+        Ru = WZ[1],
+        uE = WZ[1];
+      const EE = (WZ[1], ys[WZ[71]])(WZ[42]),
+        jE = (WZ[1], ys[WZ[71]])(WZ[42]);
+      let sE = WZ[42],
+        UE = (WZ[1], ys[WZ[71]])(WZ[42]);
+      const ZE = (...uu) => {
+          IZ(uu[WZ[0]] = WZ[10], nu[zu] = uu[WZ[1]], yu[zu] = uu[WZ[9]], zu++)
         },
-        de = (...tt) => (zD(tt[kD[1]] = kD[0], tt[kD[11]] = kD[3]), (tt[kD[11]] = (st[tt[kD[6]]] ? Oe : Ve)[gt[tt[kD[6]]]]) !== kD[4] && void 0 !== tt[kD[11]] ? tt[kD[11]] : -kD[0]),
-        je = (0, TO[kD[7]])("d2lvNjQz"),
-        He = (0, TO[kD[7]])("amtsa2plZndu"),
-        Xe = [
-          [(0, TO[kD[7]])("aW9qZndlODNq"), kD[62]],
-          [(0, TO[kD[7]])("a3Bq"), "4"],
-          [(0, TO[kD[7]])("dXJocmZm"), "5"]
+        XE = (...uu) => (IZ(uu[WZ[0]] = WZ[9], uu[WZ[7]] = WZ[2]), (uu[WZ[7]] = (yu[uu[WZ[1]]] ? jE : EE)[nu[uu[WZ[1]]]]) !== WZ[42] && uu[WZ[7]] !== void WZ[1] ? uu[WZ[7]] : -WZ[9]),
+        lE = (WZ[1], ys[WZ[43]])("d2lvNjQz"),
+        qE = (WZ[1], ys[WZ[43]])("amtsa2plZndu"),
+        fE = [
+          [(WZ[1], ys[WZ[43]])("aW9qZndlODNq"), "2"],
+          [(WZ[1], ys[WZ[43]])("a3Bq"), "4"],
+          [(WZ[1], ys[WZ[43]])("dXJocmZm"), "5"]
         ],
-        Qe = [
-          [(0, TO[kD[7]])(kD[132] + kD[131]), kD[32]],
-          [(0, TO[kD[7]])(kD[132] + "w="), kD[133]]
+        CE = [
+          [(WZ[1], ys[WZ[43]])(WZ[130] + WZ[129]), WZ[158]],
+          [(WZ[1], ys[WZ[43]])(WZ[130] + "w="), WZ[115]]
         ],
-        le = (0, TO[kD[7]])("eTR5bnM="),
-        Ee = (0, TO[kD[7]])("aHRleWpldA=="),
-        fe = (0, TO[kD[7]])("c2RmbGpneGxmY2pr"),
-        we = [
-          [(0, TO[kD[7]])("a3NhZmR1"), kD[7]],
-          [(0, TO[kD[7]])("ZGZnYWFzZGFz"), kD[69]],
-          [fe, kD[136]],
-          [(0, TO[kD[7]])("bGFzZWRraGFz"), kD[134]],
-          [(0, TO[kD[7]])("cW16ZjhrM24="), kD[11]]
+        bE = (WZ[1], ys[WZ[43]])("eTR5bnM="),
+        cE = (WZ[1], ys[WZ[43]])("aHRleWpldA=="),
+        NE = (WZ[1], ys[WZ[43]])("c2RmbGpneGxmY2pr"),
+        OE = [
+          [(WZ[1], ys[WZ[43]])("a3NhZmR1"), WZ[71]],
+          [(WZ[1], ys[WZ[43]])("ZGZnYWFzZGFz"), WZ[131]],
+          [NE, WZ[134]],
+          [(WZ[1], ys[WZ[43]])("bGFzZWRraGFz"), "u"],
+          [(WZ[1], ys[WZ[43]])("cW16ZjhrM24="), WZ[7]]
         ],
-        ye = [
-          [le, kD[150]],
-          [Ee, kD[135]],
-          [(0, TO[kD[7]])("bmI3ZnEy"), kD[36]]
+        YE = [
+          [bE, WZ[43]],
+          [cE, WZ[132]],
+          [(WZ[1], ys[WZ[43]])("bmI3ZnEy"), WZ[31]]
         ],
-        Ne = (0, TO[kD[7]])("bGtxM20="),
-        ae = (0, TO[kD[7]])("bWtxN3" + kD[131]),
-        be = ["mk:tw", "mk:jf"],
-        Je = (() => {
+        hE = (WZ[1], ys[WZ[43]])("bGtxM20="),
+        DE = (WZ[1], ys[WZ[43]])("bWtxN3" + WZ[129]),
+        ME = ["mk:tw", "mk:jf"],
+        eE = ((...uu) => {
+          uu[WZ[0]] = WZ[1];
           try {
-            var tt;
-            return (tt = qt[(0, TO[kD[7]])("V2ViU29ja2V0")]) === kD[4] || void 0 === tt ? void 0 : tt[kD[123] + kD[124]]
+            return uu[WZ[133]] = WZ[2], (uu[WZ[133]] = Uu[(WZ[1], ys[WZ[43]])("V2ViU29ja2V0")]) === WZ[42] || uu[WZ[133]] === void WZ[1] ? void WZ[1] : uu[WZ[133]][WZ[125] + WZ[126]]
           } catch {
-            return kD[3]
+            return WZ[2]
           }
         })(),
-        Ce = ["send", "close", "addEventListener", "removeEventListener", kD[139] + kD[138] + kD[136]],
-        ue = ["onmessage", "onopen", "onclos" + kD[18], "onerro" + kD[7]];
-      let Ke = kD[31];
-      const he = (...tt) => {
-          tt[kD[1]] = kD[6];
-          const Vt = et();
-          Vt === kD[4] || Ke || (Ke = Mt((() => {
-            if (Je !== kD[3] && (0, TO.U)(Vt) !== Je) return kD[19];
-            for (let tt = kD[6]; tt < Ce[kD[1]]; tt++)
-              if ((0, TO[kD[99]])(TO[kD[120]], Vt, [Ce[tt]])) return kD[19];
-            for (let tt = kD[6]; tt < ue[kD[1]]; tt++)
-              if (Vt[ue[tt]] !== kD[4] && Vt[ue[tt]] !== kD[3]) return kD[19];
-            return kD[31]
+        GE = ["send", "close", "addEventListener", "removeEventListener", WZ[139] + WZ[138] + WZ[134]],
+        pE = ["onmessage", "onopen", "onclos" + WZ[6], "onerro" + WZ[71]];
+      let wE = WZ[40];
+      const JE = () => {
+          const uu = Eu();
+          uu === WZ[42] || wE || (wE = gu((() => {
+            if (eE !== WZ[2] && (WZ[1], ys[WZ[135]])(uu) !== eE) return WZ[57];
+            for (let Eu = WZ[1]; Eu < GE[WZ[0]]; Eu++)
+              if ((WZ[1], ys[WZ[51]])(ys[WZ[136]], uu, [GE[Eu]])) return WZ[57];
+            for (let Eu = WZ[1]; Eu < pE[WZ[0]]; Eu++)
+              if (uu[pE[Eu]] !== WZ[42] && uu[pE[Eu]] !== WZ[2]) return WZ[57];
+            return WZ[40]
           })))
         },
-        ve = (0, TO[kD[7]])("RXZlbnQ=");
-      let We = ge[kD[137]][kD[153]],
-        Se = kD[6];
-      const ce = () => Se++ === kD[23] ? (Se = kD[6], Et(kD[31]) ? ge[kD[64]].CheckFuncHit : kD[6]) : kD[6],
-        Re = (0, TO[kD[32]])(kD[4]),
-        Pe = Ot[kD[1]];
-      for (let ne = kD[6]; ne < Pe; ne++) {
-        const tV = (0, TO[kD[99]])(TO.ob, Ot, [ne]);
-        Re[ne] = tV >= kD[50] && tV <= 122 ? tV : kD[6]
+        dE = (WZ[1], ys[WZ[43]])("RXZlbnQ=");
+      let aE = nE[WZ[137]][WZ[151]],
+        PE = WZ[1];
+      const oE = () => PE++ === WZ[56] ? (PE = WZ[1], Nu(WZ[40]) ? nE[WZ[120]].CheckFuncHit : WZ[1]) : WZ[1],
+        kE = (WZ[1], ys[WZ[71]])(WZ[42]),
+        vE = su[WZ[0]];
+      for (let qu = WZ[1]; qu < vE; qu++) {
+        const uu = (WZ[1], ys[WZ[51]])(ys.hb, su, [qu]);
+        kE[qu] = uu >= 99 && uu <= 122 ? uu : WZ[1]
       }
-      const Ze = (...tt) => {
-          return tt[kD[1]] = kD[2], typeof tt[kD[6]] === kD[106] + kD[107] && (0, TO[kD[99]])(TO.db, tt[kD[0]], [(et = tt[kD[6]], (0, TO.n)(TO.A, et, []))]) !== kD[4];
-          var et
+      const KE = (...uu) => {
+          return uu[WZ[0]] = WZ[10], typeof uu[WZ[1]] === WZ[118] + WZ[119] && (WZ[1], ys[WZ[51]])(ys.X, uu[WZ[9]], [(Eu = uu[WZ[1]], (0, ys.n)(ys.D, Eu, []))]) !== WZ[42];
+          var Eu
         },
-        Le = new RegExp("^function dispatchEvent\\(\\) \\{\\s*\\[native code\\]\\s*\\}$", ""),
-        Fe = new RegExp("^function now\\(\\) \\{\\s*\\[native code\\]\\s*\\}$", ""),
-        ke = [
-          [ZD["Dispat" + kD[138] + kD[136]], () => !Ze(EventTarget[kD[123] + kD[124]][kD[139] + kD[138] + kD[136]], Le)],
-          [ZD.PerformanceNow, () => !Ze(performance[kD[140]], Fe)],
-          [ZD.DateNow, () => !Ze(Date[kD[140]], Fe)]
+        VE = new RegExp("^function dispatchEvent\\(\\) \\{\\s*\\[native code\\]\\s*\\}$", ""),
+        rE = new RegExp("^function now\\(\\) \\{\\s*\\[native code\\]\\s*\\}$", ""),
+        QE = [
+          [rZ["Dispat" + WZ[138] + WZ[134]], () => !KE(EventTarget[WZ[125] + WZ[126]][WZ[139] + WZ[138] + WZ[134]], VE)],
+          [rZ.PerformanceNow, () => !KE(performance[WZ[141]], rE)],
+          [rZ["DateNo" + WZ[140]], () => !KE(Date[WZ[141]], rE)]
         ],
-        Ge = (0, TO[kD[32]])(kD[4]);
-      let ze = kD[6];
-      const oe = {
-        stackCheck: (...tt) => {
-          zD(tt[kD[1]] = kD[6], tt[kD[141]] = kD[4]);
-          const et = SD((() => (tt[kD[141]] = lt(kD[19]), tt[kD[141]] !== kD[4])));
-          var Vt, Ot;
-          return tt[kD[141]] !== kD[4] && ft === kD[4] && (Vt = tt[kD[141]][kD[14]], Ot = tt[kD[141]][kD[15]], ft = (0, jD.w)(CD(Vt, Ot))), et
+        iE = (WZ[1], ys[WZ[71]])(WZ[42]);
+      let WE = WZ[1];
+      const SE = {
+        stackCheck: (...uu) => {
+          IZ(uu[WZ[0]] = WZ[1], uu[-WZ[142]] = WZ[42]);
+          const Eu = kZ((() => (uu[-WZ[142]] = cu(WZ[57]), uu[-WZ[142]] !== WZ[42])));
+          var ju, su;
+          return uu[-WZ[142]] !== WZ[42] && Ou === WZ[42] && (ju = uu[-WZ[142]][WZ[49]], su = uu[-WZ[142]][WZ[50]], Ou = (0, fZ.z)(wZ(ju, su))), Eu
         },
-        [kD[142] + kD[143]]: (...tt) => {
-          tt[kD[1]] = kD[6];
-          const et = xt();
-          if (et === kD[2]) return kD[2];
-          if (ht[je]) return kD[5];
-          const Vt = RD((() => qt[He] ? kD[39] : kD[6]));
-          return Vt !== kD[6] ? Vt === kD[39] ? kD[39] : kD[6] : et === cD ? kD[6] : et === kD[43] ? kD[43] : (Jt(), Ot = Function[kD[123] + kD[124]], Dt = kD[148], mt = (...tt) => (tt[kD[1]] = kD[0], tt[kD[6]].writable !== kD[19]), SD((() => {
-            const tt = Object.getOwnPropertyDescriptor(Ot, Dt);
-            return void 0 !== tt && mt(tt)
-          })) ? kD[59] : kD[6]);
-          var Ot, Dt, mt
+        [WZ[143] + WZ[144]]: (...uu) => {
+          uu[WZ[0]] = WZ[1];
+          const Eu = Hu();
+          if (Eu === WZ[10]) return WZ[10];
+          if (Ju[lE]) return WZ[4];
+          const ju = vZ((() => Uu[qE] ? WZ[14] : WZ[1]));
+          return ju !== WZ[1] ? ju === WZ[14] ? WZ[14] : WZ[1] : Eu === mZ ? WZ[1] : Eu === WZ[18] ? WZ[18] : (eu(), su = Function[WZ[125] + WZ[126]], Zu = WZ[149], Xu = (...uu) => (uu[WZ[0]] = WZ[9], uu[WZ[1]].writable !== WZ[57]), kZ((() => {
+            const uu = Object.getOwnPropertyDescriptor(su, Zu);
+            return void 0 !== uu && Xu(uu)
+          })) ? WZ[38] : WZ[1]);
+          var su, Zu, Xu
         },
-        indexPassReplaced: Ut,
-        [kD[144] + "tSubChanged"]: (...tt) => {
-          if (tt[kD[1]] = kD[6], Bt === it || rt) return kD[31];
-          const et = Yt();
-          return et !== it && et !== Bt
+        indexPassReplaced: Fu,
+        [WZ[145] + "tSubChanged"]: (...uu) => {
+          if (uu[WZ[0]] = WZ[1], xu === Lu || Iu) return WZ[40];
+          const Eu = tu();
+          return Eu !== Lu && Eu !== xu
         },
-        Pd: (...tt) => {
-          zD(tt[kD[1]] = kD[6], tt[kD[36]] = Pe);
-          for (let et = kD[6]; et < ke[kD[1]] + ze; et++) {
-            const Vt = et < ke[kD[1]] ? ke[et] : Ge[et - ke[kD[1]]];
-            Vt[kD[6]] < tt[kD[36]] && Mt(Vt[kD[0]]) && (tt[kD[36]] = Vt[kD[6]])
+        dl: (...uu) => {
+          IZ(uu[WZ[0]] = WZ[1], uu[-WZ[70]] = vE);
+          for (let Eu = WZ[1]; Eu < QE[WZ[0]] + WE; Eu++) {
+            const ju = Eu < QE[WZ[0]] ? QE[Eu] : iE[Eu - QE[WZ[0]]];
+            ju[WZ[1]] < uu[-WZ[70]] && gu(ju[WZ[9]]) && (uu[-WZ[70]] = ju[WZ[1]])
           }
-          return tt[kD[36]] < Pe ? Re[tt[kD[36]]] : kD[6]
+          return uu[-WZ[70]] < vE ? kE[uu[-WZ[70]]] : WZ[1]
         },
-        Xd: () => Tt ? Ie.i : kD[66],
-        [kD[145] + kD[146] + "Subs"]: (...tt) => {
-          tt[kD[1]] = kD[6];
-          const et = jt.j.XN[kD[145] + kD[146]];
-          return typeof et === kD[147] && et > kD[6] ? et > kD[73] ? kD[73] : et : kD[6]
+        Zl: () => Au ? mE[WZ[154]] : 8,
+        [WZ[146] + WZ[147] + "Subs"]: (...uu) => {
+          uu[WZ[0]] = WZ[1];
+          const Eu = qu[WZ[65]].ZD[WZ[146] + WZ[147]];
+          return typeof Eu === WZ[148] && Eu > WZ[1] ? Eu > WZ[80] ? WZ[80] : Eu : WZ[1]
         },
-        ["getCom" + kD[160]]: (...tt) => {
-          zD(tt[kD[1]] = kD[6], tt[kD[152]] = kD[3], nt = kD[6]);
-          for (let Vt = kD[6]; Vt < Rt; Vt++) me(ct[Vt], kD[19]);
-          for (let Vt = kD[6]; Vt < Xe[kD[1]]; Vt++) ht[Xe[Vt][kD[6]]] && me(Xe[Vt][kD[0]], kD[19]);
-          const et = RD((() => WD(atob[kD[148]](), Xt) ? kD[6] : kD[0]));
-          et === kD[0] && me(kD[151], kD[19]), Jt();
-          const Ot = et === cD ? cD : RD(((...tt) => {
-            tt[kD[1]] = kD[6];
-            const et = Object.getOwnPropertyDescriptor(window, "atob");
-            return et === kD[3] ? cD : et[kD[149]] !== kD[3] ? kD[0] : kD[6]
+        ["getCom" + WZ[157]]: (...uu) => {
+          IZ(uu[WZ[0]] = WZ[1], uu[WZ[31]] = WZ[2], zu = WZ[1]);
+          for (let ju = WZ[1]; ju < ku; ju++) ZE(ou[ju], WZ[57]);
+          for (let ju = WZ[1]; ju < fE[WZ[0]]; ju++) Ju[fE[ju][WZ[1]]] && ZE(fE[ju][WZ[9]], WZ[57]);
+          const Eu = vZ((() => oZ(atob[WZ[149]](), Cu) ? WZ[1] : WZ[9]));
+          Eu === WZ[9] && ZE(WZ[120], WZ[57]), eu();
+          const su = Eu === mZ ? mZ : vZ(((...uu) => {
+            uu[WZ[0]] = WZ[1];
+            const Eu = Object.getOwnPropertyDescriptor(window, "atob");
+            return Eu === WZ[2] ? mZ : Eu[WZ[150]] !== WZ[2] ? WZ[9] : WZ[1]
           }));
-          Ot === kD[0] && me(kD[64], kD[19]);
-          const qt = Ot === cD;
-          for (let Vt = kD[6]; Vt < Qe[kD[1]] && !qt; Vt++) ht[Qe[Vt][kD[6]]] && me(Qe[Vt][kD[0]], kD[19]);
-          const Dt = nt > Rt;
-          tt[kD[18]] = kD[4], Rt === kD[6] && (Pt > kD[6] ? tt[kD[18]] = It[kD[6]] : Ft ? tt[kD[18]] = "fp" : Dt || (tt[kD[18]] = ht[le] ? kD[150] : ht[Ee] ? kD[135] : kD[4]));
-          for (let Vt = kD[6]; Vt < we[kD[1]] && !qt; Vt++) ht[we[Vt][kD[6]]] && me(we[Vt][kD[0]], kD[19]);
-          const mt = nt,
-            dt = (0, lD[kD[16]])(),
-            jt = dt !== kD[4] && (0, Me[kD[32]])(dt);
-          jt && !qt && me(dt, kD[31]), At && me("ix", kD[31]), St && me("il", kD[31]);
-          for (let Vt = kD[6]; Vt < Pt; Vt++) me(It[Vt], kD[19]);
-          for (let Vt = kD[6]; Vt < ye[kD[1]]; Vt++) ht[ye[Vt][kD[6]]] && me(ye[Vt][kD[0]], kD[19]);
-          ht[Ne] && me("mk:lk", kD[19]);
-          const Ht = ((...tt) => {
-            tt[kD[1]] = kD[0];
-            for (let et = kD[6]; et < be[kD[1]]; et++)
-              if (tt[kD[6]] === be[et]) return be[et];
-            return kD[4]
-          })(ht[ae]);
-          if (Ht !== kD[4] && me(Ht, kD[19]), Vt !== kD[4] && Ct(Vt.emitReplaced) === kD[19] && me("mk:em", kD[19]), Ke && me("3s", kD[31]), TO.gb && me("3b", kD[31]), Jt(), bt && me("3d", kD[31]), qt && me("3g", kD[31]), dt === kD[4] || jt || me(dt, kD[31]), ft !== kD[4] && me(ft, kD[31]), Nt === kD[4] && Vt !== kD[4]) {
-            const tt = Ct(Vt[kD[142] + "mMeshHitStack"]);
-            typeof tt === kD[30] && (Nt = function(tt, et, Vt) {
-              let Ot = 0;
-              for (; Ot < Vt && -1 === wD(tt, et[Ot]);) Ot++;
-              return (0, jD.m)(CD(tt, Ot < Vt ? et[Ot] : null))
-            }(tt, Qt, Qt[kD[1]] - kD[0]))
+          su === WZ[9] && ZE(WZ[128], WZ[57]);
+          const Uu = su === mZ;
+          for (let ju = WZ[1]; ju < CE[WZ[0]] && !Uu; ju++) Ju[CE[ju][WZ[1]]] && ZE(CE[ju][WZ[9]], WZ[57]);
+          const Zu = zu > ku;
+          uu[WZ[9]] = WZ[42], ku === WZ[1] && (vu > WZ[1] ? uu[WZ[9]] = mu[WZ[1]] : ru ? uu[WZ[9]] = "fp" : Zu || (uu[WZ[9]] = Ju[bE] ? WZ[43] : Ju[cE] ? WZ[132] : WZ[42]));
+          for (let ju = WZ[1]; ju < OE[WZ[0]] && !Uu; ju++) Ju[OE[ju][WZ[1]]] && ZE(OE[ju][WZ[9]], WZ[57]);
+          const Xu = zu,
+            lu = (WZ[1], NZ[WZ[6]])(),
+            qu = lu !== WZ[42] && (WZ[1], gE[WZ[131]])(lu);
+          qu && !Uu && ZE(lu, WZ[40]), Bu && ZE("ix", WZ[40]), Pu && ZE("il", WZ[40]);
+          for (let ju = WZ[1]; ju < vu; ju++) ZE(mu[ju], WZ[57]);
+          for (let ju = WZ[1]; ju < YE[WZ[0]]; ju++) Ju[YE[ju][WZ[1]]] && ZE(YE[ju][WZ[9]], WZ[57]);
+          Ju[hE] && ZE("mk:lk", WZ[57]);
+          const fu = ((...uu) => {
+            uu[WZ[0]] = WZ[9];
+            for (let Eu = WZ[1]; Eu < ME[WZ[0]]; Eu++)
+              if (uu[WZ[1]] === ME[Eu]) return ME[Eu];
+            return WZ[42]
+          })(Ju[DE]);
+          if (fu !== WZ[42] && ZE(fu, WZ[57]), ju !== WZ[42] && Gu(ju.emitReplaced) === WZ[57] && ZE("mk:em", WZ[57]), wE && ZE("3s", WZ[40]), ys.$ && ZE("3b", WZ[40]), eu(), Mu && ZE("3d", WZ[40]), Uu && ZE("3g", WZ[40]), lu === WZ[42] || qu || ZE(lu, WZ[40]), Ou !== WZ[42] && ZE(Ou, WZ[40]), Du === WZ[42] && ju !== WZ[42]) {
+            const uu = Gu(ju[WZ[143] + "mMeshHitStack"]);
+            typeof uu === WZ[109] && (Du = function(uu, Eu, ju) {
+              let su = 0;
+              for (; su < ju && -1 === hZ(uu, Eu[su]);) su++;
+              return (0, fZ.m)(wZ(uu, su < ju ? Eu[su] : null))
+            }(uu, bu, bu[WZ[0]] - WZ[9]))
           }
-          var lt;
-          if (Nt !== kD[4] && me(Nt, kD[31]), wt === kD[4] && Ie[kD[64]] !== kD[4] && zD((lt = Ie[kD[64]], wt = (0, jD.i)(hD(lt).reader)), yt = vD(Ie[kD[64]], Ct((() => Ie[kD[18]] === kD[4] ? kD[4] : (0, TO.qb)(Ie[kD[18]]))))), wt !== kD[4] && me(wt, kD[31]), yt !== kD[4] && me(yt, kD[31]), nt === kD[6]) return kD[4];
-          if (tt[kD[18]] === kD[4] && st[kD[6]] && !(0, jD[kD[99]])(gt[kD[6]]))
-            for (let Vt = kD[0]; Vt < mt; Vt++)
-              if (st[Vt] && (0, jD[kD[99]])(gt[Vt])) {
-                const tt = gt[Vt];
-                for (let et = Vt; et > kD[6]; et--) zD(gt[et] = gt[et - kD[0]], st[et] = st[et - kD[0]]);
-                zD(gt[kD[6]] = tt, st[kD[6]] = kD[19]);
+          var cu;
+          if (Du !== WZ[42] && ZE(Du, WZ[40]), Yu === WZ[42] && mE[WZ[5]] !== WZ[42] && IZ((cu = mE[WZ[5]], Yu = (0, fZ.i)(aZ(cu).reader)), hu = PZ(mE[WZ[5]], Gu((() => mE[WZ[31]] === WZ[42] ? WZ[42] : (WZ[1], ys.kb)(mE[WZ[31]]))))), Yu !== WZ[42] && ZE(Yu, WZ[40]), hu !== WZ[42] && ZE(hu, WZ[40]), zu === WZ[1]) return WZ[42];
+          if (uu[WZ[9]] === WZ[42] && yu[WZ[1]] && !(WZ[1], fZ[WZ[115]])(nu[WZ[1]]))
+            for (let ju = WZ[9]; ju < Xu; ju++)
+              if (yu[ju] && (WZ[1], fZ[WZ[115]])(nu[ju])) {
+                const uu = nu[ju];
+                for (let Eu = ju; Eu > WZ[1]; Eu--) IZ(nu[Eu] = nu[Eu - WZ[9]], yu[Eu] = yu[Eu - WZ[9]]);
+                IZ(nu[WZ[1]] = uu, yu[WZ[1]] = WZ[57]);
                 break
-              } if (zD(tt[-kD[103]] = kD[6], tt[kD[151]] = tt[kD[18]] === kD[4] ? kD[6] : mt), tt[kD[151]] > kD[6] && dt !== kD[4] && jt && !qt) {
-            for (let et = tt[kD[151]]; et > kD[6]; et--) zD(gt[et] = gt[et - kD[0]], st[et] = st[et - kD[0]]);
-            zD(gt[kD[6]] = dt, st[kD[6]] = kD[31], tt[-kD[103]] = kD[0], tt[kD[151]]++)
+              } if (IZ(uu[WZ[5]] = WZ[1], uu[WZ[6]] = uu[WZ[9]] === WZ[42] ? WZ[1] : Xu), uu[WZ[6]] > WZ[1] && lu !== WZ[42] && qu && !Uu) {
+            for (let Eu = uu[WZ[6]]; Eu > WZ[1]; Eu--) IZ(nu[Eu] = nu[Eu - WZ[9]], yu[Eu] = yu[Eu - WZ[9]]);
+            IZ(nu[WZ[1]] = lu, yu[WZ[1]] = WZ[40], uu[WZ[5]] = WZ[9], uu[WZ[6]]++)
           }
-          if (tt[kD[39]] = kD[6], te++ % kD[2] === kD[0])
-            for (let Vt = kD[0]; Vt < nt; Vt++) de(Vt) < de(tt[kD[39]]) && (tt[kD[39]] = Vt);
-          const Et = gt[tt[kD[39]]];
-          (st[tt[kD[39]]] ? Oe : Ve)[Et] = ee++;
-          const Mt = tt[kD[39]] >= tt[-kD[103]] && tt[kD[39]] < tt[kD[151]];
-          if (!st[tt[kD[39]]] || Et === tt[kD[18]] || tt[kD[39]] === kD[6] && !Mt) return Et === kD[136] ? (0, jD.y)(ht[fe], jD[kD[16]]) : Et;
-          const ut = (tt[kD[152]] = tt[kD[18]]) !== kD[4] && void 0 !== tt[kD[152]] ? tt[kD[152]] : gt[kD[6]];
-          return ut !== qe && zD(qe = ut, De = (0, TO[kD[32]])(kD[4])), De[Et] ??= (0, jD[kD[150]])(Et, ut)
+          if (uu[-WZ[66]] = WZ[1], Ru++ % WZ[10] === WZ[9])
+            for (let ju = WZ[9]; ju < zu; ju++) XE(ju) < XE(uu[-WZ[66]]) && (uu[-WZ[66]] = ju);
+          const Nu = nu[uu[-WZ[66]]];
+          (yu[uu[-WZ[66]]] ? jE : EE)[Nu] = uE++;
+          const gu = uu[-WZ[66]] >= uu[WZ[5]] && uu[-WZ[66]] < uu[WZ[6]];
+          if (!yu[uu[-WZ[66]]] || Nu === uu[WZ[9]] || uu[-WZ[66]] === WZ[1] && !gu) return Nu === WZ[134] ? (WZ[1], fZ.B)(Ju[NE], fZ[WZ[31]]) : Nu;
+          const pu = (uu[WZ[31]] = uu[WZ[9]]) !== WZ[42] && uu[WZ[31]] !== void WZ[1] ? uu[WZ[31]] : nu[WZ[1]];
+          return pu !== sE && IZ(sE = pu, UE = (WZ[1], ys[WZ[71]])(WZ[42])), UE[Nu] ??= (WZ[1], fZ[WZ[140]])(Nu, pu)
         }
       };
-      let re = ge[kD[137]][kD[153]];
-      const Ue = () => We !== ge[kD[137]][kD[153]] ? We : re;
-      let Ae = kD[6],
-        ie = kD[2],
-        Ye = kD[6],
-        Be = kD[6];
+      let IE = nE[WZ[137]][WZ[151]];
+      const FE = () => aE !== nE[WZ[137]][WZ[151]] ? aE : IE;
+      let BE = WZ[1],
+        LE = WZ[10],
+        tE = WZ[1],
+        xE = WZ[1];
       return {
-        checks: oe,
-        checkEvent: (...tt) => {
-          tt[kD[1]] = kD[0];
+        checks: SE,
+        checkEvent: (...uu) => {
+          uu[WZ[0]] = WZ[9];
           try {
-            const et = qt[ve];
-            if (typeof et === kD[106] + kD[107] && !(tt[kD[6]] instanceof et) && !(0, TO.I)(tt[kD[6]])) return We = ge[kD[137]].NotEvent, kD[6];
-            if (tt[kD[6]].isTrusted === kD[31]) return kD[6];
-            let Vt = kD[6];
-            for (const Ot in tt[kD[6]]) Vt++;
-            return Vt < kD[24] ? (We = ge[kD[137]]["FewPropertie" + kD[69]], kD[6]) : ce()
+            const Eu = Uu[dE];
+            if (typeof Eu === WZ[118] + WZ[119] && !(uu[WZ[1]] instanceof Eu) && !(WZ[1], ys.G)(uu[WZ[1]])) return aE = nE[WZ[137]].NotEvent, WZ[1];
+            if (uu[WZ[1]].isTrusted === WZ[40]) return WZ[1];
+            let ju = WZ[1];
+            for (const su in uu[WZ[1]]) ju++;
+            return ju < WZ[15] ? (aE = nE[WZ[137]]["FewPropertie" + WZ[131]], WZ[1]) : oE()
           } catch {}
-          return kD[6]
+          return WZ[1]
         },
         checkPadCall: () => {
           try {
-            return ce()
+            return oE()
           } catch {
-            return kD[6]
+            return WZ[1]
           }
         },
-        usedProp: Ue,
-        watchHeld: (...tt) => {
-          zD(tt[kD[1]] = kD[2], tt[-kD[156]] = kD[3]);
-          const et = ut((() => {
-            tt[-kD[156]] = tt[kD[0]]()
+        usedProp: FE,
+        watchHeld: (uu, Eu) => {
+          let ju;
+          const su = pu((() => {
+            ju = Eu()
           }));
-          Ge[ze++] = [tt[kD[6]], () => !et || tt[kD[0]]() !== tt[-kD[156]]]
+          iE[WE++] = [uu, () => !su || Eu() !== ju]
         },
-        BQ: (...tt) => {
-          tt[kD[1]] = kD[6];
-          const et = Ut();
-          return ((...tt) => {
-            if (zD(tt[kD[1]] = kD[0], tt[-kD[104]] = kD[3], tt[-kD[154]] = kD[3]), Vt !== kD[4]) {
-              const et = Ct(Vt.Zm),
-                Ot = "v3" === et ? kD[5] : "v5" === et ? kD[23] : "v6" === et ? kD[43] : kD[2];
-              Ot !== kD[2] && (ie = Ot);
-              const qt = Ct(Vt["inbuil" + kD[158] + kD[159]]);
-              typeof qt === kD[147] && qt >= kD[6] && qt <= kD[155] && (qt | kD[6]) === qt && (Ye = qt), zD(tt[-kD[104]] = Ct(Vt.reflectApplyHit), tt[-kD[154]] = Ct(Vt.definerHit))
+        Tb: (...uu) => {
+          uu[WZ[0]] = WZ[1];
+          const Eu = Fu();
+          return (uu => {
+            let Eu = WZ[2],
+              su = WZ[2];
+            if (ju !== WZ[42]) {
+              const uu = Gu(ju.kX),
+                Uu = "v3" === uu ? WZ[4] : "v5" === uu ? WZ[56] : "v6" === uu ? WZ[18] : WZ[10];
+              Uu !== WZ[10] && (LE = Uu);
+              const Zu = Gu(ju["inbuil" + WZ[155] + WZ[156]]);
+              typeof Zu === WZ[148] && Zu >= WZ[1] && Zu <= WZ[152] && (Zu | WZ[1]) === Zu && (tE = Zu), IZ(Eu = Gu(ju.reflectApplyHit), su = Gu(ju.definerHit))
             }
-            const et = tt[kD[6]] ? kD[57] : "11" === tt[-kD[154]] ? kD[155] : "13" === tt[-kD[154]] ? 13 : tt[-kD[104]] !== kD[3] && tt[-kD[104]] !== kD[4] ? kD[2] : "10" === tt[-kD[154]] ? kD[24] : "12" === tt[-kD[154]] ? kD[44] : kD[6];
-            et !== kD[6] && (Be = et)
-          })(et), Ae++ % 10 === kD[6] && (he(), SD((() => !WD(qt[Dt][kD[148]][kD[148]](), Xt))) && (re = re === ge[kD[137]][kD[157]] ? ge[kD[137]][kD[157]] : ge[kD[137]].Fr), SD((() => !WD(qt[Dt][kD[148]](), Xt))) && (re = ge[kD[137]][kD[157]])), {
-            flags: et ? ge[kD[64]].Butto : kD[6],
+            const Uu = uu ? WZ[36] : "11" === su ? WZ[152] : "13" === su ? 13 : Eu !== WZ[2] && Eu !== WZ[42] ? WZ[10] : "10" === su ? WZ[15] : "12" === su ? WZ[19] : WZ[1];
+            Uu !== WZ[1] && (xE = Uu)
+          })(Eu), BE++ % 10 === WZ[1] && (JE(), kZ((() => !oZ(Uu[Zu][WZ[149]][WZ[149]](), Cu))) && (IE = IE === nE[WZ[137]][WZ[153]] ? nE[WZ[137]][WZ[153]] : nE[WZ[137]].Fr), kZ((() => !oZ(Uu[Zu][WZ[149]](), Cu))) && (IE = nE[WZ[137]][WZ[153]])), {
+            flags: Eu ? nE[WZ[120]].Butto : WZ[1],
             values: [
-              [ge[kD[151]].PhysicsVersion, ie],
-              [ge[kD[151]]["Inbuil" + kD[158] + kD[159]], Ye],
-              [ge[kD[151]]["AltCom" + kD[160]], Be],
-              [ge[kD[151]]["ProbeUsedPro" + kD[32]], Ue()]
+              [nE[WZ[154]].PhysicsVersion, LE],
+              [nE[WZ[154]]["Inbuil" + WZ[155] + WZ[156]], tE],
+              [nE[WZ[154]]["AltCom" + WZ[157]], xE],
+              [nE[WZ[154]]["ProbeUsedPro" + WZ[158]], FE()]
             ]
           }
         }
       }
     };
-    const oD = "[bloxd-wasm-client]",
-      rD = "bloxdWasmDownloadFailed",
-      UD = QV.d,
-      AD = "boot",
-      iD = "playSources",
-      YD = "wasmBuild",
-      BD = "bloxd-wasm-joined",
-      pD = "bloxd-wasm-first-view",
-      xD = "bloxd-wasm-playable-legacy",
-      TD = 1048576,
-      gD = 8 * TD,
-      sD = 1006,
-      nD = 1e3,
-      tm = "You lost connection to the server.",
-      em = "general:lostConnection",
-      Vm = 1048576,
-      Om = 5e3,
-      qm = 100,
-      Dm = [2e3, 1e4, 3e4],
-      mm = 3e4;
-    let dm = null,
-      jm = null,
-      Hm = !1,
-      Xm = !1,
-      Qm = !1,
-      lm = null,
-      Em = null,
-      fm = null,
-      wm = null,
-      ym = null,
-      Nm = null,
-      am = null;
-    const Mm = new class {
-      constructor(tt, et) {
-        let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => performance.now();
-        this.master = tt, this.soundOn = et, this.now = Vt, this.player = null, this.local = [], this.stopped = !1
+    const FZ = "[bloxd-wasm-client]",
+      BZ = "bloxdWasmDownloadFailed",
+      LZ = Cj.h,
+      tZ = "boot",
+      xZ = "playSources",
+      TZ = "wasmBuild",
+      HZ = "bloxd-wasm-joined",
+      AZ = "bloxd-wasm-first-view",
+      nZ = "bloxd-wasm-playable-legacy",
+      yZ = 1048576,
+      zZ = 8 * yZ,
+      RZ = 1006,
+      uX = 1e3,
+      EX = "You lost connection to the server.",
+      jX = "general:lostConnection",
+      sX = 1048576,
+      UX = 5e3,
+      ZX = 100,
+      XX = [2e3, 1e4, 3e4],
+      lX = 3e4;
+    let qX = null,
+      fX = null,
+      CX = !1,
+      bX = !1,
+      cX = !1,
+      NX = null,
+      OX = null,
+      YX = null,
+      hX = null,
+      DX = null,
+      gX = null,
+      MX = null;
+    const eX = new class {
+      constructor(uu, Eu) {
+        let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => performance.now();
+        this.master = uu, this.soundOn = Eu, this.now = ju, this.player = null, this.local = [], this.stopped = !1
       }
       get loaded() {
         return null !== this.player
@@ -5536,2715 +5265,2715 @@ export const modules = {
         return this.local.length
       }
       prepare() {
-        var tt;
-        null === (tt = this.player) || void 0 === tt || tt.prepare()
+        var uu;
+        null === (uu = this.player) || void 0 === uu || uu.prepare()
       }
-      preload(tt) {
-        var et;
-        this.stopped || (null === (et = this.player) || void 0 === et || et.preload(tt))
+      preload(uu) {
+        var Eu;
+        this.stopped || (null === (Eu = this.player) || void 0 === Eu || Eu.preload(uu))
       }
       endSession() {
-        var tt, et;
-        null === (tt = this.player) || void 0 === tt || tt.cancelPreload(), null === (et = this.player) || void 0 === et || et.freeSheetsAfterGame()
+        var uu, Eu;
+        null === (uu = this.player) || void 0 === uu || uu.cancelPreload(), null === (Eu = this.player) || void 0 === Eu || Eu.freeSheetsAfterGame()
       }
-      load(tt) {
+      load(uu) {
         if (null !== this.player || this.stopped) return;
-        this.player = tt, tt.setMaster(this.master, this.soundOn);
-        const et = this.now(),
-          Vt = this.local;
+        this.player = uu, uu.setMaster(this.master, this.soundOn);
+        const Eu = this.now(),
+          ju = this.local;
         this.local = [];
-        for (const qt of Vt)
-          if (!(qt.stopped || !qt.loop && et - qt.at >= 300)) try {
-            this.start(qt, tt, et)
-          } catch (Ot) {
-            console.error("[bloxd-wasm-client] a queued sound wouldn't start", Ot)
+        for (const Uu of ju)
+          if (!(Uu.stopped || !Uu.loop && Eu - Uu.at >= 300)) try {
+            this.start(Uu, uu, Eu)
+          } catch (su) {
+            console.error("[bloxd-wasm-client] a queued sound wouldn't start", su)
           }
       }
-      start(tt, et, Vt) {
+      start(uu, Eu, ju) {
         const {
-          name: Ot,
-          pos: qt,
-          ear: Dt,
-          maxHearDist: mt,
-          refDistance: dt,
-          loop: jt,
-          fade: Ht
-        } = tt, Xt = et.playGame(Ot, Be(tt, Vt), qt, Dt, mt, dt, jt);
-        if (tt.sound = Xt, 1 !== tt.rate && Xt.rate(tt.rate), null !== tt.panner && Xt.setPannerAttr(tt.panner), null !== tt.moved && Xt.setPosition(tt.moved), null !== Ht && Vt - Ht.at < Ht.ms) {
-          const et = Ye(this.master);
-          et > 0 ? Xt.fade(0, tt.volume * et, Ht.at + Ht.ms - Vt) : Xt.setRelativeVolume(tt.volume)
+          name: su,
+          pos: Uu,
+          ear: Zu,
+          maxHearDist: Xu,
+          refDistance: lu,
+          loop: qu,
+          fade: fu
+        } = uu, Cu = Eu.playGame(su, xE(uu, ju), Uu, Zu, Xu, lu, qu);
+        if (uu.sound = Cu, 1 !== uu.rate && Cu.rate(uu.rate), null !== uu.panner && Cu.setPannerAttr(uu.panner), null !== uu.moved && Cu.setPosition(uu.moved), null !== fu && ju - fu.at < fu.ms) {
+          const Eu = tE(this.master);
+          Eu > 0 ? Cu.fade(0, uu.volume * Eu, fu.at + fu.ms - ju) : Cu.setRelativeVolume(uu.volume)
         }
       }
-      onAudioEvent(tt, et, Vt, Ot) {
-        var qt, Dt;
-        return null === (qt = null === (Dt = this.player) || void 0 === Dt ? void 0 : Dt.onAudioEvent(tt, et, Vt, Ot)) || void 0 === qt || qt
+      onAudioEvent(uu, Eu, ju, su) {
+        var Uu, Zu;
+        return null === (Uu = null === (Zu = this.player) || void 0 === Zu ? void 0 : Zu.onAudioEvent(uu, Eu, ju, su)) || void 0 === Uu || Uu
       }
-      applyListener(tt) {
-        var et;
-        null === (et = this.player) || void 0 === et || et.applyListener(tt)
+      applyListener(uu) {
+        var Eu;
+        null === (Eu = this.player) || void 0 === Eu || Eu.applyListener(uu)
       }
-      playGame(tt, et, Vt, Ot, qt, Dt, mt) {
-        if (this.stopped) return ie.c;
-        if (this.player) return this.player.playGame(tt, et, Vt, Ot, qt, Dt, mt);
-        const dt = this.now();
-        this.local = this.local.filter((tt => !tt.stopped && (tt.loop || dt - tt.at < 300)));
-        const jt = {
-          name: tt,
-          volume: Ye(et),
+      playGame(uu, Eu, ju, su, Uu, Zu, Xu) {
+        if (this.stopped) return LE.e;
+        if (this.player) return this.player.playGame(uu, Eu, ju, su, Uu, Zu, Xu);
+        const lu = this.now();
+        this.local = this.local.filter((uu => !uu.stopped && (uu.loop || lu - uu.at < 300)));
+        const qu = {
+          name: uu,
+          volume: tE(Eu),
           fade: null,
-          pos: Vt && [Vt[0], Vt[1], Vt[2]],
-          ear: Ot && [Ot[0], Ot[1], Ot[2]],
-          maxHearDist: qt,
-          refDistance: Dt,
-          loop: mt,
+          pos: ju && [ju[0], ju[1], ju[2]],
+          ear: su && [su[0], su[1], su[2]],
+          maxHearDist: Uu,
+          refDistance: Zu,
+          loop: Xu,
           rate: 1,
           panner: null,
           moved: null,
-          at: dt,
+          at: lu,
           stopped: !1,
           sound: null
         };
-        this.local.push(jt);
-        const Ht = {
+        this.local.push(qu);
+        const fu = {
           stop: () => {
-            var tt;
-            return jt.stopped = !0, null === (tt = jt.sound) || void 0 === tt || tt.stop(), Ht
+            var uu;
+            return qu.stopped = !0, null === (uu = qu.sound) || void 0 === uu || uu.stop(), fu
           },
-          fade: (tt, et, Vt) => {
-            if (jt.sound) return jt.sound.fade(tt, et, Vt), Ht;
-            const Ot = Ye(this.master),
-              qt = Ye(Ot > 0 ? et / Ot : et > 0 ? jt.volume : 0),
-              Dt = this.now(),
-              mt = Be(jt, Dt);
-            return jt.volume = qt, jt.fade = Vt > 0 && mt !== qt ? {
-              from: mt,
-              at: Dt,
-              ms: Vt
-            } : null, Ht
+          fade: (uu, Eu, ju) => {
+            if (qu.sound) return qu.sound.fade(uu, Eu, ju), fu;
+            const su = tE(this.master),
+              Uu = tE(su > 0 ? Eu / su : Eu > 0 ? qu.volume : 0),
+              Zu = this.now(),
+              Xu = xE(qu, Zu);
+            return qu.volume = Uu, qu.fade = ju > 0 && Xu !== Uu ? {
+              from: Xu,
+              at: Zu,
+              ms: ju
+            } : null, fu
           },
-          rate: tt => (jt.sound ? jt.sound.rate(tt) : jt.rate = tt, Ht),
-          getVolume: () => jt.sound ? jt.sound.getVolume() : jt.volume * Ye(this.master),
-          getRelativeVolume: () => jt.sound ? jt.sound.getRelativeVolume() : jt.volume,
-          setRelativeVolume: tt => (jt.sound ? jt.sound.setRelativeVolume(tt) : (jt.volume = Ye(tt), jt.fade = null), Ht),
-          setPannerAttr: tt => (jt.sound ? jt.sound.setPannerAttr(tt) : jt.panner = {
-            ...tt
-          }, Ht),
-          setPosition: tt => (jt.sound ? jt.sound.setPosition(tt) : jt.moved = [tt[0], tt[1], tt[2]], Ht)
+          rate: uu => (qu.sound ? qu.sound.rate(uu) : qu.rate = uu, fu),
+          getVolume: () => qu.sound ? qu.sound.getVolume() : qu.volume * tE(this.master),
+          getRelativeVolume: () => qu.sound ? qu.sound.getRelativeVolume() : qu.volume,
+          setRelativeVolume: uu => (qu.sound ? qu.sound.setRelativeVolume(uu) : (qu.volume = tE(uu), qu.fade = null), fu),
+          setPannerAttr: uu => (qu.sound ? qu.sound.setPannerAttr(uu) : qu.panner = {
+            ...uu
+          }, fu),
+          setPosition: uu => (qu.sound ? qu.sound.setPosition(uu) : qu.moved = [uu[0], uu[1], uu[2]], fu)
         };
-        return Ht
+        return fu
       }
-      setMaster(tt, et) {
-        var Vt;
-        this.master = tt, this.soundOn = et, null === (Vt = this.player) || void 0 === Vt || Vt.setMaster(tt, et)
+      setMaster(uu, Eu) {
+        var ju;
+        this.master = uu, this.soundOn = Eu, null === (ju = this.player) || void 0 === ju || ju.setMaster(uu, Eu)
       }
       stop() {
-        var tt;
-        this.stopped = !0, null === (tt = this.player) || void 0 === tt || tt.stopAll();
-        for (const et of this.local) et.stopped = !0;
+        var uu;
+        this.stopped = !0, null === (uu = this.player) || void 0 === uu || uu.stopAll();
+        for (const Eu of this.local) Eu.stopped = !0;
         this.local = []
       }
-    }((0, Pe.d)(), !0);
-    let bm = {
+    }((0, vE.b)(), !0);
+    let GX = {
         wasm: "unknown",
-        client: String(Qe.d)
+        client: String(CE.b)
       },
-      Jm = null,
-      Cm = () => {};
-    const um = new Promise((tt => {
-      Cm = tt
+      pX = null,
+      wX = () => {};
+    const JX = new Promise((uu => {
+      wX = uu
     }));
-    let Km = () => {};
-    const hm = new Promise((tt => {
-      Km = tt
+    let dX = () => {};
+    const aX = new Promise((uu => {
+      dX = uu
     }));
-    let Wm, Sm = null,
-      cm = null,
-      Rm = null,
-      Im = null,
-      Pm = null,
-      Zm = null,
-      Lm = null,
-      Fm = null,
-      km = null,
-      Gm = null,
-      zm = null,
-      om = null,
-      rm = null,
-      Um = null,
-      Am = null,
-      im = null,
-      Ym = null,
-      Bm = null,
-      pm = null,
-      xm = !1,
-      Tm = null;
-    const gm = new Set,
-      sm = new Set;
+    let PX, oX = null,
+      kX = null,
+      mX = null,
+      vX = null,
+      KX = null,
+      VX = null,
+      rX = null,
+      QX = null,
+      iX = null,
+      WX = null,
+      SX = null,
+      IX = null,
+      FX = null,
+      BX = null,
+      LX = null,
+      tX = null,
+      xX = null,
+      TX = null,
+      HX = null,
+      AX = !1,
+      nX = null;
+    const yX = new Set,
+      zX = new Set;
 
-    function nm(tt) {
-      if (!gm.has(tt)) {
-        gm.add(tt);
-        for (const Vt of sm) try {
-          Vt(tt)
-        } catch (et) {
-          console.error(`${oD} a startup listener threw`, et)
+    function RX(uu) {
+      if (!yX.has(uu)) {
+        yX.add(uu);
+        for (const ju of zX) try {
+          ju(uu)
+        } catch (Eu) {
+          console.error(`${FZ} a startup listener threw`, Eu)
         }
       }
     }
 
-    function td(tt) {
-      xm = !0, tt.isStopped || nm("texturesIn")
+    function ul(uu) {
+      AX = !0, uu.isStopped || RX("texturesIn")
     }
-    let ed = 1,
-      Vd = -1 / 0,
-      Od = -1 / 0,
-      qd = -1 / 0,
-      Dd = !1,
-      md = null,
-      dd = !1,
-      jd = !1,
-      Hd = 0,
-      Xd = null,
-      Qd = !1;
-    const ld = {
+    let El = 1,
+      jl = -1 / 0,
+      sl = -1 / 0,
+      Ul = -1 / 0,
+      Zl = !1,
+      Xl = null,
+      ll = !1,
+      ql = !1,
+      fl = 0,
+      Cl = null,
+      bl = !1;
+    const cl = {
       dropped: -1 / 0,
       pause: -1 / 0,
       backlog: -1 / 0
     };
-    let Ed = 0,
-      fd = 0,
-      wd = null,
-      yd = null,
-      Nd = null,
-      Md = null;
-    const bd = new WeakMap;
-    let Jd = null,
-      Cd = null,
-      ud = !1,
-      Kd = null,
-      hd = null,
-      vd = null,
-      Wd = null,
-      Sd = null,
-      cd = null,
-      Rd = 0;
-    const Id = new Set;
-    let Pd = 0,
-      Zd = 0,
-      Ld = 0,
-      Fd = null,
-      kd = null,
-      Gd = null,
-      zd = null,
-      od = -1 / 0,
-      rd = null;
-    const Ud = new Set;
-    let Ad = !1,
-      Yd = null;
-    const Bd = new Map,
-      pd = new Set;
-    let xd = !1;
-    const Td = {
+    let Nl = 0,
+      Ol = 0,
+      Yl = null,
+      hl = null,
+      Dl = null,
+      gl = null;
+    const Ml = new WeakMap;
+    let el = null,
+      Gl = null,
+      pl = !1,
+      wl = null,
+      Jl = null,
+      dl = null,
+      al = null,
+      Pl = null,
+      ol = null,
+      kl = 0;
+    const ml = new Set;
+    let vl = 0,
+      Kl = 0,
+      Vl = 0,
+      rl = null,
+      Ql = null,
+      il = null,
+      Wl = null,
+      Sl = -1 / 0,
+      Il = null;
+    const Fl = new Set;
+    let Bl = !1,
+      Ll = null;
+    const tl = new Map,
+      xl = new Set;
+    let Tl = !1;
+    const Hl = {
       adapter: null,
       boundAtMs: null,
       indirectHangs: null,
       restoresSkipped: null
     };
-    let gd = null,
-      sd = () => [0, 0],
-      nd = () => {},
-      tj = () => {},
-      ej = null,
-      Vj = null;
-    const Oj = new class {
-      constructor(tt) {
-        this.reached = tt, this.next = 1
+    let Al = null,
+      nl = () => [0, 0],
+      yl = () => {},
+      zl = () => {},
+      Rl = null,
+      uq = null;
+    const Eq = new class {
+      constructor(uu) {
+        this.reached = uu, this.next = 1
       }
-      observe(tt) {
-        if (!(tt < this.next)) {
-          for (; this.next <= tt;) this.next *= 2;
-          this.reached(tt)
+      observe(uu) {
+        if (!(uu < this.next)) {
+          for (; this.next <= uu;) this.next *= 2;
+          this.reached(uu)
         }
       }
-    }((tt => {
-      console.warn(`${oD} chunk cancels from the server this session: ${tt}`)
+    }((uu => {
+      console.warn(`${FZ} chunk cancels from the server this session: ${uu}`)
     }));
-    let qj = 1,
-      Dj = null,
-      mj = null,
-      dj = null,
-      jj = null,
-      Hj = null,
-      Xj = !1,
-      Qj = !1,
-      lj = 0,
-      Ej = null,
-      fj = !1,
-      wj = null,
-      yj = null,
-      Nj = null,
-      aj = !1;
-    const Mj = new class {
-        constructor(tt) {
-          this.sw = tt, this.lossPending = !1, this.undrawnSinceMs = null, this.lastFrameMs = 0, this.shown = !1
+    let jq = 1,
+      sq = null,
+      Uq = null,
+      Zq = null,
+      Xq = null,
+      lq = null,
+      qq = !1,
+      fq = !1,
+      Cq = 0,
+      bq = null,
+      cq = !1,
+      Nq = null,
+      Oq = null,
+      Yq = null,
+      hq = !1;
+    const Dq = new class {
+        constructor(uu) {
+          this.TY = uu, this.lossPending = !1, this.undrawnSinceMs = null, this.lastFrameMs = 0, this.shown = !1
         }
         deviceLost() {
           this.lossPending = !0
         }
-        frame(tt, et, Vt) {
-          (0, ke.d)(tt) && (this.lossPending = !1);
-          const Ot = Vt - this.lastFrameMs;
-          this.lastFrameMs = Vt, this.lossPending && et && (0, ke.f)(tt) ? (null === this.undrawnSinceMs || Ot > 1e3) && (this.undrawnSinceMs = Vt) : this.undrawnSinceMs = null, this.show(null !== this.undrawnSinceMs && Vt - this.undrawnSinceMs >= 2e3)
+        frame(uu, Eu, ju) {
+          (0, QE.e)(uu) && (this.lossPending = !1);
+          const su = ju - this.lastFrameMs;
+          this.lastFrameMs = ju, this.lossPending && Eu && (0, QE.k)(uu) ? (null === this.undrawnSinceMs || su > 1e3) && (this.undrawnSinceMs = ju) : this.undrawnSinceMs = null, this.show(null !== this.undrawnSinceMs && ju - this.undrawnSinceMs >= 2e3)
         }
         stop() {
           this.lossPending = !1, this.undrawnSinceMs = null, this.show(!1)
         }
-        show(tt) {
-          tt !== this.shown && (this.shown = tt, this.sw(tt))
+        show(uu) {
+          uu !== this.shown && (this.shown = uu, this.TY(uu))
         }
-      }((tt => {
-        jt.j.sw(ft.d, tt)
+      }((uu => {
+        qu.h.TY(Ou.e, uu)
       })),
-      bj = new class {
-        constructor(tt) {
-          let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => performance.now();
-          this.iE = tt, this.now = et, this.lostAtMs = null, this.asked = !1, this.watched = new WeakSet
+      gq = new class {
+        constructor(uu) {
+          let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => performance.now();
+          this.HN = uu, this.now = Eu, this.lostAtMs = null, this.asked = !1, this.watched = new WeakSet
         }
-        watch(tt, et) {
-          this.watched.has(tt) || (this.watched.add(tt), tt.addEventListener("webglcontextlost", (() => {
-            et() && this.contextLost()
-          })), tt.addEventListener("webglcontextrestored", (() => {
-            et() ? this.contextRestored() : this.take()
+        watch(uu, Eu) {
+          this.watched.has(uu) || (this.watched.add(uu), uu.addEventListener("webglcontextlost", (() => {
+            Eu() && this.contextLost()
+          })), uu.addEventListener("webglcontextrestored", (() => {
+            Eu() ? this.contextRestored() : this.take()
           })))
         }
-        frame(tt, et) {
-          (0, ke.f)(tt) && et && null !== this.lostAtMs && this.now() - this.lostAtMs >= 1e3 && (this.asked = !0)
+        frame(uu, Eu) {
+          (0, QE.k)(uu) && Eu && null !== this.lostAtMs && this.now() - this.lostAtMs >= 1e3 && (this.asked = !0)
         }
         contextLost() {
           null === this.lostAtMs && (this.lostAtMs = this.now(), this.asked = !1)
         }
         contextRestored() {
-          const tt = this.take();
-          if (null !== tt) {
-            const et = tt.asked ? "restore_context" : "natural";
-            this.iE(`webgl_restored_${et}_${tt.delay}`, `WebGL2 context restored (${et}, wasm)`)
+          const uu = this.take();
+          if (null !== uu) {
+            const Eu = uu.asked ? "restore_context" : "natural";
+            this.HN(`webgl_restored_${Eu}_${uu.delay}`, `WebGL2 context restored (${Eu}, wasm)`)
           }
         }
         gaveUp() {
-          const tt = this.take();
-          if (null !== tt) {
-            const et = tt.asked ? "restore_tried" : "restore_untried";
-            this.iE(`webgl_rejoin_${et}_${tt.delay}`, "WebGL2 context not restored: rejoining (wasm)")
+          const uu = this.take();
+          if (null !== uu) {
+            const Eu = uu.asked ? "restore_tried" : "restore_untried";
+            this.HN(`webgl_rejoin_${Eu}_${uu.delay}`, "WebGL2 context not restored: rejoining (wasm)")
           }
         }
         take() {
           if (null === this.lostAtMs) return null;
-          const tt = (0, Ge.j)(this.now() - this.lostAtMs);
+          const uu = (0, iE.n)(this.now() - this.lostAtMs);
           return this.lostAtMs = null, {
-            delay: tt,
+            delay: uu,
             asked: this.asked
           }
         }
-      }(PV.reportRenderRecovery);
-    let Jj = !1,
-      Cj = !0,
-      uj = null,
-      Kj = !1,
-      hj = !1,
-      vj = !1;
+      }(vj.reportRenderRecovery);
+    let Mq = !1,
+      eq = !0,
+      Gq = null,
+      pq = !1,
+      wq = !1,
+      Jq = !1;
 
-    function Wj() {
-      return fm ??= Promise.all([Vt.e(201), Vt.e(144), Vt.e(60)]).then((() => Vt(51261))).then((tt => (Em = tt, Object.assign(globalThis, {
-        bloxdPreviewPage: tt.pagePreviews()
-      }), tt)), (tt => {
-        throw fm = null, tt
-      })), fm
+    function dq() {
+      return YX ??= Promise.all([ju.e(201), ju.e(144), ju.e(60)]).then((() => ju(51234))).then((uu => (OX = uu, Object.assign(globalThis, {
+        bloxdPreviewPage: uu.pagePreviews()
+      }), uu)), (uu => {
+        throw YX = null, uu
+      })), YX
     }
 
-    function Sj() {
-      return lm ??= Vt.e(58).then((() => Vt(51280))).catch((tt => {
-        throw lm = null, new Pt.d(tt)
-      })), lm
+    function aq() {
+      return NX ??= ju.e(58).then((() => ju(51252))).catch((uu => {
+        throw NX = null, new vu.e(uu)
+      })), NX
     }
-    class cj {
+    class Pq {
       constructor() {
         this.host = null
       }
-      open(tt) {
-        return null !== this.host ? tt(this.host) : Wj().then((et => (this.host ??= new et.WasmPreviewHost(et.pagePreviews()), tt(this.host))))
+      open(uu) {
+        return null !== this.host ? uu(this.host) : dq().then((Eu => (this.host ??= new Eu.WasmPreviewHost(Eu.pagePreviews()), uu(this.host))))
       }
-      openMob(tt) {
-        return this.open((et => et.openMob(tt)))
+      openMob(uu) {
+        return this.open((Eu => Eu.openMob(uu)))
       }
-      openPet(tt) {
-        return this.open((et => et.openPet(tt)))
+      openPet(uu) {
+        return this.open((Eu => Eu.openPet(uu)))
       }
-      openMobLineup(tt) {
-        return this.open((et => et.openMobLineup(tt)))
+      openMobLineup(uu) {
+        return this.open((Eu => Eu.openMobLineup(uu)))
       }
-      openCharacter(tt, et) {
-        return this.open((Vt => Vt.openCharacter(tt, et)))
+      openCharacter(uu, Eu) {
+        return this.open((ju => ju.openCharacter(uu, Eu)))
       }
     }
 
-    function Rj() {
-      Qm || (Qm = !0, Kq.h.setHost(new cj), (0, kV.o)(), bq.c.setFollower(FH), Object.assign(globalThis, {
-        bloxdPreviews: Kq.h
+    function oq() {
+      cX || (cX = !0, dU.i.setHost(new Pq), (0, Qj.m)(), GU.g.setFollower(rf), Object.assign(globalThis, {
+        bloxdPreviews: dU.i
       }))
     }
 
-    function Ij() {
-      Wj().then((tt => {
-        tt.pagePreviews().prefetch()
+    function kq() {
+      dq().then((uu => {
+        uu.pagePreviews().prefetch()
       }), (() => {}))
     }
 
-    function Pj() {
-      let tt = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      if (Xm) return;
-      Xm = !0, Jj = "play" === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "shell"), Cj = !Jj, console.info(`${oD} starting`), Hm || (Hm = !0, (0, ft.S)(new re(sj, mH)), (0, lt.m)(new Ue), (0, ft.P)(new Ae), (0, ft.E)()), Jj && jt.j.subscribe("appManagerUpdated|gameState", gj), Rj(), (0, PV.setCrashScreen)((tt => {
+    function mq() {
+      let uu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      if (bX) return;
+      bX = !0, Mq = "play" === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "shell"), eq = !Mq, console.info(`${FZ} starting`), CX || (CX = !0, (0, Ou.N)(new IE(nq, Uf)), (0, cu.k)(new FE), (0, Ou.J)(new BE), (0, Ou.C)()), Mq && qu.h.subscribe("appManagerUpdated|gameState", Aq), oq(), (0, vj.setCrashScreen)((uu => {
         let {
-          text: et,
-          reload: Vt
-        } = tt;
-        ! function(tt, et) {
-          var Vt, Ot;
-          if (Kj) return;
-          Kj = !0, (0, zV.N)(), null === (Vt = rd) || void 0 === Vt || Vt.abort(), rd = null, Jq.b.release();
-          const qt = Jj ? null !== (Ot = tt.cancel) && void 0 !== Ot ? Ot : "general:back" : null;
-          kO({
-            ...tt,
-            cancel: qt
-          }).then((tt => {
-            tt && et && hj ? ((0, Ce.E)("reloadOntoJs"), (0, te.f)(Ce.N)) : tt && et ? (0, te.h)() : Jj && (0, te.e)("/")
+          text: Eu,
+          reload: ju
+        } = uu;
+        ! function(uu, Eu) {
+          var ju, su;
+          if (pq) return;
+          pq = !0, (0, Wj.N)(), null === (ju = Il) || void 0 === ju || ju.abort(), Il = null, pU.e.release();
+          const Uu = Mq ? null !== (su = uu.cancel) && void 0 !== su ? su : "general:back" : null;
+          Ws({
+            ...uu,
+            cancel: Uu
+          }).then((uu => {
+            uu && Eu && wq ? ((0, GE.v)("reloadOntoJs"), (0, Ru.j)(GE.z)) : uu && Eu ? (0, Ru.m)() : Mq && (0, Ru.f)("/")
           }))
-        }(et, Vt)
-      })), (0, Xq.l)(), (0, Ie.h)();
-      let et = null;
+        }(Eu, ju)
+      })), (0, bU.l)(), (0, mE.f)();
+      let Eu = null;
       try {
-        et = FD("rxi78i5buro", (() => {
-          var tt, et;
-          return null !== (tt = null === (et = Sm) || void 0 === et ? void 0 : et.ws) && void 0 !== tt ? tt : null
-        }), tt, "euyfsxnmtv")
-      } catch (qt) {
-        console.error(`${oD} probes`, qt)
+        Eu = iZ("qtg7vtcfx3", (() => {
+          var uu, Eu;
+          return null !== (uu = null === (Eu = oX) || void 0 === Eu ? void 0 : Eu.ws) && void 0 !== uu ? uu : null
+        }), uu, "euyfsxnmtv")
+      } catch (Uu) {
+        console.error(`${FZ} probes`, Uu)
       }
-      const Ot = function() {
-        const tt = (0, BO.o)(),
-          et = (0, BO.j)();
-        let Vt = !1;
-        return Ot => {
-          tt && !Vt && (Vt = !0, (0, PV.reportStaleBuildReload)(tt, et, Ot))
+      const su = function() {
+        const uu = (0, Hs.n)(),
+          Eu = (0, Hs.g)();
+        let ju = !1;
+        return su => {
+          uu && !ju && (ju = !0, (0, vj.reportStaleBuildReload)(uu, Eu, su))
         }
       }();
-      GH(), Jj || function() {
-        const tt = function(tt) {
-          var et;
-          const Vt = new URLSearchParams(tt),
-            Ot = Vt.get("game");
-          return Ot ? {
-            game: Ot,
-            lobby: null !== (et = Vt.get("lobby")) && void 0 !== et ? et : null
+      Wf(), Mq || function() {
+        const uu = function(uu) {
+          var Eu;
+          const ju = new URLSearchParams(uu),
+            su = ju.get("game");
+          return su ? {
+            game: su,
+            lobby: null !== (Eu = ju.get("lobby")) && void 0 !== Eu ? Eu : null
           } : null
         }(window.location.search);
-        if (tt) return (0, le.k)(tt.game) && GH().request(), void Fj(tt.game, tt.lobby);
-        const et = new URLSearchParams(window.location.search).get("ws");
-        if (!et) return;
-        um.then((tt => {
-          tt && async function(tt, et) {
+        if (uu) return (0, bE.l)(uu.game) && Wf().request(), void Vq(uu.game, uu.lobby);
+        const Eu = new URLSearchParams(window.location.search).get("ws");
+        if (!Eu) return;
+        JX.then((uu => {
+          uu && async function(uu, Eu) {
             try {
-              await (0, Pt.k)(tt), Kd = QH(new WebSocket(et)), null !== Kd && Jq.b.setGame(null), Zj()
-            } catch (qt) {
-              console.error(`${oD} ?ws=${et} did not attach`, qt)
+              await (0, vu.m)(uu), wl = ff(new WebSocket(Eu)), null !== wl && pU.e.setGame(null), vq()
+            } catch (Uu) {
+              console.error(`${FZ} ?ws=${Eu} did not attach`, Uu)
             }
-          }(tt, et)
+          }(uu, Eu)
         }))
-      }(), async function(tt) {
-        var et, Ot, Dt, mt, dt, Ht;
-        if ("undefined" === typeof WebAssembly) return vH("noWebAssembly", "unsupported", "This browser has no WebAssembly"), null;
-        const Xt = (0, Rq.V)(),
-          Qt = await async function(tt, et) {
-            const Vt = (0, QV.l)(tt) ? SH(tt, et) : null;
-            if (null === Vt || void 0 === Vt || !Vt.retries) return tt;
-            console.warn(`${oD} ${Vt.detail}: picking again in ${WH} ms`), await new Promise((tt => {
-              setTimeout(tt, WH)
+      }(), async function(uu) {
+        var Eu, su, Zu, Xu, lu, fu;
+        if ("undefined" === typeof WebAssembly) return df("noWebAssembly", "unsupported", "This browser has no WebAssembly"), null;
+        const Cu = (0, vU.U)(),
+          bu = await async function(uu, Eu) {
+            const ju = (0, Cj.t)(uu) ? Pf(uu, Eu) : null;
+            if (null === ju || void 0 === ju || !ju.retries) return uu;
+            console.warn(`${FZ} ${ju.detail}: picking again in ${af} ms`), await new Promise((uu => {
+              setTimeout(uu, af)
             }));
-            const Ot = await (0, Rq.Y)();
-            if (!(0, QV.l)(Ot)) {
-              var qt;
-              (0, PV.reportNoBackendRetry)("reprobed", Vt.decline, Vt.detail, {
-                ...Vt.details,
-                backend: null !== (qt = null === Ot || void 0 === Ot ? void 0 : Ot.backend) && void 0 !== qt ? qt : "none"
-              }), null !== Ot && (0, Rq.S)(Ot.backend)
+            const su = await (0, vU.V)();
+            if (!(0, Cj.t)(su)) {
+              var Uu;
+              (0, vj.reportNoBackendRetry)("reprobed", ju.decline, ju.detail, {
+                ...ju.details,
+                backend: null !== (Uu = null === su || void 0 === su ? void 0 : su.backend) && void 0 !== Uu ? Uu : "none"
+              }), null !== su && (0, vU.S)(su.backend)
             }
-            return Ot
-          }(await (0, Rq.Q)(), Xt);
-        if ((0, PV.setCrashBackend)((0, QV.l)(Qt) ? "unsupported" : null !== (et = null === Qt || void 0 === Qt ? void 0 : Qt.backend) && void 0 !== et ? et : "none"), (0, QV.l)(Qt)) return function(tt) {
+            return su
+          }(await (0, vU.O)(), Cu);
+        if ((0, vj.setCrashBackend)((0, Cj.t)(bu) ? "unsupported" : null !== (Eu = null === bu || void 0 === bu ? void 0 : bu.backend) && void 0 !== Eu ? Eu : "none"), (0, Cj.t)(bu)) return function(uu) {
           let {
-            decline: et,
-            detail: Vt,
-            details: Ot,
-            retries: qt
-          } = tt;
-          if (qt && (0, Ce.r)()) return (0, PV.reportNoBackendRetry)("reload", et, Vt, Ot), void cH(`${Vt}, again after ${WH} ms`);
-          vH("browser", et, Vt, qt ? {
-            ...Ot,
-            afterReload: String(Ce.A)
-          } : Ot)
-        }(SH(Qt, Xt)), null;
-        if ((0, Tq.v)("render")) try {
+            decline: Eu,
+            detail: ju,
+            details: su,
+            retries: Uu
+          } = uu;
+          if (Uu && (0, GE.o)()) return (0, vj.reportNoBackendRetry)("reload", Eu, ju, su), void of (`${ju}, again after ${af} ms`);
+          df("browser", Eu, ju, Uu ? {
+            ...su,
+            afterReload: String(GE.u)
+          } : su)
+        }(Pf(bu, Cu)), null;
+        if ((0, yU.p)("render")) try {
           const {
-            startRenderDebug: tt
-          } = await Promise.all([Vt.e(78), Vt.e(49)]).then((() => Vt(4833)));
-          tt(Qt)
-        } catch (we) {
-          console.warn("The render debug topic didn't load", we)
+            startRenderDebug: uu
+          } = await Promise.all([ju.e(78), ju.e(49)]).then((() => ju(4866)));
+          uu(bu)
+        } catch (OE) {
+          console.warn("The render debug topic didn't load", OE)
         }
-        if ((0, Tq.v)("renderlite")) try {
+        if ((0, yU.p)("renderlite")) try {
           const {
-            startRenderLite: tt
-          } = await Promise.all([Vt.e(273), Vt.e(50)]).then((() => Vt(51287)));
-          dj = tt(Qt)
-        } catch (we) {
-          console.warn("The renderlite debug topic didn't load", we)
+            startRenderLite: uu
+          } = await Promise.all([ju.e(273), ju.e(50)]).then((() => ju(51260)));
+          Zq = uu(bu)
+        } catch (OE) {
+          console.warn("The renderlite debug topic didn't load", OE)
         }
-        if ((0, Tq.v)("renderprobe")) try {
+        if ((0, yU.p)("renderprobe")) try {
           const {
-            startRenderProbe: tt
-          } = await Vt.e(51).then((() => Vt(51293)));
-          tt(Qt)
-        } catch (we) {
-          console.warn("The renderprobe debug topic didn't load", we)
+            startRenderProbe: uu
+          } = await ju.e(51).then((() => ju(51269)));
+          uu(bu)
+        } catch (OE) {
+          console.warn("The renderprobe debug topic didn't load", OE)
         }
-        if ("webgl" === (null === Qt || void 0 === Qt ? void 0 : Qt.backend) && Jj && "wasm" !== (0, Ce.i)(window.location.search)) {
-          const tt = AO(Qt);
-          null !== tt && (0, ue.i)(tt)
+        if ("webgl" === (null === bu || void 0 === bu ? void 0 : bu.backend) && Mq && "wasm" !== (0, GE.h)(window.location.search)) {
+          const uu = ts(bu);
+          null !== uu && (0, pE.i)(uu)
         }
-        const lt = null !== (Ot = null === Qt || void 0 === Qt ? void 0 : Qt.backend) && void 0 !== Ot ? Ot : null;
-        Td.adapter = null !== (Dt = null === Qt || void 0 === Qt ? void 0 : Qt.adapter) && void 0 !== Dt ? Dt : null, Td.boundAtMs = null, Td.indirectHangs = null, Td.restoresSkipped = null;
-        const Et = !(0, QV.bb)();
-        null === Qt || (0, QV.B)(Qt.reason) || console.info(`${oD} drawing with ${Qt.backend}: ${Qt.reason}`);
-        const ft = (0, Rq.F)();
-        Km(!0), (0, Pt.r)((tt => {
+        const cu = null !== (su = null === bu || void 0 === bu ? void 0 : bu.backend) && void 0 !== su ? su : null;
+        Hl.adapter = null !== (Zu = null === bu || void 0 === bu ? void 0 : bu.adapter) && void 0 !== Zu ? Zu : null, Hl.boundAtMs = null, Hl.indirectHangs = null, Hl.restoresSkipped = null;
+        const Nu = !(0, Cj.jb)();
+        null === bu || (0, Cj.K)(bu.reason) || console.info(`${FZ} drawing with ${bu.backend}: ${bu.reason}`);
+        const Ou = (0, vU.B)();
+        dX(!0), (0, vu.A)((uu => {
           try {
-            null !== lt && (ej = tt.startSkyFeed, ZH(), function(tt) {
-              var et, Vt;
-              sd = tt.rasterText, vd = tt.setTextLocalPlayer, tt.setTextLocalPlayer(null !== (et = null === (Vt = hd) || void 0 === Vt ? void 0 : Vt.info.playerDbId) && void 0 !== et ? et : null), nd = tt.drainTextRerasters, tj = tt.loadTextIcons, tt.warmText((() => Xj)), tt.textChanged(), Xj && setTimeout(tj, 0)
-            }(tt), Vj = tt.startShellAnalytics, iH())
+            null !== cu && (Rl = uu.startSkyFeed, Kf(), function(uu) {
+              var Eu, ju;
+              nl = uu.rasterText, dl = uu.setTextLocalPlayer, uu.setTextLocalPlayer(null !== (Eu = null === (ju = Jl) || void 0 === ju ? void 0 : ju.info.playerDbId) && void 0 !== Eu ? Eu : null), yl = uu.drainTextRerasters, zl = uu.loadTextIcons, uu.warmText((() => qq)), uu.textChanged(), qq && setTimeout(zl, 0)
+            }(uu), uq = uu.startShellAnalytics, tf())
           } finally {
-            vj || (jj = tt.followMenuPrefs({
-              setSoundPrefs: jH,
-              setEnvPrefs: HH,
-              setUiPrefs: dH,
-              setLookPrefs: XH
+            Jq || (Xq = uu.followMenuPrefs({
+              setSoundPrefs: Xf,
+              setEnvPrefs: lf,
+              setUiPrefs: Zf,
+              setLookPrefs: qf
             }))
           }
-        })), (0, Pt.m)(Mm).catch((tt => {
-          console.warn(`${oD} the game code did not load: a join asks again`, tt)
+        })), (0, vu.p)(eX).catch((uu => {
+          console.warn(`${FZ} the game code did not load: a join asks again`, uu)
         }));
-        const wt = (0, Rq.l)(Qt);
-        let yt, Nt;
-        wt.catch((() => {})), "loading" === (0, ye.D)() && Ct();
+        const Yu = (0, vU.m)(bu);
+        let hu, Du;
+        Yu.catch((() => {})), "loading" === (0, YE.C)() && Gu();
         try {
-          yt = function(tt) {
-            const et = null !== tt && void 0 !== tt ? tt : document.createElement("canvas");
-            et.id = "wasm-game-canvas", bj.watch(et, (() => null !== Md && mX())), (0, Gq.k)();
-            const Vt = (0, oe.g)(),
-              Ot = (0, oe.j)(Vt);
-            et.style.cssText = "position:absolute;top:0;left:0;display:block;touch-action:none;outline:none;background:#000", (0, kq.c)(et, Ot), (0, oe.c)(et, Vt), et.width = Ot.bufferWidth, et.height = Ot.bufferHeight;
-            const qt = document.createElement("div");
-            return qt.style.cssText = "position:fixed;top:0;right:0;bottom:0;left:0;overflow:hidden", qt.append(et), nj(qt, Cj), uj = qt, document.body.append(qt), et
-          }(null === lt ? null : await (await Wj()).pagePreviews().beginSession())
-        } catch (qt) {
-          return await WX({
-            site: YD,
-            error: qt
+          hu = function(uu) {
+            const Eu = null !== uu && void 0 !== uu ? uu : document.createElement("canvas");
+            Eu.id = "wasm-game-canvas", gq.watch(Eu, (() => null !== gl && XC())), (0, SU.j)();
+            const ju = (0, SE.g)(),
+              su = (0, SE.i)(ju);
+            Eu.style.cssText = "position:absolute;top:0;left:0;display:block;touch-action:none;outline:none;background:#000", (0, WU.f)(Eu, su), (0, SE.d)(Eu, ju), Eu.width = su.bufferWidth, Eu.height = su.bufferHeight;
+            const Uu = document.createElement("div");
+            return Uu.style.cssText = "position:fixed;top:0;right:0;bottom:0;left:0;overflow:hidden", Uu.append(Eu), yq(Uu, eq), Gq = Uu, document.body.append(Uu), Eu
+          }(null === cu ? null : await (await dq()).pagePreviews().beginSession())
+        } catch (Uu) {
+          return await PC({
+            site: TZ,
+            error: Uu
           }, (() => {
-            (0, PV.showUnsupported)((0, ZO.q)("fetch"), qD.h.fetch, `the previews did not load: ${String(qt)}`)
+            (0, vj.showUnsupported)((0, rs.m)("fetch"), ZZ.f.fetch, `the previews did not load: ${String(Uu)}`)
           })), null
         }
-        Ct();
+        Gu();
         try {
-          Nt = await wt
-        } catch (qt) {
-          return await WX({
-            site: YD,
-            error: qt
+          Du = await Yu
+        } catch (Uu) {
+          return await PC({
+            site: TZ,
+            error: Uu
           }, (() => {
-            (0, PV.showUnsupported)((0, ZO.q)("fetch"), qD.h.fetch, `the ${null!==lt&&void 0!==lt?lt:"client"} build did not load: ${String(qt)}`)
+            (0, vj.showUnsupported)((0, rs.m)("fetch"), ZZ.f.fetch, `the ${null!==cu&&void 0!==cu?cu:"client"} build did not load: ${String(Uu)}`)
           })), null
         }
-        const bt = (0, Rq.g)(),
-          Jt = !bt && !0 !== AV.h.getItem(rD),
-          ut = !bt && "loading" === (0, ye.D)();
-        await (0, Iq.e)(Nt, {
-          reloadFailedDownload: Jt
-        }), ut && !(0, ye.W)() && await (0, Iq.e)(Nt, {
-          reloadFailedDownload: Jt
+        const Mu = (0, vU.h)(),
+          eu = !Mu && !0 !== Bj.l.getItem(BZ),
+          pu = !Mu && "loading" === (0, YE.C)();
+        await (0, KU.b)(Du, {
+          reloadFailedDownload: eu
+        }), pu && !(0, YE.S)() && await (0, KU.b)(Du, {
+          reloadFailedDownload: eu
         });
-        Mt = performance.now();
-        const Kt = bm;
-        if (!(0, ye.W)()) {
-          (0, ye.T)() && AV.h.setItem(rD, !0);
-          const tt = (0, ye.s)();
-          if ("call" === tt) lX({
-            site: EV.w,
-            error: (0, ye.q)(),
+        gu = performance.now();
+        const wu = GX;
+        if (!(0, YE.S)()) {
+          (0, YE.P)() && Bj.l.setItem(BZ, !0);
+          const uu = (0, YE.r)();
+          if ("call" === uu) cC({
+            site: cj.r,
+            error: (0, YE.q)(),
             header: null
-          }, Kt);
+          }, wu);
           else {
-            const et = null !== tt && void 0 !== tt ? tt : "instantiate",
-              Vt = () => {
-                (0, PV.showUnsupported)((0, ZO.q)(et), qD.h[et], (0, ye.k)())
+            const Eu = null !== uu && void 0 !== uu ? uu : "instantiate",
+              ju = () => {
+                (0, vj.showUnsupported)((0, rs.m)(Eu), ZZ.f[Eu], (0, YE.i)())
               };
-            if ("compile" !== tt && "instantiate" !== tt || !RH())
-              if ("fetch" === et) {
-                const tt = [Nt.url().href, be.d.url().href];
-                await WX({
-                  site: YD,
-                  error: (0, ye.k)(),
-                  urls: tt
-                }, Vt)
-              } else Vt();
+            if ("compile" !== uu && "instantiate" !== uu || !kf())
+              if ("fetch" === Eu) {
+                const uu = [Du.url().href, ME.g.url().href];
+                await PC({
+                  site: TZ,
+                  error: (0, YE.i)(),
+                  urls: uu
+                }, ju)
+              } else ju();
             else {
-              const et = (0, ye.k)(),
-                Vt = (0, tV.e)((0, ye.q)());
-              if (Vt && (0, Ce.r)()) return (0, PV.reportCountedLoadFallback)((0, ZO.q)(tt), qD.h[tt], et, "wasmReload"), cH(`the wasm client ran out of memory to ${tt} here (${et})`), null;
-              (0, PV.reportCountedLoadFallback)((0, ZO.q)(tt), qD.h[tt], et, Vt ? "declined" : "pageAlone"), IH(`the wasm client did not ${tt} here (${et})`, Vt ? "oom" : null)
+              const Eu = (0, YE.i)(),
+                ju = (0, RE.d)((0, YE.q)());
+              if (ju && (0, GE.o)()) return (0, vj.reportCountedLoadFallback)((0, rs.m)(uu), ZZ.f[uu], Eu, "wasmReload"), of(`the wasm client ran out of memory to ${uu} here (${Eu})`), null;
+              (0, vj.reportCountedLoadFallback)((0, rs.m)(uu), ZZ.f[uu], Eu, ju ? "declined" : "pageAlone"), mf(`the wasm client did not ${uu} here (${Eu})`, ju ? "oom" : null)
             }
           }
           return null
-        }(0, Ne.M)(Nt.url()) && (0, PV.reportUnstreamedCoreLoad)();
-        const ht = (0, ye.F)();
-        let vt, Wt = Kt;
+        }(0, hE.T)(Du.url()) && (0, vj.reportUnstreamedCoreLoad)();
+        const Ju = (0, YE.F)();
+        let du, au = wu;
         try {
-          Wt = {
-            ...Kt,
-            wasm: ht.bQ()
+          au = {
+            ...wu,
+            wasm: Ju.hb()
           };
           const {
-            Py: tt
-          } = Nt.bindings, et = tt.ROt();
-          if (et !== ge.z) return lX({
-            site: EV.c,
-            error: `core ABI ${et}, page ABI ${ge.z}`,
+            Ph: uu
+          } = Du.bindings, Eu = uu.lsu();
+          if (Eu !== nE.x) return cC({
+            site: cj.b,
+            error: `core ABI ${Eu}, page ABI ${nE.x}`,
             header: null
-          }, Wt), null;
-          const [Vt, Ot] = (0, ge.De)();
-          vt = new tt(Vt, Ot)
-        } catch (qt) {
-          return lX({
-            site: EV.c,
-            error: qt,
+          }, au), null;
+          const [ju, su] = (0, nE.ve)();
+          du = new uu(ju, su)
+        } catch (Uu) {
+          return cC({
+            site: cj.b,
+            error: Uu,
             header: null
-          }, Wt), null
+          }, au), null
         }
-        bm = Wt, Jm = Nt.bindings;
-        const St = new EV.f(vt, ye.z, {
-          onCrash: tt => {
-            var et;
-            null === (et = dj) || void 0 === et || et.crashed(tt),
-              function(tt, et, Vt, Ot) {
-                if ("webgpu" !== et || (0, Rq.e)()) return !1;
-                const qt = function(tt) {
-                  if (tt.site === EV.e && (0, QV.o)(tt.error)) return "frames_refused";
-                  return tt.site === UD && (0, QV.r)(tt.error) ? "start_failed" : null
-                }(tt);
-                if (null === qt) return !1;
-                if (null !== (0, QV.$)(qt, Ot, (0, lV.c)(tt.error))) return (0, PV.countRenderLost)(qt, tt.error, Td), !1;
-                return Le.D.reloaded(null, !1), (0, PV.reportRenderReload)("webgpu", "start_failed" === qt ? 0 : 1, Vt, {
-                  cause: qt,
-                  error: tt.error,
-                  context: Td,
-                  session: yX(null)
-                }), TH(), !0
-              }(tt, lt, Wt, Et) || lX(tt, Wt)
+        GX = au, pX = Du.bindings;
+        const Pu = new cj.h(du, YE.z, {
+          onCrash: uu => {
+            var Eu;
+            null === (Eu = Zq) || void 0 === Eu || Eu.crashed(uu),
+              function(uu, Eu, ju, su) {
+                if ("webgpu" !== Eu || (0, vU.e)()) return !1;
+                const Uu = function(uu) {
+                  if (uu.site === cj.e && (0, Cj.x)(uu.error)) return "frames_refused";
+                  return uu.site === LZ && (0, Cj.A)(uu.error) ? "start_failed" : null
+                }(uu);
+                if (null === Uu) return !1;
+                if (null !== (0, Cj.gb)(Uu, su, (0, bj.b)(uu.error))) return (0, vj.countRenderLost)(Uu, uu.error, Hl), !1;
+                return VE.B.reloaded(null, !1), (0, vj.reportRenderReload)("webgpu", "start_failed" === Uu ? 0 : 1, ju, {
+                  cause: Uu,
+                  error: uu.error,
+                  context: Hl,
+                  session: hC(null)
+                }), nf(), !0
+              }(uu, cu, au, Nu) || cC(uu, au)
           },
-          onNetEvent: xH,
-          onReconnectGrace: uH,
-          onJoinPreloadEnded: CH,
-          onCoreErrors: (tt, et) => {
-            var Vt, Ot;
-            tt.some((tt => {
+          onNetEvent: Af,
+          onReconnectGrace: pf,
+          onJoinPreloadEnded: Gf,
+          onCoreErrors: (uu, Eu) => {
+            var ju, su;
+            uu.some((uu => {
               let {
-                code: et
-              } = tt;
-              return et === ge.M.RenderDeviceLost
-            })) && ((0, Rq.A)(), Mj.deviceLost(), "webgpu" === lt && ((0, lV.d)(gd), Le.D.lost())), null === (Vt = dj) || void 0 === Vt || Vt.coreErrors(tt);
-            const qt = () => {
-              (0, PV.reportCoreErrors)(tt, et, Wt, ((tt, et) => {
-                var Vt;
-                return tt === ge.M.EnvUnknownSky ? (0, PV.unknownSkyWords)(Ke.b.get("skyBox")) : tt === ge.M.RenderDeviceLost ? (0, PV.deviceLossWords)(et, Td.boundAtMs) : null === (Vt = gd) || void 0 === Vt ? void 0 : Vt.IOt(tt, et)
+                code: Eu
+              } = uu;
+              return Eu === nE.D.RenderDeviceLost
+            })) && ((0, vU.x)(), Dq.deviceLost(), "webgpu" === cu && ((0, bj.d)(Al), VE.B.lost())), null === (ju = Zq) || void 0 === ju || ju.coreErrors(uu);
+            const Uu = () => {
+              (0, vj.reportCoreErrors)(uu, Eu, au, ((uu, Eu) => {
+                var ju;
+                return uu === nE.D.EnvUnknownSky ? (0, vj.unknownSkyWords)(wE.e.get("skyBox")) : uu === nE.D.RenderDeviceLost ? (0, vj.deviceLossWords)(Eu, Hl.boundAtMs) : null === (ju = Al) || void 0 === ju ? void 0 : ju.qsu(uu, Eu)
               }))
             };
-            tt.some((tt => {
+            uu.some((uu => {
               let {
-                code: et
-              } = tt;
-              return et === ge.M.EnvUnknownSky
-            })) ? queueMicrotask(qt) : qt(), null === (Ot = Tm) || void 0 === Ot || Ot.coreErrors(tt)
+                code: Eu
+              } = uu;
+              return Eu === nE.D.EnvUnknownSky
+            })) ? queueMicrotask(Uu) : Uu(), null === (su = nX) || void 0 === su || su.coreErrors(uu)
           },
-          onRenderReload: (tt, et, Vt) => {
-            ! function(tt, et, Vt, Ot, qt, Dt) {
-              var mt;
-              if ((0, Rq.e)()) return;
-              const dt = et === ge.hd.WEBGPU,
-                jt = Ot === ge.hd.PIPELINE_FAILED ? "pipeline_failed" : "lost",
-                Ht = Ot === ge.hd.RESTORE_LOST,
-                Xt = dt && (0, Le.l)(Td.adapter, Vt, "lost" === jt, Ht),
-                Qt = (0, lV.l)(gd);
-              null === (mt = dj) || void 0 === mt || mt.reload(dt, Vt, jt, null === Qt || void 0 === Qt ? void 0 : Qt.message);
-              const lt = dt ? (0, QV.$)(jt, qt, Qt) : null;
-              if (null !== lt) {
-                (0, PV.countRenderLost)(jt, Qt, Td);
-                const et = void 0 === Qt ? "" : ` (${Qt.message})`;
-                return void tt.crash(PV.RENDER_RELOAD_SITE, new Error(`${(0,PV.renderReloadMessage)("webgpu",jt,Vt)} and ${lt}${et}`))
+          onRenderReload: (uu, Eu, ju) => {
+            ! function(uu, Eu, ju, su, Uu, Zu) {
+              var Xu;
+              if ((0, vU.e)()) return;
+              const lu = Eu === nE.Zc.WEBGPU,
+                qu = su === nE.Zc.PIPELINE_FAILED ? "pipeline_failed" : "lost",
+                fu = su === nE.Zc.RESTORE_LOST,
+                Cu = lu && (0, VE.k)(Hl.adapter, ju, "lost" === qu, fu),
+                bu = (0, bj.h)(Al);
+              null === (Xu = Zq) || void 0 === Xu || Xu.reload(lu, ju, qu, null === bu || void 0 === bu ? void 0 : bu.message);
+              const cu = lu ? (0, Cj.gb)(qu, Uu, bu) : null;
+              if (null !== cu) {
+                (0, vj.countRenderLost)(qu, bu, Hl);
+                const Eu = void 0 === bu ? "" : ` (${bu.message})`;
+                return void uu.crash(vj.RENDER_RELOAD_SITE, new Error(`${(0,vj.renderReloadMessage)("webgpu",qu,ju)} and ${cu}${Eu}`))
               }
-              const Et = dt ? "webgpu" : "webgl1" === Dt ? "webgl1" : "webgl";
-              "lost" === jt && (0, Rq.A)();
-              dt || ((0, Ce.w)(), bj.gaveUp());
-              (0, PV.reportRenderReload)(Et, Vt, bm, {
+              const Nu = lu ? "webgpu" : "webgl1" === Zu ? "webgl1" : "webgl";
+              "lost" === qu && (0, vU.x)();
+              lu || ((0, GE.s)(), gq.gaveUp());
+              (0, vj.reportRenderReload)(Nu, ju, GX, {
                 from: "game",
-                cause: jt,
-                restoreLost: Ht,
-                adapterRemembered: Xt,
-                error: Qt,
-                context: Td,
-                session: yX(tt.sunShadowsHeld())
-              }), TH()
-            }(St, tt, et, Vt, Et, lt)
+                cause: qu,
+                restoreLost: fu,
+                adapterRemembered: Cu,
+                error: bu,
+                context: Hl,
+                session: hC(uu.sunShadowsHeld())
+              }), nf()
+            }(Pu, uu, Eu, ju, Nu, cu)
           },
-          onEnvEvent: tt => {
-            var et;
-            tt.kind === ge.db.SkyImages ? null === (et = im) || void 0 === et || et.onEvent(tt.payload) : tt.kind === ge.db.EnvLighting && (Ym = 1 === tt.payload[0])
+          onEnvEvent: uu => {
+            var Eu;
+            uu.kind === nE.T.SkyImages ? null === (Eu = tX) || void 0 === Eu || Eu.onEvent(uu.payload) : uu.kind === nE.T.EnvLighting && (xX = 1 === uu.payload[0])
           },
-          onImages: tt => {
-            var et;
-            null === (et = Bm) || void 0 === et || et.onEvent(tt)
+          onImages: uu => {
+            var Eu;
+            null === (Eu = TX) || void 0 === Eu || Eu.onEvent(uu)
           },
-          onModelRequest: tt => {
-            var et;
-            null === (et = rm) || void 0 === et || et.request(tt)
+          onModelRequest: uu => {
+            var Eu;
+            null === (Eu = FX) || void 0 === Eu || Eu.request(uu)
           },
-          onModelTaken: (tt, et) => {
-            var Vt;
-            null === (Vt = rm) || void 0 === Vt || Vt.taken(tt, et)
+          onModelTaken: (uu, Eu) => {
+            var ju;
+            null === (ju = FX) || void 0 === ju || ju.taken(uu, Eu)
           },
           onTerrainTexturesWanted: () => {
             queueMicrotask((() => {
-              ! function(tt, et) {
-                const Vt = am;
-                if (null === Vt || tt.isStopped) return;
-                Vt.restore((tt => {
-                  (0, PV.reportTerrainTextureFailure)(tt, et)
-                })).then((et => {
-                  !1 !== et || tt.isStopped ? !0 === et && console.info(`${oD} terrain textures handed over again after the renderer lost them`) : console.warn(`${oD} the terrain textures couldn't be handed over again: the terrain draws blank`)
+              ! function(uu, Eu) {
+                const ju = MX;
+                if (null === ju || uu.isStopped) return;
+                ju.restore((uu => {
+                  (0, vj.reportTerrainTextureFailure)(uu, Eu)
+                })).then((Eu => {
+                  !1 !== Eu || uu.isStopped ? !0 === Eu && console.info(`${FZ} terrain textures handed over again after the renderer lost them`) : console.warn(`${FZ} the terrain textures couldn't be handed over again: the terrain draws blank`)
                 }))
-              }(St, Wt)
+              }(Pu, au)
             }))
           },
-          onKeepAlive: tt => {
-            const et = null === Md ? void 0 : bd.get(Md);
-            void 0 !== et && sO(et, tt)
+          onKeepAlive: uu => {
+            const Eu = null === gl ? void 0 : Ml.get(gl);
+            void 0 !== Eu && Rs(Eu, uu)
           },
           onSends: () => {
-            ! function(tt) {
-              const et = performance.now();
-              if (tt.forEachNetOut(HX), DX(tt), (0, EV.L)(tt, {
-                  worldgen: Rm,
-                  mesh: Pm
-                }), null !== mj) try {
-                mj.sendsWent(tt, et, performance.now())
-              } catch (qt) {
-                pH(qt)
+            ! function(uu) {
+              const Eu = performance.now();
+              if (uu.forEachNetOut(fC), ZC(uu), (0, cj.E)(uu, {
+                  worldgen: mX,
+                  mesh: KX
+                }), null !== Uq) try {
+                Uq.sendsWent(uu, Eu, performance.now())
+              } catch (Uu) {
+                Hf(Uu)
               }
-            }(St)
+            }(Pu)
           }
         });
-        if (wm = St, null === (mt = ze.d.wasmNetReady) || void 0 === mt || mt.call(ze.d, (() => St.isStopped ? 0 : St.netKeptFrames)), null !== tt) {
-          St.setAntiCheatProbes(ID(ye.z, tt.checks)), tt.watchHeld(ZD.CoreFrame, (() => St.frame)), tt.watchHeld(ZD.GlueFrame, (() => vt.frame));
-          const et = function(tt, et) {
-            const Vt = new PD(et);
-            let Ot = !1;
-            Vt.BQ(tt.BQ());
-            const qt = (0, TO.jb)((() => {
-              Vt.BQ(tt.BQ())
-            }), LD);
-            let Dt = 6 * (0, TO.X)() | 0;
-            const mt = () => {
-              ++Dt < 6 || (Dt = 0, tt.checks.stackCheck() && (Ot = !0))
+        if (hX = Pu, null === (Xu = WE.d.wasmNetReady) || void 0 === Xu || Xu.call(WE.d, (() => Pu.isStopped ? 0 : Pu.netKeptFrames)), null !== uu) {
+          Pu.setAntiCheatProbes(KZ(YE.z, uu.checks)), uu.watchHeld(rZ.CoreFrame, (() => Pu.frame)), uu.watchHeld(rZ.GlueFrame, (() => du.frame));
+          const Eu = function(uu, Eu) {
+            const ju = new VZ(Eu);
+            let su = !1;
+            ju.Tb(uu.Tb());
+            const Uu = (0, ys.db)((() => {
+              ju.Tb(uu.Tb())
+            }), QZ);
+            let Zu = 6 * (0, ys.Q)() | 0;
+            const Xu = () => {
+              ++Zu < 6 || (Zu = 0, uu.checks.stackCheck() && (su = !0))
             };
-            (0, QD.l)(mt);
-            const dt = () => {
-              const et = tt.checkPadCall();
-              0 !== et && Vt.setFlags(et)
+            (0, cZ.j)(Xu);
+            const lu = () => {
+              const Eu = uu.checkPadCall();
+              0 !== Eu && ju.setFlags(Eu)
             };
-            return (0, XD.j)(dt), {
-              onSend: mt,
+            return (0, bZ.i)(lu), {
+              onSend: Xu,
               beforeFrame: () => {
-                Ot && Vt.originStackHit() && (Ot = !1)
+                su && ju.originStackHit() && (su = !1)
               },
-              onEvent: et => {
-                const Ot = tt.checkEvent(et);
-                Vt.value(ge.g.ProbeUsedProp, tt.usedProp()), 0 !== Ot && Vt.setFlags(Ot)
+              onEvent: Eu => {
+                const su = uu.checkEvent(Eu);
+                ju.value(nE.j.ProbeUsedProp, uu.usedProp()), 0 !== su && ju.setFlags(su)
               },
               stop: () => {
-                (0, TO.kb)(qt), (0, QD.h)(mt), (0, XD.i)(dt)
+                (0, ys.gb)(Uu), (0, cZ.f)(Xu), (0, bZ.h)(lu)
               }
             }
-          }(tt, ((tt, et, Vt) => {
-            let Ot = !1;
-            return bX(St, (() => {
-              Ot = St.rings.input.writeRecord(ge.Fb.AntiCheat, tt, et, Vt, 0)
-            })), Ot
+          }(uu, ((uu, Eu, ju) => {
+            let su = !1;
+            return eC(Pu, (() => {
+              su = Pu.rings.input.writeRecord(nE.sb.AntiCheat, uu, Eu, ju, 0)
+            })), su
           }));
-          St.isStopped ? et.stop() : zm = et
+          Pu.isStopped ? Eu.stop() : SX = Eu
         }
-        dm = (tt, et, Vt) => St.rings.cmd.writeCmd(tt, et, Vt), jm = tt => St.rings.cmd.growForCmd(tt), Qd = !1, ZH(), (0, Pt.u)(St, {
-          core: vt,
-          memory: ye.z,
-          staleOr: (tt, et, Vt, Ot) => WX({
-            site: tt,
-            error: et
-          }, Vt, Ot),
-          reportReplayFault: (tt, et) => {
-            (0, PV.reportReplayFault)(tt, et, bm)
+        qX = (uu, Eu, ju) => Pu.rings.cmd.writeCmd(uu, Eu, ju), fX = uu => Pu.rings.cmd.growForCmd(uu), bl = !1, Kf(), (0, vu.B)(Pu, {
+          core: du,
+          memory: YE.z,
+          staleOr: (uu, Eu, ju, su) => PC({
+            site: uu,
+            error: Eu
+          }, ju, su),
+          reportReplayFault: (uu, Eu) => {
+            (0, vj.reportReplayFault)(uu, Eu, GX)
           },
-          audio: Mm,
-          options: Ke.b,
-          onNetEvent: xH,
-          sessionInfo: tt => {
-            var et;
-            return (null === (et = hd) || void 0 === et ? void 0 : et.conn) === tt ? hd.info : null
+          audio: eX,
+          options: wE.e,
+          onNetEvent: Af,
+          sessionInfo: uu => {
+            var Eu;
+            return (null === (Eu = Jl) || void 0 === Eu ? void 0 : Eu.conn) === uu ? Jl.info : null
           },
-          onEventOverflow: xj,
-          replayShaderPack: tt => {
-            var et;
-            null === (et = Tm) || void 0 === et || et.replay(tt)
+          onEventOverflow: Tq,
+          replayShaderPack: uu => {
+            var Eu;
+            null === (Eu = nX) || void 0 === Eu || Eu.replay(uu)
           },
-          hasPackModel: tt => {
-            var et, Vt;
-            return null !== (null !== (et = null === (Vt = LH()) || void 0 === Vt ? void 0 : Vt.modelUrl(tt)) && void 0 !== et ? et : null)
+          hasPackModel: uu => {
+            var Eu, ju;
+            return null !== (null !== (Eu = null === (ju = Vf()) || void 0 === ju ? void 0 : ju.modelUrl(uu)) && void 0 !== Eu ? Eu : null)
           },
-          beforeWrite: () => (!dd && St.rings.net.cursor > 0 && nH(St, !1, "all"), !St.isStopped),
-          beforeOp: () => (!dd && St.netWrittenSinceFrame > 0 && nH(St, !1, "budget"), !St.isStopped)
-        }), (0, It.A)({
+          beforeWrite: () => (!ll && Pu.rings.net.cursor > 0 && Rf(Pu, !1, "all"), !Pu.isStopped),
+          beforeOp: () => (!ll && Pu.netWrittenSinceFrame > 0 && Rf(Pu, !1, "budget"), !Pu.isStopped)
+        }), (0, mu.F)({
           lockPointer: () => {
-            if (!DO(yt)) return !1;
+            if (!Zs(hu)) return !1;
             try {
-              Promise.resolve(yt.requestPointerLock()).catch((() => {}))
+              Promise.resolve(hu.requestPointerLock()).catch((() => {}))
             } catch {
               return !1
             }
             return !0
           },
           unlockPointer: () => {
-            (0, BV.c)()
+            (0, xj.d)()
           },
           leaveGame: () => {
-            pj()
+            xq()
           },
-          canvas: () => yt
-        }), om = (0, It.p)((() => {
-          var tt;
-          const et = (0, Pt.g)();
-          null === (tt = (0, Pt.q)()) || void 0 === tt || tt.followCursorAim(!0 === (null === et || void 0 === et ? void 0 : et.isSessionLive) ? et : null)
-        })), wd && St.setUiPrefs(wd);
-        yd && St.setEnvPrefs(yd);
-        Nd && St.setLookPrefs(Nd);
-        const ct = Lq ? Fq(Lq.preventMovement) : null;
-        ct && DH(ct);
-        const Rt = (0, SV.i)(),
-          Zt = (0, SV.e)(St, Rt);
-        km = Rt.basis, (0, UV.n)(null === Zt ? null : (0, WV.l)(Zt)), Fm = Zt;
-        const Lt = (0, ae.d)();
-        let Ft = 1 / 0,
-          kt = !0,
-          Gt = Rt.shedFootprintBytes;
-        const zt = new Hq.d(Lt, (() => vt.Ty()), (tt => {
-          St.crash(EV.l, tt)
+          canvas: () => hu
+        }), IX = (0, mu.u)((() => {
+          var uu;
+          const Eu = (0, vu.l)();
+          null === (uu = (0, vu.w)()) || void 0 === uu || uu.followCursorAim(!0 === (null === Eu || void 0 === Eu ? void 0 : Eu.isSessionLive) ? Eu : null)
+        })), Yl && Pu.setUiPrefs(Yl);
+        hl && Pu.setEnvPrefs(hl);
+        Dl && Pu.setLookPrefs(Dl);
+        const ou = QU ? iU(QU.preventMovement) : null;
+        ou && sf(ou);
+        const ku = (0, Pj.k)(),
+          Ku = (0, Pj.g)(Pu, ku);
+        iX = ku.basis, (0, Fj.k)(null === Ku ? null : (0, aj.s)(Ku)), QX = Ku;
+        const Vu = (0, DE.b)();
+        let ru = 1 / 0,
+          Qu = !0,
+          iu = ku.shedFootprintBytes;
+        const Wu = new CU.c(Vu, (() => du.Lh()), (uu => {
+          Pu.crash(cj.l, uu)
         }));
-        Zm = zt, Lm = zt, null !== Zt && zt.setCeiling(Math.min((0, Hq.q)(Zt), Ft, (0, SV.l)()));
-        if (kt) {
-          zt.setShed((tt => {
-            const et = St.shedMemory("joinReserve" !== tt);
-            return null !== et && (null === Fm || et < Fm) && (Fm = et, (0, UV.n)((0, WV.l)(et))), et
-          }), ((tt, et, Vt) => {
-            1 === et ? (0, PV.reportMemoryShed)(tt, Vt, bm) : console.warn(`${oD} wasm memory: shed again (${tt}): shed ${et}`, Vt.wasmMemoryShed)
-          }), (() => St.addDistanceInUse()));
-          const tt = (0, QV.P)(ht);
-          zt.setFootprint(new xq(Gt, {
-            storedChunks: () => vt.POt(),
+        VX = Wu, rX = Wu, null !== Ku && Wu.setCeiling(Math.min((0, CU.p)(Ku), ru, (0, Pj.o)()));
+        if (Qu) {
+          Wu.setShed((uu => {
+            const Eu = Pu.shedMemory("joinReserve" !== uu);
+            return null !== Eu && (null === QX || Eu < QX) && (QX = Eu, (0, Fj.k)((0, aj.s)(Eu))), Eu
+          }), ((uu, Eu, ju) => {
+            1 === Eu ? (0, vj.reportMemoryShed)(uu, ju, GX) : console.warn(`${FZ} wasm memory: shed again (${uu}): shed ${Eu}`, ju.wasmMemoryShed)
+          }), (() => Pu.addDistanceInUse()));
+          const uu = (0, Cj.Z)(Ju);
+          Wu.setFootprint(new nU(iu, {
+            storedChunks: () => du.fsu(),
             gpuBytes: () => {
-              var et;
-              return null !== (et = null === tt || void 0 === tt ? void 0 : tt.ZOt()) && void 0 !== et ? et : 0
+              var Eu;
+              return null !== (Eu = null === uu || void 0 === uu ? void 0 : uu.Csu()) && void 0 !== Eu ? Eu : 0
             },
-            jsHeapBytes: pq
+            jsHeapBytes: AU
           }))
         }
         window.addEventListener("pagehide", (() => {
-          Zm === zt && (zt.refreshStats(), MX(zt))
-        })), window.addEventListener("pagehide", gH), window.addEventListener("pagehide", sH), !1;
-        const [ot, rt] = (0, FV.d)();
-        Hj = (0, GV.i)((tt => St.setChunkAddDistance(tt.horizontal, tt.vertical)), {
-          horizontal: ot,
-          vertical: rt
-        }), St.setAmbientOcclusion(!0 !== AV.e.getItem("disableAmbientOcclusion")), St.setPoseLod(!0 !== AV.e.getItem(fe.H)), St.setDebugLog(ge.R.Look, !0), St.setDebugLog(ge.R.CameraSet, !0), (0, sq.startLookDebug)("wasm", {
-          look: () => St.takeDebugLog(ge.R.Look),
-          cameraSets: () => St.takeDebugLog(ge.R.CameraSet)
-        }), (0, Tq.v)("remesh") && (St.setDebugLog(ge.R.Remesh, !0), Ut = () => St.takeDebugLog(ge.R.Remesh), OD = new VD((0, nq.n)(), Ut));
-        var Ut;
-        const At = function(tt, et, Vt, Ot) {
-          const qt = new CO,
-            Dt = tt => AV.e.getItem(tt);
-          qt.sync(Dt, et), (0, Fe.ab)();
-          const mt = (0, jt.n)("customBindingsChanged", (() => {
-            qt.sync(Dt, et)
+          VX === Wu && (Wu.refreshStats(), MC(Wu))
+        })), window.addEventListener("pagehide", yf), window.addEventListener("pagehide", zf), !1;
+        const [Su, Iu] = (0, rj.h)();
+        lq = (0, ij.e)((uu => Pu.setChunkAddDistance(uu.horizontal, uu.vertical)), {
+          horizontal: Su,
+          vertical: Iu
+        }), Pu.setAmbientOcclusion(!0 !== Bj.k.getItem("disableAmbientOcclusion")), Pu.setPoseLod(!0 !== Bj.k.getItem(NE.Q)), Pu.setDebugLog(nE.I.Look, !0), Pu.setDebugLog(nE.I.CameraSet, !0), (0, RU.startLookDebug)("wasm", {
+          look: () => Pu.takeDebugLog(nE.I.Look),
+          cameraSets: () => Pu.takeDebugLog(nE.I.CameraSet)
+        }), (0, yU.p)("remesh") && (Pu.setDebugLog(nE.I.Remesh, !0), Fu = () => Pu.takeDebugLog(nE.I.Remesh), UZ = new sZ((0, uZ.k)(), Fu));
+        var Fu;
+        const Bu = function(uu, Eu, ju, su) {
+          const Uu = new ps,
+            Zu = uu => Bj.k.getItem(uu);
+          Uu.sync(Zu, Eu), (0, rE.V)();
+          const Xu = (0, qu.l)("customBindingsChanged", (() => {
+            Uu.sync(Zu, Eu)
           }));
-          (0, pV.p)(et);
-          const dt = new Set,
-            Ht = (0, It.p)((() => {
-              var tt;
-              dt.size > 0 && vO() && !0 === (null === (tt = (0, Pt.g)()) || void 0 === tt ? void 0 : tt.localPlayerAlive()) && jt.j.sw("usedKeyboard")
+          (0, Tj.o)(Eu);
+          const lu = new Set,
+            fu = (0, mu.u)((() => {
+              var uu;
+              lu.size > 0 && Ps() && !0 === (null === (uu = (0, vu.l)()) || void 0 === uu ? void 0 : uu.localPlayerAlive()) && qu.h.TY("usedKeyboard")
             })),
-            Xt = EO.e.heldSizer((() => (0, oe.p)(tt))),
-            Qt = lO(tt, et, {
-              prevents: tt => qt.prevents(tt),
-              keyPressed: tt => {
-                qt.moves(tt) && (dt.add(tt), vO() && jt.j.sw("usedKeyboard"))
+            Cu = Ns.c.heldSizer((() => (0, SE.q)(uu))),
+            bu = cs(uu, Eu, {
+              prevents: uu => Uu.prevents(uu),
+              keyPressed: uu => {
+                Uu.moves(uu) && (lu.add(uu), Ps() && qu.h.TY("usedKeyboard"))
               },
-              keyReleased: tt => {
-                dt.delete(tt)
+              keyReleased: uu => {
+                lu.delete(uu)
               },
               keysReleased: () => {
-                dt.clear()
+                lu.clear()
               },
               resized: () => {
-                KO.h.measure(tt.getBoundingClientRect()), (0, fO.j)()
+                ds.j.measure(uu.getBoundingClientRect()), (0, Os.m)()
               },
-              sizeCanvas: Xt,
-              watchRenderScale: et => {
-                const Vt = (0, oe.s)(tt, et),
-                  Ot = EO.e.onRelease(et);
+              sizeCanvas: Cu,
+              watchRenderScale: Eu => {
+                const ju = (0, SE.s)(uu, Eu),
+                  su = Ns.c.onRelease(Eu);
                 return () => {
-                  Vt(), Ot()
+                  ju(), su()
                 }
               },
               touchStarting: () => {
-                KO.h.measure(tt.getBoundingClientRect())
+                ds.j.measure(uu.getBoundingClientRect())
               },
-              viewShown: Vt,
-              touchUiShown: () => ee.b.get("isTouchScreen"),
-              ctrlCombosAreGames: vO,
-              inspect: (tt, et, Vt) => {
-                qt.checks(et, Vt) && Ot(tt)
+              viewShown: ju,
+              touchUiShown: () => uE.d.get("isTouchScreen"),
+              ctrlCombosAreGames: Ps,
+              inspect: (uu, Eu, ju) => {
+                Uu.checks(Eu, ju) && su(uu)
               },
-              canLock: () => DO(tt)
+              canLock: () => Zs(uu)
             }),
-            lt = (0, MV.e)(et);
+            cu = (0, gj.c)(Eu);
           return () => {
-            mt(), Ht(), (0, pV.p)(null), lt(), Qt()
+            Xu(), fu(), (0, Tj.o)(null), cu(), bu()
           }
-        }(yt, ((tt, et, Vt, Ot, qt) => {
-          bX(St, (() => {
-            St.rings.input.writeRecord(tt, et, Vt, Ot, qt)
-          })), !jd && (0, IO.c)(tt, qt) && (0, IO.b)((() => {
-            wm !== St || vj || St.isStopped || !dX() || nH(St, !1, "budget", !1)
+        }(hu, ((uu, Eu, ju, su, Uu) => {
+          eC(Pu, (() => {
+            Pu.rings.input.writeRecord(uu, Eu, ju, su, Uu)
+          })), !ql && (0, Ks.h)(uu, Uu) && (0, Ks.d)((() => {
+            hX !== Pu || Jq || Pu.isStopped || !lC() || Rf(Pu, !1, "budget", !1)
           }))
-        }), (() => Cj), (tt => {
-          var et;
-          null === (et = zm) || void 0 === et || et.onEvent(tt)
+        }), (() => eq), (uu => {
+          var Eu;
+          null === (Eu = SX) || void 0 === Eu || Eu.onEvent(uu)
         }));
-        if (St.isStopped) return At(), null;
-        cm = At;
-        const it = () => !St.isStopped && !Kj;
-        if (St.isStopped) return null;
-        (0, ye.$)((() => {
-          "call" === (0, ye.s)() && St.crash(EV.w, (0, ye.q)())
+        if (Pu.isStopped) return Bu(), null;
+        kX = Bu;
+        const Lu = () => !Pu.isStopped && !pq;
+        if (Pu.isStopped) return null;
+        (0, YE.W)((() => {
+          "call" === (0, YE.r)() && Pu.crash(cj.r, (0, YE.q)())
         }));
-        const Yt = (0, EV.O)(St.rings.worker, (() => {
-          nH(St, !1, document.hidden ? "all" : "budget")
+        const tu = (0, cj.F)(Pu.rings.worker, (() => {
+          Rf(Pu, !1, document.hidden ? "all" : "budget")
         }));
-        Rm = function(tt, et) {
-          return JX().then((tt => {
+        mX = function(uu, Eu) {
+          return GC().then((uu => {
             let {
-              prefetchWorldgenWorker: et
-            } = tt;
-            et()
-          }), (() => {})), new dD({
-            module: (0, ye.A)(),
-            decodeSettings: tt => {
-              const et = (0, Pt.q)();
-              if (null === et) throw new Error("no game code to decode the world-gen seed with");
-              return et.decodeMapSettings(tt)
+              prefetchWorldgenWorker: Eu
+            } = uu;
+            Eu()
+          }), (() => {})), new qZ({
+            module: (0, YE.A)(),
+            decodeSettings: uu => {
+              const Eu = (0, vu.w)();
+              if (null === Eu) throw new Error("no game code to decode the world-gen seed with");
+              return Eu.decodeMapSettings(uu)
             },
-            loadWorker: CX,
+            loadWorker: pC,
             onMapWithoutWorldgen: () => {
-              uX((tt => {
+              wC((uu => {
                 let {
-                  stopWorldgenWorkerPrefetch: et
-                } = tt;
-                et()
+                  stopWorldgenWorkerPrefetch: Eu
+                } = uu;
+                Eu()
               }))
             },
-            onLoadFailed: tt => {
-              (0, PV.reportWorldgenLoadFailure)(tt, bm)
+            onLoadFailed: uu => {
+              (0, vj.reportWorldgenLoadFailure)(uu, GX)
             },
-            onWorkerLost: tt => {
-              (0, PV.reportWorkerLost)(EV.E, tt, bm)
+            onWorkerLost: uu => {
+              (0, vj.reportWorkerLost)(cj.A, uu, GX)
             },
-            onStartTimeout: tt => {
-              (0, PV.reportWorkerStartTimeout)(EV.E, tt, bm)
+            onStartTimeout: uu => {
+              (0, vj.reportWorkerStartTimeout)(cj.A, uu, GX)
             },
-            onGaveUp: tt => {
-              (0, PV.reportWorldgenGaveUp)(tt, bm)
+            onGaveUp: uu => {
+              (0, vj.reportWorldgenGaveUp)(uu, GX)
             },
-            onMemoryStats: tt => {
-              var et;
-              null === (et = Zm) || void 0 === et || et.noteWorldgen(tt)
+            onMemoryStats: uu => {
+              var Eu;
+              null === (Eu = VX) || void 0 === Eu || Eu.noteWorldgen(uu)
             },
             onMemoryGone: () => {
-              var tt;
-              null === (tt = Zm) || void 0 === tt || tt.worldgenGone()
+              var uu;
+              null === (uu = VX) || void 0 === uu || uu.worldgenGone()
             },
-            write: (Vt, Ot, qt, Dt, mt) => {
-              bX(tt, (() => {
-                tt.rings.worker.writeWorkerRecord(Vt, Ot, qt, 0, Dt, mt) || tt.crash(EV.E, `a world-gen record of kind ${Ot} did not fit the worker-in ring`)
-              })), et()
+            write: (ju, su, Uu, Zu, Xu) => {
+              eC(uu, (() => {
+                uu.rings.worker.writeWorkerRecord(ju, su, Uu, 0, Zu, Xu) || uu.crash(cj.A, `a world-gen record of kind ${su} did not fit the worker-in ring`)
+              })), Eu()
             }
           })
-        }(St, Yt), Pm = function(tt, et) {
-          return new dq({
-            module: (0, ye.A)(),
+        }(Pu, tu), KX = function(uu, Eu) {
+          return new qU({
+            module: (0, YE.A)(),
             loadWorkers: async () => {
               const [{
-                createMeshWorker: tt
-              }, et] = await Promise.all([Vt.e(41).then((() => Vt(51328))), Promise.resolve().then((() => Vt(106))).then((tt => {
+                createMeshWorker: uu
+              }, Eu] = await Promise.all([ju.e(41).then((() => ju(51307))), Promise.resolve().then((() => ju(91))).then((uu => {
                 let {
-                  isMobile: et
-                } = tt;
-                return et()
+                  isMobile: Eu
+                } = uu;
+                return Eu()
               }), (() => !1))]);
               return {
-                create: tt,
-                count: (0, Re.b)(navigator.hardwareConcurrency, et),
-                maxKeptLightStates: et ? 1 : void 0
+                create: uu,
+                count: (0, kE.e)(navigator.hardwareConcurrency, Eu),
+                maxKeptLightStates: Eu ? 1 : void 0
               }
             },
-            write: (Vt, Ot, qt, Dt, mt, dt) => {
-              (0, fO.h)(), bX(tt, (() => {
-                tt.rings.worker.writeWorkerRecord(Vt, Ot, qt, Dt, mt, dt) || tt.crash(EV.p, `a meshing record of kind ${Ot} did not fit the worker-in ring`)
-              })), et()
+            write: (ju, su, Uu, Zu, Xu, lu) => {
+              (0, Os.j)(), eC(uu, (() => {
+                uu.rings.worker.writeWorkerRecord(ju, su, Uu, Zu, Xu, lu) || uu.crash(cj.m, `a meshing record of kind ${su} did not fit the worker-in ring`)
+              })), Eu()
             },
-            onWorkerLost: tt => {
-              (0, PV.reportWorkerLost)(EV.p, tt, bm)
+            onWorkerLost: uu => {
+              (0, vj.reportWorkerLost)(cj.m, uu, GX)
             },
-            onLightFault: (tt, et) => {
-              (0, PV.reportLightFault)(tt, et, bm)
+            onLightFault: (uu, Eu) => {
+              (0, vj.reportLightFault)(uu, Eu, GX)
             },
-            onStartTimeout: tt => {
-              (0, PV.reportWorkerStartTimeout)(EV.p, tt, bm)
+            onStartTimeout: uu => {
+              (0, vj.reportWorkerStartTimeout)(cj.m, uu, GX)
             },
-            onMemoryStats: (tt, et) => {
-              var Vt;
-              null === (Vt = Zm) || void 0 === Vt || Vt.noteMeshWorker(tt, et)
+            onMemoryStats: (uu, Eu) => {
+              var ju;
+              null === (ju = VX) || void 0 === ju || ju.noteMeshWorker(uu, Eu)
             },
-            onMemoryGone: tt => {
-              var et;
-              null === (et = Zm) || void 0 === et || et.meshWorkerGone(tt)
+            onMemoryGone: uu => {
+              var Eu;
+              null === (Eu = VX) || void 0 === Eu || Eu.meshWorkerGone(uu)
             },
-            fail: (et, Vt) => {
-              const Ot = () => {
-                tt.crash(EV.p, void 0 === Vt ? et : new Error(et, {
-                  cause: Vt
+            fail: (Eu, ju) => {
+              const su = () => {
+                uu.crash(cj.m, void 0 === ju ? Eu : new Error(Eu, {
+                  cause: ju
                 }))
               };
-              void 0 !== Vt ? WX({
-                site: EV.p,
-                error: Vt
-              }, Ot) : Ot()
+              void 0 !== ju ? PC({
+                site: cj.m,
+                error: ju
+              }, su) : su()
             }
           })
-        }(St, Yt), gj();
-        const Bt = (0, Cq.p)(Se.clientSideServerUrls.staticUrl, {
-            onTableFailed: tt => {
-              WX({
-                site: PV.MODEL_FEED_SITE,
-                error: tt
+        }(Pu, tu), Aq();
+        const xu = (0, wU.i)(PE.clientSideServerUrls.staticUrl, {
+            onTableFailed: uu => {
+              PC({
+                site: vj.MODEL_FEED_SITE,
+                error: uu
               }, (() => {}), {
-                stillWanted: it
+                stillWanted: Lu
               })
             },
-            packUrl: tt => {
-              var et, Vt;
-              return null !== (et = null === (Vt = LH()) || void 0 === Vt ? void 0 : Vt.modelUrl(tt)) && void 0 !== et ? et : null
+            packUrl: uu => {
+              var Eu, ju;
+              return null !== (Eu = null === (ju = Vf()) || void 0 === ju ? void 0 : ju.modelUrl(uu)) && void 0 !== Eu ? Eu : null
             }
           }),
-          pt = function(tt, et, Vt) {
-            const Ot = Vt => {
-              var Ot, qt;
-              return null !== (Ot = null === (qt = et()) || void 0 === qt ? void 0 : qt.drawnUrl(Vt)) && void 0 !== Ot ? Ot : tt.url(Vt)
+          Tu = function(uu, Eu, ju) {
+            const su = ju => {
+              var su, Uu;
+              return null !== (su = null === (Uu = Eu()) || void 0 === Uu ? void 0 : Uu.drawnUrl(ju)) && void 0 !== su ? su : uu.url(ju)
             };
-            return (0, bq.h)((0, Qq.l)(Ot), Vt)
-          }(Bt, (() => rm), LH),
-          xt = new Qq.g(pt, (tt => {
-            console.warn(`${oD} image ${tt.key.kind}:${tt.key.index}:${tt.key.word} failed`, tt.error)
+            return (0, GU.m)((0, cU.m)(su), ju)
+          }(xu, (() => FX), Vf),
+          Hu = new cU.g(Tu, (uu => {
+            console.warn(`${FZ} image ${uu.key.kind}:${uu.key.index}:${uu.key.word} failed`, uu.error)
           }));
-        Bm = xt, pm = new Nq(St, pt, ((tt, et) => {
-          void 0 === et ? console.warn(`${oD} ${tt}`) : kH(tt, et)
+        TX = Hu, HX = new gU(Pu, Tu, ((uu, Eu) => {
+          void 0 === Eu ? console.warn(`${FZ} ${uu}`) : Qf(uu, Eu)
         }));
-        const Tt = new Mq.i(Bt, function(tt, et) {
-          let Ot = !1,
-            qt = null,
-            Dt = null;
-          const mt = {
-              onUnavailable: (Vt, Ot) => {
-                Dt ??= WX({
-                  site: PV.MODEL_POOL_SITE,
-                  error: Vt,
-                  urls: Ot
+        const Au = new eU.g(xu, function(uu, Eu) {
+          let su = !1,
+            Uu = null,
+            Zu = null;
+          const Xu = {
+              onUnavailable: (ju, su) => {
+                Zu ??= PC({
+                  site: vj.MODEL_POOL_SITE,
+                  error: ju,
+                  urls: su
                 }, (() => {
-                  (0, PV.reportModelPoolFailure)(Vt, tt)
+                  (0, vj.reportModelPoolFailure)(ju, uu)
                 }), {
-                  stillWanted: et
+                  stillWanted: Eu
                 })
               },
-              onDecoderFailed: (Vt, Ot) => {
-                const qt = () => {
-                  (0, PV.reportDracoDecoderFailure)(Vt, tt)
+              onDecoderFailed: (ju, su) => {
+                const Uu = () => {
+                  (0, vj.reportDracoDecoderFailure)(ju, uu)
                 };
-                void 0 !== Ot ? WX({
-                  site: PV.MODEL_POOL_SITE,
-                  error: Vt,
-                  urls: Ot
-                }, qt, {
-                  stillWanted: et
-                }) : qt()
+                void 0 !== su ? PC({
+                  site: vj.MODEL_POOL_SITE,
+                  error: ju,
+                  urls: su
+                }, Uu, {
+                  stillWanted: Eu
+                }) : Uu()
               },
-              onWorkerLost: et => {
-                (0, PV.reportWorkerLost)(PV.MODEL_POOL_SITE, et, tt)
+              onWorkerLost: Eu => {
+                (0, vj.reportWorkerLost)(vj.MODEL_POOL_SITE, Eu, uu)
               },
-              onModuleRetry: (et, Vt) => {
-                (0, PV.reportModelsModuleRetry)(et, Vt, tt)
+              onModuleRetry: (Eu, ju) => {
+                (0, vj.reportModelsModuleRetry)(Eu, ju, uu)
               }
             },
-            dt = Vt.e(43).then((() => Vt(51332))).then((tt => {
+            lu = ju.e(43).then((() => ju(51314))).then((uu => {
               let {
-                pageModelPool: et
-              } = tt;
-              if (Ot) return null;
-              const Vt = et(mt);
-              return qt = Vt.unlisten, Um = Vt.pool, gj(), Vt.pool
-            }), (tt => (Ot || mt.onUnavailable(tt, void 0), null)));
-          return Am = () => {
-            var tt;
-            Ot = !0, null === (tt = qt) || void 0 === tt || tt(), Um = null
-          }, (tt, et) => dt.then((Vt => {
-            var Ot;
-            return null !== (Ot = null === Vt || void 0 === Vt ? void 0 : Vt.build(tt, et)) && void 0 !== Ot ? Ot : (0, uq.s)(tt, "the model workers did not load")
-          })).then((tt => null !== Dt && (0, uq.k)(tt) ? Dt.then((() => tt)) : tt))
-        }(Wt, it), (tt => {
-          tt.startup ? (QX(), WX({
-            site: PV.MODEL_FEED_SITE,
-            error: tt.error,
-            urls: "" === tt.url ? void 0 : [tt.url]
+                pageModelPool: Eu
+              } = uu;
+              if (su) return null;
+              const ju = Eu(Xu);
+              return Uu = ju.unlisten, BX = ju.pool, Aq(), ju.pool
+            }), (uu => (su || Xu.onUnavailable(uu, void 0), null)));
+          return LX = () => {
+            var uu;
+            su = !0, null === (uu = Uu) || void 0 === uu || uu(), BX = null
+          }, (uu, Eu) => lu.then((ju => {
+            var su;
+            return null !== (su = null === ju || void 0 === ju ? void 0 : ju.build(uu, Eu)) && void 0 !== su ? su : (0, JU.s)(uu, "the model workers did not load")
+          })).then((uu => null !== Zu && (0, JU.l)(uu) ? Zu.then((() => uu)) : uu))
+        }(au, Lu), (uu => {
+          uu.startup ? (bC(), PC({
+            site: vj.MODEL_FEED_SITE,
+            error: uu.error,
+            urls: "" === uu.url ? void 0 : [uu.url]
           }, (() => {
-            (0, PV.reportModelFailure)(tt, Wt)
-          }))) : (0, PV.reportModelFailure)(tt, Wt)
+            (0, vj.reportModelFailure)(uu, au)
+          }))) : (0, vj.reportModelFailure)(uu, au)
         }), {
-          onWritten: (tt, et) => {
-            xt.glbWritten(tt, et)
+          onWritten: (uu, Eu) => {
+            Hu.glbWritten(uu, Eu)
           },
-          onTaken: (tt, et) => {
-            xt.glbTaken(tt, et)
+          onTaken: (uu, Eu) => {
+            Hu.glbTaken(uu, Eu)
           },
-          onPackFileFailed: (tt, et) => {
-            console.warn(`${oD} the texture pack's model file ${tt} failed: the shipped one loads`, et)
+          onPackFileFailed: (uu, Eu) => {
+            console.warn(`${FZ} the texture pack's model file ${uu} failed: the shipped one loads`, Eu)
           }
         });
-        rm = Tt;
-        const gt = new fq.c(St);
-        am = gt, gt.swap((tt => {
-          const et = () => {
-            (0, PV.reportTerrainTextureFailure)(tt, Wt)
+        FX = Au;
+        const nu = new YU.c(Pu);
+        MX = nu, nu.swap((uu => {
+          const Eu = () => {
+            (0, vj.reportTerrainTextureFailure)(uu, au)
           };
-          if (Xj) return void et();
-          const Vt = () => !Xj,
-            Ot = null === tt.url ? void 0 : [tt.url];
-          WX({
-            site: EV.C,
-            error: tt.error,
-            urls: Ot
-          }, et, {
-            stillWanted: Vt
+          if (qq) return void Eu();
+          const ju = () => !qq,
+            su = null === uu.url ? void 0 : [uu.url];
+          PC({
+            site: cj.y,
+            error: uu.error,
+            urls: su
+          }, Eu, {
+            stillWanted: ju
           })
-        })).then((tt => {
-          null !== tt && (tt || St.isStopped || console.warn(`${oD} the core refused the terrain textures: terrain draws untextured`), td(St))
+        })).then((uu => {
+          null !== uu && (uu || Pu.isStopped || console.warn(`${FZ} the core refused the terrain textures: terrain draws untextured`), ul(Pu))
         }));
-        const st = new xe(St, ((tt, et) => {
-          console.warn(`${oD} ${tt}`, ...void 0 === et ? [] : [et])
+        const yu = new HE(Pu, ((uu, Eu) => {
+          console.warn(`${FZ} ${uu}`, ...void 0 === Eu ? [] : [Eu])
         }));
-        st.feed(), null !== lt && function(tt, et, Ot, qt, Dt, mt) {
-          let dt = null,
-            Ht = null,
-            Xt = !1;
-          const Qt = {
+        yu.feed(), null !== cu && function(uu, Eu, su, Uu, Zu, Xu) {
+          let lu = null,
+            fu = null,
+            Cu = !1;
+          const bu = {
             textures: null,
             stop: () => {
-              var tt, et;
-              Xt = !0, null === (tt = Ht) || void 0 === tt || tt(), null === (et = dt) || void 0 === et || et(), Jq.b.setSettled(null), null !== Jm && Lj.clear(Jm)
+              var uu, Eu;
+              Cu = !0, null === (uu = fu) || void 0 === uu || uu(), null === (Eu = lu) || void 0 === Eu || Eu(), pU.e.setSettled(null), null !== pX && Kq.clear(pX)
             }
           };
-          Nm = Qt, Ht = GH().follow((Ht => {
-            null !== Ht && Promise.all([Vt.e(204), Vt.e(46)]).then((() => Vt(51300))).then((Vt => {
+          gX = bu, fu = Wf().follow((fu => {
+            null !== fu && Promise.all([ju.e(204), ju.e(46)]).then((() => ju(51276))).then((ju => {
               let {
-                PackTextures: lt
-              } = Vt;
-              if (Xt || tt.isStopped) return;
-              const Et = new lt({
-                feed: Ht,
-                terrain: et,
-                backend: Ot,
-                stopped: () => tt.isStopped,
+                PackTextures: cu
+              } = ju;
+              if (Cu || uu.isStopped) return;
+              const Nu = new cu({
+                feed: fu,
+                terrain: Eu,
+                backend: su,
+                stopped: () => uu.isStopped,
                 landed: () => {
-                  td(tt)
+                  ul(uu)
                 },
                 packSwapped: () => {
-                  (0, bq.d)(qt), mt.feed((() => async function(tt) {
-                    const et = null === tt ? null : await tt.averageColours;
-                    return null === et ? Te() : pe(et)
-                  }(Et.assets))), (0, aq.m)(Et.files()), Dt.refresh().then((tt => {
-                    null !== tt && console.info(`${oD} texture pack models: ${tt.resent} of ${tt.delivered} files written again, ${tt.refetched} refetched`)
+                  (0, GU.j)(Uu), Xu.feed((() => async function(uu) {
+                    const Eu = null === uu ? null : await uu.averageColours;
+                    return null === Eu ? AE() : TE(Eu)
+                  }(Nu.assets))), (0, MU.l)(Nu.files()), Zu.refresh().then((uu => {
+                    null !== uu && console.info(`${FZ} texture pack models: ${uu.resent} of ${uu.delivered} files written again, ${uu.refetched} refetched`)
                   }))
                 },
-                settled: (tt, et, Vt) => {
-                  var Ot;
-                  (Jq.b.setSettled({
-                    state: tt,
-                    files: et
-                  }), function(tt, et, Vt) {
-                    const Ot = null === tt.gameSource && (0, ZV.f)(tt.pack);
-                    if (null === et) return;
-                    const qt = (0, IV.g)(et.error),
-                      Dt = Ot ? "settings" : et.source;
-                    jt.j.sw(IV.c, {
-                      failure: qt,
-                      source: Dt,
-                      pack: LV(tt)
-                    }), (0, PV.reportTexturePackKeptOut)(Dt, qt, et.error, Vt)
-                  }(tt, Vt, bm), null === Vt) && function(tt) {
-                    const et = Jm;
-                    null !== et && Lj.apply(et, tt).then((et => {
-                      et && tt && console.info(`${oD} the texture pack's animations are in (${Object.keys(tt).length} files)`)
+                settled: (uu, Eu, ju) => {
+                  var su;
+                  (pU.e.setSettled({
+                    state: uu,
+                    files: Eu
+                  }), function(uu, Eu, ju) {
+                    const su = null === uu.gameSource && (0, Kj.g)(uu.pack);
+                    if (null === Eu) return;
+                    const Uu = (0, mj.h)(Eu.error),
+                      Zu = su ? "settings" : Eu.source;
+                    qu.h.TY(mj.c, {
+                      failure: Uu,
+                      source: Zu,
+                      pack: Vj(uu)
+                    }), (0, vj.reportTexturePackKeptOut)(Zu, Uu, Eu.error, ju)
+                  }(uu, ju, GX), null === ju) && function(uu) {
+                    const Eu = pX;
+                    null !== Eu && Kq.apply(Eu, uu).then((Eu => {
+                      Eu && uu && console.info(`${FZ} the texture pack's animations are in (${Object.keys(uu).length} files)`)
                     }))
-                  }(null === (Ot = tt.pack) || void 0 === Ot ? void 0 : Ot.animations)
+                  }(null === (su = uu.pack) || void 0 === su ? void 0 : su.animations)
                 },
                 settling: () => {
-                  Jq.b.setSettled(null)
+                  pU.e.setSettled(null)
                 },
-                warn: kH,
-                maxTextureSize: () => Promise.resolve((0, QV.fb)(document.createElement("canvas")))
+                warn: Qf,
+                maxTextureSize: () => Promise.resolve((0, Cj.mb)(document.createElement("canvas")))
               });
-              Qt.textures = Et, dt = Et.start()
-            }), (tt => {
-              console.warn(`${oD} the texture pack's terrain didn't load: the built atlas stays`, tt)
+              bu.textures = Nu, lu = Nu.start()
+            }), (uu => {
+              console.warn(`${FZ} the texture pack's terrain didn't load: the built atlas stays`, uu)
             }))
           }))
-        }(St, gt, lt, xt, Tt, st);
-        const Ve = () => {
-            St.setTextureLayers("")
+        }(Pu, nu, cu, Hu, Au, yu);
+        const EE = () => {
+            Pu.setTextureLayers("")
           },
-          Oe = tt => {
-            (We ??= Vt.e(54).then((() => Vt(51334))).then((tt => {
+          jE = uu => {
+            (aE ??= ju.e(54).then((() => ju(51316))).then((uu => {
               let {
-                TEXTURE_NAMES: et
-              } = tt;
-              return et
-            }), (tt => {
-              throw We = null, tt
-            })), We).then((tt => {
-              St.setTextureLayers(tt) || St.isStopped || (console.warn(`${oD} the core refused the texture names: textured Boxes draw textureNotFound`), Ve())
-            }), (et => {
-              if (St.isStopped) return;
-              const [Vt, ...Ot] = tt;
-              void 0 === Vt ? WX({
-                site: PV.TEXTURE_NAMES_SITE,
-                error: et
+                TEXTURE_NAMES: Eu
+              } = uu;
+              return Eu
+            }), (uu => {
+              throw aE = null, uu
+            })), aE).then((uu => {
+              Pu.setTextureLayers(uu) || Pu.isStopped || (console.warn(`${FZ} the core refused the texture names: textured Boxes draw textureNotFound`), EE())
+            }), (Eu => {
+              if (Pu.isStopped) return;
+              const [ju, ...su] = uu;
+              void 0 === ju ? PC({
+                site: vj.TEXTURE_NAMES_SITE,
+                error: Eu
               }, (() => {
-                console.warn(`${oD} the texture names didn't load, so textured Boxes draw textureNotFound`, et), Ve()
+                console.warn(`${FZ} the texture names didn't load, so textured Boxes draw textureNotFound`, Eu), EE()
               }), {
-                stillWanted: it
+                stillWanted: Lu
               }) : setTimeout((() => {
-                Oe(Ot)
-              }), Vt)
+                jE(su)
+              }), ju)
             }))
           };
-        if (Oe(Dm), null !== lt && !await async function(tt, et, Vt, Ot, Dt, mt) {
-            var dt;
-            const jt = (0, QV.P)(Vt);
-            if (null === jt) return tt.crash(UD, new Error(`this ${Ot} build has no openRenderer`)), !1;
-            let Ht;
-            gd = jt;
+        if (jE(XX), null !== cu && !await async function(uu, Eu, ju, su, Zu, Xu) {
+            var lu;
+            const qu = (0, Cj.Z)(ju);
+            if (null === qu) return uu.crash(LZ, new Error(`this ${su} build has no openRenderer`)), !1;
+            let fu;
+            Al = qu;
             try {
-              var Xt, Qt, lt, Et;
-              const qt = null !== (Xt = null === (Qt = Em) || void 0 === Qt ? void 0 : Qt.pagePreviews()) && void 0 !== Xt ? Xt : null,
-                dt = null !== (lt = null === (Et = Em) || void 0 === Et ? void 0 : Et.previewModule(Vt)) && void 0 !== lt ? lt : null;
-              if (null === qt || null === dt) {
-                null === qt || void 0 === qt || qt.endSession(!1), Ht = (0, oe.g)().sampleCount, await (0, QV.e)(et, jt, mt, PH, Ht, await Dt);
-                const tt = (0, QV.h)(Vt);
-                null === tt && console.warn(`${oD} this ${Ot} build has no image registry: sky and model images won't show`), (0, Eq.f)(tt)
+              var Cu, bu, cu, Nu;
+              const Uu = null !== (Cu = null === (bu = OX) || void 0 === bu ? void 0 : bu.pagePreviews()) && void 0 !== Cu ? Cu : null,
+                lu = null !== (cu = null === (Nu = OX) || void 0 === Nu ? void 0 : Nu.previewModule(ju)) && void 0 !== cu ? cu : null;
+              if (null === Uu || null === lu) {
+                null === Uu || void 0 === Uu || Uu.endSession(!1), fu = (0, SE.g)().sampleCount, await (0, Cj.j)(Eu, qu, Xu, vf, fu, await Zu);
+                const uu = (0, Cj.q)(ju);
+                null === uu && console.warn(`${FZ} this ${su} build has no image registry: sky and model images won't show`), (0, OU.h)(uu)
               } else {
-                (0, Rq.e)() && await (0, te.l)();
-                const Vt = (0, Rq.J)();
-                if (null !== Vt) {
-                  const et = (0, lV.l)(jt);
-                  return tt.crash(PV.RENDER_RELOAD_SITE, new Error(`${Vt}${void 0===et?"":` (${et.message})`}`)), !1
+                (0, vU.e)() && await (0, Ru.p)();
+                const ju = (0, vU.H)();
+                if (null !== ju) {
+                  const Eu = (0, bj.h)(qu);
+                  return uu.crash(vj.RENDER_RELOAD_SITE, new Error(`${ju}${void 0===Eu?"":` (${Eu.message})`}`)), !1
                 }
-                Ht = await qt.bindSession(dt, et, (async tt => (0, QV.t)(jt, UD, mt, tt, PH, await Dt)))
+                fu = await Uu.bindSession(lu, Eu, (async uu => (0, Cj.B)(qu, LZ, Xu, uu, vf, await Zu)))
               }
-            } catch (qt) {
-              return tt.crash(UD, qt), !1
-            }(function(tt, et) {
-              const Vt = tt,
+            } catch (Uu) {
+              return uu.crash(LZ, Uu), !1
+            }(function(uu, Eu) {
+              const ju = uu,
                 {
-                  requestCapture: Ot,
-                  takeCapture: qt
-                } = Vt;
-              if ("function" !== typeof Ot || "function" !== typeof qt) return;
-              const Dt = {
+                  requestCapture: su,
+                  takeCapture: Uu
+                } = ju;
+              if ("function" !== typeof su || "function" !== typeof Uu) return;
+              const Zu = {
                 request() {
-                  Ot.call(Vt, et)
+                  su.call(ju, Eu)
                 },
                 take() {
-                  var tt;
-                  return null !== (tt = qt.call(Vt)) && void 0 !== tt ? tt : null
+                  var uu;
+                  return null !== (uu = Uu.call(ju)) && void 0 !== uu ? uu : null
                 }
               };
-              window[zq] = Dt
-            })(et, Ht), qj = Ht, xd = !0;
-            const ft = performance.now();
-            return Td.boundAtMs = null !== (dt = (0, Rq.L)()) && void 0 !== dt ? dt : ft, Td.indirectHangs = (0, Rq.D)(), Td.restoresSkipped = (0, Rq.N)(), console.info(`${oD} ${Ot} renderer bound at ${Math.round(ft)} ms`), !tt.isStopped
-          }(St, vt, ht, lt, ft, yt)) return null;
-        if (null !== lt) {
-          var qe, De, me;
-          (0, Me.D)(lt);
-          const tt = () => !St.isStopped && mX();
-          Vt.e(196).then((() => Vt(34255))).then((et => {
+              window[IU] = Zu
+            })(Eu, fu), jq = fu, Tl = !0;
+            const Ou = performance.now();
+            return Hl.boundAtMs = null !== (lu = (0, vU.K)()) && void 0 !== lu ? lu : Ou, Hl.indirectHangs = (0, vU.z)(), Hl.restoresSkipped = (0, vU.N)(), console.info(`${FZ} ${su} renderer bound at ${Math.round(Ou)} ms`), !uu.isStopped
+          }(Pu, du, Ju, cu, Ou, hu)) return null;
+        if (null !== cu) {
+          var sE, UE, ZE;
+          (0, gE.G)(cu);
+          const uu = () => !Pu.isStopped && XC();
+          ju.e(196).then((() => ju(34444))).then((Eu => {
             let {
-              devTools: Vt
-            } = et;
-            St.isStopped || Vt.setHost(function(tt) {
+              devTools: ju
+            } = Eu;
+            Pu.isStopped || ju.setHost(function(uu) {
               return {
-                tools: cq,
-                async downloadScene(et, Vt) {
+                tools: mU,
+                async downloadScene(Eu, ju) {
                   let {
-                    width: Ot,
-                    height: qt,
-                    colouring: Dt
-                  } = Vt;
-                  "screenshot" === et && null === Dt ? await (0, vq.e)(tt, Ot, qt) : console.warn("The Rust client's developer tools take uncoloured screenshots only")
+                    width: su,
+                    height: Uu,
+                    colouring: Zu
+                  } = ju;
+                  "screenshot" === Eu && null === Zu ? await (0, PU.c)(uu, su, Uu) : console.warn("The Rust client's developer tools take uncoloured screenshots only")
                 },
                 setAmbientLightIntensity: () => (console.warn("The Rust client's renderer has no ambient light setting"), Promise.resolve()),
-                capturePhoto: (et, Vt, Ot) => (0, vq.d)(tt, et, Vt, Ot)
+                capturePhoto: (Eu, ju, su) => (0, PU.b)(uu, Eu, ju, su)
               }
-            }(function(tt, et) {
+            }(function(uu, Eu) {
               return {
-                canvas: tt,
-                maxTextureSize: Wq,
-                drawing: et,
-                resize: (tt, et, Vt) => {
-                  (0, pV.w)(ge.Fb.Resize, 0, tt / Vt, et / Vt, (0, pV.i)(Vt))
+                canvas: uu,
+                maxTextureSize: oU,
+                drawing: Eu,
+                resize: (uu, Eu, ju) => {
+                  (0, Tj.v)(nE.sb.Resize, 0, uu / ju, Eu / ju, (0, Tj.i)(ju))
                 },
                 restoreSize: () => {
-                  const et = (0, oe.p)(tt);
-                  null !== et && (0, pV.w)(ge.Fb.Resize, 0, et.cssWidth, et.cssHeight, (0, pV.i)(et.renderScale))
+                  const Eu = (0, SE.q)(uu);
+                  null !== Eu && (0, Tj.v)(nE.sb.Resize, 0, Eu.cssWidth, Eu.cssHeight, (0, Tj.i)(Eu.renderScale))
                 },
-                onFrameDrawn: tt => (Sq.add(tt), () => {
-                  Sq.delete(tt)
+                onFrameDrawn: uu => (kU.add(uu), () => {
+                  kU.delete(uu)
                 })
               }
-            }(yt, tt)))
-          }), (tt => {
-            console.warn(`${oD} the developer tools didn't load: no captures this session`, tt)
+            }(hu, uu)))
+          }), (uu => {
+            console.warn(`${FZ} the developer tools didn't load: no captures this session`, uu)
           }));
-          const et = "webgpu" === lt && null !== (qe = null === Qt || void 0 === Qt || null === (De = Qt.adapter) || void 0 === De ? void 0 : De.vendor) && void 0 !== qe ? qe : null;
-          Dj = {
-            backend: lt,
-            canvas: yt,
-            fallbackReason: null !== (me = null === Qt || void 0 === Qt ? void 0 : Qt.reason) && void 0 !== me ? me : null,
-            adapterVendor: et
-          }, iH();
+          const Eu = "webgpu" === cu && null !== (sE = null === bu || void 0 === bu || null === (UE = bu.adapter) || void 0 === UE ? void 0 : UE.vendor) && void 0 !== sE ? sE : null;
+          sq = {
+            backend: cu,
+            canvas: hu,
+            fallbackReason: null !== (ZE = null === bu || void 0 === bu ? void 0 : bu.reason) && void 0 !== ZE ? ZE : null,
+            adapterVendor: Eu
+          }, tf();
           try {
-            (0, fO.q)(lt, yt, et)
-          } catch (qt) {
-            (0, fO.t)(), console.error(`${oD} the quality steps didn't start`, qt)
+            (0, Os.q)(cu, hu, Eu)
+          } catch (Uu) {
+            (0, Os.r)(), console.error(`${FZ} the quality steps didn't start`, Uu)
           }
         }
         const {
-          storagePullBreaks: de,
-          splitPassBreaks: je
-        } = await ft;
-        je && console.warn(`${oD} split_pass_breaks on: Windows Adreno 7xx (N-103) or ?sceneDepth=off`);
-        const He = (0, nt.g)(Qt, (0, Le.g)());
-        if ((0, Tq.v)("webgpuloss")) {
-          var Xe, Qe;
-          const tt = {
-            backend: lt,
-            reason: null !== (Xe = null === Qt || void 0 === Qt ? void 0 : Qt.reason) && void 0 !== Xe ? Xe : null,
-            source: null !== (Qe = null === Qt || void 0 === Qt ? void 0 : Qt.source) && void 0 !== Qe ? Qe : null,
-            storagePullBreaks: de,
-            noWebGpu: He.messageKey
+          storagePullBreaks: XE,
+          splitPassBreaks: lE
+        } = await Ou;
+        lE && console.warn(`${FZ} split_pass_breaks on: Windows Adreno 7xx (N-103) or ?sceneDepth=off`);
+        const qE = (0, zu.g)(bu, (0, VE.g)());
+        if ((0, yU.p)("webgpuloss")) {
+          var fE, CE;
+          const uu = {
+            backend: cu,
+            reason: null !== (fE = null === bu || void 0 === bu ? void 0 : bu.reason) && void 0 !== fE ? fE : null,
+            source: null !== (CE = null === bu || void 0 === bu ? void 0 : bu.source) && void 0 !== CE ? CE : null,
+            storagePullBreaks: XE,
+            noWebGpu: qE.messageKey
           };
-          (0, gq.c)((et => {
-            et.noteWasmPick(tt)
+          (0, zU.c)((Eu => {
+            Eu.noteWasmPick(uu)
           }))
         }
-        const le = "webgpu" === lt;
-        if (Tm = (0, nt.j)(le ? St : null, le && null !== (dt = null === (Ht = Em) || void 0 === Ht ? void 0 : Ht.pagePreviews().YE) && void 0 !== dt ? dt : null, He, kH), vj) return null;
-        if (zt.reserveAtJoin((0, Hq.n)(null !== Zt && void 0 !== Zt ? Zt : WV.d)), St.isStopped) return null;
-        const Ee = tt => {
-          if (qd = performance.now(), Dd = !1, null !== mj) try {
-            mj.animationFrame(tt)
-          } catch (qt) {
-            pH(qt)
+        const bE = "webgpu" === cu;
+        if (nX = (0, zu.k)(bE ? Pu : null, bE && null !== (lu = null === (fu = OX) || void 0 === fu ? void 0 : fu.pagePreviews().AN) && void 0 !== lu ? lu : null, qE, Qf), Jq) return null;
+        if (Wu.reserveAtJoin((0, CU.n)(null !== Ku && void 0 !== Ku ? Ku : aj.g)), Pu.isStopped) return null;
+        const cE = uu => {
+          if (Ul = performance.now(), Zl = !1, null !== Uq) try {
+            Uq.animationFrame(uu)
+          } catch (Uu) {
+            Hf(Uu)
           }
-          if (function(tt, et) {
-              return et && !vj && !jd && dX() && mX() && tt.framePaces(performance.now())
-            }(St, Cj)) {
-            if (St.writePendingInput(), (0, It.d)(tt, tX), YH(!1, tt), null !== mj) try {
-              mj.framePaced()
-            } catch (qt) {
-              pH(qt)
+          if (function(uu, Eu) {
+              return Eu && !Jq && !ql && lC() && XC() && uu.framePaces(performance.now())
+            }(Pu, eq)) {
+            if (Pu.writePendingInput(), (0, mu.e)(uu, uC), xf(!1, uu), null !== Uq) try {
+              Uq.framePaced()
+            } catch (Uu) {
+              Hf(Uu)
             }
-            requestAnimationFrame(Ee)
-          } else nH(St, Cj, "budget") && ((0, ke.f)(St.lastFrameKind) && mX() && (0, It.d)(tt, tX), YH(Cj && aj, tt), Mj.frame(St.lastFrameKind, Cj && mX(), tt), bj.frame(St.lastFrameKind, Cj && mX()), (0, ke.d)(St.lastFrameKind) && Le.D.drew(), fX(St), zt.afterFrame(), requestAnimationFrame(Ee))
+            requestAnimationFrame(cE)
+          } else Rf(Pu, eq, "budget") && ((0, QE.k)(Pu.lastFrameKind) && XC() && (0, mu.e)(uu, uC), xf(eq && hq, uu), Dq.frame(Pu.lastFrameKind, eq && XC(), uu), gq.frame(Pu.lastFrameKind, eq && XC()), (0, QE.e)(Pu.lastFrameKind) && VE.B.drew(), OC(Pu), Wu.afterFrame(), requestAnimationFrame(cE))
         };
-        requestAnimationFrame(Ee);
-        return function(tt) {
-          if (tt.has("inputLog") && (0, uO.i)((tt => {
+        requestAnimationFrame(cE);
+        return function(uu) {
+          if (uu.has("inputLog") && (0, ws.f)((uu => {
               let {
-                action: et,
-                down: Vt,
-                press: Ot
-              } = tt;
-              console.info(`${hO} input ${et} ${Vt?"down":"up"} press ${Ot} at ${performance.now().toFixed(1)}`)
-            })), tt.has("inputDump")) {
-            const tt = [];
-            WO = tt, Object.assign(window, {
-              bloxdInputDump: () => tt.join("\n")
+                action: Eu,
+                down: ju,
+                press: su
+              } = uu;
+              console.info(`${as} input ${Eu} ${ju?"down":"up"} press ${su} at ${performance.now().toFixed(1)}`)
+            })), uu.has("inputDump")) {
+            const uu = [];
+            os = uu, Object.assign(window, {
+              bloxdInputDump: () => uu.join("\n")
             })
           }
-        }(new URLSearchParams(window.location.search)), Gm = function(tt) {
-          let et = null;
-          const Vt = () => {
-              null !== et && (clearInterval(et), et = null)
+        }(new URLSearchParams(window.location.search)), WX = function(uu) {
+          let Eu = null;
+          const ju = () => {
+              null !== Eu && (clearInterval(Eu), Eu = null)
             },
-            Ot = () => {
-              document.hidden ? et ??= setInterval((() => {
-                hX(tt) || Vt()
-              }), qm) : Vt()
+            su = () => {
+              document.hidden ? Eu ??= setInterval((() => {
+                dC(uu) || ju()
+              }), ZX) : ju()
             };
-          return document.addEventListener("visibilitychange", Ot), Ot(), () => {
-            Vt(), document.removeEventListener("visibilitychange", Ot)
+          return document.addEventListener("visibilitychange", su), su(), () => {
+            ju(), document.removeEventListener("visibilitychange", su)
           }
-        }(St), St
-      }(et).then((tt => {
-        var et;
-        (Ot(bm), Km(null !== tt), null !== tt && (bt = performance.now()), Cm(tt), null === tt) ? null === (et = Em) || void 0 === et || et.pagePreviews().endSession(null === (0, ye.s)()): nm("booted")
-      }), (tt => {
-        Ot(bm), Km(!1), Cm(null), lX({
-          site: AD,
-          error: tt,
+        }(Pu), Pu
+      }(Eu).then((uu => {
+        var Eu;
+        (su(GX), dX(null !== uu), null !== uu && (Mu = performance.now()), wX(uu), null === uu) ? null === (Eu = OX) || void 0 === Eu || Eu.pagePreviews().endSession(null === (0, YE.r)()): RX("booted")
+      }), (uu => {
+        su(GX), dX(!1), wX(null), cC({
+          site: tZ,
+          error: uu,
           header: null
-        }, bm)
+        }, GX)
       }))
     }
 
-    function Zj() {
-      const tt = Jm;
-      null !== tt && Wj().then((et => {
+    function vq() {
+      const uu = pX;
+      null !== uu && dq().then((Eu => {
         let {
-          pageBuiltInAnimationPack: Vt
-        } = et;
-        Vt().provide(tt)
-      }), (tt => {
-        console.warn(`${oD} the built-in animation pack's chunk did not load: lifeforms stay in their rest pose`, tt)
+          pageBuiltInAnimationPack: ju
+        } = Eu;
+        ju().provide(uu)
+      }), (uu => {
+        console.warn(`${FZ} the built-in animation pack's chunk did not load: lifeforms stay in their rest pose`, uu)
       }))
     }
-    const Lj = new class {
-      constructor(tt) {
-        this.deps = tt, this.latest = 0, this.Pd = null
+    const Kq = new class {
+      constructor(uu) {
+        this.deps = uu, this.latest = 0, this.dl = null
       }
-      apply(tt, et) {
-        return this.load(tt, et, 0)
+      apply(uu, Eu) {
+        return this.load(uu, Eu, 0)
       }
-      async load(tt, et, Vt) {
-        var Ot;
-        const qt = ++this.latest,
-          Dt = this.deps.compiler;
-        if (void 0 === et || null === et || "object" !== typeof et || 0 === Object.keys(et).length || null === Dt) return this.drop(tt), !1;
-        if ((null === (Ot = this.Pd) || void 0 === Ot ? void 0 : Ot.module) === tt && (0, mV.te)(this.Pd.files, et)) return !1;
+      async load(uu, Eu, ju) {
+        var su;
+        const Uu = ++this.latest,
+          Zu = this.deps.compiler;
+        if (void 0 === Eu || null === Eu || "object" !== typeof Eu || 0 === Object.keys(Eu).length || null === Zu) return this.drop(uu), !1;
+        if ((null === (su = this.dl) || void 0 === su ? void 0 : su.module) === uu && (0, Zj.he)(this.dl.files, Eu)) return !1;
         try {
-          const [Vt, Ot] = await Promise.all([Dt(), this.deps.builtIns()]);
-          if (qt !== this.latest) return !1;
-          const mt = await Vt(et, XV, {
-            builtIns: Ot
+          const [ju, su] = await Promise.all([Zu(), this.deps.builtIns()]);
+          if (Uu !== this.latest) return !1;
+          const Xu = await ju(Eu, fj, {
+            builtIns: su
           });
-          if (qt !== this.latest) return !1;
-          const dt = this.call(tt, mt);
-          if (void 0 === dt) throw new HV("the compiled animations didn't read against the built-in pack");
-          return this.Pd = {
-              module: tt,
-              files: et
+          if (Uu !== this.latest) return !1;
+          const lu = this.call(uu, Xu);
+          if (void 0 === lu) throw new qj("the compiled animations didn't read against the built-in pack");
+          return this.dl = {
+              module: uu,
+              files: Eu
             },
-            function(tt) {
-              for (let et = 0; et + 2 < tt.length; et += 3) {
-                ("error" === tt[et] ? console.error : console.warn)(`Animation for the texture pack: ${tt[et+1]}: ${tt[et+2]}`)
+            function(uu) {
+              for (let Eu = 0; Eu + 2 < uu.length; Eu += 3) {
+                ("error" === uu[Eu] ? console.error : console.warn)(`Animation for the texture pack: ${uu[Eu+1]}: ${uu[Eu+2]}`)
               }
-            }(dt), !0
-        } catch (dt) {
-          var mt;
-          if (qt !== this.latest) return !1;
-          this.drop(tt), 0 === Vt && this.deps.warn("the texture pack's animations didn't load: lifeforms play the built-in ones", dt);
-          const Ot = (null !== (mt = this.deps.retryAfterMs) && void 0 !== mt ? mt : jV)[Vt];
-          return void 0 === Ot || dt instanceof HV || (0, dV.l)(tt) || setTimeout((() => {
-            qt === this.latest && this.load(tt, et, Vt + 1)
-          }), Ot), !1
+            }(lu), !0
+        } catch (lu) {
+          var Xu;
+          if (Uu !== this.latest) return !1;
+          this.drop(uu), 0 === ju && this.deps.warn("the texture pack's animations didn't load: lifeforms play the built-in ones", lu);
+          const su = (null !== (Xu = this.deps.retryAfterMs) && void 0 !== Xu ? Xu : lj)[ju];
+          return void 0 === su || lu instanceof qj || (0, Xj.k)(uu) || setTimeout((() => {
+            Uu === this.latest && this.load(uu, Eu, ju + 1)
+          }), su), !1
         }
       }
-      call(tt, et) {
+      call(uu, Eu) {
         try {
-          return tt.cOt(et)
-        } catch (Vt) {
-          throw (0, dV.p)(tt, Vt), Vt
+          return uu.Xsu(Eu)
+        } catch (ju) {
+          throw (0, Xj.l)(uu, ju), ju
         }
       }
-      clear(tt) {
-        this.latest++, this.drop(tt)
+      clear(uu) {
+        this.latest++, this.drop(uu)
       }
-      drop(tt) {
-        const et = this.Pd;
-        if (this.Pd = null, (null === et || void 0 === et ? void 0 : et.module) === tt && !(0, dV.l)(tt)) try {
-          this.call(tt, null)
+      drop(uu) {
+        const Eu = this.dl;
+        if (this.dl = null, (null === Eu || void 0 === Eu ? void 0 : Eu.module) === uu && !(0, Xj.k)(uu)) try {
+          this.call(uu, null)
         } catch {}
       }
     }({
-      compiler: VV.e,
+      compiler: Ej.c,
       builtIns: async () => {
         const {
-          pageBuiltInAnimationPack: tt
-        } = await Wj();
-        return tt().whenSet()
+          pageBuiltInAnimationPack: uu
+        } = await dq();
+        return uu().whenSet()
       },
-      warn: kH
+      warn: Qf
     });
-    async function Fj(tt, et) {
-      let Ot = !1;
-      await kj({
+    async function Vq(uu, Eu) {
+      let su = !1;
+      await rq({
         matchmake: async () => {
           const {
-            guestJoinTarget: qt,
-            guestJoinWithPack: Dt
-          } = await Vt.e(277).then((() => Vt(51285)));
-          return Ot ? qt(tt, et, oH()) : (Ot = !0, Dt(tt, et, (et => rH(tt, et)), oH))
+            guestJoinTarget: Uu,
+            guestJoinWithPack: Zu
+          } = await ju.e(277).then((() => ju(51254)));
+          return su ? Uu(uu, Eu, If()) : (su = !0, Zu(uu, Eu, (Eu => Ff(uu, Eu)), If))
         },
-        onFailure: tt => {
-          (0, PV.showJoinFailure)(tt, bm)
+        onFailure: uu => {
+          (0, vj.showJoinFailure)(uu, GX)
         },
-        rejoin: tH,
-        invalidateTrafficCode: eH
+        rejoin: zq,
+        invalidateTrafficCode: Rq
       })
     }
-    async function kj(tt) {
+    async function rq(uu) {
       let {
-        matchmake: et,
-        onFailure: Vt,
-        rejoin: qt,
-        invalidateTrafficCode: Dt,
-        pageReady: mt,
-        signal: dt
-      } = tt;
-      const jt = () => !0 === (null === dt || void 0 === dt ? void 0 : dt.aborted);
-      let Ht;
-      const Xt = Jq.b.rejoinHold();
-      Cd = null;
-      const Qt = (0, zV.K)("wasm", aX);
-      let lt = !1,
-        Et = performance.now();
+        matchmake: Eu,
+        onFailure: ju,
+        rejoin: Uu,
+        invalidateTrafficCode: Zu,
+        pageReady: Xu,
+        signal: lu
+      } = uu;
+      const qu = () => !0 === (null === lu || void 0 === lu ? void 0 : lu.aborted);
+      let fu;
+      const Cu = pU.e.rejoinHold();
+      Gl = null;
+      const bu = (0, Wj.K)("wasm", gC);
+      let cu = !1,
+        Nu = performance.now();
       try {
-        if (!await hm) return {
+        if (!await aX) return {
           kind: "stopped"
         };
-        if (jt()) return {
-          kind: "nV"
+        if (qu()) return {
+          kind: "Lj"
         };
-        Sj().catch((() => {}));
-        let tt = await et();
-        var Ct, ut;
-        if (Et = performance.now(), !jt()) NX(null !== (Ct = null === (ut = tt.target.session) || void 0 === ut ? void 0 : ut.gameNameWithVariation) && void 0 !== Ct ? Ct : null);
-        const Vt = () => performance.now() - tt.matchedAt <= tt.freshMs,
-          Ot = zj(tt.target).catch((() => {}));
-        Vt() && !jt() && (Ht = new qq(tt.target, {
-          signal: dt
+        aq().catch((() => {}));
+        let uu = await Eu();
+        var Gu, pu;
+        if (Nu = performance.now(), !qu()) DC(null !== (Gu = null === (pu = uu.target.session) || void 0 === pu ? void 0 : pu.gameNameWithVariation) && void 0 !== Gu ? Gu : null);
+        const ju = () => performance.now() - uu.matchedAt <= uu.freshMs,
+          su = iq(uu.target).catch((() => {}));
+        ju() && !qu() && (fu = new ZU(uu.target, {
+          signal: lu
         }));
-        const Dt = performance.now();
-        if (null === await um) return {
+        const Zu = performance.now();
+        if (null === await JX) return {
           kind: "stopped"
         };
-        var Kt, ht;
-        if (function(tt) {
-            var et, Vt;
-            if (wt.c.markGameEngineConstructed(), Jt) return;
-            Jt = !0;
-            const Ot = Math.max(tt, null !== (et = Nt) && void 0 !== et ? et : tt);
-            (0, yt.h)("ready", Math.max(0, (null !== (Vt = Mt) && void 0 !== Vt ? Vt : Ot) - Ot) / 1e3)
-          }(Dt), !jt())
-          if (null !== Mt && null !== bt ? ((0, ft.q)("wasm_loaded", Mt), (0, ft.q)("wasm_core_ready", bt)) : console.warn("[bloxd-wasm-client] a join found the core before boot marked its steps"), tt.target.session && (0, DD.d)(tt.target.session.gameNameWithVariation)) null === (Kt = Rm) || void 0 === Kt || Kt.prestart();
-        if (await Ot, !Vt() && !jt()) null === (ht = Ht) || void 0 === ht || ht.rematched(), tt = await et(), Et = performance.now();
-        if (jt()) return {
-          kind: "nV"
+        var wu, Ju;
+        if (function(uu) {
+            var Eu, ju;
+            if (Yu.e.markGameEngineConstructed(), eu) return;
+            eu = !0;
+            const su = Math.max(uu, null !== (Eu = Du) && void 0 !== Eu ? Eu : uu);
+            (0, hu.h)("ready", Math.max(0, (null !== (ju = gu) && void 0 !== ju ? ju : su) - su) / 1e3)
+          }(Zu), !qu())
+          if (null !== gu && null !== Mu ? ((0, Ou.s)("wasm_loaded", gu), (0, Ou.s)("wasm_core_ready", Mu)) : console.warn("[bloxd-wasm-client] a join found the core before boot marked its steps"), uu.target.session && (0, XZ.d)(uu.target.session.gameNameWithVariation)) null === (wu = mX) || void 0 === wu || wu.prestart();
+        if (await su, !ju() && !qu()) null === (Ju = fu) || void 0 === Ju || Ju.rematched(), uu = await Eu(), Nu = performance.now();
+        if (qu()) return {
+          kind: "Lj"
         };
-        const Xt = await async function(tt) {
-          var et, Vt, Ot;
+        const Cu = await async function(uu) {
+          var Eu, ju, su;
           let {
-            signal: qt,
-            rejoin: Dt = null,
-            early: mt,
-            pageReady: dt
+            signal: Uu,
+            rejoin: Zu = null,
+            early: Xu,
+            pageReady: lu
           } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          if (null !== qt && void 0 !== qt && qt.aborted) throw new DOMException("the join was left", "AbortError");
-          const jt = (Ht = kd, Xt = performance.now(), null !== Ht && Xt - Ht < iO);
-          var Ht, Xt;
-          kd = null;
-          const Qt = new AbortController,
-            lt = null !== (et = null === (Vt = tt.session) || void 0 === Vt ? void 0 : Vt.gameNameWithVariation) && void 0 !== et ? et : null;
-          NX(lt), Uj({
-            controller: Qt,
-            game: lt
-          }), Gd = null, null === (Ot = rd) || void 0 === Ot || Ot.abort(), rd = null, Ad = !1, Yd = null, Bd.clear();
-          const Et = () => {
-            (0, ce.j)(Qt, (0, ce.f)(qt))
+          if (null !== Uu && void 0 !== Uu && Uu.aborted) throw new DOMException("the join was left", "AbortError");
+          const qu = (fu = Ql, Cu = performance.now(), null !== fu && Cu - fu < xs);
+          var fu, Cu;
+          Ql = null;
+          const bu = new AbortController,
+            cu = null !== (Eu = null === (ju = uu.session) || void 0 === ju ? void 0 : ju.gameNameWithVariation) && void 0 !== Eu ? Eu : null;
+          DC(cu), Iq({
+            controller: bu,
+            game: cu
+          }), il = null, null === (su = Il) || void 0 === su || su.abort(), Il = null, Bl = !1, Ll = null, tl.clear();
+          const Nu = () => {
+            (0, oE.j)(bu, (0, oE.f)(Uu))
           };
-          null === qt || void 0 === qt || qt.addEventListener("abort", Et, {
+          null === Uu || void 0 === Uu || Uu.addEventListener("abort", Nu, {
             once: !0
           });
           try {
-            var wt, yt, Nt;
-            const et = await um;
-            if (null === et || et.isStopped || vj) throw new Error("no core is running to join a game with");
-            if (tt.session && null !== Tm) {
-              const et = await oj(Tm.join(tt.session.gameNameWithVariation), Qt.signal);
-              if ((0, Tq.v)("webgpuloss")) {
-                const Vt = tt.session.gameNameWithVariation,
-                  Ot = Tm.couldntRunInJoinedGame();
-                (0, gq.c)((tt => tt.noteWasmJoin(Vt, et, Ot)))
+            var Yu, hu, Du;
+            const Eu = await JX;
+            if (null === Eu || Eu.isStopped || Jq) throw new Error("no core is running to join a game with");
+            if (uu.session && null !== nX) {
+              const Eu = await Wq(nX.join(uu.session.gameNameWithVariation), bu.signal);
+              if ((0, yU.p)("webgpuloss")) {
+                const ju = uu.session.gameNameWithVariation,
+                  su = nX.couldntRunInJoinedGame();
+                (0, zU.c)((uu => uu.noteWasmJoin(ju, Eu, su)))
               }
-              if (null !== et) throw new nt.c(et)
+              if (null !== Eu) throw new zu.e(Eu)
             }
             const [, , , {
-              joinRoom: Vt
-            }] = await oj(Promise.all([(0, Pt.k)(et), zj(tt), null === dt || void 0 === dt ? void 0 : dt(), Sj()]), Qt.signal), Ot = tt.session, qt = Ot ? {
-              ...qH,
-              attachSocket: et => {
-                const Vt = QH(et, tt.endpoint);
-                var qt;
-                null !== Vt && (hd = {
-                  conn: Vt,
-                  info: Ot
-                }, null === (qt = vd) || void 0 === qt || qt(Ot.playerDbId));
-                return Vt
+              joinRoom: ju
+            }] = await Wq(Promise.all([(0, vu.m)(Eu), iq(uu), null === lu || void 0 === lu ? void 0 : lu(), aq()]), bu.signal), su = uu.session, Uu = su ? {
+              ...jf,
+              attachSocket: Eu => {
+                const ju = ff(Eu, uu.endpoint);
+                var Uu;
+                null !== ju && (Jl = {
+                  conn: ju,
+                  info: su
+                }, null === (Uu = dl) || void 0 === Uu || Uu(su.playerDbId));
+                return ju
               }
-            } : qH, Ht = await Vt(qt, tt, {
-              signal: Qt.signal,
-              early: mt
-            }).catch((tt => {
-              throw function(tt) {
-                if (!(tt instanceof At.c)) return tt;
-                if ("roomError" === tt.stage && null !== Yd) return Gj(new At.c(tt.message, tt.stage, tt.code, Yd), tt);
-                const et = "closed" === tt.stage && null !== zd ? Bd.get(zd.conn) : void 0;
-                return void 0 === et ? tt : Gj(new At.c(tt.message, tt.stage, et.code, null, tt.socketOpened), tt)
-              }(tt)
+            } : jf, fu = await ju(Uu, uu, {
+              signal: bu.signal,
+              early: Xu
+            }).catch((uu => {
+              throw function(uu) {
+                if (!(uu instanceof Bu.e)) return uu;
+                if ("roomError" === uu.stage && null !== Ll) return Qq(new Bu.e(uu.message, uu.stage, uu.code, Ll), uu);
+                const Eu = "closed" === uu.stage && null !== Wl ? tl.get(Wl.conn) : void 0;
+                return void 0 === Eu ? uu : Qq(new Bu.e(uu.message, uu.stage, Eu.code, null, uu.socketOpened), uu)
+              }(uu)
             }));
-            if (Jd !== Qt) throw Ht.leave(), new DOMException("the join was left", "AbortError");
-            ij(Ht), null === (wt = Pm) || void 0 === wt || wt.newGame();
-            const Xt = function(tt) {
-              var et, Vt;
+            if (el !== bu) throw fu.leave(), new DOMException("the join was left", "AbortError");
+            Bq(fu), null === (Yu = KX) || void 0 === Yu || Yu.newGame();
+            const Cu = function(uu) {
+              var Eu, ju;
               const {
-                session: Ot
-              } = tt, qt = void 0 === Ot ? tt.joinOptions.lobbyName : Ot.lobbyName;
+                session: su
+              } = uu, Uu = void 0 === su ? uu.joinOptions.lobbyName : su.lobbyName;
               return {
-                endpoint: tt.endpoint,
-                game: null !== (et = null === Ot || void 0 === Ot ? void 0 : Ot.gameNameWithVariation) && void 0 !== et ? et : tt.roomName,
-                lobby: String(null !== qt && void 0 !== qt ? qt : null),
-                postCookies: null !== (Vt = tt.postCookies) && void 0 !== Vt ? Vt : null
+                endpoint: uu.endpoint,
+                game: null !== (Eu = null === su || void 0 === su ? void 0 : su.gameNameWithVariation) && void 0 !== Eu ? Eu : uu.roomName,
+                lobby: String(null !== Uu && void 0 !== Uu ? Uu : null),
+                postCookies: null !== (ju = uu.postCookies) && void 0 !== ju ? ju : null
               }
-            }(tt);
-            bd.set(Ht, Xt), tq(Xt);
-            const lt = performance.now(),
-              Et = {
-                conn: Ht.conn,
-                rejoin: Dt,
-                game: null !== (yt = null === (Nt = tt.session) || void 0 === Nt ? void 0 : Nt.gameNameWithVariation) && void 0 !== yt ? yt : "",
-                joinedAt: lt,
-                rejoinedAt: jt ? lt : null,
+            }(uu);
+            Ml.set(fu, Cu), EU(Cu);
+            const cu = performance.now(),
+              Nu = {
+                conn: fu.conn,
+                rejoin: Zu,
+                game: null !== (hu = null === (Du = uu.session) || void 0 === Du ? void 0 : Du.gameNameWithVariation) && void 0 !== hu ? hu : "",
+                joinedAt: cu,
+                rejoinedAt: qu ? cu : null,
                 overflow: null
               };
-            Wd = Et,
-              function(tt, et) {
-                MH();
-                const Vt = {
-                  endpoint: et,
-                  roomId: tt.seat.room.roomId,
+            al = Nu,
+              function(uu, Eu) {
+                gf();
+                const ju = {
+                  endpoint: Eu,
+                  roomId: uu.seat.room.roomId,
                   heldConn: 0,
                   dropCode: 0,
                   pendingHold: null,
-                  resume: new KV({
-                    reconnect: (tt, et, Ot) => async function(tt, et, Vt, Ot) {
+                  resume: new wj({
+                    reconnect: (uu, Eu, su) => async function(uu, Eu, ju, su) {
                       const {
-                        roomId: qt,
-                        roomToken: Dt
-                      } = JH(tt, et), mt = wm;
-                      if (null === mt || mt.isStopped || vj) throw new Error("no core is running to resume the game on");
+                        roomId: Uu,
+                        roomToken: Zu
+                      } = ef(uu, Eu), Xu = hX;
+                      if (null === Xu || Xu.isStopped || Jq) throw new Error("no core is running to resume the game on");
                       const {
-                        resumeRoom: dt
-                      } = await oj(Sj(), Vt), jt = {
-                        ...qH,
-                        attachSocket: et => Sd !== tt || 0 === tt.heldConn ? (et.close(), null) : QH(et, tt.endpoint, !0)
+                        resumeRoom: lu
+                      } = await Wq(aq(), ju), qu = {
+                        ...jf,
+                        attachSocket: Eu => Pl !== uu || 0 === uu.heldConn ? (Eu.close(), null) : ff(Eu, uu.endpoint, !0)
                       };
-                      return dt(jt, tt.endpoint, qt, Dt, {
-                        signal: Vt,
-                        onAttached: Ot
+                      return lu(qu, uu.endpoint, Uu, Zu, {
+                        signal: ju,
+                        onAttached: su
                       })
-                    }(Vt, tt, et, Ot),
-                    releaseSeat: tt => {
-                      !async function(tt, et) {
+                    }(ju, uu, Eu, su),
+                    releaseSeat: uu => {
+                      !async function(uu, Eu) {
                         const {
-                          roomId: Vt,
-                          roomToken: Ot
-                        } = JH(tt, et);
+                          roomId: ju,
+                          roomToken: su
+                        } = ef(uu, Eu);
                         try {
                           const {
-                            leaveHeldSeat: et
-                          } = await Sj();
-                          await et(tt.endpoint, Vt, Ot)
-                        } catch (qt) {
-                          console.warn(`${oD} the held seat of a game left while it reconnected couldn't be released`, qt)
+                            leaveHeldSeat: Eu
+                          } = await aq();
+                          await Eu(uu.endpoint, ju, su)
+                        } catch (Uu) {
+                          console.warn(`${FZ} the held seat of a game left while it reconnected couldn't be released`, Uu)
                         }
-                      }(Vt, tt)
+                      }(ju, uu)
                     },
-                    isLive: () => Sd === Vt && null !== Wd && !vj,
-                    oW: tt => {
-                      Fd = tt, aH()
+                    isLive: () => Pl === ju && null !== al && !Jq,
+                    Wm: uu => {
+                      rl = uu, Df()
                     },
-                    onReconnected: tt => {
-                      ! function(tt) {
-                        const et = Md;
-                        if (null !== et && et !== tt) {
-                          const Vt = bd.get(et);
-                          void 0 !== Vt && bd.set(tt, Vt), Nj === et && (Nj = tt), et.detach()
+                    onReconnected: uu => {
+                      ! function(uu) {
+                        const Eu = gl;
+                        if (null !== Eu && Eu !== uu) {
+                          const ju = Ml.get(Eu);
+                          void 0 !== ju && Ml.set(uu, ju), Yq === Eu && (Yq = uu), Eu.detach()
                         }
-                        ij(tt)
-                      }(tt)
+                        Bq(uu)
+                      }(uu)
                     },
-                    onGaveUp: (tt, et) => {
-                      ! function(tt, et, Vt) {
-                        var Ot, qt;
-                        console.warn(`${oD} gave up reconnecting (${Vt.reason}, ${Vt.attempts} attempts)`, Vt.lastError), (0, PV.reportReconnectGaveUp)(Vt, bm);
-                        const Dt = null !== (Ot = null === (qt = Wd) || void 0 === qt ? void 0 : qt.rejoin) && void 0 !== Ot ? Ot : null;
-                        bH(tt, "gaveUp"), Bj();
-                        const mt = {
-                          code: tt.dropCode,
+                    onGaveUp: (uu, Eu) => {
+                      ! function(uu, Eu, ju) {
+                        var su, Uu;
+                        console.warn(`${FZ} gave up reconnecting (${ju.reason}, ${ju.attempts} attempts)`, ju.lastError), (0, vj.reportReconnectGaveUp)(ju, GX);
+                        const Zu = null !== (su = null === (Uu = al) || void 0 === Uu ? void 0 : Uu.rejoin) && void 0 !== su ? su : null;
+                        Mf(uu, "gaveUp"), tq();
+                        const Xu = {
+                          code: uu.dropCode,
                           name: null,
-                          reason: tm,
-                          canReconnect: !et,
+                          reason: EX,
+                          canReconnect: !Eu,
                           automaticallyReconnect: !1,
                           requiresRefresh: !1
                         };
-                        OH(mt, et ? null : Dt, !1, {
-                          reasonKey: em,
-                          canPlayAgain: et
+                        Ef(Xu, Eu ? null : Zu, !1, {
+                          reasonKey: jX,
+                          canPlayAgain: Eu
                         })
-                      }(Vt, tt, et)
+                      }(ju, uu, Eu)
                     }
                   })
                 };
-                Sd = Vt, null !== cd && cd.conn === tt.conn && Vt.resume.onInitialInfo(cd)
-              }(Ht, tt.endpoint), performance.mark(BD), (0, ft.q)("wasm_joined", lt), setTimeout((() => {
-                Md === Ht && (0, ft.e)()
-              }), 0), Zj(), console.info(`${oD} joined ${tt.roomName} as ${Ht.seat.sessionId} at ${Math.round(performance.now())} ms`);
-            const Mt = Gd;
-            Gd = null, null !== Mt && Tj(Et, Mt.mask, Mt.frames);
-            const bt = Bd.get(Ht.conn);
-            return Bd.clear(), void 0 !== bt && (ij(null), VH(Ht.conn, bt.code, bt.reason)), Ht
+                Pl = ju, null !== ol && ol.conn === uu.conn && ju.resume.onInitialInfo(ol)
+              }(fu, uu.endpoint), performance.mark(HZ), (0, Ou.s)("wasm_joined", cu), setTimeout((() => {
+                gl === fu && (0, Ou.h)()
+              }), 0), vq(), console.info(`${FZ} joined ${uu.roomName} as ${fu.seat.sessionId} at ${Math.round(performance.now())} ms`);
+            const gu = il;
+            il = null, null !== gu && Hq(Nu, gu.mask, gu.frames);
+            const Mu = tl.get(fu.conn);
+            return tl.clear(), void 0 !== Mu && (Bq(null), uf(fu.conn, Mu.code, Mu.reason)), fu
           } finally {
-            var Mt;
-            null === qt || void 0 === qt || qt.removeEventListener("abort", Et), Jd === Qt && Aj(Md, null), (null === (Mt = zd) || void 0 === Mt ? void 0 : Mt.join) === Qt && (zd = null)
+            var gu;
+            null === Uu || void 0 === Uu || Uu.removeEventListener("abort", Nu), el === bu && Fq(gl, null), (null === (gu = Wl) || void 0 === gu ? void 0 : gu.join) === bu && (Wl = null)
           }
-        }(tt.target, {
-          signal: dt,
-          rejoin: qt(tt.target),
-          early: Ht,
-          pageReady: mt
+        }(uu.target, {
+          signal: lu,
+          rejoin: Uu(uu.target),
+          early: fu,
+          pageReady: Xu
         });
-        return lt = !0, {
+        return cu = !0, {
           kind: "joined",
-          game: Xt
+          game: Cu
         }
-      } catch (Wt) {
-        if (Wt instanceof DOMException && "AbortError" === Wt.name || jt()) return {
-          kind: "nV"
+      } catch (au) {
+        if (au instanceof DOMException && "AbortError" === au.name || qu()) return {
+          kind: "Lj"
         };
-        if (vj) return {
+        if (Jq) return {
           kind: "stopped"
         };
-        if (Ad && (Ad = !1, await Dt().catch((tt => {
-            console.warn(`${oD} the cached traffic code could not be dropped`, tt)
-          }))), null === await um) return {
+        if (Bl && (Bl = !1, await Zu().catch((uu => {
+            console.warn(`${FZ} the cached traffic code could not be dropped`, uu)
+          }))), null === await JX) return {
           kind: "stopped"
         };
-        if (Wt instanceof nt.c) return Vt(Wt, performance.now() - Et), {
+        if (au instanceof zu.e) return ju(au, performance.now() - Nu), {
           kind: "failed",
-          error: Wt,
+          error: au,
           reloading: !1
         };
-        if (Wt instanceof At.c && Wt.code === Ot.b.wasmClientNotAllowed.code && Jj) return IH("this server refused the wasm client to this account", "refused"), {
+        if (au instanceof Bu.e && au.code === su.b.wasmClientNotAllowed.code && Mq) return mf("this server refused the wasm client to this account", "refused"), {
           kind: "failed",
-          error: Wt,
+          error: au,
           reloading: !0
         };
-        const tt = Wt instanceof At.c && Wt.code === Ot.b.outdatedVersion.code,
-          et = () => null === Md,
-          qt = await WX({
-            site: PV.JOIN_SITE,
-            error: Wt,
-            outdated: tt
+        const uu = au instanceof Bu.e && au.code === su.b.outdatedVersion.code,
+          Eu = () => null === gl,
+          Uu = await PC({
+            site: vj.JOIN_SITE,
+            error: au,
+            outdated: uu
           }, (() => {
-            Vt(Wt, performance.now() - Et)
+            ju(au, performance.now() - Nu)
           }), {
-            stillWanted: et
+            stillWanted: Eu
           });
         return {
           kind: "failed",
-          error: Wt,
-          reloading: qt
+          error: au,
+          reloading: Uu
         }
       } finally {
-        var vt;
-        lt || Qt.end(), Jq.b.releaseHold(Xt);
-        const tt = null === (vt = Ht) || void 0 === vt ? void 0 : vt.release();
-        tt && (0, PV.reportUnusedSeat)(tt, bm)
+        var du;
+        cu || bu.end(), pU.e.releaseHold(Cu);
+        const uu = null === (du = fu) || void 0 === du ? void 0 : du.release();
+        uu && (0, vj.reportUnusedSeat)(uu, GX)
       }
     }
 
-    function Gj(tt, et) {
-      return tt.stack = et.stack, tt
+    function Qq(uu, Eu) {
+      return uu.stack = Eu.stack, uu
     }
 
-    function zj(tt) {
-      return tt.session ? (0, Pt.n)(Mm, tt.session.gameNameWithVariation) : Promise.resolve()
+    function iq(uu) {
+      return uu.session ? (0, vu.s)(eX, uu.session.gameNameWithVariation) : Promise.resolve()
     }
 
-    function oj(tt, et) {
-      return (0, ce.n)(et), new Promise(((Vt, Ot) => {
-        const qt = () => {
-          Ot((0, ce.f)(et))
+    function Wq(uu, Eu) {
+      return (0, oE.n)(Eu), new Promise(((ju, su) => {
+        const Uu = () => {
+          su((0, oE.f)(Eu))
         };
-        et.addEventListener("abort", qt, {
+        Eu.addEventListener("abort", Uu, {
           once: !0
-        }), tt.then((tt => {
-          et.removeEventListener("abort", qt), Vt(tt)
-        }), (tt => {
-          et.removeEventListener("abort", qt), Ot(tt)
+        }), uu.then((uu => {
+          Eu.removeEventListener("abort", Uu), ju(uu)
+        }), (uu => {
+          Eu.removeEventListener("abort", Uu), su(uu)
         }))
       }))
     }
 
-    function rj() {
-      Uj(null)
+    function Sq() {
+      Iq(null)
     }
 
-    function Uj(tt) {
-      var et, Vt, Ot;
+    function Iq(uu) {
+      var Eu, ju, su;
       (function() {
-        const tt = Sd;
-        null !== tt && bH(tt, "left")
-      }(), null === Sm || Sm.left) || (Sm.left = !0, null === (Ot = (0, Pt.g)()) || void 0 === Ot || Ot.socketLeft(), (0, lt.o)({
+        const uu = Pl;
+        null !== uu && Mf(uu, "left")
+      }(), null === oX || oX.left) || (oX.left = !0, null === (su = (0, vu.l)()) || void 0 === su || su.socketLeft(), (0, cu.m)({
         websocketUrl: null
       }));
-      Jd && (0, ce.j)(Jd, new DOMException("the join was left", "AbortError")), Bj(null !== tt), null === (et = Tm) || void 0 === et || et.leave();
-      const qt = Md;
-      null !== tt && Jq.b.setGame(tt.game), Aj(null, null !== (Vt = null === tt || void 0 === tt ? void 0 : tt.controller) && void 0 !== Vt ? Vt : null), null === qt || void 0 === qt || qt.leave(), Yj(0), (0, he.f)()
+      el && (0, oE.j)(el, new DOMException("the join was left", "AbortError")), tq(null !== uu), null === (Eu = nX) || void 0 === Eu || Eu.leave();
+      const Uu = gl;
+      null !== uu && pU.e.setGame(uu.game), Fq(null, null !== (ju = null === uu || void 0 === uu ? void 0 : uu.controller) && void 0 !== ju ? ju : null), null === Uu || void 0 === Uu || Uu.leave(), Lq(0), (0, JE.h)()
     }
 
-    function Aj(tt, et) {
-      Md = tt, Jd = et, null === Md && null === Jd && Jq.b.setGame(void 0)
+    function Fq(uu, Eu) {
+      gl = uu, el = Eu, null === gl && null === el && pU.e.setGame(void 0)
     }
 
-    function ij(tt) {
-      Aj(tt, Jd)
+    function Bq(uu) {
+      Fq(uu, el)
     }
 
-    function Yj(tt) {
-      const et = wm;
-      return null !== dm && !vj && null !== et && !et.isStopped && (!!dm(At.i, 0, (0, At.C)(tt)) && (Qd = !0, 0 === tt || jd || nH(et, !1, "all"), !0))
+    function Lq(uu) {
+      const Eu = hX;
+      return null !== qX && !Jq && null !== Eu && !Eu.isStopped && (!!qX(Bu.j, 0, (0, Bu.y)(uu)) && (bl = !0, 0 === uu || ql || Rf(Eu, !1, "all"), !0))
     }
 
-    function Bj() {
-      var tt, et;
-      arguments.length > 0 && void 0 !== arguments[0] && arguments[0] || (0, zV.g)();
-      const Vt = null !== (tt = null === (et = Wd) || void 0 === et ? void 0 : et.overflow) && void 0 !== tt ? tt : null;
-      Wd = null, null !== Vt && (0, PV.reportEventOverflow)(Vt, bm)
+    function tq() {
+      var uu, Eu;
+      arguments.length > 0 && void 0 !== arguments[0] && arguments[0] || (0, Wj.h)();
+      const ju = null !== (uu = null === (Eu = al) || void 0 === Eu ? void 0 : Eu.overflow) && void 0 !== uu ? uu : null;
+      al = null, null !== ju && (0, vj.reportEventOverflow)(ju, GX)
     }
 
-    function pj() {
-      null !== Md || null !== Jd ? rj() : lH()
+    function xq() {
+      null !== gl || null !== el ? Sq() : Cf()
     }
 
-    function xj(tt, et) {
-      console.warn(`${oD} the event buffer refused records in ${et} frames (categories ${tt})`), vj || (null !== Wd ? Tj(Wd, tt, et) : null !== Jd && function(tt, et, Vt) {
-        var Ot;
-        const qt = function(tt, et) {
-          return null === tt ? "drop" : tt.activated ? "keep" : 0 !== (et & se.u.NetSession) ? "fail" : "drop"
-        }((null === (Ot = zd) || void 0 === Ot ? void 0 : Ot.join) === tt ? zd : null, et);
-        "keep" === qt ? Gd = {
-          mask: et,
-          frames: Vt
-        } : "fail" === qt && (0, ce.j)(tt, new Error("the join's net session was lost to an event overflow"))
-      }(Jd, tt, et))
+    function Tq(uu, Eu) {
+      console.warn(`${FZ} the event buffer refused records in ${Eu} frames (categories ${uu})`), Jq || (null !== al ? Hq(al, uu, Eu) : null !== el && function(uu, Eu, ju) {
+        var su;
+        const Uu = function(uu, Eu) {
+          return null === uu ? "drop" : uu.activated ? "keep" : 0 !== (Eu & yE.v.NetSession) ? "fail" : "drop"
+        }((null === (su = Wl) || void 0 === su ? void 0 : su.join) === uu ? Wl : null, Eu);
+        "keep" === Uu ? il = {
+          mask: Eu,
+          frames: ju
+        } : "fail" === Uu && (0, oE.j)(uu, new Error("the join's net session was lost to an event overflow"))
+      }(el, uu, Eu))
     }
 
-    function Tj(tt, et, Vt) {
-      const Ot = tt.overflow ??= {
+    function Hq(uu, Eu, ju) {
+      const su = uu.overflow ??= {
         frames: 0,
         acks: 0,
         mask: 0,
         outcome: null
       };
-      Ot.frames += Vt, Ot.acks++, Ot.mask |= et;
-      const qt = function(tt, et, Vt) {
-        if (0 === (tt & se.u.NetSession)) return "none";
-        const Ot = null !== et.rejoinedAt && Vt - et.rejoinedAt < YO;
-        return null === et.rejoin || Ot ? "fail" : "rejoin"
-      }(et, tt, performance.now());
-      "none" !== qt && queueMicrotask((() => {
-        if (Wd !== tt) return;
-        const et = "rejoin" === qt && performance.now() - od >= Ut.f;
-        Ot.outcome = et ? "rejoined" : "failed", OH(function(tt, et) {
+      su.frames += ju, su.acks++, su.mask |= Eu;
+      const Uu = function(uu, Eu, ju) {
+        if (0 === (uu & yE.v.NetSession)) return "none";
+        const su = null !== Eu.rejoinedAt && ju - Eu.rejoinedAt < Ts;
+        return null === Eu.rejoin || su ? "fail" : "rejoin"
+      }(Eu, uu, performance.now());
+      "none" !== Uu && queueMicrotask((() => {
+        if (al !== uu) return;
+        const Eu = "rejoin" === Uu && performance.now() - Sl >= Fu.f;
+        su.outcome = Eu ? "rejoined" : "failed", Ef(function(uu, Eu) {
           return {
             code: 0,
             name: "eventOverflow",
             reason: "Your game fell behind the server.",
-            canReconnect: tt,
-            automaticallyReconnect: et,
+            canReconnect: uu,
+            automaticallyReconnect: Eu,
             requiresRefresh: !1
           }
-        }(null !== tt.rejoin, et), tt.rejoin, et), rj(), et && (kd = performance.now())
+        }(null !== uu.rejoin, Eu), uu.rejoin, Eu), Sq(), Eu && (Ql = performance.now())
       }))
     }
 
-    function gj() {
-      Jj && function(tt, et) {
+    function Aq() {
+      Mq && function(uu, Eu) {
         let {
-          mesh: Vt,
-          worldgen: Ot,
-          modelPool: qt
-        } = tt;
-        "landingPage" === et ? (null === Vt || void 0 === Vt || Vt.stopWorkers(), null === Ot || void 0 === Ot || Ot.stopWorker(), null === qt || void 0 === qt || qt.stopWorkers()) : ((0, ee.f)(et) || "inGame" === et) && (null === Vt || void 0 === Vt || Vt.restartWorkers(), null === qt || void 0 === qt || qt.startWorkers())
+          mesh: ju,
+          worldgen: su,
+          modelPool: Uu
+        } = uu;
+        "landingPage" === Eu ? (null === ju || void 0 === ju || ju.stopWorkers(), null === su || void 0 === su || su.stopWorker(), null === Uu || void 0 === Uu || Uu.stopWorkers()) : ((0, uE.i)(Eu) || "inGame" === Eu) && (null === ju || void 0 === ju || ju.restartWorkers(), null === Uu || void 0 === Uu || Uu.startWorkers())
       }({
-        mesh: Pm,
-        worldgen: Rm,
-        modelPool: Um
-      }, ee.b.get("gameState"))
+        mesh: KX,
+        worldgen: mX,
+        modelPool: BX
+      }, uE.d.get("gameState"))
     }
 
-    function sj(tt) {
-      Cj = tt, uj && nj(uj, tt)
+    function nq(uu) {
+      eq = uu, Gq && yq(Gq, uu)
     }
 
-    function nj(tt, et) {
-      tt.style.visibility = et ? "visible" : "hidden"
+    function yq(uu, Eu) {
+      uu.style.visibility = Eu ? "visible" : "hidden"
     }
 
-    function tH(tt) {
-      var et;
-      const Vt = tt.roomName,
-        Ot = null !== (et = tt.joinOptions.lobbyName) && void 0 !== et ? et : null;
+    function zq(uu) {
+      var Eu;
+      const ju = uu.roomName,
+        su = null !== (Eu = uu.joinOptions.lobbyName) && void 0 !== Eu ? Eu : null;
       return () => {
-        Fj(Vt, Ot)
+        Vq(ju, su)
       }
     }
 
-    function eH() {
-      return Vt.e(277).then((() => Vt(51285))).then((tt => {
+    function Rq() {
+      return ju.e(277).then((() => ju(51254))).then((uu => {
         let {
-          invalidateGuestTrafficCode: et
-        } = tt;
-        return et()
-      })).catch((tt => {
-        console.warn(`${oD} the cached traffic code could not be dropped`, tt)
+          invalidateGuestTrafficCode: Eu
+        } = uu;
+        return Eu()
+      })).catch((uu => {
+        console.warn(`${FZ} the cached traffic code could not be dropped`, uu)
       }))
     }
 
-    function VH(tt, et, Vt) {
-      var qt, Dt;
-      let mt = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      if (vj) return;
-      if ((null === (qt = Wd) || void 0 === qt ? void 0 : qt.conn) !== tt) return void(null !== Jd && Bd.set(tt, {
-        code: et,
-        reason: Vt
+    function uf(uu, Eu, ju) {
+      var Uu, Zu;
+      let Xu = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      if (Jq) return;
+      if ((null === (Uu = al) || void 0 === Uu ? void 0 : Uu.conn) !== uu) return void(null !== el && tl.set(uu, {
+        code: Eu,
+        reason: ju
       }));
       const {
-        rejoin: dt,
-        game: jt,
-        joinedAt: Ht
-      } = Wd;
-      Bj(), MH();
-      const Xt = (0, Ut.l)(et, (0, pO.f)(tt));
-      if (console.info(`${oD} the game's connection closed with code ${et} (${null!==(Dt=Xt.name)&&void 0!==Dt?Dt:"unrecognised"})`), et === Ot.b.gameOrPluginKick.code || mt || (0, PV.reportDisconnect)(Xt, bm, {
-          closeReason: Vt,
-          sinceJoinedMs: performance.now() - Ht,
-          game: jt
-        }), Xt.requiresRefresh) {
-        const tt = "outdatedVersion" === Xt.name,
-          Vt = new Error(`the game's connection closed with code ${et}`),
-          Ot = () => null === Wd && null === Jd;
-        return void WX({
-          site: PV.JOIN_SITE,
-          error: Vt,
-          outdated: tt
+        rejoin: lu,
+        game: qu,
+        joinedAt: fu
+      } = al;
+      tq(), gf();
+      const Cu = (0, Fu.k)(Eu, (0, As.f)(uu));
+      if (console.info(`${FZ} the game's connection closed with code ${Eu} (${null!==(Zu=Cu.name)&&void 0!==Zu?Zu:"unrecognised"})`), Eu === su.b.gameOrPluginKick.code || Xu || (0, vj.reportDisconnect)(Cu, GX, {
+          closeReason: ju,
+          sinceJoinedMs: performance.now() - fu,
+          game: qu
+        }), Cu.requiresRefresh) {
+        const uu = "outdatedVersion" === Cu.name,
+          ju = new Error(`the game's connection closed with code ${Eu}`),
+          su = () => null === al && null === el;
+        return void PC({
+          site: vj.JOIN_SITE,
+          error: ju,
+          outdated: uu
         }, (() => {
-          Ot() && OH(Xt, null, !1)
+          su() && Ef(Cu, null, !1)
         }), {
-          stillWanted: Ot
+          stillWanted: su
         })
       }
-      const Qt = Xt.canReconnect ? dt : null,
-        lt = null !== Qt && Xt.automaticallyReconnect && performance.now() - od >= Ut.f;
-      OH(Xt, Qt, lt)
+      const bu = Cu.canReconnect ? lu : null,
+        cu = null !== bu && Cu.automaticallyReconnect && performance.now() - Sl >= Fu.f;
+      Ef(Cu, bu, cu)
     }
 
-    function OH(tt, et, Vt) {
-      var Ot;
-      let qt = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
+    function Ef(uu, Eu, ju) {
+      var su;
+      let Uu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
         reasonKey: null,
         canPlayAgain: !1
       };
-      if (Kj) return;
-      Jq.b.unwantedLeave(Vt && null !== et && 0 === Ud.size), null === (Ot = rd) || void 0 === Ot || Ot.abort();
-      const Dt = new AbortController;
-      rd = Dt;
-      const mt = null === et ? null : () => {
-        Dt.signal.aborted || (Dt.abort(), et())
+      if (pq) return;
+      pU.e.unwantedLeave(ju && null !== Eu && 0 === Fl.size), null === (su = Il) || void 0 === su || su.abort();
+      const Zu = new AbortController;
+      Il = Zu;
+      const Xu = null === Eu ? null : () => {
+        Zu.signal.aborted || (Zu.abort(), Eu())
       };
-      if (Vt && null !== mt) {
-        od = performance.now();
-        const tt = setTimeout(mt, Ut.c);
-        Dt.signal.addEventListener("abort", (() => {
-          clearTimeout(tt)
+      if (ju && null !== Xu) {
+        Sl = performance.now();
+        const uu = setTimeout(Xu, Fu.e);
+        Zu.signal.addEventListener("abort", (() => {
+          clearTimeout(uu)
         }))
       }
-      const dt = {
-        code: tt.code,
-        name: tt.name,
-        reason: tt.reason,
-        reasonKey: qt.reasonKey,
-        reconnect: mt,
-        reconnecting: Vt,
-        requiresRefresh: tt.requiresRefresh,
-        canPlayAgain: qt.canPlayAgain
+      const lu = {
+        code: uu.code,
+        name: uu.name,
+        reason: uu.reason,
+        reasonKey: Uu.reasonKey,
+        reconnect: Xu,
+        reconnecting: ju,
+        requiresRefresh: uu.requiresRefresh,
+        canPlayAgain: Uu.canPlayAgain
       };
-      if (Ud.size > 0)
-        for (const Ht of [...Ud]) try {
-          Ht(dt)
-        } catch (jt) {
-          console.error(`${oD} an unwanted-leave listener threw`, jt)
-        } else kO((0, ZO.l)(tt, null !== mt, Vt), Dt.signal).then((et => {
-          et && (null !== mt ? mt() : tt.requiresRefresh && (0, te.h)())
+      if (Fl.size > 0)
+        for (const fu of [...Fl]) try {
+          fu(lu)
+        } catch (qu) {
+          console.error(`${FZ} an unwanted-leave listener threw`, qu)
+        } else Ws((0, rs.k)(uu, null !== Xu, ju), Zu.signal).then((Eu => {
+          Eu && (null !== Xu ? Xu() : uu.requiresRefresh && (0, Ru.m)())
         }))
     }
-    const qH = {
-      attachSocket: tt => QH(tt),
-      onConnection: tt => (pd.add(tt), () => {
-        pd.delete(tt)
+    const jf = {
+      attachSocket: uu => ff(uu),
+      onConnection: uu => (xl.add(uu), () => {
+        xl.delete(uu)
       }),
-      sendRaw: (tt, et) => {
-        const Vt = Sm;
-        return null !== Vt && Vt.conn === tt && XX(Vt, et)
+      sendRaw: (uu, Eu) => {
+        const ju = oX;
+        return null !== ju && ju.conn === uu && CC(ju, Eu)
       },
-      leaveRoom: Yj,
-      closeSocket: tt => {
-        var et;
-        (null === (et = Sm) || void 0 === et ? void 0 : et.conn) === tt && lH()
+      leaveRoom: Lq,
+      closeSocket: uu => {
+        var Eu;
+        (null === (Eu = oX) || void 0 === Eu ? void 0 : Eu.conn) === uu && Cf()
       },
-      flushNet: EH
+      flushNet: bf
     };
 
-    function DH(tt) {
-      var et;
+    function sf(uu) {
+      var Eu;
       let {
-        aux: Vt,
-        payload: Ot
-      } = tt;
-      null === (et = wm) || void 0 === et || et.queueOptions(Vt, Ot)
+        aux: ju,
+        payload: su
+      } = uu;
+      null === (Eu = hX) || void 0 === Eu || Eu.queueOptions(ju, su)
     }
 
-    function mH(tt, et) {
-      DH(function(tt, et) {
-        return Lq = tt ? {
-          preventMovement: et
-        } : null, tt ? Fq(et) : {
-          aux: ge.nc.AdEnd,
-          payload: Zq
+    function Uf(uu, Eu) {
+      sf(function(uu, Eu) {
+        return QU = uu ? {
+          preventMovement: Eu
+        } : null, uu ? iU(Eu) : {
+          aux: nE.dc.AdEnd,
+          payload: rU
         }
-      }(tt, et))
+      }(uu, Eu))
     }
 
-    function dH(tt) {
-      var et;
-      wd = tt, null === (et = wm) || void 0 === et || et.setUiPrefs(tt)
+    function Zf(uu) {
+      var Eu;
+      Yl = uu, null === (Eu = hX) || void 0 === Eu || Eu.setUiPrefs(uu)
     }
 
-    function jH(tt, et) {
-      Mm.setMaster(tt, et)
+    function Xf(uu, Eu) {
+      eX.setMaster(uu, Eu)
     }
 
-    function HH(tt) {
-      var et;
-      yd = tt, null === (et = wm) || void 0 === et || et.setEnvPrefs(tt)
+    function lf(uu) {
+      var Eu;
+      hl = uu, null === (Eu = hX) || void 0 === Eu || Eu.setEnvPrefs(uu)
     }
 
-    function XH(tt) {
-      var et;
-      Nd = tt, null === (et = wm) || void 0 === et || et.setLookPrefs(tt)
+    function qf(uu) {
+      var Eu;
+      Dl = uu, null === (Eu = hX) || void 0 === Eu || Eu.setLookPrefs(uu)
     }
 
-    function QH(tt) {
-      var et;
-      let Vt = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new URL(tt.url).origin,
-        Ot = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      if (tt.readyState === WebSocket.CLOSING || tt.readyState === WebSocket.CLOSED) return console.warn(`${oD} a closing or closed socket can't be attached`), null;
-      const qt = wm;
-      if (!qt || qt.isStopped) return console.warn(`${oD} no core is running to attach a socket to`), tt.close(), null;
-      if (null === (0, Pt.g)()) return console.warn(`${oD} the game has not started to attach a socket to`), tt.close(), null;
-      if (ed > ge.v) return console.warn(`${oD} this core has attached all the sockets it can; reload to play on`), tt.close(), null;
-      if (Qd && !jd && (nH(qt, !1, "all"), qt.isStopped || vj)) return tt.close(), null;
-      lH();
-      const Dt = ed++;
-      if (!hH(qt, "open", Dt, Ot ? ge.lc.Resume : 0)) return tt.close(), null;
-      Ot || Ke.b.reset(), zd = null === Jd ? null : {
-        join: Jd,
-        conn: Dt,
+    function ff(uu) {
+      var Eu;
+      let ju = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new URL(uu.url).origin,
+        su = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      if (uu.readyState === WebSocket.CLOSING || uu.readyState === WebSocket.CLOSED) return console.warn(`${FZ} a closing or closed socket can't be attached`), null;
+      const Uu = hX;
+      if (!Uu || Uu.isStopped) return console.warn(`${FZ} no core is running to attach a socket to`), uu.close(), null;
+      if (null === (0, vu.l)()) return console.warn(`${FZ} the game has not started to attach a socket to`), uu.close(), null;
+      if (El > nE.v) return console.warn(`${FZ} this core has attached all the sockets it can; reload to play on`), uu.close(), null;
+      if (bl && !ql && (Rf(Uu, !1, "all"), Uu.isStopped || Jq)) return uu.close(), null;
+      Cf();
+      const Zu = El++;
+      if (!Jf(Uu, "open", Zu, su ? nE.cc.Resume : 0)) return uu.close(), null;
+      su || wE.e.reset(), Wl = null === el ? null : {
+        join: el,
+        conn: Zu,
         activated: !1
-      }, tt.binaryType = "arraybuffer";
-      const mt = new hV.d((() => {
-          ! function(tt, et) {
-            if (Sm !== et || tt.isStopped || null === yH(et, sD)) return;
-            et.detach(), Sm = null, wH(tt, et, sD, "", !0), et.ws.close()
-          }(qt, dt)
+      }, uu.binaryType = "arraybuffer";
+      const Xu = new Jj.d((() => {
+          ! function(uu, Eu) {
+            if (oX !== Eu || uu.isStopped || null === Yf(Eu, RZ)) return;
+            Eu.detach(), oX = null, Of(uu, Eu, RZ, "", !0), Eu.ws.close()
+          }(Uu, lu)
         })),
-        dt = {
-          ws: tt,
-          conn: Dt,
+        lu = {
+          ws: uu,
+          conn: Zu,
           pending: [],
           pendingBytes: 0,
           left: !1,
-          resume: Ot,
+          resume: su,
           token: null,
           detach: () => {
-            mt.dispose(), tt.removeEventListener("message", jt), tt.removeEventListener("open", Ht), tt.removeEventListener("close", Xt)
+            Xu.dispose(), uu.removeEventListener("message", qu), uu.removeEventListener("open", fu), uu.removeEventListener("close", Cu)
           }
         },
-        jt = tt => {
-          if (tt.data instanceof ArrayBuffer) {
-            var et;
-            const Vt = new Uint8Array(tt.data);
-            mt.heard(), dt.token = null !== (et = (0, vV.b)(Vt)) && void 0 !== et ? et : dt.token,
-              function(tt, et, Vt) {
-                bX(tt, (() => {
-                  tt.rings.net.writeFrame(et, Vt) || tt.crash(EV.s, `a socket frame of ${Vt.byteLength} bytes did not fit the net-in ring`)
+        qu = uu => {
+          if (uu.data instanceof ArrayBuffer) {
+            var Eu;
+            const ju = new Uint8Array(uu.data);
+            Xu.heard(), lu.token = null !== (Eu = (0, dj.e)(ju)) && void 0 !== Eu ? Eu : lu.token,
+              function(uu, Eu, ju) {
+                eC(uu, (() => {
+                  uu.rings.net.writeFrame(Eu, ju) || uu.crash(cj.q, `a socket frame of ${ju.byteLength} bytes did not fit the net-in ring`)
                 }));
-                const Ot = tt.rings.net.cursor >= gD;
-                !KX() && (Ot || tt.netWrittenSinceFrame >= TD) && nH(tt, !1, document.hidden ? "all" : "budget");
-                vX(tt)
-              }(qt, Dt, Vt)
+                const su = uu.rings.net.cursor >= zZ;
+                !JC() && (su || uu.netWrittenSinceFrame >= yZ) && Rf(uu, !1, document.hidden ? "all" : "budget");
+                aC(uu)
+              }(Uu, Zu, ju)
           }
         },
-        Ht = () => {
-          Ot || (0, ft.q)("wasm_socket_open", performance.now());
-          for (const et of dt.pending.splice(0)) tt.send(et);
-          dt.pendingBytes = 0
+        fu = () => {
+          su || (0, Ou.s)("wasm_socket_open", performance.now());
+          for (const Eu of lu.pending.splice(0)) uu.send(Eu);
+          lu.pendingBytes = 0
         },
-        Xt = tt => {
-          if (Sm === dt && qt.rings.net.cursor > 0 && nH(qt, !1, "all"), Sm === dt) {
-            if (dt.detach(), Sm = null, wH(qt, dt, tt.code, tt.reason) || fH(qt, dt)) return;
-            hH(qt, "close", Dt), NH(Dt, dt.left), VH(Dt, tt.code, tt.reason)
+        Cu = uu => {
+          if (oX === lu && Uu.rings.net.cursor > 0 && Rf(Uu, !1, "all"), oX === lu) {
+            if (lu.detach(), oX = null, Of(Uu, lu, uu.code, uu.reason) || Nf(Uu, lu)) return;
+            Jf(Uu, "close", Zu), hf(Zu, lu.left), uf(Zu, uu.code, uu.reason)
           }
         };
-      return tt.addEventListener("message", jt), tt.addEventListener("open", Ht), tt.addEventListener("close", Xt), Sm = dt, null === (et = (0, Pt.g)()) || void 0 === et || et.socketAttached(Dt), (0, lt.o)({
-        websocketUrl: Vt
-      }), Dt
+      return uu.addEventListener("message", qu), uu.addEventListener("open", fu), uu.addEventListener("close", Cu), oX = lu, null === (Eu = (0, vu.l)()) || void 0 === Eu || Eu.socketAttached(Zu), (0, cu.m)({
+        websocketUrl: ju
+      }), Zu
     }
 
-    function lH() {
-      const tt = Sm;
-      if (!tt) return;
-      const et = wm,
-        Vt = tt.resume;
-      Vt && (EH(), Sm !== tt) || (Sm = null, tt.detach(), tt.ws.close(), null !== et && (fH(et, tt) || Vt && wH(et, tt, nD)) || (null !== et && hH(et, "close", tt.conn), NH(tt.conn, tt.left)))
+    function Cf() {
+      const uu = oX;
+      if (!uu) return;
+      const Eu = hX,
+        ju = uu.resume;
+      ju && (bf(), oX !== uu) || (oX = null, uu.detach(), uu.ws.close(), null !== Eu && (Nf(Eu, uu) || ju && Of(Eu, uu, uX)) || (null !== Eu && Jf(Eu, "close", uu.conn), hf(uu.conn, uu.left)))
     }
 
-    function EH() {
-      const tt = wm;
-      null !== tt && !tt.isStopped && !vj && !jd && tt.rings.net.cursor > 0 && nH(tt, !1, "all")
+    function bf() {
+      const uu = hX;
+      null !== uu && !uu.isStopped && !Jq && !ql && uu.rings.net.cursor > 0 && Rf(uu, !1, "all")
     }
 
-    function fH(tt, et) {
-      var Vt;
-      if (!et.resume) return !1;
-      const Ot = Sd;
-      return null !== Ot && null !== et.token && "" !== et.token && (Ot.pendingHold = {
-        conn: et.conn,
-        token: `${Ot.roomId}:${et.token}`
-      }), hH(tt, "close", et.conn), null === (Vt = (0, Pt.g)()) || void 0 === Vt || Vt.socketDetached(et.conn), !0
+    function Nf(uu, Eu) {
+      var ju;
+      if (!Eu.resume) return !1;
+      const su = Pl;
+      return null !== su && null !== Eu.token && "" !== Eu.token && (su.pendingHold = {
+        conn: Eu.conn,
+        token: `${su.roomId}:${Eu.token}`
+      }), Jf(uu, "close", Eu.conn), null === (ju = (0, vu.l)()) || void 0 === ju || ju.socketDetached(Eu.conn), !0
     }
 
-    function wH(tt, et, Vt) {
-      let Ot = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "",
-        qt = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-      const Dt = yH(et, Vt);
-      if (null === Dt) return !1;
+    function Of(uu, Eu, ju) {
+      let su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "",
+        Uu = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+      const Zu = Yf(Eu, ju);
+      if (null === Zu) return !1;
       const {
-        Pd: mt,
-        token: dt,
-        game: jt,
-        joinedAt: Ht
-      } = Dt;
-      if (!hH(tt, "close", et.conn, ge.D.Held)) return !0;
-      console.warn(`${oD} the game's connection ${qt?"went silent":`dropped with code ${Vt}`}, holding it`);
-      const Xt = {
-        closeReason: Ot,
-        sinceJoinedMs: performance.now() - Ht,
-        game: jt
+        dl: Xu,
+        token: lu,
+        game: qu,
+        joinedAt: fu
+      } = Zu;
+      if (!Jf(uu, "close", Eu.conn, nE.y.Held)) return !0;
+      console.warn(`${FZ} the game's connection ${Uu?"went silent":`dropped with code ${ju}`}, holding it`);
+      const Cu = {
+        closeReason: su,
+        sinceJoinedMs: performance.now() - fu,
+        game: qu
       };
-      return (0, PV.reportDisconnect)((0, Ut.l)(Vt), bm, Xt, qt ? "silent" : void 0), mt.heldConn = et.conn, mt.dropCode = Vt, mt.pendingHold = {
-        conn: et.conn,
-        token: `${mt.roomId}:${dt}`
-      }, jd || nH(tt, !1, "all"), !0
+      return (0, vj.reportDisconnect)((0, Fu.k)(ju), GX, Cu, Uu ? "silent" : void 0), Xu.heldConn = Eu.conn, Xu.dropCode = ju, Xu.pendingHold = {
+        conn: Eu.conn,
+        token: `${Xu.roomId}:${lu}`
+      }, ql || Rf(uu, !1, "all"), !0
     }
 
-    function yH(tt, et) {
-      const Vt = Sd,
-        qt = Wd,
-        Dt = tt.token;
-      return null === Vt || null === qt || vj || tt.left || qt.conn !== tt.conn || null === Dt || "" === Dt ? null : (0, Ot.h)(et) && Vt.resume.canHoldSeat() ? {
-        Pd: Vt,
-        token: Dt,
-        game: qt.game,
-        joinedAt: qt.joinedAt
+    function Yf(uu, Eu) {
+      const ju = Pl,
+        Uu = al,
+        Zu = uu.token;
+      return null === ju || null === Uu || Jq || uu.left || Uu.conn !== uu.conn || null === Zu || "" === Zu ? null : (0, su.h)(Eu) && ju.resume.canHoldSeat() ? {
+        dl: ju,
+        token: Zu,
+        game: Uu.game,
+        joinedAt: Uu.joinedAt
       } : null
     }
 
-    function NH(tt, et) {
-      var Vt;
-      null === (Vt = (0, Pt.g)()) || void 0 === Vt || Vt.closeGame(tt), (0, Pq.e)().close(tt), et || (0, lt.o)({
+    function hf(uu, Eu) {
+      var ju;
+      null === (ju = (0, vu.l)()) || void 0 === ju || ju.closeGame(uu), (0, VU.b)().close(uu), Eu || (0, cu.m)({
         websocketUrl: null
       })
     }
 
-    function aH() {
-      const tt = Fd;
-      if (null === tt) return;
-      const et = (0, Pt.g)();
-      vj || null === et || et.oW(tt) ? Fd = null : performance.now() - ld.pause >= Om && (ld.pause = performance.now(), console.warn(`${oD} the cmd ring had no room for SetPaused(${tt}): written before the next frame`))
+    function Df() {
+      const uu = rl;
+      if (null === uu) return;
+      const Eu = (0, vu.l)();
+      Jq || null === Eu || Eu.Wm(uu) ? rl = null : performance.now() - cl.pause >= UX && (cl.pause = performance.now(), console.warn(`${FZ} the cmd ring had no room for SetPaused(${uu}): written before the next frame`))
     }
 
-    function MH() {
-      const tt = Sd;
-      Sd = null, null === tt || void 0 === tt || tt.resume.dispose()
+    function gf() {
+      const uu = Pl;
+      Pl = null, null === uu || void 0 === uu || uu.resume.dispose()
     }
 
-    function bH(tt, et) {
-      var Vt, Ot;
+    function Mf(uu, Eu) {
+      var ju, su;
       const {
-        heldConn: qt
-      } = tt, Dt = tt.resume.resumingConn;
-      tt.heldConn = 0, tt.pendingHold = null, Sd === tt && (Sd = null), "left" === et ? tt.resume.leave() : tt.resume.dispose(), 0 === Ld || (null === (Vt = Sm) || void 0 === Vt ? void 0 : Vt.conn) !== Ld || "left" === et && (null === (Ot = Md) || void 0 === Ot ? void 0 : Ot.conn) === Ld || KH(Ld), "gaveUp" === et && 0 !== Dt && KH(Dt), 0 !== qt && "refused" !== et && (console.info(`${oD} the game held through its drop ${"left"===et?"was left":"is given up"}`), null === wm || wm.isStopped || hH(wm, "close", qt), NH(qt, !1))
+        heldConn: Uu
+      } = uu, Zu = uu.resume.resumingConn;
+      uu.heldConn = 0, uu.pendingHold = null, Pl === uu && (Pl = null), "left" === Eu ? uu.resume.leave() : uu.resume.dispose(), 0 === Vl || (null === (ju = oX) || void 0 === ju ? void 0 : ju.conn) !== Vl || "left" === Eu && (null === (su = gl) || void 0 === su ? void 0 : su.conn) === Vl || wf(Vl), "gaveUp" === Eu && 0 !== Zu && wf(Zu), 0 !== Uu && "refused" !== Eu && (console.info(`${FZ} the game held through its drop ${"left"===Eu?"was left":"is given up"}`), null === hX || hX.isStopped || Jf(hX, "close", Uu), hf(Uu, !1))
     }
 
-    function JH(tt, et) {
-      const Vt = et.indexOf(":");
+    function ef(uu, Eu) {
+      const ju = Eu.indexOf(":");
       return {
-        roomId: Vt < 0 ? tt.roomId : et.slice(0, Vt),
-        roomToken: et.slice(Vt + 1)
+        roomId: ju < 0 ? uu.roomId : Eu.slice(0, ju),
+        roomToken: Eu.slice(ju + 1)
       }
     }
 
-    function CH(tt) {
-      (0, fV.logClientMeasurement)("join_preload", tt, {
+    function Gf(uu) {
+      (0, Nj.logClientMeasurement)("join_preload", uu, {
         client: "wasm"
       })
     }
 
-    function uH(tt) {
-      var et;
-      cd = tt;
-      const Vt = tt.replayOffer && Zd !== tt.conn;
-      Pd = Vt ? tt.conn : 0, Rd = Vt || Id.has(tt.conn) ? 0 : tt.conn, ut.admitted(), tt.conn === Ld && (Ld = 0);
-      const Ot = Sd;
-      null !== Ot && (null === (et = Wd) || void 0 === et ? void 0 : et.conn) === tt.conn && Ot.resume.onInitialInfo(tt)
+    function pf(uu) {
+      var Eu;
+      ol = uu;
+      const ju = uu.replayOffer && Kl !== uu.conn;
+      vl = ju ? uu.conn : 0, kl = ju || ml.has(uu.conn) ? 0 : uu.conn, pu.admitted(), uu.conn === Vl && (Vl = 0);
+      const su = Pl;
+      null !== su && (null === (Eu = al) || void 0 === Eu ? void 0 : Eu.conn) === uu.conn && su.resume.onInitialInfo(uu)
     }
 
-    function KH(tt) {
-      var et;
-      const Vt = Sm;
-      (null === Vt || void 0 === Vt ? void 0 : Vt.conn) === tt && (Vt.left = !0, null === (et = (0, Pt.g)()) || void 0 === et || et.socketLeft(), (0, lt.o)({
+    function wf(uu) {
+      var Eu;
+      const ju = oX;
+      (null === ju || void 0 === ju ? void 0 : ju.conn) === uu && (ju.left = !0, null === (Eu = (0, vu.l)()) || void 0 === Eu || Eu.socketLeft(), (0, cu.m)({
         websocketUrl: null
-      }), Yj(tt) ? setTimeout((() => {
-        Sm === Vt && lH()
-      }), At.e) : lH())
+      }), Lq(uu) ? setTimeout((() => {
+        oX === ju && Cf()
+      }), Bu.h) : Cf())
     }
 
-    function hH(tt, et, Vt) {
-      let Ot = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-        qt = !1;
-      return bX(tt, (() => {
+    function Jf(uu, Eu, ju) {
+      let su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+        Uu = !1;
+      return eC(uu, (() => {
         const {
-          net: Dt
-        } = tt.rings;
-        qt = "open" === et ? Dt.writeOpen(Vt, Ot) : Dt.writeClose(Vt, Ot), qt || tt.crash(EV.s, `a socket ${et} did not fit the net-in ring`)
-      })), qt
+          net: Zu
+        } = uu.rings;
+        Uu = "open" === Eu ? Zu.writeOpen(ju, su) : Zu.writeClose(ju, su), Uu || uu.crash(cj.q, `a socket ${Eu} did not fit the net-in ring`)
+      })), Uu
     }
 
-    function vH(tt, et, Vt) {
-      let Ot = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      if (RH()) return (0, PV.reportUnsupportedFallback)(tt, et, Vt, Ot), void IH(`the wasm client can't run here (${Vt}; ${et})`, et);
-      (0, PV.showUnsupported)(tt, "unsupported", Vt, Ot)
+    function df(uu, Eu, ju) {
+      let su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+      if (kf()) return (0, vj.reportUnsupportedFallback)(uu, Eu, ju, su), void mf(`the wasm client can't run here (${ju}; ${Eu})`, Eu);
+      (0, vj.showUnsupported)(uu, "unsupported", ju, su)
     }
-    const WH = 1500;
+    const af = 1500;
 
-    function SH(tt, et) {
-      const Vt = 1 === tt.missing.length && tt.missing[0] === QV.c,
-        Ot = et ? "blockedAfterLoss" : Vt ? "noContext" : "unsupported";
+    function Pf(uu, Eu) {
+      const ju = 1 === uu.missing.length && uu.missing[0] === Cj.e,
+        su = Eu ? "blockedAfterLoss" : ju ? "noContext" : "unsupported";
       return {
-        decline: Ot,
-        detail: `No WebGPU or WebGL2, and WebGL1 lacks ${tt.missing.join(", ")}`,
+        decline: su,
+        detail: `No WebGPU or WebGL2, and WebGL1 lacks ${uu.missing.join(", ")}`,
         details: {
-          missing: tt.missing.join(",")
+          missing: uu.missing.join(",")
         },
-        retries: "unsupported" !== Ot && RH()
+        retries: "unsupported" !== su && kf()
       }
     }
 
-    function cH(tt) {
-      console.warn(`${oD} ${tt}: reloading once more onto the wasm client`), (0, Rq.q)(), (0, PV.flushCrashReports)(te.c).then(te.h, te.h)
+    function of(uu) {
+      console.warn(`${FZ} ${uu}: reloading once more onto the wasm client`), (0, vU.r)(), (0, vj.flushCrashReports)(Ru.b).then(Ru.m, Ru.m)
     }
 
-    function RH() {
-      return Jj && "wasm" !== (0, Ce.i)(window.location.search)
+    function kf() {
+      return Mq && "wasm" !== (0, GE.h)(window.location.search)
     }
 
-    function IH(tt, et) {
-      console.warn(`${oD} ${tt}: reloading on the JS client`), null !== et && (0, Ce.G)(et), (0, Ce.E)(null === et ? "reloadOntoJs" : "decline");
-      const Vt = () => {
-        (0, te.f)(Ce.N)
+    function mf(uu, Eu) {
+      console.warn(`${FZ} ${uu}: reloading on the JS client`), null !== Eu && (0, GE.x)(Eu), (0, GE.v)(null === Eu ? "reloadOntoJs" : "decline");
+      const ju = () => {
+        (0, Ru.j)(GE.z)
       };
-      (0, PV.flushCrashReports)(te.c).then(Vt, Vt)
+      (0, vj.flushCrashReports)(Ru.b).then(ju, ju)
     }
 
-    function PH(tt, et, Vt, Ot) {
-      return sd(tt, et, Vt, Ot)
+    function vf(uu, Eu, ju, su) {
+      return nl(uu, Eu, ju, su)
     }
 
-    function ZH() {
-      null === ej || null === wm || wm.isStopped || vj || null !== im || null === dm || (im = ej(dm, kH, GH().follow))
+    function Kf() {
+      null === Rl || null === hX || hX.isStopped || Jq || null !== tX || null === qX || (tX = Rl(qX, Qf, Wf().follow))
     }
 
-    function LH() {
-      var tt, et, Vt;
-      return null !== (tt = null === (et = Nm) || void 0 === et || null === (Vt = et.textures) || void 0 === Vt ? void 0 : Vt.files()) && void 0 !== tt ? tt : null
+    function Vf() {
+      var uu, Eu, ju;
+      return null !== (uu = null === (Eu = gX) || void 0 === Eu || null === (ju = Eu.textures) || void 0 === ju ? void 0 : ju.files()) && void 0 !== uu ? uu : null
     }
 
-    function FH(tt) {
-      GH().follow((et => {
-        null !== et && Promise.all([Promise.all([Vt.e(204), Vt.e(46)]).then((() => Vt(51310))), (0, Rq.Q)()]).then((tt => {
+    function rf(uu) {
+      Wf().follow((Eu => {
+        null !== Eu && Promise.all([Promise.all([ju.e(204), ju.e(46)]).then((() => ju(51288))), (0, vU.O)()]).then((uu => {
           let [{
-            followPagePackFiles: Vt
-          }, Ot] = tt;
-          const qt = null === Ot || (0, QV.l)(Ot) ? "webgl" : Ot.backend;
-          Vt(et, bq.c, qt, (tt => {
-            bq.c.setPageFiles(tt)
-          }), kH)
-        }), (et => {
-          console.warn(`${oD} the texture pack's files didn't load: the previews draw the shipped ones until the next opens`, et), tt()
+            followPagePackFiles: ju
+          }, su] = uu;
+          const Uu = null === su || (0, Cj.t)(su) ? "webgl" : su.backend;
+          ju(Eu, GU.g, Uu, (uu => {
+            GU.g.setPageFiles(uu)
+          }), Qf)
+        }), (Eu => {
+          console.warn(`${FZ} the texture pack's files didn't load: the previews draw the shipped ones until the next opens`, Eu), uu()
         }))
       }))
     }
 
-    function kH(tt, et) {
-      console.warn(`${oD} ${tt}`, et)
+    function Qf(uu, Eu) {
+      console.warn(`${FZ} ${uu}`, Eu)
     }
 
-    function GH() {
-      return ym ??= new rq({
-        load: tt => Promise.all([Vt.e(204), Vt.e(55)]).then((() => Vt(51319))).then((et => {
+    function Wf() {
+      return DX ??= new BU({
+        load: uu => Promise.all([ju.e(204), ju.e(55)]).then((() => ju(51295))).then((Eu => {
           let {
-            startPageTexturePackFeed: Vt
-          } = et;
-          return Vt(kH, tt)
+            startPageTexturePackFeed: ju
+          } = Eu;
+          return ju(Qf, uu)
         })),
-        store: AV.c,
-        iE: tt => {
-          um.then((() => {
-            (0, PV.reportTexturePackFeedLoadFailure)(tt, bm)
+        store: Bj.h,
+        HN: uu => {
+          JX.then((() => {
+            (0, vj.reportTexturePackFeedLoadFailure)(uu, GX)
           }))
         }
-      }), ym
+      }), DX
     }
-    const zH = tt => GH().follow(tt);
+    const Sf = uu => Wf().follow(uu);
 
-    function oH() {
-      return GH().loaded()
+    function If() {
+      return Wf().loaded()
     }
-    const rH = function(tt, et, Vt) {
-        let Ot = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => performance.now(),
-          qt = 0;
-        return async function(Dt, mt) {
-          let dt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => !0;
-          const jt = ++qt,
-            Ht = Ot() + et,
-            Xt = await
-          function(tt, et) {
-            let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {};
-            return new Promise((Ot => {
-              const qt = setTimeout((() => {
-                Ot(null), tt.then((tt => {
-                  null !== tt && (tt.joinedWithout(), Vt(tt))
+    const Ff = function(uu, Eu, ju) {
+        let su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => performance.now(),
+          Uu = 0;
+        return async function(Zu, Xu) {
+          let lu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => !0;
+          const qu = ++Uu,
+            fu = su() + Eu,
+            Cu = await
+          function(uu, Eu) {
+            let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {};
+            return new Promise((su => {
+              const Uu = setTimeout((() => {
+                su(null), uu.then((uu => {
+                  null !== uu && (uu.joinedWithout(), ju(uu))
                 }))
-              }), et);
-              tt.then((tt => {
-                clearTimeout(qt), Ot(tt)
+              }), Eu);
+              uu.then((uu => {
+                clearTimeout(Uu), su(uu)
               }))
             }))
-          }(tt(Dt), et, (tt => {
-            jt === qt && dt() && mt(tt, Ot() + et).catch((tt => {
-              Vt("the texture pack step after the join failed", tt)
+          }(uu(Zu), Eu, (uu => {
+            qu === Uu && lu() && Xu(uu, su() + Eu).catch((uu => {
+              ju("the texture pack step after the join failed", uu)
             }))
           }));
-          return null === Xt ? null : mt(Xt, Ht)
+          return null === Cu ? null : Xu(Cu, fu)
         }
-      }((tt => (0, le.k)(tt) ? GH().request() : GH().forJoin()), oq.e, kH),
-      UH = function(tt, et) {
-        let Vt = !1;
+      }((uu => (0, bE.l)(uu) ? Wf().request() : Wf().forJoin()), FU.d, Qf),
+      Bf = function(uu, Eu) {
+        let ju = !1;
         return {
-          setGamePackConfirm: tt => {
-            Vt = null !== tt, et(tt)
+          setGamePackConfirm: uu => {
+            ju = null !== uu, Eu(uu)
           },
-          packStep: (et, Ot, qt) => tt(et, Ot, (() => Vt && qt()))
+          packStep: (Eu, su, Uu) => uu(Eu, su, (() => ju && Uu()))
         }
-      }(rH, (tt => {
-        GH().setGamePackConfirm(tt)
+      }(Ff, (uu => {
+        Wf().setGamePackConfirm(uu)
       }));
 
-    function AH(tt) {
-      UH.setGamePackConfirm(tt)
+    function Lf(uu) {
+      Bf.setGamePackConfirm(uu)
     }
 
-    function iH() {
-      if (vj || null !== mj || null === Vj || null === Dj) return;
+    function tf() {
+      if (Jq || null !== Uq || null === uq || null === sq) return;
       const {
-        backend: tt,
-        canvas: et,
-        fallbackReason: Vt,
-        adapterVendor: Ot
-      } = Dj, qt = Vj;
-      Vj = null;
+        backend: uu,
+        canvas: Eu,
+        fallbackReason: ju,
+        adapterVendor: su
+      } = sq, Uu = uq;
+      uq = null;
       try {
-        mj = qt({
-          backend: tt,
-          canvas: et,
-          fallbackReason: Vt,
-          adapterVendor: Ot,
-          joinedGame: () => vj ? null : Md,
-          canSend: () => !vj && null !== Md && Md.conn === Rd,
-          inGame: BH,
+        Uq = Uu({
+          backend: uu,
+          canvas: Eu,
+          fallbackReason: ju,
+          adapterVendor: su,
+          joinedGame: () => Jq ? null : gl,
+          canSend: () => !Jq && null !== gl && gl.conn === kl,
+          inGame: Tf,
           shaderPackReach: () => {
-            var tt, et;
-            return null !== (tt = null === (et = Tm) || void 0 === et ? void 0 : et.reachInJoinedGame()) && void 0 !== tt ? tt : null
+            var uu, Eu;
+            return null !== (uu = null === (Eu = nX) || void 0 === Eu ? void 0 : Eu.reachInJoinedGame()) && void 0 !== uu ? uu : null
           },
-          Rw: () => Ym,
-          msaa: () => qj > 1,
-          writeCmd: (tt, et, Vt) => null !== dm && dm(tt, et, Vt),
+          aY: () => xX,
+          msaa: () => jq > 1,
+          writeCmd: (uu, Eu, ju) => null !== qX && qX(uu, Eu, ju),
           takeFailedMeshJobs: () => {
-            var tt, et;
-            return null !== (tt = null === (et = Pm) || void 0 === et ? void 0 : et.takeFailedMeshJobs()) && void 0 !== tt ? tt : 0
+            var uu, Eu;
+            return null !== (uu = null === (Eu = KX) || void 0 === Eu ? void 0 : Eu.takeFailedMeshJobs()) && void 0 !== uu ? uu : 0
           },
-          readLoadCounts: tt => {
-            var et, Vt;
-            return null !== (et = null === (Vt = wm) || void 0 === Vt ? void 0 : Vt.readLoadCounts(tt)) && void 0 !== et && et
+          readLoadCounts: uu => {
+            var Eu, ju;
+            return null !== (Eu = null === (ju = hX) || void 0 === ju ? void 0 : ju.readLoadCounts(uu)) && void 0 !== Eu && Eu
           },
-          mainStalled: (tt, et, Vt) => {
-            (0, PV.reportMainStall)(tt, et, Vt, bm)
+          mainStalled: (uu, Eu, ju) => {
+            (0, vj.reportMainStall)(uu, Eu, ju, GX)
           }
         })
-      } catch (Dt) {
-        console.error(`${oD} the frame telemetry didn't start`, Dt)
+      } catch (Zu) {
+        console.error(`${FZ} the frame telemetry didn't start`, Zu)
       }
     }
 
-    function YH(tt, et) {
+    function xf(uu, Eu) {
       try {
-        var Vt, Ot, qt;
-        const Dt = xd && null !== (Vt = null === (Ot = wm) || void 0 === Ot || null === (qt = Ot.lastHeader) || void 0 === qt ? void 0 : qt.renderPending) && void 0 !== Vt ? Vt : 0;
-        (0, fO.g)(et, tt, BH() && !(null !== Lq), Dt)
-      } catch (Dt) {
-        (0, fO.t)(), console.error(`${oD} the quality steps stopped`, Dt)
+        var ju, su, Uu;
+        const Zu = Tl && null !== (ju = null === (su = hX) || void 0 === su || null === (Uu = su.lastHeader) || void 0 === Uu ? void 0 : Uu.renderPending) && void 0 !== ju ? ju : 0;
+        (0, Os.f)(Eu, uu, Tf() && !(null !== QU), Zu)
+      } catch (Zu) {
+        (0, Os.r)(), console.error(`${FZ} the quality steps stopped`, Zu)
       }
     }
 
-    function BH() {
-      return null !== Md && Nj === Md && !vj
+    function Tf() {
+      return null !== gl && Yq === gl && !Jq
     }
 
-    function pH(tt) {
-      const et = mj;
-      mj = null;
+    function Hf(uu) {
+      const Eu = Uq;
+      Uq = null;
       try {
-        null === et || void 0 === et || et.stop()
+        null === Eu || void 0 === Eu || Eu.stop()
       } catch {}
-      console.error(`${oD} the frame telemetry threw: it stops`, tt)
+      console.error(`${FZ} the frame telemetry threw: it stops`, uu)
     }
 
-    function xH(tt) {
-      var et, Vt, Ot, qt;
-      if ((0, Pq.e)().fire(tt), "message" === tt.type) {
-        if (Hd++, tt.kX === ge.Yc.ERROR && null !== Jd) {
-          var Dt;
+    function Af(uu) {
+      var Eu, ju, su, Uu;
+      if ((0, VU.b)().fire(uu), "message" === uu.type) {
+        if (fl++, uu.VC === nE.Mc.ERROR && null !== el) {
+          var Zu;
           const {
-            text: et,
-            dropsCache: Vt
-          } = (0, Ut.q)((new TextDecoder).decode(tt.payload));
-          Ad ||= Vt, (null === (Dt = zd) || void 0 === Dt ? void 0 : Dt.conn) === tt.conn && (Yd = et)
-        } else if (tt.kX === se.gc.ResumeComplete) {
-          var mt;
-          Zd = tt.conn, tt.conn === Pd && (Pd = 0, Rd = Id.has(tt.conn) ? 0 : tt.conn), null === (mt = Sd) || void 0 === mt || mt.resume.onResumeComplete(tt.conn)
+            text: Eu,
+            dropsCache: ju
+          } = (0, Fu.n)((new TextDecoder).decode(uu.payload));
+          Bl ||= ju, (null === (Zu = Wl) || void 0 === Zu ? void 0 : Zu.conn) === uu.conn && (Ll = Eu)
+        } else if (uu.VC === yE.mc.ResumeComplete) {
+          var Xu;
+          Kl = uu.conn, uu.conn === vl && (vl = 0, kl = ml.has(uu.conn) ? 0 : uu.conn), null === (Xu = Pl) || void 0 === Xu || Xu.resume.onResumeComplete(uu.conn)
         }
         return
       }
-      tt.phase === ge.H.Left ? Xd = tt.conn : tt.phase === ge.H.Activated && (null === (et = zd) || void 0 === et ? void 0 : et.conn) === tt.conn ? zd.activated = !0 : tt.phase === ge.H.Resumed ? function(tt) {
-        var et, Vt;
-        Ld = tt;
-        const Ot = Sd;
-        if (null === Ot || 0 === Ot.heldConn || (null === (et = Sm) || void 0 === et ? void 0 : et.conn) !== tt || !Sm.resume || null === Wd) return;
-        console.info(`${oD} the game resumed on conn ${tt}, waiting for its InitialInfo`);
-        const qt = Ot.heldConn;
-        Ot.heldConn = 0, Sm.resume = !1, Wd.conn = tt, (null === (Vt = hd) || void 0 === Vt ? void 0 : Vt.conn) === qt && (hd = {
-          conn: tt,
-          info: hd.info
-        }), Ke.b.apply({
+      uu.phase === nE.z.Left ? Cl = uu.conn : uu.phase === nE.z.Activated && (null === (Eu = Wl) || void 0 === Eu ? void 0 : Eu.conn) === uu.conn ? Wl.activated = !0 : uu.phase === nE.z.Resumed ? function(uu) {
+        var Eu, ju;
+        Vl = uu;
+        const su = Pl;
+        if (null === su || 0 === su.heldConn || (null === (Eu = oX) || void 0 === Eu ? void 0 : Eu.conn) !== uu || !oX.resume || null === al) return;
+        console.info(`${FZ} the game resumed on conn ${uu}, waiting for its InitialInfo`);
+        const Uu = su.heldConn;
+        su.heldConn = 0, oX.resume = !1, al.conn = uu, (null === (ju = Jl) || void 0 === ju ? void 0 : ju.conn) === Uu && (Jl = {
+          conn: uu,
+          info: Jl.info
+        }), wE.e.apply({
           shopInfo: null,
-          _shopVersion: Ee.e
+          _shopVersion: cE.b
         })
-      }(tt.conn) : tt.phase === ge.H.Held ? function(tt) {
-        var et;
-        const Vt = Sd,
-          Ot = null !== (et = null === Vt || void 0 === Vt ? void 0 : Vt.pendingHold) && void 0 !== et ? et : null;
-        if (null !== Vt && null !== Ot && Ot.conn === tt) return Vt.pendingHold = null, Vt.heldConn = tt, Ld = 0, console.warn(`${oD} the core holds the game, reconnecting`), void Vt.resume.onDropped(Ot.token);
-        if (tt === Ld) {
-          Ld = 0;
-          const et = wm;
-          null === et || et.isStopped || (console.info(`${oD} the core held again a resumed game the shell ended before its InitialInfo: closing it again`), hH(et, "close", tt))
+      }(uu.conn) : uu.phase === nE.z.Held ? function(uu) {
+        var Eu;
+        const ju = Pl,
+          su = null !== (Eu = null === ju || void 0 === ju ? void 0 : ju.pendingHold) && void 0 !== Eu ? Eu : null;
+        if (null !== ju && null !== su && su.conn === uu) return ju.pendingHold = null, ju.heldConn = uu, Vl = 0, console.warn(`${FZ} the core holds the game, reconnecting`), void ju.resume.onDropped(su.token);
+        if (uu === Vl) {
+          Vl = 0;
+          const Eu = hX;
+          null === Eu || Eu.isStopped || (console.info(`${FZ} the core held again a resumed game the shell ended before its InitialInfo: closing it again`), Jf(Eu, "close", uu))
         }
-      }(tt.conn) : tt.phase === ge.H.Closed && (null === (Vt = Sd) || void 0 === Vt || null === (Ot = Vt.pendingHold) || void 0 === Ot ? void 0 : Ot.conn) === tt.conn && (Sd.heldConn === tt.conn ? function(tt) {
-        const et = tt.heldConn,
-          Vt = tt.dropCode;
-        bH(tt, "refused"), console.info(`${oD} the core didn't hold the game through its drop: it hadn't started`), queueMicrotask((() => {
-          NH(et, !1), VH(et, Vt, "", !0)
+      }(uu.conn) : uu.phase === nE.z.Closed && (null === (ju = Pl) || void 0 === ju || null === (su = ju.pendingHold) || void 0 === su ? void 0 : su.conn) === uu.conn && (Pl.heldConn === uu.conn ? function(uu) {
+        const Eu = uu.heldConn,
+          ju = uu.dropCode;
+        Mf(uu, "refused"), console.info(`${FZ} the core didn't hold the game through its drop: it hadn't started`), queueMicrotask((() => {
+          hf(Eu, !1), uf(Eu, ju, "", !0)
         }))
-      }(Sd) : Sd.pendingHold = null), tt.phase !== ge.H.Held && tt.phase !== ge.H.Left && tt.phase !== ge.H.Closed || (Id.add(tt.conn), tt.conn === Rd && (Rd = 0));
-      const dt = Object.keys(ge.H).find((et => ge.H[et] === tt.phase)),
-        jt = 0 === tt.code ? "" : ` (code ${tt.code})`;
-      console.info(`${oD} conn ${tt.conn}: ${null!==dt&&void 0!==dt?dt:tt.phase}${jt}, ${Hd} raw messages so far`), (null === (qt = Md) || void 0 === qt ? void 0 : qt.conn) !== tt.conn || tt.phase !== ge.H.Left && tt.phase !== ge.H.Closed || ij(null), Kd !== tt.conn || tt.phase !== ge.H.Left && tt.phase !== ge.H.Closed || (Kd = null, null === Md && null === Jd && Jq.b.setGame(void 0));
-      for (const Xt of [...pd]) try {
-        Xt(tt.conn, tt.phase, tt.code)
-      } catch (Ht) {
-        (0, ne.n)(Ht, `${oD} a connection listener threw`)
+      }(Pl) : Pl.pendingHold = null), uu.phase !== nE.z.Held && uu.phase !== nE.z.Left && uu.phase !== nE.z.Closed || (ml.add(uu.conn), uu.conn === kl && (kl = 0));
+      const lu = Object.keys(nE.z).find((Eu => nE.z[Eu] === uu.phase)),
+        qu = 0 === uu.code ? "" : ` (code ${uu.code})`;
+      console.info(`${FZ} conn ${uu.conn}: ${null!==lu&&void 0!==lu?lu:uu.phase}${qu}, ${fl} raw messages so far`), (null === (Uu = gl) || void 0 === Uu ? void 0 : Uu.conn) !== uu.conn || uu.phase !== nE.z.Left && uu.phase !== nE.z.Closed || Bq(null), wl !== uu.conn || uu.phase !== nE.z.Left && uu.phase !== nE.z.Closed || (wl = null, null === gl && null === el && pU.e.setGame(void 0));
+      for (const Cu of [...xl]) try {
+        Cu(uu.conn, uu.phase, uu.code)
+      } catch (fu) {
+        (0, zE.p)(fu, `${FZ} a connection listener threw`)
       }
     }
 
-    function TH() {
-      (0, Rq.q)(), null === Md && null === Jd || (0, iV.d)(), queueMicrotask((() => {
+    function nf() {
+      (0, vU.r)(), null === gl && null === el || (0, Lj.e)(), queueMicrotask((() => {
         try {
-          QX()
-        } catch (tt) {
-          console.warn(`${oD} stopping before the reload threw`, tt)
-        }(0, PV.flushCrashReports)(te.c).then(te.h, te.h)
+          bC()
+        } catch (uu) {
+          console.warn(`${FZ} stopping before the reload threw`, uu)
+        }(0, vj.flushCrashReports)(Ru.b).then(Ru.m, Ru.m)
       }))
     }
 
-    function gH() {
-      const tt = wm;
-      null === tt || tt.isStopped || null === Sm || jd || !tt.hasPendingCommands() || nH(tt, !1, "budget")
+    function yf() {
+      const uu = hX;
+      null === uu || uu.isStopped || null === oX || ql || !uu.hasPendingCommands() || Rf(uu, !1, "budget")
     }
 
-    function sH(tt) {
-      var et;
-      const Vt = Md;
-      tt.persisted || null === Vt || (null === (et = Sm) || void 0 === et ? void 0 : et.conn) !== Vt.conn || Sm.left || Vt.leave()
+    function zf(uu) {
+      var Eu;
+      const ju = gl;
+      uu.persisted || null === ju || (null === (Eu = oX) || void 0 === Eu ? void 0 : Eu.conn) !== ju.conn || oX.left || ju.leave()
     }
 
-    function nH(tt, et, Ot) {
-      let qt = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-      const Dt = jd;
-      jd = !0;
+    function Rf(uu, Eu, su) {
+      let Uu = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+      const Zu = ql;
+      ql = !0;
       try {
-        const Dt = tt.rings.net.cursor >= gD;
-        Dt && "all" !== Ot && !document.hidden && EX("backlog", `a shown tab's net-in is ${tt.rings.net.cursor} bytes behind: one frame reads it all`);
-        return function(tt, et, Ot, qt) {
-          var Dt, mt, dt, jt;
-          if (vj) return !1;
-          if (bX(tt, eX), vj || tt.isStopped) return !1;
-          jX() && nm("modelsIn");
-          aH(), Vd = performance.now(), Xd = null, Qd = !1, (0, It.E)(), null === (Dt = zm) || void 0 === Dt || Dt.beforeFrame(), SO(Vd, tt), (0, It.z)(Vd, VX), dd = !0;
-          const Ht = et && dX();
-          let Xt;
+        const Zu = uu.rings.net.cursor >= zZ;
+        Zu && "all" !== su && !document.hidden && NC("backlog", `a shown tab's net-in is ${uu.rings.net.cursor} bytes behind: one frame reads it all`);
+        return function(uu, Eu, su, Uu) {
+          var Zu, Xu, lu, qu;
+          if (Jq) return !1;
+          if (eC(uu, EC), Jq || uu.isStopped) return !1;
+          qC() && RX("modelsIn");
+          Df(), jl = performance.now(), Cl = null, bl = !1, (0, mu.I)(), null === (Zu = SX) || void 0 === Zu || Zu.beforeFrame(), ks(jl, uu), (0, mu.C)(jl, jC), ll = !0;
+          const fu = Eu && lC();
+          let Cu;
           try {
-            Xt = tt.frame(Vd, Ht, Ot)
+            Cu = uu.frame(jl, fu, su)
           } finally {
-            dd = !1
+            ll = !1
           }
-          if (!Xt) return !1;
-          Oj.observe(null !== (mt = null === (dt = tt.lastHeader) || void 0 === dt ? void 0 : dt.chunksCancelled) && void 0 !== mt ? mt : 0);
-          const Qt = tt.lastFrameKind,
-            lt = (0, ke.d)(Qt);
-          (function(tt) {
-            null !== OD && OD.afterFrame(performance.now(), tt)
-          })(lt), null === (jt = dj) || void 0 === jt || jt.frame(tt, Vd, Qt), et && (aj = lt);
-          lt && (0, Ze.b)(Vd);
-          if (null !== mj) try {
-            mj.frameRan(tt, Vd, performance.now(), Qt)
-          } catch (wt) {
-            pH(wt)
+          if (!Cu) return !1;
+          Eq.observe(null !== (Xu = null === (lu = uu.lastHeader) || void 0 === lu ? void 0 : lu.chunksCancelled) && void 0 !== Xu ? Xu : 0);
+          const bu = uu.lastFrameKind,
+            cu = (0, QE.e)(bu);
+          (function(uu) {
+            null !== UZ && UZ.afterFrame(performance.now(), uu)
+          })(cu), null === (qu = Zq) || void 0 === qu || qu.frame(uu, jl, bu), Eu && (hq = cu);
+          cu && (0, KE.c)(jl);
+          if (null !== Uq) try {
+            Uq.frameRan(uu, jl, performance.now(), bu)
+          } catch (Yu) {
+            Hf(Yu)
           }
-          "drawn" === Qt && mX() && function() {
-            for (const tt of [...Sq]) tt()
+          "drawn" === bu && XC() && function() {
+            for (const uu of [...kU]) uu()
           }();
-          tt.forEachNetOut(HX);
-          const Et = Sm;
-          null !== Xd && (null === Et || void 0 === Et ? void 0 : Et.conn) === Xd && XX(Et, At.l);
-          DX(tt),
-            function(tt) {
-              const et = 0 !== (tt.headerWord(se.J.LoadSteps) & se.W.JoinPreload);
-              et !== ud && (ud = et, (0, PV.setCrashAdPreload)(et), (0, zV.D)())
-            }(tt), et && function(tt) {
-              var et, Ot, qt;
-              if (null === Md || !dX()) return;
-              const Dt = tt.headerWord(se.J.LoadSteps);
-              null === yj || Nj === Md && !yj.frame(Vd, 0 !== (Dt & se.X.TerrainDrawn)) || (yj = null);
-              if (0 === (Dt & se.W.PlayerBound)) return;
-              const mt = tt.lastHeader,
-                dt = !xd || 0 === (null === mt || void 0 === mt ? void 0 : mt.renderPending);
-              !Qj && dt && (Qj = !0, performance.mark(xD));
-              if (Nj === Md) return;
-              const jt = null !== (et = null === mt || void 0 === mt ? void 0 : mt.firstView) && void 0 !== et ? et : ge.hb.NotYet;
-              if (xd && jt === ge.hb.NotYet) return;
-              if (Xj && (!0 !== (null === (Ot = (0, Pt.g)()) || void 0 === Ot ? void 0 : Ot.isSessionLive) || !dt)) return;
-              Nj = Md;
-              const Ht = Md;
+          uu.forEachNetOut(fC);
+          const Nu = oX;
+          null !== Cl && (null === Nu || void 0 === Nu ? void 0 : Nu.conn) === Cl && CC(Nu, Bu.n);
+          ZC(uu),
+            function(uu) {
+              const Eu = 0 !== (uu.headerWord(yE.K.LoadSteps) & yE.V.JoinPreload);
+              Eu !== pl && (pl = Eu, (0, vj.setCrashAdPreload)(Eu), (0, Wj.z)())
+            }(uu), Eu && function(uu) {
+              var Eu, su, Uu;
+              if (null === gl || !lC()) return;
+              const Zu = uu.headerWord(yE.K.LoadSteps);
+              null === Oq || Yq === gl && !Oq.frame(jl, 0 !== (Zu & yE.X.TerrainDrawn)) || (Oq = null);
+              if (0 === (Zu & yE.V.PlayerBound)) return;
+              const Xu = uu.lastHeader,
+                lu = !Tl || 0 === (null === Xu || void 0 === Xu ? void 0 : Xu.renderPending);
+              !fq && lu && (fq = !0, performance.mark(nZ));
+              if (Yq === gl) return;
+              const qu = null !== (Eu = null === Xu || void 0 === Xu ? void 0 : Xu.firstView) && void 0 !== Eu ? Eu : nE.W.NotYet;
+              if (Tl && qu === nE.W.NotYet) return;
+              if (qq && (!0 !== (null === (su = (0, vu.l)()) || void 0 === su ? void 0 : su.isSessionLive) || !lu)) return;
+              Yq = gl;
+              const fu = gl;
               if (setTimeout((() => {
-                  Md === Ht && (0, ft.g)()
-                }), 0), null === (qt = Tm) || void 0 === qt || qt.playable(), function() {
-                  clearTimeout(Wm), Wm = setTimeout((() => {
-                    BH() && uX((tt => {
+                  gl === fu && (0, Ou.j)()
+                }), 0), null === (Uu = nX) || void 0 === Uu || Uu.playable(), function() {
+                  clearTimeout(PX), PX = setTimeout((() => {
+                    Tf() && wC((uu => {
                       let {
-                        prefetchWorldgenWorker: et
-                      } = tt;
-                      et()
+                        prefetchWorldgenWorker: Eu
+                      } = uu;
+                      Eu()
                     }))
-                  }), mm)
-                }(), Xj) return;
-              Xj = !0, performance.mark(pD), (0, Tq.v)("render") && Promise.all([Vt.e(78), Vt.e(49)]).then((() => Vt(4833))).then((tt => {
+                  }), lX)
+                }(), qq) return;
+              qq = !0, performance.mark(AZ), (0, yU.p)("render") && Promise.all([ju.e(78), ju.e(49)]).then((() => ju(4866))).then((uu => {
                 let {
-                  renderDebugPlayable: et
-                } = tt;
-                et()
-              }), (tt => {
-                console.warn("The render debug topic didn't load", tt)
+                  renderDebugPlayable: Eu
+                } = uu;
+                Eu()
+              }), (uu => {
+                console.warn("The render debug topic didn't load", uu)
               }));
-              const Xt = Math.round(performance.now()),
-                Qt = tt.readViewQueuedPrograms();
-              null !== Qt && (0, ft.q)("wasm_view_links", Xt, (0, we.xb)(Qt));
-              const lt = null === wj || null === Ej ? 0 : Math.max(0, Ej - wj),
-                Et = null === wj ? 0 : Math.max(0, Xt - wj),
-                wt = xd ? tt.readFirstViewWait(lt, Et) : null;
-              null !== wt && (0, ft.m)(wt);
-              if (xd && jt !== ge.hb.Drawn) {
-                const et = jt === ge.hb.HeldBackstop ? "held_draws" : "long",
+              const Cu = Math.round(performance.now()),
+                bu = uu.readViewQueuedPrograms();
+              null !== bu && (0, Ou.s)("wasm_view_links", Cu, (0, OE.zb)(bu));
+              const cu = null === Nq || null === bq ? 0 : Math.max(0, bq - Nq),
+                Nu = null === Nq ? 0 : Math.max(0, Cu - Nq),
+                Yu = Tl ? uu.readFirstViewWait(cu, Nu) : null;
+              null !== Yu && (0, Ou.p)(Yu);
+              if (Tl && qu !== nE.W.Drawn) {
+                const Eu = qu === nE.W.HeldBackstop ? "held_draws" : "long",
                   {
-                    cause: Vt
-                  } = OX(tt);
-                if (console.warn(`${oD} playable at ${Xt} ms on the first view's ${et} backstop, ${Vt}: it wasn't drawn whole in time`), (0, ft.q)("wasm_view_backstop", Xt, `${et}:${Vt}`), "long" === et) {
-                  var yt, Nt;
-                  const et = null !== (yt = null === (Nt = Wd) || void 0 === Nt ? void 0 : Nt.game) && void 0 !== yt ? yt : "";
-                  yj = new YV.e((() => {
+                    cause: ju
+                  } = sC(uu);
+                if (console.warn(`${FZ} playable at ${Cu} ms on the first view's ${Eu} backstop, ${ju}: it wasn't drawn whole in time`), (0, Ou.s)("wasm_view_backstop", Cu, `${Eu}:${ju}`), "long" === Eu) {
+                  var hu, Du;
+                  const Eu = null !== (hu = null === (Du = al) || void 0 === Du ? void 0 : Du.game) && void 0 !== hu ? hu : "";
+                  Oq = new tj.b((() => {
                     const {
-                      cause: Vt,
-                      census: Ot
-                    } = OX(tt);
-                    (0, PV.reportFirstViewNoTerrain)(et, Vt, Ot, bm), (0, Je.s)("noTerrain")
+                      cause: ju,
+                      census: su
+                    } = sC(uu);
+                    (0, vj.reportFirstViewNoTerrain)(Eu, ju, su, GX), (0, eE.x)("noTerrain")
                   }))
                 }
-              } else console.info(`${oD} playable at ${Xt} ms${xd?"":" (no renderer)"}`);
-              setTimeout(tj, 0), (0, ve.g)().catch((tt => {
-                console.error(`${oD} item sprites didn't load, so item particles show the missing texture`, tt)
-              })), lq.b.warm()
-            }(tt);
-          (0, EV.L)(tt, {
-            worldgen: Rm,
-            mesh: Pm
+              } else console.info(`${FZ} playable at ${Cu} ms${Tl?"":" (no renderer)"}`);
+              setTimeout(zl, 0), (0, dE.g)().catch((uu => {
+                console.error(`${FZ} item sprites didn't load, so item particles show the missing texture`, uu)
+              })), NU.d.warm()
+            }(uu);
+          (0, cj.E)(uu, {
+            worldgen: mX,
+            mesh: KX
           }),
-          function(tt) {
-            tt.forEachEvent(RO);
-            for (const et of cO) try {
-              (0, uO.c)(et)
-            } catch (wt) {
-              if ((0, ne.h)(wt)) {
-                tt.crashOn(EV.i, wt);
+          function(uu) {
+            uu.forEachEvent(vs);
+            for (const Eu of ms) try {
+              (0, ws.b)(Eu)
+            } catch (Yu) {
+              if ((0, zE.k)(Yu)) {
+                uu.crashOn(cj.j, Yu);
                 break
               }
-              console.error(`${hO} an input action listener threw`, wt)
+              console.error(`${as} an input action listener threw`, Yu)
             }
-            cO.length = 0
-          }(tt), qt && (0, Fe.d)();
-          return !tt.isStopped
-        }(tt, et, "all" === Ot || Dt, qt)
+            ms.length = 0
+          }(uu), Uu && (0, rE.b)();
+          return !uu.isStopped
+        }(uu, Eu, "all" === su || Zu, Uu)
       } finally {
-        jd = Dt, Dt || (Od = performance.now())
+        ql = Zu, Zu || (sl = performance.now())
       }
     }
 
-    function tX(tt) {
-      console.error(`${oD} a frame-start listener threw`, tt)
+    function uC(uu) {
+      console.error(`${FZ} a frame-start listener threw`, uu)
     }
 
-    function eX() {
-      var tt, et, Vt, Ot;
-      null === (tt = rm) || void 0 === tt || tt.drain(dm, jm), null === (et = Bm) || void 0 === et || et.drain(dm), null === (Vt = pm) || void 0 === Vt || Vt.drain(performance.now()), nd(dm), null === (Ot = im) || void 0 === Ot || Ot.drain()
+    function EC() {
+      var uu, Eu, ju, su;
+      null === (uu = FX) || void 0 === uu || uu.drain(qX, fX), null === (Eu = TX) || void 0 === Eu || Eu.drain(qX), null === (ju = HX) || void 0 === ju || ju.drain(performance.now()), yl(qX), null === (su = tX) || void 0 === su || su.drain()
     }
 
-    function VX(tt) {
-      console.error(`${oD} a before-frame listener threw`, tt)
+    function jC(uu) {
+      console.error(`${FZ} a before-frame listener threw`, uu)
     }
 
-    function OX(tt) {
-      const et = (0, Pt.g)(),
-        Vt = (0, Pt.q)(),
-        Ot = null === et || null === Vt ? null : Vt.readDrawCensus(et.api);
+    function sC(uu) {
+      const Eu = (0, vu.l)(),
+        ju = (0, vu.w)(),
+        su = null === Eu || null === ju ? null : ju.readDrawCensus(Eu.api);
       return {
-        cause: (0, YV.m)(tt.headerWord(se.J.LoadSteps), Ot),
-        census: Ot
+        cause: (0, tj.e)(uu.headerWord(yE.K.LoadSteps), su),
+        census: su
       }
     }
-    const qX = {
+    const UC = {
       ChunkRequested: "wasm_chunk_requested",
       ChunkStored: "wasm_chunk_stored",
       MeshLanded: "wasm_mesh_landed",
@@ -8252,517 +7981,517 @@ export const modules = {
       TerrainDrawn: "wasm_terrain_drawn"
     };
 
-    function DX(tt) {
-      var et;
-      if (Xj) return;
-      if (null === Ej && dX() && (Ej = performance.now()), null === Md || 0 === (tt.headerWord(se.J.LoadSteps) & se.W.PlayerBound) ? wj = null : wj ??= performance.now(), null === Jd && null === Md) return;
-      null === Ej || fj || (fj = !0, (0, ft.q)("wasm_startup_loaded", Ej));
-      let Vt = 0;
-      null !== Md ? Vt = -1 : !0 === (null === (et = zd) || void 0 === et ? void 0 : et.activated) && (Vt = ~se.X.TerrainDrawn);
-      const Ot = tt.headerWord(se.J.LoadSteps) & Vt & ~lj;
-      if (0 === Ot) return;
-      lj |= Ot;
-      const qt = performance.now();
-      for (const [Dt, mt] of Object.entries(qX)) 0 !== (Ot & se.X[Dt]) && (0, ft.q)(mt, qt)
+    function ZC(uu) {
+      var Eu;
+      if (qq) return;
+      if (null === bq && lC() && (bq = performance.now()), null === gl || 0 === (uu.headerWord(yE.K.LoadSteps) & yE.V.PlayerBound) ? Nq = null : Nq ??= performance.now(), null === el && null === gl) return;
+      null === bq || cq || (cq = !0, (0, Ou.s)("wasm_startup_loaded", bq));
+      let ju = 0;
+      null !== gl ? ju = -1 : !0 === (null === (Eu = Wl) || void 0 === Eu ? void 0 : Eu.activated) && (ju = ~yE.X.TerrainDrawn);
+      const su = uu.headerWord(yE.K.LoadSteps) & ju & ~Cq;
+      if (0 === su) return;
+      Cq |= su;
+      const Uu = performance.now();
+      for (const [Zu, Xu] of Object.entries(UC)) 0 !== (su & yE.X[Zu]) && (0, Ou.s)(Xu, Uu)
     }
 
-    function mX() {
-      return xd && dX()
+    function XC() {
+      return Tl && lC()
     }
 
-    function dX() {
-      return xm && jX()
+    function lC() {
+      return AX && qC()
     }
 
-    function jX() {
-      return null === rm || rm.startupDone
+    function qC() {
+      return null === FX || FX.startupDone
     }
 
-    function HX(tt, et) {
-      const Vt = Sm;
-      (null === Vt || void 0 === Vt ? void 0 : Vt.conn) === tt ? XX(Vt, et) : fd++
+    function fC(uu, Eu) {
+      const ju = oX;
+      (null === ju || void 0 === ju ? void 0 : ju.conn) === uu ? CC(ju, Eu) : Ol++
     }
 
-    function XX(tt, et) {
+    function CC(uu, Eu) {
       const {
-        ws: Vt
-      } = tt;
-      return Vt.readyState === WebSocket.OPEN ? (Vt.send(et), !0) : Vt.readyState === WebSocket.CONNECTING && tt.pendingBytes + et.byteLength <= Vm ? (tt.pending.push(et.slice()), tt.pendingBytes += et.byteLength, !0) : (fd++, !1)
+        ws: ju
+      } = uu;
+      return ju.readyState === WebSocket.OPEN ? (ju.send(Eu), !0) : ju.readyState === WebSocket.CONNECTING && uu.pendingBytes + Eu.byteLength <= sX ? (uu.pending.push(Eu.slice()), uu.pendingBytes += Eu.byteLength, !0) : (Ol++, !1)
     }
 
-    function QX() {
-      var tt, et, Vt, Ot, qt, Dt, mt, dt, jt, Ht, Xt, Qt, lt, Et, ft, wt, yt;
-      vj = !0, Mj.stop(), (0, sq.endLookDebugTake)(), OD = null, MH(), (0, It.C)().unlockPointer(), (0, It.A)(null), null === (tt = om) || void 0 === tt || tt(), om = null, null === (et = (0, Pt.q)()) || void 0 === et || et.followCursorAim(null), (0, Fe.K)(), (0, Pt.e)(), Mm.stop(), null === (Vt = jj) || void 0 === Vt || Vt(), jj = null, null === (Ot = Hj) || void 0 === Ot || Ot(), Hj = null, null === (qt = mj) || void 0 === qt || qt.stop(), mj = null, (0, pV.p)(null), null === (Dt = cm) || void 0 === Dt || Dt(), cm = null, null === (mt = Rm) || void 0 === mt || mt.stop(), Rm = null, null === (dt = Pm) || void 0 === dt || dt.stop(), Pm = null, null !== (jt = Nm) && void 0 !== jt && null !== (Ht = jt.textures) && void 0 !== Ht && Ht.assets && (0, aq.m)(null), null === (Xt = Nm) || void 0 === Xt || Xt.stop(), Nm = null, am = null;
-      const Nt = Zm;
-      Zm = null, Nt && (Nt.stop(), MX(Nt)), null === (Qt = Bm) || void 0 === Qt || Qt.dispose(), Bm = null, null === (lt = pm) || void 0 === lt || lt.dispose(), pm = null, rm = null, null === (Et = Am) || void 0 === Et || Et(), Am = null, null === (ft = Gm) || void 0 === ft || ft(), Gm = null, null !== md && (clearTimeout(md), md = null), null === (wt = zm) || void 0 === wt || wt.stop(), zm = null, rj(), Jq.b.release(), lH();
-      const Mt = im;
-      im = null;
+    function bC() {
+      var uu, Eu, ju, su, Uu, Zu, Xu, lu, qu, fu, Cu, bu, cu, Nu, Ou, Yu, hu;
+      Jq = !0, Dq.stop(), (0, RU.endLookDebugTake)(), UZ = null, gf(), (0, mu.H)().unlockPointer(), (0, mu.F)(null), null === (uu = IX) || void 0 === uu || uu(), IX = null, null === (Eu = (0, vu.w)()) || void 0 === Eu || Eu.followCursorAim(null), (0, rE.C)(), (0, vu.i)(), eX.stop(), null === (ju = Xq) || void 0 === ju || ju(), Xq = null, null === (su = lq) || void 0 === su || su(), lq = null, null === (Uu = Uq) || void 0 === Uu || Uu.stop(), Uq = null, (0, Tj.o)(null), null === (Zu = kX) || void 0 === Zu || Zu(), kX = null, null === (Xu = mX) || void 0 === Xu || Xu.stop(), mX = null, null === (lu = KX) || void 0 === lu || lu.stop(), KX = null, null !== (qu = gX) && void 0 !== qu && null !== (fu = qu.textures) && void 0 !== fu && fu.assets && (0, MU.l)(null), null === (Cu = gX) || void 0 === Cu || Cu.stop(), gX = null, MX = null;
+      const Du = VX;
+      VX = null, Du && (Du.stop(), MC(Du)), null === (bu = TX) || void 0 === bu || bu.dispose(), TX = null, null === (cu = HX) || void 0 === cu || cu.dispose(), HX = null, FX = null, null === (Nu = LX) || void 0 === Nu || Nu(), LX = null, null === (Ou = WX) || void 0 === Ou || Ou(), WX = null, null !== Xl && (clearTimeout(Xl), Xl = null), null === (Yu = SX) || void 0 === Yu || Yu.stop(), SX = null, Sq(), pU.e.release(), Cf();
+      const gu = tX;
+      tX = null;
       try {
-        null === Mt || void 0 === Mt || Mt.dispose()
-      } catch (bt) {
-        console.warn(`${oD} the sky's images didn't release`, bt)
-      }(0, Eq.f)(null), null === (yt = Em) || void 0 === yt || yt.pagePreviews().endSession(null === (0, ye.s)())
+        null === gu || void 0 === gu || gu.dispose()
+      } catch (Mu) {
+        console.warn(`${FZ} the sky's images didn't release`, Mu)
+      }(0, OU.h)(null), null === (hu = OX) || void 0 === hu || hu.pagePreviews().endSession(null === (0, YE.r)())
     }
 
-    function lX(tt, et) {
-      var Vt, Ot;
-      const qt = null !== (Vt = null === (Ot = Zm) || void 0 === Ot ? void 0 : Ot.details()) && void 0 !== Vt ? Vt : {},
-        Dt = tt.site === UD || tt.site === AD || tt.site === PV.RENDER_RELOAD_SITE || tt.site === iD ? tt.error instanceof WebAssembly.RuntimeError || tt.error instanceof dV.e : !(0, QV.o)(tt.error) && (0, EV.F)(tt);
-      Dt && tt.error instanceof Error && (0, ye.Y)(tt.error);
-      const mt = Dt || tt.site === EV.w ? (0, PV.readTrap)(tt.error) : null,
-        dt = null !== mt && (0, eV.d)(mt.kind, mt.refusedBytes) ? mt.refusedBytes : 0,
-        jt = (0, SV.l)(),
-        Ht = null === Lm ? (0, Hq.r)(function() {
+    function cC(uu, Eu) {
+      var ju, su;
+      const Uu = null !== (ju = null === (su = VX) || void 0 === su ? void 0 : su.details()) && void 0 !== ju ? ju : {},
+        Zu = uu.site === LZ || uu.site === tZ || uu.site === vj.RENDER_RELOAD_SITE || uu.site === xZ ? uu.error instanceof WebAssembly.RuntimeError || uu.error instanceof Xj.d : !(0, Cj.x)(uu.error) && (0, cj.B)(uu);
+      Zu && uu.error instanceof Error && (0, YE.U)(uu.error);
+      const Xu = Zu || uu.site === cj.r ? (0, vj.readTrap)(uu.error) : null,
+        lu = null !== Xu && (0, uj.h)(Xu.kind, Xu.refusedBytes) ? Xu.refusedBytes : 0,
+        qu = (0, Pj.o)(),
+        fu = null === rX ? (0, CU.r)(function() {
           try {
-            return (0, ye.z)().buffer.byteLength
+            return (0, YE.z)().buffer.byteLength
           } catch {
             return 0
           }
-        }(), dt, jt) : Lm.ceilingMayRefuse(dt, jt),
-        Xt = dt > 0 && !Ht && RH();
-      var Qt;
-      if (Xt && ((0, Ce.G)("oom"), (0, Ce.E)("decline"), hj = !0), QX(), (0, Rq.e)()) return console.warn(`${oD} the session stopped at ${tt.site} as the page reloads`, tt.error), void((0, QV.o)(tt.error) || (null === (Qt = tt.header) || void 0 === Qt ? void 0 : Qt.lastError) === ge.M.CoreBusy || (0, PV.reportStoppedCore)(tt, et, mt, {
-        memoryDetails: qt,
-        declined: Xt
+        }(), lu, qu) : rX.ceilingMayRefuse(lu, qu),
+        Cu = lu > 0 && !fu && kf();
+      var bu;
+      if (Cu && ((0, GE.x)("oom"), (0, GE.v)("decline"), wq = !0), bC(), (0, vU.e)()) return console.warn(`${FZ} the session stopped at ${uu.site} as the page reloads`, uu.error), void((0, Cj.x)(uu.error) || (null === (bu = uu.header) || void 0 === bu ? void 0 : bu.lastError) === nE.D.CoreBusy || (0, vj.reportStoppedCore)(uu, Eu, Xu, {
+        memoryDetails: Uu,
+        declined: Cu
       }));
-      (0, PV.showCrash)(tt, et, mt, {
-        memoryDetails: qt,
-        declined: Xt
+      (0, vj.showCrash)(uu, Eu, Xu, {
+        memoryDetails: Uu,
+        declined: Cu
       })
     }
 
-    function EX(tt, et) {
-      const Vt = performance.now();
-      return !(Vt - ld[tt] < Om) && (ld[tt] = Vt, console.warn(`${oD} ${et}`), !0)
+    function NC(uu, Eu) {
+      const ju = performance.now();
+      return !(ju - cl[uu] < UX) && (cl[uu] = ju, console.warn(`${FZ} ${Eu}`), !0)
     }
 
-    function fX(tt) {
+    function OC(uu) {
       const {
-        input: et,
-        net: Vt,
-        worker: Ot
-      } = tt.rings, qt = tt.optionsDropped, Dt = et.dropped + qt + Vt.dropped + Ot.dropped + fd;
-      Dt !== Ed && EX("dropped", `${Dt} records dropped so far (input ${et.dropped}, options ${qt}, net ${Vt.dropped}, worker ${Ot.dropped}, net-out ${fd})`) && (Ed = Dt)
+        input: Eu,
+        net: ju,
+        worker: su
+      } = uu.rings, Uu = uu.optionsDropped, Zu = Eu.dropped + Uu + ju.dropped + su.dropped + Ol;
+      Zu !== Nl && NC("dropped", `${Zu} records dropped so far (input ${Eu.dropped}, options ${Uu}, net ${ju.dropped}, worker ${su.dropped}, net-out ${Ol})`) && (Nl = Zu)
     }
 
-    function wX() {
-      var tt, et;
-      const Vt = (0, GV.e)();
-      if (null === Vt) return null;
-      const Ot = (0, UV.s)(Vt);
+    function YC() {
+      var uu, Eu;
+      const ju = (0, ij.c)();
+      if (null === ju) return null;
+      const su = (0, Fj.q)(ju);
       return {
-        ...Ot,
-        horizontal: Math.min(Ot.horizontal, null !== (tt = null === (et = Zm) || void 0 === et ? void 0 : et.shedDistanceInUse()) && void 0 !== tt ? tt : 1 / 0)
+        ...su,
+        horizontal: Math.min(su.horizontal, null !== (uu = null === (Eu = VX) || void 0 === Eu ? void 0 : Eu.shedDistanceInUse()) && void 0 !== uu ? uu : 1 / 0)
       }
     }
 
-    function yX(tt) {
-      var et, Vt;
+    function hC(uu) {
+      var Eu, ju;
       return {
-        samples: xd ? qj : null,
-        sunShadows: tt,
-        renderDistance: null !== (et = null === (Vt = wX()) || void 0 === Vt ? void 0 : Vt.horizontal) && void 0 !== et ? et : null
+        samples: Tl ? jq : null,
+        sunShadows: uu,
+        renderDistance: null !== (Eu = null === (ju = YC()) || void 0 === ju ? void 0 : ju.horizontal) && void 0 !== Eu ? Eu : null
       }
     }
 
-    function NX(tt) {
-      Cd = tt, (0, zV.D)()
+    function DC(uu) {
+      Gl = uu, (0, Wj.z)()
     }
 
-    function aX() {
-      var tt, et, Vt;
-      const Ot = wX();
+    function gC() {
+      var uu, Eu, ju;
+      const su = YC();
       return {
-        ...null === (tt = Zm) || void 0 === tt ? void 0 : tt.pageKillSnapshot(),
-        renderDistance: null !== (et = null === Ot || void 0 === Ot ? void 0 : Ot.horizontal) && void 0 !== et ? et : null,
-        renderDistanceVertical: null !== (Vt = null === Ot || void 0 === Ot ? void 0 : Ot.vertical) && void 0 !== Vt ? Vt : null,
-        chunkCap: Fm,
-        budgetBasis: km,
-        renderBackend: (0, Rq.H)(),
-        adPreload: ud,
-        ...(0, oV.c)(Cd)
+        ...null === (uu = VX) || void 0 === uu ? void 0 : uu.pageKillSnapshot(),
+        renderDistance: null !== (Eu = null === su || void 0 === su ? void 0 : su.horizontal) && void 0 !== Eu ? Eu : null,
+        renderDistanceVertical: null !== (ju = null === su || void 0 === su ? void 0 : su.vertical) && void 0 !== ju ? ju : null,
+        chunkCap: QX,
+        budgetBasis: iX,
+        renderBackend: (0, vU.D)(),
+        adPreload: pl,
+        ...(0, Sj.e)(Gl)
       }
     }
 
-    function MX(tt) {
-      var et;
-      console.info(`${oD} wasm memory at the session's end`, tt.details());
+    function MC(uu) {
+      var Eu;
+      console.info(`${FZ} wasm memory at the session's end`, uu.details());
       const {
-        wasmMainMiB: Vt,
-        wasmWorkersMiB: Ot,
-        peakStoredChunks: qt
-      } = tt.pageKillSnapshot(), Dt = navigator.deviceMemory;
-      (0, fV.logClientMeasurement)("wasm_memory_end", {
-        wasmMainMiB: Vt,
-        wasmWorkersMiB: Ot,
-        peakStoredChunks: qt
+        wasmMainMiB: ju,
+        wasmWorkersMiB: su,
+        peakStoredChunks: Uu
+      } = uu.pageKillSnapshot(), Zu = navigator.deviceMemory;
+      (0, Nj.logClientMeasurement)("wasm_memory_end", {
+        wasmMainMiB: ju,
+        wasmWorkersMiB: su,
+        peakStoredChunks: Uu
       }, {
         client: "wasm",
-        renderBackend: null !== (et = (0, Rq.H)()) && void 0 !== et ? et : "none",
-        os: (0, rV.getOperatingSystem)(),
-        deviceMemory: String(null !== Dt && void 0 !== Dt ? Dt : "unreported")
+        renderBackend: null !== (Eu = (0, vU.D)()) && void 0 !== Eu ? Eu : "none",
+        os: (0, Ij.getOperatingSystem)(),
+        deviceMemory: String(null !== Zu && void 0 !== Zu ? Zu : "unreported")
       })
     }
 
-    function bX(tt, et) {
-      if (!tt.isStopped) try {
-        et()
-      } catch (Vt) {
-        tt.crash(EV.A, Vt)
+    function eC(uu, Eu) {
+      if (!uu.isStopped) try {
+        Eu()
+      } catch (ju) {
+        uu.crash(cj.s, ju)
       }
     }
 
-    function JX() {
-      return Im ??= Vt.e(72).then((() => Vt(51323))).catch((tt => {
-        throw Im = null, tt
-      })), Im
+    function GC() {
+      return vX ??= ju.e(72).then((() => ju(51298))).catch((uu => {
+        throw vX = null, uu
+      })), vX
     }
-    async function CX() {
+    async function pC() {
       const {
-        createWorldgenWorker: tt,
-        worldgenWorkerReady: et
-      } = await JX();
-      return await et(), tt
+        createWorldgenWorker: uu,
+        worldgenWorkerReady: Eu
+      } = await GC();
+      return await Eu(), uu
     }
 
-    function uX(tt) {
-      var et;
-      null === (et = Im) || void 0 === et || et.then(tt, (() => {}))
+    function wC(uu) {
+      var Eu;
+      null === (Eu = vX) || void 0 === Eu || Eu.then(uu, (() => {}))
     }
 
-    function KX() {
-      return performance.now() - Math.max(Od, qd) >= qm
+    function JC() {
+      return performance.now() - Math.max(sl, Ul) >= ZX
     }
 
-    function hX(tt) {
-      const et = document.hidden || Dd ? "all" : "budget";
-      Dd = !0;
-      const Vt = nH(tt, !1, et);
-      var Ot;
-      Vt && (fX(tt), null === (Ot = Zm) || void 0 === Ot || Ot.afterFrame());
-      return Vt
+    function dC(uu) {
+      const Eu = document.hidden || Zl ? "all" : "budget";
+      Zl = !0;
+      const ju = Rf(uu, !1, Eu);
+      var su;
+      ju && (OC(uu), null === (su = VX) || void 0 === su || su.afterFrame());
+      return ju
     }
 
-    function vX(tt) {
-      tt.isStopped || 0 === tt.rings.net.cursor || KX() && !hX(tt) || tt.rings.net.cursor > 0 && performance.now() - qd >= qm / 2 && function(tt) {
-        md ??= setTimeout((() => {
-          md = null, vX(tt)
-        }), qm)
-      }(tt)
+    function aC(uu) {
+      uu.isStopped || 0 === uu.rings.net.cursor || JC() && !dC(uu) || uu.rings.net.cursor > 0 && performance.now() - Ul >= ZX / 2 && function(uu) {
+        Xl ??= setTimeout((() => {
+          Xl = null, aC(uu)
+        }), ZX)
+      }(uu)
     }
 
-    function WX(tt, et) {
-      return async function(tt, et, Vt) {
+    function PC(uu, Eu) {
+      return async function(uu, Eu, ju) {
         let {
-          stop: Ot,
-          stillWanted: qt,
-          beforeReload: Dt
-        } = Vt;
-        const mt = await (0, BO.m)(tt, {
-          stillWanted: qt,
+          stop: su,
+          stillWanted: Uu,
+          beforeReload: Zu
+        } = ju;
+        const Xu = await (0, Hs.j)(uu, {
+          stillWanted: Uu,
           beforeReload: async () => {
-            Ot(), await Promise.all([(0, PV.flushCrashReports)(te.c), null === Dt || void 0 === Dt ? void 0 : Dt()])
+            su(), await Promise.all([(0, vj.flushCrashReports)(Ru.b), null === Zu || void 0 === Zu ? void 0 : Zu()])
           },
-          reload: te.h
+          reload: Ru.m
         });
-        return mt || et(), mt
-      }(tt, et, {
+        return Xu || Eu(), Xu
+      }(uu, Eu, {
         ...arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        stop: QX
+        stop: bC
       })
     }
-    let SX = !1;
+    let oC = !1;
 
-    function cX() {
-      return SX = !0, async function(tt, et, Ot) {
+    function kC() {
+      return oC = !0, async function(uu, Eu, su) {
         const {
-          gamePackSource: qt
-        } = await Vt.e(276).then((() => Vt(41257)));
-        await UH.packStep(tt, ((Vt, Ot) => Vt.packForGame(tt, qt(et), Ot)), Ot)
+          gamePackSource: Uu
+        } = await ju.e(276).then((() => ju(41276)));
+        await Bf.packStep(uu, ((ju, su) => ju.packForGame(uu, Uu(Eu), su)), su)
       }(...arguments)
     }
 
-    function RX(tt) {
-      ! function(tt, et) {
-        tt((tt => {
-          null === tt || void 0 === tt || tt.subscribe((tt => {
+    function mC(uu) {
+      ! function(uu, Eu) {
+        uu((uu => {
+          null === uu || void 0 === uu || uu.subscribe((uu => {
             let {
-              pack: Vt,
-              gameSource: Ot
-            } = tt;
-            et(null === Ot || null === Vt ? null : {
-              pack: Vt,
-              source: "" === Ot ? null : Ot
+              pack: ju,
+              gameSource: su
+            } = uu;
+            Eu(null === su || null === ju ? null : {
+              pack: ju,
+              source: "" === su ? null : su
             })
           }))
         }))
-      }(zH, tt)
+      }(Sf, uu)
     }
-    let IX = !1,
-      PX = null,
-      ZX = !1,
-      LX = !1;
+    let vC = !1,
+      KC = null,
+      VC = !1,
+      rC = !1;
 
-    function FX() {
-      var tt;
-      IX || (IX = !0, Pj("play", st), (0, lt.m)(new xX), dt.gameBridge.attach(rt), UX().catch((() => {})), (0, Pt.r)((tt => {
-        Xe(tt.setTextHost)
-      })), tt = zX, Ud.add(tt), function(tt) {
-        for (const et of gm) tt(et);
-        sm.add(tt)
-      }((tt => {
-        GX(kX[tt])
+    function QC() {
+      var uu;
+      vC || (vC = !0, mq("play", yu), (0, cu.k)(new AC), lu.gameBridge.attach(Iu), BC().catch((() => {})), (0, vu.A)((uu => {
+        fE(uu.setTextHost)
+      })), uu = SC, Fl.add(uu), function(uu) {
+        for (const Eu of yX) uu(Eu);
+        zX.add(uu)
+      }((uu => {
+        WC(iC[uu])
       })))
     }
-    const kX = {
-      booted: Dt.n.INITIALISE_NOA,
-      texturesIn: Dt.n.REGISTRATION,
-      modelsIn: Dt.n.SETUP_LIFEFORMS
+    const iC = {
+      booted: Zu.j.INITIALISE_NOA,
+      texturesIn: Zu.j.REGISTRATION,
+      modelsIn: Zu.j.SETUP_LIFEFORMS
     };
 
-    function GX(tt) {
-      jt.j.sw("matchmakeAndPlayStepCompleted", {
-        step: tt,
+    function WC(uu) {
+      qu.h.TY("matchmakeAndPlayStepCompleted", {
+        step: uu,
         totalSubSteps: 1
       })
     }
 
-    function zX(tt) {
-      if (!ZX) return;
+    function SC(uu) {
+      if (!VC) return;
       const {
-        gameNameWithVariation: et,
-        lobbyName: Vt
-      } = (0, lt.c)();
-      if (tt.code === Ot.b.serverUpdating.code) return (new xX).leaveLive(), void rX(et, Vt);
-      jt.j.sw("unwantedLeftGame", {
-        reason: oX(tt),
-        requiresRefresh: tt.requiresRefresh,
-        canReconnect: null !== tt.reconnect,
-        automaticallyReconnect: tt.reconnecting,
-        canPlayAgain: tt.canPlayAgain,
-        gameNameWithVariation: et,
-        lobbyName: Vt
-      }), (new xX).leaveLive()
+        gameNameWithVariation: Eu,
+        lobbyName: ju
+      } = (0, cu.b)();
+      if (uu.code === su.b.serverUpdating.code) return (new AC).leaveLive(), void FC(Eu, ju);
+      qu.h.TY("unwantedLeftGame", {
+        reason: IC(uu),
+        requiresRefresh: uu.requiresRefresh,
+        canReconnect: null !== uu.reconnect,
+        automaticallyReconnect: uu.reconnecting,
+        canPlayAgain: uu.canPlayAgain,
+        gameNameWithVariation: Eu,
+        lobbyName: ju
+      }), (new AC).leaveLive()
     }
 
-    function oX(tt) {
-      return null !== tt.reasonKey ? {
-        translationKey: tt.reasonKey
-      } : "gameOrPluginKick" === tt.name ? tt.reason : `You have disconnected from the server.\n${tt.reason}`
+    function IC(uu) {
+      return null !== uu.reasonKey ? {
+        translationKey: uu.reasonKey
+      } : "gameOrPluginKick" === uu.name ? uu.reason : `You have disconnected from the server.\n${uu.reason}`
     }
 
-    function rX(tt, et) {
-      var Ot;
-      Ot = (0, Ht.B)(tt, et), Promise.resolve().then((() => Vt(1613))).then((tt => {
+    function FC(uu, Eu) {
+      var su;
+      su = (0, fu.G)(uu, Eu), Promise.resolve().then((() => ju(1570))).then((uu => {
         let {
-          navigatePreserveSearch: et
-        } = tt;
-        et(Ot)
-      })).catch((tt => {
-        console.warn("[bloxd-wasm-client] the page's router didn't navigate: loading the page instead", tt), (0, te.e)(Ot)
+          navigatePreserveSearch: Eu
+        } = uu;
+        Eu(su)
+      })).catch((uu => {
+        console.warn("[bloxd-wasm-client] the page's router didn't navigate: loading the page instead", uu), (0, Ru.f)(su)
       }))
     }
 
-    function UX() {
-      return PX ??= Promise.all([Vt.e(73), Vt.e(76), Vt.e(75), Vt.e(74), Vt.e(90), Vt.e(87), Vt.e(273), Vt.e(191), Vt.e(228), Vt.e(252), Vt.e(275), Vt.e(47)]).then((() => Vt(41197))).then((tt => {
+    function BC() {
+      return KC ??= Promise.all([ju.e(73), ju.e(76), ju.e(75), ju.e(74), ju.e(90), ju.e(87), ju.e(273), ju.e(191), ju.e(228), ju.e(252), ju.e(275), ju.e(47)]).then((() => ju(41221))).then((uu => {
         try {
-          tt.attachPlayGameSources()
-        } catch (et) {
-          throw console.error("[bloxd-wasm-client] the play sources did not attach", et),
-            function(tt) {
-              um.then((et => {
-                null === et || et.isStopped || vj ? console.warn(`${oD} the play sources threw as they attached, after the client stopped`, tt) : lX({
-                  site: iD,
-                  error: tt,
+          uu.attachPlayGameSources()
+        } catch (Eu) {
+          throw console.error("[bloxd-wasm-client] the play sources did not attach", Eu),
+            function(uu) {
+              JX.then((Eu => {
+                null === Eu || Eu.isStopped || Jq ? console.warn(`${FZ} the play sources threw as they attached, after the client stopped`, uu) : cC({
+                  site: xZ,
+                  error: uu,
                   header: null
-                }, bm)
+                }, GX)
               }))
-            }(et), et
+            }(Eu), Eu
         }
-      }), (tt => {
-        throw PX = null, new Pt.d(tt)
-      })), PX
+      }), (uu => {
+        throw KC = null, new vu.e(uu)
+      })), KC
     }
-    async function AX(tt, et) {
-      FX(), SX = !0, ZX = !0;
-      let Vt = {
-          place: tt.place,
-          matchedAt: tt.matchedAt
+    async function LC(uu, Eu) {
+      QC(), oC = !0, VC = !0;
+      let ju = {
+          place: uu.place,
+          matchedAt: uu.matchedAt
         },
-        mt = tt.place.gameNameWithVariation;
-      const dt = (0, Qt.h)();
-      let jt = null;
-      const Ht = await kj({
+        Xu = uu.place.gameNameWithVariation;
+      const lu = (0, bu.d)();
+      let qu = null;
+      const fu = await rq({
         matchmake: async () => {
-          let et = Vt;
-          if (Vt = null, null === et) {
-            const Vt = await tt.rematch();
-            if (Vt.isError()) throw jt = Vt.asError().forward(), new Error(Vt.asError().message);
-            et = {
-              place: Vt.getValue(),
+          let Eu = ju;
+          if (ju = null, null === Eu) {
+            const ju = await uu.rematch();
+            if (ju.isError()) throw qu = ju.asError().forward(), new Error(ju.asError().message);
+            Eu = {
+              place: ju.getValue(),
               matchedAt: performance.now()
             }
           }
-          mt = et.place.gameNameWithVariation;
+          Xu = Eu.place.gameNameWithVariation;
           return {
-            target: await (0, Yt.d)(tt.userContext, et.place, oH(), dt),
-            matchedAt: et.matchedAt,
-            freshMs: Yt.c
+            target: await (0, tu.h)(uu.userContext, Eu.place, If(), lu),
+            matchedAt: Eu.matchedAt,
+            freshMs: tu.d
           }
         },
-        pageReady: UX,
-        onFailure: (tt, et) => {
-          null === jt && function(tt, et) {
-            (0, PV.reportPageJoinFailure)(tt, bm, et)
-          }(tt, {
-            sinceJoinStartMs: et,
-            game: mt
+        pageReady: BC,
+        onFailure: (uu, Eu) => {
+          null === qu && function(uu, Eu) {
+            (0, vj.reportPageJoinFailure)(uu, GX, Eu)
+          }(uu, {
+            sinceJoinStartMs: Eu,
+            game: Xu
           })
         },
         rejoin: () => () => {},
-        invalidateTrafficCode: () => tt.userContext.invalidateTrafficCode(),
-        signal: et
+        invalidateTrafficCode: () => uu.userContext.invalidateTrafficCode(),
+        signal: Eu
       });
-      switch (Ht.kind) {
+      switch (fu.kind) {
         case "joined":
-          if (dt) {
+          if (lu) {
             setTimeout((() => {
-              ut.ready()
+              pu.ready()
             }), 0);
             const {
-              game: tt
-            } = Ht;
-            (0, Qt.v)((() => {
-              tt.endJoinAd() && ((0, ft.i)(), ut.adEnded())
+              game: uu
+            } = fu;
+            (0, bu.p)((() => {
+              uu.endJoinAd() && ((0, Ou.l)(), pu.adEnded())
             }))
           }
-          return LX || (LX = !0, (0, ht.d)()), ZX ? (GX(Dt.n.CONNECT_TO_GAME_SERVER), GX(Dt.n.SHADER_PACK), function() {
-            var tt, et;
-            return null !== (tt = null === (et = Tm) || void 0 === et ? void 0 : et.runsInJoinedGame()) && void 0 !== tt && tt
-          }() && (0, Kt.e)(tt.userContext, mt).catch((tt => {
-            console.error("Failed to report the shader pack session", tt)
+          return rC || (rC = !0, (0, Ju.c)()), VC ? (WC(Zu.j.CONNECT_TO_GAME_SERVER), WC(Zu.j.SHADER_PACK), function() {
+            var uu, Eu;
+            return null !== (uu = null === (Eu = nX) || void 0 === Eu ? void 0 : Eu.runsInJoinedGame()) && void 0 !== uu && uu
+          }() && (0, wu.f)(uu.userContext, Xu).catch((uu => {
+            console.error("Failed to report the shader pack session", uu)
           })), function() {
-            const tt = function() {
-              var tt, et;
-              return null !== (tt = null === (et = Tm) || void 0 === et ? void 0 : et.couldntRunInJoinedGame()) && void 0 !== tt ? tt : null
+            const uu = function() {
+              var uu, Eu;
+              return null !== (uu = null === (Eu = nX) || void 0 === Eu ? void 0 : Eu.couldntRunInJoinedGame()) && void 0 !== uu ? uu : null
             }();
-            null !== tt && (0, Kt.c)(tt)
-          }(), qt.e.value(void 0)) : pX("The server ended the game as it joined");
+            null !== uu && (0, wu.e)(uu)
+          }(), Uu.c.value(void 0)) : HC("The server ended the game as it joined");
         case "failed":
-          if (!Ht.reloading) {
-            if (null !== jt) return jt;
-            if ((Ht.error instanceof At.n || Ht.error instanceof At.c) && Ht.error.code === Ot.b.serverUpdating.code) {
-              if (et.aborted) return pX("Left the game while it loaded");
+          if (!fu.reloading) {
+            if (null !== qu) return qu;
+            if ((fu.error instanceof Bu.o || fu.error instanceof Bu.e) && fu.error.code === su.b.serverUpdating.code) {
+              if (Eu.aborted) return HC("Left the game while it loaded");
               const {
-                gameNameWithVariation: tt,
-                lobbyName: Vt
-              } = (0, lt.c)();
-              return rX(tt, Vt), pX("The server is updating")
+                gameNameWithVariation: uu,
+                lobbyName: ju
+              } = (0, cu.b)();
+              return FC(uu, ju), HC("The server is updating")
             }
-            return Ht.error instanceof nt.c ? qt.e.errorWithCode(Ht.error.messageKey, Dt.n.SHADER_PACK, {
+            return fu.error instanceof zu.e ? Uu.c.errorWithCode(fu.error.messageKey, Zu.j.SHADER_PACK, {
               severity: "medium"
-            }) : qt.e.errorWithCode(function(tt) {
-              if (tt instanceof At.z || tt instanceof ct.c) return tt.message;
-              if (iX(tt)) return (0, Ut.p)(tt.code, tt.serverText);
-              return Ut.j
-            }(Ht.error), Dt.n.CONNECT_TO_GAME_SERVER, {
-              error: YX(Ht.error) ? Ht.error : void 0,
-              severity: BX(Ht.error),
-              gameServerUnreachable: (0, it.d)(Ht.error),
-              joinFailure: (0, it.h)(Ht.error),
-              rematch: (0, Wt.c)(Ht.error),
-              gameRefused: (0, St.e)(Ht.error)
+            }) : Uu.c.errorWithCode(function(uu) {
+              if (uu instanceof Bu.w || uu instanceof ou.g) return uu.message;
+              if (tC(uu)) return (0, Fu.m)(uu.code, uu.serverText);
+              return Fu.i
+            }(fu.error), Zu.j.CONNECT_TO_GAME_SERVER, {
+              error: xC(fu.error) ? fu.error : void 0,
+              severity: TC(fu.error),
+              gameServerUnreachable: (0, Lu.c)(fu.error),
+              joinFailure: (0, Lu.i)(fu.error),
+              rematch: (0, au.d)(fu.error),
+              gameRefused: (0, Pu.d)(fu.error)
             })
           }
-          return pX("Reloading into the new build");
+          return HC("Reloading into the new build");
         case "stopped":
-          return pX("The game client stopped, and shows why");
-        case "nV":
-          return pX("Left the game while it loaded")
+          return HC("The game client stopped, and shows why");
+        case "Lj":
+          return HC("Left the game while it loaded")
       }
     }
 
-    function iX(tt) {
-      return tt instanceof At.n || tt instanceof At.c && "attach" !== tt.stage
+    function tC(uu) {
+      return uu instanceof Bu.o || uu instanceof Bu.e && "attach" !== uu.stage
     }
 
-    function YX(tt) {
-      return !(tt instanceof At.z) && !iX(tt) && void 0 === (0, it.d)(tt)
+    function xC(uu) {
+      return !(uu instanceof Bu.w) && !tC(uu) && void 0 === (0, Lu.c)(uu)
     }
 
-    function BX(tt) {
-      return iX(tt) ? tt instanceof At.c && (0, Ut.l)(tt.code).requiresRefresh ? "medium" : "low" : YX(tt) || tt instanceof At.z ? "medium" : "low"
+    function TC(uu) {
+      return tC(uu) ? uu instanceof Bu.e && (0, Fu.k)(uu.code).requiresRefresh ? "medium" : "low" : xC(uu) || uu instanceof Bu.w ? "medium" : "low"
     }
 
-    function pX(tt) {
-      return qt.e.errorWithCode(tt, Dt.n.CONNECT_TO_GAME_SERVER, {
+    function HC(uu) {
+      return Uu.c.errorWithCode(uu, Zu.j.CONNECT_TO_GAME_SERVER, {
         severity: "low",
-        nV: !0
+        Lj: !0
       })
     }
-    class xX {
-      leave(tt) {
-        if ((0, Rt.d)()) {
-          var et, Vt;
-          if ((0, mt.c)()) return;
-          (0, Et.e)(!0 === (null === (et = (0, Rt.l)()) || void 0 === et || null === (Vt = et.currentViewer) || void 0 === Vt ? void 0 : Vt.unsavedChanges), tt)
+    class AC {
+      leave(uu) {
+        if ((0, ku.d)()) {
+          var Eu, ju;
+          if ((0, Xu.c)()) return;
+          (0, Nu.e)(!0 === (null === (Eu = (0, ku.j)()) || void 0 === Eu || null === (ju = Eu.currentViewer) || void 0 === ju ? void 0 : ju.unsavedChanges), uu)
         } else this.leaveLive()
       }
       leaveLive() {
-        var tt;
-        SX && (null === (tt = oH()) || void 0 === tt || tt.endGamePack());
-        if (!ZX) return;
-        ZX = !1, (0, vt.d)();
+        var uu;
+        oC && (null === (uu = If()) || void 0 === uu || uu.endGamePack());
+        if (!VC) return;
+        VC = !1, (0, du.d)();
         try {
-          var et;
-          null === (et = (0, Pt.q)()) || void 0 === et || et.clearWasmCameraScreen()
-        } catch (Ot) {
-          console.error("[bloxd-wasm-client] the camera screen didn't clear", Ot)
+          var Eu;
+          null === (Eu = (0, vu.w)()) || void 0 === Eu || Eu.clearWasmCameraScreen()
+        } catch (su) {
+          console.error("[bloxd-wasm-client] the camera screen didn't clear", su)
         }
         const {
-          gameNameWithVariation: Vt
-        } = (0, lt.c)();
+          gameNameWithVariation: ju
+        } = (0, cu.b)();
         try {
-          pj()
+          xq()
         } finally {
-          (0, lt.o)({
+          (0, cu.m)({
             websocketUrl: null
-          }), jt.j.sw("leaveGame", {
-            gameNameWithVariation: Vt
-          }), (0, Xt.T)()
+          }), qu.h.TY("leaveGame", {
+            gameNameWithVariation: ju
+          }), (0, Cu.E)()
         }
       }
       isReplay() {
-        return (0, Rt.d)()
+        return (0, ku.d)()
       }
     }
   },
-  41122: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => qt,
-      d: () => Ot,
-      g: () => dt,
-      h: () => mt
+  41153: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => Uu,
+      h: () => su,
+      l: () => lu,
+      p: () => Xu
     });
-    const Ot = 12e4,
-      qt = 3e4,
-      Dt = {
+    const su = 12e4,
+      Uu = 3e4,
+      Zu = {
         hidden: () => "undefined" !== typeof document && document.hidden,
-        listen: tt => "undefined" === typeof document ? () => {} : (document.addEventListener("visibilitychange", tt), () => {
-          document.removeEventListener("visibilitychange", tt)
+        listen: uu => "undefined" === typeof document ? () => {} : (document.addEventListener("visibilitychange", uu), () => {
+          document.removeEventListener("visibilitychange", uu)
         })
       };
 
-    function mt(tt) {
-      return `it sent no start within ${Math.round(tt)} ms`
+    function Xu(uu) {
+      return `it sent no start within ${Math.round(uu)} ms`
     }
-    class dt {
-      constructor(tt, et) {
-        let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => performance.now(),
-          Ot = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Dt;
-        this.timeoutMs = tt, this.onTimeout = et, this.now = Vt, this.visibility = Ot, this.timer = null, this.counted = 0, this.step = null, this.unlisten = void 0, this.unlisten = Ot.listen((() => {
+    class lu {
+      constructor(uu, Eu) {
+        let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => performance.now(),
+          su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Zu;
+        this.timeoutMs = uu, this.onTimeout = Eu, this.now = ju, this.visibility = su, this.timer = null, this.counted = 0, this.step = null, this.unlisten = void 0, this.unlisten = su.listen((() => {
           this.onVisibility()
-        })), Ot.hidden() || this.next()
+        })), su.hidden() || this.next()
       }
       cancel() {
         this.pause(), this.unlisten()
@@ -8771,169 +8500,169 @@ export const modules = {
         this.visibility.hidden() ? (this.counted += this.credit(), this.pause()) : null === this.timer && this.next()
       }
       credit() {
-        const tt = this.step;
-        return null === tt ? 0 : Math.min(this.now() - tt.at, tt.ms)
+        const uu = this.step;
+        return null === uu ? 0 : Math.min(this.now() - uu.at, uu.ms)
       }
       pause() {
         null !== this.timer && (clearTimeout(this.timer), this.timer = null), this.step = null
       }
       next() {
-        const tt = this.timeoutMs - this.counted;
-        if (tt <= 0) return void this.arm(1e3, (() => {
+        const uu = this.timeoutMs - this.counted;
+        if (uu <= 0) return void this.arm(1e3, (() => {
           this.cancel(), this.onTimeout(this.counted)
         }));
-        const et = Math.min(tt, 5e3);
+        const Eu = Math.min(uu, 5e3);
         this.step = {
           at: this.now(),
-          ms: et
-        }, this.arm(et, (() => {
+          ms: Eu
+        }, this.arm(Eu, (() => {
           this.counted += this.credit(), this.step = null, this.next()
         }))
       }
-      arm(tt, et) {
+      arm(uu, Eu) {
         this.timer = setTimeout((() => {
-          this.timer = null, et()
-        }), tt)
+          this.timer = null, Eu()
+        }), uu)
       }
     }
   },
-  39856: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => dt
+  39935: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => lu
     });
-    var Ot = Vt(391),
-      qt = Vt(1103);
-    const Dt = new Set(["bingo", "buildAFactory2", "classic", "testGym"]),
-      mt = new Set(["creativeFlat", "skyGrid"]);
+    var su = ju(349),
+      Uu = ju(1069);
+    const Zu = new Set(["bingo", "buildAFactory2", "classic", "testGym"]),
+      Xu = new Set(["creativeFlat", "skyGrid"]);
 
-    function dt(tt) {
-      const et = (0, Ot.bc)(tt);
-      return "classic" !== et ? Dt.has(et) : !(0, qt.k)(tt) && !mt.has((0, Ot.Wb)(tt))
+    function lu(uu) {
+      const Eu = (0, su.Vb)(uu);
+      return "classic" !== Eu ? Zu.has(Eu) : !(0, Uu.l)(uu) && !Xu.has((0, su.Qb)(uu))
     }
   },
-  37985: (tt, et, Vt) => {
-    function Ot(tt) {
-      return "string" !== typeof tt || 2 !== tt.length && ":" !== tt[2] ? null : tt[0] + tt[1]
+  38128: (uu, Eu, ju) => {
+    function su(uu) {
+      return "string" !== typeof uu || 2 !== uu.length && ":" !== uu[2] ? null : uu[0] + uu[1]
     }
-    Vt.d(et, {
-      d: () => yt,
-      f: () => ut,
-      i: () => Ct,
-      m: () => Kt,
-      n: () => dt,
-      p: () => mt,
-      s: () => Dt,
-      v: () => jt,
-      w: () => Nt,
-      y: () => wt
+    ju.d(Eu, {
+      B: () => Yu,
+      b: () => hu,
+      e: () => pu,
+      i: () => Gu,
+      m: () => wu,
+      o: () => lu,
+      s: () => Xu,
+      v: () => Zu,
+      w: () => qu,
+      z: () => Du
     });
-    const qt = ["op:ytInitialPlayerResponse.adPlacements", "op:ytInitialPlayerResponse.playerAds", "op:ytInitialPlayerResponse.adSlots", "op:playerResponse.adPlacements", "op:playerResponse.playerAds", "op:playerResponse.adSlots"];
+    const Uu = ["op:ytInitialPlayerResponse.adPlacements", "op:ytInitialPlayerResponse.playerAds", "op:ytInitialPlayerResponse.adSlots", "op:playerResponse.adPlacements", "op:playerResponse.playerAds", "op:playerResponse.adSlots"];
 
-    function Dt(tt) {
-      if (function(tt) {
-          for (let et = 0; et < qt.length; et++)
-            if (tt === qt[et]) return !0;
+    function Zu(uu) {
+      if (function(uu) {
+          for (let Eu = 0; Eu < Uu.length; Eu++)
+            if (uu === Uu[Eu]) return !0;
           return !1
-        }(tt)) return !1;
-      const et = Ot(tt);
-      return "op" === et || "ep" === et || "wi" === et || "pp" === et || "fp:call" === tt || "fp:t" === tt
+        }(uu)) return !1;
+      const Eu = su(uu);
+      return "op" === Eu || "ep" === Eu || "wi" === Eu || "pp" === Eu || "fp:call" === uu || "fp:t" === uu
     }
 
-    function mt(tt) {
-      return "fp" === Ot(tt) && !Dt(tt)
+    function Xu(uu) {
+      return "fp" === su(uu) && !Zu(uu)
     }
 
-    function dt(tt) {
-      if ("string" !== typeof tt) return !1;
-      return "o" === tt[0] && "p" === tt[1] && (2 === tt.length || ":" === tt[2]) || "fp:call" === tt || "2" === tt || "t" === tt || "a" === tt
+    function lu(uu) {
+      if ("string" !== typeof uu) return !1;
+      return "o" === uu[0] && "p" === uu[1] && (2 === uu.length || ":" === uu[2]) || "fp:call" === uu || "2" === uu || "t" === uu || "a" === uu
     }
 
-    function jt(tt, et) {
-      return `~${function(tt){return tt.length<2?tt:":"===tt[1]?tt[0]:tt[0]+tt[1]}(et)}~${tt}`
+    function qu(uu, Eu) {
+      return `~${function(uu){return uu.length<2?uu:":"===uu[1]?uu[0]:uu[0]+uu[1]}(Eu)}~${uu}`
     }
-    const Ht = 200;
+    const fu = 200;
 
-    function Xt(tt) {
-      let et = tt.length - 1;
-      for (let Vt = 0; Vt < 2; Vt++) {
-        const Vt = et;
-        for (; et >= 0 && tt[et] >= "0" && tt[et] <= "9";) et--;
-        if (et < 0 || et === Vt || ":" !== tt[et]) return -1;
-        et--
+    function Cu(uu) {
+      let Eu = uu.length - 1;
+      for (let ju = 0; ju < 2; ju++) {
+        const ju = Eu;
+        for (; Eu >= 0 && uu[Eu] >= "0" && uu[Eu] <= "9";) Eu--;
+        if (Eu < 0 || Eu === ju || ":" !== uu[Eu]) return -1;
+        Eu--
       }
-      return et + 1
+      return Eu + 1
     }
 
-    function Qt(tt) {
-      return "unknown" === tt || Xt(tt) >= 0
+    function bu(uu) {
+      return "unknown" === uu || Cu(uu) >= 0
     }
 
-    function lt(tt, et) {
-      return tt[et] >= "\ud800" && tt[et] <= "\udbff" && et + 1 < tt.length && tt[et + 1] >= "\udc00" && tt[et + 1] <= "\udfff" ? 2 : 1
+    function cu(uu, Eu) {
+      return uu[Eu] >= "\ud800" && uu[Eu] <= "\udbff" && Eu + 1 < uu.length && uu[Eu + 1] >= "\udc00" && uu[Eu + 1] <= "\udfff" ? 2 : 1
     }
 
-    function Et(tt, et, Vt) {
-      return 2 === Vt ? 4 : tt[et] <= "\x7f" ? 1 : tt[et] <= "\u07ff" ? 2 : 3
+    function Nu(uu, Eu, ju) {
+      return 2 === ju ? 4 : uu[Eu] <= "\x7f" ? 1 : uu[Eu] <= "\u07ff" ? 2 : 3
     }
 
-    function ft(tt, et, Vt) {
-      let Ot = 0;
-      for (; Ot < et;) {
-        const et = lt(tt, Ot),
-          qt = Et(tt, Ot, et);
-        if (qt > Vt) break;
-        Vt -= qt, Ot += et
+    function Ou(uu, Eu, ju) {
+      let su = 0;
+      for (; su < Eu;) {
+        const Eu = cu(uu, su),
+          Uu = Nu(uu, su, Eu);
+        if (Uu > ju) break;
+        ju -= Uu, su += Eu
       }
-      return Ot
+      return su
     }
 
-    function wt(tt) {
-      let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1 / 0;
-      if ("string" !== typeof tt || tt.length > Ht || !Qt(tt)) return "t";
-      let Vt = 2;
-      for (let dt = 0; dt < tt.length;) {
-        const et = lt(tt, dt);
-        Vt += Et(tt, dt, et), dt += et
+    function Yu(uu) {
+      let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1 / 0;
+      if ("string" !== typeof uu || uu.length > fu || !bu(uu)) return "t";
+      let ju = 2;
+      for (let lu = 0; lu < uu.length;) {
+        const Eu = cu(uu, lu);
+        ju += Nu(uu, lu, Eu), lu += Eu
       }
-      if (Vt <= et) return `t ${tt}`;
-      const Ot = Xt(tt),
-        qt = et - 2 - (tt.length - Ot);
-      if (qt < 0) return "t";
-      const Dt = ft(tt, Ot, qt);
-      let mt = "t ";
-      for (let dt = 0; dt < Dt; dt++) mt += tt[dt];
-      for (let dt = Ot; dt < tt.length; dt++) mt += tt[dt];
-      return mt
+      if (ju <= Eu) return `t ${uu}`;
+      const su = Cu(uu),
+        Uu = Eu - 2 - (uu.length - su);
+      if (Uu < 0) return "t";
+      const Zu = Ou(uu, su, Uu);
+      let Xu = "t ";
+      for (let lu = 0; lu < Zu; lu++) Xu += uu[lu];
+      for (let lu = su; lu < uu.length; lu++) Xu += uu[lu];
+      return Xu
     }
-    const yt = 62;
+    const hu = 62;
 
-    function Nt(tt) {
-      let et = "so:";
-      const Vt = ft(tt, tt.length, yt - et.length);
-      for (let Ot = 0; Ot < Vt; Ot++) et += tt[Ot];
-      return et
+    function Du(uu) {
+      let Eu = "so:";
+      const ju = Ou(uu, uu.length, hu - Eu.length);
+      for (let su = 0; su < ju; su++) Eu += uu[su];
+      return Eu
     }
-    const Mt = "BABYLON ",
-      bt = "DECODE ",
-      Jt = "BABYLON@ ";
+    const gu = "BABYLON ",
+      Mu = "DECODE ",
+      eu = "BABYLON@ ";
 
-    function Ct(tt) {
-      return Nt(Mt + tt)
-    }
-
-    function ut(tt, et) {
-      return Nt(Jt + tt + " " + et)
+    function Gu(uu) {
+      return Du(gu + uu)
     }
 
-    function Kt(tt) {
-      return Nt(bt + tt)
+    function pu(uu, Eu) {
+      return Du(eu + uu + " " + Eu)
+    }
+
+    function wu(uu) {
+      return Du(Mu + uu)
     }
   },
-  41025: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => Ot
+  41075: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => su
     });
-    const Ot = {
+    const su = {
       roomsPerServerMax: 30,
       timeForPlayerToConnect: 3e4,
       seatReservationSeconds: 15,
@@ -8957,248 +8686,248 @@ export const modules = {
       drainingSessionLobbyFillMs: 3e5
     }
   },
-  38238: tt => {
-    tt.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v+LFy8yvH//noGXl/ccuq8A/vQKd00yOdIAAAAASUVORK5CYII="
+  38361: uu => {
+    uu.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v+LFy8yvH//noGXl/ccuq8A/vQKd00yOdIAAAAASUVORK5CYII="
   },
-  38227: tt => {
-    tt.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAALUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMnBzczN8/PjxHLLPAORwCnfkvOdNAAAAAElFTkSuQmCC"
+  38352: uu => {
+    uu.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAALUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMnBzczN8/PjxHLLPAORwCnfkvOdNAAAAAElFTkSuQmCC"
   },
-  38241: tt => {
-    tt.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
+  38365: uu => {
+    uu.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
   },
-  38222: tt => {
-    tt.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAANUlEQVQYGWM8CwQMeAATHjmw1JBQAHLp/wMHDvy/ePHi/4CAgP937tz5Ly6u+5/P3uw/KAgAgjwWhHm22JoAAAAASUVORK5CYII="
+  38347: uu => {
+    uu.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAANUlEQVQYGWM8CwQMeAATHjmw1JBQAHLp/wMHDvy/ePHi/4CAgP937tz5Ly6u+5/P3uw/KAgAgjwWhHm22JoAAAAASUVORK5CYII="
   },
-  38230: tt => {
-    tt.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
+  38357: uu => {
+    uu.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
   },
-  38947: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => Dt
+  39069: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => Zu
     });
-    var Ot = Vt(2961);
-    const qt = ["none", "idle", "now"];
+    var su = ju(3017);
+    const Uu = ["none", "idle", "now"];
 
-    function Dt() {
-      const tt = () => (0, Ot.F)();
+    function Zu() {
+      const uu = () => (0, su.F)();
       return {
-        memoryBytes: () => (0, Ot.z)().buffer.byteLength,
-        reserveUpFront: et => tt().XQ(et),
-        reserveAhead: et => tt().HQ(et),
-        setCeiling: et => {
-          tt().QQ(et)
+        memoryBytes: () => (0, su.z)().buffer.byteLength,
+        reserveUpFront: Eu => uu().Xb(Eu),
+        reserveAhead: Eu => uu().Zb(Eu),
+        setCeiling: Eu => {
+          uu().lb(Eu)
         },
-        lowWater: () => qt[tt().jQ()] ?? "none",
-        stats: () => function(tt) {
-          const et = new Uint32Array((0, Ot.z)().buffer, tt, 17),
-            Vt = tt => et[tt] ?? 0,
-            qt = tt => ({
-              upFront: Vt(tt),
-              ahead: Vt(tt + 1),
-              onDemandInFrame: Vt(tt + 2),
-              onDemand: Vt(tt + 3)
+        lowWater: () => Uu[uu().Ub()] ?? "none",
+        stats: () => function(uu) {
+          const Eu = new Uint32Array((0, su.z)().buffer, uu, 17),
+            ju = uu => Eu[uu] ?? 0,
+            Uu = uu => ({
+              upFront: ju(uu),
+              ahead: ju(uu + 1),
+              onDemandInFrame: ju(uu + 2),
+              onDemand: ju(uu + 3)
             });
           return {
-            memoryBytes: Vt(0),
-            initialBytes: Vt(1),
-            liveBytes: Vt(2),
-            peakLiveBytes: Vt(3),
-            headroomBytes: Vt(4),
-            unusedBytes: Vt(5),
-            ceilingBytes: Vt(6),
-            reservesRefused: Vt(7),
-            grows: qt(8),
-            grownBytes: qt(12),
-            allocationsRefused: Vt(16)
+            memoryBytes: ju(0),
+            initialBytes: ju(1),
+            liveBytes: ju(2),
+            peakLiveBytes: ju(3),
+            headroomBytes: ju(4),
+            unusedBytes: ju(5),
+            ceilingBytes: ju(6),
+            reservesRefused: ju(7),
+            grows: Uu(8),
+            grownBytes: Uu(12),
+            allocationsRefused: ju(16)
           }
-        }(tt().lQ()),
-        takeBallast: () => tt().EQ(),
-        takePressure: () => tt().fQ()
+        }(uu().qb()),
+        takeBallast: () => uu().fb(),
+        takePressure: () => uu().Cb()
       }
     }
   },
-  5223: (tt, et, Vt) => {
-    Vt.d(et, {
-      C: () => Xt,
-      E: () => lt,
-      e: () => dt,
-      h: () => mt,
-      k: () => Ot,
-      m: () => wt,
-      p: () => Qt,
-      s: () => qt,
-      u: () => Dt,
-      y: () => Ht
+  5209: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      A: () => cu,
+      c: () => lu,
+      e: () => Xu,
+      h: () => su,
+      j: () => Yu,
+      k: () => bu,
+      o: () => Uu,
+      p: () => Zu,
+      s: () => fu,
+      w: () => Cu
     });
-    const Ot = 5;
+    const su = 5;
 
-    function qt(tt) {
-      return tt === Ot
+    function Uu(uu) {
+      return uu === su
     }
 
-    function Dt(tt) {
-      return [...tt.features]
+    function Zu(uu) {
+      return [...uu.features]
     }
-    const mt = 262144,
-      dt = 256,
-      jt = 256;
+    const Xu = 262144,
+      lu = 256,
+      qu = 256;
 
-    function Ht(tt) {
-      if ("object" !== typeof tt || null === tt || Array.isArray(tt)) return "The pack has no files.";
-      const et = [];
-      for (const [Vt, Ot] of Object.entries(tt)) {
-        if ("string" !== typeof Ot) return `${Vt} isn't text.`;
-        et.push({
-          path: Vt,
-          source: Ot
+    function fu(uu) {
+      if ("object" !== typeof uu || null === uu || Array.isArray(uu)) return "The pack has no files.";
+      const Eu = [];
+      for (const [ju, su] of Object.entries(uu)) {
+        if ("string" !== typeof su) return `${ju} isn't text.`;
+        Eu.push({
+          path: ju,
+          source: su
         })
       }
-      return et.sort(((tt, et) => Qt(tt.path, et.path))),
-        function(tt) {
-          if (0 === tt.length) return "The pack has no .wgsl files.";
-          if (tt.length > dt) return `The pack has more than ${dt} .wgsl files.`;
-          const et = new Set;
+      return Eu.sort(((uu, Eu) => bu(uu.path, Eu.path))),
+        function(uu) {
+          if (0 === uu.length) return "The pack has no .wgsl files.";
+          if (uu.length > lu) return `The pack has more than ${lu} .wgsl files.`;
+          const Eu = new Set;
           for (const {
-              path: Vt
+              path: ju
             }
-            of tt) {
-            const tt = Et(Vt);
-            if (null !== tt) return tt;
-            if (et.has(Vt)) return `The pack has two files at ${Vt}.`;
-            et.add(Vt)
+            of uu) {
+            const uu = Nu(ju);
+            if (null !== uu) return uu;
+            if (Eu.has(ju)) return `The pack has two files at ${ju}.`;
+            Eu.add(ju)
           }
-          return lt(tt) > mt ? `The pack's .wgsl files are over ${mt/1024} KB in total.` : null
-        }(et) ?? et
+          return cu(uu) > Xu ? `The pack's .wgsl files are over ${Xu/1024} KB in total.` : null
+        }(Eu) ?? Eu
     }
 
-    function Xt(tt) {
-      const et = {};
-      for (const Vt of tt) et[Vt.path] = Vt.source;
-      return et
+    function Cu(uu) {
+      const Eu = {};
+      for (const ju of uu) Eu[ju.path] = ju.source;
+      return Eu
     }
 
-    function Qt(tt, et) {
-      return tt < et ? -1 : tt > et ? 1 : 0
+    function bu(uu, Eu) {
+      return uu < Eu ? -1 : uu > Eu ? 1 : 0
     }
 
-    function lt(tt) {
-      const et = new TextEncoder;
-      let Vt = 0;
+    function cu(uu) {
+      const Eu = new TextEncoder;
+      let ju = 0;
       for (const {
-          source: Ot
+          source: su
         }
-        of tt) Vt += et.encode(Ot).byteLength;
-      return Vt
+        of uu) ju += Eu.encode(su).byteLength;
+      return ju
     }
 
-    function Et(tt) {
-      if (!tt.toLowerCase().endsWith(".wgsl")) return `${tt} isn't a .wgsl file.`;
-      if (tt.length > jt) return `A file path is over ${jt} characters.`;
-      if (tt.includes("\\") || /[\u0000-\u001f]/.test(tt)) return `${tt} isn't a valid file path.`;
-      return tt.split("/").some((tt => "" === tt || "." === tt || ".." === tt)) ? `${tt} isn't a valid file path.` : null
+    function Nu(uu) {
+      if (!uu.toLowerCase().endsWith(".wgsl")) return `${uu} isn't a .wgsl file.`;
+      if (uu.length > qu) return `A file path is over ${qu} characters.`;
+      if (uu.includes("\\") || /[\u0000-\u001f]/.test(uu)) return `${uu} isn't a valid file path.`;
+      return uu.split("/").some((uu => "" === uu || "." === uu || ".." === uu)) ? `${uu} isn't a valid file path.` : null
     }
-    const ft = /^(.*)\[rot\[([1-4])$/;
+    const Ou = /^(.*)\[rot\[([1-4])$/;
 
-    function wt(tt, et) {
-      let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const Ot = new Map;
-      et.forEach(((tt, et) => {
+    function Yu(uu, Eu) {
+      let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const su = new Map;
+      Eu.forEach(((uu, Eu) => {
         let {
-          numAnimStates: Vt,
-          animStartIdx: qt
-        } = tt;
-        for (let Dt = 1; Dt < Vt; Dt++) Ot.set(qt + Dt - 1, et)
+          numAnimStates: ju,
+          animStartIdx: Uu
+        } = uu;
+        for (let Zu = 1; Zu < ju; Zu++) su.set(Uu + Zu - 1, Eu)
       }));
-      const qt = Object.entries(tt),
-        Dt = new Map;
-      for (const [wt, yt] of qt) {
-        const tt = ft.exec(wt);
-        "1" === tt?.[2] && Dt.set(tt[1], yt + 1)
+      const Uu = Object.entries(uu),
+        Zu = new Map;
+      for (const [Yu, hu] of Uu) {
+        const uu = Ou.exec(Yu);
+        "1" === uu?.[2] && Zu.set(uu[1], hu + 1)
       }
-      const mt = tt => {
-          const et = ft.exec(tt);
-          return et && Dt.has(et[1]) ? {
-            root: et[1],
-            rotation: Number(et[2]) - 1
+      const Xu = uu => {
+          const Eu = Ou.exec(uu);
+          return Eu && Zu.has(Eu[1]) ? {
+            root: Eu[1],
+            rotation: Number(Eu[2]) - 1
           } : null
         },
-        dt = new Set(qt.map((tt => {
-          let [et] = tt;
-          return mt(et)?.root ?? et
+        lu = new Set(Uu.map((uu => {
+          let [Eu] = uu;
+          return Xu(Eu)?.root ?? Eu
         }))),
-        jt = (tt, Vt) => {
-          const Ot = tt.replace(/_?0$/, "");
-          return (et[Vt]?.numAnimStates ?? 0) > 1 && !dt.has(Ot) ? Ot : tt
+        qu = (uu, ju) => {
+          const su = uu.replace(/_?0$/, "");
+          return (Eu[ju]?.numAnimStates ?? 0) > 1 && !lu.has(su) ? su : uu
         },
-        Ht = new Map;
-      for (const [ft, wt] of qt) Ht.set(wt, jt(mt(ft)?.root ?? ft, wt));
-      const Xt = qt.reduce(((tt, et) => {
-          let [, Vt] = et;
-          return Math.max(tt, Vt + 1)
+        fu = new Map;
+      for (const [Ou, Yu] of Uu) fu.set(Yu, qu(Xu(Ou)?.root ?? Ou, Yu));
+      const Cu = Uu.reduce(((uu, Eu) => {
+          let [, ju] = Eu;
+          return Math.max(uu, ju + 1)
         }), 0),
-        Qt = Array.from({
-          length: Xt
-        }, ((tt, et) => ({
-          id: et + 1,
+        bu = Array.from({
+          length: Cu
+        }, ((uu, Eu) => ({
+          id: Eu + 1,
           rotation: 0
         }))),
-        lt = new Map,
-        Et = new Map;
-      for (const [ft, wt] of qt) {
-        const tt = mt(ft),
-          et = Ot.get(wt);
-        if (void 0 !== et) {
-          const Vt = Ht.get(et);
-          Et.set(ft, {
-            name: ft,
-            texture: Vt,
+        cu = new Map,
+        Nu = new Map;
+      for (const [Ou, Yu] of Uu) {
+        const uu = Xu(Ou),
+          Eu = su.get(Yu);
+        if (void 0 !== Eu) {
+          const ju = fu.get(Eu);
+          Nu.set(Ou, {
+            name: Ou,
+            texture: ju,
             kind: "frame"
-          }), tt && !Et.has(tt.root) && Et.set(tt.root, {
-            name: tt.root,
-            texture: Vt,
+          }), uu && !Nu.has(uu.root) && Nu.set(uu.root, {
+            name: uu.root,
+            texture: ju,
             kind: "frame"
           });
           continue
         }
-        const Vt = Ht.get(wt),
-          qt = tt?.root ?? ft;
-        if (Vt !== qt && Et.set(qt, {
-            name: qt,
-            texture: Vt,
+        const ju = fu.get(Yu),
+          Uu = uu?.root ?? Ou;
+        if (ju !== Uu && Nu.set(Uu, {
+            name: Uu,
+            texture: ju,
             kind: "frame"
-          }), tt) {
-          const et = Dt.get(tt.root);
-          Qt[wt] = {
-            id: et,
-            rotation: tt.rotation
-          }, lt.set(Vt, et), Et.set(ft, {
-            name: ft,
-            texture: Vt,
+          }), uu) {
+          const Eu = Zu.get(uu.root);
+          bu[Yu] = {
+            id: Eu,
+            rotation: uu.rotation
+          }, cu.set(ju, Eu), Nu.set(Ou, {
+            name: Ou,
+            texture: ju,
             kind: "rotation"
           })
-        } else lt.set(Vt, wt + 1)
+        } else cu.set(ju, Yu + 1)
       }
-      for (const ft of lt.keys()) Et.delete(ft);
-      for (const [ft, wt] of Vt) {
-        const tt = lt.get(wt);
-        void 0 === tt || lt.has(ft) || (lt.set(ft, tt), Et.delete(ft))
+      for (const Ou of cu.keys()) Nu.delete(Ou);
+      for (const [Ou, Yu] of ju) {
+        const uu = cu.get(Yu);
+        void 0 === uu || cu.has(Ou) || (cu.set(Ou, uu), Nu.delete(Ou))
       }
       return {
-        named: [...lt].sort(((tt, et) => {
-          let [Vt] = tt, [Ot] = et;
-          return Vt < Ot ? -1 : Vt > Ot ? 1 : 0
-        })).map((tt => {
-          let [et, Vt] = tt;
+        named: [...cu].sort(((uu, Eu) => {
+          let [ju] = uu, [su] = Eu;
+          return ju < su ? -1 : ju > su ? 1 : 0
+        })).map((uu => {
+          let [Eu, ju] = uu;
           return {
-            name: et,
-            id: Vt
+            name: Eu,
+            id: ju
           }
         })),
-        aliases: [...Et.values()],
-        layers: Qt
+        aliases: [...Nu.values()],
+        layers: bu
       }
     }
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

@@ -1,303 +1,303 @@
 export const id = 27;
 export const ids = [27];
 export const modules = {
-  5010: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => Lt,
-      f: () => Zt
+  5003: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => Vu,
+      i: () => Ku
     });
-    var Ot = Vt(5015),
-      qt = Vt(377);
-    const Dt = 120,
-      mt = 260,
-      dt = 1.15,
-      jt = 1.2,
-      Ht = 2,
-      Xt = 1.08,
-      Qt = .8,
-      lt = .95,
-      Et = 8,
-      ft = "[\"')\\]\u300d\u300f\uff09]*",
-      wt = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${ft}$`),
-      yt = new RegExp(`[?\uff1f]${ft}$`),
-      Nt = new RegExp(`[!\uff01]${ft}$`),
-      Mt = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-      bt = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-      Jt = new RegExp(`[${bt}]`),
-      Ct = new RegExp(`[${bt}]|[^${bt}]+`, "g"),
-      ut = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+    var su = ju(5011),
+      Uu = ju(337);
+    const Zu = 120,
+      Xu = 260,
+      lu = 1.15,
+      qu = 1.2,
+      fu = 2,
+      Cu = 1.08,
+      bu = .8,
+      cu = .95,
+      Nu = 8,
+      Ou = "[\"')\\]\u300d\u300f\uff09]*",
+      Yu = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${Ou}$`),
+      hu = new RegExp(`[?\uff1f]${Ou}$`),
+      Du = new RegExp(`[!\uff01]${Ou}$`),
+      gu = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+      Mu = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+      eu = new RegExp(`[${Mu}]`),
+      Gu = new RegExp(`[${Mu}]|[^${Mu}]+`, "g"),
+      pu = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-    function Kt(tt) {
-      let et = 2166136261;
-      for (let Vt = 0; Vt < tt.length; Vt++) et ^= tt.charCodeAt(Vt), et = Math.imul(et, 16777619);
-      return (et >>> 0) / 4294967295 * 2 - 1
+    function wu(uu) {
+      let Eu = 2166136261;
+      for (let ju = 0; ju < uu.length; ju++) Eu ^= uu.charCodeAt(ju), Eu = Math.imul(Eu, 16777619);
+      return (Eu >>> 0) / 4294967295 * 2 - 1
     }
 
-    function ht(tt) {
-      var et;
-      if (Jt.test(tt)) return 1;
-      const Vt = tt.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-        Ot = Vt.replace(/[^0-9]/g, "");
-      if (Ot.length > 0 && !/\p{L}/u.test(Vt)) return Math.min(Ot.length, 4);
-      const qt = null !== (et = Vt.match(ut)) && void 0 !== et ? et : [];
-      if (0 === qt.length) {
-        var Dt, mt;
-        const tt = null !== (Dt = null === (mt = Vt.match(/\p{L}/gu)) || void 0 === mt ? void 0 : mt.length) && void 0 !== Dt ? Dt : 0;
-        return 0 === tt ? 0 : Math.min(Math.max(1, Math.round(tt / 2.5)), Et)
+    function Ju(uu) {
+      var Eu;
+      if (eu.test(uu)) return 1;
+      const ju = uu.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+        su = ju.replace(/[^0-9]/g, "");
+      if (su.length > 0 && !/\p{L}/u.test(ju)) return Math.min(su.length, 4);
+      const Uu = null !== (Eu = ju.match(pu)) && void 0 !== Eu ? Eu : [];
+      if (0 === Uu.length) {
+        var Zu, Xu;
+        const uu = null !== (Zu = null === (Xu = ju.match(/\p{L}/gu)) || void 0 === Xu ? void 0 : Xu.length) && void 0 !== Zu ? Zu : 0;
+        return 0 === uu ? 0 : Math.min(Math.max(1, Math.round(uu / 2.5)), Nu)
       }
-      const dt = Vt.replace(/[^\p{L}]/gu, ""),
-        jt = qt.length > 1 && "e" === qt.at(-1) && dt.endsWith("e") && !dt.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(tt.replace(/[^\p{L}]/gu, ""));
-      return Math.min(qt.length - (jt ? 1 : 0), Et)
+      const lu = ju.replace(/[^\p{L}]/gu, ""),
+        qu = Uu.length > 1 && "e" === Uu.at(-1) && lu.endsWith("e") && !lu.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(uu.replace(/[^\p{L}]/gu, ""));
+      return Math.min(Uu.length - (qu ? 1 : 0), Nu)
     }
 
-    function vt(tt) {
-      return tt.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+    function du(uu) {
+      return uu.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
     }
 
-    function Wt(tt) {
-      const et = tt.replace(/[^\p{L}]/gu, "");
-      return et.length >= 2 && et === et.toUpperCase() && et !== et.toLowerCase()
+    function au(uu) {
+      const Eu = uu.replace(/[^\p{L}]/gu, "");
+      return Eu.length >= 2 && Eu === Eu.toUpperCase() && Eu !== Eu.toLowerCase()
     }
 
-    function St(tt, et) {
-      var Vt;
-      const Et = et && (0, Ot.i)(et),
-        ft = null !== (Vt = null === Et || void 0 === Et ? void 0 : Et.syllableMs) && void 0 !== Vt ? Vt : Ot.c,
-        bt = function(tt) {
-          const et = [];
-          for (const Ot of (0, qt.Ob)(tt))
-            if ("string" === typeof Ot)
-              for (const tt of Ot.split(/(\s+)/)) {
-                if ("" === tt) continue;
-                if (/^\s+$/.test(tt)) {
-                  et.push({
+    function Pu(uu, Eu) {
+      var ju;
+      const Nu = Eu && (0, su.l)(Eu),
+        Ou = null !== (ju = null === Nu || void 0 === Nu ? void 0 : Nu.syllableMs) && void 0 !== ju ? ju : su.e,
+        Mu = function(uu) {
+          const Eu = [];
+          for (const su of (0, Uu.gc)(uu))
+            if ("string" === typeof su)
+              for (const uu of su.split(/(\s+)/)) {
+                if ("" === uu) continue;
+                if (/^\s+$/.test(uu)) {
+                  Eu.push({
                     kind: "space",
-                    text: tt
+                    text: uu
                   });
                   continue
                 }
-                if (!Jt.test(tt)) {
-                  et.push({
+                if (!eu.test(uu)) {
+                  Eu.push({
                     kind: "word",
-                    text: tt,
+                    text: uu,
                     delayMs: 0
                   });
                   continue
                 }
-                let Ot = !0;
-                for (const qt of null !== (Vt = tt.match(Ct)) && void 0 !== Vt ? Vt : []) {
-                  var Vt;
-                  const tt = et.at(-1);
-                  Ot || "word" !== (null === tt || void 0 === tt ? void 0 : tt.kind) || Jt.test(qt) || /[\p{L}\p{N}]/u.test(qt) ? (Ot || et.push({
+                let su = !0;
+                for (const Uu of null !== (ju = uu.match(Gu)) && void 0 !== ju ? ju : []) {
+                  var ju;
+                  const uu = Eu.at(-1);
+                  su || "word" !== (null === uu || void 0 === uu ? void 0 : uu.kind) || eu.test(Uu) || /[\p{L}\p{N}]/u.test(Uu) ? (su || Eu.push({
                     kind: "space",
                     text: "\u200b"
-                  }), et.push({
+                  }), Eu.push({
                     kind: "word",
-                    text: qt,
+                    text: Uu,
                     delayMs: 0
-                  }), Ot = !1) : tt.text += qt
+                  }), su = !1) : uu.text += Uu
                 }
-              } else et.push({
+              } else Eu.push({
                 kind: "icon",
-                text: Ot.icon,
+                text: su.icon,
                 delayMs: 0
               });
-          return et
-        }(tt),
-        ut = [];
-      let St = [];
-      for (const Ot of bt) "space" !== Ot.kind && (St.push(Ot), wt.test(Ot.text) && (ut.push(St), St = []));
-      ut.push(St);
-      const ct = [];
-      let Rt = 0;
-      for (const Ot of ut) {
-        var It, Pt;
-        const tt = null !== (It = null === (Pt = Ot.at(-1)) || void 0 === Pt ? void 0 : Pt.text) && void 0 !== It ? It : "",
-          et = yt.test(tt),
-          Vt = Nt.test(tt),
-          qt = Ot.map((tt => "word" === tt.kind ? ht(tt.text) : 1)),
-          bt = qt.findLastIndex((tt => tt > 0));
-        for (const [yt, Nt] of Ot.entries()) {
-          const tt = "word" === Nt.kind,
-            Ot = qt[yt];
-          Nt.delayMs = Rt;
-          for (let qt = 0; Et && qt < Ot; qt++) {
+          return Eu
+        }(uu),
+        pu = [];
+      let Pu = [];
+      for (const su of Mu) "space" !== su.kind && (Pu.push(su), Yu.test(su.text) && (pu.push(Pu), Pu = []));
+      pu.push(Pu);
+      const ou = [];
+      let ku = 0;
+      for (const su of pu) {
+        var mu, vu;
+        const uu = null !== (mu = null === (vu = su.at(-1)) || void 0 === vu ? void 0 : vu.text) && void 0 !== mu ? mu : "",
+          Eu = hu.test(uu),
+          ju = Du.test(uu),
+          Uu = su.map((uu => "word" === uu.kind ? Ju(uu.text) : 1)),
+          Mu = Uu.findLastIndex((uu => uu > 0));
+        for (const [hu, Du] of su.entries()) {
+          const uu = "word" === Du.kind,
+            su = Uu[hu];
+          Du.delayMs = ku;
+          for (let Uu = 0; Nu && Uu < su; Uu++) {
             const {
-              intonation: Dt
-            } = Et;
-            let mt = bt > 0 ? -Dt.declineSemitones * (yt / bt) : 0;
-            mt += Kt(`${vt(Nt.text)}|${qt}`) * Dt.variationSemitones;
-            const wt = Math.min(1, Dt.variationSemitones);
-            let Mt = Et.glideSemitones,
-              Jt = 1;
-            Vt && (mt += Dt.exclaimLiftSemitones, Jt *= dt), et && yt === bt && (mt += Dt.questionRiseSemitones * (Ot > 1 ? .5 + .5 * qt / (Ot - 1) : 1), qt === Ot - 1 && (Mt = Math.abs(Mt) + Dt.questionRiseSemitones / 2)), tt && Wt(Nt.text) && (mt += Ht * wt, Jt *= jt), Ot > 1 && 0 === qt && (mt += Qt * wt, Jt *= Xt), ct.push({
-              atMs: Rt + qt * ft,
-              semitones: mt,
-              glideSemitones: Mt,
-              durationMs: qt < Ot - 1 ? Math.min(Et.durationMs, ft * lt) : Et.durationMs,
-              level: Jt
+              intonation: Zu
+            } = Nu;
+            let Xu = Mu > 0 ? -Zu.declineSemitones * (hu / Mu) : 0;
+            Xu += wu(`${du(Du.text)}|${Uu}`) * Zu.variationSemitones;
+            const Yu = Math.min(1, Zu.variationSemitones);
+            let gu = Nu.glideSemitones,
+              eu = 1;
+            ju && (Xu += Zu.exclaimLiftSemitones, eu *= lu), Eu && hu === Mu && (Xu += Zu.questionRiseSemitones * (su > 1 ? .5 + .5 * Uu / (su - 1) : 1), Uu === su - 1 && (gu = Math.abs(gu) + Zu.questionRiseSemitones / 2)), uu && au(Du.text) && (Xu += fu * Yu, eu *= qu), su > 1 && 0 === Uu && (Xu += bu * Yu, eu *= Cu), ou.push({
+              atMs: ku + Uu * Ou,
+              semitones: Xu,
+              glideSemitones: gu,
+              durationMs: Uu < su - 1 ? Math.min(Nu.durationMs, Ou * cu) : Nu.durationMs,
+              level: eu
             })
           }
-          Rt += Ot * ft + (wt.test(Nt.text) ? mt : Mt.test(Nt.text) ? Dt : 0)
+          ku += su * Ou + (Yu.test(Du.text) ? Xu : gu.test(Du.text) ? Zu : 0)
         }
       }
       return {
-        pieces: bt.map((tt => "space" === tt.kind ? tt : "icon" === tt.kind ? {
+        pieces: Mu.map((uu => "space" === uu.kind ? uu : "icon" === uu.kind ? {
           kind: "icon",
-          icon: tt.text,
-          delayMs: tt.delayMs
+          icon: uu.text,
+          delayMs: uu.delayMs
         } : {
           kind: "word",
-          text: tt.text,
-          delayMs: tt.delayMs
+          text: uu.text,
+          delayMs: uu.delayMs
         })),
-        blips: ct
+        blips: ou
       }
     }
-    var ct = Vt(1286),
-      Rt = Vt(1338),
-      It = Vt(2026);
+    var ou = ju(1244),
+      ku = ju(1303),
+      mu = ju(1995);
 
-    function Pt(tt) {
-      if ("string" === typeof tt) return tt;
-      const et = Rt.e.get().getCurrentLanguageCode();
-      return (0, ct.t)(et, tt.translationKey, (0, ct.p)(tt.params, It.d.shown))
+    function vu(uu) {
+      if ("string" === typeof uu) return uu;
+      const Eu = ku.h.get().getCurrentLanguageCode();
+      return (0, ou.u)(Eu, uu.translationKey, (0, ou.r)(uu.params, mu.e.shown))
     }
 
-    function Zt(tt) {
-      const et = void 0 === tt.voice ? null : (0, Ot.l)(tt.voice),
-        Vt = et && (0, Ot.i)(et);
+    function Ku(uu) {
+      const Eu = void 0 === uu.voice ? null : (0, su.o)(uu.voice),
+        ju = Eu && (0, su.l)(Eu);
       return {
-        plan: St(Pt(tt.line), Vt),
-        synth: Vt
+        plan: Pu(vu(uu.line), ju),
+        synth: ju
       }
     }
 
-    function Lt(tt) {
-      const et = [];
-      let Vt = [];
-      for (const [qt, Dt] of tt.entries()) {
-        var Ot;
-        "space" === Dt.kind && (" " !== Dt.text || "icon" !== (null === (Ot = tt[qt + 1]) || void 0 === Ot ? void 0 : Ot.kind)) ? (Vt.length > 0 && et.push(Vt), et.push([Dt]), Vt = []) : Vt.push(Dt)
+    function Vu(uu) {
+      const Eu = [];
+      let ju = [];
+      for (const [Uu, Zu] of uu.entries()) {
+        var su;
+        "space" === Zu.kind && (" " !== Zu.text || "icon" !== (null === (su = uu[Uu + 1]) || void 0 === su ? void 0 : su.kind)) ? (ju.length > 0 && Eu.push(ju), Eu.push([Zu]), ju = []) : ju.push(Zu)
       }
-      return Vt.length > 0 && et.push(Vt), et
+      return ju.length > 0 && Eu.push(ju), Eu
     }
   },
-  5021: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => Xt,
-      i: () => Qt
+  5019: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => Cu,
+      d: () => bu
     });
-    var Ot = Vt(5030),
-      qt = Vt(26);
-    const Dt = .25,
-      mt = .85,
-      dt = .02,
-      jt = .01;
+    var su = ju(5026),
+      Uu = ju(22);
+    const Zu = .25,
+      Xu = .85,
+      lu = .02,
+      qu = .01;
 
-    function Ht(tt, et, Vt, Ot, qt, Dt, dt) {
+    function fu(uu, Eu, ju, su, Uu, Zu, lu) {
       const {
-        waveform: jt,
-        pitchHz: Ht,
-        attackMs: Xt,
-        releaseMs: Qt,
-        lowpassHz: lt
-      } = Vt, Et = qt + Ot.durationMs / 1e3, ft = Ht * 2 ** (Ot.semitones / 12), wt = tt.createOscillator();
-      wt.type = jt, wt.frequency.setValueAtTime(ft, qt), wt.frequency.exponentialRampToValueAtTime(ft * 2 ** (Ot.glideSemitones / 12), Et);
-      const yt = qt + Math.min(Xt, Ot.durationMs) / 1e3,
-        Nt = tt.createGain();
-      Nt.gain.setValueAtTime(0, qt), Nt.gain.linearRampToValueAtTime(Dt, yt), Nt.gain.linearRampToValueAtTime(Dt * mt, Math.max(yt, Et - Qt / 1e3)), Nt.gain.linearRampToValueAtTime(0, Et);
-      const Mt = [wt];
-      if (null !== lt) {
-        const et = tt.createBiquadFilter();
-        et.type = "lowpass", et.frequency.value = lt, Mt.push(et)
+        waveform: qu,
+        pitchHz: fu,
+        attackMs: Cu,
+        releaseMs: bu,
+        lowpassHz: cu
+      } = ju, Nu = Uu + su.durationMs / 1e3, Ou = fu * 2 ** (su.semitones / 12), Yu = uu.createOscillator();
+      Yu.type = qu, Yu.frequency.setValueAtTime(Ou, Uu), Yu.frequency.exponentialRampToValueAtTime(Ou * 2 ** (su.glideSemitones / 12), Nu);
+      const hu = Uu + Math.min(Cu, su.durationMs) / 1e3,
+        Du = uu.createGain();
+      Du.gain.setValueAtTime(0, Uu), Du.gain.linearRampToValueAtTime(Zu, hu), Du.gain.linearRampToValueAtTime(Zu * Xu, Math.max(hu, Nu - bu / 1e3)), Du.gain.linearRampToValueAtTime(0, Nu);
+      const gu = [Yu];
+      if (null !== cu) {
+        const Eu = uu.createBiquadFilter();
+        Eu.type = "lowpass", Eu.frequency.value = cu, gu.push(Eu)
       }
-      Mt.push(Nt, et);
-      for (let mt = 1; mt < Mt.length; mt++) Mt[mt - 1].connect(Mt[mt]);
-      return wt.onended = () => {
-        for (const tt of Mt.slice(0, -1)) tt.disconnect();
-        dt()
-      }, wt.start(qt), wt.stop(Et), wt
+      gu.push(Du, Eu);
+      for (let Xu = 1; Xu < gu.length; Xu++) gu[Xu - 1].connect(gu[Xu]);
+      return Yu.onended = () => {
+        for (const uu of gu.slice(0, -1)) uu.disconnect();
+        lu()
+      }, Yu.start(Uu), Yu.stop(Nu), Yu
     }
 
-    function Xt(tt, et, Vt, Ot, qt, mt) {
-      if (0 === Ot.length) return mt(), () => {};
-      const Xt = Dt * Vt.volume * qt,
-        Qt = tt.createGain();
-      Qt.connect(et);
-      const lt = tt.currentTime + dt,
-        Et = new Set;
-      for (const Dt of Ot) {
-        const et = Ht(tt, Qt, Vt, Dt, lt + Dt.atMs / 1e3, Xt * Dt.level, (() => {
-          Et.delete(et), 0 === Et.size && (Qt.disconnect(), mt())
+    function Cu(uu, Eu, ju, su, Uu, Xu) {
+      if (0 === su.length) return Xu(), () => {};
+      const Cu = Zu * ju.volume * Uu,
+        bu = uu.createGain();
+      bu.connect(Eu);
+      const cu = uu.currentTime + lu,
+        Nu = new Set;
+      for (const Zu of su) {
+        const Eu = fu(uu, bu, ju, Zu, cu + Zu.atMs / 1e3, Cu * Zu.level, (() => {
+          Nu.delete(Eu), 0 === Nu.size && (bu.disconnect(), Xu())
         }));
-        Et.add(et)
+        Nu.add(Eu)
       }
       return () => {
-        const et = tt.currentTime;
-        Qt.gain.setTargetAtTime(0, et, jt);
-        for (const tt of Et) try {
-          tt.stop(et + 5 * jt)
+        const Eu = uu.currentTime;
+        bu.gain.setTargetAtTime(0, Eu, qu);
+        for (const uu of Nu) try {
+          uu.stop(Eu + 5 * qu)
         } catch {}
       }
     }
 
-    function Qt(tt, et) {
-      var Vt;
-      const Dt = Ot.Howler.ctx,
-        mt = Ot.Howler.masterGain;
-      if (!Dt || !mt || !qt.b.get("soundOnFromAd")) return () => {};
-      const dt = Ot.Howler;
-      return null === (Vt = dt._autoResume) || void 0 === Vt || Vt.call(dt), Xt(Dt, mt, tt, et, qt.b.get("soundVolume"), (() => {
-        var tt;
-        null === (tt = dt._autoSuspend) || void 0 === tt || tt.call(dt)
+    function bu(uu, Eu) {
+      var ju;
+      const Zu = su.Howler.ctx,
+        Xu = su.Howler.masterGain;
+      if (!Zu || !Xu || !Uu.d.get("soundOnFromAd")) return () => {};
+      const lu = su.Howler;
+      return null === (ju = lu._autoResume) || void 0 === ju || ju.call(lu), Cu(Zu, Xu, uu, Eu, Uu.d.get("soundVolume"), (() => {
+        var uu;
+        null === (uu = lu._autoSuspend) || void 0 === uu || uu.call(lu)
       }))
     }
   },
-  39360: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      closeClientGame: () => Ft,
-      createDefaultClientPlugins: () => Lt
+  39455: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      closeClientGame: () => ru,
+      createDefaultClientPlugins: () => Vu
     });
-    var Ot = Vt(391);
+    var su = ju(349);
 
-    function qt() {
-      let tt;
+    function Uu() {
+      let uu;
       return {
-        onCreate(et) {
-          tt = et
+        onCreate(Eu) {
+          uu = Eu
         },
         altVetoBlocks: ["Iron Chest"],
-        onPlayerAttemptAltAction(et, Vt, qt, Dt, mt, dt) {
-          var jt, Ht;
-          if ("Iron Chest" !== tt.getMetaInfo(mt).rootName) return;
-          if (!tt.hasEffect(et, "Thief")) return;
-          const Xt = tt.getBlockData(Vt, qt, Dt);
-          return tt.getPlayerDbId(et) !== (null === Xt || void 0 === Xt || null === (jt = Xt.persisted) || void 0 === jt || null === (Ht = jt.shared) || void 0 === Ht ? void 0 : Ht.ownerDbId) ? (tt.sendMessage(et, [{
+        onPlayerAttemptAltAction(Eu, ju, Uu, Zu, Xu, lu) {
+          var qu, fu;
+          if ("Iron Chest" !== uu.getMetaInfo(Xu).rootName) return;
+          if (!uu.hasEffect(Eu, "Thief")) return;
+          const Cu = uu.getBlockData(ju, Uu, Zu);
+          return uu.getPlayerDbId(Eu) !== (null === Cu || void 0 === Cu || null === (qu = Cu.persisted) || void 0 === qu || null === (fu = qu.shared) || void 0 === fu ? void 0 : fu.ownerDbId) ? (uu.sendMessage(Eu, [{
             str: {
               translationKey: "ironChest:thievesCannotOpen"
             },
             style: {
-              color: Ot.P.redUiText
+              color: su.G.redUiText
             }
           }]), "preventAction") : void 0
         }
       }
     }
-    var Dt = Vt(4339),
-      mt = Vt(1325);
-    const dt = 8.4,
-      jt = 1e-4,
-      Ht = .15,
-      Xt = .04,
-      Qt = [.12, .04, .12],
-      lt = 26,
-      Et = {
+    var Zu = ju(4427),
+      Xu = ju(1298);
+    const lu = 8.4,
+      qu = 1e-4,
+      fu = .15,
+      Cu = .04,
+      bu = [.12, .04, .12],
+      cu = 26,
+      Nu = {
         texture: "fishingFishSilhouette",
         mipmaps: !1,
-        uQ: 1,
-        minLifeTime: jt,
-        maxLifeTime: jt,
+        Mb: 1,
+        minLifeTime: qu,
+        maxLifeTime: qu,
         minSize: .55,
         maxSize: .55,
         minEmitPower: 0,
@@ -310,19 +310,19 @@ export const modules = {
           timeFraction: 1,
           minColor: [0, 0, 0, 1]
         }],
-        blendMode: Dt.f.Standard
+        blendMode: Zu.e.Standard
       },
-      ft = {
+      Ou = {
         texture: "bubble",
         mipmaps: !1,
-        uQ: 96,
+        Mb: 96,
         minLifeTime: .3,
         maxLifeTime: .65,
         minSize: .08,
         maxSize: .19,
         minEmitPower: .2,
         maxEmitPower: .55,
-        emitRate: lt,
+        emitRate: cu,
         gravity: [0, .3, 0],
         dir1: [-.3, .3, -.3],
         dir2: [.3, .7, .3],
@@ -336,159 +336,159 @@ export const modules = {
           timeFraction: 1,
           minColor: [178.5, 229.5, 255, 0]
         }],
-        blendMode: Dt.f.Standard
+        blendMode: Zu.e.Standard
       },
-      wt = [0, 0, 0],
-      yt = [0, 0, 0];
+      Yu = [0, 0, 0],
+      hu = [0, 0, 0];
 
-    function Nt(tt) {
-      const et = new Map;
-      let Vt = null;
+    function Du(uu) {
+      const Eu = new Map;
+      let ju = null;
 
-      function Ot(tt) {
-        var et, Vt;
-        null === (et = tt.bubbles) || void 0 === et || et.stop(), null === (Vt = tt.fish) || void 0 === Vt || Vt.stop()
+      function su(uu) {
+        var Eu, ju;
+        null === (Eu = uu.bubbles) || void 0 === Eu || Eu.stop(), null === (ju = uu.fish) || void 0 === ju || ju.stop()
       }
 
-      function qt(Vt) {
-        if (!Vt.readDrawnPosition(tt, yt)) {
-          for (const tt of et.values()) {
-            var Ot;
-            null === (Ot = tt.bubbles) || void 0 === Ot || Ot.setEmitRate(0)
+      function Uu(ju) {
+        if (!ju.readDrawnPosition(uu, hu)) {
+          for (const uu of Eu.values()) {
+            var su;
+            null === (su = uu.bubbles) || void 0 === su || su.setEmitRate(0)
           }
           return
         }
-        const qt = performance.now();
-        for (const [tt, mt] of et) {
-          var Dt;
-          if (null === (Dt = mt.bubbles) || void 0 === Dt || Dt.setEmitRate(0), !Vt.readDrawnPosition(tt, wt)) continue;
-          if (!((wt[0] - yt[0]) ** 2 + (wt[1] - yt[1]) ** 2 + (wt[2] - yt[2]) ** 2 < 900)) continue;
-          const et = Math.max(0, mt.biteAt - qt),
-            Ot = mt.approachDurationMs > 0 ? Math.min(1, 1 - et / mt.approachDurationMs) : 1,
-            jt = (mt.approachDurationMs - et) / 1e3,
-            Nt = mt.phase + .25 * Math.sin(1.7 * jt + mt.phase),
-            Mt = Math.min(mt.approachDurationMs / 3e3 * 2.8, dt) * (1 - Ot) * (1 + .15 * Math.sin(2.1 * jt + mt.phase)),
-            bt = Math.min(1, 4 * (1 - Ot)),
-            Jt = (.45 * Math.sin(4.1 * jt + mt.phase) + .18 * Math.sin(9.7 * jt + 2 * mt.phase)) * bt,
-            Ct = wt[0] + Math.cos(Nt) * Mt - Math.sin(Nt) * Jt,
-            ut = Math.ceil(mt.surfaceY),
-            Kt = wt[2] + Math.sin(Nt) * Mt + Math.cos(Nt) * Jt,
+        const Uu = performance.now();
+        for (const [uu, Xu] of Eu) {
+          var Zu;
+          if (null === (Zu = Xu.bubbles) || void 0 === Zu || Zu.setEmitRate(0), !ju.readDrawnPosition(uu, Yu)) continue;
+          if (!((Yu[0] - hu[0]) ** 2 + (Yu[1] - hu[1]) ** 2 + (Yu[2] - hu[2]) ** 2 < 900)) continue;
+          const Eu = Math.max(0, Xu.biteAt - Uu),
+            su = Xu.approachDurationMs > 0 ? Math.min(1, 1 - Eu / Xu.approachDurationMs) : 1,
+            qu = (Xu.approachDurationMs - Eu) / 1e3,
+            Du = Xu.phase + .25 * Math.sin(1.7 * qu + Xu.phase),
+            gu = Math.min(Xu.approachDurationMs / 3e3 * 2.8, lu) * (1 - su) * (1 + .15 * Math.sin(2.1 * qu + Xu.phase)),
+            Mu = Math.min(1, 4 * (1 - su)),
+            eu = (.45 * Math.sin(4.1 * qu + Xu.phase) + .18 * Math.sin(9.7 * qu + 2 * Xu.phase)) * Mu,
+            Gu = Yu[0] + Math.cos(Du) * gu - Math.sin(Du) * eu,
+            pu = Math.ceil(Xu.surfaceY),
+            wu = Yu[2] + Math.sin(Du) * gu + Math.cos(Du) * eu,
             {
-              fishAt: ht,
-              bubblesAt: vt
-            } = mt;
-          ht[0] = vt[0] = Ct, ht[1] = ut + Ht, vt[1] = ut + Xt, ht[2] = vt[2] = Kt, mt.fish ??= Vt.createParticles(Et, {
-            pos: ht
-          }), mt.fish.moveTo(ht), mt.fish.emit(1), mt.bubbles ??= Vt.createParticles(ft, {
-            pos: vt,
-            half: Qt
-          }), mt.bubbles.moveTo(vt), mt.bubbles.setEmitRate(lt + 32 * (.5 + .5 * Math.sin(9 * jt + mt.phase)) ** 4 + 13 * Ot)
+              fishAt: Ju,
+              bubblesAt: du
+            } = Xu;
+          Ju[0] = du[0] = Gu, Ju[1] = pu + fu, du[1] = pu + Cu, Ju[2] = du[2] = wu, Xu.fish ??= ju.createParticles(Nu, {
+            pos: Ju
+          }), Xu.fish.moveTo(Ju), Xu.fish.emit(1), Xu.bubbles ??= ju.createParticles(Ou, {
+            pos: du,
+            half: bu
+          }), Xu.bubbles.moveTo(du), Xu.bubbles.setEmitRate(cu + 32 * (.5 + .5 * Math.sin(9 * qu + Xu.phase)) ** 4 + 13 * su)
         }
       }
       return {
-        onCreate(tt) {
-          Vt = tt
+        onCreate(uu) {
+          ju = uu
         },
         onAfterRender() {
-          Vt && qt(Vt)
+          ju && Uu(ju)
         },
         onClose() {
-          for (const tt of et.values()) Ot(tt);
-          et.clear(), Vt = null
+          for (const uu of Eu.values()) su(uu);
+          Eu.clear(), ju = null
         },
-        onReceivedMessageFromServer(tt, Vt) {
-          if (tt !== mt.F) return;
+        onReceivedMessageFromServer(uu, ju) {
+          if (uu !== Xu.x) return;
           const {
-            hookId: qt,
-            waiting: Dt
-          } = Vt;
-          if (Dt) et.has(qt) || et.set(qt, {
+            hookId: Uu,
+            waiting: Zu
+          } = ju;
+          if (Zu) Eu.has(Uu) || Eu.set(Uu, {
             bubbles: null,
             fish: null,
             fishAt: [0, 0, 0],
             bubblesAt: [0, 0, 0],
-            biteAt: performance.now() + Dt.remainingMs,
-            approachDurationMs: Dt.durationMs,
-            surfaceY: Dt.surfaceY,
+            biteAt: performance.now() + Zu.remainingMs,
+            approachDurationMs: Zu.durationMs,
+            surfaceY: Zu.surfaceY,
             phase: Math.random() * Math.PI * 2
           });
           else {
-            const tt = et.get(qt);
-            tt && Ot(tt), et.delete(qt)
+            const uu = Eu.get(Uu);
+            uu && su(uu), Eu.delete(Uu)
           }
         }
       }
     }
-    var Mt = Vt(5021),
-      bt = Vt(5010);
+    var gu = ju(5019),
+      Mu = ju(5003);
 
-    function Jt(tt) {
-      let et, Vt = null,
-        Ot = null;
-      const qt = () => {
-        var tt;
-        null === (tt = Ot) || void 0 === tt || tt(), Ot = null
+    function eu(uu) {
+      let Eu, ju = null,
+        su = null;
+      const Uu = () => {
+        var uu;
+        null === (uu = su) || void 0 === uu || uu(), su = null
       };
       return {
-        onCreate(Ot) {
-          et = Ot, Vt = et.getClientOption(tt, "dialogue")
+        onCreate(su) {
+          Eu = su, ju = Eu.getClientOption(uu, "dialogue")
         },
         onAfterRender() {
-          if (!et) return;
-          const Dt = et.getClientOption(tt, "dialogue");
-          if (Dt === Vt) return;
-          if (Vt = Dt, qt(), !Dt || !1 === Dt.animateIn) return;
+          if (!Eu) return;
+          const Zu = Eu.getClientOption(uu, "dialogue");
+          if (Zu === ju) return;
+          if (ju = Zu, Uu(), !Zu || !1 === Zu.animateIn) return;
           const {
-            plan: mt,
-            synth: dt
-          } = (0, bt.f)(Dt);
-          dt && (Ot = (0, Mt.i)(dt, mt.blips))
+            plan: Xu,
+            synth: lu
+          } = (0, Mu.i)(Zu);
+          lu && (su = (0, gu.d)(lu, Xu.blips))
         },
-        onClose: qt
+        onClose: Uu
       }
     }
-    var Ct = Vt(39365);
-    const ut = [
+    var Gu = ju(39461);
+    const pu = [
         [-.3125, -.25],
         [.3125, -.25],
         [.3125, .25],
         [-.3125, .25]
       ],
-      Kt = [0, 1 / 3, 1, 1 / 3, 1, 0, 0, 0],
-      ht = [0, 1, 2, 0, 2, 3];
+      wu = [0, 1 / 3, 1, 1 / 3, 1, 0, 0, 0],
+      Ju = [0, 1, 2, 0, 2, 3];
 
-    function vt(tt, et, Vt) {
-      var Ot;
-      let [qt, Dt, mt] = et;
-      if (tt.hasPackModel("Furnace")) return null;
-      const dt = ((null !== (Ot = tt.getMetaInfo(Vt).rot) && void 0 !== Ot ? Ot : 1) - 1) * Math.PI / 2,
-        jt = Math.PI + dt,
-        Ht = Math.cos(jt),
-        Xt = Math.sin(jt),
-        Qt = [];
-      for (const [ft, wt] of ut) Qt.push(ft * Ht, wt, -ft * Xt);
-      const lt = {
-          positions: Qt,
-          indices: ht,
-          uvs: Kt
+    function du(uu, Eu, ju) {
+      var su;
+      let [Uu, Zu, Xu] = Eu;
+      if (uu.hasPackModel("Furnace")) return null;
+      const lu = ((null !== (su = uu.getMetaInfo(ju).rot) && void 0 !== su ? su : 1) - 1) * Math.PI / 2,
+        qu = Math.PI + lu,
+        fu = Math.cos(qu),
+        Cu = Math.sin(qu),
+        bu = [];
+      for (const [Ou, Yu] of pu) bu.push(Ou * fu, Yu, -Ou * Cu);
+      const cu = {
+          positions: bu,
+          indices: Ju,
+          uvs: wu
         },
-        Et = [qt + .5 + .51 * Math.sin(dt), Dt + .375, mt + .5 + .51 * Math.cos(dt)];
-      return tt.createGameMesh(lt, {
+        Nu = [Uu + .5 + .51 * Math.sin(lu), Zu + .375, Xu + .5 + .51 * Math.cos(lu)];
+      return uu.createGameMesh(cu, {
         kind: "furnaceFire"
-      }, Et)
+      }, Nu)
     }
 
-    function Wt(tt) {
-      return Math.floor(tt / 200) % 3
+    function au(uu) {
+      return Math.floor(uu / 200) % 3
     }
 
-    function St(tt, et, Vt) {
-      tt.setGameMesh(et, {
-        uvOffset: [0, Vt / 3]
+    function Pu(uu, Eu, ju) {
+      uu.setGameMesh(Eu, {
+        uvOffset: [0, ju / 3]
       })
     }
-    const ct = [.12, .025, .12],
-      Rt = [{
+    const ou = [.12, .025, .12],
+      ku = [{
         style: {
           colours: [
             [176, 176, 182],
@@ -501,7 +501,7 @@ export const modules = {
           lift: .12,
           spread: .12,
           count: 6,
-          blendMode: Dt.f.Standard,
+          blendMode: Zu.e.Standard,
           soft: !0
         },
         perSecond: 7
@@ -518,196 +518,196 @@ export const modules = {
           lift: -.6,
           spread: .35,
           count: 10,
-          blendMode: Dt.f.Add,
+          blendMode: Zu.e.Add,
           soft: !1
         },
         perSecond: 6
       }];
-    class It {
+    class mu {
       constructor() {
         this.puffers = null, this.smokes = [], this.renderFrame = 0, this.shownFireFrame = -1, this.centre = [0, 0, 0]
       }
-      start(tt, et) {
-        const Vt = tt.getBlockId(et[0], et[1], et[2]);
-        if ("Furnace" !== tt.getMetaInfo(Vt).rootName) return;
-        const Ot = performance.now();
-        let qt = this.smokes.find((tt => tt.pos[0] === et[0] && tt.pos[1] === et[1] && tt.pos[2] === et[2] && tt.qd === Vt));
-        if (qt || (qt = {
-            pos: [et[0], et[1], et[2]],
-            qd: Vt,
-            endMs: Ot,
+      start(uu, Eu) {
+        const ju = uu.getBlockId(Eu[0], Eu[1], Eu[2]);
+        if ("Furnace" !== uu.getMetaInfo(ju).rootName) return;
+        const su = performance.now();
+        let Uu = this.smokes.find((uu => uu.pos[0] === Eu[0] && uu.pos[1] === Eu[1] && uu.pos[2] === Eu[2] && uu.ul === ju));
+        if (Uu || (Uu = {
+            pos: [Eu[0], Eu[1], Eu[2]],
+            ul: ju,
+            endMs: su,
             lastBurstMs: -1 / 0,
-            pending: new Array(Rt.length).fill(0),
-            fire: vt(tt, et, Vt)
-          }, this.smokes.push(qt), null !== qt.fire && (St(tt, qt.fire, Wt(Ot)), this.shownFireFrame = -1)), qt.endMs = Ot + 6e3, this.smokes.length > 4) {
-          const et = this.smokes.reduce(((tt, et) => et.endMs < tt.endMs ? et : tt));
-          Pt(tt, et), this.smokes.splice(this.smokes.indexOf(et), 1)
+            pending: new Array(ku.length).fill(0),
+            fire: du(uu, Eu, ju)
+          }, this.smokes.push(Uu), null !== Uu.fire && (Pu(uu, Uu.fire, au(su)), this.shownFireFrame = -1)), Uu.endMs = su + 6e3, this.smokes.length > 4) {
+          const Eu = this.smokes.reduce(((uu, Eu) => Eu.endMs < uu.endMs ? Eu : uu));
+          vu(uu, Eu), this.smokes.splice(this.smokes.indexOf(Eu), 1)
         }
-        Ot - qt.lastBurstMs >= 300 && (qt.lastBurstMs = Ot, Rt.forEach(((tt, et) => {
-          qt.pending[et] += tt.style.count
+        su - Uu.lastBurstMs >= 300 && (Uu.lastBurstMs = su, ku.forEach(((uu, Eu) => {
+          Uu.pending[Eu] += uu.style.count
         })))
       }
-      onAfterRender(tt, et) {
+      onAfterRender(uu, Eu) {
         if (0 === this.smokes.length) return;
         this.renderFrame++;
-        const Vt = performance.now();
-        this.smokes = this.smokes.filter((et => {
-          const [Ot, qt, Dt] = et.pos, mt = Vt < et.endMs && tt.getBlockId(Ot, qt, Dt) === et.qd;
-          return mt || Pt(tt, et), mt
+        const ju = performance.now();
+        this.smokes = this.smokes.filter((Eu => {
+          const [su, Uu, Zu] = Eu.pos, Xu = ju < Eu.endMs && uu.getBlockId(su, Uu, Zu) === Eu.ul;
+          return Xu || vu(uu, Eu), Xu
         }));
-        const Ot = Wt(Vt);
-        if (Ot !== this.shownFireFrame) {
-          this.shownFireFrame = Ot;
-          for (const et of this.smokes) null !== et.fire && St(tt, et.fire, Ot)
+        const su = au(ju);
+        if (su !== this.shownFireFrame) {
+          this.shownFireFrame = su;
+          for (const Eu of this.smokes) null !== Eu.fire && Pu(uu, Eu.fire, su)
         }
-        if (!tt.particlesEnabled()) {
-          for (const tt of this.smokes) tt.pending.fill(0);
+        if (!uu.particlesEnabled()) {
+          for (const uu of this.smokes) uu.pending.fill(0);
           return
         }
-        const qt = Math.min(et, 250) / 1e3;
-        for (const Dt of this.smokes) {
-          const [et, Ot, mt] = Dt.pos;
-          if (0 !== tt.getBlockId(et, Ot + 1, mt)) {
-            Dt.pending.fill(0);
+        const Uu = Math.min(Eu, 250) / 1e3;
+        for (const Zu of this.smokes) {
+          const [Eu, su, Xu] = Zu.pos;
+          if (0 !== uu.getBlockId(Eu, su + 1, Xu)) {
+            Zu.pending.fill(0);
             continue
           }
-          const dt = (Dt.endMs - Vt) / 6e3,
-            jt = this.centre;
-          jt[0] = et + .5, jt[1] = Ot + 1.275, jt[2] = mt + .5, Rt.forEach(((et, Vt) => {
-            Dt.pending[Vt] += et.perSecond * dt * qt;
-            const Ot = Math.floor(Dt.pending[Vt]);
-            Ot > 0 && this.emit(tt, Vt, jt, Ot) && (Dt.pending[Vt] -= Ot)
+          const lu = (Zu.endMs - ju) / 6e3,
+            qu = this.centre;
+          qu[0] = Eu + .5, qu[1] = su + 1.275, qu[2] = Xu + .5, ku.forEach(((Eu, ju) => {
+            Zu.pending[ju] += Eu.perSecond * lu * Uu;
+            const su = Math.floor(Zu.pending[ju]);
+            su > 0 && this.emit(uu, ju, qu, su) && (Zu.pending[ju] -= su)
           }))
         }
       }
-      dispose(tt) {
-        for (const Vt of this.smokes) Pt(tt, Vt);
+      dispose(uu) {
+        for (const ju of this.smokes) vu(uu, ju);
         this.smokes = [];
-        for (const Vt of null !== (et = this.puffers) && void 0 !== et ? et : []) {
-          var et;
-          Vt.dispose()
+        for (const ju of null !== (Eu = this.puffers) && void 0 !== Eu ? Eu : []) {
+          var Eu;
+          ju.dispose()
         }
         this.puffers = null
       }
-      emit(tt, et, Vt, Ot) {
-        return this.puffers ??= Rt.map((tt => {
+      emit(uu, Eu, ju, su) {
+        return this.puffers ??= ku.map((uu => {
           let {
-            style: et,
-            perSecond: Vt
-          } = tt;
-          const Ot = (et.count / .3 + Vt) * et.life[1];
-          return new Ct.g(et, Math.ceil(4 * Ot), ct)
-        })), this.puffers[et].emit(tt, Vt, this.renderFrame, Ot)
+            style: Eu,
+            perSecond: ju
+          } = uu;
+          const su = (Eu.count / .3 + ju) * Eu.life[1];
+          return new Gu.h(Eu, Math.ceil(4 * su), ou)
+        })), this.puffers[Eu].emit(uu, ju, this.renderFrame, su)
       }
     }
 
-    function Pt(tt, et) {
-      null !== et.fire && (tt.disposeGameMesh(et.fire), et.fire = null)
+    function vu(uu, Eu) {
+      null !== Eu.fire && (uu.disposeGameMesh(Eu.fire), Eu.fire = null)
     }
 
-    function Zt() {
-      let tt;
-      const et = new It;
+    function Ku() {
+      let uu;
+      const Eu = new mu;
       return {
-        onCreate(et) {
-          tt = et
+        onCreate(Eu) {
+          uu = Eu
         },
-        onReceivedMessageFromServer(Vt, Ot) {
-          Vt === mt.G && et.start(tt, Ot)
+        onReceivedMessageFromServer(ju, su) {
+          ju === Xu.A && Eu.start(uu, su)
         },
-        onAfterRender(Vt) {
-          et.onAfterRender(tt, Vt)
+        onAfterRender(ju) {
+          Eu.onAfterRender(uu, ju)
         },
         onClose() {
-          et.dispose(tt)
+          Eu.dispose(uu)
         }
       }
     }
 
-    function Lt(tt, et, Vt, Ot) {
+    function Vu(uu, Eu, ju, su) {
       return {
-        dialogue: Jt(Ot.localPlayerId),
-        fishing: Nt(Ot.localPlayerId),
-        furnaceSmoke: Zt(),
-        ironChest: qt()
+        dialogue: eu(su.localPlayerId),
+        fishing: Du(su.localPlayerId),
+        furnaceSmoke: Ku(),
+        ironChest: Uu()
       }
     }
 
-    function Ft(tt, et) {
-      for (const qt of [tt, ...null !== et && void 0 !== et ? et : []]) try {
-        var Vt;
-        null === qt || void 0 === qt || null === (Vt = qt.onClose) || void 0 === Vt || Vt.call(qt)
-      } catch (Ot) {
-        console.error("Error in client onClose callback", Ot)
+    function ru(uu, Eu) {
+      for (const Uu of [uu, ...null !== Eu && void 0 !== Eu ? Eu : []]) try {
+        var ju;
+        null === Uu || void 0 === Uu || null === (ju = Uu.onClose) || void 0 === ju || ju.call(Uu)
+      } catch (su) {
+        console.error("Error in client onClose callback", su)
       }
     }
   },
-  39365: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => Ot,
-      g: () => Dt
+  39461: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => su,
+      h: () => Zu
     });
-    const Ot = 1 / .6,
-      qt = {
+    const su = 1 / .6,
+      Uu = {
         kind: "smokePuff"
       };
-    class Dt {
-      constructor(tt, et, Vt) {
-        this.style = tt, this.uQ = et, this.half = Vt, this.particles = null, this.lastFrame = -1
+    class Zu {
+      constructor(uu, Eu, ju) {
+        this.style = uu, this.Mb = Eu, this.half = ju, this.particles = null, this.lastFrame = -1
       }
-      emit(tt, et, Vt) {
-        let Dt = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
-        return Vt !== this.lastFrame && (this.lastFrame = Vt, this.particles || (this.particles = tt.createParticles(function(tt, et) {
+      emit(uu, Eu, ju) {
+        let Zu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
+        return ju !== this.lastFrame && (this.lastFrame = ju, this.particles || (this.particles = uu.createParticles(function(uu, Eu) {
           const [
-            [Vt, Dt, mt],
-            [dt, jt, Ht]
-          ] = tt.colours;
+            [ju, Zu, Xu],
+            [lu, qu, fu]
+          ] = uu.colours;
           return {
-            texture: tt.soft ? qt : "square_particle",
-            uQ: et,
-            minLifeTime: tt.life[0] / Ot,
-            maxLifeTime: tt.life[1] / Ot,
-            minEmitPower: tt.power[0] * Ot,
-            maxEmitPower: tt.power[1] * Ot,
-            minSize: tt.size[0],
-            maxSize: tt.size[1],
+            texture: uu.soft ? Uu : "square_particle",
+            Mb: Eu,
+            minLifeTime: uu.life[0] / su,
+            maxLifeTime: uu.life[1] / su,
+            minEmitPower: uu.power[0] * su,
+            maxEmitPower: uu.power[1] * su,
+            minSize: uu.size[0],
+            maxSize: uu.size[1],
             emitRate: 0,
-            gravity: [0, tt.lift * Ot * Ot, 0],
-            dir1: [-tt.spread, 1, -tt.spread],
-            dir2: [tt.spread, 1, tt.spread],
+            gravity: [0, uu.lift * su * su, 0],
+            dir1: [-uu.spread, 1, -uu.spread],
+            dir2: [uu.spread, 1, uu.spread],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [Vt, Dt, mt, tt.alpha],
-              maxColor: [dt, jt, Ht, tt.alpha]
+              minColor: [ju, Zu, Xu, uu.alpha],
+              maxColor: [lu, qu, fu, uu.alpha]
             }, {
               timeFraction: 1,
-              minColor: [Vt, Dt, mt, 0],
-              maxColor: [dt, jt, Ht, 0]
+              minColor: [ju, Zu, Xu, 0],
+              maxColor: [lu, qu, fu, 0]
             }],
-            blendMode: tt.blendMode
+            blendMode: uu.blendMode
           }
-        }(this.style, this.uQ), {
-          pos: et,
+        }(this.style, this.Mb), {
+          pos: Eu,
           half: this.half
-        })), this.particles.moveTo(et, this.half), this.particles.emit(Dt), !0)
+        })), this.particles.moveTo(Eu, this.half), this.particles.emit(Zu), !0)
       }
       dispose() {
-        var tt;
-        null === (tt = this.particles) || void 0 === tt || tt.stop(), this.particles = null
+        var uu;
+        null === (uu = this.particles) || void 0 === uu || uu.stop(), this.particles = null
       }
     }
   },
-  5015: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => qt,
-      d: () => Ot,
-      g: () => Dt,
-      i: () => jt,
-      l: () => mt
+  5011: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => Uu,
+      h: () => su,
+      j: () => Zu,
+      l: () => qu,
+      o: () => Xu
     });
-    const Ot = ["sine", "triangle", "square", "sawtooth"],
-      qt = 55,
-      Dt = {
+    const su = ["sine", "triangle", "square", "sawtooth"],
+      Uu = 55,
+      Zu = {
         soft: {
           waveform: "sine",
           pitchHz: 300,
@@ -846,39 +846,39 @@ export const modules = {
         }
       };
 
-    function mt(tt) {
-      return "string" !== typeof tt ? tt : Object.hasOwn(Dt, tt) ? Dt[tt] : null
+    function Xu(uu) {
+      return "string" !== typeof uu ? uu : Object.hasOwn(Zu, uu) ? Zu[uu] : null
     }
 
-    function dt(tt, et, Vt) {
-      return Math.min(Vt, Math.max(et, tt))
+    function lu(uu, Eu, ju) {
+      return Math.min(ju, Math.max(Eu, uu))
     }
 
-    function jt(tt) {
-      const et = dt(tt.durationMs, 10, 500),
-        Vt = dt(tt.attackMs, 0, et),
+    function qu(uu) {
+      const Eu = lu(uu.durationMs, 10, 500),
+        ju = lu(uu.attackMs, 0, Eu),
         {
-          intonation: qt
-        } = tt;
+          intonation: Uu
+        } = uu;
       return {
-        waveform: Ot.includes(tt.waveform) ? tt.waveform : "sine",
-        pitchHz: dt(tt.pitchHz, 20, 4e3),
-        glideSemitones: dt(tt.glideSemitones, -24, 24),
-        durationMs: et,
-        attackMs: Vt,
-        releaseMs: dt(tt.releaseMs, 0, et - Vt),
-        lowpassHz: null === tt.lowpassHz ? null : dt(tt.lowpassHz, 20, 2e4),
-        volume: dt(tt.volume, 0, 2),
+        waveform: su.includes(uu.waveform) ? uu.waveform : "sine",
+        pitchHz: lu(uu.pitchHz, 20, 4e3),
+        glideSemitones: lu(uu.glideSemitones, -24, 24),
+        durationMs: Eu,
+        attackMs: ju,
+        releaseMs: lu(uu.releaseMs, 0, Eu - ju),
+        lowpassHz: null === uu.lowpassHz ? null : lu(uu.lowpassHz, 20, 2e4),
+        volume: lu(uu.volume, 0, 2),
         intonation: {
-          variationSemitones: dt(qt.variationSemitones, 0, 6),
-          declineSemitones: dt(qt.declineSemitones, 0, 12),
-          questionRiseSemitones: dt(qt.questionRiseSemitones, 0, 12),
-          exclaimLiftSemitones: dt(qt.exclaimLiftSemitones, 0, 12)
+          variationSemitones: lu(Uu.variationSemitones, 0, 6),
+          declineSemitones: lu(Uu.declineSemitones, 0, 12),
+          questionRiseSemitones: lu(Uu.questionRiseSemitones, 0, 12),
+          exclaimLiftSemitones: lu(Uu.exclaimLiftSemitones, 0, 12)
         },
-        syllableMs: dt(tt.syllableMs, 25, 200)
+        syllableMs: lu(uu.syllableMs, 25, 200)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

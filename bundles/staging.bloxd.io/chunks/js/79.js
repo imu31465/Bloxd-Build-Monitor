@@ -1,272 +1,272 @@
 export const id = 79;
 export const ids = [79, 95];
 export const modules = {
-    5e3: (tt, et, Vt) => {
-      Vt.d(et, {
-        e: () => yt,
-        f: () => Nt
+    4997: (uu, Eu, ju) => {
+      ju.d(Eu, {
+        b: () => hu,
+        e: () => Du
       });
-      var Ot = Vt(1140),
-        qt = Vt.n(Ot),
-        Dt = Vt(63),
-        mt = Vt(1286),
-        dt = Vt(5003),
-        jt = Vt(2001),
-        Ht = Vt(2498),
-        Xt = Vt(5010),
-        Qt = Vt(1188);
-      const lt = new WeakMap;
-      let Et = 0;
+      var su = ju(1105),
+        Uu = ju.n(su),
+        Zu = ju(58),
+        Xu = ju(1244),
+        lu = ju(4999),
+        qu = ju(1964),
+        fu = ju(2543),
+        Cu = ju(5003),
+        bu = ju(1154);
+      const cu = new WeakMap;
+      let Nu = 0;
 
-      function ft(tt) {
-        let et = lt.get(tt);
-        return void 0 === et && (et = Et++, lt.set(tt, et)), et
+      function Ou(uu) {
+        let Eu = cu.get(uu);
+        return void 0 === Eu && (Eu = Nu++, cu.set(uu, Eu)), Eu
       }
 
-      function wt(tt) {
+      function Yu(uu) {
         let {
-          piece: et
-        } = tt;
-        return "space" === et.kind ? (0, Qt.jsx)(Qt.Fragment, {
-          children: et.text
-        }) : (0, Qt.jsx)("span", {
+          piece: Eu
+        } = uu;
+        return "space" === Eu.kind ? (0, bu.jsx)(bu.Fragment, {
+          children: Eu.text
+        }) : (0, bu.jsx)("span", {
           className: "DialogueWord",
           style: {
-            "--word-delay": `${et.delayMs}ms`
+            "--word-delay": `${Eu.delayMs}ms`
           },
-          children: (0, Qt.jsx)(dt.d, {
-            text: "icon" === et.kind ? `[[${et.icon}]]` : et.text
+          children: (0, bu.jsx)(lu.e, {
+            text: "icon" === Eu.kind ? `[[${Eu.icon}]]` : Eu.text
           })
         })
       }
 
-      function yt(tt) {
+      function hu(uu) {
         let {
-          display: et
-        } = tt;
+          display: Eu
+        } = uu;
         const {
-          selectedLanguage: Vt
-        } = (0, mt.H)(), Ot = (0, Dt.useMemo)((() => (0, Xt.e)((0, Xt.f)(et).plan.pieces)), [et, Vt.code]);
-        return (0, Qt.jsxs)("div", {
-          className: qt()("Dialogue", {
-            DialogueAnimateIn: !1 !== et.animateIn
+          selectedLanguage: ju
+        } = (0, Xu.A)(), su = (0, Zu.useMemo)((() => (0, Cu.e)((0, Cu.i)(Eu).plan.pieces)), [Eu, ju.code]);
+        return (0, bu.jsxs)("div", {
+          className: Uu()("Dialogue", {
+            DialogueAnimateIn: !1 !== Eu.animateIn
           }),
-          children: [et.speakerName && (0, Qt.jsx)(jt.e, {
-            text: et.speakerName,
+          children: [Eu.speakerName && (0, bu.jsx)(qu.d, {
+            text: Eu.speakerName,
             className: "DialogueSpeaker"
-          }), (0, Qt.jsx)("p", {
+          }), (0, bu.jsx)("p", {
             className: "DialogueLine",
-            children: Ot.map(((tt, et) => 1 === tt.length && "space" === tt[0].kind ? tt[0].text : (0, Qt.jsx)("span", {
+            children: su.map(((uu, Eu) => 1 === uu.length && "space" === uu[0].kind ? uu[0].text : (0, bu.jsx)("span", {
               className: "DialogueGlue",
-              children: tt.map(((tt, et) => (0, Qt.jsx)(wt, {
-                piece: tt
-              }, et)))
-            }, et)))
+              children: uu.map(((uu, Eu) => (0, bu.jsx)(Yu, {
+                piece: uu
+              }, Eu)))
+            }, Eu)))
           })]
         })
       }
-      const Nt = (0, Dt.memo)((function() {
-        const tt = (0, Ht.i)("dialogue");
-        return (0, Qt.jsx)("div", {
+      const Du = (0, Zu.memo)((function() {
+        const uu = (0, fu.h)("dialogue");
+        return (0, bu.jsx)("div", {
           className: "DialogueAnchor",
           "data-camera-keeper": "",
           role: "status",
           "aria-live": "polite",
           "aria-atomic": "true",
-          children: tt && (0, Qt.jsx)(yt, {
-            display: tt
-          }, ft(tt))
+          children: uu && (0, bu.jsx)(hu, {
+            display: uu
+          }, Ou(uu))
         })
       }))
     },
-    4875: (tt, et, Vt) => {
-        Vt.r(et), Vt.d(et, {
-          default: () => tm
+    4895: (uu, Eu, ju) => {
+        ju.r(Eu), ju.d(Eu, {
+          default: () => EX
         });
-        var Ot = Vt(63),
-          qt = Vt(1140),
-          Dt = Vt.n(qt),
-          mt = Vt(1617),
-          dt = Vt(1623),
-          jt = Vt(26),
-          Ht = Vt(83),
-          Xt = Vt(4882),
-          Qt = Vt(4894),
-          lt = Vt(4903),
-          Et = Vt(4472),
-          ft = Vt(1188);
-        const wt = "/textures/docs/icons";
+        var su = ju(58),
+          Uu = ju(1105),
+          Zu = ju.n(Uu),
+          Xu = ju(1572),
+          lu = ju(1580),
+          qu = ju(22),
+          fu = ju(65),
+          Cu = ju(4899),
+          bu = ju(4916),
+          cu = ju(4925),
+          Nu = ju(4526),
+          Ou = ju(1154);
+        const Yu = "/textures/docs/icons";
 
-        function yt(tt) {
+        function hu(uu) {
           let {
-            name: et,
-            isTinted: Vt,
-            className: Ot,
-            style: qt
-          } = tt;
-          const mt = `${wt}/${et}.png`;
-          return Vt ? (0, ft.jsxs)("span", {
-            className: Dt()("DocsPixelIcon", "Tinted", Ot),
+            name: Eu,
+            isTinted: ju,
+            className: su,
+            style: Uu
+          } = uu;
+          const Xu = `${Yu}/${Eu}.png`;
+          return ju ? (0, Ou.jsxs)("span", {
+            className: Zu()("DocsPixelIcon", "Tinted", su),
             "aria-hidden": "true",
-            style: qt,
-            children: [(0, ft.jsx)("span", {
+            style: Uu,
+            children: [(0, Ou.jsx)("span", {
               className: "DocsPixelIconTint",
               style: {
-                maskImage: `url("${mt}")`,
-                WebkitMaskImage: `url("${mt}")`
+                maskImage: `url("${Xu}")`,
+                WebkitMaskImage: `url("${Xu}")`
               }
-            }), (0, ft.jsx)("img", {
-              src: mt,
+            }), (0, Ou.jsx)("img", {
+              src: Xu,
               alt: ""
             })]
-          }) : (0, ft.jsx)("img", {
-            className: Dt()("DocsPixelIcon", Ot),
-            src: mt,
+          }) : (0, Ou.jsx)("img", {
+            className: Zu()("DocsPixelIcon", su),
+            src: Xu,
             alt: "",
             "aria-hidden": "true",
-            style: qt
+            style: Uu
           })
         }
-        const Nt = 1500;
+        const Du = 1500;
 
-        function Mt() {
-          const [tt, et] = (0, Ot.useState)(null);
-          (0, Ot.useEffect)((() => {
-            if (null === tt) return;
-            const Vt = setTimeout((() => {
-              et(null)
-            }), Nt);
+        function gu() {
+          const [uu, Eu] = (0, su.useState)(null);
+          (0, su.useEffect)((() => {
+            if (null === uu) return;
+            const ju = setTimeout((() => {
+              Eu(null)
+            }), Du);
             return () => {
-              clearTimeout(Vt)
+              clearTimeout(ju)
             }
-          }), [tt]);
-          return [tt, tt => {
-            (0, Et.d)(tt).then((() => {
-              et({
-                text: tt,
+          }), [uu]);
+          return [uu, uu => {
+            (0, Nu.b)(uu).then((() => {
+              Eu({
+                text: uu,
                 failed: !1
               })
-            }), (Vt => {
-              console.error("Could not copy to the clipboard", Vt), et({
-                text: tt,
+            }), (ju => {
+              console.error("Could not copy to the clipboard", ju), Eu({
+                text: uu,
                 failed: !0
               })
             }))
           }]
         }
 
-        function bt(tt) {
+        function Mu(uu) {
           let {
-            text: et,
-            label: Vt,
-            className: Ot
-          } = tt;
-          const [qt, mt] = Mt(), dt = !1 === (null === qt || void 0 === qt ? void 0 : qt.failed);
-          return (0, ft.jsxs)("button", {
+            text: Eu,
+            label: ju,
+            className: su
+          } = uu;
+          const [Uu, Xu] = gu(), lu = !1 === (null === Uu || void 0 === Uu ? void 0 : Uu.failed);
+          return (0, Ou.jsxs)("button", {
             type: "button",
-            className: Dt()("DocsCopyButton", Ot, {
-              Copied: dt
+            className: Zu()("DocsCopyButton", su, {
+              Copied: lu
             }),
-            title: `Copy ${et.length>40?"to clipboard":et}`,
-            "aria-label": Vt ? void 0 : `Copy ${et}`,
-            onClick: tt => {
-              tt.stopPropagation(), mt(et)
+            title: `Copy ${Eu.length>40?"to clipboard":Eu}`,
+            "aria-label": ju ? void 0 : `Copy ${Eu}`,
+            onClick: uu => {
+              uu.stopPropagation(), Xu(Eu)
             },
-            children: [(0, ft.jsx)(yt, {
-              name: dt ? "check" : "copy"
-            }), Vt && (0, ft.jsx)("span", {
-              children: dt ? "Copied" : null !== qt && void 0 !== qt && qt.failed ? "Copy failed" : Vt
+            children: [(0, Ou.jsx)(hu, {
+              name: lu ? "check" : "copy"
+            }), ju && (0, Ou.jsx)("span", {
+              children: lu ? "Copied" : null !== Uu && void 0 !== Uu && Uu.failed ? "Copy failed" : ju
             })]
           })
         }
-        Xt.c.registerLanguage("javascript", Qt.e), Xt.c.registerLanguage("typescript", lt.b);
-        const Jt = {
+        Cu.b.registerLanguage("javascript", bu.d), Cu.b.registerLanguage("typescript", cu.c);
+        const eu = {
             js: "javascript",
             ts: "typescript",
             javascript: "javascript",
             typescript: "typescript"
           },
-          Ct = {
+          Gu = {
             javascript: "JavaScript",
             typescript: "TypeScript"
           },
-          ut = 24;
+          pu = 24;
 
-        function Kt(tt) {
+        function wu(uu) {
           let {
-            code: et,
-            lang: Vt,
-            compact: qt = !1
-          } = tt;
-          const mt = (0, Ot.useMemo)((() => function(tt, et) {
-              const Vt = Jt[et];
-              return Vt ? Xt.c.highlight(tt, {
-                language: Vt
-              }).value : tt.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-            }(et, Vt)), [et, Vt]),
-            dt = et.split("\n").length,
-            jt = !qt && dt > ut + 6,
-            [Ht, Qt] = (0, Ot.useState)(!1),
-            lt = Jt[Vt];
-          return (0, ft.jsxs)("div", {
-            className: Dt()("DocsCodeBlock", {
-              Compact: qt,
-              Collapsed: jt && !Ht
+            code: Eu,
+            lang: ju,
+            compact: Uu = !1
+          } = uu;
+          const Xu = (0, su.useMemo)((() => function(uu, Eu) {
+              const ju = eu[Eu];
+              return ju ? Cu.b.highlight(uu, {
+                language: ju
+              }).value : uu.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+            }(Eu, ju)), [Eu, ju]),
+            lu = Eu.split("\n").length,
+            qu = !Uu && lu > pu + 6,
+            [fu, bu] = (0, su.useState)(!1),
+            cu = eu[ju];
+          return (0, Ou.jsxs)("div", {
+            className: Zu()("DocsCodeBlock", {
+              Compact: Uu,
+              Collapsed: qu && !fu
             }),
-            children: [!qt && (0, ft.jsxs)("div", {
+            children: [!Uu && (0, Ou.jsxs)("div", {
               className: "DocsCodeBlockHeader",
-              children: [(0, ft.jsx)("span", {
+              children: [(0, Ou.jsx)("span", {
                 className: "DocsCodeBlockLanguage",
-                children: lt ? Ct[lt] : "Text"
-              }), (0, ft.jsx)(bt, {
-                text: et,
+                children: cu ? Gu[cu] : "Text"
+              }), (0, Ou.jsx)(Mu, {
+                text: Eu,
                 label: "Copy"
               })]
-            }), (0, ft.jsx)("pre", {
-              children: (0, ft.jsx)("code", {
+            }), (0, Ou.jsx)("pre", {
+              children: (0, Ou.jsx)("code", {
                 className: "hljs",
                 dangerouslySetInnerHTML: {
-                  __html: mt
+                  __html: Xu
                 }
               })
-            }), jt && (0, ft.jsxs)("button", {
+            }), qu && (0, Ou.jsxs)("button", {
               type: "button",
               className: "DocsCodeBlockExpand",
-              "aria-expanded": Ht,
+              "aria-expanded": fu,
               onClick: () => {
-                Qt(!Ht)
+                bu(!fu)
               },
-              children: [(0, ft.jsx)(yt, {
-                name: Ht ? "chevron-up" : "chevron-down"
-              }), Ht ? "Show less" : `Show all ${dt} lines`]
+              children: [(0, Ou.jsx)(hu, {
+                name: fu ? "chevron-up" : "chevron-down"
+              }), fu ? "Show less" : `Show all ${lu} lines`]
             })]
           })
         }
-        var ht = Vt(4909);
-        var vt = Vt(4914);
-        const Wt = /^(?:export\s+)?(?:declare\s+)?(?:type|interface|enum|const enum)\s+([A-Za-z_$][\w$]*)/;
+        var Ju = ju(4928);
+        var du = ju(4931);
+        const au = /^(?:export\s+)?(?:declare\s+)?(?:type|interface|enum|const enum)\s+([A-Za-z_$][\w$]*)/;
 
-        function St(tt) {
-          const et = new Map;
-          let Vt, Ot = [],
-            qt = !1;
-          const Dt = () => {
-            Vt && et.set(Vt.name, Vt.lines.join("\n").trimEnd())
+        function Pu(uu) {
+          const Eu = new Map;
+          let ju, su = [],
+            Uu = !1;
+          const Zu = () => {
+            ju && Eu.set(ju.name, ju.lines.join("\n").trimEnd())
           };
-          for (const mt of tt.split("\n")) {
-            const tt = mt.match(Wt);
-            qt || mt.startsWith("/*") ? (qt || (Dt(), Vt = void 0), Ot.push(mt), qt = !mt.includes("*/")) : tt ? (Dt(), Vt = {
-              name: tt[1],
-              lines: [...Ot, mt]
-            }, Ot = []) : Vt && (mt.startsWith(" ") || mt.startsWith("\t") || /^[}\])|]/.test(mt)) ? Vt.lines.push(mt) : Vt && "" !== mt.trim() && (Dt(), Vt = void 0)
+          for (const Xu of uu.split("\n")) {
+            const uu = Xu.match(au);
+            Uu || Xu.startsWith("/*") ? (Uu || (Zu(), ju = void 0), su.push(Xu), Uu = !Xu.includes("*/")) : uu ? (Zu(), ju = {
+              name: uu[1],
+              lines: [...su, Xu]
+            }, su = []) : ju && (Xu.startsWith(" ") || Xu.startsWith("\t") || /^[}\])|]/.test(Xu)) ? ju.lines.push(Xu) : ju && "" !== Xu.trim() && (Zu(), ju = void 0)
           }
-          return Dt(), et
+          return Zu(), Eu
         }
 
-        function ct(tt) {
-          return "methods" === tt || "callbacks" === tt || "settings" === tt
+        function ou(uu) {
+          return "methods" === uu || "callbacks" === uu || "settings" === uu
         }
-        const Rt = {
+        const ku = {
             readme: {
               icon: "code-block",
               summary: "Code blocks, boards and World Code, and the globals your code can use.",
@@ -302,25 +302,25 @@ export const modules = {
               icon: "player",
               summary: "Per-player options such as speed, health and camera.",
               layout: "settings",
-              setterSnippet: (tt, et) => `api.setClientOption(playerId, "${tt}", ${et})`
+              setterSnippet: (uu, Eu) => `api.setClientOption(playerId, "${uu}", ${Eu})`
             },
             entitySettings: {
               icon: "eye",
               summary: "How one player sees and interacts with another entity.",
               layout: "settings",
-              setterSnippet: (tt, et) => `api.setOtherEntitySetting(playerId, targetedEntityId, "${tt}", ${et})`
+              setterSnippet: (uu, Eu) => `api.setOtherEntitySetting(playerId, targetedEntityId, "${uu}", ${Eu})`
             },
             mobSettings: {
               icon: "mob",
               summary: "Health, movement, combat and AI settings for mobs.",
               layout: "settings",
-              setterSnippet: (tt, et) => `api.setMobSetting(mobId, "${tt}", ${et})`
+              setterSnippet: (uu, Eu) => `api.setMobSetting(mobId, "${uu}", ${Eu})`
             },
             vehicleSettings: {
               icon: "car",
               summary: "Movement, physics and camera settings for vehicles.",
               layout: "settings",
-              setterSnippet: (tt, et) => `api.setVehicleSetting(vehicleId, "${tt}", ${et})`
+              setterSnippet: (uu, Eu) => `api.setVehicleSetting(vehicleId, "${uu}", ${Eu})`
             },
             meshEntities: {
               icon: "mesh",
@@ -377,7 +377,7 @@ export const modules = {
               gallery: "items"
             }
           },
-          It = {
+          mu = {
             Variations: {
               icon: "layers",
               summary: "Alternate versions of a custom game, and matchmaking players between them."
@@ -404,20 +404,20 @@ export const modules = {
             }
           };
 
-        function Pt(tt) {
-          return tt.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
+        function vu(uu) {
+          return uu.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
         }
 
-        function Zt(tt) {
-          let et = !1;
-          return tt.split("\n").map((tt => (tt.startsWith("```") && (et = !et), !et && /^#{3,} /.test(tt) ? tt.slice(1) : tt))).join("\n")
+        function Ku(uu) {
+          let Eu = !1;
+          return uu.split("\n").map((uu => (uu.startsWith("```") && (Eu = !Eu), !Eu && /^#{3,} /.test(uu) ? uu.slice(1) : uu))).join("\n")
         }
 
-        function Lt(tt) {
-          return "readme" === tt ? "getting-started" : Pt(tt)
+        function Vu(uu) {
+          return "readme" === uu ? "getting-started" : vu(uu)
         }
-        const Ft = "## Glossary of Referenced Types";
-        const kt = [{
+        const ru = "## Glossary of Referenced Types";
+        const Qu = [{
             id: "welcome",
             slug: "",
             title: "Welcome",
@@ -425,28 +425,28 @@ export const modules = {
             summary: "Run JavaScript in Bloxd, from a single block to a whole custom game.",
             layout: "article",
             markdown: "# Welcome to the Bloxd Code API\n\nWrite JavaScript that runs inside Bloxd: make a block launch players into the sky, give your world its own shop, or build a whole custom game with rounds, teams and a winner.\n\n## New to coding in Bloxd?\n\nStart with [Getting started](#readme), which explains code blocks, boards and World Code, and where each one runs. Then copy something from [Snippets](#snippets) into a code block and change it to see what happens.\n\n## Building a game\n\n[Callbacks](#callbacks) let your World Code react to players joining, chatting, breaking blocks and more. The [How-Tos](#howTo) walk through bigger features step by step, from plugins to a complete team game.\n\n## Looking something up\n\nThe [API Reference](#apiReference) lists every method on `api`. Settings for players, entities, mobs and vehicles each have their own page, and the Assets pages list every block, item, sound, particle, icon and skin name you can use. Press Ctrl K, or \u2318 K on a Mac, to search all of it.\n\n## What's new\n\nThe [Changelog](#changelog) lists what has changed in the Code API, newest first.\n\n## Get help\n\nAsk questions, report problems and suggest features on [our Discord](https://discord.gg/playbloxd)."
-          }, ...vt.d.flatMap((tt => {
-            const et = {
-              id: tt.id,
-              slug: Lt(tt.id),
-              title: tt.title,
-              markdown: tt.content,
-              ...Rt[tt.id]
+          }, ...du.d.flatMap((uu => {
+            const Eu = {
+              id: uu.id,
+              slug: Vu(uu.id),
+              title: uu.title,
+              markdown: uu.content,
+              ...ku[uu.id]
             };
-            if ("readme" === tt.id) return function(tt) {
-              const et = tt.markdown.indexOf(Ft),
-                Vt = tt.markdown.indexOf("\n```", et),
-                Ot = tt.markdown.indexOf("\n```", Vt + 1);
-              if (-1 === et || -1 === Vt || -1 === Ot) throw new Error(`Getting started has no "${Ft}" section with a code block`);
-              const qt = tt.markdown.slice(et + 31, Vt).trim(),
-                Dt = [...St(tt.markdown.slice(tt.markdown.indexOf("\n", Vt + 1) + 1, Ot))].map((tt => {
-                  let [et, Vt] = tt;
-                  return `## ${et}\n\n\`\`\`ts\n${Vt}\n\`\`\`\n`
+            if ("readme" === uu.id) return function(uu) {
+              const Eu = uu.markdown.indexOf(ru),
+                ju = uu.markdown.indexOf("\n```", Eu),
+                su = uu.markdown.indexOf("\n```", ju + 1);
+              if (-1 === Eu || -1 === ju || -1 === su) throw new Error(`Getting started has no "${ru}" section with a code block`);
+              const Uu = uu.markdown.slice(Eu + 31, ju).trim(),
+                Zu = [...Pu(uu.markdown.slice(uu.markdown.indexOf("\n", ju + 1) + 1, su))].map((uu => {
+                  let [Eu, ju] = uu;
+                  return `## ${Eu}\n\n\`\`\`ts\n${ju}\n\`\`\`\n`
                 })),
-                mt = tt.markdown.slice(tt.markdown.indexOf("\n", Ot + 1) + 1);
+                Xu = uu.markdown.slice(uu.markdown.indexOf("\n", su + 1) + 1);
               return [{
-                ...tt,
-                markdown: `${tt.markdown.slice(0,et)}${mt}`
+                ...uu,
+                markdown: `${uu.markdown.slice(0,Eu)}${Xu}`
               }, {
                 id: "types",
                 slug: "types",
@@ -454,57 +454,57 @@ export const modules = {
                 icon: "tag",
                 summary: "The types the API Reference's parameters and return values refer to.",
                 layout: "article",
-                markdown: `# Types\n\n${qt}\n\n${Dt.join("\n")}`
+                markdown: `# Types\n\n${Uu}\n\n${Zu.join("\n")}`
               }]
-            }(et);
-            if ("howTo" === tt.id) {
+            }(Eu);
+            if ("howTo" === uu.id) {
               const {
-                parent: tt,
-                guides: Vt
-              } = function(tt) {
-                const [et, ...Vt] = tt.markdown.split(/^(?=## )/m), Ot = [et], qt = [];
-                for (const mt of Vt) {
-                  var Dt;
-                  const et = mt.indexOf("\n"),
-                    Vt = mt.slice(3, et).trim(),
-                    dt = mt.slice(et + 1);
-                  if (!dt.includes("```")) {
-                    Ot.push(mt);
+                parent: uu,
+                guides: ju
+              } = function(uu) {
+                const [Eu, ...ju] = uu.markdown.split(/^(?=## )/m), su = [Eu], Uu = [];
+                for (const Xu of ju) {
+                  var Zu;
+                  const Eu = Xu.indexOf("\n"),
+                    ju = Xu.slice(3, Eu).trim(),
+                    lu = Xu.slice(Eu + 1);
+                  if (!lu.includes("```")) {
+                    su.push(Xu);
                     continue
                   }
-                  const jt = null !== (Dt = It[Vt]) && void 0 !== Dt ? Dt : {
+                  const qu = null !== (Zu = mu[ju]) && void 0 !== Zu ? Zu : {
                     icon: "lightbulb",
-                    summary: `How to use ${Vt.toLowerCase()} in World Code.`
+                    summary: `How to use ${ju.toLowerCase()} in World Code.`
                   };
-                  qt.push({
-                    id: `${tt.id}${Vt.split(/[^A-Za-z0-9]+/).map((tt=>tt.charAt(0).toUpperCase()+tt.slice(1))).join("")}`,
-                    slug: `${tt.slug}-${Pt(Vt)}`,
-                    title: Vt,
+                  Uu.push({
+                    id: `${uu.id}${ju.split(/[^A-Za-z0-9]+/).map((uu=>uu.charAt(0).toUpperCase()+uu.slice(1))).join("")}`,
+                    slug: `${uu.slug}-${vu(ju)}`,
+                    title: ju,
                     layout: "article",
-                    sourceAnchor: (0, ht.v)(Vt),
-                    markdown: `# ${Vt}\n\n${Zt(dt)}`,
-                    ...jt
+                    sourceAnchor: (0, Ju.u)(ju),
+                    markdown: `# ${ju}\n\n${Ku(lu)}`,
+                    ...qu
                   })
                 }
                 return {
                   parent: {
-                    ...tt,
-                    markdown: Ot.join(""),
-                    childPageIds: qt.map((tt => tt.id))
+                    ...uu,
+                    markdown: su.join(""),
+                    childPageIds: Uu.map((uu => uu.id))
                   },
-                  guides: qt
+                  guides: Uu
                 }
-              }(et);
-              return [tt, ...Vt]
+              }(Eu);
+              return [uu, ...ju]
             }
-            return [et]
+            return [Eu]
           }))],
-          Gt = [{
+          iu = [{
             title: "Get started",
             pageIds: ["welcome", "readme", "snippets", "changelog"]
           }, {
             title: "How-Tos",
-            pageIds: ["howTo", ...kt.filter((tt => void 0 !== tt.sourceAnchor)).map((tt => tt.id))]
+            pageIds: ["howTo", ...Qu.filter((uu => void 0 !== uu.sourceAnchor)).map((uu => uu.id))]
           }, {
             title: "Reference",
             pageIds: ["apiReference", "callbacks", "clientOptions", "types"]
@@ -519,42 +519,42 @@ export const modules = {
             pageIds: ["particles", "sounds", "icons", "skins", "blockNames", "itemNames"]
           }];
 
-        function zt(tt) {
-          return kt.find((et => et.id === tt))
+        function Wu(uu) {
+          return Qu.find((Eu => Eu.id === uu))
         }
-        const ot = new Map;
+        const Su = new Map;
 
-        function rt(tt) {
-          let et = ot.get(tt.id);
-          return et || (et = (0, ht.C)(tt.markdown, "changelog" === tt.layout ? 3 : 2), ot.set(tt.id, et)), et
-        }
-
-        function Ut(tt, et) {
-          return rt(tt).sections.some((tt => tt.heading.anchor === et || tt.blocks.some((tt => "heading" === tt.kind && tt.anchor === et))))
+        function Iu(uu) {
+          let Eu = Su.get(uu.id);
+          return Eu || (Eu = (0, Ju.z)(uu.markdown, "changelog" === uu.layout ? 3 : 2), Su.set(uu.id, Eu)), Eu
         }
 
-        function At(tt) {
-          const [et, ...Vt] = tt.replace(/^#/, "").split("-"), Ot = kt.find((tt => tt.id === et));
-          if (!Ot) return null;
-          const qt = Vt.length > 0 ? (0, ht.v)(Vt.join("-")) : "";
-          for (const mt of null !== (Dt = Ot.childPageIds) && void 0 !== Dt ? Dt : []) {
-            var Dt;
-            const tt = zt(mt);
-            if (tt.sourceAnchor === qt) return {
-              page: tt,
+        function Fu(uu, Eu) {
+          return Iu(uu).sections.some((uu => uu.heading.anchor === Eu || uu.blocks.some((uu => "heading" === uu.kind && uu.anchor === Eu))))
+        }
+
+        function Bu(uu) {
+          const [Eu, ...ju] = uu.replace(/^#/, "").split("-"), su = Qu.find((uu => uu.id === Eu));
+          if (!su) return null;
+          const Uu = ju.length > 0 ? (0, Ju.u)(ju.join("-")) : "";
+          for (const Xu of null !== (Zu = su.childPageIds) && void 0 !== Zu ? Zu : []) {
+            var Zu;
+            const uu = Wu(Xu);
+            if (uu.sourceAnchor === Uu) return {
+              page: uu,
               anchor: ""
             };
-            if (Ut(tt, qt)) return {
-              page: tt,
-              anchor: qt
+            if (Fu(uu, Uu)) return {
+              page: uu,
+              anchor: Uu
             }
           }
           return {
-            page: Ot,
-            anchor: qt
+            page: su,
+            anchor: Uu
           }
         }
-        const it = {
+        const Lu = {
           Examples: {
             pageId: "snippets",
             anchor: ""
@@ -569,182 +569,182 @@ export const modules = {
           }
         };
 
-        function Yt(tt, et) {
-          let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-          const Ot = et.slug ? `${tt}/${et.slug}` : tt;
-          return Vt ? `${Ot}#${Vt}` : Ot
+        function tu(uu, Eu) {
+          let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+          const su = Eu.slug ? `${uu}/${Eu.slug}` : uu;
+          return ju ? `${su}#${ju}` : su
         }
-        var Bt = Vt(4935);
-        const pt = /^export\s+(?:declare\s+)?(?:type|interface|enum|const enum|class)\s+([A-Za-z_$][\w$]*)/,
-          xt = new Set(["GameApi", "Console", "_TypeOf"]),
-          Tt = 4;
+        var xu = ju(4942);
+        const Tu = /^export\s+(?:declare\s+)?(?:type|interface|enum|const enum|class)\s+([A-Za-z_$][\w$]*)/,
+          Hu = new Set(["GameApi", "Console", "_TypeOf"]),
+          Au = 4;
 
-        function gt(tt) {
-          let et = tt.length;
-          for (; et > 0 && "" === tt[et - 1].trim();) et--;
-          return tt.slice(0, et)
+        function nu(uu) {
+          let Eu = uu.length;
+          for (; Eu > 0 && "" === uu[Eu - 1].trim();) Eu--;
+          return uu.slice(0, Eu)
         }
 
-        function st(tt) {
-          var et;
-          const Vt = gt(tt);
-          if (null === (et = Vt.at(-1)) || void 0 === et || !et.trimEnd().endsWith("*/")) return {
-            lines: Vt,
+        function yu(uu) {
+          var Eu;
+          const ju = nu(uu);
+          if (null === (Eu = ju.at(-1)) || void 0 === Eu || !Eu.trimEnd().endsWith("*/")) return {
+            lines: ju,
             doc: ""
           };
-          const Ot = Vt.findLastIndex((tt => tt.startsWith("/**")));
-          return -1 === Ot ? {
-            lines: Vt,
+          const su = ju.findLastIndex((uu => uu.startsWith("/**")));
+          return -1 === su ? {
+            lines: ju,
             doc: ""
           } : {
-            lines: gt(Vt.slice(0, Ot)),
-            doc: Vt.slice(Ot).join("\n")
+            lines: nu(ju.slice(0, su)),
+            doc: ju.slice(su).join("\n")
           }
         }
 
-        function nt(tt) {
-          var et;
-          const Vt = tt.split("\n"),
-            Ot = Vt.flatMap(((tt, et) => pt.test(tt) ? [et] : []));
-          let qt = st(Vt.slice(0, null !== (et = Ot[0]) && void 0 !== et ? et : Vt.length)).doc;
-          return Ot.map(((tt, et) => {
-            var Dt;
-            const mt = st(Vt.slice(tt, null !== (Dt = Ot[et + 1]) && void 0 !== Dt ? Dt : Vt.length)),
-              dt = {
-                name: Vt[tt].match(pt)[1],
-                doc: qt,
-                lines: mt.lines
+        function zu(uu) {
+          var Eu;
+          const ju = uu.split("\n"),
+            su = ju.flatMap(((uu, Eu) => Tu.test(uu) ? [Eu] : []));
+          let Uu = yu(ju.slice(0, null !== (Eu = su[0]) && void 0 !== Eu ? Eu : ju.length)).doc;
+          return su.map(((uu, Eu) => {
+            var Zu;
+            const Xu = yu(ju.slice(uu, null !== (Zu = su[Eu + 1]) && void 0 !== Zu ? Zu : ju.length)),
+              lu = {
+                name: ju[uu].match(Tu)[1],
+                doc: Uu,
+                lines: Xu.lines
               };
-            return qt = mt.doc, dt
+            return Uu = Xu.doc, lu
           }))
         }
 
-        function te(tt) {
-          var et;
-          const Vt = tt.match(/^readonly \[([\s\S]*)\]$/);
-          return Vt ? null !== (et = Vt[1].match(/"(?:[^"\\]|\\.)*"/g)) && void 0 !== et ? et : [] : null
+        function Ru(uu) {
+          var Eu;
+          const ju = uu.match(/^readonly \[([\s\S]*)\]$/);
+          return ju ? null !== (Eu = ju[1].match(/"(?:[^"\\]|\\.)*"/g)) && void 0 !== Eu ? Eu : [] : null
         }
 
-        function ee(tt) {
-          if (!tt.startsWith("{") || !tt.endsWith("}")) return null;
-          const et = {
+        function uE(uu) {
+          if (!uu.startsWith("{") || !uu.endsWith("}")) return null;
+          const Eu = {
               keys: [],
               values: []
             },
-            Vt = tt => {
-              const Vt = tt.trim().match(/^(?:readonly\s+)?("[^"]*"|[\w$]+)\??:\s*([\s\S]*)$/);
-              Vt && (et.keys.push(Vt[1].startsWith('"') ? Vt[1] : `"${Vt[1]}"`), et.values.push(Vt[2].trim()))
+            ju = uu => {
+              const ju = uu.trim().match(/^(?:readonly\s+)?("[^"]*"|[\w$]+)\??:\s*([\s\S]*)$/);
+              ju && (Eu.keys.push(ju[1].startsWith('"') ? ju[1] : `"${ju[1]}"`), Eu.values.push(ju[2].trim()))
             };
-          let Ot = 0,
-            qt = "";
-          for (const Dt of tt.slice(1, -1)) "{[(".includes(Dt) ? Ot++ : "}])".includes(Dt) && Ot--, ";" === Dt && 0 === Ot ? (Vt(qt), qt = "") : qt += Dt;
-          return Vt(qt), et
+          let su = 0,
+            Uu = "";
+          for (const Zu of uu.slice(1, -1)) "{[(".includes(Zu) ? su++ : "}])".includes(Zu) && su--, ";" === Zu && 0 === su ? (ju(Uu), Uu = "") : Uu += Zu;
+          return ju(Uu), Eu
         }
 
-        function Ve(tt) {
-          return tt.length > Tt ? `\n\t| ${tt.join("\n\t| ")}` : tt.join(" | ")
+        function EE(uu) {
+          return uu.length > Au ? `\n\t| ${uu.join("\n\t| ")}` : uu.join(" | ")
         }
 
-        function Oe(tt, et) {
-          const Vt = function(tt, et) {
-            return tt.replace(/\(_TypeOf\["([\w$]+)"\]\)\[keyof _TypeOf\["\1"\]\]/g, ((tt, Vt) => {
-              var Ot;
-              const qt = null === (Ot = et.get(Vt)) || void 0 === Ot ? void 0 : Ot.object;
-              return qt ? Ve(qt.values) : tt
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[[A-Za-z_$][\w$]*\]\[number\]/g, ((tt, Vt) => {
-              var Ot, qt;
-              const Dt = null === (Ot = et.get(Vt)) || void 0 === Ot || null === (qt = Ot.object) || void 0 === qt ? void 0 : qt.values.map(te);
-              return null !== Dt && void 0 !== Dt && Dt.every((tt => null !== tt)) ? Ve([...new Set(Dt.flat())]) : tt
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[number\]/g, ((tt, Vt) => {
-              var Ot;
-              const qt = null === (Ot = et.get(Vt)) || void 0 === Ot ? void 0 : Ot.members;
-              return qt ? Ve(qt) : tt
-            })).replace(/keyof _TypeOf\["([\w$]+)"\]/g, ((tt, Vt) => {
-              var Ot;
-              const qt = null === (Ot = et.get(Vt)) || void 0 === Ot ? void 0 : Ot.object;
-              return qt ? Ve(qt.keys) : tt
-            })).replace(/_TypeOf\["([\w$]+)"\]/g, ((tt, Vt) => {
-              var Ot, qt;
-              return null !== (Ot = null === (qt = et.get(Vt)) || void 0 === qt ? void 0 : qt.text) && void 0 !== Ot ? Ot : tt
+        function jE(uu, Eu) {
+          const ju = function(uu, Eu) {
+            return uu.replace(/\(_TypeOf\["([\w$]+)"\]\)\[keyof _TypeOf\["\1"\]\]/g, ((uu, ju) => {
+              var su;
+              const Uu = null === (su = Eu.get(ju)) || void 0 === su ? void 0 : su.object;
+              return Uu ? EE(Uu.values) : uu
+            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[[A-Za-z_$][\w$]*\]\[number\]/g, ((uu, ju) => {
+              var su, Uu;
+              const Zu = null === (su = Eu.get(ju)) || void 0 === su || null === (Uu = su.object) || void 0 === Uu ? void 0 : Uu.values.map(Ru);
+              return null !== Zu && void 0 !== Zu && Zu.every((uu => null !== uu)) ? EE([...new Set(Zu.flat())]) : uu
+            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[number\]/g, ((uu, ju) => {
+              var su;
+              const Uu = null === (su = Eu.get(ju)) || void 0 === su ? void 0 : su.members;
+              return Uu ? EE(Uu) : uu
+            })).replace(/keyof _TypeOf\["([\w$]+)"\]/g, ((uu, ju) => {
+              var su;
+              const Uu = null === (su = Eu.get(ju)) || void 0 === su ? void 0 : su.object;
+              return Uu ? EE(Uu.keys) : uu
+            })).replace(/_TypeOf\["([\w$]+)"\]/g, ((uu, ju) => {
+              var su, Uu;
+              return null !== (su = null === (Uu = Eu.get(ju)) || void 0 === Uu ? void 0 : Uu.text) && void 0 !== su ? su : uu
             }))
-          }(tt.lines.join("\n").replace(/^export\s+(?:declare\s+)?/, ""), et);
-          return [tt.doc, Vt].filter(Boolean).join("\n").replace(/\\(`|\$\{)/g, "$1").replace(/ +\n/g, "\n")
+          }(uu.lines.join("\n").replace(/^export\s+(?:declare\s+)?/, ""), Eu);
+          return [uu.doc, ju].filter(Boolean).join("\n").replace(/\\(`|\$\{)/g, "$1").replace(/ +\n/g, "\n")
         }
 
-        function qe(tt) {
-          const et = nt(tt),
-            Vt = function(tt) {
-              const et = new Map,
-                Vt = tt.find((tt => "_TypeOf" === tt.name));
-              let Ot = null;
-              const qt = () => {
-                if (Ot) {
-                  const tt = Ot.lines.join("\n");
-                  et.set(Ot.name, {
-                    text: tt,
-                    members: te(tt),
-                    object: ee(tt)
+        function sE(uu) {
+          const Eu = zu(uu),
+            ju = function(uu) {
+              const Eu = new Map,
+                ju = uu.find((uu => "_TypeOf" === uu.name));
+              let su = null;
+              const Uu = () => {
+                if (su) {
+                  const uu = su.lines.join("\n");
+                  Eu.set(su.name, {
+                    text: uu,
+                    members: Ru(uu),
+                    object: uE(uu)
                   })
                 }
               };
-              for (const Dt of Vt.lines.slice(1, -1)) {
-                const tt = Dt.match(/^\t([\w$]+): (.+)$/);
-                tt ? (qt(), Ot = {
-                  name: tt[1],
-                  lines: [tt[2]]
-                }) : Ot && Ot.lines.push(Dt.replace(/^\t/, ""))
+              for (const Zu of ju.lines.slice(1, -1)) {
+                const uu = Zu.match(/^\t([\w$]+): (.+)$/);
+                uu ? (Uu(), su = {
+                  name: uu[1],
+                  lines: [uu[2]]
+                }) : su && su.lines.push(Zu.replace(/^\t/, ""))
               }
-              return qt(), et
-            }(et),
-            Ot = new Map;
-          for (const qt of et) xt.has(qt.name) || Ot.has(qt.name) || Ot.set(qt.name, Oe(qt, Vt));
-          return Ot
+              return Uu(), Eu
+            }(Eu),
+            su = new Map;
+          for (const Uu of Eu) Hu.has(Uu.name) || su.has(Uu.name) || su.set(Uu.name, jE(Uu, ju));
+          return su
         }
-        let De, me, de;
+        let UE, ZE, XE;
 
-        function je() {
-          return me ??= function(tt) {
-            const et = nt(tt).find((tt => "GameApi" === tt.name)),
-              Vt = new Map,
-              Ot = et.lines;
-            for (let Dt = 0; Dt < Ot.length; Dt++) {
-              var qt;
-              if (!Ot[Dt].trimStart().startsWith("/**")) continue;
-              const tt = Dt;
-              for (; Dt < Ot.length && !Ot[Dt].includes("*/");) Dt++;
-              const et = null === (qt = Ot[Dt + 1]) || void 0 === qt ? void 0 : qt.match(/^\s*([A-Za-z_$][\w$]*)\s*[<(]/);
-              if (!et) continue;
-              let mt = null;
-              const dt = [];
-              let jt = "description",
-                Ht = !1;
-              for (const Vt of Ot.slice(tt, Dt + 1).join("\n").split("\n").map((tt => tt.replace(/^\s*\/\*\*\s?/, "").replace(/\s*\*\/\s*$/, "").replace(/^\s*\*\s?/, "").replace(/\\(`|\$\{)/g, "$1")))) {
-                const tt = Vt.match(/^@deprecated\s*(?:-\s*)?(.*)$/);
-                tt ? (mt = tt[1].trim(), jt = "deprecation") : Vt.startsWith("@") ? (jt = "otherTag", Ht = !0) : "" === Vt.trim() ? Ht || (jt = "description", dt.push(Vt)) : "deprecation" !== jt || /^[A-Z]/.test(Vt.trim()) ? "otherTag" !== jt && (jt = "description", dt.push(Vt)) : mt = `${mt} ${Vt.trim()}`.trim()
+        function lE() {
+          return ZE ??= function(uu) {
+            const Eu = zu(uu).find((uu => "GameApi" === uu.name)),
+              ju = new Map,
+              su = Eu.lines;
+            for (let Zu = 0; Zu < su.length; Zu++) {
+              var Uu;
+              if (!su[Zu].trimStart().startsWith("/**")) continue;
+              const uu = Zu;
+              for (; Zu < su.length && !su[Zu].includes("*/");) Zu++;
+              const Eu = null === (Uu = su[Zu + 1]) || void 0 === Uu ? void 0 : Uu.match(/^\s*([A-Za-z_$][\w$]*)\s*[<(]/);
+              if (!Eu) continue;
+              let Xu = null;
+              const lu = [];
+              let qu = "description",
+                fu = !1;
+              for (const ju of su.slice(uu, Zu + 1).join("\n").split("\n").map((uu => uu.replace(/^\s*\/\*\*\s?/, "").replace(/\s*\*\/\s*$/, "").replace(/^\s*\*\s?/, "").replace(/\\(`|\$\{)/g, "$1")))) {
+                const uu = ju.match(/^@deprecated\s*(?:-\s*)?(.*)$/);
+                uu ? (Xu = uu[1].trim(), qu = "deprecation") : ju.startsWith("@") ? (qu = "otherTag", fu = !0) : "" === ju.trim() ? fu || (qu = "description", lu.push(ju)) : "deprecation" !== qu || /^[A-Z]/.test(ju.trim()) ? "otherTag" !== qu && (qu = "description", lu.push(ju)) : Xu = `${Xu} ${ju.trim()}`.trim()
               }
-              Vt.set(et[1], {
-                deprecation: mt,
-                description: dt.join("\n").trim()
+              ju.set(Eu[1], {
+                deprecation: Xu,
+                description: lu.join("\n").trim()
               })
             }
-            return Vt
-          }(Bt.default), me
+            return ju
+          }(xu.default), ZE
         }
 
-        function He() {
-          if (!de) {
-            de = new Map;
-            for (const tt of kt) {
-              const et = (0, ht.z)(rt(tt)).flatMap((tt => tt.blocks));
-              for (const tt of (0, ht.l)(et))
-                if ("ts" === tt.lang || "typescript" === tt.lang)
-                  for (const [et, Vt] of St(tt.code)) de.set(et, Vt)
+        function qE() {
+          if (!XE) {
+            XE = new Map;
+            for (const uu of Qu) {
+              const Eu = (0, Ju.y)(Iu(uu)).flatMap((uu => uu.blocks));
+              for (const uu of (0, Ju.l)(Eu))
+                if ("ts" === uu.lang || "typescript" === uu.lang)
+                  for (const [Eu, ju] of Pu(uu.code)) XE.set(Eu, ju)
             }
-            for (const [tt, et] of(De ??= qe(Bt.default), De)) de.has(tt) || de.set(tt, et)
+            for (const [uu, Eu] of(UE ??= sE(xu.default), UE)) XE.has(uu) || XE.set(uu, Eu)
           }
-          return de
+          return XE
         }
-        const Xe = {
+        const fE = {
           BlockName: "blockNames",
           BlockNameOrId: "blockNames",
           ItemName: "itemNames",
@@ -761,332 +761,332 @@ export const modules = {
           VehicleSetting: "vehicleSettings",
           SettableVehicleSetting: "vehicleSettings"
         };
-        let Qe;
+        let CE;
 
-        function le() {
-          if (!Qe) {
-            Qe = new Map;
-            for (const tt of kt)
-              if (ct(tt.layout))
-                for (const et of rt(tt).sections) Qe.has(et.heading.text) || Qe.set(et.heading.text, {
-                  pageId: tt.id,
-                  anchor: et.heading.anchor
+        function bE() {
+          if (!CE) {
+            CE = new Map;
+            for (const uu of Qu)
+              if (ou(uu.layout))
+                for (const Eu of Iu(uu).sections) CE.has(Eu.heading.text) || CE.set(Eu.heading.text, {
+                  pageId: uu.id,
+                  anchor: Eu.heading.anchor
                 })
           }
-          return Qe
+          return CE
         }
 
-        function Ee(tt) {
-          const et = tt.trim().match(/^(?:api\.)?([A-Za-z_$][\w$]*)(?:\(.*\))?$/);
-          return et ? le().get(et[1]) : void 0
+        function cE(uu) {
+          const Eu = uu.trim().match(/^(?:api\.)?([A-Za-z_$][\w$]*)(?:\(.*\))?$/);
+          return Eu ? bE().get(Eu[1]) : void 0
         }
-        const fe = (0, Ot.createContext)("/docs"),
-          we = (0, Ot.createContext)(null),
-          ye = (0, Ot.createContext)(!1),
-          Ne = /#(?=\d*[a-fA-F])[0-9a-fA-F]{6}\b/g;
+        const NE = (0, su.createContext)("/docs"),
+          OE = (0, su.createContext)(null),
+          YE = (0, su.createContext)(!1),
+          hE = /#(?=\d*[a-fA-F])[0-9a-fA-F]{6}\b/g;
 
-        function ae(tt) {
-          const et = tt.match(/^["']?(#[0-9a-fA-F]{6})["']?$/);
-          return et ? et[1] : null
+        function DE(uu) {
+          const Eu = uu.match(/^["']?(#[0-9a-fA-F]{6})["']?$/);
+          return Eu ? Eu[1] : null
         }
 
-        function Me(tt) {
+        function gE(uu) {
           let {
-            colour: et
-          } = tt;
-          return (0, ft.jsx)("span", {
+            colour: Eu
+          } = uu;
+          return (0, Ou.jsx)("span", {
             className: "DocsColourSwatch",
             style: {
-              background: et
+              background: Eu
             },
             "aria-hidden": "true"
           })
         }
 
-        function be(tt) {
-          const et = [];
-          let Vt = 0;
-          for (const Ot of tt.matchAll(Ne)) et.push(tt.slice(Vt, Ot.index), (0, ft.jsx)(Me, {
-            colour: Ot[0]
-          }), Ot[0]), Vt = Ot.index + Ot[0].length;
-          return et.push(tt.slice(Vt)), et
+        function ME(uu) {
+          const Eu = [];
+          let ju = 0;
+          for (const su of uu.matchAll(hE)) Eu.push(uu.slice(ju, su.index), (0, Ou.jsx)(gE, {
+            colour: su[0]
+          }), su[0]), ju = su.index + su[0].length;
+          return Eu.push(uu.slice(ju)), Eu
         }
 
-        function Je(tt) {
+        function eE(uu) {
           let {
-            href: et,
-            children: Vt
-          } = tt;
-          const qt = (0, Ot.useContext)(fe);
-          if (et.startsWith("#")) {
-            const tt = At(et);
-            if (tt) return (0, ft.jsx)(mt.b, {
-              to: Yt(qt, tt.page, tt.anchor),
-              children: (0, ft.jsx)(ye.Provider, {
+            href: Eu,
+            children: ju
+          } = uu;
+          const Uu = (0, su.useContext)(NE);
+          if (Eu.startsWith("#")) {
+            const uu = Bu(Eu);
+            if (uu) return (0, Ou.jsx)(Xu.c, {
+              to: tu(Uu, uu.page, uu.anchor),
+              children: (0, Ou.jsx)(YE.Provider, {
                 value: !0,
-                children: Vt
+                children: ju
               })
             })
           }
-          return (0, ft.jsx)("a", {
-            href: et,
+          return (0, Ou.jsx)("a", {
+            href: Eu,
             target: "_blank",
             rel: "noopener noreferrer",
-            children: (0, ft.jsx)(ye.Provider, {
+            children: (0, Ou.jsx)(YE.Provider, {
               value: !0,
-              children: Vt
+              children: ju
             })
           })
         }
 
-        function Ce(tt) {
+        function GE(uu) {
           let {
-            code: et
-          } = tt;
-          const Vt = (0, Ot.useContext)(fe);
-          if ((0, Ot.useContext)(ye)) return (0, ft.jsx)("code", {
+            code: Eu
+          } = uu;
+          const ju = (0, su.useContext)(NE);
+          if ((0, su.useContext)(YE)) return (0, Ou.jsx)("code", {
             className: "DocsInlineCode",
-            children: et
+            children: Eu
           });
-          if (He().has(et)) return (0, ft.jsx)(ve, {
-            type: et
+          if (qE().has(Eu)) return (0, Ou.jsx)(dE, {
+            type: Eu
           });
-          const qt = Ee(et);
-          if (qt) return (0, ft.jsx)(mt.b, {
+          const Uu = cE(Eu);
+          if (Uu) return (0, Ou.jsx)(Xu.c, {
             className: "DocsInlineCode DocsSymbolLink",
-            to: Yt(Vt, zt(qt.pageId), qt.anchor),
-            children: et
+            to: tu(ju, Wu(Uu.pageId), Uu.anchor),
+            children: Eu
           });
-          const Dt = ae(et);
-          return (0, ft.jsxs)("code", {
+          const Zu = DE(Eu);
+          return (0, Ou.jsxs)("code", {
             className: "DocsInlineCode",
-            children: [Dt && (0, ft.jsx)(Me, {
-              colour: Dt
-            }), et]
+            children: [Zu && (0, Ou.jsx)(gE, {
+              colour: Zu
+            }), Eu]
           })
         }
 
-        function ue(tt) {
+        function pE(uu) {
           let {
-            text: et
-          } = tt;
-          const Vt = [];
-          let qt = 0;
-          for (const Ot of et.matchAll(ht.g)) {
-            Ot.index > qt && Vt.push(...be(et.slice(qt, Ot.index)));
-            const [, tt, Dt, mt, dt, jt] = Ot;
-            tt ? Vt.push((0, ft.jsx)(Ce, {
-              code: (0, ht.p)(tt, Dt)
-            })) : mt ? Vt.push((0, ft.jsx)("strong", {
-              children: (0, ft.jsx)(ue, {
-                text: mt
+            text: Eu
+          } = uu;
+          const ju = [];
+          let Uu = 0;
+          for (const su of Eu.matchAll(Ju.h)) {
+            su.index > Uu && ju.push(...ME(Eu.slice(Uu, su.index)));
+            const [, uu, Zu, Xu, lu, qu] = su;
+            uu ? ju.push((0, Ou.jsx)(GE, {
+              code: (0, Ju.n)(uu, Zu)
+            })) : Xu ? ju.push((0, Ou.jsx)("strong", {
+              children: (0, Ou.jsx)(pE, {
+                text: Xu
               })
-            })) : Vt.push((0, ft.jsx)(Je, {
-              href: jt,
-              children: (0, ft.jsx)(ue, {
-                text: dt
+            })) : ju.push((0, Ou.jsx)(eE, {
+              href: qu,
+              children: (0, Ou.jsx)(pE, {
+                text: lu
               })
-            })), qt = Ot.index + Ot[0].length
+            })), Uu = su.index + su[0].length
           }
-          return qt < et.length && Vt.push(...be(et.slice(qt))), (0, ft.jsx)(ft.Fragment, {
-            children: Vt.map(((tt, et) => (0, ft.jsx)(Ot.Fragment, {
-              children: tt
-            }, et)))
+          return Uu < Eu.length && ju.push(...ME(Eu.slice(Uu))), (0, Ou.jsx)(Ou.Fragment, {
+            children: ju.map(((uu, Eu) => (0, Ou.jsx)(su.Fragment, {
+              children: uu
+            }, Eu)))
           })
         }
-        const Ke = /("[^"]*"|'[^']*'|`[^`]*`)|([A-Za-z_$][\w$]*)|(\d+(?:\.\d+)?)|(\s+)|([^\w\s"'`$]+)/g,
-          he = new Set(["string", "number", "boolean", "null", "undefined", "void", "any", "unknown", "never", "object", "true", "false", "keyof", "typeof", "in", "extends", "readonly"]);
+        const wE = /("[^"]*"|'[^']*'|`[^`]*`)|([A-Za-z_$][\w$]*)|(\d+(?:\.\d+)?)|(\s+)|([^\w\s"'`$]+)/g,
+          JE = new Set(["string", "number", "boolean", "null", "undefined", "void", "any", "unknown", "never", "object", "true", "false", "keyof", "typeof", "in", "extends", "readonly"]);
 
-        function ve(tt) {
+        function dE(uu) {
           let {
-            type: et
-          } = tt;
-          const Vt = He(),
-            qt = [];
-          for (const Ot of et.trim().matchAll(Ke)) {
-            const [tt, et, Dt, mt, dt] = Ot;
-            et ? qt.push((0, ft.jsx)("span", {
+            type: Eu
+          } = uu;
+          const ju = qE(),
+            Uu = [];
+          for (const su of Eu.trim().matchAll(wE)) {
+            const [uu, Eu, Zu, Xu, lu] = su;
+            Eu ? Uu.push((0, Ou.jsx)("span", {
               className: "DocsTypeString",
-              children: tt
-            })) : Dt && Vt.has(Dt) ? qt.push((0, ft.jsx)(Ie, {
-              name: Dt,
-              definition: Vt.get(Dt)
-            })) : Dt ? qt.push((0, ft.jsx)("span", {
-              className: he.has(Dt) ? "DocsTypeKeyword" : "DocsTypeName",
-              children: tt
-            })) : mt ? qt.push((0, ft.jsx)("span", {
+              children: uu
+            })) : Zu && ju.has(Zu) ? Uu.push((0, Ou.jsx)(mE, {
+              name: Zu,
+              definition: ju.get(Zu)
+            })) : Zu ? Uu.push((0, Ou.jsx)("span", {
+              className: JE.has(Zu) ? "DocsTypeKeyword" : "DocsTypeName",
+              children: uu
+            })) : Xu ? Uu.push((0, Ou.jsx)("span", {
               className: "DocsTypeNumber",
-              children: tt
-            })) : dt ? qt.push(" ") : qt.push((0, ft.jsx)("span", {
+              children: uu
+            })) : lu ? Uu.push(" ") : Uu.push((0, Ou.jsx)("span", {
               className: "DocsTypePunctuation",
-              children: tt
+              children: uu
             }))
           }
-          return (0, ft.jsx)("code", {
+          return (0, Ou.jsx)("code", {
             className: "DocsInlineCode DocsTypeText",
-            children: qt.map(((tt, et) => (0, ft.jsx)(Ot.Fragment, {
-              children: tt
-            }, et)))
+            children: Uu.map(((uu, Eu) => (0, Ou.jsx)(su.Fragment, {
+              children: uu
+            }, Eu)))
           })
         }
-        const We = 480,
-          Se = 6,
-          ce = "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
-        let Re = 0;
+        const aE = 480,
+          PE = 6,
+          oE = "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
+        let kE = 0;
 
-        function Ie(tt) {
+        function mE(uu) {
           let {
-            name: et,
-            definition: Vt
-          } = tt;
-          const qt = (0, Ot.useContext)(fe),
-            Dt = Xe[et],
-            dt = (0, Ot.useRef)(null),
-            jt = (0, Ot.useRef)(null),
-            Xt = (0, Ot.useRef)(null),
-            [Qt, lt] = (0, Ot.useState)(!1),
-            [Et, wt] = (0, Ot.useState)(null),
-            Nt = (0, Ot.useRef)(),
-            Mt = (0, Ot.useContext)(we),
-            [bt] = (0, Ot.useState)((() => "DocsTypePopover-" + Re++)),
-            Jt = () => {
-              clearTimeout(Nt.current), lt(!0)
+            name: Eu,
+            definition: ju
+          } = uu;
+          const Uu = (0, su.useContext)(NE),
+            Zu = fE[Eu],
+            lu = (0, su.useRef)(null),
+            qu = (0, su.useRef)(null),
+            Cu = (0, su.useRef)(null),
+            [bu, cu] = (0, su.useState)(!1),
+            [Nu, Yu] = (0, su.useState)(null),
+            Du = (0, su.useRef)(),
+            gu = (0, su.useContext)(OE),
+            [Mu] = (0, su.useState)((() => "DocsTypePopover-" + kE++)),
+            eu = () => {
+              clearTimeout(Du.current), cu(!0)
             },
-            Ct = () => {
-              clearTimeout(Nt.current), Nt.current = setTimeout((() => {
-                lt(!1)
+            Gu = () => {
+              clearTimeout(Du.current), Du.current = setTimeout((() => {
+                cu(!1)
               }), 120)
             };
-          return (0, Ot.useEffect)((() => {
-            if (!Qt) return;
-            const tt = tt => {
-              if ("Escape" === tt.key) {
-                var et, Vt;
-                if (null !== (et = jt.current) && void 0 !== et && et.contains(document.activeElement)) null === (Vt = dt.current) || void 0 === Vt || Vt.focus();
-                lt(!1)
+          return (0, su.useEffect)((() => {
+            if (!bu) return;
+            const uu = uu => {
+              if ("Escape" === uu.key) {
+                var Eu, ju;
+                if (null !== (Eu = qu.current) && void 0 !== Eu && Eu.contains(document.activeElement)) null === (ju = lu.current) || void 0 === ju || ju.focus();
+                cu(!1)
               }
             };
-            return document.addEventListener("keydown", tt), () => {
-              document.removeEventListener("keydown", tt)
+            return document.addEventListener("keydown", uu), () => {
+              document.removeEventListener("keydown", uu)
             }
-          }), [Qt]), (0, Ot.useEffect)((() => () => {
-            clearTimeout(Nt.current)
-          }), []), (0, Ot.useLayoutEffect)((() => {
-            if (!Qt || !dt.current || !jt.current) return void wt(null);
-            const tt = dt.current.getBoundingClientRect(),
-              et = jt.current.offsetHeight,
-              Vt = Math.min(We, window.innerWidth - 32),
-              Ot = Math.min(Math.max(16, tt.left), window.innerWidth - Vt - 16),
-              qt = tt.bottom + Se + et < window.innerHeight;
-            wt({
-              left: Ot,
-              top: qt ? tt.bottom + Se : Math.max(16, tt.top - Se - et)
+          }), [bu]), (0, su.useEffect)((() => () => {
+            clearTimeout(Du.current)
+          }), []), (0, su.useLayoutEffect)((() => {
+            if (!bu || !lu.current || !qu.current) return void Yu(null);
+            const uu = lu.current.getBoundingClientRect(),
+              Eu = qu.current.offsetHeight,
+              ju = Math.min(aE, window.innerWidth - 32),
+              su = Math.min(Math.max(16, uu.left), window.innerWidth - ju - 16),
+              Uu = uu.bottom + PE + Eu < window.innerHeight;
+            Yu({
+              left: su,
+              top: Uu ? uu.bottom + PE : Math.max(16, uu.top - PE - Eu)
             })
-          }), [Qt]), (0, ft.jsxs)(ft.Fragment, {
-            children: [(0, ft.jsx)("button", {
+          }), [bu]), (0, Ou.jsxs)(Ou.Fragment, {
+            children: [(0, Ou.jsx)("button", {
               type: "button",
-              ref: dt,
+              ref: lu,
               className: "DocsTypeLink",
-              "aria-expanded": Qt,
-              "aria-describedby": Qt ? bt : void 0,
-              onMouseEnter: Jt,
-              onMouseLeave: Ct,
-              onFocus: Jt,
-              onBlur: Ct,
-              onKeyDown: tt => {
-                "Tab" === tt.key && !tt.shiftKey && Xt.current && (tt.preventDefault(), Xt.current.focus())
+              "aria-expanded": bu,
+              "aria-describedby": bu ? Mu : void 0,
+              onMouseEnter: eu,
+              onMouseLeave: Gu,
+              onFocus: eu,
+              onBlur: Gu,
+              onKeyDown: uu => {
+                "Tab" === uu.key && !uu.shiftKey && Cu.current && (uu.preventDefault(), Cu.current.focus())
               },
-              onClick: Jt,
-              children: et
-            }), Qt && (0, Ht.createPortal)((0, ft.jsxs)("span", {
-              ref: jt,
-              id: bt,
+              onClick: eu,
+              children: Eu
+            }), bu && (0, fu.createPortal)((0, Ou.jsxs)("span", {
+              ref: qu,
+              id: Mu,
               className: "DocsTypePopover",
               role: "tooltip",
-              style: Et ? {
-                left: Et.left,
-                top: Et.top,
-                maxWidth: We
+              style: Nu ? {
+                left: Nu.left,
+                top: Nu.top,
+                maxWidth: aE
               } : {
                 visibility: "hidden"
               },
-              onMouseEnter: Jt,
-              onMouseLeave: Ct,
-              onFocus: Jt,
-              onBlur: Ct,
-              children: [(0, ft.jsxs)("span", {
+              onMouseEnter: eu,
+              onMouseLeave: Gu,
+              onFocus: eu,
+              onBlur: Gu,
+              children: [(0, Ou.jsxs)("span", {
                 className: "DocsTypePopoverHeader",
-                children: [(0, ft.jsx)("span", {
+                children: [(0, Ou.jsx)("span", {
                   className: "DocsTypePopoverTitle",
-                  children: et
-                }), Dt && (0, ft.jsxs)(mt.b, {
-                  ref: Xt,
+                  children: Eu
+                }), Zu && (0, Ou.jsxs)(Xu.c, {
+                  ref: Cu,
                   className: "DocsTypePopoverLink",
-                  to: Yt(qt, zt(Dt)),
+                  to: tu(Uu, Wu(Zu)),
                   onClick: () => {
-                    lt(!1)
+                    cu(!1)
                   },
-                  onKeyDown: tt => {
-                    if ("Tab" === tt.key) {
-                      var et;
-                      if (tt.preventDefault(), tt.shiftKey || !dt.current || ! function(tt, et) {
-                          const Vt = [...document.querySelectorAll(ce)],
-                            Ot = Vt.slice(Vt.indexOf(tt) + 1).find((tt => tt.getClientRects().length > 0 && !(null !== et && void 0 !== et && et.contains(tt))));
-                          return null === Ot || void 0 === Ot || Ot.focus(), void 0 !== Ot
-                        }(dt.current, jt.current)) null === (et = dt.current) || void 0 === et || et.focus();
-                      tt.shiftKey || lt(!1)
+                  onKeyDown: uu => {
+                    if ("Tab" === uu.key) {
+                      var Eu;
+                      if (uu.preventDefault(), uu.shiftKey || !lu.current || ! function(uu, Eu) {
+                          const ju = [...document.querySelectorAll(oE)],
+                            su = ju.slice(ju.indexOf(uu) + 1).find((uu => uu.getClientRects().length > 0 && !(null !== Eu && void 0 !== Eu && Eu.contains(uu))));
+                          return null === su || void 0 === su || su.focus(), void 0 !== su
+                        }(lu.current, qu.current)) null === (Eu = lu.current) || void 0 === Eu || Eu.focus();
+                      uu.shiftKey || cu(!1)
                     }
                   },
-                  children: [zt(Dt).title, (0, ft.jsx)(yt, {
+                  children: [Wu(Zu).title, (0, Ou.jsx)(hu, {
                     name: "arrow-right"
                   })]
                 })]
-              }), (0, ft.jsx)(Kt, {
+              }), (0, Ou.jsx)(wu, {
                 lang: "ts",
-                code: Vt,
+                code: ju,
                 compact: !0
               })]
-            }), null !== Mt && void 0 !== Mt ? Mt : document.body)]
+            }), null !== gu && void 0 !== gu ? gu : document.body)]
           })
         }
-        var Pe = Vt(229),
-          Ze = Vt(4938),
-          Le = Vt(4943),
-          Fe = Vt(4948);
-        const ke = {
+        var vE = ju(202),
+          KE = ju(4944),
+          VE = ju(4952),
+          rE = ju(4958);
+        const QE = {
           progressBar: {
-            Ve: 30,
-            Oe: .075,
-            qe: 5,
-            De: !1,
+            zu: 30,
+            Ru: .075,
+            uE: 5,
+            EE: !1,
             description: [{
               str: "Click repeatedly to complete!"
             }],
-            He: "fa-solid fa-computer-mouse",
+            UE: "fa-solid fa-computer-mouse",
             scale: 3,
             rotation: 15
           },
           timedClick: {
-            Qe: 3e3,
+            XE: 3e3,
             icon: "fa-solid fa-computer-mouse",
             label: [{
               str: "Click to complete the QTE!"
             }],
-            le: !0,
+            lE: !0,
             scale: 3,
             rotation: 15,
-            Ee: !1
+            qE: !1
           },
           gravityBar: {
-            Ve: 30,
-            ye: .25,
-            Ne: 3,
-            ae: .8,
+            zu: 30,
+            CE: .25,
+            bE: 3,
+            cE: .8,
             gravity: 1,
-            Me: 1.5,
-            Je: 8,
-            Ce: 4,
-            De: !1,
+            NE: 1.5,
+            OE: 8,
+            YE: 4,
+            EE: !1,
             description: [{
               str: "Hold to catch!"
             }],
@@ -1094,7 +1094,7 @@ export const modules = {
           },
           precisionBar: {
             speed: .5,
-            Ke: .15,
+            DE: .15,
             label: [{
               str: "Click when the marker is within the green zone."
             }],
@@ -1103,30 +1103,30 @@ export const modules = {
             rotation: 0
           },
           rhythmClick: {
-            ve: 5,
-            Se: 1200,
-            ce: .15,
-            Ie: 3,
+            ME: 5,
+            eE: 1200,
+            GE: .15,
+            pE: 3,
             label: [{
               str: "Click when the circles align!"
             }],
             icon: ""
           }
         };
-        var Ge = Vt(377),
-          ze = Vt(2082);
+        var iE = ju(337),
+          WE = ju(2045);
 
-        function oe(tt) {
-          return tt.startsWith("fa-")
+        function SE(uu) {
+          return uu.startsWith("fa-")
         }
-        const re = {
+        const IE = {
             text: "Text",
             icon: "Icon",
             progressBar: "Progress bar",
             keyBinding: "Key binding",
             other: "Other"
           },
-          Ue = {
+          FE = {
             text: "Text",
             icon: {
               icon: "Pixelated Heart"
@@ -1141,10 +1141,10 @@ export const modules = {
             }
           };
 
-        function Ae(tt) {
-          return "string" === typeof tt ? "text" : "entityName" in tt || "translationKey" in tt ? "other" : (0, Ge.lb)(tt) ? "progressBar" : (0, Ge.ib)(tt) ? "keyBinding" : "icon" in tt ? "icon" : "str" in tt && "string" === typeof tt.str ? "text" : "other"
+        function BE(uu) {
+          return "string" === typeof uu ? "text" : "entityName" in uu || "translationKey" in uu ? "other" : (0, iE.ub)(uu) ? "progressBar" : (0, iE.tb)(uu) ? "keyBinding" : "icon" in uu ? "icon" : "str" in uu && "string" === typeof uu.str ? "text" : "other"
         }
-        const ie = [{
+        const LE = [{
             path: ["style", "color"],
             label: "Colour",
             field: {
@@ -1182,7 +1182,7 @@ export const modules = {
             },
             defaultText: "1"
           }],
-          Ye = {
+          tE = {
             text: [{
               path: ["str"],
               label: "Text",
@@ -1191,7 +1191,7 @@ export const modules = {
                 multiline: !0
               },
               isRequired: !0
-            }, ...ie],
+            }, ...LE],
             icon: [{
               path: ["icon"],
               label: "Icon",
@@ -1262,360 +1262,360 @@ export const modules = {
               label: "Action",
               field: {
                 kind: "choice",
-                options: ze.m
+                options: WE.j
               },
               isRequired: !0
-            }, ...ie],
+            }, ...LE],
             other: []
           };
 
-        function Be(tt) {
-          return "string" === typeof tt ? {
-            str: tt
-          } : tt
+        function xE(uu) {
+          return "string" === typeof uu ? {
+            str: uu
+          } : uu
         }
 
-        function pe(tt, et) {
-          let Vt = Be(tt);
-          for (const Ot of et) Vt = Vt && "object" === typeof Vt ? Vt[Ot] : void 0;
-          return Vt
+        function TE(uu, Eu) {
+          let ju = xE(uu);
+          for (const su of Eu) ju = ju && "object" === typeof ju ? ju[su] : void 0;
+          return ju
         }
 
-        function xe(tt, et, Vt) {
-          const Ot = (tt, qt) => {
-            var Dt;
-            const mt = et[qt],
-              dt = {
-                ...tt
+        function HE(uu, Eu, ju) {
+          const su = (uu, Uu) => {
+            var Zu;
+            const Xu = Eu[Uu],
+              lu = {
+                ...uu
               };
-            if (qt === et.length - 1) return void 0 === Vt ? delete dt[mt] : dt[mt] = Vt, dt;
-            const jt = Ot(null !== (Dt = tt[mt]) && void 0 !== Dt ? Dt : {}, qt + 1);
-            return 0 === Object.keys(jt).length ? delete dt[mt] : dt[mt] = jt, dt
+            if (Uu === Eu.length - 1) return void 0 === ju ? delete lu[Xu] : lu[Xu] = ju, lu;
+            const qu = su(null !== (Zu = uu[Xu]) && void 0 !== Zu ? Zu : {}, Uu + 1);
+            return 0 === Object.keys(qu).length ? delete lu[Xu] : lu[Xu] = qu, lu
           };
-          return function(tt) {
-            const et = Object.keys(tt);
-            return "string" === typeof tt.str && 1 === et.length ? tt.str : tt
-          }(Ot(Be(tt), 0))
+          return function(uu) {
+            const Eu = Object.keys(uu);
+            return "string" === typeof uu.str && 1 === Eu.length ? uu.str : uu
+          }(su(xE(uu), 0))
         }
 
-        function Te(tt, et) {
-          const Vt = Ae(tt),
-            Ot = Ye[Vt].find((tt => tt.path.join(".") === et.join("."))),
-            qt = null !== Ot && void 0 !== Ot && Ot.isRequired && "other" !== Vt ? pe(Ue[Vt], et) : void 0;
-          return xe(tt, et, qt)
+        function AE(uu, Eu) {
+          const ju = BE(uu),
+            su = tE[ju].find((uu => uu.path.join(".") === Eu.join("."))),
+            Uu = null !== su && void 0 !== su && su.isRequired && "other" !== ju ? TE(FE[ju], Eu) : void 0;
+          return HE(uu, Eu, Uu)
         }
 
-        function ge(tt) {
-          switch (Ae(tt)) {
+        function nE(uu) {
+          switch (BE(uu)) {
             case "text":
-              return String(pe(tt, ["str"]));
+              return String(TE(uu, ["str"]));
             case "icon":
-              return String(pe(tt, ["icon"]));
+              return String(TE(uu, ["icon"]));
             case "progressBar":
-              return `${Math.round(100*Number(pe(tt,["progress"])))}%`;
+              return `${Math.round(100*Number(TE(uu,["progress"])))}%`;
             case "keyBinding":
-              return String(pe(tt, ["action"]));
+              return String(TE(uu, ["action"]));
             case "other":
-              return JSON.stringify(tt)
+              return JSON.stringify(uu)
           }
         }
-        const se = /^[A-Za-z_$][\w$]*$/;
+        const yE = /^[A-Za-z_$][\w$]*$/;
 
-        function ne(tt) {
-          if (Array.isArray(tt)) return `[${tt.map(ne).join(", ")}]`;
-          if (tt && "object" === typeof tt) {
-            const et = Object.entries(tt).map((tt => {
-              let [et, Vt] = tt;
-              return `${se.test(et)?et:JSON.stringify(et)}: ${ne(Vt)}`
+        function zE(uu) {
+          if (Array.isArray(uu)) return `[${uu.map(zE).join(", ")}]`;
+          if (uu && "object" === typeof uu) {
+            const Eu = Object.entries(uu).map((uu => {
+              let [Eu, ju] = uu;
+              return `${yE.test(Eu)?Eu:JSON.stringify(Eu)}: ${zE(ju)}`
             }));
-            return 0 === et.length ? "{}" : `{ ${et.join(", ")} }`
+            return 0 === Eu.length ? "{}" : `{ ${Eu.join(", ")} }`
           }
-          return JSON.stringify(tt)
+          return JSON.stringify(uu)
         }
 
-        function tV(tt) {
-          const et = tt.map(ne),
-            Vt = `[${et.join(", ")}]`;
-          return Vt.length <= 60 ? Vt : `[\n${et.map((tt=>`    ${tt},`)).join("\n")}\n]`
+        function RE(uu) {
+          const Eu = uu.map(zE),
+            ju = `[${Eu.join(", ")}]`;
+          return ju.length <= 60 ? ju : `[\n${Eu.map((uu=>`    ${uu},`)).join("\n")}\n]`
         }
-        const eV = {
+        const uj = {
           "\n": "\\n",
           "\r": "\\r",
           "\t": "\\t"
         };
 
-        function VV(tt) {
-          let et = "";
-          for (let qt = 0; qt < tt.length; qt++) {
-            const Dt = tt[qt];
-            if ("\\" === Dt) {
-              var Vt;
-              const Ot = null !== (Vt = tt[qt + 1]) && void 0 !== Vt ? Vt : "";
-              et += "'" === Ot ? "'" : Dt + Ot, qt++
-            } else if ('"' === Dt) et += '\\"';
+        function Ej(uu) {
+          let Eu = "";
+          for (let Uu = 0; Uu < uu.length; Uu++) {
+            const Zu = uu[Uu];
+            if ("\\" === Zu) {
+              var ju;
+              const su = null !== (ju = uu[Uu + 1]) && void 0 !== ju ? ju : "";
+              Eu += "'" === su ? "'" : Zu + su, Uu++
+            } else if ('"' === Zu) Eu += '\\"';
             else {
-              var Ot;
-              et += null !== (Ot = eV[Dt]) && void 0 !== Ot ? Ot : Dt
+              var su;
+              Eu += null !== (su = uj[Zu]) && void 0 !== su ? su : Zu
             }
           }
-          return `"${et}"`
+          return `"${Eu}"`
         }
 
-        function OV(tt) {
-          if ("string" === typeof tt) return !0;
-          if (!tt || "object" !== typeof tt || Array.isArray(tt)) return !1;
-          const et = tt;
-          return "ProgressBar" === et.type ? "number" === typeof et.progress : "StyledKeyBinding" === et.type ? ze.m.includes(et.action) : "string" === typeof et.icon || "string" === typeof et.str || "string" === typeof et.entityName || "string" === typeof et.translationKey
+        function jj(uu) {
+          if ("string" === typeof uu) return !0;
+          if (!uu || "object" !== typeof uu || Array.isArray(uu)) return !1;
+          const Eu = uu;
+          return "ProgressBar" === Eu.type ? "number" === typeof Eu.progress : "StyledKeyBinding" === Eu.type ? WE.j.includes(Eu.action) : "string" === typeof Eu.icon || "string" === typeof Eu.str || "string" === typeof Eu.entityName || "string" === typeof Eu.translationKey
         }
 
-        function qV(tt) {
-          let et;
+        function sj(uu) {
+          let Eu;
           try {
-            et = function(tt) {
-              let et = "",
-                Vt = "",
-                Ot = 0;
-              const qt = () => {
-                et += Vt.replace(/([A-Za-z_$][\w$]*)\s*:/g, '"$1":').replace(/,(\s*[\]}])/g, "$1"), Vt = ""
+            Eu = function(uu) {
+              let Eu = "",
+                ju = "",
+                su = 0;
+              const Uu = () => {
+                Eu += ju.replace(/([A-Za-z_$][\w$]*)\s*:/g, '"$1":').replace(/,(\s*[\]}])/g, "$1"), ju = ""
               };
-              for (; Ot < tt.length;) {
-                const Dt = tt.slice(Ot).search(/["'`]|\/\//);
-                if (-1 === Dt) {
-                  Vt += tt.slice(Ot);
+              for (; su < uu.length;) {
+                const Zu = uu.slice(su).search(/["'`]|\/\//);
+                if (-1 === Zu) {
+                  ju += uu.slice(su);
                   break
                 }
-                Vt += tt.slice(Ot, Ot + Dt);
-                const mt = Ot + Dt,
-                  dt = tt[mt];
-                if ("/" === dt) {
-                  const et = tt.indexOf("\n", mt);
-                  Ot = -1 === et ? tt.length : et;
+                ju += uu.slice(su, su + Zu);
+                const Xu = su + Zu,
+                  lu = uu[Xu];
+                if ("/" === lu) {
+                  const Eu = uu.indexOf("\n", Xu);
+                  su = -1 === Eu ? uu.length : Eu;
                   continue
                 }
-                if (qt(), "`" === dt) throw new Error("Use quotes rather than template strings.");
-                let jt = mt + 1;
-                for (; jt < tt.length && tt[jt] !== dt;) jt += "\\" === tt[jt] ? 2 : 1;
-                if (jt >= tt.length) throw new Error("A string is missing its closing quote.");
-                const Ht = tt.slice(mt + 1, jt);
-                et += VV(Ht), Ot = jt + 1
+                if (Uu(), "`" === lu) throw new Error("Use quotes rather than template strings.");
+                let qu = Xu + 1;
+                for (; qu < uu.length && uu[qu] !== lu;) qu += "\\" === uu[qu] ? 2 : 1;
+                if (qu >= uu.length) throw new Error("A string is missing its closing quote.");
+                const fu = uu.slice(Xu + 1, qu);
+                Eu += Ej(fu), su = qu + 1
               }
-              return qt(), JSON.parse(et)
-            }(tt.trim())
-          } catch (Ot) {
+              return Uu(), JSON.parse(Eu)
+            }(uu.trim())
+          } catch (su) {
             return {
               parts: null,
-              error: Ot instanceof SyntaxError ? "This isn't a valid array yet." : Ot.message
+              error: su instanceof SyntaxError ? "This isn't a valid array yet." : su.message
             }
           }
-          if (!Array.isArray(et)) return {
+          if (!Array.isArray(Eu)) return {
             parts: null,
             error: 'Styled text is an array, e.g. ["Hello ", { str: "world" }]'
           };
-          const Vt = et.findIndex((tt => !OV(tt)));
-          return -1 !== Vt ? {
+          const ju = Eu.findIndex((uu => !jj(uu)));
+          return -1 !== ju ? {
             parts: null,
-            error: `Part ${Vt+1} isn't one Bloxd draws: use a string, { str }, { icon }, a ProgressBar or a StyledKeyBinding.`
+            error: `Part ${ju+1} isn't one Bloxd draws: use a string, { str }, { icon }, a ProgressBar or a StyledKeyBinding.`
           } : {
-            parts: et,
+            parts: Eu,
             error: null
           }
         }
-        const DV = 1 / Pe.e.clientTicksPerSecond,
-          mV = 700,
-          dV = {
+        const Uj = 1 / vE.e.clientTicksPerSecond,
+          Zj = 700,
+          Xj = {
             type: null,
             parameters: null,
             state: null,
             isActive: !1
           },
-          jV = {
-            progressBar: ke.progressBar.He,
-            timedClick: ke.timedClick.icon,
-            gravityBar: ke.gravityBar.icon,
-            precisionBar: ke.precisionBar.icon,
-            rhythmClick: ke.rhythmClick.icon
+          lj = {
+            progressBar: QE.progressBar.UE,
+            timedClick: QE.timedClick.icon,
+            gravityBar: QE.gravityBar.icon,
+            precisionBar: QE.precisionBar.icon,
+            rhythmClick: QE.rhythmClick.icon
           };
 
-        function HV(tt) {
+        function qj(uu) {
           let {
-            type: et
-          } = tt;
-          const [Vt, qt] = (0, Ot.useState)("ready"), [mt, dt] = (0, Ot.useState)(1), [jt, Ht] = (0, Ot.useState)(!0), Xt = (0, Ot.useRef)(null), Qt = (0, Ot.useRef)(null), lt = (0, Ot.useRef)(null), Et = (0, Ot.useRef)(new Set), wt = (0, Ot.useRef)(!1), Nt = jV[et], Mt = (0, Ot.useMemo)((() => ({
+            type: Eu
+          } = uu;
+          const [ju, Uu] = (0, su.useState)("ready"), [Xu, lu] = (0, su.useState)(1), [qu, fu] = (0, su.useState)(!0), Cu = (0, su.useRef)(null), bu = (0, su.useRef)(null), cu = (0, su.useRef)(null), Nu = (0, su.useRef)(new Set), Yu = (0, su.useRef)(!1), Du = lj[Eu], gu = (0, su.useMemo)((() => ({
             getState: () => {
-              var tt, et;
-              return null !== (tt = null === (et = lt.current) || void 0 === et ? void 0 : et.getState()) && void 0 !== tt ? tt : dV
+              var uu, Eu;
+              return null !== (uu = null === (Eu = cu.current) || void 0 === Eu ? void 0 : Eu.getState()) && void 0 !== uu ? uu : Xj
             },
-            onFrame: tt => (Et.current.add(tt), () => {
-              Et.current.delete(tt)
+            onFrame: uu => (Nu.current.add(uu), () => {
+              Nu.current.delete(uu)
             })
           })), []);
-          (0, Ot.useEffect)((() => {
-            const tt = Xt.current,
-              et = Qt.current;
-            if (!tt || !et) return;
-            const Vt = new ResizeObserver((() => {
-              dt(tt.clientWidth / Math.max(1, et.offsetWidth))
+          (0, su.useEffect)((() => {
+            const uu = Cu.current,
+              Eu = bu.current;
+            if (!uu || !Eu) return;
+            const ju = new ResizeObserver((() => {
+              lu(uu.clientWidth / Math.max(1, Eu.offsetWidth))
             }));
-            return Vt.observe(tt), () => {
-              Vt.disconnect()
+            return ju.observe(uu), () => {
+              ju.disconnect()
             }
-          }), []), (0, Ot.useEffect)((() => {
-            var tt;
-            if ("playing" !== Vt) return;
-            let Ot = !1;
-            const Dt = new Fe.h[et](ke[et], (tt => {
-              Ot = !0, Ht(!1), qt(tt ? "succeeded" : "failed")
+          }), []), (0, su.useEffect)((() => {
+            var uu;
+            if ("playing" !== ju) return;
+            let su = !1;
+            const Zu = new rE.f[Eu](QE[Eu], (uu => {
+              su = !0, fu(!1), Uu(uu ? "succeeded" : "failed")
             }), (() => {}));
-            lt.current = Dt;
-            let mt = 0,
-              dt = performance.now(),
-              jt = requestAnimationFrame((function tt(et) {
-                for (mt += Math.min(.25, (et - dt) / 1e3), dt = et; mt >= DV && !Ot;) mt -= DV, Dt.handleTick(DV);
-                for (const Vt of Et.current) Vt();
-                Ot || (jt = requestAnimationFrame(tt))
+            cu.current = Zu;
+            let Xu = 0,
+              lu = performance.now(),
+              qu = requestAnimationFrame((function uu(Eu) {
+                for (Xu += Math.min(.25, (Eu - lu) / 1e3), lu = Eu; Xu >= Uj && !su;) Xu -= Uj, Zu.handleTick(Uj);
+                for (const ju of Nu.current) ju();
+                su || (qu = requestAnimationFrame(uu))
               }));
-            return null === (tt = Xt.current) || void 0 === tt || tt.focus({
+            return null === (uu = Cu.current) || void 0 === uu || uu.focus({
               preventScroll: !0
             }), () => {
-              cancelAnimationFrame(jt), Dt.tearDown(), lt.current = null, wt.current = !1
+              cancelAnimationFrame(qu), Zu.tearDown(), cu.current = null, Yu.current = !1
             }
-          }), [Vt, et]), (0, Ot.useEffect)((() => {
-            if (jt) return;
-            const tt = setTimeout((() => {
-              Ht(!0)
-            }), mV);
+          }), [ju, Eu]), (0, su.useEffect)((() => {
+            if (qu) return;
+            const uu = setTimeout((() => {
+              fu(!0)
+            }), Zj);
             return () => {
-              clearTimeout(tt)
+              clearTimeout(uu)
             }
-          }), [jt]);
-          const bt = tt => {
-            var et;
-            "playing" === Vt && wt.current !== tt && (wt.current = tt, null === (et = lt.current) || void 0 === et || et.handleMouseInput(tt))
+          }), [qu]);
+          const Mu = uu => {
+            var Eu;
+            "playing" === ju && Yu.current !== uu && (Yu.current = uu, null === (Eu = cu.current) || void 0 === Eu || Eu.handleMouseInput(uu))
           };
-          return (0, ft.jsxs)("div", {
+          return (0, Ou.jsxs)("div", {
             className: "DocsQteDemo",
-            children: [(0, ft.jsxs)("div", {
-              ref: Xt,
-              className: Dt()("DocsQteStage", {
-                Playing: "playing" === Vt
+            children: [(0, Ou.jsxs)("div", {
+              ref: Cu,
+              className: Zu()("DocsQteStage", {
+                Playing: "playing" === ju
               }),
-              tabIndex: "playing" === Vt ? 0 : -1,
-              role: "playing" === Vt ? "button" : void 0,
-              "aria-label": "playing" === Vt ? `${et} quick time event: click or press Space` : void 0,
-              onPointerDown: tt => {
-                0 === tt.button && bt(!0)
+              tabIndex: "playing" === ju ? 0 : -1,
+              role: "playing" === ju ? "button" : void 0,
+              "aria-label": "playing" === ju ? `${Eu} quick time event: click or press Space` : void 0,
+              onPointerDown: uu => {
+                0 === uu.button && Mu(!0)
               },
               onPointerUp: () => {
-                bt(!1)
+                Mu(!1)
               },
               onPointerLeave: () => {
-                bt(!1)
+                Mu(!1)
               },
               onPointerCancel: () => {
-                bt(!1)
+                Mu(!1)
               },
-              onKeyDown: tt => {
-                "playing" !== Vt || " " !== tt.key && "Enter" !== tt.key || (tt.preventDefault(), bt(!0))
+              onKeyDown: uu => {
+                "playing" !== ju || " " !== uu.key && "Enter" !== uu.key || (uu.preventDefault(), Mu(!0))
               },
-              onKeyUp: tt => {
-                "playing" !== Vt || " " !== tt.key && "Enter" !== tt.key || bt(!1)
+              onKeyUp: uu => {
+                "playing" !== ju || " " !== uu.key && "Enter" !== uu.key || Mu(!1)
               },
-              children: [(0, ft.jsx)("div", {
-                ref: Qt,
+              children: [(0, Ou.jsx)("div", {
+                ref: bu,
                 className: "DocsQteScreen",
                 style: {
-                  transform: `scale(${mt})`
+                  transform: `scale(${Xu})`
                 },
-                children: "playing" === Vt && (0, ft.jsx)(Le.b.Provider, {
-                  value: Mt,
-                  children: (0, ft.jsx)(Ze.b, {
+                children: "playing" === ju && (0, Ou.jsx)(VE.c.Provider, {
+                  value: gu,
+                  children: (0, Ou.jsx)(KE.b, {
                     qte: {
-                      type: et,
-                      parameters: ke[et]
+                      type: Eu,
+                      parameters: QE[Eu]
                     }
                   })
                 })
-              }), "playing" !== Vt && (0, ft.jsxs)("div", {
+              }), "playing" !== ju && (0, Ou.jsxs)("div", {
                 className: "DocsQteOverlay",
-                children: ["ready" !== Vt && (0, ft.jsxs)("div", {
-                  className: Dt()("DocsQteResult", "succeeded" === Vt ? "Succeeded" : "Failed"),
-                  children: [(0, ft.jsx)(yt, {
-                    name: "succeeded" === Vt ? "check" : "cross",
+                children: ["ready" !== ju && (0, Ou.jsxs)("div", {
+                  className: Zu()("DocsQteResult", "succeeded" === ju ? "Succeeded" : "Failed"),
+                  children: [(0, Ou.jsx)(hu, {
+                    name: "succeeded" === ju ? "check" : "cross",
                     isTinted: !0
-                  }), (0, ft.jsx)("span", {
-                    children: "succeeded" === Vt ? "Succeeded: onPlayerFinishQTE gets true" : "Failed: onPlayerFinishQTE gets false"
+                  }), (0, Ou.jsx)("span", {
+                    children: "succeeded" === ju ? "Succeeded: onPlayerFinishQTE gets true" : "Failed: onPlayerFinishQTE gets false"
                   })]
-                }), (0, ft.jsxs)("button", {
+                }), (0, Ou.jsxs)("button", {
                   type: "button",
                   className: "DocsQtePlay",
-                  disabled: !jt,
+                  disabled: !qu,
                   onClick: () => {
-                    qt("playing")
+                    Uu("playing")
                   },
-                  children: [(0, ft.jsx)(yt, {
-                    name: "ready" === Vt ? "play" : "replay"
-                  }), (0, ft.jsx)("span", {
-                    children: "ready" === Vt ? `Try ${et}` : "Play again"
+                  children: [(0, Ou.jsx)(hu, {
+                    name: "ready" === ju ? "play" : "replay"
+                  }), (0, Ou.jsx)("span", {
+                    children: "ready" === ju ? `Try ${Eu}` : "Play again"
                   })]
                 })]
               })]
-            }), Nt && !oe(Nt) && (0, ft.jsxs)("p", {
+            }), Du && !SE(Du) && (0, Ou.jsxs)("p", {
               className: "DocsQteCaption",
-              children: ["The ", (0, ft.jsx)("code", {
-                children: Nt
+              children: ["The ", (0, Ou.jsx)("code", {
+                children: Du
               }), " icon is a Bloxd item, so it shows in game only."]
             })]
           })
         }
 
-        function XV(tt) {
+        function fj(uu) {
           let {
-            level: et,
-            text: Vt,
-            anchor: Ot,
-            className: qt
-          } = tt;
-          const mt = `h${Math.min(et,6)}`;
-          return (0, ft.jsxs)(mt, {
-                id: Ot,
-                className: Dt()("DocsHeading", qt),
-                children: [(0, ft.jsx)(ue, {
-                      text: Vt
-                    }), (0, ft.jsx)("a", {
+            level: Eu,
+            text: ju,
+            anchor: su,
+            className: Uu
+          } = uu;
+          const Xu = `h${Math.min(Eu,6)}`;
+          return (0, Ou.jsxs)(Xu, {
+                id: su,
+                className: Zu()("DocsHeading", Uu),
+                children: [(0, Ou.jsx)(pE, {
+                      text: ju
+                    }), (0, Ou.jsx)("a", {
                         className: "DocsHeadingAnchor",
-                        href: `#${Ot}`,
-                        "aria-label": `Link to ${Vt.replace(/`/g,"")}`,children:"#"})]})}function QV(tt){let{items:et,ordered:Vt}=tt;const Ot=Vt?"ol":"ul";return(0,ft.jsx)(Ot,{className:"DocsList",children:et.map(((tt,et)=>(0,ft.jsxs)("li",{children:[(0,ft.jsx)(ue,{text:tt.text}),tt.children.length>0&&(0,ft.jsx)(QV,{items:tt.children,ordered:Vt})]},et)))})}function lV(tt){const et=tt[0],Vt="paragraph"===(null===et||void 0===et?void 0:et.kind)?et.text.toLowerCase():"";return/^\*\*(warning|important|caution)/.test(Vt)?"warning":/^\*\*(tip|prefer)/.test(Vt)?"tip":"note"}function EV(tt){let{block:et}=tt;switch(et.kind){case"heading":return(0,ft.jsx)(XV,{level:et.level,text:et.text,anchor:et.anchor});case"paragraph":return(0,ft.jsx)("p",{children:(0,ft.jsx)(ue,{text:et.text})});case"code":{const tt="ts"===et.lang?function(tt){const et=tt.match(/^api\.addQTE\(playerId, \{\s*type: "(\w+)"/);return et&&Object.hasOwn(ke,et[1])?et[1]:null}(et.code):null;return(0,ft.jsxs)(ft.Fragment,{children:[(0,ft.jsx)(Kt,{code:et.code,lang:et.lang}),tt&&(0,ft.jsx)(HV,{type:tt})]})}case"table":return(0,ft.jsx)("div",{className:"DocsTableScroll",children:(0,ft.jsxs)("table",{className:"DocsTable",children:[(0,ft.jsx)("thead",{children:(0,ft.jsx)("tr",{children:et.header.map(((tt,et)=>(0,ft.jsx)("th",{children:(0,ft.jsx)(ue,{text:tt})},et)))})}),(0,ft.jsx)("tbody",{children:et.rows.map(((tt,et)=>(0,ft.jsx)("tr",{children:tt.map(((tt,et)=>(0,ft.jsx)("td",{children:(0,ft.jsx)(ue,{text:tt})},et)))},et)))})]})});case"list":return(0,ft.jsx)(QV,{items:et.items,ordered:et.ordered});case"quote":return(0,ft.jsx)("aside",{className:Dt()("DocsCallout",lV(et.blocks)),children:(0,ft.jsx)(fV,{blocks:et.blocks})});case"rule":return(0,ft.jsx)("hr",{className:"DocsRule"})}}function fV(tt){let{blocks:et}=tt;return(0,ft.jsx)(ft.Fragment,{children:et.map(((tt,et)=>(0,ft.jsx)(EV,{block:tt},et)))})}var wV=Vt(4923),yV=Vt(4931);function NV(tt){return"blocks"===tt||"items"===tt}const aV=new Map;function MV(tt){let et=aV.get(tt);return et||(et=function(tt){const et={entries:[],legend:[],notes:[],examples:[]};let Vt=!1;for(const Dt of tt.split(/\r?\n/).slice(1)){if(Dt.startsWith("#")){const tt=Dt.replace(/^# ?/,""),Ot=tt.match(/^\s+([A-Z]+)\s+=\s+(\w+)\s+->\s+(.+)$/);Ot?et.legend.push({code:Ot[1],meaning:Ot[2],usage:Ot[3].trim()}):/^Examples:/.test(tt.trim())?Vt=!0:Vt&&tt.trim()?et.examples.push(tt.trim()):tt.trim()&&!/^\s/.test(tt)&&et.notes.push(tt.trim());continue}const tt=Dt.trim().match(/^(.+?)(?:\s+\[([A-Z,]+)\])?$/);var Ot,qt;tt&&et.entries.push({name:tt[1],variants:null!==(Ot=null===(qt=tt[2])||void 0===qt?void 0:qt.split(","))&&void 0!==Ot?Ot:[]})}return et}("blocks"===tt?wV:yV),aV.set(tt,et)),et}function bV(tt){let{className:et,value:Vt,placeholder:Ot,label:qt,onChange:Dt,count:mt,children:dt}=tt;return(0,ft.jsxs)("div",{className:et,children:[(0,ft.jsx)(yt,{name:"magnifying-glass"}),(0,ft.jsx)("input",{type:"search",value:Vt,placeholder:Ot,"aria-label":qt,onChange:tt=>{Dt(tt.target.value)}}),dt,mt&&(0,ft.jsxs)("span",{className:"DocsFilterCount",children:[mt.visible," of ",mt.total]})]})}var JV=Vt(1152);function CV(tt){const et=tt.trim().match(/^(` {
+                        href: `#${su}`,
+                        "aria-label": `Link to ${ju.replace(/`/g,"")}`,children:"#"})]})}function Cj(uu){let{items:Eu,ordered:ju}=uu;const su=ju?"ol":"ul";return(0,Ou.jsx)(su,{className:"DocsList",children:Eu.map(((uu,Eu)=>(0,Ou.jsxs)("li",{children:[(0,Ou.jsx)(pE,{text:uu.text}),uu.children.length>0&&(0,Ou.jsx)(Cj,{items:uu.children,ordered:ju})]},Eu)))})}function bj(uu){const Eu=uu[0],ju="paragraph"===(null===Eu||void 0===Eu?void 0:Eu.kind)?Eu.text.toLowerCase():"";return/^\*\*(warning|important|caution)/.test(ju)?"warning":/^\*\*(tip|prefer)/.test(ju)?"tip":"note"}function cj(uu){let{block:Eu}=uu;switch(Eu.kind){case"heading":return(0,Ou.jsx)(fj,{level:Eu.level,text:Eu.text,anchor:Eu.anchor});case"paragraph":return(0,Ou.jsx)("p",{children:(0,Ou.jsx)(pE,{text:Eu.text})});case"code":{const uu="ts"===Eu.lang?function(uu){const Eu=uu.match(/^api\.addQTE\(playerId, \{\s*type: "(\w+)"/);return Eu&&Object.hasOwn(QE,Eu[1])?Eu[1]:null}(Eu.code):null;return(0,Ou.jsxs)(Ou.Fragment,{children:[(0,Ou.jsx)(wu,{code:Eu.code,lang:Eu.lang}),uu&&(0,Ou.jsx)(qj,{type:uu})]})}case"table":return(0,Ou.jsx)("div",{className:"DocsTableScroll",children:(0,Ou.jsxs)("table",{className:"DocsTable",children:[(0,Ou.jsx)("thead",{children:(0,Ou.jsx)("tr",{children:Eu.header.map(((uu,Eu)=>(0,Ou.jsx)("th",{children:(0,Ou.jsx)(pE,{text:uu})},Eu)))})}),(0,Ou.jsx)("tbody",{children:Eu.rows.map(((uu,Eu)=>(0,Ou.jsx)("tr",{children:uu.map(((uu,Eu)=>(0,Ou.jsx)("td",{children:(0,Ou.jsx)(pE,{text:uu})},Eu)))},Eu)))})]})});case"list":return(0,Ou.jsx)(Cj,{items:Eu.items,ordered:Eu.ordered});case"quote":return(0,Ou.jsx)("aside",{className:Zu()("DocsCallout",bj(Eu.blocks)),children:(0,Ou.jsx)(Nj,{blocks:Eu.blocks})});case"rule":return(0,Ou.jsx)("hr",{className:"DocsRule"})}}function Nj(uu){let{blocks:Eu}=uu;return(0,Ou.jsx)(Ou.Fragment,{children:Eu.map(((uu,Eu)=>(0,Ou.jsx)(cj,{block:uu},Eu)))})}var Oj=ju(4934),Yj=ju(4938);function hj(uu){return"blocks"===uu||"items"===uu}const Dj=new Map;function gj(uu){let Eu=Dj.get(uu);return Eu||(Eu=function(uu){const Eu={entries:[],legend:[],notes:[],examples:[]};let ju=!1;for(const Zu of uu.split(/\r?\n/).slice(1)){if(Zu.startsWith("#")){const uu=Zu.replace(/^# ?/,""),su=uu.match(/^\s+([A-Z]+)\s+=\s+(\w+)\s+->\s+(.+)$/);su?Eu.legend.push({code:su[1],meaning:su[2],usage:su[3].trim()}):/^Examples:/.test(uu.trim())?ju=!0:ju&&uu.trim()?Eu.examples.push(uu.trim()):uu.trim()&&!/^\s/.test(uu)&&Eu.notes.push(uu.trim());continue}const uu=Zu.trim().match(/^(.+?)(?:\s+\[([A-Z,]+)\])?$/);var su,Uu;uu&&Eu.entries.push({name:uu[1],variants:null!==(su=null===(Uu=uu[2])||void 0===Uu?void 0:Uu.split(","))&&void 0!==su?su:[]})}return Eu}("blocks"===uu?Oj:Yj),Dj.set(uu,Eu)),Eu}function Mj(uu){let{className:Eu,value:ju,placeholder:su,label:Uu,onChange:Zu,count:Xu,children:lu}=uu;return(0,Ou.jsxs)("div",{className:Eu,children:[(0,Ou.jsx)(hu,{name:"magnifying-glass"}),(0,Ou.jsx)("input",{type:"search",value:ju,placeholder:su,"aria-label":Uu,onChange:uu=>{Zu(uu.target.value)}}),lu,Xu&&(0,Ou.jsxs)("span",{className:"DocsFilterCount",children:[Xu.visible," of ",Xu.total]})]})}var ej=ju(1116);function Gj(uu){const Eu=uu.trim().match(/^(` {
                           1,
                           2
-                        })\ s * ([ ^ `]+?)\s*\1$/);return et?et[2]:null}function uV(tt){return"paragraph"===tt.kind&&""===tt.text.trim()}function KV(tt){const et={name:tt.heading.text,description:[],params:[],returns:null};let Vt="description";for(const qt of tt.blocks)if(!uV(qt))if("heading"===qt.kind&&/^Parameters:?$/.test(qt.text))Vt="params";else if("heading"===qt.kind&&/^Returns:?$/.test(qt.text))Vt="returns",et.returns={type:"",description:[]};else if("params"!==Vt||"table"!==qt.kind){if("returns"===Vt&&"paragraph"===qt.kind&&""===et.returns.type){const tt=CV(qt.text);if(null!==tt){et.returns.type=tt.replaceAll("\\|","|");continue}}"returns"===Vt?et.returns.description.push(qt):et.description.push(qt)}else for(const[tt,Vt,Dt]of qt.rows){var Ot;et.params.push({name:tt,type:null!==(Ot=CV(Vt))&&void 0!==Ot?Ot:Vt,description:null!==Dt&&void 0!==Dt?Dt:""})}return et}const hV=/^\*\*(Type|Default|Example):\*\*\s*(.*)$/;function vV(tt){return tt.filter((tt=>!uV(tt)))}const WV=/^[\w][\w .'&!:()-]*$/,SV=/^` [ ^ `]+`( ? : [\s, ] * `[^`] + `)*$/;function cV(tt){var et;if("code"===tt.kind&&"text"===tt.lang){const et=tt.code.split("\n").map((tt=>tt.trim())).filter(Boolean);return et.length>0&&et.every((tt=>WV.test(tt)))?et.map((tt=>({name:tt}))):null}return"paragraph"===tt.kind&&SV.test(tt.text.trim())?[...tt.text.matchAll(/`([ ^ `]+)` / g)].flatMap((tt => tt[1].split(/,\s*/).map((tt => ({
-                              name: tt.trim()
-                            }))))): "table" === tt.kind && null !== (et = tt.header[0]) && void 0 !== et && et.startsWith("Song") ? tt.rows.map((tt => {
-                              let [et, Vt] = tt;
+                        })\ s * ([ ^ `]+?)\s*\1$/);return Eu?Eu[2]:null}function pj(uu){return"paragraph"===uu.kind&&""===uu.text.trim()}function wj(uu){const Eu={name:uu.heading.text,description:[],params:[],returns:null};let ju="description";for(const Uu of uu.blocks)if(!pj(Uu))if("heading"===Uu.kind&&/^Parameters:?$/.test(Uu.text))ju="params";else if("heading"===Uu.kind&&/^Returns:?$/.test(Uu.text))ju="returns",Eu.returns={type:"",description:[]};else if("params"!==ju||"table"!==Uu.kind){if("returns"===ju&&"paragraph"===Uu.kind&&""===Eu.returns.type){const uu=Gj(Uu.text);if(null!==uu){Eu.returns.type=uu.replaceAll("\\|","|");continue}}"returns"===ju?Eu.returns.description.push(Uu):Eu.description.push(Uu)}else for(const[uu,ju,Zu]of Uu.rows){var su;Eu.params.push({name:uu,type:null!==(su=Gj(ju))&&void 0!==su?su:ju,description:null!==Zu&&void 0!==Zu?Zu:""})}return Eu}const Jj=/^\*\*(Type|Default|Example):\*\*\s*(.*)$/;function dj(uu){return uu.filter((uu=>!pj(uu)))}const aj=/^[\w][\w .'&!:()-]*$/,Pj=/^` [ ^ `]+`( ? : [\s, ] * `[^`] + `)*$/;function oj(uu){var Eu;if("code"===uu.kind&&"text"===uu.lang){const Eu=uu.code.split("\n").map((uu=>uu.trim())).filter(Boolean);return Eu.length>0&&Eu.every((uu=>aj.test(uu)))?Eu.map((uu=>({name:uu}))):null}return"paragraph"===uu.kind&&Pj.test(uu.text.trim())?[...uu.text.matchAll(/`([ ^ `]+)` / g)].flatMap((uu => uu[1].split(/,\s*/).map((uu => ({
+                              name: uu.trim()
+                            }))))): "table" === uu.kind && null !== (Eu = uu.header[0]) && void 0 !== Eu && Eu.startsWith("Song") ? uu.rows.map((uu => {
+                              let [Eu, ju] = uu;
                               return {
-                                name: et.replace(/`/g, ""),
-                                caption: Vt
+                                name: Eu.replace(/`/g, ""),
+                                caption: ju
                               }
                             })) : null
                           }
 
-                          function RV(tt) {
-                            const et = [];
-                            for (const Vt of tt) {
-                              const tt = cV(Vt),
-                                Ot = et.at(-1),
-                                qt = "table" === Vt.kind;
-                              tt ? "names" === (null === Ot || void 0 === Ot ? void 0 : Ot.kind) && Ot.isSongs === qt ? Ot.names.push(...tt) : et.push({
+                          function kj(uu) {
+                            const Eu = [];
+                            for (const ju of uu) {
+                              const uu = oj(ju),
+                                su = Eu.at(-1),
+                                Uu = "table" === ju.kind;
+                              uu ? "names" === (null === su || void 0 === su ? void 0 : su.kind) && su.isSongs === Uu ? su.names.push(...uu) : Eu.push({
                                 kind: "names",
-                                names: tt,
-                                isSongs: qt
-                              }) : et.push({
+                                names: uu,
+                                isSongs: Uu
+                              }) : Eu.push({
                                 kind: "block",
-                                block: Vt
+                                block: ju
                               })
                             }
-                            return et
+                            return Eu
                           }
-                          const IV = {
+                          const mj = {
                             icons: "icon",
                             particles: "particle",
                             sounds: "sound",
@@ -1624,58 +1624,58 @@ export const modules = {
                             items: "item"
                           };
 
-                          function PV(tt, et) {
-                            return `${IV[tt]}-${(0,ht.v)(et)}`
+                          function vj(uu, Eu) {
+                            return `${mj[uu]}-${(0,Ju.u)(Eu)}`
                           }
-                          const ZV = new WeakMap;
+                          const Kj = new WeakMap;
 
-                          function LV(tt, et, Vt) {
-                            let Ot = ZV.get(et);
-                            if (!Ot) {
-                              Ot = new Map;
-                              const Vt = new Set;
-                              for (const qt of (0, ht.z)(et)) {
-                                const et = RV(vV(qt.blocks)).map((et => {
-                                  if ("block" === et.kind) return et;
+                          function Vj(uu, Eu, ju) {
+                            let su = Kj.get(Eu);
+                            if (!su) {
+                              su = new Map;
+                              const ju = new Set;
+                              for (const Uu of (0, Ju.y)(Eu)) {
+                                const Eu = kj(dj(Uu.blocks)).map((Eu => {
+                                  if ("block" === Eu.kind) return Eu;
                                   return {
                                     kind: "names",
-                                    names: et.names.map((et => {
-                                      var Ot, Dt;
-                                      const mt = PV(tt, et.name);
-                                      let dt = mt;
-                                      for (let tt = 2; Vt.has(dt); tt++) dt = `${mt}-${tt}`;
-                                      return Vt.add(dt), {
-                                        ...et,
-                                        anchor: dt,
-                                        heading: null !== (Ot = null === (Dt = qt.heading) || void 0 === Dt ? void 0 : Dt.text) && void 0 !== Ot ? Ot : ""
+                                    names: Eu.names.map((Eu => {
+                                      var su, Zu;
+                                      const Xu = vj(uu, Eu.name);
+                                      let lu = Xu;
+                                      for (let uu = 2; ju.has(lu); uu++) lu = `${Xu}-${uu}`;
+                                      return ju.add(lu), {
+                                        ...Eu,
+                                        anchor: lu,
+                                        heading: null !== (su = null === (Zu = Uu.heading) || void 0 === Zu ? void 0 : Zu.text) && void 0 !== su ? su : ""
                                       }
                                     })),
-                                    isSongs: et.isSongs
+                                    isSongs: Eu.isSongs
                                   }
                                 }));
-                                Ot.set(qt.blocks, et)
+                                su.set(Uu.blocks, Eu)
                               }
-                              ZV.set(et, Ot)
+                              Kj.set(Eu, su)
                             }
-                            const qt = Ot.get(Vt);
-                            if (!qt) throw new Error("Gallery blocks must be the page's intro or one of its sections");
-                            return qt
+                            const Uu = su.get(ju);
+                            if (!Uu) throw new Error("Gallery blocks must be the page's intro or one of its sections");
+                            return Uu
                           }
-                          const FV = "/textures/docs/skinPreviews",
-                            kV = [{
+                          const rj = "/textures/docs/skinPreviews",
+                            Qj = [{
                               heading: "NPC Skins",
                               prefix: "npc"
                             }, {
                               heading: "Poses",
                               prefix: "pose"
                             }];
-                          var GV = Vt(4322),
-                            zV = Vt(4339);
+                          var ij = ju(4408),
+                            Wj = ju(4427);
 
-                          function oV(tt) {
-                            return Object.hasOwn(GV.g, tt) ? GV.g[tt] : null
+                          function Sj(uu) {
+                            return Object.hasOwn(ij.h, uu) ? ij.h[uu] : null
                           }
-                          const rV = {
+                          const Ij = {
                             dir1: [-1, -1, -1],
                             dir2: [1, 1, 1],
                             texture: "bubble",
@@ -1697,453 +1697,453 @@ export const modules = {
                               factor: 1,
                               factor2: 1
                             }],
-                            blendMode: zV.f.Standard
+                            blendMode: Wj.e.Standard
                           };
 
-                          function UV(tt, et, Vt) {
-                            return et + (Vt - et) * tt()
+                          function Fj(uu, Eu, ju) {
+                            return Eu + (ju - Eu) * uu()
                           }
 
-                          function AV(tt, et, Vt) {
-                            return tt + (et - tt) * Vt
+                          function Bj(uu, Eu, ju) {
+                            return uu + (Eu - uu) * ju
                           }
 
-                          function iV(tt) {
-                            return tt.length > 0 && "timeFraction" in tt[0]
+                          function Lj(uu) {
+                            return uu.length > 0 && "timeFraction" in uu[0]
                           }
 
-                          function YV(tt, et) {
-                            if (0 === tt.colorGradients.length) return [{
+                          function tj(uu, Eu) {
+                            if (0 === uu.colorGradients.length) return [{
                               at: 0,
                               colour: [1, 1, 1, 1]
                             }];
-                            if (!iV(tt.colorGradients)) {
-                              const Vt = tt.colorGradients,
+                            if (!Lj(uu.colorGradients)) {
+                              const ju = uu.colorGradients,
                                 {
-                                  color: Ot
-                                } = Vt[Math.floor(et() * Vt.length) % Vt.length];
+                                  color: su
+                                } = ju[Math.floor(Eu() * ju.length) % ju.length];
                               return [{
                                 at: 0,
-                                colour: [Ot[0] / 255, Ot[1] / 255, Ot[2] / 255, 1]
+                                colour: [su[0] / 255, su[1] / 255, su[2] / 255, 1]
                               }]
                             }
-                            return [...tt.colorGradients].sort(((tt, et) => tt.timeFraction - et.timeFraction)).map((tt => {
-                              var Vt, Ot, qt;
-                              const Dt = tt.minColor,
-                                mt = null !== (Vt = tt.maxColor) && void 0 !== Vt ? Vt : Dt,
-                                dt = et(),
-                                jt = [AV(Dt[0], mt[0], dt) / 255, AV(Dt[1], mt[1], dt) / 255, AV(Dt[2], mt[2], dt) / 255, AV(null !== (Ot = Dt[3]) && void 0 !== Ot ? Ot : 1, null !== (qt = mt[3]) && void 0 !== qt ? qt : 1, dt)];
+                            return [...uu.colorGradients].sort(((uu, Eu) => uu.timeFraction - Eu.timeFraction)).map((uu => {
+                              var ju, su, Uu;
+                              const Zu = uu.minColor,
+                                Xu = null !== (ju = uu.maxColor) && void 0 !== ju ? ju : Zu,
+                                lu = Eu(),
+                                qu = [Bj(Zu[0], Xu[0], lu) / 255, Bj(Zu[1], Xu[1], lu) / 255, Bj(Zu[2], Xu[2], lu) / 255, Bj(null !== (su = Zu[3]) && void 0 !== su ? su : 1, null !== (Uu = Xu[3]) && void 0 !== Uu ? Uu : 1, lu)];
                               return {
-                                at: tt.timeFraction,
-                                colour: jt
+                                at: uu.timeFraction,
+                                colour: qu
                               }
                             }))
                           }
 
-                          function BV(tt, et, Vt, Ot) {
-                            const qt = UV(Ot, tt.minEmitPower, tt.maxEmitPower),
-                              Dt = et => UV(Ot, Math.min(tt.dir1[et], tt.dir2[et]), Math.max(tt.dir1[et], tt.dir2[et])) * qt,
-                              mt = [...tt.velocityGradients].sort(((tt, et) => tt.timeFraction - et.timeFraction)).map((tt => ({
-                                at: tt.timeFraction,
-                                factor: UV(Ot, tt.factor, tt.factor2)
+                          function xj(uu, Eu, ju, su) {
+                            const Uu = Fj(su, uu.minEmitPower, uu.maxEmitPower),
+                              Zu = Eu => Fj(su, Math.min(uu.dir1[Eu], uu.dir2[Eu]), Math.max(uu.dir1[Eu], uu.dir2[Eu])) * Uu,
+                              Xu = [...uu.velocityGradients].sort(((uu, Eu) => uu.timeFraction - Eu.timeFraction)).map((uu => ({
+                                at: uu.timeFraction,
+                                factor: Fj(su, uu.factor, uu.factor2)
                               })));
                             return {
-                              pos: [UV(Ot, et[0], Vt[0]), UV(Ot, et[1], Vt[1]), UV(Ot, et[2], Vt[2])],
-                              dir: [Dt(0), Dt(1), Dt(2)],
+                              pos: [Fj(su, Eu[0], ju[0]), Fj(su, Eu[1], ju[1]), Fj(su, Eu[2], ju[2])],
+                              dir: [Zu(0), Zu(1), Zu(2)],
                               age: 0,
-                              life: UV(Ot, tt.minLifeTime, tt.maxLifeTime),
-                              size: UV(Ot, tt.minSize, tt.maxSize),
-                              colours: YV(tt, Ot),
-                              velocityFactors: mt
+                              life: Fj(su, uu.minLifeTime, uu.maxLifeTime),
+                              size: Fj(su, uu.minSize, uu.maxSize),
+                              colours: tj(uu, su),
+                              velocityFactors: Xu
                             }
                           }
 
-                          function pV(tt, et, Vt, Ot) {
-                            if (et < tt[0].at) return Vt(Math.min(1, tt.length - 1));
-                            for (let qt = 0; qt < tt.length - 1; qt++)
-                              if (et <= tt[qt + 1].at) {
-                                const Dt = tt[qt + 1].at - tt[qt].at;
-                                return Ot(Vt(qt), Vt(qt + 1), Dt > 0 ? (et - tt[qt].at) / Dt : 1)
-                              } return Vt(tt.length - 1)
+                          function Tj(uu, Eu, ju, su) {
+                            if (Eu < uu[0].at) return ju(Math.min(1, uu.length - 1));
+                            for (let Uu = 0; Uu < uu.length - 1; Uu++)
+                              if (Eu <= uu[Uu + 1].at) {
+                                const Zu = uu[Uu + 1].at - uu[Uu].at;
+                                return su(ju(Uu), ju(Uu + 1), Zu > 0 ? (Eu - uu[Uu].at) / Zu : 1)
+                              } return ju(uu.length - 1)
                           }
 
-                          function xV(tt) {
-                            return pV(tt.colours, tt.age / tt.life, (et => tt.colours[et].colour), ((tt, et, Vt) => [AV(tt[0], et[0], Vt), AV(tt[1], et[1], Vt), AV(tt[2], et[2], Vt), AV(tt[3], et[3], Vt)]))
+                          function Hj(uu) {
+                            return Tj(uu.colours, uu.age / uu.life, (Eu => uu.colours[Eu].colour), ((uu, Eu, ju) => [Bj(uu[0], Eu[0], ju), Bj(uu[1], Eu[1], ju), Bj(uu[2], Eu[2], ju), Bj(uu[3], Eu[3], ju)]))
                           }
 
-                          function TV(tt, et, Vt) {
-                            if (tt.age += Vt, tt.age >= tt.life) return !1;
-                            const Ot = function(tt) {
-                              return 0 === tt.velocityFactors.length ? 1 : pV(tt.velocityFactors, tt.age / tt.life, (et => tt.velocityFactors[et].factor), AV)
-                            }(tt) * Vt;
-                            for (let Dt = 0; Dt < 3; Dt++) {
-                              var qt;
-                              tt.pos[Dt] += tt.dir[Dt] * Ot, tt.dir[Dt] += (null !== (qt = et[Dt]) && void 0 !== qt ? qt : 0) * Vt
+                          function Aj(uu, Eu, ju) {
+                            if (uu.age += ju, uu.age >= uu.life) return !1;
+                            const su = function(uu) {
+                              return 0 === uu.velocityFactors.length ? 1 : Tj(uu.velocityFactors, uu.age / uu.life, (Eu => uu.velocityFactors[Eu].factor), Bj)
+                            }(uu) * ju;
+                            for (let Zu = 0; Zu < 3; Zu++) {
+                              var Uu;
+                              uu.pos[Zu] += uu.dir[Zu] * su, uu.dir[Zu] += (null !== (Uu = Eu[Zu]) && void 0 !== Uu ? Uu : 0) * ju
                             }
                             return !0
                           }
 
-                          function gV(tt) {
-                            return String(Math.round(1e6 * tt) / 1e6)
+                          function nj(uu) {
+                            return String(Math.round(1e6 * uu) / 1e6)
                           }
 
-                          function sV(tt) {
-                            return `[${tt.map(gV).join(", ")}]`
+                          function yj(uu) {
+                            return `[${uu.map(nj).join(", ")}]`
                           }
 
-                          function nV(tt, et) {
-                            const Vt = `${et}    `;
-                            return `[\n${(iV(tt)?tt.map((tt=>{const et=[`${Vt}    timeFraction: ${gV(tt.timeFraction)},`,`${Vt}    minColor: ${sV(tt.minColor)},`];return tt.maxColor&&et.push(`${Vt}    maxColor: ${sV(tt.maxColor)},`),`${Vt}{\n${et.join("\n")}\n${Vt}},`})):tt.map((tt=>`
+                          function zj(uu, Eu) {
+                            const ju = `${Eu}    `;
+                            return `[\n${(Lj(uu)?uu.map((uu=>{const Eu=[`${ju}    timeFraction: ${nj(uu.timeFraction)},`,`${ju}    minColor: ${yj(uu.minColor)},`];return uu.maxColor&&Eu.push(`${ju}    maxColor: ${yj(uu.maxColor)},`),`${ju}{\n${Eu.join("\n")}\n${ju}},`})):uu.map((uu=>`
                             $ {
-                              Vt
+                              ju
                             } {
                               color: $ {
-                                sV(tt.color)
+                                yj(uu.color)
                               }
-                            }, `))).join("\n")}\n${et}]`
+                            }, `))).join("\n")}\n${Eu}]`
                           }
-                          const tO = "let [x, y, z] = thisPos\ny += 1\napi.playParticleEffect({\n",
-                            eO = "    pos1: [x, y, z],\n    pos2: [x + 1, y + 1, z + 1],";
-                          const VO = .6;
+                          const Rj = "let [x, y, z] = thisPos\ny += 1\napi.playParticleEffect({\n",
+                            us = "    pos1: [x, y, z],\n    pos2: [x + 1, y + 1, z + 1],";
+                          const Es = .6;
 
-                          function OO(tt, et) {
-                            return `${et?"song":"sound"}:${tt}`
+                          function ss(uu, Eu) {
+                            return `${Eu?"song":"sound"}:${uu}`
                           }
-                          let qO = {
+                          let Us = {
                               track: null,
-                              volume: VO
+                              volume: Es
                             },
-                            DO = null,
-                            mO = 0,
-                            dO = 0;
-                          const jO = new Set;
+                            Zs = null,
+                            Xs = 0,
+                            ls = 0;
+                          const qs = new Set;
 
-                          function HO(tt) {
-                            qO = {
-                              ...qO,
-                              ...tt
-                            }, jO.forEach((tt => {
-                              tt()
+                          function fs(uu) {
+                            Us = {
+                              ...Us,
+                              ...uu
+                            }, qs.forEach((uu => {
+                              uu()
                             }))
                           }
 
-                          function XO(tt) {
-                            qO.track && HO({
+                          function Cs(uu) {
+                            Us.track && fs({
                               track: {
-                                ...qO.track,
-                                ...tt
+                                ...Us.track,
+                                ...uu
                               }
                             })
                           }
 
-                          function QO(tt) {
-                            const [et, Vt] = (0, Ot.useState)((() => tt(qO))), qt = (0, Ot.useRef)(tt);
-                            return qt.current = tt, (0, Ot.useEffect)((() => {
-                              const tt = () => {
-                                Vt((() => qt.current(qO)))
+                          function bs(uu) {
+                            const [Eu, ju] = (0, su.useState)((() => uu(Us))), Uu = (0, su.useRef)(uu);
+                            return Uu.current = uu, (0, su.useEffect)((() => {
+                              const uu = () => {
+                                ju((() => Uu.current(Us)))
                               };
-                              return jO.add(tt), tt(), () => {
-                                jO.delete(tt)
+                              return qs.add(uu), uu(), () => {
+                                qs.delete(uu)
                               }
-                            }), []), et
+                            }), []), Eu
                           }
 
-                          function lO() {
-                            mO++;
-                            const tt = DO;
-                            DO = null, null === tt || void 0 === tt || tt.stop()
+                          function cs() {
+                            Xs++;
+                            const uu = Zs;
+                            Zs = null, null === uu || void 0 === uu || uu.stop()
                           }
 
-                          function EO(tt, et) {
-                            let Ot = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-                            lO();
-                            const qt = mO,
+                          function Ns(uu, Eu) {
+                            let su = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+                            cs();
+                            const Uu = Xs,
                               {
-                                track: Dt
-                              } = qO,
-                              mt = Dt && Dt.name === tt && Dt.isSong === et ? Dt.duration : 0;
-                            dO = Ot, HO({
+                                track: Zu
+                              } = Us,
+                              Xu = Zu && Zu.name === uu && Zu.isSong === Eu ? Zu.duration : 0;
+                            ls = su, fs({
                               track: {
-                                name: tt,
-                                isSong: et,
+                                name: uu,
+                                isSong: Eu,
                                 status: "loading",
-                                duration: mt
+                                duration: Xu
                               }
-                            }), Promise.all([Vt.e(227), Vt.e(253)]).then((() => Vt(40008))).then((Vt => {
+                            }), Promise.all([ju.e(227), ju.e(253)]).then((() => ju(40076))).then((ju => {
                               let {
-                                playDocsSound: Dt
-                              } = Vt;
-                              qt === mO && (DO = Dt(tt, et, qO.volume, Ot, {
-                                onPlay: tt => {
-                                  qt === mO && XO({
+                                playDocsSound: Zu
+                              } = ju;
+                              Uu === Xs && (Zs = Zu(uu, Eu, Us.volume, su, {
+                                onPlay: uu => {
+                                  Uu === Xs && Cs({
                                     status: "playing",
-                                    duration: tt
+                                    duration: uu
                                   })
                                 },
-                                onEnd: tt => {
-                                  var et, Vt;
-                                  qt === mO && (DO = null, tt ? HO({
+                                onEnd: uu => {
+                                  var Eu, ju;
+                                  Uu === Xs && (Zs = null, uu ? fs({
                                     track: null
-                                  }) : (dO = null !== (et = null === (Vt = qO.track) || void 0 === Vt ? void 0 : Vt.duration) && void 0 !== et ? et : 0, XO({
+                                  }) : (ls = null !== (Eu = null === (ju = Us.track) || void 0 === ju ? void 0 : ju.duration) && void 0 !== Eu ? Eu : 0, Cs({
                                     status: "paused"
                                   })))
                                 }
                               }))
-                            })).catch((et => {
-                              console.error(`Could not play docs sound ${tt}`, et), qt === mO && HO({
+                            })).catch((Eu => {
+                              console.error(`Could not play docs sound ${uu}`, Eu), Uu === Xs && fs({
                                 track: null
                               })
                             }))
                           }
 
-                          function fO() {
+                          function Os() {
                             const {
-                              track: tt
-                            } = qO;
-                            if (!tt) return;
-                            if ("playing" === tt.status && DO) return dO = DO.YM(), DO.pause(), void XO({
+                              track: uu
+                            } = Us;
+                            if (!uu) return;
+                            if ("playing" === uu.status && Zs) return ls = Zs.bM(), Zs.pause(), void Cs({
                               status: "paused"
                             });
-                            if ("loading" === tt.status) return lO(), void XO({
+                            if ("loading" === uu.status) return cs(), void Cs({
                               status: "paused"
                             });
-                            if (DO) return void DO.resume();
-                            const et = tt.duration > 0 && dO >= tt.duration - .05;
-                            EO(tt.name, tt.isSong, et ? 0 : dO)
+                            if (Zs) return void Zs.resume();
+                            const Eu = uu.duration > 0 && ls >= uu.duration - .05;
+                            Ns(uu.name, uu.isSong, Eu ? 0 : ls)
                           }
 
-                          function wO() {
-                            var tt;
-                            return DO && "playing" === (null === (tt = qO.track) || void 0 === tt ? void 0 : tt.status) ? DO.YM() : dO
+                          function Ys() {
+                            var uu;
+                            return Zs && "playing" === (null === (uu = Us.track) || void 0 === uu ? void 0 : uu.status) ? Zs.bM() : ls
                           }
 
-                          function yO(tt) {
-                            var et;
-                            null === (et = DO) || void 0 === et || et.setVolume(tt), HO({
-                              volume: tt
+                          function hs(uu) {
+                            var Eu;
+                            null === (Eu = Zs) || void 0 === Eu || Eu.setVolume(uu), fs({
+                              volume: uu
                             })
                           }
 
-                          function NO() {
-                            lO(), dO = 0, HO({
+                          function Ds() {
+                            cs(), ls = 0, fs({
                               track: null
                             })
                           }
-                          const aO = (0, Ot.createContext)(null);
-                          let MO = null;
+                          const gs = (0, su.createContext)(null);
+                          let Ms = null;
 
-                          function bO() {
-                            const [tt, et] = (0, Ot.useState)(null);
-                            return (0, Ot.useEffect)((() => {
-                              let tt = !1;
-                              return MO ??= Promise.all([Vt.e(73), Vt.e(76), Vt.e(75), Vt.e(74), Vt.e(188), Vt.e(100), Vt.e(231)]).then((() => Vt(40001))), MO.then((Vt => {
-                                tt || et(Vt)
-                              }), (tt => {
-                                console.error("Could not load the docs gallery's textures", tt), MO = null
+                          function es() {
+                            const [uu, Eu] = (0, su.useState)(null);
+                            return (0, su.useEffect)((() => {
+                              let uu = !1;
+                              return Ms ??= Promise.all([ju.e(73), ju.e(76), ju.e(75), ju.e(74), ju.e(188), ju.e(100), ju.e(231)]).then((() => ju(40070))), Ms.then((ju => {
+                                uu || Eu(ju)
+                              }), (uu => {
+                                console.error("Could not load the docs gallery's textures", uu), Ms = null
                               })), () => {
-                                tt = !0
+                                uu = !0
                               }
-                            }), []), tt
+                            }), []), uu
                           }
-                          const JO = 24,
-                            CO = /^[a-z]+_(\d+(_\d+)?|none)$/;
+                          const Gs = 24,
+                            ps = /^[a-z]+_(\d+(_\d+)?|none)$/;
 
-                          function uO(tt, et) {
-                            const Vt = "skins" === tt ? function(tt, et) {
-                              const Vt = kV.find((et => tt.startsWith(et.heading)));
-                              return Vt ? function(tt, et) {
-                                return `${tt}-${et}`
-                              }(Vt.prefix, et) : null
-                            }(et.heading, et.name) : null;
-                            return null === Vt ? null : `${FV}/${Vt}.webp`
+                          function ws(uu, Eu) {
+                            const ju = "skins" === uu ? function(uu, Eu) {
+                              const ju = Qj.find((Eu => uu.startsWith(Eu.heading)));
+                              return ju ? function(uu, Eu) {
+                                return `${uu}-${Eu}`
+                              }(ju.prefix, Eu) : null
+                            }(Eu.heading, Eu.name) : null;
+                            return null === ju ? null : `${rj}/${ju}.webp`
                           }
 
-                          function KO(tt) {
+                          function ds(uu) {
                             let {
-                              kind: et,
-                              entry: Vt,
-                              assets: qt,
-                              renderedUrl: mt
-                            } = tt;
+                              kind: Eu,
+                              entry: ju,
+                              assets: Uu,
+                              renderedUrl: Xu
+                            } = uu;
                             const {
-                              name: dt
-                            } = Vt, [jt, Ht] = (0, Ot.useState)(!1);
-                            if ("icons" === et && oe(dt)) return (0, ft.jsx)(JV.b, {
+                              name: lu
+                            } = ju, [qu, fu] = (0, su.useState)(!1);
+                            if ("icons" === Eu && SE(lu)) return (0, Ou.jsx)(ej.e, {
                               className: "DocsTileIcon",
-                              name: dt
+                              name: lu
                             });
-                            let Xt = null;
-                            var Qt;
-                            if ("icons" === et) Xt = null !== (Qt = null === qt || void 0 === qt ? void 0 : qt.getIngameIconUrl(dt)) && void 0 !== Qt ? Qt : null;
-                            else if ("particles" === et) {
-                              var lt, Et, wt;
-                              Xt = null !== (lt = null === qt || void 0 === qt ? void 0 : qt.getParticleTextureUrl(null !== (Et = null === (wt = oV(dt)) || void 0 === wt ? void 0 : wt.texture) && void 0 !== Et ? Et : dt)) && void 0 !== lt ? lt : null
-                            } else "skins" === et && (Xt = null !== mt && void 0 !== mt ? mt : CO.test(dt) ? `/textures/charSkins/previews/${dt}_preview.png` : null);
-                            return !Xt || jt ? (0, ft.jsx)(yt, {
+                            let Cu = null;
+                            var bu;
+                            if ("icons" === Eu) Cu = null !== (bu = null === Uu || void 0 === Uu ? void 0 : Uu.getIngameIconUrl(lu)) && void 0 !== bu ? bu : null;
+                            else if ("particles" === Eu) {
+                              var cu, Nu, Yu;
+                              Cu = null !== (cu = null === Uu || void 0 === Uu ? void 0 : Uu.getParticleTextureUrl(null !== (Nu = null === (Yu = Sj(lu)) || void 0 === Yu ? void 0 : Yu.texture) && void 0 !== Nu ? Nu : lu)) && void 0 !== cu ? cu : null
+                            } else "skins" === Eu && (Cu = null !== Xu && void 0 !== Xu ? Xu : ps.test(lu) ? `/textures/charSkins/previews/${lu}_preview.png` : null);
+                            return !Cu || qu ? (0, Ou.jsx)(hu, {
                               className: "DocsTileIcon Placeholder",
-                              name: "skins" === et ? "person" : "image"
-                            }) : (0, ft.jsx)("img", {
-                              className: Dt()("DocsTileImage", {
-                                Pixelated: "skins" !== et
+                              name: "skins" === Eu ? "person" : "image"
+                            }) : (0, Ou.jsx)("img", {
+                              className: Zu()("DocsTileImage", {
+                                Pixelated: "skins" !== Eu
                               }),
-                              src: Xt,
-                              srcSet: Xt === mt ? `${Xt} 2x` : void 0,
+                              src: Cu,
+                              srcSet: Cu === Xu ? `${Cu} 2x` : void 0,
                               alt: "",
                               loading: "lazy",
                               onError: () => {
-                                console.warn(`Docs gallery: could not load ${Xt}`), Ht(!0)
+                                console.warn(`Docs gallery: could not load ${Cu}`), fu(!0)
                               }
                             })
                           }
 
-                          function hO(tt) {
+                          function as(uu) {
                             let {
-                              entry: et,
-                              isSong: Vt
-                            } = tt;
-                            const Ot = QO((tt => {
+                              entry: Eu,
+                              isSong: ju
+                            } = uu;
+                            const su = bs((uu => {
                                 let {
-                                  track: Ot
-                                } = tt;
-                                return (null === Ot || void 0 === Ot ? void 0 : Ot.name) === et.name && Ot.isSong === Vt ? Ot.status : null
+                                  track: su
+                                } = uu;
+                                return (null === su || void 0 === su ? void 0 : su.name) === Eu.name && su.isSong === ju ? su.status : null
                               })),
-                              qt = null !== Ot && "paused" !== Ot;
-                            return (0, ft.jsxs)("button", {
+                              Uu = null !== su && "paused" !== su;
+                            return (0, Ou.jsxs)("button", {
                               type: "button",
-                              id: et.anchor,
-                              className: Dt()("DocsSoundTile", {
-                                Playing: qt
+                              id: Eu.anchor,
+                              className: Zu()("DocsSoundTile", {
+                                Playing: Uu
                               }),
-                              "data-docs-track": OO(et.name, Vt),
-                              "aria-label": qt ? `Pause ${et.name}` : `Play ${et.name}`,
+                              "data-docs-track": ss(Eu.name, ju),
+                              "aria-label": Uu ? `Pause ${Eu.name}` : `Play ${Eu.name}`,
                               onClick: () => {
-                                null !== Ot ? fO() : EO(et.name, Vt)
+                                null !== su ? Os() : Ns(Eu.name, ju)
                               },
-                              children: [(0, ft.jsx)("span", {
+                              children: [(0, Ou.jsx)("span", {
                                 className: "DocsSoundPlay",
-                                children: (0, ft.jsx)(yt, {
-                                  name: qt ? "pause" : "play"
+                                children: (0, Ou.jsx)(hu, {
+                                  name: Uu ? "pause" : "play"
                                 })
-                              }), (0, ft.jsx)("code", {
+                              }), (0, Ou.jsx)("code", {
                                 className: "DocsSoundName",
-                                children: et.name
-                              }), et.caption && (0, ft.jsx)("span", {
+                                children: Eu.name
+                              }), Eu.caption && (0, Ou.jsx)("span", {
                                 className: "DocsSoundCaption",
-                                children: et.caption
+                                children: Eu.caption
                               })]
                             })
                           }
 
-                          function vO(tt) {
+                          function Ps(uu) {
                             let {
-                              kind: et,
-                              names: Vt,
-                              isSongs: qt
-                            } = tt;
-                            const mt = bO(),
-                              [dt, jt] = Mt(),
-                              Ht = !1 === (null === dt || void 0 === dt ? void 0 : dt.failed) ? dt.text : null,
-                              Xt = (0, Ot.useContext)(aO),
-                              [Qt, lt] = (0, Ot.useState)(""),
-                              Et = Qt.trim().toLowerCase(),
-                              wt = Et ? Vt.filter((tt => tt.name.toLowerCase().includes(Et))) : Vt;
-                            return (0, ft.jsxs)("div", {
+                              kind: Eu,
+                              names: ju,
+                              isSongs: Uu
+                            } = uu;
+                            const Xu = es(),
+                              [lu, qu] = gu(),
+                              fu = !1 === (null === lu || void 0 === lu ? void 0 : lu.failed) ? lu.text : null,
+                              Cu = (0, su.useContext)(gs),
+                              [bu, cu] = (0, su.useState)(""),
+                              Nu = bu.trim().toLowerCase(),
+                              Yu = Nu ? ju.filter((uu => uu.name.toLowerCase().includes(Nu))) : ju;
+                            return (0, Ou.jsxs)("div", {
                               className: "DocsGallery",
-                              children: [Vt.length > JO && (0, ft.jsx)(bV, {
+                              children: [ju.length > Gs && (0, Ou.jsx)(Mj, {
                                 className: "DocsGalleryFilter",
-                                value: Qt,
-                                placeholder: `Filter ${Vt.length} names\u2026`,
+                                value: bu,
+                                placeholder: `Filter ${ju.length} names\u2026`,
                                 label: "Filter names",
-                                onChange: lt,
-                                count: Et ? {
-                                  visible: wt.length,
-                                  total: Vt.length
+                                onChange: cu,
+                                count: Nu ? {
+                                  visible: Yu.length,
+                                  total: ju.length
                                 } : null
-                              }), (0, ft.jsx)("div", {
-                                className: Dt()("DocsGalleryGrid", `Kind-${et}`, {
-                                  Songs: qt
+                              }), (0, Ou.jsx)("div", {
+                                className: Zu()("DocsGalleryGrid", `Kind-${Eu}`, {
+                                  Songs: Uu
                                 }),
-                                children: wt.map((tt => {
-                                  if ("sounds" === et) return (0, ft.jsx)(hO, {
-                                    entry: tt,
-                                    isSong: qt
-                                  }, tt.anchor);
-                                  if (Xt && "particles" === et && oV(tt.name)) return (0, ft.jsxs)("button", {
+                                children: Yu.map((uu => {
+                                  if ("sounds" === Eu) return (0, Ou.jsx)(as, {
+                                    entry: uu,
+                                    isSong: Uu
+                                  }, uu.anchor);
+                                  if (Cu && "particles" === Eu && Sj(uu.name)) return (0, Ou.jsxs)("button", {
                                     type: "button",
-                                    id: tt.anchor,
-                                    className: Dt()("DocsTile Previewable", {
-                                      Copied: Ht === tt.name
+                                    id: uu.anchor,
+                                    className: Zu()("DocsTile Previewable", {
+                                      Copied: fu === uu.name
                                     }),
-                                    title: `Play "${tt.name}" in the playground and copy its name`,
+                                    title: `Play "${uu.name}" in the playground and copy its name`,
                                     onClick: () => {
-                                      Xt(tt.name), jt(tt.name)
+                                      Cu(uu.name), qu(uu.name)
                                     },
-                                    children: [(0, ft.jsxs)("span", {
+                                    children: [(0, Ou.jsxs)("span", {
                                       className: "DocsTilePreview",
-                                      children: [(0, ft.jsx)(KO, {
-                                        kind: et,
-                                        entry: tt,
-                                        assets: mt,
+                                      children: [(0, Ou.jsx)(ds, {
+                                        kind: Eu,
+                                        entry: uu,
+                                        assets: Xu,
                                         renderedUrl: null
-                                      }), (0, ft.jsx)("span", {
+                                      }), (0, Ou.jsx)("span", {
                                         className: "DocsTilePlayBadge",
-                                        children: (0, ft.jsx)(yt, {
+                                        children: (0, Ou.jsx)(hu, {
                                           name: "play"
                                         })
                                       })]
-                                    }), (0, ft.jsx)("span", {
+                                    }), (0, Ou.jsx)("span", {
                                       className: "DocsTileName",
-                                      children: Ht === tt.name ? "Copied!" : tt.name
+                                      children: fu === uu.name ? "Copied!" : uu.name
                                     })]
-                                  }, tt.anchor);
-                                  const Vt = uO(et, tt);
-                                  return (0, ft.jsxs)("button", {
+                                  }, uu.anchor);
+                                  const ju = ws(Eu, uu);
+                                  return (0, Ou.jsxs)("button", {
                                     type: "button",
-                                    id: tt.anchor,
-                                    className: Dt()("DocsTile", {
-                                      Copied: Ht === tt.name
+                                    id: uu.anchor,
+                                    className: Zu()("DocsTile", {
+                                      Copied: fu === uu.name
                                     }),
-                                    title: `Copy "${tt.name}"`,
+                                    title: `Copy "${uu.name}"`,
                                     onClick: () => {
-                                      jt(tt.name)
+                                      qu(uu.name)
                                     },
-                                    children: [(0, ft.jsx)("span", {
-                                      className: Dt()("DocsTilePreview", {
-                                        Rendered: null !== Vt
+                                    children: [(0, Ou.jsx)("span", {
+                                      className: Zu()("DocsTilePreview", {
+                                        Rendered: null !== ju
                                       }),
-                                      children: (0, ft.jsx)(KO, {
-                                        kind: et,
-                                        entry: tt,
-                                        assets: mt,
-                                        renderedUrl: Vt
+                                      children: (0, Ou.jsx)(ds, {
+                                        kind: Eu,
+                                        entry: uu,
+                                        assets: Xu,
+                                        renderedUrl: ju
                                       })
-                                    }), (0, ft.jsx)("span", {
+                                    }), (0, Ou.jsx)("span", {
                                       className: "DocsTileName",
-                                      children: Ht === tt.name ? "Copied!" : tt.name
+                                      children: fu === uu.name ? "Copied!" : uu.name
                                     })]
-                                  }, tt.anchor)
+                                  }, uu.anchor)
                                 }))
                               })]
                             })
                           }
 
-                          function WO(tt) {
+                          function os(uu) {
                             let {
-                              kind: et,
-                              content: Vt,
-                              blocks: Ot
-                            } = tt;
-                            return (0, ft.jsx)(ft.Fragment, {
-                              children: LV(et, Vt, Ot).map(((tt, Vt) => "block" === tt.kind ? (0, ft.jsx)(EV, {
-                                block: tt.block
-                              }, Vt) : (0, ft.jsx)(vO, {
-                                kind: et,
-                                names: tt.names,
-                                isSongs: tt.isSongs
-                              }, Vt)))
+                              kind: Eu,
+                              content: ju,
+                              blocks: su
+                            } = uu;
+                            return (0, Ou.jsx)(Ou.Fragment, {
+                              children: Vj(Eu, ju, su).map(((uu, ju) => "block" === uu.kind ? (0, Ou.jsx)(cj, {
+                                block: uu.block
+                              }, ju) : (0, Ou.jsx)(Ps, {
+                                kind: Eu,
+                                names: uu.names,
+                                isSongs: uu.isSongs
+                              }, ju)))
                             })
                           }
-                          const SO = [{
+                          const ks = [{
                             pageId: "readme"
                           }, {
                             pageId: "snippets",
@@ -2161,789 +2161,789 @@ export const modules = {
                             countNoun: "options"
                           }];
 
-                          function cO(tt) {
+                          function ms(uu) {
                             let {
-                              cards: et = SO,
-                              label: Vt = "Start here"
-                            } = tt;
-                            const qt = (0, Ot.useContext)(fe);
-                            return (0, ft.jsx)("nav", {
+                              cards: Eu = ks,
+                              label: ju = "Start here"
+                            } = uu;
+                            const Uu = (0, su.useContext)(NE);
+                            return (0, Ou.jsx)("nav", {
                               className: "DocsLandingCards",
-                              "aria-label": Vt,
-                              children: et.map((tt => {
+                              "aria-label": ju,
+                              children: Eu.map((uu => {
                                 let {
-                                  pageId: et,
-                                  countNoun: Vt
-                                } = tt;
-                                const Ot = zt(et);
-                                return (0, ft.jsxs)(mt.b, {
-                                  to: Yt(qt, Ot),
+                                  pageId: Eu,
+                                  countNoun: ju
+                                } = uu;
+                                const su = Wu(Eu);
+                                return (0, Ou.jsxs)(Xu.c, {
+                                  to: tu(Uu, su),
                                   className: "DocsLandingCard",
-                                  children: [(0, ft.jsx)("span", {
+                                  children: [(0, Ou.jsx)("span", {
                                     className: "DocsLandingCardIcon",
-                                    children: (0, ft.jsx)(yt, {
-                                      name: Ot.icon
+                                    children: (0, Ou.jsx)(hu, {
+                                      name: su.icon
                                     })
-                                  }), (0, ft.jsx)("span", {
+                                  }), (0, Ou.jsx)("span", {
                                     className: "DocsLandingCardTitle",
-                                    children: Ot.title
-                                  }), (0, ft.jsx)("span", {
+                                    children: su.title
+                                  }), (0, Ou.jsx)("span", {
                                     className: "DocsLandingCardSummary",
-                                    children: Ot.summary
-                                  }), Vt && (0, ft.jsxs)("span", {
+                                    children: su.summary
+                                  }), ju && (0, Ou.jsxs)("span", {
                                     className: "DocsLandingCardCount",
-                                    children: [rt(Ot).sections.length, " ", Vt]
+                                    children: [Iu(su).sections.length, " ", ju]
                                   })]
-                                }, et)
+                                }, Eu)
                               }))
                             })
                           }
-                          const RO = 240;
+                          const vs = 240;
 
-                          function IO(tt) {
+                          function Ks(uu) {
                             let {
-                              faces: et
-                            } = tt;
-                            return (0, ft.jsxs)("span", {
+                              faces: Eu
+                            } = uu;
+                            return (0, Ou.jsxs)("span", {
                               className: "DocsCube",
                               "aria-hidden": "true",
-                              children: [(0, ft.jsx)("span", {
+                              children: [(0, Ou.jsx)("span", {
                                 className: "DocsCubeFace Top",
                                 style: {
-                                  backgroundImage: `url("${et.top}")`
+                                  backgroundImage: `url("${Eu.top}")`
                                 }
-                              }), (0, ft.jsx)("span", {
+                              }), (0, Ou.jsx)("span", {
                                 className: "DocsCubeFace Left",
                                 style: {
-                                  backgroundImage: `url("${et.left}")`
+                                  backgroundImage: `url("${Eu.left}")`
                                 }
-                              }), (0, ft.jsx)("span", {
+                              }), (0, Ou.jsx)("span", {
                                 className: "DocsCubeFace Right",
                                 style: {
-                                  backgroundImage: `url("${et.right}")`
+                                  backgroundImage: `url("${Eu.right}")`
                                 }
                               })]
                             })
                           }
 
-                          function PO(tt) {
+                          function Vs(uu) {
                             let {
-                              src: et
-                            } = tt;
-                            const [Vt, qt] = (0, Ot.useState)(!1);
-                            return Vt ? null : (0, ft.jsx)("img", {
-                              src: et,
+                              src: Eu
+                            } = uu;
+                            const [ju, Uu] = (0, su.useState)(!1);
+                            return ju ? null : (0, Ou.jsx)("img", {
+                              src: Eu,
                               alt: "",
                               loading: "lazy",
                               onError: () => {
-                                console.warn(`Docs catalogue: could not load ${et}`), qt(!0)
+                                console.warn(`Docs catalogue: could not load ${Eu}`), Uu(!0)
                               }
                             })
                           }
 
-                          function ZO(tt) {
+                          function rs(uu) {
                             let {
-                              kind: et
-                            } = tt;
-                            const Vt = MV(et),
-                              qt = bO(),
-                              mt = (0, dt.s)(),
-                              [jt, Ht] = (0, Ot.useState)(""),
-                              [Xt, Qt] = (0, Ot.useState)(null),
-                              [lt, Et] = (0, Ot.useState)(RO),
-                              [wt, Nt] = (0, Ot.useState)(null),
-                              Mt = (0, Ot.useRef)(null),
-                              Jt = jt.trim().toLowerCase();
-                            (0, Ot.useEffect)((() => {
-                              const tt = (0, ht.t)(mt.hash),
-                                Ot = Vt.entries.find((Vt => PV(et, Vt.name) === tt));
-                              if (Ot) Mt.current = Ot.name, Ht(Ot.name), Qt(null), Nt(Ot.name);
-                              else if (null !== Mt.current) {
-                                const tt = Mt.current;
-                                Mt.current = null, Ht((et => et === tt ? "" : et)), Nt(null)
+                              kind: Eu
+                            } = uu;
+                            const ju = gj(Eu),
+                              Uu = es(),
+                              Xu = (0, lu.r)(),
+                              [qu, fu] = (0, su.useState)(""),
+                              [Cu, bu] = (0, su.useState)(null),
+                              [cu, Nu] = (0, su.useState)(vs),
+                              [Yu, Du] = (0, su.useState)(null),
+                              gu = (0, su.useRef)(null),
+                              eu = qu.trim().toLowerCase();
+                            (0, su.useEffect)((() => {
+                              const uu = (0, Ju.r)(Xu.hash),
+                                su = ju.entries.find((ju => vj(Eu, ju.name) === uu));
+                              if (su) gu.current = su.name, fu(su.name), bu(null), Du(su.name);
+                              else if (null !== gu.current) {
+                                const uu = gu.current;
+                                gu.current = null, fu((Eu => Eu === uu ? "" : Eu)), Du(null)
                               }
-                            }), [Vt, et, mt.hash, mt.key]), (0, Ot.useEffect)((() => {
-                              var tt;
-                              null !== wt && (null === (tt = document.getElementById(PV(et, wt))) || void 0 === tt || tt.scrollIntoView({
+                            }), [ju, Eu, Xu.hash, Xu.key]), (0, su.useEffect)((() => {
+                              var uu;
+                              null !== Yu && (null === (uu = document.getElementById(vj(Eu, Yu))) || void 0 === uu || uu.scrollIntoView({
                                 block: "center"
                               }))
-                            }), [et, wt]);
-                            const Ct = Vt.entries.filter((tt => (!Jt || tt.name.toLowerCase().includes(Jt)) && (!Xt || tt.variants.includes(Xt))));
-                            return (0, ft.jsxs)("div", {
+                            }), [Eu, Yu]);
+                            const Gu = ju.entries.filter((uu => (!eu || uu.name.toLowerCase().includes(eu)) && (!Cu || uu.variants.includes(Cu))));
+                            return (0, Ou.jsxs)("div", {
                               className: "DocsCatalogue",
-                              children: [Vt.notes.length > 0 && (0, ft.jsx)("div", {
+                              children: [ju.notes.length > 0 && (0, Ou.jsx)("div", {
                                 className: "DocsProse",
-                                children: Vt.notes.map((tt => (0, ft.jsx)("p", {
-                                  children: tt
-                                }, tt)))
-                              }), Vt.legend.length > 0 && (0, ft.jsx)("div", {
+                                children: ju.notes.map((uu => (0, Ou.jsx)("p", {
+                                  children: uu
+                                }, uu)))
+                              }), ju.legend.length > 0 && (0, Ou.jsx)("div", {
                                 className: "DocsTableScroll",
-                                children: (0, ft.jsxs)("table", {
+                                children: (0, Ou.jsxs)("table", {
                                   className: "DocsTable DocsVariantLegend",
-                                  children: [(0, ft.jsx)("thead", {
-                                    children: (0, ft.jsxs)("tr", {
-                                      children: [(0, ft.jsx)("th", {
+                                  children: [(0, Ou.jsx)("thead", {
+                                    children: (0, Ou.jsxs)("tr", {
+                                      children: [(0, Ou.jsx)("th", {
                                         children: "Code"
-                                      }), (0, ft.jsx)("th", {
+                                      }), (0, Ou.jsx)("th", {
                                         children: "Variant"
-                                      }), (0, ft.jsx)("th", {
+                                      }), (0, Ou.jsx)("th", {
                                         children: "Name to use"
                                       })]
                                     })
-                                  }), (0, ft.jsx)("tbody", {
-                                    children: Vt.legend.map((tt => (0, ft.jsxs)("tr", {
-                                      children: [(0, ft.jsx)("td", {
-                                        children: (0, ft.jsx)("button", {
+                                  }), (0, Ou.jsx)("tbody", {
+                                    children: ju.legend.map((uu => (0, Ou.jsxs)("tr", {
+                                      children: [(0, Ou.jsx)("td", {
+                                        children: (0, Ou.jsx)("button", {
                                           type: "button",
-                                          className: Dt()("DocsVariantChip", {
-                                            Active: Xt === tt.code
+                                          className: Zu()("DocsVariantChip", {
+                                            Active: Cu === uu.code
                                           }),
-                                          "aria-pressed": Xt === tt.code,
-                                          title: `Show only ${et} with ${tt.meaning} variants`,
+                                          "aria-pressed": Cu === uu.code,
+                                          title: `Show only ${Eu} with ${uu.meaning} variants`,
                                           onClick: () => {
-                                            Qt(Xt === tt.code ? null : tt.code)
+                                            bu(Cu === uu.code ? null : uu.code)
                                           },
-                                          children: tt.code
+                                          children: uu.code
                                         })
-                                      }), (0, ft.jsx)("td", {
-                                        children: tt.meaning
-                                      }), (0, ft.jsx)("td", {
-                                        children: (0, ft.jsx)("code", {
+                                      }), (0, Ou.jsx)("td", {
+                                        children: uu.meaning
+                                      }), (0, Ou.jsx)("td", {
+                                        children: (0, Ou.jsx)("code", {
                                           className: "DocsInlineCode",
-                                          children: tt.usage
+                                          children: uu.usage
                                         })
                                       })]
-                                    }, tt.code)))
+                                    }, uu.code)))
                                   })]
                                 })
-                              }), Vt.examples.length > 0 && (0, ft.jsx)(Kt, {
+                              }), ju.examples.length > 0 && (0, Ou.jsx)(wu, {
                                 lang: "text",
-                                code: Vt.examples.join("\n")
-                              }), (0, ft.jsx)(bV, {
+                                code: ju.examples.join("\n")
+                              }), (0, Ou.jsx)(Mj, {
                                 className: "DocsFilterBar",
-                                value: jt,
-                                placeholder: `Search ${Vt.entries.length} ${et}\u2026`,
-                                label: `Search ${et}`,
-                                onChange: tt => {
-                                  Ht(tt), Et(RO)
+                                value: qu,
+                                placeholder: `Search ${ju.entries.length} ${Eu}\u2026`,
+                                label: `Search ${Eu}`,
+                                onChange: uu => {
+                                  fu(uu), Nu(vs)
                                 },
-                                count: Jt || Xt ? {
-                                  visible: Ct.length,
-                                  total: Vt.entries.length
+                                count: eu || Cu ? {
+                                  visible: Gu.length,
+                                  total: ju.entries.length
                                 } : null,
-                                children: Xt && (0, ft.jsxs)("button", {
+                                children: Cu && (0, Ou.jsxs)("button", {
                                   type: "button",
                                   className: "DocsVariantChip Active",
                                   onClick: () => {
-                                    Qt(null)
+                                    bu(null)
                                   },
-                                  children: [Xt, " ", (0, ft.jsx)(yt, {
+                                  children: [Cu, " ", (0, Ou.jsx)(hu, {
                                     name: "cross"
                                   })]
                                 })
-                              }), (0, ft.jsx)("div", {
+                              }), (0, Ou.jsx)("div", {
                                 className: "DocsCatalogueGrid",
-                                children: Ct.slice(0, lt).map((tt => {
-                                  const Vt = "blocks" === et ? null === qt || void 0 === qt ? void 0 : qt.getBlockFaces(tt.name) : null,
-                                    Ot = qt && !Vt ? qt.getItemTextureUrl(tt.name) : null;
-                                  return (0, ft.jsxs)("div", {
-                                    id: PV(et, tt.name),
-                                    className: Dt()("DocsCatalogueTile", {
-                                      Linked: tt.name === wt
+                                children: Gu.slice(0, cu).map((uu => {
+                                  const ju = "blocks" === Eu ? null === Uu || void 0 === Uu ? void 0 : Uu.getBlockFaces(uu.name) : null,
+                                    su = Uu && !ju ? Uu.getItemTextureUrl(uu.name) : null;
+                                  return (0, Ou.jsxs)("div", {
+                                    id: vj(Eu, uu.name),
+                                    className: Zu()("DocsCatalogueTile", {
+                                      Linked: uu.name === Yu
                                     }),
-                                    children: [(0, ft.jsxs)("span", {
+                                    children: [(0, Ou.jsxs)("span", {
                                       className: "DocsCatalogueTexture",
-                                      children: [Vt && (0, ft.jsx)(IO, {
-                                        faces: Vt
-                                      }), Ot && (0, ft.jsx)(PO, {
-                                        src: Ot
+                                      children: [ju && (0, Ou.jsx)(Ks, {
+                                        faces: ju
+                                      }), su && (0, Ou.jsx)(Vs, {
+                                        src: su
                                       })]
-                                    }), (0, ft.jsx)("span", {
+                                    }), (0, Ou.jsx)("span", {
                                       className: "DocsCatalogueName",
-                                      children: tt.name
-                                    }), tt.variants.length > 0 && (0, ft.jsx)("span", {
+                                      children: uu.name
+                                    }), uu.variants.length > 0 && (0, Ou.jsx)("span", {
                                       className: "DocsCatalogueVariants",
-                                      children: tt.variants.map((tt => (0, ft.jsx)("span", {
-                                        children: tt
-                                      }, tt)))
-                                    }), (0, ft.jsx)(bt, {
-                                      text: tt.name,
+                                      children: uu.variants.map((uu => (0, Ou.jsx)("span", {
+                                        children: uu
+                                      }, uu)))
+                                    }), (0, Ou.jsx)(Mu, {
+                                      text: uu.name,
                                       className: "DocsCatalogueCopy"
                                     })]
-                                  }, tt.name)
+                                  }, uu.name)
                                 }))
-                              }), Ct.length > lt && (0, ft.jsxs)("button", {
+                              }), Gu.length > cu && (0, Ou.jsxs)("button", {
                                 type: "button",
                                 className: "DocsShowMore",
                                 onClick: () => {
-                                  Et(Ct.length)
+                                  Nu(Gu.length)
                                 },
-                                children: ["Show all ", Ct.length]
-                              }), 0 === Ct.length && (0, ft.jsxs)("p", {
+                                children: ["Show all ", Gu.length]
+                              }), 0 === Gu.length && (0, Ou.jsxs)("p", {
                                 className: "DocsEmpty",
-                                children: ["No ", et, " match."]
+                                children: ["No ", Eu, " match."]
                               })]
                             })
                           }
-                          var LO = Vt(4986),
-                            FO = Vt(1676);
-                          const kO = .95 * LO.b;
+                          var Qs = ju(4992),
+                            is = ju(1639);
+                          const Ws = .95 * Qs.d;
 
-                          function GO(tt) {
-                            return /^\s*```/.test(tt)
+                          function Ss(uu) {
+                            return /^\s*```/.test(uu)
                           }
 
-                          function zO(tt, et) {
-                            const Vt = [
+                          function Is(uu, Eu) {
+                            const ju = [
                               []
                             ];
-                            let Ot = !1;
-                            for (const qt of tt.split("\n")) !Ot && et(qt) && Vt.at(-1).length > 0 && Vt.push([]), GO(qt) && (Ot = !Ot), Vt.at(-1).push(qt);
-                            return Vt.map((tt => tt.join("\n").trim())).filter(Boolean)
+                            let su = !1;
+                            for (const Uu of uu.split("\n")) !su && Eu(Uu) && ju.at(-1).length > 0 && ju.push([]), Ss(Uu) && (su = !su), ju.at(-1).push(Uu);
+                            return ju.map((uu => uu.join("\n").trim())).filter(Boolean)
                           }
 
-                          function oO(tt, et) {
-                            const Vt = `${"#".repeat(et)} `,
-                              Ot = [];
-                            let qt = !1;
-                            for (const Dt of tt.split("\n")) GO(Dt) ? qt = !qt : !qt && Dt.startsWith(Vt) && Ot.push(Dt.slice(Vt.length).trim());
-                            return Ot
+                          function Fs(uu, Eu) {
+                            const ju = `${"#".repeat(Eu)} `,
+                              su = [];
+                            let Uu = !1;
+                            for (const Zu of uu.split("\n")) Ss(Zu) ? Uu = !Uu : !Uu && Zu.startsWith(ju) && su.push(Zu.slice(ju.length).trim());
+                            return su
                           }
 
-                          function rO(tt) {
-                            return tt.markdown.replace(/^\s*# .*\n/, "").trim()
+                          function Bs(uu) {
+                            return uu.markdown.replace(/^\s*# .*\n/, "").trim()
                           }
-                          class UO {
-                            constructor(tt, et) {
-                              this.origin = et, this.pages = void 0, this.partPaths = new Map;
-                              const Vt = tt.map((tt => {
-                                const et = et => this.resolveLinks(tt, et).length,
-                                  Vt = function(tt, et) {
-                                    const Vt = tt.map((tt => et(tt.markdown) + 2)),
-                                      Ot = Vt.reduce(((tt, et) => tt + et), 0),
-                                      qt = Ot / Math.ceil(Ot / kO),
-                                      Dt = [];
-                                    let mt = 0;
-                                    return tt.forEach(((tt, et) => {
-                                      const Ot = Vt[et];
-                                      (0 === Dt.length || mt + Ot > kO || mt + Ot / 2 > qt) && (Dt.push([]), mt = 0), Dt.at(-1).push(tt), mt += Ot
-                                    })), Dt
-                                  }(function(tt, et) {
-                                    return zO(tt, (tt => tt.startsWith("## "))).flatMap((tt => {
-                                      var Vt;
-                                      const Ot = null !== (Vt = oO(tt, 2)[0]) && void 0 !== Vt ? Vt : "";
-                                      if (et(tt) <= kO) return [{
-                                        markdown: tt,
-                                        section: Ot
+                          class Ls {
+                            constructor(uu, Eu) {
+                              this.origin = Eu, this.pages = void 0, this.partPaths = new Map;
+                              const ju = uu.map((uu => {
+                                const Eu = Eu => this.resolveLinks(uu, Eu).length,
+                                  ju = function(uu, Eu) {
+                                    const ju = uu.map((uu => Eu(uu.markdown) + 2)),
+                                      su = ju.reduce(((uu, Eu) => uu + Eu), 0),
+                                      Uu = su / Math.ceil(su / Ws),
+                                      Zu = [];
+                                    let Xu = 0;
+                                    return uu.forEach(((uu, Eu) => {
+                                      const su = ju[Eu];
+                                      (0 === Zu.length || Xu + su > Ws || Xu + su / 2 > Uu) && (Zu.push([]), Xu = 0), Zu.at(-1).push(uu), Xu += su
+                                    })), Zu
+                                  }(function(uu, Eu) {
+                                    return Is(uu, (uu => uu.startsWith("## "))).flatMap((uu => {
+                                      var ju;
+                                      const su = null !== (ju = Fs(uu, 2)[0]) && void 0 !== ju ? ju : "";
+                                      if (Eu(uu) <= Ws) return [{
+                                        markdown: uu,
+                                        section: su
                                       }];
-                                      let qt = !1,
-                                        Dt = "";
-                                      return zO(tt, (tt => {
-                                        const et = qt && "" !== tt.trim();
-                                        return qt = "" === tt.trim(), et
-                                      })).map((tt => {
-                                        var et;
-                                        const Vt = oO(tt, 3),
-                                          qt = tt.startsWith("### ") ? Vt[0] : Dt;
-                                        return Dt = null !== (et = Vt.at(-1)) && void 0 !== et ? et : Dt, {
-                                          markdown: tt,
-                                          section: Ot || qt
+                                      let Uu = !1,
+                                        Zu = "";
+                                      return Is(uu, (uu => {
+                                        const Eu = Uu && "" !== uu.trim();
+                                        return Uu = "" === uu.trim(), Eu
+                                      })).map((uu => {
+                                        var Eu;
+                                        const ju = Fs(uu, 3),
+                                          Uu = uu.startsWith("### ") ? ju[0] : Zu;
+                                        return Zu = null !== (Eu = ju.at(-1)) && void 0 !== Eu ? Eu : Zu, {
+                                          markdown: uu,
+                                          section: su || Uu
                                         }
                                       }))
                                     }))
-                                  }(rO(tt), et), et);
+                                  }(Bs(uu), Eu), Eu);
                                 return {
-                                  page: tt,
-                                  groups: Vt.length > 1 ? Vt : []
+                                  page: uu,
+                                  groups: ju.length > 1 ? ju : []
                                 }
                               }));
                               for (const {
-                                  page: Ot,
-                                  groups: qt
+                                  page: su,
+                                  groups: Uu
                                 }
-                                of Vt) qt.forEach(((tt, et) => {
-                                const Vt = (0, LO.r)(Ot.slug, et);
-                                for (const qt of tt.flatMap((tt => [...oO(tt.markdown, 2), ...oO(tt.markdown, 3)]))) {
-                                  const tt = `${Ot.id}#${(0,ht.v)(qt)}`;
-                                  this.partPaths.has(tt) || this.partPaths.set(tt, Vt)
+                                of ju) Uu.forEach(((uu, Eu) => {
+                                const ju = (0, Qs.w)(su.slug, Eu);
+                                for (const Uu of uu.flatMap((uu => [...Fs(uu.markdown, 2), ...Fs(uu.markdown, 3)]))) {
+                                  const uu = `${su.id}#${(0,Ju.u)(Uu)}`;
+                                  this.partPaths.has(uu) || this.partPaths.set(uu, ju)
                                 }
                               }));
-                              this.pages = Vt.map((tt => {
+                              this.pages = ju.map((uu => {
                                 let {
-                                  page: et,
-                                  groups: Vt
-                                } = tt;
+                                  page: Eu,
+                                  groups: ju
+                                } = uu;
                                 return {
-                                  page: et,
-                                  path: (0, LO.p)(et.slug),
-                                  markdown: `# ${et.title}\n\n${this.resolveLinks(et,rO(et))}\n`,
-                                  parts: Vt.map(((tt, Ot) => this.renderPart(et, tt, Ot, Vt.length)))
+                                  page: Eu,
+                                  path: (0, Qs.t)(Eu.slug),
+                                  markdown: `# ${Eu.title}\n\n${this.resolveLinks(Eu,Bs(Eu))}\n`,
+                                  parts: ju.map(((uu, su) => this.renderPart(Eu, uu, su, ju.length)))
                                 }
                               }))
                             }
-                            url(tt) {
-                              return `${this.origin}${tt}`
+                            url(uu) {
+                              return `${this.origin}${uu}`
                             }
-                            getPage(tt) {
-                              return this.pages.find((et => et.page.id === tt))
+                            getPage(uu) {
+                              return this.pages.find((Eu => Eu.page.id === uu))
                             }
                             oversizedFiles() {
-                              return this.pages.flatMap((tt => (tt.parts.length > 0 ? tt.parts : [{
-                                path: tt.path,
+                              return this.pages.flatMap((uu => (uu.parts.length > 0 ? uu.parts : [{
+                                path: uu.path,
                                 label: "",
-                                markdown: tt.markdown
-                              }]).filter((tt => tt.markdown.length > LO.b))))
+                                markdown: uu.markdown
+                              }]).filter((uu => uu.markdown.length > Qs.d))))
                             }
-                            markdownUrl(tt, et) {
-                              const Vt = et && this.partPaths.get(`${tt.id}#${et}`) || (0, LO.p)(tt.slug);
-                              return this.url(et ? `${Vt}#${et}` : Vt)
+                            markdownUrl(uu, Eu) {
+                              const ju = Eu && this.partPaths.get(`${uu.id}#${Eu}`) || (0, Qs.t)(uu.slug);
+                              return this.url(Eu ? `${ju}#${Eu}` : ju)
                             }
-                            resolveLinks(tt, et) {
-                              return et.replace(/\]\((#[^)]+)\)/g, ((et, Vt) => {
-                                var Ot;
-                                const qt = null !== (Ot = At(Vt)) && void 0 !== Ot ? Ot : this.samePageTarget(tt, Vt);
-                                return qt ? `](${this.markdownUrl(qt.page,qt.anchor)})` : et
+                            resolveLinks(uu, Eu) {
+                              return Eu.replace(/\]\((#[^)]+)\)/g, ((Eu, ju) => {
+                                var su;
+                                const Uu = null !== (su = Bu(ju)) && void 0 !== su ? su : this.samePageTarget(uu, ju);
+                                return Uu ? `](${this.markdownUrl(Uu.page,Uu.anchor)})` : Eu
                               }))
                             }
-                            samePageTarget(tt, et) {
-                              const Vt = (0, ht.v)(et.slice(1));
-                              return Ut(tt, Vt) ? {
-                                page: tt,
-                                anchor: Vt
+                            samePageTarget(uu, Eu) {
+                              const ju = (0, Ju.u)(Eu.slice(1));
+                              return Fu(uu, ju) ? {
+                                page: uu,
+                                anchor: ju
                               } : null
                             }
-                            renderPart(tt, et, Vt, Ot) {
-                              const qt = function(tt) {
-                                  const et = tt.map((tt => tt.section)).filter(Boolean);
-                                  if (0 === et.length) return "";
-                                  const Vt = et[0],
-                                    Ot = et.at(-1);
-                                  return Vt === Ot ? Vt : `${Vt} to ${Ot}`
-                                }(et),
-                                Dt = et.map((tt => tt.markdown)).join("\n\n"),
-                                mt = qt ? `It covers ${qt}. ` : "",
-                                dt = `Part ${Vt+1} of ${Ot} of [${tt.title}](${this.url((0,LO.p)(tt.slug))}). ${mt}[llms.txt](${this.url(LO.h)}) lists every part.`;
+                            renderPart(uu, Eu, ju, su) {
+                              const Uu = function(uu) {
+                                  const Eu = uu.map((uu => uu.section)).filter(Boolean);
+                                  if (0 === Eu.length) return "";
+                                  const ju = Eu[0],
+                                    su = Eu.at(-1);
+                                  return ju === su ? ju : `${ju} to ${su}`
+                                }(Eu),
+                                Zu = Eu.map((uu => uu.markdown)).join("\n\n"),
+                                Xu = Uu ? `It covers ${Uu}. ` : "",
+                                lu = `Part ${ju+1} of ${su} of [${uu.title}](${this.url((0,Qs.t)(uu.slug))}). ${Xu}[llms.txt](${this.url(Qs.f)}) lists every part.`;
                               return {
-                                path: (0, LO.r)(tt.slug, Vt),
-                                label: qt,
-                                markdown: `# ${tt.title}, part ${Vt+1} of ${Ot}\n\n${dt}\n\n${this.resolveLinks(tt,Dt)}\n`
+                                path: (0, Qs.w)(uu.slug, ju),
+                                label: Uu,
+                                markdown: `# ${uu.title}, part ${ju+1} of ${su}\n\n${lu}\n\n${this.resolveLinks(uu,Zu)}\n`
                               }
                             }
-                            llmsTxt(tt) {
-                              const et = ["# Bloxd Code API", "", "> JavaScript that runs inside Bloxd, in code blocks, boards and World Code: from a block that launches players into the sky to a whole custom game. Code calls methods on the `api` object and defines callbacks that react to game events.", "", `Each link is a page of the docs as Markdown. A page longer than about ${AO(LO.b)} tokens is also split into parts, listed under it, so that each fits a small context window. People read the same docs at ${this.url("/docs")}.`];
-                              for (const Vt of Gt) {
-                                et.push("", `## ${Vt.title}`, "");
-                                for (const tt of Vt.pageIds) {
-                                  const Vt = this.getPage(tt),
+                            llmsTxt(uu) {
+                              const Eu = ["# Bloxd Code API", "", "> JavaScript that runs inside Bloxd, in code blocks, boards and World Code: from a block that launches players into the sky to a whole custom game. Code calls methods on the `api` object and defines callbacks that react to game events.", "", `Each link is a page of the docs as Markdown. A page longer than about ${ts(Qs.d)} tokens is also split into parts, listed under it, so that each fits a small context window. People read the same docs at ${this.url("/docs")}.`];
+                              for (const ju of iu) {
+                                Eu.push("", `## ${ju.title}`, "");
+                                for (const uu of ju.pageIds) {
+                                  const ju = this.getPage(uu),
                                     {
-                                      page: Ot,
-                                      parts: qt
-                                    } = Vt,
-                                    Dt = `About ${AO(Vt.markdown.length)} tokens${qt.length>0?`, in ${qt.length} parts:`:"."}`;
-                                  et.push(`- [${Ot.title}](${this.url(Vt.path)}): ${Ot.summary} ${Dt}`), qt.forEach(((tt, Vt) => {
-                                    et.push(`  - [Part ${Vt+1}${tt.label?`: ${tt.label}`:""}](${this.url(tt.path)})`)
+                                      page: su,
+                                      parts: Uu
+                                    } = ju,
+                                    Zu = `About ${ts(ju.markdown.length)} tokens${Uu.length>0?`, in ${Uu.length} parts:`:"."}`;
+                                  Eu.push(`- [${su.title}](${this.url(ju.path)}): ${su.summary} ${Zu}`), Uu.forEach(((uu, ju) => {
+                                    Eu.push(`  - [Part ${ju+1}${uu.label?`: ${uu.label}`:""}](${this.url(uu.path)})`)
                                   }))
                                 }
                               }
-                              return et.push("", "## Optional", "", `- [Every page in one file](${this.url(LO.d)}): About ${AO(tt.length)} tokens, for a model with a large context window.`, ""), et.join("\n")
+                              return Eu.push("", "## Optional", "", `- [Every page in one file](${this.url(Qs.e)}): About ${ts(uu.length)} tokens, for a model with a large context window.`, ""), Eu.join("\n")
                             }
                             llmsFullTxt() {
-                              return Gt.flatMap((tt => tt.pageIds.map((tt => this.getPage(tt).markdown)))).join("\n---\n\n")
+                              return iu.flatMap((uu => uu.pageIds.map((uu => this.getPage(uu).markdown)))).join("\n---\n\n")
                             }
                             files() {
-                              const tt = this.llmsFullTxt(),
-                                et = this.llmsTxt(tt),
-                                Vt = new Map([
-                                  [LO.l, et],
-                                  [LO.h, et],
-                                  [LO.d, tt]
+                              const uu = this.llmsFullTxt(),
+                                Eu = this.llmsTxt(uu),
+                                ju = new Map([
+                                  [Qs.m, Eu],
+                                  [Qs.f, Eu],
+                                  [Qs.e, uu]
                                 ]);
-                              for (const Ot of this.pages) {
-                                Vt.set(Ot.path, Ot.markdown);
-                                for (const tt of Ot.parts) Vt.set(tt.path, tt.markdown)
+                              for (const su of this.pages) {
+                                ju.set(su.path, su.markdown);
+                                for (const uu of su.parts) ju.set(uu.path, uu.markdown)
                               }
-                              return Vt
+                              return ju
                             }
                           }
 
-                          function AO(tt) {
-                            return `${Math.max(1,Math.round(tt/4e3))}K`
+                          function ts(uu) {
+                            return `${Math.max(1,Math.round(uu/4e3))}K`
                           }
-                          let iO = null;
+                          let xs = null;
 
-                          function YO() {
-                            return iO ??= new UO(kt, FO.c), iO
+                          function Ts() {
+                            return xs ??= new Ls(Qu, is.e), xs
                           }
-                          var BO = Vt(4995);
-                          const pO = [BO.f, BO.q];
+                          var Hs = ju(4995);
+                          const As = [Hs.g, Hs.k];
 
-                          function xO(tt) {
-                            return YO().getPage(tt.id).parts.length > 0 ? `Read ${LO.k}, then the parts of the Bloxd Code API's ${tt.title} page it lists, so I can ask questions about it.` : `Read ${FO.c}${(0,LO.p)(tt.slug)} so I can ask questions about it. ${BO.m}`
+                          function ns(uu) {
+                            return Ts().getPage(uu.id).parts.length > 0 ? `Read ${Qs.i}, then the parts of the Bloxd Code API's ${uu.title} page it lists, so I can ask questions about it.` : `Read ${is.e}${(0,Qs.t)(uu.slug)} so I can ask questions about it. ${Hs.j}`
                           }
 
-                          function TO(tt) {
+                          function ys(uu) {
                             let {
-                              page: et
-                            } = tt;
-                            const [Vt, Ot] = Mt();
-                            return (0, ft.jsxs)("div", {
+                              page: Eu
+                            } = uu;
+                            const [ju, su] = gu();
+                            return (0, Ou.jsxs)("div", {
                               className: "DocsPageAgentActions",
-                              children: [(0, ft.jsxs)("button", {
+                              children: [(0, Ou.jsxs)("button", {
                                 type: "button",
                                 className: "DocsPageAgentAction",
                                 onClick: () => {
-                                  Ot(YO().getPage(et.id).markdown)
+                                  su(Ts().getPage(Eu.id).markdown)
                                 },
-                                children: [(0, ft.jsx)(yt, {
-                                  name: !1 === (null === Vt || void 0 === Vt ? void 0 : Vt.failed) ? "check" : "copy"
-                                }), (0, ft.jsx)("span", {
-                                  children: Vt ? Vt.failed ? "Copy failed" : "Copied" : "Copy page"
+                                children: [(0, Ou.jsx)(hu, {
+                                  name: !1 === (null === ju || void 0 === ju ? void 0 : ju.failed) ? "check" : "copy"
+                                }), (0, Ou.jsx)("span", {
+                                  children: ju ? ju.failed ? "Copy failed" : "Copied" : "Copy page"
                                 })]
-                              }), pO.map((tt => (0, ft.jsxs)("a", {
+                              }), As.map((uu => (0, Ou.jsxs)("a", {
                                 className: "DocsPageAgentAction",
-                                href: (0, BO.d)(tt, xO(et)),
+                                href: (0, Hs.d)(uu, ns(Eu)),
                                 target: "_blank",
                                 rel: "noreferrer",
-                                children: [(0, ft.jsx)(yt, {
+                                children: [(0, Ou.jsx)(hu, {
                                   name: "external-link"
-                                }), (0, ft.jsxs)("span", {
-                                  children: ["Open in ", tt.name]
+                                }), (0, Ou.jsxs)("span", {
+                                  children: ["Open in ", uu.name]
                                 })]
-                              }, tt.name)))]
+                              }, uu.name)))]
                             })
                           }
 
-                          function gO(tt) {
-                            return `#${[0,1,2].map((et=>Math.round(Math.min(255,Math.max(0,tt[et]))).toString(16).padStart(2,"0"))).join("")}`
+                          function zs(uu) {
+                            return `#${[0,1,2].map((Eu=>Math.round(Math.min(255,Math.max(0,uu[Eu]))).toString(16).padStart(2,"0"))).join("")}`
                           }
 
-                          function sO(tt) {
-                            return [parseInt(tt.slice(1, 3), 16), parseInt(tt.slice(3, 5), 16), parseInt(tt.slice(5, 7), 16)]
+                          function Rs(uu) {
+                            return [parseInt(uu.slice(1, 3), 16), parseInt(uu.slice(3, 5), 16), parseInt(uu.slice(5, 7), 16)]
                           }
 
-                          function nO(tt) {
+                          function uU(uu) {
                             let {
-                              label: et,
-                              min: Vt,
-                              max: Ot,
-                              step: qt,
-                              low: Dt,
-                              high: mt,
-                              onChange: dt
-                            } = tt;
-                            return (0, ft.jsxs)("div", {
+                              label: Eu,
+                              min: ju,
+                              max: su,
+                              step: Uu,
+                              low: Zu,
+                              high: Xu,
+                              onChange: lu
+                            } = uu;
+                            return (0, Ou.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, ft.jsxs)("div", {
+                              children: [(0, Ou.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, ft.jsx)("span", {
-                                  children: et
-                                }), (0, ft.jsx)("span", {
+                                children: [(0, Ou.jsx)("span", {
+                                  children: Eu
+                                }), (0, Ou.jsx)("span", {
                                   className: "DocsControlValue",
-                                  children: Dt === mt ? Dt : `${Dt}\u2013${mt}`
+                                  children: Zu === Xu ? Zu : `${Zu}\u2013${Xu}`
                                 })]
-                              }), (0, ft.jsxs)("div", {
+                              }), (0, Ou.jsxs)("div", {
                                 className: "DocsParticleRange",
-                                children: [(0, ft.jsx)("input", {
+                                children: [(0, Ou.jsx)("input", {
                                   type: "range",
-                                  min: Vt,
-                                  max: Ot,
-                                  step: qt,
-                                  value: Math.min(Ot, Dt),
-                                  "aria-label": `Minimum ${et.toLowerCase()}`,
-                                  onChange: tt => {
-                                    const et = Number(tt.target.value);
-                                    dt(et, Math.max(et, mt))
+                                  min: ju,
+                                  max: su,
+                                  step: Uu,
+                                  value: Math.min(su, Zu),
+                                  "aria-label": `Minimum ${Eu.toLowerCase()}`,
+                                  onChange: uu => {
+                                    const Eu = Number(uu.target.value);
+                                    lu(Eu, Math.max(Eu, Xu))
                                   }
-                                }), (0, ft.jsx)("input", {
+                                }), (0, Ou.jsx)("input", {
                                   type: "range",
-                                  min: Vt,
-                                  max: Ot,
-                                  step: qt,
-                                  value: Math.min(Ot, mt),
-                                  "aria-label": `Maximum ${et.toLowerCase()}`,
-                                  onChange: tt => {
-                                    const et = Number(tt.target.value);
-                                    dt(Math.min(et, Dt), et)
+                                  min: ju,
+                                  max: su,
+                                  step: Uu,
+                                  value: Math.min(su, Xu),
+                                  "aria-label": `Maximum ${Eu.toLowerCase()}`,
+                                  onChange: uu => {
+                                    const Eu = Number(uu.target.value);
+                                    lu(Math.min(Eu, Zu), Eu)
                                   }
                                 })]
                               })]
                             })
                           }
 
-                          function tq(tt) {
+                          function EU(uu) {
                             let {
-                              label: et,
-                              min: Vt,
-                              max: Ot,
-                              step: qt,
-                              value: Dt,
-                              onChange: mt,
-                              format: dt = String
-                            } = tt;
-                            return (0, ft.jsxs)("div", {
+                              label: Eu,
+                              min: ju,
+                              max: su,
+                              step: Uu,
+                              value: Zu,
+                              onChange: Xu,
+                              format: lu = String
+                            } = uu;
+                            return (0, Ou.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, ft.jsxs)("div", {
+                              children: [(0, Ou.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, ft.jsx)("span", {
-                                  children: et
-                                }), (0, ft.jsx)("span", {
+                                children: [(0, Ou.jsx)("span", {
+                                  children: Eu
+                                }), (0, Ou.jsx)("span", {
                                   className: "DocsControlValue",
-                                  children: dt(Dt)
+                                  children: lu(Zu)
                                 })]
-                              }), (0, ft.jsx)("input", {
+                              }), (0, Ou.jsx)("input", {
                                 type: "range",
-                                min: Vt,
-                                max: Ot,
-                                step: qt,
-                                value: Math.min(Ot, Math.max(Vt, Dt)),
-                                "aria-label": et,
-                                onChange: tt => {
-                                  mt(Number(tt.target.value))
+                                min: ju,
+                                max: su,
+                                step: Uu,
+                                value: Math.min(su, Math.max(ju, Zu)),
+                                "aria-label": Eu,
+                                onChange: uu => {
+                                  Xu(Number(uu.target.value))
                                 }
                               })]
                             })
                           }
 
-                          function eq(tt) {
+                          function jU(uu) {
                             let {
-                              opts: et,
-                              onChange: Vt
-                            } = tt;
-                            const Ot = et.colorGradients;
-                            if (!iV(Ot)) return (0, ft.jsxs)("div", {
+                              opts: Eu,
+                              onChange: ju
+                            } = uu;
+                            const su = Eu.colorGradients;
+                            if (!Lj(su)) return (0, Ou.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, ft.jsx)("div", {
+                              children: [(0, Ou.jsx)("div", {
                                 className: "DocsControlLabel",
-                                children: (0, ft.jsx)("span", {
+                                children: (0, Ou.jsx)("span", {
                                   children: "Colours, one per particle"
                                 })
-                              }), (0, ft.jsx)("div", {
+                              }), (0, Ou.jsx)("div", {
                                 className: "DocsParticleSwatches",
-                                children: Ot.map(((tt, et) => (0, ft.jsx)("input", {
+                                children: su.map(((uu, Eu) => (0, Ou.jsx)("input", {
                                   type: "color",
-                                  value: gO(tt.color),
-                                  "aria-label": `Colour ${et+1}`,
-                                  onChange: tt => {
-                                    const qt = [...Ot];
-                                    qt[et] = {
-                                      color: sO(tt.target.value)
-                                    }, Vt(qt)
+                                  value: zs(uu.color),
+                                  "aria-label": `Colour ${Eu+1}`,
+                                  onChange: uu => {
+                                    const Uu = [...su];
+                                    Uu[Eu] = {
+                                      color: Rs(uu.target.value)
+                                    }, ju(Uu)
                                   }
-                                }, et)))
+                                }, Eu)))
                               })]
                             });
-                            const qt = (tt, et) => {
-                              const qt = [...Ot];
-                              qt[tt] = et, Vt(qt)
+                            const Uu = (uu, Eu) => {
+                              const Uu = [...su];
+                              Uu[uu] = Eu, ju(Uu)
                             };
-                            return (0, ft.jsxs)("div", {
+                            return (0, Ou.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, ft.jsxs)("div", {
+                              children: [(0, Ou.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, ft.jsx)("span", {
+                                children: [(0, Ou.jsx)("span", {
                                   children: "Colour over lifetime"
-                                }), (0, ft.jsx)("span", {
+                                }), (0, Ou.jsx)("span", {
                                   className: "DocsControlValue",
                                   children: "min \xb7 max"
                                 })]
-                              }), Ot.map(((tt, et) => {
-                                var Vt;
-                                const Ot = null !== (Vt = tt.maxColor) && void 0 !== Vt ? Vt : tt.minColor;
-                                return (0, ft.jsxs)("div", {
+                              }), su.map(((uu, Eu) => {
+                                var ju;
+                                const su = null !== (ju = uu.maxColor) && void 0 !== ju ? ju : uu.minColor;
+                                return (0, Ou.jsxs)("div", {
                                   className: "DocsParticleStop",
-                                  children: [(0, ft.jsxs)("span", {
+                                  children: [(0, Ou.jsxs)("span", {
                                     className: "DocsParticleStopTime",
-                                    children: [Math.round(100 * tt.timeFraction), "%"]
-                                  }), (0, ft.jsx)("span", {
+                                    children: [Math.round(100 * uu.timeFraction), "%"]
+                                  }), (0, Ou.jsx)("span", {
                                     className: "DocsParticleStopBar",
                                     style: {
-                                      background: `linear-gradient(90deg, ${gO(tt.minColor)}, ${gO(Ot)})`
+                                      background: `linear-gradient(90deg, ${zs(uu.minColor)}, ${zs(su)})`
                                     }
-                                  }), (0, ft.jsx)("input", {
+                                  }), (0, Ou.jsx)("input", {
                                     type: "color",
-                                    value: gO(tt.minColor),
-                                    "aria-label": `Minimum colour at ${Math.round(100*tt.timeFraction)}%`,
-                                    onChange: Vt => {
-                                      qt(et, {
-                                        ...tt,
-                                        minColor: [...sO(Vt.target.value), tt.minColor[3]]
+                                    value: zs(uu.minColor),
+                                    "aria-label": `Minimum colour at ${Math.round(100*uu.timeFraction)}%`,
+                                    onChange: ju => {
+                                      Uu(Eu, {
+                                        ...uu,
+                                        minColor: [...Rs(ju.target.value), uu.minColor[3]]
                                       })
                                     }
-                                  }), (0, ft.jsx)("input", {
+                                  }), (0, Ou.jsx)("input", {
                                     type: "color",
-                                    value: gO(Ot),
-                                    "aria-label": `Maximum colour at ${Math.round(100*tt.timeFraction)}%`,
-                                    onChange: Vt => {
-                                      qt(et, {
-                                        ...tt,
-                                        maxColor: [...sO(Vt.target.value), Ot[3]]
+                                    value: zs(su),
+                                    "aria-label": `Maximum colour at ${Math.round(100*uu.timeFraction)}%`,
+                                    onChange: ju => {
+                                      Uu(Eu, {
+                                        ...uu,
+                                        maxColor: [...Rs(ju.target.value), su[3]]
                                       })
                                     }
                                   })]
-                                }, et)
+                                }, Eu)
                               }))]
                             })
                           }
-                          const Vq = [-.5, -.5, -.5],
-                            Oq = [.5, .5, .5],
-                            qq = [0, 1, 2, 3, 4, 5, 6, 7].map((tt => [1 & tt ? Oq[0] : Vq[0], 2 & tt ? Oq[1] : Vq[1], 4 & tt ? Oq[2] : Vq[2]]));class Dq {
+                          const sU = [-.5, -.5, -.5],
+                            UU = [.5, .5, .5],
+                            ZU = [0, 1, 2, 3, 4, 5, 6, 7].map((uu => [1 & uu ? UU[0] : sU[0], 2 & uu ? UU[1] : sU[1], 4 & uu ? UU[2] : sU[2]]));class XU {
                             constructor() {
                               this.tints = new WeakMap
                             }
-                            get(tt, et, Vt, Ot) {
-                              const qt = Math.round(31 * et),
-                                Dt = Math.round(31 * Vt),
-                                mt = Math.round(31 * Ot),
-                                dt = `${qt}|${Dt}|${mt}`;
-                              let jt = this.tints.get(tt);
-                              (!jt || jt.size > 2e3) && (jt = new Map, this.tints.set(tt, jt));
-                              let Ht = jt.get(dt);
-                              if (Ht) return Ht;
-                              Ht = document.createElement("canvas"), Ht.width = tt.naturalWidth || 16, Ht.height = tt.naturalHeight || 16;
-                              const Xt = Ht.getContext("2d");
-                              return Xt ? (Xt.imageSmoothingEnabled = !1, Xt.drawImage(tt, 0, 0, Ht.width, Ht.height), Xt.globalCompositeOperation = "multiply", Xt.fillStyle = `rgb(${qt/31*255}, ${Dt/31*255}, ${mt/31*255})`, Xt.fillRect(0, 0, Ht.width, Ht.height), Xt.globalCompositeOperation = "destination-in", Xt.drawImage(tt, 0, 0, Ht.width, Ht.height)) : console.warn("Particle preview: no 2D canvas context to tint a texture with"), jt.set(dt, Ht), Ht
+                            get(uu, Eu, ju, su) {
+                              const Uu = Math.round(31 * Eu),
+                                Zu = Math.round(31 * ju),
+                                Xu = Math.round(31 * su),
+                                lu = `${Uu}|${Zu}|${Xu}`;
+                              let qu = this.tints.get(uu);
+                              (!qu || qu.size > 2e3) && (qu = new Map, this.tints.set(uu, qu));
+                              let fu = qu.get(lu);
+                              if (fu) return fu;
+                              fu = document.createElement("canvas"), fu.width = uu.naturalWidth || 16, fu.height = uu.naturalHeight || 16;
+                              const Cu = fu.getContext("2d");
+                              return Cu ? (Cu.imageSmoothingEnabled = !1, Cu.drawImage(uu, 0, 0, fu.width, fu.height), Cu.globalCompositeOperation = "multiply", Cu.fillStyle = `rgb(${Uu/31*255}, ${Zu/31*255}, ${Xu/31*255})`, Cu.fillRect(0, 0, fu.width, fu.height), Cu.globalCompositeOperation = "destination-in", Cu.drawImage(uu, 0, 0, fu.width, fu.height)) : console.warn("Particle preview: no 2D canvas context to tint a texture with"), qu.set(lu, fu), fu
                             }
                           }
 
-                          function mq(tt) {
+                          function lU(uu) {
                             let {
-                              opts: et,
-                              textureUrl: Vt,
-                              burst: qt,
-                              paused: Dt
-                            } = tt;
-                            const mt = (0, Ot.useRef)(null),
-                              dt = (0, Ot.useRef)(et);
-                            dt.current = et;
-                            const jt = (0, Ot.useRef)(Dt);
-                            jt.current = Dt;
-                            const Ht = (0, Ot.useRef)(null),
-                              Xt = (0, Ot.useRef)(null),
-                              Qt = (0, Ot.useMemo)((() => Math.min(16, Math.max(1.6, 1.05 * function(tt) {
-                                let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
-                                const Vt = [-.5, -.5, -.5],
-                                  Ot = [.5, .5, .5];
-                                let qt = .5;
-                                for (let Dt = 0; Dt < 40; Dt++) {
-                                  const Dt = BV(tt, Vt, Ot, et),
-                                    mt = Math.max(Dt.life / 30, .001);
-                                  for (; TV(Dt, tt.gravity, mt);) qt = Math.max(qt, Math.hypot(Dt.pos[0], Dt.pos[1], Dt.pos[2]) + Dt.size / 2)
+                              opts: Eu,
+                              textureUrl: ju,
+                              burst: Uu,
+                              paused: Zu
+                            } = uu;
+                            const Xu = (0, su.useRef)(null),
+                              lu = (0, su.useRef)(Eu);
+                            lu.current = Eu;
+                            const qu = (0, su.useRef)(Zu);
+                            qu.current = Zu;
+                            const fu = (0, su.useRef)(null),
+                              Cu = (0, su.useRef)(null),
+                              bu = (0, su.useMemo)((() => Math.min(16, Math.max(1.6, 1.05 * function(uu) {
+                                let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
+                                const ju = [-.5, -.5, -.5],
+                                  su = [.5, .5, .5];
+                                let Uu = .5;
+                                for (let Zu = 0; Zu < 40; Zu++) {
+                                  const Zu = xj(uu, ju, su, Eu),
+                                    Xu = Math.max(Zu.life / 30, .001);
+                                  for (; Aj(Zu, uu.gravity, Xu);) Uu = Math.max(Uu, Math.hypot(Zu.pos[0], Zu.pos[1], Zu.pos[2]) + Zu.size / 2)
                                 }
-                                return qt
-                              }(et)))), [et]),
-                              lt = (0, Ot.useRef)(Qt);
-                            return lt.current = Qt, (0, Ot.useEffect)((() => {
-                              if (Ht.current = null, !Vt) return;
-                              const tt = new Image;
-                              let et = !1;
-                              return tt.onload = () => {
-                                et || (Ht.current = tt)
-                              }, tt.onerror = () => {
-                                console.warn(`Particle preview: could not load the texture ${Vt}`)
-                              }, tt.src = Vt, () => {
-                                et = !0
+                                return Uu
+                              }(Eu)))), [Eu]),
+                              cu = (0, su.useRef)(bu);
+                            return cu.current = bu, (0, su.useEffect)((() => {
+                              if (fu.current = null, !ju) return;
+                              const uu = new Image;
+                              let Eu = !1;
+                              return uu.onload = () => {
+                                Eu || (fu.current = uu)
+                              }, uu.onerror = () => {
+                                console.warn(`Particle preview: could not load the texture ${ju}`)
+                              }, uu.src = ju, () => {
+                                Eu = !0
                               }
-                            }), [Vt]), (0, Ot.useEffect)((() => {
-                              var tt;
-                              null === (tt = Xt.current) || void 0 === tt || tt.call(Xt)
-                            }), [et, qt]), (0, Ot.useEffect)((() => {
-                              const tt = mt.current,
-                                et = null === tt || void 0 === tt ? void 0 : tt.getContext("2d");
-                              if (!tt || !et) return void console.warn("Particle preview: no 2D canvas context to draw on");
-                              const Vt = new Dq;
-                              let Ot = [],
-                                qt = 0,
-                                Dt = -.7,
-                                Qt = lt.current,
-                                Et = performance.now(),
-                                ft = 0,
-                                wt = !0,
-                                yt = null;
-                              const Nt = () => {
-                                const tt = dt.current,
-                                  et = Math.min(400, Math.max(0, Math.ceil(tt.manualEmitCount)));
-                                Ot = [];
-                                for (let Vt = 0; Vt < et; Vt++) Ot.push(BV(tt, Vq, Oq, Math.random));
-                                qt = 0
+                            }), [ju]), (0, su.useEffect)((() => {
+                              var uu;
+                              null === (uu = Cu.current) || void 0 === uu || uu.call(Cu)
+                            }), [Eu, Uu]), (0, su.useEffect)((() => {
+                              const uu = Xu.current,
+                                Eu = null === uu || void 0 === uu ? void 0 : uu.getContext("2d");
+                              if (!uu || !Eu) return void console.warn("Particle preview: no 2D canvas context to draw on");
+                              const ju = new XU;
+                              let su = [],
+                                Uu = 0,
+                                Zu = -.7,
+                                bu = cu.current,
+                                Nu = performance.now(),
+                                Ou = 0,
+                                Yu = !0,
+                                hu = null;
+                              const Du = () => {
+                                const uu = lu.current,
+                                  Eu = Math.min(400, Math.max(0, Math.ceil(uu.manualEmitCount)));
+                                su = [];
+                                for (let ju = 0; ju < Eu; ju++) su.push(xj(uu, sU, UU, Math.random));
+                                Uu = 0
                               };
-                              Xt.current = Nt, Nt();
-                              const Mt = mt => {
-                                ft = requestAnimationFrame(Mt);
-                                const Xt = Math.min(.05, (mt - Et) / 1e3);
-                                if (Et = mt, !wt) return;
-                                const bt = window.devicePixelRatio || 1,
-                                  Jt = Math.round(tt.clientWidth * bt),
-                                  Ct = Math.round(tt.clientHeight * bt);
-                                if (0 === Jt || 0 === Ct) return;
-                                tt.width === Jt && tt.height === Ct || (tt.width = Jt, tt.height = Ct);
-                                const ut = dt.current;
-                                null === yt && (Dt += .18 * Xt), Qt += (lt.current - Qt) * Math.min(1, 4 * Xt);
-                                const Kt = .6 * Xt;
-                                Ot = Ot.filter((tt => TV(tt, ut.gravity, Kt))), 0 !== Ot.length || jt.current || (qt += Xt, qt > .6 && Nt());
-                                const ht = function(tt, et, Vt, Ot) {
-                                  const qt = 3.2 * Ot,
-                                    Dt = .44 * Math.min(tt, et) * qt / Ot,
-                                    mt = Math.cos(Vt),
-                                    dt = Math.sin(Vt),
-                                    jt = Math.cos(.42),
-                                    Ht = Math.sin(.42);
-                                  return (Vt, Ot, Xt) => {
-                                    const Qt = Vt * dt + Xt * mt,
-                                      lt = qt - (Ot * Ht + Qt * jt);
-                                    if (lt < .05) return null;
-                                    const Et = Dt / lt;
+                              Cu.current = Du, Du();
+                              const gu = Xu => {
+                                Ou = requestAnimationFrame(gu);
+                                const Cu = Math.min(.05, (Xu - Nu) / 1e3);
+                                if (Nu = Xu, !Yu) return;
+                                const Mu = window.devicePixelRatio || 1,
+                                  eu = Math.round(uu.clientWidth * Mu),
+                                  Gu = Math.round(uu.clientHeight * Mu);
+                                if (0 === eu || 0 === Gu) return;
+                                uu.width === eu && uu.height === Gu || (uu.width = eu, uu.height = Gu);
+                                const pu = lu.current;
+                                null === hu && (Zu += .18 * Cu), bu += (cu.current - bu) * Math.min(1, 4 * Cu);
+                                const wu = .6 * Cu;
+                                su = su.filter((uu => Aj(uu, pu.gravity, wu))), 0 !== su.length || qu.current || (Uu += Cu, Uu > .6 && Du());
+                                const Ju = function(uu, Eu, ju, su) {
+                                  const Uu = 3.2 * su,
+                                    Zu = .44 * Math.min(uu, Eu) * Uu / su,
+                                    Xu = Math.cos(ju),
+                                    lu = Math.sin(ju),
+                                    qu = Math.cos(.42),
+                                    fu = Math.sin(.42);
+                                  return (ju, su, Cu) => {
+                                    const bu = ju * lu + Cu * Xu,
+                                      cu = Uu - (su * fu + bu * qu);
+                                    if (cu < .05) return null;
+                                    const Nu = Zu / cu;
                                     return {
-                                      x: tt / 2 + (Vt * mt - Xt * dt) * Et,
-                                      y: et / 2 - (Ot * jt - Qt * Ht) * Et,
-                                      scale: Et,
-                                      depth: lt
+                                      x: uu / 2 + (ju * Xu - Cu * lu) * Nu,
+                                      y: Eu / 2 - (su * qu - bu * fu) * Nu,
+                                      scale: Nu,
+                                      depth: cu
                                     }
                                   }
-                                }(Jt, Ct, Dt, Qt);
-                                ! function(tt, et, Vt, Ot, qt) {
-                                  const Dt = tt.createLinearGradient(0, 0, 0, Vt);
-                                  Dt.addColorStop(0, "#23262d"), Dt.addColorStop(1, "#16181c"), tt.globalCompositeOperation = "source-over", tt.globalAlpha = 1, tt.fillStyle = Dt, tt.fillRect(0, 0, et, Vt);
-                                  const mt = (et, Vt) => {
-                                      const qt = Ot(et[0], et[1], et[2]),
-                                        Dt = Ot(Vt[0], Vt[1], Vt[2]);
-                                      qt && Dt && (tt.beginPath(), tt.moveTo(qt.x, qt.y), tt.lineTo(Dt.x, Dt.y), tt.stroke())
+                                }(eu, Gu, Zu, bu);
+                                ! function(uu, Eu, ju, su, Uu) {
+                                  const Zu = uu.createLinearGradient(0, 0, 0, ju);
+                                  Zu.addColorStop(0, "#23262d"), Zu.addColorStop(1, "#16181c"), uu.globalCompositeOperation = "source-over", uu.globalAlpha = 1, uu.fillStyle = Zu, uu.fillRect(0, 0, Eu, ju);
+                                  const Xu = (Eu, ju) => {
+                                      const Uu = su(Eu[0], Eu[1], Eu[2]),
+                                        Zu = su(ju[0], ju[1], ju[2]);
+                                      Uu && Zu && (uu.beginPath(), uu.moveTo(Uu.x, Uu.y), uu.lineTo(Zu.x, Zu.y), uu.stroke())
                                     },
-                                    dt = Math.ceil(qt) + 1,
-                                    jt = Vq[1];
-                                  tt.lineWidth = 1, tt.strokeStyle = "rgba(255, 255, 255, 0.07)";
-                                  for (let Ht = -dt; Ht <= dt; Ht++) mt([Ht + .5, jt, .5 - dt], [Ht + .5, jt, dt + .5]), mt([.5 - dt, jt, Ht + .5], [dt + .5, jt, Ht + .5]);
-                                  tt.strokeStyle = "rgba(255, 255, 255, 0.28)", tt.setLineDash([4, 4]);
-                                  for (const Ht of qq)
-                                    for (const tt of qq) {
-                                      const et = [0, 1, 2].filter((et => Ht[et] !== tt[et]));
-                                      1 === et.length && Ht[et[0]] < tt[et[0]] && mt(Ht, tt)
+                                    lu = Math.ceil(Uu) + 1,
+                                    qu = sU[1];
+                                  uu.lineWidth = 1, uu.strokeStyle = "rgba(255, 255, 255, 0.07)";
+                                  for (let fu = -lu; fu <= lu; fu++) Xu([fu + .5, qu, .5 - lu], [fu + .5, qu, lu + .5]), Xu([.5 - lu, qu, fu + .5], [lu + .5, qu, fu + .5]);
+                                  uu.strokeStyle = "rgba(255, 255, 255, 0.28)", uu.setLineDash([4, 4]);
+                                  for (const fu of ZU)
+                                    for (const uu of ZU) {
+                                      const Eu = [0, 1, 2].filter((Eu => fu[Eu] !== uu[Eu]));
+                                      1 === Eu.length && fu[Eu[0]] < uu[Eu[0]] && Xu(fu, uu)
                                     }
-                                  tt.setLineDash([])
-                                }(et, Jt, Ct, ht, Qt);
-                                const vt = Ht.current,
-                                  Wt = Ot.map((tt => ({
-                                    particle: tt,
-                                    at: ht(tt.pos[0], tt.pos[1], tt.pos[2])
-                                  }))).filter((tt => null !== tt.at)).sort(((tt, et) => et.at.depth - tt.at.depth));
-                                et.imageSmoothingEnabled = !1;
-                                for (const tt of function(tt) {
-                                    switch (tt) {
-                                      case zV.f.OneOne:
+                                  uu.setLineDash([])
+                                }(Eu, eu, Gu, Ju, bu);
+                                const du = fu.current,
+                                  au = su.map((uu => ({
+                                    particle: uu,
+                                    at: Ju(uu.pos[0], uu.pos[1], uu.pos[2])
+                                  }))).filter((uu => null !== uu.at)).sort(((uu, Eu) => Eu.at.depth - uu.at.depth));
+                                Eu.imageSmoothingEnabled = !1;
+                                for (const uu of function(uu) {
+                                    switch (uu) {
+                                      case Wj.e.OneOne:
                                         return [{
                                           operation: "lighter",
                                           usesAlpha: !1
                                         }];
-                                      case zV.f.Add:
+                                      case Wj.e.Add:
                                         return [{
                                           operation: "lighter",
                                           usesAlpha: !0
                                         }];
-                                      case zV.f.Multiply:
+                                      case Wj.e.Multiply:
                                         return [{
                                           operation: "multiply",
                                           usesAlpha: !0
                                         }];
-                                      case zV.f.MultiplyAdd:
+                                      case Wj.e.MultiplyAdd:
                                         return [{
                                           operation: "multiply",
                                           usesAlpha: !0
@@ -2957,665 +2957,665 @@ export const modules = {
                                           usesAlpha: !0
                                         }]
                                     }
-                                  }(ut.blendMode)) {
-                                  et.globalCompositeOperation = tt.operation;
+                                  }(pu.blendMode)) {
+                                  Eu.globalCompositeOperation = uu.operation;
                                   for (const {
-                                      particle: Ot,
-                                      at: qt
+                                      particle: su,
+                                      at: Uu
                                     }
-                                    of Wt) {
-                                    const [Dt, mt, dt, jt] = xV(Ot), Ht = Math.max(1, Ot.size * qt.scale);
-                                    et.globalAlpha = tt.usesAlpha ? Math.min(1, Math.max(0, jt)) : 1, vt ? et.drawImage(Vt.get(vt, Dt, mt, dt), qt.x - Ht / 2, qt.y - Ht / 2, Ht, Ht) : (et.fillStyle = `rgb(${255*Dt}, ${255*mt}, ${255*dt})`, et.fillRect(qt.x - Ht / 2, qt.y - Ht / 2, Ht, Ht))
+                                    of au) {
+                                    const [Zu, Xu, lu, qu] = Hj(su), fu = Math.max(1, su.size * Uu.scale);
+                                    Eu.globalAlpha = uu.usesAlpha ? Math.min(1, Math.max(0, qu)) : 1, du ? Eu.drawImage(ju.get(du, Zu, Xu, lu), Uu.x - fu / 2, Uu.y - fu / 2, fu, fu) : (Eu.fillStyle = `rgb(${255*Zu}, ${255*Xu}, ${255*lu})`, Eu.fillRect(Uu.x - fu / 2, Uu.y - fu / 2, fu, fu))
                                   }
                                 }
-                                et.globalCompositeOperation = "source-over", et.globalAlpha = 1
+                                Eu.globalCompositeOperation = "source-over", Eu.globalAlpha = 1
                               };
-                              ft = requestAnimationFrame(Mt);
-                              const bt = new IntersectionObserver((tt => {
-                                let [et] = tt;
-                                wt = et.isIntersecting
+                              Ou = requestAnimationFrame(gu);
+                              const Mu = new IntersectionObserver((uu => {
+                                let [Eu] = uu;
+                                Yu = Eu.isIntersecting
                               }));
-                              bt.observe(tt);
-                              const Jt = et => {
-                                  yt = et.clientX, tt.setPointerCapture(et.pointerId)
+                              Mu.observe(uu);
+                              const eu = Eu => {
+                                  hu = Eu.clientX, uu.setPointerCapture(Eu.pointerId)
                                 },
-                                Ct = tt => {
-                                  null !== yt && (Dt += .01 * (tt.clientX - yt), yt = tt.clientX)
+                                Gu = uu => {
+                                  null !== hu && (Zu += .01 * (uu.clientX - hu), hu = uu.clientX)
                                 },
-                                ut = () => {
-                                  yt = null
+                                pu = () => {
+                                  hu = null
                                 };
-                              return tt.addEventListener("pointerdown", Jt), tt.addEventListener("pointermove", Ct), tt.addEventListener("pointerup", ut), tt.addEventListener("pointercancel", ut), () => {
-                                cancelAnimationFrame(ft), bt.disconnect(), Xt.current = null, tt.removeEventListener("pointerdown", Jt), tt.removeEventListener("pointermove", Ct), tt.removeEventListener("pointerup", ut), tt.removeEventListener("pointercancel", ut)
+                              return uu.addEventListener("pointerdown", eu), uu.addEventListener("pointermove", Gu), uu.addEventListener("pointerup", pu), uu.addEventListener("pointercancel", pu), () => {
+                                cancelAnimationFrame(Ou), Mu.disconnect(), Cu.current = null, uu.removeEventListener("pointerdown", eu), uu.removeEventListener("pointermove", Gu), uu.removeEventListener("pointerup", pu), uu.removeEventListener("pointercancel", pu)
                               }
-                            }), []), (0, ft.jsx)("canvas", {
-                              ref: mt,
+                            }), []), (0, Ou.jsx)("canvas", {
+                              ref: Xu,
                               className: "DocsParticleCanvas",
                               role: "img",
-                              "aria-label": `Preview of a ${et.texture} particle effect. Drag to turn the view.`
+                              "aria-label": `Preview of a ${Eu.texture} particle effect. Drag to turn the view.`
                             })
                           }
-                          const dq = ["aura", "stomp", "brainRot", "mobTameSuccess", "mango", "redFirecrackerLarge"],
-                            jq = [{
-                              mode: zV.f.OneOne,
+                          const qU = ["aura", "stomp", "brainRot", "mobTameSuccess", "mango", "redFirecrackerLarge"],
+                            fU = [{
+                              mode: Wj.e.OneOne,
                               label: "0 \xb7 OneOne (glow)"
                             }, {
-                              mode: zV.f.Standard,
+                              mode: Wj.e.Standard,
                               label: "1 \xb7 Standard"
                             }, {
-                              mode: zV.f.Add,
+                              mode: Wj.e.Add,
                               label: "2 \xb7 Add"
                             }, {
-                              mode: zV.f.Multiply,
+                              mode: Wj.e.Multiply,
                               label: "3 \xb7 Multiply"
                             }, {
-                              mode: zV.f.MultiplyAdd,
+                              mode: Wj.e.MultiplyAdd,
                               label: "4 \xb7 MultiplyAdd"
                             }],
-                            Hq = (0, Ot.forwardRef)((function(tt, et) {
-                              var Vt, qt;
+                            CU = (0, su.forwardRef)((function(uu, Eu) {
+                              var ju, Uu;
                               let {
-                                textures: mt
-                              } = tt;
-                              const dt = bO(),
-                                jt = (0, Ot.useRef)(null),
-                                [Ht, Xt] = (0, Ot.useState)(rV),
-                                [Qt, lt] = (0, Ot.useState)("example"),
-                                [Et, wt] = (0, Ot.useState)(0),
-                                [Nt, Mt] = (0, Ot.useState)(!1),
-                                Jt = tt => {
-                                  const et = "example" === tt ? rV : oV(tt);
-                                  et && (Xt(et), lt(tt))
+                                textures: Xu
+                              } = uu;
+                              const lu = es(),
+                                qu = (0, su.useRef)(null),
+                                [fu, Cu] = (0, su.useState)(Ij),
+                                [bu, cu] = (0, su.useState)("example"),
+                                [Nu, Yu] = (0, su.useState)(0),
+                                [Du, gu] = (0, su.useState)(!1),
+                                eu = uu => {
+                                  const Eu = "example" === uu ? Ij : Sj(uu);
+                                  Eu && (Cu(Eu), cu(uu))
                                 };
-                              (0, Ot.useImperativeHandle)(et, (() => ({
-                                preview: tt => {
-                                  var et;
-                                  Jt(tt), null === (et = jt.current) || void 0 === et || et.scrollIntoView({
+                              (0, su.useImperativeHandle)(Eu, (() => ({
+                                preview: uu => {
+                                  var Eu;
+                                  eu(uu), null === (Eu = qu.current) || void 0 === Eu || Eu.scrollIntoView({
                                     behavior: "smooth",
                                     block: "start"
                                   })
                                 }
                               })));
-                              const Ct = tt => {
-                                  Xt({
-                                    ...Ht,
-                                    ...tt
-                                  }), lt(null)
+                              const Gu = uu => {
+                                  Cu({
+                                    ...fu,
+                                    ...uu
+                                  }), cu(null)
                                 },
-                                ut = function(tt, et) {
-                                  if (null !== et) return `${tO}    presetId: "${et}",\n${eO}\n})`;
-                                  const Vt = tt.velocityGradients.map((tt => `        {\n            timeFraction: ${gV(tt.timeFraction)},\n            factor: ${gV(tt.factor)},\n            factor2: ${gV(tt.factor2)},\n        },`)),
-                                    Ot = [`    dir1: ${sV(tt.dir1)},`, `    dir2: ${sV(tt.dir2)},`, eO, `    texture: "${tt.texture}",`, `    minLifeTime: ${gV(tt.minLifeTime)},`, `    maxLifeTime: ${gV(tt.maxLifeTime)},`, `    minEmitPower: ${gV(tt.minEmitPower)},`, `    maxEmitPower: ${gV(tt.maxEmitPower)},`, `    minSize: ${gV(tt.minSize)},`, `    maxSize: ${gV(tt.maxSize)},`, `    manualEmitCount: ${gV(tt.manualEmitCount)},`, `    gravity: ${sV(tt.gravity)},`, `    colorGradients: ${nV(tt.colorGradients,"    ")},`, `    velocityGradients: ${Vt.length>0?`[\n${Vt.join("\n")}\n    ]`:"[]"},`, `    blendMode: ${gV(tt.blendMode)},`];
-                                  return void 0 !== tt.hideDist && Ot.push(`    hideDist: ${gV(tt.hideDist)},`), `${tO}${Ot.join("\n")}\n})`
-                                }(Ht, null === Qt || "example" === Qt ? null : Qt),
-                                ht = mt.includes(Ht.texture) ? mt : [...mt, Ht.texture];
-                              return (0, ft.jsxs)("section", {
-                                ref: jt,
+                                pu = function(uu, Eu) {
+                                  if (null !== Eu) return `${Rj}    presetId: "${Eu}",\n${us}\n})`;
+                                  const ju = uu.velocityGradients.map((uu => `        {\n            timeFraction: ${nj(uu.timeFraction)},\n            factor: ${nj(uu.factor)},\n            factor2: ${nj(uu.factor2)},\n        },`)),
+                                    su = [`    dir1: ${yj(uu.dir1)},`, `    dir2: ${yj(uu.dir2)},`, us, `    texture: "${uu.texture}",`, `    minLifeTime: ${nj(uu.minLifeTime)},`, `    maxLifeTime: ${nj(uu.maxLifeTime)},`, `    minEmitPower: ${nj(uu.minEmitPower)},`, `    maxEmitPower: ${nj(uu.maxEmitPower)},`, `    minSize: ${nj(uu.minSize)},`, `    maxSize: ${nj(uu.maxSize)},`, `    manualEmitCount: ${nj(uu.manualEmitCount)},`, `    gravity: ${yj(uu.gravity)},`, `    colorGradients: ${zj(uu.colorGradients,"    ")},`, `    velocityGradients: ${ju.length>0?`[\n${ju.join("\n")}\n    ]`:"[]"},`, `    blendMode: ${nj(uu.blendMode)},`];
+                                  return void 0 !== uu.hideDist && su.push(`    hideDist: ${nj(uu.hideDist)},`), `${Rj}${su.join("\n")}\n})`
+                                }(fu, null === bu || "example" === bu ? null : bu),
+                                Ju = Xu.includes(fu.texture) ? Xu : [...Xu, fu.texture];
+                              return (0, Ou.jsxs)("section", {
+                                ref: qu,
                                 className: "DocsPlayground DocsParticlePlayground",
                                 "aria-label": "Particle effect playground",
-                                children: [(0, ft.jsxs)("header", {
+                                children: [(0, Ou.jsxs)("header", {
                                   className: "DocsPlaygroundHeader",
-                                  children: [(0, ft.jsxs)("div", {
-                                    children: [(0, ft.jsx)("div", {
+                                  children: [(0, Ou.jsxs)("div", {
+                                    children: [(0, Ou.jsx)("div", {
                                       className: "DocsPlaygroundTitle",
                                       children: "Try it: particle effects"
-                                    }), (0, ft.jsx)("div", {
+                                    }), (0, Ou.jsx)("div", {
                                       className: "DocsPlaygroundHint",
                                       children: "Pick a preset or change the settings, and the burst replays. Drag the preview to turn it."
                                     })]
-                                  }), (0, ft.jsx)(bt, {
-                                    text: ut,
+                                  }), (0, Ou.jsx)(Mu, {
+                                    text: pu,
                                     label: "Copy code"
                                   })]
-                                }), (0, ft.jsxs)("div", {
+                                }), (0, Ou.jsxs)("div", {
                                   className: "DocsPlaygroundPresets",
-                                  children: [(0, ft.jsx)("button", {
+                                  children: [(0, Ou.jsx)("button", {
                                     type: "button",
-                                    className: Dt()("DocsVariantChip", {
-                                      Active: "example" === Qt
+                                    className: Zu()("DocsVariantChip", {
+                                      Active: "example" === bu
                                     }),
                                     onClick: () => {
-                                      Jt("example")
+                                      eu("example")
                                     },
                                     children: "Example"
-                                  }), dq.filter((tt => null !== oV(tt))).map((tt => (0, ft.jsx)("button", {
+                                  }), qU.filter((uu => null !== Sj(uu))).map((uu => (0, Ou.jsx)("button", {
                                     type: "button",
-                                    className: Dt()("DocsVariantChip", {
-                                      Active: Qt === tt
+                                    className: Zu()("DocsVariantChip", {
+                                      Active: bu === uu
                                     }),
                                     onClick: () => {
-                                      Jt(tt)
+                                      eu(uu)
                                     },
-                                    children: tt
-                                  }, tt))), (0, ft.jsxs)("select", {
+                                    children: uu
+                                  }, uu))), (0, Ou.jsxs)("select", {
                                     className: "DocsParticleSelect",
-                                    value: null !== Qt && void 0 !== Qt ? Qt : "custom",
+                                    value: null !== bu && void 0 !== bu ? bu : "custom",
                                     "aria-label": "Preset",
-                                    onChange: tt => {
-                                      Jt(tt.target.value)
+                                    onChange: uu => {
+                                      eu(uu.target.value)
                                     },
-                                    children: [(0, ft.jsx)("option", {
+                                    children: [(0, Ou.jsx)("option", {
                                       value: "example",
                                       children: "Example effect"
-                                    }), null === Qt && (0, ft.jsx)("option", {
+                                    }), null === bu && (0, Ou.jsx)("option", {
                                       value: "custom",
                                       children: "Custom"
-                                    }), GV.c.map((tt => (0, ft.jsx)("option", {
-                                      value: tt,
-                                      children: tt
-                                    }, tt)))]
+                                    }), ij.d.map((uu => (0, Ou.jsx)("option", {
+                                      value: uu,
+                                      children: uu
+                                    }, uu)))]
                                   })]
-                                }), (0, ft.jsxs)("div", {
+                                }), (0, Ou.jsxs)("div", {
                                   className: "DocsParticleBody",
-                                  children: [(0, ft.jsxs)("div", {
+                                  children: [(0, Ou.jsxs)("div", {
                                     className: "DocsParticleStageWrap",
-                                    children: [(0, ft.jsx)(mq, {
-                                      opts: Ht,
-                                      textureUrl: null !== (Vt = null === dt || void 0 === dt ? void 0 : dt.getParticleTextureUrl(Ht.texture)) && void 0 !== Vt ? Vt : null,
-                                      burst: Et,
-                                      paused: Nt
-                                    }), (0, ft.jsxs)("div", {
+                                    children: [(0, Ou.jsx)(lU, {
+                                      opts: fu,
+                                      textureUrl: null !== (ju = null === lu || void 0 === lu ? void 0 : lu.getParticleTextureUrl(fu.texture)) && void 0 !== ju ? ju : null,
+                                      burst: Nu,
+                                      paused: Du
+                                    }), (0, Ou.jsxs)("div", {
                                       className: "DocsParticleStageButtons",
-                                      children: [(0, ft.jsxs)("button", {
+                                      children: [(0, Ou.jsxs)("button", {
                                         type: "button",
                                         className: "DocsParticleStageButton",
                                         onClick: () => {
-                                          wt(Et + 1)
+                                          Yu(Nu + 1)
                                         },
-                                        children: [(0, ft.jsx)(yt, {
+                                        children: [(0, Ou.jsx)(hu, {
                                           name: "replay"
-                                        }), (0, ft.jsx)("span", {
+                                        }), (0, Ou.jsx)("span", {
                                           children: "Replay"
                                         })]
-                                      }), (0, ft.jsxs)("button", {
+                                      }), (0, Ou.jsxs)("button", {
                                         type: "button",
                                         className: "DocsParticleStageButton",
-                                        "aria-pressed": Nt,
+                                        "aria-pressed": Du,
                                         onClick: () => {
-                                          Mt(!Nt)
+                                          gu(!Du)
                                         },
-                                        children: [(0, ft.jsx)(yt, {
-                                          name: Nt ? "play" : "pause"
-                                        }), (0, ft.jsx)("span", {
-                                          children: Nt ? "Loop" : "Stop looping"
+                                        children: [(0, Ou.jsx)(hu, {
+                                          name: Du ? "play" : "pause"
+                                        }), (0, Ou.jsx)("span", {
+                                          children: Du ? "Loop" : "Stop looping"
                                         })]
                                       })]
                                     })]
-                                  }), (0, ft.jsxs)("div", {
+                                  }), (0, Ou.jsxs)("div", {
                                     className: "DocsParticleControls",
-                                    children: [(0, ft.jsxs)("div", {
+                                    children: [(0, Ou.jsxs)("div", {
                                       className: "DocsControl",
-                                      children: [(0, ft.jsxs)("div", {
+                                      children: [(0, Ou.jsxs)("div", {
                                         className: "DocsControlLabel",
-                                        children: [(0, ft.jsx)("span", {
+                                        children: [(0, Ou.jsx)("span", {
                                           children: "Texture"
-                                        }), (0, ft.jsx)("code", {
+                                        }), (0, Ou.jsx)("code", {
                                           className: "DocsControlValue",
-                                          children: Ht.texture
+                                          children: fu.texture
                                         })]
-                                      }), (0, ft.jsx)("div", {
+                                      }), (0, Ou.jsx)("div", {
                                         className: "DocsParticleTextures",
-                                        children: ht.map((tt => {
-                                          var et;
-                                          const Vt = null !== (et = null === dt || void 0 === dt ? void 0 : dt.getParticleTextureUrl(tt)) && void 0 !== et ? et : null;
-                                          return (0, ft.jsx)("button", {
+                                        children: Ju.map((uu => {
+                                          var Eu;
+                                          const ju = null !== (Eu = null === lu || void 0 === lu ? void 0 : lu.getParticleTextureUrl(uu)) && void 0 !== Eu ? Eu : null;
+                                          return (0, Ou.jsx)("button", {
                                             type: "button",
-                                            className: Dt()("DocsParticleTexture", {
-                                              Active: Ht.texture === tt
+                                            className: Zu()("DocsParticleTexture", {
+                                              Active: fu.texture === uu
                                             }),
-                                            title: tt,
-                                            "aria-label": tt,
-                                            "aria-pressed": Ht.texture === tt,
+                                            title: uu,
+                                            "aria-label": uu,
+                                            "aria-pressed": fu.texture === uu,
                                             onClick: () => {
-                                              Ct({
-                                                texture: tt
+                                              Gu({
+                                                texture: uu
                                               })
                                             },
-                                            children: Vt ? (0, ft.jsx)("img", {
-                                              src: Vt,
+                                            children: ju ? (0, Ou.jsx)("img", {
+                                              src: ju,
                                               alt: ""
-                                            }) : (0, ft.jsx)(yt, {
+                                            }) : (0, Ou.jsx)(hu, {
                                               name: "image"
                                             })
-                                          }, tt)
+                                          }, uu)
                                         }))
                                       })]
-                                    }), (0, ft.jsx)(tq, {
+                                    }), (0, Ou.jsx)(EU, {
                                       label: "Particles",
                                       min: 1,
                                       max: 400,
                                       step: 1,
-                                      value: Ht.manualEmitCount,
-                                      onChange: tt => {
-                                        Ct({
-                                          manualEmitCount: tt
+                                      value: fu.manualEmitCount,
+                                      onChange: uu => {
+                                        Gu({
+                                          manualEmitCount: uu
                                         })
                                       }
-                                    }), (0, ft.jsx)(nO, {
+                                    }), (0, Ou.jsx)(uU, {
                                       label: "Lifetime",
                                       min: .05,
                                       max: 3,
                                       step: .05,
-                                      low: Ht.minLifeTime,
-                                      high: Ht.maxLifeTime,
-                                      onChange: (tt, et) => {
-                                        Ct({
-                                          minLifeTime: tt,
-                                          maxLifeTime: et
+                                      low: fu.minLifeTime,
+                                      high: fu.maxLifeTime,
+                                      onChange: (uu, Eu) => {
+                                        Gu({
+                                          minLifeTime: uu,
+                                          maxLifeTime: Eu
                                         })
                                       }
-                                    }), (0, ft.jsx)(nO, {
+                                    }), (0, Ou.jsx)(uU, {
                                       label: "Emit power",
                                       min: 0,
                                       max: 40,
                                       step: .5,
-                                      low: Ht.minEmitPower,
-                                      high: Ht.maxEmitPower,
-                                      onChange: (tt, et) => {
-                                        Ct({
-                                          minEmitPower: tt,
-                                          maxEmitPower: et
+                                      low: fu.minEmitPower,
+                                      high: fu.maxEmitPower,
+                                      onChange: (uu, Eu) => {
+                                        Gu({
+                                          minEmitPower: uu,
+                                          maxEmitPower: Eu
                                         })
                                       }
-                                    }), (0, ft.jsx)(nO, {
+                                    }), (0, Ou.jsx)(uU, {
                                       label: "Size",
                                       min: .05,
                                       max: 2,
                                       step: .05,
-                                      low: Ht.minSize,
-                                      high: Ht.maxSize,
-                                      onChange: (tt, et) => {
-                                        Ct({
-                                          minSize: tt,
-                                          maxSize: et
+                                      low: fu.minSize,
+                                      high: fu.maxSize,
+                                      onChange: (uu, Eu) => {
+                                        Gu({
+                                          minSize: uu,
+                                          maxSize: Eu
                                         })
                                       }
-                                    }), (0, ft.jsx)(tq, {
+                                    }), (0, Ou.jsx)(EU, {
                                       label: "Gravity (up)",
                                       min: -40,
                                       max: 40,
                                       step: 1,
-                                      value: null !== (qt = Ht.gravity[1]) && void 0 !== qt ? qt : 0,
-                                      onChange: tt => {
-                                        var et, Vt;
-                                        Ct({
-                                          gravity: [null !== (et = Ht.gravity[0]) && void 0 !== et ? et : 0, tt, null !== (Vt = Ht.gravity[2]) && void 0 !== Vt ? Vt : 0]
+                                      value: null !== (Uu = fu.gravity[1]) && void 0 !== Uu ? Uu : 0,
+                                      onChange: uu => {
+                                        var Eu, ju;
+                                        Gu({
+                                          gravity: [null !== (Eu = fu.gravity[0]) && void 0 !== Eu ? Eu : 0, uu, null !== (ju = fu.gravity[2]) && void 0 !== ju ? ju : 0]
                                         })
                                       }
-                                    }), (0, ft.jsxs)("div", {
+                                    }), (0, Ou.jsxs)("div", {
                                       className: "DocsControl",
-                                      children: [(0, ft.jsx)("div", {
+                                      children: [(0, Ou.jsx)("div", {
                                         className: "DocsControlLabel",
-                                        children: (0, ft.jsx)("span", {
+                                        children: (0, Ou.jsx)("span", {
                                           children: "Blend mode"
                                         })
-                                      }), (0, ft.jsx)("select", {
+                                      }), (0, Ou.jsx)("select", {
                                         className: "DocsParticleSelect",
-                                        value: Ht.blendMode,
+                                        value: fu.blendMode,
                                         "aria-label": "Blend mode",
-                                        onChange: tt => {
-                                          Ct({
-                                            blendMode: Number(tt.target.value)
+                                        onChange: uu => {
+                                          Gu({
+                                            blendMode: Number(uu.target.value)
                                           })
                                         },
-                                        children: jq.map((tt => {
+                                        children: fU.map((uu => {
                                           let {
-                                            mode: et,
-                                            label: Vt
-                                          } = tt;
-                                          return (0, ft.jsx)("option", {
-                                            value: et,
-                                            children: Vt
-                                          }, et)
+                                            mode: Eu,
+                                            label: ju
+                                          } = uu;
+                                          return (0, Ou.jsx)("option", {
+                                            value: Eu,
+                                            children: ju
+                                          }, Eu)
                                         }))
                                       })]
-                                    }), (0, ft.jsx)(eq, {
-                                      opts: Ht,
-                                      onChange: tt => {
-                                        Ct({
-                                          colorGradients: tt
+                                    }), (0, Ou.jsx)(jU, {
+                                      opts: fu,
+                                      onChange: uu => {
+                                        Gu({
+                                          colorGradients: uu
                                         })
                                       }
                                     })]
                                   })]
-                                }), (0, ft.jsx)(Kt, {
-                                  code: ut,
+                                }), (0, Ou.jsx)(wu, {
+                                  code: pu,
                                   lang: "ts"
                                 })]
                               })
                             }));
-                          var Xq = Vt(4610),
-                            Qq = Vt(2001);
+                          var bU = ju(4653),
+                            cU = ju(1964);
 
-                          function lq(tt, et) {
-                            return tt ? Xq.e.includes(et) ? tt.getIngameIconUrl(et) : tt.getItemIconUrl(et) : null
+                          function NU(uu, Eu) {
+                            return uu ? bU.c.includes(Eu) ? uu.getIngameIconUrl(Eu) : uu.getItemIconUrl(Eu) : null
                           }
 
-                          function Eq(tt) {
-                            var et, Vt, Ot;
+                          function OU(uu) {
+                            var Eu, ju, su;
                             let {
-                              part: qt,
-                              assets: mt
-                            } = tt;
-                            const dt = lq(mt, qt.icon),
-                              jt = null !== (et = null === (Vt = qt.style) || void 0 === Vt ? void 0 : Vt.fontSize) && void 0 !== et ? et : "1.8em",
-                              Ht = (0, Ge.Ib)(qt.style);
-                            return (0, ft.jsxs)("span", {
-                              className: Dt()("DocsBloxdTextIcon", {
-                                Missing: !dt
+                              part: Uu,
+                              assets: Xu
+                            } = uu;
+                            const lu = NU(Xu, Uu.icon),
+                              qu = null !== (Eu = null === (ju = Uu.style) || void 0 === ju ? void 0 : ju.fontSize) && void 0 !== Eu ? Eu : "1.8em",
+                              fu = (0, iE.Yb)(Uu.style);
+                            return (0, Ou.jsxs)("span", {
+                              className: Zu()("DocsBloxdTextIcon", {
+                                Missing: !lu
                               }),
                               style: {
-                                width: jt,
-                                height: jt,
-                                opacity: null === (Ot = qt.style) || void 0 === Ot ? void 0 : Ot.opacity
+                                width: qu,
+                                height: qu,
+                                opacity: null === (su = Uu.style) || void 0 === su ? void 0 : su.opacity
                               },
-                              title: dt ? void 0 : `No Bloxd icon, item or block is called "${qt.icon}"`,
-                              children: [dt && Ht && (0, ft.jsx)("span", {
+                              title: lu ? void 0 : `No Bloxd icon, item or block is called "${Uu.icon}"`,
+                              children: [lu && fu && (0, Ou.jsx)("span", {
                                 className: "DocsBloxdTextIconTint",
                                 style: {
-                                  background: Ht,
-                                  maskImage: `url("${dt}")`,
-                                  WebkitMaskImage: `url("${dt}")`
+                                  background: fu,
+                                  maskImage: `url("${lu}")`,
+                                  WebkitMaskImage: `url("${lu}")`
                                 }
-                              }), dt ? (0, ft.jsx)("img", {
-                                src: dt,
+                              }), lu ? (0, Ou.jsx)("img", {
+                                src: lu,
                                 alt: "",
-                                className: Dt()({
-                                  Tinted: Ht
+                                className: Zu()({
+                                  Tinted: fu
                                 })
-                              }) : (0, ft.jsx)(yt, {
+                              }) : (0, Ou.jsx)(hu, {
                                 name: "image"
                               })]
                             })
                           }
 
-                          function fq(tt) {
+                          function YU(uu) {
                             let {
-                              parts: et,
-                              className: Vt
-                            } = tt;
-                            const Ot = bO(),
-                              qt = [];
-                            let mt = [];
-                            const dt = tt => {
-                              mt.length > 0 && (qt.push((0, ft.jsx)(Qq.e, {
-                                text: mt
-                              }, `run-${tt}`)), mt = [])
+                              parts: Eu,
+                              className: ju
+                            } = uu;
+                            const su = es(),
+                              Uu = [];
+                            let Xu = [];
+                            const lu = uu => {
+                              Xu.length > 0 && (Uu.push((0, Ou.jsx)(cU.d, {
+                                text: Xu
+                              }, `run-${uu}`)), Xu = [])
                             };
-                            return et.forEach(((tt, et) => {
-                              "icon" !== Ae(tt) || oe(tt.icon) ? mt.push(tt) : (dt(et), qt.push((0, ft.jsx)(Eq, {
-                                part: tt,
-                                assets: Ot
-                              }, `icon-${et}`)))
-                            })), dt(et.length), (0, ft.jsx)("div", {
-                              className: Dt()("DocsStyledTextPreview", Vt),
-                              children: qt
+                            return Eu.forEach(((uu, Eu) => {
+                              "icon" !== BE(uu) || SE(uu.icon) ? Xu.push(uu) : (lu(Eu), Uu.push((0, Ou.jsx)(OU, {
+                                part: uu,
+                                assets: su
+                              }, `icon-${Eu}`)))
+                            })), lu(Eu.length), (0, Ou.jsx)("div", {
+                              className: Zu()("DocsStyledTextPreview", ju),
+                              children: Uu
                             })
                           }
-                          const wq = ["0.75em", "1em", "1.25em", "1.5em", "2em", "3em"];
-                          let yq = null;
+                          const hU = ["0.75em", "1em", "1.25em", "1.5em", "2em", "3em"];
+                          let DU = null;
 
-                          function Nq(tt) {
-                            if (yq ??= document.createElement("canvas").getContext("2d"), !yq) return "#000000";
-                            yq.fillStyle = "#000000", yq.fillStyle = tt;
-                            const et = yq.fillStyle;
-                            return et.startsWith("#") ? et : "#000000"
+                          function gU(uu) {
+                            if (DU ??= document.createElement("canvas").getContext("2d"), !DU) return "#000000";
+                            DU.fillStyle = "#000000", DU.fillStyle = uu;
+                            const Eu = DU.fillStyle;
+                            return Eu.startsWith("#") ? Eu : "#000000"
                           }
 
-                          function aq(tt) {
+                          function MU(uu) {
                             let {
-                              value: et,
-                              label: Vt,
-                              onChange: Ot
-                            } = tt;
-                            return (0, ft.jsxs)("span", {
+                              value: Eu,
+                              label: ju,
+                              onChange: su
+                            } = uu;
+                            return (0, Ou.jsxs)("span", {
                               className: "DocsColourInput",
-                              children: [(0, ft.jsx)("input", {
+                              children: [(0, Ou.jsx)("input", {
                                 type: "color",
-                                value: Nq(et),
-                                "aria-label": `${Vt} picker`,
-                                onChange: tt => {
-                                  Ot(tt.target.value)
+                                value: gU(Eu),
+                                "aria-label": `${ju} picker`,
+                                onChange: uu => {
+                                  su(uu.target.value)
                                 }
-                              }), (0, ft.jsx)("input", {
+                              }), (0, Ou.jsx)("input", {
                                 type: "text",
-                                value: et,
+                                value: Eu,
                                 placeholder: "#ffb914 or gold",
-                                "aria-label": Vt,
+                                "aria-label": ju,
                                 spellCheck: !1,
-                                onChange: tt => {
-                                  Ot(tt.target.value)
+                                onChange: uu => {
+                                  su(uu.target.value)
                                 }
                               })]
                             })
                           }
 
-                          function Mq(tt) {
+                          function eU(uu) {
                             let {
-                              value: et,
-                              fontAwesomeIcons: Vt,
-                              onChange: qt
-                            } = tt;
-                            const mt = bO(),
-                              [dt, jt] = (0, Ot.useState)(oe(et) ? "fontAwesome" : "bloxd"),
-                              [Ht, Xt] = (0, Ot.useState)(""),
-                              Qt = Ht.trim().toLowerCase(),
-                              lt = "bloxd" === dt ? Xq.e : Vt,
-                              Et = Qt ? lt.filter((tt => tt.toLowerCase().includes(Qt))) : lt;
-                            return (0, ft.jsxs)("div", {
+                              value: Eu,
+                              fontAwesomeIcons: ju,
+                              onChange: Uu
+                            } = uu;
+                            const Xu = es(),
+                              [lu, qu] = (0, su.useState)(SE(Eu) ? "fontAwesome" : "bloxd"),
+                              [fu, Cu] = (0, su.useState)(""),
+                              bu = fu.trim().toLowerCase(),
+                              cu = "bloxd" === lu ? bU.c : ju,
+                              Nu = bu ? cu.filter((uu => uu.toLowerCase().includes(bu))) : cu;
+                            return (0, Ou.jsxs)("div", {
                               className: "DocsIconPicker",
-                              children: [(0, ft.jsx)("input", {
+                              children: [(0, Ou.jsx)("input", {
                                 type: "text",
-                                value: et,
+                                value: Eu,
                                 "aria-label": "Icon name",
                                 spellCheck: !1,
-                                onChange: tt => {
-                                  qt(tt.target.value)
+                                onChange: uu => {
+                                  Uu(uu.target.value)
                                 }
-                              }), (0, ft.jsx)("p", {
+                              }), (0, Ou.jsx)("p", {
                                 className: "DocsTextFieldHint",
                                 children: "Pick one below, or type any item or block name."
-                              }), (0, ft.jsxs)("div", {
+                              }), (0, Ou.jsxs)("div", {
                                 className: "DocsIconPickerTabs",
                                 role: "tablist",
                                 children: [
-                                  ["bloxd", "fontAwesome"].map((tt => (0, ft.jsx)("button", {
+                                  ["bloxd", "fontAwesome"].map((uu => (0, Ou.jsx)("button", {
                                     type: "button",
                                     role: "tab",
-                                    "aria-selected": dt === tt,
-                                    className: Dt()("DocsVariantChip", {
-                                      Active: dt === tt
+                                    "aria-selected": lu === uu,
+                                    className: Zu()("DocsVariantChip", {
+                                      Active: lu === uu
                                     }),
                                     onClick: () => {
-                                      jt(tt)
+                                      qu(uu)
                                     },
-                                    children: "bloxd" === tt ? `Bloxd icons (${Xq.e.length})` : `Font Awesome (${Vt.length})`
-                                  }, tt))), (0, ft.jsx)("input", {
+                                    children: "bloxd" === uu ? `Bloxd icons (${bU.c.length})` : `Font Awesome (${ju.length})`
+                                  }, uu))), (0, Ou.jsx)("input", {
                                     type: "search",
-                                    value: Ht,
+                                    value: fu,
                                     placeholder: "Filter\u2026",
                                     "aria-label": "Filter icons",
-                                    onChange: tt => {
-                                      Xt(tt.target.value)
+                                    onChange: uu => {
+                                      Cu(uu.target.value)
                                     }
                                   })
                                 ]
-                              }), (0, ft.jsxs)("div", {
+                              }), (0, Ou.jsxs)("div", {
                                 className: "DocsIconPickerGrid",
                                 role: "tabpanel",
-                                children: [Et.map((tt => {
-                                  const Vt = "bloxd" === dt ? lq(mt, tt) : null;
-                                  return (0, ft.jsx)("button", {
+                                children: [Nu.map((uu => {
+                                  const ju = "bloxd" === lu ? NU(Xu, uu) : null;
+                                  return (0, Ou.jsx)("button", {
                                     type: "button",
-                                    title: tt,
-                                    "aria-label": tt,
-                                    "aria-pressed": tt === et,
-                                    className: Dt()("DocsIconPickerOption", {
-                                      Active: tt === et
+                                    title: uu,
+                                    "aria-label": uu,
+                                    "aria-pressed": uu === Eu,
+                                    className: Zu()("DocsIconPickerOption", {
+                                      Active: uu === Eu
                                     }),
                                     onClick: () => {
-                                      qt(tt)
+                                      Uu(uu)
                                     },
-                                    children: "fontAwesome" === dt ? (0, ft.jsx)(JV.b, {
-                                      name: tt
-                                    }) : Vt ? (0, ft.jsx)("img", {
-                                      src: Vt,
+                                    children: "fontAwesome" === lu ? (0, Ou.jsx)(ej.e, {
+                                      name: uu
+                                    }) : ju ? (0, Ou.jsx)("img", {
+                                      src: ju,
                                       alt: ""
-                                    }) : (0, ft.jsx)(yt, {
+                                    }) : (0, Ou.jsx)(hu, {
                                       name: "image"
                                     })
-                                  }, tt)
-                                })), 0 === Et.length && (0, ft.jsxs)("p", {
+                                  }, uu)
+                                })), 0 === Nu.length && (0, Ou.jsxs)("p", {
                                   className: "DocsTextFieldHint",
-                                  children: ["No icons match \u201c", Ht, "\u201d."]
+                                  children: ["No icons match \u201c", fu, "\u201d."]
                                 })]
                               })]
                             })
                           }
 
-                          function bq(tt) {
+                          function GU(uu) {
                             let {
-                              property: et,
-                              value: Vt,
-                              fontAwesomeIcons: Ot,
-                              onChange: qt
-                            } = tt;
+                              property: Eu,
+                              value: ju,
+                              fontAwesomeIcons: su,
+                              onChange: Uu
+                            } = uu;
                             const {
-                              field: Dt,
-                              label: mt
-                            } = et, dt = tt => "" !== tt || et.isRequired ? tt : void 0;
-                            switch (Dt.kind) {
+                              field: Zu,
+                              label: Xu
+                            } = Eu, lu = uu => "" !== uu || Eu.isRequired ? uu : void 0;
+                            switch (Zu.kind) {
                               case "text":
-                                return Dt.multiline ? (0, ft.jsx)("textarea", {
-                                  value: String(null !== Vt && void 0 !== Vt ? Vt : ""),
+                                return Zu.multiline ? (0, Ou.jsx)("textarea", {
+                                  value: String(null !== ju && void 0 !== ju ? ju : ""),
                                   rows: 2,
-                                  "aria-label": mt,
-                                  onChange: tt => {
-                                    qt(tt.target.value)
+                                  "aria-label": Xu,
+                                  onChange: uu => {
+                                    Uu(uu.target.value)
                                   }
-                                }) : (0, ft.jsx)("input", {
+                                }) : (0, Ou.jsx)("input", {
                                   type: "text",
-                                  value: String(null !== Vt && void 0 !== Vt ? Vt : ""),
-                                  "aria-label": mt,
-                                  onChange: tt => {
-                                    qt(dt(tt.target.value))
+                                  value: String(null !== ju && void 0 !== ju ? ju : ""),
+                                  "aria-label": Xu,
+                                  onChange: uu => {
+                                    Uu(lu(uu.target.value))
                                   }
                                 });
                               case "size":
-                                return (0, ft.jsx)("input", {
+                                return (0, Ou.jsx)("input", {
                                   type: "text",
-                                  value: String(null !== Vt && void 0 !== Vt ? Vt : ""),
-                                  placeholder: et.defaultText,
+                                  value: String(null !== ju && void 0 !== ju ? ju : ""),
+                                  placeholder: Eu.defaultText,
                                   list: "DocsTextSizeSuggestions",
-                                  "aria-label": mt,
+                                  "aria-label": Xu,
                                   spellCheck: !1,
-                                  onChange: tt => {
-                                    qt(dt(tt.target.value.trim()))
+                                  onChange: uu => {
+                                    Uu(lu(uu.target.value.trim()))
                                   }
                                 });
                               case "colour":
-                                return (0, ft.jsx)(aq, {
-                                  value: String(null !== Vt && void 0 !== Vt ? Vt : ""),
-                                  label: mt,
-                                  onChange: tt => {
-                                    qt(dt(tt))
+                                return (0, Ou.jsx)(MU, {
+                                  value: String(null !== ju && void 0 !== ju ? ju : ""),
+                                  label: Xu,
+                                  onChange: uu => {
+                                    Uu(lu(uu))
                                   }
                                 });
                               case "colours": {
-                                const tt = Array.isArray(Vt) ? Vt : [],
-                                  et = tt => {
-                                    qt(tt.length > 0 ? tt : void 0)
+                                const uu = Array.isArray(ju) ? ju : [],
+                                  Eu = uu => {
+                                    Uu(uu.length > 0 ? uu : void 0)
                                   };
-                                return (0, ft.jsxs)("div", {
+                                return (0, Ou.jsxs)("div", {
                                   className: "DocsColourList",
-                                  children: [tt.map(((Vt, Ot) => (0, ft.jsxs)("span", {
+                                  children: [uu.map(((ju, su) => (0, Ou.jsxs)("span", {
                                     className: "DocsColourListRow",
-                                    children: [(0, ft.jsx)(aq, {
-                                      value: Vt,
-                                      label: `${mt} ${Ot+1}`,
-                                      onChange: Vt => {
-                                        et(tt.map(((tt, et) => et === Ot ? Vt : tt)))
+                                    children: [(0, Ou.jsx)(MU, {
+                                      value: ju,
+                                      label: `${Xu} ${su+1}`,
+                                      onChange: ju => {
+                                        Eu(uu.map(((uu, Eu) => Eu === su ? ju : uu)))
                                       }
-                                    }), (0, ft.jsx)("button", {
+                                    }), (0, Ou.jsx)("button", {
                                       type: "button",
                                       className: "DocsTextIconButton",
-                                      "aria-label": `Remove colour ${Ot+1}`,
+                                      "aria-label": `Remove colour ${su+1}`,
                                       onClick: () => {
-                                        et(tt.filter(((tt, et) => et !== Ot)))
+                                        Eu(uu.filter(((uu, Eu) => Eu !== su)))
                                       },
-                                      children: (0, ft.jsx)(yt, {
+                                      children: (0, Ou.jsx)(hu, {
                                         name: "cross"
                                       })
                                     })]
-                                  }, Ot))), (0, ft.jsxs)("button", {
+                                  }, su))), (0, Ou.jsxs)("button", {
                                     type: "button",
                                     className: "DocsTextAddButton",
                                     onClick: () => {
-                                      var Vt;
-                                      et([...tt, null !== (Vt = tt.at(-1)) && void 0 !== Vt ? Vt : "#ffffff"])
+                                      var ju;
+                                      Eu([...uu, null !== (ju = uu.at(-1)) && void 0 !== ju ? ju : "#ffffff"])
                                     },
-                                    children: [(0, ft.jsx)(yt, {
+                                    children: [(0, Ou.jsx)(hu, {
                                       name: "plus"
-                                    }), 0 === tt.length ? "Add a colour" : "Add a colour to the gradient"]
+                                    }), 0 === uu.length ? "Add a colour" : "Add a colour to the gradient"]
                                   })]
                                 })
                               }
                               case "fraction": {
-                                var jt;
-                                const tt = "number" === typeof Vt ? Vt : Number(null !== (jt = et.defaultText) && void 0 !== jt ? jt : 0);
-                                return (0, ft.jsxs)("span", {
+                                var qu;
+                                const uu = "number" === typeof ju ? ju : Number(null !== (qu = Eu.defaultText) && void 0 !== qu ? qu : 0);
+                                return (0, Ou.jsxs)("span", {
                                   className: "DocsFractionInput",
-                                  children: [(0, ft.jsx)("input", {
+                                  children: [(0, Ou.jsx)("input", {
                                     type: "range",
                                     min: 0,
                                     max: 1,
                                     step: .01,
-                                    value: tt,
-                                    "aria-label": mt,
-                                    onChange: tt => {
-                                      qt(Number(tt.target.value))
+                                    value: uu,
+                                    "aria-label": Xu,
+                                    onChange: uu => {
+                                      Uu(Number(uu.target.value))
                                     }
-                                  }), (0, ft.jsx)("output", {
-                                    children: tt.toFixed(2)
+                                  }), (0, Ou.jsx)("output", {
+                                    children: uu.toFixed(2)
                                   })]
                                 })
                               }
                               case "choice":
-                                return (0, ft.jsxs)("select", {
-                                  value: String(null !== Vt && void 0 !== Vt ? Vt : ""),
-                                  "aria-label": mt,
-                                  onChange: tt => {
-                                    qt(dt(tt.target.value))
+                                return (0, Ou.jsxs)("select", {
+                                  value: String(null !== ju && void 0 !== ju ? ju : ""),
+                                  "aria-label": Xu,
+                                  onChange: uu => {
+                                    Uu(lu(uu.target.value))
                                   },
-                                  children: [!et.isRequired && (0, ft.jsxs)("option", {
+                                  children: [!Eu.isRequired && (0, Ou.jsxs)("option", {
                                     value: "",
-                                    children: ["Default (", et.defaultText, ")"]
-                                  }), Dt.options.map((tt => (0, ft.jsx)("option", {
-                                    value: tt,
-                                    children: tt
-                                  }, tt)))]
+                                    children: ["Default (", Eu.defaultText, ")"]
+                                  }), Zu.options.map((uu => (0, Ou.jsx)("option", {
+                                    value: uu,
+                                    children: uu
+                                  }, uu)))]
                                 });
                               case "icon":
-                                return (0, ft.jsx)(Mq, {
-                                  value: String(null !== Vt && void 0 !== Vt ? Vt : ""),
-                                  fontAwesomeIcons: Ot,
-                                  onChange: qt
+                                return (0, Ou.jsx)(eU, {
+                                  value: String(null !== ju && void 0 !== ju ? ju : ""),
+                                  fontAwesomeIcons: su,
+                                  onChange: Uu
                                 })
                             }
                           }
 
-                          function Jq(tt) {
-                            let et;
+                          function pU(uu) {
+                            let Eu;
                             try {
-                              et = JSON.parse(tt)
-                            } catch (Vt) {
+                              Eu = JSON.parse(uu)
+                            } catch (ju) {
                               return {
                                 part: null,
-                                error: `Not valid JSON yet: ${Vt.message}`
+                                error: `Not valid JSON yet: ${ju.message}`
                               }
                             }
-                            return OV(et) ? {
-                              part: et,
+                            return jj(Eu) ? {
+                              part: Eu,
                               error: null
                             } : {
                               part: null,
@@ -3623,150 +3623,150 @@ export const modules = {
                             }
                           }
 
-                          function Cq(tt) {
+                          function wU(uu) {
                             let {
-                              parts: et,
-                              index: Vt,
-                              fontAwesomeIcons: qt,
-                              onChange: Dt,
-                              nS: mt,
-                              onClose: dt
-                            } = tt;
-                            const jt = (0, Ot.useContext)(we),
-                              Xt = (0, Ot.useRef)(null),
-                              Qt = et[Vt],
-                              lt = Ae(Qt),
-                              [Et, wt] = (0, Ot.useState)((() => JSON.stringify(Qt, null, 2))),
-                              Nt = (0, Ot.useMemo)((() => "other" === lt ? Jq(Et).error : null), [lt, Et]);
-                            (0, Ot.useEffect)((() => {
-                              var tt;
-                              null === (tt = Xt.current) || void 0 === tt || tt.focus()
+                              parts: Eu,
+                              index: ju,
+                              fontAwesomeIcons: Uu,
+                              onChange: Zu,
+                              jK: Xu,
+                              onClose: lu
+                            } = uu;
+                            const qu = (0, su.useContext)(OE),
+                              Cu = (0, su.useRef)(null),
+                              bu = Eu[ju],
+                              cu = BE(bu),
+                              [Nu, Yu] = (0, su.useState)((() => JSON.stringify(bu, null, 2))),
+                              Du = (0, su.useMemo)((() => "other" === cu ? pU(Nu).error : null), [cu, Nu]);
+                            (0, su.useEffect)((() => {
+                              var uu;
+                              null === (uu = Cu.current) || void 0 === uu || uu.focus()
                             }), []);
-                            const Mt = (0, ft.jsx)("div", {
+                            const gu = (0, Ou.jsx)("div", {
                               className: "DocsTextDialogOverlay",
-                              onMouseDown: tt => {
-                                tt.target === tt.currentTarget && dt()
+                              onMouseDown: uu => {
+                                uu.target === uu.currentTarget && lu()
                               },
-                              children: (0, ft.jsxs)("div", {
-                                ref: Xt,
+                              children: (0, Ou.jsxs)("div", {
+                                ref: Cu,
                                 className: "DocsTextDialog",
                                 role: "dialog",
                                 "aria-modal": "true",
-                                "aria-label": `Edit part ${Vt+1}: ${re[lt]}`,
+                                "aria-label": `Edit part ${ju+1}: ${IE[cu]}`,
                                 tabIndex: -1,
-                                onKeyDown: tt => {
-                                  "Escape" === tt.key ? (tt.stopPropagation(), dt()) : "Tab" === tt.key && Xt.current && function(tt, et) {
-                                    const Vt = Array.from(tt.querySelectorAll(ce)),
-                                      Ot = Vt[0],
-                                      qt = Vt.at(-1);
-                                    if (!Ot || !qt) return;
-                                    const Dt = document.activeElement;
-                                    !et.shiftKey || Dt !== Ot && Dt !== tt ? et.shiftKey || Dt !== qt || (et.preventDefault(), Ot.focus()) : (et.preventDefault(), qt.focus())
-                                  }(Xt.current, tt)
+                                onKeyDown: uu => {
+                                  "Escape" === uu.key ? (uu.stopPropagation(), lu()) : "Tab" === uu.key && Cu.current && function(uu, Eu) {
+                                    const ju = Array.from(uu.querySelectorAll(oE)),
+                                      su = ju[0],
+                                      Uu = ju.at(-1);
+                                    if (!su || !Uu) return;
+                                    const Zu = document.activeElement;
+                                    !Eu.shiftKey || Zu !== su && Zu !== uu ? Eu.shiftKey || Zu !== Uu || (Eu.preventDefault(), su.focus()) : (Eu.preventDefault(), Uu.focus())
+                                  }(Cu.current, uu)
                                 },
-                                children: [(0, ft.jsxs)("header", {
+                                children: [(0, Ou.jsxs)("header", {
                                   className: "DocsTextDialogHeader",
-                                  children: [(0, ft.jsxs)("div", {
-                                    children: [(0, ft.jsxs)("div", {
+                                  children: [(0, Ou.jsxs)("div", {
+                                    children: [(0, Ou.jsxs)("div", {
                                       className: "DocsTextDialogKind",
-                                      children: ["Part ", Vt + 1]
-                                    }), (0, ft.jsx)("div", {
+                                      children: ["Part ", ju + 1]
+                                    }), (0, Ou.jsx)("div", {
                                       className: "DocsTextDialogTitle",
-                                      children: re[lt]
+                                      children: IE[cu]
                                     })]
-                                  }), (0, ft.jsx)("button", {
+                                  }), (0, Ou.jsx)("button", {
                                     type: "button",
                                     className: "DocsTextIconButton",
                                     "aria-label": "Close",
-                                    onClick: dt,
-                                    children: (0, ft.jsx)(yt, {
+                                    onClick: lu,
+                                    children: (0, Ou.jsx)(hu, {
                                       name: "cross"
                                     })
                                   })]
-                                }), (0, ft.jsx)(fq, {
-                                  parts: et,
+                                }), (0, Ou.jsx)(YU, {
+                                  parts: Eu,
                                   className: "DocsTextDialogPreview"
-                                }), (0, ft.jsx)("div", {
+                                }), (0, Ou.jsx)("div", {
                                   className: "DocsTextDialogFields",
-                                  children: "other" === lt ? (0, ft.jsxs)("label", {
+                                  children: "other" === cu ? (0, Ou.jsxs)("label", {
                                     className: "DocsTextField",
-                                    children: [(0, ft.jsx)("span", {
+                                    children: [(0, Ou.jsx)("span", {
                                       className: "DocsTextFieldLabel",
                                       children: "JSON"
-                                    }), (0, ft.jsx)("textarea", {
+                                    }), (0, Ou.jsx)("textarea", {
                                       className: "DocsTextJson",
-                                      value: Et,
+                                      value: Nu,
                                       rows: 6,
                                       spellCheck: !1,
-                                      onChange: tt => {
-                                        wt(tt.target.value);
-                                        const et = Jq(tt.target.value);
-                                        null !== et.part && Dt(et.part)
+                                      onChange: uu => {
+                                        Yu(uu.target.value);
+                                        const Eu = pU(uu.target.value);
+                                        null !== Eu.part && Zu(Eu.part)
                                       }
-                                    }), Nt && (0, ft.jsx)("span", {
+                                    }), Du && (0, Ou.jsx)("span", {
                                       className: "DocsTextFieldError",
-                                      children: Nt
+                                      children: Du
                                     })]
-                                  }) : Ye[lt].map((tt => {
-                                    const et = pe(Qt, tt.path),
-                                      Vt = tt.isRequired ? JSON.stringify(Te(Qt, tt.path)) === JSON.stringify(Qt) : void 0 === et;
-                                    return (0, ft.jsxs)("div", {
+                                  }) : tE[cu].map((uu => {
+                                    const Eu = TE(bu, uu.path),
+                                      ju = uu.isRequired ? JSON.stringify(AE(bu, uu.path)) === JSON.stringify(bu) : void 0 === Eu;
+                                    return (0, Ou.jsxs)("div", {
                                       className: "DocsTextField",
-                                      children: [(0, ft.jsxs)("div", {
+                                      children: [(0, Ou.jsxs)("div", {
                                         className: "DocsTextFieldLabel",
-                                        children: [(0, ft.jsx)("span", {
-                                          children: tt.label
-                                        }), (0, ft.jsxs)("button", {
+                                        children: [(0, Ou.jsx)("span", {
+                                          children: uu.label
+                                        }), (0, Ou.jsxs)("button", {
                                           type: "button",
                                           className: "DocsTextResetButton",
-                                          disabled: Vt,
-                                          "aria-label": `Reset ${tt.label.toLowerCase()} to default`,
+                                          disabled: ju,
+                                          "aria-label": `Reset ${uu.label.toLowerCase()} to default`,
                                           onClick: () => {
-                                            Dt(Te(Qt, tt.path))
+                                            Zu(AE(bu, uu.path))
                                           },
-                                          children: [(0, ft.jsx)(yt, {
+                                          children: [(0, Ou.jsx)(hu, {
                                             name: "replay"
                                           }), "Reset"]
                                         })]
-                                      }), (0, ft.jsx)(bq, {
-                                        property: tt,
-                                        value: et,
-                                        fontAwesomeIcons: qt,
-                                        onChange: et => {
-                                          Dt(xe(Qt, tt.path, et))
+                                      }), (0, Ou.jsx)(GU, {
+                                        property: uu,
+                                        value: Eu,
+                                        fontAwesomeIcons: Uu,
+                                        onChange: Eu => {
+                                          Zu(HE(bu, uu.path, Eu))
                                         }
-                                      }), !tt.isRequired && (0, ft.jsxs)("span", {
+                                      }), !uu.isRequired && (0, Ou.jsxs)("span", {
                                         className: "DocsTextFieldHint",
-                                        children: ["Default: ", tt.defaultText]
+                                        children: ["Default: ", uu.defaultText]
                                       })]
-                                    }, tt.path.join("."))
+                                    }, uu.path.join("."))
                                   }))
-                                }), (0, ft.jsxs)("footer", {
+                                }), (0, Ou.jsxs)("footer", {
                                   className: "DocsTextDialogFooter",
-                                  children: [(0, ft.jsxs)("button", {
+                                  children: [(0, Ou.jsxs)("button", {
                                     type: "button",
                                     className: "DocsTextRemoveButton",
-                                    onClick: mt,
-                                    children: [(0, ft.jsx)(yt, {
+                                    onClick: Xu,
+                                    children: [(0, Ou.jsx)(hu, {
                                       name: "trash"
                                     }), "Remove part"]
-                                  }), (0, ft.jsx)("button", {
+                                  }), (0, Ou.jsx)("button", {
                                     type: "button",
                                     className: "DocsTextDoneButton",
-                                    onClick: dt,
+                                    onClick: lu,
                                     children: "Done"
                                   })]
-                                }), (0, ft.jsx)("datalist", {
+                                }), (0, Ou.jsx)("datalist", {
                                   id: "DocsTextSizeSuggestions",
-                                  children: wq.map((tt => (0, ft.jsx)("option", {
-                                    value: tt
-                                  }, tt)))
+                                  children: hU.map((uu => (0, Ou.jsx)("option", {
+                                    value: uu
+                                  }, uu)))
                                 })]
                               })
                             });
-                            return jt ? (0, Ht.createPortal)(Mt, jt) : Mt
+                            return qu ? (0, fu.createPortal)(gu, qu) : gu
                           }
-                          const uq = [{
+                          const JU = [{
                               label: "Icon and text",
                               parts: [{
                                 icon: "Pixelated Heart"
@@ -3810,265 +3810,265 @@ export const modules = {
                                 action: "jump"
                               }]
                             }],
-                            Kq = Object.keys(Ue);
+                            dU = Object.keys(FE);
 
-                          function hq(tt) {
+                          function aU(uu) {
                             let {
-                              fontAwesomeIcons: et
-                            } = tt;
-                            const [Vt, qt] = (0, Ot.useState)(uq[0].parts), [mt, dt] = (0, Ot.useState)((() => tV(uq[0].parts))), [jt, Ht] = (0, Ot.useState)(null), [Xt, Qt] = (0, Ot.useState)(!1), [lt, Et] = (0, Ot.useState)(null), [wt, Nt] = (0, Ot.useState)(!1), [Mt, bt] = (0, Ot.useState)(null), Jt = (0, Ot.useRef)(null), Ct = tV(Vt);
-                            (0, Ot.useLayoutEffect)((() => {
-                              var tt;
-                              if (!Mt) return;
-                              const et = tt => {
-                                  var et;
-                                  return null === (et = Jt.current) || void 0 === et ? void 0 : et.querySelector(`[data-focus-key="${tt}"]`)
+                              fontAwesomeIcons: Eu
+                            } = uu;
+                            const [ju, Uu] = (0, su.useState)(JU[0].parts), [Xu, lu] = (0, su.useState)((() => RE(JU[0].parts))), [qu, fu] = (0, su.useState)(null), [Cu, bu] = (0, su.useState)(!1), [cu, Nu] = (0, su.useState)(null), [Yu, Du] = (0, su.useState)(!1), [gu, Mu] = (0, su.useState)(null), eu = (0, su.useRef)(null), Gu = RE(ju);
+                            (0, su.useLayoutEffect)((() => {
+                              var uu;
+                              if (!gu) return;
+                              const Eu = uu => {
+                                  var Eu;
+                                  return null === (Eu = eu.current) || void 0 === Eu ? void 0 : Eu.querySelector(`[data-focus-key="${uu}"]`)
                                 },
-                                Vt = et(Mt.key);
-                              null === (tt = Vt && !Vt.disabled ? Vt : et(Mt.fallback)) || void 0 === tt || tt.focus(), bt(null)
-                            }), [Mt]);
-                            const ut = tt => {
-                                qt(tt), dt(tV(tt)), Ht(null)
+                                ju = Eu(gu.key);
+                              null === (uu = ju && !ju.disabled ? ju : Eu(gu.fallback)) || void 0 === uu || uu.focus(), Mu(null)
+                            }), [gu]);
+                            const pu = uu => {
+                                Uu(uu), lu(RE(uu)), fu(null)
                               },
-                              ht = tt => {
-                                ut(Vt.filter(((et, Vt) => Vt !== tt))), bt({
-                                  key: `edit-${Math.min(tt,Vt.length-2)}`,
+                              Ju = uu => {
+                                pu(ju.filter(((Eu, ju) => ju !== uu))), Mu({
+                                  key: `edit-${Math.min(uu,ju.length-2)}`,
                                   fallback: "add"
                                 })
                               },
-                              vt = (tt, et) => {
-                                const Ot = [...Vt],
-                                  [qt] = Ot.splice(tt, 1);
-                                Ot.splice(tt + et, 0, qt), ut(Ot);
-                                bt({
-                                  key: `${et<0?"up":"down"}-${tt+et}`,
-                                  fallback: `edit-${tt+et}`
+                              du = (uu, Eu) => {
+                                const su = [...ju],
+                                  [Uu] = su.splice(uu, 1);
+                                su.splice(uu + Eu, 0, Uu), pu(su);
+                                Mu({
+                                  key: `${Eu<0?"up":"down"}-${uu+Eu}`,
+                                  fallback: `edit-${uu+Eu}`
                                 })
                               };
-                            return (0, ft.jsxs)("section", {
-                              ref: Jt,
+                            return (0, Ou.jsxs)("section", {
+                              ref: eu,
                               className: "DocsPlayground DocsTextEditor",
                               "aria-label": "Styled text editor",
-                              children: [(0, ft.jsx)("header", {
+                              children: [(0, Ou.jsx)("header", {
                                 className: "DocsPlaygroundHeader",
-                                children: (0, ft.jsxs)("div", {
-                                  children: [(0, ft.jsx)("div", {
+                                children: (0, Ou.jsxs)("div", {
+                                  children: [(0, Ou.jsx)("div", {
                                     className: "DocsPlaygroundTitle",
                                     children: "Styled text editor"
-                                  }), (0, ft.jsx)("div", {
+                                  }), (0, Ou.jsx)("div", {
                                     className: "DocsPlaygroundHint",
                                     children: "Add parts, click one to style it, and copy the code. The preview draws it as the game does."
                                   })]
                                 })
-                              }), (0, ft.jsx)("div", {
+                              }), (0, Ou.jsx)("div", {
                                 className: "DocsPlaygroundPresets",
-                                children: uq.map((tt => (0, ft.jsx)("button", {
+                                children: JU.map((uu => (0, Ou.jsx)("button", {
                                   type: "button",
-                                  className: Dt()("DocsVariantChip", {
-                                    Active: Ct === tV(tt.parts)
+                                  className: Zu()("DocsVariantChip", {
+                                    Active: Gu === RE(uu.parts)
                                   }),
                                   onClick: () => {
-                                    ut(tt.parts)
+                                    pu(uu.parts)
                                   },
-                                  children: tt.label
-                                }, tt.label)))
-                              }), (0, ft.jsx)(fq, {
-                                parts: Vt,
+                                  children: uu.label
+                                }, uu.label)))
+                              }), (0, Ou.jsx)(YU, {
+                                parts: ju,
                                 className: "DocsTextEditorPreview"
-                              }), (0, ft.jsxs)("div", {
+                              }), (0, Ou.jsxs)("div", {
                                 className: "DocsTextEditorBody",
-                                children: [(0, ft.jsxs)("div", {
+                                children: [(0, Ou.jsxs)("div", {
                                   className: "DocsTextEditorPanel",
-                                  children: [(0, ft.jsx)("div", {
+                                  children: [(0, Ou.jsx)("div", {
                                     className: "DocsTextEditorPanelTitle",
                                     children: "Parts"
-                                  }), (0, ft.jsxs)("ol", {
+                                  }), (0, Ou.jsxs)("ol", {
                                     className: "DocsTextParts",
-                                    children: [Vt.map(((tt, et) => {
-                                      const Ot = Ae(tt);
-                                      return (0, ft.jsxs)("li", {
+                                    children: [ju.map(((uu, Eu) => {
+                                      const su = BE(uu);
+                                      return (0, Ou.jsxs)("li", {
                                         className: "DocsTextPart",
-                                        children: [(0, ft.jsxs)("button", {
+                                        children: [(0, Ou.jsxs)("button", {
                                           type: "button",
                                           className: "DocsTextPartMain",
-                                          "data-focus-key": `edit-${et}`,
-                                          "aria-label": `Edit part ${et+1}, ${re[Ot]}`,
+                                          "data-focus-key": `edit-${Eu}`,
+                                          "aria-label": `Edit part ${Eu+1}, ${IE[su]}`,
                                           onClick: () => {
-                                            Et(et)
+                                            Nu(Eu)
                                           },
-                                          children: [(0, ft.jsx)("span", {
+                                          children: [(0, Ou.jsx)("span", {
                                             className: "DocsTextPartKind",
-                                            children: re[Ot]
-                                          }), (0, ft.jsx)(fq, {
-                                            parts: [tt],
+                                            children: IE[su]
+                                          }), (0, Ou.jsx)(YU, {
+                                            parts: [uu],
                                             className: "DocsTextPartPreview"
-                                          }), "text" !== Ot && (0, ft.jsx)("code", {
+                                          }), "text" !== su && (0, Ou.jsx)("code", {
                                             className: "DocsTextPartName",
-                                            children: ge(tt)
+                                            children: nE(uu)
                                           })]
-                                        }), (0, ft.jsxs)("span", {
+                                        }), (0, Ou.jsxs)("span", {
                                           className: "DocsTextPartActions",
-                                          children: [(0, ft.jsx)("button", {
+                                          children: [(0, Ou.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${et+1} up`,
-                                            "data-focus-key": `up-${et}`,
-                                            disabled: 0 === et,
+                                            "aria-label": `Move part ${Eu+1} up`,
+                                            "data-focus-key": `up-${Eu}`,
+                                            disabled: 0 === Eu,
                                             onClick: () => {
-                                              vt(et, -1)
+                                              du(Eu, -1)
                                             },
-                                            children: (0, ft.jsx)(yt, {
+                                            children: (0, Ou.jsx)(hu, {
                                               name: "chevron-up"
                                             })
-                                          }), (0, ft.jsx)("button", {
+                                          }), (0, Ou.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${et+1} down`,
-                                            "data-focus-key": `down-${et}`,
-                                            disabled: et === Vt.length - 1,
+                                            "aria-label": `Move part ${Eu+1} down`,
+                                            "data-focus-key": `down-${Eu}`,
+                                            disabled: Eu === ju.length - 1,
                                             onClick: () => {
-                                              vt(et, 1)
+                                              du(Eu, 1)
                                             },
-                                            children: (0, ft.jsx)(yt, {
+                                            children: (0, Ou.jsx)(hu, {
                                               name: "chevron-down"
                                             })
-                                          }), (0, ft.jsx)("button", {
+                                          }), (0, Ou.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Remove part ${et+1}`,
+                                            "aria-label": `Remove part ${Eu+1}`,
                                             onClick: () => {
-                                              ht(et)
+                                              Ju(Eu)
                                             },
-                                            children: (0, ft.jsx)(yt, {
+                                            children: (0, Ou.jsx)(hu, {
                                               name: "cross"
                                             })
                                           })]
                                         })]
-                                      }, et)
-                                    })), 0 === Vt.length && (0, ft.jsx)("li", {
+                                      }, Eu)
+                                    })), 0 === ju.length && (0, Ou.jsx)("li", {
                                       className: "DocsTextPartsEmpty",
                                       children: "No parts yet. Add one below."
                                     })]
-                                  }), (0, ft.jsxs)("div", {
+                                  }), (0, Ou.jsxs)("div", {
                                     className: "DocsTextAddPart",
-                                    onKeyDown: tt => {
-                                      "Escape" === tt.key && wt && (tt.stopPropagation(), Nt(!1), bt({
+                                    onKeyDown: uu => {
+                                      "Escape" === uu.key && Yu && (uu.stopPropagation(), Du(!1), Mu({
                                         key: "add",
                                         fallback: "add"
                                       }))
                                     },
-                                    children: [(0, ft.jsxs)("button", {
+                                    children: [(0, Ou.jsxs)("button", {
                                       type: "button",
                                       className: "DocsTextAddPartButton",
                                       "data-focus-key": "add",
-                                      "aria-expanded": wt,
+                                      "aria-expanded": Yu,
                                       "aria-controls": "DocsTextAddPartMenu",
                                       onClick: () => {
-                                        Nt(!wt)
+                                        Du(!Yu)
                                       },
-                                      children: [(0, ft.jsx)(yt, {
+                                      children: [(0, Ou.jsx)(hu, {
                                         name: "plus"
-                                      }), "Add a part", (0, ft.jsx)(yt, {
-                                        name: wt ? "chevron-up" : "chevron-down"
+                                      }), "Add a part", (0, Ou.jsx)(hu, {
+                                        name: Yu ? "chevron-up" : "chevron-down"
                                       })]
-                                    }), wt && (0, ft.jsx)("ul", {
+                                    }), Yu && (0, Ou.jsx)("ul", {
                                       id: "DocsTextAddPartMenu",
                                       className: "DocsTextAddPartMenu",
-                                      children: Kq.map((tt => (0, ft.jsx)("li", {
-                                        children: (0, ft.jsx)("button", {
+                                      children: dU.map((uu => (0, Ou.jsx)("li", {
+                                        children: (0, Ou.jsx)("button", {
                                           type: "button",
                                           onClick: () => {
-                                            (tt => {
-                                              ut([...Vt, Ue[tt]]), Nt(!1), Et(Vt.length)
-                                            })(tt)
+                                            (uu => {
+                                              pu([...ju, FE[uu]]), Du(!1), Nu(ju.length)
+                                            })(uu)
                                           },
-                                          children: re[tt]
+                                          children: IE[uu]
                                         })
-                                      }, tt)))
+                                      }, uu)))
                                     })]
                                   })]
-                                }), (0, ft.jsxs)("div", {
+                                }), (0, Ou.jsxs)("div", {
                                   className: "DocsTextEditorPanel",
-                                  children: [(0, ft.jsxs)("div", {
+                                  children: [(0, Ou.jsxs)("div", {
                                     className: "DocsTextEditorPanelTitle",
-                                    children: ["Code", (0, ft.jsxs)("button", {
+                                    children: ["Code", (0, Ou.jsxs)("button", {
                                       type: "button",
                                       className: "DocsTextEditCodeButton",
-                                      "aria-pressed": Xt,
+                                      "aria-pressed": Cu,
                                       onClick: () => {
-                                        Qt(!Xt)
+                                        bu(!Cu)
                                       },
-                                      children: [(0, ft.jsx)(yt, {
-                                        name: Xt ? "check" : "pencil"
-                                      }), Xt ? "Done" : "Edit"]
+                                      children: [(0, Ou.jsx)(hu, {
+                                        name: Cu ? "check" : "pencil"
+                                      }), Cu ? "Done" : "Edit"]
                                     })]
-                                  }), Xt ? (0, ft.jsxs)(ft.Fragment, {
-                                    children: [(0, ft.jsx)("textarea", {
+                                  }), Cu ? (0, Ou.jsxs)(Ou.Fragment, {
+                                    children: [(0, Ou.jsx)("textarea", {
                                       className: "DocsPlaygroundInput",
-                                      value: mt,
+                                      value: Xu,
                                       spellCheck: !1,
                                       "aria-label": "Styled text as code",
-                                      onChange: tt => {
-                                        dt(tt.target.value);
-                                        const et = qV(tt.target.value);
-                                        Ht(et.error), et.parts && qt(et.parts)
+                                      onChange: uu => {
+                                        lu(uu.target.value);
+                                        const Eu = sj(uu.target.value);
+                                        fu(Eu.error), Eu.parts && Uu(Eu.parts)
                                       }
-                                    }), jt && (0, ft.jsx)("p", {
+                                    }), qu && (0, Ou.jsx)("p", {
                                       className: "DocsPlaygroundError",
-                                      children: jt
+                                      children: qu
                                     })]
-                                  }) : (0, ft.jsx)(Kt, {
+                                  }) : (0, Ou.jsx)(wu, {
                                     lang: "js",
-                                    code: `api.sendMessage(playerId, ${Ct})`
+                                    code: `api.sendMessage(playerId, ${Gu})`
                                   })]
                                 })]
-                              }), null !== lt && lt < Vt.length && (0, ft.jsx)(Cq, {
-                                parts: Vt,
-                                index: lt,
-                                fontAwesomeIcons: et,
-                                onChange: tt => {
-                                  ((tt, et) => {
-                                    ut(Vt.map(((Vt, Ot) => Ot === tt ? et : Vt)))
-                                  })(lt, tt)
+                              }), null !== cu && cu < ju.length && (0, Ou.jsx)(wU, {
+                                parts: ju,
+                                index: cu,
+                                fontAwesomeIcons: Eu,
+                                onChange: uu => {
+                                  ((uu, Eu) => {
+                                    pu(ju.map(((ju, su) => su === uu ? Eu : ju)))
+                                  })(cu, uu)
                                 },
-                                nS: () => {
-                                  ht(lt), Et(null)
+                                jK: () => {
+                                  Ju(cu), Nu(null)
                                 },
                                 onClose: () => {
-                                  Et(null), bt({
-                                    key: `edit-${lt}`,
+                                  Nu(null), Mu({
+                                    key: `edit-${cu}`,
                                     fallback: "add"
                                   })
                                 }
                               })]
                             })
                           }
-                          var vq = Vt(5015),
-                            Wq = Vt(5e3),
-                            Sq = Vt(5010),
-                            cq = Vt(5021);
-                          const Rq = 40,
-                            Iq = 800,
-                            Pq = 150,
-                            Zq = 8e3,
-                            Lq = 2e3;
+                          var PU = ju(5011),
+                            oU = ju(4997),
+                            kU = ju(5003),
+                            mU = ju(5019);
+                          const vU = 40,
+                            KU = 800,
+                            VU = 150,
+                            rU = 8e3,
+                            QU = 2e3;
 
-                          function Fq(tt, et) {
-                            return 12 * Math.log2(et / tt)
+                          function iU(uu, Eu) {
+                            return 12 * Math.log2(Eu / uu)
                           }
 
-                          function kq(tt, et) {
-                            return Math.round(tt * 2 ** (et / 12) * 10) / 10
+                          function WU(uu, Eu) {
+                            return Math.round(uu * 2 ** (Eu / 12) * 10) / 10
                           }
 
-                          function Gq(tt) {
-                            return `${tt} ms`
+                          function SU(uu) {
+                            return `${uu} ms`
                           }
 
-                          function zq(tt) {
-                            return `${tt} st`
+                          function IU(uu) {
+                            return `${uu} st`
                           }
-                          const oq = [{
+                          const FU = [{
                             key: "variationSemitones",
                             label: "Word variation",
                             max: 6
@@ -4086,769 +4086,769 @@ export const modules = {
                             max: 12
                           }];
 
-                          function rq(tt) {
+                          function BU(uu) {
                             let {
-                              synth: et,
-                              onChange: Vt
-                            } = tt;
-                            const Ot = (0, vq.i)(et);
-                            return (0, ft.jsxs)("div", {
+                              synth: Eu,
+                              onChange: ju
+                            } = uu;
+                            const su = (0, PU.l)(Eu);
+                            return (0, Ou.jsxs)("div", {
                               className: "DocsVoiceControls",
-                              children: [(0, ft.jsxs)("div", {
+                              children: [(0, Ou.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, ft.jsx)("div", {
+                                children: [(0, Ou.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Voice"
-                                }), (0, ft.jsxs)("div", {
+                                }), (0, Ou.jsxs)("div", {
                                   className: "DocsControl",
-                                  children: [(0, ft.jsx)("div", {
+                                  children: [(0, Ou.jsx)("div", {
                                     className: "DocsControlLabel",
-                                    children: (0, ft.jsx)("span", {
+                                    children: (0, Ou.jsx)("span", {
                                       children: "Tone"
                                     })
-                                  }), (0, ft.jsx)("div", {
+                                  }), (0, Ou.jsx)("div", {
                                     className: "DocsVoiceWaveforms",
-                                    children: vq.d.map((tt => (0, ft.jsx)("button", {
+                                    children: PU.h.map((uu => (0, Ou.jsx)("button", {
                                       type: "button",
-                                      className: Dt()("DocsVariantChip", {
-                                        Active: et.waveform === tt
+                                      className: Zu()("DocsVariantChip", {
+                                        Active: Eu.waveform === uu
                                       }),
-                                      "aria-pressed": et.waveform === tt,
+                                      "aria-pressed": Eu.waveform === uu,
                                       onClick: () => {
-                                        Vt({
-                                          waveform: tt
+                                        ju({
+                                          waveform: uu
                                         })
                                       },
-                                      children: tt
-                                    }, tt)))
+                                      children: uu
+                                    }, uu)))
                                   })]
-                                }), (0, ft.jsx)(tq, {
+                                }), (0, Ou.jsx)(EU, {
                                   label: "Pitch",
                                   min: 0,
-                                  max: Fq(Rq, Iq),
+                                  max: iU(vU, KU),
                                   step: .1,
-                                  value: Fq(Rq, et.pitchHz),
-                                  format: () => `${et.pitchHz} Hz`,
-                                  onChange: tt => {
-                                    Vt({
-                                      pitchHz: kq(Rq, tt)
+                                  value: iU(vU, Eu.pitchHz),
+                                  format: () => `${Eu.pitchHz} Hz`,
+                                  onChange: uu => {
+                                    ju({
+                                      pitchHz: WU(vU, uu)
                                     })
                                   }
-                                }), (0, ft.jsx)(tq, {
+                                }), (0, Ou.jsx)(EU, {
                                   label: "Time per syllable",
                                   min: 25,
                                   max: 200,
                                   step: 1,
-                                  value: et.syllableMs,
-                                  format: Gq,
-                                  onChange: tt => {
-                                    Vt({
-                                      syllableMs: tt
+                                  value: Eu.syllableMs,
+                                  format: SU,
+                                  onChange: uu => {
+                                    ju({
+                                      syllableMs: uu
                                     })
                                   }
-                                }), (0, ft.jsx)(tq, {
+                                }), (0, Ou.jsx)(EU, {
                                   label: "Volume",
                                   min: 0,
                                   max: 2,
                                   step: .05,
-                                  value: et.volume,
-                                  onChange: tt => {
-                                    Vt({
-                                      volume: tt
+                                  value: Eu.volume,
+                                  onChange: uu => {
+                                    ju({
+                                      volume: uu
                                     })
                                   }
                                 })]
-                              }), (0, ft.jsxs)("div", {
+                              }), (0, Ou.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, ft.jsx)("div", {
+                                children: [(0, Ou.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Each blip"
-                                }), (0, ft.jsx)(tq, {
+                                }), (0, Ou.jsx)(EU, {
                                   label: "Length",
                                   min: 10,
                                   max: 300,
                                   step: 1,
-                                  value: et.durationMs,
-                                  format: Gq,
-                                  onChange: tt => {
-                                    Vt({
-                                      durationMs: tt
+                                  value: Eu.durationMs,
+                                  format: SU,
+                                  onChange: uu => {
+                                    ju({
+                                      durationMs: uu
                                     })
                                   }
-                                }), (0, ft.jsx)(tq, {
+                                }), (0, Ou.jsx)(EU, {
                                   label: "Fade in",
                                   min: 0,
-                                  max: Ot.durationMs,
+                                  max: su.durationMs,
                                   step: 1,
-                                  value: Ot.attackMs,
-                                  format: Gq,
-                                  onChange: tt => {
-                                    Vt({
-                                      attackMs: tt
+                                  value: su.attackMs,
+                                  format: SU,
+                                  onChange: uu => {
+                                    ju({
+                                      attackMs: uu
                                     })
                                   }
-                                }), (0, ft.jsx)(tq, {
+                                }), (0, Ou.jsx)(EU, {
                                   label: "Fade out",
                                   min: 0,
-                                  max: Ot.durationMs - Ot.attackMs,
+                                  max: su.durationMs - su.attackMs,
                                   step: 1,
-                                  value: Ot.releaseMs,
-                                  format: Gq,
-                                  onChange: tt => {
-                                    Vt({
-                                      releaseMs: tt
+                                  value: su.releaseMs,
+                                  format: SU,
+                                  onChange: uu => {
+                                    ju({
+                                      releaseMs: uu
                                     })
                                   }
-                                }), (0, ft.jsx)(tq, {
+                                }), (0, Ou.jsx)(EU, {
                                   label: "Glide",
                                   min: -12,
                                   max: 12,
                                   step: .1,
-                                  value: et.glideSemitones,
-                                  format: zq,
-                                  onChange: tt => {
-                                    Vt({
-                                      glideSemitones: tt
+                                  value: Eu.glideSemitones,
+                                  format: IU,
+                                  onChange: uu => {
+                                    ju({
+                                      glideSemitones: uu
                                     })
                                   }
-                                }), (0, ft.jsxs)("label", {
+                                }), (0, Ou.jsxs)("label", {
                                   className: "DocsVoiceToggle",
-                                  children: [(0, ft.jsx)("input", {
+                                  children: [(0, Ou.jsx)("input", {
                                     type: "checkbox",
-                                    checked: null !== et.lowpassHz,
-                                    onChange: tt => {
-                                      Vt({
-                                        lowpassHz: tt.target.checked ? Lq : null
+                                    checked: null !== Eu.lowpassHz,
+                                    onChange: uu => {
+                                      ju({
+                                        lowpassHz: uu.target.checked ? QU : null
                                       })
                                     }
-                                  }), (0, ft.jsx)("span", {
+                                  }), (0, Ou.jsx)("span", {
                                     children: "Muffle with a filter"
                                   })]
-                                }), null !== et.lowpassHz && (0, ft.jsx)(tq, {
+                                }), null !== Eu.lowpassHz && (0, Ou.jsx)(EU, {
                                   label: "Filter",
                                   min: 0,
-                                  max: Fq(Pq, Zq),
+                                  max: iU(VU, rU),
                                   step: .1,
-                                  value: Fq(Pq, et.lowpassHz),
-                                  format: () => `${et.lowpassHz} Hz`,
-                                  onChange: tt => {
-                                    Vt({
-                                      lowpassHz: kq(Pq, tt)
+                                  value: iU(VU, Eu.lowpassHz),
+                                  format: () => `${Eu.lowpassHz} Hz`,
+                                  onChange: uu => {
+                                    ju({
+                                      lowpassHz: WU(VU, uu)
                                     })
                                   }
                                 })]
-                              }), (0, ft.jsxs)("div", {
+                              }), (0, Ou.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, ft.jsx)("div", {
+                                children: [(0, Ou.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Intonation"
-                                }), oq.map((tt => {
+                                }), FU.map((uu => {
                                   let {
-                                    key: Ot,
-                                    label: qt,
-                                    max: Dt
-                                  } = tt;
-                                  return (0, ft.jsx)(tq, {
-                                    label: qt,
+                                    key: su,
+                                    label: Uu,
+                                    max: Zu
+                                  } = uu;
+                                  return (0, Ou.jsx)(EU, {
+                                    label: Uu,
                                     min: 0,
-                                    max: Dt,
+                                    max: Zu,
                                     step: .1,
-                                    value: et.intonation[Ot],
-                                    format: zq,
-                                    onChange: tt => {
-                                      Vt({
+                                    value: Eu.intonation[su],
+                                    format: IU,
+                                    onChange: uu => {
+                                      ju({
                                         intonation: {
-                                          ...et.intonation,
-                                          [Ot]: tt
+                                          ...Eu.intonation,
+                                          [su]: uu
                                         }
                                       })
                                     }
-                                  }, Ot)
+                                  }, su)
                                 }))]
                               })]
                             })
                           }
-                          const Uq = Object.keys(vq.g),
-                            Aq = ["Welcome, traveller. The road ahead is long.", "Have you seen my lost sheep anywhere?", "Watch out, the bridge is about to collapse!"];
+                          const LU = Object.keys(PU.j),
+                            tU = ["Welcome, traveller. The road ahead is long.", "Have you seen my lost sheep anywhere?", "Watch out, the bridge is about to collapse!"];
 
-                          function iq(tt) {
-                            var et;
-                            const Vt = JSON.stringify((0, vq.i)(tt));
-                            return null !== (et = Uq.find((tt => JSON.stringify((0, vq.i)(vq.g[tt])) === Vt))) && void 0 !== et ? et : null
+                          function xU(uu) {
+                            var Eu;
+                            const ju = JSON.stringify((0, PU.l)(uu));
+                            return null !== (Eu = LU.find((uu => JSON.stringify((0, PU.l)(PU.j[uu])) === ju))) && void 0 !== Eu ? Eu : null
                           }
 
-                          function Yq(tt) {
-                            let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-                            if ("object" !== typeof tt || null === tt) return JSON.stringify(tt);
-                            return `{\n${Object.entries(tt).map((tt=>{let[Vt,Ot]=tt;return`${et}    ${Vt}: ${Yq(Ot,`${et}    `)},`})).join("\n")}\n${et}}`
+                          function TU(uu) {
+                            let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+                            if ("object" !== typeof uu || null === uu) return JSON.stringify(uu);
+                            return `{\n${Object.entries(uu).map((uu=>{let[ju,su]=uu;return`${Eu}    ${ju}: ${TU(su,`${Eu}    `)},`})).join("\n")}\n${Eu}}`
                           }
 
-                          function Bq(tt, et, Vt) {
-                            const Ot = iq(tt),
-                              qt = [`    line: ${JSON.stringify(et)},`];
-                            return Vt && qt.push(`    speakerName: ${JSON.stringify(Vt)},`), qt.push("    voice,"), `const voice = ${Ot?JSON.stringify(Ot):Yq((0,vq.i)(tt))}\n\napi.setClientOption(playerId, "dialogue", {\n${qt.join("\n")}\n})`
+                          function HU(uu, Eu, ju) {
+                            const su = xU(uu),
+                              Uu = [`    line: ${JSON.stringify(Eu)},`];
+                            return ju && Uu.push(`    speakerName: ${JSON.stringify(ju)},`), Uu.push("    voice,"), `const voice = ${su?JSON.stringify(su):TU((0,PU.l)(uu))}\n\napi.setClientOption(playerId, "dialogue", {\n${Uu.join("\n")}\n})`
                           }
-                          const pq = 400,
-                            xq = 90;
-                          let Tq = null;
+                          const AU = 400,
+                            nU = 90;
+                          let yU = null;
 
-                          function gq(tt, et, Vt) {
-                            return Tq ??= new AudioContext, Tq.resume(), (0, cq.e)(Tq, Tq.destination, tt, et, Vt, (() => {}))
+                          function zU(uu, Eu, ju) {
+                            return yU ??= new AudioContext, yU.resume(), (0, mU.c)(yU, yU.destination, uu, Eu, ju, (() => {}))
                           }
 
-                          function sq() {
-                            const [tt, et] = (0, Ot.useState)(vq.g.regular), [Vt, qt] = (0, Ot.useState)(Aq[0]), [mt, dt] = (0, Ot.useState)("Innkeeper"), [jt, Ht] = (0, Ot.useState)(0), Xt = QO((tt => tt.volume)), Qt = (0, Ot.useRef)(null), lt = (0, Ot.useRef)(0), Et = (0, Ot.useRef)(0), wt = () => {
-                              var tt;
-                              null === (tt = Qt.current) || void 0 === tt || tt.call(Qt), Qt.current = null
+                          function RU() {
+                            const [uu, Eu] = (0, su.useState)(PU.j.regular), [ju, Uu] = (0, su.useState)(tU[0]), [Xu, lu] = (0, su.useState)("Innkeeper"), [qu, fu] = (0, su.useState)(0), Cu = bs((uu => uu.volume)), bu = (0, su.useRef)(null), cu = (0, su.useRef)(0), Nu = (0, su.useRef)(0), Yu = () => {
+                              var uu;
+                              null === (uu = bu.current) || void 0 === uu || uu.call(bu), bu.current = null
                             };
-                            (0, Ot.useEffect)((() => () => {
-                              var tt;
-                              null === (tt = Qt.current) || void 0 === tt || tt.call(Qt), window.clearTimeout(lt.current)
+                            (0, su.useEffect)((() => () => {
+                              var uu;
+                              null === (uu = bu.current) || void 0 === uu || uu.call(bu), window.clearTimeout(cu.current)
                             }), []);
-                            const Nt = (0, Ot.useMemo)((() => ({
-                                line: Vt,
-                                speakerName: mt || void 0,
-                                voice: tt
-                              })), [Vt, mt, tt]),
-                              Mt = (0, Ot.useRef)(Nt);
-                            Mt.current = Nt;
-                            const Jt = iq(tt),
-                              Ct = tt => {
-                                window.clearTimeout(lt.current), wt();
+                            const Du = (0, su.useMemo)((() => ({
+                                line: ju,
+                                speakerName: Xu || void 0,
+                                voice: uu
+                              })), [ju, Xu, uu]),
+                              gu = (0, su.useRef)(Du);
+                            gu.current = Du;
+                            const eu = xU(uu),
+                              Gu = uu => {
+                                window.clearTimeout(cu.current), Yu();
                                 const {
-                                  plan: et,
-                                  synth: Vt
-                                } = (0, Sq.f)(tt);
-                                Vt && (Qt.current = gq(Vt, et.blips, Xt)), Ht((tt => tt + 1))
+                                  plan: Eu,
+                                  synth: ju
+                                } = (0, kU.i)(uu);
+                                ju && (bu.current = zU(ju, Eu.blips, Cu)), fu((uu => uu + 1))
                               },
-                              ut = Bq(tt, Vt, mt);
-                            return (0, ft.jsxs)("section", {
+                              pu = HU(uu, ju, Xu);
+                            return (0, Ou.jsxs)("section", {
                               className: "DocsPlayground DocsVoicePlayground",
                               "aria-label": "Voice playground",
-                              children: [(0, ft.jsxs)("header", {
+                              children: [(0, Ou.jsxs)("header", {
                                 className: "DocsPlaygroundHeader",
-                                children: [(0, ft.jsxs)("div", {
-                                  children: [(0, ft.jsx)("div", {
+                                children: [(0, Ou.jsxs)("div", {
+                                  children: [(0, Ou.jsx)("div", {
                                     className: "DocsPlaygroundTitle",
                                     children: "Try it: voices"
-                                  }), (0, ft.jsx)("div", {
+                                  }), (0, Ou.jsx)("div", {
                                     className: "DocsPlaygroundHint",
                                     children: "Start from a preset and change it to suit your character. The line replays as you go."
                                   })]
-                                }), (0, ft.jsx)(bt, {
-                                  text: ut,
+                                }), (0, Ou.jsx)(Mu, {
+                                  text: pu,
                                   label: "Copy code"
                                 })]
-                              }), (0, ft.jsxs)("div", {
+                              }), (0, Ou.jsxs)("div", {
                                 className: "DocsPlaygroundPresets",
-                                children: [Uq.map((tt => (0, ft.jsx)("button", {
+                                children: [LU.map((uu => (0, Ou.jsx)("button", {
                                   type: "button",
-                                  className: Dt()("DocsVariantChip", {
-                                    Active: Jt === tt
+                                  className: Zu()("DocsVariantChip", {
+                                    Active: eu === uu
                                   }),
-                                  "aria-pressed": Jt === tt,
+                                  "aria-pressed": eu === uu,
                                   onClick: () => {
-                                    (tt => {
-                                      const Vt = vq.g[tt];
-                                      et(Vt), Ct({
-                                        ...Nt,
-                                        voice: Vt
+                                    (uu => {
+                                      const ju = PU.j[uu];
+                                      Eu(ju), Gu({
+                                        ...Du,
+                                        voice: ju
                                       })
-                                    })(tt)
+                                    })(uu)
                                   },
-                                  children: tt
-                                }, tt))), !Jt && (0, ft.jsx)("span", {
+                                  children: uu
+                                }, uu))), !eu && (0, Ou.jsx)("span", {
                                   className: "DocsVariantChip Active DocsVoiceCustomChip",
                                   children: "custom"
                                 })]
-                              }), (0, ft.jsxs)("div", {
+                              }), (0, Ou.jsxs)("div", {
                                 className: "DocsVoiceBody",
-                                children: [(0, ft.jsxs)("div", {
+                                children: [(0, Ou.jsxs)("div", {
                                   className: "DocsVoiceScene",
-                                  children: [(0, ft.jsx)("div", {
+                                  children: [(0, Ou.jsx)("div", {
                                     className: "DocsVoiceStage",
-                                    children: (0, ft.jsx)(Wq.e, {
-                                      display: Nt
-                                    }, jt)
-                                  }), (0, ft.jsxs)("form", {
+                                    children: (0, Ou.jsx)(oU.b, {
+                                      display: Du
+                                    }, qu)
+                                  }), (0, Ou.jsxs)("form", {
                                     className: "DocsVoiceLineRow",
-                                    onSubmit: tt => {
-                                      tt.preventDefault(), Ct(Nt)
+                                    onSubmit: uu => {
+                                      uu.preventDefault(), Gu(Du)
                                     },
-                                    children: [(0, ft.jsx)("input", {
-                                      value: Vt,
+                                    children: [(0, Ou.jsx)("input", {
+                                      value: ju,
                                       "aria-label": "Line",
                                       placeholder: "Type a line to hear it",
-                                      onChange: tt => {
-                                        qt(tt.target.value)
+                                      onChange: uu => {
+                                        Uu(uu.target.value)
                                       }
-                                    }), (0, ft.jsxs)("button", {
+                                    }), (0, Ou.jsxs)("button", {
                                       type: "submit",
                                       className: "DocsVoiceSpeakButton",
-                                      children: [(0, ft.jsx)(yt, {
+                                      children: [(0, Ou.jsx)(hu, {
                                         name: "play"
-                                      }), (0, ft.jsx)("span", {
+                                      }), (0, Ou.jsx)("span", {
                                         children: "Speak"
                                       })]
                                     })]
-                                  }), (0, ft.jsx)("div", {
+                                  }), (0, Ou.jsx)("div", {
                                     className: "DocsVoiceSamples",
-                                    children: Aq.map((tt => (0, ft.jsx)("button", {
+                                    children: tU.map((uu => (0, Ou.jsx)("button", {
                                       type: "button",
-                                      className: Dt()("DocsVariantChip", {
-                                        Active: Vt === tt
+                                      className: Zu()("DocsVariantChip", {
+                                        Active: ju === uu
                                       }),
                                       onClick: () => {
-                                        var et;
-                                        qt(et = tt), Ct({
-                                          ...Nt,
-                                          line: et
+                                        var Eu;
+                                        Uu(Eu = uu), Gu({
+                                          ...Du,
+                                          line: Eu
                                         })
                                       },
-                                      children: tt
-                                    }, tt)))
-                                  }), (0, ft.jsxs)("label", {
+                                      children: uu
+                                    }, uu)))
+                                  }), (0, Ou.jsxs)("label", {
                                     className: "DocsVoiceSpeaker",
-                                    children: [(0, ft.jsx)("span", {
+                                    children: [(0, Ou.jsx)("span", {
                                       children: "Speaker"
-                                    }), (0, ft.jsx)("input", {
-                                      value: mt,
+                                    }), (0, Ou.jsx)("input", {
+                                      value: Xu,
                                       placeholder: "No name",
-                                      onChange: tt => {
-                                        dt(tt.target.value)
+                                      onChange: uu => {
+                                        lu(uu.target.value)
                                       }
                                     })]
                                   })]
-                                }), (0, ft.jsx)(rq, {
-                                  synth: tt,
-                                  onChange: Vt => {
-                                    const Ot = {
-                                      ...tt,
-                                      ...Vt
+                                }), (0, Ou.jsx)(BU, {
+                                  synth: uu,
+                                  onChange: ju => {
+                                    const su = {
+                                      ...uu,
+                                      ...ju
                                     };
-                                    et(Ot);
-                                    const qt = {
-                                        ...Nt,
-                                        voice: Ot
+                                    Eu(su);
+                                    const Uu = {
+                                        ...Du,
+                                        voice: su
                                       },
-                                      Dt = performance.now();
-                                    if (Dt - Et.current >= xq) {
-                                      Et.current = Dt, wt();
-                                      const tt = (0, Sq.f)(qt).plan.blips[0];
-                                      tt && (Qt.current = gq((0, vq.i)(Ot), [{
-                                        ...tt,
+                                      Zu = performance.now();
+                                    if (Zu - Nu.current >= nU) {
+                                      Nu.current = Zu, Yu();
+                                      const uu = (0, kU.i)(Uu).plan.blips[0];
+                                      uu && (bu.current = zU((0, PU.l)(su), [{
+                                        ...uu,
                                         atMs: 0
-                                      }], Xt))
+                                      }], Cu))
                                     }
-                                    window.clearTimeout(lt.current), lt.current = window.setTimeout((() => {
-                                      Ct(Mt.current)
-                                    }), pq)
+                                    window.clearTimeout(cu.current), cu.current = window.setTimeout((() => {
+                                      Gu(gu.current)
+                                    }), AU)
                                   }
                                 })]
-                              }), (0, ft.jsx)(Kt, {
-                                code: ut,
+                              }), (0, Ou.jsx)(wu, {
+                                code: pu,
                                 lang: "ts"
                               })]
                             })
                           }
-                          var nq = Vt(5038);
-                          const tD = /(`{1,2})\s*(.+?)\s*\1(?!`)/g,
-                            eD = String.raw`(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)`,
-                            VD = [
-                              [new RegExp(String.raw`([A-Za-z_$][\w$]*)\s*(?:=(?![=>])|:)\s*${eD}`, "g"), nq.l],
+                          var uZ = ju(5041);
+                          const EZ = /(`{1,2})\s*(.+?)\s*\1(?!`)/g,
+                            jZ = String.raw`(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)`,
+                            sZ = [
+                              [new RegExp(String.raw`([A-Za-z_$][\w$]*)\s*(?:=(?![=>])|:)\s*${jZ}`, "g"), uZ.j],
                               [/\bfunction\s+([A-Za-z_$][\w$]*)\s*\(/g],
-                              [/([A-Za-z_$][\w$]*)\s*\([^()]*\)\s*\{/g, nq.l]
+                              [/([A-Za-z_$][\w$]*)\s*\([^()]*\)\s*\{/g, uZ.j]
                             ];
 
-                          function OD(tt) {
-                            return `${tt.pageId}#${tt.anchor}`
+                          function UZ(uu) {
+                            return `${uu.pageId}#${uu.anchor}`
                           }
-                          let qD, DD, mD;
+                          let ZZ, XZ, lZ;
 
-                          function dD(tt) {
-                            const et = (0, ht.h)(tt),
-                              Vt = new Set;
-                            for (const [, , Ot] of et.matchAll(ht.d)) {
-                              const tt = Ot.startsWith("#") ? At(Ot) : null,
-                                et = tt ? OD({
-                                  pageId: tt.page.id,
-                                  anchor: tt.anchor
+                          function qZ(uu) {
+                            const Eu = (0, Ju.j)(uu),
+                              ju = new Set;
+                            for (const [, , su] of Eu.matchAll(Ju.d)) {
+                              const uu = su.startsWith("#") ? Bu(su) : null,
+                                Eu = uu ? UZ({
+                                  pageId: uu.page.id,
+                                  anchor: uu.anchor
                                 }) : null;
-                              null !== et && (qD || (qD = new Set(kt.flatMap((tt => ct(tt.layout) ? rt(tt).sections.map((et => OD({
-                                pageId: tt.id,
-                                anchor: et.heading.anchor
-                              }))) : [])))), qD).has(et) && Vt.add(et)
+                              null !== Eu && (ZZ || (ZZ = new Set(Qu.flatMap((uu => ou(uu.layout) ? Iu(uu).sections.map((Eu => UZ({
+                                pageId: uu.id,
+                                anchor: Eu.heading.anchor
+                              }))) : [])))), ZZ).has(Eu) && ju.add(Eu)
                             }
-                            for (const [, , Ot] of et.matchAll(tD)) {
-                              const tt = Ee(Ot);
-                              tt && Vt.add(OD(tt))
+                            for (const [, , su] of Eu.matchAll(EZ)) {
+                              const uu = cE(su);
+                              uu && ju.add(UZ(uu))
                             }
-                            return Vt
+                            return ju
                           }
 
-                          function jD(tt, et) {
-                            const Vt = new Set,
-                              Ot = function(tt) {
-                                return tt.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "").replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, '""')
-                              }(tt);
-                            for (const [, qt] of Ot.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)) Vt.add(qt);
-                            for (const [qt, Dt] of VD)
-                              for (const [, tt] of(0, nq.f)(Ot, qt, Dt)) et.has(tt) && Vt.add(tt);
-                            return Vt
+                          function fZ(uu, Eu) {
+                            const ju = new Set,
+                              su = function(uu) {
+                                return uu.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "").replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, '""')
+                              }(uu);
+                            for (const [, Uu] of su.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)) ju.add(Uu);
+                            for (const [Uu, Zu] of sZ)
+                              for (const [, uu] of(0, uZ.e)(su, Uu, Zu)) Eu.has(uu) && ju.add(uu);
+                            return ju
                           }
 
-                          function HD(tt, et, Vt, Ot) {
-                            const qt = tt.get(et);
-                            qt ? !Ot && qt.some((tt => tt.pageId === Vt.pageId)) || qt.push(Vt) : tt.set(et, [Vt])
+                          function CZ(uu, Eu, ju, su) {
+                            const Uu = uu.get(Eu);
+                            Uu ? !su && Uu.some((uu => uu.pageId === ju.pageId)) || Uu.push(ju) : uu.set(Eu, [ju])
                           }
-                          const XD = /^[A-Za-z_$][\w$]*$/;
+                          const bZ = /^[A-Za-z_$][\w$]*$/;
 
-                          function QD(tt) {
-                            return XD.test(tt.name) ? tt.name : "options"
-                          }
-
-                          function lD(tt, et) {
-                            const Vt = tt.params.map(QD).join(", ");
-                            return et ? `${tt.name} = (${Vt}) => {\n\t\n}` : `api.${tt.name}(${Vt})`
+                          function cZ(uu) {
+                            return bZ.test(uu.name) ? uu.name : "options"
                           }
 
-                          function ED(tt) {
+                          function NZ(uu, Eu) {
+                            const ju = uu.params.map(cZ).join(", ");
+                            return Eu ? `${uu.name} = (${ju}) => {\n\t\n}` : `api.${uu.name}(${ju})`
+                          }
+
+                          function OZ(uu) {
                             let {
-                              method: et,
-                              isCallback: Vt
-                            } = tt;
-                            return (0, ft.jsxs)("div", {
+                              method: Eu,
+                              isCallback: ju
+                            } = uu;
+                            return (0, Ou.jsxs)("div", {
                               className: "DocsSignature",
-                              children: [(0, ft.jsxs)("span", {
+                              children: [(0, Ou.jsxs)("span", {
                                 className: "DocsSignatureCode",
-                                children: [Vt ? (0, ft.jsxs)(ft.Fragment, {
-                                  children: [(0, ft.jsx)("span", {
+                                children: [ju ? (0, Ou.jsxs)(Ou.Fragment, {
+                                  children: [(0, Ou.jsx)("span", {
                                     className: "DocsSignatureName",
-                                    children: et.name
-                                  }), (0, ft.jsx)("span", {
+                                    children: Eu.name
+                                  }), (0, Ou.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: " = ("
                                   })]
-                                }) : (0, ft.jsxs)(ft.Fragment, {
-                                  children: [(0, ft.jsx)("span", {
+                                }) : (0, Ou.jsxs)(Ou.Fragment, {
+                                  children: [(0, Ou.jsx)("span", {
                                     className: "DocsSignatureObject",
                                     children: "api."
-                                  }), (0, ft.jsx)("span", {
+                                  }), (0, Ou.jsx)("span", {
                                     className: "DocsSignatureName",
-                                    children: et.name
-                                  }), (0, ft.jsx)("span", {
+                                    children: Eu.name
+                                  }), (0, Ou.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: "("
                                   })]
-                                }), et.params.map(((tt, Vt) => (0, ft.jsxs)(Ot.Fragment, {
-                                  children: [Vt > 0 && (0, ft.jsx)("span", {
+                                }), Eu.params.map(((uu, ju) => (0, Ou.jsxs)(su.Fragment, {
+                                  children: [ju > 0 && (0, Ou.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: ", "
-                                  }), (0, ft.jsx)("a", {
+                                  }), (0, Ou.jsx)("a", {
                                     className: "DocsSignatureParam",
-                                    href: `#${et.name}-${QD(tt)}`,
-                                    children: tt.name
+                                    href: `#${Eu.name}-${cZ(uu)}`,
+                                    children: uu.name
                                   })]
-                                }, tt.name))), (0, ft.jsx)("span", {
+                                }, uu.name))), (0, Ou.jsx)("span", {
                                   className: "DocsTypePunctuation",
-                                  children: Vt ? ") => " : ")"
-                                }), Vt && !et.returns && (0, ft.jsx)("span", {
+                                  children: ju ? ") => " : ")"
+                                }), ju && !Eu.returns && (0, Ou.jsx)("span", {
                                   className: "DocsTypeKeyword",
                                   children: "void"
                                 })]
-                              }), et.returns && et.returns.type && (0, ft.jsxs)("span", {
+                              }), Eu.returns && Eu.returns.type && (0, Ou.jsxs)("span", {
                                 className: "DocsSignatureReturns",
-                                children: [!Vt && (0, ft.jsx)("span", {
+                                children: [!ju && (0, Ou.jsx)("span", {
                                   className: "DocsSignatureArrow",
                                   children: "\u2192"
-                                }), (0, ft.jsx)(ve, {
-                                  type: et.returns.type
+                                }), (0, Ou.jsx)(dE, {
+                                  type: Eu.returns.type
                                 })]
                               })]
                             })
                           }
 
-                          function fD(tt) {
+                          function YZ(uu) {
                             let {
-                              title: et,
-                              references: Vt
-                            } = tt;
-                            const qt = (0, Ot.useContext)(fe);
-                            return (0, ft.jsxs)("div", {
+                              title: Eu,
+                              references: ju
+                            } = uu;
+                            const Uu = (0, su.useContext)(NE);
+                            return (0, Ou.jsxs)("div", {
                               className: "DocsCardReferences",
-                              children: [(0, ft.jsx)("span", {
+                              children: [(0, Ou.jsx)("span", {
                                 className: "DocsCardReferencesTitle",
-                                children: et
-                              }), Vt.map((tt => (0, ft.jsx)(mt.b, {
-                                to: Yt(qt, zt(tt.pageId), tt.anchor),
-                                children: tt.label
-                              }, `${tt.pageId}#${tt.anchor}`)))]
+                                children: Eu
+                              }), ju.map((uu => (0, Ou.jsx)(Xu.c, {
+                                to: tu(Uu, Wu(uu.pageId), uu.anchor),
+                                children: uu.label
+                              }, `${uu.pageId}#${uu.anchor}`)))]
                             })
                           }
 
-                          function wD(tt) {
-                            var et, Vt;
+                          function hZ(uu) {
+                            var Eu, ju;
                             let {
-                              pageId: Ot,
-                              anchor: qt
-                            } = tt;
-                            const Dt = OD({
-                                pageId: Ot,
-                                anchor: qt
+                              pageId: su,
+                              anchor: Uu
+                            } = uu;
+                            const Zu = UZ({
+                                pageId: su,
+                                anchor: Uu
                               }),
-                              mt = null !== (et = function() {
-                                if (!mD) {
-                                  mD = new Map;
-                                  const Ot = new Set(kt.filter((tt => "callbacks" === tt.layout)).flatMap((tt => rt(tt).sections.map((tt => tt.heading.text)))));
-                                  for (const qt of kt)
-                                    if ("article" === qt.layout || "snippets" === qt.layout)
-                                      for (const Dt of (0, ht.z)(rt(qt)))
+                              Xu = null !== (Eu = function() {
+                                if (!lZ) {
+                                  lZ = new Map;
+                                  const su = new Set(Qu.filter((uu => "callbacks" === uu.layout)).flatMap((uu => Iu(uu).sections.map((uu => uu.heading.text)))));
+                                  for (const Uu of Qu)
+                                    if ("article" === Uu.layout || "snippets" === Uu.layout)
+                                      for (const Zu of (0, Ju.y)(Iu(Uu)))
                                         for (const {
-                                            code: mt
+                                            code: Xu
                                           }
-                                          of(0, ht.l)(Dt.blocks))
-                                          for (const dt of jD(mt, Ot)) {
-                                            const Ot = le().get(dt);
-                                            if (Ot) {
-                                              var tt, et, Vt;
-                                              const mt = {
-                                                pageId: qt.id,
-                                                anchor: null !== (tt = null === (et = Dt.heading) || void 0 === et ? void 0 : et.anchor) && void 0 !== tt ? tt : "",
-                                                label: null !== (Vt = qt.navTitle) && void 0 !== Vt ? Vt : qt.title
+                                          of(0, Ju.l)(Zu.blocks))
+                                          for (const lu of fZ(Xu, su)) {
+                                            const su = bE().get(lu);
+                                            if (su) {
+                                              var uu, Eu, ju;
+                                              const Xu = {
+                                                pageId: Uu.id,
+                                                anchor: null !== (uu = null === (Eu = Zu.heading) || void 0 === Eu ? void 0 : Eu.anchor) && void 0 !== uu ? uu : "",
+                                                label: null !== (ju = Uu.navTitle) && void 0 !== ju ? ju : Uu.title
                                               };
-                                              HD(mD, OD(Ot), mt, !1)
+                                              CZ(lZ, UZ(su), Xu, !1)
                                             }
                                           }
                                 }
-                                return mD
-                              }().get(Dt)) && void 0 !== et ? et : [],
-                              dt = null !== (Vt = function() {
-                                if (!DD) {
-                                  DD = new Map;
-                                  const tt = zt("changelog");
-                                  for (const et of rt(tt).sections) {
-                                    const Vt = new Set(et.blocks.flatMap((tt => [...dD(tt)])));
-                                    for (const Ot of Vt) {
-                                      const Vt = {
-                                        pageId: tt.id,
-                                        anchor: et.heading.anchor,
-                                        label: et.heading.text
+                                return lZ
+                              }().get(Zu)) && void 0 !== Eu ? Eu : [],
+                              lu = null !== (ju = function() {
+                                if (!XZ) {
+                                  XZ = new Map;
+                                  const uu = Wu("changelog");
+                                  for (const Eu of Iu(uu).sections) {
+                                    const ju = new Set(Eu.blocks.flatMap((uu => [...qZ(uu)])));
+                                    for (const su of ju) {
+                                      const ju = {
+                                        pageId: uu.id,
+                                        anchor: Eu.heading.anchor,
+                                        label: Eu.heading.text
                                       };
-                                      HD(DD, Ot, Vt, !0)
+                                      CZ(XZ, su, ju, !0)
                                     }
                                   }
                                 }
-                                return DD
-                              }().get(Dt)) && void 0 !== Vt ? Vt : [];
-                            return 0 === mt.length && 0 === dt.length ? null : (0, ft.jsxs)("footer", {
+                                return XZ
+                              }().get(Zu)) && void 0 !== ju ? ju : [];
+                            return 0 === Xu.length && 0 === lu.length ? null : (0, Ou.jsxs)("footer", {
                               className: "DocsCardFooter",
-                              children: [mt.length > 0 && (0, ft.jsx)(fD, {
+                              children: [Xu.length > 0 && (0, Ou.jsx)(YZ, {
                                 title: "Used in",
-                                references: mt
-                              }), dt.length > 0 && (0, ft.jsx)(fD, {
+                                references: Xu
+                              }), lu.length > 0 && (0, Ou.jsx)(YZ, {
                                 title: "Changelog",
-                                references: dt
+                                references: lu
                               })]
                             })
                           }
 
-                          function yD(tt) {
+                          function DZ(uu) {
                             let {
-                              method: et,
-                              pageId: Vt,
-                              anchor: Ot,
-                              isCallback: qt
-                            } = tt;
-                            const Dt = qt ? void 0 : je().get(et.name),
-                              mt = et.description.length > 0 || null === Dt || void 0 === Dt || !Dt.description ? et.description : (0, ht.G)(Dt.description);
-                            return (0, ft.jsxs)("article", {
+                              method: Eu,
+                              pageId: ju,
+                              anchor: su,
+                              isCallback: Uu
+                            } = uu;
+                            const Zu = Uu ? void 0 : lE().get(Eu.name),
+                              Xu = Eu.description.length > 0 || null === Zu || void 0 === Zu || !Zu.description ? Eu.description : (0, Ju.B)(Zu.description);
+                            return (0, Ou.jsxs)("article", {
                               className: "DocsCard DocsMethodCard",
-                              children: [(0, ft.jsxs)("header", {
+                              children: [(0, Ou.jsxs)("header", {
                                 className: "DocsCardHeader",
-                                children: [(0, ft.jsx)(XV, {
+                                children: [(0, Ou.jsx)(fj, {
                                   level: 2,
-                                  text: et.name,
-                                  anchor: Ot,
+                                  text: Eu.name,
+                                  anchor: su,
                                   className: "DocsCardTitle"
-                                }), (0, ft.jsx)(bt, {
-                                  text: lD(et, qt),
-                                  label: qt ? "Copy handler" : "Copy call",
+                                }), (0, Ou.jsx)(Mu, {
+                                  text: NZ(Eu, Uu),
+                                  label: Uu ? "Copy handler" : "Copy call",
                                   className: "DocsCardCopy"
                                 })]
-                              }), (0, ft.jsx)(ED, {
-                                method: et,
-                                isCallback: qt
-                              }), Dt && null !== Dt.deprecation && (0, ft.jsxs)("aside", {
+                              }), (0, Ou.jsx)(OZ, {
+                                method: Eu,
+                                isCallback: Uu
+                              }), Zu && null !== Zu.deprecation && (0, Ou.jsxs)("aside", {
                                 className: "DocsCallout warning DocsDeprecation",
-                                children: [(0, ft.jsx)("strong", {
+                                children: [(0, Ou.jsx)("strong", {
                                   children: "Deprecated"
-                                }), Dt.deprecation && (0, ft.jsxs)(ft.Fragment, {
-                                  children: [": ", (0, ft.jsx)(ue, {
-                                    text: (dt = Dt.deprecation, (0, nq.s)(dt, /[a-z][\w$]*[A-Z][\w$]*\b/g, (0, nq.j)("`\\w"), (tt => {
-                                      let [et] = tt;
-                                      return le().has(et) ? `\`${et}\`` : et
+                                }), Zu.deprecation && (0, Ou.jsxs)(Ou.Fragment, {
+                                  children: [": ", (0, Ou.jsx)(pE, {
+                                    text: (lu = Zu.deprecation, (0, uZ.u)(lu, /[a-z][\w$]*[A-Z][\w$]*\b/g, (0, uZ.i)("`\\w"), (uu => {
+                                      let [Eu] = uu;
+                                      return bE().has(Eu) ? `\`${Eu}\`` : Eu
                                     })))
                                   })]
                                 })]
-                              }), mt.length > 0 && (0, ft.jsx)("div", {
+                              }), Xu.length > 0 && (0, Ou.jsx)("div", {
                                 className: "DocsProse DocsCardBody",
-                                children: (0, ft.jsx)(fV, {
-                                  blocks: mt
+                                children: (0, Ou.jsx)(Nj, {
+                                  blocks: Xu
                                 })
-                              }), et.params.length > 0 && (0, ft.jsxs)("section", {
+                              }), Eu.params.length > 0 && (0, Ou.jsxs)("section", {
                                 className: "DocsCardPart",
-                                children: [(0, ft.jsx)("h3", {
+                                children: [(0, Ou.jsx)("h3", {
                                   className: "DocsCardPartTitle",
                                   children: "Parameters"
-                                }), (0, ft.jsx)("dl", {
+                                }), (0, Ou.jsx)("dl", {
                                   className: "DocsParamList",
-                                  children: et.params.map((tt => (0, ft.jsxs)("div", {
-                                    id: `${et.name}-${QD(tt)}`,
+                                  children: Eu.params.map((uu => (0, Ou.jsxs)("div", {
+                                    id: `${Eu.name}-${cZ(uu)}`,
                                     className: "DocsParam",
-                                    children: [(0, ft.jsxs)("dt", {
-                                      children: [(0, ft.jsx)("code", {
+                                    children: [(0, Ou.jsxs)("dt", {
+                                      children: [(0, Ou.jsx)("code", {
                                         className: "DocsParamName",
-                                        children: tt.name
-                                      }), (0, ft.jsx)(ve, {
-                                        type: tt.type
+                                        children: uu.name
+                                      }), (0, Ou.jsx)(dE, {
+                                        type: uu.type
                                       })]
-                                    }), tt.description && (0, ft.jsx)("dd", {
-                                      children: (0, ft.jsx)(ue, {
-                                        text: tt.description
+                                    }), uu.description && (0, Ou.jsx)("dd", {
+                                      children: (0, Ou.jsx)(pE, {
+                                        text: uu.description
                                       })
                                     })]
-                                  }, tt.name)))
+                                  }, uu.name)))
                                 })]
-                              }), et.returns && (et.returns.type || et.returns.description.length > 0) && (0, ft.jsxs)("section", {
+                              }), Eu.returns && (Eu.returns.type || Eu.returns.description.length > 0) && (0, Ou.jsxs)("section", {
                                 className: "DocsCardPart",
-                                children: [(0, ft.jsx)("h3", {
+                                children: [(0, Ou.jsx)("h3", {
                                   className: "DocsCardPartTitle",
                                   children: "Returns"
-                                }), (0, ft.jsxs)("div", {
+                                }), (0, Ou.jsxs)("div", {
                                   className: "DocsReturns",
-                                  children: [et.returns.type && (0, ft.jsx)(ve, {
-                                    type: et.returns.type
-                                  }), et.returns.description.length > 0 && (0, ft.jsx)("div", {
+                                  children: [Eu.returns.type && (0, Ou.jsx)(dE, {
+                                    type: Eu.returns.type
+                                  }), Eu.returns.description.length > 0 && (0, Ou.jsx)("div", {
                                     className: "DocsProse",
-                                    children: (0, ft.jsx)(fV, {
-                                      blocks: et.returns.description
+                                    children: (0, Ou.jsx)(Nj, {
+                                      blocks: Eu.returns.description
                                     })
                                   })]
                                 })]
-                              }), (0, ft.jsx)(wD, {
-                                pageId: Vt,
-                                anchor: Ot
+                              }), (0, Ou.jsx)(hZ, {
+                                pageId: ju,
+                                anchor: su
                               })]
                             });
-                            var dt
+                            var lu
                           }
 
-                          function ND(tt) {
-                            var et;
-                            return null !== tt.defaultValue && "undefined" !== tt.defaultValue ? tt.defaultValue : null !== (et = tt.example) && void 0 !== et ? et : "value"
+                          function gZ(uu) {
+                            var Eu;
+                            return null !== uu.defaultValue && "undefined" !== uu.defaultValue ? uu.defaultValue : null !== (Eu = uu.example) && void 0 !== Eu ? Eu : "value"
                           }
 
-                          function aD(tt) {
+                          function MZ(uu) {
                             let {
-                              setting: et,
-                              pageId: Vt,
-                              anchor: Ot,
-                              setterSnippet: qt
-                            } = tt;
-                            const Dt = null === et.defaultValue ? null : ae(et.defaultValue);
-                            return (0, ft.jsxs)("article", {
+                              setting: Eu,
+                              pageId: ju,
+                              anchor: su,
+                              setterSnippet: Uu
+                            } = uu;
+                            const Zu = null === Eu.defaultValue ? null : DE(Eu.defaultValue);
+                            return (0, Ou.jsxs)("article", {
                               className: "DocsCard DocsSettingCard",
-                              children: [(0, ft.jsxs)("header", {
+                              children: [(0, Ou.jsxs)("header", {
                                 className: "DocsCardHeader",
-                                children: [(0, ft.jsx)(XV, {
+                                children: [(0, Ou.jsx)(fj, {
                                   level: 2,
-                                  text: et.name,
-                                  anchor: Ot,
+                                  text: Eu.name,
+                                  anchor: su,
                                   className: "DocsCardTitle"
-                                }), (0, ft.jsx)(bt, {
-                                  text: qt(et.name, ND(et)),
+                                }), (0, Ou.jsx)(Mu, {
+                                  text: Uu(Eu.name, gZ(Eu)),
                                   label: "Copy setter",
                                   className: "DocsCardCopy"
                                 })]
-                              }), (0, ft.jsxs)("dl", {
+                              }), (0, Ou.jsxs)("dl", {
                                 className: "DocsSettingFacts",
-                                children: [(0, ft.jsxs)("div", {
-                                  children: [(0, ft.jsx)("dt", {
+                                children: [(0, Ou.jsxs)("div", {
+                                  children: [(0, Ou.jsx)("dt", {
                                     children: "Type"
-                                  }), (0, ft.jsx)("dd", {
-                                    children: (0, ft.jsx)(ve, {
-                                      type: et.type
+                                  }), (0, Ou.jsx)("dd", {
+                                    children: (0, Ou.jsx)(dE, {
+                                      type: Eu.type
                                     })
                                   })]
-                                }), null !== et.defaultValue && (0, ft.jsxs)("div", {
-                                  children: [(0, ft.jsx)("dt", {
+                                }), null !== Eu.defaultValue && (0, Ou.jsxs)("div", {
+                                  children: [(0, Ou.jsx)("dt", {
                                     children: "Default"
-                                  }), (0, ft.jsx)("dd", {
-                                    children: (0, ft.jsxs)("code", {
+                                  }), (0, Ou.jsx)("dd", {
+                                    children: (0, Ou.jsxs)("code", {
                                       className: "DocsInlineCode DocsDefaultValue",
-                                      children: [Dt && (0, ft.jsx)(Me, {
-                                        colour: Dt
-                                      }), et.defaultValue]
+                                      children: [Zu && (0, Ou.jsx)(gE, {
+                                        colour: Zu
+                                      }), Eu.defaultValue]
                                     })
                                   })]
-                                }), null !== et.example && (0, ft.jsxs)("div", {
-                                  children: [(0, ft.jsx)("dt", {
+                                }), null !== Eu.example && (0, Ou.jsxs)("div", {
+                                  children: [(0, Ou.jsx)("dt", {
                                     children: "Example"
-                                  }), (0, ft.jsx)("dd", {
-                                    children: (0, ft.jsx)("code", {
+                                  }), (0, Ou.jsx)("dd", {
+                                    children: (0, Ou.jsx)("code", {
                                       className: "DocsInlineCode",
-                                      children: et.example
+                                      children: Eu.example
                                     })
                                   })]
                                 })]
-                              }), et.description.length > 0 && (0, ft.jsx)("div", {
+                              }), Eu.description.length > 0 && (0, Ou.jsx)("div", {
                                 className: "DocsProse DocsCardBody",
-                                children: (0, ft.jsx)(fV, {
-                                  blocks: et.description
+                                children: (0, Ou.jsx)(Nj, {
+                                  blocks: Eu.description
                                 })
-                              }), (0, ft.jsx)(wD, {
-                                pageId: Vt,
-                                anchor: Ot
+                              }), (0, Ou.jsx)(hZ, {
+                                pageId: ju,
+                                anchor: su
                               })]
                             })
                           }
 
-                          function MD(tt) {
+                          function eZ(uu) {
                             let {
-                              section: et
-                            } = tt;
-                            return (0, ft.jsxs)("article", {
+                              section: Eu
+                            } = uu;
+                            return (0, Ou.jsxs)("article", {
                               className: "DocsCard DocsSnippetCard",
-                              children: [(0, ft.jsx)(XV, {
+                              children: [(0, Ou.jsx)(fj, {
                                 level: 2,
-                                text: et.heading.text,
-                                anchor: et.heading.anchor,
+                                text: Eu.heading.text,
+                                anchor: Eu.heading.anchor,
                                 className: "DocsCardTitle"
-                              }), (0, ft.jsx)("div", {
+                              }), (0, Ou.jsx)("div", {
                                 className: "DocsProse",
-                                children: (0, ft.jsx)(fV, {
-                                  blocks: et.blocks
+                                children: (0, Ou.jsx)(Nj, {
+                                  blocks: Eu.blocks
                                 })
                               })]
                             })
                           }
 
-                          function bD(tt) {
+                          function GZ(uu) {
                             let {
-                              section: et
-                            } = tt;
-                            return (0, ft.jsxs)("section", {
+                              section: Eu
+                            } = uu;
+                            return (0, Ou.jsxs)("section", {
                               className: "DocsProse DocsArticleSection",
-                              children: [(0, ft.jsx)(XV, {
-                                level: et.heading.level,
-                                text: et.heading.text,
-                                anchor: et.heading.anchor
-                              }), (0, ft.jsx)(fV, {
-                                blocks: et.blocks
+                              children: [(0, Ou.jsx)(fj, {
+                                level: Eu.heading.level,
+                                text: Eu.heading.text,
+                                anchor: Eu.heading.anchor
+                              }), (0, Ou.jsx)(Nj, {
+                                blocks: Eu.blocks
                               })]
                             })
                           }
-                          const JD = {
+                          const pZ = {
                             methods: "methods",
                             callbacks: "callbacks",
                             settings: "settings",
@@ -4857,337 +4857,337 @@ export const modules = {
                             article: "sections"
                           };
 
-                          function CD(tt) {
+                          function wZ(uu) {
                             let {
-                              page: et,
-                              section: Vt
-                            } = tt;
-                            if ("methods" === et.layout || "callbacks" === et.layout) return (0, ft.jsx)(yD, {
-                              method: KV(Vt),
-                              pageId: et.id,
-                              anchor: Vt.heading.anchor,
-                              isCallback: "callbacks" === et.layout
+                              page: Eu,
+                              section: ju
+                            } = uu;
+                            if ("methods" === Eu.layout || "callbacks" === Eu.layout) return (0, Ou.jsx)(DZ, {
+                              method: wj(ju),
+                              pageId: Eu.id,
+                              anchor: ju.heading.anchor,
+                              isCallback: "callbacks" === Eu.layout
                             });
-                            if ("settings" === et.layout) {
-                              const tt = function(tt) {
-                                const et = {
-                                  name: tt.heading.text,
+                            if ("settings" === Eu.layout) {
+                              const uu = function(uu) {
+                                const Eu = {
+                                  name: uu.heading.text,
                                   type: "",
                                   defaultValue: null,
                                   example: null,
                                   description: []
                                 };
-                                for (const Ot of tt.blocks) {
-                                  var Vt;
-                                  if (uV(Ot)) continue;
-                                  const tt = "paragraph" === Ot.kind ? Ot.text.match(hV) : null;
-                                  if (!tt) {
-                                    et.description.push(Ot);
+                                for (const su of uu.blocks) {
+                                  var ju;
+                                  if (pj(su)) continue;
+                                  const uu = "paragraph" === su.kind ? su.text.match(Jj) : null;
+                                  if (!uu) {
+                                    Eu.description.push(su);
                                     continue
                                   }
-                                  const qt = null !== (Vt = CV(tt[2])) && void 0 !== Vt ? Vt : tt[2];
-                                  "Type" === tt[1] ? et.type = qt : "Default" === tt[1] ? et.defaultValue = qt : "" !== qt && (et.example = qt)
+                                  const Uu = null !== (ju = Gj(uu[2])) && void 0 !== ju ? ju : uu[2];
+                                  "Type" === uu[1] ? Eu.type = Uu : "Default" === uu[1] ? Eu.defaultValue = Uu : "" !== Uu && (Eu.example = Uu)
                                 }
-                                return et.type ? et : null
-                              }(Vt);
-                              if (tt) return (0, ft.jsx)(aD, {
-                                setting: tt,
-                                pageId: et.id,
-                                anchor: Vt.heading.anchor,
-                                setterSnippet: et.setterSnippet
+                                return Eu.type ? Eu : null
+                              }(ju);
+                              if (uu) return (0, Ou.jsx)(MZ, {
+                                setting: uu,
+                                pageId: Eu.id,
+                                anchor: ju.heading.anchor,
+                                setterSnippet: Eu.setterSnippet
                               })
                             }
-                            return "snippets" === et.layout ? (0, ft.jsx)(MD, {
-                              section: Vt
-                            }) : "changelog" === et.layout ? (0, ft.jsxs)("section", {
+                            return "snippets" === Eu.layout ? (0, Ou.jsx)(eZ, {
+                              section: ju
+                            }) : "changelog" === Eu.layout ? (0, Ou.jsxs)("section", {
                               className: "DocsChangelogEntry",
-                              children: [(0, ft.jsx)("div", {
+                              children: [(0, Ou.jsx)("div", {
                                 className: "DocsChangelogDate",
-                                children: (0, ft.jsx)(XV, {
+                                children: (0, Ou.jsx)(fj, {
                                   level: 2,
-                                  text: Vt.heading.text,
-                                  anchor: Vt.heading.anchor
+                                  text: ju.heading.text,
+                                  anchor: ju.heading.anchor
                                 })
-                              }), (0, ft.jsx)("div", {
+                              }), (0, Ou.jsx)("div", {
                                 className: "DocsProse DocsChangelogBody",
-                                children: (0, ft.jsx)(fV, {
-                                  blocks: vV(Vt.blocks)
+                                children: (0, Ou.jsx)(Nj, {
+                                  blocks: dj(ju.blocks)
                                 })
                               })]
-                            }) : et.gallery ? (0, ft.jsxs)("section", {
+                            }) : Eu.gallery ? (0, Ou.jsxs)("section", {
                               className: "DocsProse DocsArticleSection",
-                              children: [(0, ft.jsx)(XV, {
-                                level: Vt.heading.level,
-                                text: Vt.heading.text,
-                                anchor: Vt.heading.anchor
-                              }), (0, ft.jsx)(WO, {
-                                kind: et.gallery,
-                                content: rt(et),
-                                blocks: Vt.blocks
+                              children: [(0, Ou.jsx)(fj, {
+                                level: ju.heading.level,
+                                text: ju.heading.text,
+                                anchor: ju.heading.anchor
+                              }), (0, Ou.jsx)(os, {
+                                kind: Eu.gallery,
+                                content: Iu(Eu),
+                                blocks: ju.blocks
                               })]
-                            }) : (0, ft.jsx)(bD, {
-                              section: Vt
+                            }) : (0, Ou.jsx)(GZ, {
+                              section: ju
                             })
                           }
 
-                          function uD(tt) {
+                          function JZ(uu) {
                             let {
-                              page: et,
-                              onTocChange: Vt
-                            } = tt;
-                            const qt = rt(et),
-                              [Dt, mt] = (0, Ot.useState)(""),
-                              dt = "article" !== et.layout,
-                              jt = NV(et.gallery) ? et.gallery : null,
-                              Ht = null !== jt,
-                              Xt = Dt.trim().toLowerCase(),
-                              Qt = (0, Ot.useRef)(null),
-                              lt = (0, Ot.useCallback)((tt => {
-                                var et;
-                                null === (et = Qt.current) || void 0 === et || et.preview(tt)
+                              page: Eu,
+                              onTocChange: ju
+                            } = uu;
+                            const Uu = Iu(Eu),
+                              [Zu, Xu] = (0, su.useState)(""),
+                              lu = "article" !== Eu.layout,
+                              qu = hj(Eu.gallery) ? Eu.gallery : null,
+                              fu = null !== qu,
+                              Cu = Zu.trim().toLowerCase(),
+                              bu = (0, su.useRef)(null),
+                              cu = (0, su.useCallback)((uu => {
+                                var Eu;
+                                null === (Eu = bu.current) || void 0 === Eu || Eu.preview(uu)
                               }), []),
-                              Et = (0, Ot.useMemo)((() => {
-                                if (!et.hasParticlePlayground) return [];
-                                const tt = RV(qt.intro).find((tt => "names" === tt.kind && !tt.names.some((tt => null !== oV(tt.name)))));
-                                return "names" === (null === tt || void 0 === tt ? void 0 : tt.kind) ? tt.names.map((tt => tt.name)) : []
-                              }), [et, qt]),
-                              wt = (0, Ot.useMemo)((() => {
-                                if (!et.hasTextPlayground) return [];
-                                const tt = qt.sections.flatMap((tt => tt.blocks.flatMap((tt => {
-                                  var et;
-                                  return (null !== (et = cV(tt)) && void 0 !== et ? et : []).flatMap((tt => oe(tt.name) ? [tt.name] : []))
+                              Nu = (0, su.useMemo)((() => {
+                                if (!Eu.hasParticlePlayground) return [];
+                                const uu = kj(Uu.intro).find((uu => "names" === uu.kind && !uu.names.some((uu => null !== Sj(uu.name)))));
+                                return "names" === (null === uu || void 0 === uu ? void 0 : uu.kind) ? uu.names.map((uu => uu.name)) : []
+                              }), [Eu, Uu]),
+                              Yu = (0, su.useMemo)((() => {
+                                if (!Eu.hasTextPlayground) return [];
+                                const uu = Uu.sections.flatMap((uu => uu.blocks.flatMap((uu => {
+                                  var Eu;
+                                  return (null !== (Eu = oj(uu)) && void 0 !== Eu ? Eu : []).flatMap((uu => SE(uu.name) ? [uu.name] : []))
                                 }))));
-                                return [...new Set(tt)]
-                              }), [et, qt]),
-                              yt = (0, Ot.useMemo)((() => Xt ? qt.sections.filter((tt => function(tt, et) {
-                                return !!tt.heading.text.toLowerCase().includes(et) || tt.blocks.some((tt => (0, ht.h)(tt).toLowerCase().includes(et)))
-                              }(tt, Xt))) : qt.sections), [qt, Xt]),
-                              Nt = (0, Ot.useMemo)((() => function(tt, et) {
-                                return "article" !== tt.layout ? et.map((tt => ({
-                                  anchor: tt.heading.anchor,
-                                  text: tt.heading.text,
+                                return [...new Set(uu)]
+                              }), [Eu, Uu]),
+                              hu = (0, su.useMemo)((() => Cu ? Uu.sections.filter((uu => function(uu, Eu) {
+                                return !!uu.heading.text.toLowerCase().includes(Eu) || uu.blocks.some((uu => (0, Ju.j)(uu).toLowerCase().includes(Eu)))
+                              }(uu, Cu))) : Uu.sections), [Uu, Cu]),
+                              Du = (0, su.useMemo)((() => function(uu, Eu) {
+                                return "article" !== uu.layout ? Eu.map((uu => ({
+                                  anchor: uu.heading.anchor,
+                                  text: uu.heading.text,
                                   level: 2
-                                }))) : et.flatMap((tt => {
-                                  const et = tt.blocks.flatMap((tt => "heading" === tt.kind && 3 === tt.level ? [{
-                                    anchor: tt.anchor,
-                                    text: tt.text,
+                                }))) : Eu.flatMap((uu => {
+                                  const Eu = uu.blocks.flatMap((uu => "heading" === uu.kind && 3 === uu.level ? [{
+                                    anchor: uu.anchor,
+                                    text: uu.text,
                                     level: 3
                                   }] : []));
                                   return [{
-                                    anchor: tt.heading.anchor,
-                                    text: tt.heading.text,
+                                    anchor: uu.heading.anchor,
+                                    text: uu.heading.text,
                                     level: 2
-                                  }, ...et]
+                                  }, ...Eu]
                                 }))
-                              }(et, yt)), [et, yt]);
-                            return (0, Ot.useEffect)((() => {
-                              Vt(Nt)
-                            }), [Nt, Vt]), (0, ft.jsxs)("article", {
+                              }(Eu, hu)), [Eu, hu]);
+                            return (0, su.useEffect)((() => {
+                              ju(Du)
+                            }), [Du, ju]), (0, Ou.jsxs)("article", {
                               className: "DocsPage",
-                              children: [(0, ft.jsxs)("header", {
+                              children: [(0, Ou.jsxs)("header", {
                                 className: "DocsPageHeader",
-                                children: [(0, ft.jsx)("h1", {
+                                children: [(0, Ou.jsx)("h1", {
                                   className: "DocsPageTitle",
-                                  children: qt.title || et.title
-                                }), (0, ft.jsx)("p", {
+                                  children: Uu.title || Eu.title
+                                }), (0, Ou.jsx)("p", {
                                   className: "DocsPageSummary",
-                                  children: et.summary
-                                }), (0, ft.jsx)(TO, {
-                                  page: et
-                                }), dt && (0, ft.jsx)("div", {
+                                  children: Eu.summary
+                                }), (0, Ou.jsx)(ys, {
+                                  page: Eu
+                                }), lu && (0, Ou.jsx)("div", {
                                   className: "DocsPageStats",
-                                  children: (0, ft.jsxs)("span", {
-                                    children: [(0, ft.jsx)("strong", {
-                                      children: qt.sections.length
-                                    }), " ", JD[et.layout]]
+                                  children: (0, Ou.jsxs)("span", {
+                                    children: [(0, Ou.jsx)("strong", {
+                                      children: Uu.sections.length
+                                    }), " ", pZ[Eu.layout]]
                                   })
                                 })]
-                              }), "" === et.slug && (0, ft.jsx)(cO, {}), jt && (0, ft.jsx)(ZO, {
-                                kind: jt
-                              }, jt), et.hasParticlePlayground && (0, ft.jsx)(Hq, {
-                                ref: Qt,
-                                textures: Et
-                              }), !Ht && qt.intro.length > 0 && (0, ft.jsx)("div", {
+                              }), "" === Eu.slug && (0, Ou.jsx)(ms, {}), qu && (0, Ou.jsx)(rs, {
+                                kind: qu
+                              }, qu), Eu.hasParticlePlayground && (0, Ou.jsx)(CU, {
+                                ref: bu,
+                                textures: Nu
+                              }), !fu && Uu.intro.length > 0 && (0, Ou.jsx)("div", {
                                 className: "DocsProse DocsPageIntro",
-                                children: et.gallery ? (0, ft.jsx)(aO.Provider, {
-                                  value: et.hasParticlePlayground ? lt : null,
-                                  children: (0, ft.jsx)(WO, {
-                                    kind: et.gallery,
-                                    content: qt,
-                                    blocks: qt.intro
+                                children: Eu.gallery ? (0, Ou.jsx)(gs.Provider, {
+                                  value: Eu.hasParticlePlayground ? cu : null,
+                                  children: (0, Ou.jsx)(os, {
+                                    kind: Eu.gallery,
+                                    content: Uu,
+                                    blocks: Uu.intro
                                   })
-                                }) : (0, ft.jsx)(fV, {
-                                  blocks: vV(qt.intro)
+                                }) : (0, Ou.jsx)(Nj, {
+                                  blocks: dj(Uu.intro)
                                 })
-                              }), et.hasTextPlayground && (0, ft.jsx)(hq, {
-                                fontAwesomeIcons: wt
-                              }), et.hasVoicePlayground && (0, ft.jsx)(sq, {}), et.childPageIds && (0, ft.jsx)(cO, {
-                                cards: et.childPageIds.map((tt => ({
-                                  pageId: tt
+                              }), Eu.hasTextPlayground && (0, Ou.jsx)(aU, {
+                                fontAwesomeIcons: Yu
+                              }), Eu.hasVoicePlayground && (0, Ou.jsx)(RU, {}), Eu.childPageIds && (0, Ou.jsx)(ms, {
+                                cards: Eu.childPageIds.map((uu => ({
+                                  pageId: uu
                                 }))),
-                                label: et.title
-                              }), dt && (0, ft.jsx)(bV, {
+                                label: Eu.title
+                              }), lu && (0, Ou.jsx)(Mj, {
                                 className: "DocsFilterBar",
-                                value: Dt,
-                                placeholder: `Filter ${qt.sections.length} ${JD[et.layout]}\u2026`,
-                                label: `Filter ${JD[et.layout]}`,
-                                onChange: mt,
-                                count: Xt ? {
-                                  visible: yt.length,
-                                  total: qt.sections.length
+                                value: Zu,
+                                placeholder: `Filter ${Uu.sections.length} ${pZ[Eu.layout]}\u2026`,
+                                label: `Filter ${pZ[Eu.layout]}`,
+                                onChange: Xu,
+                                count: Cu ? {
+                                  visible: hu.length,
+                                  total: Uu.sections.length
                                 } : null
-                              }), !Ht && (0, ft.jsxs)("div", {
-                                className: `DocsSections Layout-${et.layout}`,
-                                children: [yt.map((tt => (0, ft.jsx)(CD, {
-                                  page: et,
-                                  section: tt
-                                }, tt.heading.anchor))), 0 === yt.length && (0, ft.jsxs)("p", {
+                              }), !fu && (0, Ou.jsxs)("div", {
+                                className: `DocsSections Layout-${Eu.layout}`,
+                                children: [hu.map((uu => (0, Ou.jsx)(wZ, {
+                                  page: Eu,
+                                  section: uu
+                                }, uu.heading.anchor))), 0 === hu.length && (0, Ou.jsxs)("p", {
                                   className: "DocsEmpty",
-                                  children: ["No ", JD[et.layout], " match \u201c", Dt, "\u201d."]
+                                  children: ["No ", pZ[Eu.layout], " match \u201c", Zu, "\u201d."]
                                 })]
                               })]
                             })
                           }
-                          const KD = /^(\d+)(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/;
+                          const dZ = /^(\d+)(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/;
 
-                          function hD(tt) {
+                          function aZ(uu) {
                             let {
-                              entry: et,
-                              isActive: Vt,
-                              onNavigate: Ot,
-                              label: qt,
-                              children: mt
-                            } = tt;
-                            return (0, ft.jsx)("a", {
-                              href: `#${et.anchor}`,
-                              "aria-label": qt,
-                              className: Dt()(`Level${et.level}`, {
-                                Active: Vt
+                              entry: Eu,
+                              isActive: ju,
+                              onNavigate: su,
+                              label: Uu,
+                              children: Xu
+                            } = uu;
+                            return (0, Ou.jsx)("a", {
+                              href: `#${Eu.anchor}`,
+                              "aria-label": Uu,
+                              className: Zu()(`Level${Eu.level}`, {
+                                Active: ju
                               }),
-                              "aria-current": Vt ? "location" : void 0,
-                              onClick: tt => {
-                                tt.preventDefault(), Ot(et.anchor)
+                              "aria-current": ju ? "location" : void 0,
+                              onClick: uu => {
+                                uu.preventDefault(), su(Eu.anchor)
                               },
-                              children: mt
+                              children: Xu
                             })
                           }
 
-                          function vD(tt) {
+                          function PZ(uu) {
                             let {
-                              toc: et,
-                              activeAnchor: Vt,
-                              onNavigate: qt
-                            } = tt;
-                            const mt = Math.max(0, et.findIndex((tt => tt.anchor === Vt))),
-                              dt = (0, Ot.useRef)(null),
-                              jt = (0, Ot.useRef)(!1);
-                            (0, Ot.useEffect)((() => {
-                              var tt, Vt;
-                              const Ot = null === (tt = dt.current) || void 0 === tt ? void 0 : tt.closest(".DocsToc"),
-                                qt = null === (Vt = dt.current) || void 0 === Vt ? void 0 : Vt.querySelector(".DocsTimelineNotch.Active");
-                              if (!Ot || !qt) return;
-                              let Dt = 0;
-                              if (mt === et.length - 1) Dt = Ot.scrollHeight;
-                              else if (mt > 0) {
-                                const tt = Ot.getBoundingClientRect(),
-                                  et = qt.getBoundingClientRect();
-                                Dt = Ot.scrollTop + et.top + et.height / 2 - (tt.top + Ot.clientHeight / 2)
+                              toc: Eu,
+                              activeAnchor: ju,
+                              onNavigate: Uu
+                            } = uu;
+                            const Xu = Math.max(0, Eu.findIndex((uu => uu.anchor === ju))),
+                              lu = (0, su.useRef)(null),
+                              qu = (0, su.useRef)(!1);
+                            (0, su.useEffect)((() => {
+                              var uu, ju;
+                              const su = null === (uu = lu.current) || void 0 === uu ? void 0 : uu.closest(".DocsToc"),
+                                Uu = null === (ju = lu.current) || void 0 === ju ? void 0 : ju.querySelector(".DocsTimelineNotch.Active");
+                              if (!su || !Uu) return;
+                              let Zu = 0;
+                              if (Xu === Eu.length - 1) Zu = su.scrollHeight;
+                              else if (Xu > 0) {
+                                const uu = su.getBoundingClientRect(),
+                                  Eu = Uu.getBoundingClientRect();
+                                Zu = su.scrollTop + Eu.top + Eu.height / 2 - (uu.top + su.clientHeight / 2)
                               }
-                              Ot.scrollTo({
-                                top: Dt,
-                                behavior: jt.current ? "smooth" : "auto"
-                              }), jt.current = !0
-                            }), [mt, et.length]);
-                            const Ht = [];
-                            return et.forEach(((tt, et) => {
-                              var Vt, Ot, qt;
-                              const Dt = function(tt) {
-                                  const et = tt.trim().match(KD);
-                                  return et ? {
-                                    day: et[1],
-                                    month: `${et[2]} ${et[3]}`
+                              su.scrollTo({
+                                top: Zu,
+                                behavior: qu.current ? "smooth" : "auto"
+                              }), qu.current = !0
+                            }), [Xu, Eu.length]);
+                            const fu = [];
+                            return Eu.forEach(((uu, Eu) => {
+                              var ju, su, Uu;
+                              const Zu = function(uu) {
+                                  const Eu = uu.trim().match(dZ);
+                                  return Eu ? {
+                                    day: Eu[1],
+                                    month: `${Eu[2]} ${Eu[3]}`
                                   } : null
-                                }(tt.text),
-                                mt = null !== (Vt = null === Dt || void 0 === Dt ? void 0 : Dt.month) && void 0 !== Vt ? Vt : null;
-                              null !== mt && (null === (Ot = Ht.at(-1)) || void 0 === Ot ? void 0 : Ot.month) === mt || Ht.push({
-                                month: mt,
+                                }(uu.text),
+                                Xu = null !== (ju = null === Zu || void 0 === Zu ? void 0 : Zu.month) && void 0 !== ju ? ju : null;
+                              null !== Xu && (null === (su = fu.at(-1)) || void 0 === su ? void 0 : su.month) === Xu || fu.push({
+                                month: Xu,
                                 entries: []
-                              }), Ht.at(-1).entries.push({
-                                entry: tt,
-                                day: null !== (qt = null === Dt || void 0 === Dt ? void 0 : Dt.day) && void 0 !== qt ? qt : null,
-                                index: et
+                              }), fu.at(-1).entries.push({
+                                entry: uu,
+                                day: null !== (Uu = null === Zu || void 0 === Zu ? void 0 : Zu.day) && void 0 !== Uu ? Uu : null,
+                                index: Eu
                               })
-                            })), (0, ft.jsx)("ol", {
-                              ref: dt,
+                            })), (0, Ou.jsx)("ol", {
+                              ref: lu,
                               className: "DocsTimeline",
-                              children: Ht.map((tt => {
+                              children: fu.map((uu => {
                                 let {
-                                  month: et,
-                                  entries: Vt
-                                } = tt;
-                                return (0, ft.jsxs)("li", {
+                                  month: Eu,
+                                  entries: ju
+                                } = uu;
+                                return (0, Ou.jsxs)("li", {
                                   className: "DocsTimelineMonth",
-                                  children: [et && (0, ft.jsx)("span", {
+                                  children: [Eu && (0, Ou.jsx)("span", {
                                     className: "DocsTimelineMonthName",
-                                    children: et
-                                  }), (0, ft.jsx)("ol", {
-                                    children: Vt.map((tt => {
+                                    children: Eu
+                                  }), (0, Ou.jsx)("ol", {
+                                    children: ju.map((uu => {
                                       let {
-                                        entry: et,
-                                        day: Vt,
-                                        index: Ot
-                                      } = tt;
-                                      return (0, ft.jsx)("li", {
-                                        className: Dt()("DocsTimelineNotch", {
-                                          Passed: Ot < mt,
-                                          Active: Ot === mt
+                                        entry: Eu,
+                                        day: ju,
+                                        index: su
+                                      } = uu;
+                                      return (0, Ou.jsx)("li", {
+                                        className: Zu()("DocsTimelineNotch", {
+                                          Passed: su < Xu,
+                                          Active: su === Xu
                                         }),
-                                        children: (0, ft.jsx)(hD, {
-                                          entry: et,
-                                          isActive: Ot === mt,
-                                          onNavigate: qt,
-                                          label: et.text,
-                                          children: (0, ft.jsx)("span", {
+                                        children: (0, Ou.jsx)(aZ, {
+                                          entry: Eu,
+                                          isActive: su === Xu,
+                                          onNavigate: Uu,
+                                          label: Eu.text,
+                                          children: (0, Ou.jsx)("span", {
                                             className: "DocsTimelineDay",
-                                            children: null !== Vt && void 0 !== Vt ? Vt : et.text
+                                            children: null !== ju && void 0 !== ju ? ju : Eu.text
                                           })
                                         })
-                                      }, et.anchor)
+                                      }, Eu.anchor)
                                     }))
                                   })]
-                                }, Vt[0].entry.anchor)
+                                }, ju[0].entry.anchor)
                               }))
                             })
                           }
 
-                          function WD(tt) {
+                          function oZ(uu) {
                             let {
-                              isChangelog: et,
-                              toc: Vt,
-                              activeAnchor: Ot,
-                              onNavigate: qt
-                            } = tt;
-                            return 0 === Vt.length ? null : (0, ft.jsxs)(ft.Fragment, {
-                              children: [(0, ft.jsx)("div", {
+                              isChangelog: Eu,
+                              toc: ju,
+                              activeAnchor: su,
+                              onNavigate: Uu
+                            } = uu;
+                            return 0 === ju.length ? null : (0, Ou.jsxs)(Ou.Fragment, {
+                              children: [(0, Ou.jsx)("div", {
                                 className: "DocsTocTitle",
-                                children: et ? "Updates" : "On this page"
-                              }), et ? (0, ft.jsx)(vD, {
-                                toc: Vt,
-                                activeAnchor: Ot,
-                                onNavigate: qt
-                              }) : (0, ft.jsx)("ul", {
-                                children: Vt.map((tt => (0, ft.jsx)("li", {
-                                  children: (0, ft.jsx)(hD, {
-                                    entry: tt,
-                                    isActive: tt.anchor === Ot,
-                                    onNavigate: qt,
-                                    children: tt.text.replace(/`/g, "")
+                                children: Eu ? "Updates" : "On this page"
+                              }), Eu ? (0, Ou.jsx)(PZ, {
+                                toc: ju,
+                                activeAnchor: su,
+                                onNavigate: Uu
+                              }) : (0, Ou.jsx)("ul", {
+                                children: ju.map((uu => (0, Ou.jsx)("li", {
+                                  children: (0, Ou.jsx)(aZ, {
+                                    entry: uu,
+                                    isActive: uu.anchor === su,
+                                    onNavigate: Uu,
+                                    children: uu.text.replace(/`/g, "")
                                   })
-                                }, tt.anchor)))
+                                }, uu.anchor)))
                               })]
                             })
                           }
-                          const SD = {
+                          const kZ = {
                               methods: "Method",
                               callbacks: "Callback",
                               settings: "Setting",
@@ -5195,7 +5195,7 @@ export const modules = {
                               snippets: "Snippet",
                               article: "Section"
                             },
-                            cD = {
+                            mZ = {
                               icons: "Icon",
                               particles: "Particle",
                               sounds: "Sound",
@@ -5203,1086 +5203,1086 @@ export const modules = {
                               blocks: "Block",
                               items: "Item"
                             },
-                            RD = 20,
-                            ID = 10,
-                            PD = 40,
-                            ZD = 120;
-                          let LD;
+                            vZ = 20,
+                            KZ = 10,
+                            VZ = 40,
+                            rZ = 120;
+                          let QZ;
 
-                          function FD(tt) {
-                            const et = tt.gallery;
-                            if (!et) return [];
-                            if (NV(et)) return function(tt) {
-                              return MV(tt).entries.map((tt => tt.name))
-                            }(et).map((Vt => ({
-                              page: tt,
-                              anchor: PV(et, Vt),
-                              title: Vt,
-                              kind: cD[et],
+                          function iZ(uu) {
+                            const Eu = uu.gallery;
+                            if (!Eu) return [];
+                            if (hj(Eu)) return function(uu) {
+                              return gj(uu).entries.map((uu => uu.name))
+                            }(Eu).map((ju => ({
+                              page: uu,
+                              anchor: vj(Eu, ju),
+                              title: ju,
+                              kind: mZ[Eu],
                               text: "",
-                              listedUnder: tt.title
+                              listedUnder: uu.title
                             })));
-                            const Vt = rt(tt);
-                            return (0, ht.z)(Vt).flatMap((Ot => {
-                              const qt = Ot.heading ? `${tt.title} \u203a ${Ot.heading.text.replace(/\s*\(\d+[^)]*\)$/,"")}` : tt.title;
-                              return LV(et, Vt, Ot.blocks).flatMap((Vt => "names" !== Vt.kind ? [] : Vt.names.map((Ot => {
-                                const Dt = Vt.isSongs ? "Song" : cD[et];
+                            const ju = Iu(uu);
+                            return (0, Ju.y)(ju).flatMap((su => {
+                              const Uu = su.heading ? `${uu.title} \u203a ${su.heading.text.replace(/\s*\(\d+[^)]*\)$/,"")}` : uu.title;
+                              return Vj(Eu, ju, su.blocks).flatMap((ju => "names" !== ju.kind ? [] : ju.names.map((su => {
+                                const Zu = ju.isSongs ? "Song" : mZ[Eu];
                                 return {
-                                  page: tt,
-                                  anchor: Ot.anchor,
-                                  title: Ot.name,
-                                  kind: Dt,
+                                  page: uu,
+                                  anchor: su.anchor,
+                                  title: su.name,
+                                  kind: Zu,
                                   text: "",
-                                  listedUnder: qt
+                                  listedUnder: Uu
                                 }
                               }))))
                             }))
                           }
 
-                          function kD(tt, et, Vt) {
-                            const Ot = tt.title.toLowerCase();
-                            let qt = 0;
-                            if (Ot === et) qt = 100;
-                            else if (Ot.startsWith(et)) qt = 80;
-                            else if (Ot.includes(et)) qt = 60;
-                            else if (Vt.every((tt => Ot.includes(tt)))) qt = 45;
+                          function WZ(uu, Eu, ju) {
+                            const su = uu.title.toLowerCase();
+                            let Uu = 0;
+                            if (su === Eu) Uu = 100;
+                            else if (su.startsWith(Eu)) Uu = 80;
+                            else if (su.includes(Eu)) Uu = 60;
+                            else if (ju.every((uu => su.includes(uu)))) Uu = 45;
                             else {
-                              if (!tt.text.toLowerCase().includes(et)) return 0;
-                              qt = 20
+                              if (!uu.text.toLowerCase().includes(Eu)) return 0;
+                              Uu = 20
                             }
-                            return qt - Math.min(Ot.length / 10, 9) + ("Page" === tt.kind ? 8 : "Method" === tt.kind ? 3 : 0) - (tt.listedUnder ? RD : 0)
+                            return Uu - Math.min(su.length / 10, 9) + ("Page" === uu.kind ? 8 : "Method" === uu.kind ? 3 : 0) - (uu.listedUnder ? vZ : 0)
                           }
 
-                          function GD(tt, et) {
-                            const Vt = tt.toLowerCase().indexOf(et),
-                              Ot = Math.max(0, Vt - ZD / 3);
-                            return `${Ot>0?"\u2026":""}${tt.slice(Ot,Ot+ZD)}${Ot+ZD<tt.length?"\u2026":""}`
+                          function SZ(uu, Eu) {
+                            const ju = uu.toLowerCase().indexOf(Eu),
+                              su = Math.max(0, ju - rZ / 3);
+                            return `${su>0?"\u2026":""}${uu.slice(su,su+rZ)}${su+rZ<uu.length?"\u2026":""}`
                           }
 
-                          function zD(tt) {
+                          function IZ(uu) {
                             let {
-                              text: et,
-                              query: Vt
-                            } = tt;
-                            const Ot = Vt ? et.toLowerCase().indexOf(Vt) : -1;
-                            return -1 === Ot ? (0, ft.jsx)(ft.Fragment, {
-                              children: et
-                            }) : (0, ft.jsxs)(ft.Fragment, {
-                              children: [et.slice(0, Ot), (0, ft.jsx)("mark", {
-                                children: et.slice(Ot, Ot + Vt.length)
-                              }), et.slice(Ot + Vt.length)]
+                              text: Eu,
+                              query: ju
+                            } = uu;
+                            const su = ju ? Eu.toLowerCase().indexOf(ju) : -1;
+                            return -1 === su ? (0, Ou.jsx)(Ou.Fragment, {
+                              children: Eu
+                            }) : (0, Ou.jsxs)(Ou.Fragment, {
+                              children: [Eu.slice(0, su), (0, Ou.jsx)("mark", {
+                                children: Eu.slice(su, su + ju.length)
+                              }), Eu.slice(su + ju.length)]
                             })
                           }
 
-                          function oD(tt) {
+                          function FZ(uu) {
                             let {
-                              basePath: et,
-                              onClose: Vt
-                            } = tt;
-                            const qt = (0, dt.w)(),
-                              [mt, jt] = (0, Ot.useState)(""),
-                              [Ht, Xt] = (0, Ot.useState)(0),
-                              Qt = (0, Ot.useRef)(null),
-                              lt = (0, Ot.useRef)(null),
-                              Et = mt.trim().toLowerCase(),
-                              wt = (0, Ot.useMemo)((() => {
-                                const tt = (LD || (LD = kt.flatMap((tt => {
-                                  const et = rt(tt);
+                              basePath: Eu,
+                              onClose: ju
+                            } = uu;
+                            const Uu = (0, lu.v)(),
+                              [Xu, qu] = (0, su.useState)(""),
+                              [fu, Cu] = (0, su.useState)(0),
+                              bu = (0, su.useRef)(null),
+                              cu = (0, su.useRef)(null),
+                              Nu = Xu.trim().toLowerCase(),
+                              Yu = (0, su.useMemo)((() => {
+                                const uu = (QZ || (QZ = Qu.flatMap((uu => {
+                                  const Eu = Iu(uu);
                                   return [{
-                                    page: tt,
+                                    page: uu,
                                     anchor: "",
-                                    title: tt.title,
+                                    title: uu.title,
                                     kind: "Page",
-                                    text: tt.summary
-                                  }, ...et.sections.flatMap((et => {
-                                    const Vt = et.blocks.filter((tt => "paragraph" === tt.kind)).map(ht.h).join(" ").replace(/[`*]/g, ""),
-                                      Ot = {
-                                        page: tt,
-                                        anchor: et.heading.anchor,
-                                        title: et.heading.text.replace(/`/g, ""),
-                                        kind: SD[tt.layout],
-                                        text: Vt
+                                    text: uu.summary
+                                  }, ...Eu.sections.flatMap((Eu => {
+                                    const ju = Eu.blocks.filter((uu => "paragraph" === uu.kind)).map(Ju.j).join(" ").replace(/[`*]/g, ""),
+                                      su = {
+                                        page: uu,
+                                        anchor: Eu.heading.anchor,
+                                        title: Eu.heading.text.replace(/`/g, ""),
+                                        kind: kZ[uu.layout],
+                                        text: ju
                                       },
-                                      qt = et.blocks.flatMap((et => "article" === tt.layout && "heading" === et.kind && 3 === et.level ? [{
-                                        page: tt,
-                                        anchor: et.anchor,
-                                        title: et.text.replace(/`/g, ""),
+                                      Uu = Eu.blocks.flatMap((Eu => "article" === uu.layout && "heading" === Eu.kind && 3 === Eu.level ? [{
+                                        page: uu,
+                                        anchor: Eu.anchor,
+                                        title: Eu.text.replace(/`/g, ""),
                                         kind: "Section",
-                                        text: Ot.title
+                                        text: su.title
                                       }] : []));
-                                    return [Ot, ...qt]
-                                  })), ...FD(tt)]
-                                }))), LD);
-                                if (!Et) return tt.filter((tt => "Page" === tt.kind));
-                                const et = Et.split(/\s+/);
-                                let Vt = 0;
-                                return tt.map((tt => ({
-                                  entry: tt,
-                                  score: kD(tt, Et, et)
-                                }))).filter((tt => tt.score > 0)).sort(((tt, et) => et.score - tt.score)).filter((tt => !tt.entry.listedUnder || (Vt++, Vt <= ID))).slice(0, PD).map((tt => tt.entry))
-                              }), [Et]);
-                            (0, Ot.useEffect)((() => {
-                              Xt(0)
-                            }), [Et]), (0, Ot.useEffect)((() => {
-                              const tt = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+                                    return [su, ...Uu]
+                                  })), ...iZ(uu)]
+                                }))), QZ);
+                                if (!Nu) return uu.filter((uu => "Page" === uu.kind));
+                                const Eu = Nu.split(/\s+/);
+                                let ju = 0;
+                                return uu.map((uu => ({
+                                  entry: uu,
+                                  score: WZ(uu, Nu, Eu)
+                                }))).filter((uu => uu.score > 0)).sort(((uu, Eu) => Eu.score - uu.score)).filter((uu => !uu.entry.listedUnder || (ju++, ju <= KZ))).slice(0, VZ).map((uu => uu.entry))
+                              }), [Nu]);
+                            (0, su.useEffect)((() => {
+                              Cu(0)
+                            }), [Nu]), (0, su.useEffect)((() => {
+                              const uu = document.activeElement instanceof HTMLElement ? document.activeElement : null;
                               return () => {
-                                null === tt || void 0 === tt || tt.focus()
+                                null === uu || void 0 === uu || uu.focus()
                               }
-                            }), []), (0, Ot.useEffect)((() => {
-                              var tt, et;
-                              null === (tt = Qt.current) || void 0 === tt || null === (et = tt.querySelector(".Active")) || void 0 === et || et.scrollIntoView({
+                            }), []), (0, su.useEffect)((() => {
+                              var uu, Eu;
+                              null === (uu = bu.current) || void 0 === uu || null === (Eu = uu.querySelector(".Active")) || void 0 === Eu || Eu.scrollIntoView({
                                 block: "nearest"
                               })
-                            }), [Ht]);
-                            const Nt = tt => {
-                              qt(Yt(et, tt.page, tt.anchor)), Vt()
+                            }), [fu]);
+                            const Du = uu => {
+                              Uu(tu(Eu, uu.page, uu.anchor)), ju()
                             };
-                            return (0, ft.jsx)("div", {
+                            return (0, Ou.jsx)("div", {
                               className: "DocsSearchOverlay",
-                              onMouseDown: tt => {
-                                tt.target === tt.currentTarget && Vt()
+                              onMouseDown: uu => {
+                                uu.target === uu.currentTarget && ju()
                               },
-                              children: (0, ft.jsxs)("div", {
+                              children: (0, Ou.jsxs)("div", {
                                 className: "DocsSearchDialog",
                                 role: "dialog",
                                 "aria-modal": "true",
                                 "aria-label": "Search the docs",
-                                onMouseDown: tt => {
-                                  tt.target !== lt.current && tt.preventDefault()
+                                onMouseDown: uu => {
+                                  uu.target !== cu.current && uu.preventDefault()
                                 },
-                                onKeyDown: tt => {
-                                  if ("Escape" === tt.key) Vt();
-                                  else if ("Tab" === tt.key) {
-                                    var et;
-                                    tt.preventDefault(), null === (et = lt.current) || void 0 === et || et.focus()
+                                onKeyDown: uu => {
+                                  if ("Escape" === uu.key) ju();
+                                  else if ("Tab" === uu.key) {
+                                    var Eu;
+                                    uu.preventDefault(), null === (Eu = cu.current) || void 0 === Eu || Eu.focus()
                                   }
                                 },
-                                children: [(0, ft.jsxs)("div", {
+                                children: [(0, Ou.jsxs)("div", {
                                   className: "DocsSearchInputRow",
-                                  children: [(0, ft.jsx)(yt, {
+                                  children: [(0, Ou.jsx)(hu, {
                                     name: "magnifying-glass"
-                                  }), (0, ft.jsx)("input", {
-                                    ref: lt,
+                                  }), (0, Ou.jsx)("input", {
+                                    ref: cu,
                                     autoFocus: !0,
-                                    value: mt,
+                                    value: Xu,
                                     placeholder: "Search methods, callbacks, settings and guides\u2026",
                                     "aria-label": "Search the docs",
                                     "aria-controls": "DocsSearchResults",
-                                    "aria-activedescendant": wt.length > 0 ? `DocsSearchResult-${Ht}` : void 0,
-                                    onChange: tt => {
-                                      jt(tt.target.value)
+                                    "aria-activedescendant": Yu.length > 0 ? `DocsSearchResult-${fu}` : void 0,
+                                    onChange: uu => {
+                                      qu(uu.target.value)
                                     },
-                                    onKeyDown: tt => {
-                                      if ("ArrowDown" === tt.key || "ArrowUp" === tt.key) {
-                                        tt.preventDefault();
-                                        const et = "ArrowDown" === tt.key ? 1 : -1;
-                                        Xt((Ht + et + wt.length) % Math.max(wt.length, 1))
-                                      } else "Enter" === tt.key && wt[Ht] && Nt(wt[Ht])
+                                    onKeyDown: uu => {
+                                      if ("ArrowDown" === uu.key || "ArrowUp" === uu.key) {
+                                        uu.preventDefault();
+                                        const Eu = "ArrowDown" === uu.key ? 1 : -1;
+                                        Cu((fu + Eu + Yu.length) % Math.max(Yu.length, 1))
+                                      } else "Enter" === uu.key && Yu[fu] && Du(Yu[fu])
                                     }
-                                  }), (0, ft.jsx)("kbd", {
+                                  }), (0, Ou.jsx)("kbd", {
                                     children: "Esc"
                                   })]
-                                }), (0, ft.jsxs)("ul", {
+                                }), (0, Ou.jsxs)("ul", {
                                   id: "DocsSearchResults",
-                                  ref: Qt,
+                                  ref: bu,
                                   className: "DocsSearchResults",
                                   role: "listbox",
-                                  children: [!Et && (0, ft.jsx)("li", {
+                                  children: [!Nu && (0, Ou.jsx)("li", {
                                     className: "DocsSearchHint",
                                     children: "Jump to a page"
-                                  }), wt.map(((tt, et) => {
-                                    var Vt;
-                                    return (0, ft.jsxs)("li", {
-                                      id: `DocsSearchResult-${et}`,
+                                  }), Yu.map(((uu, Eu) => {
+                                    var ju;
+                                    return (0, Ou.jsxs)("li", {
+                                      id: `DocsSearchResult-${Eu}`,
                                       role: "option",
-                                      "aria-selected": et === Ht,
-                                      className: Dt()("DocsSearchResult", {
-                                        Active: et === Ht
+                                      "aria-selected": Eu === fu,
+                                      className: Zu()("DocsSearchResult", {
+                                        Active: Eu === fu
                                       }),
                                       onMouseMove: () => {
-                                        Xt(et)
+                                        Cu(Eu)
                                       },
                                       onClick: () => {
-                                        Nt(tt)
+                                        Du(uu)
                                       },
-                                      children: [(0, ft.jsx)(yt, {
-                                        name: tt.page.icon
-                                      }), (0, ft.jsxs)("div", {
+                                      children: [(0, Ou.jsx)(hu, {
+                                        name: uu.page.icon
+                                      }), (0, Ou.jsxs)("div", {
                                         className: "DocsSearchResultText",
-                                        children: [(0, ft.jsx)("div", {
+                                        children: [(0, Ou.jsx)("div", {
                                           className: "DocsSearchResultTitle",
-                                          children: (0, ft.jsx)(zD, {
-                                            text: tt.title,
-                                            query: Et
+                                          children: (0, Ou.jsx)(IZ, {
+                                            text: uu.title,
+                                            query: Nu
                                           })
-                                        }), tt.text && (0, ft.jsx)("div", {
+                                        }), uu.text && (0, Ou.jsx)("div", {
                                           className: "DocsSearchResultSnippet",
-                                          children: (0, ft.jsx)(zD, {
-                                            text: GD(tt.text, Et),
-                                            query: Et
+                                          children: (0, Ou.jsx)(IZ, {
+                                            text: SZ(uu.text, Nu),
+                                            query: Nu
                                           })
                                         })]
-                                      }), (0, ft.jsx)("span", {
+                                      }), (0, Ou.jsx)("span", {
                                         className: "DocsSearchResultMeta",
-                                        children: "Page" === tt.kind ? "Page" : null !== (Vt = tt.listedUnder) && void 0 !== Vt ? Vt : `${tt.kind} \xb7 ${tt.page.title}`
+                                        children: "Page" === uu.kind ? "Page" : null !== (ju = uu.listedUnder) && void 0 !== ju ? ju : `${uu.kind} \xb7 ${uu.page.title}`
                                       })]
-                                    }, `${tt.page.id}#${tt.anchor}`)
-                                  })), Et && 0 === wt.length && (0, ft.jsxs)("li", {
+                                    }, `${uu.page.id}#${uu.anchor}`)
+                                  })), Nu && 0 === Yu.length && (0, Ou.jsxs)("li", {
                                     className: "DocsSearchHint",
-                                    children: ["Nothing matches \u201c", mt, "\u201d."]
+                                    children: ["Nothing matches \u201c", Xu, "\u201d."]
                                   })]
                                 })]
                               })
                             })
                           }
 
-                          function rD(tt, et) {
-                            if (et < 10) return `${tt.toFixed(1)}s`;
-                            const Vt = Math.floor(tt);
-                            return `${Math.floor(Vt/60)}:${String(Vt%60).padStart(2,"0")}`
+                          function BZ(uu, Eu) {
+                            if (Eu < 10) return `${uu.toFixed(1)}s`;
+                            const ju = Math.floor(uu);
+                            return `${Math.floor(ju/60)}:${String(ju%60).padStart(2,"0")}`
                           }
 
-                          function UD() {
-                            const tt = QO((tt => tt.track)),
-                              et = QO((tt => tt.volume)),
-                              [Vt, qt] = (0, Ot.useState)(0),
-                              mt = (0, Ot.useRef)(VO);
-                            if ((0, Ot.useEffect)((() => {
-                                if (!tt) return;
-                                if (qt(wO()), "playing" !== tt.status) return;
-                                let et = 0;
-                                const Vt = () => {
-                                  qt(wO()), et = requestAnimationFrame(Vt)
+                          function LZ() {
+                            const uu = bs((uu => uu.track)),
+                              Eu = bs((uu => uu.volume)),
+                              [ju, Uu] = (0, su.useState)(0),
+                              Xu = (0, su.useRef)(Es);
+                            if ((0, su.useEffect)((() => {
+                                if (!uu) return;
+                                if (Uu(Ys()), "playing" !== uu.status) return;
+                                let Eu = 0;
+                                const ju = () => {
+                                  Uu(Ys()), Eu = requestAnimationFrame(ju)
                                 };
-                                return et = requestAnimationFrame(Vt), () => {
-                                  cancelAnimationFrame(et)
+                                return Eu = requestAnimationFrame(ju), () => {
+                                  cancelAnimationFrame(Eu)
                                 }
-                              }), [tt]), !tt) return null;
-                            const dt = "paused" !== tt.status,
-                              jt = Math.min(Vt, tt.duration);
-                            return (0, ft.jsx)("div", {
+                              }), [uu]), !uu) return null;
+                            const lu = "paused" !== uu.status,
+                              qu = Math.min(ju, uu.duration);
+                            return (0, Ou.jsx)("div", {
                               className: "DocsSoundPlayerDock",
-                              children: (0, ft.jsxs)("section", {
+                              children: (0, Ou.jsxs)("section", {
                                 className: "DocsSoundPlayer",
                                 "aria-label": "Sound player",
-                                children: [(0, ft.jsx)("button", {
+                                children: [(0, Ou.jsx)("button", {
                                   type: "button",
                                   className: "DocsSoundPlayerToggle",
-                                  "aria-label": dt ? `Pause ${tt.name}` : `Play ${tt.name}`,
-                                  onClick: fO,
-                                  children: (0, ft.jsx)(yt, {
-                                    name: dt ? "pause" : "play"
+                                  "aria-label": lu ? `Pause ${uu.name}` : `Play ${uu.name}`,
+                                  onClick: Os,
+                                  children: (0, Ou.jsx)(hu, {
+                                    name: lu ? "pause" : "play"
                                   })
-                                }), (0, ft.jsxs)("div", {
+                                }), (0, Ou.jsxs)("div", {
                                   className: "DocsSoundPlayerTrack",
-                                  children: [(0, ft.jsxs)("div", {
+                                  children: [(0, Ou.jsxs)("div", {
                                     className: "DocsSoundPlayerTitle",
-                                    children: [(0, ft.jsx)("code", {
-                                      children: tt.name
-                                    }), (0, ft.jsx)("span", {
-                                      children: tt.isSong ? "Song" : "Sound"
+                                    children: [(0, Ou.jsx)("code", {
+                                      children: uu.name
+                                    }), (0, Ou.jsx)("span", {
+                                      children: uu.isSong ? "Song" : "Sound"
                                     })]
-                                  }), (0, ft.jsxs)("div", {
+                                  }), (0, Ou.jsxs)("div", {
                                     className: "DocsSoundPlayerScrubber",
-                                    children: [(0, ft.jsx)("span", {
-                                      children: rD(jt, tt.duration)
-                                    }), (0, ft.jsx)("input", {
+                                    children: [(0, Ou.jsx)("span", {
+                                      children: BZ(qu, uu.duration)
+                                    }), (0, Ou.jsx)("input", {
                                       type: "range",
                                       min: 0,
-                                      max: tt.duration || 1,
+                                      max: uu.duration || 1,
                                       step: .01,
-                                      value: jt,
-                                      disabled: 0 === tt.duration,
+                                      value: qu,
+                                      disabled: 0 === uu.duration,
                                       "aria-label": "Position",
-                                      "aria-valuetext": `${rD(jt,tt.duration)} of ${rD(tt.duration,tt.duration)}`,
-                                      onChange: tt => {
-                                        const et = Number(tt.target.value);
-                                        ! function(tt) {
-                                          var et;
-                                          dO = tt, null === (et = DO) || void 0 === et || et.seek(tt)
-                                        }(et), qt(et)
+                                      "aria-valuetext": `${BZ(qu,uu.duration)} of ${BZ(uu.duration,uu.duration)}`,
+                                      onChange: uu => {
+                                        const Eu = Number(uu.target.value);
+                                        ! function(uu) {
+                                          var Eu;
+                                          ls = uu, null === (Eu = Zs) || void 0 === Eu || Eu.seek(uu)
+                                        }(Eu), Uu(Eu)
                                       }
-                                    }), (0, ft.jsx)("span", {
-                                      children: tt.duration > 0 ? rD(tt.duration, tt.duration) : "\u2013"
+                                    }), (0, Ou.jsx)("span", {
+                                      children: uu.duration > 0 ? BZ(uu.duration, uu.duration) : "\u2013"
                                     })]
                                   })]
-                                }), (0, ft.jsxs)("div", {
+                                }), (0, Ou.jsxs)("div", {
                                   className: "DocsSoundPlayerVolume",
-                                  children: [(0, ft.jsx)("button", {
+                                  children: [(0, Ou.jsx)("button", {
                                     type: "button",
-                                    "aria-label": 0 === et ? "Unmute" : "Mute",
+                                    "aria-label": 0 === Eu ? "Unmute" : "Mute",
                                     onClick: () => {
-                                      0 === et ? yO(mt.current) : (mt.current = et, yO(0))
+                                      0 === Eu ? hs(Xu.current) : (Xu.current = Eu, hs(0))
                                     },
-                                    children: (0, ft.jsx)(yt, {
+                                    children: (0, Ou.jsx)(hu, {
                                       name: "volume",
-                                      className: Dt()({
-                                        Muted: 0 === et
+                                      className: Zu()({
+                                        Muted: 0 === Eu
                                       })
                                     })
-                                  }), (0, ft.jsx)("input", {
+                                  }), (0, Ou.jsx)("input", {
                                     type: "range",
                                     min: 0,
                                     max: 1,
                                     step: .01,
-                                    value: et,
+                                    value: Eu,
                                     "aria-label": "Volume",
-                                    onChange: tt => {
-                                      yO(Number(tt.target.value))
+                                    onChange: uu => {
+                                      hs(Number(uu.target.value))
                                     }
                                   })]
-                                }), (0, ft.jsx)("button", {
+                                }), (0, Ou.jsx)("button", {
                                   type: "button",
                                   className: "DocsSoundPlayerClose",
                                   "aria-label": "Close the player",
                                   onClick: () => {
-                                    var et;
-                                    null === (et = document.querySelector(`[data-docs-track="${CSS.escape(OO(tt.name,tt.isSong))}"]`)) || void 0 === et || et.focus(), NO()
+                                    var Eu;
+                                    null === (Eu = document.querySelector(`[data-docs-track="${CSS.escape(ss(uu.name,uu.isSong))}"]`)) || void 0 === Eu || Eu.focus(), Ds()
                                   },
-                                  children: (0, ft.jsx)(yt, {
+                                  children: (0, Ou.jsx)(hu, {
                                     name: "cross"
                                   })
                                 })]
                               })
                             })
                           }
-                          var AD = Vt(39);
-                          const iD = "docsTheme",
-                            YD = window.matchMedia("(prefers-color-scheme: light)");
+                          var tZ = ju(31);
+                          const xZ = "docsTheme",
+                            TZ = window.matchMedia("(prefers-color-scheme: light)");
 
-                          function BD(tt) {
+                          function HZ(uu) {
                             let {
-                              theme: et,
-                              onChange: Vt
-                            } = tt;
-                            const Ot = "dark" === et ? "light" : "dark";
-                            return (0, ft.jsx)("button", {
+                              theme: Eu,
+                              onChange: ju
+                            } = uu;
+                            const su = "dark" === Eu ? "light" : "dark";
+                            return (0, Ou.jsx)("button", {
                               type: "button",
                               className: "DocsIconButton DocsThemeToggle",
-                              "aria-label": `Switch to ${Ot} theme`,
-                              title: `Switch to ${Ot} theme`,
+                              "aria-label": `Switch to ${su} theme`,
+                              title: `Switch to ${su} theme`,
                               onClick: () => {
-                                Vt(Ot)
+                                ju(su)
                               },
-                              children: (0, ft.jsx)(yt, {
-                                name: "dark" === et ? "moon" : "sun"
+                              children: (0, Ou.jsx)(hu, {
+                                name: "dark" === Eu ? "moon" : "sun"
                               })
                             })
                           }
-                          const pD = "https://github.com/Bloxdy/code-api",
-                            xD = "https://discord.gg/playbloxd",
-                            TD = 180,
-                            gD = /Mac|iPhone|iPad/.test(navigator.userAgent);
+                          const AZ = "https://github.com/Bloxdy/code-api",
+                            nZ = "https://discord.gg/playbloxd",
+                            yZ = 180,
+                            zZ = /Mac|iPhone|iPad/.test(navigator.userAgent);
 
-                          function sD(tt) {
+                          function RZ(uu) {
                             let {
-                              basePath: et,
-                              activePageId: Vt,
-                              onNavigate: Ot
-                            } = tt;
-                            return (0, ft.jsx)("nav", {
+                              basePath: Eu,
+                              activePageId: ju,
+                              onNavigate: su
+                            } = uu;
+                            return (0, Ou.jsx)("nav", {
                               className: "DocsNav",
                               "aria-label": "Documentation",
-                              children: Gt.map((tt => (0, ft.jsxs)("div", {
+                              children: iu.map((uu => (0, Ou.jsxs)("div", {
                                 className: "DocsNavGroup",
-                                children: [(0, ft.jsx)("div", {
+                                children: [(0, Ou.jsx)("div", {
                                   className: "DocsNavGroupTitle",
-                                  children: tt.title
-                                }), tt.pageIds.map((tt => {
-                                  var qt;
-                                  const dt = zt(tt);
-                                  return (0, ft.jsxs)(mt.b, {
-                                    to: Yt(et, dt),
-                                    className: Dt()("DocsNavLink", {
-                                      Active: dt.id === Vt
+                                  children: uu.title
+                                }), uu.pageIds.map((uu => {
+                                  var Uu;
+                                  const lu = Wu(uu);
+                                  return (0, Ou.jsxs)(Xu.c, {
+                                    to: tu(Eu, lu),
+                                    className: Zu()("DocsNavLink", {
+                                      Active: lu.id === ju
                                     }),
-                                    "aria-current": dt.id === Vt ? "page" : void 0,
-                                    onClick: Ot,
-                                    children: [(0, ft.jsx)(yt, {
-                                      name: dt.icon
-                                    }), (0, ft.jsx)("span", {
-                                      children: null !== (qt = dt.navTitle) && void 0 !== qt ? qt : dt.title
+                                    "aria-current": lu.id === ju ? "page" : void 0,
+                                    onClick: su,
+                                    children: [(0, Ou.jsx)(hu, {
+                                      name: lu.icon
+                                    }), (0, Ou.jsx)("span", {
+                                      children: null !== (Uu = lu.navTitle) && void 0 !== Uu ? Uu : lu.title
                                     })]
-                                  }, dt.id)
+                                  }, lu.id)
                                 }))]
-                              }, tt.title)))
+                              }, uu.title)))
                             })
                           }
 
-                          function nD(tt) {
+                          function uX(uu) {
                             let {
-                              basePath: et,
-                              pageId: Vt
-                            } = tt;
-                            const Ot = Gt.flatMap((tt => tt.pageIds)),
-                              qt = Ot.indexOf(Vt),
-                              Dt = qt > 0 ? zt(Ot[qt - 1]) : null,
-                              dt = qt < Ot.length - 1 ? zt(Ot[qt + 1]) : null;
-                            return (0, ft.jsxs)("nav", {
+                              basePath: Eu,
+                              pageId: ju
+                            } = uu;
+                            const su = iu.flatMap((uu => uu.pageIds)),
+                              Uu = su.indexOf(ju),
+                              Zu = Uu > 0 ? Wu(su[Uu - 1]) : null,
+                              lu = Uu < su.length - 1 ? Wu(su[Uu + 1]) : null;
+                            return (0, Ou.jsxs)("nav", {
                               className: "DocsPager",
                               "aria-label": "Pages",
-                              children: [Dt ? (0, ft.jsxs)(mt.b, {
+                              children: [Zu ? (0, Ou.jsxs)(Xu.c, {
                                 className: "DocsPagerLink Previous",
-                                to: Yt(et, Dt),
-                                children: [(0, ft.jsx)("span", {
+                                to: tu(Eu, Zu),
+                                children: [(0, Ou.jsx)("span", {
                                   className: "DocsPagerLabel",
                                   children: "Previous"
-                                }), (0, ft.jsx)("span", {
+                                }), (0, Ou.jsx)("span", {
                                   className: "DocsPagerTitle",
-                                  children: Dt.title
+                                  children: Zu.title
                                 })]
-                              }) : (0, ft.jsx)("span", {}), dt && (0, ft.jsxs)(mt.b, {
+                              }) : (0, Ou.jsx)("span", {}), lu && (0, Ou.jsxs)(Xu.c, {
                                 className: "DocsPagerLink Next",
-                                to: Yt(et, dt),
-                                children: [(0, ft.jsx)("span", {
+                                to: tu(Eu, lu),
+                                children: [(0, Ou.jsx)("span", {
                                   className: "DocsPagerLabel",
                                   children: "Next"
-                                }), (0, ft.jsx)("span", {
+                                }), (0, Ou.jsx)("span", {
                                   className: "DocsPagerTitle",
-                                  children: dt.title
+                                  children: lu.title
                                 })]
                               })]
                             })
                           }
 
-                          function tm(tt) {
+                          function EX(uu) {
                             let {
-                              basePath: et,
-                              embedded: Vt = !1
-                            } = tt;
+                              basePath: Eu,
+                              embedded: ju = !1
+                            } = uu;
                             const {
-                              pageSlug: qt = ""
-                            } = (0, dt.B)(), Ht = (0, dt.s)(), Xt = (0, dt.w)(), Qt = (lt = qt, kt.find((tt => tt.slug === lt)));
-                            var lt;
-                            const [Et, wt] = function() {
-                              const [tt, et] = (0, Ot.useState)((() => {
-                                const tt = AD.e.getItem(iD);
-                                return "dark" === tt || "light" === tt ? tt : null
-                              })), [Vt, qt] = (0, Ot.useState)(YD.matches ? "light" : "dark");
-                              return (0, Ot.useEffect)((() => {
-                                const tt = () => {
-                                  qt(YD.matches ? "light" : "dark")
+                              pageSlug: Uu = ""
+                            } = (0, lu.B)(), fu = (0, lu.r)(), Cu = (0, lu.v)(), bu = (cu = Uu, Qu.find((uu => uu.slug === cu)));
+                            var cu;
+                            const [Nu, Yu] = function() {
+                              const [uu, Eu] = (0, su.useState)((() => {
+                                const uu = tZ.k.getItem(xZ);
+                                return "dark" === uu || "light" === uu ? uu : null
+                              })), [ju, Uu] = (0, su.useState)(TZ.matches ? "light" : "dark");
+                              return (0, su.useEffect)((() => {
+                                const uu = () => {
+                                  Uu(TZ.matches ? "light" : "dark")
                                 };
-                                return YD.addEventListener("change", tt), () => {
-                                  YD.removeEventListener("change", tt)
+                                return TZ.addEventListener("change", uu), () => {
+                                  TZ.removeEventListener("change", uu)
                                 }
-                              }), []), [null !== tt && void 0 !== tt ? tt : Vt, tt => {
-                                AD.e.setItem(iD, tt), et(tt)
+                              }), []), [null !== uu && void 0 !== uu ? uu : ju, uu => {
+                                tZ.k.setItem(xZ, uu), Eu(uu)
                               }]
-                            }(), [Nt, Mt] = (0, Ot.useState)(null), [bt, Jt] = (0, Ot.useState)(!1), [Ct, ut] = (0, Ot.useState)(!1), [Kt, vt] = (0, Ot.useState)([]), Wt = function(tt, et) {
-                              const [Vt, qt] = (0, Ot.useState)("");
-                              return (0, Ot.useEffect)((() => {
-                                if (!et) return;
-                                let Vt = 0;
-                                const Ot = () => {
-                                    var Ot, Dt;
-                                    Vt = 0;
-                                    const mt = et.getBoundingClientRect().top + TD;
-                                    let dt = null !== (Ot = null === (Dt = tt[0]) || void 0 === Dt ? void 0 : Dt.anchor) && void 0 !== Ot ? Ot : "";
-                                    for (const et of tt) {
-                                      const tt = document.getElementById(et.anchor);
-                                      tt && tt.getBoundingClientRect().top <= mt && (dt = et.anchor)
+                            }(), [Du, gu] = (0, su.useState)(null), [Mu, eu] = (0, su.useState)(!1), [Gu, pu] = (0, su.useState)(!1), [wu, du] = (0, su.useState)([]), au = function(uu, Eu) {
+                              const [ju, Uu] = (0, su.useState)("");
+                              return (0, su.useEffect)((() => {
+                                if (!Eu) return;
+                                let ju = 0;
+                                const su = () => {
+                                    var su, Zu;
+                                    ju = 0;
+                                    const Xu = Eu.getBoundingClientRect().top + yZ;
+                                    let lu = null !== (su = null === (Zu = uu[0]) || void 0 === Zu ? void 0 : Zu.anchor) && void 0 !== su ? su : "";
+                                    for (const Eu of uu) {
+                                      const uu = document.getElementById(Eu.anchor);
+                                      uu && uu.getBoundingClientRect().top <= Xu && (lu = Eu.anchor)
                                     }
-                                    et.scrollTop + et.clientHeight >= et.scrollHeight - 2 && et.scrollTop > 0 && tt.length > 0 && (dt = tt[tt.length - 1].anchor), qt(dt)
+                                    Eu.scrollTop + Eu.clientHeight >= Eu.scrollHeight - 2 && Eu.scrollTop > 0 && uu.length > 0 && (lu = uu[uu.length - 1].anchor), Uu(lu)
                                   },
-                                  Dt = () => {
-                                    Vt || (Vt = requestAnimationFrame(Ot))
+                                  Zu = () => {
+                                    ju || (ju = requestAnimationFrame(su))
                                   };
-                                return Ot(), et.addEventListener("scroll", Dt, {
+                                return su(), Eu.addEventListener("scroll", Zu, {
                                   passive: !0
                                 }), () => {
-                                  cancelAnimationFrame(Vt), et.removeEventListener("scroll", Dt)
+                                  cancelAnimationFrame(ju), Eu.removeEventListener("scroll", Zu)
                                 }
-                              }), [tt, et]), Vt
-                            }(Kt, Nt), St = "" === qt && Ht.hash ? function(tt) {
-                              const et = (0, ht.t)(tt);
-                              if (Ut(zt("welcome"), et)) return null;
-                              const Vt = Object.hasOwn(it, et) ? it[et] : null;
-                              if (Vt) return {
-                                page: zt(Vt.pageId),
-                                anchor: Vt.anchor
+                              }), [uu, Eu]), ju
+                            }(wu, Du), Pu = "" === Uu && fu.hash ? function(uu) {
+                              const Eu = (0, Ju.r)(uu);
+                              if (Fu(Wu("welcome"), Eu)) return null;
+                              const ju = Object.hasOwn(Lu, Eu) ? Lu[Eu] : null;
+                              if (ju) return {
+                                page: Wu(ju.pageId),
+                                anchor: ju.anchor
                               };
-                              const Ot = zt("readme");
-                              return Ut(Ot, et) ? {
-                                page: Ot,
-                                anchor: et
-                              } : At(`#${et}`)
-                            }(Ht.hash) : null;
-                            (0, Ot.useEffect)((() => (jt.b.set({
+                              const su = Wu("readme");
+                              return Fu(su, Eu) ? {
+                                page: su,
+                                anchor: Eu
+                              } : Bu(`#${Eu}`)
+                            }(fu.hash) : null;
+                            (0, su.useEffect)((() => (qu.d.set({
                               musicOnFromPage: !1
                             }), () => {
-                              jt.b.set({
+                              qu.d.set({
                                 musicOnFromPage: !0
-                              }), NO()
-                            })), []), (0, Ot.useEffect)((() => {
-                              const tt = tt => {
-                                const et = tt.target;
-                                if (et.closest(".DocsTextDialog")) return;
-                                const Vt = et.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(et.tagName);
-                                "k" === tt.key && (tt.metaKey || tt.ctrlKey) || "/" === tt.key && !Vt ? (tt.preventDefault(), ut(!0)) : "Escape" === tt.key && Jt(!1)
+                              }), Ds()
+                            })), []), (0, su.useEffect)((() => {
+                              const uu = uu => {
+                                const Eu = uu.target;
+                                if (Eu.closest(".DocsTextDialog")) return;
+                                const ju = Eu.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(Eu.tagName);
+                                "k" === uu.key && (uu.metaKey || uu.ctrlKey) || "/" === uu.key && !ju ? (uu.preventDefault(), pu(!0)) : "Escape" === uu.key && eu(!1)
                               };
-                              return window.addEventListener("keydown", tt), () => {
-                                window.removeEventListener("keydown", tt)
+                              return window.addEventListener("keydown", uu), () => {
+                                window.removeEventListener("keydown", uu)
                               }
                             }), []);
-                            const ct = (0, Ot.useRef)(null);
-                            (0, Ot.useLayoutEffect)((() => {
-                              var tt, et;
-                              if (!Nt) return;
-                              const Vt = ct.current === Ht.pathname;
-                              ct.current = Ht.pathname;
-                              const Ot = (0, ht.t)(Ht.hash),
-                                qt = Ot ? document.getElementById(Ot) : null;
-                              if (null === (tt = Nt.querySelector(".DocsTargeted")) || void 0 === tt || tt.classList.remove("DocsTargeted"), null === qt || void 0 === qt || null === (et = qt.closest(".DocsCard, .DocsParam, .DocsTile, .DocsSoundTile")) || void 0 === et || et.classList.add("DocsTargeted"), qt) {
-                                var Dt;
-                                const tt = qt.matches(".DocsTile, .DocsSoundTile, .DocsCatalogueTile");
-                                (null !== (Dt = qt.closest(".DocsChangelogEntry")) && void 0 !== Dt ? Dt : qt).scrollIntoView({
-                                  block: tt ? "center" : "start",
-                                  behavior: Vt ? "smooth" : "auto"
+                            const ou = (0, su.useRef)(null);
+                            (0, su.useLayoutEffect)((() => {
+                              var uu, Eu;
+                              if (!Du) return;
+                              const ju = ou.current === fu.pathname;
+                              ou.current = fu.pathname;
+                              const su = (0, Ju.r)(fu.hash),
+                                Uu = su ? document.getElementById(su) : null;
+                              if (null === (uu = Du.querySelector(".DocsTargeted")) || void 0 === uu || uu.classList.remove("DocsTargeted"), null === Uu || void 0 === Uu || null === (Eu = Uu.closest(".DocsCard, .DocsParam, .DocsTile, .DocsSoundTile")) || void 0 === Eu || Eu.classList.add("DocsTargeted"), Uu) {
+                                var Zu;
+                                const uu = Uu.matches(".DocsTile, .DocsSoundTile, .DocsCatalogueTile");
+                                (null !== (Zu = Uu.closest(".DocsChangelogEntry")) && void 0 !== Zu ? Zu : Uu).scrollIntoView({
+                                  block: uu ? "center" : "start",
+                                  behavior: ju ? "smooth" : "auto"
                                 })
-                              } else Vt || Nt.scrollTo({
+                              } else ju || Du.scrollTo({
                                 top: 0
                               })
-                            }), [Nt, Ht.pathname, Ht.hash, Ht.key]);
-                            const Rt = (0, Ot.useCallback)((() => {
-                                Jt(!1)
+                            }), [Du, fu.pathname, fu.hash, fu.key]);
+                            const ku = (0, su.useCallback)((() => {
+                                eu(!1)
                               }), []),
-                              It = (0, Ot.useCallback)((tt => {
-                                Xt({
-                                  hash: tt
+                              mu = (0, su.useCallback)((uu => {
+                                Cu({
+                                  hash: uu
                                 })
-                              }), [Xt]);
-                            if (St) return (0, ft.jsx)(dt.c, {
+                              }), [Cu]);
+                            if (Pu) return (0, Ou.jsx)(lu.e, {
                               replace: !0,
-                              to: Yt(et, St.page, St.anchor)
+                              to: tu(Eu, Pu.page, Pu.anchor)
                             });
-                            if (!Qt) return (0, ft.jsx)(dt.c, {
+                            if (!bu) return (0, Ou.jsx)(lu.e, {
                               replace: !0,
-                              to: et
+                              to: Eu
                             });
-                            const Pt = Vt ? "div" : "main";
-                            return (0, ft.jsx)(fe.Provider, {
-                              value: et,
-                              children: (0, ft.jsx)(we.Provider, {
-                                value: Nt,
-                                children: (0, ft.jsxs)("div", {
-                                  ref: Mt,
-                                  className: Dt()("DocsSite", {
-                                    Embedded: Vt,
-                                    NavOpen: bt
+                            const vu = ju ? "div" : "main";
+                            return (0, Ou.jsx)(NE.Provider, {
+                              value: Eu,
+                              children: (0, Ou.jsx)(OE.Provider, {
+                                value: Du,
+                                children: (0, Ou.jsxs)("div", {
+                                  ref: gu,
+                                  className: Zu()("DocsSite", {
+                                    Embedded: ju,
+                                    NavOpen: Mu
                                   }),
-                                  "data-theme": Et,
-                                  children: [(0, ft.jsxs)("header", {
+                                  "data-theme": Nu,
+                                  children: [(0, Ou.jsxs)("header", {
                                     className: "DocsTopBar",
-                                    children: [(0, ft.jsx)("button", {
+                                    children: [(0, Ou.jsx)("button", {
                                       type: "button",
                                       className: "DocsIconButton DocsMenuButton",
-                                      "aria-label": bt ? "Close menu" : "Open menu",
-                                      "aria-expanded": bt,
+                                      "aria-label": Mu ? "Close menu" : "Open menu",
+                                      "aria-expanded": Mu,
                                       onClick: () => {
-                                        Jt(!bt)
+                                        eu(!Mu)
                                       },
-                                      children: (0, ft.jsx)(yt, {
-                                        name: bt ? "cross" : "menu"
+                                      children: (0, Ou.jsx)(hu, {
+                                        name: Mu ? "cross" : "menu"
                                       })
-                                    }), (0, ft.jsxs)(mt.b, {
-                                      to: et,
+                                    }), (0, Ou.jsxs)(Xu.c, {
+                                      to: Eu,
                                       className: "DocsBrand",
-                                      children: [(0, ft.jsx)("img", {
+                                      children: [(0, Ou.jsx)("img", {
                                         src: "/favicon.svg",
                                         alt: "",
                                         width: 28,
                                         height: 28
-                                      }), (0, ft.jsx)("span", {
+                                      }), (0, Ou.jsx)("span", {
                                         className: "DocsBrandName",
                                         children: "Bloxd"
-                                      }), (0, ft.jsx)("span", {
+                                      }), (0, Ou.jsx)("span", {
                                         className: "DocsBrandTag",
                                         children: "Code API"
                                       })]
-                                    }), (0, ft.jsxs)("button", {
+                                    }), (0, Ou.jsxs)("button", {
                                       type: "button",
                                       className: "DocsSearchTrigger",
                                       onClick: () => {
-                                        ut(!0)
+                                        pu(!0)
                                       },
-                                      children: [(0, ft.jsx)(yt, {
+                                      children: [(0, Ou.jsx)(hu, {
                                         name: "magnifying-glass"
-                                      }), (0, ft.jsx)("span", {
+                                      }), (0, Ou.jsx)("span", {
                                         className: "DocsSearchTriggerLabel",
                                         children: "Search docs"
-                                      }), (0, ft.jsxs)("kbd", {
-                                        children: [gD ? "\u2318" : "Ctrl", " K"]
+                                      }), (0, Ou.jsxs)("kbd", {
+                                        children: [zZ ? "\u2318" : "Ctrl", " K"]
                                       })]
-                                    }), (0, ft.jsxs)("div", {
+                                    }), (0, Ou.jsxs)("div", {
                                       className: "DocsTopBarLinks",
-                                      children: [(0, ft.jsxs)("a", {
-                                        href: xD,
+                                      children: [(0, Ou.jsxs)("a", {
+                                        href: nZ,
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "DocsTopBarLink",
-                                        children: [(0, ft.jsx)(yt, {
+                                        children: [(0, Ou.jsx)(hu, {
                                           name: "discord"
-                                        }), (0, ft.jsx)("span", {
+                                        }), (0, Ou.jsx)("span", {
                                           children: "Discord"
                                         })]
-                                      }), (0, ft.jsxs)("a", {
-                                        href: pD,
+                                      }), (0, Ou.jsxs)("a", {
+                                        href: AZ,
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "DocsTopBarLink",
-                                        children: [(0, ft.jsx)(yt, {
+                                        children: [(0, Ou.jsx)(hu, {
                                           name: "external-link"
-                                        }), (0, ft.jsx)("span", {
+                                        }), (0, Ou.jsx)("span", {
                                           children: "GitHub"
                                         })]
-                                      }), !Vt && (0, ft.jsxs)(mt.b, {
+                                      }), !ju && (0, Ou.jsxs)(Xu.c, {
                                         to: "/",
                                         className: "DocsTopBarLink DocsPlayLink",
-                                        children: [(0, ft.jsx)(yt, {
+                                        children: [(0, Ou.jsx)(hu, {
                                           name: "play"
-                                        }), (0, ft.jsx)("span", {
+                                        }), (0, Ou.jsx)("span", {
                                           children: "Play Bloxd"
                                         })]
-                                      }), (0, ft.jsx)(BD, {
-                                        theme: Et,
-                                        onChange: wt
+                                      }), (0, Ou.jsx)(HZ, {
+                                        theme: Nu,
+                                        onChange: Yu
                                       })]
                                     })]
-                                  }), (0, ft.jsxs)("div", {
+                                  }), (0, Ou.jsxs)("div", {
                                     className: "DocsSiteBody",
-                                    children: [(0, ft.jsx)("aside", {
+                                    children: [(0, Ou.jsx)("aside", {
                                       className: "DocsSidebar",
-                                      children: (0, ft.jsx)(sD, {
-                                        basePath: et,
-                                        activePageId: Qt.id,
-                                        onNavigate: Rt
+                                      children: (0, Ou.jsx)(RZ, {
+                                        basePath: Eu,
+                                        activePageId: bu.id,
+                                        onNavigate: ku
                                       })
-                                    }), (0, ft.jsx)("div", {
+                                    }), (0, Ou.jsx)("div", {
                                       className: "DocsNavScrim",
-                                      onClick: Rt
-                                    }), (0, ft.jsxs)(Pt, {
+                                      onClick: ku
+                                    }), (0, Ou.jsxs)(vu, {
                                       className: "DocsMain",
-                                      children: [(0, ft.jsx)(uD, {
-                                        page: Qt,
-                                        onTocChange: vt
-                                      }, Qt.id), (0, ft.jsx)(nD, {
-                                        basePath: et,
-                                        pageId: Qt.id
+                                      children: [(0, Ou.jsx)(JZ, {
+                                        page: bu,
+                                        onTocChange: du
+                                      }, bu.id), (0, Ou.jsx)(uX, {
+                                        basePath: Eu,
+                                        pageId: bu.id
                                       })]
-                                    }), (0, ft.jsx)("aside", {
-                                      className: Dt()("DocsToc", {
-                                        Timeline: "changelog" === Qt.layout
+                                    }), (0, Ou.jsx)("aside", {
+                                      className: Zu()("DocsToc", {
+                                        Timeline: "changelog" === bu.layout
                                       }),
                                       "aria-label": "On this page",
-                                      children: (0, ft.jsx)(WD, {
-                                        isChangelog: "changelog" === Qt.layout,
-                                        toc: Kt,
-                                        activeAnchor: Wt,
-                                        onNavigate: It
+                                      children: (0, Ou.jsx)(oZ, {
+                                        isChangelog: "changelog" === bu.layout,
+                                        toc: wu,
+                                        activeAnchor: au,
+                                        onNavigate: mu
                                       })
                                     })]
-                                  }), (0, ft.jsx)(UD, {}), Ct && (0, ft.jsx)(oD, {
-                                    basePath: et,
+                                  }), (0, Ou.jsx)(LZ, {}), Gu && (0, Ou.jsx)(FZ, {
+                                    basePath: Eu,
                                     onClose: () => {
-                                      ut(!1)
+                                      pu(!1)
                                     }
                                   })]
                                 })
                               })
                             })
                           }
-                        }, 4909: (tt, et, Vt) => {
-                          Vt.d(et, {
-                            C: () => Et,
-                            G: () => lt,
-                            d: () => Ot,
-                            g: () => mt,
-                            h: () => yt,
-                            l: () => wt,
-                            p: () => dt,
-                            t: () => qt,
-                            v: () => Dt,
-                            z: () => ft
+                        }, 4928: (uu, Eu, ju) => {
+                          ju.d(Eu, {
+                            B: () => cu,
+                            d: () => su,
+                            h: () => Xu,
+                            j: () => hu,
+                            l: () => Yu,
+                            n: () => lu,
+                            r: () => Uu,
+                            u: () => Zu,
+                            y: () => Ou,
+                            z: () => Nu
                           });
-                          const Ot = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
+                          const su = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
 
-                          function qt(tt) {
+                          function Uu(uu) {
                             try {
-                              return decodeURIComponent(tt.slice(1))
+                              return decodeURIComponent(uu.slice(1))
                             } catch {
-                              return tt.slice(1)
+                              return uu.slice(1)
                             }
                           }
 
-                          function Dt(tt) {
-                            return tt.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
+                          function Zu(uu) {
+                            return uu.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
                           }
-                          const mt = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${Ot.source}`, "g");
+                          const Xu = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${su.source}`, "g");
 
-                          function dt(tt, et) {
-                            return 2 === tt.length ? et.replace(/^ (.*) $/, "$1") : et
-                          }
-
-                          function jt(tt) {
-                            return "" === tt.trim()
+                          function lu(uu, Eu) {
+                            return 2 === uu.length ? Eu.replace(/^ (.*) $/, "$1") : Eu
                           }
 
-                          function Ht(tt) {
-                            const et = [];
-                            for (const Vt of tt.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) et.length > 0 && et[et.length - 1].endsWith("\\") ? et[et.length - 1] += `|${Vt}` : et.push(Vt);
-                            return et.map((tt => tt.trim().replaceAll("\\|", "|")))
+                          function qu(uu) {
+                            return "" === uu.trim()
                           }
-                          const Xt = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
 
-                          function Qt(tt) {
-                            const et = [],
-                              Vt = [{
+                          function fu(uu) {
+                            const Eu = [];
+                            for (const ju of uu.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) Eu.length > 0 && Eu[Eu.length - 1].endsWith("\\") ? Eu[Eu.length - 1] += `|${ju}` : Eu.push(ju);
+                            return Eu.map((uu => uu.trim().replaceAll("\\|", "|")))
+                          }
+                          const Cu = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
+
+                          function bu(uu) {
+                            const Eu = [],
+                              ju = [{
                                 indent: -1,
-                                items: et
+                                items: Eu
                               }];
-                            let Ot = null;
-                            for (const qt of tt) {
-                              const tt = qt.match(Xt);
-                              if (!tt) {
-                                Ot && (Ot.text += ` ${qt.trim()}`);
+                            let su = null;
+                            for (const Uu of uu) {
+                              const uu = Uu.match(Cu);
+                              if (!uu) {
+                                su && (su.text += ` ${Uu.trim()}`);
                                 continue
                               }
-                              const et = tt[1].replace(/\t/g, "  ").length;
-                              for (; et <= Vt[Vt.length - 1].indent;) Vt.pop();
-                              Ot = {
-                                text: tt[3].trim(),
+                              const Eu = uu[1].replace(/\t/g, "  ").length;
+                              for (; Eu <= ju[ju.length - 1].indent;) ju.pop();
+                              su = {
+                                text: uu[3].trim(),
                                 children: []
-                              }, Vt[Vt.length - 1].items.push(Ot), Vt.push({
-                                indent: et,
-                                items: Ot.children
+                              }, ju[ju.length - 1].items.push(su), ju.push({
+                                indent: Eu,
+                                items: su.children
                               })
                             }
-                            return et
+                            return Eu
                           }
 
-                          function lt(tt) {
-                            const et = tt.replace(/\r\n/g, "\n").split("\n"),
-                              Vt = [];
-                            let Ot = 0;
-                            for (; Ot < et.length;) {
-                              const tt = et[Ot];
-                              if (jt(tt)) {
-                                Ot++;
+                          function cu(uu) {
+                            const Eu = uu.replace(/\r\n/g, "\n").split("\n"),
+                              ju = [];
+                            let su = 0;
+                            for (; su < Eu.length;) {
+                              const uu = Eu[su];
+                              if (qu(uu)) {
+                                su++;
                                 continue
                               }
-                              const qt = tt.match(/^\s*```\s*(\w*)\s*$/);
-                              if (qt) {
-                                const tt = [];
-                                for (Ot++; Ot < et.length && !/^\s*```\s*$/.test(et[Ot]);) tt.push(et[Ot]), Ot++;
-                                Ot++, Vt.push({
+                              const Uu = uu.match(/^\s*```\s*(\w*)\s*$/);
+                              if (Uu) {
+                                const uu = [];
+                                for (su++; su < Eu.length && !/^\s*```\s*$/.test(Eu[su]);) uu.push(Eu[su]), su++;
+                                su++, ju.push({
                                   kind: "code",
-                                  lang: qt[1] || "text",
-                                  code: tt.join("\n").replace(/\s+$/, "")
+                                  lang: Uu[1] || "text",
+                                  code: uu.join("\n").replace(/\s+$/, "")
                                 });
                                 continue
                               }
-                              const mt = tt.match(/^(#{1,6})\s+(.+?)\s*#*$/);
-                              if (mt) {
-                                const tt = mt[2].trim();
-                                Vt.push({
+                              const Xu = uu.match(/^(#{1,6})\s+(.+?)\s*#*$/);
+                              if (Xu) {
+                                const uu = Xu[2].trim();
+                                ju.push({
                                   kind: "heading",
-                                  level: mt[1].length,
-                                  text: tt,
-                                  anchor: Dt(tt)
-                                }), Ot++;
+                                  level: Xu[1].length,
+                                  text: uu,
+                                  anchor: Zu(uu)
+                                }), su++;
                                 continue
                               }
-                              if (/^\s*(-{3,}|\*{3,})\s*$/.test(tt)) {
-                                Vt.push({
+                              if (/^\s*(-{3,}|\*{3,})\s*$/.test(uu)) {
+                                ju.push({
                                   kind: "rule"
-                                }), Ot++;
+                                }), su++;
                                 continue
                               }
-                              if (tt.trim().startsWith("|") && Ot + 1 < et.length && /^\s*\|[\s:|-]+\|\s*$/.test(et[Ot + 1])) {
-                                const qt = Ht(tt),
-                                  Dt = [];
-                                for (Ot += 2; Ot < et.length && et[Ot].trim().startsWith("|");) Dt.push(Ht(et[Ot])), Ot++;
-                                Vt.push({
+                              if (uu.trim().startsWith("|") && su + 1 < Eu.length && /^\s*\|[\s:|-]+\|\s*$/.test(Eu[su + 1])) {
+                                const Uu = fu(uu),
+                                  Zu = [];
+                                for (su += 2; su < Eu.length && Eu[su].trim().startsWith("|");) Zu.push(fu(Eu[su])), su++;
+                                ju.push({
                                   kind: "table",
-                                  header: qt,
-                                  rows: Dt
+                                  header: Uu,
+                                  rows: Zu
                                 });
                                 continue
                               }
-                              if (tt.startsWith(">")) {
-                                const tt = [];
-                                for (; Ot < et.length && et[Ot].startsWith(">");) tt.push(et[Ot].replace(/^>\s?/, "")), Ot++;
-                                Vt.push({
+                              if (uu.startsWith(">")) {
+                                const uu = [];
+                                for (; su < Eu.length && Eu[su].startsWith(">");) uu.push(Eu[su].replace(/^>\s?/, "")), su++;
+                                ju.push({
                                   kind: "quote",
-                                  blocks: lt(tt.join("\n"))
+                                  blocks: cu(uu.join("\n"))
                                 });
                                 continue
                               }
-                              if (Xt.test(tt)) {
-                                const qt = [],
-                                  Dt = /^\s*\d+\./.test(tt);
-                                for (; Ot < et.length && !jt(et[Ot]) && (Xt.test(et[Ot]) || /^\s+\S/.test(et[Ot]));) qt.push(et[Ot]), Ot++;
-                                Vt.push({
+                              if (Cu.test(uu)) {
+                                const Uu = [],
+                                  Zu = /^\s*\d+\./.test(uu);
+                                for (; su < Eu.length && !qu(Eu[su]) && (Cu.test(Eu[su]) || /^\s+\S/.test(Eu[su]));) Uu.push(Eu[su]), su++;
+                                ju.push({
                                   kind: "list",
-                                  ordered: Dt,
-                                  items: Qt(qt)
+                                  ordered: Zu,
+                                  items: bu(Uu)
                                 });
                                 continue
                               }
-                              const dt = [];
-                              for (; Ot < et.length && !jt(et[Ot]) && !/^\s*```/.test(et[Ot]) && !/^#{1,6}\s/.test(et[Ot]) && !et[Ot].startsWith(">") && !Xt.test(et[Ot]) && (!et[Ot].trim().startsWith("|") || 0 !== dt.length);) dt.push(et[Ot].trim()), Ot++;
-                              0 === dt.length && (dt.push(et[Ot].trim()), Ot++), Vt.push({
+                              const lu = [];
+                              for (; su < Eu.length && !qu(Eu[su]) && !/^\s*```/.test(Eu[su]) && !/^#{1,6}\s/.test(Eu[su]) && !Eu[su].startsWith(">") && !Cu.test(Eu[su]) && (!Eu[su].trim().startsWith("|") || 0 !== lu.length);) lu.push(Eu[su].trim()), su++;
+                              0 === lu.length && (lu.push(Eu[su].trim()), su++), ju.push({
                                 kind: "paragraph",
-                                text: dt.join(" ")
+                                text: lu.join(" ")
                               })
                             }
-                            return Vt
+                            return ju
                           }
 
-                          function Et(tt) {
-                            let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-                            const Vt = lt(tt);
-                            let Ot = "";
-                            const qt = [],
-                              Dt = [],
-                              mt = new Map;
-                            for (const Ht of Vt) {
-                              if ("heading" === Ht.kind) {
-                                var dt;
-                                const tt = (null !== (dt = mt.get(Ht.anchor)) && void 0 !== dt ? dt : 0) + 1;
-                                mt.set(Ht.anchor, tt), tt > 1 && (Ht.anchor = `${Ht.anchor}-${tt}`)
+                          function Nu(uu) {
+                            let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+                            const ju = cu(uu);
+                            let su = "";
+                            const Uu = [],
+                              Zu = [],
+                              Xu = new Map;
+                            for (const fu of ju) {
+                              if ("heading" === fu.kind) {
+                                var lu;
+                                const uu = (null !== (lu = Xu.get(fu.anchor)) && void 0 !== lu ? lu : 0) + 1;
+                                Xu.set(fu.anchor, uu), uu > 1 && (fu.anchor = `${fu.anchor}-${uu}`)
                               }
-                              if ("heading" === Ht.kind && 1 === Ht.level && !Ot) {
-                                Ot = Ht.text;
+                              if ("heading" === fu.kind && 1 === fu.level && !su) {
+                                su = fu.text;
                                 continue
                               }
-                              if ("heading" === Ht.kind && Ht.level <= et) {
-                                Dt.push({
-                                  heading: Ht,
+                              if ("heading" === fu.kind && fu.level <= Eu) {
+                                Zu.push({
+                                  heading: fu,
                                   blocks: []
                                 });
                                 continue
                               }
-                              const tt = Dt.at(-1);
-                              tt ? tt.blocks.push(Ht) : qt.push(Ht)
+                              const uu = Zu.at(-1);
+                              uu ? uu.blocks.push(fu) : Uu.push(fu)
                             }
-                            const jt = tt => {
+                            const qu = uu => {
                               for (;
-                                "rule" === (null === (et = tt.at(-1)) || void 0 === et ? void 0 : et.kind);) {
-                                var et;
-                                tt.pop()
+                                "rule" === (null === (Eu = uu.at(-1)) || void 0 === Eu ? void 0 : Eu.kind);) {
+                                var Eu;
+                                uu.pop()
                               }
                             };
-                            jt(qt);
-                            for (const Ht of Dt) jt(Ht.blocks);
+                            qu(Uu);
+                            for (const fu of Zu) qu(fu.blocks);
                             return {
-                              title: Ot,
-                              intro: qt,
-                              sections: Dt
+                              title: su,
+                              intro: Uu,
+                              sections: Zu
                             }
                           }
 
-                          function ft(tt) {
+                          function Ou(uu) {
                             return [{
                               heading: null,
-                              blocks: tt.intro
-                            }, ...tt.sections.map((tt => ({
-                              heading: tt.heading,
-                              blocks: tt.blocks
+                              blocks: uu.intro
+                            }, ...uu.sections.map((uu => ({
+                              heading: uu.heading,
+                              blocks: uu.blocks
                             })))]
                           }
 
-                          function wt(tt) {
-                            return tt.flatMap((tt => "code" === tt.kind ? [tt] : "quote" === tt.kind ? wt(tt.blocks) : []))
+                          function Yu(uu) {
+                            return uu.flatMap((uu => "code" === uu.kind ? [uu] : "quote" === uu.kind ? Yu(uu.blocks) : []))
                           }
 
-                          function yt(tt) {
-                            switch (tt.kind) {
+                          function hu(uu) {
+                            switch (uu.kind) {
                               case "heading":
                               case "paragraph":
-                                return tt.text;
+                                return uu.text;
                               case "code":
-                                return tt.code;
+                                return uu.code;
                               case "table":
-                                return [tt.header, ...tt.rows].map((tt => tt.join(" "))).join(" ");
+                                return [uu.header, ...uu.rows].map((uu => uu.join(" "))).join(" ");
                               case "list": {
-                                const et = tt => tt.map((tt => `${tt.text} ${et(tt.children)}`)).join(" ");
-                                return et(tt.items)
+                                const Eu = uu => uu.map((uu => `${uu.text} ${Eu(uu.children)}`)).join(" ");
+                                return Eu(uu.items)
                               }
                               case "quote":
-                                return tt.blocks.map(yt).join(" ");
+                                return uu.blocks.map(hu).join(" ");
                               case "rule":
                                 return ""
                             }
                           }
-                        }, 5003: (tt, et, Vt) => {
-                          Vt.d(et, {
-                            d: () => dt
+                        }, 4999: (uu, Eu, ju) => {
+                          ju.d(Eu, {
+                            e: () => lu
                           });
-                          var Ot = Vt(63),
-                            qt = Vt(377),
-                            Dt = Vt(2018),
-                            mt = Vt(1188);
+                          var su = ju(58),
+                            Uu = ju(337),
+                            Zu = ju(1971),
+                            Xu = ju(1154);
 
-                          function dt(tt) {
+                          function lu(uu) {
                             let {
-                              text: et
-                            } = tt;
-                            const Vt = [];
-                            let dt = "";
-                            return (0, qt.Ob)(et).forEach(((tt, et) => {
-                              if ("string" === typeof tt || !(0, Dt.g)(tt.icon)) return void(dt += "string" === typeof tt ? tt : tt.icon);
-                              const qt = Math.max(0, dt.trimEnd().search(/\S{1,12}$/));
-                              Vt.push((0, mt.jsxs)(Ot.Fragment, {
-                                children: [dt.slice(0, qt), (0, mt.jsxs)("span", {
+                              text: Eu
+                            } = uu;
+                            const ju = [];
+                            let lu = "";
+                            return (0, Uu.gc)(Eu).forEach(((uu, Eu) => {
+                              if ("string" === typeof uu || !(0, Zu.h)(uu.icon)) return void(lu += "string" === typeof uu ? uu : uu.icon);
+                              const Uu = Math.max(0, lu.trimEnd().search(/\S{1,12}$/));
+                              ju.push((0, Xu.jsxs)(su.Fragment, {
+                                children: [lu.slice(0, Uu), (0, Xu.jsxs)("span", {
                                   className: "InlineIconTextGlue",
-                                  children: [dt.slice(qt), (0, mt.jsx)("span", {
+                                  children: [lu.slice(Uu), (0, Xu.jsx)("span", {
                                     className: "InlineIconTextIcon",
                                     role: "img",
-                                    "aria-label": tt.icon,
-                                    children: (0, mt.jsx)(Dt.e, {
-                                      itemName: tt.icon,
+                                    "aria-label": uu.icon,
+                                    children: (0, Xu.jsx)(Zu.d, {
+                                      itemName: uu.icon,
                                       amount: 0
                                     })
                                   })]
                                 })]
-                              }, et)), dt = ""
-                            })), Vt.push(dt), (0, mt.jsx)(mt.Fragment, {
-                              children: Vt
+                              }, Eu)), lu = ""
+                            })), ju.push(lu), (0, Xu.jsx)(Xu.Fragment, {
+                              children: ju
                             })
                           }
-                        }, 4938: (tt, et, Vt) => {
-                          Vt.d(et, {
-                            e: () => Mt,
-                            b: () => Nt
+                        }, 4944: (uu, Eu, ju) => {
+                          ju.d(Eu, {
+                            d: () => gu,
+                            b: () => Du
                           });
-                          var Ot = Vt(63),
-                            qt = Vt(1554),
-                            Dt = Vt(2001),
-                            mt = Vt(4943),
-                            dt = Vt(1188);
-                          const jt = (0, Ot.memo)((function(tt) {
+                          var su = ju(58),
+                            Uu = ju(1499),
+                            Zu = ju(1964),
+                            Xu = ju(4952),
+                            lu = ju(1154);
+                          const qu = (0, su.memo)((function(uu) {
                             let {
-                              initialParameters: et
-                            } = tt;
-                            const Vt = (0, Ot.useRef)(null),
-                              qt = (0, Ot.useRef)(null),
-                              jt = (0, Ot.useRef)(0),
-                              Ht = (0, Ot.useRef)(null),
-                              Xt = et.description,
-                              Qt = et.He,
+                              initialParameters: Eu
+                            } = uu;
+                            const ju = (0, su.useRef)(null),
+                              Uu = (0, su.useRef)(null),
+                              qu = (0, su.useRef)(0),
+                              fu = (0, su.useRef)(null),
+                              Cu = Eu.description,
+                              bu = Eu.UE,
                               {
-                                scale: lt,
-                                rotation: Et
-                              } = null !== et && void 0 !== et ? et : {},
-                              ft = (0, mt.d)();
-                            return (0, Ot.useEffect)((() => {
-                              const tt = ft.onFrame((() => {
-                                const tt = ft.getState();
-                                if (!tt.isActive || !Vt.current || !qt.current) return;
-                                const et = tt.state;
-                                if (Vt.current.value = et.progress, et.clickCount > jt.current) {
-                                  jt.current = et.clickCount;
-                                  const tt = qt.current;
-                                  tt.classList.add("pulse"), Ht.current = setTimeout((() => {
-                                    tt.classList.remove("pulse")
+                                scale: cu,
+                                rotation: Nu
+                              } = null !== Eu && void 0 !== Eu ? Eu : {},
+                              Ou = (0, Xu.d)();
+                            return (0, su.useEffect)((() => {
+                              const uu = Ou.onFrame((() => {
+                                const uu = Ou.getState();
+                                if (!uu.isActive || !ju.current || !Uu.current) return;
+                                const Eu = uu.state;
+                                if (ju.current.value = Eu.progress, Eu.clickCount > qu.current) {
+                                  qu.current = Eu.clickCount;
+                                  const uu = Uu.current;
+                                  uu.classList.add("pulse"), fu.current = setTimeout((() => {
+                                    uu.classList.remove("pulse")
                                   }), 100)
                                 }
                               }));
                               return () => {
-                                clearTimeout(Ht.current), tt()
+                                clearTimeout(fu.current), uu()
                               }
-                            }), [ft]), (0, dt.jsx)(dt.Fragment, {
-                              children: (0, dt.jsxs)("div", {
+                            }), [Ou]), (0, lu.jsx)(lu.Fragment, {
+                              children: (0, lu.jsxs)("div", {
                                 className: "QTEProgressBarWrapper",
                                 style: {
-                                  ...null !== lt && {
-                                    "--scale": lt
+                                  ...null !== cu && {
+                                    "--scale": cu
                                   },
-                                  ...null !== Et && {
-                                    "--rotation": `${Et}deg`
+                                  ...null !== Nu && {
+                                    "--rotation": `${Nu}deg`
                                   }
                                 },
-                                children: [(0, dt.jsx)("progress", {
+                                children: [(0, lu.jsx)("progress", {
                                   id: "catch",
                                   max: 100,
                                   className: "QTEProgressBar",
-                                  ref: Vt
-                                }), (0, dt.jsx)("span", {
+                                  ref: ju
+                                }), (0, lu.jsx)("span", {
                                   className: "QTEProgressBarInteractionIndicator",
-                                  ref: qt,
-                                  children: (0, dt.jsx)(Dt.e, {
+                                  ref: Uu,
+                                  children: (0, lu.jsx)(Zu.d, {
                                     text: [{
-                                      icon: Qt
+                                      icon: bu
                                     }]
                                   })
-                                }), (0, dt.jsx)("div", {
+                                }), (0, lu.jsx)("div", {
                                   className: "QTEProgressBarDescription",
-                                  children: (0, dt.jsx)(Dt.e, {
-                                    text: Xt
+                                  children: (0, lu.jsx)(Zu.d, {
+                                    text: Cu
                                   })
                                 })]
                               })
                             })
                           }));
-                          var Ht = Vt(1140),
-                            Xt = Vt.n(Ht);
-                          const Qt = 2 * Math.PI * 90,
-                            lt = (0, Ot.memo)((function(tt) {
+                          var fu = ju(1105),
+                            Cu = ju.n(fu);
+                          const bu = 2 * Math.PI * 90,
+                            cu = (0, su.memo)((function(uu) {
                               let {
-                                initialParameters: et
-                              } = tt;
-                              const Vt = (0, Ot.useRef)(null),
-                                qt = (0, Ot.useRef)(null),
-                                jt = (0, Ot.useRef)(null),
-                                Ht = et.label,
-                                lt = et.icon,
-                                Et = et.le,
+                                initialParameters: Eu
+                              } = uu;
+                              const ju = (0, su.useRef)(null),
+                                Uu = (0, su.useRef)(null),
+                                qu = (0, su.useRef)(null),
+                                fu = Eu.label,
+                                cu = Eu.icon,
+                                Nu = Eu.lE,
                                 {
-                                  scale: ft,
-                                  rotation: wt,
-                                  Ee: yt
-                                } = null !== et && void 0 !== et ? et : {},
-                                Nt = (0, mt.d)();
-                              return (0, Ot.useEffect)((() => {
-                                const tt = Nt.onFrame((() => {
-                                  var tt, et;
-                                  const Ot = Nt.getState();
-                                  if (!Ot.isActive || !qt.current) return;
-                                  const Dt = Ot.state,
-                                    mt = null !== (tt = Dt.timeRemaining) && void 0 !== tt ? tt : 0,
-                                    dt = null !== (et = Dt.Qe) && void 0 !== et ? et : 1,
-                                    Ht = Qt * (1 - mt / dt);
-                                  qt.current.style.strokeDashoffset = `${Ht}`, Vt.current && (Vt.current.style.opacity = mt > 0 ? "1" : "0"), jt.current && Et && (jt.current.textContent = `${(mt/1e3).toFixed(1)}s`)
+                                  scale: Ou,
+                                  rotation: Yu,
+                                  qE: hu
+                                } = null !== Eu && void 0 !== Eu ? Eu : {},
+                                Du = (0, Xu.d)();
+                              return (0, su.useEffect)((() => {
+                                const uu = Du.onFrame((() => {
+                                  var uu, Eu;
+                                  const su = Du.getState();
+                                  if (!su.isActive || !Uu.current) return;
+                                  const Zu = su.state,
+                                    Xu = null !== (uu = Zu.timeRemaining) && void 0 !== uu ? uu : 0,
+                                    lu = null !== (Eu = Zu.XE) && void 0 !== Eu ? Eu : 1,
+                                    fu = bu * (1 - Xu / lu);
+                                  Uu.current.style.strokeDashoffset = `${fu}`, ju.current && (ju.current.style.opacity = Xu > 0 ? "1" : "0"), qu.current && Nu && (qu.current.textContent = `${(Xu/1e3).toFixed(1)}s`)
                                 }));
                                 return () => {
-                                  tt()
+                                  uu()
                                 }
-                              }), [Nt, Et]), (0, dt.jsxs)("div", {
+                              }), [Du, Nu]), (0, lu.jsxs)("div", {
                                 className: "QTETimedClick",
-                                ref: Vt,
+                                ref: ju,
                                 style: {
-                                  ...null !== ft && {
-                                    "--scale": ft
+                                  ...null !== Ou && {
+                                    "--scale": Ou
                                   },
-                                  ...null !== wt && {
-                                    "--rotation": `${wt}deg`
+                                  ...null !== Yu && {
+                                    "--rotation": `${Yu}deg`
                                   }
                                 },
-                                children: [(0, dt.jsxs)("div", {
+                                children: [(0, lu.jsxs)("div", {
                                   className: "QTETimedClickCircleContainer",
-                                  children: [(0, dt.jsxs)("svg", {
+                                  children: [(0, lu.jsxs)("svg", {
                                     className: "QTETimedClickCircularProgress",
                                     viewBox: "0 0 200 200",
-                                    children: [(0, dt.jsx)("circle", {
+                                    children: [(0, lu.jsx)("circle", {
                                       className: "QTETimedClickProgressTrack",
                                       cx: "100",
                                       cy: "100",
                                       r: 90,
                                       fill: "none",
                                       strokeWidth: "12"
-                                    }), (0, dt.jsx)("circle", {
+                                    }), (0, lu.jsx)("circle", {
                                       className: "QTETimedClickProgressArc",
                                       cx: "100",
                                       cy: "100",
@@ -6290,80 +6290,80 @@ export const modules = {
                                       fill: "none",
                                       strokeWidth: "12",
                                       strokeLinecap: "square",
-                                      strokeDasharray: Qt,
-                                      ref: qt
+                                      strokeDasharray: bu,
+                                      ref: Uu
                                     })]
-                                  }), (0, dt.jsx)("div", {
+                                  }), (0, lu.jsx)("div", {
                                     className: "QTETimedClickCenterContent",
-                                    children: (0, dt.jsx)(Dt.e, {
+                                    children: (0, lu.jsx)(Zu.d, {
                                       text: [{
-                                        icon: lt
+                                        icon: cu
                                       }],
-                                      className: Xt()("QTETimedClickInnerText", {
-                                        QTETimedClickBreathe: yt
+                                      className: Cu()("QTETimedClickInnerText", {
+                                        QTETimedClickBreathe: hu
                                       })
                                     })
                                   })]
-                                }), (0, dt.jsxs)("div", {
+                                }), (0, lu.jsxs)("div", {
                                   className: "QTETimedClickRightTextContainer",
-                                  children: [(0, dt.jsx)(Dt.e, {
-                                    text: Ht,
+                                  children: [(0, lu.jsx)(Zu.d, {
+                                    text: fu,
                                     className: "QTETimedClickLabelText"
-                                  }), Et && (0, dt.jsx)("span", {
+                                  }), Nu && (0, lu.jsx)("span", {
                                     className: "QTETimedClickTimeText",
-                                    ref: jt
+                                    ref: qu
                                   })]
                                 })]
                               })
                             })),
-                            Et = (0, Ot.memo)((function(tt) {
+                            Nu = (0, su.memo)((function(uu) {
                               let {
-                                initialParameters: et
-                              } = tt;
-                              const Vt = (0, Ot.useRef)(null),
-                                qt = (0, Ot.useRef)(null),
-                                jt = (0, Ot.useRef)(null),
-                                Ht = (0, Ot.useRef)(!1),
-                                Xt = et.description,
-                                Qt = null === et || void 0 === et ? void 0 : et.icon,
-                                lt = (0, mt.d)();
-                              return (0, Ot.useEffect)((() => {
-                                const tt = lt.onFrame((() => {
-                                  const tt = lt.getState();
-                                  if (!tt.isActive) return;
-                                  const et = tt.state;
-                                  if (Vt.current) {
-                                    const tt = 100 * (et.catchZonePosition - et.ye / 2);
-                                    Vt.current.style.left = `${tt}%`, Vt.current.style.width = 100 * et.ye + "%", et.isCatching !== Ht.current && (Ht.current = et.isCatching, et.isCatching ? Vt.current.classList.add("catching") : Vt.current.classList.remove("catching"))
+                                initialParameters: Eu
+                              } = uu;
+                              const ju = (0, su.useRef)(null),
+                                Uu = (0, su.useRef)(null),
+                                qu = (0, su.useRef)(null),
+                                fu = (0, su.useRef)(!1),
+                                Cu = Eu.description,
+                                bu = null === Eu || void 0 === Eu ? void 0 : Eu.icon,
+                                cu = (0, Xu.d)();
+                              return (0, su.useEffect)((() => {
+                                const uu = cu.onFrame((() => {
+                                  const uu = cu.getState();
+                                  if (!uu.isActive) return;
+                                  const Eu = uu.state;
+                                  if (ju.current) {
+                                    const uu = 100 * (Eu.catchZonePosition - Eu.CE / 2);
+                                    ju.current.style.left = `${uu}%`, ju.current.style.width = 100 * Eu.CE + "%", Eu.isCatching !== fu.current && (fu.current = Eu.isCatching, Eu.isCatching ? ju.current.classList.add("catching") : ju.current.classList.remove("catching"))
                                   }
-                                  qt.current && (qt.current.style.left = 100 * et.moverPosition + "%"), jt.current && (jt.current.value = et.progress)
+                                  Uu.current && (Uu.current.style.left = 100 * Eu.moverPosition + "%"), qu.current && (qu.current.value = Eu.progress)
                                 }));
                                 return () => {
-                                  tt()
+                                  uu()
                                 }
-                              }), [lt]), (0, dt.jsxs)("div", {
+                              }), [cu]), (0, lu.jsxs)("div", {
                                 className: "QTEGravityBar",
-                                children: [(0, dt.jsx)("div", {
+                                children: [(0, lu.jsx)("div", {
                                   className: "QTEGravityBarDescription",
-                                  children: (0, dt.jsx)(Dt.e, {
-                                    text: Xt
+                                  children: (0, lu.jsx)(Zu.d, {
+                                    text: Cu
                                   })
-                                }), (0, dt.jsx)("progress", {
+                                }), (0, lu.jsx)("progress", {
                                   max: 100,
                                   className: "QTEGravityBarProgress",
-                                  ref: jt
-                                }), (0, dt.jsxs)("div", {
+                                  ref: qu
+                                }), (0, lu.jsxs)("div", {
                                   className: "QTEGravityBarTrack",
-                                  children: [(0, dt.jsx)("div", {
+                                  children: [(0, lu.jsx)("div", {
                                     className: "QTEGravityBarCatchZone",
-                                    ref: Vt
-                                  }), (0, dt.jsx)("div", {
+                                    ref: ju
+                                  }), (0, lu.jsx)("div", {
                                     className: "QTEGravityBarMover",
-                                    ref: qt,
-                                    children: (0, dt.jsx)("span", {
-                                      children: Qt && (0, dt.jsx)(Dt.e, {
+                                    ref: Uu,
+                                    children: (0, lu.jsx)("span", {
+                                      children: bu && (0, lu.jsx)(Zu.d, {
                                         text: [{
-                                          icon: Qt,
+                                          icon: bu,
                                           style: {
                                             fontSize: "4rem"
                                           }
@@ -6374,782 +6374,782 @@ export const modules = {
                                 })]
                               })
                             }));
-                          var ft = Vt(710);
-                          const wt = (0, Ot.memo)((function(tt) {
+                          var Ou = ju(649);
+                          const Yu = (0, su.memo)((function(uu) {
                               let {
-                                initialParameters: et
-                              } = tt;
-                              const Vt = (0, Ot.useRef)(null),
-                                qt = et.label,
-                                jt = et.Ke,
+                                initialParameters: Eu
+                              } = uu;
+                              const ju = (0, su.useRef)(null),
+                                Uu = Eu.label,
+                                qu = Eu.DE,
                                 {
-                                  icon: Ht,
-                                  scale: Xt,
-                                  rotation: Qt
-                                } = null !== et && void 0 !== et ? et : {},
-                                lt = 100 * (.5 - jt / 2),
-                                Et = 100 * jt,
-                                wt = (0, mt.d)();
-                              return (0, Ot.useEffect)((() => {
-                                const tt = wt.onFrame((() => {
-                                  const tt = wt.getState();
-                                  if (!tt.isActive || !Vt.current) return;
-                                  const et = tt.state;
-                                  Vt.current.style.left = 100 * et.markerPosition + "%"
+                                  icon: fu,
+                                  scale: Cu,
+                                  rotation: bu
+                                } = null !== Eu && void 0 !== Eu ? Eu : {},
+                                cu = 100 * (.5 - qu / 2),
+                                Nu = 100 * qu,
+                                Yu = (0, Xu.d)();
+                              return (0, su.useEffect)((() => {
+                                const uu = Yu.onFrame((() => {
+                                  const uu = Yu.getState();
+                                  if (!uu.isActive || !ju.current) return;
+                                  const Eu = uu.state;
+                                  ju.current.style.left = 100 * Eu.markerPosition + "%"
                                 }));
                                 return () => {
-                                  tt()
+                                  uu()
                                 }
-                              }), [wt]), (0, dt.jsxs)("div", {
+                              }), [Yu]), (0, lu.jsxs)("div", {
                                 className: "QTEPrecisionBarWrapper",
                                 style: {
-                                  ...!(0, ft.B)(Xt) && {
-                                    "--scale": Xt
+                                  ...!(0, Ou.H)(Cu) && {
+                                    "--scale": Cu
                                   },
-                                  ...!(0, ft.B)(Qt) && {
-                                    "--rotation": `${Qt}deg`
+                                  ...!(0, Ou.H)(bu) && {
+                                    "--rotation": `${bu}deg`
                                   }
                                 },
-                                children: [Ht && (0, dt.jsx)(Dt.e, {
+                                children: [fu && (0, lu.jsx)(Zu.d, {
                                   text: [{
-                                    icon: Ht
+                                    icon: fu
                                   }],
                                   className: "QTEPrecisionBarIcon"
-                                }), (0, dt.jsxs)("div", {
+                                }), (0, lu.jsxs)("div", {
                                   className: "QTEPrecisionBarTrack",
-                                  children: [(0, dt.jsx)("div", {
+                                  children: [(0, lu.jsx)("div", {
                                     className: "QTEPrecisionBarSuccessZone",
                                     style: {
-                                      left: `${lt}%`,
-                                      width: `${Et}%`
+                                      left: `${cu}%`,
+                                      width: `${Nu}%`
                                     }
-                                  }), (0, dt.jsx)("div", {
+                                  }), (0, lu.jsx)("div", {
                                     className: "QTEPrecisionBarMarker",
-                                    ref: Vt
+                                    ref: ju
                                   })]
-                                }), (0, dt.jsx)("div", {
+                                }), (0, lu.jsx)("div", {
                                   className: "QTEPrecisionBarLabel",
-                                  children: (0, dt.jsx)(Dt.e, {
-                                    text: qt
+                                  children: (0, lu.jsx)(Zu.d, {
+                                    text: Uu
                                   })
                                 })]
                               })
                             })),
-                            yt = (0, Ot.memo)((function(tt) {
+                            hu = (0, su.memo)((function(uu) {
                               let {
-                                initialParameters: et
-                              } = tt;
-                              const Vt = (0, Ot.useRef)(null),
-                                [qt, jt] = (0, Ot.useState)((() => new Array(et.ve).fill("pending"))),
-                                [Ht, Xt] = (0, Ot.useState)((() => {
-                                  const tt = et.Ie;
-                                  return (0, ft.B)(tt) || tt <= 0 ? [] : new Array(tt).fill("pending")
+                                initialParameters: Eu
+                              } = uu;
+                              const ju = (0, su.useRef)(null),
+                                [Uu, qu] = (0, su.useState)((() => new Array(Eu.ME).fill("pending"))),
+                                [fu, Cu] = (0, su.useState)((() => {
+                                  const uu = Eu.pE;
+                                  return (0, Ou.H)(uu) || uu <= 0 ? [] : new Array(uu).fill("pending")
                                 })),
-                                Qt = et.label,
+                                bu = Eu.label,
                                 {
-                                  icon: lt
-                                } = et,
-                                Et = (0, Ot.useRef)(0),
-                                wt = (0, Ot.useRef)(0),
-                                yt = (0, Ot.useRef)([]),
-                                Nt = (0, mt.d)();
-                              return (0, Ot.useEffect)((() => {
-                                const tt = Nt.onFrame((() => {
-                                  const tt = Nt.getState();
-                                  if (!tt.isActive || !Vt.current) return;
-                                  const et = tt.state,
-                                    Ot = 30 + 60 * et.outerCircleProgress;
-                                  if (Vt.current.setAttribute("r", String(Ot)), !0 === et.lastClickResult && et.successes > Et.current) {
-                                    Vt.current.classList.remove("QTERhythmClickOuterCircle--miss"), Vt.current.classList.add("QTERhythmClickOuterCircle--hit");
-                                    const tt = setTimeout((() => {
-                                      var tt;
-                                      null === (tt = Vt.current) || void 0 === tt || tt.classList.remove("QTERhythmClickOuterCircle--hit")
+                                  icon: cu
+                                } = Eu,
+                                Nu = (0, su.useRef)(0),
+                                Yu = (0, su.useRef)(0),
+                                hu = (0, su.useRef)([]),
+                                Du = (0, Xu.d)();
+                              return (0, su.useEffect)((() => {
+                                const uu = Du.onFrame((() => {
+                                  const uu = Du.getState();
+                                  if (!uu.isActive || !ju.current) return;
+                                  const Eu = uu.state,
+                                    su = 30 + 60 * Eu.outerCircleProgress;
+                                  if (ju.current.setAttribute("r", String(su)), !0 === Eu.lastClickResult && Eu.successes > Nu.current) {
+                                    ju.current.classList.remove("QTERhythmClickOuterCircle--miss"), ju.current.classList.add("QTERhythmClickOuterCircle--hit");
+                                    const uu = setTimeout((() => {
+                                      var uu;
+                                      null === (uu = ju.current) || void 0 === uu || uu.classList.remove("QTERhythmClickOuterCircle--hit")
                                     }), 200);
-                                    yt.current.push(tt)
-                                  } else if (!1 === et.lastClickResult && et.misses > wt.current) {
-                                    Vt.current.classList.remove("QTERhythmClickOuterCircle--hit"), Vt.current.classList.add("QTERhythmClickOuterCircle--miss");
-                                    const tt = setTimeout((() => {
-                                      var tt;
-                                      null === (tt = Vt.current) || void 0 === tt || tt.classList.remove("QTERhythmClickOuterCircle--miss")
+                                    hu.current.push(uu)
+                                  } else if (!1 === Eu.lastClickResult && Eu.misses > Yu.current) {
+                                    ju.current.classList.remove("QTERhythmClickOuterCircle--hit"), ju.current.classList.add("QTERhythmClickOuterCircle--miss");
+                                    const uu = setTimeout((() => {
+                                      var uu;
+                                      null === (uu = ju.current) || void 0 === uu || uu.classList.remove("QTERhythmClickOuterCircle--miss")
                                     }), 200);
-                                    yt.current.push(tt)
+                                    hu.current.push(uu)
                                   }
-                                  et.successes === Et.current && et.misses === wt.current || (Et.current = et.successes, wt.current = et.misses, jt((tt => {
-                                    const Vt = [...tt];
-                                    for (let Ot = 0; Ot < et.ve; Ot++) Vt[Ot] = Ot < et.successes ? "success" : "pending";
-                                    return Vt
-                                  })), Xt((tt => {
-                                    if (0 === tt.length) return tt;
-                                    const Vt = [...tt];
-                                    for (let Ot = 0; Ot < Vt.length; Ot++) Vt[Ot] = Ot < et.misses ? "miss" : "pending";
-                                    return Vt
+                                  Eu.successes === Nu.current && Eu.misses === Yu.current || (Nu.current = Eu.successes, Yu.current = Eu.misses, qu((uu => {
+                                    const ju = [...uu];
+                                    for (let su = 0; su < Eu.ME; su++) ju[su] = su < Eu.successes ? "success" : "pending";
+                                    return ju
+                                  })), Cu((uu => {
+                                    if (0 === uu.length) return uu;
+                                    const ju = [...uu];
+                                    for (let su = 0; su < ju.length; su++) ju[su] = su < Eu.misses ? "miss" : "pending";
+                                    return ju
                                   })))
                                 }));
                                 return () => {
-                                  tt();
-                                  for (const tt of yt.current) clearTimeout(tt);
-                                  yt.current = []
+                                  uu();
+                                  for (const uu of hu.current) clearTimeout(uu);
+                                  hu.current = []
                                 }
-                              }), [Nt]), (0, dt.jsxs)("div", {
+                              }), [Du]), (0, lu.jsxs)("div", {
                                 className: "QTERhythmClickWrapper",
-                                children: [(0, dt.jsx)("div", {
+                                children: [(0, lu.jsx)("div", {
                                   className: "QTERhythmClickProgress",
-                                  children: qt.map(((tt, et) => (0, dt.jsx)("div", {
-                                    className: "QTERhythmClickDot" + ("success" === tt ? " QTERhythmClickDot--success" : " QTERhythmClickDot--pendingSuccess")
-                                  }, et)))
-                                }), (0, dt.jsxs)("div", {
+                                  children: Uu.map(((uu, Eu) => (0, lu.jsx)("div", {
+                                    className: "QTERhythmClickDot" + ("success" === uu ? " QTERhythmClickDot--success" : " QTERhythmClickDot--pendingSuccess")
+                                  }, Eu)))
+                                }), (0, lu.jsxs)("div", {
                                   className: "QTERhythmClickCircleContainer",
-                                  children: [(0, dt.jsxs)("svg", {
+                                  children: [(0, lu.jsxs)("svg", {
                                     className: "QTERhythmClickSvg",
                                     viewBox: "0 0 200 200",
-                                    children: [(0, dt.jsx)("circle", {
+                                    children: [(0, lu.jsx)("circle", {
                                       className: "QTERhythmClickInnerCircle",
                                       cx: "100",
                                       cy: "100",
                                       r: 30
-                                    }), (0, dt.jsx)("circle", {
+                                    }), (0, lu.jsx)("circle", {
                                       className: "QTERhythmClickOuterCircle",
                                       cx: "100",
                                       cy: "100",
                                       r: 90,
-                                      ref: Vt
+                                      ref: ju
                                     })]
-                                  }), lt && (0, dt.jsx)("div", {
+                                  }), cu && (0, lu.jsx)("div", {
                                     className: "QTERhythmClickCenterContent",
-                                    children: (0, dt.jsx)(Dt.e, {
+                                    children: (0, lu.jsx)(Zu.d, {
                                       text: [{
-                                        icon: lt
+                                        icon: cu
                                       }],
                                       className: "QTERhythmClickIcon"
                                     })
                                   })]
-                                }), Ht.length > 0 && (0, dt.jsx)("div", {
+                                }), fu.length > 0 && (0, lu.jsx)("div", {
                                   className: "QTERhythmClickProgress",
-                                  children: Ht.map(((tt, et) => (0, dt.jsx)("div", {
-                                    className: "QTERhythmClickDot" + ("miss" === tt ? " QTERhythmClickDot--miss" : " QTERhythmClickDot--pendingMiss")
-                                  }, et)))
-                                }), (0, dt.jsx)("div", {
+                                  children: fu.map(((uu, Eu) => (0, lu.jsx)("div", {
+                                    className: "QTERhythmClickDot" + ("miss" === uu ? " QTERhythmClickDot--miss" : " QTERhythmClickDot--pendingMiss")
+                                  }, Eu)))
+                                }), (0, lu.jsx)("div", {
                                   className: "QTERhythmClickLabel",
-                                  children: (0, dt.jsx)(Dt.e, {
-                                    text: Qt
+                                  children: (0, lu.jsx)(Zu.d, {
+                                    text: bu
                                   })
                                 })]
                               })
                             }));
 
-                          function Nt(tt) {
+                          function Du(uu) {
                             let {
-                              qte: et
-                            } = tt;
-                            switch (et.type) {
+                              qte: Eu
+                            } = uu;
+                            switch (Eu.type) {
                               case "progressBar":
-                                return (0, dt.jsx)(jt, {
-                                  initialParameters: et.parameters
+                                return (0, lu.jsx)(qu, {
+                                  initialParameters: Eu.parameters
                                 });
                               case "timedClick":
-                                return (0, dt.jsx)(lt, {
-                                  initialParameters: et.parameters
+                                return (0, lu.jsx)(cu, {
+                                  initialParameters: Eu.parameters
                                 });
                               case "gravityBar":
-                                return (0, dt.jsx)(Et, {
-                                  initialParameters: et.parameters
+                                return (0, lu.jsx)(Nu, {
+                                  initialParameters: Eu.parameters
                                 });
                               case "precisionBar":
-                                return (0, dt.jsx)(wt, {
-                                  initialParameters: et.parameters
+                                return (0, lu.jsx)(Yu, {
+                                  initialParameters: Eu.parameters
                                 });
                               case "rhythmClick":
-                                return (0, dt.jsx)(yt, {
-                                  initialParameters: et.parameters
+                                return (0, lu.jsx)(hu, {
+                                  initialParameters: Eu.parameters
                                 });
                               default:
                                 return console.warn("Unknown QTE type"), null
                             }
                           }
-                          const Mt = (0, Ot.memo)((function() {
-                            const [tt, et] = (0, Ot.useState)({
+                          const gu = (0, su.memo)((function() {
+                            const [uu, Eu] = (0, su.useState)({
                               type: null,
                               parameters: null,
                               state: null,
                               isActive: !1
                             });
-                            return (0, qt.f)("qteStateUpdated", (tt => {
-                              et(tt)
-                            })), tt.isActive && tt.type ? (0, dt.jsx)("div", {
+                            return (0, Uu.f)("qteStateUpdated", (uu => {
+                              Eu(uu)
+                            })), uu.isActive && uu.type ? (0, lu.jsx)("div", {
                               className: "QTE",
                               "data-camera-keeper": "",
-                              children: (0, dt.jsx)(Nt, {
-                                qte: tt
+                              children: (0, lu.jsx)(Du, {
+                                qte: uu
                               })
                             }) : null
                           }))
-                        }, 4943: (tt, et, Vt) => {
-                          Vt.d(et, {
-                            b: () => dt,
-                            d: () => jt
+                        }, 4952: (uu, Eu, ju) => {
+                          ju.d(Eu, {
+                            c: () => lu,
+                            d: () => qu
                           });
-                          var Ot = Vt(63),
-                            qt = Vt(1397),
-                            Dt = Vt(4948);
-                          const mt = {
-                              getState: () => Dt.d.getCurrentState(),
-                              onFrame: qt.r
+                          var su = ju(58),
+                            Uu = ju(1353),
+                            Zu = ju(4958);
+                          const Xu = {
+                              getState: () => Zu.d.getCurrentState(),
+                              onFrame: Uu.t
                             },
-                            dt = (0, Ot.createContext)(mt);
+                            lu = (0, su.createContext)(Xu);
 
-                          function jt() {
-                            return (0, Ot.useContext)(dt)
+                          function qu() {
+                            return (0, su.useContext)(lu)
                           }
-                        }, 5010: (tt, et, Vt) => {
-                          Vt.d(et, {
-                            e: () => Lt,
-                            f: () => Zt
+                        }, 5003: (uu, Eu, ju) => {
+                          ju.d(Eu, {
+                            e: () => Vu,
+                            i: () => Ku
                           });
-                          var Ot = Vt(5015),
-                            qt = Vt(377);
-                          const Dt = 120,
-                            mt = 260,
-                            dt = 1.15,
-                            jt = 1.2,
-                            Ht = 2,
-                            Xt = 1.08,
-                            Qt = .8,
-                            lt = .95,
-                            Et = 8,
-                            ft = "[\"')\\]\u300d\u300f\uff09]*",
-                            wt = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${ft}$`),
-                            yt = new RegExp(`[?\uff1f]${ft}$`),
-                            Nt = new RegExp(`[!\uff01]${ft}$`),
-                            Mt = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-                            bt = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-                            Jt = new RegExp(`[${bt}]`),
-                            Ct = new RegExp(`[${bt}]|[^${bt}]+`, "g"),
-                            ut = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+                          var su = ju(5011),
+                            Uu = ju(337);
+                          const Zu = 120,
+                            Xu = 260,
+                            lu = 1.15,
+                            qu = 1.2,
+                            fu = 2,
+                            Cu = 1.08,
+                            bu = .8,
+                            cu = .95,
+                            Nu = 8,
+                            Ou = "[\"')\\]\u300d\u300f\uff09]*",
+                            Yu = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${Ou}$`),
+                            hu = new RegExp(`[?\uff1f]${Ou}$`),
+                            Du = new RegExp(`[!\uff01]${Ou}$`),
+                            gu = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+                            Mu = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+                            eu = new RegExp(`[${Mu}]`),
+                            Gu = new RegExp(`[${Mu}]|[^${Mu}]+`, "g"),
+                            pu = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-                          function Kt(tt) {
-                            let et = 2166136261;
-                            for (let Vt = 0; Vt < tt.length; Vt++) et ^= tt.charCodeAt(Vt), et = Math.imul(et, 16777619);
-                            return (et >>> 0) / 4294967295 * 2 - 1
+                          function wu(uu) {
+                            let Eu = 2166136261;
+                            for (let ju = 0; ju < uu.length; ju++) Eu ^= uu.charCodeAt(ju), Eu = Math.imul(Eu, 16777619);
+                            return (Eu >>> 0) / 4294967295 * 2 - 1
                           }
 
-                          function ht(tt) {
-                            var et;
-                            if (Jt.test(tt)) return 1;
-                            const Vt = tt.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-                              Ot = Vt.replace(/[^0-9]/g, "");
-                            if (Ot.length > 0 && !/\p{L}/u.test(Vt)) return Math.min(Ot.length, 4);
-                            const qt = null !== (et = Vt.match(ut)) && void 0 !== et ? et : [];
-                            if (0 === qt.length) {
-                              var Dt, mt;
-                              const tt = null !== (Dt = null === (mt = Vt.match(/\p{L}/gu)) || void 0 === mt ? void 0 : mt.length) && void 0 !== Dt ? Dt : 0;
-                              return 0 === tt ? 0 : Math.min(Math.max(1, Math.round(tt / 2.5)), Et)
+                          function Ju(uu) {
+                            var Eu;
+                            if (eu.test(uu)) return 1;
+                            const ju = uu.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+                              su = ju.replace(/[^0-9]/g, "");
+                            if (su.length > 0 && !/\p{L}/u.test(ju)) return Math.min(su.length, 4);
+                            const Uu = null !== (Eu = ju.match(pu)) && void 0 !== Eu ? Eu : [];
+                            if (0 === Uu.length) {
+                              var Zu, Xu;
+                              const uu = null !== (Zu = null === (Xu = ju.match(/\p{L}/gu)) || void 0 === Xu ? void 0 : Xu.length) && void 0 !== Zu ? Zu : 0;
+                              return 0 === uu ? 0 : Math.min(Math.max(1, Math.round(uu / 2.5)), Nu)
                             }
-                            const dt = Vt.replace(/[^\p{L}]/gu, ""),
-                              jt = qt.length > 1 && "e" === qt.at(-1) && dt.endsWith("e") && !dt.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(tt.replace(/[^\p{L}]/gu, ""));
-                            return Math.min(qt.length - (jt ? 1 : 0), Et)
+                            const lu = ju.replace(/[^\p{L}]/gu, ""),
+                              qu = Uu.length > 1 && "e" === Uu.at(-1) && lu.endsWith("e") && !lu.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(uu.replace(/[^\p{L}]/gu, ""));
+                            return Math.min(Uu.length - (qu ? 1 : 0), Nu)
                           }
 
-                          function vt(tt) {
-                            return tt.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+                          function du(uu) {
+                            return uu.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
                           }
 
-                          function Wt(tt) {
-                            const et = tt.replace(/[^\p{L}]/gu, "");
-                            return et.length >= 2 && et === et.toUpperCase() && et !== et.toLowerCase()
+                          function au(uu) {
+                            const Eu = uu.replace(/[^\p{L}]/gu, "");
+                            return Eu.length >= 2 && Eu === Eu.toUpperCase() && Eu !== Eu.toLowerCase()
                           }
 
-                          function St(tt, et) {
-                            var Vt;
-                            const Et = et && (0, Ot.i)(et),
-                              ft = null !== (Vt = null === Et || void 0 === Et ? void 0 : Et.syllableMs) && void 0 !== Vt ? Vt : Ot.c,
-                              bt = function(tt) {
-                                const et = [];
-                                for (const Ot of (0, qt.Ob)(tt))
-                                  if ("string" === typeof Ot)
-                                    for (const tt of Ot.split(/(\s+)/)) {
-                                      if ("" === tt) continue;
-                                      if (/^\s+$/.test(tt)) {
-                                        et.push({
+                          function Pu(uu, Eu) {
+                            var ju;
+                            const Nu = Eu && (0, su.l)(Eu),
+                              Ou = null !== (ju = null === Nu || void 0 === Nu ? void 0 : Nu.syllableMs) && void 0 !== ju ? ju : su.e,
+                              Mu = function(uu) {
+                                const Eu = [];
+                                for (const su of (0, Uu.gc)(uu))
+                                  if ("string" === typeof su)
+                                    for (const uu of su.split(/(\s+)/)) {
+                                      if ("" === uu) continue;
+                                      if (/^\s+$/.test(uu)) {
+                                        Eu.push({
                                           kind: "space",
-                                          text: tt
+                                          text: uu
                                         });
                                         continue
                                       }
-                                      if (!Jt.test(tt)) {
-                                        et.push({
+                                      if (!eu.test(uu)) {
+                                        Eu.push({
                                           kind: "word",
-                                          text: tt,
+                                          text: uu,
                                           delayMs: 0
                                         });
                                         continue
                                       }
-                                      let Ot = !0;
-                                      for (const qt of null !== (Vt = tt.match(Ct)) && void 0 !== Vt ? Vt : []) {
-                                        var Vt;
-                                        const tt = et.at(-1);
-                                        Ot || "word" !== (null === tt || void 0 === tt ? void 0 : tt.kind) || Jt.test(qt) || /[\p{L}\p{N}]/u.test(qt) ? (Ot || et.push({
+                                      let su = !0;
+                                      for (const Uu of null !== (ju = uu.match(Gu)) && void 0 !== ju ? ju : []) {
+                                        var ju;
+                                        const uu = Eu.at(-1);
+                                        su || "word" !== (null === uu || void 0 === uu ? void 0 : uu.kind) || eu.test(Uu) || /[\p{L}\p{N}]/u.test(Uu) ? (su || Eu.push({
                                           kind: "space",
                                           text: "\u200b"
-                                        }), et.push({
+                                        }), Eu.push({
                                           kind: "word",
-                                          text: qt,
+                                          text: Uu,
                                           delayMs: 0
-                                        }), Ot = !1) : tt.text += qt
+                                        }), su = !1) : uu.text += Uu
                                       }
-                                    } else et.push({
+                                    } else Eu.push({
                                       kind: "icon",
-                                      text: Ot.icon,
+                                      text: su.icon,
                                       delayMs: 0
                                     });
-                                return et
-                              }(tt),
-                              ut = [];
-                            let St = [];
-                            for (const Ot of bt) "space" !== Ot.kind && (St.push(Ot), wt.test(Ot.text) && (ut.push(St), St = []));
-                            ut.push(St);
-                            const ct = [];
-                            let Rt = 0;
-                            for (const Ot of ut) {
-                              var It, Pt;
-                              const tt = null !== (It = null === (Pt = Ot.at(-1)) || void 0 === Pt ? void 0 : Pt.text) && void 0 !== It ? It : "",
-                                et = yt.test(tt),
-                                Vt = Nt.test(tt),
-                                qt = Ot.map((tt => "word" === tt.kind ? ht(tt.text) : 1)),
-                                bt = qt.findLastIndex((tt => tt > 0));
-                              for (const [yt, Nt] of Ot.entries()) {
-                                const tt = "word" === Nt.kind,
-                                  Ot = qt[yt];
-                                Nt.delayMs = Rt;
-                                for (let qt = 0; Et && qt < Ot; qt++) {
+                                return Eu
+                              }(uu),
+                              pu = [];
+                            let Pu = [];
+                            for (const su of Mu) "space" !== su.kind && (Pu.push(su), Yu.test(su.text) && (pu.push(Pu), Pu = []));
+                            pu.push(Pu);
+                            const ou = [];
+                            let ku = 0;
+                            for (const su of pu) {
+                              var mu, vu;
+                              const uu = null !== (mu = null === (vu = su.at(-1)) || void 0 === vu ? void 0 : vu.text) && void 0 !== mu ? mu : "",
+                                Eu = hu.test(uu),
+                                ju = Du.test(uu),
+                                Uu = su.map((uu => "word" === uu.kind ? Ju(uu.text) : 1)),
+                                Mu = Uu.findLastIndex((uu => uu > 0));
+                              for (const [hu, Du] of su.entries()) {
+                                const uu = "word" === Du.kind,
+                                  su = Uu[hu];
+                                Du.delayMs = ku;
+                                for (let Uu = 0; Nu && Uu < su; Uu++) {
                                   const {
-                                    intonation: Dt
-                                  } = Et;
-                                  let mt = bt > 0 ? -Dt.declineSemitones * (yt / bt) : 0;
-                                  mt += Kt(`${vt(Nt.text)}|${qt}`) * Dt.variationSemitones;
-                                  const wt = Math.min(1, Dt.variationSemitones);
-                                  let Mt = Et.glideSemitones,
-                                    Jt = 1;
-                                  Vt && (mt += Dt.exclaimLiftSemitones, Jt *= dt), et && yt === bt && (mt += Dt.questionRiseSemitones * (Ot > 1 ? .5 + .5 * qt / (Ot - 1) : 1), qt === Ot - 1 && (Mt = Math.abs(Mt) + Dt.questionRiseSemitones / 2)), tt && Wt(Nt.text) && (mt += Ht * wt, Jt *= jt), Ot > 1 && 0 === qt && (mt += Qt * wt, Jt *= Xt), ct.push({
-                                    atMs: Rt + qt * ft,
-                                    semitones: mt,
-                                    glideSemitones: Mt,
-                                    durationMs: qt < Ot - 1 ? Math.min(Et.durationMs, ft * lt) : Et.durationMs,
-                                    level: Jt
+                                    intonation: Zu
+                                  } = Nu;
+                                  let Xu = Mu > 0 ? -Zu.declineSemitones * (hu / Mu) : 0;
+                                  Xu += wu(`${du(Du.text)}|${Uu}`) * Zu.variationSemitones;
+                                  const Yu = Math.min(1, Zu.variationSemitones);
+                                  let gu = Nu.glideSemitones,
+                                    eu = 1;
+                                  ju && (Xu += Zu.exclaimLiftSemitones, eu *= lu), Eu && hu === Mu && (Xu += Zu.questionRiseSemitones * (su > 1 ? .5 + .5 * Uu / (su - 1) : 1), Uu === su - 1 && (gu = Math.abs(gu) + Zu.questionRiseSemitones / 2)), uu && au(Du.text) && (Xu += fu * Yu, eu *= qu), su > 1 && 0 === Uu && (Xu += bu * Yu, eu *= Cu), ou.push({
+                                    atMs: ku + Uu * Ou,
+                                    semitones: Xu,
+                                    glideSemitones: gu,
+                                    durationMs: Uu < su - 1 ? Math.min(Nu.durationMs, Ou * cu) : Nu.durationMs,
+                                    level: eu
                                   })
                                 }
-                                Rt += Ot * ft + (wt.test(Nt.text) ? mt : Mt.test(Nt.text) ? Dt : 0)
+                                ku += su * Ou + (Yu.test(Du.text) ? Xu : gu.test(Du.text) ? Zu : 0)
                               }
                             }
                             return {
-                              pieces: bt.map((tt => "space" === tt.kind ? tt : "icon" === tt.kind ? {
+                              pieces: Mu.map((uu => "space" === uu.kind ? uu : "icon" === uu.kind ? {
                                 kind: "icon",
-                                icon: tt.text,
-                                delayMs: tt.delayMs
+                                icon: uu.text,
+                                delayMs: uu.delayMs
                               } : {
                                 kind: "word",
-                                text: tt.text,
-                                delayMs: tt.delayMs
+                                text: uu.text,
+                                delayMs: uu.delayMs
                               })),
-                              blips: ct
+                              blips: ou
                             }
                           }
-                          var ct = Vt(1286),
-                            Rt = Vt(1338),
-                            It = Vt(2026);
+                          var ou = ju(1244),
+                            ku = ju(1303),
+                            mu = ju(1995);
 
-                          function Pt(tt) {
-                            if ("string" === typeof tt) return tt;
-                            const et = Rt.e.get().getCurrentLanguageCode();
-                            return (0, ct.t)(et, tt.translationKey, (0, ct.p)(tt.params, It.d.shown))
+                          function vu(uu) {
+                            if ("string" === typeof uu) return uu;
+                            const Eu = ku.h.get().getCurrentLanguageCode();
+                            return (0, ou.u)(Eu, uu.translationKey, (0, ou.r)(uu.params, mu.e.shown))
                           }
 
-                          function Zt(tt) {
-                            const et = void 0 === tt.voice ? null : (0, Ot.l)(tt.voice),
-                              Vt = et && (0, Ot.i)(et);
+                          function Ku(uu) {
+                            const Eu = void 0 === uu.voice ? null : (0, su.o)(uu.voice),
+                              ju = Eu && (0, su.l)(Eu);
                             return {
-                              plan: St(Pt(tt.line), Vt),
-                              synth: Vt
+                              plan: Pu(vu(uu.line), ju),
+                              synth: ju
                             }
                           }
 
-                          function Lt(tt) {
-                            const et = [];
-                            let Vt = [];
-                            for (const [qt, Dt] of tt.entries()) {
-                              var Ot;
-                              "space" === Dt.kind && (" " !== Dt.text || "icon" !== (null === (Ot = tt[qt + 1]) || void 0 === Ot ? void 0 : Ot.kind)) ? (Vt.length > 0 && et.push(Vt), et.push([Dt]), Vt = []) : Vt.push(Dt)
+                          function Vu(uu) {
+                            const Eu = [];
+                            let ju = [];
+                            for (const [Uu, Zu] of uu.entries()) {
+                              var su;
+                              "space" === Zu.kind && (" " !== Zu.text || "icon" !== (null === (su = uu[Uu + 1]) || void 0 === su ? void 0 : su.kind)) ? (ju.length > 0 && Eu.push(ju), Eu.push([Zu]), ju = []) : ju.push(Zu)
                             }
-                            return Vt.length > 0 && et.push(Vt), et
+                            return ju.length > 0 && Eu.push(ju), Eu
                           }
-                        }, 5021: (tt, et, Vt) => {
-                          Vt.d(et, {
-                            e: () => Xt,
-                            i: () => Qt
+                        }, 5019: (uu, Eu, ju) => {
+                          ju.d(Eu, {
+                            c: () => Cu,
+                            d: () => bu
                           });
-                          var Ot = Vt(5030),
-                            qt = Vt(26);
-                          const Dt = .25,
-                            mt = .85,
-                            dt = .02,
-                            jt = .01;
+                          var su = ju(5026),
+                            Uu = ju(22);
+                          const Zu = .25,
+                            Xu = .85,
+                            lu = .02,
+                            qu = .01;
 
-                          function Ht(tt, et, Vt, Ot, qt, Dt, dt) {
+                          function fu(uu, Eu, ju, su, Uu, Zu, lu) {
                             const {
-                              waveform: jt,
-                              pitchHz: Ht,
-                              attackMs: Xt,
-                              releaseMs: Qt,
-                              lowpassHz: lt
-                            } = Vt, Et = qt + Ot.durationMs / 1e3, ft = Ht * 2 ** (Ot.semitones / 12), wt = tt.createOscillator();
-                            wt.type = jt, wt.frequency.setValueAtTime(ft, qt), wt.frequency.exponentialRampToValueAtTime(ft * 2 ** (Ot.glideSemitones / 12), Et);
-                            const yt = qt + Math.min(Xt, Ot.durationMs) / 1e3,
-                              Nt = tt.createGain();
-                            Nt.gain.setValueAtTime(0, qt), Nt.gain.linearRampToValueAtTime(Dt, yt), Nt.gain.linearRampToValueAtTime(Dt * mt, Math.max(yt, Et - Qt / 1e3)), Nt.gain.linearRampToValueAtTime(0, Et);
-                            const Mt = [wt];
-                            if (null !== lt) {
-                              const et = tt.createBiquadFilter();
-                              et.type = "lowpass", et.frequency.value = lt, Mt.push(et)
+                              waveform: qu,
+                              pitchHz: fu,
+                              attackMs: Cu,
+                              releaseMs: bu,
+                              lowpassHz: cu
+                            } = ju, Nu = Uu + su.durationMs / 1e3, Ou = fu * 2 ** (su.semitones / 12), Yu = uu.createOscillator();
+                            Yu.type = qu, Yu.frequency.setValueAtTime(Ou, Uu), Yu.frequency.exponentialRampToValueAtTime(Ou * 2 ** (su.glideSemitones / 12), Nu);
+                            const hu = Uu + Math.min(Cu, su.durationMs) / 1e3,
+                              Du = uu.createGain();
+                            Du.gain.setValueAtTime(0, Uu), Du.gain.linearRampToValueAtTime(Zu, hu), Du.gain.linearRampToValueAtTime(Zu * Xu, Math.max(hu, Nu - bu / 1e3)), Du.gain.linearRampToValueAtTime(0, Nu);
+                            const gu = [Yu];
+                            if (null !== cu) {
+                              const Eu = uu.createBiquadFilter();
+                              Eu.type = "lowpass", Eu.frequency.value = cu, gu.push(Eu)
                             }
-                            Mt.push(Nt, et);
-                            for (let mt = 1; mt < Mt.length; mt++) Mt[mt - 1].connect(Mt[mt]);
-                            return wt.onended = () => {
-                              for (const tt of Mt.slice(0, -1)) tt.disconnect();
-                              dt()
-                            }, wt.start(qt), wt.stop(Et), wt
+                            gu.push(Du, Eu);
+                            for (let Xu = 1; Xu < gu.length; Xu++) gu[Xu - 1].connect(gu[Xu]);
+                            return Yu.onended = () => {
+                              for (const uu of gu.slice(0, -1)) uu.disconnect();
+                              lu()
+                            }, Yu.start(Uu), Yu.stop(Nu), Yu
                           }
 
-                          function Xt(tt, et, Vt, Ot, qt, mt) {
-                            if (0 === Ot.length) return mt(), () => {};
-                            const Xt = Dt * Vt.volume * qt,
-                              Qt = tt.createGain();
-                            Qt.connect(et);
-                            const lt = tt.currentTime + dt,
-                              Et = new Set;
-                            for (const Dt of Ot) {
-                              const et = Ht(tt, Qt, Vt, Dt, lt + Dt.atMs / 1e3, Xt * Dt.level, (() => {
-                                Et.delete(et), 0 === Et.size && (Qt.disconnect(), mt())
+                          function Cu(uu, Eu, ju, su, Uu, Xu) {
+                            if (0 === su.length) return Xu(), () => {};
+                            const Cu = Zu * ju.volume * Uu,
+                              bu = uu.createGain();
+                            bu.connect(Eu);
+                            const cu = uu.currentTime + lu,
+                              Nu = new Set;
+                            for (const Zu of su) {
+                              const Eu = fu(uu, bu, ju, Zu, cu + Zu.atMs / 1e3, Cu * Zu.level, (() => {
+                                Nu.delete(Eu), 0 === Nu.size && (bu.disconnect(), Xu())
                               }));
-                              Et.add(et)
+                              Nu.add(Eu)
                             }
                             return () => {
-                              const et = tt.currentTime;
-                              Qt.gain.setTargetAtTime(0, et, jt);
-                              for (const tt of Et) try {
-                                tt.stop(et + 5 * jt)
+                              const Eu = uu.currentTime;
+                              bu.gain.setTargetAtTime(0, Eu, qu);
+                              for (const uu of Nu) try {
+                                uu.stop(Eu + 5 * qu)
                               } catch {}
                             }
                           }
 
-                          function Qt(tt, et) {
-                            var Vt;
-                            const Dt = Ot.Howler.ctx,
-                              mt = Ot.Howler.masterGain;
-                            if (!Dt || !mt || !qt.b.get("soundOnFromAd")) return () => {};
-                            const dt = Ot.Howler;
-                            return null === (Vt = dt._autoResume) || void 0 === Vt || Vt.call(dt), Xt(Dt, mt, tt, et, qt.b.get("soundVolume"), (() => {
-                              var tt;
-                              null === (tt = dt._autoSuspend) || void 0 === tt || tt.call(dt)
+                          function bu(uu, Eu) {
+                            var ju;
+                            const Zu = su.Howler.ctx,
+                              Xu = su.Howler.masterGain;
+                            if (!Zu || !Xu || !Uu.d.get("soundOnFromAd")) return () => {};
+                            const lu = su.Howler;
+                            return null === (ju = lu._autoResume) || void 0 === ju || ju.call(lu), Cu(Zu, Xu, uu, Eu, Uu.d.get("soundVolume"), (() => {
+                              var uu;
+                              null === (uu = lu._autoSuspend) || void 0 === uu || uu.call(lu)
                             }))
                           }
-                        }, 4995: (tt, et, Vt) => {
-                          Vt.d(et, {
-                            d: () => dt,
-                            f: () => qt,
-                            j: () => jt,
-                            m: () => mt,
-                            q: () => Dt
+                        }, 4995: (uu, Eu, ju) => {
+                          ju.d(Eu, {
+                            d: () => lu,
+                            g: () => Uu,
+                            h: () => qu,
+                            j: () => Xu,
+                            k: () => Zu
                           });
-                          var Ot = Vt(4986);
-                          const qt = {
+                          var su = ju(4992);
+                          const Uu = {
                               name: "ChatGPT",
                               url: "https://chatgpt.com/?hints=search&q="
                             },
-                            Dt = {
+                            Zu = {
                               name: "Claude",
                               url: "https://claude.ai/new?q="
                             },
-                            mt = `${Ot.k} lists every page of the Bloxd Code API docs.`;
+                            Xu = `${su.i} lists every page of the Bloxd Code API docs.`;
 
-                          function dt(tt, et) {
-                            return `${tt.url}${encodeURIComponent(et.toWellFormed())}`
+                          function lu(uu, Eu) {
+                            return `${uu.url}${encodeURIComponent(Eu.toWellFormed())}`
                           }
 
-                          function jt(tt) {
-                            const et = dt(qt, tt);
-                            return et.length <= 3e4 ? {
-                              url: et,
+                          function qu(uu) {
+                            const Eu = lu(Uu, uu);
+                            return Eu.length <= 3e4 ? {
+                              url: Eu,
                               sendsPrompt: !0
                             } : {
-                              url: new URL(qt.url).origin,
+                              url: new URL(Uu.url).origin,
                               sendsPrompt: !1
                             }
                           }
-                        }, 5030: (tt, et, Vt) => {
-                          Vt.r(et), Vt.d(et, {
-                            Howl: () => qt.Howl,
-                            Howler: () => qt.Howler,
-                            musicOutput: () => yt,
-                            readyAudioContext: () => Nt
+                        }, 5026: (uu, Eu, ju) => {
+                          ju.r(Eu), ju.d(Eu, {
+                            Howl: () => Uu.Howl,
+                            Howler: () => Uu.Howler,
+                            musicOutput: () => hu,
+                            readyAudioContext: () => Du
                           });
-                          var Ot, qt = Vt(5036),
-                            Dt = Vt(3510),
-                            mt = Vt(4796);
-                          const dt = qt.Howler;
+                          var su, Uu = ju(5032),
+                            Zu = ju(3634),
+                            Xu = ju(4834);
+                          const lu = Uu.Howler;
 
-                          function jt() {
-                            var tt, et;
-                            if (dt.ctx || !dt.usingWebAudio || "undefined" === typeof AudioContext || !(0, mt.e)()) return;
-                            const Vt = navigator.audioSession;
-                            let Ot;
-                            "auto" === (null === Vt || void 0 === Vt ? void 0 : Vt.type) && (Vt.type = "ambient");
+                          function qu() {
+                            var uu, Eu;
+                            if (lu.ctx || !lu.usingWebAudio || "undefined" === typeof AudioContext || !(0, Xu.j)()) return;
+                            const ju = navigator.audioSession;
+                            let su;
+                            "auto" === (null === ju || void 0 === ju ? void 0 : ju.type) && (ju.type = "ambient");
                             try {
-                              Ot = new AudioContext({
+                              su = new AudioContext({
                                 sampleRate: 44100
                               })
                             } catch {
                               return
                             }
-                            const qt = Ot.createGain();
-                            qt.gain.setValueAtTime(dt._muted ? 0 : null !== (tt = dt._volume) && void 0 !== tt ? tt : 1, Ot.currentTime), qt.connect(Ot.destination), dt.ctx = Ot, dt.masterGain = qt, null === (et = dt._setup) || void 0 === et || et.call(dt)
+                            const Uu = su.createGain();
+                            Uu.gain.setValueAtTime(lu._muted ? 0 : null !== (uu = lu._volume) && void 0 !== uu ? uu : 1, su.currentTime), Uu.connect(su.destination), lu.ctx = su, lu.masterGain = Uu, null === (Eu = lu._setup) || void 0 === Eu || Eu.call(lu)
                           }
-                          dt._mobileUnloaded = !0;
-                          const Ht = dt.volume.bind(qt.Howler);
-                          dt.volume = function() {
-                            return jt(), Ht(...arguments)
+                          lu._mobileUnloaded = !0;
+                          const fu = lu.volume.bind(Uu.Howler);
+                          lu.volume = function() {
+                            return qu(), fu(...arguments)
                           };
-                          const Xt = dt.mute.bind(qt.Howler);
-                          dt.mute = tt => (jt(), Xt(tt));
-                          const Qt = qt.Howl.prototype,
-                            lt = Qt.init;
+                          const Cu = lu.mute.bind(Uu.Howler);
+                          lu.mute = uu => (qu(), Cu(uu));
+                          const bu = Uu.Howl.prototype,
+                            cu = bu.init;
 
-                          function Et() {
-                            for (; dt._html5AudioPool.length < dt.html5PoolSize;) {
-                              const tt = new Audio;
-                              tt._unlocked = !0, dt._releaseHtml5Audio(tt)
+                          function Nu() {
+                            for (; lu._html5AudioPool.length < lu.html5PoolSize;) {
+                              const uu = new Audio;
+                              uu._unlocked = !0, lu._releaseHtml5Audio(uu)
                             }
-                            for (const et of dt._howls)
-                              if (!et._webAudio)
-                                for (const Vt of et._getSoundIds()) {
-                                  var tt;
-                                  const Ot = null === (tt = et._soundById(Vt)) || void 0 === tt ? void 0 : tt._node;
-                                  Ot && !Ot._unlocked && (Ot._unlocked = !0, Ot.load())
+                            for (const Eu of lu._howls)
+                              if (!Eu._webAudio)
+                                for (const ju of Eu._getSoundIds()) {
+                                  var uu;
+                                  const su = null === (uu = Eu._soundById(ju)) || void 0 === uu ? void 0 : uu._node;
+                                  su && !su._unlocked && (su._unlocked = !0, su.load())
                                 }
                           }
-                          Qt.init = function(tt) {
-                            return jt(), lt.call(this, tt)
-                          }, (0, mt.e)() && (dt._unlockAudio = () => {
-                            const tt = dt.ctx;
-                            if (dt._audioUnlocked || !tt) return;
-                            dt.autoUnlock = !1;
-                            const et = tt.createBuffer(1, 1, 22050);
-                            dt._scratchBuffer = et;
-                            const Vt = new AbortController;
-                            let Ot = "afterPaint";
-                            const qt = () => {
-                                var Ot;
-                                if (dt._audioUnlocked) return;
-                                null === (Ot = dt._autoResume) || void 0 === Ot || Ot.call(dt);
-                                const qt = tt.createBufferSource();
-                                qt.buffer = et, qt.connect(tt.destination), qt.start(0), tt.resume().catch((() => {})), qt.onended = () => {
-                                  qt.disconnect(0), dt._audioUnlocked = !0, Vt.abort();
-                                  for (const tt of dt._howls) tt._emit("unlock")
+                          bu.init = function(uu) {
+                            return qu(), cu.call(this, uu)
+                          }, (0, Xu.j)() && (lu._unlockAudio = () => {
+                            const uu = lu.ctx;
+                            if (lu._audioUnlocked || !uu) return;
+                            lu.autoUnlock = !1;
+                            const Eu = uu.createBuffer(1, 1, 22050);
+                            lu._scratchBuffer = Eu;
+                            const ju = new AbortController;
+                            let su = "afterPaint";
+                            const Uu = () => {
+                                var su;
+                                if (lu._audioUnlocked) return;
+                                null === (su = lu._autoResume) || void 0 === su || su.call(lu);
+                                const Uu = uu.createBufferSource();
+                                Uu.buffer = Eu, Uu.connect(uu.destination), Uu.start(0), uu.resume().catch((() => {})), Uu.onended = () => {
+                                  Uu.disconnect(0), lu._audioUnlocked = !0, ju.abort();
+                                  for (const uu of lu._howls) uu._emit("unlock")
                                 }
                               },
-                              jt = () => {
-                                Et(), qt()
+                              qu = () => {
+                                Nu(), Uu()
                               },
-                              Ht = et => {
-                                if (Et(), "inTap" === Ot) {
-                                  if ("running" === tt.state) return;
-                                  console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), qt()
-                                } else "afterPaint" === Ot && (Ot = "queued", (0, Dt.d)(et.timeStamp, (() => {
-                                  Ot = "inTap", qt()
+                              fu = Eu => {
+                                if (Nu(), "inTap" === su) {
+                                  if ("running" === uu.state) return;
+                                  console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), Uu()
+                                } else "afterPaint" === su && (su = "queued", (0, Zu.d)(Eu.timeStamp, (() => {
+                                  su = "inTap", Uu()
                                 })))
                               };
-                            for (const Dt of ["touchstart", "touchend"]) document.addEventListener(Dt, jt, {
+                            for (const Zu of ["touchstart", "touchend"]) document.addEventListener(Zu, qu, {
                               capture: !0,
-                              signal: Vt.signal
+                              signal: ju.signal
                             });
-                            for (const Dt of mt.b) document.addEventListener(Dt, Ht, {
+                            for (const Zu of Xu.c) document.addEventListener(Zu, fu, {
                               capture: !0,
-                              signal: Vt.signal
+                              signal: ju.signal
                             })
                           });
-                          let ft = 0;
-                          const wt = null === (Ot = dt._autoSuspend) || void 0 === Ot ? void 0 : Ot.bind(qt.Howler);
+                          let Ou = 0;
+                          const Yu = null === (su = lu._autoSuspend) || void 0 === su ? void 0 : su.bind(Uu.Howler);
 
-                          function yt() {
-                            Nt();
+                          function hu() {
+                            Du();
                             const {
-                              ctx: tt,
-                              masterGain: et
-                            } = dt;
-                            return tt && et ? {
-                              ctx: tt,
-                              destination: et,
-                              holdAwake: tt => {
-                                var et, Vt;
-                                (ft += tt ? 1 : -1, tt) ? null === (et = dt._autoResume) || void 0 === et || et.call(dt): null === (Vt = dt._autoSuspend) || void 0 === Vt || Vt.call(dt)
+                              ctx: uu,
+                              masterGain: Eu
+                            } = lu;
+                            return uu && Eu ? {
+                              ctx: uu,
+                              destination: Eu,
+                              holdAwake: uu => {
+                                var Eu, ju;
+                                (Ou += uu ? 1 : -1, uu) ? null === (Eu = lu._autoResume) || void 0 === Eu || Eu.call(lu): null === (ju = lu._autoSuspend) || void 0 === ju || ju.call(lu)
                               },
                               wake: () => {
-                                var et;
-                                "running" !== tt.state && (null === (et = dt._autoResume) || void 0 === et || et.call(dt), tt.resume().catch((() => {})))
+                                var Eu;
+                                "running" !== uu.state && (null === (Eu = lu._autoResume) || void 0 === Eu || Eu.call(lu), uu.resume().catch((() => {})))
                               }
                             } : null
                           }
 
-                          function Nt() {
-                            var tt;
-                            (dt.volume(), dt.ctx && dt.autoUnlock) && (null === (tt = dt._unlockAudio) || void 0 === tt || tt.call(dt))
+                          function Du() {
+                            var uu;
+                            (lu.volume(), lu.ctx && lu.autoUnlock) && (null === (uu = lu._unlockAudio) || void 0 === uu || uu.call(lu))
                           }
-                          wt && (dt._autoSuspend = () => ft > 0 ? qt.Howler : wt())
-                        }, 5038: (tt, et, Vt) => {
-                          function Ot(tt) {
+                          Yu && (lu._autoSuspend = () => Ou > 0 ? Uu.Howler : Yu())
+                        }, 5041: (uu, Eu, ju) => {
+                          function su(uu) {
                             return {
-                              notAfter: tt
+                              notAfter: uu
                             }
                           }
-                          Vt.d(et, {
-                            b: () => jt,
-                            f: () => Ht,
-                            h: () => dt,
-                            j: () => Ot,
-                            l: () => qt,
-                            n: () => Dt,
-                            p: () => mt,
-                            s: () => Xt,
-                            w: () => Qt
+                          ju.d(Eu, {
+                            d: () => qu,
+                            e: () => fu,
+                            h: () => lu,
+                            i: () => su,
+                            j: () => Uu,
+                            n: () => Zu,
+                            q: () => Xu,
+                            u: () => Cu,
+                            x: () => bu
                           });
-                          const qt = Ot("\\w$."),
-                            Dt = Ot("\\w.,");
+                          const Uu = su("\\w$."),
+                            Zu = su("\\w.,");
 
-                          function mt(tt) {
-                            return et => jt(et, tt)
+                          function Xu(uu) {
+                            return Eu => qu(Eu, uu)
                           }
 
-                          function dt(tt) {
-                            return et => !tt.test(et.input.slice(0, et.index))
+                          function lu(uu) {
+                            return Eu => !uu.test(Eu.input.slice(0, Eu.index))
                           }
 
-                          function jt(tt, et) {
-                            return tt.index > 0 && new RegExp(`[${et}]`).test(tt.input[tt.index - 1])
+                          function qu(uu, Eu) {
+                            return uu.index > 0 && new RegExp(`[${Eu}]`).test(uu.input[uu.index - 1])
                           }
 
-                          function Ht(tt, et, Vt) {
-                            return function(tt) {
-                              return void 0 !== tt && "function" !== typeof tt
-                            }(Vt) ? function(tt, et, Vt) {
-                              const Ot = et.flags.replace(/[gy]/g, ""),
-                                qt = new RegExp(`[^${Vt}](?:${et.source})`, `${Ot}g`),
-                                Dt = [],
-                                mt = Vt => {
-                                  const Ot = Vt.index + Vt[0].length;
-                                  return ("" === Vt[0] ? lt(tt, et, Ot) : Ot) - 1
+                          function fu(uu, Eu, ju) {
+                            return function(uu) {
+                              return void 0 !== uu && "function" !== typeof uu
+                            }(ju) ? function(uu, Eu, ju) {
+                              const su = Eu.flags.replace(/[gy]/g, ""),
+                                Uu = new RegExp(`[^${ju}](?:${Eu.source})`, `${su}g`),
+                                Zu = [],
+                                Xu = ju => {
+                                  const su = ju.index + ju[0].length;
+                                  return ("" === ju[0] ? cu(uu, Eu, su) : su) - 1
                                 },
-                                dt = new RegExp(`(?:${et.source})`, `${Ot}y`).exec(tt);
-                              if (dt) {
-                                if (Dt.push(dt), !et.global) return Dt;
-                                qt.lastIndex = mt(dt)
+                                lu = new RegExp(`(?:${Eu.source})`, `${su}y`).exec(uu);
+                              if (lu) {
+                                if (Zu.push(lu), !Eu.global) return Zu;
+                                Uu.lastIndex = Xu(lu)
                               }
-                              for (let jt = qt.exec(tt); jt; jt = qt.exec(tt)) {
-                                const Vt = lt(tt, et, jt.index) - jt.index;
-                                if (jt[0] = jt[0].slice(Vt), jt.index += Vt, Dt.push(jt), !et.global) break;
-                                qt.lastIndex = mt(jt)
+                              for (let qu = Uu.exec(uu); qu; qu = Uu.exec(uu)) {
+                                const ju = cu(uu, Eu, qu.index) - qu.index;
+                                if (qu[0] = qu[0].slice(ju), qu.index += ju, Zu.push(qu), !Eu.global) break;
+                                Uu.lastIndex = Xu(qu)
                               }
-                              return Dt
-                            }(tt, et, Vt.notAfter) : function(tt, et, Vt) {
-                              const Ot = new RegExp(et.source, `${et.flags.replace(/[gy]/g,"")}g`),
-                                qt = [];
-                              for (let Dt = Ot.exec(tt); Dt; Dt = Ot.exec(tt))
-                                if (!Vt || Vt(Dt)) {
-                                  if (qt.push(Dt), !et.global) break;
-                                  "" === Dt[0] && (Ot.lastIndex = lt(tt, et, Ot.lastIndex))
-                                } else Ot.lastIndex = lt(tt, et, Dt.index);
-                              return qt
-                            }(tt, et, Vt)
+                              return Zu
+                            }(uu, Eu, ju.notAfter) : function(uu, Eu, ju) {
+                              const su = new RegExp(Eu.source, `${Eu.flags.replace(/[gy]/g,"")}g`),
+                                Uu = [];
+                              for (let Zu = su.exec(uu); Zu; Zu = su.exec(uu))
+                                if (!ju || ju(Zu)) {
+                                  if (Uu.push(Zu), !Eu.global) break;
+                                  "" === Zu[0] && (su.lastIndex = cu(uu, Eu, su.lastIndex))
+                                } else su.lastIndex = cu(uu, Eu, Zu.index);
+                              return Uu
+                            }(uu, Eu, ju)
                           }
 
-                          function Xt(tt, et, Vt, Ot) {
-                            let qt = "",
-                              Dt = 0;
-                            for (const mt of Ht(tt, et, Vt)) qt += tt.slice(Dt, mt.index) + Ot(mt), Dt = mt.index + mt[0].length;
-                            return qt + tt.slice(Dt)
+                          function Cu(uu, Eu, ju, su) {
+                            let Uu = "",
+                              Zu = 0;
+                            for (const Xu of fu(uu, Eu, ju)) Uu += uu.slice(Zu, Xu.index) + su(Xu), Zu = Xu.index + Xu[0].length;
+                            return Uu + uu.slice(Zu)
                           }
 
-                          function Qt(tt, et, Vt) {
-                            const Ot = [];
-                            let qt = 0;
-                            for (const Dt of Ht(tt, et, Vt)) Ot.push(tt.slice(qt, Dt.index)), qt = Dt.index + Dt[0].length;
-                            return [...Ot, tt.slice(qt)]
+                          function bu(uu, Eu, ju) {
+                            const su = [];
+                            let Uu = 0;
+                            for (const Zu of fu(uu, Eu, ju)) su.push(uu.slice(Uu, Zu.index)), Uu = Zu.index + Zu[0].length;
+                            return [...su, uu.slice(Uu)]
                           }
 
-                          function lt(tt, et, Vt) {
-                            var Ot;
-                            return Vt + (et.unicode && (null !== (Ot = tt.codePointAt(Vt)) && void 0 !== Ot ? Ot : 0) > 65535 ? 2 : 1)
+                          function cu(uu, Eu, ju) {
+                            var su;
+                            return ju + (Eu.unicode && (null !== (su = uu.codePointAt(ju)) && void 0 !== su ? su : 0) > 65535 ? 2 : 1)
                           }
-                        }, 4986: (tt, et, Vt) => {
-                          Vt.d(et, {
-                            b: () => qt,
-                            d: () => jt,
-                            h: () => Dt,
-                            k: () => mt,
-                            l: () => dt,
-                            m: () => yt,
-                            p: () => Xt,
-                            r: () => Qt,
-                            t: () => wt,
-                            u: () => Et
+                        }, 4992: (uu, Eu, ju) => {
+                          ju.d(Eu, {
+                            C: () => Nu,
+                            d: () => Uu,
+                            e: () => qu,
+                            f: () => Zu,
+                            i: () => Xu,
+                            m: () => lu,
+                            q: () => hu,
+                            t: () => Cu,
+                            w: () => bu,
+                            y: () => Yu
                           });
-                          var Ot = Vt(1676);
-                          const qt = 24e3,
-                            Dt = "/docs/llms.txt",
-                            mt = `${Ot.c}${Dt}`,
-                            dt = "/llms.txt",
-                            jt = "/docs/llms-full.txt";
+                          var su = ju(1639);
+                          const Uu = 24e3,
+                            Zu = "/docs/llms.txt",
+                            Xu = `${su.e}${Zu}`,
+                            lu = "/llms.txt",
+                            qu = "/docs/llms-full.txt";
 
-                          function Ht(tt) {
-                            return tt || "index"
+                          function fu(uu) {
+                            return uu || "index"
                           }
 
-                          function Xt(tt) {
-                            return `/docs/${Ht(tt)}.md`
+                          function Cu(uu) {
+                            return `/docs/${fu(uu)}.md`
                           }
 
-                          function Qt(tt, et) {
-                            return `/docs/${Ht(tt)}/${et+1}.md`
+                          function bu(uu, Eu) {
+                            return `/docs/${fu(uu)}/${Eu+1}.md`
                           }
-                          const lt = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
+                          const cu = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
 
-                          function Et(tt) {
-                            const et = lt.exec(tt);
-                            return null === et ? null : {
-                              name: et[1],
-                              part: void 0 === et[2] ? null : Number(et[2])
+                          function Nu(uu) {
+                            const Eu = cu.exec(uu);
+                            return null === Eu ? null : {
+                              name: Eu[1],
+                              part: void 0 === Eu[2] ? null : Number(Eu[2])
                             }
                           }
-                          const ft = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
+                          const Ou = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
 
-                          function wt(tt) {
-                            const et = ft.exec(tt);
-                            if (null === et) return null;
-                            const [, Vt = "", Ot] = et;
-                            return void 0 === Ot ? Xt(Vt) : Qt(Vt, Number(Ot) - 1)
+                          function Yu(uu) {
+                            const Eu = Ou.exec(uu);
+                            if (null === Eu) return null;
+                            const [, ju = "", su] = Eu;
+                            return void 0 === su ? Cu(ju) : bu(ju, Number(su) - 1)
                           }
 
-                          function yt(tt) {
-                            return `/docsHtml/${Ht(tt)}.html`
+                          function hu(uu) {
+                            return `/docsHtml/${fu(uu)}.html`
                           }
-                        }, 5015: (tt, et, Vt) => {
-                          Vt.d(et, {
-                            c: () => qt,
-                            d: () => Ot,
-                            g: () => Dt,
-                            i: () => jt,
-                            l: () => mt
+                        }, 5011: (uu, Eu, ju) => {
+                          ju.d(Eu, {
+                            e: () => Uu,
+                            h: () => su,
+                            j: () => Zu,
+                            l: () => qu,
+                            o: () => Xu
                           });
-                          const Ot = ["sine", "triangle", "square", "sawtooth"],
-                            qt = 55,
-                            Dt = {
+                          const su = ["sine", "triangle", "square", "sawtooth"],
+                            Uu = 55,
+                            Zu = {
                               soft: {
                                 waveform: "sine",
                                 pitchHz: 300,
@@ -7288,38 +7288,38 @@ export const modules = {
                               }
                             };
 
-                          function mt(tt) {
-                            return "string" !== typeof tt ? tt : Object.hasOwn(Dt, tt) ? Dt[tt] : null
+                          function Xu(uu) {
+                            return "string" !== typeof uu ? uu : Object.hasOwn(Zu, uu) ? Zu[uu] : null
                           }
 
-                          function dt(tt, et, Vt) {
-                            return Math.min(Vt, Math.max(et, tt))
+                          function lu(uu, Eu, ju) {
+                            return Math.min(ju, Math.max(Eu, uu))
                           }
 
-                          function jt(tt) {
-                            const et = dt(tt.durationMs, 10, 500),
-                              Vt = dt(tt.attackMs, 0, et),
+                          function qu(uu) {
+                            const Eu = lu(uu.durationMs, 10, 500),
+                              ju = lu(uu.attackMs, 0, Eu),
                               {
-                                intonation: qt
-                              } = tt;
+                                intonation: Uu
+                              } = uu;
                             return {
-                              waveform: Ot.includes(tt.waveform) ? tt.waveform : "sine",
-                              pitchHz: dt(tt.pitchHz, 20, 4e3),
-                              glideSemitones: dt(tt.glideSemitones, -24, 24),
-                              durationMs: et,
-                              attackMs: Vt,
-                              releaseMs: dt(tt.releaseMs, 0, et - Vt),
-                              lowpassHz: null === tt.lowpassHz ? null : dt(tt.lowpassHz, 20, 2e4),
-                              volume: dt(tt.volume, 0, 2),
+                              waveform: su.includes(uu.waveform) ? uu.waveform : "sine",
+                              pitchHz: lu(uu.pitchHz, 20, 4e3),
+                              glideSemitones: lu(uu.glideSemitones, -24, 24),
+                              durationMs: Eu,
+                              attackMs: ju,
+                              releaseMs: lu(uu.releaseMs, 0, Eu - ju),
+                              lowpassHz: null === uu.lowpassHz ? null : lu(uu.lowpassHz, 20, 2e4),
+                              volume: lu(uu.volume, 0, 2),
                               intonation: {
-                                variationSemitones: dt(qt.variationSemitones, 0, 6),
-                                declineSemitones: dt(qt.declineSemitones, 0, 12),
-                                questionRiseSemitones: dt(qt.questionRiseSemitones, 0, 12),
-                                exclaimLiftSemitones: dt(qt.exclaimLiftSemitones, 0, 12)
+                                variationSemitones: lu(Uu.variationSemitones, 0, 6),
+                                declineSemitones: lu(Uu.declineSemitones, 0, 12),
+                                questionRiseSemitones: lu(Uu.questionRiseSemitones, 0, 12),
+                                exclaimLiftSemitones: lu(Uu.exclaimLiftSemitones, 0, 12)
                               },
-                              syllableMs: dt(tt.syllableMs, 25, 200)
+                              syllableMs: lu(uu.syllableMs, 25, 200)
                             }
                           }
                         }
                       }; Object.freeze(modules);
-                      for (const tt in modules) Object.freeze(modules[tt]);
+                      for (const uu in modules) Object.freeze(modules[uu]);

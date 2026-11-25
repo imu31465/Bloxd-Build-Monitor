@@ -11615,6 +11615,16 @@ html[data-app-covered=skipped] .WholeAppWrapper {
   z-index: 17
 }
 
+.ForceRotatePromptEntering {
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  background-color: #22283b
+}
+
+.ForceRotatePromptEntering>* {
+  visibility: hidden
+}
+
 .RotateScreenPrompt {
   font-size: min(10rem, 13vw)
 }
@@ -11639,6 +11649,10 @@ html[data-app-covered=skipped] .WholeAppWrapper {
 
 .ForceRotateEnterFullscreenButton {
   font-size: 5rem
+}
+
+.ForceRotateEnterFullscreenButton.NewButton {
+  transition: none
 }
 
 .ForceRotateEnterFullscreenButton .ButtonBody {

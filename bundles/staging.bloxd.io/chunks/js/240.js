@@ -1,95 +1,95 @@
 export const id = 240;
 export const ids = [240];
 export const modules = {
-  61535: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      DEVTOOLS_SHADERS: () => Dt,
-      registerDevtoolsShader: () => mt
+  61510: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      DEVTOOLS_SHADERS: () => Zu,
+      registerDevtoolsShader: () => Xu
     });
-    var Ot = Vt(40061),
-      qt = Vt(37435);
-    const Dt = {
-      devtoolsNormal: function(tt) {
+    var su = ju(40127),
+      Uu = ju(37582);
+    const Zu = {
+      devtoolsNormal: function(uu) {
         return {
-          vertex: `\n\t\t\t${(0,qt.d)(tt,"position","vec3")}\n\t\t\t${(0,qt.d)(tt,"normal","vec3")}\n\t\t\t${(0,qt.rb)(tt,"worldViewProjection","mat4")}\n\t\t\t${(0,qt.rb)(tt,"world","mat4")}\n\t\t\t${(0,qt.wb)(tt,"vNormal","vec3","mediump")}\n\n\t\t\t${(0,qt.zb)(tt,`\n\t\t\t\t${(0,qt.k)(tt)} = ${(0,qt.vb)(tt,"worldViewProjection")} * ${(0,qt.l)(tt,"vec4",(0,qt.Ab)(tt,"position"),"1.0")};\n\t\t\t\t${(0,qt.Eb)(tt,"vNormal")} = normalize((${(0,qt.vb)(tt,"world")} * ${(0,qt.l)(tt,"vec4",(0,qt.Ab)(tt,"normal"),"0.0")}).xyz);\n\t\t\t`)}\n\t\t`,
-          fragment: `\n\t\t\t${(0,qt.wb)(tt,"vNormal","vec3","mediump")}\n\n\t\t\t${(0,qt.R)(tt,`\n\t\t\t\t\n\t\t\t\t${(0,qt.y)(tt,"vec3","normalColor",`abs(${(0,qt.T)(tt,"vNormal")})`)}\n\t\t\t\t${(0,qt.K)(tt)} = ${(0,qt.l)(tt,"vec4","normalColor","1.0")};\n\t\t\t`)}\n\t\t`
+          vertex: `\n\t\t\t${(0,Uu.g)(uu,"position","vec3")}\n\t\t\t${(0,Uu.g)(uu,"normal","vec3")}\n\t\t\t${(0,Uu.zb)(uu,"worldViewProjection","mat4")}\n\t\t\t${(0,Uu.zb)(uu,"world","mat4")}\n\t\t\t${(0,Uu.Bb)(uu,"vNormal","vec3","mediump")}\n\n\t\t\t${(0,Uu.Db)(uu,`\n\t\t\t\t${(0,Uu.n)(uu)} = ${(0,Uu.Ab)(uu,"worldViewProjection")} * ${(0,Uu.r)(uu,"vec4",(0,Uu.Fb)(uu,"position"),"1.0")};\n\t\t\t\t${(0,Uu.Ib)(uu,"vNormal")} = normalize((${(0,Uu.Ab)(uu,"world")} * ${(0,Uu.r)(uu,"vec4",(0,Uu.Fb)(uu,"normal"),"0.0")}).xyz);\n\t\t\t`)}\n\t\t`,
+          fragment: `\n\t\t\t${(0,Uu.Bb)(uu,"vNormal","vec3","mediump")}\n\n\t\t\t${(0,Uu.U)(uu,`\n\t\t\t\t\n\t\t\t\t${(0,Uu.I)(uu,"vec3","normalColor",`abs(${(0,Uu.V)(uu,"vNormal")})`)}\n\t\t\t\t${(0,Uu.P)(uu)} = ${(0,Uu.r)(uu,"vec4","normalColor","1.0")};\n\t\t\t`)}\n\t\t`
         }
       },
-      devtoolsWhite: function(tt) {
+      devtoolsWhite: function(uu) {
         return {
-          vertex: `\n\t\t\t${(0,qt.d)(tt,"position","vec3")}\n\t\t\t${(0,qt.rb)(tt,"worldViewProjection","mat4")}\n\n\t\t\t${(0,qt.zb)(tt,`\n\t\t\t\t${(0,qt.k)(tt)} = ${(0,qt.vb)(tt,"worldViewProjection")} * ${(0,qt.l)(tt,"vec4",(0,qt.Ab)(tt,"position"),"1.0")};\n\t\t\t`)}\n\t\t`,
-          fragment: `\n\t\t\t${(0,qt.R)(tt,`\n\t\t\t\t${(0,qt.K)(tt)} = ${(0,qt.l)(tt,"vec4","1.0","1.0","1.0","1.0")};\n\t\t\t`)}\n\t\t`
+          vertex: `\n\t\t\t${(0,Uu.g)(uu,"position","vec3")}\n\t\t\t${(0,Uu.zb)(uu,"worldViewProjection","mat4")}\n\n\t\t\t${(0,Uu.Db)(uu,`\n\t\t\t\t${(0,Uu.n)(uu)} = ${(0,Uu.Ab)(uu,"worldViewProjection")} * ${(0,Uu.r)(uu,"vec4",(0,Uu.Fb)(uu,"position"),"1.0")};\n\t\t\t`)}\n\t\t`,
+          fragment: `\n\t\t\t${(0,Uu.U)(uu,`\n\t\t\t\t${(0,Uu.P)(uu)} = ${(0,Uu.r)(uu,"vec4","1.0","1.0","1.0","1.0")};\n\t\t\t`)}\n\t\t`
         }
       },
-      devtoolsDepth: function(tt) {
+      devtoolsDepth: function(uu) {
         return {
-          vertex: `\n\t\t\t${(0,qt.d)(tt,"position","vec3")}\n\t\t\t${(0,qt.rb)(tt,"worldViewProjection","mat4")}\n\t\t\t${(0,qt.rb)(tt,"world","mat4")}\n\t\t\t${(0,qt.rb)(tt,"cameraPosition","vec3")}\n\t\t\t${(0,qt.wb)(tt,"vDepth","float","mediump")}\n\n\t\t\t${(0,qt.zb)(tt,`\n\t\t\t\t${(0,qt.k)(tt)} = ${(0,qt.vb)(tt,"worldViewProjection")} * ${(0,qt.l)(tt,"vec4",(0,qt.Ab)(tt,"position"),"1.0")};\n\t\t\t\t${(0,qt.y)(tt,"vec3","worldPosition",`(${(0,qt.vb)(tt,"world")} * ${(0,qt.l)(tt,"vec4",(0,qt.Ab)(tt,"position"),"1.0")}).xyz`)}\n\t\t\t\t${(0,qt.Eb)(tt,"vDepth")} = distance(worldPosition, ${(0,qt.vb)(tt,"cameraPosition")});\n\t\t\t`)}\n\t\t`,
-          fragment: `\n\t\t\t${(0,qt.wb)(tt,"vDepth","float","mediump")}\n\t\t\t${(0,qt.rb)(tt,"maxDepth","float")}\n\t\t\t${(0,qt.rb)(tt,"minDepth","float")}\n\n\t\t\t${(0,qt.R)(tt,`\n\t\t\t\t\n\t\t\t\t${(0,qt.y)(tt,"float","normalizedDepth",`clamp((${(0,qt.T)(tt,"vDepth")} - ${(0,qt.vb)(tt,"minDepth")}) / (${(0,qt.vb)(tt,"maxDepth")} - ${(0,qt.vb)(tt,"minDepth")}), 0.0, 1.0)`)}\n\t\t\t\t${(0,qt.y)(tt,"float","gray","1.0 - normalizedDepth")}\n\t\t\t\t${(0,qt.K)(tt)} = ${(0,qt.l)(tt,"vec4","gray","gray","gray","1.0")};\n\t\t\t`)}\n\t\t`
+          vertex: `\n\t\t\t${(0,Uu.g)(uu,"position","vec3")}\n\t\t\t${(0,Uu.zb)(uu,"worldViewProjection","mat4")}\n\t\t\t${(0,Uu.zb)(uu,"world","mat4")}\n\t\t\t${(0,Uu.zb)(uu,"cameraPosition","vec3")}\n\t\t\t${(0,Uu.Bb)(uu,"vDepth","float","mediump")}\n\n\t\t\t${(0,Uu.Db)(uu,`\n\t\t\t\t${(0,Uu.n)(uu)} = ${(0,Uu.Ab)(uu,"worldViewProjection")} * ${(0,Uu.r)(uu,"vec4",(0,Uu.Fb)(uu,"position"),"1.0")};\n\t\t\t\t${(0,Uu.I)(uu,"vec3","worldPosition",`(${(0,Uu.Ab)(uu,"world")} * ${(0,Uu.r)(uu,"vec4",(0,Uu.Fb)(uu,"position"),"1.0")}).xyz`)}\n\t\t\t\t${(0,Uu.Ib)(uu,"vDepth")} = distance(worldPosition, ${(0,Uu.Ab)(uu,"cameraPosition")});\n\t\t\t`)}\n\t\t`,
+          fragment: `\n\t\t\t${(0,Uu.Bb)(uu,"vDepth","float","mediump")}\n\t\t\t${(0,Uu.zb)(uu,"maxDepth","float")}\n\t\t\t${(0,Uu.zb)(uu,"minDepth","float")}\n\n\t\t\t${(0,Uu.U)(uu,`\n\t\t\t\t\n\t\t\t\t${(0,Uu.I)(uu,"float","normalizedDepth",`clamp((${(0,Uu.V)(uu,"vDepth")} - ${(0,Uu.Ab)(uu,"minDepth")}) / (${(0,Uu.Ab)(uu,"maxDepth")} - ${(0,Uu.Ab)(uu,"minDepth")}), 0.0, 1.0)`)}\n\t\t\t\t${(0,Uu.I)(uu,"float","gray","1.0 - normalizedDepth")}\n\t\t\t\t${(0,Uu.P)(uu)} = ${(0,Uu.r)(uu,"vec4","gray","gray","gray","1.0")};\n\t\t\t`)}\n\t\t`
         }
       }
     };
 
-    function mt(tt, et) {
+    function Xu(uu, Eu) {
       const {
-        vertex: Vt,
-        fragment: qt
-      } = Dt[tt](et), mt = Ot.b.GetShadersStore(et);
-      mt[`${tt}VertexShader`] = Vt, mt[`${tt}FragmentShader`] = qt
+        vertex: ju,
+        fragment: Uu
+      } = Zu[uu](Eu), Xu = su.b.GetShadersStore(Eu);
+      Xu[`${uu}VertexShader`] = ju, Xu[`${uu}FragmentShader`] = Uu
     }
   },
-  37435: (tt, et, Vt) => {
-    Vt.d(et, {
-      $: () => At,
-      Ab: () => Wt,
-      C: () => ht,
-      Eb: () => St,
-      F: () => Pt,
-      J: () => Dt,
-      K: () => Ft,
-      O: () => Lt,
-      R: () => Jt,
-      T: () => ct,
-      U: () => It,
-      V: () => zt,
-      Y: () => qt,
-      Z: () => Zt,
-      _: () => rt,
-      c: () => Ot,
-      d: () => wt,
-      db: () => Kt,
-      eb: () => ut,
-      gb: () => Ut,
-      h: () => vt,
-      ib: () => it,
-      k: () => Mt,
-      kb: () => ot,
-      l: () => jt,
-      mb: () => Ct,
-      n: () => kt,
-      nb: () => Ht,
-      q: () => Gt,
-      rb: () => Nt,
-      t: () => lt,
-      u: () => Et,
-      vb: () => Rt,
-      wb: () => yt,
-      x: () => Qt,
-      y: () => Xt,
-      zb: () => bt
+  37582: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      A: () => cu,
+      Ab: () => ku,
+      Bb: () => hu,
+      D: () => Nu,
+      Db: () => Mu,
+      F: () => bu,
+      Fb: () => au,
+      I: () => Cu,
+      Ib: () => Pu,
+      J: () => Ju,
+      L: () => vu,
+      M: () => Zu,
+      P: () => ru,
+      S: () => Vu,
+      U: () => eu,
+      V: () => ou,
+      Y: () => mu,
+      ab: () => Wu,
+      bb: () => Uu,
+      c: () => su,
+      eb: () => Ku,
+      g: () => Yu,
+      gb: () => Iu,
+      k: () => du,
+      kb: () => Bu,
+      mb: () => wu,
+      n: () => gu,
+      ob: () => pu,
+      r: () => qu,
+      sb: () => Fu,
+      tb: () => Lu,
+      u: () => Qu,
+      ub: () => Su,
+      vb: () => Gu,
+      w: () => iu,
+      xb: () => fu,
+      zb: () => Du
     });
-    const Ot = {
+    const su = {
       GLSL: 0,
       WGSL: 1
     };
 
-    function qt(tt) {
-      return tt === Ot.WGSL
+    function Uu(uu) {
+      return uu === su.WGSL
     }
 
-    function Dt(tt, et, Vt) {
-      return qt(tt) ? Vt : et
+    function Zu(uu, Eu, ju) {
+      return Uu(uu) ? ju : Eu
     }
-    const mt = new Map([
+    const Xu = new Map([
       ["int", "i32"],
       ["float", "f32"],
       ["vec2", "vec2f"],
@@ -100,185 +100,185 @@ export const modules = {
       ["mat4", "mat4x4f"]
     ]);
 
-    function dt(tt, et) {
-      if (!qt(tt)) return et;
-      const Vt = mt.get(et);
-      if (!Vt) throw new Error(`No WGSL name for shader type "${et}"`);
-      return Vt
+    function lu(uu, Eu) {
+      if (!Uu(uu)) return Eu;
+      const ju = Xu.get(Eu);
+      if (!ju) throw new Error(`No WGSL name for shader type "${Eu}"`);
+      return ju
     }
 
-    function jt(tt, et) {
-      for (var Vt = arguments.length, Ot = new Array(Vt > 2 ? Vt - 2 : 0), qt = 2; qt < Vt; qt++) Ot[qt - 2] = arguments[qt];
-      return `${dt(tt,et)}(${Ot.join(", ")})`
+    function qu(uu, Eu) {
+      for (var ju = arguments.length, su = new Array(ju > 2 ? ju - 2 : 0), Uu = 2; Uu < ju; Uu++) su[Uu - 2] = arguments[Uu];
+      return `${lu(uu,Eu)}(${su.join(", ")})`
     }
 
-    function Ht(tt, et) {
-      return jt(tt, "int", et)
+    function fu(uu, Eu) {
+      return qu(uu, "int", Eu)
     }
 
-    function Xt(tt, et, Vt, Ot, Dt) {
-      return qt(tt) ? `var ${Vt}: ${dt(tt,et)} = ${Ot};` : `${ft(tt,Dt)}${et} ${Vt} = ${Ot};`
+    function Cu(uu, Eu, ju, su, Zu) {
+      return Uu(uu) ? `var ${ju}: ${lu(uu,Eu)} = ${su};` : `${Ou(uu,Zu)}${Eu} ${ju} = ${su};`
     }
 
-    function Qt(tt, et, Vt) {
-      return qt(tt) ? `var ${Vt}: ${dt(tt,et)};` : `${et} ${Vt};`
+    function bu(uu, Eu, ju) {
+      return Uu(uu) ? `var ${ju}: ${lu(uu,Eu)};` : `${Eu} ${ju};`
     }
 
-    function lt(tt, et, Vt, Ot) {
-      return qt(tt) ? `const ${Vt}: ${dt(tt,et)} = ${Ot};` : `const ${et} ${Vt} = ${Ot};`
+    function cu(uu, Eu, ju, su) {
+      return Uu(uu) ? `const ${ju}: ${lu(uu,Eu)} = ${su};` : `const ${Eu} ${ju} = ${su};`
     }
 
-    function Et(tt, et, Vt, Ot, Dt) {
-      if (qt(tt)) {
-        return `fn ${Vt}(${Ot.map((et=>`${et.name}: ${dt(tt,et.type)}`)).join(", ")}) -> ${dt(tt,et)} {${Dt}}`
+    function Nu(uu, Eu, ju, su, Zu) {
+      if (Uu(uu)) {
+        return `fn ${ju}(${su.map((Eu=>`${Eu.name}: ${lu(uu,Eu.type)}`)).join(", ")}) -> ${lu(uu,Eu)} {${Zu}}`
       }
-      return `${et} ${Vt}(${Ot.map((tt=>`${tt.type} ${tt.name}`)).join(", ")}) {${Dt}}`
+      return `${Eu} ${ju}(${su.map((uu=>`${uu.type} ${uu.name}`)).join(", ")}) {${Zu}}`
     }
 
-    function ft(tt, et) {
-      return !et || qt(tt) ? "" : `${et} `
+    function Ou(uu, Eu) {
+      return !Eu || Uu(uu) ? "" : `${Eu} `
     }
 
-    function wt(tt, et, Vt, Ot) {
-      return qt(tt) ? `attribute ${et}: ${dt(tt,Vt)};` : `attribute ${ft(tt,Ot)}${Vt} ${et};`
+    function Yu(uu, Eu, ju, su) {
+      return Uu(uu) ? `attribute ${Eu}: ${lu(uu,ju)};` : `attribute ${Ou(uu,su)}${ju} ${Eu};`
     }
 
-    function yt(tt, et, Vt, Ot) {
-      return qt(tt) ? `varying ${et}: ${dt(tt,Vt)};` : `varying ${ft(tt,Ot)}${Vt} ${et};`
+    function hu(uu, Eu, ju, su) {
+      return Uu(uu) ? `varying ${Eu}: ${lu(uu,ju)};` : `varying ${Ou(uu,su)}${ju} ${Eu};`
     }
 
-    function Nt(tt, et, Vt) {
-      return qt(tt) ? `uniform ${et}: ${dt(tt,Vt)};` : `uniform ${Vt} ${et};`
+    function Du(uu, Eu, ju) {
+      return Uu(uu) ? `uniform ${Eu}: ${lu(uu,ju)};` : `uniform ${ju} ${Eu};`
     }
 
-    function Mt(tt) {
-      return qt(tt) ? "vertexOutputs.position" : "gl_Position"
+    function gu(uu) {
+      return Uu(uu) ? "vertexOutputs.position" : "gl_Position"
     }
 
-    function bt(tt, et) {
-      return qt(tt) ? `@vertex\nfn main(input: VertexInputs) -> FragmentInputs {${et}}` : `void main() {${et}}`
+    function Mu(uu, Eu) {
+      return Uu(uu) ? `@vertex\nfn main(input: VertexInputs) -> FragmentInputs {${Eu}}` : `void main() {${Eu}}`
     }
 
-    function Jt(tt, et) {
-      return qt(tt) ? `@fragment\nfn main(input: FragmentInputs) -> FragmentOutputs {${et}}` : `void main() {${et}}`
+    function eu(uu, Eu) {
+      return Uu(uu) ? `@fragment\nfn main(input: FragmentInputs) -> FragmentOutputs {${Eu}}` : `void main() {${Eu}}`
     }
 
-    function Ct(tt, et, Vt) {
-      if (qt(tt)) {
-        return [`var ${et}Sampler: sampler;`, `var ${et}: ${"2dArray"===Vt?"texture_2d_array<f32>":"texture_2d<f32>"};`].join("\n")
+    function Gu(uu, Eu, ju) {
+      if (Uu(uu)) {
+        return [`var ${Eu}Sampler: sampler;`, `var ${Eu}: ${"2dArray"===ju?"texture_2d_array<f32>":"texture_2d<f32>"};`].join("\n")
       }
-      return `uniform highp ${"2dArray"===Vt?"sampler2DArray":"sampler2D"} ${et};`
+      return `uniform highp ${"2dArray"===ju?"sampler2DArray":"sampler2D"} ${Eu};`
     }
 
-    function ut(tt, et, Vt) {
-      return qt(tt) ? `textureSample(${et}, ${et}Sampler, ${Vt})` : `texture2D(${et}, ${Vt})`
+    function pu(uu, Eu, ju) {
+      return Uu(uu) ? `textureSample(${Eu}, ${Eu}Sampler, ${ju})` : `texture2D(${Eu}, ${ju})`
     }
 
-    function Kt(tt, et, Vt, Ot, Dt) {
-      if (qt(tt)) {
-        return `${Dt?"textureSampleLevel":"textureSample"}(${et}, ${et}Sampler, ${Vt}, ${Ht(tt,`round(${Ot})`)}${Dt?`, ${Dt}`:""})`
+    function wu(uu, Eu, ju, su, Zu) {
+      if (Uu(uu)) {
+        return `${Zu?"textureSampleLevel":"textureSample"}(${Eu}, ${Eu}Sampler, ${ju}, ${fu(uu,`round(${su})`)}${Zu?`, ${Zu}`:""})`
       }
-      const mt = jt(tt, "vec3", Vt, Ot);
-      return Dt ? `textureLod(${et}, ${mt}, ${Dt})` : `texture(${et}, ${mt})`
+      const Xu = qu(uu, "vec3", ju, su);
+      return Zu ? `textureLod(${Eu}, ${Xu}, ${Zu})` : `texture(${Eu}, ${Xu})`
     }
 
-    function ht(tt) {
-      return qt(tt) ? "!baseColor\\=\\w+\\(diffuseSampler,diffuseSamplerSampler,fragmentInputs\\.vDiffuseUV\\+uvOffset\\);" : "!baseColor\\=\\w+\\(diffuseSampler,vDiffuseUV\\+uvOffset\\);"
+    function Ju(uu) {
+      return Uu(uu) ? "!baseColor\\=\\w+\\(diffuseSampler,diffuseSamplerSampler,fragmentInputs\\.vDiffuseUV\\+uvOffset\\);" : "!baseColor\\=\\w+\\(diffuseSampler,vDiffuseUV\\+uvOffset\\);"
     }
 
-    function vt(tt) {
-      return qt(tt) ? {
+    function du(uu) {
+      return Uu(uu) ? {
         "!varying vMainUV1: vec2f;": "centroid varying vMainUV1: vec2f;"
       } : {
         "!varying vec2 vMainUV1;": "#ifdef WEBGL2\ncentroid varying vec2 vMainUV1;\n#else\nvarying vec2 vMainUV1;\n#endif"
       }
     }
 
-    function Wt(tt, et) {
-      return qt(tt) ? `vertexInputs.${et}` : et
+    function au(uu, Eu) {
+      return Uu(uu) ? `vertexInputs.${Eu}` : Eu
     }
 
-    function St(tt, et) {
-      return qt(tt) ? `vertexOutputs.${et}` : et
+    function Pu(uu, Eu) {
+      return Uu(uu) ? `vertexOutputs.${Eu}` : Eu
     }
 
-    function ct(tt, et) {
-      return qt(tt) ? `fragmentInputs.${et}` : et
+    function ou(uu, Eu) {
+      return Uu(uu) ? `fragmentInputs.${Eu}` : Eu
     }
 
-    function Rt(tt, et) {
-      return qt(tt) ? `uniforms.${et}` : et
+    function ku(uu, Eu) {
+      return Uu(uu) ? `uniforms.${Eu}` : Eu
     }
 
-    function It(tt, et, Vt) {
-      return qt(tt) ? `frame.${et}` : Vt
+    function mu(uu, Eu, ju) {
+      return Uu(uu) ? `frame.${Eu}` : ju
     }
 
-    function Pt(tt) {
-      return qt(tt) ? "scene.vEyePosition" : "vEyePosition"
+    function vu(uu) {
+      return Uu(uu) ? "scene.vEyePosition" : "vEyePosition"
     }
 
-    function Zt(tt) {
-      return qt(tt) ? "mesh.visibility" : "visibility"
+    function Ku(uu) {
+      return Uu(uu) ? "mesh.visibility" : "visibility"
     }
 
-    function Lt(tt) {
-      return qt(tt) ? "fragmentInputs.position" : "gl_FragCoord"
+    function Vu(uu) {
+      return Uu(uu) ? "fragmentInputs.position" : "gl_FragCoord"
     }
 
-    function Ft(tt) {
-      return qt(tt) ? "fragmentOutputs.color" : "gl_FragColor"
+    function ru(uu) {
+      return Uu(uu) ? "fragmentOutputs.color" : "gl_FragColor"
     }
 
-    function kt(tt, et) {
-      return qt(tt) ? `dpdx(${et})` : `dFdx(${et})`
+    function Qu(uu, Eu) {
+      return Uu(uu) ? `dpdx(${Eu})` : `dFdx(${Eu})`
     }
 
-    function Gt(tt, et) {
-      return qt(tt) ? `dpdy(${et})` : `dFdy(${et})`
+    function iu(uu, Eu) {
+      return Uu(uu) ? `dpdy(${Eu})` : `dFdy(${Eu})`
     }
 
-    function zt(tt, et) {
-      return qt(tt) ? `inverseSqrt(${et})` : `inversesqrt(${et})`
+    function Wu(uu, Eu) {
+      return Uu(uu) ? `inverseSqrt(${Eu})` : `inversesqrt(${Eu})`
     }
 
-    function ot(tt, et, Vt, Ot) {
-      return qt(tt) ? `select(${Ot}, ${Vt}, ${et})` : `((${et}) ? (${Vt}) : (${Ot}))`
+    function Su(uu, Eu, ju, su) {
+      return Uu(uu) ? `select(${su}, ${ju}, ${Eu})` : `((${Eu}) ? (${ju}) : (${su}))`
     }
 
-    function rt(tt, et, Vt) {
-      return qt(tt) ? `((${et}) - (${Vt}) * floor((${et}) / (${Vt})))` : `mod(${et}, ${Vt})`
+    function Iu(uu, Eu, ju) {
+      return Uu(uu) ? `((${Eu}) - (${ju}) * floor((${Eu}) / (${ju})))` : `mod(${Eu}, ${ju})`
     }
 
-    function Ut(tt, et, Vt) {
-      return qt(tt) ? `${et} = vec4f(${Vt}, ${et}.a);` : `${et}.rgb = ${Vt};`
+    function Fu(uu, Eu, ju) {
+      return Uu(uu) ? `${Eu} = vec4f(${ju}, ${Eu}.a);` : `${Eu}.rgb = ${ju};`
     }
 
-    function At(tt, et, Vt) {
-      return qt(tt) ? `${et} = vec4f(${et}.rgb * (${Vt}), ${et}.a);` : `${et}.rgb *= ${Vt};`
+    function Bu(uu, Eu, ju) {
+      return Uu(uu) ? `${Eu} = vec4f(${Eu}.rgb * (${ju}), ${Eu}.a);` : `${Eu}.rgb *= ${ju};`
     }
 
-    function it(tt, et, Vt) {
-      return qt(tt) ? `${et} = vec4f(${Vt}, ${et}.w);` : `${et}.xyz = ${Vt};`
+    function Lu(uu, Eu, ju) {
+      return Uu(uu) ? `${Eu} = vec4f(${ju}, ${Eu}.w);` : `${Eu}.xyz = ${ju};`
     }
   },
-  40061: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => Ot
+  40127: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => su
     });
-    class Ot {
+    class su {
       static GetShadersRepository() {
-        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? Ot.ShadersRepository : Ot.ShadersRepositoryWGSL
+        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? su.ShadersRepository : su.ShadersRepositoryWGSL
       }
       static GetShadersStore() {
-        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? Ot.ShadersStore : Ot.ShadersStoreWGSL
+        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? su.ShadersStore : su.ShadersStoreWGSL
       }
       static GetIncludesShadersStore() {
-        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? Ot.IncludesShadersStore : Ot.IncludesShadersStoreWGSL
+        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? su.IncludesShadersStore : su.IncludesShadersStoreWGSL
       }
     }
-    Ot.ShadersRepository = "src/Shaders/", Ot.ShadersStore = {}, Ot.IncludesShadersStore = {}, Ot.ShadersRepositoryWGSL = "src/ShadersWGSL/", Ot.ShadersStoreWGSL = {}, Ot.IncludesShadersStoreWGSL = {}
+    su.ShadersRepository = "src/Shaders/", su.ShadersStore = {}, su.IncludesShadersStore = {}, su.ShadersRepositoryWGSL = "src/ShadersWGSL/", su.ShadersStoreWGSL = {}, su.IncludesShadersStoreWGSL = {}
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

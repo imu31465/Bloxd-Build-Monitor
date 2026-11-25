@@ -1,257 +1,257 @@
 export const id = 19;
 export const ids = [19];
 export const modules = {
-  36853: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => Et,
-      g: () => ft,
-      i: () => lt,
-      m: () => Qt
+  36990: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => Nu,
+      h: () => Ou,
+      k: () => cu,
+      n: () => bu
     });
-    var Ot = Vt(34371),
-      qt = Vt(36861),
-      Dt = Vt(36867),
-      mt = Vt(8936),
-      dt = Vt(1554),
-      jt = Vt(63),
-      Ht = Vt(83),
-      Xt = Vt(1188);
+    var su = ju(34547),
+      Uu = ju(36992),
+      Zu = ju(36998),
+      Xu = ju(8942),
+      lu = ju(1499),
+      qu = ju(58),
+      fu = ju(65),
+      Cu = ju(1154);
 
-    function Qt() {
-      var tt;
-      return (0, dt.h)(qt.b, (0, qt.l)()), (0, Xt.jsx)(Xt.Fragment, {
-        children: null === (tt = (0, qt.l)()) || void 0 === tt ? void 0 : tt.content
+    function bu() {
+      var uu;
+      return (0, lu.g)(Uu.c, (0, Uu.l)()), (0, Cu.jsx)(Cu.Fragment, {
+        children: null === (uu = (0, Uu.l)()) || void 0 === uu ? void 0 : uu.content
       })
     }
 
-    function lt(tt) {
-      var et;
+    function cu(uu) {
+      var Eu;
       let {
-        show: Vt
-      } = tt;
-      (0, dt.h)(qt.b, (0, qt.l)());
-      const Ht = null === (et = (0, qt.l)()) || void 0 === et ? void 0 : et.menu;
-      return (0, jt.useEffect)((() => {
-        var tt;
-        Vt || (null === Ht || void 0 === Ht || null === (tt = Ht.onClose) || void 0 === tt || tt.call(Ht), (0, Dt.t)())
-      }), [Vt, Ht]), (0, jt.useEffect)((() => Vt ? (0, mt.g)(Dt.A, Dt.f) : void 0), [Vt]), (0, Xt.jsx)(Ot.b, {
-        showing: Vt,
+        show: ju
+      } = uu;
+      (0, lu.g)(Uu.c, (0, Uu.l)());
+      const fu = null === (Eu = (0, Uu.l)()) || void 0 === Eu ? void 0 : Eu.menu;
+      return (0, qu.useEffect)((() => {
+        var uu;
+        ju || (null === fu || void 0 === fu || null === (uu = fu.onClose) || void 0 === uu || uu.call(fu), (0, Zu.q)())
+      }), [ju, fu]), (0, qu.useEffect)((() => ju ? (0, Xu.f)(Zu.x, Zu.h) : void 0), [ju]), (0, Cu.jsx)(su.b, {
+        showing: ju,
         globallyUniqueKey: "clientGameMenu",
-        children: null === Ht || void 0 === Ht ? void 0 : Ht.content
+        children: null === fu || void 0 === fu ? void 0 : fu.content
       })
     }
 
-    function Et(tt) {
+    function Nu(uu) {
       let {
-        placement: et = "bottom"
-      } = tt;
-      return (0, Xt.jsx)("div", {
-        id: `clientGameHud-${et}`,
+        placement: Eu = "bottom"
+      } = uu;
+      return (0, Cu.jsx)("div", {
+        id: `clientGameHud-${Eu}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function ft(tt) {
+    function Ou(uu) {
       let {
-        children: et,
-        placement: Vt = "bottom"
-      } = tt;
-      const [Ot, qt] = (0, jt.useState)(null);
-      return (0, jt.useEffect)((() => {
-        qt(document.getElementById(`clientGameHud-${Vt}`))
-      }), [Vt]), Ot ? (0, Ht.createPortal)(et, Ot) : null
+        children: Eu,
+        placement: ju = "bottom"
+      } = uu;
+      const [su, Uu] = (0, qu.useState)(null);
+      return (0, qu.useEffect)((() => {
+        Uu(document.getElementById(`clientGameHud-${ju}`))
+      }), [ju]), su ? (0, fu.createPortal)(Eu, su) : null
     }
   },
-  34371: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => Dt
+  34547: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => Zu
     });
-    var Ot = Vt(4668),
-      qt = Vt(4677);
+    var su = ju(4723),
+      Uu = ju(4726);
 
-    function Dt(tt) {
+    function Zu(uu) {
       let {
-        children: et,
-        showing: Vt,
-        globallyUniqueKey: Dt,
-        alwaysMountChildren: mt = !1,
-        doGameplayStartStopOnShow: dt = !0,
-        keepsMovement: jt = !1
-      } = tt;
-      return (0, qt.d)(!0, Vt, Dt, jt), (0, Ot.e)(dt, Vt), Vt || mt ? et : null
+        children: Eu,
+        showing: ju,
+        globallyUniqueKey: Zu,
+        alwaysMountChildren: Xu = !1,
+        doGameplayStartStopOnShow: lu = !0,
+        keepsMovement: qu = !1
+      } = uu;
+      return (0, Uu.e)(!0, ju, Zu, qu), (0, su.e)(lu, ju), ju || Xu ? Eu : null
     }
   },
-  8936: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => Dt,
-      g: () => qt
+  8942: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => Zu,
+      f: () => Uu
     });
-    let Ot = null;
-    const qt = function(tt) {
-        const et = {
-          cycle: tt,
+    let su = null;
+    const Uu = function(uu) {
+        const Eu = {
+          cycle: uu,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return Ot = et, () => {
-          Ot === et && (Ot = null)
+        return su = Eu, () => {
+          su === Eu && (su = null)
         }
       },
-      Dt = () => {
-        var tt;
-        return null !== (tt = Ot) && void 0 !== tt && tt.canCycle() ? Ot.cycle : null
+      Zu = () => {
+        var uu;
+        return null !== (uu = su) && void 0 !== uu && uu.canCycle() ? su.cycle : null
       }
   },
-  36867: (tt, et, Vt) => {
-    Vt.d(et, {
-      A: () => ft,
-      E: () => Mt,
-      d: () => Dt,
-      f: () => wt,
-      j: () => yt,
-      n: () => dt,
-      q: () => lt,
-      t: () => Nt,
-      w: () => Qt,
-      y: () => bt
+  36998: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => Zu,
+      h: () => Yu,
+      j: () => hu,
+      k: () => lu,
+      o: () => cu,
+      q: () => Du,
+      r: () => bu,
+      t: () => Mu,
+      x: () => Ou,
+      y: () => gu
     });
-    var Ot = Vt(26),
-      qt = Vt(31);
-    const Dt = "clientGameInventoryButtonsChanged",
-      mt = new Map;
+    var su = ju(22),
+      Uu = ju(24);
+    const Zu = "clientGameInventoryButtonsChanged",
+      Xu = new Map;
 
-    function dt() {
-      return [...mt.values()].sort(((tt, et) => {
-        var Vt, Ot;
-        return (null !== (Vt = tt.order) && void 0 !== Vt ? Vt : 0) - (null !== (Ot = et.order) && void 0 !== Ot ? Ot : 0)
+    function lu() {
+      return [...Xu.values()].sort(((uu, Eu) => {
+        var ju, su;
+        return (null !== (ju = uu.order) && void 0 !== ju ? ju : 0) - (null !== (su = Eu.order) && void 0 !== su ? su : 0)
       }))
     }
-    let jt = null;
+    let qu = null;
 
-    function Ht(tt) {
-      jt = tt
+    function fu(uu) {
+      qu = uu
     }
-    let Xt = !1;
+    let Cu = !1;
 
-    function Qt(tt) {
-      Xt = !0;
+    function bu(uu) {
+      Cu = !0;
       try {
-        tt.onClick()
+        uu.onClick()
       } finally {
-        Xt = !1
+        Cu = !1
       }
-      tt.panel && "clientGame" === Ot.b.get("openInGameMenuName") && Ht(tt.id)
+      uu.panel && "clientGame" === su.d.get("openInGameMenuName") && fu(uu.id)
     }
 
-    function lt() {
-      return Xt
+    function cu() {
+      return Cu
     }
 
-    function Et() {
-      return dt().filter((tt => tt.panel && !tt.disabled))
+    function Nu() {
+      return lu().filter((uu => uu.panel && !uu.disabled))
     }
 
-    function ft(tt) {
-      const et = Et(),
-        Vt = et.findIndex((tt => tt.id === jt));
-      return !(Vt < 0 || et.length < 2) && (Qt(et[(Vt + tt + et.length) % et.length]), !0)
+    function Ou(uu) {
+      const Eu = Nu(),
+        ju = Eu.findIndex((uu => uu.id === qu));
+      return !(ju < 0 || Eu.length < 2) && (bu(Eu[(ju + uu + Eu.length) % Eu.length]), !0)
     }
 
-    function wt() {
-      return null !== jt && Et().length > 1
+    function Yu() {
+      return null !== qu && Nu().length > 1
     }
 
-    function yt() {
-      Ht(null)
+    function hu() {
+      fu(null)
     }
 
-    function Nt() {
-      "inventory" !== Ot.b.get("openInGameMenuName") && Ht(null)
+    function Du() {
+      "inventory" !== su.d.get("openInGameMenuName") && fu(null)
     }
 
-    function Mt() {
-      const tt = jt;
-      return Ht(null), tt
+    function gu() {
+      const uu = qu;
+      return fu(null), uu
     }
 
-    function bt(tt) {
-      return mt.set(tt.id, tt), qt.j.sw(Dt, dt(), !0), () => {
-        mt.get(tt.id) === tt && (mt.delete(tt.id), qt.j.sw(Dt, dt()))
+    function Mu(uu) {
+      return Xu.set(uu.id, uu), Uu.h.TY(Zu, lu(), !0), () => {
+        Xu.get(uu.id) === uu && (Xu.delete(uu.id), Uu.h.TY(Zu, lu()))
       }
     }
   },
-  36861: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => dt,
-      c: () => yt,
-      g: () => Nt,
-      i: () => lt,
-      l: () => Ht,
-      m: () => wt,
-      o: () => Et,
-      q: () => Xt
+  36992: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => lu,
+      e: () => hu,
+      g: () => Du,
+      k: () => cu,
+      l: () => fu,
+      m: () => Yu,
+      n: () => Nu,
+      o: () => Cu
     });
-    var Ot = Vt(26),
-      qt = Vt(31),
-      Dt = Vt(1387),
-      mt = Vt(36867);
-    const dt = "clientGameUiChanged";
-    let jt = null;
+    var su = ju(22),
+      Uu = ju(24),
+      Zu = ju(1343),
+      Xu = ju(36998);
+    const lu = "clientGameUiChanged";
+    let qu = null;
 
-    function Ht() {
-      return jt
+    function fu() {
+      return qu
     }
 
-    function Xt(tt, et) {
-      const Vt = {
-        content: tt,
-        menu: et
+    function Cu(uu, Eu) {
+      const ju = {
+        content: uu,
+        menu: Eu
       };
-      return jt = Vt, qt.j.sw(dt, jt, !0), () => {
-        jt === Vt && (jt = null, ft = !1, yt(), qt.j.sw(dt, null))
+      return qu = ju, Uu.h.TY(lu, qu, !0), () => {
+        qu === ju && (qu = null, Ou = !1, hu(), Uu.h.TY(lu, null))
       }
     }
-    let Qt = null;
+    let bu = null;
 
-    function lt() {
-      return Qt
+    function cu() {
+      return bu
     }
 
-    function Et(tt) {
-      return Qt = tt, () => {
-        Qt === tt && (Qt = null)
+    function Nu(uu) {
+      return bu = uu, () => {
+        bu === uu && (bu = null)
       }
     }
-    let ft = !1;
+    let Ou = !1;
 
-    function wt() {
-      const tt = Ot.b.get("openInGameMenuName");
-      "clientGame" !== tt && (ft = "inventory" === tt), (0, mt.q)() || (0, mt.j)(), (0, Dt.p)(Dt.c), Ot.b.set({
+    function Yu() {
+      const uu = su.d.get("openInGameMenuName");
+      "clientGame" !== uu && (Ou = "inventory" === uu), (0, Xu.o)() || (0, Xu.j)(), (0, Zu.t)(Zu.b), su.d.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function yt() {
-      Mt(!1)
+    function hu() {
+      gu(!1)
     }
 
-    function Nt() {
-      Mt(ft)
+    function Du() {
+      gu(Ou)
     }
 
-    function Mt(tt) {
-      "clientGame" === Ot.b.get("openInGameMenuName") && Ot.b.set({
-        openInGameMenuName: tt ? "inventory" : null
-      }), tt || (0, mt.j)(), ft = !1
+    function gu(uu) {
+      "clientGame" === su.d.get("openInGameMenuName") && su.d.set({
+        openInGameMenuName: uu ? "inventory" : null
+      }), uu || (0, Xu.j)(), Ou = !1
     }
   },
-  39658: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      default: () => te
+  39745: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      default: () => Ru
     });
-    const Ot = {
+    const su = {
       trader: {
         name: "Lucky Trader",
         shopTab: "Basic Blocks"
@@ -261,270 +261,270 @@ export const modules = {
         shopTab: "Team Upgrades"
       }
     };
-    var qt = Vt(63),
-      Dt = Vt(38281),
-      mt = Vt(391);
-    const dt = ["Basic", "Rare", "Super"];
+    var Uu = ju(58),
+      Zu = ju(38413),
+      Xu = ju(349);
+    const lu = ["Basic", "Rare", "Super"];
 
-    function jt(tt, et) {
-      return `${"Basic"===et?"":`${et} `}${"Simple"===tt?"":`${tt} `}Lucky Block`
+    function qu(uu, Eu) {
+      return `${"Basic"===Eu?"":`${Eu} `}${"Simple"===uu?"":`${uu} `}Lucky Block`
     }
-    const Ht = new Map(["Simple", "Building", "Weapon", "Armour", "Tools", "Food", "Potion"].flatMap((tt => dt.map((et => [jt(tt, et), {
-      category: tt,
-      rarity: et
+    const fu = new Map(["Simple", "Building", "Weapon", "Armour", "Tools", "Food", "Potion"].flatMap((uu => lu.map((Eu => [qu(uu, Eu), {
+      category: uu,
+      rarity: Eu
     }])))));
-    Ht.keys();
+    fu.keys();
 
-    function Xt(tt) {
-      return Ht.get(tt)
+    function Cu(uu) {
+      return fu.get(uu)
     }
-    const Qt = "Obsidian",
-      lt = ["Cobweb"],
-      Et = [...["Red", "Blue", "Green", "Yellow"].map((tt => `${(0,mt.gb)(tt)} Wool`)), "Maple Wood Planks", "Cracked Stone Bricks", "Baked Clay", Qt, ...lt];
+    const bu = "Obsidian",
+      cu = ["Cobweb"],
+      Nu = [...["Red", "Blue", "Green", "Yellow"].map((uu => `${(0,Xu.W)(uu)} Wool`)), "Maple Wood Planks", "Cracked Stone Bricks", "Baked Clay", bu, ...cu];
 
-    function ft(tt) {
-      return Et.includes(tt)
+    function Ou(uu) {
+      return Nu.includes(uu)
     }
-    var wt = Vt(710);
+    var Yu = ju(649);
 
-    function yt(tt, et) {
-      const Vt = Xt(tt);
-      if (Vt) {
-        const tt = Xt(et);
-        if (!tt) return;
-        const Ot = dt.length - 1 - dt.indexOf(tt.rarity);
-        return (tt.category === Vt.category ? 0 : 1) * dt.length + Ot
+    function hu(uu, Eu) {
+      const ju = Cu(uu);
+      if (ju) {
+        const uu = Cu(Eu);
+        if (!uu) return;
+        const su = lu.length - 1 - lu.indexOf(uu.rarity);
+        return (uu.category === ju.category ? 0 : 1) * lu.length + su
       }
-      if (!ft(tt)) return;
-      if (et === tt) return 0;
-      const Ot = tt => ft(tt) && !lt.includes(tt) && tt !== Qt;
-      return Ot(tt) && Ot(et) ? 1 : void 0
+      if (!Ou(uu)) return;
+      if (Eu === uu) return 0;
+      const su = uu => Ou(uu) && !cu.includes(uu) && uu !== bu;
+      return su(uu) && su(Eu) ? 1 : void 0
     }
-    const Nt = [...Array.from({
-      length: wt.q - wt.m
-    }, ((tt, et) => wt.m + et)), ...Array.from({
-      length: wt.m
-    }, ((tt, et) => et))];
-    class Mt {
-      constructor(tt) {
-        this.inventory = tt, this.pending = new Map
+    const Du = [...Array.from({
+      length: Yu.q - Yu.o
+    }, ((uu, Eu) => Yu.o + Eu)), ...Array.from({
+      length: Yu.o
+    }, ((uu, Eu) => Eu))];
+    class gu {
+      constructor(uu) {
+        this.inventory = uu, this.pending = new Map
       }
-      onPlace(tt) {
-        var et;
-        const Vt = this.inventory.selectedSlot(),
-          Ot = this.inventory.itemAt(Vt);
-        (null === Ot || void 0 === Ot ? void 0 : Ot.name) === tt && (null !== (et = Ot.amount) && void 0 !== et ? et : 1) <= 1 && bt(tt) && this.pending.set(Vt, tt)
+      onPlace(uu) {
+        var Eu;
+        const ju = this.inventory.selectedSlot(),
+          su = this.inventory.itemAt(ju);
+        (null === su || void 0 === su ? void 0 : su.name) === uu && (null !== (Eu = su.amount) && void 0 !== Eu ? Eu : 1) <= 1 && Mu(uu) && this.pending.set(ju, uu)
       }
-      onDrop(tt, et) {
-        et < wt.m && null === this.inventory.itemAt(et) && bt(tt) && this.refill(et, tt)
+      onDrop(uu, Eu) {
+        Eu < Yu.o && null === this.inventory.itemAt(Eu) && Mu(uu) && this.refill(Eu, uu)
       }
-      BQ() {
-        const tt = [...this.pending];
+      Tb() {
+        const uu = [...this.pending];
         this.pending.clear();
-        for (const [et, Vt] of tt) null === this.inventory.itemAt(et) && this.refill(et, Vt)
+        for (const [Eu, ju] of uu) null === this.inventory.itemAt(Eu) && this.refill(Eu, ju)
       }
-      refill(tt, et) {
-        const Vt = function(tt, et, Vt, Ot) {
-          let qt, Dt = 1 / 0;
-          for (const mt of Nt) {
-            if (mt === et) continue;
-            const dt = Ot(mt);
-            if (!dt || mt < wt.m && et !== Vt) continue;
-            const jt = yt(tt, dt.name);
-            void 0 !== jt && jt < Dt && (qt = mt, Dt = jt)
+      refill(uu, Eu) {
+        const ju = function(uu, Eu, ju, su) {
+          let Uu, Zu = 1 / 0;
+          for (const Xu of Du) {
+            if (Xu === Eu) continue;
+            const lu = su(Xu);
+            if (!lu || Xu < Yu.o && Eu !== ju) continue;
+            const qu = hu(uu, lu.name);
+            void 0 !== qu && qu < Zu && (Uu = Xu, Zu = qu)
           }
-          return qt
-        }(et, tt, this.inventory.selectedSlot(), this.inventory.itemAt);
-        void 0 !== Vt && this.inventory.swap(tt, Vt)
+          return Uu
+        }(Eu, uu, this.inventory.selectedSlot(), this.inventory.itemAt);
+        void 0 !== ju && this.inventory.swap(uu, ju)
       }
     }
 
-    function bt(tt) {
-      return !!Xt(tt) || ft(tt)
+    function Mu(uu) {
+      return !!Cu(uu) || Ou(uu)
     }
-    var Jt = Vt(36861),
-      Ct = Vt(83),
-      ut = Vt(1140),
-      Kt = Vt.n(ut);
-    const ht = "Lucky Clover",
-      vt = {
+    var eu = ju(36992),
+      Gu = ju(65),
+      pu = ju(1105),
+      wu = ju.n(pu);
+    const Ju = "Lucky Clover",
+      du = {
         Basic: [35, 45],
         Rare: [100, 130],
         Super: [250, 330]
       };
 
-    function Wt(tt) {
-      return vt[tt][0]
+    function au(uu) {
+      return du[uu][0]
     }
 
-    function St(tt) {
-      return dt.filter((et => tt >= Wt(et)))
+    function Pu(uu) {
+      return lu.filter((Eu => uu >= au(Eu)))
     }
-    var ct = Vt(377),
-      Rt = Vt(2498),
-      It = Vt(26),
-      Pt = Vt(2681),
-      Zt = Vt(2018),
-      Lt = Vt(36853),
-      Ft = Vt(1152);
-    var kt = Vt(1188);
-    const Gt = {
-      Basic: mt.P.whiteUiText,
-      Rare: mt.P.goldUiText,
-      Super: mt.P.cyanUiText
+    var ou = ju(337),
+      ku = ju(2543),
+      mu = ju(22),
+      vu = ju(2701),
+      Ku = ju(1971),
+      Vu = ju(36990),
+      ru = ju(1116);
+    var Qu = ju(1154);
+    const iu = {
+      Basic: Xu.G.whiteUiText,
+      Rare: Xu.G.goldUiText,
+      Super: Xu.G.cyanUiText
     };
-    let zt = 1;
+    let Wu = 1;
 
-    function ot() {
-      const tt = (0, Rt.i)("currencyAmounts"),
-        et = null === tt || void 0 === tt ? void 0 : tt.Clovers;
-      return !et || et.hidden ? null : (0, kt.jsx)(Lt.g, {
-        children: (0, kt.jsx)(rt, {
-          amount: et.amount
+    function Su() {
+      const uu = (0, ku.h)("currencyAmounts"),
+        Eu = null === uu || void 0 === uu ? void 0 : uu.Clovers;
+      return !Eu || Eu.hidden ? null : (0, Qu.jsx)(Vu.h, {
+        children: (0, Qu.jsx)(Iu, {
+          amount: Eu.amount
         })
       })
     }
 
-    function rt(tt) {
-      var et, Vt, Ot;
+    function Iu(uu) {
+      var Eu, ju, su;
       let {
-        amount: Dt
-      } = tt;
+        amount: Zu
+      } = uu;
       const {
-        openEverythingMenuName: jt
-      } = (0, It.k)(["openEverythingMenuName"]), Ht = (0, Pt.e)(), [Xt, Qt] = (0, qt.useState)(Dt), [lt, Et] = (0, qt.useState)(null), [ft, wt] = (0, qt.useState)(0), [yt, Nt] = (0, qt.useState)([]), Mt = (0, qt.useRef)(Dt), bt = (0, qt.useRef)(!1), Jt = (0, qt.useRef)(null), ut = jt === ct.o.SHOP;
-      (0, qt.useEffect)((() => {
-        const tt = Mt.current;
-        if (Mt.current = Dt, Dt <= tt || ut) return void Qt(Dt);
-        const et = Ht || yt.length > 0 || window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : (Vt = Dt - tt, Ot = !bt.current, Vt <= 0 || !Ot && Vt < 40 ? 0 : Math.min(4, Math.ceil(Vt / 30)));
-        var Vt, Ot;
-        if (bt.current = !0, St(Dt).length > St(tt).length && wt(zt++), et > 0) {
-          const tt = [];
-          for (let Vt = 0; Vt < et; Vt++) tt.push({
-            id: zt++,
+        openEverythingMenuName: qu
+      } = (0, mu.l)(["openEverythingMenuName"]), fu = (0, vu.d)(), [Cu, bu] = (0, Uu.useState)(Zu), [cu, Nu] = (0, Uu.useState)(null), [Ou, Yu] = (0, Uu.useState)(0), [hu, Du] = (0, Uu.useState)([]), gu = (0, Uu.useRef)(Zu), Mu = (0, Uu.useRef)(!1), eu = (0, Uu.useRef)(null), pu = qu === ou.o.SHOP;
+      (0, Uu.useEffect)((() => {
+        const uu = gu.current;
+        if (gu.current = Zu, Zu <= uu || pu) return void bu(Zu);
+        const Eu = fu || hu.length > 0 || window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : (ju = Zu - uu, su = !Mu.current, ju <= 0 || !su && ju < 40 ? 0 : Math.min(4, Math.ceil(ju / 30)));
+        var ju, su;
+        if (Mu.current = !0, Pu(Zu).length > Pu(uu).length && Yu(Wu++), Eu > 0) {
+          const uu = [];
+          for (let ju = 0; ju < Eu; ju++) uu.push({
+            id: Wu++,
             x: window.innerWidth / 2 + 60 * (Math.random() - .5),
             y: .58 * window.innerHeight + 30 * (Math.random() - .5),
-            delayMs: 70 * Vt
+            delayMs: 70 * ju
           });
-          Nt((et => [...et, ...tt]))
+          Du((Eu => [...Eu, ...uu]))
         }
-        const qt = et > 0 ? 600 : 0;
-        Et({
-          id: zt++,
-          delayMs: qt
+        const Uu = Eu > 0 ? 600 : 0;
+        Nu({
+          id: Wu++,
+          delayMs: Uu
         });
-        const dt = performance.now() + qt;
-        let jt = 0;
-        const Xt = et => {
-          const Vt = mt.e.clamp((et - dt) / 600, 0, 1);
-          Qt(Math.round(tt + (Dt - tt) * Vt)), Vt < 1 && (jt = requestAnimationFrame(Xt))
+        const lu = performance.now() + Uu;
+        let qu = 0;
+        const Cu = Eu => {
+          const ju = Xu.b.clamp((Eu - lu) / 600, 0, 1);
+          bu(Math.round(uu + (Zu - uu) * ju)), ju < 1 && (qu = requestAnimationFrame(Cu))
         };
-        return jt = requestAnimationFrame(Xt), () => {
-          cancelAnimationFrame(jt)
+        return qu = requestAnimationFrame(Cu), () => {
+          cancelAnimationFrame(qu)
         }
-      }), [Dt, ut]);
-      const vt = function(tt) {
-          var et;
-          const Vt = null !== (et = dt.find((et => tt < Wt(et)))) && void 0 !== et ? et : "Super";
+      }), [Zu, pu]);
+      const du = function(uu) {
+          var Eu;
+          const ju = null !== (Eu = lu.find((Eu => uu < au(Eu)))) && void 0 !== Eu ? Eu : "Super";
           return {
-            rarity: Vt,
-            progress: mt.e.clamp(tt / Wt(Vt), 0, 1)
+            rarity: ju,
+            progress: Xu.b.clamp(uu / au(ju), 0, 1)
           }
-        }(Xt),
-        Rt = St(Xt).at(-1);
-      return (0, kt.jsxs)(kt.Fragment, {
-        children: [(0, kt.jsx)("div", {
+        }(Cu),
+        ku = Pu(Cu).at(-1);
+      return (0, Qu.jsxs)(Qu.Fragment, {
+        children: [(0, Qu.jsx)("div", {
           className: "LuckyCloverWalletAnchor",
-          children: (0, kt.jsxs)("div", {
-            className: Kt()("LuckyCloverWallet", {
-              Capped: Rt && "Basic" !== Rt
+          children: (0, Qu.jsxs)("div", {
+            className: wu()("LuckyCloverWallet", {
+              Capped: ku && "Basic" !== ku
             }),
-            style: Rt && {
-              "--luckyTierColour": Gt[Rt]
+            style: ku && {
+              "--luckyTierColour": iu[ku]
             },
-            children: [(0, kt.jsx)("div", {
+            children: [(0, Qu.jsx)("div", {
               className: "LuckyCloverWalletFill",
               style: {
-                transform: `scaleX(${vt.progress})`
+                transform: `scaleX(${du.progress})`
               }
-            }), ft > 0 && (0, kt.jsx)("div", {
+            }), Ou > 0 && (0, Qu.jsx)("div", {
               className: "LuckyCloverWalletReached",
               style: {
-                animationDelay: `${null!==(et=null===lt||void 0===lt?void 0:lt.delayMs)&&void 0!==et?et:0}ms`
+                animationDelay: `${null!==(Eu=null===cu||void 0===cu?void 0:cu.delayMs)&&void 0!==Eu?Eu:0}ms`
               }
-            }, ft), (0, kt.jsx)("div", {
-              ref: Jt,
-              className: Kt()("LuckyCloverWalletIcon", lt && "Bounce"),
+            }, Ou), (0, Qu.jsx)("div", {
+              ref: eu,
+              className: wu()("LuckyCloverWalletIcon", cu && "Bounce"),
               style: {
-                animationDelay: `${null!==(Ot=null===lt||void 0===lt?void 0:lt.delayMs)&&void 0!==Ot?Ot:0}ms`
+                animationDelay: `${null!==(su=null===cu||void 0===cu?void 0:cu.delayMs)&&void 0!==su?su:0}ms`
               },
-              children: (0, kt.jsx)(Zt.e, {
-                itemName: ht,
+              children: (0, Qu.jsx)(Ku.d, {
+                itemName: Ju,
                 amount: 0
               })
-            }, null !== (Vt = null === lt || void 0 === lt ? void 0 : lt.id) && void 0 !== Vt ? Vt : 0), (0, kt.jsx)("span", {
+            }, null !== (ju = null === cu || void 0 === cu ? void 0 : cu.id) && void 0 !== ju ? ju : 0), (0, Qu.jsx)("span", {
               className: "LuckyCloverWalletAmount SmallTextBold",
-              children: Xt
-            }), Rt && (0, kt.jsx)(Ft.b, {
+              children: Cu
+            }), ku && (0, Qu.jsx)(ru.e, {
               className: "LuckyCloverWalletShop",
               name: "cart-shopping"
             })]
           })
-        }), (0, Ct.createPortal)(yt.map((tt => (0, kt.jsx)(Ut, {
-          flyer: tt,
-          target: Jt,
+        }), (0, Gu.createPortal)(hu.map((uu => (0, Qu.jsx)(Fu, {
+          flyer: uu,
+          target: eu,
           onDone: () => {
-            Nt((et => et.filter((et => et.id !== tt.id))))
+            Du((Eu => Eu.filter((Eu => Eu.id !== uu.id))))
           }
-        }, tt.id))), document.body)]
+        }, uu.id))), document.body)]
       })
     }
 
-    function Ut(tt) {
+    function Fu(uu) {
       let {
-        flyer: et,
-        target: Vt,
-        onDone: Ot
-      } = tt;
-      const Dt = (0, qt.useRef)(null);
-      return (0, qt.useEffect)((() => {
-        var tt;
-        const qt = null === (tt = Vt.current) || void 0 === tt ? void 0 : tt.getBoundingClientRect();
-        if (!Dt.current || !qt) return void Ot();
+        flyer: Eu,
+        target: ju,
+        onDone: su
+      } = uu;
+      const Zu = (0, Uu.useRef)(null);
+      return (0, Uu.useEffect)((() => {
+        var uu;
+        const Uu = null === (uu = ju.current) || void 0 === uu ? void 0 : uu.getBoundingClientRect();
+        if (!Zu.current || !Uu) return void su();
         const {
-          x: mt,
-          y: dt
-        } = et, jt = mt + 140 * (Math.random() - .5), Ht = dt - 30 - 40 * Math.random(), Xt = Dt.current.animate([{
-          transform: `translate(${mt}px, ${dt}px) scale(0.3)`,
+          x: Xu,
+          y: lu
+        } = Eu, qu = Xu + 140 * (Math.random() - .5), fu = lu - 30 - 40 * Math.random(), Cu = Zu.current.animate([{
+          transform: `translate(${Xu}px, ${lu}px) scale(0.3)`,
           opacity: 0
         }, {
-          transform: `translate(${jt}px, ${Ht}px) scale(1.3)`,
+          transform: `translate(${qu}px, ${fu}px) scale(1.3)`,
           opacity: 1,
           offset: .3
         }, {
-          transform: `translate(${qt.left}px, ${qt.top}px) scale(0.8)`,
+          transform: `translate(${Uu.left}px, ${Uu.top}px) scale(0.8)`,
           opacity: .9
         }], {
           duration: 750,
           easing: "ease-in",
-          delay: et.delayMs,
+          delay: Eu.delayMs,
           fill: "backwards"
         });
-        return Xt.onfinish = Ot, () => {
-          Xt.cancel()
+        return Cu.onfinish = su, () => {
+          Cu.cancel()
         }
-      }), []), (0, kt.jsx)("div", {
-        ref: Dt,
+      }), []), (0, Qu.jsx)("div", {
+        ref: Zu,
         className: "LuckyCloverFlying",
-        children: (0, kt.jsx)(Zt.e, {
-          itemName: ht,
+        children: (0, Qu.jsx)(Ku.d, {
+          itemName: Ju,
           amount: 0
         })
       })
     }
-    var At = Vt(31);
-    const it = "luckyGearUpgradeView",
-      Yt = {
+    var Bu = ju(24);
+    const Lu = "luckyGearUpgradeView",
+      tu = {
         Wood: "#c8964f",
         Stone: "#b4b4b4",
         Iron: "#f2f2f2",
@@ -532,13 +532,13 @@ export const modules = {
         Diamond: "#5cf2ea"
       };
 
-    function Bt(tt) {
-      var et;
-      return null !== (et = Yt[tt.split(" ")[0]]) && void 0 !== et ? et : "#e07bff"
+    function xu(uu) {
+      var Eu;
+      return null !== (Eu = tu[uu.split(" ")[0]]) && void 0 !== Eu ? Eu : "#e07bff"
     }
-    class pt {
-      constructor(tt, et) {
-        this.selectedSlot = tt, this.itemAt = et, this.rings = [], this.unseen = new Map, this.view = {
+    class Tu {
+      constructor(uu, Eu) {
+        this.selectedSlot = uu, this.itemAt = Eu, this.rings = [], this.unseen = new Map, this.view = {
           rings: [],
           unseenSlots: []
         }, this.nextId = 0
@@ -546,200 +546,200 @@ export const modules = {
       getView() {
         return this.view
       }
-      Qf(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
-        for (const [Vt, Ot, qt] of tt) this.rings.push({
+      NO(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
+        for (const [ju, su, Uu] of uu) this.rings.push({
           id: this.nextId++,
-          slot: Vt,
-          colour: Bt(qt),
-          until: et + 1200
-        }), Vt !== this.selectedSlot() && this.unseen.set(Vt, {
-          from: Ot,
-          to: qt
+          slot: ju,
+          colour: xu(Uu),
+          until: Eu + 1200
+        }), ju !== this.selectedSlot() && this.unseen.set(ju, {
+          from: su,
+          to: Uu
         });
-        this.sw()
+        this.TY()
       }
-      BQ() {
-        let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : performance.now();
+      Tb() {
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : performance.now();
         if (!this.rings.length && !this.unseen.size) return;
-        const et = this.rings.filter((et => et.until > tt));
-        let Vt = et.length !== this.rings.length;
-        this.rings = et;
-        for (const [Ot, {
-            from: qt,
-            to: Dt
+        const Eu = this.rings.filter((Eu => Eu.until > uu));
+        let ju = Eu.length !== this.rings.length;
+        this.rings = Eu;
+        for (const [su, {
+            from: Uu,
+            to: Zu
           }] of this.unseen) {
-          const tt = this.itemAt(Ot);
-          (Ot === this.selectedSlot() || tt !== Dt && tt !== qt) && (this.unseen.delete(Ot), Vt = !0)
+          const uu = this.itemAt(su);
+          (su === this.selectedSlot() || uu !== Zu && uu !== Uu) && (this.unseen.delete(su), ju = !0)
         }
-        Vt && this.sw()
+        ju && this.TY()
       }
-      sw() {
+      TY() {
         this.view = {
           rings: [...this.rings],
           unseenSlots: [...this.unseen.keys()]
-        }, At.j.sw(it, this.view)
+        }, Bu.h.TY(Lu, this.view)
       }
     }
-    var xt = Vt(1554);
+    var Hu = ju(1499);
 
-    function Tt(tt) {
-      return document.querySelector(`.HotBar [data-inven-idx="${tt}"]`)
+    function Au(uu) {
+      return document.querySelector(`.HotBar [data-inven-idx="${uu}"]`)
     }
 
-    function gt(tt) {
+    function nu(uu) {
       let {
-        ring: et
-      } = tt;
-      const [Vt, Ot] = (0, qt.useState)(null);
-      return (0, qt.useLayoutEffect)((() => {
-        var tt, Vt;
-        Ot(null !== (tt = null === (Vt = Tt(et.slot)) || void 0 === Vt ? void 0 : Vt.getBoundingClientRect()) && void 0 !== tt ? tt : null)
-      }), [et]), Vt ? (0, kt.jsx)("div", {
+        ring: Eu
+      } = uu;
+      const [ju, su] = (0, Uu.useState)(null);
+      return (0, Uu.useLayoutEffect)((() => {
+        var uu, ju;
+        su(null !== (uu = null === (ju = Au(Eu.slot)) || void 0 === ju ? void 0 : ju.getBoundingClientRect()) && void 0 !== uu ? uu : null)
+      }), [Eu]), ju ? (0, Qu.jsx)("div", {
         className: "LuckyGearRing",
         style: {
-          left: Vt.left,
-          top: Vt.top,
-          width: Vt.width,
-          height: Vt.height,
-          "--ringColour": et.colour,
+          left: ju.left,
+          top: ju.top,
+          width: ju.width,
+          height: ju.height,
+          "--ringColour": Eu.colour,
           "--ringMs": "1200ms"
         }
       }) : null
     }
 
-    function st(tt) {
+    function yu(uu) {
       let {
-        slot: et
-      } = tt;
-      const [Vt, Ot] = (0, qt.useState)(null);
-      return (0, qt.useLayoutEffect)((() => {
-        const tt = () => {
-          Ot(Tt(et))
+        slot: Eu
+      } = uu;
+      const [ju, su] = (0, Uu.useState)(null);
+      return (0, Uu.useLayoutEffect)((() => {
+        const uu = () => {
+          su(Au(Eu))
         };
-        tt();
-        const Vt = new MutationObserver(tt),
-          qt = document.querySelector(".BottomMiddleElements");
-        return qt && Vt.observe(qt, {
+        uu();
+        const ju = new MutationObserver(uu),
+          Uu = document.querySelector(".BottomMiddleElements");
+        return Uu && ju.observe(Uu, {
           childList: !0,
           subtree: !0
         }), () => {
-          Vt.disconnect()
+          ju.disconnect()
         }
-      }), [et]), Vt ? (0, Ct.createPortal)((0, kt.jsx)("div", {
+      }), [Eu]), ju ? (0, Gu.createPortal)((0, Qu.jsx)("div", {
         className: "LuckyGearUnseen"
-      }), Vt) : null
+      }), ju) : null
     }
 
-    function nt(tt) {
+    function zu(uu) {
       let {
-        controller: et
-      } = tt;
-      const Vt = (0, xt.h)(it, et.getView());
-      return (0, kt.jsxs)(kt.Fragment, {
-        children: [Vt.rings.map((tt => (0, kt.jsx)(gt, {
-          ring: tt
-        }, tt.id))), Vt.unseenSlots.map((tt => (0, kt.jsx)(st, {
-          slot: tt
-        }, tt)))]
+        controller: Eu
+      } = uu;
+      const ju = (0, Hu.g)(Lu, Eu.getView());
+      return (0, Qu.jsxs)(Qu.Fragment, {
+        children: [ju.rings.map((uu => (0, Qu.jsx)(nu, {
+          ring: uu
+        }, uu.id))), ju.unseenSlots.map((uu => (0, Qu.jsx)(yu, {
+          slot: uu
+        }, uu)))]
       })
     }
-    const te = function(tt, et, Vt, mt) {
-      let dt, {
-          localPlayerId: jt
-        } = mt,
-        Ht = null;
-      const Xt = new Mt({
-          itemAt: tt => dt.getItemSlot(jt, tt),
-          selectedSlot: () => dt.getSelectedInventorySlotI(jt),
-          swap: (tt, et) => {
-            dt.swapInventorySlots(tt, et)
+    const Ru = function(uu, Eu, ju, Xu) {
+      let lu, {
+          localPlayerId: qu
+        } = Xu,
+        fu = null;
+      const Cu = new gu({
+          itemAt: uu => lu.getItemSlot(qu, uu),
+          selectedSlot: () => lu.getSelectedInventorySlotI(qu),
+          swap: (uu, Eu) => {
+            lu.swapInventorySlots(uu, Eu)
           }
         }),
-        Qt = new pt((() => dt.getSelectedInventorySlotI(jt)), (tt => {
-          var et;
-          return null === (et = dt.getItemSlot(jt, tt)) || void 0 === et ? void 0 : et.name
+        bu = new Tu((() => lu.getSelectedInventorySlotI(qu)), (uu => {
+          var Eu;
+          return null === (Eu = lu.getItemSlot(qu, uu)) || void 0 === Eu ? void 0 : Eu.name
         }));
       return {
         plugins: {
-          placeAgainstBeds: (0, Dt.c)()
+          placeAgainstBeds: (0, Zu.b)()
         },
-        onCreate: tt => {
-          dt = tt, Ht = (0, Jt.q)((0, qt.createElement)(qt.Fragment, null, (0, qt.createElement)(ot), (0, qt.createElement)(nt, {
-            controller: Qt
+        onCreate: uu => {
+          lu = uu, fu = (0, eu.o)((0, Uu.createElement)(Uu.Fragment, null, (0, Uu.createElement)(Su), (0, Uu.createElement)(zu, {
+            controller: bu
           })))
         },
         onClose: () => {
-          var tt;
-          null === (tt = Ht) || void 0 === tt || tt()
+          var uu;
+          null === (uu = fu) || void 0 === uu || uu()
         },
-        BQ: () => {
-          Xt.BQ(), Qt.BQ()
+        Tb: () => {
+          Cu.Tb(), bu.Tb()
         },
-        onReceivedMessageFromServer: (tt, et) => {
-          "luckyGearUpgrade" === tt && Qt.Qf(et)
+        onReceivedMessageFromServer: (uu, Eu) => {
+          "luckyGearUpgrade" === uu && bu.NO(Eu)
         },
-        onPlayerChangeBlock: (tt, et, Vt, Ot, qt, Dt) => {
-          "Air" !== Dt && Xt.onPlace(Dt)
+        onPlayerChangeBlock: (uu, Eu, ju, su, Uu, Zu) => {
+          "Air" !== Zu && Cu.onPlace(Zu)
         },
-        onPlayerDropItem: (tt, et, Vt, Ot) => {
-          Xt.onDrop(et, Ot)
+        onPlayerDropItem: (uu, Eu, ju, su) => {
+          Cu.onDrop(Eu, su)
         },
-        onPlayerAltAction: (tt, et, Vt, qt, Dt, mt) => {
-          if (!mt || "Mesh" !== dt.getEntityType(mt)) return;
-          const jt = dt.getEntityName(mt),
-            Ht = Object.values(Ot).find((tt => tt.name === jt));
-          Ht && dt.openShop(tt, !1, Ht.shopTab)
+        onPlayerAltAction: (uu, Eu, ju, Uu, Zu, Xu) => {
+          if (!Xu || "Mesh" !== lu.getEntityType(Xu)) return;
+          const qu = lu.getEntityName(Xu),
+            fu = Object.values(su).find((uu => uu.name === qu));
+          fu && lu.openShop(uu, !1, fu.shopTab)
         }
       }
     }
   },
-  38281: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => dt
+  38413: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => lu
     });
-    var Ot = Vt(391),
-      qt = Vt(37172),
-      Dt = Vt(4614);
-    const mt = ["Leaf Bed", "_Leaf Bed Head", ...Ot.Nc.flatMap((tt => [`${tt} Bed`, `_${tt} Bed Head`, `${tt} Strongbed`, `_${tt} Strongbed Head`]))];
+    var su = ju(349),
+      Uu = ju(37332),
+      Zu = ju(4660);
+    const Xu = ["Leaf Bed", "_Leaf Bed Head", ...su.Lc.flatMap((uu => [`${uu} Bed`, `_${uu} Bed Head`, `${uu} Strongbed`, `_${uu} Strongbed Head`]))];
 
-    function dt() {
-      let tt;
+    function lu() {
+      let uu;
       return {
-        onCreate(et) {
-          tt = et
+        onCreate(Eu) {
+          uu = Eu
         },
-        altVetoBlocks: mt,
-        onPlayerAttemptAltAction(et, Vt, Ot, mt, dt, jt) {
-          var Ht;
-          if ((0, qt.e)(tt.getMetaInfo(dt).rootName) && !tt.isEntityInteractable(jt) && (0, Dt.e)(null === (Ht = tt.bVt(et)) || void 0 === Ht ? void 0 : Ht.typeObj.type)) return "preventAction"
+        altVetoBlocks: Xu,
+        onPlayerAttemptAltAction(Eu, ju, su, Xu, lu, qu) {
+          var fu;
+          if ((0, Uu.d)(uu.getMetaInfo(lu).rootName) && !uu.isEntityInteractable(qu) && (0, Zu.d)(null === (fu = uu.yEu(Eu)) || void 0 === fu ? void 0 : fu.typeObj.type)) return "preventAction"
         }
       }
     }
   },
-  37172: (tt, et, Vt) => {
-    function Ot(tt) {
-      return tt.includes("Leaf Bed")
+  37332: (uu, Eu, ju) => {
+    function su(uu) {
+      return uu.includes("Leaf Bed")
     }
 
-    function qt(tt) {
-      return / Bed(?: Head)?(?:\||$)/.test(tt) && !Ot(tt)
+    function Uu(uu) {
+      return / Bed(?: Head)?(?:\||$)/.test(uu) && !su(uu)
     }
 
-    function Dt(tt) {
-      return tt.includes(" Strongbed")
+    function Zu(uu) {
+      return uu.includes(" Strongbed")
     }
 
-    function mt(tt) {
-      return Ot(tt) || qt(tt) || Dt(tt)
+    function Xu(uu) {
+      return su(uu) || Uu(uu) || Zu(uu)
     }
-    Vt.d(et, {
-      e: () => mt,
-      i: () => Ot,
-      l: () => Dt,
-      o: () => qt
+    ju.d(Eu, {
+      d: () => Xu,
+      f: () => su,
+      j: () => Zu,
+      n: () => Uu
     })
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

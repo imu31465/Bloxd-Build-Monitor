@@ -1,30 +1,30 @@
-/*! For license information please see igzsf.wasmMatchmaking.7634980f.chunk.js.LICENSE.txt */
+/*! For license information please see dz8ef.wasmMatchmaking.868dc4fa.chunk.js.LICENSE.txt */
 export const id = 63;
 export const ids = [63];
 export const modules = {
-  36785: (tt, et) => {
-    function Vt(tt) {
-      if (tt && "object" === typeof tt) {
-        var et = tt.which || tt.keyCode || tt.charCode;
-        et && (tt = et)
+  36925: (uu, Eu) => {
+    function ju(uu) {
+      if (uu && "object" === typeof uu) {
+        var Eu = uu.which || uu.keyCode || uu.charCode;
+        Eu && (uu = Eu)
       }
-      if ("number" === typeof tt) return mt[tt];
-      var Vt, Dt = String(tt);
-      return (Vt = Ot[Dt.toLowerCase()]) ? Vt : (Vt = qt[Dt.toLowerCase()]) || (1 === Dt.length ? Dt.charCodeAt(0) : void 0)
+      if ("number" === typeof uu) return Xu[uu];
+      var ju, Zu = String(uu);
+      return (ju = su[Zu.toLowerCase()]) ? ju : (ju = Uu[Zu.toLowerCase()]) || (1 === Zu.length ? Zu.charCodeAt(0) : void 0)
     }
-    Vt.isEventKey = function(tt, et) {
-      if (tt && "object" === typeof tt) {
-        var Vt = tt.which || tt.keyCode || tt.charCode;
-        if (null === Vt || void 0 === Vt) return !1;
-        if ("string" === typeof et) {
-          var Dt;
-          if (Dt = Ot[et.toLowerCase()]) return Dt === Vt;
-          if (Dt = qt[et.toLowerCase()]) return Dt === Vt
-        } else if ("number" === typeof et) return et === Vt;
+    ju.isEventKey = function(uu, Eu) {
+      if (uu && "object" === typeof uu) {
+        var ju = uu.which || uu.keyCode || uu.charCode;
+        if (null === ju || void 0 === ju) return !1;
+        if ("string" === typeof Eu) {
+          var Zu;
+          if (Zu = su[Eu.toLowerCase()]) return Zu === ju;
+          if (Zu = Uu[Eu.toLowerCase()]) return Zu === ju
+        } else if ("number" === typeof Eu) return Eu === ju;
         return !1
       }
     };
-    var Ot = (et = tt.exports = Vt).code = et.codes = {
+    var su = (Eu = uu.exports = ju).code = Eu.codes = {
         backspace: 8,
         tab: 9,
         enter: 13,
@@ -69,7 +69,7 @@ export const modules = {
         "]": 221,
         "'": 222
       },
-      qt = et.aliases = {
+      Uu = Eu.aliases = {
         windows: 91,
         "\u21e7": 16,
         "\u2325": 18,
@@ -91,47 +91,47 @@ export const modules = {
         del: 46,
         cmd: 91
       };
-    for (Dt = 97; Dt < 123; Dt++) Ot[String.fromCharCode(Dt)] = Dt - 32;
-    for (var Dt = 48; Dt < 58; Dt++) Ot[Dt - 48] = Dt;
-    for (Dt = 1; Dt < 13; Dt++) Ot["f" + Dt] = Dt + 111;
-    for (Dt = 0; Dt < 10; Dt++) Ot["numpad " + Dt] = Dt + 96;
-    var mt = et.names = et.title = {};
-    for (Dt in Ot) mt[Ot[Dt]] = Dt;
-    for (var dt in qt) Ot[dt] = qt[dt]
+    for (Zu = 97; Zu < 123; Zu++) su[String.fromCharCode(Zu)] = Zu - 32;
+    for (var Zu = 48; Zu < 58; Zu++) su[Zu - 48] = Zu;
+    for (Zu = 1; Zu < 13; Zu++) su["f" + Zu] = Zu + 111;
+    for (Zu = 0; Zu < 10; Zu++) su["numpad " + Zu] = Zu + 96;
+    var Xu = Eu.names = Eu.title = {};
+    for (Zu in su) Xu[su[Zu]] = Zu;
+    for (var lu in Uu) su[lu] = Uu[lu]
   },
-  36950: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => mt
+  37080: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => Xu
     });
-    var Ot = Vt(63);
-    const qt = Ot.useLayoutEffect;
-    const Dt = function(tt) {
-      var et = (0, Ot.useRef)(tt);
-      return qt((function() {
-        et.current = tt
-      })), et
+    var su = ju(58);
+    const Uu = su.useLayoutEffect;
+    const Zu = function(uu) {
+      var Eu = (0, su.useRef)(uu);
+      return Uu((function() {
+        Eu.current = uu
+      })), Eu
     };
-    var mt = function(tt) {
-      var et = Dt(tt);
-      (0, Ot.useEffect)((function() {
-        var tt = function(tt) {
-          var Vt;
-          if (null != et.current && (Vt = et.current(tt)), tt.defaultPrevented && (tt.returnValue = ""), "string" === typeof Vt) return tt.returnValue = Vt, Vt
+    var Xu = function(uu) {
+      var Eu = Zu(uu);
+      (0, su.useEffect)((function() {
+        var uu = function(uu) {
+          var ju;
+          if (null != Eu.current && (ju = Eu.current(uu)), uu.defaultPrevented && (uu.returnValue = ""), "string" === typeof ju) return uu.returnValue = ju, ju
         };
-        return window.addEventListener("beforeunload", tt),
+        return window.addEventListener("beforeunload", uu),
           function() {
-            window.removeEventListener("beforeunload", tt)
+            window.removeEventListener("beforeunload", uu)
           }
       }), [])
     }
   },
-  36830: tt => {
-    var et, Vt = "undefined" !== typeof window ? window.navigator.userAgent : "",
-      Ot = /OS X/.test(Vt),
-      qt = /Opera/.test(Vt),
-      Dt = !/like Gecko/.test(Vt) && !qt,
-      mt = tt.exports = {
-        0: Ot ? "<menu>" : "<UNK>",
+  36973: uu => {
+    var Eu, ju = "undefined" !== typeof window ? window.navigator.userAgent : "",
+      su = /OS X/.test(ju),
+      Uu = /Opera/.test(ju),
+      Zu = !/like Gecko/.test(ju) && !Uu,
+      Xu = uu.exports = {
+        0: su ? "<menu>" : "<UNK>",
         1: "<mouse 1>",
         2: "<mouse 2>",
         3: "<break>",
@@ -174,7 +174,7 @@ export const modules = {
         47: "<help>",
         91: "<meta>",
         92: "<meta>",
-        93: Ot ? "<meta>" : "<menu>",
+        93: su ? "<meta>" : "<menu>",
         95: "<sleep>",
         106: "<num-*>",
         107: "<num-+>",
@@ -197,7 +197,7 @@ export const modules = {
         170: "<browser-search>",
         171: "<browser-favorites>",
         172: "<browser-home>",
-        173: Ot && Dt ? "-" : "<volume-mute>",
+        173: su && Zu ? "-" : "<volume-mute>",
         174: "<volume-down>",
         175: "<volume-up>",
         176: "<next-track>",
@@ -223,7 +223,7 @@ export const modules = {
         224: "<meta>",
         226: "<alt-gr>",
         229: "<ime-process>",
-        231: qt ? "`" : "<unicode>",
+        231: Uu ? "`" : "<unicode>",
         246: "<attention>",
         247: "<crsel>",
         248: "<exsel>",
@@ -234,322 +234,322 @@ export const modules = {
         253: "<pa-1>",
         254: "<clear>"
       };
-    for (et = 58; et < 65; ++et) mt[et] = String.fromCharCode(et);
-    for (et = 48; et < 58; ++et) mt[et] = et - 48 + "";
-    for (et = 65; et < 91; ++et) mt[et] = String.fromCharCode(et);
-    for (et = 96; et < 106; ++et) mt[et] = "<num-" + (et - 96) + ">";
-    for (et = 112; et < 136; ++et) mt[et] = "F" + (et - 111)
+    for (Eu = 58; Eu < 65; ++Eu) Xu[Eu] = String.fromCharCode(Eu);
+    for (Eu = 48; Eu < 58; ++Eu) Xu[Eu] = Eu - 48 + "";
+    for (Eu = 65; Eu < 91; ++Eu) Xu[Eu] = String.fromCharCode(Eu);
+    for (Eu = 96; Eu < 106; ++Eu) Xu[Eu] = "<num-" + (Eu - 96) + ">";
+    for (Eu = 112; Eu < 136; ++Eu) Xu[Eu] = "F" + (Eu - 111)
   },
-  9140: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => Dt,
-      d: () => qt
+  9136: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => Zu,
+      h: () => Uu
     });
-    let Ot = !1;
+    let su = !1;
 
-    function qt() {
-      Ot = !0
+    function Uu() {
+      su = !0
     }
 
-    function Dt() {
-      return Ot
+    function Zu() {
+      return su
     }
   },
-  36693: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      InGameUi: () => Ct.d,
-      LobbyLeaderboard: () => ut.b,
-      loadCharacterCustomisationUI: () => Kt,
-      loadCharacterPreview: () => ht,
-      matchmakeAndPlay: () => ct,
-      matchmakeForAhead: () => dt.f,
-      setUpGame: () => vt
+  36832: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      InGameUi: () => Gu.d,
+      LobbyLeaderboard: () => pu.d,
+      loadCharacterCustomisationUI: () => wu,
+      loadCharacterPreview: () => Ju,
+      matchmakeAndPlay: () => ou,
+      matchmakeForAhead: () => lu.g,
+      setUpGame: () => du
     });
-    var Ot = Vt(1333),
-      qt = Vt(184),
-      Dt = Vt(26),
-      mt = Vt(36695),
-      dt = Vt(36697),
-      jt = Vt(2043),
-      Ht = Vt(36742);
+    var su = ju(1301),
+      Uu = ju(166),
+      Zu = ju(22),
+      Xu = ju(36840),
+      lu = ju(36845),
+      qu = ju(2011),
+      fu = ju(36873);
 
-    function Xt() {
-      return !1 !== jt.b.get("canCustomiseChar")
+    function Cu() {
+      return !1 !== qu.e.get("canCustomiseChar")
     }
-    let Qt = !1;
-    var lt = Vt(1423),
-      Et = Vt(1338),
-      ft = Vt(287),
-      wt = Vt(3643),
-      yt = Vt(9140),
-      Nt = Vt(9138);
+    let bu = !1;
+    var cu = ju(1369),
+      Nu = ju(1303),
+      Ou = ju(257),
+      Yu = ju(3774),
+      hu = ju(9136),
+      Du = ju(9130);
 
-    function Mt() {
-      (0, yt.c)() || (0, Nt.b)().catch((tt => {
-        console.warn("[bloxd-wasm-client] the play chunk did not load ahead of a join: the join loads it itself", tt)
+    function gu() {
+      (0, hu.d)() || (0, Du.d)().catch((uu => {
+        console.warn("[bloxd-wasm-client] the play chunk did not load ahead of a join: the join loads it itself", uu)
       }))
     }
-    var bt = Vt(3510),
-      Jt = Vt(1849);
-    var Ct = Vt(36753),
-      ut = Vt(37247);
+    var Mu = ju(3634),
+      eu = ju(1807);
+    var Gu = ju(36882),
+      pu = ju(37406);
 
-    function Kt() {
-      return Vt.e(220).then((() => Vt(41508)))
+    function wu() {
+      return ju.e(220).then((() => ju(41513)))
     }
 
-    function ht() {
-      return Vt.e(296).then((() => Vt(41510)))
+    function Ju() {
+      return ju.e(296).then((() => ju(41520)))
     }
 
-    function vt() {
-      return (0, Nt.f)()
+    function du() {
+      return (0, Du.k)()
     }
-    Qt || (Qt = !0, document.addEventListener("keydown", (tt => {
-        (0, Ht.b)(tt, Xt)
+    bu || (bu = !0, document.addEventListener("keydown", (uu => {
+        (0, fu.b)(uu, Cu)
       }))),
-      function(tt) {
-        var et;
-        return !0 !== (null === tt || void 0 === tt ? void 0 : tt.saveData) && !/2g$/.test(null !== (et = null === tt || void 0 === tt ? void 0 : tt.effectiveType) && void 0 !== et ? et : "")
-      }(navigator.connection) && (0, wt.e)((() => {
-        (0, yt.c)() || Promise.all([Vt.e(78), Vt.e(90), Vt.e(215), Vt.e(214), Vt.e(137), Vt.e(140), Vt.e(59)]).then((() => Vt(41248))).then((async tt => {
-          (0, yt.c)() || (await tt.startLoadAheadOfJoin({
-            joinStarted: yt.c,
-            language: Et.e.get().getCurrentLanguageCode()
-          }), (0, ft.c)(Mt))
-        }), (tt => {
-          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", tt)
+      function(uu) {
+        var Eu;
+        return !0 !== (null === uu || void 0 === uu ? void 0 : uu.saveData) && !/2g$/.test(null !== (Eu = null === uu || void 0 === uu ? void 0 : uu.effectiveType) && void 0 !== Eu ? Eu : "")
+      }(navigator.connection) && (0, Yu.e)((() => {
+        (0, hu.d)() || Promise.all([ju.e(78), ju.e(90), ju.e(215), ju.e(214), ju.e(137), ju.e(140), ju.e(59)]).then((() => ju(41269))).then((async uu => {
+          (0, hu.d)() || (await uu.startLoadAheadOfJoin({
+            joinStarted: hu.d,
+            language: Nu.h.get().getCurrentLanguageCode()
+          }), (0, Ou.b)(gu))
+        }), (uu => {
+          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", uu)
         }))
       }));
-    const Wt = Dt.b.get("router");
-    null === Wt ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function tt(et) {
-      if ((0, Jt.b)(et.state.location.pathname)) return void(0, Nt.d)().catch((() => {}));
-      const Vt = et.subscribe((Ot => {
-        (0, Jt.b)(Ot.location.pathname) && (Vt(), (0, bt.e)().then((() => {
-          tt(et)
+    const au = Zu.d.get("router");
+    null === au ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function uu(Eu) {
+      if ((0, eu.c)(Eu.state.location.pathname)) return void(0, Du.g)().catch((() => {}));
+      const ju = Eu.subscribe((su => {
+        (0, eu.c)(su.location.pathname) && (ju(), (0, Mu.e)().then((() => {
+          uu(Eu)
         })))
       }))
-    }(Wt), (0, mt.e)();
-    const St = (0, dt.d)((async function(tt, et) {
+    }(au), (0, Xu.d)();
+    const Pu = (0, lu.e)((async function(uu, Eu) {
       let {
-        place: Vt,
-        userContext: Dt,
-        direct: mt,
-        matchedAt: dt,
-        rematch: jt
-      } = tt;
-      const Ht = mt ? 1 / 0 : dt;
-      let Xt;
+        place: ju,
+        userContext: Zu,
+        direct: Xu,
+        matchedAt: lu,
+        rematch: qu
+      } = uu;
+      const fu = Xu ? 1 / 0 : lu;
+      let Cu;
       try {
-        Xt = await (0, Nt.d)()
-      } catch (Qt) {
-        return console.error("The wasm client did not load:", Qt), (0, lt.o)({
+        Cu = await (0, Du.g)()
+      } catch (bu) {
+        return console.error("The wasm client did not load:", bu), (0, cu.m)({
           websocketUrl: null
-        }), Ot.e.errorWithCode(String(Qt), qt.n.CONNECT_TO_GAME_SERVER, {
-          error: Qt,
-          severity: et.aborted ? "low" : "medium",
-          nV: et.aborted
+        }), su.c.errorWithCode(String(bu), Uu.j.CONNECT_TO_GAME_SERVER, {
+          error: bu,
+          severity: Eu.aborted ? "low" : "medium",
+          Lj: Eu.aborted
         })
       }
-      return Xt.playWasmGame({
-        userContext: Dt,
-        place: Vt,
-        matchedAt: Ht,
-        rematch: jt
-      }, et)
+      return Cu.playWasmGame({
+        userContext: Zu,
+        place: ju,
+        matchedAt: fu,
+        rematch: qu
+      }, Eu)
     }));
 
-    function ct() {
-      return (0, Nt.d)().catch((() => {})), St(...arguments)
+    function ou() {
+      return (0, Du.g)().catch((() => {})), Pu(...arguments)
     }
   },
-  9138: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => Et,
-      d: () => lt,
-      f: () => ft
+  9130: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => Nu,
+      g: () => cu,
+      k: () => Ou
     });
-    var Ot = Vt(3217),
-      qt = Vt(2331),
-      Dt = Vt(2208),
-      mt = Vt(4791),
-      dt = Vt(3564),
-      jt = Vt(9140);
-    let Ht = null;
+    var su = ju(3336),
+      Uu = ju(2401),
+      Zu = ju(2222),
+      Xu = ju(4830),
+      lu = ju(3691),
+      qu = ju(9136);
+    let fu = null;
 
-    function Xt() {
-      return Promise.all([Vt.e(75), Vt.e(78), Vt.e(90), Vt.e(215), Vt.e(214), Vt.e(160), Vt.e(137), Vt.e(198), Vt.e(140), Vt.e(88), Vt.e(275), Vt.e(64)]).then((() => Vt(40874)))
+    function Cu() {
+      return Promise.all([ju.e(75), ju.e(78), ju.e(90), ju.e(215), ju.e(214), ju.e(160), ju.e(137), ju.e(198), ju.e(140), ju.e(88), ju.e(275), ju.e(64)]).then((() => ju(40930)))
     }
 
-    function Qt() {
-      Promise.all([Vt.e(73), Vt.e(76), Vt.e(75), Vt.e(74), Vt.e(90), Vt.e(87), Vt.e(273), Vt.e(191), Vt.e(228), Vt.e(252), Vt.e(275), Vt.e(47)]).then((() => Vt(41197))).catch((() => {}))
+    function bu() {
+      Promise.all([ju.e(73), ju.e(76), ju.e(75), ju.e(74), ju.e(90), ju.e(87), ju.e(273), ju.e(191), ju.e(228), ju.e(252), ju.e(275), ju.e(47)]).then((() => ju(41221))).catch((() => {}))
     }
 
-    function lt() {
-      return mt.d.cancelDownloadForJoin(), (0, dt.c)(), (0, qt.f)(), (0, jt.d)(), (0, Dt.h)(), Qt(), Promise.all([Vt.e(78), Vt.e(90), Vt.e(215), Vt.e(214), Vt.e(137), Vt.e(140), Vt.e(59)]).then((() => Vt(41248))).then((tt => {
+    function cu() {
+      return Xu.e.cancelDownloadForJoin(), (0, lu.e)(), (0, Uu.e)(), (0, qu.h)(), (0, Zu.j)(), bu(), Promise.all([ju.e(78), ju.e(90), ju.e(215), ju.e(214), ju.e(137), ju.e(140), ju.e(59)]).then((() => ju(41269))).then((uu => {
         let {
-          startJoinLoad: et
-        } = tt;
-        et()
-      }), (() => {})), Ht ??= Xt().then((tt => (tt.startWasmPlay(), tt.followPageUiPack((tt => {
-        Ot.e.showGamePack(tt)
-      })), tt)), (tt => {
-        throw Ht = null, tt
-      })), Ht
+          startJoinLoad: Eu
+        } = uu;
+        Eu()
+      }), (() => {})), fu ??= Cu().then((uu => (uu.startWasmPlay(), uu.followPageUiPack((uu => {
+        su.d.showGamePack(uu)
+      })), uu)), (uu => {
+        throw fu = null, uu
+      })), fu
     }
 
-    function Et() {
-      return Qt(), Vt.e(276).then((() => Vt(41257))).catch((() => {})), Xt().then((() => {}))
+    function Nu() {
+      return bu(), ju.e(276).then((() => ju(41276))).catch((() => {})), Cu().then((() => {}))
     }
 
-    function ft() {
-      return Xt().then((tt => {
-        tt.startWasmPreviews(), tt.prefetchWasmPreviews()
+    function Ou() {
+      return Cu().then((uu => {
+        uu.startWasmPreviews(), uu.prefetchWasmPreviews()
       }))
     }
   },
-  36709: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => lt,
-      d: () => Xt,
-      f: () => Et,
-      j: () => Qt
+  36856: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => cu,
+      d: () => Cu,
+      f: () => Nu,
+      g: () => bu
     });
-    var Ot = Vt(391),
-      qt = Vt(736),
-      Dt = Vt(741),
-      mt = Vt(39);
-    const dt = {
+    var su = ju(349),
+      Uu = ju(692),
+      Zu = ju(709),
+      Xu = ju(31);
+    const lu = {
         idStorageKey: "playSessionId",
         lastActivityStorageKey: "playSessionLastActivityMs",
         expiryMs: 3e5
       },
-      jt = "playSessionGameNameWithVariation",
-      Ht = "wasMatchmakePlayer";
+      qu = "playSessionGameNameWithVariation",
+      fu = "wasMatchmakePlayer";
 
-    function Xt() {
-      let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : mt.h;
-      (0, Dt.h)(tt, dt)
+    function Cu() {
+      let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Xu.l;
+      (0, Zu.j)(uu, lu)
     }
 
-    function Qt() {
-      (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : mt.h).setItem(Ht, !0)
+    function bu() {
+      (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Xu.l).setItem(fu, !0)
     }
 
-    function lt() {
-      let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : mt.h;
-      return (0, Dt.d)(tt, dt)
+    function cu() {
+      let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Xu.l;
+      return (0, Zu.c)(uu, lu)
     }
 
-    function Et(tt) {
-      let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : mt.h;
-      const Vt = (0, Dt.d)(et, dt),
-        Xt = function(tt) {
-          const et = tt.getItem(jt);
-          return "string" !== typeof et ? null : et
-        }(et),
-        Qt = function() {
-          return !0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : mt.h).getItem(Ht)
-        }(et);
-      let lt;
-      return lt = null !== Vt && null !== Xt && (0, Dt.g)(et, dt) && function(tt, et, Vt) {
-          const qt = (0, Ot.bc)(tt),
-            Dt = (0, Ot.bc)(et),
-            mt = (0, Ot.Wb)(tt),
-            dt = (0, Ot.Wb)(et);
-          return !(qt !== Dt || !Vt) || qt === Dt && mt === dt
-        }(Xt, tt, Qt) ? Vt : (0, qt.b)(), (0, Dt.k)(et, dt, lt), et.setItem(jt, tt),
+    function Nu(uu) {
+      let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Xu.l;
+      const ju = (0, Zu.c)(Eu, lu),
+        Cu = function(uu) {
+          const Eu = uu.getItem(qu);
+          return "string" !== typeof Eu ? null : Eu
+        }(Eu),
+        bu = function() {
+          return !0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Xu.l).getItem(fu)
+        }(Eu);
+      let cu;
+      return cu = null !== ju && null !== Cu && (0, Zu.g)(Eu, lu) && function(uu, Eu, ju) {
+          const Uu = (0, su.Vb)(uu),
+            Zu = (0, su.Vb)(Eu),
+            Xu = (0, su.Qb)(uu),
+            lu = (0, su.Qb)(Eu);
+          return !(Uu !== Zu || !ju) || Uu === Zu && Xu === lu
+        }(Cu, uu, bu) ? ju : (0, Uu.e)(), (0, Zu.m)(Eu, lu, cu), Eu.setItem(qu, uu),
         function() {
-          (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : mt.h).removeItem(Ht)
-        }(et), lt
+          (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Xu.l).removeItem(fu)
+        }(Eu), cu
     }
   },
-  36701: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => Ct,
-      e: () => ut
+  36850: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => Gu,
+      f: () => pu
     });
-    var Ot = Vt(1103),
-      qt = Vt(241),
-      Dt = Vt(388),
-      mt = Vt(712),
-      dt = Vt(391),
-      jt = Vt(1109),
-      Ht = Vt(725),
-      Xt = Vt(757),
-      Qt = Vt(4655),
-      lt = Vt(106),
-      Et = Vt(153),
-      ft = Vt(1826),
-      wt = Vt(129),
-      yt = Vt(36709),
-      Nt = Vt(39),
-      Mt = Vt(738),
-      bt = Vt(717),
-      Jt = Vt(36715);
+    var su = ju(1069),
+      Uu = ju(207),
+      Zu = ju(345),
+      Xu = ju(656),
+      lu = ju(349),
+      qu = ju(1072),
+      fu = ju(680),
+      Cu = ju(719),
+      bu = ju(4709),
+      cu = ju(91),
+      Nu = ju(131),
+      Ou = ju(1779),
+      Yu = ju(107),
+      hu = ju(36856),
+      Du = ju(31),
+      gu = ju(701),
+      Mu = ju(663),
+      eu = ju(36860);
 
-    function Ct() {
-      var tt, et;
-      return [...null !== (tt = navigator.languages) && void 0 !== tt ? tt : [null !== (et = navigator.language) && void 0 !== et ? et : "none"], "en-Gb"]
+    function Gu() {
+      var uu, Eu;
+      return [...null !== (uu = navigator.languages) && void 0 !== uu ? uu : [null !== (Eu = navigator.language) && void 0 !== Eu ? Eu : "none"], "en-Gb"]
     }
 
-    function ut(tt, et, Vt, ut, Kt) {
-      const ht = (0, Ot.k)(et) ? (0, Ot.p)(et) : null,
-        vt = tt.isLoggedIn() && void 0 !== (0, qt.c)(Dt.j, Et.siteUsed) ? (0, bt.g)() : null,
-        Wt = {
-          cookies: (0, ft.getAllCookiesForGameNameWithVariation)(et),
-          isMobile: (0, lt.isMobile)(),
-          isUsingCustomGameTexturePack: null !== ht && Kt(ht),
+    function pu(uu, Eu, ju, pu, wu) {
+      const Ju = (0, su.l)(Eu) ? (0, su.q)(Eu) : null,
+        du = uu.isLoggedIn() && void 0 !== (0, Uu.c)(Zu.q, Nu.siteUsed) ? (0, Mu.h)() : null,
+        au = {
+          cookies: (0, Ou.getAllCookiesForGameNameWithVariation)(Eu),
+          isMobile: (0, cu.isMobile)(),
+          isUsingCustomGameTexturePack: null !== Ju && wu(Ju),
           generalCookies: {
-            joinDiscord: !!Nt.e.getItem("DiscordPressed"),
-            newGo: Qt.d,
-            ...tt.getMetricsCookies(),
-            trafficCode: ut,
-            compliance: lt.compliance
+            joinDiscord: !!Du.k.getItem("DiscordPressed"),
+            newGo: bu.e,
+            ...uu.getMetricsCookies(),
+            trafficCode: pu,
+            compliance: cu.compliance
           },
           browserInfo: {
             ua: window.navigator.userAgent,
-            name: (0, lt.getBrowserName)(),
-            version: (0, lt.getBrowserVersion)(),
+            name: (0, cu.getBrowserName)(),
+            version: (0, cu.getBrowserVersion)(),
             platform: navigator.platform,
-            platformType: (0, lt.getPlatformType)(),
-            deviceType: (0, wt.d)()
+            platformType: (0, cu.getPlatformType)(),
+            deviceType: (0, Yu.c)()
           },
-          isLoggedIn: tt.isLoggedIn(),
-          lobbyName: Vt,
-          languages: Ct(),
-          version: mt.d,
-          siteUsed: Et.siteUsed,
-          subsiteUsed: Et.subsiteUsed,
-          playSessionId: (0, yt.f)(et),
-          visitSessionId: (0, Mt.e)(),
-          clientReason: Ht.u.reason,
-          budgetBasis: (0, Jt.g)(),
-          ...null !== Xt.p && {
-            diagClaim: Xt.p.claimId
+          isLoggedIn: uu.isLoggedIn(),
+          lobbyName: ju,
+          languages: Gu(),
+          version: Xu.b,
+          siteUsed: Nu.siteUsed,
+          subsiteUsed: Nu.subsiteUsed,
+          playSessionId: (0, hu.f)(Eu),
+          visitSessionId: (0, gu.f)(),
+          clientReason: fu.r.reason,
+          budgetBasis: (0, eu.h)(),
+          ...null !== Cu.s && {
+            diagClaim: Cu.s.claimId
           },
-          ...null !== vt && {
-            webGpuLoss: vt
+          ...null !== du && {
+            webGpuLoss: du
           }
         };
-      return null !== ht && (0, dt.Jc)(ht) ? (Wt.lobbyName = (0, Ot.i)(ht, (0, Ot.o)(et), Vt), {
-        roomName: `classic_${jt.f}`,
-        joinOptions: Wt
+      return null !== Ju && (0, lu.Ic)(Ju) ? (au.lobbyName = (0, su.h)(Ju, (0, su.m)(Eu), ju), {
+        roomName: `classic_${qu.f}`,
+        joinOptions: au
       }) : {
-        roomName: et,
-        joinOptions: Wt
+        roomName: Eu,
+        joinOptions: au
       }
     }
   },
-  9512: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => qt,
-      e: () => Dt
+  9505: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => Uu,
+      g: () => Zu
     });
-    var Ot = Vt(9466);
-    const qt = "Air",
-      Dt = Object.freeze(new Ot.d(qt, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var su = ju(9456);
+    const Uu = "Air",
+      Zu = Object.freeze(new su.h(Uu, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

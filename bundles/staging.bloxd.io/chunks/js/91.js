@@ -1,58 +1,58 @@
 export const id = 91;
 export const ids = [91];
 export const modules = {
-  36616: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => Xt,
-      g: () => dt,
-      j: () => Ht,
-      k: () => jt,
-      o: () => bt
+  36770: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => Cu,
+      g: () => lu,
+      i: () => fu,
+      m: () => qu,
+      q: () => Mu
     });
-    var Ot = Vt(712),
-      qt = Vt(1842),
-      Dt = Vt(4963);
-    class mt {
-      constructor(tt, et) {
-        this.width = tt, this.uQ = et, this.data = void 0, this.next = 0, this.size = 0, this.data = new Float64Array(tt * et)
+    var su = ju(656),
+      Uu = ju(1802),
+      Zu = ju(4976);
+    class Xu {
+      constructor(uu, Eu) {
+        this.width = uu, this.Mb = Eu, this.data = void 0, this.next = 0, this.size = 0, this.data = new Float64Array(uu * Eu)
       }
-      push(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const Vt = this.data,
-          Ot = this.next * this.width;
-        for (let qt = 0; qt < this.width; qt++) Vt[Ot + qt] = tt[et + qt];
-        this.next = (this.next + 1) % this.uQ, this.size = Math.min(this.size + 1, this.uQ)
+      push(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const ju = this.data,
+          su = this.next * this.width;
+        for (let Uu = 0; Uu < this.width; Uu++) ju[su + Uu] = uu[Eu + Uu];
+        this.next = (this.next + 1) % this.Mb, this.size = Math.min(this.size + 1, this.Mb)
       }
       rows() {
-        let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1 / 0;
-        const Vt = [],
-          Ot = (this.next - this.size + this.uQ) % this.uQ;
-        for (let qt = 0; qt < this.size; qt++) {
-          const Dt = (Ot + qt) % this.uQ * this.width;
-          this.data[Dt + tt] >= et && Vt.push(Array.from(this.data.subarray(Dt, Dt + this.width)))
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1 / 0;
+        const ju = [],
+          su = (this.next - this.size + this.Mb) % this.Mb;
+        for (let Uu = 0; Uu < this.size; Uu++) {
+          const Zu = (su + Uu) % this.Mb * this.width;
+          this.data[Zu + uu] >= Eu && ju.push(Array.from(this.data.subarray(Zu, Zu + this.width)))
         }
-        return Vt
+        return ju
       }
       lines() {
-        return this.rows().map((tt => tt.join(",")))
+        return this.rows().map((uu => uu.join(",")))
       }
     }
-    const dt = 10,
-      jt = {
+    const lu = 10,
+      qu = {
         idle: 0,
-        hE: 1,
-        qI: 2,
-        mI: 3,
-        my: 4
+        oN: 1,
+        XV: 2,
+        lV: 3,
+        uh: 4
       },
-      Ht = {
+      fu = {
         none: 0,
         skipped: 1,
         paced: 2,
         drawn: 3
       },
-      Xt = {
+      Cu = {
         lockGained: 1,
         lockLost: 2,
         lockError: 3,
@@ -66,91 +66,91 @@ export const modules = {
         stepsLost: 11,
         cameraSetsLost: 12
       },
-      Qt = 12e3,
-      lt = ["nowMs", "dtMs", "rawX", "rawY", "turnedX", "turnedY", "outcome", "velocityX", "velocityY", "limit"],
-      Et = ["timeStamp", "nowMs", "movementX", "movementY", "locked"],
-      ft = ["nowMs", "dtMs", "heading", "pitch", "kind"],
-      wt = ["nowMs", "source", "headingBefore", "pitchBefore", "headingAfter", "pitchAfter"],
-      yt = ["nowMs", "change", "count"];
+      bu = 12e3,
+      cu = ["nowMs", "dtMs", "rawX", "rawY", "turnedX", "turnedY", "outcome", "velocityX", "velocityY", "limit"],
+      Nu = ["timeStamp", "nowMs", "movementX", "movementY", "locked"],
+      Ou = ["nowMs", "dtMs", "heading", "pitch", "kind"],
+      Yu = ["nowMs", "source", "headingBefore", "pitchBefore", "headingAfter", "pitchAfter"],
+      hu = ["nowMs", "change", "count"];
 
-    function Nt(tt) {
-      return "js" === tt ? Xt.jsClient : Xt.wasmClient
+    function Du(uu) {
+      return "js" === uu ? Cu.jsClient : Cu.wasmClient
     }
-    class Mt {
+    class gu {
       constructor() {
-        this.steps = new mt(dt, Qt), this.events = new mt(Et.length, Qt), this.frames = new mt(ft.length, Qt), this.cameraSets = new mt(Dt.e, 256), this.changes = new mt(yt.length, 256)
+        this.steps = new Xu(lu, bu), this.events = new Xu(Nu.length, bu), this.frames = new Xu(Ou.length, bu), this.cameraSets = new Xu(Zu.f, 256), this.changes = new Xu(hu.length, 256)
       }
     }
-    const bt = new class {
+    const Mu = new class {
       constructor() {
-        this.rings = null, this.sample = new Float64Array(Et.length), this.startedClient = null, this.startedAtMs = 0
+        this.rings = null, this.sample = new Float64Array(Nu.length), this.startedClient = null, this.startedAtMs = 0
       }
       get client() {
         return this.startedClient
       }
-      start(tt, et) {
-        this.startedClient = tt, this.startedAtMs = performance.now(), null !== this.rings ? this.change(Nt(tt)) : et && this.allocate()
+      start(uu, Eu) {
+        this.startedClient = uu, this.startedAtMs = performance.now(), null !== this.rings ? this.change(Du(uu)) : Eu && this.allocate()
       }
       lockGained() {
-        this.allocate(), this.change(Xt.lockGained)
+        this.allocate(), this.change(Cu.lockGained)
       }
       allocate() {
-        null === this.rings && (this.rings = new Mt, null !== this.startedClient && this.changeAt(this.startedAtMs, Nt(this.startedClient), 1))
+        null === this.rings && (this.rings = new gu, null !== this.startedClient && this.changeAt(this.startedAtMs, Du(this.startedClient), 1))
       }
-      step(tt, et) {
-        var Vt;
-        tt[et + 6] !== jt.my && (null === (Vt = this.rings) || void 0 === Vt || Vt.steps.push(tt, et))
+      step(uu, Eu) {
+        var ju;
+        uu[Eu + 6] !== qu.uh && (null === (ju = this.rings) || void 0 === ju || ju.steps.push(uu, Eu))
       }
-      cameraSet(tt, et) {
-        var Vt;
-        null === (Vt = this.rings) || void 0 === Vt || Vt.cameraSets.push(tt, et)
+      cameraSet(uu, Eu) {
+        var ju;
+        null === (ju = this.rings) || void 0 === ju || ju.cameraSets.push(uu, Eu)
       }
-      mouseMove(tt, et) {
-        const Vt = this.rings;
-        if (null === Vt) return;
-        const Ot = this.sample;
-        Ot[0] = tt.timeStamp, Ot[1] = performance.now(), Ot[2] = tt.movementX, Ot[3] = tt.movementY, Ot[4] = et ? 1 : 0, Vt.events.push(Ot)
+      mouseMove(uu, Eu) {
+        const ju = this.rings;
+        if (null === ju) return;
+        const su = this.sample;
+        su[0] = uu.timeStamp, su[1] = performance.now(), su[2] = uu.movementX, su[3] = uu.movementY, su[4] = Eu ? 1 : 0, ju.events.push(su)
       }
-      frame(tt, et, Vt, Ot) {
-        const qt = this.rings;
-        if (null === qt || Ot === Ht.none) return;
-        const Dt = this.sample;
-        Dt[0] = performance.now(), Dt[1] = tt, Dt[2] = et, Dt[3] = Vt, Dt[4] = Ot, qt.frames.push(Dt)
+      frame(uu, Eu, ju, su) {
+        const Uu = this.rings;
+        if (null === Uu || su === fu.none) return;
+        const Zu = this.sample;
+        Zu[0] = performance.now(), Zu[1] = uu, Zu[2] = Eu, Zu[3] = ju, Zu[4] = su, Uu.frames.push(Zu)
       }
-      change(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        this.changeAt(performance.now(), tt, et)
+      change(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        this.changeAt(performance.now(), uu, Eu)
       }
-      changeAt(tt, et, Vt) {
-        const Ot = this.rings;
-        if (null === Ot) return;
-        const qt = this.sample;
-        qt[0] = tt, qt[1] = et, qt[2] = Vt, Ot.changes.push(qt)
+      changeAt(uu, Eu, ju) {
+        const su = this.rings;
+        if (null === su) return;
+        const Uu = this.sample;
+        Uu[0] = uu, Uu[1] = Eu, Uu[2] = ju, su.changes.push(Uu)
       }
       dumpText() {
-        var tt, et;
-        const Vt = this.rings;
-        return [`look records (${this.startedClient}): ${lt.join(",")}`, ...null !== (tt = null === Vt || void 0 === Vt ? void 0 : Vt.steps.lines()) && void 0 !== tt ? tt : [], `mousemove events: ${Et.join(",")}`, ...null !== (et = null === Vt || void 0 === Vt ? void 0 : Vt.events.lines()) && void 0 !== et ? et : []].join("\n")
+        var uu, Eu;
+        const ju = this.rings;
+        return [`look records (${this.startedClient}): ${cu.join(",")}`, ...null !== (uu = null === ju || void 0 === ju ? void 0 : ju.steps.lines()) && void 0 !== uu ? uu : [], `mousemove events: ${Nu.join(",")}`, ...null !== (Eu = null === ju || void 0 === ju ? void 0 : ju.events.lines()) && void 0 !== Eu ? Eu : []].join("\n")
       }
-      toJson(tt, et) {
-        var Vt;
-        const qt = tt - 6e4,
-          Dt = this.rings,
-          mt = function(tt, et) {
-            var Vt;
-            let Ot = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-            const Dt = null !== (Vt = null === tt || void 0 === tt ? void 0 : tt.rows(Ot, qt)) && void 0 !== Vt ? Vt : [];
+      toJson(uu, Eu) {
+        var ju;
+        const Uu = uu - 6e4,
+          Zu = this.rings,
+          Xu = function(uu, Eu) {
+            var ju;
+            let su = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+            const Zu = null !== (ju = null === uu || void 0 === uu ? void 0 : uu.rows(su, Uu)) && void 0 !== ju ? ju : [];
             return {
-              columns: et,
-              fromMs: 0 === Dt.length ? null : Dt[0][Ot],
-              rows: Dt
+              columns: Eu,
+              fromMs: 0 === Zu.length ? null : Zu[0][su],
+              rows: Zu
             }
           };
         return {
-          version: Ot.d,
-          client: null !== (Vt = this.startedClient) && void 0 !== Vt ? Vt : "not started",
+          version: su.b,
+          client: null !== (ju = this.startedClient) && void 0 !== ju ? ju : "not started",
           savedAt: (new Date).toISOString(),
-          savedAtMs: tt,
+          savedAtMs: uu,
           keptMs: 6e4,
           page: window.location.href,
           userAgent: navigator.userAgent,
@@ -159,260 +159,260 @@ export const modules = {
             width: window.screen.width,
             height: window.screen.height
           },
-          zy: null !== document.pointerLockElement,
+          rh: null !== document.pointerLockElement,
           visibility: document.visibilityState,
-          ...et,
-          outcomes: jt,
-          frameKinds: Ht,
-          changes: Xt,
-          lookSteps: mt(null === Dt || void 0 === Dt ? void 0 : Dt.steps, lt),
-          mouseMoves: mt(null === Dt || void 0 === Dt ? void 0 : Dt.events, Et, 1),
-          frames: mt(null === Dt || void 0 === Dt ? void 0 : Dt.frames, ft),
-          cameraSets: mt(null === Dt || void 0 === Dt ? void 0 : Dt.cameraSets, wt),
-          pageChanges: mt(null === Dt || void 0 === Dt ? void 0 : Dt.changes, yt)
+          ...Eu,
+          outcomes: qu,
+          frameKinds: fu,
+          changes: Cu,
+          lookSteps: Xu(null === Zu || void 0 === Zu ? void 0 : Zu.steps, cu),
+          mouseMoves: Xu(null === Zu || void 0 === Zu ? void 0 : Zu.events, Nu, 1),
+          frames: Xu(null === Zu || void 0 === Zu ? void 0 : Zu.frames, Ou),
+          cameraSets: Xu(null === Zu || void 0 === Zu ? void 0 : Zu.cameraSets, Yu),
+          pageChanges: Xu(null === Zu || void 0 === Zu ? void 0 : Zu.changes, hu)
         }
       }
-      save(tt) {
-        const et = JSON.stringify(this.toJson(performance.now(), tt));
-        (0, qt.c)(new Blob([et], {
+      save(uu) {
+        const Eu = JSON.stringify(this.toJson(performance.now(), uu));
+        (0, Uu.d)(new Blob([Eu], {
           type: "application/json"
         }), `bloxd-mouse-look-${(new Date).toISOString().replace(/[:.]/g,"-")}.json`)
       }
     }
   },
-  36610: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      LOOK_DEBUG_HEADER: () => Xt,
-      endLookDebugTake: () => Nt,
-      noteLookDroppedCopy: () => Mt,
-      saveLookCapture: () => bt,
-      startLookDebug: () => yt
+  36762: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      LOOK_DEBUG_HEADER: () => Cu,
+      endLookDebugTake: () => Du,
+      noteLookDroppedCopy: () => gu,
+      saveLookCapture: () => Mu,
+      startLookDebug: () => hu
     });
-    var Ot = Vt(4963),
-      qt = Vt(2902),
-      Dt = Vt(1993);
-    const mt = new Map(Object.entries(Ot.k).map((tt => {
-      let [et, Vt] = tt;
-      return [Vt, et]
+    var su = ju(4976),
+      Uu = ju(2943),
+      Zu = ju(1955);
+    const Xu = new Map(Object.entries(su.h).map((uu => {
+      let [Eu, ju] = uu;
+      return [ju, Eu]
     })));
 
-    function dt(tt) {
-      return (0, Dt.G)(tt).toFixed(1)
+    function lu(uu) {
+      return (0, Zu.A)(uu).toFixed(1)
     }
 
-    function jt(tt, et) {
-      return `camera set by ${mt.get(tt[et+1])}: heading ${`${dt(tt[et+2])} -> ${dt(tt[et+4])}`} deg, pitch ${`${dt(tt[et+3])} -> ${dt(tt[et+5])}`} deg, at ${tt[et].toFixed(1)} ms`
+    function qu(uu, Eu) {
+      return `camera set by ${Xu.get(uu[Eu+1])}: heading ${`${lu(uu[Eu+2])} -> ${lu(uu[Eu+4])}`} deg, pitch ${`${lu(uu[Eu+3])} -> ${lu(uu[Eu+5])}`} deg, at ${uu[Eu].toFixed(1)} ms`
     }
-    var Ht = Vt(36616);
-    const Xt = 2;
+    var fu = ju(36770);
+    const Cu = 2;
 
-    function Qt(tt) {
-      return Number.isFinite(tt) ? String(Math.round(10 * tt) / 10) : String(tt)
+    function bu(uu) {
+      return Number.isFinite(uu) ? String(Math.round(10 * uu) / 10) : String(uu)
     }
 
-    function lt(tt) {
-      return Number.isFinite(tt) ? tt.toFixed(1) : String(tt)
+    function cu(uu) {
+      return Number.isFinite(uu) ? uu.toFixed(1) : String(uu)
     }
-    class Et {
+    class Nu {
       constructor() {
-        this.frames = 0, this.looked = 0, this.idle = 0, this.qI = 0, this.pastLimit = 0, this.lockSkips = 0, this.my = 0, this.lost = 0, this.dropped = 0, this.longFrames = 0, this.dtMin = 1 / 0, this.dtMax = 0, this.dtSum = 0, this.raw = [0, 0], this.turned = [0, 0], this.peakRate = 0, this.events = 0, this.eventMax = 0, this.bigEvents = 0, this.cameraSets = 0, this.cameraSetsLost = 0, this.outliers = 0, this.eventLines = 0, this.suppressed = 0
+        this.frames = 0, this.looked = 0, this.idle = 0, this.XV = 0, this.pastLimit = 0, this.lockSkips = 0, this.uh = 0, this.lost = 0, this.dropped = 0, this.longFrames = 0, this.dtMin = 1 / 0, this.dtMax = 0, this.dtSum = 0, this.raw = [0, 0], this.turned = [0, 0], this.peakRate = 0, this.events = 0, this.eventMax = 0, this.bigEvents = 0, this.cameraSets = 0, this.cameraSetsLost = 0, this.outliers = 0, this.eventLines = 0, this.suppressed = 0
       }
       moved() {
-        return this.events > 0 || 0 !== this.raw[0] || 0 !== this.raw[1] || this.lockSkips > 0 || this.qI > 0 || this.dropped > 0 || this.cameraSets > 0
+        return this.events > 0 || 0 !== this.raw[0] || 0 !== this.raw[1] || this.lockSkips > 0 || this.XV > 0 || this.dropped > 0 || this.cameraSets > 0
       }
       hasEvent() {
-        return this.qI > 0 || this.pastLimit > 0 || this.bigEvents > 0 || this.dropped > 0 || this.cameraSets > 0
+        return this.XV > 0 || this.pastLimit > 0 || this.bigEvents > 0 || this.dropped > 0 || this.cameraSets > 0
       }
     }
-    class ft {
+    class Ou {
       constructor() {
-        var tt = this;
-        this.topicOn = (0, qt.v)("look"), this.remote = (0, qt.x)(), this.tally = new Et, this.takes = null, this.started = !1, this.record = function(et) {
-          let Vt = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-          if (Ht.o.step(et, Vt), !tt.topicOn) return;
-          const Ot = et[Vt],
-            qt = et[Vt + 1],
-            Dt = et[Vt + 2],
-            mt = et[Vt + 3],
-            dt = et[Vt + 4],
-            jt = et[Vt + 5],
-            Xt = et[Vt + 6],
-            Et = et[Vt + 7],
-            ft = et[Vt + 8],
-            wt = et[Vt + 9],
-            yt = tt.tally;
-          switch (yt.frames++, Xt) {
-            case Ht.k.idle:
-              return void yt.idle++;
-            case Ht.k.my:
-              return void yt.my++;
-            case Ht.k.mI:
-              return yt.lockSkips++, void(0 === Dt && 0 === mt || tt.outlier(`lock skip dropped raw (${Qt(Dt)}, ${Qt(mt)}) at ${lt(Ot)} ms`))
+        var uu = this;
+        this.topicOn = (0, Uu.p)("look"), this.remote = (0, Uu.r)(), this.tally = new Nu, this.takes = null, this.started = !1, this.record = function(Eu) {
+          let ju = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+          if (fu.q.step(Eu, ju), !uu.topicOn) return;
+          const su = Eu[ju],
+            Uu = Eu[ju + 1],
+            Zu = Eu[ju + 2],
+            Xu = Eu[ju + 3],
+            lu = Eu[ju + 4],
+            qu = Eu[ju + 5],
+            Cu = Eu[ju + 6],
+            Nu = Eu[ju + 7],
+            Ou = Eu[ju + 8],
+            Yu = Eu[ju + 9],
+            hu = uu.tally;
+          switch (hu.frames++, Cu) {
+            case fu.m.idle:
+              return void hu.idle++;
+            case fu.m.uh:
+              return void hu.uh++;
+            case fu.m.lV:
+              return hu.lockSkips++, void(0 === Zu && 0 === Xu || uu.outlier(`lock skip dropped raw (${bu(Zu)}, ${bu(Xu)}) at ${cu(su)} ms`))
           }
-          yt.looked++, Number.isFinite(qt) && (yt.dtMin = Math.min(yt.dtMin, qt), yt.dtMax = Math.max(yt.dtMax, qt), yt.dtSum += qt, qt > 0 && (yt.peakRate = Math.max(yt.peakRate, Math.hypot(dt, jt) / qt))), yt.raw[0] += Dt, yt.raw[1] += mt, yt.turned[0] += dt, yt.turned[1] += jt;
-          const Nt = Math.abs(Dt) > wt || Math.abs(mt) > wt,
-            Mt = `raw (${Qt(Dt)}, ${Qt(mt)}) over ${lt(qt)} ms, limit ${Qt(wt)}, filter v (${Et.toFixed(3)}, ${ft.toFixed(3)}) px/ms, at ${lt(Ot)} ms`;
-          Xt === Ht.k.qI ? (yt.qI++, tt.outlier(`spike put right: ${Mt} -> turned (${Qt(dt)}, ${Qt(jt)})`)) : Nt ? (yt.pastLimit++, tt.outlier(`kept past limit: ${Mt}`)) : qt > 50 && (yt.longFrames++, tt.remote || tt.outlier(`long frame: ${Mt}, turned in full`))
-        }, this.onMouseMove = tt => {
-          const et = null !== document.pointerLockElement;
-          if (Ht.o.mouseMove(tt, et), !this.topicOn) return;
-          const Vt = this.tally,
+          hu.looked++, Number.isFinite(Uu) && (hu.dtMin = Math.min(hu.dtMin, Uu), hu.dtMax = Math.max(hu.dtMax, Uu), hu.dtSum += Uu, Uu > 0 && (hu.peakRate = Math.max(hu.peakRate, Math.hypot(lu, qu) / Uu))), hu.raw[0] += Zu, hu.raw[1] += Xu, hu.turned[0] += lu, hu.turned[1] += qu;
+          const Du = Math.abs(Zu) > Yu || Math.abs(Xu) > Yu,
+            gu = `raw (${bu(Zu)}, ${bu(Xu)}) over ${cu(Uu)} ms, limit ${bu(Yu)}, filter v (${Nu.toFixed(3)}, ${Ou.toFixed(3)}) px/ms, at ${cu(su)} ms`;
+          Cu === fu.m.XV ? (hu.XV++, uu.outlier(`spike put right: ${gu} -> turned (${bu(lu)}, ${bu(qu)})`)) : Du ? (hu.pastLimit++, uu.outlier(`kept past limit: ${gu}`)) : Uu > 50 && (hu.longFrames++, uu.remote || uu.outlier(`long frame: ${gu}, turned in full`))
+        }, this.onMouseMove = uu => {
+          const Eu = null !== document.pointerLockElement;
+          if (fu.q.mouseMove(uu, Eu), !this.topicOn) return;
+          const ju = this.tally,
             {
-              movementX: Ot,
-              movementY: qt
-            } = tt;
-          Vt.events++;
-          const Dt = Math.max(Math.abs(Ot), Math.abs(qt));
-          Vt.eventMax = Math.max(Vt.eventMax, Dt), Dt >= 200 && (Vt.bigEvents++, this.eventOutlier(`big mousemove (${Ot}, ${qt}) at ${lt(tt.timeStamp)} ms, lock ${et?"Pd":"free"}`))
+              movementX: su,
+              movementY: Uu
+            } = uu;
+          ju.events++;
+          const Zu = Math.max(Math.abs(su), Math.abs(Uu));
+          ju.eventMax = Math.max(ju.eventMax, Zu), Zu >= 200 && (ju.bigEvents++, this.eventOutlier(`big mousemove (${su}, ${Uu}) at ${cu(uu.timeStamp)} ms, lock ${Eu?"dl":"free"}`))
         }, this.onLockChange = () => {
-          const tt = document.pointerLockElement;
-          tt ? Ht.o.lockGained() : Ht.o.change(Ht.e.lockLost), this.topicOn && (0, qt.n)("look", `pointer lock ${tt?`gained (${tt.tagName.toLowerCase()})`:"lost"} at ${lt(performance.now())} ms`)
+          const uu = document.pointerLockElement;
+          uu ? fu.q.lockGained() : fu.q.change(fu.d.lockLost), this.topicOn && (0, Uu.k)("look", `pointer lock ${uu?`gained (${uu.tagName.toLowerCase()})`:"lost"} at ${cu(performance.now())} ms`)
         }, this.onLockError = () => {
-          Ht.o.change(Ht.e.lockError), this.topicOn && (0, qt.n)("look", `pointer lock request failed at ${lt(performance.now())} ms`)
+          fu.q.change(fu.d.lockError), this.topicOn && (0, Uu.k)("look", `pointer lock request failed at ${cu(performance.now())} ms`)
         }, this.onVisibility = () => {
-          Ht.o.change("hidden" === document.visibilityState ? Ht.e.hidden : Ht.e.visible), this.topicOn && (0, qt.n)("look", `page ${document.visibilityState} at ${lt(performance.now())} ms`)
+          fu.q.change("hidden" === document.visibilityState ? fu.d.hidden : fu.d.visible), this.topicOn && (0, Uu.k)("look", `page ${document.visibilityState} at ${cu(performance.now())} ms`)
         }, this.onFocus = () => {
-          Ht.o.change(Ht.e.focus)
+          fu.q.change(fu.d.focus)
         }, this.onBlur = () => {
-          Ht.o.change(Ht.e.blur)
+          fu.q.change(fu.d.blur)
         }, this.flush = () => {
           if (this.takeRecords(), !this.topicOn) return;
-          const tt = this.tally;
-          if (this.tally = new Et, !tt.moved() || this.remote && !tt.hasEvent()) return;
-          const et = tt.looked > 0 ? tt.dtSum / tt.looked : NaN,
-            Vt = [`${tt.frames} frames (${tt.looked} looked, ${tt.idle} idle${"wasm"===Ht.o.client?`, ${tt.my} carried`:""})`, `dt avg ${lt(et)} min ${lt(tt.dtMin)} max ${lt(tt.dtMax)}, ${tt.longFrames} long`, `${tt.events} mousemoves (max ${Qt(tt.eventMax)} px, ${tt.bigEvents} big)`, `raw (${Qt(tt.raw[0])}, ${Qt(tt.raw[1])}) turned (${Qt(tt.turned[0])}, ${Qt(tt.turned[1])})`, `peak ${tt.peakRate.toFixed(2)} px/ms`, `put right ${tt.qI}, past limit ${tt.pastLimit}, lock skips ${tt.lockSkips}`, "lock " + (document.pointerLockElement ? "Pd" : "free")];
-          tt.dropped > 0 && Vt.push(`${tt.dropped} doubled spike copies dropped`), tt.cameraSets > 0 && Vt.push(`${tt.cameraSets} camera sets`), tt.cameraSetsLost > 0 && Vt.push(`${tt.cameraSetsLost} camera set records lost`), tt.lost > 0 && Vt.push(`${tt.lost} records lost`), tt.suppressed > 0 && Vt.push(`${tt.suppressed} outlier lines not shown`), (0, qt.n)("look", `1s: ${Vt.join("; ")}`)
+          const uu = this.tally;
+          if (this.tally = new Nu, !uu.moved() || this.remote && !uu.hasEvent()) return;
+          const Eu = uu.looked > 0 ? uu.dtSum / uu.looked : NaN,
+            ju = [`${uu.frames} frames (${uu.looked} looked, ${uu.idle} idle${"wasm"===fu.q.client?`, ${uu.uh} carried`:""})`, `dt avg ${cu(Eu)} min ${cu(uu.dtMin)} max ${cu(uu.dtMax)}, ${uu.longFrames} long`, `${uu.events} mousemoves (max ${bu(uu.eventMax)} px, ${uu.bigEvents} big)`, `raw (${bu(uu.raw[0])}, ${bu(uu.raw[1])}) turned (${bu(uu.turned[0])}, ${bu(uu.turned[1])})`, `peak ${uu.peakRate.toFixed(2)} px/ms`, `put right ${uu.XV}, past limit ${uu.pastLimit}, lock skips ${uu.lockSkips}`, "lock " + (document.pointerLockElement ? "dl" : "free")];
+          uu.dropped > 0 && ju.push(`${uu.dropped} doubled spike copies dropped`), uu.cameraSets > 0 && ju.push(`${uu.cameraSets} camera sets`), uu.cameraSetsLost > 0 && ju.push(`${uu.cameraSetsLost} camera set records lost`), uu.lost > 0 && ju.push(`${uu.lost} records lost`), uu.suppressed > 0 && ju.push(`${uu.suppressed} outlier lines not shown`), (0, Uu.k)("look", `1s: ${ju.join("; ")}`)
         }
       }
-      start(tt, et) {
-        if (Ht.o.start(tt, null !== document.pointerLockElement), this.takes = et, this.topicOn) {
+      start(uu, Eu) {
+        if (fu.q.start(uu, null !== document.pointerLockElement), this.takes = Eu, this.topicOn) {
           const {
-            screen: et
+            screen: Eu
           } = window;
-          (0, qt.n)("look", `start: ${tt} client, dpr ${window.devicePixelRatio}, screen ${et.width}x${et.height}, pointer lock ${document.pointerLockElement?"Pd":"free"}`)
+          (0, Uu.k)("look", `start: ${uu} client, dpr ${window.devicePixelRatio}, screen ${Eu.width}x${Eu.height}, pointer lock ${document.pointerLockElement?"dl":"free"}`)
         }
         this.started || (this.started = !0, window.addEventListener("mousemove", this.onMouseMove, {
           capture: !0,
           passive: !0
-        }), window.addEventListener("focus", this.onFocus), window.addEventListener("blur", this.onBlur), document.addEventListener("pointerlockchange", this.onLockChange), document.addEventListener("pointerlockerror", this.onLockError), document.addEventListener("visibilitychange", this.onVisibility), setInterval(this.flush, 1e3), this.topicOn && !this.remote && (0, qt.j)("look", (() => Ht.o.dumpText())))
+        }), window.addEventListener("focus", this.onFocus), window.addEventListener("blur", this.onBlur), document.addEventListener("pointerlockchange", this.onLockChange), document.addEventListener("pointerlockerror", this.onLockError), document.addEventListener("visibilitychange", this.onVisibility), setInterval(this.flush, 1e3), this.topicOn && !this.remote && (0, Uu.j)("look", (() => fu.q.dumpText())))
       }
-      outlier(tt) {
-        const et = this.tally;
-        et.outliers >= 20 ? et.suppressed++ : (et.outliers++, (0, qt.n)("look", tt))
+      outlier(uu) {
+        const Eu = this.tally;
+        Eu.outliers >= 20 ? Eu.suppressed++ : (Eu.outliers++, (0, Uu.k)("look", uu))
       }
-      eventOutlier(tt) {
-        const et = this.tally;
-        et.eventLines >= 10 ? et.suppressed++ : (et.eventLines++, (0, qt.n)("look", tt))
+      eventOutlier(uu) {
+        const Eu = this.tally;
+        Eu.eventLines >= 10 ? Eu.suppressed++ : (Eu.eventLines++, (0, Uu.k)("look", uu))
       }
       takeRecords() {
         if (null === this.takes) return;
-        const tt = this.takes.look();
-        if (tt.length >= Xt) {
-          this.counted(Ht.e.stepsLost, tt[0]), this.counted(Ht.e.droppedCopies, tt[1]);
-          for (let et = Xt; et + Ht.g <= tt.length; et += Ht.g) this.record(tt, et)
+        const uu = this.takes.look();
+        if (uu.length >= Cu) {
+          this.counted(fu.d.stepsLost, uu[0]), this.counted(fu.d.droppedCopies, uu[1]);
+          for (let Eu = Cu; Eu + fu.g <= uu.length; Eu += fu.g) this.record(uu, Eu)
         }
-        const et = this.takes.cameraSets();
-        if (et.length >= Ot.d) {
-          this.counted(Ht.e.cameraSetsLost, et[0]);
-          for (let tt = Ot.d; tt + Ot.e <= et.length; tt += Ot.e) Ht.o.cameraSet(et, tt), this.topicOn && (this.tally.cameraSets++, this.outlier(jt(et, tt)))
+        const Eu = this.takes.cameraSets();
+        if (Eu.length >= su.b) {
+          this.counted(fu.d.cameraSetsLost, Eu[0]);
+          for (let uu = su.b; uu + su.f <= Eu.length; uu += su.f) fu.q.cameraSet(Eu, uu), this.topicOn && (this.tally.cameraSets++, this.outlier(qu(Eu, uu)))
         }
       }
       droppedCopy() {
-        this.counted(Ht.e.droppedCopies, 1)
+        this.counted(fu.d.droppedCopies, 1)
       }
-      counted(tt, et) {
-        if (0 === et) return;
-        if (Ht.o.change(tt, et), !this.topicOn) return;
-        const Vt = this.tally;
-        tt === Ht.e.droppedCopies ? Vt.dropped += et : tt === Ht.e.stepsLost ? Vt.lost += et : Vt.cameraSetsLost += et
+      counted(uu, Eu) {
+        if (0 === Eu) return;
+        if (fu.q.change(uu, Eu), !this.topicOn) return;
+        const ju = this.tally;
+        uu === fu.d.droppedCopies ? ju.dropped += Eu : uu === fu.d.stepsLost ? ju.lost += Eu : ju.cameraSetsLost += Eu
       }
       endTake() {
         this.takeRecords(), this.takes = null
       }
     }
-    let wt = null;
+    let Yu = null;
 
-    function yt(tt) {
-      let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      return wt ??= new ft, wt.start(tt, et), wt.record
+    function hu(uu) {
+      let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      return Yu ??= new Ou, Yu.start(uu, Eu), Yu.record
     }
 
-    function Nt() {
-      var tt;
-      null === (tt = wt) || void 0 === tt || tt.endTake()
+    function Du() {
+      var uu;
+      null === (uu = Yu) || void 0 === uu || uu.endTake()
     }
 
-    function Mt() {
-      var tt;
-      null === (tt = wt) || void 0 === tt || tt.droppedCopy()
+    function gu() {
+      var uu;
+      null === (uu = Yu) || void 0 === uu || uu.droppedCopy()
     }
-    async function bt(tt) {
-      var et;
-      null === (et = wt) || void 0 === et || et.takeRecords();
+    async function Mu(uu) {
+      var Eu;
+      null === (Eu = Yu) || void 0 === Eu || Eu.takeRecords();
       const {
-        clientHintsRead: Ot,
-        debugDeviceLines: qt
-      } = await Vt.e(29).then((() => Vt(34239)));
-      await Ot, Ht.o.save({
-        ...tt,
-        device: qt()
+        clientHintsRead: su,
+        debugDeviceLines: Uu
+      } = await ju.e(29).then((() => ju(34431)));
+      await su, fu.q.save({
+        ...uu,
+        device: Uu()
       })
     }
   },
-  4963: (tt, et, Vt) => {
-    Vt.d(et, {
-      $: () => Ct,
-      Cb: () => kt,
-      D: () => dt,
-      Eb: () => yt,
-      G: () => Ot,
-      Hb: () => ct,
-      J: () => Dt,
-      L: () => Jt,
-      Lb: () => St,
-      M: () => nt,
-      Nb: () => Gt,
-      Ob: () => Yt,
-      Q: () => Qt,
-      S: () => lt,
-      Sb: () => ot,
-      Vb: () => Ut,
-      W: () => Xt,
-      X: () => Ht,
-      Zb: () => At,
-      _b: () => vt,
-      bb: () => jt,
-      bc: () => Wt,
-      d: () => Mt,
-      db: () => wt,
-      e: () => Nt,
-      ec: () => pt,
-      fb: () => ft,
-      fc: () => qt,
-      g: () => gt,
-      gc: () => st,
-      hb: () => Rt,
-      ib: () => Pt,
-      jb: () => Zt,
-      k: () => bt,
-      l: () => Tt,
-      lb: () => It,
-      m: () => Et,
-      mb: () => Lt,
-      o: () => ht,
-      ob: () => Bt,
-      q: () => xt,
-      sb: () => it,
-      u: () => Kt,
-      vb: () => rt,
-      w: () => ut,
-      wb: () => Ft,
-      yb: () => zt,
-      z: () => mt
+  4976: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      $: () => Gu,
+      C: () => Xu,
+      Cb: () => Wu,
+      F: () => lu,
+      Gb: () => Qu,
+      H: () => su,
+      Jb: () => hu,
+      K: () => Zu,
+      L: () => eu,
+      Nb: () => ou,
+      O: () => zu,
+      Pb: () => Pu,
+      R: () => bu,
+      S: () => cu,
+      Sb: () => iu,
+      Ub: () => tu,
+      V: () => Cu,
+      Wb: () => Su,
+      X: () => fu,
+      Xb: () => Fu,
+      Yb: () => Bu,
+      ac: () => du,
+      b: () => gu,
+      cb: () => qu,
+      db: () => Yu,
+      ec: () => au,
+      f: () => Du,
+      fb: () => Ou,
+      fc: () => Tu,
+      g: () => nu,
+      h: () => Mu,
+      hb: () => ku,
+      j: () => Au,
+      jc: () => Uu,
+      lb: () => vu,
+      mb: () => Ku,
+      mc: () => yu,
+      n: () => Nu,
+      pb: () => mu,
+      r: () => Ju,
+      s: () => Hu,
+      tb: () => Vu,
+      ub: () => xu,
+      v: () => wu,
+      vb: () => Lu,
+      xb: () => Iu,
+      y: () => pu,
+      zb: () => ru
     });
-    const Ot = 32,
-      qt = 33.333333333333336,
-      Dt = {
+    const su = 32,
+      Uu = 33.333333333333336,
+      Zu = {
         AbiVersion: 0,
         Status: 1,
         LastError: 2,
@@ -446,36 +446,36 @@ export const modules = {
         PacingLagUs: 30,
         LoadSteps: 31
       },
-      mt = {
+      Xu = {
         NotYet: 0,
         Drawn: 1,
         Backstop: 2,
         HeldBackstop: 3
       },
-      dt = {
+      lu = {
         NotDrawn: 0,
         Drawn: 1,
         Paced: 2
       },
-      jt = {
+      qu = {
         AheadMask: 15,
         Defaulted: 128,
         LagsShift: 8,
         CountMask: 4095
       },
-      Ht = {
+      fu = {
         TerrainDrawn: 1,
         ChunkRequested: 2,
         ChunkStored: 4,
         MeshLanded: 8,
         PlayerChunk: 16
       },
-      Xt = {
+      Cu = {
         PlayerBound: 32,
         JoinPreload: 64
       },
-      Qt = 14,
-      lt = {
+      bu = 14,
+      cu = {
         ChunksReceived: 0,
         ChunksStored: 1,
         JobsSent: 2,
@@ -491,14 +491,14 @@ export const modules = {
         FirstViewGaps: 12,
         FirstViewGapMs: 13
       },
-      Et = {
+      Nu = {
         Look: 0,
         Remesh: 1,
         CameraSet: 2
       },
-      ft = 8,
-      wt = 1,
-      yt = {
+      Ou = 8,
+      Yu = 1,
+      hu = {
         Edit: 0,
         Sent: 1,
         Done: 2,
@@ -507,16 +507,16 @@ export const modules = {
         Replaced: 5,
         Emptied: 6
       },
-      Nt = 6,
-      Mt = 1,
-      bt = {
+      Du = 6,
+      gu = 1,
+      Mu = {
         SetCamDir: 0,
         Forced: 1,
         ScriptedTake: 2,
         ScriptedPose: 3,
         ScriptedRelease: 4
       },
-      Jt = {
+      eu = {
         KeyDown: 1,
         KeyUp: 2,
         MouseMove: 3,
@@ -544,12 +544,12 @@ export const modules = {
         PadLook: 25,
         EnvPrefs: 32
       },
-      Ct = {
+      Gu = {
         Frame: 1,
         Open: 2,
         Close: 3
       },
-      ut = {
+      pu = {
         RawMessage: 1,
         CoreErrors: 2,
         LocalHurt: 16,
@@ -602,7 +602,7 @@ export const modules = {
         RenderReload: 3,
         TerrainTexturesWanted: 4
       },
-      Kt = {
+      wu = {
         EntityInfo: 1,
         EntityTable: 2,
         CoreErrors: 4,
@@ -612,10 +612,10 @@ export const modules = {
         PlayerHud: 64,
         GameCalls: 128
       },
-      ht = 4,
-      vt = 4,
-      Wt = 65535,
-      St = {
+      Ju = 4,
+      du = 4,
+      au = 65535,
+      Pu = {
         Open: 1,
         TooLarge: 2,
         NothingStaged: 3,
@@ -628,7 +628,7 @@ export const modules = {
         ModuleTrap: 10,
         Port: 11
       },
-      ct = {
+      ou = {
         Busy: 0,
         Range: 1,
         OtherBody: 2,
@@ -636,12 +636,12 @@ export const modules = {
         Corrupt: 4,
         Ended: 5
       },
-      Rt = 88,
-      It = 0,
-      Pt = 24,
-      Zt = 48,
-      Lt = 80,
-      Ft = {
+      ku = 88,
+      mu = 0,
+      vu = 24,
+      Ku = 48,
+      Vu = 80,
+      ru = {
         FilePartDone: 526,
         FileDone: 527,
         Control: 528,
@@ -652,18 +652,18 @@ export const modules = {
         Killfeed: 533,
         Session: 534
       },
-      kt = {
+      Qu = {
         ToggleRecording: 0,
         SaveClip: 1,
         ViewerOpened: 2,
         ViewerClosed: 3
       },
-      Gt = {
+      iu = {
         Clip: 0,
         Recording: 1,
         Edited: 2
       },
-      zt = {
+      Wu = {
         RecordingStarted: 0,
         RecordingStopped: 1,
         RecordingDiscarded: 2,
@@ -681,34 +681,34 @@ export const modules = {
         SaveFailed: 14,
         RecordingTurnedOff: 15
       },
-      ot = {
+      Su = {
         Cleared: 0,
         Text: 1,
         Int: 2,
         Double: 3
       },
-      rt = 65535,
-      Ut = {
+      Iu = 65535,
+      Fu = {
         FlyingText: 1,
         PlayerKilled: 2,
         Killfeed: 3
       },
-      At = {
+      Bu = {
         None: 0,
         Paused: 1,
         Playing: 2,
         Cropping: 3,
         Loading: 4
       },
-      it = 2,
-      Yt = {
+      Lu = 2,
+      tu = {
         UiText: 0,
         Environment: 6,
         Hud: 12,
         Count: 19
       },
-      Bt = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
-      pt = {
+      xu = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
+      Tu = {
         SkyTable: 600,
         SkyImagesReady: 601,
         SkyTableHeaderBytes: 8,
@@ -722,7 +722,7 @@ export const modules = {
         CubeFaces: 6,
         Failed: 0
       },
-      xt = {
+      Hu = {
         Bytes: 88,
         Inclination: 0,
         Turbidity: 1,
@@ -749,7 +749,7 @@ export const modules = {
         PresentAt: 80,
         FlagsAt: 84
       },
-      Tt = {
+      Au = {
         None: 0,
         InputOverCapacity: 1,
         InputTruncated: 2,
@@ -907,8 +907,8 @@ export const modules = {
         ReplayDrops: 87,
         ReplayRecorderDrops: 304
       },
-      gt = 8,
-      st = {
+      nu = 8,
+      yu = {
         GameCodeMessage: 4,
         NewOtherEntitySettings: 23,
         NewClientOptions: 37,
@@ -933,8 +933,8 @@ export const modules = {
         WorldVariation: 5,
         EditItemCraftingRecipes: 78
       },
-      nt = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
+      zu = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

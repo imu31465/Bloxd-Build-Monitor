@@ -1,83 +1,83 @@
 export const id = 220;
 export const ids = [220, 296];
 export const modules = {
-  41508: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      CharacterCustomisationUI: () => De
+  41513: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      CharacterCustomisationUI: () => UE
     });
-    var Ot = Vt(63),
-      qt = Vt(3081),
-      Dt = Vt(1218),
-      mt = Vt(1140),
-      dt = Vt.n(mt),
-      jt = Vt(1325),
-      Ht = Vt(697),
-      Xt = Vt(1286),
-      Qt = Vt(2290),
-      lt = Vt(1657),
-      Et = Vt(2652);
-    const ft = jt.A.filter((tt => !lt.h.includes(tt)));
+    var su = ju(58),
+      Uu = ju(3179),
+      Zu = ju(1178),
+      Xu = ju(1105),
+      lu = ju.n(Xu),
+      qu = ju(1298),
+      fu = ju(628),
+      Cu = ju(1244),
+      bu = ju(2329),
+      cu = ju(1614),
+      Nu = ju(2690);
+    const Ou = qu.u.filter((uu => !cu.g.includes(uu)));
 
-    function wt(tt, et) {
-      return ft.includes(tt) && "string" === typeof et && (0, Et.g)(tt, et)
+    function Yu(uu, Eu) {
+      return Ou.includes(uu) && "string" === typeof Eu && (0, Nu.e)(uu, Eu)
     }
 
-    function yt(tt) {
-      const et = {};
-      for (const Vt of ft) {
-        const Ot = tt[Vt];
-        void 0 !== Ot && wt(Vt, Ot) && (et[Vt] = Ot)
+    function hu(uu) {
+      const Eu = {};
+      for (const ju of Ou) {
+        const su = uu[ju];
+        void 0 !== su && Yu(ju, su) && (Eu[ju] = su)
       }
-      return et
+      return Eu
     }
 
-    function Nt(tt) {
-      return 0 === Object.keys(tt).length
+    function Du(uu) {
+      return 0 === Object.keys(uu).length
     }
 
-    function Mt(tt, et) {
-      return Object.entries(tt).every((tt => {
-        let [Vt, Ot] = tt;
-        return et[Vt] === Ot
+    function gu(uu, Eu) {
+      return Object.entries(uu).every((uu => {
+        let [ju, su] = uu;
+        return Eu[ju] === su
       }))
     }
-    var bt = Vt(2295),
-      Jt = Vt(3161),
-      Ct = Vt(2063),
-      ut = Vt(1556),
-      Kt = Vt(2313),
-      ht = Vt(26),
-      vt = Vt(2772),
-      Wt = Vt(1600),
-      St = Vt(1223),
-      ct = Vt(1950);
-    class Rt {
+    var Mu = ju(2338),
+      eu = ju(3261),
+      Gu = ju(2027),
+      pu = ju(1506),
+      wu = ju(2374),
+      Ju = ju(22),
+      du = ju(2820),
+      au = ju(1559),
+      Pu = ju(1183),
+      ou = ju(1906);
+    class ku {
       constructor() {
         this.slots = new Map, this.before = new Map, this.accountId = null
       }
-      moveTo(tt) {
-        null !== tt && tt !== this.accountId && (null !== this.accountId && this.slots.size > 0 && (console.warn("saved_outfits_dropped_on_account_switch", this.slots.size), this.slots.clear()), null !== this.accountId && this.before.clear(), this.accountId = tt)
+      moveTo(uu) {
+        null !== uu && uu !== this.accountId && (null !== this.accountId && this.slots.size > 0 && (console.warn("saved_outfits_dropped_on_account_switch", this.slots.size), this.slots.clear()), null !== this.accountId && this.before.clear(), this.accountId = uu)
       }
-      isFor(tt) {
-        return null === this.accountId || this.accountId === tt
+      isFor(uu) {
+        return null === this.accountId || this.accountId === uu
       }
-      overlay(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Map;
-        return tt.map(((tt, Vt) => {
-          var Ot, qt;
-          return null !== (Ot = null !== (qt = this.slots.get(Vt)) && void 0 !== qt ? qt : et.get(Vt)) && void 0 !== Ot ? Ot : tt
+      overlay(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Map;
+        return uu.map(((uu, ju) => {
+          var su, Uu;
+          return null !== (su = null !== (Uu = this.slots.get(ju)) && void 0 !== Uu ? Uu : Eu.get(ju)) && void 0 !== su ? su : uu
         }))
       }
     }
-    class It extends vt.c {
+    class mu extends du.b {
       constructor() {
-        let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : new Rt;
-        super("saved outfits", (async et => {
-          const Vt = tt.isFor(et.whamm),
-            Ot = new Map(tt.slots),
-            qt = await Wt.e.getSavedOutfits(et);
-          return Vt ? tt.overlay(qt, Ot) : qt
-        })), this.unsaved = tt, this.started = !1, this.sending = !1
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : new ku;
+        super("saved outfits", (async Eu => {
+          const ju = uu.isFor(Eu.whamm),
+            su = new Map(uu.slots),
+            Uu = await au.b.getSavedOutfits(Eu);
+          return ju ? uu.overlay(Uu, su) : Uu
+        })), this.unsaved = uu, this.started = !1, this.sending = !1
       }
       ensureLoaded() {
         if (this.started) {
@@ -85,994 +85,994 @@ export const modules = {
         } else this.started = !0, this.watchAccount();
         this.refresh()
       }
-      save(tt, et) {
-        var Vt, Ot;
-        (this.unsaved.moveTo(this.getState().accountId), this.unsaved.before.has(tt)) || this.unsaved.before.set(tt, null !== (Vt = null === (Ot = this.getState().data) || void 0 === Ot ? void 0 : Ot[tt]) && void 0 !== Vt ? Vt : {});
-        this.unsaved.slots.set(tt, et), this.update((Vt => Vt.map(((Vt, Ot) => Ot === tt ? et : Vt)))), this.sending || this.sendUnsaved()
+      save(uu, Eu) {
+        var ju, su;
+        (this.unsaved.moveTo(this.getState().accountId), this.unsaved.before.has(uu)) || this.unsaved.before.set(uu, null !== (ju = null === (su = this.getState().data) || void 0 === su ? void 0 : su[uu]) && void 0 !== ju ? ju : {});
+        this.unsaved.slots.set(uu, Eu), this.update((ju => ju.map(((ju, su) => su === uu ? Eu : ju)))), this.sending || this.sendUnsaved()
       }
-      clear(tt) {
-        this.save(tt, {})
+      clear(uu) {
+        this.save(uu, {})
       }
       async sendUnsaved() {
         this.sending = !0;
-        let tt = !1;
+        let uu = !1;
         for (; this.unsaved.slots.size > 0;) {
-          const Vt = new Map(this.unsaved.slots);
-          let Ot = this.getState().accountId;
+          const ju = new Map(this.unsaved.slots);
+          let su = this.getState().accountId;
           try {
-            const tt = await St.userContextManager.getCurrentUserContext();
-            if (Ot = tt.whamm, this.unsaved.moveTo(tt.whamm), 0 === this.unsaved.slots.size) {
+            const uu = await Pu.userContextManager.getCurrentUserContext();
+            if (su = uu.whamm, this.unsaved.moveTo(uu.whamm), 0 === this.unsaved.slots.size) {
               this.refresh();
               break
             }
             const {
-              accountId: et,
-              data: qt
+              accountId: Eu,
+              data: Uu
             } = this.getState();
-            let Dt = qt;
-            et === tt.whamm && null !== Dt || (Dt = this.unsaved.overlay(await Wt.e.getSavedOutfits(tt)), this.refresh()), await Wt.e.setSavedOutfits(tt, Dt), this.unsaved.isFor(tt.whamm) && Dt.forEach(((tt, et) => {
-              const Ot = this.unsaved.slots.get(et);
-              void 0 === Ot || Ot === Vt.get(et) ? this.unsaved.before.delete(et) : this.unsaved.before.set(et, tt)
+            let Zu = Uu;
+            Eu === uu.whamm && null !== Zu || (Zu = this.unsaved.overlay(await au.b.getSavedOutfits(uu)), this.refresh()), await au.b.setSavedOutfits(uu, Zu), this.unsaved.isFor(uu.whamm) && Zu.forEach(((uu, Eu) => {
+              const su = this.unsaved.slots.get(Eu);
+              void 0 === su || su === ju.get(Eu) ? this.unsaved.before.delete(Eu) : this.unsaved.before.set(Eu, uu)
             }))
-          } catch (et) {
-            if (console.error("Failed to save outfits", et), this.getState().accountId === Ot && [...this.unsaved.slots].every((tt => {
-                let [et, Ot] = tt;
-                return Vt.get(et) === Ot
+          } catch (Eu) {
+            if (console.error("Failed to save outfits", Eu), this.getState().accountId === su && [...this.unsaved.slots].every((uu => {
+                let [Eu, su] = uu;
+                return ju.get(Eu) === su
               }))) {
-              const et = [...Vt.values()].every(Nt);
-              ct.f.showMessage({
-                translationKey: et ? "homePage:deleteOutfitFailed" : "homePage:saveOutfitFailed"
+              const Eu = [...ju.values()].every(Du);
+              ou.f.showMessage({
+                translationKey: Eu ? "homePage:deleteOutfitFailed" : "homePage:saveOutfitFailed"
               });
-              const Ot = new Map(this.unsaved.before);
-              this.unsaved.before.clear(), this.update((tt => tt.map(((tt, et) => {
-                var Vt;
-                return null !== (Vt = Ot.get(et)) && void 0 !== Vt ? Vt : tt
-              })))), tt = !0
+              const su = new Map(this.unsaved.before);
+              this.unsaved.before.clear(), this.update((uu => uu.map(((uu, Eu) => {
+                var ju;
+                return null !== (ju = su.get(Eu)) && void 0 !== ju ? ju : uu
+              })))), uu = !0
             }
           }
-          for (const [tt, et] of Vt) this.unsaved.slots.get(tt) === et && this.unsaved.slots.delete(tt)
+          for (const [uu, Eu] of ju) this.unsaved.slots.get(uu) === Eu && this.unsaved.slots.delete(uu)
         }
-        this.sending = !1, tt && this.refresh()
+        this.sending = !1, uu && this.refresh()
       }
     }
-    const Pt = new It;
-    var Zt = Vt(391),
-      Lt = Vt(41510),
-      Ft = Vt(1652),
-      kt = Vt(2379),
-      Gt = Vt(3072),
-      zt = Vt(2232),
-      ot = Vt(2693),
-      rt = Vt(1152);
-    Vt(34412), Vt(3166);
+    const vu = new mu;
+    var Ku = ju(349),
+      Vu = ju(41520),
+      ru = ju(1611),
+      Qu = ju(2440),
+      iu = ju(3175),
+      Wu = ju(2260),
+      Su = ju(2716),
+      Iu = ju(1116);
+    ju(34583), ju(3269);
     Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI, Math.PI;
-    var Ut = Vt(2317),
-      At = Vt(1464),
-      it = Vt(2435),
-      Yt = Vt(1450),
-      Bt = Vt(1188);
+    var Fu = ju(2380),
+      Bu = ju(1419),
+      Lu = ju(2479),
+      tu = ju(1405),
+      xu = ju(1154);
 
-    function pt(tt) {
+    function Tu(uu) {
       let {
-        wornOutfit: et,
-        onApply: Vt,
-        onOverwrite: qt,
-        onDelete: mt
-      } = tt;
+        wornOutfit: Eu,
+        onApply: ju,
+        onOverwrite: Uu,
+        onDelete: Xu
+      } = uu;
       const {
-        t: jt
-      } = (0, Xt.H)(), {
-        accountId: Ht,
-        data: Qt
-      } = (0, vt.h)(Pt, !1), {
-        userContext: lt
-      } = (0, Dt.d)();
-      async function Et(tt, et) {
-        const Vt = await Yt.NotificationProvider.showPromptPopup({
+        t: qu
+      } = (0, Cu.A)(), {
+        accountId: fu,
+        data: bu
+      } = (0, du.e)(vu, !1), {
+        userContext: cu
+      } = (0, Zu.c)();
+      async function Nu(uu, Eu) {
+        const ju = await tu.NotificationProvider.showPromptPopup({
             title: "homePage:deleteOutfitConfirm",
             confirmText: "general:delete",
             cancelText: "general:cancel",
             destructive: !0
           }).getResult(),
           {
-            accountId: Ot,
-            data: qt
-          } = Pt.getState();
-        var Dt, dt;
-        !0 === Vt && Ot === Ht && null !== qt && (Mt(Dt = qt[tt], dt = et) && Mt(dt, Dt)) && (Pt.clear(tt), mt(tt))
+            accountId: su,
+            data: Uu
+          } = vu.getState();
+        var Zu, lu;
+        !0 === ju && su === fu && null !== Uu && (gu(Zu = Uu[uu], lu = Eu) && gu(lu, Zu)) && (vu.clear(uu), Xu(uu))
       }
-      return (0, Ot.useEffect)((() => {
-        Pt.ensureLoaded()
-      }), []), null === Qt || Ht !== lt.whamm ? null : (0, Bt.jsxs)("div", {
+      return (0, su.useEffect)((() => {
+        vu.ensureLoaded()
+      }), []), null === bu || fu !== cu.whamm ? null : (0, xu.jsxs)("div", {
         className: "CosmeticPackGroup SavedOutfits",
-        children: [(0, Bt.jsx)("div", {
+        children: [(0, xu.jsx)("div", {
           className: "CosmeticPackGroupLabel",
-          children: (0, Bt.jsx)("span", {
+          children: (0, xu.jsx)("span", {
             className: "CosmeticPackGroupLabelName",
-            children: jt("homePage:myOutfits")
+            children: qu("homePage:myOutfits")
           })
-        }), (0, Bt.jsx)("div", {
+        }), (0, xu.jsx)("div", {
           className: "CharacterPresetsGrid SavedOutfitsGrid",
-          children: Qt.map(((tt, Ot) => {
-            const Dt = Nt(tt);
-            return (0, Bt.jsxs)("div", {
-              className: dt()("SavedOutfitSlot", {
-                SavedOutfitSlotFilled: !Dt
+          children: bu.map(((uu, su) => {
+            const Zu = Du(uu);
+            return (0, xu.jsxs)("div", {
+              className: lu()("SavedOutfitSlot", {
+                SavedOutfitSlotFilled: !Zu
               }),
-              children: [(0, Bt.jsxs)("div", {
-                ...(0, ut.X)(),
-                role: Dt ? "button" : "link",
+              children: [(0, xu.jsxs)("div", {
+                ...(0, pu.ib)(),
+                role: Zu ? "button" : "link",
                 "data-pad-focusable": !0,
-                className: dt()("CharacterPresetCard SavedOutfitCard", {
-                  SavedOutfitCardEmpty: Dt,
-                  CharacterPresetCardActive: !Dt && Mt(tt, et)
+                className: lu()("CharacterPresetCard SavedOutfitCard", {
+                  SavedOutfitCardEmpty: Zu,
+                  CharacterPresetCardActive: !Zu && gu(uu, Eu)
                 }),
                 onClick: () => {
-                  Dt ? Pt.save(Ot, et) : Vt(tt)
+                  Zu ? vu.save(su, Eu) : ju(uu)
                 },
-                children: [Dt && (0, Bt.jsxs)(Bt.Fragment, {
-                  children: [(0, Bt.jsx)(rt.b, {
+                children: [Zu && (0, xu.jsxs)(xu.Fragment, {
+                  children: [(0, xu.jsx)(Iu.e, {
                     name: "plus"
-                  }), jt("homePage:saveOutfit")]
-                }), !Dt && (0, Bt.jsxs)(Bt.Fragment, {
-                  children: [(0, Bt.jsx)("div", {
+                  }), qu("homePage:saveOutfit")]
+                }), !Zu && (0, xu.jsxs)(xu.Fragment, {
+                  children: [(0, xu.jsx)("div", {
                     className: "SavedOutfitCardPicture",
-                    children: (0, Bt.jsx)(it.c, {
-                      cosmetics: tt
+                    children: (0, xu.jsx)(Lu.d, {
+                      cosmetics: uu
                     })
-                  }), (0, Bt.jsx)(ut.Q, {
+                  }), (0, xu.jsx)(pu.$, {
                     padSecondaryLabelKey: "homePage:saveOutfit",
                     stopPropagation: !0,
                     onClick: () => {
-                      Mt(et, tt) || (Pt.save(Ot, et), qt(Ot, tt))
+                      gu(Eu, uu) || (vu.save(su, Eu), Uu(su, uu))
                     },
-                    children: jt("general:save")
+                    children: qu("general:save")
                   })]
                 })]
-              }), !Dt && (0, Bt.jsx)(ut.G, {
+              }), !Zu && (0, xu.jsx)(pu.R, {
                 className: "SavedOutfitDeleteButton",
-                ariaLabel: jt("general:delete"),
+                ariaLabel: qu("general:delete"),
                 onClick: () => {
-                  Et(Ot, tt)
+                  Nu(su, uu)
                 },
-                children: (0, Bt.jsx)(rt.b, {
+                children: (0, xu.jsx)(Iu.e, {
                   name: "trash-can"
                 })
               })]
-            }, Ot)
+            }, su)
           }))
         })]
       })
     }
-    var xt = Vt(36623),
-      Tt = Vt(2637),
-      gt = Vt(2645);
+    var Hu = ju(36774),
+      Au = ju(2684),
+      nu = ju(2686);
 
-    function st(tt, et, Vt) {
-      return null !== tt && !(0, Tt.j)(gt.c, et, Vt, tt.collected, tt.ownedPacks)
+    function yu(uu, Eu, ju) {
+      return null !== uu && !(0, Au.i)(nu.c, Eu, ju, uu.collected, uu.ownedPacks)
     }
 
-    function nt(tt) {
+    function zu(uu) {
       let {
-        locked: et,
-        children: Vt
-      } = tt;
-      return et ? (0, Bt.jsx)(te, {
-        children: Vt
-      }) : Vt
+        locked: Eu,
+        children: ju
+      } = uu;
+      return Eu ? (0, xu.jsx)(Ru, {
+        children: ju
+      }) : ju
     }
 
-    function te(tt) {
-      var et;
+    function Ru(uu) {
+      var Eu;
       let {
-        children: Vt
-      } = tt;
+        children: ju
+      } = uu;
       const {
-        t: Ot
-      } = (0, Xt.H)(), {
-        userContext: qt
-      } = (0, Dt.d)(), mt = null !== (et = qt.dailyDrop) && void 0 !== et && et.hidden ? Ot("dailyDrop:lockedFromHidden") : Ot("dailyDrop:lockedFrom");
-      return (0, Bt.jsx)(At.g, {
-        tooltipInner: (0, Bt.jsx)(Bt.Fragment, {
-          children: mt
+        t: su
+      } = (0, Cu.A)(), {
+        userContext: Uu
+      } = (0, Zu.c)(), Xu = null !== (Eu = Uu.dailyDrop) && void 0 !== Eu && Eu.hidden ? su("dailyDrop:lockedFromHidden") : su("dailyDrop:lockedFrom");
+      return (0, xu.jsx)(Bu.e, {
+        tooltipInner: (0, xu.jsx)(xu.Fragment, {
+          children: Xu
         }),
-        children: Vt
+        children: ju
       })
     }
 
-    function ee(tt, et, Vt) {
-      return (0, Qt.r)(tt, et).purchasable && !(0, kt.w)(tt, et, Vt)
+    function uE(uu, Eu, ju) {
+      return (0, bu.n)(uu, Eu).purchasable && !(0, Qu.p)(uu, Eu, ju)
     }
 
-    function Ve(tt, et) {
-      return Object.entries(tt).some((tt => {
-        let [Vt, Ot] = tt;
-        return ee(Vt, Ot, et)
+    function EE(uu, Eu) {
+      return Object.entries(uu).some((uu => {
+        let [ju, su] = uu;
+        return uE(ju, su, Eu)
       }))
     }
 
-    function Oe(tt) {
-      var et;
+    function jE(uu) {
+      var Eu;
       let {
-        pack: Vt,
-        ownedPacks: Ot,
-        showStoreLink: qt = !1,
-        children: Dt
-      } = tt;
+        pack: ju,
+        ownedPacks: su,
+        showStoreLink: Uu = !1,
+        children: Zu
+      } = uu;
       const {
-        t: mt
-      } = (0, Xt.H)(), jt = Ft.d[Vt], Ht = jt.purchasable && !Ot.includes(Vt) && Ft.p.includes(Vt), Qt = Gt.k[Vt];
-      return (0, Bt.jsxs)("div", {
-        className: dt()("CosmeticPackGroup", {
-          CosmeticPackGroupLocked: Ht
+        t: Xu
+      } = (0, Cu.A)(), qu = ru.e[ju], fu = qu.purchasable && !su.includes(ju) && ru.x.includes(ju), bu = iu.k[ju];
+      return (0, xu.jsxs)("div", {
+        className: lu()("CosmeticPackGroup", {
+          CosmeticPackGroupLocked: fu
         }),
-        children: [Qt && (0, Bt.jsx)(Qt, {}), (0, Bt.jsxs)("div", {
+        children: [bu && (0, xu.jsx)(bu, {}), (0, xu.jsxs)("div", {
           className: "CosmeticPackGroupLabel",
-          children: [(0, Bt.jsx)("span", {
+          children: [(0, xu.jsx)("span", {
             className: "CosmeticPackGroupLabelName",
-            children: null !== (et = jt.displayName) && void 0 !== et ? et : Vt
-          }), (Ht || qt) && (0, Bt.jsxs)(ut.A, {
+            children: null !== (Eu = qu.displayName) && void 0 !== Eu ? Eu : ju
+          }), (fu || Uu) && (0, xu.jsxs)(pu.J, {
             onClick: () => {
-              Ht ? (0, Gt.h)(Vt) : (0, Kt.l)({
+              fu ? (0, iu.h)(ju) : (0, wu.m)({
                 mode: "self",
                 source: "characterCustomisation"
               })
             },
-            children: [(0, Bt.jsx)(rt.b, {
+            children: [(0, xu.jsx)(Iu.e, {
               name: "store"
-            }), " ", mt("general:viewInShop")]
+            }), " ", Xu("general:viewInShop")]
           })]
-        }), Ht && "bee" === Vt && (0, Bt.jsx)(Gt.e, {}), Dt]
+        }), fu && "bee" === ju && (0, xu.jsx)(iu.d, {}), Zu]
       })
     }
 
-    function qe(tt) {
+    function sE(uu) {
       let {
-        equippedEmoteIds: et,
-        ownedPacks: Vt,
-        canBuy: Ot,
-        onUpdateLoadout: qt,
-        onEmoteSelected: Dt,
-        onEquipPreviewSkin: mt
-      } = tt;
+        equippedEmoteIds: Eu,
+        ownedPacks: ju,
+        canBuy: su,
+        onUpdateLoadout: Uu,
+        onEmoteSelected: Zu,
+        onEquipPreviewSkin: Xu
+      } = uu;
       const {
-        t: Ht
-      } = (0, Xt.H)(), lt = new Set(et), Et = new Map, ft = Object.keys(Qt.f.emote).sort(((tt, et) => {
-        var Vt, Ot, qt, Dt;
-        return (null !== (Vt = null === (Ot = (0, Qt.n)("emote", tt)) || void 0 === Ot ? void 0 : Ot.clientIdx) && void 0 !== Vt ? Vt : 0) - (null !== (qt = null === (Dt = (0, Qt.n)("emote", et)) || void 0 === Dt ? void 0 : Dt.clientIdx) && void 0 !== qt ? qt : 0)
-      })).filter((tt => {
-        const et = (0, Qt.r)("emote", tt),
-          qt = (0, kt.w)("emote", tt, Vt);
-        return !(et.purchasable && !qt && !Ot) && (et.clientSelectable || qt)
+        t: fu
+      } = (0, Cu.A)(), cu = new Set(Eu), Nu = new Map, Ou = Object.keys(bu.g.emote).sort(((uu, Eu) => {
+        var ju, su, Uu, Zu;
+        return (null !== (ju = null === (su = (0, bu.m)("emote", uu)) || void 0 === su ? void 0 : su.clientIdx) && void 0 !== ju ? ju : 0) - (null !== (Uu = null === (Zu = (0, bu.m)("emote", Eu)) || void 0 === Zu ? void 0 : Zu.clientIdx) && void 0 !== Uu ? Uu : 0)
+      })).filter((uu => {
+        const Eu = (0, bu.n)("emote", uu),
+          Uu = (0, Qu.p)("emote", uu, ju);
+        return !(Eu.purchasable && !Uu && !su) && (Eu.clientSelectable || Uu)
       }));
-      for (const dt of ft) {
-        const tt = (0, Qt.n)("emote", dt).cosmeticPack;
-        Et.has(tt) || Et.set(tt, []), Et.get(tt).push(dt)
+      for (const lu of Ou) {
+        const uu = (0, bu.m)("emote", lu).cosmeticPack;
+        Nu.has(uu) || Nu.set(uu, []), Nu.get(uu).push(lu)
       }
-      const wt = Array.from(Et.keys());
-      return (0, Bt.jsxs)("div", {
+      const Yu = Array.from(Nu.keys());
+      return (0, xu.jsxs)("div", {
         className: "CharCustomisPartSelectorWrapper",
-        children: [!1, (0, Bt.jsxs)("div", {
+        children: [!1, (0, xu.jsxs)("div", {
           className: "EmoteLoadoutSummary",
-          children: [(0, Bt.jsx)("span", {
+          children: [(0, xu.jsx)("span", {
             className: "EmoteLoadoutSummaryText SmallTextBold",
-            children: Ht("emotes:equippedCount", {
-              count: et.length,
-              max: jt.r
+            children: fu("emotes:equippedCount", {
+              count: Eu.length,
+              max: qu.n
             })
-          }), (0, Bt.jsx)("span", {
+          }), (0, xu.jsx)("span", {
             className: "EmoteLoadoutSummaryHint SmallTextLight",
-            children: Ht("emotes:loadoutHint")
+            children: fu("emotes:loadoutHint")
           })]
-        }), wt.map((tt => {
-          const Ot = Et.get(tt);
-          return (0, Bt.jsx)(Oe, {
-            pack: tt,
-            ownedPacks: Vt,
-            children: (0, Bt.jsx)("div", {
+        }), Yu.map((uu => {
+          const su = Nu.get(uu);
+          return (0, xu.jsx)(jE, {
+            pack: uu,
+            ownedPacks: ju,
+            children: (0, xu.jsx)("div", {
               className: "CosmeticPackGroupItems",
-              children: Ot.map((tt => {
-                var Ot;
-                const mt = et.indexOf(tt),
-                  Xt = -1 !== mt,
-                  Qt = et.length >= jt.r,
-                  Et = ee("emote", tt, Vt),
-                  ft = Et || !Xt && Qt,
-                  wt = (0, bt.j)(tt);
-                return (0, Bt.jsxs)("div", {
-                  className: dt()("CharCustomPartWrapper", "EmoteCustomPartWrapper", {
-                    SelectedCharCustomPartWrapper: Xt
+              children: su.map((uu => {
+                var su;
+                const Xu = Eu.indexOf(uu),
+                  Cu = -1 !== Xu,
+                  bu = Eu.length >= qu.n,
+                  Nu = uE("emote", uu, ju),
+                  Ou = Nu || !Cu && bu,
+                  Yu = (0, Mu.k)(uu);
+                return (0, xu.jsxs)("div", {
+                  className: lu()("CharCustomPartWrapper", "EmoteCustomPartWrapper", {
+                    SelectedCharCustomPartWrapper: Cu
                   }),
                   onClick: () => {
-                    Dt(tt)
+                    Zu(uu)
                   },
-                  children: [(0, Bt.jsxs)("div", {
+                  children: [(0, xu.jsxs)("div", {
                     className: "CharCustomPart EmoteCustomPart",
-                    children: [(0, Bt.jsx)("div", {
+                    children: [(0, xu.jsx)("div", {
                       className: "EmoteCustomPartIcon",
                       style: {
-                        backgroundImage: `url(/textures/charSkins/previews/emote_${tt}_preview.png)`
+                        backgroundImage: `url(/textures/charSkins/previews/emote_${uu}_preview.png)`
                       },
                       "aria-hidden": !0
-                    }), (0, Bt.jsx)("span", {
+                    }), (0, xu.jsx)("span", {
                       className: "EmoteCustomPartLabel SmallTextBold",
-                      children: null !== (Ot = null === wt || void 0 === wt ? void 0 : wt.displayName) && void 0 !== Ot ? Ot : tt
+                      children: null !== (su = null === Yu || void 0 === Yu ? void 0 : Yu.displayName) && void 0 !== su ? su : uu
                     })]
-                  }), (0, Bt.jsxs)("div", {
+                  }), (0, xu.jsxs)("div", {
                     className: "EmoteCustomPartToggleContainer",
-                    children: [Xt && (0, Bt.jsx)("span", {
+                    children: [Cu && (0, xu.jsx)("span", {
                       className: "EmoteCustomPartSlotBadge",
-                      children: mt + 1
-                    }), Et && (0, Bt.jsx)(rt.b, {
+                      children: Xu + 1
+                    }), Nu && (0, xu.jsx)(Iu.e, {
                       name: "lock",
                       className: "LockedCosmeticIcon"
-                    }), (0, Bt.jsx)(At.g, {
-                      tooltipInner: (0, Bt.jsx)(Bt.Fragment, {
-                        children: Ht(Xt ? "general:remove" : "general:add")
+                    }), (0, xu.jsx)(Bu.e, {
+                      tooltipInner: (0, xu.jsx)(xu.Fragment, {
+                        children: fu(Cu ? "general:remove" : "general:add")
                       }),
                       delayShow: 0,
                       delayHide: 0,
-                      children: (0, Bt.jsx)("div", {
-                        className: dt()("EmoteCustomPartToggle", {
-                          EmoteCustomPartToggleDisabled: ft,
-                          EmoteCustomPartToggleEquipped: Xt
+                      children: (0, xu.jsx)("div", {
+                        className: lu()("EmoteCustomPartToggle", {
+                          EmoteCustomPartToggleDisabled: Ou,
+                          EmoteCustomPartToggleEquipped: Cu
                         }),
-                        onClick: Vt => {
-                          Vt.stopPropagation(), ft || function(tt) {
-                            lt.has(tt) ? qt(et.filter((et => et !== tt))) : et.length >= jt.r || qt([...et, tt])
-                          }(tt)
+                        onClick: ju => {
+                          ju.stopPropagation(), Ou || function(uu) {
+                            cu.has(uu) ? Uu(Eu.filter((Eu => Eu !== uu))) : Eu.length >= qu.n || Uu([...Eu, uu])
+                          }(uu)
                         },
-                        children: (0, Bt.jsx)(rt.b, {
-                          name: Xt ? "minus" : "plus",
+                        children: (0, xu.jsx)(Iu.e, {
+                          name: Cu ? "minus" : "plus",
                           "aria-hidden": !0
                         })
                       })
                     })]
                   })]
-                }, tt)
+                }, uu)
               }))
             })
-          }, tt)
+          }, uu)
         }))]
       })
     }
-    const De = (0, Ot.memo)((function(tt) {
+    const UE = (0, su.memo)((function(uu) {
       let {
-        selectedTab: et
-      } = tt;
-      const Vt = "characters" === et ? "skin" : et,
+        selectedTab: Eu
+      } = uu;
+      const ju = "characters" === Eu ? "skin" : Eu,
         {
-          t: mt
-        } = (0, Xt.H)(),
+          t: Xu
+        } = (0, Cu.A)(),
         {
-          userContext: ft,
-          isUserContextUpdating: wt
-        } = (0, Dt.d)(),
-        Nt = (0, qt.c)(),
+          userContext: Ou,
+          isUserContextUpdating: Yu
+        } = (0, Zu.c)(),
+        Du = (0, Uu.b)(),
         {
-          gameState: bt
-        } = (0, ht.k)(["gameState"]),
-        [vt, Wt] = (0, Ot.useState)({}),
-        [St, ct] = (0, Ot.useState)({}),
-        [Rt, It] = (0, Ot.useState)(null),
+          gameState: Mu
+        } = (0, Ju.l)(["gameState"]),
+        [du, au] = (0, su.useState)({}),
+        [Pu, ou] = (0, su.useState)({}),
+        [ku, mu] = (0, su.useState)(null),
         {
-          previewEmote: Gt,
-          triggerEmote: At
-        } = (0, Jt.e)(),
-        it = (0, Ot.useRef)(jt.A.reduce(((tt, et) => (tt[et] = (0, Et.d)(et), tt)), {})),
-        Yt = (0, Ot.useRef)(!1),
-        Tt = (0, Ot.useRef)(null),
-        gt = (0, Ot.useRef)(null),
-        te = (0, Ot.useRef)(null);
+          previewEmote: iu,
+          triggerEmote: Bu
+        } = (0, eu.d)(),
+        Lu = (0, su.useRef)(qu.u.reduce(((uu, Eu) => (uu[Eu] = (0, Nu.b)(Eu), uu)), {})),
+        tu = (0, su.useRef)(!1),
+        Au = (0, su.useRef)(null),
+        nu = (0, su.useRef)(null),
+        Ru = (0, su.useRef)(null);
 
-      function De() {
-        null !== gt.current && (clearTimeout(gt.current), gt.current = null);
-        const tt = te.current;
-        null !== tt && (te.current = null, (0, xt.b)(ft, [
-          ["emote", tt]
+      function UE() {
+        null !== nu.current && (clearTimeout(nu.current), nu.current = null);
+        const uu = Ru.current;
+        null !== uu && (Ru.current = null, (0, Hu.c)(Ou, [
+          ["emote", uu]
         ]))
       }
 
-      function me(tt, et, Vt) {
-        var Ot, qt, Dt;
-        it.current = {
-          ...it.current,
-          [tt]: et
-        }, Nt(), Vt && ((0, xt.b)(ft, [
-          [tt, et]
-        ]), It(null));
-        const mt = (0, Qt.n)(tt, et);
-        if (null !== mt && void 0 !== mt && mt.colourGroup && null !== (Ot = Ft.d[mt.cosmeticPack].colourGroups) && void 0 !== Ot && null !== (qt = Ot[mt.colourGroup]) && void 0 !== qt && qt.showSwatchSelector) {
-          const Vt = (0, Qt.j)(et);
-          Vt && ct((et => ({
-            ...et,
-            [`${mt.cosmeticPack}_${tt}_${mt.colourGroup}`]: parseInt(Vt[1])
+      function ZE(uu, Eu, ju) {
+        var su, Uu, Zu;
+        Lu.current = {
+          ...Lu.current,
+          [uu]: Eu
+        }, Du(), ju && ((0, Hu.c)(Ou, [
+          [uu, Eu]
+        ]), mu(null));
+        const Xu = (0, bu.m)(uu, Eu);
+        if (null !== Xu && void 0 !== Xu && Xu.colourGroup && null !== (su = ru.e[Xu.cosmeticPack].colourGroups) && void 0 !== su && null !== (Uu = su[Xu.colourGroup]) && void 0 !== Uu && Uu.showSwatchSelector) {
+          const ju = (0, bu.j)(Eu);
+          ju && ou((Eu => ({
+            ...Eu,
+            [`${Xu.cosmeticPack}_${uu}_${Xu.colourGroup}`]: parseInt(ju[1])
           })))
         }
-        null !== (Dt = Tt.current) && void 0 !== Dt && Dt.isReady() && Tt.current.updateCosmetic(tt, et)
+        null !== (Zu = Au.current) && void 0 !== Zu && Zu.isReady() && Au.current.updateCosmetic(uu, Eu)
       }
 
-      function de(tt) {
-        Wt((et => {
-          const Vt = {
-            ...et
+      function XE(uu) {
+        au((Eu => {
+          const ju = {
+            ...Eu
           };
-          return delete Vt[tt], Vt
+          return delete ju[uu], ju
         }))
       }
 
-      function je(tt, et) {
+      function lE(uu, Eu) {
         let {
-          undoable: Vt
-        } = et;
-        Object.keys(vt).length > 0 && Wt({});
-        const Ot = Object.entries(tt).filter((tt => {
-          let [et, Vt] = tt;
-          return it.current[et] !== Vt && !ee(et, Vt, He) && !st(Xe, et, Vt)
+          undoable: ju
+        } = Eu;
+        Object.keys(du).length > 0 && au({});
+        const su = Object.entries(uu).filter((uu => {
+          let [Eu, ju] = uu;
+          return Lu.current[Eu] !== ju && !uE(Eu, ju, qE) && !yu(fE, Eu, ju)
         }));
-        Vt ? Ot.length > 0 && It({
+        ju ? su.length > 0 && mu({
           kind: "worn",
-          outfit: yt(it.current)
-        }) : It(null);
-        for (const [qt, Dt] of Ot) me(qt, Dt, !1);
-        Ot.length > 0 && (0, xt.b)(ft, Ot)
-      }(0, Ct.e)("cosmeticsUpdated", (tt => {
-        let et = !1;
+          outfit: hu(Lu.current)
+        }) : mu(null);
+        for (const [Uu, Zu] of su) ZE(Uu, Zu, !1);
+        su.length > 0 && (0, Hu.c)(Ou, su)
+      }(0, Gu.b)("cosmeticsUpdated", (uu => {
+        let Eu = !1;
         for (const {
-            local: Vt,
-            kD: Ot,
-            GD: qt
+            local: ju,
+            iZ: su,
+            WZ: Uu
           }
-          of tt) {
-          if (!Vt) return;
-          et = !0, Yt.current || me(Ot, qt, !1), Nt()
+          of uu) {
+          if (!ju) return;
+          Eu = !0, tu.current || ZE(su, Uu, !1), Du()
         }
-        et && (Yt.current = !0)
-      })), (0, Ot.useEffect)((() => {
-        if (!wt) {
-          for (const [tt, et] of Object.entries(ft.getPlayerCosmetics())) me(tt, et, !1);
-          Nt()
+        Eu && (tu.current = !0)
+      })), (0, su.useEffect)((() => {
+        if (!Yu) {
+          for (const [uu, Eu] of Object.entries(Ou.getPlayerCosmetics())) ZE(uu, Eu, !1);
+          Du()
         }
-      }), [wt]), (0, Ot.useEffect)((() => () => {
-        De()
+      }), [Yu]), (0, su.useEffect)((() => () => {
+        UE()
       }), []);
-      const He = ft.getOwnedCosmeticPacks(),
-        Xe = function(tt, et) {
-          return null === tt ? null : {
-            collected: new Set(tt.collected),
-            ownedPacks: et
+      const qE = Ou.getOwnedCosmeticPacks(),
+        fE = function(uu, Eu) {
+          return null === uu ? null : {
+            collected: new Set(uu.collected),
+            ownedPacks: Eu
           }
-        }(ft.dailyDrop, He),
-        Qe = (0, Ut.usePurchasesAllowed)(),
-        le = Object.keys(Qt.f[Vt]).filter((tt => {
-          const et = (0, Qt.r)(Vt, tt),
-            Ot = (0, kt.w)(Vt, tt, He);
-          return !(et.purchasable && !Ot && !Qe) && (et.clientSelectable || Ot)
-        })).sort(((tt, et) => {
-          var Ot, qt, Dt, mt;
-          return (null !== (Ot = null === (qt = (0, Qt.n)(Vt, tt)) || void 0 === qt ? void 0 : qt.clientIdx) && void 0 !== Ot ? Ot : 0) - (null !== (Dt = null === (mt = (0, Qt.n)(Vt, et)) || void 0 === mt ? void 0 : mt.clientIdx) && void 0 !== Dt ? Dt : 0)
+        }(Ou.dailyDrop, qE),
+        CE = (0, Fu.usePurchasesAllowed)(),
+        bE = Object.keys(bu.g[ju]).filter((uu => {
+          const Eu = (0, bu.n)(ju, uu),
+            su = (0, Qu.p)(ju, uu, qE);
+          return !(Eu.purchasable && !su && !CE) && (Eu.clientSelectable || su)
+        })).sort(((uu, Eu) => {
+          var su, Uu, Zu, Xu;
+          return (null !== (su = null === (Uu = (0, bu.m)(ju, uu)) || void 0 === Uu ? void 0 : Uu.clientIdx) && void 0 !== su ? su : 0) - (null !== (Zu = null === (Xu = (0, bu.m)(ju, Eu)) || void 0 === Xu ? void 0 : Xu.clientIdx) && void 0 !== Zu ? Zu : 0)
         })),
-        Ee = new Map;
-      for (const Ot of le) {
-        var fe;
-        const tt = null === (fe = (0, Qt.n)(Vt, Ot)) || void 0 === fe ? void 0 : fe.cosmeticPack;
-        Ee.has(tt) || Ee.set(tt, []), Ee.get(tt).push(Ot)
+        cE = new Map;
+      for (const su of bE) {
+        var NE;
+        const uu = null === (NE = (0, bu.m)(ju, su)) || void 0 === NE ? void 0 : NE.cosmeticPack;
+        cE.has(uu) || cE.set(uu, []), cE.get(uu).push(su)
       }
-      const we = function(tt, et) {
-          const Vt = new Set,
-            Ot = new Set;
-          for (const [qt, Dt] of Object.entries(Qt.f[tt])) {
-            if (void 0 === Dt.colourGroup) continue;
-            const mt = `${Dt.cosmeticPack}_${Dt.colourGroup}`;
-            (ee(tt, qt, et) ? Ot : Vt).add(mt)
+      const OE = function(uu, Eu) {
+          const ju = new Set,
+            su = new Set;
+          for (const [Uu, Zu] of Object.entries(bu.g[uu])) {
+            if (void 0 === Zu.colourGroup) continue;
+            const Xu = `${Zu.cosmeticPack}_${Zu.colourGroup}`;
+            (uE(uu, Uu, Eu) ? su : ju).add(Xu)
           }
-          return new Set([...Vt].filter((tt => Ot.has(tt))))
-        }(Vt, He),
-        ye = new Map;
-      for (const [Ot, qt] of Ee) {
-        const tt = [],
-          et = new Map;
-        for (const Ot of qt) {
-          var Ne, ae;
-          const qt = null !== (Ne = null === (ae = (0, Qt.n)(Vt, Ot)) || void 0 === ae ? void 0 : ae.colourGroup) && void 0 !== Ne ? Ne : null;
-          et.has(qt) || (et.set(qt, []), tt.push(qt)), et.get(qt).push(Ot)
+          return new Set([...ju].filter((uu => su.has(uu))))
+        }(ju, qE),
+        YE = new Map;
+      for (const [su, Uu] of cE) {
+        const uu = [],
+          Eu = new Map;
+        for (const su of Uu) {
+          var hE, DE;
+          const Uu = null !== (hE = null === (DE = (0, bu.m)(ju, su)) || void 0 === DE ? void 0 : DE.colourGroup) && void 0 !== hE ? hE : null;
+          Eu.has(Uu) || (Eu.set(Uu, []), uu.push(Uu)), Eu.get(Uu).push(su)
         }
-        const Dt = tt.map((tt => {
-          var qt;
-          const Dt = et.get(tt),
-            mt = tt ? null === (qt = Ft.d[Ot].colourGroups) || void 0 === qt ? void 0 : qt[tt] : void 0,
-            dt = !0 === (null === mt || void 0 === mt ? void 0 : mt.showSwatchSelector) && !we.has(`${Ot}_${tt}`);
-          if (dt && mt) {
-            var jt;
-            const et = null !== (jt = St[`${Ot}_${Vt}_${tt}`]) && void 0 !== jt ? jt : (0, Ft.h)(mt.colours);
+        const Zu = uu.map((uu => {
+          var Uu;
+          const Zu = Eu.get(uu),
+            Xu = uu ? null === (Uu = ru.e[su].colourGroups) || void 0 === Uu ? void 0 : Uu[uu] : void 0,
+            lu = !0 === (null === Xu || void 0 === Xu ? void 0 : Xu.showSwatchSelector) && !OE.has(`${su}_${uu}`);
+          if (lu && Xu) {
+            var qu;
+            const Eu = null !== (qu = Pu[`${su}_${ju}_${uu}`]) && void 0 !== qu ? qu : (0, ru.l)(Xu.colours);
             return {
-              groupName: tt,
-              showSwatch: dt,
-              cosmetics: Dt.filter((tt => {
-                const Vt = (0, Qt.j)(tt);
-                return !Vt || et.toString() === Vt[1].toString()
+              groupName: uu,
+              showSwatch: lu,
+              cosmetics: Zu.filter((uu => {
+                const ju = (0, bu.j)(uu);
+                return !ju || Eu.toString() === ju[1].toString()
               }))
             }
           }
           return {
-            groupName: tt,
-            cosmetics: Dt,
-            showSwatch: dt
+            groupName: uu,
+            cosmetics: Zu,
+            showSwatch: lu
           }
         }));
-        ye.set(Ot, Dt)
+        YE.set(su, Zu)
       }
-      const Me = Array.from(Ee.keys()),
-        be = new Map;
-      for (const [Ot, qt] of Object.entries(lt.d)) {
-        const tt = Ft.d[qt.cosmeticPack],
-          et = !Ve(qt.cosmetics, He),
-          Vt = Ft.l.some((tt => (0, Ft.f)(tt) === Ot));
-        (tt.clientSelectable || Vt || et) && ((!tt.purchasable || et || Qe) && (be.has(qt.cosmeticPack) || be.set(qt.cosmeticPack, []), be.get(qt.cosmeticPack).push([Ot, qt])))
+      const gE = Array.from(cE.keys()),
+        ME = new Map;
+      for (const [su, Uu] of Object.entries(cu.d)) {
+        const uu = ru.e[Uu.cosmeticPack],
+          Eu = !EE(Uu.cosmetics, qE),
+          ju = ru.r.some((uu => (0, ru.i)(uu) === su));
+        (uu.clientSelectable || ju || Eu) && ((!uu.purchasable || Eu || CE) && (ME.has(Uu.cosmeticPack) || ME.set(Uu.cosmeticPack, []), ME.get(Uu.cosmeticPack).push([su, Uu])))
       }
-      const Je = Array.from(be.keys());
-      return (0, Bt.jsxs)("div", {
+      const eE = Array.from(ME.keys());
+      return (0, xu.jsxs)("div", {
         className: "CharCustomisationBody",
-        children: [("cape" === Vt || "nameColour" === Vt) && !ft.playerHasRank("super") && (0, Bt.jsxs)("div", {
+        children: [("cape" === ju || "nameColour" === ju) && !Ou.playerHasRank("super") && (0, xu.jsxs)("div", {
           className: "CharCustomisationBodyHeader",
-          children: [(0, Bt.jsx)(rt.b, {
+          children: [(0, xu.jsx)(Iu.e, {
             name: "bolt"
-          }), mt("homePage:unlockWithSuperRank"), Qe && (0, Bt.jsx)(ut.m, {
+          }), Xu("homePage:unlockWithSuperRank"), CE && (0, xu.jsx)(pu.p, {
             onClick: () => {
-              (0, Kt.l)({
+              (0, wu.m)({
                 mode: "self",
                 source: "characterCustomisation",
                 openItem: "superRank"
               })
             },
-            children: mt("general:getItNow")
+            children: Xu("general:getItNow")
           })]
-        }), (0, Bt.jsxs)("div", {
+        }), (0, xu.jsxs)("div", {
           className: "CharCustomisationBodyInner",
-          children: ["characters" === et && (0, Bt.jsxs)("div", {
+          children: ["characters" === Eu && (0, xu.jsxs)("div", {
             className: "CharCustomisPartSelectorWrapper",
-            children: [!1, (0, Bt.jsx)(pt, {
-              wornOutfit: yt(it.current),
-              onApply: tt => {
-                je(tt, {
+            children: [!1, (0, xu.jsx)(Tu, {
+              wornOutfit: hu(Lu.current),
+              onApply: uu => {
+                lE(uu, {
                   undoable: !0
                 })
               },
-              onOverwrite: (tt, et) => {
-                It({
+              onOverwrite: (uu, Eu) => {
+                mu({
                   kind: "slot",
-                  slot: tt,
-                  outfit: et
+                  slot: uu,
+                  outfit: Eu
                 })
               },
-              onDelete: tt => {
-                It((et => "slot" === (null === et || void 0 === et ? void 0 : et.kind) && et.slot === tt ? null : et))
+              onDelete: uu => {
+                mu((Eu => "slot" === (null === Eu || void 0 === Eu ? void 0 : Eu.kind) && Eu.slot === uu ? null : Eu))
               }
-            }), Je.map((tt => {
-              const et = be.get(tt);
-              return (0, Bt.jsx)(Oe, {
-                pack: tt,
-                ownedPacks: He,
-                showStoreLink: !Ft.m.includes(tt) && et.some((tt => {
+            }), eE.map((uu => {
+              const Eu = ME.get(uu);
+              return (0, xu.jsx)(jE, {
+                pack: uu,
+                ownedPacks: qE,
+                showStoreLink: !ru.t.includes(uu) && Eu.some((uu => {
                   let [, {
-                    cosmetics: et
-                  }] = tt;
-                  return Ve(et, He)
+                    cosmetics: Eu
+                  }] = uu;
+                  return EE(Eu, qE)
                 })),
-                children: (0, Bt.jsx)("div", {
+                children: (0, xu.jsx)("div", {
                   className: "CharacterPresetsGrid",
-                  children: et.map((tt => {
-                    let [et, {
-                      cosmetics: Vt
-                    }] = tt;
-                    const Ot = Ve(Vt, He),
-                      qt = !Ot && function(tt, et) {
-                        return Object.entries(et).some((et => {
-                          let [Vt, Ot] = et;
-                          return st(tt, Vt, Ot)
+                  children: Eu.map((uu => {
+                    let [Eu, {
+                      cosmetics: ju
+                    }] = uu;
+                    const su = EE(ju, qE),
+                      Uu = !su && function(uu, Eu) {
+                        return Object.entries(Eu).some((Eu => {
+                          let [ju, su] = Eu;
+                          return yu(uu, ju, su)
                         }))
-                      }(Xe, Vt),
-                      Dt = Ot || qt,
-                      mt = Mt(Vt, vt),
-                      jt = !mt && Mt(Vt, it.current);
-                    return (0, Bt.jsx)(nt, {
-                      locked: qt,
-                      children: (0, Bt.jsxs)("div", {
+                      }(fE, ju),
+                      Zu = su || Uu,
+                      Xu = gu(ju, du),
+                      qu = !Xu && gu(ju, Lu.current);
+                    return (0, xu.jsx)(zu, {
+                      locked: Uu,
+                      children: (0, xu.jsxs)("div", {
                         "data-pad-focusable": !0,
-                        className: dt()("CharacterPresetCard", {
-                          CharacterPresetCardActive: jt,
-                          CharacterPresetCardTryingOn: mt
+                        className: lu()("CharacterPresetCard", {
+                          CharacterPresetCardActive: qu,
+                          CharacterPresetCardTryingOn: Xu
                         }),
                         onClick: () => {
-                          Dt ? function(tt) {
-                            Mt(tt, vt) ? Wt({}) : Wt({
-                              ...tt
+                          Zu ? function(uu) {
+                            gu(uu, du) ? au({}) : au({
+                              ...uu
                             })
-                          }(Vt) : je(Vt, {
+                          }(ju) : lE(ju, {
                             undoable: !0
                           })
                         },
-                        children: [(0, Bt.jsx)("div", {
+                        children: [(0, xu.jsx)("div", {
                           className: "CharacterPresetCardPreview",
                           style: {
-                            backgroundImage: `url(/textures/charSkins/previews/character_${et}_preview.png)`
+                            backgroundImage: `url(/textures/charSkins/previews/character_${Eu}_preview.png)`
                           }
-                        }), Dt && (0, Bt.jsx)(rt.b, {
+                        }), Zu && (0, xu.jsx)(Iu.e, {
                           name: "lock",
                           className: "LockedCosmeticIcon"
                         })]
                       })
-                    }, et)
+                    }, Eu)
                   }))
                 })
-              }, tt)
+              }, uu)
             }))]
-          }), "emote" === et && (0, Bt.jsx)(qe, {
-            equippedEmoteIds: (0, Et.h)(it.current.emote),
-            ownedPacks: He,
-            canBuy: Qe,
-            onUpdateLoadout: tt => {
-              const et = (0, Et.l)(tt);
-              var Vt;
-              it.current = {
-                ...it.current,
-                emote: et
-              }, ft.setPlayerCosmetics("emote", et), Nt(), Vt = et, te.current = Vt, null !== gt.current && clearTimeout(gt.current), gt.current = setTimeout(De, 350)
+          }), "emote" === Eu && (0, xu.jsx)(sE, {
+            equippedEmoteIds: (0, Nu.f)(Lu.current.emote),
+            ownedPacks: qE,
+            canBuy: CE,
+            onUpdateLoadout: uu => {
+              const Eu = (0, Nu.j)(uu);
+              var ju;
+              Lu.current = {
+                ...Lu.current,
+                emote: Eu
+              }, Ou.setPlayerCosmetics("emote", Eu), Du(), ju = Eu, Ru.current = ju, null !== nu.current && clearTimeout(nu.current), nu.current = setTimeout(UE, 350)
             },
-            onEmoteSelected: At,
+            onEmoteSelected: Bu,
             onEquipPreviewSkin: () => {
-              ! function(tt, et) {
-                for (const Vt of jt.A) "cape" !== Vt && "nameColour" !== Vt && "emote" !== Vt && tt(Vt, "skin" === Vt ? "skin_preview" : `${Vt}_none`, !1);
-                et()
-              }(me, Nt)
+              ! function(uu, Eu) {
+                for (const ju of qu.u) "cape" !== ju && "nameColour" !== ju && "emote" !== ju && uu(ju, "skin" === ju ? "skin_preview" : `${ju}_none`, !1);
+                Eu()
+              }(ZE, Du)
             }
-          }), "characters" !== et && "emote" !== et && (0, Bt.jsxs)("div", {
+          }), "characters" !== Eu && "emote" !== Eu && (0, xu.jsxs)("div", {
             className: "CharCustomisPartSelectorWrapper",
-            children: [!1, Me.map((tt => {
-              const et = ye.get(tt);
-              return (0, Bt.jsx)(Oe, {
-                pack: tt,
-                ownedPacks: He,
-                children: et.map((et => {
-                  var Ot;
+            children: [!1, gE.map((uu => {
+              const Eu = YE.get(uu);
+              return (0, xu.jsx)(jE, {
+                pack: uu,
+                ownedPacks: qE,
+                children: Eu.map((Eu => {
+                  var su;
                   let {
-                    groupName: qt,
-                    cosmetics: Dt,
-                    showSwatch: mt
-                  } = et;
-                  const jt = qt ? null === (Ot = Ft.d[tt].colourGroups) || void 0 === Ot ? void 0 : Ot[qt] : void 0,
-                    Xt = `${tt}_${Vt}_${qt}`;
-                  return (0, Bt.jsxs)("div", {
+                    groupName: Uu,
+                    cosmetics: Zu,
+                    showSwatch: Xu
+                  } = Eu;
+                  const qu = Uu ? null === (su = ru.e[uu].colourGroups) || void 0 === su ? void 0 : su[Uu] : void 0,
+                    Cu = `${uu}_${ju}_${Uu}`;
+                  return (0, xu.jsxs)("div", {
                     className: "CosmeticPackGroupItems",
-                    children: [mt && jt && (0, Bt.jsx)("div", {
+                    children: [Xu && qu && (0, xu.jsx)("div", {
                       className: "CosmeticColorSwatchCell",
-                      children: [...jt.colours.map(((tt, et) => ({
-                        color: tt,
-                        index: et
-                      })))].sort(((tt, et) => tt.color.order - et.color.order)).map((et => {
-                        var Ot;
+                      children: [...qu.colours.map(((uu, Eu) => ({
+                        color: uu,
+                        index: Eu
+                      })))].sort(((uu, Eu) => uu.color.order - Eu.color.order)).map((Eu => {
+                        var su;
                         let {
-                          color: Dt,
-                          index: mt
-                        } = et;
-                        return (0, Bt.jsx)("div", {
-                          className: dt()("CosmeticColorOption", {
-                            CosmeticColorOptionSelected: (null !== (Ot = St[Xt]) && void 0 !== Ot ? Ot : (0, Ft.h)(jt.colours)) === mt
+                          color: Zu,
+                          index: Xu
+                        } = Eu;
+                        return (0, xu.jsx)("div", {
+                          className: lu()("CosmeticColorOption", {
+                            CosmeticColorOptionSelected: (null !== (su = Pu[Cu]) && void 0 !== su ? su : (0, ru.l)(qu.colours)) === Xu
                           }),
                           style: {
-                            backgroundColor: `rgb(${Dt.rbg.join(",")})`
+                            backgroundColor: `rgb(${Zu.rbg.join(",")})`
                           },
                           onClick: () => {
-                            var et;
-                            ct((tt => ({
-                              ...tt,
-                              [Xt]: mt
+                            var Eu;
+                            ou((uu => ({
+                              ...uu,
+                              [Cu]: Xu
                             })));
-                            const Ot = vt[Vt],
-                              Dt = Ot ? (0, Qt.n)(Vt, Ot) : null,
-                              dt = (null === Dt || void 0 === Dt ? void 0 : Dt.cosmeticPack) === tt,
-                              jt = dt ? Ot : it.current[Vt],
-                              Ht = dt ? Dt : (0, Qt.n)(Vt, jt);
-                            if ((null === Ht || void 0 === Ht ? void 0 : Ht.cosmeticPack) !== tt) return;
-                            if ((null !== (et = null === Ht || void 0 === Ht ? void 0 : Ht.colourGroup) && void 0 !== et ? et : null) !== qt) return;
-                            const lt = (0, Qt.j)(jt);
-                            if (lt) {
-                              const tt = `${Vt}_${lt[0]}_${mt}`;
-                              ee(Vt, tt, He) || st(Xe, Vt, tt) ? Wt((et => ({
-                                ...et,
-                                [Vt]: tt
-                              }))) : (dt && de(Vt), me(Vt, tt, !0))
+                            const su = du[ju],
+                              Zu = su ? (0, bu.m)(ju, su) : null,
+                              lu = (null === Zu || void 0 === Zu ? void 0 : Zu.cosmeticPack) === uu,
+                              qu = lu ? su : Lu.current[ju],
+                              fu = lu ? Zu : (0, bu.m)(ju, qu);
+                            if ((null === fu || void 0 === fu ? void 0 : fu.cosmeticPack) !== uu) return;
+                            if ((null !== (Eu = null === fu || void 0 === fu ? void 0 : fu.colourGroup) && void 0 !== Eu ? Eu : null) !== Uu) return;
+                            const cu = (0, bu.j)(qu);
+                            if (cu) {
+                              const uu = `${ju}_${cu[0]}_${Xu}`;
+                              uE(ju, uu, qE) || yu(fE, ju, uu) ? au((Eu => ({
+                                ...Eu,
+                                [ju]: uu
+                              }))) : (lu && XE(ju), ZE(ju, uu, !0))
                             }
                           }
-                        }, Dt.rbg.join())
+                        }, Zu.rbg.join())
                       }))
-                    }), Dt.map((tt => {
-                      const et = tt === it.current[Vt],
-                        Ot = vt[Vt] === tt,
-                        qt = ee(Vt, tt, He),
-                        Dt = !qt && st(Xe, Vt, tt),
-                        mt = qt || Dt;
-                      let jt = !0;
-                      return mt || et || ("cape" !== Vt || (0, Zt.ae)(ft.getPlayerRanks(), tt)) && ("nameColour" !== Vt || ft.playerHasRank("super")) || (jt = !1), (0, Bt.jsx)(nt, {
-                        locked: Dt,
-                        children: (0, Bt.jsxs)("div", {
-                          className: dt()("CharCustomPartWrapper", {
-                            SelectedCharCustomPartWrapper: et && !Ot,
-                            TryingOnCharCustomPartWrapper: Ot,
-                            DisabledCharCustomPartWrapper: !jt,
-                            CharCustomPartWrapperProfileEffect: "profileEffect" === Vt
+                    }), Zu.map((uu => {
+                      const Eu = uu === Lu.current[ju],
+                        su = du[ju] === uu,
+                        Uu = uE(ju, uu, qE),
+                        Zu = !Uu && yu(fE, ju, uu),
+                        Xu = Uu || Zu;
+                      let qu = !0;
+                      return Xu || Eu || ("cape" !== ju || (0, Ku.Ud)(Ou.getPlayerRanks(), uu)) && ("nameColour" !== ju || Ou.playerHasRank("super")) || (qu = !1), (0, xu.jsx)(zu, {
+                        locked: Zu,
+                        children: (0, xu.jsxs)("div", {
+                          className: lu()("CharCustomPartWrapper", {
+                            SelectedCharCustomPartWrapper: Eu && !su,
+                            TryingOnCharCustomPartWrapper: su,
+                            DisabledCharCustomPartWrapper: !qu,
+                            CharCustomPartWrapperProfileEffect: "profileEffect" === ju
                           }),
                           onClick: () => {
-                            if (jt)
-                              if (mt) Wt((et => {
-                                if (et[Vt] === tt) {
-                                  const tt = {
-                                    ...et
+                            if (qu)
+                              if (Xu) au((Eu => {
+                                if (Eu[ju] === uu) {
+                                  const uu = {
+                                    ...Eu
                                   };
-                                  return delete tt[Vt], tt
+                                  return delete uu[ju], uu
                                 }
                                 return {
-                                  ...et,
-                                  [Vt]: tt
+                                  ...Eu,
+                                  [ju]: uu
                                 }
                               }));
                               else {
-                                var et;
-                                if (vt[Vt] && de(Vt), tt === it.current[Vt]) return;
-                                null !== (et = Tt.current) && void 0 !== et && et.isReady() && me(Vt, tt, !0)
+                                var Eu;
+                                if (du[ju] && XE(ju), uu === Lu.current[ju]) return;
+                                null !== (Eu = Au.current) && void 0 !== Eu && Eu.isReady() && ZE(ju, uu, !0)
                               }
                           },
-                          children: ["profileEffect" === Vt ? (0, Bt.jsx)("div", {
+                          children: ["profileEffect" === ju ? (0, xu.jsx)("div", {
                             className: "CharCustomPart CharCustomProfileEffect",
-                            children: (0, Bt.jsx)(ot.f, {
-                              playerSocialPreview: (0, zt.b)(tt, {
-                                name: ft.getPlayerName(),
-                                cosmetics: ft.getPlayerCosmetics()
+                            children: (0, xu.jsx)(Su.f, {
+                              playerSocialPreview: (0, Wu.b)(uu, {
+                                name: Ou.getPlayerName(),
+                                cosmetics: Ou.getPlayerCosmetics()
                               }),
                               showLocation: !1,
                               opensProfileCard: !1
                             })
-                          }) : (0, Bt.jsx)("div", {
-                            className: dt()("CharCustomPart", {
-                              PixelatedImage: "cape" === Vt
+                          }) : (0, xu.jsx)("div", {
+                            className: lu()("CharCustomPart", {
+                              PixelatedImage: "cape" === ju
                             }),
-                            style: (0, Qt.n)(Vt, tt).previewTex ? {
-                              backgroundImage: `url(/textures/charSkins/previews/${(0,Qt.n)(Vt,tt).previewTex}.png)`
+                            style: (0, bu.m)(ju, uu).previewTex ? {
+                              backgroundImage: `url(/textures/charSkins/previews/${(0,bu.m)(ju,uu).previewTex}.png)`
                             } : {
-                              backgroundColor: Ht.o[tt]
+                              backgroundColor: fu.s[uu]
                             }
-                          }), mt && (0, Bt.jsx)(rt.b, {
+                          }), Xu && (0, xu.jsx)(Iu.e, {
                             name: "lock",
                             className: "LockedCosmeticIcon"
                           })]
                         })
-                      }, tt)
+                      }, uu)
                     }))]
-                  }, null !== qt && void 0 !== qt ? qt : "ungrouped")
+                  }, null !== Uu && void 0 !== Uu ? Uu : "ungrouped")
                 }))
-              }, tt)
+              }, uu)
             }))]
-          }), Rt && (0, Bt.jsxs)(ut.f, {
+          }), ku && (0, xu.jsxs)(pu.f, {
             className: "CharCustomisationUndo",
             onClick: () => {
-              "worn" === Rt.kind ? je(Rt.outfit, {
+              "worn" === ku.kind ? lE(ku.outfit, {
                 undoable: !1
-              }) : (Pt.save(Rt.slot, Rt.outfit), It(null))
+              }) : (vu.save(ku.slot, ku.outfit), mu(null))
             },
-            children: [(0, Bt.jsx)(rt.b, {
+            children: [(0, xu.jsx)(Iu.e, {
               name: "rotate-left"
-            }), mt("general:undo")]
-          }), (0, Bt.jsx)(Lt.CharacterPreview, {
-            ref: Tt,
-            forcedCosmetics: vt,
-            rd: Gt.id,
-            emotePlaySeq: Gt.seq,
+            }), Xu("general:undo")]
+          }), (0, xu.jsx)(Vu.CharacterPreview, {
+            ref: Au,
+            forcedCosmetics: du,
+            Vl: iu.id,
+            emotePlaySeq: iu.seq,
             onReady: () => {
-              for (const tt of jt.A) me(tt, it.current[tt], !1)
+              for (const uu of qu.u) ZE(uu, Lu.current[uu], !1)
             }
           })]
         })]
       })
     }))
   },
-  41510: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      CharacterPreview: () => Qt
+  41520: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      CharacterPreview: () => bu
     });
-    var Ot = Vt(63),
-      qt = Vt(2821),
-      Dt = Vt(1325),
-      mt = Vt(2652),
-      dt = Vt(34412),
-      jt = Vt(3702),
-      Ht = Vt(1188);
-    const Xt = .6 * Math.PI,
-      Qt = (0, Ot.memo)((0, Ot.forwardRef)((function(tt, et) {
+    var su = ju(58),
+      Uu = ju(2876),
+      Zu = ju(1298),
+      Xu = ju(2690),
+      lu = ju(34583),
+      qu = ju(3834),
+      fu = ju(1154);
+    const Cu = .6 * Math.PI,
+      bu = (0, su.memo)((0, su.forwardRef)((function(uu, Eu) {
         let {
-          onReady: Vt,
-          onDrawn: Qt,
-          owner: lt = "other",
-          framing: Et = "player",
-          forcedCosmetics: ft,
-          rd: wt,
-          emotePlaySeq: yt,
-          turntableFromYaw: Nt = null
-        } = tt;
-        const Mt = (0, Ot.useRef)(null),
+          onReady: ju,
+          onDrawn: bu,
+          owner: cu = "other",
+          framing: Nu = "player",
+          forcedCosmetics: Ou,
+          Vl: Yu,
+          emotePlaySeq: hu,
+          turntableFromYaw: Du = null
+        } = uu;
+        const gu = (0, su.useRef)(null),
           {
-            width: bt,
-            height: Jt
-          } = (0, qt.d)(Mt),
-          Ct = (0, Ot.useRef)(null),
-          ut = (0, Ot.useRef)({}),
-          Kt = (0, Ot.useRef)({}),
-          [ht, vt] = (0, Ot.useState)(!1),
-          Wt = (0, Ot.useRef)(Vt);
-        Wt.current = Vt;
-        const St = (0, Ot.useRef)(Qt);
-        St.current = Qt;
-        const ct = (0, Ot.useRef)(null),
-          Rt = (0, Ot.useRef)(!1),
-          It = (0, Ot.useRef)(!1),
-          Pt = (0, Ot.useCallback)((() => {
-            const tt = Ct.current;
-            if (!tt || !St.current || Rt.current || !It.current) return;
-            const et = {};
-            ct.current = et, queueMicrotask((() => {
-              if (ct.current !== et) return;
-              const Vt = Promise.all(Dt.A.map((et => tt.untilDrawn(et)))).catch((tt => {
-                  console.error("Failed to draw the character preview", tt)
+            width: Mu,
+            height: eu
+          } = (0, Uu.d)(gu),
+          Gu = (0, su.useRef)(null),
+          pu = (0, su.useRef)({}),
+          wu = (0, su.useRef)({}),
+          [Ju, du] = (0, su.useState)(!1),
+          au = (0, su.useRef)(ju);
+        au.current = ju;
+        const Pu = (0, su.useRef)(bu);
+        Pu.current = bu;
+        const ou = (0, su.useRef)(null),
+          ku = (0, su.useRef)(!1),
+          mu = (0, su.useRef)(!1),
+          vu = (0, su.useCallback)((() => {
+            const uu = Gu.current;
+            if (!uu || !Pu.current || ku.current || !mu.current) return;
+            const Eu = {};
+            ou.current = Eu, queueMicrotask((() => {
+              if (ou.current !== Eu) return;
+              const ju = Promise.all(Zu.u.map((Eu => uu.untilDrawn(Eu)))).catch((uu => {
+                  console.error("Failed to draw the character preview", uu)
                 })),
-                Ot = new Promise((tt => {
-                  setTimeout(tt, 1e4)
+                su = new Promise((uu => {
+                  setTimeout(uu, 1e4)
                 }));
-              Promise.race([Vt, Ot]).then((() => {
-                var Vt;
-                Ct.current !== tt || ct.current !== et || Rt.current || (Rt.current = !0, null === (Vt = St.current) || void 0 === Vt || Vt.call(St))
+              Promise.race([ju, su]).then((() => {
+                var ju;
+                Gu.current !== uu || ou.current !== Eu || ku.current || (ku.current = !0, null === (ju = Pu.current) || void 0 === ju || ju.call(Pu))
               }))
             }))
           }), []);
-        return (0, Ot.useImperativeHandle)(et, (() => {
-          const tt = (tt, et) => {
-            var Vt;
-            (ut.current[tt] = et, null !== ft && void 0 !== ft && ft[tt]) || (null === (Vt = Ct.current) || void 0 === Vt || Vt.setCosmetic(tt, et), Pt())
+        return (0, su.useImperativeHandle)(Eu, (() => {
+          const uu = (uu, Eu) => {
+            var ju;
+            (pu.current[uu] = Eu, null !== Ou && void 0 !== Ou && Ou[uu]) || (null === (ju = Gu.current) || void 0 === ju || ju.setCosmetic(uu, Eu), vu())
           };
           return {
-            updateCosmetic: tt,
-            setAllCosmetics(et) {
-              for (const Ot of Dt.A) {
-                var Vt;
-                tt(Ot, null !== (Vt = et[Ot]) && void 0 !== Vt ? Vt : (0, mt.d)(Ot))
+            updateCosmetic: uu,
+            setAllCosmetics(Eu) {
+              for (const su of Zu.u) {
+                var ju;
+                uu(su, null !== (ju = Eu[su]) && void 0 !== ju ? ju : (0, Xu.b)(su))
               }
             },
             isReady() {
-              var tt, et;
-              return null !== (tt = null === (et = Ct.current) || void 0 === et ? void 0 : et.isReady()) && void 0 !== tt && tt
+              var uu, Eu;
+              return null !== (uu = null === (Eu = Gu.current) || void 0 === Eu ? void 0 : Eu.isReady()) && void 0 !== uu && uu
             },
             resetCamera() {
-              var tt;
-              null === (tt = Ct.current) || void 0 === tt || tt.resetCamera()
+              var uu;
+              null === (uu = Gu.current) || void 0 === uu || uu.resetCamera()
             },
-            setOrbit(tt) {
-              var et;
-              null === (et = Ct.current) || void 0 === et || et.setOrbit(tt)
+            setOrbit(uu) {
+              var Eu;
+              null === (Eu = Gu.current) || void 0 === Eu || Eu.setOrbit(uu)
             },
-            async ensureReadyForCapture(tt) {
-              var et;
-              await (null === (et = Ct.current) || void 0 === et ? void 0 : et.untilDrawn(tt))
+            async ensureReadyForCapture(uu) {
+              var Eu;
+              await (null === (Eu = Gu.current) || void 0 === Eu ? void 0 : Eu.untilDrawn(uu))
             },
             getDevTools() {
-              var tt;
-              return null !== (tt = Ct.current) && void 0 !== tt && tt.isReady() ? Ct.current.dev : null
+              var uu;
+              return null !== (uu = Gu.current) && void 0 !== uu && uu.isReady() ? Gu.current.dev : null
             }
           }
-        }), [ft, Pt]), (0, Ot.useEffect)((() => {
-          const tt = jt.c.register(lt),
-            et = dt.l.openCharacter(Mt.current, Et);
-          Ct.current = et;
-          let Vt = !0;
-          return et.ready.then((() => {
-            Vt && (vt(!0), Wt.current())
-          })).catch((tt => {
-            console.error("Failed to set up the character preview", tt)
+        }), [Ou, vu]), (0, su.useEffect)((() => {
+          const uu = qu.b.register(cu),
+            Eu = lu.k.openCharacter(gu.current, Nu);
+          Gu.current = Eu;
+          let ju = !0;
+          return Eu.ready.then((() => {
+            ju && (du(!0), au.current())
+          })).catch((uu => {
+            console.error("Failed to set up the character preview", uu)
           })), () => {
-            Vt = !1, tt(), et.resetCamera(), et.close(), Ct.current = null
+            ju = !1, uu(), Eu.resetCamera(), Eu.close(), Gu.current = null
           }
-        }), []), (0, Ot.useEffect)((() => {
-          bt <= 0 || Jt <= 0 || Ct.current.resize(bt, Jt)
-        }), [bt, Jt]), (0, Ot.useEffect)((() => {
-          if (!ht) return;
-          const tt = Kt.current;
-          for (const et of Dt.A) {
-            const Vt = null === ft || void 0 === ft ? void 0 : ft[et],
-              Ot = tt[et];
-            Vt && Vt !== Ot ? Ct.current.setCosmetic(et, Vt) : !Vt && Ot && ut.current[et] && Ct.current.setCosmetic(et, ut.current[et])
+        }), []), (0, su.useEffect)((() => {
+          Mu <= 0 || eu <= 0 || Gu.current.resize(Mu, eu)
+        }), [Mu, eu]), (0, su.useEffect)((() => {
+          if (!Ju) return;
+          const uu = wu.current;
+          for (const Eu of Zu.u) {
+            const ju = null === Ou || void 0 === Ou ? void 0 : Ou[Eu],
+              su = uu[Eu];
+            ju && ju !== su ? Gu.current.setCosmetic(Eu, ju) : !ju && su && pu.current[Eu] && Gu.current.setCosmetic(Eu, pu.current[Eu])
           }
-          Kt.current = {
-            ...ft
-          }, It.current = !0, Pt()
-        }), [ft, ht, Pt]), (0, Ot.useEffect)((() => {
-          ht && Ct.current.playEmote(null !== wt && void 0 !== wt ? wt : null)
-        }), [wt, yt, ht]), (0, Ot.useEffect)((() => {
-          if (!ht || null === Nt) return;
-          const tt = Ct.current,
+          wu.current = {
+            ...Ou
+          }, mu.current = !0, vu()
+        }), [Ou, Ju, vu]), (0, su.useEffect)((() => {
+          Ju && Gu.current.playEmote(null !== Yu && void 0 !== Yu ? Yu : null)
+        }), [Yu, hu, Ju]), (0, su.useEffect)((() => {
+          if (!Ju || null === Du) return;
+          const uu = Gu.current,
             {
-              pitch: et,
-              radius: Vt
-            } = dt.e[Et];
-          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return tt.setOrbit({
-            yaw: Nt + Xt,
-            pitch: et,
-            radius: Vt
+              pitch: Eu,
+              radius: ju
+            } = lu.e[Nu];
+          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return uu.setOrbit({
+            yaw: Du + Cu,
+            pitch: Eu,
+            radius: ju
           }), () => {
-            tt.resetCamera()
+            uu.resetCamera()
           };
-          const Ot = performance.now();
-          let qt = 0;
-          const Dt = mt => {
-            tt.setOrbit({
-              yaw: Nt + (mt - Ot) / 6e3 * 2 * Math.PI,
-              pitch: et,
-              radius: Vt
-            }), qt = requestAnimationFrame(Dt)
+          const su = performance.now();
+          let Uu = 0;
+          const Zu = Xu => {
+            uu.setOrbit({
+              yaw: Du + (Xu - su) / 6e3 * 2 * Math.PI,
+              pitch: Eu,
+              radius: ju
+            }), Uu = requestAnimationFrame(Zu)
           };
-          return qt = requestAnimationFrame(Dt), () => {
-            cancelAnimationFrame(qt), tt.resetCamera()
+          return Uu = requestAnimationFrame(Zu), () => {
+            cancelAnimationFrame(Uu), uu.resetCamera()
           }
-        }), [ht, Nt]), (0, Ht.jsx)("div", {
+        }), [Ju, Du]), (0, fu.jsx)("div", {
           className: "CharCustomisationPreview",
-          ref: Mt
+          ref: gu
         })
       })))
   },
-  36623: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => mt
+  36774: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => Xu
     });
-    var Ot = Vt(2024),
-      qt = Vt(1600);
-    const Dt = new class {
+    var su = ju(1986),
+      Uu = ju(1559);
+    const Zu = new class {
       constructor() {
         this.pending = new Map, this.userContext = null, this.timer = null, this.lastSentAt = -1 / 0, this.watchingVisibility = !1
       }
-      save(tt, et) {
-        tt !== this.userContext && this.sendHeld(), this.userContext = tt;
-        for (const [Ot, qt] of et) this.pending.set(Ot, qt);
+      save(uu, Eu) {
+        uu !== this.userContext && this.sendHeld(), this.userContext = uu;
+        for (const [su, Uu] of Eu) this.pending.set(su, Uu);
         if (null !== this.timer) return;
-        const Vt = this.lastSentAt + 1100 - Date.now();
-        Vt <= 0 ? this.send(tt) : (this.timer = setTimeout((() => {
+        const ju = this.lastSentAt + 1100 - Date.now();
+        ju <= 0 ? this.send(uu) : (this.timer = setTimeout((() => {
           this.sendHeld()
-        }), Vt), this.watchingVisibility || (this.watchingVisibility = !0, document.addEventListener("visibilitychange", (() => {
+        }), ju), this.watchingVisibility || (this.watchingVisibility = !0, document.addEventListener("visibilitychange", (() => {
           "hidden" === document.visibilityState && this.sendHeld()
         }))))
       }
       sendHeld() {
         null !== this.timer && null !== this.userContext && (clearTimeout(this.timer), this.timer = null, this.send(this.userContext))
       }
-      send(tt) {
-        const et = Array.from(this.pending, (tt => {
-          let [et, Vt] = tt;
+      send(uu) {
+        const Eu = Array.from(this.pending, (uu => {
+          let [Eu, ju] = uu;
           return {
-            kD: et,
-            GD: Vt
+            iZ: Eu,
+            WZ: ju
           }
         }));
-        this.pending.clear(), this.lastSentAt = Date.now(), qt.e.updateCosmetics(tt, et).catch((tt => {
-          console.error("Failed to update cosmetics", tt)
+        this.pending.clear(), this.lastSentAt = Date.now(), Uu.b.updateCosmetics(uu, Eu).catch((uu => {
+          console.error("Failed to update cosmetics", uu)
         }))
       }
     };
 
-    function mt(tt, et) {
-      for (const [Vt, Ot] of et) tt.setPlayerCosmetics(Vt, Ot);
-      if (null === Ot.gameBridge.latest("connectedGame").websocketUrl) Dt.save(tt, et);
+    function Xu(uu, Eu) {
+      for (const [ju, su] of Eu) uu.setPlayerCosmetics(ju, su);
+      if (null === su.gameBridge.latest("connectedGame").websocketUrl) Zu.save(uu, Eu);
       else
-        for (const [Vt, qt] of et) Ot.gameBridge.send("updateMyCosmetic", {
-          kD: Vt,
-          GD: qt
+        for (const [ju, Uu] of Eu) su.gameBridge.send("updateMyCosmetic", {
+          iZ: ju,
+          WZ: Uu
         })
     }
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

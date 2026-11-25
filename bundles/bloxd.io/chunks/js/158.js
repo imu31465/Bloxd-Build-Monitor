@@ -1,75 +1,75 @@
 export const id = 158;
 export const ids = [158];
 export const modules = {
-  9093: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => dt
+  9082: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => lu
     });
-    var Ot = Vt(26),
-      qt = Vt(1286),
-      Dt = Vt(5155),
-      mt = Vt(1188);
+    var su = ju(22),
+      Uu = ju(1244),
+      Zu = ju(5155),
+      Xu = ju(1154);
 
-    function dt(tt) {
+    function lu(uu) {
       let {
-        note: et
-      } = tt;
+        note: Eu
+      } = uu;
       const {
-        t: Vt
-      } = (0, qt.H)(), {
-        clientEscMenuOptions: dt
-      } = (0, Ot.k)(["clientEscMenuOptions"]);
-      return (0, mt.jsx)(Dt.c, {
-        label: Vt("touchSettings:actionButtons"),
-        checked: dt.touchActionButtons,
-        onClick: tt => {
-          Ot.b.setClientEscMenuOptions({
-            touchActionButtons: tt
+        t: ju
+      } = (0, Uu.A)(), {
+        clientEscMenuOptions: lu
+      } = (0, su.l)(["clientEscMenuOptions"]);
+      return (0, Xu.jsx)(Zu.b, {
+        label: ju("touchSettings:actionButtons"),
+        checked: lu.touchActionButtons,
+        onClick: uu => {
+          su.d.setClientEscMenuOptions({
+            touchActionButtons: uu
           })
         },
-        circleInfoText: Vt("touchSettings:actionButtonsInfo"),
-        note: et
+        circleInfoText: ju("touchSettings:actionButtonsInfo"),
+        note: Eu
       })
     }
   },
-  9082: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => YV,
-      f: () => iV
+  9067: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => tj,
+      e: () => Lj
     });
-    var Ot = Vt(1286),
-      qt = Vt(63),
-      Dt = Vt(2074),
-      mt = Vt(2082),
-      dt = Vt(1140),
-      jt = Vt.n(dt),
-      Ht = Vt(1556),
-      Xt = Vt(26),
-      Qt = Vt(106),
-      lt = Vt(129),
-      Et = Vt(5155),
-      ft = Vt(2498),
-      wt = Vt(318),
-      yt = Vt(2084),
-      Nt = Vt(2088),
-      Mt = Vt(9091),
-      bt = Vt(9093),
-      Jt = Vt(377),
-      Ct = Vt(1188);
-    const ut = {
+    var su = ju(1244),
+      Uu = ju(58),
+      Zu = ju(2040),
+      Xu = ju(2045),
+      lu = ju(1105),
+      qu = ju.n(lu),
+      fu = ju(1506),
+      Cu = ju(22),
+      bu = ju(91),
+      cu = ju(107),
+      Nu = ju(5155),
+      Ou = ju(2543),
+      Yu = ju(284),
+      hu = ju(2050),
+      Du = ju(2058),
+      gu = ju(9074),
+      Mu = ju(9082),
+      eu = ju(337),
+      Gu = ju(1154);
+    const pu = {
       floating: "settingsMenu:joystickFloating",
       fixed_shown: "settingsMenu:joystickFixed",
       fixed_hidden: "settingsMenu:joystickHidden"
     };
-    var Kt = Vt(9101);
-    var ht = Vt(1583),
-      vt = Vt(1450),
-      Wt = Vt(9109),
-      St = Vt(1513),
-      ct = Vt(1152),
-      Rt = Vt(9114),
-      It = Vt(2537);
-    const Pt = {
+    var wu = ju(9091);
+    var Ju = ju(1533),
+      du = ju(1405),
+      au = ju(9100),
+      Pu = ju(1461),
+      ou = ju(1116),
+      ku = ju(9103),
+      mu = ju(2581);
+    const vu = {
         sprint: "joystick",
         jump: "cluster",
         crouch: "cluster",
@@ -81,313 +81,313 @@ export const modules = {
         inventory: "hotbar",
         shop: "inventory",
         bag: "inventory",
-        ...Object.fromEntries(It.y.map((tt => [tt, "menu"])))
+        ...Object.fromEntries(mu.D.map((uu => [uu, "menu"])))
       },
-      Zt = tt => It.v.filter((et => Pt[et] === tt)),
-      Lt = new Set(Zt("cluster")),
-      Ft = new Set(Zt("inventory")),
-      kt = tt => "inventory" === tt || Ft.has(tt),
-      Gt = tt => {
-        const et = Pt[tt];
-        return void 0 === et ? [] : [et, ...Gt(et)]
+      Ku = uu => mu.A.filter((Eu => vu[Eu] === uu)),
+      Vu = new Set(Ku("cluster")),
+      ru = new Set(Ku("inventory")),
+      Qu = uu => "inventory" === uu || ru.has(uu),
+      iu = uu => {
+        const Eu = vu[uu];
+        return void 0 === Eu ? [] : [Eu, ...iu(Eu)]
       },
-      zt = tt => [tt, ...Gt(tt)],
-      ot = (tt, et, Vt) => "shop" === tt && et ? Vt("inventory") ? ["inventory"] : Vt("bag") ? [tt, "bag"] : [tt] : [tt],
-      rt = new Map([
-        ["cluster", Lt],
-        ["inventory", Ft]
+      Wu = uu => [uu, ...iu(uu)],
+      Su = (uu, Eu, ju) => "shop" === uu && Eu ? ju("inventory") ? ["inventory"] : ju("bag") ? [uu, "bag"] : [uu] : [uu],
+      Iu = new Map([
+        ["cluster", Vu],
+        ["inventory", ru]
       ]),
-      Ut = ["cluster"],
-      At = [...Ut, ...It.v.filter((tt => !Ut.includes(tt) && !Pt[tt]))],
-      it = tt => [tt, ...Zt(tt).flatMap(it)],
-      Yt = At.flatMap(it).map((tt => ({
-        id: tt,
-        label: `hudLayout:${tt}`,
-        ...It.u[tt],
-        parent: Pt[tt]
+      Fu = ["cluster"],
+      Bu = [...Fu, ...mu.A.filter((uu => !Fu.includes(uu) && !vu[uu]))],
+      Lu = uu => [uu, ...Ku(uu).flatMap(Lu)],
+      tu = Bu.flatMap(Lu).map((uu => ({
+        id: uu,
+        label: `hudLayout:${uu}`,
+        ...mu.x[uu],
+        parent: vu[uu]
       }))),
-      Bt = Object.fromEntries(Yt.map((tt => [tt.id, tt]))),
-      pt = "data-hud-el";
+      xu = Object.fromEntries(tu.map((uu => [uu.id, uu]))),
+      Tu = "data-hud-el";
 
-    function xt(tt, et, Vt, Ot) {
-      const qt = Vt(function(tt, et) {
-          return "attack" !== tt || et ? Bt[tt].label : "hudLayout:attackContext"
-        }(tt, et)),
-        Dt = Ot[tt];
-      return Dt ? Vt("hudLayout:slotWithKey", {
-        slot: qt,
-        key: Dt
-      }) : qt
+    function Hu(uu, Eu, ju, su) {
+      const Uu = ju(function(uu, Eu) {
+          return "attack" !== uu || Eu ? xu[uu].label : "hudLayout:attackContext"
+        }(uu, Eu)),
+        Zu = su[uu];
+      return Zu ? ju("hudLayout:slotWithKey", {
+        slot: Uu,
+        key: Zu
+      }) : Uu
     }
 
-    function Tt(tt, et, Vt, Ot) {
-      return tt.map((tt => xt(tt, et, Vt, Ot))).join(", ")
+    function Au(uu, Eu, ju, su) {
+      return uu.map((uu => Hu(uu, Eu, ju, su))).join(", ")
     }
 
-    function gt(tt) {
+    function nu(uu) {
       let {
-        className: et,
-        keepPlace: Vt
-      } = tt;
-      return Vt ? (0, Ct.jsx)("div", {
-        className: jt()(et, "Placeholder")
+        className: Eu,
+        keepPlace: ju
+      } = uu;
+      return ju ? (0, Gu.jsx)("div", {
+        className: qu()(Eu, "Placeholder")
       }) : null
     }
 
-    function st(tt) {
+    function yu(uu) {
       let {
-        id: et,
-        elements: Vt,
-        actionButtons: qt,
-        keyNames: Dt,
-        className: mt,
-        keepPlace: dt,
-        onHidden: jt
-      } = tt;
+        id: Eu,
+        elements: ju,
+        actionButtons: Uu,
+        keyNames: Zu,
+        className: Xu,
+        keepPlace: lu,
+        onHidden: qu
+      } = uu;
       const {
-        t: Xt
-      } = (0, Ot.H)();
-      if (!Bt[et].hide) return (0, Ct.jsx)(gt, {
-        className: mt,
-        keepPlace: dt
+        t: Cu
+      } = (0, su.A)();
+      if (!xu[Eu].hide) return (0, Gu.jsx)(nu, {
+        className: Xu,
+        keepPlace: lu
       });
-      const Qt = (0, It.q)(Vt, et);
-      return (0, Ct.jsx)(Ht.Q, {
-        className: mt,
-        ariaLabel: Xt(Qt ? "hudLayout:showElement" : "hudLayout:hideElement", {
-          name: xt(et, qt, Xt, Dt)
+      const bu = (0, mu.u)(ju, Eu);
+      return (0, Gu.jsx)(fu.$, {
+        className: Xu,
+        ariaLabel: Cu(bu ? "hudLayout:showElement" : "hudLayout:hideElement", {
+          name: Hu(Eu, Uu, Cu, Zu)
         }),
-        pressed: !Qt,
+        pressed: !bu,
         onClick: () => {
-          jt(et, !Qt)
+          qu(Eu, !bu)
         },
-        children: (0, Ct.jsx)(ct.b, {
-          name: Qt ? "eye-slash" : "eye"
+        children: (0, Gu.jsx)(ou.e, {
+          name: bu ? "eye-slash" : "eye"
         })
       })
     }
 
-    function nt(tt) {
+    function zu(uu) {
       let {
-        id: et,
-        elements: Vt,
-        actionButtons: qt,
-        keyNames: Dt,
-        className: mt,
-        keepPlace: dt,
-        onlyWhenMoved: jt,
-        locked: Xt,
-        onReset: Qt
-      } = tt;
+        id: Eu,
+        elements: ju,
+        actionButtons: Uu,
+        keyNames: Zu,
+        className: Xu,
+        keepPlace: lu,
+        onlyWhenMoved: qu,
+        locked: Cu,
+        onReset: bu
+      } = uu;
       const {
-        t: lt
-      } = (0, Ot.H)(), Et = Bt[et], ft = (0, It.H)(Vt[et]);
-      return !Et.move && !Et.scale || jt && ft ? (0, Ct.jsx)(gt, {
-        className: mt,
-        keepPlace: dt
-      }) : (0, Ct.jsx)(Ht.Q, {
-        className: mt,
-        disabled: ft || Xt,
-        ariaLabel: lt("hudLayout:resetElement", {
-          name: xt(et, qt, lt, Dt)
+        t: cu
+      } = (0, su.A)(), Nu = xu[Eu], Ou = (0, mu.I)(ju[Eu]);
+      return !Nu.move && !Nu.scale || qu && Ou ? (0, Gu.jsx)(nu, {
+        className: Xu,
+        keepPlace: lu
+      }) : (0, Gu.jsx)(fu.$, {
+        className: Xu,
+        disabled: Ou || Cu,
+        ariaLabel: cu("hudLayout:resetElement", {
+          name: Hu(Eu, Uu, cu, Zu)
         }),
         analyticsClick: {
           id: "hud_layout.reset_element",
-          value: et
+          value: Eu
         },
-        onClick: tt => {
-          jt && Oe(tt.currentTarget), Qt(et)
+        onClick: uu => {
+          qu && jE(uu.currentTarget), bu(Eu)
         },
-        children: (0, Ct.jsx)(ct.b, {
+        children: (0, Gu.jsx)(ou.e, {
           name: "rotate-left"
         })
       })
     }
 
-    function te(tt) {
+    function Ru(uu) {
       let {
-        id: et,
-        actionButtons: Vt,
-        keyNames: qt,
-        className: Dt,
-        keepPlace: mt,
-        locked: dt,
-        lockable: jt,
-        onLocked: Xt
-      } = tt;
+        id: Eu,
+        actionButtons: ju,
+        keyNames: Uu,
+        className: Zu,
+        keepPlace: Xu,
+        locked: lu,
+        lockable: qu,
+        onLocked: Cu
+      } = uu;
       const {
-        t: Qt
-      } = (0, Ot.H)();
-      return jt || dt ? (0, Ct.jsx)(Ht.Q, {
-        className: Dt,
-        ariaLabel: Qt(dt ? "hudLayout:unlockElement" : "hudLayout:lockElement", {
-          name: xt(et, Vt, Qt, qt)
+        t: bu
+      } = (0, su.A)();
+      return qu || lu ? (0, Gu.jsx)(fu.$, {
+        className: Zu,
+        ariaLabel: bu(lu ? "hudLayout:unlockElement" : "hudLayout:lockElement", {
+          name: Hu(Eu, ju, bu, Uu)
         }),
-        pressed: dt,
-        active: dt,
+        pressed: lu,
+        active: lu,
         analyticsClick: {
           id: "hud_layout.edit",
-          value: `${dt?"unlock":"lock"}:${et}`
+          value: `${lu?"unlock":"lock"}:${Eu}`
         },
         onClick: () => {
-          Xt(et, !dt)
+          Cu(Eu, !lu)
         },
-        children: (0, Ct.jsx)(ct.b, {
-          name: dt ? "lock" : "lock-open"
+        children: (0, Gu.jsx)(ou.e, {
+          name: lu ? "lock" : "lock-open"
         })
-      }) : (0, Ct.jsx)(gt, {
-        className: Dt,
-        keepPlace: mt
+      }) : (0, Gu.jsx)(nu, {
+        className: Zu,
+        keepPlace: Xu
       })
     }
 
-    function ee(tt) {
+    function uE(uu) {
       let {
-        className: et,
-        open: Vt,
-        name: qt,
-        onToggle: Dt
-      } = tt;
+        className: Eu,
+        open: ju,
+        name: Uu,
+        onToggle: Zu
+      } = uu;
       const {
-        t: mt
-      } = (0, Ot.H)();
-      return (0, Ct.jsx)(Ht.Q, {
-        className: et,
-        ariaLabel: mt(Vt ? "hudLayout:hideChildren" : "hudLayout:showChildren", {
-          name: qt
+        t: Xu
+      } = (0, su.A)();
+      return (0, Gu.jsx)(fu.$, {
+        className: Eu,
+        ariaLabel: Xu(ju ? "hudLayout:hideChildren" : "hudLayout:showChildren", {
+          name: Uu
         }),
-        pressed: Vt,
+        pressed: ju,
         analyticsClick: {
           id: "hud_layout.children",
-          value: Vt ? "close" : "open"
+          value: ju ? "close" : "open"
         },
         onClick: () => {
-          Dt(!Vt)
+          Zu(!ju)
         },
-        children: (0, Ct.jsx)(ct.b, {
-          name: Vt ? "angle-up" : "angle-down"
+        children: (0, Gu.jsx)(ou.e, {
+          name: ju ? "angle-up" : "angle-down"
         })
       })
     }
 
-    function Ve(tt, et) {
-      var Vt;
-      tt.contains(document.activeElement) && et.focus({
+    function EE(uu, Eu) {
+      var ju;
+      uu.contains(document.activeElement) && Eu.focus({
         preventScroll: !0
-      }), null === (Vt = (0, St.g)()) || void 0 === Vt || Vt.handOverPadFocus(tt, et)
+      }), null === (ju = (0, Pu.e)()) || void 0 === ju || ju.handOverPadFocus(uu, Eu)
     }
 
-    function Oe(tt) {
-      const et = tt.closest("[data-hud-row]"),
-        Vt = null === et || void 0 === et ? void 0 : et.querySelector(".HudElementRowName");
-      return !(!et || !Vt) && (Ve(et, Vt), !0)
+    function jE(uu) {
+      const Eu = uu.closest("[data-hud-row]"),
+        ju = null === Eu || void 0 === Eu ? void 0 : Eu.querySelector(".HudElementRowName");
+      return !(!Eu || !ju) && (EE(Eu, ju), !0)
     }
-    const qe = "button:not(:disabled), [role=button]:not([aria-disabled='true'])";
+    const sE = "button:not(:disabled), [role=button]:not([aria-disabled='true'])";
 
-    function De(tt, et) {
-      return "joystick" === tt && !et
+    function UE(uu, Eu) {
+      return "joystick" === uu && !Eu
     }
 
-    function me() {
+    function ZE() {
       const {
-        t: tt
-      } = (0, Ot.H)();
-      return (0, Ct.jsx)(Ht.Q, {
+        t: uu
+      } = (0, su.A)();
+      return (0, Gu.jsx)(fu.$, {
         className: "HudFixJoystickButton",
         analyticsClick: {
           id: "hud_layout.fix_joystick"
         },
-        onClick: tt => {
-          const et = tt.currentTarget;
-          if (!Oe(et)) {
-            const tt = function(tt) {
-              var et, Vt;
-              const Ot = [tt.previousElementSibling, tt.nextElementSibling].find((tt => tt instanceof HTMLElement && tt.matches(qe)));
-              return null !== (et = null !== Ot && void 0 !== Ot ? Ot : null === (Vt = tt.closest(".HudLayoutSidePanel, .HudFullScreenToolbar")) || void 0 === Vt ? void 0 : Vt.querySelector(`:is(${qe}):not(.HudFixJoystickButton)`)) && void 0 !== et ? et : null
-            }(et);
-            tt && Ve(et, tt)
+        onClick: uu => {
+          const Eu = uu.currentTarget;
+          if (!jE(Eu)) {
+            const uu = function(uu) {
+              var Eu, ju;
+              const su = [uu.previousElementSibling, uu.nextElementSibling].find((uu => uu instanceof HTMLElement && uu.matches(sE)));
+              return null !== (Eu = null !== su && void 0 !== su ? su : null === (ju = uu.closest(".HudLayoutSidePanel, .HudFullScreenToolbar")) || void 0 === ju ? void 0 : ju.querySelector(`:is(${sE}):not(.HudFixJoystickButton)`)) && void 0 !== Eu ? Eu : null
+            }(Eu);
+            uu && EE(Eu, uu)
           }
-          Xt.b.setClientEscMenuOptions({
+          Cu.d.setClientEscMenuOptions({
             joystickMode: "fixed_shown"
           })
         },
-        children: tt("hudLayout:fixJoystick")
+        children: uu("hudLayout:fixJoystick")
       })
     }
-    var de = Vt(83),
-      je = Vt(1371),
-      He = Vt(3176),
-      Xe = Vt(2821),
-      Qe = Vt(2546);
-    const le = (tt, et, Vt) => {
-      const Ot = Gt(et).includes(tt) ? tt : Gt(tt).includes(et) ? et : null;
-      if (null === Ot || "joystick" === Ot) return !1;
-      const qt = Ot === tt ? et : tt;
-      if ("menu" === Ot) return (0, Qe.t)(qt, Vt.hudElements[qt]);
-      if ("hotbar" !== Ot || !kt(qt)) return !0;
-      if ((0, It.L)(Vt.hudElements[qt]) || (0, It.L)(Vt.hudElements.inventory)) return !1;
-      return !(Vt.hudLocked.includes(qt) || Vt.hudLocked.includes("inventory")) || (0, It.H)(Vt.hudElements.hotbar)
+    var XE = ju(65),
+      lE = ju(1330),
+      qE = ju(3285),
+      fE = ju(2876),
+      CE = ju(2589);
+    const bE = (uu, Eu, ju) => {
+      const su = iu(Eu).includes(uu) ? uu : iu(uu).includes(Eu) ? Eu : null;
+      if (null === su || "joystick" === su) return !1;
+      const Uu = su === uu ? Eu : uu;
+      if ("menu" === su) return (0, CE.t)(Uu, ju.hudElements[Uu]);
+      if ("hotbar" !== su || !Qu(Uu)) return !0;
+      if ((0, mu.L)(ju.hudElements[Uu]) || (0, mu.L)(ju.hudElements.inventory)) return !1;
+      return !(ju.hudLocked.includes(Uu) || ju.hudLocked.includes("inventory")) || (0, mu.I)(ju.hudElements.hotbar)
     };
-    var Ee = Vt(2569),
-      fe = Vt(3217),
-      we = Vt(9120);
-    const ye = tt => ({
-      [pt]: tt
+    var cE = ju(2610),
+      NE = ju(3336),
+      OE = ju(9110);
+    const YE = uu => ({
+      [Tu]: uu
     });
 
-    function Ne(tt) {
+    function hE(uu) {
       let {
-        id: et,
-        slot: Vt,
-        icon: Ot,
-        label: Dt,
-        hidden: mt,
-        className: dt,
-        face: Ht
-      } = tt;
-      const Xt = (0, qt.useRef)(null);
-      return (0, qt.useLayoutEffect)((() => {
-        Ht && Xt.current && (0, we.m)(Xt.current, Ht)
-      }), [Ht]), (0, Ct.jsxs)("div", {
-        className: jt()("TouchKeyHit", `TouchSlot${Vt}`, dt, {
-          HudPreviewGhost: mt.has(et)
+        id: Eu,
+        slot: ju,
+        icon: su,
+        label: Zu,
+        hidden: Xu,
+        className: lu,
+        face: fu
+      } = uu;
+      const Cu = (0, Uu.useRef)(null);
+      return (0, Uu.useLayoutEffect)((() => {
+        fu && Cu.current && (0, OE.o)(Cu.current, fu)
+      }), [fu]), (0, Gu.jsxs)("div", {
+        className: qu()("TouchKeyHit", `TouchSlot${ju}`, lu, {
+          HudPreviewGhost: Xu.has(Eu)
         }),
-        ...ye(et),
-        children: [Ht && (0, Ct.jsx)("div", {
-          ref: Xt,
-          className: jt()("TouchKey", {
-            Labelled: Ht.classList.contains("Labelled")
+        ...YE(Eu),
+        children: [fu && (0, Gu.jsx)("div", {
+          ref: Cu,
+          className: qu()("TouchKey", {
+            Labelled: fu.classList.contains("Labelled")
           })
-        }), !Ht && (0, Ct.jsxs)("div", {
-          className: jt()("TouchKey", {
-            Labelled: void 0 !== Dt
+        }), !fu && (0, Gu.jsxs)("div", {
+          className: qu()("TouchKey", {
+            Labelled: void 0 !== Zu
           }),
-          children: [Ot && (0, Ct.jsx)(ct.b, {
-            name: Ot
-          }), void 0 !== Dt && (0, Ct.jsx)("span", {
+          children: [su && (0, Gu.jsx)(ou.e, {
+            name: su
+          }), void 0 !== Zu && (0, Gu.jsx)("span", {
             className: "TouchKeyLabel",
-            children: Dt
+            children: Zu
           })]
         })]
       })
     }
 
-    function ae(tt) {
+    function DE(uu) {
       let {
-        item: et,
-        selected: Vt
-      } = tt;
-      const Ot = (0, qt.useRef)(null);
-      return (0, qt.useLayoutEffect)((() => {
-        Ot.current && (0, we.m)(Ot.current, et)
-      }), [et]), (0, Ct.jsx)("div", {
-        ref: Ot,
-        className: jt()("InvenItem", {
-          Selected: Vt
+        item: Eu,
+        selected: ju
+      } = uu;
+      const su = (0, Uu.useRef)(null);
+      return (0, Uu.useLayoutEffect)((() => {
+        su.current && (0, OE.o)(su.current, Eu)
+      }), [Eu]), (0, Gu.jsx)("div", {
+        ref: su,
+        className: qu()("InvenItem", {
+          Selected: ju
         })
       })
     }
-    const Me = {
+    const gE = {
         emotes: "face-smile",
         perspective: "video",
         scoreboard: "list",
@@ -396,173 +396,173 @@ export const modules = {
         invite: "user-plus",
         settings: "gear"
       },
-      be = tt => void 0 === tt ? {} : {
+      ME = uu => void 0 === uu ? {} : {
         style: {
-          "--parked": tt
+          "--parked": uu
         }
       };
 
-    function Je(tt) {
+    function eE(uu) {
       let {
-        id: et,
-        hidden: Vt,
-        parked: Ot,
-        unslotted: qt = !1
-      } = tt;
-      return (0, Ct.jsx)("div", {
-        className: jt()("TopRightIcon", Ee.p[et], {
-          HudPreviewGhost: Vt.has(et),
-          [Qe.c]: void 0 !== Ot,
-          [Qe.e]: qt
+        id: Eu,
+        hidden: ju,
+        parked: su,
+        unslotted: Uu = !1
+      } = uu;
+      return (0, Gu.jsx)("div", {
+        className: qu()("TopRightIcon", cE.m[Eu], {
+          HudPreviewGhost: ju.has(Eu),
+          [CE.b]: void 0 !== su,
+          [CE.c]: Uu
         }),
-        ...be(Ot),
-        children: (0, Ct.jsx)("div", {
+        ...ME(su),
+        children: (0, Gu.jsx)("div", {
           className: "UiItemIcon SmallTextBold",
-          ...ye(et),
-          children: (0, Ct.jsx)("div", {
+          ...YE(Eu),
+          children: (0, Gu.jsx)("div", {
             className: "ScaleOnHover",
-            children: (0, Ct.jsx)(ct.b, {
-              name: Me[et]
+            children: (0, Gu.jsx)(ou.e, {
+              name: gE[Eu]
             })
           })
         })
       })
     }
 
-    function Ce(tt) {
+    function GE(uu) {
       let {
-        portraitPhone: et,
-        icons: Vt,
-        pinnedIcons: Ot,
-        hidden: Dt,
-        moved: mt,
-        trayState: dt
-      } = tt;
-      const Ht = et ? (0, Qe.y)(Vt) : [],
-        Xt = Vt.filter((tt => "settings" === tt)),
-        Qt = Vt.filter((tt => "settings" !== tt && !Ht.includes(tt))).reverse(),
-        lt = Ht.length > 0 && "gone" === dt,
-        Et = [...Xt, ...lt ? ["tray"] : [], ...Qt].filter((tt => "tray" === tt || Dt.has(tt) && !mt.has(tt))),
-        ft = tt => {
-          const et = Et.indexOf(tt);
-          return et < 0 ? void 0 : et
+        portraitPhone: Eu,
+        icons: ju,
+        pinnedIcons: su,
+        hidden: Zu,
+        moved: Xu,
+        trayState: lu
+      } = uu;
+      const fu = Eu ? (0, CE.B)(ju) : [],
+        Cu = ju.filter((uu => "settings" === uu)),
+        bu = ju.filter((uu => "settings" !== uu && !fu.includes(uu))).reverse(),
+        cu = fu.length > 0 && "gone" === lu,
+        Nu = [...Cu, ...cu ? ["tray"] : [], ...bu].filter((uu => "tray" === uu || Zu.has(uu) && !Xu.has(uu))),
+        Ou = uu => {
+          const Eu = Nu.indexOf(uu);
+          return Eu < 0 ? void 0 : Eu
         },
-        wt = (tt, et) => (0, Ct.jsx)(Je, {
-          id: tt,
-          hidden: Dt,
-          parked: et ? ft(tt) : void 0,
-          unslotted: et && Dt.has(tt) && mt.has(tt)
-        }, tt);
-      return (0, Ct.jsxs)("div", {
-        className: jt()("TopRightIcons TouchInGame", {
-          Column: et
+        Yu = (uu, Eu) => (0, Gu.jsx)(eE, {
+          id: uu,
+          hidden: Zu,
+          parked: Eu ? Ou(uu) : void 0,
+          unslotted: Eu && Zu.has(uu) && Xu.has(uu)
+        }, uu);
+      return (0, Gu.jsxs)("div", {
+        className: qu()("TopRightIcons TouchInGame", {
+          Column: Eu
         }),
-        children: [Xt.map((tt => wt(tt, !0))), Ht.length > 0 && (0, Ct.jsxs)("div", {
-          className: jt()("TopRightIcon TopRightTrayToggle Open", {
-            [Qe.c]: lt
+        children: [Cu.map((uu => Yu(uu, !0))), fu.length > 0 && (0, Gu.jsxs)("div", {
+          className: qu()("TopRightIcon TopRightTrayToggle Open", {
+            [CE.b]: cu
           }),
-          ...be(ft("tray")),
-          children: [(0, Ct.jsx)("div", {
-            className: jt()("UiItemIcon SmallTextBold", {
-              HudPreviewGhost: "filled" !== dt
+          ...ME(Ou("tray")),
+          children: [(0, Gu.jsx)("div", {
+            className: qu()("UiItemIcon SmallTextBold", {
+              HudPreviewGhost: "filled" !== lu
             }),
-            children: (0, Ct.jsx)("div", {
+            children: (0, Gu.jsx)("div", {
               className: "ScaleOnHover",
-              children: (0, Ct.jsx)(ct.b, {
+              children: (0, Gu.jsx)(ou.e, {
                 name: "ellipsis"
               })
             })
-          }), (0, Ct.jsx)("div", {
+          }), (0, Gu.jsx)("div", {
             className: "TopRightTray",
-            children: Ht.map((tt => wt(tt, !1)))
+            children: fu.map((uu => Yu(uu, !1)))
           })]
-        }), Qt.map((tt => (0, Ct.jsxs)(qt.Fragment, {
-          children: ["perspective" === tt && null !== Ot.rightOfCamera && (0, Ct.jsx)(ue, {
-            icon: Ot.rightOfCamera
-          }), wt(tt, !0)]
-        }, tt))), null !== Ot.leftEnd && (0, Ct.jsx)(ue, {
-          icon: Ot.leftEnd
+        }), bu.map((uu => (0, Gu.jsxs)(Uu.Fragment, {
+          children: ["perspective" === uu && null !== su.rightOfCamera && (0, Gu.jsx)(pE, {
+            icon: su.rightOfCamera
+          }), Yu(uu, !0)]
+        }, uu))), null !== su.leftEnd && (0, Gu.jsx)(pE, {
+          icon: su.leftEnd
         })]
       })
     }
 
-    function ue(tt) {
+    function pE(uu) {
       let {
-        icon: et
-      } = tt;
-      return (0, Ct.jsx)("div", {
+        icon: Eu
+      } = uu;
+      return (0, Gu.jsx)("div", {
         className: "TopRightIcon",
-        children: (0, Ct.jsx)("div", {
+        children: (0, Gu.jsx)("div", {
           className: "UiItemIcon SmallTextBold",
-          children: (0, Ct.jsx)("div", {
+          children: (0, Gu.jsx)("div", {
             className: "ScaleOnHover",
-            children: (0, Ct.jsx)(ct.b, {
-              name: et
+            children: (0, Gu.jsx)(ou.e, {
+              name: Eu
             })
           })
         })
       })
     }
 
-    function Ke(tt) {
+    function wE(uu) {
       let {
-        next: et,
-        hidden: Vt
-      } = tt;
-      return (0, Ct.jsx)("div", {
-        className: jt()("HotBarArrow", et ? "Next" : "Previous", {
-          HudPreviewGhost: Vt
+        next: Eu,
+        hidden: ju
+      } = uu;
+      return (0, Gu.jsx)("div", {
+        className: qu()("HotBarArrow", Eu ? "Next" : "Previous", {
+          HudPreviewGhost: ju
         }),
-        ...ye("arrows"),
-        children: (0, Ct.jsx)("div", {
+        ...YE("arrows"),
+        children: (0, Gu.jsx)("div", {
           className: "UiItemIcon SmallTextBold",
-          children: (0, Ct.jsx)("div", {
+          children: (0, Gu.jsx)("div", {
             className: "ScaleOnHover",
-            children: (0, Ct.jsx)(ct.b, {
-              name: et ? "caret-right" : "caret-left"
+            children: (0, Gu.jsx)(ou.e, {
+              name: Eu ? "caret-right" : "caret-left"
             })
           })
         })
       })
     }
 
-    function he() {
-      return (0, Ct.jsx)("div", {
+    function JE() {
+      return (0, Gu.jsx)("div", {
         className: "SocialBarContainer",
-        children: (0, Ct.jsx)("div", {
+        children: (0, Gu.jsx)("div", {
           className: "SocialBarOuter",
-          children: (0, Ct.jsx)("div", {
+          children: (0, Gu.jsx)("div", {
             className: "SocialBar",
-            children: (0, Ct.jsx)("div", {
+            children: (0, Gu.jsx)("div", {
               className: "CondensedSocialBarInner",
-              children: (0, Ct.jsx)("div", {
+              children: (0, Gu.jsx)("div", {
                 className: "CondensedSectionsContainer",
-                children: (0, Ct.jsxs)("div", {
+                children: (0, Gu.jsxs)("div", {
                   className: "CondensedSections",
-                  children: [(0, Ct.jsxs)("div", {
+                  children: [(0, Gu.jsxs)("div", {
                     className: "CondensedSection CondensedSectionFriendRequests",
-                    children: [(0, Ct.jsx)("div", {
+                    children: [(0, Gu.jsx)("div", {
                       className: "CondensedSectionValue",
                       children: "0"
-                    }), (0, Ct.jsx)("div", {
+                    }), (0, Gu.jsx)("div", {
                       className: "CondensedSectionIcon",
-                      children: (0, Ct.jsx)(ct.b, {
+                      children: (0, Gu.jsx)(ou.e, {
                         name: "user-clock"
                       })
                     })]
-                  }), (0, Ct.jsx)("div", {
+                  }), (0, Gu.jsx)("div", {
                     className: "SocialBarDividerContainer",
-                    children: (0, Ct.jsx)("div", {
+                    children: (0, Gu.jsx)("div", {
                       className: "SocialBarDivider"
                     })
-                  }), (0, Ct.jsxs)("div", {
+                  }), (0, Gu.jsxs)("div", {
                     className: "CondensedSection CondensedSectionOnlineFriends",
-                    children: [(0, Ct.jsx)("div", {
+                    children: [(0, Gu.jsx)("div", {
                       className: "CondensedSectionValue",
                       children: "0"
-                    }), (0, Ct.jsx)("div", {
+                    }), (0, Gu.jsx)("div", {
                       className: "CondensedSectionIcon",
-                      children: (0, Ct.jsx)(ct.b, {
+                      children: (0, Gu.jsx)(ou.e, {
                         name: "user"
                       })
                     })]
@@ -574,11 +574,11 @@ export const modules = {
         })
       })
     }
-    const ve = {
+    const dE = {
         J: "JumpKey",
         C: "CrouchKey"
       },
-      We = {
+      aE = {
         P: {
           icon: "crosshairs",
           labelKey: "touchKeys:scope"
@@ -588,8 +588,8 @@ export const modules = {
           labelKey: "touchKeys:fly"
         }
       },
-      Se = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
-      ce = {
+      PE = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+      oE = {
         0: "swords",
         1: "hammer",
         2: "cube",
@@ -597,320 +597,320 @@ export const modules = {
         5: "cookie"
       };
 
-    function Re(tt) {
+    function kE(uu) {
       let {
-        presence: et,
-        portraitPhone: Vt,
-        hidden: qt,
-        actionButtons: Dt,
-        joystickFixed: mt,
-        keysAbove: dt,
-        auraBar: Ht,
-        trayState: Xt,
-        moved: lt
-      } = tt;
+        presence: Eu,
+        portraitPhone: ju,
+        hidden: Uu,
+        actionButtons: Zu,
+        joystickFixed: Xu,
+        keysAbove: lu,
+        auraBar: fu,
+        trayState: Cu,
+        moved: cu
+      } = uu;
       const {
-        t: Et
-      } = (0, Ot.H)(), {
-        faces: ft,
-        items: wt
-      } = et, yt = tt => ({
-        HudPreviewGhost: zt(tt).some((tt => qt.has(tt)))
+        t: Nu
+      } = (0, su.A)(), {
+        faces: Ou,
+        items: Yu
+      } = Eu, hu = uu => ({
+        HudPreviewGhost: Wu(uu).some((uu => Uu.has(uu)))
       });
-      return (0, Ct.jsxs)("div", {
+      return (0, Gu.jsxs)("div", {
         className: "InGameUi HudPreviewInGameUi",
-        children: [(0, Ct.jsx)("div", {
+        children: [(0, Gu.jsx)("div", {
           className: "InGameHeaderContainer Touchscreen",
-          children: (0, Ct.jsxs)("div", {
+          children: (0, Gu.jsxs)("div", {
             className: "InGameHeader",
-            children: [(0, Ct.jsx)("div", {
+            children: [(0, Gu.jsx)("div", {
               className: "InGameHeaderLogo",
               children: "bloxd.io"
-            }), (0, Ct.jsx)("div", {
+            }), (0, Gu.jsx)("div", {
               className: "InGameHeaderSpacer"
-            }), (0, Ct.jsx)("div", {
+            }), (0, Gu.jsx)("div", {
               className: "InGameHeaderGameName",
-              children: Et("hudLayout:previewGameName")
+              children: Nu("hudLayout:previewGameName")
             })]
           })
-        }), (0, Ct.jsx)("div", {
+        }), (0, Gu.jsx)("div", {
           className: "TopLeftElements",
-          children: (0, Ct.jsx)("div", {
+          children: (0, Gu.jsx)("div", {
             className: "InGameHeaderAndChat",
-            children: (0, Ct.jsxs)("div", {
+            children: (0, Gu.jsxs)("div", {
               className: "Chat",
-              children: [(0, Ct.jsx)("div", {
+              children: [(0, Gu.jsx)("div", {
                 className: "ChatMessages HideScrollbar",
-                children: [Et("hudLayout:previewChatLine"), Et("hudLayout:previewChatJoined", {
+                children: [Nu("hudLayout:previewChatLine"), Nu("hudLayout:previewChatJoined", {
                   name: "Steve"
-                }), Et("hudLayout:previewChatJoined", {
+                }), Nu("hudLayout:previewChatJoined", {
                   name: "Alex"
-                })].map((tt => (0, Ct.jsx)("div", {
+                })].map((uu => (0, Gu.jsx)("div", {
                   className: "MessageWrapper",
-                  children: (0, Ct.jsx)("div", {
+                  children: (0, Gu.jsx)("div", {
                     className: "TextFromServer",
-                    children: (0, Ct.jsx)("div", {
+                    children: (0, Gu.jsx)("div", {
                       className: "IndividualText",
-                      children: tt
+                      children: uu
                     })
                   })
-                }, tt)))
-              }), (0, Ct.jsx)("button", {
+                }, uu)))
+              }), (0, Gu.jsx)("button", {
                 type: "button",
                 tabIndex: -1,
-                className: jt()("ChatIconWrapper SmallTextLight", yt("chat")),
-                ...ye("chat"),
-                children: (0, Ct.jsx)(ct.b, {
+                className: qu()("ChatIconWrapper SmallTextLight", hu("chat")),
+                ...YE("chat"),
+                children: (0, Gu.jsx)(ou.e, {
                   name: "comment-dots",
                   className: "ChatIcon"
                 })
               })]
             })
           })
-        }), (0, Ct.jsx)("div", {
+        }), (0, Gu.jsx)("div", {
           className: "RightElements RightElementsTouchscreen",
-          children: (0, Ct.jsxs)("div", {
+          children: (0, Gu.jsxs)("div", {
             className: "TopRightElements",
-            children: [(0, Ct.jsx)("div", {
+            children: [(0, Gu.jsx)("div", {
               className: "TopRightElementsLeft",
-              children: (0, Ct.jsx)("div", {
+              children: (0, Gu.jsx)("div", {
                 className: "TopRightIconsContainer",
-                ...ye("menu"),
-                children: (0, Ct.jsx)(Ce, {
-                  portraitPhone: Vt,
-                  icons: et.rowIcons,
-                  pinnedIcons: et.pinnedIcons,
-                  hidden: qt,
-                  trayState: Xt,
-                  moved: lt
+                ...YE("menu"),
+                children: (0, Gu.jsx)(GE, {
+                  portraitPhone: ju,
+                  icons: Eu.rowIcons,
+                  pinnedIcons: Eu.pinnedIcons,
+                  hidden: Uu,
+                  trayState: Cu,
+                  moved: cu
                 })
               })
-            }), Qt.featureFlags.useSocialFeatures && (0, Ct.jsx)("div", {
+            }), bu.featureFlags.useSocialFeatures && (0, Gu.jsx)("div", {
               className: "TopRightElementsRight",
-              children: (0, Ct.jsx)(he, {})
+              children: (0, Gu.jsx)(JE, {})
             })]
           })
-        }), (0, Ct.jsx)("div", {
+        }), (0, Gu.jsx)("div", {
           className: "HudPreviewCrosshair"
-        }), (0, Ct.jsx)("div", {
+        }), (0, Gu.jsx)("div", {
           className: "TouchInteractHit HudPreviewInteract",
-          children: (0, Ct.jsxs)("div", {
+          children: (0, Gu.jsxs)("div", {
             className: "TouchInteractKey",
-            ...ye("interact"),
-            children: [(0, Ct.jsx)("div", {
+            ...YE("interact"),
+            children: [(0, Gu.jsx)("div", {
               className: "TouchInteractIcon",
-              children: (0, Ct.jsx)(ct.b, {
+              children: (0, Gu.jsx)(ou.e, {
                 name: "hand-back-point-up"
               })
-            }), (0, Ct.jsx)("div", {
-              children: Et("hudLayout:previewInteract")
+            }), (0, Gu.jsx)("div", {
+              children: Nu("hudLayout:previewInteract")
             })]
           })
-        }), (0, Ct.jsx)("div", {
+        }), (0, Gu.jsx)("div", {
           className: "BottomCentre",
-          children: (0, Ct.jsxs)("div", {
+          children: (0, Gu.jsxs)("div", {
             className: "BottomElements",
-            children: [(0, Ct.jsx)("div", {
+            children: [(0, Gu.jsx)("div", {
               className: "BottomLeftElements Touch"
-            }), (0, Ct.jsxs)("div", {
+            }), (0, Gu.jsxs)("div", {
               className: "BottomMiddleElements",
-              children: [(0, Ct.jsx)("div", {
+              children: [(0, Gu.jsx)("div", {
                 className: "BottomScreenStatBarList",
-                ...ye("hotbar"),
-                children: (0, Ct.jsx)("div", {
+                ...YE("hotbar"),
+                children: (0, Gu.jsx)("div", {
                   className: "BottomScreenStatBarWrapper",
-                  children: (0, Ct.jsxs)("div", {
+                  children: (0, Gu.jsxs)("div", {
                     className: "BottomScreenStatBarBackground",
-                    children: [(0, Ct.jsx)("div", {
+                    children: [(0, Gu.jsx)("div", {
                       className: "BottomScreenStatBar HealthBar",
                       style: {
                         transform: "scaleX(0.8)",
                         transformOrigin: "left center"
                       }
-                    }), (0, Ct.jsxs)("div", {
+                    }), (0, Gu.jsxs)("div", {
                       className: "BottomScreenStatBarText SmallTextBold",
-                      children: [(0, Ct.jsx)(ct.b, {
+                      children: [(0, Gu.jsx)(ou.e, {
                         name: "heart"
                       }), " 80/100"]
                     })]
                   })
                 })
-              }), Ht && (0, Ct.jsxs)("div", {
+              }), fu && (0, Gu.jsxs)("div", {
                 className: "AuraBarWrapper",
-                children: [(0, Ct.jsxs)("div", {
+                children: [(0, Gu.jsxs)("div", {
                   className: "AuraBarLabel SmallTextBold",
-                  children: [(0, Ct.jsx)("img", {
+                  children: [(0, Gu.jsx)("img", {
                     className: "AuraBarLabelImage",
-                    src: (0, fe.g)("glint"),
+                    src: (0, NE.h)("glint"),
                     alt: ""
-                  }), (0, Ct.jsx)("div", {
+                  }), (0, Gu.jsx)("div", {
                     className: "AuraBarLabelText",
                     children: "0"
                   })]
-                }), (0, Ct.jsx)("div", {
+                }), (0, Gu.jsx)("div", {
                   className: "AuraBar",
-                  children: (0, Ct.jsx)("div", {
+                  children: (0, Gu.jsx)("div", {
                     className: "AuraBarBackground",
                     style: {
                       width: "40%"
                     }
                   })
                 })]
-              }), (0, Ct.jsx)("div", {
+              }), (0, Gu.jsx)("div", {
                 className: "HotBarRow",
-                children: (0, Ct.jsx)("div", {
-                  className: jt()("HotBarContainer Touch", {
-                    KeysAbove: dt
+                children: (0, Gu.jsx)("div", {
+                  className: qu()("HotBarContainer Touch", {
+                    KeysAbove: lu
                   }),
-                  children: (0, Ct.jsxs)("div", {
+                  children: (0, Gu.jsxs)("div", {
                     className: "HotBar",
-                    ...ye("hotbar"),
-                    children: [(0, Ct.jsxs)("div", {
-                      className: jt()("TouchInventoryKeys", {
-                        NoAuraBar: !Ht
+                    ...YE("hotbar"),
+                    children: [(0, Gu.jsxs)("div", {
+                      className: qu()("TouchInventoryKeys", {
+                        NoAuraBar: !fu
                       }),
-                      children: [(0, Ct.jsx)("div", {
-                        className: jt()("TouchInventoryKey ShopKey", yt("shop"), {
-                          Hidden: !et.shop
+                      children: [(0, Gu.jsx)("div", {
+                        className: qu()("TouchInventoryKey ShopKey", hu("shop"), {
+                          Hidden: !Eu.shop
                         }),
-                        ...ye("shop"),
-                        children: (0, Ct.jsx)("div", {
+                        ...YE("shop"),
+                        children: (0, Gu.jsx)("div", {
                           className: "UiItemIcon SmallTextBold",
-                          children: (0, Ct.jsx)("div", {
+                          children: (0, Gu.jsx)("div", {
                             className: "ScaleOnHover",
-                            children: (0, Ct.jsx)(ct.b, {
+                            children: (0, Gu.jsx)(ou.e, {
                               name: "cart-shopping"
                             })
                           })
                         })
-                      }), (0, Ct.jsx)("div", {
-                        className: jt()("TouchInventoryKey BagKey", yt("bag"), {
-                          Hidden: !et.bag
+                      }), (0, Gu.jsx)("div", {
+                        className: qu()("TouchInventoryKey BagKey", hu("bag"), {
+                          Hidden: !Eu.bag
                         }),
-                        ...ye("bag"),
-                        children: (0, Ct.jsx)("div", {
+                        ...YE("bag"),
+                        children: (0, Gu.jsx)("div", {
                           className: "UiItemIcon SmallTextBold",
-                          children: (0, Ct.jsx)("div", {
+                          children: (0, Gu.jsx)("div", {
                             className: "ScaleOnHover",
-                            children: (0, Ct.jsx)(ct.b, {
+                            children: (0, Gu.jsx)(ou.e, {
                               name: "backpack"
                             })
                           })
                         })
                       })]
-                    }), (0, Ct.jsx)(Ke, {
+                    }), (0, Gu.jsx)(wE, {
                       next: !1,
-                      hidden: qt.has("arrows")
-                    }), (0, Ct.jsxs)("div", {
+                      hidden: Uu.has("arrows")
+                    }), (0, Gu.jsxs)("div", {
                       className: "HotBarGameItemsContainer",
-                      children: [null !== wt && wt.map(((tt, et) => (0, Ct.jsx)(ae, {
-                        item: tt,
-                        selected: tt.classList.contains("Selected")
-                      }, et))), null === wt && Se.map((tt => {
-                        const et = ce[tt];
-                        return (0, Ct.jsx)("div", {
-                          className: jt()("InvenItem", {
-                            Selected: 0 === tt
+                      children: [null !== Yu && Yu.map(((uu, Eu) => (0, Gu.jsx)(DE, {
+                        item: uu,
+                        selected: uu.classList.contains("Selected")
+                      }, Eu))), null === Yu && PE.map((uu => {
+                        const Eu = oE[uu];
+                        return (0, Gu.jsx)("div", {
+                          className: qu()("InvenItem", {
+                            Selected: 0 === uu
                           }),
-                          children: et && (0, Ct.jsx)("div", {
+                          children: Eu && (0, Gu.jsx)("div", {
                             className: "HudPreviewItem",
-                            children: (0, Ct.jsx)(ct.b, {
-                              name: et
+                            children: (0, Gu.jsx)(ou.e, {
+                              name: Eu
                             })
                           })
-                        }, tt)
+                        }, uu)
                       }))]
-                    }), (0, Ct.jsx)(Ke, {
+                    }), (0, Gu.jsx)(wE, {
                       next: !0,
-                      hidden: qt.has("arrows")
+                      hidden: Uu.has("arrows")
                     })]
                   })
                 })
               })]
-            }), (0, Ct.jsx)("div", {
+            }), (0, Gu.jsx)("div", {
               className: "BottomRightElements",
-              children: (0, Ct.jsxs)("div", {
+              children: (0, Gu.jsxs)("div", {
                 className: "TouchComponentsButtons",
-                children: [null !== ft && we.g.map((tt => {
-                  const et = ft[tt];
-                  return et && (0, Ct.jsx)(Ne, {
-                    id: we.f[tt],
-                    slot: tt,
-                    face: et,
-                    className: ve[tt],
-                    hidden: qt
-                  }, tt)
-                })), (0, we.n)(et, Dt).map((tt => (0, Ct.jsx)(Ne, {
-                  id: we.f[tt],
-                  slot: tt,
-                  icon: We[tt].icon,
-                  label: Et(We[tt].labelKey),
+                children: [null !== Ou && OE.j.map((uu => {
+                  const Eu = Ou[uu];
+                  return Eu && (0, Gu.jsx)(hE, {
+                    id: OE.f[uu],
+                    slot: uu,
+                    face: Eu,
+                    className: dE[uu],
+                    hidden: Uu
+                  }, uu)
+                })), (0, OE.q)(Eu, Zu).map((uu => (0, Gu.jsx)(hE, {
+                  id: OE.f[uu],
+                  slot: uu,
+                  icon: aE[uu].icon,
+                  label: Nu(aE[uu].labelKey),
                   className: "HudPreviewContextSlot",
-                  hidden: qt
-                }, tt))), null === ft && (0, Ct.jsxs)(Ct.Fragment, {
-                  children: [(0, Ct.jsx)(Ne, {
+                  hidden: Uu
+                }, uu))), null === Ou && (0, Gu.jsxs)(Gu.Fragment, {
+                  children: [(0, Gu.jsx)(hE, {
                     id: "jump",
                     slot: "J",
                     icon: "arrow-up-from-line",
                     className: "JumpKey",
-                    hidden: qt
-                  }), (0, Ct.jsx)(Ne, {
+                    hidden: Uu
+                  }), (0, Gu.jsx)(hE, {
                     id: "crouch",
                     slot: "C",
                     icon: "arrow-down-to-line",
                     className: "CrouchKey",
-                    hidden: qt
-                  }), Dt && (0, Ct.jsxs)(Ct.Fragment, {
-                    children: [(0, Ct.jsx)(Ne, {
+                    hidden: Uu
+                  }), Zu && (0, Gu.jsxs)(Gu.Fragment, {
+                    children: [(0, Gu.jsx)(hE, {
                       id: "attack",
                       slot: "A",
                       icon: "swords",
-                      hidden: qt
-                    }), (0, Ct.jsx)(Ne, {
+                      hidden: Uu
+                    }), (0, Gu.jsx)(hE, {
                       id: "use",
                       slot: "U",
                       icon: "hand-back-point-up",
-                      hidden: qt
+                      hidden: Uu
                     })]
-                  }), (0, we.i)(Dt).map((tt => (0, Ct.jsx)(Ne, {
-                    id: we.f[tt],
-                    slot: tt,
-                    icon: We[tt].icon,
-                    label: Et(We[tt].labelKey),
-                    hidden: qt
-                  }, tt))), (0, Ct.jsx)(Ne, {
+                  }), (0, OE.l)(Zu).map((uu => (0, Gu.jsx)(hE, {
+                    id: OE.f[uu],
+                    slot: uu,
+                    icon: aE[uu].icon,
+                    label: Nu(aE[uu].labelKey),
+                    hidden: Uu
+                  }, uu))), (0, Gu.jsx)(hE, {
                     id: "game",
                     slot: "G",
                     icon: "bolt",
-                    hidden: qt
+                    hidden: Uu
                   })]
                 })]
               })
             })]
           })
-        }), (0, Ct.jsxs)("div", {
+        }), (0, Gu.jsxs)("div", {
           className: "TouchMovementWrapper",
-          children: [(0, Ct.jsx)("div", {
+          children: [(0, Gu.jsx)("div", {
             className: "JoystickZone HudPreviewJoystickZone",
-            children: (0, Ct.jsxs)("div", {
-              className: jt()("Joystick Resting HudPreviewJoystick", {
-                Floating: !mt
+            children: (0, Gu.jsxs)("div", {
+              className: qu()("Joystick Resting HudPreviewJoystick", {
+                Floating: !Xu
               }),
-              ...ye("joystick"),
-              children: [(0, Ct.jsx)("div", {
+              ...YE("joystick"),
+              children: [(0, Gu.jsx)("div", {
                 className: "JoystickBase"
-              }), (0, Ct.jsx)("div", {
+              }), (0, Gu.jsx)("div", {
                 className: "JoystickKnob"
               })]
             })
-          }), et.sprint && (0, Ct.jsx)("div", {
-            className: jt()("TouchSprintHit", yt("sprint"), {
-              AtHome: !mt
+          }), Eu.sprint && (0, Gu.jsx)("div", {
+            className: qu()("TouchSprintHit", hu("sprint"), {
+              AtHome: !Xu
             }),
-            ...ye("sprint"),
-            children: (0, Ct.jsx)("div", {
+            ...YE("sprint"),
+            children: (0, Gu.jsx)("div", {
               className: "TouchKey TouchSprintKey Lit",
-              children: (0, Ct.jsx)(ct.b, {
+              children: (0, Gu.jsx)(ou.e, {
                 name: "person-running"
               })
             })
@@ -919,1096 +919,1096 @@ export const modules = {
       })
     }
 
-    function Ie() {
-      const [tt, et] = (0, qt.useState)({}), Vt = (0, qt.useCallback)((tt => {
-        et((et => [...new Set([...Object.keys(et), ...Object.keys(tt)])].every((Vt => et[Vt] === tt[Vt])) ? et : tt))
+    function mE() {
+      const [uu, Eu] = (0, Uu.useState)({}), ju = (0, Uu.useCallback)((uu => {
+        Eu((Eu => [...new Set([...Object.keys(Eu), ...Object.keys(uu)])].every((ju => Eu[ju] === uu[ju])) ? Eu : uu))
       }), []);
-      return [tt, Vt]
+      return [uu, ju]
     }
-    const Pe = .05;
+    const vE = .05;
 
-    function Ze(tt) {
-      var et;
+    function KE(uu) {
+      var Eu;
       let {
-        selected: Vt,
-        layout: qt,
-        actionButtons: Dt,
-        keyNames: mt,
-        overlaps: dt,
-        scaleCaps: Xt,
-        joystickFixed: Qt,
-        onScale: lt,
-        onHidden: Et,
-        onReset: ft,
-        locked: wt,
-        lockable: yt,
-        onLocked: Nt,
-        extra: Mt
-      } = tt;
+        selected: ju,
+        layout: Uu,
+        actionButtons: Zu,
+        keyNames: Xu,
+        overlaps: lu,
+        scaleCaps: Cu,
+        joystickFixed: bu,
+        onScale: cu,
+        onHidden: Nu,
+        onReset: Ou,
+        locked: Yu,
+        lockable: hu,
+        onLocked: Du,
+        extra: gu
+      } = uu;
       const {
-        t: bt
-      } = (0, Ot.H)(), Jt = Vt ? Bt[Vt] : null, ut = null !== Vt && wt.has(Vt), Kt = (Vt && qt.hudElements[Vt] || It.l)[2], ht = null !== (et = Vt && Xt[Vt]) && void 0 !== et ? et : It.g, vt = tt => {
-        Vt && lt(Vt, Math.min(ht, Math.round(100 * (Kt + .1 * tt)) / 100))
+        t: Mu
+      } = (0, su.A)(), eu = ju ? xu[ju] : null, pu = null !== ju && Yu.has(ju), wu = (ju && Uu.hudElements[ju] || mu.q)[2], Ju = null !== (Eu = ju && Cu[ju]) && void 0 !== Eu ? Eu : mu.i, du = uu => {
+        ju && cu(ju, Math.min(Ju, Math.round(100 * (wu + .1 * uu)) / 100))
       };
-      return (0, Ct.jsxs)(Ct.Fragment, {
-        children: [(0, Ct.jsxs)("div", {
-          className: jt()("HudQuickName SmallTextBold", {
-            Overlap: dt.length > 0
+      return (0, Gu.jsxs)(Gu.Fragment, {
+        children: [(0, Gu.jsxs)("div", {
+          className: qu()("HudQuickName SmallTextBold", {
+            Overlap: lu.length > 0
           }),
-          children: [dt.length > 0 && (0, Ct.jsx)(ct.b, {
+          children: [lu.length > 0 && (0, Gu.jsx)(ou.e, {
             name: "triangle-exclamation"
-          }), Jt ? xt(Jt.id, Dt, bt, mt) : bt("hudLayout:fullScreenHint"), dt.length > 0 && (0, Ct.jsx)("span", {
+          }), eu ? Hu(eu.id, Zu, Mu, Xu) : Mu("hudLayout:fullScreenHint"), lu.length > 0 && (0, Gu.jsx)("span", {
             className: "HudQuickOverlap",
-            children: bt("hudLayout:overlapsShort", {
-              names: Tt(dt, Dt, bt, mt)
+            children: Mu("hudLayout:overlapsShort", {
+              names: Au(lu, Zu, Mu, Xu)
             })
           })]
-        }), (null === Jt || void 0 === Jt ? void 0 : Jt.scale) && (0, Ct.jsxs)("div", {
+        }), (null === eu || void 0 === eu ? void 0 : eu.scale) && (0, Gu.jsxs)("div", {
           className: "HudQuickSize",
-          children: [(0, Ct.jsx)(Ht.Q, {
-            disabled: ut || Kt <= It.h,
-            ariaLabel: bt("hudLayout:smaller"),
+          children: [(0, Gu.jsx)(fu.$, {
+            disabled: pu || wu <= mu.m,
+            ariaLabel: Mu("hudLayout:smaller"),
             onClick: () => {
-              vt(-1)
+              du(-1)
             },
-            children: (0, Ct.jsx)(ct.b, {
+            children: (0, Gu.jsx)(ou.e, {
               name: "minus"
             })
-          }), (0, Ct.jsx)("span", {
+          }), (0, Gu.jsx)("span", {
             className: "HudQuickSizeValue",
-            children: `${Math.round(100*Kt)}%`
-          }), (0, Ct.jsx)(Ht.Q, {
-            disabled: ut || Kt >= ht,
-            ariaLabel: bt("hudLayout:larger"),
+            children: `${Math.round(100*wu)}%`
+          }), (0, Gu.jsx)(fu.$, {
+            disabled: pu || wu >= Ju,
+            ariaLabel: Mu("hudLayout:larger"),
             onClick: () => {
-              vt(1)
+              du(1)
             },
-            children: (0, Ct.jsx)(ct.b, {
+            children: (0, Gu.jsx)(ou.e, {
               name: "plus"
             })
           })]
-        }), (Jt || Mt) && (0, Ct.jsxs)("div", {
+        }), (eu || gu) && (0, Gu.jsxs)("div", {
           className: "HudQuickActions",
-          children: [Jt && (0, Ct.jsxs)(Ct.Fragment, {
-            children: [(0, Ct.jsx)(te, {
-              id: Jt.id,
-              actionButtons: Dt,
-              keyNames: mt,
-              locked: ut,
-              lockable: yt(Jt.id),
-              onLocked: Nt
-            }), (0, Ct.jsx)(st, {
-              id: Jt.id,
-              elements: qt.hudElements,
-              actionButtons: Dt,
-              keyNames: mt,
-              onHidden: Et
-            }), (0, Ct.jsx)(nt, {
-              id: Jt.id,
-              elements: qt.hudElements,
-              actionButtons: Dt,
-              keyNames: mt,
-              locked: ut,
-              onReset: ft
-            }), De(Jt.id, Qt) && (0, Ct.jsx)(me, {})]
-          }), Mt]
+          children: [eu && (0, Gu.jsxs)(Gu.Fragment, {
+            children: [(0, Gu.jsx)(Ru, {
+              id: eu.id,
+              actionButtons: Zu,
+              keyNames: Xu,
+              locked: pu,
+              lockable: hu(eu.id),
+              onLocked: Du
+            }), (0, Gu.jsx)(yu, {
+              id: eu.id,
+              elements: Uu.hudElements,
+              actionButtons: Zu,
+              keyNames: Xu,
+              onHidden: Nu
+            }), (0, Gu.jsx)(zu, {
+              id: eu.id,
+              elements: Uu.hudElements,
+              actionButtons: Zu,
+              keyNames: Xu,
+              locked: pu,
+              onReset: Ou
+            }), UE(eu.id, bu) && (0, Gu.jsx)(ZE, {})]
+          }), gu]
         })]
       })
     }
-    var Le = Vt(1204),
-      Fe = Vt(4545);
-    const ke = "HudPreviewDoc",
-      Ge = {
+    var VE = ju(1170),
+      rE = ju(4594);
+    const QE = "HudPreviewDoc",
+      iE = {
         hotbar: "TouchHotbar",
         keysAbove: "TouchHotbarKeysAbove",
         hasShop: "TouchHotbarHasShop",
         hasBag: "TouchHotbarHasBag"
       },
-      ze = new Set([ke, ...Object.values(Ge)]),
-      oe = new Set(It.v.map(Ee.A)),
-      re = new Set(Ee.k),
-      Ue = 'style, link[rel="stylesheet"]';
+      WE = new Set([QE, ...Object.values(iE)]),
+      SE = new Set(mu.A.map(cE.t)),
+      IE = new Set(cE.h),
+      FE = 'style, link[rel="stylesheet"]';
 
-    function Ae(tt, et, Vt, Ot) {
-      const qt = new Map,
-        Dt = new Set,
-        mt = new URL(tt.baseURI).origin,
-        dt = et => {
-          var Vt;
-          if ("LINK" !== et.nodeName) return !0;
-          const Ot = null === (Vt = et.getAttribute("href")) || void 0 === Vt ? void 0 : Vt.trim();
-          if (!Ot) return !1;
+    function BE(uu, Eu, ju, su) {
+      const Uu = new Map,
+        Zu = new Set,
+        Xu = new URL(uu.baseURI).origin,
+        lu = Eu => {
+          var ju;
+          if ("LINK" !== Eu.nodeName) return !0;
+          const su = null === (ju = Eu.getAttribute("href")) || void 0 === ju ? void 0 : ju.trim();
+          if (!su) return !1;
           try {
-            return new URL(Ot, tt.baseURI).origin === mt
+            return new URL(su, uu.baseURI).origin === Xu
           } catch {
             return !1
           }
         };
-      let jt = null;
-      const Ht = () => {
-          jt !== (0 === Dt.size) && (jt = 0 === Dt.size, null === Ot || void 0 === Ot || Ot(jt))
+      let qu = null;
+      const fu = () => {
+          qu !== (0 === Zu.size) && (qu = 0 === Zu.size, null === su || void 0 === su || su(qu))
         },
-        Xt = tt => {
-          const et = tt.cloneNode(!0);
-          if ("LINK" === et.tagName) {
-            Dt.add(et);
-            const tt = () => {
-              Dt.delete(et), Ht()
+        Cu = uu => {
+          const Eu = uu.cloneNode(!0);
+          if ("LINK" === Eu.tagName) {
+            Zu.add(Eu);
+            const uu = () => {
+              Zu.delete(Eu), fu()
             };
-            et.addEventListener("load", tt), et.addEventListener("error", tt), Vt && et.addEventListener("load", Vt)
+            Eu.addEventListener("load", uu), Eu.addEventListener("error", uu), ju && Eu.addEventListener("load", ju)
           }
-          return et
+          return Eu
         },
-        Qt = () => {
-          const Ot = function(tt) {
-              const et = [...tt.body.children].filter((tt => tt.matches(Ue)));
-              return [...tt.head.querySelectorAll(Ue), ...et]
-            }(tt).filter(dt),
-            mt = new Set(Ot);
-          for (const [tt, et] of qt) mt.has(tt) || (et.remove(), qt.delete(tt), Dt.delete(et));
-          let jt = null;
-          for (let tt = Ot.length - 1; tt >= 0; tt--) {
-            const Dt = Ot[tt];
-            let mt = qt.get(Dt);
-            mt ? "STYLE" === Dt.tagName && mt.textContent !== Dt.textContent && (mt.textContent = Dt.textContent, null === Vt || void 0 === Vt || Vt()) : (mt = Xt(Dt), qt.set(Dt, mt), et.head.insertBefore(mt, jt)), jt = mt
+        bu = () => {
+          const su = function(uu) {
+              const Eu = [...uu.body.children].filter((uu => uu.matches(FE)));
+              return [...uu.head.querySelectorAll(FE), ...Eu]
+            }(uu).filter(lu),
+            Xu = new Set(su);
+          for (const [uu, Eu] of Uu) Xu.has(uu) || (Eu.remove(), Uu.delete(uu), Zu.delete(Eu));
+          let qu = null;
+          for (let uu = su.length - 1; uu >= 0; uu--) {
+            const Zu = su[uu];
+            let Xu = Uu.get(Zu);
+            Xu ? "STYLE" === Zu.tagName && Xu.textContent !== Zu.textContent && (Xu.textContent = Zu.textContent, null === ju || void 0 === ju || ju()) : (Xu = Cu(Zu), Uu.set(Zu, Xu), Eu.head.insertBefore(Xu, qu)), qu = Xu
           }
-          Ht()
+          fu()
         };
-      Qt();
-      const lt = new MutationObserver(Qt);
-      return lt.observe(tt.head, {
+      bu();
+      const cu = new MutationObserver(bu);
+      return cu.observe(uu.head, {
         childList: !0,
         subtree: !0,
         characterData: !0
-      }), lt.observe(tt.body, {
+      }), cu.observe(uu.body, {
         childList: !0
       }), () => {
-        lt.disconnect()
+        cu.disconnect()
       }
     }
 
-    function ie(tt, et, Vt) {
+    function LE(uu, Eu, ju) {
       let {
-        keysAbove: Ot
-      } = Vt;
-      const qt = [...tt.documentElement.classList].filter((tt => !ze.has(tt) && !re.has(tt))),
-        Dt = [...et.documentElement.classList].filter((tt => re.has(tt))),
-        mt = [ke, Ge.hotbar, Ge.hasShop, Ge.hasBag];
-      Ot && mt.push(Ge.keysAbove), et.documentElement.className = [...qt, ...mt, ...Dt].join(" ")
+        keysAbove: su
+      } = ju;
+      const Uu = [...uu.documentElement.classList].filter((uu => !WE.has(uu) && !IE.has(uu))),
+        Zu = [...Eu.documentElement.classList].filter((uu => IE.has(uu))),
+        Xu = [QE, iE.hotbar, iE.hasShop, iE.hasBag];
+      su && Xu.push(iE.keysAbove), Eu.documentElement.className = [...Uu, ...Xu, ...Zu].join(" ")
     }
-    const Ye = ["--notchTop", "--notchRight", "--notchBottom", "--notchLeft"];
+    const tE = ["--notchTop", "--notchRight", "--notchBottom", "--notchLeft"];
 
-    function Be(tt, et, Vt, Ot, qt) {
-      const Dt = (0, It.w)(Vt, Ot, "joystick"),
-        mt = (0, Ee.D)((0, Ee.K)(Vt, Ot, qt), Ot),
-        dt = mt.classes.filter((tt => !oe.has(tt))),
-        jt = et.documentElement,
-        Ht = Vt.hudLayouts[Ot].hudSafe,
-        Xt = (0, Ee.H)(Ht, window.innerWidth, window.innerHeight, pe(), Ht ? (0, Ee.N)(et) : 0);
-      (0, Ee.Q)({
-        ...mt,
-        classes: dt
+    function xE(uu, Eu, ju, su, Uu) {
+      const Zu = (0, mu.C)(ju, su, "joystick"),
+        Xu = (0, cE.u)((0, cE.G)(ju, su, Uu), su),
+        lu = Xu.classes.filter((uu => !SE.has(uu))),
+        qu = Eu.documentElement,
+        fu = ju.hudLayouts[su].hudSafe,
+        Cu = (0, cE.B)(fu, window.innerWidth, window.innerHeight, TE(), fu ? (0, cE.K)(Eu) : 0);
+      (0, cE.N)({
+        ...Xu,
+        classes: lu
       }, {
-        vars: jt,
-        safe: jt,
-        classes: jt
-      }), jt.style.setProperty("--preview-joystick-shift-left", `${Xt[3]}px`), jt.style.setProperty("--preview-joystick-shift-bottom", `${Xt[2]}px`), jt.style.setProperty("--preview-joystick-scale", String(Dt[2])), (0, Fe.f)(jt, et, Vt, Ot);
-      for (const Qt of Ye) jt.style.setProperty(Qt, tt.documentElement.style.getPropertyValue(Qt) || "0px")
+        vars: qu,
+        safe: qu,
+        classes: qu
+      }), qu.style.setProperty("--preview-joystick-shift-left", `${Cu[3]}px`), qu.style.setProperty("--preview-joystick-shift-bottom", `${Cu[2]}px`), qu.style.setProperty("--preview-joystick-scale", String(Zu[2])), (0, rE.g)(qu, Eu, ju, su);
+      for (const bu of tE) qu.style.setProperty(bu, uu.documentElement.style.getPropertyValue(bu) || "0px")
     }
 
-    function pe() {
-      return (0, Ee.J)(Xt.b.get("notchSize"), window.innerWidth, window.innerHeight)
+    function TE() {
+      return (0, cE.F)(Cu.d.get("notchSize"), window.innerWidth, window.innerHeight)
     }
 
-    function xe(tt) {
-      return (0, Ee.v)(pe(), (0, Ee.N)(tt))
+    function HE(uu) {
+      return (0, cE.r)(TE(), (0, cE.K)(uu))
     }
 
-    function Te(tt, et, Vt) {
-      const Ot = tt.documentElement.style,
-        qt = (0, Ee.I)(et),
-        Dt = Ot.getPropertyValue(qt);
+    function AE(uu, Eu, ju) {
+      const su = uu.documentElement.style,
+        Uu = (0, cE.E)(Eu),
+        Zu = su.getPropertyValue(Uu);
       try {
-        return Vt((tt => {
-          Ot.setProperty(qt, String(tt))
+        return ju((uu => {
+          su.setProperty(Uu, String(uu))
         }))
       } finally {
-        "" === Dt ? Ot.removeProperty(qt) : Ot.setProperty(qt, Dt)
+        "" === Zu ? su.removeProperty(Uu) : su.setProperty(Uu, Zu)
       }
     }
 
-    function ge(tt, et) {
-      const [Vt, Ot] = Te(tt, "hotbar", (et => {
-        const Vt = Vt => {
-          var Ot, qt;
-          return et(Vt), null !== (Ot = null === (qt = tt.querySelector(".HotBarGameItemsContainer")) || void 0 === qt ? void 0 : qt.getBoundingClientRect().width) && void 0 !== Ot ? Ot : 0
+    function nE(uu, Eu) {
+      const [ju, su] = AE(uu, "hotbar", (Eu => {
+        const ju = ju => {
+          var su, Uu;
+          return Eu(ju), null !== (su = null === (Uu = uu.querySelector(".HotBarGameItemsContainer")) || void 0 === Uu ? void 0 : Uu.getBoundingClientRect().width) && void 0 !== su ? su : 0
         };
-        return [Vt(1), Vt(It.g)]
+        return [ju(1), ju(mu.i)]
       }));
-      return Vt <= 0 ? It.g : Math.min(It.g, Math.max(1, Math.floor(Ot / Vt / et + 1e-6) * et))
+      return ju <= 0 ? mu.i : Math.min(mu.i, Math.max(1, Math.floor(su / ju / Eu + 1e-6) * Eu))
     }
-    const se = 3,
-      ne = .5,
-      tV = tt => tt.right - tt.left;
-    const eV = (tt, et) => Math.abs((0, Rt.d)(tt).x - (0, Rt.d)(et).x) + Math.abs((0, Rt.d)(tt).y - (0, Rt.d)(et).y) + Math.abs(tV(tt) - tV(et));
+    const yE = 3,
+      zE = .5,
+      RE = uu => uu.right - uu.left;
+    const uj = (uu, Eu) => Math.abs((0, ku.e)(uu).x - (0, ku.e)(Eu).x) + Math.abs((0, ku.e)(uu).y - (0, ku.e)(Eu).y) + Math.abs(RE(uu) - RE(Eu));
 
-    function VV(tt, et, Vt, Ot, qt) {
+    function Ej(uu, Eu, ju, su, Uu) {
       let {
-        canKeep: Dt = () => !0,
-        passes: mt = se,
-        before: dt
+        canKeep: Zu = () => !0,
+        passes: Xu = yE,
+        before: lu
       } = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : {};
-      const jt = et.hudLayouts[Vt].hudLocked.filter(Dt);
-      if (0 === jt.length) return et;
-      const Ht = [...Lt].filter((Ot => !jt.includes(Ot) && (0, It.w)(tt, Vt, Ot).join() === (0, It.w)(et, Vt, Ot).join())),
-        Xt = tt => {
-          const et = (0, Rt.G)(Ht.flatMap((et => tt[et] ? [tt[et]] : [])));
+      const qu = Eu.hudLayouts[ju].hudLocked.filter(Zu);
+      if (0 === qu.length) return Eu;
+      const fu = [...Vu].filter((su => !qu.includes(su) && (0, mu.C)(uu, ju, su).join() === (0, mu.C)(Eu, ju, su).join())),
+        Cu = uu => {
+          const Eu = (0, ku.M)(fu.flatMap((Eu => uu[Eu] ? [uu[Eu]] : [])));
           return {
-            ...tt,
-            cluster: null !== et && void 0 !== et ? et : void 0
+            ...uu,
+            cluster: null !== Eu && void 0 !== Eu ? Eu : void 0
           }
         };
-      let Qt = null;
-      const lt = tt => {
-          Qt = tt;
-          const et = qt(tt);
-          return et && {
-            ...et,
-            boxes: Xt(et.boxes)
+      let bu = null;
+      const cu = uu => {
+          bu = uu;
+          const Eu = Uu(uu);
+          return Eu && {
+            ...Eu,
+            boxes: Cu(Eu.boxes)
           }
         },
-        Et = dt ? {
-          ...dt,
-          boxes: Xt(dt.boxes)
-        } : lt(tt),
-        ft = Et && lt(et);
-      if (!Et || !ft) return et;
-      const wt = Et.boxes;
-      let yt = ft.boxes;
-      const Nt = Et.keysAbove !== ft.keysAbove,
-        Mt = Nt || Boolean(Et.shopAlone) !== Boolean(ft.shopAlone),
-        bt = new Set(jt.filter((tt => !kt(tt) || !("bag" === tt ? Nt : Mt))));
-      let Jt = et;
-      for (let Kt = 0; Kt < mt && bt.size > 0; Kt++) {
-        var Ct, ut;
-        const tt = new Map;
-        for (const et of bt) {
-          const qt = wt[et],
-            Dt = yt[et],
-            mt = qt && Dt ? OV(et, (0, It.w)(Jt, Vt, et), qt, Dt, Ot) : null;
-          mt ? tt.set(et, mt) : bt.delete(et)
+        Nu = lu ? {
+          ...lu,
+          boxes: Cu(lu.boxes)
+        } : cu(uu),
+        Ou = Nu && cu(Eu);
+      if (!Nu || !Ou) return Eu;
+      const Yu = Nu.boxes;
+      let hu = Ou.boxes;
+      const Du = Nu.keysAbove !== Ou.keysAbove,
+        gu = Du || Boolean(Nu.shopAlone) !== Boolean(Ou.shopAlone),
+        Mu = new Set(qu.filter((uu => !Qu(uu) || !("bag" === uu ? Du : gu))));
+      let eu = Eu;
+      for (let wu = 0; wu < Xu && Mu.size > 0; wu++) {
+        var Gu, pu;
+        const uu = new Map;
+        for (const Eu of Mu) {
+          const Uu = Yu[Eu],
+            Zu = hu[Eu],
+            Xu = Uu && Zu ? jj(Eu, (0, mu.C)(eu, ju, Eu), Uu, Zu, su) : null;
+          Xu ? uu.set(Eu, Xu) : Mu.delete(Eu)
         }
-        if (0 === tt.size) break;
-        let qt = Jt;
-        for (const [et, Ot] of tt) qt = (0, It.db)(qt, Vt, et, Ot);
-        const Dt = null === (Ct = lt(qt)) || void 0 === Ct ? void 0 : Ct.boxes;
-        if (!Dt) return et;
-        let mt = Jt;
-        for (const [et, Ot] of tt) {
-          const tt = Dt[et];
-          tt && eV(wt[et], tt) < eV(wt[et], yt[et]) - ne ? mt = (0, It.db)(mt, Vt, et, Ot) : bt.delete(et)
+        if (0 === uu.size) break;
+        let Uu = eu;
+        for (const [Eu, su] of uu) Uu = (0, mu.fb)(Uu, ju, Eu, su);
+        const Zu = null === (Gu = cu(Uu)) || void 0 === Gu ? void 0 : Gu.boxes;
+        if (!Zu) return Eu;
+        let Xu = eu;
+        for (const [Eu, su] of uu) {
+          const uu = Zu[Eu];
+          uu && uj(Yu[Eu], uu) < uj(Yu[Eu], hu[Eu]) - zE ? Xu = (0, mu.fb)(Xu, ju, Eu, su) : Mu.delete(Eu)
         }
-        if (mt === Jt) break;
-        const dt = [...tt.keys()].every((tt => bt.has(tt)));
-        Jt = dt ? qt : mt;
-        const jt = dt ? Dt : null === (ut = lt(Jt)) || void 0 === ut ? void 0 : ut.boxes;
-        if (!jt) return et;
-        yt = jt
+        if (Xu === eu) break;
+        const lu = [...uu.keys()].every((uu => Mu.has(uu)));
+        eu = lu ? Uu : Xu;
+        const qu = lu ? Zu : null === (pu = cu(eu)) || void 0 === pu ? void 0 : pu.boxes;
+        if (!qu) return Eu;
+        hu = qu
       }
-      return Qt !== Jt && qt(Jt), Jt
+      return bu !== eu && Uu(eu), eu
     }
 
-    function OV(tt, et, Vt, Ot, qt) {
-      let [Dt, mt, dt] = et;
-      const jt = It.u[tt],
-        Ht = {};
-      jt.scale && tV(Ot) > 0 && Math.abs(tV(Vt) - tV(Ot)) > ne && (Ht.scale = Math.max(It.h, Math.min(It.g, dt * tV(Vt) / tV(Ot))));
-      const Xt = (0, Rt.d)(Vt).x - (0, Rt.d)(Ot).x,
-        Qt = (0, Rt.d)(Vt).y - (0, Rt.d)(Ot).y;
-      return jt.move && (Math.abs(Xt) > ne || Math.abs(Qt) > ne) && (Ht.dx = Dt + Xt / qt.width, Ht.dy = mt + Qt / qt.height), void 0 === Ht.scale && void 0 === Ht.dx ? null : Ht
+    function jj(uu, Eu, ju, su, Uu) {
+      let [Zu, Xu, lu] = Eu;
+      const qu = mu.x[uu],
+        fu = {};
+      qu.scale && RE(su) > 0 && Math.abs(RE(ju) - RE(su)) > zE && (fu.scale = Math.max(mu.m, Math.min(mu.i, lu * RE(ju) / RE(su))));
+      const Cu = (0, ku.e)(ju).x - (0, ku.e)(su).x,
+        bu = (0, ku.e)(ju).y - (0, ku.e)(su).y;
+      return qu.move && (Math.abs(Cu) > zE || Math.abs(bu) > zE) && (fu.dx = Zu + Cu / Uu.width, fu.dy = Xu + bu / Uu.height), void 0 === fu.scale && void 0 === fu.dx ? null : fu
     }
-    let qV = 0;
+    let sj = 0;
 
-    function DV() {
-      return qV > 0
+    function Uj() {
+      return sj > 0
     }
-    const mV = tt => 0 === tt.dx && 0 === tt.dy,
-      dV = .001,
-      jV = tt => Math.abs(tt.dx) >= 5e-4 || Math.abs(tt.dy) >= 5e-4 ? tt : {
-        dx: tt.dx,
-        dy: tt.dy < 0 ? -.001 : dV
+    const Zj = uu => 0 === uu.dx && 0 === uu.dy,
+      Xj = .001,
+      lj = uu => Math.abs(uu.dx) >= 5e-4 || Math.abs(uu.dy) >= 5e-4 ? uu : {
+        dx: uu.dx,
+        dy: uu.dy < 0 ? -.001 : Xj
       };
 
-    function HV(tt) {
+    function qj(uu) {
       let {
-        preview: et,
-        stageRef: Vt,
-        ringRef: Ot,
-        centreLineRef: Dt,
-        snapCentre: mt,
-        ready: dt,
-        measure: jt,
-        k: Ht,
-        viewport: Xt,
-        boxes: Qt,
-        pieces: lt,
-        selected: Et,
-        insets: ft,
-        layout: wt,
-        canMove: yt,
-        onSelect: Nt,
-        onMove: Mt
-      } = tt;
-      const bt = (0, qt.useRef)(null),
-        Jt = (0, qt.useCallback)((() => null !== bt.current), []),
-        Ct = (tt, et) => {
-          if (!et) return null;
-          const Vt = (0, Rt.d)(tt.origin),
-            Ot = (0, Rt.d)(et),
-            qt = (tt.to.dx - tt.from.dx) * Xt.width,
-            Dt = (tt.to.dy - tt.from.dy) * Xt.height,
-            mt = et.right - et.left,
-            dt = et.bottom - et.top;
+        preview: Eu,
+        stageRef: ju,
+        ringRef: su,
+        centreLineRef: Zu,
+        snapCentre: Xu,
+        ready: lu,
+        measure: qu,
+        k: fu,
+        viewport: Cu,
+        boxes: bu,
+        pieces: cu,
+        selected: Nu,
+        insets: Ou,
+        layout: Yu,
+        canMove: hu,
+        onSelect: Du,
+        onMove: gu
+      } = uu;
+      const Mu = (0, Uu.useRef)(null),
+        eu = (0, Uu.useCallback)((() => null !== Mu.current), []),
+        Gu = (uu, Eu) => {
+          if (!Eu) return null;
+          const ju = (0, ku.e)(uu.origin),
+            su = (0, ku.e)(Eu),
+            Uu = (uu.to.dx - uu.from.dx) * Cu.width,
+            Zu = (uu.to.dy - uu.from.dy) * Cu.height,
+            Xu = Eu.right - Eu.left,
+            lu = Eu.bottom - Eu.top;
           return {
             skew: {
-              x: Ot.x - Vt.x - qt,
-              y: Ot.y - Vt.y - Dt
+              x: su.x - ju.x - Uu,
+              y: su.y - ju.y - Zu
             },
             box: {
-              left: Vt.x - mt / 2,
-              top: Vt.y - dt / 2,
-              right: Vt.x + mt / 2,
-              bottom: Vt.y + dt / 2
+              left: ju.x - Xu / 2,
+              top: ju.y - lu / 2,
+              right: ju.x + Xu / 2,
+              bottom: ju.y + lu / 2
             }
           }
         },
-        ut = (tt, Vt) => {
-          var qt;
-          const mt = bt.current;
-          if (!mt || mt.pointerId !== tt.pointerId) return;
-          bt.current = null, null === (qt = Dt.current) || void 0 === qt || qt.classList.remove("Shown", "Snapped");
-          const dt = Ot.current;
-          if (dt && null !== mt.ringStyle && dt.setAttribute("style", mt.ringStyle), Vt && mt.moved) {
-            const tt = mV(mt.to) ? null : jt(mt.id),
-              et = tt ? (0, Rt.C)(tt, (0, Rt.B)(Xt.width, Xt.height, ft)) : {
+        pu = (uu, ju) => {
+          var Uu;
+          const Xu = Mu.current;
+          if (!Xu || Xu.pointerId !== uu.pointerId) return;
+          Mu.current = null, null === (Uu = Zu.current) || void 0 === Uu || Uu.classList.remove("Shown", "Snapped");
+          const lu = su.current;
+          if (lu && null !== Xu.ringStyle && lu.setAttribute("style", Xu.ringStyle), ju && Xu.moved) {
+            const uu = Zj(Xu.to) ? null : qu(Xu.id),
+              Eu = uu ? (0, ku.J)(uu, (0, ku.G)(Cu.width, Cu.height, Ou)) : {
                 x: 0,
                 y: 0
               },
-              Vt = {
-                dx: mt.to.dx + et.x / Xt.width,
-                dy: mt.to.dy + et.y / Xt.height
+              ju = {
+                dx: Xu.to.dx + Eu.x / Cu.width,
+                dy: Xu.to.dy + Eu.y / Cu.height
               },
-              Ot = mV(mt.to) ? Vt : jV(Vt);
-            Mt(mt.id, Ot.dx, Ot.dy)
-          } else et(mt.id, null), Vt && mt.tapPick && Nt(mt.tapPick)
+              su = Zj(Xu.to) ? ju : lj(ju);
+            gu(Xu.id, su.dx, su.dy)
+          } else Eu(Xu.id, null), ju && Xu.tapPick && Du(Xu.tapPick)
         };
       return {
-        busy: Jt,
+        busy: eu,
         handlers: {
-          onPointerDown: tt => {
-            var et;
-            if (!dt || bt.current || !tt.target.closest(".HudPreviewHandle")) return;
-            const Ot = Vt.current.getBoundingClientRect(),
-              qt = {
-                x: (tt.clientX - Ot.left) / Ht,
-                y: (tt.clientY - Ot.top) / Ht
+          onPointerDown: uu => {
+            var Eu;
+            if (!lu || Mu.current || !uu.target.closest(".HudPreviewHandle")) return;
+            const su = ju.current.getBoundingClientRect(),
+              Uu = {
+                x: (uu.clientX - su.left) / fu,
+                y: (uu.clientY - su.top) / fu
               },
-              Dt = (0, Rt.v)(qt, lt, 40 / Ht),
-              mt = null !== Et ? rt.get(Et) : void 0,
-              jt = void 0 !== mt && null !== (0, Rt.v)(qt, lt.filter((tt => {
+              Zu = (0, ku.C)(Uu, cu, 40 / fu),
+              Xu = null !== Nu ? Iu.get(Nu) : void 0,
+              qu = void 0 !== Xu && null !== (0, ku.C)(Uu, cu.filter((uu => {
                 let {
-                  id: et
-                } = tt;
-                return mt.has(et)
-              })), 40 / Ht),
-              Xt = "menu" === Et && void 0 !== Qt.menu && (0, Rt.e)(Qt.menu, qt) && ("menu" === Dt || null !== Dt && (0, Qe.t)(Dt, wt.hudElements[Dt])),
-              ft = jt ? Et : Xt ? "menu" : null,
-              Mt = null !== ft,
-              Jt = null !== ft && void 0 !== ft ? ft : Dt;
-            if (!Jt) return;
-            if (function(tt) {
-                qV++;
-                const et = Vt => {
-                  Vt.pointerId === tt && (qV = Math.max(0, qV - 1), window.removeEventListener("pointerup", et, !0), window.removeEventListener("pointercancel", et, !0))
+                  id: Eu
+                } = uu;
+                return Xu.has(Eu)
+              })), 40 / fu),
+              Cu = "menu" === Nu && void 0 !== bu.menu && (0, ku.g)(bu.menu, Uu) && ("menu" === Zu || null !== Zu && (0, CE.t)(Zu, Yu.hudElements[Zu])),
+              Ou = qu ? Nu : Cu ? "menu" : null,
+              gu = null !== Ou,
+              eu = null !== Ou && void 0 !== Ou ? Ou : Zu;
+            if (!eu) return;
+            if (function(uu) {
+                sj++;
+                const Eu = ju => {
+                  ju.pointerId === uu && (sj = Math.max(0, sj - 1), window.removeEventListener("pointerup", Eu, !0), window.removeEventListener("pointercancel", Eu, !0))
                 };
-                window.addEventListener("pointerup", et, !0), window.addEventListener("pointercancel", et, !0)
-              }(tt.pointerId), !yt(Jt)) return void Nt(Mt && Dt ? Dt : Jt);
-            Nt(Jt);
-            const [Ct, ut] = null !== (et = wt.hudElements[Jt]) && void 0 !== et ? et : [0, 0], Kt = {
-              dx: Ct,
-              dy: ut
-            }, ht = {
+                window.addEventListener("pointerup", Eu, !0), window.addEventListener("pointercancel", Eu, !0)
+              }(uu.pointerId), !hu(eu)) return void Du(gu && Zu ? Zu : eu);
+            Du(eu);
+            const [Gu, pu] = null !== (Eu = Yu.hudElements[eu]) && void 0 !== Eu ? Eu : [0, 0], wu = {
+              dx: Gu,
+              dy: pu
+            }, Ju = {
               skew: {
                 x: 0,
                 y: 0
               },
-              box: Qt[Jt]
+              box: bu[eu]
             };
-            bt.current = {
-              id: Jt,
-              pointerId: tt.pointerId,
-              startX: tt.clientX,
-              startY: tt.clientY,
-              origin: Qt[Jt],
-              from: Kt,
-              to: Kt,
+            Mu.current = {
+              id: eu,
+              pointerId: uu.pointerId,
+              startX: uu.clientX,
+              startY: uu.clientY,
+              origin: bu[eu],
+              from: wu,
+              to: wu,
               moved: !1,
-              home: mV(Kt) ? {
-                centre: (0, Rt.d)(Qt[Jt]),
-                anchor: ht
+              home: Zj(wu) ? {
+                centre: (0, ku.e)(bu[eu]),
+                anchor: Ju
               } : null,
-              away: mV(Kt) ? null : ht,
-              anchor: ht,
+              away: Zj(wu) ? null : Ju,
+              anchor: Ju,
               ringStyle: null,
-              tapPick: Mt ? Dt : null
-            }, tt.currentTarget.setPointerCapture(tt.pointerId)
+              tapPick: gu ? Zu : null
+            }, uu.currentTarget.setPointerCapture(uu.pointerId)
           },
-          onPointerMove: tt => {
-            const Vt = bt.current;
-            if (!Vt || Vt.pointerId !== tt.pointerId) return;
-            const qt = tt.clientX - Vt.startX,
-              dt = tt.clientY - Vt.startY;
-            if (!Vt.moved && Math.hypot(qt, dt) < 5) return;
-            const Qt = !Vt.moved;
-            var lt, Et;
-            (Vt.moved = !0, Qt) && (Vt.ringStyle = null !== (lt = null === (Et = Ot.current) || void 0 === Et ? void 0 : Et.getAttribute("style")) && void 0 !== lt ? lt : null);
-            const wt = (0, Rt.B)(Xt.width, Xt.height, ft);
-            if (!Vt.home) {
-              var yt;
-              Vt.to = {
+          onPointerMove: uu => {
+            const ju = Mu.current;
+            if (!ju || ju.pointerId !== uu.pointerId) return;
+            const Uu = uu.clientX - ju.startX,
+              lu = uu.clientY - ju.startY;
+            if (!ju.moved && Math.hypot(Uu, lu) < 5) return;
+            const bu = !ju.moved;
+            var cu, Nu;
+            (ju.moved = !0, bu) && (ju.ringStyle = null !== (cu = null === (Nu = su.current) || void 0 === Nu ? void 0 : Nu.getAttribute("style")) && void 0 !== cu ? cu : null);
+            const Yu = (0, ku.G)(Cu.width, Cu.height, Ou);
+            if (!ju.home) {
+              var hu;
+              ju.to = {
                 dx: 0,
                 dy: 0
-              }, et(Vt.id, Vt.to);
-              const tt = jt(Vt.id),
-                Ot = null !== (yt = Ct(Vt, tt)) && void 0 !== yt ? yt : {
+              }, Eu(ju.id, ju.to);
+              const uu = qu(ju.id),
+                su = null !== (hu = Gu(ju, uu)) && void 0 !== hu ? hu : {
                   skew: {
                     x: 0,
                     y: 0
                   },
-                  box: Vt.origin
+                  box: ju.origin
                 },
-                qt = (0, Rt.d)(Vt.origin);
-              Vt.home = {
-                centre: tt ? (0, Rt.d)(tt) : {
-                  x: qt.x - Vt.from.dx * Xt.width,
-                  y: qt.y - Vt.from.dy * Xt.height
+                Uu = (0, ku.e)(ju.origin);
+              ju.home = {
+                centre: uu ? (0, ku.e)(uu) : {
+                  x: Uu.x - ju.from.dx * Cu.width,
+                  y: Uu.y - ju.from.dy * Cu.height
                 },
-                anchor: Ot
+                anchor: su
               }
             }
-            const Nt = Vt.home;
-            let Mt = !1;
-            const Jt = tt => {
-                Mt = !1;
-                let Ot = (0, Rt.n)(tt.box, qt / Ht, dt / Ht, wt);
-                const Dt = Xt.width / 2;
-                if (mt && Math.abs((0, Rt.d)(Vt.origin).x + Ot.x - Dt) <= 8 / Ht) {
-                  const et = Dt - (0, Rt.d)(Vt.origin).x,
-                    qt = (0, Rt.n)(tt.box, et, Ot.y, wt);
-                  Mt = Math.abs(qt.x - et) < .01, Mt && (Ot = qt)
+            const Du = ju.home;
+            let gu = !1;
+            const eu = uu => {
+                gu = !1;
+                let su = (0, ku.r)(uu.box, Uu / fu, lu / fu, Yu);
+                const Zu = Cu.width / 2;
+                if (Xu && Math.abs((0, ku.e)(ju.origin).x + su.x - Zu) <= 8 / fu) {
+                  const Eu = Zu - (0, ku.e)(ju.origin).x,
+                    Uu = (0, ku.r)(uu.box, Eu, su.y, Yu);
+                  gu = Math.abs(Uu.x - Eu) < .01, gu && (su = Uu)
                 }
-                const jt = (0, Rt.r)(Vt.from, Ot.x - tt.skew.x, Ot.y - tt.skew.y, Xt.width, Xt.height);
-                Vt.to = jV(jt), Vt.anchor = tt, et(Vt.id, Vt.to)
+                const qu = (0, ku.y)(ju.from, su.x - uu.skew.x, su.y - uu.skew.y, Cu.width, Cu.height);
+                ju.to = lj(qu), ju.anchor = uu, Eu(ju.id, ju.to)
               },
-              ut = (0, Rt.n)(Nt.anchor.box, qt / Ht, dt / Ht, wt),
-              Kt = Dt.current,
-              ht = (0, Rt.d)(Vt.origin),
-              vt = ((0, It.P)(Vt.id) ? 20 : 6) / Ht;
-            if (Math.abs(ht.x + ut.x - Nt.centre.x) <= vt && Math.abs(ht.y + ut.y - Nt.centre.y) <= vt) Vt.to = {
+              pu = (0, ku.r)(Du.anchor.box, Uu / fu, lu / fu, Yu),
+              wu = Zu.current,
+              Ju = (0, ku.e)(ju.origin),
+              du = ((0, mu.O)(ju.id) ? 20 : 6) / fu;
+            if (Math.abs(Ju.x + pu.x - Du.centre.x) <= du && Math.abs(Ju.y + pu.y - Du.centre.y) <= du) ju.to = {
               dx: 0,
               dy: 0
-            }, Vt.anchor = Nt.anchor, Mt = mt && Math.abs(Nt.centre.x - Xt.width / 2) < 1, et(Vt.id, Vt.to);
-            else if (Vt.away) Jt(Vt.away);
+            }, ju.anchor = Du.anchor, gu = Xu && Math.abs(Du.centre.x - Cu.width / 2) < 1, Eu(ju.id, ju.to);
+            else if (ju.away) eu(ju.away);
             else {
-              var Wt;
-              Jt(Nt.anchor), Vt.away = null !== (Wt = Ct(Vt, jt(Vt.id))) && void 0 !== Wt ? Wt : Nt.anchor, Jt(Vt.away)
+              var au;
+              eu(Du.anchor), ju.away = null !== (au = Gu(ju, qu(ju.id))) && void 0 !== au ? au : Du.anchor, eu(ju.away)
             }
-            null === Kt || void 0 === Kt || Kt.classList.add("Shown"), null === Kt || void 0 === Kt || Kt.classList.toggle("Snapped", Mt), (tt => {
-              const et = Ot.current;
-              if (et) {
+            null === wu || void 0 === wu || wu.classList.add("Shown"), null === wu || void 0 === wu || wu.classList.toggle("Snapped", gu), (uu => {
+              const Eu = su.current;
+              if (Eu) {
                 const {
-                  skew: Vt,
-                  box: Ot
-                } = tt.anchor;
-                et.style.left = Ot.left * Ht + "px", et.style.top = Ot.top * Ht + "px", et.style.width = (Ot.right - Ot.left) * Ht + "px", et.style.height = (Ot.bottom - Ot.top) * Ht + "px", et.style.translate = `${((tt.to.dx-tt.from.dx)*Xt.width+Vt.x)*Ht}px ${((tt.to.dy-tt.from.dy)*Xt.height+Vt.y)*Ht}px`
+                  skew: ju,
+                  box: su
+                } = uu.anchor;
+                Eu.style.left = su.left * fu + "px", Eu.style.top = su.top * fu + "px", Eu.style.width = (su.right - su.left) * fu + "px", Eu.style.height = (su.bottom - su.top) * fu + "px", Eu.style.translate = `${((uu.to.dx-uu.from.dx)*Cu.width+ju.x)*fu}px ${((uu.to.dy-uu.from.dy)*Cu.height+ju.y)*fu}px`
               }
-            })(Vt)
+            })(ju)
           },
-          onPointerUp: tt => {
-            ut(tt, !0)
+          onPointerUp: uu => {
+            pu(uu, !0)
           },
-          onPointerCancel: tt => {
-            ut(tt, !1)
+          onPointerCancel: uu => {
+            pu(uu, !1)
           }
         }
       }
     }
-    var XV = Vt(9126);
+    var fj = ju(9118);
 
-    function QV(tt, et) {
-      return Object.keys(tt).filter((tt => tt !== et)).map((et => tt[et]))
+    function Cj(uu, Eu) {
+      return Object.keys(uu).filter((uu => uu !== Eu)).map((Eu => uu[Eu]))
     }
 
-    function lV(tt) {
-      return tt.map((tt => {
+    function bj(uu) {
+      return uu.map((uu => {
         let {
-          id: et,
-          box: Vt
-        } = tt;
-        return `${et}:${Vt.left},${Vt.top},${Vt.right},${Vt.bottom}`
+          id: Eu,
+          box: ju
+        } = uu;
+        return `${Eu}:${ju.left},${ju.top},${ju.right},${ju.bottom}`
       })).join(";")
     }
 
-    function EV(tt) {
-      const et = [],
-        Vt = et => (0, It.P)(et) && !tt.documentElement.classList.contains((0, Ee.E)(et));
-      for (const dt of tt.querySelectorAll(`[${pt}]`)) {
-        const tt = Vt(dt.getAttribute(pt)) ? dt.querySelector(".ScaleOnHover") : null,
-          Ot = (null !== tt && void 0 !== tt ? tt : dt).getBoundingClientRect();
-        (Ot.width > 0 || Ot.height > 0) && et.push({
-          id: dt.getAttribute(pt),
-          box: (0, Rt.f)(Ot)
+    function cj(uu) {
+      const Eu = [],
+        ju = Eu => (0, mu.O)(Eu) && !uu.documentElement.classList.contains((0, cE.y)(Eu));
+      for (const lu of uu.querySelectorAll(`[${Tu}]`)) {
+        const uu = ju(lu.getAttribute(Tu)) ? lu.querySelector(".ScaleOnHover") : null,
+          su = (null !== uu && void 0 !== uu ? uu : lu).getBoundingClientRect();
+        (su.width > 0 || su.height > 0) && Eu.push({
+          id: lu.getAttribute(Tu),
+          box: (0, ku.k)(su)
         })
       }
-      const Ot = tt => (0, Rt.G)(et.filter((et => {
+      const su = uu => (0, ku.M)(Eu.filter((Eu => {
           let {
-            id: Vt
-          } = et;
-          return tt(Vt)
-        })).map((tt => {
+            id: ju
+          } = Eu;
+          return uu(ju)
+        })).map((uu => {
           let {
-            box: et
-          } = tt;
-          return et
+            box: Eu
+          } = uu;
+          return Eu
         }))),
-        qt = {};
-      for (const dt of new Set(et.map((tt => tt.id)))) qt[dt] = Ot((tt => tt === dt));
-      for (const [dt, jt] of rt) {
-        const tt = Ot((tt => jt.has(tt)));
-        tt && (qt[dt] = tt)
+        Uu = {};
+      for (const lu of new Set(Eu.map((uu => uu.id)))) Uu[lu] = su((uu => uu === lu));
+      for (const [lu, qu] of Iu) {
+        const uu = su((uu => qu.has(uu)));
+        uu && (Uu[lu] = uu)
       }
-      const Dt = tt.querySelector(".TouchInventoryKeys"),
-        mt = Dt ? (0, Rt.f)(Dt.getBoundingClientRect()) : null;
+      const Zu = uu.querySelector(".TouchInventoryKeys"),
+        Xu = Zu ? (0, ku.k)(Zu.getBoundingClientRect()) : null;
       return {
-        boxes: qt,
-        pieces: et,
-        pairHome: mt
+        boxes: Uu,
+        pieces: Eu,
+        pairHome: Xu
       }
     }
 
-    function fV(tt, et, Vt) {
-      const Ot = et.right - et.left,
-        qt = et.bottom - et.top;
-      return Te(tt, "cluster", (et => {
-        const Dt = Vt => {
-            et(Vt);
-            const Ot = [...tt.querySelectorAll(`[${pt}]:not(.HudPreviewGhost)`)].filter((tt => Lt.has(tt.getAttribute(pt)))).map((tt => (0, Rt.f)(tt.getBoundingClientRect()))),
-              qt = (0, Rt.G)(Ot);
-            return qt ? {
-              w: qt.right - qt.left,
-              h: qt.bottom - qt.top
+    function Nj(uu, Eu, ju) {
+      const su = Eu.right - Eu.left,
+        Uu = Eu.bottom - Eu.top;
+      return AE(uu, "cluster", (Eu => {
+        const Zu = ju => {
+            Eu(ju);
+            const su = [...uu.querySelectorAll(`[${Tu}]:not(.HudPreviewGhost)`)].filter((uu => Vu.has(uu.getAttribute(Tu)))).map((uu => (0, ku.k)(uu.getBoundingClientRect()))),
+              Uu = (0, ku.M)(su);
+            return Uu ? {
+              w: Uu.right - Uu.left,
+              h: Uu.bottom - Uu.top
             } : null
           },
-          mt = tt => !tt || tt.w <= Ot && tt.h <= qt,
-          dt = Dt(1),
-          jt = Dt(It.g);
-        if (!dt || mt(jt)) return It.g;
-        const Ht = (tt, et, Vt) => et > tt ? 1 + (Vt - tt) * (It.g - 1) / (et - tt) : It.g;
-        let Xt = Math.floor(Math.min(It.g, Ht(dt.w, jt.w, Ot), Ht(dt.h, jt.h, qt)) / Vt + 1e-6) * Vt;
-        for (; Xt > 1 && !mt(Dt(Xt));) Xt = Math.round(100 * (Xt - Vt)) / 100;
-        return Math.max(1, Xt)
+          Xu = uu => !uu || uu.w <= su && uu.h <= Uu,
+          lu = Zu(1),
+          qu = Zu(mu.i);
+        if (!lu || Xu(qu)) return mu.i;
+        const fu = (uu, Eu, ju) => Eu > uu ? 1 + (ju - uu) * (mu.i - 1) / (Eu - uu) : mu.i;
+        let Cu = Math.floor(Math.min(mu.i, fu(lu.w, qu.w, su), fu(lu.h, qu.h, Uu)) / ju + 1e-6) * ju;
+        for (; Cu > 1 && !Xu(Zu(Cu));) Cu = Math.round(100 * (Cu - ju)) / 100;
+        return Math.max(1, Cu)
       }))
     }
 
-    function wV(tt) {
-      ie(document, tt, {
+    function Oj(uu) {
+      LE(document, uu, {
         keysAbove: !1
       });
-      const et = parseFloat(getComputedStyle(tt.documentElement).getPropertyValue("--touch-hotbar-ends-spare")),
-        Vt = Number.isFinite(et) && et < 0;
-      return ie(document, tt, {
-        keysAbove: Vt
-      }), (0, XV.b)(tt), Vt
+      const Eu = parseFloat(getComputedStyle(uu.documentElement).getPropertyValue("--touch-hotbar-ends-spare")),
+        ju = Number.isFinite(Eu) && Eu < 0;
+      return LE(document, uu, {
+        keysAbove: ju
+      }), (0, fj.e)(uu), ju
     }
 
-    function yV(tt) {
-      const et = tt.querySelector(".TouchInventoryKey.ShopKey");
-      return null !== et && "1" === getComputedStyle(et).getPropertyValue("--touch-shop-above").trim()
+    function Yj(uu) {
+      const Eu = uu.querySelector(".TouchInventoryKey.ShopKey");
+      return null !== Eu && "1" === getComputedStyle(Eu).getPropertyValue("--touch-shop-above").trim()
     }
 
-    function NV(tt, et) {
+    function hj(uu, Eu) {
       let {
-        layout: Vt,
-        orientation: Ot,
-        viewport: Dt,
-        replicaKey: mt,
-        joystickFixed: dt,
-        busy: jt
-      } = et;
-      const [Ht, Xt] = (0, qt.useState)(null), [Qt, lt] = (0, qt.useState)({
+        layout: ju,
+        orientation: su,
+        viewport: Zu,
+        replicaKey: Xu,
+        joystickFixed: lu,
+        busy: qu
+      } = Eu;
+      const [fu, Cu] = (0, Uu.useState)(null), [bu, cu] = (0, Uu.useState)({
         boxes: {},
         pieces: []
-      }), [Et, ft] = (0, qt.useState)({
+      }), [Nu, Ou] = (0, Uu.useState)({
         top: 0,
         right: 0,
         bottom: 0,
         left: 0
-      }), [wt, yt] = (0, qt.useState)(!1), [Nt, Mt] = (0, qt.useState)(!1), [bt, Jt] = (0, qt.useState)(!1), Ct = (0, qt.useCallback)((tt => {
-        Mt(tt), tt && Jt(!0)
-      }), []), ut = Vt.hudLayouts[Ot].hudSafe;
-      (0, qt.useLayoutEffect)((() => {
-        const et = tt.current.contentDocument;
-        et.open(), et.write("<!DOCTYPE html><html><head></head><body></body></html>"), et.close(), Xt(et)
-      }), [tt]);
-      const Kt = (0, qt.useCallback)((() => {
-          Ht && ((0, Qe.u)(Ht), lt(EV(Ht)), ft(function(tt, et) {
-            const Vt = xe(tt),
-              [Ot, qt, Dt, mt] = et ? (0, Ee.w)(et, window.innerWidth, window.innerHeight, Vt) : Vt;
+      }), [Yu, hu] = (0, Uu.useState)(!1), [Du, gu] = (0, Uu.useState)(!1), [Mu, eu] = (0, Uu.useState)(!1), Gu = (0, Uu.useCallback)((uu => {
+        gu(uu), uu && eu(!0)
+      }), []), pu = ju.hudLayouts[su].hudSafe;
+      (0, Uu.useLayoutEffect)((() => {
+        const Eu = uu.current.contentDocument;
+        Eu.open(), Eu.write("<!DOCTYPE html><html><head></head><body></body></html>"), Eu.close(), Cu(Eu)
+      }), [uu]);
+      const wu = (0, Uu.useCallback)((() => {
+          fu && ((0, CE.x)(fu), cu(cj(fu)), Ou(function(uu, Eu) {
+            const ju = HE(uu),
+              [su, Uu, Zu, Xu] = Eu ? (0, cE.s)(Eu, window.innerWidth, window.innerHeight, ju) : ju;
             return {
-              top: Ot,
-              right: qt,
-              bottom: Dt,
-              left: mt
+              top: su,
+              right: Uu,
+              bottom: Zu,
+              left: Xu
             }
-          }(Ht, ut)))
-        }), [Ht, ut]),
-        ht = (0, qt.useCallback)((() => {
-          Ht && yt(wV(Ht))
-        }), [Ht]),
-        vt = (0, qt.useRef)((() => {}));
-      return vt.current = () => {
-        ht(), jt() || Kt()
-      }, (0, qt.useLayoutEffect)((() => {
-        if (Ht) return Ae(document, Ht, (() => {
-          vt.current()
-        }), Ct)
-      }), [Ht, Ct]), (0, qt.useLayoutEffect)(ht, [ht, Dt]), (0, qt.useLayoutEffect)((() => {
-        Ht && (ie(document, Ht, {
-          keysAbove: wt
-        }), Be(document, Ht, Vt, Ot, dt), ht(), Kt())
-      }), [Ht, Vt, Ot, wt, mt, dt, Dt, Kt, ht]), (0, qt.useEffect)((() => {
-        var tt;
-        if (!Ht) return;
-        const et = new ResizeObserver((() => {
-          jt() || Kt()
+          }(fu, pu)))
+        }), [fu, pu]),
+        Ju = (0, Uu.useCallback)((() => {
+          fu && hu(Oj(fu))
+        }), [fu]),
+        du = (0, Uu.useRef)((() => {}));
+      return du.current = () => {
+        Ju(), qu() || wu()
+      }, (0, Uu.useLayoutEffect)((() => {
+        if (fu) return BE(document, fu, (() => {
+          du.current()
+        }), Gu)
+      }), [fu, Gu]), (0, Uu.useLayoutEffect)(Ju, [Ju, Zu]), (0, Uu.useLayoutEffect)((() => {
+        fu && (LE(document, fu, {
+          keysAbove: Yu
+        }), xE(document, fu, ju, su, lu), Ju(), wu())
+      }), [fu, ju, su, Yu, Xu, lu, Zu, wu, Ju]), (0, Uu.useEffect)((() => {
+        var uu;
+        if (!fu) return;
+        const Eu = new ResizeObserver((() => {
+          qu() || wu()
         }));
-        for (const Vt of Ht.querySelectorAll(`[${pt}]`)) et.observe(Vt);
-        return null === (tt = Ht.fonts) || void 0 === tt || tt.ready.then(Kt), () => {
-          et.disconnect()
+        for (const ju of fu.querySelectorAll(`[${Tu}]`)) Eu.observe(ju);
+        return null === (uu = fu.fonts) || void 0 === uu || uu.ready.then(wu), () => {
+          Eu.disconnect()
         }
-      }), [Ht, Kt, jt, mt]), {
-        doc: Ht,
-        boxes: Qt.boxes,
-        pieces: Qt.pieces,
-        insets: Et,
-        keysAbove: wt,
-        ready: Nt,
-        settled: bt
+      }), [fu, wu, qu, Xu]), {
+        doc: fu,
+        boxes: bu.boxes,
+        pieces: bu.pieces,
+        insets: Nu,
+        keysAbove: Yu,
+        ready: Du,
+        settled: Mu
       }
     }
-    const aV = ["Above", "Below", "Left", "Right"];
+    const Dj = ["Above", "Below", "Left", "Right"];
 
-    function MV(tt, et, Vt, Ot, qt) {
-      const Dt = Vt[tt],
-        mt = (Dt.left + Dt.right) / 2,
-        dt = (Dt.top + Dt.bottom) / 2,
-        jt = (7.5 * et.length + 14) / Ot,
-        Ht = 18 / Ot,
-        Xt = {
+    function gj(uu, Eu, ju, su, Uu) {
+      const Zu = ju[uu],
+        Xu = (Zu.left + Zu.right) / 2,
+        lu = (Zu.top + Zu.bottom) / 2,
+        qu = (7.5 * Eu.length + 14) / su,
+        fu = 18 / su,
+        Cu = {
           Above: {
-            left: mt - jt / 2,
-            top: Dt.top - Ht,
-            right: mt + jt / 2,
-            bottom: Dt.top
+            left: Xu - qu / 2,
+            top: Zu.top - fu,
+            right: Xu + qu / 2,
+            bottom: Zu.top
           },
           Below: {
-            left: mt - jt / 2,
-            top: Dt.bottom,
-            right: mt + jt / 2,
-            bottom: Dt.bottom + Ht
+            left: Xu - qu / 2,
+            top: Zu.bottom,
+            right: Xu + qu / 2,
+            bottom: Zu.bottom + fu
           },
           Left: {
-            left: Dt.left - jt,
-            top: dt - Ht / 2,
-            right: Dt.left,
-            bottom: dt + Ht / 2
+            left: Zu.left - qu,
+            top: lu - fu / 2,
+            right: Zu.left,
+            bottom: lu + fu / 2
           },
           Right: {
-            left: Dt.right,
-            top: dt - Ht / 2,
-            right: Dt.right + jt,
-            bottom: dt + Ht / 2
+            left: Zu.right,
+            top: lu - fu / 2,
+            right: Zu.right + qu,
+            bottom: lu + fu / 2
           }
         },
-        Qt = QV(Vt, tt),
-        lt = {
+        bu = Cj(ju, uu),
+        cu = {
           left: 0,
           top: 0,
-          right: qt.width,
-          bottom: qt.height
+          right: Uu.width,
+          bottom: Uu.height
         };
-      return aV[(0, Rt.q)(aV.map((tt => Xt[tt])), Qt, {
-        bounds: lt
+      return Dj[(0, ku.v)(Dj.map((uu => Cu[uu])), bu, {
+        bounds: cu
       })]
     }
 
-    function bV() {
-      const [tt, et] = (0, He.c)();
-      return (0, qt.useMemo)((() => ({
-        width: tt,
-        height: et
-      })), [tt, et])
+    function Mj() {
+      const [uu, Eu] = (0, qE.d)();
+      return (0, Uu.useMemo)((() => ({
+        width: uu,
+        height: Eu
+      })), [uu, Eu])
     }
 
-    function JV(tt) {
-      var et;
+    function ej(uu) {
+      var Eu;
       const {
-        layout: Vt,
-        orientation: Dt,
-        selected: mt,
-        onSelect: dt,
-        onMove: Ht,
-        canMove: Xt,
-        actionButtons: Qt,
-        joystickFixed: lt,
-        presence: Et,
-        keyNames: wt,
-        maxHeight: yt,
-        fill: Nt = !1,
-        apiRef: Mt
-      } = tt, {
-        t: bt
-      } = (0, Ot.H)(), Jt = bV(), ut = (null !== (et = (0, ft.i)("maxAuraLevel")) && void 0 !== et ? et : 0) > 0, Kt = Vt.hudLayouts[Dt], ht = (0, qt.useRef)(null), vt = (0, qt.useRef)(null), Wt = (0, qt.useRef)(null), St = (0, qt.useRef)(null), Pt = (0, qt.useRef)(null), Zt = (0, qt.useRef)(null), Lt = (0, Xe.d)(ht).width, kt = Nt ? 1 : Lt > 0 ? (0, Rt.x)(Lt, Jt.width, Jt.height, yt) : 0, Gt = (0, qt.useRef)((() => !1)), Ut = (0, qt.useCallback)((() => Gt.current()), []), At = `${Qt}:${lt}:${ut}`, {
-        doc: it,
-        boxes: Yt,
-        pieces: Bt,
-        insets: pt,
-        keysAbove: Tt,
-        ready: gt,
-        settled: st
-      } = NV(Wt, {
-        layout: Vt,
-        orientation: Dt,
-        viewport: Jt,
-        replicaKey: At,
-        joystickFixed: lt,
-        busy: Ut
-      }), nt = (0, qt.useCallback)((tt => {
-        it && Be(document, it, tt, Dt, lt)
-      }), [it, Dt, lt]), te = (0, qt.useCallback)((tt => {
-        if (!it || !st) return null;
-        nt(tt);
-        const et = wV(it),
-          Vt = function(tt, et) {
+        layout: ju,
+        orientation: Zu,
+        selected: Xu,
+        onSelect: lu,
+        onMove: fu,
+        canMove: Cu,
+        actionButtons: bu,
+        joystickFixed: cu,
+        presence: Nu,
+        keyNames: Yu,
+        maxHeight: hu,
+        fill: Du = !1,
+        apiRef: gu
+      } = uu, {
+        t: Mu
+      } = (0, su.A)(), eu = Mj(), pu = (null !== (Eu = (0, Ou.h)("maxAuraLevel")) && void 0 !== Eu ? Eu : 0) > 0, wu = ju.hudLayouts[Zu], Ju = (0, Uu.useRef)(null), du = (0, Uu.useRef)(null), au = (0, Uu.useRef)(null), Pu = (0, Uu.useRef)(null), vu = (0, Uu.useRef)(null), Ku = (0, Uu.useRef)(null), Vu = (0, fE.d)(Ju).width, Qu = Du ? 1 : Vu > 0 ? (0, ku.D)(Vu, eu.width, eu.height, hu) : 0, iu = (0, Uu.useRef)((() => !1)), Fu = (0, Uu.useCallback)((() => iu.current()), []), Bu = `${bu}:${cu}:${pu}`, {
+        doc: Lu,
+        boxes: tu,
+        pieces: xu,
+        insets: Tu,
+        keysAbove: Au,
+        ready: nu,
+        settled: yu
+      } = hj(au, {
+        layout: ju,
+        orientation: Zu,
+        viewport: eu,
+        replicaKey: Bu,
+        joystickFixed: cu,
+        busy: Fu
+      }), zu = (0, Uu.useCallback)((uu => {
+        Lu && xE(document, Lu, uu, Zu, cu)
+      }), [Lu, Zu, cu]), Ru = (0, Uu.useCallback)((uu => {
+        if (!Lu || !yu) return null;
+        zu(uu);
+        const Eu = Oj(Lu),
+          ju = function(uu, Eu) {
             let {
-              boxes: Vt,
-              pieces: Ot,
-              pairHome: qt
-            } = tt;
-            const Dt = Ot.find((tt => Ft.has(tt.id)));
-            if (!Dt || !qt) return Vt;
-            const mt = (0, Rt.d)(qt),
-              dt = et(Dt.id),
-              jt = tV(Dt.box) / dt / 2,
-              Ht = (Dt.box.bottom - Dt.box.top) / dt / 2;
+              boxes: ju,
+              pieces: su,
+              pairHome: Uu
+            } = uu;
+            const Zu = su.find((uu => ru.has(uu.id)));
+            if (!Zu || !Uu) return ju;
+            const Xu = (0, ku.e)(Uu),
+              lu = Eu(Zu.id),
+              qu = RE(Zu.box) / lu / 2,
+              fu = (Zu.box.bottom - Zu.box.top) / lu / 2;
             return {
-              ...Vt,
+              ...ju,
               inventory: {
-                left: mt.x - jt,
-                top: mt.y - Ht,
-                right: mt.x + jt,
-                bottom: mt.y + Ht
+                left: Xu.x - qu,
+                top: Xu.y - fu,
+                right: Xu.x + qu,
+                bottom: Xu.y + fu
               }
             }
-          }(EV(it), (et => (0, It.w)(tt, Dt, et)[2]));
+          }(cj(Lu), (Eu => (0, mu.C)(uu, Zu, Eu)[2]));
         return {
-          boxes: Vt,
-          keysAbove: et,
-          shopAlone: yV(it)
+          boxes: ju,
+          keysAbove: Eu,
+          shopAlone: Yj(Lu)
         }
-      }), [it, st, nt, Dt]), ee = (0, qt.useRef)(null), Ve = (0, qt.useRef)(null), Oe = (0, qt.useRef)(Vt);
-      Oe.current = Vt;
-      const qe = (0, qt.useCallback)((() => {
-        null !== ee.current && (cancelAnimationFrame(ee.current), ee.current = null)
+      }), [Lu, yu, zu, Zu]), uE = (0, Uu.useRef)(null), EE = (0, Uu.useRef)(null), jE = (0, Uu.useRef)(ju);
+      jE.current = ju;
+      const sE = (0, Uu.useCallback)((() => {
+        null !== uE.current && (cancelAnimationFrame(uE.current), uE.current = null)
       }), []);
-      (0, qt.useEffect)((() => qe), [Vt, qe]);
-      const De = (0, qt.useRef)(-1 / 0),
+      (0, Uu.useEffect)((() => sE), [ju, sE]);
+      const UE = (0, Uu.useRef)(-1 / 0),
         {
-          lockable: me
-        } = tt,
-        je = (0, qt.useCallback)((tt => {
-          if (nt(tt), De.current = performance.now(), !st || 0 === Vt.hudLayouts[Dt].hudLocked.length) return;
-          const et = Vt;
-          qe(), ee.current = requestAnimationFrame((() => {
-            var Vt;
-            if (ee.current = null, Oe.current !== et) return;
-            const Ot = (null === (Vt = Ve.current) || void 0 === Vt ? void 0 : Vt.from) === et ? Ve.current.measured : te(et);
-            Ot && (Ve.current = {
-              from: et,
-              measured: Ot
-            }), nt(Ot ? VV(et, tt, Dt, Jt, te, {
-              canKeep: me,
+          lockable: ZE
+        } = uu,
+        lE = (0, Uu.useCallback)((uu => {
+          if (zu(uu), UE.current = performance.now(), !yu || 0 === ju.hudLayouts[Zu].hudLocked.length) return;
+          const Eu = ju;
+          sE(), uE.current = requestAnimationFrame((() => {
+            var ju;
+            if (uE.current = null, jE.current !== Eu) return;
+            const su = (null === (ju = EE.current) || void 0 === ju ? void 0 : ju.from) === Eu ? EE.current.measured : Ru(Eu);
+            su && (EE.current = {
+              from: Eu,
+              measured: su
+            }), zu(su ? Ej(Eu, uu, Zu, eu, Ru, {
+              canKeep: ZE,
               passes: 1,
-              before: Ot
-            }) : tt)
+              before: su
+            }) : uu)
           }))
-        }), [nt, st, Vt, Dt, Jt, te, me, qe]),
-        He = HV({
-          preview: (tt, et) => {
-            et ? je((0, It.db)(Vt, Dt, tt, et)) : (qe(), nt(Vt))
+        }), [zu, yu, ju, Zu, eu, Ru, ZE, sE]),
+        qE = qj({
+          preview: (uu, Eu) => {
+            Eu ? lE((0, mu.fb)(ju, Zu, uu, Eu)) : (sE(), zu(ju))
           },
-          stageRef: vt,
-          ringRef: St,
-          centreLineRef: Pt,
-          snapCentre: Vt.hudSnapCentre,
-          ready: st,
-          measure: tt => {
-            const et = it && gt ? EV(it).boxes[tt] : void 0;
-            return et && (0, Rt.h)(et, Jt.width, Jt.height) ? et : null
+          stageRef: du,
+          ringRef: Pu,
+          centreLineRef: vu,
+          snapCentre: ju.hudSnapCentre,
+          ready: yu,
+          measure: uu => {
+            const Eu = Lu && nu ? cj(Lu).boxes[uu] : void 0;
+            return Eu && (0, ku.m)(Eu, eu.width, eu.height) ? Eu : null
           },
-          k: kt,
-          viewport: Jt,
-          boxes: Yt,
-          pieces: Bt,
-          selected: mt,
-          insets: pt,
-          layout: Kt,
-          canMove: Xt,
-          onSelect: dt,
-          onMove: (tt, et, Vt) => {
-            qe(), Ht(tt, et, Vt)
+          k: Qu,
+          viewport: eu,
+          boxes: tu,
+          pieces: xu,
+          selected: Xu,
+          insets: Tu,
+          layout: wu,
+          canMove: Cu,
+          onSelect: lu,
+          onMove: (uu, Eu, ju) => {
+            sE(), fu(uu, Eu, ju)
           }
         });
-      (0, qt.useLayoutEffect)((() => {
-        Gt.current = He.busy
-      }), [He.busy]);
-      const fe = (0, qt.useRef)([]),
-        we = (0, qt.useRef)(Kt.hudElements);
-      (0, qt.useEffect)((() => {
-        for (const qt of Object.keys(Kt.hudElements)) {
-          var tt, et, Vt, Ot;
-          (null !== (tt = null === (et = Kt.hudElements[qt]) || void 0 === et ? void 0 : et[2]) && void 0 !== tt ? tt : 1) > (null !== (Vt = null === (Ot = we.current[qt]) || void 0 === Ot ? void 0 : Ot[2]) && void 0 !== Vt ? Vt : 1) && Xt(qt) && !(0, Qe.t)(qt, Kt.hudElements[qt]) && fe.current.push(...ot(qt, Tt, Xt))
+      (0, Uu.useLayoutEffect)((() => {
+        iu.current = qE.busy
+      }), [qE.busy]);
+      const NE = (0, Uu.useRef)([]),
+        OE = (0, Uu.useRef)(wu.hudElements);
+      (0, Uu.useEffect)((() => {
+        for (const Uu of Object.keys(wu.hudElements)) {
+          var uu, Eu, ju, su;
+          (null !== (uu = null === (Eu = wu.hudElements[Uu]) || void 0 === Eu ? void 0 : Eu[2]) && void 0 !== uu ? uu : 1) > (null !== (ju = null === (su = OE.current[Uu]) || void 0 === su ? void 0 : su[2]) && void 0 !== ju ? ju : 1) && Cu(Uu) && !(0, CE.t)(Uu, wu.hudElements[Uu]) && NE.current.push(...Su(Uu, Au, Cu))
         }
-        we.current = Kt.hudElements
-      }), [Kt.hudElements, Xt, Tt]), (0, qt.useEffect)((() => {
-        if (!gt) return;
-        const tt = (0, Rt.B)(Jt.width, Jt.height, pt);
-        for (const Vt of ((tt, et, Vt, Ot) => {
-            const qt = tt => {
-              const qt = et[tt],
+        OE.current = wu.hudElements
+      }), [wu.hudElements, Cu, Au]), (0, Uu.useEffect)((() => {
+        if (!nu) return;
+        const uu = (0, ku.G)(eu.width, eu.height, Tu);
+        for (const ju of ((uu, Eu, ju, su) => {
+            const Uu = uu => {
+              const Uu = Eu[uu],
                 {
-                  x: Dt,
-                  y: mt
-                } = qt && Ot(tt) ? (0, Rt.C)(qt, Vt) : {
+                  x: Zu,
+                  y: Xu
+                } = Uu && su(uu) ? (0, ku.J)(Uu, ju) : {
                   x: 0,
                   y: 0
                 };
-              return qt && {
-                left: qt.left + Dt,
-                top: qt.top + mt,
-                right: qt.right + Dt,
-                bottom: qt.bottom + mt
+              return Uu && {
+                left: Uu.left + Zu,
+                top: Uu.top + Xu,
+                right: Uu.right + Zu,
+                bottom: Uu.bottom + Xu
               }
             };
-            return tt.flatMap((tt => {
-              const Dt = et[tt];
-              if ("inventory" !== tt || !Dt || Dt.right - Dt.left <= Vt.right - Vt.left && Dt.bottom - Dt.top <= Vt.bottom - Vt.top) return [tt];
-              const [mt, dt] = [qt("shop"), qt("bag")];
-              return mt && dt && !(0, Rt.k)(mt, dt, 0) ? ["shop", "bag"].filter(Ot) : [tt]
+            return uu.flatMap((uu => {
+              const Zu = Eu[uu];
+              if ("inventory" !== uu || !Zu || Zu.right - Zu.left <= ju.right - ju.left && Zu.bottom - Zu.top <= ju.bottom - ju.top) return [uu];
+              const [Xu, lu] = [Uu("shop"), Uu("bag")];
+              return Xu && lu && !(0, ku.q)(Xu, lu, 0) ? ["shop", "bag"].filter(su) : [uu]
             }))
-          })(fe.current.splice(0), Yt, tt, Xt)) {
-          const Ot = Yt[Vt];
-          if (!Ot || He.busy() || !(0, Rt.h)(Ot, Jt.width, Jt.height)) continue;
-          const qt = (0, Rt.C)(Ot, tt);
-          if (0 !== qt.x || 0 !== qt.y) {
-            var et;
-            const [tt, Ot] = null !== (et = Kt.hudElements[Vt]) && void 0 !== et ? et : [0, 0];
-            Ht(Vt, tt + qt.x / Jt.width, Ot + qt.y / Jt.height)
+          })(NE.current.splice(0), tu, uu, Cu)) {
+          const su = tu[ju];
+          if (!su || qE.busy() || !(0, ku.m)(su, eu.width, eu.height)) continue;
+          const Uu = (0, ku.J)(su, uu);
+          if (0 !== Uu.x || 0 !== Uu.y) {
+            var Eu;
+            const [uu, su] = null !== (Eu = wu.hudElements[ju]) && void 0 !== Eu ? Eu : [0, 0];
+            fu(ju, uu + Uu.x / eu.width, su + Uu.y / eu.height)
           }
         }
-      }), [Yt, gt]), (0, qt.useImperativeHandle)(Mt, (() => ({
-        setScale: (tt, et) => {
-          je((0, It.db)(Vt, Dt, tt, {
-            scale: et
+      }), [tu, nu]), (0, Uu.useImperativeHandle)(gu, (() => ({
+        setScale: (uu, Eu) => {
+          lE((0, mu.fb)(ju, Zu, uu, {
+            scale: Eu
           }))
         },
-        setOpacity: tt => {
-          nt({
-            ...Vt,
-            hudKeyOpacity: tt
+        setOpacity: uu => {
+          zu({
+            ...ju,
+            hudKeyOpacity: uu
           })
         },
-        keepLocks: (tt, et) => (qe(), VV(tt, et, Dt, Jt, te, {
-          canKeep: me
+        keepLocks: (uu, Eu) => (sE(), Ej(uu, Eu, Zu, eu, Ru, {
+          canKeep: ZE
         })),
-        setSafe: tt => {
-          const et = (0, Ee.w)(tt, Jt.width, Jt.height, xe(null !== it && void 0 !== it ? it : document));
-          je((0, It.hb)(Vt, Dt, tt)), Zt.current && (Zt.current.style.inset = et.map((tt => tt * kt + "px")).join(" "))
+        setSafe: uu => {
+          const Eu = (0, cE.s)(uu, eu.width, eu.height, HE(null !== Lu && void 0 !== Lu ? Lu : document));
+          lE((0, mu.mb)(ju, Zu, uu)), Ku.current && (Ku.current.style.inset = Eu.map((uu => uu * Qu + "px")).join(" "))
         }
-      })), [nt, je, te, qe, me, it, Vt, Dt, Jt, kt]);
-      const ye = new Set(Object.keys(Kt.hudElements).filter((tt => (0, It.q)(Kt.hudElements, tt)))),
-        Ne = mt ? Yt[mt] : void 0,
-        ae = mt ? xt(mt, Qt, bt, wt) : "",
-        Me = (0, Le.g)(Jt.width, Jt.height),
-        be = mt ? function(tt, et, Vt, Ot) {
-          const qt = tt => zt(tt).some((tt => (0, It.q)(Vt.hudElements, tt) || (0, Qe.s)(tt, Vt, Ot)));
-          if (qt(tt)) return [];
-          const Dt = tt => {
-              var et, Ot;
-              return "bag" === tt && 1 !== (null !== (et = null === (Ot = Vt.hudElements.shop) || void 0 === Ot ? void 0 : Ot[2]) && void 0 !== et ? et : 1) || zt(tt).some((tt => void 0 !== Vt.hudElements[tt]))
+      })), [zu, lE, Ru, sE, ZE, Lu, ju, Zu, eu, Qu]);
+      const YE = new Set(Object.keys(wu.hudElements).filter((uu => (0, mu.u)(wu.hudElements, uu)))),
+        hE = Xu ? tu[Xu] : void 0,
+        DE = Xu ? Hu(Xu, bu, Mu, Yu) : "",
+        gE = (0, VE.h)(eu.width, eu.height),
+        ME = Xu ? function(uu, Eu, ju, su) {
+          const Uu = uu => Wu(uu).some((uu => (0, mu.u)(ju.hudElements, uu) || (0, CE.q)(uu, ju, su)));
+          if (Uu(uu)) return [];
+          const Zu = uu => {
+              var Eu, su;
+              return "bag" === uu && 1 !== (null !== (Eu = null === (su = ju.hudElements.shop) || void 0 === su ? void 0 : su[2]) && void 0 !== Eu ? Eu : 1) || Wu(uu).some((uu => void 0 !== ju.hudElements[uu]))
             },
-            mt = rt.get(tt),
-            dt = et.filter((et => {
+            Xu = Iu.get(uu),
+            lu = Eu.filter((Eu => {
               let {
-                id: Vt
-              } = et;
-              return mt ? mt.has(Vt) && !qt(Vt) : Vt === tt
+                id: ju
+              } = Eu;
+              return Xu ? Xu.has(ju) && !Uu(ju) : ju === uu
             })),
-            jt = new Set;
-          for (const Ht of et) Ht.id === tt || null !== mt && void 0 !== mt && mt.has(Ht.id) || jt.has(Ht.id) || qt(Ht.id) || dt.some((tt => {
+            qu = new Set;
+          for (const fu of Eu) fu.id === uu || null !== Xu && void 0 !== Xu && Xu.has(fu.id) || qu.has(fu.id) || Uu(fu.id) || lu.some((uu => {
             let {
-              id: et,
-              box: Ot
-            } = tt;
-            return !le(et, Ht.id, Vt) && (Dt(et) || Dt(Ht.id)) && (0, Rt.k)(Ot, Ht.box, 2)
-          })) && jt.add(Ht.id);
-          return [...jt]
-        }(mt, Bt, Kt, Me) : [],
-        Je = new Set((0, Qe.r)(Kt.hudElements)),
-        Ce = (0, Qe.z)(Kt, (0, Qe.y)(Et.rowIcons)).state,
-        ue = be.join(),
-        Ke = (0, qt.useRef)(tt.onReady);
-      Ke.current = tt.onReady, (0, qt.useEffect)((() => {
-        var tt;
-        null === (tt = Ke.current) || void 0 === tt || tt.call(Ke, st)
-      }), [st]);
-      const he = (0, qt.useRef)(tt.onMeasured);
-      (0, qt.useLayoutEffect)((() => {
-        he.current = tt.onMeasured
+              id: Eu,
+              box: su
+            } = uu;
+            return !bE(Eu, fu.id, ju) && (Zu(Eu) || Zu(fu.id)) && (0, ku.q)(su, fu.box, 2)
+          })) && qu.add(fu.id);
+          return [...qu]
+        }(Xu, xu, wu, gE) : [],
+        eE = new Set((0, CE.p)(wu.hudElements)),
+        GE = (0, CE.D)(wu, (0, CE.B)(Nu.rowIcons)).state,
+        pE = ME.join(),
+        wE = (0, Uu.useRef)(uu.onReady);
+      wE.current = uu.onReady, (0, Uu.useEffect)((() => {
+        var uu;
+        null === (uu = wE.current) || void 0 === uu || uu.call(wE, yu)
+      }), [yu]);
+      const JE = (0, Uu.useRef)(uu.onMeasured);
+      (0, Uu.useLayoutEffect)((() => {
+        JE.current = uu.onMeasured
       }));
-      const ve = (0, qt.useRef)({
+      const dE = (0, Uu.useRef)({
           layout: null,
           input: "",
           caps: {}
         }),
-        We = [lV(Bt), Jt.width, Jt.height, pt.top, pt.right, pt.bottom, pt.left, gt, At].join("|");
-      (0, qt.useEffect)((() => {
-        const tt = ue ? ue.split(",") : [],
-          et = () => {
-            var et;
-            null === (et = he.current) || void 0 === et || et.call(he, Yt, tt, ve.current.caps)
+        aE = [bj(xu), eu.width, eu.height, Tu.top, Tu.right, Tu.bottom, Tu.left, nu, Bu].join("|");
+      (0, Uu.useEffect)((() => {
+        const uu = pE ? pE.split(",") : [],
+          Eu = () => {
+            var Eu;
+            null === (Eu = JE.current) || void 0 === Eu || Eu.call(JE, tu, uu, dE.current.caps)
           };
-        let Vt;
-        const Ot = () => {
-          const tt = Oe.current;
-          if (!it || tt === ve.current.layout && We === ve.current.input) return !1;
-          const qt = De.current + 250 - performance.now();
-          return tt === ve.current.layout && (qt > 0 || Ut()) ? (Vt = setTimeout((() => {
-            Ot() && et()
-          }), Math.max(qt, 62.5)), !1) : (ve.current = {
-            layout: tt,
-            input: We,
+        let ju;
+        const su = () => {
+          const uu = jE.current;
+          if (!Lu || uu === dE.current.layout && aE === dE.current.input) return !1;
+          const Uu = UE.current + 250 - performance.now();
+          return uu === dE.current.layout && (Uu > 0 || Fu()) ? (ju = setTimeout((() => {
+            su() && Eu()
+          }), Math.max(Uu, 62.5)), !1) : (dE.current = {
+            layout: uu,
+            input: aE,
             caps: {
-              hotbar: ge(it, Pe),
-              cluster: fV(it, (0, Rt.B)(Jt.width, Jt.height, pt), Pe)
+              hotbar: nE(Lu, vE),
+              cluster: Nj(Lu, (0, ku.G)(eu.width, eu.height, Tu), vE)
             }
           }, !0)
         };
-        return Ot(), et(), () => {
-          clearTimeout(Vt)
+        return su(), Eu(), () => {
+          clearTimeout(ju)
         }
-      }), [Yt, ue, it, Jt, pt, We, Ut]);
-      const Se = tt => ({
-        left: tt.left * kt,
-        top: tt.top * kt,
-        width: (tt.right - tt.left) * kt,
-        height: (tt.bottom - tt.top) * kt
+      }), [tu, pE, Lu, eu, Tu, aE, Fu]);
+      const PE = uu => ({
+        left: uu.left * Qu,
+        top: uu.top * Qu,
+        width: (uu.right - uu.left) * Qu,
+        height: (uu.bottom - uu.top) * Qu
       });
-      return (0, Ct.jsx)("div", {
-        ref: ht,
-        className: jt()("HudPreviewBox", {
-          Fill: Nt
+      return (0, Gu.jsx)("div", {
+        ref: Ju,
+        className: qu()("HudPreviewBox", {
+          Fill: Du
         }),
         style: {
-          height: Jt.height * kt
+          height: eu.height * Qu
         },
-        children: (0, Ct.jsxs)("div", {
-          ref: vt,
+        children: (0, Gu.jsxs)("div", {
+          ref: du,
           className: "HudPreviewStage",
           style: {
-            width: Jt.width * kt,
-            height: Jt.height * kt
+            width: eu.width * Qu,
+            height: eu.height * Qu
           },
-          children: [(0, Ct.jsx)("iframe", {
-            ref: Wt,
+          children: [(0, Gu.jsx)("iframe", {
+            ref: au,
             className: "HudPreviewFrame",
-            title: bt("hudLayout:preview"),
+            title: Mu("hudLayout:preview"),
             "aria-hidden": !0,
             tabIndex: -1,
             style: {
-              width: Jt.width,
-              height: Jt.height,
-              transform: `scale(${kt})`
+              width: eu.width,
+              height: eu.height,
+              transform: `scale(${Qu})`
             }
-          }), it && (0, de.createPortal)((0, Ct.jsx)(Re, {
-            presence: Et,
-            portraitPhone: Me,
-            hidden: ye,
-            actionButtons: Qt,
-            joystickFixed: lt,
-            keysAbove: Tt,
-            auraBar: ut,
-            trayState: Ce,
-            moved: Je
-          }), it.body), (0, Ct.jsxs)("div", {
+          }), Lu && (0, XE.createPortal)((0, Gu.jsx)(kE, {
+            presence: Nu,
+            portraitPhone: gE,
+            hidden: YE,
+            actionButtons: bu,
+            joystickFixed: cu,
+            keysAbove: Au,
+            auraBar: pu,
+            trayState: GE,
+            moved: eE
+          }), Lu.body), (0, Gu.jsxs)("div", {
             className: "HudPreviewOverlay",
-            ...He.handlers,
-            children: [(0, Ct.jsx)("div", {
-              ref: Zt,
+            ...qE.handlers,
+            children: [(0, Gu.jsx)("div", {
+              ref: Ku,
               className: "HudPreviewSafeZone",
               style: {
-                top: pt.top * kt,
-                right: pt.right * kt,
-                bottom: pt.bottom * kt,
-                left: pt.left * kt
+                top: Tu.top * Qu,
+                right: Tu.right * Qu,
+                bottom: Tu.bottom * Qu,
+                left: Tu.left * Qu
               }
-            }), Bt.map(((tt, et) => {
+            }), xu.map(((uu, Eu) => {
               let {
-                id: Vt,
-                box: Ot
-              } = tt;
-              return (0, Ct.jsx)("div", {
+                id: ju,
+                box: su
+              } = uu;
+              return (0, Gu.jsx)("div", {
                 className: "HudPreviewHandle",
-                style: Se((0, Rt.o)(Ot, 40 / kt))
-              }, `${Vt}:${et}`)
-            })), Kt.hudLocked.map((tt => {
-              const et = Yt[tt];
-              return et && (0, Ct.jsx)("span", {
+                style: PE((0, ku.u)(su, 40 / Qu))
+              }, `${ju}:${Eu}`)
+            })), wu.hudLocked.map((uu => {
+              const Eu = tu[uu];
+              return Eu && (0, Gu.jsx)("span", {
                 className: "HudPreviewLockBadge",
                 style: {
-                  left: et.right * kt,
-                  top: et.top * kt
+                  left: Eu.right * Qu,
+                  top: Eu.top * Qu
                 },
-                children: (0, Ct.jsx)(ct.b, {
+                children: (0, Gu.jsx)(ou.e, {
                   name: "lock"
                 })
-              }, tt)
-            })), (0, Ct.jsx)("div", {
-              ref: Pt,
+              }, uu)
+            })), (0, Gu.jsx)("div", {
+              ref: vu,
               className: "HudPreviewCentreLine",
               style: {
-                left: Jt.width / 2 * kt
+                left: eu.width / 2 * Qu
               }
-            }), mt && Ne && (0, Ct.jsx)("div", {
-              ref: St,
-              className: jt()("HudPreviewRing", {
-                Fixed: !Xt(mt),
-                Overlap: be.length > 0
+            }), Xu && hE && (0, Gu.jsx)("div", {
+              ref: Pu,
+              className: qu()("HudPreviewRing", {
+                Fixed: !Cu(Xu),
+                Overlap: ME.length > 0
               }),
-              style: Se(Ne),
-              children: (0, Ct.jsx)("span", {
-                className: jt()("HudPreviewRingLabel", MV(mt, ae, Yt, kt, Jt)),
-                children: ae
+              style: PE(hE),
+              children: (0, Gu.jsx)("span", {
+                className: qu()("HudPreviewRingLabel", gj(Xu, DE, tu, Qu, eu)),
+                children: DE
               })
             })]
           })]
@@ -2016,1509 +2016,1509 @@ export const modules = {
       })
     }
 
-    function CV(tt, et) {
-      (0, qt.useEffect)((() => {
-        var Vt;
-        null === (Vt = tt.current) || void 0 === Vt || Vt.toggleAttribute("inert", et)
-      }), [tt, et])
+    function Gj(uu, Eu) {
+      (0, Uu.useEffect)((() => {
+        var ju;
+        null === (ju = uu.current) || void 0 === ju || ju.toggleAttribute("inert", Eu)
+      }), [uu, Eu])
     }
-    const uV = "hudFullScreen";
+    const pj = "hudFullScreen";
 
-    function KV(tt) {
+    function wj(uu) {
       let {
-        onScale: et,
-        onHidden: Vt,
-        onReset: Dt,
-        locked: mt,
-        lockable: dt,
-        onLocked: jt,
-        onClose: Xt,
-        ...Qt
-      } = tt;
+        onScale: Eu,
+        onHidden: ju,
+        onReset: Zu,
+        locked: Xu,
+        lockable: lu,
+        onLocked: qu,
+        onClose: Cu,
+        ...bu
+      } = uu;
       const {
-        t: lt
-      } = (0, Ot.H)(), Et = (0, qt.useRef)(null);
-      (0, je.w)("popup", Et, Xt),
-      function(tt) {
-        const et = (0, qt.useRef)(tt);
-        et.current = tt, (0, qt.useEffect)((() => {
+        t: cu
+      } = (0, su.A)(), Nu = (0, Uu.useRef)(null);
+      (0, lE.w)("popup", Nu, Cu),
+      function(uu) {
+        const Eu = (0, Uu.useRef)(uu);
+        Eu.current = uu, (0, Uu.useEffect)((() => {
           window.history.pushState({
             ...window.history.state,
-            [uV]: !0
+            [pj]: !0
           }, "");
-          let tt = !1;
-          const Vt = () => {
-            tt = !0, et.current()
+          let uu = !1;
+          const ju = () => {
+            uu = !0, Eu.current()
           };
-          return window.addEventListener("popstate", Vt), () => {
-            var et;
-            window.removeEventListener("popstate", Vt), !tt && null !== (et = window.history.state) && void 0 !== et && et[uV] && window.history.back()
+          return window.addEventListener("popstate", ju), () => {
+            var Eu;
+            window.removeEventListener("popstate", ju), !uu && null !== (Eu = window.history.state) && void 0 !== Eu && Eu[pj] && window.history.back()
           }
         }), [])
-      }(Xt), (0, qt.useEffect)((() => {
-        function tt(tt) {
-          "Escape" === tt.key && (tt.stopPropagation(), Xt())
+      }(Cu), (0, Uu.useEffect)((() => {
+        function uu(uu) {
+          "Escape" === uu.key && (uu.stopPropagation(), Cu())
         }
-        return window.addEventListener("keydown", tt, !0), () => {
-          window.removeEventListener("keydown", tt, !0)
+        return window.addEventListener("keydown", uu, !0), () => {
+          window.removeEventListener("keydown", uu, !0)
         }
-      }), [Xt]);
+      }), [Cu]);
       const {
-        selected: ft
-      } = Qt, wt = (0, qt.useRef)(null), yt = (0, qt.useRef)(null), [Nt, Mt] = (0, qt.useState)(!1);
-      CV(yt, !Nt);
-      const [bt, Jt] = (0, qt.useState)(null), [ut, Kt] = (0, qt.useState)([]), [ht, vt] = Ie(), Wt = (0, qt.useRef)(Qt.selected);
-      Wt.current = Qt.selected;
-      const St = (0, qt.useRef)({}),
-        ct = (0, qt.useCallback)((() => {
-          const tt = wt.current;
-          tt && Jt(function(tt, et, Vt) {
-            var Ot;
+        selected: Ou
+      } = bu, Yu = (0, Uu.useRef)(null), hu = (0, Uu.useRef)(null), [Du, gu] = (0, Uu.useState)(!1);
+      Gj(hu, !Du);
+      const [Mu, eu] = (0, Uu.useState)(null), [pu, wu] = (0, Uu.useState)([]), [Ju, du] = mE(), au = (0, Uu.useRef)(bu.selected);
+      au.current = bu.selected;
+      const Pu = (0, Uu.useRef)({}),
+        ou = (0, Uu.useCallback)((() => {
+          const uu = Yu.current;
+          uu && eu(function(uu, Eu, ju) {
+            var su;
             const {
-              innerWidth: qt,
-              innerHeight: Dt
-            } = window, mt = tt.offsetWidth, dt = tt.offsetHeight, jt = Math.max(pe()[0], 6), Ht = [];
-            for (const lt of [jt, .2 * Dt, .5 * Dt - dt / 2, .33 * Dt])
-              for (const tt of [.5, .3, .7]) Ht.push({
-                left: Math.max(0, Math.min(qt - mt - 6, Math.max(6, qt * tt - mt / 2))),
-                top: lt
+              innerWidth: Uu,
+              innerHeight: Zu
+            } = window, Xu = uu.offsetWidth, lu = uu.offsetHeight, qu = Math.max(TE()[0], 6), fu = [];
+            for (const cu of [qu, .2 * Zu, .5 * Zu - lu / 2, .33 * Zu])
+              for (const uu of [.5, .3, .7]) fu.push({
+                left: Math.max(0, Math.min(Uu - Xu - 6, Math.max(6, Uu * uu - Xu / 2))),
+                top: cu
               });
-            const Xt = Ht.map((tt => ({
-                left: tt.left - 6,
-                top: tt.top - 6,
-                right: tt.left + mt + 6,
-                bottom: tt.top + dt + 6
+            const Cu = fu.map((uu => ({
+                left: uu.left - 6,
+                top: uu.top - 6,
+                right: uu.left + Xu + 6,
+                bottom: uu.top + lu + 6
               }))),
-              Qt = QV(et, Vt);
-            return Ht[(0, Rt.q)(Xt, Qt, {
-              avoid: Vt && null !== (Ot = et[Vt]) && void 0 !== Ot ? Ot : null
+              bu = Cj(Eu, ju);
+            return fu[(0, ku.v)(Cu, bu, {
+              avoid: ju && null !== (su = Eu[ju]) && void 0 !== su ? su : null
             })]
-          }(tt, St.current, Wt.current))
+          }(uu, Pu.current, au.current))
         }), []),
-        It = (0, qt.useCallback)(((tt, et, Vt) => {
-          Kt(et), vt(Vt), St.current = tt, ct()
-        }), [ct, vt]);
-      return (0, qt.useLayoutEffect)(ct, [Qt.selected, ct]), (0, de.createPortal)((0, Ct.jsxs)("div", {
-        ref: Et,
+        mu = (0, Uu.useCallback)(((uu, Eu, ju) => {
+          wu(Eu), du(ju), Pu.current = uu, ou()
+        }), [ou, du]);
+      return (0, Uu.useLayoutEffect)(ou, [bu.selected, ou]), (0, XE.createPortal)((0, Gu.jsxs)("div", {
+        ref: Nu,
         className: "HudFullScreenEditor",
-        children: [(0, Ct.jsx)(JV, {
-          ...Qt,
+        children: [(0, Gu.jsx)(ej, {
+          ...bu,
           maxHeight: window.innerHeight,
           fill: !0,
-          onMeasured: It,
-          onReady: Mt,
-          lockable: dt
-        }), (0, Ct.jsxs)("div", {
-          ref: wt,
+          onMeasured: mu,
+          onReady: gu,
+          lockable: lu
+        }), (0, Gu.jsxs)("div", {
+          ref: Yu,
           className: "HudFullScreenToolbar",
-          style: null === bt ? void 0 : {
-            left: bt.left,
-            top: bt.top,
+          style: null === Mu ? void 0 : {
+            left: Mu.left,
+            top: Mu.top,
             transform: "none"
           },
-          children: [(0, Ct.jsx)("div", {
-            ref: yt,
+          children: [(0, Gu.jsx)("div", {
+            ref: hu,
             className: "HudFullScreenControls",
-            children: (0, Ct.jsx)(Ze, {
-              selected: ft,
-              layout: Qt.layout.hudLayouts[Qt.orientation],
-              actionButtons: Qt.actionButtons,
-              keyNames: Qt.keyNames,
-              overlaps: ut,
-              scaleCaps: ht,
-              onScale: et,
-              onHidden: Vt,
-              onReset: Dt,
-              locked: mt,
-              lockable: dt,
-              onLocked: jt,
-              joystickFixed: Qt.joystickFixed
+            children: (0, Gu.jsx)(KE, {
+              selected: Ou,
+              layout: bu.layout.hudLayouts[bu.orientation],
+              actionButtons: bu.actionButtons,
+              keyNames: bu.keyNames,
+              overlaps: pu,
+              scaleCaps: Ju,
+              onScale: Eu,
+              onHidden: ju,
+              onReset: Zu,
+              locked: Xu,
+              lockable: lu,
+              onLocked: qu,
+              joystickFixed: bu.joystickFixed
             })
-          }), (0, Ct.jsx)(Ht.f, {
+          }), (0, Gu.jsx)(fu.f, {
             className: "HudFullScreenDone",
-            onClick: Xt,
+            onClick: Cu,
             padDefaultFocus: !0,
-            children: lt("hudLayout:done")
+            children: cu("hudLayout:done")
           })]
         })]
       }), document.body)
     }
-    const hV = tt => `${Math.round(100*tt)}%`;
+    const Jj = uu => `${Math.round(100*uu)}%`;
 
-    function vV(tt) {
+    function dj(uu) {
       let {
-        info: et,
-        tuple: Vt,
-        props: qt
-      } = tt;
+        info: Eu,
+        tuple: ju,
+        props: Uu
+      } = uu;
       const {
-        t: Dt
-      } = (0, Ot.H)();
-      return (0, Ct.jsx)(Et.f, {
-        name: Dt("hudLayout:size"),
-        min: It.h,
-        max: It.g,
-        step: Pe,
-        initValue: Vt[2],
-        disabled: qt.locked.has(et.id),
-        selectableMax: qt.scaleCaps[et.id],
-        cappedNote: Dt("hudLayout:sizeCapped"),
-        format: hV,
-        onChange: tt => {
-          qt.onScalePreview(et.id, tt)
+        t: Zu
+      } = (0, su.A)();
+      return (0, Gu.jsx)(Nu.h, {
+        name: Zu("hudLayout:size"),
+        min: mu.m,
+        max: mu.i,
+        step: vE,
+        initValue: ju[2],
+        disabled: Uu.locked.has(Eu.id),
+        selectableMax: Uu.scaleCaps[Eu.id],
+        cappedNote: Zu("hudLayout:sizeCapped"),
+        format: Jj,
+        onChange: uu => {
+          Uu.onScalePreview(Eu.id, uu)
         },
-        onChangeComplete: tt => {
-          qt.onScale(et.id, tt)
+        onChangeComplete: uu => {
+          Uu.onScale(Eu.id, uu)
         }
       })
     }
 
-    function WV(tt) {
+    function aj(uu) {
       const {
-        t: et
-      } = (0, Ot.H)(), {
-        present: Vt,
-        elements: Dt,
-        selected: mt,
-        onSelect: dt,
-        onHidden: Ht,
-        onReset: Xt,
-        note: Qt,
-        actionButtons: lt,
-        keyNames: Et,
-        sizeBesidePreview: ft,
-        locked: wt,
-        lockable: yt,
-        onLocked: Nt
-      } = tt, {
-        rowIconsOpen: Mt,
-        onRowIconsOpen: bt
-      } = tt, Jt = (0, qt.useRef)(null), ut = null !== mt && (Mt || !(0, It.P)(mt));
-      return (0, qt.useEffect)((() => {
-        var tt;
-        const et = mt ? null === (tt = Jt.current) || void 0 === tt ? void 0 : tt.querySelector(`[data-hud-row="${mt}"]`) : null;
-        if (!et) return;
-        const Vt = et.closest(".SettingsMenuRight"),
-          Ot = performance.now();
-        let qt = null;
-        const Dt = () => {
-            clearInterval(jt), null === Vt || void 0 === Vt || Vt.removeEventListener("scroll", dt)
+        t: Eu
+      } = (0, su.A)(), {
+        present: ju,
+        elements: Zu,
+        selected: Xu,
+        onSelect: lu,
+        onHidden: fu,
+        onReset: Cu,
+        note: bu,
+        actionButtons: cu,
+        keyNames: Nu,
+        sizeBesidePreview: Ou,
+        locked: Yu,
+        lockable: hu,
+        onLocked: Du
+      } = uu, {
+        rowIconsOpen: gu,
+        onRowIconsOpen: Mu
+      } = uu, eu = (0, Uu.useRef)(null), pu = null !== Xu && (gu || !(0, mu.O)(Xu));
+      return (0, Uu.useEffect)((() => {
+        var uu;
+        const Eu = Xu ? null === (uu = eu.current) || void 0 === uu ? void 0 : uu.querySelector(`[data-hud-row="${Xu}"]`) : null;
+        if (!Eu) return;
+        const ju = Eu.closest(".SettingsMenuRight"),
+          su = performance.now();
+        let Uu = null;
+        const Zu = () => {
+            clearInterval(qu), null === ju || void 0 === ju || ju.removeEventListener("scroll", lu)
           },
-          dt = () => {
-            DV() || Dt()
+          lu = () => {
+            Uj() || Zu()
           },
-          jt = setInterval((() => {
-            const tt = performance.now();
-            tt - Ot > 1500 ? Dt() : DV() ? qt = null : null === qt ? qt = tt : tt - qt >= 150 && (Dt(), function(tt) {
-              var et;
-              const Vt = tt.closest(".SettingsMenuRight"),
-                Ot = null === (et = tt.closest(".HudLayoutSettings")) || void 0 === et ? void 0 : et.querySelector(".HudLayoutPreviewBox");
-              if (!Vt || !Ot) return;
-              const qt = Ot.getBoundingClientRect().bottom + 8,
-                Dt = Vt.getBoundingClientRect().bottom - 8,
-                mt = tt.getBoundingClientRect();
-              mt.top < qt ? Vt.scrollBy({
-                top: mt.top - qt,
+          qu = setInterval((() => {
+            const uu = performance.now();
+            uu - su > 1500 ? Zu() : Uj() ? Uu = null : null === Uu ? Uu = uu : uu - Uu >= 150 && (Zu(), function(uu) {
+              var Eu;
+              const ju = uu.closest(".SettingsMenuRight"),
+                su = null === (Eu = uu.closest(".HudLayoutSettings")) || void 0 === Eu ? void 0 : Eu.querySelector(".HudLayoutPreviewBox");
+              if (!ju || !su) return;
+              const Uu = su.getBoundingClientRect().bottom + 8,
+                Zu = ju.getBoundingClientRect().bottom - 8,
+                Xu = uu.getBoundingClientRect();
+              Xu.top < Uu ? ju.scrollBy({
+                top: Xu.top - Uu,
                 behavior: "smooth"
-              }) : mt.bottom > Dt && Vt.scrollBy({
-                top: Math.min(mt.bottom - Dt, mt.top - qt),
+              }) : Xu.bottom > Zu && ju.scrollBy({
+                top: Math.min(Xu.bottom - Zu, Xu.top - Uu),
                 behavior: "smooth"
               })
-            }(et))
+            }(Eu))
           }), 50);
-        return null === Vt || void 0 === Vt || Vt.addEventListener("scroll", dt, {
+        return null === ju || void 0 === ju || ju.addEventListener("scroll", lu, {
           passive: !0
-        }), Dt
-      }), [mt, ut]), (0, Ct.jsx)("div", {
-        ref: Jt,
+        }), Zu
+      }), [Xu, pu]), (0, Gu.jsx)("div", {
+        ref: eu,
         className: "SettingBoxGroup HudElementList",
-        children: Yt.filter((tt => Vt.has(tt.id) && (Mt || !(0, It.P)(tt.id)))).map((Vt => {
-          const Ot = ((tt, et) => {
-              var Vt;
-              return null !== (Vt = tt[et]) && void 0 !== Vt ? Vt : It.l
-            })(Dt, Vt.id),
-            qt = (0, It.q)(Dt, Vt.id),
-            Jt = Vt.id === mt,
-            ut = Vt.scale && !ft,
-            Kt = Qt(Vt.id, Jt);
-          return (0, Ct.jsxs)("div", {
-            "data-hud-row": Vt.id,
-            className: jt()("SettingBox HudElementRow", {
-              Open: Jt,
-              Hidden: qt,
-              Child: void 0 !== Vt.parent,
-              Grandchild: Gt(Vt.id).length > 1
+        children: tu.filter((uu => ju.has(uu.id) && (gu || !(0, mu.O)(uu.id)))).map((ju => {
+          const su = ((uu, Eu) => {
+              var ju;
+              return null !== (ju = uu[Eu]) && void 0 !== ju ? ju : mu.q
+            })(Zu, ju.id),
+            Uu = (0, mu.u)(Zu, ju.id),
+            eu = ju.id === Xu,
+            pu = ju.scale && !Ou,
+            wu = bu(ju.id, eu);
+          return (0, Gu.jsxs)("div", {
+            "data-hud-row": ju.id,
+            className: qu()("SettingBox HudElementRow", {
+              Open: eu,
+              Hidden: Uu,
+              Child: void 0 !== ju.parent,
+              Grandchild: iu(ju.id).length > 1
             }),
-            children: [(0, Ct.jsxs)("div", {
+            children: [(0, Gu.jsxs)("div", {
               className: "HudElementRowHead",
-              children: [(0, Ct.jsx)("button", {
+              children: [(0, Gu.jsx)("button", {
                 type: "button",
                 className: "HudElementRowName",
-                "aria-expanded": ut ? Jt : void 0,
+                "aria-expanded": pu ? eu : void 0,
                 onClick: () => {
-                  dt(Vt.id)
+                  lu(ju.id)
                 },
-                children: (0, Ct.jsxs)("span", {
+                children: (0, Gu.jsxs)("span", {
                   className: "HudElementRowLabel",
-                  children: [xt(Vt.id, lt, et, Et), Vt.scale && 1 !== Ot[2] && !(Jt && ut) && (0, Ct.jsxs)(Ct.Fragment, {
-                    children: [" ", (0, Ct.jsx)("span", {
+                  children: [Hu(ju.id, cu, Eu, Nu), ju.scale && 1 !== su[2] && !(eu && pu) && (0, Gu.jsxs)(Gu.Fragment, {
+                    children: [" ", (0, Gu.jsx)("span", {
                       className: "HudElementRowSize",
-                      children: hV(Ot[2])
+                      children: Jj(su[2])
                     })]
-                  }), ut && (0, Ct.jsxs)(Ct.Fragment, {
-                    children: [" ", (0, Ct.jsx)("span", {
+                  }), pu && (0, Gu.jsxs)(Gu.Fragment, {
+                    children: [" ", (0, Gu.jsx)("span", {
                       className: "HudElementRowChevron",
                       children: "\u25be"
                     })]
                   })]
                 })
-              }), (0, Ct.jsx)(te, {
+              }), (0, Gu.jsx)(Ru, {
                 className: "HudElementRowIcon",
                 keepPlace: !0,
-                id: Vt.id,
-                actionButtons: lt,
-                keyNames: Et,
-                locked: wt.has(Vt.id),
-                lockable: yt(Vt.id),
-                onLocked: Nt
-              }), "menu" === Vt.id && (0, Ct.jsx)(ee, {
+                id: ju.id,
+                actionButtons: cu,
+                keyNames: Nu,
+                locked: Yu.has(ju.id),
+                lockable: hu(ju.id),
+                onLocked: Du
+              }), "menu" === ju.id && (0, Gu.jsx)(uE, {
                 className: "HudElementRowIcon",
-                open: Mt,
-                name: xt(Vt.id, lt, et, Et),
-                onToggle: bt
-              }), "menu" !== Vt.id && (0, Ct.jsx)(st, {
+                open: gu,
+                name: Hu(ju.id, cu, Eu, Nu),
+                onToggle: Mu
+              }), "menu" !== ju.id && (0, Gu.jsx)(yu, {
                 className: "HudElementRowIcon",
                 keepPlace: !0,
-                id: Vt.id,
-                elements: Dt,
-                actionButtons: lt,
-                keyNames: Et,
-                onHidden: Ht
-              }), (0, Ct.jsx)(nt, {
+                id: ju.id,
+                elements: Zu,
+                actionButtons: cu,
+                keyNames: Nu,
+                onHidden: fu
+              }), (0, Gu.jsx)(zu, {
                 className: "HudElementRowIcon",
                 keepPlace: !0,
                 onlyWhenMoved: !0,
-                locked: wt.has(Vt.id),
-                id: Vt.id,
-                elements: Dt,
-                actionButtons: lt,
-                keyNames: Et,
-                onReset: Xt
+                locked: Yu.has(ju.id),
+                id: ju.id,
+                elements: Zu,
+                actionButtons: cu,
+                keyNames: Nu,
+                onReset: Cu
               })]
-            }), Jt && ut && (0, Ct.jsx)(vV, {
-              info: Vt,
-              tuple: Ot,
-              props: tt
-            }), Kt && (0, Ct.jsx)("div", {
+            }), eu && pu && (0, Gu.jsx)(dj, {
+              info: ju,
+              tuple: su,
+              props: uu
+            }), wu && (0, Gu.jsx)("div", {
               className: "HudElementNote",
-              children: Kt
+              children: wu
             })]
-          }, Vt.id)
+          }, ju.id)
         }))
       })
     }
 
-    function SV(tt) {
+    function Pj(uu) {
       let {
-        preview: et,
-        quick: Vt,
-        onFullScreen: Dt,
-        resting: mt,
-        onSidePanel: dt
-      } = tt;
+        preview: Eu,
+        quick: ju,
+        onFullScreen: Zu,
+        resting: Xu,
+        onSidePanel: lu
+      } = uu;
       const {
-        t: jt
-      } = (0, Ot.H)(), Xt = bV(), Qt = (0, qt.useRef)(null), {
-        width: lt
-      } = (0, Xe.d)(Qt), Et = Math.floor(Xt.width * Math.min(1, et.maxHeight / Xt.height)), ft = lt - Et - 12, wt = ft >= 130, yt = lt > 0;
-      (0, qt.useEffect)((() => {
-        yt && dt(wt)
-      }), [yt, wt, dt]);
-      const Nt = (0, Rt.x)(wt ? Et : lt, Xt.width, Xt.height, et.maxHeight),
-        Mt = mt ? (0, Ct.jsx)("div", {
+        t: qu
+      } = (0, su.A)(), Cu = Mj(), bu = (0, Uu.useRef)(null), {
+        width: cu
+      } = (0, fE.d)(bu), Nu = Math.floor(Cu.width * Math.min(1, Eu.maxHeight / Cu.height)), Ou = cu - Nu - 12, Yu = Ou >= 130, hu = cu > 0;
+      (0, Uu.useEffect)((() => {
+        hu && lu(Yu)
+      }), [hu, Yu, lu]);
+      const Du = (0, ku.D)(Yu ? Nu : cu, Cu.width, Cu.height, Eu.maxHeight),
+        gu = Xu ? (0, Gu.jsx)("div", {
           className: "HudPreviewResting",
           style: {
-            height: Xt.height * Nt
+            height: Cu.height * Du
           }
-        }) : (0, Ct.jsx)(JV, {
-          ...et
+        }) : (0, Gu.jsx)(ej, {
+          ...Eu
         }),
-        bt = tt => (0, Ct.jsxs)(Ht.Q, {
+        Mu = uu => (0, Gu.jsxs)(fu.$, {
           className: "HudLayoutFullScreenButton",
-          ariaLabel: jt("hudLayout:fullScreen"),
+          ariaLabel: qu("hudLayout:fullScreen"),
           analyticsClick: {
             id: "hud_layout.full_screen"
           },
-          onClick: Dt,
-          children: [(0, Ct.jsx)(ct.b, {
+          onClick: Zu,
+          children: [(0, Gu.jsx)(ou.e, {
             name: "expand"
-          }), tt && (0, Ct.jsx)("span", {
-            children: jt("hudLayout:fullScreen")
+          }), uu && (0, Gu.jsx)("span", {
+            children: qu("hudLayout:fullScreen")
           })]
         });
-      return (0, Ct.jsxs)("div", {
-        ref: Qt,
+      return (0, Gu.jsxs)("div", {
+        ref: bu,
         className: "SettingBox HudLayoutPreviewBox",
-        children: [lt > 0 && wt && (0, Ct.jsxs)("div", {
+        children: [cu > 0 && Yu && (0, Gu.jsxs)("div", {
           className: "HudLayoutPreviewRow",
-          children: [(0, Ct.jsx)("div", {
+          children: [(0, Gu.jsx)("div", {
             style: {
-              width: Et
+              width: Nu
             },
-            children: Mt
-          }), (0, Ct.jsx)("div", {
+            children: gu
+          }), (0, Gu.jsx)("div", {
             className: "HudLayoutSidePanel",
-            children: (0, Ct.jsx)(Ze, {
-              selected: et.selected,
-              ...Vt,
-              joystickFixed: et.joystickFixed,
-              extra: bt(!et.selected || ft >= 278)
+            children: (0, Gu.jsx)(KE, {
+              selected: Eu.selected,
+              ...ju,
+              joystickFixed: Eu.joystickFixed,
+              extra: Mu(!Eu.selected || Ou >= 278)
             })
           })]
-        }), lt > 0 && !wt && (0, Ct.jsxs)(Ct.Fragment, {
-          children: [Mt, (0, Ct.jsx)("div", {
+        }), cu > 0 && !Yu && (0, Gu.jsxs)(Gu.Fragment, {
+          children: [gu, (0, Gu.jsx)("div", {
             className: "HudLayoutCornerButton",
-            children: bt(!1)
+            children: Mu(!1)
           })]
         })]
       })
     }
-    var cV = Vt(2559),
-      RV = Vt(4537),
-      IV = Vt(2528),
-      PV = Vt(2478);
-    const ZV = tt => {
-      const et = Ee.s * ("sides" === tt ? window.innerWidth : window.innerHeight);
-      return Math.min(64, 2 * Math.floor(et / 2))
+    var oj = ju(2600),
+      kj = ju(4588),
+      mj = ju(2573),
+      vj = ju(2531);
+    const Kj = uu => {
+      const Eu = cE.n * ("sides" === uu ? window.innerWidth : window.innerHeight);
+      return Math.min(64, 2 * Math.floor(Eu / 2))
     };
 
-    function LV(tt, et, Vt) {
-      const [Ot, qt, Dt, mt] = tt;
-      return "sides" === et ? [Ot, Vt, Dt, Vt] : [Vt, qt, Vt, mt]
+    function Vj(uu, Eu, ju) {
+      const [su, Uu, Zu, Xu] = uu;
+      return "sides" === Eu ? [su, ju, Zu, ju] : [ju, Uu, ju, Xu]
     }
-    const FV = [null, null, null, null],
-      kV = tt => `${tt}px`;
+    const rj = [null, null, null, null],
+      Qj = uu => `${uu}px`;
 
-    function GV(tt) {
+    function ij(uu) {
       let {
-        safe: et,
-        onPreview: Vt,
-        onCommit: Dt
-      } = tt;
+        safe: Eu,
+        onPreview: ju,
+        onCommit: Zu
+      } = uu;
       const {
-        t: mt
-      } = (0, Ot.H)(), dt = (0, Ee.w)(null !== et && void 0 !== et ? et : FV, window.innerWidth, window.innerHeight, xe(document).map(Math.round)), jt = (0, qt.useRef)(null !== et && void 0 !== et ? et : FV);
-      jt.current = null !== et && void 0 !== et ? et : FV;
-      const Xt = tt => {
-        const et = Math.min(ZV(tt), "sides" === tt ? Math.max(dt[1], dt[3]) : Math.max(dt[0], dt[2]));
-        return (0, Ct.jsx)(Et.f, {
-          name: mt("sides" === tt ? "hudLayout:safeSides" : "hudLayout:safeEnds"),
+        t: Xu
+      } = (0, su.A)(), lu = (0, cE.s)(null !== Eu && void 0 !== Eu ? Eu : rj, window.innerWidth, window.innerHeight, HE(document).map(Math.round)), qu = (0, Uu.useRef)(null !== Eu && void 0 !== Eu ? Eu : rj);
+      qu.current = null !== Eu && void 0 !== Eu ? Eu : rj;
+      const Cu = uu => {
+        const Eu = Math.min(Kj(uu), "sides" === uu ? Math.max(lu[1], lu[3]) : Math.max(lu[0], lu[2]));
+        return (0, Gu.jsx)(Nu.h, {
+          name: Xu("sides" === uu ? "hudLayout:safeSides" : "hudLayout:safeEnds"),
           min: 0,
-          max: ZV(tt),
+          max: Kj(uu),
           step: 2,
-          initValue: et,
-          format: kV,
-          onChange: et => {
-            Vt(LV(jt.current, tt, et))
+          initValue: Eu,
+          format: Qj,
+          onChange: Eu => {
+            ju(Vj(qu.current, uu, Eu))
           },
-          onChangeComplete: Ot => {
-            if (Ot === et) return void Vt(jt.current);
-            const qt = LV(jt.current, tt, Ot);
-            jt.current = qt, Dt(qt), (0, ht.reportAnalyticsClick)({
+          onChangeComplete: su => {
+            if (su === Eu) return void ju(qu.current);
+            const Uu = Vj(qu.current, uu, su);
+            qu.current = Uu, Zu(Uu), (0, Ju.reportAnalyticsClick)({
               id: "hud_layout.safe_zone",
-              value: tt
+              value: uu
             })
           }
         })
       };
-      return (0, Ct.jsxs)("div", {
+      return (0, Gu.jsxs)("div", {
         className: "SettingBoxGroup HudSafeZone",
-        children: [(0, Ct.jsxs)("div", {
+        children: [(0, Gu.jsxs)("div", {
           className: "SettingBox HudSafeZoneHeader",
-          children: [(0, Ct.jsx)("div", {
-            children: mt("hudLayout:safeZone")
-          }), (0, Ct.jsx)(Ht.Q, {
-            active: null === et,
-            pressed: null === et,
+          children: [(0, Gu.jsx)("div", {
+            children: Xu("hudLayout:safeZone")
+          }), (0, Gu.jsx)(fu.$, {
+            active: null === Eu,
+            pressed: null === Eu,
             onClick: () => {
-              Dt(null)
+              Zu(null)
             },
-            children: mt("hudLayout:safeZoneAuto")
+            children: Xu("hudLayout:safeZoneAuto")
           })]
-        }), Xt("sides"), Xt("ends")]
+        }), Cu("sides"), Cu("ends")]
       })
     }
 
-    function zV() {
+    function Wj() {
       const {
-        t: tt
-      } = (0, Ot.H)(), et = (0, It.$)(), {
-        clientEscMenuOptions: Vt
-      } = (0, Xt.k)(["clientEscMenuOptions"]), Dt = (0, cV.k)(), mt = et.hudLayouts[Dt], [dt, jt] = (0, qt.useState)(null), {
-        rowIconsOpen: Qt,
-        onRowIconsOpen: lt,
-        select: ft
-      } = function(tt, et) {
-        const [Vt, Ot] = (0, qt.useState)((() => It.y.some((et => void 0 !== tt.hudElements[et] || tt.hudLocked.includes(et))))), Dt = (0, qt.useCallback)((tt => {
-          et(tt), (0, It.P)(tt) && Ot(!0)
-        }), [et]);
+        t: uu
+      } = (0, su.A)(), Eu = (0, mu.bb)(), {
+        clientEscMenuOptions: ju
+      } = (0, Cu.l)(["clientEscMenuOptions"]), Zu = (0, oj.l)(), Xu = Eu.hudLayouts[Zu], [lu, qu] = (0, Uu.useState)(null), {
+        rowIconsOpen: bu,
+        onRowIconsOpen: cu,
+        select: Ou
+      } = function(uu, Eu) {
+        const [ju, su] = (0, Uu.useState)((() => mu.D.some((Eu => void 0 !== uu.hudElements[Eu] || uu.hudLocked.includes(Eu))))), Zu = (0, Uu.useCallback)((uu => {
+          Eu(uu), (0, mu.O)(uu) && su(!0)
+        }), [Eu]);
         return {
-          rowIconsOpen: Vt,
-          onRowIconsOpen: Ot,
-          select: Dt
+          rowIconsOpen: ju,
+          onRowIconsOpen: su,
+          select: Zu
         }
-      }(mt, jt), [wt, yt] = (0, qt.useState)([]), [Nt, Mt] = (0, qt.useState)(null), [bt, Jt] = Ie(), ut = (0, qt.useCallback)(((tt, et, Vt) => {
-        yt(et), Jt(Vt);
-        const Ot = Object.keys(tt);
-        Mt((tt => (null === tt || void 0 === tt ? void 0 : tt.size) === Ot.length && Ot.every((et => tt.has(et))) ? tt : new Set(Ot)))
-      }), [Jt]), {
-        gameState: Kt
-      } = (0, Xt.k)(["gameState"]), Wt = (0, IV.j)(), St = (0, PV.o)(), [ct] = (0, qt.useState)((() => {
-        var tt, et, Vt, Ot;
-        return "inGame" === Kt ? (0, we.t)(document, Wt, {
-          rightOfCamera: null !== (tt = null === (et = St.rightOfCamera) || void 0 === et ? void 0 : et.icon) && void 0 !== tt ? tt : null,
-          leftEnd: null !== (Vt = null === (Ot = St.leftEnd) || void 0 === Ot ? void 0 : Ot.icon) && void 0 !== Vt ? Vt : null
-        }) : we.d
-      })), Rt = (0, qt.useRef)(null), Pt = (0, qt.useRef)(null), Zt = function(tt) {
-        const [et, Vt] = (0, qt.useState)((() => .4 * window.innerHeight));
-        return (0, qt.useLayoutEffect)((() => {
-          var et;
-          const Ot = null === (et = tt.current) || void 0 === et ? void 0 : et.closest(".SettingsMenuRight");
-          if (!Ot) return;
-          const qt = () => {
-            const tt = Ot.clientHeight < oV ? .4 : .5;
-            Vt(Math.max(80, Ot.clientHeight * tt - 24))
+      }(Xu, qu), [Yu, hu] = (0, Uu.useState)([]), [Du, gu] = (0, Uu.useState)(null), [Mu, eu] = mE(), pu = (0, Uu.useCallback)(((uu, Eu, ju) => {
+        hu(Eu), eu(ju);
+        const su = Object.keys(uu);
+        gu((uu => (null === uu || void 0 === uu ? void 0 : uu.size) === su.length && su.every((Eu => uu.has(Eu))) ? uu : new Set(su)))
+      }), [eu]), {
+        gameState: wu
+      } = (0, Cu.l)(["gameState"]), au = (0, mj.g)(), Pu = (0, vj.l)(), [ou] = (0, Uu.useState)((() => {
+        var uu, Eu, ju, su;
+        return "inGame" === wu ? (0, OE.t)(document, au, {
+          rightOfCamera: null !== (uu = null === (Eu = Pu.rightOfCamera) || void 0 === Eu ? void 0 : Eu.icon) && void 0 !== uu ? uu : null,
+          leftEnd: null !== (ju = null === (su = Pu.leftEnd) || void 0 === su ? void 0 : su.icon) && void 0 !== ju ? ju : null
+        }) : OE.d
+      })), ku = (0, Uu.useRef)(null), vu = (0, Uu.useRef)(null), Ku = function(uu) {
+        const [Eu, ju] = (0, Uu.useState)((() => .4 * window.innerHeight));
+        return (0, Uu.useLayoutEffect)((() => {
+          var Eu;
+          const su = null === (Eu = uu.current) || void 0 === Eu ? void 0 : Eu.closest(".SettingsMenuRight");
+          if (!su) return;
+          const Uu = () => {
+            const uu = su.clientHeight < Sj ? .4 : .5;
+            ju(Math.max(80, su.clientHeight * uu - 24))
           };
-          qt();
-          const Dt = new ResizeObserver(qt);
-          return Dt.observe(Ot), () => {
-            Dt.disconnect()
+          Uu();
+          const Zu = new ResizeObserver(Uu);
+          return Zu.observe(su), () => {
+            Zu.disconnect()
           }
-        }), [tt]), et
-      }(Pt), Lt = (0, RV.t)(Vt.joystickMode), Ft = Vt.touchActionButtons, Gt = (0, qt.useMemo)((() => (0, we.r)(ct, Ft)), [ct, Ft]), zt = (0, qt.useMemo)((() => new Set((0, we.n)(ct, Ft).map((tt => we.f[tt])))), [ct, Ft]);
-      (0, qt.useEffect)((() => {
-        (0, ht.reportAnalyticsClick)({
+        }), [uu]), Eu
+      }(vu), Vu = (0, kj.k)(ju.joystickMode), ru = ju.touchActionButtons, iu = (0, Uu.useMemo)((() => (0, OE.r)(ou, ru)), [ou, ru]), Wu = (0, Uu.useMemo)((() => new Set((0, OE.q)(ou, ru).map((uu => OE.f[uu])))), [ou, ru]);
+      (0, Uu.useEffect)((() => {
+        (0, Ju.reportAnalyticsClick)({
           id: "hud_layout.open"
         })
       }), []);
-      const [ot, rt] = (0, qt.useState)(!1), [Ut, At] = (0, qt.useState)(!1), it = (0, qt.useRef)(null);
-      CV(it, !Ut);
-      const [pt, gt] = (0, qt.useState)(!1), st = (0, qt.useCallback)((() => {
-        gt(!1)
-      }), []), nt = (0, qt.useMemo)((() => new Set(mt.hudLocked)), [mt.hudLocked]), te = tt => {
-        var et, Vt;
-        const Ot = (0, It.o)(),
-          qt = tt(Ot);
-        (0, It.W)(null !== (et = null === (Vt = Rt.current) || void 0 === Vt ? void 0 : Vt.keepLocks(Ot, qt)) && void 0 !== et ? et : qt)
-      }, ee = (tt, et) => {
-        te((Vt => (0, It.db)(Vt, Dt, tt, et)))
-      }, Ve = (tt, et, Vt) => {
-        ee(tt, {
-          dx: et,
-          dy: Vt
-        }), (0, ht.reportAnalyticsClick)({
+      const [Su, Iu] = (0, Uu.useState)(!1), [Fu, Bu] = (0, Uu.useState)(!1), Lu = (0, Uu.useRef)(null);
+      Gj(Lu, !Fu);
+      const [Tu, nu] = (0, Uu.useState)(!1), yu = (0, Uu.useCallback)((() => {
+        nu(!1)
+      }), []), zu = (0, Uu.useMemo)((() => new Set(Xu.hudLocked)), [Xu.hudLocked]), Ru = uu => {
+        var Eu, ju;
+        const su = (0, mu.r)(),
+          Uu = uu(su);
+        (0, mu.Z)(null !== (Eu = null === (ju = ku.current) || void 0 === ju ? void 0 : ju.keepLocks(su, Uu)) && void 0 !== Eu ? Eu : Uu)
+      }, uE = (uu, Eu) => {
+        Ru((ju => (0, mu.fb)(ju, Zu, uu, Eu)))
+      }, EE = (uu, Eu, ju) => {
+        uE(uu, {
+          dx: Eu,
+          dy: ju
+        }), (0, Ju.reportAnalyticsClick)({
           id: "hud_layout.edit",
-          value: `move:${tt}`
+          value: `move:${uu}`
         })
-      }, Oe = (tt, et) => {
-        te((Vt => (0, It.fb)(Vt, Dt, tt, et)))
-      }, qe = tt => {
-        const et = Bt[tt];
-        return (et.move || et.scale) && ("joystick" !== tt || Lt) && !(0, Qe.t)(tt, mt.hudElements[tt])
-      }, de = tt => Bt[tt].move && ("joystick" !== tt || Lt) && !nt.has(tt), je = new Set(Yt.map((tt => tt.id)).filter((tt => {
-        const et = (0, It.P)(tt) && !ct.rowIcons.includes(tt);
-        return null === Nt || Nt.has(tt) || (0, It.q)(mt.hudElements, tt) && !et
-      }))), He = {
-        present: je,
-        actionButtons: Ft,
-        keyNames: Gt,
-        scaleCaps: bt,
-        sizeBesidePreview: ot,
-        elements: mt.hudElements,
-        selected: dt,
-        onSelect: ft,
-        rowIconsOpen: Qt,
-        onRowIconsOpen: lt,
-        onScalePreview: (tt, et) => {
-          var Vt;
-          null === (Vt = Rt.current) || void 0 === Vt || Vt.setScale(tt, et)
+      }, jE = (uu, Eu) => {
+        Ru((ju => (0, mu.jb)(ju, Zu, uu, Eu)))
+      }, sE = uu => {
+        const Eu = xu[uu];
+        return (Eu.move || Eu.scale) && ("joystick" !== uu || Vu) && !(0, CE.t)(uu, Xu.hudElements[uu])
+      }, XE = uu => xu[uu].move && ("joystick" !== uu || Vu) && !zu.has(uu), lE = new Set(tu.map((uu => uu.id)).filter((uu => {
+        const Eu = (0, mu.O)(uu) && !ou.rowIcons.includes(uu);
+        return null === Du || Du.has(uu) || (0, mu.u)(Xu.hudElements, uu) && !Eu
+      }))), qE = {
+        present: lE,
+        actionButtons: ru,
+        keyNames: iu,
+        scaleCaps: Mu,
+        sizeBesidePreview: Su,
+        elements: Xu.hudElements,
+        selected: lu,
+        onSelect: Ou,
+        rowIconsOpen: bu,
+        onRowIconsOpen: cu,
+        onScalePreview: (uu, Eu) => {
+          var ju;
+          null === (ju = ku.current) || void 0 === ju || ju.setScale(uu, Eu)
         },
-        onScale: (tt, et) => {
-          ee(tt, {
-            scale: et
-          }), (0, ht.reportAnalyticsClick)({
+        onScale: (uu, Eu) => {
+          uE(uu, {
+            scale: Eu
+          }), (0, Ju.reportAnalyticsClick)({
             id: "hud_layout.edit",
-            value: `size:${tt}`
+            value: `size:${uu}`
           })
         },
-        onHidden: (tt, et) => {
-          ee(tt, {
-            hidden: et
-          }), (0, ht.reportAnalyticsClick)({
+        onHidden: (uu, Eu) => {
+          uE(uu, {
+            hidden: Eu
+          }), (0, Ju.reportAnalyticsClick)({
             id: "hud_layout.edit",
-            value: `${et?"hide":"show"}:${tt}`
+            value: `${Eu?"hide":"show"}:${uu}`
           })
         },
-        onReset: tt => {
-          ee(tt, It.b)
+        onReset: uu => {
+          uE(uu, mu.c)
         },
-        locked: nt,
-        lockable: qe,
-        onLocked: Oe,
-        note: (et, Vt) => {
-          const Ot = Vt && wt.length > 0 ? tt("hudLayout:overlapsNote", {
-            names: Tt(wt, Ft, tt, Gt)
+        locked: zu,
+        lockable: sE,
+        onLocked: jE,
+        note: (Eu, ju) => {
+          const su = ju && Yu.length > 0 ? uu("hudLayout:overlapsNote", {
+            names: Au(Yu, ru, uu, iu)
           }) : null;
-          if (Vt && De(et, Lt)) return (0, Ct.jsxs)(Ct.Fragment, {
-            children: [Ot && (0, Ct.jsx)("span", {
-              children: Ot
-            }), (0, Ct.jsx)("span", {
-              children: tt("hudLayout:floatingJoystickNote")
-            }), !ot && (0, Ct.jsx)(me, {})]
+          if (ju && UE(Eu, Vu)) return (0, Gu.jsxs)(Gu.Fragment, {
+            children: [su && (0, Gu.jsx)("span", {
+              children: su
+            }), (0, Gu.jsx)("span", {
+              children: uu("hudLayout:floatingJoystickNote")
+            }), !Su && (0, Gu.jsx)(ZE, {})]
           });
-          if (Ot) return Ot;
-          const qt = Vt && nt.has(et) ? tt("hudLayout:lockedNote") : null,
-            Dt = Vt && zt.has(et) ? tt("hudLayout:contextSlotNote") : null;
-          return qt || Dt ? (0, Ct.jsxs)(Ct.Fragment, {
-            children: [qt && (0, Ct.jsx)("span", {
-              children: qt
-            }), Dt && (0, Ct.jsx)("span", {
-              children: Dt
+          if (su) return su;
+          const Uu = ju && zu.has(Eu) ? uu("hudLayout:lockedNote") : null,
+            Zu = ju && Wu.has(Eu) ? uu("hudLayout:contextSlotNote") : null;
+          return Uu || Zu ? (0, Gu.jsxs)(Gu.Fragment, {
+            children: [Uu && (0, Gu.jsx)("span", {
+              children: Uu
+            }), Zu && (0, Gu.jsx)("span", {
+              children: Zu
             })]
-          }) : Vt && "cluster" === et ? tt("hudLayout:clusterNote") : Vt && "inventory" === et ? tt("hudLayout:inventoryNote") : Vt && "menu" === et ? tt("hudLayout:menuNote") : Vt && (0, Qe.t)(et, mt.hudElements[et]) && de(et) ? tt("hudLayout:rowIconNote") : Vt && "arrows" === et ? tt("hudLayout:arrowsNote") : Vt && "sprint" === et ? tt("hudLayout:sprintNote") : kt(et) && (0, It.q)(mt.hudElements, et) ? tt("hudLayout:inventoryHiddenNote", {
-            name: xt(et, Ft, tt, Gt)
+          }) : ju && "cluster" === Eu ? uu("hudLayout:clusterNote") : ju && "inventory" === Eu ? uu("hudLayout:inventoryNote") : ju && "menu" === Eu ? uu("hudLayout:menuNote") : ju && (0, CE.t)(Eu, Xu.hudElements[Eu]) && XE(Eu) ? uu("hudLayout:rowIconNote") : ju && "arrows" === Eu ? uu("hudLayout:arrowsNote") : ju && "sprint" === Eu ? uu("hudLayout:sprintNote") : Qu(Eu) && (0, mu.u)(Xu.hudElements, Eu) ? uu("hudLayout:inventoryHiddenNote", {
+            name: Hu(Eu, ru, uu, iu)
           }) : null
         }
       };
-      return (0, Ct.jsxs)("div", {
-        ref: Pt,
+      return (0, Gu.jsxs)("div", {
+        ref: vu,
         className: "HudLayoutSettings",
-        children: [(0, Ct.jsxs)("div", {
-          ref: it,
+        children: [(0, Gu.jsxs)("div", {
+          ref: Lu,
           className: "HudLayoutBody",
-          children: [(0, Ct.jsx)("div", {
+          children: [(0, Gu.jsx)("div", {
             className: "HudLayoutOrientation",
-            children: tt("landscape" === Dt ? "hudLayout:editingLandscape" : "hudLayout:editingPortrait")
-          }), (0, Ct.jsx)(SV, {
+            children: uu("landscape" === Zu ? "hudLayout:editingLandscape" : "hudLayout:editingPortrait")
+          }), (0, Gu.jsx)(Pj, {
             preview: {
-              layout: et,
-              orientation: Dt,
-              selected: dt,
-              onSelect: ft,
-              onMove: Ve,
-              canMove: de,
-              actionButtons: Ft,
-              joystickFixed: Lt,
-              presence: ct,
-              keyNames: Gt,
-              maxHeight: Zt,
-              apiRef: Rt,
-              onMeasured: ut,
-              onReady: At,
-              lockable: qe
+              layout: Eu,
+              orientation: Zu,
+              selected: lu,
+              onSelect: Ou,
+              onMove: EE,
+              canMove: XE,
+              actionButtons: ru,
+              joystickFixed: Vu,
+              presence: ou,
+              keyNames: iu,
+              maxHeight: Ku,
+              apiRef: ku,
+              onMeasured: pu,
+              onReady: Bu,
+              lockable: sE
             },
             quick: {
-              layout: mt,
-              actionButtons: Ft,
-              keyNames: Gt,
-              scaleCaps: bt,
-              overlaps: wt,
-              onScale: He.onScale,
-              onHidden: He.onHidden,
-              onReset: He.onReset,
-              locked: nt,
-              lockable: qe,
-              onLocked: Oe
+              layout: Xu,
+              actionButtons: ru,
+              keyNames: iu,
+              scaleCaps: Mu,
+              overlaps: Yu,
+              onScale: qE.onScale,
+              onHidden: qE.onHidden,
+              onReset: qE.onReset,
+              locked: zu,
+              lockable: sE,
+              onLocked: jE
             },
             onFullScreen: () => {
-              gt(!0)
+              nu(!0)
             },
-            resting: pt,
-            onSidePanel: rt
-          }), pt && (0, Ct.jsx)(KV, {
-            layout: et,
-            orientation: Dt,
-            selected: dt,
-            onSelect: ft,
-            onMove: Ve,
-            canMove: de,
-            actionButtons: Ft,
-            joystickFixed: Lt,
-            presence: ct,
-            keyNames: Gt,
-            onScale: He.onScale,
-            onHidden: He.onHidden,
-            onReset: He.onReset,
-            locked: nt,
-            lockable: qe,
-            onLocked: Oe,
-            apiRef: Rt,
-            onClose: st
-          }), (0, Ct.jsx)(GV, {
-            safe: mt.hudSafe,
-            onCommit: tt => {
-              te((et => (0, It.hb)(et, Dt, tt)))
+            resting: Tu,
+            onSidePanel: Iu
+          }), Tu && (0, Gu.jsx)(wj, {
+            layout: Eu,
+            orientation: Zu,
+            selected: lu,
+            onSelect: Ou,
+            onMove: EE,
+            canMove: XE,
+            actionButtons: ru,
+            joystickFixed: Vu,
+            presence: ou,
+            keyNames: iu,
+            onScale: qE.onScale,
+            onHidden: qE.onHidden,
+            onReset: qE.onReset,
+            locked: zu,
+            lockable: sE,
+            onLocked: jE,
+            apiRef: ku,
+            onClose: yu
+          }), (0, Gu.jsx)(ij, {
+            safe: Xu.hudSafe,
+            onCommit: uu => {
+              Ru((Eu => (0, mu.mb)(Eu, Zu, uu)))
             },
-            onPreview: tt => {
-              var et;
-              null === (et = Rt.current) || void 0 === et || et.setSafe(tt)
+            onPreview: uu => {
+              var Eu;
+              null === (Eu = ku.current) || void 0 === Eu || Eu.setSafe(uu)
             }
-          }), (0, Ct.jsx)(Et.c, {
-            label: tt("hudLayout:snapCentre"),
-            checked: et.hudSnapCentre,
-            onClick: tt => {
-              (0, It.U)(tt)
+          }), (0, Gu.jsx)(Nu.b, {
+            label: uu("hudLayout:snapCentre"),
+            checked: Eu.hudSnapCentre,
+            onClick: uu => {
+              (0, mu.V)(uu)
             },
-            circleInfoText: tt("hudLayout:snapCentreInfo")
-          }), (0, Ct.jsx)(WV, {
-            ...He
-          }), (0, Ct.jsx)(Et.e, {
-            label: tt("hudLayout:shape"),
-            options: It.A.map((et => ({
-              value: et,
-              label: tt(`hudLayout:shape_${et}`)
+            circleInfoText: uu("hudLayout:snapCentreInfo")
+          }), (0, Gu.jsx)(aj, {
+            ...qE
+          }), (0, Gu.jsx)(Nu.f, {
+            label: uu("hudLayout:shape"),
+            options: mu.F.map((Eu => ({
+              value: Eu,
+              label: uu(`hudLayout:shape_${Eu}`)
             }))),
-            value: et.hudShape,
-            onChange: tt => {
-              te((et => ({
-                ...et,
-                hudShape: tt
-              }))), (0, ht.reportAnalyticsClick)({
+            value: Eu.hudShape,
+            onChange: uu => {
+              Ru((Eu => ({
+                ...Eu,
+                hudShape: uu
+              }))), (0, Ju.reportAnalyticsClick)({
                 id: "hud_layout.shape",
-                value: tt
+                value: uu
               })
             }
-          }), (0, Ct.jsx)(Et.f, {
-            name: tt("hudLayout:opacity"),
-            min: It.e,
+          }), (0, Gu.jsx)(Nu.h, {
+            name: uu("hudLayout:opacity"),
+            min: mu.f,
             max: 1,
             step: .05,
-            initValue: et.hudKeyOpacity,
-            format: tt => `${Math.round(100*tt)}%`,
-            circleInfoText: tt("hudLayout:opacityInfo"),
-            onChange: tt => {
-              var et;
-              null === (et = Rt.current) || void 0 === et || et.setOpacity(tt)
+            initValue: Eu.hudKeyOpacity,
+            format: uu => `${Math.round(100*uu)}%`,
+            circleInfoText: uu("hudLayout:opacityInfo"),
+            onChange: uu => {
+              var Eu;
+              null === (Eu = ku.current) || void 0 === Eu || Eu.setOpacity(uu)
             },
-            onChangeComplete: tt => {
-              (0, It.S)(tt), (0, ht.reportAnalyticsClick)({
+            onChangeComplete: uu => {
+              (0, mu.R)(uu), (0, Ju.reportAnalyticsClick)({
                 id: "hud_layout.edit",
                 value: "opacity"
               })
             }
           })]
-        }), (0, Ct.jsx)(Ht.G, {
+        }), (0, Gu.jsx)(fu.R, {
           className: "HudLayoutResetAll",
           analyticsClick: {
             id: "hud_layout.reset_all"
           },
           onClick: () => {
             !async function() {
-              const tt = vt.NotificationProvider.showPromptPopup({
+              const uu = du.NotificationProvider.showPromptPopup({
                 title: "hudLayout:resetAllTitle",
                 subtitle: "hudLayout:resetAllSubtitle",
                 confirmText: "hudLayout:resetAllConfirm",
                 cancelText: "general:cancel",
                 destructive: !0
               });
-              !0 === await tt.getResult() && (0, It.Q)()
+              !0 === await uu.getResult() && (0, mu.Q)()
             }()
           },
-          children: tt("hudLayout:resetAll")
+          children: uu("hudLayout:resetAll")
         })]
       })
     }
-    const oV = 350;
-    const rV = [function() {
+    const Sj = 350;
+    const Ij = [function() {
       const {
-        t: tt
-      } = (0, Ot.H)(), [et, Vt] = (0, qt.useState)(!1), Dt = (0, qt.useRef)(null);
-      return (0, qt.useEffect)((() => {
-        var tt;
-        et && (null === (tt = Dt.current) || void 0 === tt || tt.scrollIntoView({
+        t: uu
+      } = (0, su.A)(), [Eu, ju] = (0, Uu.useState)(!1), Zu = (0, Uu.useRef)(null);
+      return (0, Uu.useEffect)((() => {
+        var uu;
+        Eu && (null === (uu = Zu.current) || void 0 === uu || uu.scrollIntoView({
           block: "start",
           behavior: "smooth"
         }))
-      }), [et]), (0, Ct.jsxs)("div", {
+      }), [Eu]), (0, Gu.jsxs)("div", {
         className: "HudLayoutSection",
-        children: [(0, Ct.jsx)(Wt.d, {
-          ref: Dt,
+        children: [(0, Gu.jsx)(au.e, {
+          ref: Zu,
           icon: "arrows-up-down-left-right",
-          title: tt("hudLayout:title"),
-          sub: tt("hudLayout:entrySub"),
-          expanded: et,
+          title: uu("hudLayout:title"),
+          sub: uu("hudLayout:entrySub"),
+          expanded: Eu,
           onClick: () => {
-            Vt(!et)
+            ju(!Eu)
           }
-        }), et && (0, Ct.jsx)(zV, {})]
+        }), Eu && (0, Gu.jsx)(Wj, {})]
       })
     }, function() {
       const {
-        t: tt
-      } = (0, Ot.H)(), {
-        joystickMode: et,
-        touchSpeedCurve: Vt,
-        autorun: qt,
-        jumpLock: Dt,
-        touchEdgeGuard: mt
-      } = (0, Xt.k)(["clientEscMenuOptions"]).clientEscMenuOptions;
-      return (0, Ct.jsxs)(Ct.Fragment, {
-        children: [(0, Ct.jsx)(Et.e, {
-          label: tt("settingsMenu:joystick"),
-          options: Jt.ob.map((et => ({
-            value: et,
-            label: tt(ut[et])
+        t: uu
+      } = (0, su.A)(), {
+        joystickMode: Eu,
+        touchSpeedCurve: ju,
+        autorun: Uu,
+        jumpLock: Zu,
+        touchEdgeGuard: Xu
+      } = (0, Cu.l)(["clientEscMenuOptions"]).clientEscMenuOptions;
+      return (0, Gu.jsxs)(Gu.Fragment, {
+        children: [(0, Gu.jsx)(Nu.f, {
+          label: uu("settingsMenu:joystick"),
+          options: eu.vb.map((Eu => ({
+            value: Eu,
+            label: uu(pu[Eu])
           }))),
-          value: et,
-          onChange: tt => {
-            Xt.b.setClientEscMenuOptions({
-              joystickMode: tt
+          value: Eu,
+          onChange: uu => {
+            Cu.d.setClientEscMenuOptions({
+              joystickMode: uu
             })
           },
-          circleInfoText: tt("settingsMenu:joystickInfo")
-        }), (0, Ct.jsx)(Et.c, {
-          label: tt("settingsMenu:preciseWalking"),
-          checked: Vt,
-          onClick: tt => {
-            Xt.b.setClientEscMenuOptions({
-              touchSpeedCurve: tt
+          circleInfoText: uu("settingsMenu:joystickInfo")
+        }), (0, Gu.jsx)(Nu.b, {
+          label: uu("settingsMenu:preciseWalking"),
+          checked: ju,
+          onClick: uu => {
+            Cu.d.setClientEscMenuOptions({
+              touchSpeedCurve: uu
             })
           },
-          circleInfoText: tt("settingsMenu:preciseWalkingInfo")
-        }), (0, Ct.jsx)(Et.c, {
-          label: tt("settingsMenu:autoRun"),
-          checked: qt,
-          onClick: tt => {
-            Xt.b.setClientEscMenuOptions({
-              autorun: tt
+          circleInfoText: uu("settingsMenu:preciseWalkingInfo")
+        }), (0, Gu.jsx)(Nu.b, {
+          label: uu("settingsMenu:autoRun"),
+          checked: Uu,
+          onClick: uu => {
+            Cu.d.setClientEscMenuOptions({
+              autorun: uu
             })
           },
-          circleInfoText: tt("settingsMenu:autoRunInfo")
-        }), (0, Ct.jsx)(Et.c, {
-          label: tt("settingsMenu:jumpLock"),
-          checked: Dt,
-          onClick: tt => {
-            Xt.b.setClientEscMenuOptions({
-              jumpLock: tt
+          circleInfoText: uu("settingsMenu:autoRunInfo")
+        }), (0, Gu.jsx)(Nu.b, {
+          label: uu("settingsMenu:jumpLock"),
+          checked: Zu,
+          onClick: uu => {
+            Cu.d.setClientEscMenuOptions({
+              jumpLock: uu
             })
           },
-          circleInfoText: tt("settingsMenu:jumpLockInfo")
-        }), (0, Ct.jsx)(Et.c, {
-          label: tt("touchSettings:stopAtEdges"),
-          checked: mt,
-          onClick: tt => {
-            Xt.b.setClientEscMenuOptions({
-              touchEdgeGuard: tt
+          circleInfoText: uu("settingsMenu:jumpLockInfo")
+        }), (0, Gu.jsx)(Nu.b, {
+          label: uu("touchSettings:stopAtEdges"),
+          checked: Xu,
+          onClick: uu => {
+            Cu.d.setClientEscMenuOptions({
+              touchEdgeGuard: uu
             })
           },
-          circleInfoText: tt("touchSettings:stopAtEdgesInfo")
+          circleInfoText: uu("touchSettings:stopAtEdgesInfo")
         })]
       })
     }, function() {
-      return (0, Ct.jsx)(bt.d, {})
+      return (0, Gu.jsx)(Mu.d, {})
     }, function() {
       const {
-        t: tt
-      } = (0, Ot.H)(), {
-        clientEscMenuOptions: et
-      } = (0, Xt.k)(["clientEscMenuOptions"]);
-      return (0, Kt.b)() ? (0, Ct.jsx)(Et.c, {
-        label: tt("settingsMenu:vibration"),
-        checked: et.vibration,
-        onClick: tt => {
-          Xt.b.setClientEscMenuOptions({
-            vibration: tt
+        t: uu
+      } = (0, su.A)(), {
+        clientEscMenuOptions: Eu
+      } = (0, Cu.l)(["clientEscMenuOptions"]);
+      return (0, wu.c)() ? (0, Gu.jsx)(Nu.b, {
+        label: uu("settingsMenu:vibration"),
+        checked: Eu.vibration,
+        onClick: uu => {
+          Cu.d.setClientEscMenuOptions({
+            vibration: uu
           })
         },
-        circleInfoText: tt("settingsMenu:vibrationInfo")
+        circleInfoText: uu("settingsMenu:vibrationInfo")
       }) : null
     }];
 
-    function UV() {
-      return (0, Ct.jsx)(Ct.Fragment, {
-        children: rV.map(((tt, et) => (0, Ct.jsx)(tt, {}, et)))
+    function Fj() {
+      return (0, Gu.jsx)(Gu.Fragment, {
+        children: Ij.map(((uu, Eu) => (0, Gu.jsx)(uu, {}, Eu)))
       })
     }
-    var AV = Vt(4482);
+    var Bj = ju(4531);
 
-    function iV() {
+    function Lj() {
       const {
-        t: tt
-      } = (0, Ot.H)(), {
-        isTouchScreen: et,
-        clientEscMenuOptions: Vt,
-        gameState: mt
-      } = (0, Xt.k)(["isTouchScreen", "clientEscMenuOptions", "gameState"]), dt = (0, ft.i)("ezBridging"), jt = (0, ft.i)("ezTowering"), yt = "inGame" !== mt || !0 === dt, Nt = (0, wt.e)(), bt = null !== Nt && ("inGame" !== mt || !0 === jt), [, Jt] = (0, qt.useReducer)((tt => tt + 1), 0), ut = (0, Mt.g)(), [Kt, ht] = (0, qt.useState)(AV.g);
-      return (0, Ct.jsxs)("div", {
+        t: uu
+      } = (0, su.A)(), {
+        isTouchScreen: Eu,
+        clientEscMenuOptions: ju,
+        gameState: Xu
+      } = (0, Cu.l)(["isTouchScreen", "clientEscMenuOptions", "gameState"]), lu = (0, Ou.h)("ezBridging"), qu = (0, Ou.h)("ezTowering"), hu = "inGame" !== Xu || !0 === lu, Du = (0, Yu.e)(), Mu = null !== Du && ("inGame" !== Xu || !0 === qu), [, eu] = (0, Uu.useReducer)((uu => uu + 1), 0), pu = (0, gu.d)(), [wu, Ju] = (0, Uu.useState)(Bj.f);
+      return (0, Gu.jsxs)("div", {
         className: "SettingsMenuRightInner",
-        children: [ut && (0, Ct.jsxs)("div", {
+        children: [pu && (0, Gu.jsxs)("div", {
           className: "SettingBox SettingBoxWithButton",
-          children: [(0, Ct.jsx)("div", {
-            children: tt("controller:settingsControlsNote")
-          }), (0, Ct.jsx)(Ht.Q, {
+          children: [(0, Gu.jsx)("div", {
+            children: uu("controller:settingsControlsNote")
+          }), (0, Gu.jsx)(fu.$, {
             onClick: () => {
-              Xt.b.set({
+              Cu.d.set({
                 openSettingsCategory: "controller"
               })
             },
-            children: tt("controller:settingsOpenController")
+            children: uu("controller:settingsOpenController")
           })]
-        }), (0, Qt.isTouchscreen)() && !(0, Qt.isMobile)() ? (0, Ct.jsx)(Ct.Fragment, {
-          children: (0, Ct.jsx)(Et.c, {
-            label: tt("settingsMenu:useTouchControls"),
-            checked: Kt,
-            onClick: tt => {
-              (0, AV.d)(tt), ht(tt)
+        }), (0, bu.isTouchscreen)() && !(0, bu.isMobile)() ? (0, Gu.jsx)(Gu.Fragment, {
+          children: (0, Gu.jsx)(Nu.b, {
+            label: uu("settingsMenu:useTouchControls"),
+            checked: wu,
+            onClick: uu => {
+              (0, Bj.b)(uu), Ju(uu)
             }
           })
-        }) : null, et && (0, Ct.jsx)(UV, {}), yt && (0, Ct.jsx)(Et.c, {
-          label: tt("settingsMenu:ezBridging"),
-          checked: Vt.ezBridging,
-          onClick: tt => {
-            Xt.b.setClientEscMenuOptions({
-              ezBridging: tt
+        }) : null, Eu && (0, Gu.jsx)(Fj, {}), hu && (0, Gu.jsx)(Nu.b, {
+          label: uu("settingsMenu:ezBridging"),
+          checked: ju.ezBridging,
+          onClick: uu => {
+            Cu.d.setClientEscMenuOptions({
+              ezBridging: uu
             })
           },
-          circleInfoText: tt("settingsMenu:ezBridgingInfo")
-        }), bt && (0, Ct.jsx)(Et.c, {
-          label: tt("settingsMenu:ezTowering"),
-          checked: Vt.ezTowering,
-          onClick: tt => {
-            Xt.b.setClientEscMenuOptions({
-              ezTowering: tt
+          circleInfoText: uu("settingsMenu:ezBridgingInfo")
+        }), Mu && (0, Gu.jsx)(Nu.b, {
+          label: uu("settingsMenu:ezTowering"),
+          checked: ju.ezTowering,
+          onClick: uu => {
+            Cu.d.setClientEscMenuOptions({
+              ezTowering: uu
             })
           },
-          circleInfoText: tt("jump" === Nt ? "ezTowering:jumpInfo" : "settingsMenu:ezToweringInfo")
-        }), (0, Ct.jsx)(Et.c, {
-          label: tt("settingsMenu:crouchToggle"),
-          checked: Vt.crouchIsToggle,
-          onClick: tt => {
-            Xt.b.setClientEscMenuOptions({
-              crouchIsToggle: tt
+          circleInfoText: uu("jump" === Du ? "ezTowering:jumpInfo" : "settingsMenu:ezToweringInfo")
+        }), (0, Gu.jsx)(Nu.b, {
+          label: uu("settingsMenu:crouchToggle"),
+          checked: ju.crouchIsToggle,
+          onClick: uu => {
+            Cu.d.setClientEscMenuOptions({
+              crouchIsToggle: uu
             })
           },
-          circleInfoText: tt("settingsMenu:crouchToggleInfo")
-        }), (0, Ct.jsx)(Et.c, {
-          label: tt("settingsMenu:hideUiToggle"),
-          checked: Vt.hideUiIsToggle,
-          onClick: tt => {
-            Xt.b.setClientEscMenuOptions({
-              hideUiIsToggle: tt
+          circleInfoText: uu("settingsMenu:crouchToggleInfo")
+        }), (0, Gu.jsx)(Nu.b, {
+          label: uu("settingsMenu:hideUiToggle"),
+          checked: ju.hideUiIsToggle,
+          onClick: uu => {
+            Cu.d.setClientEscMenuOptions({
+              hideUiIsToggle: uu
             })
           },
-          circleInfoText: tt("settingsMenu:hideUiToggleInfo")
-        }), "mouseOnly" !== (0, lt.d)() && (0, Ct.jsx)(Et.f, {
-          name: tt("settingsMenu:touchscreenSensitivity"),
+          circleInfoText: uu("settingsMenu:hideUiToggleInfo")
+        }), "mouseOnly" !== (0, cu.c)() && (0, Gu.jsx)(Nu.h, {
+          name: uu("settingsMenu:touchscreenSensitivity"),
           min: 1,
           max: 900,
           step: 1,
-          initValue: Vt.touchscreenSensitivity,
-          onChange: tt => {
-            Xt.b.setClientEscMenuOptions({
-              touchscreenSensitivity: tt
+          initValue: ju.touchscreenSensitivity,
+          onChange: uu => {
+            Cu.d.setClientEscMenuOptions({
+              touchscreenSensitivity: uu
             })
           }
-        }), !(0, Qt.isMobile)() && (0, Ct.jsx)(Et.f, {
-          name: tt("settingsMenu:mouseSensitivity"),
+        }), !(0, bu.isMobile)() && (0, Gu.jsx)(Nu.h, {
+          name: uu("settingsMenu:mouseSensitivity"),
           min: 1,
           max: 200,
           step: 1,
-          initValue: Vt.mouseSensitivity,
-          onChange: tt => {
-            Xt.b.setClientEscMenuOptions({
-              mouseSensitivity: tt
+          initValue: ju.mouseSensitivity,
+          onChange: uu => {
+            Cu.d.setClientEscMenuOptions({
+              mouseSensitivity: uu
             })
           }
-        }), !(0, Qt.isMobile)() && (0, Ct.jsxs)("div", {
+        }), !(0, bu.isMobile)() && (0, Gu.jsxs)("div", {
           className: "ControlsContainer",
-          children: [(0, Ct.jsx)("div", {
+          children: [(0, Gu.jsx)("div", {
             className: "SliderText",
-            children: tt("settingsMenu:keyBindings")
-          }), Dt.e.map((et => (0, Ct.jsx)(YV, {
-            title: tt(et.name.translationKey, et.name.params),
-            defaultOpen: Dt.g.has(et.id),
-            children: et.actions.map((tt => (0, Ct.jsx)(BV, {
-              noaAction: tt,
-              forceUpdate: Jt,
-              clashesWith: et.clashesWith,
-              showPadGlyph: ut
-            }, tt)))
-          }, et.name.translationKey))), (0, Ct.jsx)(Ht.G, {
+            children: uu("settingsMenu:keyBindings")
+          }), Zu.i.map((Eu => (0, Gu.jsx)(tj, {
+            title: uu(Eu.name.translationKey, Eu.name.params),
+            defaultOpen: Zu.l.has(Eu.id),
+            children: Eu.actions.map((uu => (0, Gu.jsx)(xj, {
+              noaAction: uu,
+              forceUpdate: eu,
+              clashesWith: Eu.clashesWith,
+              showPadGlyph: pu
+            }, uu)))
+          }, Eu.name.translationKey))), (0, Gu.jsx)(fu.R, {
             className: "ResetBindingsButton",
             onClick: () => {
-              (0, Dt.D)(), Jt()
+              (0, Zu.H)(), eu()
             },
-            children: tt("controls:resetBindings")
+            children: uu("controls:resetBindings")
           })]
         })]
       })
     }
 
-    function YV(tt) {
+    function tj(uu) {
       let {
-        title: et,
-        defaultOpen: Vt,
-        children: Ot
-      } = tt;
-      const [Dt, mt] = (0, qt.useState)(Vt);
-      return (0, Ct.jsxs)("div", {
-        className: jt()("ControlsSection", {
-          Collapsed: !Dt
+        title: Eu,
+        defaultOpen: ju,
+        children: su
+      } = uu;
+      const [Zu, Xu] = (0, Uu.useState)(ju);
+      return (0, Gu.jsxs)("div", {
+        className: qu()("ControlsSection", {
+          Collapsed: !Zu
         }),
-        children: [(0, Ct.jsxs)("div", {
+        children: [(0, Gu.jsxs)("div", {
           className: "ControlsSectionHeader",
           "data-pad-focusable": !0,
           onClick: () => {
-            mt(!Dt)
+            Xu(!Zu)
           },
-          children: [(0, Ct.jsx)("div", {
+          children: [(0, Gu.jsx)("div", {
             className: "ControlsSectionTitle",
-            children: et
-          }), (0, Ct.jsx)("div", {
+            children: Eu
+          }), (0, Gu.jsx)("div", {
             className: "ControlsSectionChevron",
             children: "\u25be"
           })]
-        }), Dt && (0, Ct.jsx)("div", {
+        }), Zu && (0, Gu.jsx)("div", {
           className: "ControlsSectionRows",
-          children: Ot
+          children: su
         })]
       })
     }
 
-    function BV(tt) {
+    function xj(uu) {
       let {
-        noaAction: et,
-        forceUpdate: Vt,
-        clashesWith: dt,
-        showPadGlyph: Xt
-      } = tt;
+        noaAction: Eu,
+        forceUpdate: ju,
+        clashesWith: lu,
+        showPadGlyph: Cu
+      } = uu;
       const {
-        t: Qt
-      } = (0, Ot.H)(), lt = (0, Nt.e)(et), [Et, ft] = (0, qt.useState)(!1), [wt, Mt] = (0, qt.useState)("controls:clickToEnterNewBinding"), [bt, Jt] = (0, qt.useState)(null), [ut, Kt] = (0, qt.useState)(null), ht = (0, qt.useRef)(null);
-      (0, qt.useEffect)((() => {
-        Et && ht.current && ht.current.focus()
-      }), [Et]);
-      const vt = Dt.r[et].filter((tt => mt.j[tt]));
-      let Wt = null;
-      const St = [],
-        ct = dt.flatMap((tt => {
-          var et, Vt;
-          return null !== (et = null === (Vt = Dt.e.find((et => et.id === tt))) || void 0 === Vt ? void 0 : Vt.actions) && void 0 !== et ? et : []
+        t: bu
+      } = (0, su.A)(), cu = (0, Du.b)(Eu), [Nu, Ou] = (0, Uu.useState)(!1), [Yu, gu] = (0, Uu.useState)("controls:clickToEnterNewBinding"), [Mu, eu] = (0, Uu.useState)(null), [pu, wu] = (0, Uu.useState)(null), Ju = (0, Uu.useRef)(null);
+      (0, Uu.useEffect)((() => {
+        Nu && Ju.current && Ju.current.focus()
+      }), [Nu]);
+      const du = Zu.z[Eu].filter((uu => Xu.h[uu]));
+      let au = null;
+      const Pu = [],
+        ou = lu.flatMap((uu => {
+          var Eu, ju;
+          return null !== (Eu = null === (ju = Zu.i.find((Eu => Eu.id === uu))) || void 0 === ju ? void 0 : ju.actions) && void 0 !== Eu ? Eu : []
         }));
-      for (const Ot of ct) {
-        if (Ot === et) continue;
-        const tt = Dt.r[Ot];
-        for (const et of tt) vt.includes(et) && St.push(Qt(Dt.v[Ot].translationKey, Dt.v[Ot].params))
+      for (const su of ou) {
+        if (su === Eu) continue;
+        const uu = Zu.z[su];
+        for (const Eu of uu) du.includes(Eu) && Pu.push(bu(Zu.A[su].translationKey, Zu.A[su].params))
       }
-      St.length > 0 && (Wt = Qt("controls:sharedBindingsWarning") + " ", Wt += St.join(", "));
-      const Rt = () => {
-          ft(!1), Jt(null), Mt("controls:clickToEnterNewBinding"), Kt(null)
+      Pu.length > 0 && (au = bu("controls:sharedBindingsWarning") + " ", au += Pu.join(", "));
+      const ku = () => {
+          Ou(!1), eu(null), gu("controls:clickToEnterNewBinding"), wu(null)
         },
-        It = () => "BindingInput_" + et;
-      return (0, Ct.jsxs)("div", {
-        className: jt()("ControlRow", {
-          WarningBorder: null !== Wt
+        mu = () => "BindingInput_" + Eu;
+      return (0, Gu.jsxs)("div", {
+        className: qu()("ControlRow", {
+          WarningBorder: null !== au
         }),
-        children: [(0, Ct.jsxs)("div", {
+        children: [(0, Gu.jsxs)("div", {
           className: "ControlRowInner",
-          children: [(0, Ct.jsxs)("div", {
+          children: [(0, Gu.jsxs)("div", {
             className: "ControlName",
-            children: [Qt(Dt.v[et].translationKey, Dt.v[et].params), Xt && lt && (0, Ct.jsx)(yt.d, {
-              glyph: lt,
+            children: [bu(Zu.A[Eu].translationKey, Zu.A[Eu].params), Cu && cu && (0, Gu.jsx)(hu.d, {
+              glyph: cu,
               className: "ControlPadGlyph"
             })]
-          }), (0, Ct.jsxs)("div", {
+          }), (0, Gu.jsxs)("div", {
             className: "ControlBindingsContainer",
-            children: [(0, Ct.jsxs)("div", {
+            children: [(0, Gu.jsxs)("div", {
               className: "ControlBindingsList",
-              children: [vt.map((tt => (0, Ct.jsxs)("div", {
+              children: [du.map((uu => (0, Gu.jsxs)("div", {
                 className: "ControlBinding",
-                children: [(0, Ct.jsx)("div", {
-                  children: (0, Dt.k)(tt)
-                }), (0, Ct.jsx)("div", {
+                children: [(0, Gu.jsx)("div", {
+                  children: (0, Zu.q)(uu)
+                }), (0, Gu.jsx)("div", {
                   className: "ControlBindingRemoveIcon",
                   "data-pad-focusable": !0,
                   onClick: () => {
-                    const Ot = (0, Dt.z)(et, tt);
-                    Ot.isError() ? Kt(Ot.asError().message) : Kt(null), Vt()
+                    const su = (0, Zu.B)(Eu, uu);
+                    su.isError() ? wu(su.asError().message) : wu(null), ju()
                   },
                   children: "\xd7"
                 })]
-              }, tt))), !Et && (0, Ct.jsx)("div", {
+              }, uu))), !Nu && (0, Gu.jsx)("div", {
                 className: "ControlBinding ControlBindingAdd",
                 onClick: () => {
-                  ft(!0), Kt(null)
+                  Ou(!0), wu(null)
                 },
-                children: (0, Ct.jsx)("div", {
+                children: (0, Gu.jsx)("div", {
                   className: "ControlBindingAddIcon",
                   children: "+"
                 })
               })]
-            }), Et && (0, Ct.jsxs)("div", {
+            }), Nu && (0, Gu.jsxs)("div", {
               className: "ControlBindingAddInput",
-              children: [(0, Ct.jsxs)("div", {
+              children: [(0, Gu.jsxs)("div", {
                 className: "InputContainer",
-                children: [(0, Ct.jsx)("div", {
+                children: [(0, Gu.jsx)("div", {
                   className: "InputOverlay",
-                  children: bt ? (0, Dt.k)(bt) : (0, Ct.jsx)("div", {
+                  children: Mu ? (0, Zu.q)(Mu) : (0, Gu.jsx)("div", {
                     className: "InputOverlayPlaceholder",
-                    children: Qt(wt)
+                    children: bu(Yu)
                   })
-                }), (0, Ct.jsx)("input", {
-                  ref: ht,
-                  id: It(),
+                }), (0, Gu.jsx)("input", {
+                  ref: Ju,
+                  id: mu(),
                   "data-pad-no-osk": !0,
                   defaultValue: "",
-                  onKeyDown: tt => {
-                    if ("Escape" === tt.code) return Rt(), tt.preventDefault(), void tt.stopPropagation();
-                    const et = tt.code;
-                    mt.e.includes(et) ? (Kt(null), Jt(et)) : (Kt("controls:keyIsReserved"), Jt(null)), tt.preventDefault(), tt.stopPropagation()
+                  onKeyDown: uu => {
+                    if ("Escape" === uu.code) return ku(), uu.preventDefault(), void uu.stopPropagation();
+                    const Eu = uu.code;
+                    Xu.c.includes(Eu) ? (wu(null), eu(Eu)) : (wu("controls:keyIsReserved"), eu(null)), uu.preventDefault(), uu.stopPropagation()
                   },
-                  onMouseDown: tt => {
-                    const et = "Mouse" + (tt.button + 1);
-                    document.activeElement && document.activeElement.id === It() ? mt.e.includes(et) ? (Kt(null), Jt(et)) : (Kt("controls:keyIsReserved"), Jt(null)) : Mt("controls:enterNewBinding"), tt.stopPropagation()
+                  onMouseDown: uu => {
+                    const Eu = "Mouse" + (uu.button + 1);
+                    document.activeElement && document.activeElement.id === mu() ? Xu.c.includes(Eu) ? (wu(null), eu(Eu)) : (wu("controls:keyIsReserved"), eu(null)) : gu("controls:enterNewBinding"), uu.stopPropagation()
                   },
                   onBlur: () => {
-                    Mt("controls:clickToEnterNewBinding")
+                    gu("controls:clickToEnterNewBinding")
                   }
                 })]
-              }), (0, Ct.jsx)(Ht.f, {
-                onPointerDown: tt => {
-                  tt.preventDefault()
+              }), (0, Gu.jsx)(fu.f, {
+                onPointerDown: uu => {
+                  uu.preventDefault()
                 },
                 onClick: () => {
-                  (0, Dt.d)(et, bt), Vt(), Rt()
+                  (0, Zu.e)(Eu, Mu), ju(), ku()
                 },
                 className: "ControlBindingAddButton",
-                disabled: null === bt,
-                children: Qt("general:add")
-              }), (0, Ct.jsx)("div", {
+                disabled: null === Mu,
+                children: bu("general:add")
+              }), (0, Gu.jsx)("div", {
                 className: "ControlBindingAddCancel",
                 onClick: () => {
-                  Rt()
+                  ku()
                 },
                 children: "\xd7"
               })]
-            }), ut && (0, Ct.jsx)("div", {
+            }), pu && (0, Gu.jsx)("div", {
               className: "ControlBindingError",
-              children: Qt(ut)
+              children: bu(pu)
             })]
           })]
-        }), Wt && (0, Ct.jsx)("div", {
+        }), au && (0, Gu.jsx)("div", {
           className: "ControlRowWarning",
-          children: Wt
+          children: au
         })]
       })
     }
   },
-  9109: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => mt
+  9100: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => Xu
     });
-    var Ot = Vt(63),
-      qt = Vt(1152),
-      Dt = Vt(1188);
-    const mt = (0, Ot.forwardRef)((function(tt, et) {
+    var su = ju(58),
+      Uu = ju(1116),
+      Zu = ju(1154);
+    const Xu = (0, su.forwardRef)((function(uu, Eu) {
       let {
-        icon: Vt,
-        title: Ot,
-        sub: mt,
-        expanded: dt,
-        onClick: jt
-      } = tt;
-      return (0, Dt.jsxs)("button", {
-        ref: et,
+        icon: ju,
+        title: su,
+        sub: Xu,
+        expanded: lu,
+        onClick: qu
+      } = uu;
+      return (0, Zu.jsxs)("button", {
+        ref: Eu,
         type: "button",
         className: "SettingBox SettingBoxFeatured FeaturedSettingsEntry",
-        "aria-expanded": dt,
-        onClick: jt,
-        children: [(0, Dt.jsx)(qt.b, {
-          name: Vt,
+        "aria-expanded": lu,
+        onClick: qu,
+        children: [(0, Zu.jsx)(Uu.e, {
+          name: ju,
           className: "FeaturedSettingsEntryIcon"
-        }), (0, Dt.jsxs)("span", {
+        }), (0, Zu.jsxs)("span", {
           className: "FeaturedSettingsEntryText",
-          children: [(0, Dt.jsx)("span", {
+          children: [(0, Zu.jsx)("span", {
             className: "FeaturedSettingsEntryTitle",
-            children: Ot
-          }), (0, Dt.jsx)("span", {
+            children: su
+          }), (0, Zu.jsx)("span", {
             className: "FeaturedSettingsEntrySub",
-            children: mt
+            children: Xu
           })]
-        }), (0, Dt.jsx)("span", {
+        }), (0, Zu.jsx)("span", {
           className: "FeaturedSettingsEntryChevron",
           children: "\u25be"
         })]
       })
     }))
   },
-  8888: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => Nt,
-      c: () => yt,
-      g: () => Xt,
-      j: () => Mt,
-      l: () => bt,
-      n: () => lt
+  8896: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => Du,
+      f: () => hu,
+      h: () => Cu,
+      k: () => gu,
+      m: () => Mu,
+      o: () => cu
     });
-    var Ot = Vt(1764),
-      qt = Vt(1832);
-    const Dt = tt => tt >= 56320 && tt <= 57343,
-      mt = tt => tt >= 55296 && tt <= 56319,
-      dt = (tt, et) => et >= 2 && Dt(tt.charCodeAt(et - 1)) && mt(tt.charCodeAt(et - 2)) ? et - 2 : Math.max(0, et - 1),
-      jt = (tt, et) => {
-        let Vt;
-        var Ot, qt;
-        return Vt = tt.start !== tt.end ? et < 0 ? tt.start : tt.end : et < 0 ? dt(tt.value, tt.start) : (Ot = tt.value, (qt = tt.start) + 1 < Ot.length && mt(Ot.charCodeAt(qt)) && Dt(Ot.charCodeAt(qt + 1)) ? qt + 2 : Math.min(Ot.length, qt + 1)), {
-          value: tt.value,
-          start: Vt,
-          end: Vt
+    var su = ju(1710),
+      Uu = ju(1787);
+    const Zu = uu => uu >= 56320 && uu <= 57343,
+      Xu = uu => uu >= 55296 && uu <= 56319,
+      lu = (uu, Eu) => Eu >= 2 && Zu(uu.charCodeAt(Eu - 1)) && Xu(uu.charCodeAt(Eu - 2)) ? Eu - 2 : Math.max(0, Eu - 1),
+      qu = (uu, Eu) => {
+        let ju;
+        var su, Uu;
+        return ju = uu.start !== uu.end ? Eu < 0 ? uu.start : uu.end : Eu < 0 ? lu(uu.value, uu.start) : (su = uu.value, (Uu = uu.start) + 1 < su.length && Xu(su.charCodeAt(Uu)) && Zu(su.charCodeAt(Uu + 1)) ? Uu + 2 : Math.min(su.length, Uu + 1)), {
+          value: uu.value,
+          start: ju,
+          end: ju
         }
       },
-      Ht = ["text", "search", "url", "email", "tel", "password", "number"],
-      Xt = tt => !(!(0, qt.c)(tt) || tt.isContentEditable || tt.hasAttribute("data-pad-no-osk")) && (tt instanceof HTMLTextAreaElement || tt instanceof HTMLInputElement && Ht.includes(tt.type)),
-      Qt = tt => null !== tt.selectionStart,
-      lt = tt => {
-        var et, Vt;
+      fu = ["text", "search", "url", "email", "tel", "password", "number"],
+      Cu = uu => !(!(0, Uu.e)(uu) || uu.isContentEditable || uu.hasAttribute("data-pad-no-osk")) && (uu instanceof HTMLTextAreaElement || uu instanceof HTMLInputElement && fu.includes(uu.type)),
+      bu = uu => null !== uu.selectionStart,
+      cu = uu => {
+        var Eu, ju;
         const {
-          value: Ot
-        } = tt;
+          value: su
+        } = uu;
         return {
-          value: Ot,
-          start: null !== (et = tt.selectionStart) && void 0 !== et ? et : Ot.length,
-          end: null !== (Vt = tt.selectionEnd) && void 0 !== Vt ? Vt : Ot.length
+          value: su,
+          start: null !== (Eu = uu.selectionStart) && void 0 !== Eu ? Eu : su.length,
+          end: null !== (ju = uu.selectionEnd) && void 0 !== ju ? ju : su.length
         }
       },
-      Et = (tt, et, Vt) => {
-        if (tt.readOnly) return;
-        const qt = tt instanceof HTMLTextAreaElement ? HTMLTextAreaElement.prototype : HTMLInputElement.prototype;
-        Object.getOwnPropertyDescriptor(qt, "value").set.call(tt, et.value), Qt(tt) && tt.setSelectionRange(et.start, et.end), (0, Ot.c)(tt, new InputEvent("input", {
+      Nu = (uu, Eu, ju) => {
+        if (uu.readOnly) return;
+        const Uu = uu instanceof HTMLTextAreaElement ? HTMLTextAreaElement.prototype : HTMLInputElement.prototype;
+        Object.getOwnPropertyDescriptor(Uu, "value").set.call(uu, Eu.value), bu(uu) && uu.setSelectionRange(Eu.start, Eu.end), (0, su.e)(uu, new InputEvent("input", {
           bubbles: !0,
-          inputType: Vt
+          inputType: ju
         }))
       };
-    let ft = !1;
-    const wt = (tt, et) => !!document.execCommand(tt, !1, et) || (ft || (ft = !0, console.warn(`execCommand("${tt}") failed; the on-screen keyboard is setting the value directly`)), !1),
-      yt = (tt, et) => {
-        wt("insertText", et) || Et(tt, function(tt, et) {
-          let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
-          const Ot = tt.value.slice(0, tt.start),
-            qt = tt.value.slice(tt.end);
-          let Dt = Vt < 0 ? et.length : Math.max(0, Vt - Ot.length - qt.length);
-          Dt > 0 && Dt < et.length && mt(et.charCodeAt(Dt - 1)) && Dt--;
-          const dt = et.slice(0, Dt),
-            jt = Ot.length + dt.length;
+    let Ou = !1;
+    const Yu = (uu, Eu) => !!document.execCommand(uu, !1, Eu) || (Ou || (Ou = !0, console.warn(`execCommand("${uu}") failed; the on-screen keyboard is setting the value directly`)), !1),
+      hu = (uu, Eu) => {
+        Yu("insertText", Eu) || Nu(uu, function(uu, Eu) {
+          let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
+          const su = uu.value.slice(0, uu.start),
+            Uu = uu.value.slice(uu.end);
+          let Zu = ju < 0 ? Eu.length : Math.max(0, ju - su.length - Uu.length);
+          Zu > 0 && Zu < Eu.length && Xu(Eu.charCodeAt(Zu - 1)) && Zu--;
+          const lu = Eu.slice(0, Zu),
+            qu = su.length + lu.length;
           return {
-            value: Ot + dt + qt,
-            start: jt,
-            end: jt
+            value: su + lu + Uu,
+            start: qu,
+            end: qu
           }
-        }(lt(tt), et, tt.maxLength), "insertText")
+        }(cu(uu), Eu, uu.maxLength), "insertText")
       },
-      Nt = tt => {
-        wt("delete") || Et(tt, (tt => {
-          const et = tt.start === tt.end ? dt(tt.value, tt.start) : tt.start;
+      Du = uu => {
+        Yu("delete") || Nu(uu, (uu => {
+          const Eu = uu.start === uu.end ? lu(uu.value, uu.start) : uu.start;
           return {
-            value: tt.value.slice(0, et) + tt.value.slice(tt.end),
-            start: et,
-            end: et
+            value: uu.value.slice(0, Eu) + uu.value.slice(uu.end),
+            start: Eu,
+            end: Eu
           }
-        })(lt(tt)), "deleteContentBackward")
+        })(cu(uu)), "deleteContentBackward")
       },
-      Mt = (tt, et) => {
-        if (!Qt(tt)) return;
-        const Vt = jt(lt(tt), et);
-        tt.setSelectionRange(Vt.start, Vt.end)
+      gu = (uu, Eu) => {
+        if (!bu(uu)) return;
+        const ju = qu(cu(uu), Eu);
+        uu.setSelectionRange(ju.start, ju.end)
       },
-      bt = tt => {
-        Qt(tt) && 0 === tt.selectionStart && 0 === tt.selectionEnd && tt.setSelectionRange(tt.value.length, tt.value.length)
+      Mu = uu => {
+        bu(uu) && 0 === uu.selectionStart && 0 === uu.selectionEnd && uu.setSelectionRange(uu.value.length, uu.value.length)
       }
   },
-  9063: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => dt
+  9043: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => lu
     });
-    var Ot = Vt(26),
-      qt = Vt(2203),
-      Dt = Vt(1450),
-      mt = Vt(1492);
-    const dt = async () => {
-      if ((0, mt.j)()) {
-        if (!0 !== await Dt.NotificationProvider.showPromptPopup({
+    var su = ju(22),
+      Uu = ju(2215),
+      Zu = ju(1405),
+      Xu = ju(1443);
+    const lu = async () => {
+      if ((0, Xu.g)()) {
+        if (!0 !== await Zu.NotificationProvider.showPromptPopup({
             title: "controller:menusLeaveGameTitle",
             confirmText: "controller:menusLeaveGameLeave",
             cancelText: "controller:menusLeaveGameStay",
             destructive: !0
-          }).getResult() || "inGame" !== Ot.b.get("gameState")) return
-      }(0, qt.e)()
+          }).getResult() || "inGame" !== su.d.get("gameState")) return
+      }(0, Uu.d)()
     }
   },
-  9065: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => jt,
-      d: () => Dt,
-      g: () => mt,
-      j: () => qt,
-      n: () => dt
+  9047: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => qu,
+      g: () => Zu,
+      i: () => Xu,
+      k: () => Uu,
+      m: () => lu
     });
-    var Ot = Vt(2047);
-    const qt = "controllerPadShopOpen",
-      Dt = tt => Ot.j.includes(tt),
-      mt = tt => Object.values(tt).some((tt => !1 !== tt.canBuy && !tt.isRewardedAd)),
-      dt = (tt, et, Vt) => {
-        var Ot, qt, mt, dt;
-        const jt = tt.filter((tt => !Dt(tt))),
-          Ht = null !== et && tt.includes(et) ? et : null;
-        return null !== Ht && !Dt(Ht) && Vt(Ht) ? Ht : null !== (Ot = null !== (qt = null !== (mt = null !== (dt = jt.find(Vt)) && void 0 !== dt ? dt : jt[0]) && void 0 !== mt ? mt : Ht) && void 0 !== qt ? qt : tt[0]) && void 0 !== Ot ? Ot : null
+    var su = ju(2014);
+    const Uu = "controllerPadShopOpen",
+      Zu = uu => su.g.includes(uu),
+      Xu = uu => Object.values(uu).some((uu => !1 !== uu.canBuy && !uu.isRewardedAd)),
+      lu = (uu, Eu, ju) => {
+        var su, Uu, Xu, lu;
+        const qu = uu.filter((uu => !Zu(uu))),
+          fu = null !== Eu && uu.includes(Eu) ? Eu : null;
+        return null !== fu && !Zu(fu) && ju(fu) ? fu : null !== (su = null !== (Uu = null !== (Xu = null !== (lu = qu.find(ju)) && void 0 !== lu ? lu : qu[0]) && void 0 !== Xu ? Xu : fu) && void 0 !== Uu ? Uu : uu[0]) && void 0 !== su ? su : null
       },
-      jt = tt => tt.userInput || tt.isRewardedAd || "boolean" === typeof tt.isSelected ? null : JSON.stringify([tt.image, tt.cost, tt.currency, tt.amount, tt.customTitle, tt.buyButtonText, tt.description, tt.canBuy])
+      qu = uu => uu.userInput || uu.isRewardedAd || "boolean" === typeof uu.isSelected ? null : JSON.stringify([uu.image, uu.cost, uu.currency, uu.amount, uu.customTitle, uu.buyButtonText, uu.description, uu.canBuy])
   },
-  9091: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => Ht,
-      g: () => Xt
+  9074: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => fu,
+      d: () => Cu
     });
-    var Ot = Vt(63),
-      qt = Vt(1554),
-      Dt = Vt(2096),
-      mt = Vt(1513),
-      dt = Vt(1540),
-      jt = Vt(1188);
-    const Ht = () => {
-        const tt = (0, mt.p)();
-        if ((0, Ot.useEffect)((() => {
-            (0, mt.j)()
-          }), []), !tt) return null;
+    var su = ju(58),
+      Uu = ju(1499),
+      Zu = ju(2065),
+      Xu = ju(1461),
+      lu = ju(1482),
+      qu = ju(1154);
+    const fu = () => {
+        const uu = (0, Xu.o)();
+        if ((0, su.useEffect)((() => {
+            (0, Xu.k)()
+          }), []), !uu) return null;
         const {
-          ControllerCategory: et
-        } = tt;
-        return (0, jt.jsx)(dt.e, {
-          children: (0, jt.jsx)(et, {})
+          ControllerCategory: Eu
+        } = uu;
+        return (0, qu.jsx)(lu.d, {
+          children: (0, qu.jsx)(Eu, {})
         })
       },
-      Xt = () => {
-        var tt;
-        const et = (0, mt.p)(),
-          [, Vt] = (0, Ot.useReducer)((tt => tt + 1), 0);
-        return (0, qt.f)(Dt.e, Vt), null !== (tt = null === et || void 0 === et ? void 0 : et.hasActivePad()) && void 0 !== tt && tt
+      Cu = () => {
+        var uu;
+        const Eu = (0, Xu.o)(),
+          [, ju] = (0, su.useReducer)((uu => uu + 1), 0);
+        return (0, Uu.f)(Zu.c, ju), null !== (uu = null === Eu || void 0 === Eu ? void 0 : Eu.hasActivePad()) && void 0 !== uu && uu
       }
   },
-  8893: (tt, et, Vt) => {
-    Vt.d(et, {
-      C: () => lt,
-      d: () => Ot,
-      h: () => Ht,
-      i: () => wt,
-      l: () => Qt,
-      o: () => ft,
-      r: () => Dt,
-      v: () => Et,
-      z: () => mt
+  8899: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => su,
+      c: () => fu,
+      g: () => Yu,
+      i: () => bu,
+      l: () => Ou,
+      m: () => Zu,
+      q: () => Nu,
+      r: () => Xu,
+      u: () => cu
     });
-    const Ot = ["button", "a[href]", "input:not([type=hidden])", "textarea", "select", "[role=button]", "[role=tab]", "[role=switch]", "[role=checkbox]", "[role=option]", "[role=menuitem]", "[data-pad-focusable]", "[data-pad-tab]", ".Dropdown-control", ".Dropdown-option"].join(","),
-      qt = (tt, et) => {
-        if ("function" === typeof tt.checkVisibility) return !tt.checkVisibility({
+    const su = ["button", "a[href]", "input:not([type=hidden])", "textarea", "select", "[role=button]", "[role=tab]", "[role=switch]", "[role=checkbox]", "[role=option]", "[role=menuitem]", "[data-pad-focusable]", "[data-pad-tab]", ".Dropdown-control", ".Dropdown-option"].join(","),
+      Uu = (uu, Eu) => {
+        if ("function" === typeof uu.checkVisibility) return !uu.checkVisibility({
           visibilityProperty: !0,
           checkVisibilityCSS: !0,
-          opacityProperty: et,
-          checkOpacity: et
+          opacityProperty: Eu,
+          checkOpacity: Eu
         });
         const {
-          visibility: Vt
-        } = getComputedStyle(tt);
-        if ("hidden" === Vt || "collapse" === Vt) return !0;
-        if (!et) return !1;
-        for (let Ot = tt; Ot; Ot = Ot.parentElement)
-          if ("0" === getComputedStyle(Ot).opacity) return !0;
+          visibility: ju
+        } = getComputedStyle(uu);
+        if ("hidden" === ju || "collapse" === ju) return !0;
+        if (!Eu) return !1;
+        for (let su = uu; su; su = su.parentElement)
+          if ("0" === getComputedStyle(su).opacity) return !0;
         return !1
       },
-      Dt = tt => {
-        if (!tt.isConnected || qt(tt, !0)) return !1;
-        const et = tt.getBoundingClientRect();
-        return et.width > 0 && et.height > 0
+      Zu = uu => {
+        if (!uu.isConnected || Uu(uu, !0)) return !1;
+        const Eu = uu.getBoundingClientRect();
+        return Eu.width > 0 && Eu.height > 0
       },
-      mt = tt => !!tt.matches(":disabled, [aria-disabled='true']") || "button" === tt.getAttribute("role") && "-1" === tt.getAttribute("tabindex"),
-      dt = tt => {
-        var et;
-        if (tt.closest("[data-pad-ignore]")) return !0;
-        return !!(null === (et = tt.parentElement) || void 0 === et ? void 0 : et.closest("[data-pad-focusable]"))
+      Xu = uu => !!uu.matches(":disabled, [aria-disabled='true']") || "button" === uu.getAttribute("role") && "-1" === uu.getAttribute("tabindex"),
+      lu = uu => {
+        var Eu;
+        if (uu.closest("[data-pad-ignore]")) return !0;
+        return !!(null === (Eu = uu.parentElement) || void 0 === Eu ? void 0 : Eu.closest("[data-pad-focusable]"))
       },
-      jt = tt => {
-        const et = tt.querySelectorAll(Ot);
-        return tt.matches(Ot) ? [tt, ...et] : et
+      qu = uu => {
+        const Eu = uu.querySelectorAll(su);
+        return uu.matches(su) ? [uu, ...Eu] : Eu
       },
-      Ht = tt => {
-        const et = [];
-        for (const Vt of jt(tt)) !dt(Vt) && Dt(Vt) && et.push(Vt);
-        return et
+      fu = uu => {
+        const Eu = [];
+        for (const ju of qu(uu)) !lu(ju) && Zu(ju) && Eu.push(ju);
+        return Eu
       },
-      Xt = new WeakMap,
-      Qt = tt => {
-        const et = Xt.get(tt);
-        if (et && lt(et, tt)) return !0;
-        for (const Vt of jt(tt))
-          if (!dt(Vt) && Dt(Vt)) return Xt.set(tt, Vt), !0;
-        return Xt.delete(tt), !1
+      Cu = new WeakMap,
+      bu = uu => {
+        const Eu = Cu.get(uu);
+        if (Eu && cu(Eu, uu)) return !0;
+        for (const ju of qu(uu))
+          if (!lu(ju) && Zu(ju)) return Cu.set(uu, ju), !0;
+        return Cu.delete(uu), !1
       },
-      lt = (tt, et) => et.contains(tt) && tt.matches(Ot) && !dt(tt) && Dt(tt),
-      Et = (tt, et) => lt(tt, et) && !mt(tt),
-      ft = tt => {
-        for (const et of tt.querySelectorAll("[data-pad-initial-area]"))
-          if (!qt(et, !1)) return !0;
+      cu = (uu, Eu) => Eu.contains(uu) && uu.matches(su) && !lu(uu) && Zu(uu),
+      Nu = (uu, Eu) => cu(uu, Eu) && !Xu(uu),
+      Ou = uu => {
+        for (const Eu of uu.querySelectorAll("[data-pad-initial-area]"))
+          if (!Uu(Eu, !1)) return !0;
         return !1
       },
-      wt = tt => {
-        const et = et => {
-          let Vt = 0;
-          for (let Ot = et.parentElement; Ot && Ot !== tt; Ot = Ot.parentElement) Vt++;
-          return Vt
+      Yu = uu => {
+        const Eu = Eu => {
+          let ju = 0;
+          for (let su = Eu.parentElement; su && su !== uu; su = su.parentElement) ju++;
+          return ju
         };
-        return [...tt.querySelectorAll("[data-pad-initial-area]")].filter(Dt).sort(((tt, Vt) => et(Vt) - et(tt)))
+        return [...uu.querySelectorAll("[data-pad-initial-area]")].filter(Zu).sort(((uu, ju) => Eu(ju) - Eu(uu)))
       }
   },
-  8874: (tt, et, Vt) => {
-    Vt.d(et, {
-      C: () => Kt,
-      F: () => yt,
-      H: () => jt,
-      K: () => Xt,
-      b: () => Nt,
-      c: () => vt,
-      d: () => Ct,
-      e: () => Jt,
-      h: () => ft,
-      j: () => wt,
-      k: () => lt,
-      m: () => Et,
-      q: () => ht,
-      t: () => Ht,
-      x: () => Wt,
-      y: () => ut
+  8889: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      A: () => fu,
+      C: () => au,
+      F: () => pu,
+      G: () => wu,
+      I: () => hu,
+      L: () => qu,
+      P: () => Cu,
+      b: () => Du,
+      c: () => du,
+      g: () => Gu,
+      j: () => eu,
+      m: () => Ou,
+      o: () => Yu,
+      q: () => cu,
+      u: () => Nu,
+      x: () => Ju
     });
-    var Ot = Vt(31),
-      qt = Vt(1764),
-      Dt = Vt(8880),
-      mt = Vt(8888),
-      dt = Vt(8893);
-    const jt = tt => (0, mt.g)(tt),
-      Ht = tt => {
-        const et = tt.getBoundingClientRect();
+    var su = ju(24),
+      Uu = ju(1710),
+      Zu = ju(8891),
+      Xu = ju(8896),
+      lu = ju(8899);
+    const qu = uu => (0, Xu.h)(uu),
+      fu = uu => {
+        const Eu = uu.getBoundingClientRect();
         return {
-          x: et.left + et.width / 2,
-          y: et.top + et.height / 2
+          x: Eu.left + Eu.width / 2,
+          y: Eu.top + Eu.height / 2
         }
       },
-      Xt = (tt, et, Vt) => ({
+      Cu = (uu, Eu, ju) => ({
         bubbles: !0,
         cancelable: !0,
         composed: !0,
         view: window,
-        clientX: tt.x,
-        clientY: tt.y,
-        screenX: tt.x,
-        screenY: tt.y,
-        button: et,
-        buttons: Vt,
+        clientX: uu.x,
+        clientY: uu.y,
+        screenX: uu.x,
+        screenY: uu.y,
+        button: Eu,
+        buttons: ju,
         pointerId: 1,
         pointerType: "mouse",
         isPrimary: !0
       }),
-      Qt = (tt, et) => {
-        (0, qt.c)(tt, et)
+      bu = (uu, Eu) => {
+        (0, Uu.e)(uu, Eu)
       },
-      lt = function(tt, et) {
-        let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        const Ot = 0 === Vt ? 1 : 2;
-        Qt(tt, new PointerEvent("pointerdown", Xt(et, Vt, Ot))), Qt(tt, new MouseEvent("mousedown", Xt(et, Vt, Ot)))
+      cu = function(uu, Eu) {
+        let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        const su = 0 === ju ? 1 : 2;
+        bu(uu, new PointerEvent("pointerdown", Cu(Eu, ju, su))), bu(uu, new MouseEvent("mousedown", Cu(Eu, ju, su)))
       },
-      Et = function(tt, et) {
-        let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        Qt(tt, new PointerEvent("pointerup", Xt(et, Vt, 0))), Qt(tt, new MouseEvent("mouseup", Xt(et, Vt, 0)))
+      Nu = function(uu, Eu) {
+        let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        bu(uu, new PointerEvent("pointerup", Cu(Eu, ju, 0))), bu(uu, new MouseEvent("mouseup", Cu(Eu, ju, 0)))
       },
-      ft = function(tt, et) {
-        let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        lt(tt, et, Vt), Et(tt, et, Vt), Qt(tt, 0 === Vt ? new MouseEvent("click", Xt(et, 0, 0)) : new MouseEvent("contextmenu", Xt(et, 2, 0)))
+      Ou = function(uu, Eu) {
+        let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        cu(uu, Eu, ju), Nu(uu, Eu, ju), bu(uu, 0 === ju ? new MouseEvent("click", Cu(Eu, 0, 0)) : new MouseEvent("contextmenu", Cu(Eu, 2, 0)))
       },
-      wt = function(tt, et, Vt) {
+      Yu = function(uu, Eu, ju) {
         let {
-          leaveBelow: Ot = null,
-          enterBelow: qt = null
+          leaveBelow: su = null,
+          enterBelow: Uu = null
         } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-        if (tt !== et) {
-          if (null !== tt && void 0 !== tt && tt.isConnected) {
-            const qt = {
-              ...Xt(Vt, 0, 0),
-              relatedTarget: et
+        if (uu !== Eu) {
+          if (null !== uu && void 0 !== uu && uu.isConnected) {
+            const Uu = {
+              ...Cu(ju, 0, 0),
+              relatedTarget: Eu
             };
-            Qt(tt, new PointerEvent("pointerout", qt)), Qt(tt, new MouseEvent("mouseout", qt));
-            const Dt = tt => !!et && tt.contains(et) || !!Ot && tt.contains(Ot);
-            for (let et = tt; et && !Dt(et); et = et.parentElement) Qt(et, new PointerEvent("pointerleave", {
-              ...qt,
+            bu(uu, new PointerEvent("pointerout", Uu)), bu(uu, new MouseEvent("mouseout", Uu));
+            const Zu = uu => !!Eu && uu.contains(Eu) || !!su && uu.contains(su);
+            for (let Eu = uu; Eu && !Zu(Eu); Eu = Eu.parentElement) bu(Eu, new PointerEvent("pointerleave", {
+              ...Uu,
               bubbles: !1
-            })), Qt(et, new MouseEvent("mouseleave", {
-              ...qt,
+            })), bu(Eu, new MouseEvent("mouseleave", {
+              ...Uu,
               bubbles: !1
             }))
           }
-          if (et) {
-            const Ot = {
-              ...Xt(Vt, 0, 0),
-              relatedTarget: tt
+          if (Eu) {
+            const su = {
+              ...Cu(ju, 0, 0),
+              relatedTarget: uu
             };
-            Qt(et, new PointerEvent("pointerover", Ot)), Qt(et, new MouseEvent("mouseover", Ot));
-            const Dt = [],
-              mt = et => !(null === tt || void 0 === tt || !tt.isConnected) && et.contains(tt) || !!qt && et.contains(qt);
-            for (let tt = et; tt && !mt(tt); tt = tt.parentElement) Dt.push(tt);
-            for (const tt of Dt.reverse()) Qt(tt, new PointerEvent("pointerenter", {
-              ...Ot,
+            bu(Eu, new PointerEvent("pointerover", su)), bu(Eu, new MouseEvent("mouseover", su));
+            const Zu = [],
+              Xu = Eu => !(null === uu || void 0 === uu || !uu.isConnected) && Eu.contains(uu) || !!Uu && Eu.contains(Uu);
+            for (let uu = Eu; uu && !Xu(uu); uu = uu.parentElement) Zu.push(uu);
+            for (const uu of Zu.reverse()) bu(uu, new PointerEvent("pointerenter", {
+              ...su,
               bubbles: !1
-            })), Qt(tt, new MouseEvent("mouseenter", {
-              ...Ot,
+            })), bu(uu, new MouseEvent("mouseenter", {
+              ...su,
               bubbles: !1
             }));
-            Qt(et, new PointerEvent("pointermove", Xt(Vt, 0, 0))), Qt(et, new MouseEvent("mousemove", Xt(Vt, 0, 0)))
+            bu(Eu, new PointerEvent("pointermove", Cu(ju, 0, 0))), bu(Eu, new MouseEvent("mousemove", Cu(ju, 0, 0)))
           }
-        } else et && (Qt(et, new PointerEvent("pointermove", Xt(Vt, 0, 0))), Qt(et, new MouseEvent("mousemove", Xt(Vt, 0, 0))))
+        } else Eu && (bu(Eu, new PointerEvent("pointermove", Cu(ju, 0, 0))), bu(Eu, new MouseEvent("mousemove", Cu(ju, 0, 0))))
       },
-      yt = tt => {
-        Ot.j.sw(Dt.i, tt)
+      hu = uu => {
+        su.h.TY(Zu.h, uu)
       },
-      Nt = tt => {
-        if (jt(tt)) return void yt(tt);
-        const et = tt.hasAttribute("data-pad-focusable") ? tt.querySelector("a[href]") : null,
-          Vt = null !== et && void 0 !== et ? et : tt;
-        ft(Vt, Ht(Vt))
+      Du = uu => {
+        if (qu(uu)) return void hu(uu);
+        const Eu = uu.hasAttribute("data-pad-focusable") ? uu.querySelector("a[href]") : null,
+          ju = null !== Eu && void 0 !== Eu ? Eu : uu;
+        Ou(ju, fu(ju))
       },
-      Mt = ".Dropdown-root.is-open",
-      bt = tt => {
-        const et = tt.querySelector(".Dropdown-control");
-        return Nt(et), et
+      gu = ".Dropdown-root.is-open",
+      Mu = uu => {
+        const Eu = uu.querySelector(".Dropdown-control");
+        return Du(Eu), Eu
       },
-      Jt = tt => {
-        var et;
-        const Vt = null !== (et = tt.closest(Mt)) && void 0 !== et ? et : tt.querySelector(Mt);
-        return Vt ? bt(Vt) : null
+      eu = uu => {
+        var Eu;
+        const ju = null !== (Eu = uu.closest(gu)) && void 0 !== Eu ? Eu : uu.querySelector(gu);
+        return ju ? Mu(ju) : null
       },
-      Ct = tt => {
-        for (const et of document.querySelectorAll(Mt)) et.contains(tt) || bt(et)
+      Gu = uu => {
+        for (const Eu of document.querySelectorAll(gu)) Eu.contains(uu) || Mu(Eu)
       },
-      ut = tt => null !== tt.closest("input[type=color], input[type=file], [data-pad-mouse-only]"),
-      Kt = tt => {
-        const et = tt ? document.elementFromPoint(tt.x, tt.y) : null;
-        return !(null === et || void 0 === et || !et.closest("[data-pad-repeat]"))
+      pu = uu => null !== uu.closest("input[type=color], input[type=file], [data-pad-mouse-only]"),
+      wu = uu => {
+        const Eu = uu ? document.elementFromPoint(uu.x, uu.y) : null;
+        return !(null === Eu || void 0 === Eu || !Eu.closest("[data-pad-repeat]"))
       },
-      ht = tt => {
-        var et;
-        return null !== (et = [...tt.querySelectorAll("[data-pad-back]")].find(dt.r)) && void 0 !== et ? et : null
+      Ju = uu => {
+        var Eu;
+        return null !== (Eu = [...uu.querySelectorAll("[data-pad-back]")].find(lu.m)) && void 0 !== Eu ? Eu : null
       },
-      vt = tt => {
-        const et = ht(tt);
-        return !!et && (Nt(et), !0)
+      du = uu => {
+        const Eu = Ju(uu);
+        return !!Eu && (Du(Eu), !0)
       },
-      Wt = tt => {
-        var et, Vt, Ot, qt;
-        return null !== (et = null !== (Vt = null !== (Ot = tt.getAttribute("data-pad-key")) && void 0 !== Ot ? Ot : tt.getAttribute("href")) && void 0 !== Vt ? Vt : null === (qt = tt.querySelector("a[href]")) || void 0 === qt ? void 0 : qt.getAttribute("href")) && void 0 !== et ? et : null
+      au = uu => {
+        var Eu, ju, su, Uu;
+        return null !== (Eu = null !== (ju = null !== (su = uu.getAttribute("data-pad-key")) && void 0 !== su ? su : uu.getAttribute("href")) && void 0 !== ju ? ju : null === (Uu = uu.querySelector("a[href]")) || void 0 === Uu ? void 0 : Uu.getAttribute("href")) && void 0 !== Eu ? Eu : null
       }
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

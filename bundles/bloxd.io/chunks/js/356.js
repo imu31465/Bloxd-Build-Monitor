@@ -1,68 +1,68 @@
 export const id = 356;
 export const ids = [356];
 export const modules = {
-  42791: (tt, et, Vt) => {
-    function Ot(tt) {
-      return Math.floor(tt / 8)
+  42830: (uu, Eu, ju) => {
+    function su(uu) {
+      return Math.floor(uu / 8)
     }
 
-    function qt(tt) {
-      return 1 << tt % 8
+    function Uu(uu) {
+      return 1 << uu % 8
     }
-    Vt.d(et, {
-      OptimizeIndices: () => mt
+    ju.d(Eu, {
+      OptimizeIndices: () => Xu
     });
-    class Dt {
-      constructor(tt) {
-        this.size = tt, this._byteArray = new Uint8Array(Math.ceil(this.size / 8))
+    class Zu {
+      constructor(uu) {
+        this.size = uu, this._byteArray = new Uint8Array(Math.ceil(this.size / 8))
       }
-      get(tt) {
-        if (tt >= this.size) throw new RangeError("Bit index out of range");
-        const et = Ot(tt),
-          Vt = qt(tt);
-        return 0 !== (this._byteArray[et] & Vt)
+      get(uu) {
+        if (uu >= this.size) throw new RangeError("Bit index out of range");
+        const Eu = su(uu),
+          ju = Uu(uu);
+        return 0 !== (this._byteArray[Eu] & ju)
       }
-      set(tt, et) {
-        if (tt >= this.size) throw new RangeError("Bit index out of range");
-        const Vt = Ot(tt),
-          Dt = qt(tt);
-        et ? this._byteArray[Vt] |= Dt : this._byteArray[Vt] &= ~Dt
+      set(uu, Eu) {
+        if (uu >= this.size) throw new RangeError("Bit index out of range");
+        const ju = su(uu),
+          Zu = Uu(uu);
+        Eu ? this._byteArray[ju] |= Zu : this._byteArray[ju] &= ~Zu
       }
     }
 
-    function mt(tt) {
-      const et = [],
-        Vt = tt.length / 3;
-      for (let Dt = 0; Dt < Vt; Dt++) et.push([tt[3 * Dt], tt[3 * Dt + 1], tt[3 * Dt + 2]]);
-      const Ot = new Map;
-      for (let Dt = 0; Dt < et.length; Dt++) {
-        const tt = et[Dt];
-        for (const et of tt) {
-          let tt = Ot.get(et);
-          tt || Ot.set(et, tt = []), tt.push(Dt)
+    function Xu(uu) {
+      const Eu = [],
+        ju = uu.length / 3;
+      for (let Zu = 0; Zu < ju; Zu++) Eu.push([uu[3 * Zu], uu[3 * Zu + 1], uu[3 * Zu + 2]]);
+      const su = new Map;
+      for (let Zu = 0; Zu < Eu.length; Zu++) {
+        const uu = Eu[Zu];
+        for (const Eu of uu) {
+          let uu = su.get(Eu);
+          uu || su.set(Eu, uu = []), uu.push(Zu)
         }
       }
-      const qt = new Dt(Vt),
-        mt = [],
-        dt = tt => {
-          const Vt = [tt];
-          for (; Vt.length > 0;) {
-            const tt = Vt.pop();
-            if (!qt.get(tt)) {
-              qt.set(tt, !0), mt.push(et[tt]);
-              for (const Dt of et[tt]) {
-                const tt = Ot.get(Dt);
-                if (!tt) return;
-                for (const et of tt) qt.get(et) || Vt.push(et)
+      const Uu = new Zu(ju),
+        Xu = [],
+        lu = uu => {
+          const ju = [uu];
+          for (; ju.length > 0;) {
+            const uu = ju.pop();
+            if (!Uu.get(uu)) {
+              Uu.set(uu, !0), Xu.push(Eu[uu]);
+              for (const Zu of Eu[uu]) {
+                const uu = su.get(Zu);
+                if (!uu) return;
+                for (const Eu of uu) Uu.get(Eu) || ju.push(Eu)
               }
             }
           }
         };
-      for (let Dt = 0; Dt < Vt; Dt++) qt.get(Dt) || dt(Dt);
-      let jt = 0;
-      for (const Dt of mt) tt[jt++] = Dt[0], tt[jt++] = Dt[1], tt[jt++] = Dt[2]
+      for (let Zu = 0; Zu < ju; Zu++) Uu.get(Zu) || lu(Zu);
+      let qu = 0;
+      for (const Zu of Xu) uu[qu++] = Zu[0], uu[qu++] = Zu[1], uu[qu++] = Zu[2]
     }
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

@@ -1,26 +1,26 @@
 export const id = 15;
 export const ids = [15];
 export const modules = {
-  39633: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      default: () => qt
+  39722: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      default: () => Uu
     });
-    const Ot = [
+    const su = [
         [25, 8, 56],
         [25, 8, 54]
       ],
-      qt = function(tt, et, Vt) {
-        let qt;
+      Uu = function(uu, Eu, ju) {
+        let Uu;
         return {
-          onCreate: tt => {
-            qt = tt
+          onCreate: uu => {
+            Uu = uu
           },
-          onPlayerAltAction: (tt, et, Vt, Dt, mt, dt) => {
-            Ot.some((tt => tt[0] === et && tt[2] === Dt)) && qt.openShop(tt, !1)
+          onPlayerAltAction: (uu, Eu, ju, Zu, Xu, lu) => {
+            su.some((uu => uu[0] === Eu && uu[2] === Zu)) && Uu.openShop(uu, !1)
           }
         }
       }
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

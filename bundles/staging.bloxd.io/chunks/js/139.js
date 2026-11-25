@@ -1,94 +1,94 @@
 export const id = 139;
 export const ids = [138, 139];
 export const modules = {
-  6866: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      forgetShaderPackActiveHint: () => ct,
-      isOtherApiVersion: () => ht,
-      isShaderPackActive: () => Jt,
-      isShaderPackChangePending: () => Kt,
-      markShaderPackChangePending: () => ut,
-      pageShaderPackValidationVersion: () => vt,
-      reconcileStoredShaderPackHint: () => St,
-      removeShaderPack: () => bt,
-      replaceShaderPack: () => yt,
-      saveShaderPack: () => wt,
-      shaderPackNeedsCheck: () => Wt,
-      storedPackOutcome: () => Ct,
-      storedShaderPackFiles: () => lt,
-      toStoredShaderPack: () => Qt
+  6851: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      forgetShaderPackActiveHint: () => ou,
+      isOtherApiVersion: () => Ju,
+      isShaderPackActive: () => eu,
+      isShaderPackChangePending: () => wu,
+      markShaderPackChangePending: () => pu,
+      pageShaderPackValidationVersion: () => du,
+      reconcileStoredShaderPackHint: () => Pu,
+      removeShaderPack: () => Mu,
+      replaceShaderPack: () => hu,
+      saveShaderPack: () => Yu,
+      shaderPackNeedsCheck: () => au,
+      storedPackOutcome: () => Gu,
+      storedShaderPackFiles: () => cu,
+      toStoredShaderPack: () => bu
     });
-    var Ot = Vt(5223),
-      qt = Vt(5216),
-      Dt = Vt(39),
-      mt = Vt(3524),
-      dt = Vt(6873),
-      jt = Vt(6830);
-    const Ht = "shaderPackChangePending";
-    let Xt = null;
+    var su = ju(5209),
+      Uu = ju(5206),
+      Zu = ju(31),
+      Xu = ju(3651),
+      lu = ju(6854),
+      qu = ju(6827);
+    const fu = "shaderPackChangePending";
+    let Cu = null;
 
-    function Qt(tt, et, Vt) {
+    function bu(uu, Eu, ju) {
       return {
-        manifest: tt.manifest,
-        files: (0, Ot.C)(tt.files),
-        validation: et,
-        ...Vt && {
-          listing: Vt
+        manifest: uu.manifest,
+        files: (0, su.w)(uu.files),
+        validation: Eu,
+        ...ju && {
+          listing: ju
         }
       }
     }
 
-    function lt(tt) {
-      return Object.keys(tt.files).map((et => ({
-        path: et,
-        source: tt.files[et]
+    function cu(uu) {
+      return Object.keys(uu.files).map((Eu => ({
+        path: Eu,
+        source: uu.files[Eu]
       })))
     }
-    let Et = Promise.resolve();
+    let Nu = Promise.resolve();
 
-    function ft(tt) {
-      const et = Et.then(tt);
-      return Et = et.catch((() => {})), et
-    }
-
-    function wt(tt, et) {
-      return ft((() => Nt(tt, et)))
+    function Ou(uu) {
+      const Eu = Nu.then(uu);
+      return Nu = Eu.catch((() => {})), Eu
     }
 
-    function yt(tt, et, Vt) {
-      return ft((async () => JSON.stringify(await (0, dt.g)()) === JSON.stringify(tt) && (null === et ? (await Mt(), !0) : Nt(et, Vt))))
-    }
-    async function Nt(tt, et) {
-      const Vt = await Dt.c.setItem(dt.e, tt);
-      return Vt && Rt(tt, et), Vt
-    }
-    async function Mt() {
-      await Dt.c.removeItem(dt.e), Dt.e.removeItem(mt.e)
+    function Yu(uu, Eu) {
+      return Ou((() => Du(uu, Eu)))
     }
 
-    function bt() {
-      return ft(Mt)
+    function hu(uu, Eu, ju) {
+      return Ou((async () => JSON.stringify(await (0, lu.e)()) === JSON.stringify(uu) && (null === Eu ? (await gu(), !0) : Du(Eu, ju))))
+    }
+    async function Du(uu, Eu) {
+      const ju = await Zu.h.setItem(lu.b, uu);
+      return ju && ku(uu, Eu), ju
+    }
+    async function gu() {
+      await Zu.h.removeItem(lu.b), Zu.k.removeItem(Xu.c)
     }
 
-    function Jt(tt, et) {
-      return "active" === Ct(tt, et).kind
+    function Mu() {
+      return Ou(gu)
     }
 
-    function Ct(tt, et) {
-      var Vt;
-      return null === tt ? {
+    function eu(uu, Eu) {
+      return "active" === Gu(uu, Eu).kind
+    }
+
+    function Gu(uu, Eu) {
+      var ju;
+      return null === uu ? {
         kind: "none",
         reason: "nothingStored"
-      } : ht(tt) ? {
+      } : Ju(uu) ? {
         kind: "none",
         reason: "otherApiVersion"
-      } : !1 !== (null === (Vt = tt.validation) || void 0 === Vt ? void 0 : Vt.ok) || tt.validation.fromRecheck ? null === et ? {
+      } : !1 !== (null === (ju = uu.validation) || void 0 === ju ? void 0 : ju.ok) || uu.validation.fromRecheck ? null === Eu ? {
         kind: "none",
         reason: "noCompiler"
-      } : Wt(tt, et) ? {
+      } : au(uu, Eu) ? {
         kind: "blocked",
         messageKey: "shaderPack:failedUnchecked"
-      } : tt.validation.ok ? {
+      } : uu.validation.ok ? {
         kind: "active"
       } : {
         kind: "blocked",
@@ -99,68 +99,68 @@ export const modules = {
       }
     }
 
-    function ut() {
-      Dt.h.setItem(Ht, performance.timeOrigin)
+    function pu() {
+      Zu.l.setItem(fu, performance.timeOrigin)
     }
 
-    function Kt() {
-      return Dt.h.getItem(Ht) === performance.timeOrigin
+    function wu() {
+      return Zu.l.getItem(fu) === performance.timeOrigin
     }
 
-    function ht(tt) {
-      return !(0, qt.h)(tt.manifest.apiVersion)
+    function Ju(uu) {
+      return !(0, Uu.k)(uu.manifest.apiVersion)
     }
 
-    function vt(tt) {
-      return Xt ??= tt.yI((0, jt.shaderPackTextures)()), Xt
+    function du(uu) {
+      return Cu ??= uu.fV((0, qu.shaderPackTextures)()), Cu
     }
 
-    function Wt(tt, et) {
-      var Vt;
-      return (null === (Vt = tt.validation) || void 0 === Vt ? void 0 : Vt.headerVersion) !== vt(et)
+    function au(uu, Eu) {
+      var ju;
+      return (null === (ju = uu.validation) || void 0 === ju ? void 0 : ju.headerVersion) !== du(Eu)
     }
 
-    function St(tt) {
-      return ft((async () => {
-        Rt(await (0, dt.g)(!0), tt)
+    function Pu(uu) {
+      return Ou((async () => {
+        ku(await (0, lu.e)(!0), uu)
       }))
     }
 
-    function ct() {
-      return ft((async () => {
-        Dt.e.removeItem(mt.e)
+    function ou() {
+      return Ou((async () => {
+        Zu.k.removeItem(Xu.c)
       }))
     }
 
-    function Rt(tt, et) {
-      Jt(tt, et) ? Dt.e.setItem(mt.e, !0) : Dt.e.removeItem(mt.e)
+    function ku(uu, Eu) {
+      eu(uu, Eu) ? Zu.k.setItem(Xu.c, !0) : Zu.k.removeItem(Xu.c)
     }
   },
-  6830: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      loadShaderPackTextures: () => mt,
-      shaderPackTextures: () => dt
+  6827: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      loadShaderPackTextures: () => Xu,
+      shaderPackTextures: () => lu
     });
-    var Ot = Vt(5223);
-    let qt = null,
-      Dt = null;
+    var su = ju(5209);
+    let Uu = null,
+      Zu = null;
 
-    function mt() {
-      return Dt ??= Promise.all([Vt.e(73), Vt.e(190)]).then((() => Vt(40674))).then((tt => {
+    function Xu() {
+      return Zu ??= Promise.all([ju.e(73), ju.e(190)]).then((() => ju(40746))).then((uu => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: et,
-          textureNameToIndex: Vt,
-          textureAnimationData: Dt
-        } = tt;
-        return qt ??= (0, Ot.m)(Vt, Dt, et), qt
-      })), Dt
+          FORMER_BLOCK_IMAGE_NAMES: Eu,
+          textureNameToIndex: ju,
+          textureAnimationData: Zu
+        } = uu;
+        return Uu ??= (0, su.j)(ju, Zu, Eu), Uu
+      })), Zu
     }
 
-    function dt() {
-      if (null === qt) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return qt
+    function lu() {
+      if (null === Uu) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return Uu
     }
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

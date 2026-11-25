@@ -1,144 +1,144 @@
 export const id = 209;
 export const ids = [209];
 export const modules = {
-  41734: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      loadGlbAsset: () => be,
-      loadGlbTree: () => Me
+  41759: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      loadGlbAsset: () => ME,
+      loadGlbTree: () => gE
     });
-    var Ot = Vt(38159),
-      qt = Vt(41743),
-      Dt = Vt(36471),
-      mt = Vt.n(Dt);
+    var su = ju(38303),
+      Uu = ju(41761),
+      Zu = ju(36664),
+      Xu = ju.n(Zu);
 
-    function dt() {
-      return mt()('(()=>{class tt extends Error{}function et(et,Vt){const Ot=et._malloc(Vt);if(0===Ot)throw new tt(`Draco: the decoder\'s heap refused ${Vt} bytes`);return Ot}function Vt(tt){return{[tt.DT_FLOAT32]:[Float32Array,5126],[tt.DT_INT8]:[Int8Array,5120],[tt.DT_INT16]:[Int16Array,5122],[tt.DT_INT32]:[Int32Array,5124],[tt.DT_UINT8]:[Uint8Array,5121],[tt.DT_UINT16]:[Uint16Array,5123],[tt.DT_UINT32]:[Uint32Array,5125]}}function Ot(et,Ot,qt,Dt,mt){let dt=null,jt=null,Ht=null;try{dt=new et.Decoder,jt=new et.DecoderBuffer,jt.Init(Ot,Ot.byteLength);let Xt=0;const Qt=dt.GetEncodedGeometryType(jt);if(Qt===et.TRIANGULAR_MESH){const Vt=new et.Mesh;Ht=Vt;const Ot=dt.DecodeBufferToMesh(jt,Vt);if(!Ot.ok()||0===Vt.ptr)throw new tt(Ot.error_msg());Xt=3*Vt.num_faces()}else{if(Qt!==et.POINT_CLOUD)throw new tt(`Draco: Cannot decode invalid geometry type ${Qt}`);{const Vt=new et.PointCloud;Ht=Vt;const Ot=dt.DecodeBufferToPointCloud(jt,Vt);if(!Ot.ok()||!Vt.ptr)throw new tt(Ot.error_msg())}}const lt=Ht.num_points();if(lt!==Dt.vertices||Xt!==Dt.indices)throw new tt(`Draco: decoded ${lt} vertices and ${Xt} indices, the accessors declare ${Dt.vertices} and ${Dt.indices}`);const Et=Vt(et),ft=[];for(const{kind:et,id:Vt,components:Ot}of qt){const qt=dt.GetAttributeByUniqueId(Ht,Vt);if(!qt||0===qt.ptr)throw new tt(`Draco: no attribute with id ${Vt} (${et})`);const Dt=qt.data_type();if(!Et[Dt])throw new tt(`Draco: Cannot decode invalid data type ${Dt}`);if(qt.num_components()!==Ot)throw new tt(`Draco: ${et} decodes to ${qt.num_components()} components, its accessor declares ${Ot}`);ft.push([et,qt,Dt])}return mt({dracoDecoder:dt,geometry:Ht,triangles:Qt===et.TRIANGULAR_MESH,numPoints:lt,numIndices:Xt,attributes:ft})}finally{Ht&&et.destroy(Ht),jt&&et.destroy(jt),dt&&et.destroy(dt)}}const qt=self;let Dt=null;self.onmessage=tt=>{let{data:mt}=tt;if("init"===mt.id){try{importScripts(mt.url),Dt=DracoDecoderModule({wasmBinary:mt.wasmBinary}),qt.postMessage({id:"initDone"})}catch(Qt){qt.postMessage({id:"initError",message:Qt instanceof Error?Qt.message:String(Qt)})}return}const{seq:dt,data:jt,attributeIds:Ht,expected:Xt}=mt;Dt?Dt.then((tt=>{try{const Dt=function(tt,qt,Dt,mt){const dt=Object.keys(Dt).map((tt=>({kind:tt,id:Dt[tt],components:mt.components[tt]})));return Ot(tt,qt,dt,mt,(Ot=>{let{dracoDecoder:qt,geometry:Dt,triangles:mt,numPoints:dt,numIndices:jt,attributes:Ht}=Ot;const Xt=Vt(tt);let Qt=null;if(mt){const Vt=4*jt,Ot=et(tt,Vt);try{qt.GetTrianglesUInt32Array(Dt,Vt,Ot),Qt=new Uint32Array(jt),Qt.set(new Uint32Array(tt.HEAPF32.buffer,Ot,jt))}finally{tt._free(Ot)}}const lt=[];for(const[Vt,Et,ft]of Ht){const[Ot]=Xt[ft],mt=Et.num_components(),jt=dt*mt,Ht=jt*Ot.BYTES_PER_ELEMENT,Qt=et(tt,Ht);try{qt.GetAttributeDataArrayForAllPoints(Dt,Et,ft,Ht,Qt),lt.push({kind:Vt,data:new Ot(tt.HEAPF32.buffer,Qt,jt).slice(),size:mt,byteOffset:Et.byte_offset(),byteStride:Et.byte_stride(),normalized:Et.normalized()})}finally{tt._free(Qt)}}return{indices:Qt,attributes:lt,totalVertices:dt}}))}(tt,jt,Ht,Xt),mt=Dt.attributes.map((tt=>tt.data.buffer));Dt.indices&&mt.push(Dt.indices.buffer),qt.postMessage({id:"decoded",seq:dt,...Dt},mt)}catch(Qt){qt.postMessage({id:"decodeError",seq:dt,message:Qt instanceof Error?Qt.message:String(Qt)})}}),(tt=>{qt.postMessage({id:"decodeError",seq:dt,message:tt instanceof Error?tt.message:String(tt)})})):qt.postMessage({id:"decodeError",seq:dt,message:"Draco: the decoder module is not loaded"})}})();', "Worker", void 0, Vt.p + "dracoDecode.worker.d1a38d00.worker.js")
+    function lu() {
+      return Xu()('(()=>{class uu extends Error{}function Eu(Eu,ju){const su=Eu._malloc(ju);if(0===su)throw new uu(`Draco: the decoder\'s heap refused ${ju} bytes`);return su}function ju(uu){return{[uu.DT_FLOAT32]:[Float32Array,5126],[uu.DT_INT8]:[Int8Array,5120],[uu.DT_INT16]:[Int16Array,5122],[uu.DT_INT32]:[Int32Array,5124],[uu.DT_UINT8]:[Uint8Array,5121],[uu.DT_UINT16]:[Uint16Array,5123],[uu.DT_UINT32]:[Uint32Array,5125]}}function su(Eu,su,Uu,Zu,Xu){let lu=null,qu=null,fu=null;try{lu=new Eu.Decoder,qu=new Eu.DecoderBuffer,qu.Init(su,su.byteLength);let Cu=0;const bu=lu.GetEncodedGeometryType(qu);if(bu===Eu.TRIANGULAR_MESH){const ju=new Eu.Mesh;fu=ju;const su=lu.DecodeBufferToMesh(qu,ju);if(!su.ok()||0===ju.ptr)throw new uu(su.error_msg());Cu=3*ju.num_faces()}else{if(bu!==Eu.POINT_CLOUD)throw new uu(`Draco: Cannot decode invalid geometry type ${bu}`);{const ju=new Eu.PointCloud;fu=ju;const su=lu.DecodeBufferToPointCloud(qu,ju);if(!su.ok()||!ju.ptr)throw new uu(su.error_msg())}}const cu=fu.num_points();if(cu!==Zu.vertices||Cu!==Zu.indices)throw new uu(`Draco: decoded ${cu} vertices and ${Cu} indices, the accessors declare ${Zu.vertices} and ${Zu.indices}`);const Nu=ju(Eu),Ou=[];for(const{kind:Eu,id:ju,components:su}of Uu){const Uu=lu.GetAttributeByUniqueId(fu,ju);if(!Uu||0===Uu.ptr)throw new uu(`Draco: no attribute with id ${ju} (${Eu})`);const Zu=Uu.data_type();if(!Nu[Zu])throw new uu(`Draco: Cannot decode invalid data type ${Zu}`);if(Uu.num_components()!==su)throw new uu(`Draco: ${Eu} decodes to ${Uu.num_components()} components, its accessor declares ${su}`);Ou.push([Eu,Uu,Zu])}return Xu({dracoDecoder:lu,geometry:fu,triangles:bu===Eu.TRIANGULAR_MESH,numPoints:cu,numIndices:Cu,attributes:Ou})}finally{fu&&Eu.destroy(fu),qu&&Eu.destroy(qu),lu&&Eu.destroy(lu)}}const Uu=self;let Zu=null;self.onmessage=uu=>{let{data:Xu}=uu;if("init"===Xu.id){try{importScripts(Xu.url),Zu=DracoDecoderModule({wasmBinary:Xu.wasmBinary}),Uu.postMessage({id:"initDone"})}catch(bu){Uu.postMessage({id:"initError",message:bu instanceof Error?bu.message:String(bu)})}return}const{seq:lu,data:qu,attributeIds:fu,expected:Cu}=Xu;Zu?Zu.then((uu=>{try{const Zu=function(uu,Uu,Zu,Xu){const lu=Object.keys(Zu).map((uu=>({kind:uu,id:Zu[uu],components:Xu.components[uu]})));return su(uu,Uu,lu,Xu,(su=>{let{dracoDecoder:Uu,geometry:Zu,triangles:Xu,numPoints:lu,numIndices:qu,attributes:fu}=su;const Cu=ju(uu);let bu=null;if(Xu){const ju=4*qu,su=Eu(uu,ju);try{Uu.GetTrianglesUInt32Array(Zu,ju,su),bu=new Uint32Array(qu),bu.set(new Uint32Array(uu.HEAPF32.buffer,su,qu))}finally{uu._free(su)}}const cu=[];for(const[ju,Nu,Ou]of fu){const[su]=Cu[Ou],Xu=Nu.num_components(),qu=lu*Xu,fu=qu*su.BYTES_PER_ELEMENT,bu=Eu(uu,fu);try{Uu.GetAttributeDataArrayForAllPoints(Zu,Nu,Ou,fu,bu),cu.push({kind:ju,data:new su(uu.HEAPF32.buffer,bu,qu).slice(),size:Xu,byteOffset:Nu.byte_offset(),byteStride:Nu.byte_stride(),normalized:Nu.normalized()})}finally{uu._free(bu)}}return{indices:bu,attributes:cu,totalVertices:lu}}))}(uu,qu,fu,Cu),Xu=Zu.attributes.map((uu=>uu.data.buffer));Zu.indices&&Xu.push(Zu.indices.buffer),Uu.postMessage({id:"decoded",seq:lu,...Zu},Xu)}catch(bu){Uu.postMessage({id:"decodeError",seq:lu,message:bu instanceof Error?bu.message:String(bu)})}}),(uu=>{Uu.postMessage({id:"decodeError",seq:lu,message:uu instanceof Error?uu.message:String(uu)})})):Uu.postMessage({id:"decodeError",seq:lu,message:"Draco: the decoder module is not loaded"})}})();', "Worker", void 0, ju.p + "dracoDecode.worker.9e3a9b7f.worker.js")
     }
-    var jt = Vt(106);
-    const Ht = 1e3;
-    let Xt = null,
-      Qt = null;
-    const lt = [],
-      Et = [];
-    let ft = 0;
-    const wt = {
+    var qu = ju(91);
+    const fu = 1e3;
+    let Cu = null,
+      bu = null;
+    const cu = [],
+      Nu = [];
+    let Ou = 0;
+    const Yu = {
         decodes: 0,
         workersStarted: 0,
         mostWorkers: 0
       },
-      yt = function(tt, et) {
-        const Vt = tt ? Math.max(1, Math.min(Math.floor(.5 * tt), 4)) : 1;
-        return et ? Math.min(Vt, 2) : Vt
-      }("object" === typeof navigator ? navigator.hardwareConcurrency : void 0, (0, jt.isMobile)());
+      hu = function(uu, Eu) {
+        const ju = uu ? Math.max(1, Math.min(Math.floor(.5 * uu), 4)) : 1;
+        return Eu ? Math.min(ju, 2) : ju
+      }("object" === typeof navigator ? navigator.hardwareConcurrency : void 0, (0, qu.isMobile)());
 
-    function Nt() {
-      if (!Xt) return Promise.reject(new Error("Draco: configureDracoPool was not called"));
+    function Du() {
+      if (!Cu) return Promise.reject(new Error("Draco: configureDracoPool was not called"));
       const {
-        scriptUrl: tt,
-        wasmBinaryUrl: et
-      } = Xt;
-      return Qt ??= fetch(et).then((tt => {
-        if (!tt.ok) throw new Error(`Draco: fetching ${et} failed: ${tt.status}`);
-        return tt.arrayBuffer()
-      })), Qt.catch((() => {
-        Qt = null
-      })), wt.workersStarted++, Qt.then((et => new Promise(((Vt, Ot) => {
-        const qt = new dt;
-        qt.onerror = tt => {
-          qt.onmessage = null, qt.onerror = null, qt.terminate(), Ot(new Error("Draco: the decode worker failed to start" + (tt.message ? `: ${tt.message}` : " (its script did not load)")))
-        }, qt.onmessage = tt => {
+        scriptUrl: uu,
+        wasmBinaryUrl: Eu
+      } = Cu;
+      return bu ??= fetch(Eu).then((uu => {
+        if (!uu.ok) throw new Error(`Draco: fetching ${Eu} failed: ${uu.status}`);
+        return uu.arrayBuffer()
+      })), bu.catch((() => {
+        bu = null
+      })), Yu.workersStarted++, bu.then((Eu => new Promise(((ju, su) => {
+        const Uu = new lu;
+        Uu.onerror = uu => {
+          Uu.onmessage = null, Uu.onerror = null, Uu.terminate(), su(new Error("Draco: the decode worker failed to start" + (uu.message ? `: ${uu.message}` : " (its script did not load)")))
+        }, Uu.onmessage = uu => {
           let {
-            data: et
-          } = tt;
-          qt.onmessage = null, qt.onerror = null, "initDone" === et.id ? Vt(qt) : (qt.terminate(), Ot(new Error(`Draco: ${"initError"===et.id?et.message:"the worker did not start"}`)))
+            data: Eu
+          } = uu;
+          Uu.onmessage = null, Uu.onerror = null, "initDone" === Eu.id ? ju(Uu) : (Uu.terminate(), su(new Error(`Draco: ${"initError"===Eu.id?Eu.message:"the worker did not start"}`)))
         };
-        const Dt = et.slice(0),
-          mt = {
+        const Zu = Eu.slice(0),
+          Xu = {
             id: "init",
-            url: tt,
-            wasmBinary: Dt
+            url: uu,
+            wasmBinary: Zu
           };
-        qt.postMessage(mt, [Dt])
+        Uu.postMessage(Xu, [Zu])
       }))))
     }
 
-    function Mt(tt) {
-      const et = lt.indexOf(tt); - 1 !== et && lt.splice(et, 1);
-      const Vt = Et.shift();
-      Vt && Jt(Vt)
+    function gu(uu) {
+      const Eu = cu.indexOf(uu); - 1 !== Eu && cu.splice(Eu, 1);
+      const ju = Nu.shift();
+      ju && eu(ju)
     }
 
-    function bt(tt, et) {
-      tt.busy = !0, tt.releaseTimer && (clearTimeout(tt.releaseTimer), tt.releaseTimer = null);
-      tt.worker.then((Vt => {
-        const Ot = ft++;
-        Vt.onmessage = qt => {
+    function Mu(uu, Eu) {
+      uu.busy = !0, uu.releaseTimer && (clearTimeout(uu.releaseTimer), uu.releaseTimer = null);
+      uu.worker.then((ju => {
+        const su = Ou++;
+        ju.onmessage = Uu => {
           let {
-            data: Dt
-          } = qt;
-          if (("decoded" === Dt.id || "decodeError" === Dt.id) && Dt.seq === Ot) {
-            if (Vt.onmessage = null, Vt.onerror = null, "decoded" === Dt.id) return wt.decodes++, et.resolve({
-              indices: Dt.indices,
-              attributes: Dt.attributes,
-              totalVertices: Dt.totalVertices
+            data: Zu
+          } = Uu;
+          if (("decoded" === Zu.id || "decodeError" === Zu.id) && Zu.seq === su) {
+            if (ju.onmessage = null, ju.onerror = null, "decoded" === Zu.id) return Yu.decodes++, Eu.resolve({
+              indices: Zu.indices,
+              attributes: Zu.attributes,
+              totalVertices: Zu.totalVertices
             }), void(() => {
-              const et = Et.shift();
-              et ? bt(tt, et) : (tt.busy = !1, tt.releaseTimer = setTimeout((() => {
-                const et = lt.indexOf(tt); - 1 !== et && lt.splice(et, 1), tt.worker.then((tt => {
-                  tt.terminate()
+              const Eu = Nu.shift();
+              Eu ? Mu(uu, Eu) : (uu.busy = !1, uu.releaseTimer = setTimeout((() => {
+                const Eu = cu.indexOf(uu); - 1 !== Eu && cu.splice(Eu, 1), uu.worker.then((uu => {
+                  uu.terminate()
                 }))
-              }), Ht))
+              }), fu))
             })();
-            Vt.terminate(), et.reject(new Error(Dt.message)), Mt(tt)
+            ju.terminate(), Eu.reject(new Error(Zu.message)), gu(uu)
           }
-        }, Vt.onerror = Ot => {
-          Vt.onmessage = null, Vt.onerror = null, Vt.terminate(), et.reject(new Error(`Draco: the decode worker failed: ${Ot.message}`)), Mt(tt)
+        }, ju.onerror = su => {
+          ju.onmessage = null, ju.onerror = null, ju.terminate(), Eu.reject(new Error(`Draco: the decode worker failed: ${su.message}`)), gu(uu)
         };
-        const qt = {
+        const Uu = {
           id: "decode",
-          seq: Ot,
-          data: et.data,
-          attributeIds: et.attributeIds,
-          expected: et.expected
+          seq: su,
+          data: Eu.data,
+          attributeIds: Eu.attributeIds,
+          expected: Eu.expected
         };
-        Vt.postMessage(qt, [et.data.buffer])
-      }), (Vt => {
-        et.reject(Vt instanceof Error ? Vt : new Error(String(Vt))), Mt(tt)
+        ju.postMessage(Uu, [Eu.data.buffer])
+      }), (ju => {
+        Eu.reject(ju instanceof Error ? ju : new Error(String(ju))), gu(uu)
       }))
     }
 
-    function Jt(tt) {
-      const et = lt.find((tt => !tt.busy));
-      if (et) bt(et, tt);
+    function eu(uu) {
+      const Eu = cu.find((uu => !uu.busy));
+      if (Eu) Mu(Eu, uu);
       else {
-        if (lt.length < yt) {
-          const et = {
-            worker: Nt(),
+        if (cu.length < hu) {
+          const Eu = {
+            worker: Du(),
             busy: !0,
             releaseTimer: null
           };
-          return lt.push(et), wt.mostWorkers = Math.max(wt.mostWorkers, lt.length), void bt(et, tt)
+          return cu.push(Eu), Yu.mostWorkers = Math.max(Yu.mostWorkers, cu.length), void Mu(Eu, uu)
         }
-        Et.push(tt)
+        Nu.push(uu)
       }
     }
 
-    function Ct(tt, et, Vt) {
-      return new Promise(((Ot, qt) => {
-        Jt({
-          data: new Int8Array(tt.buffer, tt.byteOffset, tt.byteLength).slice(),
-          attributeIds: et,
-          expected: Vt,
-          resolve: Ot,
-          reject: qt
+    function Gu(uu, Eu, ju) {
+      return new Promise(((su, Uu) => {
+        eu({
+          data: new Int8Array(uu.buffer, uu.byteOffset, uu.byteLength).slice(),
+          attributeIds: Eu,
+          expected: ju,
+          resolve: su,
+          reject: Uu
         })
       }))
     }
-    var ut = Vt(37716),
-      Kt = Vt(37727),
-      ht = Vt(34466),
-      vt = Vt(34459);
-    const Wt = {
+    var pu = ju(37854),
+      wu = ju(37867),
+      Ju = ju(34621),
+      du = ju(34617);
+    const au = {
       index: -1,
       magFilter: void 0,
       minFilter: void 0,
@@ -146,323 +146,323 @@ export const modules = {
       wrapT: void 0
     };
 
-    function St(tt) {
-      const et = (0, vt.g)(tt.byteLength);
-      if (et) throw new ht.n(et);
+    function Pu(uu) {
+      const Eu = (0, du.k)(uu.byteLength);
+      if (Eu) throw new Ju.o(Eu);
       const {
-        json: Vt,
-        bin: Ot
-      } = (0, ht.z)(tt), qt = (0, vt.f)(Vt, Ot);
-      if (qt) throw new ht.n(qt);
+        json: ju,
+        bin: su
+      } = (0, Ju.C)(uu), Uu = (0, du.h)(ju, su);
+      if (Uu) throw new Ju.o(Uu);
       try {
-        return function(tt, et) {
-          var Vt, Ot, qt, Dt, mt, dt, jt, Ht, Xt, Qt, lt, Et, ft, wt, yt;
-          const Nt = new Map,
-            Mt = Vt => {
-              let Ot = Nt.get(Vt);
-              if (!Ot) {
-                var qt;
-                const Dt = tt.bufferViews[Vt],
-                  mt = null !== (qt = Dt.byteOffset) && void 0 !== qt ? qt : 0;
-                Ot = {
-                  index: Vt,
-                  bytes: et.subarray(mt, mt + Dt.byteLength),
-                  byteStride: Dt.byteStride
-                }, Nt.set(Vt, Ot)
+        return function(uu, Eu) {
+          var ju, su, Uu, Zu, Xu, lu, qu, fu, Cu, bu, cu, Nu, Ou, Yu, hu;
+          const Du = new Map,
+            gu = ju => {
+              let su = Du.get(ju);
+              if (!su) {
+                var Uu;
+                const Zu = uu.bufferViews[ju],
+                  Xu = null !== (Uu = Zu.byteOffset) && void 0 !== Uu ? Uu : 0;
+                su = {
+                  index: ju,
+                  bytes: Eu.subarray(Xu, Xu + Zu.byteLength),
+                  byteStride: Zu.byteStride
+                }, Du.set(ju, su)
               }
-              return Ot
+              return su
             },
-            bt = new Map,
-            Jt = et => {
-              let Vt = bt.get(et);
-              if (!Vt) {
-                var Ot;
-                const qt = tt.accessors[et];
-                Vt = {
-                  index: et,
-                  count: qt.count,
-                  type: qt.type,
-                  numComponents: ht.q[qt.type],
-                  componentType: qt.componentType,
-                  normalized: null !== (Ot = qt.normalized) && void 0 !== Ot && Ot,
-                  byteOffset: qt.byteOffset,
-                  bufferView: void 0 === qt.bufferView ? null : Mt(qt.bufferView),
-                  min: qt.min,
-                  max: qt.max
-                }, bt.set(et, Vt)
+            Mu = new Map,
+            eu = Eu => {
+              let ju = Mu.get(Eu);
+              if (!ju) {
+                var su;
+                const Uu = uu.accessors[Eu];
+                ju = {
+                  index: Eu,
+                  count: Uu.count,
+                  type: Uu.type,
+                  numComponents: Ju.r[Uu.type],
+                  componentType: Uu.componentType,
+                  normalized: null !== (su = Uu.normalized) && void 0 !== su && su,
+                  byteOffset: Uu.byteOffset,
+                  bufferView: void 0 === Uu.bufferView ? null : gu(Uu.bufferView),
+                  min: Uu.min,
+                  max: Uu.max
+                }, Mu.set(Eu, ju)
               }
-              return Vt
+              return ju
             },
-            Ct = null !== (Vt = null === (Ot = tt.extensionsUsed) || void 0 === Ot ? void 0 : Ot.includes("KHR_draco_mesh_compression")) && void 0 !== Vt && Vt,
-            ut = (null !== (qt = tt.meshes) && void 0 !== qt ? qt : []).map(((et, Vt) => {
-              const Ot = et.primitives.map(((et, Vt) => {
-                var Ot, qt, Dt;
-                const mt = Ct ? null === (Ot = et.extensions) || void 0 === Ot ? void 0 : Ot.KHR_draco_mesh_compression : void 0;
-                let dt = null;
-                const jt = [];
-                if (mt) {
-                  const Vt = {
-                    vertices: tt.accessors[et.attributes.POSITION].count,
-                    indices: void 0 === et.indices ? 0 : tt.accessors[et.indices].count,
+            Gu = null !== (ju = null === (su = uu.extensionsUsed) || void 0 === su ? void 0 : su.includes("KHR_draco_mesh_compression")) && void 0 !== ju && ju,
+            pu = (null !== (Uu = uu.meshes) && void 0 !== Uu ? Uu : []).map(((Eu, ju) => {
+              const su = Eu.primitives.map(((Eu, ju) => {
+                var su, Uu, Zu;
+                const Xu = Gu ? null === (su = Eu.extensions) || void 0 === su ? void 0 : su.KHR_draco_mesh_compression : void 0;
+                let lu = null;
+                const qu = [];
+                if (Xu) {
+                  const ju = {
+                    vertices: uu.accessors[Eu.attributes.POSITION].count,
+                    indices: void 0 === Eu.indices ? 0 : uu.accessors[Eu.indices].count,
                     components: {}
                   };
-                  dt = {
-                    bufferView: Mt(mt.bufferView),
+                  lu = {
+                    bufferView: gu(Xu.bufferView),
                     attributeIds: {},
                     normalized: {},
-                    expected: Vt
+                    expected: ju
                   };
-                  for (const [Ot, qt] of ht.i) {
-                    const Dt = mt.attributes[Ot];
-                    if (void 0 === Dt) continue;
-                    dt.attributeIds[qt] = Dt;
-                    const jt = et.attributes[Ot];
-                    var Ht;
-                    if (void 0 !== jt) dt.normalized[qt] = null !== (Ht = tt.accessors[jt].normalized) && void 0 !== Ht && Ht, Vt.components[qt] = ht.q[tt.accessors[jt].type]
+                  for (const [su, Uu] of Ju.j) {
+                    const Zu = Xu.attributes[su];
+                    if (void 0 === Zu) continue;
+                    lu.attributeIds[Uu] = Zu;
+                    const qu = Eu.attributes[su];
+                    var fu;
+                    if (void 0 !== qu) lu.normalized[Uu] = null !== (fu = uu.accessors[qu].normalized) && void 0 !== fu && fu, ju.components[Uu] = Ju.r[uu.accessors[qu].type]
                   }
                 } else
-                  for (const [tt, Xt] of ht.i) {
-                    const Vt = et.attributes[tt];
-                    void 0 !== Vt && jt.push({
-                      semantic: tt,
-                      kind: Xt,
-                      accessor: Jt(Vt)
+                  for (const [uu, Cu] of Ju.j) {
+                    const ju = Eu.attributes[uu];
+                    void 0 !== ju && qu.push({
+                      semantic: uu,
+                      kind: Cu,
+                      accessor: eu(ju)
                     })
                   }
                 return {
-                  index: Vt,
-                  mode: null !== (qt = et.mode) && void 0 !== qt ? qt : 4,
-                  attributes: jt,
-                  indices: mt || void 0 === et.indices ? null : Jt(et.indices),
-                  position: void 0 === et.attributes.POSITION ? null : Jt(et.attributes.POSITION),
-                  material: null !== (Dt = et.material) && void 0 !== Dt ? Dt : null,
-                  draco: dt
+                  index: ju,
+                  mode: null !== (Uu = Eu.mode) && void 0 !== Uu ? Uu : 4,
+                  attributes: qu,
+                  indices: Xu || void 0 === Eu.indices ? null : eu(Eu.indices),
+                  position: void 0 === Eu.attributes.POSITION ? null : eu(Eu.attributes.POSITION),
+                  material: null !== (Zu = Eu.material) && void 0 !== Zu ? Zu : null,
+                  draco: lu
                 }
               }));
               return {
-                index: Vt,
-                name: et.name,
-                primitives: Ot,
-                extras: et.extras
+                index: ju,
+                name: Eu.name,
+                primitives: su,
+                extras: Eu.extras
               }
             })),
-            Kt = (null !== (Dt = tt.nodes) && void 0 !== Dt ? Dt : []).map(((tt, et) => {
-              var Vt, Ot;
+            wu = (null !== (Zu = uu.nodes) && void 0 !== Zu ? Zu : []).map(((uu, Eu) => {
+              var ju, su;
               return {
-                index: et,
-                name: tt.name,
-                children: null !== (Vt = tt.children) && void 0 !== Vt ? Vt : [],
-                mesh: null !== (Ot = tt.mesh) && void 0 !== Ot ? Ot : null,
-                translation: tt.translation,
-                rotation: tt.rotation,
-                scale: tt.scale,
-                hasCamera: void 0 !== tt.camera,
-                extras: tt.extras
+                index: Eu,
+                name: uu.name,
+                children: null !== (ju = uu.children) && void 0 !== ju ? ju : [],
+                mesh: null !== (su = uu.mesh) && void 0 !== su ? su : null,
+                translation: uu.translation,
+                rotation: uu.rotation,
+                scale: uu.scale,
+                hasCamera: void 0 !== uu.camera,
+                extras: uu.extras
               }
             })),
-            vt = null !== (mt = null === (dt = tt.extensionsUsed) || void 0 === dt ? void 0 : dt.includes("KHR_materials_unlit")) && void 0 !== mt && mt,
-            St = null !== (jt = null === (Ht = tt.extensionsUsed) || void 0 === Ht ? void 0 : Ht.includes("KHR_texture_transform")) && void 0 !== jt && jt,
-            ct = (null !== (Xt = tt.materials) && void 0 !== Xt ? Xt : []).map(((tt, et) => {
-              var Vt, Ot, qt, Dt;
-              const mt = tt.pbrMetallicRoughness,
-                dt = null === mt || void 0 === mt ? void 0 : mt.baseColorTexture;
+            du = null !== (Xu = null === (lu = uu.extensionsUsed) || void 0 === lu ? void 0 : lu.includes("KHR_materials_unlit")) && void 0 !== Xu && Xu,
+            Pu = null !== (qu = null === (fu = uu.extensionsUsed) || void 0 === fu ? void 0 : fu.includes("KHR_texture_transform")) && void 0 !== qu && qu,
+            ou = (null !== (Cu = uu.materials) && void 0 !== Cu ? Cu : []).map(((uu, Eu) => {
+              var ju, su, Uu, Zu;
+              const Xu = uu.pbrMetallicRoughness,
+                lu = null === Xu || void 0 === Xu ? void 0 : Xu.baseColorTexture;
               return {
-                index: et,
-                name: tt.name,
-                extras: tt.extras,
-                unlit: vt && void 0 !== (null === (Vt = tt.extensions) || void 0 === Vt ? void 0 : Vt.KHR_materials_unlit),
-                pbr: mt ? {
-                  baseColorFactor: mt.baseColorFactor,
-                  metallicFactor: mt.metallicFactor,
-                  roughnessFactor: mt.roughnessFactor
+                index: Eu,
+                name: uu.name,
+                extras: uu.extras,
+                unlit: du && void 0 !== (null === (ju = uu.extensions) || void 0 === ju ? void 0 : ju.KHR_materials_unlit),
+                pbr: Xu ? {
+                  baseColorFactor: Xu.baseColorFactor,
+                  metallicFactor: Xu.metallicFactor,
+                  roughnessFactor: Xu.roughnessFactor
                 } : null,
-                baseColorTexture: dt ? {
-                  texture: dt.index,
-                  transform: St && (null === (Ot = dt.extensions) || void 0 === Ot ? void 0 : Ot.KHR_texture_transform) || null
+                baseColorTexture: lu ? {
+                  texture: lu.index,
+                  transform: Pu && (null === (su = lu.extensions) || void 0 === su ? void 0 : su.KHR_texture_transform) || null
                 } : null,
-                emissiveFactor: tt.emissiveFactor,
-                alphaMode: null !== (qt = tt.alphaMode) && void 0 !== qt ? qt : "OPAQUE",
-                alphaCutoff: tt.alphaCutoff,
-                doubleSided: null !== (Dt = tt.doubleSided) && void 0 !== Dt && Dt
+                emissiveFactor: uu.emissiveFactor,
+                alphaMode: null !== (Uu = uu.alphaMode) && void 0 !== Uu ? Uu : "OPAQUE",
+                alphaCutoff: uu.alphaCutoff,
+                doubleSided: null !== (Zu = uu.doubleSided) && void 0 !== Zu && Zu
               }
             })),
-            Rt = (null !== (Qt = tt.textures) && void 0 !== Qt ? Qt : []).map(((et, Vt) => {
-              var Ot, qt;
-              const Dt = void 0 === et.sampler ? Wt : {
-                index: et.sampler,
-                ...null === (Ot = tt.samplers) || void 0 === Ot ? void 0 : Ot[et.sampler]
+            ku = (null !== (bu = uu.textures) && void 0 !== bu ? bu : []).map(((Eu, ju) => {
+              var su, Uu;
+              const Zu = void 0 === Eu.sampler ? au : {
+                index: Eu.sampler,
+                ...null === (su = uu.samplers) || void 0 === su ? void 0 : su[Eu.sampler]
               };
               return {
-                index: Vt,
+                index: ju,
                 sampler: {
-                  index: Dt.index,
-                  magFilter: Dt.magFilter,
-                  minFilter: Dt.minFilter,
-                  wrapS: Dt.wrapS,
-                  wrapT: Dt.wrapT
+                  index: Zu.index,
+                  magFilter: Zu.magFilter,
+                  minFilter: Zu.minFilter,
+                  wrapS: Zu.wrapS,
+                  wrapT: Zu.wrapT
                 },
-                image: null !== (qt = et.source) && void 0 !== qt ? qt : -1
+                image: null !== (Uu = Eu.source) && void 0 !== Uu ? Uu : -1
               }
             })),
-            It = (null !== (lt = tt.images) && void 0 !== lt ? lt : []).map(((tt, et) => ({
-              index: et,
-              name: tt.name,
-              mimeType: tt.mimeType,
-              bufferView: Mt(tt.bufferView)
+            mu = (null !== (cu = uu.images) && void 0 !== cu ? cu : []).map(((uu, Eu) => ({
+              index: Eu,
+              name: uu.name,
+              mimeType: uu.mimeType,
+              bufferView: gu(uu.bufferView)
             }))),
-            Pt = null !== (Et = (0, ht.w)(tt)) && void 0 !== Et ? Et : 0;
+            vu = null !== (Nu = (0, Ju.A)(uu)) && void 0 !== Nu ? Nu : 0;
           return {
-            json: tt,
-            rootNodes: null !== (ft = null === (wt = tt.scenes) || void 0 === wt || null === (yt = wt[Pt]) || void 0 === yt ? void 0 : yt.nodes) && void 0 !== ft ? ft : [],
-            nodes: Kt,
-            meshes: ut,
-            materials: ct,
-            textures: Rt,
-            images: It
+            json: uu,
+            rootNodes: null !== (Ou = null === (Yu = uu.scenes) || void 0 === Yu || null === (hu = Yu[vu]) || void 0 === hu ? void 0 : hu.nodes) && void 0 !== Ou ? Ou : [],
+            nodes: wu,
+            meshes: pu,
+            materials: ou,
+            textures: ku,
+            images: mu
           }
-        }(Vt, Ot)
-      } catch (Dt) {
-        throw Dt instanceof ht.l ? Dt : new ht.l(`reading the GLB failed: ${Dt instanceof Error?Dt.message:String(Dt)}`)
+        }(ju, su)
+      } catch (Zu) {
+        throw Zu instanceof Ju.k ? Zu : new Ju.k(`reading the GLB failed: ${Zu instanceof Error?Zu.message:String(Zu)}`)
       }
     }
-    async function ct(tt, et) {
-      var Vt, Ot;
-      const qt = tt.draco;
-      if (!qt) throw new ht.l("not a Draco primitive");
-      let Dt;
+    async function ou(uu, Eu) {
+      var ju, su;
+      const Uu = uu.draco;
+      if (!Uu) throw new Ju.k("not a Draco primitive");
+      let Zu;
       try {
-        Dt = await et(qt.bufferView.bytes, qt.attributeIds, qt.expected)
-      } catch (Ht) {
-        throw new ht.l(`Draco decoding failed: ${Ht instanceof Error?Ht.message:String(Ht)}`)
+        Zu = await Eu(Uu.bufferView.bytes, Uu.attributeIds, Uu.expected)
+      } catch (fu) {
+        throw new Ju.k(`Draco decoding failed: ${fu instanceof Error?fu.message:String(fu)}`)
       }
       const {
-        vertices: mt,
-        indices: dt,
-        components: jt
-      } = qt.expected;
-      if (Dt.totalVertices !== mt || (null !== (Vt = null === (Ot = Dt.indices) || void 0 === Ot ? void 0 : Ot.length) && void 0 !== Vt ? Vt : 0) !== dt || Dt.attributes.some((tt => tt.size !== jt[tt.kind] || tt.data.length !== mt * tt.size))) throw new ht.l("Draco decoding gave other counts than the accessors declare");
-      for (const Xt of Dt.attributes) {
-        const tt = qt.normalized[Xt.kind];
-        void 0 !== tt && (Xt.normalized = tt)
+        vertices: Xu,
+        indices: lu,
+        components: qu
+      } = Uu.expected;
+      if (Zu.totalVertices !== Xu || (null !== (ju = null === (su = Zu.indices) || void 0 === su ? void 0 : su.length) && void 0 !== ju ? ju : 0) !== lu || Zu.attributes.some((uu => uu.size !== qu[uu.kind] || uu.data.length !== Xu * uu.size))) throw new Ju.k("Draco decoding gave other counts than the accessors declare");
+      for (const Cu of Zu.attributes) {
+        const uu = Uu.normalized[Cu.kind];
+        void 0 !== uu && (Cu.normalized = uu)
       }
-      return Dt
+      return Zu
     }
-    const Rt = new WeakMap;
+    const ku = new WeakMap;
 
-    function It(tt, et) {
-      var Vt;
-      const Ot = null !== (Vt = Rt.get(tt)) && void 0 !== Vt ? Vt : et(tt);
-      return Rt.set(tt, Ot), Ot
-    }
-
-    function Pt(tt) {
-      const et = tt.bufferView,
-        Vt = 5125 === tt.componentType ? Uint32Array : Uint16Array,
-        Ot = et.bytes.buffer,
-        qt = et.bytes.byteOffset + (tt.byteOffset || 0);
-      return qt % Vt.BYTES_PER_ELEMENT !== 0 ? new Vt(Ot.slice(qt, qt + tt.count * Vt.BYTES_PER_ELEMENT), 0) : new Vt(Ot, qt, tt.count)
+    function mu(uu, Eu) {
+      var ju;
+      const su = null !== (ju = ku.get(uu)) && void 0 !== ju ? ju : Eu(uu);
+      return ku.set(uu, su), su
     }
 
-    function Zt(tt, et) {
-      if (tt.min && tt.max) return [new Float64Array(tt.min), new Float64Array(tt.max)];
-      const Vt = et.find((tt => {
+    function vu(uu) {
+      const Eu = uu.bufferView,
+        ju = 5125 === uu.componentType ? Uint32Array : Uint16Array,
+        su = Eu.bytes.buffer,
+        Uu = Eu.bytes.byteOffset + (uu.byteOffset || 0);
+      return Uu % ju.BYTES_PER_ELEMENT !== 0 ? new ju(su.slice(Uu, Uu + uu.count * ju.BYTES_PER_ELEMENT), 0) : new ju(su, Uu, uu.count)
+    }
+
+    function Ku(uu, Eu) {
+      if (uu.min && uu.max) return [new Float64Array(uu.min), new Float64Array(uu.max)];
+      const ju = Eu.find((uu => {
           let {
-            kind: et
-          } = tt;
-          return "position" === et
+            kind: Eu
+          } = uu;
+          return "position" === Eu
         })),
-        Ot = Vt ? (0, Kt.g)(Vt, tt.count) : new Float32Array(0);
-      return (0, Kt.t)(Ot.length / 3, ((tt, et) => Ot[3 * tt + et]))
+        su = ju ? (0, wu.j)(ju, uu.count) : new Float32Array(0);
+      return (0, wu.v)(su.length / 3, ((uu, Eu) => su[3 * uu + Eu]))
     }
 
-    function Lt(tt) {
-      const et = tt.attributes.map((tt => {
-          var et, Vt;
+    function Vu(uu) {
+      const Eu = uu.attributes.map((uu => {
+          var Eu, ju;
           let {
-            kind: Ot,
-            accessor: qt
-          } = tt;
+            kind: su,
+            accessor: Uu
+          } = uu;
           const {
-            bufferView: Dt,
-            numComponents: mt
-          } = qt;
-          if (!Dt) {
+            bufferView: Zu,
+            numComponents: Xu
+          } = Uu;
+          if (!Zu) {
             return {
-              kind: Ot,
-              data: It(qt, (() => new Float32Array(mt * qt.count))),
+              kind: su,
+              data: mu(Uu, (() => new Float32Array(Xu * Uu.count))),
               offset: 0,
-              stride: 4 * mt,
-              components: mt,
+              stride: 4 * Xu,
+              components: Xu,
               glType: 5126,
               isNormalized: !1
             }
           }
-          const dt = null !== (et = Dt.byteStride) && void 0 !== et ? et : mt * ht.e[qt.componentType];
+          const lu = null !== (Eu = Zu.byteStride) && void 0 !== Eu ? Eu : Xu * Ju.d[Uu.componentType];
           return {
-            kind: Ot,
-            data: Dt.bytes,
-            offset: null !== (Vt = qt.byteOffset) && void 0 !== Vt ? Vt : 0,
-            stride: dt,
-            components: mt,
-            glType: qt.componentType,
-            isNormalized: qt.normalized
+            kind: su,
+            data: Zu.bytes,
+            offset: null !== (ju = Uu.byteOffset) && void 0 !== ju ? ju : 0,
+            stride: lu,
+            components: Xu,
+            glType: Uu.componentType,
+            isNormalized: Uu.normalized
           }
         })),
-        Vt = tt.indices,
-        Ot = Vt && It(Vt, Pt),
-        qt = tt.position;
-      return new Kt.d(et, Ot, qt.count, ...Zt(qt, et))
+        ju = uu.indices,
+        su = ju && mu(ju, vu),
+        Uu = uu.position;
+      return new wu.f(Eu, su, Uu.count, ...Ku(Uu, Eu))
     }
-    const Ft = [Int8Array, Uint8Array, Int16Array, Uint16Array, Int32Array, Uint32Array, Float32Array];
+    const ru = [Int8Array, Uint8Array, Int16Array, Uint16Array, Int32Array, Uint32Array, Float32Array];
 
-    function kt(tt, et) {
-      const Vt = et.attributes.map((tt => {
+    function Qu(uu, Eu) {
+      const ju = Eu.attributes.map((uu => {
         let {
-          kind: et,
-          data: Vt,
-          size: Ot,
-          byteOffset: qt,
-          byteStride: Dt,
-          normalized: mt
-        } = tt;
+          kind: Eu,
+          data: ju,
+          size: su,
+          byteOffset: Uu,
+          byteStride: Zu,
+          normalized: Xu
+        } = uu;
         return {
-          kind: et,
-          data: Vt,
-          offset: qt,
-          stride: Dt,
-          components: Ot,
-          glType: 5120 + Ft.indexOf(Vt.constructor),
-          isNormalized: mt
+          kind: Eu,
+          data: ju,
+          offset: Uu,
+          stride: Zu,
+          components: su,
+          glType: 5120 + ru.indexOf(ju.constructor),
+          isNormalized: Xu
         }
       }));
-      return new Kt.d(Vt, et.indices, et.totalVertices, ...Zt(tt.position, Vt))
+      return new wu.f(ju, Eu.indices, Eu.totalVertices, ...Ku(uu.position, ju))
     }
 
-    function Gt(tt) {
-      const et = tt.lastIndexOf("/");
-      return et < 0 ? tt : tt.substring(et + 1)
+    function iu(uu) {
+      const Eu = uu.lastIndexOf("/");
+      return Eu < 0 ? uu : uu.substring(Eu + 1)
     }
 
-    function zt(tt) {
-      const et = tt.lastIndexOf("/");
-      return et < 0 ? "" : tt.substring(0, et + 1)
+    function Wu(uu) {
+      const Eu = uu.lastIndexOf("/");
+      return Eu < 0 ? "" : uu.substring(0, Eu + 1)
     }
 
-    function ot(tt) {
-      return tt.name || `node${tt.index}`
+    function Su(uu) {
+      return uu.name || `node${uu.index}`
     }
-    const rt = {
+    const Iu = {
         rotation: [0, 1, 0, 0],
         scale: [1, 1, -1]
       },
-      Ut = {
+      Fu = {
         9728: 12,
         9729: 2,
         9984: 9,
         9985: 11,
         9986: 10
       },
-      At = {
+      Bu = {
         9728: 1,
         9729: 7,
         9984: 4,
@@ -471,353 +471,353 @@ export const modules = {
         9987: 6
       };
 
-    function it(tt) {
-      var et, Vt, Ot, qt;
-      const Dt = null !== (et = tt.minFilter) && void 0 !== et ? et : 9987;
-      return 9729 === (null !== (Vt = tt.magFilter) && void 0 !== Vt ? Vt : 9729) ? null !== (Ot = Ut[Dt]) && void 0 !== Ot ? Ot : 3 : null !== (qt = At[Dt]) && void 0 !== qt ? qt : 4
+    function Lu(uu) {
+      var Eu, ju, su, Uu;
+      const Zu = null !== (Eu = uu.minFilter) && void 0 !== Eu ? Eu : 9987;
+      return 9729 === (null !== (ju = uu.magFilter) && void 0 !== ju ? ju : 9729) ? null !== (su = Fu[Zu]) && void 0 !== su ? su : 3 : null !== (Uu = Bu[Zu]) && void 0 !== Uu ? Uu : 4
     }
-    const Yt = {
+    const tu = {
       33071: 0,
       33648: 2
     };
 
-    function Bt(tt) {
-      var et;
-      return null !== (et = Yt[null !== tt && void 0 !== tt ? tt : 10497]) && void 0 !== et ? et : 1
+    function xu(uu) {
+      var Eu;
+      return null !== (Eu = tu[null !== uu && void 0 !== uu ? uu : 10497]) && void 0 !== Eu ? Eu : 1
     }
 
-    function pt(tt) {
-      return 9728 === tt.minFilter || 9729 === tt.minFilter
+    function Tu(uu) {
+      return 9728 === uu.minFilter || 9729 === uu.minFilter
     }
 
-    function xt(tt) {
-      var et, Vt, Ot;
-      const qt = Float64Array.from(null !== (et = tt.scale) && void 0 !== et ? et : [1, 1, 1]);
-      return tt.hasCamera && (qt[0] = -1), {
-        translation: Float64Array.from(null !== (Vt = tt.translation) && void 0 !== Vt ? Vt : [0, 0, 0]),
-        rotation: Float64Array.from(null !== (Ot = tt.rotation) && void 0 !== Ot ? Ot : [0, 0, 0, 1]),
-        scale: qt
+    function Hu(uu) {
+      var Eu, ju, su;
+      const Uu = Float64Array.from(null !== (Eu = uu.scale) && void 0 !== Eu ? Eu : [1, 1, 1]);
+      return uu.hasCamera && (Uu[0] = -1), {
+        translation: Float64Array.from(null !== (ju = uu.translation) && void 0 !== ju ? ju : [0, 0, 0]),
+        rotation: Float64Array.from(null !== (su = uu.rotation) && void 0 !== su ? su : [0, 0, 0, 1]),
+        scale: Uu
       }
     }
 
-    function Tt(tt, et) {
+    function Au(uu, Eu) {
       let {
-        translation: Vt,
-        rotation: Ot,
-        scale: qt
-      } = tt;
-      const Dt = new Float32Array(16);
-      return (0, ut.c)(qt, 0, Ot, 0, Vt, 0, Dt), et && (0, ut.q)(Dt, et, 0, Dt), Dt
+        translation: ju,
+        rotation: su,
+        scale: Uu
+      } = uu;
+      const Zu = new Float32Array(16);
+      return (0, pu.d)(Uu, 0, su, 0, ju, 0, Zu), Eu && (0, pu.j)(Zu, Eu, 0, Zu), Zu
     }
-    class gt {
-      constructor(tt, et, Vt, Ot) {
-        this.model = tt, this.decode = et, this.fileInfo = Vt, this.uniqueRootUrl = Ot, this.primitives = void 0, this.parents = new Map, this.uses = new Map, this.own = new Map;
-        const qt = new Set,
-          Dt = (et, Vt) => {
-            const Ot = tt.nodes[et];
-            if (this.parents.has(Ot)) throw new ht.l(`/nodes/${et}: Invalid recursive node hierarchy`);
-            this.parents.set(Ot, Vt);
-            const mt = null === Ot.mesh ? [] : tt.meshes[Ot.mesh].primitives,
-              dt = mt.map((tt => {
-                const et = mt.length > 1;
+    class nu {
+      constructor(uu, Eu, ju, su) {
+        this.model = uu, this.decode = Eu, this.fileInfo = ju, this.uniqueRootUrl = su, this.primitives = void 0, this.parents = new Map, this.uses = new Map, this.own = new Map;
+        const Uu = new Set,
+          Zu = (Eu, ju) => {
+            const su = uu.nodes[Eu];
+            if (this.parents.has(su)) throw new Ju.k(`/nodes/${Eu}: Invalid recursive node hierarchy`);
+            this.parents.set(su, ju);
+            const Xu = null === su.mesh ? [] : uu.meshes[su.mesh].primitives,
+              lu = Xu.map((uu => {
+                const Eu = Xu.length > 1;
                 return {
-                  name: et ? `${ot(Ot)}_primitive${tt.index}` : ot(Ot),
-                  node: Ot,
-                  primitive: tt,
-                  part: et,
+                  name: Eu ? `${Su(su)}_primitive${uu.index}` : Su(su),
+                  node: su,
+                  primitive: uu,
+                  part: Eu,
                   geometry: null
                 }
               }));
-            this.uses.set(Ot, dt);
-            const jt = null !== Ot.mesh && qt.has(Ot.mesh);
-            qt.add(Ot.mesh), this.own.set(Ot, jt ? [] : dt);
-            for (const tt of Ot.children) Dt(tt, Ot)
+            this.uses.set(su, lu);
+            const qu = null !== su.mesh && Uu.has(su.mesh);
+            Uu.add(su.mesh), this.own.set(su, qu ? [] : lu);
+            for (const uu of su.children) Zu(uu, su)
           };
-        for (const mt of tt.rootNodes) Dt(mt, null);
-        this.primitives = tt.nodes.flatMap((tt => {
-          var et;
-          return null !== (et = this.own.get(tt)) && void 0 !== et ? et : []
+        for (const Xu of uu.rootNodes) Zu(Xu, null);
+        this.primitives = uu.nodes.flatMap((uu => {
+          var Eu;
+          return null !== (Eu = this.own.get(uu)) && void 0 !== Eu ? Eu : []
         }))
       }
       decodeGeometries() {
-        const tt = new Map;
-        return Promise.all(this.primitives.map((async et => {
+        const uu = new Map;
+        return Promise.all(this.primitives.map((async Eu => {
           const {
-            primitive: Vt
-          } = et, Ot = Vt.draco;
-          let qt = Ot ? tt.get(Ot.bufferView.index) : Promise.resolve(Lt(Vt));
-          qt || (qt = ct(Vt, this.decode).then((tt => kt(Vt, tt))), tt.set(Ot.bufferView.index, qt)), et.geometry = await qt
+            primitive: ju
+          } = Eu, su = ju.draco;
+          let Uu = su ? uu.get(su.bufferView.index) : Promise.resolve(Vu(ju));
+          Uu || (Uu = ou(ju, this.decode).then((uu => Qu(ju, uu))), uu.set(su.bufferView.index, Uu)), Eu.geometry = await Uu
         })))
       }
-      parentOf(tt) {
-        var et;
-        return null !== (et = this.parents.get(tt)) && void 0 !== et ? et : null
+      parentOf(uu) {
+        var Eu;
+        return null !== (Eu = this.parents.get(uu)) && void 0 !== Eu ? Eu : null
       }
-      meshesUnder(tt) {
-        const et = this.model.nodes.filter((tt => this.uses.has(tt)));
-        for (const Ot of et) {
-          const et = this.uses.get(Ot),
-            Vt = et.find((et => et.name === tt));
-          if (Vt) return 1 === et.length ? this.subtree(Ot) : this.own.get(Ot).includes(Vt) ? [Vt] : []
+      meshesUnder(uu) {
+        const Eu = this.model.nodes.filter((uu => this.uses.has(uu)));
+        for (const su of Eu) {
+          const Eu = this.uses.get(su),
+            ju = Eu.find((Eu => Eu.name === uu));
+          if (ju) return 1 === Eu.length ? this.subtree(su) : this.own.get(su).includes(ju) ? [ju] : []
         }
-        const Vt = et.find((et => 1 !== this.uses.get(et).length && ot(et) === tt));
-        return Vt ? this.subtree(Vt) : null
+        const ju = Eu.find((Eu => 1 !== this.uses.get(Eu).length && Su(Eu) === uu));
+        return ju ? this.subtree(ju) : null
       }
-      subtree(tt) {
-        return [...this.own.get(tt), ...tt.children.flatMap((tt => this.subtree(this.model.nodes[tt])))]
+      subtree(uu) {
+        return [...this.own.get(uu), ...uu.children.flatMap((uu => this.subtree(this.model.nodes[uu])))]
       }
-      worldMatrix(tt, et, Vt) {
-        let Ot = Tt(xt(et ? rt : {}), null);
-        const qt = [];
-        for (let mt = tt.part ? tt.node : this.parentOf(tt.node); mt; mt = this.parentOf(mt)) qt.unshift(mt);
-        for (const mt of qt) Ot = Tt(xt(mt), Ot);
-        const Dt = xt(tt.part ? {} : tt.node);
-        return void 0 !== Vt && Dt.scale.fill(Vt), Tt(Dt, Ot)
+      worldMatrix(uu, Eu, ju) {
+        let su = Au(Hu(Eu ? Iu : {}), null);
+        const Uu = [];
+        for (let Xu = uu.part ? uu.node : this.parentOf(uu.node); Xu; Xu = this.parentOf(Xu)) Uu.unshift(Xu);
+        for (const Xu of Uu) su = Au(Hu(Xu), su);
+        const Zu = Hu(uu.part ? {} : uu.node);
+        return void 0 !== ju && Zu.scale.fill(ju), Au(Zu, su)
       }
-      floats(tt) {
+      floats(uu) {
         const {
-          vertexAttributes: et,
-          vertexCount: Vt
-        } = tt.geometry;
-        return new Map(et.map((tt => [tt.kind, (0, Kt.g)(tt, Vt)])))
+          vertexAttributes: Eu,
+          vertexCount: ju
+        } = uu.geometry;
+        return new Map(Eu.map((uu => [uu.kind, (0, wu.j)(uu, ju)])))
       }
-      imageUrl(tt) {
-        return function(tt, et, Vt) {
+      imageUrl(uu) {
+        return function(uu, Eu, ju) {
           let {
-            name: Ot
-          } = et;
-          return `data:${tt}${Ot}#image${Vt}`
-        }(this.uniqueRootUrl, this.fileInfo, tt)
+            name: su
+          } = Eu;
+          return `data:${uu}${su}#image${ju}`
+        }(this.uniqueRootUrl, this.fileInfo, uu)
       }
-      textureDesc(tt, et) {
-        var Vt;
+      textureDesc(uu, Eu) {
+        var ju;
         let {
-          texture: Ot,
-          transform: qt
-        } = tt;
+          texture: su,
+          transform: Uu
+        } = uu;
         const {
-          sampler: Dt,
-          image: mt
-        } = this.model.textures[Ot], {
-          bufferView: dt,
-          mimeType: jt,
-          name: Ht
-        } = this.model.images[mt], Xt = qt && {
-          ...qt.offset ? {
-            uOffset: qt.offset[0],
-            vOffset: qt.offset[1]
+          sampler: Zu,
+          image: Xu
+        } = this.model.textures[su], {
+          bufferView: lu,
+          mimeType: qu,
+          name: fu
+        } = this.model.images[Xu], Cu = Uu && {
+          ...Uu.offset ? {
+            uOffset: Uu.offset[0],
+            vOffset: Uu.offset[1]
           } : {},
           uRotationCenter: 0,
           vRotationCenter: 0,
-          ...qt.rotation ? {
-            wAng: -qt.rotation
+          ...Uu.rotation ? {
+            wAng: -Uu.rotation
           } : {},
-          ...qt.scale ? {
-            uScale: qt.scale[0],
-            vScale: qt.scale[1]
+          ...Uu.scale ? {
+            uScale: Uu.scale[0],
+            vScale: Uu.scale[1]
           } : {}
         };
         return {
-          url: this.imageUrl(mt),
-          noMipmap: pt(Dt),
+          url: this.imageUrl(Xu),
+          noMipmap: Tu(Zu),
           invertY: !1,
-          samplingMode: it(Dt),
+          samplingMode: Lu(Zu),
           data: {
-            bytes: dt.bytes,
-            mimeType: jt,
-            label: Ht,
-            context: `/textures/${Ot}`
+            bytes: lu.bytes,
+            mimeType: qu,
+            label: fu,
+            context: `/textures/${su}`
           },
           sets: {
-            wrapU: Bt(Dt.wrapS),
-            wrapV: Bt(Dt.wrapT),
-            ...Xt,
-            coordinatesIndex: null !== (Vt = null === qt || void 0 === qt ? void 0 : qt.texCoord) && void 0 !== Vt ? Vt : 0,
-            hasAlpha: et
+            wrapU: xu(Zu.wrapS),
+            wrapV: xu(Zu.wrapT),
+            ...Cu,
+            coordinatesIndex: null !== (ju = null === Uu || void 0 === Uu ? void 0 : Uu.texCoord) && void 0 !== ju ? ju : 0,
+            hasAlpha: Eu
           }
         }
       }
     }
-    async function st(tt, et, Vt, Ot, qt, Dt) {
-      let mt = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6];
-      const dt = function(tt, et, Vt) {
-          return "string" !== typeof et ? {
+    async function yu(uu, Eu, ju, su, Uu, Zu) {
+      let Xu = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6];
+      const lu = function(uu, Eu, ju) {
+          return "string" !== typeof Eu ? {
             url: "",
-            rootUrl: tt,
-            name: Vt()
-          } : et ? et.startsWith("data:") ? {
-            url: et,
-            rootUrl: tt,
+            rootUrl: uu,
+            name: ju()
+          } : Eu ? Eu.startsWith("data:") ? {
+            url: Eu,
+            rootUrl: uu,
             name: ""
-          } : tt ? {
-            url: tt + et,
-            rootUrl: tt,
-            name: et
+          } : uu ? {
+            url: uu + Eu,
+            rootUrl: uu,
+            name: Eu
           } : {
-            url: et,
-            rootUrl: zt(et),
-            name: Gt(et)
+            url: Eu,
+            rootUrl: Wu(Eu),
+            name: iu(Eu)
           } : {
-            url: tt,
-            rootUrl: zt(tt),
-            name: Gt(tt)
+            url: uu,
+            rootUrl: Wu(uu),
+            name: iu(uu)
           }
-        }(Vt, tt, qt),
-        jt = {};
-      et.addPendingData(jt);
+        }(ju, uu, Uu),
+        qu = {};
+      Eu.addPendingData(qu);
       try {
-        const Vt = St(await async function(tt, et) {
-            return "string" !== typeof et ? et : tt.url.startsWith("data:") ? (0, ht.r)(tt.url) : await (0, ht.t)(tt.url)
-          }(dt, tt)),
-          jt = new gt(Vt, Ot, dt, function(tt, et) {
+        const ju = Pu(await async function(uu, Eu) {
+            return "string" !== typeof Eu ? Eu : uu.url.startsWith("data:") ? (0, Ju.u)(uu.url) : await (0, Ju.x)(uu.url)
+          }(lu, uu)),
+          qu = new nu(ju, su, lu, function(uu, Eu) {
             let {
-              rootUrl: Vt,
-              name: Ot
-            } = tt;
-            return !Vt.startsWith("file:") && Ot ? Vt : `${Vt}${et()}/`
-          }(dt, qt));
-        return await Dt(jt), et.importedMeshesFiles && (et.loadingPluginName = "oR", mt && et.importedMeshesFiles.push(dt.url)), jt
+              rootUrl: ju,
+              name: su
+            } = uu;
+            return !ju.startsWith("file:") && su ? ju : `${ju}${Eu()}/`
+          }(lu, Uu));
+        return await Zu(qu), Eu.importedMeshesFiles && (Eu.loadingPluginName = "WK", Xu && Eu.importedMeshesFiles.push(lu.url)), qu
       } finally {
-        et.removePendingData(jt)
+        Eu.removePendingData(qu)
       }
     }
-    var nt = Vt(37846),
-      te = Vt(37694),
-      ee = Vt(38147);
+    var zu = ju(37969),
+      Ru = ju(37837),
+      uE = ju(38287);
 
-    function Ve(tt) {
-      if (null === tt || void 0 === tt || !tt.min || !tt.max) return null;
-      const [et, Vt, Ot] = tt.min, [qt, Dt, mt] = tt.max, {
-        BoundingInfo: dt,
-        uf: jt
-      } = (0, nt.e)();
-      return new dt(new jt(et, Vt, Ot), new jt(qt, Dt, mt))
+    function EE(uu) {
+      if (null === uu || void 0 === uu || !uu.min || !uu.max) return null;
+      const [Eu, ju, su] = uu.min, [Uu, Zu, Xu] = uu.max, {
+        BoundingInfo: lu,
+        dO: qu
+      } = (0, zu.c)();
+      return new lu(new qu(Eu, ju, su), new qu(Uu, Zu, Xu))
     }
 
-    function Oe(tt) {
-      (0, te.f)(tt) || (tt.geometry && tt.geometry.useBoundingInfoFromGeometry ? tt._updateBoundingInfo() : tt.refreshBoundingInfo(!0, !0))
+    function jE(uu) {
+      (0, Ru.g)(uu) || (uu.geometry && uu.geometry.useBoundingInfoFromGeometry ? uu._updateBoundingInfo() : uu.refreshBoundingInfo(!0, !0))
     }
-    class qe {
-      constructor(tt, et) {
-        this.Fw = tt, this.decode = et, this.bufferData = Promise.resolve(), this.viewData = new Map, this.viewBuffers = new Map, this.vertexBuffers = new Map, this.dracoGeometry = new Map
+    class sE {
+      constructor(uu, Eu) {
+        this.vY = uu, this.decode = Eu, this.bufferData = Promise.resolve(), this.viewData = new Map, this.viewBuffers = new Map, this.vertexBuffers = new Map, this.dracoGeometry = new Map
       }
-      viewBytes(tt) {
-        let et = this.viewData.get(tt.index);
-        return et || (et = this.bufferData.then((() => tt.bytes)), this.viewData.set(tt.index, et)), et
+      viewBytes(uu) {
+        let Eu = this.viewData.get(uu.index);
+        return Eu || (Eu = this.bufferData.then((() => uu.bytes)), this.viewData.set(uu.index, Eu)), Eu
       }
-      viewBuffer(tt) {
-        let et = this.viewBuffers.get(tt.index);
-        return et || (et = this.viewBytes(tt).then((tt => new((0, nt.e)().mf)(this.Fw.Jf(), tt, !1))), this.viewBuffers.set(tt.index, et)), et
+      viewBuffer(uu) {
+        let Eu = this.viewBuffers.get(uu.index);
+        return Eu || (Eu = this.viewBytes(uu).then((uu => new((0, zu.c)().qO)(this.vY.wO(), uu, !1))), this.viewBuffers.set(uu.index, Eu)), Eu
       }
-      vertexBuffer(tt, et) {
+      vertexBuffer(uu, Eu) {
         const {
-          kind: Vt,
-          data: Ot
-        } = et, qt = `${tt.index}:${Vt}`;
-        let Dt = this.vertexBuffers.get(qt);
-        if (!Dt) {
-          const mt = tt.bufferView;
-          Dt = mt ? this.viewBuffer(mt).then((tt => this.layoutVertexBuffer(tt, et))) : Promise.resolve(Ot).then((tt => new((0, nt.e)().VertexBuffer)(this.Fw.Jf(), tt, Vt, !1))), this.vertexBuffers.set(qt, Dt)
+          kind: ju,
+          data: su
+        } = Eu, Uu = `${uu.index}:${ju}`;
+        let Zu = this.vertexBuffers.get(Uu);
+        if (!Zu) {
+          const Xu = uu.bufferView;
+          Zu = Xu ? this.viewBuffer(Xu).then((uu => this.layoutVertexBuffer(uu, Eu))) : Promise.resolve(su).then((uu => new((0, zu.c)().VertexBuffer)(this.vY.wO(), uu, ju, !1))), this.vertexBuffers.set(Uu, Zu)
         }
-        return Dt
+        return Zu
       }
-      layoutVertexBuffer(tt, et) {
+      layoutVertexBuffer(uu, Eu) {
         let {
-          kind: Vt,
-          offset: Ot,
-          stride: qt,
-          components: Dt,
-          glType: mt,
-          isNormalized: dt
-        } = et;
-        const jt = this.Fw.Jf();
-        return new((0, nt.e)().VertexBuffer)(jt, tt, Vt, !1, void 0, qt, void 0, Ot, Dt, mt, dt, !0, void 0, !0)
+          kind: ju,
+          offset: su,
+          stride: Uu,
+          components: Zu,
+          glType: Xu,
+          isNormalized: lu
+        } = Eu;
+        const qu = this.vY.wO();
+        return new((0, zu.c)().VertexBuffer)(qu, uu, ju, !1, void 0, Uu, void 0, su, Zu, Xu, lu, !0, void 0, !0)
       }
-      load(tt, et, Vt) {
-        const Ot = (0, te.f)(Vt),
-          qt = tt => {
-            Ot || (Vt._delayInfo = Vt._delayInfo || [], -1 === Vt._delayInfo.indexOf(tt) && Vt._delayInfo.push(tt))
+      load(uu, Eu, ju) {
+        const su = (0, Ru.g)(ju),
+          Uu = uu => {
+            su || (ju._delayInfo = ju._delayInfo || [], -1 === ju._delayInfo.indexOf(uu) && ju._delayInfo.push(uu))
           },
-          Dt = et.draco;
-        if (Dt) {
-          for (const tt in Dt.attributeIds) qt(tt);
-          let mt = this.dracoGeometry.get(Dt.bufferView.index);
-          return mt || (mt = this.viewBytes(Dt.bufferView).then((async () => {
-            let qt;
+          Zu = Eu.draco;
+        if (Zu) {
+          for (const uu in Zu.attributeIds) Uu(uu);
+          let Xu = this.dracoGeometry.get(Zu.bufferView.index);
+          return Xu || (Xu = this.viewBytes(Zu.bufferView).then((async () => {
+            let Uu;
             try {
-              qt = await ct(et, this.decode)
-            } catch (jt) {
-              throw new ht.l(`${tt}: ${jt instanceof Error?jt.message:String(jt)}`)
+              Uu = await ou(Eu, this.decode)
+            } catch (qu) {
+              throw new Ju.k(`${uu}: ${qu instanceof Error?qu.message:String(qu)}`)
             }
-            const Dt = kt(et, qt);
-            if (Ot) return Dt;
-            const mt = Ve(et.position),
-              dt = new((0, nt.e)().MirroredGeometry)(Vt.name, this.Fw);
-            mt && (dt._boundingInfo = mt, dt.useBoundingInfoFromGeometry = !0), Dt.indexData && dt.setIndices(Dt.indexData);
-            for (const tt of Dt.vertexAttributes) dt.setVerticesBuffer(this.layoutVertexBuffer(tt.data, tt), Dt.vertexCount);
-            return dt.link(Dt), dt
-          })), this.dracoGeometry.set(Dt.bufferView.index, mt)), mt
+            const Zu = Qu(Eu, Uu);
+            if (su) return Zu;
+            const Xu = EE(Eu.position),
+              lu = new((0, zu.c)().MirroredGeometry)(ju.name, this.vY);
+            Xu && (lu._boundingInfo = Xu, lu.useBoundingInfoFromGeometry = !0), Zu.indexData && lu.setIndices(Zu.indexData);
+            for (const uu of Zu.vertexAttributes) lu.setVerticesBuffer(this.layoutVertexBuffer(uu.data, uu), Zu.vertexCount);
+            return lu.link(Zu), lu
+          })), this.dracoGeometry.set(Zu.bufferView.index, Xu)), Xu
         }
-        const mt = [],
-          dt = Lt(et);
-        if (Ot) return Vt.isUnIndexed = !dt.indexData, Vt.hasVertexAlpha = (0, ee.d)(et), Promise.resolve(dt);
-        const jt = new((0, nt.e)().MirroredGeometry)(Vt.name, this.Fw),
+        const Xu = [],
+          lu = Vu(Eu);
+        if (su) return ju.isUnIndexed = !lu.indexData, ju.hasVertexAlpha = (0, uE.e)(Eu), Promise.resolve(lu);
+        const qu = new((0, zu.c)().MirroredGeometry)(ju.name, this.vY),
           {
-            indexData: Ht
-          } = dt;
-        Ht ? mt.push(this.viewBytes(et.indices.bufferView).then((() => {
-          jt.setIndices(Ht)
-        }))) : Vt.isUnIndexed = !0;
-        for (const [Xt, {
-            kind: Qt,
-            accessor: lt
-          }] of et.attributes.entries()) qt(Qt), mt.push(this.vertexBuffer(lt, dt.vertexAttributes[Xt]).then((tt => {
-          if ("position" === tt.getKind()) {
-            const tt = Ve(lt);
-            tt && (jt._boundingInfo = tt, jt.useBoundingInfoFromGeometry = !0)
+            indexData: fu
+          } = lu;
+        fu ? Xu.push(this.viewBytes(Eu.indices.bufferView).then((() => {
+          qu.setIndices(fu)
+        }))) : ju.isUnIndexed = !0;
+        for (const [Cu, {
+            kind: bu,
+            accessor: cu
+          }] of Eu.attributes.entries()) Uu(bu), Xu.push(this.vertexBuffer(cu, lu.vertexAttributes[Cu]).then((uu => {
+          if ("position" === uu.getKind()) {
+            const uu = EE(cu);
+            uu && (qu._boundingInfo = uu, qu.useBoundingInfoFromGeometry = !0)
           }
-          jt.setVerticesBuffer(tt, dt.vertexCount)
+          qu.setVerticesBuffer(uu, lu.vertexCount)
         })));
-        return (0, ee.d)(et) && (Vt.hasVertexAlpha = !0), Promise.all(mt).then((() => (jt.link(dt), jt)))
+        return (0, uE.e)(Eu) && (ju.hasVertexAlpha = !0), Promise.all(Xu).then((() => (qu.link(lu), qu)))
       }
     }
-    var De, me = Vt(37564),
-      de = Vt(37331),
-      je = Vt(38157),
-      He = Vt(37502),
-      Xe = Vt(37545),
-      Qe = Vt(2848),
-      le = Vt(37531);
+    var UE, ZE = ju(37729),
+      XE = ju(37488),
+      lE = ju(38298),
+      qE = ju(37664),
+      fE = ju(37704),
+      CE = ju(2893),
+      bE = ju(37693);
 
-    function Ee(tt, et) {
-      tt.metadata = tt.metadata || {};
-      const Vt = tt._internalMetadata = tt._internalMetadata || {},
-        Ot = Vt.oR = Vt.oR || {};
-      (Ot.pointers = Ot.pointers || []).push(et)
+    function cE(uu, Eu) {
+      uu.metadata = uu.metadata || {};
+      const ju = uu._internalMetadata = uu._internalMetadata || {},
+        su = ju.WK = ju.WK || {};
+      (su.pointers = su.pointers || []).push(Eu)
     }
 
-    function fe(tt, et) {
-      if (et && Object.keys(et).length > 0) {
-        const Vt = tt.metadata = tt.metadata || {};
-        (Vt.oR = Vt.oR || {}).extras = et
+    function NE(uu, Eu) {
+      if (Eu && Object.keys(Eu).length > 0) {
+        const ju = uu.metadata = uu.metadata || {};
+        (ju.WK = ju.WK || {}).extras = Eu
       }
     }
 
-    function we(tt, et) {
-      et.position = tt.translation ? de.uf.FromArray(tt.translation) : de.uf.Zero(), et.rotationQuaternion = tt.rotation ? de.Quaternion.FromArray(tt.rotation) : de.Quaternion.Identity(), et.cj = tt.scale ? de.uf.FromArray(tt.scale) : de.uf.One()
+    function OE(uu, Eu) {
+      Eu.position = uu.translation ? XE.dO.FromArray(uu.translation) : XE.dO.Zero(), Eu.rotationQuaternion = uu.rotation ? XE.Quaternion.FromArray(uu.rotation) : XE.Quaternion.Identity(), Eu.Of = uu.scale ? XE.dO.FromArray(uu.scale) : XE.dO.One()
     }
-    class ye {
-      constructor(tt, et) {
-        if (this.Fw = tt, this.meshes = [], this.transformNodes = [], this.geometries = [], this.materials = [], this.textures = [], this.rootNodes = [], this.release = null, et) {
-          const et = tt.Jf(),
-            Vt = tt.ZI.add((() => {
+    class YE {
+      constructor(uu, Eu) {
+        if (this.vY = uu, this.meshes = [], this.transformNodes = [], this.geometries = [], this.materials = [], this.textures = [], this.rootNodes = [], this.release = null, Eu) {
+          const Eu = uu.wO(),
+            ju = uu.wV.add((() => {
               this.dispose()
             })),
-            Ot = et.bf.add((() => {
-              for (const tt of [...this.geometries, ...this.meshes, ...this.textures]) tt._rebuild()
+            su = Eu.pO.add((() => {
+              for (const uu of [...this.geometries, ...this.meshes, ...this.textures]) uu._rebuild()
             }));
           this.release = () => {
-            tt.ZI.remove(Vt), et.bf.remove(Ot)
+            uu.wV.remove(ju), Eu.pO.remove(su)
           }
         }
       }
@@ -827,267 +827,267 @@ export const modules = {
       addAllToScene() {
         if (this.release) {
           this.release(), this.release = null;
-          for (const tt of this.meshes) this.Fw.oOt(tt);
-          for (const tt of this.materials) this.Fw.addMaterial(tt);
-          for (const tt of this.geometries) this.Fw.addGeometry(tt);
-          for (const tt of this.transformNodes) this.Fw.addTransformNode(tt);
-          for (const tt of this.textures) this.Fw.addTexture(tt)
+          for (const uu of this.meshes) this.vY.hsu(uu);
+          for (const uu of this.materials) this.vY.addMaterial(uu);
+          for (const uu of this.geometries) this.vY.addGeometry(uu);
+          for (const uu of this.transformNodes) this.vY.addTransformNode(uu);
+          for (const uu of this.textures) this.vY.addTexture(uu)
         }
       }
       dispose() {
-        var tt;
-        for (const et of [this.meshes, this.materials, this.geometries, this.transformNodes, this.textures]) {
-          for (const tt of et.slice()) tt.dispose();
-          et.length = 0
+        var uu;
+        for (const Eu of [this.meshes, this.materials, this.geometries, this.transformNodes, this.textures]) {
+          for (const uu of Eu.slice()) uu.dispose();
+          Eu.length = 0
         }
-        null === (tt = this.release) || void 0 === tt || tt.call(this), this.release = null
+        null === (uu = this.release) || void 0 === uu || uu.call(this), this.release = null
       }
     }
-    class Ne {
-      constructor(tt, et, Vt, Ot, qt, Dt, mt) {
-        this.asset = tt, this.Fw = et, this.tree = Vt, this.geometryData = qt, this.materials = Dt, this.lite = mt, this.container = void 0, this.root = null, this.nodeObjects = new Map, this.nodePrimitives = new Map, this.materialData = new Map, this.container = Ot ? Vt : null
+    class hE {
+      constructor(uu, Eu, ju, su, Uu, Zu, Xu) {
+        this.asset = uu, this.vY = Eu, this.tree = ju, this.geometryData = Uu, this.materials = Zu, this.lite = Xu, this.container = void 0, this.root = null, this.nodeObjects = new Map, this.nodePrimitives = new Map, this.materialData = new Map, this.container = su ? ju : null
       }
-      create(tt) {
-        if (this.lite) return tt();
-        const et = this.Fw;
-        et._blockEntityCollection = !!this.container;
+      create(uu) {
+        if (this.lite) return uu();
+        const Eu = this.vY;
+        Eu._blockEntityCollection = !!this.container;
         try {
-          const et = tt();
-          return this.container && (et._parentContainer = this.container), et
+          const Eu = uu();
+          return this.container && (Eu._parentContainer = this.container), Eu
         } finally {
-          et._blockEntityCollection = !1
+          Eu._blockEntityCollection = !1
         }
       }
-      node(tt, et) {
-        return this.create((() => this.lite ? et ? (0, je.f)(this.lite, tt) : (0, je.r)(this.lite, tt) : et ? new((0, nt.e)().Mesh)(tt, this.Fw) : new((0, nt.e)().TransformNode)(tt, this.Fw)))
+      node(uu, Eu) {
+        return this.create((() => this.lite ? Eu ? (0, lE.g)(this.lite, uu) : (0, lE.q)(this.lite, uu) : Eu ? new((0, zu.c)().Mesh)(uu, this.vY) : new((0, zu.c)().TransformNode)(uu, this.vY)))
       }
       async load() {
-        var tt;
+        var uu;
         this.asset.model.json.nodes && this.createRoot();
-        const et = this.lite ? null : this.Fw,
-          Vt = null !== (tt = null === et || void 0 === et ? void 0 : et.blockMaterialDirtyMechanism) && void 0 !== tt && tt;
-        let Ot;
-        et && (et.blockMaterialDirtyMechanism = !0);
+        const Eu = this.lite ? null : this.vY,
+          ju = null !== (uu = null === Eu || void 0 === Eu ? void 0 : Eu.blockMaterialDirtyMechanism) && void 0 !== uu && uu;
+        let su;
+        Eu && (Eu.blockMaterialDirtyMechanism = !0);
         try {
-          Ot = this.loadScene()
+          su = this.loadScene()
         } finally {
-          null === et || void 0 === et || et._forceBlockMaterialDirtyMechanism(Vt)
+          null === Eu || void 0 === Eu || Eu._forceBlockMaterialDirtyMechanism(ju)
         }
-        await Ot;
+        await su;
         const {
-          root: qt,
-          tree: Dt
+          root: Uu,
+          tree: Zu
         } = this;
-        qt && (qt.Av(!0), Dt.meshes.push(qt), Dt.rootNodes.push(qt));
-        for (const dt of this.asset.model.nodes) {
-          const tt = this.nodeObjects.get(dt.index);
-          tt && ["TransformNode", "LiteNode"].includes(tt.getClassName()) && Dt.transformNodes.push(tt);
-          for (const et of null !== (mt = this.nodePrimitives.get(dt.index)) && void 0 !== mt ? mt : []) {
-            var mt;
-            Dt.meshes.push(et);
-            const tt = et.geometry;
-            tt && !Dt.geometries.includes(tt) && Dt.geometries.push(tt)
+        Uu && (Uu.Wk(!0), Zu.meshes.push(Uu), Zu.rootNodes.push(Uu));
+        for (const lu of this.asset.model.nodes) {
+          const uu = this.nodeObjects.get(lu.index);
+          uu && ["TransformNode", "LiteNode"].includes(uu.getClassName()) && Zu.transformNodes.push(uu);
+          for (const Eu of null !== (Xu = this.nodePrimitives.get(lu.index)) && void 0 !== Xu ? Xu : []) {
+            var Xu;
+            Zu.meshes.push(Eu);
+            const uu = Eu.geometry;
+            uu && !Zu.geometries.includes(uu) && Zu.geometries.push(uu)
           }
         }
       }
       createRoot() {
-        const tt = this.node("__root__", !0);
-        this.root = tt, tt.Av(!1), this.Fw.useRightHandedSystem || we(rt, tt)
+        const uu = this.node("__root__", !0);
+        this.root = uu, uu.Wk(!1), this.vY.useRightHandedSystem || OE(Iu, uu)
       }
       loadScene() {
-        const tt = [];
-        for (const et of this.asset.model.rootNodes) tt.push(this.loadNode(this.asset.model.nodes[et], (tt => {
-          tt.parent = this.root
+        const uu = [];
+        for (const Eu of this.asset.model.rootNodes) uu.push(this.loadNode(this.asset.model.nodes[Eu], (uu => {
+          uu.parent = this.root
         })));
-        return tt.push(Promise.resolve()), Promise.all(tt).then((() => {}))
+        return uu.push(Promise.resolve()), Promise.all(uu).then((() => {}))
       }
-      loadNode(tt, et) {
-        const Vt = `/nodes/${tt.index}`,
-          Ot = [],
-          qt = qt => {
-            if (Ee(qt, Vt), we(tt, qt), tt.hasCamera && !this.Fw.useRightHandedSystem) {
+      loadNode(uu, Eu) {
+        const ju = `/nodes/${uu.index}`,
+          su = [],
+          Uu = Uu => {
+            if (cE(Uu, ju), OE(uu, Uu), uu.hasCamera && !this.vY.useRightHandedSystem) {
               const {
-                cj: tt
-              } = qt;
-              tt.set(-1, tt.y, tt.z)
+                Of: uu
+              } = Uu;
+              uu.set(-1, uu.y, uu.z)
             }
-            for (const et of tt.children) Ot.push(this.loadNode(this.asset.model.nodes[et], (tt => {
-              tt.parent = qt
+            for (const Eu of uu.children) su.push(this.loadNode(this.asset.model.nodes[Eu], (uu => {
+              uu.parent = Uu
             })));
-            (Vt => {
-              fe(Vt, tt.extras), et(Vt)
-            })(qt)
+            (ju => {
+              NE(ju, uu.extras), Eu(ju)
+            })(Uu)
           };
-        if (null === tt.mesh) {
-          const et = this.node(ot(tt), !1);
-          this.nodeObjects.set(tt.index, et), qt(et)
+        if (null === uu.mesh) {
+          const Eu = this.node(Su(uu), !1);
+          this.nodeObjects.set(uu.index, Eu), Uu(Eu)
         } else {
-          const et = this.asset.model.meshes[tt.mesh];
-          Ot.push(this.loadMesh(`/meshes/${et.index}`, tt, et, qt))
+          const Eu = this.asset.model.meshes[uu.mesh];
+          su.push(this.loadMesh(`/meshes/${Eu.index}`, uu, Eu, Uu))
         }
-        return Promise.all(Ot).then((() => {
-          for (const Vt of null !== (et = this.nodePrimitives.get(tt.index)) && void 0 !== et ? et : []) {
-            var et;
-            Oe(Vt)
+        return Promise.all(su).then((() => {
+          for (const ju of null !== (Eu = this.nodePrimitives.get(uu.index)) && void 0 !== Eu ? Eu : []) {
+            var Eu;
+            jE(ju)
           }
-          return this.nodeObjects.get(tt.index)
+          return this.nodeObjects.get(uu.index)
         }))
       }
-      loadMesh(tt, et, Vt, Ot) {
-        const qt = [],
-          Dt = ot(et);
-        if (1 === Vt.primitives.length) {
-          const Ot = Vt.primitives[0];
-          qt.push(this.loadPrimitive(`${tt}/primitives/${Ot.index}`, Dt, Ot, (tt => {
-            this.nodeObjects.set(et.index, tt), this.nodePrimitives.set(et.index, [tt])
+      loadMesh(uu, Eu, ju, su) {
+        const Uu = [],
+          Zu = Su(Eu);
+        if (1 === ju.primitives.length) {
+          const su = ju.primitives[0];
+          Uu.push(this.loadPrimitive(`${uu}/primitives/${su.index}`, Zu, su, (uu => {
+            this.nodeObjects.set(Eu.index, uu), this.nodePrimitives.set(Eu.index, [uu])
           })))
         } else {
-          const Ot = this.node(Dt, !1);
-          this.nodeObjects.set(et.index, Ot);
-          const mt = [];
-          this.nodePrimitives.set(et.index, mt);
-          for (const et of Vt.primitives) qt.push(this.loadPrimitive(`${tt}/primitives/${et.index}`, `${Dt}_primitive${et.index}`, et, (tt => {
-            tt.parent = Ot, mt.push(tt)
+          const su = this.node(Zu, !1);
+          this.nodeObjects.set(Eu.index, su);
+          const Xu = [];
+          this.nodePrimitives.set(Eu.index, Xu);
+          for (const Eu of ju.primitives) Uu.push(this.loadPrimitive(`${uu}/primitives/${Eu.index}`, `${Zu}_primitive${Eu.index}`, Eu, (uu => {
+            uu.parent = su, Xu.push(uu)
           })))
         }
-        const mt = this.nodeObjects.get(et.index);
-        return Ot(mt), Promise.all(qt).then((() => mt))
+        const Xu = this.nodeObjects.get(Eu.index);
+        return su(Xu), Promise.all(Uu).then((() => Xu))
       }
-      loadPrimitive(tt, et, Vt, Ot) {
-        const qt = [],
-          Dt = this.node(et, !0);
-        if (Dt.sideOrientation = this.Fw.useRightHandedSystem ? He.e.CounterClockWiseSideOrientation : He.e.ClockWiseSideOrientation, qt.push(this.geometryData.load(tt, Vt, Dt).then((tt => {
-            if ((0, te.f)(Dt)) {
-              var et, Vt;
-              const Ot = tt;
-              Dt.replaceModel(Ot, Int32Array.of(0, null !== (et = null === (Vt = Ot.indexData) || void 0 === Vt ? void 0 : Vt.length) && void 0 !== et ? et : Ot.vertexCount, 0, Ot.vertexCount))
-            } else this.create((() => (tt.applyToMesh(Dt), tt)))
+      loadPrimitive(uu, Eu, ju, su) {
+        const Uu = [],
+          Zu = this.node(Eu, !0);
+        if (Zu.sideOrientation = this.vY.useRightHandedSystem ? qE.b.CounterClockWiseSideOrientation : qE.b.ClockWiseSideOrientation, Uu.push(this.geometryData.load(uu, ju, Zu).then((uu => {
+            if ((0, Ru.g)(Zu)) {
+              var Eu, ju;
+              const su = uu;
+              Zu.replaceModel(su, Int32Array.of(0, null !== (Eu = null === (ju = su.indexData) || void 0 === ju ? void 0 : ju.length) && void 0 !== Eu ? Eu : su.vertexCount, 0, su.vertexCount))
+            } else this.create((() => (uu.applyToMesh(Zu), uu)))
           }))), this.materials) {
-          const tt = 0 === Vt.mode ? He.e.PointListDrawMode : He.e.TriangleFillMode,
-            et = null === Vt.material ? null : this.asset.model.materials[Vt.material];
-          qt.push(this.loadMaterial(et, tt, (tt => {
-            Dt.material = tt
+          const uu = 0 === ju.mode ? qE.b.PointListDrawMode : qE.b.TriangleFillMode,
+            Eu = null === ju.material ? null : this.asset.model.materials[ju.material];
+          Uu.push(this.loadMaterial(Eu, uu, (uu => {
+            Zu.material = uu
           })))
         }
-        return Ee(Dt, tt), Ot(Dt), Promise.all(qt).then((() => Dt))
+        return cE(Zu, uu), su(Zu), Promise.all(Uu).then((() => Zu))
       }
-      loadMaterial(tt, et, Vt) {
-        var Ot;
-        const qt = `${null!==(Ot=null===tt||void 0===tt?void 0:tt.index)&&void 0!==Ot?Ot:"default"}:${et}`;
-        let Dt = this.materialData.get(qt);
-        return Dt || (Dt = this.createMaterial(tt, et), this.materialData.set(qt, Dt)), Vt(Dt.material), Dt.promise
+      loadMaterial(uu, Eu, ju) {
+        var su;
+        const Uu = `${null!==(su=null===uu||void 0===uu?void 0:uu.index)&&void 0!==su?su:"default"}:${Eu}`;
+        let Zu = this.materialData.get(Uu);
+        return Zu || (Zu = this.createMaterial(uu, Eu), this.materialData.set(Uu, Zu)), ju(Zu.material), Zu.promise
       }
-      createMaterial(tt, et) {
-        const Vt = tt ? tt.name || `material${tt.index}` : "__GLTFLoader._default",
+      createMaterial(uu, Eu) {
+        const ju = uu ? uu.name || `material${uu.index}` : "__GLTFLoader._default",
           {
-            style: Ot,
-            unlit: qt
+            style: su,
+            unlit: Uu
           } = this.materials;
-        let Dt;
-        const mt = this.create((() => {
-          const mt = (0, le.d)({
-            name: Vt,
-            Fw: this.Fw,
+        let Zu;
+        const Xu = this.create((() => {
+          const Xu = (0, bE.d)({
+            name: ju,
+            vY: this.vY,
             sets: {
-              ...(0, ee.c)(this.asset, tt, Ot, qt),
-              fillMode: et
+              ...(0, uE.b)(this.asset, uu, su, Uu),
+              fillMode: Eu
             },
             unrendered: !0
           });
-          return Dt = mt.model, mt.mirror
+          return Zu = Xu.model, Xu.mirror
         }));
-        let dt = Promise.resolve();
-        if (tt) {
-          const et = `/materials/${tt.index}`,
-            Ot = Dt.diffuseTexture;
-          if (Ot && !Ot.mirror) dt = new Promise((tt => setTimeout(tt)));
-          else if (Ot) {
-            const qt = Ot.mirror;
-            qt._parentContainer = this.container, qt.name = `${Vt} (Base Color)`, Ee(qt, `${et}${tt.unlit?"":"/pbrMetallicRoughness"}/baseColorTexture`), this.tree.textures.push(qt), dt = (0, Xe.v)(Ot)
+        let lu = Promise.resolve();
+        if (uu) {
+          const Eu = `/materials/${uu.index}`,
+            su = Zu.diffuseTexture;
+          if (su && !su.mirror) lu = new Promise((uu => setTimeout(uu)));
+          else if (su) {
+            const Uu = su.mirror;
+            Uu._parentContainer = this.container, Uu.name = `${ju} (Base Color)`, cE(Uu, `${Eu}${uu.unlit?"":"/pbrMetallicRoughness"}/baseColorTexture`), this.tree.textures.push(Uu), lu = (0, fE.z)(su)
           }
-          fe(mt, tt.extras), Ee(mt, et)
+          NE(Xu, uu.extras), cE(Xu, Eu)
         }
-        return this.tree.materials.push(mt), {
-          material: mt,
-          promise: dt
+        return this.tree.materials.push(Xu), {
+          material: Xu,
+          promise: lu
         }
       }
     }
 
-    function ae() {
-      me.f.dracoDecodes = wt.decodes, me.f.dracoWorkersStarted = wt.workersStarted, me.f.dracoMostWorkers = wt.mostWorkers
+    function DE() {
+      ZE.f.dracoDecodes = Yu.decodes, ZE.f.dracoWorkersStarted = Yu.workersStarted, ZE.f.dracoMostWorkers = Yu.mostWorkers
     }
-    async function Me(tt, et, Vt, qt, Dt) {
+    async function gE(uu, Eu, ju, Uu, Zu) {
       try {
-        return await async function(tt, et, Vt, qt, Dt, mt) {
-          var dt;
-          let jt;
-          const Ht = null === (dt = (0, Qe.e)()) || void 0 === dt ? void 0 : dt.Bf,
-            Xt = null !== Ht && void 0 !== Ht && Ht.pf && et === Ht.vI() ? Ht : null,
-            Qt = Dt && !Xt;
-          return await st(tt, et, Vt, qt, Ot.b, (tt => (jt = new ye(et, Qt), new Ne(tt, et, jt, Qt, new qe(et, qt), mt, Xt).load())), !Dt), jt
-        }(tt, et, Vt, Ct, qt, Dt)
+        return await async function(uu, Eu, ju, Uu, Zu, Xu) {
+          var lu;
+          let qu;
+          const fu = null === (lu = (0, CE.c)()) || void 0 === lu ? void 0 : lu.tO,
+            Cu = null !== fu && void 0 !== fu && fu.xO && Eu === fu.hV() ? fu : null,
+            bu = Zu && !Cu;
+          return await yu(uu, Eu, ju, Uu, su.e, (uu => (qu = new YE(Eu, bu), new hE(uu, Eu, qu, bu, new sE(Eu, Uu), Xu, Cu).load())), !Zu), qu
+        }(uu, Eu, ju, Gu, Uu, Zu)
       } finally {
-        ae()
+        DE()
       }
     }
-    async function be(tt, et, Vt, qt) {
+    async function ME(uu, Eu, ju, Uu) {
       try {
-        return await st(tt, et, Vt, Ct, Ot.b, (tt => qt(tt, new qe(et, Ct))))
+        return await yu(uu, Eu, ju, Gu, su.e, (uu => Uu(uu, new sE(Eu, Gu))))
       } finally {
-        ae()
+        DE()
       }
     }
-    De = qt.b, Xt || (Xt = {
-      scriptUrl: new URL(De.scriptUrl, location.href).href,
-      wasmBinaryUrl: new URL(De.wasmBinaryUrl, location.href).href
+    UE = Uu.b, Cu || (Cu = {
+      scriptUrl: new URL(UE.scriptUrl, location.href).href,
+      wasmBinaryUrl: new URL(UE.wasmBinaryUrl, location.href).href
     })
   },
-  41743: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => mt
+  41761: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => Xu
     });
-    var Ot = Vt(153),
-      qt = Vt(1169);
+    var su = ju(131),
+      Uu = ju(1135);
 
-    function Dt(tt) {
-      return (0, Ot.isDiscordClient)() ? `https://${qt.e.discordDomain}/${tt.href}` : tt.href
+    function Zu(uu) {
+      return (0, su.isDiscordClient)() ? `https://${Uu.e.discordDomain}/${uu.href}` : uu.href
     }
-    const mt = {
-      scriptUrl: Dt(new Vt.U(Vt(41748))),
-      wasmBinaryUrl: Dt(new Vt.U(Vt(41755)))
+    const Xu = {
+      scriptUrl: Zu(new ju.U(ju(41768))),
+      wasmBinaryUrl: Zu(new ju.U(ju(41772)))
     }
   },
-  36471: tt => {
-    tt.exports = function(tt, et, Vt, Ot) {
-      var qt = self || window;
+  36664: uu => {
+    uu.exports = function(uu, Eu, ju, su) {
+      var Uu = self || window;
       try {
         try {
-          var Dt;
+          var Zu;
           try {
-            Dt = new qt.Blob([tt])
-          } catch (Ht) {
-            (Dt = new(qt.BlobBuilder || qt.WebKitBlobBuilder || qt.MozBlobBuilder || qt.MSBlobBuilder)).append(tt), Dt = Dt.getBlob()
+            Zu = new Uu.Blob([uu])
+          } catch (fu) {
+            (Zu = new(Uu.BlobBuilder || Uu.WebKitBlobBuilder || Uu.MozBlobBuilder || Uu.MSBlobBuilder)).append(uu), Zu = Zu.getBlob()
           }
-          var mt = qt.URL || qt.webkitURL,
-            dt = mt.createObjectURL(Dt),
-            jt = new qt[et](dt, Vt);
-          return mt.revokeObjectURL(dt), jt
-        } catch (Ht) {
-          return new qt[et]("data:application/javascript,".concat(encodeURIComponent(tt)), Vt)
+          var Xu = Uu.URL || Uu.webkitURL,
+            lu = Xu.createObjectURL(Zu),
+            qu = new Uu[Eu](lu, ju);
+          return Xu.revokeObjectURL(lu), qu
+        } catch (fu) {
+          return new Uu[Eu]("data:application/javascript,".concat(encodeURIComponent(uu)), ju)
         }
-      } catch (Ht) {
-        if (!Ot) throw Error("Inline worker is not supported");
-        return new qt[et](Ot, Vt)
+      } catch (fu) {
+        if (!su) throw Error("Inline worker is not supported");
+        return new Uu[Eu](su, ju)
       }
     }
   },
-  41748: (tt, et, Vt) => {
-    tt.exports = Vt.p + "static/media/draco_wasm_wrapper_gltf_v2_1.8b33994b6159ad3fc976.js"
+  41768: (uu, Eu, ju) => {
+    uu.exports = ju.p + "static/media/draco_wasm_wrapper_gltf_v2_1.8b33994b6159ad3fc976.js"
   },
-  41755: (tt, et, Vt) => {
-    tt.exports = Vt.p + "static/media/draco_decoder_gltf_v2_1.1207caa8c6e38dc2aa04.wasm"
+  41772: (uu, Eu, ju) => {
+    uu.exports = ju.p + "static/media/draco_decoder_gltf_v2_1.1207caa8c6e38dc2aa04.wasm"
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

@@ -1,1230 +1,1230 @@
 export const id = 248;
 export const ids = [248];
 export const modules = {
-  39316: (tt, et, Vt) => {
-    function Ot(tt) {
-      return !(!tt.lobbyLeaderboardInfo && !tt.lobbyManage)
+  39416: (uu, Eu, ju) => {
+    function su(uu) {
+      return !(!uu.lobbyLeaderboardInfo && !uu.lobbyManage)
     }
-    Vt.d(et, {
-      d: () => Ot
+    ju.d(Eu, {
+      c: () => su
     })
   },
-  39221: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => Dt
+  39336: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => Zu
     });
-    var Ot = Vt(31),
-      qt = Vt(2043);
+    var su = ju(24),
+      Uu = ju(2011);
 
-    function Dt(tt) {
+    function Zu(uu) {
       let {
-        taskId: et,
-        progress: Vt
-      } = tt;
-      const Ot = qt.b.get("_tasks");
-      null !== Ot && void 0 !== Ot && Ot[et] && qt.b.apply({
+        taskId: Eu,
+        progress: ju
+      } = uu;
+      const su = Uu.e.get("_tasks");
+      null !== su && void 0 !== su && su[Eu] && Uu.e.apply({
         _tasks: {
-          ...Ot,
-          [et]: {
-            ...Ot[et],
-            progress: Vt
+          ...su,
+          [Eu]: {
+            ...su[Eu],
+            progress: ju
           }
         }
       })
     }
-    Ot.j.subscribe("clientTaskProgress", (tt => {
-      Dt(tt)
+    su.h.subscribe("clientTaskProgress", (uu => {
+      Zu(uu)
     }))
   },
-  39152: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => eV,
-      f: () => ne,
-      g: () => tV
+  39280: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => uj,
+      h: () => zE,
+      l: () => RE
     });
-    var Ot = Vt(3751),
-      qt = Vt(184),
-      Dt = Vt(229),
-      mt = Vt(712),
-      dt = Vt(39),
-      jt = Vt(2848),
-      Ht = Vt(3820),
-      Xt = Vt(3800),
-      Qt = Vt(1308);
-    const lt = new WeakMap;
-    class Et {
-      constructor(tt, et) {
-        let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
-          mXt: !0
+    var su = ju(3879),
+      Uu = ju(166),
+      Zu = ju(202),
+      Xu = ju(656),
+      lu = ju(31),
+      qu = ju(2893),
+      fu = ju(3946),
+      Cu = ju(3932),
+      bu = ju(1278);
+    const cu = new WeakMap;
+    class Nu {
+      constructor(uu, Eu) {
+        let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
+          wfu: !0
         };
-        this.callbacks = et, this.options = Vt, this.tOt = void 0, this.sessionId = void 0, this.DW = [], this.dXt = !1, this.df = !1, this.jXt = void 0, this.OW = 0, this.sqt = 0, this.HXt = (tt, et) => {
-          if (this.df) return;
-          const Vt = Number(tt);
-          this.dXt ? this.XXt(Vt, et) : this.DW.push({
-            id: Vt,
-            payload: et
+        this.callbacks = Eu, this.options = ju, this.kju = void 0, this.sessionId = void 0, this.Lk = [], this.Jfu = !1, this.fO = !1, this.dfu = void 0, this.Fk = 0, this.kUu = 0, this.afu = (uu, Eu) => {
+          if (this.fO) return;
+          const ju = Number(uu);
+          this.Jfu ? this.Pfu(ju, Eu) : this.Lk.push({
+            id: ju,
+            payload: Eu
           })
         }, this.dispose = () => {
-          this.df || (this.df = !0, lt.delete(this), this.DW.length = 0, this.jXt())
-        }, this.tOt = tt, this.sessionId = tt.sessionId, lt.set(this, []), this.jXt = this.QXt()
+          this.fO || (this.fO = !0, cu.delete(this), this.Lk.length = 0, this.dfu())
+        }, this.kju = uu, this.sessionId = uu.sessionId, cu.set(this, []), this.dfu = this.ofu()
       }
-      lXt(tt) {
-        this.jXt(), this.tOt = tt, this.sessionId = tt.sessionId, this.OW = 0, this.sqt = 0, this.jXt = this.QXt()
+      kfu(uu) {
+        this.dfu(), this.kju = uu, this.sessionId = uu.sessionId, this.Fk = 0, this.kUu = 0, this.dfu = this.ofu()
       }
-      get Fv() {
-        return this.sqt
+      get Vk() {
+        return this.kUu
       }
-      QXt() {
-        const tt = this.tOt.gM("*", this.HXt);
-        return this.options.mXt && this.tOt.eJ(this.dispose), tt
+      ofu() {
+        const uu = this.kju.gM("*", this.afu);
+        return this.options.wfu && this.kju.pM(this.dispose), uu
       }
-      XXt(tt, et) {
+      Pfu(uu, Eu) {
         try {
-          (0, Ht.lc)(tt) && (et = (0, Ht.e)(tt, Xt.mf.from(et)));
-          const Vt = lt.get(this)[tt];
-          if ("function" !== typeof Vt) {
-            if (this.callbacks.EXt) return void this.callbacks.EXt(tt, et);
-            throw new Error(`No onMessage handler registered for message id ${tt}`)
+          (0, fu.lc)(uu) && (Eu = (0, fu.e)(uu, Cu.qO.from(Eu)));
+          const ju = cu.get(this)[uu];
+          if ("function" !== typeof ju) {
+            if (this.callbacks.mfu) return void this.callbacks.mfu(uu, Eu);
+            throw new Error(`No onMessage handler registered for message id ${uu}`)
           }
-          Vt(et)
-        } catch (Vt) {
-          this.callbacks.fXt(`Error in onMessage ${tt} with payload ${JSON.stringify(et)}`, Vt)
+          ju(Eu)
+        } catch (ju) {
+          this.callbacks.vfu(`Error in onMessage ${uu} with payload ${JSON.stringify(Eu)}`, ju)
         } finally {
-          this.OW++
+          this.Fk++
         }
       }
-      wXt() {
+      Kfu() {
         for (const {
-            id: tt,
-            payload: et
+            id: uu,
+            payload: Eu
           }
-          of this.DW) {
-          if (this.df) break;
-          this.XXt(tt, et)
+          of this.Lk) {
+          if (this.fO) break;
+          this.Pfu(uu, Eu)
         }
-        this.DW.length = 0
+        this.Lk.length = 0
       }
-      bC() {
-        return this.df
+      Gw() {
+        return this.fO
       }
-      yXt() {
-        if (this.dXt || this.df) throw new Error("Trying to getOnMessageRegistrationHandler after registration finished");
+      Vfu() {
+        if (this.Jfu || this.fO) throw new Error("Trying to getOnMessageRegistrationHandler after registration finished");
         return {
-          gM: (tt, et) => {
-            if (this.dXt || this.df) throw new Error("Trying to call onMessage after registration finished");
-            this.gM(tt, et)
+          gM: (uu, Eu) => {
+            if (this.Jfu || this.fO) throw new Error("Trying to call onMessage after registration finished");
+            this.gM(uu, Eu)
           },
           finishRegistration: () => {
-            if (this.df) throw new Error("Cannot finish message registration after disposal");
-            this.dXt = !0, this.wXt()
+            if (this.fO) throw new Error("Cannot finish message registration after disposal");
+            this.Jfu = !0, this.Kfu()
           }
         }
       }
-      gM(tt, et) {
-        var Vt, Ot;
-        null === (Vt = (Ot = this.callbacks).NXt) || void 0 === Vt || Vt.call(Ot);
-        const qt = lt.get(this);
-        for (; tt > qt.length;) qt[qt.length] = null;
-        qt[tt] = et
+      gM(uu, Eu) {
+        var ju, su;
+        null === (ju = (su = this.callbacks).rfu) || void 0 === ju || ju.call(su);
+        const Uu = cu.get(this);
+        for (; uu > Uu.length;) Uu[Uu.length] = null;
+        Uu[uu] = Eu
       }
-      send(tt, et) {
-        this.aXt(), (0, Qt.J)(et) ? this.tOt.vW(tt, et) : this.tOt.send(tt, et)
+      send(uu, Eu) {
+        this.Qfu(), (0, bu.E)(Eu) ? this.kju.qm(uu, Eu) : this.kju.send(uu, Eu)
       }
-      aXt() {
-        var tt, et;
-        (this.sqt++, 5 === ft++) && (null === (tt = (et = this.callbacks).NXt) || void 0 === tt || tt.call(et), ft = 0)
+      Qfu() {
+        var uu, Eu;
+        (this.kUu++, 5 === Ou++) && (null === (uu = (Eu = this.callbacks).rfu) || void 0 === uu || uu.call(Eu), Ou = 0)
       }
-      vN() {
-        this.dispose(), this.tOt.vN()
+      eD() {
+        this.dispose(), this.kju.eD()
       }
       leave() {
-        this.dispose(), this.tOt.leave()
+        this.dispose(), this.kju.leave()
       }
     }
-    let ft = 0;
-    var wt = Vt(3765);
-    class yt extends Et {
-      constructor(tt) {
-        super(tt, {
-          NXt: () => {
-            (0, dt.i)(!0) && (0, Ot.Qv)()
+    let Ou = 0;
+    var Yu = ju(3897);
+    class hu extends Nu {
+      constructor(uu) {
+        super(uu, {
+          rfu: () => {
+            (0, lu.p)(!0) && (0, su.Dk)()
           },
-          fXt: (tt, et) => {
-            var Vt;
-            null === (Vt = (0, jt.e)()) || void 0 === Vt || Vt.yw(tt, et)
+          vfu: (uu, Eu) => {
+            var ju;
+            null === (ju = (0, qu.c)()) || void 0 === ju || ju.OY(uu, Eu)
           }
         }, {
-          mXt: !1
-        }), (0, wt.d)(tt)
+          wfu: !1
+        }), (0, Yu.f)(uu)
       }
-      dW(tt, et) {
-        return !!(0, wt.i)((0, wt.c)(), this.tOt, tt, et) && (this.aXt(), !0)
+      Hk(uu, Eu) {
+        return !!(0, Yu.k)((0, Yu.c)(), this.kju, uu, Eu) && (this.Qfu(), !0)
       }
-      lXt(tt) {
-        this.MXt(), super.lXt(tt), (0, wt.d)(tt)
+      kfu(uu) {
+        this.ifu(), super.kfu(uu), (0, Yu.f)(uu)
       }
-      vN() {
-        super.vN(), this.MXt()
+      eD() {
+        super.eD(), this.ifu()
       }
-      MXt() {
-        this.tOt.ZN.xE.kR = void 0
+      ifu() {
+        this.kju.pD.zN.iK = void 0
       }
     }
-    var Nt = Vt(31),
-      Mt = Vt(2043),
-      bt = Vt(1826),
-      Jt = Vt(36701),
-      Ct = Vt(39158),
-      ut = Vt(38285),
-      Kt = Vt(38056),
-      ht = Vt(710),
-      vt = Vt(38632);
+    var Du = ju(24),
+      gu = ju(2011),
+      Mu = ju(1779),
+      eu = ju(36850),
+      Gu = ju(39285),
+      pu = ju(38416),
+      wu = ju(38200),
+      Ju = ju(649),
+      du = ju(38740);
 
-    function Wt(tt, et, Vt) {
-      const Ot = function(tt) {
-          const et = new Int32Array(tt.length * vt.g);
-          return tt.forEach(((tt, Vt) => {
-            const Ot = Vt * vt.g;
-            if (4 === tt.length) {
-              const [Vt, qt, Dt, mt] = tt;
-              et.set([Vt, qt, Dt, Vt, qt, Dt, mt], Ot)
+    function au(uu, Eu, ju) {
+      const su = function(uu) {
+          const Eu = new Int32Array(uu.length * du.i);
+          return uu.forEach(((uu, ju) => {
+            const su = ju * du.i;
+            if (4 === uu.length) {
+              const [ju, Uu, Zu, Xu] = uu;
+              Eu.set([ju, Uu, Zu, ju, Uu, Zu, Xu], su)
             } else {
-              const [Vt, qt, Dt, mt, dt, jt, Ht] = tt;
-              et.set([Vt, Dt, dt, qt, mt, jt, Ht], Ot)
+              const [ju, Uu, Zu, Xu, lu, qu, fu] = uu;
+              Eu.set([ju, Zu, lu, Uu, Xu, qu, fu], su)
             }
-          })), et
-        }(Vt),
-        qt = (et, Vt, Ot, qt) => {
-          tt.setBlockNoMulti(et, Vt, Ot, qt, !0)
+          })), Eu
+        }(ju),
+        Uu = (Eu, ju, su, Uu) => {
+          uu.setBlockNoMulti(Eu, ju, su, Uu, !0)
         };
-      tt.client.gameRecorder.isCapturing() ? (0, vt.nb)(Ot, (0, vt.mb)(Ot), qt) : tt.ql.sQ.YC(Ot, {
-        Vr: qt,
-        isHookId: et => tt.blockChangeHasHooks(et),
-        watched: () => function(tt, et, Vt) {
-          const Ot = [],
-            qt = (tt, et, Vt) => {
-              Ot.push(tt, et, Vt)
+      uu.client.gameRecorder.isCapturing() ? (0, du.Bb)(su, (0, du.Ab)(su), Uu) : uu.Uc.zb.bJ(su, {
+        YB: Uu,
+        isHookId: Eu => uu.blockChangeHasHooks(Eu),
+        watched: () => function(uu, Eu, ju) {
+          const su = [],
+            Uu = (uu, Eu, ju) => {
+              su.push(uu, Eu, ju)
             },
-            Dt = new Set;
-          for (let mt = 0; mt < Vt.length; mt += vt.g)
-            for (let et = (0, ht.H)(Vt[mt]); et <= (0, ht.H)(Vt[mt + 3]); et++)
-              for (let Ot = (0, ht.H)(Vt[mt + 1]); Ot <= (0, ht.H)(Vt[mt + 4]); Ot++)
-                for (let dt = (0, ht.H)(Vt[mt + 2]); dt <= (0, ht.H)(Vt[mt + 5]); dt++) {
-                  const Vt = `${et}|${Ot}|${dt}`;
-                  Dt.has(Vt) || (Dt.add(Vt), tt.blockDataOwner.forEachDataCell(et, Ot, dt, qt))
+            Zu = new Set;
+          for (let Xu = 0; Xu < ju.length; Xu += du.i)
+            for (let Eu = (0, Ju.M)(ju[Xu]); Eu <= (0, Ju.M)(ju[Xu + 3]); Eu++)
+              for (let su = (0, Ju.M)(ju[Xu + 1]); su <= (0, Ju.M)(ju[Xu + 4]); su++)
+                for (let lu = (0, Ju.M)(ju[Xu + 2]); lu <= (0, Ju.M)(ju[Xu + 5]); lu++) {
+                  const ju = `${Eu}|${su}|${lu}`;
+                  Zu.has(ju) || (Zu.add(ju), uu.blockDataOwner.forEachDataCell(Eu, su, lu, Uu))
                 }
-          return et.forEachCell(qt), Int32Array.from(Ot)
-        }(tt, et, Ot)
-      }), tt.ql.Ztt()
+          return Eu.forEachCell(Uu), Int32Array.from(su)
+        }(uu, Eu, su)
+      }), uu.Uc.Kuu()
     }
 
-    function St(tt) {
-      tt.UVt = new Set, tt.YVt = new Set, tt.AVt = new Set, tt.BVt = new Set, tt.iVt = [], tt.pVt = [], tt.WG = new Set, tt.Uq = [], tt.rG = []
+    function Pu(uu) {
+      uu.gju = new Set, uu.Gju = new Set, uu.Mju = new Set, uu.pju = new Set, uu.eju = [], uu.wju = [], uu.mF = new Set, uu.xU = [], uu.vF = []
     }
-    class ct {
-      constructor(tt) {
-        this.ql = tt
+    class ou {
+      constructor(uu) {
+        this.Uc = uu
       }
-      register(tt) {
-        const et = this.ql,
-          Vt = (0, jt.c)();
-        tt.gM(Ht.$, (tt => {
-          et.sQ.UVt.add(tt), et.sQ.YVt.delete(tt)
-        })), tt.gM(Ht.eb, (tt => {
-          et.sQ.YVt.add(tt), et.sQ.UVt.delete(tt)
-        })), tt.gM(Ht.ge, (tt => {
-          et.sQ.YVt.delete(tt), et.sQ.UVt.delete(tt)
-        })), tt.gM(Ht.cb, (tt => {
-          et.sQ.AVt.add(tt), et.sQ.BVt.delete(tt)
-        })), tt.gM(Ht.jb, (tt => {
-          et.sQ.BVt.add(tt), et.sQ.AVt.delete(tt)
-        })), tt.gM(Ht.ke, (tt => {
-          et.sQ.BVt.delete(tt), et.sQ.AVt.delete(tt)
-        })), tt.gM(Ht.bb, (tt => {
-          (0, Qt.ib)(tt, et.sQ.pVt), (0, Qt.ib)(tt, et.sQ.iVt), et.sQ.iVt.push(tt)
-        })), tt.gM(Ht.fb, (tt => {
-          (0, Qt.ib)(tt, et.sQ.iVt), (0, Qt.ib)(tt, et.sQ.pVt), et.sQ.pVt.push(tt)
-        })), tt.gM(Ht.ie, (tt => {
-          (0, Qt.ib)(tt, et.sQ.iVt), (0, Qt.ib)(tt, et.sQ.pVt)
-        })), tt.gM(Ht.Bf, (tt => {
+      register(uu) {
+        const Eu = this.Uc,
+          ju = (0, qu.b)();
+        uu.gM(fu.S, (uu => {
+          Eu.zb.gju.add(uu), Eu.zb.Gju.delete(uu)
+        })), uu.gM(fu._, (uu => {
+          Eu.zb.Gju.add(uu), Eu.zb.gju.delete(uu)
+        })), uu.gM(fu.ve, (uu => {
+          Eu.zb.Gju.delete(uu), Eu.zb.gju.delete(uu)
+        })), uu.gM(fu.Y, (uu => {
+          Eu.zb.Mju.add(uu), Eu.zb.pju.delete(uu)
+        })), uu.gM(fu.cb, (uu => {
+          Eu.zb.pju.add(uu), Eu.zb.Mju.delete(uu)
+        })), uu.gM(fu.Ce, (uu => {
+          Eu.zb.pju.delete(uu), Eu.zb.Mju.delete(uu)
+        })), uu.gM(fu.V, (uu => {
+          (0, bu.kb)(uu, Eu.zb.wju), (0, bu.kb)(uu, Eu.zb.eju), Eu.zb.eju.push(uu)
+        })), uu.gM(fu.bb, (uu => {
+          (0, bu.kb)(uu, Eu.zb.eju), (0, bu.kb)(uu, Eu.zb.wju), Eu.zb.wju.push(uu)
+        })), uu.gM(fu.ze, (uu => {
+          (0, bu.kb)(uu, Eu.zb.eju), (0, bu.kb)(uu, Eu.zb.wju)
+        })), uu.gM(fu.Of, (uu => {
           let {
-            lq: Vt,
-            Eq: Ot
-          } = tt;
-          Ot ? et.sQ.WG.delete(Vt) : et.sQ.WG.add(Vt)
-        })), tt.gM(Ht.Af, (tt => {
+            YU: ju,
+            hU: su
+          } = uu;
+          su ? Eu.zb.mF.delete(ju) : Eu.zb.mF.add(ju)
+        })), uu.gM(fu.Lf, (uu => {
           let {
-            Uq: Ot,
-            Aq: qt
-          } = tt;
-          Vt.updateWalkThroughRect(et.lL, Ot, qt)
-        })), (0, Ot.onGameResetOnce)((() => {
-          St(et.sQ)
-        })), tt.gM(Ht.gc, (tt => {
-          ut.e.applyServerUpdate(tt)
-        })), tt.gM(Ht.pb, (tt => {
-          Vt.applyServerBlocks((() => {
-            ! function(tt, et) {
+            xU: su,
+            TU: Uu
+          } = uu;
+          ju.updateWalkThroughRect(Eu.FQ, su, Uu)
+        })), (0, su.onGameResetOnce)((() => {
+          Pu(Eu.zb)
+        })), uu.gM(fu.gc, (uu => {
+          pu.d.applyServerUpdate(uu)
+        })), uu.gM(fu.hb, (uu => {
+          ju.applyServerBlocks((() => {
+            ! function(uu, Eu) {
               for (const {
-                  bt: Vt,
-                  Jt: Ot
+                  eu: ju,
+                  Gu: su
                 }
-                of et) {
-                const et = Kt.d[Ot];
-                if (et) {
+                of Eu) {
+                const Eu = wu.c[su];
+                if (Eu) {
                   const {
-                    compX: Ot,
-                    compY: qt,
-                    compZ: Dt,
-                    mainMultiblock: mt
-                  } = et;
-                  tt.fR(Vt[0] - Ot, Vt[1] - qt, Vt[2] - Dt, mt)
+                    compX: su,
+                    compY: Uu,
+                    compZ: Zu,
+                    mainMultiblock: Xu
+                  } = Eu;
+                  uu.lK(ju[0] - su, ju[1] - Uu, ju[2] - Zu, Xu)
                 }
               }
               for (const {
-                  bt: Vt,
-                  Jt: Ot,
-                  Ct: qt
+                  eu: ju,
+                  Gu: su,
+                  pu: Uu
                 }
-                of et) tt.setBlockNoMulti(Vt[0], Vt[1], Vt[2], Ot, !0), tt.blockDataOwner.setBlockData(Vt[0], Vt[1], Vt[2], null === qt ? void 0 : JSON.parse(qt)), tt.blockAdded(Vt[0], Vt[1], Vt[2], Ot)
-            }(Vt, tt)
-          })), Nt.j.sw("changeBlockFail", tt), Vt.client.triggerGameCallback("onChangeBlockFail", tt), Nt.j.sw("EditBoard", {
+                of Eu) uu.setBlockNoMulti(ju[0], ju[1], ju[2], su, !0), uu.blockDataOwner.setBlockData(ju[0], ju[1], ju[2], null === Uu ? void 0 : JSON.parse(Uu)), uu.blockAdded(ju[0], ju[1], ju[2], su)
+            }(ju, uu)
+          })), Du.h.TY("changeBlockFail", uu), ju.client.triggerGameCallback("onChangeBlockFail", uu), Du.h.TY("EditBoard", {
             pos: null
-          }), Nt.j.sw("EditCodeBlock", {
+          }), Du.h.TY("EditCodeBlock", {
             pos: null,
             canChangePos: null
           })
-        })), tt.gM(Ht.Jb, (tt => {
-          Vt.applyServerBlocks((() => {
-            Wt(Vt, ut.e, tt)
+        })), uu.gM(fu.Gb, (uu => {
+          ju.applyServerBlocks((() => {
+            au(ju, pu.d, uu)
           }))
-        })), tt.gM(Ht.tf, (tt => {
+        })), uu.gM(fu.Ff, (uu => {
           let {
-            ut: et,
-            Kt: Ot
-          } = tt;
-          if (Vt.hA(et[0], et[1], et[2])) {
-            const tt = (0, jt.c)().XM(et[0], et[1], et[2]);
-            (0, jt.c)().updateMailboxContents(et[0], et[1], et[2], tt, Ot)
+            wu: Eu,
+            Ju: su
+          } = uu;
+          if (ju.Zx(Eu[0], Eu[1], Eu[2])) {
+            const uu = (0, qu.b)().zD(Eu[0], Eu[1], Eu[2]);
+            (0, qu.b)().updateMailboxContents(Eu[0], Eu[1], Eu[2], uu, su)
           }
-        })), tt.gM(Ht.Ae, (tt => {
+        })), uu.gM(fu.Se, (uu => {
           let {
-            pos: et,
-            data: Ot
-          } = tt;
-          Vt.blockDataOwner.setBlockData(et[0], et[1], et[2], Ot), Vt.blockAdded(et[0], et[1], et[2], Vt.XM(et[0], et[1], et[2]))
+            pos: Eu,
+            data: su
+          } = uu;
+          ju.blockDataOwner.setBlockData(Eu[0], Eu[1], Eu[2], su), ju.blockAdded(Eu[0], Eu[1], Eu[2], ju.zD(Eu[0], Eu[1], Eu[2]))
         }))
       }
     }
-    var Rt = Vt(37401),
-      It = Vt(37002),
-      Pt = Vt(38316),
-      Zt = Vt(38172),
-      Lt = Vt(38335);
-    class Ft {
-      constructor(tt, et) {
-        this.ql = tt, this.setUpQueuedEntity = et
+    var ku = ju(37547),
+      mu = ju(37162),
+      vu = ju(38439),
+      Ku = ju(38308),
+      Vu = ju(38455);
+    class ru {
+      constructor(uu, Eu) {
+        this.Uc = uu, this.setUpQueuedEntity = Eu
       }
-      register(tt) {
-        const et = this.ql,
-          Vt = (0, jt.c)();
-        tt.gM(Ht.Y, (tt => {
+      register(uu) {
+        const Eu = this.Uc,
+          ju = (0, qu.b)();
+        uu.gM(fu.Q, (uu => {
           let {
-            IV: et,
-            PV: Vt
-          } = tt;
-          this.setUpQueuedEntity(et), et = (0, It.c)(et), (0, jt.c)().client.gameRecorder.recordBulletShot(et, Vt), Nt.j.sw(`bulletShot|${et}`, {
-            bulletDirections: Vt
+            Gj: Eu,
+            pj: ju
+          } = uu;
+          this.setUpQueuedEntity(Eu), Eu = (0, mu.d)(Eu), (0, qu.b)().client.gameRecorder.recordBulletShot(Eu, ju), Du.h.TY(`bulletShot|${Eu}`, {
+            bulletDirections: ju
           })
-        })), tt.gM(Ht.kc, (tt => {
+        })), uu.gM(fu.kc, (uu => {
           let {
-            WV: et,
-            SV: Vt
-          } = tt;
-          Nt.j.sw("damagedByOtherPlayer", {
-            WV: et,
-            direction: Vt
+            Dj: Eu,
+            gj: ju
+          } = uu;
+          Du.h.TY("damagedByOtherPlayer", {
+            Dj: Eu,
+            direction: ju
           }, !0)
-        })), tt.gM(Ht.Bd, (tt => {
-          Nt.j.sw("playerKilled", tt, !0), (0, jt.c)().client.gameRecorder.recordPlayerKilled(tt.deadEId, tt.killerEId, tt.withItem, tt.killstreak)
-        })), tt.gM(Ht.Ub, (tt => {
-          Nt.j.sw("customKillfeed", tt, !0), (0, jt.c)().client.gameRecorder.recordCustomKillfeed(tt.killer, tt.victim, tt.withItem)
-        })), tt.gM(Ht.Md, (tt => {
+        })), uu.gM(fu.Td, (uu => {
+          Du.h.TY("playerKilled", uu, !0), (0, qu.b)().client.gameRecorder.recordPlayerKilled(uu.deadEId, uu.killerEId, uu.withItem, uu.killstreak)
+        })), uu.gM(fu.Ob, (uu => {
+          Du.h.TY("customKillfeed", uu, !0), (0, qu.b)().client.gameRecorder.recordCustomKillfeed(uu.killer, uu.victim, uu.withItem)
+        })), uu.gM(fu.be, (uu => {
           let {
-            xt: Vt,
-            Tt: Ot
-          } = tt;
-          this.setUpQueuedEntity(Vt);
-          const qt = et.mJ.bVt(Vt);
-          null !== qt && void 0 !== qt && qt.isGun() && qt.reload(Date.now(), Ot)
-        })), tt.gM(Ht.ue, (tt => {
+            xu: ju,
+            Tu: su
+          } = uu;
+          this.setUpQueuedEntity(ju);
+          const Uu = Eu.YG.yEu(ju);
+          null !== Uu && void 0 !== Uu && Uu.isGun() && Uu.reload(Date.now(), su)
+        })), uu.gM(fu.Ne, (uu => {
           let {
-            ne: Vt,
-            St: Ot
-          } = tt;
-          const qt = Ot ? (0, Lt.h)(et, Ot) : void 0;
-          Nt.j.sw("sendHitmarker", {
-            ne: Vt,
-            screenPos: qt
+            FE: ju,
+            ku: su
+          } = uu;
+          const Uu = su ? (0, Vu.f)(Eu, su) : void 0;
+          Du.h.TY("sendHitmarker", {
+            FE: ju,
+            screenPos: Uu
           }, !0)
-        })), tt.gM(Ht.Kc, (tt => {
+        })), uu.gM(fu.Xc, (uu => {
           let {
-            ht: Ot,
-            vt: qt,
-            ct: Dt,
-            Rt: mt,
-            Pt: dt,
-            Zt: jt,
-            Lt: Ht
-          } = tt;
-          this.setUpQueuedEntity(Ot), Ot = (0, It.c)(Ot);
-          const Xt = et.mJ.EVt(Ot);
-          if (Xt && (Xt.lastHurtTime = performance.now()), (0, Pt.playRigHurt)(et, Ot, jt), Nt.j.sw("lifeformHurt", {
-              eId: Ot,
-              Lt: Ht
-            }), qt) {
-            const tt = (0, Lt.h)(et, qt.St);
-            Nt.j.sw("yourAttackHit", {
-              ne: mt,
-              screenPos: tt,
-              hitSelf: Ot === et.lL
+            au: su,
+            Pu: Uu,
+            mu: Zu,
+            vu: Xu,
+            Ku: lu,
+            Vu: qu,
+            ru: fu
+          } = uu;
+          this.setUpQueuedEntity(su), su = (0, mu.d)(su);
+          const Cu = Eu.YG.LEu(su);
+          if (Cu && (Cu.lastHurtTime = performance.now()), (0, vu.playRigHurt)(Eu, su, qu), Du.h.TY("lifeformHurt", {
+              eId: su,
+              ru: fu
+            }), Uu) {
+            const uu = (0, Vu.f)(Eu, Uu.ku);
+            Du.h.TY("yourAttackHit", {
+              FE: Xu,
+              screenPos: uu,
+              hitSelf: su === Eu.FQ
             })
           }
-          Ot === et.lL && (Vt.shakePlayerCamera(Ot, dt / 40, 200), Nt.j.sw("closeShopOnDamaged", null), Nt.j.sw("damagedByOtherPlayer", {
-            WV: null,
-            direction: jt,
-            Pt: dt
+          su === Eu.FQ && (ju.shakePlayerCamera(su, lu / 40, 200), Du.h.TY("closeShopOnDamaged", null), Du.h.TY("damagedByOtherPlayer", {
+            Dj: null,
+            direction: qu,
+            Ku: lu
           }, !0));
-          const Qt = et.mJ.YM(Ot);
-          if (Qt && (Dt || mt)) {
-            const tt = [Qt[0], Qt[1] + 1, Qt[2]];
-            Dt && (0, Zt.l)(et, Zt.z, tt, 15), mt && (0, Zt.l)(et, Zt.o, tt, 10)
+          const bu = Eu.YG.bM(su);
+          if (bu && (Zu || Xu)) {
+            const uu = [bu[0], bu[1] + 1, bu[2]];
+            Zu && (0, Ku.m)(Eu, Ku.F, uu, 15), Xu && (0, Ku.m)(Eu, Ku.t, uu, 10)
           }
-        })), tt.gM(Ht.Hc, (tt => {
+        })), uu.gM(fu.Tc, (uu => {
           let {
-            Le: Vt,
-            Fe: Ot,
-            ke: qt
-          } = tt;
-          (0, Rt.e)(et).setHealthFrac((0, It.c)(Vt), qt), Nt.j.sw("lifeformHealthChanged", {
-            eId: (0, It.c)(Vt),
-            Fe: Ot,
-            ke: qt
+            dE: ju,
+            aE: su,
+            PE: Uu
+          } = uu;
+          (0, ku.d)(Eu).setHealthFrac((0, mu.d)(ju), Uu), Du.h.TY("lifeformHealthChanged", {
+            eId: (0, mu.d)(ju),
+            aE: su,
+            PE: Uu
           })
-        })), tt.gM(Ht.R, (tt => {
+        })), uu.gM(fu.K, (uu => {
           let {
-            bD: Vt,
-            JD: Ot
-          } = tt;
-          (0, jt.c)().playerAttacked(et.lL, Vt, Ot)
-        })), tt.gM(Ht.sb, (() => {
-          const tt = et.mJ.bVt(et.lL);
-          null !== tt && void 0 !== tt && tt.isChargeable() && tt.finishCharging(!1, Date.now())
-        })), tt.gM(Ht._b, (tt => {
+            GZ: ju,
+            pZ: su
+          } = uu;
+          (0, qu.b)().playerAttacked(Eu.FQ, ju, su)
+        })), uu.gM(fu.ob, (() => {
+          const uu = Eu.YG.yEu(Eu.FQ);
+          null !== uu && void 0 !== uu && uu.isChargeable() && uu.finishCharging(!1, Date.now())
+        })), uu.gM(fu.Tb, (uu => {
           let {
-            Ft: et,
-            kt: Vt,
-            Gt: Ot,
-            tV: qt,
-            eV: Dt,
-            VV: mt
-          } = tt;
-          et = (0, It.c)(et), (0, jt.c)().client.updateEffect(et, Vt, {
-            displayName: Ot,
-            icon: qt,
-            duration: Dt,
-            level: mt
+            Qu: Eu,
+            iu: ju,
+            Wu: su,
+            BE: Uu,
+            LE: Zu,
+            tE: Xu
+          } = uu;
+          Eu = (0, mu.d)(Eu), (0, qu.b)().client.updateEffect(Eu, ju, {
+            displayName: su,
+            icon: Uu,
+            duration: Zu,
+            level: Xu
           })
-        })), tt.gM(Ht.Qd, (tt => {
+        })), uu.gM(fu.ee, (uu => {
           let {
-            Ft: et,
-            kt: Vt
-          } = tt;
-          et = (0, It.c)(et), (0, jt.c)().client.removeEffect(et, Vt)
-        })), tt.gM(Ht.of, (tt => {
-          Nt.j.sw("ttbEffectMultiplier", tt)
+            Qu: Eu,
+            iu: ju
+          } = uu;
+          Eu = (0, mu.d)(Eu), (0, qu.b)().client.removeEffect(Eu, ju)
+        })), uu.gM(fu.zf, (uu => {
+          Du.h.TY("ttbEffectMultiplier", uu)
         }))
       }
     }
-    var kt = Vt(39179),
-      Gt = Vt(37398),
-      zt = Vt(4322),
-      ot = Vt(38347),
-      rt = Vt(36992),
-      Ut = Vt(36996),
-      At = Vt(37314),
-      it = Vt(37480),
-      Yt = Vt(38356),
-      Bt = Vt(39187);
-    class pt {
-      constructor(tt, et) {
-        this.ql = tt, this.setUpQueuedEntity = et
+    var Qu = ju(39307),
+      iu = ju(37541),
+      Wu = ju(4408),
+      Su = ju(38462),
+      Iu = ju(37145),
+      Fu = ju(37151),
+      Bu = ju(37472),
+      Lu = ju(37646),
+      tu = ju(38465),
+      xu = ju(39310);
+    class Tu {
+      constructor(uu, Eu) {
+        this.Uc = uu, this.setUpQueuedEntity = Eu
       }
-      register(tt) {
-        const et = this.ql,
-          Vt = (0, jt.c)();
-        tt.gM(Ht.Zc, (tt => {
+      register(uu) {
+        const Eu = this.Uc,
+          ju = (0, qu.b)();
+        uu.gM(fu.ld, (uu => {
           let {
-            eId: Vt,
-            settings: Ot
-          } = tt;
-          (0, it.e)(Vt);
-          for (const et in Ot)(0, it.c)(Vt, et, Ot[et]);
-          if ("canSee" in Ot && et.mJ.ptt(Vt, "hidingMeshManager")) {
-            const tt = et.mJ.getState(Vt, "hidingMeshManager");
-            tt.canSee = (0, Yt.b)("canSee", Ot.canSee), tt._forceUpdate = !0
+            eId: ju,
+            settings: su
+          } = uu;
+          (0, Lu.d)(ju);
+          for (const Eu in su)(0, Lu.c)(ju, Eu, su[Eu]);
+          if ("canSee" in su && Eu.YG.xuu(ju, "hidingMeshManager")) {
+            const uu = Eu.YG.getState(ju, "hidingMeshManager");
+            uu.canSee = (0, tu.e)("canSee", su.canSee), uu._forceUpdate = !0
           }
-        })), tt.gM(Ht.J, (tt => {
+        })), uu.gM(fu.E, (uu => {
           let {
-            pO: Vt,
-            xO: Ot,
-            animationScript: qt,
-            TO: Dt,
-            gO: mt,
-            sO: dt,
-            nO: Ht
-          } = tt;
-          Vt = (0, It.c)(Vt);
-          const Xt = null === qt && null !== dt ? (0, kt.d)(dt, Ht) : qt;
-          (0, jt.c)().client.gameRecorder.recordAnimateEntity(Vt, Ot, Xt, Dt, mt), (0, Rt.e)(et).animations.animateEntity(Vt, Ot, qt, Dt, mt, dt, Ht), null !== qt || Vt === et.lL && Ot === Gt.g.Emote && (0, jt.c)().client.cameraController.endTemporaryThirdPerson()
-        })), tt.gM(Ht.te, (tt => {
-          (0, Bt.d)(tt)
-        })), tt.gM(Ht.yd, (tt => {
-          for (const et of tt)(0, ot.x)(et);
-          Nt.j.sw("playerCosmeticsUpdated", tt, !0)
-        })), tt.gM(Ht.N, (tt => {
-          for (const Vt of tt)(0, At.g)(et, Vt)
-        })), tt.gM(Ht._c, (tt => {
-          (0, Zt.m)(et, (0, Qt.r)(tt))
-        })), tt.gM(Ht.bd, (tt => {
-          zt.g[tt.WD] ? (0, Zt.m)(et, {
-            ...zt.g[tt.WD],
-            pos1: tt.pos1,
-            pos2: tt.pos2
-          }) : console.error(`Unknown preset id: ${tt.WD}`)
-        })), tt.gM(Ht.vd, (tt => {
-          var et, Vt;
+            ys: ju,
+            zs: su,
+            animationScript: Uu,
+            Rs: Zu,
+            uU: Xu,
+            EU: lu,
+            jU: fu
+          } = uu;
+          ju = (0, mu.d)(ju);
+          const Cu = null === Uu && null !== lu ? (0, Qu.d)(lu, fu) : Uu;
+          (0, qu.b)().client.gameRecorder.recordAnimateEntity(ju, su, Cu, Zu, Xu), (0, ku.d)(Eu).animations.animateEntity(ju, su, Uu, Zu, Xu, lu, fu), null !== Uu || ju === Eu.FQ && su === iu.f.Emote && (0, qu.b)().client.cameraController.endTemporaryThirdPerson()
+        })), uu.gM(fu.Ke, (uu => {
+          (0, xu.e)(uu)
+        })), uu.gM(fu.Qd, (uu => {
+          for (const Eu of uu)(0, Su.B)(Eu);
+          Du.h.TY("playerCosmeticsUpdated", uu, !0)
+        })), uu.gM(fu.H, (uu => {
+          for (const ju of uu)(0, Bu.f)(Eu, ju)
+        })), uu.gM(fu.pd, (uu => {
+          (0, Ku.p)(Eu, (0, bu.q)(uu))
+        })), uu.gM(fu.td, (uu => {
+          Wu.h[uu.oZ] ? (0, Ku.p)(Eu, {
+            ...Wu.h[uu.oZ],
+            pos1: uu.pos1,
+            pos2: uu.pos2
+          }) : console.error(`Unknown preset id: ${uu.oZ}`)
+        })), uu.gM(fu.Nd, (uu => {
+          var Eu, ju;
           let {
-            tt: Ot,
-            et: qt,
-            Vt: Dt,
-            Ot: mt
-          } = tt, {
-            Dt: dt,
-            dt: Ht
-          } = null !== mt && void 0 !== mt ? mt : {};
+            uu: su,
+            Eu: Uu,
+            ju: Zu,
+            Uu: Xu
+          } = uu, {
+            Xu: lu,
+            lu: fu
+          } = null !== Xu && void 0 !== Xu ? Xu : {};
           const {
-            qt: Xt
-          } = null !== mt && void 0 !== mt ? mt : {};
-          dt = null !== (et = dt) && void 0 !== et ? et : void 0, Ht = null !== (Vt = Ht) && void 0 !== Vt ? Vt : void 0, "string" === typeof Xt && this.setUpQueuedEntity(Xt), (0, jt.c)().client.gameRecorder.recordPlaySound(Ot, qt, Dt, mt), rt.e.play((0, Ut.g)(Ot), qt, Xt, dt, Ht).rate(Dt)
-        })), tt.gM(Ht.uf, (tt => {
-          for (const et in tt) {
-            const Ot = tt[et];
-            for (const tt in Ot) Vt.client.meshCreator.handleParticleSystemUpdate(et, tt, Ot[tt])
+            Zu: Cu
+          } = null !== Xu && void 0 !== Xu ? Xu : {};
+          lu = null !== (Eu = lu) && void 0 !== Eu ? Eu : void 0, fu = null !== (ju = fu) && void 0 !== ju ? ju : void 0, "string" === typeof Cu && this.setUpQueuedEntity(Cu), (0, qu.b)().client.gameRecorder.recordPlaySound(su, Uu, Zu, Xu), Iu.e.play((0, Fu.e)(su), Uu, Cu, lu, fu).rate(Zu)
+        })), uu.gM(fu.Gf, (uu => {
+          for (const Eu in uu) {
+            const su = uu[Eu];
+            for (const uu in su) ju.client.meshCreator.handleParticleSystemUpdate(Eu, uu, su[uu])
           }
         }))
       }
     }
-    var xt = Vt(38040),
-      Tt = Vt(38005);
-    class gt {
-      constructor(tt) {
-        this.ql = tt
+    var Hu = ju(38178),
+      Au = ju(38145);
+    class nu {
+      constructor(uu) {
+        this.Uc = uu
       }
-      register(tt) {
-        const et = this.ql,
-          Vt = (0, jt.c)();
+      register(uu) {
+        const Eu = this.Uc,
+          ju = (0, qu.b)();
 
-        function Ot() {
-          return et.mJ.tVt(et.lL)
+        function su() {
+          return Eu.YG.kEu(Eu.FQ)
         }
-        tt.gM(Ht.tc, (tt => {
+        uu.gM(fu.yc, (uu => {
           let {
-            Sq: Vt,
-            cq: Ot,
-            Rq: qt,
-            Iq: Dt,
-            Pq: mt,
-            Zq: dt,
-            Lq: jt,
-            Fq: Ht,
-            kq: Xt
-          } = tt;
-          if (!et.mJ.ptt(Vt, "itemState")) return void(0, xt.k)(et, Vt, [mt, dt, jt], Ot, {
-            amount: qt,
-            attributes: JSON.parse(Dt),
-            Fq: Ht,
-            size: Xt
+            vU: ju,
+            KU: su,
+            VU: Uu,
+            rU: Zu,
+            QU: Xu,
+            iU: lu,
+            WU: qu,
+            SU: fu,
+            IU: Cu
+          } = uu;
+          if (!Eu.YG.xuu(ju, "itemState")) return void(0, Hu.l)(Eu, ju, [Xu, lu, qu], su, {
+            amount: Uu,
+            attributes: JSON.parse(Zu),
+            SU: fu,
+            size: Cu
           });
-          const Qt = et.mJ.getState(Vt, "itemState");
-          Qt.amount = qt, Qt.Fq = Ht, Qt.creationTime = Date.now(), (0, Tt.setServerPosition)(et.mJ.getState(Vt, "smoothToServerPos"), mt, dt, jt)
-        })), tt.gM(Ht.mb, (tt => {
-          (0, Rt.e)(et).setCantPickUp(tt, !0), et.mJ.ptt(tt, "itemState") && (et.mJ.getState(tt, "itemState").Fq = !0)
-        })), tt.gM(Ht.ce, (tt => {
-          (0, Rt.e)(et).setCantPickUp(tt, !1), et.mJ.ptt(tt, "itemState") && (et.mJ.getState(tt, "itemState").Fq = !1)
-        })), tt.gM(Ht.qd, (tt => {
+          const bu = Eu.YG.getState(ju, "itemState");
+          bu.amount = Uu, bu.SU = fu, bu.creationTime = Date.now(), (0, Au.setServerPosition)(Eu.YG.getState(ju, "smoothToServerPos"), Xu, lu, qu)
+        })), uu.gM(fu.db, (uu => {
+          (0, ku.d)(Eu).setCantPickUp(uu, !0), Eu.YG.xuu(uu, "itemState") && (Eu.YG.getState(uu, "itemState").SU = !0)
+        })), uu.gM(fu.re, (uu => {
+          (0, ku.d)(Eu).setCantPickUp(uu, !1), Eu.YG.xuu(uu, "itemState") && (Eu.YG.getState(uu, "itemState").SU = !1)
+        })), uu.gM(fu.Fd, (uu => {
           let {
-            pickUpItems: et,
-            pickUpAckSeq: Vt
-          } = tt;
+            pickUpItems: Eu,
+            pickUpAckSeq: ju
+          } = uu;
           for (const {
-              name: qt,
-              amount: Dt,
-              attributes: mt
+              name: Uu,
+              amount: Zu,
+              attributes: Xu
             }
-            of et) Ot().pickUpItem({
-            name: qt,
-            amount: Dt,
-            typeObj: xt.A[qt],
-            attributes: mt
+            of Eu) su().pickUpItem({
+            name: Uu,
+            amount: Zu,
+            typeObj: Hu.y[Uu],
+            attributes: Xu
           });
-          (0, jt.c)().client.inventoryPrediction.serverChangeApplied(Vt)
-        })), tt.gM(Ht.Ue, (tt => {
+          (0, qu.b)().client.inventoryPrediction.serverChangeApplied(ju)
+        })), uu.gM(fu._e, (uu => {
           let {
-            index: Vt,
-            name: Ot,
-            amount: qt,
-            attributes: Dt,
-            setSlotAckSeq: mt
-          } = tt;
-          const dt = et.mJ.eVt(et.lL);
-          (Vt < dt.playerInventory.numSlots || dt.cD || dt.inCreative) && dt.setItemSlot(Vt, Ot, qt, Dt), (0, jt.c)().client.inventoryPrediction.serverChangeApplied(mt)
-        })), tt.gM(Ht.sc, (tt => {
-          (0, jt.c)().client.inventoryPrediction.acknowledge(tt)
-        })), tt.gM(Ht.I, (tt => {
+            index: ju,
+            name: su,
+            amount: Uu,
+            attributes: Zu,
+            setSlotAckSeq: Xu
+          } = uu;
+          const lu = Eu.YG.mEu(Eu.FQ);
+          (ju < lu.playerInventory.numSlots || lu.mZ || lu.inCreative) && lu.setItemSlot(ju, su, Uu, Zu), (0, qu.b)().client.inventoryPrediction.serverChangeApplied(Xu)
+        })), uu.gM(fu.wc, (uu => {
+          (0, qu.b)().client.inventoryPrediction.acknowledge(uu)
+        })), uu.gM(fu.D, (uu => {
           let {
-            pV: et,
-            xV: Vt,
-            TV: Ot,
-            gV: qt
-          } = tt;
-          (0, jt.c)().client.itemDropPrediction.onActionItemDrops(et, Vt, Ot, qt)
-        })), tt.gM(Ht.Eb, (tt => {
-          Ot().clearInventory(), (0, jt.c)().client.inventoryPrediction.serverChangeApplied(tt)
-        })), tt.gM(Ht.Ve, (tt => {
-          Nt.j.sw("setSelectedInventorySlotI", tt, !0)
-        })), tt.gM(Ht.wb, (tt => {
+            Wj: Eu,
+            Sj: ju,
+            Ij: su,
+            Fj: Uu
+          } = uu;
+          (0, qu.b)().client.itemDropPrediction.onActionItemDrops(Eu, ju, su, Uu)
+        })), uu.gM(fu.zb, (uu => {
+          su().clearInventory(), (0, qu.b)().client.inventoryPrediction.serverChangeApplied(uu)
+        })), uu.gM(fu.af, (uu => {
+          Du.h.TY("setSelectedInventorySlotI", uu, !0)
+        })), uu.gM(fu.qb, (uu => {
           let {
-            Bq: Vt,
-            pq: Ot,
-            xq: qt,
-            Tq: Dt,
-            nq: mt,
-            tD: dt,
-            eD: Ht,
-            VD: Xt
-          } = tt;
-          const Qt = et.mJ.eVt(et.lL);
-          if (dt) {
+            nU: ju,
+            yU: su,
+            zU: Uu,
+            RU: Zu,
+            uZ: Xu,
+            EZ: lu,
+            jZ: fu,
+            sZ: Cu
+          } = uu;
+          const bu = Eu.YG.mEu(Eu.FQ);
+          if (lu) {
             const {
-              qD: tt,
-              DD: et
-            } = Xt;
-            return (0, jt.c)().client.inventoryPrediction.K9(et, (() => {
-              Qt.chestRefreshed(Ot, qt, Dt, Ht, tt)
-            })) && Nt.j.sw("chestToggleFromServer", !1, !0), void Nt.j.sw("chestRefreshedFromServer")
-          }(Vt || Qt.cD) && (Vt ? (Qt.chestOpened(Ot, qt, Dt, mt, Ht), null !== mt && (0, jt.c)().client.ironChestPasskeyCache.onChestOpened(Dt, mt)) : Qt.chestClosed(), Nt.j.sw("chestToggleFromServer", Vt, !0))
-        })), tt.gM(Ht.Wb, (tt => {
+              ZZ: uu,
+              XZ: Eu
+            } = Cu;
+            return (0, qu.b)().client.inventoryPrediction.I6(Eu, (() => {
+              bu.chestRefreshed(su, Uu, Zu, fu, uu)
+            })) && Du.h.TY("chestToggleFromServer", !1, !0), void Du.h.TY("chestRefreshedFromServer")
+          }(ju || bu.mZ) && (ju ? (bu.chestOpened(su, Uu, Zu, Xu, fu), null !== Xu && (0, qu.b)().client.ironChestPasskeyCache.onChestOpened(Zu, Xu)) : bu.chestClosed(), Du.h.TY("chestToggleFromServer", ju, !0))
+        })), uu.gM(fu.Sb, (uu => {
           let {
-            craftingRecipeItemName: Ot,
-            recipesForItem: qt
-          } = tt;
-          Ot ? Vt.craftingManager.editRecipesForPlayer(et.lL, Ot, qt) : Vt.craftingManager.resetAllPlayerRecipes(et.lL), Nt.j.sw("craftingRecipesEdited", {
-            itemName: Ot,
-            recipesForItem: qt
+            craftingRecipeItemName: su,
+            recipesForItem: Uu
+          } = uu;
+          su ? ju.craftingManager.editRecipesForPlayer(Eu.FQ, su, Uu) : ju.craftingManager.resetAllPlayerRecipes(Eu.FQ), Du.h.TY("craftingRecipesEdited", {
+            itemName: su,
+            recipesForItem: Uu
           })
-        })), tt.gM(Ht.Xd, (tt => {
+        })), uu.gM(fu.je, (uu => {
           let {
-            iV: et,
-            YV: Vt,
-            BV: qt
-          } = tt;
-          Ot().removeItemName(et, Vt), (0, jt.c)().client.inventoryPrediction.serverChangeApplied(qt)
-        })), tt.gM(Ht.Ud, (tt => {
+            rj: Eu,
+            Qj: ju,
+            ij: Uu
+          } = uu;
+          su().removeItemName(Eu, ju), (0, qu.b)().client.inventoryPrediction.serverChangeApplied(Uu)
+        })), uu.gM(fu.he, (uu => {
           let {
-            Gq: Ot
-          } = tt;
-          Vt.craftingManager.removeRecipes(et.lL, Ot), Nt.j.sw("craftingRecipesEdited", {
-            itemName: Ot,
+            FU: su
+          } = uu;
+          ju.craftingManager.removeRecipes(Eu.FQ, su), Du.h.TY("craftingRecipesEdited", {
+            itemName: su,
             recipesForItem: []
           })
         }))
       }
     }
-    var st = Vt(6667),
-      nt = Vt(37654),
-      te = Vt(404),
-      ee = Vt.n(te),
-      Ve = Vt(4655),
-      Oe = Vt(37951),
-      qe = Vt(38495),
-      De = Vt(37647);
-    class me {
-      constructor(tt, et) {
-        this.ql = tt, this.setUpQueuedEntity = et
+    var yu = ju(6677),
+      zu = ju(37807),
+      Ru = ju(366),
+      uE = ju.n(Ru),
+      EE = ju(4709),
+      jE = ju(38082),
+      sE = ju(38620),
+      UE = ju(37803);
+    class ZE {
+      constructor(uu, Eu) {
+        this.Uc = uu, this.setUpQueuedEntity = Eu
       }
-      register(tt) {
-        const et = this.ql,
-          Vt = (0, jt.c)();
-        tt.gM(Ht.jf, (tt => {
+      register(uu) {
+        const Eu = this.Uc,
+          ju = (0, qu.b)();
+        uu.gM(fu.vf, (uu => {
           let {
-            Ge: Vt,
-            ze: qt,
-            oe: Dt,
-            Ue: mt
-          } = tt;
-          const dt = [qt, Dt, mt];
-          et.mJ.setPosition(et.lL, dt), (0, Ot.sendColyMessage)(Ht.Ng, {
-            Qj: Vt,
-            lj: Ve.h
-          }), Nt.j.sw("localPlayerTeleported", {
-            pos: dt,
+            oE: ju,
+            kE: Uu,
+            mE: Zu,
+            vE: Xu
+          } = uu;
+          const lu = [Uu, Zu, Xu];
+          Eu.YG.setPosition(Eu.FQ, lu), (0, su.sendColyMessage)(fu.$g, {
+            uq: ju,
+            Eq: EE.h
+          }), Du.h.TY("localPlayerTeleported", {
+            pos: lu,
             isCorrection: !1
           })
-        })), tt.gM(Ht.jd, (tt => {
+        })), uu.gM(fu.Ad, (uu => {
           let {
-            UD: et,
-            AD: Vt,
-            iD: Ot,
-            YD: qt
-          } = tt;
-          this.setUpQueuedEntity(et);
-          const Dt = [Vt, Ot, qt];
-          Nt.j.sw(`otherPlayerTeleported|${et}`, {
-            pos: Dt
+            BZ: Eu,
+            LZ: ju,
+            tZ: su,
+            xZ: Uu
+          } = uu;
+          this.setUpQueuedEntity(Eu);
+          const Zu = [ju, su, Uu];
+          Du.h.TY(`otherPlayerTeleported|${Eu}`, {
+            pos: Zu
           })
-        })), tt.gM(Ht.Ed, (tt => {
+        })), uu.gM(fu.Xd, (uu => {
           let {
-            fq: Vt,
-            wq: qt,
-            yq: Dt,
-            Nq: mt,
-            aq: dt,
-            Mq: jt,
-            bq: Xt,
-            Cq: Qt,
-            Jq: lt,
-            hq: Et
-          } = tt;
-          const ft = [qt, Dt, mt];
-          et.mJ.setPosition(et.lL, ft);
-          const wt = et.mJ.fet(et.lL),
-            yt = et.mJ.YG(et.lL);
-          ee().set(yt.QG, 0, 0, 0), ee().set(yt.lG, 0, 0, 0), ee().set(yt.Dy, dt, jt, Xt), yt.wG(), wt._flying = null !== Et, Et ? (wt.flyAccel.vq = Et.vq, wt.flyAccel.Wq = Et.Wq) : wt.flyAccel.reset(), Qt && wt.movementType === st.m.GLIDING && (wt.uq = Qt.uq, ee().copy(wt.Kq, Qt.Kq)), (0, Ot.sendColyMessage)(Ht.Ng, {
-            Qj: Vt,
-            lj: Ve.h
-          }), Nt.j.sw("localPlayerTeleported", {
-            pos: ft,
+            DU: ju,
+            gU: Uu,
+            MU: Zu,
+            eU: Xu,
+            GU: lu,
+            pU: qu,
+            wU: Cu,
+            dU: bu,
+            JU: cu,
+            oU: Nu
+          } = uu;
+          const Ou = [Uu, Zu, Xu];
+          Eu.YG.setPosition(Eu.FQ, Ou);
+          const Yu = Eu.YG.qEu(Eu.FQ),
+            hu = Eu.YG.SF(Eu.FQ);
+          uE().set(hu.jF, 0, 0, 0), uE().set(hu.sF, 0, 0, 0), uE().set(hu.RY, lu, qu, Cu), hu.ZF(), Yu._flying = null !== Nu, Nu ? (Yu.flyAccel.kU = Nu.kU, Yu.flyAccel.mU = Nu.mU) : Yu.flyAccel.reset(), bu && Yu.movementType === yu.r.GLIDING && (Yu.aU = bu.aU, uE().copy(Yu.PU, bu.PU)), (0, su.sendColyMessage)(fu.$g, {
+            uq: ju,
+            Eq: EE.h
+          }), Du.h.TY("localPlayerTeleported", {
+            pos: Ou,
             isCorrection: !0
           })
-        })), tt.gM(Ht.Xe, (tt => {
+        })), uu.gM(fu.bf, (uu => {
           let {
-            vehicleEId: et,
-            overrides: Vt
-          } = tt;
-          (0, jt.c)().applyRiddenVehicleSettingOverrides(et, Vt)
-        })), tt.gM(Ht.wf, (tt => {
+            vehicleEId: Eu,
+            overrides: ju
+          } = uu;
+          (0, qu.b)().applyRiddenVehicleSettingOverrides(Eu, ju)
+        })), uu.gM(fu.If, (uu => {
           let {
-            GV: Vt,
-            zV: Ot,
-            oV: qt
-          } = tt;
-          const Dt = et.mJ.fet(et.lL).physicsState.type === st.n.SLEEPING && Vt === st.n.DEFAULT;
-          (0, jt.c)().updatePositionAndPhysics(et.lL, {
-            type: Vt,
-            tier: Ot
-          }, !0, qt), Dt && (0, jt.c)().updateHeldVehicleStatus()
-        })), tt.gM(Ht.qb, (tt => {
+            oj: ju,
+            kj: su,
+            mj: Uu
+          } = uu;
+          const Zu = Eu.YG.qEu(Eu.FQ).physicsState.type === yu.v.SLEEPING && ju === yu.v.DEFAULT;
+          (0, qu.b)().updatePositionAndPhysics(Eu.FQ, {
+            type: ju,
+            tier: su
+          }, !0, Uu), Zu && (0, qu.b)().updateHeldVehicleStatus()
+        })), uu.gM(fu.lb, (uu => {
           let {
-            Pe: Vt,
-            Ze: Ot
-          } = tt;
-          et.mJ.xet(et.lL).setPose(Vt, Ot)
-        })), tt.gM(Ht.De, (tt => {
+            wE: ju,
+            JE: su
+          } = uu;
+          Eu.YG.PEu(Eu.FQ).setPose(ju, su)
+        })), uu.gM(fu.Te, (uu => {
           const {
-            nX: Vt,
-            RVt: Ot
-          } = (0, nt.d)([tt[0], tt[1], tt[2]]);
-          De.c.setLookDirection(et, Vt, Ot), (0, Oe.r)(Vt, Ot);
-          const qt = et.mJ.xet(et.lL);
-          qt && (qt.heading = Vt)
-        })), tt.gM(Ht.He, (tt => {
-          Vt.client.cameraController.setCameraZoom(tt)
-        })), tt.gM(Ht.af, (tt => {
+            nf: ju,
+            lju: su
+          } = (0, zu.f)([uu[0], uu[1], uu[2]]);
+          UE.d.setLookDirection(Eu, ju, su), (0, jE.q)(ju, su);
+          const Uu = Eu.YG.PEu(Eu.FQ);
+          Uu && (Uu.heading = ju)
+        })), uu.gM(fu.Ue, (uu => {
+          ju.client.cameraController.setCameraZoom(uu)
+        })), uu.gM(fu.if, (uu => {
           let {
-            cV: Ot,
-            RV: qt
-          } = tt;
-          Vt.shakePlayerCamera(et.lL, Ot, qt)
-        })), tt.gM(Ht.zc, (tt => {
-          et.mJ.xet(et.lL).jumpMultiplier.setMultiplierType("jumpEffectAmount", tt)
-        })), (0, Ot.onGameResetOnce)((() => {
-          et.mJ.xet(et.lL).jumpMultiplier.setMultiplierType("jumpEffectAmount", 1)
-        })), tt.gM(Ht.L, (tt => {
-          et.mJ.YG(et.lL).applyImpulse(tt)
-        })), tt.gM(Ht.$e, (tt => {
-          const Vt = et.mJ.YG(et.lL);
-          ee().set(Vt.QG, 0, 0, 0), ee().set(Vt.lG, 0, 0, 0), ee().copy(Vt.Dy, tt), Vt.wG()
-        })), (0, Ot.onGameResetOnce)((() => {
-          (0, qe.setFloatingYValue)(et.mJ.getState(et.lL, "physics"), et.mJ.RY(et.lL), null)
-        })), tt.gM(Ht.$b, (tt => {
+            Mj: su,
+            ej: Uu
+          } = uu;
+          ju.shakePlayerCamera(Eu.FQ, su, Uu)
+        })), uu.gM(fu.Fc, (uu => {
+          Eu.YG.PEu(Eu.FQ).jumpMultiplier.setMultiplierType("jumpEffectAmount", uu)
+        })), (0, su.onGameResetOnce)((() => {
+          Eu.YG.PEu(Eu.FQ).jumpMultiplier.setMultiplierType("jumpEffectAmount", 1)
+        })), uu.gM(fu.F, (uu => {
+          Eu.YG.SF(Eu.FQ).applyImpulse(uu)
+        })), uu.gM(fu.ef, (uu => {
+          const ju = Eu.YG.SF(Eu.FQ);
+          uE().set(ju.jF, 0, 0, 0), uE().set(ju.sF, 0, 0, 0), uE().copy(ju.RY, uu), ju.ZF()
+        })), (0, su.onGameResetOnce)((() => {
+          (0, sE.setFloatingYValue)(Eu.YG.getState(Eu.FQ, "physics"), Eu.YG.wT(Eu.FQ), null)
+        })), uu.gM(fu.Vb, (uu => {
           let {
-            rV: Vt,
-            UV: Ot,
-            AV: qt
-          } = tt;
-          const Dt = (0, It.c)(Vt);
-          if (Dt === et.lL) {
-            const tt = et.mJ.RY(et.lL).position;
-            qt ??= Math.floor(tt[1]) - 1, (0, qe.setFloatingYValue)(et.mJ.getState(et.lL, "physics"), et.mJ.RY(et.lL), Ot ? qt : null)
-          }(0, Rt.e)(et).setFloating(Dt, Ot, qt);
-          const mt = et.mJ.getState(Dt, "floating");
-          mt && (mt.isFloating = Ot, mt.AV = Ot ? qt : null)
+            vj: ju,
+            Kj: su,
+            Vj: Uu
+          } = uu;
+          const Zu = (0, mu.d)(ju);
+          if (Zu === Eu.FQ) {
+            const uu = Eu.YG.wT(Eu.FQ).position;
+            Uu ??= Math.floor(uu[1]) - 1, (0, sE.setFloatingYValue)(Eu.YG.getState(Eu.FQ, "physics"), Eu.YG.wT(Eu.FQ), su ? Uu : null)
+          }(0, ku.d)(Eu).setFloating(Zu, su, Uu);
+          const Xu = Eu.YG.getState(Zu, "floating");
+          Xu && (Xu.isFloating = su, Xu.Vj = su ? Uu : null)
         }))
       }
     }
 
-    function de(tt, et, Vt, Ot, qt) {
-      let Dt = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-      if (!tt.mJ.Tet(tt.lL)) return console.log("Got resync inven but don't have inven component"), void et.acknowledge(Ot);
-      Dt && console.error("Had to sync inven"), et.K9(Ot, qt) && Vt.sw("chestToggleFromServer", !1, !0), Vt.sw("syncedInvenFromServer")
+    function XE(uu, Eu, ju, su, Uu) {
+      let Zu = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+      if (!uu.YG.oEu(uu.FQ)) return console.log("Got resync inven but don't have inven component"), void Eu.acknowledge(su);
+      Zu && console.error("Had to sync inven"), Eu.I6(su, Uu) && ju.TY("chestToggleFromServer", !1, !0), ju.TY("syncedInvenFromServer")
     }
-    var je = Vt(39202),
-      He = Vt(39208),
-      Xe = Vt(2047);
-    var Qe = Vt(4641);
+    var lE = ju(39320),
+      qE = ju(39327),
+      fE = ju(2014);
+    var CE = ju(4691);
 
-    function le(tt) {
-      const et = tt.sQ;
-      let Vt = 0,
-        qt = -1,
-        mt = -1 / 0,
-        dt = null,
-        jt = !0;
-      const Xt = () => {
-        if (++Vt % 10 !== 0) return;
-        const Xt = (0, Ot.getLastReceivedPacketId)();
-        if (Xt <= qt) return;
-        const [Qt, lt, Et] = tt.mJ.YM(tt.lL), ft = ! function(tt) {
-          var et;
-          let Vt = null === (et = tt.mJ.ZVt(tt.lL)) || void 0 === et ? void 0 : et.nE;
-          if (void 0 === Vt) return !1;
-          const Ot = new Set;
-          for (; void 0 !== Vt && !Ot.has(Vt);) {
-            var qt;
-            Ot.add(Vt);
-            const et = tt.mJ.getState(Vt, "smoothToServerPos"),
-              Dt = Array.isArray(et) ? null : null === et || void 0 === et ? void 0 : et.serverPosition;
-            if (Dt) {
-              const et = tt.mJ.YM(Vt);
-              if (Math.abs(et[0] - Dt[0]) > 10 || Math.abs(et[1] - Dt[1]) > 10 || Math.abs(et[2] - Dt[2]) > 10) return !0
+    function bE(uu) {
+      const Eu = uu.zb;
+      let ju = 0,
+        Uu = -1,
+        Xu = -1 / 0,
+        lu = null,
+        qu = !0;
+      const Cu = () => {
+        if (++ju % 10 !== 0) return;
+        const Cu = (0, su.getLastReceivedPacketId)();
+        if (Cu <= Uu) return;
+        const [bu, cu, Nu] = uu.YG.bM(uu.FQ), Ou = ! function(uu) {
+          var Eu;
+          let ju = null === (Eu = uu.YG.Cju(uu.FQ)) || void 0 === Eu ? void 0 : Eu.jO;
+          if (void 0 === ju) return !1;
+          const su = new Set;
+          for (; void 0 !== ju && !su.has(ju);) {
+            var Uu;
+            su.add(ju);
+            const Eu = uu.YG.getState(ju, "smoothToServerPos"),
+              Zu = Array.isArray(Eu) ? null : null === Eu || void 0 === Eu ? void 0 : Eu.serverPosition;
+            if (Zu) {
+              const Eu = uu.YG.bM(ju);
+              if (Math.abs(Eu[0] - Zu[0]) > 10 || Math.abs(Eu[1] - Zu[1]) > 10 || Math.abs(Eu[2] - Zu[2]) > 10) return !0
             }
-            Vt = null === (qt = tt.mJ.ZVt(Vt)) || void 0 === qt ? void 0 : qt.nE
+            ju = null === (Uu = uu.YG.Cju(ju)) || void 0 === Uu ? void 0 : Uu.jO
           }
           return !1
-        }(tt) && function(tt, et, Vt, Ot) {
-          const qt = Dt.e.ff;
-          for (let Dt = 0; Dt < tt.length; Dt++) {
-            const mt = tt[Dt];
-            if (!(0, Qe.i)(et, Vt, Ot, mt[0] * qt, mt[1] * qt, mt[2] * qt)) return !1
+        }(uu) && function(uu, Eu, ju, su) {
+          const Uu = Zu.e.hO;
+          for (let Zu = 0; Zu < uu.length; Zu++) {
+            const Xu = uu[Zu];
+            if (!(0, CE.j)(Eu, ju, su, Xu[0] * Uu, Xu[1] * Uu, Xu[2] * Uu)) return !1
           }
           return !0
-        }(et.Bw.jf, Qt, lt, Et), wt = null === dt || Math.abs(Qt - dt[0]) > 8 || Math.abs(lt - dt[1]) > 8 || Math.abs(Et - dt[2]) > 8, yt = !jt || wt || performance.now() - mt >= 1e4;
-        jt = ft, ft && yt && (qt = Xt, mt = performance.now(), dt = [Qt, lt, Et], (0, Ot.sendColyMessage)(Ht.vg, {
-          Nd: Xt
+        }(Eu.BY.CO, bu, cu, Nu), Yu = null === lu || Math.abs(bu - lu[0]) > 8 || Math.abs(cu - lu[1]) > 8 || Math.abs(Nu - lu[2]) > 8, hu = !qu || Yu || performance.now() - Xu >= 1e4;
+        qu = Ou, Ou && hu && (Uu = Cu, Xu = performance.now(), lu = [bu, cu, Nu], (0, su.sendColyMessage)(fu.Gg, {
+          cl: Cu
         }))
       };
-      return tt.on("BQ", Xt), () => {
-        tt.off("BQ", Xt)
+      return uu.on("Tb", Cu), () => {
+        uu.off("Tb", Cu)
       }
     }
-    var Ee = Vt(39216),
-      fe = Vt(1613),
-      we = Vt(2839),
-      ye = Vt(1894),
-      Ne = Vt(2990),
-      ae = Vt(4948);
-    class Me {
-      constructor(tt, et, Vt) {
-        this.ql = tt, this.gameNameWithVariation = et, this.connectionResume = Vt, this.stopChunkReports = () => {}, this.replayResume = null
+    var cE = ju(39330),
+      NE = ju(1570),
+      OE = ju(2888),
+      YE = ju(1856),
+      hE = ju(3074),
+      DE = ju(4958);
+    class gE {
+      constructor(uu, Eu, ju) {
+        this.Uc = uu, this.gameNameWithVariation = Eu, this.connectionResume = ju, this.stopChunkReports = () => {}, this.replayResume = null
       }
       clearUiRequestsAndQTEs() {
-        ae.d.reset(), (0, je.e)()
+        DE.d.reset(), (0, lE.e)()
       }
       startChunkReports() {
-        const tt = function(tt) {
-            let et = null,
-              Vt = -1 / 0,
-              qt = null;
-            const Dt = () => {
-                qt = null;
-                const Dt = Math.ceil(tt.rW[0]),
-                  mt = Math.ceil(tt.rW[1]);
-                et && et[0] === Dt && et[1] === mt || (et = [Dt, mt], Vt = performance.now(), (0, Ot.sendColyMessage)(Ht.tg, {
-                  gm: Dt,
-                  sm: mt
+        const uu = function(uu) {
+            let Eu = null,
+              ju = -1 / 0,
+              Uu = null;
+            const Zu = () => {
+                Uu = null;
+                const Zu = Math.ceil(uu.Im[0]),
+                  Xu = Math.ceil(uu.Im[1]);
+                Eu && Eu[0] === Zu && Eu[1] === Xu || (Eu = [Zu, Xu], ju = performance.now(), (0, su.sendColyMessage)(fu.Eg, {
+                  TX: Zu,
+                  HX: Xu
                 }))
               },
-              mt = () => {
-                null === qt && (qt = setTimeout(Dt, Math.max(0, Vt + 250 - performance.now())))
+              Xu = () => {
+                null === Uu && (Uu = setTimeout(Zu, Math.max(0, ju + 250 - performance.now())))
               };
-            return Dt(), tt.on("addRemoveDistanceChanged", mt), () => {
-              tt.off("addRemoveDistanceChanged", mt), null !== qt && (clearTimeout(qt), qt = null)
+            return Zu(), uu.on("addRemoveDistanceChanged", Xu), () => {
+              uu.off("addRemoveDistanceChanged", Xu), null !== Uu && (clearTimeout(Uu), Uu = null)
             }
-          }(this.ql.sQ),
-          et = le(this.ql);
+          }(this.Uc.zb),
+          Eu = bE(this.Uc);
         this.stopChunkReports = () => {
-          tt(), et()
+          uu(), Eu()
         }
       }
       restartChunkStreaming() {
-        (0, Oe.k)(this.ql, (0, jt.c)().recentChunkEdits.chunksEditedSince(this.connectionResume.getDroppedAt() - Ee.e)), this.startChunkReports()
+        (0, jE.j)(this.Uc, (0, qu.b)().recentChunkEdits.chunksEditedSince(this.connectionResume.getDroppedAt() - cE.c)), this.startChunkReports()
       }
-      register(tt) {
-        const et = this.ql,
-          Vt = (0, jt.c)();
-        tt.gM(Ht.Wc, (tt => {
-          Mt.b.applyNewClientOptions(tt)
-        })), tt.gM(Ht.td, (tt => {
-          we.c.onReceiveColyseusPing(tt)
-        })), tt.gM(Ht.Je, (tt => {
+      register(uu) {
+        const Eu = this.Uc,
+          ju = (0, qu.b)();
+        uu.gM(fu.hd, (uu => {
+          gu.e.applyNewClientOptions(uu)
+        })), uu.gM(fu.Jd, (uu => {
+          OE.b.onReceiveColyseusPing(uu)
+        })), uu.gM(fu.Xe, (uu => {
           let {
-            key: et,
-            value: Vt
-          } = tt;
-          (0, bt.setCookie)(this.gameNameWithVariation, et, Vt)
-        })), tt.gM(Ht.Qe, (tt => {
-          Nt.j.sw("setDiscordReportKey", tt)
-        })), (0, Ot.onGameResetOnce)((() => {
+            key: Eu,
+            value: ju
+          } = uu;
+          (0, Mu.setCookie)(this.gameNameWithVariation, Eu, ju)
+        })), uu.gM(fu.Ze, (uu => {
+          Du.h.TY("setDiscordReportKey", uu)
+        })), (0, su.onGameResetOnce)((() => {
           this.stopChunkReports()
-        })), tt.gM(Ht.nc, (qt => {
+        })), uu.gM(fu.pc, (Uu => {
           const {
-            Xt: Dt,
-            Qt: mt
-          } = qt;
-          if ((0, Ot.setAdjustment)(mt), this.connectionResume.onInitialInfo(qt.lt, qt.Et), Ot.offlineInputReplay.Av(qt.ft), this.connectionResume.isResuming()) {
-            console.log("Resumed the connection as eId", Dt);
+            Cu: Zu,
+            cu: Xu
+          } = Uu;
+          if ((0, su.setAdjustment)(Xu), this.connectionResume.onInitialInfo(Uu.Nu, Uu.Ou), su.offlineInputReplay.Wk(Uu.Yu), this.connectionResume.isResuming()) {
+            console.log("Resumed the connection as eId", Zu);
             try {
-              null === qt.wt && (0, jt.c)().client.inventoryPrediction.dropPending(), this.stopChunkReports(), St(et.sQ), Mt.b.apply({
+              null === Uu.hu && (0, qu.b)().client.inventoryPrediction.dropPending(), this.stopChunkReports(), Pu(Eu.zb), gu.e.apply({
                 shopInfo: null,
-                _shopVersion: Xe.e
+                _shopVersion: fE.b
               });
-              const Vt = et.mJ.eVt(et.lL);
-              Vt.cD && (Vt.chestClosed(), Nt.j.sw("chestToggleFromServer", !1, !0)), this.clearUiRequestsAndQTEs(), Nt.j.sw("initInfoReceived", tt)
+              const ju = Eu.YG.mEu(Eu.FQ);
+              ju.mZ && (ju.chestClosed(), Du.h.TY("chestToggleFromServer", !1, !0)), this.clearUiRequestsAndQTEs(), Du.h.TY("initInfoReceived", uu)
             } finally {
-              const tt = null === qt.wt ? null : {
+              const uu = null === Uu.hu ? null : {
                 sync: null,
                 endSeq: null
               };
-              this.replayResume = tt, this.connectionResume.onResumeInitialInfo(qt.wt, (() => {
-                tt.endSeq = (0, jt.c)().client.inventoryPrediction.lastActionSeq
-              })), null === tt && this.restartChunkStreaming()
+              this.replayResume = uu, this.connectionResume.onResumeInitialInfo(Uu.hu, (() => {
+                uu.endSeq = (0, qu.b)().client.inventoryPrediction.lastActionSeq
+              })), null === uu && this.restartChunkStreaming()
             }
-          } else console.log("Local client is eId", Dt), ye.c.markAdmitted(), (0, Oe.m)(et), Nt.j.sw("loadingScreenState", "loadingPage:loadingWorld"), et.Ttt = Dt, et.mJ.ptt(et.lL, et.mJ.names.entityName) && et.mJ.ZZ(et.lL, et.mJ.names.entityName), (0, jt.c)().setEntityName(et.Ttt, (0, jt.c)().getRawEntityName(et.lL)), et.dL[et.Ttt] = {}, et.mJ.RZ(et.lL, et.mJ.names.entityName), Nt.j.sw("initInfoReceived", tt), this.startChunkReports(), Vt.client.onServerConnectionFinalised()
-        })), tt.gM(Ht.se, (() => {
+          } else console.log("Local client is eId", Zu), YE.e.markAdmitted(), (0, jE.k)(Eu), Du.h.TY("loadingScreenState", "loadingPage:loadingWorld"), Eu.Huu = Zu, Eu.YG.xuu(Eu.FQ, Eu.YG.names.entityName) && Eu.YG.zV(Eu.FQ, Eu.YG.names.entityName), (0, qu.b)().setEntityName(Eu.Huu, (0, qu.b)().getRawEntityName(Eu.FQ)), Eu.EQ[Eu.Huu] = {}, Eu.YG.yV(Eu.FQ, Eu.YG.names.entityName), Du.h.TY("initInfoReceived", uu), this.startChunkReports(), ju.client.onServerConnectionFinalised()
+        })), uu.gM(fu.Ie, (() => {
           this.connectionResume.isResuming() ? this.connectionResume.onResumed((() => {
-            const tt = this.replayResume;
-            if (this.replayResume = null, !tt) return;
+            const uu = this.replayResume;
+            if (this.replayResume = null, !uu) return;
             this.restartChunkStreaming();
             const {
-              inventoryPrediction: Vt
-            } = (0, jt.c)().client, {
-              sync: qt
-            } = tt, Dt = new Set(Ot.offlineInputReplay.takeDroppedActions());
-            if (qt) {
-              var mt;
-              const Ot = null !== (mt = tt.endSeq) && void 0 !== mt ? mt : Vt.lastActionSeq;
-              Vt.forget((tt => tt > qt.DD && tt <= Ot || Dt.has(tt))), de(et, Vt, Nt.j, qt.DD, qt.load)
-            } else Vt.dropPending(), Vt.askForSnapshot()
+              inventoryPrediction: ju
+            } = (0, qu.b)().client, {
+              sync: Uu
+            } = uu, Zu = new Set(su.offlineInputReplay.takeDroppedActions());
+            if (Uu) {
+              var Xu;
+              const su = null !== (Xu = uu.endSeq) && void 0 !== Xu ? Xu : ju.lastActionSeq;
+              ju.forget((uu => uu > Uu.XZ && uu <= su || Zu.has(uu))), XE(Eu, ju, Du.h, Uu.XZ, Uu.load)
+            } else ju.dropPending(), ju.askForSnapshot()
           })) : console.warn("ResumeComplete arrived without a resume")
-        })), tt.gM(Ht.gf, (tt => {
+        })), uu.gM(fu.qf, (uu => {
           let {
-            SD: Vt,
-            LD: Ot,
-            DD: qt
-          } = tt;
+            kZ: ju,
+            rZ: su,
+            XZ: Uu
+          } = uu;
           const {
-            inventoryPrediction: Dt
-          } = (0, jt.c)().client, mt = () => {
-            et.mJ.eVt(et.lL).loadFromString(Vt)
+            inventoryPrediction: Zu
+          } = (0, qu.b)().client, Xu = () => {
+            Eu.YG.mEu(Eu.FQ).loadFromString(ju)
           };
           this.replayResume && (this.replayResume.sync = {
-            DD: qt,
-            load: mt
-          }), de(et, Dt, Nt.j, qt, mt, Ot)
-        })), tt.gM(Ht.Jd, (tt => {
+            XZ: Uu,
+            load: Xu
+          }), XE(Eu, Zu, Du.h, Uu, Xu, su)
+        })), uu.gM(fu.$d, (uu => {
           let {
-            type: et,
-            location1: Vt,
-            location2: Ot,
-            location3: qt,
-            score: Dt
-          } = tt;
-          (0, Ne.logProgressionEvent)({
-            type: et,
-            location1: Vt,
-            location2: Ot,
-            location3: qt,
-            score: Dt
+            type: Eu,
+            location1: ju,
+            location2: su,
+            location3: Uu,
+            score: Zu
+          } = uu;
+          (0, hE.logProgressionEvent)({
+            type: Eu,
+            location1: ju,
+            location2: su,
+            location3: Uu,
+            score: Zu
           })
-        })), tt.gM(Ht.qe, (tt => {
+        })), uu.gM(fu.Ge, (uu => {
           let {
-            type: et,
-            resourceType: Vt,
-            amount: Ot,
-            category: qt,
-            itemName: Dt
-          } = tt;
-          (0, Ne.logResourceEvent)({
-            type: et,
-            resourceType: Vt,
-            amount: Ot,
-            category: qt,
-            itemName: Dt
+            type: Eu,
+            resourceType: ju,
+            amount: su,
+            category: Uu,
+            itemName: Zu
+          } = uu;
+          (0, hE.logResourceEvent)({
+            type: Eu,
+            resourceType: ju,
+            amount: su,
+            category: Uu,
+            itemName: Zu
           })
-        })), tt.gM(Ht.Ec, (tt => {
+        })), uu.gM(fu.Pc, (uu => {
           let {
-            leaveEventType: et,
-            category: Vt,
-            subCategory: Ot,
-            value: qt
-          } = tt;
-          (0, Ne.updateLeaveValue)({
-            leaveEventType: et,
-            category: Vt,
-            subCategory: Ot,
-            value: qt
+            leaveEventType: Eu,
+            category: ju,
+            subCategory: su,
+            value: Uu
+          } = uu;
+          (0, hE.updateLeaveValue)({
+            leaveEventType: Eu,
+            category: ju,
+            subCategory: su,
+            value: Uu
           })
-        })), tt.gM(Ht.Rb, (tt => {
+        })), uu.gM(fu.Lb, (uu => {
           let {
-            cat1: et,
-            cat2: Vt,
-            cat3: Ot,
-            value: qt
-          } = tt;
-          (0, Ne.logCustomAnalyticsEvent)({
-            cat1: et,
-            cat2: Vt,
-            cat3: Ot,
-            value: qt
+            cat1: Eu,
+            cat2: ju,
+            cat3: su,
+            value: Uu
+          } = uu;
+          (0, hE.logCustomAnalyticsEvent)({
+            cat1: Eu,
+            cat2: ju,
+            cat3: su,
+            value: Uu
           })
-        })), tt.gM(Ht.Bc, (tt => {
-          (0, jt.c)().client.leaveGameUnwanted({
-            reason: tt,
+        })), uu.gM(fu.Jc, (uu => {
+          (0, qu.b)().client.leaveGameUnwanted({
+            reason: uu,
             requiresRefresh: !1,
             canReconnect: !1,
             automaticallyReconnect: !1
-          }), (0, fe.navigatePreserveSearch)("/")
-        })), tt.gM(Ht.ye, (tt => {
-          Nt.j.sw("serverUpdating", Date.now() + tt, !0)
-        })), tt.gM(Ht.Uc, He.e), tt.gM(Ht.Oc, (tt => {
-          console.error(`[logErrorToConsole]: ${tt}`)
+          }), (0, NE.navigatePreserveSearch)("/")
+        })), uu.gM(fu.Oe, (uu => {
+          Du.h.TY("serverUpdating", Date.now() + uu, !0)
+        })), uu.gM(fu.fd, qE.b), uu.gM(fu.$c, (uu => {
+          console.error(`[logErrorToConsole]: ${uu}`)
         }))
       }
     }
-    var be = Vt(39221),
-      Je = Vt(39226),
-      Ce = Vt(1103),
-      ue = Vt(39224),
-      Ke = Vt(2486),
-      he = Vt(3722);
-    class ve {
-      constructor(tt, et) {
-        this.ql = tt, this.clientApi = et
+    var ME = ju(39336),
+      eE = ju(39344),
+      GE = ju(1069),
+      pE = ju(39342),
+      wE = ju(2533),
+      JE = ju(3847);
+    class dE {
+      constructor(uu, Eu) {
+        this.Uc = uu, this.clientApi = Eu
       }
-      register(tt) {
-        const et = this.ql,
-          Vt = (0, jt.c)();
-        tt.gM(Ht.vb, (tt => {
+      register(uu) {
+        const Eu = this.Uc,
+          ju = (0, qu.b)();
+        uu.gM(fu.pb, (uu => {
           let {
-            chatMsgId: et,
-            content: Vt,
-            chatterEId: Ot
-          } = tt;
-          Nt.j.sw("chat", {
-            serverChatMsgId: et,
-            content: Vt,
-            chatterEId: Ot
+            chatMsgId: Eu,
+            content: ju,
+            chatterEId: su
+          } = uu;
+          Du.h.TY("chat", {
+            serverChatMsgId: Eu,
+            content: ju,
+            chatterEId: su
           }, !0)
-        })), tt.gM(Ht.mf, (tt => {
-          Nt.j.sw("TopRightHelper", tt, !0)
-        })), tt.gM(Ht.if, (tt => {
-          (0, be.c)(tt)
-        })), tt.gM(Ht.Cc, (tt => {
+        })), uu.gM(fu.wf, (uu => {
+          Du.h.TY("TopRightHelper", uu, !0)
+        })), uu.gM(fu.tf, (uu => {
+          (0, ME.c)(uu)
+        })), uu.gM(fu.Nc, (uu => {
           let {
-            category: et,
-            timeframe: Vt,
-            data: Ot
-          } = tt;
-          Nt.j.sw("leaderboardResponse", {
-            category: et,
-            timeframe: Vt,
-            data: Ot
+            category: Eu,
+            timeframe: ju,
+            data: su
+          } = uu;
+          Du.h.TY("leaderboardResponse", {
+            category: Eu,
+            timeframe: ju,
+            data: su
           })
-        })), tt.gM(Ht.ef, (() => {
-          Nt.j.sw("showShopTutorial", null, !0)
-        })), tt.gM(Ht.Gd, (tt => {
-          Nt.j.sw("progressBarUpdate", tt, !0)
-        })), tt.gM(Ht.rc, (tt => {
-          Nt.j.sw("middleScreenBarInitiate", {
-            duration: tt.zq,
-            oq: tt.oq,
-            horizBarRemOffset: tt.rq
+        })), uu.gM(fu.mf, (() => {
+          Du.h.TY("showShopTutorial", null, !0)
+        })), uu.gM(fu.Yd, (uu => {
+          Du.h.TY("progressBarUpdate", uu, !0)
+        })), uu.gM(fu.tc, (uu => {
+          Du.h.TY("middleScreenBarInitiate", {
+            duration: uu.BU,
+            LU: uu.LU,
+            horizBarRemOffset: uu.tU
           }, !0)
-        })), tt.gM(Ht._d, (() => {
-          Nt.j.sw("middleScreenBarRemove", !0)
-        })), tt.gM(Ht.Ne, (tt => {
+        })), uu.gM(fu.ke, (() => {
+          Du.h.TY("middleScreenBarRemove", !0)
+        })), uu.gM(fu.Ye, (uu => {
           let {
-            id: et,
-            position: Vt,
-            style: Ot,
-            Ae: qt,
-            Ye: Dt
-          } = tt;
-          Nt.j.sw("setDirectionArrow", {
-            id: et,
-            position: Vt,
-            style: Ot,
-            text: (0, Ht.v)(qt),
-            Ye: Dt
+            id: Eu,
+            position: ju,
+            style: su,
+            KE: Uu,
+            rE: Zu
+          } = uu;
+          Du.h.TY("setDirectionArrow", {
+            id: Eu,
+            position: ju,
+            style: su,
+            text: (0, fu.t)(Uu),
+            rE: Zu
           }, !0)
-        })), tt.gM(Ht.Bb, (tt => {
+        })), uu.gM(fu.vb, (uu => {
           let {
-            id: et
-          } = tt;
-          Nt.j.sw("clearDirectionArrow", {
-            id: et
+            id: Eu
+          } = uu;
+          Du.h.TY("clearDirectionArrow", {
+            id: Eu
           }, !0)
-        })), tt.gM(Ht.Nb, (tt => {
-          (0, he.onCosmeticPackGranted)(tt)
-        })), tt.gM(Ht.ed, (tt => {
+        })), uu.gM(fu.Jb, (uu => {
+          (0, JE.onCosmeticPackGranted)(uu)
+        })), uu.gM(fu.ud, (uu => {
           let {
-            id: et,
-            gt: Vt
-          } = tt;
+            id: Eu,
+            Hu: ju
+          } = uu;
           const {
-            type: qt,
-            params: Dt
-          } = (0, Je.f)(Vt), mt = {
-            ...Dt
+            type: Uu,
+            params: Zu
+          } = (0, eE.i)(ju), Xu = {
+            ...Zu
           };
-          for (const Ot of Je.e) Ot in mt && mt[Ot] && (mt[Ot] = (0, Ht.v)(mt[Ot]));
-          ae.d.queueQTE(et, qt, mt).getResult().then((tt => {
-            "boolean" === typeof tt && (0, Ot.sendColyMessage)(Ht.qi, {
-              qteId: et,
-              qteResponse: tt
+          for (const su of eE.e) su in Xu && Xu[su] && (Xu[su] = (0, fu.t)(Xu[su]));
+          DE.d.queueQTE(Eu, Uu, Xu).getResult().then((uu => {
+            "boolean" === typeof uu && (0, su.sendColyMessage)(fu.vi, {
+              qteId: Eu,
+              qteResponse: uu
             })
           }))
-        })), tt.gM(Ht.$d, (tt => {
-          ae.d.cancelQTE(tt)
-        })), (0, Ot.onGameResetOnce)((() => {
-          ae.d.reset()
-        })), tt.gM(Ht.gd, (tt => {
+        })), uu.gM(fu.oe, (uu => {
+          DE.d.cancelQTE(uu)
+        })), (0, su.onGameResetOnce)((() => {
+          DE.d.reset()
+        })), uu.gM(fu.wd, (uu => {
           let {
-            id: et,
-            clientParameters: Vt
-          } = tt;
-          (0, je.i)(et, Vt)
-        })), tt.gM(Ht.ae, (tt => {
-          (0, je.l)(tt)
-        })), tt.gM(Ht.pf, (tt => {
+            id: Eu,
+            clientParameters: ju
+          } = uu;
+          (0, lE.g)(Eu, ju)
+        })), uu.gM(fu.pe, (uu => {
+          (0, lE.i)(uu)
+        })), uu.gM(fu.Bf, (uu => {
           let {
-            text: et,
-            id: Vt,
-            destructive: qt
-          } = tt;
-          (0, je.n)(Vt, et, qt, (tt => {
-            (0, Ot.sendColyMessage)(Ht.Oj, {
-              aj: Vt,
-              Mj: tt,
-              bj: 5
+            text: Eu,
+            id: ju,
+            destructive: Uu
+          } = uu;
+          (0, lE.k)(ju, Eu, Uu, (uu => {
+            (0, su.sendColyMessage)(fu.Kj, {
+              qq: ju,
+              fq: uu,
+              Cq: 5
             })
           }))
-        })), tt.gM(Ht.nd, (tt => {
+        })), uu.gM(fu.Ed, (uu => {
           let {
-            info: et
-          } = tt;
-          Nt.j.sw("overShopInfo", et, !0)
-        })), tt.gM(Ht.cc, (tt => {
+            info: Eu
+          } = uu;
+          Du.h.TY("overShopInfo", Eu, !0)
+        })), uu.gM(fu.$b, (uu => {
           let {
-            jt: Vt,
-            Ht: Ot
-          } = tt;
-          this.clientApi.openShop(et.lL, Vt, Ot)
-        })), tt.gM(Ht.ac, (tt => {
+            qu: ju,
+            fu: su
+          } = uu;
+          this.clientApi.openShop(Eu.FQ, ju, su)
+        })), uu.gM(fu.Yb, (uu => {
           let {
-            zD: et,
-            oD: Vt,
-            rD: Ot
-          } = tt;
-          Nt.j.sw("flyingMiddleMessage", {
-            content: (0, Ht.v)(et),
-            oD: Vt,
-            rD: Ot
+            SZ: Eu,
+            IZ: ju,
+            FZ: su
+          } = uu;
+          Du.h.TY("flyingMiddleMessage", {
+            content: (0, fu.t)(Eu),
+            IZ: ju,
+            FZ: su
           }, !0)
-        })), tt.gM(Ht.Ff, (tt => {
-          const et = tt === Ce.h ? null : {
-            message: `Currently loaded as variation: ${tt}`,
+        })), uu.gM(fu.Qf, (uu => {
+          const Eu = uu === GE.f ? null : {
+            message: `Currently loaded as variation: ${uu}`,
             type: "Warning"
           };
-          Nt.j.sw("showPermanentBottomMessage", et, !0)
-        })), tt.gM(Ht.ec, (tt => {
+          Du.h.TY("showPermanentBottomMessage", Eu, !0)
+        })), uu.gM(fu.cc, (uu => {
           let {
-            messageType: et,
-            data: Ot
-          } = tt;
-          (0, ue.f)(et) ? (0, ue.b)(et, Ot) : ("freeCamPerms" === et && Vt.client.freeCameraController.setPerms(Ot.key, Ot.value), Vt.client.triggerGameCallback("onReceivedMessageFromServer", et, Ot))
-        })), tt.gM(Ht.Ib, Ke.h)
+            messageType: Eu,
+            data: su
+          } = uu;
+          (0, pE.i)(Eu) ? (0, pE.e)(Eu, su) : ("freeCamPerms" === Eu && ju.client.freeCameraController.setPerms(su.key, su.value), ju.client.triggerGameCallback("onReceivedMessageFromServer", Eu, su))
+        })), uu.gM(fu.Cb, wE.l)
       }
     }
-    class We {
-      constructor(tt, et, Vt, Ot) {
-        this.gameNameWithVariation = tt, this.ql = Vt, this.connectionResume = Ot, this.stateReplicationHandler = void 0, this.stateReplicationHandler = new Ct.e(et, this.ql)
+    class aE {
+      constructor(uu, Eu, ju, su) {
+        this.gameNameWithVariation = uu, this.Uc = ju, this.connectionResume = su, this.stateReplicationHandler = void 0, this.stateReplicationHandler = new Gu.b(Eu, this.Uc)
       }
       setupStateReplicationHandlers() {
-        this.stateReplicationHandler.setup(), (0, Ot.onGameResetOnce)((() => {
+        this.stateReplicationHandler.setup(), (0, su.onGameResetOnce)((() => {
           this.stateReplicationHandler.dispose()
         }))
       }
-      lXt(tt) {
-        this.stateReplicationHandler.dispose(), this.stateReplicationHandler = new Ct.e(tt, this.ql), this.stateReplicationHandler.setup()
+      kfu(uu) {
+        this.stateReplicationHandler.dispose(), this.stateReplicationHandler = new Gu.b(uu, this.Uc), this.stateReplicationHandler.setup()
       }
-      setupOnMessageListeners(tt, et) {
-        const Vt = this.ql,
-          Ot = tt => {
-            this.stateReplicationHandler.setUpIfQueued(tt)
+      setupOnMessageListeners(uu, Eu) {
+        const ju = this.Uc,
+          su = uu => {
+            this.stateReplicationHandler.setUpIfQueued(uu)
           };
-        new Me(Vt, this.gameNameWithVariation, this.connectionResume).register(tt), new ct(Vt).register(tt), new gt(Vt).register(tt), new Ft(Vt, Ot).register(tt), new pt(Vt, Ot).register(tt), new ve(Vt, et).register(tt), new me(Vt, Ot).register(tt)
+        new gE(ju, this.gameNameWithVariation, this.connectionResume).register(uu), new ou(ju).register(uu), new nu(ju).register(uu), new ru(ju, su).register(uu), new Tu(ju, su).register(uu), new dE(ju, Eu).register(uu), new ZE(ju, su).register(uu)
       }
     }
     window.addEventListener("beforeunload", (() => {}));
-    var Se = Vt(39232),
-      ce = Vt(39241),
-      Re = Vt(738),
-      Ie = Vt(3012);
-    class Pe {
-      constructor(tt, et, Vt, Ot) {
-        this.msgHandler = Vt, this.listener = Ot, this.session = void 0, this.attachedRoom = null, this.detachRoomListeners = null, this.suspended = !1, this.droppedAt = 0, this.session = new Se.c({
-          reconnect: tt,
-          isLive: () => Ot.isLive(),
-          onReconnected: tt => {
-            this.resumeOnRoom(tt)
+    var PE = ju(39351),
+      oE = ju(39354),
+      kE = ju(701),
+      mE = ju(3099);
+    class vE {
+      constructor(uu, Eu, ju, su) {
+        this.msgHandler = ju, this.listener = su, this.session = void 0, this.attachedRoom = null, this.detachRoomListeners = null, this.suspended = !1, this.droppedAt = 0, this.session = new PE.e({
+          reconnect: uu,
+          isLive: () => su.isLive(),
+          onReconnected: uu => {
+            this.resumeOnRoom(uu)
           },
-          onGaveUp: (tt, et) => {
-            Ot.onGaveUp(tt, et)
+          onGaveUp: (uu, Eu) => {
+            su.onGaveUp(uu, Eu)
           },
-          freeze: et,
-          releaseSeat: et => {
-            tt(et).then((tt => {
-              tt.leave(!0)
-            }), (tt => {
-              console.warn("Couldn't release the held seat of a game left while reconnecting", tt)
+          freeze: Eu,
+          releaseSeat: Eu => {
+            uu(Eu).then((uu => {
+              uu.leave(!0)
+            }), (uu => {
+              console.warn("Couldn't release the held seat of a game left while reconnecting", uu)
             }))
           }
         })
       }
-      onInitialInfo(tt, et) {
-        this.session.onInitialInfo(tt, et)
+      onInitialInfo(uu, Eu) {
+        this.session.onInitialInfo(uu, Eu)
       }
       isResuming() {
         return this.session.isResuming()
@@ -1232,173 +1232,173 @@ export const modules = {
       getDroppedAt() {
         return this.droppedAt
       }
-      onResumeInitialInfo(tt, et) {
-        if (this.session.onResuming(), null === tt) {
+      onResumeInitialInfo(uu, Eu) {
+        if (this.session.onResuming(), null === uu) {
           try {
-            (0, jt.c)().client.itemDropPrediction.reset()
-          } catch (Vt) {
-            console.error("Error dropping the item drop predictions on resuming", Vt)
+            (0, qu.b)().client.itemDropPrediction.reset()
+          } catch (ju) {
+            console.error("Error dropping the item drop predictions on resuming", ju)
           }
-          return Ot.offlineInputReplay.discard(), void this.setSuspended(!1)
-        }(0, jt.c)().client.itemDropPrediction.onResumeReplayOffered(), Ot.offlineInputReplay.replayFrom(tt.Nt, et)
+          return su.offlineInputReplay.discard(), void this.setSuspended(!1)
+        }(0, qu.b)().client.itemDropPrediction.onResumeReplayOffered(), su.offlineInputReplay.replayFrom(uu.gu, Eu)
       }
-      onResumed(tt) {
-        this.setSuspended(!1), (0, Ot.resendBeacons)();
+      onResumed(uu) {
+        this.setSuspended(!1), (0, su.resendBeacons)();
         try {
-          tt()
-        } catch (et) {
-          console.error("Error completing the resume", et)
+          uu()
+        } catch (Eu) {
+          console.error("Error completing the resume", Eu)
         } finally {
           this.session.onResumed()
         }
       }
-      attachRoom(tt) {
-        const et = (0, Re.i)((() => tt.connection.isOpen));
-        tt.eJ(et);
-        const Vt = new ce.d((() => {
-          this.session.canHoldSeat() && this.listener.isLive() && (console.warn("The game server went silent, reconnecting"), this.onConnectionDropped(tt, "silent"), tt.leave(!1))
+      attachRoom(uu) {
+        const Eu = (0, kE.j)((() => uu.connection.isOpen));
+        uu.pM(Eu);
+        const ju = new oE.d((() => {
+          this.session.canHoldSeat() && this.listener.isLive() && (console.warn("The game server went silent, reconnecting"), this.onConnectionDropped(uu, "silent"), uu.leave(!1))
         }));
-        tt.onStateChange((() => {
-          Vt.heard()
+        uu.onStateChange((() => {
+          ju.heard()
         }));
-        const Ot = et => {
-          et.persisted || tt.leave(!0)
+        const su = Eu => {
+          Eu.persisted || uu.leave(!0)
         };
-        window.addEventListener("pagehide", Ot), tt.eJ(((et, Vt) => {
-          if (tt === this.attachedRoom && this.listener.isLive()) return (0, Dt.h)(et) && this.session.canHoldSeat() ? (console.warn(`Connection to the game server dropped with code ${et}, reconnecting`), this.listener.onDropped(et, Vt), void this.onConnectionDropped(tt, String(et))) : void this.listener.onRoomLeft(et, Vt)
-        })), this.attachedRoom = tt, this.detachRoomListeners = () => {
-          et(), Vt.dispose(), window.removeEventListener("pagehide", Ot)
+        window.addEventListener("pagehide", su), uu.pM(((Eu, ju) => {
+          if (uu === this.attachedRoom && this.listener.isLive()) return (0, Zu.h)(Eu) && this.session.canHoldSeat() ? (console.warn(`Connection to the game server dropped with code ${Eu}, reconnecting`), this.listener.onDropped(Eu, ju), void this.onConnectionDropped(uu, String(Eu))) : void this.listener.onRoomLeft(Eu, ju)
+        })), this.attachedRoom = uu, this.detachRoomListeners = () => {
+          Eu(), ju.dispose(), window.removeEventListener("pagehide", su)
         }
       }
       dispose() {
         this.detachRoom(), this.session.leave(), this.setSuspended(!1)
       }
-      setSuspended(tt) {
-        tt !== this.suspended && (this.suspended = tt, (0, Ot.setConnectionSuspended)(tt), (0, jt.c)().client.itemDropPrediction.setSuspended(tt))
+      setSuspended(uu) {
+        uu !== this.suspended && (this.suspended = uu, (0, su.setConnectionSuspended)(uu), (0, qu.b)().client.itemDropPrediction.setSuspended(uu))
       }
       detachRoom() {
-        var tt;
-        null === (tt = this.detachRoomListeners) || void 0 === tt || tt.call(this), this.detachRoomListeners = null, this.attachedRoom = null
+        var uu;
+        null === (uu = this.detachRoomListeners) || void 0 === uu || uu.call(this), this.detachRoomListeners = null, this.attachedRoom = null
       }
-      onConnectionDropped(tt, et) {
-        (0, Ie.reportClientError)("disconnect", "Left room", et), this.isResuming() || (this.droppedAt = Date.now()), this.detachRoom(), Ot.offlineInputReplay.onConnectionLost(), this.setSuspended(!0), this.session.onConnectionLost(tt.reconnectionToken)
+      onConnectionDropped(uu, Eu) {
+        (0, mE.reportClientError)("disconnect", "Left room", Eu), this.isResuming() || (this.droppedAt = Date.now()), this.detachRoom(), su.offlineInputReplay.onConnectionLost(), this.setSuspended(!0), this.session.onConnectionLost(uu.reconnectionToken)
       }
-      resumeOnRoom(tt) {
-        if (!this.listener.isLive()) return console.warn("Left the game while reconnecting, leaving the resumed room"), tt.leave(!0), void this.dispose();
-        console.log("Reconnected to the game server, waiting for the game to resume"), (0, Bt.r)(), Ot.offlineInputReplay.onConnectionReplaced(), this.msgHandler.lXt(tt), this.listener.onReconnected(tt), this.attachRoom(tt)
+      resumeOnRoom(uu) {
+        if (!this.listener.isLive()) return console.warn("Left the game while reconnecting, leaving the resumed room"), uu.leave(!0), void this.dispose();
+        console.log("Reconnected to the game server, waiting for the game to resume"), (0, xu.n)(), su.offlineInputReplay.onConnectionReplaced(), this.msgHandler.kfu(uu), this.listener.onReconnected(uu), this.attachRoom(uu)
       }
     }
-    var Ze = Vt(3055),
-      Le = Vt(3059),
-      Fe = Vt(1423),
-      ke = Vt(1397),
-      Ge = Vt(4830),
-      ze = Vt(3217),
-      oe = Vt(1167),
-      re = Vt(37967),
-      Ue = Vt(39249),
-      Ae = Vt(9133),
-      ie = Vt(39257),
-      Ye = Vt(1298),
-      Be = Vt(36738),
-      pe = Vt(39263),
-      xe = Vt(1820),
-      Te = Vt(2854);
+    var KE = ju(3148),
+      VE = ju(3152),
+      rE = ju(1369),
+      QE = ju(1353),
+      iE = ju(4858),
+      WE = ju(3336),
+      SE = ju(1128),
+      IE = ju(38105),
+      FE = ju(39362),
+      BE = ju(9128),
+      LE = ju(39367),
+      tE = ju(1259),
+      xE = ju(36870),
+      TE = ju(39371),
+      HE = ju(1767),
+      AE = ju(2902);
 
-    function ge(tt) {
-      var et, Vt;
-      if ("object" !== typeof tt || null === tt) return {
-        errType: typeof tt
+    function nE(uu) {
+      var Eu, ju;
+      if ("object" !== typeof uu || null === uu) return {
+        errType: typeof uu
       };
-      const Ot = tt;
+      const su = uu;
       return {
-        errType: null !== (et = null === (Vt = tt.constructor) || void 0 === Vt ? void 0 : Vt.name) && void 0 !== et ? et : "",
-        errName: "string" === typeof Ot.name ? Ot.name : "",
-        eventType: "string" === typeof Ot.type ? Ot.type : "",
-        errStack: "string" === typeof Ot.stack ? Ot.stack.split("\n").slice(1).join(" | ") : ""
+        errType: null !== (Eu = null === (ju = uu.constructor) || void 0 === ju ? void 0 : ju.name) && void 0 !== Eu ? Eu : "",
+        errName: "string" === typeof su.name ? su.name : "",
+        eventType: "string" === typeof su.type ? su.type : "",
+        errStack: "string" === typeof su.stack ? su.stack.split("\n").slice(1).join(" | ") : ""
       }
     }
 
-    function se(tt) {
-      if ("undefined" !== typeof ProgressEvent && tt instanceof ProgressEvent) return !0;
-      if (!(tt instanceof Error)) return !1;
-      const et = tt.code;
-      return "ServerError" === tt.name && void 0 === et || "AbortError" === tt.name || "seat reservation expired." === tt.message || "early_leave" === tt.message
-    }(0, wt.k)((tt => {
-      (0, Ie.reportClientError)("wasm_net", tt)
+    function yE(uu) {
+      if ("undefined" !== typeof ProgressEvent && uu instanceof ProgressEvent) return !0;
+      if (!(uu instanceof Error)) return !1;
+      const Eu = uu.code;
+      return "ServerError" === uu.name && void 0 === Eu || "AbortError" === uu.name || "seat reservation expired." === uu.message || "early_leave" === uu.message
+    }(0, Yu.m)((uu => {
+      (0, mE.reportClientError)("wasm_net", uu)
     }));
-    let ne = !0;
+    let zE = !0;
 
-    function tV() {
-      ne = !1
+    function RE() {
+      zE = !1
     }
-    class eV {
-      constructor(tt) {
-        this.gameNameWithVariation = void 0, this.lobbyName = void 0, this.colyClient = void 0, this.userContext = void 0, this.joinedAt = null, this.joinAdHold = !1, this.checkSendPath = () => {}, this.ql = void 0, this.connectionResume = void 0, this.incomingMsgInitialisor = void 0, this.gameNameWithVariation = tt.gameNameWithVariation, this.lobbyName = tt.lobbyName, this.colyClient = tt.colyClient, this.userContext = tt.userContext
+    class uj {
+      constructor(uu) {
+        this.gameNameWithVariation = void 0, this.lobbyName = void 0, this.colyClient = void 0, this.userContext = void 0, this.joinedAt = null, this.joinAdHold = !1, this.checkSendPath = () => {}, this.Uc = void 0, this.connectionResume = void 0, this.incomingMsgInitialisor = void 0, this.gameNameWithVariation = uu.gameNameWithVariation, this.lobbyName = uu.lobbyName, this.colyClient = uu.colyClient, this.userContext = uu.userContext
       }
-      async connectToServer(tt, et, Vt) {
-        Mt.b.reset(), tt.dL = {
-          [tt.lL]: {}
-        }, tt.Ttt = void 0, (0, Bt.r)(), (0, jt.c)().removeAllEntityNames(), (0, jt.c)().setEntityName(tt.lL, this.userContext.getPlayerName()), (0, Fe.o)({
+      async connectToServer(uu, Eu, ju) {
+        gu.e.reset(), uu.EQ = {
+          [uu.FQ]: {}
+        }, uu.Huu = void 0, (0, xu.n)(), (0, qu.b)().removeAllEntityNames(), (0, qu.b)().setEntityName(uu.FQ, this.userContext.getPlayerName()), (0, rE.m)({
           lobbyName: this.lobbyName
-        }), console.log("Waiting for clientConnection passed promise to resolve"), this.joinAdHold = (0, xe.h)(), console.log("joining server with game", this.gameNameWithVariation, "lobbyName", this.lobbyName);
-        const mt = performance.now();
-        Vt.aborted || (0, ke.q)("wasm_core_ready", mt);
-        const dt = (0, ie.c)(this.userContext, (() => {
+        }), console.log("Waiting for clientConnection passed promise to resolve"), this.joinAdHold = (0, HE.d)(), console.log("joining server with game", this.gameNameWithVariation, "lobbyName", this.lobbyName);
+        const Xu = performance.now();
+        ju.aborted || (0, QE.s)("wasm_core_ready", Xu);
+        const lu = (0, LE.h)(this.userContext, (() => {
           const {
-            roomName: Ot,
-            joinOptions: qt
-          } = (0, Jt.e)(this.userContext, this.gameNameWithVariation, this.lobbyName, et, (tt => ze.e.isUsingCustomGameTexturePack(tt)));
-          return qt.joinAdHold = this.joinAdHold, qt.renderBackend = (0, Te.e)(tt.Bf), (0, Ue.g)((() => this.colyClient.joinOrCreateUntil(Vt, Ot, qt)), Vt)
+            roomName: su,
+            joinOptions: Uu
+          } = (0, eu.f)(this.userContext, this.gameNameWithVariation, this.lobbyName, Eu, (uu => WE.d.isUsingCustomGameTexturePack(uu)));
+          return Uu.joinAdHold = this.joinAdHold, Uu.renderBackend = (0, AE.e)(uu.tO), (0, FE.e)((() => this.colyClient.joinOrCreateUntil(ju, su, Uu)), ju)
         }));
-        return Nt.j.sw("loadingScreenState", "loadingPage:joiningLobby"), await dt.then((et => {
-          if (this.joinedAt = performance.now(), (0, ke.q)("wasm_joined", this.joinedAt), this.ql = tt, this.joinAdHold) {
-            const tt = (0, xe.v)((() => {
-              et.send(qt.h), (0, ke.i)(), ye.c.markJoinAdEnded()
+        return Du.h.TY("loadingScreenState", "loadingPage:joiningLobby"), await lu.then((Eu => {
+          if (this.joinedAt = performance.now(), (0, QE.s)("wasm_joined", this.joinedAt), this.Uc = uu, this.joinAdHold) {
+            const uu = (0, HE.p)((() => {
+              Eu.send(Uu.e), (0, QE.l)(), YE.e.markJoinAdEnded()
             }));
-            et.eJ(tt), (0, Ot.onGameResetOnce)(tt)
+            Eu.pM(uu), (0, su.onGameResetOnce)(uu)
           }
-          const Vt = new yt(et);
-          this.connectionResume = new Pe((tt => this.colyClient.reconnect(tt)), (et => {
-            tt.oW(et)
-          }), Vt, {
-            isLive: () => (0, jt.c)().client.getMsgHandler() === Vt,
-            onDropped: (tt, et) => {
-              (0, Le.h)(tt) || this.logUnrecognisedConnectionLoss(tt, void 0, {
+          const ju = new hu(Eu);
+          this.connectionResume = new vE((uu => this.colyClient.reconnect(uu)), (Eu => {
+            uu.Wm(Eu)
+          }), ju, {
+            isLive: () => (0, qu.b)().client.getMsgHandler() === ju,
+            onDropped: (uu, Eu) => {
+              (0, VE.j)(uu) || this.logUnrecognisedConnectionLoss(uu, void 0, {
                 site: "drop",
-                closeReason: null !== et && void 0 !== et ? et : "",
+                closeReason: null !== Eu && void 0 !== Eu ? Eu : "",
                 sinceJoined: this.sinceJoined()
               })
             },
-            onRoomLeft: (tt, et) => {
-              this.onRoomLeft(tt, et)
+            onRoomLeft: (uu, Eu) => {
+              this.onRoomLeft(uu, Eu)
             },
-            onReconnected: tt => {
-              this.incomingMsgInitialisor.lXt(tt), this.checkSendPath = (0, re.i)(Vt, tt, wt.l)
+            onReconnected: uu => {
+              this.incomingMsgInitialisor.kfu(uu), this.checkSendPath = (0, IE.d)(ju, uu, Yu.o)
             },
-            onGaveUp: (tt, et) => {
-              this.onResumeGaveUp(tt, et)
+            onGaveUp: (uu, Eu) => {
+              this.onResumeGaveUp(uu, Eu)
             }
-          }), this.connectionResume.attachRoom(et), (0, Ot.onGameResetOnce)((() => {
+          }), this.connectionResume.attachRoom(Eu), (0, su.onGameResetOnce)((() => {
             this.connectionResume.dispose()
           }));
-          const Dt = Vt.send,
-            mt = Vt.gM,
-            dt = Vt.tOt.send,
-            Ht = Vt.tOt.gM,
-            Xt = Vt.XXt;
-          this.checkSendPath = (0, re.i)(Vt, et, wt.l);
-          const Qt = setInterval((() => {
-            Dt === Vt.send && mt === Vt.gM && dt === Vt.tOt.send && Ht === Vt.tOt.gM && Xt === Vt.XXt || tV(), this.checkSendPath()
+          const Zu = ju.send,
+            Xu = ju.gM,
+            lu = ju.kju.send,
+            fu = ju.kju.gM,
+            Cu = ju.Pfu;
+          this.checkSendPath = (0, IE.d)(ju, Eu, Yu.o);
+          const bu = setInterval((() => {
+            Zu === ju.send && Xu === ju.gM && lu === ju.kju.send && fu === ju.kju.gM && Cu === ju.Pfu || RE(), this.checkSendPath()
           }), 1e4);
-          return (0, Ot.onGameResetOnce)((() => {
-            clearInterval(Qt)
+          return (0, su.onGameResetOnce)((() => {
+            clearInterval(bu)
           })), {
             success: !0,
-            successDetails: Vt
+            successDetails: ju
           }
-        })).catch((et => {
-          if (Vt.aborted && et === (0, Ye.f)(Vt)) return {
+        })).catch((Eu => {
+          if (ju.aborted && Eu === (0, tE.f)(ju)) return {
             success: !1,
             failDetails: {
               reason: "Left the game while it loaded",
@@ -1406,22 +1406,22 @@ export const modules = {
               canReconnect: !1
             }
           };
-          if (et instanceof Be.c) return console.warn("Seat request timed out", this.lobbyName, this.gameNameWithVariation), {
+          if (Eu instanceof xE.g) return console.warn("Seat request timed out", this.lobbyName, this.gameNameWithVariation), {
             success: !1,
             failDetails: {
-              reason: et.message,
+              reason: Eu.message,
               requiresRefresh: !1,
               canReconnect: !1,
               gameServerUnreachable: "timedOut",
-              joinFailure: (0, pe.b)(et, et.leg)
+              joinFailure: (0, TE.d)(Eu, Eu.leg)
             }
           };
-          tt.yw(`Failed to connect to bloxd room, check your internet connection. lobbyName: ${this.lobbyName}, gameNameWithVariation: ${this.gameNameWithVariation} code: ${et.code}\n`, et);
-          const Ot = et.code;
-          return Ot === Dt.b.serverUpdating.code ? (this.goToUpdateWaiting(), {
+          uu.OY(`Failed to connect to bloxd room, check your internet connection. lobbyName: ${this.lobbyName}, gameNameWithVariation: ${this.gameNameWithVariation} code: ${Eu.code}\n`, Eu);
+          const su = Eu.code;
+          return su === Zu.b.serverUpdating.code ? (this.goToUpdateWaiting(), {
             success: !1,
             failDetails: {
-              reason: Dt.b.serverUpdating.text,
+              reason: Zu.b.serverUpdating.text,
               requiresRefresh: !1,
               canReconnect: !0,
               goesToUpdateWaiting: !0
@@ -1429,1407 +1429,1407 @@ export const modules = {
           }) : {
             success: !1,
             failDetails: {
-              ...this.onConnectionToServerLost(Ot, et.message, {
+              ...this.onConnectionToServerLost(su, Eu.message, {
                 site: "join",
-                sinceJoinStart: (0, Le.d)(performance.now() - mt),
-                ...ge(et)
-              }, se(et)),
-              rematch: (0, Ue.c)(et),
-              gameRefused: (0, Ae.e)(et),
-              joinFailure: (0, pe.b)(et, this.colyClient.legReached())
+                sinceJoinStart: (0, VE.e)(performance.now() - Xu),
+                ...nE(Eu)
+              }, yE(Eu)),
+              rematch: (0, FE.d)(Eu),
+              gameRefused: (0, BE.d)(Eu),
+              joinFailure: (0, TE.d)(Eu, this.colyClient.legReached())
             }
           }
         }))
       }
-      setupServerListeners(tt, et, Vt) {
-        Nt.j.sw("loadingScreenState", "loadingPage:loadingPlayerInfo"), this.incomingMsgInitialisor = new We(this.gameNameWithVariation, et.tOt, tt, this.connectionResume), this.incomingMsgInitialisor.setupStateReplicationHandlers();
-        const qt = et.yXt();
-        this.incomingMsgInitialisor.setupOnMessageListeners(qt, Vt), (0, Ot.onConnectionToServerReady)(qt, et), this.joinAdHold && ye.c.markAdmissionAwaited(), qt.finishRegistration()
+      setupServerListeners(uu, Eu, ju) {
+        Du.h.TY("loadingScreenState", "loadingPage:loadingPlayerInfo"), this.incomingMsgInitialisor = new aE(this.gameNameWithVariation, Eu.kju, uu, this.connectionResume), this.incomingMsgInitialisor.setupStateReplicationHandlers();
+        const Uu = Eu.Vfu();
+        this.incomingMsgInitialisor.setupOnMessageListeners(Uu, ju), (0, su.onConnectionToServerReady)(Uu, Eu), this.joinAdHold && YE.e.markAdmissionAwaited(), Uu.finishRegistration()
       }
       dispose() {
         this.connectionResume.dispose()
       }
-      onResumeGaveUp(tt, et) {
-        (0, oe.Nw)(new Error("Reconnect failed"), {
-          ...(0, Ze.i)(et),
+      onResumeGaveUp(uu, Eu) {
+        (0, SE.YY)(new Error("Reconnect failed"), {
+          ...(0, KE.l)(Eu),
           game: this.gameNameWithVariation
-        }), (0, Ie.reportClientError)("disconnect", "Reconnect failed", et.reason), (0, jt.c)().client.leaveGameUnwanted({
+        }), (0, mE.reportClientError)("disconnect", "Reconnect failed", Eu.reason), (0, qu.b)().client.leaveGameUnwanted({
           reason: {
             translationKey: "general:lostConnection"
           },
-          canReconnect: !tt,
-          canPlayAgain: tt,
+          canReconnect: !uu,
+          canPlayAgain: uu,
           requiresRefresh: !1,
           automaticallyReconnect: !1
-        }), (0, fe.navigatePreserveSearch)("/")
+        }), (0, NE.navigatePreserveSearch)("/")
       }
       sinceJoined() {
-        return null === this.joinedAt ? "" : (0, Le.d)(performance.now() - this.joinedAt)
+        return null === this.joinedAt ? "" : (0, VE.e)(performance.now() - this.joinedAt)
       }
-      onRoomLeft(tt, et) {
-        var Vt;
-        if (tt === Dt.b.gameOrPluginKick.code) return;
-        if (console.log(`Left room with code ${tt}`), tt === Dt.b.serverUpdating.code) return (0, Ie.reportClientError)("disconnect", "Left room", "serverUpdating"), (0, jt.c)().client.leaveGame(this.getUpdateWaitingUrl()), void this.goToUpdateWaiting();
-        this.ql.yw(`Kicked from server with code ${tt}`, new Error);
-        const Ot = Object.keys(Dt.b).find((et => Dt.b[et].code === tt));
-        (0, Ie.reportClientError)("disconnect", "Left room", null !== Ot && void 0 !== Ot ? Ot : String(tt));
-        const qt = this.onConnectionToServerLost(tt, void 0, {
+      onRoomLeft(uu, Eu) {
+        var ju;
+        if (uu === Zu.b.gameOrPluginKick.code) return;
+        if (console.log(`Left room with code ${uu}`), uu === Zu.b.serverUpdating.code) return (0, mE.reportClientError)("disconnect", "Left room", "serverUpdating"), (0, qu.b)().client.leaveGame(this.getUpdateWaitingUrl()), void this.goToUpdateWaiting();
+        this.Uc.OY(`Kicked from server with code ${uu}`, new Error);
+        const su = Object.keys(Zu.b).find((Eu => Zu.b[Eu].code === uu));
+        (0, mE.reportClientError)("disconnect", "Left room", null !== su && void 0 !== su ? su : String(uu));
+        const Uu = this.onConnectionToServerLost(uu, void 0, {
           site: "leave",
-          closeReason: null !== et && void 0 !== et ? et : "",
+          closeReason: null !== Eu && void 0 !== Eu ? Eu : "",
           sinceJoined: this.sinceJoined()
         });
-        (0, jt.c)().client.leaveGameUnwanted({
-          reason: `You have disconnected from the server.\n${qt.reason}`,
-          canReconnect: qt.canReconnect,
-          requiresRefresh: qt.requiresRefresh,
-          automaticallyReconnect: null !== (Vt = qt.automaticallyReconnect) && void 0 !== Vt && Vt
-        }), (0, fe.navigatePreserveSearch)("/")
+        (0, qu.b)().client.leaveGameUnwanted({
+          reason: `You have disconnected from the server.\n${Uu.reason}`,
+          canReconnect: Uu.canReconnect,
+          requiresRefresh: Uu.requiresRefresh,
+          automaticallyReconnect: null !== (ju = Uu.automaticallyReconnect) && void 0 !== ju && ju
+        }), (0, NE.navigatePreserveSearch)("/")
       }
       getUpdateWaitingUrl() {
-        return (0, Ge.B)(this.gameNameWithVariation, this.lobbyName)
+        return (0, iE.G)(this.gameNameWithVariation, this.lobbyName)
       }
       goToUpdateWaiting() {
-        (0, fe.navigatePreserveSearch)(this.getUpdateWaitingUrl())
+        (0, NE.navigatePreserveSearch)(this.getUpdateWaitingUrl())
       }
-      onConnectionToServerLost(tt, et, Vt) {
-        var Ot;
-        let qt = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        if (null !== (Ot = et) && void 0 !== Ot && Ot.endsWith(Dt.l) && (this.userContext.invalidateTrafficCode(), et = et.replace(Dt.l, "")), tt === Dt.b.outdatedVersion.code) return console.error("Outdated client with version ", mt.d, ", refreshing page"), (0, bt.reloadBloxd)(), {
+      onConnectionToServerLost(uu, Eu, ju) {
+        var su;
+        let Uu = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        if (null !== (su = Eu) && void 0 !== su && su.endsWith(Zu.l) && (this.userContext.invalidateTrafficCode(), Eu = Eu.replace(Zu.l, "")), uu === Zu.b.outdatedVersion.code) return console.error("Outdated client with version ", Xu.b, ", refreshing page"), (0, Mu.reloadBloxd)(), {
           reason: "Outdated client",
           requiresRefresh: !0,
           canReconnect: !1
         };
-        if (tt === Dt.b.loadRecaptchaError.code) return console.error("Load recaptcha error, refreshing page"), (0, bt.reloadBloxd)(), {
+        if (uu === Zu.b.loadRecaptchaError.code) return console.error("Load recaptcha error, refreshing page"), (0, Mu.reloadBloxd)(), {
           reason: "Failed to load recaptcha",
           requiresRefresh: !0,
           canReconnect: !1
         };
-        for (const mt in Dt.b) {
+        for (const Xu in Zu.b) {
           const {
-            code: Vt,
-            text: Ot,
-            canReconnect: qt
-          } = Dt.b[mt];
-          if (Vt === tt) {
-            console.log("matched known error", tt, "leaving game");
+            code: ju,
+            text: su,
+            canReconnect: Uu
+          } = Zu.b[Xu];
+          if (ju === uu) {
+            console.log("matched known error", uu, "leaving game");
             return {
-              reason: "" !== Ot ? Ot : et || `Code: ${tt}`,
+              reason: "" !== su ? su : Eu || `Code: ${uu}`,
               requiresRefresh: !1,
-              canReconnect: qt,
-              automaticallyReconnect: Vt === Dt.b.customGameUpdated.code || Vt === Dt.b.duplicateLobbyNameError.code
+              canReconnect: Uu,
+              automaticallyReconnect: ju === Zu.b.customGameUpdated.code || ju === Zu.b.duplicateLobbyNameError.code
             }
           }
         }
-        return console.log("Didn't match known error, leaving game"), (0, Le.e)(tt) || qt ? console.warn("Connection lost", tt, et) : this.logUnrecognisedConnectionLoss(tt, et, Vt), {
-          reason: `Either your internet isn't working or this is a bug.\nCode: ${tt}`,
+        return console.log("Didn't match known error, leaving game"), (0, VE.i)(uu) || Uu ? console.warn("Connection lost", uu, Eu) : this.logUnrecognisedConnectionLoss(uu, Eu, ju), {
+          reason: `Either your internet isn't working or this is a bug.\nCode: ${uu}`,
           requiresRefresh: !1,
           canReconnect: !1,
-          gameServerUnreachable: qt ? "failed" : void 0
+          gameServerUnreachable: Uu ? "failed" : void 0
         }
       }
-      logUnrecognisedConnectionLoss(tt, et, Vt) {
-        (0, oe.Nw)(new Error("Unrecognised connection loss"), {
-          code: String(tt),
-          cause: null !== et && void 0 !== et ? et : "",
-          ...Vt,
+      logUnrecognisedConnectionLoss(uu, Eu, ju) {
+        (0, SE.YY)(new Error("Unrecognised connection loss"), {
+          code: String(uu),
+          cause: null !== Eu && void 0 !== Eu ? Eu : "",
+          ...ju,
           game: this.gameNameWithVariation,
-          ...(0, Le.k)()
+          ...(0, VE.n)()
         })
       }
     }
   },
-  39158: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => pV,
-      g: () => tO
+  39285: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => Tj,
+      c: () => Rj
     });
-    var Ot, qt, Dt, mt, dt, jt, Ht, Xt, Qt, lt, Et, ft, wt, yt, Nt, Mt, bt, Jt, Ct, ut, Kt, ht, vt, Wt, St, ct, Rt, It, Pt, Zt, Lt, Ft, kt, Gt, zt, ot, rt, Ut, At, it, Yt, Bt, pt, xt, Tt, gt, st, nt, te, ee, Ve, Oe, qe, De, me, de, je, He, Xe, Qe, le, Ee, fe, we, ye, Ne, ae, Me, be, Je, Ce, ue, Ke, he, ve, We, Se, ce, Re, Ie, Pe, Ze, Le, Fe, ke, Ge, ze, oe, re, Ue, Ae, ie, Ye, Be, pe, xe, Te, ge, se, ne = Vt(31),
-      tV = Vt(37401),
-      eV = Vt(39169),
-      VV = Vt(39177),
-      OV = Vt(9348),
-      qV = Vt(707),
-      DV = Vt(705),
-      mV = Vt(37028);
-    let dV = (Ot = (0, OV.type)("number"), qt = (0, OV.type)("number"), Dt = (0, OV.type)("number"), mt = (0, OV.type)("number"), dt = (0, OV.type)("number"), jt = (0, OV.type)("number"), Ht = (0, OV.type)("string"), Xt = class extends OV.Schema {
+    var su, Uu, Zu, Xu, lu, qu, fu, Cu, bu, cu, Nu, Ou, Yu, hu, Du, gu, Mu, eu, Gu, pu, wu, Ju, du, au, Pu, ou, ku, mu, vu, Ku, Vu, ru, Qu, iu, Wu, Su, Iu, Fu, Bu, Lu, tu, xu, Tu, Hu, Au, nu, yu, zu, Ru, uE, EE, jE, sE, UE, ZE, XE, lE, qE, fE, CE, bE, cE, NE, OE, YE, hE, DE, gE, ME, eE, GE, pE, wE, JE, dE, aE, PE, oE, kE, mE, vE, KE, VE, rE, QE, iE, WE, SE, IE, FE, BE, LE, tE, xE, TE, HE, AE, nE, yE, zE = ju(24),
+      RE = ju(37547),
+      uj = ju(39296),
+      Ej = ju(39303),
+      jj = ju(9329),
+      sj = ju(645),
+      Uj = ju(636),
+      Zj = ju(37185);
+    let Xj = (su = (0, jj.type)("number"), Uu = (0, jj.type)("number"), Zu = (0, jj.type)("number"), Xu = (0, jj.type)("number"), lu = (0, jj.type)("number"), qu = (0, jj.type)("number"), fu = (0, jj.type)("string"), Cu = class extends jj.Schema {
         constructor() {
-          super(...arguments), (0, eV.b)(this, "id", Qt, this), (0, eV.b)(this, "amount", lt, this), (0, eV.b)(this, "x", Et, this), (0, eV.b)(this, "y", ft, this), (0, eV.b)(this, "z", wt, this), (0, eV.b)(this, "size", yt, this), (0, eV.b)(this, "attributes", Nt, this)
+          super(...arguments), (0, uj.b)(this, "id", bu, this), (0, uj.b)(this, "amount", cu, this), (0, uj.b)(this, "x", Nu, this), (0, uj.b)(this, "y", Ou, this), (0, uj.b)(this, "z", Yu, this), (0, uj.b)(this, "size", hu, this), (0, uj.b)(this, "attributes", Du, this)
         }
-      }, Qt = (0, VV.e)(Xt.prototype, "id", [Ot], {
+      }, bu = (0, Ej.e)(Cu.prototype, "id", [su], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), lt = (0, VV.e)(Xt.prototype, "amount", [qt], {
+      }), cu = (0, Ej.e)(Cu.prototype, "amount", [Uu], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), Et = (0, VV.e)(Xt.prototype, "x", [Dt], {
+      }), Nu = (0, Ej.e)(Cu.prototype, "x", [Zu], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), ft = (0, VV.e)(Xt.prototype, "y", [mt], {
+      }), Ou = (0, Ej.e)(Cu.prototype, "y", [Xu], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), wt = (0, VV.e)(Xt.prototype, "z", [dt], {
+      }), Yu = (0, Ej.e)(Cu.prototype, "z", [lu], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), yt = (0, VV.e)(Xt.prototype, "size", [jt], {
+      }), hu = (0, Ej.e)(Cu.prototype, "size", [qu], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 1
         }
-      }), Nt = (0, VV.e)(Xt.prototype, "attributes", [Ht], {
+      }), Du = (0, Ej.e)(Cu.prototype, "attributes", [fu], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return "{}"
         }
-      }), Xt),
-      jV = (Mt = (0, OV.type)("string"), bt = (0, OV.type)("string"), Jt = class extends OV.Schema {
+      }), Cu),
+      lj = (gu = (0, jj.type)("string"), Mu = (0, jj.type)("string"), eu = class extends jj.Schema {
         constructor() {
-          super(...arguments), (0, eV.b)(this, "itemName", Ct, this), (0, eV.b)(this, "enchantmentTier", ut, this)
+          super(...arguments), (0, uj.b)(this, "itemName", Gu, this), (0, uj.b)(this, "enchantmentTier", pu, this)
         }
-      }, Ct = (0, VV.e)(Jt.prototype, "itemName", [Mt], {
+      }, Gu = (0, Ej.e)(eu.prototype, "itemName", [gu], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: null
-      }), ut = (0, VV.e)(Jt.prototype, "enchantmentTier", [bt], {
+      }), pu = (0, Ej.e)(eu.prototype, "enchantmentTier", [Mu], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: null
-      }), Jt),
-      HV = (Kt = (0, OV.type)("string"), ht = (0, OV.type)("string"), vt = (0, OV.type)("number"), Wt = (0, OV.type)("number"), St = (0, OV.type)("number"), ct = (0, OV.type)("float32"), Rt = (0, OV.type)("float32"), It = (0, OV.type)("float32"), Pt = (0, OV.type)("string"), Zt = (0, OV.type)(["number"]), Lt = (0, OV.type)("boolean"), Ft = class extends OV.Schema {
+      }), eu),
+      qj = (wu = (0, jj.type)("string"), Ju = (0, jj.type)("string"), du = (0, jj.type)("number"), au = (0, jj.type)("number"), Pu = (0, jj.type)("number"), ou = (0, jj.type)("float32"), ku = (0, jj.type)("float32"), mu = (0, jj.type)("float32"), vu = (0, jj.type)("string"), Ku = (0, jj.type)(["number"]), Vu = (0, jj.type)("boolean"), ru = class extends jj.Schema {
         constructor() {
-          super(...arguments), (0, eV.b)(this, "type", kt, this), (0, eV.b)(this, "name", Gt, this), (0, eV.b)(this, "x", zt, this), (0, eV.b)(this, "y", ot, this), (0, eV.b)(this, "z", rt, this), (0, eV.b)(this, "xRotation", Ut, this), (0, eV.b)(this, "yRotation", At, this), (0, eV.b)(this, "zRotation", it, this), (0, eV.b)(this, "followingEId", Yt, this), (0, eV.b)(this, "followingOffset", Bt, this), (0, eV.b)(this, "shouldMatchFollowingEntityRotation", pt, this)
+          super(...arguments), (0, uj.b)(this, "type", Qu, this), (0, uj.b)(this, "name", iu, this), (0, uj.b)(this, "x", Wu, this), (0, uj.b)(this, "y", Su, this), (0, uj.b)(this, "z", Iu, this), (0, uj.b)(this, "xRotation", Fu, this), (0, uj.b)(this, "yRotation", Bu, this), (0, uj.b)(this, "zRotation", Lu, this), (0, uj.b)(this, "followingEId", tu, this), (0, uj.b)(this, "followingOffset", xu, this), (0, uj.b)(this, "shouldMatchFollowingEntityRotation", Tu, this)
         }
-      }, kt = (0, VV.e)(Ft.prototype, "type", [Kt], {
+      }, Qu = (0, Ej.e)(ru.prototype, "type", [wu], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: null
-      }), Gt = (0, VV.e)(Ft.prototype, "name", [ht], {
+      }), iu = (0, Ej.e)(ru.prototype, "name", [Ju], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return ""
         }
-      }), zt = (0, VV.e)(Ft.prototype, "x", [vt], {
+      }), Wu = (0, Ej.e)(ru.prototype, "x", [du], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), ot = (0, VV.e)(Ft.prototype, "y", [Wt], {
+      }), Su = (0, Ej.e)(ru.prototype, "y", [au], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), rt = (0, VV.e)(Ft.prototype, "z", [St], {
+      }), Iu = (0, Ej.e)(ru.prototype, "z", [Pu], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), Ut = (0, VV.e)(Ft.prototype, "xRotation", [ct], {
+      }), Fu = (0, Ej.e)(ru.prototype, "xRotation", [ou], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), At = (0, VV.e)(Ft.prototype, "yRotation", [Rt], {
+      }), Bu = (0, Ej.e)(ru.prototype, "yRotation", [ku], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), it = (0, VV.e)(Ft.prototype, "zRotation", [It], {
+      }), Lu = (0, Ej.e)(ru.prototype, "zRotation", [mu], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), Yt = (0, VV.e)(Ft.prototype, "followingEId", [Pt], {
+      }), tu = (0, Ej.e)(ru.prototype, "followingEId", [vu], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: null
-      }), Bt = (0, VV.e)(Ft.prototype, "followingOffset", [Zt], {
+      }), xu = (0, Ej.e)(ru.prototype, "followingOffset", [Ku], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
-          return new OV.ArraySchema(0, 0, 0)
+          return new jj.ArraySchema(0, 0, 0)
         }
-      }), pt = (0, VV.e)(Ft.prototype, "shouldMatchFollowingEntityRotation", [Lt], {
+      }), Tu = (0, Ej.e)(ru.prototype, "shouldMatchFollowingEntityRotation", [Vu], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return !0
         }
-      }), Ft),
-      XV = (xt = (0, OV.type)("float32"), Tt = (0, OV.type)("float32"), gt = (0, OV.type)("boolean"), st = (0, OV.type)("boolean"), nt = (0, OV.type)("float32"), te = (0, OV.type)("boolean"), ee = (0, OV.type)("string"), Ve = (0, OV.type)("string"), Oe = (0, OV.type)("string"), qe = (0, OV.type)("string"), De = (0, OV.type)(["number"]), me = (0, OV.type)("number"), de = (0, OV.type)({
-        map: jV
-      }), je = class extends HV {
+      }), ru),
+      fj = (Hu = (0, jj.type)("float32"), Au = (0, jj.type)("float32"), nu = (0, jj.type)("boolean"), yu = (0, jj.type)("boolean"), zu = (0, jj.type)("float32"), Ru = (0, jj.type)("boolean"), uE = (0, jj.type)("string"), EE = (0, jj.type)("string"), jE = (0, jj.type)("string"), sE = (0, jj.type)("string"), UE = (0, jj.type)(["number"]), ZE = (0, jj.type)("number"), XE = (0, jj.type)({
+        map: lj
+      }), lE = class extends qj {
         constructor() {
-          super(...arguments), (0, eV.b)(this, "scale", He, this), (0, eV.b)(this, "speed", Xe, this), (0, eV.b)(this, "jumping", Qe, this), (0, eV.b)(this, "crouching", le, this), (0, eV.b)(this, "cameraPitch", Ee, this), (0, eV.b)(this, "armSwinging", fe, this), (0, eV.b)(this, "heldItemName", we, this), (0, eV.b)(this, "heldItemEnchantmentTier", ye, this), (0, eV.b)(this, "pose", Ne, this), (0, eV.b)(this, "ridingVehicleEId", ae, this), (0, eV.b)(this, "meshOffset", Me, this), (0, eV.b)(this, "baseRenderHeading", be, this), (0, eV.b)(this, "armour", Je, this)
+          super(...arguments), (0, uj.b)(this, "scale", qE, this), (0, uj.b)(this, "speed", fE, this), (0, uj.b)(this, "jumping", CE, this), (0, uj.b)(this, "crouching", bE, this), (0, uj.b)(this, "cameraPitch", cE, this), (0, uj.b)(this, "armSwinging", NE, this), (0, uj.b)(this, "heldItemName", OE, this), (0, uj.b)(this, "heldItemEnchantmentTier", YE, this), (0, uj.b)(this, "pose", hE, this), (0, uj.b)(this, "ridingVehicleEId", DE, this), (0, uj.b)(this, "meshOffset", gE, this), (0, uj.b)(this, "baseRenderHeading", ME, this), (0, uj.b)(this, "armour", eE, this)
         }
-      }, He = (0, VV.e)(je.prototype, "scale", [xt], {
+      }, qE = (0, Ej.e)(lE.prototype, "scale", [Hu], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 1
         }
-      }), Xe = (0, VV.e)(je.prototype, "speed", [Tt], {
+      }), fE = (0, Ej.e)(lE.prototype, "speed", [Au], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), Qe = (0, VV.e)(je.prototype, "jumping", [gt], {
+      }), CE = (0, Ej.e)(lE.prototype, "jumping", [nu], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return !1
         }
-      }), le = (0, VV.e)(je.prototype, "crouching", [st], {
+      }), bE = (0, Ej.e)(lE.prototype, "crouching", [yu], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return !1
         }
-      }), Ee = (0, VV.e)(je.prototype, "cameraPitch", [nt], {
+      }), cE = (0, Ej.e)(lE.prototype, "cameraPitch", [zu], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), fe = (0, VV.e)(je.prototype, "armSwinging", [te], {
+      }), NE = (0, Ej.e)(lE.prototype, "armSwinging", [Ru], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return !1
         }
-      }), we = (0, VV.e)(je.prototype, "heldItemName", [ee], {
+      }), OE = (0, Ej.e)(lE.prototype, "heldItemName", [uE], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: null
-      }), ye = (0, VV.e)(je.prototype, "heldItemEnchantmentTier", [Ve], {
+      }), YE = (0, Ej.e)(lE.prototype, "heldItemEnchantmentTier", [EE], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: null
-      }), Ne = (0, VV.e)(je.prototype, "pose", [Oe], {
+      }), hE = (0, Ej.e)(lE.prototype, "pose", [jE], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return "standing"
         }
-      }), ae = (0, VV.e)(je.prototype, "ridingVehicleEId", [qe], {
+      }), DE = (0, Ej.e)(lE.prototype, "ridingVehicleEId", [sE], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return null
         }
-      }), Me = (0, VV.e)(je.prototype, "meshOffset", [De], {
+      }), gE = (0, Ej.e)(lE.prototype, "meshOffset", [UE], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
-          return new OV.ArraySchema(0, 0, 0)
+          return new jj.ArraySchema(0, 0, 0)
         }
-      }), be = (0, VV.e)(je.prototype, "baseRenderHeading", [me], {
+      }), ME = (0, Ej.e)(lE.prototype, "baseRenderHeading", [ZE], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), Je = (0, VV.e)(je.prototype, "armour", [de], {
+      }), eE = (0, Ej.e)(lE.prototype, "armour", [XE], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
-          return new OV.MapSchema
+          return new jj.MapSchema
         }
-      }), je),
-      QV = (Ce = (0, OV.type)("string"), ue = (0, OV.type)("string"), Ke = (0, OV.type)("string"), he = (0, OV.type)("uint8"), ve = class extends XV {
+      }), lE),
+      Cj = (GE = (0, jj.type)("string"), pE = (0, jj.type)("string"), wE = (0, jj.type)("string"), JE = (0, jj.type)("uint8"), dE = class extends fj {
         constructor() {
-          super(...arguments), (0, eV.b)(this, "variation", We, this), (0, eV.b)(this, "ownerDbId", Se, this), (0, eV.b)(this, "metaInfo", ce, this), (0, eV.b)(this, "aiState", Re, this)
+          super(...arguments), (0, uj.b)(this, "variation", aE, this), (0, uj.b)(this, "ownerDbId", PE, this), (0, uj.b)(this, "metaInfo", oE, this), (0, uj.b)(this, "aiState", kE, this)
         }
-      }, We = (0, VV.e)(ve.prototype, "variation", [Ce], {
+      }, aE = (0, Ej.e)(dE.prototype, "variation", [GE], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return "default"
         }
-      }), Se = (0, VV.e)(ve.prototype, "ownerDbId", [ue], {
+      }), PE = (0, Ej.e)(dE.prototype, "ownerDbId", [pE], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return null
         }
-      }), ce = (0, VV.e)(ve.prototype, "metaInfo", [Ke], {
+      }), oE = (0, Ej.e)(dE.prototype, "metaInfo", [wE], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return ""
         }
-      }), Re = (0, VV.e)(ve.prototype, "aiState", [he], {
+      }), kE = (0, Ej.e)(dE.prototype, "aiState", [JE], {
         configurable: !0,
         enumerable: !0,
         writable: !0,
         initializer: function() {
           return 0
         }
-      }), ve);
-    Ie = (0, OV.type)("string"), Pe = (0, OV.type)("string"), Ze = (0, OV.type)("string"), Le = (0, OV.type)("string"), Fe = class extends HV {
+      }), dE);
+    mE = (0, jj.type)("string"), vE = (0, jj.type)("string"), KE = (0, jj.type)("string"), VE = (0, jj.type)("string"), rE = class extends qj {
       constructor() {
-        super(...arguments), (0, eV.b)(this, "meshKind", ke, this), (0, eV.b)(this, "meshOpts", Ge, this), (0, eV.b)(this, "pose", ze, this), (0, eV.b)(this, "leaderboardTop", oe, this)
+        super(...arguments), (0, uj.b)(this, "meshKind", QE, this), (0, uj.b)(this, "meshOpts", iE, this), (0, uj.b)(this, "pose", WE, this), (0, uj.b)(this, "leaderboardTop", SE, this)
       }
-    }, ke = (0, VV.e)(Fe.prototype, "meshKind", [Ie], {
+    }, QE = (0, Ej.e)(rE.prototype, "meshKind", [mE], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: null
-    }), Ge = (0, VV.e)(Fe.prototype, "meshOpts", [Pe], {
+    }), iE = (0, Ej.e)(rE.prototype, "meshOpts", [vE], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: null
-    }), ze = (0, VV.e)(Fe.prototype, "pose", [Ze], {
+    }), WE = (0, Ej.e)(rE.prototype, "pose", [KE], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: null
-    }), oe = (0, VV.e)(Fe.prototype, "leaderboardTop", [Le], {
+    }), SE = (0, Ej.e)(rE.prototype, "leaderboardTop", [VE], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: null
     });
 
-    function lV(tt) {
-      return Object.keys(OV.Metadata.getFields(tt))
+    function bj(uu) {
+      return Object.keys(jj.Metadata.getFields(uu))
     }
-    const EV = lV(QV);
-    for (const eO of qV.t)
-      if (!EV.includes(eO)) throw new Error(`Mob Schema is missing a networked property: "${eO}"`);
-    const fV = lV((re = (0, OV.type)("string"), Ue = (0, OV.type)("float32"), Ae = (0, OV.type)("float32"), ie = (0, OV.type)("float32"), Ye = (0, OV.type)("float32"), Be = class extends HV {
+    const cj = bj(Cj);
+    for (const us of sj.n)
+      if (!cj.includes(us)) throw new Error(`Mob Schema is missing a networked property: "${us}"`);
+    const Nj = bj((IE = (0, jj.type)("string"), FE = (0, jj.type)("float32"), BE = (0, jj.type)("float32"), LE = (0, jj.type)("float32"), tE = (0, jj.type)("float32"), xE = class extends qj {
       constructor() {
-        super(...arguments), (0, eV.b)(this, "soundName", pe, this), (0, eV.b)(this, "volume", xe, this), (0, eV.b)(this, "refDistance", Te, this), (0, eV.b)(this, "maxHearDist", ge, this), (0, eV.b)(this, "rate", se, this)
+        super(...arguments), (0, uj.b)(this, "soundName", TE, this), (0, uj.b)(this, "volume", HE, this), (0, uj.b)(this, "refDistance", AE, this), (0, uj.b)(this, "maxHearDist", nE, this), (0, uj.b)(this, "rate", yE, this)
       }
-    }, pe = (0, VV.e)(Be.prototype, "soundName", [re], {
+    }, TE = (0, Ej.e)(xE.prototype, "soundName", [IE], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: function() {
         return ""
       }
-    }), xe = (0, VV.e)(Be.prototype, "volume", [Ue], {
+    }), HE = (0, Ej.e)(xE.prototype, "volume", [FE], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: function() {
         return 1
       }
-    }), Te = (0, VV.e)(Be.prototype, "refDistance", [Ae], {
+    }), AE = (0, Ej.e)(xE.prototype, "refDistance", [BE], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: function() {
-        return mV.f
+        return Zj.j
       }
-    }), ge = (0, VV.e)(Be.prototype, "maxHearDist", [ie], {
+    }), nE = (0, Ej.e)(xE.prototype, "maxHearDist", [LE], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: function() {
-        return mV.b
+        return Zj.d
       }
-    }), se = (0, VV.e)(Be.prototype, "rate", [Ye], {
+    }), yE = (0, Ej.e)(xE.prototype, "rate", [tE], {
       configurable: !0,
       enumerable: !0,
       writable: !0,
       initializer: function() {
         return 1
       }
-    }), Be));
-    for (const eO of DV.d)
-      if (!fV.includes(eO)) throw new Error(`AudioEntity Schema is missing a replicated property: "${eO}"`);
-    var wV = Vt(38657),
-      yV = Vt(1325),
-      NV = Vt(710),
-      aV = Vt(38457),
-      MV = Vt(4339),
-      bV = Vt(391),
-      JV = Vt(37510),
-      CV = Vt(38347),
-      uV = Vt(2290),
-      KV = Vt(37480),
-      hV = Vt(38686),
-      vV = Vt(37634),
-      WV = Vt(404),
-      SV = Vt.n(WV),
-      cV = Vt(38192),
-      RV = Vt(37317),
-      IV = Vt(38321),
-      PV = Vt(38363);
-    class ZV {
-      constructor(tt, et) {
-        this.bloxd = tt, this.eId = et, this.ql = void 0, this.colyseusEntity = void 0, this.canSeeSub = void 0, this.canAttackSub = void 0, this.interactableSub = void 0, this.overlayColourSub = void 0, this.opacitySub = void 0, this.zIndexSub = void 0, this.multilineTextBoxSub = void 0, this.previousHidingMeshManagerState = void 0, this.meshKind = void 0, this.meshOpts = void 0, this.leaderboardTop = void 0, this.meshRebuildQueued = !1, this.df = !1, this.ql = tt.ql
+    }), xE));
+    for (const us of Uj.l)
+      if (!Nj.includes(us)) throw new Error(`AudioEntity Schema is missing a replicated property: "${us}"`);
+    var Oj = ju(38764),
+      Yj = ju(1298),
+      hj = ju(649),
+      Dj = ju(38568),
+      gj = ju(4427),
+      Mj = ju(349),
+      ej = ju(37671),
+      Gj = ju(38462),
+      pj = ju(2329),
+      wj = ju(37646),
+      Jj = ju(38787),
+      dj = ju(37794),
+      aj = ju(366),
+      Pj = ju.n(aj),
+      oj = ju(38324),
+      kj = ju(37474),
+      mj = ju(38447),
+      vj = ju(38474);
+    class Kj {
+      constructor(uu, Eu) {
+        this.bloxd = uu, this.eId = Eu, this.Uc = void 0, this.colyseusEntity = void 0, this.canSeeSub = void 0, this.canAttackSub = void 0, this.interactableSub = void 0, this.overlayColourSub = void 0, this.opacitySub = void 0, this.zIndexSub = void 0, this.multilineTextBoxSub = void 0, this.previousHidingMeshManagerState = void 0, this.meshKind = void 0, this.meshOpts = void 0, this.leaderboardTop = void 0, this.meshRebuildQueued = !1, this.fO = !1, this.Uc = uu.Uc
       }
-      initClient(tt) {
-        var et, Vt, Ot;
-        this.colyseusEntity = tt, this.meshKind = tt.meshKind, this.meshOpts = tt.meshOpts, this.leaderboardTop = tt.leaderboardTop, this.ql.mJ.add([tt.x, tt.y, tt.z], 1, 1, null, null, !1, !1, this.eId), this.ql.mJ.RZ(this.eId, "smoothToServerPos");
-        const qt = "Person" === this.meshKind;
-        this.ql.mJ.RZ(this.eId, "meshRotation", {
+      initClient(uu) {
+        var Eu, ju, su;
+        this.colyseusEntity = uu, this.meshKind = uu.meshKind, this.meshOpts = uu.meshOpts, this.leaderboardTop = uu.leaderboardTop, this.Uc.YG.add([uu.x, uu.y, uu.z], 1, 1, null, null, !1, !1, this.eId), this.Uc.YG.yV(this.eId, "smoothToServerPos");
+        const Uu = "Person" === this.meshKind;
+        this.Uc.YG.yV(this.eId, "meshRotation", {
           isServerControlled: !0,
-          ...qt ? {
+          ...Uu ? {
             defaultRotationsPerSecond: .5
           } : {},
-          childrenNodeParams: qt ? [{
+          childrenNodeParams: Uu ? [{
             nodeName: "HeadMesh",
-            softTolerance: hV.l,
+            softTolerance: Jj.h,
             hardTolerance: null
           }] : []
-        }), this.updateHidingMeshMgr(), this.canSeeSub = ne.j.subscribe(`otherEntitySettings|${this.eId}|canSee`, (tt => {
+        }), this.updateHidingMeshMgr(), this.canSeeSub = zE.h.subscribe(`otherEntitySettings|${this.eId}|canSee`, (uu => {
           this.updateHidingMeshMgr()
         }));
-        const Dt = () => {
-          const tt = this.ql.mJ.oet(this.eId);
-          if (!tt) return;
-          const et = (0, vV.k)(this.eId);
-          if ("number" === typeof tt.RP) {
-            var Vt, Ot, qt, Dt;
-            const mt = null === (Vt = (0, uV.n)("head", null === (qt = this.getSpec()) || void 0 === qt || null === (Dt = qt.opts.textures) || void 0 === Dt ? void 0 : Dt.head)) || void 0 === Vt || null === (Ot = Vt.personModel) || void 0 === Ot ? void 0 : Ot.fullBody;
-            return this.ql.Bf.xI.setPickable(tt.RP, et && !mt), void(0, RV.updatePersonAttachmentPickability)(this.ql, this.eId, et)
+        const Zu = () => {
+          const uu = this.Uc.YG.GEu(this.eId);
+          if (!uu) return;
+          const Eu = (0, dj.f)(this.eId);
+          if ("number" === typeof uu.mV) {
+            var ju, su, Uu, Zu;
+            const Xu = null === (ju = (0, pj.m)("head", null === (Uu = this.getSpec()) || void 0 === Uu || null === (Zu = Uu.opts.textures) || void 0 === Zu ? void 0 : Zu.head)) || void 0 === ju || null === (su = ju.personModel) || void 0 === su ? void 0 : su.fullBody;
+            return this.Uc.tO.oV.setPickable(uu.mV, Eu && !Xu), void(0, kj.updatePersonAttachmentPickability)(this.Uc, this.eId, Eu)
           }
-          const mt = tt.mesh;
-          if (mt)
-            for (const dt of [mt, ...mt.getChildMeshes(!1)]) "Gw" in dt && !dt.name.startsWith("Cape|") && (dt.Gw = et)
+          const Xu = uu.mesh;
+          if (Xu)
+            for (const lu of [Xu, ...Xu.getChildMeshes(!1)]) "VY" in lu && !lu.name.startsWith("Cape|") && (lu.VY = Eu)
         };
-        this.canAttackSub = ne.j.subscribe(`otherEntitySettings|${this.eId}|canAttack`, Dt), this.interactableSub = ne.j.subscribe(`otherEntitySettings|${this.eId}|interactable`, Dt), this.overlayColourSub = ne.j.subscribe(`otherEntitySettingsClientifiedEId|${this.eId}|overlayColour`, (tt => {
-          this.updateOverlayColour(tt)
-        })), this.opacitySub = ne.j.subscribe(`otherEntitySettingsClientifiedEId|${this.eId}|opacity`, (tt => {
-          this.updateOpacity(tt)
-        })), this.zIndexSub = ne.j.subscribe(`otherEntitySettingsClientifiedEId|${this.eId}|zIndex`, (tt => {
-          this.updateZIndex(tt)
+        this.canAttackSub = zE.h.subscribe(`otherEntitySettings|${this.eId}|canAttack`, Zu), this.interactableSub = zE.h.subscribe(`otherEntitySettings|${this.eId}|interactable`, Zu), this.overlayColourSub = zE.h.subscribe(`otherEntitySettingsClientifiedEId|${this.eId}|overlayColour`, (uu => {
+          this.updateOverlayColour(uu)
+        })), this.opacitySub = zE.h.subscribe(`otherEntitySettingsClientifiedEId|${this.eId}|opacity`, (uu => {
+          this.updateOpacity(uu)
+        })), this.zIndexSub = zE.h.subscribe(`otherEntitySettingsClientifiedEId|${this.eId}|zIndex`, (uu => {
+          this.updateZIndex(uu)
         }));
-        const mt = this.ql.dL[this.ql.lL][this.eId];
-        this.updateOverlayColour(null !== (et = null === mt || void 0 === mt ? void 0 : mt.overlayColour) && void 0 !== et ? et : null), this.updateOpacity(null !== (Vt = null === mt || void 0 === mt ? void 0 : mt.opacity) && void 0 !== Vt ? Vt : 1), this.updateZIndex(null !== (Ot = null === mt || void 0 === mt ? void 0 : mt.zIndex) && void 0 !== Ot ? Ot : 0), this.multilineTextBoxSub = (0, KV.p)(this.ql, this.eId)
+        const Xu = this.Uc.EQ[this.Uc.FQ][this.eId];
+        this.updateOverlayColour(null !== (Eu = null === Xu || void 0 === Xu ? void 0 : Xu.overlayColour) && void 0 !== Eu ? Eu : null), this.updateOpacity(null !== (ju = null === Xu || void 0 === Xu ? void 0 : Xu.opacity) && void 0 !== ju ? ju : 1), this.updateZIndex(null !== (su = null === Xu || void 0 === Xu ? void 0 : Xu.zIndex) && void 0 !== su ? su : 0), this.multilineTextBoxSub = (0, wj.r)(this.Uc, this.eId)
       }
-      onChangeClient(tt, et) {
-        if ("xRotation" === tt || "yRotation" === tt || "zRotation" === tt)(0, KV.t)(this.ql, this.eId, tt, et);
-        else if ("pose" === tt) {
-          const tt = this.ql.mJ.xet(this.eId);
-          tt && (tt.pose = et || "standing")
-        } else "meshKind" === tt || "meshOpts" === tt ? (this[tt] = et, this.queueMeshRebuild()) : "name" === tt && "" !== et ? this.updateHidingMeshMgr() : "leaderboardTop" === tt && (this.leaderboardTop = et, ne.j.sw(`leaderboardTop|${this.eId}`, et))
+      onChangeClient(uu, Eu) {
+        if ("xRotation" === uu || "yRotation" === uu || "zRotation" === uu)(0, wj.v)(this.Uc, this.eId, uu, Eu);
+        else if ("pose" === uu) {
+          const uu = this.Uc.YG.PEu(this.eId);
+          uu && (uu.pose = Eu || "standing")
+        } else "meshKind" === uu || "meshOpts" === uu ? (this[uu] = Eu, this.queueMeshRebuild()) : "name" === uu && "" !== Eu ? this.updateHidingMeshMgr() : "leaderboardTop" === uu && (this.leaderboardTop = Eu, zE.h.TY(`leaderboardTop|${this.eId}`, Eu))
       }
       disposeClient() {
-        this.df = !0, this.ql.mJ.deleteEntity(this.eId), ne.j.unsubscribe(this.canSeeSub), ne.j.unsubscribe(this.canAttackSub), ne.j.unsubscribe(this.interactableSub), ne.j.unsubscribe(this.overlayColourSub), ne.j.unsubscribe(this.opacitySub), ne.j.unsubscribe(this.zIndexSub), ne.j.unsubscribe(this.multilineTextBoxSub)
+        this.fO = !0, this.Uc.YG.deleteEntity(this.eId), zE.h.unsubscribe(this.canSeeSub), zE.h.unsubscribe(this.canAttackSub), zE.h.unsubscribe(this.interactableSub), zE.h.unsubscribe(this.overlayColourSub), zE.h.unsubscribe(this.opacitySub), zE.h.unsubscribe(this.zIndexSub), zE.h.unsubscribe(this.multilineTextBoxSub)
       }
       getCurrentHidingMeshMgrState() {
-        var tt, et;
+        var uu, Eu;
         return {
-          canSee: null !== (tt = null === (et = this.ql.dL[this.ql.lL][this.eId]) || void 0 === et ? void 0 : et.canSee) && void 0 !== tt && tt,
+          canSee: null !== (uu = null === (Eu = this.Uc.EQ[this.Uc.FQ][this.eId]) || void 0 === Eu ? void 0 : Eu.canSee) && void 0 !== uu && uu,
           name: this.colyseusEntity.name,
           meshKind: this.meshKind,
           meshOpts: this.meshOpts
         }
       }
       updateHidingMeshMgr() {
-        var tt, et, Vt;
+        var uu, Eu, ju;
         const {
-          ql: Ot
+          Uc: su
         } = this, {
-          mJ: qt
-        } = Ot, Dt = this.getCurrentHidingMeshMgrState();
-        if ((0, bV.te)(this.previousHidingMeshManagerState, Dt)) return;
-        if (this.previousHidingMeshManagerState = Dt, qt.ZZ(this.eId, "hidingMeshManager"), null === (tt = Ot.dL[Ot.lL][this.eId]) || void 0 === tt || !tt.canSee) return;
-        const mt = this.getSpec();
-        if (!mt) return;
+          YG: Uu
+        } = su, Zu = this.getCurrentHidingMeshMgrState();
+        if ((0, Mj.he)(this.previousHidingMeshManagerState, Zu)) return;
+        if (this.previousHidingMeshManagerState = Zu, Uu.zV(this.eId, "hidingMeshManager"), null === (uu = su.EQ[su.FQ][this.eId]) || void 0 === uu || !uu.canSee) return;
+        const Xu = this.getSpec();
+        if (!Xu) return;
         const {
-          type: dt,
-          opts: jt
-        } = mt;
-        "Person" === dt && (jt.textures = (0, uV.v)(jt.textures)), jt.eId = this.eId, qt.RZ(this.eId, "hidingMeshManager", {
+          type: lu,
+          opts: qu
+        } = Xu;
+        "Person" === lu && (qu.textures = (0, pj.q)(qu.textures)), qu.eId = this.eId, Uu.yV(this.eId, "hidingMeshManager", {
           addMeshComponent: () => {
-            var tt, et, Vt;
-            "Leaderboard" === dt && (jt.leaderboardTop = this.leaderboardTop);
-            const Dt = this.bloxd.client.meshCreator.getEntityMesh(dt, jt, (tt => {
-              var et, Vt;
-              if ("number" === typeof tt) {
-                var qt, Dt, mt;
-                const et = Ot.Bf.xI;
-                et.setEntityId(tt, this.eId);
-                const Vt = "Person" === dt && (null === (qt = (0, uV.n)("head", null === (mt = jt.textures) || void 0 === mt ? void 0 : mt.head)) || void 0 === qt || null === (Dt = qt.personModel) || void 0 === Dt ? void 0 : Dt.fullBody);
-                return void et.setPickable(tt, (0, vV.k)(this.eId) && !Vt)
+            var uu, Eu, ju;
+            "Leaderboard" === lu && (qu.leaderboardTop = this.leaderboardTop);
+            const Zu = this.bloxd.client.meshCreator.getEntityMesh(lu, qu, (uu => {
+              var Eu, ju;
+              if ("number" === typeof uu) {
+                var Uu, Zu, Xu;
+                const Eu = su.tO.oV;
+                Eu.setEntityId(uu, this.eId);
+                const ju = "Person" === lu && (null === (Uu = (0, pj.m)("head", null === (Xu = qu.textures) || void 0 === Xu ? void 0 : Xu.head)) || void 0 === Uu || null === (Zu = Uu.personModel) || void 0 === Zu ? void 0 : Zu.fullBody);
+                return void Eu.setPickable(uu, (0, dj.f)(this.eId) && !ju)
               }
-              const Ht = tt;
-              for (const dt of [Ht, ...Ht.getChildMeshes(!1)]) void 0 === dt.Gw || dt.name.startsWith("Cape|") || (dt.Gw = (0, vV.k)(this.eId), dt.metadata ??= new Ot.Bf.zw, dt.metadata.eId = this.eId);
-              this.updateOpacity(null !== (et = null === (Vt = Ot.dL[Ot.lL][this.eId]) || void 0 === Vt ? void 0 : Vt.opacity) && void 0 !== et ? et : 1)
+              const fu = uu;
+              for (const lu of [fu, ...fu.getChildMeshes(!1)]) void 0 === lu.VY || lu.name.startsWith("Cape|") || (lu.VY = (0, dj.f)(this.eId), lu.metadata ??= new su.tO.rY, lu.metadata.eId = this.eId);
+              this.updateOpacity(null !== (Eu = null === (ju = su.EQ[su.FQ][this.eId]) || void 0 === ju ? void 0 : ju.opacity) && void 0 !== Eu ? Eu : 1)
             }));
-            if (!Dt) return;
+            if (!Zu) return;
             const {
-              RP: mt,
-              mesh: Ht,
-              meshOffset: Xt,
-              nameYOffset: Qt,
-              modelLoaded: lt
-            } = Dt;
-            null === lt || void 0 === lt || lt.then((() => {
-              var tt;
-              (null === (tt = qt.oet(this.eId)) || void 0 === tt ? void 0 : tt.mesh) === Ht && (this.previousHidingMeshManagerState = null, this.updateHidingMeshMgr())
+              mV: Xu,
+              mesh: fu,
+              meshOffset: Cu,
+              nameYOffset: bu,
+              modelLoaded: cu
+            } = Zu;
+            null === cu || void 0 === cu || cu.then((() => {
+              var uu;
+              (null === (uu = Uu.GEu(this.eId)) || void 0 === uu ? void 0 : uu.mesh) === fu && (this.previousHidingMeshManagerState = null, this.updateHidingMeshMgr())
             }));
-            const Et = null === mt ? null : Ot.Bf.xI.FOt(mt, 0);
-            if (qt.RZ(this.eId, qt.names.mesh, {
-                RP: mt,
-                DOt: Et,
-                mesh: Ht,
-                kdt: !1,
-                dOt: "Leaderboard" !== dt,
-                offset: Xt.slice(),
-                Fdt: "ParticleEmitter" === dt && jt.followTargetMeshOffset ? tt => {
-                  var et;
-                  SV().copy(tt, Xt);
-                  const Vt = null === (et = qt.ZVt(this.eId)) || void 0 === et ? void 0 : et.nE,
-                    Ot = void 0 === Vt ? null : qt.xet(Vt);
-                  if (Ot) {
-                    var Dt, mt;
-                    const et = this.bloxd.getEntityHeading(null !== (Dt = Ot.ridingVehicleEId) && void 0 !== Dt ? Dt : Vt, !0),
-                      qt = Math.sin(et),
-                      dt = Math.cos(et);
-                    tt[0] += Ot.meshOffset[0] * dt + Ot.meshOffset[2] * qt, tt[1] += Ot.meshOffset[1], tt[2] += Ot.meshOffset[2] * dt - Ot.meshOffset[0] * qt;
-                    const jt = null !== (mt = Ot.ridingVehicleEId) && void 0 !== mt ? mt : null;
-                    null !== jt && (0, PV.e)(this.ql, jt, tt)
+            const Nu = null === Xu ? null : su.tO.oV.csu(Xu, 0);
+            if (Uu.yV(this.eId, Uu.names.mesh, {
+                mV: Xu,
+                rju: Nu,
+                mesh: fu,
+                Zlu: !1,
+                iju: "Leaderboard" !== lu,
+                offset: Cu.slice(),
+                Ulu: "ParticleEmitter" === lu && qu.followTargetMeshOffset ? uu => {
+                  var Eu;
+                  Pj().copy(uu, Cu);
+                  const ju = null === (Eu = Uu.Cju(this.eId)) || void 0 === Eu ? void 0 : Eu.jO,
+                    su = void 0 === ju ? null : Uu.PEu(ju);
+                  if (su) {
+                    var Zu, Xu;
+                    const Eu = this.bloxd.getEntityHeading(null !== (Zu = su.ridingVehicleEId) && void 0 !== Zu ? Zu : ju, !0),
+                      Uu = Math.sin(Eu),
+                      lu = Math.cos(Eu);
+                    uu[0] += su.meshOffset[0] * lu + su.meshOffset[2] * Uu, uu[1] += su.meshOffset[1], uu[2] += su.meshOffset[2] * lu - su.meshOffset[0] * Uu;
+                    const qu = null !== (Xu = su.ridingVehicleEId) && void 0 !== Xu ? Xu : null;
+                    null !== qu && (0, vj.e)(this.Uc, qu, uu)
                   }
                 } : null
-              }), "Person" === dt) {
-              var ft, wt, yt, Nt;
-              qt.RZ(this.eId, qt.names.meshAttachments, {
-                personFullBody: null !== (ft = null === (wt = (0, uV.n)("head", null === (Nt = jt.textures) || void 0 === Nt ? void 0 : Nt.head)) || void 0 === wt || null === (yt = wt.personModel) || void 0 === yt ? void 0 : yt.fullBody) && void 0 !== ft && ft
+              }), "Person" === lu) {
+              var Ou, Yu, hu, Du;
+              Uu.yV(this.eId, Uu.names.meshAttachments, {
+                personFullBody: null !== (Ou = null === (Yu = (0, pj.m)("head", null === (Du = qu.textures) || void 0 === Du ? void 0 : Du.head)) || void 0 === Yu || null === (hu = Yu.personModel) || void 0 === hu ? void 0 : hu.fullBody) && void 0 !== Ou && Ou
               });
-              for (const tt of yV.A) {
-                var Mt, bt, Jt;
-                const et = null === (Mt = jt.textures) || void 0 === Mt ? void 0 : Mt[tt];
-                et && null !== (bt = (0, uV.n)(tt, et)) && void 0 !== bt && null !== (Jt = bt.attachments) && void 0 !== Jt && Jt.length && CV.b.Player.meshApi.updatePlayerCosmetic(this.eId, mt, tt, et)
+              for (const uu of Yj.u) {
+                var gu, Mu, eu;
+                const Eu = null === (gu = qu.textures) || void 0 === gu ? void 0 : gu[uu];
+                Eu && null !== (Mu = (0, pj.m)(uu, Eu)) && void 0 !== Mu && null !== (eu = Mu.attachments) && void 0 !== eu && eu.length && Gj.b.Player.meshApi.updatePlayerCosmetic(this.eId, Xu, uu, Eu)
               }
-              qt.RZ(this.eId, qt.names.moveState), qt.RZ(this.eId, "updateWalkingState", {
-                RP: mt,
-                DOt: Et,
-                walkingLegSwingDuration: hV.v
-              }), qt.RZ(this.eId, "humanoidMesh", {
-                RP: mt,
-                DOt: Et,
+              Uu.yV(this.eId, Uu.names.moveState), Uu.yV(this.eId, "updateWalkingState", {
+                mV: Xu,
+                rju: Nu,
+                walkingLegSwingDuration: Jj.o
+              }), Uu.yV(this.eId, "humanoidMesh", {
+                mV: Xu,
+                rju: Nu,
                 heldItemPositionParams: {},
                 maxWalkingAngleOverride: null
-              }), qt.RZ(this.eId, "animator", {
-                RP: mt,
-                DOt: Et,
+              }), Uu.yV(this.eId, "animator", {
+                mV: Xu,
+                rju: Nu,
                 modelLifeformType: "Player"
-              }), IV.g.hasAnimation("Person") && qt.RZ(this.eId, "rigAnimation", {
+              }), mj.d.hasAnimation("Person") && Uu.yV(this.eId, "rigAnimation", {
                 target: "Person",
-                RP: mt
-              }), qt.xet(this.eId).pose = this.colyseusEntity.pose || "standing"
-            } else if ("BloxdBlock" === dt && null !== mt) {
-              qt.RZ(this.eId, "animator", {
-                RP: mt,
-                DOt: Et,
+                mV: Xu
+              }), Uu.PEu(this.eId).pose = this.colyseusEntity.pose || "standing"
+            } else if ("BloxdBlock" === lu && null !== Xu) {
+              Uu.yV(this.eId, "animator", {
+                mV: Xu,
+                rju: Nu,
                 modelLifeformType: null
               });
-              const tt = (0, aV.m)(jt.blockName);
-              null !== tt && qt.RZ(this.eId, "rigAnimation", {
-                target: tt,
-                RP: mt
+              const uu = (0, Dj.o)(qu.blockName);
+              null !== uu && Uu.yV(this.eId, "rigAnimation", {
+                target: uu,
+                mV: Xu
               })
             }
-            qt.djt(this.eId, "entityName", {
+            Uu.alu(this.eId, "entityName", {
               name: this.colyseusEntity.name,
-              nameYOffset: Qt
-            }), this.bloxd.setEntityName(this.eId, this.colyseusEntity.name), !0 === jt.autoRotate && (qt.ZZ(this.eId, "meshRotation"), qt.RZ(this.eId, "autoRotate"));
+              nameYOffset: bu
+            }), this.bloxd.setEntityName(this.eId, this.colyseusEntity.name), !0 === qu.autoRotate && (Uu.zV(this.eId, "meshRotation"), Uu.yV(this.eId, "autoRotate"));
             const {
-              lineToEId: Ct
-            } = jt;
-            (0, NV.B)(Ct) || qt.RZ(this.eId, "lineToEntity", {
-              lineToEId: Ct
+              lineToEId: Gu
+            } = qu;
+            (0, hj.H)(Gu) || Uu.yV(this.eId, "lineToEntity", {
+              lineToEId: Gu
             });
-            const ut = Ot.dL[Ot.lL][this.eId];
-            this.updateOverlayColour(null !== (tt = null === ut || void 0 === ut ? void 0 : ut.overlayColour) && void 0 !== tt ? tt : null), this.updateOpacity(null !== (et = null === ut || void 0 === ut ? void 0 : ut.opacity) && void 0 !== et ? et : 1), this.updateZIndex(null !== (Vt = null === ut || void 0 === ut ? void 0 : ut.zIndex) && void 0 !== Vt ? Vt : 0)
+            const pu = su.EQ[su.FQ][this.eId];
+            this.updateOverlayColour(null !== (uu = null === pu || void 0 === pu ? void 0 : pu.overlayColour) && void 0 !== uu ? uu : null), this.updateOpacity(null !== (Eu = null === pu || void 0 === pu ? void 0 : pu.opacity) && void 0 !== Eu ? Eu : 1), this.updateZIndex(null !== (ju = null === pu || void 0 === pu ? void 0 : pu.zIndex) && void 0 !== ju ? ju : 0)
           },
           removeMeshComponent: () => {
-            "Person" !== dt && "BloxdBlock" !== dt || qt.ZZ(this.eId, "rigAnimation"), qt.ZZ(this.eId, qt.names.mesh), qt.ptt(this.eId, qt.names.meshAttachments) && qt.ZZ(this.eId, qt.names.meshAttachments), qt.ZZ(this.eId, "entityName"), qt.ZZ(this.eId, "autoRotate"), qt.ZZ(this.eId, "lineToEntity"), "Person" === dt ? (qt.ZZ(this.eId, qt.names.moveState), qt.ZZ(this.eId, "updateWalkingState"), qt.ZZ(this.eId, "humanoidMesh"), qt.ZZ(this.eId, "animator")) : "BloxdBlock" === dt && qt.ZZ(this.eId, "animator")
+            "Person" !== lu && "BloxdBlock" !== lu || Uu.zV(this.eId, "rigAnimation"), Uu.zV(this.eId, Uu.names.mesh), Uu.xuu(this.eId, Uu.names.meshAttachments) && Uu.zV(this.eId, Uu.names.meshAttachments), Uu.zV(this.eId, "entityName"), Uu.zV(this.eId, "autoRotate"), Uu.zV(this.eId, "lineToEntity"), "Person" === lu ? (Uu.zV(this.eId, Uu.names.moveState), Uu.zV(this.eId, "updateWalkingState"), Uu.zV(this.eId, "humanoidMesh"), Uu.zV(this.eId, "animator")) : "BloxdBlock" === lu && Uu.zV(this.eId, "animator")
           },
-          hideDist: null !== (et = jt.hideDist) && void 0 !== et ? et : 80,
-          movingHideDist: null !== (Vt = jt.hideDist) && void 0 !== Vt ? Vt : 120,
-          displayOutsideLoadedChunk: jt.hideDist > 100,
+          hideDist: null !== (Eu = qu.hideDist) && void 0 !== Eu ? Eu : 80,
+          movingHideDist: null !== (ju = qu.hideDist) && void 0 !== ju ? ju : 120,
+          displayOutsideLoadedChunk: qu.hideDist > 100,
           immediatelyUpdate: !0,
-          mj: "BloxdBlock" === dt ? jt.blockName : dt
+          nl: "BloxdBlock" === lu ? qu.blockName : lu
         })
       }
       queueMeshRebuild() {
         this.meshRebuildQueued || (this.meshRebuildQueued = !0, queueMicrotask((() => {
-          this.meshRebuildQueued = !1, this.df || this.updateHidingMeshMgr()
+          this.meshRebuildQueued = !1, this.fO || this.updateHidingMeshMgr()
         })))
       }
       getSpec() {
-        return (0, MV.h)({
+        return (0, gj.i)({
           meshKind: this.meshKind,
           meshOpts: this.meshOpts
         })
       }
-      updateOverlayColour(tt) {
-        var et, Vt;
+      updateOverlayColour(uu) {
+        var Eu, ju;
         if ("Person" !== this.meshKind) return;
-        let Ot = new JV.e(0, 0, 0, 0);
-        if (null !== tt) {
-          const et = (0, bV.cb)(tt);
-          Ot = new JV.e(et[0] / 255, et[1] / 255, et[2] / 255, .5)
+        let su = new ej.b(0, 0, 0, 0);
+        if (null !== uu) {
+          const Eu = (0, Mj.S)(uu);
+          su = new ej.b(Eu[0] / 255, Eu[1] / 255, Eu[2] / 255, .5)
         }
-        const qt = null !== (et = null === (Vt = this.ql.mJ.oet(this.eId)) || void 0 === Vt ? void 0 : Vt.RP) && void 0 !== et ? et : null;
-        null !== qt && CV.b.Player.meshApi.updateMeshOverlayColour(qt, Ot)
+        const Uu = null !== (Eu = null === (ju = this.Uc.YG.GEu(this.eId)) || void 0 === ju ? void 0 : ju.mV) && void 0 !== Eu ? Eu : null;
+        null !== Uu && Gj.b.Player.meshApi.updateMeshOverlayColour(Uu, su)
       }
-      updateZIndex(tt) {
-        var et;
+      updateZIndex(uu) {
+        var Eu;
         if ("Person" !== this.meshKind) return;
-        const Vt = null === (et = this.ql.mJ.oet(this.eId)) || void 0 === et ? void 0 : et.RP;
-        "number" === typeof Vt && this.ql.Bf.xI.setRenderingGroupId(Vt, tt)
+        const ju = null === (Eu = this.Uc.YG.GEu(this.eId)) || void 0 === Eu ? void 0 : Eu.mV;
+        "number" === typeof ju && this.Uc.tO.oV.setRenderingGroupId(ju, uu)
       }
-      updateOpacity(tt) {
-        const et = this.ql.mJ.oet(this.eId);
-        et && ("number" !== typeof et.RP ? et.mesh && "ParticleEmitter" !== this.meshKind && (0, cV.g)(et.mesh, tt) : CV.b.Player.meshApi.updateMeshOpacity(et.RP, tt))
+      updateOpacity(uu) {
+        const Eu = this.Uc.YG.GEu(this.eId);
+        Eu && ("number" !== typeof Eu.mV ? Eu.mesh && "ParticleEmitter" !== this.meshKind && (0, oj.e)(Eu.mesh, uu) : Gj.b.Player.meshApi.updateMeshOpacity(Eu.mV, uu))
       }
     }
-    var LV = Vt(39167);
-    class FV {
-      constructor(tt, et) {
-        this.eId = et, this.ql = void 0, this.schema = void 0, this.ql = tt.ql
+    var Vj = ju(39288);
+    class rj {
+      constructor(uu, Eu) {
+        this.eId = Eu, this.Uc = void 0, this.schema = void 0, this.Uc = uu.Uc
       }
-      initClient(tt) {
-        this.schema = tt, this.ql.mJ.add([tt.x, tt.y, tt.z], .1, .1, null, null, !1, !1, this.eId), this.ql.mJ.RZ(this.eId, "smoothToServerPos"), LV.c.add(this.eId, this.copyOpts())
+      initClient(uu) {
+        this.schema = uu, this.Uc.YG.add([uu.x, uu.y, uu.z], .1, .1, null, null, !1, !1, this.eId), this.Uc.YG.yV(this.eId, "smoothToServerPos"), Vj.e.add(this.eId, this.copyOpts())
       }
-      onChangeClient(tt) {
-        DV.d.includes(tt) && LV.c.update(this.eId, this.copyOpts())
+      onChangeClient(uu) {
+        Uj.l.includes(uu) && Vj.e.update(this.eId, this.copyOpts())
       }
       disposeClient() {
-        LV.c.remove(this.eId), this.ql.mJ.deleteEntity(this.eId)
+        Vj.e.remove(this.eId), this.Uc.YG.deleteEntity(this.eId)
       }
       copyOpts() {
         const {
-          soundName: tt,
-          volume: et,
-          refDistance: Vt,
-          maxHearDist: Ot,
-          rate: qt
+          soundName: uu,
+          volume: Eu,
+          refDistance: ju,
+          maxHearDist: su,
+          rate: Uu
         } = this.schema;
         return {
-          soundName: tt,
-          volume: et,
-          refDistance: Vt,
-          maxHearDist: Ot,
-          rate: qt
+          soundName: uu,
+          volume: Eu,
+          refDistance: ju,
+          maxHearDist: su,
+          rate: Uu
         }
       }
     }
-    var kV = Vt(3751),
-      GV = Vt(37002),
-      zV = Vt(6667),
-      oV = Vt(38040),
-      rV = Vt(2848),
-      UV = Vt(38404),
-      AV = Vt(9308),
-      iV = Vt(38697),
-      YV = Vt(38005),
-      BV = Vt(3012);
-    class pV {
-      constructor(tt, et) {
-        let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 4,
-          Ot = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => performance.now();
-        this.tOt = tt, this.ql = et, this.setupBudgetMs = Vt, this.now = Ot, this.createStateCallbacks = void 0, this.roomStateCallbacks = void 0, this.allItems = {}, this.detachers = new Map, this.deferredSetups = new Map, this.queuedSetups = new Map, this.promotedSetups = new Set, this.setupBudgetLeftMs = void 0, this.lastRefillMs = void 0, this.roomState = void 0, this.df = !1, this.onFrame = () => {
+    var Qj = ju(3879),
+      ij = ju(37162),
+      Wj = ju(6677),
+      Sj = ju(38178),
+      Ij = ju(2893),
+      Fj = ju(38505),
+      Bj = ju(9296),
+      Lj = ju(38800),
+      tj = ju(38145),
+      xj = ju(3099);
+    class Tj {
+      constructor(uu, Eu) {
+        let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 4,
+          su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => performance.now();
+        this.kju = uu, this.Uc = Eu, this.setupBudgetMs = ju, this.now = su, this.createStateCallbacks = void 0, this.roomStateCallbacks = void 0, this.allItems = {}, this.detachers = new Map, this.deferredSetups = new Map, this.queuedSetups = new Map, this.promotedSetups = new Set, this.setupBudgetLeftMs = void 0, this.lastRefillMs = void 0, this.roomState = void 0, this.fO = !1, this.onFrame = () => {
           this.setUpQueuedEntities(!0)
-        }, this.bM = () => {
+        }, this.RD = () => {
           this.setUpQueuedEntities(this.now() - this.lastRefillMs > 100)
         }, this.setUpPromoted = () => {
-          for (const tt of this.promotedSetups) {
-            this.promotedSetups.delete(tt);
-            const et = this.queuedSetups.get(tt);
-            et && (this.queuedSetups.delete(tt), this.timedSetup(et, tt))
+          for (const uu of this.promotedSetups) {
+            this.promotedSetups.delete(uu);
+            const Eu = this.queuedSetups.get(uu);
+            Eu && (this.queuedSetups.delete(uu), this.timedSetup(Eu, uu))
           }
-        }, this.createStateCallbacks = (0, AV.getStateCallbacks)(tt), this.roomStateCallbacks = this.createStateCallbacks(tt.state), this.roomState = tt.state, this.setupBudgetLeftMs = Vt, this.lastRefillMs = Ot()
+        }, this.createStateCallbacks = (0, Bj.getStateCallbacks)(uu), this.roomStateCallbacks = this.createStateCallbacks(uu.state), this.roomState = uu.state, this.setupBudgetLeftMs = ju, this.lastRefillMs = su()
       }
       setup() {
-        this.setupEntityHandlers(), this.setupItemHandlers(), this.tOt.onStateChange(this.setUpPromoted), this.ql.on("beforeInputs", this.onFrame), this.ql.on("BQ", this.bM)
+        this.setupEntityHandlers(), this.setupItemHandlers(), this.kju.onStateChange(this.setUpPromoted), this.Uc.on("beforeInputs", this.onFrame), this.Uc.on("Tb", this.RD)
       }
-      setUpQueuedEntities(tt) {
-        var et;
-        if ((null === (et = (0, rV.c)().client.getMsgHandler()) || void 0 === et ? void 0 : et.tOt) !== this.tOt) return this.ql.off("beforeInputs", this.onFrame), this.ql.off("BQ", this.bM), this.queuedSetups.clear(), void this.promotedSetups.clear();
-        if (tt && (this.setupBudgetLeftMs = this.setupBudgetMs, this.lastRefillMs = this.now()), this.setUpPromoted(), 0 !== this.queuedSetups.size)
-          for (SV().copy(xV, this.ql.mJ.YM(this.ql.lL)); this.setupBudgetLeftMs > 0;) {
-            const tt = this.nearestQueued(xV);
-            if (null === tt) return;
-            this.setUpIfQueued(tt), this.setUpPromoted()
+      setUpQueuedEntities(uu) {
+        var Eu;
+        if ((null === (Eu = (0, Ij.b)().client.getMsgHandler()) || void 0 === Eu ? void 0 : Eu.kju) !== this.kju) return this.Uc.off("beforeInputs", this.onFrame), this.Uc.off("Tb", this.RD), this.queuedSetups.clear(), void this.promotedSetups.clear();
+        if (uu && (this.setupBudgetLeftMs = this.setupBudgetMs, this.lastRefillMs = this.now()), this.setUpPromoted(), 0 !== this.queuedSetups.size)
+          for (Pj().copy(Hj, this.Uc.YG.bM(this.Uc.FQ)); this.setupBudgetLeftMs > 0;) {
+            const uu = this.nearestQueued(Hj);
+            if (null === uu) return;
+            this.setUpIfQueued(uu), this.setUpPromoted()
           }
       }
-      nearestQueued(tt) {
-        let et = null,
-          Vt = 1 / 0;
-        return this.queuedSetups.forEach(((Ot, qt) => {
-          const Dt = function(tt, et) {
-            return (et.x - tt[0]) ** 2 + (et.y - tt[1]) ** 2 + (et.z - tt[2]) ** 2
-          }(tt, Ot);
-          (null === et || Dt < Vt) && (et = qt, Vt = Dt)
-        })), et
+      nearestQueued(uu) {
+        let Eu = null,
+          ju = 1 / 0;
+        return this.queuedSetups.forEach(((su, Uu) => {
+          const Zu = function(uu, Eu) {
+            return (Eu.x - uu[0]) ** 2 + (Eu.y - uu[1]) ** 2 + (Eu.z - uu[2]) ** 2
+          }(uu, su);
+          (null === Eu || Zu < ju) && (Eu = Uu, ju = Zu)
+        })), Eu
       }
-      setUpOrQueue(tt, et) {
-        0 === this.queuedSetups.size && this.setupBudgetLeftMs > 0 || this.mustSetUpNow(tt, et) ? this.timedSetup(tt, et) : this.queuedSetups.set(et, tt)
+      setUpOrQueue(uu, Eu) {
+        0 === this.queuedSetups.size && this.setupBudgetLeftMs > 0 || this.mustSetUpNow(uu, Eu) ? this.timedSetup(uu, Eu) : this.queuedSetups.set(Eu, uu)
       }
-      mustSetUpNow(tt, et) {
-        const Vt = this.ql.Ttt;
-        if (et === Vt) return !0;
-        const Ot = this.roomState.entities.get(Vt);
-        return !(!Ot || Ot.ridingVehicleEId !== et && Ot.followingEId !== et) || (TV(tt.type) === wV.d || (0, rV.c)().getFollowingEntities(et).length > 0)
+      mustSetUpNow(uu, Eu) {
+        const ju = this.Uc.Huu;
+        if (Eu === ju) return !0;
+        const su = this.roomState.entities.get(ju);
+        return !(!su || su.ridingVehicleEId !== Eu && su.followingEId !== Eu) || (Aj(uu.type) === Oj.b || (0, Ij.b)().getFollowingEntities(Eu).length > 0)
       }
-      setUpIfQueued(tt) {
-        const et = this.queuedSetups.get(tt);
-        et && (this.queuedSetups.delete(tt), this.timedSetup(et, tt))
+      setUpIfQueued(uu) {
+        const Eu = this.queuedSetups.get(uu);
+        Eu && (this.queuedSetups.delete(uu), this.timedSetup(Eu, uu))
       }
-      promoteIfQueued(tt) {
-        null !== tt && this.queuedSetups.has(tt) && this.promotedSetups.add(tt)
+      promoteIfQueued(uu) {
+        null !== uu && this.queuedSetups.has(uu) && this.promotedSetups.add(uu)
       }
-      timedSetup(tt, et) {
-        const Vt = this.now();
-        this.setupEntity(tt, et), this.setupBudgetLeftMs -= this.now() - Vt
+      timedSetup(uu, Eu) {
+        const ju = this.now();
+        this.setupEntity(uu, Eu), this.setupBudgetLeftMs -= this.now() - ju
       }
       setupEntityHandlers() {
-        this.roomStateCallbacks.entities.qJ(((tt, et) => {
-          this.ql.Ttt ? this.setUpOrQueue(tt, et) : this.deferEntitySetupUntilInitInfo(tt, et)
-        })), this.roomStateCallbacks.entities.nS(((tt, et) => {
-          const Vt = this.deferredSetups.get(et);
-          Vt && (ne.j.unsubscribe(Vt), this.deferredSetups.delete(et)), this.queuedSetups.delete(et), this.detach(et), (0, rV.c)().client.disposeEntity(et)
+        this.roomStateCallbacks.entities.lG(((uu, Eu) => {
+          this.Uc.Huu ? this.setUpOrQueue(uu, Eu) : this.deferEntitySetupUntilInitInfo(uu, Eu)
+        })), this.roomStateCallbacks.entities.jK(((uu, Eu) => {
+          const ju = this.deferredSetups.get(Eu);
+          ju && (zE.h.unsubscribe(ju), this.deferredSetups.delete(Eu)), this.queuedSetups.delete(Eu), this.detach(Eu), (0, Ij.b)().client.disposeEntity(Eu)
         }))
       }
-      deferEntitySetupUntilInitInfo(tt, et) {
-        const Vt = ne.j.yN("initInfoReceived", (() => {
-          this.deferredSetups.delete(et), this.setUpOrQueue(tt, et)
+      deferEntitySetupUntilInitInfo(uu, Eu) {
+        const ju = zE.h.qD("initInfoReceived", (() => {
+          this.deferredSetups.delete(Eu), this.setUpOrQueue(uu, Eu)
         }));
-        this.deferredSetups.set(et, Vt), (0, kV.onGameResetOnce)((() => {
-          this.deferredSetups.get(et) === Vt && (ne.j.unsubscribe(Vt), this.deferredSetups.delete(et)), (0, rV.c)().updatePositionAndPhysics(this.ql.lL, {
-            type: zV.n.DEFAULT,
+        this.deferredSetups.set(Eu, ju), (0, Qj.onGameResetOnce)((() => {
+          this.deferredSetups.get(Eu) === ju && (zE.h.unsubscribe(ju), this.deferredSetups.delete(Eu)), (0, Ij.b)().updatePositionAndPhysics(this.Uc.FQ, {
+            type: Wj.v.DEFAULT,
             tier: null
-          }, !0), (0, rV.c)().takeHeldPlayerBodySize(this.ql.lL);
-          const tt = this.ql.mJ.fet(this.ql.lL);
-          tt && (tt.movementType = zV.m.NORMAL)
+          }, !0), (0, Ij.b)().takeHeldPlayerBodySize(this.Uc.FQ);
+          const uu = this.Uc.YG.qEu(this.Uc.FQ);
+          uu && (uu.movementType = Wj.r.NORMAL)
         }))
       }
-      setupEntity(tt, et) {
-        const Vt = et === this.ql.Ttt;
-        if (Vt)(0, rV.c)().client.vY(this.ql.lL, null, null);
+      setupEntity(uu, Eu) {
+        const ju = Eu === this.Uc.Huu;
+        if (ju)(0, Ij.b)().client.pT(this.Uc.FQ, null, null);
         else {
           const {
-            type: Vt
-          } = tt, Ot = TV(Vt);
-          if (void 0 === Ot) return void
-          function(tt, et) {
-            const Vt = String(tt);
-            if (gV.has(Vt)) return;
-            gV.add(Vt);
-            const Ot = Vt.length > 80 ? `${Vt.slice(0,80)}...` : Vt,
-              qt = `No client handler for entity type ${JSON.stringify(Ot)}, so entity ${et} is not set up`;
-            console.warn(qt), (0, BV.reportClientError)("uncaught", qt, "unknown_entity_type")
-          }(Vt, et);
-          (0, rV.c)().client.vY(et, tt, new Ot((0, rV.c)(), et, Vt))
+            type: ju
+          } = uu, su = Aj(ju);
+          if (void 0 === su) return void
+          function(uu, Eu) {
+            const ju = String(uu);
+            if (nj.has(ju)) return;
+            nj.add(ju);
+            const su = ju.length > 80 ? `${ju.slice(0,80)}...` : ju,
+              Uu = `No client handler for entity type ${JSON.stringify(su)}, so entity ${Eu} is not set up`;
+            console.warn(Uu), (0, xj.reportClientError)("uncaught", Uu, "unknown_entity_type")
+          }(ju, Eu);
+          (0, Ij.b)().client.pT(Eu, uu, new su((0, Ij.b)(), Eu, ju))
         }
-        const Ot = this.createStateCallbacks(tt);
-        if (Vt) return this.setupMapSchemaCallbacks(et, tt, Ot, "armour"), this.setupScalarField(et, tt, Ot, "scale"), this.setupScalarField(et, tt, Ot, "ridingVehicleEId"), this.setupScalarField(et, tt, Ot, "followingEId"), this.setupScalarField(et, tt, Ot, "followingOffset"), void this.setupScalarField(et, tt, Ot, "shouldMatchFollowingEntityRotation");
-        for (const qt of lV(tt.constructor)) tt[qt] instanceof OV.MapSchema ? this.setupMapSchemaCallbacks(et, tt, Ot, qt) : this.setupScalarField(et, tt, Ot, qt)
+        const su = this.createStateCallbacks(uu);
+        if (ju) return this.setupMapSchemaCallbacks(Eu, uu, su, "armour"), this.setupScalarField(Eu, uu, su, "scale"), this.setupScalarField(Eu, uu, su, "ridingVehicleEId"), this.setupScalarField(Eu, uu, su, "followingEId"), this.setupScalarField(Eu, uu, su, "followingOffset"), void this.setupScalarField(Eu, uu, su, "shouldMatchFollowingEntityRotation");
+        for (const Uu of bj(uu.constructor)) uu[Uu] instanceof jj.MapSchema ? this.setupMapSchemaCallbacks(Eu, uu, su, Uu) : this.setupScalarField(Eu, uu, su, Uu)
       }
-      setupMapSchemaCallbacks(tt, et, Vt, Ot) {
-        const qt = Vt[Ot],
-          Dt = new Map;
-        qt.qJ(((Vt, qt) => {
-          if (this.onEntityFieldChange(tt, et, Ot, {
-              key: qt,
-              value: Vt
-            }), !(Vt instanceof OV.Schema)) return;
-          const mt = this.createStateCallbacks(Vt),
-            dt = [];
-          for (const Dt of lV(Vt.constructor)) dt.push(this.listenForFutureChanges(mt, Dt, (() => {
-            this.onEntityFieldChange(tt, et, Ot, {
-              key: qt,
-              value: Vt
+      setupMapSchemaCallbacks(uu, Eu, ju, su) {
+        const Uu = ju[su],
+          Zu = new Map;
+        Uu.lG(((ju, Uu) => {
+          if (this.onEntityFieldChange(uu, Eu, su, {
+              key: Uu,
+              value: ju
+            }), !(ju instanceof jj.Schema)) return;
+          const Xu = this.createStateCallbacks(ju),
+            lu = [];
+          for (const Zu of bj(ju.constructor)) lu.push(this.listenForFutureChanges(Xu, Zu, (() => {
+            this.onEntityFieldChange(uu, Eu, su, {
+              key: Uu,
+              value: ju
             })
           })));
-          Dt.set(qt, (() => {
-            for (const tt of dt) tt()
+          Zu.set(Uu, (() => {
+            for (const uu of lu) uu()
           }))
-        })), qt.nS(((Vt, qt) => {
-          var mt;
-          null === (mt = Dt.get(qt)) || void 0 === mt || mt(), Dt.delete(qt), this.onEntityFieldChange(tt, et, Ot, {
-            key: qt,
+        })), Uu.jK(((ju, Uu) => {
+          var Xu;
+          null === (Xu = Zu.get(Uu)) || void 0 === Xu || Xu(), Zu.delete(Uu), this.onEntityFieldChange(uu, Eu, su, {
+            key: Uu,
             value: null
           })
-        })), this.addDetacher(tt, (() => {
-          for (const tt of Dt.values()) tt();
-          Dt.clear()
+        })), this.addDetacher(uu, (() => {
+          for (const uu of Zu.values()) uu();
+          Zu.clear()
         }))
       }
-      setupScalarField(tt, et, Vt, Ot) {
-        this.onEntityFieldChange(tt, et, Ot, et[Ot]);
-        const qt = this.listenForFutureChanges(Vt, Ot, (Vt => {
-          this.onEntityFieldChange(tt, et, Ot, Vt)
+      setupScalarField(uu, Eu, ju, su) {
+        this.onEntityFieldChange(uu, Eu, su, Eu[su]);
+        const Uu = this.listenForFutureChanges(ju, su, (ju => {
+          this.onEntityFieldChange(uu, Eu, su, ju)
         }));
-        this.addDetacher(tt, qt)
+        this.addDetacher(uu, Uu)
       }
-      addDetacher(tt, et) {
-        let Vt = this.detachers.get(tt);
-        Vt || (Vt = [], this.detachers.set(tt, Vt)), Vt.push(et)
+      addDetacher(uu, Eu) {
+        let ju = this.detachers.get(uu);
+        ju || (ju = [], this.detachers.set(uu, ju)), ju.push(Eu)
       }
-      detach(tt) {
-        for (const Vt of null !== (et = this.detachers.get(tt)) && void 0 !== et ? et : []) {
-          var et;
-          Vt()
+      detach(uu) {
+        for (const ju of null !== (Eu = this.detachers.get(uu)) && void 0 !== Eu ? Eu : []) {
+          var Eu;
+          ju()
         }
-        this.detachers.delete(tt)
+        this.detachers.delete(uu)
       }
-      listenForFutureChanges(tt, et, Vt) {
-        return tt.listen(et, Vt, !1)
+      listenForFutureChanges(uu, Eu, ju) {
+        return uu.listen(Eu, ju, !1)
       }
-      onEntityFieldChange(tt, et, Vt, Ot) {
-        switch (Vt) {
+      onEntityFieldChange(uu, Eu, ju, su) {
+        switch (ju) {
           case "ridingVehicleEId": {
-            this.promoteIfQueued(Ot);
-            const et = this.ql.mJ.xet((0, GV.c)(tt));
-            et && (et.ridingVehicleEId = Ot);
+            this.promoteIfQueued(su);
+            const Eu = this.Uc.YG.PEu((0, ij.d)(uu));
+            Eu && (Eu.ridingVehicleEId = su);
             break
           }
           case "armour":
-            this.handleArmourChange(tt, Ot);
+            this.handleArmourChange(uu, su);
             break;
           case "followingEId":
-            this.promoteIfQueued(Ot), this.handleFollowingEIdChange(tt, et, Ot);
+            this.promoteIfQueued(su), this.handleFollowingEIdChange(uu, Eu, su);
             break;
           case "xRotation":
           case "yRotation":
           case "zRotation":
-            this.handleRotationChange(tt, Vt, Ot);
+            this.handleRotationChange(uu, ju, su);
             break;
           case "scale":
-            this.handleScaleChange(tt, Ot);
+            this.handleScaleChange(uu, su);
             break;
           case "baseRenderHeading":
-            this.handleBaseRenderHeadingChange(tt, Ot);
+            this.handleBaseRenderHeadingChange(uu, su);
             break;
           case "followingOffset":
-            this.handleFollowingOffsetChange(tt, Ot);
+            this.handleFollowingOffsetChange(uu, su);
             break;
           case "shouldMatchFollowingEntityRotation":
-            this.handleShouldMatchFollowingEntityRotationChange(tt, Ot);
+            this.handleShouldMatchFollowingEntityRotationChange(uu, su);
             break;
           case "x":
           case "y":
           case "z":
-            return void this.handlePositionChange(tt, Vt, Ot)
-        }(0, rV.c)().client.updateEntityField(tt, Vt, Ot)
+            return void this.handlePositionChange(uu, ju, su)
+        }(0, Ij.b)().client.updateEntityField(uu, ju, su)
       }
-      handleArmourChange(tt, et) {
-        var Vt, Ot;
+      handleArmourChange(uu, Eu) {
+        var ju, su;
         const {
-          key: qt,
-          value: Dt
-        } = et;
-        (0, CV.w)(tt, qt, null !== (Vt = null === Dt || void 0 === Dt ? void 0 : Dt.itemName) && void 0 !== Vt ? Vt : null, null !== (Ot = null === Dt || void 0 === Dt ? void 0 : Dt.enchantmentTier) && void 0 !== Ot ? Ot : null)
+          key: Uu,
+          value: Zu
+        } = Eu;
+        (0, Gj.x)(uu, Uu, null !== (ju = null === Zu || void 0 === Zu ? void 0 : Zu.itemName) && void 0 !== ju ? ju : null, null !== (su = null === Zu || void 0 === Zu ? void 0 : Zu.enchantmentTier) && void 0 !== su ? su : null)
       }
-      handleFollowingEIdChange(tt, et, Vt) {
-        const Ot = (0, GV.c)(tt),
-          qt = Ot === this.ql.lL;
-        if (this.ql.mJ.ZZ(Ot, this.ql.mJ.names.GJ), Vt) this.ql.mJ.ZZ(Ot, "smoothToServerPos"), this.ql.mJ.RZ(Ot, this.ql.mJ.names.GJ, {
-          nE: (0, GV.c)(Vt),
-          offset: Array.from(et.followingOffset),
-          LVt: et.shouldMatchFollowingEntityRotation,
-          zVt: !0,
-          oVt: (tt, Ot) => {
-            if (SV().copy(tt, et.followingOffset), et.ridingVehicleEId === Vt) {
-              const et = (0, GV.c)(Vt),
-                qt = (0, rV.c)().getEntityHeading(et, Ot);
-              SV().tm(tt, tt, SV().ZERO, qt)
+      handleFollowingEIdChange(uu, Eu, ju) {
+        const su = (0, ij.d)(uu),
+          Uu = su === this.Uc.FQ;
+        if (this.Uc.YG.zV(su, this.Uc.YG.names.yG), ju) this.Uc.YG.zV(su, "smoothToServerPos"), this.Uc.YG.yV(su, this.Uc.YG.names.yG, {
+          jO: (0, ij.d)(ju),
+          offset: Array.from(Eu.followingOffset),
+          bju: Eu.shouldMatchFollowingEntityRotation,
+          Yju: !0,
+          hju: (uu, su) => {
+            if (Pj().copy(uu, Eu.followingOffset), Eu.ridingVehicleEId === ju) {
+              const Eu = (0, ij.d)(ju),
+                Uu = (0, Ij.b)().getEntityHeading(Eu, su);
+              Pj().sq(uu, uu, Pj().ZERO, Uu)
             }
           }
         });
-        else if (!qt) {
-          this.ql.mJ.ptt(Ot, "smoothToServerPos") || this.ql.mJ.RZ(Ot, "smoothToServerPos");
-          const tt = this.ql.mJ.getState(Ot, "smoothToServerPos"),
-            et = this.ql.mJ.RY(Ot).position;
-          (0, YV.setServerPosition)(tt, et[0], et[1], et[2])
+        else if (!Uu) {
+          this.Uc.YG.xuu(su, "smoothToServerPos") || this.Uc.YG.yV(su, "smoothToServerPos");
+          const uu = this.Uc.YG.getState(su, "smoothToServerPos"),
+            Eu = this.Uc.YG.wT(su).position;
+          (0, tj.setServerPosition)(uu, Eu[0], Eu[1], Eu[2])
         }
       }
-      handleRotationChange(tt, et, Vt) {
-        const Ot = "xRotation" === et ? 0 : "yRotation" === et ? 1 : 2;
-        for (const qt of (0, rV.c)().getFollowingEntities(tt)) {
-          const tt = this.ql.mJ.getState(qt, "meshRotation"),
-            et = this.ql.mJ.ZVt(qt);
-          tt && et.LVt && (tt.serverSetRotation[Ot] = Vt)
+      handleRotationChange(uu, Eu, ju) {
+        const su = "xRotation" === Eu ? 0 : "yRotation" === Eu ? 1 : 2;
+        for (const Uu of (0, Ij.b)().getFollowingEntities(uu)) {
+          const uu = this.Uc.YG.getState(Uu, "meshRotation"),
+            Eu = this.Uc.YG.Cju(Uu);
+          uu && Eu.bju && (uu.serverSetRotation[su] = ju)
         }
       }
-      handleScaleChange(tt, et) {
-        const Vt = (0, GV.c)(tt);
-        if (ne.j.sw(`entityScale|${Vt}`, et), Vt === this.ql.lL) {
-          var Ot;
-          (0, rV.c)().removeFromEyeHeightCache(Vt);
-          const tt = this.ql.mJ.fet(this.ql.lL),
-            et = null !== (Ot = null === tt || void 0 === tt ? void 0 : tt.physicsState) && void 0 !== Ot ? Ot : {
-              type: zV.n.DEFAULT,
+      handleScaleChange(uu, Eu) {
+        const ju = (0, ij.d)(uu);
+        if (zE.h.TY(`entityScale|${ju}`, Eu), ju === this.Uc.FQ) {
+          var su;
+          (0, Ij.b)().removeFromEyeHeightCache(ju);
+          const uu = this.Uc.YG.qEu(this.Uc.FQ),
+            Eu = null !== (su = null === uu || void 0 === uu ? void 0 : uu.physicsState) && void 0 !== su ? su : {
+              type: Wj.v.DEFAULT,
               tier: null
             };
-          return void(0, rV.c)().updatePositionAndPhysics(this.ql.lL, et, !1)
+          return void(0, Ij.b)().updatePositionAndPhysics(this.Uc.FQ, Eu, !1)
         }
-        const qt = (0, rV.c)().getLifeformType(Vt);
-        if (null === qt) return;
+        const Uu = (0, Ij.b)().getLifeformType(ju);
+        if (null === Uu) return;
         const {
-          physicsBodyWidth: Dt,
-          physicsBodyHeight: mt
-        } = (0, iV.d)(et, qt);
-        this.ql.mJ.IVt(Vt, Dt, mt, Dt)
+          physicsBodyWidth: Zu,
+          physicsBodyHeight: Xu
+        } = (0, Lj.h)(Eu, Uu);
+        this.Uc.YG.qju(ju, Zu, Xu, Zu)
       }
-      handleBaseRenderHeadingChange(tt, et) {
-        const Vt = this.ql.mJ.getState(tt, "meshRotation");
-        Vt && (Vt.baseRenderRotation[1] = et);
-        for (const Ot of (0, rV.c)().getFollowingEntities(tt)) {
-          const tt = this.ql.mJ.getState(Ot, "meshRotation"),
-            Vt = this.ql.mJ.ZVt(Ot);
-          tt && Vt.LVt && (tt.baseRenderRotation[1] = et)
+      handleBaseRenderHeadingChange(uu, Eu) {
+        const ju = this.Uc.YG.getState(uu, "meshRotation");
+        ju && (ju.baseRenderRotation[1] = Eu);
+        for (const su of (0, Ij.b)().getFollowingEntities(uu)) {
+          const uu = this.Uc.YG.getState(su, "meshRotation"),
+            ju = this.Uc.YG.Cju(su);
+          uu && ju.bju && (uu.baseRenderRotation[1] = Eu)
         }
       }
-      handleFollowingOffsetChange(tt, et) {
-        const Vt = this.ql.mJ.ZVt((0, GV.c)(tt));
-        if (Vt && Vt.offset) {
-          const tt = et ? Array.from(et) : SV().ZERO;
-          Vt.offset[0] = tt[0], Vt.offset[1] = tt[1], Vt.offset[2] = tt[2]
+      handleFollowingOffsetChange(uu, Eu) {
+        const ju = this.Uc.YG.Cju((0, ij.d)(uu));
+        if (ju && ju.offset) {
+          const uu = Eu ? Array.from(Eu) : Pj().ZERO;
+          ju.offset[0] = uu[0], ju.offset[1] = uu[1], ju.offset[2] = uu[2]
         }
       }
-      handleShouldMatchFollowingEntityRotationChange(tt, et) {
-        const Vt = this.ql.mJ.ZVt((0, GV.c)(tt));
-        Vt && (Vt.LVt = null === et || void 0 === et || et)
+      handleShouldMatchFollowingEntityRotationChange(uu, Eu) {
+        const ju = this.Uc.YG.Cju((0, ij.d)(uu));
+        ju && (ju.bju = null === Eu || void 0 === Eu || Eu)
       }
-      handlePositionChange(tt, et, Vt) {
-        if (this.ql.mJ.ptt(tt, "smoothToServerPos")) {
-          const Ot = this.ql.mJ.getState(tt, "smoothToServerPos");
-          (0, YV.setServerPositionAxis)(Ot, sV[et], Vt)
+      handlePositionChange(uu, Eu, ju) {
+        if (this.Uc.YG.xuu(uu, "smoothToServerPos")) {
+          const su = this.Uc.YG.getState(uu, "smoothToServerPos");
+          (0, tj.setServerPositionAxis)(su, yj[Eu], ju)
         }
       }
       setupItemHandlers() {
-        this.roomStateCallbacks.items.qJ(((tt, et) => {
-          this.allItems[et] = tt, (0, oV.k)(this.ql, et, [tt.x, tt.y, tt.z], tt.id, {
-            amount: tt.amount,
-            attributes: JSON.parse(tt.attributes),
-            Fq: (0, tV.e)(this.ql).cantPickUpItem(et),
-            size: tt.size,
-            predictedAt: (0, rV.c)().client.itemDropPrediction.onServerItemAdded(et)
+        this.roomStateCallbacks.items.lG(((uu, Eu) => {
+          this.allItems[Eu] = uu, (0, Sj.l)(this.Uc, Eu, [uu.x, uu.y, uu.z], uu.id, {
+            amount: uu.amount,
+            attributes: JSON.parse(uu.attributes),
+            SU: (0, RE.d)(this.Uc).cantPickUpItem(Eu),
+            size: uu.size,
+            predictedAt: (0, Ij.b)().client.itemDropPrediction.onServerItemAdded(Eu)
           });
-          const Vt = this.createStateCallbacks(tt);
-          for (const Ot of lV(dV)) this.onItemFieldChange(et, Ot, tt[Ot]), this.addDetacher(et, this.listenForFutureChanges(Vt, Ot, (tt => {
-            this.onItemFieldChange(et, Ot, tt)
+          const ju = this.createStateCallbacks(uu);
+          for (const su of bj(Xj)) this.onItemFieldChange(Eu, su, uu[su]), this.addDetacher(Eu, this.listenForFutureChanges(ju, su, (uu => {
+            this.onItemFieldChange(Eu, su, uu)
           })))
-        })), this.roomStateCallbacks.items.nS(((tt, et) => {
-          delete this.allItems[et], this.detach(et), (0, rV.c)().client.itemDropPrediction.onServerItemRemoved(et), this.ql.mJ.ptt(et, this.ql.mJ.names.itemState) && this.ql.mJ.deleteEntity(et), (0, tV.e)(this.ql).disposeEntity(et)
+        })), this.roomStateCallbacks.items.jK(((uu, Eu) => {
+          delete this.allItems[Eu], this.detach(Eu), (0, Ij.b)().client.itemDropPrediction.onServerItemRemoved(Eu), this.Uc.YG.xuu(Eu, this.Uc.YG.names.itemState) && this.Uc.YG.deleteEntity(Eu), (0, RE.d)(this.Uc).disposeEntity(Eu)
         }))
       }
-      onItemFieldChange(tt, et, Vt) {
-        if (et in sV) {
-          if (this.ql.mJ.ptt(tt, "itemState")) {
-            const Ot = this.ql.mJ.getState(tt, "smoothToServerPos");
-            (0, YV.setServerPositionAxis)(Ot, sV[et], Vt), (0, rV.c)().client.itemDropPrediction.onServerItemMoved(tt)
+      onItemFieldChange(uu, Eu, ju) {
+        if (Eu in yj) {
+          if (this.Uc.YG.xuu(uu, "itemState")) {
+            const su = this.Uc.YG.getState(uu, "smoothToServerPos");
+            (0, tj.setServerPositionAxis)(su, yj[Eu], ju), (0, Ij.b)().client.itemDropPrediction.onServerItemMoved(uu)
           }
           return
         }
-        if (!this.ql.mJ.ptt(tt, "itemState")) return;
-        const Ot = this.ql.mJ.getState(tt, "itemState");
-        "amount" === et && Vt !== Ot.amount && (Ot.creationTime = Date.now()), Ot[et] = "attributes" === et ? JSON.parse(Vt) : Vt
+        if (!this.Uc.YG.xuu(uu, "itemState")) return;
+        const su = this.Uc.YG.getState(uu, "itemState");
+        "amount" === Eu && ju !== su.amount && (su.creationTime = Date.now()), su[Eu] = "attributes" === Eu ? JSON.parse(ju) : ju
       }
       dispose() {
-        if (!this.df) {
-          this.df = !0, this.ql.off("beforeInputs", this.onFrame), this.ql.off("BQ", this.bM), this.queuedSetups.clear(), this.promotedSetups.clear();
-          for (const tt of this.deferredSetups.values()) ne.j.unsubscribe(tt);
-          this.deferredSetups.clear(), this.ql.mJ.ZZ(this.ql.lL, this.ql.mJ.names.GJ);
-          for (const tt in this.allItems) this.ql.mJ.deleteEntity(tt), delete this.allItems[tt];
-          for (const tt of [...this.detachers.keys()]) this.detach(tt);
-          (0, tV.e)(this.ql).clear();
-          for (const tt of (0, rV.c)().client.iterateEntityIds())(0, rV.c)().client.disposeEntity(tt)
+        if (!this.fO) {
+          this.fO = !0, this.Uc.off("beforeInputs", this.onFrame), this.Uc.off("Tb", this.RD), this.queuedSetups.clear(), this.promotedSetups.clear();
+          for (const uu of this.deferredSetups.values()) zE.h.unsubscribe(uu);
+          this.deferredSetups.clear(), this.Uc.YG.zV(this.Uc.FQ, this.Uc.YG.names.yG);
+          for (const uu in this.allItems) this.Uc.YG.deleteEntity(uu), delete this.allItems[uu];
+          for (const uu of [...this.detachers.keys()]) this.detach(uu);
+          (0, RE.d)(this.Uc).clear();
+          for (const uu of (0, Ij.b)().client.iterateEntityIds())(0, Ij.b)().client.disposeEntity(uu)
         }
       }
     }
-    const xV = [0, 0, 0];
+    const Hj = [0, 0, 0];
 
-    function TV(tt) {
-      if ("string" !== typeof tt) return;
-      const et = tt.indexOf("|"),
-        Vt = -1 === et ? tt : tt.slice(0, et),
-        Ot = tO();
-      return Object.hasOwn(Ot, Vt) ? Ot[Vt] : void 0
+    function Aj(uu) {
+      if ("string" !== typeof uu) return;
+      const Eu = uu.indexOf("|"),
+        ju = -1 === Eu ? uu : uu.slice(0, Eu),
+        su = Rj();
+      return Object.hasOwn(su, ju) ? su[ju] : void 0
     }
-    const gV = new Set;
-    const sV = {
+    const nj = new Set;
+    const yj = {
       x: 0,
       y: 1,
       z: 2
     };
-    let nV = null;
+    let zj = null;
 
-    function tO() {
-      return null !== nV || (nV = {
-        ...Object.fromEntries(DV.f.map((tt => {
+    function Rj() {
+      return null !== zj || (zj = {
+        ...Object.fromEntries(Uj.n.map((uu => {
           const {
-            mj: et
-          } = (0, UV.c)(tt);
-          return [tt, et]
+            nl: Eu
+          } = (0, Fj.e)(uu);
+          return [uu, Eu]
         }))),
-        Pebble: wV.d,
-        Snowball: wV.d,
-        "Snowball Launcher": wV.d,
-        "Reinforced Pebble": wV.d,
-        Bullet: wV.d,
-        "Reinforced Ball": wV.d,
-        Ball: wV.d,
-        Mango: wV.d,
-        "Moonstone Orb": wV.d,
-        ...Object.fromEntries(qV.w.map((tt => [(0, bV.ec)(tt), wV.d]))),
-        Arrow: wV.d,
-        "Arrow of Speed": wV.d,
-        "Arrow of Poison": wV.d,
-        "Arrow of Slowness": wV.d,
-        "Arrow of Weakness": wV.d,
-        "Arrow of Knockback": wV.d,
-        "Arrow of Strength": wV.d,
-        "Arrow of Invisibility": wV.d,
-        "Arrow of Jumping": wV.d,
-        "Arrow of Defense": wV.d,
-        "Arrow of Instant Healing": wV.d,
-        "Arrow of Instant Damage": wV.d,
-        "Arrow of Regeneration": wV.d,
-        "Arrow of Haste": wV.d,
-        "Arrow of Shield": wV.d,
-        "Arrow of Double Jump": wV.d,
-        "Arrow of Heat Resistance": wV.d,
-        "Arrow of X-Ray Vision": wV.d,
-        "Arrow of Mining Yield": wV.d,
-        "Arrow of Brain Rot": wV.d,
-        "Arrow of Milk": wV.d,
-        Fireball: wV.d,
-        "Bouncy Bomb": wV.d,
-        RPG: wV.d,
-        "Obby RPG": wV.d,
-        "Super RPG": wV.d,
-        "Grenade Launcher": wV.d,
-        Iceball: wV.d,
-        Coconut: wV.d,
-        "Splash Speed Potion": wV.d,
-        "Splash Defense Potion": wV.d,
-        "Splash Strength Potion": wV.d,
-        "Splash Invisibility Potion": wV.d,
-        "Splash Jump Potion": wV.d,
-        "Splash Knockback Potion": wV.d,
-        "Splash Poison Potion": wV.d,
-        "Splash Speed Potion II": wV.d,
-        "Splash Defense Potion II": wV.d,
-        "Splash Strength Potion II": wV.d,
-        "Splash Jump Potion II": wV.d,
-        "Splash Knockback Potion II": wV.d,
-        "Splash Poison Potion II": wV.d,
-        "Splash Slowness Potion": wV.d,
-        "Splash Slowness Potion II": wV.d,
-        "Splash Weakness Potion": wV.d,
-        "Splash Weakness Potion II": wV.d,
-        "Splash Milk Potion": wV.d,
-        "Splash Instant Damage Potion": wV.d,
-        "Splash Instant Damage Potion II": wV.d,
-        "Splash Instant Healing Potion": wV.d,
-        "Splash Instant Healing Potion II": wV.d,
-        "Splash Regeneration Potion": wV.d,
-        "Splash Regeneration Potion II": wV.d,
-        "Splash Haste Potion": wV.d,
-        "Splash Haste Potion II": wV.d,
-        "Splash Shield Potion": wV.d,
-        "Splash Shield Potion II": wV.d,
-        "Splash Double Jump Potion": wV.d,
-        "Splash Heat Resistance Potion": wV.d,
-        "Splash X-Ray Vision Potion": wV.d,
-        "Splash Mining Yield Potion": wV.d,
-        "Splash Mining Yield Potion II": wV.d,
-        "Splash Brain Rot Potion": wV.d,
-        "Yellow Paintball Gun": wV.d,
-        "White Paintball Gun": wV.d,
-        "Red Paintball Gun": wV.d,
-        "Purple Paintball Gun": wV.d,
-        "Pink Paintball Gun": wV.d,
-        "Orange Paintball Gun": wV.d,
-        "Magenta Paintball Gun": wV.d,
-        "Lime Paintball Gun": wV.d,
-        "Light Gray Paintball Gun": wV.d,
-        "Light Blue Paintball Gun": wV.d,
-        "Green Paintball Gun": wV.d,
-        "Gray Paintball Gun": wV.d,
-        "Cyan Paintball Gun": wV.d,
-        "Brown Paintball Gun": wV.d,
-        "Blue Paintball Gun": wV.d,
-        "Black Paintball Gun": wV.d,
-        "Yellow Heavy Paintball Gun": wV.d,
-        "White Heavy Paintball Gun": wV.d,
-        "Red Heavy Paintball Gun": wV.d,
-        "Purple Heavy Paintball Gun": wV.d,
-        "Pink Heavy Paintball Gun": wV.d,
-        "Orange Heavy Paintball Gun": wV.d,
-        "Magenta Heavy Paintball Gun": wV.d,
-        "Lime Heavy Paintball Gun": wV.d,
-        "Light Gray Heavy Paintball Gun": wV.d,
-        "Light Blue Heavy Paintball Gun": wV.d,
-        "Green Heavy Paintball Gun": wV.d,
-        "Gray Heavy Paintball Gun": wV.d,
-        "Cyan Heavy Paintball Gun": wV.d,
-        "Brown Heavy Paintball Gun": wV.d,
-        "Blue Heavy Paintball Gun": wV.d,
-        "Black Heavy Paintball Gun": wV.d,
-        "Toxin Ball": wV.d,
-        "Splash Aura XP Potion": wV.d,
-        "Splash Aura XP Potion II": wV.d,
-        "Arrow of Aura XP": wV.d,
-        Firecracker: wV.d,
-        "Rainbow Firecracker": wV.d,
-        "White Firecracker": wV.d,
-        "Orange Firecracker": wV.d,
-        "Magenta Firecracker": wV.d,
-        "Light Blue Firecracker": wV.d,
-        "Yellow Firecracker": wV.d,
-        "Lime Firecracker": wV.d,
-        "Pink Firecracker": wV.d,
-        "Gray Firecracker": wV.d,
-        "Light Gray Firecracker": wV.d,
-        "Cyan Firecracker": wV.d,
-        "Purple Firecracker": wV.d,
-        "Blue Firecracker": wV.d,
-        "Brown Firecracker": wV.d,
-        "Green Firecracker": wV.d,
-        "Red Firecracker": wV.d,
-        "Black Firecracker": wV.d,
-        "Firecracker Pebble": wV.d,
-        "Rainbow Firecracker Pebble": wV.d,
-        "White Firecracker Pebble": wV.d,
-        "Orange Firecracker Pebble": wV.d,
-        "Magenta Firecracker Pebble": wV.d,
-        "Light Blue Firecracker Pebble": wV.d,
-        "Yellow Firecracker Pebble": wV.d,
-        "Lime Firecracker Pebble": wV.d,
-        "Pink Firecracker Pebble": wV.d,
-        "Gray Firecracker Pebble": wV.d,
-        "Light Gray Firecracker Pebble": wV.d,
-        "Cyan Firecracker Pebble": wV.d,
-        "Purple Firecracker Pebble": wV.d,
-        "Blue Firecracker Pebble": wV.d,
-        "Brown Firecracker Pebble": wV.d,
-        "Green Firecracker Pebble": wV.d,
-        "Red Firecracker Pebble": wV.d,
-        "Black Firecracker Pebble": wV.d,
-        "Blinding Pebble": wV.d,
-        Poop: wV.d,
-        "Wood Boomerang": wV.d,
-        "Stone Boomerang": wV.d,
-        "Iron Boomerang": wV.d,
-        "Gold Boomerang": wV.d,
-        "Diamond Boomerang": wV.d,
-        "Amethite Boomerang": wV.d,
-        "Magmasteel Boomerang": wV.d,
-        "Rubellite Boomerang": wV.d,
-        "Serpentite Boomerang": wV.d,
-        "Moonstone Boomerang": wV.d,
-        "67 Base Projectile": wV.d,
-        "67 Boosted Projectile": wV.d,
-        "Capitano Grenade": wV.d,
-        "Scatter Pellet": wV.d,
-        "Lucky Bomb": wV.d,
-        "Unlucky Bomb": wV.d,
-        "Swap Orb": wV.d,
-        Mesh: ZV,
-        AudioEntity: FV
-      }), nV
+        Pebble: Oj.b,
+        Snowball: Oj.b,
+        "Snowball Launcher": Oj.b,
+        "Reinforced Pebble": Oj.b,
+        Bullet: Oj.b,
+        "Reinforced Ball": Oj.b,
+        Ball: Oj.b,
+        Mango: Oj.b,
+        "Moonstone Orb": Oj.b,
+        ...Object.fromEntries(sj.q.map((uu => [(0, Mj._b)(uu), Oj.b]))),
+        Arrow: Oj.b,
+        "Arrow of Speed": Oj.b,
+        "Arrow of Poison": Oj.b,
+        "Arrow of Slowness": Oj.b,
+        "Arrow of Weakness": Oj.b,
+        "Arrow of Knockback": Oj.b,
+        "Arrow of Strength": Oj.b,
+        "Arrow of Invisibility": Oj.b,
+        "Arrow of Jumping": Oj.b,
+        "Arrow of Defense": Oj.b,
+        "Arrow of Instant Healing": Oj.b,
+        "Arrow of Instant Damage": Oj.b,
+        "Arrow of Regeneration": Oj.b,
+        "Arrow of Haste": Oj.b,
+        "Arrow of Shield": Oj.b,
+        "Arrow of Double Jump": Oj.b,
+        "Arrow of Heat Resistance": Oj.b,
+        "Arrow of X-Ray Vision": Oj.b,
+        "Arrow of Mining Yield": Oj.b,
+        "Arrow of Brain Rot": Oj.b,
+        "Arrow of Milk": Oj.b,
+        Fireball: Oj.b,
+        "Bouncy Bomb": Oj.b,
+        RPG: Oj.b,
+        "Obby RPG": Oj.b,
+        "Super RPG": Oj.b,
+        "Grenade Launcher": Oj.b,
+        Iceball: Oj.b,
+        Coconut: Oj.b,
+        "Splash Speed Potion": Oj.b,
+        "Splash Defense Potion": Oj.b,
+        "Splash Strength Potion": Oj.b,
+        "Splash Invisibility Potion": Oj.b,
+        "Splash Jump Potion": Oj.b,
+        "Splash Knockback Potion": Oj.b,
+        "Splash Poison Potion": Oj.b,
+        "Splash Speed Potion II": Oj.b,
+        "Splash Defense Potion II": Oj.b,
+        "Splash Strength Potion II": Oj.b,
+        "Splash Jump Potion II": Oj.b,
+        "Splash Knockback Potion II": Oj.b,
+        "Splash Poison Potion II": Oj.b,
+        "Splash Slowness Potion": Oj.b,
+        "Splash Slowness Potion II": Oj.b,
+        "Splash Weakness Potion": Oj.b,
+        "Splash Weakness Potion II": Oj.b,
+        "Splash Milk Potion": Oj.b,
+        "Splash Instant Damage Potion": Oj.b,
+        "Splash Instant Damage Potion II": Oj.b,
+        "Splash Instant Healing Potion": Oj.b,
+        "Splash Instant Healing Potion II": Oj.b,
+        "Splash Regeneration Potion": Oj.b,
+        "Splash Regeneration Potion II": Oj.b,
+        "Splash Haste Potion": Oj.b,
+        "Splash Haste Potion II": Oj.b,
+        "Splash Shield Potion": Oj.b,
+        "Splash Shield Potion II": Oj.b,
+        "Splash Double Jump Potion": Oj.b,
+        "Splash Heat Resistance Potion": Oj.b,
+        "Splash X-Ray Vision Potion": Oj.b,
+        "Splash Mining Yield Potion": Oj.b,
+        "Splash Mining Yield Potion II": Oj.b,
+        "Splash Brain Rot Potion": Oj.b,
+        "Yellow Paintball Gun": Oj.b,
+        "White Paintball Gun": Oj.b,
+        "Red Paintball Gun": Oj.b,
+        "Purple Paintball Gun": Oj.b,
+        "Pink Paintball Gun": Oj.b,
+        "Orange Paintball Gun": Oj.b,
+        "Magenta Paintball Gun": Oj.b,
+        "Lime Paintball Gun": Oj.b,
+        "Light Gray Paintball Gun": Oj.b,
+        "Light Blue Paintball Gun": Oj.b,
+        "Green Paintball Gun": Oj.b,
+        "Gray Paintball Gun": Oj.b,
+        "Cyan Paintball Gun": Oj.b,
+        "Brown Paintball Gun": Oj.b,
+        "Blue Paintball Gun": Oj.b,
+        "Black Paintball Gun": Oj.b,
+        "Yellow Heavy Paintball Gun": Oj.b,
+        "White Heavy Paintball Gun": Oj.b,
+        "Red Heavy Paintball Gun": Oj.b,
+        "Purple Heavy Paintball Gun": Oj.b,
+        "Pink Heavy Paintball Gun": Oj.b,
+        "Orange Heavy Paintball Gun": Oj.b,
+        "Magenta Heavy Paintball Gun": Oj.b,
+        "Lime Heavy Paintball Gun": Oj.b,
+        "Light Gray Heavy Paintball Gun": Oj.b,
+        "Light Blue Heavy Paintball Gun": Oj.b,
+        "Green Heavy Paintball Gun": Oj.b,
+        "Gray Heavy Paintball Gun": Oj.b,
+        "Cyan Heavy Paintball Gun": Oj.b,
+        "Brown Heavy Paintball Gun": Oj.b,
+        "Blue Heavy Paintball Gun": Oj.b,
+        "Black Heavy Paintball Gun": Oj.b,
+        "Toxin Ball": Oj.b,
+        "Splash Aura XP Potion": Oj.b,
+        "Splash Aura XP Potion II": Oj.b,
+        "Arrow of Aura XP": Oj.b,
+        Firecracker: Oj.b,
+        "Rainbow Firecracker": Oj.b,
+        "White Firecracker": Oj.b,
+        "Orange Firecracker": Oj.b,
+        "Magenta Firecracker": Oj.b,
+        "Light Blue Firecracker": Oj.b,
+        "Yellow Firecracker": Oj.b,
+        "Lime Firecracker": Oj.b,
+        "Pink Firecracker": Oj.b,
+        "Gray Firecracker": Oj.b,
+        "Light Gray Firecracker": Oj.b,
+        "Cyan Firecracker": Oj.b,
+        "Purple Firecracker": Oj.b,
+        "Blue Firecracker": Oj.b,
+        "Brown Firecracker": Oj.b,
+        "Green Firecracker": Oj.b,
+        "Red Firecracker": Oj.b,
+        "Black Firecracker": Oj.b,
+        "Firecracker Pebble": Oj.b,
+        "Rainbow Firecracker Pebble": Oj.b,
+        "White Firecracker Pebble": Oj.b,
+        "Orange Firecracker Pebble": Oj.b,
+        "Magenta Firecracker Pebble": Oj.b,
+        "Light Blue Firecracker Pebble": Oj.b,
+        "Yellow Firecracker Pebble": Oj.b,
+        "Lime Firecracker Pebble": Oj.b,
+        "Pink Firecracker Pebble": Oj.b,
+        "Gray Firecracker Pebble": Oj.b,
+        "Light Gray Firecracker Pebble": Oj.b,
+        "Cyan Firecracker Pebble": Oj.b,
+        "Purple Firecracker Pebble": Oj.b,
+        "Blue Firecracker Pebble": Oj.b,
+        "Brown Firecracker Pebble": Oj.b,
+        "Green Firecracker Pebble": Oj.b,
+        "Red Firecracker Pebble": Oj.b,
+        "Black Firecracker Pebble": Oj.b,
+        "Blinding Pebble": Oj.b,
+        Poop: Oj.b,
+        "Wood Boomerang": Oj.b,
+        "Stone Boomerang": Oj.b,
+        "Iron Boomerang": Oj.b,
+        "Gold Boomerang": Oj.b,
+        "Diamond Boomerang": Oj.b,
+        "Amethite Boomerang": Oj.b,
+        "Magmasteel Boomerang": Oj.b,
+        "Rubellite Boomerang": Oj.b,
+        "Serpentite Boomerang": Oj.b,
+        "Moonstone Boomerang": Oj.b,
+        "67 Base Projectile": Oj.b,
+        "67 Boosted Projectile": Oj.b,
+        "Capitano Grenade": Oj.b,
+        "Scatter Pellet": Oj.b,
+        "Lucky Bomb": Oj.b,
+        "Unlucky Bomb": Oj.b,
+        "Swap Orb": Oj.b,
+        Mesh: Kj,
+        AudioEntity: rj
+      }), zj
     }
   },
-  39216: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => Dt,
-      h: () => mt
+  39330: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => Zu,
+      e: () => Xu
     });
-    var Ot = Vt(710),
-      qt = Vt(37972);
-    const Dt = 4e4;
-    class mt {
+    var su = ju(649),
+      Uu = ju(38114);
+    const Zu = 4e4;
+    class Xu {
       constructor() {
-        let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Date.now;
-        this.now = tt, this.editedAt = new Map, this.lastChunkX = NaN, this.lastChunkY = NaN, this.lastChunkZ = NaN, this.lastChunkId = ""
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Date.now;
+        this.now = uu, this.editedAt = new Map, this.lastChunkX = NaN, this.lastChunkY = NaN, this.lastChunkZ = NaN, this.lastChunkId = ""
       }
-      noteEdit(tt, et, Vt) {
-        const Dt = (0, Ot.H)(tt),
-          mt = (0, Ot.H)(et),
-          dt = (0, Ot.H)(Vt),
-          jt = this.now();
-        if (Dt !== this.lastChunkX || mt !== this.lastChunkY || dt !== this.lastChunkZ) {
-          this.lastChunkX = Dt, this.lastChunkY = mt, this.lastChunkZ = dt, this.lastChunkId = (0, qt.e)(Dt, mt, dt), this.editedAt.delete(this.lastChunkId), this.editedAt.set(this.lastChunkId, jt);
-          for (const [tt, et] of this.editedAt) {
-            if (et >= jt - 3e5) break;
-            this.editedAt.delete(tt)
+      noteEdit(uu, Eu, ju) {
+        const Zu = (0, su.M)(uu),
+          Xu = (0, su.M)(Eu),
+          lu = (0, su.M)(ju),
+          qu = this.now();
+        if (Zu !== this.lastChunkX || Xu !== this.lastChunkY || lu !== this.lastChunkZ) {
+          this.lastChunkX = Zu, this.lastChunkY = Xu, this.lastChunkZ = lu, this.lastChunkId = (0, Uu.d)(Zu, Xu, lu), this.editedAt.delete(this.lastChunkId), this.editedAt.set(this.lastChunkId, qu);
+          for (const [uu, Eu] of this.editedAt) {
+            if (Eu >= qu - 3e5) break;
+            this.editedAt.delete(uu)
           }
-        } else this.editedAt.set(this.lastChunkId, jt)
+        } else this.editedAt.set(this.lastChunkId, qu)
       }
-      chunksEditedSince(tt) {
-        const et = [];
-        for (const [Vt, Ot] of this.editedAt) Ot >= tt && et.push(Vt);
-        return et
+      chunksEditedSince(uu) {
+        const Eu = [];
+        for (const [ju, su] of this.editedAt) su >= uu && Eu.push(ju);
+        return Eu
       }
     }
   },
-  39278: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => fe,
-      g: () => re,
-      j: () => Ie,
-      k: () => Ue
+  39380: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => NE,
+      f: () => IE,
+      i: () => mE,
+      j: () => FE
     });
-    var Ot = Vt(3751),
-      qt = Vt(9005),
-      Dt = Vt(36925),
-      mt = Vt(1543),
-      dt = Vt(36992),
-      jt = Vt(39167),
-      Ht = Vt(39152),
-      Xt = Vt(3820),
-      Qt = Vt(38126),
-      lt = Vt(39282),
-      Et = Vt(1325),
-      ft = Vt(377),
-      wt = Vt(31),
-      yt = Vt(2043),
-      Nt = Vt(106),
-      Mt = Vt(39),
-      bt = Vt(2074),
-      Jt = Vt(1993),
-      Ct = Vt(3046);
-    class ut {
-      constructor(tt) {
-        this.storeForMs = tt, this.clicks = new Ct.b
+    var su = ju(3879),
+      Uu = ju(8992),
+      Zu = ju(37061),
+      Xu = ju(1487),
+      lu = ju(37145),
+      qu = ju(39288),
+      fu = ju(39280),
+      Cu = ju(3946),
+      bu = ju(38263),
+      cu = ju(39384),
+      Nu = ju(1298),
+      Ou = ju(337),
+      Yu = ju(24),
+      hu = ju(2011),
+      Du = ju(91),
+      gu = ju(31),
+      Mu = ju(2040),
+      eu = ju(1955),
+      Gu = ju(3145);
+    class pu {
+      constructor(uu) {
+        this.storeForMs = uu, this.clicks = new Gu.d
       }
       click() {
         this.clicks.enqueue(Date.now());
-        const tt = Date.now() - this.storeForMs;
-        for (; this.clicks.size > 0 && this.clicks.peek() < tt;) this.clicks.dequeue()
+        const uu = Date.now() - this.storeForMs;
+        for (; this.clicks.size > 0 && this.clicks.peek() < uu;) this.clicks.dequeue()
       }
-      getNumClicksInMs(tt) {
-        let et = 0;
-        return this.clicks.forEach((Vt => {
-          Vt > Date.now() - tt && et++
-        })), et
+      getNumClicksInMs(uu) {
+        let Eu = 0;
+        return this.clicks.forEach((ju => {
+          ju > Date.now() - uu && Eu++
+        })), Eu
       }
-      getMaxClickSeparationInMs(tt) {
+      getMaxClickSeparationInMs(uu) {
         if (0 === this.clicks.size) return this.storeForMs;
-        let et = 0,
-          Vt = Date.now() - tt;
-        this.clicks.forEach((Ot => {
-          Ot < Date.now() - tt || (et = Math.max(et, Math.abs(Ot - Vt)), Vt = Ot)
+        let Eu = 0,
+          ju = Date.now() - uu;
+        this.clicks.forEach((su => {
+          su < Date.now() - uu || (Eu = Math.max(Eu, Math.abs(su - ju)), ju = su)
         }));
-        const Ot = Math.abs(Date.now() - Vt);
-        return Math.max(et, Ot)
+        const su = Math.abs(Date.now() - ju);
+        return Math.max(Eu, su)
       }
     }
-    class Kt {
-      constructor(tt) {
-        this.storeForMs = tt, this.clickDownDurations = new Ct.b
+    class wu {
+      constructor(uu) {
+        this.storeForMs = uu, this.clickDownDurations = new Gu.d
       }
-      registerClickDownDuration(tt) {
+      registerClickDownDuration(uu) {
         this.clickDownDurations.enqueue({
-          dur: tt,
+          dur: uu,
           atTime: Date.now()
         });
-        const et = Date.now() - this.storeForMs;
-        for (; this.clickDownDurations.size > 0 && this.clickDownDurations.peek().atTime < et;) this.clickDownDurations.dequeue()
+        const Eu = Date.now() - this.storeForMs;
+        for (; this.clickDownDurations.size > 0 && this.clickDownDurations.peek().atTime < Eu;) this.clickDownDurations.dequeue()
       }
-      clickDownDurationsCheck(tt) {
-        if (tt > this.storeForMs) return console.error("overDuration is greater than storeForMs"), "0:0";
-        let et = 0,
-          Vt = 0;
-        return this.clickDownDurations.forEach((Ot => {
-          Ot.atTime > Date.now() - tt && (et++, Vt = Math.max(Vt, Ot.dur))
-        })), `${et}:${Vt}`
+      clickDownDurationsCheck(uu) {
+        if (uu > this.storeForMs) return console.error("overDuration is greater than storeForMs"), "0:0";
+        let Eu = 0,
+          ju = 0;
+        return this.clickDownDurations.forEach((su => {
+          su.atTime > Date.now() - uu && (Eu++, ju = Math.max(ju, su.dur))
+        })), `${Eu}:${ju}`
       }
     }
-    var ht = Vt(36745),
-      vt = Vt(39288),
-      Wt = Vt(26),
-      St = Vt(2848),
-      ct = Vt(1423),
-      Rt = Vt(2486),
-      It = Vt(4576),
-      Pt = Vt(153),
-      Zt = Vt(38406),
-      Lt = Vt(38610),
-      Ft = Vt(710),
-      kt = Vt(36742),
-      Gt = Vt(17),
-      zt = Vt(9425),
-      ot = Vt(1308),
-      rt = Vt(229),
-      Ut = Vt(39297),
-      At = Vt(39305),
-      it = Vt(39313),
-      Yt = Vt(38437),
-      Bt = Vt(39322),
-      pt = Vt(38335),
-      xt = Vt(3470),
-      Tt = Vt(1732),
-      gt = Vt(36861),
-      st = Vt(2902),
-      nt = Vt(36610),
-      te = Vt(36616),
-      ee = Vt(39316),
-      Ve = Vt(38200);
-    const Oe = {
+    var Ju = ju(36876),
+      du = ju(39392),
+      au = ju(22),
+      Pu = ju(2893),
+      ou = ju(1369),
+      ku = ju(2533),
+      mu = ju(4619),
+      vu = ju(131),
+      Ku = ju(38511),
+      Vu = ju(38720),
+      ru = ju(649),
+      Qu = ju(36873),
+      iu = ju(13),
+      Wu = ju(9409),
+      Su = ju(1278),
+      Iu = ju(202),
+      Fu = ju(39395),
+      Bu = ju(39401),
+      Lu = ju(39407),
+      tu = ju(38542),
+      xu = ju(39419),
+      Tu = ju(38455),
+      Hu = ju(3599),
+      Au = ju(1687),
+      nu = ju(36992),
+      yu = ju(2943),
+      zu = ju(36762),
+      Ru = ju(36770),
+      uE = ju(39416),
+      EE = ju(38333);
+    const jE = {
       forward: "freeCamForward",
       backward: "freeCamBackward",
       left: "freeCamLeft",
@@ -2838,409 +2838,409 @@ export const modules = {
       crouch: "freeCamDown"
     };
 
-    function qe() {
-      var tt, et;
-      return !(null === (tt = (0, St.c)().client) || void 0 === tt || null === (et = tt.freeCameraController) || void 0 === et || !et.movesFly())
+    function sE() {
+      var uu, Eu;
+      return !(null === (uu = (0, Pu.b)().client) || void 0 === uu || null === (Eu = uu.freeCameraController) || void 0 === Eu || !Eu.movesFly())
     }
 
-    function De(tt) {
-      const et = tt.on.bind(tt);
-      tt.on = (tt, Vt) => {
-        bt.C.has(tt) ? et(tt, Vt) : et(tt, (et => {
-          var Ot;
-          return null !== (Ot = (0, St.c)().client) && void 0 !== Ot && Ot.isReplayMode() ? function(tt) {
-            return tt in Oe
-          }(tt) && qe() ? Vt(et) : void 0 : Vt(et)
+    function UE(uu) {
+      const Eu = uu.on.bind(uu);
+      uu.on = (uu, ju) => {
+        Mu.D.has(uu) ? Eu(uu, ju) : Eu(uu, (Eu => {
+          var su;
+          return null !== (su = (0, Pu.b)().client) && void 0 !== su && su.isReplayMode() ? function(uu) {
+            return uu in jE
+          }(uu) && sE() ? ju(Eu) : void 0 : ju(Eu)
         }))
       }
     }
-    const me = 5e3,
-      de = 1;
-    let je, He = de,
-      Xe = 0;
-    const Qe = !0;
-    let le = Qe;
-    yt.b.subscribe("_ignoreBasicBoards", (tt => {
-      le = tt
-    })), (0, Ot.onGameReset)((() => {
-      le = Qe
+    const ZE = 5e3,
+      XE = 1;
+    let lE, qE = XE,
+      fE = 0;
+    const CE = !0;
+    let bE = CE;
+    hu.e.subscribe("_ignoreBasicBoards", (uu => {
+      bE = uu
+    })), (0, su.onGameReset)((() => {
+      bE = CE
     }));
-    let Ee = null;
-    const fe = () => Ee;
-    let we, ye, Ne;
-    var ae, Me, be, Je, Ce, ue, Ke, he, ve;
-    const We = [1, 2, 0, "h", 3, 85, "g", 5, 99, "d", 8, 255, "length", 81, 17, 73, 4, "undefined", void 0, 199, 103, 63, 6, "fromCodePoint", 7, 12, "push", 220, 87, 91, 8191, 88, 13, 14, 111, 227, 211, "f", 131, !1, 56, 203, 9, 39, 123, "b", "c", "a", 144, "e", 221, 225, 162, 68, 138, 76, 106, 24, 65, 201, 125, "i", !0, 197, 189, null, 231, 178, 172, 61, 236, 38, 246, 10, 230, 19, 244, "_", 193, 222, 94, 173, 83, 127, 33554432, 67108864, 104, 22, 149, 128, 148, 84];
+    let cE = null;
+    const NE = () => cE;
+    let OE, YE, hE;
+    var DE, gE, ME, eE, GE, pE, wE, JE, dE;
+    const aE = ["b", 0, 1, 8, 3, "a", "i", 21, 5, 6, 4, 255, "length", 207, 98, "undefined", void 0, "c", "d", 2, 63, "fromCodePoint", 7, 12, "push", "h", 9, "g", 91, 186, 101, 8191, 88, 13, 14, 210, 100, 127, "e", 194, 16, 198, 189, !1, 178, 46, 116, 126, 109, 202, 192, 217, 176, !0, 209, 245, 105, 146, 137, 85, 215, 25, 175, 159, 236];
 
-    function Se(...tt) {
-      return tt[We[12]] = We[0], typeof Je !== We[17] && Je ? (new Je).decode(new Ce(tt[We[2]])) : typeof ue !== We[17] && ue ? ue.from(tt[We[2]]).toString("utf-8") : ve(tt[We[2]])
+    function PE(...uu) {
+      return uu[aE[12]] = aE[2], typeof eE !== aE[15] && eE ? (new eE).decode(new GE(uu[aE[1]])) : typeof pE !== aE[15] && pE ? pE.from(uu[aE[1]]).toString("utf-8") : dE(uu[aE[1]])
     }
 
-    function ce() {}
+    function oE() {}
 
-    function Re() {
-      Re = function() {}
+    function kE() {
+      kE = function() {}
     }
 
-    function Ie(tt) {
-      function et() {
-        return tt.mJ.bVt(tt.lL)
+    function mE(uu) {
+      function Eu() {
+        return uu.YG.yEu(uu.FQ)
       }
-      De(tt.inputs.down), De(tt.inputs.up);
-      for (const Ot of ["forward", "backward", "left", "right", "sprint", "jump", "crouch"]) {
-        const et = (et, Vt) => {
-          var qt, Dt;
-          if (qe()) {
-            var mt;
-            const qt = Oe[Ot];
-            var dt, jt;
-            if (qt) null === (dt = (0, St.c)().client) || void 0 === dt || null === (jt = dt.freeCameraController) || void 0 === jt || jt.handlefreeCamKeyPress(qt, et, Vt);
-            return void(Vt || null !== (mt = (0, St.c)().client) && void 0 !== mt && mt.isReplayMode() || (tt.mJ.hVt()[Ot] = !1))
+      UE(uu.inputs.down), UE(uu.inputs.up);
+      for (const su of ["forward", "backward", "left", "right", "sprint", "jump", "crouch"]) {
+        const Eu = (Eu, ju) => {
+          var Uu, Zu;
+          if (sE()) {
+            var Xu;
+            const Uu = jE[su];
+            var lu, qu;
+            if (Uu) null === (lu = (0, Pu.b)().client) || void 0 === lu || null === (qu = lu.freeCameraController) || void 0 === qu || qu.handlefreeCamKeyPress(Uu, Eu, ju);
+            return void(ju || null !== (Xu = (0, Pu.b)().client) && void 0 !== Xu && Xu.isReplayMode() || (uu.YG.jju()[su] = !1))
           }
-          if (null !== (qt = (0, St.c)().client) && void 0 !== qt && null !== (Dt = qt.freeCameraController) && void 0 !== Dt && Dt.isKeyPressOverriden(et)) return;
-          tt.mJ.hVt()[Ot] = Vt
+          if (null !== (Uu = (0, Pu.b)().client) && void 0 !== Uu && null !== (Zu = Uu.freeCameraController) && void 0 !== Zu && Zu.isKeyPressOverriden(Eu)) return;
+          uu.YG.jju()[su] = ju
         };
-        tt.inputs.down.on(Ot, (tt => et(tt, !0))), tt.inputs.up.on(Ot, (tt => et(tt, !1)))
+        uu.inputs.down.on(su, (uu => Eu(uu, !0))), uu.inputs.up.on(su, (uu => Eu(uu, !1)))
       }
-      tt.inputs.down.on("crouch", (() => {
-        if (qe()) return;
-        if (!tt.OJ.canCrouch) return;
-        const et = tt.mJ.hVt();
-        Wt.b.get("clientEscMenuOptions").crouchIsToggle && (et.crouchToggled = !et.crouchToggled && !et.padSneakToggled), et.padSneakToggled = !1
+      uu.inputs.down.on("crouch", (() => {
+        if (sE()) return;
+        if (!uu.sG.canCrouch) return;
+        const Eu = uu.YG.jju();
+        au.d.get("clientEscMenuOptions").crouchIsToggle && (Eu.crouchToggled = !Eu.crouchToggled && !Eu.padSneakToggled), Eu.padSneakToggled = !1
       }));
-      const Vt = () => {
-        const tt = et();
-        tt.isGun() && tt.inaccuracyCalculator.jump()
+      const ju = () => {
+        const uu = Eu();
+        uu.isGun() && uu.inaccuracyCalculator.jump()
       };
-      tt.inputs.down.on("jump", (tt => {
-        qe() || (Vt(), we(tt))
+      uu.inputs.down.on("jump", (uu => {
+        sE() || (ju(), OE(uu))
       }));
-      for (const Ot of bt.h) tt.inputs.down.on(Ot, (tt => {
-        var et, Vt;
-        null !== (et = (0, St.c)().client) && void 0 !== et && null !== (Vt = et.freeCameraController) && void 0 !== Vt && Vt.handlefreeCamKeyPress(Ot, tt, !0) && (tt.preventDefault(), tt.stopPropagation())
-      })), tt.inputs.up.on(Ot, (tt => {
-        var et, Vt;
-        null !== (et = (0, St.c)().client) && void 0 !== et && null !== (Vt = et.freeCameraController) && void 0 !== Vt && Vt.handlefreeCamKeyPress(Ot, tt, !1) && (tt.preventDefault(), tt.stopPropagation())
+      for (const su of Mu.n) uu.inputs.down.on(su, (uu => {
+        var Eu, ju;
+        null !== (Eu = (0, Pu.b)().client) && void 0 !== Eu && null !== (ju = Eu.freeCameraController) && void 0 !== ju && ju.handlefreeCamKeyPress(su, uu, !0) && (uu.preventDefault(), uu.stopPropagation())
+      })), uu.inputs.up.on(su, (uu => {
+        var Eu, ju;
+        null !== (Eu = (0, Pu.b)().client) && void 0 !== Eu && null !== (ju = Eu.freeCameraController) && void 0 !== ju && ju.handlefreeCamKeyPress(su, uu, !1) && (uu.preventDefault(), uu.stopPropagation())
       }));
-      tt.inputs.down.on("recordGame", (() => {
-        var tt, et;
-        null === (tt = (0, St.c)().client) || void 0 === tt || null === (et = tt.gameRecorder) || void 0 === et || et.toggleRecording()
-      })), tt.inputs.down.on("recordClip", (() => {
-        var tt, et;
-        (0, ht.e)() || null === (tt = (0, St.c)().client) || void 0 === tt || null === (et = tt.gameRecorder) || void 0 === et || et.saveClip()
+      uu.inputs.down.on("recordGame", (() => {
+        var uu, Eu;
+        null === (uu = (0, Pu.b)().client) || void 0 === uu || null === (Eu = uu.gameRecorder) || void 0 === Eu || Eu.toggleRecording()
+      })), uu.inputs.down.on("recordClip", (() => {
+        var uu, Eu;
+        (0, Ju.c)() || null === (uu = (0, Pu.b)().client) || void 0 === uu || null === (Eu = uu.gameRecorder) || void 0 === Eu || Eu.saveClip()
       }));
-      for (const Ot of bt.C) tt.inputs.down.on(Ot, (() => {
-        var tt;
-        if ((0, vt.c)()) return;
-        if ("replayViewerOpen" === Ot) return void wt.j.sw("replayViewer|requested", "toggle");
-        const et = null === (tt = (0, St.c)().client) || void 0 === tt ? void 0 : tt.gameReplayer;
-        ((0, ht.e)() || null !== et && void 0 !== et && et.isReplayMode()) && (null === et || void 0 === et || et.handleAction(Ot))
+      for (const su of Mu.D) uu.inputs.down.on(su, (() => {
+        var uu;
+        if ((0, du.c)()) return;
+        if ("replayViewerOpen" === su) return void Yu.h.TY("replayViewer|requested", "toggle");
+        const Eu = null === (uu = (0, Pu.b)().client) || void 0 === uu ? void 0 : uu.gameReplayer;
+        ((0, Ju.c)() || null !== Eu && void 0 !== Eu && Eu.isReplayMode()) && (null === Eu || void 0 === Eu || Eu.handleAction(su))
       }));
-      const mt = new ut(3e4),
-        Qt = new Kt(4e4);
-      let lt = 0;
-      const Mt = tt => {
-          let et = 0,
-            Vt = null;
-          const Ot = et => null !== et && et === Vt && (Vt = null, tt(), !0);
+      const Xu = new pu(3e4),
+        bu = new wu(4e4);
+      let cu = 0;
+      const gu = uu => {
+          let Eu = 0,
+            ju = null;
+          const su = Eu => null !== Eu && Eu === ju && (ju = null, uu(), !0);
           return {
-            press: () => (et++, (0, Ut.e)() || (Ot(Vt), Vt = et), et),
-            owns: tt => tt === Vt,
-            release: Ot
+            press: () => (Eu++, (0, Fu.e)() || (su(ju), ju = Eu), Eu),
+            owns: uu => uu === ju,
+            release: su
           }
         },
-        Ct = (tt, Vt) => {
-          Vt && Ue(Et.c.TouchDownFirePrimary), tt ? zt() : ((0, Lt.f)(), et().wOt()), Vt || Ue(Et.c.DownFirePrimary), re(!0), mt.click();
-          const qt = mt.getMaxClickSeparationInMs(3e4) < 1e3 / 30,
-            Dt = mt.getMaxClickSeparationInMs(1e4) < 20,
-            dt = mt.getMaxClickSeparationInMs(4e3) < 1e3 / 70;
-          if (qt || Dt || dt) {
-            let tt;
-            if (qt) tt = 30;
-            else if (Dt) tt = 50;
+        Gu = (uu, ju) => {
+          ju && FE(Nu.b.TouchDownFirePrimary), uu ? Wu() : ((0, Vu.g)(), Eu().xju()), ju || FE(Nu.b.DownFirePrimary), IE(!0), Xu.click();
+          const Uu = Xu.getMaxClickSeparationInMs(3e4) < 1e3 / 30,
+            Zu = Xu.getMaxClickSeparationInMs(1e4) < 20,
+            lu = Xu.getMaxClickSeparationInMs(4e3) < 1e3 / 70;
+          if (Uu || Zu || lu) {
+            let uu;
+            if (Uu) uu = 30;
+            else if (Zu) uu = 50;
             else {
-              if (!dt) throw new Error("???");
-              tt = 70
-            }(0, Ot.sendColyMessage)(Xt.dk, tt)
+              if (!lu) throw new Error("???");
+              uu = 70
+            }(0, su.sendColyMessage)(Cu.$j, uu)
           }
         },
-        It = new At.d,
-        Pt = Mt((() => {
-          At.d.stopRunning();
-          const tt = Date.now() - lt;
-          Qt.registerClickDownDuration(tt), et().lOt(), Ue(Et.c.UpFirePrimary), re(!1);
-          const Vt = Qt.clickDownDurationsCheck(4e4);
-          (0, Ot.sendColyMessage)(Xt.wg, Vt)
+        mu = new Bu.b,
+        vu = gu((() => {
+          Bu.b.stopRunning();
+          const uu = Date.now() - cu;
+          bu.registerClickDownDuration(uu), Eu().Bju(), FE(Nu.b.UpFirePrimary), IE(!1);
+          const ju = bu.clickDownDurationsCheck(4e4);
+          (0, su.sendColyMessage)(Cu.Ig, ju)
         }));
-      let Zt = 0;
-      tt.inputs.down.on("primary-fire", (function(tt) {
-        Zt = Pt.press(), Pt.owns(Zt) && (lt = Date.now(), Math.abs(performance.now() - tt.timeStamp) > 5e3 || (Ct(tt.altKey, "changedTouches" in tt), we(tt)))
-      })), tt.inputs.up.on("primary-fire", (function(tt) {
-        Pt.release(Zt) && we(tt, !0)
+      let Ku = 0;
+      uu.inputs.down.on("primary-fire", (function(uu) {
+        Ku = vu.press(), vu.owns(Ku) && (cu = Date.now(), Math.abs(performance.now() - uu.timeStamp) > 5e3 || (Gu(uu.altKey, "changedTouches" in uu), OE(uu)))
+      })), uu.inputs.up.on("primary-fire", (function(uu) {
+        vu.release(Ku) && OE(uu, !0)
       }));
-      const Ft = () => {
-          et().VXt(), Ue(Et.c.DownFireSecondary), re(!0), tt.Itt && !tt.Itt.position && (0, Ht.g)()
+      const ru = () => {
+          Eu().Mfu(), FE(Nu.b.DownFireSecondary), IE(!0), uu.muu && !uu.muu.position && (0, fu.l)()
         },
-        kt = Mt((() => {
-          et().QOt(), Ue(Et.c.UpFireSecondary), re(!1)
+        Qu = gu((() => {
+          Eu().Fju(), FE(Nu.b.UpFireSecondary), IE(!1)
         }));
-      let Gt = 0;
-      tt.inputs.down.on("alt-fire", (function(tt) {
-        Gt = kt.press(), kt.owns(Gt) && (Ft(), we(tt))
-      })), tt.inputs.up.on("alt-fire", (function(tt) {
-        kt.release(Gt) && we(tt, !0)
+      let iu = 0;
+      uu.inputs.down.on("alt-fire", (function(uu) {
+        iu = Qu.press(), Qu.owns(iu) && (ru(), OE(uu))
+      })), uu.inputs.up.on("alt-fire", (function(uu) {
+        Qu.release(iu) && OE(uu, !0)
       }));
-      const zt = () => et().DXt();
-      tt.inputs.down.on("mid-fire", (() => {
-        (0, Ut.e)() || zt()
+      const Wu = () => Eu().pfu();
+      uu.inputs.down.on("mid-fire", (() => {
+        (0, Fu.e)() || Wu()
       }));
-      const Bt = tt => {
-          (0, Ot.sendColyMessage)(Xt.Fh, tt, !0)
+      const xu = uu => {
+          (0, su.sendColyMessage)(Cu.Fh, uu, !0)
         },
-        je = tt => {
-          (0, Ot.sendColyMessage)(Xt.Gh, {
-            Id: tt,
-            Pd: Qe()
+        lE = uu => {
+          (0, su.sendColyMessage)(Cu.Hh, {
+            Jl: uu,
+            dl: CE()
           }, !0)
         };
-      for (const Ot of ["SpecialAction1", "SpecialAction2"]) tt.inputs.down.on(Ot, (() => {
-        Bt(Ot)
-      })), tt.inputs.up.on(Ot, (() => {
-        je(Ot)
+      for (const su of ["SpecialAction1", "SpecialAction2"]) uu.inputs.down.on(su, (() => {
+        xu(su)
+      })), uu.inputs.up.on(su, (() => {
+        lE(su)
       }));
-      const Xe = () => {
-        const tt = et();
-        tt.isGun() && tt.reload(Date.now())
+      const fE = () => {
+        const uu = Eu();
+        uu.isGun() && uu.reload(Date.now())
       };
-      tt.inputs.down.on("ReloadGun", Xe);
-      const Qe = () => {
-        let et = "a";
-        return tt.physics.testSolid.toString().includes("Cl") || (et = "b"), et
+      uu.inputs.down.on("ReloadGun", fE);
+      const CE = () => {
+        let Eu = "a";
+        return uu.physics.testSolid.toString().includes("wc") || (Eu = "b"), Eu
       };
-      tt.inputs.down.on("OpenInventory", (tt => {
-        tt.preventDefault(), (0, Tt.C)(tt, "inventory", (0, it.d)((0, St.e)()))
-      })), tt.inputs.bind("ShiftHeld", "ShiftLeft", "ShiftRight");
-      const le = tt => {
-        wt.j.sw("DropItemKeyPressed", tt)
+      uu.inputs.down.on("OpenInventory", (uu => {
+        uu.preventDefault(), (0, Au.z)(uu, "inventory", (0, Lu.e)((0, Pu.c)()))
+      })), uu.inputs.bind("ShiftHeld", "ShiftLeft", "ShiftRight");
+      const bE = uu => {
+        Yu.h.TY("DropItemKeyPressed", uu)
       };
-      tt.inputs.down.on("DropItem", (() => {
-        le(tt.mJ.hVt().crouch)
-      })), tt.inputs.down.on("OpenShop", (et => {
-        (0, ht.e)() || "inGame" === Wt.b.get("gameState") && (0, Tt.y)(et, ft.o.SHOP, !(0, qt.c)(tt.OJ.shopInfo))
-      })), tt.inputs.down.on("OpenLobbyLeaderboard", (et => {
-        (0, ht.e)() || "inGame" === Wt.b.get("gameState") && (0, Tt.y)(et, ft.o.LOBBY_LEADERBOARD, (0, ee.d)(tt.OJ))
-      })), tt.inputs.down.on("HideUi", (() => {
-        wt.j.sw("showUi", !1)
-      })), tt.inputs.up.on("HideUi", (() => {
-        wt.j.sw("showUi", !0)
+      uu.inputs.down.on("DropItem", (() => {
+        bE(uu.YG.jju().crouch)
+      })), uu.inputs.down.on("OpenShop", (Eu => {
+        (0, Ju.c)() || "inGame" === au.d.get("gameState") && (0, Au.x)(Eu, Ou.o.SHOP, !(0, Uu.b)(uu.sG.shopInfo))
+      })), uu.inputs.down.on("OpenLobbyLeaderboard", (Eu => {
+        (0, Ju.c)() || "inGame" === au.d.get("gameState") && (0, Au.x)(Eu, Ou.o.LOBBY_LEADERBOARD, (0, uE.c)(uu.sG))
+      })), uu.inputs.down.on("HideUi", (() => {
+        Yu.h.TY("showUi", !1)
+      })), uu.inputs.up.on("HideUi", (() => {
+        Yu.h.TY("showUi", !0)
       }));
-      const fe = tt => {
-        0 === tt && (tt = 10), wt.j.sw("setSelectedInventorySlotI", tt - 1), wt.j.sw("numkeyPressed", tt)
+      const NE = uu => {
+        0 === uu && (uu = 10), Yu.h.TY("setSelectedInventorySlotI", uu - 1), Yu.h.TY("numkeyPressed", uu)
       };
-      for (let Ot = 1; Ot <= 10; Ot++) tt.inputs.down.on("HotBarSlot" + Ot.toString(), (() => {
-        fe(Ot)
+      for (let su = 1; su <= 10; su++) uu.inputs.down.on("HotBarSlot" + su.toString(), (() => {
+        NE(su)
       }));
-      tt.inputs.down.on("OpenTasksAndLeaderboard", (et => {
-        const Vt = (0, gt.i)();
-        Vt ? (0, Tt.G)(et, !0, Vt) : (0, Tt.C)(et, "retentionFeatures", !(!tt.OJ._tasks && !tt.OJ._availableLeaderboards))
-      })), tt.inputs.down.on("OpenCodeEditor", (et => {
-        (0, Tt.G)(et, (0, Rt.b)((0, ct.c)()), (() => {
-          (0, Rt.f)(tt.mJ.YM(tt.lL))
+      uu.inputs.down.on("OpenTasksAndLeaderboard", (Eu => {
+        const ju = (0, nu.k)();
+        ju ? (0, Au.D)(Eu, !0, ju) : (0, Au.z)(Eu, "retentionFeatures", !(!uu.sG._tasks && !uu.sG._availableLeaderboards))
+      })), uu.inputs.down.on("OpenCodeEditor", (Eu => {
+        (0, Au.D)(Eu, (0, ku.b)((0, ou.b)()), (() => {
+          (0, ku.h)(uu.YG.bM(uu.FQ))
         }))
-      })), tt.inputs.bind("ToggleFullCoordinateOverlay", "F3"), tt.inputs.down.on("ToggleFullCoordinateOverlay", (() => {
-        wt.j.sw("toggleFullCoordinateOverlay")
+      })), uu.inputs.bind("ToggleFullCoordinateOverlay", "F3"), uu.inputs.down.on("ToggleFullCoordinateOverlay", (() => {
+        Yu.h.TY("toggleFullCoordinateOverlay")
       }));
-      const Ne = () => {
-        (0, St.c)().client.cameraController.swapCameraZoom()
+      const hE = () => {
+        (0, Pu.b)().client.cameraController.swapCameraZoom()
       };
-      tt.inputs.down.on("SwapCameraZoom", Ne), tt.inputs.down.on("OpenInviteLink", (tt => {
-        (0, Tt.C)(tt, "inviteLink", Nt.featureFlags.canUseInviteLinks)
-      })), tt.inputs.bind("Y", "KeyY"), tt.inputs.down.on("Y", (tt => {
-        (0, ht.e)() || wt.j.sw("YKeyPressed")
-      })), tt.inputs.bind("X", "KeyX"), tt.inputs.down.on("X", (tt => {
-        (0, ht.e)() || wt.j.sw("XKeyPressed")
-      })), tt.inputs.down.on("OpenEmoteWheel", (() => {
-        wt.j.sw("requestEmoteWheelHoldOpen")
-      })), tt.inputs.up.on("OpenEmoteWheel", (() => {
-        wt.j.sw("requestEmoteWheelHoldRelease")
-      })), tt.inputs.down.on("Zoom", (() => {
-        if ("inGame" === Wt.b.get("gameState")) {
-          tt.mJ.getState(tt.lL, "playerCameraAdjustment").zoomKeyPressed = !0, (0, St.c)().client.cameraController.handleZoomKeyPressed()
+      uu.inputs.down.on("SwapCameraZoom", hE), uu.inputs.down.on("OpenInviteLink", (uu => {
+        (0, Au.z)(uu, "inviteLink", Du.featureFlags.canUseInviteLinks)
+      })), uu.inputs.bind("Y", "KeyY"), uu.inputs.down.on("Y", (uu => {
+        (0, Ju.c)() || Yu.h.TY("YKeyPressed")
+      })), uu.inputs.bind("X", "KeyX"), uu.inputs.down.on("X", (uu => {
+        (0, Ju.c)() || Yu.h.TY("XKeyPressed")
+      })), uu.inputs.down.on("OpenEmoteWheel", (() => {
+        Yu.h.TY("requestEmoteWheelHoldOpen")
+      })), uu.inputs.up.on("OpenEmoteWheel", (() => {
+        Yu.h.TY("requestEmoteWheelHoldRelease")
+      })), uu.inputs.down.on("Zoom", (() => {
+        if ("inGame" === au.d.get("gameState")) {
+          uu.YG.getState(uu.FQ, "playerCameraAdjustment").zoomKeyPressed = !0, (0, Pu.b)().client.cameraController.handleZoomKeyPressed()
         }
-      })), tt.inputs.up.on("Zoom", (() => {
-        tt.mJ.getState(tt.lL, "playerCameraAdjustment").zoomKeyPressed = !1
-      })), Pe();
-      const ae = tt => function() {
-        return ye(), tt(...arguments)
+      })), uu.inputs.up.on("Zoom", (() => {
+        uu.YG.getState(uu.FQ, "playerCameraAdjustment").zoomKeyPressed = !1
+      })), vE();
+      const DE = uu => function() {
+        return YE(), uu(...arguments)
       };
 
-      function Me(tt) {
-        "inGame" !== Wt.b.get("gameState") || (0, Tt.u)() || (wt.j.sw("ctrlCrouchWithoutFullscreen"), tt.preventDefault())
+      function gE(uu) {
+        "inGame" !== au.d.get("gameState") || (0, Au.t)() || (Yu.h.TY("ctrlCrouchWithoutFullscreen"), uu.preventDefault())
       }
-      Ee = {
-        primaryFireDown: ae((tt => {
-          const et = Pt.press();
-          return Pt.owns(et) && (lt = Date.now(), Ct(!1, !1), tt && It.start()), et
+      cE = {
+        primaryFireDown: DE((uu => {
+          const Eu = vu.press();
+          return vu.owns(Eu) && (cu = Date.now(), Gu(!1, !1), uu && mu.start()), Eu
         })),
-        primaryFireUp: ae((tt => {
-          Pt.release(tt)
+        primaryFireUp: DE((uu => {
+          vu.release(uu)
         })),
-        altFireDown: ae((() => {
-          const tt = kt.press();
-          return kt.owns(tt) && Ft(), tt
+        altFireDown: DE((() => {
+          const uu = Qu.press();
+          return Qu.owns(uu) && ru(), uu
         })),
-        altFireUp: ae((tt => {
-          kt.release(tt)
+        altFireUp: DE((uu => {
+          Qu.release(uu)
         })),
-        jumpDown: ae(Vt),
-        specialActionDown: ae(Bt),
-        specialActionUp: ae(je),
-        reloadGun: ae(Xe),
-        dropItem: ae(le),
-        swapCameraZoom: ae(Ne),
-        pickBlock: ae(zt)
-      }, tt.inputs.down.on("ctrlCrouch", Me), tt.inputs.up.on("ctrlCrouch", Me), tt.inputs.bind("ctrlCrouch", "ControlLeft");
-      const be = tt => {
-        "inGame" === Wt.b.get("gameState") && tt.ctrlKey && !(0, Tt.u)() && tt.preventDefault()
+        jumpDown: DE(ju),
+        specialActionDown: DE(xu),
+        specialActionUp: DE(lE),
+        reloadGun: DE(fE),
+        dropItem: DE(bE),
+        swapCameraZoom: DE(hE),
+        pickBlock: DE(Wu)
+      }, uu.inputs.down.on("ctrlCrouch", gE), uu.inputs.up.on("ctrlCrouch", gE), uu.inputs.bind("ctrlCrouch", "ControlLeft");
+      const ME = uu => {
+        "inGame" === au.d.get("gameState") && uu.ctrlKey && !(0, Au.t)() && uu.preventDefault()
       };
-      document.addEventListener("keydown", be), document.addEventListener("keyup", be), document.addEventListener("keypress", be), tt.inputs.bind("Alt", "AltLeft", "AltRight"), tt.inputs.down.on("Alt", (tt => {
-        tt.preventDefault()
+      document.addEventListener("keydown", ME), document.addEventListener("keyup", ME), document.addEventListener("keypress", ME), uu.inputs.bind("Alt", "AltLeft", "AltRight"), uu.inputs.down.on("Alt", (uu => {
+        uu.preventDefault()
       }));
-      const Je = et => (0, pt.i)(tt, et),
-        Ce = et => (0, pt.k)(tt, et),
-        ue = [0, 0, 0],
-        Ke = [0, 0, 1];
-      tt.on("afterRender", (et => {
-        te.o.frame(et, tt.camera.heading, tt.camera.pitch, te.j.drawn), (0, Dt.g)(tt.camera.heading), (0, pt.m)(tt, ue, Ke), (0, St.c)().client.triggerGameCallback("onAfterRender", et, {
-          cameraHeading: tt.camera.heading,
-          cameraPitch: tt.camera.pitch,
-          cameraPosition: ue,
-          cameraDirection: Ke,
-          tanHalfFovX: (0, pt.d)(tt),
-          tanHalfFovY: Math.tan(tt.Bf.XT().fov / 2),
+      const eE = Eu => (0, Tu.h)(uu, Eu),
+        GE = Eu => (0, Tu.i)(uu, Eu),
+        pE = [0, 0, 0],
+        wE = [0, 0, 1];
+      uu.on("afterRender", (Eu => {
+        Ru.q.frame(Eu, uu.camera.heading, uu.camera.pitch, Ru.i.drawn), (0, Zu.f)(uu.camera.heading), (0, Tu.j)(uu, pE, wE), (0, Pu.b)().client.triggerGameCallback("onAfterRender", Eu, {
+          cameraHeading: uu.camera.heading,
+          cameraPitch: uu.camera.pitch,
+          cameraPosition: pE,
+          cameraDirection: wE,
+          tanHalfFovX: (0, Tu.e)(uu),
+          tanHalfFovY: Math.tan(uu.tO.uR().fov / 2),
           screenBandPct: {
-            x: xt.d,
-            y: (0, xt.m)()
+            x: Hu.b,
+            y: (0, Hu.h)()
           },
-          projectWorldPosToScreenPos: Je,
-          projectWorldPosToViewport: Ce
+          projectWorldPosToScreenPos: eE,
+          projectWorldPosToViewport: GE
         })
-      })), tt.camera.pR = (0, nt.startLookDebug)("js"), tt.inputs.HI = nt.noteLookDroppedCopy, (0, st.v)("remesh") && (0, Ve.j)(tt), tt.on("beforeInputs", (() => {
-        if ((0, vt.c)()) return tt.inputs.rU.dx = 0, void(tt.inputs.rU.dy = 0);
-        if (tt.camera.rU.dx += tt.inputs.rU.dx, tt.camera.rU.dy += tt.inputs.rU.dy, 0 !== tt.inputs.rU.dx || 0 !== tt.inputs.rU.dy) {
-          tt.mJ.getState(tt.lL, "playerCameraAdjustment").lastPointerMove = Date.now()
+      })), uu.camera.IK = (0, zu.startLookDebug)("js"), uu.inputs.qV = zu.noteLookDroppedCopy, (0, yu.p)("remesh") && (0, EE.i)(uu), uu.on("beforeInputs", (() => {
+        if ((0, du.c)()) return uu.inputs.wL.dx = 0, void(uu.inputs.wL.dy = 0);
+        if (uu.camera.wL.dx += uu.inputs.wL.dx, uu.camera.wL.dy += uu.inputs.wL.dy, 0 !== uu.inputs.wL.dx || 0 !== uu.inputs.wL.dy) {
+          uu.YG.getState(uu.FQ, "playerCameraAdjustment").lastPointerMove = Date.now()
         }
-        tt.inputs.rU.dx = 0, tt.inputs.rU.dy = 0
+        uu.inputs.wL.dx = 0, uu.inputs.wL.dy = 0
       }));
-      let he = 0;
-      const ve = [0, 0, 0],
-        We = [0, 0, 0],
-        Se = {
-          base: ve,
-          max: We
+      let JE = 0;
+      const dE = [0, 0, 0],
+        aE = [0, 0, 0],
+        PE = {
+          base: dE,
+          max: aE
         },
-        ce = tt => {
-          const et = rt.e.droppedBlockSize / 2;
-          return [0, 1, 2].every((Vt => tt[Vt] >= ve[Vt] - et && tt[Vt] <= We[Vt] + et))
+        oE = uu => {
+          const Eu = Iu.e.droppedBlockSize / 2;
+          return [0, 1, 2].every((ju => uu[ju] >= dE[ju] - Eu && uu[ju] <= aE[ju] + Eu))
         };
-      tt.on("BQ", (function(et) {
-        wt.j.sw("noaTick", et);
-        const Vt = (0, St.c)().client;
-        if (Vt.triggerGameCallback("BQ", et), Vt.isClientGameSessionActive()) try {
-          jt.c.BQ(et)
-        } catch (mt) {
-          console.error("Error ticking audio entities", mt)
+      uu.on("Tb", (function(Eu) {
+        Yu.h.TY("noaTick", Eu);
+        const ju = (0, Pu.b)().client;
+        if (ju.triggerGameCallback("Tb", Eu), ju.isClientGameSessionActive()) try {
+          qu.e.Tb(Eu)
+        } catch (Xu) {
+          console.error("Error ticking audio entities", Xu)
         }
-        if (!tt.mJ.aVt(tt.lL).isAlive) return;
-        Date.now() - he > 9e3 && (! function() {
-          const tt = (0, St.e)();
-          "number" === typeof tt.OJ.speedMultiplier && "number" === typeof tt.OJ.jumpAmount && (0, Ot.sendColyMessage)(Xt.bi, {
-            Md: (0, ot.f)(tt.OJ.speedMultiplier),
-            bd: (0, ot.d)(tt.OJ.jumpAmount),
-            Jd: (0, ot.f)(tt.OJ.crouchingSpeed),
-            Cd: (0, ot.f)(tt.OJ.walkingSpeed),
-            ud: (0, ot.f)(tt.OJ.runningSpeed),
-            Kd: (0, ot.d)(tt.utt),
-            hd: tt.mJ.fet(tt.lL).jumpForce,
-            vd: tt.mJ.RY(1).width,
-            Wd: tt.mJ.RY(1).height,
-            Sd: tt.mJ.YG(1).Sd
+        if (!uu.YG.AEu(uu.FQ).isAlive) return;
+        Date.now() - JE > 9e3 && (! function() {
+          const uu = (0, Pu.c)();
+          "number" === typeof uu.sG.speedMultiplier && "number" === typeof uu.sG.jumpAmount && (0, su.sendColyMessage)(Cu.hi, {
+            Nl: (0, Su.g)(uu.sG.speedMultiplier),
+            Ol: (0, Su.d)(uu.sG.jumpAmount),
+            Yl: (0, Su.g)(uu.sG.crouchingSpeed),
+            hl: (0, Su.g)(uu.sG.walkingSpeed),
+            Dl: (0, Su.g)(uu.sG.runningSpeed),
+            gl: (0, Su.d)(uu.puu),
+            Ml: uu.YG.qEu(uu.FQ).jumpForce,
+            el: uu.YG.wT(1).width,
+            Gl: uu.YG.wT(1).height,
+            pl: uu.YG.SF(1).pl
           }, !0)
-        }(), he = Date.now());
-        const qt = tt.mJ.hVt();
-        if ((qt.jump || qt.forward || qt.backward || qt.left || qt.right || qt.sprint) && wt.j.sw("usedKeyboard"), tt.mJ.VVt(tt.lL) && !0 === tt.OJ.canPickUpItems) {
-          const et = tt.mJ.YM(tt.lL),
-            Vt = (0, Jt.q)(He),
-            qt = (0, Jt.t)(He);
-          ve[0] = et[0] - Vt, ve[1] = et[1] - .6 * qt, ve[2] = et[2] - Vt, We[0] = et[0] + Vt, We[1] = et[1] + rt.e.Yy + .6 * qt, We[2] = et[2] + Vt;
-          const Dt = tt.mJ.jjt(Se, tt.mJ.names.autoRotate),
+        }(), JE = Date.now());
+        const Uu = uu.YG.jju();
+        if ((Uu.jump || Uu.forward || Uu.backward || Uu.left || Uu.right || Uu.sprint) && Yu.h.TY("usedKeyboard"), uu.YG.vEu(uu.FQ) && !0 === uu.sG.canPickUpItems) {
+          const Eu = uu.YG.bM(uu.FQ),
+            ju = (0, eu.o)(qE),
+            Uu = (0, eu.p)(qE);
+          dE[0] = Eu[0] - ju, dE[1] = Eu[1] - .6 * Uu, dE[2] = Eu[2] - ju, aE[0] = Eu[0] + ju, aE[1] = Eu[1] + Iu.e.Ih + .6 * Uu, aE[2] = Eu[2] + ju;
+          const Zu = uu.YG.Plu(PE, uu.YG.names.autoRotate),
             {
-              itemDropPrediction: mt
-            } = (0, St.c)().client,
-            jt = Ot.offlineInputReplay.holdsInput();
-          if (Dt.length > 0)
-            for (const Qt of Dt) {
-              const et = tt.mJ.getState(Qt, "itemState");
-              if (void 0 === et || Date.now() - et.creationTime < 500) continue;
-              let Vt = Qt,
-                qt = null;
-              if (et.Fq) {
-                const tt = mt.pickupTarget(Qt, ce, jt);
-                if (null === tt) continue;
+              itemDropPrediction: Xu
+            } = (0, Pu.b)().client,
+            qu = su.offlineInputReplay.holdsInput();
+          if (Zu.length > 0)
+            for (const bu of Zu) {
+              const Eu = uu.YG.getState(bu, "itemState");
+              if (void 0 === Eu || Date.now() - Eu.creationTime < 500) continue;
+              let ju = bu,
+                Uu = null;
+              if (Eu.SU) {
+                const uu = Xu.pickupTarget(bu, oE, qu);
+                if (null === uu) continue;
                 ({
-                  pd: Vt,
-                  sd: qt
-                } = tt)
+                  Sl: ju,
+                  Bl: Uu
+                } = uu)
               }
-              const Dt = tt.mJ.getState(Vt, "itemState");
-              if (Dt.Fq && null === qt) continue;
-              let lt = 0,
-                Et = null,
-                ft = !1;
-              if (0 === Dt.amount) ft = !0;
+              const Zu = uu.YG.getState(ju, "itemState");
+              if (Zu.SU && null === Uu) continue;
+              let cu = 0,
+                Nu = null,
+                Ou = !1;
+              if (0 === Zu.amount) Ou = !0;
               else {
                 const {
-                  amountPickedUp: et
-                } = tt.mJ.tVt(tt.lL).pickUpItem({
-                  name: Dt.name,
-                  typeObj: Dt.typeObj,
-                  amount: Dt.amount,
-                  attributes: Dt.attributes
+                  amountPickedUp: Eu
+                } = uu.YG.kEu(uu.FQ).pickUpItem({
+                  name: Zu.name,
+                  typeObj: Zu.typeObj,
+                  amount: Zu.amount,
+                  attributes: Zu.attributes
                 });
-                if (lt = et, 0 === lt) continue;
-                Et = Yt.d.pickUp(Dt, lt), Dt.amount -= lt, Dt.amount < 0 ? console.error("Picking up led to less than 0 of item!") : 0 === Dt.amount ? ft = !0 : Dt.creationTime = Date.now() + me
+                if (cu = Eu, 0 === cu) continue;
+                Nu = tu.b.pickUp(Zu, cu), Zu.amount -= cu, Zu.amount < 0 ? console.error("Picking up led to less than 0 of item!") : 0 === Zu.amount ? Ou = !0 : Zu.creationTime = Date.now() + ZE
               }
-              const wt = (0, St.c)().client.inventoryPrediction.record(Et);
-              (0, Ot.sendColyMessage)(Xt.yh, {
-                pd: null === qt ? Vt : "",
-                xd: lt,
-                Td: Ht.f,
-                Tm: wt,
-                sd: qt
-              }, !0), ft && (jt && mt.onPickedUpOffline(Vt, wt, qt), null === qt && tt.mJ.deleteEntity(Vt));
-              dt.e.play("pickUp", rt.e.pickupSoundVol).rate(1 + Math.random() * rt.e.pickupSoundRateVariation)
+              const Yu = (0, Pu.b)().client.inventoryPrediction.record(Nu);
+              (0, su.sendColyMessage)(Cu.Bh, {
+                Sl: null === Uu ? ju : "",
+                Il: cu,
+                Fl: fu.h,
+                xX: Yu,
+                Bl: Uu
+              }, !0), Ou && (qu && Xu.onPickedUpOffline(ju, Yu, Uu), null === Uu && uu.YG.deleteEntity(ju));
+              lu.e.play("pickUp", Iu.e.pickupSoundVol).rate(1 + Math.random() * Iu.e.pickupSoundRateVariation)
             }
         }
-        if (!tt.mJ.oet(tt.lL)) return;
-        const Dt = tt.inputs.rU.het;
-        if (0 !== Dt) {
-          const et = Dt > 0 ? 1 : -1;
-          tt.inputs.state["mid-fire"] || tt.inputs.state.Alt || !tt.OJ.useInventory ? (tt.inputs.state["mid-fire"] && wt.j.sw("requestEmoteWheelClose"), (0, St.c)().client.cameraController.handleScrollZoom(et)) : wt.j.sw("ScrollInventorySlot", et)
+        if (!uu.YG.GEu(uu.FQ)) return;
+        const Zu = uu.inputs.wL.NEu;
+        if (0 !== Zu) {
+          const Eu = Zu > 0 ? 1 : -1;
+          uu.inputs.state["mid-fire"] || uu.inputs.state.Alt || !uu.sG.useInventory ? (uu.inputs.state["mid-fire"] && Yu.h.TY("requestEmoteWheelClose"), (0, Pu.b)().client.cameraController.handleScrollZoom(Eu)) : Yu.h.TY("ScrollInventorySlot", Eu)
         }
-      })), yt.b.subscribe("droppedItemScale", (tt => {
-        He = "number" === typeof tt && isFinite(tt) ? tt : de
+      })), hu.e.subscribe("droppedItemScale", (uu => {
+        qE = "number" === typeof uu && isFinite(uu) ? uu : XE
       }))
     }
 
-    function Pe() {
-      const tt = (0, St.e)();
-      if (tt)
-        for (const et in bt.r) {
-          tt.inputs.unbind(et);
-          for (const Vt of bt.r[et]) tt.inputs.bind(et, Vt)
+    function vE() {
+      const uu = (0, Pu.c)();
+      if (uu)
+        for (const Eu in Mu.z) {
+          uu.inputs.unbind(Eu);
+          for (const ju of Mu.z[Eu]) uu.inputs.bind(Eu, ju)
         }
     }
-    Re(ae = {}, Me = ['=37!VRzU2@wR$"@$R}!VTc#q804', "#hQ}8x9ng/1i{", "^HF#)6y.4rQ.O6iq{h)si6vq|1.GCu", 'N(|*#"{q)hQ<{', '`34&xQ34TMQl"m$F]rJ:C!*R9X}YP"LR&$:V>>]PiX<jrN*', ".3o&SO=0HLUakwT,J<<24YxUO=8LkwV#Y1V!$Uvi|>C0.>fS(f;EUQ102@=s5", ">uG;{W#v2OyG0HP^dOHPDwTPeh!jh/O7m(f|MeKPVSUi8,3,9@u", "Mn8s:;(,mhw>/6|$C_9P:i@0|<jmjFCIvCL2Z}Uq%LI3B}1e", '11<1#"$Ru2gpO6N$P@f|MN5', "WH81xd<UhS0", 'fULsF"(R>3t)`UbeG(fl+Q$T_=>f"/3r/BcE^Q3<N>4Nwh*F=5', "oOTfD0]RI@I&&/5_de<fd!`vtqFOoi/Fx_F:J%j4xS|/+/wWc37vvZ*R*p^", '.nhT0K(*23WpmigF@hnVF`iv#@Rv^uw#k3^vGQZ!KL7aE>#U9&fVx"5', '0",2(amDl1()Phren&R!@P?q^OZ900]]@1{#RAE(YMkyA>5z43bf', "#>mB{>5RQ1h)AHr@<n|*G`6)f", '8WaYYY6Xf1kyh#4Ia1gv)EI780=weX5TbWi!I"0,BGs9C`S$~1zTERY<U2', 'N$bP.>ZPN2~e"0"78"J', "x.?Ph!v{B2I;xf", "qST+^dOZg=YY~u!Iv1bs<W:4J1aj6w/", "f1R+A&+cP2S,@}UrB>r1jOa(?/>w4II4,>+scW5", "BNwY_YU.L>|s:`@^hS&**)hi#rk>6Rt4x2x#/", "?.i}R:uXOj}w~~gWS2(+o.qc(", '^@aYqiNS>rb<0A"4:nl!ti"4S>q)uuC]KNQE@', "Ls<sv6&c?=6DiRHI`u)sG}>T%q;E{", "[_7pQE=Sdh5}BunHF}r(H=;vBhn>g}oR;3K+T", "m951&9E(.0!%nhBSH!n72ZkiV%7Pw`0[%2l+=m5", "VOEFq.BZ(L,", 'a"ds}RQvg=DfbF#^9u2(', "{U6(FEgS>=wy6aRTFHj7#cPPk@t3fu?#L1Q+9O8,|1Q|{><zGnS7:iSRjr", 'a&31j!<zL%|sg}{zWu{&+}rUBGQ!jmHH="Q+wOQis3*z9i(S;Nu', "[z(+<Vm,yqtm~}`#B>#VS`j%lqHpc]_F[HWY3afRK1Hs2AZeU7/v", '0O*dhECRQq/a]Y2Ik=)sB"Kw{221}9t$ku];y%aDp"#', "8e]fRQTJc*|SO6j]RHR7G}*,Lh0VARAU#h]+OK]L#r", '+7r&O!TPu2OMnuq$k/iFz]dS2pZS{N~#lFcPnDqq%Lp@cJ"R]1v(', "_rpB4sED|2yS{", 'v<=&neL!pOp~1ANWQ">;6]5', "XD|a/.`Ud%N^96C", ".z^7HstD(", "|$T+P=?q)C_", '$(P!k]s{%LfAV,[qBetvRUfT"*EYeY`e6=ifh]2Xz0Jc>"(I8N(P[U`Q`q', "~<0&Q.Wq|2Wr_0CqrF#a2ZD$.OGN:/C@i1CVa>*0&1eE^f<rkOJ", 'Y_*2g9!Z&.KB[Ao^B&9+#}*D["IOP`2', "~H[B5a4c32H)Um[I0NPVrRaSk0q(:9t^lUJ", "*<QFN:#c)*&M:/JHKu2&f!kiZLT+C}9S", "S&%pdEv6&2|w[I2]>/u", "9u]Pw!I4.@D,0Xxrbe=(*e5", "[rI#}|9n:jF", '_(@!|D@w?GDE:uBrZ(7va!oCAj5x+|NeTh)YOeRSg"z(cm7r`5', ':+;2"efTy2Lj~`MHU7[BRQ;{', "Qs(;aR$P(", "B!k&=&.:TSUuN#Mririp#", "ez;f%=#:?j/T3R[Fd@SB_Yf[OjaUJ6;U#1Y#0>uIm1[", "G<mVZ.%v,0Ue3fN#2<V^LKaPEj?NY>)#hY9v:6$,AO[;</[WPzQF;90J", '0"V!3alvNC5d{N~e3N3BlRZCa0aVeF<r`WN(@$9TX"xE3f', "Hn1Y5eJT:rBe{", "AzgVr6%Q,@Sah]hFthITrP<.q2$sNa~#", 'F1Ws0&uX^O(nINweH(GvvZeTr.9s*hm^RNeV/.=JA=v#B"Ar*UWf', "<z,YNY]0Nh9^~#~W$N:|v6Ow_rE{XaySce,1J>pZJ>nwF6F7", '`I2dR"LDD"+/U|aqD@%;K]ODD*j:h}9,XD;^m`%vf2=', 'e29^3Rn0NCVwIa7z4zBT5DcQ2rbh!6BTYC"BqioO8@i=miMRqB>!^c5', "jF9;WcDTv;8.ifoRm@aYO>5", 'lU*("aYvo3`hvF(', "EeKF9aIcIOxEw}@#&u?+0eQvDGl@lKF[LNAv", 'LnB(h}!,z08.}/77?F[#c&p,{h89""Q#vn9}1DwPCr*3W9L,snif', '9N{B6.3U4/3YG~jIH7)PlNiXhS_"n`u+^zpBw;@w+hDOB`l+Tn%p)}Azu2g', "(Cg!0%Q4/<Ky{", '"@|*GQ)&rh/e{', "SD~xIc;v!3BE`ck^@hI#RnP!HX[wJ]P^SH9fmx5", 'YF2&2N}:|1O"{~v', 'o?,xg<u40j$"r~nrajZvI$)4_/=UcmdFf>[#xAE!%qawU"`e]!5196tJ', "2nkBPaMSUqKlGa#UiOd+4n4Xl", 'e>;1%=u%X/^#LhvH{U%v"9r%<hiBRuOzI{', '8NXvpE5*y.j)Hf)$;?"%xQbU#OpA2~pIUuz^g9(*Djmtf#Ie', "j<n;SRPJ", "YHb2pZh43SwRv|8t=nA;yNd0YCA{#mEF;Nif", "NCA;_w4./Gk9CRsI%$:l3DVif", "dH$TeYk.bX+#KuyI+7Wf", "8r]+zd?.#/NPJH=[Y$1v[YLZO=/0Ku", "1nlPcW(R{S_", "LsApnDrI*r7i2NeH}n^VtEW:XGI0funT", "B2D+Hs7Uu", '1(r:a)d,n.!w99"7DCu', '&&&*"9<.)%fm0Ym$[$,dD<`XJq_G)9{r1&7^r6J[C3pp)9"r.5', "I!*1:N!(>/5nz]XqQ[y7/O6iSCg;raP#)5", '834a@"%XKXfalKyS=ua1;Dx<a0[', '}&X+;D<7o"[M3f*I(nW(oE^J{S@#IN07XHP!3Nb.rSeN[XIe6H5T@', 'lYs&Y99Sz@n%SH>T3O^p&YqvoOUaw,FRX}t;qiBC"*VBzF"zK"~2', "^_Ns}!Qzl", "w=Ns(6wClLo*Xa=^Ozvx=9zvJ1$r|I$]5>&pcHr6UqL^8UuHtBUa>N5", "o[K!rPc4V/m9BaF4}1m7,$;vchX#l>Y$,@cYqOBwf", '/HV!rR$,i19^.>q4E?1;R",J', 'O@52[AM!|CZ9~}x,lf0*Tcqco"w6PuEq7DkB4Y8exCwy}FQeD&J', "5M?p=WX%+<u:tH$]AncE`dS!iq", "4}%!RU%UFrGNkf{+92^VyN<&;0S:[IBRI_OvUU5", "qh?v7cRPnLYijcS$57t;a;3znLEwYau+`(<PB}%7~.f)yhx[69qpXN5", "Rb)!0s>c", "~t&nhgi)t?+p.8ff!%>j&&2|i9mA@kL", "8u#s:|jww9(", "*CXPkVeA", "~hT525RV", "klV5)K>V", ">L7fuIds", "5g4~&QiSX)sNW", "VE~l/oP`|#oZA", "v>}Z(R}}M<zCI", '63]"$o{+_w', "3}98k7ks1v[cVg[*#6t#[j8=0", "xFa142^OEkrn2gbQ0MtpJ>sF5", "^TcSm`R+AMW^ZE!_xFtpU32CV", "xJdSiy;V|>hGnaFSDT*pQ(/C3PO!ls+f{lvqT", "Fy#=Hj_.T?g2/29B0{h%9jEqvtJc&;)L(m1=s", "TFtpZL/CTrYEK6yJzc4U.cA^(kx!VgU?+lvqX", "y404a[ROOD|NSEp?6WXp.crO=?6!VgSMulXpT", ',iXpO*J.&4E7ryz3Ia"o/eJN+5}R_gSM/lI', "wP$tD}/C", "7#O)fKqx", "r:8L8MCx", "_<I@>,n~", "J(W2b2fN", "*nB?1$^r", "r8FXrZEn", "J`[I;$e", "d|B??$lr", ":wmy(Qbk", "^Hg4$FL=", "(sMNMYz=", "1vP%CWGx", "Z<=9OrbG", "05^.5t&H", "A+kX", "io@}+mk{"]), Re(be = function(...tt) {
-      Re(tt[We[12]] = We[2], tt[We[5]] = [function() {
+    kE(DE = {}, gE = ["3HbPiP>:ylL537zcuU6lB.&j&lQ}gT/=Uu)1@ZO=+l", 'dR6R9nH?sw7Zi8?"4vk1J&gna8#6<gB+Rv(#c,)1<qA;>VcKnPH', "xh>AsQ}S&l|.o*$=v7lbML8~8f}!m?Gh^K/,x1;Qsl", "}gp#jSr5_k~7e(*K2GryL6[[:+q", '<]waeg(t9~hWc%=~BrM,a(EkEqei(Q1*`XBXo.BF+v"H^=?', "AWN,@ZUS_k_h%E<Fj1nfh3y?=UwGJc4C5L_l", "#S2#xsYVrkU[WHTNR8GAk[j&a@hN5:>", "EH+c[fO=cDOi~dH&C*v,F}u}X", "uX^lTh<qT`^`h4!j:5H", "wXkA#uR~jww6A:qtH8uP%a&@2LV2)P=WwPZdaSbNNO4XDh@", ",]ME/a?0VUw63h?cCyIA?ZJ", "gyV#|0PBCQd6=<CkR#G#i", "`,*cA9[osk2Bg[QK2L*cx7>fD~*XV:f=wvOXnyo/r@P}LDl", 'kyOy^P"&$O2YCVfKpL.X', "u|TowPko7@", "kyznl9!tT`CKT?zKUmbP}nZ@rlF7aMr&duV", 'b,!t?[%@oxI[!%j]((%y6.KN"q`(Lh*&whcA5vpL[?zvB', 'lP`U/P6y/"^`tRw*zGMUofOtW@?.3N4CO+dx+.B=l+9!J', "g7|nJGF=8fJyjd/4FqtZ;84Qwi>xMHc+*w|a.C45OvkNRCyFS7fZg&a9aw", "YPs#C=kf7@+2M<@TPJ", "S@Sj~9sjvYT.6*H:`W7E~T~;^?kWE4G|*tHd", "z(bEa=>F,Dr;Rw@", "bY#,l&2oU`;ys?_K{H]y72J", "wUt1sA0zA(~6rD,WJE>x", '>qSll.J;wrjMG%lWXItW!9g@&U`}N4gNS"!d;&a[A(GWP*OWOWbKk(NN"kn', "FPix(gc[aqqA|VicQm[x", '7Ps;38^neO(oHg/tEP8ANPS@"qy=FM3=UPmZ:nbSdQ)!qMZ*Dq,XS%yto', 'CtLnH5>v^QLrn<[N|83njb<F)k!(P*vh7qyA]2G{^"l4l)mcT8xM;7K&nk', '4UUKJ&k0"l', '<(.RZ7C0"U#MzEl', "?qvX:b)GEvzgJ&PT@uJc^0[FEqvR{:ahiPfx!MPqZDiya4p&uJ", '}h/,|n1@"lw2DT(tM7noB.=t?L;l^w=~A(gEu5!y5iT6~*%StG$XU)[oK+', 'iy]y1Te@^+f,w%2k5+BX+<[278%~Zw`ttugo{zQSM",,1*pFY7;acbvBu?', 'uyHsyChkvY1A}RJj7ULZZZgX."@jO&aWMY#XUhEo/Q9;O8_FiuV', 'o@>tin;{~U;UU:#~<Ku*m}ZSA~8A*T/Fs"BX', '$O5RHG"V8O2YzN]*bLA*v5Wo8O/897P:BRUn.QV&yU=ZF:Q=[K{oXGJ', "A(*#)[;j#@Ztx3_K3UNXf%4&2L<~U34Gn7ME<9fF=8LgrD|t%mAsm%LV", 'O7iW1&:9xLn,b:ECe@nx37ejS?@"A&xTsWV', '$H@A4.|fF"FD=T[WH|5ZCvAFC?$5rh7C:wMlr)QV&k@x.gK&fJ', "Rr&A[.z+5wME9N&NT|zW7Q4n`l:x_9H~LH}lB8=?!l8A(H`jAuutq5#@d", '^KI#?.u5"U0[B', "Th!#h,#NX", '?q|X"(qv]"m[ih;', "*8;2x7$t*L5,&7w*N5/Ufv9=A;%89&qF", ",mnoaS>?d?", "3L8W^aN&%k3}.HMk^CY,CE[F+lsij3%K#8YXdf1j8DQ}002*?h4l@", "mGHAGS4{u`}Y+&4GehFXGbJ;8L^#y%MT97=x*nX5I(%wG:/=|B", "sS1ypn2yswx|L?j=RP*to&Cq;.To+M#&ovh1hS`uh?", "eyn.`7;;}@`r^<OWwqwn`6S&+qu==*wC&PTl", "+*_RX9Wk(Y+y|V,T.PeoO)1G_Q!,QgGh_y#X", 'TI.ZNSnV]+8APg"G}y:c6Z&&<@h[B', "Xq>ttSmk?~#+!gDSxh=#W(w?i`6&=D]WmI5o", "QPzWAs){xDM}[&)GKUV", "2+RAT%#N[?Z&Y(c=K5H", "ryNU+9*Nef{&Zcx*x5q#rL6yIYLgJCZkcU<d&=of!@^5|*$4Oh.RRMJ", "KPjW)<>BS?#O1:J&sX`Eh=XgIOvRr[4*dtZs>L>:3YK[z[}Chyio~", "k8a#is(FqL)g<H0*vXQyu.|t+w9BSHu+3hbRPLat|`cNER.ttPet+PYQX", "4U>1A9mq8+iXzRt]iyH", 'r7|E5}+0"?wj?MqF(G"tM6a[DrZBRce:~h4aV8/B', "5Lnf5QfB", "XPWX]}co|?1>JPeC`(?n@.vt%vAfr:(+SIJbG,v?<k", "QPsAhSeSwrh,wcM*]O|EIgJ", "dPzna}%Gef$5WTI*@hzo", 'rH]#.)rjm~|H.gPW8W_Ro[[tr@>3zNvh3"+cbL"}8D>M0w;', "8+;bU57}i?+N|DQFy7.XK", "glNl3GJ&,D|7uH", '/gQyRf`54~<gpE<cO,lj"L&@]+At*dg:,up;X1hknU[~]:vhwh:c&S8Nl..', "?I_RB5j@klY", ']ts;?Zif}q3YtR8|S*?xFY7n`8@xW*&hf"5.qf>oBrB2Bd', "Gy,X.Cp@ZLu=@cBW6:oa[6P[GUv(%:X:3,V", "[7ljM9snd`C7d)Q]Mm$X_Z]QVl&KfM&W<(!tK}A[3>JuvH0S3UM,Q5oB", "Qlz*iZPo~@9#}(p]v|z*{m7{q+c[|(r&bubR<<%n4rb>&<,Wu|g.g8J", 'sPPUl.i?Wi]o1[3=7"k#3855x+.DwD/G4lx#eyQV', "SOmKV{G~d?", "?5gKW0L~nqB%n<!j<7`,^P)@o", "^mXZ+qb5jr(AvcB&i*pye%ZGrqb_8<~K#H/l", "z7T,69pSYO/9cDx*9OXW~Z!y;x>2oH)_i5PnZ1JNu?$9JH", "C1nt.Gxj+UaHXh;T", "LK(;T%O=2L<1}8ZCqLB", 'Y+nA%mxQl"_G981*N5/,u&(teLVGo*T:B@/RPf"Vo', "*wLW6qGnLf}9}0eC]*!#XLz+y@$BGE=+8H;UK", "WqClWb7j0wG75:0cRwTnaEpG7llc[NnK+@1y9&rj~8U", 'xhToXMJQ+qrvksIkRvS2!LQN"lo%?&G+<y_.4', ":1JX>seQy@S,8R$]!h#Elq`5PQODuwL|AJ", "Vlwn{PbN3;bw97ptZ+XnFYB[#rw%JP;", "x#gnp,^G!UENRw8+SyUnD7r}5;_ZIV", "C*fx)LRN|`=HNP!W|1Do", ")(Qfb9XNi`Yn3NYK?ItW&Uitk@GL(%c=s7V2)<2B%l@39R:=", "Am+bEg<F+lWZ}(;kt8H", "Dv`ELGAB3LRuZ&uTvW`U}ssS1>lO7w:GsHZA*q4N!87", "dEd._[&QtLT,d3a|?81;m2a9`8e[F?sGVUAsL8J", "E7gWv)5n7wZtWV", "tyxw;*!r", "caM54p4{", ";G}rVNBH", "(_@7@XiH", "lfhu/geF", "@`fM^h^N", "J^Tl*ywv", "aD.V8yu", "?YTlly%v", "(&V(v|FT", "eyNod+DT", "pFl3(ZAA", "46+q6Rs=", "ZkiA"]), kE(ME = function(...uu) {
+      kE(uu[aE[12]] = aE[1], uu[aE[5]] = [function() {
         return globalThis
       }, function() {
         return global
@@ -3248,966 +3248,853 @@ export const modules = {
         return window
       }, function() {
         return new Function("return this")()
-      }], tt[-We[13]] = We[18], tt[-We[14]] = []);
+      }], uu[aE[2]] = aE[16], uu[aE[13]] = []);
       try {
-        Re(tt[-We[13]] = Object, tt[-We[14]][We[26]]("".__proto__.constructor.name))
-      } catch (Me) {}
-      tt: for (tt[We[15]] = We[2]; tt[We[15]] < tt[We[5]][We[12]]; tt[We[15]]++) try {
-        for (tt[-We[13]] = tt[We[5]][tt[We[15]]](), tt[We[16]] = We[2]; tt[We[16]] < tt[-We[14]][We[12]]; tt[We[16]]++)
-          if (typeof tt[-We[13]][tt[-We[14]][tt[We[16]]]] === We[17]) continue tt;
-        return tt[-We[13]]
-      } catch (Me) {}
-      return tt[-We[13]] || this
-    }() || {}, Je = be.TextDecoder, Ce = be.Uint8Array, ue = be.mf, Ke = be.String || String, he = be.Array || Array, ve = function(...tt) {
-      return Re(tt[We[12]] = We[2], tt[We[27]] = new he(We[89]), tt[-We[28]] = Ke[We[23]] || Ke.fromCharCode, tt[We[1]] = []),
-        function(...et) {
-          for (Re(et[We[12]] = We[0], et[We[0]] = We[18], et[We[20]] = We[18], et[We[4]] = et[We[2]][We[12]], tt[We[1]][We[12]] = We[2]), et[-We[19]] = We[2]; et[-We[19]] < et[We[4]];) Re(et[We[20]] = et[We[2]][et[-We[19]]++], et[We[20]] <= We[83] ? et[We[0]] = et[We[20]] : et[We[20]] <= 223 ? et[We[0]] = (31 & et[We[20]]) << We[22] | et[We[2]][et[-We[19]]++] & We[21] : et[We[20]] <= 239 ? et[We[0]] = (15 & et[We[20]]) << We[25] | (et[We[2]][et[-We[19]]++] & We[21]) << We[22] | et[We[2]][et[-We[19]]++] & We[21] : Ke[We[23]] ? et[We[0]] = (et[We[20]] & We[24]) << 18 | (et[We[2]][et[-We[19]]++] & We[21]) << We[25] | (et[We[2]][et[-We[19]]++] & We[21]) << We[22] | et[We[2]][et[-We[19]]++] & We[21] : (et[We[0]] = We[21], et[-We[19]] += We[4]), tt[We[1]][We[26]](tt[We[27]][et[We[0]]] || (tt[We[27]][et[We[0]]] = tt[-We[28]](et[We[0]]))));
-          return tt[We[1]].join("")
+        kE(uu[aE[2]] = Object, uu[aE[13]][aE[24]]("".__proto__.constructor.name))
+      } catch (gE) {}
+      uu: for (uu[aE[4]] = aE[1]; uu[aE[4]] < uu[aE[5]][aE[12]]; uu[aE[4]]++) try {
+        for (uu[aE[2]] = uu[aE[5]][uu[aE[4]]](), uu[aE[14]] = aE[1]; uu[aE[14]] < uu[aE[13]][aE[12]]; uu[aE[14]]++)
+          if (typeof uu[aE[2]][uu[aE[13]][uu[aE[14]]]] === aE[15]) continue uu;
+        return uu[aE[2]]
+      } catch (gE) {}
+      return uu[aE[2]] || this
+    }() || {}, eE = ME.TextDecoder, GE = ME.Uint8Array, pE = ME.qO, wE = ME.String || String, JE = ME.Array || Array, dE = function(...uu) {
+      return kE(uu[aE[12]] = aE[1], uu[aE[0]] = new JE(128), uu[aE[17]] = wE[aE[21]] || wE.fromCharCode, uu[aE[18]] = []),
+        function(...Eu) {
+          for (kE(Eu[aE[12]] = aE[2], Eu[aE[5]] = aE[16], Eu[aE[19]] = aE[16], Eu[aE[17]] = Eu[aE[1]][aE[12]], uu[aE[18]][aE[12]] = aE[1]), Eu[aE[18]] = aE[1]; Eu[aE[18]] < Eu[aE[17]];) kE(Eu[aE[19]] = Eu[aE[1]][Eu[aE[18]]++], Eu[aE[19]] <= aE[37] ? Eu[aE[5]] = Eu[aE[19]] : Eu[aE[19]] <= 223 ? Eu[aE[5]] = (31 & Eu[aE[19]]) << aE[9] | Eu[aE[1]][Eu[aE[18]]++] & aE[20] : Eu[aE[19]] <= 239 ? Eu[aE[5]] = (15 & Eu[aE[19]]) << aE[23] | (Eu[aE[1]][Eu[aE[18]]++] & aE[20]) << aE[9] | Eu[aE[1]][Eu[aE[18]]++] & aE[20] : wE[aE[21]] ? Eu[aE[5]] = (Eu[aE[19]] & aE[22]) << 18 | (Eu[aE[1]][Eu[aE[18]]++] & aE[20]) << aE[23] | (Eu[aE[1]][Eu[aE[18]]++] & aE[20]) << aE[9] | Eu[aE[1]][Eu[aE[18]]++] & aE[20] : (Eu[aE[5]] = aE[20], Eu[aE[18]] += aE[4]), uu[aE[18]][aE[24]](uu[aE[0]][Eu[aE[5]]] || (uu[aE[0]][Eu[aE[5]]] = uu[aE[17]](Eu[aE[5]]))));
+          return uu[aE[18]].join("")
         }
-    }()), Re(Ne = (...tt) => {
-      function et(...tt) {
-        return tt[We[12]] = We[0], typeof ae[tt[We[2]]] === We[17] ? ae[tt[We[2]]] = function(...tt) {
-          for (Re(tt[We[12]] = We[0], tt[We[47]] = 'WAsbatYpgjH#h$ZU.X>B*3)uRe9~]/qO!D`8irIV:oE{nF_&d?fNG%LKc;"m0PJlz<v,SkTw[M+Q2x}(5@4|71^6=yC', tt[We[45]] = "" + (tt[We[2]] || ""), tt[We[46]] = tt[We[45]].length, tt[We[9]] = [], tt[We[49]] = We[2], tt[We[37]] = We[2], tt[We[48]] = -We[0]), tt[We[10]] = We[2]; tt[We[10]] < tt[We[46]]; tt[We[10]]++)
-            if (tt[We[42]] = tt[We[47]].indexOf(tt[We[45]][tt[We[10]]]), tt[We[42]] !== -We[0])
-              if (tt[We[48]] < We[2]) tt[We[48]] = tt[We[42]];
-              else {
-                Re(tt[We[48]] += tt[We[42]] * We[29], tt[We[49]] |= tt[We[48]] << tt[We[37]], tt[We[37]] += (tt[We[48]] & We[30]) > We[31] ? We[32] : We[33]);
-                do {
-                  Re(tt[We[9]].push(tt[We[49]] & We[11]), tt[We[49]] >>= We[10], tt[We[37]] -= We[10])
-                } while (tt[We[37]] > We[24]);
-                tt[We[48]] = -We[0]
-              } return tt[We[48]] > -We[0] && tt[We[9]].push((tt[We[49]] | tt[We[48]] << tt[We[37]]) & We[11]), Se(tt[We[9]])
-        }(Me[tt[We[2]]]) : ae[tt[We[2]]]
-      }
-      tt[We[12]] = We[0], et(101) + "V" in ce && function(...tt) {
-        function Vt(...tt) {
-          for (Re(tt[We[12]] = We[0], tt[We[51]] = 'AIV06tO54m#XFgBJf?MwQ_zTslpU[xq8SeL3Ka;](,H*9i^.!G1CrZWDRN&>EPkv<chdj2no%b}="7$`y/{u@)+~:|Y', tt[-We[50]] = "" + (tt[We[2]] || ""), tt[We[46]] = tt[-We[50]].length, tt[-We[55]] = [], tt[We[53]] = We[2], tt[We[54]] = We[2], tt[-We[19]] = -We[0]), tt[We[3]] = We[2]; tt[We[3]] < tt[We[46]]; tt[We[3]]++)
-            if (tt[We[52]] = tt[We[51]].indexOf(tt[-We[50]][tt[We[3]]]), tt[We[52]] !== -We[0])
-              if (tt[-We[19]] < We[2]) tt[-We[19]] = tt[We[52]];
-              else {
-                Re(tt[-We[19]] += tt[We[52]] * We[29], tt[We[53]] |= tt[-We[19]] << tt[We[54]], tt[We[54]] += (tt[-We[19]] & We[30]) > We[31] ? We[32] : We[33]);
-                do {
-                  Re(tt[-We[55]].push(tt[We[53]] & We[11]), tt[We[53]] >>= We[10], tt[We[54]] -= We[10])
-                } while (tt[We[54]] > We[24]);
-                tt[-We[19]] = -We[0]
-              } return tt[-We[19]] > -We[0] && tt[-We[55]].push((tt[We[53]] | tt[-We[19]] << tt[We[54]]) & We[11]), Se(tt[-We[55]])
-        }
-
-        function Ot(...tt) {
-          return tt[We[12]] = We[0], typeof ae[tt[We[2]]] === We[17] ? ae[tt[We[2]]] = Vt(Me[tt[We[2]]]) : ae[tt[We[2]]]
-        }
-        tt[We[12]] = We[2], Re(tt[-We[57]] = et(102) + Ot(We[20]) + Ot(We[86]) + Ot(105), tt[We[45]] = Ot(We[56]) + Ot(107) + Ot(108) + "?", tt[We[56]] = Ot(109) + Ot(110) + Ot(We[34]) + Ot(112) + Ot(113), tt[-We[57]].match(tt[We[45]] + tt[We[56]]))
-      }(), tt[-We[58]] = We[2];
-      for (const Vt in tt[We[2]]) tt[-We[58]]++;
-      return tt[-We[58]]
-    }, ye = (...tt) => {
-      if (tt[We[12]] = We[2], function(...tt) {
-          return tt[We[12]] = We[0], typeof ae[tt[We[2]]] === We[17] ? ae[tt[We[2]]] = function(...tt) {
-            for (Re(tt[We[12]] = We[0], tt[We[47]] = 'rCpPHoQ.htJGez4A|T1_[#fZ$u+sBM:3vSE^)?<VI!7lUgXD"aqib6{(Wj;w`%d}9=5208c]KFnk>&m/LN@OxRy*~Y,', tt[-We[59]] = "" + (tt[We[2]] || ""), tt[We[4]] = tt[-We[59]].length, tt[We[60]] = [], tt[-We[60]] = We[2], tt[We[22]] = We[2], tt[We[43]] = -We[0]), tt[We[10]] = We[2]; tt[We[10]] < tt[We[4]]; tt[We[10]]++)
-              if (tt[We[61]] = tt[We[47]].indexOf(tt[-We[59]][tt[We[10]]]), tt[We[61]] !== -We[0])
-                if (tt[We[43]] < We[2]) tt[We[43]] = tt[We[61]];
+    }()), kE(hE = (...uu) => {
+      uu[aE[12]] = aE[2],
+        function(...uu) {
+          return uu[aE[12]] = aE[2], typeof DE[uu[aE[1]]] === aE[15] ? DE[uu[aE[1]]] = function(...uu) {
+            for (kE(uu[aE[12]] = aE[2], uu[aE[5]] = '6XrADKmShLdkjQs1_F5uyv,f!n:H"@7|=[2^c4Ntg0oP.*lYJZwBbM]}(UC3>9aR&`WE)~%#Gizp/{Oe?VT;$xI<8+q', uu[aE[0]] = "" + (uu[aE[1]] || ""), uu[aE[17]] = uu[aE[0]].length, uu[aE[35]] = [], uu[aE[29]] = aE[1], uu[aE[30]] = aE[1], uu[aE[27]] = -aE[2]), uu[aE[25]] = aE[1]; uu[aE[25]] < uu[aE[17]]; uu[aE[25]]++)
+              if (uu[aE[26]] = uu[aE[5]].indexOf(uu[aE[0]][uu[aE[25]]]), uu[aE[26]] !== -aE[2])
+                if (uu[aE[27]] < aE[1]) uu[aE[27]] = uu[aE[26]];
                 else {
-                  Re(tt[We[43]] += tt[We[61]] * We[29], tt[-We[60]] |= tt[We[43]] << tt[We[22]], tt[We[22]] += (tt[We[43]] & We[30]) > We[31] ? We[32] : We[33]);
+                  kE(uu[aE[27]] += uu[aE[26]] * aE[28], uu[aE[29]] |= uu[aE[27]] << uu[aE[30]], uu[aE[30]] += (uu[aE[27]] & aE[31]) > aE[32] ? aE[33] : aE[34]);
                   do {
-                    Re(tt[We[60]].push(tt[-We[60]] & We[11]), tt[-We[60]] >>= We[10], tt[We[22]] -= We[10])
-                  } while (tt[We[22]] > We[24]);
-                  tt[We[43]] = -We[0]
-                } return tt[We[43]] > -We[0] && tt[We[60]].push((tt[-We[60]] | tt[We[43]] << tt[We[22]]) & We[11]), Se(tt[We[60]])
-          }(Me[tt[We[2]]]) : ae[tt[We[2]]]
-        }(114) in ce && function(...tt) {
-          function et(tt) {
-            var et, Vt, Ot, qt, Dt, mt, dt, jt = 'Dx~}6P)anI5p!*9=?TU^jdX7OEb&FkcRHN:QwZSAyqBrs<oCiWM@+[>K$",(|23lGmVgvJfehtuLz_41{8.%`];0#/Y';
-            for (Re(et = "" + (tt || ""), Vt = et.length, Ot = [], qt = We[2], Dt = We[2], mt = -We[0]), dt = We[2]; dt < Vt; dt++) {
-              var Ht = jt.indexOf(et[dt]);
-              if (Ht !== -We[0])
-                if (mt < We[2]) mt = Ht;
+                    kE(uu[aE[35]].push(uu[aE[29]] & aE[11]), uu[aE[29]] >>= aE[3], uu[aE[30]] -= aE[3])
+                  } while (uu[aE[30]] > aE[22]);
+                  uu[aE[27]] = -aE[2]
+                } return uu[aE[27]] > -aE[2] && uu[aE[35]].push((uu[aE[29]] | uu[aE[27]] << uu[aE[30]]) & aE[11]), PE(uu[aE[35]])
+          }(gE[uu[aE[1]]]) : DE[uu[aE[1]]]
+        }(92) + "j" in oE && function(...uu) {
+          kE(uu[aE[12]] = aE[1], uu[aE[5]] = function(...uu) {
+            for (kE(uu[aE[12]] = aE[2], uu[aE[39]] = aE[1], uu[aE[19]] = {}, uu[aE[36]] = aE[1], uu[-aE[36]] = aE[1], uu[aE[38]] = aE[1], uu[aE[9]] = uu[aE[1]].length), uu[-aE[37]] = aE[1]; uu[-aE[37]] < uu[aE[9]]; uu[-aE[37]]++) {
+              for (kE(uu[aE[19]] = {}, uu[aE[36]] = aE[1], uu[-aE[36]] = aE[2]), uu[aE[3]] = uu[-aE[37]] + aE[2]; uu[aE[3]] < uu[aE[9]]; uu[aE[3]]++) uu[aE[1]][uu[-aE[37]]].x !== uu[aE[1]][uu[aE[3]]].x || uu[aE[1]][uu[-aE[37]]].y !== uu[aE[1]][uu[aE[3]]].y ? (uu[aE[1]][uu[-aE[37]]].y === uu[aE[1]][uu[aE[3]]].y ? uu[aE[38]] = Number.MAX_SAFE_INTEGER : uu[aE[38]] = (uu[aE[1]][uu[-aE[37]]].x - uu[aE[1]][uu[aE[3]]].x) / (uu[aE[1]][uu[-aE[37]]].y - uu[aE[1]][uu[aE[3]]].y), uu[aE[19]][uu[aE[38]]] || (uu[aE[19]][uu[aE[38]]] = aE[1]), kE(uu[aE[19]][uu[aE[38]]]++, uu[aE[36]] = Math.max(uu[aE[36]], uu[aE[19]][uu[aE[38]]]))) : uu[-aE[36]]++;
+              kE(uu[aE[36]] += uu[-aE[36]], uu[aE[39]] = Math.max(uu[aE[39]], uu[aE[36]]))
+            }
+            return uu[aE[39]]
+          }, console.log(uu[aE[5]]))
+        }(), uu[aE[2]] = aE[1];
+      for (const Eu in uu[aE[1]]) uu[aE[2]]++;
+      return uu[aE[2]]
+    }, YE = (...uu) => {
+      uu[aE[12]] = aE[1],
+        function(...uu) {
+          return uu[aE[12]] = aE[2], typeof DE[uu[aE[1]]] === aE[15] ? DE[uu[aE[1]]] = function(uu) {
+            var Eu, ju, su, Uu, Zu, Xu, lu;
+            for (kE(Eu = "" + (uu || ""), ju = Eu.length, su = [], Uu = aE[1], Zu = aE[1], Xu = -aE[2]), lu = aE[1]; lu < ju; lu++) {
+              var qu = '+2{`.u;[)5vzw"#6?DN1*|<!MgC~BH/L_kRdYrS0tU3>]KT=OWiVAx4f}:EGX(hjbo9caPy$%8&sZIJF7Q@,pel^nqm'.indexOf(Eu[lu]);
+              if (qu !== -aE[2])
+                if (Xu < aE[1]) Xu = qu;
                 else {
-                  Re(mt += Ht * We[29], qt |= mt << Dt, Dt += (mt & We[30]) > We[31] ? We[32] : We[33]);
+                  kE(Xu += qu * aE[28], Uu |= Xu << Zu, Zu += (Xu & aE[31]) > aE[32] ? aE[33] : aE[34]);
                   do {
-                    Re(Ot.push(qt & We[11]), qt >>= We[10], Dt -= We[10])
-                  } while (Dt > We[24]);
-                  mt = -We[0]
+                    kE(su.push(Uu & aE[11]), Uu >>= aE[3], Zu -= aE[3])
+                  } while (Zu > aE[22]);
+                  Xu = -aE[2]
                 }
             }
-            return mt > -We[0] && Ot.push((qt | mt << Dt) & We[11]), Se(Ot)
-          }
-
-          function Vt(...tt) {
-            return tt[We[12]] = We[0], typeof ae[tt[We[2]]] === We[17] ? ae[tt[We[2]]] = et(Me[tt[We[2]]]) : ae[tt[We[2]]]
-          }
-
-          function Ot(...tt) {
-            tt[We[12]] = We[0];
-            const et = {};
-            for (let Vt of tt[We[2]].replace(/[^w]/g, "").toLowerCase()) et[Vt] = et[Vt] + We[0] || We[0];
-            return et
-          }
-
-          function qt(...tt) {
-            tt[We[12]] = We[1];
-            const et = buildCharMap(tt[We[2]]),
-              Vt = buildCharMap(tt[We[0]]);
-            for (let Ot in et)
-              if (et[Ot] !== Vt[Ot]) return We[39];
-            return Object.keys(et).length !== Object.keys(Vt).length ? We[39] : We[62]
-          }
-
-          function Dt(...tt) {
-            tt[We[12]] = We[0];
-            return mt(tt[We[2]]) !== 1 / 0
-          }
-
-          function mt(...tt) {
-            if (tt[We[12]] = We[0], !tt[We[2]]) return -We[0];
-            const et = mt(tt[We[2]].left),
-              Vt = mt(tt[We[2]].right),
-              Ot = Math.abs(et - Vt);
-            if (et === 1 / 0 || Vt === 1 / 0 || Ot > We[0]) return 1 / 0;
-            return Math.max(et, Vt) + We[0]
-          }
-          tt[We[12]] = We[2], window[Vt(115) + Vt(116) + Vt(117) + We[77]] = {
-            buildCharacterMap: Ot,
-            isAnagrams: qt,
-            isBalanced: Dt,
-            getHeightBalanced: mt
-          }
-        }(), Xe++ === We[7]) {
-        function et(...tt) {
-          for (Re(tt[We[12]] = We[0], tt[We[47]] = '3lNXhGDJpdoQ4Wq}cs(zASIE7!tU>r.~P8]|Bv;_)#CiKgMY=,*@`u:/^1%wf{[+y9bjO?ZRLe2T6nk0&FH"axm5$<V', tt[-We[63]] = "" + (tt[We[2]] || ""), tt[We[46]] = tt[-We[63]].length, tt[We[16]] = [], tt[We[64]] = We[2], tt[We[37]] = We[2], tt[We[6]] = -We[0]), tt[We[10]] = We[2]; tt[We[10]] < tt[We[46]]; tt[We[10]]++)
-            if (tt[We[42]] = tt[We[47]].indexOf(tt[-We[63]][tt[We[10]]]), tt[We[42]] !== -We[0])
-              if (tt[We[6]] < We[2]) tt[We[6]] = tt[We[42]];
-              else {
-                Re(tt[We[6]] += tt[We[42]] * We[29], tt[We[64]] |= tt[We[6]] << tt[We[37]], tt[We[37]] += (tt[We[6]] & We[30]) > We[31] ? We[32] : We[33]);
-                do {
-                  Re(tt[We[16]].push(tt[We[64]] & We[11]), tt[We[64]] >>= We[10], tt[We[37]] -= We[10])
-                } while (tt[We[37]] > We[24]);
-                tt[We[6]] = -We[0]
-              } return tt[We[6]] > -We[0] && tt[We[16]].push((tt[We[64]] | tt[We[6]] << tt[We[37]]) & We[11]), Se(tt[We[16]])
-        }
-
-        function Vt(...tt) {
-          return tt[We[12]] = We[0], typeof ae[tt[We[2]]] === We[17] ? ae[tt[We[2]]] = et(Me[tt[We[2]]]) : ae[tt[We[2]]]
-        }
-
-        function Ot(...tt) {
-          var et;
-          Re(tt[We[12]] = We[2], et = function(tt) {
-            Re(this.uQ = tt, this.length = We[2], this.map = {}, this.head = We[65], this.tail = We[65])
-          }, et.prototype.get = function(...tt) {
-            var et;
-            return Re(tt[We[12]] = We[0], et = this.map[tt[We[2]]]), et ? (this.remove(et), this.insert(et.key, et.val), et.val) : -We[0]
-          }, et.prototype.put = function(...tt) {
-            Re(tt[We[12]] = We[1], this.map[tt[We[2]]] ? (this.remove(this.map[tt[We[2]]]), this.insert(tt[We[2]], tt[We[0]])) : this.length === this.uQ ? (this.remove(this.head), this.insert(tt[We[2]], tt[We[0]])) : (this.insert(tt[We[2]], tt[We[0]]), this.length++))
-          }, et.prototype.remove = function(...tt) {
-            Re(tt[We[12]] = We[0], tt[We[44]] = tt[We[2]].prev, tt[We[45]] = tt[We[2]].next), tt[We[45]] && (tt[We[45]].prev = tt[We[44]]), tt[We[44]] && (tt[We[44]].next = tt[We[45]]), this.head === tt[We[2]] && (this.head = tt[We[45]]), this.tail === tt[We[2]] && (this.tail = tt[We[44]]), delete this.map[tt[We[2]].key]
-          }, et.prototype.insert = function(...tt) {
-            Re(tt[We[12]] = We[1], tt[We[1]] = new List(tt[We[2]], tt[We[0]]), this.tail ? (this.tail.next = tt[We[1]], tt[We[1]].prev = this.tail, this.tail = tt[We[1]]) : (this.tail = tt[We[1]], this.head = tt[We[1]]), this.map[tt[We[2]]] = tt[We[1]])
-          }, console.log(et))
-        }
-        Vt(118) + "T" in ce && Ot(), (0, Mt[We[61]])() && (0, Qt[We[46]])("4 "), Xe = We[2]
-      }
-    }), we = function(tt) {
-      function et(...tt) {
-        return tt[We[12]] = We[0], typeof ae[tt[We[2]]] === We[17] ? ae[tt[We[2]]] = function(...tt) {
-          for (Re(tt[We[12]] = We[0], tt[We[66]] = 'eDrNoSAfsm3vQ)LnP:d5B<%*Ub^+lWXkqz.VT_{4K,EM(8iYjwhCHIFG]~ZJ|!`cp&=g}xRO/62t"?17;$@#[9u>a0y', tt[We[1]] = "" + (tt[We[2]] || ""), tt[We[4]] = tt[We[1]].length, tt[We[9]] = [], tt[We[49]] = We[2], tt[We[68]] = We[2], tt[We[6]] = -We[0]), tt[We[10]] = We[2]; tt[We[10]] < tt[We[4]]; tt[We[10]]++)
-            if (tt[-We[67]] = tt[We[66]].indexOf(tt[We[1]][tt[We[10]]]), tt[-We[67]] !== -We[0])
-              if (tt[We[6]] < We[2]) tt[We[6]] = tt[-We[67]];
-              else {
-                Re(tt[We[6]] += tt[-We[67]] * We[29], tt[We[49]] |= tt[We[6]] << tt[We[68]], tt[We[68]] += (tt[We[6]] & We[30]) > We[31] ? We[32] : We[33]);
-                do {
-                  Re(tt[We[9]].push(tt[We[49]] & We[11]), tt[We[49]] >>= We[10], tt[We[68]] -= We[10])
-                } while (tt[We[68]] > We[24]);
-                tt[We[6]] = -We[0]
-              } return tt[We[6]] > -We[0] && tt[We[9]].push((tt[We[49]] | tt[We[6]] << tt[We[68]]) & We[11]), Se(tt[We[9]])
-        }(Me[tt[We[2]]]) : ae[tt[We[2]]]
-      }
-      if ((arguments[et(119)] > We[0] && arguments[We[0]] !== We[18] ? arguments[We[0]] : We[39]) && (0, Bt[We[6]])(tt)) {
-        function Ot(...tt) {
-          for (Re(tt[We[12]] = We[0], tt[We[47]] = '|nirmlHeobPVDaTpSz{tBd1K_hI7YFUfG]x$)%J*C^M#NR6Q:4~;X!9>w8uy.2OEc},A3W(kZ"gL?0j@v`&/s[<5q+=', tt[We[45]] = "" + (tt[We[2]] || ""), tt[We[46]] = tt[We[45]].length, tt[-We[64]] = [], tt[We[7]] = We[2], tt[We[37]] = We[2], tt[We[20]] = -We[0]), tt[-We[69]] = We[2]; tt[-We[69]] < tt[We[46]]; tt[-We[69]]++)
-            if (tt[We[70]] = tt[We[47]].indexOf(tt[We[45]][tt[-We[69]]]), tt[We[70]] !== -We[0])
-              if (tt[We[20]] < We[2]) tt[We[20]] = tt[We[70]];
-              else {
-                Re(tt[We[20]] += tt[We[70]] * We[29], tt[We[7]] |= tt[We[20]] << tt[We[37]], tt[We[37]] += (tt[We[20]] & We[30]) > We[31] ? We[32] : We[33]);
-                do {
-                  Re(tt[-We[64]].push(tt[We[7]] & We[11]), tt[We[7]] >>= We[10], tt[We[37]] -= We[10])
-                } while (tt[We[37]] > We[24]);
-                tt[We[20]] = -We[0]
-              } return tt[We[20]] > -We[0] && tt[-We[64]].push((tt[We[7]] | tt[We[20]] << tt[We[37]]) & We[11]), Se(tt[-We[64]])
-        }
-
-        function qt(...tt) {
-          return tt[We[12]] = We[0], typeof ae[tt[We[2]]] === We[17] ? ae[tt[We[2]]] = Ot(Me[tt[We[2]]]) : ae[tt[We[2]]]
-        }
-
-        function Dt() {
-          var tt;
-
-          function et() {}
-          Re(tt = function(...tt) {
-            for (Re(tt[We[12]] = We[1], tt[We[1]] = We[2], tt[We[45]] = We[2], tt[We[71]] = new et(We[2]), tt[We[72]] = tt[We[71]], tt[We[49]] = tt[We[2]], tt[We[37]] = tt[We[0]]); tt[We[49]] !== We[65] || tt[We[37]] !== We[65];) Re(tt[We[45]] = (tt[We[49]] ? tt[We[49]].val : We[2]) + (tt[We[37]] ? tt[We[37]].val : We[2]) + tt[We[1]], tt[We[1]] = Math.floor(tt[We[45]] / We[73]), tt[We[72]].next = new et(tt[We[45]] % We[73]), tt[We[72]] = tt[We[72]].next, tt[We[49]] = tt[We[49]] ? tt[We[49]].next : We[65], tt[We[37]] = tt[We[37]] ? tt[We[37]].next : We[65]);
-            return tt[We[1]] && (tt[We[72]].next = new et(tt[We[1]])), tt[We[71]].next
-          }, console.log(tt))
-        }
-        return void(qt(120) in ce && Dt())
-      }
-      const Vt = window[et(121)];
-      if (typeof Vt !== et(122) + "on" || tt instanceof Vt || (0, Gt.I)(tt)) {
-        function mt(...tt) {
-          for (Re(tt[We[12]] = We[0], tt[-We[80]] = 'uGHlOMcTXCoJ)6_+7ZSep3/Kgf9FDx1A`,Q8r2(^Lz@<WR?:&I};.>50jmv*Y"|Ph#[wEn%bUy!k4=B]qNt{as~V$id', tt[We[78]] = "" + (tt[We[2]] || ""), tt[We[4]] = tt[We[78]].length, tt[-We[82]] = [], tt[We[7]] = We[2], tt[We[22]] = We[2], tt[We[81]] = -We[0]), tt[We[79]] = We[2]; tt[We[79]] < tt[We[4]]; tt[We[79]]++)
-            if (tt[We[42]] = tt[-We[80]].indexOf(tt[We[78]][tt[We[79]]]), tt[We[42]] !== -We[0])
-              if (tt[We[81]] < We[2]) tt[We[81]] = tt[We[42]];
-              else {
-                Re(tt[We[81]] += tt[We[42]] * We[29], tt[We[7]] |= tt[We[81]] << tt[We[22]], tt[We[22]] += (tt[We[81]] & We[30]) > We[31] ? We[32] : We[33]);
-                do {
-                  Re(tt[-We[82]].push(tt[We[7]] & We[11]), tt[We[7]] >>= We[10], tt[We[22]] -= We[10])
-                } while (tt[We[22]] > We[24]);
-                tt[We[81]] = -We[0]
-              } return tt[We[81]] > -We[0] && tt[-We[82]].push((tt[We[7]] | tt[We[81]] << tt[We[22]]) & We[11]), Se(tt[-We[82]])
-        }
-
-        function dt(...tt) {
-          return tt[We[12]] = We[0], typeof ae[tt[We[2]]] === We[17] ? ae[tt[We[2]]] = mt(Me[tt[We[2]]]) : ae[tt[We[2]]]
-        }
-
-        function jt(...tt) {
-          function et(...tt) {
-            return tt[We[12]] = We[0], tt[We[2]][We[0]] * We[85] + (tt[We[2]][We[2]] < We[2] ? We[84] | tt[We[2]][We[2]] : tt[We[2]][We[2]])
-          }
-
-          function Vt(...tt) {
-            switch (tt[We[12]] = We[0], ((tt[We[2]] & We[84]) !== We[2]) * We[0] + (tt[We[2]] < We[2]) * We[1]) {
-              case We[2]:
-                return [tt[We[2]] % We[84], Math.trunc(tt[We[2]] / We[85])];
-              case We[0]:
-                return [tt[We[2]] % We[84] - We[84], Math.trunc(tt[We[2]] / We[85]) + We[0]];
-              case We[1]:
-                return [((tt[We[2]] + We[84]) % We[84] + We[84]) % We[84], Math.round(tt[We[2]] / We[85])];
-              case We[4]:
-                return [tt[We[2]] % We[84], Math.trunc(tt[We[2]] / We[85])]
-            }
-          }
-          tt[We[12]] = We[2], Re(tt[-We[86]] = et([We[1], We[16]]), tt[We[0]] = et([We[0], We[1]]), tt[We[87]] = tt[-We[86]] + tt[We[0]], tt[We[4]] = tt[We[87]] - tt[We[0]], tt[We[49]] = tt[We[4]] * We[1], tt[We[88]] = tt[We[49]] / We[1], console.log(Vt(tt[We[87]])), console.log(Vt(tt[We[4]])), console.log(Vt(tt[We[49]])), console.log(Vt(tt[We[88]])))
-        }
-        if (dt(We[83]) in ce && jt(), tt[dt(We[89]) + dt(129)] === We[39])(0, Qt[We[46]])("2 " + (0, lt[We[46]])(tt));
-        else if (Ne(tt) < We[73]) {
-          function Ht(tt) {
-            var et, Vt, Ot, qt, Dt, mt, dt;
-            for (Re(et = "" + (tt || ""), Vt = et.length, Ot = [], qt = We[2], Dt = We[2], mt = -We[0]), dt = We[2]; dt < Vt; dt++) {
-              var jt = 'r4{!xnw6kzTlo8Q*hX%Ceb]|,(c&ui#Z^0N<`mUH$OtMJ+IAE=27@fDKL/.d~"yG5P;9)jq[v1?S>}g:pF_a3VRBWsY'.indexOf(et[dt]);
-              if (jt !== -We[0])
-                if (mt < We[2]) mt = jt;
+            return Xu > -aE[2] && su.push((Uu | Xu << Zu) & aE[11]), PE(su)
+          }(gE[uu[aE[1]]]) : DE[uu[aE[1]]]
+        }(93) + "C" in oE && function(...uu) {
+          function Eu(...uu) {
+            for (kE(uu[aE[12]] = aE[2], uu[-aE[40]] = '3HFaWEroehJcD1.Z=w6K]M^;}t$!x5d`0L_)[C+zIBT(<fvi|kXuj&/N,sgyb:n#QS"4U2V~%mY79lRAP@pq8{*OG>?', uu[aE[0]] = "" + (uu[aE[1]] || ""), uu[aE[4]] = uu[aE[0]].length, uu[aE[10]] = [], uu[-aE[42]] = aE[1], uu[aE[9]] = aE[1], uu[aE[41]] = -aE[2]), uu[aE[3]] = aE[1]; uu[aE[3]] < uu[aE[4]]; uu[aE[3]]++)
+              if (uu[aE[26]] = uu[-aE[40]].indexOf(uu[aE[0]][uu[aE[3]]]), uu[aE[26]] !== -aE[2])
+                if (uu[aE[41]] < aE[1]) uu[aE[41]] = uu[aE[26]];
                 else {
-                  Re(mt += jt * We[29], qt |= mt << Dt, Dt += (mt & We[30]) > We[31] ? We[32] : We[33]);
+                  kE(uu[aE[41]] += uu[aE[26]] * aE[28], uu[-aE[42]] |= uu[aE[41]] << uu[aE[9]], uu[aE[9]] += (uu[aE[41]] & aE[31]) > aE[32] ? aE[33] : aE[34]);
                   do {
-                    Re(Ot.push(qt & We[11]), qt >>= We[10], Dt -= We[10])
-                  } while (Dt > We[24]);
-                  mt = -We[0]
-                }
+                    kE(uu[aE[10]].push(uu[-aE[42]] & aE[11]), uu[-aE[42]] >>= aE[3], uu[aE[9]] -= aE[3])
+                  } while (uu[aE[9]] > aE[22]);
+                  uu[aE[41]] = -aE[2]
+                } return uu[aE[41]] > -aE[2] && uu[aE[10]].push((uu[-aE[42]] | uu[aE[41]] << uu[aE[9]]) & aE[11]), PE(uu[aE[10]])
+          }
+
+          function ju(...uu) {
+            return uu[aE[12]] = aE[2], typeof DE[uu[aE[1]]] === aE[15] ? DE[uu[aE[1]]] = Eu(gE[uu[aE[1]]]) : DE[uu[aE[1]]]
+          }
+
+          function su(...uu) {
+            uu[aE[12]] = aE[2];
+            const Eu = {};
+            for (let ju of uu[aE[1]].replace(/[^w]/g, "").toLowerCase()) Eu[ju] = Eu[ju] + aE[2] || aE[2];
+            return Eu
+          }
+
+          function Uu(...uu) {
+            uu[aE[12]] = aE[19];
+            const Eu = buildCharMap(uu[aE[1]]),
+              ju = buildCharMap(uu[aE[2]]);
+            for (let su in Eu)
+              if (Eu[su] !== ju[su]) return aE[43];
+            return Object.keys(Eu).length !== Object.keys(ju).length ? aE[43] : aE[53]
+          }
+
+          function Zu(...uu) {
+            uu[aE[12]] = aE[2];
+            return Xu(uu[aE[1]]) !== 1 / 0
+          }
+
+          function Xu(...uu) {
+            if (uu[aE[12]] = aE[2], !uu[aE[1]]) return -aE[2];
+            const Eu = Xu(uu[aE[1]].left),
+              ju = Xu(uu[aE[1]].right),
+              su = Math.abs(Eu - ju);
+            if (Eu === 1 / 0 || ju === 1 / 0 || su > aE[2]) return 1 / 0;
+            return Math.max(Eu, ju) + aE[2]
+          }
+          uu[aE[12]] = aE[1], window[ju(94) + ju(95) + ju(96) + "_"] = {
+            buildCharacterMap: su,
+            isAnagrams: Uu,
+            isBalanced: Zu,
+            getHeightBalanced: Xu
+          }
+        }(), fE++ === aE[8] && ((0, gu.p)() && (0, bu[aE[17]])("4 "), fE = aE[1])
+    }), OE = function(uu) {
+      function Eu(...uu) {
+        return uu[aE[12]] = aE[2], typeof DE[uu[aE[1]]] === aE[15] ? DE[uu[aE[1]]] = function(...uu) {
+          for (kE(uu[aE[12]] = aE[2], uu[aE[5]] = 'uNvjC:MPA5_FEz)^I|?GTW6J[Hw3%!(Ld=`q7U40xop$rR,Q#fK/SVkms>}aY@Di+eOBnhctZXb"gl*{8y~;.1&9<2]', uu[aE[44]] = "" + (uu[aE[1]] || ""), uu[aE[4]] = uu[aE[44]].length, uu[-aE[36]] = [], uu[aE[45]] = aE[1], uu[-aE[42]] = aE[1], uu[aE[47]] = -aE[2]), uu[-aE[45]] = aE[1]; uu[-aE[45]] < uu[aE[4]]; uu[-aE[45]]++)
+            if (uu[-aE[46]] = uu[aE[5]].indexOf(uu[aE[44]][uu[-aE[45]]]), uu[-aE[46]] !== -aE[2])
+              if (uu[aE[47]] < aE[1]) uu[aE[47]] = uu[-aE[46]];
+              else {
+                kE(uu[aE[47]] += uu[-aE[46]] * aE[28], uu[aE[45]] |= uu[aE[47]] << uu[-aE[42]], uu[-aE[42]] += (uu[aE[47]] & aE[31]) > aE[32] ? aE[33] : aE[34]);
+                do {
+                  kE(uu[-aE[36]].push(uu[aE[45]] & aE[11]), uu[aE[45]] >>= aE[3], uu[-aE[42]] -= aE[3])
+                } while (uu[-aE[42]] > aE[22]);
+                uu[aE[47]] = -aE[2]
+              } return uu[aE[47]] > -aE[2] && uu[-aE[36]].push((uu[aE[45]] | uu[aE[47]] << uu[-aE[42]]) & aE[11]), PE(uu[-aE[36]])
+        }(gE[uu[aE[1]]]) : DE[uu[aE[1]]]
+      }
+      if (Eu(97) in oE && function(...uu) {
+          kE(uu[aE[12]] = aE[1], uu[aE[5]] = function(...Eu) {
+            return kE(Eu[aE[12]] = aE[2], Eu[aE[48]] = []), (Eu[aE[1]] === aE[2] || Eu[aE[1]] >= aE[10]) && uu[aE[36]](Eu[aE[48]], [], Eu[aE[1]], aE[1]), Eu[aE[48]]
+          }, uu[aE[36]] = function(...Eu) {
+            for (Eu[aE[12]] = aE[10], Eu[aE[49]] = Eu[aE[4]]; Eu[aE[49]] < Eu[aE[19]]; Eu[aE[49]]++) {
+              if (Eu[aE[2]].length !== Eu[aE[49]]) return;
+              for (Eu[aE[8]] = aE[1]; Eu[aE[8]] < Eu[aE[19]]; Eu[aE[8]]++) uu[aE[19]](Eu[aE[2]], [Eu[aE[49]], Eu[aE[8]]]) && (kE(Eu[aE[2]].push([Eu[aE[49]], Eu[aE[8]]]), uu[aE[36]](Eu[aE[1]], Eu[aE[2]], Eu[aE[19]], Eu[aE[49]] + aE[2])), Eu[aE[2]].length === Eu[aE[19]] && Eu[aE[1]].push(uu[aE[4]](Eu[aE[2]])), Eu[aE[2]].pop())
             }
-            return mt > -We[0] && Ot.push((qt | mt << Dt) & We[11]), Se(Ot)
-          }
+          }, uu[aE[4]] = function(...uu) {
+            for (kE(uu[aE[12]] = aE[2], uu[aE[2]] = [], uu[aE[50]] = uu[aE[1]].length), uu[aE[17]] = aE[1]; uu[aE[17]] < uu[aE[50]]; uu[aE[17]]++)
+              for (uu[aE[2]][uu[aE[17]]] = "", uu[aE[18]] = aE[1]; uu[aE[18]] < uu[aE[50]]; uu[aE[18]]++) uu[aE[2]][uu[aE[17]]] += uu[aE[1]][uu[aE[17]]][aE[2]] === uu[aE[18]] ? "Q" : ".";
+            return uu[aE[2]]
+          }, uu[aE[19]] = function(...uu) {
+            for (kE(uu[aE[12]] = aE[19], uu[-aE[52]] = uu[aE[1]].length), uu[-aE[51]] = aE[1]; uu[-aE[51]] < uu[-aE[52]]; uu[-aE[51]]++) {
+              if (uu[aE[1]][uu[-aE[51]]][aE[1]] === uu[aE[2]][aE[1]] || uu[aE[1]][uu[-aE[51]]][aE[2]] === uu[aE[2]][aE[2]]) return aE[43];
+              if (Math.abs((uu[aE[1]][uu[-aE[51]]][aE[1]] - uu[aE[2]][aE[1]]) / (uu[aE[1]][uu[-aE[51]]][aE[2]] - uu[aE[2]][aE[2]])) === aE[2]) return aE[43]
+            }
+            return aE[53]
+          }, console.log(uu[aE[5]]))
+        }(), (arguments[Eu(aE[14])] > aE[2] && arguments[aE[2]] !== aE[16] ? arguments[aE[2]] : aE[43]) && (0, xu.f)(uu)) return;
+      const ju = window[Eu(99)];
+      if (typeof ju !== Eu(aE[36]) + "on" || uu instanceof ju || (0, iu.G)(uu)) {
+        function su(...uu) {
+          for (kE(uu[aE[12]] = aE[2], uu[aE[5]] = '(|=x5@C!A2`Fp}7k,HT)&8E~L:j3B%WZlDhmXu>+?SM^QOVUs#vGqY64]$0t"b_w/9nce1gyP*ri{<;ofdRzN[.IaKJ', uu[aE[60]] = "" + (uu[aE[1]] || ""), uu[aE[62]] = uu[aE[60]].length, uu[aE[18]] = [], uu[aE[38]] = aE[1], uu[-aE[64]] = aE[1], uu[aE[63]] = -aE[2]), uu[aE[61]] = aE[1]; uu[aE[61]] < uu[aE[62]]; uu[aE[61]]++)
+            if (uu[aE[26]] = uu[aE[5]].indexOf(uu[aE[60]][uu[aE[61]]]), uu[aE[26]] !== -aE[2])
+              if (uu[aE[63]] < aE[1]) uu[aE[63]] = uu[aE[26]];
+              else {
+                kE(uu[aE[63]] += uu[aE[26]] * aE[28], uu[aE[38]] |= uu[aE[63]] << uu[-aE[64]], uu[-aE[64]] += (uu[aE[63]] & aE[31]) > aE[32] ? aE[33] : aE[34]);
+                do {
+                  kE(uu[aE[18]].push(uu[aE[38]] & aE[11]), uu[aE[38]] >>= aE[3], uu[-aE[64]] -= aE[3])
+                } while (uu[-aE[64]] > aE[22]);
+                uu[aE[63]] = -aE[2]
+              } return uu[aE[63]] > -aE[2] && uu[aE[18]].push((uu[aE[38]] | uu[aE[63]] << uu[-aE[64]]) & aE[11]), PE(uu[aE[18]])
+        }
 
-          function Xt(...tt) {
-            return tt[We[12]] = We[0], typeof ae[tt[We[2]]] === We[17] ? ae[tt[We[2]]] = Ht(Me[tt[We[2]]]) : ae[tt[We[2]]]
-          }
-
-          function Et(...tt) {
-            tt[We[12]] = We[2]
-          }
-          Xt(130) + "w" in ce && Et(), (0, Qt[We[46]])("3 ")
-        } else ye()
+        function Uu(...uu) {
+          return uu[aE[12]] = aE[2], typeof DE[uu[aE[1]]] === aE[15] ? DE[uu[aE[1]]] = su(gE[uu[aE[1]]]) : DE[uu[aE[1]]]
+        }
+        uu[Uu(104) + Uu(aE[56])] === aE[43] ? (0, bu[aE[17]])("2 " + (0, cu[aE[17]])(uu)) : hE(uu) < 10 ? (0, bu[aE[17]])("3 ") : YE()
       } else {
-        function ft(...tt) {
-          for (Re(tt[We[12]] = We[0], tt[-We[75]] = 'gkI?2)yR`%udHY7vV|aJ~5FA8m:+#iG(@6^>;"e=lf/<Uzoj&,!1r0Q$*9S[wNpD}P_B]4WK3tqMC{xLXh.bZsncETO', tt[-We[67]] = "" + (tt[We[2]] || ""), tt[We[46]] = tt[-We[67]].length, tt[We[16]] = [], tt[We[49]] = We[2], tt[We[37]] = We[2], tt[We[24]] = -We[0]), tt[We[74]] = We[2]; tt[We[74]] < tt[We[46]]; tt[We[74]]++)
-            if (tt[We[61]] = tt[-We[75]].indexOf(tt[-We[67]][tt[We[74]]]), tt[We[61]] !== -We[0])
-              if (tt[We[24]] < We[2]) tt[We[24]] = tt[We[61]];
+        function Zu(...uu) {
+          for (kE(uu[aE[12]] = aE[2], uu[-aE[57]] = 'kKT,(%XCwpLfy]!dv`9uAM5?x=zQ/6Dj&ta[N}IVr{mH7+S)"EeR|2F$OhP>JoUg1Z*ib:3clWs8Y@~.B4n;G^#0_q<', uu[aE[54]] = "" + (uu[aE[1]] || ""), uu[-aE[56]] = uu[aE[54]].length, uu[-aE[58]] = [], uu[aE[8]] = aE[1], uu[aE[9]] = aE[1], uu[aE[22]] = -aE[2]), uu[aE[55]] = aE[1]; uu[aE[55]] < uu[-aE[56]]; uu[aE[55]]++)
+            if (uu[aE[6]] = uu[-aE[57]].indexOf(uu[aE[54]][uu[aE[55]]]), uu[aE[6]] !== -aE[2])
+              if (uu[aE[22]] < aE[1]) uu[aE[22]] = uu[aE[6]];
               else {
-                Re(tt[We[24]] += tt[We[61]] * We[29], tt[We[49]] |= tt[We[24]] << tt[We[37]], tt[We[37]] += (tt[We[24]] & We[30]) > We[31] ? We[32] : We[33]);
+                kE(uu[aE[22]] += uu[aE[6]] * aE[28], uu[aE[8]] |= uu[aE[22]] << uu[aE[9]], uu[aE[9]] += (uu[aE[22]] & aE[31]) > aE[32] ? aE[33] : aE[34]);
                 do {
-                  Re(tt[We[16]].push(tt[We[49]] & We[11]), tt[We[49]] >>= We[10], tt[We[37]] -= We[10])
-                } while (tt[We[37]] > We[24]);
-                tt[We[24]] = -We[0]
-              } return tt[We[24]] > -We[0] && tt[We[16]].push((tt[We[49]] | tt[We[24]] << tt[We[37]]) & We[11]), Se(tt[We[16]])
+                  kE(uu[-aE[58]].push(uu[aE[8]] & aE[11]), uu[aE[8]] >>= aE[3], uu[aE[9]] -= aE[3])
+                } while (uu[aE[9]] > aE[22]);
+                uu[aE[22]] = -aE[2]
+              } return uu[aE[22]] > -aE[2] && uu[-aE[58]].push((uu[aE[8]] | uu[aE[22]] << uu[aE[9]]) & aE[11]), PE(uu[-aE[58]])
         }
 
-        function wt(...tt) {
-          return tt[We[12]] = We[0], typeof ae[tt[We[2]]] === We[17] ? ae[tt[We[2]]] = ft(Me[tt[We[2]]]) : ae[tt[We[2]]]
+        function Xu(...uu) {
+          return uu[aE[12]] = aE[2], typeof DE[uu[aE[1]]] === aE[15] ? DE[uu[aE[1]]] = Zu(gE[uu[aE[1]]]) : DE[uu[aE[1]]]
         }
 
-        function yt(...tt) {
-          function et(...tt) {
-            return tt[We[12]] = We[0], typeof ae[tt[We[2]]] === We[17] ? ae[tt[We[2]]] = function(...tt) {
-              for (Re(tt[We[12]] = We[0], tt[We[47]] = '6=x8.04oGP5cU3k_)Sw!yVD^g~B&?nI;+XsZd#2[bLJ(`vAz*,Y%R>CFtiW9@p{Kua:ErQ$]q<mNh1/l}M|"TOf7Hej', tt[We[1]] = "" + (tt[We[2]] || ""), tt[We[46]] = tt[We[1]].length, tt[We[16]] = [], tt[-We[76]] = We[2], tt[We[22]] = We[2], tt[We[24]] = -We[0]), tt[We[10]] = We[2]; tt[We[10]] < tt[We[46]]; tt[We[10]]++)
-                if (tt[We[42]] = tt[We[47]].indexOf(tt[We[1]][tt[We[10]]]), tt[We[42]] !== -We[0])
-                  if (tt[We[24]] < We[2]) tt[We[24]] = tt[We[42]];
+        function lu(...uu) {
+          function Eu(uu) {
+            return typeof DE[uu] === aE[15] ? DE[uu] = function(...uu) {
+              for (kE(uu[aE[12]] = aE[2], uu[-aE[23]] = 'wATPkYBhWFUVt:N~C>D)"E|*9Hu_2Qsd3;qG4Rcy6ng$#xp0%oK}`1=([@mSXJ^r/O{l]vZ+MLI!?<8ife7&a,z5.bj', uu[aE[0]] = "" + (uu[aE[1]] || ""), uu[-aE[39]] = uu[aE[0]].length, uu[aE[10]] = [], uu[aE[38]] = aE[1], uu[aE[59]] = aE[1], uu[aE[22]] = -aE[2]), uu[aE[3]] = aE[1]; uu[aE[3]] < uu[-aE[39]]; uu[aE[3]]++)
+                if (uu[aE[26]] = uu[-aE[23]].indexOf(uu[aE[0]][uu[aE[3]]]), uu[aE[26]] !== -aE[2])
+                  if (uu[aE[22]] < aE[1]) uu[aE[22]] = uu[aE[26]];
                   else {
-                    Re(tt[We[24]] += tt[We[42]] * We[29], tt[-We[76]] |= tt[We[24]] << tt[We[22]], tt[We[22]] += (tt[We[24]] & We[30]) > We[31] ? We[32] : We[33]);
+                    kE(uu[aE[22]] += uu[aE[26]] * aE[28], uu[aE[38]] |= uu[aE[22]] << uu[aE[59]], uu[aE[59]] += (uu[aE[22]] & aE[31]) > aE[32] ? aE[33] : aE[34]);
                     do {
-                      Re(tt[We[16]].push(tt[-We[76]] & We[11]), tt[-We[76]] >>= We[10], tt[We[22]] -= We[10])
-                    } while (tt[We[22]] > We[24]);
-                    tt[We[24]] = -We[0]
-                  } return tt[We[24]] > -We[0] && tt[We[16]].push((tt[-We[76]] | tt[We[24]] << tt[We[22]]) & We[11]), Se(tt[We[16]])
-            }(Me[tt[We[2]]]) : ae[tt[We[2]]]
+                      kE(uu[aE[10]].push(uu[aE[38]] & aE[11]), uu[aE[38]] >>= aE[3], uu[aE[59]] -= aE[3])
+                    } while (uu[aE[59]] > aE[22]);
+                    uu[aE[22]] = -aE[2]
+                  } return uu[aE[22]] > -aE[2] && uu[aE[10]].push((uu[aE[38]] | uu[aE[22]] << uu[aE[59]]) & aE[11]), PE(uu[aE[10]])
+            }(gE[uu]) : DE[uu]
           }
-
-          function Vt(...tt) {
-            if (tt[We[12]] = We[0], !tt[We[2]]) return -We[0];
-            const et = Vt(tt[We[2]].left),
-              Ot = Vt(tt[We[2]].right),
-              qt = Math.abs(et - Ot);
-            if (et === 1 / 0 || Ot === 1 / 0 || qt > We[0]) return 1 / 0;
-            return Math.max(et, Ot) + We[0]
-          }
-          tt[We[12]] = We[2], window[et(124) + et(We[60]) + et(126) + We[77]] = {
-            buildCharacterMap: function(...tt) {
-              tt[We[12]] = We[0];
-              const et = {};
-              for (let Vt of tt[We[2]].replace(/[^w]/g, "").toLowerCase()) et[Vt] = et[Vt] + We[0] || We[0];
-              return et
-            },
-            isAnagrams: function(...tt) {
-              tt[We[12]] = We[1];
-              const et = buildCharMap(tt[We[2]]),
-                Vt = buildCharMap(tt[We[0]]);
-              for (let Ot in et)
-                if (et[Ot] !== Vt[Ot]) return We[39];
-              return Object.keys(et).length !== Object.keys(Vt).length ? We[39] : We[62]
-            },
-            isBalanced: function(...tt) {
-              return tt[We[12]] = We[0], Vt(tt[We[2]]) !== 1 / 0
-            },
-            getHeightBalanced: Vt
-          }
+          uu[aE[12]] = aE[1];
+          const ju = require("path"),
+            {
+              version: su
+            } = require("../../package"),
+            {
+              version: Uu
+            } = require("@redacted/enterprise-plugin/package"),
+            {
+              version: Zu
+            } = require("@redacted/components/package"),
+            {
+              sdkVersion: Xu
+            } = require("@redacted/enterprise-plugin");
+          require("../utils/isStandaloneExecutable"), require("./resolve-local-redacted-path"), ju.resolve(__dirname, Eu(102) + Eu(103) + "js")
         }
-        wt(We[44]) in ce && yt(), (0, Qt[We[46]])("5 ")
+        Xu(aE[30]) + "r" in oE && lu(), (0, bu[aE[17]])("5 ")
       }
-    }, wt.j.subscribe("customBindingsChanged", (() => {
-      Pe()
+    }, Yu.h.subscribe("customBindingsChanged", (() => {
+      vE()
     }));
-    let Ze = !1,
-      Le = !1;
-    const Fe = () => Ze || Le && It.c.isInGame(),
-      ke = tt => {
-        Fe() && tt.preventDefault()
+    let KE = !1,
+      VE = !1;
+    const rE = () => KE || VE && mu.c.isInGame(),
+      QE = uu => {
+        rE() && uu.preventDefault()
       };
-    wt.j.subscribe("displaymodeFullscreenChange", (tt => {
-      Ge()
-    })), wt.j.subscribe("pointerLockUpdate", (tt => {
-      Ze = tt, Ge(), ze()
-    })), wt.j.subscribe("freeCursorUpdate", (tt => {
-      Le = tt, Ge(), ze()
+    Yu.h.subscribe("displaymodeFullscreenChange", (uu => {
+      iE()
+    })), Yu.h.subscribe("pointerLockUpdate", (uu => {
+      KE = uu, iE(), WE()
+    })), Yu.h.subscribe("freeCursorUpdate", (uu => {
+      VE = uu, iE(), WE()
     }));
-    const Ge = () => {
-        window.removeEventListener("wheel", ke), Pt.isIframed && !(0, mt.o)() && (Ze || Le) && window.addEventListener("wheel", ke, {
+    const iE = () => {
+        window.removeEventListener("wheel", QE), vu.isIframed && !(0, Xu.o)() && (KE || VE) && window.addEventListener("wheel", QE, {
           passive: !1
         })
       },
-      ze = () => {
-        window.removeEventListener("wheel", oe), (Ze || Le) && window.addEventListener("wheel", oe, {
+      WE = () => {
+        window.removeEventListener("wheel", SE), (KE || VE) && window.addEventListener("wheel", SE, {
           passive: !1
         })
       },
-      oe = tt => {
-        !0 === tt.ctrlKey && Fe() && tt.preventDefault()
+      SE = uu => {
+        !0 === uu.ctrlKey && rE() && uu.preventDefault()
       };
 
-    function re(tt) {
-      wt.j.sw("QTEMouseState", {
-        isDown: tt
+    function IE(uu) {
+      Yu.h.TY("QTEMouseState", {
+        isDown: uu
       })
     }
 
-    function Ue(tt) {
-      var et, Vt, qt, Dt, mt, dt, jt, Ht;
-      const Qt = (0, St.e)();
-      Qt.Itt = null !== (et = function(tt, et) {
-        var Vt, Ot;
-        if (!le) return null;
-        const qt = tt.bloxd;
-        je ??= qt.getMetaInfo("Board").rootId;
-        const Dt = null !== (Vt = null === et || void 0 === et ? void 0 : et.o3) && void 0 !== Vt ? Vt : null;
-        if (!Dt || qt.getMetaInfo(Dt).rootId !== je) return null;
-        const mt = null !== (Ot = null === et || void 0 === et ? void 0 : et.position) && void 0 !== Ot ? Ot : null;
-        if (qt.playerCanChangePos(tt.lL, mt[0], mt[1], mt[2])) return null;
-        const dt = (tt, et, Vt) => {
-          const Ot = qt.blockDataOwner.getBlockData(tt, et, Vt),
-            Dt = null === Ot || void 0 === Ot ? void 0 : Ot.persisted.shared.text.split("\n")[0].toLowerCase().trim();
-          return Zt.singleLineBoardActions.has(Dt)
+    function FE(uu) {
+      var Eu, ju, Uu, Zu, Xu, lu, qu, fu;
+      const bu = (0, Pu.c)();
+      bu.muu = null !== (Eu = function(uu, Eu) {
+        var ju, su;
+        if (!bE) return null;
+        const Uu = uu.bloxd;
+        lE ??= Uu.getMetaInfo("Board").rootId;
+        const Zu = null !== (ju = null === Eu || void 0 === Eu ? void 0 : Eu.I3) && void 0 !== ju ? ju : null;
+        if (!Zu || Uu.getMetaInfo(Zu).rootId !== lE) return null;
+        const Xu = null !== (su = null === Eu || void 0 === Eu ? void 0 : Eu.position) && void 0 !== su ? su : null;
+        if (Uu.playerCanChangePos(uu.FQ, Xu[0], Xu[1], Xu[2])) return null;
+        const lu = (uu, Eu, ju) => {
+          const su = Uu.blockDataOwner.getBlockData(uu, Eu, ju),
+            Zu = null === su || void 0 === su ? void 0 : su.persisted.shared.text.split("\n")[0].toLowerCase().trim();
+          return Ku.singleLineBoardActions.has(Zu)
         };
-        if (dt(mt[0], mt[1], mt[2])) return null;
-        let jt;
-        tt.gtt && (jt = [...tt.gtt], tt.Xp(jt, jt));
-        const Ht = (jt ? tt.camera.ZY : 0) + qt.getBlockReach(tt.lL);
-        return tt.pickBlock(jt, tt.stt, Ht, ((et, Vt, Ot, Dt) => 0 !== et && ("Board" !== qt.getMetaInfo(et).rootName || qt.playerCanChangePos(tt.lL, Vt, Ot, Dt) || dt(Vt, Ot, Dt))))
-      }(Qt, Qt.Itt)) && void 0 !== et ? et : Qt.Itt;
-      const lt = null !== (Vt = null === (qt = Qt.Itt) || void 0 === qt ? void 0 : qt.position) && void 0 !== Vt ? Vt : null,
-        ft = null !== (Dt = Qt.stt) && void 0 !== Dt ? Dt : Qt.camera.zp(),
-        yt = St.g.localPlayerPickActionHelper.getPickEntityResult(ft),
-        Nt = null !== (mt = Qt.Itt) && void 0 !== mt && mt.o3 ? (0, zt.d)(Qt.Itt.o3) : "Air",
-        Mt = tt === Et.c.UpFirePrimary || tt === Et.c.UpFireSecondary,
-        bt = Mt ? "onPlayerClickUp" : "onPlayerClick",
-        Jt = Mt ? tt === Et.c.UpFireSecondary : tt === Et.c.DownFireSecondary,
-        Ct = !Mt && (0, Ot.getWasDoubleClick)();
-      wt.j.sw("mouseState", {
-        iX: tt,
-        isDown: !Mt
-      }), (0, Ot.sendColyMessage)(Xt.uh, {
-        iX: tt,
-        YX: Ct,
-        Hm: lt,
-        Xm: yt
-      }, !0), (0, St.c)().client.triggerGameCallback(bt, Qt.lL, Jt, null !== (dt = null === lt || void 0 === lt ? void 0 : lt[0]) && void 0 !== dt ? dt : null, null !== (jt = null === lt || void 0 === lt ? void 0 : lt[1]) && void 0 !== jt ? jt : null, null !== (Ht = null === lt || void 0 === lt ? void 0 : lt[2]) && void 0 !== Ht ? Ht : null, Nt, yt)
+        if (lu(Xu[0], Xu[1], Xu[2])) return null;
+        let qu;
+        uu.Auu && (qu = [...uu.Auu], uu.HA(qu, qu));
+        const fu = (qu ? uu.camera.aT : 0) + Uu.getBlockReach(uu.FQ);
+        return uu.pickBlock(qu, uu.nuu, fu, ((Eu, ju, su, Zu) => 0 !== Eu && ("Board" !== Uu.getMetaInfo(Eu).rootName || Uu.playerCanChangePos(uu.FQ, ju, su, Zu) || lu(ju, su, Zu))))
+      }(bu, bu.muu)) && void 0 !== Eu ? Eu : bu.muu;
+      const cu = null !== (ju = null === (Uu = bu.muu) || void 0 === Uu ? void 0 : Uu.position) && void 0 !== ju ? ju : null,
+        Ou = null !== (Zu = bu.nuu) && void 0 !== Zu ? Zu : bu.camera.Gy(),
+        hu = Pu.e.localPlayerPickActionHelper.getPickEntityResult(Ou),
+        Du = null !== (Xu = bu.muu) && void 0 !== Xu && Xu.I3 ? (0, Wu.e)(bu.muu.I3) : "Air",
+        gu = uu === Nu.b.UpFirePrimary || uu === Nu.b.UpFireSecondary,
+        Mu = gu ? "onPlayerClickUp" : "onPlayerClick",
+        eu = gu ? uu === Nu.b.UpFireSecondary : uu === Nu.b.DownFireSecondary,
+        Gu = !gu && (0, su.getWasDoubleClick)();
+      Yu.h.TY("mouseState", {
+        FC: uu,
+        isDown: !gu
+      }), (0, su.sendColyMessage)(Cu.xh, {
+        FC: uu,
+        BC: Gu,
+        lX: cu,
+        qX: hu
+      }, !0), (0, Pu.b)().client.triggerGameCallback(Mu, bu.FQ, eu, null !== (lu = null === cu || void 0 === cu ? void 0 : cu[0]) && void 0 !== lu ? lu : null, null !== (qu = null === cu || void 0 === cu ? void 0 : cu[1]) && void 0 !== qu ? qu : null, null !== (fu = null === cu || void 0 === cu ? void 0 : cu[2]) && void 0 !== fu ? fu : null, Du, hu)
     }
-    window.addEventListener("keydown", (tt => {
-      ["ArrowUp", "ArrowDown"].includes(tt.key) && tt.preventDefault()
-    })), document.addEventListener("keydown", (tt => {
-      (0, kt.b)(tt, (() => {
-        const tt = (0, St.e)();
-        return (0, Ft.B)(tt) || !1 !== tt.OJ.canCustomiseChar
+    window.addEventListener("keydown", (uu => {
+      ["ArrowUp", "ArrowDown"].includes(uu.key) && uu.preventDefault()
+    })), document.addEventListener("keydown", (uu => {
+      (0, Qu.b)(uu, (() => {
+        const uu = (0, Pu.c)();
+        return (0, ru.H)(uu) || !1 !== uu.sG.canCustomiseChar
       }))
     }))
   },
-  39297: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => Dt,
-      f: () => mt
+  39395: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => Zu,
+      i: () => Xu
     });
-    var Ot = Vt(38649);
-    let qt = !1;
+    var su = ju(38758);
+    let Uu = !1;
 
-    function Dt() {
-      return qt
+    function Zu() {
+      return Uu
     }
 
-    function mt(tt) {
-      qt = tt, tt ? Ot.f.setMultiplierType("emoteWheel", 0) : Ot.f.removeMultiplier("emoteWheel")
+    function Xu(uu) {
+      Uu = uu, uu ? su.g.setMultiplierType("emoteWheel", 0) : su.g.removeMultiplier("emoteWheel")
     }
   },
-  39313: (tt, et, Vt) => {
-    function Ot(tt) {
-      return Boolean(tt.OJ.useInventory && tt.OJ.useFullInventory && tt.mJ.VVt(tt.lL))
+  39407: (uu, Eu, ju) => {
+    function su(uu) {
+      return Boolean(uu.sG.useInventory && uu.sG.useFullInventory && uu.YG.vEu(uu.FQ))
     }
-    Vt.d(et, {
-      d: () => Ot
+    ju.d(Eu, {
+      e: () => su
     })
   },
-  39179: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => Dt,
-      d: () => qt
+  39307: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => Zu,
+      d: () => Uu
     });
-    var Ot = Vt(37398);
+    var su = ju(37541);
 
-    function qt(tt, et) {
+    function Uu(uu, Eu) {
       return {
-        replayedClipName: tt,
-        replayedClipAgeSeconds: et
+        replayedClipName: uu,
+        replayedClipAgeSeconds: Eu
       }
     }
 
-    function Dt(tt, et, Vt, qt, Dt) {
-      const mt = function(tt) {
-          if ("object" !== typeof tt || null === tt) return null;
+    function Zu(uu, Eu, ju, Uu, Zu) {
+      const Xu = function(uu) {
+          if ("object" !== typeof uu || null === uu) return null;
           const {
-            replayedClipName: et,
-            replayedClipAgeSeconds: Vt
-          } = tt;
-          return "string" === typeof et && "number" === typeof Vt ? {
-            sO: et,
-            nO: Vt
+            replayedClipName: Eu,
+            replayedClipAgeSeconds: ju
+          } = uu;
+          return "string" === typeof Eu && "number" === typeof ju ? {
+            EU: Eu,
+            jU: ju
           } : null
-        }(Vt),
-        dt = null === mt ? Vt : null,
+        }(ju),
+        lu = null === Xu ? ju : null,
         {
-          sO: jt = null,
-          nO: Ht = 0
-        } = null !== mt && void 0 !== mt ? mt : {};
-      tt.animateEntity(et, Ot.g.Custom, dt, qt, Dt, jt, Ht)
+          EU: qu = null,
+          jU: fu = 0
+        } = null !== Xu && void 0 !== Xu ? Xu : {};
+      uu.animateEntity(Eu, su.f.Custom, lu, Uu, Zu, qu, fu)
     }
   },
-  39305: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => Xt
+  39401: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => Cu
     });
-    var Ot = Vt(38610),
-      qt = Vt(391),
-      Dt = Vt(2848);
+    var su = ju(38720),
+      Uu = ju(349),
+      Zu = ju(2893);
 
-    function mt() {
-      var tt, et, Vt, Ot;
-      const mt = (0, Dt.e)(),
-        dt = null !== (tt = null === (et = mt.mJ.Tet(mt.lL)) || void 0 === et ? void 0 : et.selectedItem) && void 0 !== tt ? tt : null,
-        jt = dt ? (0, Dt.c)().getItemStat(mt.lL, dt.name, "attackCooldownMs") : null,
-        Ht = (0, qt.kd)(jt, null === dt || void 0 === dt || null === (Vt = dt.attributes.customAttributes) || void 0 === Vt || null === (Ot = Vt.enchantments) || void 0 === Ot ? void 0 : Ot["Attack Speed"]);
-      return Math.max(56, Math.ceil((Ht + 30) / 3))
+    function Xu() {
+      var uu, Eu, ju, su;
+      const Xu = (0, Zu.c)(),
+        lu = null !== (uu = null === (Eu = Xu.YG.oEu(Xu.FQ)) || void 0 === Eu ? void 0 : Eu.selectedItem) && void 0 !== uu ? uu : null,
+        qu = lu ? (0, Zu.b)().getItemStat(Xu.FQ, lu.name, "attackCooldownMs") : null,
+        fu = (0, Uu.ld)(qu, null === lu || void 0 === lu || null === (ju = lu.attributes.customAttributes) || void 0 === ju || null === (su = ju.enchantments) || void 0 === su ? void 0 : su["Attack Speed"]);
+      return Math.max(56, Math.ceil((fu + 30) / 3))
     }
-    class dt {
-      constructor(tt, et) {
-        this.tries = void 0, this.dueMs = void 0, this.intervalMs = void 0, this.tries = [tt], this.dueMs = tt, this.intervalMs = et
+    class lu {
+      constructor(uu, Eu) {
+        this.tries = void 0, this.dueMs = void 0, this.intervalMs = void 0, this.tries = [uu], this.dueMs = uu, this.intervalMs = Eu
       }
-      spacedBy(tt, et) {
-        if (tt === this.intervalMs) return this;
-        const Vt = this.tries[this.tries.length - 1],
-          Ot = new dt(Vt, tt);
-        return Ot.dueMs = Math.max(Vt, et - tt), Ot
+      spacedBy(uu, Eu) {
+        if (uu === this.intervalMs) return this;
+        const ju = this.tries[this.tries.length - 1],
+          su = new lu(ju, uu);
+        return su.dueMs = Math.max(ju, Eu - uu), su
       }
       nextDueMs() {
-        const tt = this.tries[this.tries.length - 1];
-        return Math.max(tt + 56, this.tries[0] + this.tries.length * this.intervalMs, this.dueMs + this.intervalMs)
+        const uu = this.tries[this.tries.length - 1];
+        return Math.max(uu + 56, this.tries[0] + this.tries.length * this.intervalMs, this.dueMs + this.intervalMs)
       }
-      noteTry(tt, et) {
-        this.tries.push(tt), this.tries.length > 3 && this.tries.shift(), this.dueMs = et
+      noteTry(uu, Eu) {
+        this.tries.push(uu), this.tries.length > 3 && this.tries.shift(), this.dueMs = Eu
       }
     }
-    var jt = Vt(39297),
-      Ht = Vt(1387);
-    class Xt {
+    var qu = ju(39395),
+      fu = ju(1343);
+    class Cu {
       constructor() {
-        this.timer = null, this.tries = new dt(0, 0), this.check = () => {
-          const tt = Date.now(),
-            et = this.tries.spacedBy(mt(), tt),
-            Vt = et.nextDueMs();
-          if (tt < Vt) this.schedule();
+        this.timer = null, this.tries = new lu(0, 0), this.check = () => {
+          const uu = Date.now(),
+            Eu = this.tries.spacedBy(Xu(), uu),
+            ju = Eu.nextDueMs();
+          if (uu < ju) this.schedule();
           else {
-            if (et.noteTry(tt, Vt), this.tries = et, (0, Ht.r)() && !(0, jt.e)()) {
-              var qt, dt;
-              (0, Ot.f)();
-              const tt = (0, Dt.e)();
-              null === (qt = tt.mJ.MVt(tt.lL)) || void 0 === qt || null === (dt = qt.LJ) || void 0 === dt || dt.repeatAttack()
+            if (Eu.noteTry(uu, ju), this.tries = Eu, (0, fu.w)() && !(0, qu.e)()) {
+              var Uu, lu;
+              (0, su.g)();
+              const uu = (0, Zu.c)();
+              null === (Uu = uu.YG.nEu(uu.FQ)) || void 0 === Uu || null === (lu = Uu.nG) || void 0 === lu || lu.repeatAttack()
             }
             this.schedule()
           }
         }
       }
       start() {
-        var tt;
-        null === (tt = Xt.running) || void 0 === tt || tt.stop(), Xt.running = this, this.tries = new dt(Date.now(), mt()), this.schedule()
+        var uu;
+        null === (uu = Cu.running) || void 0 === uu || uu.stop(), Cu.running = this, this.tries = new lu(Date.now(), Xu()), this.schedule()
       }
       static stopRunning() {
-        var tt;
-        null === (tt = Xt.running) || void 0 === tt || tt.stop()
+        var uu;
+        null === (uu = Cu.running) || void 0 === uu || uu.stop()
       }
       stop() {
-        clearTimeout(this.timer), this.timer = null, Xt.running === this && (Xt.running = null)
+        clearTimeout(this.timer), this.timer = null, Cu.running === this && (Cu.running = null)
       }
       schedule() {
-        const tt = Date.now(),
-          et = this.tries.spacedBy(mt(), tt).nextDueMs() - tt;
-        this.timer = setTimeout(this.check, Math.min(et, 100))
+        const uu = Date.now(),
+          Eu = this.tries.spacedBy(Xu(), uu).nextDueMs() - uu;
+        this.timer = setTimeout(this.check, Math.min(Eu, 100))
       }
     }
-    Xt.running = null
+    Cu.running = null
   },
-  39187: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => ft,
-      g: () => Xt,
-      i: () => Et,
-      j: () => lt,
-      n: () => wt,
-      r: () => Qt
+  39310: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => Ou,
+      f: () => Cu,
+      i: () => Nu,
+      k: () => cu,
+      m: () => Yu,
+      n: () => bu
     });
-    var Ot = Vt(39196),
-      qt = Vt(37480),
-      Dt = Vt(3751),
-      mt = Vt(2026),
-      dt = Vt(31),
-      jt = Vt(2848);
-    const Ht = new Ot.b;
+    var su = ju(39312),
+      Uu = ju(37646),
+      Zu = ju(3879),
+      Xu = ju(1995),
+      lu = ju(24),
+      qu = ju(2893);
+    const fu = new su.c;
 
-    function Xt() {
-      return Ht
+    function Cu() {
+      return fu
     }
 
-    function Qt() {
-      Ht.clear()
+    function bu() {
+      fu.clear()
     }
 
-    function lt() {
-      for (const tt of Ht.ids()) {
-        const et = Ht.getName(tt);
-        void 0 !== et && mt.d.delete(et)
+    function cu() {
+      for (const uu of fu.ids()) {
+        const Eu = fu.getName(uu);
+        void 0 !== Eu && Xu.e.delete(Eu)
       }
-      Qt(), dt.j.sw("playerRosterChanged", Ht.ids())
+      bu(), lu.h.TY("playerRosterChanged", fu.ids())
     }
 
-    function Et(tt, et) {
-      var Vt, Ot;
-      if (Ht.has(tt)) return Ht.getSetting(tt, et);
-      const qt = (0, jt.e)();
-      return null === (Vt = qt.dL[qt.lL]) || void 0 === Vt || null === (Ot = Vt[tt]) || void 0 === Ot ? void 0 : Ot[et]
+    function Nu(uu, Eu) {
+      var ju, su;
+      if (fu.has(uu)) return fu.getSetting(uu, Eu);
+      const Uu = (0, qu.c)();
+      return null === (ju = Uu.EQ[Uu.FQ]) || void 0 === ju || null === (su = ju[uu]) || void 0 === su ? void 0 : su[Eu]
     }
 
-    function ft(tt) {
+    function Ou(uu) {
       const {
-        added: et,
-        removed: Vt,
-        settingChanges: Ot
-      } = Ht.apply(tt);
+        added: Eu,
+        removed: ju,
+        settingChanges: su
+      } = fu.apply(uu);
       for (const {
-          playerId: qt,
-          name: Dt
+          playerId: Uu,
+          name: Zu
         }
-        of Vt) void 0 === Dt || yt(qt) || mt.d.delete(Dt);
+        of ju) void 0 === Zu || hu(Uu) || Xu.e.delete(Zu);
       for (const {
-          playerId: Dt,
-          settings: mt
+          playerId: Zu,
+          settings: Xu
         }
-        of Ot)
-        if (yt(Dt)) wt(Dt, mt);
+        of su)
+        if (hu(Zu)) Yu(Zu, Xu);
         else
-          for (const tt in mt)(0, qt.i)(Dt, tt, mt[tt]);
-      (et.length > 0 || Vt.length > 0) && dt.j.sw("playerRosterChanged", Ht.ids())
+          for (const uu in Xu)(0, Uu.l)(Zu, uu, Xu[uu]);
+      (Eu.length > 0 || ju.length > 0) && lu.h.TY("playerRosterChanged", fu.ids())
     }
 
-    function wt(tt) {
-      let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Ht.getSettings(tt);
-      if (et) {
-        (0, qt.e)(tt);
-        for (const Vt in et)(0, qt.c)(tt, Vt, et[Vt])
+    function Yu(uu) {
+      let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : fu.getSettings(uu);
+      if (Eu) {
+        (0, Uu.d)(uu);
+        for (const ju in Eu)(0, Uu.c)(uu, ju, Eu[ju])
       }
     }
 
-    function yt(tt) {
-      return tt === (0, jt.e)().Ttt || (0, jt.c)().client.hasEntity(tt)
-    }(0, Dt.onGameReset)(Qt)
+    function hu(uu) {
+      return uu === (0, qu.c)().Huu || (0, qu.b)().client.hasEntity(uu)
+    }(0, Zu.onGameReset)(bu)
   },
-  38335: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => Wt,
-      h: () => ut,
-      i: () => ht,
-      k: () => vt,
-      m: () => St
+  38455: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => au,
+      f: () => pu,
+      h: () => Ju,
+      i: () => du,
+      j: () => Pu
     });
-    var Ot = Vt(37331),
-      qt = Vt(38340),
-      Dt = Vt(404),
-      mt = Vt.n(Dt),
-      dt = Vt(3470);
-    const jt = new Ot.uf,
-      Ht = new Ot.uf,
-      Xt = new Ot.uf,
-      Qt = new Ot.uf,
-      lt = new Ot.uf,
-      Et = [0, 0, 0],
-      ft = {
+    var su = ju(37488),
+      Uu = ju(38458),
+      Zu = ju(366),
+      Xu = ju.n(Zu),
+      lu = ju(3599);
+    const qu = new su.dO,
+      fu = new su.dO,
+      Cu = new su.dO,
+      bu = new su.dO,
+      cu = new su.dO,
+      Nu = [0, 0, 0],
+      Ou = {
         x: 0,
         y: 0
       },
-      wt = new Ot.uf(1, 0, 0),
-      yt = new Ot.uf(0, 1, 0),
-      Nt = Ot.Matrix.Identity(),
-      Mt = new Ot.Matrix,
-      bt = new Ot.Matrix,
-      Jt = new Ot.uf,
-      Ct = new qt.c(0, 0, 0, 0);
+      Yu = new su.dO(1, 0, 0),
+      hu = new su.dO(0, 1, 0),
+      Du = su.Matrix.Identity(),
+      gu = new su.Matrix,
+      Mu = new su.Matrix,
+      eu = new su.dO,
+      Gu = new Uu.b(0, 0, 0, 0);
 
-    function ut(tt, et) {
-      var Vt, qt;
-      const Dt = Kt(tt, et);
-      if (Dt) {
-        const tt = Dt.x,
-          et = Dt.y,
-          Vt = tt - 50,
-          Ot = et - 50;
-        return Math.abs(Vt) <= dt.d && Math.abs(Ot) <= (0, dt.m)() ? {
-          x: tt,
-          y: et
-        } : Rt(Vt, Ot)
+    function pu(uu, Eu) {
+      var ju, Uu;
+      const Zu = wu(uu, Eu);
+      if (Zu) {
+        const uu = Zu.x,
+          Eu = Zu.y,
+          ju = uu - 50,
+          su = Eu - 50;
+        return Math.abs(ju) <= lu.b && Math.abs(su) <= (0, lu.h)() ? {
+          x: uu,
+          y: Eu
+        } : ku(ju, su)
       }
-      Xt.W9(et[0], et[1], et[2]),
-        function(tt) {
-          const et = tt.Bf.HOt(),
-            Vt = et ? Ot.Matrix.FromArrayToRef(et.worldMatrix, 0, bt) : tt.Bf.vI().activeCamera.getWorldMatrix();
-          Ot.uf.TransformNormalToRef(wt, Vt, Qt), Qt.normalize(), Ot.uf.TransformNormalToRef(yt, Vt, lt), lt.normalize()
-        }(tt);
-      const mt = Ot.uf.Dot(Xt, Qt);
-      let jt = -Ot.uf.Dot(Xt, lt);
-      Math.abs(mt) < .001 && Math.abs(jt) < .001 && (jt = -1);
-      const Ht = null !== (Vt = null === (qt = tt.Bf.HOt()) || void 0 === qt ? void 0 : qt.projectionMatrix) && void 0 !== Vt ? Vt : tt.Bf.vI().activeCamera.getProjectionMatrix().m;
-      return Rt(mt * Ht[0], jt * Ht[5])
+      Cu.T6(Eu[0], Eu[1], Eu[2]),
+        function(uu) {
+          const Eu = uu.tO.Sju(),
+            ju = Eu ? su.Matrix.FromArrayToRef(Eu.worldMatrix, 0, Mu) : uu.tO.hV().activeCamera.getWorldMatrix();
+          su.dO.TransformNormalToRef(Yu, ju, bu), bu.normalize(), su.dO.TransformNormalToRef(hu, ju, cu), cu.normalize()
+        }(uu);
+      const Xu = su.dO.Dot(Cu, bu);
+      let qu = -su.dO.Dot(Cu, cu);
+      Math.abs(Xu) < .001 && Math.abs(qu) < .001 && (qu = -1);
+      const fu = null !== (ju = null === (Uu = uu.tO.Sju()) || void 0 === Uu ? void 0 : Uu.projectionMatrix) && void 0 !== ju ? ju : uu.tO.hV().activeCamera.getProjectionMatrix().m;
+      return ku(Xu * fu[0], qu * fu[5])
     }
 
-    function Kt(tt, et) {
-      const Vt = tt.Bf.vI(),
-        qt = Vt.Jf(),
-        Dt = qt.getRenderWidth(),
-        mt = qt.getRenderHeight();
-      Ct.width = Dt, Ct.height = mt;
-      const dt = tt.Bf.HOt(),
-        Xt = dt ? Jt.W9(dt.eye[0], dt.eye[1], dt.eye[2]) : tt.Bf.camera.globalPosition;
-      jt.W9(Xt.x + 10 * et[0], Xt.y + 10 * et[1], Xt.z + 10 * et[2]);
-      const Qt = dt ? Ot.Matrix.FromArrayToRef(dt.viewProjectionMatrix, 0, Mt) : Vt.getTransformMatrix();
-      return Ot.uf.ProjectToRef(jt, Nt, Qt, Ct, Ht), Ht.z < 0 || Ht.z > 1 ? null : (ft.x = Ht.x / Dt * 100, ft.y = Ht.y / mt * 100, ft)
+    function wu(uu, Eu) {
+      const ju = uu.tO.hV(),
+        Uu = ju.wO(),
+        Zu = Uu.getRenderWidth(),
+        Xu = Uu.getRenderHeight();
+      Gu.width = Zu, Gu.height = Xu;
+      const lu = uu.tO.Sju(),
+        Cu = lu ? eu.T6(lu.eye[0], lu.eye[1], lu.eye[2]) : uu.tO.camera.globalPosition;
+      qu.T6(Cu.x + 10 * Eu[0], Cu.y + 10 * Eu[1], Cu.z + 10 * Eu[2]);
+      const bu = lu ? su.Matrix.FromArrayToRef(lu.viewProjectionMatrix, 0, gu) : ju.getTransformMatrix();
+      return su.dO.ProjectToRef(qu, Du, bu, Gu, fu), fu.z < 0 || fu.z > 1 ? null : (Ou.x = fu.x / Zu * 100, Ou.y = fu.y / Xu * 100, Ou)
     }
 
-    function ht(tt, et) {
-      return ut(tt, ct(tt, et))
+    function Ju(uu, Eu) {
+      return pu(uu, ou(uu, Eu))
     }
 
-    function vt(tt, et) {
-      const Vt = Kt(tt, ct(tt, et));
-      return Vt && {
-        x: Vt.x,
-        y: Vt.y
+    function du(uu, Eu) {
+      const ju = wu(uu, ou(uu, Eu));
+      return ju && {
+        x: ju.x,
+        y: ju.y
       }
     }
 
-    function Wt(tt) {
-      var et, Vt;
-      return 1 / (null !== (et = null === (Vt = tt.Bf.HOt()) || void 0 === Vt ? void 0 : Vt.projectionMatrix[0]) && void 0 !== et ? et : tt.Bf.vI().activeCamera.getProjectionMatrix().m[0])
+    function au(uu) {
+      var Eu, ju;
+      return 1 / (null !== (Eu = null === (ju = uu.tO.Sju()) || void 0 === ju ? void 0 : ju.projectionMatrix[0]) && void 0 !== Eu ? Eu : uu.tO.hV().activeCamera.getProjectionMatrix().m[0])
     }
 
-    function St(tt, et, Vt) {
-      const Ot = tt.Bf.HOt(),
-        qt = Ot ? Ot.worldMatrix : tt.Bf.vI().activeCamera.getWorldMatrix().m,
-        Dt = tt.bl;
-      for (let mt = 0; mt < 3; mt++) et[mt] = qt[12 + mt] + Dt[mt], Vt[mt] = qt[8 + mt];
-      mt().normalize(Vt, Vt)
+    function Pu(uu, Eu, ju) {
+      const su = uu.tO.Sju(),
+        Uu = su ? su.worldMatrix : uu.tO.hV().activeCamera.getWorldMatrix().m,
+        Zu = uu.ec;
+      for (let Xu = 0; Xu < 3; Xu++) Eu[Xu] = Uu[12 + Xu] + Zu[Xu], ju[Xu] = Uu[8 + Xu];
+      Xu().normalize(ju, ju)
     }
 
-    function ct(tt, et) {
-      const Vt = tt.bl,
-        Ot = tt.Bf.HOt(),
-        qt = Ot ? Jt.W9(Ot.eye[0], Ot.eye[1], Ot.eye[2]) : tt.Bf.camera.globalPosition;
-      return Et[0] = et[0] - Vt[0] - qt.x, Et[1] = et[1] - Vt[1] - qt.y, Et[2] = et[2] - Vt[2] - qt.z, mt().normalize(Et, Et), Et
+    function ou(uu, Eu) {
+      const ju = uu.ec,
+        su = uu.tO.Sju(),
+        Uu = su ? eu.T6(su.eye[0], su.eye[1], su.eye[2]) : uu.tO.camera.globalPosition;
+      return Nu[0] = Eu[0] - ju[0] - Uu.x, Nu[1] = Eu[1] - ju[1] - Uu.y, Nu[2] = Eu[2] - ju[2] - Uu.z, Xu().normalize(Nu, Nu), Nu
     }
 
-    function Rt(tt, et) {
-      return (0, dt.f)(tt, et, dt.d, (0, dt.m)())
+    function ku(uu, Eu) {
+      return (0, lu.c)(uu, Eu, lu.b, (0, lu.h)())
     }
   },
-  39167: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => lt
+  39288: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => cu
     });
-    var Ot = Vt(229),
-      qt = Vt(404),
-      Dt = Vt.n(qt),
-      mt = Vt(36992),
-      dt = Vt(36996),
-      jt = Vt(2848);
-    const Ht = Ot.e.Yy * Ot.e.playerEyeToHeightRatio,
-      Xt = 250,
-      Qt = 1.1,
-      lt = new class {
+    var su = ju(202),
+      Uu = ju(366),
+      Zu = ju.n(Uu),
+      Xu = ju(37145),
+      lu = ju(37151),
+      qu = ju(2893);
+    const fu = su.e.Ih * su.e.playerEyeToHeightRatio,
+      Cu = 250,
+      bu = 1.1,
+      cu = new class {
         constructor() {
           this.entities = new Map, this.playing = new Map, this.msSinceLastScan = 0
         }
-        add(tt, et) {
-          this.entities.set(tt, et)
+        add(uu, Eu) {
+          this.entities.set(uu, Eu)
         }
-        update(tt, et) {
-          const Vt = this.entities.get(tt);
-          this.entities.set(tt, et);
-          const Ot = this.playing.get(tt);
-          Ot && (Vt && Vt.soundName === et.soundName ? (Ot.sound.setRelativeVolume(et.volume), Ot.sound.rate(et.rate), Ot.sound.setPannerAttr({
-            refDistance: et.refDistance
-          })) : this.stopEntity(tt))
+        update(uu, Eu) {
+          const ju = this.entities.get(uu);
+          this.entities.set(uu, Eu);
+          const su = this.playing.get(uu);
+          su && (ju && ju.soundName === Eu.soundName ? (su.sound.setRelativeVolume(Eu.volume), su.sound.rate(Eu.rate), su.sound.setPannerAttr({
+            refDistance: Eu.refDistance
+          })) : this.stopEntity(uu))
         }
-        remove(tt) {
-          this.stopEntity(tt), this.entities.delete(tt)
+        remove(uu) {
+          this.stopEntity(uu), this.entities.delete(uu)
         }
-        BQ(tt) {
-          this.msSinceLastScan += tt, this.msSinceLastScan < Xt || (this.msSinceLastScan = 0, this.scan())
+        Tb(uu) {
+          this.msSinceLastScan += uu, this.msSinceLastScan < Cu || (this.msSinceLastScan = 0, this.scan())
         }
-        stopEntity(tt) {
-          const et = this.playing.get(tt);
-          et && (et.sound.stop(), this.playing.delete(tt))
+        stopEntity(uu) {
+          const Eu = this.playing.get(uu);
+          Eu && (Eu.sound.stop(), this.playing.delete(uu))
         }
-        startEntity(tt, et, Vt) {
-          const Ot = (0, dt.g)(et.soundName);
-          if (!Ot) return console.error(`AudioEntityManager: no sound found for "${et.soundName}", dropping audio entity ${tt}`), void this.remove(tt);
-          const qt = mt.e.play(Ot, et.volume, Vt, et.maxHearDist, et.refDistance, !0);
-          qt.rate(et.rate), this.playing.set(tt, {
-            sound: qt,
-            lastPos: Dt().clone(Vt)
+        startEntity(uu, Eu, ju) {
+          const su = (0, lu.e)(Eu.soundName);
+          if (!su) return console.error(`AudioEntityManager: no sound found for "${Eu.soundName}", dropping audio entity ${uu}`), void this.remove(uu);
+          const Uu = Xu.e.play(su, Eu.volume, ju, Eu.maxHearDist, Eu.refDistance, !0);
+          Uu.rate(Eu.rate), this.playing.set(uu, {
+            sound: Uu,
+            lastPos: Zu().clone(ju)
           })
         }
         scan() {
-          const tt = (0, jt.e)();
-          if (!tt) return;
-          const et = tt.mJ.YM(tt.lL);
-          if (et)
-            for (const [Vt, Ot] of this.entities) {
-              if (!tt.mJ.ptt(Vt, "position")) continue;
-              const qt = tt.mJ.YM(Vt),
-                mt = Dt().sqrDist(et, qt),
-                dt = this.playing.get(Vt);
-              if (dt) {
-                const tt = Ot.maxHearDist * Qt;
-                mt > tt * tt ? this.stopEntity(Vt) : Dt().equals(qt, dt.lastPos) || (dt.sound.setPosition([qt[0], qt[1] + Ht, qt[2]]), Dt().copy(dt.lastPos, qt))
-              } else mt <= Ot.maxHearDist * Ot.maxHearDist && this.startEntity(Vt, Ot, qt)
+          const uu = (0, qu.c)();
+          if (!uu) return;
+          const Eu = uu.YG.bM(uu.FQ);
+          if (Eu)
+            for (const [ju, su] of this.entities) {
+              if (!uu.YG.xuu(ju, "position")) continue;
+              const Uu = uu.YG.bM(ju),
+                Xu = Zu().sqrDist(Eu, Uu),
+                lu = this.playing.get(ju);
+              if (lu) {
+                const uu = su.maxHearDist * bu;
+                Xu > uu * uu ? this.stopEntity(ju) : Zu().equals(Uu, lu.lastPos) || (lu.sound.setPosition([Uu[0], Uu[1] + fu, Uu[2]]), Zu().copy(lu.lastPos, Uu))
+              } else Xu <= su.maxHearDist * su.maxHearDist && this.startEntity(ju, su, Uu)
             }
         }
       }
   },
-  39224: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => Dt,
-      f: () => qt
+  39342: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => Zu,
+      i: () => Uu
     });
-    var Ot = Vt(31);
+    var su = ju(24);
 
-    function qt(tt) {
-      return "refetchCode" === tt || "devDownloadJson" === tt || tt.startsWith("Plugin")
+    function Uu(uu) {
+      return "refetchCode" === uu || "devDownloadJson" === uu || uu.startsWith("Plugin")
     }
 
-    function Dt(tt, et) {
-      "refetchCode" !== tt ? "Plugin|MobAiPlugin|ShowPetUi" !== tt ? Promise.all([Vt.e(109), Vt.e(110), Vt.e(105), Vt.e(107), Vt.e(218)]).then((() => Vt(41997))).then((Vt => {
+    function Zu(uu, Eu) {
+      "refetchCode" !== uu ? "Plugin|MobAiPlugin|ShowPetUi" !== uu ? Promise.all([ju.e(109), ju.e(110), ju.e(105), ju.e(107), ju.e(218)]).then((() => ju(42001))).then((ju => {
         let {
-          runClientGameMessage: Ot
-        } = Vt;
-        Ot(tt, et)
-      })).catch((et => {
-        console.error(`Game message ${tt} failed`, et)
-      })) : Ot.j.sw("showPetUi", et) : Ot.j.sw("refetchCode")
+          runClientGameMessage: su
+        } = ju;
+        su(uu, Eu)
+      })).catch((Eu => {
+        console.error(`Game message ${uu} failed`, Eu)
+      })) : su.h.TY("showPetUi", Eu) : su.h.TY("refetchCode")
     }
   },
-  39208: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => Xt
+  39327: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => Cu
     });
-    var Ot = Vt(1308),
-      qt = Vt(1429),
-      Dt = Vt(26),
-      mt = Vt(1410),
-      dt = Vt(1423),
-      jt = Vt(1613),
-      Ht = Vt(36709);
+    var su = ju(1278),
+      Uu = ju(1376),
+      Zu = ju(22),
+      Xu = ju(1362),
+      lu = ju(1369),
+      qu = ju(1570),
+      fu = ju(36856);
 
-    function Xt(tt) {
+    function Cu(uu) {
       let {
-        iq: et,
-        Yq: Vt
-      } = tt;
-      const Xt = null !== et && void 0 !== et ? et : (0, dt.c)().gameNameWithVariation;
-      (0, Ot.M)(Xt) && ((0, Ht.j)(), (0, mt.ab)((() => {
-        console.log("Received matchmaking order from game server to game", et), (0, Dt.i)("inGameReplay"), (0, jt.navigatePreserveSearch)((0, qt.c)(Xt, null !== Vt && void 0 !== Vt ? Vt : void 0))
+        HU: Eu,
+        AU: ju
+      } = uu;
+      const Cu = null !== Eu && void 0 !== Eu ? Eu : (0, lu.b)().gameNameWithVariation;
+      (0, su.L)(Cu) && ((0, fu.g)(), (0, Xu.R)((() => {
+        console.log("Received matchmaking order from game server to game", Eu), (0, Zu.j)("inGameReplay"), (0, qu.navigatePreserveSearch)((0, Uu.c)(Cu, null !== ju && void 0 !== ju ? ju : void 0))
       }), "video_start"))
     }
   },
-  39202: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => jt,
-      i: () => mt,
-      l: () => dt,
-      n: () => Ht
+  39320: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => qu,
+      g: () => Xu,
+      i: () => lu,
+      k: () => fu
     });
-    var Ot = Vt(31),
-      qt = Vt(1450);
-    const Dt = new Map;
+    var su = ju(24),
+      Uu = ju(1405);
+    const Zu = new Map;
 
-    function mt(tt, et) {
-      Ot.j.sw("newUiRequest", {
-        id: tt,
-        clientParameters: et
+    function Xu(uu, Eu) {
+      su.h.TY("newUiRequest", {
+        id: uu,
+        clientParameters: Eu
       }, !0)
     }
 
-    function dt(tt) {
-      Ot.j.sw("removeUiRequest", tt, !0);
-      const et = Dt.get(tt);
-      et && (et.tearDownNotification(), Dt.delete(tt))
+    function lu(uu) {
+      su.h.TY("removeUiRequest", uu, !0);
+      const Eu = Zu.get(uu);
+      Eu && (Eu.tearDownNotification(), Zu.delete(uu))
     }
 
-    function jt() {
-      Ot.j.sw("clearUiRequests");
-      for (const tt of Dt.values()) tt.tearDownNotification();
-      Dt.clear()
+    function qu() {
+      su.h.TY("clearUiRequests");
+      for (const uu of Zu.values()) uu.tearDownNotification();
+      Zu.clear()
     }
 
-    function Ht(tt, et, Vt, Ot) {
-      const mt = qt.NotificationProvider.showPromptPopup({
-        title: et,
+    function fu(uu, Eu, ju, su) {
+      const Xu = Uu.NotificationProvider.showPromptPopup({
+        title: Eu,
         confirmText: "general:yes",
         cancelText: "general:no",
-        destructive: Vt,
+        destructive: ju,
         unlockPointerKey: "uiRequestPopup"
       });
-      Dt.set(tt, mt), mt.getResult().then((et => {
-        Dt.delete(tt), "notificationTornDown" !== et && Ot(et)
+      Zu.set(uu, Xu), Xu.getResult().then((Eu => {
+        Zu.delete(uu), "notificationTornDown" !== Eu && su(Eu)
       }))
     }
   },
-  39196: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => Ot
+  39312: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => su
     });
-    class Ot {
+    class su {
       constructor() {
         this.members = new Map
       }
-      apply(tt) {
-        const et = {
+      apply(uu) {
+        const Eu = {
           added: [],
           removed: [],
           settingChanges: []
         };
-        for (const Ot of tt.zt) {
-          let tt = this.members.get(Ot.ot);
-          if (tt || (tt = {
+        for (const su of uu.Su) {
+          let uu = this.members.get(su.Iu);
+          if (uu || (uu = {
               name: null,
               settings: {}
-            }, this.members.set(Ot.ot, tt), et.added.push(Ot.ot)), null !== Ot.rt && (tt.name = Ot.rt), null !== Ot.Ut || Ot.Yt.length > 0) {
-            const Vt = null === Ot.Ut ? {} : JSON.parse(Ot.Ut);
-            Object.assign(tt.settings, Vt);
-            for (const et of Ot.Yt) delete tt.settings[et], Vt[et] = void 0;
-            et.settingChanges.push({
-              playerId: Ot.ot,
-              settings: Vt
+            }, this.members.set(su.Iu, uu), Eu.added.push(su.Iu)), null !== su.Fu && (uu.name = su.Fu), null !== su.Bu || su.Lu.length > 0) {
+            const ju = null === su.Bu ? {} : JSON.parse(su.Bu);
+            Object.assign(uu.settings, ju);
+            for (const Eu of su.Lu) delete uu.settings[Eu], ju[Eu] = void 0;
+            Eu.settingChanges.push({
+              playerId: su.Iu,
+              settings: ju
             })
           }
         }
-        for (const Ot of tt.Bt) {
-          const tt = this.members.get(Ot);
-          var Vt;
-          if (tt) this.members.delete(Ot), et.removed.push({
-            playerId: Ot,
-            name: null !== (Vt = tt.name) && void 0 !== Vt ? Vt : void 0
+        for (const su of uu.tu) {
+          const uu = this.members.get(su);
+          var ju;
+          if (uu) this.members.delete(su), Eu.removed.push({
+            playerId: su,
+            name: null !== (ju = uu.name) && void 0 !== ju ? ju : void 0
           })
         }
-        return et
+        return Eu
       }
-      has(tt) {
-        return this.members.has(tt)
+      has(uu) {
+        return this.members.has(uu)
       }
       ids() {
         return [...this.members.keys()]
       }
-      getName(tt) {
-        var et, Vt;
-        return null !== (et = null === (Vt = this.members.get(tt)) || void 0 === Vt ? void 0 : Vt.name) && void 0 !== et ? et : void 0
+      getName(uu) {
+        var Eu, ju;
+        return null !== (Eu = null === (ju = this.members.get(uu)) || void 0 === ju ? void 0 : ju.name) && void 0 !== Eu ? Eu : void 0
       }
-      getSettings(tt) {
-        var et;
-        return null === (et = this.members.get(tt)) || void 0 === et ? void 0 : et.settings
+      getSettings(uu) {
+        var Eu;
+        return null === (Eu = this.members.get(uu)) || void 0 === Eu ? void 0 : Eu.settings
       }
-      getSetting(tt, et) {
-        var Vt;
-        return null === (Vt = this.members.get(tt)) || void 0 === Vt ? void 0 : Vt.settings[et]
+      getSetting(uu, Eu) {
+        var ju;
+        return null === (ju = this.members.get(uu)) || void 0 === ju ? void 0 : ju.settings[Eu]
       }
       clear() {
         this.members.clear()
       }
     }
   },
-  39226: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => Ot,
-      f: () => qt
+  39344: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => su,
+      i: () => Uu
     });
-    const Ot = ["description", "label"];
+    const su = ["description", "label"];
 
-    function qt(tt) {
-      const et = tt.type;
+    function Uu(uu) {
+      const Eu = uu.type;
       return {
-        type: et,
-        params: tt[et]
+        type: Eu,
+        params: uu[Eu]
       }
     }
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

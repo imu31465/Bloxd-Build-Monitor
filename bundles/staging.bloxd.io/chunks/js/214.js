@@ -1,302 +1,302 @@
 export const id = 214;
 export const ids = [214];
 export const modules = {
-  41008: (tt, et, Vt) => {
-    function Ot(tt, et, Vt) {
-      if ("undefined" !== typeof OffscreenCanvas) return new OffscreenCanvas(tt, et).getContext("2d", Vt);
-      const Ot = document.createElement("canvas");
-      return Ot.width = tt, Ot.height = et, Ot.getContext("2d", Vt)
+  41062: (uu, Eu, ju) => {
+    function su(uu, Eu, ju) {
+      if ("undefined" !== typeof OffscreenCanvas) return new OffscreenCanvas(uu, Eu).getContext("2d", ju);
+      const su = document.createElement("canvas");
+      return su.width = uu, su.height = Eu, su.getContext("2d", ju)
     }
 
-    function qt(tt, et) {
-      return tt.getContext("2d", et)
+    function Uu(uu, Eu) {
+      return uu.getContext("2d", Eu)
     }
-    Vt.d(et, {
-      b: () => qt,
-      e: () => Ot
+    ju.d(Eu, {
+      e: () => Uu,
+      i: () => su
     })
   },
-  40967: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => dt
+  41020: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => lu
     });
-    const Ot = 1 << 20,
-      qt = 1 << 21,
-      Dt = 1024,
-      mt = 2048;
+    const su = 1 << 20,
+      Uu = 1 << 21,
+      Zu = 1024,
+      Xu = 2048;
 
-    function dt(tt, et, Vt) {
-      const dt = tt + Ot,
-        jt = et + Dt,
-        Ht = Vt + Ot;
-      return dt < 0 || dt >= qt || Ht < 0 || Ht >= qt || jt < 0 || jt >= mt ? -1 : (dt * qt + Ht) * mt + jt
+    function lu(uu, Eu, ju) {
+      const lu = uu + su,
+        qu = Eu + Zu,
+        fu = ju + su;
+      return lu < 0 || lu >= Uu || fu < 0 || fu >= Uu || qu < 0 || qu >= Xu ? -1 : (lu * Uu + fu) * Xu + qu
     }
   },
-  40960: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => Ot,
-      e: () => mt,
-      f: () => qt,
-      i: () => Dt,
-      l: () => Xt,
-      n: () => Ht,
-      q: () => jt,
-      t: () => dt
+  41017: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => su,
+      h: () => Xu,
+      i: () => Uu,
+      j: () => Zu,
+      l: () => Cu,
+      m: () => fu,
+      o: () => qu,
+      q: () => lu
     });
-    Vt(3533);
-    Vt(40967);
+    ju(3653);
+    ju(41020);
 
-    function Ot(tt) {}
+    function su(uu) {}
 
-    function qt(tt) {}
+    function Uu(uu) {}
 
-    function Dt(tt) {}
+    function Zu(uu) {}
 
-    function mt(tt) {}
+    function Xu(uu) {}
 
-    function dt(tt) {}
+    function lu(uu) {}
 
-    function jt(tt, et, Vt) {}
+    function qu(uu, Eu, ju) {}
 
-    function Ht(tt) {}
+    function fu(uu) {}
 
-    function Xt(tt) {}
+    function Cu(uu) {}
   },
-  40952: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => bt,
-      e: () => ft,
-      f: () => Bt,
-      i: () => St,
-      l: () => It,
-      p: () => Pt,
-      s: () => Mt,
-      w: () => yt,
-      A: () => Nt,
-      B: () => Wt,
-      C: () => Ut,
-      E: () => ut,
-      F: () => Gt,
-      J: () => Yt,
-      L: () => Zt,
-      O: () => Ft
+  41011: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => Mu,
+      e: () => Ou,
+      h: () => xu,
+      j: () => Pu,
+      l: () => mu,
+      m: () => vu,
+      q: () => gu,
+      r: () => hu,
+      s: () => Du,
+      w: () => au,
+      y: () => Fu,
+      A: () => pu,
+      B: () => iu,
+      C: () => tu,
+      E: () => Ku,
+      F: () => ru
     });
-    var Ot = Vt(4960),
-      qt = Vt(40831),
-      Dt = (Vt(40960), Vt(17));
-    class mt {
-      constructor(tt, et) {
-        this.memory = tt, this.access = et, this.cursor = 0, this.dropped = 0, this.buffer = null, this.ptr = 0, this.uQ = 0, this.u32 = new Dt.k(0), this.f32 = new Dt.i(0), this.u8 = new Dt.e(0), this.dataView = new Dt.j(new ArrayBuffer(0)), this.refresh()
+    var su = ju(4970),
+      Uu = ju(40897),
+      Zu = (ju(41017), ju(13));
+    class Xu {
+      constructor(uu, Eu) {
+        this.memory = uu, this.access = Eu, this.cursor = 0, this.dropped = 0, this.buffer = null, this.ptr = 0, this.Mb = 0, this.u32 = new Zu.k(0), this.f32 = new Zu.f(0), this.u8 = new Zu.d(0), this.dataView = new Zu.i(new ArrayBuffer(0)), this.refresh()
       }
       refresh() {
-        this.ptr = this.access.ptr(), this.uQ = this.access.uQ(), this.buffer = (0, Dt.M)(this.memory()), this.u32 = new Dt.k(this.buffer, this.ptr, this.uQ >>> 2), this.f32 = new Dt.i(this.buffer, this.ptr, this.uQ >>> 2), this.u8 = new Dt.e(this.buffer, this.ptr, this.uQ), this.dataView = new Dt.j(this.buffer, this.ptr, this.uQ)
+        this.ptr = this.access.ptr(), this.Mb = this.access.Mb(), this.buffer = (0, Zu.J)(this.memory()), this.u32 = new Zu.k(this.buffer, this.ptr, this.Mb >>> 2), this.f32 = new Zu.f(this.buffer, this.ptr, this.Mb >>> 2), this.u8 = new Zu.d(this.buffer, this.ptr, this.Mb), this.dataView = new Zu.i(this.buffer, this.ptr, this.Mb)
       }
       ensureViews() {
-        (0, Dt.M)(this.memory()) !== this.buffer && this.refresh()
+        (0, Zu.J)(this.memory()) !== this.buffer && this.refresh()
       }
       get view() {
         return this.ensureViews(), this.dataView
       }
-      room(tt) {
-        return !!this.fits(tt) || (this.dropped++, !1)
+      room(uu) {
+        return !!this.fits(uu) || (this.dropped++, !1)
       }
-      fits(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.cursor;
+      fits(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.cursor;
         this.ensureViews();
-        const Vt = et + tt;
-        return Vt <= this.uQ || Vt <= Ot.Xc && 0 !== this.access.reserve(Vt) && (this.refresh(), Vt <= this.uQ)
+        const ju = Eu + uu;
+        return ju <= this.Mb || ju <= su.Lc && 0 !== this.access.reserve(ju) && (this.refresh(), ju <= this.Mb)
       }
-      consume(tt) {
-        const et = this.cursor - tt;
-        et > 0 && tt > 0 && (this.ensureViews(), this.u8.copyWithin(0, tt, this.cursor)), this.cursor = et > 0 ? et : 0
+      consume(uu) {
+        const Eu = this.cursor - uu;
+        Eu > 0 && uu > 0 && (this.ensureViews(), this.u8.copyWithin(0, uu, this.cursor)), this.cursor = Eu > 0 ? Eu : 0
       }
-      writeRecord(tt, et, Vt, qt, Dt) {
-        if (!this.room(Ot.Cb)) return !1;
-        const mt = this.cursor >>> 2;
-        return this.u32[mt] = 65535 & tt | (65535 & et) << 16, this.f32[mt + 1] = Vt, this.f32[mt + 2] = qt, this.u32[mt + 3] = Dt >>> 0, this.cursor += Ot.Cb, !0
+      writeRecord(uu, Eu, ju, Uu, Zu) {
+        if (!this.room(su.pb)) return !1;
+        const Xu = this.cursor >>> 2;
+        return this.u32[Xu] = 65535 & uu | (65535 & Eu) << 16, this.f32[Xu + 1] = ju, this.f32[Xu + 2] = Uu, this.u32[Xu + 3] = Zu >>> 0, this.cursor += su.pb, !0
       }
-      writeOptions(tt, et) {
-        const Vt = et.byteLength,
-          qt = Ot.Cb + (0, Ot.Fe)(Vt);
-        if (!this.fits(qt)) return !1;
-        const Dt = this.cursor,
-          mt = Dt >>> 2;
-        this.u32[mt] = Ot.Fb.Options, this.u32[mt + 1] = Vt, this.u32[mt + 2] = 0, this.u32[mt + 3] = tt >>> 0;
-        const dt = Dt + Ot.Cb;
-        return this.u8.set(et, dt), this.u8.fill(0, dt + Vt, Dt + qt), this.cursor += qt, !0
+      writeOptions(uu, Eu) {
+        const ju = Eu.byteLength,
+          Uu = su.pb + (0, su.xe)(ju);
+        if (!this.fits(Uu)) return !1;
+        const Zu = this.cursor,
+          Xu = Zu >>> 2;
+        this.u32[Xu] = su.sb.Options, this.u32[Xu + 1] = ju, this.u32[Xu + 2] = 0, this.u32[Xu + 3] = uu >>> 0;
+        const lu = Zu + su.pb;
+        return this.u8.set(Eu, lu), this.u8.fill(0, lu + ju, Zu + Uu), this.cursor += Uu, !0
       }
-      writeWorkerRecord(tt, et, Vt, qt, Dt, mt) {
-        const dt = mt.byteLength,
-          jt = Ot.Vd + (0, Ot.Fe)(dt);
-        if (dt > Ot.Sd) return this.dropped++, !1;
-        if (!this.room(jt)) return !1;
-        const Ht = this.cursor,
-          Xt = Ht >>> 2;
-        this.u32[Xt] = tt >>> 0, this.u32[Xt + 1] = 65535 & et | (65535 & Vt) << 16, this.u32[Xt + 2] = qt >>> 0, this.u32[Xt + 3] = Dt >>> 0, this.u32[Xt + 4] = dt;
-        const Qt = Ht + Ot.Vd;
-        return this.u8.set(mt, Qt), this.u8.fill(0, Qt + dt, Ht + jt), this.cursor += jt, !0
+      writeWorkerRecord(uu, Eu, ju, Uu, Zu, Xu) {
+        const lu = Xu.byteLength,
+          qu = su.Qd + (0, su.xe)(lu);
+        if (lu > su.Md) return this.dropped++, !1;
+        if (!this.room(qu)) return !1;
+        const fu = this.cursor,
+          Cu = fu >>> 2;
+        this.u32[Cu] = uu >>> 0, this.u32[Cu + 1] = 65535 & Eu | (65535 & ju) << 16, this.u32[Cu + 2] = Uu >>> 0, this.u32[Cu + 3] = Zu >>> 0, this.u32[Cu + 4] = lu;
+        const bu = fu + su.Qd;
+        return this.u8.set(Xu, bu), this.u8.fill(0, bu + lu, fu + qu), this.cursor += qu, !0
       }
       written() {
         return this.ensureViews(), this.u8.subarray(0, this.cursor)
       }
-      writeFrame(tt, et) {
-        return this.writeNet(Ot.kc.Frame, tt, et)
+      writeFrame(uu, Eu) {
+        return this.writeNet(su.ac.Frame, uu, Eu)
       }
-      writeOpen(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return this.writeNet(Ot.kc.Open, tt, jt(et))
+      writeOpen(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return this.writeNet(su.ac.Open, uu, qu(Eu))
       }
-      writeClose(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return this.writeNet(Ot.kc.Close, tt, jt(et))
+      writeClose(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return this.writeNet(su.ac.Close, uu, qu(Eu))
       }
-      writeNet(tt, et, Vt) {
-        const qt = Vt.byteLength,
-          Dt = Ot.ic + (0, Ot.Fe)(qt);
-        if (qt > Ot.bc) return this.dropped++, !1;
-        if (!this.room(Dt)) return !1;
-        const mt = this.cursor;
-        this.u32[mt >>> 2] = qt, this.u32[1 + (mt >>> 2)] = (0, Ot.Ae)(tt, et);
-        const dt = mt + Ot.ic;
-        return this.u8.set(Vt, dt), this.u8.fill(0, dt + qt, mt + Dt), this.cursor += Dt, !0
+      writeNet(uu, Eu, ju) {
+        const Uu = ju.byteLength,
+          Zu = su._b + (0, su.xe)(Uu);
+        if (Uu > su.Xb) return this.dropped++, !1;
+        if (!this.room(Zu)) return !1;
+        const Xu = this.cursor;
+        this.u32[Xu >>> 2] = Uu, this.u32[1 + (Xu >>> 2)] = (0, su.se)(uu, Eu);
+        const lu = Xu + su._b;
+        return this.u8.set(ju, lu), this.u8.fill(0, lu + Uu, Xu + Zu), this.cursor += Zu, !0
       }
-      XE(tt, et, Vt) {
-        const qt = Ot.q + (0, Ot.Fe)(Vt);
-        if (!this.room(qt)) return -1;
-        const Dt = this.cursor;
-        this.u32[Dt >>> 2] = 65535 & tt | (65535 & et) << 16, this.u32[1 + (Dt >>> 2)] = Vt;
-        const mt = Dt + Ot.q;
-        return this.u8.fill(0, mt, Dt + qt), this.cursor += qt, mt
+      NN(uu, Eu, ju) {
+        const Uu = su.s + (0, su.xe)(ju);
+        if (!this.room(Uu)) return -1;
+        const Zu = this.cursor;
+        this.u32[Zu >>> 2] = 65535 & uu | (65535 & Eu) << 16, this.u32[1 + (Zu >>> 2)] = ju;
+        const Xu = Zu + su.s;
+        return this.u8.fill(0, Xu, Zu + Uu), this.cursor += Uu, Xu
       }
-      growForCmd(tt) {
-        return this.fits(Ot.q + (0, Ot.Fe)(tt), 0)
+      growForCmd(uu) {
+        return this.fits(su.s + (0, su.xe)(uu), 0)
       }
-      writeCmd(tt, et, Vt) {
-        const Ot = this.XE(tt, et, Vt.byteLength);
-        return !(Ot < 0) && (this.u8.set(Vt, Ot), !0)
+      writeCmd(uu, Eu, ju) {
+        const su = this.NN(uu, Eu, ju.byteLength);
+        return !(su < 0) && (this.u8.set(ju, su), !0)
       }
-      copyWritten(tt, et) {
-        return this.ensureViews(), this.u8.slice(tt, tt + et)
+      copyWritten(uu, Eu) {
+        return this.ensureViews(), this.u8.slice(uu, uu + Eu)
       }
     }
-    const dt = new Dt.e(0);
+    const lu = new Zu.d(0);
 
-    function jt(tt) {
-      if (0 === tt) return dt;
-      const et = new Dt.e(Ot.ec);
-      for (let Vt = 0; Vt < Ot.ec; Vt++) et[Vt] = tt >>> 8 * Vt & 255;
-      return et
+    function qu(uu) {
+      if (0 === uu) return lu;
+      const Eu = new Zu.d(su.Yb);
+      for (let ju = 0; ju < su.Yb; ju++) Eu[ju] = uu >>> 8 * ju & 255;
+      return Eu
     }
-    class Ht {
-      constructor(tt, et) {
-        this.input = void 0, this.net = void 0, this.worker = void 0, this.cmd = void 0, this.input = new mt(et, {
-          ptr: () => tt.kQ(),
-          uQ: () => tt.wmt(),
-          reserve: et => tt.Wmt(et)
-        }), this.net = new mt(et, {
-          ptr: () => tt.Kmt(),
-          uQ: () => tt.umt(),
-          reserve: et => tt.Smt(et)
-        }), this.worker = new mt(et, {
-          ptr: () => tt.gmt(),
-          uQ: () => tt.Tmt(),
-          reserve: et => tt.cmt(et)
-        }), this.cmd = new mt(et, {
-          ptr: () => tt.qmt(),
-          uQ: () => tt.Vmt(),
-          reserve: et => tt.Omt(et)
+    class fu {
+      constructor(uu, Eu) {
+        this.input = void 0, this.net = void 0, this.worker = void 0, this.cmd = void 0, this.input = new Xu(Eu, {
+          ptr: () => uu.ib(),
+          Mb: () => uu.FZu(),
+          reserve: Eu => uu.RZu(Eu)
+        }), this.net = new Xu(Eu, {
+          ptr: () => uu.nZu(),
+          Mb: () => uu.AZu(),
+          reserve: Eu => uu.uXu(Eu)
+        }), this.worker = new Xu(Eu, {
+          ptr: () => uu.GXu(),
+          Mb: () => uu.eXu(),
+          reserve: Eu => uu.EXu(Eu)
+        }), this.cmd = new Xu(Eu, {
+          ptr: () => uu.vZu(),
+          Mb: () => uu.kZu(),
+          reserve: Eu => uu.mZu(Eu)
         })
       }
-      reset(tt, et, Vt) {
-        this.input.consume(tt), this.worker.consume(et), this.cmd.consume(Vt)
+      reset(uu, Eu, ju) {
+        this.input.consume(uu), this.worker.consume(Eu), this.cmd.consume(ju)
       }
     }
-    var Xt = Vt(36507),
-      Qt = Vt(2465),
-      lt = Vt(4958),
-      Et = Vt(40971);
-    const ft = "coreFrame",
-      wt = "fatalStatus",
-      yt = "otherCall",
-      Nt = "coreRings",
-      Mt = "netIn",
-      bt = "abi",
-      Jt = "netOut",
-      Ct = "workerOut",
-      ut = "worldgenHost",
-      Kt = "eventWalker",
-      ht = "netEvent",
-      vt = "envEvent",
-      Wt = "sharedTables",
-      St = "inputAction",
-      ct = "frameSends",
-      Rt = new Set([Kt, ht, vt, ct, St, Wt]),
-      It = "wasmMemory",
-      Pt = "meshHost";
+    var Cu = ju(36684),
+      bu = ju(2519),
+      cu = ju(4965),
+      Nu = ju(41025);
+    const Ou = "coreFrame",
+      Yu = "fatalStatus",
+      hu = "otherCall",
+      Du = "coreRings",
+      gu = "netIn",
+      Mu = "abi",
+      eu = "netOut",
+      Gu = "workerOut",
+      pu = "worldgenHost",
+      wu = "eventWalker",
+      Ju = "netEvent",
+      du = "envEvent",
+      au = "sharedTables",
+      Pu = "inputAction",
+      ou = "frameSends",
+      ku = new Set([wu, Ju, du, ou, Pu, au]),
+      mu = "wasmMemory",
+      vu = "meshHost";
 
-    function Zt(tt, et) {
-      tt.forEachWorkerOut(((Vt, qt, Dt) => {
-        if ((0, Ot.ve)(Vt)) try {
-          var mt;
-          null === (mt = et.worldgen) || void 0 === mt || mt.take(Vt, Dt)
-        } catch (jt) {
-          tt.crash(ut, jt)
+    function Ku(uu, Eu) {
+      uu.forEachWorkerOut(((ju, Uu, Zu) => {
+        if ((0, su.je)(ju)) try {
+          var Xu;
+          null === (Xu = Eu.worldgen) || void 0 === Xu || Xu.take(ju, Zu)
+        } catch (qu) {
+          uu.crash(pu, qu)
         } else try {
-          var dt;
-          null === (dt = et.mesh) || void 0 === dt || dt.take(Vt, qt, Dt)
-        } catch (jt) {
-          tt.crash(Pt, jt)
+          var lu;
+          null === (lu = Eu.mesh) || void 0 === lu || lu.take(ju, Uu, Zu)
+        } catch (qu) {
+          uu.crash(vu, qu)
         }
       }))
     }
-    const Lt = 1048576;
+    const Vu = 1048576;
 
-    function Ft(tt, et) {
-      let Vt = !1;
-      const Ot = () => {
-        Vt = !1, et()
+    function ru(uu, Eu) {
+      let ju = !1;
+      const su = () => {
+        ju = !1, Eu()
       };
       return () => {
-        !Vt && tt.cursor >= Lt && (Vt = !0, queueMicrotask(Ot))
+        !ju && uu.cursor >= Vu && (ju = !0, queueMicrotask(su))
       }
     }
-    const kt = new Set([wt, yt, ut, Pt]);
+    const Qu = new Set([Yu, hu, pu, vu]);
 
-    function Gt(tt) {
-      return Rt.has(tt.site) ? tt.error instanceof WebAssembly.RuntimeError || (0, qt.k)(tt.error) : !kt.has(tt.site) && tt.error instanceof Error
+    function iu(uu) {
+      return ku.has(uu.site) ? uu.error instanceof WebAssembly.RuntimeError || (0, Uu.l)(uu.error) : !Qu.has(uu.site) && uu.error instanceof Error
     }
-    const zt = "events",
-      ot = [],
-      rt = "debugLog",
-      Ut = "terrainTextures",
-      At = "sunShadowTextures",
-      it = new TextDecoder;
+    const Wu = "events",
+      Su = [],
+      Iu = "debugLog",
+      Fu = "terrainTextures",
+      Bu = "sunShadowTextures",
+      Lu = new TextDecoder;
 
-    function Yt(tt, et) {
+    function tu(uu, Eu) {
       const {
-        site: Vt,
-        error: qt,
-        header: Dt
-      } = tt, mt = Dt ? (0, Ot.qe)(Dt.lastError) : "noFrame", dt = `CORE-${Vt===wt?mt:Vt}`, jt = null === qt || void 0 === qt ? "" : ` ${(0,Xt.j)(qt)}`, Ht = {
-        site: Vt,
-        wasmBuild: et.wasm,
-        clientVersion: et.client
+        site: ju,
+        error: Uu,
+        header: Zu
+      } = uu, Xu = Zu ? (0, su.he)(Zu.lastError) : "noFrame", lu = `CORE-${ju===Yu?Xu:ju}`, qu = null === Uu || void 0 === Uu ? "" : ` ${(0,Cu.j)(Uu)}`, fu = {
+        site: ju,
+        wasmBuild: Eu.wasm,
+        clientVersion: Eu.client
       };
-      return Dt && (Ht.status = String(Dt.status), Ht.lastError = mt, Ht.lastErrorCode = String(Dt.lastError), Ht.lastErrorDetail = String(Dt.lastErrorDetail), Ht.errorCount = String(Dt.errorCount), Ht.frameIndex = String(Dt.frameIndex), Ht.tickIndex = String(Dt.tickIndex)), {
-        code: dt,
-        message: `core ${Vt}, last error ${mt};${jt}`,
-        details: Ht
+      return Zu && (fu.status = String(Zu.status), fu.lastError = Xu, fu.lastErrorCode = String(Zu.lastError), fu.lastErrorDetail = String(Zu.lastErrorDetail), fu.errorCount = String(Zu.errorCount), fu.frameIndex = String(Zu.frameIndex), fu.tickIndex = String(Zu.tickIndex)), {
+        code: lu,
+        message: `core ${ju}, last error ${Xu};${qu}`,
+        details: fu
       }
     }
-    class Bt {
-      constructor(tt, et, Vt) {
-        this.core = tt, this.memory = et, this.handlers = Vt, this.rings = void 0, this.lastHeader = null, this.lastFrameKind = "none", this.stopped = !1, this.netKept = 0, this.keptFrames = 0, this.headerBuffer = null, this.header = new Uint32Array(0), this.loadCountsBuffer = null, this.loadCounts = new Uint32Array(0), this.unsentUiPrefs = null, this.eventWalker = null, this.netOffsets = [], this.frameEvents = {
+    class xu {
+      constructor(uu, Eu, ju) {
+        this.core = uu, this.memory = Eu, this.handlers = ju, this.rings = void 0, this.lastHeader = null, this.lastFrameKind = "none", this.stopped = !1, this.netKept = 0, this.keptFrames = 0, this.headerBuffer = null, this.header = new Uint32Array(0), this.loadCountsBuffer = null, this.loadCounts = new Uint32Array(0), this.unsentUiPrefs = null, this.eventWalker = null, this.netOffsets = [], this.frameEvents = {
           ptr: 0,
           len: 0,
-          net: ot,
+          net: Su,
           netOffsets: this.netOffsets,
           kind: "none"
-        }, this.unsentEnvPrefs = null, this.unsentLookPrefs = null, this.envEvents = [], this.graceEvents = [], this.unsentOptions = [], this.optionsDropped = 0, this.drawsHeld = !1, this.gameHost = null, this.atSendsStop = !1, this.rings = new Ht(tt, et)
+        }, this.unsentEnvPrefs = null, this.unsentLookPrefs = null, this.envEvents = [], this.graceEvents = [], this.unsentOptions = [], this.optionsDropped = 0, this.drawsHeld = !1, this.gameHost = null, this.atSendsStop = !1, this.rings = new fu(uu, Eu)
       }
       get netKeptFrames() {
         return this.keptFrames
@@ -307,643 +307,643 @@ export const modules = {
       hasPendingCommands() {
         return this.rings.cmd.cursor > 0
       }
-      framePaces(tt) {
+      framePaces(uu) {
         if (this.stopped || this.drawsHeld) return !1;
         try {
-          return this.core.Qmt(tt)
-        } catch (et) {
-          return this.crash(ft, et), !1
+          return this.core.WZu(uu)
+        } catch (Eu) {
+          return this.crash(Ou, Eu), !1
         }
       }
       get isStopped() {
         return this.stopped
       }
-      frame(tt, et) {
-        var Vt;
-        let Dt = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      frame(uu, Eu) {
+        var ju;
+        let Zu = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         if (this.stopped) return !1;
         if (!this.writePendingInput()) return !1;
         const {
-          input: mt,
-          net: dt,
-          worker: jt,
-          cmd: Ht
-        } = this.rings, Xt = dt.cursor, Qt = et && !this.drawsHeld;
-        let yt = Ot.Q.Fatal;
-        const Nt = mt.cursor,
-          bt = jt.cursor,
-          Jt = Ht.cursor;
-        let Ct, ut = null;
-        const vt = this.handlers.onSends;
+          input: Xu,
+          net: lu,
+          worker: qu,
+          cmd: fu
+        } = this.rings, Cu = lu.cursor, bu = Eu && !this.drawsHeld;
+        let hu = su.F.Fatal;
+        const Du = Xu.cursor,
+          Mu = qu.cursor,
+          eu = fu.cursor;
+        let Gu, pu = null;
+        const du = this.handlers.onSends;
         try {
-          const et = (Qt ? Ot.mb.Draws : 0) | (Dt ? Ot.mb.NetAll : 0) | (vt ? Ot.mb.StopForSends : 0);
-          yt = (0, Et.e)((() => {
-            let Vt = this.core.frame(tt, Nt, dt.cursor, bt, et, Jt);
-            for (; Vt === Ot.yd && vt;) {
-              var qt;
-              if (Ct ??= null === (qt = this.gameHost) || void 0 === qt ? void 0 : qt.takeFault(), void 0 === Ct && !this.takeSends(vt)) return Ot.Q.Fatal;
-              Vt = this.core.oy()
+          const Eu = (bu ? su.ab.Draws : 0) | (Zu ? su.ab.NetAll : 0) | (du ? su.ab.StopForSends : 0);
+          hu = (0, Nu.h)((() => {
+            let ju = this.core.frame(uu, Du, lu.cursor, Mu, Eu, eu);
+            for (; ju === su.pd && du;) {
+              var Uu;
+              if (Gu ??= null === (Uu = this.gameHost) || void 0 === Uu ? void 0 : Uu.takeFault(), void 0 === Gu && !this.takeSends(du)) return su.F.Fatal;
+              ju = this.core.Qh()
             }
-            return Vt
+            return ju
           }))
-        } catch (it) {
-          ut = {
-            error: it
+        } catch (Lu) {
+          pu = {
+            error: Lu
           }
         }
-        Ct ??= null === (Vt = this.gameHost) || void 0 === Vt ? void 0 : Vt.takeFault();
-        const Wt = this.stopped || null !== ut || void 0 !== Ct;
-        this.rings.reset(Wt ? mt.cursor : Nt, Wt ? jt.cursor : bt, Wt ? Ht.cursor : Jt);
-        const St = null === ut && void 0 === Ct,
-          ct = St && !this.stopped && yt === Ot.Q.Fatal && 0 === this.core.QE(),
-          Rt = St && !ct ? this.headerView() : null,
-          It = ct ? {
-            ...null !== (Pt = this.lastHeader) && void 0 !== Pt ? Pt : (0, Ot.Ge)(new Uint32Array(Ot.qb)),
-            status: Ot.Q.Fatal,
-            lastError: Ot.M.CoreBusy,
+        Gu ??= null === (ju = this.gameHost) || void 0 === ju ? void 0 : ju.takeFault();
+        const au = this.stopped || null !== pu || void 0 !== Gu;
+        this.rings.reset(au ? Xu.cursor : Du, au ? qu.cursor : Mu, au ? fu.cursor : eu);
+        const Pu = null === pu && void 0 === Gu,
+          ou = Pu && !this.stopped && hu === su.F.Fatal && 0 === this.core.ON(),
+          ku = Pu && !ou ? this.headerView() : null,
+          mu = ou ? {
+            ...null !== (vu = this.lastHeader) && void 0 !== vu ? vu : (0, su.ze)(new Uint32Array(su.eb)),
+            status: su.F.Fatal,
+            lastError: su.D.CoreBusy,
             lastErrorDetail: 0
-          } : null === Rt ? null : (0, Ot.Ge)(Rt);
-        var Pt;
-        null !== It && (this.lastHeader = It);
-        const Zt = null !== It && yt !== Ot.Q.Fatal,
-          Lt = Zt && null !== Rt ? Rt[Ot.sb.NetInKept] : 0,
-          Ft = Zt && Lt <= Xt && Lt % 4 === 0 ? Lt : null;
-        var kt, Gt;
-        null !== It && null !== Ft && yt === Ot.Q.Errors && (null === (kt = (Gt = this.handlers).onErrors) || void 0 === kt || kt.call(Gt, It));
-        const zt = null === Ft ? ot : this.readEvents(Xt);
-        if (dt.consume(Xt - (null !== Ft && void 0 !== Ft ? Ft : 0)), this.netKept = null !== Ft && void 0 !== Ft ? Ft : 0, this.keptFrames = this.netKept > 0 ? this.keptFrames + 1 : 0, null !== ut) return this.crash(ft, void 0 === Ct || Ct instanceof qt.d ? ut.error : Ct), !1;
-        if (void 0 !== Ct || null === It) return this.crashOn(ft, Ct), !1;
-        if (ct) return this.crash(wt, null), !1;
-        const rt = this.headerView()[Ot.sb.FrameDraw];
-        if (this.lastFrameKind = (0, lt.e)(Qt, rt), yt === Ot.Q.Fatal) return this.crash(wt, null), !1;
-        if (null === Ft) return this.crash(Mt, `the core kept ${Lt} of ${Xt} net-in bytes`), !1;
+          } : null === ku ? null : (0, su.ze)(ku);
+        var vu;
+        null !== mu && (this.lastHeader = mu);
+        const Ku = null !== mu && hu !== su.F.Fatal,
+          Vu = Ku && null !== ku ? ku[su.hb.NetInKept] : 0,
+          ru = Ku && Vu <= Cu && Vu % 4 === 0 ? Vu : null;
+        var Qu, iu;
+        null !== mu && null !== ru && hu === su.F.Errors && (null === (Qu = (iu = this.handlers).onErrors) || void 0 === Qu || Qu.call(iu, mu));
+        const Wu = null === ru ? Su : this.readEvents(Cu);
+        if (lu.consume(Cu - (null !== ru && void 0 !== ru ? ru : 0)), this.netKept = null !== ru && void 0 !== ru ? ru : 0, this.keptFrames = this.netKept > 0 ? this.keptFrames + 1 : 0, null !== pu) return this.crash(Ou, void 0 === Gu || Gu instanceof Uu.e ? pu.error : Gu), !1;
+        if (void 0 !== Gu || null === mu) return this.crashOn(Ou, Gu), !1;
+        if (ou) return this.crash(Yu, null), !1;
+        const Iu = this.headerView()[su.hb.FrameDraw];
+        if (this.lastFrameKind = (0, cu.h)(bu, Iu), hu === su.F.Fatal) return this.crash(Yu, null), !1;
+        if (null === ru) return this.crash(gu, `the core kept ${Vu} of ${Cu} net-in bytes`), !1;
         if (this.eventWalker) {
           if (this.stopped) return !1;
-          const tt = this.frameEvents,
-            et = this.headerView();
-          tt.ptr = et[Ot.sb.EventsPtr], tt.len = et[Ot.sb.EventsLen], tt.net = zt, tt.kind = this.lastFrameKind;
+          const uu = this.frameEvents,
+            Eu = this.headerView();
+          uu.ptr = Eu[su.hb.EventsPtr], uu.len = Eu[su.hb.EventsLen], uu.net = Wu, uu.kind = this.lastFrameKind;
           try {
-            this.eventWalker(tt)
-          } catch (it) {
-            return this.crashOn(Kt, it), !1
+            this.eventWalker(uu)
+          } catch (Lu) {
+            return this.crashOn(wu, Lu), !1
           }
           return this.handEnvEvents()
         }
-        for (const Ot of zt) {
+        for (const su of Wu) {
           if (this.stopped) return !1;
           try {
-            var Ut, At;
-            null === (Ut = (At = this.handlers).onNetEvent) || void 0 === Ut || Ut.call(At, Ot)
-          } catch (it) {
-            return this.crashOn(ht, it), !1
+            var Fu, Bu;
+            null === (Fu = (Bu = this.handlers).onNetEvent) || void 0 === Fu || Fu.call(Bu, su)
+          } catch (Lu) {
+            return this.crashOn(Ju, Lu), !1
           }
         }
         return this.handEnvEvents()
       }
       handEnvEvents() {
-        for (const Dt of this.graceEvents) {
+        for (const Zu of this.graceEvents) {
           if (this.stopped) return !1;
           try {
-            var tt, et;
-            null === (tt = (et = this.handlers).onReconnectGrace) || void 0 === tt || tt.call(et, Dt)
-          } catch (qt) {
-            return this.crashOn(ht, qt), !1
+            var uu, Eu;
+            null === (uu = (Eu = this.handlers).onReconnectGrace) || void 0 === uu || uu.call(Eu, Zu)
+          } catch (Uu) {
+            return this.crashOn(Ju, Uu), !1
           }
         }
-        for (const Dt of this.envEvents) {
+        for (const Zu of this.envEvents) {
           if (this.stopped) return !1;
           try {
-            var Vt, Ot;
-            null === (Vt = (Ot = this.handlers).onEnvEvent) || void 0 === Vt || Vt.call(Ot, Dt)
-          } catch (qt) {
-            return this.crashOn(vt, qt), !1
+            var ju, su;
+            null === (ju = (su = this.handlers).onEnvEvent) || void 0 === ju || ju.call(su, Zu)
+          } catch (Uu) {
+            return this.crashOn(du, Uu), !1
           }
         }
         return !this.stopped
       }
-      setEventWalker(tt) {
-        this.eventWalker = tt
+      setEventWalker(uu) {
+        this.eventWalker = uu
       }
       writePendingInput() {
         if (this.stopped) return !1;
         const {
-          input: tt
+          input: uu
         } = this.rings;
         try {
-          const et = this.unsentUiPrefs;
-          et && tt.writeRecord(Ot.Fb.UiPrefs, 0, et.nametagCutDistance, 0, (0, Ot.Ke)(et)) && (this.unsentUiPrefs = null);
-          const Vt = this.unsentEnvPrefs;
-          Vt && tt.writeRecord(Ot.Fb.EnvPrefs, (0, Ot.ue)(Vt), Vt.fogChunks, 0, 0) && (this.unsentEnvPrefs = null);
-          const qt = this.unsentLookPrefs;
-          qt && tt.writeRecord(Ot.Fb.Sensitivity, 0, qt.mouse, qt.touch, (0, Qt.i)(qt.fovPercent)) && (this.unsentLookPrefs = null);
-          let Dt = 0;
+          const Eu = this.unsentUiPrefs;
+          Eu && uu.writeRecord(su.sb.UiPrefs, 0, Eu.nametagCutDistance, 0, (0, su.Ae)(Eu)) && (this.unsentUiPrefs = null);
+          const ju = this.unsentEnvPrefs;
+          ju && uu.writeRecord(su.sb.EnvPrefs, (0, su.ie)(ju), ju.fogChunks, 0, 0) && (this.unsentEnvPrefs = null);
+          const Uu = this.unsentLookPrefs;
+          Uu && uu.writeRecord(su.sb.Sensitivity, 0, Uu.mouse, Uu.touch, (0, bu.i)(Uu.fovPercent)) && (this.unsentLookPrefs = null);
+          let Zu = 0;
           for (const {
-              aux: Ot,
-              payload: mt
+              aux: su,
+              payload: Xu
             }
             of this.unsentOptions) {
-            if (!tt.writeOptions(Ot, mt)) {
-              if (tt.cursor > 0) break;
+            if (!uu.writeOptions(su, Xu)) {
+              if (uu.cursor > 0) break;
               this.optionsDropped++
             }
-            Dt++
+            Zu++
           }
-          Dt > 0 && this.unsentOptions.splice(0, Dt)
-        } catch (et) {
-          return this.crash(Nt, et), !1
+          Zu > 0 && this.unsentOptions.splice(0, Zu)
+        } catch (Eu) {
+          return this.crash(Du, Eu), !1
         }
         return !0
       }
-      setHoldDraws(tt) {
-        this.drawsHeld = tt
+      setHoldDraws(uu) {
+        this.drawsHeld = uu
       }
-      setUiPrefs(tt) {
+      setUiPrefs(uu) {
         this.unsentUiPrefs = {
-          ...tt
+          ...uu
         }
       }
-      setEnvPrefs(tt) {
+      setEnvPrefs(uu) {
         this.unsentEnvPrefs = {
-          ...tt
+          ...uu
         }
       }
-      setLookPrefs(tt) {
+      setLookPrefs(uu) {
         this.unsentLookPrefs = {
-          ...tt
+          ...uu
         }
       }
-      queueOptions(tt, et) {
-        return !this.isStopped && (et.byteLength > Ot.nc.PayloadMaxBytes ? (this.optionsDropped++, !1) : (this.unsentOptions.push({
-          aux: tt,
-          payload: et
+      queueOptions(uu, Eu) {
+        return !this.isStopped && (Eu.byteLength > su.dc.PayloadMaxBytes ? (this.optionsDropped++, !1) : (this.unsentOptions.push({
+          aux: uu,
+          payload: Eu
         }), !0))
       }
-      setChunkCap(tt) {
-        return this.callCore("setChunkCap", null, (et => et.Fmt(tt)))
+      setChunkCap(uu) {
+        return this.callCore("setChunkCap", null, (Eu => Eu.lXu(uu)))
       }
-      shedMemory(tt) {
-        const et = this.callCore("shedMemory", null, (et => et.Amt(tt)));
-        return 0 === et ? null : et
+      shedMemory(uu) {
+        const Eu = this.callCore("shedMemory", null, (Eu => Eu.OXu(uu)));
+        return 0 === Eu ? null : Eu
       }
       addDistanceInUse() {
-        const tt = this.callCore("addDistanceInUse", null, (tt => tt.pDt()));
-        return 0 === tt ? null : tt
+        const uu = this.callCore("addDistanceInUse", null, (uu => uu.JZu()));
+        return 0 === uu ? null : uu
       }
-      setChunkAddDistance(tt, et) {
-        return this.callCore("setChunkAddDistance", !1, (Vt => Vt.Lmt(tt, et)))
+      setChunkAddDistance(uu, Eu) {
+        return this.callCore("setChunkAddDistance", !1, (ju => ju.XXu(uu, Eu)))
       }
-      setGameHost(tt) {
-        return this.callCore("setGameHost", !1, (et => (et.Xmt(tt), this.gameHost = tt, !0)))
+      setGameHost(uu) {
+        return this.callCore("setGameHost", !1, (Eu => (Eu.iZu(uu), this.gameHost = uu, !0)))
       }
-      setAntiCheatProbes(tt) {
-        return this.callCore("setAntiCheatProbes", !1, (et => et.Pmt(tt)))
+      setAntiCheatProbes(uu) {
+        return this.callCore("setAntiCheatProbes", !1, (Eu => Eu.UXu(uu)))
       }
-      setAmbientOcclusion(tt) {
-        this.callCore("setAmbientOcclusion", void 0, (et => {
-          et.Imt(tt)
+      setAmbientOcclusion(uu) {
+        this.callCore("setAmbientOcclusion", void 0, (Eu => {
+          Eu.sXu(uu)
         }))
       }
-      setPoseLod(tt) {
-        this.callCore("setPoseLod", void 0, (et => {
-          et.Gmt(tt)
+      setPoseLod(uu) {
+        this.callCore("setPoseLod", void 0, (Eu => {
+          Eu.fXu(uu)
         }))
       }
-      setDebugLog(tt, et) {
-        this.callCore(rt, void 0, (Vt => {
-          Vt.Ly(tt, et)
+      setDebugLog(uu, Eu) {
+        this.callCore(Iu, void 0, (ju => {
+          ju.kh(uu, Eu)
         }))
       }
-      takeDebugLog(tt) {
-        return this.callCore(rt, [], (et => et.Fy(tt)))
+      takeDebugLog(uu) {
+        return this.callCore(Iu, [], (Eu => Eu.mh(uu)))
       }
-      setTextureLayers(tt) {
-        return this.callCore("setTextureLayers", !1, (et => et.Umt(tt)))
+      setTextureLayers(uu) {
+        return this.callCore("setTextureLayers", !1, (Eu => Eu.NXu(uu)))
       }
-      setBlockColours(tt) {
+      setBlockColours(uu) {
         let {
-          blocks: et,
-          counts: Vt,
-          values: Ot
-        } = tt;
-        return this.callCore("setBlockColours", !1, (tt => tt.SOt(et, Vt, Ot)))
+          blocks: Eu,
+          counts: ju,
+          values: su
+        } = uu;
+        return this.callCore("setBlockColours", !1, (uu => uu.Zsu(Eu, ju, su)))
       }
       terrainTextureNames() {
-        return this.callCore(Ut, [], (tt => tt.xmt()))
+        return this.callCore(Fu, [], (uu => uu.MXu()))
       }
-      setTerrainTextures(tt, et, Vt, Ot) {
-        return this.callCore(Ut, !1, (qt => qt.rmt(tt, Vt, et, Ot)))
+      setTerrainTextures(uu, Eu, ju, su) {
+        return this.callCore(Fu, !1, (Uu => Uu.cXu(uu, ju, Eu, su)))
       }
-      setShaderPack(tt, et, Vt, Ot, qt, Dt) {
-        return this.callCore("setShaderPack", !1, (mt => {
-          var dt, jt;
-          return null !== (dt = null === (jt = mt.rOt) || void 0 === jt ? void 0 : jt.call(mt, tt, et, Vt, Ot, qt, Dt)) && void 0 !== dt && dt
+      setShaderPack(uu, Eu, ju, su, Uu, Zu) {
+        return this.callCore("setShaderPack", !1, (Xu => {
+          var lu, qu;
+          return null !== (lu = null === (qu = Xu.gsu) || void 0 === qu ? void 0 : qu.call(Xu, uu, Eu, ju, su, Uu, Zu)) && void 0 !== lu && lu
         }))
       }
       sunShadowWantedTextures() {
-        return this.callCore(At, null, (tt => {
-          var et, Vt;
-          return null !== (et = null === (Vt = tt.imt) || void 0 === Vt ? void 0 : Vt.call(tt)) && void 0 !== et ? et : null
+        return this.callCore(Bu, null, (uu => {
+          var Eu, ju;
+          return null !== (Eu = null === (ju = uu.YXu) || void 0 === ju ? void 0 : ju.call(uu)) && void 0 !== Eu ? Eu : null
         }))
       }
-      setSunShadowTexture(tt, et, Vt, Ot, qt) {
-        this.callCore(At, void 0, (Dt => {
-          var mt;
-          null === (mt = Dt.omt) || void 0 === mt || mt.call(Dt, tt, et, Vt, Ot, qt)
+      setSunShadowTexture(uu, Eu, ju, su, Uu) {
+        this.callCore(Bu, void 0, (Zu => {
+          var Xu;
+          null === (Xu = Zu.bXu) || void 0 === Xu || Xu.call(Zu, uu, Eu, ju, su, Uu)
         }))
       }
       takeSunShadowWarnings() {
-        return this.callCore(At, [], (tt => {
-          var et, Vt;
-          return null !== (et = null === (Vt = tt.Bmt) || void 0 === Vt ? void 0 : Vt.call(tt)) && void 0 !== et ? et : []
+        return this.callCore(Bu, [], (uu => {
+          var Eu, ju;
+          return null !== (Eu = null === (ju = uu.DXu) || void 0 === ju ? void 0 : ju.call(uu)) && void 0 !== Eu ? Eu : []
         }))
       }
       sunShadowsHeld() {
-        return this.callCore(At, null, (tt => {
-          var et, Vt;
-          return null !== (et = null === (Vt = tt.Ymt) || void 0 === Vt ? void 0 : Vt.call(tt)) && void 0 !== et ? et : null
+        return this.callCore(Bu, null, (uu => {
+          var Eu, ju;
+          return null !== (Eu = null === (ju = uu.hXu) || void 0 === ju ? void 0 : ju.call(uu)) && void 0 !== Eu ? Eu : null
         }))
       }
-      callCore(tt, et, Vt) {
-        if (this.stopped) return et;
+      callCore(uu, Eu, ju) {
+        if (this.stopped) return Eu;
         try {
-          return Vt(this.core)
-        } catch (Ot) {
-          return this.crash(tt, Ot), et
+          return ju(this.core)
+        } catch (su) {
+          return this.crash(uu, su), Eu
         }
       }
-      readEvents(tt) {
+      readEvents(uu) {
         this.netOffsets.length = 0;
-        const et = this.headerView(),
-          Vt = et[Ot.sb.EventsPtr],
-          qt = et[Ot.sb.EventsLen];
-        if (this.envEvents.length = 0, this.graceEvents.length = 0, 0 === qt) return ot;
-        const Dt = [],
-          mt = this.memory().buffer;
-        if (Vt % 4 !== 0 || Vt + qt > mt.byteLength) return this.crash(zt, `events of ${qt} bytes at ${Vt} outside ${mt.byteLength} bytes of memory`), ot;
-        const dt = new DataView(mt, Vt, qt),
-          jt = this.rings.net,
-          Ht = (et, Vt) => et + Vt <= tt ? jt.copyWritten(et, Vt) : null;
-        let Xt = 0;
-        for (; Xt < qt;) {
-          const tt = Xt + Ot.bb,
-            et = tt <= qt ? dt.getUint32(Xt, !0) : -1,
-            jt = et >>> 16;
-          if (et < 0 || jt > qt - tt) return this.crash(zt, `event record at ${Xt} overruns its ${qt} bytes`), ot;
-          const St = 65535 & et,
-            ct = et => dt.getUint32(tt + 4 * et, !0);
-          if (St === Ot.db.RawMessage) {
-            const tt = jt >= Ot.Yc.BYTES ? 65535 & ct(1) : -1,
-              et = tt === Ot.Yc.STRING_TYPE,
-              Vt = jt === (et ? Ot.Yc.STRING_TYPE_BYTES : Ot.Yc.BYTES) ? Ht(ct(2), ct(3)) : null,
-              qt = et && Vt ? Ht(ct(4), ct(5)) : null;
-            if (!Vt || et && !qt) return this.crash(zt, `RawMessage at ${Xt} of ${jt} bytes names bytes outside net-in`), ot;
-            this.netOffsets.push(Xt), Dt.push({
+        const Eu = this.headerView(),
+          ju = Eu[su.hb.EventsPtr],
+          Uu = Eu[su.hb.EventsLen];
+        if (this.envEvents.length = 0, this.graceEvents.length = 0, 0 === Uu) return Su;
+        const Zu = [],
+          Xu = this.memory().buffer;
+        if (ju % 4 !== 0 || ju + Uu > Xu.byteLength) return this.crash(Wu, `events of ${Uu} bytes at ${ju} outside ${Xu.byteLength} bytes of memory`), Su;
+        const lu = new DataView(Xu, ju, Uu),
+          qu = this.rings.net,
+          fu = (Eu, ju) => Eu + ju <= uu ? qu.copyWritten(Eu, ju) : null;
+        let Cu = 0;
+        for (; Cu < Uu;) {
+          const uu = Cu + su.R,
+            Eu = uu <= Uu ? lu.getUint32(Cu, !0) : -1,
+            qu = Eu >>> 16;
+          if (Eu < 0 || qu > Uu - uu) return this.crash(Wu, `event record at ${Cu} overruns its ${Uu} bytes`), Su;
+          const Pu = 65535 & Eu,
+            ou = Eu => lu.getUint32(uu + 4 * Eu, !0);
+          if (Pu === su.T.RawMessage) {
+            const uu = qu >= su.Mc.BYTES ? 65535 & ou(1) : -1,
+              Eu = uu === su.Mc.STRING_TYPE,
+              ju = qu === (Eu ? su.Mc.STRING_TYPE_BYTES : su.Mc.BYTES) ? fu(ou(2), ou(3)) : null,
+              Uu = Eu && ju ? fu(ou(4), ou(5)) : null;
+            if (!ju || Eu && !Uu) return this.crash(Wu, `RawMessage at ${Cu} of ${qu} bytes names bytes outside net-in`), Su;
+            this.netOffsets.push(Cu), Zu.push({
               type: "message",
-              conn: ct(0),
-              kX: tt,
-              payloadKind: ct(1) >>> 16,
-              payload: Vt,
-              stringType: qt ? it.decode(qt) : null
+              conn: ou(0),
+              VC: uu,
+              payloadKind: ou(1) >>> 16,
+              payload: ju,
+              stringType: Uu ? Lu.decode(Uu) : null
             })
-          } else if (St === Ot.db.CoreErrors) {
-            var Qt, lt;
-            const tt = jt >= 4 ? ct(0) : -1;
-            if (tt < 0 || tt > Ot.K.PAIRS_MAX || jt !== 4 * (Ot.K.FIXED_WORDS + Ot.K.PAIR_WORDS * tt)) return this.crash(zt, `CoreErrors at ${Xt} of ${jt} bytes`), ot;
-            const et = [];
-            for (let Vt = 0; Vt < tt; Vt++) et.push({
-              code: ct(1 + 2 * Vt),
-              detail: ct(2 + 2 * Vt)
+          } else if (Pu === su.T.CoreErrors) {
+            var bu, cu;
+            const uu = qu >= 4 ? ou(0) : -1;
+            if (uu < 0 || uu > su.B.PAIRS_MAX || qu !== 4 * (su.B.FIXED_WORDS + su.B.PAIR_WORDS * uu)) return this.crash(Wu, `CoreErrors at ${Cu} of ${qu} bytes`), Su;
+            const Eu = [];
+            for (let ju = 0; ju < uu; ju++) Eu.push({
+              code: ou(1 + 2 * ju),
+              detail: ou(2 + 2 * ju)
             });
-            null === (Qt = (lt = this.handlers).onCoreErrors) || void 0 === Qt || Qt.call(lt, et, ct(1 + 2 * tt))
-          } else if (St === Ot.db.RenderReload) {
-            var Et, ft;
-            if (jt !== Ot.hd.BYTES) return this.crash(zt, `RenderReload at ${Xt} of ${jt} bytes`), ot;
-            null === (Et = (ft = this.handlers).onRenderReload) || void 0 === Et || Et.call(ft, ct(0), ct(1), ct(2))
-          } else if (St === Ot.db.JoinPreloadEnded) {
-            var wt, yt;
-            if (jt !== Ot.Kb.BYTES) return this.crash(zt, `JoinPreloadEnded at ${Xt} of ${jt} bytes`), ot;
-            null === (wt = (yt = this.handlers).onJoinPreloadEnded) || void 0 === wt || wt.call(yt, {
-              chunks: ct(Ot.Kb.CHUNKS),
-              bytes: ct(Ot.Kb.BYTES_HELD),
-              asked: ct(Ot.Kb.ASKED),
-              replaced: ct(Ot.Kb.REPLACED),
-              dropped: ct(Ot.Kb.DROPPED)
+            null === (bu = (cu = this.handlers).onCoreErrors) || void 0 === bu || bu.call(cu, Eu, ou(1 + 2 * uu))
+          } else if (Pu === su.T.RenderReload) {
+            var Nu, Ou;
+            if (qu !== su.Zc.BYTES) return this.crash(Wu, `RenderReload at ${Cu} of ${qu} bytes`), Su;
+            null === (Nu = (Ou = this.handlers).onRenderReload) || void 0 === Nu || Nu.call(Ou, ou(0), ou(1), ou(2))
+          } else if (Pu === su.T.JoinPreloadEnded) {
+            var Yu, hu;
+            if (qu !== su.Ab.BYTES) return this.crash(Wu, `JoinPreloadEnded at ${Cu} of ${qu} bytes`), Su;
+            null === (Yu = (hu = this.handlers).onJoinPreloadEnded) || void 0 === Yu || Yu.call(hu, {
+              chunks: ou(su.Ab.CHUNKS),
+              bytes: ou(su.Ab.BYTES_HELD),
+              asked: ou(su.Ab.ASKED),
+              replaced: ou(su.Ab.REPLACED),
+              dropped: ou(su.Ab.DROPPED)
             })
-          } else if (St === Ot.db.Images) {
-            var Nt, Mt;
-            null === (Nt = (Mt = this.handlers).onImages) || void 0 === Nt || Nt.call(Mt, new Uint8Array(mt.slice(Vt + tt, Vt + tt + jt)))
-          } else if (St === Ot.db.ModelRequests)
-            for (let Vt = 0; Vt < jt >>> 2; Vt++) {
-              var bt, Jt;
-              null === (bt = (Jt = this.handlers).onModelRequest) || void 0 === bt || bt.call(Jt, ct(Vt))
-            } else if (St === Ot.db.ModelTaken) {
-              var Ct, ut;
-              if (jt < 4) return this.crash(zt, `ModelTaken at ${Xt} of ${jt} bytes`), ot;
-              const tt = new Uint32Array((jt >>> 2) - 1);
-              for (let et = 0; et < tt.length; et++) tt[et] = ct(1 + et);
-              null === (Ct = (ut = this.handlers).onModelTaken) || void 0 === Ct || Ct.call(ut, ct(0), tt)
-            } else if (St === Ot.db.TerrainTexturesWanted) {
-            var Kt, ht;
-            if (0 !== jt) return this.crash(zt, `TerrainTexturesWanted at ${Xt} of ${jt} bytes`), ot;
-            null === (Kt = (ht = this.handlers).onTerrainTexturesWanted) || void 0 === Kt || Kt.call(ht)
-          } else if (St === Ot.db.KeepAliveDue) {
-            var vt, Wt;
-            if (jt > Ot.Lb) return this.crash(zt, `KeepAliveDue at ${Xt} of ${jt} bytes`), ot;
-            null === (vt = (Wt = this.handlers).onKeepAlive) || void 0 === vt || vt.call(Wt, new Uint8Array(mt, Vt + tt, jt).slice())
-          } else if (St === Ot.db.ConnectionState) {
-            if (jt !== Ot.s) return this.crash(zt, `ConnectionState at ${Xt} of ${jt} bytes`), ot;
-            this.netOffsets.push(Xt), Dt.push({
+          } else if (Pu === su.T.Images) {
+            var Du, gu;
+            null === (Du = (gu = this.handlers).onImages) || void 0 === Du || Du.call(gu, new Uint8Array(Xu.slice(ju + uu, ju + uu + qu)))
+          } else if (Pu === su.T.ModelRequests)
+            for (let ju = 0; ju < qu >>> 2; ju++) {
+              var Mu, eu;
+              null === (Mu = (eu = this.handlers).onModelRequest) || void 0 === Mu || Mu.call(eu, ou(ju))
+            } else if (Pu === su.T.ModelTaken) {
+              var Gu, pu;
+              if (qu < 4) return this.crash(Wu, `ModelTaken at ${Cu} of ${qu} bytes`), Su;
+              const uu = new Uint32Array((qu >>> 2) - 1);
+              for (let Eu = 0; Eu < uu.length; Eu++) uu[Eu] = ou(1 + Eu);
+              null === (Gu = (pu = this.handlers).onModelTaken) || void 0 === Gu || Gu.call(pu, ou(0), uu)
+            } else if (Pu === su.T.TerrainTexturesWanted) {
+            var wu, Ju;
+            if (0 !== qu) return this.crash(Wu, `TerrainTexturesWanted at ${Cu} of ${qu} bytes`), Su;
+            null === (wu = (Ju = this.handlers).onTerrainTexturesWanted) || void 0 === wu || wu.call(Ju)
+          } else if (Pu === su.T.KeepAliveDue) {
+            var du, au;
+            if (qu > su.Db) return this.crash(Wu, `KeepAliveDue at ${Cu} of ${qu} bytes`), Su;
+            null === (du = (au = this.handlers).onKeepAlive) || void 0 === du || du.call(au, new Uint8Array(Xu, ju + uu, qu).slice())
+          } else if (Pu === su.T.ConnectionState) {
+            if (qu !== su.t) return this.crash(Wu, `ConnectionState at ${Cu} of ${qu} bytes`), Su;
+            this.netOffsets.push(Cu), Zu.push({
               type: "connection",
-              conn: ct(0),
-              phase: ct(1),
-              code: 0 | ct(2)
+              conn: ou(0),
+              phase: ou(1),
+              code: 0 | ou(2)
             })
-          } else if (St === Ot.db.EnvLighting || St === Ot.db.SkyImages) {
-            if (jt !== (St === Ot.db.EnvLighting ? Ot.Z : Ot.Bd)) return this.crash(zt, `event ${St} at ${Xt} of ${jt} bytes`), ot;
+          } else if (Pu === su.T.EnvLighting || Pu === su.T.SkyImages) {
+            if (qu !== (Pu === su.T.EnvLighting ? su.N : su.xd)) return this.crash(Wu, `event ${Pu} at ${Cu} of ${qu} bytes`), Su;
             this.envEvents.push({
-              kind: St,
-              payload: new Uint8Array(mt.slice(Vt + tt, Vt + tt + jt))
+              kind: Pu,
+              payload: new Uint8Array(Xu.slice(ju + uu, ju + uu + qu))
             })
-          } else if (St === Ot.db.ReconnectGrace) {
-            if (jt !== Ot.Dc) return this.crash(zt, `ReconnectGrace at ${Xt} of ${jt} bytes`), ot;
-            const tt = ct(2);
+          } else if (Pu === su.T.ReconnectGrace) {
+            if (qu !== su.sc) return this.crash(Wu, `ReconnectGrace at ${Cu} of ${qu} bytes`), Su;
+            const uu = ou(2);
             this.graceEvents.push({
-              conn: ct(0),
-              graceMs: ct(1),
-              sessionBased: 0 !== (tt & Ot.Zc.SessionBased),
-              replayOffer: 0 !== (tt & Ot.Zc.ReplayOffer)
+              conn: ou(0),
+              graceMs: ou(1),
+              sessionBased: 0 !== (uu & su.Nc.SessionBased),
+              replayOffer: 0 !== (uu & su.Nc.ReplayOffer)
             })
           }
-          Xt = tt + (0, Ot.Fe)(jt)
+          Cu = uu + (0, su.xe)(qu)
         }
-        return Dt
+        return Zu
       }
-      takeSends(tt) {
+      takeSends(uu) {
         this.atSendsStop = !0;
         try {
-          tt()
-        } catch (et) {
-          this.crashOn(ct, et)
+          uu()
+        } catch (Eu) {
+          this.crashOn(ou, Eu)
         } finally {
           this.atSendsStop = !1
         }
         return !this.stopped
       }
-      forEachNetOut(tt) {
-        this.forEachOut(Jt, "net-out", Ot.sb.NetOutPtr, Ot.sb.NetOutLen, Ot.ic, 0, ((et, Vt, qt, Dt) => {
-          const mt = (0, Ot.ze)(Vt);
-          mt === Ot.kc.Frame ? tt((0, Ot.ye)(Vt), qt) : this.crash(Jt, `net-out record at ${Dt} is kind ${mt}, not a frame`)
+      forEachNetOut(uu) {
+        this.forEachOut(eu, "net-out", su.hb.NetOutPtr, su.hb.NetOutLen, su._b, 0, ((Eu, ju, Uu, Zu) => {
+          const Xu = (0, su.oe)(ju);
+          Xu === su.ac.Frame ? uu((0, su.ne)(ju), Uu) : this.crash(eu, `net-out record at ${Zu} is kind ${Xu}, not a frame`)
         }))
       }
-      forEachWorkerOut(tt) {
-        this.forEachOut(Ct, "worker-out", Ot.sb.WorkerOutPtr, Ot.sb.WorkerOutLen, Ot.Rd, 4, ((et, Vt, qt, Dt) => {
-          const mt = 255 & et,
-            dt = mt === Ot.he.Init ? this.initOf(qt, Dt) : qt;
-          null !== dt && tt(mt, et >>> 8 & 16777215, dt)
+      forEachWorkerOut(uu) {
+        this.forEachOut(Gu, "worker-out", su.hb.WorkerOutPtr, su.hb.WorkerOutLen, su.Kd, 4, ((Eu, ju, Uu, Zu) => {
+          const Xu = 255 & Eu,
+            lu = Xu === su.Zd.Init ? this.initOf(Uu, Zu) : Uu;
+          null !== lu && uu(Xu, Eu >>> 8 & 16777215, lu)
         }))
       }
-      initOf(tt, et) {
-        const Vt = this.memory().buffer;
-        if (tt.byteLength !== Ot.vb) return this.crash(Ct, `worker-out Init record at ${et} is ${tt.byteLength} bytes, not a view`), null;
-        const qt = new DataView(tt.buffer, tt.byteOffset, Ot.vb),
-          Dt = qt.getUint32(0, !0),
-          mt = qt.getUint32(4, !0);
-        return Dt + mt > Vt.byteLength ? (this.crash(Ct, `worker-out Init record at ${et} names ${mt} bytes at ${Dt} outside ${Vt.byteLength} bytes of memory`), null) : new Uint8Array(Vt, Dt, mt)
+      initOf(uu, Eu) {
+        const ju = this.memory().buffer;
+        if (uu.byteLength !== su.kb) return this.crash(Gu, `worker-out Init record at ${Eu} is ${uu.byteLength} bytes, not a view`), null;
+        const Uu = new DataView(uu.buffer, uu.byteOffset, su.kb),
+          Zu = Uu.getUint32(0, !0),
+          Xu = Uu.getUint32(4, !0);
+        return Zu + Xu > ju.byteLength ? (this.crash(Gu, `worker-out Init record at ${Eu} names ${Xu} bytes at ${Zu} outside ${ju.byteLength} bytes of memory`), null) : new Uint8Array(ju, Zu, Xu)
       }
-      forEachOut(tt, et, Vt, qt, Dt, mt, dt) {
+      forEachOut(uu, Eu, ju, Uu, Zu, Xu, lu) {
         if (!this.headerReadable()) return;
-        const jt = this.headerView(),
-          Ht = jt[Vt],
-          Xt = jt[qt];
-        if (0 === Xt) return;
-        const Qt = this.memory().buffer;
-        if (Ht % 4 !== 0 || Ht + Xt > Qt.byteLength) return void this.crash(tt, `${et} of ${Xt} bytes at ${Ht} outside ${Qt.byteLength} bytes of memory`);
-        const lt = new DataView(Qt, Ht, Xt);
-        let Et = 0;
-        for (; Et < Xt;) {
-          const Vt = Et + Dt,
-            qt = Vt <= Xt ? lt.getUint32(Et + mt, !0) : -1;
-          if (qt < 0 || qt > Xt - Vt) return void this.crash(tt, `${et} record at ${Et} overruns its ${Xt} bytes`);
-          if (dt(lt.getUint32(Et, !0), lt.getUint32(Et + 4, !0), new Uint8Array(Qt, Ht + Vt, qt), Et), this.stopped) return;
-          Et = Vt + (0, Ot.Fe)(qt)
+        const qu = this.headerView(),
+          fu = qu[ju],
+          Cu = qu[Uu];
+        if (0 === Cu) return;
+        const bu = this.memory().buffer;
+        if (fu % 4 !== 0 || fu + Cu > bu.byteLength) return void this.crash(uu, `${Eu} of ${Cu} bytes at ${fu} outside ${bu.byteLength} bytes of memory`);
+        const cu = new DataView(bu, fu, Cu);
+        let Nu = 0;
+        for (; Nu < Cu;) {
+          const ju = Nu + Zu,
+            Uu = ju <= Cu ? cu.getUint32(Nu + Xu, !0) : -1;
+          if (Uu < 0 || Uu > Cu - ju) return void this.crash(uu, `${Eu} record at ${Nu} overruns its ${Cu} bytes`);
+          if (lu(cu.getUint32(Nu, !0), cu.getUint32(Nu + 4, !0), new Uint8Array(bu, fu + ju, Uu), Nu), this.stopped) return;
+          Nu = ju + (0, su.xe)(Uu)
         }
       }
-      forEachEvent(tt) {
+      forEachEvent(uu) {
         if (this.stopped || null === this.lastHeader) return;
-        const et = this.headerView(),
-          Vt = et[Ot.sb.EventsPtr],
-          qt = et[Ot.sb.EventsLen];
-        if (0 === qt) return;
-        const Dt = this.memory().buffer;
-        if (Vt % 4 !== 0 || Vt + qt > Dt.byteLength) return void this.crash(zt, `events of ${qt} bytes at ${Vt} outside ${Dt.byteLength} bytes of memory`);
-        const mt = new DataView(Dt, Vt, qt);
-        let dt = 0;
-        for (; dt < qt;) {
-          const et = dt + Ot.bb,
-            Vt = et <= qt ? mt.getUint32(dt, !0) : -1,
-            Dt = Vt >>> 16;
-          if (Vt < 0 || Dt > qt - et) return void this.crash(zt, `event record at ${dt} overruns its ${qt} bytes`);
-          tt(65535 & Vt, mt, et, Dt), dt = et + (0, Ot.Fe)(Dt)
+        const Eu = this.headerView(),
+          ju = Eu[su.hb.EventsPtr],
+          Uu = Eu[su.hb.EventsLen];
+        if (0 === Uu) return;
+        const Zu = this.memory().buffer;
+        if (ju % 4 !== 0 || ju + Uu > Zu.byteLength) return void this.crash(Wu, `events of ${Uu} bytes at ${ju} outside ${Zu.byteLength} bytes of memory`);
+        const Xu = new DataView(Zu, ju, Uu);
+        let lu = 0;
+        for (; lu < Uu;) {
+          const Eu = lu + su.R,
+            ju = Eu <= Uu ? Xu.getUint32(lu, !0) : -1,
+            Zu = ju >>> 16;
+          if (ju < 0 || Zu > Uu - Eu) return void this.crash(Wu, `event record at ${lu} overruns its ${Uu} bytes`);
+          uu(65535 & ju, Xu, Eu, Zu), lu = Eu + (0, su.xe)(Zu)
         }
       }
-      crashOn(tt, et) {
-        et instanceof qt.d ? this.crash(zt, et.message) : this.crash(tt, et)
+      crashOn(uu, Eu) {
+        Eu instanceof Uu.e ? this.crash(Wu, Eu.message) : this.crash(uu, Eu)
       }
-      crash(tt, et) {
+      crash(uu, Eu) {
         this.stopped || (this.stopped = !0, this.handlers.onCrash({
-          site: tt,
-          error: et,
+          site: uu,
+          error: Eu,
           header: this.lastHeader
         }))
       }
-      headerWord(tt) {
-        return this.headerReadable() ? this.headerView()[tt] : 0
+      headerWord(uu) {
+        return this.headerReadable() ? this.headerView()[uu] : 0
       }
       headerReadable() {
         return !this.stopped && (null !== this.lastHeader || this.atSendsStop)
       }
-      readLoadCounts(tt) {
-        const et = this.loadCountWords();
-        return null !== et && (tt.chunksReceived = et[Ot.Vb.ChunksReceived], tt.chunksCancelled = this.headerView()[Ot.sb.ChunksCancelled], tt.chunksStored = et[Ot.Vb.ChunksStored], tt.jobsSent = et[Ot.Vb.JobsSent], tt.jobsDone = et[Ot.Vb.JobsDone], tt.jobsInFlight = et[Ot.Vb.JobsInFlight], tt.workersLive = et[Ot.Vb.WorkersLive], tt.workersRetired = et[Ot.Vb.WorkersRetired], !0)
+      readLoadCounts(uu) {
+        const Eu = this.loadCountWords();
+        return null !== Eu && (uu.chunksReceived = Eu[su.Mb.ChunksReceived], uu.chunksCancelled = this.headerView()[su.hb.ChunksCancelled], uu.chunksStored = Eu[su.Mb.ChunksStored], uu.jobsSent = Eu[su.Mb.JobsSent], uu.jobsDone = Eu[su.Mb.JobsDone], uu.jobsInFlight = Eu[su.Mb.JobsInFlight], uu.workersLive = Eu[su.Mb.WorkersLive], uu.workersRetired = Eu[su.Mb.WorkersRetired], !0)
       }
       readViewQueuedPrograms() {
-        var tt, et;
-        const Vt = null !== (tt = null === (et = this.loadCountWords()) || void 0 === et ? void 0 : et[Ot.Vb.ViewQueuedPrograms]) && void 0 !== tt ? tt : 0;
-        return 0 === Vt ? null : Vt - 1
+        var uu, Eu;
+        const ju = null !== (uu = null === (Eu = this.loadCountWords()) || void 0 === Eu ? void 0 : Eu[su.Mb.ViewQueuedPrograms]) && void 0 !== uu ? uu : 0;
+        return 0 === ju ? null : ju - 1
       }
-      readFirstViewWait(tt, et) {
-        const Vt = this.loadCountWords();
-        return null === Vt ? null : [Vt[Ot.Vb.FirstViewLinkMs], Vt[Ot.Vb.FirstViewTerrainMs], Vt[Ot.Vb.FirstViewHeldMs], Vt[Ot.Vb.FirstViewOtherMs], Vt[Ot.Vb.FirstViewGaps], Vt[Ot.Vb.FirstViewGapMs], tt, et]
+      readFirstViewWait(uu, Eu) {
+        const ju = this.loadCountWords();
+        return null === ju ? null : [ju[su.Mb.FirstViewLinkMs], ju[su.Mb.FirstViewTerrainMs], ju[su.Mb.FirstViewHeldMs], ju[su.Mb.FirstViewOtherMs], ju[su.Mb.FirstViewGaps], ju[su.Mb.FirstViewGapMs], uu, Eu]
       }
       loadCountWords() {
         if (this.stopped || null === this.lastHeader) return null;
-        const tt = this.core.Zy();
-        if (0 === tt) return null;
-        const et = this.memory().buffer;
-        return et !== this.loadCountsBuffer && (this.loadCountsBuffer = et, this.loadCounts = new Uint32Array(et, tt, Ot.Ob)), this.loadCounts
+        const uu = this.core.oh();
+        if (0 === uu) return null;
+        const Eu = this.memory().buffer;
+        return Eu !== this.loadCountsBuffer && (this.loadCountsBuffer = Eu, this.loadCounts = new Uint32Array(Eu, uu, su.Fb)), this.loadCounts
       }
       headerView() {
-        const tt = this.memory().buffer;
-        return tt !== this.headerBuffer && (this.headerBuffer = tt, this.header = new Uint32Array(tt, this.core.QE(), Ot.qb)), this.header
+        const uu = this.memory().buffer;
+        return uu !== this.headerBuffer && (this.headerBuffer = uu, this.header = new Uint32Array(uu, this.core.ON(), su.eb)), this.header
       }
     }
   },
-  40971: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => mt,
-      e: () => Dt
+  41025: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => Xu,
+      h: () => Zu
     });
-    var Ot = Vt(4851);
-    let qt = null;
+    var su = ju(4874);
+    let Uu = null;
 
-    function Dt(tt) {
-      qt = {
+    function Zu(uu) {
+      Uu = {
         scanned: !1
       };
       try {
-        return tt()
+        return uu()
       } finally {
-        qt = null
+        Uu = null
       }
     }
 
-    function mt() {
-      const tt = qt;
-      if (null === tt) return (0, Ot.h)();
-      const et = (0, Ot.h)(!tt.scanned);
-      return tt.scanned = !0, et
+    function Xu() {
+      const uu = Uu;
+      if (null === uu) return (0, su.f)();
+      const Eu = (0, su.f)(!uu.scanned);
+      return uu.scanned = !0, Eu
     }
   },
-  41022: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => Ot
+  41072: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => su
     });
-    const Ot = {
+    const su = {
       webgpu: "rust_webgpu",
       webgl: "rust_webgl2",
       webgl1: "rust_webgl1"
     }
   },
-  41037: (tt, et, Vt) => {
-    function Ot() {
-      return Vt(41044)
+  41083: (uu, Eu, ju) => {
+    function su() {
+      return ju(41086)
     }
 
-    function qt() {
-      return Vt(41053)
+    function Uu() {
+      return ju(41090)
     }
 
-    function Dt(tt) {
-      return ["pl", "ru", "tr", "uk", "vi"].includes(tt)
+    function Zu(uu) {
+      return ["pl", "ru", "tr", "uk", "vi"].includes(uu)
     }
-    Vt.d(et, {
-      c: () => Dt,
-      d: () => Ot,
-      g: () => qt
+    ju.d(Eu, {
+      b: () => Zu,
+      f: () => su,
+      j: () => Uu
     })
   },
-  36507: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => dt,
-      e: () => Ht,
-      i: () => mt,
-      j: () => Qt
+  36684: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => lu,
+      f: () => fu,
+      h: () => Xu,
+      j: () => bu
     });
-    var Ot = Vt(36489),
-      qt = Vt(17);
-    const Dt = /wasm-function\[\d+\]|wasm:\/\/|\[wasm code\]/;
+    var su = ju(36670),
+      Uu = ju(13);
+    const Zu = /wasm-function\[\d+\]|wasm:\/\/|\[wasm code\]/;
 
-    function mt(tt) {
-      if (tt instanceof WebAssembly.RuntimeError) return !0;
-      const et = tt instanceof Error ? tt.stack : void 0;
-      return "string" === typeof et && Dt.test(et)
+    function Xu(uu) {
+      if (uu instanceof WebAssembly.RuntimeError) return !0;
+      const Eu = uu instanceof Error ? uu.stack : void 0;
+      return "string" === typeof Eu && Zu.test(Eu)
     }
 
-    function dt(tt, et, Vt) {
-      var qt;
-      const mt = tt instanceof Error ? tt.name : "thrown",
-        dt = (tt instanceof Error && null !== (qt = tt.stack) && void 0 !== qt ? qt : "").split("\n").filter((tt => Dt.test(tt))).slice(0, 8).map((tt => tt.trim())),
-        jt = null === et ? "wasm memory unknown" : `wasm memory ${Math.round(et/2**20)} MB`,
-        Ht = null === Vt.panic ? "" : `, panic: ${(0,Ot.e)(Vt.panic)}`,
-        Xt = `${mt}: ${tt instanceof Error?tt.message:String(tt)}`;
-      return `${(0,Ot.j)(Vt.kind,Vt.refusedBytes)} ${Xt} (${jt})${Ht}${dt.length>0?` | ${dt.join(" < ")}`:""}`
+    function lu(uu, Eu, ju) {
+      var Uu;
+      const Xu = uu instanceof Error ? uu.name : "thrown",
+        lu = (uu instanceof Error && null !== (Uu = uu.stack) && void 0 !== Uu ? Uu : "").split("\n").filter((uu => Zu.test(uu))).slice(0, 8).map((uu => uu.trim())),
+        qu = null === Eu ? "wasm memory unknown" : `wasm memory ${Math.round(Eu/2**20)} MB`,
+        fu = null === ju.panic ? "" : `, panic: ${(0,su.i)(ju.panic)}`,
+        Cu = `${Xu}: ${uu instanceof Error?uu.message:String(uu)}`;
+      return `${(0,su.n)(ju.kind,ju.refusedBytes)} ${Cu} (${qu})${fu}${lu.length>0?` | ${lu.join(" < ")}`:""}`
     }
-    const jt = /on a detached ArrayBuffer|access detached ArrayBuffer|has been detached from the view/;
+    const qu = /on a detached ArrayBuffer|access detached ArrayBuffer|has been detached from the view/;
 
-    function Ht(tt) {
-      var et;
-      let Vt = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ArrayBuffer.prototype;
-      if (!(tt instanceof Error) || !jt.test(tt.message)) return {};
-      if (!("detached" in Vt)) return {
+    function fu(uu) {
+      var Eu;
+      let ju = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ArrayBuffer.prototype;
+      if (!(uu instanceof Error) || !qu.test(uu.message)) return {};
+      if (!("detached" in ju)) return {
         arrayBufferDetached: "absent"
       };
       return {
-        arrayBufferDetached: (0, qt.$)(null === (et = (0, qt.Q)(Vt, "detached")) || void 0 === et ? void 0 : et.get, /^function (get )?detached\(\) \{\s*\[native code\]\s*\}$/) ? "native" : "script"
+        arrayBufferDetached: (0, Uu.T)(null === (Eu = (0, Uu.N)(ju, "detached")) || void 0 === Eu ? void 0 : Eu.get, /^function (get )?detached\(\) \{\s*\[native code\]\s*\}$/) ? "native" : "script"
       }
     }
-    const Xt = 500;
+    const Cu = 500;
 
-    function Qt(tt) {
-      let et = "[object Object]";
+    function bu(uu) {
+      let Eu = "[object Object]";
       try {
-        et = String(tt)
+        Eu = String(uu)
       } catch {}
-      if ("[object Object]" !== et) return et;
+      if ("[object Object]" !== Eu) return Eu;
       try {
-        var Vt, Ot;
-        return null !== (Vt = null === (Ot = JSON.stringify(tt)) || void 0 === Ot ? void 0 : Ot.slice(0, Xt)) && void 0 !== Vt ? Vt : et
+        var ju, su;
+        return null !== (ju = null === (su = JSON.stringify(uu)) || void 0 === su ? void 0 : su.slice(0, Cu)) && void 0 !== ju ? ju : Eu
       } catch {
-        return et
+        return Eu
       }
     }
   },
-  41044: (tt, et, Vt) => {
-    tt.exports = Vt.p + "static/media/JetBrainsMonoNL-ExtraBold-latin.68689f5c710b4650e4b8.woff2"
+  41086: (uu, Eu, ju) => {
+    uu.exports = ju.p + "static/media/JetBrainsMonoNL-ExtraBold-latin.68689f5c710b4650e4b8.woff2"
   },
-  41053: (tt, et, Vt) => {
-    tt.exports = Vt.p + "static/media/JetBrainsMonoNL-ExtraBold-rest.d152b95e9e75f7dca56d.woff2"
+  41090: (uu, Eu, ju) => {
+    uu.exports = ju.p + "static/media/JetBrainsMonoNL-ExtraBold-rest.d152b95e9e75f7dca56d.woff2"
   },
-  36489: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => Ot,
-      d: () => Dt,
-      e: () => jt,
-      h: () => mt,
-      j: () => qt
+  36670: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => su,
+      h: () => Zu,
+      i: () => qu,
+      j: () => Xu,
+      n: () => Uu
     });
-    const Ot = /^alloc_failed (\d+) bytes$/;
+    const su = /^alloc_failed (\d+) bytes$/;
 
-    function qt(tt, et) {
-      return Dt(tt, et) ? `trap=alloc_failed ${et} bytes` : `trap=${tt}`
+    function Uu(uu, Eu) {
+      return Zu(uu, Eu) ? `trap=alloc_failed ${Eu} bytes` : `trap=${uu}`
     }
 
-    function Dt(tt, et) {
-      return "unreachable" === tt && et > 0
+    function Zu(uu, Eu) {
+      return "unreachable" === uu && Eu > 0
     }
 
-    function mt(tt, et, Vt) {
-      const Ot = function(tt) {
-        return tt instanceof WebAssembly.RuntimeError ? /unreachable/i.test(tt.message) ? "unreachable" : /out of bounds/i.test(tt.message) ? "out_of_bounds" : "runtime_error" : (tt instanceof RangeError || tt instanceof Error && "InternalError" === tt.name) && /call stack|recursion/i.test(tt.message) ? "stack_overflow" : "js_error"
-      }(tt);
-      if ("unreachable" !== Ot) return {
-        kind: Ot,
+    function Xu(uu, Eu, ju) {
+      const su = function(uu) {
+        return uu instanceof WebAssembly.RuntimeError ? /unreachable/i.test(uu.message) ? "unreachable" : /out of bounds/i.test(uu.message) ? "out_of_bounds" : "runtime_error" : (uu instanceof RangeError || uu instanceof Error && "InternalError" === uu.name) && /call stack|recursion/i.test(uu.message) ? "stack_overflow" : "js_error"
+      }(uu);
+      if ("unreachable" !== su) return {
+        kind: su,
         panic: null,
         refusedBytes: 0
       };
-      const qt = et(),
-        Dt = Vt();
+      const Uu = Eu(),
+        Zu = ju();
       return {
-        kind: Ot,
-        panic: Dt > 0 ? null : qt,
-        refusedBytes: Dt
+        kind: su,
+        panic: Zu > 0 ? null : Uu,
+        refusedBytes: Zu
       }
     }
-    const dt = 300;
+    const lu = 300;
 
-    function jt(tt) {
-      return tt.replace(/\s*\n\s*/g, " / ").slice(0, dt)
+    function qu(uu) {
+      return uu.replace(/\s*\n\s*/g, " / ").slice(0, lu)
     }
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

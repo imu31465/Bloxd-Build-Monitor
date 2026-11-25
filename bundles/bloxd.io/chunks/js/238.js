@@ -1,12 +1,12 @@
 export const id = 238;
 export const ids = [238];
 export const modules = {
-  37359: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => qt
+  37506: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => Uu
     });
-    var Ot = Vt(37367);
-    class qt {
+    var su = ju(37514);
+    class Uu {
       static get LastCreatedEngine() {
         return 0 === this.Instances.length ? null : this.Instances[this.Instances.length - 1]
       }
@@ -14,120 +14,120 @@ export const modules = {
         return this._LastCreatedScene
       }
     }
-    qt.Instances = [], qt.OnEnginesDisposedObservable = new Ot.c, qt._LastCreatedScene = null, qt.UseFallbackTexture = !0, qt.FallbackTexture = ""
+    Uu.Instances = [], Uu.OnEnginesDisposedObservable = new su.d, Uu._LastCreatedScene = null, Uu.UseFallbackTexture = !0, Uu.FallbackTexture = ""
   },
-  38897: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => Dt
+  39030: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => Zu
     });
-    var Ot = Vt(38899);
-    const qt = (tt, et, Vt) => tt ? tt.getClassName && "Mesh" === tt.getClassName() ? null : !tt.getClassName || "SubMesh" !== tt.getClassName() && "PhysicsBody" !== tt.getClassName() ? tt.clone ? tt.clone() : Array.isArray(tt) ? tt.slice() : Vt && "object" === typeof tt ? {
-      ...tt
-    } : null : tt.clone(et) : null;
-    class Dt {
-      static DeepCopy(tt, et, Vt, Dt) {
-        let mt = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const dt = function(tt) {
-          const et = [];
+    var su = ju(39032);
+    const Uu = (uu, Eu, ju) => uu ? uu.getClassName && "Mesh" === uu.getClassName() ? null : !uu.getClassName || "SubMesh" !== uu.getClassName() && "PhysicsBody" !== uu.getClassName() ? uu.clone ? uu.clone() : Array.isArray(uu) ? uu.slice() : ju && "object" === typeof uu ? {
+      ...uu
+    } : null : uu.clone(Eu) : null;
+    class Zu {
+      static DeepCopy(uu, Eu, ju, Zu) {
+        let Xu = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const lu = function(uu) {
+          const Eu = [];
           do {
-            const Vt = Object.getOwnPropertyNames(tt);
-            for (const tt of Vt) - 1 === et.indexOf(tt) && et.push(tt)
-          } while (tt = Object.getPrototypeOf(tt));
-          return et
-        }(tt);
-        for (const Ht of dt) {
-          if ("_" === Ht[0] && (!Dt || -1 === Dt.indexOf(Ht))) continue;
-          if (Ht.endsWith("Observable")) continue;
-          if (Vt && -1 !== Vt.indexOf(Ht)) continue;
-          const dt = tt[Ht],
-            Xt = typeof dt;
-          if ("function" !== Xt) try {
-            if ("object" === Xt)
-              if (dt instanceof Uint8Array) et[Ht] = Uint8Array.from(dt);
-              else if (dt instanceof Array) {
-              if (et[Ht] = [], dt.length > 0)
-                if ("object" == typeof dt[0])
-                  for (let tt = 0; tt < dt.length; tt++) {
-                    const Vt = qt(dt[tt], et, mt); - 1 === et[Ht].indexOf(Vt) && et[Ht].push(Vt)
-                  } else et[Ht] = dt.slice(0)
-            } else et[Ht] = qt(dt, et, mt);
-            else et[Ht] = dt
-          } catch (jt) {
-            Ot.d.Warn(jt.message)
+            const ju = Object.getOwnPropertyNames(uu);
+            for (const uu of ju) - 1 === Eu.indexOf(uu) && Eu.push(uu)
+          } while (uu = Object.getPrototypeOf(uu));
+          return Eu
+        }(uu);
+        for (const fu of lu) {
+          if ("_" === fu[0] && (!Zu || -1 === Zu.indexOf(fu))) continue;
+          if (fu.endsWith("Observable")) continue;
+          if (ju && -1 !== ju.indexOf(fu)) continue;
+          const lu = uu[fu],
+            Cu = typeof lu;
+          if ("function" !== Cu) try {
+            if ("object" === Cu)
+              if (lu instanceof Uint8Array) Eu[fu] = Uint8Array.from(lu);
+              else if (lu instanceof Array) {
+              if (Eu[fu] = [], lu.length > 0)
+                if ("object" == typeof lu[0])
+                  for (let uu = 0; uu < lu.length; uu++) {
+                    const ju = Uu(lu[uu], Eu, Xu); - 1 === Eu[fu].indexOf(ju) && Eu[fu].push(ju)
+                  } else Eu[fu] = lu.slice(0)
+            } else Eu[fu] = Uu(lu, Eu, Xu);
+            else Eu[fu] = lu
+          } catch (qu) {
+            su.b.Warn(qu.message)
           }
         }
       }
     }
   },
-  38159: (tt, et, Vt) => {
-    function Ot() {
-      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (tt => {
-        const et = 16 * Math.random() | 0;
-        return ("x" === tt ? et : 3 & et | 8).toString(16)
+  38303: (uu, Eu, ju) => {
+    function su() {
+      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (uu => {
+        const Eu = 16 * Math.random() | 0;
+        return ("x" === uu ? Eu : 3 & Eu | 8).toString(16)
       }))
     }
-    Vt.d(et, {
-      b: () => Ot
+    ju.d(Eu, {
+      e: () => su
     })
   },
-  38899: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => Ot
+  39032: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => su
     });
-    class Ot {
-      static _CheckLimit(tt, et) {
-        let Vt = Ot._LogLimitOutputs[tt];
-        return Vt ? Vt.current++ : (Vt = {
-          limit: et,
+    class su {
+      static _CheckLimit(uu, Eu) {
+        let ju = su._LogLimitOutputs[uu];
+        return ju ? ju.current++ : (ju = {
+          limit: Eu,
           current: 1
-        }, Ot._LogLimitOutputs[tt] = Vt), Vt.current <= Vt.limit
+        }, su._LogLimitOutputs[uu] = ju), ju.current <= ju.limit
       }
-      static _GenerateLimitMessage(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const Vt = Ot._LogLimitOutputs[tt];
-        if (!Vt || !Ot.MessageLimitReached) return;
-        const qt = this._Levels[et];
-        Vt.current === Vt.limit && Ot[qt.name](Ot.MessageLimitReached.replace(/%LIMIT%/g, "" + Vt.limit).replace(/%TYPE%/g, qt.name ?? ""))
+      static _GenerateLimitMessage(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const ju = su._LogLimitOutputs[uu];
+        if (!ju || !su.MessageLimitReached) return;
+        const Uu = this._Levels[Eu];
+        ju.current === ju.limit && su[Uu.name](su.MessageLimitReached.replace(/%LIMIT%/g, "" + ju.limit).replace(/%TYPE%/g, Uu.name ?? ""))
       }
-      static _AddLogEntry(tt) {
-        Ot._LogCache = tt + Ot._LogCache, Ot.OnNewCacheEntry && Ot.OnNewCacheEntry(tt)
+      static _AddLogEntry(uu) {
+        su._LogCache = uu + su._LogCache, su.OnNewCacheEntry && su.OnNewCacheEntry(uu)
       }
-      static _FormatMessage(tt) {
-        const et = tt => tt < 10 ? "0" + tt : "" + tt,
-          Vt = new Date;
-        return "[" + et(Vt.getHours()) + ":" + et(Vt.getMinutes()) + ":" + et(Vt.getSeconds()) + "]: " + tt
+      static _FormatMessage(uu) {
+        const Eu = uu => uu < 10 ? "0" + uu : "" + uu,
+          ju = new Date;
+        return "[" + Eu(ju.getHours()) + ":" + Eu(ju.getMinutes()) + ":" + Eu(ju.getSeconds()) + "]: " + uu
       }
-      static _LogDisabled(tt, et) {}
+      static _LogDisabled(uu, Eu) {}
       static _LogEnabled() {
-        let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          et = arguments.length > 1 ? arguments[1] : void 0,
-          Vt = arguments.length > 2 ? arguments[2] : void 0;
-        const qt = Array.isArray(et) ? et[0] : et;
-        if (void 0 !== Vt && !Ot._CheckLimit(qt, Vt)) return;
-        const Dt = Ot._FormatMessage(qt),
-          mt = this._Levels[tt],
-          dt = Array.isArray(et) ? et.slice(1) : [];
-        mt.logFunc && mt.logFunc("BJS - " + Dt, ...dt);
-        const jt = `<div style='color:${mt.color}'>${Dt}</div><br>`;
-        Ot._AddLogEntry(jt), Ot._GenerateLimitMessage(qt, tt)
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          Eu = arguments.length > 1 ? arguments[1] : void 0,
+          ju = arguments.length > 2 ? arguments[2] : void 0;
+        const Uu = Array.isArray(Eu) ? Eu[0] : Eu;
+        if (void 0 !== ju && !su._CheckLimit(Uu, ju)) return;
+        const Zu = su._FormatMessage(Uu),
+          Xu = this._Levels[uu],
+          lu = Array.isArray(Eu) ? Eu.slice(1) : [];
+        Xu.logFunc && Xu.logFunc("BJS - " + Zu, ...lu);
+        const qu = `<div style='color:${Xu.color}'>${Zu}</div><br>`;
+        su._AddLogEntry(qu), su._GenerateLimitMessage(Uu, uu)
       }
       static get LogCache() {
-        return Ot._LogCache
+        return su._LogCache
       }
       static ClearLogCache() {
-        Ot._LogCache = "", Ot._LogLimitOutputs = {}, Ot.errorsCount = 0
+        su._LogCache = "", su._LogLimitOutputs = {}, su.errorsCount = 0
       }
-      static set LogLevels(tt) {
-        Ot.Log = Ot._LogDisabled, Ot.Warn = Ot._LogDisabled, Ot.Error = Ot._LogDisabled;
-        const et = [Ot.MessageLogLevel, Ot.WarningLogLevel, Ot.ErrorLogLevel];
-        for (const Vt of et)
-          if ((tt & Vt) === Vt) {
-            const tt = this._Levels[Vt];
-            Ot[tt.name] = Ot._LogEnabled.bind(Ot, Vt)
+      static set LogLevels(uu) {
+        su.Log = su._LogDisabled, su.Warn = su._LogDisabled, su.Error = su._LogDisabled;
+        const Eu = [su.MessageLogLevel, su.WarningLogLevel, su.ErrorLogLevel];
+        for (const ju of Eu)
+          if ((uu & ju) === ju) {
+            const uu = this._Levels[ju];
+            su[uu.name] = su._LogEnabled.bind(su, ju)
           }
       }
     }
-    Ot.NoneLogLevel = 0, Ot.MessageLogLevel = 1, Ot.WarningLogLevel = 2, Ot.ErrorLogLevel = 4, Ot.AllLogLevel = 7, Ot.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Ot._LogCache = "", Ot._LogLimitOutputs = {}, Ot._Levels = [{}, {
+    su.NoneLogLevel = 0, su.MessageLogLevel = 1, su.WarningLogLevel = 2, su.ErrorLogLevel = 4, su.AllLogLevel = 7, su.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", su._LogCache = "", su._LogLimitOutputs = {}, su._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -139,126 +139,126 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], Ot.errorsCount = 0, Ot.Log = Ot._LogEnabled.bind(Ot, Ot.MessageLogLevel), Ot.Warn = Ot._LogEnabled.bind(Ot, Ot.WarningLogLevel), Ot.Error = Ot._LogEnabled.bind(Ot, Ot.ErrorLogLevel)
+    }], su.errorsCount = 0, su.Log = su._LogEnabled.bind(su, su.MessageLogLevel), su.Warn = su._LogEnabled.bind(su, su.WarningLogLevel), su.Error = su._LogEnabled.bind(su, su.ErrorLogLevel)
   },
-  37367: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => mt
+  37514: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => Xu
     });
-    const Ot = "undefined" !== typeof WeakRef;
-    class qt {
-      constructor(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          Vt = arguments.length > 2 ? arguments[2] : void 0,
-          Ot = arguments.length > 3 ? arguments[3] : void 0;
-        this.initialize(tt, et, Vt, Ot)
+    const su = "undefined" !== typeof WeakRef;
+    class Uu {
+      constructor(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          ju = arguments.length > 2 ? arguments[2] : void 0,
+          su = arguments.length > 3 ? arguments[3] : void 0;
+        this.initialize(uu, Eu, ju, su)
       }
-      initialize(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          Vt = arguments.length > 2 ? arguments[2] : void 0,
-          Ot = arguments.length > 3 ? arguments[3] : void 0;
-        return this.mask = tt, this.skipNextObservers = et, this.target = Vt, this.currentTarget = Ot, this
+      initialize(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          ju = arguments.length > 2 ? arguments[2] : void 0,
+          su = arguments.length > 3 ? arguments[3] : void 0;
+        return this.mask = uu, this.skipNextObservers = Eu, this.target = ju, this.currentTarget = su, this
       }
     }
-    class Dt {
-      constructor(tt, et) {
-        let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        this.callback = tt, this.mask = et, this.scope = Vt, this._willBeUnregistered = !1, this.unregisterOnNextCall = !1, this._remove = null
+    class Zu {
+      constructor(uu, Eu) {
+        let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        this.callback = uu, this.mask = Eu, this.scope = ju, this._willBeUnregistered = !1, this.unregisterOnNextCall = !1, this._remove = null
       }
       remove() {
-        let tt = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        this._remove && this._remove(tt)
+        let uu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        this._remove && this._remove(uu)
       }
     }
-    class mt {
-      static FromPromise(tt, et) {
-        const Vt = new mt;
-        return tt.then((tt => {
-          Vt.notifyObservers(tt)
-        })).catch((tt => {
-          if (!et) throw tt;
-          et.notifyObservers(tt)
-        })), Vt
+    class Xu {
+      static FromPromise(uu, Eu) {
+        const ju = new Xu;
+        return uu.then((uu => {
+          ju.notifyObservers(uu)
+        })).catch((uu => {
+          if (!Eu) throw uu;
+          Eu.notifyObservers(uu)
+        })), ju
       }
       get observers() {
         return this._observers
       }
-      constructor(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        this.notifyIfTriggered = et, this._observers = new Array, this._numObserversMarkedAsDeleted = 0, this._hasNotified = !1, this._eventState = new qt(0), tt && (this._onObserverAdded = tt)
+      constructor(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        this.notifyIfTriggered = Eu, this._observers = new Array, this._numObserversMarkedAsDeleted = 0, this._hasNotified = !1, this._eventState = new Uu(0), uu && (this._onObserverAdded = uu)
       }
-      add(tt) {
-        let et = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          Vt = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        if (!tt) return null;
-        const qt = new Dt(tt, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null);
-        qt.unregisterOnNextCall = Vt, et ? this._observers.unshift(qt) : this._observers.push(qt), this._onObserverAdded && this._onObserverAdded(qt), this._hasNotified && this.notifyIfTriggered && this.notifyObserver(qt, this._lastNotifiedValue);
-        const mt = Ot ? new WeakRef(this) : {
+      add(uu) {
+        let Eu = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          ju = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        if (!uu) return null;
+        const Uu = new Zu(uu, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null);
+        Uu.unregisterOnNextCall = ju, Eu ? this._observers.unshift(Uu) : this._observers.push(Uu), this._onObserverAdded && this._onObserverAdded(Uu), this._hasNotified && this.notifyIfTriggered && this.notifyObserver(Uu, this._lastNotifiedValue);
+        const Xu = su ? new WeakRef(this) : {
           deref: () => this
         };
-        return qt._remove = function() {
-          let tt = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-          const et = mt.deref();
-          et && (tt ? et.remove(qt) : et._remove(qt))
-        }, qt
+        return Uu._remove = function() {
+          let uu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          const Eu = Xu.deref();
+          Eu && (uu ? Eu.remove(Uu) : Eu._remove(Uu))
+        }, Uu
       }
-      addOnce(tt) {
-        return this.add(tt, void 0, void 0, void 0, !0)
+      addOnce(uu) {
+        return this.add(uu, void 0, void 0, void 0, !0)
       }
-      remove(tt) {
-        if (!tt) return !1;
-        tt._remove = null;
-        return -1 !== this._observers.indexOf(tt) && (this._deferUnregister(tt), !0)
+      remove(uu) {
+        if (!uu) return !1;
+        uu._remove = null;
+        return -1 !== this._observers.indexOf(uu) && (this._deferUnregister(uu), !0)
       }
-      removeCallback(tt, et) {
-        for (let Vt = 0; Vt < this._observers.length; Vt++) {
-          const Ot = this._observers[Vt];
-          if (!Ot._willBeUnregistered && (Ot.callback === tt && (!et || et === Ot.scope))) return this._deferUnregister(Ot), !0
+      removeCallback(uu, Eu) {
+        for (let ju = 0; ju < this._observers.length; ju++) {
+          const su = this._observers[ju];
+          if (!su._willBeUnregistered && (su.callback === uu && (!Eu || Eu === su.scope))) return this._deferUnregister(su), !0
         }
         return !1
       }
-      _deferUnregister(tt) {
-        tt._willBeUnregistered || (this._numObserversMarkedAsDeleted++, tt.unregisterOnNextCall = !1, tt._willBeUnregistered = !0, setTimeout((() => {
-          this._remove(tt)
+      _deferUnregister(uu) {
+        uu._willBeUnregistered || (this._numObserversMarkedAsDeleted++, uu.unregisterOnNextCall = !1, uu._willBeUnregistered = !0, setTimeout((() => {
+          this._remove(uu)
         }), 0))
       }
-      _remove(tt) {
-        let et = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        if (!tt) return !1;
-        const Vt = this._observers.indexOf(tt);
-        return -1 !== Vt && (et && this._numObserversMarkedAsDeleted--, this._observers.splice(Vt, 1), !0)
+      _remove(uu) {
+        let Eu = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        if (!uu) return !1;
+        const ju = this._observers.indexOf(uu);
+        return -1 !== ju && (Eu && this._numObserversMarkedAsDeleted--, this._observers.splice(ju, 1), !0)
       }
-      makeObserverTopPriority(tt) {
-        this._remove(tt, !1), this._observers.unshift(tt)
+      makeObserverTopPriority(uu) {
+        this._remove(uu, !1), this._observers.unshift(uu)
       }
-      makeObserverBottomPriority(tt) {
-        this._remove(tt, !1), this._observers.push(tt)
+      makeObserverBottomPriority(uu) {
+        this._remove(uu, !1), this._observers.push(uu)
       }
-      notifyObservers(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
-          Vt = arguments.length > 2 ? arguments[2] : void 0,
-          Ot = arguments.length > 3 ? arguments[3] : void 0,
-          qt = arguments.length > 4 ? arguments[4] : void 0;
-        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = tt), !this._observers.length) return !0;
-        const Dt = this._eventState;
-        Dt.mask = et, Dt.target = Vt, Dt.currentTarget = Ot, Dt.skipNextObservers = !1, Dt.lastReturnValue = tt, Dt.userInfo = qt;
-        for (const mt of this._observers)
-          if (!mt._willBeUnregistered && (mt.mask & et && (mt.unregisterOnNextCall && this._deferUnregister(mt), mt.scope ? Dt.lastReturnValue = mt.callback.apply(mt.scope, [tt, Dt]) : Dt.lastReturnValue = mt.callback(tt, Dt)), Dt.skipNextObservers)) return !1;
+      notifyObservers(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+          ju = arguments.length > 2 ? arguments[2] : void 0,
+          su = arguments.length > 3 ? arguments[3] : void 0,
+          Uu = arguments.length > 4 ? arguments[4] : void 0;
+        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = uu), !this._observers.length) return !0;
+        const Zu = this._eventState;
+        Zu.mask = Eu, Zu.target = ju, Zu.currentTarget = su, Zu.skipNextObservers = !1, Zu.lastReturnValue = uu, Zu.userInfo = Uu;
+        for (const Xu of this._observers)
+          if (!Xu._willBeUnregistered && (Xu.mask & Eu && (Xu.unregisterOnNextCall && this._deferUnregister(Xu), Xu.scope ? Zu.lastReturnValue = Xu.callback.apply(Xu.scope, [uu, Zu]) : Zu.lastReturnValue = Xu.callback(uu, Zu)), Zu.skipNextObservers)) return !1;
         return !0
       }
-      notifyObserver(tt, et) {
-        let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
-        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = et), tt._willBeUnregistered) return;
-        const Ot = this._eventState;
-        Ot.mask = Vt, Ot.skipNextObservers = !1, tt.unregisterOnNextCall && this._deferUnregister(tt), tt.callback(et, Ot)
+      notifyObserver(uu, Eu) {
+        let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
+        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = Eu), uu._willBeUnregistered) return;
+        const su = this._eventState;
+        su.mask = ju, su.skipNextObservers = !1, uu.unregisterOnNextCall && this._deferUnregister(uu), uu.callback(Eu, su)
       }
       hasObservers() {
         return this._observers.length - this._numObserversMarkedAsDeleted > 0
       }
       clear() {
         for (; this._observers.length;) {
-          const tt = this._observers.pop();
-          tt && (tt._remove = null)
+          const uu = this._observers.pop();
+          uu && (uu._remove = null)
         }
         this._onObserverAdded = null, this._numObserversMarkedAsDeleted = 0, this.cleanLastNotifiedState()
       }
@@ -266,42 +266,42 @@ export const modules = {
         this._hasNotified = !1, this._lastNotifiedValue = void 0
       }
       clone() {
-        const tt = new mt;
-        return tt._observers = this._observers.slice(0), tt
+        const uu = new Xu;
+        return uu._observers = this._observers.slice(0), uu
       }
       hasSpecificMask() {
-        let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : -1;
-        for (const et of this._observers)
-          if (et.mask & tt || et.mask === tt) return !0;
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : -1;
+        for (const Eu of this._observers)
+          if (Eu.mask & uu || Eu.mask === uu) return !0;
         return !1
       }
     }
   },
-  61509: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      AsyncLoop: () => Ot.d,
-      RegisterTools: () => Ot.h,
-      Tools: () => Ot.l,
-      className: () => Ot.o
+  61478: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      AsyncLoop: () => su.d,
+      RegisterTools: () => su.f,
+      Tools: () => su.h,
+      className: () => su.k
     });
-    var Ot = Vt(40300);
-    (0, Ot.h)()
+    var su = ju(40356);
+    (0, su.f)()
   },
-  37390: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => Dt,
-      i: () => qt
+  37532: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => Zu,
+      f: () => Uu
     });
-    const Ot = {};
+    const su = {};
 
-    function qt(tt, et) {
-      Ot[tt] = et
+    function Uu(uu, Eu) {
+      su[uu] = Eu
     }
 
-    function Dt(tt) {
-      return Ot[tt]
+    function Zu(uu) {
+      return su[uu]
     }
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

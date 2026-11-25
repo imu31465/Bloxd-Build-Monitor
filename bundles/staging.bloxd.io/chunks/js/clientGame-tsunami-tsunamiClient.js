@@ -1,116 +1,116 @@
 export const id = 26;
 export const ids = [26];
 export const modules = {
-  39766: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      default: () => dt
+  39839: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      default: () => lu
     });
-    var Ot = Vt(34406);
-    const qt = 1e3 / 3;
+    var su = ju(34571);
+    const Uu = 1e3 / 3;
 
-    function Dt(tt, et, Vt) {
-      if ("parenthetical-seconds" === et) return ` (${tt}s)`;
-      const Ot = `${Math.floor(tt/60)}:${(tt%60).toString().padStart(2,"0")}`;
-      return Vt ? `${Vt}${Ot}` : Ot
+    function Zu(uu, Eu, ju) {
+      if ("parenthetical-seconds" === Eu) return ` (${uu}s)`;
+      const su = `${Math.floor(uu/60)}:${(uu%60).toString().padStart(2,"0")}`;
+      return ju ? `${ju}${su}` : su
     }
 
-    function mt(tt, et, Vt, qt, Dt) {
-      var mt;
-      const dt = {
-        ...qt.baseNametag
+    function Xu(uu, Eu, ju, Uu, Zu) {
+      var Xu;
+      const lu = {
+        ...Uu.baseNametag
       };
-      dt.content = [...null !== (mt = qt.baseNametag.content) && void 0 !== mt ? mt : [], {
+      lu.content = [...null !== (Xu = Uu.baseNametag.content) && void 0 !== Xu ? Xu : [], {
         str: " "
       }, {
         icon: "Gold Coin"
       }, {
-        str: `: ${(0,Ot.d)(Dt)}`
-      }], tt.setOtherEntitySetting(et, Vt, "nameTagInfo", dt)
+        str: `: ${(0,su.b)(Zu)}`
+      }], uu.setOtherEntitySetting(Eu, ju, "nameTagInfo", lu)
     }
-    const dt = function(tt, et, Vt, Ot) {
-      let dt, {
-        localPlayerId: jt
-      } = Ot;
-      const Ht = new Map,
-        Xt = new Map;
-      let Qt = 0,
-        lt = 0;
+    const lu = function(uu, Eu, ju, su) {
+      let lu, {
+        localPlayerId: qu
+      } = su;
+      const fu = new Map,
+        Cu = new Map;
+      let bu = 0,
+        cu = 0;
       return {
-        onCreate: tt => {
-          dt = tt
+        onCreate: uu => {
+          lu = uu
         },
-        BQ: tt => {
-          const et = Date.now();
-          for (const [Ot, qt] of Ht) {
-            const tt = Math.floor((et - qt.startTime) / 1e3),
-              mt = Math.max(0, qt.remainingSeconds - tt);
-            if (mt === qt.lastRenderedSecond) continue;
-            qt.lastRenderedSecond = mt;
-            const Xt = {
-                str: Dt(mt, qt.format, qt.prefix),
-                style: qt.style
+        Tb: uu => {
+          const Eu = Date.now();
+          for (const [su, Uu] of fu) {
+            const uu = Math.floor((Eu - Uu.startTime) / 1e3),
+              Xu = Math.max(0, Uu.remainingSeconds - uu);
+            if (Xu === Uu.lastRenderedSecond) continue;
+            Uu.lastRenderedSecond = Xu;
+            const Cu = {
+                str: Zu(Xu, Uu.format, Uu.prefix),
+                style: Uu.style
               },
-              Qt = {
-                ...qt.baseNametag
+              bu = {
+                ...Uu.baseNametag
               };
-            var Vt;
-            if ("content" === qt.location) Qt.content = [...null !== (Vt = qt.baseNametag.content) && void 0 !== Vt ? Vt : [], Xt];
-            else Qt.subtitle = [Xt];
-            dt.setOtherEntitySetting(jt, Ot, "nameTagInfo", Qt), mt <= 0 && Ht.delete(Ot)
+            var ju;
+            if ("content" === Uu.location) bu.content = [...null !== (ju = Uu.baseNametag.content) && void 0 !== ju ? ju : [], Cu];
+            else bu.subtitle = [Cu];
+            lu.setOtherEntitySetting(qu, su, "nameTagInfo", bu), Xu <= 0 && fu.delete(su)
           }
-          if (Xt.size > 0 && et - Qt >= qt) {
-            Qt = et, lt = (lt + 1) % 3;
-            let tt = 0;
-            for (const [Vt, Ot] of Xt) {
-              if (tt++ % 3 !== lt) continue;
-              const qt = Math.floor((et - Ot.startTime) / 1e3);
-              if (qt === Ot.lastRenderedSecond) continue;
-              Ot.lastRenderedSecond = qt;
-              const Dt = Ot.accumulatedIncome + Ot.incomePerSecond * BigInt(qt);
-              mt(dt, jt, Vt, Ot, Dt)
+          if (Cu.size > 0 && Eu - bu >= Uu) {
+            bu = Eu, cu = (cu + 1) % 3;
+            let uu = 0;
+            for (const [ju, su] of Cu) {
+              if (uu++ % 3 !== cu) continue;
+              const Uu = Math.floor((Eu - su.startTime) / 1e3);
+              if (Uu === su.lastRenderedSecond) continue;
+              su.lastRenderedSecond = Uu;
+              const Zu = su.accumulatedIncome + su.incomePerSecond * BigInt(Uu);
+              Xu(lu, qu, ju, su, Zu)
             }
           }
         },
-        onReceivedMessageFromServer: (tt, et) => {
-          if ("startCountdown" === tt) Ht.set(et.eId, {
-            baseNametag: et.baseNametag,
-            remainingSeconds: et.remainingSeconds,
+        onReceivedMessageFromServer: (uu, Eu) => {
+          if ("startCountdown" === uu) fu.set(Eu.eId, {
+            baseNametag: Eu.baseNametag,
+            remainingSeconds: Eu.remainingSeconds,
             startTime: Date.now(),
-            format: et.format,
-            location: et.location,
-            prefix: et.prefix,
-            style: et.style,
+            format: Eu.format,
+            location: Eu.location,
+            prefix: Eu.prefix,
+            style: Eu.style,
             lastRenderedSecond: -1
           });
-          else if ("stopCountdown" === tt) Ht.delete(et.eId);
-          else if ("startIncomeTicking" === tt) {
-            const tt = {
-              baseNametag: et.baseNametag,
-              accumulatedIncome: BigInt(et.accumulatedIncome),
-              incomePerSecond: BigInt(et.incomePerSecond),
+          else if ("stopCountdown" === uu) fu.delete(Eu.eId);
+          else if ("startIncomeTicking" === uu) {
+            const uu = {
+              baseNametag: Eu.baseNametag,
+              accumulatedIncome: BigInt(Eu.accumulatedIncome),
+              incomePerSecond: BigInt(Eu.incomePerSecond),
               startTime: Date.now(),
               lastRenderedSecond: -1
             };
-            Xt.set(et.eId, tt), mt(dt, jt, et.eId, tt, tt.accumulatedIncome)
-          } else "stopIncomeTicking" === tt && Xt.delete(et.eId) && dt.setOtherEntitySetting(jt, et.eId, "nameTagInfo", {
+            Cu.set(Eu.eId, uu), Xu(lu, qu, Eu.eId, uu, uu.accumulatedIncome)
+          } else "stopIncomeTicking" === uu && Cu.delete(Eu.eId) && lu.setOtherEntitySetting(qu, Eu.eId, "nameTagInfo", {
             content: []
           })
         },
-        onPlayerAltAction: (tt, et, Vt, Ot, qt, Dt) => {
-          if (Dt && "Mesh" === dt.getEntityType(Dt)) {
-            const et = dt.getEntityName(Dt);
-            "Upgrades" === et ? dt.openShop(tt, !1, "Upgrades") : "Items" === et ? dt.openShop(tt, !1, "Items") : "Prestige" === et ? dt.openShop(tt, !1, "Prestige") : "Collections" === et ? dt.openShop(tt, !1, "Collections") : "Base Skins" === et ? dt.openShop(tt, !1, "Base Skins") : "Gauntlet" === et ? dt.openShop(tt, !1, "Gauntlet") : "Diamond Shop" === et && dt.openShop(tt, !1, "Diamond Shop")
+        onPlayerAltAction: (uu, Eu, ju, su, Uu, Zu) => {
+          if (Zu && "Mesh" === lu.getEntityType(Zu)) {
+            const Eu = lu.getEntityName(Zu);
+            "Upgrades" === Eu ? lu.openShop(uu, !1, "Upgrades") : "Items" === Eu ? lu.openShop(uu, !1, "Items") : "Prestige" === Eu ? lu.openShop(uu, !1, "Prestige") : "Collections" === Eu ? lu.openShop(uu, !1, "Collections") : "Base Skins" === Eu ? lu.openShop(uu, !1, "Base Skins") : "Gauntlet" === Eu ? lu.openShop(uu, !1, "Gauntlet") : "Diamond Shop" === Eu && lu.openShop(uu, !1, "Diamond Shop")
           }
         }
       }
     }
   },
-  34406: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => qt,
-      g: () => mt
+  34571: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => Uu,
+      c: () => Xu
     });
-    const Ot = [{
+    const su = [{
       threshold: 10n ** 180n,
       suffix: "NoQig"
     }, {
@@ -292,67 +292,67 @@ export const modules = {
       suffix: "K"
     }];
 
-    function qt(tt) {
-      let et, Vt = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
-      if ("number" === typeof tt) {
-        if (!Number.isFinite(tt)) return "0";
-        if (Math.abs(tt) < 100) {
-          const et = tt < 0 ? "-" : "",
-            Vt = Math.abs(tt);
-          return Vt >= 10 ? `${et}${Vt.toFixed(1).replace(/\.0$/,"")}` : `${et}${Vt.toFixed(2).replace(/\.?0+$/,"")}`
+    function Uu(uu) {
+      let Eu, ju = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
+      if ("number" === typeof uu) {
+        if (!Number.isFinite(uu)) return "0";
+        if (Math.abs(uu) < 100) {
+          const Eu = uu < 0 ? "-" : "",
+            ju = Math.abs(uu);
+          return ju >= 10 ? `${Eu}${ju.toFixed(1).replace(/\.0$/,"")}` : `${Eu}${ju.toFixed(2).replace(/\.?0+$/,"")}`
         }
-        et = BigInt(Math.floor(tt))
-      } else et = tt;
-      const qt = et < 0n ? -et : et,
-        Dt = et < 0n ? "-" : "",
-        mt = qt.toString();
-      if (mt.length <= Vt) return `${Dt}${mt}`;
-      const dt = 3 * Math.floor((mt.length - 1) / 3);
-      if (dt < 3) return `${Dt}${mt}`;
-      if (dt > 3 * Ot.length) {
-        const tt = mt[0],
-          et = mt.slice(1, 3).replace(/0+$/, "");
-        return `${Dt}${et?`${tt}.${et}`:tt}e${mt.length-1}`
+        Eu = BigInt(Math.floor(uu))
+      } else Eu = uu;
+      const Uu = Eu < 0n ? -Eu : Eu,
+        Zu = Eu < 0n ? "-" : "",
+        Xu = Uu.toString();
+      if (Xu.length <= ju) return `${Zu}${Xu}`;
+      const lu = 3 * Math.floor((Xu.length - 1) / 3);
+      if (lu < 3) return `${Zu}${Xu}`;
+      if (lu > 3 * su.length) {
+        const uu = Xu[0],
+          Eu = Xu.slice(1, 3).replace(/0+$/, "");
+        return `${Zu}${Eu?`${uu}.${Eu}`:uu}e${Xu.length-1}`
       }
       const {
-        threshold: jt,
-        suffix: Ht
-      } = Ot[Ot.length - dt / 3], Xt = qt / jt, Qt = Number(1000n * (qt % jt) / jt), lt = Number(Xt) + Qt / 1e3;
-      let Et;
-      return Et = lt >= 100 ? Math.floor(lt).toString() : lt >= 10 ? lt.toFixed(1).replace(/\.0$/, "") : lt.toFixed(2).replace(/\.?0+$/, ""), `${Dt}${Et}${Ht}`
+        threshold: qu,
+        suffix: fu
+      } = su[su.length - lu / 3], Cu = Uu / qu, bu = Number(1000n * (Uu % qu) / qu), cu = Number(Cu) + bu / 1e3;
+      let Nu;
+      return Nu = cu >= 100 ? Math.floor(cu).toString() : cu >= 10 ? cu.toFixed(1).replace(/\.0$/, "") : cu.toFixed(2).replace(/\.?0+$/, ""), `${Zu}${Nu}${fu}`
     }
-    const Dt = Ot.map((tt => {
+    const Zu = su.map((uu => {
       let {
-        threshold: et,
-        suffix: Vt
-      } = tt;
+        threshold: Eu,
+        suffix: ju
+      } = uu;
       return {
-        threshold: Number(et),
-        suffix: Vt
+        threshold: Number(Eu),
+        suffix: ju
       }
-    })).filter((tt => {
+    })).filter((uu => {
       let {
-        threshold: et
-      } = tt;
-      return Number.isFinite(et)
+        threshold: Eu
+      } = uu;
+      return Number.isFinite(Eu)
     }));
 
-    function mt(tt) {
-      const et = Math.abs(tt),
-        Vt = tt < 0 ? "-" : "";
+    function Xu(uu) {
+      const Eu = Math.abs(uu),
+        ju = uu < 0 ? "-" : "";
       for (const {
-          threshold: Ot,
-          suffix: qt
+          threshold: su,
+          suffix: Uu
         }
-        of Dt)
-        if (et >= Ot) {
-          const tt = et / Ot;
-          if (tt >= 1e3) return `${Vt}${et.toExponential(2).replace("e+","e")}`;
-          let Dt;
-          return Dt = tt >= 100 ? Math.floor(tt).toString() : tt >= 10 ? tt.toFixed(1).replace(/\.0$/, "") : tt.toFixed(2).replace(/\.?0+$/, ""), `${Vt}${Dt}${qt}`
-        } return `${Vt}${et}`
+        of Zu)
+        if (Eu >= su) {
+          const uu = Eu / su;
+          if (uu >= 1e3) return `${ju}${Eu.toExponential(2).replace("e+","e")}`;
+          let Zu;
+          return Zu = uu >= 100 ? Math.floor(uu).toString() : uu >= 10 ? uu.toFixed(1).replace(/\.0$/, "") : uu.toFixed(2).replace(/\.?0+$/, ""), `${ju}${Zu}${Uu}`
+        } return `${ju}${Eu}`
     }
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

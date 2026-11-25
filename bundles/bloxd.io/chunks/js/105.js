@@ -1,462 +1,462 @@
 export const id = 105;
 export const ids = [105];
 export const modules = {
-  5081: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => lt
+  5077: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => cu
     });
-    var Ot = Vt(1140),
-      qt = Vt.n(Ot),
-      Dt = Vt(1152),
-      mt = Vt(1436),
-      dt = Vt(3564),
-      jt = Vt(153),
-      Ht = Vt(3613),
-      Xt = Vt(3597),
-      Qt = Vt(1188);
+    var su = ju(1105),
+      Uu = ju.n(su),
+      Zu = ju(1116),
+      Xu = ju(1393),
+      lu = ju(3691),
+      qu = ju(131),
+      fu = ju(3738),
+      Cu = ju(3729),
+      bu = ju(1154);
 
-    function lt(tt) {
+    function cu(uu) {
       let {
-        game: et
-      } = tt;
-      const Vt = (0, jt.is99NightsCrazyGamesBundle)() ? "large" : "small",
-        Ot = (0, Ht.h)(et, Vt),
-        lt = (0, dt.g)(Ot),
-        Et = void 0 !== lt.blurhash;
-      return (0, Qt.jsxs)("div", {
+        game: Eu
+      } = uu;
+      const ju = (0, qu.is99NightsCrazyGamesBundle)() ? "large" : "small",
+        su = (0, fu.e)(Eu, ju),
+        cu = (0, lu.h)(su),
+        Nu = void 0 !== cu.blurhash;
+      return (0, bu.jsxs)("div", {
         className: "SchematicImageContainer",
-        children: [lt.isLoading && !Et && (0, Qt.jsx)(mt.b, {
+        children: [cu.isLoading && !Nu && (0, bu.jsx)(Xu.b, {
           loaderType: "Secondary"
-        }), !lt.failed && (null !== lt.src || Et) && (0, Qt.jsx)("div", {
-          className: qt()("SchematicImage", Xt.j, {
-            SchematicImageFadeIn: lt.fadeIn && !Et
+        }), !cu.failed && (null !== cu.src || Nu) && (0, bu.jsx)("div", {
+          className: Uu()("SchematicImage", Cu.d, {
+            SchematicImageFadeIn: cu.fadeIn && !Nu
           }),
-          style: (0, Xt.h)(lt),
-          children: (0, Qt.jsx)(Xt.e, {
-            image: lt
+          style: (0, Cu.c)(cu),
+          children: (0, bu.jsx)(Cu.b, {
+            image: cu
           })
-        }), lt.failed && (0, Qt.jsx)("div", {
+        }), cu.failed && (0, bu.jsx)("div", {
           className: "SchematicImageError",
-          children: (0, Qt.jsx)(Dt.b, {
+          children: (0, bu.jsx)(Zu.e, {
             name: "face-dizzy"
           })
         })]
       })
     }
   },
-  5200: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => yt
+  5188: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => hu
     });
-    var Ot = Vt(63),
-      qt = Vt(1140),
-      Dt = Vt.n(qt),
-      mt = Vt(5124),
-      dt = Vt(1436),
-      jt = Vt(1286),
-      Ht = Vt(3219),
-      Xt = Vt(3353),
-      Qt = Vt(1152),
-      lt = Vt(3223),
-      Et = Vt(5208),
-      ft = Vt(5228),
-      wt = Vt(1188);
+    var su = ju(58),
+      Uu = ju(1105),
+      Zu = ju.n(Uu),
+      Xu = ju(5120),
+      lu = ju(1393),
+      qu = ju(1244),
+      fu = ju(3340),
+      Cu = ju(3489),
+      bu = ju(1116),
+      cu = ju(3343),
+      Nu = ju(5197),
+      Ou = ju(5216),
+      Yu = ju(1154);
 
-    function yt(tt) {
+    function hu(uu) {
       let {
-        folderName: et,
-        onTexturePackUpdated: qt,
-        disabled: yt = !1,
-        maxFileSizeMb: Nt,
-        packOwner: Mt
-      } = tt;
+        folderName: Eu,
+        onTexturePackUpdated: Uu,
+        disabled: hu = !1,
+        maxFileSizeMb: Du,
+        packOwner: gu
+      } = uu;
       const {
-        t: bt
-      } = (0, jt.H)(), [Jt, Ct] = (0, Ot.useState)(!1), [ut, Kt] = (0, Ot.useState)(null), [ht, vt] = (0, Ot.useState)(null), Wt = (0, Ot.useRef)(null);
-      async function St(tt) {
-        Ct(!0);
+        t: Mu
+      } = (0, qu.A)(), [eu, Gu] = (0, su.useState)(!1), [pu, wu] = (0, su.useState)(null), [Ju, du] = (0, su.useState)(null), au = (0, su.useRef)(null);
+      async function Pu(uu) {
+        Gu(!0);
         try {
-          const et = await (0, Ht.t)(tt);
-          if ("customGame" === Mt && (0, Xt.j)(et)) return void Kt(bt(Xt.e));
-          if (void 0 !== Nt) {
-            const tt = JSON.stringify(et).length / 1048576;
-            if (tt > Nt) return void Kt(bt("customTexturePack:packTooBig", {
-              size: tt.toFixed(1),
-              max: Nt
+          const Eu = await (0, fu.o)(uu);
+          if ("customGame" === gu && (0, Cu.g)(Eu)) return void wu(Mu(Cu.c));
+          if (void 0 !== Du) {
+            const uu = JSON.stringify(Eu).length / 1048576;
+            if (uu > Du) return void wu(Mu("customTexturePack:packTooBig", {
+              size: uu.toFixed(1),
+              max: Du
             }))
           }
-          Kt(null), vt(null), qt(et), Wt.current = et,
-            function(tt, et) {
-              const Ot = tt.modelOverrides;
-              Ot && Promise.all([Vt.e(206), Vt.e(205)]).then((() => Vt(34452))).then((Vt => {
+          wu(null), du(null), Uu(Eu), au.current = Eu,
+            function(uu, Eu) {
+              const su = uu.modelOverrides;
+              su && Promise.all([ju.e(206), ju.e(205)]).then((() => ju(34615))).then((ju => {
                 let {
-                  packDisplayName: qt,
-                  refusedPackModels: Dt,
-                  packModelSummary: mt
-                } = Vt;
-                const dt = qt(tt.metaData);
-                et(mt(dt, Dt(dt, Ot, !1)))
-              })).catch((tt => {
-                console.error("Checking the texture pack's models failed:", tt)
+                  packDisplayName: Uu,
+                  refusedPackModels: Zu,
+                  packModelSummary: Xu
+                } = ju;
+                const lu = Uu(uu.metaData);
+                Eu(Xu(lu, Zu(lu, su, !1)))
+              })).catch((uu => {
+                console.error("Checking the texture pack's models failed:", uu)
               }))
-            }(et, (tt => {
-              Wt.current === et && vt(tt)
+            }(Eu, (uu => {
+              au.current === Eu && du(uu)
             }))
-        } catch (et) {
-          if (et instanceof lt.d) {
-            const tt = "customTexturePack:invalidPack" !== et.translationKey || (0, ft.g)() ? et.translationKey : "customTexturePack:invalidPackZip";
-            Kt((0, Et.j)(bt, tt, et.params))
-          } else console.error("Couldn't read the texture pack", et), Kt(bt("customTexturePack:errorTitle"))
+        } catch (Eu) {
+          if (Eu instanceof cu.d) {
+            const uu = "customTexturePack:invalidPack" !== Eu.translationKey || (0, Ou.h)() ? Eu.translationKey : "customTexturePack:invalidPackZip";
+            wu((0, Nu.g)(Mu, uu, Eu.params))
+          } else console.error("Couldn't read the texture pack", Eu), wu(Mu("customTexturePack:errorTitle"))
         } finally {
-          Ct(!1)
+          Gu(!1)
         }
       }
       const {
-        getRootProps: ct,
-        getInputProps: Rt,
-        isDragActive: It,
-        open: Pt
-      } = (0, mt.e)({
-        onDrop: St,
+        getRootProps: ou,
+        getInputProps: ku,
+        isDragActive: mu,
+        open: vu
+      } = (0, Xu.c)({
+        onDrop: Pu,
         noClick: !0,
         noKeyboard: !0,
         useFsAccessApi: !1,
-        disabled: yt
+        disabled: hu
       });
-      return (0, wt.jsxs)("div", {
+      return (0, Yu.jsxs)("div", {
         className: "CustomTexturePackContainer",
-        children: [(0, wt.jsxs)("div", {
+        children: [(0, Yu.jsxs)("div", {
           className: "CustomTextureWarning",
-          children: [bt("settingsMenu:customTextureWarning"), ".", (0, wt.jsx)("br", {}), bt("settingsMenu:viewDocumentation"), ":", " ", (0, wt.jsx)("a", {
+          children: [Mu("settingsMenu:customTextureWarning"), ".", (0, Yu.jsx)("br", {}), Mu("settingsMenu:viewDocumentation"), ":", " ", (0, Yu.jsx)("a", {
             href: "https://github.com/Bloxdy/texturePacks",
             target: "_blank",
             rel: "noreferrer",
             children: "github.com/Bloxdy/texturePacks"
           })]
-        }), ut && (0, wt.jsxs)("div", {
+        }), pu && (0, Yu.jsxs)("div", {
           className: "CustomTextureError",
-          children: [bt("general:error"), ": ", ut]
-        }), ht && (0, wt.jsx)("div", {
+          children: [Mu("general:error"), ": ", pu]
+        }), Ju && (0, Yu.jsx)("div", {
           className: "CustomTextureError",
-          children: ht
-        }), (0, wt.jsxs)("div", {
-          ...ct({
-            className: Dt()("CustomTextureFolderUpload", {
-              ActiveDrag: It,
-              Disabled: yt
+          children: Ju
+        }), (0, Yu.jsxs)("div", {
+          ...ou({
+            className: Zu()("CustomTextureFolderUpload", {
+              ActiveDrag: mu,
+              Disabled: hu
             })
           }),
-          children: [(0, wt.jsx)("input", {
-            ...Rt({
+          children: [(0, Yu.jsx)("input", {
+            ...ku({
               webkitdirectory: "true"
             })
-          }), Jt && (0, wt.jsx)("div", {
+          }), eu && (0, Yu.jsx)("div", {
             className: "CustomTextureFolderUploadLoading",
-            children: (0, wt.jsx)(dt.b, {})
-          }), !Jt && !It && et && (0, wt.jsxs)(wt.Fragment, {
-            children: [(0, wt.jsx)("div", {
+            children: (0, Yu.jsx)(lu.b, {})
+          }), !eu && !mu && Eu && (0, Yu.jsxs)(Yu.Fragment, {
+            children: [(0, Yu.jsx)("div", {
               className: "CustomTextureFolderUploadIcon Active",
-              children: (0, wt.jsx)(Qt.b, {
+              children: (0, Yu.jsx)(bu.e, {
                 name: "folder-image"
               })
-            }), (0, wt.jsx)("div", {
+            }), (0, Yu.jsx)("div", {
               className: "CustomTextureFolderUploadInstructions Active",
-              children: et
+              children: Eu
             })]
-          }), !Jt && (It || !et) && (0, wt.jsxs)(wt.Fragment, {
-            children: [(0, wt.jsx)("div", {
+          }), !eu && (mu || !Eu) && (0, Yu.jsxs)(Yu.Fragment, {
+            children: [(0, Yu.jsx)("div", {
               className: "CustomTextureFolderUploadIcon",
-              children: (0, wt.jsx)(Qt.b, {
+              children: (0, Yu.jsx)(bu.e, {
                 name: "up-from-bracket"
               })
-            }), (0, wt.jsx)("div", {
+            }), (0, Yu.jsx)("div", {
               className: "CustomTextureFolderUploadInstructions",
-              children: bt((0, ft.g)() ? "customTexturePack:dropHere" : "customTexturePack:chooseZipInstructions")
+              children: Mu((0, Ou.h)() ? "customTexturePack:dropHere" : "customTexturePack:chooseZipInstructions")
             })]
-          }), !Jt && (0, wt.jsx)(ft.d, {
-            disabled: yt,
-            openFolderPicker: Pt,
-            onFiles: tt => {
-              St(tt)
+          }), !eu && (0, Yu.jsx)(Ou.d, {
+            disabled: hu,
+            openFolderPicker: vu,
+            onFiles: uu => {
+              Pu(uu)
             }
           })]
         })]
       })
     }
   },
-  5228: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => Xt,
-      g: () => Ht
+  5216: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => Cu,
+      h: () => fu
     });
-    var Ot = Vt(63),
-      qt = Vt(1556),
-      Dt = Vt(1286),
-      mt = Vt(106),
-      dt = Vt(3207),
-      jt = Vt(1188);
+    var su = ju(58),
+      Uu = ju(1506),
+      Zu = ju(1244),
+      Xu = ju(91),
+      lu = ju(3318),
+      qu = ju(1154);
 
-    function Ht() {
-      return !(0, mt.isMobile)()
+    function fu() {
+      return !(0, Xu.isMobile)()
     }
 
-    function Xt(tt) {
+    function Cu(uu) {
       let {
-        disabled: et,
-        openFolderPicker: Vt,
-        onFiles: mt
-      } = tt;
+        disabled: Eu,
+        openFolderPicker: ju,
+        onFiles: Xu
+      } = uu;
       const {
-        t: Xt
-      } = (0, Dt.H)(), Qt = (0, Ot.useRef)(null);
-      return (0, jt.jsxs)("div", {
+        t: Cu
+      } = (0, Zu.A)(), bu = (0, su.useRef)(null);
+      return (0, qu.jsxs)("div", {
         className: "PackPickButtons",
         "data-pad-mouse-only": !0,
-        children: [(0, jt.jsx)("input", {
-          ref: Qt,
+        children: [(0, qu.jsx)("input", {
+          ref: bu,
           type: "file",
           accept: ".zip,application/zip",
           hidden: !0,
-          onChange: function(tt) {
-            const et = Array.from(tt.target.files);
-            tt.target.value = "", mt(et)
+          onChange: function(uu) {
+            const Eu = Array.from(uu.target.files);
+            uu.target.value = "", Xu(Eu)
           }
-        }), Ht() && (0, jt.jsx)(qt.f, {
-          disabled: et,
-          onClick: Vt,
-          children: Xt("general:chooseFolder")
-        }), (0, jt.jsx)(qt.f, {
-          disabled: et,
+        }), fu() && (0, qu.jsx)(Uu.f, {
+          disabled: Eu,
+          onClick: ju,
+          children: Cu("general:chooseFolder")
+        }), (0, qu.jsx)(Uu.f, {
+          disabled: Eu,
           onClick: () => {
-            (0, dt.f)(Qt.current)
+            (0, lu.e)(bu.current)
           },
-          children: Xt("general:chooseZip")
+          children: Cu("general:chooseZip")
         })]
       })
     }
   },
-  5155: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => ft,
-      e: () => bt,
-      f: () => wt,
-      j: () => Mt
+  5155: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => Ou,
+      f: () => Mu,
+      h: () => Yu,
+      l: () => gu
     });
-    var Ot = Vt(63),
-      qt = Vt(5162),
-      Dt = Vt(4475),
-      mt = Vt(1464),
-      dt = Vt(5186),
-      jt = Vt(1140),
-      Ht = Vt.n(jt),
-      Xt = Vt(1450),
-      Qt = Vt(1826),
-      lt = Vt(5194),
-      Et = Vt(1188);
+    var su = ju(58),
+      Uu = ju(5158),
+      Zu = ju(4528),
+      Xu = ju(1419),
+      lu = ju(5179),
+      qu = ju(1105),
+      fu = ju.n(qu),
+      Cu = ju(1405),
+      bu = ju(1779),
+      cu = ju(5182),
+      Nu = ju(1154);
 
-    function ft(tt) {
+    function Ou(uu) {
       let {
-        label: et,
-        onClick: Vt,
-        checked: Ot,
-        circleInfoText: qt,
-        className: dt,
-        disabled: jt,
-        note: Xt
-      } = tt;
-      return (0, Et.jsxs)("div", {
-        "aria-disabled": jt || void 0,
+        label: Eu,
+        onClick: ju,
+        checked: su,
+        circleInfoText: Uu,
+        className: lu,
+        disabled: qu,
+        note: Cu
+      } = uu;
+      return (0, Nu.jsxs)("div", {
+        "aria-disabled": qu || void 0,
         "data-pad-focusable": !0,
-        className: Ht()("SettingBox CheckboxContainer", {
-          [dt]: dt,
-          SettingBoxDisabled: jt
+        className: fu()("SettingBox CheckboxContainer", {
+          [lu]: lu,
+          SettingBoxDisabled: qu
         }),
         onClick: () => {
-          jt || Vt(!Ot)
+          qu || ju(!su)
         },
-        children: [(0, Et.jsxs)("div", {
+        children: [(0, Nu.jsxs)("div", {
           className: "CheckboxInputAndText",
-          children: [(0, Et.jsx)("label", {
+          children: [(0, Nu.jsx)("label", {
             className: "CheckboxClickableLabel",
-            children: (0, Et.jsx)(Dt.b, {
+            children: (0, Nu.jsx)(Zu.d, {
               className: "SettingsCheckbox",
-              checked: Ot,
-              disabled: jt,
+              checked: su,
+              disabled: qu,
               onChange: () => {}
             })
-          }), (0, Et.jsxs)("div", {
+          }), (0, Nu.jsxs)("div", {
             className: "CheckboxText",
-            children: [et, qt && (0, Et.jsx)("span", {
-              onClick: tt => tt.stopPropagation(),
-              children: (0, Et.jsx)(mt.c, {
+            children: [Eu, Uu && (0, Nu.jsx)("span", {
+              onClick: uu => uu.stopPropagation(),
+              children: (0, Nu.jsx)(Xu.c, {
                 className: "SettingsTextInputCircleInfo",
-                hoverInfo: qt
+                hoverInfo: Uu
               })
             })]
           })]
-        }), Xt && (0, Et.jsx)("div", {
+        }), Cu && (0, Nu.jsx)("div", {
           className: "SettingNote",
-          children: Xt
+          children: Cu
         })]
       })
     }
 
-    function wt(tt) {
+    function Yu(uu) {
       let {
-        name: et,
-        onChange: Vt,
-        min: qt,
-        max: Dt,
-        step: dt,
-        initValue: jt,
-        circleInfoText: Xt,
-        format: Qt,
-        className: lt,
-        padStep: ft,
-        disabled: wt = !1,
-        selectableMax: yt,
-        cappedNote: Mt,
-        onChangeComplete: bt
-      } = tt;
-      const [Jt, Ct] = (0, Ot.useState)(jt), ut = (0, Ot.useRef)(jt);
-      (0, Ot.useEffect)((() => {
-        ut.current = jt, Ct(jt)
-      }), [jt]);
-      const Kt = void 0 !== yt && yt < Dt,
-        ht = Kt ? {
-          "--slider-selectable": (yt - qt) / (Dt - qt)
+        name: Eu,
+        onChange: ju,
+        min: Uu,
+        max: Zu,
+        step: lu,
+        initValue: qu,
+        circleInfoText: Cu,
+        format: bu,
+        className: cu,
+        padStep: Ou,
+        disabled: Yu = !1,
+        selectableMax: hu,
+        cappedNote: gu,
+        onChangeComplete: Mu
+      } = uu;
+      const [eu, Gu] = (0, su.useState)(qu), pu = (0, su.useRef)(qu);
+      (0, su.useEffect)((() => {
+        pu.current = qu, Gu(qu)
+      }), [qu]);
+      const wu = void 0 !== hu && hu < Zu,
+        Ju = wu ? {
+          "--slider-selectable": (hu - Uu) / (Zu - Uu)
         } : void 0;
-      return (0, Et.jsxs)("div", {
-        className: Ht()("SettingBox SettingsSliderDiv", {
-          [lt]: lt,
-          SettingBoxDisabled: wt,
-          SliderCapped: Kt
+      return (0, Nu.jsxs)("div", {
+        className: fu()("SettingBox SettingsSliderDiv", {
+          [cu]: cu,
+          SettingBoxDisabled: Yu,
+          SliderCapped: wu
         }),
-        style: ht,
-        children: [(0, Et.jsxs)("div", {
+        style: Ju,
+        children: [(0, Nu.jsxs)("div", {
           className: "SliderText",
-          children: [`${et}: ${Qt?Qt(Jt):Jt}`, Xt && (0, Et.jsx)(mt.c, {
+          children: [`${Eu}: ${bu?bu(eu):eu}`, Cu && (0, Nu.jsx)(Xu.c, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: Xt
+            hoverInfo: Cu
           })]
-        }), (0, Et.jsx)("div", {
+        }), (0, Nu.jsx)("div", {
           className: "SliderDiv",
-          children: (0, Et.jsx)(Nt, {
-            value: Jt,
-            min: qt,
-            max: Dt,
-            step: dt,
-            onChange: tt => {
-              if (Kt && tt >= yt && Jt === yt) return;
-              const et = Kt ? Math.min(tt, yt) : tt;
-              ut.current = et, Ct(et), Vt(et)
+          children: (0, Nu.jsx)(Du, {
+            value: eu,
+            min: Uu,
+            max: Zu,
+            step: lu,
+            onChange: uu => {
+              if (wu && uu >= hu && eu === hu) return;
+              const Eu = wu ? Math.min(uu, hu) : uu;
+              pu.current = Eu, Gu(Eu), ju(Eu)
             },
-            onChangeComplete: bt && (() => {
-              bt(ut.current)
+            onChangeComplete: Mu && (() => {
+              Mu(pu.current)
             }),
-            format: Qt,
-            padStep: ft,
-            disabled: wt
+            format: bu,
+            padStep: Ou,
+            disabled: Yu
           })
-        }), Kt && Mt && (0, Et.jsx)("div", {
+        }), wu && gu && (0, Nu.jsx)("div", {
           className: "SettingNote",
-          children: Mt
+          children: gu
         })]
       })
     }
-    const yt = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
+    const hu = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
 
-    function Nt(tt) {
-      var et;
+    function Du(uu) {
+      var Eu;
       let {
-        value: Vt,
-        min: Dt,
-        max: mt,
-        step: dt,
-        onChange: jt,
-        orientation: Ht,
-        reverse: Xt,
-        setIsChanging: Qt,
-        tooltip: ft,
-        labels: wt,
-        handleLabel: Nt,
-        format: Mt,
-        onChangeStart: bt,
-        onChangeComplete: Jt,
-        padStep: Ct,
-        disabled: ut = !1
-      } = tt;
-      const Kt = (0, Ot.useRef)(null),
-        ht = (0, Ot.useRef)(null);
-      (0, Ot.useLayoutEffect)((() => {
-        var tt, et, Vt;
-        const Ot = null !== (tt = null === (et = Kt.current) || void 0 === et ? void 0 : et.querySelector(".rangeslider")) && void 0 !== tt ? tt : null;
-        null === Ot || void 0 === Ot || Ot.setAttribute("data-pad-slider", ""), null === Ot || void 0 === Ot || Ot.setAttribute("data-pad-focusable", ""), null === Ot || void 0 === Ot || null === (Vt = Ot.querySelector(".rangeslider__handle")) || void 0 === Vt || Vt.setAttribute("data-pad-slider-handle", ""), ht.current = Ot
-      }), []), (0, Ot.useLayoutEffect)((() => {
-        var tt, et;
-        ut ? null === (tt = ht.current) || void 0 === tt || tt.setAttribute("aria-disabled", "true") : null === (et = ht.current) || void 0 === et || et.removeAttribute("aria-disabled")
-      }), [ut]);
-      const vt = (null !== (et = String(dt).split(".")[1]) && void 0 !== et ? et : "").length,
-        Wt = tt => {
-          const et = Number((Math.round((tt - Dt) / dt) * dt + Dt).toFixed(vt));
-          return Math.min(mt, Math.max(Dt, et))
+        value: ju,
+        min: Zu,
+        max: Xu,
+        step: lu,
+        onChange: qu,
+        orientation: fu,
+        reverse: Cu,
+        setIsChanging: bu,
+        tooltip: Ou,
+        labels: Yu,
+        handleLabel: Du,
+        format: gu,
+        onChangeStart: Mu,
+        onChangeComplete: eu,
+        padStep: Gu,
+        disabled: pu = !1
+      } = uu;
+      const wu = (0, su.useRef)(null),
+        Ju = (0, su.useRef)(null);
+      (0, su.useLayoutEffect)((() => {
+        var uu, Eu, ju;
+        const su = null !== (uu = null === (Eu = wu.current) || void 0 === Eu ? void 0 : Eu.querySelector(".rangeslider")) && void 0 !== uu ? uu : null;
+        null === su || void 0 === su || su.setAttribute("data-pad-slider", ""), null === su || void 0 === su || su.setAttribute("data-pad-focusable", ""), null === su || void 0 === su || null === (ju = su.querySelector(".rangeslider__handle")) || void 0 === ju || ju.setAttribute("data-pad-slider-handle", ""), Ju.current = su
+      }), []), (0, su.useLayoutEffect)((() => {
+        var uu, Eu;
+        pu ? null === (uu = Ju.current) || void 0 === uu || uu.setAttribute("aria-disabled", "true") : null === (Eu = Ju.current) || void 0 === Eu || Eu.removeAttribute("aria-disabled")
+      }), [pu]);
+      const du = (null !== (Eu = String(lu).split(".")[1]) && void 0 !== Eu ? Eu : "").length,
+        au = uu => {
+          const Eu = Number((Math.round((uu - Zu) / lu) * lu + Zu).toFixed(du));
+          return Math.min(Xu, Math.max(Zu, Eu))
         },
-        St = (0, Ot.useRef)(Jt);
-      St.current = Jt, (0, Ot.useEffect)((() => {
-        const tt = Kt.current;
-        if (!tt) return;
-        const et = tt => {
-          var et;
-          yt.has(tt.key) && (null === (et = St.current) || void 0 === et || et.call(St))
+        Pu = (0, su.useRef)(eu);
+      Pu.current = eu, (0, su.useEffect)((() => {
+        const uu = wu.current;
+        if (!uu) return;
+        const Eu = uu => {
+          var Eu;
+          hu.has(uu.key) && (null === (Eu = Pu.current) || void 0 === Eu || Eu.call(Pu))
         };
-        return tt.addEventListener("keyup", et), () => {
-          tt.removeEventListener("keyup", et)
+        return uu.addEventListener("keyup", Eu), () => {
+          uu.removeEventListener("keyup", Eu)
         }
       }), []);
-      const ct = (0, Ot.useRef)(!1);
-      return (0, lt.i)(ht, {
-        adjust: tt => {
-          if (ut) return;
-          const et = null !== Ct && void 0 !== Ct ? Ct : Math.max(dt, Math.round((mt - Dt) / 20 / dt) * dt),
-            Ot = Wt(Vt + tt * et * (Xt ? -1 : 1));
-          Ot !== Vt && (null === bt || void 0 === bt || bt(), jt(Ot), null === Jt || void 0 === Jt || Jt())
+      const ou = (0, su.useRef)(!1);
+      return (0, cu.e)(Ju, {
+        adjust: uu => {
+          if (pu) return;
+          const Eu = null !== Gu && void 0 !== Gu ? Gu : Math.max(lu, Math.round((Xu - Zu) / 20 / lu) * lu),
+            su = au(ju + uu * Eu * (Cu ? -1 : 1));
+          su !== ju && (null === Mu || void 0 === Mu || Mu(), qu(su), null === eu || void 0 === eu || eu())
         },
-        setFraction: tt => {
-          if (ut) return;
-          const et = Wt(Dt + (Xt ? 1 - tt : tt) * (mt - Dt));
-          et !== Vt && (ct.current || (ct.current = !0, null === bt || void 0 === bt || bt()), jt(et))
+        setFraction: uu => {
+          if (pu) return;
+          const Eu = au(Zu + (Cu ? 1 - uu : uu) * (Xu - Zu));
+          Eu !== ju && (ou.current || (ou.current = !0, null === Mu || void 0 === Mu || Mu()), qu(Eu))
         },
         endDrag: () => {
-          ct.current && (ct.current = !1, null === Jt || void 0 === Jt || Jt())
+          ou.current && (ou.current = !1, null === eu || void 0 === eu || eu())
         }
-      }), (0, Et.jsx)("div", {
-        ref: Kt,
+      }), (0, Nu.jsx)("div", {
+        ref: wu,
         style: {
           display: "contents"
         },
-        children: (0, Et.jsx)(qt.d, {
-          value: Vt,
-          min: Dt,
-          max: mt,
-          step: dt,
-          onChange: jt,
-          orientation: Ht,
-          reverse: Xt,
-          tooltip: ft,
-          labels: wt,
-          handleLabel: Nt,
-          format: Mt,
+        children: (0, Nu.jsx)(Uu.c, {
+          value: ju,
+          min: Zu,
+          max: Xu,
+          step: lu,
+          onChange: qu,
+          orientation: fu,
+          reverse: Cu,
+          tooltip: Ou,
+          labels: Yu,
+          handleLabel: Du,
+          format: gu,
           onChangeStart: () => {
-            null === bt || void 0 === bt || bt(), null === Qt || void 0 === Qt || Qt(!0)
+            null === Mu || void 0 === Mu || Mu(), null === bu || void 0 === bu || bu(!0)
           },
           onChangeComplete: () => {
-            null === Qt || void 0 === Qt || Qt(!1), null === Jt || void 0 === Jt || Jt()
+            null === bu || void 0 === bu || bu(!1), null === eu || void 0 === eu || eu()
           }
         })
       })
     }
-    async function Mt() {
-      const tt = Xt.NotificationProvider.showPromptPopup({
+    async function gu() {
+      const uu = Cu.NotificationProvider.showPromptPopup({
         title: "settingsMenu:reloadPagePopupTitle",
         subtitle: "settingsMenu:reloadPagePopupSubtitle",
         confirmText: "settingsMenu:reloadPagePopupConfirm",
@@ -464,75 +464,75 @@ export const modules = {
         cancelText: "general:cancel",
         cancelTooltip: ""
       });
-      !0 === await tt.getResult() && (0, Qt.reloadBloxd)()
+      !0 === await uu.getResult() && (0, bu.reloadBloxd)()
     }
 
-    function bt(tt) {
+    function Mu(uu) {
       let {
-        label: et,
-        options: Vt,
-        value: Ot,
-        onChange: qt,
-        circleInfoText: Dt
-      } = tt;
-      return (0, Et.jsxs)("div", {
+        label: Eu,
+        options: ju,
+        value: su,
+        onChange: Uu,
+        circleInfoText: Zu
+      } = uu;
+      return (0, Nu.jsxs)("div", {
         className: "SettingBox SegmentedSettingRow",
-        children: [(0, Et.jsxs)("div", {
+        children: [(0, Nu.jsxs)("div", {
           className: "SliderText",
-          children: [et, Dt && (0, Et.jsx)(mt.c, {
+          children: [Eu, Zu && (0, Nu.jsx)(Xu.c, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: Dt
+            hoverInfo: Zu
           })]
-        }), (0, Et.jsx)(dt.c, {
-          ariaLabel: et,
-          options: Vt,
-          value: Ot,
-          onChange: qt
+        }), (0, Nu.jsx)(lu.c, {
+          ariaLabel: Eu,
+          options: ju,
+          value: su,
+          onChange: Uu
         })]
       })
     }
   },
-  5150: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => yt,
-      g: () => Nt
+  5151: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => hu,
+      g: () => Du
     });
-    var Ot = Vt(3219),
-      qt = Vt(2219),
-      Dt = Vt(63),
-      mt = Vt(1140),
-      dt = Vt.n(mt),
-      jt = Vt(1436),
-      Ht = Vt(3217),
-      Xt = Vt(1450),
-      Qt = Vt(5155),
-      lt = Vt(5200),
-      Et = Vt(725),
-      ft = Vt(5235),
-      wt = Vt(1188);
+    var su = ju(3340),
+      Uu = ju(2239),
+      Zu = ju(58),
+      Xu = ju(1105),
+      lu = ju.n(Xu),
+      qu = ju(1393),
+      fu = ju(3336),
+      Cu = ju(1405),
+      bu = ju(5155),
+      cu = ju(5188),
+      Nu = ju(680),
+      Ou = ju(5223),
+      Yu = ju(1154);
 
-    function yt(tt) {
-      var et;
+    function hu(uu) {
+      var Eu;
       let {
-        setApplySettingsCallback: Vt
-      } = tt;
-      const [, mt] = (0, Dt.useReducer)((tt => tt + 1), 0), dt = (0, Dt.useRef)(!1), jt = (0, Dt.useRef)(null);
+        setApplySettingsCallback: ju
+      } = uu;
+      const [, Xu] = (0, Zu.useReducer)((uu => uu + 1), 0), lu = (0, Zu.useRef)(!1), qu = (0, Zu.useRef)(null);
 
-      function yt(tt, et) {
-        Ht.e.setFromJson(tt, "player");
-        const Ot = Ht.e.saveTexturePack();
-        if (Et.K) {
-          const tt = Ht.e.toJson();
-          Ot.then((et => {
-            et && (0, ft.d)(tt)
+      function hu(uu, Eu) {
+        fu.d.setFromJson(uu, "player");
+        const su = fu.d.saveTexturePack();
+        if (Nu.y) {
+          const uu = fu.d.toJson();
+          su.then((Eu => {
+            Eu && (0, Ou.c)(uu)
           }))
-        } else dt.current ||= et, jt.current !== Ht.e.getId() || Ht.e.getId() === qt.p.CUSTOM && dt.current ? Vt((() => Qt.j)) : Vt(null);
-        mt()
+        } else lu.current ||= Eu, qu.current !== fu.d.getId() || fu.d.getId() === Uu.p.CUSTOM && lu.current ? ju((() => bu.l)) : ju(null);
+        Xu()
       }
-      async function Mt(tt) {
-        if (Ht.e.getId() !== tt.metaData.id) {
-          if (Ht.e.getId() === qt.p.CUSTOM && Ht.e.getFromFolderName()) {
-            const tt = Xt.NotificationProvider.showPromptPopup({
+      async function gu(uu) {
+        if (fu.d.getId() !== uu.metaData.id) {
+          if (fu.d.getId() === Uu.p.CUSTOM && fu.d.getFromFolderName()) {
+            const uu = Cu.NotificationProvider.showPromptPopup({
               title: "settingsMenu:loseChangesTitle",
               subtitle: "settingsMenu:loseChangesSubtitle",
               confirmText: "general:continue",
@@ -541,29 +541,29 @@ export const modules = {
               cancelText: "general:cancel",
               cancelTooltip: ""
             });
-            if (!0 !== await tt.getResult()) return
+            if (!0 !== await uu.getResult()) return
           }
-          yt(tt, !1)
+          hu(uu, !1)
         }
-      }(0, Dt.useEffect)((() => {
-        jt.current = Ht.e.getId()
+      }(0, Zu.useEffect)((() => {
+        qu.current = fu.d.getId()
       }), []);
-      const bt = Ot.e,
-        Jt = [bt, ...Object.values(qt.p).filter((tt => tt !== bt))];
-      return (0, wt.jsx)(wt.Fragment, {
-        children: (0, wt.jsxs)("div", {
+      const Mu = su.c,
+        eu = [Mu, ...Object.values(Uu.p).filter((uu => uu !== Mu))];
+      return (0, Yu.jsx)(Yu.Fragment, {
+        children: (0, Yu.jsxs)("div", {
           className: "TexturePackCategory SettingsMenuRightInner",
-          children: [(0, wt.jsx)("div", {
+          children: [(0, Yu.jsx)("div", {
             className: "TexturePackList",
-            children: Jt.map((tt => (0, wt.jsx)(Nt, {
-              id: tt,
-              isSelected: tt === Ht.e.getId(),
-              setSelected: Mt
-            }, tt)))
-          }), Ht.e.getId() === qt.p.CUSTOM && (0, wt.jsx)(lt.c, {
-            folderName: null !== (et = Ht.e.getFromFolderName()) && void 0 !== et ? et : null,
-            onTexturePackUpdated: function(tt) {
-              yt(tt, !0)
+            children: eu.map((uu => (0, Yu.jsx)(Du, {
+              id: uu,
+              isSelected: uu === fu.d.getId(),
+              setSelected: gu
+            }, uu)))
+          }), fu.d.getId() === Uu.p.CUSTOM && (0, Yu.jsx)(cu.e, {
+            folderName: null !== (Eu = fu.d.getFromFolderName()) && void 0 !== Eu ? Eu : null,
+            onTexturePackUpdated: function(uu) {
+              hu(uu, !0)
             },
             packOwner: "player"
           })]
@@ -571,417 +571,417 @@ export const modules = {
       })
     }
 
-    function Nt(tt) {
+    function Du(uu) {
       let {
-        id: et,
-        isSelected: Vt,
-        setSelected: mt,
-        disabled: Ht = !1
-      } = tt;
-      const [Xt, Qt] = (0, Dt.useState)(!0), [lt, Et] = (0, Dt.useState)(""), [ft, yt] = (0, Dt.useState)(""), [Nt, Mt] = (0, Dt.useState)(""), bt = (0, Dt.useRef)({});
-      return (0, Dt.useEffect)((() => {
-        (0, Ot.q)(et).then((tt => {
-          var et;
-          tt && (bt.current = tt, Qt(!1), Et(bt.current.metaData.name), yt(bt.current.metaData.author), Mt(null !== (et = bt.current.metaData.previewImage) && void 0 !== et ? et : ""))
-        })).catch((tt => {
-          console.warn(`Failed to fetch texture pack ${et}`, tt)
+        id: Eu,
+        isSelected: ju,
+        setSelected: Xu,
+        disabled: fu = !1
+      } = uu;
+      const [Cu, bu] = (0, Zu.useState)(!0), [cu, Nu] = (0, Zu.useState)(""), [Ou, hu] = (0, Zu.useState)(""), [Du, gu] = (0, Zu.useState)(""), Mu = (0, Zu.useRef)({});
+      return (0, Zu.useEffect)((() => {
+        (0, su.n)(Eu).then((uu => {
+          var Eu;
+          uu && (Mu.current = uu, bu(!1), Nu(Mu.current.metaData.name), hu(Mu.current.metaData.author), gu(null !== (Eu = Mu.current.metaData.previewImage) && void 0 !== Eu ? Eu : ""))
+        })).catch((uu => {
+          console.warn(`Failed to fetch texture pack ${Eu}`, uu)
         }))
-      }), [et]), (0, wt.jsxs)("div", {
+      }), [Eu]), (0, Yu.jsxs)("div", {
         "data-pad-focusable": !0,
-        "aria-disabled": Ht || void 0,
-        className: dt()("TexturePack", {
-          Selected: Vt,
-          Custom: et === qt.p.CUSTOM,
-          Disabled: Ht
+        "aria-disabled": fu || void 0,
+        className: lu()("TexturePack", {
+          Selected: ju,
+          Custom: Eu === Uu.p.CUSTOM,
+          Disabled: fu
         }),
         onClick: () => {
-          Xt || Ht || mt(bt.current)
+          Cu || fu || Xu(Mu.current)
         },
-        children: [(0, wt.jsx)("div", {
+        children: [(0, Yu.jsx)("div", {
           className: "TexturePackBg",
           style: {
-            backgroundImage: Nt ? `url(${Nt})` : void 0
+            backgroundImage: Du ? `url(${Du})` : void 0
           }
-        }), Xt && (0, wt.jsx)("div", {
+        }), Cu && (0, Yu.jsx)("div", {
           className: "TexturePackName",
-          children: (0, wt.jsx)(jt.b, {})
-        }), !Xt && lt && (0, wt.jsx)("div", {
+          children: (0, Yu.jsx)(qu.b, {})
+        }), !Cu && cu && (0, Yu.jsx)("div", {
           className: "TexturePackName",
-          children: lt
-        }), !Xt && ft && (0, wt.jsx)("div", {
+          children: cu
+        }), !Cu && Ou && (0, Yu.jsx)("div", {
           className: "TexturePackAuthor",
-          children: ft
+          children: Ou
         })]
       })
     }
   },
-  5208: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => dt,
-      f: () => mt,
-      j: () => Dt
+  5197: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => lu,
+      f: () => Xu,
+      g: () => Zu
     });
-    var Ot = Vt(5216);
-    const qt = [tt => tt.strict ? "strict" : "nonStrict", tt => tt.program];
+    var su = ju(5206);
+    const Uu = [uu => uu.strict ? "strict" : "nonStrict", uu => uu.program];
 
-    function Dt(tt, et) {
-      let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const Ot = {};
-      for (const qt in Vt) Ot[qt] = `\0${qt}\0`;
-      return tt(et, Ot).replace(/\0(\w+)\0/g, ((tt, et) => Vt[et]))
+    function Zu(uu, Eu) {
+      let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const su = {};
+      for (const Uu in ju) su[Uu] = `\0${Uu}\0`;
+      return uu(Eu, su).replace(/\0(\w+)\0/g, ((uu, Eu) => ju[Eu]))
     }
 
-    function mt(tt) {
-      return null === tt.file ? null : tt.line > 0 ? `${tt.file}:${tt.line}` : tt.file
+    function Xu(uu) {
+      return null === uu.file ? null : uu.line > 0 ? `${uu.file}:${uu.line}` : uu.file
     }
 
-    function dt(tt) {
-      const et = new Map(tt.map((tt => [jt(tt).join("."), tt])));
-      if (0 === et.size) return [];
-      const Vt = Xt([...et.values()]);
-      return 0 === Vt[0].length ? [] : Vt
+    function lu(uu) {
+      const Eu = new Map(uu.map((uu => [qu(uu).join("."), uu])));
+      if (0 === Eu.size) return [];
+      const ju = Cu([...Eu.values()]);
+      return 0 === ju[0].length ? [] : ju
     }
 
-    function jt(tt) {
-      return qt.map((et => et(tt)))
+    function qu(uu) {
+      return Uu.map((Eu => Eu(uu)))
     }
-    const Ht = qt.map((tt => new Set(Ot.g.map(tt)).size));
+    const fu = Uu.map((uu => new Set(su.h.map(uu)).size));
 
-    function Xt(tt) {
-      const et = qt.map((et => new Set(tt.map(et)))),
-        Vt = et.reduce(((tt, et) => tt * et.size), 1),
-        Ot = et.every(((tt, et) => 1 === tt.size || tt.size === Ht[et]));
-      if (Vt === tt.length && Ot) return [qt.filter(((tt, Vt) => 1 === et[Vt].size)).map((et => et(tt[0])))];
-      let Dt = null;
-      for (let mt = 0; mt < qt.length; mt++) {
-        if (1 === et[mt].size) continue;
-        const Vt = Qt(tt, qt[mt]).flatMap(Xt);
-        (null === Dt || Vt.length < Dt.length) && (Dt = Vt)
+    function Cu(uu) {
+      const Eu = Uu.map((Eu => new Set(uu.map(Eu)))),
+        ju = Eu.reduce(((uu, Eu) => uu * Eu.size), 1),
+        su = Eu.every(((uu, Eu) => 1 === uu.size || uu.size === fu[Eu]));
+      if (ju === uu.length && su) return [Uu.filter(((uu, ju) => 1 === Eu[ju].size)).map((Eu => Eu(uu[0])))];
+      let Zu = null;
+      for (let Xu = 0; Xu < Uu.length; Xu++) {
+        if (1 === Eu[Xu].size) continue;
+        const ju = bu(uu, Uu[Xu]).flatMap(Cu);
+        (null === Zu || ju.length < Zu.length) && (Zu = ju)
       }
-      return Dt
+      return Zu
     }
 
-    function Qt(tt, et) {
-      const Vt = new Map;
-      for (const qt of tt) {
-        var Ot;
-        const tt = et(qt);
-        Vt.set(tt, [...null !== (Ot = Vt.get(tt)) && void 0 !== Ot ? Ot : [], qt])
+    function bu(uu, Eu) {
+      const ju = new Map;
+      for (const Uu of uu) {
+        var su;
+        const uu = Eu(Uu);
+        ju.set(uu, [...null !== (su = ju.get(uu)) && void 0 !== su ? su : [], Uu])
       }
-      return [...Vt.values()]
+      return [...ju.values()]
     }
   },
-  5186: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => mt
+  5179: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => Xu
     });
-    var Ot = Vt(1140),
-      qt = Vt.n(Ot),
-      Dt = Vt(1188);
+    var su = ju(1105),
+      Uu = ju.n(su),
+      Zu = ju(1154);
 
-    function mt(tt) {
+    function Xu(uu) {
       let {
-        options: et,
-        value: Vt,
-        onChange: Ot,
-        ariaLabel: mt,
-        className: dt,
-        reselectable: jt = !1,
-        keepsFocus: Ht = !1,
-        padTabs: Xt
-      } = tt;
-      const Qt = void 0 !== Xt;
-      return (0, Dt.jsx)("div", {
-        className: qt()("SegmentedToggle", dt),
+        options: Eu,
+        value: ju,
+        onChange: su,
+        ariaLabel: Xu,
+        className: lu,
+        reselectable: qu = !1,
+        keepsFocus: fu = !1,
+        padTabs: Cu
+      } = uu;
+      const bu = void 0 !== Cu;
+      return (0, Zu.jsx)("div", {
+        className: Uu()("SegmentedToggle", lu),
         role: "group",
-        "aria-label": mt,
-        "data-pad-tabs": Xt,
-        children: et.map((tt => {
-          const et = tt.value === Vt;
-          return (0, Dt.jsx)("button", {
+        "aria-label": Xu,
+        "data-pad-tabs": Cu,
+        children: Eu.map((uu => {
+          const Eu = uu.value === ju;
+          return (0, Zu.jsx)("button", {
             type: "button",
-            "aria-pressed": et,
-            "data-pad-tab": Qt || void 0,
-            "data-pad-selected": Qt && et ? "true" : void 0,
-            "data-pad-default-focus": Qt && et || void 0,
-            "aria-label": tt.ariaLabel,
-            title: tt.ariaLabel,
-            className: qt()("SegmentedToggleOption SmallTextLight", {
-              SegmentedToggleOptionSelected: et
+            "aria-pressed": Eu,
+            "data-pad-tab": bu || void 0,
+            "data-pad-selected": bu && Eu ? "true" : void 0,
+            "data-pad-default-focus": bu && Eu || void 0,
+            "aria-label": uu.ariaLabel,
+            title: uu.ariaLabel,
+            className: Uu()("SegmentedToggleOption SmallTextLight", {
+              SegmentedToggleOptionSelected: Eu
             }),
-            onMouseDown: Ht ? tt => {
-              tt.preventDefault()
+            onMouseDown: fu ? uu => {
+              uu.preventDefault()
             } : void 0,
             onClick: () => {
-              et && !jt || Ot(tt.value)
+              Eu && !qu || su(uu.value)
             },
-            children: tt.label
-          }, tt.value)
+            children: uu.label
+          }, uu.value)
         }))
       })
     }
   },
-  5194: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => Dt,
-      i: () => mt
+  5182: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => Zu,
+      e: () => Xu
     });
-    var Ot = Vt(63);
-    const qt = new WeakMap,
-      Dt = tt => {
-        var et;
-        const Vt = tt.closest("[data-pad-slider]");
-        return Vt && null !== (et = qt.get(Vt)) && void 0 !== et ? et : null
+    var su = ju(58);
+    const Uu = new WeakMap,
+      Zu = uu => {
+        var Eu;
+        const ju = uu.closest("[data-pad-slider]");
+        return ju && null !== (Eu = Uu.get(ju)) && void 0 !== Eu ? Eu : null
       },
-      mt = (tt, et) => {
-        const Vt = (0, Ot.useRef)(et);
-        Vt.current = et, (0, Ot.useEffect)((() => {
-          if (tt.current) return ((tt, et) => (qt.set(tt, et), () => {
-            qt.get(tt) === et && qt.delete(tt)
-          }))(tt.current, {
-            adjust: tt => {
-              Vt.current.adjust(tt)
+      Xu = (uu, Eu) => {
+        const ju = (0, su.useRef)(Eu);
+        ju.current = Eu, (0, su.useEffect)((() => {
+          if (uu.current) return ((uu, Eu) => (Uu.set(uu, Eu), () => {
+            Uu.get(uu) === Eu && Uu.delete(uu)
+          }))(uu.current, {
+            adjust: uu => {
+              ju.current.adjust(uu)
             },
-            setFraction: tt => {
-              Vt.current.setFraction(tt)
+            setFraction: uu => {
+              ju.current.setFraction(uu)
             },
             endDrag: () => {
-              Vt.current.endDrag()
+              ju.current.endDrag()
             }
           })
-        }), [tt])
+        }), [uu])
       }
   },
-  5216: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => Ot.k,
-      g: () => qt,
-      h: () => Ot.s
+  5206: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => su.h,
+      h: () => Uu,
+      k: () => su.o
     });
-    var Ot = Vt(5223);
-    const qt = [!1, !0].flatMap((tt => ["terrain", "liquid", "model"].map((et => ({
-      strict: tt,
-      program: et
+    var su = ju(5209);
+    const Uu = [!1, !0].flatMap((uu => ["terrain", "liquid", "model"].map((Eu => ({
+      strict: uu,
+      program: Eu
     })))))
   },
-  5243: (tt, et, Vt) => {
-    function Ot(tt, et) {
-      return qt(tt, et)
+  5230: (uu, Eu, ju) => {
+    function su(uu, Eu) {
+      return Uu(uu, Eu)
     }
 
-    function qt(tt, et) {
-      if (tt === et) return !0;
-      if ("object" !== typeof tt || "object" !== typeof et || null === tt || null === et || Array.isArray(tt) !== Array.isArray(et)) return !1;
-      const Vt = tt,
-        Ot = et,
-        Dt = Object.keys(Vt);
-      return Dt.length === Object.keys(Ot).length && Dt.every((tt => Object.prototype.hasOwnProperty.call(Ot, tt) && qt(Vt[tt], Ot[tt])))
+    function Uu(uu, Eu) {
+      if (uu === Eu) return !0;
+      if ("object" !== typeof uu || "object" !== typeof Eu || null === uu || null === Eu || Array.isArray(uu) !== Array.isArray(Eu)) return !1;
+      const ju = uu,
+        su = Eu,
+        Zu = Object.keys(ju);
+      return Zu.length === Object.keys(su).length && Zu.every((uu => Object.prototype.hasOwnProperty.call(su, uu) && Uu(ju[uu], su[uu])))
     }
-    Vt.d(et, {
-      e: () => Ot
+    ju.d(Eu, {
+      c: () => su
     })
   },
-  5235: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => mt,
-      f: () => dt
+  5223: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => Xu,
+      g: () => lu
     });
-    var Ot = Vt(2219),
-      qt = Vt(5243);
-    let Dt = null;
+    var su = ju(2239),
+      Uu = ju(5230);
+    let Zu = null;
 
-    function mt(tt) {
-      Dt = {
-        pack: tt.metaData.id === Ot.d ? null : tt
+    function Xu(uu) {
+      Zu = {
+        pack: uu.metaData.id === su.e ? null : uu
       }
     }
 
-    function dt(tt) {
-      return !(null === Dt || !(0, qt.e)(Dt.pack, tt)) && (Dt = null, !0)
+    function lu(uu) {
+      return !(null === Zu || !(0, Uu.c)(Zu.pack, uu)) && (Zu = null, !0)
     }
   },
-  5223: (tt, et, Vt) => {
-    Vt.d(et, {
-      C: () => Xt,
-      E: () => lt,
-      e: () => dt,
-      h: () => mt,
-      k: () => Ot,
-      m: () => wt,
-      p: () => Qt,
-      s: () => qt,
-      u: () => Dt,
-      y: () => Ht
+  5209: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      A: () => cu,
+      c: () => lu,
+      e: () => Xu,
+      h: () => su,
+      j: () => Yu,
+      k: () => bu,
+      o: () => Uu,
+      p: () => Zu,
+      s: () => fu,
+      w: () => Cu
     });
-    const Ot = 5;
+    const su = 5;
 
-    function qt(tt) {
-      return tt === Ot
+    function Uu(uu) {
+      return uu === su
     }
 
-    function Dt(tt) {
-      return [...tt.features]
+    function Zu(uu) {
+      return [...uu.features]
     }
-    const mt = 262144,
-      dt = 256,
-      jt = 256;
+    const Xu = 262144,
+      lu = 256,
+      qu = 256;
 
-    function Ht(tt) {
-      if ("object" !== typeof tt || null === tt || Array.isArray(tt)) return "The pack has no files.";
-      const et = [];
-      for (const [Vt, Ot] of Object.entries(tt)) {
-        if ("string" !== typeof Ot) return `${Vt} isn't text.`;
-        et.push({
-          path: Vt,
-          source: Ot
+    function fu(uu) {
+      if ("object" !== typeof uu || null === uu || Array.isArray(uu)) return "The pack has no files.";
+      const Eu = [];
+      for (const [ju, su] of Object.entries(uu)) {
+        if ("string" !== typeof su) return `${ju} isn't text.`;
+        Eu.push({
+          path: ju,
+          source: su
         })
       }
-      return et.sort(((tt, et) => Qt(tt.path, et.path))),
-        function(tt) {
-          if (0 === tt.length) return "The pack has no .wgsl files.";
-          if (tt.length > dt) return `The pack has more than ${dt} .wgsl files.`;
-          const et = new Set;
+      return Eu.sort(((uu, Eu) => bu(uu.path, Eu.path))),
+        function(uu) {
+          if (0 === uu.length) return "The pack has no .wgsl files.";
+          if (uu.length > lu) return `The pack has more than ${lu} .wgsl files.`;
+          const Eu = new Set;
           for (const {
-              path: Vt
+              path: ju
             }
-            of tt) {
-            const tt = Et(Vt);
-            if (null !== tt) return tt;
-            if (et.has(Vt)) return `The pack has two files at ${Vt}.`;
-            et.add(Vt)
+            of uu) {
+            const uu = Nu(ju);
+            if (null !== uu) return uu;
+            if (Eu.has(ju)) return `The pack has two files at ${ju}.`;
+            Eu.add(ju)
           }
-          return lt(tt) > mt ? `The pack's .wgsl files are over ${mt/1024} KB in total.` : null
-        }(et) ?? et
+          return cu(uu) > Xu ? `The pack's .wgsl files are over ${Xu/1024} KB in total.` : null
+        }(Eu) ?? Eu
     }
 
-    function Xt(tt) {
-      const et = {};
-      for (const Vt of tt) et[Vt.path] = Vt.source;
-      return et
+    function Cu(uu) {
+      const Eu = {};
+      for (const ju of uu) Eu[ju.path] = ju.source;
+      return Eu
     }
 
-    function Qt(tt, et) {
-      return tt < et ? -1 : tt > et ? 1 : 0
+    function bu(uu, Eu) {
+      return uu < Eu ? -1 : uu > Eu ? 1 : 0
     }
 
-    function lt(tt) {
-      const et = new TextEncoder;
-      let Vt = 0;
+    function cu(uu) {
+      const Eu = new TextEncoder;
+      let ju = 0;
       for (const {
-          source: Ot
+          source: su
         }
-        of tt) Vt += et.encode(Ot).byteLength;
-      return Vt
+        of uu) ju += Eu.encode(su).byteLength;
+      return ju
     }
 
-    function Et(tt) {
-      if (!tt.toLowerCase().endsWith(".wgsl")) return `${tt} isn't a .wgsl file.`;
-      if (tt.length > jt) return `A file path is over ${jt} characters.`;
-      if (tt.includes("\\") || /[\u0000-\u001f]/.test(tt)) return `${tt} isn't a valid file path.`;
-      return tt.split("/").some((tt => "" === tt || "." === tt || ".." === tt)) ? `${tt} isn't a valid file path.` : null
+    function Nu(uu) {
+      if (!uu.toLowerCase().endsWith(".wgsl")) return `${uu} isn't a .wgsl file.`;
+      if (uu.length > qu) return `A file path is over ${qu} characters.`;
+      if (uu.includes("\\") || /[\u0000-\u001f]/.test(uu)) return `${uu} isn't a valid file path.`;
+      return uu.split("/").some((uu => "" === uu || "." === uu || ".." === uu)) ? `${uu} isn't a valid file path.` : null
     }
-    const ft = /^(.*)\[rot\[([1-4])$/;
+    const Ou = /^(.*)\[rot\[([1-4])$/;
 
-    function wt(tt, et) {
-      let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const Ot = new Map;
-      et.forEach(((tt, et) => {
+    function Yu(uu, Eu) {
+      let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const su = new Map;
+      Eu.forEach(((uu, Eu) => {
         let {
-          numAnimStates: Vt,
-          animStartIdx: qt
-        } = tt;
-        for (let Dt = 1; Dt < Vt; Dt++) Ot.set(qt + Dt - 1, et)
+          numAnimStates: ju,
+          animStartIdx: Uu
+        } = uu;
+        for (let Zu = 1; Zu < ju; Zu++) su.set(Uu + Zu - 1, Eu)
       }));
-      const qt = Object.entries(tt),
-        Dt = new Map;
-      for (const [wt, yt] of qt) {
-        const tt = ft.exec(wt);
-        "1" === tt?.[2] && Dt.set(tt[1], yt + 1)
+      const Uu = Object.entries(uu),
+        Zu = new Map;
+      for (const [Yu, hu] of Uu) {
+        const uu = Ou.exec(Yu);
+        "1" === uu?.[2] && Zu.set(uu[1], hu + 1)
       }
-      const mt = tt => {
-          const et = ft.exec(tt);
-          return et && Dt.has(et[1]) ? {
-            root: et[1],
-            rotation: Number(et[2]) - 1
+      const Xu = uu => {
+          const Eu = Ou.exec(uu);
+          return Eu && Zu.has(Eu[1]) ? {
+            root: Eu[1],
+            rotation: Number(Eu[2]) - 1
           } : null
         },
-        dt = new Set(qt.map((tt => {
-          let [et] = tt;
-          return mt(et)?.root ?? et
+        lu = new Set(Uu.map((uu => {
+          let [Eu] = uu;
+          return Xu(Eu)?.root ?? Eu
         }))),
-        jt = (tt, Vt) => {
-          const Ot = tt.replace(/_?0$/, "");
-          return (et[Vt]?.numAnimStates ?? 0) > 1 && !dt.has(Ot) ? Ot : tt
+        qu = (uu, ju) => {
+          const su = uu.replace(/_?0$/, "");
+          return (Eu[ju]?.numAnimStates ?? 0) > 1 && !lu.has(su) ? su : uu
         },
-        Ht = new Map;
-      for (const [ft, wt] of qt) Ht.set(wt, jt(mt(ft)?.root ?? ft, wt));
-      const Xt = qt.reduce(((tt, et) => {
-          let [, Vt] = et;
-          return Math.max(tt, Vt + 1)
+        fu = new Map;
+      for (const [Ou, Yu] of Uu) fu.set(Yu, qu(Xu(Ou)?.root ?? Ou, Yu));
+      const Cu = Uu.reduce(((uu, Eu) => {
+          let [, ju] = Eu;
+          return Math.max(uu, ju + 1)
         }), 0),
-        Qt = Array.from({
-          length: Xt
-        }, ((tt, et) => ({
-          id: et + 1,
+        bu = Array.from({
+          length: Cu
+        }, ((uu, Eu) => ({
+          id: Eu + 1,
           rotation: 0
         }))),
-        lt = new Map,
-        Et = new Map;
-      for (const [ft, wt] of qt) {
-        const tt = mt(ft),
-          et = Ot.get(wt);
-        if (void 0 !== et) {
-          const Vt = Ht.get(et);
-          Et.set(ft, {
-            name: ft,
-            texture: Vt,
+        cu = new Map,
+        Nu = new Map;
+      for (const [Ou, Yu] of Uu) {
+        const uu = Xu(Ou),
+          Eu = su.get(Yu);
+        if (void 0 !== Eu) {
+          const ju = fu.get(Eu);
+          Nu.set(Ou, {
+            name: Ou,
+            texture: ju,
             kind: "frame"
-          }), tt && !Et.has(tt.root) && Et.set(tt.root, {
-            name: tt.root,
-            texture: Vt,
+          }), uu && !Nu.has(uu.root) && Nu.set(uu.root, {
+            name: uu.root,
+            texture: ju,
             kind: "frame"
           });
           continue
         }
-        const Vt = Ht.get(wt),
-          qt = tt?.root ?? ft;
-        if (Vt !== qt && Et.set(qt, {
-            name: qt,
-            texture: Vt,
+        const ju = fu.get(Yu),
+          Uu = uu?.root ?? Ou;
+        if (ju !== Uu && Nu.set(Uu, {
+            name: Uu,
+            texture: ju,
             kind: "frame"
-          }), tt) {
-          const et = Dt.get(tt.root);
-          Qt[wt] = {
-            id: et,
-            rotation: tt.rotation
-          }, lt.set(Vt, et), Et.set(ft, {
-            name: ft,
-            texture: Vt,
+          }), uu) {
+          const Eu = Zu.get(uu.root);
+          bu[Yu] = {
+            id: Eu,
+            rotation: uu.rotation
+          }, cu.set(ju, Eu), Nu.set(Ou, {
+            name: Ou,
+            texture: ju,
             kind: "rotation"
           })
-        } else lt.set(Vt, wt + 1)
+        } else cu.set(ju, Yu + 1)
       }
-      for (const ft of lt.keys()) Et.delete(ft);
-      for (const [ft, wt] of Vt) {
-        const tt = lt.get(wt);
-        void 0 === tt || lt.has(ft) || (lt.set(ft, tt), Et.delete(ft))
+      for (const Ou of cu.keys()) Nu.delete(Ou);
+      for (const [Ou, Yu] of ju) {
+        const uu = cu.get(Yu);
+        void 0 === uu || cu.has(Ou) || (cu.set(Ou, uu), Nu.delete(Ou))
       }
       return {
-        named: [...lt].sort(((tt, et) => {
-          let [Vt] = tt, [Ot] = et;
-          return Vt < Ot ? -1 : Vt > Ot ? 1 : 0
-        })).map((tt => {
-          let [et, Vt] = tt;
+        named: [...cu].sort(((uu, Eu) => {
+          let [ju] = uu, [su] = Eu;
+          return ju < su ? -1 : ju > su ? 1 : 0
+        })).map((uu => {
+          let [Eu, ju] = uu;
           return {
-            name: et,
-            id: Vt
+            name: Eu,
+            id: ju
           }
         })),
-        aliases: [...Et.values()],
-        layers: Qt
+        aliases: [...Nu.values()],
+        layers: bu
       }
     }
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

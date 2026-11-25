@@ -1,80 +1,80 @@
 export const id = 253;
 export const ids = [253];
 export const modules = {
-  40008: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      playDocsSound: () => dt
+  40076: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      playDocsSound: () => lu
     });
-    var Ot = Vt(5030),
-      qt = Vt(36996),
-      Dt = Vt(1293);
-    const mt = new Map;
+    var su = ju(5026),
+      Uu = ju(37151),
+      Zu = ju(1255);
+    const Xu = new Map;
 
-    function dt(tt, et, Vt, dt, jt) {
-      let Ht, Xt = null,
-        Qt = 0,
-        lt = 0;
-      if (et) Ht = new Ot.Howl({
-        src: [`${Dt.clientSideServerUrls.staticUrl}/sounds/music/${tt}.mp3`],
+    function lu(uu, Eu, ju, lu, qu) {
+      let fu, Cu = null,
+        bu = 0,
+        cu = 0;
+      if (Eu) fu = new su.Howl({
+        src: [`${Zu.clientSideServerUrls.staticUrl}/sounds/music/${uu}.mp3`],
         html5: !0,
-        volume: Vt
+        volume: ju
       });
       else {
-        var Et;
-        Xt = (0, qt.o)(tt);
-        const et = (0, qt.k)(Xt),
-          Vt = null !== (Et = et.sprite[tt]) && void 0 !== Et ? Et : null;
-        if (!Vt) throw new Error(`Docs sound ${tt} is not in sprite sheet ${Xt}`);
-        Qt = Vt[0] / 1e3, lt = Vt[1] / 1e3, Ht = mt.get(Xt), Ht || (Ht = new Ot.Howl({
-          ...et,
+        var Nu;
+        Cu = (0, Uu.j)(uu);
+        const Eu = (0, Uu.g)(Cu),
+          ju = null !== (Nu = Eu.sprite[uu]) && void 0 !== Nu ? Nu : null;
+        if (!ju) throw new Error(`Docs sound ${uu} is not in sprite sheet ${Cu}`);
+        bu = ju[0] / 1e3, cu = ju[1] / 1e3, fu = Xu.get(Cu), fu || (fu = new su.Howl({
+          ...Eu,
           volume: 1
-        }), mt.set(Xt, Ht))
+        }), Xu.set(Cu, fu))
       }
-      const ft = et ? Ht.play() : Ht.play(tt);
-      Ht.volume(Vt, ft), dt > 0 && Ht.seek(Qt + dt, ft);
-      const wt = () => et ? Ht.duration() : lt;
-      let yt = !1;
-      const Nt = tt => {
-          yt || (yt = !0, Ht.off("play", Mt, ft), Ht.off("end", bt, ft), Ht.off("loaderror", Ct), Ht.off("playerror", Jt, ft), et && Ht.unload(), jt.onEnd(tt))
+      const Ou = Eu ? fu.play() : fu.play(uu);
+      fu.volume(ju, Ou), lu > 0 && fu.seek(bu + lu, Ou);
+      const Yu = () => Eu ? fu.duration() : cu;
+      let hu = !1;
+      const Du = uu => {
+          hu || (hu = !0, fu.off("play", gu, Ou), fu.off("end", Mu, Ou), fu.off("loaderror", Gu), fu.off("playerror", eu, Ou), Eu && fu.unload(), qu.onEnd(uu))
         },
-        Mt = () => {
-          jt.onPlay(wt())
+        gu = () => {
+          qu.onPlay(Yu())
         },
-        bt = () => {
-          Nt(!1)
+        Mu = () => {
+          Du(!1)
         },
-        Jt = (et, Vt) => {
-          console.error(`Could not play docs sound ${tt}`, Vt), Nt(!0)
+        eu = (Eu, ju) => {
+          console.error(`Could not play docs sound ${uu}`, ju), Du(!0)
         },
-        Ct = (tt, et) => {
-          null !== Xt && mt.get(Xt) === Ht && (mt.delete(Xt), Ht.unload()), Jt(tt, et)
+        Gu = (uu, Eu) => {
+          null !== Cu && Xu.get(Cu) === fu && (Xu.delete(Cu), fu.unload()), eu(uu, Eu)
         };
-      return Ht.on("play", Mt, ft), Ht.once("end", bt, ft), Ht.once("loaderror", Ct), Ht.once("playerror", Jt, ft), {
+      return fu.on("play", gu, Ou), fu.once("end", Mu, Ou), fu.once("loaderror", Gu), fu.once("playerror", eu, Ou), {
         pause: () => {
-          Ht.pause(ft)
+          fu.pause(Ou)
         },
         resume: () => {
-          Ht.play(ft)
+          fu.play(Ou)
         },
-        seek: tt => {
-          const et = wt(),
-            Vt = Math.max(tt, 0);
-          Ht.seek(Qt + (et > 0 ? Math.min(Vt, et) : Vt), ft)
+        seek: uu => {
+          const Eu = Yu(),
+            ju = Math.max(uu, 0);
+          fu.seek(bu + (Eu > 0 ? Math.min(ju, Eu) : ju), Ou)
         },
-        YM: () => {
-          const tt = Ht.seek(ft);
-          return "number" === typeof tt ? Math.max(0, tt - Qt) : 0
+        bM: () => {
+          const uu = fu.seek(Ou);
+          return "number" === typeof uu ? Math.max(0, uu - bu) : 0
         },
-        getDuration: wt,
-        setVolume: tt => {
-          Ht.volume(tt, ft)
+        getDuration: Yu,
+        setVolume: uu => {
+          fu.volume(uu, Ou)
         },
         stop: () => {
-          yt || (Ht.stop(ft), Nt(!1))
+          hu || (fu.stop(Ou), Du(!1))
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

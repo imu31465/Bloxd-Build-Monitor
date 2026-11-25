@@ -1,31 +1,31 @@
 export const id = 310;
 export const ids = [310];
 export const modules = {
-  42011: (tt, et, Vt) => {
-    Vt.d(et, {
-      parseShaderPack: () => Ot
+  42012: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      parseShaderPack: () => su
     });
 
-    function Ot(tt) {
-      var et, Vt;
-      const Ot = tt.get("shaderPackUrl"),
-        qt = null !== (et = tt.get("shaderPackMode")) && void 0 !== et ? et : "strict";
-      if (null === Ot) {
-        if (tt.has("shaderPackMode")) throw new Error("shaderPackMode= needs shaderPackUrl=");
+    function su(uu) {
+      var Eu, ju;
+      const su = uu.get("shaderPackUrl"),
+        Uu = null !== (Eu = uu.get("shaderPackMode")) && void 0 !== Eu ? Eu : "strict";
+      if (null === su) {
+        if (uu.has("shaderPackMode")) throw new Error("shaderPackMode= needs shaderPackUrl=");
         return null
       }
-      if ("lite" !== tt.get("renderer")) throw new Error("shaderPackUrl= needs renderer=lite: shader packs run on Lite only");
-      if (! function(tt) {
-          return "strict" === tt || "allow" === tt
-        }(qt)) throw new Error(`Unknown shaderPackMode "${qt}" - use strict or allow`);
-      const Dt = (null !== (Vt = tt.get("variants")) && void 0 !== Vt ? Vt : "").split(",").find((tt => tt.trim().startsWith("liteShaderPack")));
-      if (void 0 !== Dt) throw new Error(`shaderPackUrl= runs its own pack: drop variants=${Dt.trim()}`);
+      if ("lite" !== uu.get("renderer")) throw new Error("shaderPackUrl= needs renderer=lite: shader packs run on Lite only");
+      if (! function(uu) {
+          return "strict" === uu || "allow" === uu
+        }(Uu)) throw new Error(`Unknown shaderPackMode "${Uu}" - use strict or allow`);
+      const Zu = (null !== (ju = uu.get("variants")) && void 0 !== ju ? ju : "").split(",").find((uu => uu.trim().startsWith("liteShaderPack")));
+      if (void 0 !== Zu) throw new Error(`shaderPackUrl= runs its own pack: drop variants=${Zu.trim()}`);
       return {
-        url: Ot,
-        mode: qt
+        url: su,
+        mode: Uu
       }
     }
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

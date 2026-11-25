@@ -1,523 +1,523 @@
 export const id = 198;
 export const ids = [198];
 export const modules = {
-  34317: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => Yt,
-      g: () => Je,
-      h: () => be,
-      j: () => ue,
-      n: () => de,
-      o: () => He,
-      q: () => Qe,
-      t: () => Ce,
-      x: () => Xe
+  34490: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => tu,
+      f: () => eE,
+      j: () => ME,
+      m: () => pE,
+      o: () => XE,
+      p: () => qE,
+      q: () => CE,
+      r: () => GE,
+      s: () => fE
     });
-    var Ot = Vt(312),
-      qt = Vt(26),
-      Dt = Vt(106),
-      mt = Vt(1732),
-      dt = Vt(4563),
-      jt = Vt(2984),
-      Ht = Vt(2987),
-      Xt = Vt(39);
+    var su = ju(274),
+      Uu = ju(22),
+      Zu = ju(91),
+      Xu = ju(1687),
+      lu = ju(4602),
+      qu = ju(3061),
+      fu = ju(3067),
+      Cu = ju(31);
     const {
-      windows: Qt,
-      target: lt,
-      stepDown: Et,
-      stepUp: ft,
-      noGain: wt
-    } = Ht.e, yt = 1e3 / 60 * 1.08, Nt = 1e3 / 55, Mt = 1e3 / 45, bt = 1e3 / 30 * .92, Jt = 1e3 / 30 * 1.08;
-    class Ct {
+      windows: bu,
+      target: cu,
+      stepDown: Nu,
+      stepUp: Ou,
+      noGain: Yu
+    } = fu.c, hu = 1e3 / 60 * 1.08, Du = 1e3 / 55, gu = 1e3 / 45, Mu = 1e3 / 30 * .92, eu = 1e3 / 30 * 1.08;
+    class Gu {
       constructor() {
         this.lastMs = -1, this.runBand = -1, this.runLength = 0, this.votes60 = 0, this.votesMid = 0, this.sumMidMs = 0, this.votes30 = 0, this.steadyVotes30 = 0, this.steadyFastAfter30 = 0, this.capRuledOut = !1
       }
-      frame(tt, et) {
-        const Vt = tt - this.lastMs;
-        this.lastMs = tt;
-        const Ot = function(tt) {
-          if (tt <= 0 || tt > 100) return -1;
-          if (tt <= yt) return 0;
-          if (tt >= Nt && tt <= Mt) return 1;
-          return tt >= bt && tt <= Jt ? 2 : -1
-        }(Vt);
-        0 === Ot && 2 === this.runBand && et && (this.steadyFastAfter30++, this.capRuledOut ||= this.steadyVotes30 >= 60 && this.steadyFastAfter30 >= .1 * this.steadyVotes30), Ot !== this.runBand && (this.runBand = Ot, this.runLength = 0), Ot < 0 || ++this.runLength < 3 || (0 === Ot ? this.votes60++ : 1 === Ot ? (this.votesMid++, this.sumMidMs += Vt) : (this.votes30++, et && this.steadyVotes30++))
+      frame(uu, Eu) {
+        const ju = uu - this.lastMs;
+        this.lastMs = uu;
+        const su = function(uu) {
+          if (uu <= 0 || uu > 100) return -1;
+          if (uu <= hu) return 0;
+          if (uu >= Du && uu <= gu) return 1;
+          return uu >= Mu && uu <= eu ? 2 : -1
+        }(ju);
+        0 === su && 2 === this.runBand && Eu && (this.steadyFastAfter30++, this.capRuledOut ||= this.steadyVotes30 >= 60 && this.steadyFastAfter30 >= .1 * this.steadyVotes30), su !== this.runBand && (this.runBand = su, this.runLength = 0), su < 0 || ++this.runLength < 3 || (0 === su ? this.votes60++ : 1 === su ? (this.votesMid++, this.sumMidMs += ju) : (this.votes30++, Eu && this.steadyVotes30++))
       }
       hz() {
         return this.votes60 >= 60 ? 60 : this.votesMid >= 60 ? 1e3 * this.votesMid / this.sumMidMs : this.votes30 >= 60 && !this.capRuledOut ? 30 : 60
       }
     }
-    const ut = Qt.windowMs,
-      Kt = Qt.settleMs,
-      ht = Qt.graceMs,
-      vt = Qt.minIntervals,
-      Wt = 1e3 * vt / ut,
-      St = Math.floor(1e4 / ut),
-      ct = wt.backoffMs,
-      Rt = wt.maxMs;
-    class It {
-      constructor(tt, et) {
+    const pu = bu.windowMs,
+      wu = bu.settleMs,
+      Ju = bu.graceMs,
+      du = bu.minIntervals,
+      au = 1e3 * du / pu,
+      Pu = Math.floor(1e4 / pu),
+      ou = Yu.backoffMs,
+      ku = Yu.maxMs;
+    class mu {
+      constructor(uu, Eu) {
         let {
-          lowest: Vt,
-          startStep: Ot = 0,
-          noGain: qt = null,
-          upWait: Dt = null
-        } = et;
-        this.hooks = tt, this.step = void 0, this.lowest = void 0, this.phase = {
+          lowest: ju,
+          startStep: su = 0,
+          noGain: Uu = null,
+          upWait: Zu = null
+        } = Eu;
+        this.hooks = uu, this.step = void 0, this.lowest = void 0, this.phase = {
           kind: "watch"
-        }, this.noGain = void 0, this.downUntilMs = void 0, this.downBackoffMs = void 0, this.noGainFps = void 0, this.upFailures = void 0, this.upUntilMs = void 0, this.climbing = void 0, this.climbed = null, this.cleanRun = 0, this.dropRun = 0, this.dropRunMasked = !1, this.dropRunFpsSum = 0, this.dropRunClean = 0, this.dropRunCleanFpsSum = 0, this.refresh = new Ct, this.wasMeasuring = !1, this.lastFrameMs = -1, this.resizedMs = Number.NEGATIVE_INFINITY, this.quietUntilMs = 0, this.graceUntilMs = 0, this.windowStartMs = -1, this.lastDrawnMs = 0, this.windowIntervals = 0, this.windowHeld = 0, this.windowMaxIntervalMs = 0, this.windowMasked = !1, this.slowStartMs = -1, this.slowIntervals = 0, this.slowMasked = !1, this.log = [], this.windows = [], this.lastTargetFps = lt.maxFps, this.lowest = Vt, this.step = Math.min(Ot, Vt), this.noGain = qt, this.climbing = this.step > 0;
-        const mt = Vt + 1;
-        this.downUntilMs = new Array(mt).fill(0), this.downBackoffMs = new Array(mt).fill(0), this.noGainFps = new Array(mt).fill(0), this.noGainFps[0] = null === qt ? 0 : qt.fps, this.upFailures = new Array(mt).fill(0), this.upUntilMs = new Array(mt).fill(0), null !== Dt && Dt.step >= 0 && Dt.step < mt && (this.upUntilMs[Dt.step] = Dt.untilMs)
+        }, this.noGain = void 0, this.downUntilMs = void 0, this.downBackoffMs = void 0, this.noGainFps = void 0, this.upFailures = void 0, this.upUntilMs = void 0, this.climbing = void 0, this.climbed = null, this.cleanRun = 0, this.dropRun = 0, this.dropRunMasked = !1, this.dropRunFpsSum = 0, this.dropRunClean = 0, this.dropRunCleanFpsSum = 0, this.refresh = new Gu, this.wasMeasuring = !1, this.lastFrameMs = -1, this.resizedMs = Number.NEGATIVE_INFINITY, this.quietUntilMs = 0, this.graceUntilMs = 0, this.windowStartMs = -1, this.lastDrawnMs = 0, this.windowIntervals = 0, this.windowHeld = 0, this.windowMaxIntervalMs = 0, this.windowMasked = !1, this.slowStartMs = -1, this.slowIntervals = 0, this.slowMasked = !1, this.log = [], this.windows = [], this.lastTargetFps = cu.maxFps, this.lowest = ju, this.step = Math.min(su, ju), this.noGain = Uu, this.climbing = this.step > 0;
+        const Xu = ju + 1;
+        this.downUntilMs = new Array(Xu).fill(0), this.downBackoffMs = new Array(Xu).fill(0), this.noGainFps = new Array(Xu).fill(0), this.noGainFps[0] = null === Uu ? 0 : Uu.fps, this.upFailures = new Array(Xu).fill(0), this.upUntilMs = new Array(Xu).fill(0), null !== Zu && Zu.step >= 0 && Zu.step < Xu && (this.upUntilMs[Zu.step] = Zu.untilMs)
       }
       currentStep() {
         return this.step
       }
-      frame(tt, et, Vt) {
-        let Ot = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        if (this.refresh.frame(tt, Vt && !Ot), !Vt) return void this.leave(tt);
-        const qt = tt - this.lastFrameMs,
-          Dt = this.resizeStall(tt);
-        if (qt > 2e3 && !Dt && this.leave(this.lastFrameMs), !this.wasMeasuring) return this.wasMeasuring = !0, this.lastFrameMs = tt, this.quietUntilMs = Math.max(this.quietUntilMs, tt + ht), this.graceUntilMs = tt + ht, this.windowStartMs = -1, void(this.slowStartMs = -1);
-        qt > 500 && (this.hitch(tt), Dt && (this.slowStartMs = -1)), this.lastFrameMs = tt, tt >= this.quietUntilMs && this.countWindow(tt, et, Ot) || et && tt >= this.graceUntilMs && this.countSlow(tt, Ot)
+      frame(uu, Eu, ju) {
+        let su = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        if (this.refresh.frame(uu, ju && !su), !ju) return void this.leave(uu);
+        const Uu = uu - this.lastFrameMs,
+          Zu = this.resizeStall(uu);
+        if (Uu > 2e3 && !Zu && this.leave(this.lastFrameMs), !this.wasMeasuring) return this.wasMeasuring = !0, this.lastFrameMs = uu, this.quietUntilMs = Math.max(this.quietUntilMs, uu + Ju), this.graceUntilMs = uu + Ju, this.windowStartMs = -1, void(this.slowStartMs = -1);
+        Uu > 500 && (this.hitch(uu), Zu && (this.slowStartMs = -1)), this.lastFrameMs = uu, uu >= this.quietUntilMs && this.countWindow(uu, Eu, su) || Eu && uu >= this.graceUntilMs && this.countSlow(uu, su)
       }
-      countWindow(tt, et, Vt) {
-        if (this.windowStartMs < 0) return !!et && (this.windowStartMs = tt, this.lastDrawnMs = tt, this.windowIntervals = 0, this.windowHeld = 0, this.windowMaxIntervalMs = 0, this.windowMasked = Vt, !1);
-        if (this.windowMasked ||= Vt, !et) return this.windowHeld++, !1;
-        this.windowIntervals++, this.windowMaxIntervalMs = Math.max(this.windowMaxIntervalMs, tt - this.lastDrawnMs), this.lastDrawnMs = tt;
-        const Ot = tt - this.windowStartMs;
-        if (Ot < ut) return !1;
-        const qt = this.windowIntervals,
-          Dt = 1e3 * qt / Ot,
-          mt = this.windowHeld,
-          dt = this.windowMaxIntervalMs,
-          jt = this.windowMasked;
-        if (this.windowStartMs = -1, qt < vt) return !1;
+      countWindow(uu, Eu, ju) {
+        if (this.windowStartMs < 0) return !!Eu && (this.windowStartMs = uu, this.lastDrawnMs = uu, this.windowIntervals = 0, this.windowHeld = 0, this.windowMaxIntervalMs = 0, this.windowMasked = ju, !1);
+        if (this.windowMasked ||= ju, !Eu) return this.windowHeld++, !1;
+        this.windowIntervals++, this.windowMaxIntervalMs = Math.max(this.windowMaxIntervalMs, uu - this.lastDrawnMs), this.lastDrawnMs = uu;
+        const su = uu - this.windowStartMs;
+        if (su < pu) return !1;
+        const Uu = this.windowIntervals,
+          Zu = 1e3 * Uu / su,
+          Xu = this.windowHeld,
+          lu = this.windowMaxIntervalMs,
+          qu = this.windowMasked;
+        if (this.windowStartMs = -1, Uu < du) return !1;
         this.slowStartMs = -1;
-        const Ht = this.targetFps(),
-          Xt = Dt >= Ht * lt.cleanShare && dt <= lt.cleanMaxIntervalMs && (0 === mt || Dt >= Ht);
-        return this.decide(Dt, 1, Xt, Dt < Ht * lt.dropShare, jt, tt), !0
+        const fu = this.targetFps(),
+          Cu = Zu >= fu * cu.cleanShare && lu <= cu.cleanMaxIntervalMs && (0 === Xu || Zu >= fu);
+        return this.decide(Zu, 1, Cu, Zu < fu * cu.dropShare, qu, uu), !0
       }
       targetFps() {
-        return this.lastTargetFps = Math.min(lt.maxFps, this.refresh.hz()), this.lastTargetFps
+        return this.lastTargetFps = Math.min(cu.maxFps, this.refresh.hz()), this.lastTargetFps
       }
-      countSlow(tt, et) {
-        if (this.slowStartMs < 0) return this.slowStartMs = tt, this.slowIntervals = 0, void(this.slowMasked = et);
-        this.slowMasked ||= et, this.slowIntervals++;
-        const Vt = tt - this.slowStartMs;
-        if (Vt < 1e4) return;
-        const Ot = 1e3 * this.slowIntervals / Vt,
-          qt = this.slowMasked;
-        this.slowStartMs = -1, this.countSlow(tt, et), Ot < Wt && (this.windowStartMs = -1, this.decide(Ot, St, !1, !0, qt, tt))
+      countSlow(uu, Eu) {
+        if (this.slowStartMs < 0) return this.slowStartMs = uu, this.slowIntervals = 0, void(this.slowMasked = Eu);
+        this.slowMasked ||= Eu, this.slowIntervals++;
+        const ju = uu - this.slowStartMs;
+        if (ju < 1e4) return;
+        const su = 1e3 * this.slowIntervals / ju,
+          Uu = this.slowMasked;
+        this.slowStartMs = -1, this.countSlow(uu, Eu), su < au && (this.windowStartMs = -1, this.decide(su, Pu, !1, !0, Uu, uu))
       }
-      resizeStall(tt) {
-        return this.lastFrameMs - this.resizedMs <= Kt && tt - this.lastFrameMs <= 15e3
+      resizeStall(uu) {
+        return this.lastFrameMs - this.resizedMs <= wu && uu - this.lastFrameMs <= 15e3
       }
-      paused(tt) {
-        this.refresh.frame(tt, !1), tt - this.lastFrameMs > 2e3 && (this.quietUntilMs = Math.max(this.quietUntilMs, tt + ht), this.graceUntilMs = tt + ht), this.lastFrameMs = tt, this.slowStartMs = -1, this.hitch(tt)
+      paused(uu) {
+        this.refresh.frame(uu, !1), uu - this.lastFrameMs > 2e3 && (this.quietUntilMs = Math.max(this.quietUntilMs, uu + Ju), this.graceUntilMs = uu + Ju), this.lastFrameMs = uu, this.slowStartMs = -1, this.hitch(uu)
       }
-      resized(tt) {
-        this.resizedMs = tt, this.hitch(tt)
+      resized(uu) {
+        this.resizedMs = uu, this.hitch(uu)
       }
       hidden() {
         this.leave(this.lastFrameMs)
       }
-      leave(tt) {
-        this.wasMeasuring && (this.wasMeasuring = !1, this.left(tt))
+      leave(uu) {
+        this.wasMeasuring && (this.wasMeasuring = !1, this.left(uu))
       }
-      hitch(tt) {
-        this.windowStartMs = -1, this.quietUntilMs = Math.max(this.quietUntilMs, tt + Kt)
+      hitch(uu) {
+        this.windowStartMs = -1, this.quietUntilMs = Math.max(this.quietUntilMs, uu + wu)
       }
-      left(tt) {
+      left(uu) {
         this.windowStartMs = -1, this.slowStartMs = -1, this.cleanRun = 0, this.resetDropRun();
-        const et = this.phase;
-        "watch" !== et.kind && (this.phase = {
+        const Eu = this.phase;
+        "watch" !== Eu.kind && (this.phase = {
           kind: "watch"
-        }, "down" === et.kind && (this.downUntilMs[et.from] = tt + ct, this.noGainFps[et.from] = 0, 0 === et.from && null !== this.noGain && (this.noGain = {
+        }, "down" === Eu.kind && (this.downUntilMs[Eu.from] = uu + ou, this.noGainFps[Eu.from] = 0, 0 === Eu.from && null !== this.noGain && (this.noGain = {
           ...this.noGain,
-          untilMs: Math.min(this.noGain.untilMs, tt + ct)
-        })), this.setStep(et.from, 0, tt, "left"), "up" === et.kind && (this.climbed = et.fromClimbed))
+          untilMs: Math.min(this.noGain.untilMs, uu + ou)
+        })), this.setStep(Eu.from, 0, uu, "left"), "up" === Eu.kind && (this.climbed = Eu.fromClimbed))
       }
-      decide(tt, et, Vt, Ot, qt, Dt) {
+      decide(uu, Eu, ju, su, Uu, Zu) {
         128 === this.windows.length && this.windows.shift(), this.windows.push({
-          atMs: Dt,
+          atMs: Zu,
           step: this.step,
-          fps: Math.round(10 * tt) / 10,
-          windows: et,
-          masked: qt,
-          dropping: Ot
+          fps: Math.round(10 * uu) / 10,
+          windows: Eu,
+          masked: Uu,
+          dropping: su
         });
-        const mt = this.phase;
-        switch (mt.kind) {
+        const Xu = this.phase;
+        switch (Xu.kind) {
           case "watch":
-            return void this.watch(tt, et, Vt, Ot, qt, Dt);
+            return void this.watch(uu, Eu, ju, su, Uu, Zu);
           case "down": {
-            if (mt.judged += et, mt.fpsSum += tt * et, qt || (mt.clean += et, mt.cleanFpsSum += tt * et), mt.judged < Et.judgeWindows) return;
-            const Vt = mt.clean > 0 ? mt.cleanFpsSum / mt.clean : mt.fpsSum / mt.judged;
-            return void(Vt >= mt.fromFps * Et.keepGain ? this.keepDown(mt.from, Vt, Dt) : this.noGainFrom(mt, Vt, Dt))
+            if (Xu.judged += Eu, Xu.fpsSum += uu * Eu, Uu || (Xu.clean += Eu, Xu.cleanFpsSum += uu * Eu), Xu.judged < Nu.judgeWindows) return;
+            const ju = Xu.clean > 0 ? Xu.cleanFpsSum / Xu.clean : Xu.fpsSum / Xu.judged;
+            return void(ju >= Xu.fromFps * Nu.keepGain ? this.keepDown(Xu.from, ju, Zu) : this.noGainFrom(Xu, ju, Zu))
           }
           case "up":
-            return Vt ? void(++mt.judged >= ft.trialWindows && (this.watchAt(this.step), this.climbed = {
-              from: mt.from,
+            return ju ? void(++Xu.judged >= Ou.trialWindows && (this.watchAt(this.step), this.climbed = {
+              from: Xu.from,
               heldWindows: 0,
-              below: mt.fromClimbed
-            }, this.record(Dt, tt, "up_kept"))) : (qt ? (this.watchAt(mt.from), this.setStep(mt.from, tt, Dt, "spoiled")) : this.failUp(this.step, mt.from, tt, Dt), void(this.climbed = mt.fromClimbed))
+              below: Xu.fromClimbed
+            }, this.record(Zu, uu, "up_kept"))) : (Uu ? (this.watchAt(Xu.from), this.setStep(Xu.from, uu, Zu, "spoiled")) : this.failUp(this.step, Xu.from, uu, Zu), void(this.climbed = Xu.fromClimbed))
         }
       }
-      watch(tt, et, Vt, Ot, qt, Dt) {
-        const mt = this.climbed;
-        null !== mt && !Ot && !qt && ++mt.heldWindows >= ft.heldWindows && (this.climbed = null, this.record(Dt, tt, "Pd"), this.hooks.Pd(this.step)), Ot ? (this.dropRun += et, this.dropRunFpsSum += tt * et, this.dropRunMasked ||= qt, qt || (this.dropRunClean += et, this.dropRunCleanFpsSum += tt * et)) : this.resetDropRun(), qt && Vt || (this.cleanRun = Vt ? this.cleanRun + 1 : 0);
-        const dt = null !== this.climbed ? ft : Et;
-        if (this.dropRun >= (this.dropRunMasked ? dt.maskedWindows : dt.dropWindows)) {
-          const et = this.dropRunClean > 0 ? this.dropRunCleanFpsSum / this.dropRunClean : this.dropRunFpsSum / this.dropRun,
-            Vt = this.dropRunClean >= Et.dropWindows && et < this.noGainFps[this.step] * wt.heavierShare;
+      watch(uu, Eu, ju, su, Uu, Zu) {
+        const Xu = this.climbed;
+        null !== Xu && !su && !Uu && ++Xu.heldWindows >= Ou.heldWindows && (this.climbed = null, this.record(Zu, uu, "dl"), this.hooks.dl(this.step)), su ? (this.dropRun += Eu, this.dropRunFpsSum += uu * Eu, this.dropRunMasked ||= Uu, Uu || (this.dropRunClean += Eu, this.dropRunCleanFpsSum += uu * Eu)) : this.resetDropRun(), Uu && ju || (this.cleanRun = ju ? this.cleanRun + 1 : 0);
+        const lu = null !== this.climbed ? Ou : Nu;
+        if (this.dropRun >= (this.dropRunMasked ? lu.maskedWindows : lu.dropWindows)) {
+          const Eu = this.dropRunClean > 0 ? this.dropRunCleanFpsSum / this.dropRunClean : this.dropRunFpsSum / this.dropRun,
+            ju = this.dropRunClean >= Nu.dropWindows && Eu < this.noGainFps[this.step] * Yu.heavierShare;
           this.resetDropRun();
-          const Ot = this.climbed;
-          return void(null !== Ot ? (this.failUp(this.step, Ot.from, tt, Dt), this.climbed = Ot.below) : this.step < this.lowest && (Vt || this.waitOver(Dt)) && (this.climbing = !1, this.phase = {
+          const su = this.climbed;
+          return void(null !== su ? (this.failUp(this.step, su.from, uu, Zu), this.climbed = su.below) : this.step < this.lowest && (ju || this.waitOver(Zu)) && (this.climbing = !1, this.phase = {
             kind: "down",
             from: this.step,
-            fromFps: et,
-            early: !this.waitOver(Dt),
+            fromFps: Eu,
+            early: !this.waitOver(Zu),
             judged: 0,
             fpsSum: 0,
             clean: 0,
             cleanFpsSum: 0
-          }, this.setStep(this.step + 1, et, Dt, "down")))
+          }, this.setStep(this.step + 1, Eu, Zu, "down")))
         }
-        const jt = this.step - 1;
-        jt >= 0 && this.cleanRun >= (this.climbing ? ft.climbWindows : ft.cleanWindows) && Dt >= this.upUntilMs[jt] && (this.phase = {
+        const qu = this.step - 1;
+        qu >= 0 && this.cleanRun >= (this.climbing ? Ou.climbWindows : Ou.cleanWindows) && Zu >= this.upUntilMs[qu] && (this.phase = {
           kind: "up",
           from: this.step,
           judged: 0,
           fromClimbed: this.climbed
-        }, this.setStep(jt, tt, Dt, "up"))
+        }, this.setStep(qu, uu, Zu, "up"))
       }
-      waitOver(tt) {
-        return !(0 === this.step && null !== this.noGain && tt < this.noGain.untilMs) && tt >= this.downUntilMs[this.step]
+      waitOver(uu) {
+        return !(0 === this.step && null !== this.noGain && uu < this.noGain.untilMs) && uu >= this.downUntilMs[this.step]
       }
-      keepDown(tt, et, Vt) {
-        this.watchAt(this.step), this.downBackoffMs[tt] = 0, this.noGainFps[tt] = 0, this.record(Vt, et, "down_kept"), 0 === tt && null !== this.noGain && (this.noGain = null, this.hooks.noGain(null)), this.hooks.hE(this.step)
+      keepDown(uu, Eu, ju) {
+        this.watchAt(this.step), this.downBackoffMs[uu] = 0, this.noGainFps[uu] = 0, this.record(ju, Eu, "down_kept"), 0 === uu && null !== this.noGain && (this.noGain = null, this.hooks.noGain(null)), this.hooks.oN(this.step)
       }
-      noGainFrom(tt, et, Vt) {
-        var Ot, qt;
+      noGainFrom(uu, Eu, ju) {
+        var su, Uu;
         let {
-          from: Dt,
-          fromFps: mt,
-          early: dt
-        } = tt;
-        const jt = 0 === Dt ? null !== (Ot = null === (qt = this.noGain) || void 0 === qt ? void 0 : qt.backoffMs) && void 0 !== Ot ? Ot : 0 : this.downBackoffMs[Dt],
-          Ht = 0 === jt ? ct : dt ? jt : Math.min(2 * jt, Rt),
-          Xt = Math.max(mt, et);
-        this.downBackoffMs[Dt] = Ht, this.downUntilMs[Dt] = Vt + Ht, this.noGainFps[Dt] = Xt, 0 === Dt && (this.noGain = {
-          untilMs: Vt + Ht,
-          backoffMs: Ht,
-          fps: Xt
-        }, this.hooks.noGain(this.noGain)), this.watchAt(Dt), this.setStep(Dt, et, Vt, "no_gain")
+          from: Zu,
+          fromFps: Xu,
+          early: lu
+        } = uu;
+        const qu = 0 === Zu ? null !== (su = null === (Uu = this.noGain) || void 0 === Uu ? void 0 : Uu.backoffMs) && void 0 !== su ? su : 0 : this.downBackoffMs[Zu],
+          fu = 0 === qu ? ou : lu ? qu : Math.min(2 * qu, ku),
+          Cu = Math.max(Xu, Eu);
+        this.downBackoffMs[Zu] = fu, this.downUntilMs[Zu] = ju + fu, this.noGainFps[Zu] = Cu, 0 === Zu && (this.noGain = {
+          untilMs: ju + fu,
+          backoffMs: fu,
+          fps: Cu
+        }, this.hooks.noGain(this.noGain)), this.watchAt(Zu), this.setStep(Zu, Eu, ju, "no_gain")
       }
-      failUp(tt, et, Vt, Ot) {
+      failUp(uu, Eu, ju, su) {
         this.climbing = !1;
-        const qt = ++this.upFailures[tt],
-          Dt = ft.failWaitsMs;
-        this.upUntilMs[tt] = Ot + Dt[Math.min(qt, Dt.length) - 1], this.watchAt(et), this.setStep(et, Vt, Ot, "up_failed"), this.hooks.upFailed(tt)
+        const Uu = ++this.upFailures[uu],
+          Zu = Ou.failWaitsMs;
+        this.upUntilMs[uu] = su + Zu[Math.min(Uu, Zu.length) - 1], this.watchAt(Eu), this.setStep(Eu, ju, su, "up_failed"), this.hooks.upFailed(uu)
       }
-      watchAt(tt) {
+      watchAt(uu) {
         this.phase = {
           kind: "watch"
-        }, this.climbed = tt === this.step ? this.climbed : null, this.cleanRun = 0, this.resetDropRun()
+        }, this.climbed = uu === this.step ? this.climbed : null, this.cleanRun = 0, this.resetDropRun()
       }
       resetDropRun() {
         this.dropRun = 0, this.dropRunFpsSum = 0, this.dropRunMasked = !1, this.dropRunClean = 0, this.dropRunCleanFpsSum = 0
       }
-      setStep(tt, et, Vt, Ot) {
-        const qt = tt !== this.step;
-        qt && (this.climbed = null), this.step = tt, this.record(Vt, et, Ot), qt && (this.slowStartMs = -1, this.resized(Vt), this.hooks.changed(tt))
+      setStep(uu, Eu, ju, su) {
+        const Uu = uu !== this.step;
+        Uu && (this.climbed = null), this.step = uu, this.record(ju, Eu, su), Uu && (this.slowStartMs = -1, this.resized(ju), this.hooks.changed(uu))
       }
-      record(tt, et, Vt) {
+      record(uu, Eu, ju) {
         64 === this.log.length && this.log.shift(), this.log.push({
-          atMs: tt,
+          atMs: uu,
           step: this.step,
-          fps: Math.round(10 * et) / 10,
+          fps: Math.round(10 * Eu) / 10,
           targetFps: Math.round(10 * this.lastTargetFps) / 10,
-          why: Vt
+          why: ju
         })
       }
     }
-    var Pt = Vt(34323),
-      Zt = Vt(3179),
-      Lt = Vt(34326);
-    const Ft = "autoGraphics",
-      kt = 6048e5,
-      Gt = "startScale";
+    var vu = ju(34499),
+      Ku = ju(3290),
+      Vu = ju(34501);
+    const ru = "autoGraphics",
+      Qu = 6048e5,
+      iu = "startScale";
 
-    function zt() {
-      return (0, jt.M)(qt.b.get("clientEscMenuOptions").pixelScale) * (0, jt.E)()
+    function Wu() {
+      return (0, qu.A)(Uu.d.get("clientEscMenuOptions").pixelScale) * (0, qu.x)()
     }
 
-    function ot() {
-      return (0, jt.t)(zt())
+    function Su() {
+      return (0, qu.n)(Wu())
     }
 
-    function rt() {
-      const tt = Xt.e.getItem(Ft);
-      return "object" !== typeof tt || null === tt || "string" !== typeof tt.gpu ? null : tt
+    function Iu() {
+      const uu = Cu.k.getItem(ru);
+      return "object" !== typeof uu || null === uu || "string" !== typeof uu.gpu ? null : uu
     }
 
-    function Ut(tt) {
+    function Fu(uu) {
       return {
-        untilEpochMs: Date.now() + (tt.untilMs - performance.now()),
-        backoffMs: tt.backoffMs,
-        fps: tt.fps
+        untilEpochMs: Date.now() + (uu.untilMs - performance.now()),
+        backoffMs: uu.backoffMs,
+        fps: uu.fps
       }
     }
 
-    function At(tt) {
-      return void 0 === tt || "number" !== typeof tt.fps ? null : {
-        untilMs: performance.now() + (tt.untilEpochMs - Date.now()),
-        backoffMs: tt.backoffMs,
-        fps: tt.fps
+    function Bu(uu) {
+      return void 0 === uu || "number" !== typeof uu.fps ? null : {
+        untilMs: performance.now() + (uu.untilEpochMs - Date.now()),
+        backoffMs: uu.backoffMs,
+        fps: uu.fps
       }
     }
-    let it = null;
+    let Lu = null;
 
-    function Yt() {
-      if (null === it) {
-        const tt = new URLSearchParams(window.location.search).get("msaa");
-        it = qt.b.get("clientEscMenuOptions").antiAliasing && ("0" === tt || "1" !== tt && !(0, dt.c)("antiAliasing") && (0, Zt.e)())
+    function tu() {
+      if (null === Lu) {
+        const uu = new URLSearchParams(window.location.search).get("msaa");
+        Lu = Uu.d.get("clientEscMenuOptions").antiAliasing && ("0" === uu || "1" !== uu && !(0, lu.c)("antiAliasing") && (0, Ku.d)())
       }
-      return it
+      return Lu
     }
 
-    function Bt(tt) {
-      const et = "number" === typeof tt ? Date.now() - tt : -1;
-      return et >= 0 && et < kt
+    function xu(uu) {
+      const Eu = "number" === typeof uu ? Date.now() - uu : -1;
+      return Eu >= 0 && Eu < Qu
     }
-    let pt = null;
+    let Tu = null;
 
-    function xt() {
-      return pt ??= (0, Dt.getDeviceDefaultPixelScale)(), Tt(pt)
+    function Hu() {
+      return Tu ??= (0, Zu.getDeviceDefaultPixelScale)(), Au(Tu)
     }
 
-    function Tt(tt) {
-      const et = qt.b.get("clientEscMenuOptions");
-      return et.pixelSmoothing && !(0, dt.c)("pixelScale") && et.pixelScale === tt
+    function Au(uu) {
+      const Eu = Uu.d.get("clientEscMenuOptions");
+      return Eu.pixelSmoothing && !(0, lu.c)("pixelScale") && Eu.pixelScale === uu
     }
-    let gt = null,
-      st = 0;
+    let nu = null,
+      yu = 0;
 
-    function nt() {
-      if (null === gt || st !== zt()) {
-        var tt;
-        st = zt();
-        const et = Number(null !== (tt = new URLSearchParams(window.location.search).get(Gt)) && void 0 !== tt ? tt : ""),
-          Vt = ot();
-        if (et > 0 && et <= 1) gt = (0, jt.A)(Vt, Vt[0] / et);
+    function zu() {
+      if (null === nu || yu !== Wu()) {
+        var uu;
+        yu = Wu();
+        const Eu = Number(null !== (uu = new URLSearchParams(window.location.search).get(iu)) && void 0 !== uu ? uu : ""),
+          ju = Su();
+        if (Eu > 0 && Eu <= 1) nu = (0, qu.v)(ju, ju[0] / Eu);
         else {
-          const tt = rt(),
-            et = (0, jt.A)(Vt, (0, jt.D)(zt())),
-            Ot = !(0, Zt.i)() && Bt(null === tt || void 0 === tt ? void 0 : tt.heldAt) && (null === tt || void 0 === tt ? void 0 : tt.heldTarget) === zt() ? null === tt || void 0 === tt ? void 0 : tt.heldN : void 0;
-          gt = "number" === typeof Ot ? Math.min(et, (0, jt.A)(Vt, Ot)) : et
+          const uu = Iu(),
+            Eu = (0, qu.v)(ju, (0, qu.w)(Wu())),
+            su = !(0, Ku.l)() && xu(null === uu || void 0 === uu ? void 0 : uu.heldAt) && (null === uu || void 0 === uu ? void 0 : uu.heldTarget) === Wu() ? null === uu || void 0 === uu ? void 0 : uu.heldN : void 0;
+          nu = "number" === typeof su ? Math.min(Eu, (0, qu.v)(ju, su)) : Eu
         }
       }
-      return gt
+      return nu
     }
 
-    function te(tt, et) {
-      var Vt;
-      const Ot = et.indexOf(null !== (Vt = tt.failedUpN) && void 0 !== Vt ? Vt : -1);
-      return Ot >= 0 && Bt(tt.failedUpAt) ? {
-        step: Ot,
-        untilMs: performance.now() + Ht.e.stepUp.failWaitsMs[0]
+    function Ru(uu, Eu) {
+      var ju;
+      const su = Eu.indexOf(null !== (ju = uu.failedUpN) && void 0 !== ju ? ju : -1);
+      return su >= 0 && xu(uu.failedUpAt) ? {
+        step: su,
+        untilMs: performance.now() + fu.c.stepUp.failWaitsMs[0]
       } : null
     }
-    let ee = null,
-      Ve = !1,
-      Oe = "";
-    const qe = new Set;
+    let uE = null,
+      EE = !1,
+      jE = "";
+    const sE = new Set;
 
-    function De() {
-      for (const tt of qe) tt()
+    function UE() {
+      for (const uu of sE) uu()
     }
 
-    function me() {
-      return Ve ? null : (fe(), null === ee ? (null !== pt || null !== (0, Dt.peekGpuVendor)() ? xt() : Tt(1)) ? nt() : null : xt() ? ee.currentStep() : null)
+    function ZE() {
+      return EE ? null : (NE(), null === uE ? (null !== Tu || null !== (0, Zu.peekGpuVendor)() ? Hu() : Au(1)) ? zu() : null : Hu() ? uE.currentStep() : null)
     }
 
-    function de() {
-      const tt = me();
-      if (null === tt) return null;
-      const et = ot(),
-        Vt = et[Math.min(tt, et.length - 1)];
-      return Vt === je() ? null : Vt
+    function XE() {
+      const uu = ZE();
+      if (null === uu) return null;
+      const Eu = Su(),
+        ju = Eu[Math.min(uu, Eu.length - 1)];
+      return ju === lE() ? null : ju
     }
 
-    function je() {
-      return (0, jt.w)(qt.b.get("clientEscMenuOptions").pixelScale, (0, jt.E)())
+    function lE() {
+      return (0, qu.s)(Uu.d.get("clientEscMenuOptions").pixelScale, (0, qu.x)())
     }
 
-    function He() {
-      return null !== ee && null !== de()
+    function qE() {
+      return null !== uE && null !== XE()
     }
 
-    function Xe(tt) {
-      return qe.add(tt), () => {
-        qe.delete(tt)
+    function fE(uu) {
+      return sE.add(uu), () => {
+        sE.delete(uu)
       }
     }
 
-    function Qe(tt, et, Vt) {
-      var qt;
-      if (null !== ee || Ve || (0, Zt.i)()) return;
-      const Dt = (0, Pt.b)(tt, et, Vt);
-      null !== Dt && ((0, Zt.l)(Dt.vendor), "" !== Dt.renderer && (0, Ot.q)(Dt.vendor, Dt.renderer)), Oe = `${tt}:${(null===Dt||void 0===Dt?void 0:Dt.renderer)||(null===Dt||void 0===Dt?void 0:Dt.vendor)||""}`, (null === (qt = rt()) || void 0 === qt ? void 0 : qt.gpu) !== Oe && (Xt.e.setItem(Ft, {
-        gpu: Oe
-      }), gt = null), Ee(), document.addEventListener("visibilitychange", (() => {
+    function CE(uu, Eu, ju) {
+      var Uu;
+      if (null !== uE || EE || (0, Ku.l)()) return;
+      const Zu = (0, vu.e)(uu, Eu, ju);
+      null !== Zu && ((0, Ku.o)(Zu.vendor), "" !== Zu.renderer && (0, su.m)(Zu.vendor, Zu.renderer)), jE = `${uu}:${(null===Zu||void 0===Zu?void 0:Zu.renderer)||(null===Zu||void 0===Zu?void 0:Zu.vendor)||""}`, (null === (Uu = Iu()) || void 0 === Uu ? void 0 : Uu.gpu) !== jE && (Cu.k.setItem(ru, {
+        gpu: jE
+      }), nu = null), cE(), document.addEventListener("visibilitychange", (() => {
         if (document.hidden) try {
-          var tt;
-          null === (tt = ee) || void 0 === tt || tt.hidden()
-        } catch (et) {
-          Ce(), console.error("The quality steps stopped", et)
+          var uu;
+          null === (uu = uE) || void 0 === uu || uu.hidden()
+        } catch (Eu) {
+          GE(), console.error("The quality steps stopped", Eu)
         }
       }))
     }
-    let le = 0;
+    let bE = 0;
 
-    function Ee() {
-      var tt;
-      const et = null !== (tt = rt()) && void 0 !== tt ? tt : {
-          gpu: Oe
+    function cE() {
+      var uu;
+      const Eu = null !== (uu = Iu()) && void 0 !== uu ? uu : {
+          gpu: jE
         },
-        Vt = ot();
-      le = zt(), ee = new It({
-          changed: De,
-          hE: () => {
-            we({
+        ju = Su();
+      bE = Wu(), uE = new mu({
+          changed: UE,
+          oN: () => {
+            OE({
               heldN: void 0
             })
           },
-          Pd: tt => {
-            var et;
-            const Vt = ot()[tt],
-              Ot = {
-                heldN: Vt,
+          dl: uu => {
+            var Eu;
+            const ju = Su()[uu],
+              su = {
+                heldN: ju,
                 heldAt: Date.now(),
-                heldTarget: zt()
+                heldTarget: Wu()
               };
-            (null === (et = rt()) || void 0 === et ? void 0 : et.failedUpN) === Vt && (Ot.failedUpN = void 0), we(Ot)
+            (null === (Eu = Iu()) || void 0 === Eu ? void 0 : Eu.failedUpN) === ju && (su.failedUpN = void 0), OE(su)
           },
-          upFailed: tt => {
-            we({
-              failedUpN: ot()[tt],
+          upFailed: uu => {
+            OE({
+              failedUpN: Su()[uu],
               failedUpAt: Date.now()
             })
           },
-          noGain: tt => {
-            we({
-              noGain: null === tt ? void 0 : Ut(tt)
+          noGain: uu => {
+            OE({
+              noGain: null === uu ? void 0 : Fu(uu)
             })
           }
         }, {
-          lowest: Vt.length - 1,
-          startStep: nt(),
-          noGain: At(et.noGain),
-          upWait: te(et, Vt)
+          lowest: ju.length - 1,
+          startStep: zu(),
+          noGain: Bu(Eu.noGain),
+          upWait: Ru(Eu, ju)
         }),
-        function(tt) {
-          const et = {
+        function(uu) {
+          const Eu = {
             get step() {
-              return tt.currentStep()
+              return uu.currentStep()
             },
             get n() {
-              var tt;
-              return null !== (tt = de()) && void 0 !== tt ? tt : je()
+              var uu;
+              return null !== (uu = XE()) && void 0 !== uu ? uu : lE()
             },
             get scale() {
-              var tt;
-              return ot()[0] / (null !== (tt = de()) && void 0 !== tt ? tt : je())
+              var uu;
+              return Su()[0] / (null !== (uu = XE()) && void 0 !== uu ? uu : lE())
             },
             get msaaOff() {
-              return Yt()
+              return tu()
             },
-            log: tt.log,
-            windows: tt.windows
+            log: uu.log,
+            windows: uu.windows
           };
           Object.defineProperty(window, "__qualitySteps", {
-            value: et,
+            value: Eu,
             configurable: !0
           })
-        }(ee), De()
+        }(uE), UE()
     }
 
-    function fe() {
-      null !== ee && zt() !== le && (gt = null, Ee())
+    function NE() {
+      null !== uE && Wu() !== bE && (nu = null, cE())
     }
 
-    function we(tt) {
-      Xt.e.setItem(Ft, {
-        ...rt(),
-        ...tt,
-        gpu: Oe
+    function OE(uu) {
+      Cu.k.setItem(ru, {
+        ...Iu(),
+        ...uu,
+        gpu: jE
       })
     }
-    let ye = 0,
-      Ne = 0,
-      ae = 0,
-      Me = !1;
+    let YE = 0,
+      hE = 0,
+      DE = 0,
+      gE = !1;
 
-    function be() {
-      ye++
+    function ME() {
+      YE++
     }
 
-    function Je(tt, et, Vt) {
-      let Ot = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-      fe(), null !== ee && (tt - ae >= 1e3 && (Me = ye - Ne > Ht.e.sceneChange.meshesPerSecond, Ne = ye, ae = tt), Lt.e.isHeld() ? ee.paused(tt) : ee.frame(tt, et, Vt && !document.hidden && xt(), Me || Ot > 0 || (0, mt.q)()))
+    function eE(uu, Eu, ju) {
+      let su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+      NE(), null !== uE && (uu - DE >= 1e3 && (gE = YE - hE > fu.c.sceneChange.meshesPerSecond, hE = YE, DE = uu), Vu.c.isHeld() ? uE.paused(uu) : uE.frame(uu, Eu, ju && !document.hidden && Hu(), gE || su > 0 || (0, Xu.s)()))
     }
 
-    function Ce() {
-      if (!Ve) {
-        Ve = !0, null !== ee && (ee = null, we({
+    function GE() {
+      if (!EE) {
+        EE = !0, null !== uE && (uE = null, OE({
           noGain: void 0
         }));
         try {
-          De()
-        } catch (tt) {
-          console.error("The quality steps' resize to the player's n failed", tt)
+          UE()
+        } catch (uu) {
+          console.error("The quality steps' resize to the player's n failed", uu)
         }
       }
     }
 
-    function ue() {
-      var tt;
-      null === (tt = ee) || void 0 === tt || tt.resized(performance.now())
+    function pE() {
+      var uu;
+      null === (uu = uE) || void 0 === uu || uu.resized(performance.now())
     }
   },
-  34323: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => Dt
+  34499: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => Zu
     });
-    var Ot = Vt(106),
-      qt = Vt(146);
+    var su = ju(91),
+      Uu = ju(124);
 
-    function Dt(tt, et, Vt) {
-      if ("webgpu" === tt) return Vt ? ((0, Ot.seedGpuVendor)(Vt), {
-        vendor: Vt,
+    function Zu(uu, Eu, ju) {
+      if ("webgpu" === uu) return ju ? ((0, su.seedGpuVendor)(ju), {
+        vendor: ju,
         renderer: ""
       }) : null;
       try {
-        const Vt = "webgl" === tt ? et.getContext("webgl2") : et.getContext("webgl");
-        "webgl" === tt && Vt && (0, qt.E)(Vt);
-        const Dt = null === Vt || void 0 === Vt ? void 0 : Vt.getExtension("WEBGL_debug_renderer_info");
-        if (Vt && Dt) {
-          const tt = String(Vt.getParameter(Dt.UNMASKED_VENDOR_WEBGL)),
-            et = String(Vt.getParameter(Dt.UNMASKED_RENDERER_WEBGL));
-          return (0, Ot.seedGpuVendor)(tt), (0, qt.K)(tt, et), {
-            vendor: tt,
-            renderer: et
+        const ju = "webgl" === uu ? Eu.getContext("webgl2") : Eu.getContext("webgl");
+        "webgl" === uu && ju && (0, Uu.w)(ju);
+        const Zu = null === ju || void 0 === ju ? void 0 : ju.getExtension("WEBGL_debug_renderer_info");
+        if (ju && Zu) {
+          const uu = String(ju.getParameter(Zu.UNMASKED_VENDOR_WEBGL)),
+            Eu = String(ju.getParameter(Zu.UNMASKED_RENDERER_WEBGL));
+          return (0, su.seedGpuVendor)(uu), (0, Uu.C)(uu, Eu), {
+            vendor: uu,
+            renderer: Eu
           }
         }
-        Vt && (0, qt.K)(String(Vt.getParameter(Vt.VENDOR)), String(Vt.getParameter(Vt.RENDERER)))
+        ju && (0, Uu.C)(String(ju.getParameter(ju.VENDOR)), String(ju.getParameter(ju.RENDERER)))
       } catch {}
       return null
     }
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

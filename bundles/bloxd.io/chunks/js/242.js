@@ -1,571 +1,571 @@
 export const id = 242;
 export const ids = [242];
 export const modules = {
-  41267: (tt, et, Vt) => {
-    Vt.d(et, {
-      noaDevTools: () => Qt
+  41290: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      noaDevTools: () => bu
     });
-    var Ot = Vt(37805),
-      qt = Vt(37787),
-      Dt = Vt(2848),
-      mt = Vt(1826),
-      dt = Vt(41162);
+    var su = ju(37938),
+      Uu = ju(37916),
+      Zu = ju(2893),
+      Xu = ju(1779),
+      lu = ju(41194);
 
-    function jt(tt) {
+    function qu(uu) {
       const {
-        Bf: et
-      } = tt, Vt = et.engine, Ot = {
-        width: Vt.getRenderWidth(),
-        height: Vt.getRenderHeight()
+        tO: Eu
+      } = uu, ju = Eu.engine, su = {
+        width: ju.getRenderWidth(),
+        height: ju.getRenderHeight()
       };
       return {
-        canvas: Vt.getRenderingCanvas(),
-        maxTextureSize: Vt.getCaps().maxTextureSize,
-        drawing: () => !tt.NJ,
-        resize: (tt, et) => {
-          Vt.setSize(tt, et)
+        canvas: ju.getRenderingCanvas(),
+        maxTextureSize: ju.getCaps().maxTextureSize,
+        drawing: () => !uu.aG,
+        resize: (uu, Eu) => {
+          ju.setSize(uu, Eu)
         },
         restoreSize: () => {
-          Vt.setSize(Ot.width, Ot.height), et.resize()
+          ju.setSize(su.width, su.height), Eu.resize()
         },
-        onFrameDrawn: et => (tt.on("afterRender", et), () => {
-          tt.off("afterRender", et)
+        onFrameDrawn: Eu => (uu.on("afterRender", Eu), () => {
+          uu.off("afterRender", Eu)
         })
       }
     }
-    var Ht = Vt(34255);
+    var fu = ju(34444);
 
-    function Xt(tt, et) {
+    function Cu(uu, Eu) {
       let {
-        width: Ht,
-        height: Xt,
-        colouring: Qt
-      } = et;
-      const lt = "normals" === Qt,
-        Et = "depth" === Qt;
-      return new Promise((et => {
+        width: fu,
+        height: Cu,
+        colouring: bu
+      } = Eu;
+      const cu = "normals" === bu,
+        Nu = "depth" === bu;
+      return new Promise((Eu => {
         try {
-          const ft = (0, Dt.e)();
-          if (ft.Bf.pf) return "screenshot" !== tt || null !== Qt ? (console.warn("GLB downloads and coloured screenshots need WebGPU off in Graphics settings"), void et()) : void(0, dt.e)(jt(ft), Ht, Xt).finally(et);
-          const wt = ft.Bf.engine,
-            yt = ft.Bf.vI(),
-            Nt = Ht,
-            Mt = Xt;
-          Promise.all([Promise.all([Vt.e(258), Vt.e(259), Vt.e(238)]).then((() => Vt(61509))), Promise.all([Vt.e(237), Vt.e(236), Vt.e(258), Vt.e(259), Vt.e(256), Vt.e(260), Vt.e(263), Vt.e(316), Vt.e(243)]).then((() => Vt(61516))), Promise.all([Vt.e(237), Vt.e(236), Vt.e(258), Vt.e(259), Vt.e(256), Vt.e(266), Vt.e(260), Vt.e(268), Vt.e(245)]).then((() => Vt(61523))), Vt.e(357).then((() => Vt(61529))), Promise.all([Vt.e(236), Vt.e(232)]).then((() => Vt(37331))), Vt.e(257).then((() => Vt(61532))), Vt.e(240).then((() => Vt(61535)))]).then((Dt => {
+          const Ou = (0, Zu.c)();
+          if (Ou.tO.xO) return "screenshot" !== uu || null !== bu ? (console.warn("GLB downloads and coloured screenshots need WebGPU off in Graphics settings"), void Eu()) : void(0, lu.c)(qu(Ou), fu, Cu).finally(Eu);
+          const Yu = Ou.tO.engine,
+            hu = Ou.tO.hV(),
+            Du = fu,
+            gu = Cu;
+          Promise.all([Promise.all([ju.e(258), ju.e(259), ju.e(238)]).then((() => ju(61478))), Promise.all([ju.e(237), ju.e(236), ju.e(258), ju.e(259), ju.e(256), ju.e(260), ju.e(263), ju.e(316), ju.e(243)]).then((() => ju(61483))), Promise.all([ju.e(237), ju.e(236), ju.e(258), ju.e(259), ju.e(256), ju.e(266), ju.e(260), ju.e(268), ju.e(245)]).then((() => ju(61489))), ju.e(357).then((() => ju(61492))), Promise.all([ju.e(236), ju.e(232)]).then((() => ju(37488))), ju.e(257).then((() => ju(61501))), ju.e(240).then((() => ju(61510)))]).then((Zu => {
             const {
-              CreateScreenshotUsingRenderTarget: dt
-            } = Dt[1], {
-              ShaderMaterial: jt
-            } = Dt[2], {
-              ShaderLanguage: Ht
-            } = Dt[3], {
-              uf: Xt
-            } = Dt[4], {
-              registerDevtoolsShader: Qt
-            } = Dt[6], ft = Ht.GLSL, bt = new Map, Jt = yt.meshes.filter((tt => tt.material));
-            let Ct = !1,
-              ut = null;
+              CreateScreenshotUsingRenderTarget: lu
+            } = Zu[1], {
+              ShaderMaterial: qu
+            } = Zu[2], {
+              ShaderLanguage: fu
+            } = Zu[3], {
+              dO: Cu
+            } = Zu[4], {
+              registerDevtoolsShader: bu
+            } = Zu[6], Ou = fu.GLSL, Mu = new Map, eu = hu.meshes.filter((uu => uu.material));
+            let Gu = !1,
+              pu = null;
 
-            function Kt() {
-              var tt;
-              Ct && (Ct = !1, (0, Ot.e)(yt.meshes, !1)), null === (tt = ut) || void 0 === tt || tt(), ut = null, Jt.forEach((tt => {
-                const et = bt.get(tt);
-                et && (tt.material = et)
+            function wu() {
+              var uu;
+              Gu && (Gu = !1, (0, su.f)(hu.meshes, !1)), null === (uu = pu) || void 0 === uu || uu(), pu = null, eu.forEach((uu => {
+                const Eu = Mu.get(uu);
+                Eu && (uu.material = Eu)
               }))
             }
-            if (lt) {
-              const tt = [],
-                et = [];
-              Jt.forEach((Vt => {
-                const Ot = Vt.name.toLowerCase(),
-                  qt = Vt.fL().boundingBox.center,
-                  Dt = yt.activeCamera.position.subtract(qt).length();
-                Ot.includes("sky") || Ot.includes("background") || Ot.includes("environment") || Dt > 1e3 ? et.push(Vt) : tt.push(Vt)
-              })), Qt("devtoolsNormal", ft);
-              const Vt = new jt("normalMaterial", yt, "devtoolsNormal", {
+            if (cu) {
+              const uu = [],
+                Eu = [];
+              eu.forEach((ju => {
+                const su = ju.name.toLowerCase(),
+                  Uu = ju.EW().boundingBox.center,
+                  Zu = hu.activeCamera.position.subtract(Uu).length();
+                su.includes("sky") || su.includes("background") || su.includes("environment") || Zu > 1e3 ? Eu.push(ju) : uu.push(ju)
+              })), bu("devtoolsNormal", Ou);
+              const ju = new qu("normalMaterial", hu, "devtoolsNormal", {
                 attributes: ["position", "normal"],
                 uniforms: ["worldViewProjection", "world"],
-                shaderLanguage: ft
+                shaderLanguage: Ou
               });
-              Qt("devtoolsWhite", ft);
-              const Ot = new jt("whiteMaterial", yt, "devtoolsWhite", {
+              bu("devtoolsWhite", Ou);
+              const su = new qu("whiteMaterial", hu, "devtoolsWhite", {
                 attributes: ["position"],
                 uniforms: ["worldViewProjection"],
-                shaderLanguage: ft
+                shaderLanguage: Ou
               });
-              tt.forEach((tt => {
-                bt.set(tt, tt.material), tt.material = Vt
-              })), et.forEach((tt => {
-                bt.set(tt, tt.material), tt.material = Ot
+              uu.forEach((uu => {
+                Mu.set(uu, uu.material), uu.material = ju
+              })), Eu.forEach((uu => {
+                Mu.set(uu, uu.material), uu.material = su
               }))
-            } else if (Et) {
-              Qt("devtoolsDepth", ft);
-              const tt = yt.activeCamera.position;
-              let et = 0,
-                Vt = 1 / 0;
-              Jt.forEach((Ot => {
-                const qt = Ot.name.toLowerCase();
-                if (qt.includes("sky") || qt.includes("background") || qt.includes("environment")) return;
-                const Dt = Ot.fL().boundingBox.center,
-                  mt = Xt.TransformCoordinates(Dt, Ot.getWorldMatrix()),
-                  dt = tt.subtract(mt).length();
-                dt > 1e3 || (et = Math.max(et, dt), Vt = Math.min(Vt, dt))
+            } else if (Nu) {
+              bu("devtoolsDepth", Ou);
+              const uu = hu.activeCamera.position;
+              let Eu = 0,
+                ju = 1 / 0;
+              eu.forEach((su => {
+                const Uu = su.name.toLowerCase();
+                if (Uu.includes("sky") || Uu.includes("background") || Uu.includes("environment")) return;
+                const Zu = su.EW().boundingBox.center,
+                  Xu = Cu.TransformCoordinates(Zu, su.getWorldMatrix()),
+                  lu = uu.subtract(Xu).length();
+                lu > 1e3 || (Eu = Math.max(Eu, lu), ju = Math.min(ju, lu))
               }));
-              const Ot = et - Vt;
-              et += .1 * Ot, Vt = Math.max(0, Vt - .1 * Ot), console.log(`Depth range: min=${Vt.toFixed(2)}, max=${et.toFixed(2)}, range=${Ot.toFixed(2)}`), Ot < 1 && (et = Vt + 10);
-              const qt = new jt("depthMaterial", yt, "devtoolsDepth", {
+              const su = Eu - ju;
+              Eu += .1 * su, ju = Math.max(0, ju - .1 * su), console.log(`Depth range: min=${ju.toFixed(2)}, max=${Eu.toFixed(2)}, range=${su.toFixed(2)}`), su < 1 && (Eu = ju + 10);
+              const Uu = new qu("depthMaterial", hu, "devtoolsDepth", {
                 attributes: ["position"],
                 uniforms: ["worldViewProjection", "world", "cameraPosition", "maxDepth", "minDepth"],
-                shaderLanguage: ft
+                shaderLanguage: Ou
               });
-              qt.setVector3("cameraPosition", tt), qt.setFloat("maxDepth", et), qt.setFloat("minDepth", Vt), Jt.forEach((tt => {
-                bt.set(tt, tt.material), tt.material = qt
+              Uu.setVector3("cameraPosition", uu), Uu.setFloat("maxDepth", Eu), Uu.setFloat("minDepth", ju), eu.forEach((uu => {
+                Mu.set(uu, uu.material), uu.material = Uu
               }))
             }
-            if ((0, Ot.e)(yt.meshes, !0), Ct = !0, "glb" === tt && (ut = (0, qt.b)(yt.meshes)), "screenshot" === tt) {
-              let tt = `bloxd-screenshot-${Nt}x${Mt}-${Date.now()}.png`;
-              lt ? tt = `bloxd-screenshot-normals-${Nt}x${Mt}-${Date.now()}.png` : Et && (tt = `bloxd-screenshot-depth-${Nt}x${Mt}-${Date.now()}.png`), dt(wt, yt.activeCamera, {
-                width: Nt,
-                height: Mt
-              }, (function(Vt) {
-                Kt(), fetch(Vt).then((function(tt) {
-                  return tt.blob()
-                })).then((function(Vt) {
-                  (0, mt.downloadBlob)(Vt, tt), et()
-                })).catch((function(tt) {
-                  console.error("Error processing screenshot:", tt), et()
+            if ((0, su.f)(hu.meshes, !0), Gu = !0, "glb" === uu && (pu = (0, Uu.e)(hu.meshes)), "screenshot" === uu) {
+              let uu = `bloxd-screenshot-${Du}x${gu}-${Date.now()}.png`;
+              cu ? uu = `bloxd-screenshot-normals-${Du}x${gu}-${Date.now()}.png` : Nu && (uu = `bloxd-screenshot-depth-${Du}x${gu}-${Date.now()}.png`), lu(Yu, hu.activeCamera, {
+                width: Du,
+                height: gu
+              }, (function(ju) {
+                wu(), fetch(ju).then((function(uu) {
+                  return uu.blob()
+                })).then((function(ju) {
+                  (0, Xu.downloadBlob)(ju, uu), Eu()
+                })).catch((function(uu) {
+                  console.error("Error processing screenshot:", uu), Eu()
                 }))
               }), "image/png", void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, (function() {
-                console.error("Screenshot timed out"), Kt(), et()
+                console.error("Screenshot timed out"), wu(), Eu()
               }))
             } else {
-              let tt = "Fw";
-              lt ? tt = "scene-normals" : Et && (tt = "scene-depth"), lt || Et ? setTimeout((() => {
+              let uu = "vY";
+              cu ? uu = "scene-normals" : Nu && (uu = "scene-depth"), cu || Nu ? setTimeout((() => {
                 (async function() {
                   const {
-                    StandardMaterial: tt
-                  } = await Promise.all([Vt.e(237), Vt.e(236), Vt.e(258), Vt.e(259), Vt.e(256), Vt.e(266), Vt.e(265), Vt.e(244)]).then((() => Vt(40452))), {
-                    Color3: et
-                  } = await Promise.all([Vt.e(237), Vt.e(241)]).then((() => Vt(37510))), Ot = [], qt = [];
-                  if (Jt.forEach((tt => {
-                      const et = tt.name.toLowerCase(),
-                        Vt = tt.fL().boundingBox.center,
-                        Dt = yt.activeCamera.position.subtract(Vt).length();
-                      et.includes("sky") || et.includes("background") || et.includes("environment") || Dt > 1e3 ? qt.push(tt) : Ot.push(tt)
-                    })), lt) Ot.forEach(((Vt, Ot) => {
-                    const qt = Vt.getVerticesData("normal");
-                    if (qt) {
-                      const Dt = [];
-                      for (let tt = 0; tt < qt.length; tt += 3) {
-                        const et = Math.abs(qt[tt]),
-                          Vt = Math.abs(qt[tt + 1]),
-                          Ot = Math.abs(qt[tt + 2]);
-                        Dt.push(et, Vt, Ot, 1)
+                    StandardMaterial: uu
+                  } = await Promise.all([ju.e(237), ju.e(236), ju.e(258), ju.e(259), ju.e(256), ju.e(266), ju.e(265), ju.e(244)]).then((() => ju(40514))), {
+                    Color3: Eu
+                  } = await Promise.all([ju.e(237), ju.e(241)]).then((() => ju(37671))), su = [], Uu = [];
+                  if (eu.forEach((uu => {
+                      const Eu = uu.name.toLowerCase(),
+                        ju = uu.EW().boundingBox.center,
+                        Zu = hu.activeCamera.position.subtract(ju).length();
+                      Eu.includes("sky") || Eu.includes("background") || Eu.includes("environment") || Zu > 1e3 ? Uu.push(uu) : su.push(uu)
+                    })), cu) su.forEach(((ju, su) => {
+                    const Uu = ju.getVerticesData("normal");
+                    if (Uu) {
+                      const Zu = [];
+                      for (let uu = 0; uu < Uu.length; uu += 3) {
+                        const Eu = Math.abs(Uu[uu]),
+                          ju = Math.abs(Uu[uu + 1]),
+                          su = Math.abs(Uu[uu + 2]);
+                        Zu.push(Eu, ju, su, 1)
                       }
-                      Vt.setVerticesData("color", Dt);
-                      const mt = new tt(`vertexColorMat_${Ot}`, yt);
-                      mt.disableLighting = !0, mt.emissiveColor = new et(1, 1, 1), mt.specularColor = new et(0, 0, 0), Vt.material = mt
+                      ju.setVerticesData("color", Zu);
+                      const Xu = new uu(`vertexColorMat_${su}`, hu);
+                      Xu.disableLighting = !0, Xu.emissiveColor = new Eu(1, 1, 1), Xu.specularColor = new Eu(0, 0, 0), ju.material = Xu
                     }
-                  })), qt.forEach(((Vt, Ot) => {
-                    const qt = Vt.getVerticesData("position");
-                    if (qt) {
-                      const Dt = [],
-                        mt = qt.length / 3;
-                      for (let tt = 0; tt < mt; tt++) Dt.push(1, 1, 1, 1);
-                      Vt.setVerticesData("color", Dt);
-                      const dt = new tt(`whiteMat_${Ot}`, yt);
-                      dt.disableLighting = !0, dt.emissiveColor = new et(1, 1, 1), dt.specularColor = new et(0, 0, 0), Vt.material = dt
+                  })), Uu.forEach(((ju, su) => {
+                    const Uu = ju.getVerticesData("position");
+                    if (Uu) {
+                      const Zu = [],
+                        Xu = Uu.length / 3;
+                      for (let uu = 0; uu < Xu; uu++) Zu.push(1, 1, 1, 1);
+                      ju.setVerticesData("color", Zu);
+                      const lu = new uu(`whiteMat_${su}`, hu);
+                      lu.disableLighting = !0, lu.emissiveColor = new Eu(1, 1, 1), lu.specularColor = new Eu(0, 0, 0), ju.material = lu
                     }
                   }));
-                  else if (Et) {
-                    const Vt = yt.activeCamera.position;
-                    let qt = 0,
-                      Dt = 1 / 0;
-                    Ot.forEach((tt => {
-                      const et = tt.fL().boundingBox.center,
-                        Ot = Xt.TransformCoordinates(et, tt.getWorldMatrix()),
-                        mt = Vt.subtract(Ot).length();
-                      qt = Math.max(qt, mt), Dt = Math.min(Dt, mt)
+                  else if (Nu) {
+                    const ju = hu.activeCamera.position;
+                    let Uu = 0,
+                      Zu = 1 / 0;
+                    su.forEach((uu => {
+                      const Eu = uu.EW().boundingBox.center,
+                        su = Cu.TransformCoordinates(Eu, uu.getWorldMatrix()),
+                        Xu = ju.subtract(su).length();
+                      Uu = Math.max(Uu, Xu), Zu = Math.min(Zu, Xu)
                     }));
-                    const mt = qt - Dt;
-                    qt += .1 * mt, Dt = Math.max(0, Dt - .1 * mt), mt < 1 && (qt = Dt + 10), Jt.forEach(((Ot, mt) => {
-                      const dt = Ot.name.toLowerCase(),
-                        jt = Ot.fL().boundingBox.center,
-                        Ht = Xt.TransformCoordinates(jt, Ot.getWorldMatrix()),
-                        Qt = Vt.subtract(Ht).length();
-                      if (!(dt.includes("sky") || dt.includes("background") || dt.includes("environment") || Qt > 1e3)) {
-                        const Vt = 1 - Math.min(Math.max((Qt - Dt) / (qt - Dt), 0), 1),
-                          dt = new tt(`depthMat_${mt}`, yt);
-                        dt.diffuseColor = new et(Vt, Vt, Vt), dt.specularColor = new et(0, 0, 0), Ot.material = dt
+                    const Xu = Uu - Zu;
+                    Uu += .1 * Xu, Zu = Math.max(0, Zu - .1 * Xu), Xu < 1 && (Uu = Zu + 10), eu.forEach(((su, Xu) => {
+                      const lu = su.name.toLowerCase(),
+                        qu = su.EW().boundingBox.center,
+                        fu = Cu.TransformCoordinates(qu, su.getWorldMatrix()),
+                        bu = ju.subtract(fu).length();
+                      if (!(lu.includes("sky") || lu.includes("background") || lu.includes("environment") || bu > 1e3)) {
+                        const ju = 1 - Math.min(Math.max((bu - Zu) / (Uu - Zu), 0), 1),
+                          lu = new uu(`depthMat_${Xu}`, hu);
+                        lu.diffuseColor = new Eu(ju, ju, ju), lu.specularColor = new Eu(0, 0, 0), su.material = lu
                       }
                     }))
                   }
-                })().then((() => Promise.all([Vt.e(237), Vt.e(236), Vt.e(258), Vt.e(259), Vt.e(256), Vt.e(266), Vt.e(260), Vt.e(265), Vt.e(263), Vt.e(255), Vt.e(268), Vt.e(279), Vt.e(316), Vt.e(249), Vt.e(267), Vt.e(235)]).then((() => Vt(61543))))).then((et => et.GLTF2Export.GLBAsync(yt, tt))).then((tt => {
-                  Kt(), tt.downloadFiles(), et()
-                })).catch((tt => {
-                  console.error("Error exporting GLB:", tt), Kt(), et()
+                })().then((() => Promise.all([ju.e(237), ju.e(236), ju.e(258), ju.e(259), ju.e(256), ju.e(266), ju.e(260), ju.e(265), ju.e(263), ju.e(255), ju.e(268), ju.e(279), ju.e(316), ju.e(249), ju.e(267), ju.e(235)]).then((() => ju(61518))))).then((Eu => Eu.GLTF2Export.GLBAsync(hu, uu))).then((uu => {
+                  wu(), uu.downloadFiles(), Eu()
+                })).catch((uu => {
+                  console.error("Error exporting GLB:", uu), wu(), Eu()
                 }))
-              }), 100) : Promise.all([Vt.e(237), Vt.e(236), Vt.e(258), Vt.e(259), Vt.e(256), Vt.e(266), Vt.e(260), Vt.e(265), Vt.e(263), Vt.e(255), Vt.e(268), Vt.e(279), Vt.e(316), Vt.e(249), Vt.e(267), Vt.e(235)]).then((() => Vt(61543))).then((Vt => {
-                Vt.GLTF2Export.GLBAsync(yt, tt).then((tt => {
-                  Kt(), tt.downloadFiles(), et()
-                })).catch((tt => {
-                  console.error("Error exporting GLB:", tt), Kt(), et()
+              }), 100) : Promise.all([ju.e(237), ju.e(236), ju.e(258), ju.e(259), ju.e(256), ju.e(266), ju.e(260), ju.e(265), ju.e(263), ju.e(255), ju.e(268), ju.e(279), ju.e(316), ju.e(249), ju.e(267), ju.e(235)]).then((() => ju(61518))).then((ju => {
+                ju.GLTF2Export.GLBAsync(hu, uu).then((uu => {
+                  wu(), uu.downloadFiles(), Eu()
+                })).catch((uu => {
+                  console.error("Error exporting GLB:", uu), wu(), Eu()
                 }))
-              })).catch((tt => {
-                console.error("Error importing serializers:", tt), Kt(), et()
+              })).catch((uu => {
+                console.error("Error importing serializers:", uu), wu(), Eu()
               }))
             }
-          })).catch((tt => {
-            console.error("Error downloading the scene:", tt), et()
+          })).catch((uu => {
+            console.error("Error downloading the scene:", uu), Eu()
           }))
-        } catch (ft) {
-          console.error("Error taking screenshot:", ft), et()
+        } catch (Ou) {
+          console.error("Error taking screenshot:", Ou), Eu()
         }
       }))
     }
-    const Qt = new class {
+    const bu = new class {
       constructor() {
-        this.tools = Ht.ALL_DEV_TOOLS
+        this.tools = fu.ALL_DEV_TOOLS
       }
-      downloadScene(tt, et) {
-        return Xt(tt, et)
+      downloadScene(uu, Eu) {
+        return Cu(uu, Eu)
       }
-      async setAmbientLightIntensity(tt) {
+      async setAmbientLightIntensity(uu) {
         const {
-          Color3: et
-        } = await Promise.all([Vt.e(237), Vt.e(241)]).then((() => Vt(37510)));
-        (0, Dt.e)().Bf.vI().ambientColor = et.FromArray([tt, tt, tt])
+          Color3: Eu
+        } = await Promise.all([ju.e(237), ju.e(241)]).then((() => ju(37671)));
+        (0, Zu.c)().tO.hV().ambientColor = Eu.FromArray([uu, uu, uu])
       }
-      capturePhoto(tt, et, Vt) {
-        return function(tt, et, Vt, Ot) {
-          return (0, dt.d)(jt(tt), et, Vt, Ot)
-        }((0, Dt.e)(), tt, et, Vt)
+      capturePhoto(uu, Eu, ju) {
+        return function(uu, Eu, ju, su) {
+          return (0, lu.b)(qu(uu), Eu, ju, su)
+        }((0, Zu.c)(), uu, Eu, ju)
       }
     }
   },
-  41162: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => dt,
-      e: () => jt
+  41194: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => lu,
+      c: () => qu
     });
-    var Ot = Vt(1842);
-    const qt = 33177600,
-      Dt = 3e4;
-    let mt = !1;
+    var su = ju(1802);
+    const Uu = 33177600,
+      Zu = 3e4;
+    let Xu = !1;
 
-    function dt(tt, et, Vt) {
-      let Ot = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    function lu(uu, Eu, ju) {
+      let su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
       const {
-        scale: dt = 1,
-        type: jt = "image/png",
-        quality: Ht
-      } = Ot;
-      if (!tt.drawing()) return Promise.reject(new Error("Screenshots need a game to be running"));
-      if (mt) return Promise.reject(new Error("A screenshot is already being taken"));
-      mt = !0;
-      const Xt = function(tt, et, Vt) {
-        const Ot = Math.max(1, tt),
-          Dt = Math.max(1, et),
-          mt = Math.min(1, Vt / Math.max(Ot, Dt), Math.sqrt(qt / (Ot * Dt)));
+        scale: lu = 1,
+        type: qu = "image/png",
+        quality: fu
+      } = su;
+      if (!uu.drawing()) return Promise.reject(new Error("Screenshots need a game to be running"));
+      if (Xu) return Promise.reject(new Error("A screenshot is already being taken"));
+      Xu = !0;
+      const Cu = function(uu, Eu, ju) {
+        const su = Math.max(1, uu),
+          Zu = Math.max(1, Eu),
+          Xu = Math.min(1, ju / Math.max(su, Zu), Math.sqrt(Uu / (su * Zu)));
         return {
-          width: Math.max(1, Math.floor(Ot * mt)),
-          height: Math.max(1, Math.floor(Dt * mt))
+          width: Math.max(1, Math.floor(su * Xu)),
+          height: Math.max(1, Math.floor(Zu * Xu))
         }
-      }(et, Vt, tt.maxTextureSize);
-      return tt.resize(Xt.width, Xt.height, dt * Xt.width / Math.max(1, et)), new Promise(((et, Vt) => {
-        let Ot, qt = 2,
-          dt = null;
-        const Xt = () => {
-          var et;
-          mt = !1, null === (et = dt) || void 0 === et || et(), clearTimeout(Ot), tt.restoreSize()
+      }(Eu, ju, uu.maxTextureSize);
+      return uu.resize(Cu.width, Cu.height, lu * Cu.width / Math.max(1, Eu)), new Promise(((Eu, ju) => {
+        let su, Uu = 2,
+          lu = null;
+        const Cu = () => {
+          var Eu;
+          Xu = !1, null === (Eu = lu) || void 0 === Eu || Eu(), clearTimeout(su), uu.restoreSize()
         };
-        Ot = setTimeout((() => {
-          Xt(), Vt(new Error("No frame was drawn to capture"))
-        }), Dt), dt = tt.onFrameDrawn((() => {
-          if (qt--, qt > 0) return;
+        su = setTimeout((() => {
+          Cu(), ju(new Error("No frame was drawn to capture"))
+        }), Zu), lu = uu.onFrameDrawn((() => {
+          if (Uu--, Uu > 0) return;
           const {
-            canvas: Ot
-          } = tt, Dt = {
-            width: Ot.width,
-            height: Ot.height
+            canvas: su
+          } = uu, Zu = {
+            width: su.width,
+            height: su.height
           };
           try {
-            Ot.toBlob((tt => {
-              tt ? et({
-                blob: tt,
-                ...Dt
-              }) : Vt(new Error("The canvas gave no image"))
-            }), jt, Ht)
-          } catch (mt) {
-            Vt(mt)
+            su.toBlob((uu => {
+              uu ? Eu({
+                blob: uu,
+                ...Zu
+              }) : ju(new Error("The canvas gave no image"))
+            }), qu, fu)
+          } catch (Xu) {
+            ju(Xu)
           } finally {
-            Xt()
+            Cu()
           }
         }))
       }))
     }
-    async function jt(tt, et, Vt) {
+    async function qu(uu, Eu, ju) {
       try {
-        const qt = await dt(tt, et, Vt);
-        (0, Ot.c)(qt.blob, `bloxd-screenshot-${qt.width}x${qt.height}-${Date.now()}.png`)
-      } catch (qt) {
-        console.error("Error taking screenshot:", qt)
+        const Uu = await lu(uu, Eu, ju);
+        (0, su.d)(Uu.blob, `bloxd-screenshot-${Uu.width}x${Uu.height}-${Date.now()}.png`)
+      } catch (Uu) {
+        console.error("Error taking screenshot:", Uu)
       }
     }
   },
-  37805: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => Ht,
-      e: () => dt,
-      h: () => mt
+  37938: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => fu,
+      f: () => lu,
+      g: () => Xu
     });
-    var Ot = Vt(37798),
-      qt = Vt(37814);
-    let Dt = 0;
+    var su = ju(37931),
+      Uu = ju(37941);
+    let Zu = 0;
 
-    function mt(tt, et) {
-      const Vt = tt;
-      Vt._noaFaceGroups = null !== et && void 0 !== et ? et : null, Vt._noaFaceEpoch = -1, Vt._noaFaceMask = -1, Vt._noaFaceCount = -1, Vt._noaFaceMaterial = null;
-      const Ot = tt.vJ;
-      Ot && 1 === Ot.length && (Ot[0].indexStart = 0, Ot[0].indexCount = tt.getTotalIndices())
+    function Xu(uu, Eu) {
+      const ju = uu;
+      ju._noaFaceGroups = null !== Eu && void 0 !== Eu ? Eu : null, ju._noaFaceEpoch = -1, ju._noaFaceMask = -1, ju._noaFaceCount = -1, ju._noaFaceMaterial = null;
+      const su = uu.iG;
+      su && 1 === su.length && (su[0].indexStart = 0, su[0].indexCount = uu.getTotalIndices())
     }
 
-    function dt(tt, et) {
-      if (et) {
-        Dt++;
-        for (const et of tt) {
-          const tt = et._noaFaceGroups;
-          tt && mt(et, tt)
+    function lu(uu, Eu) {
+      if (Eu) {
+        Zu++;
+        for (const Eu of uu) {
+          const uu = Eu._noaFaceGroups;
+          uu && Xu(Eu, uu)
         }
-      } else Dt = Math.max(0, Dt - 1)
+      } else Zu = Math.max(0, Zu - 1)
     }
 
-    function jt(tt, et, Vt) {
-      let qt = -1,
-        Dt = 0;
-      for (let mt = 0; mt < Ot.g; mt++) {
-        const Vt = tt[mt],
-          dt = tt[mt + 1];
-        dt > Vt && et & 1 << Ot.d[mt] && (qt < 0 && (qt = Vt), Dt = dt)
+    function qu(uu, Eu, ju) {
+      let Uu = -1,
+        Zu = 0;
+      for (let Xu = 0; Xu < su.e; Xu++) {
+        const ju = uu[Xu],
+          lu = uu[Xu + 1];
+        lu > ju && Eu & 1 << su.d[Xu] && (Uu < 0 && (Uu = ju), Zu = lu)
       }
-      return qt < 0 ? (Vt[0] = 0, Vt[1] = 0, 0) : (Vt[0] = qt, Vt[1] = Dt - qt, Dt - qt)
+      return Uu < 0 ? (ju[0] = 0, ju[1] = 0, 0) : (ju[0] = Uu, ju[1] = Zu - Uu, Zu - Uu)
     }
-    class Ht {
-      constructor(tt, et) {
-        this.ff = tt, this.engine = et, this.epoch = 0, this.eyeX = NaN, this.eyeY = NaN, this.eyeZ = NaN, this.focalPx = NaN, this.culling = !1, this.range = new Int32Array(2)
+    class fu {
+      constructor(uu, Eu) {
+        this.hO = uu, this.engine = Eu, this.epoch = 0, this.eyeX = NaN, this.eyeY = NaN, this.eyeZ = NaN, this.focalPx = NaN, this.culling = !1, this.range = new Int32Array(2)
       }
-      apply(tt, et) {
-        if (!et) return;
-        const Vt = et.getProjectionMatrix().m,
-          mt = 0 === Dt && 0 === Vt[15],
-          dt = et.globalPosition,
+      apply(uu, Eu) {
+        if (!Eu) return;
+        const ju = Eu.getProjectionMatrix().m,
+          Xu = 0 === Zu && 0 === ju[15],
+          lu = Eu.globalPosition,
           {
-            engine: Ht
+            engine: fu
           } = this,
-          Xt = mt ? (0, qt.d)(Vt, Ht.getRenderWidth(), Ht.getRenderHeight()) : 0;
-        dt.x === this.eyeX && dt.y === this.eyeY && dt.z === this.eyeZ && Xt === this.focalPx && mt === this.culling || (this.epoch++, this.eyeX = dt.x, this.eyeY = dt.y, this.eyeZ = dt.z, this.focalPx = Xt, this.culling = mt);
+          Cu = Xu ? (0, Uu.b)(ju, fu.getRenderWidth(), fu.getRenderHeight()) : 0;
+        lu.x === this.eyeX && lu.y === this.eyeY && lu.z === this.eyeZ && Cu === this.focalPx && Xu === this.culling || (this.epoch++, this.eyeX = lu.x, this.eyeY = lu.y, this.eyeZ = lu.z, this.focalPx = Cu, this.culling = Xu);
         const {
-          epoch: Qt,
-          range: lt
-        } = this, Et = this.ff / 2, ft = Et * Math.sqrt(3), wt = tt.data, yt = tt.length;
-        let Nt = 0;
-        for (let Dt = 0; Dt < yt; Dt++) {
-          const tt = wt[Dt],
-            et = tt._noaFaceGroups;
-          if (et && (tt._noaFaceEpoch !== Qt || tt._noaFaceMaterial !== tt.material)) {
-            tt._noaFaceEpoch = Qt, tt._noaFaceMaterial = tt.material;
-            const Vt = tt.vJ,
-              Dt = Vt && 1 === Vt.length ? Vt[0] : null;
-            let Ht = -1;
-            if (mt && Dt && (0, Ot.t)(tt.material)) {
-              const Vt = tt.position,
-                Ot = dt.x - Vt.x,
-                Dt = dt.y - Vt.y,
-                mt = dt.z - Vt.z,
-                jt = Ot - Et,
-                Qt = Dt - Et,
-                lt = mt - Et,
-                wt = Math.sqrt(jt * jt + Qt * Qt + lt * lt) + ft;
-              Ht = (0, qt.l)(et, Ot, Dt, mt, (0, qt.h)(wt, Xt))
+          epoch: bu,
+          range: cu
+        } = this, Nu = this.hO / 2, Ou = Nu * Math.sqrt(3), Yu = uu.data, hu = uu.length;
+        let Du = 0;
+        for (let Zu = 0; Zu < hu; Zu++) {
+          const uu = Yu[Zu],
+            Eu = uu._noaFaceGroups;
+          if (Eu && (uu._noaFaceEpoch !== bu || uu._noaFaceMaterial !== uu.material)) {
+            uu._noaFaceEpoch = bu, uu._noaFaceMaterial = uu.material;
+            const ju = uu.iG,
+              Zu = ju && 1 === ju.length ? ju[0] : null;
+            let fu = -1;
+            if (Xu && Zu && (0, su.o)(uu.material)) {
+              const ju = uu.position,
+                su = lu.x - ju.x,
+                Zu = lu.y - ju.y,
+                Xu = lu.z - ju.z,
+                qu = su - Nu,
+                bu = Zu - Nu,
+                cu = Xu - Nu,
+                Yu = Math.sqrt(qu * qu + bu * bu + cu * cu) + Ou;
+              fu = (0, Uu.i)(Eu, su, Zu, Xu, (0, Uu.d)(Yu, Cu))
             }
-            if (Dt && Ht !== tt._noaFaceMask) {
-              tt._noaFaceMask = Ht;
-              let Vt = 0,
-                qt = et[Ot.g]; - 1 !== Ht && (qt = jt(et, Ht, lt), Vt = lt[0]), tt._noaFaceCount = qt, Dt.indexStart = 6 * Vt, Dt.indexCount = 6 * qt, Dt.setBoundingInfo(tt.fL())
+            if (Zu && fu !== uu._noaFaceMask) {
+              uu._noaFaceMask = fu;
+              let ju = 0,
+                Uu = Eu[su.e]; - 1 !== fu && (Uu = qu(Eu, fu, cu), ju = cu[0]), uu._noaFaceCount = Uu, Zu.indexStart = 6 * ju, Zu.indexCount = 6 * Uu, Zu.setBoundingInfo(uu.EW())
             }
           }
-          et && 0 === tt._noaFaceCount || (wt[Nt++] = tt)
+          Eu && 0 === uu._noaFaceCount || (Yu[Du++] = uu)
         }
-        tt.length = Nt
+        uu.length = Du
       }
     }
   },
-  37787: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => jt,
-      c: () => dt
+  37916: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => qu,
+      h: () => lu
     });
-    const Ot = new WeakSet;
-    let qt = 0;
-    const Dt = new Set;
+    const su = new WeakSet;
+    let Uu = 0;
+    const Zu = new Set;
 
-    function mt(tt, et) {
-      tt._data = et
+    function Xu(uu, Eu) {
+      uu._data = Eu
     }
 
-    function dt(tt) {
-      var et, Vt;
-      (null !== (et = null === (Vt = tt.getBuffer()) || void 0 === Vt ? void 0 : Vt.uQ) && void 0 !== et ? et : 0) > 0 && (Ot.add(tt), 0 === qt ? mt(tt, null) : Dt.add(tt))
+    function lu(uu) {
+      var Eu, ju;
+      (null !== (Eu = null === (ju = uu.getBuffer()) || void 0 === ju ? void 0 : ju.Mb) && void 0 !== Eu ? Eu : 0) > 0 && (su.add(uu), 0 === Uu ? Xu(uu, null) : Zu.add(uu))
     }
 
-    function jt(tt) {
-      qt++;
-      for (const Vt of function(tt) {
-          const et = new Set;
-          for (const qt of tt) {
-            const tt = qt.geometry;
-            for (const qt of Object.values(null !== (Vt = null === tt || void 0 === tt ? void 0 : tt.getVertexBuffers()) && void 0 !== Vt ? Vt : {})) {
-              var Vt;
-              const tt = qt.getWrapperBuffer();
-              Ot.has(tt) && et.add(tt)
+    function qu(uu) {
+      Uu++;
+      for (const ju of function(uu) {
+          const Eu = new Set;
+          for (const Uu of uu) {
+            const uu = Uu.geometry;
+            for (const Uu of Object.values(null !== (ju = null === uu || void 0 === uu ? void 0 : uu.getVertexBuffers()) && void 0 !== ju ? ju : {})) {
+              var ju;
+              const uu = Uu.getWrapperBuffer();
+              su.has(uu) && Eu.add(uu)
             }
           }
-          return et
-        }(tt)) Vt.getData() || Ht(Vt), Dt.add(Vt);
-      let et = !0;
+          return Eu
+        }(uu)) ju.getData() || fu(ju), Zu.add(ju);
+      let Eu = !0;
       return () => {
-        if (et && (et = !1, qt--, 0 === qt)) {
-          for (const tt of Dt) mt(tt, null);
-          Dt.clear()
+        if (Eu && (Eu = !1, Uu--, 0 === Uu)) {
+          for (const uu of Zu) Xu(uu, null);
+          Zu.clear()
         }
       }
     }
 
-    function Ht(tt) {
-      const et = tt.getBuffer();
-      if (!et || !(et.uQ > 0)) return;
-      const Vt = tt._engine,
-        Ot = new Uint8Array(et.uQ);
-      Vt.bindArrayBuffer(et), Vt._gl.getBufferSubData(Vt._gl.ARRAY_BUFFER, 0, Ot), Vt._resetVertexBufferBinding(), mt(tt, Ot)
+    function fu(uu) {
+      const Eu = uu.getBuffer();
+      if (!Eu || !(Eu.Mb > 0)) return;
+      const ju = uu._engine,
+        su = new Uint8Array(Eu.Mb);
+      ju.bindArrayBuffer(Eu), ju._gl.getBufferSubData(ju._gl.ARRAY_BUFFER, 0, su), ju._resetVertexBufferBinding(), Xu(uu, su)
     }
   },
-  37798: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => mt,
-      g: () => Dt,
-      j: () => jt,
-      l: () => Ot,
-      p: () => dt,
-      r: () => qt,
-      t: () => Ht
+  37931: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => Xu,
+      e: () => Zu,
+      f: () => qu,
+      j: () => su,
+      k: () => lu,
+      m: () => Uu,
+      o: () => fu
     });
-    const Ot = 6,
-      qt = [0, 2, 4, 1, 3, 5, 0, 2],
-      Dt = 6,
-      mt = [1, 0, 3, 2, 5, 4];
-    for (let Xt = Dt; Xt < qt.length; Xt++)
-      if (qt[Xt] !== qt[Xt - Dt]) throw new Error("FACE_LAYOUT must repeat a prefix of its base groups");
-    const dt = qt.length + 1,
-      jt = (() => {
-        const tt = [];
-        for (let et = 0; et < Dt; et++) tt[qt[et]] = et;
-        return tt
+    const su = 6,
+      Uu = [0, 2, 4, 1, 3, 5, 0, 2],
+      Zu = 6,
+      Xu = [1, 0, 3, 2, 5, 4];
+    for (let Cu = Zu; Cu < Uu.length; Cu++)
+      if (Uu[Cu] !== Uu[Cu - Zu]) throw new Error("FACE_LAYOUT must repeat a prefix of its base groups");
+    const lu = Uu.length + 1,
+      qu = (() => {
+        const uu = [];
+        for (let Eu = 0; Eu < Zu; Eu++) uu[Uu[Eu]] = Eu;
+        return uu
       })();
 
-    function Ht(tt) {
-      return !!tt && tt.backFaceCulling && (0 === tt.transparencyMode || 1 === tt.transparencyMode)
+    function fu(uu) {
+      return !!uu && uu.backFaceCulling && (0 === uu.transparencyMode || 1 === uu.transparencyMode)
     }
   },
-  37814: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => dt,
-      h: () => jt,
-      i: () => Xt,
-      l: () => Ht,
-      o: () => ft
+  37941: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => lu,
+      d: () => qu,
+      g: () => Cu,
+      i: () => fu,
+      j: () => Ou
     });
-    var Ot = Vt(37798);
-    const qt = 1 / 16,
-      Dt = 1 / 64,
-      mt = 2048;
-    Ot.l;
+    var su = ju(37931);
+    const Uu = 1 / 16,
+      Zu = 1 / 64,
+      Xu = 2048;
+    su.j;
 
-    function dt(tt, et, Vt) {
-      return Math.min(Math.abs(tt[0] * et), Math.abs(tt[5] * Vt)) / 2
+    function lu(uu, Eu, ju) {
+      return Math.min(Math.abs(uu[0] * Eu), Math.abs(uu[5] * ju)) / 2
     }
 
-    function jt(tt, et) {
-      return qt + Dt * tt * tt / et
+    function qu(uu, Eu) {
+      return Uu + Zu * uu * uu / Eu
     }
 
-    function Ht(tt, et, Vt, qt, Dt) {
-      const mt = Ot.p;
-      return Xt(tt[mt], tt[mt + 1], tt[mt + 2], tt[mt + 3], tt[mt + 4], tt[mt + 5], et, Vt, qt, Dt)
+    function fu(uu, Eu, ju, Uu, Zu) {
+      const Xu = su.k;
+      return Cu(uu[Xu], uu[Xu + 1], uu[Xu + 2], uu[Xu + 3], uu[Xu + 4], uu[Xu + 5], Eu, ju, Uu, Zu)
     }
 
-    function Xt(tt, et, Vt, Ot, qt, Dt, mt, dt, jt, Ht) {
-      return (mt <= tt - Ht ? 0 : 1) | (mt >= et + Ht ? 0 : 2) | (dt <= Vt - Ht ? 0 : 4) | (dt >= Ot + Ht ? 0 : 8) | (jt <= qt - Ht ? 0 : 16) | (jt >= Dt + Ht ? 0 : 32)
+    function Cu(uu, Eu, ju, su, Uu, Zu, Xu, lu, qu, fu) {
+      return (Xu <= uu - fu ? 0 : 1) | (Xu >= Eu + fu ? 0 : 2) | (lu <= ju - fu ? 0 : 4) | (lu >= su + fu ? 0 : 8) | (qu <= Uu - fu ? 0 : 16) | (qu >= Zu + fu ? 0 : 32)
     }
-    const Qt = (() => {
-        const tt = [];
-        for (let et = 0; et < Ot.r.length; et++) {
-          let Vt = 0;
-          for (let qt = et + 1; qt <= Ot.r.length; qt++) {
-            const Dt = 1 << Ot.r[qt - 1];
-            if (Vt & Dt) break;
-            Vt |= Dt, tt.push({
-              start: et,
-              end: qt,
-              PV: Vt
+    const bu = (() => {
+        const uu = [];
+        for (let Eu = 0; Eu < su.m.length; Eu++) {
+          let ju = 0;
+          for (let Uu = Eu + 1; Uu <= su.m.length; Uu++) {
+            const Zu = 1 << su.m[Uu - 1];
+            if (ju & Zu) break;
+            ju |= Zu, uu.push({
+              start: Eu,
+              end: Uu,
+              pj: ju
             })
           }
         }
-        return tt
+        return uu
       })(),
-      lt = [];
+      cu = [];
 
-    function Et(tt, et) {
-      const Vt = Ot.j[et];
-      return tt[Vt + 1] - tt[Vt]
+    function Nu(uu, Eu) {
+      const ju = su.f[Eu];
+      return uu[ju + 1] - uu[ju]
     }
 
-    function ft(tt, et, Vt) {
-      let qt = 0;
-      for (let mt = 0; mt < Ot.l; mt++) Et(tt, mt) > 0 && (qt |= 1 << mt);
-      if (0 === (et &= qt)) return 0;
-      if (et === qt) return Vt[0] = 0, Vt[1] = tt[Ot.g], 1;
-      let Dt = null,
-        dt = 1 / 0;
-      for (const Ht of function(tt) {
-          let et = lt[tt];
-          if (et) return et;
-          const Vt = new Map,
-            Ot = (tt, et) => {
-              const Ot = 4 * tt + et.length / 2;
-              Vt.has(Ot) || Vt.set(Ot, {
-                PV: tt,
-                windows: et
+    function Ou(uu, Eu, ju) {
+      let Uu = 0;
+      for (let Xu = 0; Xu < su.j; Xu++) Nu(uu, Xu) > 0 && (Uu |= 1 << Xu);
+      if (0 === (Eu &= Uu)) return 0;
+      if (Eu === Uu) return ju[0] = 0, ju[1] = uu[su.e], 1;
+      let Zu = null,
+        lu = 1 / 0;
+      for (const fu of function(uu) {
+          let Eu = cu[uu];
+          if (Eu) return Eu;
+          const ju = new Map,
+            su = (uu, Eu) => {
+              const su = 4 * uu + Eu.length / 2;
+              ju.has(su) || ju.set(su, {
+                pj: uu,
+                windows: Eu
               })
             };
-          for (const Dt of Qt)
-            if ((Dt.PV & tt) === tt && Ot(Dt.PV, [Dt.start, Dt.end]), 0 !== (Dt.PV & tt))
-              for (const et of Qt) et.start < Dt.end || 0 !== (Dt.PV & et.PV) || 0 === (et.PV & tt) || ((Dt.PV | et.PV) & tt) !== tt || Ot(Dt.PV | et.PV, [Dt.start, Dt.end, et.start, et.end]);
-          const qt = [...Vt.values()];
-          return et = qt.filter((tt => !qt.some((et => et !== tt && (et.PV & tt.PV) === et.PV && et.windows.length <= tt.windows.length)))), lt[tt] = et, et
-        }(et)) {
-        let Vt = (Ht.windows.length / 2 - 1) * mt;
-        const jt = Ht.PV & ~et & qt;
-        for (let et = 0; et < Ot.l; et++) jt & 1 << et && (Vt += Et(tt, et));
-        Vt < dt && (Dt = Ht, dt = Vt)
+          for (const Zu of bu)
+            if ((Zu.pj & uu) === uu && su(Zu.pj, [Zu.start, Zu.end]), 0 !== (Zu.pj & uu))
+              for (const Eu of bu) Eu.start < Zu.end || 0 !== (Zu.pj & Eu.pj) || 0 === (Eu.pj & uu) || ((Zu.pj | Eu.pj) & uu) !== uu || su(Zu.pj | Eu.pj, [Zu.start, Zu.end, Eu.start, Eu.end]);
+          const Uu = [...ju.values()];
+          return Eu = Uu.filter((uu => !Uu.some((Eu => Eu !== uu && (Eu.pj & uu.pj) === Eu.pj && Eu.windows.length <= uu.windows.length)))), cu[uu] = Eu, Eu
+        }(Eu)) {
+        let ju = (fu.windows.length / 2 - 1) * Xu;
+        const qu = fu.pj & ~Eu & Uu;
+        for (let Eu = 0; Eu < su.j; Eu++) qu & 1 << Eu && (ju += Nu(uu, Eu));
+        ju < lu && (Zu = fu, lu = ju)
       }
-      const jt = Dt.windows;
-      for (let Ot = 0; Ot < jt.length; Ot += 2) {
-        const et = tt[jt[Ot]];
-        Vt[Ot] = et, Vt[Ot + 1] = tt[jt[Ot + 1]] - et
+      const qu = Zu.windows;
+      for (let su = 0; su < qu.length; su += 2) {
+        const Eu = uu[qu[su]];
+        ju[su] = Eu, ju[su + 1] = uu[qu[su + 1]] - Eu
       }
-      return jt.length / 2
+      return qu.length / 2
     }
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

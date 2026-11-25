@@ -1,78 +1,78 @@
 export const id = 247;
 export const ids = [247];
 export const modules = {
-  38309: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => Ht,
-      e: () => Ot,
-      f: () => dt,
-      j: () => qt,
-      n: () => mt,
-      o: () => Dt
+  38432: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => fu,
+      e: () => su,
+      g: () => lu,
+      h: () => Uu,
+      j: () => Xu,
+      l: () => Zu
     });
-    const Ot = 1.001,
-      qt = .501,
-      Dt = .025,
-      mt = .75,
-      dt = .08,
-      jt = 4;
+    const su = 1.001,
+      Uu = .501,
+      Zu = .025,
+      Xu = .75,
+      lu = .08,
+      qu = 4;
 
-    function Ht() {
-      const tt = qt,
-        et = Dt,
-        Vt = tt - et / 2,
-        Ot = (2 * tt - 2 * et) / (2 * jt - 1),
-        mt = [];
-      for (const qt of [-Vt, Vt])
-        for (const Dt of [-Vt, Vt])
-          for (let Vt = 0; Vt < jt; Vt++) {
-            const dt = -tt + et + Ot * (2 * Vt + .5);
-            mt.push([Ot, et, et, dt, qt, Dt]), mt.push([et, Ot, et, qt, dt, Dt]), mt.push([et, et, Ot, qt, Dt, dt])
+    function fu() {
+      const uu = Uu,
+        Eu = Zu,
+        ju = uu - Eu / 2,
+        su = (2 * uu - 2 * Eu) / (2 * qu - 1),
+        Xu = [];
+      for (const Uu of [-ju, ju])
+        for (const Zu of [-ju, ju])
+          for (let ju = 0; ju < qu; ju++) {
+            const lu = -uu + Eu + su * (2 * ju + .5);
+            Xu.push([su, Eu, Eu, lu, Uu, Zu]), Xu.push([Eu, su, Eu, Uu, lu, Zu]), Xu.push([Eu, Eu, su, Uu, Zu, lu])
           }
-      for (const qt of [-Vt, Vt])
-        for (const tt of [-Vt, Vt])
-          for (const Ot of [-Vt, Vt]) mt.push([et, et, et, qt, tt, Ot]);
-      return mt
+      for (const Uu of [-ju, ju])
+        for (const uu of [-ju, ju])
+          for (const su of [-ju, ju]) Xu.push([Eu, Eu, Eu, Uu, uu, su]);
+      return Xu
     }
   },
-  38641: (tt, et, Vt) => {
-    Vt.d(et, {
-      A: () => ht,
-      E: () => Ct,
-      I: () => Jt,
-      K: () => lt,
-      N: () => wt,
-      O: () => Nt,
-      Q: () => qt,
-      b: () => Xt,
-      f: () => jt,
-      j: () => bt,
-      k: () => Ht,
-      m: () => dt,
-      o: () => mt,
-      s: () => Dt,
-      t: () => Kt,
-      u: () => Et,
-      w: () => ut
+  38754: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      A: () => eu,
+      D: () => cu,
+      H: () => Yu,
+      J: () => Du,
+      L: () => Uu,
+      b: () => Cu,
+      e: () => qu,
+      f: () => Mu,
+      j: () => fu,
+      l: () => lu,
+      m: () => Xu,
+      n: () => Zu,
+      r: () => wu,
+      s: () => Nu,
+      v: () => pu,
+      w: () => Ju,
+      y: () => Gu
     });
-    var Ot = Vt(9497);
+    var su = ju(9490);
 
-    function qt(tt) {
-      return Math.floor(tt).toLocaleString("en-US")
+    function Uu(uu) {
+      return Math.floor(uu).toLocaleString("en-US")
     }
-    const Dt = 2e3,
-      mt = .005,
-      dt = .001,
-      jt = 2,
-      Ht = "Fluid Tank",
-      Xt = "Coolant Mixer",
-      Qt = 144;
+    const Zu = 2e3,
+      Xu = .005,
+      lu = .001,
+      qu = 2,
+      fu = "Fluid Tank",
+      Cu = "Coolant Mixer",
+      bu = 144;
 
-    function lt(tt) {
-      const et = tt.split("|")[0];
-      return (0, Ot.n)(et) ? et === Ot.e ? "cryo" : "water" : null
+    function cu(uu) {
+      const Eu = uu.split("|")[0];
+      return (0, su.h)(Eu) ? Eu === su.c ? "cryo" : "water" : null
     }
-    const Et = [
+    const Nu = [
         [1, 0, 0],
         [-1, 0, 0],
         [0, 1, 0],
@@ -80,43 +80,43 @@ export const modules = {
         [0, 0, 1],
         [0, 0, -1]
       ],
-      ft = 63;
+      Ou = 63;
 
-    function wt(tt) {
-      let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const Vt = et ? function(tt, et, Vt) {
-        const Ot = Et.findIndex((Ot => {
-          let [qt, Dt, mt] = Ot;
-          return qt === tt && Dt === et && mt === Vt
+    function Yu(uu) {
+      let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const ju = Eu ? function(uu, Eu, ju) {
+        const su = Nu.findIndex((su => {
+          let [Uu, Zu, Xu] = su;
+          return Uu === uu && Zu === Eu && Xu === ju
         }));
-        return Ot < 0 ? 0 : 1 << Ot
-      }(et[0], et[1], et[2]) : 0;
-      return "maker" === tt ? {
-        kind: tt,
-        faces: Vt
-      } : "user" === tt ? {
-        kind: tt,
-        faces: ft & ~Vt
+        return su < 0 ? 0 : 1 << su
+      }(Eu[0], Eu[1], Eu[2]) : 0;
+      return "maker" === uu ? {
+        kind: uu,
+        faces: ju
+      } : "user" === uu ? {
+        kind: uu,
+        faces: Ou & ~ju
       } : {
-        kind: tt,
-        faces: ft
+        kind: uu,
+        faces: Ou
       }
     }
 
-    function yt(tt) {
-      return "pipe" === tt || "tank" === tt || "maker" === tt
+    function hu(uu) {
+      return "pipe" === uu || "tank" === uu || "maker" === uu
     }
 
-    function Nt(tt, et, Vt) {
-      return 0 !== (tt.faces & 1 << Vt) && 0 !== (et.faces & 1 << (1 ^ Vt)) && (yt(tt.kind) || yt(et.kind))
+    function Du(uu, Eu, ju) {
+      return 0 !== (uu.faces & 1 << ju) && 0 !== (Eu.faces & 1 << (1 ^ ju)) && (hu(uu.kind) || hu(Eu.kind))
     }
-    const Mt = (tt, et, Vt, Ot) => ({
-        input: tt,
-        inputAmount: Ot,
-        output: et,
-        outputAmount: Vt
+    const gu = (uu, Eu, ju, su) => ({
+        input: uu,
+        inputAmount: su,
+        output: Eu,
+        outputAmount: ju
       }),
-      bt = {
+      Mu = {
         Condenser: {
           kind: "Condenser",
           opMs: 2e3,
@@ -135,7 +135,7 @@ export const modules = {
           inputSlot: 0,
           fuelSlot: null,
           outputSlots: [1, 2, 3],
-          recipes: [Mt("Uranium Grit", "Uranium Pellet", 1, 12), Mt("Spent Pellet", "Plutonium Pellet", 1, 4)],
+          recipes: [gu("Uranium Grit", "Uranium Pellet", 1, 12), gu("Spent Pellet", "Plutonium Pellet", 1, 4)],
           powerPerOp: 600,
           waterPerOp: 24
         },
@@ -156,36 +156,36 @@ export const modules = {
           inputSlot: 0,
           fuelSlot: null,
           outputSlots: [],
-          recipes: [Mt("Biomass", "", 0, 1)],
+          recipes: [gu("Biomass", "", 0, 1)],
           powerPerOp: 720,
           waterPerOp: 144,
-          cryoMade: Qt,
+          cryoMade: bu,
           couplable: !0,
           couplerSlot: 1
         }
       };
 
-    function Jt(tt, et) {
-      return 1e3 * (null !== et && void 0 !== et ? et : 0) / tt.opMs
+    function eu(uu, Eu) {
+      return 1e3 * (null !== Eu && void 0 !== Eu ? Eu : 0) / uu.opMs
     }
 
-    function Ct(tt) {
-      let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-      const Vt = Jt(bt["Coolant Mixer"], Qt) * et;
-      return tt <= 0 ? 0 : Math.ceil(tt / Vt - 1e-9)
+    function Gu(uu) {
+      let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+      const ju = eu(Mu["Coolant Mixer"], bu) * Eu;
+      return uu <= 0 ? 0 : Math.ceil(uu / ju - 1e-9)
     }
-    const ut = "baf2Water",
-      Kt = "baf2waterclose",
-      ht = "baf2wateropen"
+    const pu = "baf2Water",
+      wu = "baf2waterclose",
+      Ju = "baf2wateropen"
   },
-  38634: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => Zt,
-      h: () => Lt
+  38745: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => Ku,
+      f: () => Vu
     });
-    var Ot = Vt(9425),
-      qt = Vt(9454);
-    const Dt = [
+    var su = ju(9409),
+      Uu = ju(9442);
+    const Zu = [
       [1, 0, 0],
       [-1, 0, 0],
       [0, 0, 1],
@@ -193,45 +193,45 @@ export const modules = {
       [0, 1, 0],
       [0, -1, 0]
     ];
-    var mt = Vt(9475),
-      dt = Vt(38467),
-      jt = Vt(9466);
-    const Ht = {
+    var Xu = ju(9459),
+      lu = ju(38582),
+      qu = ju(9456);
+    const fu = {
       1: [0, -1],
       2: [-1, 0],
       3: [0, 1],
       4: [1, 0]
     };
 
-    function Xt(tt) {
-      let [et, Vt] = tt;
-      return [-Vt, et]
+    function Cu(uu) {
+      let [Eu, ju] = uu;
+      return [-ju, Eu]
     }
 
-    function Qt(tt, et) {
-      return tt[0] === et[0] && tt[1] === et[1]
+    function bu(uu, Eu) {
+      return uu[0] === Eu[0] && uu[1] === Eu[1]
     }
 
-    function lt(tt, et) {
-      return tt[0] * et[0] + tt[1] * et[1] === 0
+    function cu(uu, Eu) {
+      return uu[0] * Eu[0] + uu[1] * Eu[1] === 0
     }
-    const Et = [
+    const Nu = [
       [1, 0, 0],
       [-1, 0, 0],
       [0, 0, 1],
       [0, 0, -1]
     ];
-    var ft = Vt(9492);
+    var Ou = ju(9485);
 
-    function wt(tt, et, Vt, Ot, qt) {
-      return et < ft.l || et >= ft.l + ft.n || Math.floor(tt / ft.q) === Math.floor(Ot / ft.q) && Math.floor(Vt / ft.q) === Math.floor(qt / ft.q)
+    function Yu(uu, Eu, ju, su, Uu) {
+      return Eu < Ou.p || Eu >= Ou.p + Ou.q || Math.floor(uu / Ou.w) === Math.floor(su / Ou.w) && Math.floor(ju / Ou.w) === Math.floor(Uu / Ou.w)
     }
-    const yt = "Splitter",
-      Nt = "Sorting Gate",
-      Mt = new Set(ft.C),
-      bt = new Set([...ft.C, "Belt Loader", "Fast Loader", Nt]),
-      Jt = new Set(ft.o),
-      Ct = [
+    const hu = "Splitter",
+      Du = "Sorting Gate",
+      gu = new Set(Ou.G),
+      Mu = new Set([...Ou.G, "Belt Loader", "Fast Loader", Du]),
+      eu = new Set(Ou.s),
+      Gu = [
         [1, 0, 0],
         [-1, 0, 0],
         [0, 0, 1],
@@ -240,259 +240,259 @@ export const modules = {
         [0, -1, 0]
       ];
 
-    function ut(tt) {
-      var et, Vt;
-      return null !== (et = null === (Vt = Ot.h[tt]) || void 0 === Vt ? void 0 : Vt.meta.rootName) && void 0 !== et ? et : ""
+    function pu(uu) {
+      var Eu, ju;
+      return null !== (Eu = null === (ju = su.f[uu]) || void 0 === ju ? void 0 : ju.meta.rootName) && void 0 !== Eu ? Eu : ""
     }
 
-    function Kt(tt) {
-      return ut(tt) === ft.f && (0, ft.L)(Ot.h[tt].name)
+    function wu(uu) {
+      return pu(uu) === Ou.f && (0, Ou.P)(su.f[uu].name)
     }
-    var ht = Vt(9462),
-      vt = Vt(9480);
-    const Wt = [
+    var Ju = ju(9448),
+      du = ju(9467);
+    const au = [
       [1, 0, 0],
       [-1, 0, 0],
       [0, 0, 1],
       [0, 0, -1]
     ];
 
-    function St(tt) {
-      var et, Vt;
-      const qt = null === (et = Ot.h[tt]) || void 0 === et ? void 0 : et.meta;
-      return (null === qt || void 0 === qt ? void 0 : qt.rootName) !== vt.n ? null : {
-        rot: null !== (Vt = qt.rot) && void 0 !== Vt ? Vt : 1,
-        half: (0, vt.g)(qt.rootName, qt.metaStr)
+    function Pu(uu) {
+      var Eu, ju;
+      const Uu = null === (Eu = su.f[uu]) || void 0 === Eu ? void 0 : Eu.meta;
+      return (null === Uu || void 0 === Uu ? void 0 : Uu.rootName) !== du.m ? null : {
+        rot: null !== (ju = Uu.rot) && void 0 !== ju ? ju : 1,
+        half: (0, du.f)(Uu.rootName, Uu.metaStr)
       }
     }
 
-    function ct(tt, et, Vt, Ot) {
-      return St(tt(et, Vt, Ot))
+    function ou(uu, Eu, ju, su) {
+      return Pu(uu(Eu, ju, su))
     }
 
-    function Rt(tt, et, Vt, Ot, qt) {
+    function ku(uu, Eu, ju, su, Uu) {
       let {
-        rot: Dt,
-        half: mt
-      } = qt;
-      const [dt, jt] = (0, vt.l)(Dt, mt), Ht = ct(tt, et + dt, Vt, Ot + jt);
-      return null !== Ht && Ht.rot === Dt && Ht.half === vt.r[mt]
+        rot: Zu,
+        half: Xu
+      } = Uu;
+      const [lu, qu] = (0, du.l)(Zu, Xu), fu = ou(uu, Eu + lu, ju, su + qu);
+      return null !== fu && fu.rot === Zu && fu.half === du.o[Xu]
     }
-    var It = Vt(38639);
-    const Pt = [new class {
+    var mu = ju(38751);
+    const vu = [new class {
       constructor() {
-        this.reshapeOffsets = Et
+        this.reshapeOffsets = Nu
       }
-      handles(tt) {
-        var et;
-        return "Stairs" === (null === (et = Ot.h[tt]) || void 0 === et ? void 0 : et.model)
+      handles(uu) {
+        var Eu;
+        return "Stairs" === (null === (Eu = su.f[uu]) || void 0 === Eu ? void 0 : Eu.model)
       }
-      affects(tt) {
-        return this.handles(tt)
+      affects(uu) {
+        return this.handles(uu)
       }
-      shape(tt, et, Vt, qt, Dt) {
-        const mt = this.stairsOf(Dt),
-          dt = this.cornerAt(tt, et, Vt, qt, mt),
-          Ht = mt.half === jt.b.top ? "top" : "bot";
-        return (0, Ot.k)(`${Ot.h[Dt].meta.rootName}|meta|rot${mt.rot}|${Ht}${null===dt?"":`|${dt}`}`)
+      shape(uu, Eu, ju, Uu, Zu) {
+        const Xu = this.stairsOf(Zu),
+          lu = this.cornerAt(uu, Eu, ju, Uu, Xu),
+          fu = Xu.half === qu.d.top ? "top" : "bot";
+        return (0, su.g)(`${su.f[Zu].meta.rootName}|meta|rot${Xu.rot}|${fu}${null===lu?"":`|${lu}`}`)
       }
-      stairsOf(tt) {
+      stairsOf(uu) {
         const {
-          rot: et,
-          halfblockPlacement: Vt
-        } = Ot.h[tt].meta;
+          rot: Eu,
+          halfblockPlacement: ju
+        } = su.f[uu].meta;
         return {
-          rot: et,
-          half: Vt
+          rot: Eu,
+          half: ju
         }
       }
-      stairsAt(tt, et, Vt, Ot) {
-        const qt = tt(et, Vt, Ot);
-        return this.handles(qt) ? this.stairsOf(qt) : null
+      stairsAt(uu, Eu, ju, su) {
+        const Uu = uu(Eu, ju, su);
+        return this.handles(Uu) ? this.stairsOf(Uu) : null
       }
-      cornerAt(tt, et, Vt, Ot, qt) {
+      cornerAt(uu, Eu, ju, su, Uu) {
         let {
-          rot: Dt,
-          half: mt
-        } = qt;
-        const dt = Ht[Dt],
-          jt = qt => {
-            let [dt, jt] = qt;
-            const Ht = this.stairsAt(tt, et + dt, Vt, Ot + jt);
-            return null !== Ht && Ht.rot === Dt && Ht.half === mt
+          rot: Zu,
+          half: Xu
+        } = Uu;
+        const lu = fu[Zu],
+          qu = Uu => {
+            let [lu, qu] = Uu;
+            const fu = this.stairsAt(uu, Eu + lu, ju, su + qu);
+            return null !== fu && fu.rot === Zu && fu.half === Xu
           },
-          Et = this.stairsAt(tt, et + dt[0], Vt, Ot + dt[1]);
-        if (null !== Et && Et.half === mt) {
-          const tt = Ht[Et.rot];
-          if (lt(dt, tt) && !jt([-tt[0], -tt[1]])) return Qt(tt, Xt(dt)) ? "outerLeft" : "outerRight"
+          Nu = this.stairsAt(uu, Eu + lu[0], ju, su + lu[1]);
+        if (null !== Nu && Nu.half === Xu) {
+          const uu = fu[Nu.rot];
+          if (cu(lu, uu) && !qu([-uu[0], -uu[1]])) return bu(uu, Cu(lu)) ? "outerLeft" : "outerRight"
         }
-        const ft = this.stairsAt(tt, et - dt[0], Vt, Ot - dt[1]);
-        if (null !== ft && ft.half === mt) {
-          const tt = Ht[ft.rot];
-          if (lt(dt, tt) && !jt(tt)) return Qt(tt, Xt(dt)) ? "innerLeft" : "innerRight"
+        const Ou = this.stairsAt(uu, Eu - lu[0], ju, su - lu[1]);
+        if (null !== Ou && Ou.half === Xu) {
+          const uu = fu[Ou.rot];
+          if (cu(lu, uu) && !qu(uu)) return bu(uu, Cu(lu)) ? "innerLeft" : "innerRight"
         }
         return null
       }
     }, new class {
       constructor() {
-        this.reshapeOffsets = Dt, this.rootIds = new Set(qt.f.map((tt => (0, Ot.k)(tt))))
+        this.reshapeOffsets = Zu, this.rootIds = new Set(Uu.h.map((uu => (0, su.g)(uu))))
       }
-      handles(tt) {
-        var et;
-        const Vt = null === (et = Ot.h[tt]) || void 0 === et ? void 0 : et.meta;
-        return void 0 !== Vt && this.rootIds.has(Vt.rootId)
+      handles(uu) {
+        var Eu;
+        const ju = null === (Eu = su.f[uu]) || void 0 === Eu ? void 0 : Eu.meta;
+        return void 0 !== ju && this.rootIds.has(ju.rootId)
       }
-      affects(tt) {
-        return this.handles(tt)
+      affects(uu) {
+        return this.handles(uu)
       }
-      placedBy(tt) {
-        return Ot.h[tt].meta.rootName === qt.m ? null : qt.m
+      placedBy(uu) {
+        return su.f[uu].meta.rootName === Uu.t ? null : Uu.t
       }
-      shape(tt, et, Vt, Dt, mt) {
+      shape(uu, Eu, ju, Zu, Xu) {
         const {
-          rootId: dt,
-          rootName: jt,
-          rot: Ht
-        } = Ot.h[mt].meta;
-        let Xt = 0;
-        return qt.u[Ht].forEach(((qt, mt) => {
-          var jt;
-          let [Qt, lt, Et] = qt;
-          const ft = null === (jt = Ot.h[tt(et + Qt, Vt + lt, Dt + Et)]) || void 0 === jt ? void 0 : jt.meta;
-          (null === ft || void 0 === ft ? void 0 : ft.rootId) === dt && ft.rot === Ht && (Xt |= 1 << mt)
-        })), (0, Ot.k)((0, qt.e)(jt, Ht, Xt))
+          rootId: lu,
+          rootName: qu,
+          rot: fu
+        } = su.f[Xu].meta;
+        let Cu = 0;
+        return Uu.z[fu].forEach(((Uu, Xu) => {
+          var qu;
+          let [bu, cu, Nu] = Uu;
+          const Ou = null === (qu = su.f[uu(Eu + bu, ju + cu, Zu + Nu)]) || void 0 === qu ? void 0 : qu.meta;
+          (null === Ou || void 0 === Ou ? void 0 : Ou.rootId) === lu && Ou.rot === fu && (Cu |= 1 << Xu)
+        })), (0, su.g)((0, Uu.f)(qu, fu, Cu))
       }
-    }, ...mt.e.map((tt => new dt.b(tt))), new class {
+    }, ...Xu.b.map((uu => new lu.e(uu))), new class {
       constructor() {
-        this.reshapeOffsets = Ct
+        this.reshapeOffsets = Gu
       }
-      handles(tt) {
-        const et = ut(tt);
-        return Mt.has(et) || et === ft.f
+      handles(uu) {
+        const Eu = pu(uu);
+        return gu.has(Eu) || Eu === Ou.f
       }
-      affects(tt) {
-        const et = ut(tt);
-        return bt.has(et) || Jt.has(et) || et === yt || et === ft.f || void 0 !== ft.c[et]
+      affects(uu) {
+        const Eu = pu(uu);
+        return Mu.has(Eu) || eu.has(Eu) || Eu === hu || Eu === Ou.f || void 0 !== Ou.c[Eu]
       }
-      shape(tt, et, Vt, qt, Dt, mt) {
+      shape(uu, Eu, ju, Uu, Zu, Xu) {
         const {
-          rootName: dt,
-          rot: jt
-        } = Ot.h[Dt].meta;
-        return dt === ft.f ? mt ? Dt : function(tt, et, Vt, qt, Dt) {
-          const [mt, dt] = ft.e[Dt - 1];
-          for (let jt = 1; jt <= ft.y; jt++) {
-            const [Ht, Xt] = [et - mt * jt, qt - dt * jt], Qt = tt(Ht, Vt, Xt);
-            if (ut(Qt) === ft.f && Ot.h[Qt].meta.rot === Dt && wt(et, Vt, qt, Ht, Xt)) return (0, Ot.k)((0, ft.S)(Dt, !Kt(Qt)))
+          rootName: lu,
+          rot: qu
+        } = su.f[Zu].meta;
+        return lu === Ou.f ? Xu ? Zu : function(uu, Eu, ju, Uu, Zu) {
+          const [Xu, lu] = Ou.e[Zu - 1];
+          for (let qu = 1; qu <= Ou.F; qu++) {
+            const [fu, Cu] = [Eu - Xu * qu, Uu - lu * qu], bu = uu(fu, ju, Cu);
+            if (pu(bu) === Ou.f && su.f[bu].meta.rot === Zu && Yu(Eu, ju, Uu, fu, Cu)) return (0, su.g)((0, Ou.$)(Zu, !wu(bu)))
           }
-          return (0, Ot.k)((0, ft.S)(Dt, !1))
-        }(tt, et, Vt, qt, jt) : (0, Ot.k)((0, ft.D)(dt, jt, function(tt, et, Vt, qt, Dt) {
-          const [mt, dt] = ft.e[Dt - 1], jt = (Dt, mt) => function(tt, et, Vt) {
-            var qt;
-            const Dt = null === (qt = Ot.h[tt]) || void 0 === qt ? void 0 : qt.meta;
-            if (!Dt) return !1;
-            const mt = Dt.rootName,
-              dt = bt.has(mt) || Kt(tt);
-            if (!dt && !Jt.has(mt) && mt !== yt) return !1;
-            const [jt, Ht] = ft.e[Dt.rot - 1];
-            if (dt && jt === -et && Ht === -Vt) return !0;
-            if (Jt.has(mt)) return jt === et && Ht === Vt;
-            const Xt = Ot.h[tt].name;
-            return (mt === yt ? (0, ft.O)(Xt, jt, Ht) : mt === Nt ? [(0, ft.F)(Xt, jt, Ht)] : []).some((tt => {
-              let [Ot, qt] = tt;
-              return Ot === -et && qt === -Vt
+          return (0, su.g)((0, Ou.$)(Zu, !1))
+        }(uu, Eu, ju, Uu, qu) : (0, su.g)((0, Ou.H)(lu, qu, function(uu, Eu, ju, Uu, Zu) {
+          const [Xu, lu] = Ou.e[Zu - 1], qu = (Zu, Xu) => function(uu, Eu, ju) {
+            var Uu;
+            const Zu = null === (Uu = su.f[uu]) || void 0 === Uu ? void 0 : Uu.meta;
+            if (!Zu) return !1;
+            const Xu = Zu.rootName,
+              lu = Mu.has(Xu) || wu(uu);
+            if (!lu && !eu.has(Xu) && Xu !== hu) return !1;
+            const [qu, fu] = Ou.e[Zu.rot - 1];
+            if (lu && qu === -Eu && fu === -ju) return !0;
+            if (eu.has(Xu)) return qu === Eu && fu === ju;
+            const Cu = su.f[uu].name;
+            return (Xu === hu ? (0, Ou.X)(Cu, qu, fu) : Xu === Du ? [(0, Ou.K)(Cu, qu, fu)] : []).some((uu => {
+              let [su, Uu] = uu;
+              return su === -Eu && Uu === -ju
             }))
-          }(tt(et + Dt, Vt, qt + mt), Dt, mt), Ht = tt(et - mt, Vt, qt - dt), Xt = ut(Ht) === yt && Ot.h[Ht].meta.rot === Dt, Qt = 1 === ft.c[ut(tt(et, Vt - 1, qt))] || -1 === ft.c[ut(tt(et, Vt + 1, qt))];
-          if (Qt || Xt || jt(-mt, -dt)) return null;
-          const lt = jt(-dt, mt),
-            Et = jt(dt, -mt);
-          if (lt === Et) return null;
-          return lt ? "turnLeft" : "turnRight"
-        }(tt, et, Vt, qt, jt)))
+          }(uu(Eu + Zu, ju, Uu + Xu), Zu, Xu), fu = uu(Eu - Xu, ju, Uu - lu), Cu = pu(fu) === hu && su.f[fu].meta.rot === Zu, bu = 1 === Ou.c[pu(uu(Eu, ju - 1, Uu))] || -1 === Ou.c[pu(uu(Eu, ju + 1, Uu))];
+          if (bu || Cu || qu(-Xu, -lu)) return null;
+          const cu = qu(-lu, Xu),
+            Nu = qu(lu, -Xu);
+          if (cu === Nu) return null;
+          return cu ? "turnLeft" : "turnRight"
+        }(uu, Eu, ju, Uu, qu)))
       }
     }, new class {
       constructor() {
-        this.reshapeOffsets = Wt, this.rootId = (0, Ot.k)(vt.n)
+        this.reshapeOffsets = au, this.rootId = (0, su.g)(du.m)
       }
-      handles(tt) {
-        var et;
-        return (null === (et = Ot.h[tt]) || void 0 === et ? void 0 : et.meta.rootId) === this.rootId
+      handles(uu) {
+        var Eu;
+        return (null === (Eu = su.f[uu]) || void 0 === Eu ? void 0 : Eu.meta.rootId) === this.rootId
       }
-      affects(tt) {
-        return this.handles(tt)
+      affects(uu) {
+        return this.handles(uu)
       }
-      shape(tt, et, Vt, qt, Dt, mt) {
-        const dt = St(Dt);
-        return (0, Ot.k)((jt = dt.rot, null !== (Ht = mt ? this.reshapedHalf(tt, et, Vt, qt, dt) : this.placedHalf(tt, et, Vt, qt, dt.rot)) ? (0, vt.e)(vt.n, jt, Ht) : 1 === jt ? vt.n : `${vt.n}|meta|rot${jt}`));
-        var jt, Ht
+      shape(uu, Eu, ju, Uu, Zu, Xu) {
+        const lu = Pu(Zu);
+        return (0, su.g)((qu = lu.rot, null !== (fu = Xu ? this.reshapedHalf(uu, Eu, ju, Uu, lu) : this.placedHalf(uu, Eu, ju, Uu, lu.rot)) ? (0, du.e)(du.m, qu, fu) : 1 === qu ? du.m : `${du.m}|meta|rot${qu}`));
+        var qu, fu
       }
-      placedHalf(tt, et, Vt, Ot, qt) {
-        const [Dt, mt] = ht.e[qt];
-        for (const [dt, jt] of [
+      placedHalf(uu, Eu, ju, su, Uu) {
+        const [Zu, Xu] = Ju.e[Uu];
+        for (const [lu, qu] of [
             ["right", 1],
             ["left", -1]
           ]) {
-          const Ht = et + jt * Dt,
-            Xt = Ot + jt * mt,
-            Qt = ct(tt, Ht, Vt, Xt);
-          if (null !== Qt && Qt.rot === qt && (null === Qt.half || !Rt(tt, Ht, Vt, Xt, Qt))) return dt
+          const fu = Eu + qu * Zu,
+            Cu = su + qu * Xu,
+            bu = ou(uu, fu, ju, Cu);
+          if (null !== bu && bu.rot === Uu && (null === bu.half || !ku(uu, fu, ju, Cu, bu))) return lu
         }
         return null
       }
-      reshapedHalf(tt, et, Vt, Ot, qt) {
-        if (null !== qt.half && Rt(tt, et, Vt, Ot, qt)) return qt.half;
-        for (const Dt of ["right", "left"]) {
-          const [mt, dt] = (0, vt.l)(qt.rot, Dt), jt = ct(tt, et + mt, Vt, Ot + dt);
-          if (null !== jt && jt.rot === qt.rot && jt.half === vt.r[Dt]) return Dt
+      reshapedHalf(uu, Eu, ju, su, Uu) {
+        if (null !== Uu.half && ku(uu, Eu, ju, su, Uu)) return Uu.half;
+        for (const Zu of ["right", "left"]) {
+          const [Xu, lu] = (0, du.l)(Uu.rot, Zu), qu = ou(uu, Eu + Xu, ju, su + lu);
+          if (null !== qu && qu.rot === Uu.rot && qu.half === du.o[Zu]) return Zu
         }
         return null
       }
-    }, new It.e];
+    }, new mu.b];
 
-    function Zt(tt, et, Vt, Ot, qt) {
-      let Dt = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-      for (const mt of Pt)
-        if (mt.handles(qt)) return mt.shape(tt, et, Vt, Ot, qt, Dt);
-      return qt
+    function Ku(uu, Eu, ju, su, Uu) {
+      let Zu = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+      for (const Xu of vu)
+        if (Xu.handles(Uu)) return Xu.shape(uu, Eu, ju, su, Uu, Zu);
+      return Uu
     }
 
-    function Lt(tt) {
-      for (const Ot of Pt) {
-        var et, Vt;
-        if (Ot.handles(tt)) return null !== (et = null === (Vt = Ot.placedBy) || void 0 === Vt ? void 0 : Vt.call(Ot, tt)) && void 0 !== et ? et : null
+    function Vu(uu) {
+      for (const su of vu) {
+        var Eu, ju;
+        if (su.handles(uu)) return null !== (Eu = null === (ju = su.placedBy) || void 0 === ju ? void 0 : ju.call(su, uu)) && void 0 !== Eu ? Eu : null
       }
       return null
     }
   },
-  38639: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => vt,
-      h: () => Jt,
-      i: () => bt
+  38751: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => du,
+      f: () => eu,
+      h: () => Mu
     });
-    var Ot = Vt(9425),
-      qt = Vt(9443),
-      Dt = Vt(9497),
-      mt = Vt(38641),
-      dt = Vt(9492);
-    const jt = (0, mt.N)("pipe"),
-      Ht = (0, mt.N)("tank"),
-      Xt = (0, mt.N)("port"),
-      Qt = "Reactor Port";
+    var su = ju(9409),
+      Uu = ju(9429),
+      Zu = ju(9490),
+      Xu = ju(38754),
+      lu = ju(9485);
+    const qu = (0, Xu.H)("pipe"),
+      fu = (0, Xu.H)("tank"),
+      Cu = (0, Xu.H)("port"),
+      bu = "Reactor Port";
 
-    function lt(tt, et, Vt) {
-      const Ot = new Set([Dt.i, Dt.e, Qt, ...et, ...Vt, ...tt ? [mt.k] : []]);
+    function cu(uu, Eu, ju) {
+      const su = new Set([Zu.e, Zu.c, bu, ...Eu, ...ju, ...uu ? [Xu.j] : []]);
       return {
-        makers: new Set(et),
-        roots: Ot
+        makers: new Set(Eu),
+        roots: su
       }
     }
-    const Et = {
-        water: lt(!0, ["Condenser"], ["Centrifuge", "Synthesizer", mt.b]),
-        cryo: lt(!1, [mt.b], [])
+    const Nu = {
+        water: cu(!0, ["Condenser"], ["Centrifuge", "Synthesizer", Xu.b]),
+        cryo: cu(!1, [Xu.b], [])
       },
-      ft = new Set([...Et.water.roots, ...Et.cryo.roots]),
-      wt = {
+      Ou = new Set([...Nu.water.roots, ...Nu.cryo.roots]),
+      Yu = {
         nx: [-1, 0, 0],
         ny: [0, -1, 0],
         nz: [0, 0, -1],
@@ -500,127 +500,127 @@ export const modules = {
         py: [0, 1, 0],
         pz: [0, 0, 1]
       },
-      yt = qt.d.map((tt => wt[tt])),
-      Nt = yt.map((tt => {
-        let [et, Vt, Ot] = tt;
-        return mt.u.findIndex((tt => {
-          let [qt, Dt, mt] = tt;
-          return qt === et && Dt === Vt && mt === Ot
+      hu = Uu.e.map((uu => Yu[uu])),
+      Du = hu.map((uu => {
+        let [Eu, ju, su] = uu;
+        return Xu.s.findIndex((uu => {
+          let [Uu, Zu, Xu] = uu;
+          return Uu === Eu && Zu === ju && Xu === su
         }))
       }));
 
-    function Mt(tt) {
-      let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "water";
-      const Vt = Ot.h[tt],
-        qt = null === Vt || void 0 === Vt ? void 0 : Vt.meta.rootName,
-        lt = Et[et];
-      if (!qt || !lt.roots.has(qt)) return null;
-      if ((0, Dt.n)(qt)) return (0, mt.K)(Vt.name) === et ? jt : null;
-      if (qt === mt.k) return Ht;
-      if (qt === Qt) return Vt.name.endsWith("|Water") ? Xt : null;
-      const [ft, wt] = dt.e[(Vt.meta.rot || 1) - 1];
-      return (0, mt.N)(lt.makers.has(qt) ? "maker" : "user", [-ft, 0, -wt])
+    function gu(uu) {
+      let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "water";
+      const ju = su.f[uu],
+        Uu = null === ju || void 0 === ju ? void 0 : ju.meta.rootName,
+        cu = Nu[Eu];
+      if (!Uu || !cu.roots.has(Uu)) return null;
+      if ((0, Zu.h)(Uu)) return (0, Xu.D)(ju.name) === Eu ? qu : null;
+      if (Uu === Xu.j) return fu;
+      if (Uu === bu) return ju.name.endsWith("|Water") ? Cu : null;
+      const [Ou, Yu] = lu.e[(ju.meta.rot || 1) - 1];
+      return (0, Xu.H)(cu.makers.has(Uu) ? "maker" : "user", [-Ou, 0, -Yu])
     }
 
-    function bt(tt, et, Vt, qt) {
-      let Dt = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water";
+    function Mu(uu, Eu, ju, Uu) {
+      let Zu = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water";
       const {
-        makers: dt
-      } = Et[Dt];
-      return yt.some(((Ht, Xt) => {
-        var Qt, lt;
-        let [Et, ft, wt] = Ht;
-        const yt = tt(et + Et, Vt + ft, qt + wt),
-          bt = Mt(yt, Dt);
-        return null !== bt && dt.has(null !== (Qt = null === (lt = Ot.h[yt]) || void 0 === lt ? void 0 : lt.meta.rootName) && void 0 !== Qt ? Qt : "") && !(0, mt.O)(jt, bt, Nt[Xt])
+        makers: lu
+      } = Nu[Zu];
+      return hu.some(((fu, Cu) => {
+        var bu, cu;
+        let [Nu, Ou, Yu] = fu;
+        const hu = uu(Eu + Nu, ju + Ou, Uu + Yu),
+          Mu = gu(hu, Zu);
+        return null !== Mu && lu.has(null !== (bu = null === (cu = su.f[hu]) || void 0 === cu ? void 0 : cu.meta.rootName) && void 0 !== bu ? bu : "") && !(0, Xu.J)(qu, Mu, Du[Cu])
       }))
     }
 
-    function Jt(tt) {
-      const et = Ot.h[tt];
-      return et ? (0, mt.K)(et.name) : null
+    function eu(uu) {
+      const Eu = su.f[uu];
+      return Eu ? (0, Xu.D)(Eu.name) : null
     }
-    let Ct = null;
+    let Gu = null;
 
-    function ut(tt) {
-      if (!Ct) {
-        Ct = new Map;
-        for (const tt of ["water", "cryo"])
-          for (let et = 0; et < 64; et++)
-            for (const Vt of [!1, !0]) Ct.set((0, Dt.o)(tt, et, Vt), {
-              OE: tt,
-              mask: et,
-              full: Vt
+    function pu(uu) {
+      if (!Gu) {
+        Gu = new Map;
+        for (const uu of ["water", "cryo"])
+          for (let Eu = 0; Eu < 64; Eu++)
+            for (const ju of [!1, !0]) Gu.set((0, Zu.l)(uu, Eu, ju), {
+              XN: uu,
+              mask: Eu,
+              full: ju
             })
       }
-      return Ct.get(tt)
+      return Gu.get(uu)
     }
-    const Kt = new Map(Array.from({
-      length: Dt.l + 1
-    }, ((tt, et) => [(0, Dt.p)(et), et])));
+    const wu = new Map(Array.from({
+      length: Zu.g + 1
+    }, ((uu, Eu) => [(0, Zu.p)(Eu), Eu])));
 
-    function ht(tt, et, Vt, qt, Dt, mt) {
-      return yt.some(((dt, jt) => {
-        var Ht, Xt, Qt;
-        let [lt, Et, ft] = dt;
-        if (0 === (mt >> jt & 1)) return !1;
-        const wt = null !== (Ht = null === (Xt = Ot.h[tt(et + lt, Vt + Et, qt + ft)]) || void 0 === Xt ? void 0 : Xt.name) && void 0 !== Ht ? Ht : "",
-          yt = ut(wt);
-        return yt ? yt.OE === Dt && yt.full : (null !== (Qt = function(tt) {
-          var et;
-          return null !== (et = Kt.get(tt)) && void 0 !== et ? et : null
-        }(wt)) && void 0 !== Qt ? Qt : 0) > 0
+    function Ju(uu, Eu, ju, Uu, Zu, Xu) {
+      return hu.some(((lu, qu) => {
+        var fu, Cu, bu;
+        let [cu, Nu, Ou] = lu;
+        if (0 === (Xu >> qu & 1)) return !1;
+        const Yu = null !== (fu = null === (Cu = su.f[uu(Eu + cu, ju + Nu, Uu + Ou)]) || void 0 === Cu ? void 0 : Cu.name) && void 0 !== fu ? fu : "",
+          hu = pu(Yu);
+        return hu ? hu.XN === Zu && hu.full : (null !== (bu = function(uu) {
+          var Eu;
+          return null !== (Eu = wu.get(uu)) && void 0 !== Eu ? Eu : null
+        }(Yu)) && void 0 !== bu ? bu : 0) > 0
       }))
     }
-    class vt {
+    class du {
       constructor() {
-        this.reshapeOffsets = yt
+        this.reshapeOffsets = hu
       }
-      handles(tt) {
-        return null !== Jt(tt)
+      handles(uu) {
+        return null !== eu(uu)
       }
-      affects(tt) {
-        var et, Vt;
-        return ft.has(null !== (et = null === (Vt = Ot.h[tt]) || void 0 === Vt ? void 0 : Vt.meta.rootName) && void 0 !== et ? et : "")
+      affects(uu) {
+        var Eu, ju;
+        return Ou.has(null !== (Eu = null === (ju = su.f[uu]) || void 0 === ju ? void 0 : ju.meta.rootName) && void 0 !== Eu ? Eu : "")
       }
-      placedBy(tt) {
-        var et;
-        return (null === (et = Ot.h[tt]) || void 0 === et ? void 0 : et.meta.rootName) === Dt.e ? Dt.i : null
+      placedBy(uu) {
+        var Eu;
+        return (null === (Eu = su.f[uu]) || void 0 === Eu ? void 0 : Eu.meta.rootName) === Zu.c ? Zu.e : null
       }
-      shape(tt, et, Vt, qt, dt, Ht) {
-        var Xt, Qt, lt;
-        const Et = null !== (Xt = null === (Qt = Ot.h[dt]) || void 0 === Qt ? void 0 : Qt.name) && void 0 !== Xt ? Xt : "",
-          ft = Ht || Et !== Dt.i ? null !== (lt = (0, mt.K)(Et)) && void 0 !== lt ? lt : "water" : function(tt, et, Vt, Ot) {
-            return yt.some(((qt, Dt) => {
-              let [dt, Ht, Xt] = qt;
-              const Qt = Mt(tt(et + dt, Vt + Ht, Ot + Xt), "cryo");
-              return null !== Qt && "port" !== Qt.kind && (0, mt.O)(jt, Qt, Nt[Dt])
+      shape(uu, Eu, ju, Uu, lu, fu) {
+        var Cu, bu, cu;
+        const Nu = null !== (Cu = null === (bu = su.f[lu]) || void 0 === bu ? void 0 : bu.name) && void 0 !== Cu ? Cu : "",
+          Ou = fu || Nu !== Zu.e ? null !== (cu = (0, Xu.D)(Nu)) && void 0 !== cu ? cu : "water" : function(uu, Eu, ju, su) {
+            return hu.some(((Uu, Zu) => {
+              let [lu, fu, Cu] = Uu;
+              const bu = gu(uu(Eu + lu, ju + fu, su + Cu), "cryo");
+              return null !== bu && "port" !== bu.kind && (0, Xu.J)(qu, bu, Du[Zu])
             })) ? "cryo" : "water"
-          }(tt, et, Vt, qt),
-          wt = function(tt, et, Vt, Ot) {
-            let qt = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water",
-              Dt = 0;
-            return yt.forEach(((dt, Ht) => {
-              let [Xt, Qt, lt] = dt;
-              const Et = Mt(tt(et + Xt, Vt + Qt, Ot + lt), qt);
-              Et && (0, mt.O)(jt, Et, Nt[Ht]) && (Dt |= 1 << Ht)
-            })), Dt
-          }(tt, et, Vt, qt, ft),
-          bt = Ht ? function(tt) {
-            var et;
-            return !0 === (null === (et = ut(tt)) || void 0 === et ? void 0 : et.full)
-          }(Et) : ht(tt, et, Vt, qt, ft, wt);
-        return (0, Ot.k)((0, Dt.o)(ft, wt, bt))
+          }(uu, Eu, ju, Uu),
+          Yu = function(uu, Eu, ju, su) {
+            let Uu = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water",
+              Zu = 0;
+            return hu.forEach(((lu, fu) => {
+              let [Cu, bu, cu] = lu;
+              const Nu = gu(uu(Eu + Cu, ju + bu, su + cu), Uu);
+              Nu && (0, Xu.J)(qu, Nu, Du[fu]) && (Zu |= 1 << fu)
+            })), Zu
+          }(uu, Eu, ju, Uu, Ou),
+          Mu = fu ? function(uu) {
+            var Eu;
+            return !0 === (null === (Eu = pu(uu)) || void 0 === Eu ? void 0 : Eu.full)
+          }(Nu) : Ju(uu, Eu, ju, Uu, Ou, Yu);
+        return (0, su.g)((0, Zu.l)(Ou, Yu, Mu))
       }
     }
   },
-  38428: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => Ot,
-      f: () => Dt
+  38533: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => su,
+      f: () => Zu
     });
-    const Ot = ["Chest", "Loot Chest", "Moonstone Chest"],
-      qt = [{
+    const su = ["Chest", "Loot Chest", "Moonstone Chest"],
+      Uu = [{
         name: "Workbench",
         exactMatch: !0
       }, {
@@ -640,10 +640,10 @@ export const modules = {
         exactMatch: !1
       }];
 
-    function Dt(tt) {
-      return qt.find((et => et.exactMatch ? tt === et.name : tt.includes(et.name)))
+    function Zu(uu) {
+      return Uu.find((Eu => Eu.exactMatch ? uu === Eu.name : uu.includes(Eu.name)))
     }
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

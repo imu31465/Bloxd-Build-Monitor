@@ -1,286 +1,286 @@
 export const id = 45;
 export const ids = [45, 205];
 export const modules = {
-  34452: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      packDisplayName: () => ft,
-      packModelMessage: () => wt,
-      packModelSummary: () => Nt,
-      refusedPackModels: () => yt
+  34615: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      packDisplayName: () => Ou,
+      packModelMessage: () => Yu,
+      packModelSummary: () => Du,
+      refusedPackModels: () => hu
     });
-    var Ot = Vt(34459),
-      qt = Vt(34466);
-    const Dt = "DRACO",
-      mt = 0,
-      dt = 1,
-      jt = 0,
-      Ht = 1,
-      Xt = 32768;
+    var su = ju(34617),
+      Uu = ju(34621);
+    const Zu = "DRACO",
+      Xu = 0,
+      lu = 1,
+      qu = 0,
+      fu = 1,
+      Cu = 32768;
 
-    function Qt(tt) {
-      const et = new DataView(tt.buffer, tt.byteOffset, tt.byteLength);
-      let Vt = 0;
-      const Ot = () => {
-          if (Vt >= tt.byteLength) throw new RangeError("past the stream");
-          return tt[Vt++]
+    function bu(uu) {
+      const Eu = new DataView(uu.buffer, uu.byteOffset, uu.byteLength);
+      let ju = 0;
+      const su = () => {
+          if (ju >= uu.byteLength) throw new RangeError("past the stream");
+          return uu[ju++]
         },
-        qt = () => {
-          if (Vt + 4 > tt.byteLength) throw new RangeError("past the stream");
-          const Ot = et.getUint32(Vt, !0);
-          return Vt += 4, Ot
+        Uu = () => {
+          if (ju + 4 > uu.byteLength) throw new RangeError("past the stream");
+          const su = Eu.getUint32(ju, !0);
+          return ju += 4, su
         },
-        Qt = () => {
-          let tt = 0;
-          for (let et = 0; et < 35; et += 7) {
-            const Vt = Ot();
-            if (tt += (127 & Vt) * 2 ** et, 0 === (128 & Vt)) return tt
+        bu = () => {
+          let uu = 0;
+          for (let Eu = 0; Eu < 35; Eu += 7) {
+            const ju = su();
+            if (uu += (127 & ju) * 2 ** Eu, 0 === (128 & ju)) return uu
           }
           throw new RangeError("varint too long")
         };
       try {
-        for (let tt = 0; tt < Dt.length; tt++)
-          if (Ot() !== Dt.charCodeAt(tt)) return null;
-        const et = Ot(),
-          lt = Ot(),
-          Et = Ot(),
-          ft = Ot(),
-          wt = Ot() | Ot() << 8;
-        if (2 !== et) return null;
-        0 !== (wt & Xt) && function(tt, et, Vt) {
-          const Ot = () => {
-              et(Vt())
+        for (let uu = 0; uu < Zu.length; uu++)
+          if (su() !== Zu.charCodeAt(uu)) return null;
+        const Eu = su(),
+          cu = su(),
+          Nu = su(),
+          Ou = su(),
+          Yu = su() | su() << 8;
+        if (2 !== Eu) return null;
+        0 !== (Yu & Cu) && function(uu, Eu, ju) {
+          const su = () => {
+              Eu(ju())
             },
-            qt = () => {
-              let Vt = 1,
-                qt = !0;
-              for (; Vt > 0;) {
-                Vt--, qt || Ot(), qt = !1;
-                const Dt = tt();
-                for (let Vt = 0; Vt < Dt; Vt++) Ot(), et(tt());
-                Vt += tt()
+            Uu = () => {
+              let ju = 1,
+                Uu = !0;
+              for (; ju > 0;) {
+                ju--, Uu || su(), Uu = !1;
+                const Zu = uu();
+                for (let ju = 0; ju < Zu; ju++) su(), Eu(uu());
+                ju += uu()
               }
             },
-            Dt = tt();
-          for (let mt = 0; mt < Dt; mt++) tt(), qt();
-          qt()
-        }(Qt, (et => {
-          if (Vt + et > tt.byteLength) throw new RangeError("past the stream");
-          Vt += et
-        }), Ot);
-        const yt = lt < 2 ? qt : Qt;
-        if (Et === mt) return {
+            Zu = uu();
+          for (let Xu = 0; Xu < Zu; Xu++) uu(), Uu();
+          Uu()
+        }(bu, (Eu => {
+          if (ju + Eu > uu.byteLength) throw new RangeError("past the stream");
+          ju += Eu
+        }), su);
+        const hu = cu < 2 ? Uu : bu;
+        if (Nu === Xu) return {
           faces: 0,
-          vertices: qt()
+          vertices: Uu()
         };
-        if (Et !== dt) return null;
-        if (ft === jt) {
+        if (Nu !== lu) return null;
+        if (Ou === qu) {
           return {
-            faces: yt(),
-            vertices: yt()
+            faces: hu(),
+            vertices: hu()
           }
         }
-        if (ft !== Ht) return null;
-        Ot(), lt < 2 && Qt();
-        const Nt = Qt();
+        if (Ou !== fu) return null;
+        su(), cu < 2 && bu();
+        const Du = bu();
         return {
-          faces: Qt(),
-          vertices: Nt
+          faces: bu(),
+          vertices: Du
         }
       } catch {
         return null
       }
     }
 
-    function lt(tt, et, Vt) {
-      var Ot, qt;
-      if (null === (Ot = null === (qt = tt.extensionsUsed) || void 0 === qt ? void 0 : qt.includes("KHR_draco_mesh_compression")) || void 0 === Ot || !Ot) return null;
-      for (const ft of null !== (Dt = tt.meshes) && void 0 !== Dt ? Dt : []) {
-        var Dt;
-        for (const Ot of ft.primitives) {
-          var mt, dt, jt, Ht, Xt, lt;
-          const qt = null === (mt = Ot.extensions) || void 0 === mt ? void 0 : mt.KHR_draco_mesh_compression;
-          if ("object" !== typeof qt || null === qt) continue;
-          const Dt = null === (dt = tt.bufferViews) || void 0 === dt ? void 0 : dt[qt.bufferView];
-          if (null === et || void 0 === Dt) return Et;
-          const ft = null !== (jt = Dt.byteOffset) && void 0 !== jt ? jt : 0,
-            wt = Qt(et.subarray(ft, ft + Dt.byteLength));
-          if (null === wt && !Vt) continue;
-          const yt = null !== (Ht = tt.accessors) && void 0 !== Ht ? Ht : [],
-            Nt = null === (Xt = yt[Ot.attributes.POSITION]) || void 0 === Xt ? void 0 : Xt.count,
-            Mt = void 0 === Ot.indices ? 0 : null === (lt = yt[Ot.indices]) || void 0 === lt ? void 0 : lt.count;
-          if (null === wt || void 0 === Nt || void 0 === Mt || 3 * wt.faces !== Mt || wt.vertices > Nt) return Et
+    function cu(uu, Eu, ju) {
+      var su, Uu;
+      if (null === (su = null === (Uu = uu.extensionsUsed) || void 0 === Uu ? void 0 : Uu.includes("KHR_draco_mesh_compression")) || void 0 === su || !su) return null;
+      for (const Ou of null !== (Zu = uu.meshes) && void 0 !== Zu ? Zu : []) {
+        var Zu;
+        for (const su of Ou.primitives) {
+          var Xu, lu, qu, fu, Cu, cu;
+          const Uu = null === (Xu = su.extensions) || void 0 === Xu ? void 0 : Xu.KHR_draco_mesh_compression;
+          if ("object" !== typeof Uu || null === Uu) continue;
+          const Zu = null === (lu = uu.bufferViews) || void 0 === lu ? void 0 : lu[Uu.bufferView];
+          if (null === Eu || void 0 === Zu) return Nu;
+          const Ou = null !== (qu = Zu.byteOffset) && void 0 !== qu ? qu : 0,
+            Yu = bu(Eu.subarray(Ou, Ou + Zu.byteLength));
+          if (null === Yu && !ju) continue;
+          const hu = null !== (fu = uu.accessors) && void 0 !== fu ? fu : [],
+            Du = null === (Cu = hu[su.attributes.POSITION]) || void 0 === Cu ? void 0 : Cu.count,
+            gu = void 0 === su.indices ? 0 : null === (cu = hu[su.indices]) || void 0 === cu ? void 0 : cu.count;
+          if (null === Yu || void 0 === Du || void 0 === gu || 3 * Yu.faces !== gu || Yu.vertices > Du) return Nu
         }
       }
       return null
     }
-    const Et = "has a Draco stream whose counts don't match its accessors";
+    const Nu = "has a Draco stream whose counts don't match its accessors";
 
-    function ft(tt) {
-      var et;
-      return null !== (et = tt.name) && void 0 !== et ? et : tt.fromFolderName || tt.id
+    function Ou(uu) {
+      var Eu;
+      return null !== (Eu = uu.name) && void 0 !== Eu ? Eu : uu.fromFolderName || uu.id
     }
 
-    function wt(tt, et, Vt) {
-      return `Texture pack "${tt}": model "${et}" was not loaded because it ${Vt}. The default model is used instead.`
+    function Yu(uu, Eu, ju) {
+      return `Texture pack "${uu}": model "${Eu}" was not loaded because it ${ju}. The default model is used instead.`
     }
 
-    function yt(tt, et, Vt) {
+    function hu(uu, Eu, ju) {
       let {
-        strictDraco: Dt = !1
+        strictDraco: Zu = !1
       } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const mt = {};
-      for (const [dt, jt] of Object.entries(et)) {
-        let et;
-        if (jt.startsWith("data:")) try {
-          const tt = new Uint8Array((0, qt.r)(jt));
-          if (et = (0, Ot.b)(tt), null === et) {
+      const Xu = {};
+      for (const [lu, qu] of Object.entries(Eu)) {
+        let Eu;
+        if (qu.startsWith("data:")) try {
+          const uu = new Uint8Array((0, Uu.u)(qu));
+          if (Eu = (0, su.e)(uu), null === Eu) {
             const {
-              json: Vt,
-              bin: Ot
-            } = (0, qt.z)(tt);
-            et = lt(Vt, Ot, Dt)
+              json: ju,
+              bin: su
+            } = (0, Uu.C)(uu);
+            Eu = cu(ju, su, Zu)
           }
         } catch {
-          et = "is not a binary glTF 2.0 file"
-        } else et = "loads data from outside the file";
-        et && (mt[dt] = et, Vt && console.warn(wt(tt, dt, et)))
+          Eu = "is not a binary glTF 2.0 file"
+        } else Eu = "loads data from outside the file";
+        Eu && (Xu[lu] = Eu, ju && console.warn(Yu(uu, lu, Eu)))
       }
-      return mt
+      return Xu
     }
 
-    function Nt(tt, et) {
-      const Vt = Object.keys(et);
-      if (0 === Vt.length) return null;
-      if (1 === Vt.length) return wt(tt, Vt[0], et[Vt[0]]);
-      const Ot = Vt.map((tt => `"${tt}" ${et[tt]}`)).join("; ");
-      return `Texture pack "${tt}": ${Vt.length} models were not loaded (${Ot}). The default models are used instead.`
+    function Du(uu, Eu) {
+      const ju = Object.keys(Eu);
+      if (0 === ju.length) return null;
+      if (1 === ju.length) return Yu(uu, ju[0], Eu[ju[0]]);
+      const su = ju.map((uu => `"${uu}" ${Eu[uu]}`)).join("; ");
+      return `Texture pack "${uu}": ${ju.length} models were not loaded (${su}). The default models are used instead.`
     }
   },
-  61731: (tt, et, Vt) => {
-    Vt.d(et, {
-      packAssets: () => Nt
+  61713: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      packAssets: () => Du
     });
-    var Ot = Vt(2219),
-      qt = Vt(2208),
-      Dt = Vt(34452),
-      mt = Vt(3274),
-      dt = Vt(3305);
+    var su = ju(2239),
+      Uu = ju(2222),
+      Zu = ju(34615),
+      Xu = ju(3383),
+      lu = ju(3416);
 
-    function jt(tt, et, Vt, Ot) {
-      const qt = `${(0,mt.d)(tt,et)}|sheets${Vt}`;
-      return Ot === dt.b ? qt : `${qt}|layers${Ot}`
+    function qu(uu, Eu, ju, su) {
+      const Uu = `${(0,Xu.c)(uu,Eu)}|sheets${ju}`;
+      return su === lu.c ? Uu : `${Uu}|layers${su}`
     }
-    var Ht = Vt(3312),
-      Xt = Vt(3244),
-      Qt = Vt(3231),
-      lt = Vt(3281);
-    var Et = Vt(51303);
-    const ft = 256;
-    let wt = null,
-      yt = null;
+    var fu = ju(3420),
+      Cu = ju(3354),
+      bu = ju(3346),
+      cu = ju(3391);
+    var Nu = ju(51278);
+    const Ou = 256;
+    let Yu = null,
+      hu = null;
 
-    function Nt(tt) {
-      var et;
-      let Vt = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : dt.b;
-      if ((null === (et = wt) || void 0 === et ? void 0 : et.pack) === tt.pack && wt.maxLayerWidth === Vt) return wt.assets;
-      const Nt = (0, Et.f)(tt.pack, (0, Et.j)(tt));
-      if (null === Nt || !(0, qt.g)(Nt)) return Promise.resolve(null);
-      const bt = async function(tt, et, Vt) {
-        var Et;
-        const wt = null !== (Et = tt.textureOverrides) && void 0 !== Et ? Et : {},
+    function Du(uu) {
+      var Eu;
+      let ju = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : lu.c;
+      if ((null === (Eu = Yu) || void 0 === Eu ? void 0 : Eu.pack) === uu.pack && Yu.maxLayerWidth === ju) return Yu.assets;
+      const Du = (0, Nu.g)(uu.pack, (0, Nu.k)(uu));
+      if (null === Du || !(0, Uu.f)(Du)) return Promise.resolve(null);
+      const Mu = async function(uu, Eu, ju) {
+        var Nu;
+        const Yu = null !== (Nu = uu.textureOverrides) && void 0 !== Nu ? Nu : {},
           {
-            id: Nt,
-            version: bt
-          } = tt.metaData,
-          Jt = et && Nt !== Ot.p.CUSTOM,
-          Ct = {};
-        Jt && (yt = Ct);
-        let ut, Kt, ht = Jt ? await async function(tt, et, Vt, Ot) {
-          const qt = jt(tt, et, Vt, dt.b),
-            Dt = jt(tt, et, Vt, Ot),
-            Ht = await (0, mt.f)((tt => tt === qt || tt === Dt));
-          return null !== Ht && (Ot === dt.b || Ht.blockAtlasWidth <= Ot) ? Ht : null
-        }(Nt, bt, ft, Vt): null;
-        if (null === ht) {
+            id: Du,
+            version: Mu
+          } = uu.metaData,
+          eu = Eu && Du !== su.p.CUSTOM,
+          Gu = {};
+        eu && (hu = Gu);
+        let pu, wu, Ju = eu ? await async function(uu, Eu, ju, su) {
+          const Uu = qu(uu, Eu, ju, lu.c),
+            Zu = qu(uu, Eu, ju, su),
+            fu = await (0, Xu.f)((uu => uu === Uu || uu === Zu));
+          return null !== fu && (su === lu.c || fu.blockAtlasWidth <= su) ? fu : null
+        }(Du, Mu, Ou, ju): null;
+        if (null === Ju) {
           const {
-            blockMetadata: tt,
-            getDefaultTexture: et,
-            textureNameToIndex: Dt
-          } = await (0, qt.k)(), dt = (0, Xt.b)(tt, ((tt, Vt) => ({
-            url: Mt(wt, et, tt, "block" === Vt ? Qt.e.BLOCK : Qt.e.ITEM)
-          }))), Ht = await
-          function(tt, et, Vt, Ot, qt, Dt) {
-            return (0, lt.d)((mt => mt.WasmTextureWorker.generateRequired(tt, et, Vt, Ot, qt, Dt)))
-          }(tt, Dt, dt, Nt === Ot.d, Vt, ft), Et = Ht.assets;
-          ht = {
-            ...Et,
+            blockMetadata: uu,
+            getDefaultTexture: Eu,
+            textureNameToIndex: Zu
+          } = await (0, Uu.k)(), lu = (0, Cu.d)(uu, ((uu, ju) => ({
+            url: gu(Yu, Eu, uu, "block" === ju ? bu.e.BLOCK : bu.e.ITEM)
+          }))), fu = await
+          function(uu, Eu, ju, su, Uu, Zu) {
+            return (0, cu.e)((Xu => Xu.WasmTextureWorker.generateRequired(uu, Eu, ju, su, Uu, Zu)))
+          }(uu, Zu, lu, Du === su.e, ju, Ou), Nu = fu.assets;
+          Ju = {
+            ...Nu,
             averageColors: {}
-          }, ut = Ht.averageColors(), Jt && (Kt = ut.then((async tt => {
-            null !== tt && yt === Ct && await
-            function(tt, et, Vt, Ot, qt) {
-              return (0, mt.h)(jt(tt, et, Ot, qt), Vt)
-            }(Nt, bt, {
-              ...Et,
-              averageColors: tt
-            }, ft, Ht.layerCap)
+          }, pu = fu.averageColors(), eu && (wu = pu.then((async uu => {
+            null !== uu && hu === Gu && await
+            function(uu, Eu, ju, su, Uu) {
+              return (0, Xu.l)(qu(uu, Eu, su, Uu), ju)
+            }(Du, Mu, {
+              ...Nu,
+              averageColors: uu
+            }, Ou, fu.layerCap)
           })))
         }
-        return function(tt, et) {
-          var Vt, Ot;
-          let qt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Promise.resolve((dt = tt.averageColors, 0 === Object.keys(null !== dt && void 0 !== dt ? dt : {}).length ? null : tt.averageColors)),
-            mt = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Promise.resolve();
-          var dt;
-          const jt = null !== (Vt = et.textureOverrides) && void 0 !== Vt ? Vt : {},
-            Xt = null !== (Ot = et.modelOverrides) && void 0 !== Ot ? Ot : {},
-            Qt = 0 === Object.keys(Xt).length ? {} : (0, Dt.refusedPackModels)((0, Dt.packDisplayName)(et.metaData), Xt, !0, {
+        return function(uu, Eu) {
+          var ju, su;
+          let Uu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Promise.resolve((lu = uu.averageColors, 0 === Object.keys(null !== lu && void 0 !== lu ? lu : {}).length ? null : uu.averageColors)),
+            Xu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Promise.resolve();
+          var lu;
+          const qu = null !== (ju = Eu.textureOverrides) && void 0 !== ju ? ju : {},
+            Cu = null !== (su = Eu.modelOverrides) && void 0 !== su ? su : {},
+            bu = 0 === Object.keys(Cu).length ? {} : (0, Zu.refusedPackModels)((0, Zu.packDisplayName)(Eu.metaData), Cu, !0, {
               strictDraco: !0
             }),
             {
-              animatedBlockTextures: lt,
-              rotatedBlockTextures: Et
-            } = tt,
-            ft = tt => {
-              var et, Vt;
-              return null !== (et = null !== (Vt = lt[tt]) && void 0 !== Vt ? Vt : Et[tt]) && void 0 !== et ? et : null
+              animatedBlockTextures: cu,
+              rotatedBlockTextures: Nu
+            } = uu,
+            Ou = uu => {
+              var Eu, ju;
+              return null !== (Eu = null !== (ju = cu[uu]) && void 0 !== ju ? ju : Nu[uu]) && void 0 !== Eu ? Eu : null
             };
           return {
             terrain: {
-              atlasSheets: tt.blockAtlasArr,
-              texture: ft
+              atlasSheets: uu.blockAtlasArr,
+              texture: Ou
             },
-            sheetPixels: [...tt.blockAtlasPixels],
-            heldUntil: mt,
-            sheetLayout: tt.imagesPerAtlas,
-            sheetWidth: tt.blockAtlasWidth,
-            armourAtlasUrl: tt.armourAtlas,
-            texture: tt => {
-              var et, Vt;
-              return null !== (et = null !== (Vt = ft(tt)) && void 0 !== Vt ? Vt : (0, Ht.e)(jt, tt)) && void 0 !== et ? et : null
+            sheetPixels: [...uu.blockAtlasPixels],
+            heldUntil: Xu,
+            sheetLayout: uu.imagesPerAtlas,
+            sheetWidth: uu.blockAtlasWidth,
+            armourAtlasUrl: uu.armourAtlas,
+            texture: uu => {
+              var Eu, ju;
+              return null !== (Eu = null !== (ju = Ou(uu)) && void 0 !== ju ? ju : (0, fu.c)(qu, uu)) && void 0 !== Eu ? Eu : null
             },
-            model: tt => void 0 === Qt[tt] && Xt[tt] || null,
-            averageColours: qt
+            model: uu => void 0 === bu[uu] && Cu[uu] || null,
+            averageColours: Uu
           }
-        }(ht, tt, ut, Kt)
-      }(Nt, null === tt.gameSource, Vt), Jt = {
-        pack: tt.pack,
-        maxLayerWidth: Vt,
-        assets: bt
+        }(Ju, uu, pu, wu)
+      }(Du, null === uu.gameSource, ju), eu = {
+        pack: uu.pack,
+        maxLayerWidth: ju,
+        assets: Mu
       };
-      return wt = Jt, bt.catch((() => {
-        wt === Jt && (wt = null)
-      })), bt
+      return Yu = eu, Mu.catch((() => {
+        Yu === eu && (Yu = null)
+      })), Mu
     }
 
-    function Mt(tt, et, Ot, qt) {
-      const Dt = (0, Ht.e)(tt, Ot);
-      if (Dt) return Dt;
+    function gu(uu, Eu, su, Uu) {
+      const Zu = (0, fu.c)(uu, su);
+      if (Zu) return Zu;
       try {
-        return et(Ot, qt).url
+        return Eu(su, Uu).url
       } catch {
-        return Vt(3369)
+        return ju(3500)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

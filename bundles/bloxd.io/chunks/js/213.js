@@ -1,33 +1,33 @@
 export const id = 213;
 export const ids = [213];
 export const modules = {
-  36487: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      CAPPED_COUNTS_VISIT_CAP: () => Dt,
-      reportCappedWasmFailure: () => jt,
-      reportUncappedWasmFailure: () => dt,
-      reportWasmCrash: () => qt,
-      reportWasmFailure: () => mt
+  36668: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      CAPPED_COUNTS_VISIT_CAP: () => Zu,
+      reportCappedWasmFailure: () => qu,
+      reportUncappedWasmFailure: () => lu,
+      reportWasmCrash: () => Uu,
+      reportWasmFailure: () => Xu
     });
-    var Ot = Vt(3012);
+    var su = ju(3099);
 
-    function qt(tt) {
-      (0, Ot.reportClientError)("wasm_load", tt.message, tt.code)
+    function Uu(uu) {
+      (0, su.reportClientError)("wasm_load", uu.message, uu.code)
     }
-    const Dt = Ot.MAX_ERRORS_PER_VISIT - 4;
+    const Zu = su.MAX_ERRORS_PER_VISIT - 4;
 
-    function mt(tt, et, Vt) {
-      (0, Ot.reportClientError)(tt, et, Vt, !1)
-    }
-
-    function dt(tt, et, Vt) {
-      (0, Ot.reportClientError)(tt, et, Vt, !1, 1 / 0)
+    function Xu(uu, Eu, ju) {
+      (0, su.reportClientError)(uu, Eu, ju, !1)
     }
 
-    function jt(tt, et, Vt) {
-      (0, Ot.reportClientError)(tt, et, Vt, !1, Dt)
+    function lu(uu, Eu, ju) {
+      (0, su.reportClientError)(uu, Eu, ju, !1, 1 / 0)
+    }
+
+    function qu(uu, Eu, ju) {
+      (0, su.reportClientError)(uu, Eu, ju, !1, Zu)
     }
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

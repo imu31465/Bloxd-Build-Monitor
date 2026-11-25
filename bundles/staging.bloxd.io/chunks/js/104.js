@@ -1,79 +1,79 @@
 export const id = 104;
 export const ids = [104];
 export const modules = {
-  5081: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => lt
+  5077: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => cu
     });
-    var Ot = Vt(1140),
-      qt = Vt.n(Ot),
-      Dt = Vt(1152),
-      mt = Vt(1436),
-      dt = Vt(3564),
-      jt = Vt(153),
-      Ht = Vt(3613),
-      Xt = Vt(3597),
-      Qt = Vt(1188);
+    var su = ju(1105),
+      Uu = ju.n(su),
+      Zu = ju(1116),
+      Xu = ju(1393),
+      lu = ju(3691),
+      qu = ju(131),
+      fu = ju(3738),
+      Cu = ju(3729),
+      bu = ju(1154);
 
-    function lt(tt) {
+    function cu(uu) {
       let {
-        game: et
-      } = tt;
-      const Vt = (0, jt.is99NightsCrazyGamesBundle)() ? "large" : "small",
-        Ot = (0, Ht.h)(et, Vt),
-        lt = (0, dt.g)(Ot),
-        Et = void 0 !== lt.blurhash;
-      return (0, Qt.jsxs)("div", {
+        game: Eu
+      } = uu;
+      const ju = (0, qu.is99NightsCrazyGamesBundle)() ? "large" : "small",
+        su = (0, fu.e)(Eu, ju),
+        cu = (0, lu.h)(su),
+        Nu = void 0 !== cu.blurhash;
+      return (0, bu.jsxs)("div", {
         className: "SchematicImageContainer",
-        children: [lt.isLoading && !Et && (0, Qt.jsx)(mt.b, {
+        children: [cu.isLoading && !Nu && (0, bu.jsx)(Xu.b, {
           loaderType: "Secondary"
-        }), !lt.failed && (null !== lt.src || Et) && (0, Qt.jsx)("div", {
-          className: qt()("SchematicImage", Xt.j, {
-            SchematicImageFadeIn: lt.fadeIn && !Et
+        }), !cu.failed && (null !== cu.src || Nu) && (0, bu.jsx)("div", {
+          className: Uu()("SchematicImage", Cu.d, {
+            SchematicImageFadeIn: cu.fadeIn && !Nu
           }),
-          style: (0, Xt.h)(lt),
-          children: (0, Qt.jsx)(Xt.e, {
-            image: lt
+          style: (0, Cu.c)(cu),
+          children: (0, bu.jsx)(Cu.b, {
+            image: cu
           })
-        }), lt.failed && (0, Qt.jsx)("div", {
+        }), cu.failed && (0, bu.jsx)("div", {
           className: "SchematicImageError",
-          children: (0, Qt.jsx)(Dt.b, {
+          children: (0, bu.jsx)(Zu.e, {
             name: "face-dizzy"
           })
         })]
       })
     }
   },
-  6708: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      default: () => zt
+  6719: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      default: () => Wu
     });
-    Vt(5078);
-    var Ot = Vt(63),
-      qt = Vt(1140),
-      Dt = Vt.n(qt),
-      mt = Vt(377),
-      dt = Vt(1117),
-      jt = Vt(1308),
-      Ht = Vt(1099),
-      Xt = Vt(1286),
-      Qt = Vt(1600),
-      lt = Vt(3621),
-      Et = Vt(1218),
-      ft = Vt(5081),
-      wt = Vt(2693),
-      yt = Vt(1556),
-      Nt = Vt(4700),
-      Mt = Vt(5086),
-      bt = Vt(1436),
-      Jt = Vt(1613),
-      Ct = Vt(4691),
-      ut = Vt(2602),
-      Kt = Vt(5089),
-      ht = Vt(6596),
-      vt = Vt(1633),
-      Wt = Vt(1188);
-    const St = [{
+    ju(5073);
+    var su = ju(58),
+      Uu = ju(1105),
+      Zu = ju.n(Uu),
+      Xu = ju(337),
+      lu = ju(1079),
+      qu = ju(1278),
+      fu = ju(1065),
+      Cu = ju(1244),
+      bu = ju(1559),
+      cu = ju(3754),
+      Nu = ju(1178),
+      Ou = ju(5077),
+      Yu = ju(2716),
+      hu = ju(1506),
+      Du = ju(4749),
+      gu = ju(5084),
+      Mu = ju(1393),
+      eu = ju(1570),
+      Gu = ju(4740),
+      pu = ju(2655),
+      wu = ju(5089),
+      Ju = ju(6618),
+      du = ju(1595),
+      au = ju(1154);
+    const Pu = [{
         scope: "customGames",
         title: "studio:leaderboardCustomGames"
       }, {
@@ -83,407 +83,407 @@ export const modules = {
         scope: "dormantGames",
         title: "studio:leaderboardDormantGames"
       }],
-      ct = 25,
-      Rt = "scope",
-      It = "category",
-      Pt = "customGames";
-    const Zt = 7,
-      Lt = {
+      ou = 25,
+      ku = "scope",
+      mu = "category",
+      vu = "customGames";
+    const Ku = 7,
+      Vu = {
         playsPerDay: null,
         avgPlaytimeMinutes: null,
         retention: null
       };
 
-    function Ft(tt) {
+    function ru(uu) {
       let {
-        position: et
-      } = tt;
-      const Vt = ht.e[et];
-      return (0, Wt.jsxs)("td", {
-        className: Dt()("StudioLeaderboardPosition", {
-          StudioLeaderboardTopPosition: void 0 !== Vt,
-          [`StudioLeaderboardTopPosition${et}`]: void 0 !== Vt
+        position: Eu
+      } = uu;
+      const ju = Ju.c[Eu];
+      return (0, au.jsxs)("td", {
+        className: Zu()("StudioLeaderboardPosition", {
+          StudioLeaderboardTopPosition: void 0 !== ju,
+          [`StudioLeaderboardTopPosition${Eu}`]: void 0 !== ju
         }),
-        children: [void 0 !== Vt && (0, Wt.jsx)("img", {
+        children: [void 0 !== ju && (0, au.jsx)("img", {
           className: "StudioLeaderboardPositionItem",
-          src: Vt,
+          src: ju,
           alt: ""
-        }), et]
+        }), Eu]
       })
     }
 
-    function kt(tt) {
+    function Qu(uu) {
       let {
-        discoverability: et
-      } = tt;
+        discoverability: Eu
+      } = uu;
       const {
-        playsPerDay: Vt,
-        avgPlaytimeMinutes: qt,
-        retention: Dt
-      } = null === et ? Lt : (0, lt.k)(et);
-      return (0, Wt.jsxs)(Ot.Fragment, {
-        children: [(0, Wt.jsx)("td", {
-          children: null !== Vt ? (0, lt.d)(Vt) : "-"
-        }), (0, Wt.jsx)("td", {
-          children: null !== qt ? (0, lt.g)(qt) : "-"
-        }), (0, Wt.jsx)("td", {
-          children: null !== Dt ? (0, lt.i)(Dt) : "-"
+        playsPerDay: ju,
+        avgPlaytimeMinutes: Uu,
+        retention: Zu
+      } = null === Eu ? Vu : (0, cu.h)(Eu);
+      return (0, au.jsxs)(su.Fragment, {
+        children: [(0, au.jsx)("td", {
+          children: null !== ju ? (0, cu.c)(ju) : "-"
+        }), (0, au.jsx)("td", {
+          children: null !== Uu ? (0, cu.e)(Uu) : "-"
+        }), (0, au.jsx)("td", {
+          children: null !== Zu ? (0, cu.f)(Zu) : "-"
         })]
       })
     }
 
-    function Gt(tt) {
+    function iu(uu) {
       let {
-        discoverability: et
-      } = tt;
-      return (0, Wt.jsx)("td", {
+        discoverability: Eu
+      } = uu;
+      return (0, au.jsx)("td", {
         className: "StudioLeaderboardEngagementScore",
-        children: void 0 !== (null === et || void 0 === et ? void 0 : et.engagementScore) ? (0, jt.S)(Math.round(et.engagementScore)) : "-"
+        children: void 0 !== (null === Eu || void 0 === Eu ? void 0 : Eu.engagementScore) ? (0, qu.S)(Math.round(Eu.engagementScore)) : "-"
       })
     }
 
-    function zt() {
-      var tt, et;
+    function Wu() {
+      var uu, Eu;
       const {
-        t: Vt
-      } = (0, Xt.H)(), qt = (0, Jt.useNavigatePreserveSearch)(), {
-        userContext: Dt,
-        isUserContextUpdating: ht
-      } = (0, Et.d)(), Lt = (0, ut.m)(), [zt, ot] = (0, Ct.r)(), rt = (Ut = zt.get(Rt), St.some((tt => tt.scope === Ut)) ? Ut : Pt);
-      var Ut;
-      const At = function(tt) {
-          return mt.K.includes(tt) ? tt : null
-        }(zt.get(It)),
-        it = (0, Ct.h)(zt.get(Ct.d)),
-        [Yt, Bt] = (0, Ot.useState)(null),
-        [pt, xt] = (0, Ot.useState)(!1);
+        t: ju
+      } = (0, Cu.A)(), Uu = (0, eu.useNavigatePreserveSearch)(), {
+        userContext: Zu,
+        isUserContextUpdating: Ju
+      } = (0, Nu.c)(), Vu = (0, pu.l)(), [Wu, Su] = (0, Gu.k)(), Iu = (Fu = Wu.get(ku), Pu.some((uu => uu.scope === Fu)) ? Fu : vu);
+      var Fu;
+      const Bu = function(uu) {
+          return Xu.Y.includes(uu) ? uu : null
+        }(Wu.get(mu)),
+        Lu = (0, Gu.c)(Wu.get(Gu.b)),
+        [tu, xu] = (0, su.useState)(null),
+        [Tu, Hu] = (0, su.useState)(!1);
 
-      function Tt(tt) {
-        ot((et => {
-          (0, Ct.j)(et, Rt, tt.scope === Pt ? null : tt.scope), (0, Ct.j)(et, It, tt.category), (0, Ct.n)(et, tt.page)
+      function Au(uu) {
+        Su((Eu => {
+          (0, Gu.f)(Eu, ku, uu.scope === vu ? null : uu.scope), (0, Gu.f)(Eu, mu, uu.category), (0, Gu.i)(Eu, uu.page)
         }))
       }
-      const gt = !ht && Dt.playerHasRank("developer"),
-        st = gt && "allGames" === rt,
-        nt = gt && "dormantGames" === rt;
-      (0, Ot.useEffect)((() => {
-        if (ht) return;
-        let tt = !1;
-        return Bt(null), xt(!1), Qt.e.getPublishedGamePreviews(Dt, {
+      const nu = !Ju && Zu.playerHasRank("developer"),
+        yu = nu && "allGames" === Iu,
+        zu = nu && "dormantGames" === Iu;
+      (0, su.useEffect)((() => {
+        if (Ju) return;
+        let uu = !1;
+        return xu(null), Hu(!1), bu.b.getPublishedGamePreviews(Zu, {
           searchQuery: null,
-          pageNumber: it,
-          pageSize: ct,
+          pageNumber: Lu,
+          pageSize: ou,
           onlyFavouriteGames: !1,
           onlyOwnedGames: !1,
           onlyApprovedGames: !1,
           schematicIdsToExclude: [],
-          gameCategories: null !== At ? [At] : [],
+          gameCategories: null !== Bu ? [Bu] : [],
           upAndComing: !1,
-          dormantGames: nt,
+          dormantGames: zu,
           sortByEngagementScore: !0,
-          firstPartyGameNames: st ? Ht.d : void 0,
+          firstPartyGameNames: yu ? fu.d : void 0,
           includeOwners: !0
-        }).then((et => {
-          tt || Bt(et)
-        })).catch((et => {
-          console.error("Failed to load the studio leaderboard", et), tt || xt(!0)
+        }).then((Eu => {
+          uu || xu(Eu)
+        })).catch((Eu => {
+          console.error("Failed to load the studio leaderboard", Eu), uu || Hu(!0)
         })), () => {
-          tt = !0
+          uu = !0
         }
-      }), [ht, st, nt, At, it, Dt]);
-      const te = null !== (tt = null === Yt || void 0 === Yt ? void 0 : Yt.results) && void 0 !== tt ? tt : null,
-        ee = function(tt, et, Vt) {
-          const [qt, Dt] = (0, Ot.useState)({}), mt = Vt ? (null !== tt && void 0 !== tt ? tt : []).flatMap((tt => "firstPartyGame" === tt.type ? [(0, dt.i)(tt.gameNameWithVariation, !0)] : [])).join(",") : "", jt = (0, Ot.useMemo)((() => "" === mt ? [] : mt.split(",")), [mt]);
-          return (0, Ot.useEffect)((() => {
-            if (0 === jt.length) return void Dt({});
-            let tt = !1;
-            return Qt.e.getGamesByAnalyticsIds(et, jt).then((et => {
-              tt || Dt(et)
-            })).catch((tt => {
-              console.error("Failed to load first party discoverability for the studio leaderboard", tt)
+      }), [Ju, yu, zu, Bu, Lu, Zu]);
+      const Ru = null !== (uu = null === tu || void 0 === tu ? void 0 : tu.results) && void 0 !== uu ? uu : null,
+        uE = function(uu, Eu, ju) {
+          const [Uu, Zu] = (0, su.useState)({}), Xu = ju ? (null !== uu && void 0 !== uu ? uu : []).flatMap((uu => "firstPartyGame" === uu.type ? [(0, lu.i)(uu.gameNameWithVariation, !0)] : [])).join(",") : "", qu = (0, su.useMemo)((() => "" === Xu ? [] : Xu.split(",")), [Xu]);
+          return (0, su.useEffect)((() => {
+            if (0 === qu.length) return void Zu({});
+            let uu = !1;
+            return bu.b.getGamesByAnalyticsIds(Eu, qu).then((Eu => {
+              uu || Zu(Eu)
+            })).catch((uu => {
+              console.error("Failed to load first party discoverability for the studio leaderboard", uu)
             })), () => {
-              tt = !0
+              uu = !0
             }
-          }), [jt, et]), qt
-        }(te, Dt, gt),
-        Ve = null !== te ? function(tt, et, Vt, Ot, qt) {
-          return tt.map(((tt, Dt) => {
-            var mt;
-            const jt = Ot + Dt + 1;
-            if ("customGame" === tt.type) {
-              const et = tt.preview;
+          }), [qu, Eu]), Uu
+        }(Ru, Zu, nu),
+        EE = null !== Ru ? function(uu, Eu, ju, su, Uu) {
+          return uu.map(((uu, Zu) => {
+            var Xu;
+            const qu = su + Zu + 1;
+            if ("customGame" === uu.type) {
+              const Eu = uu.preview;
               return {
-                key: et.schematicId,
-                position: jt,
-                thumbnail: (0, Wt.jsx)(ft.b, {
-                  game: et
+                key: Eu.schematicId,
+                position: qu,
+                thumbnail: (0, au.jsx)(Ou.b, {
+                  game: Eu
                 }),
-                name: et.name,
-                owner: tt.owner,
-                category: et.gameCategory,
-                ccu: et.ccu,
-                favourites: et.favourites,
-                discoverability: (0, lt.n)(et) ? et : null,
-                url: (0, vt.k)((0, dt.e)(et.schematicId))
+                name: Eu.name,
+                owner: uu.owner,
+                category: Eu.gameCategory,
+                ccu: Eu.ccu,
+                favourites: Eu.favourites,
+                discoverability: (0, cu.l)(Eu) ? Eu : null,
+                url: (0, du.i)((0, lu.e)(Eu.schematicId))
               }
             }
-            const Ht = tt.gameNameWithVariation,
-              Xt = (0, dt.i)(Ht, !0);
+            const fu = uu.gameNameWithVariation,
+              Cu = (0, lu.i)(fu, !0);
             return {
-              key: Ht,
-              position: jt,
-              thumbnail: (0, Wt.jsx)(Kt.d, {
-                game: Ht
+              key: fu,
+              position: qu,
+              thumbnail: (0, au.jsx)(wu.c, {
+                game: fu
               }),
-              name: (0, vt.j)(Ht, qt),
+              name: (0, du.h)(fu, Uu),
               owner: null,
-              category: (0, vt.d)(Ht),
-              ccu: (0, ut.e)(Ht, et),
+              category: (0, du.c)(fu),
+              ccu: (0, pu.c)(fu, Eu),
               favourites: null,
-              discoverability: null !== (mt = Vt[Xt]) && void 0 !== mt ? mt : null,
-              url: (0, vt.k)(Xt)
+              discoverability: null !== (Xu = ju[Cu]) && void 0 !== Xu ? Xu : null,
+              url: (0, du.i)(Cu)
             }
           }))
-        }(te, Lt, ee, (it - 1) * ct, Vt) : [],
-        Oe = !pt && null === Yt,
-        qe = !Oe && !pt && 0 === Ve.length,
-        De = null !== (et = null === Yt || void 0 === Yt ? void 0 : Yt.totalPages) && void 0 !== et ? et : 1;
-      return (0, Wt.jsxs)("div", {
+        }(Ru, Vu, uE, (Lu - 1) * ou, ju) : [],
+        jE = !Tu && null === tu,
+        sE = !jE && !Tu && 0 === EE.length,
+        UE = null !== (Eu = null === tu || void 0 === tu ? void 0 : tu.totalPages) && void 0 !== Eu ? Eu : 1;
+      return (0, au.jsxs)("div", {
         className: "StudioPage StudioLeaderboard",
-        children: [(0, Wt.jsx)("div", {
+        children: [(0, au.jsx)("div", {
           className: "StudioPageHeader",
-          children: (0, Wt.jsx)("h1", {
+          children: (0, au.jsx)("h1", {
             className: "StudioPageTitle",
-            children: Vt("studio:leaderboard")
+            children: ju("studio:leaderboard")
           })
-        }), (0, Wt.jsxs)("div", {
+        }), (0, au.jsxs)("div", {
           className: "StudioLeaderboardBanner",
-          children: [!nt && (0, Wt.jsx)("div", {
-            children: Vt("studio:leaderboardBanner")
-          }), nt && (0, Wt.jsx)("div", {
-            children: Vt("studio:leaderboardDormantBanner")
-          }), (0, Wt.jsx)("div", {
-            children: Vt("studio:leaderboardMetricsBanner", {
-              days: Zt
+          children: [!zu && (0, au.jsx)("div", {
+            children: ju("studio:leaderboardBanner")
+          }), zu && (0, au.jsx)("div", {
+            children: ju("studio:leaderboardDormantBanner")
+          }), (0, au.jsx)("div", {
+            children: ju("studio:leaderboardMetricsBanner", {
+              days: Ku
             })
           })]
-        }), gt && (0, Wt.jsx)("div", {
+        }), nu && (0, au.jsx)("div", {
           className: "StudioLeaderboardScopes",
-          children: St.map((tt => (0, Wt.jsx)(yt.Q, {
-            active: rt === tt.scope,
+          children: Pu.map((uu => (0, au.jsx)(hu.$, {
+            active: Iu === uu.scope,
             onClick: () => {
-              Tt({
-                scope: tt.scope,
-                category: At,
+              Au({
+                scope: uu.scope,
+                category: Bu,
                 page: 1
               })
             },
-            children: Vt(tt.title)
-          }, tt.scope)))
-        }), (0, Wt.jsxs)("div", {
+            children: ju(uu.title)
+          }, uu.scope)))
+        }), (0, au.jsxs)("div", {
           className: "StudioLeaderboardCategories",
-          children: [(0, Wt.jsx)(yt.Q, {
-            active: null === At,
+          children: [(0, au.jsx)(hu.$, {
+            active: null === Bu,
             onClick: () => {
-              Tt({
-                scope: rt,
+              Au({
+                scope: Iu,
                 category: null,
                 page: 1
               })
             },
-            children: Vt("studio:leaderboardAllCategories")
-          }), mt.K.map((tt => (0, Wt.jsx)(yt.Q, {
-            active: At === tt,
+            children: ju("studio:leaderboardAllCategories")
+          }), Xu.Y.map((uu => (0, au.jsx)(hu.$, {
+            active: Bu === uu,
             onClick: () => {
-              Tt({
-                scope: rt,
-                category: tt,
+              Au({
+                scope: Iu,
+                category: uu,
                 page: 1
               })
             },
-            children: (0, mt.Y)(tt)
-          }, tt)))]
-        }), Oe && (0, Wt.jsx)("div", {
+            children: (0, Xu.ib)(uu)
+          }, uu)))]
+        }), jE && (0, au.jsx)("div", {
           className: "StudioPageLoader AnimFadeIn",
-          children: (0, Wt.jsx)(bt.b, {})
-        }), pt && (0, Wt.jsx)("div", {
+          children: (0, au.jsx)(Mu.b, {})
+        }), Tu && (0, au.jsx)("div", {
           className: "StudioPageMessage AnimFadeIn",
-          children: Vt("studio:failedToLoadLeaderboard")
-        }), qe && (0, Wt.jsx)("div", {
+          children: ju("studio:failedToLoadLeaderboard")
+        }), sE && (0, au.jsx)("div", {
           className: "StudioPageMessage AnimFadeIn",
-          children: Vt("studio:leaderboardEmpty")
-        }), !Oe && !pt && !qe && (0, Wt.jsx)("div", {
+          children: ju("studio:leaderboardEmpty")
+        }), !jE && !Tu && !sE && (0, au.jsx)("div", {
           className: "StudioLeaderboardTableScroll AnimFadeIn",
-          children: (0, Wt.jsx)(Mt.b, {
+          children: (0, au.jsx)(gu.d, {
             className: "StudioTable",
             columns: [{
               key: "position",
               header: "#"
             }, {
               key: "game",
-              header: Vt("general:game")
+              header: ju("general:game")
             }, {
               key: "owner",
-              header: Vt("general:owner")
-            }, ...null === At ? [{
+              header: ju("general:owner")
+            }, ...null === Bu ? [{
               key: "category",
-              header: Vt("general:category")
-            }] : [], ...gt ? [{
+              header: ju("general:category")
+            }] : [], ...nu ? [{
               key: "engagementScore",
               header: "engagementScore"
             }] : [], {
               key: "playsPerDay",
-              header: Vt("studio:leaderboardPlaysPerDay")
+              header: ju("studio:leaderboardPlaysPerDay")
             }, {
               key: "sessionLength",
-              header: Vt("studio:leaderboardSessionLength")
+              header: ju("studio:leaderboardSessionLength")
             }, {
               key: "retention",
-              header: Vt("studio:leaderboardSessionsPerPlayer")
-            }, ...nt ? [] : [{
+              header: ju("studio:leaderboardSessionsPerPlayer")
+            }, ...zu ? [] : [{
               key: "ccu",
-              header: Vt("studio:metricCcu")
+              header: ju("studio:metricCcu")
             }], {
               key: "favourites",
-              header: Vt("general:favourites")
+              header: ju("general:favourites")
             }],
-            rows: Ve,
-            getRowKey: tt => tt.key,
-            renderRow: tt => (0, Wt.jsxs)("tr", {
+            rows: EE,
+            getRowKey: uu => uu.key,
+            renderRow: uu => (0, au.jsxs)("tr", {
               onClick: () => {
-                qt(tt.url)
+                Uu(uu.url)
               },
-              children: [(0, Wt.jsx)(Ft, {
-                position: tt.position
-              }), (0, Wt.jsx)("td", {
-                children: (0, Wt.jsx)(Kt.e, {
-                  thumbnail: tt.thumbnail,
-                  name: tt.name
+              children: [(0, au.jsx)(ru, {
+                position: uu.position
+              }), (0, au.jsx)("td", {
+                children: (0, au.jsx)(wu.f, {
+                  thumbnail: uu.thumbnail,
+                  name: uu.name
                 })
-              }), (0, Wt.jsxs)("td", {
+              }), (0, au.jsxs)("td", {
                 className: "StudioLeaderboardOwner",
-                children: [null === tt.owner && "-", null !== tt.owner && (0, Wt.jsx)(wt.f, {
-                  playerSocialPreview: tt.owner,
+                children: [null === uu.owner && "-", null !== uu.owner && (0, au.jsx)(Yu.f, {
+                  playerSocialPreview: uu.owner,
                   showLocation: !1,
                   opensProfileCard: !1
                 })]
-              }), null === At && (0, Wt.jsx)("td", {
-                children: (0, mt.Y)(tt.category)
-              }), gt && (0, Wt.jsx)(Gt, {
-                discoverability: tt.discoverability
-              }), (0, Wt.jsx)(kt, {
-                discoverability: tt.discoverability
-              }), !nt && (0, Wt.jsx)("td", {
-                children: null !== tt.ccu ? (0, jt.S)(tt.ccu) : "-"
-              }), (0, Wt.jsx)("td", {
-                children: null !== tt.favourites ? (0, jt.S)(tt.favourites) : "-"
+              }), null === Bu && (0, au.jsx)("td", {
+                children: (0, Xu.ib)(uu.category)
+              }), nu && (0, au.jsx)(iu, {
+                discoverability: uu.discoverability
+              }), (0, au.jsx)(Qu, {
+                discoverability: uu.discoverability
+              }), !zu && (0, au.jsx)("td", {
+                children: null !== uu.ccu ? (0, qu.S)(uu.ccu) : "-"
+              }), (0, au.jsx)("td", {
+                children: null !== uu.favourites ? (0, qu.S)(uu.favourites) : "-"
               })]
             })
           })
-        }), !pt && (0, Wt.jsx)(Nt.d, {
+        }), !Tu && (0, au.jsx)(Du.d, {
           className: "AnimFadeIn",
-          page: it,
-          totalPages: De,
-          onSetPage: tt => {
-            Tt({
-              scope: rt,
-              category: At,
-              page: tt
+          page: Lu,
+          totalPages: UE,
+          onSetPage: uu => {
+            Au({
+              scope: Iu,
+              category: Bu,
+              page: uu
             })
           }
         })]
       })
     }
   },
-  5089: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => mt,
-      e: () => Dt
+  5089: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => Xu,
+      f: () => Zu
     });
-    var Ot = Vt(1633),
-      qt = Vt(1188);
+    var su = ju(1595),
+      Uu = ju(1154);
 
-    function Dt(tt) {
+    function Zu(uu) {
       let {
-        thumbnail: et,
-        name: Vt
-      } = tt;
-      return (0, qt.jsxs)("div", {
+        thumbnail: Eu,
+        name: ju
+      } = uu;
+      return (0, Uu.jsxs)("div", {
         className: "StudioTableGameCell",
-        children: [(0, qt.jsx)("div", {
+        children: [(0, Uu.jsx)("div", {
           className: "StudioTableThumbnail",
-          children: et
-        }), (0, qt.jsx)("span", {
+          children: Eu
+        }), (0, Uu.jsx)("span", {
           className: "StudioTableGameName",
-          children: Vt
+          children: ju
         })]
       })
     }
 
-    function mt(tt) {
+    function Xu(uu) {
       let {
-        game: et
-      } = tt;
-      return (0, qt.jsx)("img", {
+        game: Eu
+      } = uu;
+      return (0, Uu.jsx)("img", {
         className: "StudioTableThumbnailImage",
-        src: (0, Ot.h)(et),
+        src: (0, su.e)(Eu),
         alt: ""
       })
     }
   },
-  6596: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => Ot
+  6618: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => su
     });
-    const Ot = {
-      1: Vt(6602),
-      2: Vt(6608),
-      3: Vt(6616)
+    const su = {
+      1: ju(6624),
+      2: ju(6631),
+      3: ju(6635)
     }
   },
-  5086: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => dt
+  5084: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => lu
     });
-    var Ot = Vt(63),
-      qt = Vt(1140),
-      Dt = Vt.n(qt),
-      mt = Vt(1188);
+    var su = ju(58),
+      Uu = ju(1105),
+      Zu = ju.n(Uu),
+      Xu = ju(1154);
 
-    function dt(tt) {
+    function lu(uu) {
       let {
-        columns: et,
-        rows: Vt,
-        getRowKey: qt,
-        renderRow: dt,
-        className: jt
-      } = tt;
-      return (0, mt.jsxs)("table", {
-        className: Dt()("Table", jt),
-        children: [(0, mt.jsx)("thead", {
-          children: (0, mt.jsx)("tr", {
-            children: et.map((tt => (0, mt.jsx)("th", {
-              children: tt.header
-            }, tt.key)))
+        columns: Eu,
+        rows: ju,
+        getRowKey: Uu,
+        renderRow: lu,
+        className: qu
+      } = uu;
+      return (0, Xu.jsxs)("table", {
+        className: Zu()("Table", qu),
+        children: [(0, Xu.jsx)("thead", {
+          children: (0, Xu.jsx)("tr", {
+            children: Eu.map((uu => (0, Xu.jsx)("th", {
+              children: uu.header
+            }, uu.key)))
           })
-        }), (0, mt.jsx)("tbody", {
-          children: Vt.map((tt => (0, mt.jsx)(Ot.Fragment, {
-            children: dt(tt)
-          }, qt(tt))))
+        }), (0, Xu.jsx)("tbody", {
+          children: ju.map((uu => (0, Xu.jsx)(su.Fragment, {
+            children: lu(uu)
+          }, Uu(uu))))
         })]
       })
     }
   },
-  5078: () => {},
-  6602: tt => {
-    tt.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAGVJREFUGJVjYKAZ4LF0YGBgYPiPhrErsn9/8v/Tv5//P/37+b/9+5NYFaMowqaYCaby2Z4fDAwMDAwO684xOKw7hyLGwMDAwIhmKlxSyoWD4aCgOVwNskK4YgYGBhRFuAB2HxMLAPX+QYFf3uJZAAAAAElFTkSuQmCC"
+  5073: () => {},
+  6624: uu => {
+    uu.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAGVJREFUGJVjYKAZ4LF0YGBgYPiPhrErsn9/8v/Tv5//P/37+b/9+5NYFaMowqaYCaby2Z4fDAwMDAwO684xOKw7hyLGwMDAwIhmKlxSyoWD4aCgOVwNskK4YgYGBhRFuAB2HxMLAPX+QYFf3uJZAAAAAElFTkSuQmCC"
   },
-  6608: tt => {
-    tt.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAKhJREFUOI1jYBhxgJGQAntrHgYGBgaGg0e//EcWDw0NZWRgYGBYvXo1inom6rkNAjBciMtFv18bQhhCEBexMqtgdSlNXYjXRbgAzKUws6juQhZ0AUIu+7HWA6+BtA9DuAthLtr/GatG3rA7WM2iXRiG+AkwMjAwMLCKnsfqUnQX2WhxMjIwMDAcufYdRZz2OSXET4CBgYGBYc2mDyjpEpeL0AHVXTgCAQAJXjDPnoKDuAAAAABJRU5ErkJggg=="
+  6631: uu => {
+    uu.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAKhJREFUOI1jYBhxgJGQAntrHgYGBgaGg0e//EcWDw0NZWRgYGBYvXo1inom6rkNAjBciMtFv18bQhhCEBexMqtgdSlNXYjXRbgAzKUws6juQhZ0AUIu+7HWA6+BtA9DuAthLtr/GatG3rA7WM2iXRiG+AkwMjAwMLCKnsfqUnQX2WhxMjIwMDAcufYdRZz2OSXET4CBgYGBYc2mDyjpEpeL0AHVXTgCAQAJXjDPnoKDuAAAAABJRU5ErkJggg=="
   },
-  6616: tt => {
-    tt.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAK9JREFUOI3l0zEKwjAYhuE3QY+hWEWQ4lwovYE4WY+pDg7iBURwlrYgWtGD1EGCtk3aJZn6jV9+fh5CAp2LaBuY+zMArklW/PfreCUANttdaV7as31TE5pEyf0BwNQbAdCXUit1KmwUmaKkapd1Ya9atMn2h2PjQvdClVv+BCBNM+15vFxoe3fCKAwEgD8ZF/C7S5PIGw4EQP56uxXWfkoUBgCczpfSuzSJqrEu7GA+v28v0x7vVwcAAAAASUVORK5CYII="
+  6635: uu => {
+    uu.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAK9JREFUOI3l0zEKwjAYhuE3QY+hWEWQ4lwovYE4WY+pDg7iBURwlrYgWtGD1EGCtk3aJZn6jV9+fh5CAp2LaBuY+zMArklW/PfreCUANttdaV7as31TE5pEyf0BwNQbAdCXUit1KmwUmaKkapd1Ya9atMn2h2PjQvdClVv+BCBNM+15vFxoe3fCKAwEgD8ZF/C7S5PIGw4EQP56uxXWfkoUBgCczpfSuzSJqrEu7GA+v28v0x7vVwcAAAAASUVORK5CYII="
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

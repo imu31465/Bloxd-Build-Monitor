@@ -1,156 +1,156 @@
 export const id = 296;
 export const ids = [296];
 export const modules = {
-  41510: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      CharacterPreview: () => Qt
+  41520: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      CharacterPreview: () => bu
     });
-    var Ot = Vt(63),
-      qt = Vt(2821),
-      Dt = Vt(1325),
-      mt = Vt(2652),
-      dt = Vt(34412),
-      jt = Vt(3702),
-      Ht = Vt(1188);
-    const Xt = .6 * Math.PI,
-      Qt = (0, Ot.memo)((0, Ot.forwardRef)((function(tt, et) {
+    var su = ju(58),
+      Uu = ju(2876),
+      Zu = ju(1298),
+      Xu = ju(2690),
+      lu = ju(34583),
+      qu = ju(3834),
+      fu = ju(1154);
+    const Cu = .6 * Math.PI,
+      bu = (0, su.memo)((0, su.forwardRef)((function(uu, Eu) {
         let {
-          onReady: Vt,
-          onDrawn: Qt,
-          owner: lt = "other",
-          framing: Et = "player",
-          forcedCosmetics: ft,
-          rd: wt,
-          emotePlaySeq: yt,
-          turntableFromYaw: Nt = null
-        } = tt;
-        const Mt = (0, Ot.useRef)(null),
+          onReady: ju,
+          onDrawn: bu,
+          owner: cu = "other",
+          framing: Nu = "player",
+          forcedCosmetics: Ou,
+          Vl: Yu,
+          emotePlaySeq: hu,
+          turntableFromYaw: Du = null
+        } = uu;
+        const gu = (0, su.useRef)(null),
           {
-            width: bt,
-            height: Jt
-          } = (0, qt.d)(Mt),
-          Ct = (0, Ot.useRef)(null),
-          ut = (0, Ot.useRef)({}),
-          Kt = (0, Ot.useRef)({}),
-          [ht, vt] = (0, Ot.useState)(!1),
-          Wt = (0, Ot.useRef)(Vt);
-        Wt.current = Vt;
-        const St = (0, Ot.useRef)(Qt);
-        St.current = Qt;
-        const ct = (0, Ot.useRef)(null),
-          Rt = (0, Ot.useRef)(!1),
-          It = (0, Ot.useRef)(!1),
-          Pt = (0, Ot.useCallback)((() => {
-            const tt = Ct.current;
-            if (!tt || !St.current || Rt.current || !It.current) return;
-            const et = {};
-            ct.current = et, queueMicrotask((() => {
-              if (ct.current !== et) return;
-              const Vt = Promise.all(Dt.A.map((et => tt.untilDrawn(et)))).catch((tt => {
-                  console.error("Failed to draw the character preview", tt)
+            width: Mu,
+            height: eu
+          } = (0, Uu.d)(gu),
+          Gu = (0, su.useRef)(null),
+          pu = (0, su.useRef)({}),
+          wu = (0, su.useRef)({}),
+          [Ju, du] = (0, su.useState)(!1),
+          au = (0, su.useRef)(ju);
+        au.current = ju;
+        const Pu = (0, su.useRef)(bu);
+        Pu.current = bu;
+        const ou = (0, su.useRef)(null),
+          ku = (0, su.useRef)(!1),
+          mu = (0, su.useRef)(!1),
+          vu = (0, su.useCallback)((() => {
+            const uu = Gu.current;
+            if (!uu || !Pu.current || ku.current || !mu.current) return;
+            const Eu = {};
+            ou.current = Eu, queueMicrotask((() => {
+              if (ou.current !== Eu) return;
+              const ju = Promise.all(Zu.u.map((Eu => uu.untilDrawn(Eu)))).catch((uu => {
+                  console.error("Failed to draw the character preview", uu)
                 })),
-                Ot = new Promise((tt => {
-                  setTimeout(tt, 1e4)
+                su = new Promise((uu => {
+                  setTimeout(uu, 1e4)
                 }));
-              Promise.race([Vt, Ot]).then((() => {
-                var Vt;
-                Ct.current !== tt || ct.current !== et || Rt.current || (Rt.current = !0, null === (Vt = St.current) || void 0 === Vt || Vt.call(St))
+              Promise.race([ju, su]).then((() => {
+                var ju;
+                Gu.current !== uu || ou.current !== Eu || ku.current || (ku.current = !0, null === (ju = Pu.current) || void 0 === ju || ju.call(Pu))
               }))
             }))
           }), []);
-        return (0, Ot.useImperativeHandle)(et, (() => {
-          const tt = (tt, et) => {
-            var Vt;
-            (ut.current[tt] = et, null !== ft && void 0 !== ft && ft[tt]) || (null === (Vt = Ct.current) || void 0 === Vt || Vt.setCosmetic(tt, et), Pt())
+        return (0, su.useImperativeHandle)(Eu, (() => {
+          const uu = (uu, Eu) => {
+            var ju;
+            (pu.current[uu] = Eu, null !== Ou && void 0 !== Ou && Ou[uu]) || (null === (ju = Gu.current) || void 0 === ju || ju.setCosmetic(uu, Eu), vu())
           };
           return {
-            updateCosmetic: tt,
-            setAllCosmetics(et) {
-              for (const Ot of Dt.A) {
-                var Vt;
-                tt(Ot, null !== (Vt = et[Ot]) && void 0 !== Vt ? Vt : (0, mt.d)(Ot))
+            updateCosmetic: uu,
+            setAllCosmetics(Eu) {
+              for (const su of Zu.u) {
+                var ju;
+                uu(su, null !== (ju = Eu[su]) && void 0 !== ju ? ju : (0, Xu.b)(su))
               }
             },
             isReady() {
-              var tt, et;
-              return null !== (tt = null === (et = Ct.current) || void 0 === et ? void 0 : et.isReady()) && void 0 !== tt && tt
+              var uu, Eu;
+              return null !== (uu = null === (Eu = Gu.current) || void 0 === Eu ? void 0 : Eu.isReady()) && void 0 !== uu && uu
             },
             resetCamera() {
-              var tt;
-              null === (tt = Ct.current) || void 0 === tt || tt.resetCamera()
+              var uu;
+              null === (uu = Gu.current) || void 0 === uu || uu.resetCamera()
             },
-            setOrbit(tt) {
-              var et;
-              null === (et = Ct.current) || void 0 === et || et.setOrbit(tt)
+            setOrbit(uu) {
+              var Eu;
+              null === (Eu = Gu.current) || void 0 === Eu || Eu.setOrbit(uu)
             },
-            async ensureReadyForCapture(tt) {
-              var et;
-              await (null === (et = Ct.current) || void 0 === et ? void 0 : et.untilDrawn(tt))
+            async ensureReadyForCapture(uu) {
+              var Eu;
+              await (null === (Eu = Gu.current) || void 0 === Eu ? void 0 : Eu.untilDrawn(uu))
             },
             getDevTools() {
-              var tt;
-              return null !== (tt = Ct.current) && void 0 !== tt && tt.isReady() ? Ct.current.dev : null
+              var uu;
+              return null !== (uu = Gu.current) && void 0 !== uu && uu.isReady() ? Gu.current.dev : null
             }
           }
-        }), [ft, Pt]), (0, Ot.useEffect)((() => {
-          const tt = jt.c.register(lt),
-            et = dt.l.openCharacter(Mt.current, Et);
-          Ct.current = et;
-          let Vt = !0;
-          return et.ready.then((() => {
-            Vt && (vt(!0), Wt.current())
-          })).catch((tt => {
-            console.error("Failed to set up the character preview", tt)
+        }), [Ou, vu]), (0, su.useEffect)((() => {
+          const uu = qu.b.register(cu),
+            Eu = lu.k.openCharacter(gu.current, Nu);
+          Gu.current = Eu;
+          let ju = !0;
+          return Eu.ready.then((() => {
+            ju && (du(!0), au.current())
+          })).catch((uu => {
+            console.error("Failed to set up the character preview", uu)
           })), () => {
-            Vt = !1, tt(), et.resetCamera(), et.close(), Ct.current = null
+            ju = !1, uu(), Eu.resetCamera(), Eu.close(), Gu.current = null
           }
-        }), []), (0, Ot.useEffect)((() => {
-          bt <= 0 || Jt <= 0 || Ct.current.resize(bt, Jt)
-        }), [bt, Jt]), (0, Ot.useEffect)((() => {
-          if (!ht) return;
-          const tt = Kt.current;
-          for (const et of Dt.A) {
-            const Vt = null === ft || void 0 === ft ? void 0 : ft[et],
-              Ot = tt[et];
-            Vt && Vt !== Ot ? Ct.current.setCosmetic(et, Vt) : !Vt && Ot && ut.current[et] && Ct.current.setCosmetic(et, ut.current[et])
+        }), []), (0, su.useEffect)((() => {
+          Mu <= 0 || eu <= 0 || Gu.current.resize(Mu, eu)
+        }), [Mu, eu]), (0, su.useEffect)((() => {
+          if (!Ju) return;
+          const uu = wu.current;
+          for (const Eu of Zu.u) {
+            const ju = null === Ou || void 0 === Ou ? void 0 : Ou[Eu],
+              su = uu[Eu];
+            ju && ju !== su ? Gu.current.setCosmetic(Eu, ju) : !ju && su && pu.current[Eu] && Gu.current.setCosmetic(Eu, pu.current[Eu])
           }
-          Kt.current = {
-            ...ft
-          }, It.current = !0, Pt()
-        }), [ft, ht, Pt]), (0, Ot.useEffect)((() => {
-          ht && Ct.current.playEmote(null !== wt && void 0 !== wt ? wt : null)
-        }), [wt, yt, ht]), (0, Ot.useEffect)((() => {
-          if (!ht || null === Nt) return;
-          const tt = Ct.current,
+          wu.current = {
+            ...Ou
+          }, mu.current = !0, vu()
+        }), [Ou, Ju, vu]), (0, su.useEffect)((() => {
+          Ju && Gu.current.playEmote(null !== Yu && void 0 !== Yu ? Yu : null)
+        }), [Yu, hu, Ju]), (0, su.useEffect)((() => {
+          if (!Ju || null === Du) return;
+          const uu = Gu.current,
             {
-              pitch: et,
-              radius: Vt
-            } = dt.e[Et];
-          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return tt.setOrbit({
-            yaw: Nt + Xt,
-            pitch: et,
-            radius: Vt
+              pitch: Eu,
+              radius: ju
+            } = lu.e[Nu];
+          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return uu.setOrbit({
+            yaw: Du + Cu,
+            pitch: Eu,
+            radius: ju
           }), () => {
-            tt.resetCamera()
+            uu.resetCamera()
           };
-          const Ot = performance.now();
-          let qt = 0;
-          const Dt = mt => {
-            tt.setOrbit({
-              yaw: Nt + (mt - Ot) / 6e3 * 2 * Math.PI,
-              pitch: et,
-              radius: Vt
-            }), qt = requestAnimationFrame(Dt)
+          const su = performance.now();
+          let Uu = 0;
+          const Zu = Xu => {
+            uu.setOrbit({
+              yaw: Du + (Xu - su) / 6e3 * 2 * Math.PI,
+              pitch: Eu,
+              radius: ju
+            }), Uu = requestAnimationFrame(Zu)
           };
-          return qt = requestAnimationFrame(Dt), () => {
-            cancelAnimationFrame(qt), tt.resetCamera()
+          return Uu = requestAnimationFrame(Zu), () => {
+            cancelAnimationFrame(Uu), uu.resetCamera()
           }
-        }), [ht, Nt]), (0, Ht.jsx)("div", {
+        }), [Ju, Du]), (0, fu.jsx)("div", {
           className: "CharCustomisationPreview",
-          ref: Mt
+          ref: gu
         })
       })))
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

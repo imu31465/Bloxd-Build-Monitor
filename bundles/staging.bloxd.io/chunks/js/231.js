@@ -1,82 +1,82 @@
 export const id = 231;
 export const ids = [231];
 export const modules = {
-  40001: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      getBlockFaces: () => lt,
-      getIngameIconUrl: () => wt,
-      getItemIconUrl: () => ft,
-      getItemTextureUrl: () => Et,
-      getParticleTextureUrl: () => yt
+  40070: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      getBlockFaces: () => cu,
+      getIngameIconUrl: () => Yu,
+      getItemIconUrl: () => Ou,
+      getItemTextureUrl: () => Nu,
+      getParticleTextureUrl: () => hu
     });
-    var Ot = Vt(4599),
-      qt = Vt(37273),
-      Dt = Vt(9416),
-      mt = Vt(3219);
-    const dt = new Set,
-      jt = new Set;
-    let Ht = null;
+    var su = ju(4643),
+      Uu = ju(37428),
+      Zu = ju(9406),
+      Xu = ju(3340);
+    const lu = new Set,
+      qu = new Set;
+    let fu = null;
 
-    function Xt(tt) {
-      dt.has(tt) || (dt.add(tt), jt.add(tt), Ht ??= setTimeout((() => {
-        console.warn(`Docs gallery: no default texture for ${jt.size} names`, [...jt]), jt.clear(), Ht = null
+    function Cu(uu) {
+      lu.has(uu) || (lu.add(uu), qu.add(uu), fu ??= setTimeout((() => {
+        console.warn(`Docs gallery: no default texture for ${qu.size} names`, [...qu]), qu.clear(), fu = null
       }), 1e3))
     }
 
-    function Qt(tt, et) {
+    function bu(uu, Eu) {
       try {
-        return (0, Dt.getDefaultTexture)(tt, et).url
+        return (0, Zu.getDefaultTexture)(uu, Eu).url
       } catch {
-        return Xt(tt), null
+        return Cu(uu), null
       }
     }
 
-    function lt(tt) {
-      var et, Vt;
-      const Dt = qt.o[tt];
-      if (!Dt || Dt.itemTexture || !Dt.textureInfo) return null;
+    function cu(uu) {
+      var Eu, ju;
+      const Zu = Uu.l[uu];
+      if (!Zu || Zu.itemTexture || !Zu.textureInfo) return null;
       const {
-        textureInfo: dt,
-        texturePerSide: jt
-      } = Dt, Ht = tt => {
-        return "string" === typeof(et = jt && Array.isArray(dt) ? dt[jt[tt]] : dt) ? Qt(et, mt.k.BLOCK) : et && "object" === typeof et && "animTextures" in et ? Qt((0, Ot.k)(et), mt.k.BLOCK) : null;
-        var et
-      }, Xt = Ht(2);
-      return Xt ? {
-        top: Xt,
-        left: null !== (et = Ht(4)) && void 0 !== et ? et : Xt,
-        right: null !== (Vt = Ht(0)) && void 0 !== Vt ? Vt : Xt
+        textureInfo: lu,
+        texturePerSide: qu
+      } = Zu, fu = uu => {
+        return "string" === typeof(Eu = qu && Array.isArray(lu) ? lu[qu[uu]] : lu) ? bu(Eu, Xu.i.BLOCK) : Eu && "object" === typeof Eu && "animTextures" in Eu ? bu((0, su.o)(Eu), Xu.i.BLOCK) : null;
+        var Eu
+      }, Cu = fu(2);
+      return Cu ? {
+        top: Cu,
+        left: null !== (Eu = fu(4)) && void 0 !== Eu ? Eu : Cu,
+        right: null !== (ju = fu(0)) && void 0 !== ju ? ju : Cu
       } : null
     }
 
-    function Et(tt) {
-      var et;
-      const Vt = qt.o[tt];
-      return Qt(null !== (et = null === Vt || void 0 === Vt ? void 0 : Vt.itemTexture) && void 0 !== et ? et : "string" === typeof(null === Vt || void 0 === Vt ? void 0 : Vt.textureInfo) ? Vt.textureInfo : tt, mt.k.ITEM)
+    function Nu(uu) {
+      var Eu;
+      const ju = Uu.l[uu];
+      return bu(null !== (Eu = null === ju || void 0 === ju ? void 0 : ju.itemTexture) && void 0 !== Eu ? Eu : "string" === typeof(null === ju || void 0 === ju ? void 0 : ju.textureInfo) ? ju.textureInfo : uu, Xu.i.ITEM)
     }
 
-    function ft(tt) {
-      var et, Vt;
-      return qt.o[tt] ? null !== (et = null === (Vt = lt(tt)) || void 0 === Vt ? void 0 : Vt.top) && void 0 !== et ? et : Et(tt) : null
+    function Ou(uu) {
+      var Eu, ju;
+      return Uu.l[uu] ? null !== (Eu = null === (ju = cu(uu)) || void 0 === ju ? void 0 : ju.top) && void 0 !== Eu ? Eu : Nu(uu) : null
     }
 
-    function wt(tt) {
-      return Qt(tt, mt.k.ICON)
+    function Yu(uu) {
+      return bu(uu, Xu.i.ICON)
     }
 
-    function yt(tt) {
+    function hu(uu) {
       try {
-        return Vt(3375)(`./${tt}.png`)
+        return ju(3505)(`./${uu}.png`)
       } catch {
-        return Xt(tt), null
+        return Cu(uu), null
       }
     }
   },
-  37306: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => Ot
+  37467: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => su
     });
-    const Ot = {
+    const su = {
       "skyblock:forged:astral-astral-astral": {
         name: "Heart of the Cosmos",
         lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
@@ -238,4 +238,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

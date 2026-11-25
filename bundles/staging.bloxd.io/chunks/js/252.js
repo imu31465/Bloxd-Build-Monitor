@@ -1,502 +1,502 @@
 export const id = 252;
 export const ids = [252];
 export const modules = {
-  41229: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => Dt,
-      d: () => mt
+  41252: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => Zu,
+      d: () => Xu
     });
-    var Ot = Vt(2034);
-    let qt = !1;
+    var su = ju(1999);
+    let Uu = !1;
 
-    function Dt() {
-      qt = !0
+    function Zu() {
+      Uu = !0
     }
 
-    function mt() {
-      qt && (qt = !1, (0, Ot.e)())
+    function Xu() {
+      Uu && (Uu = !1, (0, su.c)())
     }
   },
-  41222: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => mt,
-      h: () => Dt,
-      k: () => dt
+  41247: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => Xu,
+      e: () => Zu,
+      h: () => lu
     });
-    var Ot = Vt(40761),
-      qt = Vt(40769);
+    var su = ju(40833),
+      Uu = ju(40847);
 
-    function Dt(tt) {
-      if (tt.queries.drawCensus() < Ot.Cb.BYTES) return null;
-      const et = tt.memoryData(tt.scratch(), Ot.Cb.BYTES, 4, "the draw census");
-      return null === et ? null : {
-        terrainOpaque: Ot.Cb.terrainOpaque(et, 0),
-        terrainTransparent: Ot.Cb.terrainTransparent(et, 0),
-        terrainPack: Ot.Cb.terrainPack(et, 0),
-        earthSky: Ot.Cb.earthSky(et, 0),
-        skyMeshes: Ot.Cb.skyMeshes(et, 0),
-        regular: Ot.Cb.regular(et, 0),
-        thin: Ot.Cb.thin(et, 0),
-        line: Ot.Cb.line(et, 0),
-        text: Ot.Cb.text(et, 0),
-        particles: Ot.Cb.particles(et, 0),
-        terrainParts: Ot.Cb.terrainParts(et, 0),
-        terrainCompiling: Ot.Cb.terrainCompiling(et, 0),
-        ringCopiesMax: Ot.Cb.ringCopiesMax(et, 0),
-        ringBusyWrites: Ot.Cb.ringBusyWrites(et, 0)
+    function Zu(uu) {
+      if (uu.queries.drawCensus() < su.vb.BYTES) return null;
+      const Eu = uu.memoryData(uu.scratch(), su.vb.BYTES, 4, "the draw census");
+      return null === Eu ? null : {
+        terrainOpaque: su.vb.terrainOpaque(Eu, 0),
+        terrainTransparent: su.vb.terrainTransparent(Eu, 0),
+        terrainPack: su.vb.terrainPack(Eu, 0),
+        earthSky: su.vb.earthSky(Eu, 0),
+        skyMeshes: su.vb.skyMeshes(Eu, 0),
+        regular: su.vb.regular(Eu, 0),
+        thin: su.vb.thin(Eu, 0),
+        line: su.vb.line(Eu, 0),
+        text: su.vb.text(Eu, 0),
+        particles: su.vb.particles(Eu, 0),
+        terrainParts: su.vb.terrainParts(Eu, 0),
+        terrainCompiling: su.vb.terrainCompiling(Eu, 0),
+        ringCopiesMax: su.vb.ringCopiesMax(Eu, 0),
+        ringBusyWrites: su.vb.ringBusyWrites(Eu, 0)
       }
     }
 
-    function mt(tt) {
+    function Xu(uu) {
       const {
-        terrainOpaque: et,
-        terrainTransparent: Vt,
-        earthSky: Ot,
-        skyMeshes: qt,
-        regular: Dt,
-        thin: mt,
-        line: dt,
-        text: jt,
-        particles: Ht
-      } = tt;
-      return et + Vt + Ot + qt + Dt + mt + dt + jt + Ht
+        terrainOpaque: Eu,
+        terrainTransparent: ju,
+        earthSky: su,
+        skyMeshes: Uu,
+        regular: Zu,
+        thin: Xu,
+        line: lu,
+        text: qu,
+        particles: fu
+      } = uu;
+      return Eu + ju + su + Uu + Zu + Xu + lu + qu + fu
     }
 
-    function dt() {
-      const tt = (0, qt.g)();
-      return !0 === (null === tt || void 0 === tt ? void 0 : tt.isCoreRunning) ? function(tt) {
-        const et = Dt(tt);
-        if (null === et) return [];
+    function lu() {
+      const uu = (0, Uu.l)();
+      return !0 === (null === uu || void 0 === uu ? void 0 : uu.isCoreRunning) ? function(uu) {
+        const Eu = Zu(uu);
+        if (null === Eu) return [];
         const {
-          terrainOpaque: Vt,
-          terrainTransparent: Ot,
-          terrainPack: qt,
-          earthSky: dt,
-          skyMeshes: jt,
-          regular: Ht,
-          thin: Xt,
-          line: Qt,
-          text: lt,
-          particles: Et
-        } = et;
+          terrainOpaque: ju,
+          terrainTransparent: su,
+          terrainPack: Uu,
+          earthSky: lu,
+          skyMeshes: qu,
+          regular: fu,
+          thin: Cu,
+          line: bu,
+          text: cu,
+          particles: Nu
+        } = Eu;
         return [{
           label: "Drawn",
-          value: `${mt(et)}`
+          value: `${Xu(Eu)}`
         }, {
           label: "Terrain",
-          value: `${Vt} opaque / ${Ot} transparent (${qt} shader pack)`
+          value: `${ju} opaque / ${su} transparent (${Uu} shader pack)`
         }, {
           label: "Meshes / Thin bases",
-          value: `${Ht} / ${Xt}`
+          value: `${fu} / ${Cu}`
         }, {
           label: "Text / Lines",
-          value: `${lt} / ${Qt}`
+          value: `${cu} / ${bu}`
         }, {
           label: "Sky / Particles",
-          value: `${dt+jt} / ${Et}`
+          value: `${lu+qu} / ${Nu}`
         }]
-      }(tt.api) : []
+      }(uu.api) : []
     }
   },
-  41206: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => ft,
-      e: () => lt,
-      g: () => Et
+  41230: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => Ou,
+      c: () => cu,
+      g: () => Nu
     });
-    var Ot = Vt(2037),
-      qt = Vt(1391),
-      Dt = Vt(40769),
-      mt = Vt(40797),
-      dt = Vt(40804),
-      jt = Vt(40824);
-    const Ht = new qt.b;
-    let Xt = !1;
+    var su = ju(2007),
+      Uu = ju(1345),
+      Zu = ju(40847),
+      Xu = ju(40864),
+      lu = ju(40873),
+      qu = ju(40889);
+    const fu = new Uu.d;
+    let Cu = !1;
 
-    function Qt(tt) {
-      const et = (0, Dt.g)();
-      return null !== et && +tt === et.api.localId
+    function bu(uu) {
+      const Eu = (0, Zu.l)();
+      return null !== Eu && +uu === Eu.api.localId
     }
 
-    function lt() {
-      Xt || (Xt = !0, (0, jt.j)(mt.l, (tt => {
-        var et, Vt;
-        const Ot = (0, dt.h)(mt.l, tt);
-        if (!(0, dt.d)(Ot)) return;
-        const qt = Ot;
-        Qt(qt.Ft) && Et(qt.kt, {
-          icon: qt.tV,
-          level: qt.VV,
-          displayName: null !== (et = qt.Gt) && void 0 !== et ? et : null,
-          durationMs: null !== (Vt = qt.eV) && void 0 !== Vt ? Vt : null
+    function cu() {
+      Cu || (Cu = !0, (0, qu.n)(Xu.k, (uu => {
+        var Eu, ju;
+        const su = (0, lu.g)(Xu.k, uu);
+        if (!(0, lu.e)(su)) return;
+        const Uu = su;
+        bu(Uu.Qu) && Nu(Uu.iu, {
+          icon: Uu.BE,
+          level: Uu.tE,
+          displayName: null !== (Eu = Uu.Wu) && void 0 !== Eu ? Eu : null,
+          durationMs: null !== (ju = Uu.LE) && void 0 !== ju ? ju : null
         })
-      })), (0, jt.j)(mt.O, (tt => {
-        const et = (0, dt.h)(mt.O, tt);
-        if (!(0, dt.d)(et)) return;
-        const Vt = et;
-        Qt(Vt.Ft) && Ot.d.remove(Vt.kt)
-      })), (0, jt.f)((() => {
-        Ot.d.clear()
+      })), (0, qu.n)(Xu.V, (uu => {
+        const Eu = (0, lu.g)(Xu.V, uu);
+        if (!(0, lu.e)(Eu)) return;
+        const ju = Eu;
+        bu(ju.Qu) && su.c.remove(ju.iu)
+      })), (0, qu.i)((() => {
+        su.c.clear()
       })))
     }
 
-    function Et(tt, et) {
-      Ot.d.update(tt, et), Ht.forEach((et => {
-        et(tt)
+    function Nu(uu, Eu) {
+      su.c.update(uu, Eu), fu.forEach((Eu => {
+        Eu(uu)
       }))
     }
-    const ft = {
+    const Ou = {
       localEffectUpdated: {
-        watch: tt => Ht.add(tt)
+        watch: uu => fu.add(uu)
       }
     }
   },
-  41215: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => Xt
+  41235: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => Cu
     });
-    var Ot = Vt(4963),
-      qt = Vt(4960),
-      Dt = Vt(40812),
-      mt = Vt(40824);
-    const dt = new Set(Ot.M),
-      jt = Ot.M.map((tt => (new TextEncoder).encode(tt))),
-      Ht = new Map;
+    var su = ju(4976),
+      Uu = ju(4970),
+      Zu = ju(40877),
+      Xu = ju(40889);
+    const lu = new Set(su.O),
+      qu = su.O.map((uu => (new TextEncoder).encode(uu))),
+      fu = new Map;
 
-    function Xt(tt, et) {
-      var Vt;
-      return null === (Vt = Ht.get(tt)) || void 0 === Vt ? void 0 : Vt[et]
-    }(0, mt.j)(Ot.gc.NewOtherEntitySettings, (tt => {
-      tt.payloadKind === qt.wc.Msgpack && jt.some((et => function(tt, et) {
-        const Vt = et[0];
-        for (let Ot = tt.indexOf(Vt); - 1 !== Ot && Ot + et.length <= tt.length; Ot = tt.indexOf(Vt, Ot + 1)) {
-          let Vt = 1;
-          for (; Vt < et.length && tt[Ot + Vt] === et[Vt];) Vt++;
-          if (Vt === et.length) return !0
+    function Cu(uu, Eu) {
+      var ju;
+      return null === (ju = fu.get(uu)) || void 0 === ju ? void 0 : ju[Eu]
+    }(0, Xu.n)(su.mc.NewOtherEntitySettings, (uu => {
+      uu.payloadKind === Uu.ic.Msgpack && qu.some((Eu => function(uu, Eu) {
+        const ju = Eu[0];
+        for (let su = uu.indexOf(ju); - 1 !== su && su + Eu.length <= uu.length; su = uu.indexOf(ju, su + 1)) {
+          let ju = 1;
+          for (; ju < Eu.length && uu[su + ju] === Eu[ju];) ju++;
+          if (ju === Eu.length) return !0
         }
         return !1
-      }(tt.payload, et))) && function(tt) {
-        if (null === tt || "object" !== typeof tt || null === tt.settings || "object" !== typeof tt.settings) return;
-        const et = String(tt.eId),
-          Vt = tt.settings;
-        let Ot = Ht.get(et);
-        for (const qt in Vt) {
-          if (!dt.has(qt)) continue;
-          const tt = Vt[qt];
-          null === tt || void 0 === tt ? Ot && delete Ot[qt] : (Ot ??= {}, Ot[qt] = tt)
+      }(uu.payload, Eu))) && function(uu) {
+        if (null === uu || "object" !== typeof uu || null === uu.settings || "object" !== typeof uu.settings) return;
+        const Eu = String(uu.eId),
+          ju = uu.settings;
+        let su = fu.get(Eu);
+        for (const Uu in ju) {
+          if (!lu.has(Uu)) continue;
+          const uu = ju[Uu];
+          null === uu || void 0 === uu ? su && delete su[Uu] : (su ??= {}, su[Uu] = uu)
         }
-        Ot && Ht.set(et, Ot)
-      }((0, Dt.c)(tt.payload))
-    })), (0, mt.f)((() => {
-      Ht.clear()
+        su && fu.set(Eu, su)
+      }((0, Zu.d)(uu.payload))
+    })), (0, Xu.i)((() => {
+      fu.clear()
     }))
   },
-  41201: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => Et,
-      c: () => Ht,
-      d: () => Qt
+  41223: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => Nu,
+      f: () => fu,
+      h: () => bu
     });
-    var Ot = Vt(39196),
-      qt = Vt(2026),
-      Dt = Vt(1391),
-      mt = Vt(40797),
-      dt = Vt(40804),
-      jt = Vt(40824);
-    const Ht = new Ot.b;
-    let Xt = {};
+    var su = ju(39312),
+      Uu = ju(1995),
+      Zu = ju(1345),
+      Xu = ju(40864),
+      lu = ju(40873),
+      qu = ju(40889);
+    const fu = new su.c;
+    let Cu = {};
 
-    function Qt(tt) {
-      return Xt[tt]
+    function bu(uu) {
+      return Cu[uu]
     }
-    const lt = new Dt.b;
+    const cu = new Zu.d;
 
-    function Et(tt) {
-      return lt.add(tt)
+    function Nu(uu) {
+      return cu.add(uu)
     }
 
-    function ft(tt) {
-      lt.callEach(tt, "a roster listener")
-    }(0, jt.j)(mt.X, (tt => {
-      const et = (0, dt.h)(mt.X, tt);
-      if (void 0 === et) return;
-      const Vt = et.zt.some((tt => {
+    function Ou(uu) {
+      cu.callEach(uu, "a roster listener")
+    }(0, qu.n)(Xu.db, (uu => {
+      const Eu = (0, lu.g)(Xu.db, uu);
+      if (void 0 === Eu) return;
+      const ju = Eu.Su.some((uu => {
           let {
-            ot: et,
-            rt: Vt
-          } = tt;
-          return null !== Vt && Ht.has(et) && Ht.getName(et) !== Vt
+            Iu: Eu,
+            Fu: ju
+          } = uu;
+          return null !== ju && fu.has(Eu) && fu.getName(Eu) !== ju
         })),
         {
-          added: Ot,
-          removed: Dt,
-          settingChanges: jt
-        } = Ht.apply(et),
-        Xt = new Set;
-      for (const qt of jt)
-        for (const tt in qt.settings) Xt.add(tt);
-      const Qt = Vt || Ot.length > 0 || Dt.length > 0;
-      (Qt || Xt.has("hideNameSeed")) && function() {
-        const tt = new Map;
-        for (const et of Ht.ids()) {
-          const Vt = Ht.getName(et),
-            Ot = Ht.getSetting(et, "hideNameSeed");
-          void 0 !== Vt && void 0 !== Ot && null !== Ot && tt.set(Vt, Ot)
+          added: su,
+          removed: Zu,
+          settingChanges: qu
+        } = fu.apply(Eu),
+        Cu = new Set;
+      for (const Uu of qu)
+        for (const uu in Uu.settings) Cu.add(uu);
+      const bu = ju || su.length > 0 || Zu.length > 0;
+      (bu || Cu.has("hideNameSeed")) && function() {
+        const uu = new Map;
+        for (const Eu of fu.ids()) {
+          const ju = fu.getName(Eu),
+            su = fu.getSetting(Eu, "hideNameSeed");
+          void 0 !== ju && void 0 !== su && null !== su && uu.set(ju, su)
         }
-        qt.d.replaceAll(tt)
-      }(), ft({
+        Uu.e.replaceAll(uu)
+      }(), Ou({
         kind: "roster",
-        members: Qt,
-        settings: Xt
+        members: bu,
+        settings: Cu
       })
-    })), (0, jt.j)(mt.K, (tt => {
-      const et = (0, dt.h)(mt.K, tt);
-      if (void 0 !== et) {
+    })), (0, qu.n)(Xu.R, (uu => {
+      const Eu = (0, lu.g)(Xu.R, uu);
+      if (void 0 !== Eu) {
         for (const {
-            FD: tt,
-            kD: Vt,
-            GD: Ot
+            QZ: uu,
+            iZ: ju,
+            WZ: su
           }
-          of et) Xt[tt] = {
-          ...Xt[tt],
-          [Vt]: Ot
+          of Eu) Cu[uu] = {
+          ...Cu[uu],
+          [ju]: su
         };
-        ft({
+        Ou({
           kind: "cosmetics",
-          updates: et
+          updates: Eu
         })
       }
-    })), (0, jt.f)((() => {
-      Ht.clear(), Xt = {}, qt.d.clear(), ft({
+    })), (0, qu.i)((() => {
+      fu.clear(), Cu = {}, Uu.e.clear(), Ou({
         kind: "reset"
       })
-    })), (0, jt.g)((() => {
-      Ht.clear(), ft({
+    })), (0, qu.k)((() => {
+      fu.clear(), Ou({
         kind: "reset"
       })
     }))
   },
-  41219: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => St,
-      e: () => yt,
-      g: () => Pt,
-      h: () => Zt
+  41242: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => Pu,
+      f: () => hu,
+      j: () => vu,
+      l: () => Ku
     });
-    var Ot = Vt(1363),
-      qt = Vt(705),
-      Dt = Vt(106),
-      mt = Vt(4963),
-      dt = Vt(40761),
-      jt = Vt(40792),
-      Ht = Vt(40769),
-      Xt = Vt(41215),
-      Qt = Vt(41201),
-      lt = Vt(40804),
-      Et = Vt(40824);
+    var su = ju(1320),
+      Uu = ju(636),
+      Zu = ju(91),
+      Xu = ju(4976),
+      lu = ju(40833),
+      qu = ju(40860),
+      fu = ju(40847),
+      Cu = ju(41235),
+      bu = ju(41223),
+      cu = ju(40873),
+      Nu = ju(40889);
 
-    function ft(tt) {
+    function Ou(uu) {
       let {
-        deadEId: et,
-        killerEId: Vt,
-        killerLifeformType: Ot,
-        withItem: qt,
-        killstreak: Dt
-      } = tt;
+        deadEId: Eu,
+        killerEId: ju,
+        killerLifeformType: su,
+        withItem: Uu,
+        killstreak: Zu
+      } = uu;
       return {
-        killer: Jt({
-          eId: Vt,
-          lifeformType: Ot
+        killer: eu({
+          eId: ju,
+          lifeformType: su
         }),
-        victim: Jt({
-          eId: et
+        victim: eu({
+          eId: Eu
         }),
-        withItem: qt,
-        killstreak: Dt
+        withItem: Uu,
+        killstreak: Zu
       }
     }
 
-    function wt(tt) {
+    function Yu(uu) {
       let {
-        killer: et,
-        victim: Vt,
-        withItem: Ot
-      } = tt;
+        killer: Eu,
+        victim: ju,
+        withItem: su
+      } = uu;
       return {
-        killer: Jt(et),
-        victim: Jt(Vt),
-        withItem: Ot,
+        killer: eu(Eu),
+        victim: eu(ju),
+        withItem: su,
         killstreak: 0
       }
     }
 
-    function yt(tt) {
-      ht && Wt((() => "killed" === tt.kind ? ft(tt.body) : wt(tt.body)))
+    function hu(uu) {
+      Ju && au((() => "killed" === uu.kind ? Ou(uu.body) : Yu(uu.body)))
     }
-    const Nt = "#2727f1",
-      Mt = "#912c2c";
+    const Du = "#2727f1",
+      gu = "#912c2c";
 
-    function bt(tt, et) {
-      var Vt;
-      return Qt.c.has(tt) ? null === (Vt = Qt.c.getSettings(tt)) || void 0 === Vt ? void 0 : Vt[et] : (0, Xt.b)(tt, et)
+    function Mu(uu, Eu) {
+      var ju;
+      return bu.f.has(uu) ? null === (ju = bu.f.getSettings(uu)) || void 0 === ju ? void 0 : ju[Eu] : (0, Cu.c)(uu, Eu)
     }
 
-    function Jt(tt) {
-      var et, Vt, mt, dt, Xt;
+    function eu(uu) {
+      var Eu, ju, Xu, lu, Cu;
       let {
-        eId: lt,
-        name: Et,
-        colour: ft,
-        lifeformType: wt
-      } = tt;
-      if (void 0 === lt || null === lt || "" === lt) {
-        const tt = Et || null;
+        eId: cu,
+        name: Nu,
+        colour: Ou,
+        lifeformType: Yu
+      } = uu;
+      if (void 0 === cu || null === cu || "" === cu) {
+        const uu = Nu || null;
         return {
           id: null,
-          shownName: tt,
-          lifeformType: null === tt && null !== wt && void 0 !== wt ? wt : null,
-          colour: ft || null,
+          shownName: uu,
+          lifeformType: null === uu && null !== Yu && void 0 !== Yu ? Yu : null,
+          colour: Ou || null,
           local: !1,
           realName: null
         }
       }
-      const yt = String(lt),
-        Jt = null === (et = (0, Ht.g)()) || void 0 === et ? void 0 : et.api,
-        Ct = void 0 !== Jt && String(Jt.localId) === yt,
-        ut = null !== (Vt = Qt.c.getName(yt)) && void 0 !== Vt ? Vt : null,
-        Kt = null !== (mt = bt(yt, "hideNameSeed")) && void 0 !== mt ? mt : null;
-      let ht = null === ut ? null : (0, Ot.e)(ut, !Dt.featureFlags.canSeeRealPlayerNames, Kt) || null,
-        vt = null;
-      if (null === ht && void 0 !== Jt) {
-        const tt = Jt.getEntityType(yt);
-        "Player" !== tt && (ht = (0, jt.h)(Jt, +yt) || null), vt = qt.f.includes(tt) ? tt : null
+      const hu = String(cu),
+        eu = null === (Eu = (0, fu.l)()) || void 0 === Eu ? void 0 : Eu.api,
+        Gu = void 0 !== eu && String(eu.localId) === hu,
+        pu = null !== (ju = bu.f.getName(hu)) && void 0 !== ju ? ju : null,
+        wu = null !== (Xu = Mu(hu, "hideNameSeed")) && void 0 !== Xu ? Xu : null;
+      let Ju = null === pu ? null : (0, su.e)(pu, !Zu.featureFlags.canSeeRealPlayerNames, wu) || null,
+        du = null;
+      if (null === Ju && void 0 !== eu) {
+        const uu = eu.getEntityType(hu);
+        "Player" !== uu && (Ju = (0, qu.h)(eu, +hu) || null), du = Uu.n.includes(uu) ? uu : null
       }
       return {
-        id: yt,
-        shownName: ht,
-        lifeformType: null === ht && null !== (dt = null !== (Xt = vt) && void 0 !== Xt ? Xt : wt) && void 0 !== dt ? dt : null,
-        colour: ft || bt(yt, "killfeedColour") || (Ct ? Nt : Mt),
-        local: Ct,
-        realName: ut
+        id: hu,
+        shownName: Ju,
+        lifeformType: null === Ju && null !== (lu = null !== (Cu = du) && void 0 !== Cu ? Cu : Yu) && void 0 !== lu ? lu : null,
+        colour: Ou || Mu(hu, "killfeedColour") || (Gu ? Du : gu),
+        local: Gu,
+        realName: pu
       }
     }
-    const Ct = 32;
-    let ut = [],
-      Kt = null,
-      ht = !1,
-      vt = !1;
+    const Gu = 32;
+    let pu = [],
+      wu = null,
+      Ju = !1,
+      du = !1;
 
-    function Wt(tt) {
-      null === Kt ? (ut.length === Ct && ut.shift(), ut.push(tt)) : Kt(tt())
+    function au(uu) {
+      null === wu ? (pu.length === Gu && pu.shift(), pu.push(uu)) : wu(uu())
     }
 
-    function St() {
-      vt || (vt = !0, (0, Et.j)(mt.gc.PlayerKilled, (tt => {
-        const et = (0, lt.k)(tt);
-        (0, lt.d)(et) && Wt((() => ft(et)))
-      })), (0, Et.j)(mt.gc.CustomKillfeed, (tt => {
-        const et = (0, lt.k)(tt);
-        (0, lt.d)(et) && (0, lt.d)(et.killer) && (0, lt.d)(et.victim) && Wt((() => wt(et)))
-      })), (0, Et.f)((() => {
-        ut = []
+    function Pu() {
+      du || (du = !0, (0, Nu.n)(Xu.mc.PlayerKilled, (uu => {
+        const Eu = (0, cu.i)(uu);
+        (0, cu.e)(Eu) && au((() => Ou(Eu)))
+      })), (0, Nu.n)(Xu.mc.CustomKillfeed, (uu => {
+        const Eu = (0, cu.i)(uu);
+        (0, cu.e)(Eu) && (0, cu.e)(Eu.killer) && (0, cu.e)(Eu.victim) && au((() => Yu(Eu)))
+      })), (0, Nu.i)((() => {
+        pu = []
       })))
     }
-    const ct = Object.freeze([0, 0, 0]),
-      Rt = [0, 0, 0],
-      It = [0, 0, 0],
-      Pt = {
+    const ou = Object.freeze([0, 0, 0]),
+      ku = [0, 0, 0],
+      mu = [0, 0, 0],
+      vu = {
         kill: {
-          watch(tt) {
-            if (ht = !0, 0 === ut.length) return Kt = tt, () => {
-              ht = !1, Kt = null
+          watch(uu) {
+            if (Ju = !0, 0 === pu.length) return wu = uu, () => {
+              Ju = !1, wu = null
             };
-            const et = setTimeout((() => {
-              const et = ut;
-              ut = [], Kt = tt;
-              for (const Ot of et) try {
-                tt(Ot())
-              } catch (Vt) {
-                console.error("[bloxd-wasm-client] a kept kill couldn't be handed on", Vt)
+            const Eu = setTimeout((() => {
+              const Eu = pu;
+              pu = [], wu = uu;
+              for (const su of Eu) try {
+                uu(su())
+              } catch (ju) {
+                console.error("[bloxd-wasm-client] a kept kill couldn't be handed on", ju)
               }
             }), 0);
             return () => {
-              clearTimeout(et), ht = !1, Kt = null
+              clearTimeout(Eu), Ju = !1, wu = null
             }
           }
         }
       },
-      Zt = {
+      Ku = {
         localPos() {
-          const tt = (0, Ht.g)();
-          if (null === tt) return ct;
-          const et = tt.api.apiView;
-          for (let Vt = 0; Vt < 3; Vt++) Rt[Vt] = dt.x.localPos(et, 0, Vt);
-          return Rt
+          const uu = (0, fu.l)();
+          if (null === uu) return ou;
+          const Eu = uu.api.apiView;
+          for (let ju = 0; ju < 3; ju++) ku[ju] = lu.u.localPos(Eu, 0, ju);
+          return ku
         },
         targetedBlockPos() {
-          const tt = (0, Ht.g)();
-          if (null === tt || dt.x.targetBlockId(tt.api.apiView, 0) === dt.ld) return null;
-          for (let et = 0; et < 3; et++) It[et] = dt.x.targetBlock(tt.api.apiView, 0, et);
-          return It
+          const uu = (0, fu.l)();
+          if (null === uu || lu.u.targetBlockId(uu.api.apiView, 0) === lu.Tc) return null;
+          for (let Eu = 0; Eu < 3; Eu++) mu[Eu] = lu.u.targetBlock(uu.api.apiView, 0, Eu);
+          return mu
         }
       }
   },
-  39196: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => Ot
+  39312: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => su
     });
-    class Ot {
+    class su {
       constructor() {
         this.members = new Map
       }
-      apply(tt) {
-        const et = {
+      apply(uu) {
+        const Eu = {
           added: [],
           removed: [],
           settingChanges: []
         };
-        for (const Ot of tt.zt) {
-          let tt = this.members.get(Ot.ot);
-          if (tt || (tt = {
+        for (const su of uu.Su) {
+          let uu = this.members.get(su.Iu);
+          if (uu || (uu = {
               name: null,
               settings: {}
-            }, this.members.set(Ot.ot, tt), et.added.push(Ot.ot)), null !== Ot.rt && (tt.name = Ot.rt), null !== Ot.Ut || Ot.Yt.length > 0) {
-            const Vt = null === Ot.Ut ? {} : JSON.parse(Ot.Ut);
-            Object.assign(tt.settings, Vt);
-            for (const et of Ot.Yt) delete tt.settings[et], Vt[et] = void 0;
-            et.settingChanges.push({
-              playerId: Ot.ot,
-              settings: Vt
+            }, this.members.set(su.Iu, uu), Eu.added.push(su.Iu)), null !== su.Fu && (uu.name = su.Fu), null !== su.Bu || su.Lu.length > 0) {
+            const ju = null === su.Bu ? {} : JSON.parse(su.Bu);
+            Object.assign(uu.settings, ju);
+            for (const Eu of su.Lu) delete uu.settings[Eu], ju[Eu] = void 0;
+            Eu.settingChanges.push({
+              playerId: su.Iu,
+              settings: ju
             })
           }
         }
-        for (const Ot of tt.Bt) {
-          const tt = this.members.get(Ot);
-          var Vt;
-          if (tt) this.members.delete(Ot), et.removed.push({
-            playerId: Ot,
-            name: null !== (Vt = tt.name) && void 0 !== Vt ? Vt : void 0
+        for (const su of uu.tu) {
+          const uu = this.members.get(su);
+          var ju;
+          if (uu) this.members.delete(su), Eu.removed.push({
+            playerId: su,
+            name: null !== (ju = uu.name) && void 0 !== ju ? ju : void 0
           })
         }
-        return et
+        return Eu
       }
-      has(tt) {
-        return this.members.has(tt)
+      has(uu) {
+        return this.members.has(uu)
       }
       ids() {
         return [...this.members.keys()]
       }
-      getName(tt) {
-        var et, Vt;
-        return null !== (et = null === (Vt = this.members.get(tt)) || void 0 === Vt ? void 0 : Vt.name) && void 0 !== et ? et : void 0
+      getName(uu) {
+        var Eu, ju;
+        return null !== (Eu = null === (ju = this.members.get(uu)) || void 0 === ju ? void 0 : ju.name) && void 0 !== Eu ? Eu : void 0
       }
-      getSettings(tt) {
-        var et;
-        return null === (et = this.members.get(tt)) || void 0 === et ? void 0 : et.settings
+      getSettings(uu) {
+        var Eu;
+        return null === (Eu = this.members.get(uu)) || void 0 === Eu ? void 0 : Eu.settings
       }
-      getSetting(tt, et) {
-        var Vt;
-        return null === (Vt = this.members.get(tt)) || void 0 === Vt ? void 0 : Vt.settings[et]
+      getSetting(uu, Eu) {
+        var ju;
+        return null === (ju = this.members.get(uu)) || void 0 === ju ? void 0 : ju.settings[Eu]
       }
       clear() {
         this.members.clear()
@@ -505,4 +505,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

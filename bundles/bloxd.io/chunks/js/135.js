@@ -1,13 +1,13 @@
 export const id = 135;
 export const ids = [135, 138, 139];
 export const modules = {
-  6801: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => mt
+  6800: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => Xu
     });
-    var Ot = Vt(5208),
-      qt = Vt(1188);
-    const Dt = {
+    var su = ju(5197),
+      Uu = ju(1154);
+    const Zu = {
       strict: "shaderPack:variantStrict",
       nonStrict: "shaderPack:variantNonStrict",
       terrain: "shaderPack:variantTerrain",
@@ -15,339 +15,339 @@ export const modules = {
       model: "shaderPack:variantModel"
     };
 
-    function mt(tt) {
+    function Xu(uu) {
       let {
-        diagnostics: et,
-        more: Vt = 0,
-        t: mt
-      } = tt;
-      return (0, qt.jsxs)("ul", {
+        diagnostics: Eu,
+        more: ju = 0,
+        t: Xu
+      } = uu;
+      return (0, Uu.jsxs)("ul", {
         className: "ShaderPackDiagnostics",
-        children: [et.map(((tt, et) => {
-          const Vt = (0, Ot.f)(tt),
-            dt = function(tt, et) {
-              const Vt = (0, Ot.b)(null !== tt && void 0 !== tt ? tt : []);
-              if (0 === Vt.length) return null;
-              return Vt.map((tt => tt.map((tt => et(Dt[tt]))).join(", "))).join("; ")
-            }(tt.variants, mt);
-          return (0, qt.jsxs)("li", {
-            children: [Vt && (0, qt.jsx)("span", {
+        children: [Eu.map(((uu, Eu) => {
+          const ju = (0, su.f)(uu),
+            lu = function(uu, Eu) {
+              const ju = (0, su.e)(null !== uu && void 0 !== uu ? uu : []);
+              if (0 === ju.length) return null;
+              return ju.map((uu => uu.map((uu => Eu(Zu[uu]))).join(", "))).join("; ")
+            }(uu.variants, Xu);
+          return (0, Uu.jsxs)("li", {
+            children: [ju && (0, Uu.jsx)("span", {
               className: "ShaderPackDiagnosticLocation",
-              children: Vt
-            }), tt.message, dt && (0, qt.jsx)("span", {
+              children: ju
+            }), uu.message, lu && (0, Uu.jsx)("span", {
               className: "ShaderPackDiagnosticVariants",
-              children: mt("shaderPack:onlyIn", {
-                variants: dt
+              children: Xu("shaderPack:onlyIn", {
+                variants: lu
               })
             })]
-          }, et)
-        })), Vt > 0 && (0, qt.jsx)("li", {
-          children: mt("shaderPack:moreErrors", {
-            count: String(Vt)
+          }, Eu)
+        })), ju > 0 && (0, Uu.jsx)("li", {
+          children: Xu("shaderPack:moreErrors", {
+            count: String(ju)
           })
         })]
       })
     }
   },
-  6810: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => ut,
-      e: () => Kt
+  6806: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => pu,
+      g: () => wu
     });
-    var Ot = Vt(63),
-      qt = Vt(1140),
-      Dt = Vt.n(qt),
-      mt = Vt(5124),
-      dt = Vt(1436),
-      jt = Vt(1152),
-      Ht = Vt(1286),
-      Xt = Vt(5223),
-      Qt = Vt(5216),
-      lt = Vt(3223);
-    const Et = 33554432,
-      ft = 1024,
-      wt = 65536;
-    async function yt(tt) {
-      const et = (0, lt.n)(tt);
-      if (et) {
-        if (et.size > Et) throw new lt.d("shaderPack:loadZipTooBig", {
-          megabytes: String(Et / 1048576)
+    var su = ju(58),
+      Uu = ju(1105),
+      Zu = ju.n(Uu),
+      Xu = ju(5120),
+      lu = ju(1393),
+      qu = ju(1116),
+      fu = ju(1244),
+      Cu = ju(5209),
+      bu = ju(5206),
+      cu = ju(3343);
+    const Nu = 33554432,
+      Ou = 1024,
+      Yu = 65536;
+    async function hu(uu) {
+      const Eu = (0, cu.p)(uu);
+      if (Eu) {
+        if (Eu.size > Nu) throw new cu.d("shaderPack:loadZipTooBig", {
+          megabytes: String(Nu / 1048576)
         });
-        return async function(tt) {
-          return Nt((0, lt.h)(tt, ft).map((et => ({
-            path: et.path,
-            read: Vt => (0, lt.m)(tt, et, Vt)
+        return async function(uu) {
+          return Du((0, cu.h)(uu, Ou).map((Eu => ({
+            path: Eu.path,
+            read: ju => (0, cu.l)(uu, Eu, ju)
           }))))
-        }(new Uint8Array(await et.arrayBuffer()))
+        }(new Uint8Array(await Eu.arrayBuffer()))
       }
-      return Nt(tt.map((tt => ({
-        path: (0, lt.i)(tt),
-        read: et => async function(tt, et) {
-          return tt.size > et ? null : new Uint8Array(await tt.arrayBuffer())
-        }(tt, et)
+      return Du(uu.map((uu => ({
+        path: (0, cu.j)(uu),
+        read: Eu => async function(uu, Eu) {
+          return uu.size > Eu ? null : new Uint8Array(await uu.arrayBuffer())
+        }(uu, Eu)
       }))))
     }
-    async function Nt(tt) {
-      const et = function(tt) {
-          const et = tt.length > 0 ? tt[0].path.indexOf("/") : -1;
-          if (-1 === et) return tt;
-          const Vt = tt[0].path.slice(0, et + 1);
-          if (!tt.every((tt => tt.path.startsWith(Vt)))) return tt;
-          return tt.map((tt => ({
-            ...tt,
-            path: tt.path.slice(Vt.length)
+    async function Du(uu) {
+      const Eu = function(uu) {
+          const Eu = uu.length > 0 ? uu[0].path.indexOf("/") : -1;
+          if (-1 === Eu) return uu;
+          const ju = uu[0].path.slice(0, Eu + 1);
+          if (!uu.every((uu => uu.path.startsWith(ju)))) return uu;
+          return uu.map((uu => ({
+            ...uu,
+            path: uu.path.slice(ju.length)
           })))
-        }(tt.filter((tt => !(0, lt.g)(tt.path)))),
-        Vt = et.filter((tt => "pack.json" === tt.path.toLowerCase()));
-      if (0 === Vt.length) throw new lt.d("shaderPack:loadNoManifest");
-      if (Vt.length > 1) throw new lt.d("shaderPack:loadDuplicateManifest");
-      const Ot = Vt[0],
-        qt = await Ot.read(wt);
-      if (null === qt) throw new lt.d("shaderPack:loadManifestTooBig", {
-        kilobytes: String(wt / 1024)
+        }(uu.filter((uu => !(0, cu.f)(uu.path)))),
+        ju = Eu.filter((uu => "pack.json" === uu.path.toLowerCase()));
+      if (0 === ju.length) throw new cu.d("shaderPack:loadNoManifest");
+      if (ju.length > 1) throw new cu.d("shaderPack:loadDuplicateManifest");
+      const su = ju[0],
+        Uu = await su.read(Yu);
+      if (null === Uu) throw new cu.d("shaderPack:loadManifestTooBig", {
+        kilobytes: String(Yu / 1024)
       });
-      const Dt = function(tt) {
-          let et;
+      const Zu = function(uu) {
+          let Eu;
           try {
-            et = JSON.parse(tt)
-          } catch (dt) {
-            throw new lt.d("shaderPack:loadManifestNotJson", {
-              error: dt.message
+            Eu = JSON.parse(uu)
+          } catch (lu) {
+            throw new cu.d("shaderPack:loadManifestNotJson", {
+              error: lu.message
             }, {
-              cause: dt
+              cause: lu
             })
           }
-          if ("object" !== typeof et || null === et || Array.isArray(et)) throw new lt.d("shaderPack:loadManifestNotObject");
+          if ("object" !== typeof Eu || null === Eu || Array.isArray(Eu)) throw new cu.d("shaderPack:loadManifestNotObject");
           const {
-            apiVersion: Vt,
-            name: Ot,
-            author: qt,
-            description: Dt,
-            keepCircleShadows: mt
-          } = et;
-          if (void 0 === Vt) throw new lt.d("shaderPack:loadNoApiVersion", {
-            version: String(Qt.d)
+            apiVersion: ju,
+            name: su,
+            author: Uu,
+            description: Zu,
+            keepCircleShadows: Xu
+          } = Eu;
+          if (void 0 === ju) throw new cu.d("shaderPack:loadNoApiVersion", {
+            version: String(bu.d)
           });
-          if (!(0, Qt.h)(Vt)) throw new lt.d("shaderPack:loadWrongApiVersion", {
-            packVersion: JSON.stringify(Vt),
-            version: String(Qt.d)
+          if (!(0, bu.k)(ju)) throw new cu.d("shaderPack:loadWrongApiVersion", {
+            packVersion: JSON.stringify(ju),
+            version: String(bu.d)
           });
-          if ("string" !== typeof Ot || "" === Ot.trim()) throw new lt.d("shaderPack:loadNoName");
-          if (void 0 !== qt && null !== qt && "string" !== typeof qt) throw new lt.d("shaderPack:loadAuthorNotString");
-          if (void 0 !== Dt && null !== Dt && "string" !== typeof Dt) throw new lt.d("shaderPack:loadDescriptionNotString");
-          if (void 0 !== mt && "boolean" !== typeof mt) throw new lt.d("shaderPack:loadKeepCircleShadowsNotBoolean");
+          if ("string" !== typeof su || "" === su.trim()) throw new cu.d("shaderPack:loadNoName");
+          if (void 0 !== Uu && null !== Uu && "string" !== typeof Uu) throw new cu.d("shaderPack:loadAuthorNotString");
+          if (void 0 !== Zu && null !== Zu && "string" !== typeof Zu) throw new cu.d("shaderPack:loadDescriptionNotString");
+          if (void 0 !== Xu && "boolean" !== typeof Xu) throw new cu.d("shaderPack:loadKeepCircleShadowsNotBoolean");
           return {
-            apiVersion: Vt,
-            name: Ot,
-            author: "string" === typeof qt ? qt : null,
-            description: "string" === typeof Dt && "" !== Dt.trim() ? Dt : null,
-            keepCircleShadows: !0 === mt
+            apiVersion: ju,
+            name: su,
+            author: "string" === typeof Uu ? Uu : null,
+            description: "string" === typeof Zu && "" !== Zu.trim() ? Zu : null,
+            keepCircleShadows: !0 === Xu
           }
-        }(Mt(qt, Ot.path)),
-        mt = et.filter((tt => tt.path.toLowerCase().endsWith(".wgsl"))).sort(((tt, et) => (0, Xt.p)(tt.path, et.path)));
-      if (0 === mt.length) throw new lt.d("shaderPack:loadNoWgsl");
-      if (mt.length > Xt.e) throw new lt.d("shaderPack:loadTooManyWgsl", {
-        count: String(Xt.e)
+        }(gu(Uu, su.path)),
+        Xu = Eu.filter((uu => uu.path.toLowerCase().endsWith(".wgsl"))).sort(((uu, Eu) => (0, Cu.k)(uu.path, Eu.path)));
+      if (0 === Xu.length) throw new cu.d("shaderPack:loadNoWgsl");
+      if (Xu.length > Cu.c) throw new cu.d("shaderPack:loadTooManyWgsl", {
+        count: String(Cu.c)
       });
-      const dt = mt.find(((tt, et) => et > 0 && tt.path === mt[et - 1].path));
-      if (dt) throw new lt.d("shaderPack:loadDuplicatePath", {
-        path: dt.path
+      const lu = Xu.find(((uu, Eu) => Eu > 0 && uu.path === Xu[Eu - 1].path));
+      if (lu) throw new cu.d("shaderPack:loadDuplicatePath", {
+        path: lu.path
       });
-      const jt = [];
-      let Ht = Xt.h;
-      for (const Qt of mt) {
-        const tt = await Qt.read(Ht);
-        if (null === tt) throw new lt.d("shaderPack:loadSourceTooBig", {
-          kilobytes: String(Xt.h / 1024)
+      const qu = [];
+      let fu = Cu.e;
+      for (const bu of Xu) {
+        const uu = await bu.read(fu);
+        if (null === uu) throw new cu.d("shaderPack:loadSourceTooBig", {
+          kilobytes: String(Cu.e / 1024)
         });
-        Ht -= tt.byteLength, jt.push({
-          path: Qt.path,
-          source: Mt(tt, Qt.path)
+        fu -= uu.byteLength, qu.push({
+          path: bu.path,
+          source: gu(uu, bu.path)
         })
       }
       return {
-        manifest: Dt,
-        files: jt
+        manifest: Zu,
+        files: qu
       }
     }
 
-    function Mt(tt, et) {
+    function gu(uu, Eu) {
       try {
         return new TextDecoder("utf-8", {
           fatal: !0
-        }).decode(tt)
-      } catch (Vt) {
-        throw new lt.d("shaderPack:loadNotUtf8", {
-          path: et
+        }).decode(uu)
+      } catch (ju) {
+        throw new cu.d("shaderPack:loadNotUtf8", {
+          path: Eu
         }, {
-          cause: Vt
+          cause: ju
         })
       }
     }
-    var bt = Vt(5208),
-      Jt = Vt(5228),
-      Ct = Vt(1188);
+    var Mu = ju(5197),
+      eu = ju(5216),
+      Gu = ju(1154);
 
-    function ut(tt) {
+    function pu(uu) {
       let {
-        busy: et,
-        disabled: Vt,
-        onFiles: Ot
-      } = tt;
+        busy: Eu,
+        disabled: ju,
+        onFiles: su
+      } = uu;
       const {
-        t: qt
-      } = (0, Ht.H)(), {
-        getRootProps: Xt,
-        getInputProps: Qt,
-        isDragActive: lt,
-        open: Et
-      } = (0, mt.e)({
-        onDrop: Ot,
+        t: Uu
+      } = (0, fu.A)(), {
+        getRootProps: Cu,
+        getInputProps: bu,
+        isDragActive: cu,
+        open: Nu
+      } = (0, Xu.c)({
+        onDrop: su,
         noClick: !0,
         noKeyboard: !0,
         useFsAccessApi: !1,
-        disabled: Vt
+        disabled: ju
       });
-      return (0, Ct.jsxs)("div", {
-        ...Xt({
-          className: Dt()("ShaderPackDropZone", {
-            ActiveDrag: lt,
-            Disabled: Vt
+      return (0, Gu.jsxs)("div", {
+        ...Cu({
+          className: Zu()("ShaderPackDropZone", {
+            ActiveDrag: cu,
+            Disabled: ju
           })
         }),
-        children: [(0, Ct.jsx)("input", {
-          ...Qt({
+        children: [(0, Gu.jsx)("input", {
+          ...bu({
             webkitdirectory: "true"
           })
-        }), et && (0, Ct.jsx)(dt.b, {}), !et && (0, Ct.jsxs)(Ct.Fragment, {
-          children: [(0, Ct.jsx)("div", {
+        }), Eu && (0, Gu.jsx)(lu.b, {}), !Eu && (0, Gu.jsxs)(Gu.Fragment, {
+          children: [(0, Gu.jsx)("div", {
             className: "ShaderPackDropZoneIcon",
-            children: (0, Ct.jsx)(jt.b, {
+            children: (0, Gu.jsx)(qu.e, {
               name: "up-from-bracket"
             })
-          }), (0, Ct.jsx)("div", {
+          }), (0, Gu.jsx)("div", {
             className: "ShaderPackDropZoneInstructions",
-            children: qt((0, Jt.g)() ? "shaderPack:dropHere" : "shaderPack:chooseZipInstructions")
-          }), (0, Ct.jsx)(Jt.d, {
-            disabled: Vt,
-            openFolderPicker: Et,
-            onFiles: Ot
+            children: Uu((0, eu.h)() ? "shaderPack:dropHere" : "shaderPack:chooseZipInstructions")
+          }), (0, Gu.jsx)(eu.d, {
+            disabled: ju,
+            openFolderPicker: Nu,
+            onFiles: su
           })]
         })]
       })
     }
 
-    function Kt(tt) {
+    function wu(uu) {
       const {
-        t: et
-      } = (0, Ht.H)(), [Vt, qt] = (0, Ot.useState)(!1), [Dt, mt] = (0, Ot.useState)(null), dt = (0, Ot.useRef)(!1);
+        t: Eu
+      } = (0, fu.A)(), [ju, Uu] = (0, su.useState)(!1), [Zu, Xu] = (0, su.useState)(null), lu = (0, su.useRef)(!1);
       return {
-        loading: Vt,
-        error: Dt,
-        setError: mt,
-        onFiles: async function(Vt) {
-          if (!dt.current) {
-            dt.current = !0, qt(!0), mt(null);
+        loading: ju,
+        error: Zu,
+        setError: Xu,
+        onFiles: async function(ju) {
+          if (!lu.current) {
+            lu.current = !0, Uu(!0), Xu(null);
             try {
-              await tt(await yt(Vt))
-            } catch (Ot) {
-              Ot instanceof lt.d ? mt((0, bt.j)(et, Ot.translationKey, Ot.params)) : (console.error("Failed to load the shader pack", Ot), mt(et("shaderPack:unexpectedError")))
+              await uu(await hu(ju))
+            } catch (su) {
+              su instanceof cu.d ? Xu((0, Mu.g)(Eu, su.translationKey, su.params)) : (console.error("Failed to load the shader pack", su), Xu(Eu("shaderPack:unexpectedError")))
             } finally {
-              dt.current = !1, qt(!1)
+              lu.current = !1, Uu(!1)
             }
           }
         }
       }
     }
   },
-  6866: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      forgetShaderPackActiveHint: () => ct,
-      isOtherApiVersion: () => ht,
-      isShaderPackActive: () => Jt,
-      isShaderPackChangePending: () => Kt,
-      markShaderPackChangePending: () => ut,
-      pageShaderPackValidationVersion: () => vt,
-      reconcileStoredShaderPackHint: () => St,
-      removeShaderPack: () => bt,
-      replaceShaderPack: () => yt,
-      saveShaderPack: () => wt,
-      shaderPackNeedsCheck: () => Wt,
-      storedPackOutcome: () => Ct,
-      storedShaderPackFiles: () => lt,
-      toStoredShaderPack: () => Qt
+  6851: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      forgetShaderPackActiveHint: () => ou,
+      isOtherApiVersion: () => Ju,
+      isShaderPackActive: () => eu,
+      isShaderPackChangePending: () => wu,
+      markShaderPackChangePending: () => pu,
+      pageShaderPackValidationVersion: () => du,
+      reconcileStoredShaderPackHint: () => Pu,
+      removeShaderPack: () => Mu,
+      replaceShaderPack: () => hu,
+      saveShaderPack: () => Yu,
+      shaderPackNeedsCheck: () => au,
+      storedPackOutcome: () => Gu,
+      storedShaderPackFiles: () => cu,
+      toStoredShaderPack: () => bu
     });
-    var Ot = Vt(5223),
-      qt = Vt(5216),
-      Dt = Vt(39),
-      mt = Vt(3524),
-      dt = Vt(6873),
-      jt = Vt(6830);
-    const Ht = "shaderPackChangePending";
-    let Xt = null;
+    var su = ju(5209),
+      Uu = ju(5206),
+      Zu = ju(31),
+      Xu = ju(3651),
+      lu = ju(6854),
+      qu = ju(6827);
+    const fu = "shaderPackChangePending";
+    let Cu = null;
 
-    function Qt(tt, et, Vt) {
+    function bu(uu, Eu, ju) {
       return {
-        manifest: tt.manifest,
-        files: (0, Ot.C)(tt.files),
-        validation: et,
-        ...Vt && {
-          listing: Vt
+        manifest: uu.manifest,
+        files: (0, su.w)(uu.files),
+        validation: Eu,
+        ...ju && {
+          listing: ju
         }
       }
     }
 
-    function lt(tt) {
-      return Object.keys(tt.files).map((et => ({
-        path: et,
-        source: tt.files[et]
+    function cu(uu) {
+      return Object.keys(uu.files).map((Eu => ({
+        path: Eu,
+        source: uu.files[Eu]
       })))
     }
-    let Et = Promise.resolve();
+    let Nu = Promise.resolve();
 
-    function ft(tt) {
-      const et = Et.then(tt);
-      return Et = et.catch((() => {})), et
-    }
-
-    function wt(tt, et) {
-      return ft((() => Nt(tt, et)))
+    function Ou(uu) {
+      const Eu = Nu.then(uu);
+      return Nu = Eu.catch((() => {})), Eu
     }
 
-    function yt(tt, et, Vt) {
-      return ft((async () => JSON.stringify(await (0, dt.g)()) === JSON.stringify(tt) && (null === et ? (await Mt(), !0) : Nt(et, Vt))))
-    }
-    async function Nt(tt, et) {
-      const Vt = await Dt.c.setItem(dt.e, tt);
-      return Vt && Rt(tt, et), Vt
-    }
-    async function Mt() {
-      await Dt.c.removeItem(dt.e), Dt.e.removeItem(mt.e)
+    function Yu(uu, Eu) {
+      return Ou((() => Du(uu, Eu)))
     }
 
-    function bt() {
-      return ft(Mt)
+    function hu(uu, Eu, ju) {
+      return Ou((async () => JSON.stringify(await (0, lu.e)()) === JSON.stringify(uu) && (null === Eu ? (await gu(), !0) : Du(Eu, ju))))
+    }
+    async function Du(uu, Eu) {
+      const ju = await Zu.h.setItem(lu.b, uu);
+      return ju && ku(uu, Eu), ju
+    }
+    async function gu() {
+      await Zu.h.removeItem(lu.b), Zu.k.removeItem(Xu.c)
     }
 
-    function Jt(tt, et) {
-      return "active" === Ct(tt, et).kind
+    function Mu() {
+      return Ou(gu)
     }
 
-    function Ct(tt, et) {
-      var Vt;
-      return null === tt ? {
+    function eu(uu, Eu) {
+      return "active" === Gu(uu, Eu).kind
+    }
+
+    function Gu(uu, Eu) {
+      var ju;
+      return null === uu ? {
         kind: "none",
         reason: "nothingStored"
-      } : ht(tt) ? {
+      } : Ju(uu) ? {
         kind: "none",
         reason: "otherApiVersion"
-      } : !1 !== (null === (Vt = tt.validation) || void 0 === Vt ? void 0 : Vt.ok) || tt.validation.fromRecheck ? null === et ? {
+      } : !1 !== (null === (ju = uu.validation) || void 0 === ju ? void 0 : ju.ok) || uu.validation.fromRecheck ? null === Eu ? {
         kind: "none",
         reason: "noCompiler"
-      } : Wt(tt, et) ? {
+      } : au(uu, Eu) ? {
         kind: "blocked",
         messageKey: "shaderPack:failedUnchecked"
-      } : tt.validation.ok ? {
+      } : uu.validation.ok ? {
         kind: "active"
       } : {
         kind: "blocked",
@@ -358,149 +358,149 @@ export const modules = {
       }
     }
 
-    function ut() {
-      Dt.h.setItem(Ht, performance.timeOrigin)
+    function pu() {
+      Zu.l.setItem(fu, performance.timeOrigin)
     }
 
-    function Kt() {
-      return Dt.h.getItem(Ht) === performance.timeOrigin
+    function wu() {
+      return Zu.l.getItem(fu) === performance.timeOrigin
     }
 
-    function ht(tt) {
-      return !(0, qt.h)(tt.manifest.apiVersion)
+    function Ju(uu) {
+      return !(0, Uu.k)(uu.manifest.apiVersion)
     }
 
-    function vt(tt) {
-      return Xt ??= tt.yI((0, jt.shaderPackTextures)()), Xt
+    function du(uu) {
+      return Cu ??= uu.fV((0, qu.shaderPackTextures)()), Cu
     }
 
-    function Wt(tt, et) {
-      var Vt;
-      return (null === (Vt = tt.validation) || void 0 === Vt ? void 0 : Vt.headerVersion) !== vt(et)
+    function au(uu, Eu) {
+      var ju;
+      return (null === (ju = uu.validation) || void 0 === ju ? void 0 : ju.headerVersion) !== du(Eu)
     }
 
-    function St(tt) {
-      return ft((async () => {
-        Rt(await (0, dt.g)(!0), tt)
+    function Pu(uu) {
+      return Ou((async () => {
+        ku(await (0, lu.e)(!0), uu)
       }))
     }
 
-    function ct() {
-      return ft((async () => {
-        Dt.e.removeItem(mt.e)
+    function ou() {
+      return Ou((async () => {
+        Zu.k.removeItem(Xu.c)
       }))
     }
 
-    function Rt(tt, et) {
-      Jt(tt, et) ? Dt.e.setItem(mt.e, !0) : Dt.e.removeItem(mt.e)
+    function ku(uu, Eu) {
+      eu(uu, Eu) ? Zu.k.setItem(Xu.c, !0) : Zu.k.removeItem(Xu.c)
     }
   },
-  6830: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      loadShaderPackTextures: () => mt,
-      shaderPackTextures: () => dt
+  6827: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      loadShaderPackTextures: () => Xu,
+      shaderPackTextures: () => lu
     });
-    var Ot = Vt(5223);
-    let qt = null,
-      Dt = null;
+    var su = ju(5209);
+    let Uu = null,
+      Zu = null;
 
-    function mt() {
-      return Dt ??= Promise.all([Vt.e(73), Vt.e(190)]).then((() => Vt(40674))).then((tt => {
+    function Xu() {
+      return Zu ??= Promise.all([ju.e(73), ju.e(190)]).then((() => ju(40746))).then((uu => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: et,
-          textureNameToIndex: Vt,
-          textureAnimationData: Dt
-        } = tt;
-        return qt ??= (0, Ot.m)(Vt, Dt, et), qt
-      })), Dt
+          FORMER_BLOCK_IMAGE_NAMES: Eu,
+          textureNameToIndex: ju,
+          textureAnimationData: Zu
+        } = uu;
+        return Uu ??= (0, su.j)(ju, Zu, Eu), Uu
+      })), Zu
     }
 
-    function dt() {
-      if (null === qt) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return qt
+    function lu() {
+      if (null === Uu) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return Uu
     }
   },
-  6857: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => jt,
-      f: () => dt
+  6849: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => qu,
+      e: () => lu
     });
-    var Ot = Vt(6866),
-      qt = Vt(6830),
-      Dt = Vt(133);
-    const mt = 100;
-    async function dt(tt, et) {
-      var Vt;
-      let Ot = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (Vt = navigator.gpu) && void 0 !== Vt ? Vt : null;
-      const mt = tt.mtt(et, (0, qt.shaderPackTextures)());
-      if (mt.errors.length > 0) return Ht(tt, mt.errors, mt.offInStrict);
-      const dt = await async function(tt) {
-        if (!tt) return null;
+    var su = ju(6851),
+      Uu = ju(6827),
+      Zu = ju(115);
+    const Xu = 100;
+    async function lu(uu, Eu) {
+      var ju;
+      let su = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (ju = navigator.gpu) && void 0 !== ju ? ju : null;
+      const Xu = uu.luu(Eu, (0, Uu.shaderPackTextures)());
+      if (Xu.errors.length > 0) return fu(uu, Xu.errors, Xu.offInStrict);
+      const lu = await async function(uu) {
+        if (!uu) return null;
         try {
-          const et = await (0, Dt.t)(tt);
-          return et ? await et.requestDevice() : null
-        } catch (et) {
-          return console.error("Couldn't get a WebGPU device to validate the shader pack.", et), null
+          const Eu = await (0, Zu.v)(uu);
+          return Eu ? await Eu.requestDevice() : null
+        } catch (Eu) {
+          return console.error("Couldn't get a WebGPU device to validate the shader pack.", Eu), null
         }
-      }(Ot);
-      if (!dt) return null;
-      let jt = !1;
-      dt.lost.then((() => {
-        jt = !0
+      }(su);
+      if (!lu) return null;
+      let qu = !1;
+      lu.lost.then((() => {
+        qu = !0
       }));
       try {
-        const et = await Promise.all(mt.validationModules.map((et => async function(tt, et, Vt) {
-          et.pushErrorScope("validation");
-          const Ot = et.createShaderModule({
-              code: Vt.code
+        const Eu = await Promise.all(Xu.validationModules.map((Eu => async function(uu, Eu, ju) {
+          Eu.pushErrorScope("validation");
+          const su = Eu.createShaderModule({
+              code: ju.code
             }),
-            qt = et.popErrorScope(),
+            Uu = Eu.popErrorScope(),
             {
-              messages: Dt
-            } = await Ot.getCompilationInfo(),
-            mt = Dt.filter((tt => "error" === tt.type)).map((et => tt.mapValidationMessage(Vt, et))),
-            dt = await qt;
-          dt && 0 === mt.length && mt.push({
+              messages: Zu
+            } = await su.getCompilationInfo(),
+            Xu = Zu.filter((uu => "error" === uu.type)).map((Eu => uu.mapValidationMessage(ju, Eu))),
+            lu = await Uu;
+          lu && 0 === Xu.length && Xu.push({
             file: null,
             line: 0,
-            message: dt.message,
-            variants: [Vt.key]
+            message: lu.message,
+            variants: [ju.key]
           });
-          return mt
-        }(tt, dt, et))));
-        return jt ? null : Ht(tt, tt.uOt(et.flat()), mt.offInStrict)
-      } catch (Xt) {
-        return console.error("Couldn't validate the shader pack on WebGPU.", Xt), null
+          return Xu
+        }(uu, lu, Eu))));
+        return qu ? null : fu(uu, uu.Rju(Eu.flat()), Xu.offInStrict)
+      } catch (Cu) {
+        return console.error("Couldn't validate the shader pack on WebGPU.", Cu), null
       } finally {
-        dt.destroy()
+        lu.destroy()
       }
     }
-    async function jt(tt, et) {
-      var Vt;
-      if (!(0, Ot.shaderPackNeedsCheck)(tt, et) || (0, Ot.isOtherApiVersion)(tt)) return tt;
-      const qt = await dt(et, (0, Ot.storedShaderPackFiles)(tt));
-      if (!qt) return tt;
-      const Dt = !1 === (null === (Vt = tt.validation) || void 0 === Vt ? void 0 : Vt.ok) && !tt.validation.fromRecheck,
-        mt = {
-          ...tt,
-          validation: Dt ? qt : {
-            ...qt,
+    async function qu(uu, Eu) {
+      var ju;
+      if (!(0, su.shaderPackNeedsCheck)(uu, Eu) || (0, su.isOtherApiVersion)(uu)) return uu;
+      const Uu = await lu(Eu, (0, su.storedShaderPackFiles)(uu));
+      if (!Uu) return uu;
+      const Zu = !1 === (null === (ju = uu.validation) || void 0 === ju ? void 0 : ju.ok) && !uu.validation.fromRecheck,
+        Xu = {
+          ...uu,
+          validation: Zu ? Uu : {
+            ...Uu,
             fromRecheck: !0
           }
         };
-      return await (0, Ot.replaceShaderPack)(tt, mt, et) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), mt
+      return await (0, su.replaceShaderPack)(uu, Xu, Eu) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), Xu
     }
 
-    function Ht(tt, et, Vt) {
+    function fu(uu, Eu, ju) {
       return {
-        headerVersion: (0, Ot.pageShaderPackValidationVersion)(tt),
-        ok: 0 === et.length,
-        errors: et.slice(0, mt),
-        moreErrors: Math.max(0, et.length - mt),
-        offInStrict: Vt
+        headerVersion: (0, su.pageShaderPackValidationVersion)(uu),
+        ok: 0 === Eu.length,
+        errors: Eu.slice(0, Xu),
+        moreErrors: Math.max(0, Eu.length - Xu),
+        offInStrict: ju
       }
     }
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

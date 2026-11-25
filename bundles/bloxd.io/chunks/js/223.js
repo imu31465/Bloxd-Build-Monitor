@@ -1,80 +1,80 @@
 export const id = 223;
 export const ids = [223];
 export const modules = {
-  41276: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      LobbyManageView: () => ue
+  41300: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      LobbyManageView: () => pE
     });
-    var Ot = Vt(63),
-      qt = Vt(1583),
-      Dt = Vt(37252),
-      mt = Vt(2516),
-      dt = Vt(2523),
-      jt = Vt(2498),
-      Ht = Vt(36804);
+    var su = ju(58),
+      Uu = ju(1533),
+      Zu = ju(37411),
+      Xu = ju(2560),
+      lu = ju(2568),
+      qu = ju(2543),
+      fu = ju(36951);
 
-    function Xt() {
-      const [tt, et] = (0, Ot.useState)(new Map);
+    function Cu() {
+      const [uu, Eu] = (0, su.useState)(new Map);
       return {
-        get: et => tt.get(et),
-        hold: (0, Ot.useCallback)(((tt, Vt, Ot) => {
-          et((et => new Map(et).set(tt, Vt))), Ot.then((() => {
-            et((et => {
-              const Vt = new Map(et);
-              return Vt.delete(tt), Vt
+        get: Eu => uu.get(Eu),
+        hold: (0, su.useCallback)(((uu, ju, su) => {
+          Eu((Eu => new Map(Eu).set(uu, ju))), su.then((() => {
+            Eu((Eu => {
+              const ju = new Map(Eu);
+              return ju.delete(uu), ju
             }))
           }))
         }), [])
       }
     }
-    var Qt = Vt(1140),
-      lt = Vt.n(Qt),
-      Et = Vt(1286),
-      ft = Vt(1152),
-      wt = Vt(1436),
-      yt = Vt(2745),
-      Nt = Vt(5186),
-      Mt = Vt(3510);
-    var bt = Vt(2063),
-      Jt = Vt(1556);
+    var bu = ju(1105),
+      cu = ju.n(bu),
+      Nu = ju(1244),
+      Ou = ju(1116),
+      Yu = ju(1393),
+      hu = ju(2777),
+      Du = ju(5179),
+      gu = ju(3634);
+    var Mu = ju(2027),
+      eu = ju(1506);
 
-    function Ct(tt, et, Vt) {
-      const Ot = tt.filter((tt => tt.name !== et)),
-        qt = Ot.filter((tt => "none" === tt.role)).sort(((tt, et) => et.at - tt.at)),
-        Dt = Ot.filter((tt => "none" !== tt.role)).sort(((tt, et) => Vt.indexOf(tt.role) - Vt.indexOf(et.role) || et.at - tt.at));
-      return [...tt.some((tt => tt.name === et)) && null !== et ? [et] : [], ...[...qt, ...Dt].map((tt => tt.name))]
+    function Gu(uu, Eu, ju) {
+      const su = uu.filter((uu => uu.name !== Eu)),
+        Uu = su.filter((uu => "none" === uu.role)).sort(((uu, Eu) => Eu.at - uu.at)),
+        Zu = su.filter((uu => "none" !== uu.role)).sort(((uu, Eu) => ju.indexOf(uu.role) - ju.indexOf(Eu.role) || Eu.at - uu.at));
+      return [...uu.some((uu => uu.name === Eu)) && null !== Eu ? [Eu] : [], ...[...Uu, ...Zu].map((uu => uu.name))]
     }
 
-    function ut(tt, et) {
-      const Vt = tt.banned.map((tt => tt.name)),
-        Ot = new Set(Vt);
+    function pu(uu, Eu) {
+      const ju = uu.banned.map((uu => uu.name)),
+        su = new Set(ju);
       return {
-        here: Ct(tt.here, et, tt.roles.map((tt => tt.role))),
-        away: tt.away.filter((tt => !Ot.has(tt.name))).map((tt => tt.name)),
-        banned: Vt
+        here: Gu(uu.here, Eu, uu.roles.map((uu => uu.role))),
+        away: uu.away.filter((uu => !su.has(uu.name))).map((uu => uu.name)),
+        banned: ju
       }
     }
 
-    function Kt(tt, et) {
-      const Vt = tt.here.find((tt => tt.name === et));
-      if (Vt) return {
+    function wu(uu, Eu) {
+      const ju = uu.here.find((uu => uu.name === Eu));
+      if (ju) return {
         section: "here",
-        player: Vt
+        player: ju
       };
-      const Ot = tt.banned.find((tt => tt.name === et));
-      if (Ot) return {
+      const su = uu.banned.find((uu => uu.name === Eu));
+      if (su) return {
         section: "banned",
-        bannedAt: Ot.at
+        bannedAt: su.at
       };
-      const qt = tt.away.find((tt => tt.name === et));
-      return qt ? {
+      const Uu = uu.away.find((uu => uu.name === Eu));
+      return Uu ? {
         section: "away",
-        player: qt
+        player: Uu
       } : {
         section: "gone"
       }
     }
-    const ht = {
+    const Ju = {
       gamemode: !1,
       roles: [],
       fixedRole: null,
@@ -82,357 +82,357 @@ export const modules = {
       ban: !1,
       unban: !1
     };
-    var vt = Vt(2742),
-      Wt = Vt(36799),
-      St = Vt(36978),
-      ct = Vt(3192),
-      Rt = Vt(391);
+    var du = ju(2774),
+      au = ju(36946),
+      Pu = ju(37109),
+      ou = ju(3309),
+      ku = ju(349);
 
-    function It(tt, et, Vt) {
-      return et.map((et => {
-        if ("string" === typeof et) return et;
-        const Ot = "str" in et ? et.str : et;
-        return "string" === typeof Ot ? Ot : "entityName" in Ot ? Ot.entityName : "translationKey" in Ot ? tt(Ot.translationKey, (0, Et.p)(Ot.params, Vt)) : ""
+    function mu(uu, Eu, ju) {
+      return Eu.map((Eu => {
+        if ("string" === typeof Eu) return Eu;
+        const su = "str" in Eu ? Eu.str : Eu;
+        return "string" === typeof su ? su : "entityName" in su ? su.entityName : "translationKey" in su ? uu(su.translationKey, (0, Nu.r)(su.params, ju)) : ""
       })).join("")
     }
 
-    function Pt(tt, et, Vt, Ot, qt) {
-      return qt - Ot < 6e4 ? tt(`${Vt}JustNow`) : tt(Vt, {
-        time: (0, Rt.mb)((0, Et.o)(et, Vt), Ot, qt)
+    function vu(uu, Eu, ju, su, Uu) {
+      return Uu - su < 6e4 ? uu(`${ju}JustNow`) : uu(ju, {
+        time: (0, ku._)((0, Nu.n)(Eu, ju), su, Uu)
       })
     }
-    var Zt = Vt(2001),
-      Lt = Vt(1770),
-      Ft = Vt(1188);
+    var Ku = ju(1964),
+      Vu = ju(1723),
+      ru = ju(1154);
 
-    function kt(tt) {
+    function Qu(uu) {
       let {
-        status: et
-      } = tt;
-      return (0, Ft.jsx)("span", {
-        className: lt()("LobbyManageStatus", {
-          LobbyManageStatusRefused: !et.ok
+        status: Eu
+      } = uu;
+      return (0, ru.jsx)("span", {
+        className: cu()("LobbyManageStatus", {
+          LobbyManageStatusRefused: !Eu.ok
         }),
-        children: (0, Ft.jsx)(Zt.e, {
-          text: et.text
+        children: (0, ru.jsx)(Ku.d, {
+          text: Eu.text
         })
       })
     }
 
-    function Gt(tt) {
+    function iu(uu) {
       let {
-        names: et,
-        cap: Vt,
-        filterFrom: qt,
-        moreLabel: Dt,
-        reveal: mt = null,
-        renderRow: dt
-      } = tt;
+        names: Eu,
+        cap: ju,
+        filterFrom: Uu,
+        moreLabel: Zu,
+        reveal: Xu = null,
+        renderRow: lu
+      } = uu;
       const {
-        t: jt
-      } = (0, Et.H)(), [Ht, Xt] = (0, Ot.useState)(!1), [Qt, lt] = (0, Ot.useState)(""), wt = Ht || null !== mt && et.indexOf(mt) >= Vt, Nt = (wt || et.length <= Vt) && null !== qt && et.length > qt, Mt = Qt.trim().toLowerCase();
-      let bt = wt ? et : et.slice(0, Vt);
-      return Nt && "" !== Mt && (bt = bt.filter((tt => tt.toLowerCase().includes(Mt)))), (0, Ft.jsxs)(Ft.Fragment, {
-        children: [Nt && (0, Ft.jsx)(Lt.d, {
+        t: qu
+      } = (0, Nu.A)(), [fu, Cu] = (0, su.useState)(!1), [bu, cu] = (0, su.useState)(""), Yu = fu || null !== Xu && Eu.indexOf(Xu) >= ju, Du = (Yu || Eu.length <= ju) && null !== Uu && Eu.length > Uu, gu = bu.trim().toLowerCase();
+      let Mu = Yu ? Eu : Eu.slice(0, ju);
+      return Du && "" !== gu && (Mu = Mu.filter((uu => uu.toLowerCase().includes(gu)))), (0, ru.jsxs)(ru.Fragment, {
+        children: [Du && (0, ru.jsx)(Vu.d, {
           className: "LobbyManageFilter",
-          placeholderText: jt("lobbyManage:findName"),
-          ariaLabel: jt("lobbyManage:findName"),
-          onValueChange: tt => {
-            lt(tt)
+          placeholderText: qu("lobbyManage:findName"),
+          ariaLabel: qu("lobbyManage:findName"),
+          onValueChange: uu => {
+            cu(uu)
           }
-        }), bt.length > 0 && (0, Ft.jsx)("div", {
+        }), Mu.length > 0 && (0, ru.jsx)("div", {
           className: "PlayerRows",
-          children: bt.map(((tt, et) => dt(tt, bt.length - et)))
-        }), !wt && et.length > Vt && (0, Ft.jsx)("div", {
+          children: Mu.map(((uu, Eu) => lu(uu, Mu.length - Eu)))
+        }), !Yu && Eu.length > ju && (0, ru.jsx)("div", {
           className: "LobbyManageMore",
-          children: (0, Ft.jsx)(yt.d, {
-            label: (0, Ft.jsxs)(Ft.Fragment, {
-              children: [Dt, " ", (0, Ft.jsx)(ft.b, {
+          children: (0, ru.jsx)(hu.b, {
+            label: (0, ru.jsxs)(ru.Fragment, {
+              children: [Zu, " ", (0, ru.jsx)(Ou.e, {
                 name: "angle-down"
               })]
             }),
             onClick: () => {
-              Xt(!0)
+              Cu(!0)
             }
           })
         })]
       })
     }
 
-    function zt(tt) {
+    function Wu(uu) {
       let {
-        value: et,
-        placeholder: Vt,
-        ariaLabel: qt,
-        maxLength: Dt,
-        wide: mt = !1,
-        onSave: dt
-      } = tt;
-      const jt = (0, Ot.useRef)(null),
-        [Ht, Xt] = (0, Ot.useState)(0),
-        Qt = (0, Ot.useRef)(!0),
-        Et = (0, Ot.useRef)(null),
-        ft = (0, Ot.useRef)({
-          value: et,
-          onSave: dt
+        value: Eu,
+        placeholder: ju,
+        ariaLabel: Uu,
+        maxLength: Zu,
+        wide: Xu = !1,
+        onSave: lu
+      } = uu;
+      const qu = (0, su.useRef)(null),
+        [fu, Cu] = (0, su.useState)(0),
+        bu = (0, su.useRef)(!0),
+        Nu = (0, su.useRef)(null),
+        Ou = (0, su.useRef)({
+          value: Eu,
+          onSave: lu
         });
-      ft.current = {
-        value: et,
-        onSave: dt
+      Ou.current = {
+        value: Eu,
+        onSave: lu
       };
-      const wt = () => {
-        const tt = Et.current;
-        Et.current = null, null !== tt && tt !== ft.current.value && ft.current.onSave(tt).then((() => {
-          Qt.current && Xt((tt => tt + 1))
+      const Yu = () => {
+        const uu = Nu.current;
+        Nu.current = null, null !== uu && uu !== Ou.current.value && Ou.current.onSave(uu).then((() => {
+          bu.current && Cu((uu => uu + 1))
         }))
       };
-      return (0, Ot.useEffect)((() => {
-        null === Et.current && jt.current && (jt.current.value = et)
-      }), [et, Ht]), (0, Ot.useEffect)((() => () => {
-        Qt.current = !1, wt()
-      }), []), (0, Ft.jsx)("div", {
-        className: lt()("LobbyManageRuleInput", {
-          LobbyManageRuleInputWide: mt
+      return (0, su.useEffect)((() => {
+        null === Nu.current && qu.current && (qu.current.value = Eu)
+      }), [Eu, fu]), (0, su.useEffect)((() => () => {
+        bu.current = !1, Yu()
+      }), []), (0, ru.jsx)("div", {
+        className: cu()("LobbyManageRuleInput", {
+          LobbyManageRuleInputWide: Xu
         }),
-        onBlur: wt,
-        children: (0, Ft.jsx)(Lt.d, {
-          domRef: jt,
-          defaultValue: et,
-          placeholderText: Vt,
-          ariaLabel: qt,
-          maxLength: Dt,
-          onValueChange: tt => {
-            Et.current = tt
+        onBlur: Yu,
+        children: (0, ru.jsx)(Vu.d, {
+          domRef: qu,
+          defaultValue: Eu,
+          placeholderText: ju,
+          ariaLabel: Uu,
+          maxLength: Zu,
+          onValueChange: uu => {
+            Nu.current = uu
           },
-          onEnter: wt
+          onEnter: Yu
         })
       })
     }
-    const ot = ["mod", "coOwner"],
-      rt = {
+    const Su = ["mod", "coOwner"],
+      Iu = {
         coOwner: "lobbyManage:roleCanCoOwner",
         mod: "lobbyManage:roleCanMod",
         coder: "lobbyManage:roleCanCoder",
         builder: "lobbyManage:roleCanBuilder"
       };
 
-    function Ut(tt) {
-      var et, Vt, Dt;
+    function Fu(uu) {
+      var Eu, ju, Zu;
       let {
-        name: mt,
-        place: dt,
-        openedIn: jt,
-        isYou: Ht,
-        manage: Qt,
-        hiddenNames: lt,
-        zIndex: wt
-      } = tt;
+        name: Xu,
+        place: lu,
+        openedIn: qu,
+        isYou: fu,
+        manage: bu,
+        hiddenNames: cu,
+        zIndex: Yu
+      } = uu;
       const {
-        t: yt,
-        selectedLanguage: Nt
-      } = (0, Et.H)(), [Mt, bt] = (0, Ot.useState)(null), {
-        state: Ct
-      } = Qt, ut = `player:${mt}`, Kt = function(tt, et) {
-        if ("banned" === tt.section) return {
-          ...ht,
+        t: hu,
+        selectedLanguage: Du
+      } = (0, Nu.A)(), [gu, Mu] = (0, su.useState)(null), {
+        state: Gu
+      } = bu, pu = `player:${Xu}`, wu = function(uu, Eu) {
+        if ("banned" === uu.section) return {
+          ...Ju,
           unban: !0
         };
-        if ("gone" === tt.section) return ht;
+        if ("gone" === uu.section) return Ju;
         const {
-          player: Vt
-        } = tt, Ot = "here" === tt.section, qt = Ot || "none" !== Vt.role ? Vt.can.roles : [];
+          player: ju
+        } = uu, su = "here" === uu.section, Uu = su || "none" !== ju.role ? ju.can.roles : [];
         return {
-          gamemode: Ot && et && null !== Vt.gamemode && Vt.can.gamemode,
-          roles: qt,
-          fixedRole: 0 === qt.length && "none" !== Vt.role ? Vt.role : null,
-          kick: Ot && Vt.can.kick,
-          ban: Vt.can.ban,
+          gamemode: su && Eu && null !== ju.gamemode && ju.can.gamemode,
+          roles: Uu,
+          fixedRole: 0 === Uu.length && "none" !== ju.role ? ju.role : null,
+          kick: su && ju.can.kick,
+          ban: ju.can.ban,
           unban: !1
         }
-      }(dt, null !== Ct.gamemodes), Rt = Qt.statusOf(ut), Zt = Qt.isPending(ut), Lt = Xt(), Gt = Date.now(), zt = tt => {
-        var et, Vt;
-        return null !== (et = null === (Vt = (tt => Ct.roles.find((et => et.role === tt)))(tt)) || void 0 === Vt ? void 0 : Vt.label) && void 0 !== et ? et : tt
-      }, Ut = tt => {
-        const et = rt[tt];
-        return void 0 === et ? void 0 : yt(et)
-      }, At = "here" === dt.section || "away" === dt.section ? dt.player : null, it = "here" === dt.section ? dt.player.id : null, {
-        playerSocialPreview: Yt,
-        isFriend: Bt
-      } = null === it ? {
-        playerSocialPreview: (0, St.j)(mt, null),
+      }(lu, null !== Gu.gamemodes), ku = bu.statusOf(pu), Ku = bu.isPending(pu), Vu = Cu(), iu = Date.now(), Wu = uu => {
+        var Eu, ju;
+        return null !== (Eu = null === (ju = (uu => Gu.roles.find((Eu => Eu.role === uu)))(uu)) || void 0 === ju ? void 0 : ju.label) && void 0 !== Eu ? Eu : uu
+      }, Fu = uu => {
+        const Eu = Iu[uu];
+        return void 0 === Eu ? void 0 : hu(Eu)
+      }, Bu = "here" === lu.section || "away" === lu.section ? lu.player : null, Lu = "here" === lu.section ? lu.player.id : null, {
+        playerSocialPreview: tu,
+        isFriend: xu
+      } = null === Lu ? {
+        playerSocialPreview: (0, Pu.h)(Xu, null),
         isFriend: !1
-      } : (0, Wt.c)(it, mt), pt = function() {
-        Qt.send(...arguments)
-      }, xt = (tt, et) => {
-        Lt.hold("role", tt, Qt.send({
+      } : (0, au.c)(Lu, Xu), Tu = function() {
+        bu.send(...arguments)
+      }, Hu = (uu, Eu) => {
+        Vu.hold("role", uu, bu.send({
           type: "setRole",
-          name: mt,
-          role: tt
-        }, ut, et))
+          name: Xu,
+          role: uu
+        }, pu, Eu))
       };
-      let Tt = null;
-      if ("ban" === (null === Mt || void 0 === Mt ? void 0 : Mt.kind)) Tt = yt("lobbyManageEntry:banConfirm", {
-        playerName: mt
+      let Au = null;
+      if ("ban" === (null === gu || void 0 === gu ? void 0 : gu.kind)) Au = hu("lobbyManageEntry:banConfirm", {
+        playerName: Xu
       });
-      else if ("role" === (null === Mt || void 0 === Mt ? void 0 : Mt.kind)) {
-        var gt;
-        Tt = `${yt("lobbyManage:roleConfirm",{playerName:mt,role:zt(Mt.role)})} ${null!==(gt=Ut(Mt.role))&&void 0!==gt?gt:""}`
-      } else if (Rt) Tt = (0, Ft.jsx)(kt, {
-        status: Rt
+      else if ("role" === (null === gu || void 0 === gu ? void 0 : gu.kind)) {
+        var nu;
+        Au = `${hu("lobbyManage:roleConfirm",{playerName:Xu,role:Wu(gu.role)})} ${null!==(nu=Fu(gu.role))&&void 0!==nu?nu:""}`
+      } else if (ku) Au = (0, ru.jsx)(Qu, {
+        status: ku
       });
-      else if (Ht) Tt = yt("lobbyManage:you");
-      else if ("here" === dt.section) "none" === dt.player.role && Gt - dt.player.at < 6e5 && (Tt = Pt(yt, Nt.code, "lobbyManage:joinedAgo", dt.player.at, Gt));
-      else if ("away" === dt.section) {
-        if (dt.player.at > 0) {
-          const tt = "kicked" === dt.player.why ? "lobbyManage:kickedAgo" : "lobbyManage:leftAgo";
-          Tt = Pt(yt, Nt.code, tt, dt.player.at, Gt)
+      else if (fu) Au = hu("lobbyManage:you");
+      else if ("here" === lu.section) "none" === lu.player.role && iu - lu.player.at < 6e5 && (Au = vu(hu, Du.code, "lobbyManage:joinedAgo", lu.player.at, iu));
+      else if ("away" === lu.section) {
+        if (lu.player.at > 0) {
+          const uu = "kicked" === lu.player.why ? "lobbyManage:kickedAgo" : "lobbyManage:leftAgo";
+          Au = vu(hu, Du.code, uu, lu.player.at, iu)
         }
-      } else "banned" === dt.section ? null !== dt.bannedAt && (Tt = Pt(yt, Nt.code, "lobbyManage:bannedAgo", dt.bannedAt, Gt)) : "banned" === jt && (Tt = yt("lobbyManageEntry:unbanned"));
-      return (0, Ft.jsx)("div", {
+      } else "banned" === lu.section ? null !== lu.bannedAt && (Au = vu(hu, Du.code, "lobbyManage:bannedAgo", lu.bannedAt, iu)) : "banned" === qu && (Au = hu("lobbyManageEntry:unbanned"));
+      return (0, ru.jsx)("div", {
         className: "LobbyManagePlayerRow",
-        "data-lobby-manage-row": mt,
-        children: (0, Ft.jsxs)(vt.f, {
-          playerSocialPreview: Yt,
-          isFriend: Bt,
-          status: Tt,
-          opensProfileCard: !Ht && (0, Wt.e)(!0, mt, lt),
-          zIndex: wt,
-          children: [null !== Mt && (0, Ft.jsxs)("div", {
+        "data-lobby-manage-row": Xu,
+        children: (0, ru.jsxs)(du.g, {
+          playerSocialPreview: tu,
+          isFriend: xu,
+          status: Au,
+          opensProfileCard: !fu && (0, au.d)(!0, Xu, cu),
+          zIndex: Yu,
+          children: [null !== gu && (0, ru.jsxs)("div", {
             className: "LobbyManageButtons",
-            children: ["ban" === Mt.kind && (0, Ft.jsxs)(Jt.G, {
+            children: ["ban" === gu.kind && (0, ru.jsxs)(eu.R, {
               className: "LobbyManageIconButton SmallTextLight",
               analyticsClick: {
                 id: "lobby_manage.ban",
                 value: "row"
               },
               onClick: () => {
-                bt(null), pt({
+                Mu(null), Tu({
                   type: "ban",
-                  name: mt
-                }, ut)
+                  name: Xu
+                }, pu)
               },
-              children: [(0, Ft.jsx)(ft.b, {
+              children: [(0, ru.jsx)(Ou.e, {
                 name: "gavel"
-              }), (0, Ft.jsx)("span", {
+              }), (0, ru.jsx)("span", {
                 className: "LobbyManageButtonLabel",
-                children: yt("lobbyManageEntry:ban")
+                children: hu("lobbyManageEntry:ban")
               })]
-            }), "role" === Mt.kind && (0, Ft.jsx)(Jt.f, {
+            }), "role" === gu.kind && (0, ru.jsx)(eu.f, {
               className: "LobbyManageIconButton SmallTextLight",
               analyticsClick: {
                 id: "lobby_manage.set_role",
-                value: Mt.role
+                value: gu.role
               },
               onClick: () => {
-                bt(null), xt(Mt.role)
+                Mu(null), Hu(gu.role)
               },
-              children: yt("lobbyManage:makeRole", {
-                role: zt(Mt.role)
+              children: hu("lobbyManage:makeRole", {
+                role: Wu(gu.role)
               })
-            }), (0, Ft.jsx)(Jt.g, {
+            }), (0, ru.jsx)(eu.i, {
               className: "LobbyManageIconButton SmallTextLight",
               onClick: () => {
-                bt(null)
+                Mu(null)
               },
-              children: yt("general:cancel")
+              children: hu("general:cancel")
             })]
-          }), null === Mt && (0, Ft.jsxs)(Ft.Fragment, {
-            children: [(0, Ft.jsxs)("div", {
+          }), null === gu && (0, ru.jsxs)(ru.Fragment, {
+            children: [(0, ru.jsxs)("div", {
               className: "LobbyManageChoices",
-              children: [Kt.gamemode && null !== At && (0, Ft.jsx)(ct.e, {
-                options: (null !== (et = Ct.gamemodes) && void 0 !== et ? et : []).map((tt => ({
-                  value: tt.value,
-                  label: It(yt, tt.label, lt)
+              children: [wu.gamemode && null !== Bu && (0, ru.jsx)(ou.c, {
+                options: (null !== (Eu = Gu.gamemodes) && void 0 !== Eu ? Eu : []).map((uu => ({
+                  value: uu.value,
+                  label: mu(hu, uu.label, cu)
                 }))),
-                value: null !== (Vt = Lt.get("gamemode")) && void 0 !== Vt ? Vt : At.gamemode,
-                disabled: Zt,
-                onChange: tt => {
-                  (0, qt.reportAnalyticsClick)({
+                value: null !== (ju = Vu.get("gamemode")) && void 0 !== ju ? ju : Bu.gamemode,
+                disabled: Ku,
+                onChange: uu => {
+                  (0, Uu.reportAnalyticsClick)({
                     id: "lobby_manage.set_gamemode",
-                    value: tt.value
-                  }), Lt.hold("gamemode", tt.value, Qt.send({
+                    value: uu.value
+                  }), Vu.hold("gamemode", uu.value, bu.send({
                     type: "setGamemode",
-                    name: mt,
-                    gamemode: tt.value
-                  }, ut))
+                    name: Xu,
+                    gamemode: uu.value
+                  }, pu))
                 }
-              }), Kt.roles.length > 0 && null !== At && (0, Ft.jsx)(ct.e, {
-                options: [...Ct.roles].reverse().filter((tt => Kt.roles.includes(tt.role))).map((tt => ({
-                  value: tt.role,
-                  label: tt.label
+              }), wu.roles.length > 0 && null !== Bu && (0, ru.jsx)(ou.c, {
+                options: [...Gu.roles].reverse().filter((uu => wu.roles.includes(uu.role))).map((uu => ({
+                  value: uu.role,
+                  label: uu.label
                 }))),
-                value: null !== (Dt = Lt.get("role")) && void 0 !== Dt ? Dt : At.role,
-                disabled: Zt,
-                onChange: tt => {
-                  var et;
-                  (et = tt.value) !== (null === At || void 0 === At ? void 0 : At.role) && (ot.includes(et) ? bt({
+                value: null !== (Zu = Vu.get("role")) && void 0 !== Zu ? Zu : Bu.role,
+                disabled: Ku,
+                onChange: uu => {
+                  var Eu;
+                  (Eu = uu.value) !== (null === Bu || void 0 === Bu ? void 0 : Bu.role) && (Su.includes(Eu) ? Mu({
                     kind: "role",
-                    role: et
-                  }) : ((0, qt.reportAnalyticsClick)({
+                    role: Eu
+                  }) : ((0, Uu.reportAnalyticsClick)({
                     id: "lobby_manage.set_role",
-                    value: et
-                  }), xt(et, Ut(et))))
+                    value: Eu
+                  }), Hu(Eu, Fu(Eu))))
                 }
-              }), null !== Kt.fixedRole && (0, Ft.jsx)("div", {
+              }), null !== wu.fixedRole && (0, ru.jsx)("div", {
                 className: "LobbyManageChoiceFixed",
-                children: zt(Kt.fixedRole)
+                children: Wu(wu.fixedRole)
               })]
-            }), (0, Ft.jsxs)("div", {
+            }), (0, ru.jsxs)("div", {
               className: "LobbyManageButtons",
-              children: [Kt.kick && (0, Ft.jsxs)(Jt.g, {
+              children: [wu.kick && (0, ru.jsxs)(eu.i, {
                 className: "LobbyManageIconButton SmallTextLight",
-                ariaLabel: `${yt("lobbyManageEntry:kick")} ${mt}`,
-                disabled: Zt,
+                ariaLabel: `${hu("lobbyManageEntry:kick")} ${Xu}`,
+                disabled: Ku,
                 analyticsClick: {
                   id: "lobby_manage.kick",
                   value: "row"
                 },
                 onClick: () => {
-                  pt({
+                  Tu({
                     type: "kick",
-                    name: mt
-                  }, ut)
+                    name: Xu
+                  }, pu)
                 },
-                children: [(0, Ft.jsx)(ft.b, {
+                children: [(0, ru.jsx)(Ou.e, {
                   name: "person-falling-burst"
-                }), (0, Ft.jsx)("span", {
+                }), (0, ru.jsx)("span", {
                   className: "LobbyManageButtonLabel",
-                  children: yt("lobbyManageEntry:kick")
+                  children: hu("lobbyManageEntry:kick")
                 })]
-              }), Kt.ban && (0, Ft.jsxs)(Jt.K, {
+              }), wu.ban && (0, ru.jsxs)(eu.U, {
                 className: "LobbyManageOutlineButton SmallTextLight",
-                ariaLabel: `${yt("lobbyManageEntry:ban")} ${mt}`,
-                disabled: Zt,
+                ariaLabel: `${hu("lobbyManageEntry:ban")} ${Xu}`,
+                disabled: Ku,
                 padDestructive: !0,
                 onClick: () => {
-                  bt({
+                  Mu({
                     kind: "ban"
                   })
                 },
-                children: [(0, Ft.jsx)(ft.b, {
+                children: [(0, ru.jsx)(Ou.e, {
                   name: "gavel"
-                }), (0, Ft.jsx)("span", {
+                }), (0, ru.jsx)("span", {
                   className: "LobbyManageButtonLabel",
-                  children: yt("lobbyManageEntry:ban")
+                  children: hu("lobbyManageEntry:ban")
                 })]
-              }), Kt.unban && (0, Ft.jsxs)(Jt.g, {
+              }), wu.unban && (0, ru.jsxs)(eu.i, {
                 className: "LobbyManageIconButton SmallTextLight",
-                ariaLabel: `${yt("lobbyManageEntry:unban")} ${mt}`,
-                disabled: Zt,
+                ariaLabel: `${hu("lobbyManageEntry:unban")} ${Xu}`,
+                disabled: Ku,
                 analyticsClick: {
                   id: "lobby_manage.unban"
                 },
                 onClick: () => {
-                  pt({
+                  Tu({
                     type: "unban",
-                    name: mt
-                  }, ut)
+                    name: Xu
+                  }, pu)
                 },
-                children: [(0, Ft.jsx)(ft.b, {
+                children: [(0, ru.jsx)(Ou.e, {
                   name: "user-unlock"
-                }), (0, Ft.jsx)("span", {
+                }), (0, ru.jsx)("span", {
                   className: "LobbyManageButtonLabel",
-                  children: yt("lobbyManageEntry:unban")
+                  children: hu("lobbyManageEntry:unban")
                 })]
               })]
             })]
@@ -441,783 +441,783 @@ export const modules = {
       })
     }
 
-    function At(tt) {
-      var et, Vt, qt, Dt;
+    function Bu(uu) {
+      var Eu, ju, Uu, Zu;
       let {
-        manage: mt,
-        focusRequest: dt,
-        onFocused: jt
-      } = tt;
+        manage: Xu,
+        focusRequest: lu,
+        onFocused: qu
+      } = uu;
       const {
-        t: Ht
-      } = (0, Et.H)(), Xt = (0, bt.h)("players"), Qt = (0, bt.h)("hiddenPlayerNames"), lt = (0, Ot.useRef)(null), {
-        state: wt
-      } = mt, Nt = null === Xt.localId ? null : null !== (et = null === (Vt = Xt.byId[Xt.localId]) || void 0 === Vt ? void 0 : Vt.name) && void 0 !== et ? et : null, [Mt] = (0, Ot.useState)((() => ut(wt, Nt))), Ct = function(tt, et, Vt) {
-        const Ot = new Set([...tt.here, ...tt.away, ...tt.banned]),
-          qt = ut(et, Vt),
-          Dt = et => {
-            const Vt = qt[et].filter((tt => !Ot.has(tt)));
-            for (const tt of Vt) Ot.add(tt);
-            return [...tt[et], ...Vt]
+        t: fu
+      } = (0, Nu.A)(), Cu = (0, Mu.f)("players"), bu = (0, Mu.f)("hiddenPlayerNames"), cu = (0, su.useRef)(null), {
+        state: Yu
+      } = Xu, Du = null === Cu.localId ? null : null !== (Eu = null === (ju = Cu.byId[Cu.localId]) || void 0 === ju ? void 0 : ju.name) && void 0 !== Eu ? Eu : null, [gu] = (0, su.useState)((() => pu(Yu, Du))), Gu = function(uu, Eu, ju) {
+        const su = new Set([...uu.here, ...uu.away, ...uu.banned]),
+          Uu = pu(Eu, ju),
+          Zu = Eu => {
+            const ju = Uu[Eu].filter((uu => !su.has(uu)));
+            for (const uu of ju) su.add(uu);
+            return [...uu[Eu], ...ju]
           };
         return {
-          here: Dt("here"),
-          away: Dt("away"),
-          banned: Dt("banned")
+          here: Zu("here"),
+          away: Zu("away"),
+          banned: Zu("banned")
         }
-      }(Mt, wt, Nt), [ht, vt] = (0, Ot.useState)(!1), Wt = function(tt, et) {
-        return tt.here.filter((tt => tt.name !== et && "none" === tt.role && tt.can.kick)).length
-      }(wt, Nt), St = mt.statusOf("kickAll");
-      (0, Ot.useEffect)((() => {
-        var tt, et;
-        if (null === dt) return;
-        const Vt = null === (tt = lt.current) || void 0 === tt ? void 0 : tt.querySelector(`[data-lobby-manage-row="${CSS.escape(dt.name)}"]`);
-        null === Vt || void 0 === Vt || Vt.scrollIntoView({
+      }(gu, Yu, Du), [Ju, du] = (0, su.useState)(!1), au = function(uu, Eu) {
+        return uu.here.filter((uu => uu.name !== Eu && "none" === uu.role && uu.can.kick)).length
+      }(Yu, Du), Pu = Xu.statusOf("kickAll");
+      (0, su.useEffect)((() => {
+        var uu, Eu;
+        if (null === lu) return;
+        const ju = null === (uu = cu.current) || void 0 === uu ? void 0 : uu.querySelector(`[data-lobby-manage-row="${CSS.escape(lu.name)}"]`);
+        null === ju || void 0 === ju || ju.scrollIntoView({
           block: "center"
-        }), null === Vt || void 0 === Vt || null === (et = Vt.querySelector(".ProfilePreview")) || void 0 === et || et.focus({
+        }), null === ju || void 0 === ju || null === (Eu = ju.querySelector(".ProfilePreview")) || void 0 === Eu || Eu.focus({
           preventScroll: !0
-        }), jt(dt.seq)
-      }), [null === dt || void 0 === dt ? void 0 : dt.seq]);
-      const ct = tt => (et, Vt) => (0, Ft.jsx)(Ut, {
-        name: et,
-        place: Kt(wt, et),
-        openedIn: tt,
-        isYou: et === Nt,
-        manage: mt,
-        hiddenNames: Qt,
-        zIndex: Vt
-      }, et);
-      return (0, Ft.jsxs)("div", {
-        ref: lt,
+        }), qu(lu.seq)
+      }), [null === lu || void 0 === lu ? void 0 : lu.seq]);
+      const ou = uu => (Eu, ju) => (0, ru.jsx)(Fu, {
+        name: Eu,
+        place: wu(Yu, Eu),
+        openedIn: uu,
+        isYou: Eu === Du,
+        manage: Xu,
+        hiddenNames: bu,
+        zIndex: ju
+      }, Eu);
+      return (0, ru.jsxs)("div", {
+        ref: cu,
         className: "LobbyManagePage",
-        children: [Ct.here.length > 0 && (0, Ft.jsxs)("div", {
+        children: [Gu.here.length > 0 && (0, ru.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, Ft.jsxs)("div", {
+          children: [(0, ru.jsxs)("div", {
             className: "LobbyManageBoxHeading",
-            children: [(0, Ft.jsx)(yt.d, {
-              label: Ht("lobbyManage:here"),
-              meta: wt.here.length
-            }), Wt >= 2 && !ht && (0, Ft.jsxs)(Jt.K, {
+            children: [(0, ru.jsx)(hu.b, {
+              label: fu("lobbyManage:here"),
+              meta: Yu.here.length
+            }), au >= 2 && !Ju && (0, ru.jsxs)(eu.U, {
               className: "LobbyManageTitleAction SmallTextLight",
               padDestructive: !0,
-              disabled: mt.isPending("kickAll"),
+              disabled: Xu.isPending("kickAll"),
               onClick: () => {
-                vt(!0)
+                du(!0)
               },
-              children: [(0, Ft.jsx)(ft.b, {
+              children: [(0, ru.jsx)(Ou.e, {
                 name: "person-falling-burst"
-              }), " ", Ht("lobbyManage:kickAll")]
+              }), " ", fu("lobbyManage:kickAll")]
             })]
-          }), ht && Wt >= 2 && (0, Ft.jsxs)("div", {
+          }), Ju && au >= 2 && (0, ru.jsxs)("div", {
             className: "LobbyManageConfirm",
-            children: [(0, Ft.jsx)("span", {
+            children: [(0, ru.jsx)("span", {
               className: "LobbyManageConfirmText",
-              children: Ht("lobbyManage:kickAllConfirm", {
-                count: Wt
+              children: fu("lobbyManage:kickAllConfirm", {
+                count: au
               })
-            }), (0, Ft.jsxs)("div", {
+            }), (0, ru.jsxs)("div", {
               className: "LobbyManageButtons",
-              children: [(0, Ft.jsx)(Jt.G, {
+              children: [(0, ru.jsx)(eu.R, {
                 className: "LobbyManageIconButton SmallTextLight",
                 analyticsClick: {
                   id: "lobby_manage.kick_all"
                 },
                 onClick: () => {
-                  vt(!1), mt.send({
+                  du(!1), Xu.send({
                     type: "kickAll"
                   }, "kickAll")
                 },
-                children: Ht("lobbyManage:kickAll")
-              }), (0, Ft.jsx)(Jt.g, {
+                children: fu("lobbyManage:kickAll")
+              }), (0, ru.jsx)(eu.i, {
                 className: "LobbyManageIconButton SmallTextLight",
                 onClick: () => {
-                  vt(!1)
+                  du(!1)
                 },
-                children: Ht("general:cancel")
+                children: fu("general:cancel")
               })]
             })]
-          }), St && (0, Ft.jsx)("div", {
+          }), Pu && (0, ru.jsx)("div", {
             className: "LobbyManageBoxStatus",
-            children: (0, Ft.jsx)(kt, {
-              status: St
+            children: (0, ru.jsx)(Qu, {
+              status: Pu
             })
-          }), (0, Ft.jsx)(Gt, {
-            names: Ct.here,
-            cap: Ct.here.length,
+          }), (0, ru.jsx)(iu, {
+            names: Gu.here,
+            cap: Gu.here.length,
             filterFrom: 20,
             moreLabel: "",
-            renderRow: ct("here")
+            renderRow: ou("here")
           })]
-        }), Ct.away.length > 0 && (0, Ft.jsxs)("div", {
+        }), Gu.away.length > 0 && (0, ru.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, Ft.jsx)(yt.d, {
-            label: Ht("lobbyManage:notHere"),
-            meta: Ct.away.length
-          }), (0, Ft.jsx)(Gt, {
-            names: Ct.away,
+          children: [(0, ru.jsx)(hu.b, {
+            label: fu("lobbyManage:notHere"),
+            meta: Gu.away.length
+          }), (0, ru.jsx)(iu, {
+            names: Gu.away,
             cap: 5,
             filterFrom: null,
-            moreLabel: Ht("lobbyManage:allCount", {
-              count: Ct.away.length
+            moreLabel: fu("lobbyManage:allCount", {
+              count: Gu.away.length
             }),
-            reveal: null !== (qt = null === dt || void 0 === dt ? void 0 : dt.name) && void 0 !== qt ? qt : null,
-            renderRow: ct("away")
+            reveal: null !== (Uu = null === lu || void 0 === lu ? void 0 : lu.name) && void 0 !== Uu ? Uu : null,
+            renderRow: ou("away")
           })]
-        }), Ct.banned.length > 0 && (0, Ft.jsxs)("div", {
+        }), Gu.banned.length > 0 && (0, ru.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, Ft.jsx)(yt.d, {
-            label: Ht("lobbyManage:banned"),
-            meta: Ct.banned.length
-          }), (0, Ft.jsx)(Gt, {
-            names: Ct.banned,
+          children: [(0, ru.jsx)(hu.b, {
+            label: fu("lobbyManage:banned"),
+            meta: Gu.banned.length
+          }), (0, ru.jsx)(iu, {
+            names: Gu.banned,
             cap: 5,
             filterFrom: 20,
-            moreLabel: Ht("lobbyManage:allCount", {
-              count: Ct.banned.length
+            moreLabel: fu("lobbyManage:allCount", {
+              count: Gu.banned.length
             }),
-            reveal: null !== (Dt = null === dt || void 0 === dt ? void 0 : dt.name) && void 0 !== Dt ? Dt : null,
-            renderRow: ct("banned")
+            reveal: null !== (Zu = null === lu || void 0 === lu ? void 0 : lu.name) && void 0 !== Zu ? Zu : null,
+            renderRow: ou("banned")
           })]
         })]
       })
     }
-    var it = Vt(4771),
-      Yt = Vt(1737),
-      Bt = Vt(36954),
-      pt = Vt(36973),
-      xt = Vt(36967),
-      Tt = Vt(36959),
-      gt = Vt(36988),
-      st = Vt(36982),
-      nt = Vt(36984);
+    var Lu = ju(4809),
+      tu = ju(1693),
+      xu = ju(37087),
+      Tu = ju(37101),
+      Hu = ju(37099),
+      Au = ju(37091),
+      nu = ju(37130),
+      yu = ju(37115),
+      zu = ju(37123);
 
-    function te(tt) {
-      const et = new Set;
-      for (const Vt of tt) et.add(Vt.toLowerCase());
-      return et
+    function Ru(uu) {
+      const Eu = new Set;
+      for (const ju of uu) Eu.add(ju.toLowerCase());
+      return Eu
     }
 
-    function ee(tt) {
-      var et, Vt;
+    function uE(uu) {
+      var Eu, ju;
       let {
-        state: qt,
-        lobbyName: Dt,
-        listed: mt,
-        isListed: dt,
-        bM: jt,
-        qJ: Ht,
-        statusOf: Xt
-      } = tt;
+        state: Uu,
+        lobbyName: Zu,
+        listed: Xu,
+        isListed: lu,
+        RD: qu,
+        lG: fu,
+        statusOf: Cu
+      } = uu;
       const {
-        t: Qt,
-        selectedLanguage: lt
-      } = (0, Et.H)(), ft = (0, Yt.k)(), wt = (0, bt.h)("players"), Nt = null === wt.localId ? null : null !== (et = null === (Vt = wt.byId[wt.localId]) || void 0 === Vt ? void 0 : Vt.name) && void 0 !== et ? et : null, Mt = (0, Ot.useMemo)((() => (0, Tt.f)(ft.friends, Dt, qt.here.map((tt => tt.name)))), [ft.friends, Dt, qt.here]), Jt = new Map(Mt.map((tt => [tt.friend.name.toLowerCase(), tt]))), Ct = function(tt) {
+        t: bu,
+        selectedLanguage: cu
+      } = (0, Nu.A)(), Ou = (0, tu.m)(), Yu = (0, Mu.f)("players"), Du = null === Yu.localId ? null : null !== (Eu = null === (ju = Yu.byId[Yu.localId]) || void 0 === ju ? void 0 : ju.name) && void 0 !== Eu ? Eu : null, gu = (0, su.useMemo)((() => (0, Au.i)(Ou.friends, Zu, Uu.here.map((uu => uu.name)))), [Ou.friends, Zu, Uu.here]), eu = new Map(gu.map((uu => [uu.friend.name.toLowerCase(), uu]))), Gu = function(uu) {
         let {
-          refused: et,
-          listed: Vt,
-          here: Ot,
-          friends: qt,
-          excluded: Dt
-        } = tt;
-        const mt = te(Dt),
-          dt = tt => tt.filter((tt => {
-            const et = tt.toLowerCase();
-            return !mt.has(et) && (mt.add(et), !0)
+          refused: Eu,
+          listed: ju,
+          here: su,
+          friends: Uu,
+          excluded: Zu
+        } = uu;
+        const Xu = Ru(Zu),
+          lu = uu => uu.filter((uu => {
+            const Eu = uu.toLowerCase();
+            return !Xu.has(Eu) && (Xu.add(Eu), !0)
           }));
         return {
           added: [],
-          refused: dt(et),
-          listed: dt(Vt),
-          suggested: dt([...Ot, ...qt])
+          refused: lu(Eu),
+          listed: lu(ju),
+          suggested: lu([...su, ...Uu])
         }
       }({
-        refused: qt.refused.map((tt => tt.name)),
-        listed: mt,
-        here: qt.here.map((tt => tt.name)),
-        friends: Mt.flatMap((tt => "here" === tt.place ? [] : [tt.friend.name])),
-        excluded: [...null === Nt ? [] : [Nt], ...[...qt.here, ...qt.away].flatMap((tt => "none" === tt.role || (0, Tt.j)(mt, tt.name) ? [] : [tt.name]))]
-      }), [ut] = (0, Ot.useState)(Ct), [Kt, ht] = (0, Ot.useState)([]), vt = function(tt, et, Vt) {
-        const Ot = te(Vt),
-          qt = te([...Vt, ...tt.refused, ...tt.listed, ...tt.suggested]),
-          Dt = Vt => [...tt[Vt].filter((tt => !Ot.has(tt.toLowerCase()))), ...et[Vt].filter((tt => {
-            const et = tt.toLowerCase();
-            return !qt.has(et) && (qt.add(et), !0)
+        refused: Uu.refused.map((uu => uu.name)),
+        listed: Xu,
+        here: Uu.here.map((uu => uu.name)),
+        friends: gu.flatMap((uu => "here" === uu.place ? [] : [uu.friend.name])),
+        excluded: [...null === Du ? [] : [Du], ...[...Uu.here, ...Uu.away].flatMap((uu => "none" === uu.role || (0, Au.l)(Xu, uu.name) ? [] : [uu.name]))]
+      }), [pu] = (0, su.useState)(Gu), [wu, Ju] = (0, su.useState)([]), du = function(uu, Eu, ju) {
+        const su = Ru(ju),
+          Uu = Ru([...ju, ...uu.refused, ...uu.listed, ...uu.suggested]),
+          Zu = ju => [...uu[ju].filter((uu => !su.has(uu.toLowerCase()))), ...Eu[ju].filter((uu => {
+            const Eu = uu.toLowerCase();
+            return !Uu.has(Eu) && (Uu.add(Eu), !0)
           }))];
         return {
-          added: [...Vt],
-          refused: Dt("refused"),
-          listed: Dt("listed"),
-          suggested: Dt("suggested")
+          added: [...ju],
+          refused: Zu("refused"),
+          listed: Zu("listed"),
+          suggested: Zu("suggested")
         }
-      }(ut, Ct, Kt), ct = (tt, et) => {
-        var Vt, Ot;
-        const Dt = tt.toLowerCase(),
-          mt = Jt.get(Dt),
-          Ht = qt.here.find((tt => tt.name.toLowerCase() === Dt)),
-          Et = qt.refused.find((tt => tt.name.toLowerCase() === Dt)),
-          ft = null !== (Vt = null === Xt || void 0 === Xt ? void 0 : Xt(tt)) && void 0 !== Vt ? Vt : null;
-        let wt = null;
-        ft ? wt = (0, Ft.jsx)(kt, {
-          status: ft
-        }) : Et ? wt = Pt(Qt, lt.code, "lobbyManage:triedToJoinAgo", Et.at, Date.now()) : mt && Ht ? wt = Qt("lobbyManage:friendHere") : mt ? wt = "online" === mt.place ? Qt("lobbyManage:friendOnline") : Qt("lobbyManage:friend") : Ht && (wt = Qt("lobbyManage:hereStatus"));
-        let yt = null !== (Ot = null === mt || void 0 === mt ? void 0 : mt.friend) && void 0 !== Ot ? Ot : (0, St.j)(tt, null);
-        return !mt && null !== Ht && void 0 !== Ht && Ht.id && (yt = (0, Wt.c)(Ht.id, Ht.name).playerSocialPreview), (0, Ft.jsx)(st.c, {
-          playerSocialPreview: yt,
-          isFriend: void 0 !== mt,
+      }(pu, Gu, wu), ou = (uu, Eu) => {
+        var ju, su;
+        const Zu = uu.toLowerCase(),
+          Xu = eu.get(Zu),
+          fu = Uu.here.find((uu => uu.name.toLowerCase() === Zu)),
+          Nu = Uu.refused.find((uu => uu.name.toLowerCase() === Zu)),
+          Ou = null !== (ju = null === Cu || void 0 === Cu ? void 0 : Cu(uu)) && void 0 !== ju ? ju : null;
+        let Yu = null;
+        Ou ? Yu = (0, ru.jsx)(Qu, {
+          status: Ou
+        }) : Nu ? Yu = vu(bu, cu.code, "lobbyManage:triedToJoinAgo", Nu.at, Date.now()) : Xu && fu ? Yu = bu("lobbyManage:friendHere") : Xu ? Yu = "online" === Xu.place ? bu("lobbyManage:friendOnline") : bu("lobbyManage:friend") : fu && (Yu = bu("lobbyManage:hereStatus"));
+        let hu = null !== (su = null === Xu || void 0 === Xu ? void 0 : Xu.friend) && void 0 !== su ? su : (0, Pu.h)(uu, null);
+        return !Xu && null !== fu && void 0 !== fu && fu.id && (hu = (0, au.c)(fu.id, fu.name).playerSocialPreview), (0, ru.jsx)(yu.d, {
+          playerSocialPreview: hu,
+          isFriend: void 0 !== Xu,
           hideFriendBadge: !0,
-          status: wt,
-          zIndex: et,
-          BQ: {
-            on: dt(tt),
-            onChange: et => {
-              jt(tt, et)
+          status: Yu,
+          zIndex: Eu,
+          Tb: {
+            on: lu(uu),
+            onChange: Eu => {
+              qu(uu, Eu)
             }
           }
-        }, Dt)
-      }, Rt = [...vt.added, ...vt.refused];
-      return (0, Ft.jsxs)("div", {
+        }, Zu)
+      }, ku = [...du.added, ...du.refused];
+      return (0, ru.jsxs)("div", {
         className: "LobbyManageBox",
-        children: [(0, Ft.jsx)(yt.d, {
-          label: Qt("worldSocial:whitelist"),
-          meta: mt.length
-        }), (0, Ft.jsx)(nt.d, {
-          label: Qt("lobbyManage:add"),
+        children: [(0, ru.jsx)(hu.b, {
+          label: bu("worldSocial:whitelist"),
+          meta: Xu.length
+        }), (0, ru.jsx)(zu.d, {
+          label: bu("lobbyManage:add"),
           icon: "user-check",
-          placeholder: Qt("socialBar:enterPlayerName"),
-          onSubmit: async tt => {
-            const et = await Ht(tt);
-            return et.ok && ht((et => [tt, ...et])), et
+          placeholder: bu("socialBar:enterPlayerName"),
+          onSubmit: async uu => {
+            const Eu = await fu(uu);
+            return Eu.ok && Ju((Eu => [uu, ...Eu])), Eu
           }
-        }), Rt.length > 0 && (0, Ft.jsx)("div", {
+        }), ku.length > 0 && (0, ru.jsx)("div", {
           className: "PlayerRows",
-          children: Rt.map(((tt, et) => ct(tt, Rt.length - et)))
-        }), (0, Ft.jsx)(Gt, {
-          names: vt.listed,
+          children: ku.map(((uu, Eu) => ou(uu, ku.length - Eu)))
+        }), (0, ru.jsx)(iu, {
+          names: du.listed,
           cap: 8,
           filterFrom: 8,
-          moreLabel: Qt("lobbyManage:allOnWhitelist", {
-            count: vt.listed.length
+          moreLabel: bu("lobbyManage:allOnWhitelist", {
+            count: du.listed.length
           }),
-          renderRow: ct
-        }), (0, Ft.jsx)(Gt, {
-          names: vt.suggested,
+          renderRow: ou
+        }), (0, ru.jsx)(iu, {
+          names: du.suggested,
           cap: 8,
           filterFrom: null,
-          moreLabel: Qt("lobbyManage:allCount", {
-            count: vt.suggested.length
+          moreLabel: bu("lobbyManage:allCount", {
+            count: du.suggested.length
           }),
-          renderRow: ct
+          renderRow: ou
         })]
       })
     }
 
-    function Ve(tt) {
+    function EE(uu) {
       let {
-        manage: et,
-        listing: Vt
-      } = tt;
+        manage: Eu,
+        listing: ju
+      } = uu;
       const {
-        t: Ot
-      } = (0, Et.H)(), Dt = (tt, Vt) => ((0, qt.reportAnalyticsClick)({
+        t: su
+      } = (0, Nu.A)(), Zu = (uu, ju) => ((0, Uu.reportAnalyticsClick)({
         id: "lobby_manage.set_listing",
-        value: tt
-      }), et.send({
+        value: uu
+      }), Eu.send({
         type: "setListing",
-        field: tt,
-        value: Vt
-      }, `listing:${tt}`)), mt = tt => {
-        const Vt = et.statusOf(`listing:${tt}`);
-        return Vt && !Vt.ok && (0, Ft.jsx)("div", {
+        field: uu,
+        value: ju
+      }, `listing:${uu}`)), Xu = uu => {
+        const ju = Eu.statusOf(`listing:${uu}`);
+        return ju && !ju.ok && (0, ru.jsx)("div", {
           className: "LobbyManageFieldError",
-          children: (0, Ft.jsx)(kt, {
-            status: Vt
+          children: (0, ru.jsx)(Qu, {
+            status: ju
           })
         })
       };
-      return (0, Ft.jsxs)("div", {
+      return (0, ru.jsxs)("div", {
         className: "LobbyManageBox LobbyManageListing",
-        children: [(0, Ft.jsx)(yt.d, {
-          label: Ot("lobbyManage:inWorldsList")
-        }), (0, Ft.jsxs)("div", {
+        children: [(0, ru.jsx)(hu.b, {
+          label: su("lobbyManage:inWorldsList")
+        }), (0, ru.jsxs)("div", {
           className: "LobbyManageRuleRow",
-          children: [(0, Ft.jsx)("div", {
+          children: [(0, ru.jsx)("div", {
             className: "SliderText",
-            children: Ot("lobbyManage:description")
-          }), (0, Ft.jsx)(zt, {
-            value: Vt.description,
-            ariaLabel: Ot("lobbyManage:description"),
+            children: su("lobbyManage:description")
+          }), (0, ru.jsx)(Wu, {
+            value: ju.description,
+            ariaLabel: su("lobbyManage:description"),
             wide: !0,
-            onSave: tt => Dt("description", tt)
+            onSave: uu => Zu("description", uu)
           })]
-        }), mt("description"), (0, Ft.jsxs)("div", {
+        }), Xu("description"), (0, ru.jsxs)("div", {
           className: "LobbyManageRuleRow",
-          children: [(0, Ft.jsx)("div", {
+          children: [(0, ru.jsx)("div", {
             className: "SliderText",
-            children: Ot("lobbyManage:emojis")
-          }), (0, Ft.jsx)(zt, {
-            value: Vt.emojis,
-            ariaLabel: Ot("lobbyManage:emojis"),
-            onSave: tt => Dt("emojis", tt)
+            children: su("lobbyManage:emojis")
+          }), (0, ru.jsx)(Wu, {
+            value: ju.emojis,
+            ariaLabel: su("lobbyManage:emojis"),
+            onSave: uu => Zu("emojis", uu)
           })]
-        }), mt("emojis"), (0, Ft.jsxs)("div", {
+        }), Xu("emojis"), (0, ru.jsxs)("div", {
           className: "LobbyManageRuleRow",
-          children: [(0, Ft.jsx)("div", {
+          children: [(0, ru.jsx)("div", {
             className: "SliderText",
-            children: Ot("lobbyManage:colour")
-          }), (0, Ft.jsx)(Oe, {
-            value: Vt.colour,
-            ariaLabel: Ot("lobbyManage:colour"),
-            onSave: tt => {
-              Dt("colour", tt)
+            children: su("lobbyManage:colour")
+          }), (0, ru.jsx)(jE, {
+            value: ju.colour,
+            ariaLabel: su("lobbyManage:colour"),
+            onSave: uu => {
+              Zu("colour", uu)
             }
           })]
-        }), mt("colour")]
+        }), Xu("colour")]
       })
     }
 
-    function Oe(tt) {
+    function jE(uu) {
       let {
-        value: et,
-        ariaLabel: Vt,
-        onSave: qt
-      } = tt;
-      const Dt = (0, Ot.useRef)(null),
-        mt = (0, Ot.useRef)({
-          value: et,
-          onSave: qt
+        value: Eu,
+        ariaLabel: ju,
+        onSave: Uu
+      } = uu;
+      const Zu = (0, su.useRef)(null),
+        Xu = (0, su.useRef)({
+          value: Eu,
+          onSave: Uu
         });
-      mt.current = {
-        value: et,
-        onSave: qt
+      Xu.current = {
+        value: Eu,
+        onSave: Uu
       };
-      const dt = (0, Ot.useRef)(null),
-        jt = (0, Ot.useRef)(!1),
-        Ht = tt => {
-          jt.current && tt.value !== mt.current.value && tt.value !== dt.current && (dt.current = tt.value, mt.current.onSave(tt.value))
+      const lu = (0, su.useRef)(null),
+        qu = (0, su.useRef)(!1),
+        fu = uu => {
+          qu.current && uu.value !== Xu.current.value && uu.value !== lu.current && (lu.current = uu.value, Xu.current.onSave(uu.value))
         };
-      return (0, Ot.useEffect)((() => {
-        Dt.current && document.activeElement !== Dt.current && (Dt.current.value = et)
-      }), [et]), (0, Ot.useEffect)((() => {
-        const tt = Dt.current,
-          et = () => {
-            Ht(tt)
+      return (0, su.useEffect)((() => {
+        Zu.current && document.activeElement !== Zu.current && (Zu.current.value = Eu)
+      }), [Eu]), (0, su.useEffect)((() => {
+        const uu = Zu.current,
+          Eu = () => {
+            fu(uu)
           };
-        return tt.addEventListener("change", et), () => {
-          tt.removeEventListener("change", et), Ht(tt)
+        return uu.addEventListener("change", Eu), () => {
+          uu.removeEventListener("change", Eu), fu(uu)
         }
-      }), []), (0, Ft.jsx)("input", {
-        ref: Dt,
+      }), []), (0, ru.jsx)("input", {
+        ref: Zu,
         type: "color",
         className: "LobbyManageColour",
-        defaultValue: et,
-        "aria-label": Vt,
+        defaultValue: Eu,
+        "aria-label": ju,
         onInput: () => {
-          jt.current = !0
+          qu.current = !0
         },
-        onBlur: tt => {
-          Ht(tt.currentTarget)
+        onBlur: uu => {
+          fu(uu.currentTarget)
         }
       })
     }
 
-    function qe(tt) {
+    function sE(uu) {
       let {
-        manage: et
-      } = tt;
+        manage: Eu
+      } = uu;
       const {
-        lobbyName: Vt,
-        shownLobbyName: Ot
-      } = (0, bt.h)("connectedGame");
-      return et.state.you.canSetVisibility && null !== Vt ? (0, Ft.jsx)(me, {
-        manage: et,
-        lobbyName: Vt,
-        worldCode: null !== Ot && void 0 !== Ot ? Ot : Vt
-      }, Vt) : (0, Ft.jsx)(de, {
-        manage: et,
-        lobbyName: null !== Vt && void 0 !== Vt ? Vt : ""
+        lobbyName: ju,
+        shownLobbyName: su
+      } = (0, Mu.f)("connectedGame");
+      return Eu.state.you.canSetVisibility && null !== ju ? (0, ru.jsx)(ZE, {
+        manage: Eu,
+        lobbyName: ju,
+        worldCode: null !== su && void 0 !== su ? su : ju
+      }, ju) : (0, ru.jsx)(XE, {
+        manage: Eu,
+        lobbyName: null !== ju && void 0 !== ju ? ju : ""
       })
     }
 
-    function De(tt) {
-      return tt.map((tt => tt.toLowerCase())).sort().join(",")
+    function UE(uu) {
+      return uu.map((uu => uu.toLowerCase())).sort().join(",")
     }
 
-    function me(tt) {
-      var et;
+    function ZE(uu) {
+      var Eu;
       let {
-        manage: Vt,
-        lobbyName: Dt,
-        worldCode: mt
-      } = tt;
+        manage: ju,
+        lobbyName: Zu,
+        worldCode: Xu
+      } = uu;
       const {
-        t: dt
-      } = (0, Et.H)(), {
-        settings: jt,
-        loading: Ht,
-        change: Xt,
-        retry: Qt,
-        refresh: lt
-      } = (0, Bt.f)(Dt), ft = (0, Yt.k)(), {
-        state: Nt
-      } = Vt, Mt = (0, Ot.useRef)(jt);
-      Mt.current = jt;
-      const bt = De(null !== (et = Nt.whitelist) && void 0 !== et ? et : []),
-        Ct = null !== Nt.whitelist;
-      (0, Ot.useEffect)((() => {
-        const tt = Mt.current;
-        null !== tt && (tt.visibility !== Nt.visibility || Ct && De(tt.whitelist) !== bt) && lt()
-      }), [Nt.visibility, bt, Ct, lt]);
-      const ut = async (tt, et) => {
-        let Vt = null;
-        return await Xt(tt, et, {
+        t: lu
+      } = (0, Nu.A)(), {
+        settings: qu,
+        loading: fu,
+        change: Cu,
+        retry: bu,
+        refresh: cu
+      } = (0, xu.k)(Zu), Ou = (0, tu.m)(), {
+        state: Du
+      } = ju, gu = (0, su.useRef)(qu);
+      gu.current = qu;
+      const Mu = UE(null !== (Eu = Du.whitelist) && void 0 !== Eu ? Eu : []),
+        Gu = null !== Du.whitelist;
+      (0, su.useEffect)((() => {
+        const uu = gu.current;
+        null !== uu && (uu.visibility !== Du.visibility || Gu && UE(uu.whitelist) !== Mu) && cu()
+      }), [Du.visibility, Mu, Gu, cu]);
+      const pu = async (uu, Eu) => {
+        let ju = null;
+        return await Cu(uu, Eu, {
           quiet: !0,
-          onAnswer: tt => {
-            Vt = tt
+          onAnswer: uu => {
+            ju = uu
           }
-        }), Vt
-      }, Kt = (tt, et) => {
-        null !== et && "error" in et && Vt.showStatus(tt, {
+        }), ju
+      }, wu = (uu, Eu) => {
+        null !== Eu && "error" in Eu && ju.showStatus(uu, {
           ok: !1,
-          text: [dt(et.error)]
+          text: [lu(Eu.error)]
         })
-      }, ht = async tt => {
-        if (null === jt || tt === jt.visibility) return;
-        (0, qt.reportAnalyticsClick)({
+      }, Ju = async uu => {
+        if (null === qu || uu === qu.visibility) return;
+        (0, Uu.reportAnalyticsClick)({
           id: "lobby_manage.set_mode",
-          value: tt
+          value: uu
         });
-        const et = "whitelist" === tt ? (0, Tt.e)((0, Tt.f)(ft.friends, Dt, Nt.here.map((tt => tt.name))), (0, gt.e)(Dt), jt.whitelist) : [],
-          Vt = await ut({
-            setVisibility: tt
-          }, (et => ({
-            ...et,
-            visibility: tt
+        const Eu = "whitelist" === uu ? (0, Au.e)((0, Au.i)(Ou.friends, Zu, Du.here.map((uu => uu.name))), (0, nu.e)(Zu), qu.whitelist) : [],
+          ju = await pu({
+            setVisibility: uu
+          }, (Eu => ({
+            ...Eu,
+            visibility: uu
           })));
-        Kt("mode", Vt), null === Vt || "error" in Vt || await (async tt => {
-          for (const et of (0, Tt.m)(tt, it.E))
-            if (!await Xt({
-                whitelistAdd: et
-              }, (tt => (0, Tt.r)(tt, et, !0)))) return !1;
+        wu("mode", ju), null === ju || "error" in ju || await (async uu => {
+          for (const Eu of (0, Au.o)(uu, Lu.E))
+            if (!await Cu({
+                whitelistAdd: Eu
+              }, (uu => (0, Au.r)(uu, Eu, !0)))) return !1;
           return !0
-        })(et)
-      }, vt = (0, Ot.useMemo)((() => {
-        var tt;
-        if (null === jt) return [];
-        const et = null !== (tt = Nt.whitelist) && void 0 !== tt ? tt : [];
-        return [...et.filter((tt => (0, Tt.j)(jt.whitelist, tt))), ...jt.whitelist.filter((tt => !(0, Tt.j)(et, tt)))]
-      }), [jt, Nt.whitelist]), Wt = Vt.statusOf("mode");
-      return (0, Ft.jsxs)("div", {
+        })(Eu)
+      }, du = (0, su.useMemo)((() => {
+        var uu;
+        if (null === qu) return [];
+        const Eu = null !== (uu = Du.whitelist) && void 0 !== uu ? uu : [];
+        return [...Eu.filter((uu => (0, Au.l)(qu.whitelist, uu))), ...qu.whitelist.filter((uu => !(0, Au.l)(Eu, uu)))]
+      }), [qu, Du.whitelist]), au = ju.statusOf("mode");
+      return (0, ru.jsxs)("div", {
         className: "LobbyManagePage",
-        children: [(0, Ft.jsxs)("div", {
+        children: [(0, ru.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, Ft.jsx)(yt.d, {
-            label: dt("worldSocial:whoCanJoin")
-          }), null === jt && Ht && (0, Ft.jsx)("div", {
+          children: [(0, ru.jsx)(hu.b, {
+            label: lu("worldSocial:whoCanJoin")
+          }), null === qu && fu && (0, ru.jsx)("div", {
             className: "LobbyManageLoading",
-            children: (0, Ft.jsx)(wt.b, {})
-          }), null === jt && !Ht && (0, Ft.jsx)(Jt.g, {
+            children: (0, ru.jsx)(Yu.b, {})
+          }), null === qu && !fu && (0, ru.jsx)(eu.i, {
             className: "SmallTextLight",
-            onClick: Qt,
-            children: dt("worldSocial:loadFailed")
-          }), null !== jt && (0, Ft.jsx)(pt.e, {
-            visibility: jt.visibility,
-            onPick: tt => {
-              ht(tt)
+            onClick: bu,
+            children: lu("worldSocial:loadFailed")
+          }), null !== qu && (0, ru.jsx)(Tu.d, {
+            visibility: qu.visibility,
+            onPick: uu => {
+              Ju(uu)
             }
-          }), Wt && (0, Ft.jsx)("div", {
+          }), au && (0, ru.jsx)("div", {
             className: "LobbyManageFieldError",
-            children: (0, Ft.jsx)(kt, {
-              status: Wt
+            children: (0, ru.jsx)(Qu, {
+              status: au
             })
-          }), null !== jt && "private" !== jt.visibility && (0, Ft.jsx)(xt.b, {
-            worldCode: mt,
+          }), null !== qu && "private" !== qu.visibility && (0, ru.jsx)(Hu.d, {
+            worldCode: Xu,
             message: null
           })]
-        }), "whitelist" === (null === jt || void 0 === jt ? void 0 : jt.visibility) && (0, Ft.jsx)(ee, {
-          state: Nt,
-          lobbyName: Dt,
-          listed: vt,
-          isListed: tt => (0, Tt.j)(jt.whitelist, tt),
-          bM: (tt, et) => {
-            (0, qt.reportAnalyticsClick)(et ? {
+        }), "whitelist" === (null === qu || void 0 === qu ? void 0 : qu.visibility) && (0, ru.jsx)(uE, {
+          state: Du,
+          lobbyName: Zu,
+          listed: du,
+          isListed: uu => (0, Au.l)(qu.whitelist, uu),
+          RD: (uu, Eu) => {
+            (0, Uu.reportAnalyticsClick)(Eu ? {
               id: "lobby_manage.whitelist_add",
-              value: "BQ"
+              value: "Tb"
             } : {
               id: "lobby_manage.whitelist_remove"
-            }), ut(et ? {
-              whitelistAdd: [tt]
+            }), pu(Eu ? {
+              whitelistAdd: [uu]
             } : {
-              whitelistRemove: tt
-            }, (Vt => (0, Tt.r)(Vt, [tt], et))).then((et => {
-              Kt(`whitelist:${tt.toLowerCase()}`, et)
+              whitelistRemove: uu
+            }, (ju => (0, Au.r)(ju, [uu], Eu))).then((Eu => {
+              wu(`whitelist:${uu.toLowerCase()}`, Eu)
             }))
           },
-          qJ: async tt => {
-            (0, qt.reportAnalyticsClick)({
+          lG: async uu => {
+            (0, Uu.reportAnalyticsClick)({
               id: "lobby_manage.whitelist_add",
               value: "field"
             });
-            const et = await ut({
-              whitelistAdd: [tt]
-            }, (et => (0, Tt.r)(et, [tt], !0)));
-            return null === et ? {
+            const Eu = await pu({
+              whitelistAdd: [uu]
+            }, (Eu => (0, Au.r)(Eu, [uu], !0)));
+            return null === Eu ? {
               ok: !1,
-              error: dt("worldSocial:changeFailed")
-            } : "error" in et ? {
+              error: lu("worldSocial:changeFailed")
+            } : "error" in Eu ? {
               ok: !1,
-              error: dt(et.error)
-            } : (0, Tt.j)(et.notFound, tt) ? {
+              error: lu(Eu.error)
+            } : (0, Au.l)(Eu.notFound, uu) ? {
               ok: !1,
-              error: dt("lobbyManage:noPlayerCalled", {
-                playerName: tt
+              error: lu("lobbyManage:noPlayerCalled", {
+                playerName: uu
               })
             } : {
               ok: !0
             }
           },
-          statusOf: tt => Vt.statusOf(`whitelist:${tt.toLowerCase()}`)
-        }), "public" === (null === jt || void 0 === jt ? void 0 : jt.visibility) && null !== Nt.listing && (0, Ft.jsx)(Ve, {
-          manage: Vt,
-          listing: Nt.listing
+          statusOf: uu => ju.statusOf(`whitelist:${uu.toLowerCase()}`)
+        }), "public" === (null === qu || void 0 === qu ? void 0 : qu.visibility) && null !== Du.listing && (0, ru.jsx)(EE, {
+          manage: ju,
+          listing: Du.listing
         })]
       })
     }
 
-    function de(tt) {
-      var et;
+    function XE(uu) {
+      var Eu;
       let {
-        manage: Vt,
-        lobbyName: Ot
-      } = tt;
+        manage: ju,
+        lobbyName: su
+      } = uu;
       const {
-        t: Dt
-      } = (0, Et.H)(), {
-        state: mt
-      } = Vt, dt = Xt(), jt = null !== (et = mt.whitelist) && void 0 !== et ? et : [];
-      return (0, Ft.jsxs)("div", {
+        t: Zu
+      } = (0, Nu.A)(), {
+        state: Xu
+      } = ju, lu = Cu(), qu = null !== (Eu = Xu.whitelist) && void 0 !== Eu ? Eu : [];
+      return (0, ru.jsxs)("div", {
         className: "LobbyManagePage",
-        children: [(0, Ft.jsxs)("div", {
+        children: [(0, ru.jsxs)("div", {
           className: "LobbyManageBox",
-          children: [(0, Ft.jsx)(yt.d, {
-            label: Dt("worldSocial:whoCanJoin")
-          }), (0, Ft.jsx)("div", {
+          children: [(0, ru.jsx)(hu.b, {
+            label: Zu("worldSocial:whoCanJoin")
+          }), (0, ru.jsx)("div", {
             className: "LobbyManageModeText",
-            children: Dt(`worldSocial:${mt.visibility}`)
+            children: Zu(`worldSocial:${Xu.visibility}`)
           })]
-        }), "whitelist" === mt.visibility && mt.you.canEditWhitelist && (0, Ft.jsx)(ee, {
-          state: mt,
-          lobbyName: Ot,
-          listed: jt,
-          isListed: tt => {
-            var et;
-            return null !== (et = dt.get(tt.toLowerCase())) && void 0 !== et ? et : (0, Tt.j)(jt, tt)
+        }), "whitelist" === Xu.visibility && Xu.you.canEditWhitelist && (0, ru.jsx)(uE, {
+          state: Xu,
+          lobbyName: su,
+          listed: qu,
+          isListed: uu => {
+            var Eu;
+            return null !== (Eu = lu.get(uu.toLowerCase())) && void 0 !== Eu ? Eu : (0, Au.l)(qu, uu)
           },
-          bM: (tt, et) => {
-            (0, qt.reportAnalyticsClick)(et ? {
+          RD: (uu, Eu) => {
+            (0, Uu.reportAnalyticsClick)(Eu ? {
               id: "lobby_manage.whitelist_add",
-              value: "BQ"
+              value: "Tb"
             } : {
               id: "lobby_manage.whitelist_remove"
             });
-            const Ot = tt.toLowerCase();
-            dt.hold(Ot, et, Vt.send(et ? {
+            const su = uu.toLowerCase();
+            lu.hold(su, Eu, ju.send(Eu ? {
               type: "whitelistAdd",
-              names: [tt]
+              names: [uu]
             } : {
               type: "whitelistRemove",
-              name: tt
-            }, `whitelist:${Ot}`))
+              name: uu
+            }, `whitelist:${su}`))
           },
-          qJ: async tt => {
-            (0, qt.reportAnalyticsClick)({
+          lG: async uu => {
+            (0, Uu.reportAnalyticsClick)({
               id: "lobby_manage.whitelist_add",
               value: "field"
             });
-            const et = await Vt.send({
+            const Eu = await ju.send({
               type: "whitelistAdd",
-              names: [tt]
+              names: [uu]
             }, "whitelist-field");
-            return et.ok ? {
+            return Eu.ok ? {
               ok: !0
             } : {
               ok: !1,
-              error: (0, Ft.jsx)(Zt.e, {
-                text: et.message
+              error: (0, ru.jsx)(Ku.d, {
+                text: Eu.message
               })
             }
           },
-          statusOf: tt => Vt.statusOf(`whitelist:${tt.toLowerCase()}`)
-        }), "public" === mt.visibility && null !== mt.listing && (0, Ft.jsx)(Ve, {
-          manage: Vt,
-          listing: mt.listing
+          statusOf: uu => ju.statusOf(`whitelist:${uu.toLowerCase()}`)
+        }), "public" === Xu.visibility && null !== Xu.listing && (0, ru.jsx)(EE, {
+          manage: ju,
+          listing: Xu.listing
         })]
       })
     }
-    var je = Vt(5155),
-      He = Vt(1464);
-    const Xe = /[\p{Script_Extensions=Han}\p{Script_Extensions=Hiragana}\p{Script_Extensions=Katakana}\p{Script_Extensions=Hangul}\u{3000}-\u{303F}\u{FF01}-\u{FF60}\u{FFE0}-\u{FFE6}]/u;
-    const Qe = (0, Ot.memo)((function(tt) {
-      var et;
+    var lE = ju(5155),
+      qE = ju(1419);
+    const fE = /[\p{Script_Extensions=Han}\p{Script_Extensions=Hiragana}\p{Script_Extensions=Katakana}\p{Script_Extensions=Hangul}\u{3000}-\u{303F}\u{FF01}-\u{FF60}\u{FFE0}-\u{FFE6}]/u;
+    const CE = (0, su.memo)((function(uu) {
+      var Eu;
       let {
-        rule: Vt,
-        value: Ot,
-        status: qt,
-        pending: Dt,
-        hiddenNames: mt,
-        nC: dt,
-        onAction: jt
-      } = tt;
+        rule: ju,
+        value: su,
+        status: Uu,
+        pending: Zu,
+        hiddenNames: Xu,
+        MJ: lu,
+        onAction: qu
+      } = uu;
       const {
-        t: Ht
-      } = (0, Et.H)(), Xt = tt => dt(Vt, tt), Qt = (tt, et) => {
-        jt(Vt, tt, et)
-      }, lt = It(Ht, Vt.label, mt), ft = Vt.info ? It(Ht, Vt.info, mt) : void 0, wt = Vt.placeholder ? It(Ht, Vt.placeholder, mt) : void 0, yt = (null !== (et = Vt.options) && void 0 !== et ? et : []).map((tt => ({
-        value: tt.value,
-        label: It(Ht, tt.label, mt)
-      }))), Nt = Math.max(0, ...yt.map((tt => function(tt) {
-        let et = 0;
-        for (const Vt of tt) et += Xe.test(Vt) ? 2 : 1;
-        return et
-      }(tt.label)))), Mt = qt && (0, Ft.jsx)("div", {
+        t: fu
+      } = (0, Nu.A)(), Cu = uu => lu(ju, uu), bu = (uu, Eu) => {
+        qu(ju, uu, Eu)
+      }, cu = mu(fu, ju.label, Xu), Ou = ju.info ? mu(fu, ju.info, Xu) : void 0, Yu = ju.placeholder ? mu(fu, ju.placeholder, Xu) : void 0, hu = (null !== (Eu = ju.options) && void 0 !== Eu ? Eu : []).map((uu => ({
+        value: uu.value,
+        label: mu(fu, uu.label, Xu)
+      }))), Du = Math.max(0, ...hu.map((uu => function(uu) {
+        let Eu = 0;
+        for (const ju of uu) Eu += fE.test(ju) ? 2 : 1;
+        return Eu
+      }(uu.label)))), gu = Uu && (0, ru.jsx)("div", {
         className: "LobbyManageRuleStatus",
-        children: (0, Ft.jsx)(kt, {
-          status: qt
+        children: (0, ru.jsx)(Qu, {
+          status: Uu
         })
-      }), bt = (0, Ft.jsxs)("div", {
+      }), Mu = (0, ru.jsxs)("div", {
         className: "SliderText",
-        children: [lt, void 0 !== ft && (0, Ft.jsx)(He.c, {
+        children: [cu, void 0 !== Ou && (0, ru.jsx)(qE.c, {
           className: "SettingsTextInputCircleInfo",
-          hoverInfo: ft
+          hoverInfo: Ou
         })]
       });
-      return "toggle" === Vt.kind ? (0, Ft.jsxs)(Ft.Fragment, {
-        children: [(0, Ft.jsx)(je.c, {
-          label: lt,
-          checked: !0 === Ot,
-          circleInfoText: ft,
-          disabled: Dt,
-          onClick: Xt
-        }), Mt]
-      }) : "choice" === Vt.kind && yt.length <= 3 ? (0, Ft.jsxs)(Ft.Fragment, {
-        children: [(0, Ft.jsx)(je.e, {
-          label: lt,
-          options: yt,
-          value: String(Ot),
-          circleInfoText: ft,
-          onChange: Xt
-        }), Mt]
-      }) : (0, Ft.jsxs)("div", {
+      return "toggle" === ju.kind ? (0, ru.jsxs)(ru.Fragment, {
+        children: [(0, ru.jsx)(lE.b, {
+          label: cu,
+          checked: !0 === su,
+          circleInfoText: Ou,
+          disabled: Zu,
+          onClick: Cu
+        }), gu]
+      }) : "choice" === ju.kind && hu.length <= 3 ? (0, ru.jsxs)(ru.Fragment, {
+        children: [(0, ru.jsx)(lE.f, {
+          label: cu,
+          options: hu,
+          value: String(su),
+          circleInfoText: Ou,
+          onChange: Cu
+        }), gu]
+      }) : (0, ru.jsxs)("div", {
         className: "SettingBox LobbyManageRuleRow",
-        children: [bt, "choice" === Vt.kind && (0, Ft.jsx)("span", {
+        children: [Mu, "choice" === ju.kind && (0, ru.jsx)("span", {
           className: "LobbyManageRuleChoice",
           style: {
-            "--lobby-choice-chars": Nt
+            "--lobby-choice-chars": Du
           },
-          children: (0, Ft.jsx)(ct.e, {
-            options: yt,
-            value: String(Ot),
-            disabled: Dt,
-            onChange: tt => {
-              Xt(tt.value)
+          children: (0, ru.jsx)(ou.c, {
+            options: hu,
+            value: String(su),
+            disabled: Zu,
+            onChange: uu => {
+              Cu(uu.value)
             }
           })
-        }), ("number" === Vt.kind || "text" === Vt.kind) && (0, Ft.jsx)(zt, {
-          value: null === Ot ? "" : String(Ot),
-          placeholder: wt,
-          ariaLabel: lt,
-          onSave: tt => {
-            const et = tt.trim(),
-              Ot = Number(et);
-            return Xt("number" === Vt.kind && "" !== et && Number.isFinite(Ot) ? Ot : et)
+        }), ("number" === ju.kind || "text" === ju.kind) && (0, ru.jsx)(Wu, {
+          value: null === su ? "" : String(su),
+          placeholder: Yu,
+          ariaLabel: cu,
+          onSave: uu => {
+            const Eu = uu.trim(),
+              su = Number(Eu);
+            return Cu("number" === ju.kind && "" !== Eu && Number.isFinite(su) ? su : Eu)
           }
-        }), "action" === Vt.kind && (0, Ft.jsxs)("div", {
+        }), "action" === ju.kind && (0, ru.jsxs)("div", {
           className: "LobbyManageRuleInput",
-          children: [yt.length > 3 && (0, Ft.jsx)(ct.e, {
-            options: yt,
+          children: [hu.length > 3 && (0, ru.jsx)(ou.c, {
+            options: hu,
             value: {
               value: "",
-              label: null !== wt && void 0 !== wt ? wt : lt
+              label: null !== Yu && void 0 !== Yu ? Yu : cu
             },
-            disabled: Dt,
-            onChange: tt => {
-              Qt(tt.value)
+            disabled: Zu,
+            onChange: uu => {
+              bu(uu.value)
             }
-          }), yt.length > 0 && yt.length <= 3 && yt.map((tt => (0, Ft.jsx)(Jt.g, {
+          }), hu.length > 0 && hu.length <= 3 && hu.map((uu => (0, ru.jsx)(eu.i, {
             className: "SmallTextLight",
-            disabled: Dt,
+            disabled: Zu,
             onClick: () => {
-              Qt(tt.value)
+              bu(uu.value)
             },
-            children: tt.label
-          }, tt.value))), 0 === yt.length && (0, Ft.jsx)(Jt.g, {
+            children: uu.label
+          }, uu.value))), 0 === hu.length && (0, ru.jsx)(eu.i, {
             className: "SmallTextLight",
-            disabled: Dt,
+            disabled: Zu,
             onClick: () => {
-              Qt()
+              bu()
             },
-            children: null !== wt && void 0 !== wt ? wt : lt
+            children: null !== Yu && void 0 !== Yu ? Yu : cu
           })]
-        }), "names" === Vt.kind && (0, Ft.jsx)(le, {
-          names: Array.isArray(Ot) ? Ot : [],
-          pending: Dt,
-          onAction: Qt
-        }), Mt]
+        }), "names" === ju.kind && (0, ru.jsx)(bE, {
+          names: Array.isArray(su) ? su : [],
+          pending: Zu,
+          onAction: bu
+        }), gu]
       })
     }));
 
-    function le(tt) {
+    function bE(uu) {
       let {
-        names: et,
-        pending: Vt,
-        onAction: qt
-      } = tt;
+        names: Eu,
+        pending: ju,
+        onAction: Uu
+      } = uu;
       const {
-        t: Dt
-      } = (0, Et.H)(), mt = (0, Ot.useRef)(null), [dt, jt] = (0, Ot.useState)(""), Ht = () => {
-        const tt = dt.trim();
-        "" !== tt && (qt(tt, "add"), mt.current && (mt.current.value = ""), jt(""))
+        t: Zu
+      } = (0, Nu.A)(), Xu = (0, su.useRef)(null), [lu, qu] = (0, su.useState)(""), fu = () => {
+        const uu = lu.trim();
+        "" !== uu && (Uu(uu, "add"), Xu.current && (Xu.current.value = ""), qu(""))
       };
-      return (0, Ft.jsxs)("div", {
+      return (0, ru.jsxs)("div", {
         className: "LobbyManageNames",
-        children: [et.map((tt => (0, Ft.jsxs)("div", {
+        children: [Eu.map((uu => (0, ru.jsxs)("div", {
           className: "LobbyManageName",
-          children: [(0, Ft.jsx)("span", {
+          children: [(0, ru.jsx)("span", {
             className: "LobbyManageNameText",
-            children: tt
-          }), (0, Ft.jsx)(Jt.g, {
+            children: uu
+          }), (0, ru.jsx)(eu.i, {
             className: "LobbyManageIconButton SmallTextLight",
-            ariaLabel: Dt("lobbyManage:removeName", {
-              name: tt
+            ariaLabel: Zu("lobbyManage:removeName", {
+              name: uu
             }),
-            disabled: Vt,
+            disabled: ju,
             onClick: () => {
-              qt(tt, "remove")
+              Uu(uu, "remove")
             },
-            children: (0, Ft.jsx)(ft.b, {
+            children: (0, ru.jsx)(Ou.e, {
               name: "xmark"
             })
           })]
-        }, tt))), (0, Ft.jsxs)("div", {
+        }, uu))), (0, ru.jsxs)("div", {
           className: "LobbyManageRuleInput",
-          children: [(0, Ft.jsx)(Lt.d, {
-            domRef: mt,
-            placeholderText: Dt("lobbyManage:namePlaceholder"),
-            ariaLabel: Dt("lobbyManage:namePlaceholder"),
+          children: [(0, ru.jsx)(Vu.d, {
+            domRef: Xu,
+            placeholderText: Zu("lobbyManage:namePlaceholder"),
+            ariaLabel: Zu("lobbyManage:namePlaceholder"),
             maxLength: 32,
-            onValueChange: tt => {
-              jt(tt)
+            onValueChange: uu => {
+              qu(uu)
             },
-            onEnter: Ht
-          }), (0, Ft.jsx)(Jt.g, {
+            onEnter: fu
+          }), (0, ru.jsx)(eu.i, {
             className: "SmallTextLight",
-            disabled: Vt || "" === dt.trim(),
-            onClick: Ht,
-            children: Dt("lobbyManage:addHere")
+            disabled: ju || "" === lu.trim(),
+            onClick: fu,
+            children: Zu("lobbyManage:addHere")
           })]
         })]
       })
     }
-    const Ee = [{
+    const cE = [{
       group: "gameplay",
       title: "lobbyManage:gameplay"
     }, {
@@ -1225,125 +1225,125 @@ export const modules = {
       title: "lobbyManage:world"
     }];
 
-    function fe(tt, et) {
-      return Ee.map((Vt => {
+    function NE(uu, Eu) {
+      return cE.map((ju => {
         let {
-          group: Ot,
-          title: qt
-        } = Vt;
-        const Dt = tt.filter((tt => tt.group === Ot && void 0 === tt.parent)).map((Vt => {
-          const Ot = !0 === et(Vt) ? tt.filter((tt => tt.parent === Vt.key)) : [];
+          group: su,
+          title: Uu
+        } = ju;
+        const Zu = uu.filter((uu => uu.group === su && void 0 === uu.parent)).map((ju => {
+          const su = !0 === Eu(ju) ? uu.filter((uu => uu.parent === ju.key)) : [];
           return {
-            rule: Vt,
-            children: Ot
+            rule: ju,
+            children: su
           }
         }));
         return {
-          group: Ot,
-          title: qt,
-          items: Dt
+          group: su,
+          title: Uu,
+          items: Zu
         }
       }))
     }
 
-    function we(tt) {
-      return tt.flatMap((tt => {
+    function OE(uu) {
+      return uu.flatMap((uu => {
         let {
-          items: et
-        } = tt;
-        return et.flatMap((tt => {
+          items: Eu
+        } = uu;
+        return Eu.flatMap((uu => {
           let {
-            rule: et,
-            children: Vt
-          } = tt;
-          return [et, ...Vt]
+            rule: Eu,
+            children: ju
+          } = uu;
+          return [Eu, ...ju]
         }))
       }))
     }
 
-    function ye(tt) {
+    function YE(uu) {
       let {
-        manage: et,
-        rowsShown: Vt
-      } = tt;
+        manage: Eu,
+        rowsShown: ju
+      } = uu;
       const {
-        t: Dt
-      } = (0, Et.H)(), mt = (0, bt.h)("hiddenPlayerNames"), {
-        rules: dt
-      } = et.state, jt = Xt(), Ht = tt => {
-        const et = jt.get(tt.key);
-        return void 0 === et ? tt.value : et
-      }, Qt = fe(dt, Ht), [lt] = (0, Ot.useState)((() => we(Qt).map((tt => tt.key)))), ft = Vt === 1 / 0 ? null : new Set(lt.slice(0, Vt)), wt = tt => null === ft || ft.has(tt.key), {
-        hold: Nt
-      } = jt, Mt = (0, Ot.useCallback)(((tt, Vt) => {
-        (0, qt.reportAnalyticsClick)({
+        t: Zu
+      } = (0, Nu.A)(), Xu = (0, Mu.f)("hiddenPlayerNames"), {
+        rules: lu
+      } = Eu.state, qu = Cu(), fu = uu => {
+        const Eu = qu.get(uu.key);
+        return void 0 === Eu ? uu.value : Eu
+      }, bu = NE(lu, fu), [cu] = (0, su.useState)((() => OE(bu).map((uu => uu.key)))), Ou = ju === 1 / 0 ? null : new Set(cu.slice(0, ju)), Yu = uu => null === Ou || Ou.has(uu.key), {
+        hold: Du
+      } = qu, gu = (0, su.useCallback)(((uu, ju) => {
+        (0, Uu.reportAnalyticsClick)({
           id: "lobby_manage.set_rule",
-          value: tt.key
+          value: uu.key
         });
-        const Ot = et.send({
+        const su = Eu.send({
           type: "setRule",
-          key: tt.key,
-          value: Vt
-        }, `rule:${tt.key}`);
-        return Nt(tt.key, Vt, Ot), Ot
-      }), [et, Nt]), Jt = (0, Ot.useCallback)(((tt, Vt, Ot) => {
-        (0, qt.reportAnalyticsClick)({
+          key: uu.key,
+          value: ju
+        }, `rule:${uu.key}`);
+        return Du(uu.key, ju, su), su
+      }), [Eu, Du]), eu = (0, su.useCallback)(((uu, ju, su) => {
+        (0, Uu.reportAnalyticsClick)({
           id: "lobby_manage.set_rule",
-          value: tt.key
-        }), et.send({
+          value: uu.key
+        }), Eu.send({
           type: "ruleAction",
-          key: tt.key,
-          ...void 0 === Vt ? {} : {
-            arg: Vt
+          key: uu.key,
+          ...void 0 === ju ? {} : {
+            arg: ju
           },
-          ...void 0 === Ot ? {} : {
-            op: Ot
+          ...void 0 === su ? {} : {
+            op: su
           }
-        }, `rule:${tt.key}`, void 0 === Ot ? Dt("lobbyManage:setJustNow") : void 0)
-      }), [et, Dt]), Ct = tt => {
-        const Vt = `rule:${tt.key}`;
-        return (0, Ft.jsx)(Qe, {
-          rule: tt,
-          value: Ht(tt),
-          status: et.statusOf(Vt),
-          pending: et.isPending(Vt),
-          hiddenNames: mt,
-          nC: Mt,
-          onAction: Jt
-        }, tt.key)
+        }, `rule:${uu.key}`, void 0 === su ? Zu("lobbyManage:setJustNow") : void 0)
+      }), [Eu, Zu]), Gu = uu => {
+        const ju = `rule:${uu.key}`;
+        return (0, ru.jsx)(CE, {
+          rule: uu,
+          value: fu(uu),
+          status: Eu.statusOf(ju),
+          pending: Eu.isPending(ju),
+          hiddenNames: Xu,
+          MJ: gu,
+          onAction: eu
+        }, uu.key)
       };
-      return (0, Ft.jsx)("div", {
+      return (0, ru.jsx)("div", {
         className: "LobbyManagePage LobbyManageRules",
-        children: Qt.map((tt => {
+        children: bu.map((uu => {
           let {
-            group: et,
-            title: Vt,
-            items: qt
-          } = tt;
-          const mt = qt.filter((tt => {
+            group: Eu,
+            title: ju,
+            items: Uu
+          } = uu;
+          const Xu = Uu.filter((uu => {
             let {
-              rule: et
-            } = tt;
-            return wt(et)
+              rule: Eu
+            } = uu;
+            return Yu(Eu)
           }));
-          return 0 === mt.length ? null : (0, Ft.jsxs)(Ot.Fragment, {
-            children: [(0, Ft.jsx)(yt.d, {
-              label: Dt(Vt)
-            }), mt.map((tt => {
+          return 0 === Xu.length ? null : (0, ru.jsxs)(su.Fragment, {
+            children: [(0, ru.jsx)(hu.b, {
+              label: Zu(ju)
+            }), Xu.map((uu => {
               let {
-                rule: et,
-                children: Vt
-              } = tt;
-              return 0 === Vt.length ? Ct(et) : (0, Ft.jsxs)("div", {
+                rule: Eu,
+                children: ju
+              } = uu;
+              return 0 === ju.length ? Gu(Eu) : (0, ru.jsxs)("div", {
                 className: "SettingBoxGroup",
-                children: [Ct(et), Vt.filter(wt).map(Ct)]
-              }, et.key)
+                children: [Gu(Eu), ju.filter(Yu).map(Gu)]
+              }, Eu.key)
             }))]
-          }, et)
+          }, Eu)
         }))
       })
     }
-    const Ne = {
+    const hE = {
         players: {
           icon: "user-group",
           title: "lobbyManage:players"
@@ -1361,590 +1361,590 @@ export const modules = {
           title: "lobbyManage:leaderboard"
         }
       },
-      ae = 5,
-      Me = (0, Ot.memo)((function(tt) {
+      DE = 5,
+      gE = (0, su.memo)((function(uu) {
         let {
-          page: et,
-          manage: Vt,
-          leaderboard: qt,
-          focusRequest: Dt,
-          onFocused: mt,
-          ruleRowsShown: dt
-        } = tt;
-        return "leaderboard" === et ? (0, Ft.jsx)(Ot.Suspense, {
-          fallback: (0, Ft.jsx)("div", {
+          page: Eu,
+          manage: ju,
+          leaderboard: Uu,
+          focusRequest: Zu,
+          onFocused: Xu,
+          ruleRowsShown: lu
+        } = uu;
+        return "leaderboard" === Eu ? (0, ru.jsx)(su.Suspense, {
+          fallback: (0, ru.jsx)("div", {
             className: "LobbyManageLoading",
-            children: (0, Ft.jsx)(wt.b, {})
+            children: (0, ru.jsx)(Yu.b, {})
           }),
-          children: qt
-        }) : "joining" === et ? (0, Ft.jsx)(qe, {
-          manage: Vt
-        }) : "rules" === et ? (0, Ft.jsx)(ye, {
-          manage: Vt,
-          rowsShown: dt
-        }) : (0, Ft.jsx)(At, {
-          manage: Vt,
-          focusRequest: Dt,
-          onFocused: mt
+          children: Uu
+        }) : "joining" === Eu ? (0, ru.jsx)(sE, {
+          manage: ju
+        }) : "rules" === Eu ? (0, ru.jsx)(YE, {
+          manage: ju,
+          rowsShown: lu
+        }) : (0, ru.jsx)(Bu, {
+          manage: ju,
+          focusRequest: Zu,
+          onFocused: Xu
         })
       }));
 
-    function be(tt) {
+    function ME(uu) {
       let {
-        page: et
-      } = tt;
+        page: Eu
+      } = uu;
       const {
-        t: Vt
-      } = (0, Et.H)(), Ot = Ne[et];
-      return (0, Ft.jsxs)(Ft.Fragment, {
-        children: [(0, Ft.jsx)(ft.b, {
-          name: Ot.icon
-        }), " ", (0, Ft.jsx)("span", {
+        t: ju
+      } = (0, Nu.A)(), su = hE[Eu];
+      return (0, ru.jsxs)(ru.Fragment, {
+        children: [(0, ru.jsx)(Ou.e, {
+          name: su.icon
+        }), " ", (0, ru.jsx)("span", {
           className: "LobbyManagePageTitle",
-          children: Vt(Ot.title)
+          children: ju(su.title)
         })]
       })
     }
 
-    function Je(tt) {
-      var et;
+    function eE(uu) {
+      var Eu;
       const {
-        t: Vt
-      } = (0, Et.H)(), {
-        pages: Dt,
-        landing: mt
-      } = tt, jt = (0, Ot.useRef)(null), Ht = (0, Ot.useRef)(null), Xt = (0, Ot.useRef)(null), Qt = (0, Ot.useRef)(new Map), [ft, wt] = (0, Ot.useState)(null), bt = (0, Ot.useRef)(ft), Jt = (0, Ot.useRef)(0), [Ct, ut] = (0, Ot.useState)(Dt[0]), Kt = null !== ft && void 0 !== ft ? ft : Dt.includes(Ct) ? Ct : Dt[0], [ht] = (0, Ot.useState)(null !== (et = null === mt || void 0 === mt ? void 0 : mt.page) && void 0 !== et ? et : null), vt = null !== ht && Dt.includes(ht) ? [ht, ...Dt.filter((tt => tt !== ht))] : Dt, [Wt] = (0, Ot.useState)((() => {
-        const et = we(fe(tt.manage.state.rules, (tt => tt.value)));
-        return Math.max(1, Math.ceil(et.length / ae))
-      })), St = vt.flatMap((tt => "rules" === tt ? Array(Wt).fill(tt) : [tt])), ct = function(tt, et) {
-        const [Vt, qt] = (0, Ot.useState)(tt), Dt = Vt >= et;
-        return Dt && Vt !== 1 / 0 && qt(1 / 0), (0, Ot.useLayoutEffect)((() => {
-          if (Dt) return;
-          let tt = !0;
-          return (0, Mt.e)().then((() => {
-            tt && qt((tt => tt + 1))
+        t: ju
+      } = (0, Nu.A)(), {
+        pages: Zu,
+        landing: Xu
+      } = uu, qu = (0, su.useRef)(null), fu = (0, su.useRef)(null), Cu = (0, su.useRef)(null), bu = (0, su.useRef)(new Map), [Ou, Yu] = (0, su.useState)(null), Mu = (0, su.useRef)(Ou), eu = (0, su.useRef)(0), [Gu, pu] = (0, su.useState)(Zu[0]), wu = null !== Ou && void 0 !== Ou ? Ou : Zu.includes(Gu) ? Gu : Zu[0], [Ju] = (0, su.useState)(null !== (Eu = null === Xu || void 0 === Xu ? void 0 : Xu.page) && void 0 !== Eu ? Eu : null), du = null !== Ju && Zu.includes(Ju) ? [Ju, ...Zu.filter((uu => uu !== Ju))] : Zu, [au] = (0, su.useState)((() => {
+        const Eu = OE(NE(uu.manage.state.rules, (uu => uu.value)));
+        return Math.max(1, Math.ceil(Eu.length / DE))
+      })), Pu = du.flatMap((uu => "rules" === uu ? Array(au).fill(uu) : [uu])), ou = function(uu, Eu) {
+        const [ju, Uu] = (0, su.useState)(uu), Zu = ju >= Eu;
+        return Zu && ju !== 1 / 0 && Uu(1 / 0), (0, su.useLayoutEffect)((() => {
+          if (Zu) return;
+          let uu = !0;
+          return (0, gu.e)().then((() => {
+            uu && Uu((uu => uu + 1))
           })), () => {
-            tt = !1
+            uu = !1
           }
-        }), [Vt, Dt]), Dt ? 1 / 0 : Vt
-      }(1, St.length), Rt = St.slice(0, ct), It = new Set(Rt), Pt = ct < St.length, Zt = Pt ? Rt.filter((tt => "rules" === tt)).length * ae : 1 / 0, Lt = (0, Ot.useRef)(tt.focusRequest);
-      Lt.current = tt.focusRequest;
-      const kt = tt => {
-          bt.current = tt, wt(tt)
+        }), [ju, Zu]), Zu ? 1 / 0 : ju
+      }(1, Pu.length), ku = Pu.slice(0, ou), mu = new Set(ku), vu = ou < Pu.length, Ku = vu ? ku.filter((uu => "rules" === uu)).length * DE : 1 / 0, Vu = (0, su.useRef)(uu.focusRequest);
+      Vu.current = uu.focusRequest;
+      const Qu = uu => {
+          Mu.current = uu, Yu(uu)
         },
-        Gt = () => {
-          var tt, et;
-          jt.current.style.scrollPaddingTop = `${null!==(tt=null===(et=Xt.current)||void 0===et?void 0:et.offsetHeight)&&void 0!==tt?tt:0}px`
+        iu = () => {
+          var uu, Eu;
+          qu.current.style.scrollPaddingTop = `${null!==(uu=null===(Eu=Cu.current)||void 0===Eu?void 0:Eu.offsetHeight)&&void 0!==uu?uu:0}px`
         },
-        zt = tt => {
-          const et = jt.current,
-            Vt = Qt.current.get(tt);
-          if (void 0 === Vt) return;
-          const Ot = document.activeElement,
-            qt = Lt.current,
-            Dt = null === qt ? null : Vt.querySelector(`[data-lobby-manage-row="${CSS.escape(qt.name)}"]`);
-          Gt(), Ot instanceof HTMLElement && null !== Dt && void 0 !== Dt && Dt.contains(Ot) ? Ot.scrollIntoView({
+        Wu = uu => {
+          const Eu = qu.current,
+            ju = bu.current.get(uu);
+          if (void 0 === ju) return;
+          const su = document.activeElement,
+            Uu = Vu.current,
+            Zu = null === Uu ? null : ju.querySelector(`[data-lobby-manage-row="${CSS.escape(Uu.name)}"]`);
+          iu(), su instanceof HTMLElement && null !== Zu && void 0 !== Zu && Zu.contains(su) ? su.scrollIntoView({
             block: "center"
-          }) : null === Vt.previousElementSibling ? et.scrollTop = 0 : Vt.scrollIntoView({
+          }) : null === ju.previousElementSibling ? Eu.scrollTop = 0 : ju.scrollIntoView({
             block: "start"
-          }), Jt.current = et.scrollTop
+          }), eu.current = Eu.scrollTop
         },
-        ot = tt => {
-          (0, qt.reportAnalyticsClick)({
+        Su = uu => {
+          (0, Uu.reportAnalyticsClick)({
             id: "lobby_manage.page",
-            value: tt
-          }), kt(tt), zt(tt)
+            value: uu
+          }), Qu(uu), Wu(uu)
         },
-        rt = () => {
-          var tt, et;
-          const Vt = jt.current,
-            Ot = Vt.getBoundingClientRect().top + (null !== (tt = null === (et = Xt.current) || void 0 === et ? void 0 : et.offsetHeight) && void 0 !== tt ? tt : 0),
-            qt = Dt.map((tt => {
-              var et, Vt;
-              return (null !== (et = null === (Vt = Qt.current.get(tt)) || void 0 === Vt ? void 0 : Vt.getBoundingClientRect().top) && void 0 !== et ? et : 1 / 0) - Ot
+        Iu = () => {
+          var uu, Eu;
+          const ju = qu.current,
+            su = ju.getBoundingClientRect().top + (null !== (uu = null === (Eu = Cu.current) || void 0 === Eu ? void 0 : Eu.offsetHeight) && void 0 !== uu ? uu : 0),
+            Uu = Zu.map((uu => {
+              var Eu, ju;
+              return (null !== (Eu = null === (ju = bu.current.get(uu)) || void 0 === ju ? void 0 : ju.getBoundingClientRect().top) && void 0 !== Eu ? Eu : 1 / 0) - su
             })),
-            mt = !Pt && Vt.scrollTop + Vt.clientHeight >= Vt.scrollHeight - 1;
-          ut(Dt[(0, dt.h)(qt, mt)])
+            Xu = !vu && ju.scrollTop + ju.clientHeight >= ju.scrollHeight - 1;
+          pu(Zu[(0, lu.g)(Uu, Xu)])
         },
-        Ut = () => {
-          null !== bt.current && (kt(null), rt())
+        Fu = () => {
+          null !== Mu.current && (Qu(null), Iu())
         };
-      (0, Ot.useLayoutEffect)((() => {
-        null !== mt && Dt.includes(mt.page) && ot(mt.page)
-      }), [null === mt || void 0 === mt ? void 0 : mt.seq]), (0, Ot.useLayoutEffect)((() => {
-        null === bt.current || Dt.includes(bt.current) || Ut()
+      (0, su.useLayoutEffect)((() => {
+        null !== Xu && Zu.includes(Xu.page) && Su(Xu.page)
+      }), [null === Xu || void 0 === Xu ? void 0 : Xu.seq]), (0, su.useLayoutEffect)((() => {
+        null === Mu.current || Zu.includes(Mu.current) || Fu()
       }));
       const {
-        onFocused: At
-      } = tt, it = (0, Ot.useCallback)((tt => {
-        null !== bt.current && zt(bt.current), At(tt)
-      }), [At]);
-      (0, Ot.useLayoutEffect)((() => {
-        const tt = bt.current;
-        null !== tt && (!Pt || Dt.indexOf(St[ct - 1]) < Dt.indexOf(tt)) && zt(tt)
-      }), [ct]), (0, Ot.useEffect)((() => {
-        const tt = new ResizeObserver((() => {
-          null !== bt.current ? zt(bt.current) : Gt()
+        onFocused: Bu
+      } = uu, Lu = (0, su.useCallback)((uu => {
+        null !== Mu.current && Wu(Mu.current), Bu(uu)
+      }), [Bu]);
+      (0, su.useLayoutEffect)((() => {
+        const uu = Mu.current;
+        null !== uu && (!vu || Zu.indexOf(Pu[ou - 1]) < Zu.indexOf(uu)) && Wu(uu)
+      }), [ou]), (0, su.useEffect)((() => {
+        const uu = new ResizeObserver((() => {
+          null !== Mu.current ? Wu(Mu.current) : iu()
         }));
-        return tt.observe(jt.current), tt.observe(Ht.current), () => {
-          tt.disconnect()
+        return uu.observe(qu.current), uu.observe(fu.current), () => {
+          uu.disconnect()
         }
-      }), []), (0, Ot.useLayoutEffect)((() => {
-        const tt = Xt.current,
-          et = null === tt || void 0 === tt ? void 0 : tt.querySelector(".SegmentedToggleOptionSelected");
-        et && (tt.scrollLeft = Math.min(et.offsetLeft, Math.max(tt.scrollLeft, et.offsetLeft + et.offsetWidth - tt.clientWidth)))
-      }), [Kt]);
-      return (0, Ft.jsxs)("div", {
-        ref: jt,
+      }), []), (0, su.useLayoutEffect)((() => {
+        const uu = Cu.current,
+          Eu = null === uu || void 0 === uu ? void 0 : uu.querySelector(".SegmentedToggleOptionSelected");
+        Eu && (uu.scrollLeft = Math.min(Eu.offsetLeft, Math.max(uu.scrollLeft, Eu.offsetLeft + Eu.offsetWidth - uu.clientWidth)))
+      }), [wu]);
+      return (0, ru.jsxs)("div", {
+        ref: qu,
         className: "MenuBody LobbyManageBody",
         onScroll: () => {
-          null === bt.current ? rt() : Math.abs(jt.current.scrollTop - Jt.current) > 1 && Ut()
+          null === Mu.current ? Iu() : Math.abs(qu.current.scrollTop - eu.current) > 1 && Fu()
         },
-        onClick: tt => {
-          var et;
-          null !== (et = Xt.current) && void 0 !== et && et.contains(tt.target) || Ut()
+        onClick: uu => {
+          var Eu;
+          null !== (Eu = Cu.current) && void 0 !== Eu && Eu.contains(uu.target) || Fu()
         },
-        onFocus: tt => {
-          var et;
-          const Vt = null === bt.current ? null : Qt.current.get(bt.current);
-          !Vt || Vt.contains(tt.target) || null !== (et = Xt.current) && void 0 !== et && et.contains(tt.target) || Ut()
+        onFocus: uu => {
+          var Eu;
+          const ju = null === Mu.current ? null : bu.current.get(Mu.current);
+          !ju || ju.contains(uu.target) || null !== (Eu = Cu.current) && void 0 !== Eu && Eu.contains(uu.target) || Fu()
         },
-        children: [Dt.length > 1 && (0, Ft.jsx)("div", {
-          ref: Xt,
+        children: [Zu.length > 1 && (0, ru.jsx)("div", {
+          ref: Cu,
           className: "LobbyManageChips",
-          children: (0, Ft.jsx)(Nt.c, {
-            options: Dt.map((tt => ({
-              value: tt,
-              label: (0, Ft.jsx)(be, {
-                page: tt
+          children: (0, ru.jsx)(Du.c, {
+            options: Zu.map((uu => ({
+              value: uu,
+              label: (0, ru.jsx)(ME, {
+                page: uu
               }),
-              ariaLabel: Vt(Ne[tt].title)
+              ariaLabel: ju(hE[uu].title)
             }))),
-            value: Kt,
+            value: wu,
             padTabs: "2",
-            ariaLabel: Vt("lobbyManageEntry:manageLobby"),
+            ariaLabel: ju("lobbyManageEntry:manageLobby"),
             reselectable: !0,
-            onChange: ot
+            onChange: Su
           })
-        }), (0, Ft.jsx)("div", {
-          ref: Ht,
-          className: lt()("LobbyManageInner", {
-            Staging: Pt
+        }), (0, ru.jsx)("div", {
+          ref: fu,
+          className: cu()("LobbyManageInner", {
+            Staging: vu
           }),
-          children: Dt.filter((tt => It.has(tt))).map((et => {
-            const Vt = et === ft;
-            return (0, Ft.jsxs)("section", {
-              ref: tt => {
-                tt ? Qt.current.set(et, tt) : Qt.current.delete(et)
+          children: Zu.filter((uu => mu.has(uu))).map((Eu => {
+            const ju = Eu === Ou;
+            return (0, ru.jsxs)("section", {
+              ref: uu => {
+                uu ? bu.current.set(Eu, uu) : bu.current.delete(Eu)
               },
               className: "LobbyManageSection",
-              "data-pad-initial-area": Vt || void 0,
-              children: [Dt.length > 1 && (0, Ft.jsx)("div", {
+              "data-pad-initial-area": ju || void 0,
+              children: [Zu.length > 1 && (0, ru.jsx)("div", {
                 className: "LobbyManageSectionHeading",
-                "data-pad-focusable": Vt || void 0,
-                "data-pad-unavailable": Vt || void 0,
-                children: (0, Ft.jsx)(yt.d, {
-                  label: (0, Ft.jsx)(be, {
-                    page: et
+                "data-pad-focusable": ju || void 0,
+                "data-pad-unavailable": ju || void 0,
+                children: (0, ru.jsx)(hu.b, {
+                  label: (0, ru.jsx)(ME, {
+                    page: Eu
                   })
                 })
-              }), (0, Ft.jsx)(Me, {
-                page: et,
-                manage: tt.manage,
-                leaderboard: tt.leaderboard,
-                focusRequest: tt.focusRequest,
-                onFocused: it,
-                ruleRowsShown: "rules" === et ? Zt : 1 / 0
+              }), (0, ru.jsx)(gE, {
+                page: Eu,
+                manage: uu.manage,
+                leaderboard: uu.leaderboard,
+                focusRequest: uu.focusRequest,
+                onFocused: Lu,
+                ruleRowsShown: "rules" === Eu ? Ku : 1 / 0
               })]
-            }, et)
+            }, Eu)
           }))
         })]
       })
     }
 
-    function Ce(tt) {
-      return void 0 === (null === tt || void 0 === tt ? void 0 : tt.page) ? null : {
-        page: tt.page,
-        seq: tt.seq
+    function GE(uu) {
+      return void 0 === (null === uu || void 0 === uu ? void 0 : uu.page) ? null : {
+        page: uu.page,
+        seq: uu.seq
       }
     }
 
-    function ue(tt) {
+    function pE(uu) {
       let {
-        leaderboard: et
-      } = tt;
-      const Vt = function() {
-          const tt = (0, jt.i)("lobbyManage"),
-            [et, Vt] = (0, Ot.useReducer)((tt => tt + 1), 0),
-            [qt] = (0, Ot.useState)((() => new Ht.d(Vt)));
-          return (0, Ot.useEffect)((() => {
-            const tt = qt.nextDeadline();
-            if (null === tt) return;
-            const et = setTimeout((() => {
-              qt.expire(Date.now()), Vt()
-            }), Math.max(0, tt - Date.now()));
+        leaderboard: Eu
+      } = uu;
+      const ju = function() {
+          const uu = (0, qu.h)("lobbyManage"),
+            [Eu, ju] = (0, su.useReducer)((uu => uu + 1), 0),
+            [Uu] = (0, su.useState)((() => new fu.b(ju)));
+          return (0, su.useEffect)((() => {
+            const uu = Uu.nextDeadline();
+            if (null === uu) return;
+            const Eu = setTimeout((() => {
+              Uu.expire(Date.now()), ju()
+            }), Math.max(0, uu - Date.now()));
             return () => {
-              clearTimeout(et)
+              clearTimeout(Eu)
             }
-          })), (0, Ot.useMemo)((() => null === tt ? null : {
-            state: tt,
-            send: (tt, et, Ot) => {
-              const Dt = qt.send(tt, et, null !== Ot && void 0 !== Ot ? Ot : null);
-              return Vt(), Dt
+          })), (0, su.useMemo)((() => null === uu ? null : {
+            state: uu,
+            send: (uu, Eu, su) => {
+              const Zu = Uu.send(uu, Eu, null !== su && void 0 !== su ? su : null);
+              return ju(), Zu
             },
-            statusOf: tt => qt.statusOf(tt, Date.now()),
-            showStatus: (tt, et) => {
-              qt.show(tt, et)
+            statusOf: uu => Uu.statusOf(uu, Date.now()),
+            showStatus: (uu, Eu) => {
+              Uu.show(uu, Eu)
             },
-            isPending: tt => qt.isPending(tt)
-          }), [tt, et, qt])
+            isPending: uu => Uu.isPending(uu)
+          }), [uu, Eu, Uu])
         }(),
-        Xt = (0, dt.i)((0, Dt.c)()),
-        Qt = (0, mt.l)(),
-        [lt, Et] = (0, Ot.useState)((() => Ce(Qt))),
-        [ft, wt] = (0, Ot.useState)(null);
-      return (0, Ot.useEffect)((() => {
-        null === Qt && (0, qt.reportAnalyticsClick)({
+        Cu = (0, lu.j)((0, Zu.c)()),
+        bu = (0, Xu.l)(),
+        [cu, Nu] = (0, su.useState)((() => GE(bu))),
+        [Ou, Yu] = (0, su.useState)(null);
+      return (0, su.useEffect)((() => {
+        null === bu && (0, Uu.reportAnalyticsClick)({
           id: "lobby_manage.open",
           value: "menu_tab"
         })
-      }), []), (0, Ot.useEffect)((() => {
-        null !== Qt && (Et((tt => (null === tt || void 0 === tt ? void 0 : tt.seq) === Qt.seq ? tt : Ce(Qt))), void 0 !== Qt.focusName && "players" === Qt.page ? wt({
-          name: Qt.focusName,
-          seq: Qt.seq
-        }) : (0, mt.k)(Qt.seq))
-      }), [null === Qt || void 0 === Qt ? void 0 : Qt.seq]), null === Vt ? null : (0, Ft.jsx)("div", {
+      }), []), (0, su.useEffect)((() => {
+        null !== bu && (Nu((uu => (null === uu || void 0 === uu ? void 0 : uu.seq) === bu.seq ? uu : GE(bu))), void 0 !== bu.focusName && "players" === bu.page ? Yu({
+          name: bu.focusName,
+          seq: bu.seq
+        }) : (0, Xu.j)(bu.seq))
+      }), [null === bu || void 0 === bu ? void 0 : bu.seq]), null === ju ? null : (0, ru.jsx)("div", {
         className: "LobbyManage Menu",
-        children: (0, Ft.jsx)(Je, {
-          pages: (0, dt.d)(Vt.state, Xt),
-          manage: Vt,
-          leaderboard: et,
-          focusRequest: ft,
-          onFocused: mt.k,
-          landing: lt
+        children: (0, ru.jsx)(eE, {
+          pages: (0, lu.f)(ju.state, Cu),
+          manage: ju,
+          leaderboard: Eu,
+          focusRequest: Ou,
+          onFocused: Xu.j,
+          landing: cu
         })
       })
     }
   },
-  36804: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => Xt,
-      h: () => jt
+  36951: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => Cu,
+      f: () => qu
     });
-    var Ot = Vt(1583),
-      qt = Vt(2043),
-      Dt = Vt(2024);
-    const mt = 1e4;
-    let dt = 0;
+    var su = ju(1533),
+      Uu = ju(2011),
+      Zu = ju(1986);
+    const Xu = 1e4;
+    let lu = 0;
 
-    function jt(tt) {
-      const et = ++dt;
-      return new Promise((Vt => {
-        const dt = et => {
-            jt(), clearTimeout(Ht), !1 === (null === et || void 0 === et ? void 0 : et.ok) && (0, Ot.reportAnalyticsClick)({
+    function qu(uu) {
+      const Eu = ++lu;
+      return new Promise((ju => {
+        const lu = Eu => {
+            qu(), clearTimeout(fu), !1 === (null === Eu || void 0 === Eu ? void 0 : Eu.ok) && (0, su.reportAnalyticsClick)({
               id: "lobby_manage.refused",
-              value: tt.type
-            }), Vt(et)
+              value: uu.type
+            }), ju(Eu)
           },
-          jt = qt.b.subscribe("lobbyManage", (tt => {
-            const Vt = function(tt, et) {
-              var Vt;
-              return null !== (Vt = null === tt || void 0 === tt ? void 0 : tt.results.find((tt => tt.requestId === et))) && void 0 !== Vt ? Vt : null
-            }(tt, et);
-            null !== Vt && dt(Vt)
+          qu = Uu.e.subscribe("lobbyManage", (uu => {
+            const ju = function(uu, Eu) {
+              var ju;
+              return null !== (ju = null === uu || void 0 === uu ? void 0 : uu.results.find((uu => uu.requestId === Eu))) && void 0 !== ju ? ju : null
+            }(uu, Eu);
+            null !== ju && lu(ju)
           })),
-          Ht = setTimeout((() => {
-            dt(null)
-          }), mt);
-        Dt.gameBridge.send("lobbyManage", {
-          ...tt,
-          requestId: et
+          fu = setTimeout((() => {
+            lu(null)
+          }), Xu);
+        Zu.gameBridge.send("lobbyManage", {
+          ...uu,
+          requestId: Eu
         })
       }))
     }
-    const Ht = [{
+    const fu = [{
       translationKey: "lobbyManageEntry:noAnswer"
     }];
-    class Xt {
-      constructor(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : jt;
-        this.onChange = tt, this.sendAction = et, this.pending = new Map, this.statuses = new Map
+    class Cu {
+      constructor(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : qu;
+        this.onChange = uu, this.sendAction = Eu, this.pending = new Map, this.statuses = new Map
       }
-      send(tt, et, Vt) {
-        var Ot;
-        return this.statuses.delete(et), this.pending.set(et, (null !== (Ot = this.pending.get(et)) && void 0 !== Ot ? Ot : 0) + 1), this.sendAction(tt).then((tt => {
-          var Ot;
-          const qt = null !== tt && void 0 !== tt ? tt : {
+      send(uu, Eu, ju) {
+        var su;
+        return this.statuses.delete(Eu), this.pending.set(Eu, (null !== (su = this.pending.get(Eu)) && void 0 !== su ? su : 0) + 1), this.sendAction(uu).then((uu => {
+          var su;
+          const Uu = null !== uu && void 0 !== uu ? uu : {
               requestId: -1,
               ok: !1,
-              message: Ht
+              message: fu
             },
-            Dt = (null !== (Ot = this.pending.get(et)) && void 0 !== Ot ? Ot : 1) - 1;
-          Dt > 0 ? this.pending.set(et, Dt) : this.pending.delete(et);
-          const mt = !qt.ok || qt.message.length > 0 ? qt.message : null === Vt ? null : [Vt];
-          return null !== mt && this.statuses.set(et, {
-            ok: qt.ok,
-            text: mt,
+            Zu = (null !== (su = this.pending.get(Eu)) && void 0 !== su ? su : 1) - 1;
+          Zu > 0 ? this.pending.set(Eu, Zu) : this.pending.delete(Eu);
+          const Xu = !Uu.ok || Uu.message.length > 0 ? Uu.message : null === ju ? null : [ju];
+          return null !== Xu && this.statuses.set(Eu, {
+            ok: Uu.ok,
+            text: Xu,
             until: Date.now() + 4e3
-          }), this.onChange(), qt
+          }), this.onChange(), Uu
         }))
       }
-      show(tt, et) {
-        this.statuses.set(tt, {
-          ...et,
+      show(uu, Eu) {
+        this.statuses.set(uu, {
+          ...Eu,
           until: Date.now() + 4e3
         }), this.onChange()
       }
-      expire(tt) {
-        for (const [et, Vt] of this.statuses) Vt.until <= tt && this.statuses.delete(et)
+      expire(uu) {
+        for (const [Eu, ju] of this.statuses) ju.until <= uu && this.statuses.delete(Eu)
       }
       nextDeadline() {
-        let tt = null;
-        for (const Vt of this.statuses.values()) {
-          var et;
-          tt = Math.min(null !== (et = tt) && void 0 !== et ? et : 1 / 0, Vt.until)
+        let uu = null;
+        for (const ju of this.statuses.values()) {
+          var Eu;
+          uu = Math.min(null !== (Eu = uu) && void 0 !== Eu ? Eu : 1 / 0, ju.until)
         }
-        return tt
+        return uu
       }
-      statusOf(tt, et) {
-        const Vt = this.statuses.get(tt);
-        return !Vt || Vt.until <= et ? null : {
-          ok: Vt.ok,
-          text: Vt.text
+      statusOf(uu, Eu) {
+        const ju = this.statuses.get(uu);
+        return !ju || ju.until <= Eu ? null : {
+          ok: ju.ok,
+          text: ju.text
         }
       }
-      isPending(tt) {
-        return this.pending.has(tt)
+      isPending(uu) {
+        return this.pending.has(uu)
       }
     }
   },
-  36799: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => Ht,
-      e: () => jt
+  36946: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => fu,
+      d: () => qu
     });
-    var Ot = Vt(697),
-      qt = Vt(2024),
-      Dt = Vt(1737),
-      mt = Vt(106),
-      dt = Vt(1354);
+    var su = ju(628),
+      Uu = ju(1986),
+      Zu = ju(1693),
+      Xu = ju(91),
+      lu = ju(1314);
 
-    function jt(tt, et, Vt) {
-      return mt.featureFlags.useSocialFeatures && tt && null === (0, dt.e)(et, Vt)
+    function qu(uu, Eu, ju) {
+      return Xu.featureFlags.useSocialFeatures && uu && null === (0, lu.d)(Eu, ju)
     }
 
-    function Ht(tt, et) {
-      var Vt, mt;
-      const dt = Dt.e.getSocialState().friends.find((tt => tt.name.toLowerCase() === et.toLowerCase())),
-        jt = qt.gameBridge.latest("players").byId[tt],
-        Ht = void 0 !== jt && jt.name === et,
-        Xt = Ht && null !== (Vt = jt.cosmetics) && void 0 !== Vt ? Vt : void 0,
-        Qt = dt && Xt ? {
-          ...dt,
-          cosmetics: Xt
-        } : dt;
+    function fu(uu, Eu) {
+      var ju, Xu;
+      const lu = Zu.b.getSocialState().friends.find((uu => uu.name.toLowerCase() === Eu.toLowerCase())),
+        qu = Uu.gameBridge.latest("players").byId[uu],
+        fu = void 0 !== qu && qu.name === Eu,
+        Cu = fu && null !== (ju = qu.cosmetics) && void 0 !== ju ? ju : void 0,
+        bu = lu && Cu ? {
+          ...lu,
+          cosmetics: Cu
+        } : lu;
       return {
-        playerSocialPreview: null !== Qt && void 0 !== Qt ? Qt : {
+        playerSocialPreview: null !== bu && void 0 !== bu ? bu : {
           isError: !1,
-          name: et,
-          ranks: Ht ? [...jt.ranks] : [],
-          cosmetics: null !== Xt && void 0 !== Xt ? Xt : {},
-          nameColour: null !== (mt = null === Xt || void 0 === Xt ? void 0 : Xt.nameColour) && void 0 !== mt ? mt : Ot.c,
+          name: Eu,
+          ranks: fu ? [...qu.ranks] : [],
+          cosmetics: null !== Cu && void 0 !== Cu ? Cu : {},
+          nameColour: null !== (Xu = null === Cu || void 0 === Cu ? void 0 : Cu.nameColour) && void 0 !== Xu ? Xu : su.e,
           location: {
             status: "inGame"
           }
         },
-        isFriend: void 0 !== dt
+        isFriend: void 0 !== lu
       }
     }
   },
-  36984: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => Qt
+  37123: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => bu
     });
-    var Ot = Vt(63),
-      qt = Vt(1140),
-      Dt = Vt.n(qt),
-      mt = Vt(1770),
-      dt = Vt(1556),
-      jt = Vt(1436),
-      Ht = Vt(1152),
-      Xt = Vt(1188);
+    var su = ju(58),
+      Uu = ju(1105),
+      Zu = ju.n(Uu),
+      Xu = ju(1723),
+      lu = ju(1506),
+      qu = ju(1393),
+      fu = ju(1116),
+      Cu = ju(1154);
 
-    function Qt(tt) {
+    function bu(uu) {
       let {
-        label: et,
-        icon: Vt,
-        placeholder: qt,
-        onSubmit: Qt
-      } = tt;
-      const lt = (0, Ot.useRef)(null),
-        [Et, ft] = (0, Ot.useState)(""),
-        [wt, yt] = (0, Ot.useState)("Enter"),
-        [Nt, Mt] = (0, Ot.useState)(null);
-      (0, Ot.useEffect)((() => {
-        if ("Success" !== wt && "Error" !== wt) return;
-        const tt = setTimeout((() => {
-          "Success" === wt && lt.current && (lt.current.value = "", ft("")), yt("Enter")
-        }), "Success" === wt ? 1e3 : 4e3);
+        label: Eu,
+        icon: ju,
+        placeholder: Uu,
+        onSubmit: bu
+      } = uu;
+      const cu = (0, su.useRef)(null),
+        [Nu, Ou] = (0, su.useState)(""),
+        [Yu, hu] = (0, su.useState)("Enter"),
+        [Du, gu] = (0, su.useState)(null);
+      (0, su.useEffect)((() => {
+        if ("Success" !== Yu && "Error" !== Yu) return;
+        const uu = setTimeout((() => {
+          "Success" === Yu && cu.current && (cu.current.value = "", Ou("")), hu("Enter")
+        }), "Success" === Yu ? 1e3 : 4e3);
         return () => {
-          clearTimeout(tt)
+          clearTimeout(uu)
         }
-      }), [wt]);
-      const bt = () => {
-        const tt = Et.trim();
-        "" !== tt && "Enter" === wt && (yt("Loading"), Qt(tt).then((tt => {
-          lt.current && ("error" in tt ? null === tt.error ? yt("Enter") : (Mt(tt.error), yt("Error")) : yt("Success"))
+      }), [Yu]);
+      const Mu = () => {
+        const uu = Nu.trim();
+        "" !== uu && "Enter" === Yu && (hu("Loading"), bu(uu).then((uu => {
+          cu.current && ("error" in uu ? null === uu.error ? hu("Enter") : (gu(uu.error), hu("Error")) : hu("Success"))
         })))
       };
-      return (0, Xt.jsxs)("div", {
+      return (0, Cu.jsxs)("div", {
         className: "PlayerNameField",
-        onKeyDown: tt => {
-          tt.target === lt.current && "Escape" !== tt.key && tt.stopPropagation()
+        onKeyDown: uu => {
+          uu.target === cu.current && "Escape" !== uu.key && uu.stopPropagation()
         },
-        children: [(0, Xt.jsxs)("div", {
-          className: Dt()("AddFriendBodyOverlay", `AddFriendBodyOverlay${wt}`),
-          children: ["Loading" === wt && (0, Xt.jsx)(jt.b, {}), "Success" === wt && (0, Xt.jsx)(Ht.b, {
+        children: [(0, Cu.jsxs)("div", {
+          className: Zu()("AddFriendBodyOverlay", `AddFriendBodyOverlay${Yu}`),
+          children: ["Loading" === Yu && (0, Cu.jsx)(qu.b, {}), "Success" === Yu && (0, Cu.jsx)(fu.e, {
             name: "check"
-          }), "Error" === wt && Nt]
-        }), (0, Xt.jsxs)("div", {
+          }), "Error" === Yu && Du]
+        }), (0, Cu.jsxs)("div", {
           className: "PlayerSearch",
-          children: [(0, Xt.jsx)(mt.d, {
+          children: [(0, Cu.jsx)(Xu.d, {
             className: "PlayerSearchInput",
-            domRef: lt,
+            domRef: cu,
             maxLength: 32,
-            placeholderText: qt,
-            ariaLabel: qt,
+            placeholderText: Uu,
+            ariaLabel: Uu,
             stopPropagation: !1,
-            onValueChange: tt => {
-              ft(tt)
+            onValueChange: uu => {
+              Ou(uu)
             },
-            onEnter: bt
-          }), (0, Xt.jsxs)(dt.f, {
+            onEnter: Mu
+          }), (0, Cu.jsxs)(lu.f, {
             className: "PlayerSearchInputButton SmallTextLight",
-            disabled: "Enter" !== wt || "" === Et.trim(),
-            onClick: bt,
-            children: [(0, Xt.jsx)(Ht.b, {
-              name: Vt
-            }), " ", et]
+            disabled: "Enter" !== Yu || "" === Nu.trim(),
+            onClick: Mu,
+            children: [(0, Cu.jsx)(fu.e, {
+              name: ju
+            }), " ", Eu]
           })]
         })]
       })
     }
   },
-  36973: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => Qt
+  37101: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => bu
     });
-    var Ot = Vt(63),
-      qt = Vt(1140),
-      Dt = Vt.n(qt),
-      mt = Vt(1286),
-      dt = Vt(1152),
-      jt = Vt(1188);
-    const Ht = {
+    var su = ju(58),
+      Uu = ju(1105),
+      Zu = ju.n(Uu),
+      Xu = ju(1244),
+      lu = ju(1116),
+      qu = ju(1154);
+    const fu = {
         unlisted: "link",
         public: "globe",
         whitelist: "user-check",
         private: "lock"
       },
-      Xt = ["unlisted", "public", "whitelist", "private"];
+      Cu = ["unlisted", "public", "whitelist", "private"];
 
-    function Qt(tt) {
+    function bu(uu) {
       let {
-        visibility: et,
-        onPick: Vt
-      } = tt;
+        visibility: Eu,
+        onPick: ju
+      } = uu;
       const {
-        t: qt
-      } = (0, mt.H)(), Qt = (0, Ot.useRef)([]);
-      return (0, jt.jsx)("div", {
+        t: Uu
+      } = (0, Xu.A)(), bu = (0, su.useRef)([]);
+      return (0, qu.jsx)("div", {
         className: "WorldSocialTiles",
         role: "group",
-        "aria-label": qt("worldSocial:whoCanJoin"),
-        children: Xt.map(((tt, Ot) => {
-          const mt = tt === et;
-          return (0, jt.jsxs)("button", {
-            ref: tt => {
-              Qt.current[Ot] = tt
+        "aria-label": Uu("worldSocial:whoCanJoin"),
+        children: Cu.map(((uu, su) => {
+          const Xu = uu === Eu;
+          return (0, qu.jsxs)("button", {
+            ref: uu => {
+              bu.current[su] = uu
             },
             type: "button",
-            className: Dt()("WorldSocialTile", {
-              WorldSocialTileSelected: mt
+            className: Zu()("WorldSocialTile", {
+              WorldSocialTileSelected: Xu
             }),
-            "aria-pressed": mt,
-            tabIndex: mt ? 0 : -1,
-            onKeyDown: tt => {
-              ((tt, et) => {
-                const Vt = "ArrowRight" === tt.key || "ArrowDown" === tt.key ? 1 : "ArrowLeft" === tt.key || "ArrowUp" === tt.key ? -1 : 0;
-                var Ot;
-                0 !== Vt && (tt.preventDefault(), null === (Ot = Qt.current[(et + Vt + Xt.length) % Xt.length]) || void 0 === Ot || Ot.focus())
-              })(tt, Ot)
+            "aria-pressed": Xu,
+            tabIndex: Xu ? 0 : -1,
+            onKeyDown: uu => {
+              ((uu, Eu) => {
+                const ju = "ArrowRight" === uu.key || "ArrowDown" === uu.key ? 1 : "ArrowLeft" === uu.key || "ArrowUp" === uu.key ? -1 : 0;
+                var su;
+                0 !== ju && (uu.preventDefault(), null === (su = bu.current[(Eu + ju + Cu.length) % Cu.length]) || void 0 === su || su.focus())
+              })(uu, su)
             },
             onClick: () => {
-              Vt(tt)
+              ju(uu)
             },
-            children: [(0, jt.jsx)("span", {
+            children: [(0, qu.jsx)("span", {
               className: "WorldSocialTileIcon",
-              children: (0, jt.jsx)(dt.b, {
-                name: Ht[tt]
+              children: (0, qu.jsx)(lu.e, {
+                name: fu[uu]
               })
-            }), (0, jt.jsxs)("span", {
+            }), (0, qu.jsxs)("span", {
               className: "WorldSocialTileText",
-              children: [(0, jt.jsx)("span", {
+              children: [(0, qu.jsx)("span", {
                 className: "WorldSocialTileTitle",
-                children: qt(`worldSocial:${tt}`)
-              }), (0, jt.jsx)("span", {
+                children: Uu(`worldSocial:${uu}`)
+              }), (0, qu.jsx)("span", {
                 className: "WorldSocialTileDescription",
-                children: qt(`worldSocial:${tt}Description`)
+                children: Uu(`worldSocial:${uu}Description`)
               })]
             })]
-          }, tt)
+          }, uu)
         }))
       })
     }
   },
-  36982: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => dt
+  37115: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => lu
     });
-    var Ot = Vt(1286),
-      qt = Vt(2742),
-      Dt = Vt(4475),
-      mt = Vt(1188);
+    var su = ju(1244),
+      Uu = ju(2774),
+      Zu = ju(4528),
+      Xu = ju(1154);
 
-    function dt(tt) {
+    function lu(uu) {
       let {
-        BQ: et,
-        children: Vt,
-        ...dt
-      } = tt;
+        Tb: Eu,
+        children: ju,
+        ...lu
+      } = uu;
       const {
-        t: jt
-      } = (0, Ot.H)();
-      return (0, mt.jsx)("div", {
+        t: qu
+      } = (0, su.A)();
+      return (0, Xu.jsx)("div", {
         className: "WhitelistTickRow",
         onClick: () => {
-          et.onChange(!et.on)
+          Eu.onChange(!Eu.on)
         },
-        children: (0, mt.jsx)(qt.f, {
-          ...dt,
+        children: (0, Xu.jsx)(Uu.g, {
+          ...lu,
           opensProfileCard: !1,
-          children: (0, mt.jsxs)("div", {
+          children: (0, Xu.jsxs)("div", {
             className: "WhitelistTickRowActions",
-            onClick: tt => {
-              tt.stopPropagation()
+            onClick: uu => {
+              uu.stopPropagation()
             },
-            children: [Vt, (0, mt.jsx)("label", {
+            children: [ju, (0, Xu.jsx)("label", {
               className: "WhitelistTickRowTick",
-              children: (0, mt.jsx)(Dt.b, {
-                checked: et.on,
+              children: (0, Xu.jsx)(Zu.d, {
+                checked: Eu.on,
                 disabled: !1,
-                ariaLabel: jt("worldSocial:letJoin", {
-                  playerName: dt.playerSocialPreview.name
+                ariaLabel: qu("worldSocial:letJoin", {
+                  playerName: lu.playerSocialPreview.name
                 }),
-                onChange: tt => {
-                  et.onChange(tt.target.checked)
+                onChange: uu => {
+                  Eu.onChange(uu.target.checked)
                 }
               })
             })]
@@ -1953,395 +1953,395 @@ export const modules = {
       })
     }
   },
-  36967: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => ft
+  37099: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => Ou
     });
-    var Ot = Vt(63),
-      qt = Vt(1286),
-      Dt = Vt(1950),
-      mt = Vt(106),
-      dt = Vt(26),
-      jt = Vt(1583),
-      Ht = Vt(2755),
-      Xt = Vt(34278),
-      Qt = Vt(1556),
-      lt = Vt(1152),
-      Et = Vt(1188);
+    var su = ju(58),
+      Uu = ju(1244),
+      Zu = ju(1906),
+      Xu = ju(91),
+      lu = ju(22),
+      qu = ju(1533),
+      fu = ju(2806),
+      Cu = ju(34457),
+      bu = ju(1506),
+      cu = ju(1116),
+      Nu = ju(1154);
 
-    function ft(tt) {
+    function Ou(uu) {
       let {
-        worldCode: et,
-        message: Vt
-      } = tt;
+        worldCode: Eu,
+        message: ju
+      } = uu;
       const {
-        t: ft
-      } = (0, qt.H)(), {
-        isTouchScreen: wt
-      } = (0, dt.k)(["isTouchScreen"]), yt = mt.featureFlags.canUseInviteLinks, Nt = (0, Xt.k)(yt && null === Vt), [Mt, bt] = (0, Ht.k)(), Jt = (0, Ot.useRef)(null);
-      if (null !== Vt) return (0, Et.jsxs)("div", {
+        t: Ou
+      } = (0, Uu.A)(), {
+        isTouchScreen: Yu
+      } = (0, lu.l)(["isTouchScreen"]), hu = Xu.featureFlags.canUseInviteLinks, Du = (0, Cu.k)(hu && null === ju), [gu, Mu] = (0, fu.f)(), eu = (0, su.useRef)(null);
+      if (null !== ju) return (0, Nu.jsxs)("div", {
         className: "WorldSocialLinkRow WorldSocialLinkRowMessage",
-        children: [(0, Et.jsx)(lt.b, {
+        children: [(0, Nu.jsx)(cu.e, {
           name: "lock"
-        }), (0, Et.jsx)("span", {
-          children: Vt
+        }), (0, Nu.jsx)("span", {
+          children: ju
         })]
       });
-      const Ct = yt ? Nt : et,
-        ut = wt && yt && (0, Ht.e)();
-      return (0, Et.jsxs)("div", {
+      const Gu = hu ? Du : Eu,
+        pu = Yu && hu && (0, fu.b)();
+      return (0, Nu.jsxs)("div", {
         className: "WorldSocialLinkRow",
-        children: [!yt && (0, Et.jsx)("span", {
+        children: [!hu && (0, Nu.jsx)("span", {
           className: "WorldSocialCodeLabel",
-          children: ft("worldSocial:worldCode")
-        }), (0, Et.jsx)("input", {
-          ref: Jt,
+          children: Ou("worldSocial:worldCode")
+        }), (0, Nu.jsx)("input", {
+          ref: eu,
           className: "WorldSocialLink",
           readOnly: !0,
-          value: null !== Ct && void 0 !== Ct ? Ct : "",
-          "aria-label": ft(yt ? "worldSocial:worldLink" : "worldSocial:worldCode"),
-          onFocus: tt => {
-            tt.currentTarget.select()
+          value: null !== Gu && void 0 !== Gu ? Gu : "",
+          "aria-label": Ou(hu ? "worldSocial:worldLink" : "worldSocial:worldCode"),
+          onFocus: uu => {
+            uu.currentTarget.select()
           }
-        }), (0, Et.jsxs)(Qt.f, {
+        }), (0, Nu.jsxs)(bu.f, {
           className: "WorldSocialCopy",
-          disabled: null === Ct,
+          disabled: null === Gu,
           onClick: () => {
-            null !== Ct && (0, Ht.h)(Ct, {
-              useShareSheet: ut,
-              onOutcome: tt => {
-                if ((0, jt.reportAnalyticsClick)({
+            null !== Gu && (0, fu.d)(Gu, {
+              useShareSheet: pu,
+              onOutcome: uu => {
+                if ((0, qu.reportAnalyticsClick)({
                     id: "world_social.copy_link",
-                    value: "copied" !== tt || yt ? tt : "code"
-                  }), "copied" === tt) bt();
-                else if ("failed" === tt) {
-                  var et;
-                  null === (et = Jt.current) || void 0 === et || et.focus(), Dt.f.showMessage({
+                    value: "copied" !== uu || hu ? uu : "code"
+                  }), "copied" === uu) Mu();
+                else if ("failed" === uu) {
+                  var Eu;
+                  null === (Eu = eu.current) || void 0 === Eu || Eu.focus(), Zu.f.showMessage({
                     translationKey: "partyBar:copyFailed"
                   })
                 }
               }
             })
           },
-          children: [(0, Et.jsx)(lt.b, {
-            name: Mt ? "check" : ut ? "up-from-bracket" : "copy"
-          }), " ", ft(Mt ? "general:copied" : ut ? "worldSocial:share" : "general:copy")]
+          children: [(0, Nu.jsx)(cu.e, {
+            name: gu ? "check" : pu ? "up-from-bracket" : "copy"
+          }), " ", Ou(gu ? "general:copied" : pu ? "worldSocial:share" : "general:copy")]
         })]
       })
     }
   },
-  36978: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => Et,
-      f: () => lt,
-      j: () => Qt
+  37109: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => Nu,
+      f: () => cu,
+      h: () => bu
     });
-    var Ot = Vt(697),
-      qt = Vt(1286),
-      Dt = Vt(1737),
-      mt = Vt(2742),
-      dt = Vt(2693),
-      jt = Vt(1556),
-      Ht = Vt(36982),
-      Xt = Vt(1188);
+    var su = ju(628),
+      Uu = ju(1244),
+      Zu = ju(1693),
+      Xu = ju(2774),
+      lu = ju(2716),
+      qu = ju(1506),
+      fu = ju(37115),
+      Cu = ju(1154);
 
-    function Qt(tt, et) {
-      var Vt;
+    function bu(uu, Eu) {
+      var ju;
       return {
         isError: !1,
-        name: tt,
+        name: uu,
         ranks: [...arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : []],
-        cosmetics: null !== et && void 0 !== et ? et : {},
-        nameColour: null !== (Vt = null === et || void 0 === et ? void 0 : et.nameColour) && void 0 !== Vt ? Vt : Ot.c,
+        cosmetics: null !== Eu && void 0 !== Eu ? Eu : {},
+        nameColour: null !== (ju = null === Eu || void 0 === Eu ? void 0 : Eu.nameColour) && void 0 !== ju ? ju : su.e,
         location: {
           status: "offline"
         }
       }
     }
 
-    function lt(tt) {
+    function cu(uu) {
       let {
-        player: et,
-        isFriend: Vt = !1,
-        status: Ot,
-        showLocation: jt = void 0 === Ot,
-        BQ: Qt,
-        onSendFriendRequest: lt,
-        actions: Et,
-        zIndex: ft
-      } = tt;
+        player: Eu,
+        isFriend: ju = !1,
+        status: su,
+        showLocation: qu = void 0 === su,
+        Tb: bu,
+        onSendFriendRequest: cu,
+        actions: Nu,
+        zIndex: Ou
+      } = uu;
       const {
-        t: wt
-      } = (0, qt.H)();
-      let yt = Ot;
-      null !== Qt && void 0 !== Qt && Qt.on && (yt = (0, Xt.jsxs)(Xt.Fragment, {
-        children: [null !== Ot && void 0 !== Ot ? Ot : (0, Xt.jsx)(dt.e, {
-          socialPreview: et
-        }), (0, Xt.jsxs)("span", {
+        t: Yu
+      } = (0, Uu.A)();
+      let hu = su;
+      null !== bu && void 0 !== bu && bu.on && (hu = (0, Cu.jsxs)(Cu.Fragment, {
+        children: [null !== su && void 0 !== su ? su : (0, Cu.jsx)(lu.b, {
+          socialPreview: Eu
+        }), (0, Cu.jsxs)("span", {
           className: "WorldSocialCanJoin",
-          children: [" \xb7 ", wt("worldSocial:canJoin")]
+          children: [" \xb7 ", Yu("worldSocial:canJoin")]
         })]
       }));
-      const Nt = {
-        playerSocialPreview: et,
-        isFriend: Vt,
+      const Du = {
+        playerSocialPreview: Eu,
+        isFriend: ju,
         hideFriendBadge: !0,
-        onFriendRemoved: Vt ? tt => {
-          Dt.e.removeFriendFromState(tt)
+        onFriendRemoved: ju ? uu => {
+          Zu.b.removeFriendFromState(uu)
         } : void 0,
-        status: yt,
-        showLocation: jt,
-        onSendFriendRequest: lt,
-        zIndex: ft
+        status: hu,
+        showLocation: qu,
+        onSendFriendRequest: cu,
+        zIndex: Ou
       };
-      return Qt ? (0, Xt.jsx)(Ht.c, {
-        ...Nt,
-        BQ: Qt,
-        children: Et
-      }) : (0, Xt.jsx)(mt.f, {
-        ...Nt,
+      return bu ? (0, Cu.jsx)(fu.d, {
+        ...Du,
+        Tb: bu,
+        children: Nu
+      }) : (0, Cu.jsx)(Xu.g, {
+        ...Du,
         opensProfileCard: !1,
-        children: Et || void 0
+        children: Nu || void 0
       })
     }
 
-    function Et(tt) {
+    function Nu(uu) {
       let {
-        row: et,
-        BQ: Vt,
-        canInvite: Ot,
-        invited: Dt,
-        onInvite: mt,
-        zIndex: dt
-      } = tt;
+        row: Eu,
+        Tb: ju,
+        canInvite: su,
+        invited: Zu,
+        onInvite: Xu,
+        zIndex: lu
+      } = uu;
       const {
-        t: Ht
-      } = (0, qt.H)(), Qt = "online" === et.place ? jt.f : jt.g;
-      return (0, Xt.jsx)(lt, {
-        player: et.friend,
+        t: fu
+      } = (0, Uu.A)(), bu = "online" === Eu.place ? qu.f : qu.i;
+      return (0, Cu.jsx)(cu, {
+        player: Eu.friend,
         isFriend: !0,
-        status: "here" === et.place ? Ht("worldSocial:inThisWorld") : void 0,
+        status: "here" === Eu.place ? fu("worldSocial:inThisWorld") : void 0,
         showLocation: !0,
-        BQ: Vt,
-        zIndex: dt,
-        actions: Ot && (0, Xt.jsx)(Qt, {
+        Tb: ju,
+        zIndex: lu,
+        actions: su && (0, Cu.jsx)(bu, {
           className: "WorldSocialInvite SmallTextLight",
-          disabled: Dt,
-          onClick: mt,
-          ariaLabel: `${Ht("worldSocial:invite")} ${et.friend.name}`,
-          children: Ht(Dt ? "worldSocial:invited" : "worldSocial:invite")
+          disabled: Zu,
+          onClick: Xu,
+          ariaLabel: `${fu("worldSocial:invite")} ${Eu.friend.name}`,
+          children: fu(Zu ? "worldSocial:invited" : "worldSocial:invite")
         })
       })
     }
   },
-  36954: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => jt,
-      e: () => mt,
-      f: () => Ht
+  37087: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => qu,
+      h: () => Xu,
+      k: () => fu
     });
-    var Ot = Vt(63),
-      qt = Vt(4725),
-      Dt = Vt(1950);
+    var su = ju(58),
+      Uu = ju(4769),
+      Zu = ju(1906);
 
-    function mt(tt) {
-      const et = {
-        lobbyName: tt,
+    function Xu(uu) {
+      const Eu = {
+        lobbyName: uu,
         answer: null,
-        response: qt.e.getSocialSettings(tt)
+        response: Uu.d.getSocialSettings(uu)
       };
-      return et.response.then((tt => {
-        et.answer = tt
-      })), et
+      return Eu.response.then((uu => {
+        Eu.answer = uu
+      })), Eu
     }
-    const dt = new Map;
+    const lu = new Map;
 
-    function jt(tt) {
-      dt.set(tt.lobbyName, tt)
+    function qu(uu) {
+      lu.set(uu.lobbyName, uu)
     }
 
-    function Ht(tt) {
-      const [et] = (0, Ot.useState)((() => function(tt) {
-        var et;
-        const Vt = null !== (et = dt.get(tt)) && void 0 !== et ? et : null;
-        return null !== Vt && void 0 !== Vt && Vt.answer && "error" in Vt.answer ? null : Vt
-      }(tt))), [Vt, mt] = (0, Ot.useState)((() => null !== et && void 0 !== et && et.answer && "settings" in et.answer ? et.answer.settings : null)), [jt, Ht] = (0, Ot.useState)(!0), [Xt, Qt] = (0, Ot.useState)(null !== Vt), lt = (0, Ot.useRef)(Vt);
-      lt.current = Vt;
-      const Et = (0, Ot.useRef)(0),
-        ft = (0, Ot.useRef)(0),
-        wt = (0, Ot.useRef)(!1),
-        yt = (0, Ot.useRef)(!0),
-        Nt = (0, Ot.useCallback)((async et => {
-          const Vt = ++Et.current,
-            Ot = await (null !== et && void 0 !== et ? et : qt.e.getSocialSettings(tt));
-          yt.current && Vt === Et.current && (Qt(!0), Ht(!1), "error" in Ot || mt(Ot.settings))
-        }), [tt]),
-        Mt = (0, Ot.useCallback)((() => {
-          Ht(!0), Nt()
-        }), [Nt]),
-        bt = (0, Ot.useCallback)((() => {
-          ft.current > 0 ? wt.current = !0 : Nt()
-        }), [Nt]);
-      (0, Ot.useEffect)((() => (yt.current = !0, dt.delete(tt), Ht(!0), Nt(null === et || void 0 === et ? void 0 : et.response), () => {
-        yt.current = !1
-      })), [Nt, tt, et]);
-      const Jt = tt => {
-        Et.current++, Ht(!1), lt.current = tt, mt(tt)
+    function fu(uu) {
+      const [Eu] = (0, su.useState)((() => function(uu) {
+        var Eu;
+        const ju = null !== (Eu = lu.get(uu)) && void 0 !== Eu ? Eu : null;
+        return null !== ju && void 0 !== ju && ju.answer && "error" in ju.answer ? null : ju
+      }(uu))), [ju, Xu] = (0, su.useState)((() => null !== Eu && void 0 !== Eu && Eu.answer && "settings" in Eu.answer ? Eu.answer.settings : null)), [qu, fu] = (0, su.useState)(!0), [Cu, bu] = (0, su.useState)(null !== ju), cu = (0, su.useRef)(ju);
+      cu.current = ju;
+      const Nu = (0, su.useRef)(0),
+        Ou = (0, su.useRef)(0),
+        Yu = (0, su.useRef)(!1),
+        hu = (0, su.useRef)(!0),
+        Du = (0, su.useCallback)((async Eu => {
+          const ju = ++Nu.current,
+            su = await (null !== Eu && void 0 !== Eu ? Eu : Uu.d.getSocialSettings(uu));
+          hu.current && ju === Nu.current && (bu(!0), fu(!1), "error" in su || Xu(su.settings))
+        }), [uu]),
+        gu = (0, su.useCallback)((() => {
+          fu(!0), Du()
+        }), [Du]),
+        Mu = (0, su.useCallback)((() => {
+          Ou.current > 0 ? Yu.current = !0 : Du()
+        }), [Du]);
+      (0, su.useEffect)((() => (hu.current = !0, lu.delete(uu), fu(!0), Du(null === Eu || void 0 === Eu ? void 0 : Eu.response), () => {
+        hu.current = !1
+      })), [Du, uu, Eu]);
+      const eu = uu => {
+        Nu.current++, fu(!1), cu.current = uu, Xu(uu)
       };
       return {
-        settings: Vt,
-        loading: jt,
-        answered: Xt,
-        retry: Mt,
-        refresh: bt,
-        change: async function(et, Vt) {
+        settings: ju,
+        loading: qu,
+        answered: Cu,
+        retry: gu,
+        refresh: Mu,
+        change: async function(Eu, ju) {
           let {
-            quiet: Ot = !1,
-            onAnswer: mt
+            quiet: su = !1,
+            onAnswer: Xu
           } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-          const dt = lt.current;
-          if (null === dt) return !1;
-          Jt(Vt(dt)), ft.current > 0 && (wt.current = !0), ft.current++;
-          const jt = await qt.e.setSocialSettings(tt, et);
-          ft.current--;
-          const Ht = !("error" in jt);
-          if (!yt.current) return Ht;
-          if (null === mt || void 0 === mt || mt(jt), Ot);
-          else if ("error" in jt) Dt.f.showMessage({
-            translationKey: jt.error
+          const lu = cu.current;
+          if (null === lu) return !1;
+          eu(ju(lu)), Ou.current > 0 && (Yu.current = !0), Ou.current++;
+          const qu = await Uu.d.setSocialSettings(uu, Eu);
+          Ou.current--;
+          const fu = !("error" in qu);
+          if (!hu.current) return fu;
+          if (null === Xu || void 0 === Xu || Xu(qu), su);
+          else if ("error" in qu) Zu.f.showMessage({
+            translationKey: qu.error
           });
           else
-            for (const tt of jt.notFound) Dt.f.showMessage({
+            for (const uu of qu.notFound) Zu.f.showMessage({
               translationKey: "worldSocial:notFound",
               params: {
-                playerName: tt
+                playerName: uu
               }
             });
-          if (ft.current > 0) return Ht;
-          const Xt = wt.current;
-          return wt.current = !1, !Xt && "settings" in jt ? Jt(jt.settings) : (Xt || Jt(dt), Nt()), Ht
+          if (Ou.current > 0) return fu;
+          const Cu = Yu.current;
+          return Yu.current = !1, !Cu && "settings" in qu ? eu(qu.settings) : (Cu || eu(lu), Du()), fu
         }
       }
     }
   },
-  36988: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => mt,
-      i: () => Dt
+  37130: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => Xu,
+      h: () => Zu
     });
-    var Ot = Vt(184);
-    const qt = new Map;
+    var su = ju(166);
+    const Uu = new Map;
 
-    function Dt(tt, et) {
-      var Vt;
-      const Ot = null !== (Vt = qt.get(tt)) && void 0 !== Vt ? Vt : new Map;
-      Ot.set(et, Date.now()), qt.set(tt, Ot)
+    function Zu(uu, Eu) {
+      var ju;
+      const su = null !== (ju = Uu.get(uu)) && void 0 !== ju ? ju : new Map;
+      su.set(Eu, Date.now()), Uu.set(uu, su)
     }
 
-    function mt(tt) {
-      const et = qt.get(tt);
-      if (!et) return [];
-      const Vt = Date.now();
-      for (const [qt, Dt] of et) Vt - Dt >= Ot.o && et.delete(qt);
-      return [...et.keys()]
+    function Xu(uu) {
+      const Eu = Uu.get(uu);
+      if (!Eu) return [];
+      const ju = Date.now();
+      for (const [Uu, Zu] of Eu) ju - Zu >= su.l && Eu.delete(Uu);
+      return [...Eu.keys()]
     }
   },
-  36959: (tt, et, Vt) => {
-    function Ot(tt, et) {
-      const Vt = et.toLowerCase();
-      for (const Ot of tt)
-        if (Ot.toLowerCase() === Vt) return !0;
+  37091: (uu, Eu, ju) => {
+    function su(uu, Eu) {
+      const ju = Eu.toLowerCase();
+      for (const su of uu)
+        if (su.toLowerCase() === ju) return !0;
       return !1
     }
 
-    function qt(tt, et, Vt) {
-      const qt = [],
-        Dt = [],
-        mt = [];
-      for (const dt of tt) !dt.isError && dt.name && ("inGame" === dt.location.status && dt.location.inLobbyName === et || Ot(Vt, dt.name) ? Dt.push({
-        friend: dt,
+    function Uu(uu, Eu, ju) {
+      const Uu = [],
+        Zu = [],
+        Xu = [];
+      for (const lu of uu) !lu.isError && lu.name && ("inGame" === lu.location.status && lu.location.inLobbyName === Eu || su(ju, lu.name) ? Zu.push({
+        friend: lu,
         place: "here"
-      }) : "offline" === dt.location.status ? mt.push({
-        friend: dt,
+      }) : "offline" === lu.location.status ? Xu.push({
+        friend: lu,
         place: "offline"
-      }) : qt.push({
-        friend: dt,
+      }) : Uu.push({
+        friend: lu,
         place: "online"
       }));
-      return [...qt, ...Dt, ...mt]
+      return [...Uu, ...Zu, ...Xu]
     }
 
-    function Dt(tt, et, Vt) {
-      const qt = [],
-        Dt = tt.flatMap((tt => "here" === tt.place ? [tt.friend.name] : []));
-      for (const mt of [...Dt, ...et]) Ot(qt, mt) || Ot(Vt, mt) || qt.push(mt);
-      return qt
+    function Zu(uu, Eu, ju) {
+      const Uu = [],
+        Zu = uu.flatMap((uu => "here" === uu.place ? [uu.friend.name] : []));
+      for (const Xu of [...Zu, ...Eu]) su(Uu, Xu) || su(ju, Xu) || Uu.push(Xu);
+      return Uu
     }
 
-    function mt(tt, et) {
-      return null === tt || void 0 === tt || !tt.canManage || Ot(tt.whitelist, et) ? "none" : "whitelist" === tt.visibility ? "required" : "quiet"
+    function Xu(uu, Eu) {
+      return null === uu || void 0 === uu || !uu.canManage || su(uu.whitelist, Eu) ? "none" : "whitelist" === uu.visibility ? "required" : "quiet"
     }
 
-    function dt(tt) {
-      if (null === tt) return !0;
+    function lu(uu) {
+      if (null === uu) return !0;
       const {
-        visibility: et
-      } = tt;
-      return "public" === et || "unlisted" === et || "whitelist" === et && tt.canManage
+        visibility: Eu
+      } = uu;
+      return "public" === Eu || "unlisted" === Eu || "whitelist" === Eu && uu.canManage
     }
 
-    function jt(tt, et, Vt) {
-      if (Vt) {
-        const Vt = et.filter((et => !Ot(tt.whitelist, et)));
+    function qu(uu, Eu, ju) {
+      if (ju) {
+        const ju = Eu.filter((Eu => !su(uu.whitelist, Eu)));
         return {
-          ...tt,
-          whitelist: [...tt.whitelist, ...Vt]
+          ...uu,
+          whitelist: [...uu.whitelist, ...ju]
         }
       }
       return {
-        ...tt,
-        whitelist: tt.whitelist.filter((tt => !Ot(et, tt)))
+        ...uu,
+        whitelist: uu.whitelist.filter((uu => !su(Eu, uu)))
       }
     }
 
-    function Ht(tt, et) {
-      const Vt = [];
-      for (let Ot = 0; Ot < tt.length; Ot += et) Vt.push(tt.slice(Ot, Ot + et));
-      return Vt
+    function fu(uu, Eu) {
+      const ju = [];
+      for (let su = 0; su < uu.length; su += Eu) ju.push(uu.slice(su, su + Eu));
+      return ju
     }
-    Vt.d(et, {
-      b: () => dt,
-      e: () => Dt,
-      f: () => qt,
-      j: () => Ot,
-      m: () => Ht,
-      o: () => mt,
-      r: () => jt
+    ju.d(Eu, {
+      b: () => lu,
+      e: () => Zu,
+      i: () => Uu,
+      l: () => su,
+      o: () => fu,
+      q: () => Xu,
+      r: () => qu
     })
   },
-  37252: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => Dt
+  37411: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => Zu
     });
-    var Ot = Vt(63),
-      qt = Vt(2498);
+    var su = ju(58),
+      Uu = ju(2543);
 
-    function Dt() {
-      const tt = (0, qt.i)("lobbyLeaderboardInfo");
-      return (0, Ot.useMemo)((() => function(tt) {
-        if (null === tt) return null;
-        const et = Object.entries(tt),
-          Vt = et.filter((tt => {
-            let [, et] = tt;
-            return void 0 !== et
+    function Zu() {
+      const uu = (0, Uu.h)("lobbyLeaderboardInfo");
+      return (0, su.useMemo)((() => function(uu) {
+        if (null === uu) return null;
+        const Eu = Object.entries(uu),
+          ju = Eu.filter((uu => {
+            let [, Eu] = uu;
+            return void 0 !== Eu
           }));
-        if (Vt.length === et.length) return tt;
-        const Ot = Object.fromEntries(Vt),
-          qt = Object.keys(tt).filter((tt => !Object.hasOwn(Ot, tt)));
-        return console.warn(`lobbyLeaderboardInfo left out its undefined columns: ${qt.join(", ")}`), Ot
-      }(tt)), [tt])
+        if (ju.length === Eu.length) return uu;
+        const su = Object.fromEntries(ju),
+          Uu = Object.keys(uu).filter((uu => !Object.hasOwn(su, uu)));
+        return console.warn(`lobbyLeaderboardInfo left out its undefined columns: ${Uu.join(", ")}`), su
+      }(uu)), [uu])
     }
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

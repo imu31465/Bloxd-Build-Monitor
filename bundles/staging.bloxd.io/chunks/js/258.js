@@ -1,83 +1,83 @@
 export const id = 258;
 export const ids = [258];
 export const modules = {
-  40270: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => lt,
-      h: () => Qt,
-      l: () => jt,
-      o: () => Et,
-      s: () => Ht,
-      v: () => dt,
-      z: () => Xt
+  40319: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => cu,
+      f: () => bu,
+      h: () => qu,
+      l: () => Nu,
+      n: () => fu,
+      q: () => lu,
+      s: () => Cu
     });
-    var Ot = Vt(38899),
-      qt = Vt(40272);
+    var su = ju(39032),
+      Uu = ju(40326);
 
-    function Dt(tt, et, Vt, Ot) {
-      switch (et) {
+    function Zu(uu, Eu, ju, su) {
+      switch (Eu) {
         case 5120: {
-          let et = tt.getInt8(Vt);
-          return Ot && (et = Math.max(et / 127, -1)), et
+          let Eu = uu.getInt8(ju);
+          return su && (Eu = Math.max(Eu / 127, -1)), Eu
         }
         case 5121: {
-          let et = tt.getUint8(Vt);
-          return Ot && (et /= 255), et
+          let Eu = uu.getUint8(ju);
+          return su && (Eu /= 255), Eu
         }
         case 5122: {
-          let et = tt.getInt16(Vt, !0);
-          return Ot && (et = Math.max(et / 32767, -1)), et
+          let Eu = uu.getInt16(ju, !0);
+          return su && (Eu = Math.max(Eu / 32767, -1)), Eu
         }
         case 5123: {
-          let et = tt.getUint16(Vt, !0);
-          return Ot && (et /= 65535), et
+          let Eu = uu.getUint16(ju, !0);
+          return su && (Eu /= 65535), Eu
         }
         case 5131:
-          return (0, qt.e)(tt.getUint16(Vt, !0));
+          return (0, Uu.e)(uu.getUint16(ju, !0));
         case 5124:
-          return tt.getInt32(Vt, !0);
+          return uu.getInt32(ju, !0);
         case 5125:
-          return tt.getUint32(Vt, !0);
+          return uu.getUint32(ju, !0);
         case 5126:
-          return tt.getFloat32(Vt, !0);
+          return uu.getFloat32(ju, !0);
         default:
-          throw new Error(`Invalid component type ${et}`)
+          throw new Error(`Invalid component type ${Eu}`)
       }
     }
 
-    function mt(tt, et, Vt, Ot, Dt) {
-      switch (et) {
+    function Xu(uu, Eu, ju, su, Zu) {
+      switch (Eu) {
         case 5120:
-          Ot && (Dt = Math.round(127 * Dt)), tt.setInt8(Vt, Dt);
+          su && (Zu = Math.round(127 * Zu)), uu.setInt8(ju, Zu);
           break;
         case 5121:
-          Ot && (Dt = Math.round(255 * Dt)), tt.setUint8(Vt, Dt);
+          su && (Zu = Math.round(255 * Zu)), uu.setUint8(ju, Zu);
           break;
         case 5122:
-          Ot && (Dt = Math.round(32767 * Dt)), tt.setInt16(Vt, Dt, !0);
+          su && (Zu = Math.round(32767 * Zu)), uu.setInt16(ju, Zu, !0);
           break;
         case 5123:
-          Ot && (Dt = Math.round(65535 * Dt)), tt.setUint16(Vt, Dt, !0);
+          su && (Zu = Math.round(65535 * Zu)), uu.setUint16(ju, Zu, !0);
           break;
         case 5131:
-          tt.setUint16(Vt, (0, qt.k)(Dt), !0);
+          uu.setUint16(ju, (0, Uu.k)(Zu), !0);
           break;
         case 5124:
-          tt.setInt32(Vt, Dt, !0);
+          uu.setInt32(ju, Zu, !0);
           break;
         case 5125:
-          tt.setUint32(Vt, Dt, !0);
+          uu.setUint32(ju, Zu, !0);
           break;
         case 5126:
-          tt.setFloat32(Vt, Dt, !0);
+          uu.setFloat32(ju, Zu, !0);
           break;
         default:
-          throw new Error(`Invalid component type ${et}`)
+          throw new Error(`Invalid component type ${Eu}`)
       }
     }
 
-    function dt(tt) {
-      switch (tt) {
+    function lu(uu) {
+      switch (uu) {
         case 5120:
         case 5121:
           return 1;
@@ -90,61 +90,61 @@ export const modules = {
         case 5126:
           return 4;
         default:
-          throw new Error(`Invalid type '${tt}'`)
+          throw new Error(`Invalid type '${uu}'`)
       }
     }
 
-    function jt(tt, et, Vt, Ot, qt, jt, Ht, Xt) {
-      const Qt = new Array(Ot),
-        lt = new Array(Ot);
-      if (tt instanceof Array) {
-        let qt = et / 4;
-        const Dt = Vt / 4;
-        for (let et = 0; et < jt; et += Ot) {
-          for (let et = 0; et < Ot; et++) Qt[et] = lt[et] = tt[qt + et];
-          Xt(lt, et);
-          for (let et = 0; et < Ot; et++) Qt[et] !== lt[et] && (tt[qt + et] = lt[et]);
-          qt += Dt
+    function qu(uu, Eu, ju, su, Uu, qu, fu, Cu) {
+      const bu = new Array(su),
+        cu = new Array(su);
+      if (uu instanceof Array) {
+        let Uu = Eu / 4;
+        const Zu = ju / 4;
+        for (let Eu = 0; Eu < qu; Eu += su) {
+          for (let Eu = 0; Eu < su; Eu++) bu[Eu] = cu[Eu] = uu[Uu + Eu];
+          Cu(cu, Eu);
+          for (let Eu = 0; Eu < su; Eu++) bu[Eu] !== cu[Eu] && (uu[Uu + Eu] = cu[Eu]);
+          Uu += Zu
         }
       } else {
-        const Et = ArrayBuffer.isView(tt) ? new DataView(tt.buffer, tt.byteOffset, tt.byteLength) : new DataView(tt),
-          ft = dt(qt);
-        for (let tt = 0; tt < jt; tt += Ot) {
-          for (let tt = 0, Vt = et; tt < Ot; tt++, Vt += ft) Qt[tt] = lt[tt] = Dt(Et, qt, Vt, Ht);
-          Xt(lt, tt);
-          for (let tt = 0, Vt = et; tt < Ot; tt++, Vt += ft) Qt[tt] !== lt[tt] && mt(Et, qt, Vt, Ht, lt[tt]);
-          et += Vt
+        const Nu = ArrayBuffer.isView(uu) ? new DataView(uu.buffer, uu.byteOffset, uu.byteLength) : new DataView(uu),
+          Ou = lu(Uu);
+        for (let uu = 0; uu < qu; uu += su) {
+          for (let uu = 0, ju = Eu; uu < su; uu++, ju += Ou) bu[uu] = cu[uu] = Zu(Nu, Uu, ju, fu);
+          Cu(cu, uu);
+          for (let uu = 0, ju = Eu; uu < su; uu++, ju += Ou) bu[uu] !== cu[uu] && Xu(Nu, Uu, ju, fu, cu[uu]);
+          Eu += ju
         }
       }
     }
 
-    function Ht(tt, et, Vt, qt, Dt, mt, Ht, Xt) {
-      const Qt = et * dt(Vt),
-        lt = Ht * et;
-      if (5126 !== Vt || Dt !== Qt) {
-        const Ot = new Float32Array(lt);
-        return jt(tt, qt, Dt, et, Vt, lt, mt, ((tt, Vt) => {
-          for (let qt = 0; qt < et; qt++) Ot[Vt + qt] = tt[qt]
-        })), Ot
+    function fu(uu, Eu, ju, Uu, Zu, Xu, fu, Cu) {
+      const bu = Eu * lu(ju),
+        cu = fu * Eu;
+      if (5126 !== ju || Zu !== bu) {
+        const su = new Float32Array(cu);
+        return qu(uu, Uu, Zu, Eu, ju, cu, Xu, ((uu, ju) => {
+          for (let Uu = 0; Uu < Eu; Uu++) su[ju + Uu] = uu[Uu]
+        })), su
       }
-      if (!(tt instanceof Array || tt instanceof Float32Array) || 0 !== qt || tt.length !== lt) {
-        if (tt instanceof Array) {
-          const et = qt / 4;
-          return tt.slice(et, et + lt)
+      if (!(uu instanceof Array || uu instanceof Float32Array) || 0 !== Uu || uu.length !== cu) {
+        if (uu instanceof Array) {
+          const Eu = Uu / 4;
+          return uu.slice(Eu, Eu + cu)
         }
-        if (ArrayBuffer.isView(tt)) {
-          const et = tt.byteOffset + qt;
-          return 0 !== (3 & et) && (Ot.d.Warn("Float array must be aligned to 4-bytes border"), Xt = !0), Xt ? new Float32Array(tt.buffer.slice(et, et + lt * Float32Array.BYTES_PER_ELEMENT)) : new Float32Array(tt.buffer, et, lt)
+        if (ArrayBuffer.isView(uu)) {
+          const Eu = uu.byteOffset + Uu;
+          return 0 !== (3 & Eu) && (su.b.Warn("Float array must be aligned to 4-bytes border"), Cu = !0), Cu ? new Float32Array(uu.buffer.slice(Eu, Eu + cu * Float32Array.BYTES_PER_ELEMENT)) : new Float32Array(uu.buffer, Eu, cu)
         }
-        return new Float32Array(tt, qt, lt)
+        return new Float32Array(uu, Uu, cu)
       }
-      return Xt ? tt.slice() : tt
+      return Cu ? uu.slice() : uu
     }
 
-    function Xt(tt, et, Vt, qt, Dt, mt, Ht) {
-      const Xt = dt(Vt),
-        Qt = function(tt) {
-          switch (tt) {
+    function Cu(uu, Eu, ju, Uu, Zu, Xu, fu) {
+      const Cu = lu(ju),
+        bu = function(uu) {
+          switch (uu) {
             case 5120:
               return Int8Array;
             case 5121:
@@ -161,120 +161,120 @@ export const modules = {
             case 5126:
               return Float32Array;
             default:
-              throw new Error(`Invalid component type '${tt}'`)
+              throw new Error(`Invalid component type '${uu}'`)
           }
-        }(Vt),
-        lt = mt * et;
-      if (Array.isArray(tt)) {
-        if (0 !== (3 & qt) || 0 !== (3 & Dt)) throw new Error("byteOffset and byteStride must be a multiple of 4 for number[] data.");
-        const Ot = qt / 4,
-          dt = Dt / 4;
-        if (Ot + (mt - 1) * dt + et > tt.length) throw new Error("Last accessed index is out of bounds.");
-        if (dt < et) throw new Error("Data stride cannot be smaller than the component size.");
-        if (dt !== et) {
-          const Ot = new Qt(lt);
-          return jt(tt, qt, Dt, et, Vt, lt, !1, ((tt, Vt) => {
-            for (let qt = 0; qt < et; qt++) Ot[Vt + qt] = tt[qt]
-          })), Ot
+        }(ju),
+        cu = Xu * Eu;
+      if (Array.isArray(uu)) {
+        if (0 !== (3 & Uu) || 0 !== (3 & Zu)) throw new Error("byteOffset and byteStride must be a multiple of 4 for number[] data.");
+        const su = Uu / 4,
+          lu = Zu / 4;
+        if (su + (Xu - 1) * lu + Eu > uu.length) throw new Error("Last accessed index is out of bounds.");
+        if (lu < Eu) throw new Error("Data stride cannot be smaller than the component size.");
+        if (lu !== Eu) {
+          const su = new bu(cu);
+          return qu(uu, Uu, Zu, Eu, ju, cu, !1, ((uu, ju) => {
+            for (let Uu = 0; Uu < Eu; Uu++) su[ju + Uu] = uu[Uu]
+          })), su
         }
-        return new Qt(tt.slice(Ot, Ot + lt))
+        return new bu(uu.slice(su, su + cu))
       }
-      let Et, ft = qt;
-      ArrayBuffer.isView(tt) ? (Et = tt.buffer, ft += tt.byteOffset) : Et = tt;
-      if (ft + (mt - 1) * Dt + et * Xt > Et.byteLength) throw new Error("Last accessed byte is out of bounds.");
-      const wt = et * Xt;
-      if (Dt < wt) throw new Error("Byte stride cannot be smaller than the component's byte size.");
-      if (Dt !== wt) {
-        const tt = new Qt(lt),
-          Vt = new Uint8Array(Et, ft),
-          Ot = new Uint8Array(tt.buffer),
-          qt = et * Xt;
-        for (let et = 0, dt = 0, jt = 0; et < mt; et++, dt += Dt, jt += qt) Ot.set(Vt.subarray(dt, dt + qt), jt);
-        return tt
+      let Nu, Ou = Uu;
+      ArrayBuffer.isView(uu) ? (Nu = uu.buffer, Ou += uu.byteOffset) : Nu = uu;
+      if (Ou + (Xu - 1) * Zu + Eu * Cu > Nu.byteLength) throw new Error("Last accessed byte is out of bounds.");
+      const Yu = Eu * Cu;
+      if (Zu < Yu) throw new Error("Byte stride cannot be smaller than the component's byte size.");
+      if (Zu !== Yu) {
+        const uu = new bu(cu),
+          ju = new Uint8Array(Nu, Ou),
+          su = new Uint8Array(uu.buffer),
+          Uu = Eu * Cu;
+        for (let Eu = 0, lu = 0, qu = 0; Eu < Xu; Eu++, lu += Zu, qu += Uu) su.set(ju.subarray(lu, lu + Uu), qu);
+        return uu
       }
-      return 1 !== Xt && 0 !== (ft & Xt - 1) && (Ot.d.Warn("Array must be aligned to border of element size. Data will be copied."), Ht = !0), Ht ? new Qt(Et.slice(ft, ft + lt * Xt)) : new Qt(Et, ft, lt)
+      return 1 !== Cu && 0 !== (Ou & Cu - 1) && (su.b.Warn("Array must be aligned to border of element size. Data will be copied."), fu = !0), fu ? new bu(Nu.slice(Ou, Ou + cu * Cu)) : new bu(Nu, Ou, cu)
     }
 
-    function Qt(tt, et, Vt, qt, Dt, mt, Ht, Xt) {
-      const Qt = et * dt(Vt),
-        lt = Ht * et;
-      if (Xt.length !== lt) throw new Error("Output length is not valid");
-      if (5126 === Vt && Dt === Qt)
-        if (tt instanceof Array) {
-          const et = qt / 4;
-          Xt.set(tt, et)
-        } else if (ArrayBuffer.isView(tt)) {
-        const et = tt.byteOffset + qt;
-        if (0 !== (3 & et)) return Ot.d.Warn("Float array must be aligned to 4-bytes border"), void Xt.set(new Float32Array(tt.buffer.slice(et, et + lt * Float32Array.BYTES_PER_ELEMENT)));
-        const Vt = new Float32Array(tt.buffer, et, lt);
-        Xt.set(Vt)
+    function bu(uu, Eu, ju, Uu, Zu, Xu, fu, Cu) {
+      const bu = Eu * lu(ju),
+        cu = fu * Eu;
+      if (Cu.length !== cu) throw new Error("Output length is not valid");
+      if (5126 === ju && Zu === bu)
+        if (uu instanceof Array) {
+          const Eu = Uu / 4;
+          Cu.set(uu, Eu)
+        } else if (ArrayBuffer.isView(uu)) {
+        const Eu = uu.byteOffset + Uu;
+        if (0 !== (3 & Eu)) return su.b.Warn("Float array must be aligned to 4-bytes border"), void Cu.set(new Float32Array(uu.buffer.slice(Eu, Eu + cu * Float32Array.BYTES_PER_ELEMENT)));
+        const ju = new Float32Array(uu.buffer, Eu, cu);
+        Cu.set(ju)
       } else {
-        const et = new Float32Array(tt, qt, lt);
-        Xt.set(et)
-      } else jt(tt, qt, Dt, et, Vt, lt, mt, ((tt, Vt) => {
-        for (let Ot = 0; Ot < et; Ot++) Xt[Vt + Ot] = tt[Ot]
+        const Eu = new Float32Array(uu, Uu, cu);
+        Cu.set(Eu)
+      } else qu(uu, Uu, Zu, Eu, ju, cu, Xu, ((uu, ju) => {
+        for (let su = 0; su < Eu; su++) Cu[ju + su] = uu[su]
       }))
     }
 
-    function lt(tt, et) {
-      let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        Ot = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-      if (Array.isArray(tt)) {
-        for (let qt = 0; qt < et; qt++)
-          if (tt[Vt + qt] - Ot > 65535) return !0;
+    function cu(uu, Eu) {
+      let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+      if (Array.isArray(uu)) {
+        for (let Uu = 0; Uu < Eu; Uu++)
+          if (uu[ju + Uu] - su > 65535) return !0;
         return !1
       }
-      return 4 === tt.BYTES_PER_ELEMENT
+      return 4 === uu.BYTES_PER_ELEMENT
     }
 
-    function Et(tt) {
-      const et = tt.buffer;
-      if (et instanceof ArrayBuffer) return tt;
-      const Vt = new ArrayBuffer(tt.byteLength);
-      return new Uint8Array(Vt).set(new Uint8Array(et, tt.byteOffset, tt.byteLength)), Vt
+    function Nu(uu) {
+      const Eu = uu.buffer;
+      if (Eu instanceof ArrayBuffer) return uu;
+      const ju = new ArrayBuffer(uu.byteLength);
+      return new Uint8Array(ju).set(new Uint8Array(Eu, uu.byteOffset, uu.byteLength)), ju
     }
   },
-  40082: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => ht,
-      g: () => ut,
-      j: () => Kt,
-      h: () => Pt,
-      m: () => Zt
+  40160: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => Ju,
+      i: () => pu,
+      p: () => wu,
+      l: () => vu,
+      r: () => Ku
     });
-    class Ot {
+    class su {
       constructor() {
         this.children = []
       }
-      isValid(tt) {
+      isValid(uu) {
         return !0
       }
-      process(tt, et, Vt) {
-        let Ot = "";
+      process(uu, Eu, ju) {
+        let su = "";
         if (this.line) {
-          let Vt = this.line;
-          const qt = et.processor;
-          if (qt) {
-            qt.lineProcessor && (Vt = qt.lineProcessor(Vt, et.isFragment, et.processingContext));
-            const Ot = et.processor?.attributeKeywordName ?? "attribute",
-              Dt = et.isFragment && et.processor?.varyingFragmentKeywordName ? et.processor?.varyingFragmentKeywordName : !et.isFragment && et.processor?.varyingVertexKeywordName ? et.processor?.varyingVertexKeywordName : "varying";
-            if (!et.isFragment && qt.attributeProcessor && this.line.startsWith(Ot)) Vt = qt.attributeProcessor(this.line, tt, et.processingContext);
-            else if (qt.varyingProcessor && (qt.varyingCheck?.(this.line, et.isFragment) || !qt.varyingCheck && this.line.startsWith(Dt))) Vt = qt.varyingProcessor(this.line, et.isFragment, tt, et.processingContext);
-            else if (qt.uniformProcessor && qt.uniformRegexp && qt.uniformRegexp.test(this.line)) et.lookForClosingBracketForUniformBuffer || (Vt = qt.uniformProcessor(this.line, et.isFragment, tt, et.processingContext));
-            else if (qt.uniformBufferProcessor && qt.uniformBufferRegexp && qt.uniformBufferRegexp.test(this.line)) et.lookForClosingBracketForUniformBuffer || (Vt = qt.uniformBufferProcessor(this.line, et.isFragment, et.processingContext), et.lookForClosingBracketForUniformBuffer = !0);
-            else if (qt.textureProcessor && qt.textureRegexp && qt.textureRegexp.test(this.line)) Vt = qt.textureProcessor(this.line, et.isFragment, tt, et.processingContext);
-            else if ((qt.uniformProcessor || qt.uniformBufferProcessor) && this.line.startsWith("uniform") && !et.lookForClosingBracketForUniformBuffer) {
-              /uniform\s+(?:(?:highp)?|(?:lowp)?)\s*(\S+)\s+(\S+)\s*;/.test(this.line) ? qt.uniformProcessor && (Vt = qt.uniformProcessor(this.line, et.isFragment, tt, et.processingContext)) : qt.uniformBufferProcessor && (Vt = qt.uniformBufferProcessor(this.line, et.isFragment, et.processingContext), et.lookForClosingBracketForUniformBuffer = !0)
+          let ju = this.line;
+          const Uu = Eu.processor;
+          if (Uu) {
+            Uu.lineProcessor && (ju = Uu.lineProcessor(ju, Eu.isFragment, Eu.processingContext));
+            const su = Eu.processor?.attributeKeywordName ?? "attribute",
+              Zu = Eu.isFragment && Eu.processor?.varyingFragmentKeywordName ? Eu.processor?.varyingFragmentKeywordName : !Eu.isFragment && Eu.processor?.varyingVertexKeywordName ? Eu.processor?.varyingVertexKeywordName : "varying";
+            if (!Eu.isFragment && Uu.attributeProcessor && this.line.startsWith(su)) ju = Uu.attributeProcessor(this.line, uu, Eu.processingContext);
+            else if (Uu.varyingProcessor && (Uu.varyingCheck?.(this.line, Eu.isFragment) || !Uu.varyingCheck && this.line.startsWith(Zu))) ju = Uu.varyingProcessor(this.line, Eu.isFragment, uu, Eu.processingContext);
+            else if (Uu.uniformProcessor && Uu.uniformRegexp && Uu.uniformRegexp.test(this.line)) Eu.lookForClosingBracketForUniformBuffer || (ju = Uu.uniformProcessor(this.line, Eu.isFragment, uu, Eu.processingContext));
+            else if (Uu.uniformBufferProcessor && Uu.uniformBufferRegexp && Uu.uniformBufferRegexp.test(this.line)) Eu.lookForClosingBracketForUniformBuffer || (ju = Uu.uniformBufferProcessor(this.line, Eu.isFragment, Eu.processingContext), Eu.lookForClosingBracketForUniformBuffer = !0);
+            else if (Uu.textureProcessor && Uu.textureRegexp && Uu.textureRegexp.test(this.line)) ju = Uu.textureProcessor(this.line, Eu.isFragment, uu, Eu.processingContext);
+            else if ((Uu.uniformProcessor || Uu.uniformBufferProcessor) && this.line.startsWith("uniform") && !Eu.lookForClosingBracketForUniformBuffer) {
+              /uniform\s+(?:(?:highp)?|(?:lowp)?)\s*(\S+)\s+(\S+)\s*;/.test(this.line) ? Uu.uniformProcessor && (ju = Uu.uniformProcessor(this.line, Eu.isFragment, uu, Eu.processingContext)) : Uu.uniformBufferProcessor && (ju = Uu.uniformBufferProcessor(this.line, Eu.isFragment, Eu.processingContext), Eu.lookForClosingBracketForUniformBuffer = !0)
             }
-            et.lookForClosingBracketForUniformBuffer && -1 !== this.line.indexOf("}") && (et.lookForClosingBracketForUniformBuffer = !1, qt.endOfUniformBufferProcessor && (Vt = qt.endOfUniformBufferProcessor(this.line, et.isFragment, et.processingContext)))
+            Eu.lookForClosingBracketForUniformBuffer && -1 !== this.line.indexOf("}") && (Eu.lookForClosingBracketForUniformBuffer = !1, Uu.endOfUniformBufferProcessor && (ju = Uu.endOfUniformBufferProcessor(this.line, Eu.isFragment, Eu.processingContext)))
           }
-          Ot += Vt + "\n"
+          su += ju + "\n"
         }
-        for (const qt of this.children) Ot += qt.process(tt, et, Vt);
-        return this.additionalDefineKey && (tt[this.additionalDefineKey] = this.additionalDefineValue || "true", Vt[this.additionalDefineKey] = tt[this.additionalDefineKey]), Ot
+        for (const Uu of this.children) su += Uu.process(uu, Eu, ju);
+        return this.additionalDefineKey && (uu[this.additionalDefineKey] = this.additionalDefineValue || "true", ju[this.additionalDefineKey] = uu[this.additionalDefineKey]), su
       }
     }
-    class qt {
+    class Uu {
       constructor() {
         this._lines = []
       }
@@ -284,273 +284,273 @@ export const modules = {
       get canRead() {
         return this.lineIndex < this._lines.length - 1
       }
-      set lines(tt) {
+      set lines(uu) {
         this._lines.length = 0;
-        for (const et of tt) {
-          if (!et || "\r" === et) continue;
-          if ("#" === et[0]) {
-            this._lines.push(et);
+        for (const Eu of uu) {
+          if (!Eu || "\r" === Eu) continue;
+          if ("#" === Eu[0]) {
+            this._lines.push(Eu);
             continue
           }
-          const tt = et.trim();
-          if (!tt) continue;
-          if (tt.startsWith("//")) {
-            this._lines.push(et);
+          const uu = Eu.trim();
+          if (!uu) continue;
+          if (uu.startsWith("//")) {
+            this._lines.push(Eu);
             continue
           }
-          const Vt = tt.indexOf(";");
-          if (-1 === Vt) this._lines.push(tt);
-          else if (Vt === tt.length - 1) tt.length > 1 && this._lines.push(tt);
+          const ju = uu.indexOf(";");
+          if (-1 === ju) this._lines.push(uu);
+          else if (ju === uu.length - 1) uu.length > 1 && this._lines.push(uu);
           else {
-            const tt = et.split(";");
-            for (let et = 0; et < tt.length; et++) {
-              let Vt = tt[et];
-              Vt && (Vt = Vt.trim(), Vt && this._lines.push(Vt + (et !== tt.length - 1 ? ";" : "")))
+            const uu = Eu.split(";");
+            for (let Eu = 0; Eu < uu.length; Eu++) {
+              let ju = uu[Eu];
+              ju && (ju = ju.trim(), ju && this._lines.push(ju + (Eu !== uu.length - 1 ? ";" : "")))
             }
           }
         }
       }
     }
-    class Dt extends Ot {
-      process(tt, et, Vt) {
-        for (let Ot = 0; Ot < this.children.length; Ot++) {
-          const qt = this.children[Ot];
-          if (qt.isValid(tt)) return qt.process(tt, et, Vt)
+    class Zu extends su {
+      process(uu, Eu, ju) {
+        for (let su = 0; su < this.children.length; su++) {
+          const Uu = this.children[su];
+          if (Uu.isValid(uu)) return Uu.process(uu, Eu, ju)
         }
         return ""
       }
     }
-    class mt extends Ot {
-      isValid(tt) {
-        return this.testExpression.isTrue(tt)
+    class Xu extends su {
+      isValid(uu) {
+        return this.testExpression.isTrue(uu)
       }
     }
-    class dt {
-      isTrue(tt) {
+    class lu {
+      isTrue(uu) {
         return !0
       }
-      static postfixToInfix(tt) {
-        const et = [];
-        for (const Vt of tt)
-          if (void 0 === dt._OperatorPriority[Vt]) et.push(Vt);
+      static postfixToInfix(uu) {
+        const Eu = [];
+        for (const ju of uu)
+          if (void 0 === lu._OperatorPriority[ju]) Eu.push(ju);
           else {
-            const tt = et[et.length - 1],
-              Ot = et[et.length - 2];
-            et.length -= 2, et.push(`(${Ot}${Vt}${tt})`)
-          } return et[et.length - 1]
+            const uu = Eu[Eu.length - 1],
+              su = Eu[Eu.length - 2];
+            Eu.length -= 2, Eu.push(`(${su}${ju}${uu})`)
+          } return Eu[Eu.length - 1]
       }
-      static infixToPostfix(tt) {
-        const et = dt._InfixToPostfixCache.get(tt);
-        if (et) return et.accessTime = Date.now(), et.result;
-        if (!tt.includes("&&") && !tt.includes("||") && !tt.includes(")") && !tt.includes("(")) return [tt];
-        const Vt = [];
-        let Ot = -1;
-        const qt = () => {
-            Xt = Xt.trim(), "" !== Xt && (Vt.push(Xt), Xt = "")
+      static infixToPostfix(uu) {
+        const Eu = lu._InfixToPostfixCache.get(uu);
+        if (Eu) return Eu.accessTime = Date.now(), Eu.result;
+        if (!uu.includes("&&") && !uu.includes("||") && !uu.includes(")") && !uu.includes("(")) return [uu];
+        const ju = [];
+        let su = -1;
+        const Uu = () => {
+            Cu = Cu.trim(), "" !== Cu && (ju.push(Cu), Cu = "")
           },
-          Dt = tt => {
-            Ot < dt._Stack.length - 1 && (dt._Stack[++Ot] = tt)
+          Zu = uu => {
+            su < lu._Stack.length - 1 && (lu._Stack[++su] = uu)
           },
-          mt = () => dt._Stack[Ot],
-          jt = () => -1 === Ot ? "!!INVALID EXPRESSION!!" : dt._Stack[Ot--];
-        let Ht = 0,
-          Xt = "";
-        for (; Ht < tt.length;) {
-          const et = tt.charAt(Ht),
-            Qt = Ht < tt.length - 1 ? tt.substring(Ht, 2 + Ht) : "";
-          if ("(" === et) Xt = "", Dt(et);
-          else if (")" === et) {
-            for (qt(); - 1 !== Ot && "(" !== mt();) Vt.push(jt());
-            jt()
-          } else if (dt._OperatorPriority[Qt] > 1) {
-            for (qt(); - 1 !== Ot && dt._OperatorPriority[mt()] >= dt._OperatorPriority[Qt];) Vt.push(jt());
-            Dt(Qt), Ht++
-          } else Xt += et;
-          Ht++
+          Xu = () => lu._Stack[su],
+          qu = () => -1 === su ? "!!INVALID EXPRESSION!!" : lu._Stack[su--];
+        let fu = 0,
+          Cu = "";
+        for (; fu < uu.length;) {
+          const Eu = uu.charAt(fu),
+            bu = fu < uu.length - 1 ? uu.substring(fu, 2 + fu) : "";
+          if ("(" === Eu) Cu = "", Zu(Eu);
+          else if (")" === Eu) {
+            for (Uu(); - 1 !== su && "(" !== Xu();) ju.push(qu());
+            qu()
+          } else if (lu._OperatorPriority[bu] > 1) {
+            for (Uu(); - 1 !== su && lu._OperatorPriority[Xu()] >= lu._OperatorPriority[bu];) ju.push(qu());
+            Zu(bu), fu++
+          } else Cu += Eu;
+          fu++
         }
-        for (qt(); - 1 !== Ot;) "(" === mt() ? jt() : Vt.push(jt());
-        return dt._InfixToPostfixCache.size >= dt.InfixToPostfixCacheLimitSize && dt.ClearCache(), dt._InfixToPostfixCache.set(tt, {
-          result: Vt,
+        for (Uu(); - 1 !== su;) "(" === Xu() ? qu() : ju.push(qu());
+        return lu._InfixToPostfixCache.size >= lu.InfixToPostfixCacheLimitSize && lu.ClearCache(), lu._InfixToPostfixCache.set(uu, {
+          result: ju,
           accessTime: Date.now()
-        }), Vt
+        }), ju
       }
       static ClearCache() {
-        const tt = Array.from(dt._InfixToPostfixCache.entries()).sort(((tt, et) => tt[1].accessTime - et[1].accessTime));
-        for (let et = 0; et < dt.InfixToPostfixCacheCleanupSize; et++) dt._InfixToPostfixCache.delete(tt[et][0])
+        const uu = Array.from(lu._InfixToPostfixCache.entries()).sort(((uu, Eu) => uu[1].accessTime - Eu[1].accessTime));
+        for (let Eu = 0; Eu < lu.InfixToPostfixCacheCleanupSize; Eu++) lu._InfixToPostfixCache.delete(uu[Eu][0])
       }
     }
-    dt.InfixToPostfixCacheLimitSize = 5e4, dt.InfixToPostfixCacheCleanupSize = 25e3, dt._InfixToPostfixCache = new Map, dt._OperatorPriority = {
+    lu.InfixToPostfixCacheLimitSize = 5e4, lu.InfixToPostfixCacheCleanupSize = 25e3, lu._InfixToPostfixCache = new Map, lu._OperatorPriority = {
       ")": 0,
       "(": 1,
       "||": 2,
       "&&": 3
-    }, dt._Stack = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""];
-    class jt extends dt {
-      constructor(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        super(), this.define = tt, this.not = et
+    }, lu._Stack = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""];
+    class qu extends lu {
+      constructor(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        super(), this.define = uu, this.not = Eu
       }
-      isTrue(tt) {
-        let et = void 0 !== tt[this.define];
-        return this.not && (et = !et), et
-      }
-    }
-    class Ht extends dt {
-      isTrue(tt) {
-        return this.leftOperand.isTrue(tt) || this.rightOperand.isTrue(tt)
+      isTrue(uu) {
+        let Eu = void 0 !== uu[this.define];
+        return this.not && (Eu = !Eu), Eu
       }
     }
-    class Xt extends dt {
-      isTrue(tt) {
-        return this.leftOperand.isTrue(tt) && this.rightOperand.isTrue(tt)
+    class fu extends lu {
+      isTrue(uu) {
+        return this.leftOperand.isTrue(uu) || this.rightOperand.isTrue(uu)
       }
     }
-    class Qt extends dt {
-      constructor(tt, et, Vt) {
-        super(), this.define = tt, this.operand = et, this.testValue = Vt
+    class Cu extends lu {
+      isTrue(uu) {
+        return this.leftOperand.isTrue(uu) && this.rightOperand.isTrue(uu)
+      }
+    }
+    class bu extends lu {
+      constructor(uu, Eu, ju) {
+        super(), this.define = uu, this.operand = Eu, this.testValue = ju
       }
       toString() {
         return `${this.define} ${this.operand} ${this.testValue}`
       }
-      isTrue(tt) {
-        let et = !1;
-        const Vt = parseInt(void 0 != tt[this.define] ? tt[this.define] : this.define),
-          Ot = parseInt(void 0 != tt[this.testValue] ? tt[this.testValue] : this.testValue);
-        if (isNaN(Vt) || isNaN(Ot)) return !1;
+      isTrue(uu) {
+        let Eu = !1;
+        const ju = parseInt(void 0 != uu[this.define] ? uu[this.define] : this.define),
+          su = parseInt(void 0 != uu[this.testValue] ? uu[this.testValue] : this.testValue);
+        if (isNaN(ju) || isNaN(su)) return !1;
         switch (this.operand) {
           case ">":
-            et = Vt > Ot;
+            Eu = ju > su;
             break;
           case "<":
-            et = Vt < Ot;
+            Eu = ju < su;
             break;
           case "<=":
-            et = Vt <= Ot;
+            Eu = ju <= su;
             break;
           case ">=":
-            et = Vt >= Ot;
+            Eu = ju >= su;
             break;
           case "==":
-            et = Vt === Ot;
+            Eu = ju === su;
             break;
           case "!=":
-            et = Vt !== Ot
+            Eu = ju !== su
         }
-        return et
+        return Eu
       }
     }
-    var lt = Vt(40080),
-      Et = Vt(40076);
-    const ft = /defined\s*?\((.+?)\)/g,
-      wt = /defined\s*?\[(.+?)\]/g,
-      yt = /#include\s?<(.+)>(\((.*)\))*(\[(.*)\])*/g,
-      Nt = /__decl__/,
-      Mt = /light\{X\}.(\w*)/g,
-      bt = /\{X\}/g,
-      Jt = [],
-      Ct = /(#ifdef)|(#else)|(#elif)|(#endif)|(#ifndef)|(#if)/;
+    var cu = ju(40153),
+      Nu = ju(40149);
+    const Ou = /defined\s*?\((.+?)\)/g,
+      Yu = /defined\s*?\[(.+?)\]/g,
+      hu = /#include\s?<(.+)>(\((.*)\))*(\[(.*)\])*/g,
+      Du = /__decl__/,
+      gu = /light\{X\}.(\w*)/g,
+      Mu = /\{X\}/g,
+      eu = [],
+      Gu = /(#ifdef)|(#else)|(#elif)|(#endif)|(#ifndef)|(#if)/;
 
-    function ut(tt) {
-      tt.processor && tt.processor.initializeShaders && tt.processor.initializeShaders(tt.processingContext)
+    function pu(uu) {
+      uu.processor && uu.processor.initializeShaders && uu.processor.initializeShaders(uu.processingContext)
     }
 
-    function Kt(tt, et, Vt, Ot) {
-      et.processor?.preProcessShaderCode && (tt = et.processor.preProcessShaderCode(tt, et.isFragment)), Pt(tt, et, (tt => {
-        et.processCodeAfterIncludes && (tt = et.processCodeAfterIncludes(et.isFragment ? "fragment" : "vertex", tt, et.defines));
-        const qt = function(tt, et, Vt) {
-          let Ot = function(tt, et) {
-            if (et.processor?.noPrecision) return tt;
-            const Vt = et.shouldUseHighPrecisionShader; - 1 === tt.indexOf("precision highp float") ? tt = Vt ? "precision highp float;\n" + tt : "precision mediump float;\n" + tt : Vt || (tt = tt.replace("precision highp float", "precision mediump float"));
-            return tt
-          }(tt, et);
-          if (!et.processor) return Ot;
-          if (0 === et.processor.shaderLanguage && -1 !== Ot.indexOf("#version 3") && (Ot = Ot.replace("#version 300 es", ""), !et.processor.parseGLES3)) return Ot;
-          const qt = et.defines,
-            Dt = It(et, Vt);
-          et.processor.preProcessor && (Ot = et.processor.preProcessor(Ot, qt, Dt, et.isFragment, et.processingContext));
-          const mt = {};
-          Ot = Rt(Ot, Dt, et, mt), et.processor.postProcessor && (Ot = et.processor.postProcessor(Ot, qt, et.isFragment, et.processingContext, Vt ? {
-            drawBuffersExtensionDisabled: !Vt.getCaps().drawBuffersExtension
-          } : {}, Dt, mt));
-          Vt?._features.needShaderCodeInlining && (Ot = Vt.inlineShaderCode(Ot));
-          return Ot
-        }(tt, et, Ot);
-        Vt(qt, tt)
+    function wu(uu, Eu, ju, su) {
+      Eu.processor?.preProcessShaderCode && (uu = Eu.processor.preProcessShaderCode(uu, Eu.isFragment)), vu(uu, Eu, (uu => {
+        Eu.processCodeAfterIncludes && (uu = Eu.processCodeAfterIncludes(Eu.isFragment ? "fragment" : "vertex", uu, Eu.defines));
+        const Uu = function(uu, Eu, ju) {
+          let su = function(uu, Eu) {
+            if (Eu.processor?.noPrecision) return uu;
+            const ju = Eu.shouldUseHighPrecisionShader; - 1 === uu.indexOf("precision highp float") ? uu = ju ? "precision highp float;\n" + uu : "precision mediump float;\n" + uu : ju || (uu = uu.replace("precision highp float", "precision mediump float"));
+            return uu
+          }(uu, Eu);
+          if (!Eu.processor) return su;
+          if (0 === Eu.processor.shaderLanguage && -1 !== su.indexOf("#version 3") && (su = su.replace("#version 300 es", ""), !Eu.processor.parseGLES3)) return su;
+          const Uu = Eu.defines,
+            Zu = mu(Eu, ju);
+          Eu.processor.preProcessor && (su = Eu.processor.preProcessor(su, Uu, Zu, Eu.isFragment, Eu.processingContext));
+          const Xu = {};
+          su = ku(su, Zu, Eu, Xu), Eu.processor.postProcessor && (su = Eu.processor.postProcessor(su, Uu, Eu.isFragment, Eu.processingContext, ju ? {
+            drawBuffersExtensionDisabled: !ju.getCaps().drawBuffersExtension
+          } : {}, Zu, Xu));
+          ju?._features.needShaderCodeInlining && (su = ju.inlineShaderCode(su));
+          return su
+        }(uu, Eu, su);
+        ju(Uu, uu)
       }))
     }
 
-    function ht(tt, et, Vt) {
-      return Vt.processor && Vt.processor.finalizeShaders ? Vt.processor.finalizeShaders(tt, et, Vt.processingContext) : {
-        vertexCode: tt,
-        fragmentCode: et
+    function Ju(uu, Eu, ju) {
+      return ju.processor && ju.processor.finalizeShaders ? ju.processor.finalizeShaders(uu, Eu, ju.processingContext) : {
+        vertexCode: uu,
+        fragmentCode: Eu
       }
     }
 
-    function vt(tt) {
-      const et = /defined\((.+)\)/.exec(tt);
-      if (et && et.length) return new jt(et[1].trim(), "!" === tt[0]);
-      const Vt = ["==", "!=", ">=", "<=", "<", ">"];
-      let Ot = "",
-        qt = 0;
-      for (Ot of Vt)
-        if (qt = tt.indexOf(Ot), qt > -1) break;
-      if (-1 === qt) return new jt(tt);
-      const Dt = tt.substring(0, qt).trim(),
-        mt = tt.substring(qt + Ot.length).trim();
-      return new Qt(Dt, Ot, mt)
+    function du(uu) {
+      const Eu = /defined\((.+)\)/.exec(uu);
+      if (Eu && Eu.length) return new qu(Eu[1].trim(), "!" === uu[0]);
+      const ju = ["==", "!=", ">=", "<=", "<", ">"];
+      let su = "",
+        Uu = 0;
+      for (su of ju)
+        if (Uu = uu.indexOf(su), Uu > -1) break;
+      if (-1 === Uu) return new qu(uu);
+      const Zu = uu.substring(0, Uu).trim(),
+        Xu = uu.substring(Uu + su.length).trim();
+      return new bu(Zu, su, Xu)
     }
 
-    function Wt(tt, et) {
-      const Vt = new mt,
-        Ot = tt.substring(0, et);
-      let qt = tt.substring(et);
-      return qt = qt.substring(0, (qt.indexOf("//") + 1 || qt.length + 1) - 1).trim(), Vt.testExpression = "#ifdef" === Ot ? new jt(qt) : "#ifndef" === Ot ? new jt(qt, !0) : function(tt) {
-        tt = tt.replace(ft, "defined[$1]");
-        const et = dt.infixToPostfix(tt),
-          Vt = [];
-        for (const qt of et)
-          if ("||" !== qt && "&&" !== qt) Vt.push(qt);
-          else if (Vt.length >= 2) {
-          let tt = Vt[Vt.length - 1],
-            et = Vt[Vt.length - 2];
-          Vt.length -= 2;
-          const Ot = "&&" == qt ? new Xt : new Ht;
-          "string" === typeof tt && (tt = tt.replace(wt, "defined($1)")), "string" === typeof et && (et = et.replace(wt, "defined($1)")), Ot.leftOperand = "string" === typeof et ? vt(et) : et, Ot.rightOperand = "string" === typeof tt ? vt(tt) : tt, Vt.push(Ot)
+    function au(uu, Eu) {
+      const ju = new Xu,
+        su = uu.substring(0, Eu);
+      let Uu = uu.substring(Eu);
+      return Uu = Uu.substring(0, (Uu.indexOf("//") + 1 || Uu.length + 1) - 1).trim(), ju.testExpression = "#ifdef" === su ? new qu(Uu) : "#ifndef" === su ? new qu(Uu, !0) : function(uu) {
+        uu = uu.replace(Ou, "defined[$1]");
+        const Eu = lu.infixToPostfix(uu),
+          ju = [];
+        for (const Uu of Eu)
+          if ("||" !== Uu && "&&" !== Uu) ju.push(Uu);
+          else if (ju.length >= 2) {
+          let uu = ju[ju.length - 1],
+            Eu = ju[ju.length - 2];
+          ju.length -= 2;
+          const su = "&&" == Uu ? new Cu : new fu;
+          "string" === typeof uu && (uu = uu.replace(Yu, "defined($1)")), "string" === typeof Eu && (Eu = Eu.replace(Yu, "defined($1)")), su.leftOperand = "string" === typeof Eu ? du(Eu) : Eu, su.rightOperand = "string" === typeof uu ? du(uu) : uu, ju.push(su)
         }
-        let Ot = Vt[Vt.length - 1];
-        return "string" === typeof Ot && (Ot = Ot.replace(wt, "defined($1)")), "string" === typeof Ot ? vt(Ot) : Ot
-      }(qt), Vt
+        let su = ju[ju.length - 1];
+        return "string" === typeof su && (su = su.replace(Yu, "defined($1)")), "string" === typeof su ? du(su) : su
+      }(Uu), ju
     }
 
-    function St(tt, et, Vt, qt) {
-      let Dt;
-      for (; ct(tt, Vt, qt);) {
-        Dt = tt.currentLine;
-        const mt = Dt.substring(0, 5).toLowerCase();
-        if ("#else" === mt) {
-          const Vt = new Ot;
-          return et.children.push(Vt), void ct(tt, Vt, qt)
+    function Pu(uu, Eu, ju, Uu) {
+      let Zu;
+      for (; ou(uu, ju, Uu);) {
+        Zu = uu.currentLine;
+        const Xu = Zu.substring(0, 5).toLowerCase();
+        if ("#else" === Xu) {
+          const ju = new su;
+          return Eu.children.push(ju), void ou(uu, ju, Uu)
         }
-        if ("#elif" === mt) {
-          const tt = Wt(Dt, 5);
-          et.children.push(tt), Vt = tt
+        if ("#elif" === Xu) {
+          const uu = au(Zu, 5);
+          Eu.children.push(uu), ju = uu
         }
       }
     }
 
-    function ct(tt, et, Vt) {
-      for (; tt.canRead;) {
-        tt.lineIndex++;
-        const qt = tt.currentLine;
-        if (qt.indexOf("#") >= 0) {
-          const Ot = Ct.exec(qt);
-          if (Ot && Ot.length) {
-            switch (Ot[0]) {
+    function ou(uu, Eu, ju) {
+      for (; uu.canRead;) {
+        uu.lineIndex++;
+        const Uu = uu.currentLine;
+        if (Uu.indexOf("#") >= 0) {
+          const su = Gu.exec(Uu);
+          if (su && su.length) {
+            switch (su[0]) {
               case "#ifdef": {
-                const Ot = new Dt;
-                et.children.push(Ot);
-                const mt = Wt(qt, 6);
-                Ot.children.push(mt), St(tt, Ot, mt, Vt);
+                const su = new Zu;
+                Eu.children.push(su);
+                const Xu = au(Uu, 6);
+                su.children.push(Xu), Pu(uu, su, Xu, ju);
                 break
               }
               case "#else":
@@ -559,155 +559,155 @@ export const modules = {
               case "#endif":
                 return !1;
               case "#ifndef": {
-                const Ot = new Dt;
-                et.children.push(Ot);
-                const mt = Wt(qt, 7);
-                Ot.children.push(mt), St(tt, Ot, mt, Vt);
+                const su = new Zu;
+                Eu.children.push(su);
+                const Xu = au(Uu, 7);
+                su.children.push(Xu), Pu(uu, su, Xu, ju);
                 break
               }
               case "#if": {
-                const Ot = new Dt,
-                  mt = Wt(qt, 3);
-                et.children.push(Ot), Ot.children.push(mt), St(tt, Ot, mt, Vt);
+                const su = new Zu,
+                  Xu = au(Uu, 3);
+                Eu.children.push(su), su.children.push(Xu), Pu(uu, su, Xu, ju);
                 break
               }
             }
             continue
           }
         }
-        const mt = new Ot;
-        if (mt.line = qt, et.children.push(mt), "#" === qt[0] && "d" === qt[1]) {
-          const tt = qt.replace(";", "").split(" ");
-          mt.additionalDefineKey = tt[1], 3 === tt.length && (mt.additionalDefineValue = tt[2])
+        const Xu = new su;
+        if (Xu.line = Uu, Eu.children.push(Xu), "#" === Uu[0] && "d" === Uu[1]) {
+          const uu = Uu.replace(";", "").split(" ");
+          Xu.additionalDefineKey = uu[1], 3 === uu.length && (Xu.additionalDefineValue = uu[2])
         }
       }
       return !1
     }
 
-    function Rt(tt, et, Vt, Dt) {
-      const mt = new Ot,
-        dt = new qt;
-      return dt.lineIndex = -1, dt.lines = tt.split("\n"), ct(dt, mt, Dt), mt.process(et, Vt, Dt)
+    function ku(uu, Eu, ju, Zu) {
+      const Xu = new su,
+        lu = new Uu;
+      return lu.lineIndex = -1, lu.lines = uu.split("\n"), ou(lu, Xu, Zu), Xu.process(Eu, ju, Zu)
     }
 
-    function It(tt, et) {
-      const Vt = tt.defines,
-        Ot = {};
-      for (const qt of Vt) {
-        const tt = qt.replace("#define", "").replace(";", "").trim().split(" ");
-        Ot[tt[0]] = tt.length > 1 ? tt[1] : ""
+    function mu(uu, Eu) {
+      const ju = uu.defines,
+        su = {};
+      for (const Uu of ju) {
+        const uu = Uu.replace("#define", "").replace(";", "").trim().split(" ");
+        su[uu[0]] = uu.length > 1 ? uu[1] : ""
       }
-      return 0 === tt.processor?.shaderLanguage && (Ot.GL_ES = "true"), Ot.__VERSION__ = tt.version, Ot[tt.platformName] = "true", (0, Et.i)(Ot, et?.isNDCHalfZRange, et?.LOt, et?.useExactSrgbConversions), Ot
+      return 0 === uu.processor?.shaderLanguage && (su.GL_ES = "true"), su.__VERSION__ = uu.version, su[uu.platformName] = "true", (0, Nu.k)(su, Eu?.isNDCHalfZRange, Eu?.bsu, Eu?.useExactSrgbConversions), su
     }
 
-    function Pt(tt, et, Vt) {
-      let Ot;
-      for (Jt.length = 0; null !== (Ot = yt.exec(tt));) Jt.push(Ot);
-      let qt = [tt],
-        Dt = !1;
-      for (const dt of Jt) {
-        let tt = dt[1];
-        if (-1 !== tt.indexOf("__decl__") && (tt = tt.replace(Nt, ""), et.supportsUniformBuffers && (tt = tt.replace("Vertex", "Ubo").replace("Fragment", "Ubo")), tt += "Declaration"), !et.includesShadersStore[tt]) {
-          const Ot = et.shadersRepository + "ShadersInclude/" + tt + ".fx";
-          return void Zt.loadFile(Ot, (Ot => {
-            et.includesShadersStore[tt] = Ot, Pt(qt.join(""), et, Vt)
+    function vu(uu, Eu, ju) {
+      let su;
+      for (eu.length = 0; null !== (su = hu.exec(uu));) eu.push(su);
+      let Uu = [uu],
+        Zu = !1;
+      for (const lu of eu) {
+        let uu = lu[1];
+        if (-1 !== uu.indexOf("__decl__") && (uu = uu.replace(Du, ""), Eu.supportsUniformBuffers && (uu = uu.replace("Vertex", "Ubo").replace("Fragment", "Ubo")), uu += "Declaration"), !Eu.includesShadersStore[uu]) {
+          const su = Eu.shadersRepository + "ShadersInclude/" + uu + ".fx";
+          return void Ku.loadFile(su, (su => {
+            Eu.includesShadersStore[uu] = su, vu(Uu.join(""), Eu, ju)
           }))
         } {
-          let Vt = et.includesShadersStore[tt];
-          if (dt[2]) {
-            const tt = dt[3].split(",");
-            for (let et = 0; et < tt.length; et += 2) {
-              const Ot = new RegExp(tt[et], "g"),
-                qt = tt[et + 1];
-              Vt = Vt.replace(Ot, qt)
+          let ju = Eu.includesShadersStore[uu];
+          if (lu[2]) {
+            const uu = lu[3].split(",");
+            for (let Eu = 0; Eu < uu.length; Eu += 2) {
+              const su = new RegExp(uu[Eu], "g"),
+                Uu = uu[Eu + 1];
+              ju = ju.replace(su, Uu)
             }
           }
-          if (dt[4]) {
-            const tt = dt[5];
-            if (-1 !== tt.indexOf("..")) {
-              const Ot = tt.split(".."),
-                qt = parseInt(Ot[0]);
-              let Dt = parseInt(Ot[1]),
-                mt = Vt.slice(0);
-              Vt = "", isNaN(Dt) && (Dt = et.indexParameters[Ot[1]]);
-              for (let tt = qt; tt < Dt; tt++) et.supportsUniformBuffers || (mt = mt.replace(Mt, ((tt, et) => et + "{X}"))), Vt += mt.replace(bt, tt.toString()) + "\n"
-            } else et.supportsUniformBuffers || (Vt = Vt.replace(Mt, ((tt, et) => et + "{X}"))), Vt = Vt.replace(bt, tt)
+          if (lu[4]) {
+            const uu = lu[5];
+            if (-1 !== uu.indexOf("..")) {
+              const su = uu.split(".."),
+                Uu = parseInt(su[0]);
+              let Zu = parseInt(su[1]),
+                Xu = ju.slice(0);
+              ju = "", isNaN(Zu) && (Zu = Eu.indexParameters[su[1]]);
+              for (let uu = Uu; uu < Zu; uu++) Eu.supportsUniformBuffers || (Xu = Xu.replace(gu, ((uu, Eu) => Eu + "{X}"))), ju += Xu.replace(Mu, uu.toString()) + "\n"
+            } else Eu.supportsUniformBuffers || (ju = ju.replace(gu, ((uu, Eu) => Eu + "{X}"))), ju = ju.replace(Mu, uu)
           }
-          const Ot = [];
-          for (const tt of qt) {
-            const et = tt.split(dt[0]);
-            for (let tt = 0; tt < et.length - 1; tt++) Ot.push(et[tt]), Ot.push(Vt);
-            Ot.push(et[et.length - 1])
+          const su = [];
+          for (const uu of Uu) {
+            const Eu = uu.split(lu[0]);
+            for (let uu = 0; uu < Eu.length - 1; uu++) su.push(Eu[uu]), su.push(ju);
+            su.push(Eu[Eu.length - 1])
           }
-          qt = Ot, Dt = Dt || Vt.indexOf("#include<") >= 0 || Vt.indexOf("#include <") >= 0
+          Uu = su, Zu = Zu || ju.indexOf("#include<") >= 0 || ju.indexOf("#include <") >= 0
         }
       }
-      Jt.length = 0;
-      const mt = qt.join("");
-      Dt ? Pt(mt.toString(), et, Vt) : Vt(mt)
+      eu.length = 0;
+      const Xu = Uu.join("");
+      Zu ? vu(Xu.toString(), Eu, ju) : ju(Xu)
     }
-    const Zt = {
-      loadFile: (tt, et, Vt, Ot, qt, Dt) => {
-        throw (0, lt.e)("FileTools")
+    const Ku = {
+      loadFile: (uu, Eu, ju, su, Uu, Zu) => {
+        throw (0, cu.h)("FileTools")
       }
     }
   },
-  40076: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => qt,
-      f: () => Dt,
-      i: () => dt,
-      j: () => mt,
-      k: () => jt
+  40149: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => Uu,
+      g: () => Zu,
+      k: () => lu,
+      l: () => Xu,
+      o: () => qu
     });
-    var Ot = Vt(40080);
-    const qt = {};
+    var su = ju(40153);
+    const Uu = {};
 
-    function Dt(tt, et) {
-      return (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "") + (et ? et + "\n" : "") + tt
+    function Zu(uu, Eu) {
+      return (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "") + (Eu ? Eu + "\n" : "") + uu
     }
 
-    function mt(tt, et, Vt, Dt, mt, dt, jt) {
-      const Ht = jt || qt.loadFile;
-      if (!Ht) throw (0, Ot.e)("FileTools");
-      return Ht(tt, et, Vt, Dt, mt, dt)
+    function Xu(uu, Eu, ju, Zu, Xu, lu, qu) {
+      const fu = qu || Uu.loadFile;
+      if (!fu) throw (0, su.h)("FileTools");
+      return fu(uu, Eu, ju, Zu, Xu, lu)
     }
 
-    function dt(tt, et, Vt, Ot) {
-      if (tt) return et ? tt.IS_NDC_HALF_ZRANGE = "" : delete tt.IS_NDC_HALF_ZRANGE, Vt ? tt.USE_REVERSE_DEPTHBUFFER = "" : delete tt.USE_REVERSE_DEPTHBUFFER, void(Ot ? tt.USE_EXACT_SRGB_CONVERSIONS = "" : delete tt.USE_EXACT_SRGB_CONVERSIONS);
+    function lu(uu, Eu, ju, su) {
+      if (uu) return Eu ? uu.IS_NDC_HALF_ZRANGE = "" : delete uu.IS_NDC_HALF_ZRANGE, ju ? uu.USE_REVERSE_DEPTHBUFFER = "" : delete uu.USE_REVERSE_DEPTHBUFFER, void(su ? uu.USE_EXACT_SRGB_CONVERSIONS = "" : delete uu.USE_EXACT_SRGB_CONVERSIONS);
       {
-        let tt = "";
-        return et && (tt += "#define IS_NDC_HALF_ZRANGE"), Vt && (tt && (tt += "\n"), tt += "#define USE_REVERSE_DEPTHBUFFER"), Ot && (tt && (tt += "\n"), tt += "#define USE_EXACT_SRGB_CONVERSIONS"), tt
+        let uu = "";
+        return Eu && (uu += "#define IS_NDC_HALF_ZRANGE"), ju && (uu && (uu += "\n"), uu += "#define USE_REVERSE_DEPTHBUFFER"), su && (uu && (uu += "\n"), uu += "#define USE_EXACT_SRGB_CONVERSIONS"), uu
       }
     }
 
-    function jt(tt, et) {
-      let Vt = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        Ot = arguments.length > 3 ? arguments[3] : void 0;
-      switch (tt) {
+    function qu(uu, Eu) {
+      let ju = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        su = arguments.length > 3 ? arguments[3] : void 0;
+      switch (uu) {
         case 3: {
-          const tt = new Int8Array(et);
-          return Ot && tt.set(new Int8Array(Ot)), tt
+          const uu = new Int8Array(Eu);
+          return su && uu.set(new Int8Array(su)), uu
         }
         case 0: {
-          const tt = new Uint8Array(et);
-          return Ot && tt.set(new Uint8Array(Ot)), tt
+          const uu = new Uint8Array(Eu);
+          return su && uu.set(new Uint8Array(su)), uu
         }
         case 4: {
-          const tt = "number" !== typeof et ? new Int16Array(et) : new Int16Array(Vt ? et / 2 : et);
-          return Ot && tt.set(new Int16Array(Ot)), tt
+          const uu = "number" !== typeof Eu ? new Int16Array(Eu) : new Int16Array(ju ? Eu / 2 : Eu);
+          return su && uu.set(new Int16Array(su)), uu
         }
         case 5:
         case 8:
         case 9:
         case 10:
         case 2: {
-          const tt = "number" !== typeof et ? new Uint16Array(et) : new Uint16Array(Vt ? et / 2 : et);
-          return Ot && tt.set(new Uint16Array(Ot)), tt
+          const uu = "number" !== typeof Eu ? new Uint16Array(Eu) : new Uint16Array(ju ? Eu / 2 : Eu);
+          return su && uu.set(new Uint16Array(su)), uu
         }
         case 6: {
-          const tt = "number" !== typeof et ? new Int32Array(et) : new Int32Array(Vt ? et / 4 : et);
-          return Ot && tt.set(new Int32Array(Ot)), tt
+          const uu = "number" !== typeof Eu ? new Int32Array(Eu) : new Int32Array(ju ? Eu / 4 : Eu);
+          return su && uu.set(new Int32Array(su)), uu
         }
         case 7:
         case 11:
@@ -715,55 +715,55 @@ export const modules = {
         case 13:
         case 14:
         case 15: {
-          const tt = "number" !== typeof et ? new Uint32Array(et) : new Uint32Array(Vt ? et / 4 : et);
-          return Ot && tt.set(new Uint32Array(Ot)), tt
+          const uu = "number" !== typeof Eu ? new Uint32Array(Eu) : new Uint32Array(ju ? Eu / 4 : Eu);
+          return su && uu.set(new Uint32Array(su)), uu
         }
         case 1: {
-          const tt = "number" !== typeof et ? new Float32Array(et) : new Float32Array(Vt ? et / 4 : et);
-          return Ot && tt.set(new Float32Array(Ot)), tt
+          const uu = "number" !== typeof Eu ? new Float32Array(Eu) : new Float32Array(ju ? Eu / 4 : Eu);
+          return su && uu.set(new Float32Array(su)), uu
         }
       }
-      const qt = new Uint8Array(et);
-      return Ot && qt.set(new Uint8Array(Ot)), qt
+      const Uu = new Uint8Array(Eu);
+      return su && Uu.set(new Uint8Array(su)), Uu
     }
   },
-  40080: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => Ht,
-      c: () => Xt,
-      d: () => jt,
-      e: () => qt
+  40153: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => fu,
+      d: () => Cu,
+      g: () => qu,
+      h: () => Uu
     });
-    const Ot = {};
+    const su = {};
 
-    function qt(tt) {
-      if (!(arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) || !Ot[tt]) return Ot[tt] = !0, `${tt} needs to be imported before as it contains a side-effect required by your code.`
+    function Uu(uu) {
+      if (!(arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) || !su[uu]) return su[uu] = !0, `${uu} needs to be imported before as it contains a side-effect required by your code.`
     }
-    const Dt = {};
-    let mt = !1,
-      dt = 0;
+    const Zu = {};
+    let Xu = !1,
+      lu = 0;
 
-    function jt(tt, et) {
-      let Vt = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      const Ot = function() {
-        if ((Vt || mt) && 0 === dt) {
-          const Vt = `${tt}.${et}`;
-          Dt[Vt] || (Dt[Vt] = !0, console.warn(`[Babylon.js] ${Vt}() requires a side-effect import. See: https://doc.babylonjs.com/setup/treeshaking`))
+    function qu(uu, Eu) {
+      let ju = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const su = function() {
+        if ((ju || Xu) && 0 === lu) {
+          const ju = `${uu}.${Eu}`;
+          Zu[ju] || (Zu[ju] = !0, console.warn(`[Babylon.js] ${ju}() requires a side-effect import. See: https://doc.babylonjs.com/setup/treeshaking`))
         }
       };
-      return Ot.__isSideEffectStub = !0, Ot
+      return su.__isSideEffectStub = !0, su
     }
 
-    function Ht(tt) {
-      return !!tt && !tt.__isSideEffectStub
+    function fu(uu) {
+      return !!uu && !uu.__isSideEffectStub
     }
 
-    function Xt(tt, et) {
+    function Cu(uu, Eu) {
       return {
         get() {},
-        set(tt) {
-          Object.defineProperty(this, et, {
-            value: tt,
+        set(uu) {
+          Object.defineProperty(this, Eu, {
+            value: uu,
             writable: !0,
             configurable: !0,
             enumerable: !0
@@ -774,41 +774,41 @@ export const modules = {
       }
     }
   },
-  40068: (tt, et, Vt) => {
-    function Ot() {
+  40138: (uu, Eu, ju) => {
+    function su() {
       return "undefined" !== typeof window
     }
 
-    function qt() {
+    function Uu() {
       return "undefined" !== typeof navigator
     }
 
-    function Dt() {
+    function Zu() {
       return "undefined" !== typeof document
     }
 
-    function mt(tt) {
-      let et = "",
-        Vt = tt.firstChild;
-      for (; Vt;) 3 === Vt.nodeType && (et += Vt.textContent), Vt = Vt.nextSibling;
-      return et
+    function Xu(uu) {
+      let Eu = "",
+        ju = uu.firstChild;
+      for (; ju;) 3 === ju.nodeType && (Eu += ju.textContent), ju = ju.nextSibling;
+      return Eu
     }
-    Vt.d(et, {
-      c: () => mt,
-      d: () => Dt,
-      h: () => qt,
-      j: () => Ot
+    ju.d(Eu, {
+      d: () => Xu,
+      e: () => Zu,
+      i: () => Uu,
+      m: () => su
     })
   },
-  40257: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => Ot,
-      e: () => qt,
-      f: () => Dt
+  40308: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => su,
+      f: () => Uu,
+      i: () => Zu
     });
-    class Ot extends Error {}
-    Ot._setPrototypeOf = Object.setPrototypeOf || ((tt, et) => (tt.__proto__ = et, tt));
-    const qt = {
+    class su extends Error {}
+    su._setPrototypeOf = Object.setPrototypeOf || ((uu, Eu) => (uu.__proto__ = Eu, uu));
+    const Uu = {
       MeshInvalidPositionsError: 0,
       UnsupportedTextureError: 1e3,
       GLTFLoaderUnexpectedMagicError: 2e3,
@@ -817,339 +817,339 @@ export const modules = {
       RequestFileError: 4001,
       ReadFileError: 4002
     };
-    class Dt extends Ot {
-      constructor(tt, et, Vt) {
-        super(tt), this.errorCode = et, this.innerError = Vt, this.name = "RuntimeError", Ot._setPrototypeOf(this, Dt.prototype)
+    class Zu extends su {
+      constructor(uu, Eu, ju) {
+        super(uu), this.errorCode = Eu, this.innerError = ju, this.name = "RuntimeError", su._setPrototypeOf(this, Zu.prototype)
       }
     }
   },
-  40249: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => It,
-      f: () => bt,
-      j: () => Wt,
-      k: () => ct,
-      o: () => ht,
-      p: () => ut,
-      r: () => Kt,
-      u: () => kt,
-      y: () => vt,
-      z: () => Jt
+  40294: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => mu,
+      g: () => Mu,
+      h: () => au,
+      l: () => ou,
+      m: () => Ju,
+      q: () => pu,
+      r: () => wu,
+      v: () => Qu,
+      x: () => du,
+      z: () => eu
     });
-    var Ot = Vt(40255),
-      qt = Vt(40068),
-      Dt = Vt(37367);
-    class mt {}
-    mt.FilesToLoad = {};
-    var dt = Vt(40257),
-      jt = Vt(40261),
-      Ht = Vt(37359),
-      Xt = Vt(40076),
-      Qt = Vt(40082),
-      lt = Vt(38899),
-      Et = Vt(40085),
-      ft = Vt(40270);
-    const wt = new RegExp(/^data:([^,]+\/[^,]+)?;base64,/i);
-    class yt extends dt.f {
-      constructor(tt, et) {
-        super(tt, dt.e.LoadFileError), this.name = "LoadFileError", dt.b._setPrototypeOf(this, yt.prototype), et instanceof Ot.e ? this.request = et : this.file = et
+    var su = ju(40302),
+      Uu = ju(40138),
+      Zu = ju(37514);
+    class Xu {}
+    Xu.FilesToLoad = {};
+    var lu = ju(40308),
+      qu = ju(40312),
+      fu = ju(37506),
+      Cu = ju(40149),
+      bu = ju(40160),
+      cu = ju(39032),
+      Nu = ju(40164),
+      Ou = ju(40319);
+    const Yu = new RegExp(/^data:([^,]+\/[^,]+)?;base64,/i);
+    class hu extends lu.i {
+      constructor(uu, Eu) {
+        super(uu, lu.f.LoadFileError), this.name = "LoadFileError", lu.d._setPrototypeOf(this, hu.prototype), Eu instanceof su.b ? this.request = Eu : this.file = Eu
       }
     }
-    class Nt extends dt.f {
-      constructor(tt, et) {
-        super(tt, dt.e.RequestFileError), this.request = et, this.name = "RequestFileError", dt.b._setPrototypeOf(this, Nt.prototype)
+    class Du extends lu.i {
+      constructor(uu, Eu) {
+        super(uu, lu.f.RequestFileError), this.request = Eu, this.name = "RequestFileError", lu.d._setPrototypeOf(this, Du.prototype)
       }
     }
-    class Mt extends dt.f {
-      constructor(tt, et) {
-        super(tt, dt.e.ReadFileError), this.file = et, this.name = "ReadFileError", dt.b._setPrototypeOf(this, Mt.prototype)
+    class gu extends lu.i {
+      constructor(uu, Eu) {
+        super(uu, lu.f.ReadFileError), this.file = Eu, this.name = "ReadFileError", lu.d._setPrototypeOf(this, gu.prototype)
       }
     }
-    const bt = {
+    const Mu = {
         DefaultRetryStrategy: class {
           static ExponentialBackoff() {
-            let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 3,
-              et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500;
-            return (Vt, Ot, qt) => 0 !== Ot.status || qt >= tt || -1 !== Vt.indexOf("file:") ? -1 : Math.pow(2, qt) * et
+            let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 3,
+              Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500;
+            return (ju, su, Uu) => 0 !== su.status || Uu >= uu || -1 !== ju.indexOf("file:") ? -1 : Math.pow(2, Uu) * Eu
           }
         }.ExponentialBackoff(),
         BaseUrl: "",
         CorsBehavior: "anonymous",
-        PreprocessUrl: tt => tt,
+        PreprocessUrl: uu => uu,
         ScriptBaseUrl: "",
-        ScriptPreprocessUrl: tt => tt,
-        CleanUrl: tt => tt = tt.replace(/#/gm, "%23")
+        ScriptPreprocessUrl: uu => uu,
+        CleanUrl: uu => uu = uu.replace(/#/gm, "%23")
       },
-      Jt = (tt, et) => {
-        if ((!tt || 0 !== tt.indexOf("data:")) && bt.CorsBehavior)
-          if ("string" === typeof bt.CorsBehavior || bt.CorsBehavior instanceof String) et.crossOrigin = bt.CorsBehavior;
+      eu = (uu, Eu) => {
+        if ((!uu || 0 !== uu.indexOf("data:")) && Mu.CorsBehavior)
+          if ("string" === typeof Mu.CorsBehavior || Mu.CorsBehavior instanceof String) Eu.crossOrigin = Mu.CorsBehavior;
           else {
-            const Vt = bt.CorsBehavior(tt);
-            Vt && (et.crossOrigin = Vt)
+            const ju = Mu.CorsBehavior(uu);
+            ju && (Eu.crossOrigin = ju)
           }
       },
-      Ct = {
+      Gu = {
         getRequiredSize: null
       },
-      ut = function(tt, et, Vt, qt) {
-        let Dt, dt = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
-          Xt = arguments.length > 5 ? arguments[5] : void 0,
-          Qt = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : Ht.d.LastCreatedEngine;
-        if ("undefined" === typeof HTMLImageElement && !Qt?._features.forceBitmapOverHTMLImageElement) return Vt("LoadImage is only supported in web or BabylonNative environments."), null;
-        if (Qt?._features.forceBitmapOverHTMLImageElement && "string" !== typeof tt && "undefined" !== typeof Blob) {
-          let Ot;
-          if (tt instanceof Blob) Ot = tt;
+      pu = function(uu, Eu, ju, Uu) {
+        let Zu, lu = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
+          Cu = arguments.length > 5 ? arguments[5] : void 0,
+          bu = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : fu.b.LastCreatedEngine;
+        if ("undefined" === typeof HTMLImageElement && !bu?._features.forceBitmapOverHTMLImageElement) return ju("LoadImage is only supported in web or BabylonNative environments."), null;
+        if (bu?._features.forceBitmapOverHTMLImageElement && "string" !== typeof uu && "undefined" !== typeof Blob) {
+          let su;
+          if (uu instanceof Blob) su = uu;
           else {
-            const et = tt instanceof ArrayBuffer ? tt : (0, ft.o)(tt);
-            Ot = new Blob([et], {
-              type: dt
+            const Eu = uu instanceof ArrayBuffer ? uu : (0, Ou.l)(uu);
+            su = new Blob([Eu], {
+              type: lu
             })
           }
-          return Qt.createImageBitmap(Ot, {
+          return bu.createImageBitmap(su, {
             premultiplyAlpha: "none",
             colorSpaceConversion: "none",
-            ...Xt
-          }).then(et).catch((et => {
-            Vt && Vt("Error while trying to load image: " + tt, et)
+            ...Cu
+          }).then(Eu).catch((Eu => {
+            ju && ju("Error while trying to load image: " + uu, Eu)
           })), null
         }
-        let lt = !1;
-        if (tt instanceof ArrayBuffer || ArrayBuffer.isView(tt))
+        let cu = !1;
+        if (uu instanceof ArrayBuffer || ArrayBuffer.isView(uu))
           if ("undefined" !== typeof Blob && "undefined" !== typeof URL) {
-            let et;
-            et = tt instanceof ArrayBuffer ? tt : (0, ft.o)(tt), Dt = URL.createObjectURL(new Blob([et], {
-              type: dt
-            })), lt = !0
-          } else Dt = `data:${dt};base64,` + (0, jt.j)(tt);
-        else tt instanceof Blob ? (Dt = URL.createObjectURL(tt), lt = !0) : (Dt = bt.CleanUrl(tt), Dt = bt.PreprocessUrl(Dt));
-        const Et = et => {
-          if (Vt) {
-            const Ot = Dt || tt.toString();
-            Vt(`Error while trying to load image: ${0===Ot.indexOf("http")||Ot.length<=128?Ot:Ot.slice(0,128)+"..."}`, et)
+            let Eu;
+            Eu = uu instanceof ArrayBuffer ? uu : (0, Ou.l)(uu), Zu = URL.createObjectURL(new Blob([Eu], {
+              type: lu
+            })), cu = !0
+          } else Zu = `data:${lu};base64,` + (0, qu.e)(uu);
+        else uu instanceof Blob ? (Zu = URL.createObjectURL(uu), cu = !0) : (Zu = Mu.CleanUrl(uu), Zu = Mu.PreprocessUrl(Zu));
+        const Nu = Eu => {
+          if (ju) {
+            const su = Zu || uu.toString();
+            ju(`Error while trying to load image: ${0===su.indexOf("http")||su.length<=128?su:su.slice(0,128)+"..."}`, Eu)
           }
         };
-        if (Qt?._features.forceBitmapOverHTMLImageElement) return ht(Dt, (Ot => {
-          Qt.createImageBitmap(new Blob([Ot], {
-            type: dt
+        if (bu?._features.forceBitmapOverHTMLImageElement) return Ju(Zu, (su => {
+          bu.createImageBitmap(new Blob([su], {
+            type: lu
           }), {
             premultiplyAlpha: "none",
             colorSpaceConversion: "none",
-            ...Xt
-          }).then((tt => {
-            et(tt), lt && URL.revokeObjectURL(Dt)
-          })).catch((et => {
-            Vt && Vt("Error while trying to load image: " + tt, et)
+            ...Cu
+          }).then((uu => {
+            Eu(uu), cu && URL.revokeObjectURL(Zu)
+          })).catch((Eu => {
+            ju && ju("Error while trying to load image: " + uu, Eu)
           }))
-        }), void 0, qt || void 0, !0, ((tt, et) => {
-          Et(et)
+        }), void 0, Uu || void 0, !0, ((uu, Eu) => {
+          Nu(Eu)
         })), null;
-        const wt = new Image;
-        if (Ct.getRequiredSize) {
-          const et = Ct.getRequiredSize(tt);
-          et.width && (wt.width = et.width), et.height && (wt.height = et.height)
+        const Yu = new Image;
+        if (Gu.getRequiredSize) {
+          const Eu = Gu.getRequiredSize(uu);
+          Eu.width && (Yu.width = Eu.width), Eu.height && (Yu.height = Eu.height)
         }
-        Jt(Dt, wt);
-        const yt = [],
-          Nt = () => {
-            for (const tt of yt) tt.target.removeEventListener(tt.name, tt.handler);
-            yt.length = 0
+        eu(Zu, Yu);
+        const hu = [],
+          Du = () => {
+            for (const uu of hu) uu.target.removeEventListener(uu.name, uu.handler);
+            hu.length = 0
           };
-        yt.push({
-          target: wt,
+        hu.push({
+          target: Yu,
           name: "load",
           handler: () => {
-            Nt(), et(wt), lt && wt.src && URL.revokeObjectURL(wt.src)
+            Du(), Eu(Yu), cu && Yu.src && URL.revokeObjectURL(Yu.src)
           }
-        }), yt.push({
-          target: wt,
+        }), hu.push({
+          target: Yu,
           name: "error",
-          handler: tt => {
-            Nt(), Et(tt), lt && wt.src && URL.revokeObjectURL(wt.src)
+          handler: uu => {
+            Du(), Nu(uu), cu && Yu.src && URL.revokeObjectURL(Yu.src)
           }
-        }), yt.push({
+        }), hu.push({
           target: document,
           name: "securitypolicyviolation",
-          handler: tt => {
-            if (tt.blockedURI !== wt.src || "iE" === tt.disposition) return;
-            Nt();
-            const et = new Error(`CSP violation of policy ${tt.effectiveDirective} ${tt.blockedURI}. Current policy is ${tt.originalPolicy}`);
-            Ht.d.UseFallbackTexture = !1, Et(et), lt && wt.src && URL.revokeObjectURL(wt.src), wt.src = ""
+          handler: uu => {
+            if (uu.blockedURI !== Yu.src || "HN" === uu.disposition) return;
+            Du();
+            const Eu = new Error(`CSP violation of policy ${uu.effectiveDirective} ${uu.blockedURI}. Current policy is ${uu.originalPolicy}`);
+            fu.b.UseFallbackTexture = !1, Nu(Eu), cu && Yu.src && URL.revokeObjectURL(Yu.src), Yu.src = ""
           }
         }), (() => {
-          for (const tt of yt) tt.target.addEventListener(tt.name, tt.handler)
+          for (const uu of hu) uu.target.addEventListener(uu.name, uu.handler)
         })();
-        const Mt = "blob:" === Dt.substring(0, 5),
-          ut = "data:" === Dt.substring(0, 5),
-          Kt = () => {
-            Mt || ut || !Ot.e.IsCustomRequestAvailable ? wt.src = Dt : ht(Dt, ((tt, et, Vt) => {
-              const Ot = new Blob([tt], {
-                  type: !dt && Vt ? Vt : dt
+        const gu = "blob:" === Zu.substring(0, 5),
+          pu = "data:" === Zu.substring(0, 5),
+          wu = () => {
+            gu || pu || !su.b.IsCustomRequestAvailable ? Yu.src = Zu : Ju(Zu, ((uu, Eu, ju) => {
+              const su = new Blob([uu], {
+                  type: !lu && ju ? ju : lu
                 }),
-                qt = URL.createObjectURL(Ot);
-              lt = !0, wt.src = qt
-            }), void 0, qt || void 0, !0, ((tt, et) => {
-              Et(et)
+                Uu = URL.createObjectURL(su);
+              cu = !0, Yu.src = Uu
+            }), void 0, Uu || void 0, !0, ((uu, Eu) => {
+              Nu(Eu)
             }))
           },
-          vt = () => {
-            qt && qt.loadImage(Dt, wt)
+          du = () => {
+            Uu && Uu.loadImage(Zu, Yu)
           };
-        if (!Mt && !ut && qt && qt.enableTexturesOffline) qt.open(vt, Kt);
+        if (!gu && !pu && Uu && Uu.enableTexturesOffline) Uu.open(du, wu);
         else {
-          if (-1 !== Dt.indexOf("file:")) {
-            const tt = decodeURIComponent(Dt.substring(5).toLowerCase());
-            if (mt.FilesToLoad[tt] && "undefined" !== typeof URL) {
+          if (-1 !== Zu.indexOf("file:")) {
+            const uu = decodeURIComponent(Zu.substring(5).toLowerCase());
+            if (Xu.FilesToLoad[uu] && "undefined" !== typeof URL) {
               try {
-                let et;
+                let Eu;
                 try {
-                  et = URL.createObjectURL(mt.FilesToLoad[tt])
-                } catch (Wt) {
-                  et = URL.createObjectURL(mt.FilesToLoad[tt])
+                  Eu = URL.createObjectURL(Xu.FilesToLoad[uu])
+                } catch (au) {
+                  Eu = URL.createObjectURL(Xu.FilesToLoad[uu])
                 }
-                wt.src = et, lt = !0
-              } catch (St) {
-                wt.src = ""
+                Yu.src = Eu, cu = !0
+              } catch (Pu) {
+                Yu.src = ""
               }
-              return wt
+              return Yu
             }
           }
-          Kt()
+          wu()
         }
-        return wt
+        return Yu
       },
-      Kt = (tt, et, Vt, Ot, qt) => {
-        const mt = new FileReader,
-          dt = {
-            onCompleteObservable: new Dt.c,
-            abort: () => mt.abort()
+      wu = (uu, Eu, ju, su, Uu) => {
+        const Xu = new FileReader,
+          lu = {
+            onCompleteObservable: new Zu.d,
+            abort: () => Xu.abort()
           };
-        return mt.onloadend = () => dt.onCompleteObservable.notifyObservers(dt), qt && (mt.onerror = () => {
-          qt(new Mt(`Unable to read ${tt.name}`, tt))
-        }), mt.onload = tt => {
-          et(tt.target.result)
-        }, Vt && (mt.onprogress = Vt), Ot ? mt.readAsArrayBuffer(tt) : mt.readAsText(tt), dt
+        return Xu.onloadend = () => lu.onCompleteObservable.notifyObservers(lu), Uu && (Xu.onerror = () => {
+          Uu(new gu(`Unable to read ${uu.name}`, uu))
+        }), Xu.onload = uu => {
+          Eu(uu.target.result)
+        }, ju && (Xu.onprogress = ju), su ? Xu.readAsArrayBuffer(uu) : Xu.readAsText(uu), lu
       },
-      ht = (tt, et, Vt, Ot, qt, jt, Ht) => {
-        if (tt.name) return Kt(tt, et, Vt, qt, jt ? tt => {
-          jt(void 0, tt)
+      Ju = (uu, Eu, ju, su, Uu, qu, fu) => {
+        if (uu.name) return wu(uu, Eu, ju, Uu, qu ? uu => {
+          qu(void 0, uu)
         } : void 0);
-        const Xt = tt;
-        if (-1 !== Xt.indexOf("file:")) {
-          let tt = decodeURIComponent(Xt.substring(5).toLowerCase());
-          0 === tt.indexOf("./") && (tt = tt.substring(2));
-          const Ot = mt.FilesToLoad[tt];
-          if (Ot) return Kt(Ot, et, Vt, qt, jt ? tt => jt(void 0, new yt(tt.message, tt.file)) : void 0)
+        const Cu = uu;
+        if (-1 !== Cu.indexOf("file:")) {
+          let uu = decodeURIComponent(Cu.substring(5).toLowerCase());
+          0 === uu.indexOf("./") && (uu = uu.substring(2));
+          const su = Xu.FilesToLoad[uu];
+          if (su) return wu(su, Eu, ju, Uu, qu ? uu => qu(void 0, new hu(uu.message, uu.file)) : void 0)
         }
         const {
-          match: Qt,
-          type: ft
-        } = Rt(Xt);
-        if (Qt) {
-          const tt = {
-            onCompleteObservable: new Dt.c,
+          match: bu,
+          type: Ou
+        } = ku(Cu);
+        if (bu) {
+          const uu = {
+            onCompleteObservable: new Zu.d,
             abort: () => () => {}
           };
           try {
-            const tt = qt ? It(Xt) : Pt(Xt);
-            et(tt, void 0, ft)
-          } catch (dt) {
-            jt ? jt(void 0, dt) : lt.d.Error(dt.message || "Failed to parse the Data URL")
+            const uu = Uu ? mu(Cu) : vu(Cu);
+            Eu(uu, void 0, Ou)
+          } catch (lu) {
+            qu ? qu(void 0, lu) : cu.b.Error(lu.message || "Failed to parse the Data URL")
           }
-          return Et.c.SetImmediate((() => {
-            tt.onCompleteObservable.notifyObservers(tt)
-          })), tt
+          return Nu.c.SetImmediate((() => {
+            uu.onCompleteObservable.notifyObservers(uu)
+          })), uu
         }
-        return vt(Xt, ((tt, Vt) => {
-          et(tt, Vt?.responseURL, Vt?.getResponseHeader("content-type"))
-        }), Vt, Ot, qt, jt ? tt => {
-          jt(tt.request, new yt(tt.message, tt.request))
-        } : void 0, Ht)
+        return du(Cu, ((uu, ju) => {
+          Eu(uu, ju?.responseURL, ju?.getResponseHeader("content-type"))
+        }), ju, su, Uu, qu ? uu => {
+          qu(uu.request, new hu(uu.message, uu.request))
+        } : void 0, fu)
       },
-      vt = (tt, et, Vt, mt, dt, jt, Xt) => {
-        null !== mt && (mt ?? (mt = Ht.d.LastCreatedScene?.offlineProvider)), tt = bt.CleanUrl(tt), tt = bt.PreprocessUrl(tt);
-        const Qt = bt.BaseUrl + tt;
-        let Et = !1;
-        const ft = {
-            onCompleteObservable: new Dt.c,
-            abort: () => Et = !0
+      du = (uu, Eu, ju, Xu, lu, qu, Cu) => {
+        null !== Xu && (Xu ?? (Xu = fu.b.LastCreatedScene?.offlineProvider)), uu = Mu.CleanUrl(uu), uu = Mu.PreprocessUrl(uu);
+        const bu = Mu.BaseUrl + uu;
+        let Nu = !1;
+        const Ou = {
+            onCompleteObservable: new Zu.d,
+            abort: () => Nu = !0
           },
-          wt = () => {
-            let tt, Dt = new Ot.e,
-              mt = null;
-            const Ht = () => {
-              Dt && (Vt && Dt.removeEventListener("progress", Vt), tt && Dt.removeEventListener("readystatechange", tt), Dt.removeEventListener("loadend", wt))
+          Yu = () => {
+            let uu, Zu = new su.b,
+              Xu = null;
+            const fu = () => {
+              Zu && (ju && Zu.removeEventListener("progress", ju), uu && Zu.removeEventListener("readystatechange", uu), Zu.removeEventListener("loadend", Yu))
             };
-            let wt = () => {
-              Ht(), ft.onCompleteObservable.notifyObservers(ft), ft.onCompleteObservable.clear(), Vt = void 0, tt = null, wt = null, jt = void 0, Xt = void 0, et = void 0
+            let Yu = () => {
+              fu(), Ou.onCompleteObservable.notifyObservers(Ou), Ou.onCompleteObservable.clear(), ju = void 0, uu = null, Yu = null, qu = void 0, Cu = void 0, Eu = void 0
             };
-            ft.abort = () => {
-              Et = !0, wt && wt(), Dt && Dt.readyState !== (XMLHttpRequest.DONE || 4) && Dt.abort(), null !== mt && (clearTimeout(mt), mt = null), Dt = null
+            Ou.abort = () => {
+              Nu = !0, Yu && Yu(), Zu && Zu.readyState !== (XMLHttpRequest.DONE || 4) && Zu.abort(), null !== Xu && (clearTimeout(Xu), Xu = null), Zu = null
             };
-            const yt = tt => {
-                const et = tt.message || "Unknown error";
-                jt && Dt ? jt(new Nt(et, Dt)) : lt.d.Error(et)
+            const hu = uu => {
+                const Eu = uu.message || "Unknown error";
+                qu && Zu ? qu(new Du(Eu, Zu)) : cu.b.Error(Eu)
               },
-              Mt = lt => {
-                if (Dt) {
-                  if (Dt.open("GET", Qt), Xt) try {
-                    Xt(Dt)
-                  } catch (ft) {
-                    return void yt(ft)
+              gu = cu => {
+                if (Zu) {
+                  if (Zu.open("GET", bu), Cu) try {
+                    Cu(Zu)
+                  } catch (Ou) {
+                    return void hu(Ou)
                   }
-                  dt && (Dt.responseType = "arraybuffer"), Vt && Dt.addEventListener("progress", Vt), wt && Dt.addEventListener("loadend", wt), tt = () => {
-                    if (!Et && Dt && Dt.readyState === (XMLHttpRequest.DONE || 4)) {
-                      if (tt && Dt.removeEventListener("readystatechange", tt), Dt.status >= 200 && Dt.status < 300 || 0 === Dt.status && (!(0, qt.j)() || St())) {
-                        const tt = dt ? Dt.response : Dt.responseText;
-                        if (null !== tt) {
+                  lu && (Zu.responseType = "arraybuffer"), ju && Zu.addEventListener("progress", ju), Yu && Zu.addEventListener("loadend", Yu), uu = () => {
+                    if (!Nu && Zu && Zu.readyState === (XMLHttpRequest.DONE || 4)) {
+                      if (uu && Zu.removeEventListener("readystatechange", uu), Zu.status >= 200 && Zu.status < 300 || 0 === Zu.status && (!(0, Uu.m)() || Pu())) {
+                        const uu = lu ? Zu.response : Zu.responseText;
+                        if (null !== uu) {
                           try {
-                            et && et(tt, Dt)
-                          } catch (ft) {
-                            yt(ft)
+                            Eu && Eu(uu, Zu)
+                          } catch (Ou) {
+                            hu(Ou)
                           }
                           return
                         }
                       }
-                      const Vt = bt.DefaultRetryStrategy;
-                      if (Vt) {
-                        const tt = Vt(Qt, Dt, lt);
-                        if (-1 !== tt) return Ht(), Dt = new Ot.e, void(mt = setTimeout((() => Mt(lt + 1)), tt))
+                      const ju = Mu.DefaultRetryStrategy;
+                      if (ju) {
+                        const uu = ju(bu, Zu, cu);
+                        if (-1 !== uu) return fu(), Zu = new su.b, void(Xu = setTimeout((() => gu(cu + 1)), uu))
                       }
-                      const Xt = new Nt("Error status: " + Dt.status + " " + Dt.statusText + " - Unable to load " + Qt, Dt);
-                      jt && jt(Xt)
+                      const Cu = new Du("Error status: " + Zu.status + " " + Zu.statusText + " - Unable to load " + bu, Zu);
+                      qu && qu(Cu)
                     }
-                  }, Dt.addEventListener("readystatechange", tt), Dt.send()
+                  }, Zu.addEventListener("readystatechange", uu), Zu.send()
                 }
               };
-            Mt(0)
+            gu(0)
           };
-        if (mt && mt.enableSceneOffline && !tt.startsWith("blob:")) {
-          const Ot = tt => {
-              tt && tt.status > 400 ? jt && jt(tt) : wt()
+        if (Xu && Xu.enableSceneOffline && !uu.startsWith("blob:")) {
+          const su = uu => {
+              uu && uu.status > 400 ? qu && qu(uu) : Yu()
             },
-            qt = () => {
-              mt && mt.loadFile(bt.BaseUrl + tt, (tt => {
-                !Et && et && et(tt), ft.onCompleteObservable.notifyObservers(ft)
-              }), Vt ? tt => {
-                !Et && Vt && Vt(tt)
-              } : void 0, Ot, dt)
+            Uu = () => {
+              Xu && Xu.loadFile(Mu.BaseUrl + uu, (uu => {
+                !Nu && Eu && Eu(uu), Ou.onCompleteObservable.notifyObservers(Ou)
+              }), ju ? uu => {
+                !Nu && ju && ju(uu)
+              } : void 0, su, lu)
             };
-          mt.open(qt, Ot)
-        } else wt();
-        return ft
+          Xu.open(Uu, su)
+        } else Yu();
+        return Ou
       },
-      Wt = tt => {
+      au = uu => {
         const {
-          match: et,
-          type: Vt
-        } = Rt(tt);
-        if (et) return Vt || void 0;
-        const Ot = tt.lastIndexOf(".");
-        switch (tt.substring(Ot + 1).toLowerCase()) {
+          match: Eu,
+          type: ju
+        } = ku(uu);
+        if (Eu) return ju || void 0;
+        const su = uu.lastIndexOf(".");
+        switch (uu.substring(su + 1).toLowerCase()) {
           case "glb":
             return "model/gltf-binary";
           case "bin":
             return "application/octet-stream";
-          case "oR":
+          case "WK":
             return "model/gltf+json";
           case "jpg":
           case "jpeg":
@@ -1168,275 +1168,275 @@ export const modules = {
             return
         }
       },
-      St = () => "undefined" !== typeof location && "file:" === location.protocol,
-      ct = tt => wt.test(tt),
-      Rt = tt => {
-        const et = wt.exec(tt);
-        if (null === et || 0 === et.length) return {
+      Pu = () => "undefined" !== typeof location && "file:" === location.protocol,
+      ou = uu => Yu.test(uu),
+      ku = uu => {
+        const Eu = Yu.exec(uu);
+        if (null === Eu || 0 === Eu.length) return {
           match: !1,
           type: ""
         };
         return {
           match: !0,
-          type: et[0].replace("data:", "").replace(";base64,", "")
+          type: Eu[0].replace("data:", "").replace(";base64,", "")
         }
       };
 
-    function It(tt) {
-      return (0, jt.d)(tt.split(",")[1])
+    function mu(uu) {
+      return (0, qu.c)(uu.split(",")[1])
     }
-    const Pt = tt => (0, jt.f)(tt.split(",")[1]);
-    let Zt;
-    const Lt = (tt, et, Vt, Ot, qt, Dt, mt, dt, jt, Ht) => {
-      Zt = {
-        DecodeBase64UrlToBinary: tt,
-        DecodeBase64UrlToString: et,
-        DefaultRetryStrategy: Vt.DefaultRetryStrategy,
-        BaseUrl: Vt.BaseUrl,
-        CorsBehavior: Vt.CorsBehavior,
-        PreprocessUrl: Vt.PreprocessUrl,
-        IsBase64DataUrl: Ot,
-        IsFileURL: qt,
-        LoadFile: Dt,
-        LoadImage: mt,
-        ReadFile: dt,
-        RequestFile: jt,
-        SetCorsBehavior: Ht
-      }, Object.defineProperty(Zt, "DefaultRetryStrategy", {
+    const vu = uu => (0, qu.d)(uu.split(",")[1]);
+    let Ku;
+    const Vu = (uu, Eu, ju, su, Uu, Zu, Xu, lu, qu, fu) => {
+      Ku = {
+        DecodeBase64UrlToBinary: uu,
+        DecodeBase64UrlToString: Eu,
+        DefaultRetryStrategy: ju.DefaultRetryStrategy,
+        BaseUrl: ju.BaseUrl,
+        CorsBehavior: ju.CorsBehavior,
+        PreprocessUrl: ju.PreprocessUrl,
+        IsBase64DataUrl: su,
+        IsFileURL: Uu,
+        LoadFile: Zu,
+        LoadImage: Xu,
+        ReadFile: lu,
+        RequestFile: qu,
+        SetCorsBehavior: fu
+      }, Object.defineProperty(Ku, "DefaultRetryStrategy", {
         get: function() {
-          return Vt.DefaultRetryStrategy
+          return ju.DefaultRetryStrategy
         },
-        set: function(tt) {
-          Vt.DefaultRetryStrategy = tt
+        set: function(uu) {
+          ju.DefaultRetryStrategy = uu
         }
-      }), Object.defineProperty(Zt, "BaseUrl", {
+      }), Object.defineProperty(Ku, "BaseUrl", {
         get: function() {
-          return Vt.BaseUrl
+          return ju.BaseUrl
         },
-        set: function(tt) {
-          Vt.BaseUrl = tt
+        set: function(uu) {
+          ju.BaseUrl = uu
         }
-      }), Object.defineProperty(Zt, "PreprocessUrl", {
+      }), Object.defineProperty(Ku, "PreprocessUrl", {
         get: function() {
-          return Vt.PreprocessUrl
+          return ju.PreprocessUrl
         },
-        set: function(tt) {
-          Vt.PreprocessUrl = tt
+        set: function(uu) {
+          ju.PreprocessUrl = uu
         }
-      }), Object.defineProperty(Zt, "CorsBehavior", {
+      }), Object.defineProperty(Ku, "CorsBehavior", {
         get: function() {
-          return Vt.CorsBehavior
+          return ju.CorsBehavior
         },
-        set: function(tt) {
-          Vt.CorsBehavior = tt
+        set: function(uu) {
+          ju.CorsBehavior = uu
         }
       })
     };
-    let Ft = !1;
+    let ru = !1;
 
-    function kt() {
-      Ft || (Ft = !0, Lt(It, Pt, bt, ct, St, ht, ut, Kt, vt, Jt), Xt.c.loadFile = ht, Xt.c.loadImage = ut, Qt.m.loadFile = ht)
+    function Qu() {
+      ru || (ru = !0, Vu(mu, vu, Mu, ou, Pu, Ju, pu, wu, du, eu), Cu.e.loadFile = Ju, Cu.e.loadImage = pu, bu.r.loadFile = Ju)
     }
   },
-  40272: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => dt,
-      i: () => Dt,
-      k: () => mt
+  40326: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => lu,
+      i: () => Zu,
+      k: () => Xu
     });
-    let Ot = null;
+    let su = null;
 
-    function qt() {
-      if (Ot) return Ot;
-      const tt = new ArrayBuffer(4),
-        et = new Float32Array(tt),
-        Vt = new Uint32Array(tt),
-        qt = new Uint32Array(512),
-        Dt = new Uint32Array(512);
-      for (let Ot = 0; Ot < 256; ++Ot) {
-        const tt = Ot - 127;
-        tt < -24 ? (qt[Ot] = 0, qt[256 | Ot] = 32768, Dt[Ot] = 24, Dt[256 | Ot] = 24) : tt < -14 ? (qt[Ot] = 1024 >> -tt - 14, qt[256 | Ot] = 1024 >> -tt - 14 | 32768, Dt[Ot] = -tt - 1, Dt[256 | Ot] = -tt - 1) : tt <= 15 ? (qt[Ot] = tt + 15 << 10, qt[256 | Ot] = tt + 15 << 10 | 32768, Dt[Ot] = 13, Dt[256 | Ot] = 13) : tt < 128 ? (qt[Ot] = 31744, qt[256 | Ot] = 64512, Dt[Ot] = 24, Dt[256 | Ot] = 24) : (qt[Ot] = 31744, qt[256 | Ot] = 64512, Dt[Ot] = 13, Dt[256 | Ot] = 13)
+    function Uu() {
+      if (su) return su;
+      const uu = new ArrayBuffer(4),
+        Eu = new Float32Array(uu),
+        ju = new Uint32Array(uu),
+        Uu = new Uint32Array(512),
+        Zu = new Uint32Array(512);
+      for (let su = 0; su < 256; ++su) {
+        const uu = su - 127;
+        uu < -24 ? (Uu[su] = 0, Uu[256 | su] = 32768, Zu[su] = 24, Zu[256 | su] = 24) : uu < -14 ? (Uu[su] = 1024 >> -uu - 14, Uu[256 | su] = 1024 >> -uu - 14 | 32768, Zu[su] = -uu - 1, Zu[256 | su] = -uu - 1) : uu <= 15 ? (Uu[su] = uu + 15 << 10, Uu[256 | su] = uu + 15 << 10 | 32768, Zu[su] = 13, Zu[256 | su] = 13) : uu < 128 ? (Uu[su] = 31744, Uu[256 | su] = 64512, Zu[su] = 24, Zu[256 | su] = 24) : (Uu[su] = 31744, Uu[256 | su] = 64512, Zu[su] = 13, Zu[256 | su] = 13)
       }
-      const mt = new Uint32Array(2048),
-        dt = new Uint32Array(64),
-        jt = new Uint32Array(64);
-      for (let Ot = 1; Ot < 1024; ++Ot) {
-        let tt = Ot << 13,
-          et = 0;
-        for (; 0 === (8388608 & tt);) tt <<= 1, et -= 8388608;
-        tt &= -8388609, et += 947912704, mt[Ot] = tt | et
+      const Xu = new Uint32Array(2048),
+        lu = new Uint32Array(64),
+        qu = new Uint32Array(64);
+      for (let su = 1; su < 1024; ++su) {
+        let uu = su << 13,
+          Eu = 0;
+        for (; 0 === (8388608 & uu);) uu <<= 1, Eu -= 8388608;
+        uu &= -8388609, Eu += 947912704, Xu[su] = uu | Eu
       }
-      for (let Ot = 1024; Ot < 2048; ++Ot) mt[Ot] = 939524096 + (Ot - 1024 << 13);
-      for (let Ot = 1; Ot < 31; ++Ot) dt[Ot] = Ot << 23;
-      dt[31] = 1199570944, dt[32] = 2147483648;
-      for (let Ot = 33; Ot < 63; ++Ot) dt[Ot] = 2147483648 + (Ot - 32 << 23);
-      dt[63] = 3347054592;
-      for (let Ot = 1; Ot < 64; ++Ot) 32 !== Ot && (jt[Ot] = 1024);
-      return Ot = {
-        floatView: et,
-        uint32View: Vt,
-        baseTable: qt,
-        shiftTable: Dt,
-        mantissaTable: mt,
-        exponentTable: dt,
-        offsetTable: jt
-      }, Ot
+      for (let su = 1024; su < 2048; ++su) Xu[su] = 939524096 + (su - 1024 << 13);
+      for (let su = 1; su < 31; ++su) lu[su] = su << 23;
+      lu[31] = 1199570944, lu[32] = 2147483648;
+      for (let su = 33; su < 63; ++su) lu[su] = 2147483648 + (su - 32 << 23);
+      lu[63] = 3347054592;
+      for (let su = 1; su < 64; ++su) 32 !== su && (qu[su] = 1024);
+      return su = {
+        floatView: Eu,
+        uint32View: ju,
+        baseTable: Uu,
+        shiftTable: Zu,
+        mantissaTable: Xu,
+        exponentTable: lu,
+        offsetTable: qu
+      }, su
     }
-    const Dt = 65504;
+    const Zu = 65504;
 
-    function mt(tt) {
-      const et = qt();
-      et.floatView[0] = tt;
-      const Vt = et.uint32View[0],
-        Ot = Vt >> 23 & 511;
-      return et.baseTable[Ot] + ((8388607 & Vt) >> et.shiftTable[Ot])
+    function Xu(uu) {
+      const Eu = Uu();
+      Eu.floatView[0] = uu;
+      const ju = Eu.uint32View[0],
+        su = ju >> 23 & 511;
+      return Eu.baseTable[su] + ((8388607 & ju) >> Eu.shiftTable[su])
     }
 
-    function dt(tt) {
-      const et = qt();
-      return et.uint32View[0] = et.mantissaTable[et.offsetTable[tt >> 10] + (1023 & tt)] + et.exponentTable[tt >> 10], et.floatView[0]
+    function lu(uu) {
+      const Eu = Uu();
+      return Eu.uint32View[0] = Eu.mantissaTable[Eu.offsetTable[uu >> 10] + (1023 & uu)] + Eu.exponentTable[uu >> 10], Eu.floatView[0]
     }
   },
-  40261: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => Dt,
-      f: () => qt,
-      j: () => Ot
+  40312: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => Zu,
+      d: () => Uu,
+      e: () => su
     });
-    const Ot = tt => {
-        const et = ArrayBuffer.isView(tt) ? new Uint8Array(tt.buffer, tt.byteOffset, tt.byteLength) : new Uint8Array(tt);
-        return "function" === typeof et.toBase64 ? et.toBase64() : function(tt) {
-          const et = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
-          let Vt, Ot, qt, Dt, mt, dt, jt, Ht = "",
-            Xt = 0;
-          for (; Xt < tt.length;) Vt = tt[Xt++], Ot = Xt < tt.length ? tt[Xt++] : Number.NaN, qt = Xt < tt.length ? tt[Xt++] : Number.NaN, Dt = Vt >> 2, mt = (3 & Vt) << 4 | Ot >> 4, dt = (15 & Ot) << 2 | qt >> 6, jt = 63 & qt, isNaN(Ot) ? dt = jt = 64 : isNaN(qt) && (jt = 64), Ht += et.charAt(Dt) + et.charAt(mt) + et.charAt(dt) + et.charAt(jt);
-          return Ht
-        }(et)
+    const su = uu => {
+        const Eu = ArrayBuffer.isView(uu) ? new Uint8Array(uu.buffer, uu.byteOffset, uu.byteLength) : new Uint8Array(uu);
+        return "function" === typeof Eu.toBase64 ? Eu.toBase64() : function(uu) {
+          const Eu = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+          let ju, su, Uu, Zu, Xu, lu, qu, fu = "",
+            Cu = 0;
+          for (; Cu < uu.length;) ju = uu[Cu++], su = Cu < uu.length ? uu[Cu++] : Number.NaN, Uu = Cu < uu.length ? uu[Cu++] : Number.NaN, Zu = ju >> 2, Xu = (3 & ju) << 4 | su >> 4, lu = (15 & su) << 2 | Uu >> 6, qu = 63 & Uu, isNaN(su) ? lu = qu = 64 : isNaN(Uu) && (qu = 64), fu += Eu.charAt(Zu) + Eu.charAt(Xu) + Eu.charAt(lu) + Eu.charAt(qu);
+          return fu
+        }(Eu)
       },
-      qt = tt => atob(tt),
-      Dt = tt => "function" === typeof Uint8Array.fromBase64 ? Uint8Array.fromBase64(tt).buffer : function(tt) {
-        const et = qt(tt),
-          Vt = et.length,
-          Ot = new Uint8Array(new ArrayBuffer(Vt));
-        for (let qt = 0; qt < Vt; qt++) Ot[qt] = et.charCodeAt(qt);
-        return Ot.buffer
-      }(tt)
+      Uu = uu => atob(uu),
+      Zu = uu => "function" === typeof Uint8Array.fromBase64 ? Uint8Array.fromBase64(uu).buffer : function(uu) {
+        const Eu = Uu(uu),
+          ju = Eu.length,
+          su = new Uint8Array(new ArrayBuffer(ju));
+        for (let Uu = 0; Uu < ju; Uu++) su[Uu] = Eu.charCodeAt(Uu);
+        return su.buffer
+      }(uu)
   },
-  40085: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => qt,
-      g: () => mt
+  40164: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => Uu,
+      d: () => Xu
     });
-    let Ot = [];
-    class qt {
-      static SetImmediate(tt) {
-        0 === Ot.length && setTimeout((() => {
-          const tt = Ot;
-          Ot = [];
-          for (const et of tt) et()
-        }), 1), Ot.push(tt)
+    let su = [];
+    class Uu {
+      static SetImmediate(uu) {
+        0 === su.length && setTimeout((() => {
+          const uu = su;
+          su = [];
+          for (const Eu of uu) Eu()
+        }), 1), su.push(uu)
       }
     }
 
-    function Dt(tt, et, Vt) {
+    function Zu(uu, Eu, ju) {
       try {
-        if (tt()) return et(), !0
-      } catch (Ot) {
-        return Vt?.(Ot), !0
+        if (uu()) return Eu(), !0
+      } catch (su) {
+        return ju?.(su), !0
       }
       return !1
     }
-    const mt = function(tt, et, Vt) {
-      let Ot = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 16,
-        qt = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3e4,
-        mt = arguments.length > 6 ? arguments[6] : void 0;
-      if ((!(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5]) && Dt(tt, et, Vt)) return null;
-      const dt = setInterval((() => {
-        Dt(tt, et, Vt) ? clearInterval(dt) : (qt -= Ot, qt < 0 && (clearInterval(dt), Vt?.(new Error("Operation timed out after maximum retries. " + (mt || "")), !0)))
-      }), Ot);
-      return () => clearInterval(dt)
+    const Xu = function(uu, Eu, ju) {
+      let su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 16,
+        Uu = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3e4,
+        Xu = arguments.length > 6 ? arguments[6] : void 0;
+      if ((!(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5]) && Zu(uu, Eu, ju)) return null;
+      const lu = setInterval((() => {
+        Zu(uu, Eu, ju) ? clearInterval(lu) : (Uu -= su, Uu < 0 && (clearInterval(lu), ju?.(new Error("Operation timed out after maximum retries. " + (Xu || "")), !0)))
+      }), su);
+      return () => clearInterval(lu)
     }
   },
-  40255: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => Ot
+  40302: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => su
     });
-    class Ot {
+    class su {
       constructor() {
         this._xhr = "undefined" !== typeof _native && _native.XMLHttpRequest ? new _native.XMLHttpRequest : new XMLHttpRequest, this._requestURL = ""
       }
       static get IsCustomRequestAvailable() {
-        return Object.keys(Ot.CustomRequestHeaders).length > 0 || Ot.CustomRequestModifiers.length > 0
+        return Object.keys(su.CustomRequestHeaders).length > 0 || su.CustomRequestModifiers.length > 0
       }
-      static _CleanUrl(tt) {
-        return tt = (tt = tt.replace("file:http:", "http:")).replace("file:https:", "https:")
+      static _CleanUrl(uu) {
+        return uu = (uu = uu.replace("file:http:", "http:")).replace("file:https:", "https:")
       }
-      static _ShouldSkipRequestModifications(tt) {
-        return Ot.SkipRequestModificationForBabylonCDN && (tt.includes("preview.babylonjs.com") || tt.includes("cdn.babylonjs.com"))
+      static _ShouldSkipRequestModifications(uu) {
+        return su.SkipRequestModificationForBabylonCDN && (uu.includes("preview.babylonjs.com") || uu.includes("cdn.babylonjs.com"))
       }
-      static _CollectCustomizations(tt) {
-        const et = {
+      static _CollectCustomizations(uu) {
+        const Eu = {
           ...arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}
         };
-        if (Ot._ShouldSkipRequestModifications(tt)) return {
-          url: tt,
-          headers: et
+        if (su._ShouldSkipRequestModifications(uu)) return {
+          url: uu,
+          headers: Eu
         };
-        for (const qt in Ot.CustomRequestHeaders) {
-          const tt = Ot.CustomRequestHeaders[qt];
-          tt && (et[qt] = tt)
+        for (const Uu in su.CustomRequestHeaders) {
+          const uu = su.CustomRequestHeaders[Uu];
+          uu && (Eu[Uu] = uu)
         }
-        const Vt = {
-          setRequestHeader: (tt, Vt) => {
-            et[tt] = Vt
+        const ju = {
+          setRequestHeader: (uu, ju) => {
+            Eu[uu] = ju
           }
         };
-        for (const qt of Ot.CustomRequestModifiers) {
-          if (Ot._ShouldSkipRequestModifications(tt)) break;
-          const et = qt(Vt, tt);
-          "string" === typeof et && (tt = et)
+        for (const Uu of su.CustomRequestModifiers) {
+          if (su._ShouldSkipRequestModifications(uu)) break;
+          const Eu = Uu(ju, uu);
+          "string" === typeof Eu && (uu = Eu)
         }
         return {
-          url: tt,
-          headers: et
+          url: uu,
+          headers: Eu
         }
       }
-      static async FetchAsync(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const Vt = et.method ?? "GET";
+      static async FetchAsync(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const ju = Eu.method ?? "GET";
         if ("undefined" !== typeof fetch) {
           const {
-            url: qt,
-            headers: Dt
-          } = Ot._CollectCustomizations(Ot._CleanUrl(tt), et.headers ?? {});
-          return await fetch(qt, {
-            method: Vt,
-            headers: Dt,
-            body: et.body ?? void 0
+            url: Uu,
+            headers: Zu
+          } = su._CollectCustomizations(su._CleanUrl(uu), Eu.headers ?? {});
+          return await fetch(Uu, {
+            method: ju,
+            headers: Zu,
+            body: Eu.body ?? void 0
           })
         }
-        return await new Promise(((qt, Dt) => {
-          const mt = new Ot;
-          mt.responseType = "arraybuffer", mt.addEventListener("readystatechange", (() => {
-            if (4 === mt.readyState)
-              if (mt.status >= 200 && mt.status < 300) {
-                const tt = "undefined" !== typeof Headers ? new Headers : void 0,
-                  et = mt.getResponseHeader("Content-Type");
-                et && tt && tt.set("Content-Type", et), "undefined" !== typeof Response ? qt(new Response(mt.response, {
-                  status: mt.status,
-                  statusText: mt.statusText,
-                  headers: tt
-                })) : qt({
+        return await new Promise(((Uu, Zu) => {
+          const Xu = new su;
+          Xu.responseType = "arraybuffer", Xu.addEventListener("readystatechange", (() => {
+            if (4 === Xu.readyState)
+              if (Xu.status >= 200 && Xu.status < 300) {
+                const uu = "undefined" !== typeof Headers ? new Headers : void 0,
+                  Eu = Xu.getResponseHeader("Content-Type");
+                Eu && uu && uu.set("Content-Type", Eu), "undefined" !== typeof Response ? Uu(new Response(Xu.response, {
+                  status: Xu.status,
+                  statusText: Xu.statusText,
+                  headers: uu
+                })) : Uu({
                   ok: !0,
-                  status: mt.status,
-                  statusText: mt.statusText,
+                  status: Xu.status,
+                  statusText: Xu.statusText,
                   headers: {
-                    get: tt => mt.getResponseHeader(tt)
+                    get: uu => Xu.getResponseHeader(uu)
                   },
-                  arrayBuffer: async () => await Promise.resolve(mt.response)
+                  arrayBuffer: async () => await Promise.resolve(Xu.response)
                 })
-              } else Dt(new Error(`HTTP ${mt.status} loading '${mt.requestURL}': ${mt.statusText}`))
-          })), mt.open(Vt, tt, et.headers), mt.send(et.body ?? null)
+              } else Zu(new Error(`HTTP ${Xu.status} loading '${Xu.requestURL}': ${Xu.statusText}`))
+          })), Xu.open(ju, uu, Eu.headers), Xu.send(Eu.body ?? null)
         }))
       }
       get requestURL() {
@@ -1445,8 +1445,8 @@ export const modules = {
       get onprogress() {
         return this._xhr.onprogress
       }
-      set onprogress(tt) {
-        this._xhr.onprogress = tt
+      set onprogress(uu) {
+        this._xhr.onprogress = uu
       }
       get readyState() {
         return this._xhr.readyState
@@ -1469,44 +1469,44 @@ export const modules = {
       get responseType() {
         return this._xhr.responseType
       }
-      set responseType(tt) {
-        this._xhr.responseType = tt
+      set responseType(uu) {
+        this._xhr.responseType = uu
       }
       get timeout() {
         return this._xhr.timeout
       }
-      set timeout(tt) {
-        this._xhr.timeout = tt
+      set timeout(uu) {
+        this._xhr.timeout = uu
       }
-      addEventListener(tt, et, Vt) {
-        this._xhr.addEventListener(tt, et, Vt)
+      addEventListener(uu, Eu, ju) {
+        this._xhr.addEventListener(uu, Eu, ju)
       }
-      removeEventListener(tt, et, Vt) {
-        this._xhr.removeEventListener(tt, et, Vt)
+      removeEventListener(uu, Eu, ju) {
+        this._xhr.removeEventListener(uu, Eu, ju)
       }
       abort() {
         this._xhr.abort()
       }
-      send(tt) {
-        this._xhr.send(tt)
+      send(uu) {
+        this._xhr.send(uu)
       }
-      open(tt, et, Vt) {
+      open(uu, Eu, ju) {
         const {
-          url: qt,
-          headers: Dt
-        } = Ot._CollectCustomizations(et, Vt);
-        this._requestURL = Ot._CleanUrl(qt), this._xhr.open(tt, this._requestURL, !0);
-        for (const Ot in Dt) this._xhr.setRequestHeader(Ot, Dt[Ot])
+          url: Uu,
+          headers: Zu
+        } = su._CollectCustomizations(Eu, ju);
+        this._requestURL = su._CleanUrl(Uu), this._xhr.open(uu, this._requestURL, !0);
+        for (const su in Zu) this._xhr.setRequestHeader(su, Zu[su])
       }
-      setRequestHeader(tt, et) {
-        this._xhr.setRequestHeader(tt, et)
+      setRequestHeader(uu, Eu) {
+        this._xhr.setRequestHeader(uu, Eu)
       }
-      getResponseHeader(tt) {
-        return this._xhr.getResponseHeader(tt)
+      getResponseHeader(uu) {
+        return this._xhr.getResponseHeader(uu)
       }
     }
-    Ot.CustomRequestHeaders = {}, Ot.CustomRequestModifiers = new Array, Ot.SkipRequestModificationForBabylonCDN = !0
+    su.CustomRequestHeaders = {}, su.CustomRequestModifiers = new Array, su.SkipRequestModificationForBabylonCDN = !0
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

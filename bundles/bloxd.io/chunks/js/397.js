@@ -1,197 +1,197 @@
 export const id = 397;
 export const ids = [397];
 export const modules = {
-  62136: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      rebuildScenePbrPipelines: () => dt,
-      rebuildSceneRenderables: () => jt
+  62126: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      rebuildScenePbrPipelines: () => lu,
+      rebuildSceneRenderables: () => qu
     });
-    var Ot = Vt(41967),
-      qt = (tt, et) => tt.order - et.order,
-      Dt = 8,
-      mt = tt => jt(tt);
-    async function dt(tt) {
-      let et = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      await Ht(tt, "pbr", et)
+    var su = ju(41976),
+      Uu = (uu, Eu) => uu.order - Eu.order,
+      Zu = 8,
+      Xu = uu => qu(uu);
+    async function lu(uu) {
+      let Eu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+      await fu(uu, "pbr", Eu)
     }
-    async function jt(tt) {
-      await Ht(tt, void 0, !1)
+    async function qu(uu) {
+      await fu(uu, void 0, !1)
     }
-    async function Ht(tt, et, dt) {
-      const jt = tt;
-      if (!jt._built && !dt) return;
-      const Ht = jt._lightListVersion ?? 0,
-        Xt = jt.surface.engine,
-        Qt = tt => {
-          jt._z ? tt.forEach((tt => tt())) : (0, Ot.f)(Xt, (() => tt.forEach((tt => tt()))))
+    async function fu(uu, Eu, lu) {
+      const qu = uu;
+      if (!qu._built && !lu) return;
+      const fu = qu._lightListVersion ?? 0,
+        Cu = qu.surface.engine,
+        bu = uu => {
+          qu._z ? uu.forEach((uu => uu())) : (0, su.d)(Cu, (() => uu.forEach((uu => uu()))))
         };
-      let lt = !1,
-        Et = !1,
-        ft = !1,
-        wt = !1;
+      let cu = !1,
+        Nu = !1,
+        Ou = !1,
+        Yu = !1;
       try {
-        for (let tt = 1;; tt++) {
-          if (void 0 !== et) {
-            await yt();
+        for (let uu = 1;; uu++) {
+          if (void 0 !== Eu) {
+            await hu();
             break
           }
-          if (Mt(jt), await yt(), !Nt(jt)) break;
-          if (tt >= Dt) {
-            jt._rebuildHook = mt, wt = !0, Et = !0;
+          if (gu(qu), await hu(), !Du(qu)) break;
+          if (uu >= Zu) {
+            qu._rebuildHook = Xu, Yu = !0, Nu = !0;
             break
           }
         }
-        ft = !0
+        Ou = !0
       } finally {
-        if (lt && (jt._renderables.sort(qt), jt._renderableVersion++, jt._materialEpoch++, jt._built && jt._frameGraph.build()), void 0 === et && ft && !Et && (jt._lightListVersion ?? 0) === Ht) {
-          const tt = jt._pendingTopologyRetirements?.splice(0);
-          tt?.length && Qt(tt), wt || (jt._rebuildHook = void 0)
+        if (cu && (qu._renderables.sort(Uu), qu._renderableVersion++, qu._materialEpoch++, qu._built && qu._frameGraph.build()), void 0 === Eu && Ou && !Nu && (qu._lightListVersion ?? 0) === fu) {
+          const uu = qu._pendingTopologyRetirements?.splice(0);
+          uu?.length && bu(uu), Yu || (qu._rebuildHook = void 0)
         }
       }
-      async function yt() {
-        for (const [tt, Ot] of jt._groups) {
-          if (void 0 !== et && tt._materialFamily !== et) continue;
-          if (0 === Ot.length) {
-            (Ot.o || Ot.r) && (bt(tt, Ot), lt = !0);
+      async function hu() {
+        for (const [uu, su] of qu._groups) {
+          if (void 0 !== Eu && uu._materialFamily !== Eu) continue;
+          if (0 === su.length) {
+            (su.o || su.r) && (Mu(uu, su), cu = !0);
             continue
           }
-          const qt = jt._runtimeBuilds;
-          await (qt?.wait(Ot));
-          let Dt = !1;
-          const dt = async () => {
-            const et = jt._runtimeBuilds,
-              Vt = [...Ot].filter((et => jt.meshes.includes(et) && et.material?._buildGroup === tt));
-            if (0 === Vt.length) return void bt(tt, Ot);
-            const mt = !!Ot.r,
-              dt = jt._disposables.length,
-              Ht = new Map,
-              Xt = new Map(Vt.map((tt => [tt, tt.material])));
-            for (const tt of Vt) {
-              const Vt = jt._meshDisposables.get(tt);
-              Vt && (Ht.set(tt, Vt), jt._meshDisposables.delete(tt), et?.holdPendingDisposers(tt, Vt))
+          const Uu = qu._runtimeBuilds;
+          await (Uu?.wait(su));
+          let Zu = !1;
+          const lu = async () => {
+            const Eu = qu._runtimeBuilds,
+              ju = [...su].filter((Eu => qu.meshes.includes(Eu) && Eu.material?._buildGroup === uu));
+            if (0 === ju.length) return void Mu(uu, su);
+            const Xu = !!su.r,
+              lu = qu._disposables.length,
+              fu = new Map,
+              Cu = new Map(ju.map((uu => [uu, uu.material])));
+            for (const uu of ju) {
+              const ju = qu._meshDisposables.get(uu);
+              ju && (fu.set(uu, ju), qu._meshDisposables.delete(uu), Eu?.holdPendingDisposers(uu, ju))
             }
-            let lt, Et;
-            jt._p = tt => (Et = tt, !0);
+            let cu, Nu;
+            qu._p = uu => (Nu = uu, !0);
             try {
-              lt = await tt(jt, Vt)
-            } catch (ut) {
-              Et?.[1]();
-              for (const qt of Vt) {
-                const Vt = Ht.get(qt),
-                  Dt = jt._meshDisposables.get(qt);
-                if (Dt && Dt !== Vt)
-                  for (const tt of Dt) tt();
-                const mt = jt.meshes.includes(qt) && qt.material === Xt.get(qt) && qt.material?._buildGroup === tt && Ot.includes(qt);
-                Vt && mt ? jt._meshDisposables.set(qt, Vt) : (jt._meshDisposables.delete(qt), Vt && Qt(Vt)), Vt && et?.releasePendingDisposers(qt, Vt)
+              cu = await uu(qu, ju)
+            } catch (pu) {
+              Nu?.[1]();
+              for (const Uu of ju) {
+                const ju = fu.get(Uu),
+                  Zu = qu._meshDisposables.get(Uu);
+                if (Zu && Zu !== ju)
+                  for (const uu of Zu) uu();
+                const Xu = qu.meshes.includes(Uu) && Uu.material === Cu.get(Uu) && Uu.material?._buildGroup === uu && su.includes(Uu);
+                ju && Xu ? qu._meshDisposables.set(Uu, ju) : (qu._meshDisposables.delete(Uu), ju && bu(ju)), ju && Eu?.releasePendingDisposers(Uu, ju)
               }
-              throw ut
+              throw pu
             } finally {
-              delete jt._p
+              delete qu._p
             }
-            if (jt._z || qt?._d()) {
-              Et?.[1]();
-              for (const et of Vt) {
-                const tt = jt._meshDisposables.get(et),
-                  Vt = Ht.get(et);
-                if (tt && tt !== Vt)
-                  for (const et of tt) et();
-                jt._meshDisposables.delete(et)
+            if (qu._z || Uu?._d()) {
+              Nu?.[1]();
+              for (const Eu of ju) {
+                const uu = qu._meshDisposables.get(Eu),
+                  ju = fu.get(Eu);
+                if (uu && uu !== ju)
+                  for (const Eu of uu) Eu();
+                qu._meshDisposables.delete(Eu)
               }
-              for (const et of jt._disposables.splice(0)) et();
-              const tt = [...Ht.values()].flat();
-              Qt(tt);
-              for (const [Vt, Ot] of Ht) et?.releasePendingDisposers(Vt, Ot);
+              for (const Eu of qu._disposables.splice(0)) Eu();
+              const uu = [...fu.values()].flat();
+              bu(uu);
+              for (const [ju, su] of fu) Eu?.releasePendingDisposers(ju, su);
               return
             }
-            Et?.[0](), tt._rebuildSingle = lt.rebuildSingle, Ot.r = jt._runtimeBuilds?.base(tt, lt.rebuildSingle) ?? lt.rebuildSingle, "pbr" === tt._materialFamily && lt._G && (Ot._w = null), mt && Jt(jt, dt);
-            const ft = new Set(Vt.filter((et => jt.meshes.includes(et) && et.material === Xt.get(et) && et.material?._buildGroup === tt && Ot.includes(et))));
-            if (ft.size !== Vt.length && lt.renderables.some((tt => !tt.mesh))) {
-              for (const tt of Vt) {
-                const Vt = jt._meshDisposables.get(tt),
-                  Ot = Ht.get(tt);
-                if (Vt && Vt !== Ot)
-                  for (const tt of Vt) tt();
-                Ot && jt.meshes.includes(tt) ? jt._meshDisposables.set(tt, Ot) : (jt._meshDisposables.delete(tt), Ot && Qt(Ot)), Ot && et?.releasePendingDisposers(tt, Ot)
+            Nu?.[0](), uu._rebuildSingle = cu.rebuildSingle, su.r = qu._runtimeBuilds?.base(uu, cu.rebuildSingle) ?? cu.rebuildSingle, "pbr" === uu._materialFamily && cu._G && (su._w = null), Xu && eu(qu, lu);
+            const Ou = new Set(ju.filter((Eu => qu.meshes.includes(Eu) && Eu.material === Cu.get(Eu) && Eu.material?._buildGroup === uu && su.includes(Eu))));
+            if (Ou.size !== ju.length && cu.renderables.some((uu => !uu.mesh))) {
+              for (const uu of ju) {
+                const ju = qu._meshDisposables.get(uu),
+                  su = fu.get(uu);
+                if (ju && ju !== su)
+                  for (const uu of ju) uu();
+                su && qu.meshes.includes(uu) ? qu._meshDisposables.set(uu, su) : (qu._meshDisposables.delete(uu), su && bu(su)), su && Eu?.releasePendingDisposers(uu, su)
               }
-              return void(Dt = !0)
+              return void(Zu = !0)
             }
-            const wt = new Set;
-            for (const tt of Vt)
-              if (ft.has(tt)) wt.add(tt.material), jt._runtimeBuilds?.reset(tt);
+            const Yu = new Set;
+            for (const uu of ju)
+              if (Ou.has(uu)) Yu.add(uu.material), qu._runtimeBuilds?.reset(uu);
               else {
-                const Vt = Ht.get(tt),
-                  Ot = jt._meshDisposables.get(tt);
-                if (Ot && Ot !== Vt)
-                  for (const tt of Ot) tt();
-                Vt && jt.meshes.includes(tt) ? (jt._meshDisposables.set(tt, Vt), Ht.delete(tt), et?.releasePendingDisposers(tt, Vt)) : jt._meshDisposables.delete(tt)
-              } for (const tt of wt) tt._csmGen = (tt._csmGen ?? 0) + 1;
-            const yt = Ot.o,
-              Nt = yt?.length ? new Set(yt) : null;
-            for (let tt = jt._renderables.length - 1; tt >= 0; tt--) {
-              const et = jt._renderables[tt];
-              (ft.has(et.mesh) || Nt?.has(et)) && jt._renderables.splice(tt, 1)
+                const ju = fu.get(uu),
+                  su = qu._meshDisposables.get(uu);
+                if (su && su !== ju)
+                  for (const uu of su) uu();
+                ju && qu.meshes.includes(uu) ? (qu._meshDisposables.set(uu, ju), fu.delete(uu), Eu?.releasePendingDisposers(uu, ju)) : qu._meshDisposables.delete(uu)
+              } for (const uu of Yu) uu._csmGen = (uu._csmGen ?? 0) + 1;
+            const hu = su.o,
+              Du = hu?.length ? new Set(hu) : null;
+            for (let uu = qu._renderables.length - 1; uu >= 0; uu--) {
+              const Eu = qu._renderables[uu];
+              (Ou.has(Eu.mesh) || Du?.has(Eu)) && qu._renderables.splice(uu, 1)
             }
-            const Mt = lt.renderables.filter((tt => !tt.mesh || ft.has(tt.mesh)));
-            jt._renderables.push(...Mt), Ot.o = Mt;
-            const Ct = [...Ht.values()].flat();
-            Qt(Ct);
-            for (const [tt, Ot] of Ht) et?.releasePendingDisposers(tt, Ot)
+            const gu = cu.renderables.filter((uu => !uu.mesh || Ou.has(uu.mesh)));
+            qu._renderables.push(...gu), su.o = gu;
+            const Gu = [...fu.values()].flat();
+            bu(Gu);
+            for (const [uu, su] of fu) Eu?.releasePendingDisposers(uu, su)
           }, {
-            X: Ht
-          } = await Promise.resolve().then((() => Vt(61634))), Xt = 3;
-          for (let et = 1;; et++) {
-            if (Dt = !1, await Ht(jt, tt, dt), jt._z || qt?._d()) return void(Et = !0);
-            if (!Dt) break;
-            if (et >= Xt) {
-              bt(tt, Ot), jt._rebuildHook = mt, wt = !0, Et = !0;
+            X: fu
+          } = await Promise.resolve().then((() => ju(61601))), Cu = 3;
+          for (let Eu = 1;; Eu++) {
+            if (Zu = !1, await fu(qu, uu, lu), qu._z || Uu?._d()) return void(Nu = !0);
+            if (!Zu) break;
+            if (Eu >= Cu) {
+              Mu(uu, su), qu._rebuildHook = Xu, Yu = !0, Nu = !0;
               break
             }
           }
-          Dt ? lt = !0 : lt = !0
+          Zu ? cu = !0 : cu = !0
         }
       }
 
-      function Nt(tt) {
-        for (const et of tt.meshes) {
-          const Vt = et.material?._buildGroup;
-          if (Vt && !tt._groups.get(Vt)?.includes(et)) return !0
+      function Du(uu) {
+        for (const Eu of uu.meshes) {
+          const ju = Eu.material?._buildGroup;
+          if (ju && !uu._groups.get(ju)?.includes(Eu)) return !0
         }
         return !1
       }
 
-      function Mt(tt) {
-        const et = new Map;
-        for (const Vt of tt.meshes) {
-          const tt = Vt.material?._buildGroup;
-          if (!tt) continue;
-          const Ot = et.get(tt);
-          Ot ? Ot.push(Vt) : et.set(tt, [Vt])
+      function gu(uu) {
+        const Eu = new Map;
+        for (const ju of uu.meshes) {
+          const uu = ju.material?._buildGroup;
+          if (!uu) continue;
+          const su = Eu.get(uu);
+          su ? su.push(ju) : Eu.set(uu, [ju])
         }
-        for (const [Vt, Ot] of tt._groups) {
-          const tt = et.get(Vt) ?? [];
-          (Ot.length !== tt.length || tt.some(((tt, et) => Ot[et] !== tt))) && (Ot.length = 0, Ot.push(...tt)), et.delete(Vt)
+        for (const [ju, su] of uu._groups) {
+          const uu = Eu.get(ju) ?? [];
+          (su.length !== uu.length || uu.some(((uu, Eu) => su[Eu] !== uu))) && (su.length = 0, su.push(...uu)), Eu.delete(ju)
         }
-        for (const [Vt, Ot] of et) {
-          const et = Ot;
-          tt._groups.set(Vt, et)
+        for (const [ju, su] of Eu) {
+          const Eu = su;
+          uu._groups.set(ju, Eu)
         }
       }
 
-      function bt(tt, et) {
-        const Vt = et.o;
-        if (Vt?.length) {
-          const tt = new Set(Vt);
-          for (let et = jt._renderables.length - 1; et >= 0; et--) tt.has(jt._renderables[et]) && jt._renderables.splice(et, 1)
+      function Mu(uu, Eu) {
+        const ju = Eu.o;
+        if (ju?.length) {
+          const uu = new Set(ju);
+          for (let Eu = qu._renderables.length - 1; Eu >= 0; Eu--) uu.has(qu._renderables[Eu]) && qu._renderables.splice(Eu, 1)
         }
-        et.o = void 0, et.r = void 0, jt._runtimeBuilds?.dropBase(tt), jt._rebuildHook = mt, wt = !0
+        Eu.o = void 0, Eu.r = void 0, qu._runtimeBuilds?.dropBase(uu), qu._rebuildHook = Xu, Yu = !0
       }
 
-      function Jt(tt, et) {
-        const Vt = new Set(tt._disposables.slice(0, et));
-        for (let Ot = tt._disposables.length - 1; Ot >= et; Ot--) Vt.has(tt._disposables[Ot]) && tt._disposables.splice(Ot, 1)
+      function eu(uu, Eu) {
+        const ju = new Set(uu._disposables.slice(0, Eu));
+        for (let su = uu._disposables.length - 1; su >= Eu; su--) ju.has(uu._disposables[su]) && uu._disposables.splice(su, 1)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

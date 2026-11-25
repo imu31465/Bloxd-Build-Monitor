@@ -1,394 +1,394 @@
 export const id = 239;
 export const ids = [239];
 export const modules = {
-  37411: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => dt,
-      h: () => mt,
-      j: () => qt
+  37562: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => lu,
+      g: () => Xu,
+      h: () => Uu
     });
-    const Ot = 1024,
-      qt = 16,
-      Dt = 36e4;
-    class mt {
-      constructor(tt) {
-        this.boneCount = tt, this.rotation = void 0, this.position = void 0, this.scale = void 0, this.touched = void 0, this.rotation = new Float64Array(3 * tt), this.position = new Float64Array(3 * tt), this.scale = new Float64Array(3 * tt).fill(1), this.touched = new Uint8Array(tt)
+    const su = 1024,
+      Uu = 16,
+      Zu = 36e4;
+    class Xu {
+      constructor(uu) {
+        this.boneCount = uu, this.rotation = void 0, this.position = void 0, this.scale = void 0, this.touched = void 0, this.rotation = new Float64Array(3 * uu), this.position = new Float64Array(3 * uu), this.scale = new Float64Array(3 * uu).fill(1), this.touched = new Uint8Array(uu)
       }
       clampToLimits() {
-        for (let tt = 0; tt < this.boneCount; tt++)
-          if (0 !== this.touched[tt])
-            for (let et = 3 * tt; et < 3 * tt + 3; et++) {
-              const tt = this.rotation[et],
-                Vt = this.position[et],
-                mt = this.scale[et];
-              tt >= -36e4 && tt <= Dt || (this.rotation[et] = jt(tt, Dt)), Vt >= -1024 && Vt <= Ot || (this.position[et] = jt(Vt, Ot)), mt >= -qt && mt <= qt || (this.scale[et] = jt(mt, qt, 1))
+        for (let uu = 0; uu < this.boneCount; uu++)
+          if (0 !== this.touched[uu])
+            for (let Eu = 3 * uu; Eu < 3 * uu + 3; Eu++) {
+              const uu = this.rotation[Eu],
+                ju = this.position[Eu],
+                Xu = this.scale[Eu];
+              uu >= -36e4 && uu <= Zu || (this.rotation[Eu] = qu(uu, Zu)), ju >= -1024 && ju <= su || (this.position[Eu] = qu(ju, su)), Xu >= -Uu && Xu <= Uu || (this.scale[Eu] = qu(Xu, Uu, 1))
             }
       }
       reset() {
-        for (let tt = 0; tt < this.boneCount; tt++)
-          if (0 !== this.touched[tt]) {
-            this.touched[tt] = 0;
-            for (let et = 3 * tt; et < 3 * tt + 3; et++) this.rotation[et] = 0, this.position[et] = 0, this.scale[et] = 1
+        for (let uu = 0; uu < this.boneCount; uu++)
+          if (0 !== this.touched[uu]) {
+            this.touched[uu] = 0;
+            for (let Eu = 3 * uu; Eu < 3 * uu + 3; Eu++) this.rotation[Eu] = 0, this.position[Eu] = 0, this.scale[Eu] = 1
           }
       }
     }
-    class dt {
-      constructor(tt) {
-        this.rotation = void 0, this.position = void 0, this.scaleDelta = void 0, this.boneWeight = void 0, this.touched = void 0, this.overrides = void 0, this.touchedBones = void 0, this.touchedCount = 0, this.rotation = new Float64Array(3 * tt), this.position = new Float64Array(3 * tt), this.scaleDelta = new Float64Array(3 * tt), this.boneWeight = new Float64Array(tt), this.touched = new Uint8Array(tt), this.overrides = new Uint8Array(tt), this.touchedBones = new Int32Array(tt)
+    class lu {
+      constructor(uu) {
+        this.rotation = void 0, this.position = void 0, this.scaleDelta = void 0, this.boneWeight = void 0, this.touched = void 0, this.overrides = void 0, this.touchedBones = void 0, this.touchedCount = 0, this.rotation = new Float64Array(3 * uu), this.position = new Float64Array(3 * uu), this.scaleDelta = new Float64Array(3 * uu), this.boneWeight = new Float64Array(uu), this.touched = new Uint8Array(uu), this.overrides = new Uint8Array(uu), this.touchedBones = new Int32Array(uu)
       }
-      touch(tt, et, Vt) {
-        0 === this.touched[tt] && (this.touched[tt] = 1, this.touchedBones[this.touchedCount++] = tt), this.boneWeight[tt] += et, Vt && (this.overrides[tt] = 1)
+      touch(uu, Eu, ju) {
+        0 === this.touched[uu] && (this.touched[uu] = 1, this.touchedBones[this.touchedCount++] = uu), this.boneWeight[uu] += Eu, ju && (this.overrides[uu] = 1)
       }
-      applyTo(tt, et, Vt) {
-        let Ot = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        for (let qt = 0; qt < this.touchedCount; qt++) {
-          const Dt = this.touchedBones[qt],
-            mt = this.boneWeight[Dt];
-          if (Vt || 1 === this.overrides[Dt]) {
-            const Vt = et * Math.min(1, mt);
-            for (let et = 3 * Dt; et < 3 * Dt + 3; et++) tt.rotation[et] += (this.rotation[et] / mt - tt.rotation[et]) * Vt, tt.position[et] += (this.position[et] / mt - tt.position[et]) * Vt, tt.scale[et] += (1 + this.scaleDelta[et] / mt - tt.scale[et]) * Vt
+      applyTo(uu, Eu, ju) {
+        let su = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        for (let Uu = 0; Uu < this.touchedCount; Uu++) {
+          const Zu = this.touchedBones[Uu],
+            Xu = this.boneWeight[Zu];
+          if (ju || 1 === this.overrides[Zu]) {
+            const ju = Eu * Math.min(1, Xu);
+            for (let Eu = 3 * Zu; Eu < 3 * Zu + 3; Eu++) uu.rotation[Eu] += (this.rotation[Eu] / Xu - uu.rotation[Eu]) * ju, uu.position[Eu] += (this.position[Eu] / Xu - uu.position[Eu]) * ju, uu.scale[Eu] += (1 + this.scaleDelta[Eu] / Xu - uu.scale[Eu]) * ju
           } else {
-            const Vt = Ot && mt > 1 ? et / mt : et;
-            for (let et = 3 * Dt; et < 3 * Dt + 3; et++) tt.rotation[et] += this.rotation[et] * Vt, tt.position[et] += this.position[et] * Vt, tt.scale[et] *= 1 + this.scaleDelta[et] * Vt
+            const ju = su && Xu > 1 ? Eu / Xu : Eu;
+            for (let Eu = 3 * Zu; Eu < 3 * Zu + 3; Eu++) uu.rotation[Eu] += this.rotation[Eu] * ju, uu.position[Eu] += this.position[Eu] * ju, uu.scale[Eu] *= 1 + this.scaleDelta[Eu] * ju
           }
-          tt.touched[Dt] = 1
+          uu.touched[Zu] = 1
         }
       }
       clear() {
-        for (let tt = 0; tt < this.touchedCount; tt++) {
-          const et = this.touchedBones[tt];
-          this.touched[et] = 0, this.overrides[et] = 0, this.boneWeight[et] = 0;
-          for (let tt = 3 * et; tt < 3 * et + 3; tt++) this.rotation[tt] = 0, this.position[tt] = 0, this.scaleDelta[tt] = 0
+        for (let uu = 0; uu < this.touchedCount; uu++) {
+          const Eu = this.touchedBones[uu];
+          this.touched[Eu] = 0, this.overrides[Eu] = 0, this.boneWeight[Eu] = 0;
+          for (let uu = 3 * Eu; uu < 3 * Eu + 3; uu++) this.rotation[uu] = 0, this.position[uu] = 0, this.scaleDelta[uu] = 0
         }
         this.touchedCount = 0
       }
     }
 
-    function jt(tt, et) {
-      let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-      return Number.isNaN(tt) ? Vt : Math.min(et, Math.max(-et, tt))
+    function qu(uu, Eu) {
+      let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      return Number.isNaN(uu) ? ju : Math.min(Eu, Math.max(-Eu, uu))
     }
   },
-  37403: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => jt,
-      e: () => dt
+  37554: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => qu,
+      d: () => lu
     });
-    var Ot = Vt(37398),
-      qt = Vt(391),
-      Dt = Vt(1993),
-      mt = Vt(37411);
+    var su = ju(37541),
+      Uu = ju(349),
+      Zu = ju(1955),
+      Xu = ju(37562);
 
-    function dt(tt) {
-      if ("eq" in tt) return vt.createAnimationScript(tt);
-      return new Xt(tt).createAnimationScript()
+    function lu(uu) {
+      if ("UU" in uu) return du.createAnimationScript(uu);
+      return new Cu(uu).createAnimationScript()
     }
 
-    function jt(tt, et, Vt, qt) {
-      const Dt = tt.eq <= 0 ? 1 : et + Vt * Math.max(0, qt) / tt.eq;
-      return tt.Vq === Ot.k.LoopOnLastFrame ? Dt % 1 : tt.Vq === Ot.k.NoLoop && Dt >= 1 ? null : Math.min(1, Dt)
+    function qu(uu, Eu, ju, Uu) {
+      const Zu = uu.UU <= 0 ? 1 : Eu + ju * Math.max(0, Uu) / uu.UU;
+      return uu.ZU === su.k.LoopOnLastFrame ? Zu % 1 : uu.ZU === su.k.NoLoop && Zu >= 1 ? null : Math.min(1, Zu)
     }
-    class Ht {
-      createAnimationScript(tt) {
+    class fu {
+      createAnimationScript(uu) {
         const {
-          eq: et,
-          loop: Vt,
-          Oq: Ot
-        } = tt;
+          UU: Eu,
+          loop: ju,
+          XU: su
+        } = uu;
         return {
-          eq: Math.round(et),
-          Vq: this.createLoopMode(null !== Vt && void 0 !== Vt && Vt),
-          Oq: this.createNodeSkeletonAnimationScript(null !== Ot && void 0 !== Ot ? Ot : null)
+          UU: Math.round(Eu),
+          ZU: this.createLoopMode(null !== ju && void 0 !== ju && ju),
+          XU: this.createNodeSkeletonAnimationScript(null !== su && void 0 !== su ? su : null)
         }
       }
-      createLoopMode(tt) {
-        switch (tt) {
+      createLoopMode(uu) {
+        switch (uu) {
           case !1:
-            return Ot.k.NoLoop;
+            return su.k.NoLoop;
           case !0:
-            return Ot.k.LoopOnLastFrame;
+            return su.k.LoopOnLastFrame;
           case "hold-on-last-frame":
-            return Ot.k.HoldOnLastFrame
+            return su.k.HoldOnLastFrame
         }
-        throw new Error(`Invalid loop mode schema: ${tt}`)
+        throw new Error(`Invalid loop mode schema: ${uu}`)
       }
-      createNodeSkeletonAnimationScript(tt) {
-        if (null === tt) return null;
-        const et = {};
-        for (const Vt in tt) {
-          const Ot = tt[Vt];
-          et[Vt] = this.createNodeAnimationScript(Ot)
+      createNodeSkeletonAnimationScript(uu) {
+        if (null === uu) return null;
+        const Eu = {};
+        for (const ju in uu) {
+          const su = uu[ju];
+          Eu[ju] = this.createNodeAnimationScript(su)
         }
-        return et
+        return Eu
       }
-      createNodeAnimationScript(tt) {
+      createNodeAnimationScript(uu) {
         const {
-          timeline: et
-        } = tt, Vt = et.filter((tt => Number.isFinite(tt.timeFraction)));
-        return Vt.sort(((tt, et) => tt.timeFraction - et.timeFraction)), {
-          rotation: this.createTimelineFromKeyframes(Vt, "rotation", Et),
-          position: this.createTimelineFromKeyframes(Vt, "position", wt),
-          scale: this.createTimelineFromKeyframes(Vt, "scale", wt, Nt)
+          timeline: Eu
+        } = uu, ju = Eu.filter((uu => Number.isFinite(uu.timeFraction)));
+        return ju.sort(((uu, Eu) => uu.timeFraction - Eu.timeFraction)), {
+          rotation: this.createTimelineFromKeyframes(ju, "rotation", Nu),
+          position: this.createTimelineFromKeyframes(ju, "position", Yu),
+          scale: this.createTimelineFromKeyframes(ju, "scale", Yu, Du)
         }
       }
-      createTimelineFromKeyframes(tt, et, Vt) {
-        let Ot = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : tt => tt;
-        const qt = [];
-        for (const Ht of tt) {
-          const tt = Ht[et];
-          if (tt) {
-            const et = this.createAnimationFrameWithoutPrecomputes(Ht.timeFraction, tt, Ot);
-            Qt(et) && qt.push(et)
+      createTimelineFromKeyframes(uu, Eu, ju) {
+        let su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : uu => uu;
+        const Uu = [];
+        for (const fu of uu) {
+          const uu = fu[Eu];
+          if (uu) {
+            const Eu = this.createAnimationFrameWithoutPrecomputes(fu.timeFraction, uu, su);
+            bu(Eu) && Uu.push(Eu)
           }
         }
-        const Dt = [];
-        for (let Ht = 0; Ht < qt.length; Ht++) {
-          var mt, dt, jt;
-          const tt = qt[Ht],
-            et = null !== (mt = qt[Ht - 1]) && void 0 !== mt ? mt : tt,
-            Ot = null !== (dt = qt[Ht + 1]) && void 0 !== dt ? dt : tt,
-            Xt = null !== (jt = qt[Ht + 2]) && void 0 !== jt ? jt : Ot;
-          Dt.push({
-            ...tt,
-            ...Vt(et.post, et.timeFraction, tt.post, tt.timeFraction, Ot.pre, Ot.timeFraction, Xt.pre, Xt.timeFraction)
+        const Zu = [];
+        for (let fu = 0; fu < Uu.length; fu++) {
+          var Xu, lu, qu;
+          const uu = Uu[fu],
+            Eu = null !== (Xu = Uu[fu - 1]) && void 0 !== Xu ? Xu : uu,
+            su = null !== (lu = Uu[fu + 1]) && void 0 !== lu ? lu : uu,
+            Cu = null !== (qu = Uu[fu + 2]) && void 0 !== qu ? qu : su;
+          Zu.push({
+            ...uu,
+            ...ju(Eu.post, Eu.timeFraction, uu.post, uu.timeFraction, su.pre, su.timeFraction, Cu.pre, Cu.timeFraction)
           })
         }
-        return Dt
+        return Zu
       }
-      createAnimationFrameWithoutPrecomputes(tt, et, Vt) {
-        let Ot, qt, Dt = null;
-        var mt;
-        if ("object" === typeof et && "point" in et) Dt = null !== (mt = et.mq) && void 0 !== mt ? mt : null, Ot = et.point, qt = et.point;
-        else if ("object" === typeof et && "pre" in et) {
-          var dt;
-          Dt = null !== (dt = et.mq) && void 0 !== dt ? dt : null, Ot = et.pre, qt = et.post
-        } else Ot = et, qt = et;
+      createAnimationFrameWithoutPrecomputes(uu, Eu, ju) {
+        let su, Uu, Zu = null;
+        var Xu;
+        if ("object" === typeof Eu && "point" in Eu) Zu = null !== (Xu = Eu.fU) && void 0 !== Xu ? Xu : null, su = Eu.point, Uu = Eu.point;
+        else if ("object" === typeof Eu && "pre" in Eu) {
+          var lu;
+          Zu = null !== (lu = Eu.fU) && void 0 !== lu ? lu : null, su = Eu.pre, Uu = Eu.post
+        } else su = Eu, Uu = Eu;
         return {
-          timeFraction: tt,
-          mq: this.createLerpMode(Dt),
-          pre: Vt(Ot),
-          post: Vt(qt)
+          timeFraction: uu,
+          fU: this.createLerpMode(Zu),
+          pre: ju(su),
+          post: ju(Uu)
         }
       }
-      createLerpMode(tt) {
-        return null === tt ? Ot.i.Linear : Ht.LERP_MODE_SCHEMA_MAPPING[tt]
+      createLerpMode(uu) {
+        return null === uu ? su.h.Linear : fu.LERP_MODE_SCHEMA_MAPPING[uu]
       }
     }
-    Ht.LERP_MODE_SCHEMA_MAPPING = {
-      linear: Ot.i.Linear,
-      "catmull-rom-spline": Ot.i.CatmullRomSpline
+    fu.LERP_MODE_SCHEMA_MAPPING = {
+      linear: su.h.Linear,
+      "catmull-rom-spline": su.h.CatmullRomSpline
     };
-    class Xt {
-      constructor(tt) {
-        this.animationSchema = tt
+    class Cu {
+      constructor(uu) {
+        this.animationSchema = uu
       }
       createAnimationScript() {
         const {
-          animation_length: tt,
-          loop: et,
-          bones: Vt
+          animation_length: uu,
+          loop: Eu,
+          bones: ju
         } = this.animationSchema;
         return {
-          eq: Math.round(1e3 * tt),
-          Vq: this.createLoopMode(null !== et && void 0 !== et && et),
-          Oq: this.createNodeSkeletonAnimationScript(null !== Vt && void 0 !== Vt ? Vt : null)
+          UU: Math.round(1e3 * uu),
+          ZU: this.createLoopMode(null !== Eu && void 0 !== Eu && Eu),
+          XU: this.createNodeSkeletonAnimationScript(null !== ju && void 0 !== ju ? ju : null)
         }
       }
-      createLoopMode(tt) {
-        switch (tt) {
+      createLoopMode(uu) {
+        switch (uu) {
           case !1:
-            return Ot.k.NoLoop;
+            return su.k.NoLoop;
           case !0:
-            return Ot.k.LoopOnLastFrame;
+            return su.k.LoopOnLastFrame;
           case "hold_on_last_frame":
-            return Ot.k.HoldOnLastFrame
+            return su.k.HoldOnLastFrame
         }
-        throw new Error(`Invalid Blockbench loop mode schema: ${tt}`)
+        throw new Error(`Invalid Blockbench loop mode schema: ${uu}`)
       }
-      createNodeSkeletonAnimationScript(tt) {
-        if (null === tt) return null;
-        const et = {};
-        for (const Vt in tt) {
-          const Ot = tt[Vt];
-          et[Vt] = this.createNodeAnimationScript(Ot)
+      createNodeSkeletonAnimationScript(uu) {
+        if (null === uu) return null;
+        const Eu = {};
+        for (const ju in uu) {
+          const su = uu[ju];
+          Eu[ju] = this.createNodeAnimationScript(su)
         }
-        return et
+        return Eu
       }
-      createNodeAnimationScript(tt) {
+      createNodeAnimationScript(uu) {
         const {
-          rotation: et,
-          position: Vt,
-          scale: Ot
-        } = tt;
+          rotation: Eu,
+          position: ju,
+          scale: su
+        } = uu;
         return {
-          rotation: this.createAnimationTimeline(null !== et && void 0 !== et ? et : null, bt, Et, !0),
-          position: this.createAnimationTimeline(null !== Vt && void 0 !== Vt ? Vt : null, Ct, wt, !1),
-          scale: this.createAnimationTimeline(null !== Ot && void 0 !== Ot ? Ot : null, yt, wt, !1)
+          rotation: this.createAnimationTimeline(null !== Eu && void 0 !== Eu ? Eu : null, Mu, Nu, !0),
+          position: this.createAnimationTimeline(null !== ju && void 0 !== ju ? ju : null, Gu, Yu, !1),
+          scale: this.createAnimationTimeline(null !== su && void 0 !== su ? su : null, hu, Yu, !1)
         }
       }
-      createAnimationTimeline(tt, et, Vt, Ot) {
-        if (null === tt) return [];
-        (Array.isArray(tt) || "number" === typeof tt) && (tt = {
-          "0.0": tt
+      createAnimationTimeline(uu, Eu, ju, su) {
+        if (null === uu) return [];
+        (Array.isArray(uu) || "number" === typeof uu) && (uu = {
+          "0.0": uu
         });
-        const qt = Object.entries(tt).map((tt => {
-          let [Vt, Ot] = tt;
-          const qt = Number(Vt) / this.animationSchema.animation_length;
-          return this.createAnimationFrameWithoutPrecomputes(qt, Ot, et)
-        })).filter(Qt);
-        qt.sort(((tt, et) => tt.timeFraction - et.timeFraction)), Ot && function(tt) {
-          for (let et = 1; et < tt.length; et++) {
-            const Vt = tt[et - 1].post,
-              Ot = tt[et],
-              qt = ut(Ot.pre),
-              Dt = ut(Ot.post),
-              mt = ht(Vt, Ot.pre);
-            ht(Vt, qt) < mt && (tt[et] = {
-              ...Ot,
-              pre: qt,
-              post: Dt
+        const Uu = Object.entries(uu).map((uu => {
+          let [ju, su] = uu;
+          const Uu = Number(ju) / this.animationSchema.animation_length;
+          return this.createAnimationFrameWithoutPrecomputes(Uu, su, Eu)
+        })).filter(bu);
+        Uu.sort(((uu, Eu) => uu.timeFraction - Eu.timeFraction)), su && function(uu) {
+          for (let Eu = 1; Eu < uu.length; Eu++) {
+            const ju = uu[Eu - 1].post,
+              su = uu[Eu],
+              Uu = pu(su.pre),
+              Zu = pu(su.post),
+              Xu = Ju(ju, su.pre);
+            Ju(ju, Uu) < Xu && (uu[Eu] = {
+              ...su,
+              pre: Uu,
+              post: Zu
             })
           }
-        }(qt);
-        const Dt = [];
-        for (let Ht = 0; Ht < qt.length; Ht++) {
-          var mt, dt, jt;
-          const tt = qt[Ht],
-            et = null !== (mt = qt[Ht - 1]) && void 0 !== mt ? mt : tt,
-            Ot = null !== (dt = qt[Ht + 1]) && void 0 !== dt ? dt : tt,
-            Xt = null !== (jt = qt[Ht + 2]) && void 0 !== jt ? jt : Ot;
-          Dt.push({
-            ...tt,
-            ...Vt(et.post, et.timeFraction, tt.post, tt.timeFraction, Ot.pre, Ot.timeFraction, Xt.pre, Xt.timeFraction)
+        }(Uu);
+        const Zu = [];
+        for (let fu = 0; fu < Uu.length; fu++) {
+          var Xu, lu, qu;
+          const uu = Uu[fu],
+            Eu = null !== (Xu = Uu[fu - 1]) && void 0 !== Xu ? Xu : uu,
+            su = null !== (lu = Uu[fu + 1]) && void 0 !== lu ? lu : uu,
+            Cu = null !== (qu = Uu[fu + 2]) && void 0 !== qu ? qu : su;
+          Zu.push({
+            ...uu,
+            ...ju(Eu.post, Eu.timeFraction, uu.post, uu.timeFraction, su.pre, su.timeFraction, Cu.pre, Cu.timeFraction)
           })
         }
-        return Dt
+        return Zu
       }
-      createAnimationFrameWithoutPrecomputes(tt, et, Vt) {
-        let Ot, qt, Dt = null;
-        if ("object" === typeof et && "post" in et) {
-          var mt;
-          Dt = null !== (mt = et.lerp_mode) && void 0 !== mt ? mt : null, qt = Vt(et.post), Ot = void 0 !== et.pre ? Vt(et.pre) : qt
+      createAnimationFrameWithoutPrecomputes(uu, Eu, ju) {
+        let su, Uu, Zu = null;
+        if ("object" === typeof Eu && "post" in Eu) {
+          var Xu;
+          Zu = null !== (Xu = Eu.lerp_mode) && void 0 !== Xu ? Xu : null, Uu = ju(Eu.post), su = void 0 !== Eu.pre ? ju(Eu.pre) : Uu
         } else {
-          const tt = Vt(et);
-          qt = tt, Ot = tt
+          const uu = ju(Eu);
+          Uu = uu, su = uu
         }
         return {
-          timeFraction: tt,
-          mq: this.createLerpMode(Dt),
-          pre: Ot,
-          post: qt
+          timeFraction: uu,
+          fU: this.createLerpMode(Zu),
+          pre: su,
+          post: Uu
         }
       }
-      createLerpMode(tt) {
-        return null === tt ? Ot.i.Linear : Xt.LERP_MODE_SCHEMA_MAPPING[tt]
+      createLerpMode(uu) {
+        return null === uu ? su.h.Linear : Cu.LERP_MODE_SCHEMA_MAPPING[uu]
       }
     }
 
-    function Qt(tt) {
-      return Number.isFinite(tt.timeFraction) && lt(tt.pre) && lt(tt.post)
+    function bu(uu) {
+      return Number.isFinite(uu.timeFraction) && cu(uu.pre) && cu(uu.post)
     }
 
-    function lt(tt) {
-      return Number.isFinite(tt[0]) && Number.isFinite(tt[1]) && Number.isFinite(tt[2])
+    function cu(uu) {
+      return Number.isFinite(uu[0]) && Number.isFinite(uu[1]) && Number.isFinite(uu[2])
     }
 
-    function Et(tt, et, Vt, Ot, qt, Dt, mt, dt) {
-      const jt = Dt - et,
-        Ht = Dt - Ot,
-        Xt = dt - Ot,
-        Qt = [null, null, null];
-      for (let lt = 0; lt < Qt.length; lt++) Qt[lt] = ft(tt[lt], Vt[lt], qt[lt], mt[lt], jt, Xt);
+    function Nu(uu, Eu, ju, su, Uu, Zu, Xu, lu) {
+      const qu = Zu - Eu,
+        fu = Zu - su,
+        Cu = lu - su,
+        bu = [null, null, null];
+      for (let cu = 0; cu < bu.length; cu++) bu[cu] = Ou(uu[cu], ju[cu], Uu[cu], Xu[cu], qu, Cu);
       return {
-        dq: Ht,
-        jq: Qt
+        CU: fu,
+        bU: bu
       }
     }
 
-    function ft(tt, et, Vt, Ot, Dt, mt) {
+    function Ou(uu, Eu, ju, su, Zu, Xu) {
       return {
-        Xq: qt.e.computeShortestRotation(tt, Vt) / Dt,
-        Qq: qt.e.computeShortestRotation(et, Ot) / mt,
-        delta: qt.e.computeShortestRotation(et, Vt)
+        NU: Uu.b.computeShortestRotation(uu, ju) / Zu,
+        OU: Uu.b.computeShortestRotation(Eu, su) / Xu,
+        delta: Uu.b.computeShortestRotation(Eu, ju)
       }
     }
 
-    function wt(tt, et, Vt, Ot, qt, Dt, mt, dt) {
-      const jt = Dt - et,
-        Ht = Dt - Ot,
-        Xt = dt - Ot,
-        Qt = [null, null, null];
-      for (let lt = 0; lt < Qt.length; lt++) Qt[lt] = {
-        Xq: (qt[lt] - tt[lt]) / jt,
-        Qq: (mt[lt] - Vt[lt]) / Xt,
-        delta: qt[lt] - Vt[lt]
+    function Yu(uu, Eu, ju, su, Uu, Zu, Xu, lu) {
+      const qu = Zu - Eu,
+        fu = Zu - su,
+        Cu = lu - su,
+        bu = [null, null, null];
+      for (let cu = 0; cu < bu.length; cu++) bu[cu] = {
+        NU: (Uu[cu] - uu[cu]) / qu,
+        OU: (Xu[cu] - ju[cu]) / Cu,
+        delta: Uu[cu] - ju[cu]
       };
       return {
-        dq: Ht,
-        jq: Qt
+        CU: fu,
+        bU: bu
       }
     }
 
-    function yt(tt) {
-      return Nt("number" === typeof tt ? [tt, tt, tt] : tt)
+    function hu(uu) {
+      return Du("number" === typeof uu ? [uu, uu, uu] : uu)
     }
 
-    function Nt(tt) {
-      return [Mt(tt[0]), Mt(tt[1]), Mt(tt[2])]
+    function Du(uu) {
+      return [gu(uu[0]), gu(uu[1]), gu(uu[2])]
     }
 
-    function Mt(tt) {
-      return Number.isFinite(tt) ? Math.min(mt.j, Math.max(-mt.j, tt)) : tt
+    function gu(uu) {
+      return Number.isFinite(uu) ? Math.min(Xu.h, Math.max(-Xu.h, uu)) : uu
     }
 
-    function bt(tt) {
-      const [et, Vt, Ot] = tt, mt = -(0, Dt.l)(et), dt = -(0, Dt.l)(Vt), jt = (0, Dt.l)(Ot), Ht = qt.e.quaternionFromEulerZYX(mt, dt, jt);
-      return qt.e.eulerYXZFromQuaternion(Ht)
+    function Mu(uu) {
+      const [Eu, ju, su] = uu, Xu = -(0, Zu.k)(Eu), lu = -(0, Zu.k)(ju), qu = (0, Zu.k)(su), fu = Uu.b.quaternionFromEulerZYX(Xu, lu, qu);
+      return Uu.b.eulerYXZFromQuaternion(fu)
     }
-    Xt.LERP_MODE_SCHEMA_MAPPING = {
-      linear: Ot.i.Linear,
-      catmullrom: Ot.i.CatmullRomSpline
+    Cu.LERP_MODE_SCHEMA_MAPPING = {
+      linear: su.h.Linear,
+      catmullrom: su.h.CatmullRomSpline
     };
-    const Jt = 1 / 16;
+    const eu = 1 / 16;
 
-    function Ct(tt) {
-      return [-tt[0] * Jt, tt[1] * Jt, tt[2] * Jt]
+    function Gu(uu) {
+      return [-uu[0] * eu, uu[1] * eu, uu[2] * eu]
     }
 
-    function ut(tt) {
-      const [et, Vt, Ot] = tt;
-      return [et >= 0 ? Math.PI - et : -Math.PI - et, Kt(Vt + Math.PI), Kt(Ot + Math.PI)]
+    function pu(uu) {
+      const [Eu, ju, su] = uu;
+      return [Eu >= 0 ? Math.PI - Eu : -Math.PI - Eu, wu(ju + Math.PI), wu(su + Math.PI)]
     }
 
-    function Kt(tt) {
-      return qt.e.mod(tt + Math.PI, 2 * Math.PI) - Math.PI
+    function wu(uu) {
+      return Uu.b.mod(uu + Math.PI, 2 * Math.PI) - Math.PI
     }
 
-    function ht(tt, et) {
-      return Math.abs(qt.e.computeShortestRotation(tt[0], et[0])) + Math.abs(qt.e.computeShortestRotation(tt[1], et[1])) + Math.abs(qt.e.computeShortestRotation(tt[2], et[2]))
+    function Ju(uu, Eu) {
+      return Math.abs(Uu.b.computeShortestRotation(uu[0], Eu[0])) + Math.abs(Uu.b.computeShortestRotation(uu[1], Eu[1])) + Math.abs(Uu.b.computeShortestRotation(uu[2], Eu[2]))
     }
-    const vt = new Ht
+    const du = new fu
   },
-  37398: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => mt,
-      g: () => Dt,
-      i: () => Ot,
-      k: () => qt
+  37541: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => Xu,
+      f: () => Zu,
+      h: () => su,
+      k: () => Uu
     });
-    let Ot = function(tt) {
-        return tt[tt.Linear = 0] = "Linear", tt[tt.CatmullRomSpline = 1] = "CatmullRomSpline", tt
+    let su = function(uu) {
+        return uu[uu.Linear = 0] = "Linear", uu[uu.CatmullRomSpline = 1] = "CatmullRomSpline", uu
       }({}),
-      qt = function(tt) {
-        return tt[tt.NoLoop = 0] = "NoLoop", tt[tt.LoopOnLastFrame = 1] = "LoopOnLastFrame", tt[tt.HoldOnLastFrame = 2] = "HoldOnLastFrame", tt
+      Uu = function(uu) {
+        return uu[uu.NoLoop = 0] = "NoLoop", uu[uu.LoopOnLastFrame = 1] = "LoopOnLastFrame", uu[uu.HoldOnLastFrame = 2] = "HoldOnLastFrame", uu
       }({}),
-      Dt = function(tt) {
-        return tt[tt.Movement = 0] = "Movement", tt[tt.Action = 1] = "Action", tt[tt.Emote = 2] = "Emote", tt[tt.Custom = 3] = "Custom", tt
+      Zu = function(uu) {
+        return uu[uu.Movement = 0] = "Movement", uu[uu.Action = 1] = "Action", uu[uu.Emote = 2] = "Emote", uu[uu.Custom = 3] = "Custom", uu
       }({}),
-      mt = function(tt) {
-        return tt[tt.Start = 0] = "Start", tt[tt.Stop = 1] = "Stop", tt
+      Xu = function(uu) {
+        return uu[uu.Start = 0] = "Start", uu[uu.Stop = 1] = "Stop", uu
       }({})
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

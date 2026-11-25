@@ -1,99 +1,99 @@
 export const id = 80;
 export const ids = [80];
 export const modules = {
-  4888: tt => {
-    function et(tt) {
-      return tt instanceof Map ? tt.clear = tt.delete = tt.set = function() {
+  4908: uu => {
+    function Eu(uu) {
+      return uu instanceof Map ? uu.clear = uu.delete = uu.set = function() {
         throw new Error("map is read-only")
-      } : tt instanceof Set && (tt.add = tt.clear = tt.delete = function() {
+      } : uu instanceof Set && (uu.add = uu.clear = uu.delete = function() {
         throw new Error("set is read-only")
-      }), Object.freeze(tt), Object.getOwnPropertyNames(tt).forEach((Vt => {
-        const Ot = tt[Vt],
-          qt = typeof Ot;
-        "object" !== qt && "function" !== qt || Object.isFrozen(Ot) || et(Ot)
-      })), tt
+      }), Object.freeze(uu), Object.getOwnPropertyNames(uu).forEach((ju => {
+        const su = uu[ju],
+          Uu = typeof su;
+        "object" !== Uu && "function" !== Uu || Object.isFrozen(su) || Eu(su)
+      })), uu
     }
-    class Vt {
-      constructor(tt) {
-        void 0 === tt.data && (tt.data = {}), this.data = tt.data, this.isMatchIgnored = !1
+    class ju {
+      constructor(uu) {
+        void 0 === uu.data && (uu.data = {}), this.data = uu.data, this.isMatchIgnored = !1
       }
       ignoreMatch() {
         this.isMatchIgnored = !0
       }
     }
 
-    function Ot(tt) {
-      return tt.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;")
+    function su(uu) {
+      return uu.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;")
     }
 
-    function qt(tt) {
-      const et = Object.create(null);
-      for (const Dt in tt) et[Dt] = tt[Dt];
-      for (var Vt = arguments.length, Ot = new Array(Vt > 1 ? Vt - 1 : 0), qt = 1; qt < Vt; qt++) Ot[qt - 1] = arguments[qt];
-      return Ot.forEach((function(tt) {
-        for (const Vt in tt) et[Vt] = tt[Vt]
-      })), et
+    function Uu(uu) {
+      const Eu = Object.create(null);
+      for (const Zu in uu) Eu[Zu] = uu[Zu];
+      for (var ju = arguments.length, su = new Array(ju > 1 ? ju - 1 : 0), Uu = 1; Uu < ju; Uu++) su[Uu - 1] = arguments[Uu];
+      return su.forEach((function(uu) {
+        for (const ju in uu) Eu[ju] = uu[ju]
+      })), Eu
     }
-    const Dt = tt => !!tt.scope;
-    class mt {
-      constructor(tt, et) {
-        this.buffer = "", this.classPrefix = et.classPrefix, tt.walk(this)
+    const Zu = uu => !!uu.scope;
+    class Xu {
+      constructor(uu, Eu) {
+        this.buffer = "", this.classPrefix = Eu.classPrefix, uu.walk(this)
       }
-      addText(tt) {
-        this.buffer += Ot(tt)
+      addText(uu) {
+        this.buffer += su(uu)
       }
-      openNode(tt) {
-        if (!Dt(tt)) return;
-        const et = ((tt, et) => {
+      openNode(uu) {
+        if (!Zu(uu)) return;
+        const Eu = ((uu, Eu) => {
           let {
-            prefix: Vt
-          } = et;
-          if (tt.startsWith("language:")) return tt.replace("language:", "language-");
-          if (tt.includes(".")) {
-            const et = tt.split(".");
-            return [`${Vt}${et.shift()}`, ...et.map(((tt, et) => `${tt}${"_".repeat(et+1)}`))].join(" ")
+            prefix: ju
+          } = Eu;
+          if (uu.startsWith("language:")) return uu.replace("language:", "language-");
+          if (uu.includes(".")) {
+            const Eu = uu.split(".");
+            return [`${ju}${Eu.shift()}`, ...Eu.map(((uu, Eu) => `${uu}${"_".repeat(Eu+1)}`))].join(" ")
           }
-          return `${Vt}${tt}`
-        })(tt.scope, {
+          return `${ju}${uu}`
+        })(uu.scope, {
           prefix: this.classPrefix
         });
-        this.span(et)
+        this.span(Eu)
       }
-      closeNode(tt) {
-        Dt(tt) && (this.buffer += "</span>")
+      closeNode(uu) {
+        Zu(uu) && (this.buffer += "</span>")
       }
       value() {
         return this.buffer
       }
-      span(tt) {
-        this.buffer += `<span class="${tt}">`
+      span(uu) {
+        this.buffer += `<span class="${uu}">`
       }
     }
-    const dt = function() {
-      let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      const et = {
+    const lu = function() {
+      let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      const Eu = {
         children: []
       };
-      return Object.assign(et, tt), et
+      return Object.assign(Eu, uu), Eu
     };
-    class jt {
+    class qu {
       constructor() {
-        this.rM = dt(), this.stack = [this.rM]
+        this.XM = lu(), this.stack = [this.XM]
       }
       get top() {
         return this.stack[this.stack.length - 1]
       }
       get root() {
-        return this.rM
+        return this.XM
       }
-      add(tt) {
-        this.top.children.push(tt)
+      add(uu) {
+        this.top.children.push(uu)
       }
-      openNode(tt) {
-        const et = dt({
-          scope: tt
+      openNode(uu) {
+        const Eu = lu({
+          scope: uu
         });
-        this.add(et), this.stack.push(et)
+        this.add(Eu), this.stack.push(Eu)
       }
       closeNode() {
         if (this.stack.length > 1) return this.stack.pop()
@@ -102,391 +102,391 @@ export const modules = {
         for (; this.closeNode(););
       }
       toJSON() {
-        return JSON.stringify(this.rM, null, 4)
+        return JSON.stringify(this.XM, null, 4)
       }
-      walk(tt) {
-        return this.constructor._walk(tt, this.rM)
+      walk(uu) {
+        return this.constructor._walk(uu, this.XM)
       }
-      static _walk(tt, et) {
-        return "string" === typeof et ? tt.addText(et) : et.children && (tt.openNode(et), et.children.forEach((et => this._walk(tt, et))), tt.closeNode(et)), tt
+      static _walk(uu, Eu) {
+        return "string" === typeof Eu ? uu.addText(Eu) : Eu.children && (uu.openNode(Eu), Eu.children.forEach((Eu => this._walk(uu, Eu))), uu.closeNode(Eu)), uu
       }
-      static _collapse(tt) {
-        "string" !== typeof tt && tt.children && (tt.children.every((tt => "string" === typeof tt)) ? tt.children = [tt.children.join("")] : tt.children.forEach((tt => {
-          jt._collapse(tt)
+      static _collapse(uu) {
+        "string" !== typeof uu && uu.children && (uu.children.every((uu => "string" === typeof uu)) ? uu.children = [uu.children.join("")] : uu.children.forEach((uu => {
+          qu._collapse(uu)
         })))
       }
     }
-    class Ht extends jt {
-      constructor(tt) {
-        super(), this.options = tt
+    class fu extends qu {
+      constructor(uu) {
+        super(), this.options = uu
       }
-      addText(tt) {
-        "" !== tt && this.add(tt)
+      addText(uu) {
+        "" !== uu && this.add(uu)
       }
-      startScope(tt) {
-        this.openNode(tt)
+      startScope(uu) {
+        this.openNode(uu)
       }
       endScope() {
         this.closeNode()
       }
-      __addSublanguage(tt, et) {
-        const Vt = tt.root;
-        et && (Vt.scope = `language:${et}`), this.add(Vt)
+      __addSublanguage(uu, Eu) {
+        const ju = uu.root;
+        Eu && (ju.scope = `language:${Eu}`), this.add(ju)
       }
       toHTML() {
-        return new mt(this, this.options).value()
+        return new Xu(this, this.options).value()
       }
       finalize() {
         return this.closeAllNodes(), !0
       }
     }
 
-    function Xt(tt) {
-      return tt ? "string" === typeof tt ? tt : tt.source : null
+    function Cu(uu) {
+      return uu ? "string" === typeof uu ? uu : uu.source : null
     }
 
-    function Qt(tt) {
-      return ft("(?=", tt, ")")
+    function bu(uu) {
+      return Ou("(?=", uu, ")")
     }
 
-    function lt(tt) {
-      return ft("(?:", tt, ")*")
+    function cu(uu) {
+      return Ou("(?:", uu, ")*")
     }
 
-    function Et(tt) {
-      return ft("(?:", tt, ")?")
+    function Nu(uu) {
+      return Ou("(?:", uu, ")?")
     }
 
-    function ft() {
-      for (var tt = arguments.length, et = new Array(tt), Vt = 0; Vt < tt; Vt++) et[Vt] = arguments[Vt];
-      return et.map((tt => Xt(tt))).join("")
+    function Ou() {
+      for (var uu = arguments.length, Eu = new Array(uu), ju = 0; ju < uu; ju++) Eu[ju] = arguments[ju];
+      return Eu.map((uu => Cu(uu))).join("")
     }
 
-    function wt() {
-      for (var tt = arguments.length, et = new Array(tt), Vt = 0; Vt < tt; Vt++) et[Vt] = arguments[Vt];
-      const Ot = function(tt) {
-        const et = tt[tt.length - 1];
-        return "object" === typeof et && et.constructor === Object ? (tt.splice(tt.length - 1, 1), et) : {}
-      }(et);
-      return "(" + (Ot.capture ? "" : "?:") + et.map((tt => Xt(tt))).join("|") + ")"
+    function Yu() {
+      for (var uu = arguments.length, Eu = new Array(uu), ju = 0; ju < uu; ju++) Eu[ju] = arguments[ju];
+      const su = function(uu) {
+        const Eu = uu[uu.length - 1];
+        return "object" === typeof Eu && Eu.constructor === Object ? (uu.splice(uu.length - 1, 1), Eu) : {}
+      }(Eu);
+      return "(" + (su.capture ? "" : "?:") + Eu.map((uu => Cu(uu))).join("|") + ")"
     }
 
-    function yt(tt) {
-      return new RegExp(tt.toString() + "|").exec("").length - 1
+    function hu(uu) {
+      return new RegExp(uu.toString() + "|").exec("").length - 1
     }
-    const Nt = /\[(?:[^\\\]]|\\.)*\]|\(\??|\\([1-9][0-9]*)|\\./;
+    const Du = /\[(?:[^\\\]]|\\.)*\]|\(\??|\\([1-9][0-9]*)|\\./;
 
-    function Mt(tt, et) {
+    function gu(uu, Eu) {
       let {
-        joinWith: Vt
-      } = et, Ot = 0;
-      return tt.map((tt => {
-        Ot += 1;
-        const et = Ot;
-        let Vt = Xt(tt),
-          qt = "";
-        for (; Vt.length > 0;) {
-          const tt = Nt.exec(Vt);
-          if (!tt) {
-            qt += Vt;
+        joinWith: ju
+      } = Eu, su = 0;
+      return uu.map((uu => {
+        su += 1;
+        const Eu = su;
+        let ju = Cu(uu),
+          Uu = "";
+        for (; ju.length > 0;) {
+          const uu = Du.exec(ju);
+          if (!uu) {
+            Uu += ju;
             break
           }
-          qt += Vt.substring(0, tt.index), Vt = Vt.substring(tt.index + tt[0].length), "\\" === tt[0][0] && tt[1] ? qt += "\\" + String(Number(tt[1]) + et) : (qt += tt[0], "(" === tt[0] && Ot++)
+          Uu += ju.substring(0, uu.index), ju = ju.substring(uu.index + uu[0].length), "\\" === uu[0][0] && uu[1] ? Uu += "\\" + String(Number(uu[1]) + Eu) : (Uu += uu[0], "(" === uu[0] && su++)
         }
-        return qt
-      })).map((tt => `(${tt})`)).join(Vt)
+        return Uu
+      })).map((uu => `(${uu})`)).join(ju)
     }
-    const bt = "[a-zA-Z]\\w*",
-      Jt = "[a-zA-Z_]\\w*",
-      Ct = "\\b\\d+(\\.\\d+)?",
-      ut = "(-?)(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)",
-      Kt = "\\b(0b[01]+)",
-      ht = {
-        XE: "\\\\[\\s\\S]",
+    const Mu = "[a-zA-Z]\\w*",
+      eu = "[a-zA-Z_]\\w*",
+      Gu = "\\b\\d+(\\.\\d+)?",
+      pu = "(-?)(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)",
+      wu = "\\b(0b[01]+)",
+      Ju = {
+        NN: "\\\\[\\s\\S]",
         relevance: 0
       },
-      vt = {
+      du = {
         scope: "string",
-        XE: "'",
+        NN: "'",
         end: "'",
         illegal: "\\n",
-        contains: [ht]
+        contains: [Ju]
       },
-      Wt = {
+      au = {
         scope: "string",
-        XE: '"',
+        NN: '"',
         end: '"',
         illegal: "\\n",
-        contains: [ht]
+        contains: [Ju]
       },
-      St = function(tt, et) {
-        const Vt = qt({
+      Pu = function(uu, Eu) {
+        const ju = Uu({
           scope: "comment",
-          XE: tt,
-          end: et,
+          NN: uu,
+          end: Eu,
           contains: []
         }, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {});
-        Vt.contains.push({
+        ju.contains.push({
           scope: "doctag",
-          XE: "[ ]*(?=(TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):)",
+          NN: "[ ]*(?=(TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):)",
           end: /(TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):/,
           excludeBegin: !0,
           relevance: 0
         });
-        const Ot = wt("I", "a", "is", "so", "us", "to", "at", "if", "in", "it", "on", /[A-Za-z]+['](d|ve|re|ll|t|s|n)/, /[A-Za-z]+[-][a-z]+/, /[A-Za-z][a-z]{2,}/);
-        return Vt.contains.push({
-          XE: ft(/[ ]+/, "(", Ot, /[.]?[:]?([.][ ]|[ ])/, "){3}")
-        }), Vt
+        const su = Yu("I", "a", "is", "so", "us", "to", "at", "if", "in", "it", "on", /[A-Za-z]+['](d|ve|re|ll|t|s|n)/, /[A-Za-z]+[-][a-z]+/, /[A-Za-z][a-z]{2,}/);
+        return ju.contains.push({
+          NN: Ou(/[ ]+/, "(", su, /[.]?[:]?([.][ ]|[ ])/, "){3}")
+        }), ju
       },
-      ct = St("//", "$"),
-      Rt = St("/\\*", "\\*/"),
-      It = St("#", "$"),
-      Pt = {
+      ou = Pu("//", "$"),
+      ku = Pu("/\\*", "\\*/"),
+      mu = Pu("#", "$"),
+      vu = {
         scope: "number",
-        XE: Ct,
+        NN: Gu,
         relevance: 0
       },
-      Zt = {
+      Ku = {
         scope: "number",
-        XE: ut,
+        NN: pu,
         relevance: 0
       },
-      Lt = {
+      Vu = {
         scope: "number",
-        XE: Kt,
+        NN: wu,
         relevance: 0
       },
-      Ft = {
+      ru = {
         scope: "regexp",
-        XE: /\/(?=[^/\n]*\/)/,
+        NN: /\/(?=[^/\n]*\/)/,
         end: /\/[gimuy]*/,
-        contains: [ht, {
-          XE: /\[/,
+        contains: [Ju, {
+          NN: /\[/,
           end: /\]/,
           relevance: 0,
-          contains: [ht]
+          contains: [Ju]
         }]
       },
-      kt = {
+      Qu = {
         scope: "title",
-        XE: bt,
+        NN: Mu,
         relevance: 0
       },
-      Gt = {
+      iu = {
         scope: "title",
-        XE: Jt,
+        NN: eu,
         relevance: 0
       },
-      zt = {
-        XE: "\\.\\s*" + Jt,
+      Wu = {
+        NN: "\\.\\s*" + eu,
         relevance: 0
       };
-    var ot = Object.freeze({
+    var Su = Object.freeze({
       __proto__: null,
-      APOS_STRING_MODE: vt,
-      BACKSLASH_ESCAPE: ht,
-      BINARY_NUMBER_MODE: Lt,
-      BINARY_NUMBER_RE: Kt,
-      COMMENT: St,
-      C_BLOCK_COMMENT_MODE: Rt,
-      C_LINE_COMMENT_MODE: ct,
-      C_NUMBER_MODE: Zt,
-      C_NUMBER_RE: ut,
-      END_SAME_AS_BEGIN: function(tt) {
-        return Object.assign(tt, {
-          "on:begin": (tt, et) => {
-            et.data._beginMatch = tt[1]
+      APOS_STRING_MODE: du,
+      BACKSLASH_ESCAPE: Ju,
+      BINARY_NUMBER_MODE: Vu,
+      BINARY_NUMBER_RE: wu,
+      COMMENT: Pu,
+      C_BLOCK_COMMENT_MODE: ku,
+      C_LINE_COMMENT_MODE: ou,
+      C_NUMBER_MODE: Ku,
+      C_NUMBER_RE: pu,
+      END_SAME_AS_BEGIN: function(uu) {
+        return Object.assign(uu, {
+          "on:begin": (uu, Eu) => {
+            Eu.data._beginMatch = uu[1]
           },
-          "on:end": (tt, et) => {
-            et.data._beginMatch !== tt[1] && et.ignoreMatch()
+          "on:end": (uu, Eu) => {
+            Eu.data._beginMatch !== uu[1] && Eu.ignoreMatch()
           }
         })
       },
-      HASH_COMMENT_MODE: It,
-      IDENT_RE: bt,
+      HASH_COMMENT_MODE: mu,
+      IDENT_RE: Mu,
       MATCH_NOTHING_RE: /\b\B/,
-      METHOD_GUARD: zt,
-      NUMBER_MODE: Pt,
-      NUMBER_RE: Ct,
+      METHOD_GUARD: Wu,
+      NUMBER_MODE: vu,
+      NUMBER_RE: Gu,
       PHRASAL_WORDS_MODE: {
-        XE: /\b(a|an|the|are|I'm|isn't|don't|doesn't|won't|but|just|should|pretty|simply|enough|gonna|going|wtf|so|such|will|you|your|they|like|more)\b/
+        NN: /\b(a|an|the|are|I'm|isn't|don't|doesn't|won't|but|just|should|pretty|simply|enough|gonna|going|wtf|so|such|will|you|your|they|like|more)\b/
       },
-      QUOTE_STRING_MODE: Wt,
-      REGEXP_MODE: Ft,
+      QUOTE_STRING_MODE: au,
+      REGEXP_MODE: ru,
       RE_STARTERS_RE: "!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|-|-=|/=|/|:|;|<<|<<=|<=|<|===|==|=|>>>=|>>=|>=|>>>|>>|>|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~",
       SHEBANG: function() {
-        let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        const et = /^#![ ]*\//;
-        return tt.binary && (tt.XE = ft(et, /.*\b/, tt.binary, /\b.*/)), qt({
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        const Eu = /^#![ ]*\//;
+        return uu.binary && (uu.NN = Ou(Eu, /.*\b/, uu.binary, /\b.*/)), Uu({
           scope: "meta",
-          XE: et,
+          NN: Eu,
           end: /$/,
           relevance: 0,
-          "on:begin": (tt, et) => {
-            0 !== tt.index && et.ignoreMatch()
+          "on:begin": (uu, Eu) => {
+            0 !== uu.index && Eu.ignoreMatch()
           }
-        }, tt)
+        }, uu)
       },
-      TITLE_MODE: kt,
-      UNDERSCORE_IDENT_RE: Jt,
-      UNDERSCORE_TITLE_MODE: Gt
+      TITLE_MODE: Qu,
+      UNDERSCORE_IDENT_RE: eu,
+      UNDERSCORE_TITLE_MODE: iu
     });
 
-    function rt(tt, et) {
-      "." === tt.input[tt.index - 1] && et.ignoreMatch()
+    function Iu(uu, Eu) {
+      "." === uu.input[uu.index - 1] && Eu.ignoreMatch()
     }
 
-    function Ut(tt, et) {
-      void 0 !== tt.className && (tt.scope = tt.className, delete tt.className)
+    function Fu(uu, Eu) {
+      void 0 !== uu.className && (uu.scope = uu.className, delete uu.className)
     }
 
-    function At(tt, et) {
-      et && tt.beginKeywords && (tt.XE = "\\b(" + tt.beginKeywords.split(" ").join("|") + ")(?!\\.)(?=\\b|\\s)", tt.__beforeBegin = rt, tt.keywords = tt.keywords || tt.beginKeywords, delete tt.beginKeywords, void 0 === tt.relevance && (tt.relevance = 0))
+    function Bu(uu, Eu) {
+      Eu && uu.beginKeywords && (uu.NN = "\\b(" + uu.beginKeywords.split(" ").join("|") + ")(?!\\.)(?=\\b|\\s)", uu.__beforeBegin = Iu, uu.keywords = uu.keywords || uu.beginKeywords, delete uu.beginKeywords, void 0 === uu.relevance && (uu.relevance = 0))
     }
 
-    function it(tt, et) {
-      Array.isArray(tt.illegal) && (tt.illegal = wt(...tt.illegal))
+    function Lu(uu, Eu) {
+      Array.isArray(uu.illegal) && (uu.illegal = Yu(...uu.illegal))
     }
 
-    function Yt(tt, et) {
-      if (tt.match) {
-        if (tt.XE || tt.end) throw new Error("begin & end are not supported with match");
-        tt.XE = tt.match, delete tt.match
+    function tu(uu, Eu) {
+      if (uu.match) {
+        if (uu.NN || uu.end) throw new Error("begin & end are not supported with match");
+        uu.NN = uu.match, delete uu.match
       }
     }
 
-    function Bt(tt, et) {
-      void 0 === tt.relevance && (tt.relevance = 1)
+    function xu(uu, Eu) {
+      void 0 === uu.relevance && (uu.relevance = 1)
     }
-    const pt = (tt, et) => {
-        if (!tt.beforeMatch) return;
-        if (tt.starts) throw new Error("beforeMatch cannot be used with starts");
-        const Vt = Object.assign({}, tt);
-        Object.keys(tt).forEach((et => {
-          delete tt[et]
-        })), tt.keywords = Vt.keywords, tt.XE = ft(Vt.beforeMatch, Qt(Vt.XE)), tt.starts = {
+    const Tu = (uu, Eu) => {
+        if (!uu.beforeMatch) return;
+        if (uu.starts) throw new Error("beforeMatch cannot be used with starts");
+        const ju = Object.assign({}, uu);
+        Object.keys(uu).forEach((Eu => {
+          delete uu[Eu]
+        })), uu.keywords = ju.keywords, uu.NN = Ou(ju.beforeMatch, bu(ju.NN)), uu.starts = {
           relevance: 0,
-          contains: [Object.assign(Vt, {
+          contains: [Object.assign(ju, {
             endsParent: !0
           })]
-        }, tt.relevance = 0, delete Vt.beforeMatch
+        }, uu.relevance = 0, delete ju.beforeMatch
       },
-      xt = ["of", "and", "for", "in", "not", "or", "if", "then", "parent", "list", "value"];
+      Hu = ["of", "and", "for", "in", "not", "or", "if", "then", "parent", "list", "value"];
 
-    function Tt(tt, et) {
-      let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "keyword";
-      const Ot = Object.create(null);
-      return "string" === typeof tt ? qt(Vt, tt.split(" ")) : Array.isArray(tt) ? qt(Vt, tt) : Object.keys(tt).forEach((function(Vt) {
-        Object.assign(Ot, Tt(tt[Vt], et, Vt))
-      })), Ot;
+    function Au(uu, Eu) {
+      let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "keyword";
+      const su = Object.create(null);
+      return "string" === typeof uu ? Uu(ju, uu.split(" ")) : Array.isArray(uu) ? Uu(ju, uu) : Object.keys(uu).forEach((function(ju) {
+        Object.assign(su, Au(uu[ju], Eu, ju))
+      })), su;
 
-      function qt(tt, Vt) {
-        et && (Vt = Vt.map((tt => tt.toLowerCase()))), Vt.forEach((function(et) {
-          const Vt = et.split("|");
-          Ot[Vt[0]] = [tt, gt(Vt[0], Vt[1])]
+      function Uu(uu, ju) {
+        Eu && (ju = ju.map((uu => uu.toLowerCase()))), ju.forEach((function(Eu) {
+          const ju = Eu.split("|");
+          su[ju[0]] = [uu, nu(ju[0], ju[1])]
         }))
       }
     }
 
-    function gt(tt, et) {
-      return et ? Number(et) : function(tt) {
-        return xt.includes(tt.toLowerCase())
-      }(tt) ? 0 : 1
+    function nu(uu, Eu) {
+      return Eu ? Number(Eu) : function(uu) {
+        return Hu.includes(uu.toLowerCase())
+      }(uu) ? 0 : 1
     }
-    const st = {},
-      nt = tt => {
-        console.error(tt)
+    const yu = {},
+      zu = uu => {
+        console.error(uu)
       },
-      te = function(tt) {
-        for (var et = arguments.length, Vt = new Array(et > 1 ? et - 1 : 0), Ot = 1; Ot < et; Ot++) Vt[Ot - 1] = arguments[Ot];
-        console.log(`WARN: ${tt}`, ...Vt)
+      Ru = function(uu) {
+        for (var Eu = arguments.length, ju = new Array(Eu > 1 ? Eu - 1 : 0), su = 1; su < Eu; su++) ju[su - 1] = arguments[su];
+        console.log(`WARN: ${uu}`, ...ju)
       },
-      ee = (tt, et) => {
-        st[`${tt}/${et}`] || (console.log(`Deprecated as of ${tt}. ${et}`), st[`${tt}/${et}`] = !0)
+      uE = (uu, Eu) => {
+        yu[`${uu}/${Eu}`] || (console.log(`Deprecated as of ${uu}. ${Eu}`), yu[`${uu}/${Eu}`] = !0)
       },
-      Ve = new Error;
+      EE = new Error;
 
-    function Oe(tt, et, Vt) {
+    function jE(uu, Eu, ju) {
       let {
-        key: Ot
-      } = Vt, qt = 0;
-      const Dt = tt[Ot],
-        mt = {},
-        dt = {};
-      for (let jt = 1; jt <= et.length; jt++) dt[jt + qt] = Dt[jt], mt[jt + qt] = !0, qt += yt(et[jt - 1]);
-      tt[Ot] = dt, tt[Ot]._emit = mt, tt[Ot]._multi = !0
+        key: su
+      } = ju, Uu = 0;
+      const Zu = uu[su],
+        Xu = {},
+        lu = {};
+      for (let qu = 1; qu <= Eu.length; qu++) lu[qu + Uu] = Zu[qu], Xu[qu + Uu] = !0, Uu += hu(Eu[qu - 1]);
+      uu[su] = lu, uu[su]._emit = Xu, uu[su]._multi = !0
     }
 
-    function qe(tt) {
-      ! function(tt) {
-        tt.scope && "object" === typeof tt.scope && null !== tt.scope && (tt.beginScope = tt.scope, delete tt.scope)
-      }(tt), "string" === typeof tt.beginScope && (tt.beginScope = {
-          _wrap: tt.beginScope
-        }), "string" === typeof tt.endScope && (tt.endScope = {
-          _wrap: tt.endScope
+    function sE(uu) {
+      ! function(uu) {
+        uu.scope && "object" === typeof uu.scope && null !== uu.scope && (uu.beginScope = uu.scope, delete uu.scope)
+      }(uu), "string" === typeof uu.beginScope && (uu.beginScope = {
+          _wrap: uu.beginScope
+        }), "string" === typeof uu.endScope && (uu.endScope = {
+          _wrap: uu.endScope
         }),
-        function(tt) {
-          if (Array.isArray(tt.XE)) {
-            if (tt.skip || tt.excludeBegin || tt.returnBegin) throw nt("skip, excludeBegin, returnBegin not compatible with beginScope: {}"), Ve;
-            if ("object" !== typeof tt.beginScope || null === tt.beginScope) throw nt("beginScope must be object"), Ve;
-            Oe(tt, tt.XE, {
+        function(uu) {
+          if (Array.isArray(uu.NN)) {
+            if (uu.skip || uu.excludeBegin || uu.returnBegin) throw zu("skip, excludeBegin, returnBegin not compatible with beginScope: {}"), EE;
+            if ("object" !== typeof uu.beginScope || null === uu.beginScope) throw zu("beginScope must be object"), EE;
+            jE(uu, uu.NN, {
               key: "beginScope"
-            }), tt.XE = Mt(tt.XE, {
+            }), uu.NN = gu(uu.NN, {
               joinWith: ""
             })
           }
-        }(tt),
-        function(tt) {
-          if (Array.isArray(tt.end)) {
-            if (tt.skip || tt.excludeEnd || tt.returnEnd) throw nt("skip, excludeEnd, returnEnd not compatible with endScope: {}"), Ve;
-            if ("object" !== typeof tt.endScope || null === tt.endScope) throw nt("endScope must be object"), Ve;
-            Oe(tt, tt.end, {
+        }(uu),
+        function(uu) {
+          if (Array.isArray(uu.end)) {
+            if (uu.skip || uu.excludeEnd || uu.returnEnd) throw zu("skip, excludeEnd, returnEnd not compatible with endScope: {}"), EE;
+            if ("object" !== typeof uu.endScope || null === uu.endScope) throw zu("endScope must be object"), EE;
+            jE(uu, uu.end, {
               key: "endScope"
-            }), tt.end = Mt(tt.end, {
+            }), uu.end = gu(uu.end, {
               joinWith: ""
             })
           }
-        }(tt)
+        }(uu)
     }
 
-    function De(tt) {
-      function et(et, Vt) {
-        return new RegExp(Xt(et), "m" + (tt.case_insensitive ? "i" : "") + (tt.unicodeRegex ? "u" : "") + (Vt ? "g" : ""))
+    function UE(uu) {
+      function Eu(Eu, ju) {
+        return new RegExp(Cu(Eu), "m" + (uu.case_insensitive ? "i" : "") + (uu.unicodeRegex ? "u" : "") + (ju ? "g" : ""))
       }
-      class Vt {
+      class ju {
         constructor() {
           this.matchIndexes = {}, this.regexes = [], this.matchAt = 1, this.position = 0
         }
-        addRule(tt, et) {
-          et.position = this.position++, this.matchIndexes[this.matchAt] = et, this.regexes.push([et, tt]), this.matchAt += yt(tt) + 1
+        addRule(uu, Eu) {
+          Eu.position = this.position++, this.matchIndexes[this.matchAt] = Eu, this.regexes.push([Eu, uu]), this.matchAt += hu(uu) + 1
         }
         compile() {
           0 === this.regexes.length && (this.exec = () => null);
-          const tt = this.regexes.map((tt => tt[1]));
-          this.matcherRe = et(Mt(tt, {
+          const uu = this.regexes.map((uu => uu[1]));
+          this.matcherRe = Eu(gu(uu, {
             joinWith: "|"
           }), !0), this.lastIndex = 0
         }
-        exec(tt) {
+        exec(uu) {
           this.matcherRe.lastIndex = this.lastIndex;
-          const et = this.matcherRe.exec(tt);
-          if (!et) return null;
-          const Vt = et.findIndex(((tt, et) => et > 0 && void 0 !== tt)),
-            Ot = this.matchIndexes[Vt];
-          return et.splice(0, Vt), Object.assign(et, Ot)
+          const Eu = this.matcherRe.exec(uu);
+          if (!Eu) return null;
+          const ju = Eu.findIndex(((uu, Eu) => Eu > 0 && void 0 !== uu)),
+            su = this.matchIndexes[ju];
+          return Eu.splice(0, ju), Object.assign(Eu, su)
         }
       }
-      class Ot {
+      class su {
         constructor() {
           this.rules = [], this.multiRegexes = [], this.count = 0, this.lastIndex = 0, this.regexIndex = 0
         }
-        getMatcher(tt) {
-          if (this.multiRegexes[tt]) return this.multiRegexes[tt];
-          const et = new Vt;
-          return this.rules.slice(tt).forEach((tt => {
-            let [Vt, Ot] = tt;
-            return et.addRule(Vt, Ot)
-          })), et.compile(), this.multiRegexes[tt] = et, et
+        getMatcher(uu) {
+          if (this.multiRegexes[uu]) return this.multiRegexes[uu];
+          const Eu = new ju;
+          return this.rules.slice(uu).forEach((uu => {
+            let [ju, su] = uu;
+            return Eu.addRule(ju, su)
+          })), Eu.compile(), this.multiRegexes[uu] = Eu, Eu
         }
         resumingScanAtSamePosition() {
           return 0 !== this.regexIndex
@@ -494,81 +494,81 @@ export const modules = {
         considerAll() {
           this.regexIndex = 0
         }
-        addRule(tt, et) {
-          this.rules.push([tt, et]), "XE" === et.type && this.count++
+        addRule(uu, Eu) {
+          this.rules.push([uu, Eu]), "NN" === Eu.type && this.count++
         }
-        exec(tt) {
-          const et = this.getMatcher(this.regexIndex);
-          et.lastIndex = this.lastIndex;
-          let Vt = et.exec(tt);
+        exec(uu) {
+          const Eu = this.getMatcher(this.regexIndex);
+          Eu.lastIndex = this.lastIndex;
+          let ju = Eu.exec(uu);
           if (this.resumingScanAtSamePosition())
-            if (Vt && Vt.index === this.lastIndex);
+            if (ju && ju.index === this.lastIndex);
             else {
-              const et = this.getMatcher(0);
-              et.lastIndex = this.lastIndex + 1, Vt = et.exec(tt)
-            } return Vt && (this.regexIndex += Vt.position + 1, this.regexIndex === this.count && this.considerAll()), Vt
+              const Eu = this.getMatcher(0);
+              Eu.lastIndex = this.lastIndex + 1, ju = Eu.exec(uu)
+            } return ju && (this.regexIndex += ju.position + 1, this.regexIndex === this.count && this.considerAll()), ju
         }
       }
-      if (tt.compilerExtensions || (tt.compilerExtensions = []), tt.contains && tt.contains.includes("self")) throw new Error("ERR: contains `self` is not supported at the top-level of a language.  See documentation.");
-      return tt.classNameAliases = qt(tt.classNameAliases || {}),
-        function Vt(Dt, mt) {
-          const dt = Dt;
-          if (Dt.isCompiled) return dt;
-          [Ut, Yt, qe, pt].forEach((tt => tt(Dt, mt))), tt.compilerExtensions.forEach((tt => tt(Dt, mt))), Dt.__beforeBegin = null, [At, it, Bt].forEach((tt => tt(Dt, mt))), Dt.isCompiled = !0;
-          let jt = null;
-          return "object" === typeof Dt.keywords && Dt.keywords.$pattern && (Dt.keywords = Object.assign({}, Dt.keywords), jt = Dt.keywords.$pattern, delete Dt.keywords.$pattern), jt = jt || /\w+/, Dt.keywords && (Dt.keywords = Tt(Dt.keywords, tt.case_insensitive)), dt.keywordPatternRe = et(jt, !0), mt && (Dt.XE || (Dt.XE = /\B|\b/), dt.beginRe = et(dt.XE), Dt.end || Dt.endsWithParent || (Dt.end = /\B|\b/), Dt.end && (dt.endRe = et(dt.end)), dt.terminatorEnd = Xt(dt.end) || "", Dt.endsWithParent && mt.terminatorEnd && (dt.terminatorEnd += (Dt.end ? "|" : "") + mt.terminatorEnd)), Dt.illegal && (dt.illegalRe = et(Dt.illegal)), Dt.contains || (Dt.contains = []), Dt.contains = [].concat(...Dt.contains.map((function(tt) {
-            return function(tt) {
-              tt.variants && !tt.cachedVariants && (tt.cachedVariants = tt.variants.map((function(et) {
-                return qt(tt, {
+      if (uu.compilerExtensions || (uu.compilerExtensions = []), uu.contains && uu.contains.includes("self")) throw new Error("ERR: contains `self` is not supported at the top-level of a language.  See documentation.");
+      return uu.classNameAliases = Uu(uu.classNameAliases || {}),
+        function ju(Zu, Xu) {
+          const lu = Zu;
+          if (Zu.isCompiled) return lu;
+          [Fu, tu, sE, Tu].forEach((uu => uu(Zu, Xu))), uu.compilerExtensions.forEach((uu => uu(Zu, Xu))), Zu.__beforeBegin = null, [Bu, Lu, xu].forEach((uu => uu(Zu, Xu))), Zu.isCompiled = !0;
+          let qu = null;
+          return "object" === typeof Zu.keywords && Zu.keywords.$pattern && (Zu.keywords = Object.assign({}, Zu.keywords), qu = Zu.keywords.$pattern, delete Zu.keywords.$pattern), qu = qu || /\w+/, Zu.keywords && (Zu.keywords = Au(Zu.keywords, uu.case_insensitive)), lu.keywordPatternRe = Eu(qu, !0), Xu && (Zu.NN || (Zu.NN = /\B|\b/), lu.beginRe = Eu(lu.NN), Zu.end || Zu.endsWithParent || (Zu.end = /\B|\b/), Zu.end && (lu.endRe = Eu(lu.end)), lu.terminatorEnd = Cu(lu.end) || "", Zu.endsWithParent && Xu.terminatorEnd && (lu.terminatorEnd += (Zu.end ? "|" : "") + Xu.terminatorEnd)), Zu.illegal && (lu.illegalRe = Eu(Zu.illegal)), Zu.contains || (Zu.contains = []), Zu.contains = [].concat(...Zu.contains.map((function(uu) {
+            return function(uu) {
+              uu.variants && !uu.cachedVariants && (uu.cachedVariants = uu.variants.map((function(Eu) {
+                return Uu(uu, {
                   variants: null
-                }, et)
+                }, Eu)
               })));
-              if (tt.cachedVariants) return tt.cachedVariants;
-              if (me(tt)) return qt(tt, {
-                starts: tt.starts ? qt(tt.starts) : null
+              if (uu.cachedVariants) return uu.cachedVariants;
+              if (ZE(uu)) return Uu(uu, {
+                starts: uu.starts ? Uu(uu.starts) : null
               });
-              if (Object.isFrozen(tt)) return qt(tt);
-              return tt
-            }("self" === tt ? Dt : tt)
-          }))), Dt.contains.forEach((function(tt) {
-            Vt(tt, dt)
-          })), Dt.starts && Vt(Dt.starts, mt), dt.matcher = function(tt) {
-            const et = new Ot;
-            return tt.contains.forEach((tt => et.addRule(tt.XE, {
-              rule: tt,
-              type: "XE"
-            }))), tt.terminatorEnd && et.addRule(tt.terminatorEnd, {
+              if (Object.isFrozen(uu)) return Uu(uu);
+              return uu
+            }("self" === uu ? Zu : uu)
+          }))), Zu.contains.forEach((function(uu) {
+            ju(uu, lu)
+          })), Zu.starts && ju(Zu.starts, Xu), lu.matcher = function(uu) {
+            const Eu = new su;
+            return uu.contains.forEach((uu => Eu.addRule(uu.NN, {
+              rule: uu,
+              type: "NN"
+            }))), uu.terminatorEnd && Eu.addRule(uu.terminatorEnd, {
               type: "end"
-            }), tt.illegal && et.addRule(tt.illegal, {
+            }), uu.illegal && Eu.addRule(uu.illegal, {
               type: "illegal"
-            }), et
-          }(dt), dt
-        }(tt)
+            }), Eu
+          }(lu), lu
+        }(uu)
     }
 
-    function me(tt) {
-      return !!tt && (tt.endsWithParent || me(tt.starts))
+    function ZE(uu) {
+      return !!uu && (uu.endsWithParent || ZE(uu.starts))
     }
-    class de extends Error {
-      constructor(tt, et) {
-        super(tt), this.name = "HTMLInjectionError", this.html = et
+    class XE extends Error {
+      constructor(uu, Eu) {
+        super(uu), this.name = "HTMLInjectionError", this.html = Eu
       }
     }
-    const je = Ot,
-      He = qt,
-      Xe = Symbol("nomatch"),
-      Qe = function(tt) {
-        const Ot = Object.create(null),
-          qt = Object.create(null),
-          Dt = [];
-        let mt = !0;
-        const dt = "Could not find the language '{}', did you forget to load/include a language module?",
-          jt = {
+    const lE = su,
+      qE = Uu,
+      fE = Symbol("nomatch"),
+      CE = function(uu) {
+        const su = Object.create(null),
+          Uu = Object.create(null),
+          Zu = [];
+        let Xu = !0;
+        const lu = "Could not find the language '{}', did you forget to load/include a language module?",
+          qu = {
             disableAutodetect: !0,
             name: "Plain text",
             contains: []
           };
-        let Xt = {
+        let Cu = {
           ignoreUnescapedHTML: !1,
           throwUnescapedHTML: !1,
           noHighlightRe: /^(no-?highlight)$/i,
@@ -576,575 +576,575 @@ export const modules = {
           classPrefix: "hljs-",
           cssSelector: "pre code",
           languages: null,
-          __emitter: Ht
+          __emitter: fu
         };
 
-        function yt(tt) {
-          return Xt.noHighlightRe.test(tt)
+        function hu(uu) {
+          return Cu.noHighlightRe.test(uu)
         }
 
-        function Nt(tt, et, Vt) {
-          let Ot = "",
-            qt = "";
-          "object" === typeof et ? (Ot = tt, Vt = et.ignoreIllegals, qt = et.language) : (ee("10.7.0", "highlight(lang, code, ...args) has been deprecated."), ee("10.7.0", "Please use highlight(code, options) instead.\nhttps://github.com/highlightjs/highlight.js/issues/2277"), qt = tt, Ot = et), void 0 === Vt && (Vt = !0);
-          const Dt = {
-            code: Ot,
-            language: qt
+        function Du(uu, Eu, ju) {
+          let su = "",
+            Uu = "";
+          "object" === typeof Eu ? (su = uu, ju = Eu.ignoreIllegals, Uu = Eu.language) : (uE("10.7.0", "highlight(lang, code, ...args) has been deprecated."), uE("10.7.0", "Please use highlight(code, options) instead.\nhttps://github.com/highlightjs/highlight.js/issues/2277"), Uu = uu, su = Eu), void 0 === ju && (ju = !0);
+          const Zu = {
+            code: su,
+            language: Uu
           };
-          Wt("before:highlight", Dt);
-          const mt = Dt.result ? Dt.result : Mt(Dt.language, Dt.code, Vt);
-          return mt.code = Dt.code, Wt("after:highlight", mt), mt
+          au("before:highlight", Zu);
+          const Xu = Zu.result ? Zu.result : gu(Zu.language, Zu.code, ju);
+          return Xu.code = Zu.code, au("after:highlight", Xu), Xu
         }
 
-        function Mt(tt, et, qt, Dt) {
-          const jt = Object.create(null);
+        function gu(uu, Eu, Uu, Zu) {
+          const qu = Object.create(null);
 
-          function Ht() {
-            if (!Wt.keywords) return void ct.addText(Rt);
-            let tt = 0;
-            Wt.keywordPatternRe.lastIndex = 0;
-            let et = Wt.keywordPatternRe.exec(Rt),
-              Vt = "";
-            for (; et;) {
-              Vt += Rt.substring(tt, et.index);
-              const qt = ut.case_insensitive ? et[0].toLowerCase() : et[0],
-                Dt = (Ot = qt, Wt.keywords[Ot]);
-              if (Dt) {
-                const [tt, Ot] = Dt;
-                if (ct.addText(Vt), Vt = "", jt[qt] = (jt[qt] || 0) + 1, jt[qt] <= 7 && (It += Ot), tt.startsWith("_")) Vt += et[0];
+          function fu() {
+            if (!au.keywords) return void ou.addText(ku);
+            let uu = 0;
+            au.keywordPatternRe.lastIndex = 0;
+            let Eu = au.keywordPatternRe.exec(ku),
+              ju = "";
+            for (; Eu;) {
+              ju += ku.substring(uu, Eu.index);
+              const Uu = pu.case_insensitive ? Eu[0].toLowerCase() : Eu[0],
+                Zu = (su = Uu, au.keywords[su]);
+              if (Zu) {
+                const [uu, su] = Zu;
+                if (ou.addText(ju), ju = "", qu[Uu] = (qu[Uu] || 0) + 1, qu[Uu] <= 7 && (mu += su), uu.startsWith("_")) ju += Eu[0];
                 else {
-                  const Vt = ut.classNameAliases[tt] || tt;
-                  lt(et[0], Vt)
+                  const ju = pu.classNameAliases[uu] || uu;
+                  cu(Eu[0], ju)
                 }
-              } else Vt += et[0];
-              tt = Wt.keywordPatternRe.lastIndex, et = Wt.keywordPatternRe.exec(Rt)
+              } else ju += Eu[0];
+              uu = au.keywordPatternRe.lastIndex, Eu = au.keywordPatternRe.exec(ku)
             }
-            var Ot;
-            Vt += Rt.substring(tt), ct.addText(Vt)
+            var su;
+            ju += ku.substring(uu), ou.addText(ju)
           }
 
-          function Qt() {
-            null != Wt.subLanguage ? function() {
-              if ("" === Rt) return;
-              let tt = null;
-              if ("string" === typeof Wt.subLanguage) {
-                if (!Ot[Wt.subLanguage]) return void ct.addText(Rt);
-                tt = Mt(Wt.subLanguage, Rt, !0, St[Wt.subLanguage]), St[Wt.subLanguage] = tt._top
-              } else tt = bt(Rt, Wt.subLanguage.length ? Wt.subLanguage : null);
-              Wt.relevance > 0 && (It += tt.relevance), ct.__addSublanguage(tt._emitter, tt.language)
-            }() : Ht(), Rt = ""
+          function bu() {
+            null != au.subLanguage ? function() {
+              if ("" === ku) return;
+              let uu = null;
+              if ("string" === typeof au.subLanguage) {
+                if (!su[au.subLanguage]) return void ou.addText(ku);
+                uu = gu(au.subLanguage, ku, !0, Pu[au.subLanguage]), Pu[au.subLanguage] = uu._top
+              } else uu = Mu(ku, au.subLanguage.length ? au.subLanguage : null);
+              au.relevance > 0 && (mu += uu.relevance), ou.__addSublanguage(uu._emitter, uu.language)
+            }() : fu(), ku = ""
           }
 
-          function lt(tt, et) {
-            "" !== tt && (ct.startScope(et), ct.addText(tt), ct.endScope())
+          function cu(uu, Eu) {
+            "" !== uu && (ou.startScope(Eu), ou.addText(uu), ou.endScope())
           }
 
-          function Et(tt, et) {
-            let Vt = 1;
-            const Ot = et.length - 1;
-            for (; Vt <= Ot;) {
-              if (!tt._emit[Vt]) {
-                Vt++;
+          function Nu(uu, Eu) {
+            let ju = 1;
+            const su = Eu.length - 1;
+            for (; ju <= su;) {
+              if (!uu._emit[ju]) {
+                ju++;
                 continue
               }
-              const Ot = ut.classNameAliases[tt[Vt]] || tt[Vt],
-                qt = et[Vt];
-              Ot ? lt(qt, Ot) : (Rt = qt, Ht(), Rt = ""), Vt++
+              const su = pu.classNameAliases[uu[ju]] || uu[ju],
+                Uu = Eu[ju];
+              su ? cu(Uu, su) : (ku = Uu, fu(), ku = ""), ju++
             }
           }
 
-          function ft(tt, et) {
-            return tt.scope && "string" === typeof tt.scope && ct.openNode(ut.classNameAliases[tt.scope] || tt.scope), tt.beginScope && (tt.beginScope._wrap ? (lt(Rt, ut.classNameAliases[tt.beginScope._wrap] || tt.beginScope._wrap), Rt = "") : tt.beginScope._multi && (Et(tt.beginScope, et), Rt = "")), Wt = Object.create(tt, {
+          function Ou(uu, Eu) {
+            return uu.scope && "string" === typeof uu.scope && ou.openNode(pu.classNameAliases[uu.scope] || uu.scope), uu.beginScope && (uu.beginScope._wrap ? (cu(ku, pu.classNameAliases[uu.beginScope._wrap] || uu.beginScope._wrap), ku = "") : uu.beginScope._multi && (Nu(uu.beginScope, Eu), ku = "")), au = Object.create(uu, {
               parent: {
-                value: Wt
+                value: au
               }
-            }), Wt
+            }), au
           }
 
-          function wt(tt, et, Ot) {
-            let qt = function(tt, et) {
-              const Vt = tt && tt.exec(et);
-              return Vt && 0 === Vt.index
-            }(tt.endRe, Ot);
-            if (qt) {
-              if (tt["on:end"]) {
-                const Ot = new Vt(tt);
-                tt["on:end"](et, Ot), Ot.isMatchIgnored && (qt = !1)
+          function Yu(uu, Eu, su) {
+            let Uu = function(uu, Eu) {
+              const ju = uu && uu.exec(Eu);
+              return ju && 0 === ju.index
+            }(uu.endRe, su);
+            if (Uu) {
+              if (uu["on:end"]) {
+                const su = new ju(uu);
+                uu["on:end"](Eu, su), su.isMatchIgnored && (Uu = !1)
               }
-              if (qt) {
-                for (; tt.endsParent && tt.parent;) tt = tt.parent;
-                return tt
+              if (Uu) {
+                for (; uu.endsParent && uu.parent;) uu = uu.parent;
+                return uu
               }
             }
-            if (tt.endsWithParent) return wt(tt.parent, et, Ot)
+            if (uu.endsWithParent) return Yu(uu.parent, Eu, su)
           }
 
-          function yt(tt) {
-            return 0 === Wt.matcher.regexIndex ? (Rt += tt[0], 1) : (Lt = !0, 0)
+          function hu(uu) {
+            return 0 === au.matcher.regexIndex ? (ku += uu[0], 1) : (Vu = !0, 0)
           }
 
-          function Nt(tt) {
-            const Vt = tt[0],
-              Ot = et.substring(tt.index),
-              qt = wt(Wt, tt, Ot);
-            if (!qt) return Xe;
-            const Dt = Wt;
-            Wt.endScope && Wt.endScope._wrap ? (Qt(), lt(Vt, Wt.endScope._wrap)) : Wt.endScope && Wt.endScope._multi ? (Qt(), Et(Wt.endScope, tt)) : Dt.skip ? Rt += Vt : (Dt.returnEnd || Dt.excludeEnd || (Rt += Vt), Qt(), Dt.excludeEnd && (Rt = Vt));
+          function Du(uu) {
+            const ju = uu[0],
+              su = Eu.substring(uu.index),
+              Uu = Yu(au, uu, su);
+            if (!Uu) return fE;
+            const Zu = au;
+            au.endScope && au.endScope._wrap ? (bu(), cu(ju, au.endScope._wrap)) : au.endScope && au.endScope._multi ? (bu(), Nu(au.endScope, uu)) : Zu.skip ? ku += ju : (Zu.returnEnd || Zu.excludeEnd || (ku += ju), bu(), Zu.excludeEnd && (ku = ju));
             do {
-              Wt.scope && ct.closeNode(), Wt.skip || Wt.subLanguage || (It += Wt.relevance), Wt = Wt.parent
-            } while (Wt !== qt.parent);
-            return qt.starts && ft(qt.starts, tt), Dt.returnEnd ? 0 : Vt.length
+              au.scope && ou.closeNode(), au.skip || au.subLanguage || (mu += au.relevance), au = au.parent
+            } while (au !== Uu.parent);
+            return Uu.starts && Ou(Uu.starts, uu), Zu.returnEnd ? 0 : ju.length
           }
-          let Jt = {};
+          let eu = {};
 
-          function Ct(Ot, Dt) {
-            const dt = Dt && Dt[0];
-            if (Rt += Ot, null == dt) return Qt(), 0;
-            if ("XE" === Jt.type && "end" === Dt.type && Jt.index === Dt.index && "" === dt) {
-              if (Rt += et.slice(Dt.index, Dt.index + 1), !mt) {
-                const et = new Error(`0 width match regex (${tt})`);
-                throw et.languageName = tt, et.badRule = Jt.rule, et
+          function Gu(su, Zu) {
+            const lu = Zu && Zu[0];
+            if (ku += su, null == lu) return bu(), 0;
+            if ("NN" === eu.type && "end" === Zu.type && eu.index === Zu.index && "" === lu) {
+              if (ku += Eu.slice(Zu.index, Zu.index + 1), !Xu) {
+                const Eu = new Error(`0 width match regex (${uu})`);
+                throw Eu.languageName = uu, Eu.badRule = eu.rule, Eu
               }
               return 1
             }
-            if (Jt = Dt, "XE" === Dt.type) return function(tt) {
-              const et = tt[0],
-                Ot = tt.rule,
-                qt = new Vt(Ot),
-                Dt = [Ot.__beforeBegin, Ot["on:begin"]];
-              for (const Vt of Dt)
-                if (Vt && (Vt(tt, qt), qt.isMatchIgnored)) return yt(et);
-              return Ot.skip ? Rt += et : (Ot.excludeBegin && (Rt += et), Qt(), Ot.returnBegin || Ot.excludeBegin || (Rt = et)), ft(Ot, tt), Ot.returnBegin ? 0 : et.length
-            }(Dt);
-            if ("illegal" === Dt.type && !qt) {
-              const tt = new Error('Illegal lexeme "' + dt + '" for mode "' + (Wt.scope || "<unnamed>") + '"');
-              throw tt.mode = Wt, tt
+            if (eu = Zu, "NN" === Zu.type) return function(uu) {
+              const Eu = uu[0],
+                su = uu.rule,
+                Uu = new ju(su),
+                Zu = [su.__beforeBegin, su["on:begin"]];
+              for (const ju of Zu)
+                if (ju && (ju(uu, Uu), Uu.isMatchIgnored)) return hu(Eu);
+              return su.skip ? ku += Eu : (su.excludeBegin && (ku += Eu), bu(), su.returnBegin || su.excludeBegin || (ku = Eu)), Ou(su, uu), su.returnBegin ? 0 : Eu.length
+            }(Zu);
+            if ("illegal" === Zu.type && !Uu) {
+              const uu = new Error('Illegal lexeme "' + lu + '" for mode "' + (au.scope || "<unnamed>") + '"');
+              throw uu.mode = au, uu
             }
-            if ("end" === Dt.type) {
-              const tt = Nt(Dt);
-              if (tt !== Xe) return tt
+            if ("end" === Zu.type) {
+              const uu = Du(Zu);
+              if (uu !== fE) return uu
             }
-            if ("illegal" === Dt.type && "" === dt) return Rt += "\n", 1;
-            if (Zt > 1e5 && Zt > 3 * Dt.index) {
+            if ("illegal" === Zu.type && "" === lu) return ku += "\n", 1;
+            if (Ku > 1e5 && Ku > 3 * Zu.index) {
               throw new Error("potential infinite loop, way more iterations than matches")
             }
-            return Rt += dt, dt.length
+            return ku += lu, lu.length
           }
-          const ut = Kt(tt);
-          if (!ut) throw nt(dt.replace("{}", tt)), new Error('Unknown language: "' + tt + '"');
-          const ht = De(ut);
-          let vt = "",
-            Wt = Dt || ht;
-          const St = {},
-            ct = new Xt.__emitter(Xt);
+          const pu = wu(uu);
+          if (!pu) throw zu(lu.replace("{}", uu)), new Error('Unknown language: "' + uu + '"');
+          const Ju = UE(pu);
+          let du = "",
+            au = Zu || Ju;
+          const Pu = {},
+            ou = new Cu.__emitter(Cu);
           ! function() {
-            const tt = [];
-            for (let et = Wt; et !== ut; et = et.parent) et.scope && tt.unshift(et.scope);
-            tt.forEach((tt => ct.openNode(tt)))
+            const uu = [];
+            for (let Eu = au; Eu !== pu; Eu = Eu.parent) Eu.scope && uu.unshift(Eu.scope);
+            uu.forEach((uu => ou.openNode(uu)))
           }();
-          let Rt = "",
-            It = 0,
-            Pt = 0,
-            Zt = 0,
-            Lt = !1;
+          let ku = "",
+            mu = 0,
+            vu = 0,
+            Ku = 0,
+            Vu = !1;
           try {
-            if (ut.__emitTokens) ut.__emitTokens(et, ct);
+            if (pu.__emitTokens) pu.__emitTokens(Eu, ou);
             else {
-              for (Wt.matcher.considerAll();;) {
-                Zt++, Lt ? Lt = !1 : Wt.matcher.considerAll(), Wt.matcher.lastIndex = Pt;
-                const tt = Wt.matcher.exec(et);
-                if (!tt) break;
-                const Vt = Ct(et.substring(Pt, tt.index), tt);
-                Pt = tt.index + Vt
+              for (au.matcher.considerAll();;) {
+                Ku++, Vu ? Vu = !1 : au.matcher.considerAll(), au.matcher.lastIndex = vu;
+                const uu = au.matcher.exec(Eu);
+                if (!uu) break;
+                const ju = Gu(Eu.substring(vu, uu.index), uu);
+                vu = uu.index + ju
               }
-              Ct(et.substring(Pt))
+              Gu(Eu.substring(vu))
             }
-            return ct.finalize(), vt = ct.toHTML(), {
-              language: tt,
-              value: vt,
-              relevance: It,
+            return ou.finalize(), du = ou.toHTML(), {
+              language: uu,
+              value: du,
+              relevance: mu,
               illegal: !1,
-              _emitter: ct,
-              _top: Wt
+              _emitter: ou,
+              _top: au
             }
-          } catch (Ft) {
-            if (Ft.message && Ft.message.includes("Illegal")) return {
-              language: tt,
-              value: je(et),
+          } catch (ru) {
+            if (ru.message && ru.message.includes("Illegal")) return {
+              language: uu,
+              value: lE(Eu),
               illegal: !0,
               relevance: 0,
               _illegalBy: {
-                message: Ft.message,
-                index: Pt,
-                context: et.slice(Pt - 100, Pt + 100),
-                mode: Ft.mode,
-                resultSoFar: vt
+                message: ru.message,
+                index: vu,
+                context: Eu.slice(vu - 100, vu + 100),
+                mode: ru.mode,
+                resultSoFar: du
               },
-              _emitter: ct
+              _emitter: ou
             };
-            if (mt) return {
-              language: tt,
-              value: je(et),
+            if (Xu) return {
+              language: uu,
+              value: lE(Eu),
               illegal: !1,
               relevance: 0,
-              errorRaised: Ft,
-              _emitter: ct,
-              _top: Wt
+              errorRaised: ru,
+              _emitter: ou,
+              _top: au
             };
-            throw Ft
+            throw ru
           }
         }
 
-        function bt(tt, et) {
-          et = et || Xt.languages || Object.keys(Ot);
-          const Vt = function(tt) {
-              const et = {
-                value: je(tt),
+        function Mu(uu, Eu) {
+          Eu = Eu || Cu.languages || Object.keys(su);
+          const ju = function(uu) {
+              const Eu = {
+                value: lE(uu),
                 illegal: !1,
                 relevance: 0,
-                _top: jt,
-                _emitter: new Xt.__emitter(Xt)
+                _top: qu,
+                _emitter: new Cu.__emitter(Cu)
               };
-              return et._emitter.addText(tt), et
-            }(tt),
-            qt = et.filter(Kt).filter(vt).map((et => Mt(et, tt, !1)));
-          qt.unshift(Vt);
-          const Dt = qt.sort(((tt, et) => {
-              if (tt.relevance !== et.relevance) return et.relevance - tt.relevance;
-              if (tt.language && et.language) {
-                if (Kt(tt.language).supersetOf === et.language) return 1;
-                if (Kt(et.language).supersetOf === tt.language) return -1
+              return Eu._emitter.addText(uu), Eu
+            }(uu),
+            Uu = Eu.filter(wu).filter(du).map((Eu => gu(Eu, uu, !1)));
+          Uu.unshift(ju);
+          const Zu = Uu.sort(((uu, Eu) => {
+              if (uu.relevance !== Eu.relevance) return Eu.relevance - uu.relevance;
+              if (uu.language && Eu.language) {
+                if (wu(uu.language).supersetOf === Eu.language) return 1;
+                if (wu(Eu.language).supersetOf === uu.language) return -1
               }
               return 0
             })),
-            [mt, dt] = Dt,
-            Ht = mt;
-          return Ht.secondBest = dt, Ht
+            [Xu, lu] = Zu,
+            fu = Xu;
+          return fu.secondBest = lu, fu
         }
 
-        function Jt(tt) {
-          let et = null;
-          const Vt = function(tt) {
-            let et = tt.className + " ";
-            et += tt.parentNode ? tt.parentNode.className : "";
-            const Vt = Xt.languageDetectRe.exec(et);
-            if (Vt) {
-              const et = Kt(Vt[1]);
-              return et || (te(dt.replace("{}", Vt[1])), te("Falling back to no-highlight mode for this block.", tt)), et ? Vt[1] : "no-highlight"
+        function eu(uu) {
+          let Eu = null;
+          const ju = function(uu) {
+            let Eu = uu.className + " ";
+            Eu += uu.parentNode ? uu.parentNode.className : "";
+            const ju = Cu.languageDetectRe.exec(Eu);
+            if (ju) {
+              const Eu = wu(ju[1]);
+              return Eu || (Ru(lu.replace("{}", ju[1])), Ru("Falling back to no-highlight mode for this block.", uu)), Eu ? ju[1] : "no-highlight"
             }
-            return et.split(/\s+/).find((tt => yt(tt) || Kt(tt)))
-          }(tt);
-          if (yt(Vt)) return;
-          if (Wt("before:highlightElement", {
-              el: tt,
-              language: Vt
-            }), tt.dataset.highlighted) return void console.log("Element previously highlighted. To highlight again, first unset `dataset.highlighted`.", tt);
-          if (tt.children.length > 0 && (Xt.ignoreUnescapedHTML || (console.warn("One of your code blocks includes unescaped HTML. This is a potentially serious security risk."), console.warn("https://github.com/highlightjs/highlight.js/wiki/security"), console.warn("The element with unescaped HTML:"), console.warn(tt)), Xt.throwUnescapedHTML)) {
-            throw new de("One of your code blocks includes unescaped HTML.", tt.innerHTML)
+            return Eu.split(/\s+/).find((uu => hu(uu) || wu(uu)))
+          }(uu);
+          if (hu(ju)) return;
+          if (au("before:highlightElement", {
+              el: uu,
+              language: ju
+            }), uu.dataset.highlighted) return void console.log("Element previously highlighted. To highlight again, first unset `dataset.highlighted`.", uu);
+          if (uu.children.length > 0 && (Cu.ignoreUnescapedHTML || (console.warn("One of your code blocks includes unescaped HTML. This is a potentially serious security risk."), console.warn("https://github.com/highlightjs/highlight.js/wiki/security"), console.warn("The element with unescaped HTML:"), console.warn(uu)), Cu.throwUnescapedHTML)) {
+            throw new XE("One of your code blocks includes unescaped HTML.", uu.innerHTML)
           }
-          et = tt;
-          const Ot = et.textContent,
-            Dt = Vt ? Nt(Ot, {
-              language: Vt,
+          Eu = uu;
+          const su = Eu.textContent,
+            Zu = ju ? Du(su, {
+              language: ju,
               ignoreIllegals: !0
-            }) : bt(Ot);
-          tt.innerHTML = Dt.value, tt.dataset.highlighted = "yes",
-            function(tt, et, Vt) {
-              const Ot = et && qt[et] || Vt;
-              tt.classList.add("hljs"), tt.classList.add(`language-${Ot}`)
-            }(tt, Vt, Dt.language), tt.result = {
-              language: Dt.language,
-              re: Dt.relevance,
-              relevance: Dt.relevance
-            }, Dt.secondBest && (tt.secondBest = {
-              language: Dt.secondBest.language,
-              relevance: Dt.secondBest.relevance
-            }), Wt("after:highlightElement", {
-              el: tt,
-              result: Dt,
-              text: Ot
+            }) : Mu(su);
+          uu.innerHTML = Zu.value, uu.dataset.highlighted = "yes",
+            function(uu, Eu, ju) {
+              const su = Eu && Uu[Eu] || ju;
+              uu.classList.add("hljs"), uu.classList.add(`language-${su}`)
+            }(uu, ju, Zu.language), uu.result = {
+              language: Zu.language,
+              re: Zu.relevance,
+              relevance: Zu.relevance
+            }, Zu.secondBest && (uu.secondBest = {
+              language: Zu.secondBest.language,
+              relevance: Zu.secondBest.relevance
+            }), au("after:highlightElement", {
+              el: uu,
+              result: Zu,
+              text: su
             })
         }
-        let Ct = !1;
+        let Gu = !1;
 
-        function ut() {
-          if ("loading" === document.readyState) return Ct || window.addEventListener("DOMContentLoaded", (function() {
-            ut()
-          }), !1), void(Ct = !0);
-          document.querySelectorAll(Xt.cssSelector).forEach(Jt)
+        function pu() {
+          if ("loading" === document.readyState) return Gu || window.addEventListener("DOMContentLoaded", (function() {
+            pu()
+          }), !1), void(Gu = !0);
+          document.querySelectorAll(Cu.cssSelector).forEach(eu)
         }
 
-        function Kt(tt) {
-          return tt = (tt || "").toLowerCase(), Ot[tt] || Ot[qt[tt]]
+        function wu(uu) {
+          return uu = (uu || "").toLowerCase(), su[uu] || su[Uu[uu]]
         }
 
-        function ht(tt, et) {
+        function Ju(uu, Eu) {
           let {
-            languageName: Vt
-          } = et;
-          "string" === typeof tt && (tt = [tt]), tt.forEach((tt => {
-            qt[tt.toLowerCase()] = Vt
+            languageName: ju
+          } = Eu;
+          "string" === typeof uu && (uu = [uu]), uu.forEach((uu => {
+            Uu[uu.toLowerCase()] = ju
           }))
         }
 
-        function vt(tt) {
-          const et = Kt(tt);
-          return et && !et.disableAutodetect
+        function du(uu) {
+          const Eu = wu(uu);
+          return Eu && !Eu.disableAutodetect
         }
 
-        function Wt(tt, et) {
-          const Vt = tt;
-          Dt.forEach((function(tt) {
-            tt[Vt] && tt[Vt](et)
+        function au(uu, Eu) {
+          const ju = uu;
+          Zu.forEach((function(uu) {
+            uu[ju] && uu[ju](Eu)
           }))
         }
-        Object.assign(tt, {
-          highlight: Nt,
-          highlightAuto: bt,
-          highlightAll: ut,
-          highlightElement: Jt,
-          highlightBlock: function(tt) {
-            return ee("10.7.0", "highlightBlock will be removed entirely in v12.0"), ee("10.7.0", "Please use highlightElement now."), Jt(tt)
+        Object.assign(uu, {
+          highlight: Du,
+          highlightAuto: Mu,
+          highlightAll: pu,
+          highlightElement: eu,
+          highlightBlock: function(uu) {
+            return uE("10.7.0", "highlightBlock will be removed entirely in v12.0"), uE("10.7.0", "Please use highlightElement now."), eu(uu)
           },
-          configure: function(tt) {
-            Xt = He(Xt, tt)
+          configure: function(uu) {
+            Cu = qE(Cu, uu)
           },
           initHighlighting: () => {
-            ut(), ee("10.6.0", "initHighlighting() deprecated.  Use highlightAll() now.")
+            pu(), uE("10.6.0", "initHighlighting() deprecated.  Use highlightAll() now.")
           },
           initHighlightingOnLoad: function() {
-            ut(), ee("10.6.0", "initHighlightingOnLoad() deprecated.  Use highlightAll() now.")
+            pu(), uE("10.6.0", "initHighlightingOnLoad() deprecated.  Use highlightAll() now.")
           },
-          registerLanguage: function(et, Vt) {
-            let qt = null;
+          registerLanguage: function(Eu, ju) {
+            let Uu = null;
             try {
-              qt = Vt(tt)
-            } catch (Dt) {
-              if (nt("Language definition for '{}' could not be registered.".replace("{}", et)), !mt) throw Dt;
-              nt(Dt), qt = jt
+              Uu = ju(uu)
+            } catch (Zu) {
+              if (zu("Language definition for '{}' could not be registered.".replace("{}", Eu)), !Xu) throw Zu;
+              zu(Zu), Uu = qu
             }
-            qt.name || (qt.name = et), Ot[et] = qt, qt.rawDefinition = Vt.bind(null, tt), qt.aliases && ht(qt.aliases, {
-              languageName: et
+            Uu.name || (Uu.name = Eu), su[Eu] = Uu, Uu.rawDefinition = ju.bind(null, uu), Uu.aliases && Ju(Uu.aliases, {
+              languageName: Eu
             })
           },
-          unregisterLanguage: function(tt) {
-            delete Ot[tt];
-            for (const et of Object.keys(qt)) qt[et] === tt && delete qt[et]
+          unregisterLanguage: function(uu) {
+            delete su[uu];
+            for (const Eu of Object.keys(Uu)) Uu[Eu] === uu && delete Uu[Eu]
           },
           listLanguages: function() {
-            return Object.keys(Ot)
+            return Object.keys(su)
           },
-          getLanguage: Kt,
-          registerAliases: ht,
-          autoDetection: vt,
-          inherit: He,
-          addPlugin: function(tt) {
-            ! function(tt) {
-              tt["before:highlightBlock"] && !tt["before:highlightElement"] && (tt["before:highlightElement"] = et => {
-                tt["before:highlightBlock"](Object.assign({
-                  block: et.el
-                }, et))
-              }), tt["after:highlightBlock"] && !tt["after:highlightElement"] && (tt["after:highlightElement"] = et => {
-                tt["after:highlightBlock"](Object.assign({
-                  block: et.el
-                }, et))
+          getLanguage: wu,
+          registerAliases: Ju,
+          autoDetection: du,
+          inherit: qE,
+          addPlugin: function(uu) {
+            ! function(uu) {
+              uu["before:highlightBlock"] && !uu["before:highlightElement"] && (uu["before:highlightElement"] = Eu => {
+                uu["before:highlightBlock"](Object.assign({
+                  block: Eu.el
+                }, Eu))
+              }), uu["after:highlightBlock"] && !uu["after:highlightElement"] && (uu["after:highlightElement"] = Eu => {
+                uu["after:highlightBlock"](Object.assign({
+                  block: Eu.el
+                }, Eu))
               })
-            }(tt), Dt.push(tt)
+            }(uu), Zu.push(uu)
           },
-          removePlugin: function(tt) {
-            const et = Dt.indexOf(tt); - 1 !== et && Dt.splice(et, 1)
+          removePlugin: function(uu) {
+            const Eu = Zu.indexOf(uu); - 1 !== Eu && Zu.splice(Eu, 1)
           }
-        }), tt.debugMode = function() {
-          mt = !1
-        }, tt.safeMode = function() {
-          mt = !0
-        }, tt.versionString = "11.11.1", tt.regex = {
-          concat: ft,
-          lookahead: Qt,
-          either: wt,
-          optional: Et,
-          anyNumberOfTimes: lt
+        }), uu.debugMode = function() {
+          Xu = !1
+        }, uu.safeMode = function() {
+          Xu = !0
+        }, uu.versionString = "11.11.1", uu.regex = {
+          concat: Ou,
+          lookahead: bu,
+          either: Yu,
+          optional: Nu,
+          anyNumberOfTimes: cu
         };
-        for (const Vt in ot) "object" === typeof ot[Vt] && et(ot[Vt]);
-        return Object.assign(tt, ot), tt
+        for (const ju in Su) "object" === typeof Su[ju] && Eu(Su[ju]);
+        return Object.assign(uu, Su), uu
       },
-      le = Qe({});
-    le.newInstance = () => Qe({}), tt.exports = le, le.HighlightJS = le, le.default = le
+      bE = CE({});
+    bE.newInstance = () => CE({}), uu.exports = bE, bE.HighlightJS = bE, bE.default = bE
   },
-  4882: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => Ot
+  4899: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => su
     });
-    const Ot = Vt(4888)
+    const su = ju(4908)
   },
-  4894: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => Qt
+  4916: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => bu
     });
-    const Ot = "[A-Za-z$_][0-9A-Za-z$_]*",
-      qt = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
-      Dt = ["true", "false", "null", "undefined", "NaN", "Infinity"],
-      mt = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
-      dt = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
-      jt = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
-      Ht = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
-      Xt = [].concat(jt, mt, dt);
+    const su = "[A-Za-z$_][0-9A-Za-z$_]*",
+      Uu = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
+      Zu = ["true", "false", "null", "undefined", "NaN", "Infinity"],
+      Xu = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
+      lu = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
+      qu = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
+      fu = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
+      Cu = [].concat(qu, Xu, lu);
 
-    function Qt(tt) {
-      const et = tt.regex,
-        Vt = Ot,
-        Qt = "<>",
-        lt = "</>",
-        Et = {
-          XE: /<[A-Za-z0-9\\._:-]+/,
+    function bu(uu) {
+      const Eu = uu.regex,
+        ju = su,
+        bu = "<>",
+        cu = "</>",
+        Nu = {
+          NN: /<[A-Za-z0-9\\._:-]+/,
           end: /\/[A-Za-z0-9\\._:-]+>|\/>/,
-          isTrulyOpeningTag: (tt, et) => {
-            const Vt = tt[0].length + tt.index,
-              Ot = tt.input[Vt];
-            if ("<" === Ot || "," === Ot) return void et.ignoreMatch();
-            let qt;
-            ">" === Ot && (((tt, et) => {
+          isTrulyOpeningTag: (uu, Eu) => {
+            const ju = uu[0].length + uu.index,
+              su = uu.input[ju];
+            if ("<" === su || "," === su) return void Eu.ignoreMatch();
+            let Uu;
+            ">" === su && (((uu, Eu) => {
               let {
-                after: Vt
-              } = et;
-              const Ot = "</" + tt[0].slice(1);
-              return -1 !== tt.input.indexOf(Ot, Vt)
-            })(tt, {
-              after: Vt
-            }) || et.ignoreMatch());
-            const Dt = tt.input.substring(Vt);
-            ((qt = Dt.match(/^\s*=/)) || (qt = Dt.match(/^\s+extends\s+/)) && 0 === qt.index) && et.ignoreMatch()
+                after: ju
+              } = Eu;
+              const su = "</" + uu[0].slice(1);
+              return -1 !== uu.input.indexOf(su, ju)
+            })(uu, {
+              after: ju
+            }) || Eu.ignoreMatch());
+            const Zu = uu.input.substring(ju);
+            ((Uu = Zu.match(/^\s*=/)) || (Uu = Zu.match(/^\s+extends\s+/)) && 0 === Uu.index) && Eu.ignoreMatch()
           }
         },
-        ft = {
-          $pattern: Ot,
-          keyword: qt,
-          literal: Dt,
-          built_in: Xt,
-          "variable.language": Ht
+        Ou = {
+          $pattern: su,
+          keyword: Uu,
+          literal: Zu,
+          built_in: Cu,
+          "variable.language": fu
         },
-        wt = "[0-9](_?[0-9])*",
-        yt = `\\.(${wt})`,
-        Nt = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
-        Mt = {
+        Yu = "[0-9](_?[0-9])*",
+        hu = `\\.(${Yu})`,
+        Du = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
+        gu = {
           className: "number",
           variants: [{
-            XE: `(\\b(${Nt})((${yt})|\\.)?|(${yt}))[eE][+-]?(${wt})\\b`
+            NN: `(\\b(${Du})((${hu})|\\.)?|(${hu}))[eE][+-]?(${Yu})\\b`
           }, {
-            XE: `\\b(${Nt})\\b((${yt})\\b|\\.)?|(${yt})\\b`
+            NN: `\\b(${Du})\\b((${hu})\\b|\\.)?|(${hu})\\b`
           }, {
-            XE: "\\b(0|[1-9](_?[0-9])*)n\\b"
+            NN: "\\b(0|[1-9](_?[0-9])*)n\\b"
           }, {
-            XE: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
+            NN: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
           }, {
-            XE: "\\b0[bB][0-1](_?[0-1])*n?\\b"
+            NN: "\\b0[bB][0-1](_?[0-1])*n?\\b"
           }, {
-            XE: "\\b0[oO][0-7](_?[0-7])*n?\\b"
+            NN: "\\b0[oO][0-7](_?[0-7])*n?\\b"
           }, {
-            XE: "\\b0[0-7]+n?\\b"
+            NN: "\\b0[0-7]+n?\\b"
           }],
           relevance: 0
         },
-        bt = {
+        Mu = {
           className: "subst",
-          XE: "\\$\\{",
+          NN: "\\$\\{",
           end: "\\}",
-          keywords: ft,
+          keywords: Ou,
           contains: []
         },
-        Jt = {
-          XE: ".?html`",
+        eu = {
+          NN: ".?html`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [tt.BACKSLASH_ESCAPE, bt],
+            contains: [uu.BACKSLASH_ESCAPE, Mu],
             subLanguage: "xml"
           }
         },
-        Ct = {
-          XE: ".?css`",
+        Gu = {
+          NN: ".?css`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [tt.BACKSLASH_ESCAPE, bt],
+            contains: [uu.BACKSLASH_ESCAPE, Mu],
             subLanguage: "css"
           }
         },
-        ut = {
-          XE: ".?gql`",
+        pu = {
+          NN: ".?gql`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [tt.BACKSLASH_ESCAPE, bt],
+            contains: [uu.BACKSLASH_ESCAPE, Mu],
             subLanguage: "graphql"
           }
         },
-        Kt = {
+        wu = {
           className: "string",
-          XE: "`",
+          NN: "`",
           end: "`",
-          contains: [tt.BACKSLASH_ESCAPE, bt]
+          contains: [uu.BACKSLASH_ESCAPE, Mu]
         },
-        ht = {
+        Ju = {
           className: "comment",
-          variants: [tt.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
+          variants: [uu.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
             relevance: 0,
             contains: [{
-              XE: "(?=@[A-Za-z]+)",
+              NN: "(?=@[A-Za-z]+)",
               relevance: 0,
               contains: [{
                 className: "doctag",
-                XE: "@[A-Za-z]+"
+                NN: "@[A-Za-z]+"
               }, {
                 className: "type",
-                XE: "\\{",
+                NN: "\\{",
                 end: "\\}",
                 excludeEnd: !0,
                 excludeBegin: !0,
                 relevance: 0
               }, {
                 className: "variable",
-                XE: Vt + "(?=\\s*(-)|$)",
+                NN: ju + "(?=\\s*(-)|$)",
                 endsParent: !0,
                 relevance: 0
               }, {
-                XE: /(?=[^\n])\s/,
+                NN: /(?=[^\n])\s/,
                 relevance: 0
               }]
             }]
-          }), tt.C_BLOCK_COMMENT_MODE, tt.C_LINE_COMMENT_MODE]
+          }), uu.C_BLOCK_COMMENT_MODE, uu.C_LINE_COMMENT_MODE]
         },
-        vt = [tt.APOS_STRING_MODE, tt.QUOTE_STRING_MODE, Jt, Ct, ut, Kt, {
+        du = [uu.APOS_STRING_MODE, uu.QUOTE_STRING_MODE, eu, Gu, pu, wu, {
           match: /\$\d+/
-        }, Mt];
-      bt.contains = vt.concat({
-        XE: /\{/,
+        }, gu];
+      Mu.contains = du.concat({
+        NN: /\{/,
         end: /\}/,
-        keywords: ft,
-        contains: ["self"].concat(vt)
+        keywords: Ou,
+        contains: ["self"].concat(du)
       });
-      const Wt = [].concat(ht, bt.contains),
-        St = Wt.concat([{
-          XE: /(\s*)\(/,
+      const au = [].concat(Ju, Mu.contains),
+        Pu = au.concat([{
+          NN: /(\s*)\(/,
           end: /\)/,
-          keywords: ft,
-          contains: ["self"].concat(Wt)
+          keywords: Ou,
+          contains: ["self"].concat(au)
         }]),
-        ct = {
+        ou = {
           className: "params",
-          XE: /(\s*)\(/,
+          NN: /(\s*)\(/,
           end: /\)/,
           excludeBegin: !0,
           excludeEnd: !0,
-          keywords: ft,
-          contains: St
+          keywords: Ou,
+          contains: Pu
         },
-        Rt = {
+        ku = {
           variants: [{
-            match: [/class/, /\s+/, Vt, /\s+/, /extends/, /\s+/, et.concat(Vt, "(", et.concat(/\./, Vt), ")*")],
+            match: [/class/, /\s+/, ju, /\s+/, /extends/, /\s+/, Eu.concat(ju, "(", Eu.concat(/\./, ju), ")*")],
             scope: {
               1: "keyword",
               3: "title.class",
@@ -1152,24 +1152,24 @@ export const modules = {
               7: "title.class.inherited"
             }
           }, {
-            match: [/class/, /\s+/, Vt],
+            match: [/class/, /\s+/, ju],
             scope: {
               1: "keyword",
               3: "title.class"
             }
           }]
         },
-        It = {
+        mu = {
           relevance: 0,
-          match: et.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
+          match: Eu.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
           className: "title.class",
           keywords: {
-            _: [...mt, ...dt]
+            _: [...Xu, ...lu]
           }
         },
-        Pt = {
+        vu = {
           variants: [{
-            match: [/function/, /\s+/, Vt, /(?=\s*\()/]
+            match: [/function/, /\s+/, ju, /(?=\s*\()/]
           }, {
             match: [/function/, /\s*(?=\()/]
           }],
@@ -1178,53 +1178,53 @@ export const modules = {
             3: "title.function"
           },
           label: "func.def",
-          contains: [ct],
+          contains: [ou],
           illegal: /%/
         };
-      const Zt = {
-        match: et.concat(/\b/, (Lt = [...jt, "super", "import"].map((tt => `${tt}\\s*\\(`)), et.concat("(?!", Lt.join("|"), ")")), Vt, et.lookahead(/\s*\(/)),
+      const Ku = {
+        match: Eu.concat(/\b/, (Vu = [...qu, "super", "import"].map((uu => `${uu}\\s*\\(`)), Eu.concat("(?!", Vu.join("|"), ")")), ju, Eu.lookahead(/\s*\(/)),
         className: "title.function",
         relevance: 0
       };
-      var Lt;
-      const Ft = {
-          XE: et.concat(/\./, et.lookahead(et.concat(Vt, /(?![0-9A-Za-z$_(])/))),
-          end: Vt,
+      var Vu;
+      const ru = {
+          NN: Eu.concat(/\./, Eu.lookahead(Eu.concat(ju, /(?![0-9A-Za-z$_(])/))),
+          end: ju,
           excludeBegin: !0,
           keywords: "prototype",
           className: "property",
           relevance: 0
         },
-        kt = {
-          match: [/get|set/, /\s+/, Vt, /(?=\()/],
+        Qu = {
+          match: [/get|set/, /\s+/, ju, /(?=\()/],
           className: {
             1: "keyword",
             3: "title.function"
           },
           contains: [{
-            XE: /\(\)/
-          }, ct]
+            NN: /\(\)/
+          }, ou]
         },
-        Gt = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + tt.UNDERSCORE_IDENT_RE + ")\\s*=>",
-        zt = {
-          match: [/const|var|let/, /\s+/, Vt, /\s*/, /=\s*/, /(async\s*)?/, et.lookahead(Gt)],
+        iu = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + uu.UNDERSCORE_IDENT_RE + ")\\s*=>",
+        Wu = {
+          match: [/const|var|let/, /\s+/, ju, /\s*/, /=\s*/, /(async\s*)?/, Eu.lookahead(iu)],
           keywords: "async",
           className: {
             1: "keyword",
             3: "title.function"
           },
-          contains: [ct]
+          contains: [ou]
         };
       return {
         name: "JavaScript",
         aliases: ["js", "jsx", "mjs", "cjs"],
-        keywords: ft,
+        keywords: Ou,
         exports: {
-          PARAMS_CONTAINS: St,
-          CLASS_REFERENCE: It
+          PARAMS_CONTAINS: Pu,
+          CLASS_REFERENCE: mu
         },
         illegal: /#(?![$_A-z])/,
-        contains: [tt.SHEBANG({
+        contains: [uu.SHEBANG({
           label: "shebang",
           binary: "node",
           relevance: 5
@@ -1232,265 +1232,265 @@ export const modules = {
           label: "use_strict",
           className: "meta",
           relevance: 10,
-          XE: /^\s*['"]use (strict|asm)['"]/
-        }, tt.APOS_STRING_MODE, tt.QUOTE_STRING_MODE, Jt, Ct, ut, Kt, ht, {
+          NN: /^\s*['"]use (strict|asm)['"]/
+        }, uu.APOS_STRING_MODE, uu.QUOTE_STRING_MODE, eu, Gu, pu, wu, Ju, {
           match: /\$\d+/
-        }, Mt, It, {
+        }, gu, mu, {
           scope: "attr",
-          match: Vt + et.lookahead(":"),
+          match: ju + Eu.lookahead(":"),
           relevance: 0
-        }, zt, {
-          XE: "(" + tt.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
+        }, Wu, {
+          NN: "(" + uu.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
           keywords: "return throw case",
           relevance: 0,
-          contains: [ht, tt.REGEXP_MODE, {
+          contains: [Ju, uu.REGEXP_MODE, {
             className: "function",
-            XE: Gt,
+            NN: iu,
             returnBegin: !0,
             end: "\\s*=>",
             contains: [{
               className: "params",
               variants: [{
-                XE: tt.UNDERSCORE_IDENT_RE,
+                NN: uu.UNDERSCORE_IDENT_RE,
                 relevance: 0
               }, {
                 className: null,
-                XE: /\(\s*\)/,
+                NN: /\(\s*\)/,
                 skip: !0
               }, {
-                XE: /(\s*)\(/,
+                NN: /(\s*)\(/,
                 end: /\)/,
                 excludeBegin: !0,
                 excludeEnd: !0,
-                keywords: ft,
-                contains: St
+                keywords: Ou,
+                contains: Pu
               }]
             }]
           }, {
-            XE: /,/,
+            NN: /,/,
             relevance: 0
           }, {
             match: /\s+/,
             relevance: 0
           }, {
             variants: [{
-              XE: Qt,
-              end: lt
+              NN: bu,
+              end: cu
             }, {
               match: /<[A-Za-z0-9\\._:-]+\s*\/>/
             }, {
-              XE: Et.XE,
-              "on:begin": Et.isTrulyOpeningTag,
-              end: Et.end
+              NN: Nu.NN,
+              "on:begin": Nu.isTrulyOpeningTag,
+              end: Nu.end
             }],
             subLanguage: "xml",
             contains: [{
-              XE: Et.XE,
-              end: Et.end,
+              NN: Nu.NN,
+              end: Nu.end,
               skip: !0,
               contains: ["self"]
             }]
           }]
-        }, Pt, {
+        }, vu, {
           beginKeywords: "while if switch catch for"
         }, {
-          XE: "\\b(?!function)" + tt.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
+          NN: "\\b(?!function)" + uu.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
           returnBegin: !0,
           label: "func.def",
-          contains: [ct, tt.inherit(tt.TITLE_MODE, {
-            XE: Vt,
+          contains: [ou, uu.inherit(uu.TITLE_MODE, {
+            NN: ju,
             className: "title.function"
           })]
         }, {
           match: /\.\.\./,
           relevance: 0
-        }, Ft, {
-          match: "\\$" + Vt,
+        }, ru, {
+          match: "\\$" + ju,
           relevance: 0
         }, {
           match: [/\bconstructor(?=\s*\()/],
           className: {
             1: "title.function"
           },
-          contains: [ct]
-        }, Zt, {
+          contains: [ou]
+        }, Ku, {
           relevance: 0,
           match: /\b[A-Z][A-Z_0-9]+\b/,
           className: "variable.constant"
-        }, Rt, kt, {
+        }, ku, Qu, {
           match: /\$[(.]/
         }]
       }
     }
   },
-  4903: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => lt
+  4925: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => cu
     });
-    const Ot = "[A-Za-z$_][0-9A-Za-z$_]*",
-      qt = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
-      Dt = ["true", "false", "null", "undefined", "NaN", "Infinity"],
-      mt = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
-      dt = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
-      jt = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
-      Ht = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
-      Xt = [].concat(jt, mt, dt);
+    const su = "[A-Za-z$_][0-9A-Za-z$_]*",
+      Uu = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
+      Zu = ["true", "false", "null", "undefined", "NaN", "Infinity"],
+      Xu = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
+      lu = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
+      qu = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
+      fu = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
+      Cu = [].concat(qu, Xu, lu);
 
-    function Qt(tt) {
-      const et = tt.regex,
-        Vt = Ot,
-        Qt = "<>",
-        lt = "</>",
-        Et = {
-          XE: /<[A-Za-z0-9\\._:-]+/,
+    function bu(uu) {
+      const Eu = uu.regex,
+        ju = su,
+        bu = "<>",
+        cu = "</>",
+        Nu = {
+          NN: /<[A-Za-z0-9\\._:-]+/,
           end: /\/[A-Za-z0-9\\._:-]+>|\/>/,
-          isTrulyOpeningTag: (tt, et) => {
-            const Vt = tt[0].length + tt.index,
-              Ot = tt.input[Vt];
-            if ("<" === Ot || "," === Ot) return void et.ignoreMatch();
-            let qt;
-            ">" === Ot && (((tt, et) => {
+          isTrulyOpeningTag: (uu, Eu) => {
+            const ju = uu[0].length + uu.index,
+              su = uu.input[ju];
+            if ("<" === su || "," === su) return void Eu.ignoreMatch();
+            let Uu;
+            ">" === su && (((uu, Eu) => {
               let {
-                after: Vt
-              } = et;
-              const Ot = "</" + tt[0].slice(1);
-              return -1 !== tt.input.indexOf(Ot, Vt)
-            })(tt, {
-              after: Vt
-            }) || et.ignoreMatch());
-            const Dt = tt.input.substring(Vt);
-            ((qt = Dt.match(/^\s*=/)) || (qt = Dt.match(/^\s+extends\s+/)) && 0 === qt.index) && et.ignoreMatch()
+                after: ju
+              } = Eu;
+              const su = "</" + uu[0].slice(1);
+              return -1 !== uu.input.indexOf(su, ju)
+            })(uu, {
+              after: ju
+            }) || Eu.ignoreMatch());
+            const Zu = uu.input.substring(ju);
+            ((Uu = Zu.match(/^\s*=/)) || (Uu = Zu.match(/^\s+extends\s+/)) && 0 === Uu.index) && Eu.ignoreMatch()
           }
         },
-        ft = {
-          $pattern: Ot,
-          keyword: qt,
-          literal: Dt,
-          built_in: Xt,
-          "variable.language": Ht
+        Ou = {
+          $pattern: su,
+          keyword: Uu,
+          literal: Zu,
+          built_in: Cu,
+          "variable.language": fu
         },
-        wt = "[0-9](_?[0-9])*",
-        yt = `\\.(${wt})`,
-        Nt = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
-        Mt = {
+        Yu = "[0-9](_?[0-9])*",
+        hu = `\\.(${Yu})`,
+        Du = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
+        gu = {
           className: "number",
           variants: [{
-            XE: `(\\b(${Nt})((${yt})|\\.)?|(${yt}))[eE][+-]?(${wt})\\b`
+            NN: `(\\b(${Du})((${hu})|\\.)?|(${hu}))[eE][+-]?(${Yu})\\b`
           }, {
-            XE: `\\b(${Nt})\\b((${yt})\\b|\\.)?|(${yt})\\b`
+            NN: `\\b(${Du})\\b((${hu})\\b|\\.)?|(${hu})\\b`
           }, {
-            XE: "\\b(0|[1-9](_?[0-9])*)n\\b"
+            NN: "\\b(0|[1-9](_?[0-9])*)n\\b"
           }, {
-            XE: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
+            NN: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
           }, {
-            XE: "\\b0[bB][0-1](_?[0-1])*n?\\b"
+            NN: "\\b0[bB][0-1](_?[0-1])*n?\\b"
           }, {
-            XE: "\\b0[oO][0-7](_?[0-7])*n?\\b"
+            NN: "\\b0[oO][0-7](_?[0-7])*n?\\b"
           }, {
-            XE: "\\b0[0-7]+n?\\b"
+            NN: "\\b0[0-7]+n?\\b"
           }],
           relevance: 0
         },
-        bt = {
+        Mu = {
           className: "subst",
-          XE: "\\$\\{",
+          NN: "\\$\\{",
           end: "\\}",
-          keywords: ft,
+          keywords: Ou,
           contains: []
         },
-        Jt = {
-          XE: ".?html`",
+        eu = {
+          NN: ".?html`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [tt.BACKSLASH_ESCAPE, bt],
+            contains: [uu.BACKSLASH_ESCAPE, Mu],
             subLanguage: "xml"
           }
         },
-        Ct = {
-          XE: ".?css`",
+        Gu = {
+          NN: ".?css`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [tt.BACKSLASH_ESCAPE, bt],
+            contains: [uu.BACKSLASH_ESCAPE, Mu],
             subLanguage: "css"
           }
         },
-        ut = {
-          XE: ".?gql`",
+        pu = {
+          NN: ".?gql`",
           end: "",
           starts: {
             end: "`",
             returnEnd: !1,
-            contains: [tt.BACKSLASH_ESCAPE, bt],
+            contains: [uu.BACKSLASH_ESCAPE, Mu],
             subLanguage: "graphql"
           }
         },
-        Kt = {
+        wu = {
           className: "string",
-          XE: "`",
+          NN: "`",
           end: "`",
-          contains: [tt.BACKSLASH_ESCAPE, bt]
+          contains: [uu.BACKSLASH_ESCAPE, Mu]
         },
-        ht = {
+        Ju = {
           className: "comment",
-          variants: [tt.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
+          variants: [uu.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
             relevance: 0,
             contains: [{
-              XE: "(?=@[A-Za-z]+)",
+              NN: "(?=@[A-Za-z]+)",
               relevance: 0,
               contains: [{
                 className: "doctag",
-                XE: "@[A-Za-z]+"
+                NN: "@[A-Za-z]+"
               }, {
                 className: "type",
-                XE: "\\{",
+                NN: "\\{",
                 end: "\\}",
                 excludeEnd: !0,
                 excludeBegin: !0,
                 relevance: 0
               }, {
                 className: "variable",
-                XE: Vt + "(?=\\s*(-)|$)",
+                NN: ju + "(?=\\s*(-)|$)",
                 endsParent: !0,
                 relevance: 0
               }, {
-                XE: /(?=[^\n])\s/,
+                NN: /(?=[^\n])\s/,
                 relevance: 0
               }]
             }]
-          }), tt.C_BLOCK_COMMENT_MODE, tt.C_LINE_COMMENT_MODE]
+          }), uu.C_BLOCK_COMMENT_MODE, uu.C_LINE_COMMENT_MODE]
         },
-        vt = [tt.APOS_STRING_MODE, tt.QUOTE_STRING_MODE, Jt, Ct, ut, Kt, {
+        du = [uu.APOS_STRING_MODE, uu.QUOTE_STRING_MODE, eu, Gu, pu, wu, {
           match: /\$\d+/
-        }, Mt];
-      bt.contains = vt.concat({
-        XE: /\{/,
+        }, gu];
+      Mu.contains = du.concat({
+        NN: /\{/,
         end: /\}/,
-        keywords: ft,
-        contains: ["self"].concat(vt)
+        keywords: Ou,
+        contains: ["self"].concat(du)
       });
-      const Wt = [].concat(ht, bt.contains),
-        St = Wt.concat([{
-          XE: /(\s*)\(/,
+      const au = [].concat(Ju, Mu.contains),
+        Pu = au.concat([{
+          NN: /(\s*)\(/,
           end: /\)/,
-          keywords: ft,
-          contains: ["self"].concat(Wt)
+          keywords: Ou,
+          contains: ["self"].concat(au)
         }]),
-        ct = {
+        ou = {
           className: "params",
-          XE: /(\s*)\(/,
+          NN: /(\s*)\(/,
           end: /\)/,
           excludeBegin: !0,
           excludeEnd: !0,
-          keywords: ft,
-          contains: St
+          keywords: Ou,
+          contains: Pu
         },
-        Rt = {
+        ku = {
           variants: [{
-            match: [/class/, /\s+/, Vt, /\s+/, /extends/, /\s+/, et.concat(Vt, "(", et.concat(/\./, Vt), ")*")],
+            match: [/class/, /\s+/, ju, /\s+/, /extends/, /\s+/, Eu.concat(ju, "(", Eu.concat(/\./, ju), ")*")],
             scope: {
               1: "keyword",
               3: "title.class",
@@ -1498,24 +1498,24 @@ export const modules = {
               7: "title.class.inherited"
             }
           }, {
-            match: [/class/, /\s+/, Vt],
+            match: [/class/, /\s+/, ju],
             scope: {
               1: "keyword",
               3: "title.class"
             }
           }]
         },
-        It = {
+        mu = {
           relevance: 0,
-          match: et.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
+          match: Eu.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
           className: "title.class",
           keywords: {
-            _: [...mt, ...dt]
+            _: [...Xu, ...lu]
           }
         },
-        Pt = {
+        vu = {
           variants: [{
-            match: [/function/, /\s+/, Vt, /(?=\s*\()/]
+            match: [/function/, /\s+/, ju, /(?=\s*\()/]
           }, {
             match: [/function/, /\s*(?=\()/]
           }],
@@ -1524,53 +1524,53 @@ export const modules = {
             3: "title.function"
           },
           label: "func.def",
-          contains: [ct],
+          contains: [ou],
           illegal: /%/
         };
-      const Zt = {
-        match: et.concat(/\b/, (Lt = [...jt, "super", "import"].map((tt => `${tt}\\s*\\(`)), et.concat("(?!", Lt.join("|"), ")")), Vt, et.lookahead(/\s*\(/)),
+      const Ku = {
+        match: Eu.concat(/\b/, (Vu = [...qu, "super", "import"].map((uu => `${uu}\\s*\\(`)), Eu.concat("(?!", Vu.join("|"), ")")), ju, Eu.lookahead(/\s*\(/)),
         className: "title.function",
         relevance: 0
       };
-      var Lt;
-      const Ft = {
-          XE: et.concat(/\./, et.lookahead(et.concat(Vt, /(?![0-9A-Za-z$_(])/))),
-          end: Vt,
+      var Vu;
+      const ru = {
+          NN: Eu.concat(/\./, Eu.lookahead(Eu.concat(ju, /(?![0-9A-Za-z$_(])/))),
+          end: ju,
           excludeBegin: !0,
           keywords: "prototype",
           className: "property",
           relevance: 0
         },
-        kt = {
-          match: [/get|set/, /\s+/, Vt, /(?=\()/],
+        Qu = {
+          match: [/get|set/, /\s+/, ju, /(?=\()/],
           className: {
             1: "keyword",
             3: "title.function"
           },
           contains: [{
-            XE: /\(\)/
-          }, ct]
+            NN: /\(\)/
+          }, ou]
         },
-        Gt = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + tt.UNDERSCORE_IDENT_RE + ")\\s*=>",
-        zt = {
-          match: [/const|var|let/, /\s+/, Vt, /\s*/, /=\s*/, /(async\s*)?/, et.lookahead(Gt)],
+        iu = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + uu.UNDERSCORE_IDENT_RE + ")\\s*=>",
+        Wu = {
+          match: [/const|var|let/, /\s+/, ju, /\s*/, /=\s*/, /(async\s*)?/, Eu.lookahead(iu)],
           keywords: "async",
           className: {
             1: "keyword",
             3: "title.function"
           },
-          contains: [ct]
+          contains: [ou]
         };
       return {
         name: "JavaScript",
         aliases: ["js", "jsx", "mjs", "cjs"],
-        keywords: ft,
+        keywords: Ou,
         exports: {
-          PARAMS_CONTAINS: St,
-          CLASS_REFERENCE: It
+          PARAMS_CONTAINS: Pu,
+          CLASS_REFERENCE: mu
         },
         illegal: /#(?![$_A-z])/,
-        contains: [tt.SHEBANG({
+        contains: [uu.SHEBANG({
           label: "shebang",
           binary: "node",
           relevance: 5
@@ -1578,151 +1578,151 @@ export const modules = {
           label: "use_strict",
           className: "meta",
           relevance: 10,
-          XE: /^\s*['"]use (strict|asm)['"]/
-        }, tt.APOS_STRING_MODE, tt.QUOTE_STRING_MODE, Jt, Ct, ut, Kt, ht, {
+          NN: /^\s*['"]use (strict|asm)['"]/
+        }, uu.APOS_STRING_MODE, uu.QUOTE_STRING_MODE, eu, Gu, pu, wu, Ju, {
           match: /\$\d+/
-        }, Mt, It, {
+        }, gu, mu, {
           scope: "attr",
-          match: Vt + et.lookahead(":"),
+          match: ju + Eu.lookahead(":"),
           relevance: 0
-        }, zt, {
-          XE: "(" + tt.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
+        }, Wu, {
+          NN: "(" + uu.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
           keywords: "return throw case",
           relevance: 0,
-          contains: [ht, tt.REGEXP_MODE, {
+          contains: [Ju, uu.REGEXP_MODE, {
             className: "function",
-            XE: Gt,
+            NN: iu,
             returnBegin: !0,
             end: "\\s*=>",
             contains: [{
               className: "params",
               variants: [{
-                XE: tt.UNDERSCORE_IDENT_RE,
+                NN: uu.UNDERSCORE_IDENT_RE,
                 relevance: 0
               }, {
                 className: null,
-                XE: /\(\s*\)/,
+                NN: /\(\s*\)/,
                 skip: !0
               }, {
-                XE: /(\s*)\(/,
+                NN: /(\s*)\(/,
                 end: /\)/,
                 excludeBegin: !0,
                 excludeEnd: !0,
-                keywords: ft,
-                contains: St
+                keywords: Ou,
+                contains: Pu
               }]
             }]
           }, {
-            XE: /,/,
+            NN: /,/,
             relevance: 0
           }, {
             match: /\s+/,
             relevance: 0
           }, {
             variants: [{
-              XE: Qt,
-              end: lt
+              NN: bu,
+              end: cu
             }, {
               match: /<[A-Za-z0-9\\._:-]+\s*\/>/
             }, {
-              XE: Et.XE,
-              "on:begin": Et.isTrulyOpeningTag,
-              end: Et.end
+              NN: Nu.NN,
+              "on:begin": Nu.isTrulyOpeningTag,
+              end: Nu.end
             }],
             subLanguage: "xml",
             contains: [{
-              XE: Et.XE,
-              end: Et.end,
+              NN: Nu.NN,
+              end: Nu.end,
               skip: !0,
               contains: ["self"]
             }]
           }]
-        }, Pt, {
+        }, vu, {
           beginKeywords: "while if switch catch for"
         }, {
-          XE: "\\b(?!function)" + tt.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
+          NN: "\\b(?!function)" + uu.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
           returnBegin: !0,
           label: "func.def",
-          contains: [ct, tt.inherit(tt.TITLE_MODE, {
-            XE: Vt,
+          contains: [ou, uu.inherit(uu.TITLE_MODE, {
+            NN: ju,
             className: "title.function"
           })]
         }, {
           match: /\.\.\./,
           relevance: 0
-        }, Ft, {
-          match: "\\$" + Vt,
+        }, ru, {
+          match: "\\$" + ju,
           relevance: 0
         }, {
           match: [/\bconstructor(?=\s*\()/],
           className: {
             1: "title.function"
           },
-          contains: [ct]
-        }, Zt, {
+          contains: [ou]
+        }, Ku, {
           relevance: 0,
           match: /\b[A-Z][A-Z_0-9]+\b/,
           className: "variable.constant"
-        }, Rt, kt, {
+        }, ku, Qu, {
           match: /\$[(.]/
         }]
       }
     }
 
-    function lt(tt) {
-      const et = tt.regex,
-        Vt = Qt(tt),
-        mt = Ot,
-        dt = ["any", "void", "number", "boolean", "string", "object", "never", "symbol", "bigint", "unknown"],
-        jt = {
-          XE: [/namespace/, /\s+/, tt.IDENT_RE],
+    function cu(uu) {
+      const Eu = uu.regex,
+        ju = bu(uu),
+        Xu = su,
+        lu = ["any", "void", "number", "boolean", "string", "object", "never", "symbol", "bigint", "unknown"],
+        qu = {
+          NN: [/namespace/, /\s+/, uu.IDENT_RE],
           beginScope: {
             1: "keyword",
             3: "title.class"
           }
         },
-        lt = {
+        cu = {
           beginKeywords: "interface",
           end: /\{/,
           excludeEnd: !0,
           keywords: {
             keyword: "interface extends",
-            built_in: dt
+            built_in: lu
           },
-          contains: [Vt.exports.CLASS_REFERENCE]
+          contains: [ju.exports.CLASS_REFERENCE]
         },
-        Et = {
-          $pattern: Ot,
-          keyword: qt.concat(["type", "interface", "public", "private", "protected", "implements", "declare", "abstract", "readonly", "enum", "override", "satisfies"]),
-          literal: Dt,
-          built_in: Xt.concat(dt),
-          "variable.language": Ht
+        Nu = {
+          $pattern: su,
+          keyword: Uu.concat(["type", "interface", "public", "private", "protected", "implements", "declare", "abstract", "readonly", "enum", "override", "satisfies"]),
+          literal: Zu,
+          built_in: Cu.concat(lu),
+          "variable.language": fu
         },
-        ft = {
+        Ou = {
           className: "meta",
-          XE: "@" + mt
+          NN: "@" + Xu
         },
-        wt = (tt, et, Vt) => {
-          const Ot = tt.contains.findIndex((tt => tt.label === et));
-          if (-1 === Ot) throw new Error("can not find mode to replace");
-          tt.contains.splice(Ot, 1, Vt)
+        Yu = (uu, Eu, ju) => {
+          const su = uu.contains.findIndex((uu => uu.label === Eu));
+          if (-1 === su) throw new Error("can not find mode to replace");
+          uu.contains.splice(su, 1, ju)
         };
-      Object.assign(Vt.keywords, Et), Vt.exports.PARAMS_CONTAINS.push(ft);
-      const yt = Vt.contains.find((tt => "attr" === tt.scope)),
-        Nt = Object.assign({}, yt, {
-          match: et.concat(mt, et.lookahead(/\s*\?:/))
+      Object.assign(ju.keywords, Nu), ju.exports.PARAMS_CONTAINS.push(Ou);
+      const hu = ju.contains.find((uu => "attr" === uu.scope)),
+        Du = Object.assign({}, hu, {
+          match: Eu.concat(Xu, Eu.lookahead(/\s*\?:/))
         });
-      Vt.exports.PARAMS_CONTAINS.push([Vt.exports.CLASS_REFERENCE, yt, Nt]), Vt.contains = Vt.contains.concat([ft, jt, lt, Nt]), wt(Vt, "shebang", tt.SHEBANG()), wt(Vt, "use_strict", {
+      ju.exports.PARAMS_CONTAINS.push([ju.exports.CLASS_REFERENCE, hu, Du]), ju.contains = ju.contains.concat([Ou, qu, cu, Du]), Yu(ju, "shebang", uu.SHEBANG()), Yu(ju, "use_strict", {
         className: "meta",
         relevance: 10,
-        XE: /^\s*['"]use strict['"]/
+        NN: /^\s*['"]use strict['"]/
       });
-      return Vt.contains.find((tt => "func.def" === tt.label)).relevance = 0, Object.assign(Vt, {
+      return ju.contains.find((uu => "func.def" === uu.label)).relevance = 0, Object.assign(ju, {
         name: "TypeScript",
         aliases: ["ts", "tsx", "mts", "cts"]
-      }), Vt
+      }), ju
     }
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

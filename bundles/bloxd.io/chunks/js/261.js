@@ -1,148 +1,148 @@
 export const id = 261;
 export const ids = [261];
 export const modules = {
-  40431: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => mt,
-      g: () => dt
+  40499: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => Xu,
+      h: () => lu
     });
-    var Ot = Vt(38899),
-      qt = Vt(40230),
-      Dt = Vt(40409),
-      mt = {};
-    class dt {
-      constructor(tt) {
-        this.attachedToElement = !1, this.attached = {}, this.camera = tt, this.checkInputs = () => {}
+    var su = ju(39032),
+      Uu = ju(40272),
+      Zu = ju(40462),
+      Xu = {};
+    class lu {
+      constructor(uu) {
+        this.attachedToElement = !1, this.attached = {}, this.camera = uu, this.checkInputs = () => {}
       }
-      add(tt) {
-        const et = tt.getSimpleName();
-        this.attached[et] ? Ot.d.Warn("camera input of type " + et + " already exists on camera") : (this.attached[et] = tt, tt.camera = this.camera, tt.checkInputs && (this.checkInputs = this._addCheckInputs(tt.checkInputs.bind(tt))), this.attachedToElement && tt.attachControl(this.noPreventDefault))
+      add(uu) {
+        const Eu = uu.getSimpleName();
+        this.attached[Eu] ? su.b.Warn("camera input of type " + Eu + " already exists on camera") : (this.attached[Eu] = uu, uu.camera = this.camera, uu.checkInputs && (this.checkInputs = this._addCheckInputs(uu.checkInputs.bind(uu))), this.attachedToElement && uu.attachControl(this.noPreventDefault))
       }
-      remove(tt) {
-        for (const et in this.attached) {
-          const Vt = this.attached[et];
-          if (Vt === tt) return Vt.detachControl(), Vt.camera = null, delete this.attached[et], void this.rebuildInputCheck()
+      remove(uu) {
+        for (const Eu in this.attached) {
+          const ju = this.attached[Eu];
+          if (ju === uu) return ju.detachControl(), ju.camera = null, delete this.attached[Eu], void this.rebuildInputCheck()
         }
       }
-      removeByType(tt) {
-        for (const et in this.attached) {
-          const Vt = this.attached[et];
-          Vt.getClassName() === tt && (Vt.detachControl(), Vt.camera = null, delete this.attached[et], this.rebuildInputCheck())
+      removeByType(uu) {
+        for (const Eu in this.attached) {
+          const ju = this.attached[Eu];
+          ju.getClassName() === uu && (ju.detachControl(), ju.camera = null, delete this.attached[Eu], this.rebuildInputCheck())
         }
       }
-      _addCheckInputs(tt) {
-        const et = this.checkInputs;
+      _addCheckInputs(uu) {
+        const Eu = this.checkInputs;
         return () => {
-          et(), tt()
+          Eu(), uu()
         }
       }
-      attachInput(tt) {
-        this.attachedToElement && tt.attachControl(this.noPreventDefault)
+      attachInput(uu) {
+        this.attachedToElement && uu.attachControl(this.noPreventDefault)
       }
       attachElement() {
-        let tt = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        let uu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         if (!this.attachedToElement) {
-          tt = !Dt.c.ForceAttachControlToAlwaysPreventDefault && tt, this.attachedToElement = !0, this.noPreventDefault = tt;
-          for (const et in this.attached) this.attached[et].attachControl(tt)
+          uu = !Zu.e.ForceAttachControlToAlwaysPreventDefault && uu, this.attachedToElement = !0, this.noPreventDefault = uu;
+          for (const Eu in this.attached) this.attached[Eu].attachControl(uu)
         }
       }
       detachElement() {
-        let tt = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        for (const et in this.attached) this.attached[et].detachControl(), tt && (this.attached[et].camera = null);
+        let uu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        for (const Eu in this.attached) this.attached[Eu].detachControl(), uu && (this.attached[Eu].camera = null);
         this.attachedToElement = !1
       }
       rebuildInputCheck() {
         this.checkInputs = () => {};
-        for (const tt in this.attached) {
-          const et = this.attached[tt];
-          et.checkInputs && (this.checkInputs = this._addCheckInputs(et.checkInputs.bind(et)))
+        for (const uu in this.attached) {
+          const Eu = this.attached[uu];
+          Eu.checkInputs && (this.checkInputs = this._addCheckInputs(Eu.checkInputs.bind(Eu)))
         }
       }
       clear() {
         this.attachedToElement && this.detachElement(!0), this.attached = {}, this.attachedToElement = !1, this.checkInputs = () => {}
       }
-      serialize(tt) {
-        const et = {};
-        for (const Vt in this.attached) {
-          const tt = this.attached[Vt],
-            Ot = qt.d.Serialize(tt);
-          et[tt.getClassName()] = Ot
+      serialize(uu) {
+        const Eu = {};
+        for (const ju in this.attached) {
+          const uu = this.attached[ju],
+            su = Uu.e.Serialize(uu);
+          Eu[uu.getClassName()] = su
         }
-        tt.inputsmgr = et
+        uu.inputsmgr = Eu
       }
-      parse(tt) {
-        const et = tt.inputsmgr;
-        if (et) {
+      parse(uu) {
+        const Eu = uu.inputsmgr;
+        if (Eu) {
           this.clear();
-          for (const tt in et) {
-            const Vt = mt[tt];
-            if (Vt) {
-              const Ot = et[tt],
-                Dt = qt.d.Parse((() => new Vt), Ot, null);
-              this.add(Dt)
+          for (const uu in Eu) {
+            const ju = Xu[uu];
+            if (ju) {
+              const su = Eu[uu],
+                Zu = Uu.e.Parse((() => new ju), su, null);
+              this.add(Zu)
             }
           }
         } else
-          for (const Vt in this.attached) {
-            const et = mt[this.attached[Vt].getClassName()];
-            if (et) {
-              const Ot = qt.d.Parse((() => new et), tt, null);
-              this.remove(this.attached[Vt]), this.add(Ot)
+          for (const ju in this.attached) {
+            const Eu = Xu[this.attached[ju].getClassName()];
+            if (Eu) {
+              const su = Uu.e.Parse((() => new Eu), uu, null);
+              this.remove(this.attached[ju]), this.add(su)
             }
           }
       }
     }
   },
-  41339: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => bt
+  41353: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => Mu
     });
-    var Ot = Vt(40211),
-      qt = Vt(40213),
-      Dt = Vt(40085),
-      mt = Vt(37336),
-      dt = Vt(40202),
-      jt = Vt(40661),
-      Ht = Vt(37390),
-      Xt = Vt(37367),
-      Qt = Vt(40230),
-      lt = Vt(40037),
-      Et = Vt(38899),
-      ft = Vt(40249),
-      wt = Vt(38159),
-      yt = Vt(40281);
-    var Nt = Vt(40092);
-    let Mt = !1;
-    let bt = (() => {
-        var tt;
-        let et, Vt, Ht, bt, Jt, Ct, ut, Kt, ht, vt = dt.b,
-          Wt = [],
-          St = [],
-          ct = [],
-          Rt = [],
-          It = [],
-          Pt = [],
-          Zt = [],
-          Lt = [],
-          Ft = [],
-          kt = [],
-          Gt = [],
-          zt = [],
-          ot = [],
-          rt = [],
-          Ut = [];
-        return tt = class extends vt {
-          set boundingBoxSize(tt) {
-            if (this._boundingBoxSize && this._boundingBoxSize.equals(tt)) return;
-            this._boundingBoxSize = tt;
-            const et = this.vI();
-            et && et.markAllMaterialsAsDirty(1)
+    var su = ju(40255),
+      Uu = ju(40258),
+      Zu = ju(40164),
+      Xu = ju(37494),
+      lu = ju(40253),
+      qu = ju(40739),
+      fu = ju(37532),
+      Cu = ju(37514),
+      bu = ju(40272),
+      cu = ju(40108),
+      Nu = ju(39032),
+      Ou = ju(40294),
+      Yu = ju(38303),
+      hu = ju(40339);
+    var Du = ju(40168);
+    let gu = !1;
+    let Mu = (() => {
+        var uu;
+        let Eu, ju, fu, Mu, eu, Gu, pu, wu, Ju, du = lu.c,
+          au = [],
+          Pu = [],
+          ou = [],
+          ku = [],
+          mu = [],
+          vu = [],
+          Ku = [],
+          Vu = [],
+          ru = [],
+          Qu = [],
+          iu = [],
+          Wu = [],
+          Su = [],
+          Iu = [],
+          Fu = [];
+        return uu = class extends du {
+          set boundingBoxSize(uu) {
+            if (this._boundingBoxSize && this._boundingBoxSize.equals(uu)) return;
+            this._boundingBoxSize = uu;
+            const Eu = this.hV();
+            Eu && Eu.markAllMaterialsAsDirty(1)
           }
           get boundingBoxSize() {
             return this._boundingBoxSize
           }
-          set rotationY(tt) {
-            this._rotationY = tt, this.setReflectionTextureMatrix(mt.c.RotationY(this._rotationY))
+          set rotationY(uu) {
+            this._rotationY = uu, this.setReflectionTextureMatrix(Xu.e.RotationY(this._rotationY))
           }
           get rotationY() {
             return this._rotationY
@@ -153,362 +153,362 @@ export const modules = {
           get forcedExtension() {
             return this._forcedExtension
           }
-          constructor(tt, et) {
-            let Vt, qt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-              Dt = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-              dt = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
-              Ht = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
-              Qt = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null,
-              bt = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 5,
-              Jt = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
-              Ct = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : null,
-              ut = arguments.length > 10 && void 0 !== arguments[10] && arguments[10],
-              Kt = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : .8,
-              ht = arguments.length > 12 && void 0 !== arguments[12] ? arguments[12] : 0,
-              vt = arguments.length > 13 ? arguments[13] : void 0,
-              At = arguments.length > 14 ? arguments[14] : void 0;
-            super(et), this._delayedOnLoad = (0, Ot.m)(this, Wt), this.onLoadObservable = new Xt.c, this.url = (0, Ot.m)(this, St, void 0), this.boundingBoxPosition = ((0, Ot.m)(this, ct), (0, Ot.m)(this, Rt, mt.n.Zero())), this._boundingBoxSize = (0, Ot.m)(this, It), this._rotationY = 0, this._files = (0, Ot.m)(this, Pt, null), this._forcedExtension = ((0, Ot.m)(this, Zt), (0, Ot.m)(this, Lt, null)), this._extensions = ((0, Ot.m)(this, Ft), (0, Ot.m)(this, kt, null)), this._textureMatrix = ((0, Ot.m)(this, Gt), (0, Ot.m)(this, zt, void 0)), this._textureMatrixRefraction = ((0, Ot.m)(this, ot), (0, Ot.m)(this, rt, new mt.c)), this._format = (0, Ot.m)(this, Ut), this._buffer = null, Mt || (Mt = !0, Nt.d.prototype._partialLoadFile = function(tt, et, Vt, Ot) {
-              let qt = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
-              this._loadFile(tt, (tt => {
-                Vt[et] = tt, Vt._internalCount++, 6 === Vt._internalCount && Ot(Vt)
-              }), void 0, void 0, !0, ((tt, et) => {
-                qt && tt && qt(tt.status + " " + tt.statusText, et)
+          constructor(uu, Eu) {
+            let ju, Uu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+              Zu = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+              lu = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+              fu = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+              bu = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null,
+              Mu = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 5,
+              eu = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
+              Gu = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : null,
+              pu = arguments.length > 10 && void 0 !== arguments[10] && arguments[10],
+              wu = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : .8,
+              Ju = arguments.length > 12 && void 0 !== arguments[12] ? arguments[12] : 0,
+              du = arguments.length > 13 ? arguments[13] : void 0,
+              Bu = arguments.length > 14 ? arguments[14] : void 0;
+            super(Eu), this._delayedOnLoad = (0, su.g)(this, au), this.onLoadObservable = new Cu.d, this.url = (0, su.g)(this, Pu, void 0), this.boundingBoxPosition = ((0, su.g)(this, ou), (0, su.g)(this, ku, Xu.t.Zero())), this._boundingBoxSize = (0, su.g)(this, mu), this._rotationY = 0, this._files = (0, su.g)(this, vu, null), this._forcedExtension = ((0, su.g)(this, Ku), (0, su.g)(this, Vu, null)), this._extensions = ((0, su.g)(this, ru), (0, su.g)(this, Qu, null)), this._textureMatrix = ((0, su.g)(this, iu), (0, su.g)(this, Wu, void 0)), this._textureMatrixRefraction = ((0, su.g)(this, Su), (0, su.g)(this, Iu, new Xu.e)), this._format = (0, su.g)(this, Fu), this._buffer = null, gu || (gu = !0, Du.d.prototype._partialLoadFile = function(uu, Eu, ju, su) {
+              let Uu = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
+              this._loadFile(uu, (uu => {
+                ju[Eu] = uu, ju._internalCount++, 6 === ju._internalCount && su(ju)
+              }), void 0, void 0, !0, ((uu, Eu) => {
+                Uu && uu && Uu(uu.status + " " + uu.statusText, Eu)
               }))
-            }, Nt.d.prototype._cascadeLoadFiles = function(tt, et, Vt) {
-              let Ot = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-              const qt = [];
-              qt._internalCount = 0;
-              for (let Dt = 0; Dt < 6; Dt++) this._partialLoadFile(Vt[Dt], Dt, qt, et, Ot)
-            }, Nt.d.prototype._cascadeLoadImgs = function(tt, et, Vt, Ot) {
-              let qt = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
-                Dt = arguments.length > 5 ? arguments[5] : void 0;
-              const mt = [];
-              mt._internalCount = 0;
-              for (let dt = 0; dt < 6; dt++) this._partialLoadImg(Ot[dt], dt, mt, tt, et, Vt, qt, Dt)
-            }, Nt.d.prototype._partialLoadImg = function(tt, et, Vt, Ot, qt, Dt) {
-              let mt = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null,
-                dt = arguments.length > 7 ? arguments[7] : void 0;
-              const jt = (0, wt.b)();
-              (0, ft.p)(tt, (tt => {
-                Vt[et] = tt, Vt._internalCount++, Ot && Ot.removePendingData(jt), 6 === Vt._internalCount && Dt && Dt(qt, Vt)
-              }), ((tt, et) => {
-                Ot && Ot.removePendingData(jt), mt && mt(tt, et)
-              }), Ot ? Ot.offlineProvider : null, dt), Ot && Ot.addPendingData(jt)
-            }, Nt.d.prototype.createCubeTextureBase = function(tt, et, Vt, Ot) {
-              let qt = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
-                Dt = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
-                mt = arguments.length > 6 ? arguments[6] : void 0,
-                dt = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
-                jt = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
-                Ht = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 0,
-                Xt = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : 0,
-                Qt = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : null,
-                ft = arguments.length > 12 && void 0 !== arguments[12] ? arguments[12] : null,
-                wt = arguments.length > 13 && void 0 !== arguments[13] ? arguments[13] : null,
-                Nt = arguments.length > 14 && void 0 !== arguments[14] && arguments[14],
-                Mt = arguments.length > 15 && void 0 !== arguments[15] ? arguments[15] : null;
-              const bt = Qt || new lt.d(this, 7);
-              bt.isCube = !0, bt.url = tt, bt.generateMipMaps = !Ot, bt._lodGenerationScale = Ht, bt._lodGenerationOffset = Xt, bt._useSRGBBuffer = !!Nt && this._caps.supportSRGBBuffers && (this.version > 1 || this.isWebGPU || !!Ot), bt !== Qt && (bt.label = tt.substring(0, 60)), this._doNotHandleContextLost || (bt._extension = dt, bt._files = Vt, bt._buffer = Mt);
-              const Jt = tt;
-              this._transformTextureUrl && !Qt && (tt = this._transformTextureUrl(tt));
-              const Ct = dt ?? function(tt) {
-                  const et = tt.split("?")[0],
-                    Vt = et.lastIndexOf(".");
-                  return Vt > -1 ? et.substring(Vt).toLowerCase() : ""
-                }(tt),
-                ut = (0, yt.d)(Ct),
-                Kt = (tt, et) => {
-                  bt.dispose(), Dt ? Dt(tt, et) : tt && Et.d.Warn(tt)
+            }, Du.d.prototype._cascadeLoadFiles = function(uu, Eu, ju) {
+              let su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+              const Uu = [];
+              Uu._internalCount = 0;
+              for (let Zu = 0; Zu < 6; Zu++) this._partialLoadFile(ju[Zu], Zu, Uu, Eu, su)
+            }, Du.d.prototype._cascadeLoadImgs = function(uu, Eu, ju, su) {
+              let Uu = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+                Zu = arguments.length > 5 ? arguments[5] : void 0;
+              const Xu = [];
+              Xu._internalCount = 0;
+              for (let lu = 0; lu < 6; lu++) this._partialLoadImg(su[lu], lu, Xu, uu, Eu, ju, Uu, Zu)
+            }, Du.d.prototype._partialLoadImg = function(uu, Eu, ju, su, Uu, Zu) {
+              let Xu = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null,
+                lu = arguments.length > 7 ? arguments[7] : void 0;
+              const qu = (0, Yu.e)();
+              (0, Ou.q)(uu, (uu => {
+                ju[Eu] = uu, ju._internalCount++, su && su.removePendingData(qu), 6 === ju._internalCount && Zu && Zu(Uu, ju)
+              }), ((uu, Eu) => {
+                su && su.removePendingData(qu), Xu && Xu(uu, Eu)
+              }), su ? su.offlineProvider : null, lu), su && su.addPendingData(qu)
+            }, Du.d.prototype.createCubeTextureBase = function(uu, Eu, ju, su) {
+              let Uu = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+                Zu = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+                Xu = arguments.length > 6 ? arguments[6] : void 0,
+                lu = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+                qu = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
+                fu = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 0,
+                Cu = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : 0,
+                bu = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : null,
+                Ou = arguments.length > 12 && void 0 !== arguments[12] ? arguments[12] : null,
+                Yu = arguments.length > 13 && void 0 !== arguments[13] ? arguments[13] : null,
+                Du = arguments.length > 14 && void 0 !== arguments[14] && arguments[14],
+                gu = arguments.length > 15 && void 0 !== arguments[15] ? arguments[15] : null;
+              const Mu = bu || new cu.c(this, 7);
+              Mu.isCube = !0, Mu.url = uu, Mu.generateMipMaps = !su, Mu._lodGenerationScale = fu, Mu._lodGenerationOffset = Cu, Mu._useSRGBBuffer = !!Du && this._caps.supportSRGBBuffers && (this.version > 1 || this.isWebGPU || !!su), Mu !== bu && (Mu.label = uu.substring(0, 60)), this._doNotHandleContextLost || (Mu._extension = lu, Mu._files = ju, Mu._buffer = gu);
+              const eu = uu;
+              this._transformTextureUrl && !bu && (uu = this._transformTextureUrl(uu));
+              const Gu = lu ?? function(uu) {
+                  const Eu = uu.split("?")[0],
+                    ju = Eu.lastIndexOf(".");
+                  return ju > -1 ? Eu.substring(ju).toLowerCase() : ""
+                }(uu),
+                pu = (0, hu.d)(Gu),
+                wu = (uu, Eu) => {
+                  Mu.dispose(), Zu ? Zu(uu, Eu) : uu && Nu.b.Warn(uu)
                 },
-                ht = (Dt, Qt) => {
-                  tt === Jt ? Dt && Kt(Dt.status + " " + Dt.statusText, Qt) : (Et.d.Warn(`Failed to load ${tt}, falling back to the ${Jt}`), this.createCubeTextureBase(Jt, et, Vt, !!Ot, qt, Kt, mt, dt, jt, Ht, Xt, bt, ft, wt, Nt, Mt))
+                Ju = (Zu, bu) => {
+                  uu === eu ? Zu && wu(Zu.status + " " + Zu.statusText, bu) : (Nu.b.Warn(`Failed to load ${uu}, falling back to the ${eu}`), this.createCubeTextureBase(eu, Eu, ju, !!su, Uu, wu, Xu, lu, qu, fu, Cu, Mu, Ou, Yu, Du, gu))
                 };
-              if (ut) ut.then((Ot => {
-                const Dt = tt => {
-                  ft && ft(bt, tt), Ot.loadCubeData(tt, bt, jt, qt, ((tt, et) => {
-                    Kt(tt, et)
+              if (pu) pu.then((su => {
+                const Zu = uu => {
+                  Ou && Ou(Mu, uu), su.loadCubeData(uu, Mu, qu, Uu, ((uu, Eu) => {
+                    wu(uu, Eu)
                   }))
                 };
-                Mt ? Dt(Mt) : Vt && 6 === Vt.length ? Ot.supportCascades ? this._cascadeLoadFiles(et, (tt => Dt(tt.map((tt => new Uint8Array(tt))))), Vt, Kt) : Kt("Textures type does not support cascades.") : this._loadFile(tt, (tt => Dt(new Uint8Array(tt))), void 0, et ? et.offlineProvider || null : void 0, !0, ht)
+                gu ? Zu(gu) : ju && 6 === ju.length ? su.supportCascades ? this._cascadeLoadFiles(Eu, (uu => Zu(uu.map((uu => new Uint8Array(uu))))), ju, wu) : wu("Textures type does not support cascades.") : this._loadFile(uu, (uu => Zu(new Uint8Array(uu))), void 0, Eu ? Eu.offlineProvider || null : void 0, !0, Ju)
               }));
               else {
-                if (!Vt || 0 === Vt.length) throw new Error("Cannot load cubemap because files were not defined, or the correct loader was not found.");
-                this._cascadeLoadImgs(et, bt, ((tt, et) => {
-                  wt && wt(tt, et)
-                }), Vt, Kt)
+                if (!ju || 0 === ju.length) throw new Error("Cannot load cubemap because files were not defined, or the correct loader was not found.");
+                this._cascadeLoadImgs(Eu, Mu, ((uu, Eu) => {
+                  Yu && Yu(uu, Eu)
+                }), ju, wu)
               }
-              return this._internalTexturesCache.push(bt), bt
-            }), this.name = tt, this.url = tt, this._noMipmap = Dt, this.hasAlpha = !1, this.isCube = !0, this._textureMatrix = mt.c.Identity(), this.coordinatesMode = jt.f.CUBIC_MODE;
-            let it = null;
-            null === qt || Array.isArray(qt) ? (this._noMipmap = Dt, this._format = bt, this._createPolynomials = ut, Vt = qt, this._loaderOptions = vt, this._useSRGBBuffer = At, this._lodScale = Kt, this._lodOffset = ht) : (Vt = qt.extensions ?? null, this._noMipmap = qt.noMipmap ?? !1, dt = qt.files ?? null, it = qt.buffer ?? null, this._format = qt.format ?? 5, Jt = qt.prefiltered ?? !1, Ct = qt.forcedExtension ?? null, this._createPolynomials = qt.createPolynomials ?? !1, this._lodScale = qt.lodScale ?? .8, this._lodOffset = qt.lodOffset ?? 0, this._loaderOptions = qt.loaderOptions, this._useSRGBBuffer = qt.useSRGBBuffer, this._sphericalPolynomialTargetSize = qt.sphericalPolynomialTargetSize ?? 0, Ht = qt.onLoad ?? null, Qt = qt.onError ?? null), (tt || dt) && this.updateURL(tt, Ct, Ht, Jt, Qt, Vt, this.vI()?.useDelayedTextureLoading, dt, it)
+              return this._internalTexturesCache.push(Mu), Mu
+            }), this.name = uu, this.url = uu, this._noMipmap = Zu, this.hasAlpha = !1, this.isCube = !0, this._textureMatrix = Xu.e.Identity(), this.coordinatesMode = qu.g.CUBIC_MODE;
+            let Lu = null;
+            null === Uu || Array.isArray(Uu) ? (this._noMipmap = Zu, this._format = Mu, this._createPolynomials = pu, ju = Uu, this._loaderOptions = du, this._useSRGBBuffer = Bu, this._lodScale = wu, this._lodOffset = Ju) : (ju = Uu.extensions ?? null, this._noMipmap = Uu.noMipmap ?? !1, lu = Uu.files ?? null, Lu = Uu.buffer ?? null, this._format = Uu.format ?? 5, eu = Uu.prefiltered ?? !1, Gu = Uu.forcedExtension ?? null, this._createPolynomials = Uu.createPolynomials ?? !1, this._lodScale = Uu.lodScale ?? .8, this._lodOffset = Uu.lodOffset ?? 0, this._loaderOptions = Uu.loaderOptions, this._useSRGBBuffer = Uu.useSRGBBuffer, this._sphericalPolynomialTargetSize = Uu.sphericalPolynomialTargetSize ?? 0, fu = Uu.onLoad ?? null, bu = Uu.onError ?? null), (uu || lu) && this.updateURL(uu, Gu, fu, eu, bu, ju, this.hV()?.useDelayedTextureLoading, lu, Lu)
           }
           getClassName() {
             return "CubeTexture"
           }
-          updateURL(tt) {
-            let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-              Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-              Ot = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-              qt = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
-              Dt = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
-              mt = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
-              dt = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
-              jt = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : null;
-            this.name && !this.name.startsWith("data:") || (this.name = tt), this.url = tt, et && (this._forcedExtension = et);
-            const Ht = tt.lastIndexOf("."),
-              Xt = et || (Ht > -1 ? tt.substring(Ht).toLowerCase() : ""),
-              Qt = 0 === Xt.indexOf(".dds"),
-              lt = 0 === Xt.indexOf(".env"),
-              Et = 0 === Xt.indexOf(".basis");
-            if (lt ? (this.gammaSpace = !1, this._prefiltered = !1, this.anisotropicFilteringLevel = 1) : (this._prefiltered = Ot, Ot && (this.gammaSpace = !1, this.anisotropicFilteringLevel = 1)), dt) this._files = dt;
-            else if (Et || lt || Qt || Dt || (Dt = ["_px.jpg", "_py.jpg", "_pz.jpg", "_nx.jpg", "_ny.jpg", "_nz.jpg"]), this._files = this._files || [], this._files.length = 0, Dt) {
-              for (let et = 0; et < Dt.length; et++) this._files.push(tt + Dt[et]);
-              this._extensions = Dt
+          updateURL(uu) {
+            let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+              ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+              su = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+              Uu = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+              Zu = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+              Xu = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
+              lu = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+              qu = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : null;
+            this.name && !this.name.startsWith("data:") || (this.name = uu), this.url = uu, Eu && (this._forcedExtension = Eu);
+            const fu = uu.lastIndexOf("."),
+              Cu = Eu || (fu > -1 ? uu.substring(fu).toLowerCase() : ""),
+              bu = 0 === Cu.indexOf(".dds"),
+              cu = 0 === Cu.indexOf(".env"),
+              Nu = 0 === Cu.indexOf(".basis");
+            if (cu ? (this.gammaSpace = !1, this._prefiltered = !1, this.anisotropicFilteringLevel = 1) : (this._prefiltered = su, su && (this.gammaSpace = !1, this.anisotropicFilteringLevel = 1)), lu) this._files = lu;
+            else if (Nu || cu || bu || Zu || (Zu = ["_px.jpg", "_py.jpg", "_pz.jpg", "_nx.jpg", "_ny.jpg", "_nz.jpg"]), this._files = this._files || [], this._files.length = 0, Zu) {
+              for (let Eu = 0; Eu < Zu.length; Eu++) this._files.push(uu + Zu[Eu]);
+              this._extensions = Zu
             }
-            this._buffer = jt, mt ? (this.delayLoadState = 4, this._delayedOnLoad = Vt, this._delayedOnError = qt) : this._loadTexture(Vt, qt)
+            this._buffer = qu, Xu ? (this.delayLoadState = 4, this._delayedOnLoad = ju, this._delayedOnError = Uu) : this._loadTexture(ju, Uu)
           }
-          delayLoad(tt) {
-            4 === this.delayLoadState && (tt && (this._forcedExtension = tt), this.delayLoadState = 1, this._loadTexture(this._delayedOnLoad, this._delayedOnError))
+          delayLoad(uu) {
+            4 === this.delayLoadState && (uu && (this._forcedExtension = uu), this.delayLoadState = 1, this._loadTexture(this._delayedOnLoad, this._delayedOnError))
           }
           getReflectionTextureMatrix() {
             return this._textureMatrix
           }
-          setReflectionTextureMatrix(tt) {
-            if (tt.updateFlag === this._textureMatrix.updateFlag) return;
-            if (tt.isIdentity() !== this._textureMatrix.isIdentity() && this.vI()?.markAllMaterialsAsDirty(1, (tt => -1 !== tt.getActiveTextures().indexOf(this))), this._textureMatrix = tt, !this.vI()?.useRightHandedSystem) return;
-            const et = mt.k.uf[0],
-              Vt = mt.k.Quaternion[0],
-              Ot = mt.k.uf[1];
-            this._textureMatrix.decompose(et, Vt, Ot), Vt.z *= -1, Vt.w *= -1, mt.c.ComposeToRef(et, Vt, Ot, this._textureMatrixRefraction)
+          setReflectionTextureMatrix(uu) {
+            if (uu.updateFlag === this._textureMatrix.updateFlag) return;
+            if (uu.isIdentity() !== this._textureMatrix.isIdentity() && this.hV()?.markAllMaterialsAsDirty(1, (uu => -1 !== uu.getActiveTextures().indexOf(this))), this._textureMatrix = uu, !this.hV()?.useRightHandedSystem) return;
+            const Eu = Xu.m.dO[0],
+              ju = Xu.m.Quaternion[0],
+              su = Xu.m.dO[1];
+            this._textureMatrix.decompose(Eu, ju, su), ju.z *= -1, ju.w *= -1, Xu.e.ComposeToRef(Eu, ju, su, this._textureMatrixRefraction)
           }
           getRefractionTextureMatrix() {
-            return this.vI()?.useRightHandedSystem ? this._textureMatrixRefraction : this._textureMatrix
+            return this.hV()?.useRightHandedSystem ? this._textureMatrixRefraction : this._textureMatrix
           }
           _loadTexture() {
-            let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-              et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-            const Vt = this.vI(),
-              Ot = this._texture;
+            let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+              Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+            const ju = this.hV(),
+              su = this._texture;
             this._texture = this._getFromCache(this.url, this._noMipmap, void 0, void 0, this._useSRGBBuffer, this.isCube);
-            const qt = () => {
-                this.onLoadObservable.notifyObservers(this), Ot && (Ot.dispose(), this.vI()?.markAllMaterialsAsDirty(1)), tt && tt()
+            const Uu = () => {
+                this.onLoadObservable.notifyObservers(this), su && (su.dispose(), this.hV()?.markAllMaterialsAsDirty(1)), uu && uu()
               },
-              mt = (tt, Vt) => {
+              Xu = (uu, ju) => {
                 this._loadingError = !0, this._errorObject = {
-                  message: tt,
-                  exception: Vt
-                }, et && et(tt, Vt), jt.f.OnTextureLoadErrorObservable.notifyObservers(this)
+                  message: uu,
+                  exception: ju
+                }, Eu && Eu(uu, ju), qu.g.OnTextureLoadErrorObservable.notifyObservers(this)
               };
-            this._texture ? this._texture.isReady ? Dt.c.SetImmediate((() => qt())) : this._texture.onLoadedObservable.add((() => qt())) : (this._prefiltered ? this._texture = this._getEngine().createPrefilteredCubeTexture(this.url, Vt, this._lodScale, this._lodOffset, tt, mt, this._format, this._forcedExtension, this._createPolynomials, this._buffer) : this._texture = this._getEngine().createCubeTexture(this.url, Vt, this._files, this._noMipmap, tt, mt, this._format, this._forcedExtension, !1, this._lodScale, this._lodOffset, null, this._loaderOptions, !!this._useSRGBBuffer, this._buffer), this._texture?.onLoadedObservable.add((() => this.onLoadObservable.notifyObservers(this))))
+            this._texture ? this._texture.isReady ? Zu.c.SetImmediate((() => Uu())) : this._texture.onLoadedObservable.add((() => Uu())) : (this._prefiltered ? this._texture = this._getEngine().createPrefilteredCubeTexture(this.url, ju, this._lodScale, this._lodOffset, uu, Xu, this._format, this._forcedExtension, this._createPolynomials, this._buffer) : this._texture = this._getEngine().createCubeTexture(this.url, ju, this._files, this._noMipmap, uu, Xu, this._format, this._forcedExtension, !1, this._lodScale, this._lodOffset, null, this._loaderOptions, !!this._useSRGBBuffer, this._buffer), this._texture?.onLoadedObservable.add((() => this.onLoadObservable.notifyObservers(this))))
           }
           clone() {
-            let et = 0;
-            const Vt = this.irradianceTexture,
-              Ot = Qt.d.Clone((() => {
-                const Vt = new tt(this.url, this.vI() || this._getEngine(), this._extensions, this._noMipmap, this._files);
-                return et = Vt.uniqueId, Vt
+            let Eu = 0;
+            const ju = this.irradianceTexture,
+              su = bu.e.Clone((() => {
+                const ju = new uu(this.url, this.hV() || this._getEngine(), this._extensions, this._noMipmap, this._files);
+                return Eu = ju.uniqueId, ju
               }), this);
-            return Ot.uniqueId = et, Vt && !this.irradianceTexture && (this.irradianceTexture = Vt), Ot
+            return su.uniqueId = Eu, ju && !this.irradianceTexture && (this.irradianceTexture = ju), su
           }
         }, (() => {
-          const Dt = "function" === typeof Symbol && Symbol.metadata ? Object.create(vt[Symbol.metadata] ?? null) : void 0;
-          et = [(0, qt.P)()], Vt = [(0, qt.M)()], Ht = [(0, qt.M)()], bt = [(0, qt.P)("rotationY")], Jt = [(0, qt.P)("files")], Ct = [(0, qt.P)("forcedExtension")], ut = [(0, qt.P)("extensions")], Kt = [(0, qt.z)("textureMatrix")], ht = [(0, qt.z)("textureMatrixRefraction")], (0, Ot.l)(tt, null, Ht, {
+          const Zu = "function" === typeof Symbol && Symbol.metadata ? Object.create(du[Symbol.metadata] ?? null) : void 0;
+          Eu = [(0, Uu.E)()], ju = [(0, Uu.A)()], fu = [(0, Uu.A)()], Mu = [(0, Uu.E)("rotationY")], eu = [(0, Uu.E)("files")], Gu = [(0, Uu.E)("forcedExtension")], pu = [(0, Uu.E)("extensions")], wu = [(0, Uu.r)("textureMatrix")], Ju = [(0, Uu.r)("textureMatrixRefraction")], (0, su.e)(uu, null, fu, {
             kind: "getter",
             name: "boundingBoxSize",
             static: !1,
             private: !1,
             access: {
-              has: tt => "boundingBoxSize" in tt,
-              get: tt => tt.boundingBoxSize
+              has: uu => "boundingBoxSize" in uu,
+              get: uu => uu.boundingBoxSize
             },
-            metadata: Dt
-          }, null, Wt), (0, Ot.l)(tt, null, bt, {
+            metadata: Zu
+          }, null, au), (0, su.e)(uu, null, Mu, {
             kind: "setter",
             name: "rotationY",
             static: !1,
             private: !1,
             access: {
-              has: tt => "rotationY" in tt,
-              set: (tt, et) => {
-                tt.rotationY = et
+              has: uu => "rotationY" in uu,
+              set: (uu, Eu) => {
+                uu.rotationY = Eu
               }
             },
-            metadata: Dt
-          }, null, Wt), (0, Ot.l)(null, null, et, {
+            metadata: Zu
+          }, null, au), (0, su.e)(null, null, Eu, {
             kind: "field",
             name: "url",
             static: !1,
             private: !1,
             access: {
-              has: tt => "url" in tt,
-              get: tt => tt.url,
-              set: (tt, et) => {
-                tt.url = et
+              has: uu => "url" in uu,
+              get: uu => uu.url,
+              set: (uu, Eu) => {
+                uu.url = Eu
               }
             },
-            metadata: Dt
-          }, St, ct), (0, Ot.l)(null, null, Vt, {
+            metadata: Zu
+          }, Pu, ou), (0, su.e)(null, null, ju, {
             kind: "field",
             name: "boundingBoxPosition",
             static: !1,
             private: !1,
             access: {
-              has: tt => "boundingBoxPosition" in tt,
-              get: tt => tt.boundingBoxPosition,
-              set: (tt, et) => {
-                tt.boundingBoxPosition = et
+              has: uu => "boundingBoxPosition" in uu,
+              get: uu => uu.boundingBoxPosition,
+              set: (uu, Eu) => {
+                uu.boundingBoxPosition = Eu
               }
             },
-            metadata: Dt
-          }, Rt, It), (0, Ot.l)(null, null, Jt, {
+            metadata: Zu
+          }, ku, mu), (0, su.e)(null, null, eu, {
             kind: "field",
             name: "_files",
             static: !1,
             private: !1,
             access: {
-              has: tt => "_files" in tt,
-              get: tt => tt._files,
-              set: (tt, et) => {
-                tt._files = et
+              has: uu => "_files" in uu,
+              get: uu => uu._files,
+              set: (uu, Eu) => {
+                uu._files = Eu
               }
             },
-            metadata: Dt
-          }, Pt, Zt), (0, Ot.l)(null, null, Ct, {
+            metadata: Zu
+          }, vu, Ku), (0, su.e)(null, null, Gu, {
             kind: "field",
             name: "_forcedExtension",
             static: !1,
             private: !1,
             access: {
-              has: tt => "_forcedExtension" in tt,
-              get: tt => tt._forcedExtension,
-              set: (tt, et) => {
-                tt._forcedExtension = et
+              has: uu => "_forcedExtension" in uu,
+              get: uu => uu._forcedExtension,
+              set: (uu, Eu) => {
+                uu._forcedExtension = Eu
               }
             },
-            metadata: Dt
-          }, Lt, Ft), (0, Ot.l)(null, null, ut, {
+            metadata: Zu
+          }, Vu, ru), (0, su.e)(null, null, pu, {
             kind: "field",
             name: "_extensions",
             static: !1,
             private: !1,
             access: {
-              has: tt => "_extensions" in tt,
-              get: tt => tt._extensions,
-              set: (tt, et) => {
-                tt._extensions = et
+              has: uu => "_extensions" in uu,
+              get: uu => uu._extensions,
+              set: (uu, Eu) => {
+                uu._extensions = Eu
               }
             },
-            metadata: Dt
-          }, kt, Gt), (0, Ot.l)(null, null, Kt, {
+            metadata: Zu
+          }, Qu, iu), (0, su.e)(null, null, wu, {
             kind: "field",
             name: "_textureMatrix",
             static: !1,
             private: !1,
             access: {
-              has: tt => "_textureMatrix" in tt,
-              get: tt => tt._textureMatrix,
-              set: (tt, et) => {
-                tt._textureMatrix = et
+              has: uu => "_textureMatrix" in uu,
+              get: uu => uu._textureMatrix,
+              set: (uu, Eu) => {
+                uu._textureMatrix = Eu
               }
             },
-            metadata: Dt
-          }, zt, ot), (0, Ot.l)(null, null, ht, {
+            metadata: Zu
+          }, Wu, Su), (0, su.e)(null, null, Ju, {
             kind: "field",
             name: "_textureMatrixRefraction",
             static: !1,
             private: !1,
             access: {
-              has: tt => "_textureMatrixRefraction" in tt,
-              get: tt => tt._textureMatrixRefraction,
-              set: (tt, et) => {
-                tt._textureMatrixRefraction = et
+              has: uu => "_textureMatrixRefraction" in uu,
+              get: uu => uu._textureMatrixRefraction,
+              set: (uu, Eu) => {
+                uu._textureMatrixRefraction = Eu
               }
             },
-            metadata: Dt
-          }, rt, Ut), Dt && Object.defineProperty(tt, Symbol.metadata, {
+            metadata: Zu
+          }, Iu, Fu), Zu && Object.defineProperty(uu, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: Dt
+            value: Zu
           })
-        })(), tt
+        })(), uu
       })(),
-      Jt = !1;
+      eu = !1;
 
-    function Ct(tt, et, Vt) {
-      let Ot = "";
-      for (const qt of tt) Ot += qt;
-      return new bt(Ot, et, null, Vt, tt)
+    function Gu(uu, Eu, ju) {
+      let su = "";
+      for (const Uu of uu) su += Uu;
+      return new Mu(su, Eu, null, ju, uu)
     }
 
-    function ut(tt, et) {
-      let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-        Ot = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-      const qt = et.useDelayedTextureLoading;
-      et.useDelayedTextureLoading = !1;
-      const Dt = new bt(tt, et, null, !1, null, null, null, void 0, !0, Vt, Ot);
-      return et.useDelayedTextureLoading = qt, Dt
+    function pu(uu, Eu) {
+      let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+        su = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+      const Uu = Eu.useDelayedTextureLoading;
+      Eu.useDelayedTextureLoading = !1;
+      const Zu = new Mu(uu, Eu, null, !1, null, null, null, void 0, !0, ju, su);
+      return Eu.useDelayedTextureLoading = Uu, Zu
     }
 
-    function Kt(tt, et, Vt) {
-      const Ot = Qt.d.Parse((() => {
-        let Ot = !1;
-        return tt.prefiltered && (Ot = tt.prefiltered), new bt(Vt + (tt.url ?? tt.name), et, tt.extensions, !1, tt.files || null, null, null, void 0, Ot, tt.forcedExtension)
-      }), tt, et);
-      if (tt.boundingBoxPosition && (Ot.boundingBoxPosition = mt.n.FromArray(tt.boundingBoxPosition)), tt.boundingBoxSize && (Ot.boundingBoxSize = mt.n.FromArray(tt.boundingBoxSize)), tt.animations)
-        for (let qt = 0; qt < tt.animations.length; qt++) {
-          const et = tt.animations[qt],
-            Vt = (0, Ht.e)("BABYLON.Animation");
-          Vt && Ot.animations.push(Vt.Parse(et))
+    function wu(uu, Eu, ju) {
+      const su = bu.e.Parse((() => {
+        let su = !1;
+        return uu.prefiltered && (su = uu.prefiltered), new Mu(ju + (uu.url ?? uu.name), Eu, uu.extensions, !1, uu.files || null, null, null, void 0, su, uu.forcedExtension)
+      }), uu, Eu);
+      if (uu.boundingBoxPosition && (su.boundingBoxPosition = Xu.t.FromArray(uu.boundingBoxPosition)), uu.boundingBoxSize && (su.boundingBoxSize = Xu.t.FromArray(uu.boundingBoxSize)), uu.animations)
+        for (let Uu = 0; Uu < uu.animations.length; Uu++) {
+          const Eu = uu.animations[Uu],
+            ju = (0, fu.d)("BABYLON.Animation");
+          ju && su.animations.push(ju.Parse(Eu))
         }
-      return Ot
+      return su
     }
-    Jt || (Jt = !0, bt.CreateFromImages = Ct, bt.CreateFromPrefilteredData = ut, bt.Parse = Kt, jt.f._CubeTextureParser = Kt, (0, Ht.i)("BABYLON.CubeTexture", bt))
+    eu || (eu = !0, Mu.CreateFromImages = Gu, Mu.CreateFromPrefilteredData = pu, Mu.Parse = wu, qu.g._CubeTextureParser = wu, (0, fu.f)("BABYLON.CubeTexture", Mu))
   },
-  41394: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => Ht
+  41400: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => fu
     });
-    var Ot = Vt(38899),
-      qt = Vt(40661),
-      Dt = Vt(40131),
-      mt = Vt(40048),
-      dt = Vt(40037);
-    let jt = !1;
-    class Ht extends qt.f {
-      constructor(tt, et, Vt) {
-        let Ot = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-          Ht = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3,
-          Xt = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 5,
-          Qt = arguments.length > 6 ? arguments[6] : void 0;
-        const lt = !Vt || Vt._isScene;
-        super(null, lt ? Vt : Vt?.Fw, lt ? !Ot : Vt, Qt, Ht, void 0, void 0, void 0, void 0, Xt), jt || (jt = !0, mt.ThinEngine.prototype.createDynamicTexture = function(tt, et, Vt, Ot) {
-          const qt = new dt.d(this, 4);
-          return qt.baseWidth = tt, qt.baseHeight = et, Vt && (tt = this.needPOTTextures ? (0, Dt.g)(tt, this._caps.maxTextureSize) : tt, et = this.needPOTTextures ? (0, Dt.g)(et, this._caps.maxTextureSize) : et), qt.width = tt, qt.height = et, qt.isReady = !1, qt.generateMipMaps = Vt, qt.samplingMode = Ot, this.updateTextureSamplingMode(Ot, qt), this._internalTexturesCache.push(qt), qt
-        }, mt.ThinEngine.prototype.updateDynamicTexture = function(tt, et, Vt) {
-          let Ot = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-            qt = arguments.length > 4 ? arguments[4] : void 0,
-            Dt = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-          if (!tt) return;
-          const mt = this._gl,
-            dt = mt.TEXTURE_2D,
-            jt = this._bindTextureDirectly(dt, tt, !0, Dt);
-          this._unpackFlipY(void 0 === Vt ? tt.invertY : Vt), Ot && mt.pixelStorei(mt.UNPACK_PREMULTIPLY_ALPHA_WEBGL, 1);
-          const Ht = this._getWebGLTextureType(tt.type),
-            Xt = this._getInternalFormat(qt || tt.format),
-            Qt = this._getRGBABufferInternalSizedFormat(tt.type, Xt);
-          mt.texImage2D(dt, 0, Qt, Xt, Ht, et), tt.generateMipMaps && mt.generateMipmap(dt), jt || this._bindTextureDirectly(dt, null), Ot && mt.pixelStorei(mt.UNPACK_PREMULTIPLY_ALPHA_WEBGL, 0), qt && (tt.format = qt), tt._dynamicTextureSource = et, tt._premulAlpha = Ot, tt.invertY = Vt || !1, tt.isReady = !0
-        }), this.name = tt, this.wrapU = qt.f.CLAMP_ADDRESSMODE, this.wrapV = qt.f.CLAMP_ADDRESSMODE, this._generateMipMaps = Ot;
-        const Et = this._getEngine();
-        if (!Et) return;
-        if (et.getContext) this._canvas = et, this._ownCanvas = !1, this._texture = Et.createDynamicTexture(this._canvas.width, this._canvas.height, Ot, Ht);
+    var su = ju(39032),
+      Uu = ju(40739),
+      Zu = ju(40192),
+      Xu = ju(40118),
+      lu = ju(40108);
+    let qu = !1;
+    class fu extends Uu.g {
+      constructor(uu, Eu, ju) {
+        let su = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+          fu = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3,
+          Cu = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 5,
+          bu = arguments.length > 6 ? arguments[6] : void 0;
+        const cu = !ju || ju._isScene;
+        super(null, cu ? ju : ju?.vY, cu ? !su : ju, bu, fu, void 0, void 0, void 0, void 0, Cu), qu || (qu = !0, Xu.ThinEngine.prototype.createDynamicTexture = function(uu, Eu, ju, su) {
+          const Uu = new lu.c(this, 4);
+          return Uu.baseWidth = uu, Uu.baseHeight = Eu, ju && (uu = this.needPOTTextures ? (0, Zu.g)(uu, this._caps.maxTextureSize) : uu, Eu = this.needPOTTextures ? (0, Zu.g)(Eu, this._caps.maxTextureSize) : Eu), Uu.width = uu, Uu.height = Eu, Uu.isReady = !1, Uu.generateMipMaps = ju, Uu.samplingMode = su, this.updateTextureSamplingMode(su, Uu), this._internalTexturesCache.push(Uu), Uu
+        }, Xu.ThinEngine.prototype.updateDynamicTexture = function(uu, Eu, ju) {
+          let su = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+            Uu = arguments.length > 4 ? arguments[4] : void 0,
+            Zu = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+          if (!uu) return;
+          const Xu = this._gl,
+            lu = Xu.TEXTURE_2D,
+            qu = this._bindTextureDirectly(lu, uu, !0, Zu);
+          this._unpackFlipY(void 0 === ju ? uu.invertY : ju), su && Xu.pixelStorei(Xu.UNPACK_PREMULTIPLY_ALPHA_WEBGL, 1);
+          const fu = this._getWebGLTextureType(uu.type),
+            Cu = this._getInternalFormat(Uu || uu.format),
+            bu = this._getRGBABufferInternalSizedFormat(uu.type, Cu);
+          Xu.texImage2D(lu, 0, bu, Cu, fu, Eu), uu.generateMipMaps && Xu.generateMipmap(lu), qu || this._bindTextureDirectly(lu, null), su && Xu.pixelStorei(Xu.UNPACK_PREMULTIPLY_ALPHA_WEBGL, 0), Uu && (uu.format = Uu), uu._dynamicTextureSource = Eu, uu._premulAlpha = su, uu.invertY = ju || !1, uu.isReady = !0
+        }), this.name = uu, this.wrapU = Uu.g.CLAMP_ADDRESSMODE, this.wrapV = Uu.g.CLAMP_ADDRESSMODE, this._generateMipMaps = su;
+        const Nu = this._getEngine();
+        if (!Nu) return;
+        if (Eu.getContext) this._canvas = Eu, this._ownCanvas = !1, this._texture = Nu.createDynamicTexture(this._canvas.width, this._canvas.height, su, fu);
         else {
-          this._canvas = Et.createCanvas(1, 1), this._ownCanvas = !0;
-          const tt = et;
-          tt.width || 0 === tt.width ? this._texture = Et.createDynamicTexture(tt.width, tt.height, Ot, Ht) : this._texture = Et.createDynamicTexture(et, et, Ot, Ht)
+          this._canvas = Nu.createCanvas(1, 1), this._ownCanvas = !0;
+          const uu = Eu;
+          uu.width || 0 === uu.width ? this._texture = Nu.createDynamicTexture(uu.width, uu.height, su, fu) : this._texture = Nu.createDynamicTexture(Eu, Eu, su, fu)
         }
-        const ft = this.getSize();
-        this._canvas.width !== ft.width && (this._canvas.width = ft.width), this._canvas.height !== ft.height && (this._canvas.height = ft.height), this._context = this._canvas.getContext("2d")
+        const Ou = this.getSize();
+        this._canvas.width !== Ou.width && (this._canvas.width = Ou.width), this._canvas.height !== Ou.height && (this._canvas.height = Ou.height), this._context = this._canvas.getContext("2d")
       }
       getClassName() {
         return "DynamicTexture"
@@ -516,109 +516,109 @@ export const modules = {
       get canRescale() {
         return !0
       }
-      _recreate(tt) {
-        this._canvas.width = tt.width, this._canvas.height = tt.height, this.releaseInternalTexture(), this._texture = this._getEngine().createDynamicTexture(tt.width, tt.height, this._generateMipMaps, this.samplingMode)
+      _recreate(uu) {
+        this._canvas.width = uu.width, this._canvas.height = uu.height, this.releaseInternalTexture(), this._texture = this._getEngine().createDynamicTexture(uu.width, uu.height, this._generateMipMaps, this.samplingMode)
       }
-      scale(tt) {
-        const et = this.getSize();
-        et.width *= tt, et.height *= tt, this._recreate(et)
+      scale(uu) {
+        const Eu = this.getSize();
+        Eu.width *= uu, Eu.height *= uu, this._recreate(Eu)
       }
-      scaleTo(tt, et) {
-        const Vt = this.getSize();
-        Vt.width = tt, Vt.height = et, this._recreate(Vt)
+      scaleTo(uu, Eu) {
+        const ju = this.getSize();
+        ju.width = uu, ju.height = Eu, this._recreate(ju)
       }
       getContext() {
         return this._context
       }
-      clear(tt) {
-        const et = this.getSize();
-        tt && (this._context.fillStyle = tt), this._context.clearRect(0, 0, et.width, et.height)
+      clear(uu) {
+        const Eu = this.getSize();
+        uu && (this._context.fillStyle = uu), this._context.clearRect(0, 0, Eu.width, Eu.height)
       }
-      update(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          Vt = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        this._texture && this._getEngine().updateDynamicTexture(this._texture, this._canvas, void 0 === tt || tt, et, this._format || void 0, void 0, Vt)
+      update(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          ju = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        this._texture && this._getEngine().updateDynamicTexture(this._texture, this._canvas, void 0 === uu || uu, Eu, this._format || void 0, void 0, ju)
       }
-      drawText(tt, et, Vt, Ot, qt, Dt, mt) {
-        let dt = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7];
-        const jt = this.getSize();
-        if (Dt && (this._context.fillStyle = Dt, this._context.fillRect(0, 0, jt.width, jt.height)), this._context.font = Ot, null === et || void 0 === et) {
-          const Vt = this._context.measureText(tt);
-          et = (jt.width - Vt.width) / 2
+      drawText(uu, Eu, ju, su, Uu, Zu, Xu) {
+        let lu = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7];
+        const qu = this.getSize();
+        if (Zu && (this._context.fillStyle = Zu, this._context.fillRect(0, 0, qu.width, qu.height)), this._context.font = su, null === Eu || void 0 === Eu) {
+          const ju = this._context.measureText(uu);
+          Eu = (qu.width - ju.width) / 2
         }
-        if (null === Vt || void 0 === Vt) {
-          const tt = parseInt(Ot.replace(/\D/g, ""));
-          Vt = jt.height / 2 + tt / 3.65
+        if (null === ju || void 0 === ju) {
+          const uu = parseInt(su.replace(/\D/g, ""));
+          ju = qu.height / 2 + uu / 3.65
         }
-        this._context.fillStyle = qt || "", this._context.fillText(tt, et, Vt), dt && this.update(mt)
+        this._context.fillStyle = Uu || "", this._context.fillText(uu, Eu, ju), lu && this.update(Xu)
       }
       dispose() {
         super.dispose(), this._ownCanvas && this._canvas?.remove?.(), this._canvas = null, this._context = null
       }
       clone() {
-        const tt = this.vI();
-        if (!tt) return this;
-        const et = this.getSize(),
-          Vt = new Ht(this.name, et, tt, this._generateMipMaps);
-        return Vt.hasAlpha = this.hasAlpha, Vt.level = this.level, Vt.wrapU = this.wrapU, Vt.wrapV = this.wrapV, Vt
+        const uu = this.hV();
+        if (!uu) return this;
+        const Eu = this.getSize(),
+          ju = new fu(this.name, Eu, uu, this._generateMipMaps);
+        return ju.hasAlpha = this.hasAlpha, ju.level = this.level, ju.wrapU = this.wrapU, ju.wrapV = this.wrapV, ju
       }
       serialize() {
-        const tt = this.vI();
-        tt && !tt.isReady() && Ot.d.Warn("The scene must be ready before serializing the dynamic texture");
-        const et = super.serialize();
-        return Ht._IsCanvasElement(this._canvas) && (et.base64String = this._canvas.toDataURL()), et.invertY = this._invertY, et.samplingMode = this.samplingMode, et
+        const uu = this.hV();
+        uu && !uu.isReady() && su.b.Warn("The scene must be ready before serializing the dynamic texture");
+        const Eu = super.serialize();
+        return fu._IsCanvasElement(this._canvas) && (Eu.base64String = this._canvas.toDataURL()), Eu.invertY = this._invertY, Eu.samplingMode = this.samplingMode, Eu
       }
-      static _IsCanvasElement(tt) {
-        return void 0 !== tt.toDataURL
+      static _IsCanvasElement(uu) {
+        return void 0 !== uu.toDataURL
       }
       _rebuild() {
         this.update()
       }
     }
   },
-  41361: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => qt
+  41366: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => Uu
     });
-    var Ot = Vt(40661);
-    class qt extends Ot.f {
+    var su = ju(40739);
+    class Uu extends su.g {
       get depth() {
         return this._depth
       }
-      constructor(tt, et, Vt, qt, Dt, mt) {
-        let dt = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
-          jt = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
-          Ht = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : Ot.f.TRILINEAR_SAMPLINGMODE,
-          Xt = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 0,
-          Qt = arguments.length > 10 ? arguments[10] : void 0,
-          lt = arguments.length > 11 ? arguments[11] : void 0;
-        super(null, mt, !dt, jt), this.format = Dt, this._texture = mt.Jf().createRawTexture2DArray(tt, et, Vt, qt, Dt, dt, jt, Ht, null, Xt, Qt ?? 0, lt), this._depth = qt, this.is2DArray = !0
+      constructor(uu, Eu, ju, Uu, Zu, Xu) {
+        let lu = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
+          qu = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
+          fu = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : su.g.TRILINEAR_SAMPLINGMODE,
+          Cu = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 0,
+          bu = arguments.length > 10 ? arguments[10] : void 0,
+          cu = arguments.length > 11 ? arguments[11] : void 0;
+        super(null, Xu, !lu, qu), this.format = Zu, this._texture = Xu.wO().createRawTexture2DArray(uu, Eu, ju, Uu, Zu, lu, qu, fu, null, Cu, bu ?? 0, cu), this._depth = Uu, this.is2DArray = !0
       }
-      update(tt) {
-        this.updateMipLevel(tt, 0)
+      update(uu) {
+        this.updateMipLevel(uu, 0)
       }
-      updateMipLevel(tt, et) {
-        this._texture && this._getEngine().updateRawTexture2DArray(this._texture, tt, this._texture.format, this._texture.invertY, null, this._texture.type, et)
+      updateMipLevel(uu, Eu) {
+        this._texture && this._getEngine().updateRawTexture2DArray(this._texture, uu, this._texture.format, this._texture.invertY, null, this._texture.type, Eu)
       }
-      static CreateRGBATexture(tt, et, Vt, Ot, Dt) {
-        return new qt(tt, et, Vt, Ot, 5, Dt, !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5], arguments.length > 6 && void 0 !== arguments[6] && arguments[6], arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 3, arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0)
+      static CreateRGBATexture(uu, Eu, ju, su, Zu) {
+        return new Uu(uu, Eu, ju, su, 5, Zu, !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5], arguments.length > 6 && void 0 !== arguments[6] && arguments[6], arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 3, arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0)
       }
     }
   },
-  41355: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => Ot.e
+  41364: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => su.b
     });
-    var Ot = Vt(40551);
-    (0, Ot.h)()
+    var su = ju(40622);
+    (0, su.d)()
   },
-  40289: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => Ot.d
+  40346: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => su.f
     });
-    var Ot = Vt(40296);
-    (0, Ot.b)()
+    var su = ju(40350);
+    (0, su.d)()
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

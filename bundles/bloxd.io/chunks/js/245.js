@@ -1,260 +1,260 @@
 export const id = 245;
 export const ids = [244, 245];
 export const modules = {
-  61523: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      RegisterShaderMaterial: () => Ot.d,
-      ShaderMaterial: () => Ot.o,
-      ShaderMaterialCreateFromSnippetAsync: () => Ot.e,
-      ShaderMaterialParse: () => Ot.k,
-      ShaderMaterialParseFromFileAsync: () => Ot.g,
-      ShaderMaterialParseFromSnippetAsync: () => Ot.h
+  61489: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      RegisterShaderMaterial: () => su.d,
+      ShaderMaterial: () => su.q,
+      ShaderMaterialCreateFromSnippetAsync: () => su.g,
+      ShaderMaterialParse: () => su.m,
+      ShaderMaterialParseFromFileAsync: () => su.i,
+      ShaderMaterialParseFromSnippetAsync: () => su.j
     });
-    var Ot = Vt(40659);
-    (0, Ot.d)()
+    var su = ju(40735);
+    (0, su.d)()
   },
-  38009: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => qt
+  38152: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => Uu
     });
-    var Ot = Vt(38016);
-    class qt {
-      static GetPlanes(tt) {
-        const et = [];
-        for (let Vt = 0; Vt < 6; Vt++) et.push(new Ot.b(0, 0, 0, 0));
-        return qt.GetPlanesToRef(tt, et), et
+    var su = ju(38154);
+    class Uu {
+      static GetPlanes(uu) {
+        const Eu = [];
+        for (let ju = 0; ju < 6; ju++) Eu.push(new su.d(0, 0, 0, 0));
+        return Uu.GetPlanesToRef(uu, Eu), Eu
       }
-      static GetNearPlaneToRef(tt, et) {
-        const Vt = tt.m;
-        et.normal.x = Vt[3] + Vt[2], et.normal.y = Vt[7] + Vt[6], et.normal.z = Vt[11] + Vt[10], et.d = Vt[15] + Vt[14], et.normalize()
+      static GetNearPlaneToRef(uu, Eu) {
+        const ju = uu.m;
+        Eu.normal.x = ju[3] + ju[2], Eu.normal.y = ju[7] + ju[6], Eu.normal.z = ju[11] + ju[10], Eu.d = ju[15] + ju[14], Eu.normalize()
       }
-      static GetFarPlaneToRef(tt, et) {
-        const Vt = tt.m;
-        et.normal.x = Vt[3] - Vt[2], et.normal.y = Vt[7] - Vt[6], et.normal.z = Vt[11] - Vt[10], et.d = Vt[15] - Vt[14], et.normalize()
+      static GetFarPlaneToRef(uu, Eu) {
+        const ju = uu.m;
+        Eu.normal.x = ju[3] - ju[2], Eu.normal.y = ju[7] - ju[6], Eu.normal.z = ju[11] - ju[10], Eu.d = ju[15] - ju[14], Eu.normalize()
       }
-      static GetLeftPlaneToRef(tt, et) {
-        const Vt = tt.m;
-        et.normal.x = Vt[3] + Vt[0], et.normal.y = Vt[7] + Vt[4], et.normal.z = Vt[11] + Vt[8], et.d = Vt[15] + Vt[12], et.normalize()
+      static GetLeftPlaneToRef(uu, Eu) {
+        const ju = uu.m;
+        Eu.normal.x = ju[3] + ju[0], Eu.normal.y = ju[7] + ju[4], Eu.normal.z = ju[11] + ju[8], Eu.d = ju[15] + ju[12], Eu.normalize()
       }
-      static GetRightPlaneToRef(tt, et) {
-        const Vt = tt.m;
-        et.normal.x = Vt[3] - Vt[0], et.normal.y = Vt[7] - Vt[4], et.normal.z = Vt[11] - Vt[8], et.d = Vt[15] - Vt[12], et.normalize()
+      static GetRightPlaneToRef(uu, Eu) {
+        const ju = uu.m;
+        Eu.normal.x = ju[3] - ju[0], Eu.normal.y = ju[7] - ju[4], Eu.normal.z = ju[11] - ju[8], Eu.d = ju[15] - ju[12], Eu.normalize()
       }
-      static GetTopPlaneToRef(tt, et) {
-        const Vt = tt.m;
-        et.normal.x = Vt[3] - Vt[1], et.normal.y = Vt[7] - Vt[5], et.normal.z = Vt[11] - Vt[9], et.d = Vt[15] - Vt[13], et.normalize()
+      static GetTopPlaneToRef(uu, Eu) {
+        const ju = uu.m;
+        Eu.normal.x = ju[3] - ju[1], Eu.normal.y = ju[7] - ju[5], Eu.normal.z = ju[11] - ju[9], Eu.d = ju[15] - ju[13], Eu.normalize()
       }
-      static GetBottomPlaneToRef(tt, et) {
-        const Vt = tt.m;
-        et.normal.x = Vt[3] + Vt[1], et.normal.y = Vt[7] + Vt[5], et.normal.z = Vt[11] + Vt[9], et.d = Vt[15] + Vt[13], et.normalize()
+      static GetBottomPlaneToRef(uu, Eu) {
+        const ju = uu.m;
+        Eu.normal.x = ju[3] + ju[1], Eu.normal.y = ju[7] + ju[5], Eu.normal.z = ju[11] + ju[9], Eu.d = ju[15] + ju[13], Eu.normalize()
       }
-      static GetPlanesToRef(tt, et) {
-        qt.GetNearPlaneToRef(tt, et[0]), qt.GetFarPlaneToRef(tt, et[1]), qt.GetLeftPlaneToRef(tt, et[2]), qt.GetRightPlaneToRef(tt, et[3]), qt.GetTopPlaneToRef(tt, et[4]), qt.GetBottomPlaneToRef(tt, et[5])
+      static GetPlanesToRef(uu, Eu) {
+        Uu.GetNearPlaneToRef(uu, Eu[0]), Uu.GetFarPlaneToRef(uu, Eu[1]), Uu.GetLeftPlaneToRef(uu, Eu[2]), Uu.GetRightPlaneToRef(uu, Eu[3]), Uu.GetTopPlaneToRef(uu, Eu[4]), Uu.GetBottomPlaneToRef(uu, Eu[5])
       }
-      static IsPointInFrustum(tt, et) {
-        for (let Vt = 0; Vt < 6; Vt++)
-          if (et[Vt].dotCoordinate(tt) < 0) return !1;
+      static IsPointInFrustum(uu, Eu) {
+        for (let ju = 0; ju < 6; ju++)
+          if (Eu[ju].dotCoordinate(uu) < 0) return !1;
         return !0
       }
     }
   },
-  38016: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => qt
+  38154: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => Uu
     });
-    var Ot = Vt(37336);
-    class qt {
-      constructor(tt, et, Vt, qt) {
-        this.normal = new Ot.n(tt, et, Vt), this.d = qt
+    var su = ju(37494);
+    class Uu {
+      constructor(uu, Eu, ju, Uu) {
+        this.normal = new su.t(uu, Eu, ju), this.d = Uu
       }
-      GOt() {
+      Osu() {
         return [this.normal.x, this.normal.y, this.normal.z, this.d]
       }
       clone() {
-        return new qt(this.normal.x, this.normal.y, this.normal.z, this.d)
+        return new Uu(this.normal.x, this.normal.y, this.normal.z, this.d)
       }
       getClassName() {
         return "Plane"
       }
       getHashCode() {
-        let tt = this.normal.getHashCode();
-        return tt = 397 * tt ^ this.d, tt
+        let uu = this.normal.getHashCode();
+        return uu = 397 * uu ^ this.d, uu
       }
       normalize() {
-        const tt = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
-        let et = 0;
-        return 0 !== tt && (et = 1 / tt), this.normal.x *= et, this.normal.y *= et, this.normal.z *= et, this.d *= et, this
+        const uu = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
+        let Eu = 0;
+        return 0 !== uu && (Eu = 1 / uu), this.normal.x *= Eu, this.normal.y *= Eu, this.normal.z *= Eu, this.d *= Eu, this
       }
-      transform(tt) {
-        const et = qt._TmpMatrix;
-        tt.invertToRef(et);
-        const Vt = et.m,
-          Ot = this.normal.x,
-          Dt = this.normal.y,
-          mt = this.normal.z,
-          dt = this.d,
-          jt = Ot * Vt[0] + Dt * Vt[1] + mt * Vt[2] + dt * Vt[3],
-          Ht = Ot * Vt[4] + Dt * Vt[5] + mt * Vt[6] + dt * Vt[7],
-          Xt = Ot * Vt[8] + Dt * Vt[9] + mt * Vt[10] + dt * Vt[11],
-          Qt = Ot * Vt[12] + Dt * Vt[13] + mt * Vt[14] + dt * Vt[15];
-        return new qt(jt, Ht, Xt, Qt)
+      transform(uu) {
+        const Eu = Uu._TmpMatrix;
+        uu.invertToRef(Eu);
+        const ju = Eu.m,
+          su = this.normal.x,
+          Zu = this.normal.y,
+          Xu = this.normal.z,
+          lu = this.d,
+          qu = su * ju[0] + Zu * ju[1] + Xu * ju[2] + lu * ju[3],
+          fu = su * ju[4] + Zu * ju[5] + Xu * ju[6] + lu * ju[7],
+          Cu = su * ju[8] + Zu * ju[9] + Xu * ju[10] + lu * ju[11],
+          bu = su * ju[12] + Zu * ju[13] + Xu * ju[14] + lu * ju[15];
+        return new Uu(qu, fu, Cu, bu)
       }
-      dotCoordinate(tt) {
-        return this.normal.x * tt.x + this.normal.y * tt.y + this.normal.z * tt.z + this.d
+      dotCoordinate(uu) {
+        return this.normal.x * uu.x + this.normal.y * uu.y + this.normal.z * uu.z + this.d
       }
-      copyFromPoints(tt, et, Vt) {
-        const Ot = et.x - tt.x,
-          qt = et.y - tt.y,
-          Dt = et.z - tt.z,
-          mt = Vt.x - tt.x,
-          dt = Vt.y - tt.y,
-          jt = Vt.z - tt.z,
-          Ht = qt * jt - Dt * dt,
-          Xt = Dt * mt - Ot * jt,
-          Qt = Ot * dt - qt * mt,
-          lt = Math.sqrt(Ht * Ht + Xt * Xt + Qt * Qt);
-        let Et;
-        return Et = 0 !== lt ? 1 / lt : 0, this.normal.x = Ht * Et, this.normal.y = Xt * Et, this.normal.z = Qt * Et, this.d = -(this.normal.x * tt.x + this.normal.y * tt.y + this.normal.z * tt.z), this
+      copyFromPoints(uu, Eu, ju) {
+        const su = Eu.x - uu.x,
+          Uu = Eu.y - uu.y,
+          Zu = Eu.z - uu.z,
+          Xu = ju.x - uu.x,
+          lu = ju.y - uu.y,
+          qu = ju.z - uu.z,
+          fu = Uu * qu - Zu * lu,
+          Cu = Zu * Xu - su * qu,
+          bu = su * lu - Uu * Xu,
+          cu = Math.sqrt(fu * fu + Cu * Cu + bu * bu);
+        let Nu;
+        return Nu = 0 !== cu ? 1 / cu : 0, this.normal.x = fu * Nu, this.normal.y = Cu * Nu, this.normal.z = bu * Nu, this.d = -(this.normal.x * uu.x + this.normal.y * uu.y + this.normal.z * uu.z), this
       }
-      isFrontFacingTo(tt, et) {
-        return Ot.n.Dot(this.normal, tt) <= et
+      isFrontFacingTo(uu, Eu) {
+        return su.t.Dot(this.normal, uu) <= Eu
       }
-      signedDistanceTo(tt) {
-        return Ot.n.Dot(tt, this.normal) + this.d
+      signedDistanceTo(uu) {
+        return su.t.Dot(uu, this.normal) + this.d
       }
-      static FromArray(tt) {
-        return new qt(tt[0], tt[1], tt[2], tt[3])
+      static FromArray(uu) {
+        return new Uu(uu[0], uu[1], uu[2], uu[3])
       }
-      static FromPoints(tt, et, Vt) {
-        const Ot = new qt(0, 0, 0, 0);
-        return Ot.copyFromPoints(tt, et, Vt), Ot
+      static FromPoints(uu, Eu, ju) {
+        const su = new Uu(0, 0, 0, 0);
+        return su.copyFromPoints(uu, Eu, ju), su
       }
-      static FromPositionAndNormal(tt, et) {
-        const Vt = new qt(0, 0, 0, 0);
-        return this.FromPositionAndNormalToRef(tt, et, Vt)
+      static FromPositionAndNormal(uu, Eu) {
+        const ju = new Uu(0, 0, 0, 0);
+        return this.FromPositionAndNormalToRef(uu, Eu, ju)
       }
-      static FromPositionAndNormalToRef(tt, et, Vt) {
-        return Vt.normal.rK(et), Vt.normal.normalize(), Vt.d = -tt.dot(Vt.normal), Vt
+      static FromPositionAndNormalToRef(uu, Eu, ju) {
+        return ju.normal.yJ(Eu), ju.normal.normalize(), ju.d = -uu.dot(ju.normal), ju
       }
-      static SignedDistanceToPlaneFromPositionAndNormal(tt, et, Vt) {
-        const qt = -(et.x * tt.x + et.y * tt.y + et.z * tt.z);
-        return Ot.n.Dot(Vt, et) + qt
+      static SignedDistanceToPlaneFromPositionAndNormal(uu, Eu, ju) {
+        const Uu = -(Eu.x * uu.x + Eu.y * uu.y + Eu.z * uu.z);
+        return su.t.Dot(ju, Eu) + Uu
       }
     }
-    qt._TmpMatrix = Ot.c.Identity()
+    Uu._TmpMatrix = su.e.Identity()
   },
-  38897: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => Dt
+  39030: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => Zu
     });
-    var Ot = Vt(38899);
-    const qt = (tt, et, Vt) => tt ? tt.getClassName && "Mesh" === tt.getClassName() ? null : !tt.getClassName || "SubMesh" !== tt.getClassName() && "PhysicsBody" !== tt.getClassName() ? tt.clone ? tt.clone() : Array.isArray(tt) ? tt.slice() : Vt && "object" === typeof tt ? {
-      ...tt
-    } : null : tt.clone(et) : null;
-    class Dt {
-      static DeepCopy(tt, et, Vt, Dt) {
-        let mt = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const dt = function(tt) {
-          const et = [];
+    var su = ju(39032);
+    const Uu = (uu, Eu, ju) => uu ? uu.getClassName && "Mesh" === uu.getClassName() ? null : !uu.getClassName || "SubMesh" !== uu.getClassName() && "PhysicsBody" !== uu.getClassName() ? uu.clone ? uu.clone() : Array.isArray(uu) ? uu.slice() : ju && "object" === typeof uu ? {
+      ...uu
+    } : null : uu.clone(Eu) : null;
+    class Zu {
+      static DeepCopy(uu, Eu, ju, Zu) {
+        let Xu = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const lu = function(uu) {
+          const Eu = [];
           do {
-            const Vt = Object.getOwnPropertyNames(tt);
-            for (const tt of Vt) - 1 === et.indexOf(tt) && et.push(tt)
-          } while (tt = Object.getPrototypeOf(tt));
-          return et
-        }(tt);
-        for (const Ht of dt) {
-          if ("_" === Ht[0] && (!Dt || -1 === Dt.indexOf(Ht))) continue;
-          if (Ht.endsWith("Observable")) continue;
-          if (Vt && -1 !== Vt.indexOf(Ht)) continue;
-          const dt = tt[Ht],
-            Xt = typeof dt;
-          if ("function" !== Xt) try {
-            if ("object" === Xt)
-              if (dt instanceof Uint8Array) et[Ht] = Uint8Array.from(dt);
-              else if (dt instanceof Array) {
-              if (et[Ht] = [], dt.length > 0)
-                if ("object" == typeof dt[0])
-                  for (let tt = 0; tt < dt.length; tt++) {
-                    const Vt = qt(dt[tt], et, mt); - 1 === et[Ht].indexOf(Vt) && et[Ht].push(Vt)
-                  } else et[Ht] = dt.slice(0)
-            } else et[Ht] = qt(dt, et, mt);
-            else et[Ht] = dt
-          } catch (jt) {
-            Ot.d.Warn(jt.message)
+            const ju = Object.getOwnPropertyNames(uu);
+            for (const uu of ju) - 1 === Eu.indexOf(uu) && Eu.push(uu)
+          } while (uu = Object.getPrototypeOf(uu));
+          return Eu
+        }(uu);
+        for (const fu of lu) {
+          if ("_" === fu[0] && (!Zu || -1 === Zu.indexOf(fu))) continue;
+          if (fu.endsWith("Observable")) continue;
+          if (ju && -1 !== ju.indexOf(fu)) continue;
+          const lu = uu[fu],
+            Cu = typeof lu;
+          if ("function" !== Cu) try {
+            if ("object" === Cu)
+              if (lu instanceof Uint8Array) Eu[fu] = Uint8Array.from(lu);
+              else if (lu instanceof Array) {
+              if (Eu[fu] = [], lu.length > 0)
+                if ("object" == typeof lu[0])
+                  for (let uu = 0; uu < lu.length; uu++) {
+                    const ju = Uu(lu[uu], Eu, Xu); - 1 === Eu[fu].indexOf(ju) && Eu[fu].push(ju)
+                  } else Eu[fu] = lu.slice(0)
+            } else Eu[fu] = Uu(lu, Eu, Xu);
+            else Eu[fu] = lu
+          } catch (qu) {
+            su.b.Warn(qu.message)
           }
         }
       }
     }
   },
-  38159: (tt, et, Vt) => {
-    function Ot() {
-      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (tt => {
-        const et = 16 * Math.random() | 0;
-        return ("x" === tt ? et : 3 & et | 8).toString(16)
+  38303: (uu, Eu, ju) => {
+    function su() {
+      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (uu => {
+        const Eu = 16 * Math.random() | 0;
+        return ("x" === uu ? Eu : 3 & Eu | 8).toString(16)
       }))
     }
-    Vt.d(et, {
-      b: () => Ot
+    ju.d(Eu, {
+      e: () => su
     })
   },
-  38899: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => Ot
+  39032: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => su
     });
-    class Ot {
-      static _CheckLimit(tt, et) {
-        let Vt = Ot._LogLimitOutputs[tt];
-        return Vt ? Vt.current++ : (Vt = {
-          limit: et,
+    class su {
+      static _CheckLimit(uu, Eu) {
+        let ju = su._LogLimitOutputs[uu];
+        return ju ? ju.current++ : (ju = {
+          limit: Eu,
           current: 1
-        }, Ot._LogLimitOutputs[tt] = Vt), Vt.current <= Vt.limit
+        }, su._LogLimitOutputs[uu] = ju), ju.current <= ju.limit
       }
-      static _GenerateLimitMessage(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const Vt = Ot._LogLimitOutputs[tt];
-        if (!Vt || !Ot.MessageLimitReached) return;
-        const qt = this._Levels[et];
-        Vt.current === Vt.limit && Ot[qt.name](Ot.MessageLimitReached.replace(/%LIMIT%/g, "" + Vt.limit).replace(/%TYPE%/g, qt.name ?? ""))
+      static _GenerateLimitMessage(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const ju = su._LogLimitOutputs[uu];
+        if (!ju || !su.MessageLimitReached) return;
+        const Uu = this._Levels[Eu];
+        ju.current === ju.limit && su[Uu.name](su.MessageLimitReached.replace(/%LIMIT%/g, "" + ju.limit).replace(/%TYPE%/g, Uu.name ?? ""))
       }
-      static _AddLogEntry(tt) {
-        Ot._LogCache = tt + Ot._LogCache, Ot.OnNewCacheEntry && Ot.OnNewCacheEntry(tt)
+      static _AddLogEntry(uu) {
+        su._LogCache = uu + su._LogCache, su.OnNewCacheEntry && su.OnNewCacheEntry(uu)
       }
-      static _FormatMessage(tt) {
-        const et = tt => tt < 10 ? "0" + tt : "" + tt,
-          Vt = new Date;
-        return "[" + et(Vt.getHours()) + ":" + et(Vt.getMinutes()) + ":" + et(Vt.getSeconds()) + "]: " + tt
+      static _FormatMessage(uu) {
+        const Eu = uu => uu < 10 ? "0" + uu : "" + uu,
+          ju = new Date;
+        return "[" + Eu(ju.getHours()) + ":" + Eu(ju.getMinutes()) + ":" + Eu(ju.getSeconds()) + "]: " + uu
       }
-      static _LogDisabled(tt, et) {}
+      static _LogDisabled(uu, Eu) {}
       static _LogEnabled() {
-        let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          et = arguments.length > 1 ? arguments[1] : void 0,
-          Vt = arguments.length > 2 ? arguments[2] : void 0;
-        const qt = Array.isArray(et) ? et[0] : et;
-        if (void 0 !== Vt && !Ot._CheckLimit(qt, Vt)) return;
-        const Dt = Ot._FormatMessage(qt),
-          mt = this._Levels[tt],
-          dt = Array.isArray(et) ? et.slice(1) : [];
-        mt.logFunc && mt.logFunc("BJS - " + Dt, ...dt);
-        const jt = `<div style='color:${mt.color}'>${Dt}</div><br>`;
-        Ot._AddLogEntry(jt), Ot._GenerateLimitMessage(qt, tt)
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          Eu = arguments.length > 1 ? arguments[1] : void 0,
+          ju = arguments.length > 2 ? arguments[2] : void 0;
+        const Uu = Array.isArray(Eu) ? Eu[0] : Eu;
+        if (void 0 !== ju && !su._CheckLimit(Uu, ju)) return;
+        const Zu = su._FormatMessage(Uu),
+          Xu = this._Levels[uu],
+          lu = Array.isArray(Eu) ? Eu.slice(1) : [];
+        Xu.logFunc && Xu.logFunc("BJS - " + Zu, ...lu);
+        const qu = `<div style='color:${Xu.color}'>${Zu}</div><br>`;
+        su._AddLogEntry(qu), su._GenerateLimitMessage(Uu, uu)
       }
       static get LogCache() {
-        return Ot._LogCache
+        return su._LogCache
       }
       static ClearLogCache() {
-        Ot._LogCache = "", Ot._LogLimitOutputs = {}, Ot.errorsCount = 0
+        su._LogCache = "", su._LogLimitOutputs = {}, su.errorsCount = 0
       }
-      static set LogLevels(tt) {
-        Ot.Log = Ot._LogDisabled, Ot.Warn = Ot._LogDisabled, Ot.Error = Ot._LogDisabled;
-        const et = [Ot.MessageLogLevel, Ot.WarningLogLevel, Ot.ErrorLogLevel];
-        for (const Vt of et)
-          if ((tt & Vt) === Vt) {
-            const tt = this._Levels[Vt];
-            Ot[tt.name] = Ot._LogEnabled.bind(Ot, Vt)
+      static set LogLevels(uu) {
+        su.Log = su._LogDisabled, su.Warn = su._LogDisabled, su.Error = su._LogDisabled;
+        const Eu = [su.MessageLogLevel, su.WarningLogLevel, su.ErrorLogLevel];
+        for (const ju of Eu)
+          if ((uu & ju) === ju) {
+            const uu = this._Levels[ju];
+            su[uu.name] = su._LogEnabled.bind(su, ju)
           }
       }
     }
-    Ot.NoneLogLevel = 0, Ot.MessageLogLevel = 1, Ot.WarningLogLevel = 2, Ot.ErrorLogLevel = 4, Ot.AllLogLevel = 7, Ot.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Ot._LogCache = "", Ot._LogLimitOutputs = {}, Ot._Levels = [{}, {
+    su.NoneLogLevel = 0, su.MessageLogLevel = 1, su.WarningLogLevel = 2, su.ErrorLogLevel = 4, su.AllLogLevel = 7, su.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", su._LogCache = "", su._LogLimitOutputs = {}, su._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -266,8 +266,8 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], Ot.errorsCount = 0, Ot.Log = Ot._LogEnabled.bind(Ot, Ot.MessageLogLevel), Ot.Warn = Ot._LogEnabled.bind(Ot, Ot.WarningLogLevel), Ot.Error = Ot._LogEnabled.bind(Ot, Ot.ErrorLogLevel)
+    }], su.errorsCount = 0, su.Log = su._LogEnabled.bind(su, su.MessageLogLevel), su.Warn = su._LogEnabled.bind(su, su.WarningLogLevel), su.Error = su._LogEnabled.bind(su, su.ErrorLogLevel)
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

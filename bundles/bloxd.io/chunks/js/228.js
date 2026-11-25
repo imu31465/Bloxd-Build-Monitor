@@ -1,327 +1,327 @@
 export const id = 228;
 export const ids = [228];
 export const modules = {
-  39850: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => Ot,
-      h: () => qt
+  39933: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => su,
+      f: () => Uu
     });
-    const Ot = "The world isn't loaded, so no blocks can be seen.",
-      qt = "The world isn't loaded, so nothing in it can be seen."
+    const su = "The world isn't loaded, so no blocks can be seen.",
+      Uu = "The world isn't loaded, so nothing in it can be seen."
   },
-  39316: (tt, et, Vt) => {
-    function Ot(tt) {
-      return !(!tt.lobbyLeaderboardInfo && !tt.lobbyManage)
+  39416: (uu, Eu, ju) => {
+    function su(uu) {
+      return !(!uu.lobbyLeaderboardInfo && !uu.lobbyManage)
     }
-    Vt.d(et, {
-      d: () => Ot
+    ju.d(Eu, {
+      c: () => su
     })
   },
-  37044: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => Dt,
-      h: () => qt
+  37208: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => Zu,
+      e: () => Uu
     });
-    let Ot = () => null;
+    let su = () => null;
 
-    function qt(tt) {
-      Ot = tt
+    function Uu(uu) {
+      su = uu
     }
 
-    function Dt(tt, et) {
-      return Ot(tt, et)
+    function Zu(uu, Eu) {
+      return su(uu, Eu)
     }
   },
-  40785: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => wt,
-      i: () => bt,
-      m: () => Mt,
-      p: () => yt
+  40856: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => Yu,
+      h: () => Mu,
+      k: () => gu,
+      m: () => hu
     });
-    var Ot = Vt(31),
-      qt = Vt(40792),
-      Dt = Vt(40769),
-      mt = Vt(40797),
-      dt = Vt(40777),
-      jt = Vt(40804),
-      Ht = Vt(40824);
+    var su = ju(24),
+      Uu = ju(40860),
+      Zu = ju(40847),
+      Xu = ju(40864),
+      lu = ju(40854),
+      qu = ju(40873),
+      fu = ju(40889);
 
-    function Xt(tt) {
-      var et, Vt;
-      const Ot = (0, Dt.g)();
-      return Ot ? null === (et = (0, qt.d)(Ot.api, tt[0], tt[1], tt[2])) || void 0 === et || null === (Vt = et.persisted) || void 0 === Vt ? void 0 : Vt.shared : void 0
+    function Cu(uu) {
+      var Eu, ju;
+      const su = (0, Zu.l)();
+      return su ? null === (Eu = (0, Uu.d)(su.api, uu[0], uu[1], uu[2])) || void 0 === Eu || null === (ju = Eu.persisted) || void 0 === ju ? void 0 : ju.shared : void 0
     }
 
-    function Qt(tt) {
-      return `${tt[0]},${tt[1]},${tt[2]}`
+    function bu(uu) {
+      return `${uu[0]},${uu[1]},${uu[2]}`
     }
-    const lt = new Map;
-    let Et = null,
-      ft = 0;
+    const cu = new Map;
+    let Nu = null,
+      Ou = 0;
 
-    function wt() {
-      return ft
+    function Yu() {
+      return Ou
     }
 
-    function yt(tt) {
-      const et = null !== Et && Et.key === Qt(tt.pos) ? Et.type : null;
-      if (null === et) return tt;
-      let Vt = null;
-      if ("Iron" === et) {
+    function hu(uu) {
+      const Eu = null !== Nu && Nu.key === bu(uu.pos) ? Nu.type : null;
+      if (null === Eu) return uu;
+      let ju = null;
+      if ("Iron" === Eu) {
         const {
-          cachedPasskey: et,
-          ...Ot
-        } = Nt(tt.pos);
-        Vt = {
-          Rd: null !== et && void 0 !== et ? et : [0, 0, 0, 0],
-          ...Ot
+          cachedPasskey: Eu,
+          ...su
+        } = Du(uu.pos);
+        ju = {
+          wl: null !== Eu && void 0 !== Eu ? Eu : [0, 0, 0, 0],
+          ...su
         }
       }
       return {
-        ...tt,
-        type: et,
-        ironChest: Vt
+        ...uu,
+        type: Eu,
+        ironChest: ju
       }
     }
 
-    function Nt(tt) {
-      const et = Xt(tt),
-        Vt = null === et || void 0 === et ? void 0 : et.ownerDbId,
-        Ot = function(tt) {
-          var et;
-          let Vt = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Xt(tt);
-          const Ot = Qt(tt),
-            qt = lt.get(Ot);
-          return qt ? qt.lastOpened < (null !== (et = null === Vt || void 0 === Vt ? void 0 : Vt.passkeyLastUpdated) && void 0 !== et ? et : 0) ? (lt.delete(Ot), null) : [...qt.Rd] : null
-        }(tt, et);
-      return void 0 === Vt ? {
-        cachedPasskey: Ot
+    function Du(uu) {
+      const Eu = Cu(uu),
+        ju = null === Eu || void 0 === Eu ? void 0 : Eu.ownerDbId,
+        su = function(uu) {
+          var Eu;
+          let ju = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Cu(uu);
+          const su = bu(uu),
+            Uu = cu.get(su);
+          return Uu ? Uu.lastOpened < (null !== (Eu = null === ju || void 0 === ju ? void 0 : ju.passkeyLastUpdated) && void 0 !== Eu ? Eu : 0) ? (cu.delete(su), null) : [...Uu.wl] : null
+        }(uu, Eu);
+      return void 0 === ju ? {
+        cachedPasskey: su
       } : {
-        ownerDbId: Vt,
-        cachedPasskey: Ot
+        ownerDbId: ju,
+        cachedPasskey: su
       }
-    }(0, Ht.j)(mt.d, (tt => {
-      const et = (0, jt.h)(mt.d, tt);
-      if (!(0, jt.d)(et) || et.tD) return;
-      if (ft++, !et.Bq || null === et.Tq) return void(Et = null);
-      const Vt = Qt(et.Tq);
-      Et = {
-        key: Vt,
-        type: et.xq
-      }, null !== et.nq && lt.set(Vt, {
-        Rd: [...et.nq],
+    }(0, fu.n)(Xu.b, (uu => {
+      const Eu = (0, qu.g)(Xu.b, uu);
+      if (!(0, qu.e)(Eu) || Eu.EZ) return;
+      if (Ou++, !Eu.nU || null === Eu.RU) return void(Nu = null);
+      const ju = bu(Eu.RU);
+      Nu = {
+        key: ju,
+        type: Eu.zU
+      }, null !== Eu.uZ && cu.set(ju, {
+        wl: [...Eu.uZ],
         lastOpened: Date.now()
       })
-    })), (0, Ht.f)((() => {
-      lt.clear(), Et = null, ft++
-    })), (0, Ht.g)((() => {
-      null !== Et && (Et = null, ft++, Ot.j.sw("chestToggleFromServer", !1, !0))
+    })), (0, fu.i)((() => {
+      cu.clear(), Nu = null, Ou++
+    })), (0, fu.k)((() => {
+      null !== Nu && (Nu = null, Ou++, su.h.TY("chestToggleFromServer", !1, !0))
     }));
-    const Mt = {
+    const gu = {
         boardEditRequested: {
-          watch: tt => (0, Ot.n)("EditBoard", (et => {
+          watch: uu => (0, su.l)("EditBoard", (Eu => {
             let {
-              pos: Vt
-            } = et;
-            if (null === Vt) return void tt(null);
-            const Ot = (0, Dt.g)(),
-              qt = (0, Dt.q)();
-            Ot && qt && tt(qt.readBoardToEdit(Ot.api, Ot.chunks, Vt))
+              pos: ju
+            } = Eu;
+            if (null === ju) return void uu(null);
+            const su = (0, Zu.l)(),
+              Uu = (0, Zu.w)();
+            su && Uu && uu(Uu.readBoardToEdit(su.api, su.chunks, ju))
           }))
         },
         ironChestOpenRequested: {
-          watch: tt => (0, Ot.n)("OpenIronChest", (et => {
+          watch: uu => (0, su.l)("OpenIronChest", (Eu => {
             let {
-              pos: Vt
-            } = et;
-            tt(function(tt) {
+              pos: ju
+            } = Eu;
+            uu(function(uu) {
               return {
-                pos: tt,
-                ...Nt(tt)
+                pos: uu,
+                ...Du(uu)
               }
-            }(Vt))
+            }(ju))
           }))
         }
       },
-      bt = {
-        writeOnBoard(tt) {
-          var et;
+      Mu = {
+        writeOnBoard(uu) {
+          var Eu;
           let {
-            pos: Vt,
-            text: Ot,
-            textSize: qt
-          } = tt;
-          null === (et = (0, Dt.g)()) || void 0 === et || et.send(dt.c.UpdateBoard, (0, dt.S)({
-            Rj: Vt,
-            Ij: Ot,
-            Pj: qt
+            pos: ju,
+            text: su,
+            textSize: Uu
+          } = uu;
+          null === (Eu = (0, Zu.l)()) || void 0 === Eu || Eu.send(lu.c.UpdateBoard, (0, lu.X)({
+            eq: ju,
+            Gq: su,
+            pq: Uu
           }))
         },
-        writeBook(tt) {
-          var et;
+        writeBook(uu) {
+          var Eu;
           let {
-            pages: Vt,
-            title: Ot,
-            published: qt
-          } = tt;
-          null === (et = (0, Dt.g)()) || void 0 === et || et.send(dt.c.UpdateBook, (0, dt.T)({
-            nm: Vt,
-            td: Ot,
-            Vd: qt
+            pages: ju,
+            title: su,
+            published: Uu
+          } = uu;
+          null === (Eu = (0, Zu.l)()) || void 0 === Eu || Eu.send(lu.c.UpdateBook, (0, lu._)({
+            AX: ju,
+            yX: su,
+            zX: Uu
           }))
         },
-        writeNameTag(tt) {
-          var et;
-          null === (et = (0, Dt.g)()) || void 0 === et || et.send(dt.c.UpdateNameTag, tt)
+        writeNameTag(uu) {
+          var Eu;
+          null === (Eu = (0, Zu.l)()) || void 0 === Eu || Eu.send(lu.c.UpdateNameTag, uu)
         },
-        setCustomLobbyBlock(tt) {
+        setCustomLobbyBlock(uu) {
           let {
-            pos: et,
-            blockName: Vt
-          } = tt;
-          const Ot = (0, Dt.q)(),
-            qt = (0, Dt.g)();
-          Ot && qt && qt.send(dt.c.SetCustomLobbyBlock, (0, dt.I)({
-            qd: Ot.blockIdOf(Vt),
-            Od: et
+            pos: Eu,
+            blockName: ju
+          } = uu;
+          const su = (0, Zu.w)(),
+            Uu = (0, Zu.l)();
+          su && Uu && Uu.send(lu.c.SetCustomLobbyBlock, (0, lu.H)({
+            ul: su.blockIdOf(ju),
+            RX: Eu
           }))
         }
       }
   },
-  40845: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => jt,
-      c: () => mt,
-      d: () => dt
+  40904: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => qu,
+      e: () => Xu,
+      g: () => lu
     });
-    var Ot = Vt(40761),
-      qt = Vt(4951),
-      Dt = Vt(40769);
+    var su = ju(40833),
+      Uu = ju(4962),
+      Zu = ju(40847);
 
-    function mt() {
-      var tt;
-      const et = null === (tt = (0, Dt.g)()) || void 0 === tt ? void 0 : tt.api.localId;
-      return void 0 === et || et === Ot.hd ? null : String(et)
+    function Xu() {
+      var uu;
+      const Eu = null === (uu = (0, Zu.l)()) || void 0 === uu ? void 0 : uu.api.localId;
+      return void 0 === Eu || Eu === su.Pc ? null : String(Eu)
     }
 
-    function dt(tt) {
-      const et = (0, Dt.g)();
-      if (null !== et) return tt(et);
-      let Vt = null;
-      const Ot = (0, qt.o)((() => {
-        const et = (0, Dt.g)();
-        null !== et && null === Vt && (Ot(), Vt = tt(et))
+    function lu(uu) {
+      const Eu = (0, Zu.l)();
+      if (null !== Eu) return uu(Eu);
+      let ju = null;
+      const su = (0, Uu.t)((() => {
+        const Eu = (0, Zu.l)();
+        null !== Eu && null === ju && (su(), ju = uu(Eu))
       }));
       return () => {
-        var tt;
-        Ot(), null === (tt = Vt) || void 0 === tt || tt()
+        var uu;
+        su(), null === (uu = ju) || void 0 === uu || uu()
       }
     }
 
-    function jt(tt, et, Vt) {
+    function qu(uu, Eu, ju) {
       return {
         current: () => {
-          const Vt = (0, Dt.g)();
-          return null === Vt ? et : tt(Vt)()
+          const ju = (0, Zu.l)();
+          return null === ju ? Eu : uu(ju)()
         },
-        watch: et => dt((Ot => {
-          const qt = tt(Ot);
-          let Dt = qt();
-          return et(Dt), Vt((() => {
-            const tt = qt();
-            tt !== Dt && (Dt = tt, et(tt))
+        watch: Eu => lu((su => {
+          const Uu = uu(su);
+          let Zu = Uu();
+          return Eu(Zu), ju((() => {
+            const uu = Uu();
+            uu !== Zu && (Zu = uu, Eu(uu))
           }))
         }))
       }
     }
   },
-  40840: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => Ht
+  40901: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => fu
     });
-    var Ot = Vt(40769),
-      qt = Vt(40845),
-      Dt = Vt(40853);
+    var su = ju(40847),
+      Uu = ju(40904),
+      Zu = ju(40912);
 
-    function mt() {
-      var tt, et;
-      return null !== (tt = null === (et = (0, Ot.g)()) || void 0 === et ? void 0 : et.itemBridgeSources) && void 0 !== tt ? tt : Dt.e
+    function Xu() {
+      var uu, Eu;
+      return null !== (uu = null === (Eu = (0, su.l)()) || void 0 === Eu ? void 0 : Eu.itemBridgeSources) && void 0 !== uu ? uu : Zu.d
     }
 
-    function dt(tt) {
+    function lu(uu) {
       return {
-        current: () => mt().states[tt].current(),
-        watch: et => (0, qt.d)((Vt => {
-          const Ot = Vt.itemBridgeSources.states[tt];
-          return et(Ot.current()), Ot.watch(et)
+        current: () => Xu().states[uu].current(),
+        watch: Eu => (0, Uu.g)((ju => {
+          const su = ju.itemBridgeSources.states[uu];
+          return Eu(su.current()), su.watch(Eu)
         }))
       }
     }
 
-    function jt(tt) {
+    function qu(uu) {
       return {
-        watch: et => (0, qt.d)((Vt => Vt.itemBridgeSources.events[tt].watch(et)))
+        watch: Eu => (0, Uu.g)((ju => ju.itemBridgeSources.events[uu].watch(Eu)))
       }
     }
-    const Ht = {
+    const fu = {
       states: {
-        inventory: dt("inventory"),
-        hotbar: dt("hotbar"),
-        crafting: dt("crafting"),
-        heldItemAim: dt("heldItemAim")
+        inventory: lu("inventory"),
+        hotbar: lu("hotbar"),
+        crafting: lu("crafting"),
+        heldItemAim: lu("heldItemAim")
       },
       events: {
-        hotbarSlotRequested: jt("hotbarSlotRequested"),
-        hotbarScrolled: jt("hotbarScrolled"),
-        numberKeyPressed: jt("numberKeyPressed"),
-        inventoryDropRequested: jt("inventoryDropRequested"),
-        chestToggled: jt("chestToggled"),
-        chestRefreshed: jt("chestRefreshed"),
-        inventorySynced: jt("inventorySynced"),
-        enchantingTableOpened: jt("enchantingTableOpened")
+        hotbarSlotRequested: qu("hotbarSlotRequested"),
+        hotbarScrolled: qu("hotbarScrolled"),
+        numberKeyPressed: qu("numberKeyPressed"),
+        inventoryDropRequested: qu("inventoryDropRequested"),
+        chestToggled: qu("chestToggled"),
+        chestRefreshed: qu("chestRefreshed"),
+        inventorySynced: qu("inventorySynced"),
+        enchantingTableOpened: qu("enchantingTableOpened")
       },
       commands: {
-        selectHotbarSlot: tt => mt().commands.selectHotbarSlot(tt),
-        removeInventoryItem: tt => mt().commands.removeInventoryItem(tt),
-        swapInventorySlots: tt => mt().commands.swapInventorySlots(tt),
-        moveInventoryItem: tt => mt().commands.moveInventoryItem(tt),
-        quickMoveInventoryItem: tt => mt().commands.quickMoveInventoryItem(tt),
-        closeChest: tt => mt().commands.closeChest(tt),
-        focusCrafting: tt => mt().commands.focusCrafting(tt),
-        craftRecipe: tt => mt().commands.craftRecipe(tt),
-        salvageItem: tt => mt().commands.salvageItem(tt),
-        enchantItem: tt => mt().commands.enchantItem(tt)
+        selectHotbarSlot: uu => Xu().commands.selectHotbarSlot(uu),
+        removeInventoryItem: uu => Xu().commands.removeInventoryItem(uu),
+        swapInventorySlots: uu => Xu().commands.swapInventorySlots(uu),
+        moveInventoryItem: uu => Xu().commands.moveInventoryItem(uu),
+        quickMoveInventoryItem: uu => Xu().commands.quickMoveInventoryItem(uu),
+        closeChest: uu => Xu().commands.closeChest(uu),
+        focusCrafting: uu => Xu().commands.focusCrafting(uu),
+        craftRecipe: uu => Xu().commands.craftRecipe(uu),
+        salvageItem: uu => Xu().commands.salvageItem(uu),
+        enchantItem: uu => Xu().commands.enchantItem(uu)
       },
       queries: {
-        enchantingOffer: tt => mt().queries.enchantingOffer(tt)
+        enchantingOffer: uu => Xu().queries.enchantingOffer(uu)
       }
     }
   },
-  40853: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => dt
+  40912: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => lu
     });
-    var Ot = Vt(39850);
+    var su = ju(39933);
 
-    function qt(tt) {
+    function Uu(uu) {
       return {
-        current: () => tt,
+        current: () => uu,
         watch: () => () => {}
       }
     }
 
-    function Dt() {}
-    const mt = Object.freeze([0, 0, 0]),
-      dt = {
+    function Zu() {}
+    const Xu = Object.freeze([0, 0, 0]),
+      lu = {
         states: {
-          health: qt({
+          health: Uu({
             health: null,
             maxHealth: null,
             shield: null,
             maxShield: null
           }),
-          inventory: qt({
+          inventory: Uu({
             player: [],
             chestOrCreative: [],
             chest: null,
@@ -329,63 +329,63 @@ export const modules = {
             selectedSlot: 0,
             freeSlots: 0
           }),
-          hotbar: qt({
+          hotbar: Uu({
             items: [],
             ammo: 0,
             selectedSlot: null
           }),
-          stationItems: qt({
+          stationItems: Uu({
             enchantable: {},
             salvageable: {}
           }),
-          itemInfo: qt({}),
-          creativeVisibility: qt({
+          itemInfo: Uu({}),
+          creativeVisibility: Uu({
             publicLobby: !1,
             shownInGame: {}
           }),
-          aura: qt(null),
-          heldItemAim: qt({
+          aura: Uu(null),
+          heldItemAim: Uu({
             gun: !1,
             aimable: !1,
             chargeName: null
           }),
-          crouching: qt(!1),
-          gliderBoostFuel: qt(0),
-          flight: qt({
+          crouching: Uu(!1),
+          gliderBoostFuel: Uu(0),
+          flight: Uu({
             canFly: !1,
             flying: !1
           }),
-          crafting: qt({
+          crafting: Uu({
             focus: null,
             recipes: [],
             detail: null
           }),
-          players: qt({
+          players: Uu({
             ids: [],
             byId: {},
             localId: null
           }),
-          lobbyLeaderboardRows: qt({}),
-          fullInventory: qt(!1),
-          crosshairTarget: qt({
+          lobbyLeaderboardRows: Uu({}),
+          fullInventory: Uu(!1),
+          crosshairTarget: Uu({
             interactPrompt: null,
             blockText: null,
             neededTool: null
           }),
-          localPlayerAlive: qt(!0),
-          freeCamera: qt({
+          localPlayerAlive: Uu(!0),
+          freeCamera: Uu({
             allowed: !1,
             movesFly: !1
           }),
-          replay: qt(null),
-          replayEdits: qt(null),
-          replayRecorder: qt({
+          replay: Uu(null),
+          replayEdits: Uu(null),
+          replayRecorder: Uu({
             recording: !1,
             clipping: !1,
             hasClipBuffer: !1,
             seconds: 0
           }),
-          replayVideoExporting: qt(!1)
+          replayVideoExporting: Uu(!1)
         },
         events: {
           hotbarSlotRequested: {
@@ -447,87 +447,87 @@ export const modules = {
           }
         },
         commands: {
-          selectHotbarSlot: Dt,
+          selectHotbarSlot: Zu,
           removeInventoryItem: () => !1,
           swapInventorySlots: () => !1,
           moveInventoryItem: () => !1,
           quickMoveInventoryItem: () => null,
-          closeChest: Dt,
-          setInventoryOpen: Dt,
-          changeIronChestPasskey: Dt,
-          dragReplayCamera: Dt,
-          applyTemporaryThirdPerson: Dt,
-          holdEmoteWheel: Dt,
-          recordFlyingMiddleText: Dt,
-          focusCrafting: Dt,
+          closeChest: Zu,
+          setInventoryOpen: Zu,
+          changeIronChestPasskey: Zu,
+          dragReplayCamera: Zu,
+          applyTemporaryThirdPerson: Zu,
+          holdEmoteWheel: Zu,
+          recordFlyingMiddleText: Zu,
+          focusCrafting: Zu,
           craftRecipe: () => ({
-            cX: 0,
-            jj: null,
+            aC: 0,
+            yl: null,
             amountAddedToSlot: 0
           }),
           salvageItem: () => !1,
-          enchantItem: Dt,
-          setShopOpen: Dt,
-          buyShopItem: Dt,
-          lobbyManage: Dt,
-          sendChatMessage: Dt,
-          ignorePlayer: Dt,
-          reportPlayer: Dt,
-          reportWorldCodeChat: Dt,
-          requestDiscordReportKey: Dt,
-          reportLobbyOrGame: Dt,
-          playEmote: Dt,
-          updateMyCosmetic: Dt,
-          writeOnBoard: Dt,
-          writeBook: Dt,
-          writeNameTag: Dt,
-          setCustomLobbyBlock: Dt,
-          openIronChest: Dt,
-          sendCodeCollab: Dt,
-          clickCodeBlock: Dt,
-          bindCustomButtonKeys: Dt,
-          pressCustomButton: Dt,
-          moveReplayFreecam: Dt,
-          holdReplayFreecamVertical: Dt,
-          respawn: Dt,
-          wakeUp: Dt,
-          requestLeaderboard: Dt,
-          completeTask: Dt,
-          setServerCookie: Dt,
-          answerUiRequest: Dt,
-          chooseRewardedAd: Dt,
-          setCameraZoom: Dt,
-          setFreeCameraMovesFly: Dt,
-          setBlockHighlight: Dt,
-          setCrosshairInteractPrompt: Dt,
-          setLookSensitivity: Dt,
-          replayAction: Dt,
-          setReplayPlaying: Dt,
-          seekReplay: Dt,
-          setReplayCameraMode: Dt,
-          syncReplayCameraMode: Dt,
-          setReplayCameraKeyframe: Dt,
-          moveReplayCameraKeyframe: Dt,
-          deleteReplayCameraKeyframes: Dt,
-          setReplayPlaybackMark: Dt,
+          enchantItem: Zu,
+          setShopOpen: Zu,
+          buyShopItem: Zu,
+          lobbyManage: Zu,
+          sendChatMessage: Zu,
+          ignorePlayer: Zu,
+          reportPlayer: Zu,
+          reportWorldCodeChat: Zu,
+          requestDiscordReportKey: Zu,
+          reportLobbyOrGame: Zu,
+          playEmote: Zu,
+          updateMyCosmetic: Zu,
+          writeOnBoard: Zu,
+          writeBook: Zu,
+          writeNameTag: Zu,
+          setCustomLobbyBlock: Zu,
+          openIronChest: Zu,
+          sendCodeCollab: Zu,
+          clickCodeBlock: Zu,
+          bindCustomButtonKeys: Zu,
+          pressCustomButton: Zu,
+          moveReplayFreecam: Zu,
+          holdReplayFreecamVertical: Zu,
+          respawn: Zu,
+          wakeUp: Zu,
+          requestLeaderboard: Zu,
+          completeTask: Zu,
+          setServerCookie: Zu,
+          answerUiRequest: Zu,
+          chooseRewardedAd: Zu,
+          setCameraZoom: Zu,
+          setFreeCameraMovesFly: Zu,
+          setBlockHighlight: Zu,
+          setCrosshairInteractPrompt: Zu,
+          setLookSensitivity: Zu,
+          replayAction: Zu,
+          setReplayPlaying: Zu,
+          seekReplay: Zu,
+          setReplayCameraMode: Zu,
+          syncReplayCameraMode: Zu,
+          setReplayCameraKeyframe: Zu,
+          moveReplayCameraKeyframe: Zu,
+          deleteReplayCameraKeyframes: Zu,
+          setReplayPlaybackMark: Zu,
           cropReplay: () => !1,
-          holdReplayForShaderPackFailure: Dt,
-          exportReplayVideo: Dt,
-          toggleRecording: Dt,
-          saveClip: Dt,
-          setRecorderPrefs: Dt,
-          setReplayViewerOpen: Dt
+          holdReplayForShaderPackFailure: Zu,
+          exportReplayVideo: Zu,
+          toggleRecording: Zu,
+          saveClip: Zu,
+          setRecorderPrefs: Zu,
+          setReplayViewerOpen: Zu
         },
         queries: {
           enchantingOffer: () => ({
             perks: [],
             options: []
           }),
-          worldCodeAiChunk: () => Ot.e,
-          worldCodeAiGameState: () => Ot.h
+          worldCodeAiChunk: () => su.e,
+          worldCodeAiGameState: () => su.f
         },
         lookups: {
-          localPos: () => mt,
+          localPos: () => Xu,
           targetedBlockPos: () => null,
           blockAtViewPoint: () => null,
           momentumFrac: () => 0,
@@ -545,316 +545,316 @@ export const modules = {
         }
       }
   },
-  40767: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => vt,
-      f: () => ht,
-      h: () => Wt,
-      k: () => Kt,
-      n: () => Ct
+  40840: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => du,
+      i: () => Ju,
+      j: () => au,
+      l: () => wu,
+      p: () => Gu
     });
-    var Ot = Vt(39441),
-      qt = Vt(1308),
-      Dt = Vt(2043),
-      mt = Vt(2054),
-      dt = Vt(3346),
-      jt = Vt(37044),
-      Ht = Vt(1423),
-      Xt = Vt(40769),
-      Qt = Vt(4980),
-      lt = Vt(2458),
-      Et = Vt(40777),
-      ft = Vt(40785),
-      wt = Vt(40840);
-    let yt = null;
+    var su = ju(39547),
+      Uu = ju(1278),
+      Zu = ju(2011),
+      Xu = ju(2019),
+      lu = ju(3475),
+      qu = ju(37208),
+      fu = ju(1369),
+      Cu = ju(40847),
+      bu = ju(4986),
+      cu = ju(2516),
+      Nu = ju(40854),
+      Ou = ju(40856),
+      Yu = ju(40901);
+    let hu = null;
 
-    function Nt(tt) {
-      const et = new Map,
-        Vt = Vt => {
-          if ("string" !== typeof Vt) return;
-          let Ot = et.get(Vt);
-          return void 0 === Ot && (Ot = tt(Vt), void 0 !== Ot && et.set(Vt, Ot)), Ot
+    function Du(uu) {
+      const Eu = new Map,
+        ju = ju => {
+          if ("string" !== typeof ju) return;
+          let su = Eu.get(ju);
+          return void 0 === su && (su = uu(ju), void 0 !== su && Eu.set(ju, su)), su
         };
       return new Proxy({}, {
-        get: (tt, et) => Vt(et),
-        has: (tt, et) => void 0 !== Vt(et)
+        get: (uu, Eu) => ju(Eu),
+        has: (uu, Eu) => void 0 !== ju(Eu)
       })
     }
 
-    function Mt(tt) {
-      const et = (0, dt.b)(tt);
-      return void 0 !== et && (0, dt.e)(et) === tt
+    function gu(uu) {
+      const Eu = (0, lu.b)(uu);
+      return void 0 !== Eu && (0, lu.c)(Eu) === uu
     }
 
-    function bt(tt) {
-      var et;
-      const Vt = null === (et = (0, Xt.g)()) || void 0 === et ? void 0 : et.tables;
-      if (void 0 === Vt || !Mt(tt)) return;
-      const Ot = {
-          displayName: Vt.getDisplayName(tt)
+    function Mu(uu) {
+      var Eu;
+      const ju = null === (Eu = (0, Cu.l)()) || void 0 === Eu ? void 0 : Eu.tables;
+      if (void 0 === ju || !gu(uu)) return;
+      const su = {
+          displayName: ju.getDisplayName(uu)
         },
-        qt = Vt.getItemStat(tt, "description");
-      void 0 !== qt && null !== qt && (Ot.description = qt);
+        Uu = ju.getItemStat(uu, "description");
+      void 0 !== Uu && null !== Uu && (su.description = Uu);
       const {
-        rootName: Dt
-      } = Vt.getMetaInfo(tt);
-      Dt !== tt && (Ot.rootName = Dt);
-      const mt = Vt.getItemStat(tt, "armourReduction");
-      return void 0 !== mt && null !== mt && (Ot.armourReduction = mt), Ot
-    }(0, Xt.r)((tt => {
-      yt = tt
+        rootName: Zu
+      } = ju.getMetaInfo(uu);
+      Zu !== uu && (su.rootName = Zu);
+      const Xu = ju.getItemStat(uu, "armourReduction");
+      return void 0 !== Xu && null !== Xu && (su.armourReduction = Xu), su
+    }(0, Cu.A)((uu => {
+      hu = uu
     }));
-    const Jt = (0, mt.g)("DisplayName", "Description");
+    const eu = (0, Xu.i)("DisplayName", "Description");
 
-    function Ct() {
-      return Boolean(Dt.b.get("useInventory") && Dt.b.get("useFullInventory"))
+    function Gu() {
+      return Boolean(Zu.e.get("useInventory") && Zu.e.get("useFullInventory"))
     }
-    let ut = null;
-    const Kt = {
+    let pu = null;
+    const wu = {
         inventory: function() {
-          const tt = wt.c.states.inventory;
-          let et = null;
-          const Vt = tt => {
-            var Vt;
-            return null === tt.chest ? tt : ((null === (Vt = et) || void 0 === Vt ? void 0 : Vt.from) === tt && et.chestVersion === (0, ft.e)() || (et = {
-              from: tt,
-              chestVersion: (0, ft.e)(),
+          const uu = Yu.c.states.inventory;
+          let Eu = null;
+          const ju = uu => {
+            var ju;
+            return null === uu.chest ? uu : ((null === (ju = Eu) || void 0 === ju ? void 0 : ju.from) === uu && Eu.chestVersion === (0, Ou.e)() || (Eu = {
+              from: uu,
+              chestVersion: (0, Ou.e)(),
               view: {
-                ...tt,
-                chest: (0, ft.p)(tt.chest)
+                ...uu,
+                chest: (0, Ou.m)(uu.chest)
               }
-            }), et.view)
+            }), Eu.view)
           };
           return {
-            current: () => Vt(tt.current()),
-            watch: et => tt.watch((tt => {
-              et(Vt(tt))
+            current: () => ju(uu.current()),
+            watch: Eu => uu.watch((uu => {
+              Eu(ju(uu))
             }))
           }
         }(),
-        crafting: wt.c.states.crafting,
+        crafting: Yu.c.states.crafting,
         stationItems: {
           current() {
-            var tt;
-            return (null === (tt = ut) || void 0 === tt ? void 0 : tt.namesVersion) !== (0, dt.h)() && (ut = {
-              namesVersion: (0, dt.h)(),
+            var uu;
+            return (null === (uu = pu) || void 0 === uu ? void 0 : uu.namesVersion) !== (0, lu.g)() && (pu = {
+              namesVersion: (0, lu.g)(),
               items: {
-                enchantable: Nt((tt => {
-                  const et = (0, dt.b)(tt);
-                  return void 0 !== et && null !== yt && yt.enchantmentPerksOf(et).length > 0 || void 0
+                enchantable: Du((uu => {
+                  const Eu = (0, lu.b)(uu);
+                  return void 0 !== Eu && null !== hu && hu.enchantmentPerksOf(Eu).length > 0 || void 0
                 })),
-                salvageable: Nt((tt => !(!Mt(tt) || null === (0, jt.d)(tt)) || void 0))
+                salvageable: Du((uu => !(!gu(uu) || null === (0, qu.d)(uu)) || void 0))
               }
-            }), ut.items
+            }), pu.items
           },
           watch: () => () => {}
         },
         itemInfo: function() {
-          let tt = null;
-          const et = () => {
-            var et;
-            return (null === (et = tt) || void 0 === et ? void 0 : et.namesVersion) !== (0, dt.h)() && (tt = {
-              namesVersion: (0, dt.h)(),
-              infos: Nt(bt)
-            }), tt.infos
+          let uu = null;
+          const Eu = () => {
+            var Eu;
+            return (null === (Eu = uu) || void 0 === Eu ? void 0 : Eu.namesVersion) !== (0, lu.g)() && (uu = {
+              namesVersion: (0, lu.g)(),
+              infos: Du(Mu)
+            }), uu.infos
           };
           return {
-            current: et,
-            watch: Vt => (0, mt.q)((Ot => {
-              Ot.some(Jt) && (tt = null, Vt(et()))
+            current: Eu,
+            watch: ju => (0, Xu.q)((su => {
+              su.some(eu) && (uu = null, ju(Eu()))
             }))
           }
         }(),
-        creativeVisibility: (0, mt.l)((function() {
-          const tt = {};
-          for (const qt of null !== (et = null === (Vt = yt) || void 0 === Vt ? void 0 : Vt.creativeItemIds()) && void 0 !== et ? et : []) {
-            var et, Vt, mt, jt;
-            const Ht = (0, dt.e)(qt);
-            if (void 0 === Ht) continue;
-            const Xt = null !== (mt = Dt.b.get((0, Ot.h)(Ht, "showInCreativeInven"))) && void 0 !== mt ? mt : null === (jt = yt) || void 0 === jt ? void 0 : jt.showInCreativeInvenOf(qt);
-            "boolean" === typeof Xt && (tt[Ht] = Xt)
+        creativeVisibility: (0, Xu.l)((function() {
+          const uu = {};
+          for (const Uu of null !== (Eu = null === (ju = hu) || void 0 === ju ? void 0 : ju.creativeItemIds()) && void 0 !== Eu ? Eu : []) {
+            var Eu, ju, Xu, qu;
+            const fu = (0, lu.c)(Uu);
+            if (void 0 === fu) continue;
+            const Cu = null !== (Xu = Zu.e.get((0, su.g)(fu, "showInCreativeInven"))) && void 0 !== Xu ? Xu : null === (qu = hu) || void 0 === qu ? void 0 : qu.showInCreativeInvenOf(Uu);
+            "boolean" === typeof Cu && (uu[fu] = Cu)
           }
           return {
-            publicLobby: (0, qt.P)((0, Ht.c)().lobbyName),
-            shownInGame: tt
+            publicLobby: (0, Uu.N)((0, fu.b)().lobbyName),
+            shownInGame: uu
           }
-        }), ["connectedGameChanged"], (0, mt.g)("ShowInCreativeInven")),
-        fullInventory: (0, mt.l)(Ct, [], (0, mt.k)("useInventory", "useFullInventory"))
+        }), ["connectedGameChanged"], (0, Xu.i)("ShowInCreativeInven")),
+        fullInventory: (0, Xu.l)(Gu, [], (0, Xu.k)("useInventory", "useFullInventory"))
       },
-      ht = {
-        inventoryDropRequested: wt.c.events.inventoryDropRequested,
-        chestToggled: wt.c.events.chestToggled,
-        chestRefreshed: wt.c.events.chestRefreshed,
-        inventorySynced: wt.c.events.inventorySynced,
-        enchantingTableOpened: wt.c.events.enchantingTableOpened
+      Ju = {
+        inventoryDropRequested: Yu.c.events.inventoryDropRequested,
+        chestToggled: Yu.c.events.chestToggled,
+        chestRefreshed: Yu.c.events.chestRefreshed,
+        inventorySynced: Yu.c.events.inventorySynced,
+        enchantingTableOpened: Yu.c.events.enchantingTableOpened
       },
-      vt = {
-        removeInventoryItem: wt.c.commands.removeInventoryItem,
-        swapInventorySlots: wt.c.commands.swapInventorySlots,
-        moveInventoryItem: wt.c.commands.moveInventoryItem,
-        quickMoveInventoryItem: wt.c.commands.quickMoveInventoryItem,
-        closeChest: wt.c.commands.closeChest,
-        setInventoryOpen(tt) {
-          (0, Qt.g)(lt.u.InventoryOpen, tt ? lt.u.InventoryOpen : 0)
+      du = {
+        removeInventoryItem: Yu.c.commands.removeInventoryItem,
+        swapInventorySlots: Yu.c.commands.swapInventorySlots,
+        moveInventoryItem: Yu.c.commands.moveInventoryItem,
+        quickMoveInventoryItem: Yu.c.commands.quickMoveInventoryItem,
+        closeChest: Yu.c.commands.closeChest,
+        setInventoryOpen(uu) {
+          (0, bu.g)(cu.x.InventoryOpen, uu ? cu.x.InventoryOpen : 0)
         },
-        focusCrafting: wt.c.commands.focusCrafting,
-        craftRecipe: wt.c.commands.craftRecipe,
-        salvageItem: wt.c.commands.salvageItem,
-        enchantItem: wt.c.commands.enchantItem,
-        changeIronChestPasskey(tt) {
-          var et;
+        focusCrafting: Yu.c.commands.focusCrafting,
+        craftRecipe: Yu.c.commands.craftRecipe,
+        salvageItem: Yu.c.commands.salvageItem,
+        enchantItem: Yu.c.commands.enchantItem,
+        changeIronChestPasskey(uu) {
+          var Eu;
           let {
-            pos: Vt,
-            Rd: Ot
-          } = tt;
-          null === (et = (0, Xt.g)()) || void 0 === et || et.send(Et.c.ChangeIronChestPasskey, (0, Et.j)({
-            Tq: Vt,
-            Rd: Ot
+            pos: ju,
+            wl: su
+          } = uu;
+          null === (Eu = (0, Cu.l)()) || void 0 === Eu || Eu.send(Nu.c.ChangeIronChestPasskey, (0, Nu.k)({
+            RU: ju,
+            wl: su
           }))
         },
-        openIronChest(tt) {
-          var et;
+        openIronChest(uu) {
+          var Eu;
           let {
-            pos: Vt,
-            Rd: Ot
-          } = tt;
-          null === (et = (0, Xt.g)()) || void 0 === et || et.send(Et.c.OpenIronChest, (0, Et.z)({
-            Tq: Vt,
-            Rd: Ot
+            pos: ju,
+            wl: su
+          } = uu;
+          null === (Eu = (0, Cu.l)()) || void 0 === Eu || Eu.send(Nu.c.OpenIronChest, (0, Nu.B)({
+            RU: ju,
+            wl: su
           }))
         }
       },
-      Wt = {
-        enchantingOffer: wt.c.queries.enchantingOffer
+      au = {
+        enchantingOffer: Yu.c.queries.enchantingOffer
       }
   },
-  40831: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => Ot,
-      e: () => Xt,
-      h: () => mt,
-      k: () => qt,
-      n: () => dt,
-      o: () => Ht
+  40897: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => su,
+      h: () => Cu,
+      k: () => Xu,
+      l: () => Uu,
+      p: () => lu,
+      r: () => fu
     });
-    class Ot extends Error {
+    class su extends Error {
       constructor() {
         super(...arguments), this.name = "CoreCorruption"
       }
     }
 
-    function qt(tt) {
-      return tt instanceof RangeError && /call stack/i.test(tt.message) || tt instanceof Error && "InternalError" === tt.name && /recursion/i.test(tt.message)
+    function Uu(uu) {
+      return uu instanceof RangeError && /call stack/i.test(uu.message) || uu instanceof Error && "InternalError" === uu.name && /recursion/i.test(uu.message)
     }
-    const Dt = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
+    const Zu = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
 
-    function mt(tt) {
-      var et;
-      return tt instanceof WebAssembly.RuntimeError || tt instanceof Ot || qt(tt) && Dt.test(null !== (et = tt.stack) && void 0 !== et ? et : "")
-    }
-
-    function dt(tt, et) {
-      if (mt(tt)) throw tt;
-      console.error(et, tt)
+    function Xu(uu) {
+      var Eu;
+      return uu instanceof WebAssembly.RuntimeError || uu instanceof su || Uu(uu) && Zu.test(null !== (Eu = uu.stack) && void 0 !== Eu ? Eu : "")
     }
 
-    function jt(tt, et, Vt, qt, Dt) {
-      if (et % qt !== 0 || et + Vt > tt.byteLength) throw new Ot(`${Dt}: ${Vt} bytes at ${et}, ${qt}-aligned, outside ${tt.byteLength} bytes of memory`)
+    function lu(uu, Eu) {
+      if (Xu(uu)) throw uu;
+      console.error(Eu, uu)
     }
 
-    function Ht(tt, et, Vt, Ot, qt) {
-      return 0 === Vt ? null : (jt(et, Vt, Ot * tt.BYTES_PER_ELEMENT, tt.BYTES_PER_ELEMENT, qt), new tt(et, Vt, Ot))
+    function qu(uu, Eu, ju, Uu, Zu) {
+      if (Eu % Uu !== 0 || Eu + ju > uu.byteLength) throw new su(`${Zu}: ${ju} bytes at ${Eu}, ${Uu}-aligned, outside ${uu.byteLength} bytes of memory`)
     }
 
-    function Xt(tt, et, Vt, Ot, qt) {
-      return 0 === et ? null : (jt(tt, et, Vt, Ot, qt), new DataView(tt, et, Vt))
+    function fu(uu, Eu, ju, su, Uu) {
+      return 0 === ju ? null : (qu(Eu, ju, su * uu.BYTES_PER_ELEMENT, uu.BYTES_PER_ELEMENT, Uu), new uu(Eu, ju, su))
+    }
+
+    function Cu(uu, Eu, ju, su, Uu) {
+      return 0 === Eu ? null : (qu(uu, Eu, ju, su, Uu), new DataView(uu, Eu, ju))
     }
   },
-  40769: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => Ot,
-      e: () => Nt,
-      g: () => wt,
-      k: () => yt,
-      m: () => lt,
-      n: () => Et,
-      q: () => Xt,
-      r: () => Qt,
-      u: () => ft
+  40847: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      A: () => bu,
+      B: () => Ou,
+      e: () => su,
+      i: () => Du,
+      l: () => Yu,
+      m: () => hu,
+      p: () => cu,
+      s: () => Nu,
+      w: () => Cu
     });
-    class Ot extends Error {
-      constructor(tt) {
-        super(`the join's code did not load: ${tt instanceof Error?tt.message:String(tt)}`, {
-          cause: tt
-        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === tt || void 0 === tt ? void 0 : tt.request
+    class su extends Error {
+      constructor(uu) {
+        super(`the join's code did not load: ${uu instanceof Error?uu.message:String(uu)}`, {
+          cause: uu
+        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === uu || void 0 === uu ? void 0 : uu.request
       }
     }
-    let qt = null,
-      Dt = null,
-      mt = null;
-    const dt = [];
-    let jt = null;
+    let Uu = null,
+      Zu = null,
+      Xu = null;
+    const lu = [];
+    let qu = null;
 
-    function Ht(tt, et) {
+    function fu(uu, Eu) {
       try {
-        tt(et)
-      } catch (Vt) {
-        console.error("[bloxd-wasm-client] the game chunk's listener failed", Vt)
+        uu(Eu)
+      } catch (ju) {
+        console.error("[bloxd-wasm-client] the game chunk's listener failed", ju)
       }
     }
 
-    function Xt() {
-      return jt
+    function Cu() {
+      return qu
     }
 
-    function Qt(tt) {
-      dt.push(tt), null !== jt && Ht(tt, jt)
+    function bu(uu) {
+      lu.push(uu), null !== qu && fu(uu, qu)
     }
 
-    function lt(tt) {
-      return qt ??= Promise.all([Vt.e(73), Vt.e(98), Vt.e(226), Vt.e(78), Vt.e(227), Vt.e(201), Vt.e(97), Vt.e(246), Vt.e(273), Vt.e(199), Vt.e(214), Vt.e(191), Vt.e(198), Vt.e(193), Vt.e(144), Vt.e(88), Vt.e(122), Vt.e(252), Vt.e(57)]).then((() => Vt(42820))).then((et => {
-        et.loadAudio(tt), jt = et;
-        for (const tt of dt) Ht(tt, et);
-        return et
-      })).catch((tt => {
-        throw qt = null, tt
-      })), qt
+    function cu(uu) {
+      return Uu ??= Promise.all([ju.e(73), ju.e(98), ju.e(226), ju.e(78), ju.e(227), ju.e(201), ju.e(97), ju.e(246), ju.e(273), ju.e(199), ju.e(214), ju.e(191), ju.e(198), ju.e(193), ju.e(144), ju.e(88), ju.e(122), ju.e(252), ju.e(57)]).then((() => ju(42862))).then((Eu => {
+        Eu.loadAudio(uu), qu = Eu;
+        for (const uu of lu) fu(uu, Eu);
+        return Eu
+      })).catch((uu => {
+        throw Uu = null, uu
+      })), Uu
     }
-    async function Et(tt, et) {
+    async function Nu(uu, Eu) {
       try {
-        const Vt = await lt(tt);
-        await Vt.loadClientGame(et)
-      } catch (Vt) {
-        throw new Ot(Vt)
+        const ju = await cu(uu);
+        await ju.loadClientGame(Eu)
+      } catch (ju) {
+        throw new su(ju)
       }
     }
 
-    function ft(tt, et) {
-      Dt = {
-        running: tt,
-        shell: et
+    function Ou(uu, Eu) {
+      Zu = {
+        running: uu,
+        shell: Eu
       }
     }
 
-    function wt() {
-      return mt
+    function Yu() {
+      return Xu
     }
-    async function yt(tt) {
-      const et = Dt;
-      if ((null === et || void 0 === et ? void 0 : et.running) !== tt) throw new Error("the core's session has ended");
-      const Vt = await lt(et.shell.audio).catch((tt => {
-        throw new Ot(tt)
+    async function hu(uu) {
+      const Eu = Zu;
+      if ((null === Eu || void 0 === Eu ? void 0 : Eu.running) !== uu) throw new Error("the core's session has ended");
+      const ju = await cu(Eu.shell.audio).catch((uu => {
+        throw new su(uu)
       }));
-      if (null !== mt) return mt;
-      if (Dt !== et || tt.isStopped) throw new Error("the core stopped while the game code loaded");
-      if (mt = Vt.startGameHost(tt, et.shell), null === mt) throw new Error("the core's shared tables didn't read, so the game can't start");
-      return mt
+      if (null !== Xu) return Xu;
+      if (Zu !== Eu || uu.isStopped) throw new Error("the core stopped while the game code loaded");
+      if (Xu = ju.startGameHost(uu, Eu.shell), null === Xu) throw new Error("the core's shared tables didn't read, so the game can't start");
+      return Xu
     }
 
-    function Nt() {
-      null !== mt && (null !== jt ? jt.endGameHost(mt) : mt.closeGame()), mt = null, Dt = null
+    function Du() {
+      null !== Xu && (null !== qu ? qu.endGameHost(Xu) : Xu.closeGame()), Xu = null, Zu = null
     }
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

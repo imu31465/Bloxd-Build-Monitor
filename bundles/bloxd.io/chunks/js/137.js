@@ -1,60 +1,60 @@
 export const id = 137;
 export const ids = [137];
 export const modules = {
-  36535: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => Tt,
-      h: () => te,
-      k: () => st,
-      o: () => xt
+  36713: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => Au,
+      i: () => Ru,
+      k: () => yu,
+      o: () => Hu
     });
-    var Ot = Vt(2961),
-      qt = Vt(2972),
-      Dt = Vt(6820),
-      mt = Vt(4851),
-      dt = Vt(2970),
-      jt = Vt(2965);
-    const Ht = "bloxd-wasmDownloaded",
-      Xt = 12;
+    var su = ju(3017),
+      Uu = ju(3038),
+      Zu = ju(6818),
+      Xu = ju(4874),
+      lu = ju(3029),
+      qu = ju(3020);
+    const fu = "bloxd-wasmDownloaded",
+      Cu = 12;
 
-    function Qt(tt) {
-      return tt.pathname.slice(tt.pathname.lastIndexOf("/") + 1)
+    function bu(uu) {
+      return uu.pathname.slice(uu.pathname.lastIndexOf("/") + 1)
     }
 
-    function lt() {
+    function cu() {
       try {
         if ("undefined" === typeof localStorage) return null;
-        const tt = JSON.parse(localStorage.getItem(Ht) ?? "[]");
-        return Array.isArray(tt) ? tt.filter((tt => "string" === typeof tt)) : []
-      } catch (tt) {
-        return console.warn("Bloxd wasm: the record of downloaded modules could not be read: asking the HTTP cache for none", tt), null
+        const uu = JSON.parse(localStorage.getItem(fu) ?? "[]");
+        return Array.isArray(uu) ? uu.filter((uu => "string" === typeof uu)) : []
+      } catch (uu) {
+        return console.warn("Bloxd wasm: the record of downloaded modules could not be read: asking the HTTP cache for none", uu), null
       }
     }
-    const Et = Reflect.apply,
-      ft = "undefined" === typeof Worker ? void 0 : Worker,
-      wt = ft?.prototype.postMessage,
-      yt = ft?.prototype.terminate,
-      Nt = "undefined" === typeof EventTarget ? void 0 : EventTarget.prototype.addEventListener,
-      Mt = "undefined" === typeof MessageEvent ? void 0 : Object.getOwnPropertyDescriptor(MessageEvent.prototype, "data")?.get,
-      bt = Object.getOwnPropertyDescriptor(Object.getPrototypeOf(Uint8Array.prototype), "buffer").get,
-      Jt = function() {
+    const Nu = Reflect.apply,
+      Ou = "undefined" === typeof Worker ? void 0 : Worker,
+      Yu = Ou?.prototype.postMessage,
+      hu = Ou?.prototype.terminate,
+      Du = "undefined" === typeof EventTarget ? void 0 : EventTarget.prototype.addEventListener,
+      gu = "undefined" === typeof MessageEvent ? void 0 : Object.getOwnPropertyDescriptor(MessageEvent.prototype, "data")?.get,
+      Mu = Object.getOwnPropertyDescriptor(Object.getPrototypeOf(Uint8Array.prototype), "buffer").get,
+      eu = function() {
         try {
-          return (0, mt.l)(ft, "Worker", !0) && (0, mt.l)(wt, "postMessage") && (0, mt.l)(yt, "terminate") && (0, mt.l)(bt, "buffer") && void 0 !== Nt && void 0 !== Mt
+          return (0, Xu.m)(Ou, "Worker", !0) && (0, Xu.m)(Yu, "postMessage") && (0, Xu.m)(hu, "terminate") && (0, Xu.m)(Mu, "buffer") && void 0 !== Du && void 0 !== gu
         } catch {
           return !1
         }
       }();
-    let Ct = !1;
+    let Gu = !1;
 
-    function ut() {
-      return Jt && !Ct
+    function pu() {
+      return eu && !Gu
     }
-    class Kt {
+    class wu {
       worker = null;
       failed = !1;
       constructor() {
-        if (ut()) try {
-          this.worker = vt(), Et(Nt, this.worker, ["error", () => {
+        if (pu()) try {
+          this.worker = du(), Nu(Du, this.worker, ["error", () => {
             this.failed = !0
           }])
         } catch {
@@ -62,125 +62,125 @@ export const modules = {
         }
       }
       take() {
-        const tt = this.worker;
-        if (this.worker = null, null !== tt && this.failed) throw Et(yt, tt, []), new Error("it did not run");
-        return tt
+        const uu = this.worker;
+        if (this.worker = null, null !== uu && this.failed) throw Nu(hu, uu, []), new Error("it did not run");
+        return uu
       }
       stop() {
-        const tt = this.worker;
-        this.worker = null, null !== tt && Et(yt, tt, [])
+        const uu = this.worker;
+        this.worker = null, null !== uu && Nu(hu, uu, [])
       }
     }
-    class ht {
+    class Ju {
       decoded;
       worker;
       reject;
-      constructor(tt, et, Vt, Ot, Dt) {
+      constructor(uu, Eu, ju, su, Zu) {
         try {
-          this.worker = Dt?.take() ?? vt()
-        } catch (Ht) {
-          throw Ct = !0, new Error(`The zstd decoder's worker did not start: ${(0,dt.d)(Ht)}`)
+          this.worker = Zu?.take() ?? du()
+        } catch (fu) {
+          throw Gu = !0, new Error(`The zstd decoder's worker did not start: ${(0,lu.d)(fu)}`)
         }
-        const mt = this.worker;
-        this.decoded = (0, qt.i)(((et, qt) => {
-          this.reject = qt;
-          const Dt = (tt, et) => {
-            Et(Nt, mt, [tt, et])
+        const Xu = this.worker;
+        this.decoded = (0, Uu.i)(((Eu, Uu) => {
+          this.reject = Uu;
+          const Zu = (uu, Eu) => {
+            Nu(Du, Xu, [uu, Eu])
           };
-          Dt("message", (tt => {
-            Ot();
+          Zu("message", (uu => {
+            su();
             try {
-              const Ot = Et(Mt, tt, []);
-              if (!0 === Ot) et();
+              const su = Nu(gu, uu, []);
+              if (!0 === su) Eu();
               else {
-                if ("string" === typeof Ot) throw Ot.startsWith(dt.b) && (Ct = !0), new Error(Ot);
-                Vt(Ot, Et(jt.v, Ot, []))
+                if ("string" === typeof su) throw su.startsWith(lu.c) && (Gu = !0), new Error(su);
+                ju(su, Nu(qu.A, su, []))
               }
-            } catch (Ht) {
-              qt(Ht)
+            } catch (fu) {
+              Uu(fu)
             }
-          })), Dt("error", (() => {
-            Ct = !0, qt(new Error("The zstd decoder's worker did not run"))
-          })), Dt("messageerror", (() => {
-            qt(new Error(`${tt}'s decoder sent a piece that could not be read`))
+          })), Zu("error", (() => {
+            Gu = !0, Uu(new Error("The zstd decoder's worker did not run"))
+          })), Zu("messageerror", (() => {
+            Uu(new Error(`${uu}'s decoder sent a piece that could not be read`))
           }))
-        })), (0, jt.Q)(this.decoded), Et(wt, mt, [
-          [tt, et]
+        })), (0, qu.Y)(this.decoded), Nu(Yu, Xu, [
+          [uu, Eu]
         ])
       }
-      push(tt) {
-        Et(wt, this.worker, [tt, [Et(bt, tt, [])]])
+      push(uu) {
+        Nu(Yu, this.worker, [uu, [Nu(Mu, uu, [])]])
       }
       end() {
-        Et(wt, this.worker, [null])
+        Nu(Yu, this.worker, [null])
       }
       markWorkerFailed() {
-        Ct = !0
+        Gu = !0
       }
-      fail(tt) {
-        this.reject(tt), this.terminate()
+      fail(uu) {
+        this.reject(uu), this.terminate()
       }
       terminate() {
-        Et(yt, this.worker, [])
+        Nu(hu, this.worker, [])
       }
     }
 
-    function vt() {
-      if (globalThis.Worker !== ft) throw new Error("Worker is not the one the page loaded with");
-      return new Worker(new URL(Vt.p + Vt.u(68), Vt.b), {
+    function du() {
+      if (globalThis.Worker !== Ou) throw new Error("Worker is not the one the page loaded with");
+      return new Worker(new URL(ju.p + ju.u(68), ju.b), {
         name: "wasmZstdDecoder",
         type: "module"
       })
     }
-    const Wt = Reflect.apply,
-      St = ArrayBuffer,
-      ct = "undefined" === typeof Response ? void 0 : Response,
-      Rt = "undefined" === typeof ReadableStream ? void 0 : ReadableStream,
-      It = function() {
-        let tt;
-        void 0 !== Rt && new Rt({
+    const au = Reflect.apply,
+      Pu = ArrayBuffer,
+      ou = "undefined" === typeof Response ? void 0 : Response,
+      ku = "undefined" === typeof ReadableStream ? void 0 : ReadableStream,
+      mu = function() {
+        let uu;
+        void 0 !== ku && new ku({
           __proto__: null,
-          start(et) {
+          start(Eu) {
             const {
-              enqueue: Vt,
-              close: Ot,
-              error: qt
-            } = Object.getPrototypeOf(et);
-            tt = {
-              enqueue: Vt,
-              close: Ot,
-              error: qt
+              enqueue: ju,
+              close: su,
+              error: Uu
+            } = Object.getPrototypeOf(Eu);
+            uu = {
+              enqueue: ju,
+              close: su,
+              error: Uu
             }
           }
         }, {
           __proto__: null
         });
-        return tt
+        return uu
       }(),
-      Pt = function() {
+      vu = function() {
         try {
-          return "undefined" !== typeof WebAssembly && "function" === typeof WebAssembly.compileStreaming && void 0 !== It && (0, mt.l)(ct, "Response", !0) && (0, mt.l)(Rt, "ReadableStream", !0) && (0, mt.l)(It.enqueue, "enqueue") && (0, mt.l)(It.close, "close") && (0, mt.l)(It.error, "error") && (0, mt.l)(jt.Y, "body") && (0, mt.l)(jt.L, "getReader") && (0, mt.l)(jt.U, "read")
+          return "undefined" !== typeof WebAssembly && "function" === typeof WebAssembly.compileStreaming && void 0 !== mu && (0, Xu.m)(ou, "Response", !0) && (0, Xu.m)(ku, "ReadableStream", !0) && (0, Xu.m)(mu.enqueue, "enqueue") && (0, Xu.m)(mu.close, "close") && (0, Xu.m)(mu.error, "error") && (0, Xu.m)(qu.$, "body") && (0, Xu.m)(qu.P, "getReader") && (0, Xu.m)(qu._, "read")
         } catch {
           return !1
         }
       }();
-    async function Zt(tt, et, Vt, Ot, Dt, mt, Ht) {
-      const Xt = new St(et),
+    async function Ku(uu, Eu, ju, su, Zu, Xu, fu) {
+      const Cu = new Pu(Eu),
         {
-          controller: Qt,
-          compiled: lt
-        } = function(tt) {
+          controller: bu,
+          compiled: cu
+        } = function(uu) {
           try {
-            let tt;
-            const et = new Rt({
+            let uu;
+            const Eu = new ku({
                 __proto__: null,
-                start(et) {
-                  tt = et
+                start(Eu) {
+                  uu = Eu
                 }
               }, {
                 __proto__: null
               }),
-              Vt = new ct(et, {
+              ju = new ou(Eu, {
                 __proto__: null,
                 headers: {
                   __proto__: null,
@@ -188,355 +188,355 @@ export const modules = {
                 }
               });
             return {
-              controller: tt,
-              compiled: (0, jt.Q)((0, jt.C)((0, jt.gb)(Vt)))
+              controller: uu,
+              compiled: (0, qu.Y)((0, qu.D)((0, qu.gb)(ju)))
             }
-          } catch (et) {
-            throw new Error(`${tt} could not be streamed into a compile: ${(0,dt.d)(et)}`)
+          } catch (Eu) {
+            throw new Error(`${uu} could not be streamed into a compile: ${(0,lu.d)(Eu)}`)
           }
-        }(tt),
+        }(uu),
         {
-          enqueue: Et,
-          close: ft,
-          error: wt
-        } = It,
-        yt = tt => {
+          enqueue: Nu,
+          close: Ou,
+          error: Yu
+        } = mu,
+        hu = uu => {
           try {
-            Wt(wt, Qt, [tt])
+            au(Yu, bu, [uu])
           } catch {}
         };
-      let Nt = 0;
-      const Mt = (Vt, Ot) => {
-        if (Nt + Ot > et) throw new Error(`${tt} decoded past its module's ${et} bytes`);
-        Wt(jt.ab, new jt.k(Xt), [new jt.k(Vt), Nt]);
+      let Du = 0;
+      const gu = (ju, su) => {
+        if (Du + su > Eu) throw new Error(`${uu} decoded past its module's ${Eu} bytes`);
+        au(qu.cb, new qu.o(Cu), [new qu.o(ju), Du]);
         try {
-          Wt(Et, Qt, [new jt.k(Xt, Nt, Ot)])
+          au(Nu, bu, [new qu.o(Cu, Du, su)])
         } catch {}
-        Nt += Ot
+        Du += su
       };
-      let bt, Jt;
+      let Mu, eu;
       try {
-        bt = new ht(tt, et, Mt, Ot, Ht)
-      } catch (vt) {
-        throw yt(vt), vt
+        Mu = new Ju(uu, Eu, gu, su, fu)
+      } catch (du) {
+        throw hu(du), du
       }
-      const Ct = tt => {
-        bt.fail(tt), void 0 !== Jt && Lt(Jt)
+      const Gu = uu => {
+        Mu.fail(uu), void 0 !== eu && Vu(eu)
       };
-      let ut = !1;
-      Vt.addEventListener("abort", (() => {
-        ut && bt.markWorkerFailed(), Ct(new Error(`${tt} stalled`))
+      let pu = !1;
+      ju.addEventListener("abort", (() => {
+        pu && Mu.markWorkerFailed(), Gu(new Error(`${uu} stalled`))
       }), {
         once: !0
-      }), (0, qt.s)(lt, (() => {}), Ct);
+      }), (0, Uu.s)(cu, (() => {}), Gu);
       try {
-        let mt;
+        let Xu;
         try {
-          mt = await fetch(tt, {
-            signal: Vt
+          Xu = await fetch(uu, {
+            signal: ju
           })
-        } catch (vt) {
-          throw new Error(`Fetching ${tt} failed: ${(0,dt.d)(vt)}`)
+        } catch (du) {
+          throw new Error(`Fetching ${uu} failed: ${(0,lu.d)(du)}`)
         }
         const {
-          ok: Ht,
-          status: Xt,
-          body: Qt
-        } = function(tt, et) {
+          ok: fu,
+          status: Cu,
+          body: bu
+        } = function(uu, Eu) {
           try {
             const {
-              ok: tt,
-              status: Vt
-            } = et;
+              ok: uu,
+              status: ju
+            } = Eu;
             return {
-              ok: tt,
-              status: Vt,
-              body: Wt(jt.Y, et, [])
+              ok: uu,
+              status: ju,
+              body: au(qu.$, Eu, [])
             }
           } catch {
-            throw new Error(`${tt} came in a response a page script made`)
+            throw new Error(`${uu} came in a response a page script made`)
           }
-        }(tt, mt);
-        if (!Ht) throw new Error(`Fetching ${tt} failed: HTTP ${Xt}`);
-        Ot();
-        const lt = Wt(jt.L, Qt, []);
-        Jt = lt;
-        const Et = () => {
-          Lt(lt)
+        }(uu, Xu);
+        if (!fu) throw new Error(`Fetching ${uu} failed: HTTP ${Cu}`);
+        su();
+        const cu = au(qu.P, bu, []);
+        eu = cu;
+        const Nu = () => {
+          Vu(cu)
         };
-        for ((0, qt.s)(bt.decoded, Et, Et);;) {
-          let et;
+        for ((0, Uu.s)(Mu.decoded, Nu, Nu);;) {
+          let Eu;
           try {
-            et = await Wt(jt.U, lt, [])
-          } catch (vt) {
-            throw new Error(`Downloading ${tt} failed: ${(0,dt.d)(vt)}`)
+            Eu = await au(qu._, cu, [])
+          } catch (du) {
+            throw new Error(`Downloading ${uu} failed: ${(0,lu.d)(du)}`)
           }
-          if (et.done) break;
-          Ot(), bt.push(et.value)
+          if (Eu.done) break;
+          su(), Mu.push(Eu.value)
         }
-        if (ut = !0, bt.end(), await bt.decoded, Dt(), Nt !== et) throw new Error(`${tt} ended before its module did`)
-      } catch (vt) {
-        throw yt(vt), Ct(vt), vt
+        if (pu = !0, Mu.end(), await Mu.decoded, Zu(), Du !== Eu) throw new Error(`${uu} ended before its module did`)
+      } catch (du) {
+        throw hu(du), Gu(du), du
       }
-      bt.terminate();
+      Mu.terminate();
       try {
-        Wt(ft, Qt, [])
+        au(Ou, bu, [])
       } catch {}
-      const Kt = await lt;
-      return void 0 !== mt && await (0, jt.z)(tt, new jt.k(Xt), {
-        sha256: mt.sha256,
+      const wu = await cu;
+      return void 0 !== Xu && await (0, qu.C)(uu, new qu.o(Cu), {
+        sha256: Xu.sha256,
         onMismatch: () => {}
-      }), Kt
+      }), wu
     }
 
-    function Lt(tt) {
+    function Vu(uu) {
       try {
-        (0, jt.Q)(tt.cancel())
+        (0, qu.Y)(uu.cancel())
       } catch {}
     }
-    const Ft = ".zst.bin",
-      kt = 1e3;
-    let Gt = null;
+    const ru = ".zst.bin",
+      Qu = 1e3;
+    let iu = null;
 
-    function zt(tt) {
-      return Gt ??= function() {
-        const tt = new Map,
-          et = "bloxd_wasm_webgpu:5136982,bloxd_wasm_webgl:5516365,bloxd_wasm_webgl1:4851467,bloxd_wasm_workers:201241,bloxd_wasm_models:311531,bloxd_wasm_client:3712496";
-        for (const Vt of et?.split(",") ?? []) {
-          const [et = "", Ot] = Vt.split(":"), qt = Number(Ot);
-          Number.isInteger(qt) && qt > 0 && tt.set(et, qt)
+    function Wu(uu) {
+      return iu ??= function() {
+        const uu = new Map,
+          Eu = "bloxd_wasm_webgpu:5137010,bloxd_wasm_webgl:5516404,bloxd_wasm_webgl1:4851467,bloxd_wasm_workers:201241,bloxd_wasm_models:311531,bloxd_wasm_client:3712496";
+        for (const ju of Eu?.split(",") ?? []) {
+          const [Eu = "", su] = ju.split(":"), Uu = Number(su);
+          Number.isInteger(Uu) && Uu > 0 && uu.set(Eu, Uu)
         }
-        return tt
-      }(), Gt.get(tt)
+        return uu
+      }(), iu.get(uu)
     }
-    async function ot(tt, et) {
-      let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const Ot = zt(tt.name);
-      if (void 0 === Ot) return rt(await Ut(tt, et, Vt), "cold-wasm");
-      const Dt = Pt ? new Kt : null;
-      let mt;
+    async function Su(uu, Eu) {
+      let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const su = Wu(uu.name);
+      if (void 0 === su) return Iu(await Fu(uu, Eu, ju), "cold-wasm");
+      const Zu = vu ? new wu : null;
+      let Xu;
       try {
-        if (Ht = tt.url(), lt()?.includes(Qt(Ht)) && await async function(tt) {
-            const et = new AbortController;
-            let Vt;
-            const Ot = (0, qt.i)((tt => {
-              Vt = setTimeout((() => {
-                et.abort(), tt(null)
-              }), kt)
+        if (fu = uu.url(), cu()?.includes(bu(fu)) && await async function(uu) {
+            const Eu = new AbortController;
+            let ju;
+            const su = (0, Uu.i)((uu => {
+              ju = setTimeout((() => {
+                Eu.abort(), uu(null)
+              }), Qu)
             }));
             try {
-              const Vt = fetch(tt.href, {
+              const ju = fetch(uu.href, {
                   cache: "only-if-cached",
                   mode: "same-origin",
-                  signal: et.signal
+                  signal: Eu.signal
                 }),
-                Dt = await (0, qt.r)([Vt, Ot]);
-              return !!Dt?.ok && ((0, jt.Q)(Dt.body.cancel()), !0)
+                Zu = await (0, Uu.o)([ju, su]);
+              return !!Zu?.ok && ((0, qu.Y)(Zu.body.cancel()), !0)
             } catch {
               return !1
             } finally {
-              clearTimeout(Vt)
+              clearTimeout(ju)
             }
-          }(tt.url())) return Dt?.stop(), await async function(tt, et, Vt, Ot) {
-          let qt = !1;
-          const Dt = Vt && {
-            sha256: Vt.sha256,
+          }(uu.url())) return Zu?.stop(), await async function(uu, Eu, ju, su) {
+          let Uu = !1;
+          const Zu = ju && {
+            sha256: ju.sha256,
             onMismatch: () => {
-              qt = !0
+              Uu = !0
             }
           };
           try {
-            return rt(await Ut(tt, Dt, Ot), "warm")
-          } catch (mt) {
-            const Ot = await At(tt, et, Vt, null);
-            if (null === Ot) throw qt && Vt.onMismatch(), mt;
-            return console.warn(`${tt.url().href} from the HTTP cache failed: ${(0,dt.d)(mt)}: loaded its copy instead`), rt(Ot, qt ? "warm-refused" : "warm-broken")
+            return Iu(await Fu(uu, Zu, su), "warm")
+          } catch (Xu) {
+            const su = await Bu(uu, Eu, ju, null);
+            if (null === su) throw Uu && ju.onMismatch(), Xu;
+            return console.warn(`${uu.url().href} from the HTTP cache failed: ${(0,lu.d)(Xu)}: loaded its copy instead`), Iu(su, Uu ? "warm-refused" : "warm-broken")
           }
-        }(tt, Ot, et, Vt);
-        mt = await At(tt, Ot, et, Dt)
+        }(uu, su, Eu, ju);
+        Xu = await Bu(uu, su, Eu, Zu)
       } finally {
-        Dt?.stop()
+        Zu?.stop()
       }
-      var Ht;
-      return null !== mt ? rt(mt, "cold-worker") : rt(await Ut(tt, et, Vt), "cold-wasm")
+      var fu;
+      return null !== Xu ? Iu(Xu, "cold-worker") : Iu(await Fu(uu, Eu, ju), "cold-wasm")
     }
 
-    function rt(tt, et) {
+    function Iu(uu, Eu) {
       return {
         __proto__: null,
-        module: tt,
-        path: et
+        module: uu,
+        path: Eu
       }
     }
 
-    function Ut(tt, et, Vt) {
-      return void 0 === zt(tt.name) ? (0, jt.G)(tt.url(), et, Vt) : (0, jt.G)(tt.url(), et, {
-        ...Vt,
+    function Fu(uu, Eu, ju) {
+      return void 0 === Wu(uu.name) ? (0, qu.I)(uu.url(), Eu, ju) : (0, qu.I)(uu.url(), Eu, {
+        ...ju,
         hideThen: !0,
         onDownloaded: () => {
-          ! function(tt) {
-            const et = lt();
-            if (null === et) return;
-            const Vt = Qt(tt),
-              Ot = et.filter((tt => tt !== Vt));
-            Ot.push(Vt);
+          ! function(uu) {
+            const Eu = cu();
+            if (null === Eu) return;
+            const ju = bu(uu),
+              su = Eu.filter((uu => uu !== ju));
+            su.push(ju);
             try {
-              localStorage.setItem(Ht, JSON.stringify(Ot.slice(-Xt)))
-            } catch (qt) {
-              console.warn(`Bloxd wasm: ${Vt} could not be recorded as downloaded: a later join asks the HTTP cache nothing for it`, qt)
+              localStorage.setItem(fu, JSON.stringify(su.slice(-Cu)))
+            } catch (Uu) {
+              console.warn(`Bloxd wasm: ${ju} could not be recorded as downloaded: a later join asks the HTTP cache nothing for it`, Uu)
             }
-          }(tt.url()), Vt.onDownloaded?.()
+          }(uu.url()), ju.onDownloaded?.()
         }
       })
     }
-    async function At(tt, et, Vt, Ot) {
-      if (!Pt || !ut()) return null;
-      const qt = tt.url(),
-        Dt = `${qt.href}${Ft}`;
+    async function Bu(uu, Eu, ju, su) {
+      if (!vu || !pu()) return null;
+      const Uu = uu.url(),
+        Zu = `${Uu.href}${ru}`;
       try {
-        return await (0, jt.eb)(Dt, ((tt, qt, mt) => Zt(Dt, et, tt, qt, mt, Vt, Ot)))
-      } catch (mt) {
-        return console.warn(`${(0,dt.d)(mt)}: loading ${qt.href} instead`), null
+        return await (0, qu.eb)(Zu, ((uu, Uu, Xu) => Ku(Zu, Eu, uu, Uu, Xu, ju, su)))
+      } catch (Xu) {
+        return console.warn(`${(0,lu.d)(Xu)}: loading ${Uu.href} instead`), null
       }
     }
-    let it = null,
-      Yt = !1;
-    const Bt = new Map,
-      pt = new Map;
+    let Lu = null,
+      tu = !1;
+    const xu = new Map,
+      Tu = new Map;
 
-    function xt(tt, et, Vt) {
-      return null === it ? it = gt(tt, et, Vt?.memoryMaximumBytes) : tt !== it.build ? console.warn(`Bloxd wasm: ${tt.name} was asked for after ${it.build.name} started loading, which this thread keeps`) : et.name !== it.workers.name && console.warn(`Bloxd wasm: ${et.name} was asked for workers after ${it.workers.name}, which this thread keeps`), Vt?.reloadFailedDownload && !Yt && (0, Ot.fb)() && (Yt = !0, it = gt(it.build, it.workers, it.memoryMaximumBytes)), it.loaded
+    function Hu(uu, Eu, ju) {
+      return null === Lu ? Lu = nu(uu, Eu, ju?.memoryMaximumBytes) : uu !== Lu.build ? console.warn(`Bloxd wasm: ${uu.name} was asked for after ${Lu.build.name} started loading, which this thread keeps`) : Eu.name !== Lu.workers.name && console.warn(`Bloxd wasm: ${Eu.name} was asked for workers after ${Lu.workers.name}, which this thread keeps`), ju?.reloadFailedDownload && !tu && (0, su.$)() && (tu = !0, Lu = nu(Lu.build, Lu.workers, Lu.memoryMaximumBytes)), Lu.loaded
     }
 
-    function Tt(tt, et) {
-      if (null !== it) return (0, qt.e)([]);
-      const Vt = tt.filter((tt => !Bt.has(tt.name))).map((tt => {
-        const Vt = new AbortController,
-          Ot = {
-            compiled: Ut(tt, (0, Dt.c)(tt.name), {
-              priority: et,
-              nV: Vt.signal,
+    function Au(uu, Eu) {
+      if (null !== Lu) return (0, Uu.h)([]);
+      const ju = uu.filter((uu => !xu.has(uu.name))).map((uu => {
+        const ju = new AbortController,
+          su = {
+            compiled: Fu(uu, (0, Zu.b)(uu.name), {
+              priority: Eu,
+              Lj: ju.signal,
               onDownloaded: () => {
-                Ot.downloaded = !0
+                su.downloaded = !0
               },
               retries: {
                 onRetry: () => {
-                  Ot.downloaded = !1, null !== it && Vt.abort()
+                  su.downloaded = !1, null !== Lu && ju.abort()
                 }
               }
             }),
-            cancel: Vt,
+            cancel: ju,
             downloaded: !1
           };
-        return Bt.set(tt.name, Ot), (0, qt.i)((et => {
-          (0, qt.s)(Ot.compiled, (() => {
-            Ot.downloaded = !0, et()
-          }), (Ot => {
-            Vt.signal.aborted || console.warn(`Bloxd wasm: ${tt.name}'s compile ahead of the load failed: the load compiles it afresh`, Ot), et()
+        return xu.set(uu.name, su), (0, Uu.i)((Eu => {
+          (0, Uu.s)(su.compiled, (() => {
+            su.downloaded = !0, Eu()
+          }), (su => {
+            ju.signal.aborted || console.warn(`Bloxd wasm: ${uu.name}'s compile ahead of the load failed: the load compiles it afresh`, su), Eu()
           }))
         }))
       }));
-      return (0, qt.e)(Vt)
+      return (0, Uu.h)(ju)
     }
 
-    function gt(tt, et, Vt) {
-      const Dt = (0, Ot.M)((async () => {
-        (0, mt.z)(), pt.clear();
-        const Vt = nt(tt),
-          Ot = et.name === tt.name ? Vt : nt(et);
+    function nu(uu, Eu, ju) {
+      const Zu = (0, su.N)((async () => {
+        (0, Xu.C)(), Tu.clear();
+        const ju = zu(uu),
+          su = Eu.name === uu.name ? ju : zu(Eu);
         for (const {
-            cancel: tt
+            cancel: uu
           }
-          of Bt.values()) tt.abort();
-        Bt.clear(), await (0, qt.e)([Vt, Ot]);
-        const Dt = await Vt,
-          dt = await Ot;
-        return (0, mt.z)(), {
-          module: Dt,
-          workerModule: dt
+          of xu.values()) uu.abort();
+        xu.clear(), await (0, Uu.h)([ju, su]);
+        const Zu = await ju,
+          lu = await su;
+        return (0, Xu.C)(), {
+          module: Zu,
+          workerModule: lu
         }
-      }), tt, Vt);
+      }), uu, ju);
       return {
-        build: tt,
-        workers: et,
-        memoryMaximumBytes: Vt,
-        loaded: Dt
+        build: uu,
+        workers: Eu,
+        memoryMaximumBytes: ju,
+        loaded: Zu
       }
     }
 
-    function st(tt) {
-      return pt.get(tt)
+    function yu(uu) {
+      return Tu.get(uu)
     }
 
-    function nt(tt) {
-      const et = performance.now(),
-        Vt = Bt.get(tt.name);
-      Bt.delete(tt.name);
-      const Ot = !0 === Vt?.downloaded ? Vt : void 0;
-      return void 0 !== Vt && void 0 === Ot && Vt.cancel.abort(), (0, qt.i)(((Vt, Dt) => {
-        const mt = (Ot, qt) => {
-            pt.set(tt.name, {
-              path: qt,
-              ms: performance.now() - et
-            }), Vt(Ot)
+    function zu(uu) {
+      const Eu = performance.now(),
+        ju = xu.get(uu.name);
+      xu.delete(uu.name);
+      const su = !0 === ju?.downloaded ? ju : void 0;
+      return void 0 !== ju && void 0 === su && ju.cancel.abort(), (0, Uu.i)(((ju, Zu) => {
+        const Xu = (su, Uu) => {
+            Tu.set(uu.name, {
+              path: Uu,
+              ms: performance.now() - Eu
+            }), ju(su)
           },
-          dt = () => {
-            (0, qt.s)(ee(tt), (tt => {
+          lu = () => {
+            (0, Uu.s)(uE(uu), (uu => {
               let {
-                module: et,
-                path: Vt
-              } = tt;
-              mt(et, Vt)
-            }), Dt)
+                module: Eu,
+                path: ju
+              } = uu;
+              Xu(Eu, ju)
+            }), Zu)
           };
-        void 0 === Ot ? dt() : (0, qt.s)(Ot.compiled, (tt => {
-          mt(tt, "ahead")
-        }), dt)
+        void 0 === su ? lu() : (0, Uu.s)(su.compiled, (uu => {
+          Xu(uu, "ahead")
+        }), lu)
       }))
     }
-    async function te(tt, et) {
+    async function Ru(uu, Eu) {
       const {
-        module: Vt
-      } = await ee(tt, {
-        retries: et
+        module: ju
+      } = await uE(uu, {
+        retries: Eu
       });
-      return Vt
+      return ju
     }
-    async function ee(tt) {
-      let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      return await ot(tt, (0, Dt.c)(tt.name), et)
+    async function uE(uu) {
+      let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      return await Su(uu, (0, Zu.b)(uu.name), Eu)
     }
   },
-  6820: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => mt
+  6818: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => Xu
     });
-    var Ot = Vt(2965);
-    const qt = {
-      bloxd_wasm: () => "79e619b054ae905a5b8f4bf459846802c4d04f9c338bac0e93fb2e786ccb47d7",
-      bloxd_wasm_client: () => "3e9d9c92e80b558e2418153f6d2a1a0bf080851fa9da2f3eac7b5d131fa1208b",
-      bloxd_wasm_workers: () => "d6180b50b2f3a41f4cc9ec709c702b403d5c3c14c69a32a117a286fccc1c4cae",
-      bloxd_wasm_models: () => "b0007ea7fdbd7aac2fc56ace41940bb9419c473b2c4e22ae586bd9617e961e50",
-      bloxd_wasm_webgpu: () => "38c1dcbfb4bbcbb44a23823fffa818ded30864cfa8888b894791e58c09e2b45b",
-      bloxd_wasm_webgl: () => "8bc9810de446335f886bb8ec7aec0faad1cf86d215d2899bc364d09bd9e8c969",
-      bloxd_wasm_webgl1: () => "67ad9c6dce37796a8d5cd66908a5f05307a9f76718f363441e62f7df779cec5f",
-      bloxd_wasm_replay: () => "d4cc807eadefc7c5a5335e66f0d7d03918d890434d43b5338a42fea1e7c35a35",
-      bloxd_wasm_recorder: () => "cc2e46ae4efc8d6af5a399e7423d94f6da0332d05b530d991d7a4ca5439ac99d",
-      bloxd_wasm_anim: () => "47a23fc87ecc8906f1edafe7d9d71bf5aac49598c5aefc455978f2bcc55551ff",
-      bloxd_wasm_textures: () => "4becc450031cb7888091452fd459d969999d55161fb0d00265048d3df8dc21dd",
-      bloxd_wasm_shader_pack: () => "9e65c9a3b97efeac864ceaa9c5b11bf65594610d8ff8caa0e62e9a1c70e7968d"
+    var su = ju(3020);
+    const Uu = {
+      bloxd_wasm: () => "2517ea48b70adb2315dde407aac9f7771c8f8fed4679df16a67d4f64e16c0ca4",
+      bloxd_wasm_client: () => "8e3f5c7e0ae9778e8a2bd555c9edea34e1d676dc84c47647f9c7991c78833b4b",
+      bloxd_wasm_workers: () => "d314ffb1d191d7f6e9dac1c5f780237cb88fc08431e4e713d1c31afadf5b76c9",
+      bloxd_wasm_models: () => "42b4348bfb4c39f2510c78f8a28323e13b143f72ae8226764cf2206b470c6fb3",
+      bloxd_wasm_webgpu: () => "c94f0ae845af7c64763dcb834061b20260ad6971d870317f9bca33a9ff0b5ef7",
+      bloxd_wasm_webgl: () => "38da11f9eab49b5d8f0185157a6a5ad6178e22840ff20a445e1f5249ac36cd91",
+      bloxd_wasm_webgl1: () => "ab1532b525d3a2188fd7631f21987906e6be9fdd62b14c0c03f54625410b4948",
+      bloxd_wasm_replay: () => "1c1690d0d143f51a770a1ac88fb427efc12cb7c4ca9f74446ee285cbe1e29b0f",
+      bloxd_wasm_recorder: () => "97298cfd514093207f0c3863193df40fc2a4be3f5101bb93ee5a1dc7efa69233",
+      bloxd_wasm_anim: () => "b0759d22815334552b8854b47c63eec9a03952d38dd1a922a5af613c34fa435b",
+      bloxd_wasm_textures: () => "4f2ee2890c6dcabbc98355370ba732664c4dbb0f4dd616c0ecd33a7f045a54d2",
+      bloxd_wasm_shader_pack: () => "920f59d8c3d7cd8bfe52d0c86bce310b93a17cac0f77c75edad8ee229808259a"
     };
-    var Dt = Vt(4851);
+    var Zu = ju(4874);
 
-    function mt(tt) {
-      const et = Object.prototype.hasOwnProperty.call(qt, tt) ? qt[tt]() : void 0;
-      if (void 0 !== et) return {
-        sha256: et,
-        onMismatch: Dt.y
+    function Xu(uu) {
+      const Eu = Object.prototype.hasOwnProperty.call(Uu, uu) ? Uu[uu]() : void 0;
+      if (void 0 !== Eu) return {
+        sha256: Eu,
+        onMismatch: Zu.B
       };
-      throw new Ot.g(`${tt} has no release digest, so this build refuses it`)
+      throw new su.j(`${uu} has no release digest, so this build refuses it`)
     }
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

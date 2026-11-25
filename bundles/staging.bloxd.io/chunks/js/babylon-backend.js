@@ -1,100 +1,100 @@
 export const id = 0;
 export const ids = [0];
 export const modules = {
-  41323: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      CapeMaterialPlugin: () => Jt,
-      HueTintMaterialPlugin: () => Ct,
-      LifeformMaterialPlugin: () => ut,
-      OverlayMaterialPlugin: () => Kt
+  41338: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      CapeMaterialPlugin: () => eu,
+      HueTintMaterialPlugin: () => Gu,
+      LifeformMaterialPlugin: () => pu,
+      OverlayMaterialPlugin: () => wu
     });
-    var Ot = Vt(41332),
-      qt = Vt(38261);
-    class Dt extends((0, Ot.d)(qt.e)) {}(0, Ot.f)(qt.e, Dt);
-    var mt = Vt(37426);
-    class dt extends((0, Ot.d)(mt.e)) {}(0, Ot.f)(mt.e, dt);
-    var jt = Vt(38105);
-    class Ht extends((0, Ot.d)(jt.d)) {}(0, Ot.f)(jt.d, Ht);
-    var Xt = Vt(37670),
-      Qt = Vt(40452),
-      lt = Vt(37663);
-    class Et extends((0, Ot.d)(lt.h)) {
-      constructor(tt, et, Vt) {
-        super(tt, et, Vt), (0, Xt.j)(tt)
+    var su = ju(41346),
+      Uu = ju(38386);
+    class Zu extends((0, su.g)(Uu.e)) {}(0, su.k)(Uu.e, Zu);
+    var Xu = ju(37571);
+    class lu extends((0, su.g)(Xu.g)) {}(0, su.k)(Xu.g, lu);
+    var qu = ju(38236);
+    class fu extends((0, su.g)(qu.f)) {}(0, su.k)(qu.f, fu);
+    var Cu = ju(37816),
+      bu = ju(40514),
+      cu = ju(37811);
+    class Nu extends((0, su.g)(cu.e)) {
+      constructor(uu, Eu, ju) {
+        super(uu, Eu, ju), (0, Cu.h)(uu)
       }
-      dispose(tt) {
-        (0, Xt.m)(this._material), super.dispose(tt)
+      dispose(uu) {
+        (0, Cu.k)(this._material), super.dispose(uu)
       }
-    }(0, Ot.f)(lt.h, Et), (0, lt.j)({
-      disableUnusedSpecularTerm: Ot.c,
-      isLightingDisabled: tt => tt instanceof Qt.StandardMaterial && tt.disableLighting
+    }(0, su.k)(cu.e, Nu), (0, cu.g)({
+      disableUnusedSpecularTerm: su.e,
+      isLightingDisabled: uu => uu instanceof bu.StandardMaterial && uu.disableLighting
     });
-    var ft = Vt(38913);
-    class wt extends((0, Ot.d)(ft.f)) {}(0, Ot.f)(ft.f, wt);
-    var yt = Vt(39019),
-      Nt = Vt(37521),
-      Mt = Vt(38386),
-      bt = Vt(37476);
-    class Jt extends((0, Ot.d)(yt.b)) {}(0, Ot.f)(yt.b, Jt);
-    class Ct extends((0, Ot.d)(Nt.d)) {}(0, Ot.f)(Nt.d, Ct);
-    class ut extends((0, Ot.d)(Mt.m)) {}(0, Ot.f)(Mt.m, ut);
-    class Kt extends((0, Ot.d)(bt.b)) {}(0, Ot.f)(bt.b, Kt)
+    var Ou = ju(39038);
+    class Yu extends((0, su.g)(Ou.e)) {}(0, su.k)(Ou.e, Yu);
+    var hu = ju(39141),
+      Du = ju(37684),
+      gu = ju(38494),
+      Mu = ju(37637);
+    class eu extends((0, su.g)(hu.d)) {}(0, su.k)(hu.d, eu);
+    class Gu extends((0, su.g)(Du.b)) {}(0, su.k)(Du.b, Gu);
+    class pu extends((0, su.g)(gu.m)) {}(0, su.k)(gu.m, pu);
+    class wu extends((0, su.g)(Mu.b)) {}(0, su.k)(Mu.b, wu)
   },
-  41802: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      addBabylonLights: () => Ce,
-      default: () => he
+  41810: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      addBabylonLights: () => GE,
+      default: () => JE
     });
-    var Ot = Vt(41805),
-      qt = (Vt(40182), Vt(41316), Vt(40669), Vt(41816)),
-      Dt = Vt(37510),
-      mt = Vt(37331),
-      dt = Vt(41824),
-      jt = Vt(41831),
-      Ht = Vt(37467),
-      Xt = (Vt(41332), Vt(41842)),
-      Qt = Vt(41840),
-      lt = Vt(38937),
-      Et = Vt(41848),
-      ft = Vt(40061),
-      wt = Vt(38924);
-    const yt = "gpuParticles",
-      Nt = wt.w,
-      Mt = tt => tt / 4,
-      bt = tt => `gpuParticleSystem[${tt>>2}].${"xyzw"[3&tt]}`,
-      Jt = `\nprecision highp float;\nprecision highp int;\nprecision highp usampler2D;\n\n#define MAX_STOPS ${wt.e}\n#define COLOR_POSITIONS ${Mt(Nt.colorPositions)}\n#define COLOR1 ${Mt(Nt.color1)}\n#define COLOR2 ${Mt(Nt.color2)}\n#define VELOCITY ${Mt(Nt.Dy)}\n#define REMAP ${Mt(Nt.remap)}\n#define RECORDS_PER_ROW ${wt.p}\n\nuniform mat4 gpuParticleView;\nuniform mat4 gpuParticleProjection;\nuniform vec4 gpuParticleSystem[${wt.r/4}];\n// The records' frame offset and the system's clock; the slot drawn first (the oldest) and the slots in use.\nuniform vec4 gpuParticleFrame;\nuniform vec2 gpuParticleRange;\nuniform usampler2D gpuParticleRecords;\n\nvarying vec2 vUV;\nvarying vec4 vColor;\nvarying vec4 vRemap;\n\nvec3 gravity() { return vec3(${bt(Nt.gravity)}, ${bt(Nt.gravity+1)}, ${bt(Nt.gravity+2)}); }\nint colorCount() { return int(${bt(Nt.colorCount)}); }\nvec4 colorDead() { return gpuParticleSystem[${Mt(Nt.colorDead)}]; }\nint velocityCount() { return int(${bt(Nt.velocityCount)}); }\nint remapCount() { return int(${bt(Nt.remapCount)}); }\n\nuint hash(uint v) {\n\tuint state = v * 747796405u + 2891336453u;\n\t// (state >> 28) + 4 as constant shifts: ANGLE's Direct3D 11 on Intel gen 7/7.5/8 shifts by a variable amount wrongly\n\tuint top = state >> 28u;\n\tuint bits0 = state >> 4u;\n\tuint bits1 = (top & 1u) != 0u ? bits0 >> 1u : bits0;\n\tuint bits2 = (top & 2u) != 0u ? bits1 >> 2u : bits1;\n\tuint bits3 = (top & 4u) != 0u ? bits2 >> 4u : bits2;\n\tuint word = (((top & 8u) != 0u ? bits3 >> 8u : bits3) ^ state) * 277803737u;\n\treturn (word >> 22u) ^ word;\n}\n\n// The particle's own random pick for a gradient stop, as Babylon picks one when the particle reaches it.\nfloat random(uint seed, int stop) {\n\treturn float(hash(seed ^ (uint(stop) * 0x9e3779b9u)) >> 8u) / 16777216.0;\n}\n\nfloat colourPosition(int i) {\n\treturn gpuParticleSystem[COLOR_POSITIONS + i / 4][i % 4];\n}\n\nvec4 stopColour(int i, uint seed) {\n\treturn mix(gpuParticleSystem[COLOR1 + i], gpuParticleSystem[COLOR2 + i], random(seed, i));\n}\n\nfloat velocityFactor(int i, uint seed) {\n\tvec4 stop = gpuParticleSystem[VELOCITY + i];\n\treturn mix(stop.y, stop.z, random(seed, MAX_STOPS + i));\n}\n\nvec4 colourAt(vec4 colour0, float age, float ratio, uint seed) {\n\tint n = colorCount();\n\tvec4 colour;\n\tif (n == 0) {\n\t\tcolour = mix(colour0, colorDead(), ratio);\n\t} else if (age == 0.0) {\n\t\treturn stopColour(0, seed);\n\t} else if (ratio < colourPosition(0)) {\n\t\tcolour = stopColour(min(1, n - 1), seed);\n\t} else {\n\t\tcolour = stopColour(n - 1, seed);\n\t\tfor (int i = 0; i + 1 < n; i++) {\n\t\t\tfloat a = colourPosition(i);\n\t\t\tfloat b = colourPosition(i + 1);\n\t\t\tif (ratio >= a && ratio <= b) {\n\t\t\t\tfloat scale = b > a ? (ratio - a) / (b - a) : 0.0;\n\t\t\t\tcolour = mix(stopColour(i, seed), stopColour(i + 1, seed), scale);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\tcolour.a = max(colour.a, 0.0);\n\treturn colour;\n}\n\nvec3 travel(float alpha, float beta, vec3 d, vec3 g, float s0, float s1) {\n\tfloat ds = s1 - s0;\n\tfloat ds2 = (s1 * s1 - s0 * s0) * 0.5;\n\tfloat ds3 = (s1 * s1 * s1 - s0 * s0 * s0) / 3.0;\n\treturn d * (alpha * ds) + (g * alpha + d * beta) * ds2 + g * (beta * ds3);\n}\n\nvec3 displacement(vec3 d, float age, float life, uint seed) {\n\tvec3 g = gravity();\n\tint n = velocityCount();\n\tif (n == 0) {\n\t\treturn d * age + g * (0.5 * age * age);\n\t}\n\tvec3 total = vec3(0.0);\n\tfloat beforeFirst = min(age, gpuParticleSystem[VELOCITY].x * life);\n\tif (beforeFirst > 0.0) {\n\t\ttotal += travel(velocityFactor(min(1, n - 1), seed), 0.0, d, g, 0.0, beforeFirst);\n\t}\n\tfor (int i = 0; i + 1 < n; i++) {\n\t\tfloat a = gpuParticleSystem[VELOCITY + i].x * life;\n\t\tfloat b = gpuParticleSystem[VELOCITY + i + 1].x * life;\n\t\tfloat lo = max(a, 0.0);\n\t\tfloat hi = min(b, age);\n\t\tif (hi > lo) {\n\t\t\tfloat fa = velocityFactor(i, seed);\n\t\t\tfloat beta = (velocityFactor(i + 1, seed) - fa) / (b - a);\n\t\t\ttotal += travel(fa - beta * a, beta, d, g, lo, hi);\n\t\t}\n\t}\n\tfloat afterLast = max(gpuParticleSystem[VELOCITY + n - 1].x * life, 0.0);\n\tif (age > afterLast) {\n\t\ttotal += travel(velocityFactor(n - 1, seed), 0.0, d, g, afterLast, age);\n\t}\n\treturn total;\n}\n\nvec4 remapAt(float age, float ratio) {\n\tint n = remapCount();\n\tif (n == 0 || age == 0.0) {\n\t\treturn vec4(0.0, 1.0, 0.0, 1.0);\n\t}\n\tvec2 stop = gpuParticleSystem[REMAP + n - 1].yz;\n\tif (ratio < gpuParticleSystem[REMAP].x) {\n\t\tstop = gpuParticleSystem[REMAP].yz;\n\t} else {\n\t\tfor (int i = 0; i + 1 < n; i++) {\n\t\t\tvec4 a = gpuParticleSystem[REMAP + i];\n\t\t\tvec4 b = gpuParticleSystem[REMAP + i + 1];\n\t\t\tif (ratio >= a.x && ratio <= b.x) {\n\t\t\t\tstop = mix(a.yz, b.yz, b.x > a.x ? (ratio - a.x) / (b.x - a.x) : 0.0);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\treturn vec4(stop.x, stop.y - stop.x, 0.0, 1.0);\n}\n\nvoid main(void) {\n\t// No division by a variable: ANGLE's Direct3D 11 on Intel gen 7/7.5/8 is suspected of dividing by a uniform wrongly\n\tint count = int(gpuParticleRange.y);\n\tint unwrapped = int(gpuParticleRange.x) + gl_InstanceID;\n\t// One wrap, as start < count and the draw's instances are count (gpuParticleRing.ts)\n\tint slot = unwrapped >= count ? unwrapped - count : unwrapped;\n\tivec2 at = ivec2((slot % RECORDS_PER_ROW) * 4, slot / RECORDS_PER_ROW);\n\tvec4 spawn = uintBitsToFloat(texelFetch(gpuParticleRecords, at, 0));\n\tvec4 velocity = uintBitsToFloat(texelFetch(gpuParticleRecords, at + ivec2(1, 0), 0));\n\tuvec4 sizeSeed = texelFetch(gpuParticleRecords, at + ivec2(2, 0), 0);\n\tvec4 colour0 = uintBitsToFloat(texelFetch(gpuParticleRecords, at + ivec2(3, 0), 0));\n\tfloat age = gpuParticleFrame.w - spawn.w;\n\tfloat life = velocity.w;\n\t// The strip's corners: (0, 0), (1, 0), (0, 1), (1, 1).\n\tvec2 corner = vec2(float(gl_VertexID & 1), float(gl_VertexID >> 1));\n\tvUV = corner;\n\tif (!(age >= 0.0 && age < life)) {\n\t\t// Dead, or not yet written: outside the clip volume.\n\t\tgl_Position = vec4(0.0, 0.0, 2.0, 1.0);\n\t\tvColor = vec4(0.0);\n\t\tvRemap = vec4(0.0, 1.0, 0.0, 1.0);\n\t\treturn;\n\t}\n\tfloat ratio = age / life;\n\tuint seed = sizeSeed.y;\n\tvec3 centre = gpuParticleFrame.xyz + spawn.xyz + displacement(velocity.xyz, age, life, seed);\n\t// particles.vertex's billboard: the corner offset in view space.\n\tvec3 viewPos = (gpuParticleView * vec4(centre, 1.0)).xyz + vec3((corner - 0.5) * uintBitsToFloat(sizeSeed.x), 0.0);\n\tgl_Position = gpuParticleProjection * vec4(viewPos, 1.0);\n\tvColor = colourAt(colour0, age, ratio, seed);\n\tvRemap = remapAt(age, ratio);\n}\n`;
-    ft.b.ShadersStore[`${yt}VertexShader`] = Jt, ft.b.ShadersStore[`${yt}PixelShader`] = "\nprecision highp float;\n\nuniform sampler2D gpuParticleTexture;\nuniform sampler2D gpuParticleRampTexture;\nuniform float gpuParticleRamp;\n\nvarying vec2 vUV;\nvarying vec4 vColor;\nvarying vec4 vRemap;\n\nvoid main(void) {\n\tvec4 textureColour = texture2D(gpuParticleTexture, vUV);\n\tvec4 colour = textureColour * vColor;\n\tif (gpuParticleRamp != 0.0) {\n\t\tfloat alpha = colour.a;\n\t\tfloat index = clamp((alpha - vRemap.x) / vRemap.y, 0.0, 1.0);\n\t\tvec4 rampColour = texture2D(gpuParticleRampTexture, vec2(1.0 - index, 0.0));\n\t\tcolour = vec4(colour.rgb * rampColour.rgb, clamp((alpha * rampColour.a - vRemap.z) / vRemap.w, 0.0, 1.0));\n\t}\n#ifdef MULTIPLY_PASS\n\t// The MULTIPLY pass of BLENDMULTIPLYMODE, which MULTIPLYADD draws before its ADD pass.\n\tfloat sourceAlpha = vColor.a * textureColour.a;\n\tcolour.rgb = colour.rgb * sourceAlpha + vec3(1.0 - sourceAlpha);\n#endif\n\tgl_FragColor = colour;\n}\n";
-    const Ct = ["gpuParticleView", "gpuParticleProjection", "gpuParticleSystem", "gpuParticleFrame", "gpuParticleRange", "gpuParticleRamp"],
-      ut = ["gpuParticleTexture", "gpuParticleRampTexture", "gpuParticleRecords"];
-    var Kt = Vt(38922),
-      ht = Vt(41851);
-    class vt extends Kt.b {
-      constructor(tt, et, Vt, Ot) {
-        super(tt, et, Vt), this.renderer = Vt, this.Fw = Ot, this.id = void 0, this.renderingGroupId = 0, this.layerMask = 268435455, this.records = void 0, this.uniforms = new Float32Array(wt.r), this.uniformBits = new Uint32Array(this.uniforms.buffer), this.ramp = null, this.rampTexels = (0, ht.i)(), this.engine = void 0, this.animatedFrame = -1, this.uploadSlots = (tt, et) => {
+    var su = ju(41814),
+      Uu = (ju(40238), ju(41335), ju(40742), ju(41825)),
+      Zu = ju(37671),
+      Xu = ju(37488),
+      lu = ju(41838),
+      qu = ju(41847),
+      fu = ju(37630),
+      Cu = (ju(41346), ju(41857)),
+      bu = ju(41855),
+      cu = ju(39065),
+      Nu = ju(41861),
+      Ou = ju(40127),
+      Yu = ju(39052);
+    const hu = "gpuParticles",
+      Du = Yu.v,
+      gu = uu => uu / 4,
+      Mu = uu => `gpuParticleSystem[${uu>>2}].${"xyzw"[3&uu]}`,
+      eu = `\nprecision highp float;\nprecision highp int;\nprecision highp usampler2D;\n\n#define MAX_STOPS ${Yu.b}\n#define COLOR_POSITIONS ${gu(Du.colorPositions)}\n#define COLOR1 ${gu(Du.color1)}\n#define COLOR2 ${gu(Du.color2)}\n#define VELOCITY ${gu(Du.RY)}\n#define REMAP ${gu(Du.remap)}\n#define RECORDS_PER_ROW ${Yu.m}\n\nuniform mat4 gpuParticleView;\nuniform mat4 gpuParticleProjection;\nuniform vec4 gpuParticleSystem[${Yu.p/4}];\n// The records' frame offset and the system's clock; the slot drawn first (the oldest) and the slots in use.\nuniform vec4 gpuParticleFrame;\nuniform vec2 gpuParticleRange;\nuniform usampler2D gpuParticleRecords;\n\nvarying vec2 vUV;\nvarying vec4 vColor;\nvarying vec4 vRemap;\n\nvec3 gravity() { return vec3(${Mu(Du.gravity)}, ${Mu(Du.gravity+1)}, ${Mu(Du.gravity+2)}); }\nint colorCount() { return int(${Mu(Du.colorCount)}); }\nvec4 colorDead() { return gpuParticleSystem[${gu(Du.colorDead)}]; }\nint velocityCount() { return int(${Mu(Du.velocityCount)}); }\nint remapCount() { return int(${Mu(Du.remapCount)}); }\n\nuint hash(uint v) {\n\tuint state = v * 747796405u + 2891336453u;\n\t// (state >> 28) + 4 as constant shifts: ANGLE's Direct3D 11 on Intel gen 7/7.5/8 shifts by a variable amount wrongly\n\tuint top = state >> 28u;\n\tuint bits0 = state >> 4u;\n\tuint bits1 = (top & 1u) != 0u ? bits0 >> 1u : bits0;\n\tuint bits2 = (top & 2u) != 0u ? bits1 >> 2u : bits1;\n\tuint bits3 = (top & 4u) != 0u ? bits2 >> 4u : bits2;\n\tuint word = (((top & 8u) != 0u ? bits3 >> 8u : bits3) ^ state) * 277803737u;\n\treturn (word >> 22u) ^ word;\n}\n\n// The particle's own random pick for a gradient stop, as Babylon picks one when the particle reaches it.\nfloat random(uint seed, int stop) {\n\treturn float(hash(seed ^ (uint(stop) * 0x9e3779b9u)) >> 8u) / 16777216.0;\n}\n\nfloat colourPosition(int i) {\n\treturn gpuParticleSystem[COLOR_POSITIONS + i / 4][i % 4];\n}\n\nvec4 stopColour(int i, uint seed) {\n\treturn mix(gpuParticleSystem[COLOR1 + i], gpuParticleSystem[COLOR2 + i], random(seed, i));\n}\n\nfloat velocityFactor(int i, uint seed) {\n\tvec4 stop = gpuParticleSystem[VELOCITY + i];\n\treturn mix(stop.y, stop.z, random(seed, MAX_STOPS + i));\n}\n\nvec4 colourAt(vec4 colour0, float age, float ratio, uint seed) {\n\tint n = colorCount();\n\tvec4 colour;\n\tif (n == 0) {\n\t\tcolour = mix(colour0, colorDead(), ratio);\n\t} else if (age == 0.0) {\n\t\treturn stopColour(0, seed);\n\t} else if (ratio < colourPosition(0)) {\n\t\tcolour = stopColour(min(1, n - 1), seed);\n\t} else {\n\t\tcolour = stopColour(n - 1, seed);\n\t\tfor (int i = 0; i + 1 < n; i++) {\n\t\t\tfloat a = colourPosition(i);\n\t\t\tfloat b = colourPosition(i + 1);\n\t\t\tif (ratio >= a && ratio <= b) {\n\t\t\t\tfloat scale = b > a ? (ratio - a) / (b - a) : 0.0;\n\t\t\t\tcolour = mix(stopColour(i, seed), stopColour(i + 1, seed), scale);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\tcolour.a = max(colour.a, 0.0);\n\treturn colour;\n}\n\nvec3 travel(float alpha, float beta, vec3 d, vec3 g, float s0, float s1) {\n\tfloat ds = s1 - s0;\n\tfloat ds2 = (s1 * s1 - s0 * s0) * 0.5;\n\tfloat ds3 = (s1 * s1 * s1 - s0 * s0 * s0) / 3.0;\n\treturn d * (alpha * ds) + (g * alpha + d * beta) * ds2 + g * (beta * ds3);\n}\n\nvec3 displacement(vec3 d, float age, float life, uint seed) {\n\tvec3 g = gravity();\n\tint n = velocityCount();\n\tif (n == 0) {\n\t\treturn d * age + g * (0.5 * age * age);\n\t}\n\tvec3 total = vec3(0.0);\n\tfloat beforeFirst = min(age, gpuParticleSystem[VELOCITY].x * life);\n\tif (beforeFirst > 0.0) {\n\t\ttotal += travel(velocityFactor(min(1, n - 1), seed), 0.0, d, g, 0.0, beforeFirst);\n\t}\n\tfor (int i = 0; i + 1 < n; i++) {\n\t\tfloat a = gpuParticleSystem[VELOCITY + i].x * life;\n\t\tfloat b = gpuParticleSystem[VELOCITY + i + 1].x * life;\n\t\tfloat lo = max(a, 0.0);\n\t\tfloat hi = min(b, age);\n\t\tif (hi > lo) {\n\t\t\tfloat fa = velocityFactor(i, seed);\n\t\t\tfloat beta = (velocityFactor(i + 1, seed) - fa) / (b - a);\n\t\t\ttotal += travel(fa - beta * a, beta, d, g, lo, hi);\n\t\t}\n\t}\n\tfloat afterLast = max(gpuParticleSystem[VELOCITY + n - 1].x * life, 0.0);\n\tif (age > afterLast) {\n\t\ttotal += travel(velocityFactor(n - 1, seed), 0.0, d, g, afterLast, age);\n\t}\n\treturn total;\n}\n\nvec4 remapAt(float age, float ratio) {\n\tint n = remapCount();\n\tif (n == 0 || age == 0.0) {\n\t\treturn vec4(0.0, 1.0, 0.0, 1.0);\n\t}\n\tvec2 stop = gpuParticleSystem[REMAP + n - 1].yz;\n\tif (ratio < gpuParticleSystem[REMAP].x) {\n\t\tstop = gpuParticleSystem[REMAP].yz;\n\t} else {\n\t\tfor (int i = 0; i + 1 < n; i++) {\n\t\t\tvec4 a = gpuParticleSystem[REMAP + i];\n\t\t\tvec4 b = gpuParticleSystem[REMAP + i + 1];\n\t\t\tif (ratio >= a.x && ratio <= b.x) {\n\t\t\t\tstop = mix(a.yz, b.yz, b.x > a.x ? (ratio - a.x) / (b.x - a.x) : 0.0);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\treturn vec4(stop.x, stop.y - stop.x, 0.0, 1.0);\n}\n\nvoid main(void) {\n\t// No division by a variable: ANGLE's Direct3D 11 on Intel gen 7/7.5/8 is suspected of dividing by a uniform wrongly\n\tint count = int(gpuParticleRange.y);\n\tint unwrapped = int(gpuParticleRange.x) + gl_InstanceID;\n\t// One wrap, as start < count and the draw's instances are count (gpuParticleRing.ts)\n\tint slot = unwrapped >= count ? unwrapped - count : unwrapped;\n\tivec2 at = ivec2((slot % RECORDS_PER_ROW) * 4, slot / RECORDS_PER_ROW);\n\tvec4 spawn = uintBitsToFloat(texelFetch(gpuParticleRecords, at, 0));\n\tvec4 velocity = uintBitsToFloat(texelFetch(gpuParticleRecords, at + ivec2(1, 0), 0));\n\tuvec4 sizeSeed = texelFetch(gpuParticleRecords, at + ivec2(2, 0), 0);\n\tvec4 colour0 = uintBitsToFloat(texelFetch(gpuParticleRecords, at + ivec2(3, 0), 0));\n\tfloat age = gpuParticleFrame.w - spawn.w;\n\tfloat life = velocity.w;\n\t// The strip's corners: (0, 0), (1, 0), (0, 1), (1, 1).\n\tvec2 corner = vec2(float(gl_VertexID & 1), float(gl_VertexID >> 1));\n\tvUV = corner;\n\tif (!(age >= 0.0 && age < life)) {\n\t\t// Dead, or not yet written: outside the clip volume.\n\t\tgl_Position = vec4(0.0, 0.0, 2.0, 1.0);\n\t\tvColor = vec4(0.0);\n\t\tvRemap = vec4(0.0, 1.0, 0.0, 1.0);\n\t\treturn;\n\t}\n\tfloat ratio = age / life;\n\tuint seed = sizeSeed.y;\n\tvec3 centre = gpuParticleFrame.xyz + spawn.xyz + displacement(velocity.xyz, age, life, seed);\n\t// particles.vertex's billboard: the corner offset in view space.\n\tvec3 viewPos = (gpuParticleView * vec4(centre, 1.0)).xyz + vec3((corner - 0.5) * uintBitsToFloat(sizeSeed.x), 0.0);\n\tgl_Position = gpuParticleProjection * vec4(viewPos, 1.0);\n\tvColor = colourAt(colour0, age, ratio, seed);\n\tvRemap = remapAt(age, ratio);\n}\n`;
+    Ou.b.ShadersStore[`${hu}VertexShader`] = eu, Ou.b.ShadersStore[`${hu}PixelShader`] = "\nprecision highp float;\n\nuniform sampler2D gpuParticleTexture;\nuniform sampler2D gpuParticleRampTexture;\nuniform float gpuParticleRamp;\n\nvarying vec2 vUV;\nvarying vec4 vColor;\nvarying vec4 vRemap;\n\nvoid main(void) {\n\tvec4 textureColour = texture2D(gpuParticleTexture, vUV);\n\tvec4 colour = textureColour * vColor;\n\tif (gpuParticleRamp != 0.0) {\n\t\tfloat alpha = colour.a;\n\t\tfloat index = clamp((alpha - vRemap.x) / vRemap.y, 0.0, 1.0);\n\t\tvec4 rampColour = texture2D(gpuParticleRampTexture, vec2(1.0 - index, 0.0));\n\t\tcolour = vec4(colour.rgb * rampColour.rgb, clamp((alpha * rampColour.a - vRemap.z) / vRemap.w, 0.0, 1.0));\n\t}\n#ifdef MULTIPLY_PASS\n\t// The MULTIPLY pass of BLENDMULTIPLYMODE, which MULTIPLYADD draws before its ADD pass.\n\tfloat sourceAlpha = vColor.a * textureColour.a;\n\tcolour.rgb = colour.rgb * sourceAlpha + vec3(1.0 - sourceAlpha);\n#endif\n\tgl_FragColor = colour;\n}\n";
+    const Gu = ["gpuParticleView", "gpuParticleProjection", "gpuParticleSystem", "gpuParticleFrame", "gpuParticleRange", "gpuParticleRamp"],
+      pu = ["gpuParticleTexture", "gpuParticleRampTexture", "gpuParticleRecords"];
+    var wu = ju(39046),
+      Ju = ju(41870);
+    class du extends wu.c {
+      constructor(uu, Eu, ju, su) {
+        super(uu, Eu, ju), this.renderer = ju, this.vY = su, this.id = void 0, this.renderingGroupId = 0, this.layerMask = 268435455, this.records = void 0, this.uniforms = new Float32Array(Yu.p), this.uniformBits = new Uint32Array(this.uniforms.buffer), this.ramp = null, this.rampTexels = (0, Ju.h)(), this.engine = void 0, this.animatedFrame = -1, this.uploadSlots = (uu, Eu) => {
           const {
-            engine: Vt
-          } = this, Ot = Vt._gl;
-          Vt._bindTextureDirectly(Ot.TEXTURE_2D, this.records, !0), Vt._unpackFlipY(!1);
-          const qt = this.ring.recordBits;
-          for (let Dt = tt; Dt < et;) {
-            const tt = Math.floor(Dt / wt.p),
-              Vt = Math.min(et, (tt + 1) * wt.p);
-            Ot.texSubImage2D(Ot.TEXTURE_2D, 0, Dt % wt.p * 4, tt, 4 * (Vt - Dt), 1, Ot.RGBA_INTEGER, Ot.UNSIGNED_INT, qt, Dt * wt.h), Dt = Vt
+            engine: ju
+          } = this, su = ju._gl;
+          ju._bindTextureDirectly(su.TEXTURE_2D, this.records, !0), ju._unpackFlipY(!1);
+          const Uu = this.ring.recordBits;
+          for (let Zu = uu; Zu < Eu;) {
+            const uu = Math.floor(Zu / Yu.m),
+              ju = Math.min(Eu, (uu + 1) * Yu.m);
+            su.texSubImage2D(su.TEXTURE_2D, 0, Zu % Yu.m * 4, uu, 4 * (ju - Zu), 1, su.RGBA_INTEGER, su.UNSIGNED_INT, Uu, Zu * Yu.e), Zu = ju
           }
-          Vt._bindTextureDirectly(Ot.TEXTURE_2D, null)
-        }, this.id = tt;
-        const qt = Ot.Jf();
-        this.engine = qt;
-        const Dt = Math.max(1, et),
-          mt = Math.min(Dt, wt.p);
-        this.records = qt.createRawTexture(null, 4 * mt, Math.ceil(Dt / mt), Xt.e.TEXTUREFORMAT_RGBA_INTEGER, !1, !1, Xt.e.TEXTURE_NEAREST_SAMPLINGMODE, null, Xt.e.TEXTURETYPE_UNSIGNED_INTEGER)
+          ju._bindTextureDirectly(su.TEXTURE_2D, null)
+        }, this.id = uu;
+        const Uu = su.wO();
+        this.engine = Uu;
+        const Zu = Math.max(1, Eu),
+          Xu = Math.min(Zu, Yu.m);
+        this.records = Uu.createRawTexture(null, 4 * Xu, Math.ceil(Zu / Xu), Cu.e.TEXTUREFORMAT_RGBA_INTEGER, !1, !1, Cu.e.TEXTURE_NEAREST_SAMPLINGMODE, null, Cu.e.TEXTURETYPE_UNSIGNED_INTEGER)
       }
       animate() {
-        let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.Fw.getAnimationRatio() || 1;
-        const et = this.Fw.getFrameId();
-        if (et === this.animatedFrame) return !1;
-        const Vt = super.animate(tt);
-        return Vt && (this.animatedFrame = et, this.ring.takeUploads(this.uploadSlots)), Vt
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.vY.getAnimationRatio() || 1;
+        const Eu = this.vY.getFrameId();
+        if (Eu === this.animatedFrame) return !1;
+        const ju = super.animate(uu);
+        return ju && (this.animatedFrame = Eu, this.ring.takeUploads(this.uploadSlots)), ju
       }
       render() {
         return this.renderer.render(this)
@@ -103,752 +103,752 @@ export const modules = {
       clone() {
         return null
       }
-      prepareDraw(tt) {
-        (0, ht.m)(this, this.uniforms, this.uniformBits, tt);
-        for (const Vt of wt.s) this.uniforms[Vt] = this.uniformBits[Vt];
-        var et;
-        (0, ht.o)(this, this.rampTexels) && (0 === this.rampTexels.key.length ? (null === (et = this.ramp) || void 0 === et || et.dispose(), this.ramp = null) : this.ramp ? this.ramp.update(this.rampTexels.texels) : this.ramp = Qt.d.CreateRGBATexture(this.rampTexels.texels, wt.l, 1, this.Fw, !1, !1, Xt.e.TEXTURE_NEAREST_SAMPLINGMODE))
+      prepareDraw(uu) {
+        (0, Ju.i)(this, this.uniforms, this.uniformBits, uu);
+        for (const ju of Yu.t) this.uniforms[ju] = this.uniformBits[ju];
+        var Eu;
+        (0, Ju.l)(this, this.rampTexels) && (0 === this.rampTexels.key.length ? (null === (Eu = this.ramp) || void 0 === Eu || Eu.dispose(), this.ramp = null) : this.ramp ? this.ramp.update(this.rampTexels.texels) : this.ramp = bu.d.CreateRGBATexture(this.rampTexels.texels, Yu.j, 1, this.vY, !1, !1, Cu.e.TEXTURE_NEAREST_SAMPLINGMODE))
       }
       releaseGl() {
-        var tt;
-        this.records.dispose(), null === (tt = this.ramp) || void 0 === tt || tt.dispose(), this.ramp = null
+        var uu;
+        this.records.dispose(), null === (uu = this.ramp) || void 0 === uu || uu.dispose(), this.ramp = null
       }
     }
-    const Wt = "the context was lost before the programs linked";
-    class St {
-      constructor(tt, et) {
-        this.Fw = tt, this.reportFailure = et, this.failed = !1, this.engine = void 0, this.effect = void 0, this.multiplyEffect = void 0, this.whiteRamp = void 0, this.vertexBuffers = {}, this.frame = new Float32Array(4), this.warnOnce = (0, Et.b)(), this.engine = tt.Jf(), this.effect = this.createEffect(""), this.multiplyEffect = this.createEffect("#define MULTIPLY_PASS"), this.whiteRamp = Qt.d.CreateRGBATexture(new Uint8Array([255, 255, 255, 255]), 1, 1, tt, !1, !1, Xt.e.TEXTURE_NEAREST_SAMPLINGMODE), this.awaitLink(this.effect), this.awaitLink(this.multiplyEffect)
+    const au = "the context was lost before the programs linked";
+    class Pu {
+      constructor(uu, Eu) {
+        this.vY = uu, this.reportFailure = Eu, this.failed = !1, this.engine = void 0, this.effect = void 0, this.multiplyEffect = void 0, this.whiteRamp = void 0, this.vertexBuffers = {}, this.frame = new Float32Array(4), this.warnOnce = (0, Nu.d)(), this.engine = uu.wO(), this.effect = this.createEffect(""), this.multiplyEffect = this.createEffect("#define MULTIPLY_PASS"), this.whiteRamp = bu.d.CreateRGBATexture(new Uint8Array([255, 255, 255, 255]), 1, 1, uu, !1, !1, Cu.e.TEXTURE_NEAREST_SAMPLINGMODE), this.awaitLink(this.effect), this.awaitLink(this.multiplyEffect)
       }
-      xZ(tt, et) {
-        const Vt = wt.p * this.engine.getCaps().maxTextureSize;
-        et > Vt && this.warnOnce(`capacity:${tt}`, `particle system ${tt} holds ${Vt} particles, not ${et}: its records texture's limit`);
-        const Ot = new vt(tt, Math.min(et, Vt), this, this.Fw);
-        return this.Fw.addParticleSystem(Ot), Ot
+      Kr(uu, Eu) {
+        const ju = Yu.m * this.engine.getCaps().maxTextureSize;
+        Eu > ju && this.warnOnce(`capacity:${uu}`, `particle system ${uu} holds ${ju} particles, not ${Eu}: its records texture's limit`);
+        const su = new du(uu, Math.min(Eu, ju), this, this.vY);
+        return this.vY.addParticleSystem(su), su
       }
-      canDraw(tt) {
-        var et, Vt;
-        if (this.failed || null === (et = tt.texture) || void 0 === et || null === (Vt = et.mirror) || void 0 === Vt || !Vt.isReady()) return !1;
-        for (const Ot of (0, lt.g)(tt.blendMode))
-          if (!this.effectFor(Ot).isReady()) return !1;
+      canDraw(uu) {
+        var Eu, ju;
+        if (this.failed || null === (Eu = uu.texture) || void 0 === Eu || null === (ju = Eu.mirror) || void 0 === ju || !ju.isReady()) return !1;
+        for (const su of (0, cu.k)(uu.blendMode))
+          if (!this.effectFor(su).isReady()) return !1;
         return !0
       }
-      disposeStopped(tt) {
-        this.Fw._toBeDisposed.push(tt)
+      disposeStopped(uu) {
+        this.vY._toBeDisposed.push(uu)
       }
-      remove(tt) {
-        this.Fw.removeParticleSystem(tt), tt.releaseGl()
+      remove(uu) {
+        this.vY.removeParticleSystem(uu), uu.releaseGl()
       }
-      render(tt) {
-        var et;
-        if (!tt.isReady() || !tt.hasLiveParticles()) return 0;
+      render(uu) {
+        var Eu;
+        if (!uu.isReady() || !uu.hasLiveParticles()) return 0;
         const {
-          engine: Vt,
-          Fw: Ot,
-          frame: qt
+          engine: ju,
+          vY: su,
+          frame: Uu
         } = this;
-        tt.prepareDraw(this.warnOnce), tt.drawOffset(qt, 0), qt[3] = tt.drawTime();
-        const Dt = tt.ring.drawStart(),
-          mt = tt.ring.drawCount(),
-          dt = null !== (et = tt.ramp) && void 0 !== et ? et : this.whiteRamp;
-        Vt.setState(!1);
-        for (const jt of (0, lt.g)(tt.blendMode)) {
-          const et = this.effectFor(jt);
-          Vt.enableEffect(et), et.setTexture("gpuParticleTexture", tt.texture.mirror), et.setTexture("gpuParticleRampTexture", dt), et._bindTexture("gpuParticleRecords", tt.records), et.setMatrix("gpuParticleView", Ot.getViewMatrix()), et.setMatrix("gpuParticleProjection", Ot.getProjectionMatrix()), et.setFloatArray4("gpuParticleSystem", tt.uniforms), et.setFloat4("gpuParticleFrame", qt[0], qt[1], qt[2], qt[3]), et.setFloat2("gpuParticleRange", Dt, mt), et.setFloat("gpuParticleRamp", tt.uniforms[wt.w.ramp]), Vt.bindBuffers(this.vertexBuffers, null, et), Vt.setAlphaMode((0, lt.e)(jt)), Vt.drawArraysType(Xt.e.MATERIAL_TriangleStripDrawMode, 0, 4, mt), et._bindTexture("gpuParticleRecords", null)
+        uu.prepareDraw(this.warnOnce), uu.drawOffset(Uu, 0), Uu[3] = uu.drawTime();
+        const Zu = uu.ring.drawStart(),
+          Xu = uu.ring.drawCount(),
+          lu = null !== (Eu = uu.ramp) && void 0 !== Eu ? Eu : this.whiteRamp;
+        ju.setState(!1);
+        for (const qu of (0, cu.k)(uu.blendMode)) {
+          const Eu = this.effectFor(qu);
+          ju.enableEffect(Eu), Eu.setTexture("gpuParticleTexture", uu.texture.mirror), Eu.setTexture("gpuParticleRampTexture", lu), Eu._bindTexture("gpuParticleRecords", uu.records), Eu.setMatrix("gpuParticleView", su.getViewMatrix()), Eu.setMatrix("gpuParticleProjection", su.getProjectionMatrix()), Eu.setFloatArray4("gpuParticleSystem", uu.uniforms), Eu.setFloat4("gpuParticleFrame", Uu[0], Uu[1], Uu[2], Uu[3]), Eu.setFloat2("gpuParticleRange", Zu, Xu), Eu.setFloat("gpuParticleRamp", uu.uniforms[Yu.v.ramp]), ju.bindBuffers(this.vertexBuffers, null, Eu), ju.setAlphaMode((0, cu.j)(qu)), ju.drawArraysType(Cu.e.MATERIAL_TriangleStripDrawMode, 0, 4, Xu), Eu._bindTexture("gpuParticleRecords", null)
         }
-        return Vt.setAlphaMode(Xt.e.ALPHA_DISABLE), mt
+        return ju.setAlphaMode(Cu.e.ALPHA_DISABLE), Xu
       }
-      awaitLink(tt) {
-        const et = tt.getPipelineContext(),
-          Vt = this.gl();
-        !this.failed && Vt && (!et || et.isParallelCompiled && !et.program ? this.warnOnce("asyncProgram", "GPU particles: Babylon made a particle program asynchronously, so a failed link shows only after the first systems are made") : et.isParallelCompiled && et.program && (Vt.getProgramParameter(et.program, Vt.LINK_STATUS) || this.fail(function(tt, et, Vt) {
-          if (tt.isContextLost()) return Wt;
-          for (const [Ot, qt] of [
-              ["VERTEX SHADER", et.vertexShader],
-              ["FRAGMENT SHADER", et.fragmentShader]
+      awaitLink(uu) {
+        const Eu = uu.getPipelineContext(),
+          ju = this.gl();
+        !this.failed && ju && (!Eu || Eu.isParallelCompiled && !Eu.program ? this.warnOnce("asyncProgram", "GPU particles: Babylon made a particle program asynchronously, so a failed link shows only after the first systems are made") : Eu.isParallelCompiled && Eu.program && (ju.getProgramParameter(Eu.program, ju.LINK_STATUS) || this.fail(function(uu, Eu, ju) {
+          if (uu.isContextLost()) return au;
+          for (const [su, Uu] of [
+              ["VERTEX SHADER", Eu.vertexShader],
+              ["FRAGMENT SHADER", Eu.fragmentShader]
             ]) {
-            const et = qt && !tt.getShaderParameter(qt, tt.COMPILE_STATUS) ? tt.getShaderInfoLog(qt) : null;
-            if (et) return `${Ot} ${et}`
+            const Eu = Uu && !uu.getShaderParameter(Uu, uu.COMPILE_STATUS) ? uu.getShaderInfoLog(Uu) : null;
+            if (Eu) return `${su} ${Eu}`
           }
-          return tt.getProgramInfoLog(Vt) || "a program did not link"
-        }(Vt, et, et.program))))
+          return uu.getProgramInfoLog(ju) || "a program did not link"
+        }(ju, Eu, Eu.program))))
       }
       gl() {
         return this.engine._gl
       }
-      effectFor(tt) {
-        return tt === lt.b ? this.multiplyEffect : this.effect
+      effectFor(uu) {
+        return uu === cu.e ? this.multiplyEffect : this.effect
       }
-      createEffect(tt) {
-        return this.engine.createEffect(yt, [], Ct, ut, tt, void 0, void 0, ((tt, et) => {
-          var Vt;
-          this.fail(null !== (Vt = this.gl()) && void 0 !== Vt && Vt.isContextLost() ? Wt : function(tt) {
-            const et = tt.split("\n    at ")[0];
-            return /^\S*@\S*:\d+:\d+/.test(et) ? "a program failed, its log not in this browser's stack" : et.replace(/^Error: /, "")
-          }(et))
+      createEffect(uu) {
+        return this.engine.createEffect(hu, [], Gu, pu, uu, void 0, void 0, ((uu, Eu) => {
+          var ju;
+          this.fail(null !== (ju = this.gl()) && void 0 !== ju && ju.isContextLost() ? au : function(uu) {
+            const Eu = uu.split("\n    at ")[0];
+            return /^\S*@\S*:\d+:\d+/.test(Eu) ? "a program failed, its log not in this browser's stack" : Eu.replace(/^Error: /, "")
+          }(Eu))
         }))
       }
-      fail(tt) {
+      fail(uu) {
         if (!this.failed) {
-          this.failed = !0, console.warn(`GPU particles cannot compile here, so new particle systems are Babylon's: ${tt}`), this.reportFailure(tt);
-          for (const tt of this.Fw.PJ.slice()) tt instanceof vt && tt.disposeOnStop && tt.dispose()
+          this.failed = !0, console.warn(`GPU particles cannot compile here, so new particle systems are Babylon's: ${uu}`), this.reportFailure(uu);
+          for (const uu of this.vY.WG.slice()) uu instanceof du && uu.disposeOnStop && uu.dispose()
         }
       }
     }
-    var ct = Vt(40023);
-    class Rt extends ct.e {
+    var ou = ju(40092);
+    class ku extends ou.c {
       createEffect() {
-        const tt = super.createEffect(...arguments);
-        return Pt(tt), It.has(tt) || (It.add(tt), tt.onCompileObservable.add((() => {
-          Pt(tt)
-        }))), tt
+        const uu = super.createEffect(...arguments);
+        return vu(uu), mu.has(uu) || (mu.add(uu), uu.onCompileObservable.add((() => {
+          vu(uu)
+        }))), uu
       }
     }
-    const It = new WeakSet;
+    const mu = new WeakSet;
 
-    function Pt(tt) {
-      tt._vertexSourceCodeBeforeMigration = "", tt._fragmentSourceCodeBeforeMigration = ""
+    function vu(uu) {
+      uu._vertexSourceCodeBeforeMigration = "", uu._fragmentSourceCodeBeforeMigration = ""
     }
-    var Zt = Vt(40397),
-      Lt = Vt(41312),
-      Ft = Vt(40155),
-      kt = Vt(40359),
-      Gt = Vt(40357),
-      zt = Vt(40289),
-      ot = Vt(41387),
-      rt = Vt(37867),
-      Ut = Vt(41854),
-      At = Vt(41858),
-      it = Vt(41865),
-      Yt = Vt(40311),
-      Bt = Vt(2947),
-      pt = Vt(37738),
-      xt = Vt(40497),
-      Tt = Vt(37825),
-      gt = Vt(37764);
+    var Ku = ju(40456),
+      Vu = ju(41329),
+      ru = ju(40209),
+      Qu = ju(40420),
+      iu = ju(40417),
+      Wu = ju(40346),
+      Su = ju(41394),
+      Iu = ju(37993),
+      Fu = ju(41875),
+      Bu = ju(41877),
+      Lu = ju(41885),
+      tu = ju(40366),
+      xu = ju(2999),
+      Tu = ju(37874),
+      Hu = ju(40581),
+      Au = ju(37954),
+      nu = ju(37901);
 
-    function st(tt) {
-      if (tt.visibility < 1 || !tt.isVisible || !tt.isEnabled() || tt.metadata[gt.f] || !tt.isReady()) return !0;
-      const et = tt.vJ;
-      if (!et || 0 === et.length) return !0;
-      for (let Vt = 0; Vt < et.length; Vt++) {
-        const Ot = et[Vt],
-          qt = Ot.vf();
-        if (!qt || !qt.isReadyForSubMesh(tt, Ot, !1)) return !0
+    function yu(uu) {
+      if (uu.visibility < 1 || !uu.isVisible || !uu.isEnabled() || uu.metadata[nu.g] || !uu.isReady()) return !0;
+      const Eu = uu.iG;
+      if (!Eu || 0 === Eu.length) return !0;
+      for (let ju = 0; ju < Eu.length; ju++) {
+        const su = Eu[ju],
+          Uu = su.oO();
+        if (!Uu || !Uu.isReadyForSubMesh(uu, su, !1)) return !0
       }
       return !1
     }
-    class nt {
-      constructor(tt, et) {
-        this.ql = tt, this.culled = 0, this.armed = !1, this.vis = null, this.eye = [0, 0, 0], this.passable = new Set, this.meshes = [], this.cellSlots = new Int32Array(256), this.count = 0, et.onBeforeActiveMeshesEvaluationObservable.add((() => {
+    class zu {
+      constructor(uu, Eu) {
+        this.Uc = uu, this.culled = 0, this.armed = !1, this.vis = null, this.eye = [0, 0, 0], this.passable = new Set, this.meshes = [], this.cellSlots = new Int32Array(256), this.count = 0, Eu.onBeforeActiveMeshesEvaluationObservable.add((() => {
           this.armed = !0
         }))
       }
-      XE(tt) {
-        var et;
-        const Vt = this.armed;
-        if (this.armed = !1, this.vis = null, !Vt) return !1;
+      NN(uu) {
+        var Eu;
+        const ju = this.armed;
+        if (this.armed = !1, this.vis = null, !ju) return !1;
         this.culled = 0;
         const {
-          ql: Ot
-        } = this, qt = null === (et = Ot.aJ) || void 0 === et ? void 0 : et.visibility;
-        if (!qt || !tt || Ot.Bf.pf) return !1;
-        if (!(Ot.sQ.BOt[0] >= Tt.e)) return !1;
-        const Dt = tt.getProjectionMatrix().m;
-        if (0 !== Dt[15]) return !1;
-        const mt = Ot.bl,
-          dt = tt.globalPosition,
-          jt = this.eye;
-        return jt[0] = dt.x + mt[0], jt[1] = dt.y + mt[1], jt[2] = dt.z + mt[2], !!qt.eyeClear(jt[0], jt[1], jt[2], tt.minZ, Dt, Ot.sQ) && (this.vis = qt, this.passable.clear(), this.count = 0, !0)
+          Uc: su
+        } = this, Uu = null === (Eu = su.mG) || void 0 === Eu ? void 0 : Eu.visibility;
+        if (!Uu || !uu || su.tO.xO) return !1;
+        if (!(su.zb.Jsu[0] >= Au.d)) return !1;
+        const Zu = uu.getProjectionMatrix().m;
+        if (0 !== Zu[15]) return !1;
+        const Xu = su.ec,
+          lu = uu.globalPosition,
+          qu = this.eye;
+        return qu[0] = lu.x + Xu[0], qu[1] = lu.y + Xu[1], qu[2] = lu.z + Xu[2], !!Uu.eyeClear(qu[0], qu[1], qu[2], uu.minZ, Zu, su.zb) && (this.vis = Uu, this.passable.clear(), this.count = 0, !0)
       }
-      see(tt, et) {
-        const Vt = this.count++;
-        if (Vt === this.cellSlots.length) {
-          const tt = new Int32Array(2 * Vt);
-          tt.set(this.cellSlots), this.cellSlots = tt
+      see(uu, Eu) {
+        const ju = this.count++;
+        if (ju === this.cellSlots.length) {
+          const uu = new Int32Array(2 * ju);
+          uu.set(this.cellSlots), this.cellSlots = uu
         }
-        this.cellSlots[Vt] = et, this.meshes[Vt] = tt
+        this.cellSlots[ju] = Eu, this.meshes[ju] = uu
       }
-      seeThrough(tt) {
-        this.passable.add(tt)
+      seeThrough(uu) {
+        this.passable.add(uu)
       }
-      finish(tt, et) {
+      finish(uu, Eu) {
         const {
-          vis: Vt,
-          eye: Ot,
-          meshes: qt,
-          count: Dt,
-          cellSlots: mt
+          vis: ju,
+          eye: su,
+          meshes: Uu,
+          count: Zu,
+          cellSlots: Xu
         } = this, {
-          sQ: dt
-        } = this.ql, [jt, Ht] = dt.BOt, Xt = null !== Vt && Vt.update(Ot[0], Ot[1], Ot[2], dt.vtt, jt, Ht, this.passable);
-        let Qt = 0;
-        for (let lt = 0; lt < Dt; lt++) {
-          const Ot = qt[lt];
-          if (Xt) {
-            const tt = 3 * mt[lt];
-            if (tt >= 0 && !Vt.isDrawn(et[tt], et[tt + 1], et[tt + 2])) {
-              Qt++;
+          zb: lu
+        } = this.Uc, [qu, fu] = lu.Jsu, Cu = null !== ju && ju.update(su[0], su[1], su[2], lu.duu, qu, fu, this.passable);
+        let bu = 0;
+        for (let cu = 0; cu < Zu; cu++) {
+          const su = Uu[cu];
+          if (Cu) {
+            const uu = 3 * Xu[cu];
+            if (uu >= 0 && !ju.isDrawn(Eu[uu], Eu[uu + 1], Eu[uu + 2])) {
+              bu++;
               continue
             }
           }
-          Yt.g.prototype.push.call(tt, Ot)
+          tu.f.prototype.push.call(uu, su)
         }
-        qt.fill(null, 0, Dt), this.count = 0, this.vis = null, this.culled = Qt
+        Uu.fill(null, 0, Zu), this.count = 0, this.vis = null, this.culled = bu
       }
     }
-    var te = Vt(37805),
-      ee = Vt(37754),
-      Ve = Vt(40474),
-      Oe = Vt(41873),
-      qe = Vt(40476),
-      De = Vt(40415);
-    let me = 1;
-    const de = new WeakSet;
+    var Ru = ju(37938),
+      uE = ju(37886),
+      EE = ju(40552),
+      jE = ju(41890),
+      sE = ju(40556),
+      UE = ju(40467);
+    let ZE = 1;
+    const XE = new WeakSet;
 
-    function je() {
-      return me
+    function lE() {
+      return ZE
     }
 
-    function He() {
-      me = me >= 1073741823 ? 1 : me + 1
+    function qE() {
+      ZE = ZE >= 1073741823 ? 1 : ZE + 1
     }
 
-    function Xe(tt) {
-      const et = tt.metadata;
-      if (!et || !0 !== et[pt.n]) return;
-      const Vt = et[pt.s],
-        Ot = null === Vt || void 0 === Vt ? void 0 : Vt._noaStamps;
-      if (!Vt || !Ot) return;
-      const qt = Vt.entries.indexOf(tt);
-      qt >= 0 && (Ot[qt] = 0)
+    function fE(uu) {
+      const Eu = uu.metadata;
+      if (!Eu || !0 !== Eu[Tu.q]) return;
+      const ju = Eu[Tu.v],
+        su = null === ju || void 0 === ju ? void 0 : ju._noaStamps;
+      if (!ju || !su) return;
+      const Uu = ju.entries.indexOf(uu);
+      Uu >= 0 && (su[Uu] = 0)
     }
 
-    function Qe(tt) {
-      const et = tt.vJ;
-      for (let Vt = 0; Vt < et.length; Vt++) {
-        const tt = et[Vt].vf();
-        if (tt && !tt.isFrozen) return !1
+    function CE(uu) {
+      const Eu = uu.iG;
+      for (let ju = 0; ju < Eu.length; ju++) {
+        const uu = Eu[ju].oO();
+        if (uu && !uu.isFrozen) return !1
       }
-      for (let Vt = 0; Vt < et.length; Vt++) {
-        const tt = et[Vt].vf();
-        tt && de.add(tt)
+      for (let ju = 0; ju < Eu.length; ju++) {
+        const uu = Eu[ju].oO();
+        uu && XE.add(uu)
       }
       return !0
     }
-    let le = !1;
-    const Ee = new WeakSet;
+    let bE = !1;
+    const cE = new WeakSet;
 
-    function fe(tt, et) {
-      const Vt = tt[et];
-      if ("function" !== typeof Vt) throw new Error(`terrainDrawState: Babylon has no ${et} to hook`);
-      return Vt
+    function NE(uu, Eu) {
+      const ju = uu[Eu];
+      if ("function" !== typeof ju) throw new Error(`terrainDrawState: Babylon has no ${Eu} to hook`);
+      return ju
     }
 
-    function we(tt, et, Vt, Ot, qt) {
-      const Dt = Vt.sQ.vtt,
-        mt = new Map;
-      let dt = 0;
-      const jt = new nt(Vt, tt),
-        Ht = new te.d(Dt, tt.Jf());
-      ! function(tt) {
-        if (Ee.has(tt) || (Ee.add(tt), tt.onContextLostObservable.add(He), tt.bf.add(He)), le) return;
-        le = !0;
-        const et = Oe.c.prototype,
-          Vt = fe(et, "_markSubMeshesAsDirty");
-        Object.assign(et, {
-          _markSubMeshesAsDirty(tt) {
-            Vt.call(this, tt), Xe(this)
+    function OE(uu, Eu, ju, su, Uu) {
+      const Zu = ju.zb.duu,
+        Xu = new Map;
+      let lu = 0;
+      const qu = new zu(ju, uu),
+        fu = new Ru.d(Zu, uu.wO());
+      ! function(uu) {
+        if (cE.has(uu) || (cE.add(uu), uu.onContextLostObservable.add(qE), uu.pO.add(qE)), bE) return;
+        bE = !0;
+        const Eu = jE.c.prototype,
+          ju = NE(Eu, "_markSubMeshesAsDirty");
+        Object.assign(Eu, {
+          _markSubMeshesAsDirty(uu) {
+            ju.call(this, uu), fE(this)
           }
         });
-        const Ot = fe(De.d.prototype, "_syncParentEnabledState");
-        Object.assign(De.d.prototype, {
+        const su = NE(UE.c.prototype, "_syncParentEnabledState");
+        Object.assign(UE.c.prototype, {
           _syncParentEnabledState() {
-            Ot.call(this), Xe(this)
+            su.call(this), fE(this)
           }
         });
-        const qt = fe(qe.d.prototype, "resetDrawCache");
-        qe.d.prototype.resetDrawCache = function(tt, et) {
-          qt.call(this, tt, et), Xe(this.getMesh())
+        const Uu = NE(sE.e.prototype, "resetDrawCache");
+        sE.e.prototype.resetDrawCache = function(uu, Eu) {
+          Uu.call(this, uu, Eu), fE(this.getMesh())
         };
-        const Dt = Ve.c.prototype,
-          mt = fe(Dt, "markDirty");
-        Dt.markDirty = function(tt) {
-          mt.call(this, tt), de.has(this) && He()
+        const Zu = EE.b.prototype,
+          Xu = NE(Zu, "markDirty");
+        Zu.markDirty = function(uu) {
+          Xu.call(this, uu), XE.has(this) && qE()
         };
-        const dt = fe(Dt, "_markAllSubMeshesAsDirty");
-        Object.assign(Dt, {
-          _markAllSubMeshesAsDirty(tt) {
-            dt.call(this, tt), de.has(this) && He()
+        const lu = NE(Zu, "_markAllSubMeshesAsDirty");
+        Object.assign(Zu, {
+          _markAllSubMeshesAsDirty(uu) {
+            lu.call(this, uu), XE.has(this) && qE()
           }
         })
-      }(tt.Jf());
-      let Xt = new Float64Array(384),
-        Qt = new Int32Array(64),
-        lt = new Uint8Array(64),
-        Et = new Float64Array(64),
-        ft = new Int32Array(192),
-        wt = 0;
-      const yt = [],
-        Nt = new Float64Array(24),
-        Mt = () => {
-          const tt = yt.pop();
-          return void 0 !== tt ? (Qt[tt] = 0, tt) : (wt === Qt.length && (Xt = ye(Xt, new Float64Array(2 * Xt.length)), Qt = ye(Qt, new Int32Array(2 * Qt.length)), lt = ye(lt, new Uint8Array(2 * lt.length)), Et = ye(Et, new Float64Array(2 * Et.length)), ft = ye(ft, new Int32Array(2 * ft.length))), wt++)
+      }(uu.wO());
+      let Cu = new Float64Array(384),
+        bu = new Int32Array(64),
+        cu = new Uint8Array(64),
+        Nu = new Float64Array(64),
+        Ou = new Int32Array(192),
+        Yu = 0;
+      const hu = [],
+        Du = new Float64Array(24),
+        gu = () => {
+          const uu = hu.pop();
+          return void 0 !== uu ? (bu[uu] = 0, uu) : (Yu === bu.length && (Cu = YE(Cu, new Float64Array(2 * Cu.length)), bu = YE(bu, new Int32Array(2 * bu.length)), cu = YE(cu, new Uint8Array(2 * cu.length)), Nu = YE(Nu, new Float64Array(2 * Nu.length)), Ou = YE(Ou, new Int32Array(2 * Ou.length))), Yu++)
         },
-        bt = tt => {
-          const et = 6 * tt._noaSlot,
-            Vt = tt.tqt[0],
-            Ot = tt.tqt[1];
-          Xt[et] = Vt.x, Xt[et + 1] = Vt.y, Xt[et + 2] = Vt.z, Xt[et + 3] = Ot.x, Xt[et + 4] = Ot.y, Xt[et + 5] = Ot.z
+        Mu = uu => {
+          const Eu = 6 * uu._noaSlot,
+            ju = uu.vsu[0],
+            su = uu.vsu[1];
+          Cu[Eu] = ju.x, Cu[Eu + 1] = ju.y, Cu[Eu + 2] = ju.z, Cu[Eu + 3] = su.x, Cu[Eu + 4] = su.y, Cu[Eu + 5] = su.z
         },
-        Jt = (tt, et, Vt) => {
-          if (!Vt) return jt.see(tt, -1), !1;
-          const Ot = st(tt);
-          return Ot && jt.seeThrough(Et[et]), jt.see(tt, et), !Ot
+        eu = (uu, Eu, ju) => {
+          if (!ju) return qu.see(uu, -1), !1;
+          const su = yu(uu);
+          return su && qu.seeThrough(Nu[Eu]), qu.see(uu, Eu), !su
         };
-      let Ct = -1;
-      return tt.getActiveMeshCandidates = () => {
-        const Vt = tt.frustumPlanes,
-          Ot = et._selectionContent;
-        Ot.reset(), (Vt => {
-          const Ot = tt.frustumPlanes;
-          dt = dt + 1 | 0 || 1;
-          const qt = et.blocks,
-            Dt = jt.XE(tt.activeCamera),
-            mt = Dt && !0;
-          if (mt) {
-            const et = tt.Jf().currentRenderPassId;
-            et !== Ct && (Ct = et, He())
+      let Gu = -1;
+      return uu.getActiveMeshCandidates = () => {
+        const ju = uu.frustumPlanes,
+          su = Eu._selectionContent;
+        su.reset(), (ju => {
+          const su = uu.frustumPlanes;
+          lu = lu + 1 | 0 || 1;
+          const Uu = Eu.blocks,
+            Zu = qu.NN(uu.activeCamera),
+            Xu = Zu && !0;
+          if (Xu) {
+            const Eu = uu.wO().currentRenderPassId;
+            Eu !== Gu && (Gu = Eu, qE())
           }
-          const Ht = je(),
-            Et = mt && !1;
-          qt.length > 0 && function(tt, et) {
-            for (let Vt = 0; Vt < 6; Vt++) {
-              const Ot = tt[Vt],
-                qt = Ot.normal;
-              et[4 * Vt] = qt.x, et[4 * Vt + 1] = qt.y, et[4 * Vt + 2] = qt.z, et[4 * Vt + 3] = Ot.d
+          const fu = lE(),
+            Nu = Xu && !1;
+          Uu.length > 0 && function(uu, Eu) {
+            for (let ju = 0; ju < 6; ju++) {
+              const su = uu[ju],
+                Uu = su.normal;
+              Eu[4 * ju] = Uu.x, Eu[4 * ju + 1] = Uu.y, Eu[4 * ju + 2] = Uu.z, Eu[4 * ju + 3] = su.d
             }
-          }(Ot, Nt);
-          const wt = Xt,
-            yt = Qt,
-            Mt = lt;
-          for (let tt = 0; tt < qt.length; tt++) {
-            const et = qt[tt];
-            if (!xt.e.IsInFrustum(et.tqt, Ot)) continue;
-            const Xt = et.entries;
+          }(su, Du);
+          const Yu = Cu,
+            hu = bu,
+            gu = cu;
+          for (let uu = 0; uu < Uu.length; uu++) {
+            const Eu = Uu[uu];
+            if (!Hu.e.IsInFrustum(Eu.vsu, su)) continue;
+            const Cu = Eu.entries;
             {
-              const tt = et._noaSlots,
-                Ot = et._noaStamps,
-                qt = et._noaTerrain;
-              for (let et = 0; et < Xt.length; et++) {
-                const Qt = tt[et];
-                if (yt[Qt] !== dt && (yt[Qt] = dt, Mt[Qt] = Ne(wt, 6 * Qt, Nt) ? 1 : 0), 0 === Mt[Qt]) continue;
-                const lt = Xt[et];
-                if (mt && Ot[et] === Ht) Et && 1 === qt[et] && st(lt) && 0, jt.see(lt, 1 === qt[et] ? Qt : -1);
-                else if (mt) {
-                  Ot[et] = Ht;
-                  const tt = !0 === lt.metadata[ee.l];
-                  qt[et] = tt ? 1 : 0;
-                  const Vt = Jt(lt, Qt, tt);
-                  !tt || Vt && Qe(lt) || (Ot[et] = 0)
-                } else Dt ? Jt(lt, Qt, !0 === lt.metadata[ee.l]) : Yt.g.prototype.push.call(Vt, lt)
+              const uu = Eu._noaSlots,
+                su = Eu._noaStamps,
+                Uu = Eu._noaTerrain;
+              for (let Eu = 0; Eu < Cu.length; Eu++) {
+                const bu = uu[Eu];
+                if (hu[bu] !== lu && (hu[bu] = lu, gu[bu] = hE(Yu, 6 * bu, Du) ? 1 : 0), 0 === gu[bu]) continue;
+                const cu = Cu[Eu];
+                if (Xu && su[Eu] === fu) Nu && 1 === Uu[Eu] && yu(cu) && 0, qu.see(cu, 1 === Uu[Eu] ? bu : -1);
+                else if (Xu) {
+                  su[Eu] = fu;
+                  const uu = !0 === cu.metadata[uE.k];
+                  Uu[Eu] = uu ? 1 : 0;
+                  const ju = eu(cu, bu, uu);
+                  !uu || ju && CE(cu) || (su[Eu] = 0)
+                } else Zu ? eu(cu, bu, !0 === cu.metadata[uE.k]) : tu.f.prototype.push.call(ju, cu)
               }
               continue
             }
           }
-          Dt && jt.finish(Vt, ft)
-        })(Ot), Ht.apply(Ot, tt.activeCamera);
-        const Dt = et.nOt;
-        for (let tt = 0; tt < Dt.length; tt++) {
-          const et = Dt[tt];
-          et.isEnabled() && Yt.g.prototype.push.call(Ot, et)
+          Zu && qu.finish(ju, Ou)
+        })(su), fu.apply(su, uu.activeCamera);
+        const Zu = Eu.msu;
+        for (let uu = 0; uu < Zu.length; uu++) {
+          const Eu = Zu[uu];
+          Eu.isEnabled() && tu.f.prototype.push.call(su, Eu)
         }
-        return qt(Ot, Vt), Ot
+        return Uu(su, ju), su
       }, {
-        eqt: () => jt.culled,
-        oOt: (tt, et) => {
-          const qt = Math.floor(et[0] / Dt),
-            dt = Math.floor(et[1] / Dt),
-            jt = Math.floor(et[2] / Dt),
-            Ht = `${qt}|${dt}|${jt}`;
-          let Xt = mt.get(Ht);
-          if (!Xt) {
-            const tt = [0, 0, 0];
-            Vt.Fet([qt * Dt - 1, dt * Dt - 1, jt * Dt - 1], null, tt), Xt = Object.assign(Ot(tt, Dt + 2), {
-              Vqt: Ht,
-              Oqt: 0,
+        Ksu: () => qu.culled,
+        hsu: (uu, Eu) => {
+          const Uu = Math.floor(Eu[0] / Zu),
+            lu = Math.floor(Eu[1] / Zu),
+            qu = Math.floor(Eu[2] / Zu),
+            fu = `${Uu}|${lu}|${qu}`;
+          let Cu = Xu.get(fu);
+          if (!Cu) {
+            const uu = [0, 0, 0];
+            ju.MEu([Uu * Zu - 1, lu * Zu - 1, qu * Zu - 1], null, uu), Cu = Object.assign(su(uu, Zu + 2), {
+              Vsu: fu,
+              rsu: 0,
               _selectionId: 0,
               _inFrustum: !1,
-              _noaSlot: Mt()
-            }), bt(Xt), Et[Xt._noaSlot] = (0, Bt.e)(qt, dt, jt), ft[3 * Xt._noaSlot] = qt, ft[3 * Xt._noaSlot + 1] = dt, ft[3 * Xt._noaSlot + 2] = jt, mt.set(Ht, Xt)
+              _noaSlot: gu()
+            }), Mu(Cu), Nu[Cu._noaSlot] = (0, xu.k)(Uu, lu, qu), Ou[3 * Cu._noaSlot] = Uu, Ou[3 * Cu._noaSlot + 1] = lu, Ou[3 * Cu._noaSlot + 2] = qu, Xu.set(fu, Cu)
           }
-          Xt.Oqt++, tt.metadata[pt.u] = Xt
+          Cu.rsu++, uu.metadata[Tu.w] = Cu
         },
-        wZ: tt => {
-          const et = tt.metadata[pt.u];
-          et && (et.Oqt--, et.Oqt <= 0 && (mt.delete(et.Vqt), yt.push(et._noaSlot)), tt.metadata[pt.u] = null)
+        rV: uu => {
+          const Eu = uu.metadata[Tu.w];
+          Eu && (Eu.rsu--, Eu.rsu <= 0 && (Xu.delete(Eu.Vsu), hu.push(Eu._noaSlot)), uu.metadata[Tu.w] = null)
         },
-        sOt: (tt, et) => {
-          const Vt = tt,
-            Ot = et.metadata[pt.u];
-          (Vt._noaSlots ??= []).push(Ot._noaSlot), (Vt._noaStamps ??= []).push(0), (Vt._noaTerrain ??= []).push(0), Vt.entries.push(et)
+        ksu: (uu, Eu) => {
+          const ju = uu,
+            su = Eu.metadata[Tu.w];
+          (ju._noaSlots ??= []).push(su._noaSlot), (ju._noaStamps ??= []).push(0), (ju._noaTerrain ??= []).push(0), ju.entries.push(Eu)
         },
-        removeEntry: (tt, et) => {
-          const Vt = tt,
-            Ot = Vt.entries,
-            qt = Ot.indexOf(et);
-          if (qt < 0) return;
-          const Dt = Vt._noaSlots,
-            mt = Vt._noaStamps,
-            dt = Vt._noaTerrain,
-            jt = Ot.length - 1;
-          Ot[qt] = Ot[jt], Dt[qt] = Dt[jt], mt[qt] = mt[jt], dt[qt] = dt[jt], Ot.pop(), Dt.pop(), mt.pop(), dt.pop()
+        removeEntry: (uu, Eu) => {
+          const ju = uu,
+            su = ju.entries,
+            Uu = su.indexOf(Eu);
+          if (Uu < 0) return;
+          const Zu = ju._noaSlots,
+            Xu = ju._noaStamps,
+            lu = ju._noaTerrain,
+            qu = su.length - 1;
+          su[Uu] = su[qu], Zu[Uu] = Zu[qu], Xu[Uu] = Xu[qu], lu[Uu] = lu[qu], su.pop(), Zu.pop(), Xu.pop(), lu.pop()
         },
-        K9: tt => {
-          for (const et of mt.values()) {
-            et.YOt.qqt(tt), et.iOt.qqt(tt);
-            for (const Vt of et.tqt) Vt.qqt(tt);
-            bt(et)
+        I6: uu => {
+          for (const Eu of Xu.values()) {
+            Eu.wsu.Qsu(uu), Eu.Gsu.Qsu(uu);
+            for (const ju of Eu.vsu) ju.Qsu(uu);
+            Mu(Eu)
           }
         }
       }
     }
 
-    function ye(tt, et) {
-      return et.set(tt), et
+    function YE(uu, Eu) {
+      return Eu.set(uu), Eu
     }
 
-    function Ne(tt, et, Vt) {
-      const Ot = tt[et],
-        qt = tt[et + 1],
-        Dt = tt[et + 2],
-        mt = tt[et + 3],
-        dt = tt[et + 4],
-        jt = tt[et + 5];
-      for (let Ht = 0; Ht < 24; Ht += 4) {
-        const tt = Vt[Ht],
-          et = Vt[Ht + 1],
-          Xt = Vt[Ht + 2];
-        if (!(tt * (tt >= 0 ? mt : Ot) + et * (et >= 0 ? dt : qt) + Xt * (Xt >= 0 ? jt : Dt) + Vt[Ht + 3] >= 0)) return !1
+    function hE(uu, Eu, ju) {
+      const su = uu[Eu],
+        Uu = uu[Eu + 1],
+        Zu = uu[Eu + 2],
+        Xu = uu[Eu + 3],
+        lu = uu[Eu + 4],
+        qu = uu[Eu + 5];
+      for (let fu = 0; fu < 24; fu += 4) {
+        const uu = ju[fu],
+          Eu = ju[fu + 1],
+          Cu = ju[fu + 2];
+        if (!(uu * (uu >= 0 ? Xu : su) + Eu * (Eu >= 0 ? lu : Uu) + Cu * (Cu >= 0 ? qu : Zu) + ju[fu + 3] >= 0)) return !1
       }
       return !0
     }
-    var ae = Vt(38024);
-    class Me {
-      constructor(tt, et) {
-        var Vt = tt.Fw;
-        Vt.KOt(new it.d(Vt));
-        var Ot = new Ut.e(jt);
-        Vt.mqt = Ot, Ot.blocks = [];
-        var qt, Dt = {},
-          dt = [];
-        this.textPlanes = dt, this.eqt = () => qt.eqt(), this.K9 = tt => {
-          Xt(Ot, tt), qt.K9(tt)
-        }, this.oOt = (et, Vt, mt) => {
-          if (!et.metadata) throw new Error("Mesh should have mesh.metadata property");
-          if (!et.metadata[pt.s] && !et.metadata[pt.m]) {
-            if (!Vt) {
-              var jt = Ot.nOt;
-              if (et.metadata[pt.z] && !et.parent) {
-                jt = dt;
-                var Xt = et.fL().jqt;
-                et.metadata[pt.C] = Xt.center.length() + Xt.radius, et.Cf = !0
+    var DE = ju(38159);
+    class gE {
+      constructor(uu, Eu) {
+        var ju = uu.vY;
+        ju.usu(new Lu.e(ju));
+        var su = new Fu.c(qu);
+        ju.Wsu = su, su.blocks = [];
+        var Uu, Zu = {},
+          lu = [];
+        this.textPlanes = lu, this.Ksu = () => Uu.Ksu(), this.I6 = uu => {
+          Cu(su, uu), Uu.I6(uu)
+        }, this.hsu = (Eu, ju, Xu) => {
+          if (!Eu.metadata) throw new Error("Mesh should have mesh.metadata property");
+          if (!Eu.metadata[Tu.v] && !Eu.metadata[Tu.p]) {
+            if (!ju) {
+              var qu = su.msu;
+              if (Eu.metadata[Tu.B] && !Eu.parent) {
+                qu = lu;
+                var Cu = Eu.EW().Isu;
+                Eu.metadata[Tu.F] = Cu.center.length() + Cu.radius, Eu.JO = !0
               }
-              return jt.push(et), et.metadata[pt.i] = jt, void(et.metadata[pt.m] = !0)
+              return qu.push(Eu), Eu.metadata[Tu.j] = qu, void(Eu.metadata[Tu.p] = !0)
             }
-            var lt = Math.floor(mt[0] / Ht),
-              Et = Math.floor(mt[1] / Ht),
-              ft = Math.floor(mt[2] / Ht),
-              wt = lt + "|" + Et + "|" + ft,
-              yt = Dt[wt];
-            if (!yt) {
-              var Nt = [lt * Ht, Et * Ht, ft * Ht],
-                Mt = [0, 0, 0];
-              tt.ql.Fet(Nt, null, Mt), yt = Qt(Mt, Ht), Ot.blocks.push(yt), Dt[wt] = yt, yt.Vqt = wt
+            var cu = Math.floor(Xu[0] / fu),
+              Nu = Math.floor(Xu[1] / fu),
+              Ou = Math.floor(Xu[2] / fu),
+              Yu = cu + "|" + Nu + "|" + Ou,
+              hu = Zu[Yu];
+            if (!hu) {
+              var Du = [cu * fu, Nu * fu, Ou * fu],
+                gu = [0, 0, 0];
+              uu.Uc.MEu(Du, null, gu), hu = bu(gu, fu), su.blocks.push(hu), Zu[Yu] = hu, hu.Vsu = Yu
             }
-            qt.oOt(et, mt), qt.sOt(yt, et), yt.Oqt = (yt.Oqt || 0) + 1, et.metadata[pt.s] = yt, et.metadata[pt.n] = !0, et.Cf = !0
+            Uu.hsu(Eu, Xu), Uu.ksu(hu, Eu), hu.rsu = (hu.rsu || 0) + 1, Eu.metadata[Tu.v] = hu, Eu.metadata[Tu.q] = !0, Eu.JO = !0
           }
-        }, this.wZ = tt => {
-          if (tt.metadata) {
-            tt.metadata[pt.m] && ((0, Bt.h)(tt.metadata[pt.i], tt), tt.metadata[pt.m] = !1), tt.metadata[pt.i] === dt && (tt.Cf = !1), tt.metadata[pt.i] = void 0, tt.metadata[pt.C] = void 0;
-            var et = tt.metadata[pt.s];
-            et && et.entries && (tt.metadata[pt.n] && qt.removeEntry(et, tt), et.Oqt--, et.Oqt <= 0 && (delete Dt[et.Vqt], (0, Bt.h)(Ot.blocks, et))), qt.wZ(tt), tt.metadata[pt.s] = null, tt.metadata[pt.n] = !1
+        }, this.rV = uu => {
+          if (uu.metadata) {
+            uu.metadata[Tu.p] && ((0, xu.p)(uu.metadata[Tu.j], uu), uu.metadata[Tu.p] = !1), uu.metadata[Tu.j] === lu && (uu.JO = !1), uu.metadata[Tu.j] = void 0, uu.metadata[Tu.F] = void 0;
+            var Eu = uu.metadata[Tu.v];
+            Eu && Eu.entries && (uu.metadata[Tu.q] && Uu.removeEntry(Eu, uu), Eu.rsu--, Eu.rsu <= 0 && (delete Zu[Eu.Vsu], (0, xu.p)(su.blocks, Eu))), Uu.rV(uu), uu.metadata[Tu.v] = null, uu.metadata[Tu.q] = !1
           }
-        }, this.A_ = function(tt) {
-          let et = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          if (tt.metadata[pt.s]) {
-            if (tt.metadata[pt.n] === et) return;
-            var Vt = tt.metadata[pt.s];
-            Vt && Vt.entries && (et ? qt.sOt(Vt, tt) : qt.removeEntry(Vt, tt)), tt.metadata[pt.n] = et
+        }, this.L_ = function(uu) {
+          let Eu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          if (uu.metadata[Tu.v]) {
+            if (uu.metadata[Tu.q] === Eu) return;
+            var ju = uu.metadata[Tu.v];
+            ju && ju.entries && (Eu ? Uu.ksu(ju, uu) : Uu.removeEntry(ju, uu)), uu.metadata[Tu.q] = Eu
           } else {
-            if (tt.metadata[pt.m] === et) return;
-            var Dt = tt.metadata[pt.i] || Ot.nOt;
-            et ? Dt.push(tt) : (0, Bt.h)(Dt, tt), tt.metadata[pt.m] = et
+            if (uu.metadata[Tu.p] === Eu) return;
+            var Zu = uu.metadata[Tu.j] || su.msu;
+            Eu ? Zu.push(uu) : (0, xu.p)(Zu, uu), uu.metadata[Tu.p] = Eu
           }
         };
-        var jt = () => {},
-          Ht = et * tt.ql.sQ.vtt,
-          Xt = (tt, et) => {
-            tt.blocks.forEach((tt => {
-              tt.YOt.qqt(et), tt.iOt.qqt(et), tt.tqt.forEach((tt => tt.qqt(et))), tt.blocks && Xt(tt, et)
+        var qu = () => {},
+          fu = Eu * uu.Uc.zb.duu,
+          Cu = (uu, Eu) => {
+            uu.blocks.forEach((uu => {
+              uu.wsu.Qsu(Eu), uu.Gsu.Qsu(Eu), uu.vsu.forEach((uu => uu.Qsu(Eu))), uu.blocks && Cu(uu, Eu)
             }))
           },
-          Qt = (tt, et) => {
-            var Vt = new mt.uf(tt[0], tt[1], tt[2]),
-              Ot = new mt.uf(tt[0] + et, tt[1] + et, tt[2] + et);
-            return new At.e(Vt, Ot, void 0, void 0, void 0, jt)
+          bu = (uu, Eu) => {
+            var ju = new Xu.dO(uu[0], uu[1], uu[2]),
+              su = new Xu.dO(uu[0] + Eu, uu[1] + Eu, uu[2] + Eu);
+            return new Bu.d(ju, su, void 0, void 0, void 0, qu)
           };
-        qt = we(Vt, Ot, tt.ql, Qt, ((tt, et) => {
-          for (var Vt = 0; Vt < dt.length; Vt++) {
-            var Ot = dt[Vt];
-            Ot.isEnabled(!1) && ((0, ae.d)(Ot, et) && Yt.g.prototype.push.call(tt, Ot))
+        Uu = OE(ju, su, uu.Uc, bu, ((uu, Eu) => {
+          for (var ju = 0; ju < lu.length; ju++) {
+            var su = lu[ju];
+            su.isEnabled(!1) && ((0, DE.e)(su, Eu) && tu.f.prototype.push.call(uu, su))
           }
         }))
       }
     }
 
-    function be(tt) {
+    function ME(uu) {
       const {
-        holderPosition: et,
-        holderRotation: Vt,
-        lT: Ot,
-        fov: qt,
-        near: Dt,
-        far: mt
-      } = tt.model.XT, dt = tt.wqt;
-      dt.position.W9(et[0], et[1], et[2]), dt.rotation.W9(Vt[0], Vt[1], Vt[2]);
-      const jt = tt.camera;
-      jt.position.W9(Ot[0], Ot[1], Ot[2]), jt.fov = qt, jt.minZ = Dt, jt.maxZ = mt
+        holderPosition: Eu,
+        holderRotation: ju,
+        jR: su,
+        fov: Uu,
+        near: Zu,
+        far: Xu
+      } = uu.model.uR, lu = uu.Asu;
+      lu.position.T6(Eu[0], Eu[1], Eu[2]), lu.rotation.T6(ju[0], ju[1], ju[2]);
+      const qu = uu.camera;
+      qu.position.T6(su[0], su[1], su[2]), qu.fov = Uu, qu.minZ = Zu, qu.maxZ = Xu
     }
 
-    function Je(tt) {
-      const et = tt.Jf(),
-        Vt = et,
-        Ot = Vt._gl;
-      if (!Ot || Vt.Vw < 2 || et.LOt || Ot.getParameter(Ot.DEPTH_BITS) < 24) return !1;
-      const qt = tt._renderingManager,
-        Dt = qt.getRenderingGroup(-1),
-        mt = qt.getRenderingGroup(0),
-        dt = kt.d.prototype.render;
-      return Dt.render = function(tt, et, Vt, Ot, qt, Dt, jt, Ht, Xt) {
-        (tt || mt._empty) && dt.call(this, tt, et, Vt, Ot, qt, Dt, jt, Ht, Xt)
-      }, mt.render = function(tt, Vt, qt, mt) {
-        let jt = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          Ht = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-          Qt = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
-          lt = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7],
-          Et = arguments.length > 8 ? arguments[8] : void 0;
-        tt ? dt.call(this, tt, Vt, qt, mt, jt, Ht, Qt, lt, Et) : (et.setAlphaMode(Xt.e.ALPHA_DISABLE), dt.call(this, null, !1, !1, mt, jt, Ht, Qt, !1), Dt._empty || (Ot.depthRange(1, 1), dt.call(Dt, null, Vt, qt, mt, jt, Ht, Qt, lt, Et), Ot.depthRange(0, 1)), dt.call(this, null, Vt, qt, mt, !1, !1, !1, lt, Et))
+    function eE(uu) {
+      const Eu = uu.wO(),
+        ju = Eu,
+        su = ju._gl;
+      if (!su || ju.uY < 2 || Eu.bsu || su.getParameter(su.DEPTH_BITS) < 24) return !1;
+      const Uu = uu._renderingManager,
+        Zu = Uu.getRenderingGroup(-1),
+        Xu = Uu.getRenderingGroup(0),
+        lu = Qu.d.prototype.render;
+      return Zu.render = function(uu, Eu, ju, su, Uu, Zu, qu, fu, Cu) {
+        (uu || Xu._empty) && lu.call(this, uu, Eu, ju, su, Uu, Zu, qu, fu, Cu)
+      }, Xu.render = function(uu, ju, Uu, Xu) {
+        let qu = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          fu = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+          bu = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
+          cu = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7],
+          Nu = arguments.length > 8 ? arguments[8] : void 0;
+        uu ? lu.call(this, uu, ju, Uu, Xu, qu, fu, bu, cu, Nu) : (Eu.setAlphaMode(Cu.e.ALPHA_DISABLE), lu.call(this, null, !1, !1, Xu, qu, fu, bu, !1), Zu._empty || (su.depthRange(1, 1), lu.call(Zu, null, ju, Uu, Xu, qu, fu, bu, cu, Nu), su.depthRange(0, 1)), lu.call(this, null, ju, Uu, Xu, !1, !1, !1, cu, Nu))
       }, !0
     }
 
-    function Ce(tt, et) {
-      return [et, rt.f].map(((et, Vt) => {
-        const Ot = new qt.d("light", mt.uf.FromArray(et), tt);
-        return Ot.diffuse = Dt.Color3.FromArray([1, 1, 1]), Ot.specular = Dt.Color3.FromArray([1, 1, 1]), Ot.intensity = rt.d[Vt], Ot
+    function GE(uu, Eu) {
+      return [Eu, Iu.e].map(((Eu, ju) => {
+        const su = new Uu.b("light", Xu.dO.FromArray(Eu), uu);
+        return su.diffuse = Zu.Color3.FromArray([1, 1, 1]), su.specular = Zu.Color3.FromArray([1, 1, 1]), su.intensity = Iu.c[ju], su
       }))
     }
-    class ue extends jt.b {
+    class pE extends qu.c {
       constructor() {
         super(...arguments), this.heldTexture = null
       }
       get texture() {
         return this.heldTexture
       }
-      set texture(tt) {
-        var et;
-        this.heldTexture = tt, this.particleTexture = null !== (et = null === tt || void 0 === tt ? void 0 : tt.mirror) && void 0 !== et ? et : null
+      set texture(uu) {
+        var Eu;
+        this.heldTexture = uu, this.particleTexture = null !== (Eu = null === uu || void 0 === uu ? void 0 : uu.mirror) && void 0 !== Eu ? Eu : null
       }
       isEmitting() {
         return this.isStarted() && !this._stopped
       }
       dispose() {
-        let tt = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
-          et = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          Vt = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        tt && (this.particleTexture = null, (0, Ht.H)(this.heldTexture), this.heldTexture = null), super.dispose(tt, et, Vt)
+        let uu = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
+          Eu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          ju = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        uu && (this.particleTexture = null, (0, fu.D)(this.heldTexture), this.heldTexture = null), super.dispose(uu, Eu, ju)
       }
     }
-    const Ke = Ot.e.Zero();
-    const he = {
-      nVt: function(tt, et) {
-        return new Rt(tt, et.xVt, {
-          preserveDrawingBuffer: et.preserveDrawingBuffer,
+    const wE = su.e.Zero();
+    const JE = {
+      oju: function(uu, Eu) {
+        return new ku(uu, Eu.Jju, {
+          preserveDrawingBuffer: Eu.preserveDrawingBuffer,
           powerPreference: "high-performance",
           alpha: !1,
           stencil: !1
         })
       },
-      aqt: function(tt, et) {
-        ! function(tt, et, Vt) {
-          const Ot = new zt.c(tt.engine);
-          tt.Fw = Ot, Ot.detachControl(), Ot.autoClear = !1, Gt.b.MIN_RENDERINGGROUPS = -1;
-          for (let Dt = Gt.b.MIN_RENDERINGGROUPS; Dt <= 1; Dt++) Ot.setRenderingOrder(Dt, kt.d.PainterSortCompare, kt.d.PainterSortCompare, kt.d.PainterSortCompare);
-          Ot.setRenderingAutoClearDepthStencil(0, !1), Ft.e.Enabled = !1, tt.lqt = new Me(tt, Math.round(et.Eqt)), tt.wqt = new Lt.c("camHolder", Ot), tt.camera = new Zt.c("camera", new mt.uf(0, 0, 0), Ot), tt.camera.parent = tt.wqt, be(tt), (0, rt.i)(tt, ((tt, et, Vt) => (0, ot.k)(et, Vt, tt.Fw))), Ot.clearColor = Dt.e.FromArray(et.clearColor), Ot.ambientColor = Dt.Color3.FromArray(et.ambientColor);
-          const qt = Vt(Ot, et.Nqt);
-          Ot.onNewLightAddedObservable.add((tt => {
-            qt.some((et => et === tt)) || console.error(`Light "${tt.name}" was added to the scene after startup; terrain, block models and Lite will ignore it. Add it in addNoaLights (renderingCamera.ts) and addBabylonLights (babylonBackend.ts).`)
-          })), Ot.skipPointerMovePicking = !0
-        }(tt, et, Ce), Je(tt.Fw)
+      zsu: function(uu, Eu) {
+        ! function(uu, Eu, ju) {
+          const su = new Wu.b(uu.engine);
+          uu.vY = su, su.detachControl(), su.autoClear = !1, iu.c.MIN_RENDERINGGROUPS = -1;
+          for (let Zu = iu.c.MIN_RENDERINGGROUPS; Zu <= 1; Zu++) su.setRenderingOrder(Zu, Qu.d.PainterSortCompare, Qu.d.PainterSortCompare, Qu.d.PainterSortCompare);
+          su.setRenderingAutoClearDepthStencil(0, !1), ru.b.Enabled = !1, uu.tsu = new gE(uu, Math.round(Eu.Tsu)), uu.Asu = new Vu.e("camHolder", su), uu.camera = new Ku.d("camera", new Xu.dO(0, 0, 0), su), uu.camera.parent = uu.Asu, ME(uu), (0, Iu.h)(uu, ((uu, Eu, ju) => (0, Su.k)(Eu, ju, uu.vY))), su.clearColor = Zu.b.FromArray(Eu.clearColor), su.ambientColor = Zu.Color3.FromArray(Eu.ambientColor);
+          const Uu = ju(su, Eu.ysu);
+          su.onNewLightAddedObservable.add((uu => {
+            Uu.some((Eu => Eu === uu)) || console.error(`Light "${uu.name}" was added to the scene after startup; terrain, block models and Lite will ignore it. Add it in addNoaLights (renderingCamera.ts) and addBabylonLights (babylonBackend.ts).`)
+          })), su.skipPointerMovePicking = !0
+        }(uu, Eu, GE), eE(uu.vY)
       },
-      fqt: be,
-      setBabylonFog: function(tt, et, Vt, Ot) {
-        const qt = tt.Fw;
-        qt.fogMode = 3, qt.fogStart = et, qt.fogEnd = Vt, qt.fogColor.set(Ot[0], Ot[1], Ot[2])
+      Hsu: ME,
+      setBabylonFog: function(uu, Eu, ju, su) {
+        const Uu = uu.vY;
+        Uu.fogMode = 3, Uu.fogStart = Eu, Uu.fogEnd = ju, Uu.fogColor.set(su[0], su[1], su[2])
       },
-      bqt: function(tt, et, Vt) {
-        return tt.engine.Vw >= 2 && (tt.Jqt || (tt.Jqt = new St(tt.Fw, tt.Cqt)), !tt.Jqt.failed) ? tt.Jqt.xZ(et, Vt) : new ue(et, Vt, tt.Fw)
+      uUu: function(uu, Eu, ju) {
+        return uu.engine.uY >= 2 && (uu.EUu || (uu.EUu = new Pu(uu.vY, uu.jUu)), !uu.EUu.failed) ? uu.EUu.Kr(Eu, ju) : new pE(Eu, ju, uu.vY)
       },
-      Kqt: function(tt, et) {
-        tt.Fw.PJ.forEach((Vt => {
-          if (Vt instanceof vt) return void Vt.K9(et, tt.ql.bl);
-          const Ot = Vt;
-          if (Ot.emitter.getConnectedParticleSystems)
-            for (const tt of Ot._particles) tt.position.set(tt.position.x - et[0], tt.position.y - et[1], tt.position.z - et[2]);
+      UUu: function(uu, Eu) {
+        uu.vY.WG.forEach((ju => {
+          if (ju instanceof du) return void ju.I6(Eu, uu.Uc.ec);
+          const su = ju;
+          if (su.emitter.getConnectedParticleSystems)
+            for (const uu of su._particles) uu.position.set(uu.position.x - Eu[0], uu.position.y - Eu[1], uu.position.z - Eu[2]);
           else {
-            if (!Ot.worldOffset) throw new Error("Particle system has no world offset");
-            Ot.worldOffset.x = -tt.ql.bl[0], Ot.worldOffset.y = -tt.ql.bl[1], Ot.worldOffset.z = -tt.ql.bl[2]
+            if (!su.worldOffset) throw new Error("Particle system has no world offset");
+            su.worldOffset.x = -uu.Uc.ec[0], su.worldOffset.y = -uu.Uc.ec[1], su.worldOffset.z = -uu.Uc.ec[2]
           }
         }))
       },
-      linesFromArrays: function(tt, et, Vt) {
-        const Ot = new dt.c(et, tt.Fw, null, void 0, void 0, !1);
-        return (0, ot.h)(et, Vt, tt.Fw, Ot), Ot
+      linesFromArrays: function(uu, Eu, ju) {
+        const su = new lu.e(Eu, uu.vY, null, void 0, void 0, !1);
+        return (0, Su.h)(Eu, ju, uu.vY, su), su
       },
-      kw: Xe,
-      uqt: function(tt, et) {
-        return Ke.origin.rK(et.origin), Ke.direction.rK(et.direction), Ke.length = et.length, Ke.epsilon = et.epsilon, Ke.uqt(tt, !1, void 0, !1, void 0, !0).pickedPoint
+      KY: fE,
+      sUu: function(uu, Eu) {
+        return wE.origin.yJ(Eu.origin), wE.direction.yJ(Eu.direction), wE.length = Eu.length, wE.epsilon = Eu.epsilon, wE.sUu(uu, !1, void 0, !1, void 0, !0).pickedPoint
       }
     }
   },
-  41332: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => Ut,
-      d: () => Mt,
-      f: () => xt
+  41346: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => Fu,
+      g: () => gu,
+      k: () => Hu
     });
-    var Ot = Vt(40452),
-      qt = Vt(41339),
-      Dt = Vt(41394),
-      mt = Vt(41348),
-      dt = Vt(38068),
-      jt = Vt(38080),
-      Ht = Vt(38085),
-      Xt = Vt(38091),
-      Qt = Vt(37461),
-      lt = Vt(37467),
-      Et = Vt(41355),
-      ft = Vt(37448),
-      wt = Vt(37454),
-      yt = Vt(37435);
+    var su = ju(40514),
+      Uu = ju(41353),
+      Zu = ju(41400),
+      Xu = ju(41360),
+      lu = ju(38209),
+      qu = ju(38218),
+      fu = ju(38220),
+      Cu = ju(38226),
+      bu = ju(37621),
+      cu = ju(37630),
+      Nu = ju(41364),
+      Ou = ju(37595),
+      Yu = ju(37603),
+      hu = ju(37582);
 
-    function Nt(tt, et) {
-      return Object.assign((function(tt, Vt, Ot, qt) {
-        return et(this.featureState, tt, Vt, Ot, qt)
+    function Du(uu, Eu) {
+      return Object.assign((function(uu, ju, su, Uu) {
+        return Eu(this.featureState, uu, ju, su, Uu)
       }), {
-        pE: tt
+        yN: uu
       })
     }
 
-    function Mt(tt) {
-      const et = class extends Et.d {
-          constructor(et, Vt) {
-            const Ot = (0, wt.X)(et),
-              qt = Ot && (0, wt.s)(Ot, tt.name);
-            for (var Dt = arguments.length, mt = new Array(Dt > 2 ? Dt - 2 : 0), dt = 2; dt < Dt; dt++) mt[dt - 2] = arguments[dt];
-            super(et, tt.name, tt.priority, qt ? qt.defines : tt.defines(...mt), !1), this.featureState = void 0, this.featureState = Vt, this._pluginManager._addPlugin(this), this._enable(!0), (0, wt.v)(this._material, tt, this.featureState, this._pluginDefineNames)
+    function gu(uu) {
+      const Eu = class extends Nu.e {
+          constructor(Eu, ju) {
+            const su = (0, Yu.$)(Eu),
+              Uu = su && (0, Yu.z)(su, uu.name);
+            for (var Zu = arguments.length, Xu = new Array(Zu > 2 ? Zu - 2 : 0), lu = 2; lu < Zu; lu++) Xu[lu - 2] = arguments[lu];
+            super(Eu, uu.name, uu.priority, Uu ? Uu.defines : uu.defines(...Xu), !1), this.featureState = void 0, this.featureState = ju, this._pluginManager._addPlugin(this), this._enable(!0), (0, Yu.D)(this._material, uu, this.featureState, this._pluginDefineNames)
           }
           getClassName() {
-            return tt.className
+            return uu.className
           }
-          isCompatible(tt) {
-            return tt === yt.c.GLSL || tt === yt.c.WGSL
+          isCompatible(uu) {
+            return uu === hu.c.GLSL || uu === hu.c.WGSL
           }
         },
-        Vt = (0, ft.g)(tt);
-      for (const [Ot, qt] of Object.entries(ft.c)) {
-        const Dt = tt[Ot];
-        if (Dt) {
-          const tt = Vt[Ot];
-          Object.defineProperty(et.prototype, qt, {
-            value: Nt(Dt, tt),
+        ju = (0, Ou.h)(uu);
+      for (const [su, Uu] of Object.entries(Ou.b)) {
+        const Zu = uu[su];
+        if (Zu) {
+          const uu = ju[su];
+          Object.defineProperty(Eu.prototype, Uu, {
+            value: Du(Zu, uu),
             writable: !0,
             configurable: !0
           })
         }
       }
-      return et
+      return Eu
     }
-    class bt extends(Mt(dt.e)) {}
-    var Jt = Vt(40023),
-      Ct = Vt(41361),
-      ut = Vt(41370);
+    class Mu extends(gu(lu.c)) {}
+    var eu = ju(40092),
+      Gu = ju(41366),
+      pu = ju(41373);
 
-    function Kt(tt, et, Vt) {
-      return (0, ut.e)(Vt, et.urls, (() => async function(tt, et, Vt) {
+    function wu(uu, Eu, ju) {
+      return (0, pu.g)(ju, Eu.urls, (() => async function(uu, Eu, ju) {
         const {
-          width: Ot
-        } = tt[0].getSize(), qt = tt.map(((tt, Vt) => {
-          var qt;
-          const Dt = Math.round(tt.getSize().height / Ot),
-            mt = null === et || void 0 === et ? void 0 : et[Vt];
+          width: su
+        } = uu[0].getSize(), Uu = uu.map(((uu, ju) => {
+          var Uu;
+          const Zu = Math.round(uu.getSize().height / su),
+            Xu = null === Eu || void 0 === Eu ? void 0 : Eu[ju];
           return {
-            pixels: mt && mt.byteLength === Ot * Ot * Dt * 4 ? mt : null !== (qt = ht.get(tt.getInternalTexture())) && void 0 !== qt ? qt : tt._readPixelsSync(),
-            layers: Dt
+            pixels: Xu && Xu.byteLength === su * su * Zu * 4 ? Xu : null !== (Uu = Ju.get(uu.getInternalTexture())) && void 0 !== Uu ? Uu : uu._readPixelsSync(),
+            layers: Zu
           }
-        })), Dt = Vt.Jf().getCaps().texture2DArrayMaxLayerCount, dt = (0, ut.d)(qt, Ot, Dt).map((tt => {
+        })), Zu = ju.wO().getCaps().texture2DArrayMaxLayerCount, lu = (0, pu.e)(Uu, su, Zu).map((uu => {
           let {
-            pixels: et,
-            layers: qt
-          } = tt;
+            pixels: Eu,
+            layers: Uu
+          } = uu;
           return {
-            atlas: new Ct.c(et, Ot, Ot, qt, Jt.e.TEXTUREFORMAT_RGBA, Vt, !0, !1, mt.b.NEAREST_NEAREST_MIPLINEAR),
-            layers: qt
+            atlas: new Gu.d(Eu, su, su, Uu, eu.c.TEXTUREFORMAT_RGBA, ju, !0, !1, Xu.c.NEAREST_NEAREST_MIPLINEAR),
+            layers: Uu
           }
         }));
-        return tt.forEach(((tt, et) => {
-          const Ot = tt.getInternalTexture();
-          ht.has(Ot) || (! function(tt, et) {
-            const Vt = et.createRawTexture(new Uint8Array(4), 1, 1, Jt.e.TEXTUREFORMAT_RGBA, !1, !1, mt.b.NEAREST_SAMPLINGMODE);
-            tt._hardwareTexture.release(), et.unbindAllTextures(), Vt._swapAndDie(tt, !1)
-          }(Ot, Vt.Jf()), ht.set(Ot, qt[et].pixels))
-        })), dt
-      }(tt, et.pixels, Vt)))
+        return uu.forEach(((uu, Eu) => {
+          const su = uu.getInternalTexture();
+          Ju.has(su) || (! function(uu, Eu) {
+            const ju = Eu.createRawTexture(new Uint8Array(4), 1, 1, eu.c.TEXTUREFORMAT_RGBA, !1, !1, Xu.c.NEAREST_SAMPLINGMODE);
+            uu._hardwareTexture.release(), Eu.unbindAllTextures(), ju._swapAndDie(uu, !1)
+          }(su, ju.wO()), Ju.set(su, Uu[Eu].pixels))
+        })), lu
+      }(uu, Eu.pixels, ju)))
     }
-    const ht = new WeakMap;
-    var vt = Vt(38100);
-    class Wt extends(Mt(jt.j)) {
-      constructor(tt, et) {
-        super(tt, et), this.loaded = new Set, this.mirrors = void 0, this.mirrors = et.textures.map((tt => tt.mirror)), this.mirrors.forEach(((tt, et) => {
-          tt.onLoadObservable.add((tt => {
-            this.setTextureArrayData(tt, et).catch((tt => {
-              console.error(`Failed to build the texture arrays, at atlas ${et}`, tt)
+    const Ju = new WeakMap;
+    var du = ju(38232);
+    class au extends(gu(qu.h)) {
+      constructor(uu, Eu) {
+        super(uu, Eu), this.loaded = new Set, this.mirrors = void 0, this.mirrors = Eu.textures.map((uu => uu.mirror)), this.mirrors.forEach(((uu, Eu) => {
+          uu.onLoadObservable.add((uu => {
+            this.setTextureArrayData(uu, Eu).catch((uu => {
+              console.error(`Failed to build the texture arrays, at atlas ${Eu}`, uu)
             }))
           }))
-        })), (0, vt.m)(et, tt.shaderLanguage)
+        })), (0, du.i)(Eu, uu.shaderLanguage)
       }
-      async setTextureArrayData(tt, et) {
-        const Vt = this.featureState,
+      async setTextureArrayData(uu, Eu) {
+        const ju = this.featureState,
           {
-            width: Ot,
-            height: qt
-          } = tt.getSize(),
-          Dt = this._material.shaderLanguage;
-        if (!Vt.useWebGL2) return void(0, vt.g)(this._material, Vt, et, Ot, Math.round(qt / Ot), Dt);
-        if (this.loaded.add(et), this.loaded.size < this.mirrors.length) return;
-        const mt = await Kt(this.mirrors, Vt.sources, this._material.vI());
-        (0, vt.e)(this._material, Vt, mt, Ot, Dt)
+            width: su,
+            height: Uu
+          } = uu.getSize(),
+          Zu = this._material.shaderLanguage;
+        if (!ju.useWebGL2) return void(0, du.e)(this._material, ju, Eu, su, Math.round(Uu / su), Zu);
+        if (this.loaded.add(Eu), this.loaded.size < this.mirrors.length) return;
+        const Xu = await wu(this.mirrors, ju.sources, this._material.hV());
+        (0, du.b)(this._material, ju, Xu, su, Zu)
       }
     }
-    var St = Vt(41374),
-      ct = Vt(40490),
-      Rt = Vt(37331),
-      It = Vt(41379),
-      Pt = Vt(40608),
-      Zt = Vt(40476),
-      Lt = Vt(41312),
-      Ft = Vt(37846),
-      kt = Vt(41387);
-    class Gt extends St.b {
+    var Pu = ju(41378),
+      ou = ju(40574),
+      ku = ju(37488),
+      mu = ju(41387),
+      vu = ju(40668),
+      Ku = ju(40556),
+      Vu = ju(41329),
+      ru = ju(37969),
+      Qu = ju(41394);
+    class iu extends Pu.d {
       getData() {
         return null
       }
@@ -857,464 +857,464 @@ export const modules = {
         super._rebuild()
       }
     }
-    const zt = {
-      Mesh: It.b,
-      TransformNode: Lt.c,
-      mf: St.b,
-      VertexBuffer: St.e,
-      BoundingInfo: ct.c,
-      uf: Rt.uf,
-      ArenaBuffer: Gt,
-      SubMesh: Zt.d,
-      VertexData: Pt.d,
-      MirroredGeometry: kt.e,
-      meshFromArrays: kt.h,
-      plainMeshFromArrays: kt.k
+    const Wu = {
+      Mesh: mu.d,
+      TransformNode: Vu.e,
+      qO: Pu.d,
+      VertexBuffer: Pu.e,
+      BoundingInfo: ou.c,
+      dO: ku.dO,
+      ArenaBuffer: iu,
+      SubMesh: Ku.e,
+      VertexData: vu.b,
+      MirroredGeometry: Qu.e,
+      meshFromArrays: Qu.h,
+      plainMeshFromArrays: Qu.k
     };
-    (0, Ft.g)(zt);
-    var ot = Vt(37670);
-    class rt extends(Mt(Xt.i)) {
-      constructor(tt, et) {
-        if (super(tt, et), tt instanceof Ot.StandardMaterial && et.dirLightCount > 0) {
-          const et = tt,
-            Vt = et._blockDirtyMechanism;
-          et._blockDirtyMechanism = !0, tt.disableLighting = !0, et._blockDirtyMechanism = Vt;
-          const Ot = (0, wt.X)(tt);
-          Ot && (Ot.disableLighting = !0, (0, wt.U)(Ot))
-        }(0, ot.j)(tt)
+    (0, ru.d)(Wu);
+    var Su = ju(37816);
+    class Iu extends(gu(Cu.h)) {
+      constructor(uu, Eu) {
+        if (super(uu, Eu), uu instanceof su.StandardMaterial && Eu.dirLightCount > 0) {
+          const Eu = uu,
+            ju = Eu._blockDirtyMechanism;
+          Eu._blockDirtyMechanism = !0, uu.disableLighting = !0, Eu._blockDirtyMechanism = ju;
+          const su = (0, Yu.$)(uu);
+          su && (su.disableLighting = !0, (0, Yu.Z)(su))
+        }(0, Su.h)(uu)
       }
-      dispose(tt) {
-        (0, ot.m)(this._material), super.dispose(tt)
+      dispose(uu) {
+        (0, Su.k)(this._material), super.dispose(uu)
       }
     }
 
-    function Ut(tt, et) {
-      if (!(et instanceof Ot.StandardMaterial) || et.specularTexture) return;
+    function Fu(uu, Eu) {
+      if (!(Eu instanceof su.StandardMaterial) || Eu.specularTexture) return;
       const {
-        r: Vt,
-        g: qt,
-        b: Dt
-      } = et.specularColor;
-      0 === Vt && 0 === qt && 0 === Dt && (tt.SPECULARTERM = !1)
-    }(0, Xt.g)({
-      disableUnusedSpecularTerm: Ut
+        r: ju,
+        g: Uu,
+        b: Zu
+      } = Eu.specularColor;
+      0 === ju && 0 === Uu && 0 === Zu && (uu.SPECULARTERM = !1)
+    }(0, Cu.d)({
+      disableUnusedSpecularTerm: Fu
     });
-    var At = Vt(37545),
-      it = Vt(37856);
-    const Yt = new RegExp(`^#define ${Ht.c}\\s*$`, "m");
-    class Bt extends(Mt(Ht.h)) {
-      constructor(tt, et) {
-        super(tt, et), this.df = !1, et.ditherOnlyWhileFading && (it.g.add(tt), this.prewarmDitherTwins(tt))
+    var Bu = ju(37704),
+      Lu = ju(37977);
+    const tu = new RegExp(`^#define ${fu.c}\\s*$`, "m");
+    class xu extends(gu(fu.f)) {
+      constructor(uu, Eu) {
+        super(uu, Eu), this.fO = !1, Eu.ditherOnlyWhileFading && (Lu.h.add(uu), this.prewarmDitherTwins(uu))
       }
-      prewarmDitherTwins(tt) {
-        const et = new WeakSet;
-        tt.onEffectCreatedObservable.add((Vt => {
+      prewarmDitherTwins(uu) {
+        const Eu = new WeakSet;
+        uu.onEffectCreatedObservable.add((ju => {
           let {
-            effect: Ot,
-            subMesh: qt
-          } = Vt;
-          if (this.featureState.prewarmingDither || et.has(Ot)) return;
-          et.add(Ot);
-          const Dt = null === qt || void 0 === qt ? void 0 : qt.getMesh();
-          Dt && !Yt.test(Ot.defines) && tt.vI().onAfterRenderObservable.addOnce((() => {
-            this.prewarmDither(Dt) || et.delete(Ot)
+            effect: su,
+            subMesh: Uu
+          } = ju;
+          if (this.featureState.prewarmingDither || Eu.has(su)) return;
+          Eu.add(su);
+          const Zu = null === Uu || void 0 === Uu ? void 0 : Uu.getMesh();
+          Zu && !tu.test(su.defines) && uu.hV().onAfterRenderObservable.addOnce((() => {
+            this.prewarmDither(Zu) || Eu.delete(su)
           }))
         }))
       }
-      prewarmDither(tt) {
-        if (this.df || tt.bC()) return !1;
-        const et = new Zt.d(0, 0, 0, 0, 0, tt, void 0, !1, !1);
+      prewarmDither(uu) {
+        if (this.fO || uu.Gw()) return !1;
+        const Eu = new Ku.e(0, 0, 0, 0, 0, uu, void 0, !1, !1);
         this.featureState.prewarmingDither = !0;
         try {
-          this._material.isReadyForSubMesh(tt, et)
+          this._material.isReadyForSubMesh(uu, Eu)
         } finally {
           this.featureState.prewarmingDither = !1
         }
-        return null !== et.effect
+        return null !== Eu.effect
       }
-      dispose(tt) {
-        this.df = !0, super.dispose(tt)
+      dispose(uu) {
+        this.fO = !0, super.dispose(uu)
       }
     }
-    const pt = new Map;
+    const Tu = new Map;
 
-    function xt(tt, et) {
-      pt.set(tt, et)
+    function Hu(uu, Eu) {
+      Tu.set(uu, Eu)
     }
-    xt(dt.e, bt), xt(jt.j, Wt), xt(Ht.h, Bt), xt(Xt.i, rt), (0, Qt.e)({
-      create: (tt, et) => {
-        const Vt = new Ot.StandardMaterial(tt.name, et);
-        return (0, At.q)(tt, Vt), Vt.detailMap._pluginDefineNames
+    Hu(lu.c, Mu), Hu(qu.h, au), Hu(fu.f, xu), Hu(Cu.h, Iu), (0, bu.b)({
+      create: (uu, Eu) => {
+        const ju = new su.StandardMaterial(uu.name, Eu);
+        return (0, Bu.s)(uu, ju), ju.detailMap._pluginDefineNames
       },
-      write: (tt, et, Vt) => {
-        (0, At.V)(tt.mirror, et, Vt)
+      write: (uu, Eu, ju) => {
+        (0, Bu.Y)(uu.mirror, Eu, ju)
       },
-      addFeature: (tt, et, Vt) => {
-        const Ot = pt.get(et.feature);
-        if (!Ot) throw new Error(`${et.feature.name} has no plugin class (registerPluginClass)`);
-        new Ot(tt.mirror, et.state, ...Vt)
+      addFeature: (uu, Eu, ju) => {
+        const su = Tu.get(Eu.feature);
+        if (!su) throw new Error(`${Eu.feature.name} has no plugin class (registerPluginClass)`);
+        new su(uu.mirror, Eu.state, ...ju)
       },
-      texture: (tt, et, Vt) => {
+      texture: (uu, Eu, ju) => {
         let {
-          url: Ot,
-          noMipmap: qt,
-          invertY: Dt,
-          samplingMode: dt,
-          data: jt,
-          sets: Ht
-        } = Vt;
-        if (!jt) {
-          const Vt = new mt.b(Ot, et, qt, Dt, dt);
-          return Object.assign(Vt, Ht), void(0, lt.N)(tt, Vt)
+          url: su,
+          noMipmap: Uu,
+          invertY: Zu,
+          samplingMode: lu,
+          data: qu,
+          sets: fu
+        } = ju;
+        if (!qu) {
+          const ju = new Xu.c(su, Eu, Uu, Zu, lu);
+          return Object.assign(ju, fu), void(0, cu.G)(uu, ju)
         }
-        const Xt = {},
-          Qt = new Promise(((tt, et) => {
-            Xt.onLoad = tt, Xt.onError = (tt, Vt) => {
-              et(new Error(`${jt.context}: ${(null===Vt||void 0===Vt?void 0:Vt.message)||tt||"Failed to load texture"}`))
+        const Cu = {},
+          bu = new Promise(((uu, Eu) => {
+            Cu.onLoad = uu, Cu.onError = (uu, ju) => {
+              Eu(new Error(`${qu.context}: ${(null===ju||void 0===ju?void 0:ju.message)||uu||"Failed to load texture"}`))
             }
           })),
           {
-            mimeType: Et,
-            bytes: ft,
-            label: wt
-          } = jt,
-          yt = {
-            noMipmap: qt,
+            mimeType: Nu,
+            bytes: Ou,
+            label: Yu
+          } = qu,
+          hu = {
+            noMipmap: Uu,
             invertY: !1,
-            samplingMode: dt,
-            ...Xt,
-            mimeType: Et,
+            samplingMode: lu,
+            ...Cu,
+            mimeType: Nu,
             loaderOptions: void 0,
             useSRGBBuffer: !1
           },
-          Nt = new mt.b(null, et, yt);
-        At.s.set(Nt, Qt), Object.assign(Nt, Ht), Nt.updateURL(Ot, ft);
-        const Mt = Nt.getInternalTexture();
-        Mt && (Mt.label = wt), tt.uvSet = Nt.coordinatesIndex, tt.matrix.set((0, At.N)(Nt)), (0, lt.N)(tt, Nt)
+          Du = new Xu.c(null, Eu, hu);
+        Bu.v.set(Du, bu), Object.assign(Du, fu), Du.updateURL(su, Ou);
+        const gu = Du.getInternalTexture();
+        gu && (gu.label = Yu), uu.uvSet = Du.coordinatesIndex, uu.matrix.set((0, Bu.Q)(Du)), (0, cu.G)(uu, Du)
       },
-      cube: (tt, et, Vt) => {
+      cube: (uu, Eu, ju) => {
         let {
-          rootUrl: Ot,
-          files: Dt,
-          noMipmap: dt,
-          luminance: jt
-        } = Vt;
+          rootUrl: su,
+          files: Zu,
+          noMipmap: lu,
+          luminance: qu
+        } = ju;
         const {
-          samplingMode: Ht
-        } = tt.sampler, Xt = Ht === (0, lt.E)(dt) ? null : () => {
-          (0, At.L)(Qt, Ht)
-        }, Qt = new qt.e(Ot, et, null, dt, Dt, Xt, null, (0, lt.B)(jt));
-        Qt.coordinatesMode = mt.b.SKYBOX_MODE, (0, lt.N)(tt, Qt)
+          samplingMode: fu
+        } = uu.sampler, Cu = fu === (0, cu.z)(lu) ? null : () => {
+          (0, Bu.O)(bu, fu)
+        }, bu = new Uu.e(su, Eu, null, lu, Zu, Cu, null, (0, cu.x)(qu));
+        bu.coordinatesMode = Xu.c.SKYBOX_MODE, (0, cu.G)(uu, bu)
       },
-      canvas: (tt, et, Vt) => {
+      canvas: (uu, Eu, ju) => {
         let {
-          width: Ot,
-          height: qt,
-          mipmaps: dt,
-          samplingMode: jt,
-          hasAlpha: Ht = !1,
-          wrap: Xt = mt.b.CLAMP_ADDRESSMODE
-        } = Vt;
-        const Qt = new Dt.c(et, {
-          width: Ot,
-          height: qt
-        }, tt, dt, jt);
-        Qt.hasAlpha = Ht, Qt.wrapU = Xt, Qt.wrapV = Xt;
-        const lt = (0, At.C)(Qt);
-        return (0, At.G)(lt, Qt), lt
+          width: su,
+          height: Uu,
+          mipmaps: lu,
+          samplingMode: qu,
+          hasAlpha: fu = !1,
+          wrap: Cu = Xu.c.CLAMP_ADDRESSMODE
+        } = ju;
+        const bu = new Zu.d(Eu, {
+          width: su,
+          height: Uu
+        }, uu, lu, qu);
+        bu.hasAlpha = fu, bu.wrapU = Cu, bu.wrapV = Cu;
+        const cu = (0, Bu.G)(bu);
+        return (0, Bu.I)(cu, bu), cu
       }
     })
   },
-  41387: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => Xt,
-      h: () => Qt,
-      k: () => lt
+  41394: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => Cu,
+      h: () => bu,
+      k: () => cu
     });
-    var Ot = Vt(41374),
-      qt = Vt(40270),
-      Dt = Vt(40490),
-      mt = Vt(40614),
-      dt = Vt(41379),
-      jt = Vt(40608),
-      Ht = Vt(37727);
-    class Xt extends mt.d {
+    var su = ju(41378),
+      Uu = ju(40319),
+      Zu = ju(40574),
+      Xu = ju(40676),
+      lu = ju(41387),
+      qu = ju(40668),
+      fu = ju(37867);
+    class Cu extends Xu.b {
       constructor() {
-        super(...arguments), this.model = null, this.onGeometryUpdated = (tt, et) => {
-          this.releaseUnlessInstanced(et)
+        super(...arguments), this.model = null, this.onGeometryUpdated = (uu, Eu) => {
+          this.releaseUnlessInstanced(Eu)
         }, this.onLinked = null
       }
-      link(tt) {
-        var et;
-        (0, Ht.n)(tt), this.model = tt, null === (et = this.onLinked) || void 0 === et || et.call(this, tt)
+      link(uu) {
+        var Eu;
+        (0, fu.p)(uu), this.model = uu, null === (Eu = this.onLinked) || void 0 === Eu || Eu.call(this, uu)
       }
       relink() {
         this.release();
-        const tt = [];
-        for (const qt of Object.values(this._vertexBuffers))
-          if (!qt.getIsInstanced()) {
+        const uu = [];
+        for (const Uu of Object.values(this._vertexBuffers))
+          if (!Uu.getIsInstanced()) {
             const {
-              byteOffset: et,
-              byteStride: Vt,
-              type: Ot,
-              normalized: Dt
-            } = qt;
-            tt.push({
-              kind: qt.getKind(),
-              data: qt.getData(),
-              offset: et,
-              stride: Vt,
-              components: qt.getSize(),
-              glType: Ot,
-              isNormalized: Dt
+              byteOffset: Eu,
+              byteStride: ju,
+              type: su,
+              normalized: Zu
+            } = Uu;
+            uu.push({
+              kind: Uu.getKind(),
+              data: Uu.getData(),
+              offset: Eu,
+              stride: ju,
+              components: Uu.getSize(),
+              glType: su,
+              isNormalized: Zu
             })
-          } const et = this._indices.length ? this._indices : null,
+          } const Eu = this._indices.length ? this._indices : null,
           {
-            minimum: Vt,
-            maximum: Ot
+            minimum: ju,
+            maximum: su
           } = this.extend;
-        this.link(new Ht.d(tt, et, this.getTotalVertices(), new Float64Array(Vt.GOt()), new Float64Array(Ot.GOt())))
+        this.link(new fu.f(uu, Eu, this.getTotalVertices(), new Float64Array(ju.Osu()), new Float64Array(su.Osu())))
       }
-      copy(tt) {
-        if (!this.model) return super.copy(tt);
-        const et = new Xt(tt, this.vI()),
-          Vt = this.zOt(void 0, !0);
-        Vt && et.setIndices(Vt);
-        let mt = !1;
-        for (const Dt in this._vertexBuffers) {
-          const tt = this._vertexBuffers[Dt],
-            Vt = tt.getData();
-          if (!Vt) continue;
-          const dt = tt.getSize(),
+      copy(uu) {
+        if (!this.model) return super.copy(uu);
+        const Eu = new Cu(uu, this.hV()),
+          ju = this.Ysu(void 0, !0);
+        ju && Eu.setIndices(ju);
+        let Xu = !1;
+        for (const Zu in this._vertexBuffers) {
+          const uu = this._vertexBuffers[Zu],
+            ju = uu.getData();
+          if (!ju) continue;
+          const lu = uu.getSize(),
             {
-              type: jt,
-              byteOffset: Ht,
-              byteStride: Xt,
-              normalized: Qt
-            } = tt;
-          mt ||= tt.isUpdatable();
-          const lt = tt.getIsInstanced() ? (Vt instanceof Array ? 4 * Vt.length : Vt.byteLength) / Xt : this.getTotalVertices(),
-            Et = (0, qt.z)(Vt, dt, jt, Ht, Xt, lt, !0),
-            ft = {
-              updatable: tt.isUpdatable(),
-              stride: dt,
-              type: jt,
-              normalized: Qt,
+              type: qu,
+              byteOffset: fu,
+              byteStride: Cu,
+              normalized: bu
+            } = uu;
+          Xu ||= uu.isUpdatable();
+          const cu = uu.getIsInstanced() ? (ju instanceof Array ? 4 * ju.length : ju.byteLength) / Cu : this.getTotalVertices(),
+            Nu = (0, Uu.s)(ju, lu, qu, fu, Cu, cu, !0),
+            Ou = {
+              updatable: uu.isUpdatable(),
+              stride: lu,
+              type: qu,
+              normalized: bu,
               takeBufferOwnership: !0,
-              instanced: tt.getIsInstanced()
+              instanced: uu.getIsInstanced()
             };
-          et.setVerticesBuffer(new Ot.e(this.Jf(), Et, Dt, ft), lt)
+          Eu.setVerticesBuffer(new su.e(this.wO(), Nu, Zu, Ou), cu)
         }
-        return et._updatable = mt, et._boundingInfo = new Dt.c(this.extend.minimum, this.extend.maximum), et.relink(), et
+        return Eu._updatable = Xu, Eu._boundingInfo = new Zu.c(this.extend.minimum, this.extend.maximum), Eu.relink(), Eu
       }
-      static mergeMeshes(tt, et, Vt, Ot, qt, Dt) {
-        const jt = tt[0].vI(),
-          Ht = new dt.b(tt[0].name + "_merged", jt),
-          Qt = new Xt(mt.d.RandomId(), jt, void 0, !1, Ht);
+      static mergeMeshes(uu, Eu, ju, su, Uu, Zu) {
+        const qu = uu[0].hV(),
+          fu = new lu.d(uu[0].name + "_merged", qu),
+          bu = new Cu(Xu.b.RandomId(), qu, void 0, !1, fu);
         try {
-          if (!dt.b.MergeMeshes(tt, et, Vt, Ht, qt, Dt)) return Ht.dispose(), null
-        } catch (lt) {
-          throw Ht.dispose(), lt
+          if (!lu.d.MergeMeshes(uu, Eu, ju, fu, Uu, Zu)) return fu.dispose(), null
+        } catch (cu) {
+          throw fu.dispose(), cu
         }
-        return Qt.relink(), Ht
+        return bu.relink(), fu
       }
-      removeVerticesData(tt) {
-        this.releaseUnlessInstanced(tt), super.removeVerticesData(tt)
+      removeVerticesData(uu) {
+        this.releaseUnlessInstanced(uu), super.removeVerticesData(uu)
       }
       dispose() {
         this.release(), super.dispose()
       }
-      releaseUnlessInstanced(tt) {
-        var et;
-        tt && null !== (et = this.getVertexBuffer(tt)) && void 0 !== et && et.getIsInstanced() || this.release()
+      releaseUnlessInstanced(uu) {
+        var Eu;
+        uu && null !== (Eu = this.getVertexBuffer(uu)) && void 0 !== Eu && Eu.getIsInstanced() || this.release()
       }
       release() {
-        this.model && ((0, Ht.x)(this.model), this.model = null)
+        this.model && ((0, fu.x)(this.model), this.model = null)
       }
     }
 
-    function Qt(tt, et, Vt) {
-      let Ot = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new dt.b(tt, Vt);
-      const qt = (0, Ht.j)(et),
+    function bu(uu, Eu, ju) {
+      let su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new lu.d(uu, ju);
+      const Uu = (0, fu.n)(Eu),
         {
-          positions: Dt,
-          normals: Qt,
-          uvs: lt,
-          indices: Et,
-          named: ft = {}
-        } = et,
-        wt = new jt.d;
-      wt.positions = Dt, wt.normals = null !== Qt && void 0 !== Qt ? Qt : null, wt.uvs = null !== lt && void 0 !== lt ? lt : null, wt.indices = Et;
-      const yt = new Xt(mt.d.RandomId(), Vt, wt, !1, Ot);
+          positions: Zu,
+          normals: bu,
+          uvs: cu,
+          indices: Nu,
+          named: Ou = {}
+        } = Eu,
+        Yu = new qu.b;
+      Yu.positions = Zu, Yu.normals = null !== bu && void 0 !== bu ? bu : null, Yu.uvs = null !== cu && void 0 !== cu ? cu : null, Yu.indices = Nu;
+      const hu = new Cu(Xu.b.RandomId(), ju, Yu, !1, su);
       for (const {
-          kind: mt,
-          components: dt
+          kind: Xu,
+          components: lu
         }
-        of qt.vertexAttributes) mt in ft && Ot.setVerticesData(mt, ft[mt], !1, dt);
-      return yt.link(qt), Ot
+        of Uu.vertexAttributes) Xu in Ou && su.setVerticesData(Xu, Ou[Xu], !1, lu);
+      return hu.link(Uu), su
     }
 
-    function lt(tt, et, Vt) {
-      let Ot = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      const qt = new dt.b(tt, Vt),
+    function cu(uu, Eu, ju) {
+      let su = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      const Uu = new lu.d(uu, ju),
         {
-          positions: Dt,
-          normals: mt,
-          uvs: Ht,
-          indices: Xt
-        } = et;
-      return Object.assign(new jt.d, {
-        positions: Dt,
-        normals: mt,
-        uvs: Ht,
-        indices: Xt
-      }).applyToMesh(qt, Ot), qt
+          positions: Zu,
+          normals: Xu,
+          uvs: fu,
+          indices: Cu
+        } = Eu;
+      return Object.assign(new qu.b, {
+        positions: Zu,
+        normals: Xu,
+        uvs: fu,
+        indices: Cu
+      }).applyToMesh(Uu, su), Uu
     }
   },
-  41851: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => yt,
-      i: () => dt,
-      m: () => mt,
-      o: () => Ht
+  41870: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => hu,
+      h: () => lu,
+      i: () => Xu,
+      l: () => fu
     });
-    var Ot = Vt(37510),
-      qt = Vt(38927),
-      Dt = Vt(38924);
+    var su = ju(37671),
+      Uu = ju(39056),
+      Zu = ju(39052);
 
-    function mt(tt, et, Vt, Ot) {
-      const qt = Dt.w;
-      et.fill(0), tt.gravity.toArray(et, qt.gravity), tt.colorDead.toArray(et, qt.colorDead), Vt[qt.ramp] = tt.useRampGradients ? 1 : 0;
-      const mt = tt.getColorGradients(),
-        dt = lt(tt, mt, "colour", Ot);
-      Vt[qt.colorCount] = dt;
-      for (let Dt = 0; Dt < dt; Dt++) {
-        var jt;
-        const tt = mt[Et(mt, Dt)];
-        et[qt.colorPositions + Dt] = tt.gradient, tt.color1.toArray(et, qt.color1 + 4 * Dt), (null !== (jt = tt.color2) && void 0 !== jt ? jt : tt.color1).toArray(et, qt.color2 + 4 * Dt)
+    function Xu(uu, Eu, ju, su) {
+      const Uu = Zu.v;
+      Eu.fill(0), uu.gravity.toArray(Eu, Uu.gravity), uu.colorDead.toArray(Eu, Uu.colorDead), ju[Uu.ramp] = uu.useRampGradients ? 1 : 0;
+      const Xu = uu.getColorGradients(),
+        lu = cu(uu, Xu, "colour", su);
+      ju[Uu.colorCount] = lu;
+      for (let Zu = 0; Zu < lu; Zu++) {
+        var qu;
+        const uu = Xu[Nu(Xu, Zu)];
+        Eu[Uu.colorPositions + Zu] = uu.gradient, uu.color1.toArray(Eu, Uu.color1 + 4 * Zu), (null !== (qu = uu.color2) && void 0 !== qu ? qu : uu.color1).toArray(Eu, Uu.color2 + 4 * Zu)
       }
-      const Ht = tt.getVelocityGradients(),
-        Xt = lt(tt, Ht, "Dy", Ot);
-      Vt[qt.velocityCount] = Xt;
-      for (let Dt = 0; Dt < Xt; Dt++) Mt(et, qt.Dy + 4 * Dt, Ht[Et(Ht, Dt)]);
-      const Qt = tt.useRampGradients ? tt.getColorRemapGradients() : null,
-        ft = lt(tt, Qt, "colour remap", Ot);
-      Vt[qt.remapCount] = ft;
-      for (let Dt = 0; Dt < ft; Dt++) Mt(et, qt.remap + 4 * Dt, Qt[Et(Qt, Dt)])
+      const fu = uu.getVelocityGradients(),
+        Cu = cu(uu, fu, "RY", su);
+      ju[Uu.velocityCount] = Cu;
+      for (let Zu = 0; Zu < Cu; Zu++) gu(Eu, Uu.RY + 4 * Zu, fu[Nu(fu, Zu)]);
+      const bu = uu.useRampGradients ? uu.getColorRemapGradients() : null,
+        Ou = cu(uu, bu, "colour remap", su);
+      ju[Uu.remapCount] = Ou;
+      for (let Zu = 0; Zu < Ou; Zu++) gu(Eu, Uu.remap + 4 * Zu, bu[Nu(bu, Zu)])
     }
 
-    function dt() {
+    function lu() {
       return {
         key: [],
-        texels: new Uint8Array(4 * Dt.l)
+        texels: new Uint8Array(4 * Zu.j)
       }
     }
-    const jt = [];
+    const qu = [];
 
-    function Ht(tt, et) {
-      return Xt(tt, jt), !Nt(jt, et.key) && (et.key.length = 0, et.key.push(...jt), et.key.length > 0 && function(tt, et) {
-        for (let Vt = 0; Vt < Dt.l; Vt++) qt.i.GetCurrentGradient(Vt / Dt.l, tt, ((tt, et, Vt) => {
-          Ot.Color3.LerpToRef(tt.color, et.color, Vt, Qt)
-        })), et[4 * Vt] = 255 * Qt.r, et[4 * Vt + 1] = 255 * Qt.g, et[4 * Vt + 2] = 255 * Qt.b, et[4 * Vt + 3] = 255
-      }(tt.getRampGradients(), et.texels), !0)
+    function fu(uu, Eu) {
+      return Cu(uu, qu), !Du(qu, Eu.key) && (Eu.key.length = 0, Eu.key.push(...qu), Eu.key.length > 0 && function(uu, Eu) {
+        for (let ju = 0; ju < Zu.j; ju++) Uu.m.GetCurrentGradient(ju / Zu.j, uu, ((uu, Eu, ju) => {
+          su.Color3.LerpToRef(uu.color, Eu.color, ju, bu)
+        })), Eu[4 * ju] = 255 * bu.r, Eu[4 * ju + 1] = 255 * bu.g, Eu[4 * ju + 2] = 255 * bu.b, Eu[4 * ju + 3] = 255
+      }(uu.getRampGradients(), Eu.texels), !0)
     }
 
-    function Xt(tt, et) {
-      et.length = 0;
-      const Vt = tt.useRampGradients ? tt.getRampGradients() : null;
-      if (null !== Vt && void 0 !== Vt && Vt.length) {
-        et.push(Vt.length);
-        for (const tt of Vt) et.push(tt.gradient, tt.color.r, tt.color.g, tt.color.b)
+    function Cu(uu, Eu) {
+      Eu.length = 0;
+      const ju = uu.useRampGradients ? uu.getRampGradients() : null;
+      if (null !== ju && void 0 !== ju && ju.length) {
+        Eu.push(ju.length);
+        for (const uu of ju) Eu.push(uu.gradient, uu.color.r, uu.color.g, uu.color.b)
       }
     }
-    const Qt = new Ot.Color3;
+    const bu = new su.Color3;
 
-    function lt(tt, et, Vt, Ot) {
-      return et ? et.length > Dt.e ? (Ot(`particleStops:${Vt}`, `GPU particles use the first 2 and last ${Dt.e-2} of more than ${Dt.e} ${Vt} gradient stops (${tt.name})`), Dt.e) : et.length : 0
+    function cu(uu, Eu, ju, su) {
+      return Eu ? Eu.length > Zu.b ? (su(`particleStops:${ju}`, `GPU particles use the first 2 and last ${Zu.b-2} of more than ${Zu.b} ${ju} gradient stops (${uu.name})`), Zu.b) : Eu.length : 0
     }
 
-    function Et(tt, et) {
-      return et < 2 || tt.length <= Dt.e ? et : tt.length - Dt.e + et
+    function Nu(uu, Eu) {
+      return Eu < 2 || uu.length <= Zu.b ? Eu : uu.length - Zu.b + Eu
     }
-    const ft = new Float32Array(Dt.r),
-      wt = new Uint32Array(ft.buffer);
+    const Ou = new Float32Array(Zu.p),
+      Yu = new Uint32Array(Ou.buffer);
 
-    function yt(tt, et, Vt) {
-      return mt(tt, ft, wt, Vt), et && Nt(wt, et) ? null : wt.slice()
+    function hu(uu, Eu, ju) {
+      return Xu(uu, Ou, Yu, ju), Eu && Du(Yu, Eu) ? null : Yu.slice()
     }
 
-    function Nt(tt, et) {
-      if (tt.length !== et.length) return !1;
-      for (let Vt = 0; Vt < tt.length; Vt++)
-        if (tt[Vt] !== et[Vt]) return !1;
+    function Du(uu, Eu) {
+      if (uu.length !== Eu.length) return !1;
+      for (let ju = 0; ju < uu.length; ju++)
+        if (uu[ju] !== Eu[ju]) return !1;
       return !0
     }
 
-    function Mt(tt, et, Vt) {
-      var Ot;
-      tt[et] = Vt.gradient, tt[et + 1] = Vt.factor1, tt[et + 2] = null !== (Ot = Vt.factor2) && void 0 !== Ot ? Ot : Vt.factor1
+    function gu(uu, Eu, ju) {
+      var su;
+      uu[Eu] = ju.gradient, uu[Eu + 1] = ju.factor1, uu[Eu + 2] = null !== (su = ju.factor2) && void 0 !== su ? su : ju.factor1
     }
   },
-  41370: (tt, et, Vt) => {
-    function Ot(tt, et, Vt) {
-      const Ot = et * et * 4,
-        qt = tt[0].layers,
-        Dt = qt * (tt.length - 1) + tt[tt.length - 1].layers,
-        mt = new Uint8Array(Dt * Ot);
-      tt.forEach(((et, Vt) => {
-        const Dt = Vt + 1 < tt.length ? Math.min(et.layers, qt) : et.layers;
-        mt.set(new Uint8Array(et.pixels.buffer, et.pixels.byteOffset, Dt * Ot), Vt * qt * Ot)
+  41373: (uu, Eu, ju) => {
+    function su(uu, Eu, ju) {
+      const su = Eu * Eu * 4,
+        Uu = uu[0].layers,
+        Zu = Uu * (uu.length - 1) + uu[uu.length - 1].layers,
+        Xu = new Uint8Array(Zu * su);
+      uu.forEach(((Eu, ju) => {
+        const Zu = ju + 1 < uu.length ? Math.min(Eu.layers, Uu) : Eu.layers;
+        Xu.set(new Uint8Array(Eu.pixels.buffer, Eu.pixels.byteOffset, Zu * su), ju * Uu * su)
       }));
-      const dt = Math.max(1, Math.min(Dt, Vt || Dt));
-      if (dt === Dt) return [{
-        pixels: mt,
-        layers: Dt
+      const lu = Math.max(1, Math.min(Zu, ju || Zu));
+      if (lu === Zu) return [{
+        pixels: Xu,
+        layers: Zu
       }];
-      const jt = [];
-      for (let Ht = 0; Ht < Dt; Ht += dt) {
-        const tt = Math.min(Dt, Ht + dt);
-        jt.push({
-          pixels: mt.slice(Ht * Ot, tt * Ot),
-          layers: tt - Ht
+      const qu = [];
+      for (let fu = 0; fu < Zu; fu += lu) {
+        const uu = Math.min(Zu, fu + lu);
+        qu.push({
+          pixels: Xu.slice(fu * su, uu * su),
+          layers: uu - fu
         })
       }
-      return jt
+      return qu
     }
-    Vt.d(et, {
-      d: () => Ot,
-      e: () => Dt
+    ju.d(Eu, {
+      e: () => su,
+      g: () => Zu
     });
-    const qt = new WeakMap;
+    const Uu = new WeakMap;
 
-    function Dt(tt, et, Vt) {
-      var Ot, Dt;
-      const mt = null !== (Ot = qt.get(tt)) && void 0 !== Ot ? Ot : new Map;
-      qt.set(tt, mt);
-      const dt = null !== (Dt = mt.get(et[0])) && void 0 !== Dt ? Dt : [];
-      mt.set(et[0], dt);
-      const jt = dt.find((tt => tt.urls.length === et.length && tt.urls.every(((tt, Vt) => tt === et[Vt]))));
-      if (jt) return jt.built;
-      const Ht = {
-        urls: [...et],
-        built: Vt()
+    function Zu(uu, Eu, ju) {
+      var su, Zu;
+      const Xu = null !== (su = Uu.get(uu)) && void 0 !== su ? su : new Map;
+      Uu.set(uu, Xu);
+      const lu = null !== (Zu = Xu.get(Eu[0])) && void 0 !== Zu ? Zu : [];
+      Xu.set(Eu[0], lu);
+      const qu = lu.find((uu => uu.urls.length === Eu.length && uu.urls.every(((uu, ju) => uu === Eu[ju]))));
+      if (qu) return qu.built;
+      const fu = {
+        urls: [...Eu],
+        built: ju()
       };
-      return dt.push(Ht), Ht.built.catch((() => {
-        dt.splice(dt.indexOf(Ht), 1)
-      })), Ht.built
+      return lu.push(fu), fu.built.catch((() => {
+        lu.splice(lu.indexOf(fu), 1)
+      })), fu.built
     }
   },
-  41848: (tt, et, Vt) => {
-    function Ot() {
-      let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-      const et = new Set;
-      return (Vt, Ot) => {
-        et.has(Vt) || (et.add(Vt), console.warn(tt + Ot))
+  41861: (uu, Eu, ju) => {
+    function su() {
+      let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+      const Eu = new Set;
+      return (ju, su) => {
+        Eu.has(ju) || (Eu.add(ju), console.warn(uu + su))
       }
     }
-    Vt.d(et, {
-      b: () => Ot
+    ju.d(Eu, {
+      d: () => su
     })
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

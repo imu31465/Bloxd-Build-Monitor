@@ -1,127 +1,127 @@
 export const id = 234;
 export const ids = [234, 241, 244];
 export const modules = {
-  40431: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => mt,
-      g: () => dt
+  40499: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => Xu,
+      h: () => lu
     });
-    var Ot = Vt(38899),
-      qt = Vt(40230),
-      Dt = Vt(40409),
-      mt = {};
-    class dt {
-      constructor(tt) {
-        this.attachedToElement = !1, this.attached = {}, this.camera = tt, this.checkInputs = () => {}
+    var su = ju(39032),
+      Uu = ju(40272),
+      Zu = ju(40462),
+      Xu = {};
+    class lu {
+      constructor(uu) {
+        this.attachedToElement = !1, this.attached = {}, this.camera = uu, this.checkInputs = () => {}
       }
-      add(tt) {
-        const et = tt.getSimpleName();
-        this.attached[et] ? Ot.d.Warn("camera input of type " + et + " already exists on camera") : (this.attached[et] = tt, tt.camera = this.camera, tt.checkInputs && (this.checkInputs = this._addCheckInputs(tt.checkInputs.bind(tt))), this.attachedToElement && tt.attachControl(this.noPreventDefault))
+      add(uu) {
+        const Eu = uu.getSimpleName();
+        this.attached[Eu] ? su.b.Warn("camera input of type " + Eu + " already exists on camera") : (this.attached[Eu] = uu, uu.camera = this.camera, uu.checkInputs && (this.checkInputs = this._addCheckInputs(uu.checkInputs.bind(uu))), this.attachedToElement && uu.attachControl(this.noPreventDefault))
       }
-      remove(tt) {
-        for (const et in this.attached) {
-          const Vt = this.attached[et];
-          if (Vt === tt) return Vt.detachControl(), Vt.camera = null, delete this.attached[et], void this.rebuildInputCheck()
+      remove(uu) {
+        for (const Eu in this.attached) {
+          const ju = this.attached[Eu];
+          if (ju === uu) return ju.detachControl(), ju.camera = null, delete this.attached[Eu], void this.rebuildInputCheck()
         }
       }
-      removeByType(tt) {
-        for (const et in this.attached) {
-          const Vt = this.attached[et];
-          Vt.getClassName() === tt && (Vt.detachControl(), Vt.camera = null, delete this.attached[et], this.rebuildInputCheck())
+      removeByType(uu) {
+        for (const Eu in this.attached) {
+          const ju = this.attached[Eu];
+          ju.getClassName() === uu && (ju.detachControl(), ju.camera = null, delete this.attached[Eu], this.rebuildInputCheck())
         }
       }
-      _addCheckInputs(tt) {
-        const et = this.checkInputs;
+      _addCheckInputs(uu) {
+        const Eu = this.checkInputs;
         return () => {
-          et(), tt()
+          Eu(), uu()
         }
       }
-      attachInput(tt) {
-        this.attachedToElement && tt.attachControl(this.noPreventDefault)
+      attachInput(uu) {
+        this.attachedToElement && uu.attachControl(this.noPreventDefault)
       }
       attachElement() {
-        let tt = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        let uu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         if (!this.attachedToElement) {
-          tt = !Dt.c.ForceAttachControlToAlwaysPreventDefault && tt, this.attachedToElement = !0, this.noPreventDefault = tt;
-          for (const et in this.attached) this.attached[et].attachControl(tt)
+          uu = !Zu.e.ForceAttachControlToAlwaysPreventDefault && uu, this.attachedToElement = !0, this.noPreventDefault = uu;
+          for (const Eu in this.attached) this.attached[Eu].attachControl(uu)
         }
       }
       detachElement() {
-        let tt = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        for (const et in this.attached) this.attached[et].detachControl(), tt && (this.attached[et].camera = null);
+        let uu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        for (const Eu in this.attached) this.attached[Eu].detachControl(), uu && (this.attached[Eu].camera = null);
         this.attachedToElement = !1
       }
       rebuildInputCheck() {
         this.checkInputs = () => {};
-        for (const tt in this.attached) {
-          const et = this.attached[tt];
-          et.checkInputs && (this.checkInputs = this._addCheckInputs(et.checkInputs.bind(et)))
+        for (const uu in this.attached) {
+          const Eu = this.attached[uu];
+          Eu.checkInputs && (this.checkInputs = this._addCheckInputs(Eu.checkInputs.bind(Eu)))
         }
       }
       clear() {
         this.attachedToElement && this.detachElement(!0), this.attached = {}, this.attachedToElement = !1, this.checkInputs = () => {}
       }
-      serialize(tt) {
-        const et = {};
-        for (const Vt in this.attached) {
-          const tt = this.attached[Vt],
-            Ot = qt.d.Serialize(tt);
-          et[tt.getClassName()] = Ot
+      serialize(uu) {
+        const Eu = {};
+        for (const ju in this.attached) {
+          const uu = this.attached[ju],
+            su = Uu.e.Serialize(uu);
+          Eu[uu.getClassName()] = su
         }
-        tt.inputsmgr = et
+        uu.inputsmgr = Eu
       }
-      parse(tt) {
-        const et = tt.inputsmgr;
-        if (et) {
+      parse(uu) {
+        const Eu = uu.inputsmgr;
+        if (Eu) {
           this.clear();
-          for (const tt in et) {
-            const Vt = mt[tt];
-            if (Vt) {
-              const Ot = et[tt],
-                Dt = qt.d.Parse((() => new Vt), Ot, null);
-              this.add(Dt)
+          for (const uu in Eu) {
+            const ju = Xu[uu];
+            if (ju) {
+              const su = Eu[uu],
+                Zu = Uu.e.Parse((() => new ju), su, null);
+              this.add(Zu)
             }
           }
         } else
-          for (const Vt in this.attached) {
-            const et = mt[this.attached[Vt].getClassName()];
-            if (et) {
-              const Ot = qt.d.Parse((() => new et), tt, null);
-              this.remove(this.attached[Vt]), this.add(Ot)
+          for (const ju in this.attached) {
+            const Eu = Xu[this.attached[ju].getClassName()];
+            if (Eu) {
+              const su = Uu.e.Parse((() => new Eu), uu, null);
+              this.remove(this.attached[ju]), this.add(su)
             }
           }
       }
     }
   },
-  40433: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => Ot.b
+  40503: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => su.e
     });
-    var Ot = Vt(40438);
-    (0, Ot.f)()
+    var su = ju(40506);
+    (0, su.f)()
   },
-  40438: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => Xt,
-      f: () => lt
+  40506: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => Cu,
+      f: () => cu
     });
-    var Ot = Vt(40211),
-      qt = Vt(40213),
-      Dt = Vt(37336),
-      mt = Vt(37513),
-      dt = Vt(40445),
-      jt = Vt(40415),
-      Ht = Vt(37390);
-    let Xt = (() => {
-        var tt;
-        let et, Vt, jt = dt.e,
-          Ht = [],
-          Xt = [],
-          Qt = [],
-          lt = [];
-        return tt = class extends jt {
-          constructor(tt, et, Vt, qt) {
-            super(tt, Vt, qt), this.groundColor = (0, Ot.m)(this, Ht, new mt.b(0, 0, 0)), this.direction = ((0, Ot.m)(this, Xt), (0, Ot.m)(this, Qt, void 0)), (0, Ot.m)(this, lt), this.direction = et || Dt.n.Up()
+    var su = ju(40255),
+      Uu = ju(40258),
+      Zu = ju(37494),
+      Xu = ju(37680),
+      lu = ju(40508),
+      qu = ju(40467),
+      fu = ju(37532);
+    let Cu = (() => {
+        var uu;
+        let Eu, ju, qu = lu.e,
+          fu = [],
+          Cu = [],
+          bu = [],
+          cu = [];
+        return uu = class extends qu {
+          constructor(uu, Eu, ju, Uu) {
+            super(uu, ju, Uu), this.groundColor = (0, su.g)(this, fu, new Xu.c(0, 0, 0)), this.direction = ((0, su.g)(this, Cu), (0, su.g)(this, bu, void 0)), (0, su.g)(this, cu), this.direction = Eu || Zu.t.Up()
           }
           _buildUniformLayout() {
             this._uniformBuffer.addUniform("vLightData", 4), this._uniformBuffer.addUniform("vLightDiffuse", 4), this._uniformBuffer.addUniform("vLightSpecular", 4), this._uniformBuffer.addUniform("vLightGround", 3), this._uniformBuffer.addUniform("shadowsInfo", 3), this._uniformBuffer.addUniform("depthValues", 2), this._uniformBuffer.create()
@@ -129,499 +129,499 @@ export const modules = {
           getClassName() {
             return "HemisphericLight"
           }
-          setDirectionToTarget(tt) {
-            return this.direction = Dt.n.Normalize(tt.subtract(Dt.n.Zero())), this.direction
+          setDirectionToTarget(uu) {
+            return this.direction = Zu.t.Normalize(uu.subtract(Zu.t.Zero())), this.direction
           }
           getShadowGenerator() {
             return null
           }
-          transferToEffect(tt, et) {
-            const Vt = Dt.n.Normalize(this.direction);
-            return this._uniformBuffer.updateFloat4("vLightData", Vt.x, Vt.y, Vt.z, 0, et), this._uniformBuffer.updateColor3("vLightGround", this.groundColor.scale(this.intensity), et), this
+          transferToEffect(uu, Eu) {
+            const ju = Zu.t.Normalize(this.direction);
+            return this._uniformBuffer.updateFloat4("vLightData", ju.x, ju.y, ju.z, 0, Eu), this._uniformBuffer.updateColor3("vLightGround", this.groundColor.scale(this.intensity), Eu), this
           }
-          transferToNodeMaterialEffect(tt, et) {
-            const Vt = Dt.n.Normalize(this.direction);
-            return tt.setFloat3(et, Vt.x, Vt.y, Vt.z), this
+          transferToNodeMaterialEffect(uu, Eu) {
+            const ju = Zu.t.Normalize(this.direction);
+            return uu.setFloat3(Eu, ju.x, ju.y, ju.z), this
           }
           computeWorldMatrix() {
-            return this._worldMatrix || (this._worldMatrix = Dt.c.Identity()), this._worldMatrix
+            return this._worldMatrix || (this._worldMatrix = Zu.e.Identity()), this._worldMatrix
           }
           getTypeID() {
-            return dt.e.LIGHTTYPEID_HEMISPHERICLIGHT
+            return lu.e.LIGHTTYPEID_HEMISPHERICLIGHT
           }
-          prepareLightSpecificDefines(tt, et) {
-            tt["HEMILIGHT" + et] = !0
+          prepareLightSpecificDefines(uu, Eu) {
+            uu["HEMILIGHT" + Eu] = !0
           }
         }, (() => {
-          const Dt = "function" === typeof Symbol && Symbol.metadata ? Object.create(jt[Symbol.metadata] ?? null) : void 0;
-          et = [(0, qt.t)()], Vt = [(0, qt.M)()], (0, Ot.l)(null, null, et, {
+          const Zu = "function" === typeof Symbol && Symbol.metadata ? Object.create(qu[Symbol.metadata] ?? null) : void 0;
+          Eu = [(0, Uu.j)()], ju = [(0, Uu.A)()], (0, su.e)(null, null, Eu, {
             kind: "field",
             name: "groundColor",
             static: !1,
             private: !1,
             access: {
-              has: tt => "groundColor" in tt,
-              get: tt => tt.groundColor,
-              set: (tt, et) => {
-                tt.groundColor = et
+              has: uu => "groundColor" in uu,
+              get: uu => uu.groundColor,
+              set: (uu, Eu) => {
+                uu.groundColor = Eu
               }
             },
-            metadata: Dt
-          }, Ht, Xt), (0, Ot.l)(null, null, Vt, {
+            metadata: Zu
+          }, fu, Cu), (0, su.e)(null, null, ju, {
             kind: "field",
             name: "direction",
             static: !1,
             private: !1,
             access: {
-              has: tt => "direction" in tt,
-              get: tt => tt.direction,
-              set: (tt, et) => {
-                tt.direction = et
+              has: uu => "direction" in uu,
+              get: uu => uu.direction,
+              set: (uu, Eu) => {
+                uu.direction = Eu
               }
             },
-            metadata: Dt
-          }, Qt, lt), Dt && Object.defineProperty(tt, Symbol.metadata, {
+            metadata: Zu
+          }, bu, cu), Zu && Object.defineProperty(uu, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: Dt
+            value: Zu
           })
-        })(), tt
+        })(), uu
       })(),
-      Qt = !1;
+      bu = !1;
 
-    function lt() {
-      Qt || (Qt = !0, jt.d.AddNodeConstructor("Light_Type_3", ((tt, et) => () => new Xt(tt, Dt.n.Zero(), et))), (0, Ht.i)("BABYLON.HemisphericLight", Xt))
+    function cu() {
+      bu || (bu = !0, qu.c.AddNodeConstructor("Light_Type_3", ((uu, Eu) => () => new Cu(uu, Zu.t.Zero(), Eu))), (0, fu.f)("BABYLON.HemisphericLight", Cu))
     }
   },
-  37510: (tt, et, Vt) => {
-    Vt.d(et, {
-      Color3: () => Ot.b,
-      e: () => Ot.c
+  37671: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      Color3: () => su.c,
+      b: () => su.g
     });
-    var Ot = Vt(37513);
-    (0, Ot.e)()
+    var su = ju(37680);
+    (0, su.i)()
   },
-  38009: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => qt
+  38152: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => Uu
     });
-    var Ot = Vt(38016);
-    class qt {
-      static GetPlanes(tt) {
-        const et = [];
-        for (let Vt = 0; Vt < 6; Vt++) et.push(new Ot.b(0, 0, 0, 0));
-        return qt.GetPlanesToRef(tt, et), et
+    var su = ju(38154);
+    class Uu {
+      static GetPlanes(uu) {
+        const Eu = [];
+        for (let ju = 0; ju < 6; ju++) Eu.push(new su.d(0, 0, 0, 0));
+        return Uu.GetPlanesToRef(uu, Eu), Eu
       }
-      static GetNearPlaneToRef(tt, et) {
-        const Vt = tt.m;
-        et.normal.x = Vt[3] + Vt[2], et.normal.y = Vt[7] + Vt[6], et.normal.z = Vt[11] + Vt[10], et.d = Vt[15] + Vt[14], et.normalize()
+      static GetNearPlaneToRef(uu, Eu) {
+        const ju = uu.m;
+        Eu.normal.x = ju[3] + ju[2], Eu.normal.y = ju[7] + ju[6], Eu.normal.z = ju[11] + ju[10], Eu.d = ju[15] + ju[14], Eu.normalize()
       }
-      static GetFarPlaneToRef(tt, et) {
-        const Vt = tt.m;
-        et.normal.x = Vt[3] - Vt[2], et.normal.y = Vt[7] - Vt[6], et.normal.z = Vt[11] - Vt[10], et.d = Vt[15] - Vt[14], et.normalize()
+      static GetFarPlaneToRef(uu, Eu) {
+        const ju = uu.m;
+        Eu.normal.x = ju[3] - ju[2], Eu.normal.y = ju[7] - ju[6], Eu.normal.z = ju[11] - ju[10], Eu.d = ju[15] - ju[14], Eu.normalize()
       }
-      static GetLeftPlaneToRef(tt, et) {
-        const Vt = tt.m;
-        et.normal.x = Vt[3] + Vt[0], et.normal.y = Vt[7] + Vt[4], et.normal.z = Vt[11] + Vt[8], et.d = Vt[15] + Vt[12], et.normalize()
+      static GetLeftPlaneToRef(uu, Eu) {
+        const ju = uu.m;
+        Eu.normal.x = ju[3] + ju[0], Eu.normal.y = ju[7] + ju[4], Eu.normal.z = ju[11] + ju[8], Eu.d = ju[15] + ju[12], Eu.normalize()
       }
-      static GetRightPlaneToRef(tt, et) {
-        const Vt = tt.m;
-        et.normal.x = Vt[3] - Vt[0], et.normal.y = Vt[7] - Vt[4], et.normal.z = Vt[11] - Vt[8], et.d = Vt[15] - Vt[12], et.normalize()
+      static GetRightPlaneToRef(uu, Eu) {
+        const ju = uu.m;
+        Eu.normal.x = ju[3] - ju[0], Eu.normal.y = ju[7] - ju[4], Eu.normal.z = ju[11] - ju[8], Eu.d = ju[15] - ju[12], Eu.normalize()
       }
-      static GetTopPlaneToRef(tt, et) {
-        const Vt = tt.m;
-        et.normal.x = Vt[3] - Vt[1], et.normal.y = Vt[7] - Vt[5], et.normal.z = Vt[11] - Vt[9], et.d = Vt[15] - Vt[13], et.normalize()
+      static GetTopPlaneToRef(uu, Eu) {
+        const ju = uu.m;
+        Eu.normal.x = ju[3] - ju[1], Eu.normal.y = ju[7] - ju[5], Eu.normal.z = ju[11] - ju[9], Eu.d = ju[15] - ju[13], Eu.normalize()
       }
-      static GetBottomPlaneToRef(tt, et) {
-        const Vt = tt.m;
-        et.normal.x = Vt[3] + Vt[1], et.normal.y = Vt[7] + Vt[5], et.normal.z = Vt[11] + Vt[9], et.d = Vt[15] + Vt[13], et.normalize()
+      static GetBottomPlaneToRef(uu, Eu) {
+        const ju = uu.m;
+        Eu.normal.x = ju[3] + ju[1], Eu.normal.y = ju[7] + ju[5], Eu.normal.z = ju[11] + ju[9], Eu.d = ju[15] + ju[13], Eu.normalize()
       }
-      static GetPlanesToRef(tt, et) {
-        qt.GetNearPlaneToRef(tt, et[0]), qt.GetFarPlaneToRef(tt, et[1]), qt.GetLeftPlaneToRef(tt, et[2]), qt.GetRightPlaneToRef(tt, et[3]), qt.GetTopPlaneToRef(tt, et[4]), qt.GetBottomPlaneToRef(tt, et[5])
+      static GetPlanesToRef(uu, Eu) {
+        Uu.GetNearPlaneToRef(uu, Eu[0]), Uu.GetFarPlaneToRef(uu, Eu[1]), Uu.GetLeftPlaneToRef(uu, Eu[2]), Uu.GetRightPlaneToRef(uu, Eu[3]), Uu.GetTopPlaneToRef(uu, Eu[4]), Uu.GetBottomPlaneToRef(uu, Eu[5])
       }
-      static IsPointInFrustum(tt, et) {
-        for (let Vt = 0; Vt < 6; Vt++)
-          if (et[Vt].dotCoordinate(tt) < 0) return !1;
+      static IsPointInFrustum(uu, Eu) {
+        for (let ju = 0; ju < 6; ju++)
+          if (Eu[ju].dotCoordinate(uu) < 0) return !1;
         return !0
       }
     }
   },
-  38016: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => qt
+  38154: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => Uu
     });
-    var Ot = Vt(37336);
-    class qt {
-      constructor(tt, et, Vt, qt) {
-        this.normal = new Ot.n(tt, et, Vt), this.d = qt
+    var su = ju(37494);
+    class Uu {
+      constructor(uu, Eu, ju, Uu) {
+        this.normal = new su.t(uu, Eu, ju), this.d = Uu
       }
-      GOt() {
+      Osu() {
         return [this.normal.x, this.normal.y, this.normal.z, this.d]
       }
       clone() {
-        return new qt(this.normal.x, this.normal.y, this.normal.z, this.d)
+        return new Uu(this.normal.x, this.normal.y, this.normal.z, this.d)
       }
       getClassName() {
         return "Plane"
       }
       getHashCode() {
-        let tt = this.normal.getHashCode();
-        return tt = 397 * tt ^ this.d, tt
+        let uu = this.normal.getHashCode();
+        return uu = 397 * uu ^ this.d, uu
       }
       normalize() {
-        const tt = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
-        let et = 0;
-        return 0 !== tt && (et = 1 / tt), this.normal.x *= et, this.normal.y *= et, this.normal.z *= et, this.d *= et, this
+        const uu = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
+        let Eu = 0;
+        return 0 !== uu && (Eu = 1 / uu), this.normal.x *= Eu, this.normal.y *= Eu, this.normal.z *= Eu, this.d *= Eu, this
       }
-      transform(tt) {
-        const et = qt._TmpMatrix;
-        tt.invertToRef(et);
-        const Vt = et.m,
-          Ot = this.normal.x,
-          Dt = this.normal.y,
-          mt = this.normal.z,
-          dt = this.d,
-          jt = Ot * Vt[0] + Dt * Vt[1] + mt * Vt[2] + dt * Vt[3],
-          Ht = Ot * Vt[4] + Dt * Vt[5] + mt * Vt[6] + dt * Vt[7],
-          Xt = Ot * Vt[8] + Dt * Vt[9] + mt * Vt[10] + dt * Vt[11],
-          Qt = Ot * Vt[12] + Dt * Vt[13] + mt * Vt[14] + dt * Vt[15];
-        return new qt(jt, Ht, Xt, Qt)
+      transform(uu) {
+        const Eu = Uu._TmpMatrix;
+        uu.invertToRef(Eu);
+        const ju = Eu.m,
+          su = this.normal.x,
+          Zu = this.normal.y,
+          Xu = this.normal.z,
+          lu = this.d,
+          qu = su * ju[0] + Zu * ju[1] + Xu * ju[2] + lu * ju[3],
+          fu = su * ju[4] + Zu * ju[5] + Xu * ju[6] + lu * ju[7],
+          Cu = su * ju[8] + Zu * ju[9] + Xu * ju[10] + lu * ju[11],
+          bu = su * ju[12] + Zu * ju[13] + Xu * ju[14] + lu * ju[15];
+        return new Uu(qu, fu, Cu, bu)
       }
-      dotCoordinate(tt) {
-        return this.normal.x * tt.x + this.normal.y * tt.y + this.normal.z * tt.z + this.d
+      dotCoordinate(uu) {
+        return this.normal.x * uu.x + this.normal.y * uu.y + this.normal.z * uu.z + this.d
       }
-      copyFromPoints(tt, et, Vt) {
-        const Ot = et.x - tt.x,
-          qt = et.y - tt.y,
-          Dt = et.z - tt.z,
-          mt = Vt.x - tt.x,
-          dt = Vt.y - tt.y,
-          jt = Vt.z - tt.z,
-          Ht = qt * jt - Dt * dt,
-          Xt = Dt * mt - Ot * jt,
-          Qt = Ot * dt - qt * mt,
-          lt = Math.sqrt(Ht * Ht + Xt * Xt + Qt * Qt);
-        let Et;
-        return Et = 0 !== lt ? 1 / lt : 0, this.normal.x = Ht * Et, this.normal.y = Xt * Et, this.normal.z = Qt * Et, this.d = -(this.normal.x * tt.x + this.normal.y * tt.y + this.normal.z * tt.z), this
+      copyFromPoints(uu, Eu, ju) {
+        const su = Eu.x - uu.x,
+          Uu = Eu.y - uu.y,
+          Zu = Eu.z - uu.z,
+          Xu = ju.x - uu.x,
+          lu = ju.y - uu.y,
+          qu = ju.z - uu.z,
+          fu = Uu * qu - Zu * lu,
+          Cu = Zu * Xu - su * qu,
+          bu = su * lu - Uu * Xu,
+          cu = Math.sqrt(fu * fu + Cu * Cu + bu * bu);
+        let Nu;
+        return Nu = 0 !== cu ? 1 / cu : 0, this.normal.x = fu * Nu, this.normal.y = Cu * Nu, this.normal.z = bu * Nu, this.d = -(this.normal.x * uu.x + this.normal.y * uu.y + this.normal.z * uu.z), this
       }
-      isFrontFacingTo(tt, et) {
-        return Ot.n.Dot(this.normal, tt) <= et
+      isFrontFacingTo(uu, Eu) {
+        return su.t.Dot(this.normal, uu) <= Eu
       }
-      signedDistanceTo(tt) {
-        return Ot.n.Dot(tt, this.normal) + this.d
+      signedDistanceTo(uu) {
+        return su.t.Dot(uu, this.normal) + this.d
       }
-      static FromArray(tt) {
-        return new qt(tt[0], tt[1], tt[2], tt[3])
+      static FromArray(uu) {
+        return new Uu(uu[0], uu[1], uu[2], uu[3])
       }
-      static FromPoints(tt, et, Vt) {
-        const Ot = new qt(0, 0, 0, 0);
-        return Ot.copyFromPoints(tt, et, Vt), Ot
+      static FromPoints(uu, Eu, ju) {
+        const su = new Uu(0, 0, 0, 0);
+        return su.copyFromPoints(uu, Eu, ju), su
       }
-      static FromPositionAndNormal(tt, et) {
-        const Vt = new qt(0, 0, 0, 0);
-        return this.FromPositionAndNormalToRef(tt, et, Vt)
+      static FromPositionAndNormal(uu, Eu) {
+        const ju = new Uu(0, 0, 0, 0);
+        return this.FromPositionAndNormalToRef(uu, Eu, ju)
       }
-      static FromPositionAndNormalToRef(tt, et, Vt) {
-        return Vt.normal.rK(et), Vt.normal.normalize(), Vt.d = -tt.dot(Vt.normal), Vt
+      static FromPositionAndNormalToRef(uu, Eu, ju) {
+        return ju.normal.yJ(Eu), ju.normal.normalize(), ju.d = -uu.dot(ju.normal), ju
       }
-      static SignedDistanceToPlaneFromPositionAndNormal(tt, et, Vt) {
-        const qt = -(et.x * tt.x + et.y * tt.y + et.z * tt.z);
-        return Ot.n.Dot(Vt, et) + qt
+      static SignedDistanceToPlaneFromPositionAndNormal(uu, Eu, ju) {
+        const Uu = -(Eu.x * uu.x + Eu.y * uu.y + Eu.z * uu.z);
+        return su.t.Dot(ju, Eu) + Uu
       }
     }
-    qt._TmpMatrix = Ot.c.Identity()
+    Uu._TmpMatrix = su.e.Identity()
   },
-  37331: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      Matrix: () => Ot.c,
-      Quaternion: () => Ot.e,
-      RegisterMathVector: () => Ot.h,
-      TmpVectors: () => Ot.k,
-      Vector2: () => Ot.m,
-      uf: () => Ot.n,
-      Vector4: () => Ot.r
+  37488: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      Matrix: () => su.e,
+      Quaternion: () => su.i,
+      RegisterMathVector: () => su.l,
+      TmpVectors: () => su.m,
+      Vector2: () => su.p,
+      dO: () => su.t,
+      Vector4: () => su.u
     });
-    var Ot = Vt(37336);
-    (0, Ot.h)()
+    var su = ju(37494);
+    (0, su.l)()
   },
-  38340: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => Ot
+  38458: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => su
     });
-    class Ot {
-      constructor(tt, et, Vt, Ot) {
-        this.x = tt, this.y = et, this.width = Vt, this.height = Ot
+    class su {
+      constructor(uu, Eu, ju, su) {
+        this.x = uu, this.y = Eu, this.width = ju, this.height = su
       }
-      toGlobal(tt, et) {
-        return new Ot(this.x * tt, this.y * et, this.width * tt, this.height * et)
+      toGlobal(uu, Eu) {
+        return new su(this.x * uu, this.y * Eu, this.width * uu, this.height * Eu)
       }
-      toGlobalToRef(tt, et, Vt) {
-        return Vt.x = this.x * tt, Vt.y = this.y * et, Vt.width = this.width * tt, Vt.height = this.height * et, this
+      toGlobalToRef(uu, Eu, ju) {
+        return ju.x = this.x * uu, ju.y = this.y * Eu, ju.width = this.width * uu, ju.height = this.height * Eu, this
       }
       clone() {
-        return new Ot(this.x, this.y, this.width, this.height)
+        return new su(this.x, this.y, this.width, this.height)
       }
     }
   },
-  40595: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => Ht
+  40659: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => fu
     });
-    var Ot = Vt(37336),
-      qt = Vt(37513),
-      Dt = Vt(40601),
-      mt = Vt(40608),
-      dt = Vt(40628);
+    var su = ju(37494),
+      Uu = ju(37680),
+      Zu = ju(40661),
+      Xu = ju(40668),
+      lu = ju(40693);
 
-    function jt(tt) {
-      let et = [0, 1, 2, 0, 2, 3, 4, 5, 6, 4, 6, 7, 8, 9, 10, 8, 10, 11, 12, 13, 14, 12, 14, 15, 16, 17, 18, 16, 18, 19, 20, 21, 22, 20, 22, 23];
-      const Vt = [0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0],
-        Dt = [],
-        jt = tt.width || tt.size || 1,
-        Ht = tt.height || tt.size || 1,
-        Xt = tt.depth || tt.size || 1,
-        Qt = tt.wrap || !1;
-      let lt = void 0 === tt.topBaseAt ? 1 : tt.topBaseAt,
-        Et = void 0 === tt.bottomBaseAt ? 0 : tt.bottomBaseAt;
-      lt = (lt + 4) % 4, Et = (Et + 4) % 4;
-      let ft = [2, 0, 3, 1][lt],
-        wt = [2, 0, 1, 3][Et],
-        yt = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1];
-      if (Qt) {
-        et = [2, 3, 0, 2, 0, 1, 4, 5, 6, 4, 6, 7, 9, 10, 11, 9, 11, 8, 12, 14, 15, 12, 13, 14], yt = [-1, 1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1];
-        let tt = [
+    function qu(uu) {
+      let Eu = [0, 1, 2, 0, 2, 3, 4, 5, 6, 4, 6, 7, 8, 9, 10, 8, 10, 11, 12, 13, 14, 12, 14, 15, 16, 17, 18, 16, 18, 19, 20, 21, 22, 20, 22, 23];
+      const ju = [0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0, 0, -1, 0],
+        Zu = [],
+        qu = uu.width || uu.size || 1,
+        fu = uu.height || uu.size || 1,
+        Cu = uu.depth || uu.size || 1,
+        bu = uu.wrap || !1;
+      let cu = void 0 === uu.topBaseAt ? 1 : uu.topBaseAt,
+        Nu = void 0 === uu.bottomBaseAt ? 0 : uu.bottomBaseAt;
+      cu = (cu + 4) % 4, Nu = (Nu + 4) % 4;
+      let Ou = [2, 0, 3, 1][cu],
+        Yu = [2, 0, 1, 3][Nu],
+        hu = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1];
+      if (bu) {
+        Eu = [2, 3, 0, 2, 0, 1, 4, 5, 6, 4, 6, 7, 9, 10, 11, 9, 11, 8, 12, 14, 15, 12, 13, 14], hu = [-1, 1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1];
+        let uu = [
             [1, 1, 1],
             [-1, 1, 1],
             [-1, 1, -1],
             [1, 1, -1]
           ],
-          Vt = [
+          ju = [
             [-1, -1, 1],
             [1, -1, 1],
             [1, -1, -1],
             [-1, -1, -1]
           ];
-        const Ot = [17, 18, 19, 16],
-          qt = [22, 23, 20, 21];
-        for (; ft > 0;) tt.unshift(tt.pop()), Ot.unshift(Ot.pop()), ft--;
-        for (; wt > 0;) Vt.unshift(Vt.pop()), qt.unshift(qt.pop()), wt--;
-        tt = tt.flat(), Vt = Vt.flat(), yt = yt.concat(tt).concat(Vt), et.push(Ot[0], Ot[2], Ot[3], Ot[0], Ot[1], Ot[2]), et.push(qt[0], qt[2], qt[3], qt[0], qt[1], qt[2])
+        const su = [17, 18, 19, 16],
+          Uu = [22, 23, 20, 21];
+        for (; Ou > 0;) uu.unshift(uu.pop()), su.unshift(su.pop()), Ou--;
+        for (; Yu > 0;) ju.unshift(ju.pop()), Uu.unshift(Uu.pop()), Yu--;
+        uu = uu.flat(), ju = ju.flat(), hu = hu.concat(uu).concat(ju), Eu.push(su[0], su[2], su[3], su[0], su[1], su[2]), Eu.push(Uu[0], Uu[2], Uu[3], Uu[0], Uu[1], Uu[2])
       }
-      const Nt = [jt / 2, Ht / 2, Xt / 2],
-        Mt = yt.reduce(((tt, et, Vt) => tt.concat(et * Nt[Vt % 3])), []),
-        bt = 0 === tt.sideOrientation ? 0 : tt.sideOrientation || mt.d.DEFAULTSIDE,
-        Jt = tt.faceUV || new Array(6),
-        Ct = tt.faceColors,
-        ut = [];
-      for (let mt = 0; mt < 6; mt++) void 0 === Jt[mt] && (Jt[mt] = new Ot.r(0, 0, 1, 1)), Ct && void 0 === Ct[mt] && (Ct[mt] = new qt.c(1, 1, 1, 1));
-      for (let Ot = 0; Ot < 6; Ot++)
-        if (Dt.push(Jt[Ot].z, dt.b ? 1 - Jt[Ot].w : Jt[Ot].w), Dt.push(Jt[Ot].x, dt.b ? 1 - Jt[Ot].w : Jt[Ot].w), Dt.push(Jt[Ot].x, dt.b ? 1 - Jt[Ot].y : Jt[Ot].y), Dt.push(Jt[Ot].z, dt.b ? 1 - Jt[Ot].y : Jt[Ot].y), Ct)
-          for (let tt = 0; tt < 4; tt++) ut.push(Ct[Ot].r, Ct[Ot].g, Ct[Ot].b, Ct[Ot].a);
-      mt.d._ComputeSides(bt, Mt, et, Vt, Dt, tt.frontUVs, tt.backUVs);
-      const Kt = new mt.d;
-      if (Kt.indices = et, Kt.positions = Mt, Kt.normals = Vt, Kt.uvs = Dt, Ct) {
-        const tt = bt === mt.d.DOUBLESIDE ? ut.concat(ut) : ut;
-        Kt.colors = tt
+      const Du = [qu / 2, fu / 2, Cu / 2],
+        gu = hu.reduce(((uu, Eu, ju) => uu.concat(Eu * Du[ju % 3])), []),
+        Mu = 0 === uu.sideOrientation ? 0 : uu.sideOrientation || Xu.b.DEFAULTSIDE,
+        eu = uu.faceUV || new Array(6),
+        Gu = uu.faceColors,
+        pu = [];
+      for (let Xu = 0; Xu < 6; Xu++) void 0 === eu[Xu] && (eu[Xu] = new su.u(0, 0, 1, 1)), Gu && void 0 === Gu[Xu] && (Gu[Xu] = new Uu.g(1, 1, 1, 1));
+      for (let su = 0; su < 6; su++)
+        if (Zu.push(eu[su].z, lu.c ? 1 - eu[su].w : eu[su].w), Zu.push(eu[su].x, lu.c ? 1 - eu[su].w : eu[su].w), Zu.push(eu[su].x, lu.c ? 1 - eu[su].y : eu[su].y), Zu.push(eu[su].z, lu.c ? 1 - eu[su].y : eu[su].y), Gu)
+          for (let uu = 0; uu < 4; uu++) pu.push(Gu[su].r, Gu[su].g, Gu[su].b, Gu[su].a);
+      Xu.b._ComputeSides(Mu, gu, Eu, ju, Zu, uu.frontUVs, uu.backUVs);
+      const wu = new Xu.b;
+      if (wu.indices = Eu, wu.positions = gu, wu.normals = ju, wu.uvs = Zu, Gu) {
+        const uu = Mu === Xu.b.DOUBLESIDE ? pu.concat(pu) : pu;
+        wu.colors = uu
       }
-      return Kt
+      return wu
     }
 
-    function Ht(tt) {
-      let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-      const Ot = new Dt.d(tt, Vt);
-      et.sideOrientation = Dt.d._GetDefaultSideOrientation(et.sideOrientation), Ot._originalBuilderSideOrientation = et.sideOrientation;
-      return jt(et).applyToMesh(Ot, et.updatable), Ot
+    function fu(uu) {
+      let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      const su = new Zu.e(uu, ju);
+      Eu.sideOrientation = Zu.e._GetDefaultSideOrientation(Eu.sideOrientation), su._originalBuilderSideOrientation = Eu.sideOrientation;
+      return qu(Eu).applyToMesh(su, Eu.updatable), su
     }
-    let Xt = !1;
-    Xt || (Xt = !0, mt.d.CreateBox = jt, Dt.d.CreateBox = function(tt, et) {
-      return Ht(tt, {
-        size: et,
+    let Cu = !1;
+    Cu || (Cu = !0, Xu.b.CreateBox = qu, Zu.e.CreateBox = function(uu, Eu) {
+      return fu(uu, {
+        size: Eu,
         sideOrientation: arguments.length > 4 ? arguments[4] : void 0,
         updatable: arguments.length > 3 ? arguments[3] : void 0
       }, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null)
     })
   },
-  40644: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => Qt
+  40720: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => bu
     });
-    var Ot = Vt(37336),
-      qt = Vt(40601),
-      Dt = Vt(40608),
-      mt = Vt(40650),
-      dt = Vt(40343),
-      jt = Vt(38899);
+    var su = ju(37494),
+      Uu = ju(40661),
+      Zu = ju(40668),
+      Xu = ju(40723),
+      lu = ju(40399),
+      qu = ju(39032);
 
-    function Ht(tt) {
-      const et = [],
-        Vt = [],
-        Ot = tt.lines,
-        qt = tt.colors,
-        mt = [];
-      let dt = 0;
-      for (let Dt = 0; Dt < Ot.length; Dt++) {
-        const tt = Ot[Dt];
-        for (let Ot = 0; Ot < tt.length; Ot++) {
+    function fu(uu) {
+      const Eu = [],
+        ju = [],
+        su = uu.lines,
+        Uu = uu.colors,
+        Xu = [];
+      let lu = 0;
+      for (let Zu = 0; Zu < su.length; Zu++) {
+        const uu = su[Zu];
+        for (let su = 0; su < uu.length; su++) {
           const {
-            x: jt,
-            y: Ht,
-            z: Xt
-          } = tt[Ot];
-          if (Vt.push(jt, Ht, Xt), qt) {
-            const tt = qt[Dt],
+            x: qu,
+            y: fu,
+            z: Cu
+          } = uu[su];
+          if (ju.push(qu, fu, Cu), Uu) {
+            const uu = Uu[Zu],
               {
-                r: et,
-                g: Vt,
-                b: dt,
-                a: jt
-              } = tt[Ot];
-            mt.push(et, Vt, dt, jt)
+                r: Eu,
+                g: ju,
+                b: lu,
+                a: qu
+              } = uu[su];
+            Xu.push(Eu, ju, lu, qu)
           }
-          Ot > 0 && (et.push(dt - 1), et.push(dt)), dt++
+          su > 0 && (Eu.push(lu - 1), Eu.push(lu)), lu++
         }
       }
-      const jt = new Dt.d;
-      return jt.indices = et, jt.positions = Vt, qt && (jt.colors = mt), jt
+      const qu = new Zu.b;
+      return qu.indices = Eu, qu.positions = ju, Uu && (qu.colors = Xu), qu
     }
 
-    function Xt(tt) {
-      const et = tt.dashSize || 3,
-        Vt = tt.gapSize || 1,
-        qt = tt.dashNb || 200,
-        mt = tt.points,
-        dt = [],
-        jt = [],
-        Ht = Ot.n.Zero();
-      let Xt, Qt, lt, Et = 0,
-        ft = 0;
-      for (lt = 0; lt < mt.length - 1; lt++) mt[lt + 1].subtractToRef(mt[lt], Ht), Et += Ht.length();
-      const wt = Et / qt,
-        yt = et * wt / (et + Vt);
-      for (lt = 0; lt < mt.length - 1; lt++) {
-        mt[lt + 1].subtractToRef(mt[lt], Ht), Xt = Math.floor(Ht.length() / wt), Ht.normalize();
-        for (let tt = 0; tt < Xt; tt++) Qt = wt * tt, dt.push(mt[lt].x + Qt * Ht.x, mt[lt].y + Qt * Ht.y, mt[lt].z + Qt * Ht.z), dt.push(mt[lt].x + (Qt + yt) * Ht.x, mt[lt].y + (Qt + yt) * Ht.y, mt[lt].z + (Qt + yt) * Ht.z), jt.push(ft, ft + 1), ft += 2
+    function Cu(uu) {
+      const Eu = uu.dashSize || 3,
+        ju = uu.gapSize || 1,
+        Uu = uu.dashNb || 200,
+        Xu = uu.points,
+        lu = [],
+        qu = [],
+        fu = su.t.Zero();
+      let Cu, bu, cu, Nu = 0,
+        Ou = 0;
+      for (cu = 0; cu < Xu.length - 1; cu++) Xu[cu + 1].subtractToRef(Xu[cu], fu), Nu += fu.length();
+      const Yu = Nu / Uu,
+        hu = Eu * Yu / (Eu + ju);
+      for (cu = 0; cu < Xu.length - 1; cu++) {
+        Xu[cu + 1].subtractToRef(Xu[cu], fu), Cu = Math.floor(fu.length() / Yu), fu.normalize();
+        for (let uu = 0; uu < Cu; uu++) bu = Yu * uu, lu.push(Xu[cu].x + bu * fu.x, Xu[cu].y + bu * fu.y, Xu[cu].z + bu * fu.z), lu.push(Xu[cu].x + (bu + hu) * fu.x, Xu[cu].y + (bu + hu) * fu.y, Xu[cu].z + (bu + hu) * fu.z), qu.push(Ou, Ou + 1), Ou += 2
       }
-      const Nt = new Dt.d;
-      return Nt.positions = dt, Nt.indices = jt, Nt
+      const Du = new Zu.b;
+      return Du.positions = lu, Du.indices = qu, Du
     }
 
-    function Qt(tt, et) {
-      let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-      const Ot = et.instance,
-        qt = et.lines,
-        Dt = et.colors;
-      if (Ot) {
-        const tt = Ot.getVerticesData(dt.m.PositionKind);
-        let et, Vt;
-        Dt && (et = Ot.getVerticesData(dt.m.ColorKind));
-        let mt = 0,
-          jt = 0;
-        for (let Ot = 0; Ot < qt.length; Ot++) {
-          const dt = qt[Ot];
-          for (let qt = 0; qt < dt.length; qt++) tt[mt] = dt[qt].x, tt[mt + 1] = dt[qt].y, tt[mt + 2] = dt[qt].z, Dt && et && (Vt = Dt[Ot], et[jt] = Vt[qt].r, et[jt + 1] = Vt[qt].g, et[jt + 2] = Vt[qt].b, et[jt + 3] = Vt[qt].a, jt += 4), mt += 3
+    function bu(uu, Eu) {
+      let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      const su = Eu.instance,
+        Uu = Eu.lines,
+        Zu = Eu.colors;
+      if (su) {
+        const uu = su.getVerticesData(lu.j.PositionKind);
+        let Eu, ju;
+        Zu && (Eu = su.getVerticesData(lu.j.ColorKind));
+        let Xu = 0,
+          qu = 0;
+        for (let su = 0; su < Uu.length; su++) {
+          const lu = Uu[su];
+          for (let Uu = 0; Uu < lu.length; Uu++) uu[Xu] = lu[Uu].x, uu[Xu + 1] = lu[Uu].y, uu[Xu + 2] = lu[Uu].z, Zu && Eu && (ju = Zu[su], Eu[qu] = ju[Uu].r, Eu[qu + 1] = ju[Uu].g, Eu[qu + 2] = ju[Uu].b, Eu[qu + 3] = ju[Uu].a, qu += 4), Xu += 3
         }
-        return Ot.updateVerticesData(dt.m.PositionKind, tt, !1, !1), Dt && et && Ot.updateVerticesData(dt.m.ColorKind, et, !1, !1), Ot.refreshBoundingInfo(), Ot
+        return su.updateVerticesData(lu.j.PositionKind, uu, !1, !1), Zu && Eu && su.updateVerticesData(lu.j.ColorKind, Eu, !1, !1), su.refreshBoundingInfo(), su
       }
-      const jt = !!Dt,
-        Xt = new mt.b(tt, Vt, null, void 0, void 0, jt, et.useVertexAlpha, et.material);
-      return Ht(et).applyToMesh(Xt, et.updatable), Xt
+      const qu = !!Zu,
+        Cu = new Xu.c(uu, ju, null, void 0, void 0, qu, Eu.useVertexAlpha, Eu.material);
+      return fu(Eu).applyToMesh(Cu, Eu.updatable), Cu
     }
 
-    function lt(tt, et) {
-      let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-      const Ot = et.colors ? [et.colors] : null;
-      return Qt(tt, {
-        lines: [et.points],
-        updatable: et.updatable,
-        instance: et.instance,
-        colors: Ot,
-        useVertexAlpha: et.useVertexAlpha,
-        material: et.material
-      }, Vt)
+    function cu(uu, Eu) {
+      let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      const su = Eu.colors ? [Eu.colors] : null;
+      return bu(uu, {
+        lines: [Eu.points],
+        updatable: Eu.updatable,
+        instance: Eu.instance,
+        colors: su,
+        useVertexAlpha: Eu.useVertexAlpha,
+        material: Eu.material
+      }, ju)
     }
 
-    function Et(tt, et) {
-      let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-      const Dt = et.points,
-        dt = et.instance,
-        Ht = et.gapSize || 1,
-        Qt = et.dashSize || 3;
-      if (dt) {
-        const tt = tt => {
-          const et = Ot.n.Zero(),
-            Vt = tt.length / 6;
-          let qt, mt, jt, Ht, Xt = 0,
-            Qt = 0;
-          for (jt = 0; jt < Dt.length - 1; jt++) Dt[jt + 1].subtractToRef(Dt[jt], et), Xt += et.length();
-          const lt = Xt / Vt,
-            Et = dt._creationDataStorage.dashSize,
-            ft = Et * lt / (Et + dt._creationDataStorage.gapSize);
-          for (jt = 0; jt < Dt.length - 1; jt++)
-            for (Dt[jt + 1].subtractToRef(Dt[jt], et), qt = Math.floor(et.length() / lt), et.normalize(), Ht = 0; Ht < qt && Qt < tt.length;) mt = lt * Ht, tt[Qt] = Dt[jt].x + mt * et.x, tt[Qt + 1] = Dt[jt].y + mt * et.y, tt[Qt + 2] = Dt[jt].z + mt * et.z, tt[Qt + 3] = Dt[jt].x + (mt + ft) * et.x, tt[Qt + 4] = Dt[jt].y + (mt + ft) * et.y, tt[Qt + 5] = Dt[jt].z + (mt + ft) * et.z, Qt += 6, Ht++;
-          for (; Qt < tt.length;) tt[Qt] = Dt[jt].x, tt[Qt + 1] = Dt[jt].y, tt[Qt + 2] = Dt[jt].z, Qt += 3
+    function Nu(uu, Eu) {
+      let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      const Zu = Eu.points,
+        lu = Eu.instance,
+        fu = Eu.gapSize || 1,
+        bu = Eu.dashSize || 3;
+      if (lu) {
+        const uu = uu => {
+          const Eu = su.t.Zero(),
+            ju = uu.length / 6;
+          let Uu, Xu, qu, fu, Cu = 0,
+            bu = 0;
+          for (qu = 0; qu < Zu.length - 1; qu++) Zu[qu + 1].subtractToRef(Zu[qu], Eu), Cu += Eu.length();
+          const cu = Cu / ju,
+            Nu = lu._creationDataStorage.dashSize,
+            Ou = Nu * cu / (Nu + lu._creationDataStorage.gapSize);
+          for (qu = 0; qu < Zu.length - 1; qu++)
+            for (Zu[qu + 1].subtractToRef(Zu[qu], Eu), Uu = Math.floor(Eu.length() / cu), Eu.normalize(), fu = 0; fu < Uu && bu < uu.length;) Xu = cu * fu, uu[bu] = Zu[qu].x + Xu * Eu.x, uu[bu + 1] = Zu[qu].y + Xu * Eu.y, uu[bu + 2] = Zu[qu].z + Xu * Eu.z, uu[bu + 3] = Zu[qu].x + (Xu + Ou) * Eu.x, uu[bu + 4] = Zu[qu].y + (Xu + Ou) * Eu.y, uu[bu + 5] = Zu[qu].z + (Xu + Ou) * Eu.z, bu += 6, fu++;
+          for (; bu < uu.length;) uu[bu] = Zu[qu].x, uu[bu + 1] = Zu[qu].y, uu[bu + 2] = Zu[qu].z, bu += 3
         };
-        return (et.dashNb || et.dashSize || et.gapSize || et.useVertexAlpha || et.material) && jt.d.Warn("You have used an option other than points with the instance option. Please be aware that these other options will be ignored."), dt.updateMeshPositions(tt, !1), dt
+        return (Eu.dashNb || Eu.dashSize || Eu.gapSize || Eu.useVertexAlpha || Eu.material) && qu.b.Warn("You have used an option other than points with the instance option. Please be aware that these other options will be ignored."), lu.updateMeshPositions(uu, !1), lu
       }
-      const lt = new mt.b(tt, Vt, null, void 0, void 0, void 0, et.useVertexAlpha, et.material);
-      return Xt(et).applyToMesh(lt, et.updatable), lt._creationDataStorage = new qt.k, lt._creationDataStorage.dashSize = Qt, lt._creationDataStorage.gapSize = Ht, lt
+      const cu = new Xu.c(uu, ju, null, void 0, void 0, void 0, Eu.useVertexAlpha, Eu.material);
+      return Cu(Eu).applyToMesh(cu, Eu.updatable), cu._creationDataStorage = new Uu.g, cu._creationDataStorage.dashSize = bu, cu._creationDataStorage.gapSize = fu, cu
     }
-    let ft = !1;
-    ft || (ft = !0, Dt.d.CreateLineSystem = Ht, Dt.d.CreateDashedLines = Xt, qt.d.CreateLines = function(tt, et) {
-      return lt(tt, {
-        points: et,
+    let Ou = !1;
+    Ou || (Ou = !0, Zu.b.CreateLineSystem = fu, Zu.b.CreateDashedLines = Cu, Uu.e.CreateLines = function(uu, Eu) {
+      return cu(uu, {
+        points: Eu,
         updatable: arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         instance: arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null
       }, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null)
-    }, qt.d.CreateDashedLines = function(tt, et, Vt, Ot, qt) {
-      return Et(tt, {
-        points: et,
-        dashSize: Vt,
-        gapSize: Ot,
-        dashNb: qt,
+    }, Uu.e.CreateDashedLines = function(uu, Eu, ju, su, Uu) {
+      return Nu(uu, {
+        points: Eu,
+        dashSize: ju,
+        gapSize: su,
+        dashNb: Uu,
         updatable: arguments.length > 6 ? arguments[6] : void 0,
         instance: arguments.length > 7 ? arguments[7] : void 0
       }, arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null)
     })
   },
-  40650: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => lt,
-      e: () => wt
+  40723: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => cu,
+      d: () => Yu
     });
-    var Ot, qt, Dt = Vt(37513),
-      mt = Vt(40343),
-      dt = Vt(40601),
-      jt = Vt(40656),
-      Ht = Vt(40474),
-      Xt = Vt(40659),
-      Qt = Vt(40080);
-    class lt extends dt.d {
-      _isShaderMaterial(tt) {
-        return !!tt && "ShaderMaterial" === tt.getClassName()
+    var su, Uu, Zu = ju(37680),
+      Xu = ju(40399),
+      lu = ju(40661),
+      qu = ju(40731),
+      fu = ju(40552),
+      Cu = ju(40735),
+      bu = ju(40153);
+    class cu extends lu.e {
+      _isShaderMaterial(uu) {
+        return !!uu && "ShaderMaterial" === uu.getClassName()
       }
-      constructor(tt) {
-        let et = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-          Ot = arguments.length > 5 ? arguments[5] : void 0,
-          qt = arguments.length > 6 ? arguments[6] : void 0,
-          dt = arguments.length > 7 ? arguments[7] : void 0;
-        super(tt, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null, et, arguments.length > 4 ? arguments[4] : void 0), this.useVertexColor = Ot, this.useVertexAlpha = qt, this.color = new Dt.b(1, 1, 1), this.alpha = 1, this._shaderLanguage = 0, this._ownsMaterial = !1, et && (this.color = et.color.clone(), this.alpha = et.alpha, this.useVertexColor = et.useVertexColor, this.useVertexAlpha = et.useVertexAlpha), this.intersectionThreshold = .1;
-        const jt = {
-          attributes: [mt.m.PositionKind],
+      constructor(uu) {
+        let Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+          su = arguments.length > 5 ? arguments[5] : void 0,
+          Uu = arguments.length > 6 ? arguments[6] : void 0,
+          lu = arguments.length > 7 ? arguments[7] : void 0;
+        super(uu, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null, Eu, arguments.length > 4 ? arguments[4] : void 0), this.useVertexColor = su, this.useVertexAlpha = Uu, this.color = new Zu.c(1, 1, 1), this.alpha = 1, this._shaderLanguage = 0, this._ownsMaterial = !1, Eu && (this.color = Eu.color.clone(), this.alpha = Eu.alpha, this.useVertexColor = Eu.useVertexColor, this.useVertexAlpha = Eu.useVertexAlpha), this.intersectionThreshold = .1;
+        const qu = {
+          attributes: [Xu.j.PositionKind],
           uniforms: ["world", "viewProjection"],
           needAlphaBlending: !0,
           defines: [],
           useClipPlane: null,
           shaderLanguage: 0
         };
-        if (this.useVertexAlpha ? jt.defines.push("#define VERTEXALPHA") : jt.needAlphaBlending = !1, this.useVertexColor ? (jt.defines.push("#define VERTEXCOLOR"), jt.attributes.push(mt.m.ColorKind)) : (jt.uniforms.push("color"), this._color4 = new Dt.c), dt) this.material = dt;
+        if (this.useVertexAlpha ? qu.defines.push("#define VERTEXALPHA") : qu.needAlphaBlending = !1, this.useVertexColor ? (qu.defines.push("#define VERTEXCOLOR"), qu.attributes.push(Xu.j.ColorKind)) : (qu.uniforms.push("color"), this._color4 = new Zu.g), lu) this.material = lu;
         else {
-          this.vI().Jf().isWebGPU && !lt.ForceGLSL && (this._shaderLanguage = 1), jt.shaderLanguage = this._shaderLanguage, jt.extraInitializationsAsync = async () => {
-            1 === this._shaderLanguage ? await Promise.all([Vt.e(349).then((() => Vt(42798))), Vt.e(355).then((() => Vt(42805)))]) : await Promise.all([Vt.e(331).then((() => Vt(42814))), Vt.e(337).then((() => Vt(42818)))])
+          this.hV().wO().isWebGPU && !cu.ForceGLSL && (this._shaderLanguage = 1), qu.shaderLanguage = this._shaderLanguage, qu.extraInitializationsAsync = async () => {
+            1 === this._shaderLanguage ? await Promise.all([ju.e(349).then((() => ju(42835))), ju.e(355).then((() => ju(42837)))]) : await Promise.all([ju.e(331).then((() => ju(42845))), ju.e(337).then((() => ju(42854)))])
           };
-          const tt = new Xt.o("colorShader", this.vI(), "color", jt, !1);
-          tt.doNotSerialize = !0, this._ownsMaterial = !0, this._setInternalMaterial(tt)
+          const uu = new Cu.q("colorShader", this.hV(), "color", qu, !1);
+          uu.doNotSerialize = !0, this._ownsMaterial = !0, this._setInternalMaterial(uu)
         }
       }
       getClassName() {
@@ -630,193 +630,193 @@ export const modules = {
       get material() {
         return this._internalAbstractMeshDataInfo._material
       }
-      set material(tt) {
-        const et = this.material;
-        if (et === tt) return;
-        const Vt = et && this._ownsMaterial;
-        this._ownsMaterial = !1, this._setInternalMaterial(tt), Vt && et?.dispose()
+      set material(uu) {
+        const Eu = this.material;
+        if (Eu === uu) return;
+        const ju = Eu && this._ownsMaterial;
+        this._ownsMaterial = !1, this._setInternalMaterial(uu), ju && Eu?.dispose()
       }
-      _setInternalMaterial(tt) {
-        this._setMaterial(tt), this.material && (this.material.fillMode = Ht.c.LineListDrawMode, this.material.disableLighting = !0)
+      _setInternalMaterial(uu) {
+        this._setMaterial(uu), this.material && (this.material.fillMode = fu.b.LineListDrawMode, this.material.disableLighting = !0)
       }
       get checkCollisions() {
         return !1
       }
-      set checkCollisions(tt) {}
-      _bind(tt, et) {
+      set checkCollisions(uu) {}
+      _bind(uu, Eu) {
         if (!this._geometry) return this;
-        const Vt = this.isUnIndexed ? null : this._geometry.getIndexBuffer();
-        if (!this._userInstancedBuffersStorage || this.hasThinInstances ? this._geometry._bind(et, Vt) : this._geometry._bind(et, Vt, this._userInstancedBuffersStorage.vertexBuffers, this._userInstancedBuffersStorage.vertexArrayObjects), !this.useVertexColor && this._isShaderMaterial(this.material)) {
+        const ju = this.isUnIndexed ? null : this._geometry.getIndexBuffer();
+        if (!this._userInstancedBuffersStorage || this.hasThinInstances ? this._geometry._bind(Eu, ju) : this._geometry._bind(Eu, ju, this._userInstancedBuffersStorage.vertexBuffers, this._userInstancedBuffersStorage.vertexArrayObjects), !this.useVertexColor && this._isShaderMaterial(this.material)) {
           const {
-            r: tt,
-            g: et,
-            b: Vt
+            r: uu,
+            g: Eu,
+            b: ju
           } = this.color;
-          this._color4.set(tt, et, Vt, this.alpha), this.material.setColor4("color", this._color4)
+          this._color4.set(uu, Eu, ju, this.alpha), this.material.setColor4("color", this._color4)
         }
         return this
       }
-      _draw(tt, et, Vt) {
+      _draw(uu, Eu, ju) {
         if (!this._geometry || !this._geometry.getVertexBuffers() || !this._unIndexed && !this._geometry.getIndexBuffer()) return this;
-        const Ot = this.vI().Jf();
-        return this._unIndexed ? Ot.drawArraysType(Ht.c.LineListDrawMode, tt.verticesStart, tt.verticesCount, Vt) : Ot.drawElementsType(Ht.c.LineListDrawMode, tt.indexStart, tt.indexCount, Vt), this
+        const su = this.hV().wO();
+        return this._unIndexed ? su.drawArraysType(fu.b.LineListDrawMode, uu.verticesStart, uu.verticesCount, ju) : su.drawElementsType(fu.b.LineListDrawMode, uu.indexStart, uu.indexCount, ju), this
       }
-      dispose(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        (arguments.length > 2 ? arguments[2] : void 0) || (this._ownsMaterial || et) && this.material?.dispose(!1, !1, !0), super.dispose(tt)
+      dispose(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        (arguments.length > 2 ? arguments[2] : void 0) || (this._ownsMaterial || Eu) && this.material?.dispose(!1, !1, !0), super.dispose(uu)
       }
-      clone(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          Vt = arguments.length > 2 ? arguments[2] : void 0;
-        if (et && void 0 === et._addToSceneRootNodes) {
-          const Vt = et;
-          return Vt.source = this, new lt(tt, this.vI(), Vt.parent, Vt.source, Vt.doNotCloneChildren)
+      clone(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          ju = arguments.length > 2 ? arguments[2] : void 0;
+        if (Eu && void 0 === Eu._addToSceneRootNodes) {
+          const ju = Eu;
+          return ju.source = this, new cu(uu, this.hV(), ju.parent, ju.source, ju.doNotCloneChildren)
         }
-        return new lt(tt, this.vI(), et, this, Vt)
+        return new cu(uu, this.hV(), Eu, this, ju)
       }
-      createInstance(tt) {
-        const et = new Et(tt, this);
-        if (this.qL) {
-          et.qL = {};
-          for (const tt in this.qL) et.qL[tt] = this.qL[tt]
+      createInstance(uu) {
+        const Eu = new Nu(uu, this);
+        if (this.Hr) {
+          Eu.Hr = {};
+          for (const uu in this.Hr) Eu.Hr[uu] = this.Hr[uu]
         }
-        return et
+        return Eu
       }
-      serialize(tt) {
-        super.serialize(tt), tt.color = this.color.GOt(), tt.alpha = this.alpha
+      serialize(uu) {
+        super.serialize(uu), uu.color = this.color.Osu(), uu.alpha = this.alpha
       }
-      static Parse(tt, et) {
-        const Vt = new lt(tt.name, et);
-        return Vt.color = Dt.b.FromArray(tt.color), Vt.alpha = tt.alpha, Vt
+      static Parse(uu, Eu) {
+        const ju = new cu(uu.name, Eu);
+        return ju.color = Zu.c.FromArray(uu.color), ju.alpha = uu.alpha, ju
       }
     }
-    lt.ForceGLSL = !1;
-    class Et extends jt.b {
-      constructor(tt, et) {
-        super(tt, et), this.intersectionThreshold = et.intersectionThreshold
+    cu.ForceGLSL = !1;
+    class Nu extends qu.b {
+      constructor(uu, Eu) {
+        super(uu, Eu), this.intersectionThreshold = Eu.intersectionThreshold
       }
       getClassName() {
         return "InstancedLinesMesh"
       }
     }
-    let ft = !1;
+    let Ou = !1;
 
-    function wt() {
-      ft || (ft = !0, dt.d._LinesMeshParser = (tt, et) => lt.Parse(tt, et))
-    }(Ot = lt.prototype).enableEdgesRendering ?? (Ot.enableEdgesRendering = (0, Qt.d)("LinesMesh", "enableEdgesRendering")), (qt = Et.prototype).enableEdgesRendering ?? (qt.enableEdgesRendering = (0, Qt.d)("InstancedLinesMesh", "enableEdgesRendering"))
+    function Yu() {
+      Ou || (Ou = !0, lu.e._LinesMeshParser = (uu, Eu) => cu.Parse(uu, Eu))
+    }(su = cu.prototype).enableEdgesRendering ?? (su.enableEdgesRendering = (0, bu.g)("LinesMesh", "enableEdgesRendering")), (Uu = Nu.prototype).enableEdgesRendering ?? (Uu.enableEdgesRendering = (0, bu.g)("InstancedLinesMesh", "enableEdgesRendering"))
   },
-  38897: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => Dt
+  39030: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => Zu
     });
-    var Ot = Vt(38899);
-    const qt = (tt, et, Vt) => tt ? tt.getClassName && "Mesh" === tt.getClassName() ? null : !tt.getClassName || "SubMesh" !== tt.getClassName() && "PhysicsBody" !== tt.getClassName() ? tt.clone ? tt.clone() : Array.isArray(tt) ? tt.slice() : Vt && "object" === typeof tt ? {
-      ...tt
-    } : null : tt.clone(et) : null;
-    class Dt {
-      static DeepCopy(tt, et, Vt, Dt) {
-        let mt = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const dt = function(tt) {
-          const et = [];
+    var su = ju(39032);
+    const Uu = (uu, Eu, ju) => uu ? uu.getClassName && "Mesh" === uu.getClassName() ? null : !uu.getClassName || "SubMesh" !== uu.getClassName() && "PhysicsBody" !== uu.getClassName() ? uu.clone ? uu.clone() : Array.isArray(uu) ? uu.slice() : ju && "object" === typeof uu ? {
+      ...uu
+    } : null : uu.clone(Eu) : null;
+    class Zu {
+      static DeepCopy(uu, Eu, ju, Zu) {
+        let Xu = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const lu = function(uu) {
+          const Eu = [];
           do {
-            const Vt = Object.getOwnPropertyNames(tt);
-            for (const tt of Vt) - 1 === et.indexOf(tt) && et.push(tt)
-          } while (tt = Object.getPrototypeOf(tt));
-          return et
-        }(tt);
-        for (const Ht of dt) {
-          if ("_" === Ht[0] && (!Dt || -1 === Dt.indexOf(Ht))) continue;
-          if (Ht.endsWith("Observable")) continue;
-          if (Vt && -1 !== Vt.indexOf(Ht)) continue;
-          const dt = tt[Ht],
-            Xt = typeof dt;
-          if ("function" !== Xt) try {
-            if ("object" === Xt)
-              if (dt instanceof Uint8Array) et[Ht] = Uint8Array.from(dt);
-              else if (dt instanceof Array) {
-              if (et[Ht] = [], dt.length > 0)
-                if ("object" == typeof dt[0])
-                  for (let tt = 0; tt < dt.length; tt++) {
-                    const Vt = qt(dt[tt], et, mt); - 1 === et[Ht].indexOf(Vt) && et[Ht].push(Vt)
-                  } else et[Ht] = dt.slice(0)
-            } else et[Ht] = qt(dt, et, mt);
-            else et[Ht] = dt
-          } catch (jt) {
-            Ot.d.Warn(jt.message)
+            const ju = Object.getOwnPropertyNames(uu);
+            for (const uu of ju) - 1 === Eu.indexOf(uu) && Eu.push(uu)
+          } while (uu = Object.getPrototypeOf(uu));
+          return Eu
+        }(uu);
+        for (const fu of lu) {
+          if ("_" === fu[0] && (!Zu || -1 === Zu.indexOf(fu))) continue;
+          if (fu.endsWith("Observable")) continue;
+          if (ju && -1 !== ju.indexOf(fu)) continue;
+          const lu = uu[fu],
+            Cu = typeof lu;
+          if ("function" !== Cu) try {
+            if ("object" === Cu)
+              if (lu instanceof Uint8Array) Eu[fu] = Uint8Array.from(lu);
+              else if (lu instanceof Array) {
+              if (Eu[fu] = [], lu.length > 0)
+                if ("object" == typeof lu[0])
+                  for (let uu = 0; uu < lu.length; uu++) {
+                    const ju = Uu(lu[uu], Eu, Xu); - 1 === Eu[fu].indexOf(ju) && Eu[fu].push(ju)
+                  } else Eu[fu] = lu.slice(0)
+            } else Eu[fu] = Uu(lu, Eu, Xu);
+            else Eu[fu] = lu
+          } catch (qu) {
+            su.b.Warn(qu.message)
           }
         }
       }
     }
   },
-  38159: (tt, et, Vt) => {
-    function Ot() {
-      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (tt => {
-        const et = 16 * Math.random() | 0;
-        return ("x" === tt ? et : 3 & et | 8).toString(16)
+  38303: (uu, Eu, ju) => {
+    function su() {
+      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (uu => {
+        const Eu = 16 * Math.random() | 0;
+        return ("x" === uu ? Eu : 3 & Eu | 8).toString(16)
       }))
     }
-    Vt.d(et, {
-      b: () => Ot
+    ju.d(Eu, {
+      e: () => su
     })
   },
-  38899: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => Ot
+  39032: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => su
     });
-    class Ot {
-      static _CheckLimit(tt, et) {
-        let Vt = Ot._LogLimitOutputs[tt];
-        return Vt ? Vt.current++ : (Vt = {
-          limit: et,
+    class su {
+      static _CheckLimit(uu, Eu) {
+        let ju = su._LogLimitOutputs[uu];
+        return ju ? ju.current++ : (ju = {
+          limit: Eu,
           current: 1
-        }, Ot._LogLimitOutputs[tt] = Vt), Vt.current <= Vt.limit
+        }, su._LogLimitOutputs[uu] = ju), ju.current <= ju.limit
       }
-      static _GenerateLimitMessage(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const Vt = Ot._LogLimitOutputs[tt];
-        if (!Vt || !Ot.MessageLimitReached) return;
-        const qt = this._Levels[et];
-        Vt.current === Vt.limit && Ot[qt.name](Ot.MessageLimitReached.replace(/%LIMIT%/g, "" + Vt.limit).replace(/%TYPE%/g, qt.name ?? ""))
+      static _GenerateLimitMessage(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const ju = su._LogLimitOutputs[uu];
+        if (!ju || !su.MessageLimitReached) return;
+        const Uu = this._Levels[Eu];
+        ju.current === ju.limit && su[Uu.name](su.MessageLimitReached.replace(/%LIMIT%/g, "" + ju.limit).replace(/%TYPE%/g, Uu.name ?? ""))
       }
-      static _AddLogEntry(tt) {
-        Ot._LogCache = tt + Ot._LogCache, Ot.OnNewCacheEntry && Ot.OnNewCacheEntry(tt)
+      static _AddLogEntry(uu) {
+        su._LogCache = uu + su._LogCache, su.OnNewCacheEntry && su.OnNewCacheEntry(uu)
       }
-      static _FormatMessage(tt) {
-        const et = tt => tt < 10 ? "0" + tt : "" + tt,
-          Vt = new Date;
-        return "[" + et(Vt.getHours()) + ":" + et(Vt.getMinutes()) + ":" + et(Vt.getSeconds()) + "]: " + tt
+      static _FormatMessage(uu) {
+        const Eu = uu => uu < 10 ? "0" + uu : "" + uu,
+          ju = new Date;
+        return "[" + Eu(ju.getHours()) + ":" + Eu(ju.getMinutes()) + ":" + Eu(ju.getSeconds()) + "]: " + uu
       }
-      static _LogDisabled(tt, et) {}
+      static _LogDisabled(uu, Eu) {}
       static _LogEnabled() {
-        let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          et = arguments.length > 1 ? arguments[1] : void 0,
-          Vt = arguments.length > 2 ? arguments[2] : void 0;
-        const qt = Array.isArray(et) ? et[0] : et;
-        if (void 0 !== Vt && !Ot._CheckLimit(qt, Vt)) return;
-        const Dt = Ot._FormatMessage(qt),
-          mt = this._Levels[tt],
-          dt = Array.isArray(et) ? et.slice(1) : [];
-        mt.logFunc && mt.logFunc("BJS - " + Dt, ...dt);
-        const jt = `<div style='color:${mt.color}'>${Dt}</div><br>`;
-        Ot._AddLogEntry(jt), Ot._GenerateLimitMessage(qt, tt)
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          Eu = arguments.length > 1 ? arguments[1] : void 0,
+          ju = arguments.length > 2 ? arguments[2] : void 0;
+        const Uu = Array.isArray(Eu) ? Eu[0] : Eu;
+        if (void 0 !== ju && !su._CheckLimit(Uu, ju)) return;
+        const Zu = su._FormatMessage(Uu),
+          Xu = this._Levels[uu],
+          lu = Array.isArray(Eu) ? Eu.slice(1) : [];
+        Xu.logFunc && Xu.logFunc("BJS - " + Zu, ...lu);
+        const qu = `<div style='color:${Xu.color}'>${Zu}</div><br>`;
+        su._AddLogEntry(qu), su._GenerateLimitMessage(Uu, uu)
       }
       static get LogCache() {
-        return Ot._LogCache
+        return su._LogCache
       }
       static ClearLogCache() {
-        Ot._LogCache = "", Ot._LogLimitOutputs = {}, Ot.errorsCount = 0
+        su._LogCache = "", su._LogLimitOutputs = {}, su.errorsCount = 0
       }
-      static set LogLevels(tt) {
-        Ot.Log = Ot._LogDisabled, Ot.Warn = Ot._LogDisabled, Ot.Error = Ot._LogDisabled;
-        const et = [Ot.MessageLogLevel, Ot.WarningLogLevel, Ot.ErrorLogLevel];
-        for (const Vt of et)
-          if ((tt & Vt) === Vt) {
-            const tt = this._Levels[Vt];
-            Ot[tt.name] = Ot._LogEnabled.bind(Ot, Vt)
+      static set LogLevels(uu) {
+        su.Log = su._LogDisabled, su.Warn = su._LogDisabled, su.Error = su._LogDisabled;
+        const Eu = [su.MessageLogLevel, su.WarningLogLevel, su.ErrorLogLevel];
+        for (const ju of Eu)
+          if ((uu & ju) === ju) {
+            const uu = this._Levels[ju];
+            su[uu.name] = su._LogEnabled.bind(su, ju)
           }
       }
     }
-    Ot.NoneLogLevel = 0, Ot.MessageLogLevel = 1, Ot.WarningLogLevel = 2, Ot.ErrorLogLevel = 4, Ot.AllLogLevel = 7, Ot.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Ot._LogCache = "", Ot._LogLimitOutputs = {}, Ot._Levels = [{}, {
+    su.NoneLogLevel = 0, su.MessageLogLevel = 1, su.WarningLogLevel = 2, su.ErrorLogLevel = 4, su.AllLogLevel = 7, su.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", su._LogCache = "", su._LogLimitOutputs = {}, su._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -828,15 +828,15 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], Ot.errorsCount = 0, Ot.Log = Ot._LogEnabled.bind(Ot, Ot.MessageLogLevel), Ot.Warn = Ot._LogEnabled.bind(Ot, Ot.WarningLogLevel), Ot.Error = Ot._LogEnabled.bind(Ot, Ot.ErrorLogLevel)
+    }], su.errorsCount = 0, su.Log = su._LogEnabled.bind(su, su.MessageLogLevel), su.Warn = su._LogEnabled.bind(su, su.WarningLogLevel), su.Error = su._LogEnabled.bind(su, su.ErrorLogLevel)
   },
-  40289: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => Ot.d
+  40346: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => su.f
     });
-    var Ot = Vt(40296);
-    (0, Ot.b)()
+    var su = ju(40350);
+    (0, su.d)()
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

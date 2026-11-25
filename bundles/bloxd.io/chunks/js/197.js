@@ -1,225 +1,225 @@
 export const id = 197;
 export const ids = [197];
 export const modules = {
-  36618: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      showOnboardingPopup: () => Ft
+  36772: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      showOnboardingPopup: () => ru
     });
-    var Ot = Vt(63),
-      qt = Vt(1286),
-      Dt = Vt(1450),
-      mt = Vt(1556),
-      dt = Vt(4430),
-      jt = Vt(1657),
-      Ht = Vt(1652),
-      Xt = Vt(2290),
-      Qt = Vt(1140),
-      lt = Vt.n(Qt),
-      Et = Vt(1223),
-      ft = Vt(36623),
-      wt = Vt(1152),
-      yt = Vt(2435),
-      Nt = Vt(3555),
-      Mt = Vt(1218),
-      bt = Vt(1188);
-    const Jt = Object.entries(jt.d).filter((tt => {
-      let [, et] = tt;
-      return "default" === et.cosmeticPack
+    var su = ju(58),
+      Uu = ju(1244),
+      Zu = ju(1405),
+      Xu = ju(1506),
+      lu = ju(4485),
+      qu = ju(1614),
+      fu = ju(1611),
+      Cu = ju(2329),
+      bu = ju(1105),
+      cu = ju.n(bu),
+      Nu = ju(1183),
+      Ou = ju(36774),
+      Yu = ju(1116),
+      hu = ju(2479),
+      Du = ju(3678),
+      gu = ju(1178),
+      Mu = ju(1154);
+    const eu = Object.entries(qu.d).filter((uu => {
+      let [, Eu] = uu;
+      return "default" === Eu.cosmeticPack
     }));
 
-    function Ct(tt) {
-      return Ht.d.default.colourGroups[tt].colours.map(((tt, et) => {
+    function Gu(uu) {
+      return fu.e.default.colourGroups[uu].colours.map(((uu, Eu) => {
         let {
-          rbg: Vt,
-          order: Ot
-        } = tt;
+          rbg: ju,
+          order: su
+        } = uu;
         return {
-          rbg: Vt,
-          order: Ot,
-          index: et
+          rbg: ju,
+          order: su,
+          index: Eu
         }
-      })).sort(((tt, et) => tt.order - et.order))
+      })).sort(((uu, Eu) => uu.order - Eu.order))
     }
-    const ut = Ct("eyes"),
-      Kt = Ct("skin");
+    const pu = Gu("eyes"),
+      wu = Gu("skin");
 
-    function ht(tt, et) {
-      var Vt;
-      if (void 0 === et || "default" !== (null === (Vt = (0, Xt.n)(tt, et)) || void 0 === Vt ? void 0 : Vt.cosmeticPack)) return null;
-      const Ot = (0, Xt.j)(et);
-      return Ot && [Ot[0], Number(Ot[1])]
-    }
-
-    function vt(tt, et, Vt) {
-      return `${tt}_${et}_${Vt}`
+    function Ju(uu, Eu) {
+      var ju;
+      if (void 0 === Eu || "default" !== (null === (ju = (0, Cu.m)(uu, Eu)) || void 0 === ju ? void 0 : ju.cosmeticPack)) return null;
+      const su = (0, Cu.j)(Eu);
+      return su && [su[0], Number(su[1])]
     }
 
-    function Wt(tt) {
+    function du(uu, Eu, ju) {
+      return `${uu}_${Eu}_${ju}`
+    }
+
+    function au(uu) {
       let {
-        label: et,
-        colours: Vt,
-        picked: Ot,
-        onPick: Dt
-      } = tt;
+        label: Eu,
+        colours: ju,
+        picked: su,
+        onPick: Zu
+      } = uu;
       const {
-        t: mt
-      } = (0, qt.H)();
-      return (0, bt.jsxs)("div", {
+        t: Xu
+      } = (0, Uu.A)();
+      return (0, Mu.jsxs)("div", {
         className: "OnboardingColours",
-        children: [(0, bt.jsx)("div", {
+        children: [(0, Mu.jsx)("div", {
           className: "OnboardingColoursLabel",
-          children: et
-        }), (0, bt.jsx)("div", {
+          children: Eu
+        }), (0, Mu.jsx)("div", {
           className: "OnboardingSwatches",
           role: "radiogroup",
-          "aria-label": et,
-          children: Vt.map(((tt, et) => {
+          "aria-label": Eu,
+          children: ju.map(((uu, Eu) => {
             let {
-              rbg: Vt,
-              index: qt
-            } = tt;
-            return (0, bt.jsx)("button", {
+              rbg: ju,
+              index: Uu
+            } = uu;
+            return (0, Mu.jsx)("button", {
               type: "button",
-              className: lt()("OnboardingSwatch", {
-                OnboardingSwatchSelected: qt === Ot
+              className: cu()("OnboardingSwatch", {
+                OnboardingSwatchSelected: Uu === su
               }),
               style: {
-                backgroundColor: `rgb(${Vt.join(",")})`
+                backgroundColor: `rgb(${ju.join(",")})`
               },
               role: "radio",
-              "aria-checked": qt === Ot,
-              "aria-label": mt("homePage:onboardingColour", {
-                number: et + 1
+              "aria-checked": Uu === su,
+              "aria-label": Xu("homePage:onboardingColour", {
+                number: Eu + 1
               }),
               onClick: () => {
-                Dt(qt)
+                Zu(Uu)
               }
-            }, qt)
+            }, Uu)
           }))
         })]
       })
     }
 
-    function St() {
+    function Pu() {
       const {
-        t: tt
-      } = (0, qt.H)(), {
-        userContext: et,
-        isUserContextUpdating: Vt
-      } = (0, Mt.d)(), [Dt, mt] = (0, Ot.useState)(!1), [, jt] = (0, Ot.useReducer)((tt => tt + 1), 0), Ht = (0, Ot.useRef)({}), Xt = (0, Ot.useRef)(null), Qt = (0, Nt.b)(), Ct = {
-        ...et.getPlayerCosmetics(),
-        ...Xt.current
-      }, St = (0, Ot.useRef)(null);
-      (0, Ot.useEffect)((() => {
-        var tt;
-        Dt && (null === (tt = St.current) || void 0 === tt || tt.scrollIntoView({
+        t: uu
+      } = (0, Uu.A)(), {
+        userContext: Eu,
+        isUserContextUpdating: ju
+      } = (0, gu.c)(), [Zu, Xu] = (0, su.useState)(!1), [, qu] = (0, su.useReducer)((uu => uu + 1), 0), fu = (0, su.useRef)({}), Cu = (0, su.useRef)(null), bu = (0, Du.c)(), Gu = {
+        ...Eu.getPlayerCosmetics(),
+        ...Cu.current
+      }, Pu = (0, su.useRef)(null);
+      (0, su.useEffect)((() => {
+        var uu;
+        Zu && (null === (uu = Pu.current) || void 0 === uu || uu.scrollIntoView({
           block: "nearest"
         }))
-      }), [Dt]);
-      const ct = (tt, et) => {
-          (0, ft.b)(tt, Object.entries(et)), Qt.current ? jt() : tt.publishUpdateIfCurrent()
+      }), [Zu]);
+      const ou = (uu, Eu) => {
+          (0, Ou.c)(uu, Object.entries(Eu)), bu.current ? qu() : uu.publishUpdateIfCurrent()
         },
-        Rt = tt => {
-          const Ot = {
-            ...Xt.current,
-            ...tt
+        ku = uu => {
+          const su = {
+            ...Cu.current,
+            ...uu
           };
-          if (!Vt) return Xt.current = null, void ct(et, Ot);
-          Xt.current = Ot, jt(), Et.userContextManager.getCurrentUserContext().then((tt => {
-            Xt.current === Ot && (Xt.current = null, ct(tt, Ot))
-          })).catch((tt => {
-            console.warn("Couldn't put on the onboarding look held for the account", tt), Xt.current === Ot && (Xt.current = null, Qt.current && jt())
+          if (!ju) return Cu.current = null, void ou(Eu, su);
+          Cu.current = su, qu(), Nu.userContextManager.getCurrentUserContext().then((uu => {
+            Cu.current === su && (Cu.current = null, ou(uu, su))
+          })).catch((uu => {
+            console.warn("Couldn't put on the onboarding look held for the account", uu), Cu.current === su && (Cu.current = null, bu.current && qu())
           }))
         };
-      (0, Ot.useEffect)((() => () => {
-        et.publishUpdateIfCurrent()
-      }), [et]);
-      const It = ht("eyes", Ct.eyes),
-        Pt = ht("skin", Ct.skin);
-      return (0, bt.jsxs)(bt.Fragment, {
-        children: [(0, bt.jsx)("div", {
+      (0, su.useEffect)((() => () => {
+        Eu.publishUpdateIfCurrent()
+      }), [Eu]);
+      const mu = Ju("eyes", Gu.eyes),
+        vu = Ju("skin", Gu.skin);
+      return (0, Mu.jsxs)(Mu.Fragment, {
+        children: [(0, Mu.jsx)("div", {
           className: "OnboardingPresets",
-          children: Jt.map(((et, Vt) => {
-            let [Ot, {
-              cosmetics: qt
-            }] = et;
-            const Dt = function(tt, et) {
-              return Object.entries(et).every((et => {
-                let [Vt, Ot] = et;
-                return "skin" === Vt || ("eyes" === Vt ? (null === (qt = ht("eyes", tt.eyes)) || void 0 === qt ? void 0 : qt[0]) === (null === (Dt = ht("eyes", Ot)) || void 0 === Dt ? void 0 : Dt[0]) : tt[Vt] === Ot);
-                var qt, Dt
+          children: eu.map(((Eu, ju) => {
+            let [su, {
+              cosmetics: Uu
+            }] = Eu;
+            const Zu = function(uu, Eu) {
+              return Object.entries(Eu).every((Eu => {
+                let [ju, su] = Eu;
+                return "skin" === ju || ("eyes" === ju ? (null === (Uu = Ju("eyes", uu.eyes)) || void 0 === Uu ? void 0 : Uu[0]) === (null === (Zu = Ju("eyes", su)) || void 0 === Zu ? void 0 : Zu[0]) : uu[ju] === su);
+                var Uu, Zu
               }))
-            }(Ct, qt);
-            return (0, bt.jsx)("button", {
+            }(Gu, Uu);
+            return (0, Mu.jsx)("button", {
               type: "button",
-              className: lt()("OnboardingPreset", {
-                OnboardingPresetSelected: Dt
+              className: cu()("OnboardingPreset", {
+                OnboardingPresetSelected: Zu
               }),
-              "aria-label": tt("homePage:onboardingPreset", {
-                number: Vt + 1
+              "aria-label": uu("homePage:onboardingPreset", {
+                number: ju + 1
               }),
-              "aria-pressed": Dt,
+              "aria-pressed": Zu,
               onClick: () => {
-                (0, dt.j)(`preset.${Ot}`);
+                (0, lu.i)(`preset.${su}`);
                 const {
-                  eyes: tt,
-                  skin: et
-                } = Ht.current;
-                Rt({
-                  ...qt,
-                  ...void 0 !== tt && {
-                    eyes: vt("eyes", ht("eyes", qt.eyes)[0], tt)
+                  eyes: uu,
+                  skin: Eu
+                } = fu.current;
+                ku({
+                  ...Uu,
+                  ...void 0 !== uu && {
+                    eyes: du("eyes", Ju("eyes", Uu.eyes)[0], uu)
                   },
-                  ...void 0 !== et && {
-                    skin: vt("skin", "0", et)
+                  ...void 0 !== Eu && {
+                    skin: du("skin", "0", Eu)
                   }
                 })
               },
-              children: (0, bt.jsx)("div", {
+              children: (0, Mu.jsx)("div", {
                 className: "OnboardingPresetImage",
                 style: {
-                  backgroundImage: `url(/textures/charSkins/previews/character_${Ot}_preview.png)`
+                  backgroundImage: `url(/textures/charSkins/previews/character_${su}_preview.png)`
                 }
               })
-            }, Ot)
+            }, su)
           }))
-        }), (0, bt.jsxs)("button", {
+        }), (0, Mu.jsxs)("button", {
           type: "button",
           className: "OnboardingMoreOptions",
-          "aria-expanded": Dt,
+          "aria-expanded": Zu,
           onClick: () => {
-            Dt || (0, dt.j)("more"), mt(!Dt)
+            Zu || (0, lu.i)("more"), Xu(!Zu)
           },
-          children: [tt("homePage:onboardingMoreOptions"), (0, bt.jsx)(wt.b, {
-            name: Dt ? "caret-up" : "caret-down"
+          children: [uu("homePage:onboardingMoreOptions"), (0, Mu.jsx)(Yu.e, {
+            name: Zu ? "caret-up" : "caret-down"
           })]
-        }), Dt && (0, bt.jsxs)("div", {
-          ref: St,
+        }), Zu && (0, Mu.jsxs)("div", {
+          ref: Pu,
           className: "OnboardingMore",
-          children: [(0, bt.jsx)("div", {
+          children: [(0, Mu.jsx)("div", {
             className: "OnboardingMorePreview",
-            children: (0, bt.jsx)(yt.c, {
-              cosmetics: Ct
+            children: (0, Mu.jsx)(hu.d, {
+              cosmetics: Gu
             })
-          }), (0, bt.jsxs)("div", {
+          }), (0, Mu.jsxs)("div", {
             className: "OnboardingMoreColours",
-            children: [(0, bt.jsx)(Wt, {
-              label: tt("homePage:onboardingEyeColour"),
-              colours: ut,
-              picked: null === It || void 0 === It ? void 0 : It[1],
-              onPick: tt => {
-                var et;
-                (0, dt.j)("eyes"), Ht.current.eyes = tt, Rt({
-                  eyes: vt("eyes", null !== (et = null === It || void 0 === It ? void 0 : It[0]) && void 0 !== et ? et : "0", tt)
+            children: [(0, Mu.jsx)(au, {
+              label: uu("homePage:onboardingEyeColour"),
+              colours: pu,
+              picked: null === mu || void 0 === mu ? void 0 : mu[1],
+              onPick: uu => {
+                var Eu;
+                (0, lu.i)("eyes"), fu.current.eyes = uu, ku({
+                  eyes: du("eyes", null !== (Eu = null === mu || void 0 === mu ? void 0 : mu[0]) && void 0 !== Eu ? Eu : "0", uu)
                 })
               }
-            }), (0, bt.jsx)(Wt, {
-              label: tt("homePage:onboardingSkinColour"),
-              colours: Kt,
-              picked: null === Pt || void 0 === Pt ? void 0 : Pt[1],
-              onPick: tt => {
-                (0, dt.j)("skin"), Ht.current.skin = tt, Rt({
-                  skin: vt("skin", "0", tt)
+            }), (0, Mu.jsx)(au, {
+              label: uu("homePage:onboardingSkinColour"),
+              colours: wu,
+              picked: null === vu || void 0 === vu ? void 0 : vu[1],
+              onPick: uu => {
+                (0, lu.i)("skin"), fu.current.skin = uu, ku({
+                  skin: du("skin", "0", uu)
                 })
               }
             })]
@@ -227,339 +227,339 @@ export const modules = {
         })]
       })
     }
-    var ct = Vt(1363),
-      Rt = Vt(26),
-      It = Vt(34272),
-      Pt = Vt(1436),
-      Zt = Vt(1770);
+    var ou = ju(1320),
+      ku = ju(22),
+      mu = ju(34452),
+      vu = ju(1393),
+      Ku = ju(1723);
 
-    function Lt(tt) {
+    function Vu(uu) {
       const {
-        t: et
-      } = (0, qt.H)(), {
-        userContext: Vt,
-        isUserContextUpdating: Dt
-      } = (0, Mt.d)(), jt = Dt ? null : Vt.getPlayerName(), Ht = (0, Ot.useRef)(null), [Xt, Qt] = (0, Ot.useState)((() => null === jt ? (0, ct.f)() : null)), [lt, Et] = (0, Ot.useState)(null), [ft, yt] = (0, Ot.useState)(!1), Jt = (0, Ot.useRef)("hE"), Ct = (0, Nt.b)(), ut = (0, Ot.useRef)(null !== Xt), Kt = (0, Ot.useRef)(!1), ht = null !== Xt && void 0 !== Xt ? Xt : jt, vt = (0, Ot.useRef)(null), Wt = tt => {
-        Ht.current && (Ht.current.value = tt), Qt(tt)
-      }, St = (0, Ot.useRef)(!1);
-      (0, Ot.useEffect)((() => {
-        var tt, et;
-        !ft && St.current && (St.current = !1, null === (tt = Ht.current) || void 0 === tt || tt.focus(), null === (et = Ht.current) || void 0 === et || et.select())
-      }), [ft]);
-      const Lt = (0, Ot.useRef)(null);
-      (0, Ot.useEffect)((() => {
-        var tt;
-        null !== lt && (null === (tt = Lt.current) || void 0 === tt || tt.scrollIntoView({
+        t: Eu
+      } = (0, Uu.A)(), {
+        userContext: ju,
+        isUserContextUpdating: Zu
+      } = (0, gu.c)(), qu = Zu ? null : ju.getPlayerName(), fu = (0, su.useRef)(null), [Cu, bu] = (0, su.useState)((() => null === qu ? (0, ou.f)() : null)), [cu, Nu] = (0, su.useState)(null), [Ou, hu] = (0, su.useState)(!1), eu = (0, su.useRef)("oN"), Gu = (0, Du.c)(), pu = (0, su.useRef)(null !== Cu), wu = (0, su.useRef)(!1), Ju = null !== Cu && void 0 !== Cu ? Cu : qu, du = (0, su.useRef)(null), au = uu => {
+        fu.current && (fu.current.value = uu), bu(uu)
+      }, Pu = (0, su.useRef)(!1);
+      (0, su.useEffect)((() => {
+        var uu, Eu;
+        !Ou && Pu.current && (Pu.current = !1, null === (uu = fu.current) || void 0 === uu || uu.focus(), null === (Eu = fu.current) || void 0 === Eu || Eu.select())
+      }), [Ou]);
+      const Vu = (0, su.useRef)(null);
+      (0, su.useEffect)((() => {
+        var uu;
+        null !== cu && (null === (uu = Vu.current) || void 0 === uu || uu.scrollIntoView({
           block: "nearest"
         }))
-      }), [lt]);
-      const Ft = (tt, et) => {
-        const Vt = document.activeElement === Ht.current || St.current;
-        yt(!0), Et(null), tt.then((tt => {
-          Ct.current && (yt(!1), St.current = Vt, et(tt))
+      }), [cu]);
+      const ru = (uu, Eu) => {
+        const ju = document.activeElement === fu.current || Pu.current;
+        hu(!0), Nu(null), uu.then((uu => {
+          Gu.current && (hu(!1), Pu.current = ju, Eu(uu))
         }))
       };
-      (0, Ot.useEffect)((() => {
-        var tt, et;
-        Rt.b.get("isTouchScreen") || (null === (tt = Ht.current) || void 0 === tt || tt.focus(), null === (et = Ht.current) || void 0 === et || et.select())
+      (0, su.useEffect)((() => {
+        var uu, Eu;
+        ku.d.get("isTouchScreen") || (null === (uu = fu.current) || void 0 === uu || uu.focus(), null === (Eu = fu.current) || void 0 === Eu || Eu.select())
       }), []);
-      const kt = () => {
-          (0, dt.m)(Jt.current), tt()
+      const Qu = () => {
+          (0, lu.j)(eu.current), uu()
         },
-        Gt = tt => "refused" === tt.outcome ? tt.message : et((0, It.g)(tt.failure)),
-        zt = tt => !(tt.length >= ct.k) && (Et({
+        iu = uu => "refused" === uu.outcome ? uu.message : Eu((0, mu.d)(uu.failure)),
+        Wu = uu => !(uu.length >= ou.j) && (Nu({
           kind: "error",
-          message: et("homePage:changeNameMinLengthError", {
-            length: ct.k
+          message: Eu("homePage:changeNameMinLengthError", {
+            length: ou.j
           })
         }), !0),
-        ot = tt => {
-          var Ot, qt, Dt;
-          tt.toLowerCase() !== (null === (Ot = null !== (qt = null === (Dt = vt.current) || void 0 === Dt ? void 0 : Dt.name) && void 0 !== qt ? qt : jt) || void 0 === Ot ? void 0 : Ot.toLowerCase()) ? zt(tt) || Ft((0, It.d)(Vt, tt), (Vt => {
-            "taken" !== Vt.outcome ? "refused" !== Vt.outcome && "failed" !== Vt.outcome ? Vt.name !== tt ? (Jt.current = "suffixed", vt.current = {
-              name: Vt.name,
-              outcome: Jt.current
-            }, Wt(Vt.name), Et({
+        Su = uu => {
+          var su, Uu, Zu;
+          uu.toLowerCase() !== (null === (su = null !== (Uu = null === (Zu = du.current) || void 0 === Zu ? void 0 : Zu.name) && void 0 !== Uu ? Uu : qu) || void 0 === su ? void 0 : su.toLowerCase()) ? Wu(uu) || ru((0, mu.c)(ju, uu), (ju => {
+            "taken" !== ju.outcome ? "refused" !== ju.outcome && "failed" !== ju.outcome ? ju.name !== uu ? (eu.current = "suffixed", du.current = {
+              name: ju.name,
+              outcome: eu.current
+            }, au(ju.name), Nu({
               kind: "suffixed",
-              taken: tt,
-              name: Vt.name
-            })) : kt() : Et({
+              taken: uu,
+              name: ju.name
+            })) : Qu() : Nu({
               kind: "error",
-              message: Gt(Vt)
-            }) : Et({
+              message: iu(ju)
+            }) : Nu({
               kind: "error",
-              message: et("homePage:onboardingNameAllTaken")
+              message: Eu("homePage:onboardingNameAllTaken")
             })
-          })) : kt()
+          })) : Qu()
         };
-      (0, Ot.useEffect)((() => {
-        if (!ft || null !== jt || !Kt.current) return;
-        const tt = setTimeout((() => {
-          Kt.current = !1, yt(!1), Et({
+      (0, su.useEffect)((() => {
+        if (!Ou || null !== qu || !wu.current) return;
+        const uu = setTimeout((() => {
+          wu.current = !1, hu(!1), Nu({
             kind: "noAccount"
           })
         }), 2e4);
         return () => {
-          clearTimeout(tt)
+          clearTimeout(uu)
         }
-      }), [ft, jt]), (0, Ot.useEffect)((() => {
-        if (null === jt) return;
-        const tt = ut.current && "hE" === Jt.current && Vt.isLoggedIn();
-        ut.current = !1, "noAccount" === (null === lt || void 0 === lt ? void 0 : lt.kind) && Et(null), tt && Wt(jt), Kt.current && (Kt.current = !1, yt(!1), ot(tt ? jt : ht))
-      }), [jt]);
-      const rt = "error" === (null === lt || void 0 === lt ? void 0 : lt.kind) ? lt.message : "noAccount" === (null === lt || void 0 === lt ? void 0 : lt.kind) ? et("homePage:onboardingNameNoAccount") : null;
+      }), [Ou, qu]), (0, su.useEffect)((() => {
+        if (null === qu) return;
+        const uu = pu.current && "oN" === eu.current && ju.isLoggedIn();
+        pu.current = !1, "noAccount" === (null === cu || void 0 === cu ? void 0 : cu.kind) && Nu(null), uu && au(qu), wu.current && (wu.current = !1, hu(!1), Su(uu ? qu : Ju))
+      }), [qu]);
+      const Iu = "error" === (null === cu || void 0 === cu ? void 0 : cu.kind) ? cu.message : "noAccount" === (null === cu || void 0 === cu ? void 0 : cu.kind) ? Eu("homePage:onboardingNameNoAccount") : null;
       return {
-        field: (0, bt.jsxs)("div", {
+        field: (0, Mu.jsxs)("div", {
           className: "OnboardingNameField",
-          ref: Lt,
-          children: [(0, bt.jsx)("div", {
+          ref: Vu,
+          children: [(0, Mu.jsx)("div", {
             className: "OnboardingSubtitle",
-            children: et("general:name")
-          }), null === ht && (0, bt.jsx)(Pt.b, {}), null !== ht && (0, bt.jsxs)("div", {
+            children: Eu("general:name")
+          }), null === Ju && (0, Mu.jsx)(vu.b, {}), null !== Ju && (0, Mu.jsxs)("div", {
             className: "OnboardingNameRow",
-            children: [(0, bt.jsx)(Zt.d, {
+            children: [(0, Mu.jsx)(Ku.d, {
               className: "OnboardingNameInput",
-              ariaLabel: et("general:name"),
-              maxLength: ct.g,
-              defaultValue: ht,
-              domRef: Ht,
-              forcedText: ft ? ht : null,
+              ariaLabel: Eu("general:name"),
+              maxLength: ou.g,
+              defaultValue: Ju,
+              domRef: fu,
+              forcedText: Ou ? Ju : null,
               onEnter: () => {
-                var tt;
-                null === (tt = Ht.current) || void 0 === tt || tt.blur()
+                var uu;
+                null === (uu = fu.current) || void 0 === uu || uu.blur()
               },
-              onValueChange: tt => {
-                const Vt = (0, ct.n)(tt);
-                Vt !== tt && Ht.current && (Ht.current.value = Vt), Et(Vt !== tt ? {
+              onValueChange: uu => {
+                const ju = (0, ou.m)(uu);
+                ju !== uu && fu.current && (fu.current.value = ju), Nu(ju !== uu ? {
                   kind: "error",
-                  message: et("homePage:nameCharacters")
-                } : null), Vt !== ht && (Jt.current = "changed"), Qt(Vt)
+                  message: Eu("homePage:nameCharacters")
+                } : null), ju !== Ju && (eu.current = "changed"), bu(ju)
               }
-            }), (0, bt.jsx)(mt.f, {
+            }), (0, Mu.jsx)(Xu.f, {
               className: "OnboardingRandomName",
-              ariaLabel: et("homePage:onboardingRandomName"),
-              disabled: ft,
+              ariaLabel: Eu("homePage:onboardingRandomName"),
+              disabled: Ou,
               onClick: () => {
                 (() => {
-                  if (Et(null), null === jt || Vt.isLoggedIn()) return Wt((0, ct.f)()), void(Jt.current = "rolled");
-                  Ft((0, It.m)(Vt), (tt => {
-                    var et, Ot;
-                    if ("refused" === tt.outcome || "failed" === tt.outcome) return Wt(Vt.getPlayerName()), Jt.current = null !== (et = null === (Ot = vt.current) || void 0 === Ot ? void 0 : Ot.outcome) && void 0 !== et ? et : "hE", void Et({
+                  if (Nu(null), null === qu || ju.isLoggedIn()) return au((0, ou.f)()), void(eu.current = "rolled");
+                  ru((0, mu.g)(ju), (uu => {
+                    var Eu, su;
+                    if ("refused" === uu.outcome || "failed" === uu.outcome) return au(ju.getPlayerName()), eu.current = null !== (Eu = null === (su = du.current) || void 0 === su ? void 0 : su.outcome) && void 0 !== Eu ? Eu : "oN", void Nu({
                       kind: "error",
-                      message: Gt(tt)
+                      message: iu(uu)
                     });
-                    Jt.current = "rolled", vt.current = {
-                      name: tt.name,
+                    eu.current = "rolled", du.current = {
+                      name: uu.name,
                       outcome: "rolled"
-                    }, Wt(tt.name)
+                    }, au(uu.name)
                   }))
                 })()
               },
-              children: (0, bt.jsx)(wt.b, {
+              children: (0, Mu.jsx)(Yu.e, {
                 name: "dice"
               })
             })]
-          }), "suffixed" === (null === lt || void 0 === lt ? void 0 : lt.kind) && (0, bt.jsx)("div", {
+          }), "suffixed" === (null === cu || void 0 === cu ? void 0 : cu.kind) && (0, Mu.jsx)("div", {
             className: "OnboardingNameNote",
-            children: et("homePage:onboardingNameSuffixed", {
-              taken: lt.taken,
-              name: lt.name
+            children: Eu("homePage:onboardingNameSuffixed", {
+              taken: cu.taken,
+              name: cu.name
             })
-          }), null !== rt && (0, bt.jsx)("div", {
+          }), null !== Iu && (0, Mu.jsx)("div", {
             className: "OnboardingNameNote OnboardingNameError",
-            children: rt
+            children: Iu
           })]
         }),
         submit: () => {
-          if (!ft && null !== ht) {
-            if (null === jt) {
-              if (zt(ht)) return;
-              return St.current = document.activeElement === Ht.current, Kt.current = !0, yt(!0), void Et(null)
+          if (!Ou && null !== Ju) {
+            if (null === qu) {
+              if (Wu(Ju)) return;
+              return Pu.current = document.activeElement === fu.current, wu.current = !0, hu(!0), void Nu(null)
             }
-            ot(ht)
+            Su(Ju)
           }
         },
-        busy: ft,
-        ready: null !== ht
+        busy: Ou,
+        ready: null !== Ju
       }
     }
 
-    function Ft() {
-      const tt = {
+    function ru() {
+      const uu = {
         finished: !1
       };
-      return Dt.NotificationProvider.showCustomPopup({
-        body: et => (0, bt.jsx)(kt, {
+      return Zu.NotificationProvider.showCustomPopup({
+        body: Eu => (0, Mu.jsx)(Qu, {
           onFinish: () => {
-            (0, dt.g)(), tt.finished = !0, et()
+            (0, lu.e)(), uu.finished = !0, Eu()
           }
         }),
         middleScreenPopupClassName: "OnboardingPopup",
         ignoreBackgroundPress: !0,
         onClose: () => {
-          tt.finished || (0, dt.e)()
+          uu.finished || (0, lu.b)()
         }
       })
     }
 
-    function kt(tt) {
+    function Qu(uu) {
       let {
-        onFinish: et
-      } = tt;
+        onFinish: Eu
+      } = uu;
       const {
-        t: Vt
-      } = (0, qt.H)(), Dt = Lt(et);
-      return (0, Ot.useEffect)((() => {
-        (0, dt.o)()
-      }), []), (0, bt.jsxs)("div", {
+        t: ju
+      } = (0, Uu.A)(), Zu = Vu(Eu);
+      return (0, su.useEffect)((() => {
+        (0, lu.n)()
+      }), []), (0, Mu.jsxs)("div", {
         className: "Onboarding",
-        children: [(0, bt.jsx)("div", {
+        children: [(0, Mu.jsx)("div", {
           className: "OnboardingTitle",
-          children: Vt("homePage:onboardingTitle")
-        }), (0, bt.jsxs)("div", {
+          children: ju("homePage:onboardingTitle")
+        }), (0, Mu.jsxs)("div", {
           className: "OnboardingBody",
-          children: [Dt.field, (0, bt.jsx)(St, {})]
-        }), (0, bt.jsx)("div", {
+          children: [Zu.field, (0, Mu.jsx)(Pu, {})]
+        }), (0, Mu.jsx)("div", {
           className: "OnboardingFooter",
-          children: (0, bt.jsx)(mt.m, {
+          children: (0, Mu.jsx)(Xu.p, {
             className: "OnboardingPrimaryButton",
             padDefaultFocus: !0,
-            loading: Dt.busy,
-            disabled: !Dt.ready,
-            onClick: Dt.submit,
-            children: Vt("homePage:onboardingDone")
+            loading: Zu.busy,
+            disabled: !Zu.ready,
+            onClick: Zu.submit,
+            children: ju("homePage:onboardingDone")
           })
         })]
       })
     }
   },
-  36623: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => mt
+  36774: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => Xu
     });
-    var Ot = Vt(2024),
-      qt = Vt(1600);
-    const Dt = new class {
+    var su = ju(1986),
+      Uu = ju(1559);
+    const Zu = new class {
       constructor() {
         this.pending = new Map, this.userContext = null, this.timer = null, this.lastSentAt = -1 / 0, this.watchingVisibility = !1
       }
-      save(tt, et) {
-        tt !== this.userContext && this.sendHeld(), this.userContext = tt;
-        for (const [Ot, qt] of et) this.pending.set(Ot, qt);
+      save(uu, Eu) {
+        uu !== this.userContext && this.sendHeld(), this.userContext = uu;
+        for (const [su, Uu] of Eu) this.pending.set(su, Uu);
         if (null !== this.timer) return;
-        const Vt = this.lastSentAt + 1100 - Date.now();
-        Vt <= 0 ? this.send(tt) : (this.timer = setTimeout((() => {
+        const ju = this.lastSentAt + 1100 - Date.now();
+        ju <= 0 ? this.send(uu) : (this.timer = setTimeout((() => {
           this.sendHeld()
-        }), Vt), this.watchingVisibility || (this.watchingVisibility = !0, document.addEventListener("visibilitychange", (() => {
+        }), ju), this.watchingVisibility || (this.watchingVisibility = !0, document.addEventListener("visibilitychange", (() => {
           "hidden" === document.visibilityState && this.sendHeld()
         }))))
       }
       sendHeld() {
         null !== this.timer && null !== this.userContext && (clearTimeout(this.timer), this.timer = null, this.send(this.userContext))
       }
-      send(tt) {
-        const et = Array.from(this.pending, (tt => {
-          let [et, Vt] = tt;
+      send(uu) {
+        const Eu = Array.from(this.pending, (uu => {
+          let [Eu, ju] = uu;
           return {
-            kD: et,
-            GD: Vt
+            iZ: Eu,
+            WZ: ju
           }
         }));
-        this.pending.clear(), this.lastSentAt = Date.now(), qt.e.updateCosmetics(tt, et).catch((tt => {
-          console.error("Failed to update cosmetics", tt)
+        this.pending.clear(), this.lastSentAt = Date.now(), Uu.b.updateCosmetics(uu, Eu).catch((uu => {
+          console.error("Failed to update cosmetics", uu)
         }))
       }
     };
 
-    function mt(tt, et) {
-      for (const [Vt, Ot] of et) tt.setPlayerCosmetics(Vt, Ot);
-      if (null === Ot.gameBridge.latest("connectedGame").websocketUrl) Dt.save(tt, et);
+    function Xu(uu, Eu) {
+      for (const [ju, su] of Eu) uu.setPlayerCosmetics(ju, su);
+      if (null === su.gameBridge.latest("connectedGame").websocketUrl) Zu.save(uu, Eu);
       else
-        for (const [Vt, qt] of et) Ot.gameBridge.send("updateMyCosmetic", {
-          kD: Vt,
-          GD: qt
+        for (const [ju, Uu] of Eu) su.gameBridge.send("updateMyCosmetic", {
+          iZ: ju,
+          WZ: Uu
         })
     }
   },
-  34272: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => Mt,
-      g: () => Ht,
-      k: () => wt,
-      m: () => ft
+  34452: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => gu,
+      d: () => fu,
+      e: () => Yu,
+      g: () => Ou
     });
-    var Ot = Vt(184),
-      qt = Vt(1363),
-      Dt = Vt(1293),
-      mt = Vt(1223),
-      dt = Vt(1824);
-    const jt = {
+    var su = ju(166),
+      Uu = ju(1320),
+      Zu = ju(1255),
+      Xu = ju(1183),
+      lu = ju(1776);
+    const qu = {
       offline: "homePage:onboardingNameNoAccount",
       outdated: "general:updatedReloading",
       busy: "homePage:changeNameTooFast",
       server: "homePage:changeNameFailed"
     };
 
-    function Ht(tt) {
-      return jt[tt]
+    function fu(uu) {
+      return qu[uu]
     }
 
-    function Xt(tt) {
-      return (0, dt.e)(tt) ? "outdated" : tt instanceof Ot.e ? 429 === tt.httpCode ? "busy" : "server" : "offline"
+    function Cu(uu) {
+      return (0, lu.b)(uu) ? "outdated" : uu instanceof su.b ? 429 === uu.httpCode ? "busy" : "server" : "offline"
     }
 
-    function Qt(tt, et, Vt) {
-      return (0, mt.postJsonWithMetricsCookiesAndJsonResponse)(`${Dt.clientSideServerUrls.indexUrl}${et}`, Vt, {
+    function bu(uu, Eu, ju) {
+      return (0, Xu.postJsonWithMetricsCookiesAndJsonResponse)(`${Zu.clientSideServerUrls.indexUrl}${Eu}`, ju, {
         retries: 3
-      }, tt.getMetricsCookies()).catch((tt => (console.error("Bad response from the server when trying to change name:", et, tt), {
+      }, uu.getMetricsCookies()).catch((uu => (console.error("Bad response from the server when trying to change name:", Eu, uu), {
         outcome: "failed",
-        failure: Xt(tt)
+        failure: Cu(uu)
       })))
     }
 
-    function lt(tt) {
-      return "outcome" in tt && "failed" === tt.outcome
+    function cu(uu) {
+      return "outcome" in uu && "failed" === uu.outcome
     }
 
-    function Et(tt) {
-      return console.error("Error when trying to get with new name from DB", tt), {
+    function Nu(uu) {
+      return console.error("Error when trying to get with new name from DB", uu), {
         outcome: "refused",
-        message: tt
+        message: uu
       }
     }
-    async function ft(tt) {
-      const et = await Qt(tt, "/index/name/random", {});
-      return lt(et) ? et : "err" in et ? Et(et.err) : (tt.setPlayerName(et.name), {
+    async function Ou(uu) {
+      const Eu = await bu(uu, "/index/name/random", {});
+      return cu(Eu) ? Eu : "err" in Eu ? Nu(Eu.err) : (uu.setPlayerName(Eu.name), {
         outcome: "changed",
-        name: et.name
+        name: Eu.name
       })
     }
-    async function wt(tt, et) {
-      const Vt = await Qt(tt, "/index/name/update", {
-        name: et
+    async function Yu(uu, Eu) {
+      const ju = await bu(uu, "/index/name/update", {
+        name: Eu
       });
-      return lt(Vt) ? Vt : "err" in Vt ? Et(Vt.err) : Vt.nameExists ? {
+      return cu(ju) ? ju : "err" in ju ? Nu(ju.err) : ju.nameExists ? {
         outcome: "taken"
-      } : (tt.setPlayerName(et), {
+      } : (uu.setPlayerName(Eu), {
         outcome: "changed",
-        name: et
+        name: Eu
       })
     }
 
-    function yt(tt, et) {
-      let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
-      const Ot = 1 === et ? 1 : 10 ** (et - 1),
-        Dt = String(Ot + Math.floor(Vt() * (10 ** et - Ot)));
-      return `${tt.slice(0,qt.g-et)}${Dt}`
+    function hu(uu, Eu) {
+      let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
+      const su = 1 === Eu ? 1 : 10 ** (Eu - 1),
+        Zu = String(su + Math.floor(ju() * (10 ** Eu - su)));
+      return `${uu.slice(0,Uu.g-Eu)}${Zu}`
     }
-    const Nt = [1, 2, 3, 4];
-    async function Mt(tt, et) {
-      const Vt = await wt(tt, et);
-      if ("taken" !== Vt.outcome) return Vt;
-      for (const Ot of Nt) {
-        const Vt = yt(et, Ot),
-          qt = await wt(tt, Vt);
-        if ("taken" !== qt.outcome) return qt
+    const Du = [1, 2, 3, 4];
+    async function gu(uu, Eu) {
+      const ju = await Yu(uu, Eu);
+      if ("taken" !== ju.outcome) return ju;
+      for (const su of Du) {
+        const ju = hu(Eu, su),
+          Uu = await Yu(uu, ju);
+        if ("taken" !== Uu.outcome) return Uu
       }
       return {
         outcome: "taken"
@@ -568,4 +568,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

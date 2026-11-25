@@ -1,22 +1,22 @@
 export const id = 14;
 export const ids = [14];
 export const modules = {
-  38760: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => mt
+  38882: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => Xu
     });
-    const Ot = 4,
-      qt = 12e3,
-      Dt = 1e3;
-    class mt {
+    const su = 4,
+      Uu = 12e3,
+      Zu = 1e3;
+    class Xu {
       constructor() {
         let {
-          limit: tt = Ot,
-          windowMs: et = qt,
-          spacingMs: Vt = Dt,
-          now: mt = Date.now
+          limit: uu = su,
+          windowMs: Eu = Uu,
+          spacingMs: ju = Zu,
+          now: Xu = Date.now
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        this.sent = [], this.lastSentAt = -1 / 0, this.timer = null, this.listeners = new Set, this.priority = new Set, this.limit = void 0, this.windowMs = void 0, this.spacingMs = void 0, this.now = void 0, this.limit = tt, this.windowMs = et, this.spacingMs = Vt, this.now = mt
+        this.sent = [], this.lastSentAt = -1 / 0, this.timer = null, this.listeners = new Set, this.priority = new Set, this.limit = void 0, this.windowMs = void 0, this.spacingMs = void 0, this.now = void 0, this.limit = uu, this.windowMs = Eu, this.spacingMs = ju, this.now = Xu
       }
       isPacing() {
         return !this.canSendPriority() || this.isPriorityWaiting()
@@ -25,61 +25,61 @@ export const modules = {
         return this.prune(), this.sent.length < this.limit && this.now() - this.lastSentAt >= this.spacingMs
       }
       tryStart() {
-        for (const tt of this.priority) tt.flush();
+        for (const uu of this.priority) uu.flush();
         return !this.isPacing() && (this.start(), !0)
       }
       start() {
         this.prune();
-        const tt = this.now();
-        this.sent.push(tt), this.lastSentAt = tt, this.schedule(), this.notify()
+        const uu = this.now();
+        this.sent.push(uu), this.lastSentAt = uu, this.schedule(), this.notify()
       }
-      addPriority(tt) {
-        return this.priority.add(tt), () => {
-          this.priority.delete(tt)
+      addPriority(uu) {
+        return this.priority.add(uu), () => {
+          this.priority.delete(uu)
         }
       }
-      subscribe(tt) {
-        return this.listeners.add(tt), () => {
-          this.listeners.delete(tt)
+      subscribe(uu) {
+        return this.listeners.add(uu), () => {
+          this.listeners.delete(uu)
         }
       }
       dispose() {
         this.clearTimer(), this.sent = [], this.listeners.clear(), this.priority.clear()
       }
       isPriorityWaiting() {
-        for (const tt of this.priority)
-          if (tt.waiting()) return !0;
+        for (const uu of this.priority)
+          if (uu.waiting()) return !0;
         return !1
       }
       prune() {
-        const tt = this.now() - this.windowMs;
-        for (; this.sent.length > 0 && this.sent[0] <= tt;) this.sent.shift()
+        const uu = this.now() - this.windowMs;
+        for (; this.sent.length > 0 && this.sent[0] <= uu;) this.sent.shift()
       }
       schedule() {
         this.clearTimer();
-        const tt = this.now(),
-          et = this.lastSentAt + this.spacingMs,
-          Vt = Math.min(et > tt ? et : 1 / 0, this.sent.length > 0 ? this.sent[0] + this.windowMs : 1 / 0);
-        Vt !== 1 / 0 && (this.timer = setTimeout((() => {
+        const uu = this.now(),
+          Eu = this.lastSentAt + this.spacingMs,
+          ju = Math.min(Eu > uu ? Eu : 1 / 0, this.sent.length > 0 ? this.sent[0] + this.windowMs : 1 / 0);
+        ju !== 1 / 0 && (this.timer = setTimeout((() => {
           this.timer = null, this.prune(), this.schedule(), this.notify()
-        }), Math.max(0, Vt - tt)))
+        }), Math.max(0, ju - uu)))
       }
       notify() {
-        for (const tt of this.listeners) tt()
+        for (const uu of this.listeners) uu()
       }
       clearTimer() {
         null !== this.timer && (clearTimeout(this.timer), this.timer = null)
       }
     }
   },
-  38747: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => Ot
+  38851: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => su
     });
-    class Ot {
-      constructor(tt, et, Vt) {
-        this.sw = tt, this.beforeOpen = et, this.afterClose = Vt, this.open = !1, this.df = !1, this.snapshot = void 0, this.getSnapshot = () => this.snapshot, this.show = () => {
-          this.isEnabled() && !this.df && (this.open = !0, this.beforeOpen(this), this.emit())
+    class su {
+      constructor(uu, Eu, ju) {
+        this.TY = uu, this.beforeOpen = Eu, this.afterClose = ju, this.open = !1, this.fO = !1, this.snapshot = void 0, this.getSnapshot = () => this.snapshot, this.show = () => {
+          this.isEnabled() && !this.fO && (this.open = !0, this.beforeOpen(this), this.emit())
         }, this.close = () => {
           this.closePanel(!1)
         }, this.dismiss = () => {
@@ -92,234 +92,234 @@ export const modules = {
       showOrRefresh() {
         this.open ? this.emit() : this.show()
       }
-      closePanel(tt) {
-        this.open = !1, this.onClosed(), this.emit(), this.afterClose(tt)
+      closePanel(uu) {
+        this.open = !1, this.onClosed(), this.emit(), this.afterClose(uu)
       }
       onClosed() {}
       dispose() {
-        this.open = !1, this.emit(), this.df = !0
+        this.open = !1, this.emit(), this.fO = !0
       }
       isEnabled() {
         return !0
       }
       emit() {
-        this.df || (this.snapshot = this.buildSnapshot(), this.sw(this.snapshot))
+        this.fO || (this.snapshot = this.buildSnapshot(), this.TY(this.snapshot))
       }
     }
   },
-  39503: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      default: () => QV
+  39592: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      default: () => Cj
     });
-    var Ot = Vt(63);
-    var qt = Vt(26),
-      Dt = Vt(2014),
-      mt = Vt(31),
-      dt = Vt(36861),
-      jt = Vt(1140),
-      Ht = Vt.n(jt),
-      Xt = Vt(1554),
-      Qt = Vt(1286),
-      lt = Vt(4665),
-      Et = Vt(1441),
-      ft = Vt(1556),
-      wt = Vt(2018),
-      yt = Vt(1464),
-      Nt = Vt(2001),
-      Mt = Vt(2063),
-      bt = Vt(241);
-    const Jt = Vt(39509),
-      Ct = Object.fromEntries(Jt.keys().map((tt => [tt.replace(/^\.\/(.*)\.webp$/, "$1"), Jt(tt)]))),
-      ut = new Set;
+    var su = ju(58);
+    var Uu = ju(22),
+      Zu = ju(1969),
+      Xu = ju(24),
+      lu = ju(36992),
+      qu = ju(1105),
+      fu = ju.n(qu),
+      Cu = ju(1499),
+      bu = ju(1244),
+      cu = ju(4719),
+      Nu = ju(1398),
+      Ou = ju(1506),
+      Yu = ju(1971),
+      hu = ju(1419),
+      Du = ju(1964),
+      gu = ju(2027),
+      Mu = ju(207);
+    const eu = ju(39600),
+      Gu = Object.fromEntries(eu.keys().map((uu => [uu.replace(/^\.\/(.*)\.webp$/, "$1"), eu(uu)]))),
+      pu = new Set;
 
-    function Kt(tt, et) {
-      const Vt = et ? tt : `${tt}-uncaught`,
-        Ot = (0, bt.c)(Ct, Vt);
-      return void 0 !== Ot || ut.has(Vt) || (ut.add(Vt), console.warn(`Containment Breach has no mugshot ${Vt}: run tools/harnessCutouts/ContainmentMugshotCapture.ts`)), Ot
+    function wu(uu, Eu) {
+      const ju = Eu ? uu : `${uu}-uncaught`,
+        su = (0, Mu.c)(Gu, ju);
+      return void 0 !== su || pu.has(ju) || (pu.add(ju), console.warn(`Containment Breach has no mugshot ${ju}: run tools/harnessCutouts/ContainmentMugshotCapture.ts`)), su
     }
-    var ht = Vt(1188);
-    const vt = "containmentBreach",
-      Wt = "Gold Coin";
+    var Ju = ju(1154);
+    const du = "containmentBreach",
+      au = "Gold Coin";
 
-    function St(tt) {
+    function Pu(uu) {
       let {
-        open: et,
-        onDismiss: Vt,
-        title: Ot,
-        className: qt,
-        decor: Dt,
-        headerExtra: mt,
-        status: dt,
-        statusRefused: jt = !1,
-        children: Xt
-      } = tt;
-      const Qt = `${qt}Title`;
-      return (0, ht.jsx)(lt.c, {
-        show: et,
-        close: Vt,
+        open: Eu,
+        onDismiss: ju,
+        title: su,
+        className: Uu,
+        decor: Zu,
+        headerExtra: Xu,
+        status: lu,
+        statusRefused: qu = !1,
+        children: Cu
+      } = uu;
+      const bu = `${Uu}Title`;
+      return (0, Ju.jsx)(cu.c, {
+        show: Eu,
+        close: ju,
         togglePointerLock: !1,
         className: "ContainmentBoardOverlay",
-        children: (0, ht.jsxs)("section", {
-          className: Ht()("ContainmentBoardPanel", qt),
+        children: (0, Ju.jsxs)("section", {
+          className: fu()("ContainmentBoardPanel", Uu),
           role: "dialog",
           "aria-modal": "true",
-          "aria-labelledby": Qt,
-          children: [Dt && (0, ht.jsx)("div", {
+          "aria-labelledby": bu,
+          children: [Zu && (0, Ju.jsx)("div", {
             className: "BoardDecor",
             "aria-hidden": "true",
-            children: Dt
-          }), (0, ht.jsxs)("header", {
+            children: Zu
+          }), (0, Ju.jsxs)("header", {
             className: "BoardHeader",
-            children: [(0, ht.jsx)("h2", {
-              id: Qt,
+            children: [(0, Ju.jsx)("h2", {
+              id: bu,
               className: "VisuallyHidden",
-              children: Ot
-            }), mt, (0, ht.jsx)(ft.j, {
-              onClick: Vt
+              children: su
+            }), Xu, (0, Ju.jsx)(Ou.l, {
+              onClick: ju
             })]
-          }), (0, ht.jsx)("div", {
+          }), (0, Ju.jsx)("div", {
             className: "BoardBody",
-            children: Xt
-          }), void 0 !== dt && (0, ht.jsx)("footer", {
-            className: Ht()("BoardStatus", {
-              Refused: jt
+            children: Cu
+          }), void 0 !== lu && (0, Ju.jsx)("footer", {
+            className: fu()("BoardStatus", {
+              Refused: qu
             }),
-            children: dt
+            children: lu
           })]
         })
       })
     }
 
-    function ct(tt) {
+    function ou(uu) {
       let {
-        itemName: et
-      } = tt;
-      return (0, ht.jsx)(wt.e, {
-        itemName: et,
+        itemName: Eu
+      } = uu;
+      return (0, Ju.jsx)(Yu.d, {
+        itemName: Eu,
         amount: 0
       })
     }
 
-    function Rt(tt) {
+    function ku(uu) {
       let {
-        anomalyId: et,
-        caught: Vt
-      } = tt;
-      const qt = (0, Ot.useRef)(null);
-      return (0, Et.e)(qt, !Vt), (0, ht.jsx)("span", {
-        ref: qt,
-        className: Ht()("BoardMugshot", {
-          Uncaught: !Vt
+        anomalyId: Eu,
+        caught: ju
+      } = uu;
+      const Uu = (0, su.useRef)(null);
+      return (0, Nu.d)(Uu, !ju), (0, Ju.jsx)("span", {
+        ref: Uu,
+        className: fu()("BoardMugshot", {
+          Uncaught: !ju
         }),
-        children: (0, ht.jsx)("img", {
-          src: Kt(et, Vt),
+        children: (0, Ju.jsx)("img", {
+          src: wu(Eu, ju),
           alt: "",
           draggable: !1
         })
       })
     }
 
-    function It(tt) {
+    function mu(uu) {
       let {
-        itemName: et,
-        amount: Vt,
-        Pd: Ot,
-        inTile: qt = !1
-      } = tt;
-      return (0, ht.jsx)(yt.g, {
+        itemName: Eu,
+        amount: ju,
+        dl: su,
+        inTile: Uu = !1
+      } = uu;
+      return (0, Ju.jsx)(hu.e, {
         delayShow: 200,
-        hoverOnly: qt,
+        hoverOnly: Uu,
         placement: "top",
         tooltipClassName: "BoardChipTooltipBox",
-        tooltipInner: (0, ht.jsx)(Zt, {
-          itemName: et,
-          amount: Vt,
-          Pd: Ot
+        tooltipInner: (0, Ju.jsx)(Ku, {
+          itemName: Eu,
+          amount: ju,
+          dl: su
         }),
-        children: (0, ht.jsxs)("span", {
-          className: Ht()("BoardChip", {
-            Short: void 0 !== Ot && Ot < Vt
+        children: (0, Ju.jsxs)("span", {
+          className: fu()("BoardChip", {
+            Short: void 0 !== su && su < ju
           }),
-          children: [(0, ht.jsx)("span", {
+          children: [(0, Ju.jsx)("span", {
             className: "BoardChipIcon",
-            children: (0, ht.jsx)(ct, {
-              itemName: et
+            children: (0, Ju.jsx)(ou, {
+              itemName: Eu
             })
-          }), Vt.toLocaleString()]
+          }), ju.toLocaleString()]
         })
       })
     }
-    const Pt = /^(.*?)\s*Salvaged from (?:an? )?(.+?)\.?$/;
+    const vu = /^(.*?)\s*Salvaged from (?:an? )?(.+?)\.?$/;
 
-    function Zt(tt) {
-      var et;
+    function Ku(uu) {
+      var Eu;
       let {
-        itemName: Vt,
-        amount: Ot,
-        Pd: qt
-      } = tt;
+        itemName: ju,
+        amount: su,
+        dl: Uu
+      } = uu;
       const {
-        t: Dt
-      } = (0, Qt.H)(), mt = (0, Mt.g)("itemInfo", (tt => tt[Vt])), {
-        lore: dt,
-        droppedBy: jt
-      } = function(tt) {
-        if ("string" !== typeof tt) return {
-          lore: tt,
+        t: Zu
+      } = (0, bu.A)(), Xu = (0, gu.d)("itemInfo", (uu => uu[ju])), {
+        lore: lu,
+        droppedBy: qu
+      } = function(uu) {
+        if ("string" !== typeof uu) return {
+          lore: uu,
           droppedBy: null
         };
-        const et = Pt.exec(tt);
-        return null === et ? {
-          lore: tt,
+        const Eu = vu.exec(uu);
+        return null === Eu ? {
+          lore: uu,
           droppedBy: null
         } : {
-          lore: "" === et[1] ? void 0 : et[1],
-          droppedBy: et[2]
+          lore: "" === Eu[1] ? void 0 : Eu[1],
+          droppedBy: Eu[2]
         }
-      }(null === mt || void 0 === mt ? void 0 : mt.description);
-      return (0, ht.jsxs)("div", {
+      }(null === Xu || void 0 === Xu ? void 0 : Xu.description);
+      return (0, Ju.jsxs)("div", {
         className: "BoardChipTooltip",
-        children: [(0, ht.jsxs)("div", {
+        children: [(0, Ju.jsxs)("div", {
           className: "BoardChipTooltipHeader",
-          children: [(0, ht.jsx)("span", {
+          children: [(0, Ju.jsx)("span", {
             className: "BoardChipTooltipIcon",
-            children: (0, ht.jsx)(ct, {
-              itemName: Vt
+            children: (0, Ju.jsx)(ou, {
+              itemName: ju
             })
-          }), (0, ht.jsx)(Nt.e, {
-            text: null !== (et = null === mt || void 0 === mt ? void 0 : mt.displayName) && void 0 !== et ? et : Vt,
+          }), (0, Ju.jsx)(Du.d, {
+            text: null !== (Eu = null === Xu || void 0 === Xu ? void 0 : Xu.displayName) && void 0 !== Eu ? Eu : ju,
             className: "BoardChipTooltipName"
           })]
-        }), (void 0 !== dt || null !== jt) && (0, ht.jsxs)("div", {
+        }), (void 0 !== lu || null !== qu) && (0, Ju.jsxs)("div", {
           className: "BoardChipTooltipBody",
-          children: [void 0 !== dt && (0, ht.jsx)(Nt.e, {
-            text: dt,
+          children: [void 0 !== lu && (0, Ju.jsx)(Du.d, {
+            text: lu,
             className: "BoardChipTooltipDescription"
-          }), null !== jt && (0, ht.jsxs)("span", {
+          }), null !== qu && (0, Ju.jsxs)("span", {
             className: "BoardChipTooltipSource",
-            children: [(0, ht.jsx)("span", {
+            children: [(0, Ju.jsx)("span", {
               className: "BoardChipTooltipLabel",
-              children: Dt(`${vt}:chipDroppedBy`)
-            }), jt]
+              children: Zu(`${du}:chipDroppedBy`)
+            }), qu]
           })]
-        }), void 0 !== qt && (0, ht.jsxs)("div", {
-          className: Ht()("BoardChipTooltipHeld", {
-            Short: qt < Ot
+        }), void 0 !== Uu && (0, Ju.jsxs)("div", {
+          className: fu()("BoardChipTooltipHeld", {
+            Short: Uu < su
           }),
-          children: [(0, ht.jsx)("span", {
+          children: [(0, Ju.jsx)("span", {
             className: "BoardChipTooltipLabel",
-            children: Dt(`${vt}:chipYouHave`)
-          }), (0, ht.jsxs)("span", {
+            children: Zu(`${du}:chipYouHave`)
+          }), (0, Ju.jsxs)("span", {
             className: "BoardChipTooltipCount",
-            children: [(0, ht.jsx)("span", {
+            children: [(0, Ju.jsx)("span", {
               className: "BoardChipTooltipHeldAmount",
-              children: qt.toLocaleString()
-            }), ` / ${Ot.toLocaleString()}`]
-          }), (0, ht.jsx)("span", {
+              children: Uu.toLocaleString()
+            }), ` / ${su.toLocaleString()}`]
+          }), (0, Ju.jsx)("span", {
             className: "BoardChipTooltipMeter",
-            children: (0, ht.jsx)("span", {
+            children: (0, Ju.jsx)("span", {
               style: {
-                width: (Ot > 0 ? 100 * Math.min(1, qt / Ot) : 100) + "%"
+                width: (su > 0 ? 100 * Math.min(1, Uu / su) : 100) + "%"
               }
             })
           })]
@@ -327,81 +327,81 @@ export const modules = {
       })
     }
 
-    function Lt(tt) {
+    function Vu(uu) {
       let {
-        icon: et,
-        name: Vt,
-        selected: Ot,
-        locked: qt,
-        className: Dt,
-        buttonRef: mt,
-        onSelect: dt,
-        children: jt
-      } = tt;
-      return (0, ht.jsxs)("button", {
-        ref: mt,
+        icon: Eu,
+        name: ju,
+        selected: su,
+        locked: Uu,
+        className: Zu,
+        buttonRef: Xu,
+        onSelect: lu,
+        children: qu
+      } = uu;
+      return (0, Ju.jsxs)("button", {
+        ref: Xu,
         type: "button",
-        className: Ht()("BoardTile", Dt, {
-          Selected: Ot,
-          Locked: qt
+        className: fu()("BoardTile", Zu, {
+          Selected: su,
+          Locked: Uu
         }),
-        onClick: dt,
-        children: [(0, ht.jsx)("span", {
+        onClick: lu,
+        children: [(0, Ju.jsx)("span", {
           className: "BoardTileIcon",
-          children: et
-        }), (0, ht.jsx)("span", {
+          children: Eu
+        }), (0, Ju.jsx)("span", {
           className: "BoardTileName",
-          children: Vt
-        }), jt]
+          children: ju
+        }), qu]
       })
     }
 
-    function Ft(tt) {
+    function ru(uu) {
       let {
-        icon: et,
-        name: Vt,
-        children: Ot
-      } = tt;
-      return (0, ht.jsxs)("header", {
+        icon: Eu,
+        name: ju,
+        children: su
+      } = uu;
+      return (0, Ju.jsxs)("header", {
         className: "BoardDetailHeader",
-        children: [(0, ht.jsx)("span", {
+        children: [(0, Ju.jsx)("span", {
           className: "BoardDetailIcon",
-          children: et
-        }), (0, ht.jsxs)("div", {
+          children: Eu
+        }), (0, Ju.jsxs)("div", {
           className: "BoardDetailHeading",
-          children: [(0, ht.jsx)("h3", {
-            children: Vt
-          }), (0, ht.jsx)("span", {
+          children: [(0, Ju.jsx)("h3", {
+            children: ju
+          }), (0, Ju.jsx)("span", {
             className: "BoardDetailStatus",
-            children: Ot
+            children: su
           })]
         })]
       })
     }
 
-    function kt(tt) {
+    function Qu(uu) {
       let {
-        coins: et,
-        children: Vt
-      } = tt;
-      return (0, ht.jsxs)("div", {
+        coins: Eu,
+        children: ju
+      } = uu;
+      return (0, Ju.jsxs)("div", {
         className: "BoardWallet",
-        children: [(0, ht.jsx)(It, {
-          itemName: Wt,
-          amount: et
-        }), Vt]
+        children: [(0, Ju.jsx)(mu, {
+          itemName: au,
+          amount: Eu
+        }), ju]
       })
     }
-    var Gt = Vt(38747);
-    const zt = "containmentCodexView";
-    class ot extends Gt.b {
+    var iu = ju(38851);
+    const Wu = "containmentCodexView";
+    class Su extends iu.d {
       constructor() {
-        super(...arguments), this.entries = [], this.selectedId = "", this.snapshot = this.buildSnapshot(), this.select = tt => {
-          this.selectedId = tt, this.emit()
+        super(...arguments), this.entries = [], this.selectedId = "", this.snapshot = this.buildSnapshot(), this.select = uu => {
+          this.selectedId = uu, this.emit()
         }
       }
-      Qf(tt) {
-        this.entries = tt.codexEntries, this.selectedId = this.entries[0].codexEntryId, this.showOrRefresh()
+      NO(uu) {
+        this.entries = uu.codexEntries, this.selectedId = this.entries[0].codexEntryId, this.showOrRefresh()
       }
       buildSnapshot() {
         return {
@@ -411,55 +411,55 @@ export const modules = {
         }
       }
     }
-    const rt = {
-        codexAnyDifficulty: `${vt}:codexNeedsAny`,
-        codexNormalOnly: `${vt}:codexNeedsNormal`,
-        codexHardOnly: `${vt}:codexNeedsHard`
+    const Iu = {
+        codexAnyDifficulty: `${du}:codexNeedsAny`,
+        codexNormalOnly: `${du}:codexNeedsNormal`,
+        codexHardOnly: `${du}:codexNeedsHard`
       },
-      Ut = {
+      Fu = {
         codexContained: "Contained",
         codexEncountered: "Sighted",
         codexUnidentified: "Unknown"
       },
-      At = {
-        codexContained: `${vt}:codexContainedBadge`,
-        codexEncountered: `${vt}:codexEncounteredBadge`,
-        codexUnidentified: `${vt}:codexUnidentifiedBadge`
+      Bu = {
+        codexContained: `${du}:codexContainedBadge`,
+        codexEncountered: `${du}:codexEncounteredBadge`,
+        codexUnidentified: `${du}:codexUnidentifiedBadge`
       },
-      it = ["94%", "81%", "88%", "46%", "72%"];
+      Lu = ["94%", "81%", "88%", "46%", "72%"];
 
-    function Yt(tt) {
+    function tu(uu) {
       let {
-        entry: et
-      } = tt;
+        entry: Eu
+      } = uu;
       const {
-        t: Vt
-      } = (0, Qt.H)();
-      return (0, ht.jsx)("span", {
-        className: Ht()("BoardBadge", Ut[et.codexEntryState]),
-        children: Vt(At[et.codexEntryState])
+        t: ju
+      } = (0, bu.A)();
+      return (0, Ju.jsx)("span", {
+        className: fu()("BoardBadge", Fu[Eu.codexEntryState]),
+        children: ju(Bu[Eu.codexEntryState])
       })
     }
 
-    function Bt(tt) {
+    function xu(uu) {
       const {
-        t: et
-      } = (0, Qt.H)();
-      return "codexUnidentified" === tt.codexEntryState ? et(`${vt}:codexUnidentifiedName`) : tt.codexEntryName
+        t: Eu
+      } = (0, bu.A)();
+      return "codexUnidentified" === uu.codexEntryState ? Eu(`${du}:codexUnidentifiedName`) : uu.codexEntryName
     }
 
-    function pt(tt) {
+    function Tu(uu) {
       let {
-        entry: et
-      } = tt;
-      return "codexUnidentified" === et.codexEntryState ? (0, ht.jsx)(ct, {
+        entry: Eu
+      } = uu;
+      return "codexUnidentified" === Eu.codexEntryState ? (0, Ju.jsx)(ou, {
         itemName: "Book"
-      }) : (0, ht.jsxs)("span", {
+      }) : (0, Ju.jsxs)("span", {
         className: "CodexPhoto",
-        children: [(0, ht.jsx)(Rt, {
-          anomalyId: et.codexEntryId,
-          caught: "codexContained" === et.codexEntryState
-        }), (0, ht.jsx)("img", {
+        children: [(0, Ju.jsx)(ku, {
+          anomalyId: Eu.codexEntryId,
+          caught: "codexContained" === Eu.codexEntryState
+        }), (0, Ju.jsx)("img", {
           className: "CodexPaperclip",
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAMCAYAAACulacQAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQ0lEQVR4nGNggIIXb97/X7V57/+Wvtn/GZDBqs17UQTgClahScBATHrlf5ySeHWimo9NMbokCp9OkmD/oasGCaJLAAC5ZUIBS85GiAAAAABJRU5ErkJggg==",
           alt: "",
@@ -468,27 +468,27 @@ export const modules = {
       })
     }
 
-    function xt(tt) {
+    function Hu(uu) {
       let {
-        entry: et,
-        selected: Vt,
-        onSelect: Ot
-      } = tt;
-      const qt = "codexUnidentified" === et.codexEntryState;
-      return (0, ht.jsxs)(Lt, {
-        icon: (0, ht.jsx)(pt, {
-          entry: et
+        entry: Eu,
+        selected: ju,
+        onSelect: su
+      } = uu;
+      const Uu = "codexUnidentified" === Eu.codexEntryState;
+      return (0, Ju.jsxs)(Vu, {
+        icon: (0, Ju.jsx)(Tu, {
+          entry: Eu
         }),
-        name: Bt(et),
-        selected: Vt,
-        locked: qt,
-        className: Ht()("CodexFolder", Ut[et.codexEntryState]),
+        name: xu(Eu),
+        selected: ju,
+        locked: Uu,
+        className: fu()("CodexFolder", Fu[Eu.codexEntryState]),
         onSelect: () => {
-          Ot(et.codexEntryId)
+          su(Eu.codexEntryId)
         },
-        children: [!qt && (0, ht.jsx)(Yt, {
-          entry: et
-        }), qt && (0, ht.jsx)("img", {
+        children: [!Uu && (0, Ju.jsx)(tu, {
+          entry: Eu
+        }), Uu && (0, Ju.jsx)("img", {
           className: "CodexSeal",
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAARElEQVR4nGNggIIGHp7/MAzjw+TAnMf+/mB8RkQEjOGKYZLIgsiK4AqQJZA1gBXAOHgVwCRQJJEdCVOEYj8yQPciTAEAz0hgyamUqskAAAAASUVORK5CYII=",
           alt: "",
@@ -497,176 +497,176 @@ export const modules = {
       })
     }
 
-    function Tt(tt) {
+    function Au(uu) {
       let {
-        count: et
-      } = tt;
-      const Vt = [];
-      for (let Ot = Math.min(et, 25); Ot > 0; Ot -= 5) Vt.push(Math.min(Ot, 5));
-      return (0, ht.jsx)("span", {
+        count: Eu
+      } = uu;
+      const ju = [];
+      for (let su = Math.min(Eu, 25); su > 0; su -= 5) ju.push(Math.min(su, 5));
+      return (0, Ju.jsx)("span", {
         className: "CodexTallyMarks",
         "aria-hidden": "true",
-        children: Vt.map(((tt, et) => (0, ht.jsx)("span", {
-          className: Ht()("CodexTallyGroup", {
-            Gate: 5 === tt
+        children: ju.map(((uu, Eu) => (0, Ju.jsx)("span", {
+          className: fu()("CodexTallyGroup", {
+            Gate: 5 === uu
           }),
           children: Array.from({
-            length: Math.min(tt, 4)
-          }, ((tt, et) => (0, ht.jsx)("span", {
+            length: Math.min(uu, 4)
+          }, ((uu, Eu) => (0, Ju.jsx)("span", {
             className: "CodexTallyMark"
-          }, et)))
-        }, et)))
+          }, Eu)))
+        }, Eu)))
       })
     }
 
-    function gt(tt) {
+    function nu(uu) {
       let {
-        contained: et,
-        total: Vt
-      } = tt;
+        contained: Eu,
+        total: ju
+      } = uu;
       const {
-        t: Ot
-      } = (0, Qt.H)();
-      return (0, ht.jsxs)("div", {
+        t: su
+      } = (0, bu.A)();
+      return (0, Ju.jsxs)("div", {
         className: "CodexProgress",
-        children: [Ot(`${vt}:codexProgress`, {
-          contained: String(et),
-          total: String(Vt)
-        }), (0, ht.jsx)("span", {
+        children: [su(`${du}:codexProgress`, {
+          contained: String(Eu),
+          total: String(ju)
+        }), (0, Ju.jsx)("span", {
           className: "CodexProgressMeter",
-          children: (0, ht.jsx)("span", {
+          children: (0, Ju.jsx)("span", {
             style: {
-              width: et / Vt * 100 + "%"
+              width: Eu / ju * 100 + "%"
             }
           })
         })]
       })
     }
 
-    function st(tt) {
+    function yu(uu) {
       let {
-        entry: et,
-        fileNumber: Vt
-      } = tt;
+        entry: Eu,
+        fileNumber: ju
+      } = uu;
       const {
-        t: Ot
-      } = (0, Qt.H)(), qt = "codexContained" === et.codexEntryState;
-      return (0, ht.jsx)("section", {
+        t: su
+      } = (0, bu.A)(), Uu = "codexContained" === Eu.codexEntryState;
+      return (0, Ju.jsx)("section", {
         className: "BoardDetail",
-        children: (0, ht.jsxs)("article", {
-          className: Ht()("CodexDossier", Ut[et.codexEntryState]),
-          children: [(0, ht.jsx)("span", {
+        children: (0, Ju.jsxs)("article", {
+          className: fu()("CodexDossier", Fu[Eu.codexEntryState]),
+          children: [(0, Ju.jsx)("span", {
             className: "CodexFileNumber",
-            children: Ot(`${vt}:codexFileNumber`, {
-              number: String(Vt).padStart(3, "0")
+            children: su(`${du}:codexFileNumber`, {
+              number: String(ju).padStart(3, "0")
             })
-          }), (0, ht.jsx)(Ft, {
-            icon: (0, ht.jsx)(pt, {
-              entry: et
+          }), (0, Ju.jsx)(ru, {
+            icon: (0, Ju.jsx)(Tu, {
+              entry: Eu
             }),
-            name: Bt(et),
-            children: (0, ht.jsx)(Yt, {
-              entry: et
+            name: xu(Eu),
+            children: (0, Ju.jsx)(tu, {
+              entry: Eu
             })
-          }), qt && (0, ht.jsxs)(ht.Fragment, {
-            children: [(0, ht.jsx)("p", {
+          }), Uu && (0, Ju.jsxs)(Ju.Fragment, {
+            children: [(0, Ju.jsx)("p", {
               className: "BoardDescription",
-              children: et.codexEntryLore
-            }), (0, ht.jsxs)("p", {
+              children: Eu.codexEntryLore
+            }), (0, Ju.jsxs)("p", {
               className: "CodexTally",
-              children: [Ot(`${vt}:codexContainments`, {
-                count: String(et.codexEntryContainedCount)
-              }), (0, ht.jsx)(Tt, {
-                count: et.codexEntryContainedCount
+              children: [su(`${du}:codexContainments`, {
+                count: String(Eu.codexEntryContainedCount)
+              }), (0, Ju.jsx)(Au, {
+                count: Eu.codexEntryContainedCount
               })]
-            }), (0, ht.jsx)("span", {
+            }), (0, Ju.jsx)("span", {
               className: "CodexClosedStamp",
               "aria-hidden": "true",
-              children: Ot(`${vt}:codexContainedBadge`)
+              children: su(`${du}:codexContainedBadge`)
             })]
-          }), !qt && (0, ht.jsxs)(ht.Fragment, {
-            children: [(0, ht.jsxs)("div", {
+          }), !Uu && (0, Ju.jsxs)(Ju.Fragment, {
+            children: [(0, Ju.jsxs)("div", {
               className: "CodexRedaction",
-              children: [it.map((tt => (0, ht.jsx)("span", {
+              children: [Lu.map((uu => (0, Ju.jsx)("span", {
                 className: "CodexRedactedLine",
                 style: {
-                  width: tt
+                  width: uu
                 }
-              }, tt))), (0, ht.jsx)("p", {
+              }, uu))), (0, Ju.jsx)("p", {
                 className: "CodexRedacted",
-                children: Ot(`${vt}:codexRedacted`)
+                children: su(`${du}:codexRedacted`)
               })]
-            }), "" !== et.codexEntryHint && (0, ht.jsxs)("aside", {
+            }), "" !== Eu.codexEntryHint && (0, Ju.jsxs)("aside", {
               className: "CodexNote",
-              children: [(0, ht.jsx)("h4", {
-                children: Ot(`${vt}:codexHintLabel`)
-              }), (0, ht.jsx)("p", {
-                children: et.codexEntryHint
+              children: [(0, Ju.jsx)("h4", {
+                children: su(`${du}:codexHintLabel`)
+              }), (0, Ju.jsx)("p", {
+                children: Eu.codexEntryHint
               })]
-            }), (0, ht.jsx)("p", {
+            }), (0, Ju.jsx)("p", {
               className: "CodexClearance",
-              children: Ot(rt[et.codexEntryDifficulty])
+              children: su(Iu[Eu.codexEntryDifficulty])
             })]
           })]
         })
       })
     }
 
-    function nt(tt) {
+    function zu(uu) {
       let {
-        controller: et
-      } = tt;
-      const Vt = (0, Xt.h)(zt, et.getSnapshot()),
+        controller: Eu
+      } = uu;
+      const ju = (0, Cu.g)(Wu, Eu.getSnapshot()),
         {
-          t: Ot
-        } = (0, Qt.H)();
-      if (0 === Vt.entries.length) return null;
-      const qt = Vt.entries.find((tt => tt.codexEntryId === Vt.selectedId)),
-        Dt = Vt.entries.filter((tt => "codexContained" === tt.codexEntryState)).length,
-        mt = Vt.entries.map((tt => tt.codexEntryId)).sort().indexOf(qt.codexEntryId) + 1;
-      return (0, ht.jsxs)(St, {
-        open: Vt.open,
-        onDismiss: et.dismiss,
-        title: Ot(`${vt}:codexTitle`),
+          t: su
+        } = (0, bu.A)();
+      if (0 === ju.entries.length) return null;
+      const Uu = ju.entries.find((uu => uu.codexEntryId === ju.selectedId)),
+        Zu = ju.entries.filter((uu => "codexContained" === uu.codexEntryState)).length,
+        Xu = ju.entries.map((uu => uu.codexEntryId)).sort().indexOf(Uu.codexEntryId) + 1;
+      return (0, Ju.jsxs)(Pu, {
+        open: ju.open,
+        onDismiss: Eu.dismiss,
+        title: su(`${du}:codexTitle`),
         className: "ContainmentCodexPanel",
-        headerExtra: (0, ht.jsx)(gt, {
-          contained: Dt,
-          total: Vt.entries.length
+        headerExtra: (0, Ju.jsx)(nu, {
+          contained: Zu,
+          total: ju.entries.length
         }),
-        children: [(0, ht.jsx)("div", {
+        children: [(0, Ju.jsx)("div", {
           className: "BoardTiles",
-          children: Vt.entries.map((tt => (0, ht.jsx)(xt, {
-            entry: tt,
-            selected: tt === qt,
-            onSelect: et.select
-          }, tt.codexEntryId)))
-        }), (0, ht.jsx)(st, {
-          entry: qt,
-          fileNumber: mt
+          children: ju.entries.map((uu => (0, Ju.jsx)(Hu, {
+            entry: uu,
+            selected: uu === Uu,
+            onSelect: Eu.select
+          }, uu.codexEntryId)))
+        }), (0, Ju.jsx)(yu, {
+          entry: Uu,
+          fileNumber: Xu
         })]
       })
     }
-    var te = Vt(391);
-    class ee extends Gt.b {
-      constructor(tt, et, Vt, Ot, qt, Dt) {
-        super(tt, et, Vt), this.pacer = Ot, this.command = qt, this.predict = Dt, this.board = null, this.confirmed = null, this.selectedId = "", this.notice = null, this.unsubscribePacer = void 0, this.select = tt => {
-          this.selectedId = tt, this.emit()
-        }, this.act = (tt, et) => {
-          if (!this.open || null === this.board || !this.pacer.send(`${this.command} ${tt} ${et}`, this.rollBack)) return;
-          const Vt = this.predict(this.board, tt, et);
-          null !== Vt && (this.board = Vt.board, this.notice = Vt.notice, this.emit())
+    var Ru = ju(349);
+    class uE extends iu.d {
+      constructor(uu, Eu, ju, su, Uu, Zu) {
+        super(uu, Eu, ju), this.pacer = su, this.command = Uu, this.predict = Zu, this.board = null, this.confirmed = null, this.selectedId = "", this.notice = null, this.unsubscribePacer = void 0, this.select = uu => {
+          this.selectedId = uu, this.emit()
+        }, this.act = (uu, Eu) => {
+          if (!this.open || null === this.board || !this.pacer.send(`${this.command} ${uu} ${Eu}`, this.rollBack)) return;
+          const ju = this.predict(this.board, uu, Eu);
+          null !== ju && (this.board = ju.board, this.notice = ju.notice, this.emit())
         }, this.rollBack = () => {
           this.board !== this.confirmed && (this.board = this.confirmed, this.notice = null)
-        }, this.unsubscribePacer = Ot.subscribe((() => {
+        }, this.unsubscribePacer = su.subscribe((() => {
           this.emit()
         }))
       }
-      Qf(tt) {
-        const et = this.messageOpens(tt);
-        if (et && this.open) return this.board === this.confirmed && (this.board = tt), this.confirmed = tt, void this.emit();
-        if (this.board = tt, this.confirmed = tt, this.pacer.onReply(), et) return this.notice = null, this.selectedId = this.openingSelection(tt), void this.show();
-        const Vt = this.messageNotice(tt);
-        null !== Vt && (this.notice = Vt), this.emit()
+      NO(uu) {
+        const Eu = this.messageOpens(uu);
+        if (Eu && this.open) return this.board === this.confirmed && (this.board = uu), this.confirmed = uu, void this.emit();
+        if (this.board = uu, this.confirmed = uu, this.pacer.onReply(), Eu) return this.notice = null, this.selectedId = this.openingSelection(uu), void this.show();
+        const ju = this.messageNotice(uu);
+        null !== ju && (this.notice = ju), this.emit()
       }
       dispose() {
         this.unsubscribePacer(), super.dispose()
@@ -676,153 +676,153 @@ export const modules = {
       }
     }
 
-    function Ve(tt, et) {
-      return tt.loadoutCoins >= et.loadoutCostCoins && et.loadoutCostParts.every((et => function(tt, et) {
-        return Oe(tt, et).loadoutHeldPartAmount
-      }(tt, et.loadoutPartCurrency) >= et.loadoutPartAmount))
+    function EE(uu, Eu) {
+      return uu.loadoutCoins >= Eu.loadoutCostCoins && Eu.loadoutCostParts.every((Eu => function(uu, Eu) {
+        return jE(uu, Eu).loadoutHeldPartAmount
+      }(uu, Eu.loadoutPartCurrency) >= Eu.loadoutPartAmount))
     }
 
-    function Oe(tt, et) {
-      return tt.loadoutHeldParts.find((tt => tt.loadoutHeldPartCurrency === et))
+    function jE(uu, Eu) {
+      return uu.loadoutHeldParts.find((uu => uu.loadoutHeldPartCurrency === Eu))
     }
 
-    function qe(tt, et) {
-      return tt.loadoutSlots.find((tt => tt.loadoutSlotKind === et))
+    function sE(uu, Eu) {
+      return uu.loadoutSlots.find((uu => uu.loadoutSlotKind === Eu))
     }
 
-    function De(tt) {
-      return tt.loadoutPerks.filter((tt => tt.loadoutPerkEquipped)).length >= tt.loadoutMaxPerks
+    function UE(uu) {
+      return uu.loadoutPerks.filter((uu => uu.loadoutPerkEquipped)).length >= uu.loadoutMaxPerks
     }
 
-    function me(tt, et, Vt) {
-      for (const qt of tt.loadoutSlots) {
-        const Ot = qt.loadoutSlotOptions.find((tt => tt.loadoutOptionId === Vt));
-        if (Ot) return "loadoutArmour" === qt.loadoutSlotKind ? je(tt, qt, Ot, et) : de(tt, qt, Ot, et)
+    function ZE(uu, Eu, ju) {
+      for (const Uu of uu.loadoutSlots) {
+        const su = Uu.loadoutSlotOptions.find((uu => uu.loadoutOptionId === ju));
+        if (su) return "loadoutArmour" === Uu.loadoutSlotKind ? lE(uu, Uu, su, Eu) : XE(uu, Uu, su, Eu)
       }
-      const Ot = tt.loadoutPerks.find((tt => tt.loadoutPerkId === Vt));
-      return Ot ? function(tt, et, Vt) {
-        const Ot = et.loadoutPerkOwned,
-          qt = et.loadoutPerkEquipped,
-          Dt = et.loadoutPerkName,
-          mt = De(tt);
-        if ("loadoutUnlock" === Vt) {
-          if (Ot || !Ve(tt, et.loadoutPerkCost)) return null;
-          const Vt = {
-            ...et,
+      const su = uu.loadoutPerks.find((uu => uu.loadoutPerkId === ju));
+      return su ? function(uu, Eu, ju) {
+        const su = Eu.loadoutPerkOwned,
+          Uu = Eu.loadoutPerkEquipped,
+          Zu = Eu.loadoutPerkName,
+          Xu = UE(uu);
+        if ("loadoutUnlock" === ju) {
+          if (su || !EE(uu, Eu.loadoutPerkCost)) return null;
+          const ju = {
+            ...Eu,
             loadoutPerkOwned: !0,
-            loadoutPerkEquipped: !mt
+            loadoutPerkEquipped: !Xu
           };
           return {
-            board: Xe(Qe(tt, et.loadoutPerkCost), Vt),
-            notice: le(mt ? "loadoutNoticeUnlockedNoRoom" : "loadoutNoticeUnlocked", Dt)
+            board: fE(CE(uu, Eu.loadoutPerkCost), ju),
+            notice: bE(Xu ? "loadoutNoticeUnlockedNoRoom" : "loadoutNoticeUnlocked", Zu)
           }
         }
-        if ("loadoutUpgrade" === Vt || !Ot || "loadoutEquip" === Vt === qt || !qt && mt) return null;
+        if ("loadoutUpgrade" === ju || !su || "loadoutEquip" === ju === Uu || !Uu && Xu) return null;
         return {
-          board: Xe(tt, {
-            ...et,
-            loadoutPerkEquipped: !qt
+          board: fE(uu, {
+            ...Eu,
+            loadoutPerkEquipped: !Uu
           }),
-          notice: le(qt ? "loadoutNoticeUnequipped" : "loadoutNoticeEquipped", Dt)
+          notice: bE(Uu ? "loadoutNoticeUnequipped" : "loadoutNoticeEquipped", Zu)
         }
-      }(tt, Ot, et) : null
+      }(uu, su, Eu) : null
     }
 
-    function de(tt, et, Vt, Ot) {
-      const qt = Vt.loadoutOptionOwnedTier,
-        Dt = Vt.loadoutOptionName;
-      if ("loadoutEquip" === Ot) return 0 === qt ? null : {
-        board: He(tt, et, Vt.loadoutOptionId, null),
-        notice: le("loadoutNoticeEquipped", Dt)
+    function XE(uu, Eu, ju, su) {
+      const Uu = ju.loadoutOptionOwnedTier,
+        Zu = ju.loadoutOptionName;
+      if ("loadoutEquip" === su) return 0 === Uu ? null : {
+        board: qE(uu, Eu, ju.loadoutOptionId, null),
+        notice: bE("loadoutNoticeEquipped", Zu)
       };
-      const mt = "loadoutUnlock" === Ot;
-      if (mt && 0 !== qt || "loadoutUpgrade" === Ot && (0 === qt || qt >= Vt.loadoutOptionTiers.length) || "loadoutUnequip" === Ot) return null;
-      const dt = Vt.loadoutOptionTiers[qt].loadoutTierCost;
-      if (!Ve(tt, dt)) return null;
-      const jt = {
-          ...Vt,
-          loadoutOptionOwnedTier: qt + 1
+      const Xu = "loadoutUnlock" === su;
+      if (Xu && 0 !== Uu || "loadoutUpgrade" === su && (0 === Uu || Uu >= ju.loadoutOptionTiers.length) || "loadoutUnequip" === su) return null;
+      const lu = ju.loadoutOptionTiers[Uu].loadoutTierCost;
+      if (!EE(uu, lu)) return null;
+      const qu = {
+          ...ju,
+          loadoutOptionOwnedTier: Uu + 1
         },
-        Ht = mt ? Vt.loadoutOptionId : et.loadoutSlotEquippedId;
+        fu = Xu ? ju.loadoutOptionId : Eu.loadoutSlotEquippedId;
       return {
-        board: He(Qe(tt, dt), et, Ht, jt),
-        notice: mt ? le("loadoutNoticeUnlocked", Dt) : le("loadoutNoticeUpgraded", Dt, qt + 1)
+        board: qE(CE(uu, lu), Eu, fu, qu),
+        notice: Xu ? bE("loadoutNoticeUnlocked", Zu) : bE("loadoutNoticeUpgraded", Zu, Uu + 1)
       }
     }
 
-    function je(tt, et, Vt, Ot) {
-      const qt = Vt.loadoutOptionOwnedTier > 0,
-        Dt = Vt.loadoutOptionName;
-      if ("loadoutEquip" === Ot && qt) return {
-        board: He(tt, et, Vt.loadoutOptionId, null),
-        notice: le("loadoutNoticeEquipped", Dt)
+    function lE(uu, Eu, ju, su) {
+      const Uu = ju.loadoutOptionOwnedTier > 0,
+        Zu = ju.loadoutOptionName;
+      if ("loadoutEquip" === su && Uu) return {
+        board: qE(uu, Eu, ju.loadoutOptionId, null),
+        notice: bE("loadoutNoticeEquipped", Zu)
       };
-      const mt = Vt.loadoutOptionTiers[0].loadoutTierCost;
-      return "loadoutUnlock" !== Ot || qt || !Ve(tt, mt) ? null : {
-        board: He(Qe(tt, mt), et, Vt.loadoutOptionId, {
-          ...Vt,
+      const Xu = ju.loadoutOptionTiers[0].loadoutTierCost;
+      return "loadoutUnlock" !== su || Uu || !EE(uu, Xu) ? null : {
+        board: qE(CE(uu, Xu), Eu, ju.loadoutOptionId, {
+          ...ju,
           loadoutOptionOwnedTier: 1
         }),
-        notice: le("loadoutNoticeUnlocked", Dt)
+        notice: bE("loadoutNoticeUnlocked", Zu)
       }
     }
 
-    function He(tt, et, Vt, Ot) {
-      const qt = {
-        ...et,
-        loadoutSlotEquippedId: Vt,
-        loadoutSlotOptions: et.loadoutSlotOptions.map((tt => null !== Ot && tt.loadoutOptionId === Ot.loadoutOptionId ? Ot : tt))
+    function qE(uu, Eu, ju, su) {
+      const Uu = {
+        ...Eu,
+        loadoutSlotEquippedId: ju,
+        loadoutSlotOptions: Eu.loadoutSlotOptions.map((uu => null !== su && uu.loadoutOptionId === su.loadoutOptionId ? su : uu))
       };
       return {
-        ...tt,
-        loadoutSlots: tt.loadoutSlots.map((tt => tt === et ? qt : tt))
+        ...uu,
+        loadoutSlots: uu.loadoutSlots.map((uu => uu === Eu ? Uu : uu))
       }
     }
 
-    function Xe(tt, et) {
+    function fE(uu, Eu) {
       return {
-        ...tt,
-        loadoutPerks: tt.loadoutPerks.map((tt => tt.loadoutPerkId === et.loadoutPerkId ? et : tt))
+        ...uu,
+        loadoutPerks: uu.loadoutPerks.map((uu => uu.loadoutPerkId === Eu.loadoutPerkId ? Eu : uu))
       }
     }
 
-    function Qe(tt, et) {
+    function CE(uu, Eu) {
       return {
-        ...tt,
-        loadoutCoins: tt.loadoutCoins - et.loadoutCostCoins,
-        loadoutHeldParts: tt.loadoutHeldParts.map((tt => {
-          const Vt = et.loadoutCostParts.find((et => et.loadoutPartCurrency === tt.loadoutHeldPartCurrency));
-          return Vt ? {
-            ...tt,
-            loadoutHeldPartAmount: tt.loadoutHeldPartAmount - Vt.loadoutPartAmount
-          } : tt
+        ...uu,
+        loadoutCoins: uu.loadoutCoins - Eu.loadoutCostCoins,
+        loadoutHeldParts: uu.loadoutHeldParts.map((uu => {
+          const ju = Eu.loadoutCostParts.find((Eu => Eu.loadoutPartCurrency === uu.loadoutHeldPartCurrency));
+          return ju ? {
+            ...uu,
+            loadoutHeldPartAmount: uu.loadoutHeldPartAmount - ju.loadoutPartAmount
+          } : uu
         }))
       }
     }
 
-    function le(tt, et) {
+    function bE(uu, Eu) {
       return {
-        loadoutNoticeKey: tt,
+        loadoutNoticeKey: uu,
         loadoutNoticeRefused: !1,
-        loadoutNoticeName: et,
+        loadoutNoticeName: Eu,
         loadoutNoticeTier: arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0
       }
     }
-    const Ee = "containmentLoadoutView";
-    class fe extends ee {
-      constructor(tt, et, Vt, Ot) {
-        super(tt, et, Vt, Ot, "loadout", me), this.slot = "loadoutPrimary", this.snapshot = this.buildSnapshot(), this.selectSlot = tt => {
-          this.slot = tt, this.selectedId = we(this.board, tt), this.emit()
+    const cE = "containmentLoadoutView";
+    class NE extends uE {
+      constructor(uu, Eu, ju, su) {
+        super(uu, Eu, ju, su, "loadout", ZE), this.slot = "loadoutPrimary", this.snapshot = this.buildSnapshot(), this.selectSlot = uu => {
+          this.slot = uu, this.selectedId = OE(this.board, uu), this.emit()
         }
       }
-      messageOpens(tt) {
-        return tt.loadoutMessageOpens
+      messageOpens(uu) {
+        return uu.loadoutMessageOpens
       }
-      messageNotice(tt) {
-        return tt.loadoutNotice
+      messageNotice(uu) {
+        return uu.loadoutNotice
       }
-      openingSelection(tt) {
-        return we(tt, this.slot)
+      openingSelection(uu) {
+        return OE(uu, this.slot)
       }
       buildSnapshot() {
         return {
@@ -836,765 +836,765 @@ export const modules = {
       }
     }
 
-    function we(tt, et) {
-      if ("loadoutPerks" === et) {
-        var Vt;
-        const et = tt.loadoutPerks;
-        return (null !== (Vt = et.find((tt => tt.loadoutPerkEquipped))) && void 0 !== Vt ? Vt : et[0]).loadoutPerkId
+    function OE(uu, Eu) {
+      if ("loadoutPerks" === Eu) {
+        var ju;
+        const Eu = uu.loadoutPerks;
+        return (null !== (ju = Eu.find((uu => uu.loadoutPerkEquipped))) && void 0 !== ju ? ju : Eu[0]).loadoutPerkId
       }
-      return qe(tt, et).loadoutSlotEquippedId
+      return sE(uu, Eu).loadoutSlotEquippedId
     }
-    const ye = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAY0lEQVR4nGNgIAP8x4FRwP/sFt3/EYU6YBqGIwp1MBSDBUH4/3nW//83csD5DOgKfeKNsWIMhV+///qvbOT7/87cMjCG8TEUgiSLqlpRMEgMQ+HJvgy4aTAMEsPqc2KChyAAAFxNbnylK5O6AAAAAElFTkSuQmCC";
-    var Ne = Vt(37110),
-      ae = Vt(1371);
-    const Me = {
-        loadoutPrimary: `${vt}:loadoutSlotPrimary`,
-        loadoutSecondary: `${vt}:loadoutSlotSecondary`,
-        loadoutOffensive: `${vt}:loadoutSlotOffensive`,
-        loadoutSelfHelp: `${vt}:loadoutSlotSelfHelp`,
-        loadoutArmour: `${vt}:loadoutSlotArmour`,
-        loadoutPerks: `${vt}:loadoutSlotPerks`
+    const YE = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAY0lEQVR4nGNgIAP8x4FRwP/sFt3/EYU6YBqGIwp1MBSDBUH4/3nW//83csD5DOgKfeKNsWIMhV+///qvbOT7/87cMjCG8TEUgiSLqlpRMEgMQ+HJvgy4aTAMEsPqc2KChyAAAFxNbnylK5O6AAAAAElFTkSuQmCC";
+    var hE = ju(37282),
+      DE = ju(1330);
+    const gE = {
+        loadoutPrimary: `${du}:loadoutSlotPrimary`,
+        loadoutSecondary: `${du}:loadoutSlotSecondary`,
+        loadoutOffensive: `${du}:loadoutSlotOffensive`,
+        loadoutSelfHelp: `${du}:loadoutSlotSelfHelp`,
+        loadoutArmour: `${du}:loadoutSlotArmour`,
+        loadoutPerks: `${du}:loadoutSlotPerks`
       },
-      be = {
+      ME = {
         section: "right",
-        il: "bottom",
+        Hc: "bottom",
         act: "top"
       },
-      Je = (0, Ot.createContext)({
+      eE = (0, su.createContext)({
         step: null,
         targetRef: () => {}
       });
 
-    function Ce() {
+    function GE() {
       const {
-        step: tt,
-        targetRef: et
-      } = (0, Ot.useContext)(Je);
-      return (Vt, Ot) => (null === tt || void 0 === tt ? void 0 : tt.kind) === Vt && tt.id === Ot ? et : void 0
+        step: uu,
+        targetRef: Eu
+      } = (0, su.useContext)(eE);
+      return (ju, su) => (null === uu || void 0 === uu ? void 0 : uu.kind) === ju && uu.id === su ? Eu : void 0
     }
 
-    function ue(tt, et) {
-      const Vt = et.loadoutTargetId;
-      if ("loadoutPerks" === et.loadoutTargetSection) {
-        const et = tt.loadoutPerks.find((tt => tt.loadoutPerkId === Vt));
+    function pE(uu, Eu) {
+      const ju = Eu.loadoutTargetId;
+      if ("loadoutPerks" === Eu.loadoutTargetSection) {
+        const Eu = uu.loadoutPerks.find((uu => uu.loadoutPerkId === ju));
         return {
-          name: et.loadoutPerkName,
-          owned: et.loadoutPerkOwned,
-          equipped: et.loadoutPerkEquipped
+          name: Eu.loadoutPerkName,
+          owned: Eu.loadoutPerkOwned,
+          equipped: Eu.loadoutPerkEquipped
         }
       }
-      const Ot = qe(tt, et.loadoutTargetSection),
-        qt = Ot.loadoutSlotOptions.find((tt => tt.loadoutOptionId === Vt));
+      const su = sE(uu, Eu.loadoutTargetSection),
+        Uu = su.loadoutSlotOptions.find((uu => uu.loadoutOptionId === ju));
       return {
-        name: qt.loadoutOptionName,
-        owned: qt.loadoutOptionOwnedTier > 0,
-        equipped: Ot.loadoutSlotEquippedId === Vt
+        name: Uu.loadoutOptionName,
+        owned: Uu.loadoutOptionOwnedTier > 0,
+        equipped: su.loadoutSlotEquippedId === ju
       }
     }
 
-    function Ke(tt, et, Vt, Ot) {
-      const [qt, Dt] = tt(`${vt}:${et}`, {
-        [Vt]: "\x01"
+    function wE(uu, Eu, ju, su) {
+      const [Uu, Zu] = uu(`${du}:${Eu}`, {
+        [ju]: "\x01"
       }).split("\x01");
-      return (0, ht.jsxs)(ht.Fragment, {
-        children: [qt, (0, ht.jsx)("span", {
+      return (0, Ju.jsxs)(Ju.Fragment, {
+        children: [Uu, (0, Ju.jsx)("span", {
           className: "LoadoutWalkthroughName",
-          children: Ot
-        }), Dt]
+          children: su
+        }), Zu]
       })
     }
 
-    function he(tt) {
+    function JE(uu) {
       let {
-        view: et,
-        onDismiss: Vt,
-        children: qt
-      } = tt;
+        view: Eu,
+        onDismiss: ju,
+        children: Uu
+      } = uu;
       const {
-        t: Dt
-      } = (0, Qt.H)(), mt = et.loadout, dt = et.open ? mt.loadoutWalkthrough.map((tt => ({
-        target: tt,
-        info: ue(mt, tt)
-      }))).find((tt => {
+        t: Zu
+      } = (0, bu.A)(), Xu = Eu.loadout, lu = Eu.open ? Xu.loadoutWalkthrough.map((uu => ({
+        target: uu,
+        info: pE(Xu, uu)
+      }))).find((uu => {
         let {
-          info: et
-        } = tt;
-        return !et.equipped
+          info: Eu
+        } = uu;
+        return !Eu.equipped
       })) : void 0;
-      let jt = null,
-        Ht = null;
-      if (void 0 !== dt) {
+      let qu = null,
+        fu = null;
+      if (void 0 !== lu) {
         const {
-          target: tt,
-          info: Vt
-        } = dt;
-        et.slot !== tt.loadoutTargetSection ? (jt = {
+          target: uu,
+          info: ju
+        } = lu;
+        Eu.slot !== uu.loadoutTargetSection ? (qu = {
           kind: "section",
-          id: tt.loadoutTargetSection
-        }, Ht = Ke(Dt, "loadoutWalkthroughSection", "section", Dt(Me[tt.loadoutTargetSection]))) : et.selectedId !== tt.loadoutTargetId ? (jt = {
-          kind: "il",
-          id: tt.loadoutTargetId
-        }, Ht = Ke(Dt, "loadoutWalkthroughPick", "name", Vt.name)) : (jt = {
+          id: uu.loadoutTargetSection
+        }, fu = wE(Zu, "loadoutWalkthroughSection", "section", Zu(gE[uu.loadoutTargetSection]))) : Eu.selectedId !== uu.loadoutTargetId ? (qu = {
+          kind: "Hc",
+          id: uu.loadoutTargetId
+        }, fu = wE(Zu, "loadoutWalkthroughPick", "name", ju.name)) : (qu = {
           kind: "act",
-          id: tt.loadoutTargetId
-        }, Ht = Ke(Dt, Vt.owned ? "loadoutWalkthroughEquip" : "loadoutWalkthroughUnlock", "name", Vt.name))
+          id: uu.loadoutTargetId
+        }, fu = wE(Zu, ju.owned ? "loadoutWalkthroughEquip" : "loadoutWalkthroughUnlock", "name", ju.name))
       }
-      const Xt = null === jt ? null : function(tt) {
-          return `${tt.kind}:${tt.id}`
-        }(jt),
-        [lt, Et] = (0, Ot.useState)(null),
-        ft = (0, Ot.useCallback)((tt => {
-          Et((et => null !== tt ? {
-            key: Xt,
-            node: tt
-          } : (null === et || void 0 === et ? void 0 : et.key) === Xt ? null : et))
-        }), [Xt]),
-        wt = null !== Xt && (null === lt || void 0 === lt ? void 0 : lt.key) === Xt ? lt.node : null;
-      return (0, ht.jsxs)(Je.Provider, {
+      const Cu = null === qu ? null : function(uu) {
+          return `${uu.kind}:${uu.id}`
+        }(qu),
+        [cu, Nu] = (0, su.useState)(null),
+        Ou = (0, su.useCallback)((uu => {
+          Nu((Eu => null !== uu ? {
+            key: Cu,
+            node: uu
+          } : (null === Eu || void 0 === Eu ? void 0 : Eu.key) === Cu ? null : Eu))
+        }), [Cu]),
+        Yu = null !== Cu && (null === cu || void 0 === cu ? void 0 : cu.key) === Cu ? cu.node : null;
+      return (0, Ju.jsxs)(eE.Provider, {
         value: {
-          step: jt,
-          targetRef: ft
+          step: qu,
+          targetRef: Ou
         },
-        children: [qt, null !== jt && null !== wt && (0, ht.jsx)(ve, {
-          target: wt,
-          placement: be[jt.kind],
-          onDismiss: Vt,
-          children: Ht
-        }, Xt)]
+        children: [Uu, null !== qu && null !== Yu && (0, Ju.jsx)(dE, {
+          target: Yu,
+          placement: ME[qu.kind],
+          onDismiss: ju,
+          children: fu
+        }, Cu)]
       })
     }
 
-    function ve(tt) {
+    function dE(uu) {
       let {
-        target: et,
-        placement: Vt,
-        onDismiss: qt,
-        children: Dt
-      } = tt;
+        target: Eu,
+        placement: ju,
+        onDismiss: Uu,
+        children: Zu
+      } = uu;
       const {
-        t: mt
-      } = (0, Qt.H)(), dt = (0, Ot.useRef)(et);
-      return dt.current = et, (0, ae.w)("popup", dt, qt), (0, ht.jsxs)(Ne.h, {
-        target: et,
-        placement: Vt,
+        t: Xu
+      } = (0, bu.A)(), lu = (0, su.useRef)(Eu);
+      return lu.current = Eu, (0, DE.w)("popup", lu, Uu), (0, Ju.jsxs)(hE.d, {
+        target: Eu,
+        placement: ju,
         className: "LoadoutWalkthroughStep",
         spotlightMargin: 10,
-        children: [(0, ht.jsxs)("div", {
+        children: [(0, Ju.jsxs)("div", {
           className: "LoadoutWalkthroughHeader",
-          children: [(0, ht.jsx)("img", {
+          children: [(0, Ju.jsx)("img", {
             className: "LoadoutWalkthroughPortrait",
-            src: ye,
+            src: YE,
             alt: "",
             draggable: !1
-          }), (0, ht.jsx)("span", {
+          }), (0, Ju.jsx)("span", {
             className: "LoadoutWalkthroughSpeaker",
-            children: mt(`${vt}:operatorName`)
-          }), (0, ht.jsx)(ft.j, {
-            onClick: qt,
-            ariaLabel: mt(`${vt}:loadoutWalkthroughClose`),
+            children: Xu(`${du}:operatorName`)
+          }), (0, Ju.jsx)(Ou.l, {
+            onClick: Uu,
+            ariaLabel: Xu(`${du}:loadoutWalkthroughClose`),
             padIgnore: !0
           })]
-        }), (0, ht.jsx)("p", {
+        }), (0, Ju.jsx)("p", {
           className: "LoadoutWalkthroughText",
-          children: Dt
+          children: Zu
         })]
       })
     }
-    const We = new Set(["loadoutStatReload", "loadoutStatResupply"]);
+    const aE = new Set(["loadoutStatReload", "loadoutStatResupply"]);
 
-    function Se(tt) {
+    function PE(uu) {
       let {
-        cost: et,
-        loadout: Vt
-      } = tt;
+        cost: Eu,
+        loadout: ju
+      } = uu;
       const {
-        t: Ot
-      } = (0, Qt.H)();
-      return et.loadoutCostCoins <= 0 && 0 === et.loadoutCostParts.length ? (0, ht.jsx)("span", {
+        t: su
+      } = (0, bu.A)();
+      return Eu.loadoutCostCoins <= 0 && 0 === Eu.loadoutCostParts.length ? (0, Ju.jsx)("span", {
         className: "LoadoutCost",
-        children: Ot(`${vt}:loadoutFree`)
-      }) : (0, ht.jsxs)("span", {
+        children: su(`${du}:loadoutFree`)
+      }) : (0, Ju.jsxs)("span", {
         className: "LoadoutCost",
-        children: [et.loadoutCostCoins > 0 && (0, ht.jsx)(It, {
-          itemName: Wt,
-          amount: et.loadoutCostCoins,
-          Pd: Vt.loadoutCoins
-        }), et.loadoutCostParts.map((tt => {
-          const et = Oe(Vt, tt.loadoutPartCurrency);
-          return (0, ht.jsx)(It, {
-            itemName: et.loadoutHeldPartItem,
-            amount: tt.loadoutPartAmount,
-            Pd: et.loadoutHeldPartAmount
-          }, tt.loadoutPartCurrency)
+        children: [Eu.loadoutCostCoins > 0 && (0, Ju.jsx)(mu, {
+          itemName: au,
+          amount: Eu.loadoutCostCoins,
+          dl: ju.loadoutCoins
+        }), Eu.loadoutCostParts.map((uu => {
+          const Eu = jE(ju, uu.loadoutPartCurrency);
+          return (0, Ju.jsx)(mu, {
+            itemName: Eu.loadoutHeldPartItem,
+            amount: uu.loadoutPartAmount,
+            dl: Eu.loadoutHeldPartAmount
+          }, uu.loadoutPartCurrency)
         }))]
       })
     }
-    const ce = {
-      loadoutStatFireRate: `${vt}:loadoutUnitPerMinute`,
-      loadoutStatReload: `${vt}:loadoutUnitSeconds`,
-      loadoutStatResupply: `${vt}:loadoutUnitSeconds`
+    const oE = {
+      loadoutStatFireRate: `${du}:loadoutUnitPerMinute`,
+      loadoutStatReload: `${du}:loadoutUnitSeconds`,
+      loadoutStatResupply: `${du}:loadoutUnitSeconds`
     };
 
-    function Re(tt) {
-      return "loadoutStatPotency" === tt.loadoutStatKind ? (0, te.Y)(tt.loadoutStatValue) : String(tt.loadoutStatValue)
+    function kE(uu) {
+      return "loadoutStatPotency" === uu.loadoutStatKind ? (0, Ru.N)(uu.loadoutStatValue) : String(uu.loadoutStatValue)
     }
 
-    function Ie(tt) {
-      var et;
+    function mE(uu) {
+      var Eu;
       let {
-        option: Vt
-      } = tt;
+        option: ju
+      } = uu;
       const {
-        t: Ot
-      } = (0, Qt.H)(), qt = Vt.loadoutOptionTiers, Dt = null === (et = qt[0]) || void 0 === et ? void 0 : et.loadoutTierStats.map((tt => tt.loadoutStatKind));
-      if (!Dt || 0 === Dt.length) return null;
-      const mt = Vt.loadoutOptionOwnedTier,
-        dt = (tt, et) => {
-          var Vt;
-          return null === (Vt = qt[tt]) || void 0 === Vt ? void 0 : Vt.loadoutTierStats.find((tt => tt.loadoutStatKind === et))
+        t: su
+      } = (0, bu.A)(), Uu = ju.loadoutOptionTiers, Zu = null === (Eu = Uu[0]) || void 0 === Eu ? void 0 : Eu.loadoutTierStats.map((uu => uu.loadoutStatKind));
+      if (!Zu || 0 === Zu.length) return null;
+      const Xu = ju.loadoutOptionOwnedTier,
+        lu = (uu, Eu) => {
+          var ju;
+          return null === (ju = Uu[uu]) || void 0 === ju ? void 0 : ju.loadoutTierStats.find((uu => uu.loadoutStatKind === Eu))
         };
-      return (0, ht.jsxs)("table", {
+      return (0, Ju.jsxs)("table", {
         className: "LoadoutTierTable",
-        children: [(0, ht.jsx)("thead", {
-          children: (0, ht.jsxs)("tr", {
-            children: [(0, ht.jsx)("th", {}), qt.map(((tt, et) => (0, ht.jsx)("th", {
-              className: Ht()({
-                Current: et + 1 === mt,
-                Next: et === mt
+        children: [(0, Ju.jsx)("thead", {
+          children: (0, Ju.jsxs)("tr", {
+            children: [(0, Ju.jsx)("th", {}), Uu.map(((uu, Eu) => (0, Ju.jsx)("th", {
+              className: fu()({
+                Current: Eu + 1 === Xu,
+                Next: Eu === Xu
               }),
-              children: Ot(`${vt}:loadoutTier`, {
-                tier: (0, te.Y)(et + 1)
+              children: su(`${du}:loadoutTier`, {
+                tier: (0, Ru.N)(Eu + 1)
               })
-            }, et)))]
+            }, Eu)))]
           })
-        }), (0, ht.jsx)("tbody", {
-          children: Dt.map((tt => {
-            const et = ce[tt];
-            return (0, ht.jsxs)("tr", {
-              children: [(0, ht.jsxs)("th", {
+        }), (0, Ju.jsx)("tbody", {
+          children: Zu.map((uu => {
+            const Eu = oE[uu];
+            return (0, Ju.jsxs)("tr", {
+              children: [(0, Ju.jsxs)("th", {
                 scope: "row",
-                children: [Ot(`${vt}:${tt}`), et && (0, ht.jsx)("span", {
+                children: [su(`${du}:${uu}`), Eu && (0, Ju.jsx)("span", {
                   className: "LoadoutStatUnit",
-                  children: Ot(et)
+                  children: su(Eu)
                 })]
-              }), qt.map(((et, Vt) => {
-                const Ot = dt(Vt, tt),
-                  qt = Vt > 0 ? dt(Vt - 1, tt) : void 0,
-                  Dt = Ot && qt ? Ot.loadoutStatValue - qt.loadoutStatValue : 0,
-                  jt = We.has(tt) ? Dt < 0 : Dt > 0,
-                  Xt = Vt === mt;
-                return (0, ht.jsxs)("td", {
-                  className: Ht()({
-                    Current: Vt + 1 === mt,
-                    Next: Xt,
-                    Gain: jt,
-                    Owned: Vt < mt
+              }), Uu.map(((Eu, ju) => {
+                const su = lu(ju, uu),
+                  Uu = ju > 0 ? lu(ju - 1, uu) : void 0,
+                  Zu = su && Uu ? su.loadoutStatValue - Uu.loadoutStatValue : 0,
+                  qu = aE.has(uu) ? Zu < 0 : Zu > 0,
+                  Cu = ju === Xu;
+                return (0, Ju.jsxs)("td", {
+                  className: fu()({
+                    Current: ju + 1 === Xu,
+                    Next: Cu,
+                    Gain: qu,
+                    Owned: ju < Xu
                   }),
-                  children: [Xt && jt && (0, ht.jsx)("span", {
+                  children: [Cu && qu && (0, Ju.jsx)("span", {
                     className: "LoadoutGainArrow",
                     "aria-hidden": "true",
-                    children: Dt < 0 ? "\u25bc" : "\u25b2"
-                  }), Ot ? Re(Ot) : "-"]
-                }, Vt)
+                    children: Zu < 0 ? "\u25bc" : "\u25b2"
+                  }), su ? kE(su) : "-"]
+                }, ju)
               }))]
-            }, tt)
+            }, uu)
           }))
         })]
       })
     }
 
-    function Pe(tt) {
+    function vE(uu) {
       let {
-        view: et,
-        controller: Vt,
-        slot: Ot,
-        option: qt
-      } = tt;
+        view: Eu,
+        controller: ju,
+        slot: su,
+        option: Uu
+      } = uu;
       const {
-        t: Dt
-      } = (0, Qt.H)(), mt = et.loadout, dt = qt.loadoutOptionOwnedTier, jt = qt.loadoutOptionTiers.length, Ht = Ot.loadoutSlotEquippedId === qt.loadoutOptionId, Xt = dt < jt ? qt.loadoutOptionTiers[dt].loadoutTierCost : null, lt = null !== Xt && Ve(mt, Xt), Et = qt.loadoutOptionId, wt = Ce();
-      return (0, ht.jsxs)(ht.Fragment, {
-        children: [(0, ht.jsx)(Le, {
-          icon: qt.loadoutOptionIcon,
-          name: qt.loadoutOptionName,
-          status: 0 === dt ? Dt(`${vt}:loadoutLocked`) : jt > 1 ? Dt(`${vt}:loadoutTier`, {
-            tier: (0, te.Y)(dt)
+        t: Zu
+      } = (0, bu.A)(), Xu = Eu.loadout, lu = Uu.loadoutOptionOwnedTier, qu = Uu.loadoutOptionTiers.length, fu = su.loadoutSlotEquippedId === Uu.loadoutOptionId, Cu = lu < qu ? Uu.loadoutOptionTiers[lu].loadoutTierCost : null, cu = null !== Cu && EE(Xu, Cu), Nu = Uu.loadoutOptionId, Yu = GE();
+      return (0, Ju.jsxs)(Ju.Fragment, {
+        children: [(0, Ju.jsx)(VE, {
+          icon: Uu.loadoutOptionIcon,
+          name: Uu.loadoutOptionName,
+          status: 0 === lu ? Zu(`${du}:loadoutLocked`) : qu > 1 ? Zu(`${du}:loadoutTier`, {
+            tier: (0, Ru.N)(lu)
           }) : null,
-          locked: 0 === dt,
-          equipped: Ht
-        }), (0, ht.jsx)("p", {
+          locked: 0 === lu,
+          equipped: fu
+        }), (0, Ju.jsx)("p", {
           className: "BoardDescription",
-          children: qt.loadoutOptionDescription
-        }), (0, ht.jsx)(Ie, {
-          option: qt
-        }), (0, ht.jsxs)("div", {
-          ref: wt("act", Et),
+          children: Uu.loadoutOptionDescription
+        }), (0, Ju.jsx)(mE, {
+          option: Uu
+        }), (0, Ju.jsxs)("div", {
+          ref: Yu("act", Nu),
           className: "BoardActions",
-          children: [null !== Xt && (0, ht.jsxs)("div", {
+          children: [null !== Cu && (0, Ju.jsxs)("div", {
             className: "LoadoutBuy",
-            children: [(0, ht.jsx)(Se, {
-              cost: Xt,
-              loadout: mt
-            }), (0, ht.jsx)(ft.m, {
-              disabled: !lt || et.pending,
+            children: [(0, Ju.jsx)(PE, {
+              cost: Cu,
+              loadout: Xu
+            }), (0, Ju.jsx)(Ou.p, {
+              disabled: !cu || Eu.pending,
               onClick: () => {
-                Vt.act(0 === dt ? "loadoutUnlock" : "loadoutUpgrade", Et)
+                ju.act(0 === lu ? "loadoutUnlock" : "loadoutUpgrade", Nu)
               },
-              children: 0 === dt ? Dt(`${vt}:loadoutUnlock`) : Dt(`${vt}:loadoutUpgrade`, {
-                tier: (0, te.Y)(dt + 1)
+              children: 0 === lu ? Zu(`${du}:loadoutUnlock`) : Zu(`${du}:loadoutUpgrade`, {
+                tier: (0, Ru.N)(lu + 1)
               })
             })]
-          }), null === Xt && jt > 1 && (0, ht.jsx)("span", {
+          }), null === Cu && qu > 1 && (0, Ju.jsx)("span", {
             className: "BoardHint",
-            children: Dt(`${vt}:loadoutMaxed`)
-          }), dt > 0 && !Ht && (0, ht.jsx)(ft.f, {
-            disabled: et.pending,
+            children: Zu(`${du}:loadoutMaxed`)
+          }), lu > 0 && !fu && (0, Ju.jsx)(Ou.f, {
+            disabled: Eu.pending,
             onClick: () => {
-              Vt.act("loadoutEquip", Et)
+              ju.act("loadoutEquip", Nu)
             },
-            children: Dt(`${vt}:loadoutEquip`)
+            children: Zu(`${du}:loadoutEquip`)
           })]
         })]
       })
     }
 
-    function Ze(tt) {
+    function KE(uu) {
       let {
-        view: et,
-        controller: Vt,
-        perk: Ot
-      } = tt;
+        view: Eu,
+        controller: ju,
+        perk: su
+      } = uu;
       const {
-        t: qt
-      } = (0, Qt.H)(), Dt = et.loadout, mt = De(Dt), dt = Ot.loadoutPerkId, jt = Ce();
-      return (0, ht.jsxs)(ht.Fragment, {
-        children: [(0, ht.jsx)(Le, {
-          icon: Ot.loadoutPerkIcon,
-          name: Ot.loadoutPerkName,
-          status: Ot.loadoutPerkOwned ? null : qt(`${vt}:loadoutLocked`),
-          locked: !Ot.loadoutPerkOwned,
-          equipped: Ot.loadoutPerkEquipped
-        }), (0, ht.jsx)("p", {
+        t: Uu
+      } = (0, bu.A)(), Zu = Eu.loadout, Xu = UE(Zu), lu = su.loadoutPerkId, qu = GE();
+      return (0, Ju.jsxs)(Ju.Fragment, {
+        children: [(0, Ju.jsx)(VE, {
+          icon: su.loadoutPerkIcon,
+          name: su.loadoutPerkName,
+          status: su.loadoutPerkOwned ? null : Uu(`${du}:loadoutLocked`),
+          locked: !su.loadoutPerkOwned,
+          equipped: su.loadoutPerkEquipped
+        }), (0, Ju.jsx)("p", {
           className: "BoardDescription",
-          children: Ot.loadoutPerkDescription
-        }), (0, ht.jsxs)("div", {
-          ref: jt("act", dt),
+          children: su.loadoutPerkDescription
+        }), (0, Ju.jsxs)("div", {
+          ref: qu("act", lu),
           className: "BoardActions",
-          children: [!Ot.loadoutPerkOwned && (0, ht.jsxs)("div", {
+          children: [!su.loadoutPerkOwned && (0, Ju.jsxs)("div", {
             className: "LoadoutBuy",
-            children: [(0, ht.jsx)(Se, {
-              cost: Ot.loadoutPerkCost,
-              loadout: Dt
-            }), (0, ht.jsx)(ft.m, {
-              disabled: !Ve(Dt, Ot.loadoutPerkCost) || et.pending,
+            children: [(0, Ju.jsx)(PE, {
+              cost: su.loadoutPerkCost,
+              loadout: Zu
+            }), (0, Ju.jsx)(Ou.p, {
+              disabled: !EE(Zu, su.loadoutPerkCost) || Eu.pending,
               onClick: () => {
-                Vt.act("loadoutUnlock", dt)
+                ju.act("loadoutUnlock", lu)
               },
-              children: qt(`${vt}:loadoutUnlock`)
+              children: Uu(`${du}:loadoutUnlock`)
             })]
-          }), Ot.loadoutPerkOwned && !Ot.loadoutPerkEquipped && (0, ht.jsx)(ft.f, {
-            disabled: mt || et.pending,
+          }), su.loadoutPerkOwned && !su.loadoutPerkEquipped && (0, Ju.jsx)(Ou.f, {
+            disabled: Xu || Eu.pending,
             onClick: () => {
-              Vt.act("loadoutEquip", dt)
+              ju.act("loadoutEquip", lu)
             },
-            children: qt(`${vt}:loadoutEquip`)
-          }), Ot.loadoutPerkOwned && !Ot.loadoutPerkEquipped && mt && (0, ht.jsx)("span", {
+            children: Uu(`${du}:loadoutEquip`)
+          }), su.loadoutPerkOwned && !su.loadoutPerkEquipped && Xu && (0, Ju.jsx)("span", {
             className: "BoardHint",
-            children: qt(`${vt}:loadoutSocketsFullHint`)
-          }), Ot.loadoutPerkEquipped && (0, ht.jsx)(ft.Q, {
-            disabled: et.pending,
+            children: Uu(`${du}:loadoutSocketsFullHint`)
+          }), su.loadoutPerkEquipped && (0, Ju.jsx)(Ou.$, {
+            disabled: Eu.pending,
             onClick: () => {
-              Vt.act("loadoutUnequip", dt)
+              ju.act("loadoutUnequip", lu)
             },
-            children: qt(`${vt}:loadoutUnequip`)
+            children: Uu(`${du}:loadoutUnequip`)
           })]
         })]
       })
     }
 
-    function Le(tt) {
+    function VE(uu) {
       let {
-        icon: et,
-        name: Vt,
-        status: Ot,
-        locked: qt,
-        equipped: Dt
-      } = tt;
+        icon: Eu,
+        name: ju,
+        status: su,
+        locked: Uu,
+        equipped: Zu
+      } = uu;
       const {
-        t: mt
-      } = (0, Qt.H)();
-      return (0, ht.jsxs)(Ft, {
-        icon: (0, ht.jsx)(ct, {
-          itemName: et
+        t: Xu
+      } = (0, bu.A)();
+      return (0, Ju.jsxs)(ru, {
+        icon: (0, Ju.jsx)(ou, {
+          itemName: Eu
         }),
-        name: Vt,
-        children: [null !== Ot && (0, ht.jsx)("span", {
-          className: Ht()("LoadoutStatusText", {
-            Locked: qt
+        name: ju,
+        children: [null !== su && (0, Ju.jsx)("span", {
+          className: fu()("LoadoutStatusText", {
+            Locked: Uu
           }),
-          children: Ot
-        }), Dt && (0, ht.jsx)("span", {
+          children: su
+        }), Zu && (0, Ju.jsx)("span", {
           className: "BoardBadge",
-          children: mt(`${vt}:loadoutEquippedBadge`)
+          children: Xu(`${du}:loadoutEquippedBadge`)
         })]
       })
     }
 
-    function Fe(tt) {
+    function rE(uu) {
       let {
-        view: et,
-        controller: Vt
-      } = tt;
-      const Ot = et.loadout;
-      if ("loadoutPerks" === et.slot) {
-        const tt = Ot.loadoutPerks.find((tt => tt.loadoutPerkId === et.selectedId));
-        return (0, ht.jsx)("section", {
+        view: Eu,
+        controller: ju
+      } = uu;
+      const su = Eu.loadout;
+      if ("loadoutPerks" === Eu.slot) {
+        const uu = su.loadoutPerks.find((uu => uu.loadoutPerkId === Eu.selectedId));
+        return (0, Ju.jsx)("section", {
           className: "BoardDetail",
-          children: tt && (0, ht.jsx)(Ze, {
-            view: et,
-            controller: Vt,
-            perk: tt
+          children: uu && (0, Ju.jsx)(KE, {
+            view: Eu,
+            controller: ju,
+            perk: uu
           })
         })
       }
-      const qt = qe(Ot, et.slot),
-        Dt = qt.loadoutSlotOptions.find((tt => tt.loadoutOptionId === et.selectedId));
-      return (0, ht.jsx)("section", {
+      const Uu = sE(su, Eu.slot),
+        Zu = Uu.loadoutSlotOptions.find((uu => uu.loadoutOptionId === Eu.selectedId));
+      return (0, Ju.jsx)("section", {
         className: "BoardDetail",
-        children: Dt && (0, ht.jsx)(Pe, {
-          view: et,
-          controller: Vt,
-          slot: qt,
-          option: Dt
+        children: Zu && (0, Ju.jsx)(vE, {
+          view: Eu,
+          controller: ju,
+          slot: Uu,
+          option: Zu
         })
       })
     }
 
-    function ke(tt) {
+    function QE(uu) {
       let {
-        owned: et,
-        total: Vt
-      } = tt;
-      return Vt <= 1 ? null : (0, ht.jsx)("span", {
+        owned: Eu,
+        total: ju
+      } = uu;
+      return ju <= 1 ? null : (0, Ju.jsx)("span", {
         className: "LoadoutPips",
         children: Array.from({
-          length: Vt
-        }, ((tt, Vt) => (0, ht.jsx)("span", {
-          className: Ht()("LoadoutPip", {
-            Filled: Vt < et
+          length: ju
+        }, ((uu, ju) => (0, Ju.jsx)("span", {
+          className: fu()("LoadoutPip", {
+            Filled: ju < Eu
           })
-        }, Vt)))
+        }, ju)))
       })
     }
 
-    function Ge(tt) {
+    function iE(uu) {
       let {
-        view: et,
-        controller: Vt
-      } = tt;
+        view: Eu,
+        controller: ju
+      } = uu;
       const {
-        t: Ot
-      } = (0, Qt.H)(), qt = et.loadout, Dt = Ce();
-      return (0, ht.jsxs)("nav", {
+        t: su
+      } = (0, bu.A)(), Uu = Eu.loadout, Zu = GE();
+      return (0, Ju.jsxs)("nav", {
         className: "LoadoutKit",
-        "aria-label": Ot(`${vt}:loadoutKit`),
-        children: [qt.loadoutSlots.map((tt => {
-          const qt = tt.loadoutSlotOptions.find((et => et.loadoutOptionId === tt.loadoutSlotEquippedId));
-          return (0, ht.jsxs)("button", {
-            ref: Dt("section", tt.loadoutSlotKind),
+        "aria-label": su(`${du}:loadoutKit`),
+        children: [Uu.loadoutSlots.map((uu => {
+          const Uu = uu.loadoutSlotOptions.find((Eu => Eu.loadoutOptionId === uu.loadoutSlotEquippedId));
+          return (0, Ju.jsxs)("button", {
+            ref: Zu("section", uu.loadoutSlotKind),
             type: "button",
-            className: Ht()("LoadoutKitSlot", {
-              Selected: et.slot === tt.loadoutSlotKind
+            className: fu()("LoadoutKitSlot", {
+              Selected: Eu.slot === uu.loadoutSlotKind
             }),
             onClick: () => {
-              Vt.selectSlot(tt.loadoutSlotKind)
+              ju.selectSlot(uu.loadoutSlotKind)
             },
-            children: [(0, ht.jsx)("span", {
+            children: [(0, Ju.jsx)("span", {
               className: "LoadoutKitIcon",
-              children: qt && (0, ht.jsx)(ct, {
-                itemName: qt.loadoutOptionIcon
+              children: Uu && (0, Ju.jsx)(ou, {
+                itemName: Uu.loadoutOptionIcon
               })
-            }), (0, ht.jsxs)("span", {
+            }), (0, Ju.jsxs)("span", {
               className: "LoadoutKitText",
-              children: [(0, ht.jsxs)("span", {
+              children: [(0, Ju.jsxs)("span", {
                 className: "LoadoutKitTop",
-                children: [(0, ht.jsx)("span", {
+                children: [(0, Ju.jsx)("span", {
                   className: "LoadoutKitLabel",
-                  children: Ot(Me[tt.loadoutSlotKind])
-                }), qt && (0, ht.jsx)(ke, {
-                  owned: qt.loadoutOptionOwnedTier,
-                  total: qt.loadoutOptionTiers.length
+                  children: su(gE[uu.loadoutSlotKind])
+                }), Uu && (0, Ju.jsx)(QE, {
+                  owned: Uu.loadoutOptionOwnedTier,
+                  total: Uu.loadoutOptionTiers.length
                 })]
-              }), (0, ht.jsx)("span", {
+              }), (0, Ju.jsx)("span", {
                 className: "LoadoutKitName",
-                children: null === qt || void 0 === qt ? void 0 : qt.loadoutOptionName
+                children: null === Uu || void 0 === Uu ? void 0 : Uu.loadoutOptionName
               })]
             })]
-          }, tt.loadoutSlotKind)
-        })), (0, ht.jsx)(ze, {
-          view: et,
-          controller: Vt
+          }, uu.loadoutSlotKind)
+        })), (0, Ju.jsx)(WE, {
+          view: Eu,
+          controller: ju
         })]
       })
     }
 
-    function ze(tt) {
+    function WE(uu) {
       let {
-        view: et,
-        controller: Vt
-      } = tt;
+        view: Eu,
+        controller: ju
+      } = uu;
       const {
-        t: Ot
-      } = (0, Qt.H)(), qt = et.loadout, Dt = qt.loadoutPerks.filter((tt => tt.loadoutPerkEquipped)), mt = Ce();
-      return (0, ht.jsxs)("button", {
-        ref: mt("section", "loadoutPerks"),
+        t: su
+      } = (0, bu.A)(), Uu = Eu.loadout, Zu = Uu.loadoutPerks.filter((uu => uu.loadoutPerkEquipped)), Xu = GE();
+      return (0, Ju.jsxs)("button", {
+        ref: Xu("section", "loadoutPerks"),
         type: "button",
-        className: Ht()("LoadoutKitSlot", "LoadoutPerks", {
-          Selected: "loadoutPerks" === et.slot
+        className: fu()("LoadoutKitSlot", "LoadoutPerks", {
+          Selected: "loadoutPerks" === Eu.slot
         }),
         onClick: () => {
-          Vt.selectSlot("loadoutPerks")
+          ju.selectSlot("loadoutPerks")
         },
-        children: [(0, ht.jsxs)("span", {
+        children: [(0, Ju.jsxs)("span", {
           className: "LoadoutKitTop",
-          children: [(0, ht.jsx)("span", {
+          children: [(0, Ju.jsx)("span", {
             className: "LoadoutKitLabel",
-            children: Ot(Me.loadoutPerks)
-          }), (0, ht.jsx)("span", {
+            children: su(gE.loadoutPerks)
+          }), (0, Ju.jsx)("span", {
             className: "LoadoutPerkCount",
-            children: Ot(`${vt}:loadoutPerkCount`, {
-              equipped: String(Dt.length),
-              max: String(qt.loadoutMaxPerks)
+            children: su(`${du}:loadoutPerkCount`, {
+              equipped: String(Zu.length),
+              max: String(Uu.loadoutMaxPerks)
             })
           })]
-        }), (0, ht.jsx)("span", {
+        }), (0, Ju.jsx)("span", {
           className: "LoadoutSockets",
           children: Array.from({
-            length: qt.loadoutMaxPerks
-          }, ((tt, et) => {
-            const Vt = Dt[et];
-            return (0, ht.jsxs)("span", {
-              className: Ht()("LoadoutSocket", {
-                Filled: Vt,
-                Empty: !Vt
+            length: Uu.loadoutMaxPerks
+          }, ((uu, Eu) => {
+            const ju = Zu[Eu];
+            return (0, Ju.jsxs)("span", {
+              className: fu()("LoadoutSocket", {
+                Filled: ju,
+                Empty: !ju
               }),
-              children: [(0, ht.jsx)("span", {
+              children: [(0, Ju.jsx)("span", {
                 className: "LoadoutSocketWell",
-                children: Vt && (0, ht.jsx)(ct, {
-                  itemName: Vt.loadoutPerkIcon
+                children: ju && (0, Ju.jsx)(ou, {
+                  itemName: ju.loadoutPerkIcon
                 })
-              }), (0, ht.jsx)("span", {
+              }), (0, Ju.jsx)("span", {
                 className: "LoadoutSocketName",
-                children: Vt ? Vt.loadoutPerkName : Ot(`${vt}:loadoutPerkSocketEmpty`)
+                children: ju ? ju.loadoutPerkName : su(`${du}:loadoutPerkSocketEmpty`)
               })]
-            }, et)
+            }, Eu)
           }))
         })]
       })
     }
 
-    function oe(tt) {
+    function SE(uu) {
       let {
-        icon: et,
-        name: Vt,
-        selected: Ot,
-        equipped: qt,
-        locked: Dt,
-        ownedTier: mt,
-        tiers: dt,
-        buttonRef: jt,
-        onSelect: Ht
-      } = tt;
+        icon: Eu,
+        name: ju,
+        selected: su,
+        equipped: Uu,
+        locked: Zu,
+        ownedTier: Xu,
+        tiers: lu,
+        buttonRef: qu,
+        onSelect: fu
+      } = uu;
       const {
-        t: Xt
-      } = (0, Qt.H)();
-      return (0, ht.jsxs)(Lt, {
-        icon: (0, ht.jsx)(ct, {
-          itemName: et
+        t: Cu
+      } = (0, bu.A)();
+      return (0, Ju.jsxs)(Vu, {
+        icon: (0, Ju.jsx)(ou, {
+          itemName: Eu
         }),
-        name: Vt,
-        selected: Ot,
-        locked: Dt,
-        buttonRef: jt,
-        onSelect: Ht,
-        children: [qt && (0, ht.jsx)("span", {
+        name: ju,
+        selected: su,
+        locked: Zu,
+        buttonRef: qu,
+        onSelect: fu,
+        children: [Uu && (0, Ju.jsx)("span", {
           className: "BoardBadge",
-          children: Xt(`${vt}:loadoutEquippedBadge`)
-        }), Dt && (0, ht.jsx)("span", {
+          children: Cu(`${du}:loadoutEquippedBadge`)
+        }), Zu && (0, Ju.jsx)("span", {
           className: "BoardBadge Muted",
-          children: Xt(`${vt}:loadoutLocked`)
-        }), !Dt && (0, ht.jsx)(ke, {
-          owned: mt,
-          total: dt
+          children: Cu(`${du}:loadoutLocked`)
+        }), !Zu && (0, Ju.jsx)(QE, {
+          owned: Xu,
+          total: lu
         })]
       })
     }
 
-    function re(tt) {
+    function IE(uu) {
       let {
-        view: et,
-        controller: Vt
-      } = tt;
-      const Ot = et.loadout,
-        qt = Ce();
-      if ("loadoutPerks" === et.slot) return (0, ht.jsx)("div", {
+        view: Eu,
+        controller: ju
+      } = uu;
+      const su = Eu.loadout,
+        Uu = GE();
+      if ("loadoutPerks" === Eu.slot) return (0, Ju.jsx)("div", {
         className: "BoardTiles",
-        children: Ot.loadoutPerks.map((tt => (0, ht.jsx)(oe, {
-          icon: tt.loadoutPerkIcon,
-          name: tt.loadoutPerkName,
-          selected: et.selectedId === tt.loadoutPerkId,
-          equipped: tt.loadoutPerkEquipped,
-          locked: !tt.loadoutPerkOwned,
+        children: su.loadoutPerks.map((uu => (0, Ju.jsx)(SE, {
+          icon: uu.loadoutPerkIcon,
+          name: uu.loadoutPerkName,
+          selected: Eu.selectedId === uu.loadoutPerkId,
+          equipped: uu.loadoutPerkEquipped,
+          locked: !uu.loadoutPerkOwned,
           ownedTier: 0,
           tiers: 0,
-          buttonRef: qt("il", tt.loadoutPerkId),
+          buttonRef: Uu("Hc", uu.loadoutPerkId),
           onSelect: () => {
-            Vt.select(tt.loadoutPerkId)
+            ju.select(uu.loadoutPerkId)
           }
-        }, tt.loadoutPerkId)))
+        }, uu.loadoutPerkId)))
       });
-      const Dt = qe(Ot, et.slot);
-      return (0, ht.jsx)("div", {
+      const Zu = sE(su, Eu.slot);
+      return (0, Ju.jsx)("div", {
         className: "BoardTiles",
-        children: Dt.loadoutSlotOptions.map((tt => (0, ht.jsx)(oe, {
-          icon: tt.loadoutOptionIcon,
-          name: tt.loadoutOptionName,
-          selected: et.selectedId === tt.loadoutOptionId,
-          equipped: Dt.loadoutSlotEquippedId === tt.loadoutOptionId,
-          locked: 0 === tt.loadoutOptionOwnedTier,
-          ownedTier: tt.loadoutOptionOwnedTier,
-          tiers: tt.loadoutOptionTiers.length,
-          buttonRef: qt("il", tt.loadoutOptionId),
+        children: Zu.loadoutSlotOptions.map((uu => (0, Ju.jsx)(SE, {
+          icon: uu.loadoutOptionIcon,
+          name: uu.loadoutOptionName,
+          selected: Eu.selectedId === uu.loadoutOptionId,
+          equipped: Zu.loadoutSlotEquippedId === uu.loadoutOptionId,
+          locked: 0 === uu.loadoutOptionOwnedTier,
+          ownedTier: uu.loadoutOptionOwnedTier,
+          tiers: uu.loadoutOptionTiers.length,
+          buttonRef: Uu("Hc", uu.loadoutOptionId),
           onSelect: () => {
-            Vt.select(tt.loadoutOptionId)
+            ju.select(uu.loadoutOptionId)
           }
-        }, tt.loadoutOptionId)))
+        }, uu.loadoutOptionId)))
       })
     }
 
-    function Ue(tt) {
+    function FE(uu) {
       let {
-        loadout: et
-      } = tt;
-      return (0, ht.jsx)(kt, {
-        coins: et.loadoutCoins,
-        children: et.loadoutHeldParts.filter((tt => tt.loadoutHeldPartAmount > 0)).map((tt => (0, ht.jsx)(It, {
-          itemName: tt.loadoutHeldPartItem,
-          amount: tt.loadoutHeldPartAmount
-        }, tt.loadoutHeldPartCurrency)))
+        loadout: Eu
+      } = uu;
+      return (0, Ju.jsx)(Qu, {
+        coins: Eu.loadoutCoins,
+        children: Eu.loadoutHeldParts.filter((uu => uu.loadoutHeldPartAmount > 0)).map((uu => (0, Ju.jsx)(mu, {
+          itemName: uu.loadoutHeldPartItem,
+          amount: uu.loadoutHeldPartAmount
+        }, uu.loadoutHeldPartCurrency)))
       })
     }
 
-    function Ae(tt) {
+    function BE(uu) {
       let {
-        controller: et
-      } = tt;
-      const Vt = (0, Xt.h)(Ee, et.getSnapshot()),
+        controller: Eu
+      } = uu;
+      const ju = (0, Cu.g)(cE, Eu.getSnapshot()),
         {
-          t: Ot
-        } = (0, Qt.H)();
-      if (null === Vt.loadout) return null;
-      const qt = Vt.notice;
-      return (0, ht.jsx)(he, {
-        view: Vt,
-        onDismiss: et.dismiss,
-        children: (0, ht.jsxs)(St, {
-          open: Vt.open,
-          onDismiss: et.dismiss,
-          title: Ot(`${vt}:loadoutTitle`),
+          t: su
+        } = (0, bu.A)();
+      if (null === ju.loadout) return null;
+      const Uu = ju.notice;
+      return (0, Ju.jsx)(JE, {
+        view: ju,
+        onDismiss: Eu.dismiss,
+        children: (0, Ju.jsxs)(Pu, {
+          open: ju.open,
+          onDismiss: Eu.dismiss,
+          title: su(`${du}:loadoutTitle`),
           className: "ContainmentLoadoutPanel",
-          headerExtra: (0, ht.jsx)(Ue, {
-            loadout: Vt.loadout
+          headerExtra: (0, Ju.jsx)(FE, {
+            loadout: ju.loadout
           }),
-          statusRefused: null === qt || void 0 === qt ? void 0 : qt.loadoutNoticeRefused,
-          status: (0, ht.jsxs)(ht.Fragment, {
-            children: [(0, ht.jsx)("span", {
+          statusRefused: null === Uu || void 0 === Uu ? void 0 : Uu.loadoutNoticeRefused,
+          status: (0, Ju.jsxs)(Ju.Fragment, {
+            children: [(0, Ju.jsx)("span", {
               className: "LoadoutRadioBadge",
-              children: Ot(`${vt}:loadoutRadioBadge`)
-            }), null !== qt && Ot(`${vt}:${qt.loadoutNoticeKey}`, {
-              name: qt.loadoutNoticeName,
-              tier: (0, te.Y)(qt.loadoutNoticeTier),
-              max: String(Vt.loadout.loadoutMaxPerks)
+              children: su(`${du}:loadoutRadioBadge`)
+            }), null !== Uu && su(`${du}:${Uu.loadoutNoticeKey}`, {
+              name: Uu.loadoutNoticeName,
+              tier: (0, Ru.N)(Uu.loadoutNoticeTier),
+              max: String(ju.loadout.loadoutMaxPerks)
             })]
           }),
-          children: [(0, ht.jsx)(Ge, {
-            view: Vt,
-            controller: et
-          }), (0, ht.jsx)(re, {
-            view: Vt,
-            controller: et
-          }), (0, ht.jsx)(Fe, {
-            view: Vt,
-            controller: et
+          children: [(0, Ju.jsx)(iE, {
+            view: ju,
+            controller: Eu
+          }), (0, Ju.jsx)(IE, {
+            view: ju,
+            controller: Eu
+          }), (0, Ju.jsx)(rE, {
+            view: ju,
+            controller: Eu
           })]
         })
       })
     }
 
-    function ie(tt, et, Vt) {
-      const Ot = tt.locatorEntries.find((tt => tt.locatorEntryId === Vt));
-      if (!Ot) return null;
-      const qt = Ot.locatorEntryName;
-      if ("locatorDisarm" === et) return Ot.locatorEntryArmed ? {
-        board: Ye(tt, null),
-        notice: Be("locatorNoticeDisarmed", qt)
+    function LE(uu, Eu, ju) {
+      const su = uu.locatorEntries.find((uu => uu.locatorEntryId === ju));
+      if (!su) return null;
+      const Uu = su.locatorEntryName;
+      if ("locatorDisarm" === Eu) return su.locatorEntryArmed ? {
+        board: tE(uu, null),
+        notice: xE("locatorNoticeDisarmed", Uu)
       } : null;
-      if ("locatorArm" === et) return Ot.locatorEntryOwned && !Ot.locatorEntryArmed ? {
-        board: Ye(tt, Vt),
-        notice: Be("locatorNoticeArmed", qt)
+      if ("locatorArm" === Eu) return su.locatorEntryOwned && !su.locatorEntryArmed ? {
+        board: tE(uu, ju),
+        notice: xE("locatorNoticeArmed", Uu)
       } : null;
-      if (Ot.locatorEntryOwned || tt.locatorCoins < Ot.locatorEntryPrice) return null;
-      const Dt = Ye({
-        ...tt,
-        locatorCoins: tt.locatorCoins - Ot.locatorEntryPrice
-      }, Vt);
+      if (su.locatorEntryOwned || uu.locatorCoins < su.locatorEntryPrice) return null;
+      const Zu = tE({
+        ...uu,
+        locatorCoins: uu.locatorCoins - su.locatorEntryPrice
+      }, ju);
       return {
         board: {
-          ...Dt,
-          locatorEntries: Dt.locatorEntries.map((tt => tt.locatorEntryId === Vt ? {
-            ...tt,
+          ...Zu,
+          locatorEntries: Zu.locatorEntries.map((uu => uu.locatorEntryId === ju ? {
+            ...uu,
             locatorEntryOwned: !0
-          } : tt))
+          } : uu))
         },
-        notice: Be("locatorNoticeBought", qt)
+        notice: xE("locatorNoticeBought", Uu)
       }
     }
 
-    function Ye(tt, et) {
+    function tE(uu, Eu) {
       return {
-        ...tt,
-        locatorEntries: tt.locatorEntries.map((tt => {
-          const Vt = tt.locatorEntryId === et;
-          return tt.locatorEntryArmed === Vt ? tt : {
-            ...tt,
-            locatorEntryArmed: Vt
+        ...uu,
+        locatorEntries: uu.locatorEntries.map((uu => {
+          const ju = uu.locatorEntryId === Eu;
+          return uu.locatorEntryArmed === ju ? uu : {
+            ...uu,
+            locatorEntryArmed: ju
           }
         }))
       }
     }
 
-    function Be(tt, et) {
+    function xE(uu, Eu) {
       return {
-        locatorNoticeKey: tt,
+        locatorNoticeKey: uu,
         locatorNoticeRefused: !1,
-        locatorNoticeName: et
+        locatorNoticeName: Eu
       }
     }
-    const pe = "containmentLocatorView";
-    class xe extends ee {
-      constructor(tt, et, Vt, Ot) {
-        super(tt, et, Vt, Ot, "locator", ie), this.snapshot = this.buildSnapshot()
+    const TE = "containmentLocatorView";
+    class HE extends uE {
+      constructor(uu, Eu, ju, su) {
+        super(uu, Eu, ju, su, "locator", LE), this.snapshot = this.buildSnapshot()
       }
-      messageOpens(tt) {
-        return tt.locatorMessageOpens
+      messageOpens(uu) {
+        return uu.locatorMessageOpens
       }
-      messageNotice(tt) {
-        return tt.locatorNotice
+      messageNotice(uu) {
+        return uu.locatorNotice
       }
-      openingSelection(tt) {
-        var et;
-        const Vt = tt.locatorEntries;
-        return (null !== (et = Vt.find((tt => tt.locatorEntryArmed))) && void 0 !== et ? et : Vt[0]).locatorEntryId
+      openingSelection(uu) {
+        var Eu;
+        const ju = uu.locatorEntries;
+        return (null !== (Eu = ju.find((uu => uu.locatorEntryArmed))) && void 0 !== Eu ? Eu : ju[0]).locatorEntryId
       }
       buildSnapshot() {
         return {
@@ -1606,245 +1606,245 @@ export const modules = {
         }
       }
     }
-    const Te = {
-        locatorContained: `${vt}:locatorFlavourContained`,
-        locatorEncountered: `${vt}:locatorFlavourEncountered`,
-        locatorUnseen: `${vt}:locatorFlavourUnseen`
+    const AE = {
+        locatorContained: `${du}:locatorFlavourContained`,
+        locatorEncountered: `${du}:locatorFlavourEncountered`,
+        locatorUnseen: `${du}:locatorFlavourUnseen`
       },
-      ge = {
+      nE = {
         codexAnyDifficulty: null,
-        codexNormalOnly: `${vt}:locatorAttunedNormal`,
-        codexHardOnly: `${vt}:locatorAttunedHard`
+        codexNormalOnly: `${du}:locatorAttunedNormal`,
+        codexHardOnly: `${du}:locatorAttunedHard`
       };
 
-    function se() {
-      return (0, ht.jsx)(ht.Fragment, {
+    function yE() {
+      return (0, Ju.jsx)(Ju.Fragment, {
         children: Array.from({
           length: 5
-        }, ((tt, et) => (0, ht.jsx)("span", {
+        }, ((uu, Eu) => (0, Ju.jsx)("span", {
           className: "LocatorFly",
-          children: (0, ht.jsx)("img", {
+          children: (0, Ju.jsx)("img", {
             src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAICAYAAADwdn+XAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAYElEQVR4nGNgoBboMlb5LyUjD8YgNtHyJ6/d+Q/CILa1lz9YAbo4DCDLYxjQv3gt3AYQG90AdHkUQ/qhkjAb0BURkgcDmAQMo7sSXR7deyiGoIvDvIOsGasB+ACyBmTNACS0go3ibhumAAAAAElFTkSuQmCC",
             alt: "",
             draggable: !1
           })
-        }, et)))
+        }, Eu)))
       })
     }
 
-    function ne(tt) {
+    function zE(uu) {
       let {
-        entry: et
-      } = tt;
+        entry: Eu
+      } = uu;
       const {
-        t: Vt
-      } = (0, Qt.H)();
-      return et.locatorEntryArmed ? (0, ht.jsx)("span", {
+        t: ju
+      } = (0, bu.A)();
+      return Eu.locatorEntryArmed ? (0, Ju.jsx)("span", {
         className: "BoardBadge Armed",
-        children: Vt(`${vt}:locatorArmedBadge`)
-      }) : et.locatorEntryOwned ? (0, ht.jsx)("span", {
+        children: ju(`${du}:locatorArmedBadge`)
+      }) : Eu.locatorEntryOwned ? (0, Ju.jsx)("span", {
         className: "BoardBadge",
-        children: Vt(`${vt}:locatorOwnedBadge`)
+        children: ju(`${du}:locatorOwnedBadge`)
       }) : null
     }
 
-    function tV(tt) {
+    function RE(uu) {
       let {
-        entry: et,
-        coins: Vt,
-        inTile: Ot = !1
-      } = tt;
-      return (0, ht.jsx)(It, {
-        itemName: Wt,
-        amount: et.locatorEntryPrice,
-        Pd: Vt,
-        inTile: Ot
+        entry: Eu,
+        coins: ju,
+        inTile: su = !1
+      } = uu;
+      return (0, Ju.jsx)(mu, {
+        itemName: au,
+        amount: Eu.locatorEntryPrice,
+        dl: ju,
+        inTile: su
       })
     }
 
-    function eV(tt) {
+    function uj(uu) {
       let {
-        view: et,
-        controller: Vt,
-        entry: Ot
-      } = tt;
+        view: Eu,
+        controller: ju,
+        entry: su
+      } = uu;
       const {
-        t: qt
-      } = (0, Qt.H)(), Dt = Ot.locatorEntryId, mt = et.locators.locatorEntries.find((tt => tt.locatorEntryArmed && tt !== Ot));
-      return (0, ht.jsxs)("div", {
+        t: Uu
+      } = (0, bu.A)(), Zu = su.locatorEntryId, Xu = Eu.locators.locatorEntries.find((uu => uu.locatorEntryArmed && uu !== su));
+      return (0, Ju.jsxs)("div", {
         className: "BoardActions",
-        children: [Ot.locatorEntryArmed && (0, ht.jsx)(ft.Q, {
-          disabled: et.pending,
+        children: [su.locatorEntryArmed && (0, Ju.jsx)(Ou.$, {
+          disabled: Eu.pending,
           onClick: () => {
-            Vt.act("locatorDisarm", Dt)
+            ju.act("locatorDisarm", Zu)
           },
-          children: qt(`${vt}:locatorDisarm`)
-        }), Ot.locatorEntryOwned && !Ot.locatorEntryArmed && (0, ht.jsx)(ft.f, {
-          disabled: et.pending,
+          children: Uu(`${du}:locatorDisarm`)
+        }), su.locatorEntryOwned && !su.locatorEntryArmed && (0, Ju.jsx)(Ou.f, {
+          disabled: Eu.pending,
           onClick: () => {
-            Vt.act("locatorArm", Dt)
+            ju.act("locatorArm", Zu)
           },
-          children: qt(`${vt}:locatorArm`)
-        }), !Ot.locatorEntryOwned && (0, ht.jsxs)("div", {
+          children: Uu(`${du}:locatorArm`)
+        }), !su.locatorEntryOwned && (0, Ju.jsxs)("div", {
           className: "LocatorBuy",
-          children: [(0, ht.jsx)(tV, {
-            entry: Ot,
-            coins: et.locators.locatorCoins
-          }), (0, ht.jsx)(ft.m, {
-            disabled: et.locators.locatorCoins < Ot.locatorEntryPrice || et.pending,
+          children: [(0, Ju.jsx)(RE, {
+            entry: su,
+            coins: Eu.locators.locatorCoins
+          }), (0, Ju.jsx)(Ou.p, {
+            disabled: Eu.locators.locatorCoins < su.locatorEntryPrice || Eu.pending,
             onClick: () => {
-              Vt.act("locatorBuy", Dt)
+              ju.act("locatorBuy", Zu)
             },
-            children: qt(`${vt}:locatorBuy`)
+            children: Uu(`${du}:locatorBuy`)
           })]
-        }), mt && !Ot.locatorEntryArmed && (0, ht.jsx)("span", {
+        }), Xu && !su.locatorEntryArmed && (0, Ju.jsx)("span", {
           className: "BoardHint",
-          children: qt(`${vt}:locatorReplacesHint`, {
-            name: mt.locatorEntryName
+          children: Uu(`${du}:locatorReplacesHint`, {
+            name: Xu.locatorEntryName
           })
         })]
       })
     }
 
-    function VV(tt) {
+    function Ej(uu) {
       let {
-        entry: et
-      } = tt;
-      return "locatorUnseen" === et.locatorEntryStanding ? (0, ht.jsx)(ct, {
+        entry: Eu
+      } = uu;
+      return "locatorUnseen" === Eu.locatorEntryStanding ? (0, Ju.jsx)(ou, {
         itemName: "Compass"
-      }) : (0, ht.jsx)(Rt, {
-        anomalyId: et.locatorEntryId,
-        caught: "locatorContained" === et.locatorEntryStanding
+      }) : (0, Ju.jsx)(ku, {
+        anomalyId: Eu.locatorEntryId,
+        caught: "locatorContained" === Eu.locatorEntryStanding
       })
     }
 
-    function OV(tt) {
+    function jj(uu) {
       let {
-        view: et,
-        controller: Vt,
-        entry: Ot
-      } = tt;
+        view: Eu,
+        controller: ju,
+        entry: su
+      } = uu;
       const {
-        t: qt
-      } = (0, Qt.H)(), Dt = ge[Ot.locatorEntryDifficulty];
-      return (0, ht.jsxs)("section", {
+        t: Uu
+      } = (0, bu.A)(), Zu = nE[su.locatorEntryDifficulty];
+      return (0, Ju.jsxs)("section", {
         className: "BoardDetail",
-        children: [(0, ht.jsxs)("div", {
-          className: Ht()("LocatorLabel", {
-            Armed: Ot.locatorEntryArmed
+        children: [(0, Ju.jsxs)("div", {
+          className: fu()("LocatorLabel", {
+            Armed: su.locatorEntryArmed
           }),
-          children: [(0, ht.jsx)(Ft, {
-            icon: (0, ht.jsx)(VV, {
-              entry: Ot
+          children: [(0, Ju.jsx)(ru, {
+            icon: (0, Ju.jsx)(Ej, {
+              entry: su
             }),
-            name: qt(`${vt}:locatorName`, {
-              name: Ot.locatorEntryName
+            name: Uu(`${du}:locatorName`, {
+              name: su.locatorEntryName
             }),
-            children: (0, ht.jsx)(ne, {
-              entry: Ot
+            children: (0, Ju.jsx)(zE, {
+              entry: su
             })
-          }), (0, ht.jsx)("p", {
+          }), (0, Ju.jsx)("p", {
             className: "BoardDescription",
-            children: qt(Ot.locatorEntryArmed ? `${vt}:locatorFlavourArmed` : Te[Ot.locatorEntryStanding])
-          }), null !== Dt && (0, ht.jsx)("p", {
+            children: Uu(su.locatorEntryArmed ? `${du}:locatorFlavourArmed` : AE[su.locatorEntryStanding])
+          }), null !== Zu && (0, Ju.jsx)("p", {
             className: "LocatorAttuned",
-            children: qt(Dt)
-          }), (0, ht.jsx)("p", {
+            children: Uu(Zu)
+          }), (0, Ju.jsx)("p", {
             className: "BoardDescription LocatorUsage",
-            children: qt(`${vt}:locatorUsage`)
+            children: Uu(`${du}:locatorUsage`)
           })]
-        }), (0, ht.jsx)(eV, {
-          view: et,
-          controller: Vt,
-          entry: Ot
+        }), (0, Ju.jsx)(uj, {
+          view: Eu,
+          controller: ju,
+          entry: su
         })]
       })
     }
 
-    function qV(tt) {
+    function sj(uu) {
       let {
-        controller: et
-      } = tt;
-      const Vt = (0, Xt.h)(pe, et.getSnapshot()),
+        controller: Eu
+      } = uu;
+      const ju = (0, Cu.g)(TE, Eu.getSnapshot()),
         {
-          t: Ot
-        } = (0, Qt.H)(),
-        qt = Vt.locators;
-      if (null === qt) return null;
-      const Dt = qt.locatorEntries.find((tt => tt.locatorEntryId === Vt.selectedId)),
-        mt = Vt.notice;
-      return (0, ht.jsxs)(St, {
-        open: Vt.open,
-        onDismiss: et.dismiss,
-        title: Ot(`${vt}:locatorTitle`),
+          t: su
+        } = (0, bu.A)(),
+        Uu = ju.locators;
+      if (null === Uu) return null;
+      const Zu = Uu.locatorEntries.find((uu => uu.locatorEntryId === ju.selectedId)),
+        Xu = ju.notice;
+      return (0, Ju.jsxs)(Pu, {
+        open: ju.open,
+        onDismiss: Eu.dismiss,
+        title: su(`${du}:locatorTitle`),
         className: "ContainmentLocatorPanel",
-        decor: (0, ht.jsx)(se, {}),
-        headerExtra: (0, ht.jsx)(kt, {
-          coins: qt.locatorCoins
+        decor: (0, Ju.jsx)(yE, {}),
+        headerExtra: (0, Ju.jsx)(Qu, {
+          coins: Uu.locatorCoins
         }),
-        statusRefused: null === mt || void 0 === mt ? void 0 : mt.locatorNoticeRefused,
-        status: (0, ht.jsxs)(ht.Fragment, {
-          children: [(0, ht.jsx)("span", {
+        statusRefused: null === Xu || void 0 === Xu ? void 0 : Xu.locatorNoticeRefused,
+        status: (0, Ju.jsxs)(Ju.Fragment, {
+          children: [(0, Ju.jsx)("span", {
             className: "LocatorKeeperBadge",
-            children: Ot(`${vt}:locatorKeeperName`)
-          }), null !== mt && Ot(`${vt}:${mt.locatorNoticeKey}`, {
-            name: mt.locatorNoticeName
+            children: su(`${du}:locatorKeeperName`)
+          }), null !== Xu && su(`${du}:${Xu.locatorNoticeKey}`, {
+            name: Xu.locatorNoticeName
           })]
         }),
-        children: [(0, ht.jsx)("div", {
+        children: [(0, Ju.jsx)("div", {
           className: "BoardTiles",
-          children: qt.locatorEntries.map((tt => (0, ht.jsxs)(Lt, {
-            icon: (0, ht.jsx)(VV, {
-              entry: tt
+          children: Uu.locatorEntries.map((uu => (0, Ju.jsxs)(Vu, {
+            icon: (0, Ju.jsx)(Ej, {
+              entry: uu
             }),
-            name: tt.locatorEntryName,
-            selected: tt === Dt,
+            name: uu.locatorEntryName,
+            selected: uu === Zu,
             locked: !1,
-            className: Ht()("LocatorTag", {
-              Armed: tt.locatorEntryArmed
+            className: fu()("LocatorTag", {
+              Armed: uu.locatorEntryArmed
             }),
             onSelect: () => {
-              et.select(tt.locatorEntryId)
+              Eu.select(uu.locatorEntryId)
             },
-            children: [(0, ht.jsx)(ne, {
-              entry: tt
-            }), !tt.locatorEntryOwned && (0, ht.jsx)(tV, {
-              entry: tt,
-              coins: qt.locatorCoins,
+            children: [(0, Ju.jsx)(zE, {
+              entry: uu
+            }), !uu.locatorEntryOwned && (0, Ju.jsx)(RE, {
+              entry: uu,
+              coins: Uu.locatorCoins,
               inTile: !0
             })]
-          }, tt.locatorEntryId)))
-        }), (0, ht.jsx)(OV, {
-          view: Vt,
-          controller: et,
-          entry: Dt
+          }, uu.locatorEntryId)))
+        }), (0, Ju.jsx)(jj, {
+          view: ju,
+          controller: Eu,
+          entry: Zu
         })]
       })
     }
 
-    function DV(tt) {
+    function Uj(uu) {
       let {
-        loadout: et,
-        codex: Vt,
-        locator: Ot
-      } = tt;
-      return (0, ht.jsxs)(ht.Fragment, {
-        children: [(0, ht.jsx)(Ae, {
-          controller: et
-        }), (0, ht.jsx)(nt, {
-          controller: Vt
-        }), (0, ht.jsx)(qV, {
-          controller: Ot
+        loadout: Eu,
+        codex: ju,
+        locator: su
+      } = uu;
+      return (0, Ju.jsxs)(Ju.Fragment, {
+        children: [(0, Ju.jsx)(BE, {
+          controller: Eu
+        }), (0, Ju.jsx)(zu, {
+          controller: ju
+        }), (0, Ju.jsx)(sj, {
+          controller: su
         })]
       })
     }
-    var mV = Vt(38760);
-    class dV {
-      constructor(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
-        this.sendCommand = tt, this.budget = void 0, this.awaitingReply = !1, this.replyTimer = null, this.listeners = new Set, this.budget = new mV.e({
+    var Zj = ju(38882);
+    class Xj {
+      constructor(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
+        this.sendCommand = uu, this.budget = void 0, this.awaitingReply = !1, this.replyTimer = null, this.listeners = new Set, this.budget = new Zj.b({
           spacingMs: 0,
-          now: et
+          now: Eu
         }), this.budget.subscribe((() => {
           this.notify()
         }))
@@ -1852,17 +1852,17 @@ export const modules = {
       isPending() {
         return this.awaitingReply || this.budget.isPacing()
       }
-      send(tt, et) {
+      send(uu, Eu) {
         return !this.isPending() && (this.awaitingReply = !0, this.replyTimer = setTimeout((() => {
-          this.replyTimer = null, this.awaitingReply = !1, et(), this.notify()
-        }), 8e3), this.budget.start(), this.sendCommand(tt), !0)
+          this.replyTimer = null, this.awaitingReply = !1, Eu(), this.notify()
+        }), 8e3), this.budget.start(), this.sendCommand(uu), !0)
       }
       onReply() {
         this.awaitingReply = !1, this.clearReplyTimer()
       }
-      subscribe(tt) {
-        return this.listeners.add(tt), () => {
-          this.listeners.delete(tt)
+      subscribe(uu) {
+        return this.listeners.add(uu), () => {
+          this.listeners.delete(uu)
         }
       }
       dispose() {
@@ -1872,177 +1872,177 @@ export const modules = {
         null !== this.replyTimer && (clearTimeout(this.replyTimer), this.replyTimer = null)
       }
       notify() {
-        for (const tt of this.listeners) tt()
+        for (const uu of this.listeners) uu()
       }
     }
-    var jV = Vt(38758);
-    const HV = new Map([
-      ["npc_general", ye],
-      ["npc_tentacle_guy", jV]
+    var lj = ju(38873);
+    const qj = new Map([
+      ["npc_general", YE],
+      ["npc_tentacle_guy", lj]
     ]);
 
-    function XV(tt) {
-      const et = HV.get(tt);
-      if (void 0 === et) return null;
-      const Vt = document.createElement("img");
-      return Vt.src = et, Vt.alt = "", Vt.draggable = !1, Vt.style.imageRendering = "pixelated", Vt
+    function fj(uu) {
+      const Eu = qj.get(uu);
+      if (void 0 === Eu) return null;
+      const ju = document.createElement("img");
+      return ju.src = Eu, ju.alt = "", ju.draggable = !1, ju.style.imageRendering = "pixelated", ju
     }
-    const QV = function() {
-      let tt, et = !1,
-        Vt = null,
-        jt = null;
-      const Ht = [],
-        Xt = tt => {
-          for (const et of Ht) et !== tt && et.close();
-          (0, dt.m)()
+    const Cj = function() {
+      let uu, Eu = !1,
+        ju = null,
+        qu = null;
+      const fu = [],
+        Cu = uu => {
+          for (const Eu of fu) Eu !== uu && Eu.close();
+          (0, lu.m)()
         },
-        Qt = tt => {
-          tt && (0, dt.g)()
+        bu = uu => {
+          uu && (0, lu.g)()
         },
-        lt = new dV((et => {
-          tt.sendCommand(et)
+        cu = new Xj((Eu => {
+          uu.sendCommand(Eu)
         })),
-        Et = new fe((tt => {
-          mt.j.sw(Ee, tt, !0)
-        }), Xt, Qt, lt),
-        ft = new ot((tt => {
-          mt.j.sw(zt, tt, !0)
-        }), Xt, Qt),
-        wt = new xe((tt => {
-          mt.j.sw(pe, tt, !0)
-        }), Xt, Qt, lt);
-      Ht.push(Et, ft, wt);
+        Nu = new NE((uu => {
+          Xu.h.TY(cE, uu, !0)
+        }), Cu, bu, cu),
+        Ou = new Su((uu => {
+          Xu.h.TY(Wu, uu, !0)
+        }), Cu, bu),
+        Yu = new HE((uu => {
+          Xu.h.TY(TE, uu, !0)
+        }), Cu, bu, cu);
+      fu.push(Nu, Ou, Yu);
       return {
-        onCreate: et => {
-          tt = et, Vt = (0, dt.q)(null, {
-            content: (0, Ot.createElement)(DV, {
-              loadout: Et,
-              codex: ft,
-              locator: wt
+        onCreate: Eu => {
+          uu = Eu, ju = (0, lu.o)(null, {
+            content: (0, su.createElement)(Uj, {
+              loadout: Nu,
+              codex: Ou,
+              locator: Yu
             }),
             onClose: () => {
-              for (const tt of Ht) tt.close()
+              for (const uu of fu) uu.close()
             }
-          }), jt = (0, Dt.e)(XV)
+          }), qu = (0, Zu.e)(fj)
         },
-        onReceivedMessageFromServer: (tt, et) => {
-          "containmentLoadout" === tt ? Et.Qf(et) : "containmentLoadoutClose" === tt ? Et.isOpen() && (Et.close(), (0, dt.c)()) : "containmentCodex" === tt ? ft.Qf(et) : "containmentLocator" === tt && wt.Qf(et)
+        onReceivedMessageFromServer: (uu, Eu) => {
+          "containmentLoadout" === uu ? Nu.NO(Eu) : "containmentLoadoutClose" === uu ? Nu.isOpen() && (Nu.close(), (0, lu.e)()) : "containmentCodex" === uu ? Ou.NO(Eu) : "containmentLocator" === uu && Yu.NO(Eu)
         },
-        BQ: () => {
-          et || qt.b.get("loadingOverlayVisible") || (et = !0, tt.sendCommand("containmentEntered"))
+        Tb: () => {
+          Eu || Uu.d.get("loadingOverlayVisible") || (Eu = !0, uu.sendCommand("containmentEntered"))
         },
         onClose: () => {
-          var tt, et;
-          null === (tt = Vt) || void 0 === tt || tt(), Vt = null, null === (et = jt) || void 0 === et || et(), jt = null;
-          for (const Vt of Ht) Vt.dispose();
-          lt.dispose()
+          var uu, Eu;
+          null === (uu = ju) || void 0 === uu || uu(), ju = null, null === (Eu = qu) || void 0 === Eu || Eu(), qu = null;
+          for (const ju of fu) ju.dispose();
+          cu.dispose()
         }
       }
     }
   },
-  39509: (tt, et, Vt) => {
-    var Ot = {
-      "./breach-zero-uncaught.webp": 39518,
-      "./breach-zero.webp": 39526,
-      "./brood-father-uncaught.webp": 39535,
-      "./brood-father.webp": 39540,
-      "./carousel-uncaught.webp": 39546,
-      "./carousel.webp": 39552,
-      "./deadlock-uncaught.webp": 39559,
-      "./deadlock.webp": 39561,
-      "./frost-revenant-uncaught.webp": 39566,
-      "./frost-revenant.webp": 39571,
-      "./hollow-choir-uncaught.webp": 39580,
-      "./hollow-choir.webp": 39583,
-      "./magma-warden-uncaught.webp": 39587,
-      "./magma-warden.webp": 39594,
-      "./patient-zero-uncaught.webp": 39599,
-      "./patient-zero.webp": 39607,
-      "./siege-engine-uncaught.webp": 39614,
-      "./siege-engine.webp": 39616,
-      "./warp-stalker-uncaught.webp": 39620,
-      "./warp-stalker.webp": 39624
+  39600: (uu, Eu, ju) => {
+    var su = {
+      "./breach-zero-uncaught.webp": 39605,
+      "./breach-zero.webp": 39613,
+      "./brood-father-uncaught.webp": 39618,
+      "./brood-father.webp": 39621,
+      "./carousel-uncaught.webp": 39623,
+      "./carousel.webp": 39631,
+      "./deadlock-uncaught.webp": 39638,
+      "./deadlock.webp": 39643,
+      "./frost-revenant-uncaught.webp": 39650,
+      "./frost-revenant.webp": 39654,
+      "./hollow-choir-uncaught.webp": 39658,
+      "./hollow-choir.webp": 39667,
+      "./magma-warden-uncaught.webp": 39672,
+      "./magma-warden.webp": 39678,
+      "./patient-zero-uncaught.webp": 39685,
+      "./patient-zero.webp": 39688,
+      "./siege-engine-uncaught.webp": 39697,
+      "./siege-engine.webp": 39703,
+      "./warp-stalker-uncaught.webp": 39710,
+      "./warp-stalker.webp": 39714
     };
 
-    function qt(tt) {
-      var et = Dt(tt);
-      return Vt(et)
+    function Uu(uu) {
+      var Eu = Zu(uu);
+      return ju(Eu)
     }
 
-    function Dt(tt) {
-      if (!Vt.o(Ot, tt)) {
-        var et = new Error("Cannot find module '" + tt + "'");
-        throw et.code = "MODULE_NOT_FOUND", et
+    function Zu(uu) {
+      if (!ju.o(su, uu)) {
+        var Eu = new Error("Cannot find module '" + uu + "'");
+        throw Eu.code = "MODULE_NOT_FOUND", Eu
       }
-      return Ot[tt]
+      return su[uu]
     }
-    qt.keys = function() {
-      return Object.keys(Ot)
-    }, qt.resolve = Dt, tt.exports = qt, qt.id = 39509
+    Uu.keys = function() {
+      return Object.keys(su)
+    }, Uu.resolve = Zu, uu.exports = Uu, Uu.id = 39600
   },
-  39518: (tt, et, Vt) => {
-    tt.exports = Vt.p + "static/media/breach-zero-uncaught.c7d4410f99269ac1ee2f.webp"
+  39605: (uu, Eu, ju) => {
+    uu.exports = ju.p + "static/media/breach-zero-uncaught.c7d4410f99269ac1ee2f.webp"
   },
-  39526: (tt, et, Vt) => {
-    tt.exports = Vt.p + "static/media/breach-zero.ef5aacecf502228cd20b.webp"
+  39613: (uu, Eu, ju) => {
+    uu.exports = ju.p + "static/media/breach-zero.ef5aacecf502228cd20b.webp"
   },
-  39535: (tt, et, Vt) => {
-    tt.exports = Vt.p + "static/media/brood-father-uncaught.ee678432c71b7061fae1.webp"
+  39618: (uu, Eu, ju) => {
+    uu.exports = ju.p + "static/media/brood-father-uncaught.ee678432c71b7061fae1.webp"
   },
-  39540: (tt, et, Vt) => {
-    tt.exports = Vt.p + "static/media/brood-father.e48391955a574c1155fa.webp"
+  39621: (uu, Eu, ju) => {
+    uu.exports = ju.p + "static/media/brood-father.e48391955a574c1155fa.webp"
   },
-  39546: (tt, et, Vt) => {
-    tt.exports = Vt.p + "static/media/carousel-uncaught.a92757620f569f31d7d2.webp"
+  39623: (uu, Eu, ju) => {
+    uu.exports = ju.p + "static/media/carousel-uncaught.a92757620f569f31d7d2.webp"
   },
-  39552: (tt, et, Vt) => {
-    tt.exports = Vt.p + "static/media/carousel.5fc13db7958067d6e1a3.webp"
+  39631: (uu, Eu, ju) => {
+    uu.exports = ju.p + "static/media/carousel.5fc13db7958067d6e1a3.webp"
   },
-  39559: (tt, et, Vt) => {
-    tt.exports = Vt.p + "static/media/deadlock-uncaught.feadbdbbf2d040dce5c0.webp"
+  39638: (uu, Eu, ju) => {
+    uu.exports = ju.p + "static/media/deadlock-uncaught.feadbdbbf2d040dce5c0.webp"
   },
-  39561: (tt, et, Vt) => {
-    tt.exports = Vt.p + "static/media/deadlock.2bcaeaa57376fd78ddcb.webp"
+  39643: (uu, Eu, ju) => {
+    uu.exports = ju.p + "static/media/deadlock.2bcaeaa57376fd78ddcb.webp"
   },
-  39566: (tt, et, Vt) => {
-    tt.exports = Vt.p + "static/media/frost-revenant-uncaught.c0271636eeae988b1a40.webp"
+  39650: (uu, Eu, ju) => {
+    uu.exports = ju.p + "static/media/frost-revenant-uncaught.c0271636eeae988b1a40.webp"
   },
-  39571: (tt, et, Vt) => {
-    tt.exports = Vt.p + "static/media/frost-revenant.fed6021646d7f0f81876.webp"
+  39654: (uu, Eu, ju) => {
+    uu.exports = ju.p + "static/media/frost-revenant.fed6021646d7f0f81876.webp"
   },
-  39580: (tt, et, Vt) => {
-    tt.exports = Vt.p + "static/media/hollow-choir-uncaught.7eaab76a15f82bd79558.webp"
+  39658: (uu, Eu, ju) => {
+    uu.exports = ju.p + "static/media/hollow-choir-uncaught.7eaab76a15f82bd79558.webp"
   },
-  39583: (tt, et, Vt) => {
-    tt.exports = Vt.p + "static/media/hollow-choir.05f9c51994aecece852a.webp"
+  39667: (uu, Eu, ju) => {
+    uu.exports = ju.p + "static/media/hollow-choir.05f9c51994aecece852a.webp"
   },
-  39587: (tt, et, Vt) => {
-    tt.exports = Vt.p + "static/media/magma-warden-uncaught.5308736fbb8a503cdfc7.webp"
+  39672: (uu, Eu, ju) => {
+    uu.exports = ju.p + "static/media/magma-warden-uncaught.5308736fbb8a503cdfc7.webp"
   },
-  39594: (tt, et, Vt) => {
-    tt.exports = Vt.p + "static/media/magma-warden.cc4302a49a39ae962a31.webp"
+  39678: (uu, Eu, ju) => {
+    uu.exports = ju.p + "static/media/magma-warden.cc4302a49a39ae962a31.webp"
   },
-  39599: (tt, et, Vt) => {
-    tt.exports = Vt.p + "static/media/patient-zero-uncaught.1f9ec012a14c4dbdcc8f.webp"
+  39685: (uu, Eu, ju) => {
+    uu.exports = ju.p + "static/media/patient-zero-uncaught.1f9ec012a14c4dbdcc8f.webp"
   },
-  39607: (tt, et, Vt) => {
-    tt.exports = Vt.p + "static/media/patient-zero.cc76984bb20e9f9ace76.webp"
+  39688: (uu, Eu, ju) => {
+    uu.exports = ju.p + "static/media/patient-zero.cc76984bb20e9f9ace76.webp"
   },
-  39614: (tt, et, Vt) => {
-    tt.exports = Vt.p + "static/media/siege-engine-uncaught.88e0ad7fec37ba2b4a2e.webp"
+  39697: (uu, Eu, ju) => {
+    uu.exports = ju.p + "static/media/siege-engine-uncaught.88e0ad7fec37ba2b4a2e.webp"
   },
-  39616: (tt, et, Vt) => {
-    tt.exports = Vt.p + "static/media/siege-engine.b2e2382e415f4ae470ac.webp"
+  39703: (uu, Eu, ju) => {
+    uu.exports = ju.p + "static/media/siege-engine.b2e2382e415f4ae470ac.webp"
   },
-  39620: (tt, et, Vt) => {
-    tt.exports = Vt.p + "static/media/warp-stalker-uncaught.c3b1b82ecb18446b71b0.webp"
+  39710: (uu, Eu, ju) => {
+    uu.exports = ju.p + "static/media/warp-stalker-uncaught.c3b1b82ecb18446b71b0.webp"
   },
-  39624: (tt, et, Vt) => {
-    tt.exports = Vt.p + "static/media/warp-stalker.851972c629601b668aa7.webp"
+  39714: (uu, Eu, ju) => {
+    uu.exports = ju.p + "static/media/warp-stalker.851972c629601b668aa7.webp"
   },
-  38758: tt => {
-    tt.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAYElEQVR4nGNgIBIwovH/45JnRFaUGN+Comr+whq4GiZ0RVycnGAMAlAxsC0sMN2fvn9DodEBzEQGdUV5hvNnV4JpGJuPkwtTIQh4umZhZWMonDqjGCsbHcCCBkQjs0kDAPeaHpfX1eroAAAAAElFTkSuQmCC"
+  38873: uu => {
+    uu.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAYElEQVR4nGNgIBIwovH/45JnRFaUGN+Comr+whq4GiZ0RVycnGAMAlAxsC0sMN2fvn9DodEBzEQGdUV5hvNnV4JpGJuPkwtTIQh4umZhZWMonDqjGCsbHcCCBkQjs0kDAPeaHpfX1eroAAAAAElFTkSuQmCC"
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

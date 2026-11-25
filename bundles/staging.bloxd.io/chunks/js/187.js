@@ -1,2445 +1,2445 @@
 export const id = 187;
 export const ids = [187];
 export const modules = {
-  9406: (tt, et) => {
-    et.discordURLBuilder = function(tt) {
-      var et;
-      const Vt = (null === (et = null === window || void 0 === window ? void 0 : window.location) || void 0 === et ? void 0 : et.hostname) || "localhost",
-        Ot = tt.hostname.split("."),
-        qt = !tt.hostname.includes("trycloudflare.com") && !tt.hostname.includes("discordsays.com") && Ot.length > 2 ? `/${Ot[0]}` : "";
-      return tt.pathname.startsWith("/.proxy") ? `${tt.protocol}//${Vt}${qt}${tt.pathname}${tt.search}` : `${tt.protocol}//${Vt}/.proxy/colyseus${qt}${tt.pathname}${tt.search}`
+  9393: (uu, Eu) => {
+    Eu.discordURLBuilder = function(uu) {
+      var Eu;
+      const ju = (null === (Eu = null === window || void 0 === window ? void 0 : window.location) || void 0 === Eu ? void 0 : Eu.hostname) || "localhost",
+        su = uu.hostname.split("."),
+        Uu = !uu.hostname.includes("trycloudflare.com") && !uu.hostname.includes("discordsays.com") && su.length > 2 ? `/${su[0]}` : "";
+      return uu.pathname.startsWith("/.proxy") ? `${uu.protocol}//${ju}${Uu}${uu.pathname}${uu.search}` : `${uu.protocol}//${ju}/.proxy/colyseus${Uu}${uu.pathname}${uu.search}`
     }
   },
-  9393: (tt, et, Vt) => {
-    var Ot, qt, Dt, mt, dt = Vt(9324),
-      jt = Vt(9397),
-      Ht = Vt(9373);
-    Ot = new WeakMap, qt = new WeakMap, Dt = new WeakMap, mt = new WeakMap, et.Auth = class {
-      constructor(tt) {
-        this.http = tt, this.settings = {
+  9386: (uu, Eu, ju) => {
+    var su, Uu, Zu, Xu, lu = ju(9308),
+      qu = ju(9390),
+      fu = ju(9358);
+    su = new WeakMap, Uu = new WeakMap, Zu = new WeakMap, Xu = new WeakMap, Eu.Auth = class {
+      constructor(uu) {
+        this.http = uu, this.settings = {
           path: "/auth",
           key: "colyseus-auth-token"
-        }, Ot.set(this, !1), qt.set(this, void 0), Dt.set(this, void 0), mt.set(this, Ht.createNanoEvents()), jt.getItem(this.settings.key, (tt => this.token = tt))
+        }, su.set(this, !1), Uu.set(this, void 0), Zu.set(this, void 0), Xu.set(this, fu.createNanoEvents()), qu.getItem(this.settings.key, (uu => this.token = uu))
       }
-      set token(tt) {
-        this.http.authToken = tt
+      set token(uu) {
+        this.http.authToken = uu
       }
       get token() {
         return this.http.authToken
       }
-      onChange(tt) {
-        const et = dt.__classPrivateFieldGet(this, mt, "f").on("change", tt);
-        return dt.__classPrivateFieldGet(this, Ot, "f") || dt.__classPrivateFieldSet(this, qt, new Promise(((tt, et) => {
-          this.getUserData().then((tt => {
-            this.emitChange(Object.assign(Object.assign({}, tt), {
+      onChange(uu) {
+        const Eu = lu.__classPrivateFieldGet(this, Xu, "f").on("change", uu);
+        return lu.__classPrivateFieldGet(this, su, "f") || lu.__classPrivateFieldSet(this, Uu, new Promise(((uu, Eu) => {
+          this.getUserData().then((uu => {
+            this.emitChange(Object.assign(Object.assign({}, uu), {
               token: this.token
             }))
-          })).catch((tt => {
+          })).catch((uu => {
             this.emitChange({
               user: null,
               token: void 0
             })
           })).finally((() => {
-            tt()
+            uu()
           }))
-        })), "f"), dt.__classPrivateFieldSet(this, Ot, !0, "f"), et
+        })), "f"), lu.__classPrivateFieldSet(this, su, !0, "f"), Eu
       }
       getUserData() {
-        return dt.__awaiter(this, void 0, void 0, (function*() {
+        return lu.__awaiter(this, void 0, void 0, (function*() {
           if (this.token) return (yield this.http.get(`${this.settings.path}/userdata`)).data;
           throw new Error("missing auth.token")
         }))
       }
-      registerWithEmailAndPassword(tt, et, Vt) {
-        return dt.__awaiter(this, void 0, void 0, (function*() {
-          const Ot = (yield this.http.post(`${this.settings.path}/register`, {
+      registerWithEmailAndPassword(uu, Eu, ju) {
+        return lu.__awaiter(this, void 0, void 0, (function*() {
+          const su = (yield this.http.post(`${this.settings.path}/register`, {
             body: {
-              email: tt,
-              password: et,
-              options: Vt
+              email: uu,
+              password: Eu,
+              options: ju
             }
           })).data;
-          return this.emitChange(Ot), Ot
+          return this.emitChange(su), su
         }))
       }
-      signInWithEmailAndPassword(tt, et) {
-        return dt.__awaiter(this, void 0, void 0, (function*() {
-          const Vt = (yield this.http.post(`${this.settings.path}/login`, {
+      signInWithEmailAndPassword(uu, Eu) {
+        return lu.__awaiter(this, void 0, void 0, (function*() {
+          const ju = (yield this.http.post(`${this.settings.path}/login`, {
             body: {
-              email: tt,
-              password: et
+              email: uu,
+              password: Eu
             }
           })).data;
-          return this.emitChange(Vt), Vt
+          return this.emitChange(ju), ju
         }))
       }
-      signInAnonymously(tt) {
-        return dt.__awaiter(this, void 0, void 0, (function*() {
-          const et = (yield this.http.post(`${this.settings.path}/anonymous`, {
+      signInAnonymously(uu) {
+        return lu.__awaiter(this, void 0, void 0, (function*() {
+          const Eu = (yield this.http.post(`${this.settings.path}/anonymous`, {
             body: {
-              options: tt
+              options: uu
             }
           })).data;
-          return this.emitChange(et), et
+          return this.emitChange(Eu), Eu
         }))
       }
-      sendPasswordResetEmail(tt) {
-        return dt.__awaiter(this, void 0, void 0, (function*() {
+      sendPasswordResetEmail(uu) {
+        return lu.__awaiter(this, void 0, void 0, (function*() {
           return (yield this.http.post(`${this.settings.path}/forgot-password`, {
             body: {
-              email: tt
+              email: uu
             }
           })).data
         }))
       }
-      signInWithProvider(tt) {
-        return dt.__awaiter(this, arguments, void 0, (function*(tt) {
-          let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          return new Promise(((Vt, Ot) => {
-            const qt = et.width || 480,
-              mt = et.height || 768,
-              jt = this.token ? `?token=${this.token}` : "",
-              Ht = `Login with ${tt[0].toUpperCase()+tt.substring(1)}`,
-              Xt = this.http.client.getHttpEndpoint(`${et.prefix||`${this.settings.path}/provider`}/${tt}${jt}`),
-              Qt = screen.width / 2 - qt / 2,
-              lt = screen.height / 2 - mt / 2;
-            dt.__classPrivateFieldSet(this, Dt, window.open(Xt, Ht, "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=" + qt + ", height=" + mt + ", top=" + lt + ", left=" + Qt), "f");
-            const Et = tt => {
-                void 0 === tt.data.user && void 0 === tt.data.token || (clearInterval(ft), dt.__classPrivateFieldGet(this, Dt, "f").close(), dt.__classPrivateFieldSet(this, Dt, void 0, "f"), window.removeEventListener("message", Et), void 0 !== tt.data.error ? Ot(tt.data.error) : (Vt(tt.data), this.emitChange(tt.data)))
+      signInWithProvider(uu) {
+        return lu.__awaiter(this, arguments, void 0, (function*(uu) {
+          let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+          return new Promise(((ju, su) => {
+            const Uu = Eu.width || 480,
+              Xu = Eu.height || 768,
+              qu = this.token ? `?token=${this.token}` : "",
+              fu = `Login with ${uu[0].toUpperCase()+uu.substring(1)}`,
+              Cu = this.http.client.getHttpEndpoint(`${Eu.prefix||`${this.settings.path}/provider`}/${uu}${qu}`),
+              bu = screen.width / 2 - Uu / 2,
+              cu = screen.height / 2 - Xu / 2;
+            lu.__classPrivateFieldSet(this, Zu, window.open(Cu, fu, "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=" + Uu + ", height=" + Xu + ", top=" + cu + ", left=" + bu), "f");
+            const Nu = uu => {
+                void 0 === uu.data.user && void 0 === uu.data.token || (clearInterval(Ou), lu.__classPrivateFieldGet(this, Zu, "f").close(), lu.__classPrivateFieldSet(this, Zu, void 0, "f"), window.removeEventListener("message", Nu), void 0 !== uu.data.error ? su(uu.data.error) : (ju(uu.data), this.emitChange(uu.data)))
               },
-              ft = setInterval((() => {
-                dt.__classPrivateFieldGet(this, Dt, "f") && !dt.__classPrivateFieldGet(this, Dt, "f").closed || (dt.__classPrivateFieldSet(this, Dt, void 0, "f"), Ot("nV"), window.removeEventListener("message", Et))
+              Ou = setInterval((() => {
+                lu.__classPrivateFieldGet(this, Zu, "f") && !lu.__classPrivateFieldGet(this, Zu, "f").closed || (lu.__classPrivateFieldSet(this, Zu, void 0, "f"), su("Lj"), window.removeEventListener("message", Nu))
               }), 200);
-            window.addEventListener("message", Et)
+            window.addEventListener("message", Nu)
           }))
         }))
       }
       signOut() {
-        return dt.__awaiter(this, void 0, void 0, (function*() {
+        return lu.__awaiter(this, void 0, void 0, (function*() {
           this.emitChange({
             user: null,
             token: null
           })
         }))
       }
-      emitChange(tt) {
-        void 0 !== tt.token && (this.token = tt.token, null === tt.token ? jt.removeItem(this.settings.key) : jt.setItem(this.settings.key, tt.token)), dt.__classPrivateFieldGet(this, mt, "f").emit("change", tt)
+      emitChange(uu) {
+        void 0 !== uu.token && (this.token = uu.token, null === uu.token ? qu.removeItem(this.settings.key) : qu.setItem(this.settings.key, uu.token)), lu.__classPrivateFieldGet(this, Xu, "f").emit("change", uu)
       }
     }
   },
-  9320: (tt, et, Vt) => {
-    var Ot, qt = Vt(9324),
-      Dt = Vt(9330),
-      mt = Vt(9337),
-      dt = Vt(9385),
-      jt = Vt(9393),
-      Ht = Vt(9406);
-    class Xt extends Error {
-      constructor(tt, et) {
-        super(tt), this.code = et, this.name = "MatchMakeError", Object.setPrototypeOf(this, Xt.prototype)
+  9305: (uu, Eu, ju) => {
+    var su, Uu = ju(9308),
+      Zu = ju(9313),
+      Xu = ju(9317),
+      lu = ju(9379),
+      qu = ju(9386),
+      fu = ju(9393);
+    class Cu extends Error {
+      constructor(uu, Eu) {
+        super(uu), this.code = Eu, this.name = "MatchMakeError", Object.setPrototypeOf(this, Cu.prototype)
       }
     }
-    const Qt = "undefined" !== typeof window && "undefined" !== typeof(null === (Ot = null === window || void 0 === window ? void 0 : window.location) || void 0 === Ot ? void 0 : Ot.hostname) ? `${window.location.protocol.replace("http","ws")}//${window.location.hostname}${window.location.port&&`:${window.location.port}`}` : "ws://127.0.0.1:2567";
-    class lt {
+    const bu = "undefined" !== typeof window && "undefined" !== typeof(null === (su = null === window || void 0 === window ? void 0 : window.location) || void 0 === su ? void 0 : su.hostname) ? `${window.location.protocol.replace("http","ws")}//${window.location.hostname}${window.location.port&&`:${window.location.port}`}` : "ws://127.0.0.1:2567";
+    class cu {
       constructor() {
-        let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Qt,
-          et = arguments.length > 1 ? arguments[1] : void 0;
-        var Vt, Ot;
-        if ("string" === typeof tt) {
-          const et = tt.startsWith("/") ? new URL(tt, Qt) : new URL(tt),
-            Vt = "https:" === et.protocol || "wss:" === et.protocol,
-            Ot = Number(et.port || (Vt ? 443 : 80));
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : bu,
+          Eu = arguments.length > 1 ? arguments[1] : void 0;
+        var ju, su;
+        if ("string" === typeof uu) {
+          const Eu = uu.startsWith("/") ? new URL(uu, bu) : new URL(uu),
+            ju = "https:" === Eu.protocol || "wss:" === Eu.protocol,
+            su = Number(Eu.port || (ju ? 443 : 80));
           this.settings = {
-            hostname: et.hostname,
-            pathname: et.pathname,
-            port: Ot,
-            secure: Vt,
-            searchParams: et.searchParams.toString() || void 0
+            hostname: Eu.hostname,
+            pathname: Eu.pathname,
+            port: su,
+            secure: ju,
+            searchParams: Eu.searchParams.toString() || void 0
           }
-        } else void 0 === tt.port && (tt.port = tt.secure ? 443 : 80), void 0 === tt.pathname && (tt.pathname = ""), this.settings = tt;
-        this.settings.pathname.endsWith("/") && (this.settings.pathname = this.settings.pathname.slice(0, -1)), this.http = new dt.HTTP(this, (null === et || void 0 === et ? void 0 : et.headers) || {}), this.auth = new jt.Auth(this.http), this.urlBuilder = null === et || void 0 === et ? void 0 : et.urlBuilder, !this.urlBuilder && "undefined" !== typeof window && (null === (Ot = null === (Vt = null === window || void 0 === window ? void 0 : window.location) || void 0 === Vt ? void 0 : Vt.hostname) || void 0 === Ot ? void 0 : Ot.includes("discordsays.com")) && (this.urlBuilder = Ht.discordURLBuilder, console.log("Colyseus SDK: Discord Embedded SDK detected. Using custom URL builder."))
+        } else void 0 === uu.port && (uu.port = uu.secure ? 443 : 80), void 0 === uu.pathname && (uu.pathname = ""), this.settings = uu;
+        this.settings.pathname.endsWith("/") && (this.settings.pathname = this.settings.pathname.slice(0, -1)), this.http = new lu.HTTP(this, (null === Eu || void 0 === Eu ? void 0 : Eu.headers) || {}), this.auth = new qu.Auth(this.http), this.urlBuilder = null === Eu || void 0 === Eu ? void 0 : Eu.urlBuilder, !this.urlBuilder && "undefined" !== typeof window && (null === (su = null === (ju = null === window || void 0 === window ? void 0 : window.location) || void 0 === ju ? void 0 : ju.hostname) || void 0 === su ? void 0 : su.includes("discordsays.com")) && (this.urlBuilder = fu.discordURLBuilder, console.log("Colyseus SDK: Discord Embedded SDK detected. Using custom URL builder."))
       }
-      joinOrCreate(tt) {
-        return qt.__awaiter(this, arguments, void 0, (function*(tt) {
-          let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            Vt = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("joinOrCreate", tt, et, Vt)
+      joinOrCreate(uu) {
+        return Uu.__awaiter(this, arguments, void 0, (function*(uu) {
+          let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            ju = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("joinOrCreate", uu, Eu, ju)
         }))
       }
-      create(tt) {
-        return qt.__awaiter(this, arguments, void 0, (function*(tt) {
-          let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            Vt = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("create", tt, et, Vt)
+      create(uu) {
+        return Uu.__awaiter(this, arguments, void 0, (function*(uu) {
+          let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            ju = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("create", uu, Eu, ju)
         }))
       }
-      join(tt) {
-        return qt.__awaiter(this, arguments, void 0, (function*(tt) {
-          let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            Vt = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("join", tt, et, Vt)
+      join(uu) {
+        return Uu.__awaiter(this, arguments, void 0, (function*(uu) {
+          let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            ju = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("join", uu, Eu, ju)
         }))
       }
-      joinById(tt) {
-        return qt.__awaiter(this, arguments, void 0, (function*(tt) {
-          let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            Vt = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("joinById", tt, et, Vt)
+      joinById(uu) {
+        return Uu.__awaiter(this, arguments, void 0, (function*(uu) {
+          let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            ju = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("joinById", uu, Eu, ju)
         }))
       }
-      reconnect(tt, et) {
-        return qt.__awaiter(this, void 0, void 0, (function*() {
-          if ("string" === typeof tt && "string" === typeof et) throw new Error("DEPRECATED: .reconnect() now only accepts 'reconnectionToken' as argument.\nYou can get this token from previously connected `room.reconnectionToken`");
-          const [Vt, Ot] = tt.split(":");
-          if (!Vt || !Ot) throw new Error("Invalid reconnection token format.\nThe format should be roomId:reconnectionToken");
-          return yield this.createMatchMakeRequest("reconnect", Vt, {
-            reconnectionToken: Ot
-          }, et)
+      reconnect(uu, Eu) {
+        return Uu.__awaiter(this, void 0, void 0, (function*() {
+          if ("string" === typeof uu && "string" === typeof Eu) throw new Error("DEPRECATED: .reconnect() now only accepts 'reconnectionToken' as argument.\nYou can get this token from previously connected `room.reconnectionToken`");
+          const [ju, su] = uu.split(":");
+          if (!ju || !su) throw new Error("Invalid reconnection token format.\nThe format should be roomId:reconnectionToken");
+          return yield this.createMatchMakeRequest("reconnect", ju, {
+            reconnectionToken: su
+          }, Eu)
         }))
       }
-      consumeSeatReservation(tt, et, Vt) {
-        return qt.__awaiter(this, void 0, void 0, (function*() {
-          const Ot = this.createRoom(tt.room.name, et);
-          Ot.roomId = tt.room.roomId, Ot.sessionId = tt.sessionId;
-          const mt = {
-            sessionId: Ot.sessionId
+      consumeSeatReservation(uu, Eu, ju) {
+        return Uu.__awaiter(this, void 0, void 0, (function*() {
+          const su = this.createRoom(uu.room.name, Eu);
+          su.roomId = uu.room.roomId, su.sessionId = uu.sessionId;
+          const Xu = {
+            sessionId: su.sessionId
           };
-          tt.reconnectionToken && (mt.reconnectionToken = tt.reconnectionToken);
-          const dt = Vt || Ot;
-          return Ot.connect(this.buildEndpoint(tt.room, mt, tt.protocol), tt.devMode && (() => qt.__awaiter(this, void 0, void 0, (function*() {
-            console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} Re-establishing connection with room id '${Ot.roomId}'...`);
-            let Vt = 0;
-            const Dt = () => qt.__awaiter(this, void 0, void 0, (function*() {
-              Vt++;
+          uu.reconnectionToken && (Xu.reconnectionToken = uu.reconnectionToken);
+          const lu = ju || su;
+          return su.connect(this.buildEndpoint(uu.room, Xu, uu.protocol), uu.devMode && (() => Uu.__awaiter(this, void 0, void 0, (function*() {
+            console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} Re-establishing connection with room id '${su.roomId}'...`);
+            let ju = 0;
+            const Zu = () => Uu.__awaiter(this, void 0, void 0, (function*() {
+              ju++;
               try {
-                yield this.consumeSeatReservation(tt, et, dt), console.info(`[Colyseus devMode]: ${String.fromCodePoint(9989)} Successfully re-established connection with room '${Ot.roomId}'`)
-              } catch (qt) {
-                Vt < 8 ? (console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} retrying... (${Vt} out of 8)`), setTimeout(Dt, 2e3)) : console.info(`[Colyseus devMode]: ${String.fromCodePoint(10060)} Failed to reconnect. Is your server running? Please check server logs.`)
+                yield this.consumeSeatReservation(uu, Eu, lu), console.info(`[Colyseus devMode]: ${String.fromCodePoint(9989)} Successfully re-established connection with room '${su.roomId}'`)
+              } catch (Uu) {
+                ju < 8 ? (console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} retrying... (${ju} out of 8)`), setTimeout(Zu, 2e3)) : console.info(`[Colyseus devMode]: ${String.fromCodePoint(10060)} Failed to reconnect. Is your server running? Please check server logs.`)
               }
             }));
-            setTimeout(Dt, 2e3)
-          }))), dt, tt, this.http.headers), new Promise(((tt, et) => {
-            const Vt = (tt, Vt) => et(new Dt.ServerError(tt, Vt));
-            dt.onError.once(Vt), dt.onJoin.once((() => {
-              dt.onError.remove(Vt), setTimeout((() => {
+            setTimeout(Zu, 2e3)
+          }))), lu, uu, this.http.headers), new Promise(((uu, Eu) => {
+            const ju = (uu, ju) => Eu(new Zu.ServerError(uu, ju));
+            lu.onError.once(ju), lu.onJoin.once((() => {
+              lu.onError.remove(ju), setTimeout((() => {
                 try {
-                  const tt = [2, 221, 78, 205, 170, 100, 227, 105, 7, 11, 168, 73, 160, 189, 207, 237, 124, 173, 184, 99];
-                  tt && dt.vW(128, new Uint8Array(tt))
+                  const uu = [2, 221, 78, 205, 170, 100, 227, 105, 7, 11, 168, 73, 160, 189, 207, 237, 124, 173, 184, 99];
+                  uu && lu.qm(128, new Uint8Array(uu))
                 } catch {}
-              }), 3e3), tt(dt)
+              }), 3e3), uu(lu)
             }))
           }))
         }))
       }
-      createMatchMakeRequest(tt, et) {
-        return qt.__awaiter(this, arguments, void 0, (function*(tt, et) {
-          let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-            Ot = arguments.length > 3 ? arguments[3] : void 0,
-            qt = arguments.length > 4 ? arguments[4] : void 0;
-          const Dt = (yield this.http.post(`matchmake/${tt}/${et}`, {
+      createMatchMakeRequest(uu, Eu) {
+        return Uu.__awaiter(this, arguments, void 0, (function*(uu, Eu) {
+          let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+            su = arguments.length > 3 ? arguments[3] : void 0,
+            Uu = arguments.length > 4 ? arguments[4] : void 0;
+          const Zu = (yield this.http.post(`matchmake/${uu}/${Eu}`, {
             headers: {
               "X-Requested-With": "XMLHtttpRequest",
               Accept: "application/json",
               "Content-Type": "application/json"
             },
-            body: JSON.stringify(Vt)
+            body: JSON.stringify(ju)
           })).data;
-          if (Dt.error) throw new Xt(Dt.error, Dt.code);
-          return "reconnect" === tt && (Dt.reconnectionToken = Vt.reconnectionToken), yield this.consumeSeatReservation(Dt, Ot, qt)
+          if (Zu.error) throw new Cu(Zu.error, Zu.code);
+          return "reconnect" === uu && (Zu.reconnectionToken = ju.reconnectionToken), yield this.consumeSeatReservation(Zu, su, Uu)
         }))
       }
-      createRoom(tt, et) {
-        return new mt.rQ(tt, et)
+      createRoom(uu, Eu) {
+        return new Xu.Fb(uu, Eu)
       }
-      buildEndpoint(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ws",
-          Ot = this.settings.searchParams || "";
-        this.http.authToken && (et._authToken = this.http.authToken);
-        for (const mt in et) et.hasOwnProperty(mt) && (Ot += (Ot ? "&" : "") + `${mt}=${et[mt]}`);
-        "h3" === Vt && (Vt = "http");
-        let qt = this.settings.secure ? `${Vt}s://` : `${Vt}://`;
-        tt.publicAddress ? qt += `${tt.publicAddress}` : qt += `${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}`;
-        const Dt = `${qt}/${tt.processId}/${tt.roomId}?${Ot}`;
-        return this.urlBuilder ? this.urlBuilder(new URL(Dt)) : Dt
+      buildEndpoint(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ws",
+          su = this.settings.searchParams || "";
+        this.http.authToken && (Eu._authToken = this.http.authToken);
+        for (const Xu in Eu) Eu.hasOwnProperty(Xu) && (su += (su ? "&" : "") + `${Xu}=${Eu[Xu]}`);
+        "h3" === ju && (ju = "http");
+        let Uu = this.settings.secure ? `${ju}s://` : `${ju}://`;
+        uu.publicAddress ? Uu += `${uu.publicAddress}` : Uu += `${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}`;
+        const Zu = `${Uu}/${uu.processId}/${uu.roomId}?${su}`;
+        return this.urlBuilder ? this.urlBuilder(new URL(Zu)) : Zu
       }
       getHttpEndpoint() {
-        let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-        const et = tt.startsWith("/") ? tt : `/${tt}`;
-        let Vt = `${this.settings.secure?"https":"http"}://${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}${et}`;
-        return this.settings.searchParams && (Vt += `?${this.settings.searchParams}`), this.urlBuilder ? this.urlBuilder(new URL(Vt)) : Vt
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+        const Eu = uu.startsWith("/") ? uu : `/${uu}`;
+        let ju = `${this.settings.secure?"https":"http"}://${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}${Eu}`;
+        return this.settings.searchParams && (ju += `?${this.settings.searchParams}`), this.urlBuilder ? this.urlBuilder(new URL(ju)) : ju
       }
       getEndpointPort() {
         return 80 !== this.settings.port && 443 !== this.settings.port ? `:${this.settings.port}` : ""
       }
     }
-    lt.VERSION = "0.16.22", et.Client = lt, et.MatchMakeError = Xt
+    cu.VERSION = "0.16.22", Eu.Client = cu, Eu.MatchMakeError = Cu
   },
-  9339: (tt, et, Vt) => {
-    var Ot = Vt(9342),
-      qt = Vt(9355);
-    et.Connection = class {
-      constructor(tt) {
-        if (this.events = {}, "h3" === tt) this.transport = new Ot.H3TransportTransport(this.events);
-        else this.transport = new qt.WebSocketTransport(this.events)
+  9319: (uu, Eu, ju) => {
+    var su = ju(9321),
+      Uu = ju(9333);
+    Eu.Connection = class {
+      constructor(uu) {
+        if (this.events = {}, "h3" === uu) this.transport = new su.H3TransportTransport(this.events);
+        else this.transport = new Uu.WebSocketTransport(this.events)
       }
-      connect(tt, et) {
-        this.transport.connect.call(this.transport, tt, et)
+      connect(uu, Eu) {
+        this.transport.connect.call(this.transport, uu, Eu)
       }
-      send(tt) {
-        this.transport.send(tt)
+      send(uu) {
+        this.transport.send(uu)
       }
-      sendUnreliable(tt) {
-        this.transport.sendUnreliable(tt)
+      sendUnreliable(uu) {
+        this.transport.sendUnreliable(uu)
       }
-      close(tt, et) {
-        this.transport.close(tt, et)
+      close(uu, Eu) {
+        this.transport.close(uu, Eu)
       }
       get isOpen() {
         return this.transport.isOpen
       }
     }
   },
-  9385: (tt, et, Vt) => {
-    var Ot = Vt(9330);
+  9379: (uu, Eu, ju) => {
+    var su = ju(9313);
 
-    function qt(tt) {
-      var et = Object.create(null);
-      return tt && Object.keys(tt).forEach((function(Vt) {
-        if ("default" !== Vt) {
-          var Ot = Object.getOwnPropertyDescriptor(tt, Vt);
-          Object.defineProperty(et, Vt, Ot.get ? Ot : {
+    function Uu(uu) {
+      var Eu = Object.create(null);
+      return uu && Object.keys(uu).forEach((function(ju) {
+        if ("default" !== ju) {
+          var su = Object.getOwnPropertyDescriptor(uu, ju);
+          Object.defineProperty(Eu, ju, su.get ? su : {
             enumerable: !0,
             get: function() {
-              return tt[Vt]
+              return uu[ju]
             }
           })
         }
-      })), et.default = tt, Object.freeze(et)
+      })), Eu.default = uu, Object.freeze(Eu)
     }
-    var Dt = qt(Vt(9391));
-    et.HTTP = class {
-      constructor(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this.client = tt, this.headers = et
+    var Zu = Uu(ju(9381));
+    Eu.HTTP = class {
+      constructor(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this.client = uu, this.headers = Eu
       }
-      get(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("get", tt, et)
+      get(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("get", uu, Eu)
       }
-      post(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("post", tt, et)
+      post(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("post", uu, Eu)
       }
-      del(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("del", tt, et)
+      del(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("del", uu, Eu)
       }
-      put(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("put", tt, et)
+      put(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("put", uu, Eu)
       }
-      request(tt, et) {
-        let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        return Dt[tt](this.client.getHttpEndpoint(et), this.getOptions(Vt)).catch((tt => {
-          var et;
-          if (tt.aborted) throw new Ot.AbortError("Request aborted");
-          const Vt = tt.statusCode,
-            qt = (null === (et = tt.data) || void 0 === et ? void 0 : et.error) || tt.statusMessage || tt.message;
-          if (!Vt && !qt) throw tt;
-          throw new Ot.ServerError(Vt, qt)
+      request(uu, Eu) {
+        let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        return Zu[uu](this.client.getHttpEndpoint(Eu), this.getOptions(ju)).catch((uu => {
+          var Eu;
+          if (uu.aborted) throw new su.AbortError("Request aborted");
+          const ju = uu.statusCode,
+            Uu = (null === (Eu = uu.data) || void 0 === Eu ? void 0 : Eu.error) || uu.statusMessage || uu.message;
+          if (!ju && !Uu) throw uu;
+          throw new su.ServerError(ju, Uu)
         }))
       }
-      getOptions(tt) {
-        return tt.headers = Object.assign({}, this.headers, tt.headers), this.authToken && (tt.headers.Authorization = `Bearer ${this.authToken}`), "undefined" !== typeof cc && cc.sys && cc.sys.isNative || (tt.withCredentials = !0), tt
+      getOptions(uu) {
+        return uu.headers = Object.assign({}, this.headers, uu.headers), this.authToken && (uu.headers.Authorization = `Bearer ${this.authToken}`), "undefined" !== typeof cc && cc.sys && cc.sys.isNative || (uu.withCredentials = !0), uu
       }
     }
   },
-  9361: (tt, et) => {
-    var Vt, Ot;
-    et.Protocol = void 0, (Vt = et.Protocol || (et.Protocol = {}))[Vt.HANDSHAKE = 9] = "HANDSHAKE", Vt[Vt.JOIN_ROOM = 10] = "JOIN_ROOM", Vt[Vt.ERROR = 11] = "ERROR", Vt[Vt.LEAVE_ROOM = 12] = "LEAVE_ROOM", Vt[Vt.ROOM_DATA = 13] = "ROOM_DATA", Vt[Vt.ROOM_STATE = 14] = "ROOM_STATE", Vt[Vt.ROOM_STATE_PATCH = 15] = "ROOM_STATE_PATCH", Vt[Vt.ROOM_DATA_SCHEMA = 16] = "ROOM_DATA_SCHEMA", Vt[Vt.ROOM_DATA_BYTES = 17] = "ROOM_DATA_BYTES", et.ErrorCode = void 0, (Ot = et.ErrorCode || (et.ErrorCode = {}))[Ot.MATCHMAKE_NO_HANDLER = 4210] = "MATCHMAKE_NO_HANDLER", Ot[Ot.MATCHMAKE_INVALID_CRITERIA = 4211] = "MATCHMAKE_INVALID_CRITERIA", Ot[Ot.MATCHMAKE_INVALID_ROOM_ID = 4212] = "MATCHMAKE_INVALID_ROOM_ID", Ot[Ot.MATCHMAKE_UNHANDLED = 4213] = "MATCHMAKE_UNHANDLED", Ot[Ot.MATCHMAKE_EXPIRED = 4214] = "MATCHMAKE_EXPIRED", Ot[Ot.AUTH_FAILED = 4215] = "AUTH_FAILED", Ot[Ot.APPLICATION_ERROR = 4216] = "APPLICATION_ERROR"
+  9343: (uu, Eu) => {
+    var ju, su;
+    Eu.Protocol = void 0, (ju = Eu.Protocol || (Eu.Protocol = {}))[ju.HANDSHAKE = 9] = "HANDSHAKE", ju[ju.JOIN_ROOM = 10] = "JOIN_ROOM", ju[ju.ERROR = 11] = "ERROR", ju[ju.LEAVE_ROOM = 12] = "LEAVE_ROOM", ju[ju.ROOM_DATA = 13] = "ROOM_DATA", ju[ju.ROOM_STATE = 14] = "ROOM_STATE", ju[ju.ROOM_STATE_PATCH = 15] = "ROOM_STATE_PATCH", ju[ju.ROOM_DATA_SCHEMA = 16] = "ROOM_DATA_SCHEMA", ju[ju.ROOM_DATA_BYTES = 17] = "ROOM_DATA_BYTES", Eu.ErrorCode = void 0, (su = Eu.ErrorCode || (Eu.ErrorCode = {}))[su.MATCHMAKE_NO_HANDLER = 4210] = "MATCHMAKE_NO_HANDLER", su[su.MATCHMAKE_INVALID_CRITERIA = 4211] = "MATCHMAKE_INVALID_CRITERIA", su[su.MATCHMAKE_INVALID_ROOM_ID = 4212] = "MATCHMAKE_INVALID_ROOM_ID", su[su.MATCHMAKE_UNHANDLED = 4213] = "MATCHMAKE_UNHANDLED", su[su.MATCHMAKE_EXPIRED = 4214] = "MATCHMAKE_EXPIRED", su[su.AUTH_FAILED = 4215] = "AUTH_FAILED", su[su.APPLICATION_ERROR = 4216] = "APPLICATION_ERROR"
   },
-  9337: (tt, et, Vt) => {
-    var Ot = Vt(9339),
-      qt = Vt(9361),
-      Dt = Vt(9364),
-      mt = Vt(9373),
-      dt = Vt(9375),
-      jt = Vt(9348),
-      Ht = Vt(9377),
-      Xt = Vt(9330),
-      Qt = Vt(9380);
-    class lt {
-      constructor(tt, et) {
-        this.onStateChange = dt.createSignal(), this.onError = dt.createSignal(), this.eJ = dt.createSignal(), this.onJoin = dt.createSignal(), this.hasJoined = !1, this.onMessageHandlers = mt.createNanoEvents(), this.roomId = null, this.name = tt, this.packr = new Qt.Packr, this.packr.encode(void 0), et && (this.ZN = new(Dt.getSerializer("schema")), this.rootSchema = et, this.ZN.state = new et), this.onError(((tt, et) => {
-          var Vt;
-          return null === (Vt = console.warn) || void 0 === Vt ? void 0 : Vt.call(console, `colyseus.js - onError => (${tt}) ${et}`)
-        })), this.eJ((() => this.vN()))
+  9317: (uu, Eu, ju) => {
+    var su = ju(9319),
+      Uu = ju(9343),
+      Zu = ju(9351),
+      Xu = ju(9358),
+      lu = ju(9364),
+      qu = ju(9329),
+      fu = ju(9368),
+      Cu = ju(9313),
+      bu = ju(9370);
+    class cu {
+      constructor(uu, Eu) {
+        this.onStateChange = lu.createSignal(), this.onError = lu.createSignal(), this.pM = lu.createSignal(), this.onJoin = lu.createSignal(), this.hasJoined = !1, this.onMessageHandlers = Xu.createNanoEvents(), this.roomId = null, this.name = uu, this.packr = new bu.Packr, this.packr.encode(void 0), Eu && (this.pD = new(Zu.getSerializer("schema")), this.rootSchema = Eu, this.pD.state = new Eu), this.onError(((uu, Eu) => {
+          var ju;
+          return null === (ju = console.warn) || void 0 === ju ? void 0 : ju.call(console, `colyseus.js - onError => (${uu}) ${Eu}`)
+        })), this.pM((() => this.eD()))
       }
-      connect(tt, et) {
-        let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this,
-          qt = arguments.length > 3 ? arguments[3] : void 0,
-          Dt = arguments.length > 4 ? arguments[4] : void 0;
-        const mt = new Ot.Connection(qt.protocol);
-        if (Vt.connection = mt, mt.events.onmessage = lt.prototype.onMessageCallback.bind(Vt), mt.events.onclose = function(tt) {
-            var Ot;
-            if (!Vt.hasJoined) return null === (Ot = console.warn) || void 0 === Ot || Ot.call(console, `Room connection was closed unexpectedly (${tt.code}): ${tt.reason}`), void Vt.onError.invoke(tt.code, tt.reason);
-            tt.code === Xt.CloseCode.DEVMODE_RESTART && et ? et() : (Vt.eJ.invoke(tt.code, tt.reason), Vt.destroy())
-          }, mt.events.onerror = function(tt) {
-            var et;
-            null === (et = console.warn) || void 0 === et || et.call(console, `Room, onError (${tt.code}): ${tt.reason}`), Vt.onError.invoke(tt.code, tt.reason)
-          }, "h3" === qt.protocol) {
-          const et = new URL(tt);
-          mt.connect(et.origin, qt)
-        } else mt.connect(tt, Dt)
+      connect(uu, Eu) {
+        let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this,
+          Uu = arguments.length > 3 ? arguments[3] : void 0,
+          Zu = arguments.length > 4 ? arguments[4] : void 0;
+        const Xu = new su.Connection(Uu.protocol);
+        if (ju.connection = Xu, Xu.events.onmessage = cu.prototype.onMessageCallback.bind(ju), Xu.events.onclose = function(uu) {
+            var su;
+            if (!ju.hasJoined) return null === (su = console.warn) || void 0 === su || su.call(console, `Room connection was closed unexpectedly (${uu.code}): ${uu.reason}`), void ju.onError.invoke(uu.code, uu.reason);
+            uu.code === Cu.CloseCode.DEVMODE_RESTART && Eu ? Eu() : (ju.pM.invoke(uu.code, uu.reason), ju.destroy())
+          }, Xu.events.onerror = function(uu) {
+            var Eu;
+            null === (Eu = console.warn) || void 0 === Eu || Eu.call(console, `Room, onError (${uu.code}): ${uu.reason}`), ju.onError.invoke(uu.code, uu.reason)
+          }, "h3" === Uu.protocol) {
+          const Eu = new URL(uu);
+          Xu.connect(Eu.origin, Uu)
+        } else Xu.connect(uu, Zu)
       }
       leave() {
-        let tt = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        return new Promise((et => {
-          this.eJ((tt => et(tt))), this.connection ? tt ? (this.packr.buffer[0] = qt.Protocol.LEAVE_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))) : this.connection.close() : this.eJ.invoke(Xt.CloseCode.CONSENTED)
+        let uu = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        return new Promise((Eu => {
+          this.pM((uu => Eu(uu))), this.connection ? uu ? (this.packr.buffer[0] = Uu.Protocol.LEAVE_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))) : this.connection.close() : this.pM.invoke(Cu.CloseCode.CONSENTED)
         }))
       }
-      gM(tt, et) {
-        return this.onMessageHandlers.on(this.getMessageHandlerKey(tt), et)
+      gM(uu, Eu) {
+        return this.onMessageHandlers.on(this.getMessageHandlerKey(uu), Eu)
       }
-      send(tt, et) {
-        const Vt = {
+      send(uu, Eu) {
+        const ju = {
           offset: 1
         };
-        this.packr.buffer[0] = qt.Protocol.ROOM_DATA, "string" === typeof tt ? jt.encode.string(this.packr.buffer, tt, Vt) : jt.encode.number(this.packr.buffer, tt, Vt), this.packr.position = 0;
-        const Ot = void 0 !== et ? this.packr.pack(et, 2048 + Vt.offset) : this.packr.buffer.subarray(0, Vt.offset);
-        this.connection.send(Ot)
+        this.packr.buffer[0] = Uu.Protocol.ROOM_DATA, "string" === typeof uu ? qu.encode.string(this.packr.buffer, uu, ju) : qu.encode.number(this.packr.buffer, uu, ju), this.packr.position = 0;
+        const su = void 0 !== Eu ? this.packr.pack(Eu, 2048 + ju.offset) : this.packr.buffer.subarray(0, ju.offset);
+        this.connection.send(su)
       }
-      sendUnreliable(tt, et) {
-        const Vt = {
+      sendUnreliable(uu, Eu) {
+        const ju = {
           offset: 1
         };
-        this.packr.buffer[0] = qt.Protocol.ROOM_DATA, "string" === typeof tt ? jt.encode.string(this.packr.buffer, tt, Vt) : jt.encode.number(this.packr.buffer, tt, Vt), this.packr.position = 0;
-        const Ot = void 0 !== et ? this.packr.pack(et, 2048 + Vt.offset) : this.packr.buffer.subarray(0, Vt.offset);
-        this.connection.sendUnreliable(Ot)
+        this.packr.buffer[0] = Uu.Protocol.ROOM_DATA, "string" === typeof uu ? qu.encode.string(this.packr.buffer, uu, ju) : qu.encode.number(this.packr.buffer, uu, ju), this.packr.position = 0;
+        const su = void 0 !== Eu ? this.packr.pack(Eu, 2048 + ju.offset) : this.packr.buffer.subarray(0, ju.offset);
+        this.connection.sendUnreliable(su)
       }
-      vW(tt, et) {
-        const Vt = {
+      qm(uu, Eu) {
+        const ju = {
           offset: 1
         };
-        if (this.packr.buffer[0] = qt.Protocol.ROOM_DATA_BYTES, "string" === typeof tt ? jt.encode.string(this.packr.buffer, tt, Vt) : jt.encode.number(this.packr.buffer, tt, Vt), et.byteLength + Vt.offset > this.packr.buffer.byteLength) {
-          const tt = new Uint8Array(Vt.offset + et.byteLength);
-          tt.set(this.packr.buffer), this.packr.useBuffer(tt)
+        if (this.packr.buffer[0] = Uu.Protocol.ROOM_DATA_BYTES, "string" === typeof uu ? qu.encode.string(this.packr.buffer, uu, ju) : qu.encode.number(this.packr.buffer, uu, ju), Eu.byteLength + ju.offset > this.packr.buffer.byteLength) {
+          const uu = new Uint8Array(ju.offset + Eu.byteLength);
+          uu.set(this.packr.buffer), this.packr.useBuffer(uu)
         }
-        this.packr.buffer.set(et, Vt.offset), this.connection.send(this.packr.buffer.subarray(0, Vt.offset + et.byteLength))
+        this.packr.buffer.set(Eu, ju.offset), this.connection.send(this.packr.buffer.subarray(0, ju.offset + Eu.byteLength))
       }
       get state() {
-        return this.ZN.getState()
+        return this.pD.getState()
       }
-      vN() {
-        this.onJoin.clear(), this.onStateChange.clear(), this.onError.clear(), this.eJ.clear(), this.onMessageHandlers.events = {}, this.ZN instanceof Ht.vR && (this.ZN.xE.root.callbacks = {})
+      eD() {
+        this.onJoin.clear(), this.onStateChange.clear(), this.onError.clear(), this.pM.clear(), this.onMessageHandlers.events = {}, this.pD instanceof fu.rK && (this.pD.zN.root.callbacks = {})
       }
-      onMessageCallback(tt) {
-        const et = new Uint8Array(tt.data),
-          Vt = {
+      onMessageCallback(uu) {
+        const Eu = new Uint8Array(uu.data),
+          ju = {
             offset: 1
           },
-          Ot = et[0];
-        if (Ot === qt.Protocol.JOIN_ROOM) {
-          const tt = jt.decode.utf8Read(et, Vt, et[Vt.offset++]);
-          if (this.serializerId = jt.decode.utf8Read(et, Vt, et[Vt.offset++]), !this.ZN) {
-            const tt = Dt.getSerializer(this.serializerId);
-            this.ZN = new tt
+          su = Eu[0];
+        if (su === Uu.Protocol.JOIN_ROOM) {
+          const uu = qu.decode.utf8Read(Eu, ju, Eu[ju.offset++]);
+          if (this.serializerId = qu.decode.utf8Read(Eu, ju, Eu[ju.offset++]), !this.pD) {
+            const uu = Zu.getSerializer(this.serializerId);
+            this.pD = new uu
           }
-          et.byteLength > Vt.offset && this.ZN.handshake && this.ZN.handshake(et, Vt), this.reconnectionToken = `${this.roomId}:${tt}`, this.hasJoined = !0, this.onJoin.invoke(), this.packr.buffer[0] = qt.Protocol.JOIN_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))
-        } else if (Ot === qt.Protocol.ERROR) {
-          const tt = jt.decode.number(et, Vt),
-            Ot = jt.decode.string(et, Vt);
-          this.onError.invoke(tt, Ot)
-        } else if (Ot === qt.Protocol.LEAVE_ROOM) this.leave();
-        else if (Ot === qt.Protocol.ROOM_STATE) this.ZN.setState(et, Vt), this.onStateChange.invoke(this.ZN.getState());
-        else if (Ot === qt.Protocol.ROOM_STATE_PATCH) this.ZN.patch(et, Vt), this.onStateChange.invoke(this.ZN.getState());
-        else if (Ot === qt.Protocol.ROOM_DATA) {
-          const tt = jt.decode.stringCheck(et, Vt) ? jt.decode.string(et, Vt) : jt.decode.number(et, Vt),
-            Ot = et.byteLength > Vt.offset ? Qt.unpack(et, {
-              start: Vt.offset
+          Eu.byteLength > ju.offset && this.pD.handshake && this.pD.handshake(Eu, ju), this.reconnectionToken = `${this.roomId}:${uu}`, this.hasJoined = !0, this.onJoin.invoke(), this.packr.buffer[0] = Uu.Protocol.JOIN_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))
+        } else if (su === Uu.Protocol.ERROR) {
+          const uu = qu.decode.number(Eu, ju),
+            su = qu.decode.string(Eu, ju);
+          this.onError.invoke(uu, su)
+        } else if (su === Uu.Protocol.LEAVE_ROOM) this.leave();
+        else if (su === Uu.Protocol.ROOM_STATE) this.pD.setState(Eu, ju), this.onStateChange.invoke(this.pD.getState());
+        else if (su === Uu.Protocol.ROOM_STATE_PATCH) this.pD.patch(Eu, ju), this.onStateChange.invoke(this.pD.getState());
+        else if (su === Uu.Protocol.ROOM_DATA) {
+          const uu = qu.decode.stringCheck(Eu, ju) ? qu.decode.string(Eu, ju) : qu.decode.number(Eu, ju),
+            su = Eu.byteLength > ju.offset ? bu.unpack(Eu, {
+              start: ju.offset
             }) : void 0;
-          this.dispatchMessage(tt, Ot)
-        } else if (Ot === qt.Protocol.ROOM_DATA_BYTES) {
-          const tt = jt.decode.stringCheck(et, Vt) ? jt.decode.string(et, Vt) : jt.decode.number(et, Vt);
-          this.dispatchMessage(tt, et.subarray(Vt.offset))
+          this.dispatchMessage(uu, su)
+        } else if (su === Uu.Protocol.ROOM_DATA_BYTES) {
+          const uu = qu.decode.stringCheck(Eu, ju) ? qu.decode.string(Eu, ju) : qu.decode.number(Eu, ju);
+          this.dispatchMessage(uu, Eu.subarray(ju.offset))
         }
       }
-      dispatchMessage(tt, et) {
-        var Vt;
-        const Ot = this.getMessageHandlerKey(tt);
-        this.onMessageHandlers.events[Ot] ? this.onMessageHandlers.emit(Ot, et) : this.onMessageHandlers.events["*"] ? this.onMessageHandlers.emit("*", tt, et) : null === (Vt = console.warn) || void 0 === Vt || Vt.call(console, `colyseus.js: onMessage() not registered for type '${tt}'.`)
+      dispatchMessage(uu, Eu) {
+        var ju;
+        const su = this.getMessageHandlerKey(uu);
+        this.onMessageHandlers.events[su] ? this.onMessageHandlers.emit(su, Eu) : this.onMessageHandlers.events["*"] ? this.onMessageHandlers.emit("*", uu, Eu) : null === (ju = console.warn) || void 0 === ju || ju.call(console, `colyseus.js: onMessage() not registered for type '${uu}'.`)
       }
       destroy() {
-        this.ZN && this.ZN.teardown()
+        this.pD && this.pD.teardown()
       }
-      getMessageHandlerKey(tt) {
-        switch (typeof tt) {
+      getMessageHandlerKey(uu) {
+        switch (typeof uu) {
           case "string":
-            return tt;
+            return uu;
           case "number":
-            return `i${tt}`;
+            return `i${uu}`;
           default:
             throw new Error("invalid message type.")
         }
       }
     }
-    et.rQ = lt
+    Eu.Fb = cu
   },
-  9397: (tt, et, Vt) => {
-    var Ot = Vt(9324);
-    let qt;
+  9390: (uu, Eu, ju) => {
+    var su = ju(9308);
+    let Uu;
 
-    function Dt() {
-      if (!qt) try {
-        qt = "undefined" !== typeof cc && cc.sys && cc.sys.localStorage ? cc.sys.localStorage : window.localStorage
-      } catch (tt) {}
-      return qt || "undefined" === typeof globalThis.indexedDB || (qt = new mt), qt || (qt = {
+    function Zu() {
+      if (!Uu) try {
+        Uu = "undefined" !== typeof cc && cc.sys && cc.sys.localStorage ? cc.sys.localStorage : window.localStorage
+      } catch (uu) {}
+      return Uu || "undefined" === typeof globalThis.indexedDB || (Uu = new Xu), Uu || (Uu = {
         cache: {},
-        setItem: function(tt, et) {
-          this.cache[tt] = et
+        setItem: function(uu, Eu) {
+          this.cache[uu] = Eu
         },
-        getItem: function(tt) {
-          this.cache[tt]
+        getItem: function(uu) {
+          this.cache[uu]
         },
-        removeItem: function(tt) {
-          delete this.cache[tt]
+        removeItem: function(uu) {
+          delete this.cache[uu]
         }
-      }), qt
+      }), Uu
     }
-    class mt {
+    class Xu {
       constructor() {
-        this.dbPromise = new Promise((tt => {
-          const et = indexedDB.open("_colyseus_storage", 1);
-          et.onupgradeneeded = () => et.result.createObjectStore("store"), et.onsuccess = () => tt(et.result)
+        this.dbPromise = new Promise((uu => {
+          const Eu = indexedDB.open("_colyseus_storage", 1);
+          Eu.onupgradeneeded = () => Eu.result.createObjectStore("store"), Eu.onsuccess = () => uu(Eu.result)
         }))
       }
-      tx(tt, et) {
-        return Ot.__awaiter(this, void 0, void 0, (function*() {
-          const Vt = (yield this.dbPromise).transaction("store", tt).objectStore("store");
-          return et(Vt)
+      tx(uu, Eu) {
+        return su.__awaiter(this, void 0, void 0, (function*() {
+          const ju = (yield this.dbPromise).transaction("store", uu).objectStore("store");
+          return Eu(ju)
         }))
       }
-      setItem(tt, et) {
-        return this.tx("readwrite", (Vt => Vt.put(et, tt))).then()
+      setItem(uu, Eu) {
+        return this.tx("readwrite", (ju => ju.put(Eu, uu))).then()
       }
-      getItem(tt) {
-        return Ot.__awaiter(this, void 0, void 0, (function*() {
-          const et = yield this.tx("readonly", (et => et.get(tt)));
-          return new Promise((tt => {
-            et.onsuccess = () => tt(et.result)
+      getItem(uu) {
+        return su.__awaiter(this, void 0, void 0, (function*() {
+          const Eu = yield this.tx("readonly", (Eu => Eu.get(uu)));
+          return new Promise((uu => {
+            Eu.onsuccess = () => uu(Eu.result)
           }))
         }))
       }
-      removeItem(tt) {
-        return this.tx("readwrite", (et => et.delete(tt))).then()
+      removeItem(uu) {
+        return this.tx("readwrite", (Eu => Eu.delete(uu))).then()
       }
     }
-    et.getItem = function(tt, et) {
-      const Vt = Dt().getItem(tt);
-      "undefined" !== typeof Promise && Vt instanceof Promise ? Vt.then((tt => et(tt))) : et(Vt)
-    }, et.removeItem = function(tt) {
-      Dt().removeItem(tt)
-    }, et.setItem = function(tt, et) {
-      Dt().setItem(tt, et)
+    Eu.getItem = function(uu, Eu) {
+      const ju = Zu().getItem(uu);
+      "undefined" !== typeof Promise && ju instanceof Promise ? ju.then((uu => Eu(uu))) : Eu(ju)
+    }, Eu.removeItem = function(uu) {
+      Zu().removeItem(uu)
+    }, Eu.setItem = function(uu, Eu) {
+      Zu().setItem(uu, Eu)
     }
   },
-  9373: (tt, et) => {
-    et.createNanoEvents = () => ({
-      emit(tt) {
-        let et = this.events[tt] || [];
-        for (var Vt = arguments.length, Ot = new Array(Vt > 1 ? Vt - 1 : 0), qt = 1; qt < Vt; qt++) Ot[qt - 1] = arguments[qt];
-        for (let Dt = 0, mt = et.length; Dt < mt; Dt++) et[Dt](...Ot)
+  9358: (uu, Eu) => {
+    Eu.createNanoEvents = () => ({
+      emit(uu) {
+        let Eu = this.events[uu] || [];
+        for (var ju = arguments.length, su = new Array(ju > 1 ? ju - 1 : 0), Uu = 1; Uu < ju; Uu++) su[Uu - 1] = arguments[Uu];
+        for (let Zu = 0, Xu = Eu.length; Zu < Xu; Zu++) Eu[Zu](...su)
       },
       events: {},
-      on(tt, et) {
-        var Vt;
-        return (null === (Vt = this.events[tt]) || void 0 === Vt ? void 0 : Vt.push(et)) || (this.events[tt] = [et]), () => {
-          var Vt;
-          this.events[tt] = null === (Vt = this.events[tt]) || void 0 === Vt ? void 0 : Vt.filter((tt => et !== tt))
+      on(uu, Eu) {
+        var ju;
+        return (null === (ju = this.events[uu]) || void 0 === ju ? void 0 : ju.push(Eu)) || (this.events[uu] = [Eu]), () => {
+          var ju;
+          this.events[uu] = null === (ju = this.events[uu]) || void 0 === ju ? void 0 : ju.filter((uu => Eu !== uu))
         }
       }
     })
   },
-  9375: (tt, et) => {
-    class Vt {
+  9364: (uu, Eu) => {
+    class ju {
       constructor() {
         this.handlers = []
       }
-      register(tt) {
-        return this.handlers.push(tt), this
+      register(uu) {
+        return this.handlers.push(uu), this
       }
       invoke() {
-        for (var tt = arguments.length, et = new Array(tt), Vt = 0; Vt < tt; Vt++) et[Vt] = arguments[Vt];
-        this.handlers.forEach((tt => tt.apply(this, et)))
+        for (var uu = arguments.length, Eu = new Array(uu), ju = 0; ju < uu; ju++) Eu[ju] = arguments[ju];
+        this.handlers.forEach((uu => uu.apply(this, Eu)))
       }
       invokeAsync() {
-        for (var tt = arguments.length, et = new Array(tt), Vt = 0; Vt < tt; Vt++) et[Vt] = arguments[Vt];
-        return Promise.all(this.handlers.map((tt => tt.apply(this, et))))
+        for (var uu = arguments.length, Eu = new Array(uu), ju = 0; ju < uu; ju++) Eu[ju] = arguments[ju];
+        return Promise.all(this.handlers.map((uu => uu.apply(this, Eu))))
       }
-      remove(tt) {
-        const et = this.handlers.indexOf(tt);
-        this.handlers[et] = this.handlers[this.handlers.length - 1], this.handlers.pop()
+      remove(uu) {
+        const Eu = this.handlers.indexOf(uu);
+        this.handlers[Eu] = this.handlers[this.handlers.length - 1], this.handlers.pop()
       }
       clear() {
         this.handlers = []
       }
     }
-    et.EventEmitter = Vt, et.createSignal = function() {
-      const tt = new Vt;
+    Eu.EventEmitter = ju, Eu.createSignal = function() {
+      const uu = new ju;
 
-      function et(et) {
-        return tt.register(et, null === this)
+      function Eu(Eu) {
+        return uu.register(Eu, null === this)
       }
-      return et.once = et => {
-        const Vt = function() {
-          for (var Ot = arguments.length, qt = new Array(Ot), Dt = 0; Dt < Ot; Dt++) qt[Dt] = arguments[Dt];
-          et.apply(this, qt), tt.remove(Vt)
+      return Eu.once = Eu => {
+        const ju = function() {
+          for (var su = arguments.length, Uu = new Array(su), Zu = 0; Zu < su; Zu++) Uu[Zu] = arguments[Zu];
+          Eu.apply(this, Uu), uu.remove(ju)
         };
-        tt.register(Vt)
-      }, et.remove = et => tt.remove(et), et.invoke = function() {
-        return tt.invoke(...arguments)
-      }, et.invokeAsync = function() {
-        return tt.invokeAsync(...arguments)
-      }, et.clear = () => tt.clear(), et
+        uu.register(ju)
+      }, Eu.remove = Eu => uu.remove(Eu), Eu.invoke = function() {
+        return uu.invoke(...arguments)
+      }, Eu.invokeAsync = function() {
+        return uu.invokeAsync(...arguments)
+      }, Eu.clear = () => uu.clear(), Eu
     }
   },
-  9330: (tt, et) => {
-    var Vt;
-    et.CloseCode = void 0, (Vt = et.CloseCode || (et.CloseCode = {}))[Vt.CONSENTED = 4e3] = "CONSENTED", Vt[Vt.DEVMODE_RESTART = 4010] = "DEVMODE_RESTART";
-    class Ot extends Error {
-      constructor(tt, et) {
-        super(et), this.name = "ServerError", this.code = tt
+  9313: (uu, Eu) => {
+    var ju;
+    Eu.CloseCode = void 0, (ju = Eu.CloseCode || (Eu.CloseCode = {}))[ju.CONSENTED = 4e3] = "CONSENTED", ju[ju.DEVMODE_RESTART = 4010] = "DEVMODE_RESTART";
+    class su extends Error {
+      constructor(uu, Eu) {
+        super(Eu), this.name = "ServerError", this.code = uu
       }
     }
-    class qt extends Error {
-      constructor(tt) {
-        super(tt), this.name = "AbortError"
+    class Uu extends Error {
+      constructor(uu) {
+        super(uu), this.name = "AbortError"
       }
     }
-    et.AbortError = qt, et.ServerError = Ot
+    Eu.AbortError = Uu, Eu.ServerError = su
   },
-  9308: (tt, et, Vt) => {
-    Vt(9317);
-    var Ot = Vt(9320),
-      qt = Vt(9361),
-      Dt = Vt(9337),
-      mt = Vt(9393),
-      dt = Vt(9330),
-      jt = Vt(9377),
-      Ht = Vt(9408),
-      Xt = Vt(9364);
-    Xt.registerSerializer("schema", jt.vR), Xt.registerSerializer("none", Ht.NoneSerializer), et.Client = Ot.Client, et.MatchMakeError = Ot.MatchMakeError, Object.defineProperty(et, "ErrorCode", {
+  9296: (uu, Eu, ju) => {
+    ju(9300);
+    var su = ju(9305),
+      Uu = ju(9343),
+      Zu = ju(9317),
+      Xu = ju(9386),
+      lu = ju(9313),
+      qu = ju(9368),
+      fu = ju(9401),
+      Cu = ju(9351);
+    Cu.registerSerializer("schema", qu.rK), Cu.registerSerializer("none", fu.NoneSerializer), Eu.Client = su.Client, Eu.MatchMakeError = su.MatchMakeError, Object.defineProperty(Eu, "ErrorCode", {
       enumerable: !0,
       get: function() {
-        return qt.ErrorCode
+        return Uu.ErrorCode
       }
-    }), Object.defineProperty(et, "Protocol", {
+    }), Object.defineProperty(Eu, "Protocol", {
       enumerable: !0,
       get: function() {
-        return qt.Protocol
+        return Uu.Protocol
       }
-    }), et.rQ = Dt.rQ, et.Auth = mt.Auth, et.ServerError = dt.ServerError, et.vR = jt.vR, et.getStateCallbacks = jt.getStateCallbacks, et.registerSerializer = Xt.registerSerializer
+    }), Eu.Fb = Zu.Fb, Eu.Auth = Xu.Auth, Eu.ServerError = lu.ServerError, Eu.rK = qu.rK, Eu.getStateCallbacks = qu.getStateCallbacks, Eu.registerSerializer = Cu.registerSerializer
   },
-  9317: () => {
-    ArrayBuffer.isView || (ArrayBuffer.isView = tt => null !== tt && "object" === typeof tt && tt.buffer instanceof ArrayBuffer), "undefined" === typeof globalThis && "undefined" !== typeof window && (window.globalThis = window), "undefined" === typeof FormData && (globalThis.FormData = class {})
+  9300: () => {
+    ArrayBuffer.isView || (ArrayBuffer.isView = uu => null !== uu && "object" === typeof uu && uu.buffer instanceof ArrayBuffer), "undefined" === typeof globalThis && "undefined" !== typeof window && (window.globalThis = window), "undefined" === typeof FormData && (globalThis.FormData = class {})
   },
-  9408: (tt, et) => {
-    et.NoneSerializer = class {
-      setState(tt) {}
+  9401: (uu, Eu) => {
+    Eu.NoneSerializer = class {
+      setState(uu) {}
       getState() {
         return null
       }
-      patch(tt) {}
+      patch(uu) {}
       teardown() {}
-      handshake(tt) {}
+      handshake(uu) {}
     }
   },
-  9377: (tt, et, Vt) => {
-    var Ot = Vt(9348);
-    et.vR = class {
-      setState(tt, et) {
-        this.xE.decode(tt, et)
+  9368: (uu, Eu, ju) => {
+    var su = ju(9329);
+    Eu.rK = class {
+      setState(uu, Eu) {
+        this.zN.decode(uu, Eu)
       }
       getState() {
         return this.state
       }
-      patch(tt, et) {
-        return this.xE.decode(tt, et)
+      patch(uu, Eu) {
+        return this.zN.decode(uu, Eu)
       }
       teardown() {
-        this.xE.root.clearRefs()
+        this.zN.root.clearRefs()
       }
-      handshake(tt, et) {
-        this.state ? (Ot.Reflection.decode(tt, et), this.xE = new Ot.Decoder(this.state)) : (this.xE = Ot.Reflection.decode(tt, et), this.state = this.xE.state)
+      handshake(uu, Eu) {
+        this.state ? (su.Reflection.decode(uu, Eu), this.zN = new su.Decoder(this.state)) : (this.zN = su.Reflection.decode(uu, Eu), this.state = this.zN.state)
       }
-    }, et.getStateCallbacks = function(tt) {
+    }, Eu.getStateCallbacks = function(uu) {
       try {
-        return Ot.getDecoderStateCallbacks(tt.ZN.xE)
-      } catch (et) {
+        return su.getDecoderStateCallbacks(uu.pD.zN)
+      } catch (Eu) {
         return
       }
     }
   },
-  9364: (tt, et) => {
-    const Vt = {};
-    et.getSerializer = function(tt) {
-      const et = Vt[tt];
-      if (!et) throw new Error("missing serializer: " + tt);
-      return et
-    }, et.registerSerializer = function(tt, et) {
-      Vt[tt] = et
+  9351: (uu, Eu) => {
+    const ju = {};
+    Eu.getSerializer = function(uu) {
+      const Eu = ju[uu];
+      if (!Eu) throw new Error("missing serializer: " + uu);
+      return Eu
+    }, Eu.registerSerializer = function(uu, Eu) {
+      ju[uu] = Eu
     }
   },
-  9342: (tt, et, Vt) => {
-    var Ot = Vt(9324),
-      qt = Vt(9348);
-    et.H3TransportTransport = class {
-      constructor(tt) {
-        this.events = tt, this.isOpen = !1, this.lengthPrefixBuffer = new Uint8Array(9)
+  9321: (uu, Eu, ju) => {
+    var su = ju(9308),
+      Uu = ju(9329);
+    Eu.H3TransportTransport = class {
+      constructor(uu) {
+        this.events = uu, this.isOpen = !1, this.lengthPrefixBuffer = new Uint8Array(9)
       }
-      connect(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const Vt = et.fingerprint && {
+      connect(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const ju = Eu.fingerprint && {
           serverCertificateHashes: [{
             algorithm: "sha-256",
-            value: new Uint8Array(et.fingerprint).buffer
+            value: new Uint8Array(Eu.fingerprint).buffer
           }]
         } || void 0;
-        this.wt = new WebTransport(tt, Vt), this.wt.ready.then((tt => {
-          console.log("WebTransport ready!", tt), this.isOpen = !0, this.unreliableReader = this.wt.datagrams.readable.getReader(), this.unreliableWriter = this.wt.datagrams.writable.getWriter();
-          this.wt.incomingBidirectionalStreams.getReader().read().then((tt => {
-            this.reader = tt.value.readable.getReader(), this.writer = tt.value.writable.getWriter(), this.sendSeatReservation(et.room.roomId, et.sessionId, et.reconnectionToken), this.readIncomingData(), this.readIncomingUnreliableData()
-          })).catch((tt => {
-            console.error("failed to read incoming stream", tt), console.error("TODO: close the connection")
+        this.wt = new WebTransport(uu, ju), this.wt.ready.then((uu => {
+          console.log("WebTransport ready!", uu), this.isOpen = !0, this.unreliableReader = this.wt.datagrams.readable.getReader(), this.unreliableWriter = this.wt.datagrams.writable.getWriter();
+          this.wt.incomingBidirectionalStreams.getReader().read().then((uu => {
+            this.reader = uu.value.readable.getReader(), this.writer = uu.value.writable.getWriter(), this.sendSeatReservation(Eu.room.roomId, Eu.sessionId, Eu.reconnectionToken), this.readIncomingData(), this.readIncomingUnreliableData()
+          })).catch((uu => {
+            console.error("failed to read incoming stream", uu), console.error("TODO: close the connection")
           }))
-        })).catch((tt => {
-          console.log("WebTransport not ready!", tt), this._close()
-        })), this.wt.closed.then((tt => {
-          console.log("WebTransport closed w/ success", tt), this.events.onclose({
-            code: tt.closeCode,
-            reason: tt.reason
+        })).catch((uu => {
+          console.log("WebTransport not ready!", uu), this._close()
+        })), this.wt.closed.then((uu => {
+          console.log("WebTransport closed w/ success", uu), this.events.onclose({
+            code: uu.closeCode,
+            reason: uu.reason
           })
-        })).catch((tt => {
-          console.log("WebTransport closed w/ error", tt), this.events.onerror(tt), this.events.onclose({
-            code: tt.closeCode,
-            reason: tt.reason
+        })).catch((uu => {
+          console.log("WebTransport closed w/ error", uu), this.events.onerror(uu), this.events.onclose({
+            code: uu.closeCode,
+            reason: uu.reason
           })
         })).finally((() => {
           this._close()
         }))
       }
-      send(tt) {
-        const et = qt.encode.number(this.lengthPrefixBuffer, tt.length, {
+      send(uu) {
+        const Eu = Uu.encode.number(this.lengthPrefixBuffer, uu.length, {
             offset: 0
           }),
-          Vt = new Uint8Array(et + tt.length);
-        Vt.set(this.lengthPrefixBuffer.subarray(0, et), 0), Vt.set(tt, et), this.writer.write(Vt)
+          ju = new Uint8Array(Eu + uu.length);
+        ju.set(this.lengthPrefixBuffer.subarray(0, Eu), 0), ju.set(uu, Eu), this.writer.write(ju)
       }
-      sendUnreliable(tt) {
-        const et = qt.encode.number(this.lengthPrefixBuffer, tt.length, {
+      sendUnreliable(uu) {
+        const Eu = Uu.encode.number(this.lengthPrefixBuffer, uu.length, {
             offset: 0
           }),
-          Vt = new Uint8Array(et + tt.length);
-        Vt.set(this.lengthPrefixBuffer.subarray(0, et), 0), Vt.set(tt, et), this.unreliableWriter.write(Vt)
+          ju = new Uint8Array(Eu + uu.length);
+        ju.set(this.lengthPrefixBuffer.subarray(0, Eu), 0), ju.set(uu, Eu), this.unreliableWriter.write(ju)
       }
-      close(tt, et) {
+      close(uu, Eu) {
         try {
           this.wt.close({
-            closeCode: tt,
-            reason: et
+            closeCode: uu,
+            reason: Eu
           })
-        } catch (Vt) {
-          console.error(Vt)
+        } catch (ju) {
+          console.error(ju)
         }
       }
       readIncomingData() {
-        return Ot.__awaiter(this, void 0, void 0, (function*() {
-          let tt;
+        return su.__awaiter(this, void 0, void 0, (function*() {
+          let uu;
           for (; this.isOpen;) {
             try {
-              tt = yield this.reader.read();
-              const et = tt.value,
-                Vt = {
+              uu = yield this.reader.read();
+              const Eu = uu.value,
+                ju = {
                   offset: 0
                 };
               do {
-                const tt = qt.decode.number(et, Vt);
+                const uu = Uu.decode.number(Eu, ju);
                 this.events.onmessage({
-                  data: et.subarray(Vt.offset, Vt.offset + tt)
-                }), Vt.offset += tt
-              } while (Vt.offset < et.length)
-            } catch (et) {
-              -1 === et.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", et);
+                  data: Eu.subarray(ju.offset, ju.offset + uu)
+                }), ju.offset += uu
+              } while (ju.offset < Eu.length)
+            } catch (Eu) {
+              -1 === Eu.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", Eu);
               break
             }
-            if (tt.done) break
+            if (uu.done) break
           }
         }))
       }
       readIncomingUnreliableData() {
-        return Ot.__awaiter(this, void 0, void 0, (function*() {
-          let tt;
+        return su.__awaiter(this, void 0, void 0, (function*() {
+          let uu;
           for (; this.isOpen;) {
             try {
-              tt = yield this.unreliableReader.read();
-              const et = tt.value,
-                Vt = {
+              uu = yield this.unreliableReader.read();
+              const Eu = uu.value,
+                ju = {
                   offset: 0
                 };
               do {
-                const tt = qt.decode.number(et, Vt);
+                const uu = Uu.decode.number(Eu, ju);
                 this.events.onmessage({
-                  data: et.subarray(Vt.offset, Vt.offset + tt)
-                }), Vt.offset += tt
-              } while (Vt.offset < et.length)
-            } catch (et) {
-              -1 === et.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", et);
+                  data: Eu.subarray(ju.offset, ju.offset + uu)
+                }), ju.offset += uu
+              } while (ju.offset < Eu.length)
+            } catch (Eu) {
+              -1 === Eu.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", Eu);
               break
             }
-            if (tt.done) break
+            if (uu.done) break
           }
         }))
       }
-      sendSeatReservation(tt, et, Vt) {
-        const Ot = {
+      sendSeatReservation(uu, Eu, ju) {
+        const su = {
             offset: 0
           },
-          Dt = [];
-        qt.encode.string(Dt, tt, Ot), qt.encode.string(Dt, et, Ot), Vt && qt.encode.string(Dt, Vt, Ot), this.writer.write(new Uint8Array(Dt).buffer)
+          Zu = [];
+        Uu.encode.string(Zu, uu, su), Uu.encode.string(Zu, Eu, su), ju && Uu.encode.string(Zu, ju, su), this.writer.write(new Uint8Array(Zu).buffer)
       }
       _close() {
         this.isOpen = !1
       }
     }
   },
-  9355: (tt, et, Vt) => {
-    var Ot = Vt(9357);
-    const qt = globalThis.WebSocket || Ot;
-    et.WebSocketTransport = class {
-      constructor(tt) {
-        this.events = tt
+  9333: (uu, Eu, ju) => {
+    var su = ju(9340);
+    const Uu = globalThis.WebSocket || su;
+    Eu.WebSocketTransport = class {
+      constructor(uu) {
+        this.events = uu
       }
-      send(tt) {
-        this.ws.send(tt)
+      send(uu) {
+        this.ws.send(uu)
       }
-      sendUnreliable(tt) {
+      sendUnreliable(uu) {
         console.warn("colyseus.js: The WebSocket transport does not support unreliable messages")
       }
-      connect(tt, et) {
+      connect(uu, Eu) {
         try {
-          this.ws = new qt(tt, {
-            headers: et,
+          this.ws = new Uu(uu, {
+            headers: Eu,
             protocols: this.protocols
           })
-        } catch (Vt) {
-          this.ws = new qt(tt, this.protocols)
+        } catch (ju) {
+          this.ws = new Uu(uu, this.protocols)
         }
         this.ws.binaryType = "arraybuffer", this.ws.onopen = this.events.onopen, this.ws.onmessage = this.events.onmessage, this.ws.onclose = this.events.onclose, this.ws.onerror = this.events.onerror
       }
-      close(tt, et) {
-        this.ws.close(tt, et)
+      close(uu, Eu) {
+        this.ws.close(uu, Eu)
       }
       get isOpen() {
-        return this.ws.readyState === qt.OPEN
+        return this.ws.readyState === Uu.OPEN
       }
     }
   },
-  9357: tt => {
-    tt.exports = function() {
+  9340: uu => {
+    uu.exports = function() {
       throw new Error("ws does not work in the browser. Browser clients must use the native WebSocket object")
     }
   },
-  9391: (tt, et, Vt) => {
-    function Ot(tt, et) {
-      et.headers = tt.headers || {}, et.statusMessage = tt.statusText, et.statusCode = tt.status, et.data = tt.response
+  9381: (uu, Eu, ju) => {
+    function su(uu, Eu) {
+      Eu.headers = uu.headers || {}, Eu.statusMessage = uu.statusText, Eu.statusCode = uu.status, Eu.data = uu.response
     }
 
-    function qt(tt, et, Vt) {
-      return new Promise((function(qt, Dt) {
-        Vt = Vt || {};
-        var mt, dt, jt, Ht = new XMLHttpRequest,
-          Xt = Vt.body,
-          Qt = Vt.headers || {};
-        for (mt in Vt.timeout && (Ht.timeout = Vt.timeout), Ht.ontimeout = Ht.onerror = function(tt) {
-            tt.timeout = "timeout" == tt.type, Dt(tt)
-          }, Ht.onabort = function(tt) {
-            tt.aborted = !0, Dt(tt)
-          }, Ht.open(tt, et.href || et), Ht.onload = function() {
-            for (jt = Ht.getAllResponseHeaders().trim().split(/[\r\n]+/), Ot(Ht, Ht); dt = jt.shift();) dt = dt.split(": "), Ht.headers[dt.shift().toLowerCase()] = dt.join(": ");
-            if ((dt = Ht.headers["content-type"]) && ~dt.indexOf("application/json")) try {
-              Ht.data = JSON.parse(Ht.data, Vt.reviver)
-            } catch (tt) {
-              return Ot(Ht, tt), Dt(tt)
-            }(Ht.status >= 400 ? Dt : qt)(Ht)
-          }, typeof FormData < "u" && Xt instanceof FormData || Xt && "object" == typeof Xt && (Qt["content-type"] = "application/json", Xt = JSON.stringify(Xt)), Ht.withCredentials = !!Vt.withCredentials, Qt) Ht.setRequestHeader(mt, Qt[mt]);
-        Ht.send(Xt), Vt.signal && Vt.signal.addEventListener("abort", (function() {
-          Ht.abort()
+    function Uu(uu, Eu, ju) {
+      return new Promise((function(Uu, Zu) {
+        ju = ju || {};
+        var Xu, lu, qu, fu = new XMLHttpRequest,
+          Cu = ju.body,
+          bu = ju.headers || {};
+        for (Xu in ju.timeout && (fu.timeout = ju.timeout), fu.ontimeout = fu.onerror = function(uu) {
+            uu.timeout = "timeout" == uu.type, Zu(uu)
+          }, fu.onabort = function(uu) {
+            uu.aborted = !0, Zu(uu)
+          }, fu.open(uu, Eu.href || Eu), fu.onload = function() {
+            for (qu = fu.getAllResponseHeaders().trim().split(/[\r\n]+/), su(fu, fu); lu = qu.shift();) lu = lu.split(": "), fu.headers[lu.shift().toLowerCase()] = lu.join(": ");
+            if ((lu = fu.headers["content-type"]) && ~lu.indexOf("application/json")) try {
+              fu.data = JSON.parse(fu.data, ju.reviver)
+            } catch (uu) {
+              return su(fu, uu), Zu(uu)
+            }(fu.status >= 400 ? Zu : Uu)(fu)
+          }, typeof FormData < "u" && Cu instanceof FormData || Cu && "object" == typeof Cu && (bu["content-type"] = "application/json", Cu = JSON.stringify(Cu)), fu.withCredentials = !!ju.withCredentials, bu) fu.setRequestHeader(Xu, bu[Xu]);
+        fu.send(Cu), ju.signal && ju.signal.addEventListener("abort", (function() {
+          fu.abort()
         }))
       }))
     }
-    Vt.r(et), Vt.d(et, {
-      del: () => jt,
-      get: () => Dt,
-      patch: () => dt,
-      post: () => mt,
-      put: () => Ht,
-      send: () => qt
+    ju.r(Eu), ju.d(Eu, {
+      del: () => qu,
+      get: () => Zu,
+      patch: () => lu,
+      post: () => Xu,
+      put: () => fu,
+      send: () => Uu
     });
-    var Dt = qt.bind(qt, "GET"),
-      mt = qt.bind(qt, "POST"),
-      dt = qt.bind(qt, "PATCH"),
-      jt = qt.bind(qt, "DELETE"),
-      Ht = qt.bind(qt, "PUT")
+    var Zu = Uu.bind(Uu, "GET"),
+      Xu = Uu.bind(Uu, "POST"),
+      lu = Uu.bind(Uu, "PATCH"),
+      qu = Uu.bind(Uu, "DELETE"),
+      fu = Uu.bind(Uu, "PUT")
   },
-  9380: (tt, et, Vt) => {
-    var Ot, qt, Dt;
-    Vt.r(et), Vt.d(et, {
-      ALWAYS: () => pe,
-      C1: () => Ct,
-      DECIMAL_FIT: () => Te,
-      DECIMAL_ROUND: () => xe,
-      Decoder: () => He,
-      Encoder: () => Ye,
-      FLOAT32_OPTIONS: () => fe,
-      NEVER: () => Be,
-      Packr: () => Le,
-      RESERVE_START_SPACE: () => ne,
-      RESET_BUFFER_MODE: () => se,
-      REUSE_BUFFER_MODE: () => ge,
-      Unpackr: () => St,
-      addExtension: () => oe,
-      clearSource: () => de,
-      decode: () => Ee,
-      decodeIter: () => tV,
-      encode: () => ie,
-      encodeIter: () => eV,
-      isNativeAccelerationEnabled: () => rt,
-      mapsAsObjects: () => OV,
-      pack: () => Ae,
-      roundFloat32: () => be,
-      unpack: () => Qe,
-      unpackMultiple: () => le,
-      useRecords: () => VV
+  9370: (uu, Eu, ju) => {
+    var su, Uu, Zu;
+    ju.r(Eu), ju.d(Eu, {
+      ALWAYS: () => TE,
+      C1: () => Gu,
+      DECIMAL_FIT: () => AE,
+      DECIMAL_ROUND: () => HE,
+      Decoder: () => qE,
+      Encoder: () => tE,
+      FLOAT32_OPTIONS: () => NE,
+      NEVER: () => xE,
+      Packr: () => VE,
+      RESERVE_START_SPACE: () => zE,
+      RESET_BUFFER_MODE: () => yE,
+      REUSE_BUFFER_MODE: () => nE,
+      Unpackr: () => Pu,
+      addExtension: () => SE,
+      clearSource: () => XE,
+      decode: () => cE,
+      decodeIter: () => RE,
+      encode: () => LE,
+      encodeIter: () => uj,
+      isNativeAccelerationEnabled: () => Iu,
+      mapsAsObjects: () => jj,
+      pack: () => BE,
+      roundFloat32: () => ME,
+      unpack: () => CE,
+      unpackMultiple: () => bE,
+      useRecords: () => Ej
     });
     try {
-      Ot = new TextDecoder
-    } catch (qV) {}
-    var mt = 0;
-    const dt = [];
-    var jt, Ht, Xt, Qt, lt, Et = dt,
-      ft = 0,
-      wt = {},
-      yt = 0,
-      Nt = 0,
-      Mt = [],
-      bt = {
+      su = new TextDecoder
+    } catch (sj) {}
+    var Xu = 0;
+    const lu = [];
+    var qu, fu, Cu, bu, cu, Nu = lu,
+      Ou = 0,
+      Yu = {},
+      hu = 0,
+      Du = 0,
+      gu = [],
+      Mu = {
         useRecords: !1,
         mapsAsObjects: !0
       };
-    class Jt {}
-    const Ct = new Jt;
-    Ct.name = "MessagePack 0xC1";
-    var ut, Kt, ht, vt = !1,
-      Wt = 2;
+    class eu {}
+    const Gu = new eu;
+    Gu.name = "MessagePack 0xC1";
+    var pu, wu, Ju, du = !1,
+      au = 2;
     try {
       new Function("")
-    } catch (qV) {
-      Wt = 1 / 0
+    } catch (sj) {
+      au = 1 / 0
     }
-    class St {
-      constructor(tt) {
-        tt && (!1 === tt.useRecords && void 0 === tt.mapsAsObjects && (tt.mapsAsObjects = !0), tt.sequential && !1 !== tt.trusted && (tt.trusted = !0, tt.structures || 0 == tt.useRecords || (tt.structures = [], tt.maxSharedStructures || (tt.maxSharedStructures = 0))), tt.structures ? tt.structures.sharedLength = tt.structures.length : tt.getStructures && ((tt.structures = []).uninitialized = !0, tt.structures.sharedLength = 0), tt.int64AsNumber && (tt.int64AsType = "number")), Object.assign(this, tt)
+    class Pu {
+      constructor(uu) {
+        uu && (!1 === uu.useRecords && void 0 === uu.mapsAsObjects && (uu.mapsAsObjects = !0), uu.sequential && !1 !== uu.trusted && (uu.trusted = !0, uu.structures || 0 == uu.useRecords || (uu.structures = [], uu.maxSharedStructures || (uu.maxSharedStructures = 0))), uu.structures ? uu.structures.sharedLength = uu.structures.length : uu.getStructures && ((uu.structures = []).uninitialized = !0, uu.structures.sharedLength = 0), uu.int64AsNumber && (uu.int64AsType = "number")), Object.assign(this, uu)
       }
-      unpack(tt, et) {
-        if (qt) return me((() => (de(), this ? this.unpack(tt, et) : St.prototype.unpack.call(bt, tt, et))));
-        tt.buffer || tt.constructor !== ArrayBuffer || (tt = "undefined" !== typeof Buffer ? Buffer.from(tt) : new Uint8Array(tt)), "object" === typeof et ? (Dt = et.end || tt.length, mt = et.start || 0) : (mt = 0, Dt = et > -1 ? et : tt.length), ft = 0, Nt = 0, Ht = null, Et = dt, Xt = null, qt = tt;
+      unpack(uu, Eu) {
+        if (Uu) return ZE((() => (XE(), this ? this.unpack(uu, Eu) : Pu.prototype.unpack.call(Mu, uu, Eu))));
+        uu.buffer || uu.constructor !== ArrayBuffer || (uu = "undefined" !== typeof Buffer ? Buffer.from(uu) : new Uint8Array(uu)), "object" === typeof Eu ? (Zu = Eu.end || uu.length, Xu = Eu.start || 0) : (Xu = 0, Zu = Eu > -1 ? Eu : uu.length), Ou = 0, Du = 0, fu = null, Nu = lu, Cu = null, Uu = uu;
         try {
-          lt = tt.dataView || (tt.dataView = new DataView(tt.buffer, tt.byteOffset, tt.byteLength))
-        } catch (qV) {
-          if (qt = null, tt instanceof Uint8Array) throw qV;
-          throw new Error("Source must be a Uint8Array or Buffer but was a " + (tt && "object" == typeof tt ? tt.constructor.name : typeof tt))
+          cu = uu.dataView || (uu.dataView = new DataView(uu.buffer, uu.byteOffset, uu.byteLength))
+        } catch (sj) {
+          if (Uu = null, uu instanceof Uint8Array) throw sj;
+          throw new Error("Source must be a Uint8Array or Buffer but was a " + (uu && "object" == typeof uu ? uu.constructor.name : typeof uu))
         }
-        if (this instanceof St) {
-          if (wt = this, this.structures) return jt = this.structures, ct(et);
-          (!jt || jt.length > 0) && (jt = [])
-        } else wt = bt, (!jt || jt.length > 0) && (jt = []);
-        return ct(et)
+        if (this instanceof Pu) {
+          if (Yu = this, this.structures) return qu = this.structures, ou(Eu);
+          (!qu || qu.length > 0) && (qu = [])
+        } else Yu = Mu, (!qu || qu.length > 0) && (qu = []);
+        return ou(Eu)
       }
-      unpackMultiple(tt, et) {
-        let Vt, Ot = 0;
+      unpackMultiple(uu, Eu) {
+        let ju, su = 0;
         try {
-          vt = !0;
-          let qt = tt.length,
-            Dt = this ? this.unpack(tt, qt) : Xe.unpack(tt, qt);
-          if (!et) {
-            for (Vt = [Dt]; mt < qt;) Ot = mt, Vt.push(ct());
-            return Vt
+          du = !0;
+          let Uu = uu.length,
+            Zu = this ? this.unpack(uu, Uu) : fE.unpack(uu, Uu);
+          if (!Eu) {
+            for (ju = [Zu]; Xu < Uu;) su = Xu, ju.push(ou());
+            return ju
           }
-          if (!1 === et(Dt, Ot, mt)) return;
-          for (; mt < qt;)
-            if (Ot = mt, !1 === et(ct(), Ot, mt)) return
-        } catch (qV) {
-          throw qV.lastPosition = Ot, qV.values = Vt, qV
+          if (!1 === Eu(Zu, su, Xu)) return;
+          for (; Xu < Uu;)
+            if (su = Xu, !1 === Eu(ou(), su, Xu)) return
+        } catch (sj) {
+          throw sj.lastPosition = su, sj.values = ju, sj
         } finally {
-          vt = !1, de()
+          du = !1, XE()
         }
       }
-      _mergeStructures(tt, et) {
-        Kt && (tt = Kt.call(this, tt)), tt = tt || [], Object.isFrozen(tt) && (tt = tt.map((tt => tt.slice(0))));
-        for (let Vt = 0, Ot = tt.length; Vt < Ot; Vt++) {
-          let et = tt[Vt];
-          et && (et.isShared = !0, Vt >= 32 && (et.highByte = Vt - 32 >> 5))
+      _mergeStructures(uu, Eu) {
+        wu && (uu = wu.call(this, uu)), uu = uu || [], Object.isFrozen(uu) && (uu = uu.map((uu => uu.slice(0))));
+        for (let ju = 0, su = uu.length; ju < su; ju++) {
+          let Eu = uu[ju];
+          Eu && (Eu.isShared = !0, ju >= 32 && (Eu.highByte = ju - 32 >> 5))
         }
-        tt.sharedLength = tt.length;
-        for (let Vt in et || [])
-          if (Vt >= 0) {
-            let Ot = tt[Vt],
-              qt = et[Vt];
-            qt && (Ot && ((tt.restoreStructures || (tt.restoreStructures = []))[Vt] = Ot), tt[Vt] = qt)
-          } return this.structures = tt
+        uu.sharedLength = uu.length;
+        for (let ju in Eu || [])
+          if (ju >= 0) {
+            let su = uu[ju],
+              Uu = Eu[ju];
+            Uu && (su && ((uu.restoreStructures || (uu.restoreStructures = []))[ju] = su), uu[ju] = Uu)
+          } return this.structures = uu
       }
-      decode(tt, et) {
-        return this.unpack(tt, et)
+      decode(uu, Eu) {
+        return this.unpack(uu, Eu)
       }
     }
 
-    function ct(tt) {
+    function ou(uu) {
       try {
-        if (!wt.trusted && !vt) {
-          let tt = jt.sharedLength || 0;
-          tt < jt.length && (jt.length = tt)
+        if (!Yu.trusted && !du) {
+          let uu = qu.sharedLength || 0;
+          uu < qu.length && (qu.length = uu)
         }
-        let et;
-        if (wt.randomAccessStructure && qt[mt] < 64 && qt[mt] >= 32 && ut ? (et = ut(qt, mt, Dt, wt), qt = null, tt && tt.lazy || !et || (et = et.toJSON()), mt = Dt) : et = It(), Xt && (mt = Xt.postBundlePosition, Xt = null), vt && (jt.restoreStructures = null), mt == Dt) jt && jt.restoreStructures && Rt(), jt = null, qt = null, Qt && (Qt = null);
+        let Eu;
+        if (Yu.randomAccessStructure && Uu[Xu] < 64 && Uu[Xu] >= 32 && pu ? (Eu = pu(Uu, Xu, Zu, Yu), Uu = null, uu && uu.lazy || !Eu || (Eu = Eu.toJSON()), Xu = Zu) : Eu = mu(), Cu && (Xu = Cu.postBundlePosition, Cu = null), du && (qu.restoreStructures = null), Xu == Zu) qu && qu.restoreStructures && ku(), qu = null, Uu = null, bu && (bu = null);
         else {
-          if (mt > Dt) throw new Error("Unexpected end of MessagePack data");
-          if (!vt) {
-            let tt;
+          if (Xu > Zu) throw new Error("Unexpected end of MessagePack data");
+          if (!du) {
+            let uu;
             try {
-              tt = JSON.stringify(et, ((tt, et) => "bigint" === typeof et ? `${et}n` : et)).slice(0, 100)
-            } catch (qV) {
-              tt = "(JSON view not available " + qV + ")"
+              uu = JSON.stringify(Eu, ((uu, Eu) => "bigint" === typeof Eu ? `${Eu}n` : Eu)).slice(0, 100)
+            } catch (sj) {
+              uu = "(JSON view not available " + sj + ")"
             }
-            throw new Error("Data read, but end of buffer not reached " + tt)
+            throw new Error("Data read, but end of buffer not reached " + uu)
           }
         }
-        return et
-      } catch (qV) {
-        throw jt && jt.restoreStructures && Rt(), de(), (qV instanceof RangeError || qV.message.startsWith("Unexpected end of buffer") || mt > Dt) && (qV.incomplete = !0), qV
+        return Eu
+      } catch (sj) {
+        throw qu && qu.restoreStructures && ku(), XE(), (sj instanceof RangeError || sj.message.startsWith("Unexpected end of buffer") || Xu > Zu) && (sj.incomplete = !0), sj
       }
     }
 
-    function Rt() {
-      for (let tt in jt.restoreStructures) jt[tt] = jt.restoreStructures[tt];
-      jt.restoreStructures = null
+    function ku() {
+      for (let uu in qu.restoreStructures) qu[uu] = qu.restoreStructures[uu];
+      qu.restoreStructures = null
     }
 
-    function It() {
-      let tt = qt[mt++];
-      if (tt < 160) {
-        if (tt < 128) {
-          if (tt < 64) return tt;
+    function mu() {
+      let uu = Uu[Xu++];
+      if (uu < 160) {
+        if (uu < 128) {
+          if (uu < 64) return uu;
           {
-            let et = jt[63 & tt] || wt.getStructures && Ft()[63 & tt];
-            return et ? (et.read || (et.read = Zt(et, 63 & tt)), et.read()) : tt
+            let Eu = qu[63 & uu] || Yu.getStructures && ru()[63 & uu];
+            return Eu ? (Eu.read || (Eu.read = Ku(Eu, 63 & uu)), Eu.read()) : uu
           }
         }
-        if (tt < 144) {
-          if (tt -= 128, wt.mapsAsObjects) {
-            let et = {};
-            for (let Vt = 0; Vt < tt; Vt++) {
-              let tt = nt();
-              "__proto__" === tt && (tt = "__proto_"), et[tt] = It()
+        if (uu < 144) {
+          if (uu -= 128, Yu.mapsAsObjects) {
+            let Eu = {};
+            for (let ju = 0; ju < uu; ju++) {
+              let uu = zu();
+              "__proto__" === uu && (uu = "__proto_"), Eu[uu] = mu()
             }
-            return et
+            return Eu
           } {
-            let et = new Map;
-            for (let Vt = 0; Vt < tt; Vt++) et.set(It(), It());
-            return et
+            let Eu = new Map;
+            for (let ju = 0; ju < uu; ju++) Eu.set(mu(), mu());
+            return Eu
           }
         } {
-          tt -= 144;
-          let et = new Array(tt);
-          for (let Vt = 0; Vt < tt; Vt++) et[Vt] = It();
-          return wt.freezeData ? Object.freeze(et) : et
+          uu -= 144;
+          let Eu = new Array(uu);
+          for (let ju = 0; ju < uu; ju++) Eu[ju] = mu();
+          return Yu.freezeData ? Object.freeze(Eu) : Eu
         }
       }
-      if (tt < 192) {
-        let et = tt - 160;
-        if (Nt >= mt) return Ht.slice(mt - yt, (mt += et) - yt);
-        if (0 == Nt && Dt < 140) {
-          let tt = et < 16 ? pt(et) : Bt(et);
-          if (null != tt) return tt
+      if (uu < 192) {
+        let Eu = uu - 160;
+        if (Du >= Xu) return fu.slice(Xu - hu, (Xu += Eu) - hu);
+        if (0 == Du && Zu < 140) {
+          let uu = Eu < 16 ? Tu(Eu) : xu(Eu);
+          if (null != uu) return uu
         }
-        return kt(et)
+        return Qu(Eu)
       } {
-        let et;
-        switch (tt) {
+        let Eu;
+        switch (uu) {
           case 192:
             return null;
           case 193:
-            return Xt ? (et = It(), et > 0 ? Xt[1].slice(Xt.position1, Xt.position1 += et) : Xt[0].slice(Xt.position0, Xt.position0 -= et)) : Ct;
+            return Cu ? (Eu = mu(), Eu > 0 ? Cu[1].slice(Cu.position1, Cu.position1 += Eu) : Cu[0].slice(Cu.position0, Cu.position0 -= Eu)) : Gu;
           case 194:
             return !1;
           case 195:
             return !0;
           case 196:
-            if (et = qt[mt++], void 0 === et) throw new Error("Unexpected end of buffer");
-            return Tt(et);
+            if (Eu = Uu[Xu++], void 0 === Eu) throw new Error("Unexpected end of buffer");
+            return Au(Eu);
           case 197:
-            return et = lt.getUint16(mt), mt += 2, Tt(et);
+            return Eu = cu.getUint16(Xu), Xu += 2, Au(Eu);
           case 198:
-            return et = lt.getUint32(mt), mt += 4, Tt(et);
+            return Eu = cu.getUint32(Xu), Xu += 4, Au(Eu);
           case 199:
-            return gt(qt[mt++]);
+            return nu(Uu[Xu++]);
           case 200:
-            return et = lt.getUint16(mt), mt += 2, gt(et);
+            return Eu = cu.getUint16(Xu), Xu += 2, nu(Eu);
           case 201:
-            return et = lt.getUint32(mt), mt += 4, gt(et);
+            return Eu = cu.getUint32(Xu), Xu += 4, nu(Eu);
           case 202:
-            if (et = lt.getFloat32(mt), wt.useFloat32 > 2) {
-              let tt = je[(127 & qt[mt]) << 1 | qt[mt + 1] >> 7];
-              return mt += 4, (tt * et + (et > 0 ? .5 : -.5) | 0) / tt
+            if (Eu = cu.getFloat32(Xu), Yu.useFloat32 > 2) {
+              let uu = lE[(127 & Uu[Xu]) << 1 | Uu[Xu + 1] >> 7];
+              return Xu += 4, (uu * Eu + (Eu > 0 ? .5 : -.5) | 0) / uu
             }
-            return mt += 4, et;
+            return Xu += 4, Eu;
           case 203:
-            return et = lt.getFloat64(mt), mt += 8, et;
+            return Eu = cu.getFloat64(Xu), Xu += 8, Eu;
           case 204:
-            return qt[mt++];
+            return Uu[Xu++];
           case 205:
-            return et = lt.getUint16(mt), mt += 2, et;
+            return Eu = cu.getUint16(Xu), Xu += 2, Eu;
           case 206:
-            return et = lt.getUint32(mt), mt += 4, et;
+            return Eu = cu.getUint32(Xu), Xu += 4, Eu;
           case 207:
-            return "number" === wt.int64AsType ? (et = 4294967296 * lt.getUint32(mt), et += lt.getUint32(mt + 4)) : "string" === wt.int64AsType ? et = lt.getBigUint64(mt).toString() : "auto" === wt.int64AsType ? (et = lt.getBigUint64(mt), et <= BigInt(2) << BigInt(52) && (et = Number(et))) : et = lt.getBigUint64(mt), mt += 8, et;
+            return "number" === Yu.int64AsType ? (Eu = 4294967296 * cu.getUint32(Xu), Eu += cu.getUint32(Xu + 4)) : "string" === Yu.int64AsType ? Eu = cu.getBigUint64(Xu).toString() : "auto" === Yu.int64AsType ? (Eu = cu.getBigUint64(Xu), Eu <= BigInt(2) << BigInt(52) && (Eu = Number(Eu))) : Eu = cu.getBigUint64(Xu), Xu += 8, Eu;
           case 208:
-            return lt.getInt8(mt++);
+            return cu.getInt8(Xu++);
           case 209:
-            return et = lt.getInt16(mt), mt += 2, et;
+            return Eu = cu.getInt16(Xu), Xu += 2, Eu;
           case 210:
-            return et = lt.getInt32(mt), mt += 4, et;
+            return Eu = cu.getInt32(Xu), Xu += 4, Eu;
           case 211:
-            return "number" === wt.int64AsType ? (et = 4294967296 * lt.getInt32(mt), et += lt.getUint32(mt + 4)) : "string" === wt.int64AsType ? et = lt.getBigInt64(mt).toString() : "auto" === wt.int64AsType ? (et = lt.getBigInt64(mt), et >= BigInt(-2) << BigInt(52) && et <= BigInt(2) << BigInt(52) && (et = Number(et))) : et = lt.getBigInt64(mt), mt += 8, et;
+            return "number" === Yu.int64AsType ? (Eu = 4294967296 * cu.getInt32(Xu), Eu += cu.getUint32(Xu + 4)) : "string" === Yu.int64AsType ? Eu = cu.getBigInt64(Xu).toString() : "auto" === Yu.int64AsType ? (Eu = cu.getBigInt64(Xu), Eu >= BigInt(-2) << BigInt(52) && Eu <= BigInt(2) << BigInt(52) && (Eu = Number(Eu))) : Eu = cu.getBigInt64(Xu), Xu += 8, Eu;
           case 212:
-            if (et = qt[mt++], 114 == et) return ee(63 & qt[mt++]);
+            if (Eu = Uu[Xu++], 114 == Eu) return uE(63 & Uu[Xu++]);
             {
-              let tt = Mt[et];
-              if (tt) return tt.read ? (mt++, tt.read(It())) : tt.noBuffer ? (mt++, tt()) : tt(qt.subarray(mt, ++mt));
-              throw new Error("Unknown extension " + et)
+              let uu = gu[Eu];
+              if (uu) return uu.read ? (Xu++, uu.read(mu())) : uu.noBuffer ? (Xu++, uu()) : uu(Uu.subarray(Xu, ++Xu));
+              throw new Error("Unknown extension " + Eu)
             }
           case 213:
-            return et = qt[mt], 114 == et ? (mt++, ee(63 & qt[mt++], qt[mt++])) : gt(2);
+            return Eu = Uu[Xu], 114 == Eu ? (Xu++, uE(63 & Uu[Xu++], Uu[Xu++])) : nu(2);
           case 214:
-            return gt(4);
+            return nu(4);
           case 215:
-            return gt(8);
+            return nu(8);
           case 216:
-            return gt(16);
+            return nu(16);
           case 217:
-            return et = qt[mt++], Nt >= mt ? Ht.slice(mt - yt, (mt += et) - yt) : Gt(et);
+            return Eu = Uu[Xu++], Du >= Xu ? fu.slice(Xu - hu, (Xu += Eu) - hu) : iu(Eu);
           case 218:
-            return et = lt.getUint16(mt), Nt >= (mt += 2) ? Ht.slice(mt - yt, (mt += et) - yt) : zt(et);
+            return Eu = cu.getUint16(Xu), Du >= (Xu += 2) ? fu.slice(Xu - hu, (Xu += Eu) - hu) : Wu(Eu);
           case 219:
-            return et = lt.getUint32(mt), Nt >= (mt += 4) ? Ht.slice(mt - yt, (mt += et) - yt) : ot(et);
+            return Eu = cu.getUint32(Xu), Du >= (Xu += 4) ? fu.slice(Xu - hu, (Xu += Eu) - hu) : Su(Eu);
           case 220:
-            return et = lt.getUint16(mt), mt += 2, At(et);
+            return Eu = cu.getUint16(Xu), Xu += 2, Bu(Eu);
           case 221:
-            return et = lt.getUint32(mt), mt += 4, At(et);
+            return Eu = cu.getUint32(Xu), Xu += 4, Bu(Eu);
           case 222:
-            return et = lt.getUint16(mt), mt += 2, it(et);
+            return Eu = cu.getUint16(Xu), Xu += 2, Lu(Eu);
           case 223:
-            return et = lt.getUint32(mt), mt += 4, it(et);
+            return Eu = cu.getUint32(Xu), Xu += 4, Lu(Eu);
           default:
-            if (tt >= 224) return tt - 256;
-            if (void 0 === tt) {
-              let tt = new Error("Unexpected end of MessagePack data");
-              throw tt.incomplete = !0, tt
+            if (uu >= 224) return uu - 256;
+            if (void 0 === uu) {
+              let uu = new Error("Unexpected end of MessagePack data");
+              throw uu.incomplete = !0, uu
             }
-            throw new Error("Unknown MessagePack token " + tt)
+            throw new Error("Unknown MessagePack token " + uu)
         }
       }
     }
-    const Pt = /^[a-zA-Z_$][a-zA-Z\d_$]*$/;
+    const vu = /^[a-zA-Z_$][a-zA-Z\d_$]*$/;
 
-    function Zt(tt, et) {
-      function Vt() {
-        if (Vt.count++ > Wt) {
-          let Vt = tt.read = new Function("r", "return function(){return " + (wt.freezeData ? "Object.freeze" : "") + "({" + tt.map((tt => "__proto__" === tt ? "__proto_:r()" : Pt.test(tt) ? tt + ":r()" : "[" + JSON.stringify(tt) + "]:r()")).join(",") + "})}")(It);
-          return 0 === tt.highByte && (tt.read = Lt(et, tt.read)), Vt()
+    function Ku(uu, Eu) {
+      function ju() {
+        if (ju.count++ > au) {
+          let ju = uu.read = new Function("r", "return function(){return " + (Yu.freezeData ? "Object.freeze" : "") + "({" + uu.map((uu => "__proto__" === uu ? "__proto_:r()" : vu.test(uu) ? uu + ":r()" : "[" + JSON.stringify(uu) + "]:r()")).join(",") + "})}")(mu);
+          return 0 === uu.highByte && (uu.read = Vu(Eu, uu.read)), ju()
         }
-        let Ot = {};
-        for (let et = 0, Vt = tt.length; et < Vt; et++) {
-          let Vt = tt[et];
-          "__proto__" === Vt && (Vt = "__proto_"), Ot[Vt] = It()
+        let su = {};
+        for (let Eu = 0, ju = uu.length; Eu < ju; Eu++) {
+          let ju = uu[Eu];
+          "__proto__" === ju && (ju = "__proto_"), su[ju] = mu()
         }
-        return wt.freezeData ? Object.freeze(Ot) : Ot
+        return Yu.freezeData ? Object.freeze(su) : su
       }
-      return Vt.count = 0, 0 === tt.highByte ? Lt(et, Vt) : Vt
+      return ju.count = 0, 0 === uu.highByte ? Vu(Eu, ju) : ju
     }
-    const Lt = (tt, et) => function() {
-      let Vt = qt[mt++];
-      if (0 === Vt) return et();
-      let Ot = tt < 32 ? -(tt + (Vt << 5)) : tt + (Vt << 5),
-        Dt = jt[Ot] || Ft()[Ot];
-      if (!Dt) throw new Error("Record id is not defined for " + Ot);
-      return Dt.read || (Dt.read = Zt(Dt, tt)), Dt.read()
+    const Vu = (uu, Eu) => function() {
+      let ju = Uu[Xu++];
+      if (0 === ju) return Eu();
+      let su = uu < 32 ? -(uu + (ju << 5)) : uu + (ju << 5),
+        Zu = qu[su] || ru()[su];
+      if (!Zu) throw new Error("Record id is not defined for " + su);
+      return Zu.read || (Zu.read = Ku(Zu, uu)), Zu.read()
     };
 
-    function Ft() {
-      let tt = me((() => (qt = null, wt.getStructures())));
-      return jt = wt._mergeStructures(tt, jt)
+    function ru() {
+      let uu = ZE((() => (Uu = null, Yu.getStructures())));
+      return qu = Yu._mergeStructures(uu, qu)
     }
-    var kt = Ut,
-      Gt = Ut,
-      zt = Ut,
-      ot = Ut;
-    let rt = !1;
+    var Qu = Fu,
+      iu = Fu,
+      Wu = Fu,
+      Su = Fu;
+    let Iu = !1;
 
-    function Ut(tt) {
-      let et;
-      if (tt < 16 && (et = pt(tt))) return et;
-      if (tt > 64 && Ot) return Ot.decode(qt.subarray(mt, mt += tt));
-      const Vt = mt + tt,
-        Dt = [];
-      for (et = ""; mt < Vt;) {
-        const tt = qt[mt++];
-        if (0 === (128 & tt)) Dt.push(tt);
-        else if (192 === (224 & tt)) {
-          const et = 63 & qt[mt++];
-          Dt.push((31 & tt) << 6 | et)
-        } else if (224 === (240 & tt)) {
-          const et = 63 & qt[mt++],
-            Vt = 63 & qt[mt++];
-          Dt.push((31 & tt) << 12 | et << 6 | Vt)
-        } else if (240 === (248 & tt)) {
-          let et = (7 & tt) << 18 | (63 & qt[mt++]) << 12 | (63 & qt[mt++]) << 6 | 63 & qt[mt++];
-          et > 65535 && (et -= 65536, Dt.push(et >>> 10 & 1023 | 55296), et = 56320 | 1023 & et), Dt.push(et)
-        } else Dt.push(tt);
-        Dt.length >= 4096 && (et += Yt.apply(String, Dt), Dt.length = 0)
+    function Fu(uu) {
+      let Eu;
+      if (uu < 16 && (Eu = Tu(uu))) return Eu;
+      if (uu > 64 && su) return su.decode(Uu.subarray(Xu, Xu += uu));
+      const ju = Xu + uu,
+        Zu = [];
+      for (Eu = ""; Xu < ju;) {
+        const uu = Uu[Xu++];
+        if (0 === (128 & uu)) Zu.push(uu);
+        else if (192 === (224 & uu)) {
+          const Eu = 63 & Uu[Xu++];
+          Zu.push((31 & uu) << 6 | Eu)
+        } else if (224 === (240 & uu)) {
+          const Eu = 63 & Uu[Xu++],
+            ju = 63 & Uu[Xu++];
+          Zu.push((31 & uu) << 12 | Eu << 6 | ju)
+        } else if (240 === (248 & uu)) {
+          let Eu = (7 & uu) << 18 | (63 & Uu[Xu++]) << 12 | (63 & Uu[Xu++]) << 6 | 63 & Uu[Xu++];
+          Eu > 65535 && (Eu -= 65536, Zu.push(Eu >>> 10 & 1023 | 55296), Eu = 56320 | 1023 & Eu), Zu.push(Eu)
+        } else Zu.push(uu);
+        Zu.length >= 4096 && (Eu += tu.apply(String, Zu), Zu.length = 0)
       }
-      return Dt.length > 0 && (et += Yt.apply(String, Dt)), et
+      return Zu.length > 0 && (Eu += tu.apply(String, Zu)), Eu
     }
 
-    function At(tt) {
-      let et = new Array(tt);
-      for (let Vt = 0; Vt < tt; Vt++) et[Vt] = It();
-      return wt.freezeData ? Object.freeze(et) : et
+    function Bu(uu) {
+      let Eu = new Array(uu);
+      for (let ju = 0; ju < uu; ju++) Eu[ju] = mu();
+      return Yu.freezeData ? Object.freeze(Eu) : Eu
     }
 
-    function it(tt) {
-      if (wt.mapsAsObjects) {
-        let et = {};
-        for (let Vt = 0; Vt < tt; Vt++) {
-          let tt = nt();
-          "__proto__" === tt && (tt = "__proto_"), et[tt] = It()
+    function Lu(uu) {
+      if (Yu.mapsAsObjects) {
+        let Eu = {};
+        for (let ju = 0; ju < uu; ju++) {
+          let uu = zu();
+          "__proto__" === uu && (uu = "__proto_"), Eu[uu] = mu()
         }
-        return et
+        return Eu
       } {
-        let et = new Map;
-        for (let Vt = 0; Vt < tt; Vt++) et.set(It(), It());
-        return et
+        let Eu = new Map;
+        for (let ju = 0; ju < uu; ju++) Eu.set(mu(), mu());
+        return Eu
       }
     }
-    var Yt = String.fromCharCode;
+    var tu = String.fromCharCode;
 
-    function Bt(tt) {
-      let et = mt,
-        Vt = new Array(tt);
-      for (let Ot = 0; Ot < tt; Ot++) {
-        const tt = qt[mt++];
-        if ((128 & tt) > 0) return void(mt = et);
-        Vt[Ot] = tt
+    function xu(uu) {
+      let Eu = Xu,
+        ju = new Array(uu);
+      for (let su = 0; su < uu; su++) {
+        const uu = Uu[Xu++];
+        if ((128 & uu) > 0) return void(Xu = Eu);
+        ju[su] = uu
       }
-      return Yt.apply(String, Vt)
+      return tu.apply(String, ju)
     }
 
-    function pt(tt) {
-      if (tt < 4) {
-        if (tt < 2) {
-          if (0 === tt) return "";
+    function Tu(uu) {
+      if (uu < 4) {
+        if (uu < 2) {
+          if (0 === uu) return "";
           {
-            let tt = qt[mt++];
-            return (128 & tt) > 1 ? void(mt -= 1) : Yt(tt)
+            let uu = Uu[Xu++];
+            return (128 & uu) > 1 ? void(Xu -= 1) : tu(uu)
           }
         } {
-          let et = qt[mt++],
-            Vt = qt[mt++];
-          if ((128 & et) > 0 || (128 & Vt) > 0) return void(mt -= 2);
-          if (tt < 3) return Yt(et, Vt);
-          let Ot = qt[mt++];
-          return (128 & Ot) > 0 ? void(mt -= 3) : Yt(et, Vt, Ot)
+          let Eu = Uu[Xu++],
+            ju = Uu[Xu++];
+          if ((128 & Eu) > 0 || (128 & ju) > 0) return void(Xu -= 2);
+          if (uu < 3) return tu(Eu, ju);
+          let su = Uu[Xu++];
+          return (128 & su) > 0 ? void(Xu -= 3) : tu(Eu, ju, su)
         }
       } {
-        let et = qt[mt++],
-          Vt = qt[mt++],
-          Ot = qt[mt++],
-          Dt = qt[mt++];
-        if ((128 & et) > 0 || (128 & Vt) > 0 || (128 & Ot) > 0 || (128 & Dt) > 0) return void(mt -= 4);
-        if (tt < 6) {
-          if (4 === tt) return Yt(et, Vt, Ot, Dt);
+        let Eu = Uu[Xu++],
+          ju = Uu[Xu++],
+          su = Uu[Xu++],
+          Zu = Uu[Xu++];
+        if ((128 & Eu) > 0 || (128 & ju) > 0 || (128 & su) > 0 || (128 & Zu) > 0) return void(Xu -= 4);
+        if (uu < 6) {
+          if (4 === uu) return tu(Eu, ju, su, Zu);
           {
-            let tt = qt[mt++];
-            return (128 & tt) > 0 ? void(mt -= 5) : Yt(et, Vt, Ot, Dt, tt)
+            let uu = Uu[Xu++];
+            return (128 & uu) > 0 ? void(Xu -= 5) : tu(Eu, ju, su, Zu, uu)
           }
         }
-        if (tt < 8) {
-          let dt = qt[mt++],
-            jt = qt[mt++];
-          if ((128 & dt) > 0 || (128 & jt) > 0) return void(mt -= 6);
-          if (tt < 7) return Yt(et, Vt, Ot, Dt, dt, jt);
-          let Ht = qt[mt++];
-          return (128 & Ht) > 0 ? void(mt -= 7) : Yt(et, Vt, Ot, Dt, dt, jt, Ht)
+        if (uu < 8) {
+          let lu = Uu[Xu++],
+            qu = Uu[Xu++];
+          if ((128 & lu) > 0 || (128 & qu) > 0) return void(Xu -= 6);
+          if (uu < 7) return tu(Eu, ju, su, Zu, lu, qu);
+          let fu = Uu[Xu++];
+          return (128 & fu) > 0 ? void(Xu -= 7) : tu(Eu, ju, su, Zu, lu, qu, fu)
         } {
-          let dt = qt[mt++],
-            jt = qt[mt++],
-            Ht = qt[mt++],
-            Xt = qt[mt++];
-          if ((128 & dt) > 0 || (128 & jt) > 0 || (128 & Ht) > 0 || (128 & Xt) > 0) return void(mt -= 8);
-          if (tt < 10) {
-            if (8 === tt) return Yt(et, Vt, Ot, Dt, dt, jt, Ht, Xt);
+          let lu = Uu[Xu++],
+            qu = Uu[Xu++],
+            fu = Uu[Xu++],
+            Cu = Uu[Xu++];
+          if ((128 & lu) > 0 || (128 & qu) > 0 || (128 & fu) > 0 || (128 & Cu) > 0) return void(Xu -= 8);
+          if (uu < 10) {
+            if (8 === uu) return tu(Eu, ju, su, Zu, lu, qu, fu, Cu);
             {
-              let tt = qt[mt++];
-              return (128 & tt) > 0 ? void(mt -= 9) : Yt(et, Vt, Ot, Dt, dt, jt, Ht, Xt, tt)
+              let uu = Uu[Xu++];
+              return (128 & uu) > 0 ? void(Xu -= 9) : tu(Eu, ju, su, Zu, lu, qu, fu, Cu, uu)
             }
           }
-          if (tt < 12) {
-            let Qt = qt[mt++],
-              lt = qt[mt++];
-            if ((128 & Qt) > 0 || (128 & lt) > 0) return void(mt -= 10);
-            if (tt < 11) return Yt(et, Vt, Ot, Dt, dt, jt, Ht, Xt, Qt, lt);
-            let Et = qt[mt++];
-            return (128 & Et) > 0 ? void(mt -= 11) : Yt(et, Vt, Ot, Dt, dt, jt, Ht, Xt, Qt, lt, Et)
+          if (uu < 12) {
+            let bu = Uu[Xu++],
+              cu = Uu[Xu++];
+            if ((128 & bu) > 0 || (128 & cu) > 0) return void(Xu -= 10);
+            if (uu < 11) return tu(Eu, ju, su, Zu, lu, qu, fu, Cu, bu, cu);
+            let Nu = Uu[Xu++];
+            return (128 & Nu) > 0 ? void(Xu -= 11) : tu(Eu, ju, su, Zu, lu, qu, fu, Cu, bu, cu, Nu)
           } {
-            let Qt = qt[mt++],
-              lt = qt[mt++],
-              Et = qt[mt++],
-              ft = qt[mt++];
-            if ((128 & Qt) > 0 || (128 & lt) > 0 || (128 & Et) > 0 || (128 & ft) > 0) return void(mt -= 12);
-            if (tt < 14) {
-              if (12 === tt) return Yt(et, Vt, Ot, Dt, dt, jt, Ht, Xt, Qt, lt, Et, ft);
+            let bu = Uu[Xu++],
+              cu = Uu[Xu++],
+              Nu = Uu[Xu++],
+              Ou = Uu[Xu++];
+            if ((128 & bu) > 0 || (128 & cu) > 0 || (128 & Nu) > 0 || (128 & Ou) > 0) return void(Xu -= 12);
+            if (uu < 14) {
+              if (12 === uu) return tu(Eu, ju, su, Zu, lu, qu, fu, Cu, bu, cu, Nu, Ou);
               {
-                let tt = qt[mt++];
-                return (128 & tt) > 0 ? void(mt -= 13) : Yt(et, Vt, Ot, Dt, dt, jt, Ht, Xt, Qt, lt, Et, ft, tt)
+                let uu = Uu[Xu++];
+                return (128 & uu) > 0 ? void(Xu -= 13) : tu(Eu, ju, su, Zu, lu, qu, fu, Cu, bu, cu, Nu, Ou, uu)
               }
             } {
-              let wt = qt[mt++],
-                yt = qt[mt++];
-              if ((128 & wt) > 0 || (128 & yt) > 0) return void(mt -= 14);
-              if (tt < 15) return Yt(et, Vt, Ot, Dt, dt, jt, Ht, Xt, Qt, lt, Et, ft, wt, yt);
-              let Nt = qt[mt++];
-              return (128 & Nt) > 0 ? void(mt -= 15) : Yt(et, Vt, Ot, Dt, dt, jt, Ht, Xt, Qt, lt, Et, ft, wt, yt, Nt)
+              let Yu = Uu[Xu++],
+                hu = Uu[Xu++];
+              if ((128 & Yu) > 0 || (128 & hu) > 0) return void(Xu -= 14);
+              if (uu < 15) return tu(Eu, ju, su, Zu, lu, qu, fu, Cu, bu, cu, Nu, Ou, Yu, hu);
+              let Du = Uu[Xu++];
+              return (128 & Du) > 0 ? void(Xu -= 15) : tu(Eu, ju, su, Zu, lu, qu, fu, Cu, bu, cu, Nu, Ou, Yu, hu, Du)
             }
           }
         }
       }
     }
 
-    function xt() {
-      let tt, et = qt[mt++];
-      if (et < 192) tt = et - 160;
-      else switch (et) {
+    function Hu() {
+      let uu, Eu = Uu[Xu++];
+      if (Eu < 192) uu = Eu - 160;
+      else switch (Eu) {
         case 217:
-          tt = qt[mt++];
+          uu = Uu[Xu++];
           break;
         case 218:
-          tt = lt.getUint16(mt), mt += 2;
+          uu = cu.getUint16(Xu), Xu += 2;
           break;
         case 219:
-          tt = lt.getUint32(mt), mt += 4;
+          uu = cu.getUint32(Xu), Xu += 4;
           break;
         default:
           throw new Error("Expected string")
       }
-      return Ut(tt)
+      return Fu(uu)
     }
 
-    function Tt(tt) {
-      return wt.copyBuffers ? Uint8Array.prototype.slice.call(qt, mt, mt += tt) : qt.subarray(mt, mt += tt)
+    function Au(uu) {
+      return Yu.copyBuffers ? Uint8Array.prototype.slice.call(Uu, Xu, Xu += uu) : Uu.subarray(Xu, Xu += uu)
     }
 
-    function gt(tt) {
-      let et = qt[mt++];
-      if (Mt[et]) {
-        let Vt;
-        return Mt[et](qt.subarray(mt, Vt = mt += tt), (tt => {
-          mt = tt;
+    function nu(uu) {
+      let Eu = Uu[Xu++];
+      if (gu[Eu]) {
+        let ju;
+        return gu[Eu](Uu.subarray(Xu, ju = Xu += uu), (uu => {
+          Xu = uu;
           try {
-            return It()
+            return mu()
           } finally {
-            mt = Vt
+            Xu = ju
           }
         }))
       }
-      throw new Error("Unknown extension type " + et)
+      throw new Error("Unknown extension type " + Eu)
     }
-    var st = new Array(4096);
+    var yu = new Array(4096);
 
-    function nt() {
-      let tt = qt[mt++];
-      if (!(tt >= 160 && tt < 192)) return mt--, te(It());
-      if (tt -= 160, Nt >= mt) return Ht.slice(mt - yt, (mt += tt) - yt);
-      if (!(0 == Nt && Dt < 180)) return kt(tt);
-      let et, Vt = 4095 & (tt << 5 ^ (tt > 1 ? lt.getUint16(mt) : tt > 0 ? qt[mt] : 0)),
-        Ot = st[Vt],
-        dt = mt,
-        jt = mt + tt - 3,
-        Xt = 0;
-      if (Ot && Ot.bytes == tt) {
-        for (; dt < jt;) {
-          if (et = lt.getUint32(dt), et != Ot[Xt++]) {
-            dt = 1879048192;
+    function zu() {
+      let uu = Uu[Xu++];
+      if (!(uu >= 160 && uu < 192)) return Xu--, Ru(mu());
+      if (uu -= 160, Du >= Xu) return fu.slice(Xu - hu, (Xu += uu) - hu);
+      if (!(0 == Du && Zu < 180)) return Qu(uu);
+      let Eu, ju = 4095 & (uu << 5 ^ (uu > 1 ? cu.getUint16(Xu) : uu > 0 ? Uu[Xu] : 0)),
+        su = yu[ju],
+        lu = Xu,
+        qu = Xu + uu - 3,
+        Cu = 0;
+      if (su && su.bytes == uu) {
+        for (; lu < qu;) {
+          if (Eu = cu.getUint32(lu), Eu != su[Cu++]) {
+            lu = 1879048192;
             break
           }
-          dt += 4
+          lu += 4
         }
-        for (jt += 3; dt < jt;)
-          if (et = qt[dt++], et != Ot[Xt++]) {
-            dt = 1879048192;
+        for (qu += 3; lu < qu;)
+          if (Eu = Uu[lu++], Eu != su[Cu++]) {
+            lu = 1879048192;
             break
-          } if (dt === jt) return mt = dt, Ot.string;
-        jt -= 3, dt = mt
+          } if (lu === qu) return Xu = lu, su.string;
+        qu -= 3, lu = Xu
       }
-      for (Ot = [], st[Vt] = Ot, Ot.bytes = tt; dt < jt;) et = lt.getUint32(dt), Ot.push(et), dt += 4;
-      for (jt += 3; dt < jt;) et = qt[dt++], Ot.push(et);
-      let Qt = tt < 16 ? pt(tt) : Bt(tt);
-      return Ot.string = null != Qt ? Qt : kt(tt)
+      for (su = [], yu[ju] = su, su.bytes = uu; lu < qu;) Eu = cu.getUint32(lu), su.push(Eu), lu += 4;
+      for (qu += 3; lu < qu;) Eu = Uu[lu++], su.push(Eu);
+      let bu = uu < 16 ? Tu(uu) : xu(uu);
+      return su.string = null != bu ? bu : Qu(uu)
     }
 
-    function te(tt) {
-      if ("string" === typeof tt) return tt;
-      if ("number" === typeof tt || "boolean" === typeof tt || "bigint" === typeof tt) return tt.toString();
-      if (null == tt) return tt + "";
-      if (wt.allowArraysInMapKeys && Array.isArray(tt) && tt.flat().every((tt => ["string", "number", "boolean", "bigint"].includes(typeof tt)))) return tt.flat().toString();
-      throw new Error("Invalid property type for record: " + typeof tt)
+    function Ru(uu) {
+      if ("string" === typeof uu) return uu;
+      if ("number" === typeof uu || "boolean" === typeof uu || "bigint" === typeof uu) return uu.toString();
+      if (null == uu) return uu + "";
+      if (Yu.allowArraysInMapKeys && Array.isArray(uu) && uu.flat().every((uu => ["string", "number", "boolean", "bigint"].includes(typeof uu)))) return uu.flat().toString();
+      throw new Error("Invalid property type for record: " + typeof uu)
     }
-    const ee = (tt, et) => {
-      let Vt = It().map(te),
-        Ot = tt;
-      void 0 !== et && (tt = tt < 32 ? -((et << 5) + tt) : (et << 5) + tt, Vt.highByte = et);
-      let qt = jt[tt];
-      return qt && (qt.isShared || vt) && ((jt.restoreStructures || (jt.restoreStructures = []))[tt] = qt), jt[tt] = Vt, Vt.read = Zt(Vt, Ot), Vt.read()
+    const uE = (uu, Eu) => {
+      let ju = mu().map(Ru),
+        su = uu;
+      void 0 !== Eu && (uu = uu < 32 ? -((Eu << 5) + uu) : (Eu << 5) + uu, ju.highByte = Eu);
+      let Uu = qu[uu];
+      return Uu && (Uu.isShared || du) && ((qu.restoreStructures || (qu.restoreStructures = []))[uu] = Uu), qu[uu] = ju, ju.read = Ku(ju, su), ju.read()
     };
-    Mt[0] = () => {}, Mt[0].noBuffer = !0, Mt[66] = tt => {
-      let et = tt.length,
-        Vt = BigInt(128 & tt[0] ? tt[0] - 256 : tt[0]);
-      for (let Ot = 1; Ot < et; Ot++) Vt <<= BigInt(8), Vt += BigInt(tt[Ot]);
-      return Vt
+    gu[0] = () => {}, gu[0].noBuffer = !0, gu[66] = uu => {
+      let Eu = uu.length,
+        ju = BigInt(128 & uu[0] ? uu[0] - 256 : uu[0]);
+      for (let su = 1; su < Eu; su++) ju <<= BigInt(8), ju += BigInt(uu[su]);
+      return ju
     };
-    let Ve = {
+    let EE = {
       Error: Error,
       TypeError: TypeError,
       ReferenceError: ReferenceError
     };
-    Mt[101] = () => {
-      let tt = It();
-      return (Ve[tt[0]] || Error)(tt[1], {
-        cause: tt[2]
+    gu[101] = () => {
+      let uu = mu();
+      return (EE[uu[0]] || Error)(uu[1], {
+        cause: uu[2]
       })
-    }, Mt[105] = tt => {
-      if (!1 === wt.structuredClone) throw new Error("Structured clone extension is disabled");
-      let et = lt.getUint32(mt - 4);
-      Qt || (Qt = new Map);
-      let Vt, Ot = qt[mt];
-      Vt = Ot >= 144 && Ot < 160 || 220 == Ot || 221 == Ot ? [] : {};
-      let Dt = {
-        target: Vt
+    }, gu[105] = uu => {
+      if (!1 === Yu.structuredClone) throw new Error("Structured clone extension is disabled");
+      let Eu = cu.getUint32(Xu - 4);
+      bu || (bu = new Map);
+      let ju, su = Uu[Xu];
+      ju = su >= 144 && su < 160 || 220 == su || 221 == su ? [] : {};
+      let Zu = {
+        target: ju
       };
-      Qt.set(et, Dt);
-      let dt = It();
-      return Dt.used ? Object.assign(Vt, dt) : (Dt.target = dt, dt)
-    }, Mt[112] = tt => {
-      if (!1 === wt.structuredClone) throw new Error("Structured clone extension is disabled");
-      let et = lt.getUint32(mt - 4),
-        Vt = Qt.get(et);
-      return Vt.used = !0, Vt.target
-    }, Mt[115] = () => new Set(It());
-    const Oe = ["Int8", "Uint8", "Uint8Clamped", "Int16", "Uint16", "Int32", "Uint32", "Float32", "Float64", "BigInt64", "BigUint64"].map((tt => tt + "Array"));
-    let qe = "object" === typeof globalThis ? globalThis : window;
-    Mt[116] = tt => {
-      let et = tt[0],
-        Vt = Oe[et];
-      if (!Vt) {
-        if (16 === et) {
-          let et = new ArrayBuffer(tt.length - 1);
-          return new Uint8Array(et).set(tt.subarray(1)), et
+      bu.set(Eu, Zu);
+      let lu = mu();
+      return Zu.used ? Object.assign(ju, lu) : (Zu.target = lu, lu)
+    }, gu[112] = uu => {
+      if (!1 === Yu.structuredClone) throw new Error("Structured clone extension is disabled");
+      let Eu = cu.getUint32(Xu - 4),
+        ju = bu.get(Eu);
+      return ju.used = !0, ju.target
+    }, gu[115] = () => new Set(mu());
+    const jE = ["Int8", "Uint8", "Uint8Clamped", "Int16", "Uint16", "Int32", "Uint32", "Float32", "Float64", "BigInt64", "BigUint64"].map((uu => uu + "Array"));
+    let sE = "object" === typeof globalThis ? globalThis : window;
+    gu[116] = uu => {
+      let Eu = uu[0],
+        ju = jE[Eu];
+      if (!ju) {
+        if (16 === Eu) {
+          let Eu = new ArrayBuffer(uu.length - 1);
+          return new Uint8Array(Eu).set(uu.subarray(1)), Eu
         }
-        throw new Error("Could not find typed array for code " + et)
+        throw new Error("Could not find typed array for code " + Eu)
       }
-      return new qe[Vt](Uint8Array.prototype.slice.call(tt, 1).buffer)
-    }, Mt[120] = () => {
-      let tt = It();
-      return new RegExp(tt[0], tt[1])
+      return new sE[ju](Uint8Array.prototype.slice.call(uu, 1).buffer)
+    }, gu[120] = () => {
+      let uu = mu();
+      return new RegExp(uu[0], uu[1])
     };
-    const De = [];
+    const UE = [];
 
-    function me(tt) {
-      ht && ht();
-      let et = Dt,
-        Vt = mt,
-        Ot = ft,
-        dt = yt,
-        Mt = Nt,
-        bt = Ht,
-        Jt = Et,
-        Ct = Qt,
-        ut = Xt,
-        Kt = new Uint8Array(qt.slice(0, Dt)),
-        Wt = jt,
-        St = jt.slice(0, jt.length),
-        ct = wt,
-        Rt = vt,
-        It = tt();
-      return Dt = et, mt = Vt, ft = Ot, yt = dt, Nt = Mt, Ht = bt, Et = Jt, Qt = Ct, Xt = ut, qt = Kt, vt = Rt, (jt = Wt).splice(0, jt.length, ...St), wt = ct, lt = new DataView(qt.buffer, qt.byteOffset, qt.byteLength), It
+    function ZE(uu) {
+      Ju && Ju();
+      let Eu = Zu,
+        ju = Xu,
+        su = Ou,
+        lu = hu,
+        gu = Du,
+        Mu = fu,
+        eu = Nu,
+        Gu = bu,
+        pu = Cu,
+        wu = new Uint8Array(Uu.slice(0, Zu)),
+        au = qu,
+        Pu = qu.slice(0, qu.length),
+        ou = Yu,
+        ku = du,
+        mu = uu();
+      return Zu = Eu, Xu = ju, Ou = su, hu = lu, Du = gu, fu = Mu, Nu = eu, bu = Gu, Cu = pu, Uu = wu, du = ku, (qu = au).splice(0, qu.length, ...Pu), Yu = ou, cu = new DataView(Uu.buffer, Uu.byteOffset, Uu.byteLength), mu
     }
 
-    function de() {
-      qt = null, Qt = null, jt = null
+    function XE() {
+      Uu = null, bu = null, qu = null
     }
-    Mt[98] = tt => {
-      let et = (tt[0] << 24) + (tt[1] << 16) + (tt[2] << 8) + tt[3],
-        Vt = mt;
-      return mt += et - tt.length, Xt = De, (Xt = [xt(), xt()]).position0 = 0, Xt.position1 = 0, Xt.postBundlePosition = mt, mt = Vt, It()
-    }, Mt[255] = tt => 4 == tt.length ? new Date(1e3 * (16777216 * tt[0] + (tt[1] << 16) + (tt[2] << 8) + tt[3])) : 8 == tt.length ? new Date(((tt[0] << 22) + (tt[1] << 14) + (tt[2] << 6) + (tt[3] >> 2)) / 1e6 + 1e3 * (4294967296 * (3 & tt[3]) + 16777216 * tt[4] + (tt[5] << 16) + (tt[6] << 8) + tt[7])) : 12 == tt.length ? new Date(((tt[0] << 24) + (tt[1] << 16) + (tt[2] << 8) + tt[3]) / 1e6 + 1e3 * ((128 & tt[4] ? -281474976710656 : 0) + 1099511627776 * tt[6] + 4294967296 * tt[7] + 16777216 * tt[8] + (tt[9] << 16) + (tt[10] << 8) + tt[11])) : new Date("invalid");
-    const je = new Array(147);
-    for (let DV = 0; DV < 256; DV++) je[DV] = +("1e" + Math.floor(45.15 - .30103 * DV));
-    const He = St;
-    var Xe = new St({
+    gu[98] = uu => {
+      let Eu = (uu[0] << 24) + (uu[1] << 16) + (uu[2] << 8) + uu[3],
+        ju = Xu;
+      return Xu += Eu - uu.length, Cu = UE, (Cu = [Hu(), Hu()]).position0 = 0, Cu.position1 = 0, Cu.postBundlePosition = Xu, Xu = ju, mu()
+    }, gu[255] = uu => 4 == uu.length ? new Date(1e3 * (16777216 * uu[0] + (uu[1] << 16) + (uu[2] << 8) + uu[3])) : 8 == uu.length ? new Date(((uu[0] << 22) + (uu[1] << 14) + (uu[2] << 6) + (uu[3] >> 2)) / 1e6 + 1e3 * (4294967296 * (3 & uu[3]) + 16777216 * uu[4] + (uu[5] << 16) + (uu[6] << 8) + uu[7])) : 12 == uu.length ? new Date(((uu[0] << 24) + (uu[1] << 16) + (uu[2] << 8) + uu[3]) / 1e6 + 1e3 * ((128 & uu[4] ? -281474976710656 : 0) + 1099511627776 * uu[6] + 4294967296 * uu[7] + 16777216 * uu[8] + (uu[9] << 16) + (uu[10] << 8) + uu[11])) : new Date("invalid");
+    const lE = new Array(147);
+    for (let Uj = 0; Uj < 256; Uj++) lE[Uj] = +("1e" + Math.floor(45.15 - .30103 * Uj));
+    const qE = Pu;
+    var fE = new Pu({
       useRecords: !1
     });
-    const Qe = Xe.unpack,
-      le = Xe.unpackMultiple,
-      Ee = Xe.unpack,
-      fe = {
+    const CE = fE.unpack,
+      bE = fE.unpackMultiple,
+      cE = fE.unpack,
+      NE = {
         NEVER: 0,
         ALWAYS: 1,
         DECIMAL_ROUND: 3,
         DECIMAL_FIT: 4
       };
-    let we, ye, Ne, ae = new Float32Array(1),
-      Me = new Uint8Array(ae.buffer, 0, 4);
+    let OE, YE, hE, DE = new Float32Array(1),
+      gE = new Uint8Array(DE.buffer, 0, 4);
 
-    function be(tt) {
-      ae[0] = tt;
-      let et = je[(127 & Me[3]) << 1 | Me[2] >> 7];
-      return (et * tt + (tt > 0 ? .5 : -.5) | 0) / et
+    function ME(uu) {
+      DE[0] = uu;
+      let Eu = lE[(127 & gE[3]) << 1 | gE[2] >> 7];
+      return (Eu * uu + (uu > 0 ? .5 : -.5) | 0) / Eu
     }
     try {
-      we = new TextEncoder
-    } catch (qV) {}
-    const Je = "undefined" !== typeof Buffer,
-      Ce = Je ? function(tt) {
-        return Buffer.allocUnsafeSlow(tt)
+      OE = new TextEncoder
+    } catch (sj) {}
+    const eE = "undefined" !== typeof Buffer,
+      GE = eE ? function(uu) {
+        return Buffer.allocUnsafeSlow(uu)
       } : Uint8Array,
-      ue = Je ? Buffer : Uint8Array,
-      Ke = Je ? 4294967296 : 2144337920;
-    let he, ve, We, Se, ce, Re = 0,
-      Ie = null;
-    const Pe = /[\u0080-\uFFFF]/,
-      Ze = Symbol("record-id");
-    class Le extends St {
-      constructor(tt) {
-        let et, Vt, Ot, qt;
-        super(tt), this.offset = 0;
-        let Dt = ue.prototype.utf8Write ? function(tt, et) {
-            return he.utf8Write(tt, et, he.byteLength - et)
-          } : !(!we || !we.encodeInto) && function(tt, et) {
-            return we.encodeInto(tt, he.subarray(et)).written
+      pE = eE ? Buffer : Uint8Array,
+      wE = eE ? 4294967296 : 2144337920;
+    let JE, dE, aE, PE, oE, kE = 0,
+      mE = null;
+    const vE = /[\u0080-\uFFFF]/,
+      KE = Symbol("record-id");
+    class VE extends Pu {
+      constructor(uu) {
+        let Eu, ju, su, Uu;
+        super(uu), this.offset = 0;
+        let Zu = pE.prototype.utf8Write ? function(uu, Eu) {
+            return JE.utf8Write(uu, Eu, JE.byteLength - Eu)
+          } : !(!OE || !OE.encodeInto) && function(uu, Eu) {
+            return OE.encodeInto(uu, JE.subarray(Eu)).written
           },
-          mt = this;
-        tt || (tt = {});
-        let dt = tt && tt.sequential,
-          jt = tt.structures || tt.saveStructures,
-          Ht = tt.maxSharedStructures;
-        if (null == Ht && (Ht = jt ? 32 : 0), Ht > 8160) throw new Error("Maximum maxSharedStructure is 8160");
-        tt.structuredClone && void 0 == tt.moreTypes && (this.moreTypes = !0);
-        let Xt = tt.maxOwnStructures;
-        null == Xt && (Xt = jt ? 32 : 64), this.structures || 0 == tt.useRecords || (this.structures = []);
-        let Qt = Ht > 32 || Xt + Ht > 64,
-          lt = Ht + 64,
-          Et = Ht + Xt + 64;
-        if (Et > 8256) throw new Error("Maximum maxSharedStructure + maxOwnStructure is 8192");
-        let ft = [],
-          wt = 0,
-          yt = 0;
-        this.pack = this.encode = function(tt, Dt) {
-          if (he || (he = new Ce(8192), We = he.dataView || (he.dataView = new DataView(he.buffer, 0, 8192)), Re = 0), Se = he.length - 10, Se - Re < 2048 ? (he = new Ce(he.length), We = he.dataView || (he.dataView = new DataView(he.buffer, 0, he.length)), Se = he.length - 10, Re = 0) : Re = Re + 7 & 2147483640, et = Re, Dt & ne && (Re += 255 & Dt), qt = mt.structuredClone ? new Map : null, mt.bundleStrings && "string" !== typeof tt ? (Ie = [], Ie.size = 1 / 0) : Ie = null, Ot = mt.structures, Ot) {
-            Ot.uninitialized && (Ot = mt._mergeStructures(mt.getStructures()));
-            let tt = Ot.sharedLength || 0;
-            if (tt > Ht) throw new Error("Shared structures is larger than maximum shared structures, try increasing maxSharedStructures to " + Ot.sharedLength);
-            if (!Ot.transitions) {
-              Ot.transitions = Object.create(null);
-              for (let et = 0; et < tt; et++) {
-                let tt = Ot[et];
-                if (!tt) continue;
-                let Vt, qt = Ot.transitions;
-                for (let et = 0, Ot = tt.length; et < Ot; et++) {
-                  let Ot = tt[et];
-                  Vt = qt[Ot], Vt || (Vt = qt[Ot] = Object.create(null)), qt = Vt
+          Xu = this;
+        uu || (uu = {});
+        let lu = uu && uu.sequential,
+          qu = uu.structures || uu.saveStructures,
+          fu = uu.maxSharedStructures;
+        if (null == fu && (fu = qu ? 32 : 0), fu > 8160) throw new Error("Maximum maxSharedStructure is 8160");
+        uu.structuredClone && void 0 == uu.moreTypes && (this.moreTypes = !0);
+        let Cu = uu.maxOwnStructures;
+        null == Cu && (Cu = qu ? 32 : 64), this.structures || 0 == uu.useRecords || (this.structures = []);
+        let bu = fu > 32 || Cu + fu > 64,
+          cu = fu + 64,
+          Nu = fu + Cu + 64;
+        if (Nu > 8256) throw new Error("Maximum maxSharedStructure + maxOwnStructure is 8192");
+        let Ou = [],
+          Yu = 0,
+          hu = 0;
+        this.pack = this.encode = function(uu, Zu) {
+          if (JE || (JE = new GE(8192), aE = JE.dataView || (JE.dataView = new DataView(JE.buffer, 0, 8192)), kE = 0), PE = JE.length - 10, PE - kE < 2048 ? (JE = new GE(JE.length), aE = JE.dataView || (JE.dataView = new DataView(JE.buffer, 0, JE.length)), PE = JE.length - 10, kE = 0) : kE = kE + 7 & 2147483640, Eu = kE, Zu & zE && (kE += 255 & Zu), Uu = Xu.structuredClone ? new Map : null, Xu.bundleStrings && "string" !== typeof uu ? (mE = [], mE.size = 1 / 0) : mE = null, su = Xu.structures, su) {
+            su.uninitialized && (su = Xu._mergeStructures(Xu.getStructures()));
+            let uu = su.sharedLength || 0;
+            if (uu > fu) throw new Error("Shared structures is larger than maximum shared structures, try increasing maxSharedStructures to " + su.sharedLength);
+            if (!su.transitions) {
+              su.transitions = Object.create(null);
+              for (let Eu = 0; Eu < uu; Eu++) {
+                let uu = su[Eu];
+                if (!uu) continue;
+                let ju, Uu = su.transitions;
+                for (let Eu = 0, su = uu.length; Eu < su; Eu++) {
+                  let su = uu[Eu];
+                  ju = Uu[su], ju || (ju = Uu[su] = Object.create(null)), Uu = ju
                 }
-                qt[Ze] = et + 64
+                Uu[KE] = Eu + 64
               }
-              this.lastNamedStructuresLength = tt
+              this.lastNamedStructuresLength = uu
             }
-            dt || (Ot.nextId = tt + 64)
+            lu || (su.nextId = uu + 64)
           }
-          let jt;
-          Vt && (Vt = !1);
+          let qu;
+          ju && (ju = !1);
           try {
-            mt.randomAccessStructure && tt && tt.constructor && tt.constructor === Object ? St(tt) : bt(tt);
-            let Vt = Ie;
-            if (Ie && ze(et, bt, 0), qt && qt.idsToInsert) {
-              let tt = qt.idsToInsert.sort(((tt, et) => tt.offset > et.offset ? 1 : -1)),
-                Ot = tt.length,
-                Dt = -1;
-              for (; Vt && Ot > 0;) {
-                let qt = tt[--Ot].offset + et;
-                qt < Vt.stringsPosition + et && -1 === Dt && (Dt = 0), qt > Vt.position + et ? Dt >= 0 && (Dt += 6) : (Dt >= 0 && (We.setUint32(Vt.position + et, We.getUint32(Vt.position + et) + Dt), Dt = -1), Vt = Vt.previous, Ot++)
+            Xu.randomAccessStructure && uu && uu.constructor && uu.constructor === Object ? Pu(uu) : Mu(uu);
+            let ju = mE;
+            if (mE && WE(Eu, Mu, 0), Uu && Uu.idsToInsert) {
+              let uu = Uu.idsToInsert.sort(((uu, Eu) => uu.offset > Eu.offset ? 1 : -1)),
+                su = uu.length,
+                Zu = -1;
+              for (; ju && su > 0;) {
+                let Uu = uu[--su].offset + Eu;
+                Uu < ju.stringsPosition + Eu && -1 === Zu && (Zu = 0), Uu > ju.position + Eu ? Zu >= 0 && (Zu += 6) : (Zu >= 0 && (aE.setUint32(ju.position + Eu, aE.getUint32(ju.position + Eu) + Zu), Zu = -1), ju = ju.previous, su++)
               }
-              Dt >= 0 && Vt && We.setUint32(Vt.position + et, We.getUint32(Vt.position + et) + Dt), Re += 6 * tt.length, Re > Se && ht(Re), mt.offset = Re;
-              let dt = function(tt, et) {
-                let Vt, Ot = 6 * et.length,
-                  qt = tt.length - Ot;
-                for (; Vt = et.pop();) {
-                  let et = Vt.offset,
-                    Dt = Vt.id;
-                  tt.copyWithin(et + Ot, et, qt), Ot -= 6;
-                  let mt = et + Ot;
-                  tt[mt++] = 214, tt[mt++] = 105, tt[mt++] = Dt >> 24, tt[mt++] = Dt >> 16 & 255, tt[mt++] = Dt >> 8 & 255, tt[mt++] = 255 & Dt, qt = et
+              Zu >= 0 && ju && aE.setUint32(ju.position + Eu, aE.getUint32(ju.position + Eu) + Zu), kE += 6 * uu.length, kE > PE && Ju(kE), Xu.offset = kE;
+              let lu = function(uu, Eu) {
+                let ju, su = 6 * Eu.length,
+                  Uu = uu.length - su;
+                for (; ju = Eu.pop();) {
+                  let Eu = ju.offset,
+                    Zu = ju.id;
+                  uu.copyWithin(Eu + su, Eu, Uu), su -= 6;
+                  let Xu = Eu + su;
+                  uu[Xu++] = 214, uu[Xu++] = 105, uu[Xu++] = Zu >> 24, uu[Xu++] = Zu >> 16 & 255, uu[Xu++] = Zu >> 8 & 255, uu[Xu++] = 255 & Zu, Uu = Eu
                 }
-                return tt
-              }(he.subarray(et, Re), tt);
-              return qt = null, dt
+                return uu
+              }(JE.subarray(Eu, kE), uu);
+              return Uu = null, lu
             }
-            return mt.offset = Re, Dt & ge ? (he.start = et, he.end = Re, he) : he.subarray(et, Re)
-          } catch (qV) {
-            throw jt = qV, qV
+            return Xu.offset = kE, Zu & nE ? (JE.start = Eu, JE.end = kE, JE) : JE.subarray(Eu, kE)
+          } catch (sj) {
+            throw qu = sj, sj
           } finally {
-            if (Ot && (Nt(), Vt && mt.saveStructures)) {
-              let Vt = Ot.sharedLength || 0,
-                qt = he.subarray(et, Re),
-                dt = re(Ot, mt);
-              if (!jt) return !1 === mt.saveStructures(dt, dt.isCompatible) ? mt.pack(tt, Dt) : (mt.lastNamedStructuresLength = Vt, he.length > 1073741824 && (he = null), qt)
+            if (su && (Du(), ju && Xu.saveStructures)) {
+              let ju = su.sharedLength || 0,
+                Uu = JE.subarray(Eu, kE),
+                lu = IE(su, Xu);
+              if (!qu) return !1 === Xu.saveStructures(lu, lu.isCompatible) ? Xu.pack(uu, Zu) : (Xu.lastNamedStructuresLength = ju, JE.length > 1073741824 && (JE = null), Uu)
             }
-            he.length > 1073741824 && (he = null), Dt & se && (Re = et)
+            JE.length > 1073741824 && (JE = null), Zu & yE && (kE = Eu)
           }
         };
-        const Nt = () => {
-            yt < 10 && yt++;
-            let tt = Ot.sharedLength || 0;
-            if (Ot.length > tt && !dt && (Ot.length = tt), wt > 1e4) Ot.transitions = null, yt = 0, wt = 0, ft.length > 0 && (ft = []);
-            else if (ft.length > 0 && !dt) {
-              for (let tt = 0, et = ft.length; tt < et; tt++) ft[tt][Ze] = 0;
-              ft = []
+        const Du = () => {
+            hu < 10 && hu++;
+            let uu = su.sharedLength || 0;
+            if (su.length > uu && !lu && (su.length = uu), Yu > 1e4) su.transitions = null, hu = 0, Yu = 0, Ou.length > 0 && (Ou = []);
+            else if (Ou.length > 0 && !lu) {
+              for (let uu = 0, Eu = Ou.length; uu < Eu; uu++) Ou[uu][KE] = 0;
+              Ou = []
             }
           },
-          Mt = tt => {
-            var et = tt.length;
-            et < 16 ? he[Re++] = 144 | et : et < 65536 ? (he[Re++] = 220, he[Re++] = et >> 8, he[Re++] = 255 & et) : (he[Re++] = 221, We.setUint32(Re, et), Re += 4);
-            for (let Vt = 0; Vt < et; Vt++) bt(tt[Vt])
+          gu = uu => {
+            var Eu = uu.length;
+            Eu < 16 ? JE[kE++] = 144 | Eu : Eu < 65536 ? (JE[kE++] = 220, JE[kE++] = Eu >> 8, JE[kE++] = 255 & Eu) : (JE[kE++] = 221, aE.setUint32(kE, Eu), kE += 4);
+            for (let ju = 0; ju < Eu; ju++) Mu(uu[ju])
           },
-          bt = tt => {
-            Re > Se && (he = ht(Re));
-            var Vt, Ot = typeof tt;
-            if ("string" === Ot) {
-              let Ot, qt = tt.length;
-              if (Ie && qt >= 4 && qt < 4096) {
-                if ((Ie.size += qt) > 21760) {
-                  let tt, Vt, Ot = (Ie[0] ? 3 * Ie[0].length + Ie[1].length : 0) + 10;
-                  Re + Ot > Se && (he = ht(Re + Ot)), Ie.position ? (Vt = Ie, he[Re] = 200, Re += 3, he[Re++] = 98, tt = Re - et, Re += 4, ze(et, bt, 0), We.setUint16(tt + et - 3, Re - et - tt)) : (he[Re++] = 214, he[Re++] = 98, tt = Re - et, Re += 4), Ie = ["", ""], Ie.previous = Vt, Ie.size = 0, Ie.position = tt
+          Mu = uu => {
+            kE > PE && (JE = Ju(kE));
+            var ju, su = typeof uu;
+            if ("string" === su) {
+              let su, Uu = uu.length;
+              if (mE && Uu >= 4 && Uu < 4096) {
+                if ((mE.size += Uu) > 21760) {
+                  let uu, ju, su = (mE[0] ? 3 * mE[0].length + mE[1].length : 0) + 10;
+                  kE + su > PE && (JE = Ju(kE + su)), mE.position ? (ju = mE, JE[kE] = 200, kE += 3, JE[kE++] = 98, uu = kE - Eu, kE += 4, WE(Eu, Mu, 0), aE.setUint16(uu + Eu - 3, kE - Eu - uu)) : (JE[kE++] = 214, JE[kE++] = 98, uu = kE - Eu, kE += 4), mE = ["", ""], mE.previous = ju, mE.size = 0, mE.position = uu
                 }
-                let Vt = Pe.test(tt);
-                return Ie[Vt ? 0 : 1] += tt, he[Re++] = 193, void bt(Vt ? -qt : qt)
+                let ju = vE.test(uu);
+                return mE[ju ? 0 : 1] += uu, JE[kE++] = 193, void Mu(ju ? -Uu : Uu)
               }
-              Ot = qt < 32 ? 1 : qt < 256 ? 2 : qt < 65536 ? 3 : 5;
-              let mt = 3 * qt;
-              if (Re + mt > Se && (he = ht(Re + mt)), qt < 64 || !Dt) {
-                let et, Dt, mt, dt = Re + Ot;
-                for (et = 0; et < qt; et++) Dt = tt.charCodeAt(et), Dt < 128 ? he[dt++] = Dt : Dt < 2048 ? (he[dt++] = Dt >> 6 | 192, he[dt++] = 63 & Dt | 128) : 55296 === (64512 & Dt) && 56320 === (64512 & (mt = tt.charCodeAt(et + 1))) ? (Dt = 65536 + ((1023 & Dt) << 10) + (1023 & mt), et++, he[dt++] = Dt >> 18 | 240, he[dt++] = Dt >> 12 & 63 | 128, he[dt++] = Dt >> 6 & 63 | 128, he[dt++] = 63 & Dt | 128) : (he[dt++] = Dt >> 12 | 224, he[dt++] = Dt >> 6 & 63 | 128, he[dt++] = 63 & Dt | 128);
-                Vt = dt - Re - Ot
-              } else Vt = Dt(tt, Re + Ot);
-              Vt < 32 ? he[Re++] = 160 | Vt : Vt < 256 ? (Ot < 2 && he.copyWithin(Re + 2, Re + 1, Re + 1 + Vt), he[Re++] = 217, he[Re++] = Vt) : Vt < 65536 ? (Ot < 3 && he.copyWithin(Re + 3, Re + 2, Re + 2 + Vt), he[Re++] = 218, he[Re++] = Vt >> 8, he[Re++] = 255 & Vt) : (Ot < 5 && he.copyWithin(Re + 5, Re + 3, Re + 3 + Vt), he[Re++] = 219, We.setUint32(Re, Vt), Re += 4), Re += Vt
-            } else if ("number" === Ot)
-              if (tt >>> 0 === tt) tt < 32 || tt < 128 && !1 === this.useRecords || tt < 64 && !this.randomAccessStructure ? he[Re++] = tt : tt < 256 ? (he[Re++] = 204, he[Re++] = tt) : tt < 65536 ? (he[Re++] = 205, he[Re++] = tt >> 8, he[Re++] = 255 & tt) : (he[Re++] = 206, We.setUint32(Re, tt), Re += 4);
-              else if ((tt | 0) === tt) tt >= -32 ? he[Re++] = 256 + tt : tt >= -128 ? (he[Re++] = 208, he[Re++] = tt + 256) : tt >= -32768 ? (he[Re++] = 209, We.setInt16(Re, tt), Re += 2) : (he[Re++] = 210, We.setInt32(Re, tt), Re += 4);
+              su = Uu < 32 ? 1 : Uu < 256 ? 2 : Uu < 65536 ? 3 : 5;
+              let Xu = 3 * Uu;
+              if (kE + Xu > PE && (JE = Ju(kE + Xu)), Uu < 64 || !Zu) {
+                let Eu, Zu, Xu, lu = kE + su;
+                for (Eu = 0; Eu < Uu; Eu++) Zu = uu.charCodeAt(Eu), Zu < 128 ? JE[lu++] = Zu : Zu < 2048 ? (JE[lu++] = Zu >> 6 | 192, JE[lu++] = 63 & Zu | 128) : 55296 === (64512 & Zu) && 56320 === (64512 & (Xu = uu.charCodeAt(Eu + 1))) ? (Zu = 65536 + ((1023 & Zu) << 10) + (1023 & Xu), Eu++, JE[lu++] = Zu >> 18 | 240, JE[lu++] = Zu >> 12 & 63 | 128, JE[lu++] = Zu >> 6 & 63 | 128, JE[lu++] = 63 & Zu | 128) : (JE[lu++] = Zu >> 12 | 224, JE[lu++] = Zu >> 6 & 63 | 128, JE[lu++] = 63 & Zu | 128);
+                ju = lu - kE - su
+              } else ju = Zu(uu, kE + su);
+              ju < 32 ? JE[kE++] = 160 | ju : ju < 256 ? (su < 2 && JE.copyWithin(kE + 2, kE + 1, kE + 1 + ju), JE[kE++] = 217, JE[kE++] = ju) : ju < 65536 ? (su < 3 && JE.copyWithin(kE + 3, kE + 2, kE + 2 + ju), JE[kE++] = 218, JE[kE++] = ju >> 8, JE[kE++] = 255 & ju) : (su < 5 && JE.copyWithin(kE + 5, kE + 3, kE + 3 + ju), JE[kE++] = 219, aE.setUint32(kE, ju), kE += 4), kE += ju
+            } else if ("number" === su)
+              if (uu >>> 0 === uu) uu < 32 || uu < 128 && !1 === this.useRecords || uu < 64 && !this.randomAccessStructure ? JE[kE++] = uu : uu < 256 ? (JE[kE++] = 204, JE[kE++] = uu) : uu < 65536 ? (JE[kE++] = 205, JE[kE++] = uu >> 8, JE[kE++] = 255 & uu) : (JE[kE++] = 206, aE.setUint32(kE, uu), kE += 4);
+              else if ((uu | 0) === uu) uu >= -32 ? JE[kE++] = 256 + uu : uu >= -128 ? (JE[kE++] = 208, JE[kE++] = uu + 256) : uu >= -32768 ? (JE[kE++] = 209, aE.setInt16(kE, uu), kE += 2) : (JE[kE++] = 210, aE.setInt32(kE, uu), kE += 4);
             else {
-              let et;
-              if ((et = this.useFloat32) > 0 && tt < 4294967296 && tt >= -2147483648) {
-                let Vt;
-                if (he[Re++] = 202, We.setFloat32(Re, tt), et < 4 || ((Vt = tt * je[(127 & he[Re]) << 1 | he[Re + 1] >> 7]) | 0) === Vt) return void(Re += 4);
-                Re--
+              let Eu;
+              if ((Eu = this.useFloat32) > 0 && uu < 4294967296 && uu >= -2147483648) {
+                let ju;
+                if (JE[kE++] = 202, aE.setFloat32(kE, uu), Eu < 4 || ((ju = uu * lE[(127 & JE[kE]) << 1 | JE[kE + 1] >> 7]) | 0) === ju) return void(kE += 4);
+                kE--
               }
-              he[Re++] = 203, We.setFloat64(Re, tt), Re += 8
-            } else if ("object" === Ot || "function" === Ot)
-              if (tt) {
-                if (qt) {
-                  let Vt = qt.get(tt);
-                  if (Vt) {
-                    if (!Vt.id) {
-                      let tt = qt.idsToInsert || (qt.idsToInsert = []);
-                      Vt.id = tt.push(Vt)
+              JE[kE++] = 203, aE.setFloat64(kE, uu), kE += 8
+            } else if ("object" === su || "function" === su)
+              if (uu) {
+                if (Uu) {
+                  let ju = Uu.get(uu);
+                  if (ju) {
+                    if (!ju.id) {
+                      let uu = Uu.idsToInsert || (Uu.idsToInsert = []);
+                      ju.id = uu.push(ju)
                     }
-                    return he[Re++] = 214, he[Re++] = 112, We.setUint32(Re, Vt.id), void(Re += 4)
+                    return JE[kE++] = 214, JE[kE++] = 112, aE.setUint32(kE, ju.id), void(kE += 4)
                   }
-                  qt.set(tt, {
-                    offset: Re - et
+                  Uu.set(uu, {
+                    offset: kE - Eu
                   })
                 }
-                let Dt = tt.constructor;
-                if (Dt === Object) Kt(tt);
-                else if (Dt === Array) Mt(tt);
-                else if (Dt === Map)
-                  if (this.mapAsEmptyObject) he[Re++] = 128;
+                let Zu = uu.constructor;
+                if (Zu === Object) wu(uu);
+                else if (Zu === Array) gu(uu);
+                else if (Zu === Map)
+                  if (this.mapAsEmptyObject) JE[kE++] = 128;
                   else {
-                    (Vt = tt.size) < 16 ? he[Re++] = 128 | Vt : Vt < 65536 ? (he[Re++] = 222, he[Re++] = Vt >> 8, he[Re++] = 255 & Vt) : (he[Re++] = 223, We.setUint32(Re, Vt), Re += 4);
-                    for (let [et, Vt] of tt) bt(et), bt(Vt)
+                    (ju = uu.size) < 16 ? JE[kE++] = 128 | ju : ju < 65536 ? (JE[kE++] = 222, JE[kE++] = ju >> 8, JE[kE++] = 255 & ju) : (JE[kE++] = 223, aE.setUint32(kE, ju), kE += 4);
+                    for (let [Eu, ju] of uu) Mu(Eu), Mu(ju)
                   }
                 else {
-                  for (let et = 0, Vt = ye.length; et < Vt; et++) {
-                    if (tt instanceof Ne[et]) {
-                      let Vt = ye[et];
-                      if (Vt.write) {
-                        Vt.type && (he[Re++] = 212, he[Re++] = Vt.type, he[Re++] = 0);
-                        let et = Vt.write.call(this, tt);
-                        return void(et === tt ? Array.isArray(tt) ? Mt(tt) : Kt(tt) : bt(et))
+                  for (let Eu = 0, ju = YE.length; Eu < ju; Eu++) {
+                    if (uu instanceof hE[Eu]) {
+                      let ju = YE[Eu];
+                      if (ju.write) {
+                        ju.type && (JE[kE++] = 212, JE[kE++] = ju.type, JE[kE++] = 0);
+                        let Eu = ju.write.call(this, uu);
+                        return void(Eu === uu ? Array.isArray(uu) ? gu(uu) : wu(uu) : Mu(Eu))
                       }
-                      let Ot, qt = he,
-                        Dt = We,
-                        mt = Re;
-                      he = null;
+                      let su, Uu = JE,
+                        Zu = aE,
+                        Xu = kE;
+                      JE = null;
                       try {
-                        Ot = Vt.pack.call(this, tt, (tt => (he = qt, qt = null, Re += tt, Re > Se && ht(Re), {
-                          target: he,
-                          targetView: We,
-                          position: Re - tt
-                        })), bt)
+                        su = ju.pack.call(this, uu, (uu => (JE = Uu, Uu = null, kE += uu, kE > PE && Ju(kE), {
+                          target: JE,
+                          targetView: aE,
+                          position: kE - uu
+                        })), Mu)
                       } finally {
-                        qt && (he = qt, We = Dt, Re = mt, Se = he.length - 10)
+                        Uu && (JE = Uu, aE = Zu, kE = Xu, PE = JE.length - 10)
                       }
-                      return void(Ot && (Ot.length + Re > Se && ht(Ot.length + Re), Re = Ge(Ot, he, Re, Vt.type)))
+                      return void(su && (su.length + kE > PE && Ju(su.length + kE), kE = iE(su, JE, kE, ju.type)))
                     }
                   }
-                  if (Array.isArray(tt)) Mt(tt);
+                  if (Array.isArray(uu)) gu(uu);
                   else {
-                    if (tt.toJSON) {
-                      const et = tt.toJSON();
-                      if (et !== tt) return bt(et)
+                    if (uu.toJSON) {
+                      const Eu = uu.toJSON();
+                      if (Eu !== uu) return Mu(Eu)
                     }
-                    if ("function" === Ot) return bt(this.writeFunction && this.writeFunction(tt));
-                    Kt(tt)
+                    if ("function" === su) return Mu(this.writeFunction && this.writeFunction(uu));
+                    wu(uu)
                   }
                 }
-              } else he[Re++] = 192;
-            else if ("boolean" === Ot) he[Re++] = tt ? 195 : 194;
-            else if ("bigint" === Ot) {
-              if (tt < BigInt(1) << BigInt(63) && tt >= -(BigInt(1) << BigInt(63))) he[Re++] = 211, We.setBigInt64(Re, tt);
-              else if (tt < BigInt(1) << BigInt(64) && tt > 0) he[Re++] = 207, We.setBigUint64(Re, tt);
+              } else JE[kE++] = 192;
+            else if ("boolean" === su) JE[kE++] = uu ? 195 : 194;
+            else if ("bigint" === su) {
+              if (uu < BigInt(1) << BigInt(63) && uu >= -(BigInt(1) << BigInt(63))) JE[kE++] = 211, aE.setBigInt64(kE, uu);
+              else if (uu < BigInt(1) << BigInt(64) && uu > 0) JE[kE++] = 207, aE.setBigUint64(kE, uu);
               else {
                 if (!this.largeBigIntToFloat) {
-                  if (this.largeBigIntToString) return bt(tt.toString());
-                  if (this.useBigIntExtension && tt < BigInt(2) ** BigInt(1023) && tt > -(BigInt(2) ** BigInt(1023))) {
-                    he[Re++] = 199, Re++, he[Re++] = 66;
-                    let et, Vt = [];
+                  if (this.largeBigIntToString) return Mu(uu.toString());
+                  if (this.useBigIntExtension && uu < BigInt(2) ** BigInt(1023) && uu > -(BigInt(2) ** BigInt(1023))) {
+                    JE[kE++] = 199, kE++, JE[kE++] = 66;
+                    let Eu, ju = [];
                     do {
-                      let Ot = tt & BigInt(255);
-                      et = (Ot & BigInt(128)) === (tt < BigInt(0) ? BigInt(128) : BigInt(0)), Vt.push(Ot), tt >>= BigInt(8)
-                    } while (tt !== BigInt(0) && tt !== BigInt(-1) || !et);
-                    he[Re - 2] = Vt.length;
-                    for (let tt = Vt.length; tt > 0;) he[Re++] = Number(Vt[--tt]);
+                      let su = uu & BigInt(255);
+                      Eu = (su & BigInt(128)) === (uu < BigInt(0) ? BigInt(128) : BigInt(0)), ju.push(su), uu >>= BigInt(8)
+                    } while (uu !== BigInt(0) && uu !== BigInt(-1) || !Eu);
+                    JE[kE - 2] = ju.length;
+                    for (let uu = ju.length; uu > 0;) JE[kE++] = Number(ju[--uu]);
                     return
                   }
-                  throw new RangeError(tt + " was too large to fit in MessagePack 64-bit integer format, use useBigIntExtension, or set largeBigIntToFloat to convert to float-64, or set largeBigIntToString to convert to string")
+                  throw new RangeError(uu + " was too large to fit in MessagePack 64-bit integer format, use useBigIntExtension, or set largeBigIntToFloat to convert to float-64, or set largeBigIntToString to convert to string")
                 }
-                he[Re++] = 203, We.setFloat64(Re, Number(tt))
+                JE[kE++] = 203, aE.setFloat64(kE, Number(uu))
               }
-              Re += 8
+              kE += 8
             } else {
-              if ("undefined" !== Ot) throw new Error("Unknown type: " + Ot);
-              this.encodeUndefinedAsNil ? he[Re++] = 192 : (he[Re++] = 212, he[Re++] = 0, he[Re++] = 0)
+              if ("undefined" !== su) throw new Error("Unknown type: " + su);
+              this.encodeUndefinedAsNil ? JE[kE++] = 192 : (JE[kE++] = 212, JE[kE++] = 0, JE[kE++] = 0)
             }
           },
-          Jt = this.variableMapSize || this.coercibleKeyAsNumber || this.skipValues ? tt => {
-            let et;
+          eu = this.variableMapSize || this.coercibleKeyAsNumber || this.skipValues ? uu => {
+            let Eu;
             if (this.skipValues) {
-              et = [];
-              for (let Vt in tt) "function" === typeof tt.hasOwnProperty && !tt.hasOwnProperty(Vt) || this.skipValues.includes(tt[Vt]) || et.push(Vt)
-            } else et = Object.keys(tt);
-            let Vt, Ot = et.length;
-            if (Ot < 16 ? he[Re++] = 128 | Ot : Ot < 65536 ? (he[Re++] = 222, he[Re++] = Ot >> 8, he[Re++] = 255 & Ot) : (he[Re++] = 223, We.setUint32(Re, Ot), Re += 4), this.coercibleKeyAsNumber)
-              for (let qt = 0; qt < Ot; qt++) {
-                Vt = et[qt];
-                let Ot = Number(Vt);
-                bt(isNaN(Ot) ? Vt : Ot), bt(tt[Vt])
+              Eu = [];
+              for (let ju in uu) "function" === typeof uu.hasOwnProperty && !uu.hasOwnProperty(ju) || this.skipValues.includes(uu[ju]) || Eu.push(ju)
+            } else Eu = Object.keys(uu);
+            let ju, su = Eu.length;
+            if (su < 16 ? JE[kE++] = 128 | su : su < 65536 ? (JE[kE++] = 222, JE[kE++] = su >> 8, JE[kE++] = 255 & su) : (JE[kE++] = 223, aE.setUint32(kE, su), kE += 4), this.coercibleKeyAsNumber)
+              for (let Uu = 0; Uu < su; Uu++) {
+                ju = Eu[Uu];
+                let su = Number(ju);
+                Mu(isNaN(su) ? ju : su), Mu(uu[ju])
               } else
-                for (let qt = 0; qt < Ot; qt++) bt(Vt = et[qt]), bt(tt[Vt])
-          } : tt => {
-            he[Re++] = 222;
-            let Vt = Re - et;
-            Re += 2;
-            let Ot = 0;
-            for (let et in tt)("function" !== typeof tt.hasOwnProperty || tt.hasOwnProperty(et)) && (bt(et), bt(tt[et]), Ot++);
-            if (Ot > 65535) throw new Error('Object is too large to serialize with fast 16-bit map size, use the "variableMapSize" option to serialize this object');
-            he[Vt++ + et] = Ot >> 8, he[Vt + et] = 255 & Ot
+                for (let Uu = 0; Uu < su; Uu++) Mu(ju = Eu[Uu]), Mu(uu[ju])
+          } : uu => {
+            JE[kE++] = 222;
+            let ju = kE - Eu;
+            kE += 2;
+            let su = 0;
+            for (let Eu in uu)("function" !== typeof uu.hasOwnProperty || uu.hasOwnProperty(Eu)) && (Mu(Eu), Mu(uu[Eu]), su++);
+            if (su > 65535) throw new Error('Object is too large to serialize with fast 16-bit map size, use the "variableMapSize" option to serialize this object');
+            JE[ju++ + Eu] = su >> 8, JE[ju + Eu] = 255 & su
           },
-          Ct = !1 === this.useRecords ? Jt : tt.progressiveRecords && !Qt ? tt => {
-            let Vt, qt, Dt = Ot.transitions || (Ot.transitions = Object.create(null)),
-              mt = Re++ - et;
-            for (let dt in tt)
-              if ("function" !== typeof tt.hasOwnProperty || tt.hasOwnProperty(dt)) {
-                if (Vt = Dt[dt], Vt) Dt = Vt;
+          Gu = !1 === this.useRecords ? eu : uu.progressiveRecords && !bu ? uu => {
+            let ju, Uu, Zu = su.transitions || (su.transitions = Object.create(null)),
+              Xu = kE++ - Eu;
+            for (let lu in uu)
+              if ("function" !== typeof uu.hasOwnProperty || uu.hasOwnProperty(lu)) {
+                if (ju = Zu[lu], ju) Zu = ju;
                 else {
-                  let jt = Object.keys(tt),
-                    Ht = Dt;
-                  Dt = Ot.transitions;
-                  let Xt = 0;
-                  for (let tt = 0, et = jt.length; tt < et; tt++) {
-                    let et = jt[tt];
-                    Vt = Dt[et], Vt || (Vt = Dt[et] = Object.create(null), Xt++), Dt = Vt
+                  let qu = Object.keys(uu),
+                    fu = Zu;
+                  Zu = su.transitions;
+                  let Cu = 0;
+                  for (let uu = 0, Eu = qu.length; uu < Eu; uu++) {
+                    let Eu = qu[uu];
+                    ju = Zu[Eu], ju || (ju = Zu[Eu] = Object.create(null), Cu++), Zu = ju
                   }
-                  mt + et + 1 == Re ? (Re--, vt(Dt, jt, Xt)) : Wt(Dt, jt, mt, Xt), qt = !0, Dt = Ht[dt]
+                  Xu + Eu + 1 == kE ? (kE--, du(Zu, qu, Cu)) : au(Zu, qu, Xu, Cu), Uu = !0, Zu = fu[lu]
                 }
-                bt(tt[dt])
-              } if (!qt) {
-              let Vt = Dt[Ze];
-              Vt ? he[mt + et] = Vt : Wt(Dt, Object.keys(tt), mt, 0)
+                Mu(uu[lu])
+              } if (!Uu) {
+              let ju = Zu[KE];
+              ju ? JE[Xu + Eu] = ju : au(Zu, Object.keys(uu), Xu, 0)
             }
-          } : tt => {
-            let et, Vt = Ot.transitions || (Ot.transitions = Object.create(null)),
-              qt = 0;
-            for (let Ot in tt)("function" !== typeof tt.hasOwnProperty || tt.hasOwnProperty(Ot)) && (et = Vt[Ot], et || (et = Vt[Ot] = Object.create(null), qt++), Vt = et);
-            let Dt = Vt[Ze];
-            Dt ? Dt >= 96 && Qt ? (he[Re++] = 96 + (31 & (Dt -= 96)), he[Re++] = Dt >> 5) : he[Re++] = Dt : vt(Vt, Vt.__keys__ || Object.keys(tt), qt);
-            for (let Ot in tt)("function" !== typeof tt.hasOwnProperty || tt.hasOwnProperty(Ot)) && bt(tt[Ot])
+          } : uu => {
+            let Eu, ju = su.transitions || (su.transitions = Object.create(null)),
+              Uu = 0;
+            for (let su in uu)("function" !== typeof uu.hasOwnProperty || uu.hasOwnProperty(su)) && (Eu = ju[su], Eu || (Eu = ju[su] = Object.create(null), Uu++), ju = Eu);
+            let Zu = ju[KE];
+            Zu ? Zu >= 96 && bu ? (JE[kE++] = 96 + (31 & (Zu -= 96)), JE[kE++] = Zu >> 5) : JE[kE++] = Zu : du(ju, ju.__keys__ || Object.keys(uu), Uu);
+            for (let su in uu)("function" !== typeof uu.hasOwnProperty || uu.hasOwnProperty(su)) && Mu(uu[su])
           },
-          ut = "function" == typeof this.useRecords && this.useRecords,
-          Kt = ut ? tt => {
-            ut(tt) ? Ct(tt) : Jt(tt)
-          } : Ct,
-          ht = tt => {
-            let Vt;
-            if (tt > 16777216) {
-              if (tt - et > Ke) throw new Error("Packed buffer would be larger than maximum buffer size");
-              Vt = Math.min(Ke, 4096 * Math.round(Math.max((tt - et) * (tt > 67108864 ? 1.25 : 2), 4194304) / 4096))
-            } else Vt = 1 + (Math.max(tt - et << 2, he.length - 1) >> 12) << 12;
-            let Ot = new Ce(Vt);
-            return We = Ot.dataView || (Ot.dataView = new DataView(Ot.buffer, 0, Vt)), tt = Math.min(tt, he.length), he.copy ? he.copy(Ot, 0, et, tt) : Ot.set(he.slice(et, tt)), Re -= et, et = 0, Se = Ot.length - 10, he = Ot
+          pu = "function" == typeof this.useRecords && this.useRecords,
+          wu = pu ? uu => {
+            pu(uu) ? Gu(uu) : eu(uu)
+          } : Gu,
+          Ju = uu => {
+            let ju;
+            if (uu > 16777216) {
+              if (uu - Eu > wE) throw new Error("Packed buffer would be larger than maximum buffer size");
+              ju = Math.min(wE, 4096 * Math.round(Math.max((uu - Eu) * (uu > 67108864 ? 1.25 : 2), 4194304) / 4096))
+            } else ju = 1 + (Math.max(uu - Eu << 2, JE.length - 1) >> 12) << 12;
+            let su = new GE(ju);
+            return aE = su.dataView || (su.dataView = new DataView(su.buffer, 0, ju)), uu = Math.min(uu, JE.length), JE.copy ? JE.copy(su, 0, Eu, uu) : su.set(JE.slice(Eu, uu)), kE -= Eu, Eu = 0, PE = su.length - 10, JE = su
           },
-          vt = (tt, et, qt) => {
-            let Dt = Ot.nextId;
-            Dt || (Dt = 64), Dt < lt && this.shouldShareStructure && !this.shouldShareStructure(et) ? (Dt = Ot.nextOwnId, Dt < Et || (Dt = lt), Ot.nextOwnId = Dt + 1) : (Dt >= Et && (Dt = lt), Ot.nextId = Dt + 1);
-            let mt = et.highByte = Dt >= 96 && Qt ? Dt - 96 >> 5 : -1;
-            tt[Ze] = Dt, tt.__keys__ = et, Ot[Dt - 64] = et, Dt < lt ? (et.isShared = !0, Ot.sharedLength = Dt - 63, Vt = !0, mt >= 0 ? (he[Re++] = 96 + (31 & Dt), he[Re++] = mt) : he[Re++] = Dt) : (mt >= 0 ? (he[Re++] = 213, he[Re++] = 114, he[Re++] = 96 + (31 & Dt), he[Re++] = mt) : (he[Re++] = 212, he[Re++] = 114, he[Re++] = Dt), qt && (wt += yt * qt), ft.length >= Xt && (ft.shift()[Ze] = 0), ft.push(tt), bt(et))
+          du = (uu, Eu, Uu) => {
+            let Zu = su.nextId;
+            Zu || (Zu = 64), Zu < cu && this.shouldShareStructure && !this.shouldShareStructure(Eu) ? (Zu = su.nextOwnId, Zu < Nu || (Zu = cu), su.nextOwnId = Zu + 1) : (Zu >= Nu && (Zu = cu), su.nextId = Zu + 1);
+            let Xu = Eu.highByte = Zu >= 96 && bu ? Zu - 96 >> 5 : -1;
+            uu[KE] = Zu, uu.__keys__ = Eu, su[Zu - 64] = Eu, Zu < cu ? (Eu.isShared = !0, su.sharedLength = Zu - 63, ju = !0, Xu >= 0 ? (JE[kE++] = 96 + (31 & Zu), JE[kE++] = Xu) : JE[kE++] = Zu) : (Xu >= 0 ? (JE[kE++] = 213, JE[kE++] = 114, JE[kE++] = 96 + (31 & Zu), JE[kE++] = Xu) : (JE[kE++] = 212, JE[kE++] = 114, JE[kE++] = Zu), Uu && (Yu += hu * Uu), Ou.length >= Cu && (Ou.shift()[KE] = 0), Ou.push(uu), Mu(Eu))
           },
-          Wt = (tt, Vt, Ot, qt) => {
-            let Dt = he,
-              mt = Re,
-              dt = Se,
-              jt = et;
-            he = ve, Re = 0, et = 0, he || (ve = he = new Ce(8192)), Se = he.length - 10, vt(tt, Vt, qt), ve = he;
-            let Ht = Re;
-            if (he = Dt, Re = mt, Se = dt, et = jt, Ht > 1) {
-              let tt = Re + Ht - 1;
-              tt > Se && ht(tt);
-              let Vt = Ot + et;
-              he.copyWithin(Vt + Ht, Vt + 1, Re), he.set(ve.slice(0, Ht), Vt), Re = tt
-            } else he[Ot + et] = ve[0]
+          au = (uu, ju, su, Uu) => {
+            let Zu = JE,
+              Xu = kE,
+              lu = PE,
+              qu = Eu;
+            JE = dE, kE = 0, Eu = 0, JE || (dE = JE = new GE(8192)), PE = JE.length - 10, du(uu, ju, Uu), dE = JE;
+            let fu = kE;
+            if (JE = Zu, kE = Xu, PE = lu, Eu = qu, fu > 1) {
+              let uu = kE + fu - 1;
+              uu > PE && Ju(uu);
+              let ju = su + Eu;
+              JE.copyWithin(ju + fu, ju + 1, kE), JE.set(dE.slice(0, fu), ju), kE = uu
+            } else JE[su + Eu] = dE[0]
           },
-          St = tt => {
-            let qt = ce(tt, he, et, Re, Ot, ht, ((tt, et, Ot) => {
-              if (Ot) return Vt = !0;
-              Re = et;
-              let qt = he;
-              return bt(tt), Nt(), qt !== he ? {
-                position: Re,
-                targetView: We,
-                target: he
-              } : Re
+          Pu = uu => {
+            let Uu = oE(uu, JE, Eu, kE, su, Ju, ((uu, Eu, su) => {
+              if (su) return ju = !0;
+              kE = Eu;
+              let Uu = JE;
+              return Mu(uu), Du(), Uu !== JE ? {
+                position: kE,
+                targetView: aE,
+                target: JE
+              } : kE
             }), this);
-            if (0 === qt) return Kt(tt);
-            Re = qt
+            if (0 === Uu) return wu(uu);
+            kE = Uu
           }
       }
-      useBuffer(tt) {
-        he = tt, We = he.dataView || (he.dataView = new DataView(he.buffer, he.byteOffset, he.byteLength)), Re = 0
+      useBuffer(uu) {
+        JE = uu, aE = JE.dataView || (JE.dataView = new DataView(JE.buffer, JE.byteOffset, JE.byteLength)), kE = 0
       }
-      set position(tt) {
-        Re = tt
+      set position(uu) {
+        kE = uu
       }
       get position() {
-        return Re
+        return kE
       }
-      set buffer(tt) {
-        he = tt
+      set buffer(uu) {
+        JE = uu
       }
       get buffer() {
-        return he
+        return JE
       }
       clearSharedData() {
         this.structures && (this.structures = []), this.typedStructs && (this.typedStructs = [])
       }
     }
 
-    function Fe(tt, et, Vt, Ot) {
-      let qt = tt.byteLength;
-      if (qt + 1 < 256) {
+    function rE(uu, Eu, ju, su) {
+      let Uu = uu.byteLength;
+      if (Uu + 1 < 256) {
         var {
-          target: Dt,
-          position: mt
-        } = Vt(4 + qt);
-        Dt[mt++] = 199, Dt[mt++] = qt + 1
-      } else if (qt + 1 < 65536) {
+          target: Zu,
+          position: Xu
+        } = ju(4 + Uu);
+        Zu[Xu++] = 199, Zu[Xu++] = Uu + 1
+      } else if (Uu + 1 < 65536) {
         var {
-          target: Dt,
-          position: mt
-        } = Vt(5 + qt);
-        Dt[mt++] = 200, Dt[mt++] = qt + 1 >> 8, Dt[mt++] = qt + 1 & 255
+          target: Zu,
+          position: Xu
+        } = ju(5 + Uu);
+        Zu[Xu++] = 200, Zu[Xu++] = Uu + 1 >> 8, Zu[Xu++] = Uu + 1 & 255
       } else {
         var {
-          target: Dt,
-          position: mt,
-          targetView: dt
-        } = Vt(7 + qt);
-        Dt[mt++] = 201, dt.setUint32(mt, qt + 1), mt += 4
+          target: Zu,
+          position: Xu,
+          targetView: lu
+        } = ju(7 + Uu);
+        Zu[Xu++] = 201, lu.setUint32(Xu, Uu + 1), Xu += 4
       }
-      Dt[mt++] = 116, Dt[mt++] = et, tt.buffer || (tt = new Uint8Array(tt)), Dt.set(new Uint8Array(tt.buffer, tt.byteOffset, tt.byteLength), mt)
+      Zu[Xu++] = 116, Zu[Xu++] = Eu, uu.buffer || (uu = new Uint8Array(uu)), Zu.set(new Uint8Array(uu.buffer, uu.byteOffset, uu.byteLength), Xu)
     }
 
-    function ke(tt, et) {
-      let Vt = tt.byteLength;
-      var Ot, qt;
-      if (Vt < 256) {
+    function QE(uu, Eu) {
+      let ju = uu.byteLength;
+      var su, Uu;
+      if (ju < 256) {
         var {
-          target: Ot,
-          position: qt
-        } = et(Vt + 2);
-        Ot[qt++] = 196, Ot[qt++] = Vt
-      } else if (Vt < 65536) {
+          target: su,
+          position: Uu
+        } = Eu(ju + 2);
+        su[Uu++] = 196, su[Uu++] = ju
+      } else if (ju < 65536) {
         var {
-          target: Ot,
-          position: qt
-        } = et(Vt + 3);
-        Ot[qt++] = 197, Ot[qt++] = Vt >> 8, Ot[qt++] = 255 & Vt
+          target: su,
+          position: Uu
+        } = Eu(ju + 3);
+        su[Uu++] = 197, su[Uu++] = ju >> 8, su[Uu++] = 255 & ju
       } else {
         var {
-          target: Ot,
-          position: qt,
-          targetView: Dt
-        } = et(Vt + 5);
-        Ot[qt++] = 198, Dt.setUint32(qt, Vt), qt += 4
+          target: su,
+          position: Uu,
+          targetView: Zu
+        } = Eu(ju + 5);
+        su[Uu++] = 198, Zu.setUint32(Uu, ju), Uu += 4
       }
-      Ot.set(tt, qt)
+      su.set(uu, Uu)
     }
 
-    function Ge(tt, et, Vt, Ot) {
-      let qt = tt.length;
-      switch (qt) {
+    function iE(uu, Eu, ju, su) {
+      let Uu = uu.length;
+      switch (Uu) {
         case 1:
-          et[Vt++] = 212;
+          Eu[ju++] = 212;
           break;
         case 2:
-          et[Vt++] = 213;
+          Eu[ju++] = 213;
           break;
         case 4:
-          et[Vt++] = 214;
+          Eu[ju++] = 214;
           break;
         case 8:
-          et[Vt++] = 215;
+          Eu[ju++] = 215;
           break;
         case 16:
-          et[Vt++] = 216;
+          Eu[ju++] = 216;
           break;
         default:
-          qt < 256 ? (et[Vt++] = 199, et[Vt++] = qt) : qt < 65536 ? (et[Vt++] = 200, et[Vt++] = qt >> 8, et[Vt++] = 255 & qt) : (et[Vt++] = 201, et[Vt++] = qt >> 24, et[Vt++] = qt >> 16 & 255, et[Vt++] = qt >> 8 & 255, et[Vt++] = 255 & qt)
+          Uu < 256 ? (Eu[ju++] = 199, Eu[ju++] = Uu) : Uu < 65536 ? (Eu[ju++] = 200, Eu[ju++] = Uu >> 8, Eu[ju++] = 255 & Uu) : (Eu[ju++] = 201, Eu[ju++] = Uu >> 24, Eu[ju++] = Uu >> 16 & 255, Eu[ju++] = Uu >> 8 & 255, Eu[ju++] = 255 & Uu)
       }
-      return et[Vt++] = Ot, et.set(tt, Vt), Vt += qt
+      return Eu[ju++] = su, Eu.set(uu, ju), ju += Uu
     }
 
-    function ze(tt, et, Vt) {
-      if (Ie.length > 0) {
-        We.setUint32(Ie.position + tt, Re + Vt - Ie.position - tt), Ie.stringsPosition = Re - tt;
-        let Ot = Ie;
-        Ie = null, et(Ot[0]), et(Ot[1])
+    function WE(uu, Eu, ju) {
+      if (mE.length > 0) {
+        aE.setUint32(mE.position + uu, kE + ju - mE.position - uu), mE.stringsPosition = kE - uu;
+        let su = mE;
+        mE = null, Eu(su[0]), Eu(su[1])
       }
     }
 
-    function oe(tt) {
-      if (tt.Class) {
-        if (!tt.pack && !tt.write) throw new Error("Extension has no pack or write function");
-        if (tt.pack && !tt.type) throw new Error("Extension has no type (numeric code to identify the extension)");
-        Ne.unshift(tt.Class), ye.unshift(tt)
-      }! function(tt) {
-        tt.unpack ? Mt[tt.type] = tt.unpack : Mt[tt.type] = tt
-      }(tt)
+    function SE(uu) {
+      if (uu.Class) {
+        if (!uu.pack && !uu.write) throw new Error("Extension has no pack or write function");
+        if (uu.pack && !uu.type) throw new Error("Extension has no type (numeric code to identify the extension)");
+        hE.unshift(uu.Class), YE.unshift(uu)
+      }! function(uu) {
+        uu.unpack ? gu[uu.type] = uu.unpack : gu[uu.type] = uu
+      }(uu)
     }
 
-    function re(tt, et) {
-      return tt.isCompatible = tt => {
-        let Vt = !tt || (et.lastNamedStructuresLength || 0) === tt.length;
-        return Vt || et._mergeStructures(tt), Vt
-      }, tt
+    function IE(uu, Eu) {
+      return uu.isCompatible = uu => {
+        let ju = !uu || (Eu.lastNamedStructuresLength || 0) === uu.length;
+        return ju || Eu._mergeStructures(uu), ju
+      }, uu
     }
-    Ne = [Date, Set, Error, RegExp, ArrayBuffer, Object.getPrototypeOf(Uint8Array.prototype).constructor, Jt], ye = [{
-      pack(tt, et, Vt) {
-        let Ot = tt.getTime() / 1e3;
-        if ((this.useTimestamp32 || 0 === tt.getMilliseconds()) && Ot >= 0 && Ot < 4294967296) {
+    hE = [Date, Set, Error, RegExp, ArrayBuffer, Object.getPrototypeOf(Uint8Array.prototype).constructor, eu], YE = [{
+      pack(uu, Eu, ju) {
+        let su = uu.getTime() / 1e3;
+        if ((this.useTimestamp32 || 0 === uu.getMilliseconds()) && su >= 0 && su < 4294967296) {
           let {
-            target: tt,
-            targetView: Vt,
-            position: qt
-          } = et(6);
-          tt[qt++] = 214, tt[qt++] = 255, Vt.setUint32(qt, Ot)
-        } else if (Ot > 0 && Ot < 4294967296) {
+            target: uu,
+            targetView: ju,
+            position: Uu
+          } = Eu(6);
+          uu[Uu++] = 214, uu[Uu++] = 255, ju.setUint32(Uu, su)
+        } else if (su > 0 && su < 4294967296) {
           let {
-            target: Vt,
-            targetView: qt,
-            position: Dt
-          } = et(10);
-          Vt[Dt++] = 215, Vt[Dt++] = 255, qt.setUint32(Dt, 4e6 * tt.getMilliseconds() + (Ot / 1e3 / 4294967296 | 0)), qt.setUint32(Dt + 4, Ot)
-        } else if (isNaN(Ot)) {
-          if (this.onInvalidDate) return et(0), Vt(this.onInvalidDate());
+            target: ju,
+            targetView: Uu,
+            position: Zu
+          } = Eu(10);
+          ju[Zu++] = 215, ju[Zu++] = 255, Uu.setUint32(Zu, 4e6 * uu.getMilliseconds() + (su / 1e3 / 4294967296 | 0)), Uu.setUint32(Zu + 4, su)
+        } else if (isNaN(su)) {
+          if (this.onInvalidDate) return Eu(0), ju(this.onInvalidDate());
           let {
-            target: tt,
-            targetView: Ot,
-            position: qt
-          } = et(3);
-          tt[qt++] = 212, tt[qt++] = 255, tt[qt++] = 255
+            target: uu,
+            targetView: su,
+            position: Uu
+          } = Eu(3);
+          uu[Uu++] = 212, uu[Uu++] = 255, uu[Uu++] = 255
         } else {
           let {
-            target: Vt,
-            targetView: qt,
-            position: Dt
-          } = et(15);
-          Vt[Dt++] = 199, Vt[Dt++] = 12, Vt[Dt++] = 255, qt.setUint32(Dt, 1e6 * tt.getMilliseconds()), qt.setBigInt64(Dt + 4, BigInt(Math.floor(Ot)))
+            target: ju,
+            targetView: Uu,
+            position: Zu
+          } = Eu(15);
+          ju[Zu++] = 199, ju[Zu++] = 12, ju[Zu++] = 255, Uu.setUint32(Zu, 1e6 * uu.getMilliseconds()), Uu.setBigInt64(Zu + 4, BigInt(Math.floor(su)))
         }
       }
     }, {
-      pack(tt, et, Vt) {
-        if (this.setAsEmptyObject) return et(0), Vt({});
-        let Ot = Array.from(tt),
+      pack(uu, Eu, ju) {
+        if (this.setAsEmptyObject) return Eu(0), ju({});
+        let su = Array.from(uu),
           {
-            target: qt,
-            position: Dt
-          } = et(this.moreTypes ? 3 : 0);
-        this.moreTypes && (qt[Dt++] = 212, qt[Dt++] = 115, qt[Dt++] = 0), Vt(Ot)
+            target: Uu,
+            position: Zu
+          } = Eu(this.moreTypes ? 3 : 0);
+        this.moreTypes && (Uu[Zu++] = 212, Uu[Zu++] = 115, Uu[Zu++] = 0), ju(su)
       }
     }, {
-      pack(tt, et, Vt) {
+      pack(uu, Eu, ju) {
         let {
-          target: Ot,
-          position: qt
-        } = et(this.moreTypes ? 3 : 0);
-        this.moreTypes && (Ot[qt++] = 212, Ot[qt++] = 101, Ot[qt++] = 0), Vt([tt.name, tt.message, tt.cause])
+          target: su,
+          position: Uu
+        } = Eu(this.moreTypes ? 3 : 0);
+        this.moreTypes && (su[Uu++] = 212, su[Uu++] = 101, su[Uu++] = 0), ju([uu.name, uu.message, uu.cause])
       }
     }, {
-      pack(tt, et, Vt) {
+      pack(uu, Eu, ju) {
         let {
-          target: Ot,
-          position: qt
-        } = et(this.moreTypes ? 3 : 0);
-        this.moreTypes && (Ot[qt++] = 212, Ot[qt++] = 120, Ot[qt++] = 0), Vt([tt.source, tt.flags])
+          target: su,
+          position: Uu
+        } = Eu(this.moreTypes ? 3 : 0);
+        this.moreTypes && (su[Uu++] = 212, su[Uu++] = 120, su[Uu++] = 0), ju([uu.source, uu.flags])
       }
     }, {
-      pack(tt, et) {
-        this.moreTypes ? Fe(tt, 16, et) : ke(Je ? Buffer.from(tt) : new Uint8Array(tt), et)
+      pack(uu, Eu) {
+        this.moreTypes ? rE(uu, 16, Eu) : QE(eE ? Buffer.from(uu) : new Uint8Array(uu), Eu)
       }
     }, {
-      pack(tt, et) {
-        let Vt = tt.constructor;
-        Vt !== ue && this.moreTypes ? Fe(tt, Oe.indexOf(Vt.name), et) : ke(tt, et)
+      pack(uu, Eu) {
+        let ju = uu.constructor;
+        ju !== pE && this.moreTypes ? rE(uu, jE.indexOf(ju.name), Eu) : QE(uu, Eu)
       }
     }, {
-      pack(tt, et) {
+      pack(uu, Eu) {
         let {
-          target: Vt,
-          position: Ot
-        } = et(1);
-        Vt[Ot] = 193
+          target: ju,
+          position: su
+        } = Eu(1);
+        ju[su] = 193
       }
     }];
-    let Ue = new Le({
+    let FE = new VE({
       useRecords: !1
     });
-    const Ae = Ue.pack,
-      ie = Ue.pack,
-      Ye = Le,
+    const BE = FE.pack,
+      LE = FE.pack,
+      tE = VE,
       {
-        NEVER: Be,
-        ALWAYS: pe,
-        DECIMAL_ROUND: xe,
-        DECIMAL_FIT: Te
-      } = fe,
-      ge = 512,
-      se = 1024,
-      ne = 2048;
-    const tV = function(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (!tt || "object" !== typeof tt) throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a promise");
-        const Vt = new St(et);
-        let Ot;
-        const qt = tt => {
-          let et;
-          Ot && (tt = Buffer.concat([Ot, tt]), Ot = void 0);
+        NEVER: xE,
+        ALWAYS: TE,
+        DECIMAL_ROUND: HE,
+        DECIMAL_FIT: AE
+      } = NE,
+      nE = 512,
+      yE = 1024,
+      zE = 2048;
+    const RE = function(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        if (!uu || "object" !== typeof uu) throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a promise");
+        const ju = new Pu(Eu);
+        let su;
+        const Uu = uu => {
+          let Eu;
+          su && (uu = Buffer.concat([su, uu]), su = void 0);
           try {
-            et = Vt.unpackMultiple(tt)
-          } catch (qt) {
-            if (!qt.incomplete) throw qt;
-            Ot = tt.slice(qt.lastPosition), et = qt.values
+            Eu = ju.unpackMultiple(uu)
+          } catch (Uu) {
+            if (!Uu.incomplete) throw Uu;
+            su = uu.slice(Uu.lastPosition), Eu = Uu.values
           }
-          return et
+          return Eu
         };
-        return "function" === typeof tt[Symbol.iterator] ? function*() {
-          for (const et of tt) yield* qt(et)
-        }() : "function" === typeof tt[Symbol.asyncIterator] ? async function*() {
-          for await (const et of tt) yield* qt(et)
+        return "function" === typeof uu[Symbol.iterator] ? function*() {
+          for (const Eu of uu) yield* Uu(Eu)
+        }() : "function" === typeof uu[Symbol.asyncIterator] ? async function*() {
+          for await (const Eu of uu) yield* Uu(Eu)
         }(): void 0
       },
-      eV = function(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (tt && "object" === typeof tt) {
-          if ("function" === typeof tt[Symbol.iterator]) return function*(tt, et) {
-            const Vt = new Le(et);
-            for (const Ot of tt) yield Vt.pack(Ot)
-          }(tt, et);
-          if ("function" === typeof tt.then || "function" === typeof tt[Symbol.asyncIterator]) return async function*(tt, et) {
-            const Vt = new Le(et);
-            for await (const Ot of tt) yield Vt.pack(Ot)
-          }(tt, et);
+      uj = function(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        if (uu && "object" === typeof uu) {
+          if ("function" === typeof uu[Symbol.iterator]) return function*(uu, Eu) {
+            const ju = new VE(Eu);
+            for (const su of uu) yield ju.pack(su)
+          }(uu, Eu);
+          if ("function" === typeof uu.then || "function" === typeof uu[Symbol.asyncIterator]) return async function*(uu, Eu) {
+            const ju = new VE(Eu);
+            for await (const su of uu) yield ju.pack(su)
+          }(uu, Eu);
           throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a Promise")
         }
         throw new Error("first argument must be an Iterable, Async Iterable, or a Promise for an Async Iterable")
       },
-      VV = !1,
-      OV = !0
+      Ej = !1,
+      jj = !0
   },
-  9348: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      $changes: () => wt,
-      $childType: () => yt,
-      $decoder: () => Xt,
-      $deleteByIndex: () => Et,
-      $encoder: () => Ht,
-      $filter: () => Qt,
-      $getByIndex: () => lt,
-      $numFields: () => Wt,
-      $refId: () => dt,
-      $track: () => jt,
-      $values: () => Ct,
-      ArraySchema: () => OO,
-      Callbacks: () => Oq,
-      ChangeTree: () => RV,
-      CollectionSchema: () => mO,
-      Decoder: () => xO,
-      Encoder: () => iO,
-      FieldBuilder: () => HO,
-      MapSchema: () => DO,
-      Metadata: () => xe,
-      OPERATION: () => qt,
-      Reflection: () => nO,
-      ReflectionField: () => gO,
-      ReflectionType: () => sO,
-      Root: () => IO,
-      Schema: () => cO,
-      SetSchema: () => dO,
-      StateCallbackStrategy: () => Vq,
-      StateView: () => kO,
-      StreamSchema: () => jO,
-      TypeContext: () => re,
-      createPool: () => Dq,
-      decode: () => be,
-      decodeKeyValueOperation: () => gV,
-      decodeSchemaOperation: () => TV,
-      defineCustomTypes: () => Ke,
-      defineTypes: () => vO,
-      deprecated: () => KO,
-      dumpChanges: () => SO,
-      encode: () => Ve,
-      encodeArray: () => zV,
-      encodeIndexedEntry: () => kV,
-      encodeKeyValueOperation: () => GV,
-      encodeMapEntry: () => FV,
-      encodeSchemaOperation: () => LV,
-      nE: () => yO,
-      fullStateOnly: () => bO,
-      getDecoderStateCallbacks: () => tq,
-      getEncodeDescriptor: () => eV,
-      getRawChangesCallback: () => eq,
-      isBuilder: () => XO,
-      patchOnly: () => MO,
-      registerType: () => ue,
-      schema: () => WO,
-      t: () => fO,
-      type: () => JO,
-      unreliable: () => aO,
-      view: () => NO
+  9329: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      $changes: () => Yu,
+      $childType: () => hu,
+      $decoder: () => Cu,
+      $deleteByIndex: () => Nu,
+      $encoder: () => fu,
+      $filter: () => bu,
+      $getByIndex: () => cu,
+      $numFields: () => au,
+      $refId: () => lu,
+      $track: () => qu,
+      $values: () => Gu,
+      ArraySchema: () => ss,
+      Callbacks: () => UU,
+      ChangeTree: () => kj,
+      CollectionSchema: () => Xs,
+      Decoder: () => ns,
+      Encoder: () => xs,
+      FieldBuilder: () => fs,
+      MapSchema: () => Zs,
+      Metadata: () => HE,
+      OPERATION: () => Uu,
+      Reflection: () => uU,
+      ReflectionField: () => zs,
+      ReflectionType: () => Rs,
+      Root: () => Ks,
+      Schema: () => ms,
+      SetSchema: () => ls,
+      StateCallbackStrategy: () => sU,
+      StateView: () => Ws,
+      StreamSchema: () => qs,
+      TypeContext: () => IE,
+      createPool: () => XU,
+      decode: () => ME,
+      decodeKeyValueOperation: () => nj,
+      decodeSchemaOperation: () => Aj,
+      defineCustomTypes: () => wE,
+      defineTypes: () => Ps,
+      deprecated: () => ds,
+      dumpChanges: () => ks,
+      encode: () => EE,
+      encodeArray: () => Wj,
+      encodeIndexedEntry: () => Qj,
+      encodeKeyValueOperation: () => ij,
+      encodeMapEntry: () => rj,
+      encodeSchemaOperation: () => Vj,
+      jO: () => hs,
+      fullStateOnly: () => es,
+      getDecoderStateCallbacks: () => EU,
+      getEncodeDescriptor: () => uj,
+      getRawChangesCallback: () => jU,
+      isBuilder: () => Cs,
+      patchOnly: () => Ms,
+      registerType: () => pE,
+      schema: () => os,
+      t: () => Os,
+      type: () => Gs,
+      unreliable: () => gs,
+      view: () => Ds
     });
-    const Ot = 255;
-    var qt;
+    const su = 255;
+    var Uu;
 
-    function Dt(tt) {
-      Object.defineProperty(tt, Symbol.metadata, {
+    function Zu(uu) {
+      Object.defineProperty(uu, Symbol.metadata, {
         value: void 0,
         writable: !0,
         configurable: !0,
         enumerable: !1
       })
-    }! function(tt) {
-      tt[tt.ADD = 128] = "ADD", tt[tt.REPLACE = 0] = "REPLACE", tt[tt.DELETE = 64] = "DELETE", tt[tt.DELETE_AND_MOVE = 96] = "DELETE_AND_MOVE", tt[tt.MOVE_AND_ADD = 160] = "MOVE_AND_ADD", tt[tt.DELETE_AND_ADD = 192] = "DELETE_AND_ADD", tt[tt.CLEAR = 10] = "CLEAR", tt[tt.REVERSE = 15] = "REVERSE", tt[tt.MOVE = 32] = "MOVE", tt[tt.DELETE_BY_REFID = 33] = "DELETE_BY_REFID", tt[tt.ADD_BY_REFID = 129] = "ADD_BY_REFID"
-    }(qt || (qt = {})), Symbol.metadata ??= Symbol.for("Symbol.metadata");
-    const mt = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof global ? global : "undefined" !== typeof self ? self : "undefined" !== typeof window ? window : {};
+    }! function(uu) {
+      uu[uu.ADD = 128] = "ADD", uu[uu.REPLACE = 0] = "REPLACE", uu[uu.DELETE = 64] = "DELETE", uu[uu.DELETE_AND_MOVE = 96] = "DELETE_AND_MOVE", uu[uu.MOVE_AND_ADD = 160] = "MOVE_AND_ADD", uu[uu.DELETE_AND_ADD = 192] = "DELETE_AND_ADD", uu[uu.CLEAR = 10] = "CLEAR", uu[uu.REVERSE = 15] = "REVERSE", uu[uu.MOVE = 32] = "MOVE", uu[uu.DELETE_BY_REFID = 33] = "DELETE_BY_REFID", uu[uu.ADD_BY_REFID = 129] = "ADD_BY_REFID"
+    }(Uu || (Uu = {})), Symbol.metadata ??= Symbol.for("Symbol.metadata");
+    const Xu = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof global ? global : "undefined" !== typeof self ? self : "undefined" !== typeof window ? window : {};
     if ("function" === typeof Symbol && "function" !== typeof Symbol.for) {
-      const tt = "colyseus.symbolRegistry",
-        et = mt[tt] || (mt[tt] = Object.create(null));
-      Symbol.for = function(tt) {
-        return et[tt] || (et[tt] = Symbol(tt))
-      }, Symbol.keyFor = function(tt) {
-        for (const Vt in et)
-          if (et[Vt] === tt) return Vt
+      const uu = "colyseus.symbolRegistry",
+        Eu = Xu[uu] || (Xu[uu] = Object.create(null));
+      Symbol.for = function(uu) {
+        return Eu[uu] || (Eu[uu] = Symbol(uu))
+      }, Symbol.keyFor = function(uu) {
+        for (const ju in Eu)
+          if (Eu[ju] === uu) return ju
       }
     }
-    const dt = Symbol.for("$refId"),
-      jt = "~track",
-      Ht = "~encoder",
-      Xt = "~decoder",
-      Qt = "~filter",
-      lt = "~getByIndex",
-      Et = "~deleteByIndex",
-      ft = "~resyncPrune",
-      wt = Symbol.for("$changes"),
-      yt = Symbol.for("$childType"),
-      Nt = Symbol.for("$proxyTarget"),
-      Mt = "~onEncodeEnd",
-      bt = "~reset",
-      Jt = "~onDecodeEnd",
-      Ct = Symbol.for("$values"),
-      ut = "~builder",
-      Kt = "~descriptors",
-      ht = "~__encodeDescriptor",
-      vt = "~encoders",
-      Wt = "~__numFields",
-      St = "~__refTypeFieldIndexes",
-      ct = "~__viewFieldIndexes",
-      Rt = "$__fieldIndexesByViewTag",
-      It = "~__unreliableFieldIndexes",
-      Pt = "~__patchOnlyFieldIndexes",
-      Zt = "~__fullSyncSkipIndexes",
-      Lt = "~__fullStateOnlyFieldIndexes",
-      Ft = "~__streamFieldIndexes",
-      kt = "~__streamPriorities";
-    let Gt;
+    const lu = Symbol.for("$refId"),
+      qu = "~track",
+      fu = "~encoder",
+      Cu = "~decoder",
+      bu = "~filter",
+      cu = "~getByIndex",
+      Nu = "~deleteByIndex",
+      Ou = "~resyncPrune",
+      Yu = Symbol.for("$changes"),
+      hu = Symbol.for("$childType"),
+      Du = Symbol.for("$proxyTarget"),
+      gu = "~onEncodeEnd",
+      Mu = "~reset",
+      eu = "~onDecodeEnd",
+      Gu = Symbol.for("$values"),
+      pu = "~builder",
+      wu = "~descriptors",
+      Ju = "~__encodeDescriptor",
+      du = "~encoders",
+      au = "~__numFields",
+      Pu = "~__refTypeFieldIndexes",
+      ou = "~__viewFieldIndexes",
+      ku = "$__fieldIndexesByViewTag",
+      mu = "~__unreliableFieldIndexes",
+      vu = "~__patchOnlyFieldIndexes",
+      Ku = "~__fullSyncSkipIndexes",
+      Vu = "~__fullStateOnlyFieldIndexes",
+      ru = "~__streamFieldIndexes",
+      Qu = "~__streamPriorities";
+    let iu;
     try {
-      Gt = new TextEncoder
-    } catch (mq) {}
-    const zt = new ArrayBuffer(8),
-      ot = new Int32Array(zt),
-      rt = new Float32Array(zt),
-      Ut = new Float64Array(zt),
-      At = new BigInt64Array(zt),
-      it = "undefined" !== typeof Buffer && Buffer.byteLength ? Buffer.byteLength : function(tt, et) {
-        for (var Vt = 0, Ot = 0, qt = 0, Dt = tt.length; qt < Dt; qt++)(Vt = tt.charCodeAt(qt)) < 128 ? Ot += 1 : Vt < 2048 ? Ot += 2 : Vt < 55296 || Vt >= 57344 ? Ot += 3 : (qt++, Ot += 4);
-        return Ot
+      iu = new TextEncoder
+    } catch (lU) {}
+    const Wu = new ArrayBuffer(8),
+      Su = new Int32Array(Wu),
+      Iu = new Float32Array(Wu),
+      Fu = new Float64Array(Wu),
+      Bu = new BigInt64Array(Wu),
+      Lu = "undefined" !== typeof Buffer && Buffer.byteLength ? Buffer.byteLength : function(uu, Eu) {
+        for (var ju = 0, su = 0, Uu = 0, Zu = uu.length; Uu < Zu; Uu++)(ju = uu.charCodeAt(Uu)) < 128 ? su += 1 : ju < 2048 ? su += 2 : ju < 55296 || ju >= 57344 ? su += 3 : (Uu++, su += 4);
+        return su
       };
 
-    function Yt(tt, et, Vt) {
-      for (var Ot = 0, qt = 0, Dt = et.length; qt < Dt; qt++)(Ot = et.charCodeAt(qt)) < 128 ? tt[Vt.offset++] = Ot : Ot < 2048 ? (tt[Vt.offset] = 192 | Ot >> 6, tt[Vt.offset + 1] = 128 | 63 & Ot, Vt.offset += 2) : Ot < 55296 || Ot >= 57344 ? (tt[Vt.offset] = 224 | Ot >> 12, tt[Vt.offset + 1] = 128 | Ot >> 6 & 63, tt[Vt.offset + 2] = 128 | 63 & Ot, Vt.offset += 3) : (qt++, Ot = 65536 + ((1023 & Ot) << 10 | 1023 & et.charCodeAt(qt)), tt[Vt.offset] = 240 | Ot >> 18, tt[Vt.offset + 1] = 128 | Ot >> 12 & 63, tt[Vt.offset + 2] = 128 | Ot >> 6 & 63, tt[Vt.offset + 3] = 128 | 63 & Ot, Vt.offset += 4)
+    function tu(uu, Eu, ju) {
+      for (var su = 0, Uu = 0, Zu = Eu.length; Uu < Zu; Uu++)(su = Eu.charCodeAt(Uu)) < 128 ? uu[ju.offset++] = su : su < 2048 ? (uu[ju.offset] = 192 | su >> 6, uu[ju.offset + 1] = 128 | 63 & su, ju.offset += 2) : su < 55296 || su >= 57344 ? (uu[ju.offset] = 224 | su >> 12, uu[ju.offset + 1] = 128 | su >> 6 & 63, uu[ju.offset + 2] = 128 | 63 & su, ju.offset += 3) : (Uu++, su = 65536 + ((1023 & su) << 10 | 1023 & Eu.charCodeAt(Uu)), uu[ju.offset] = 240 | su >> 18, uu[ju.offset + 1] = 128 | su >> 12 & 63, uu[ju.offset + 2] = 128 | su >> 6 & 63, uu[ju.offset + 3] = 128 | 63 & su, ju.offset += 4)
     }
 
-    function Bt(tt, et, Vt) {
-      tt[Vt.offset++] = 255 & et
+    function xu(uu, Eu, ju) {
+      uu[ju.offset++] = 255 & Eu
     }
 
-    function pt(tt, et, Vt) {
-      tt[Vt.offset++] = 255 & et, tt[Vt.offset++] = et >> 8 & 255
+    function Tu(uu, Eu, ju) {
+      uu[ju.offset++] = 255 & Eu, uu[ju.offset++] = Eu >> 8 & 255
     }
 
-    function xt(tt, et, Vt) {
-      tt[Vt.offset++] = 255 & et, tt[Vt.offset++] = et >> 8 & 255
+    function Hu(uu, Eu, ju) {
+      uu[ju.offset++] = 255 & Eu, uu[ju.offset++] = Eu >> 8 & 255
     }
 
-    function Tt(tt, et, Vt) {
-      tt[Vt.offset++] = 255 & et, tt[Vt.offset++] = et >> 8 & 255, tt[Vt.offset++] = et >> 16 & 255, tt[Vt.offset++] = et >> 24 & 255
+    function Au(uu, Eu, ju) {
+      uu[ju.offset++] = 255 & Eu, uu[ju.offset++] = Eu >> 8 & 255, uu[ju.offset++] = Eu >> 16 & 255, uu[ju.offset++] = Eu >> 24 & 255
     }
 
-    function gt(tt, et, Vt) {
-      const Ot = et >> 24,
-        qt = et >> 16,
-        Dt = et >> 8,
-        mt = et;
-      tt[Vt.offset++] = 255 & mt, tt[Vt.offset++] = 255 & Dt, tt[Vt.offset++] = 255 & qt, tt[Vt.offset++] = 255 & Ot
+    function nu(uu, Eu, ju) {
+      const su = Eu >> 24,
+        Uu = Eu >> 16,
+        Zu = Eu >> 8,
+        Xu = Eu;
+      uu[ju.offset++] = 255 & Xu, uu[ju.offset++] = 255 & Zu, uu[ju.offset++] = 255 & Uu, uu[ju.offset++] = 255 & su
     }
 
-    function st(tt, et, Vt) {
-      const Ot = Math.floor(et / Math.pow(2, 32));
-      gt(tt, et >>> 0, Vt), gt(tt, Ot, Vt)
+    function yu(uu, Eu, ju) {
+      const su = Math.floor(Eu / Math.pow(2, 32));
+      nu(uu, Eu >>> 0, ju), nu(uu, su, ju)
     }
 
-    function nt(tt, et, Vt) {
-      const Ot = et / Math.pow(2, 32) | 0;
-      gt(tt, et >>> 0, Vt), gt(tt, Ot, Vt)
+    function zu(uu, Eu, ju) {
+      const su = Eu / Math.pow(2, 32) | 0;
+      nu(uu, Eu >>> 0, ju), nu(uu, su, ju)
     }
 
-    function te(tt, et, Vt) {
-      rt[0] = et, Tt(tt, ot[0], Vt)
+    function Ru(uu, Eu, ju) {
+      Iu[0] = Eu, Au(uu, Su[0], ju)
     }
 
-    function ee(tt, et, Vt) {
-      Ut[0] = et, Tt(tt, ot[0], Vt), Tt(tt, ot[1], Vt)
+    function uE(uu, Eu, ju) {
+      Fu[0] = Eu, Au(uu, Su[0], ju), Au(uu, Su[1], ju)
     }
-    const Ve = {
-        int8: Bt,
-        uint8: function(tt, et, Vt) {
-          tt[Vt.offset++] = 255 & et
+    const EE = {
+        int8: xu,
+        uint8: function(uu, Eu, ju) {
+          uu[ju.offset++] = 255 & Eu
         },
-        int16: pt,
-        uint16: xt,
-        int32: Tt,
-        uint32: gt,
-        int64: st,
-        uint64: nt,
-        bigint64: function(tt, et, Vt) {
-          At[0] = BigInt.asIntN(64, et), Tt(tt, ot[0], Vt), Tt(tt, ot[1], Vt)
+        int16: Tu,
+        uint16: Hu,
+        int32: Au,
+        uint32: nu,
+        int64: yu,
+        uint64: zu,
+        bigint64: function(uu, Eu, ju) {
+          Bu[0] = BigInt.asIntN(64, Eu), Au(uu, Su[0], ju), Au(uu, Su[1], ju)
         },
-        biguint64: function(tt, et, Vt) {
-          At[0] = BigInt.asIntN(64, et), Tt(tt, ot[0], Vt), Tt(tt, ot[1], Vt)
+        biguint64: function(uu, Eu, ju) {
+          Bu[0] = BigInt.asIntN(64, Eu), Au(uu, Su[0], ju), Au(uu, Su[1], ju)
         },
-        float32: te,
-        float64: ee,
-        boolean: function(tt, et, Vt) {
-          tt[Vt.offset++] = et ? 1 : 0
+        float32: Ru,
+        float64: uE,
+        boolean: function(uu, Eu, ju) {
+          uu[ju.offset++] = Eu ? 1 : 0
         },
-        string: function(tt, et, Vt) {
-          et || (et = "");
-          let Ot = it(et, "utf8"),
-            qt = 0;
-          if (Ot < 32) tt[Vt.offset++] = 160 | Ot, qt = 1;
-          else if (Ot < 256) tt[Vt.offset++] = 217, tt[Vt.offset++] = Ot, qt = 2;
-          else if (Ot < 65536) tt[Vt.offset++] = 218, xt(tt, Ot, Vt), qt = 3;
+        string: function(uu, Eu, ju) {
+          Eu || (Eu = "");
+          let su = Lu(Eu, "utf8"),
+            Uu = 0;
+          if (su < 32) uu[ju.offset++] = 160 | su, Uu = 1;
+          else if (su < 256) uu[ju.offset++] = 217, uu[ju.offset++] = su, Uu = 2;
+          else if (su < 65536) uu[ju.offset++] = 218, Hu(uu, su, ju), Uu = 3;
           else {
-            if (!(Ot < 4294967296)) throw new Error("String too long");
-            tt[Vt.offset++] = 219, gt(tt, Ot, Vt), qt = 5
+            if (!(su < 4294967296)) throw new Error("String too long");
+            uu[ju.offset++] = 219, nu(uu, su, ju), Uu = 5
           }
-          return Yt(tt, et, Vt), qt + Ot
+          return tu(uu, Eu, ju), Uu + su
         },
-        number: function tt(et, Vt, Ot) {
-          return isNaN(Vt) ? tt(et, 0, Ot) : isFinite(Vt) ? Vt !== (0 | Vt) ? Math.abs(Vt) <= 34028235e31 && (rt[0] = Vt, Math.abs(Math.abs(rt[0]) - Math.abs(Vt)) < 1e-4) ? (et[Ot.offset++] = 202, te(et, Vt, Ot), 5) : (et[Ot.offset++] = 203, ee(et, Vt, Ot), 9) : Vt >= 0 ? Vt < 128 ? (et[Ot.offset++] = 255 & Vt, 1) : Vt < 256 ? (et[Ot.offset++] = 204, et[Ot.offset++] = 255 & Vt, 2) : Vt < 65536 ? (et[Ot.offset++] = 205, xt(et, Vt, Ot), 3) : Vt < 4294967296 ? (et[Ot.offset++] = 206, gt(et, Vt, Ot), 5) : (et[Ot.offset++] = 207, nt(et, Vt, Ot), 9) : Vt >= -32 ? (et[Ot.offset++] = 224 | Vt + 32, 1) : Vt >= -128 ? (et[Ot.offset++] = 208, Bt(et, Vt, Ot), 2) : Vt >= -32768 ? (et[Ot.offset++] = 209, pt(et, Vt, Ot), 3) : Vt >= -2147483648 ? (et[Ot.offset++] = 210, Tt(et, Vt, Ot), 5) : (et[Ot.offset++] = 211, st(et, Vt, Ot), 9) : tt(et, Vt > 0 ? Number.MAX_SAFE_INTEGER : -Number.MAX_SAFE_INTEGER, Ot)
+        number: function uu(Eu, ju, su) {
+          return isNaN(ju) ? uu(Eu, 0, su) : isFinite(ju) ? ju !== (0 | ju) ? Math.abs(ju) <= 34028235e31 && (Iu[0] = ju, Math.abs(Math.abs(Iu[0]) - Math.abs(ju)) < 1e-4) ? (Eu[su.offset++] = 202, Ru(Eu, ju, su), 5) : (Eu[su.offset++] = 203, uE(Eu, ju, su), 9) : ju >= 0 ? ju < 128 ? (Eu[su.offset++] = 255 & ju, 1) : ju < 256 ? (Eu[su.offset++] = 204, Eu[su.offset++] = 255 & ju, 2) : ju < 65536 ? (Eu[su.offset++] = 205, Hu(Eu, ju, su), 3) : ju < 4294967296 ? (Eu[su.offset++] = 206, nu(Eu, ju, su), 5) : (Eu[su.offset++] = 207, zu(Eu, ju, su), 9) : ju >= -32 ? (Eu[su.offset++] = 224 | ju + 32, 1) : ju >= -128 ? (Eu[su.offset++] = 208, xu(Eu, ju, su), 2) : ju >= -32768 ? (Eu[su.offset++] = 209, Tu(Eu, ju, su), 3) : ju >= -2147483648 ? (Eu[su.offset++] = 210, Au(Eu, ju, su), 5) : (Eu[su.offset++] = 211, yu(Eu, ju, su), 9) : uu(Eu, ju > 0 ? Number.MAX_SAFE_INTEGER : -Number.MAX_SAFE_INTEGER, su)
         },
-        utf8Write: Yt,
-        utf8Length: it
+        utf8Write: tu,
+        utf8Length: Lu
       },
-      Oe = new ArrayBuffer(8),
-      qe = new Int32Array(Oe),
-      De = new Float32Array(Oe),
-      me = new Float64Array(Oe),
-      de = new BigUint64Array(Oe),
-      je = new BigInt64Array(Oe);
+      jE = new ArrayBuffer(8),
+      sE = new Int32Array(jE),
+      UE = new Float32Array(jE),
+      ZE = new Float64Array(jE),
+      XE = new BigUint64Array(jE),
+      lE = new BigInt64Array(jE);
 
-    function He(tt, et, Vt) {
-      Vt > tt.length - et.offset && (Vt = tt.length - et.offset);
-      for (var Ot = "", qt = 0, Dt = et.offset, mt = et.offset + Vt; Dt < mt; Dt++) {
-        var dt = tt[Dt];
-        if (0 !== (128 & dt))
-          if (192 !== (224 & dt))
-            if (224 !== (240 & dt)) {
-              if (240 !== (248 & dt)) {
-                console.error("decode.utf8Read(): Invalid byte " + dt + " at offset " + Dt + ". Skip to end of string: " + (et.offset + Vt));
+    function qE(uu, Eu, ju) {
+      ju > uu.length - Eu.offset && (ju = uu.length - Eu.offset);
+      for (var su = "", Uu = 0, Zu = Eu.offset, Xu = Eu.offset + ju; Zu < Xu; Zu++) {
+        var lu = uu[Zu];
+        if (0 !== (128 & lu))
+          if (192 !== (224 & lu))
+            if (224 !== (240 & lu)) {
+              if (240 !== (248 & lu)) {
+                console.error("decode.utf8Read(): Invalid byte " + lu + " at offset " + Zu + ". Skip to end of string: " + (Eu.offset + ju));
                 break
-              }(qt = (7 & dt) << 18 | (63 & tt[++Dt]) << 12 | (63 & tt[++Dt]) << 6 | 63 & tt[++Dt]) >= 65536 ? (qt -= 65536, Ot += String.fromCharCode(55296 + (qt >>> 10), 56320 + (1023 & qt))) : Ot += String.fromCharCode(qt)
-            } else Ot += String.fromCharCode((15 & dt) << 12 | (63 & tt[++Dt]) << 6 | 63 & tt[++Dt]);
-        else Ot += String.fromCharCode((31 & dt) << 6 | 63 & tt[++Dt]);
-        else Ot += String.fromCharCode(dt)
+              }(Uu = (7 & lu) << 18 | (63 & uu[++Zu]) << 12 | (63 & uu[++Zu]) << 6 | 63 & uu[++Zu]) >= 65536 ? (Uu -= 65536, su += String.fromCharCode(55296 + (Uu >>> 10), 56320 + (1023 & Uu))) : su += String.fromCharCode(Uu)
+            } else su += String.fromCharCode((15 & lu) << 12 | (63 & uu[++Zu]) << 6 | 63 & uu[++Zu]);
+        else su += String.fromCharCode((31 & lu) << 6 | 63 & uu[++Zu]);
+        else su += String.fromCharCode(lu)
       }
-      return et.offset += Vt, Ot
+      return Eu.offset += ju, su
     }
 
-    function Xe(tt, et) {
-      return Qe(tt, et) << 24 >> 24
+    function fE(uu, Eu) {
+      return CE(uu, Eu) << 24 >> 24
     }
 
-    function Qe(tt, et) {
-      return tt[et.offset++]
+    function CE(uu, Eu) {
+      return uu[Eu.offset++]
     }
 
-    function le(tt, et) {
-      return Ee(tt, et) << 16 >> 16
+    function bE(uu, Eu) {
+      return cE(uu, Eu) << 16 >> 16
     }
 
-    function Ee(tt, et) {
-      return tt[et.offset++] | tt[et.offset++] << 8
+    function cE(uu, Eu) {
+      return uu[Eu.offset++] | uu[Eu.offset++] << 8
     }
 
-    function fe(tt, et) {
-      return tt[et.offset++] | tt[et.offset++] << 8 | tt[et.offset++] << 16 | tt[et.offset++] << 24
+    function NE(uu, Eu) {
+      return uu[Eu.offset++] | uu[Eu.offset++] << 8 | uu[Eu.offset++] << 16 | uu[Eu.offset++] << 24
     }
 
-    function we(tt, et) {
-      return fe(tt, et) >>> 0
+    function OE(uu, Eu) {
+      return NE(uu, Eu) >>> 0
     }
 
-    function ye(tt, et) {
-      return qe[0] = fe(tt, et), De[0]
+    function YE(uu, Eu) {
+      return sE[0] = NE(uu, Eu), UE[0]
     }
 
-    function Ne(tt, et) {
-      return qe[0] = fe(tt, et), qe[1] = fe(tt, et), me[0]
+    function hE(uu, Eu) {
+      return sE[0] = NE(uu, Eu), sE[1] = NE(uu, Eu), ZE[0]
     }
 
-    function ae(tt, et) {
-      const Vt = we(tt, et);
-      return fe(tt, et) * Math.pow(2, 32) + Vt
+    function DE(uu, Eu) {
+      const ju = OE(uu, Eu);
+      return NE(uu, Eu) * Math.pow(2, 32) + ju
     }
 
-    function Me(tt, et) {
-      const Vt = we(tt, et);
-      return we(tt, et) * Math.pow(2, 32) + Vt
+    function gE(uu, Eu) {
+      const ju = OE(uu, Eu);
+      return OE(uu, Eu) * Math.pow(2, 32) + ju
     }
-    const be = {
-        utf8Read: He,
-        int8: Xe,
-        uint8: Qe,
-        int16: le,
-        uint16: Ee,
-        int32: fe,
-        uint32: we,
-        float32: ye,
-        float64: Ne,
-        int64: ae,
-        uint64: Me,
-        bigint64: function(tt, et) {
-          return qe[0] = fe(tt, et), qe[1] = fe(tt, et), je[0]
+    const ME = {
+        utf8Read: qE,
+        int8: fE,
+        uint8: CE,
+        int16: bE,
+        uint16: cE,
+        int32: NE,
+        uint32: OE,
+        float32: YE,
+        float64: hE,
+        int64: DE,
+        uint64: gE,
+        bigint64: function(uu, Eu) {
+          return sE[0] = NE(uu, Eu), sE[1] = NE(uu, Eu), lE[0]
         },
-        biguint64: function(tt, et) {
-          return qe[0] = fe(tt, et), qe[1] = fe(tt, et), de[0]
+        biguint64: function(uu, Eu) {
+          return sE[0] = NE(uu, Eu), sE[1] = NE(uu, Eu), XE[0]
         },
-        boolean: function(tt, et) {
-          return Qe(tt, et) > 0
+        boolean: function(uu, Eu) {
+          return CE(uu, Eu) > 0
         },
-        string: function(tt, et) {
-          const Vt = tt[et.offset++];
-          let Ot;
-          return Vt < 192 ? Ot = 31 & Vt : 217 === Vt ? Ot = Qe(tt, et) : 218 === Vt ? Ot = Ee(tt, et) : 219 === Vt && (Ot = we(tt, et)), He(tt, et, Ot)
+        string: function(uu, Eu) {
+          const ju = uu[Eu.offset++];
+          let su;
+          return ju < 192 ? su = 31 & ju : 217 === ju ? su = CE(uu, Eu) : 218 === ju ? su = cE(uu, Eu) : 219 === ju && (su = OE(uu, Eu)), qE(uu, Eu, su)
         },
-        number: function(tt, et) {
-          const Vt = tt[et.offset++];
-          return Vt < 128 ? Vt : 202 === Vt ? ye(tt, et) : 203 === Vt ? Ne(tt, et) : 204 === Vt ? Qe(tt, et) : 205 === Vt ? Ee(tt, et) : 206 === Vt ? we(tt, et) : 207 === Vt ? Me(tt, et) : 208 === Vt ? Xe(tt, et) : 209 === Vt ? le(tt, et) : 210 === Vt ? fe(tt, et) : 211 === Vt ? ae(tt, et) : Vt > 223 ? -1 * (255 - Vt + 1) : void 0
+        number: function(uu, Eu) {
+          const ju = uu[Eu.offset++];
+          return ju < 128 ? ju : 202 === ju ? YE(uu, Eu) : 203 === ju ? hE(uu, Eu) : 204 === ju ? CE(uu, Eu) : 205 === ju ? cE(uu, Eu) : 206 === ju ? OE(uu, Eu) : 207 === ju ? gE(uu, Eu) : 208 === ju ? fE(uu, Eu) : 209 === ju ? bE(uu, Eu) : 210 === ju ? NE(uu, Eu) : 211 === ju ? DE(uu, Eu) : ju > 223 ? -1 * (255 - ju + 1) : void 0
         },
-        stringCheck: function(tt, et) {
-          const Vt = tt[et.offset];
-          return Vt < 192 && Vt > 160 || 217 === Vt || 218 === Vt || 219 === Vt
+        stringCheck: function(uu, Eu) {
+          const ju = uu[Eu.offset];
+          return ju < 192 && ju > 160 || 217 === ju || 218 === ju || 219 === ju
         }
       },
-      Je = {},
-      Ce = new Map;
+      eE = {},
+      GE = new Map;
 
-    function ue(tt, et) {
-      et.constructor && (Object.prototype.hasOwnProperty.call(et, "constructor") && null == et.constructor[Symbol.metadata] && Dt(et.constructor), Ce.set(et.constructor, tt), Je[tt] = et), et.encode && (Ve[tt] = et.encode), et.decode && (be[tt] = et.decode)
+    function pE(uu, Eu) {
+      Eu.constructor && (Object.prototype.hasOwnProperty.call(Eu, "constructor") && null == Eu.constructor[Symbol.metadata] && Zu(Eu.constructor), GE.set(Eu.constructor, uu), eE[uu] = Eu), Eu.encode && (EE[uu] = Eu.encode), Eu.decode && (ME[uu] = Eu.decode)
     }
 
-    function Ke(tt) {
-      for (const et in tt) ue(et, tt[et]);
-      return tt => JO(tt)
+    function wE(uu) {
+      for (const Eu in uu) pE(Eu, uu[Eu]);
+      return uu => Gs(uu)
     }
-    const he = "ArraySchema does not support streaming \u2014 positional ops (splice / unshift / reverse) shift subsequent indexes, so holding ADDs back for a later tick under `maxPerTick` would desync the decoder. Use `t.stream(X)` (stable monotonic positions) or `t.map(X).stream()` (stable keys) instead.";
+    const JE = "ArraySchema does not support streaming \u2014 positional ops (splice / unshift / reverse) shift subsequent indexes, so holding ADDs back for a later tick under `maxPerTick` would desync the decoder. Use `t.stream(X)` (stable monotonic positions) or `t.map(X).stream()` (stable keys) instead.";
 
-    function ve() {
+    function dE() {
       return {
         pendingByView: new Map,
         sentByView: new Map,
@@ -2450,160 +2450,160 @@ export const modules = {
       }
     }
 
-    function We(tt) {
-      return tt._stream ??= ve()
+    function aE(uu) {
+      return uu._stream ??= dE()
     }
 
-    function Se(tt, et, Vt) {
-      0 === et.activeViews.size && We(tt).broadcastPending.add(Vt)
+    function PE(uu, Eu, ju) {
+      0 === Eu.activeViews.size && aE(uu).broadcastPending.add(ju)
     }
 
-    function ce(tt, et, Vt, Ot) {
-      const Dt = tt._stream;
-      if (void 0 === Dt) return !0;
-      let mt = !1;
-      return Dt.broadcastPending.delete(Ot) ? mt = !0 : Dt.sentBroadcast.delete(Ot) && Dt.broadcastDeletes.add(Ot), et.forEachActiveView((tt => {
-        const et = Dt.pendingByView.get(tt.id);
-        if (et?.has(Ot)) return et.delete(Ot), void(mt = !0);
-        const dt = Dt.sentByView.get(tt.id);
-        if (dt?.has(Ot)) {
-          dt.delete(Ot);
-          let et = tt.changes.get(Vt);
-          void 0 === et && (et = new Map, tt.changes.set(Vt, et)), et.set(Ot, qt.DELETE)
+    function oE(uu, Eu, ju, su) {
+      const Zu = uu._stream;
+      if (void 0 === Zu) return !0;
+      let Xu = !1;
+      return Zu.broadcastPending.delete(su) ? Xu = !0 : Zu.sentBroadcast.delete(su) && Zu.broadcastDeletes.add(su), Eu.forEachActiveView((uu => {
+        const Eu = Zu.pendingByView.get(uu.id);
+        if (Eu?.has(su)) return Eu.delete(su), void(Xu = !0);
+        const lu = Zu.sentByView.get(uu.id);
+        if (lu?.has(su)) {
+          lu.delete(su);
+          let Eu = uu.changes.get(ju);
+          void 0 === Eu && (Eu = new Map, uu.changes.set(ju, Eu)), Eu.set(su, Uu.DELETE)
         }
-      })), mt
+      })), Xu
     }
 
-    function Re(tt, et) {
-      const Vt = tt._stream?.pendingByView;
-      if (void 0 === Vt) return !1;
-      for (const [Ot, qt] of Vt)
-        if (qt.size > 0 && void 0 !== et.activeViews.get(Ot)?.deref()) return !0;
+    function kE(uu, Eu) {
+      const ju = uu._stream?.pendingByView;
+      if (void 0 === ju) return !1;
+      for (const [su, Uu] of ju)
+        if (Uu.size > 0 && void 0 !== Eu.activeViews.get(su)?.deref()) return !0;
       return !1
     }
 
-    function Ie(tt) {
-      const et = tt._stream;
-      return void 0 !== et && (et.broadcastPending.size > 0 || et.broadcastDeletes.size > 0)
+    function mE(uu) {
+      const Eu = uu._stream;
+      return void 0 !== Eu && (Eu.broadcastPending.size > 0 || Eu.broadcastDeletes.size > 0)
     }
 
-    function Pe(tt, et, Vt) {
-      const Ot = We(tt);
-      let qt = Ot.pendingByView.get(et);
-      void 0 === qt && (qt = new Set, Ot.pendingByView.set(et, qt)), qt.add(Vt)
+    function vE(uu, Eu, ju) {
+      const su = aE(uu);
+      let Uu = su.pendingByView.get(Eu);
+      void 0 === Uu && (Uu = new Set, su.pendingByView.set(Eu, Uu)), Uu.add(ju)
     }
 
-    function Ze(tt, et) {
-      const Vt = tt._stream;
-      void 0 !== Vt && (Vt.pendingByView.delete(et), Vt.sentByView.delete(et), Vt.priorityByView?.delete(et))
+    function KE(uu, Eu) {
+      const ju = uu._stream;
+      void 0 !== ju && (ju.pendingByView.delete(Eu), ju.sentByView.delete(Eu), ju.priorityByView?.delete(Eu))
     }
-    const Le = {
+    const VE = {
       8: "uint8",
       16: "uint16",
       32: "uint32"
     };
 
-    function Fe(tt) {
-      if (null == tt || "object" !== typeof tt) throw new Error("t.quantized(): options object with { min, max } is required.");
+    function rE(uu) {
+      if (null == uu || "object" !== typeof uu) throw new Error("t.quantized(): options object with { min, max } is required.");
       const {
-        min: et,
-        max: Vt
-      } = tt;
-      if ("number" !== typeof et || "number" !== typeof Vt || !(Vt > et) || !Number.isFinite(et) || !Number.isFinite(Vt)) throw new Error(`t.quantized(): require finite min < max (got min=${et}, max=${Vt}).`);
-      const Ot = tt.bits ?? 16;
-      if (8 !== Ot && 16 !== Ot && 32 !== Ot) throw new Error(`t.quantized(): bits must be 8, 16 or 32 (got ${Ot}).`);
-      const qt = tt.mode ?? "clamp";
-      if ("clamp" !== qt && "wrap" !== qt) throw new Error(`t.quantized(): mode must be "clamp" or "wrap" (got ${JSON.stringify(qt)}).`);
-      const Dt = "wrap" === qt,
-        mt = Math.pow(2, Ot);
+        min: Eu,
+        max: ju
+      } = uu;
+      if ("number" !== typeof Eu || "number" !== typeof ju || !(ju > Eu) || !Number.isFinite(Eu) || !Number.isFinite(ju)) throw new Error(`t.quantized(): require finite min < max (got min=${Eu}, max=${ju}).`);
+      const su = uu.bits ?? 16;
+      if (8 !== su && 16 !== su && 32 !== su) throw new Error(`t.quantized(): bits must be 8, 16 or 32 (got ${su}).`);
+      const Uu = uu.mode ?? "clamp";
+      if ("clamp" !== Uu && "wrap" !== Uu) throw new Error(`t.quantized(): mode must be "clamp" or "wrap" (got ${JSON.stringify(Uu)}).`);
+      const Zu = "wrap" === Uu,
+        Xu = Math.pow(2, su);
       return {
-        min: et,
-        max: Vt,
-        bits: Ot,
-        wrap: Dt,
-        wire: Le[Ot],
-        range: Vt - et,
-        span: Dt ? mt : et === -Vt ? mt - 2 : mt - 1
+        min: Eu,
+        max: ju,
+        bits: su,
+        wrap: Zu,
+        wire: VE[su],
+        range: ju - Eu,
+        span: Zu ? Xu : Eu === -ju ? Xu - 2 : Xu - 1
       }
     }
 
-    function ke(tt) {
-      return null !== tt && "object" === typeof tt && void 0 !== tt.quantized
+    function QE(uu) {
+      return null !== uu && "object" === typeof uu && void 0 !== uu.quantized
     }
 
-    function Ge(tt, et) {
-      if (tt.wrap) {
-        if (!Number.isFinite(et)) return 0;
-        const Vt = tt.range;
-        let Ot = (et - tt.min) % Vt;
-        Ot < 0 && (Ot += Vt);
-        const qt = tt.span;
-        return Math.floor(Ot / Vt * qt + .5) % qt
+    function iE(uu, Eu) {
+      if (uu.wrap) {
+        if (!Number.isFinite(Eu)) return 0;
+        const ju = uu.range;
+        let su = (Eu - uu.min) % ju;
+        su < 0 && (su += ju);
+        const Uu = uu.span;
+        return Math.floor(su / ju * Uu + .5) % Uu
       }
-      if (et !== et) return 0;
-      const Vt = et < tt.min ? tt.min : et > tt.max ? tt.max : et;
-      return Math.floor((Vt - tt.min) / tt.range * tt.span + .5)
+      if (Eu !== Eu) return 0;
+      const ju = Eu < uu.min ? uu.min : Eu > uu.max ? uu.max : Eu;
+      return Math.floor((ju - uu.min) / uu.range * uu.span + .5)
     }
 
-    function ze(tt, et) {
-      return tt.min + et / tt.span * tt.range
+    function WE(uu, Eu) {
+      return uu.min + Eu / uu.span * uu.range
     }
 
-    function oe(tt) {
-      const et = Ve[tt.wire];
-      return (Vt, Ot, qt) => et(Vt, Ge(tt, Ot), qt)
+    function SE(uu) {
+      const Eu = EE[uu.wire];
+      return (ju, su, Uu) => Eu(ju, iE(uu, su), Uu)
     }
-    class re {
+    class IE {
       types = {};
       schemas = new Map;
       hasFilters = !1;
       static inheritedTypes = new WeakMap;
       static cachedContexts = new WeakMap;
-      static register(tt) {
-        const et = Object.getPrototypeOf(tt);
-        if (et !== cO) {
-          let Vt = re.inheritedTypes.get(et);
-          Vt || (Vt = new Set, re.inheritedTypes.set(et, Vt)), Vt.add(tt)
+      static register(uu) {
+        const Eu = Object.getPrototypeOf(uu);
+        if (Eu !== ms) {
+          let ju = IE.inheritedTypes.get(Eu);
+          ju || (ju = new Set, IE.inheritedTypes.set(Eu, ju)), ju.add(uu)
         }
       }
-      static cache(tt) {
-        let et = re.cachedContexts.get(tt);
-        return et || (et = new re(tt), re.cachedContexts.set(tt, et)), et
+      static cache(uu) {
+        let Eu = IE.cachedContexts.get(uu);
+        return Eu || (Eu = new IE(uu), IE.cachedContexts.set(uu, Eu)), Eu
       }
-      constructor(tt) {
-        tt && this.discoverTypes(tt)
+      constructor(uu) {
+        uu && this.discoverTypes(uu)
       }
-      has(tt) {
-        return this.schemas.has(tt)
+      has(uu) {
+        return this.schemas.has(uu)
       }
-      get(tt) {
-        return this.types[tt]
+      get(uu) {
+        return this.types[uu]
       }
-      add(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.schemas.size;
-        return !this.schemas.has(tt) && (this.types[et] = tt, null == tt[Symbol.metadata] && xe.initialize(tt), this.schemas.set(tt, et), !0)
+      add(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.schemas.size;
+        return !this.schemas.has(uu) && (this.types[Eu] = uu, null == uu[Symbol.metadata] && HE.initialize(uu), this.schemas.set(uu, Eu), !0)
       }
-      getTypeId(tt) {
-        return this.schemas.get(tt)
+      getTypeId(uu) {
+        return this.schemas.get(uu)
       }
-      discoverTypes(tt) {
-        if (!this.add(tt)) return;
-        re.inheritedTypes.get(tt)?.forEach((tt => {
-          this.discoverTypes(tt)
+      discoverTypes(uu) {
+        if (!this.add(uu)) return;
+        IE.inheritedTypes.get(uu)?.forEach((uu => {
+          this.discoverTypes(uu)
         }));
-        let et = tt;
+        let Eu = uu;
         for (;
-          (et = Object.getPrototypeOf(et)) && et !== cO && et !== Function.prototype;) this.discoverTypes(et);
-        const Vt = tt[Symbol.metadata];
-        (Vt[ct] || Vt[Ft]) && (this.hasFilters = !0);
-        for (const Ot in Vt) {
-          const tt = Vt[Ot].type;
-          if ("string" !== typeof tt && !ke(tt))
-            if ("function" === typeof tt) this.discoverTypes(tt);
+          (Eu = Object.getPrototypeOf(Eu)) && Eu !== ms && Eu !== Function.prototype;) this.discoverTypes(Eu);
+        const ju = uu[Symbol.metadata];
+        (ju[ou] || ju[ru]) && (this.hasFilters = !0);
+        for (const su in ju) {
+          const uu = ju[su].type;
+          if ("string" !== typeof uu && !QE(uu))
+            if ("function" === typeof uu) this.discoverTypes(uu);
             else {
-              const et = Object.values(tt)[0];
-              if ("string" === typeof et) continue;
-              this.discoverTypes(et)
+              const Eu = Object.values(uu)[0];
+              if ("string" === typeof Eu) continue;
+              this.discoverTypes(Eu)
             }
         }
       }
@@ -2612,303 +2612,303 @@ export const modules = {
       }
     }
 
-    function Ue(tt) {
-      const et = ie(tt);
-      return et ? {
-        complexTypeKlass: Je[et],
-        childType: tt[et]
+    function FE(uu) {
+      const Eu = LE(uu);
+      return Eu ? {
+        complexTypeKlass: eE[Eu],
+        childType: uu[Eu]
       } : {
         complexTypeKlass: !1,
-        childType: tt
+        childType: uu
       }
     }
 
-    function Ae(tt, et) {
-      const Vt = Ye(tt),
-        Ot = ie(Vt),
-        qt = Ot && ie(Vt[Ot]);
-      if (qt) throw new Error(`${et?`${et}: `:""}@colyseus/schema: nested collections are not supported ("${Ot}" of "${qt}"). Collections can only hold primitive types or Schema classes, wrap the inner ${qt} in a Schema class.`);
-      return Vt
+    function BE(uu, Eu) {
+      const ju = tE(uu),
+        su = LE(ju),
+        Uu = su && LE(ju[su]);
+      if (Uu) throw new Error(`${Eu?`${Eu}: `:""}@colyseus/schema: nested collections are not supported ("${su}" of "${Uu}"). Collections can only hold primitive types or Schema classes, wrap the inner ${Uu} in a Schema class.`);
+      return ju
     }
 
-    function ie(tt) {
-      return "object" === typeof tt && null !== tt ? Object.keys(tt).find((tt => void 0 !== Je[tt])) : void 0
+    function LE(uu) {
+      return "object" === typeof uu && null !== uu ? Object.keys(uu).find((uu => void 0 !== eE[uu])) : void 0
     }
 
-    function Ye(tt) {
-      if ("object" !== typeof tt || null === tt) return tt;
-      if (Array.isArray(tt)) return {
-        array: Ye(tt[0])
+    function tE(uu) {
+      if ("object" !== typeof uu || null === uu) return uu;
+      if (Array.isArray(uu)) return {
+        array: tE(uu[0])
       };
-      const et = function(tt) {
-        const et = Object.keys(tt),
-          Vt = et.filter((tt => /\d+/.test(tt)));
-        if (Vt.length > 0 && Vt.length === et.length / 2 && tt[tt[Vt[0]]] == Vt[0]) return "number";
-        if (et.length > 0 && et.every((et => tt[et] === et))) return "string"
-      }(tt);
-      if (et) return et;
-      if (ke(tt)) return "string" === typeof tt.quantized.wire ? tt : {
-        quantized: Fe(tt.quantized)
+      const Eu = function(uu) {
+        const Eu = Object.keys(uu),
+          ju = Eu.filter((uu => /\d+/.test(uu)));
+        if (ju.length > 0 && ju.length === Eu.length / 2 && uu[uu[ju[0]]] == ju[0]) return "number";
+        if (Eu.length > 0 && Eu.every((Eu => uu[Eu] === Eu))) return "string"
+      }(uu);
+      if (Eu) return Eu;
+      if (QE(uu)) return "string" === typeof uu.quantized.wire ? uu : {
+        quantized: rE(uu.quantized)
       };
-      if (void 0 !== tt.type) return Ye(tt.type);
-      const Vt = ie(tt);
-      return Vt && (tt[Vt] = Ye(tt[Vt])), tt
+      if (void 0 !== uu.type) return tE(uu.type);
+      const ju = LE(uu);
+      return ju && (uu[ju] = tE(uu[ju])), uu
     }
-    const Be = [St, It, Pt, Zt, Lt, Ft, vt];
+    const xE = [Pu, mu, vu, Ku, Vu, ru, du];
 
-    function pe(tt, et, Vt) {
-      tt[et] || Object.defineProperty(tt, et, {
+    function TE(uu, Eu, ju) {
+      uu[Eu] || Object.defineProperty(uu, Eu, {
         value: [],
         enumerable: !1,
         configurable: !0,
         writable: !0
-      }), tt[et].push(Vt)
+      }), uu[Eu].push(ju)
     }
-    const xe = {
-        addField(tt, et, Vt, Ot, qt) {
-          if (et >= 63) throw new Error(`Can't define field '${Vt}'.\nSchema instances may only have up to 63 fields.`);
-          tt[et] = Object.assign(tt[et] || {}, {
-            type: Ot,
-            index: et,
-            name: Vt
-          }), Object.defineProperty(tt, Kt, {
-            value: tt[Kt] || {},
+    const HE = {
+        addField(uu, Eu, ju, su, Uu) {
+          if (Eu >= 63) throw new Error(`Can't define field '${ju}'.\nSchema instances may only have up to 63 fields.`);
+          uu[Eu] = Object.assign(uu[Eu] || {}, {
+            type: su,
+            index: Eu,
+            name: ju
+          }), Object.defineProperty(uu, wu, {
+            value: uu[wu] || {},
             enumerable: !1,
             configurable: !0
-          }), tt[Kt][Vt] = qt || {
+          }), uu[wu][ju] = Uu || {
             value: void 0,
             writable: !0,
             enumerable: !0,
             configurable: !0
-          }, Object.defineProperty(tt, Wt, {
-            value: et,
+          }, Object.defineProperty(uu, au, {
+            value: Eu,
             enumerable: !1,
             configurable: !0
-          }), Object.defineProperty(tt, Vt, {
-            value: et,
+          }), Object.defineProperty(uu, ju, {
+            value: Eu,
             enumerable: !1,
             configurable: !0
-          }), "string" === typeof tt[et].type || ke(tt[et].type) || (void 0 === tt[St] && Object.defineProperty(tt, St, {
+          }), "string" === typeof uu[Eu].type || QE(uu[Eu].type) || (void 0 === uu[Pu] && Object.defineProperty(uu, Pu, {
             value: [],
             enumerable: !1,
             configurable: !0
-          }), tt[St].push(et));
-          const Dt = tt[et].type;
-          if (Dt && "object" === typeof Dt && void 0 !== Dt.stream) {
-            if (void 0 !== Dt.array) throw new Error(he);
-            tt[et].stream = !0, tt[Ft] || Object.defineProperty(tt, Ft, {
+          }), uu[Pu].push(Eu));
+          const Zu = uu[Eu].type;
+          if (Zu && "object" === typeof Zu && void 0 !== Zu.stream) {
+            if (void 0 !== Zu.array) throw new Error(JE);
+            uu[Eu].stream = !0, uu[ru] || Object.defineProperty(uu, ru, {
               value: [],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), tt[Ft].includes(et) || tt[Ft].push(et);
-            const qt = Ot?.priority;
-            "function" === typeof qt && xe.setStreamPriority(tt, Vt, qt)
+            }), uu[ru].includes(Eu) || uu[ru].push(Eu);
+            const Uu = su?.priority;
+            "function" === typeof Uu && HE.setStreamPriority(uu, ju, Uu)
           }
         },
-        setTag(tt, et, Vt) {
-          const Ot = tt[et];
-          if (tt[Ot].tag = Vt, tt[ct] || (Object.defineProperty(tt, ct, {
+        setTag(uu, Eu, ju) {
+          const su = uu[Eu];
+          if (uu[su].tag = ju, uu[ou] || (Object.defineProperty(uu, ou, {
               value: [],
               enumerable: !1,
               configurable: !0
-            }), Object.defineProperty(tt, Rt, {
+            }), Object.defineProperty(uu, ku, {
               value: {},
               enumerable: !1,
               configurable: !0
-            })), tt[ct].push(Ot), Vt < 0) tt[Rt][Vt] || (tt[Rt][Vt] = []), tt[Rt][Vt].push(Ot);
+            })), uu[ou].push(su), ju < 0) uu[ku][ju] || (uu[ku][ju] = []), uu[ku][ju].push(su);
           else
-            for (let qt = Vt; qt > 0; qt &= qt - 1) {
-              const et = qt & -qt;
-              tt[Rt][et] || (tt[Rt][et] = []), tt[Rt][et].push(Ot)
+            for (let Uu = ju; Uu > 0; Uu &= Uu - 1) {
+              const Eu = Uu & -Uu;
+              uu[ku][Eu] || (uu[ku][Eu] = []), uu[ku][Eu].push(su)
             }
         },
-        setUnreliable(tt, et) {
-          const Vt = tt[et];
-          if ("string" !== typeof tt[Vt].type) throw new Error(`@unreliable cannot be applied to ref-type field "${et}". For ref-type fields, mark each primitive sub-field with @unreliable instead. See README "Limitations and best practices".`);
-          tt[Vt].unreliable = !0, tt[It] || Object.defineProperty(tt, It, {
+        setUnreliable(uu, Eu) {
+          const ju = uu[Eu];
+          if ("string" !== typeof uu[ju].type) throw new Error(`@unreliable cannot be applied to ref-type field "${Eu}". For ref-type fields, mark each primitive sub-field with @unreliable instead. See README "Limitations and best practices".`);
+          uu[ju].unreliable = !0, uu[mu] || Object.defineProperty(uu, mu, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), tt[It].push(Vt)
+          }), uu[mu].push(ju)
         },
-        setPatchOnly(tt, et) {
-          const Vt = tt[et];
-          if (tt[Vt].fullStateOnly) throw new Error(`field "${et}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
-          tt[Vt].patchOnly = !0, pe(tt, Pt, Vt), pe(tt, Zt, Vt)
+        setPatchOnly(uu, Eu) {
+          const ju = uu[Eu];
+          if (uu[ju].fullStateOnly) throw new Error(`field "${Eu}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
+          uu[ju].patchOnly = !0, TE(uu, vu, ju), TE(uu, Ku, ju)
         },
-        setDeprecated(tt, et) {
-          const Vt = tt[et];
-          tt[Vt].deprecated = !0, pe(tt, Zt, Vt), Object.defineProperty(tt, Vt, {
-            value: tt[Vt],
+        setDeprecated(uu, Eu) {
+          const ju = uu[Eu];
+          uu[ju].deprecated = !0, TE(uu, Ku, ju), Object.defineProperty(uu, ju, {
+            value: uu[ju],
             enumerable: !1,
             configurable: !0
           })
         },
-        setFullStateOnly(tt, et) {
-          const Vt = tt[et];
-          if (tt[Vt].patchOnly) throw new Error(`field "${et}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
-          tt[Vt].fullStateOnly = !0, pe(tt, Lt, Vt)
+        setFullStateOnly(uu, Eu) {
+          const ju = uu[Eu];
+          if (uu[ju].patchOnly) throw new Error(`field "${Eu}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
+          uu[ju].fullStateOnly = !0, TE(uu, Vu, ju)
         },
-        setStream(tt, et) {
-          const Vt = tt[et];
-          tt[Vt].stream = !0, tt[Ft] || Object.defineProperty(tt, Ft, {
+        setStream(uu, Eu) {
+          const ju = uu[Eu];
+          uu[ju].stream = !0, uu[ru] || Object.defineProperty(uu, ru, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), tt[Ft].push(Vt)
+          }), uu[ru].push(ju)
         },
-        setStreamPriority(tt, et, Vt) {
-          const Ot = tt[et];
-          tt[kt] || Object.defineProperty(tt, kt, {
+        setStreamPriority(uu, Eu, ju) {
+          const su = uu[Eu];
+          uu[Qu] || Object.defineProperty(uu, Qu, {
             value: {},
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), tt[kt][Ot] = Vt
+          }), uu[Qu][su] = ju
         },
-        getStreamPriority: (tt, et) => tt?.[kt]?.[et],
-        defineField(tt, et, Vt, Ot, qt) {
-          const Dt = Ae(qt, `${tt.name}.${Ot}`),
+        getStreamPriority: (uu, Eu) => uu?.[Qu]?.[Eu],
+        defineField(uu, Eu, ju, su, Uu) {
+          const Zu = BE(Uu, `${uu.name}.${su}`),
             {
-              complexTypeKlass: mt,
-              childType: dt
-            } = Ue(Dt);
-          xe.addField(et, Vt, Ot, Dt, uO(Ot, Vt, dt, mt)), et[Kt][Ot] && Object.defineProperty(tt.prototype, Ot, et[Kt][Ot]), ("string" === typeof Dt || ke(Dt)) && (et[vt] || Object.defineProperty(et, vt, {
+              complexTypeKlass: Xu,
+              childType: lu
+            } = FE(Zu);
+          HE.addField(Eu, ju, su, Zu, ws(su, ju, lu, Xu)), Eu[wu][su] && Object.defineProperty(uu.prototype, su, Eu[wu][su]), ("string" === typeof Zu || QE(Zu)) && (Eu[du] || Object.defineProperty(Eu, du, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), et[vt][Vt] = "string" === typeof Dt ? Ve[Dt] : oe(Dt.quantized))
+          }), Eu[du][ju] = "string" === typeof Zu ? EE[Zu] : SE(Zu.quantized))
         },
-        setFields(tt, et) {
-          const Vt = tt.prototype.constructor;
-          re.register(Vt);
-          const Ot = Object.getPrototypeOf(Vt),
-            qt = Ot && Ot[Symbol.metadata],
-            Dt = xe.initialize(Vt);
-          Vt[jt] || (Vt[jt] = cO[jt]), Vt[Ht] || (Vt[Ht] = cO[Ht]), Vt[Xt] || (Vt[Xt] = cO[Xt]), Vt.prototype.toJSON || (Vt.prototype.toJSON = cO.prototype.toJSON);
-          let mt = Dt[Wt] ?? (qt && qt[Wt]) ?? -1;
-          mt++, Dt[vt] || Object.defineProperty(Dt, vt, {
-            value: qt?.[vt] ? [...qt[vt]] : [],
+        setFields(uu, Eu) {
+          const ju = uu.prototype.constructor;
+          IE.register(ju);
+          const su = Object.getPrototypeOf(ju),
+            Uu = su && su[Symbol.metadata],
+            Zu = HE.initialize(ju);
+          ju[qu] || (ju[qu] = ms[qu]), ju[fu] || (ju[fu] = ms[fu]), ju[Cu] || (ju[Cu] = ms[Cu]), ju.prototype.toJSON || (ju.prototype.toJSON = ms.prototype.toJSON);
+          let Xu = Zu[au] ?? (Uu && Uu[au]) ?? -1;
+          Xu++, Zu[du] || Object.defineProperty(Zu, du, {
+            value: Uu?.[du] ? [...Uu[du]] : [],
             enumerable: !1,
             configurable: !0,
             writable: !0
           });
-          for (const dt in et) {
-            if (void 0 !== Dt[dt]) throw new Error(`@colyseus/schema: Duplicate '${dt}' definition on '${Vt.name||"(anonymous)"}'.`);
-            xe.defineField(Vt, Dt, mt, dt, et[dt]), mt++
+          for (const lu in Eu) {
+            if (void 0 !== Zu[lu]) throw new Error(`@colyseus/schema: Duplicate '${lu}' definition on '${ju.name||"(anonymous)"}'.`);
+            HE.defineField(ju, Zu, Xu, lu, Eu[lu]), Xu++
           }
-          return tt
+          return uu
         },
-        isDeprecated: (tt, et) => !0 === tt[et].deprecated,
-        initialize(tt) {
-          const et = Object.getPrototypeOf(tt),
-            Vt = et[Symbol.metadata];
-          let Ot = tt[Symbol.metadata] ?? Object.create(null);
-          if (et !== cO && Ot === Vt && (Ot = Object.create(null), Vt)) {
-            Object.setPrototypeOf(Ot, Vt), Object.defineProperty(Ot, Wt, {
-              value: Vt[Wt],
+        isDeprecated: (uu, Eu) => !0 === uu[Eu].deprecated,
+        initialize(uu) {
+          const Eu = Object.getPrototypeOf(uu),
+            ju = Eu[Symbol.metadata];
+          let su = uu[Symbol.metadata] ?? Object.create(null);
+          if (Eu !== ms && su === ju && (su = Object.create(null), ju)) {
+            Object.setPrototypeOf(su, ju), Object.defineProperty(su, au, {
+              value: ju[au],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), void 0 !== Vt[ct] && (Object.defineProperty(Ot, ct, {
-              value: [...Vt[ct]],
+            }), void 0 !== ju[ou] && (Object.defineProperty(su, ou, {
+              value: [...ju[ou]],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), Object.defineProperty(Ot, Rt, {
+            }), Object.defineProperty(su, ku, {
               value: {
-                ...Vt[Rt]
+                ...ju[ku]
               },
               enumerable: !1,
               configurable: !0,
               writable: !0
             }));
-            for (const tt of Be) {
-              const et = Vt[tt];
-              void 0 !== et && Object.defineProperty(Ot, tt, {
-                value: [...et],
+            for (const uu of xE) {
+              const Eu = ju[uu];
+              void 0 !== Eu && Object.defineProperty(su, uu, {
+                value: [...Eu],
                 enumerable: !1,
                 configurable: !0,
                 writable: !0
               })
             }
-            Object.defineProperty(Ot, Kt, {
+            Object.defineProperty(su, wu, {
               value: {
-                ...Vt[Kt]
+                ...ju[wu]
               },
               enumerable: !1,
               configurable: !0,
               writable: !0
             })
           }
-          return Object.defineProperty(tt, Symbol.metadata, {
-            value: Ot,
+          return Object.defineProperty(uu, Symbol.metadata, {
+            value: su,
             writable: !1,
             configurable: !0
-          }), Ot
+          }), su
         },
-        isValidInstance: tt => tt.constructor[Symbol.metadata] && Object.prototype.hasOwnProperty.call(tt.constructor[Symbol.metadata], Wt),
-        getFields(tt) {
-          const et = tt[Symbol.metadata],
-            Vt = {};
-          for (let Ot = 0; Ot <= et[Wt]; Ot++) Vt[et[Ot].name] = et[Ot].type;
-          return Vt
+        isValidInstance: uu => uu.constructor[Symbol.metadata] && Object.prototype.hasOwnProperty.call(uu.constructor[Symbol.metadata], au),
+        getFields(uu) {
+          const Eu = uu[Symbol.metadata],
+            ju = {};
+          for (let su = 0; su <= Eu[au]; su++) ju[Eu[su].name] = Eu[su].type;
+          return ju
         },
-        hasViewTagAtIndex: (tt, et) => tt?.[ct]?.includes(et),
-        hasUnreliableAtIndex: (tt, et) => tt?.[It]?.includes(et),
-        hasPatchOnlyAtIndex: (tt, et) => tt?.[Pt]?.includes(et),
-        hasFullStateOnlyAtIndex: (tt, et) => tt?.[Lt]?.includes(et),
-        hasStreamAtIndex: (tt, et) => tt?.[Ft]?.includes(et)
+        hasViewTagAtIndex: (uu, Eu) => uu?.[ou]?.includes(Eu),
+        hasUnreliableAtIndex: (uu, Eu) => uu?.[mu]?.includes(Eu),
+        hasPatchOnlyAtIndex: (uu, Eu) => uu?.[vu]?.includes(Eu),
+        hasFullStateOnlyAtIndex: (uu, Eu) => uu?.[Vu]?.includes(Eu),
+        hasStreamAtIndex: (uu, Eu) => uu?.[ru]?.includes(Eu)
       },
-      Te = (tt, et, Vt) => tt(et, Vt);
-    class ge {
+      AE = (uu, Eu, ju) => uu(Eu, ju);
+    class nE {
       dirtyLow = 0;
       dirtyHigh = 0;
       ops;
-      constructor(tt) {
-        this.ops = new Uint8Array(Math.max(tt + 1, 1))
+      constructor(uu) {
+        this.ops = new Uint8Array(Math.max(uu + 1, 1))
       }
-      record(tt, et) {
-        const Vt = this.ops[tt];
-        0 === Vt ? this.ops[tt] = et : (Vt === qt.DELETE || Vt === qt.ADD && et === qt.DELETE_AND_ADD) && (this.ops[tt] = qt.DELETE_AND_ADD), tt < 32 ? this.dirtyLow |= 1 << tt : this.dirtyHigh |= 1 << tt - 32
+      record(uu, Eu) {
+        const ju = this.ops[uu];
+        0 === ju ? this.ops[uu] = Eu : (ju === Uu.DELETE || ju === Uu.ADD && Eu === Uu.DELETE_AND_ADD) && (this.ops[uu] = Uu.DELETE_AND_ADD), uu < 32 ? this.dirtyLow |= 1 << uu : this.dirtyHigh |= 1 << uu - 32
       }
-      recordDelete(tt, et) {
-        this.ops[tt] = et, tt < 32 ? this.dirtyLow |= 1 << tt : this.dirtyHigh |= 1 << tt - 32
+      recordDelete(uu, Eu) {
+        this.ops[uu] = Eu, uu < 32 ? this.dirtyLow |= 1 << uu : this.dirtyHigh |= 1 << uu - 32
       }
-      recordRaw(tt, et) {
-        this.record(tt, et)
+      recordRaw(uu, Eu) {
+        this.record(uu, Eu)
       }
-      operationAt(tt) {
-        const et = this.ops[tt];
-        return 0 === et ? void 0 : et
+      operationAt(uu) {
+        const Eu = this.ops[uu];
+        return 0 === Eu ? void 0 : Eu
       }
-      setOperationAt(tt, et) {
-        this.ops[tt] = et
+      setOperationAt(uu, Eu) {
+        this.ops[uu] = Eu
       }
-      forEach(tt) {
-        this.forEachWithCtx(tt, Te)
+      forEach(uu) {
+        this.forEachWithCtx(uu, AE)
       }
-      forEachWithCtx(tt, et) {
-        let Vt = this.dirtyLow,
-          Ot = this.dirtyHigh;
-        const qt = this.ops;
-        for (; 0 !== Vt;) {
-          const Ot = Vt & -Vt,
-            Dt = 31 - Math.clz32(Ot);
-          Vt ^= Ot, et(tt, Dt, qt[Dt])
+      forEachWithCtx(uu, Eu) {
+        let ju = this.dirtyLow,
+          su = this.dirtyHigh;
+        const Uu = this.ops;
+        for (; 0 !== ju;) {
+          const su = ju & -ju,
+            Zu = 31 - Math.clz32(su);
+          ju ^= su, Eu(uu, Zu, Uu[Zu])
         }
-        for (; 0 !== Ot;) {
-          const Vt = Ot & -Ot,
-            Dt = 31 - Math.clz32(Vt) + 32;
-          Ot ^= Vt, et(tt, Dt, qt[Dt])
+        for (; 0 !== su;) {
+          const ju = su & -su,
+            Zu = 31 - Math.clz32(ju) + 32;
+          su ^= ju, Eu(uu, Zu, Uu[Zu])
         }
       }
       size() {
-        return ne(this.dirtyLow) + ne(this.dirtyHigh)
+        return zE(this.dirtyLow) + zE(this.dirtyHigh)
       }
       has() {
         return 0 !== (this.dirtyLow | this.dirtyHigh)
@@ -2917,359 +2917,359 @@ export const modules = {
         this.dirtyLow = 0, this.dirtyHigh = 0, this.ops.fill(0)
       }
     }
-    class se {
-      Sf = new Map;
+    class yE {
+      mO = new Map;
       pureOps = [];
-      record(tt, et) {
-        const Vt = this.Sf.get(tt);
-        void 0 === Vt ? this.Sf.set(tt, et) : (Vt === qt.DELETE || Vt === qt.ADD && et === qt.DELETE_AND_ADD) && this.Sf.set(tt, qt.DELETE_AND_ADD)
+      record(uu, Eu) {
+        const ju = this.mO.get(uu);
+        void 0 === ju ? this.mO.set(uu, Eu) : (ju === Uu.DELETE || ju === Uu.ADD && Eu === Uu.DELETE_AND_ADD) && this.mO.set(uu, Uu.DELETE_AND_ADD)
       }
-      recordDelete(tt, et) {
-        this.Sf.set(tt, et)
+      recordDelete(uu, Eu) {
+        this.mO.set(uu, Eu)
       }
-      recordRaw(tt, et) {
-        this.Sf.set(tt, et)
+      recordRaw(uu, Eu) {
+        this.mO.set(uu, Eu)
       }
-      recordPure(tt) {
-        this.pureOps.push([this.Sf.size, tt])
+      recordPure(uu) {
+        this.pureOps.push([this.mO.size, uu])
       }
-      operationAt(tt) {
-        return this.Sf.get(tt)
+      operationAt(uu) {
+        return this.mO.get(uu)
       }
-      setOperationAt(tt, et) {
-        this.Sf.has(tt) && this.Sf.set(tt, et)
+      setOperationAt(uu, Eu) {
+        this.mO.has(uu) && this.mO.set(uu, Eu)
       }
-      forEach(tt) {
-        this.forEachWithCtx(tt, Te)
+      forEach(uu) {
+        this.forEachWithCtx(uu, AE)
       }
-      forEachWithCtx(tt, et) {
-        const Vt = this.pureOps;
-        if (Vt.length > 0) {
-          let Ot = 0,
-            qt = 0;
-          for (const [Dt, mt] of this.Sf) {
-            for (; Ot < Vt.length && Vt[Ot][0] <= qt;) {
-              const qt = Vt[Ot++][1];
-              et(tt, -qt, qt)
+      forEachWithCtx(uu, Eu) {
+        const ju = this.pureOps;
+        if (ju.length > 0) {
+          let su = 0,
+            Uu = 0;
+          for (const [Zu, Xu] of this.mO) {
+            for (; su < ju.length && ju[su][0] <= Uu;) {
+              const Uu = ju[su++][1];
+              Eu(uu, -Uu, Uu)
             }
-            et(tt, Dt, mt), qt++
+            Eu(uu, Zu, Xu), Uu++
           }
-          for (; Ot < Vt.length;) {
-            const qt = Vt[Ot++][1];
-            et(tt, -qt, qt)
+          for (; su < ju.length;) {
+            const Uu = ju[su++][1];
+            Eu(uu, -Uu, Uu)
           }
         } else
-          for (const [Ot, qt] of this.Sf) et(tt, Ot, qt)
+          for (const [su, Uu] of this.mO) Eu(uu, su, Uu)
       }
       size() {
-        return this.Sf.size + this.pureOps.length
+        return this.mO.size + this.pureOps.length
       }
       has() {
-        return this.Sf.size > 0 || this.pureOps.length > 0
+        return this.mO.size > 0 || this.pureOps.length > 0
       }
       reset() {
-        this.Sf.clear(), this.pureOps.length = 0
+        this.mO.clear(), this.pureOps.length = 0
       }
-      shift(tt) {
-        const et = new Map;
-        for (const [Vt, Ot] of this.Sf) et.set(Vt + tt, Ot);
-        this.Sf = et
+      shift(uu) {
+        const Eu = new Map;
+        for (const [ju, su] of this.mO) Eu.set(ju + uu, su);
+        this.mO = Eu
       }
     }
 
-    function ne(tt) {
-      return 16843009 * ((tt = (858993459 & (tt -= tt >>> 1 & 1431655765)) + (tt >>> 2 & 858993459)) + (tt >>> 4) & 252645135) >>> 24
+    function zE(uu) {
+      return 16843009 * ((uu = (858993459 & (uu -= uu >>> 1 & 1431655765)) + (uu >>> 2 & 858993459)) + (uu >>> 4) & 252645135) >>> 24
     }
 
-    function tV(tt) {
-      if (void 0 === tt) return 0;
-      let et = 0;
-      for (let Vt = 0, Ot = tt.length; Vt < Ot; Vt++) {
-        const Ot = tt[Vt];
-        Ot < 32 && (et |= 1 << Ot)
+    function RE(uu) {
+      if (void 0 === uu) return 0;
+      let Eu = 0;
+      for (let ju = 0, su = uu.length; ju < su; ju++) {
+        const su = uu[ju];
+        su < 32 && (Eu |= 1 << su)
       }
-      return et
+      return Eu
     }
 
-    function eV(tt) {
-      const et = tt.constructor;
-      if (Object.prototype.hasOwnProperty.call(et, ht)) return et[ht];
-      const Vt = et[Symbol.metadata],
-        Ot = xe.isValidInstance(tt),
-        qt = (Vt?.[ct]?.length ?? 0) > 0,
-        Dt = function(tt) {
-          const et = [],
-            Vt = [],
-            Ot = [],
-            qt = [],
-            Dt = tt?.[Wt];
-          if (void 0 === Dt) return {
-            names: et,
-            types: Vt,
-            tags: Ot,
-            encoders: qt
+    function uj(uu) {
+      const Eu = uu.constructor;
+      if (Object.prototype.hasOwnProperty.call(Eu, Ju)) return Eu[Ju];
+      const ju = Eu[Symbol.metadata],
+        su = HE.isValidInstance(uu),
+        Uu = (ju?.[ou]?.length ?? 0) > 0,
+        Zu = function(uu) {
+          const Eu = [],
+            ju = [],
+            su = [],
+            Uu = [],
+            Zu = uu?.[au];
+          if (void 0 === Zu) return {
+            names: Eu,
+            types: ju,
+            tags: su,
+            encoders: Uu
           };
-          const mt = tt[vt];
-          for (let dt = 0; dt <= Dt; dt++) {
-            const Dt = tt[dt];
-            void 0 !== Dt ? (et[dt] = Dt.name, Vt[dt] = Dt.type, Ot[dt] = Dt.tag, qt[dt] = mt?.[dt]) : (et[dt] = void 0, Vt[dt] = void 0, Ot[dt] = void 0, qt[dt] = void 0)
+          const Xu = uu[du];
+          for (let lu = 0; lu <= Zu; lu++) {
+            const Zu = uu[lu];
+            void 0 !== Zu ? (Eu[lu] = Zu.name, ju[lu] = Zu.type, su[lu] = Zu.tag, Uu[lu] = Xu?.[lu]) : (Eu[lu] = void 0, ju[lu] = void 0, su[lu] = void 0, Uu[lu] = void 0)
           }
           return {
-            names: et,
-            types: Vt,
-            tags: Ot,
-            encoders: qt
+            names: Eu,
+            types: ju,
+            tags: su,
+            encoders: Uu
           }
-        }(Vt),
-        mt = Ot && !qt ? void 0 : et[Qt],
-        dt = {
-          encoder: et[Ht],
-          filter: mt,
-          metadata: Vt,
-          isSchema: Ot,
-          filterBitmask: Ot ? tV(Vt?.[ct]) : 0,
-          hasAnyFullStateOnly: (Vt?.[Lt]?.length ?? 0) > 0,
-          hasAnyUnreliable: (Vt?.[It]?.length ?? 0) > 0,
-          hasAnyStream: (Vt?.[Ft]?.length ?? 0) > 0,
-          hasAnyView: qt,
-          fullStateOnlyBitmask: tV(Vt?.[Lt]),
-          unreliableBitmask: tV(Vt?.[It]),
-          streamBitmask: tV(Vt?.[Ft]),
-          names: Dt.names,
-          types: Dt.types,
-          tags: Dt.tags,
-          encoders: Dt.encoders
+        }(ju),
+        Xu = su && !Uu ? void 0 : Eu[bu],
+        lu = {
+          encoder: Eu[fu],
+          filter: Xu,
+          metadata: ju,
+          isSchema: su,
+          filterBitmask: su ? RE(ju?.[ou]) : 0,
+          hasAnyFullStateOnly: (ju?.[Vu]?.length ?? 0) > 0,
+          hasAnyUnreliable: (ju?.[mu]?.length ?? 0) > 0,
+          hasAnyStream: (ju?.[ru]?.length ?? 0) > 0,
+          hasAnyView: Uu,
+          fullStateOnlyBitmask: RE(ju?.[Vu]),
+          unreliableBitmask: RE(ju?.[mu]),
+          streamBitmask: RE(ju?.[ru]),
+          names: Zu.names,
+          types: Zu.types,
+          tags: Zu.tags,
+          encoders: Zu.encoders
         };
-      return Object.defineProperty(et, ht, {
-        value: dt,
+      return Object.defineProperty(Eu, Ju, {
+        value: lu,
         enumerable: !1,
         writable: !0,
         configurable: !0
-      }), dt
+      }), lu
     }
 
-    function VV(tt, et) {
-      if (void 0 !== tt.parentRef && et(tt.parentRef, tt._parentIndex)) return !0;
-      for (let Vt = tt.extraParents; void 0 !== Vt; Vt = Vt.next)
-        if (et(Vt.ref, Vt.index)) return !0;
+    function Ej(uu, Eu) {
+      if (void 0 !== uu.parentRef && Eu(uu.parentRef, uu._parentIndex)) return !0;
+      for (let ju = uu.extraParents; void 0 !== ju; ju = ju.next)
+        if (Eu(ju.ref, ju.index)) return !0;
       return !1
     }
-    const OV = (tt, et) => {
-        tt.isFieldUnreliable(et) ? tt.ensureUnreliableRecorder().record(et, qt.ADD) : tt.record(et, qt.ADD)
+    const jj = (uu, Eu) => {
+        uu.isFieldUnreliable(Eu) ? uu.ensureUnreliableRecorder().record(Eu, Uu.ADD) : uu.record(Eu, Uu.ADD)
       },
-      qV = (tt, et) => tt(et);
+      sj = (uu, Eu) => uu(Eu);
 
-    function DV(tt, et, Vt) {
-      const Ot = tt.refTarget;
-      if (void 0 !== Ot[yt]) {
-        if (tt.isPatchOnly) return;
-        if (Array.isArray(Ot.items)) {
-          const tt = Ot.items;
-          for (let Ot = 0, qt = tt.length; Ot < qt; Ot++) void 0 !== tt[Ot] && Vt(et, Ot)
-        } else if (void 0 !== Ot.journal)
-          for (const [tt, qt] of Ot.journal.keyByIndex) Ot.$items.has(qt) && Vt(et, tt);
-        else if (void 0 !== Ot.$items)
-          for (const tt of Ot.$items.keys()) Vt(et, tt)
+    function Uj(uu, Eu, ju) {
+      const su = uu.refTarget;
+      if (void 0 !== su[hu]) {
+        if (uu.isPatchOnly) return;
+        if (Array.isArray(su.items)) {
+          const uu = su.items;
+          for (let su = 0, Uu = uu.length; su < Uu; su++) void 0 !== uu[su] && ju(Eu, su)
+        } else if (void 0 !== su.journal)
+          for (const [uu, Uu] of su.journal.keyByIndex) su.$items.has(Uu) && ju(Eu, uu);
+        else if (void 0 !== su.$items)
+          for (const uu of su.$items.keys()) ju(Eu, uu)
       } else {
-        const qt = tt.metadata;
-        if (!qt) return;
-        const Dt = qt[Wt] ?? -1,
-          mt = qt[Zt],
-          dt = tt.encDescriptor.names;
-        for (let tt = 0; tt <= Dt; tt++) {
-          const qt = dt[tt];
-          if (void 0 === qt) continue;
-          if (mt && mt.includes(tt)) continue;
-          const Dt = Ot[qt];
-          void 0 !== Dt && null !== Dt && Vt(et, tt)
+        const Uu = uu.metadata;
+        if (!Uu) return;
+        const Zu = Uu[au] ?? -1,
+          Xu = Uu[Ku],
+          lu = uu.encDescriptor.names;
+        for (let uu = 0; uu <= Zu; uu++) {
+          const Uu = lu[uu];
+          if (void 0 === Uu) continue;
+          if (Xu && Xu.includes(uu)) continue;
+          const Zu = su[Uu];
+          void 0 !== Zu && null !== Zu && ju(Eu, uu)
         }
       }
     }
 
-    function mV(tt, et, Vt, Ot) {
-      ! function(tt, et, Vt) {
-        if (!et) return;
-        const Ot = et[wt],
-          qt = !Ot._isSchema;
-        let Dt;
-        qt ? (et = Ot.parent, Vt = Ot.parentIndex, Dt = et?.[wt].metadata) : Dt = Ot.metadata;
-        const mt = (Dt?.[Pt]?.includes(Vt) ? hV : 0) | (Dt?.[Lt]?.includes(Vt) ? vV : 0),
-          dt = Ot.flags & cV | mt,
-          jt = tt.flags;
-        tt.flags = jt | dt;
-        dt & ~jt & vV && (tt.reset(), tt.unreliableRecorder?.reset());
-        const Ht = tt.root?.types;
-        if (!Ht?.hasFilters) return;
-        const Xt = Dt?.[ct]?.includes(Vt) ?? !1,
-          Qt = Dt?.[Ft]?.includes(Vt) ?? !1,
-          lt = Ot.isFiltered || Xt || Qt;
-        if (tt.isFiltered = lt, Qt && !qt) {
-          tt.isStreamCollection = !0;
-          const et = We(tt.ref);
-          if (void 0 === et.priority) {
-            const tt = xe.getStreamPriority(Dt, Vt);
-            void 0 !== tt && (et.priority = tt)
+    function Zj(uu, Eu, ju, su) {
+      ! function(uu, Eu, ju) {
+        if (!Eu) return;
+        const su = Eu[Yu],
+          Uu = !su._isSchema;
+        let Zu;
+        Uu ? (Eu = su.parent, ju = su.parentIndex, Zu = Eu?.[Yu].metadata) : Zu = su.metadata;
+        const Xu = (Zu?.[vu]?.includes(ju) ? Jj : 0) | (Zu?.[Vu]?.includes(ju) ? dj : 0),
+          lu = su.flags & oj | Xu,
+          qu = uu.flags;
+        uu.flags = qu | lu;
+        lu & ~qu & dj && (uu.reset(), uu.unreliableRecorder?.reset());
+        const fu = uu.root?.types;
+        if (!fu?.hasFilters) return;
+        const Cu = Zu?.[ou]?.includes(ju) ?? !1,
+          bu = Zu?.[ru]?.includes(ju) ?? !1,
+          cu = su.isFiltered || Cu || bu;
+        if (uu.isFiltered = cu, bu && !Uu) {
+          uu.isStreamCollection = !0;
+          const Eu = aE(uu.ref);
+          if (void 0 === Eu.priority) {
+            const uu = HE.getStreamPriority(Zu, ju);
+            void 0 !== uu && (Eu.priority = uu)
           }
-          tt.root?.registerStream(tt.ref)
+          uu.root?.registerStream(uu.ref)
         }
-        if (lt) {
-          const et = jV(tt);
-          tt.isVisibilitySharedWithParent = Ot.isFiltered && et && !Qt && (!Xt || qt && Dt[Vt].tag !== wO)
+        if (cu) {
+          const Eu = lj(uu);
+          uu.isVisibilitySharedWithParent = su.isFiltered && Eu && !bu && (!Cu || Uu && Zu[ju].tag !== Ys)
         }
-      }(tt, et, Vt), tt.isFullStateOnly || (tt.has() && tt.root?.enqueueChangeTree(tt), tt.unreliableRecorder?.has() && tt.root?.enqueueUnreliable(tt), tt.has() || tt.unreliableRecorder?.has() || tt.root?.enqueueChangeTree(tt))
+      }(uu, Eu, ju), uu.isFullStateOnly || (uu.has() && uu.root?.enqueueChangeTree(uu), uu.unreliableRecorder?.has() && uu.root?.enqueueUnreliable(uu), uu.has() || uu.unreliableRecorder?.has() || uu.root?.enqueueChangeTree(uu))
     }
 
-    function dV(tt) {
-      const et = tt.pendingFilterRefresh;
-      for (let Vt = 0; Vt < et.length; Vt++) {
-        const tt = et[Vt];
-        0 !== (tt.flags & SV) && HV(tt)
+    function Xj(uu) {
+      const Eu = uu.pendingFilterRefresh;
+      for (let ju = 0; ju < Eu.length; ju++) {
+        const uu = Eu[ju];
+        0 !== (uu.flags & Pj) && qj(uu)
       }
-      et.length = 0
+      Eu.length = 0
     }
 
-    function jV(tt) {
-      return tt._isSchema || "string" !== typeof tt.refTarget[yt]
+    function lj(uu) {
+      return uu._isSchema || "string" !== typeof uu.refTarget[hu]
     }
 
-    function HV(tt) {
-      tt.flags &= ~SV;
-      const et = tt.root;
-      if (void 0 === et || void 0 === tt.parentRef) return;
-      const Vt = jV(tt);
-      let Ot = fV(tt, tt.parentRef, tt._parentIndex, Vt);
-      for (let Dt = tt.extraParents; void 0 !== Dt && Ot !== EV; Dt = Dt.next) Ot |= fV(tt, Dt.ref, Dt.index, Vt);
-      if (0 === Ot) return;
-      tt.isVisibilitySharedWithParent = 0 !== (Ot & lV);
-      const qt = 0 === (Ot & QV);
-      qt !== tt.isFiltered && (tt.isFiltered = qt, qt || tt.isFullStateOnly || (tt.forEachLiveWithCtx(tt, OV), tt.has() && et.enqueueChangeTree(tt), tt.unreliableRecorder?.has() && et.enqueueUnreliable(tt)), tt.forEachChildWithCtx(tt, wV))
+    function qj(uu) {
+      uu.flags &= ~Pj;
+      const Eu = uu.root;
+      if (void 0 === Eu || void 0 === uu.parentRef) return;
+      const ju = lj(uu);
+      let su = Nj(uu, uu.parentRef, uu._parentIndex, ju);
+      for (let Zu = uu.extraParents; void 0 !== Zu && su !== cj; Zu = Zu.next) su |= Nj(uu, Zu.ref, Zu.index, ju);
+      if (0 === su) return;
+      uu.isVisibilitySharedWithParent = 0 !== (su & bj);
+      const Uu = 0 === (su & Cj);
+      Uu !== uu.isFiltered && (uu.isFiltered = Uu, Uu || uu.isFullStateOnly || (uu.forEachLiveWithCtx(uu, jj), uu.has() && Eu.enqueueChangeTree(uu), uu.unreliableRecorder?.has() && Eu.enqueueUnreliable(uu)), uu.forEachChildWithCtx(uu, Oj))
     }
-    const XV = 1,
-      QV = 2,
-      lV = 4,
-      EV = XV | QV | lV;
+    const fj = 1,
+      Cj = 2,
+      bj = 4,
+      cj = fj | Cj | bj;
 
-    function fV(tt, et, Vt, Ot) {
-      const qt = et[wt];
-      if (qt.root !== tt.root || ! function(tt, et, Vt) {
-          const Ot = et.refTarget;
-          if (et.isArray) {
-            const et = Ot.items,
-              qt = et[Vt];
-            if (void 0 !== qt && qt[wt] === tt) return !0;
-            for (let Vt = 0, Ot = et.length; Vt < Ot; Vt++) {
-              const Ot = et[Vt];
-              if (void 0 !== Ot && Ot[wt] === tt) return !0
+    function Nj(uu, Eu, ju, su) {
+      const Uu = Eu[Yu];
+      if (Uu.root !== uu.root || ! function(uu, Eu, ju) {
+          const su = Eu.refTarget;
+          if (Eu.isArray) {
+            const Eu = su.items,
+              Uu = Eu[ju];
+            if (void 0 !== Uu && Uu[Yu] === uu) return !0;
+            for (let ju = 0, su = Eu.length; ju < su; ju++) {
+              const su = Eu[ju];
+              if (void 0 !== su && su[Yu] === uu) return !0
             }
             return !1
           }
-          const qt = et.getValue(Vt);
-          return void 0 !== qt && qt[wt] === tt
-        }(tt, qt, Vt)) return 0;
-      qt.flags & SV && HV(qt);
-      let Dt = XV;
-      if (qt._isSchema) {
-        void 0 !== qt.encDescriptor.tags[Vt] || qt.isFieldStream(Vt) || (qt.isFiltered ? Ot && (Dt |= lV) : Dt |= QV)
-      } else if (qt.isFiltered) {
-        if (Ot && !qt.isStreamCollection) {
-          const tt = qt.parent?.[wt];
-          (tt?._isSchema ? tt.encDescriptor.tags[qt.parentIndex] : void 0) !== wO && (Dt |= lV)
+          const Uu = Eu.getValue(ju);
+          return void 0 !== Uu && Uu[Yu] === uu
+        }(uu, Uu, ju)) return 0;
+      Uu.flags & Pj && qj(Uu);
+      let Zu = fj;
+      if (Uu._isSchema) {
+        void 0 !== Uu.encDescriptor.tags[ju] || Uu.isFieldStream(ju) || (Uu.isFiltered ? su && (Zu |= bj) : Zu |= Cj)
+      } else if (Uu.isFiltered) {
+        if (su && !Uu.isStreamCollection) {
+          const uu = Uu.parent?.[Yu];
+          (uu?._isSchema ? uu.encDescriptor.tags[Uu.parentIndex] : void 0) !== Ys && (Zu |= bj)
         }
-      } else Dt |= QV;
-      return Dt
+      } else Zu |= Cj;
+      return Zu
     }
-    const wV = (tt, et, Vt) => {
-      HV(et)
+    const Oj = (uu, Eu, ju) => {
+      qj(Eu)
     };
 
-    function yV(tt, et, Vt, Ot) {
-      if (tt.addParent(et, Ot), !Vt) return;
-      const qt = Vt.add(tt);
-      Vt !== tt.root && (tt.root = Vt, mV(tt, et, Ot));
-      const Dt = et?.[wt];
-      if (void 0 !== Dt && void 0 !== Dt.subscribedViews && void 0 !== et[yt] && function(tt, et, Vt, Ot) {
-          const qt = tt.subscribedViews;
-          if (void 0 === qt) return;
-          const Dt = tt.isStreamCollection,
-            mt = Dt ? tt.ref : void 0,
-            dt = Dt ? void 0 : Vt[wt];
-          for (let jt = 0, Ht = qt.length; jt < Ht; jt++) {
-            let tt = qt[jt];
-            for (; 0 !== tt;) {
-              const Vt = tt & -tt;
-              tt ^= Vt;
-              const Ht = 32 * jt + (31 - Math.clz32(Vt)),
-                Xt = Ot.activeViews.get(Ht),
-                Qt = Xt?.deref();
-              void 0 !== Qt ? Dt ? Pe(mt, Ht, et) : void 0 !== dt && Qt.markVisible(dt) : qt[jt] &= ~Vt
+    function Yj(uu, Eu, ju, su) {
+      if (uu.addParent(Eu, su), !ju) return;
+      const Uu = ju.add(uu);
+      ju !== uu.root && (uu.root = ju, Zj(uu, Eu, su));
+      const Zu = Eu?.[Yu];
+      if (void 0 !== Zu && void 0 !== Zu.subscribedViews && void 0 !== Eu[hu] && function(uu, Eu, ju, su) {
+          const Uu = uu.subscribedViews;
+          if (void 0 === Uu) return;
+          const Zu = uu.isStreamCollection,
+            Xu = Zu ? uu.ref : void 0,
+            lu = Zu ? void 0 : ju[Yu];
+          for (let qu = 0, fu = Uu.length; qu < fu; qu++) {
+            let uu = Uu[qu];
+            for (; 0 !== uu;) {
+              const ju = uu & -uu;
+              uu ^= ju;
+              const fu = 32 * qu + (31 - Math.clz32(ju)),
+                Cu = su.activeViews.get(fu),
+                bu = Cu?.deref();
+              void 0 !== bu ? Zu ? vE(Xu, fu, Eu) : void 0 !== lu && bu.markVisible(lu) : Uu[qu] &= ~ju
             }
           }
-        }(Dt, Ot, tt.ref, Vt), qt) {
-        let et = bV[JV];
-        void 0 === et && (et = {
+        }(Zu, su, uu.ref, ju), Uu) {
+        let Eu = Mj[ej];
+        void 0 === Eu && (Eu = {
           parentRef: void 0,
           root: void 0
-        }, bV[JV] = et), et.parentRef = tt.ref, et.root = Vt, JV++, aV(tt, et, CV), JV--
+        }, Mj[ej] = Eu), Eu.parentRef = uu.ref, Eu.root = ju, ej++, Dj(uu, Eu, Gj), ej--
       }
     }
 
-    function NV(tt, et, Vt) {
-      tt(et, Vt)
+    function hj(uu, Eu, ju) {
+      uu(Eu, ju)
     }
 
-    function aV(tt, et, Vt) {
-      const Ot = tt.refTarget;
-      if (Ot[yt]) {
-        if ("string" !== typeof Ot[yt]) {
-          const tt = Ot.items;
-          if (void 0 !== tt)
-            for (let Ot = 0, qt = tt.length; Ot < qt; Ot++) {
-              const qt = tt[Ot];
-              qt && Vt(et, qt[wt], Ot)
+    function Dj(uu, Eu, ju) {
+      const su = uu.refTarget;
+      if (su[hu]) {
+        if ("string" !== typeof su[hu]) {
+          const uu = su.items;
+          if (void 0 !== uu)
+            for (let su = 0, Uu = uu.length; su < Uu; su++) {
+              const Uu = uu[su];
+              Uu && ju(Eu, Uu[Yu], su)
             } else {
-              const tt = Ot.$items,
-                qt = Ot._collectionIndexes;
-              for (const Ot of tt.keys()) {
-                const Dt = tt.get(Ot);
-                Dt && Vt(et, Dt[wt], qt?.[Ot] ?? Ot)
+              const uu = su.$items,
+                Uu = su._collectionIndexes;
+              for (const su of uu.keys()) {
+                const Zu = uu.get(su);
+                Zu && ju(Eu, Zu[Yu], Uu?.[su] ?? su)
               }
             }
         }
       } else {
-        const qt = tt.metadata,
-          Dt = qt?.[St];
-        if (!Dt) return;
-        const mt = tt.encDescriptor.names;
-        for (let tt = 0, dt = Dt.length; tt < dt; tt++) {
-          const qt = Dt[tt],
-            dt = Ot[mt[qt]];
-          dt && Vt(et, dt[wt], qt)
+        const Uu = uu.metadata,
+          Zu = Uu?.[Pu];
+        if (!Zu) return;
+        const Xu = uu.encDescriptor.names;
+        for (let uu = 0, lu = Zu.length; uu < lu; uu++) {
+          const Uu = Zu[uu],
+            lu = su[Xu[Uu]];
+          lu && ju(Eu, lu[Yu], Uu)
         }
       }
     }
 
-    function MV(tt, et, Vt) {
-      et.root !== tt ? et.setRoot(tt) : tt.add(et)
+    function gj(uu, Eu, ju) {
+      Eu.root !== uu ? Eu.setRoot(uu) : uu.add(Eu)
     }
-    const bV = [];
-    let JV = 0;
+    const Mj = [];
+    let ej = 0;
 
-    function CV(tt, et, Vt) {
-      if (et.root === tt.root) return tt.root.add(et), void tt.root.moveNextToParent(et);
-      et.setParent(tt.parentRef, tt.root, Vt)
+    function Gj(uu, Eu, ju) {
+      if (Eu.root === uu.root) return uu.root.add(Eu), void uu.root.moveNextToParent(Eu);
+      Eu.setParent(uu.parentRef, uu.root, ju)
     }
 
-    function uV(tt, et, Vt) {
-      const Ot = (3 & Vt) << 3;
-      return Vt < 4 ? tt >>> Ot & 255 : et >>> Ot & 255
+    function pj(uu, Eu, ju) {
+      const su = (3 & ju) << 3;
+      return ju < 4 ? uu >>> su & 255 : Eu >>> su & 255
     }
-    const KV = (tt, et, Vt) => tt(et, Vt);
-    const hV = 16,
-      vV = 32,
-      WV = 128,
-      SV = 256,
-      cV = hV | vV;
-    class RV {
+    const wj = (uu, Eu, ju) => uu(Eu, ju);
+    const Jj = 16,
+      dj = 32,
+      aj = 128,
+      Pj = 256,
+      oj = Jj | dj;
+    class kj {
       ref;
       refTarget;
       get isArray() {
@@ -3302,183 +3302,183 @@ export const modules = {
       get isFiltered() {
         return 0 !== (1 & this.flags)
       }
-      set isFiltered(tt) {
-        this.flags = tt ? 1 | this.flags : -2 & this.flags
+      set isFiltered(uu) {
+        this.flags = uu ? 1 | this.flags : -2 & this.flags
       }
       get isVisibilitySharedWithParent() {
         return 0 !== (2 & this.flags)
       }
-      set isVisibilitySharedWithParent(tt) {
-        this.flags = tt ? 2 | this.flags : -3 & this.flags
+      set isVisibilitySharedWithParent(uu) {
+        this.flags = uu ? 2 | this.flags : -3 & this.flags
       }
       get isNew() {
         return 0 !== (4 & this.flags)
       }
-      set isNew(tt) {
-        this.flags = tt ? 4 | this.flags : -5 & this.flags
+      set isNew(uu) {
+        this.flags = uu ? 4 | this.flags : -5 & this.flags
       }
       get isUnreliable() {
         return 0 !== (8 & this.flags)
       }
-      set isUnreliable(tt) {
-        this.flags = tt ? 8 | this.flags : -9 & this.flags
+      set isUnreliable(uu) {
+        this.flags = uu ? 8 | this.flags : -9 & this.flags
       }
       get isPatchOnly() {
-        return 0 !== (this.flags & hV)
+        return 0 !== (this.flags & Jj)
       }
-      set isPatchOnly(tt) {
-        this.flags = tt ? this.flags | hV : this.flags & ~hV
+      set isPatchOnly(uu) {
+        this.flags = uu ? this.flags | Jj : this.flags & ~Jj
       }
       get isFullStateOnly() {
-        return 0 !== (this.flags & vV)
+        return 0 !== (this.flags & dj)
       }
-      set isFullStateOnly(tt) {
-        this.flags = tt ? this.flags | vV : this.flags & ~vV
+      set isFullStateOnly(uu) {
+        this.flags = uu ? this.flags | dj : this.flags & ~dj
       }
       get isStreamCollection() {
         return 0 !== (64 & this.flags)
       }
-      set isStreamCollection(tt) {
-        this.flags = tt ? 64 | this.flags : -65 & this.flags
+      set isStreamCollection(uu) {
+        this.flags = uu ? 64 | this.flags : -65 & this.flags
       }
       get needsRestage() {
-        return 0 !== (this.flags & WV)
+        return 0 !== (this.flags & aj)
       }
-      set needsRestage(tt) {
-        this.flags = tt ? this.flags | WV : -129 & this.flags
+      set needsRestage(uu) {
+        this.flags = uu ? this.flags | aj : -129 & this.flags
       }
       get hasFilteredFields() {
         return this.isFiltered || this.encDescriptor.hasAnyView
       }
       ensureUnreliableRecorder() {
-        return void 0 === this.unreliableRecorder && (this.unreliableRecorder = this._isSchema ? new ge(this.metadata?.[Wt] ?? 0) : new se), this.unreliableRecorder
+        return void 0 === this.unreliableRecorder && (this.unreliableRecorder = this._isSchema ? new nE(this.metadata?.[au] ?? 0) : new yE), this.unreliableRecorder
       }
-      isFieldUnreliable(tt) {
-        const et = this.encDescriptor;
-        return !!et.hasAnyUnreliable && (tt < 32 ? 0 !== (et.unreliableBitmask & 1 << tt) : xe.hasUnreliableAtIndex(this.metadata, tt))
+      isFieldUnreliable(uu) {
+        const Eu = this.encDescriptor;
+        return !!Eu.hasAnyUnreliable && (uu < 32 ? 0 !== (Eu.unreliableBitmask & 1 << uu) : HE.hasUnreliableAtIndex(this.metadata, uu))
       }
-      isFieldFullStateOnly(tt) {
+      isFieldFullStateOnly(uu) {
         if (this.isFullStateOnly) return !0;
-        const et = this.encDescriptor;
-        return !!et.hasAnyFullStateOnly && (tt < 32 ? 0 !== (et.fullStateOnlyBitmask & 1 << tt) : xe.hasFullStateOnlyAtIndex(this.metadata, tt))
+        const Eu = this.encDescriptor;
+        return !!Eu.hasAnyFullStateOnly && (uu < 32 ? 0 !== (Eu.fullStateOnlyBitmask & 1 << uu) : HE.hasFullStateOnlyAtIndex(this.metadata, uu))
       }
-      isFieldStream(tt) {
-        const et = this.encDescriptor;
-        return !!et.hasAnyStream && (tt < 32 ? 0 !== (et.streamBitmask & 1 << tt) : xe.hasStreamAtIndex(this.metadata, tt))
+      isFieldStream(uu) {
+        const Eu = this.encDescriptor;
+        return !!Eu.hasAnyStream && (uu < 32 ? 0 !== (Eu.streamBitmask & 1 << uu) : HE.hasStreamAtIndex(this.metadata, uu))
       }
-      constructor(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : tt;
-        this.ref = tt, this.refTarget = et;
-        const Vt = eV(tt);
-        this.encDescriptor = Vt, this.metadata = Vt.metadata;
-        const Ot = Vt.isSchema;
-        if (this._isSchema = Ot, this.ops = void 0, this.collDirty = void 0, this.collPureOps = void 0, Ot) {
-          const tt = this.metadata?.[Wt] ?? 0;
-          tt > 7 && (this.ops = new Uint8Array(tt + 1))
+      constructor(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : uu;
+        this.ref = uu, this.refTarget = Eu;
+        const ju = uj(uu);
+        this.encDescriptor = ju, this.metadata = ju.metadata;
+        const su = ju.isSchema;
+        if (this._isSchema = su, this.ops = void 0, this.collDirty = void 0, this.collPureOps = void 0, su) {
+          const uu = this.metadata?.[au] ?? 0;
+          uu > 7 && (this.ops = new Uint8Array(uu + 1))
         } else this.collDirty = new Map
       }
-      _opAt(tt) {
-        const et = this.ops;
-        if (void 0 !== et) return et[tt];
-        const Vt = (3 & tt) << 3;
-        return tt < 4 ? this.opsLow >>> Vt & 255 : this.opsHigh >>> Vt & 255
+      _opAt(uu) {
+        const Eu = this.ops;
+        if (void 0 !== Eu) return Eu[uu];
+        const ju = (3 & uu) << 3;
+        return uu < 4 ? this.opsLow >>> ju & 255 : this.opsHigh >>> ju & 255
       }
-      _opPut(tt, et) {
-        const Vt = this.ops;
-        if (void 0 !== Vt) return void(Vt[tt] = et);
-        const Ot = (3 & tt) << 3,
-          qt = ~(255 << Ot);
-        tt < 4 ? this.opsLow = this.opsLow & qt | et << Ot : this.opsHigh = this.opsHigh & qt | et << Ot
+      _opPut(uu, Eu) {
+        const ju = this.ops;
+        if (void 0 !== ju) return void(ju[uu] = Eu);
+        const su = (3 & uu) << 3,
+          Uu = ~(255 << su);
+        uu < 4 ? this.opsLow = this.opsLow & Uu | Eu << su : this.opsHigh = this.opsHigh & Uu | Eu << su
       }
-      _markDirty(tt) {
-        tt < 32 ? this.dirtyLow |= 1 << tt : this.dirtyHigh |= 1 << tt - 32
+      _markDirty(uu) {
+        uu < 32 ? this.dirtyLow |= 1 << uu : this.dirtyHigh |= 1 << uu - 32
       }
-      record(tt, et) {
+      record(uu, Eu) {
         if (this._isSchema) {
-          const Vt = this._opAt(tt);
-          0 === Vt ? this._opPut(tt, et) : (Vt === qt.DELETE || Vt === qt.ADD && et === qt.DELETE_AND_ADD) && this._opPut(tt, qt.DELETE_AND_ADD), this._markDirty(tt)
+          const ju = this._opAt(uu);
+          0 === ju ? this._opPut(uu, Eu) : (ju === Uu.DELETE || ju === Uu.ADD && Eu === Uu.DELETE_AND_ADD) && this._opPut(uu, Uu.DELETE_AND_ADD), this._markDirty(uu)
         } else {
-          const Vt = this.collDirty,
-            Ot = Vt.get(tt);
-          let Dt;
-          Dt = void 0 === Ot ? et : Ot === qt.DELETE || Ot === qt.ADD && et === qt.DELETE_AND_ADD ? qt.DELETE_AND_ADD : Ot, Vt.set(tt, Dt)
+          const ju = this.collDirty,
+            su = ju.get(uu);
+          let Zu;
+          Zu = void 0 === su ? Eu : su === Uu.DELETE || su === Uu.ADD && Eu === Uu.DELETE_AND_ADD ? Uu.DELETE_AND_ADD : su, ju.set(uu, Zu)
         }
       }
-      recordDelete(tt, et) {
-        this._isSchema ? (this._opPut(tt, et), this._markDirty(tt)) : this.collDirty.set(tt, et)
+      recordDelete(uu, Eu) {
+        this._isSchema ? (this._opPut(uu, Eu), this._markDirty(uu)) : this.collDirty.set(uu, Eu)
       }
-      recordRaw(tt, et) {
-        this._isSchema ? (this._opPut(tt, et), this._markDirty(tt)) : this.collDirty.set(tt, et)
+      recordRaw(uu, Eu) {
+        this._isSchema ? (this._opPut(uu, Eu), this._markDirty(uu)) : this.collDirty.set(uu, Eu)
       }
-      recordPure(tt) {
+      recordPure(uu) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): pure operations are not supported");
-        (this.collPureOps ??= []).push([this.collDirty.size, tt])
+        (this.collPureOps ??= []).push([this.collDirty.size, uu])
       }
-      operationAt(tt) {
+      operationAt(uu) {
         if (this._isSchema) {
-          const et = this._opAt(tt);
-          return 0 === et ? void 0 : et
+          const Eu = this._opAt(uu);
+          return 0 === Eu ? void 0 : Eu
         }
-        return this.collDirty.get(tt)
+        return this.collDirty.get(uu)
       }
-      setOperationAt(tt, et) {
-        if (this._isSchema) this._opPut(tt, et);
+      setOperationAt(uu, Eu) {
+        if (this._isSchema) this._opPut(uu, Eu);
         else {
-          const Vt = this.collDirty;
-          Vt.has(tt) && Vt.set(tt, et)
+          const ju = this.collDirty;
+          ju.has(uu) && ju.set(uu, Eu)
         }
       }
-      forEach(tt) {
-        this.forEachWithCtx(tt, KV)
+      forEach(uu) {
+        this.forEachWithCtx(uu, wj)
       }
-      forEachWithCtx(tt, et) {
+      forEachWithCtx(uu, Eu) {
         if (this._isSchema) {
-          let Vt = this.dirtyLow,
-            Ot = this.dirtyHigh;
-          const qt = this.ops;
-          if (void 0 !== qt) {
-            for (; 0 !== Vt;) {
-              const Ot = Vt & -Vt,
-                Dt = 31 - Math.clz32(Ot);
-              Vt ^= Ot, et(tt, Dt, qt[Dt])
+          let ju = this.dirtyLow,
+            su = this.dirtyHigh;
+          const Uu = this.ops;
+          if (void 0 !== Uu) {
+            for (; 0 !== ju;) {
+              const su = ju & -ju,
+                Zu = 31 - Math.clz32(su);
+              ju ^= su, Eu(uu, Zu, Uu[Zu])
             }
-            for (; 0 !== Ot;) {
-              const Vt = Ot & -Ot,
-                Dt = 31 - Math.clz32(Vt) + 32;
-              Ot ^= Vt, et(tt, Dt, qt[Dt])
+            for (; 0 !== su;) {
+              const ju = su & -su,
+                Zu = 31 - Math.clz32(ju) + 32;
+              su ^= ju, Eu(uu, Zu, Uu[Zu])
             }
           } else {
-            const Ot = this.opsLow,
-              qt = this.opsHigh;
-            for (; 0 !== Vt;) {
-              const Dt = Vt & -Vt,
-                mt = 31 - Math.clz32(Dt);
-              Vt ^= Dt, et(tt, mt, uV(Ot, qt, mt))
+            const su = this.opsLow,
+              Uu = this.opsHigh;
+            for (; 0 !== ju;) {
+              const Zu = ju & -ju,
+                Xu = 31 - Math.clz32(Zu);
+              ju ^= Zu, Eu(uu, Xu, pj(su, Uu, Xu))
             }
           }
           return
         }
-        const Vt = this.collDirty,
-          Ot = this.collPureOps;
-        if (void 0 !== Ot && Ot.length > 0) {
-          let qt = 0,
-            Dt = 0;
-          for (const [mt, dt] of Vt) {
-            for (; qt < Ot.length && Ot[qt][0] <= Dt;) {
-              const Vt = Ot[qt++][1];
-              et(tt, -Vt, Vt)
+        const ju = this.collDirty,
+          su = this.collPureOps;
+        if (void 0 !== su && su.length > 0) {
+          let Uu = 0,
+            Zu = 0;
+          for (const [Xu, lu] of ju) {
+            for (; Uu < su.length && su[Uu][0] <= Zu;) {
+              const ju = su[Uu++][1];
+              Eu(uu, -ju, ju)
             }
-            et(tt, mt, dt), Dt++
+            Eu(uu, Xu, lu), Zu++
           }
-          for (; qt < Ot.length;) {
-            const Vt = Ot[qt++][1];
-            et(tt, -Vt, Vt)
+          for (; Uu < su.length;) {
+            const ju = su[Uu++][1];
+            Eu(uu, -ju, ju)
           }
         } else
-          for (const [qt, Dt] of Vt) et(tt, qt, Dt)
+          for (const [Uu, Zu] of ju) Eu(uu, Uu, Zu)
       }
       size() {
-        return this._isSchema ? ne(this.dirtyLow) + ne(this.dirtyHigh) : this.collDirty.size + (this.collPureOps?.length ?? 0)
+        return this._isSchema ? zE(this.dirtyLow) + zE(this.dirtyHigh) : this.collDirty.size + (this.collPureOps?.length ?? 0)
       }
       has() {
         return this._isSchema ? 0 !== (this.dirtyLow | this.dirtyHigh) : this.collDirty.size > 0 || void 0 !== this.collPureOps && this.collPureOps.length > 0
@@ -3491,81 +3491,81 @@ export const modules = {
         if (void 0 !== this.root) throw new Error(`@colyseus/schema: cannot recycle an attached ChangeTree (${this.ref?.constructor?.name}). Remove the instance from its parent collection before releasing it to a pool.`);
         this.reset(), this.unreliableRecorder?.reset(), this.flags = 132, this._fullSyncGen = 0, this.parentRef = void 0, this._parentIndex = void 0, this.extraParents = void 0, this.changesNode = void 0, this.unreliableChangesNode = void 0, this.paused = !1, this.visibleViews = void 0, this.tagViews = void 0, this.subscribedViews = void 0
       }
-      insertAt(tt, et) {
+      insertAt(uu, Eu) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): insertAt is not supported");
-        const Vt = this.collDirty,
-          Ot = new Map,
-          Dt = !this.paused && !this.isFullStateOnly;
-        if (tt > 0)
-          for (const [qt, mt] of Vt) qt < tt && Ot.set(qt, mt);
-        if (Dt)
-          for (let mt = 0; mt < et; mt++) Ot.set(tt + mt, qt.ADD);
-        for (const [qt, mt] of Vt) qt >= tt && Ot.set(qt + et, mt);
-        this.collDirty = Ot, Dt && this.root?.enqueueChangeTree(this)
+        const ju = this.collDirty,
+          su = new Map,
+          Zu = !this.paused && !this.isFullStateOnly;
+        if (uu > 0)
+          for (const [Uu, Xu] of ju) Uu < uu && su.set(Uu, Xu);
+        if (Zu)
+          for (let Xu = 0; Xu < Eu; Xu++) su.set(uu + Xu, Uu.ADD);
+        for (const [Uu, Xu] of ju) Uu >= uu && su.set(Uu + Eu, Xu);
+        this.collDirty = su, Zu && this.root?.enqueueChangeTree(this)
       }
-      removeAt(tt, et) {
+      removeAt(uu, Eu) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): removeAt is not supported");
-        const Vt = this.collDirty,
-          Ot = tt + et;
-        let qt = !1;
-        for (const mt of Vt.keys())
-          if (mt >= Ot) {
-            qt = !0;
+        const ju = this.collDirty,
+          su = uu + Eu;
+        let Uu = !1;
+        for (const Xu of ju.keys())
+          if (Xu >= su) {
+            Uu = !0;
             break
-          } if (!qt) {
-          for (let et = tt; et < Ot; et++) Vt.delete(et);
+          } if (!Uu) {
+          for (let Eu = uu; Eu < su; Eu++) ju.delete(Eu);
           return
         }
-        const Dt = new Map;
-        for (const [mt, dt] of Vt) mt < tt ? Dt.set(mt, dt) : mt >= Ot && Dt.set(mt - et, dt);
-        this.collDirty = Dt
+        const Zu = new Map;
+        for (const [Xu, lu] of ju) Xu < uu ? Zu.set(Xu, lu) : Xu >= su && Zu.set(Xu - Eu, lu);
+        this.collDirty = Zu
       }
-      unshift(tt) {
-        this.insertAt(0, tt)
+      unshift(uu) {
+        this.insertAt(0, uu)
       }
-      setRoot(tt) {
-        ! function(tt, et) {
-          tt.root = et;
-          const Vt = et.add(tt);
-          mV(tt, tt.parent, tt.parentIndex), Vt && aV(tt, et, MV)
-        }(this, tt)
+      setRoot(uu) {
+        ! function(uu, Eu) {
+          uu.root = Eu;
+          const ju = Eu.add(uu);
+          Zj(uu, uu.parent, uu.parentIndex), ju && Dj(uu, Eu, gj)
+        }(this, uu)
       }
-      setParent(tt, et, Vt) {
-        yV(this, tt, et, Vt)
+      setParent(uu, Eu, ju) {
+        Yj(this, uu, Eu, ju)
       }
-      forEachChild(tt) {
-        aV(this, tt, NV)
+      forEachChild(uu) {
+        Dj(this, uu, hj)
       }
-      forEachChildWithCtx(tt, et) {
-        aV(this, tt, et)
+      forEachChildWithCtx(uu, Eu) {
+        Dj(this, uu, Eu)
       }
-      forEachLive(tt) {
-        DV(this, tt, qV)
+      forEachLive(uu) {
+        Uj(this, uu, sj)
       }
-      forEachLiveWithCtx(tt, et) {
-        DV(this, tt, et)
+      forEachLiveWithCtx(uu, Eu) {
+        Uj(this, uu, Eu)
       }
-      operation(tt) {
-        this.paused || this.isFullStateOnly || (this.recordPure(tt), this.root?.enqueueChangeTree(this))
+      operation(uu) {
+        this.paused || this.isFullStateOnly || (this.recordPure(uu), this.root?.enqueueChangeTree(this))
       }
-      _routeAndRecord(tt, et, Vt) {
-        if (!this.paused && !this.isFieldFullStateOnly(tt)) {
-          if (this.isFieldUnreliable(tt) && !this.isNew) {
-            const Ot = this.ensureUnreliableRecorder();
-            return Vt ? Ot.recordRaw(tt, et) : Ot.record(tt, et), void this.root?.enqueueUnreliable(this)
+      _routeAndRecord(uu, Eu, ju) {
+        if (!this.paused && !this.isFieldFullStateOnly(uu)) {
+          if (this.isFieldUnreliable(uu) && !this.isNew) {
+            const su = this.ensureUnreliableRecorder();
+            return ju ? su.recordRaw(uu, Eu) : su.record(uu, Eu), void this.root?.enqueueUnreliable(this)
           }
-          Vt ? this.recordRaw(tt, et) : this.record(tt, et), this.root?.enqueueChangeTree(this)
+          ju ? this.recordRaw(uu, Eu) : this.record(uu, Eu), this.root?.enqueueChangeTree(this)
         }
       }
-      change(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : qt.ADD;
-        this._routeAndRecord(tt, et, !1)
+      change(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Uu.ADD;
+        this._routeAndRecord(uu, Eu, !1)
       }
-      indexedOperation(tt, et) {
-        this._routeAndRecord(tt, et, !0)
+      indexedOperation(uu, Eu) {
+        this._routeAndRecord(uu, Eu, !0)
       }
-      getChange(tt) {
-        return this.operationAt(tt)
+      getChange(uu) {
+        return this.operationAt(uu)
       }
       pause() {
         this.paused = !0
@@ -3573,60 +3573,60 @@ export const modules = {
       resume() {
         this.paused = !1
       }
-      untracked(tt) {
-        const et = this.paused;
+      untracked(uu) {
+        const Eu = this.paused;
         this.paused = !0;
         try {
-          return tt()
+          return uu()
         } finally {
-          this.paused = et
+          this.paused = Eu
         }
       }
-      markDirty(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : qt.ADD;
-        const Vt = this.paused;
+      markDirty(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Uu.ADD;
+        const ju = this.paused;
         this.paused = !1;
         try {
-          this.change(tt, et)
+          this.change(uu, Eu)
         } finally {
-          this.paused = Vt
+          this.paused = ju
         }
       }
-      getValue(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return this.refTarget[lt](tt, et)
+      getValue(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return this.refTarget[cu](uu, Eu)
       }
-      delete(tt, et) {
-        if (void 0 === tt) {
+      delete(uu, Eu) {
+        if (void 0 === uu) {
           try {
-            throw new Error(`@colyseus/schema ${this.ref.constructor.name}: trying to delete non-existing index '${tt}'`)
-          } catch (mq) {
-            console.warn(mq)
+            throw new Error(`@colyseus/schema ${this.ref.constructor.name}: trying to delete non-existing index '${uu}'`)
+          } catch (lU) {
+            console.warn(lU)
           }
           return
         }
-        if (this.paused || this.isFieldFullStateOnly(tt)) return this.getValue(tt);
-        const Vt = this.isFieldUnreliable(tt) && !this.isNew;
-        Vt ? this.ensureUnreliableRecorder().recordDelete(tt, et ?? qt.DELETE) : this.recordDelete(tt, et ?? qt.DELETE);
-        const Ot = this.getValue(tt);
-        return Ot && Ot[wt] && this.root?.remove(Ot[wt]), Vt ? this.root?.enqueueUnreliable(this) : this.root?.enqueueChangeTree(this), Ot
+        if (this.paused || this.isFieldFullStateOnly(uu)) return this.getValue(uu);
+        const ju = this.isFieldUnreliable(uu) && !this.isNew;
+        ju ? this.ensureUnreliableRecorder().recordDelete(uu, Eu ?? Uu.DELETE) : this.recordDelete(uu, Eu ?? Uu.DELETE);
+        const su = this.getValue(uu);
+        return su && su[Yu] && this.root?.remove(su[Yu]), ju ? this.root?.enqueueUnreliable(this) : this.root?.enqueueChangeTree(this), su
       }
       endEncode() {
-        this.reset(), this.changesNode = void 0, this._isSchema || this.refTarget[Mt]?.(), this.isNew = !1
+        this.reset(), this.changesNode = void 0, this._isSchema || this.refTarget[gu]?.(), this.isNew = !1
       }
       endEncodeUnreliable() {
-        this.unreliableRecorder?.reset(), this.unreliableChangesNode = void 0, this._isSchema || this.refTarget[Mt]?.()
+        this.unreliableRecorder?.reset(), this.unreliableChangesNode = void 0, this._isSchema || this.refTarget[gu]?.()
       }
       discard() {
-        this._isSchema || this.refTarget[Mt]?.(), this.reset(), this.unreliableRecorder?.reset()
+        this._isSchema || this.refTarget[gu]?.(), this.reset(), this.unreliableRecorder?.reset()
       }
       discardAll() {
-        const tt = tt => {
-          if (tt < 0) return;
-          const et = this.getValue(tt);
-          et && et[wt] && et[wt].discardAll()
+        const uu = uu => {
+          if (uu < 0) return;
+          const Eu = this.getValue(uu);
+          Eu && Eu[Yu] && Eu[Yu].discardAll()
         };
-        this.forEach(tt), this.unreliableRecorder?.forEach(tt), this.discard()
+        this.forEach(uu), this.unreliableRecorder?.forEach(uu), this.discard()
       }
       get changed() {
         return this.has() || (this.unreliableRecorder?.has() ?? !1)
@@ -3637,89 +3637,89 @@ export const modules = {
       get parentIndex() {
         return this._parentIndex
       }
-      addParent(tt, et) {
-        ! function(tt, et, Vt) {
-          if (tt.parentRef) {
-            if (tt.parentRef[wt] === et[wt]) return void(tt._parentIndex = Vt);
-            if (VV(tt, ((tt, Vt) => tt[wt] === et[wt]))) return void(tt._parentIndex = Vt)
+      addParent(uu, Eu) {
+        ! function(uu, Eu, ju) {
+          if (uu.parentRef) {
+            if (uu.parentRef[Yu] === Eu[Yu]) return void(uu._parentIndex = ju);
+            if (Ej(uu, ((uu, ju) => uu[Yu] === Eu[Yu]))) return void(uu._parentIndex = ju)
           }
-          void 0 === tt.parentRef ? (tt.parentRef = et, tt._parentIndex = Vt) : (tt.extraParents = {
-            ref: tt.parentRef,
-            index: tt._parentIndex,
-            next: tt.extraParents
-          }, tt.parentRef = et, tt._parentIndex = Vt)
-        }(this, tt, et)
+          void 0 === uu.parentRef ? (uu.parentRef = Eu, uu._parentIndex = ju) : (uu.extraParents = {
+            ref: uu.parentRef,
+            index: uu._parentIndex,
+            next: uu.extraParents
+          }, uu.parentRef = Eu, uu._parentIndex = ju)
+        }(this, uu, Eu)
       }
-      setParentIndex(tt, et) {
-        ! function(tt, et, Vt) {
-          if (void 0 !== tt.extraParents)
-            if (tt.parentRef[wt] !== et[wt]) {
-              for (let Ot = tt.extraParents; void 0 !== Ot; Ot = Ot.next)
-                if (Ot.ref[wt] === et[wt]) return void(Ot.index = Vt)
-            } else tt._parentIndex = Vt;
-          else tt._parentIndex = Vt
-        }(this, tt, et)
+      setParentIndex(uu, Eu) {
+        ! function(uu, Eu, ju) {
+          if (void 0 !== uu.extraParents)
+            if (uu.parentRef[Yu] !== Eu[Yu]) {
+              for (let su = uu.extraParents; void 0 !== su; su = su.next)
+                if (su.ref[Yu] === Eu[Yu]) return void(su.index = ju)
+            } else uu._parentIndex = ju;
+          else uu._parentIndex = ju
+        }(this, uu, Eu)
       }
       removeParent() {
-        return function(tt, et) {
-          if (tt.parentRef && tt.parentRef[wt] === et[wt]) return tt.extraParents ? (tt.parentRef = tt.extraParents.ref, tt._parentIndex = tt.extraParents.index, tt.extraParents = tt.extraParents.next) : (tt.parentRef = void 0, tt._parentIndex = void 0), !0;
-          let Vt = tt.extraParents,
-            Ot = null;
-          for (; Vt;) {
-            if (Vt.ref[wt] === et[wt]) return Ot ? Ot.next = Vt.next : tt.extraParents = Vt.next, !0;
-            Ot = Vt, Vt = Vt.next
+        return function(uu, Eu) {
+          if (uu.parentRef && uu.parentRef[Yu] === Eu[Yu]) return uu.extraParents ? (uu.parentRef = uu.extraParents.ref, uu._parentIndex = uu.extraParents.index, uu.extraParents = uu.extraParents.next) : (uu.parentRef = void 0, uu._parentIndex = void 0), !0;
+          let ju = uu.extraParents,
+            su = null;
+          for (; ju;) {
+            if (ju.ref[Yu] === Eu[Yu]) return su ? su.next = ju.next : uu.extraParents = ju.next, !0;
+            su = ju, ju = ju.next
           }
-          return void 0 === tt.parentRef
+          return void 0 === uu.parentRef
         }(this, arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.parent)
       }
-      findParent(tt) {
-        return function(tt, et) {
-          if (void 0 !== tt.parentRef && et(tt.parentRef, tt._parentIndex)) return {
-            ref: tt.parentRef,
-            index: tt._parentIndex
+      findParent(uu) {
+        return function(uu, Eu) {
+          if (void 0 !== uu.parentRef && Eu(uu.parentRef, uu._parentIndex)) return {
+            ref: uu.parentRef,
+            index: uu._parentIndex
           };
-          for (let Vt = tt.extraParents; void 0 !== Vt; Vt = Vt.next)
-            if (et(Vt.ref, Vt.index)) return {
-              ref: Vt.ref,
-              index: Vt.index
+          for (let ju = uu.extraParents; void 0 !== ju; ju = ju.next)
+            if (Eu(ju.ref, ju.index)) return {
+              ref: ju.ref,
+              index: ju.index
             }
-        }(this, tt)
+        }(this, uu)
       }
-      hasParent(tt) {
-        return VV(this, tt)
+      hasParent(uu) {
+        return Ej(this, uu)
       }
-      indexInParent(tt) {
-        return function(tt, et) {
-          if (tt.parentRef && tt.parentRef[wt] === et[wt]) return tt._parentIndex;
-          for (let Vt = tt.extraParents; void 0 !== Vt; Vt = Vt.next)
-            if (Vt.ref[wt] === et[wt]) return Vt.index
-        }(this, tt)
+      indexInParent(uu) {
+        return function(uu, Eu) {
+          if (uu.parentRef && uu.parentRef[Yu] === Eu[Yu]) return uu._parentIndex;
+          for (let ju = uu.extraParents; void 0 !== ju; ju = ju.next)
+            if (ju.ref[Yu] === Eu[Yu]) return ju.index
+        }(this, uu)
       }
       getAllParents() {
-        return function(tt) {
-          const et = [];
-          tt.parentRef && et.push({
-            ref: tt.parentRef,
-            index: tt._parentIndex
+        return function(uu) {
+          const Eu = [];
+          uu.parentRef && Eu.push({
+            ref: uu.parentRef,
+            index: uu._parentIndex
           });
-          let Vt = tt.extraParents;
-          for (; Vt;) et.push({
-            ref: Vt.ref,
-            index: Vt.index
-          }), Vt = Vt.next;
-          return et
+          let ju = uu.extraParents;
+          for (; ju;) Eu.push({
+            ref: ju.ref,
+            index: ju.index
+          }), ju = ju.next;
+          return Eu
         }(this)
       }
     }
-    class IV {
+    class mj {
       ref;
       root = void 0;
       parentRef = void 0;
       paused = !1;
       isNew = !1;
       flags = 0;
-      constructor(tt) {
-        this.ref = tt
+      constructor(uu) {
+        this.ref = uu
       }
       change() {}
       delete() {}
@@ -3738,606 +3738,606 @@ export const modules = {
       discardAll() {}
       pause() {}
       resume() {}
-      untracked(tt) {
-        return tt()
+      untracked(uu) {
+        return uu()
       }
       markDirty() {}
-      forEachChild(tt) {
-        const et = this.ref;
-        if (et[yt]) {
-          if ("string" !== typeof et[yt])
-            for (const [Vt, Ot] of et.entries()) Ot && tt(Ot[wt], et._collectionIndexes?.[Vt] ?? Vt);
+      forEachChild(uu) {
+        const Eu = this.ref;
+        if (Eu[hu]) {
+          if ("string" !== typeof Eu[hu])
+            for (const [ju, su] of Eu.entries()) su && uu(su[Yu], Eu._collectionIndexes?.[ju] ?? ju);
           return
         }
-        const Vt = et.constructor,
-          Ot = Vt?.[Symbol.metadata];
-        if (!Ot) return;
-        const qt = Ot[St] ?? [];
-        for (let Dt = 0; Dt < qt.length; Dt++) {
-          const Vt = qt[Dt],
-            mt = et[Ot[Vt].name];
-          mt && tt(mt[wt], Vt)
+        const ju = Eu.constructor,
+          su = ju?.[Symbol.metadata];
+        if (!su) return;
+        const Uu = su[Pu] ?? [];
+        for (let Zu = 0; Zu < Uu.length; Zu++) {
+          const ju = Uu[Zu],
+            Xu = Eu[su[ju].name];
+          Xu && uu(Xu[Yu], ju)
         }
       }
-      forEachChildWithCtx(tt, et) {
-        this.forEachChild(((Vt, Ot) => et(tt, Vt, Ot)))
+      forEachChildWithCtx(uu, Eu) {
+        this.forEachChild(((ju, su) => Eu(uu, ju, su)))
       }
       forEachLive() {}
       forEachLiveWithCtx() {}
       forEach() {}
     }
 
-    function PV(tt) {
-      let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : tt;
-      var Vt;
-      Object.defineProperty(tt, wt, {
-        value: (Vt = et, new IV(Vt)),
+    function vj(uu) {
+      let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : uu;
+      var ju;
+      Object.defineProperty(uu, Yu, {
+        value: (ju = Eu, new mj(ju)),
         enumerable: !1,
         writable: !0
       })
     }
 
-    function ZV(tt, et, Vt, Ot, Dt, mt, jt) {
-      void 0 !== jt ? jt(et, Ot, mt) : "string" === typeof Vt ? Ve[Vt]?.(et, Ot, mt) : null != Vt[Symbol.metadata] ? (Ve.number(et, Ot[dt], mt), (Dt & qt.ADD) === qt.ADD && tt.tryEncodeTypeId(et, Vt, Ot.constructor, mt)) : Ve.number(et, Ot[dt], mt)
+    function Kj(uu, Eu, ju, su, Zu, Xu, qu) {
+      void 0 !== qu ? qu(Eu, su, Xu) : "string" === typeof ju ? EE[ju]?.(Eu, su, Xu) : null != ju[Symbol.metadata] ? (EE.number(Eu, su[lu], Xu), (Zu & Uu.ADD) === Uu.ADD && uu.tryEncodeTypeId(Eu, ju, su.constructor, Xu)) : EE.number(Eu, su[lu], Xu)
     }
-    const LV = function(tt, et, Vt, Ot, Dt, mt, dt, jt) {
-        if (et[mt.offset++] = 255 & (Ot | Dt), Dt === qt.DELETE) return;
-        const Ht = Vt.encDescriptor,
-          Xt = Vt.ref,
-          Qt = Xt[Ct][Ot] ?? Xt[Ht.names[Ot]];
-        ZV(tt, et, Ht.types[Ot], Qt, Dt, mt, Ht.encoders[Ot])
+    const Vj = function(uu, Eu, ju, su, Zu, Xu, lu, qu) {
+        if (Eu[Xu.offset++] = 255 & (su | Zu), Zu === Uu.DELETE) return;
+        const fu = ju.encDescriptor,
+          Cu = ju.ref,
+          bu = Cu[Gu][su] ?? Cu[fu.names[su]];
+        Kj(uu, Eu, fu.types[su], bu, Zu, Xu, fu.encoders[su])
       },
-      FV = function(tt, et, Vt, Ot, Dt, mt) {
-        if (et[mt.offset++] = 255 & Dt, Ve.number(et, Ot, mt), Dt === qt.DELETE) return;
-        const dt = Vt.ref;
-        if ((Dt & qt.ADD) === qt.ADD) {
-          const tt = dt.$indexes.get(Ot);
-          Ve.string(et, tt, mt)
+      rj = function(uu, Eu, ju, su, Zu, Xu) {
+        if (Eu[Xu.offset++] = 255 & Zu, EE.number(Eu, su, Xu), Zu === Uu.DELETE) return;
+        const lu = ju.ref;
+        if ((Zu & Uu.ADD) === Uu.ADD) {
+          const uu = lu.$indexes.get(su);
+          EE.string(Eu, uu, Xu)
         }
-        ZV(tt, et, dt[yt], dt[lt](Ot), Dt, mt)
+        Kj(uu, Eu, lu[hu], lu[cu](su), Zu, Xu)
       },
-      kV = function(tt, et, Vt, Ot, Dt, mt) {
-        if (et[mt.offset++] = 255 & Dt, Ve.number(et, Ot, mt), Dt === qt.DELETE) return;
-        const dt = Vt.ref;
-        ZV(tt, et, dt[yt], dt[lt](Ot), Dt, mt)
+      Qj = function(uu, Eu, ju, su, Zu, Xu) {
+        if (Eu[Xu.offset++] = 255 & Zu, EE.number(Eu, su, Xu), Zu === Uu.DELETE) return;
+        const lu = ju.ref;
+        Kj(uu, Eu, lu[hu], lu[cu](su), Zu, Xu)
       },
-      GV = function(tt, et, Vt, Ot, Dt, mt) {
-        const dt = Vt.ref;
-        (Dt & qt.ADD) === qt.ADD && "function" === typeof dt.set ? FV(tt, et, Vt, Ot, Dt, mt) : kV(tt, et, Vt, Ot, Dt, mt)
+      ij = function(uu, Eu, ju, su, Zu, Xu) {
+        const lu = ju.ref;
+        (Zu & Uu.ADD) === Uu.ADD && "function" === typeof lu.set ? rj(uu, Eu, ju, su, Zu, Xu) : Qj(uu, Eu, ju, su, Zu, Xu)
       },
-      zV = function(tt, et, Vt, Ot, Dt, mt, jt, Ht) {
-        const Xt = Vt.refTarget,
-          Qt = Xt[yt],
-          Et = "string" !== typeof Qt;
-        let ft;
-        if (Ht && Vt.isFiltered && Et) {
-          const tt = Xt.tmpItems[Ot];
-          if (!tt) return;
-          if (ft = tt[dt], Dt === qt.DELETE) Dt = qt.DELETE_BY_REFID;
-          else if ((Dt & qt.ADD) === qt.ADD) Dt = qt.ADD_BY_REFID;
-          else if ((Dt & qt.MOVE) === qt.MOVE) return
-        } else if (Dt === qt.DELETE && Et) {
-          const tt = Xt.tmpItems[Ot];
-          if (!tt) return;
-          ft = tt[dt], Dt = qt.DELETE_BY_REFID
-        } else ft = Ot;
-        if (et[mt.offset++] = 255 & Dt, Ve.number(et, ft, mt), Dt === qt.DELETE || Dt === qt.DELETE_BY_REFID) return;
-        ZV(tt, et, Qt, Xt[lt](Ot, jt), Dt, mt)
+      Wj = function(uu, Eu, ju, su, Zu, Xu, qu, fu) {
+        const Cu = ju.refTarget,
+          bu = Cu[hu],
+          Nu = "string" !== typeof bu;
+        let Ou;
+        if (fu && ju.isFiltered && Nu) {
+          const uu = Cu.tmpItems[su];
+          if (!uu) return;
+          if (Ou = uu[lu], Zu === Uu.DELETE) Zu = Uu.DELETE_BY_REFID;
+          else if ((Zu & Uu.ADD) === Uu.ADD) Zu = Uu.ADD_BY_REFID;
+          else if ((Zu & Uu.MOVE) === Uu.MOVE) return
+        } else if (Zu === Uu.DELETE && Nu) {
+          const uu = Cu.tmpItems[su];
+          if (!uu) return;
+          Ou = uu[lu], Zu = Uu.DELETE_BY_REFID
+        } else Ou = su;
+        if (Eu[Xu.offset++] = 255 & Zu, EE.number(Eu, Ou, Xu), Zu === Uu.DELETE || Zu === Uu.DELETE_BY_REFID) return;
+        Kj(uu, Eu, bu, Cu[cu](su, qu), Zu, Xu)
       };
 
-    function oV(tt, et, Vt, Ot, Dt, mt, jt) {
-      const Ht = tt.resyncVisited;
-      let Xt = Ht.get(tt.currentRefId);
-      if (void 0 === Xt && Ht.set(tt.currentRefId, Xt = new Set), Xt.add(Ot), void 0 !== Dt && Vt === qt.ADD && Dt !== mt) {
-        const Vt = Dt[dt];
-        void 0 !== Vt && (tt.root.removeRef(Vt), jt?.push({
-          ref: et,
-          refId: tt.currentRefId,
-          op: qt.DELETE,
-          dynamicIndex: Ot,
+    function Sj(uu, Eu, ju, su, Zu, Xu, qu) {
+      const fu = uu.resyncVisited;
+      let Cu = fu.get(uu.currentRefId);
+      if (void 0 === Cu && fu.set(uu.currentRefId, Cu = new Set), Cu.add(su), void 0 !== Zu && ju === Uu.ADD && Zu !== Xu) {
+        const ju = Zu[lu];
+        void 0 !== ju && (uu.root.removeRef(ju), qu?.push({
+          ref: Eu,
+          refId: uu.currentRefId,
+          op: Uu.DELETE,
+          dynamicIndex: su,
           value: void 0,
-          previousValue: Dt
+          previousValue: Zu
         }))
       }
     }
 
-    function rV(tt, et, Vt, Ot) {
-      const qt = et[dt];
-      if (void 0 === qt || Vt.has(qt)) return;
-      Vt.add(qt);
-      const Dt = et.constructor[Symbol.metadata],
-        mt = Dt?.[St];
-      if (void 0 === mt) return;
-      const jt = Dt[Pt];
-      for (let dt = 0; dt < mt.length; dt++) {
-        const qt = mt[dt];
-        if (void 0 !== jt && jt.includes(qt)) continue;
-        const Ht = Dt[qt],
-          Xt = et[Ht.name];
-        Xt && (cO.is(Ht.type) ? rV(tt, Xt, Vt, Ot) : UV(tt, Xt, Vt, Ot))
+    function Ij(uu, Eu, ju, su) {
+      const Uu = Eu[lu];
+      if (void 0 === Uu || ju.has(Uu)) return;
+      ju.add(Uu);
+      const Zu = Eu.constructor[Symbol.metadata],
+        Xu = Zu?.[Pu];
+      if (void 0 === Xu) return;
+      const qu = Zu[vu];
+      for (let lu = 0; lu < Xu.length; lu++) {
+        const Uu = Xu[lu];
+        if (void 0 !== qu && qu.includes(Uu)) continue;
+        const fu = Zu[Uu],
+          Cu = Eu[fu.name];
+        Cu && (ms.is(fu.type) ? Ij(uu, Cu, ju, su) : Fj(uu, Cu, ju, su))
       }
     }
 
-    function UV(tt, et, Vt, Ot) {
-      const Dt = et[Nt] ?? et,
-        mt = Dt[dt];
-      if (void 0 === mt || Vt.has(mt)) return;
-      Vt.add(mt);
-      const jt = tt.resyncVisited.get(mt);
-      if (void 0 === jt) return;
-      const Ht = tt.root;
-      Dt[ft](jt, ((tt, Vt) => {
-        Ot?.push({
-          ref: et,
-          refId: mt,
-          op: qt.DELETE,
-          dynamicIndex: Vt,
+    function Fj(uu, Eu, ju, su) {
+      const Zu = Eu[Du] ?? Eu,
+        Xu = Zu[lu];
+      if (void 0 === Xu || ju.has(Xu)) return;
+      ju.add(Xu);
+      const qu = uu.resyncVisited.get(Xu);
+      if (void 0 === qu) return;
+      const fu = uu.root;
+      Zu[Ou](qu, ((uu, ju) => {
+        su?.push({
+          ref: Eu,
+          refId: Xu,
+          op: Uu.DELETE,
+          dynamicIndex: ju,
           value: void 0,
-          previousValue: tt
+          previousValue: uu
         });
-        const Dt = tt?.[dt];
-        void 0 !== Dt && Ht.removeRef(Dt)
-      }), (et => {
-        cO.isSchema(et) && rV(tt, et, Vt, Ot)
+        const Zu = uu?.[lu];
+        void 0 !== Zu && fu.removeRef(Zu)
+      }), (Eu => {
+        ms.isSchema(Eu) && Ij(uu, Eu, ju, su)
       }))
     }
-    const AV = 1,
-      iV = 2,
-      YV = 3,
-      BV = 4,
-      pV = 5;
+    const Bj = 1,
+      Lj = 2,
+      tj = 3,
+      xj = 4,
+      Tj = 5;
 
-    function xV(tt, et, Vt, Ot, Dt, mt, jt, Ht, Xt) {
-      const Qt = tt.root;
-      let lt;
-      if ((et & qt.DELETE) === qt.DELETE) {
-        const tt = Dt?.[dt];
-        void 0 !== tt && Qt.removeRef(tt), et !== qt.DELETE_AND_ADD && Vt[Et](Ot), lt = void 0
+    function Hj(uu, Eu, ju, su, Zu, Xu, qu, fu, Cu) {
+      const bu = uu.root;
+      let cu;
+      if ((Eu & Uu.DELETE) === Uu.DELETE) {
+        const uu = Zu?.[lu];
+        void 0 !== uu && bu.removeRef(uu), Eu !== Uu.DELETE_AND_ADD && ju[Nu](su), cu = void 0
       }
-      if (et === qt.DELETE);
-      else if ("string" === typeof mt) lt = be[mt](jt, Ht);
-      else if (ke(mt)) lt = function(tt, et, Vt) {
-        return ze(tt, (0, be[tt.wire])(et, Vt))
-      }(mt.quantized, jt, Ht);
-      else if (cO.is(mt)) {
-        const Vt = be.number(jt, Ht);
-        if (lt = Qt.refs.get(Vt), (et & qt.ADD) === qt.ADD) {
-          const Ot = tt.getInstanceType(jt, Ht, mt);
-          lt || (lt = tt.createInstanceOfType(Ot)), Qt.addRef(Vt, lt, lt !== Dt || et === qt.DELETE_AND_ADD && lt === Dt)
+      if (Eu === Uu.DELETE);
+      else if ("string" === typeof Xu) cu = ME[Xu](qu, fu);
+      else if (QE(Xu)) cu = function(uu, Eu, ju) {
+        return WE(uu, (0, ME[uu.wire])(Eu, ju))
+      }(Xu.quantized, qu, fu);
+      else if (ms.is(Xu)) {
+        const ju = ME.number(qu, fu);
+        if (cu = bu.refs.get(ju), (Eu & Uu.ADD) === Uu.ADD) {
+          const su = uu.getInstanceType(qu, fu, Xu);
+          cu || (cu = uu.createInstanceOfType(su)), bu.addRef(ju, cu, cu !== Zu || Eu === Uu.DELETE_AND_ADD && cu === Zu)
         }
       } else {
-        const Vt = (ft = Object.keys(mt)[0], Je[ft]),
-          Ot = be.number(jt, Ht);
-        null !== tt.resyncVisited && function(tt, et) {
-          const Vt = tt.resyncVisited;
-          Vt.has(et) || Vt.set(et, new Set)
-        }(tt, Ot);
-        const Et = Qt.refs.has(Ot) ? Dt || Qt.refs.get(Ot) : Vt.constructor.initializeForDecoder();
-        if (lt = Et.clone(!0), lt[yt] = Object.values(mt)[0], Dt) {
-          let tt = Dt[dt];
-          if (void 0 !== tt && Ot !== tt) {
-            (et & qt.DELETE) !== qt.DELETE && Qt.removeRef(tt);
-            const Vt = Dt.entries();
-            let Ot;
+        const ju = (Ou = Object.keys(Xu)[0], eE[Ou]),
+          su = ME.number(qu, fu);
+        null !== uu.resyncVisited && function(uu, Eu) {
+          const ju = uu.resyncVisited;
+          ju.has(Eu) || ju.set(Eu, new Set)
+        }(uu, su);
+        const Nu = bu.refs.has(su) ? Zu || bu.refs.get(su) : ju.constructor.initializeForDecoder();
+        if (cu = Nu.clone(!0), cu[hu] = Object.values(Xu)[0], Zu) {
+          let uu = Zu[lu];
+          if (void 0 !== uu && su !== uu) {
+            (Eu & Uu.DELETE) !== Uu.DELETE && bu.removeRef(uu);
+            const ju = Zu.entries();
+            let su;
             for (;
-              (Ot = Vt.next()) && !Ot.done;) {
-              const [et, Vt] = Ot.value;
-              "object" === typeof Vt && (tt = Vt[dt]), Xt?.push({
-                ref: Dt,
-                refId: tt,
-                op: qt.DELETE,
-                field: et,
+              (su = ju.next()) && !su.done;) {
+              const [Eu, ju] = su.value;
+              "object" === typeof ju && (uu = ju[lu]), Cu?.push({
+                ref: Zu,
+                refId: uu,
+                op: Uu.DELETE,
+                field: Eu,
                 value: void 0,
-                previousValue: Vt
+                previousValue: ju
               })
             }
           }
         }
-        Qt.addRef(Ot, lt, Et !== Dt || et === qt.DELETE_AND_ADD && Et === Dt)
+        bu.addRef(su, cu, Nu !== Zu || Eu === Uu.DELETE_AND_ADD && Nu === Zu)
       }
-      var ft;
-      return lt
+      var Ou;
+      return cu
     }
-    const TV = function(tt, et, Vt, Ot, qt) {
-        const Dt = et[Vt.offset++],
-          mt = Ot.constructor[Symbol.metadata],
-          dt = Dt >> 6 << 6,
-          jt = Dt % (dt || 255),
-          Ht = mt[jt];
-        if (void 0 === Ht) return console.warn("@colyseus/schema: field not defined at", {
-          index: jt,
-          ref: Ot.constructor.name,
-          metadata: mt
+    const Aj = function(uu, Eu, ju, su, Uu) {
+        const Zu = Eu[ju.offset++],
+          Xu = su.constructor[Symbol.metadata],
+          lu = Zu >> 6 << 6,
+          qu = Zu % (lu || 255),
+          fu = Xu[qu];
+        if (void 0 === fu) return console.warn("@colyseus/schema: field not defined at", {
+          index: qu,
+          ref: su.constructor.name,
+          metadata: Xu
         }), -1;
-        const Xt = !0 === Ht.deprecated,
-          Qt = Xt ? void 0 : Ot[lt](jt),
-          Et = xV(tt, dt, Ot, jt, Qt, Ht.type, et, Vt, qt);
-        Xt || (null !== Et && void 0 !== Et && (Ot[Ht.name] = Et), Qt !== Et && qt?.push({
-          ref: Ot,
-          refId: tt.currentRefId,
-          op: dt,
-          field: Ht.name,
-          value: Et,
-          previousValue: Qt
+        const Cu = !0 === fu.deprecated,
+          bu = Cu ? void 0 : su[cu](qu),
+          Nu = Hj(uu, lu, su, qu, bu, fu.type, Eu, ju, Uu);
+        Cu || (null !== Nu && void 0 !== Nu && (su[fu.name] = Nu), bu !== Nu && Uu?.push({
+          ref: su,
+          refId: uu.currentRefId,
+          op: lu,
+          field: fu.name,
+          value: Nu,
+          previousValue: bu
         }))
       },
-      gV = function(tt, et, Vt, Ot, Dt) {
-        const mt = Ot[Nt] ?? Ot,
-          dt = et[Vt.offset++];
-        if (dt === qt.CLEAR) return tt.removeChildRefs(mt, Dt), void mt.clear();
-        const jt = be.number(et, Vt),
-          Ht = mt[yt],
-          Xt = mt.constructor.COLLECTION_KIND;
-        let Qt;
-        (dt & qt.ADD) === qt.ADD ? Xt === AV ? (Qt = be.string(et, Vt), mt.setIndex(jt, Qt)) : Qt = jt : Qt = mt.getIndex(jt);
-        const Et = mt[lt](jt),
-          ft = xV(tt, dt, Ot, jt, Et, Ht, et, Vt, Dt);
-        if (null !== tt.resyncVisited && oV(tt, Ot, dt, Qt, Et, ft, Dt), null !== ft && void 0 !== ft) switch (Xt) {
-          case AV:
-            mt.$items.set(Qt, ft);
+      nj = function(uu, Eu, ju, su, Zu) {
+        const Xu = su[Du] ?? su,
+          lu = Eu[ju.offset++];
+        if (lu === Uu.CLEAR) return uu.removeChildRefs(Xu, Zu), void Xu.clear();
+        const qu = ME.number(Eu, ju),
+          fu = Xu[hu],
+          Cu = Xu.constructor.COLLECTION_KIND;
+        let bu;
+        (lu & Uu.ADD) === Uu.ADD ? Cu === Bj ? (bu = ME.string(Eu, ju), Xu.setIndex(qu, bu)) : bu = qu : bu = Xu.getIndex(qu);
+        const Nu = Xu[cu](qu),
+          Ou = Hj(uu, lu, su, qu, Nu, fu, Eu, ju, Zu);
+        if (null !== uu.resyncVisited && Sj(uu, su, lu, bu, Nu, Ou, Zu), null !== Ou && void 0 !== Ou) switch (Cu) {
+          case Bj:
+            Xu.$items.set(bu, Ou);
             break;
-          case iV:
-            mt.$setAt(jt, ft, null !== tt.resyncVisited && dt === qt.ADD ? qt.REPLACE : dt);
+          case Lj:
+            Xu.$setAt(qu, Ou, null !== uu.resyncVisited && lu === Uu.ADD ? Uu.REPLACE : lu);
             break;
-          case YV:
-          case BV:
-          case pV:
-            mt.$items.has(jt) || (mt.$items.set(jt, ft), "number" === typeof mt.$refId && jt >= mt.$refId && (mt.$refId = jt + 1));
+          case tj:
+          case xj:
+          case Tj:
+            Xu.$items.has(qu) || (Xu.$items.set(qu, Ou), "number" === typeof Xu.$refId && qu >= Xu.$refId && (Xu.$refId = qu + 1));
             break;
           default:
-            console.warn(`@colyseus/schema: missing COLLECTION_KIND on ${mt.constructor?.name} \u2014 item at index ${jt} was not stored.`)
+            console.warn(`@colyseus/schema: missing COLLECTION_KIND on ${Xu.constructor?.name} \u2014 item at index ${qu} was not stored.`)
         }
-        Et !== ft && Dt?.push({
-          ref: Ot,
-          refId: tt.currentRefId,
-          op: dt,
-          dynamicIndex: Qt,
-          value: ft,
-          previousValue: Et
+        Nu !== Ou && Zu?.push({
+          ref: su,
+          refId: uu.currentRefId,
+          op: lu,
+          dynamicIndex: bu,
+          value: Ou,
+          previousValue: Nu
         })
       },
-      sV = function(tt, et, Vt, Ot, Dt) {
-        const mt = Ot[Nt] ?? Ot;
-        let dt, jt = et[Vt.offset++];
-        if (jt === qt.CLEAR) return tt.removeChildRefs(mt, Dt), void mt.clear();
-        if (jt === qt.REVERSE) return void mt.items.reverse();
-        if (jt === qt.DELETE_BY_REFID) {
-          const jt = be.number(et, Vt),
-            Ht = tt.root.refs.get(jt);
-          if (void 0 === Ht) return;
-          if (tt.root.removeRef(jt), dt = mt.findIndex((tt => tt === Ht)), -1 === dt) return;
-          return mt[Et](dt), void Dt?.push({
-            ref: Ot,
-            refId: tt.currentRefId,
-            op: qt.DELETE,
-            dynamicIndex: dt,
+      yj = function(uu, Eu, ju, su, Zu) {
+        const Xu = su[Du] ?? su;
+        let lu, qu = Eu[ju.offset++];
+        if (qu === Uu.CLEAR) return uu.removeChildRefs(Xu, Zu), void Xu.clear();
+        if (qu === Uu.REVERSE) return void Xu.items.reverse();
+        if (qu === Uu.DELETE_BY_REFID) {
+          const qu = ME.number(Eu, ju),
+            fu = uu.root.refs.get(qu);
+          if (void 0 === fu) return;
+          if (uu.root.removeRef(qu), lu = Xu.findIndex((uu => uu === fu)), -1 === lu) return;
+          return Xu[Nu](lu), void Zu?.push({
+            ref: su,
+            refId: uu.currentRefId,
+            op: Uu.DELETE,
+            dynamicIndex: lu,
             value: void 0,
-            previousValue: Ht
+            previousValue: fu
           })
         }
-        if (jt === qt.ADD_BY_REFID) {
-          const Ot = be.number(et, Vt),
-            qt = tt.root.refs.get(Ot);
-          qt && (dt = mt.findIndex((tt => tt === qt))), -1 !== dt && void 0 !== dt || (dt = mt.length)
-        } else dt = be.number(et, Vt);
-        const Ht = mt[yt];
-        let Xt = dt;
-        const Qt = mt.items[dt],
-          lt = xV(tt, jt, Ot, dt, Qt, Ht, et, Vt, Dt);
-        null !== tt.resyncVisited && oV(tt, Ot, jt, dt, Qt, lt, Dt), null !== lt && void 0 !== lt && lt !== Qt && mt.$setAt(dt, lt, null !== tt.resyncVisited && jt === qt.ADD ? qt.REPLACE : jt), Qt !== lt && Dt?.push({
-          ref: Ot,
-          refId: tt.currentRefId,
-          op: jt,
-          dynamicIndex: Xt,
-          value: lt,
-          previousValue: Qt
+        if (qu === Uu.ADD_BY_REFID) {
+          const su = ME.number(Eu, ju),
+            Uu = uu.root.refs.get(su);
+          Uu && (lu = Xu.findIndex((uu => uu === Uu))), -1 !== lu && void 0 !== lu || (lu = Xu.length)
+        } else lu = ME.number(Eu, ju);
+        const fu = Xu[hu];
+        let Cu = lu;
+        const bu = Xu.items[lu],
+          cu = Hj(uu, qu, su, lu, bu, fu, Eu, ju, Zu);
+        null !== uu.resyncVisited && Sj(uu, su, qu, lu, bu, cu, Zu), null !== cu && void 0 !== cu && cu !== bu && Xu.$setAt(lu, cu, null !== uu.resyncVisited && qu === Uu.ADD ? Uu.REPLACE : qu), bu !== cu && Zu?.push({
+          ref: su,
+          refId: uu.currentRefId,
+          op: qu,
+          dynamicIndex: Cu,
+          value: cu,
+          previousValue: bu
         })
       };
-    class nV extends Error {}
+    class zj extends Error {}
 
-    function tO(tt, et, Vt, Ot) {
-      if (!(tt instanceof et)) throw new nV(`a '${et.name}' was expected, but '${tt&&tt.constructor.name}' was provided in ${Vt.constructor.name}#${Ot}`)
+    function Rj(uu, Eu, ju, su) {
+      if (!(uu instanceof Eu)) throw new zj(`a '${Eu.name}' was expected, but '${uu&&uu.constructor.name}' was provided in ${ju.constructor.name}#${su}`)
     }
-    const eO = (tt, et) => {
-        const Vt = tt.toString(),
-          Ot = et.toString();
-        return Vt < Ot ? -1 : Vt > Ot ? 1 : 0
+    const us = (uu, Eu) => {
+        const ju = uu.toString(),
+          su = Eu.toString();
+        return ju < su ? -1 : ju > su ? 1 : 0
       },
-      VO = {
-        get: (tt, et) => "symbol" === typeof et || isNaN(et) ? Reflect.get(tt, et) : tt.items[et],
-        set: (tt, et, Vt) => {
-          if ("symbol" !== typeof et && !isNaN(et)) {
-            if (void 0 === Vt || null === Vt) tt.$deleteAt(et);
+      Es = {
+        get: (uu, Eu) => "symbol" === typeof Eu || isNaN(Eu) ? Reflect.get(uu, Eu) : uu.items[Eu],
+        set: (uu, Eu, ju) => {
+          if ("symbol" !== typeof Eu && !isNaN(Eu)) {
+            if (void 0 === ju || null === ju) uu.$deleteAt(Eu);
             else {
-              let Ot;
-              if (Vt[wt]) {
-                tO(Vt, tt[yt], tt, et);
-                const Dt = tt.items[et];
-                tt.isMovingItems ? (Ot = tt.$wireIndex(Number(et)), void 0 !== Dt ? Vt[wt].isNew ? tt[wt].indexedOperation(Ot, qt.MOVE_AND_ADD) : (tt[wt].getChange(Ot) & qt.DELETE) === qt.DELETE ? tt[wt].indexedOperation(Ot, qt.DELETE_AND_MOVE) : tt[wt].indexedOperation(Ot, qt.MOVE) : Vt[wt].isNew && tt[wt].indexedOperation(Ot, qt.ADD), Vt[wt].setParent(tt, tt[wt].root, Ot)) : Ot = tt.$changeAt(Number(et), Vt), void 0 !== Dt && Dt[wt].root?.remove(Dt[wt])
-              } else Ot = tt.$changeAt(Number(et), Vt);
-              tt.items[et] = Vt, void 0 !== Ot && (tt.tmpItems[Ot] = Vt)
+              let su;
+              if (ju[Yu]) {
+                Rj(ju, uu[hu], uu, Eu);
+                const Zu = uu.items[Eu];
+                uu.isMovingItems ? (su = uu.$wireIndex(Number(Eu)), void 0 !== Zu ? ju[Yu].isNew ? uu[Yu].indexedOperation(su, Uu.MOVE_AND_ADD) : (uu[Yu].getChange(su) & Uu.DELETE) === Uu.DELETE ? uu[Yu].indexedOperation(su, Uu.DELETE_AND_MOVE) : uu[Yu].indexedOperation(su, Uu.MOVE) : ju[Yu].isNew && uu[Yu].indexedOperation(su, Uu.ADD), ju[Yu].setParent(uu, uu[Yu].root, su)) : su = uu.$changeAt(Number(Eu), ju), void 0 !== Zu && Zu[Yu].root?.remove(Zu[Yu])
+              } else su = uu.$changeAt(Number(Eu), ju);
+              uu.items[Eu] = ju, void 0 !== su && (uu.tmpItems[su] = ju)
             }
             return !0
           }
-          return Reflect.set(tt, et, Vt)
+          return Reflect.set(uu, Eu, ju)
         },
-        deleteProperty: (tt, et) => ("number" === typeof et ? tt.$deleteAt(et) : delete tt[et], !0),
-        has: (tt, et) => "symbol" === typeof et || isNaN(Number(et)) ? Reflect.has(tt, et) : Reflect.has(tt.items, et)
+        deleteProperty: (uu, Eu) => ("number" === typeof Eu ? uu.$deleteAt(Eu) : delete uu[Eu], !0),
+        has: (uu, Eu) => "symbol" === typeof Eu || isNaN(Number(Eu)) ? Reflect.has(uu, Eu) : Reflect.has(uu.items, Eu)
       };
-    class OO {
-      [wt];
-      [dt];
-      [Nt];
-      [yt];
+    class ss {
+      [Yu];
+      [lu];
+      [Du];
+      [hu];
       items = [];
       tmpItems = [];
       deletedIndexes = [];
       isMovingItems = !1;
       _needsCompaction = !1;
-      static[Ht] = zV;
-      static[Xt] = sV;
-      static COLLECTION_KIND = iV;
-      static[Qt](tt, et, Vt) {
-        if (!Vt) return !0;
-        const Ot = tt[Nt] ?? tt;
-        return "string" === typeof Ot[yt] || Vt.isChangeTreeVisible(Ot.tmpItems[et]?.[wt])
+      static[fu] = Wj;
+      static[Cu] = yj;
+      static COLLECTION_KIND = Lj;
+      static[bu](uu, Eu, ju) {
+        if (!ju) return !0;
+        const su = uu[Du] ?? uu;
+        return "string" === typeof su[hu] || ju.isChangeTreeVisible(su.tmpItems[Eu]?.[Yu])
       }
-      static is(tt) {
-        return Array.isArray(tt) || void 0 !== tt.array
+      static is(uu) {
+        return Array.isArray(uu) || void 0 !== uu.array
       }
-      static from(tt) {
-        return new OO(...Array.from(tt))
+      static from(uu) {
+        return new ss(...Array.from(uu))
       }
       constructor() {
-        this[yt] = void 0, this[Nt] = this;
-        const tt = new Proxy(this, VO);
-        return Object.defineProperty(this, wt, {
-          value: new RV(tt, this),
+        this[hu] = void 0, this[Du] = this;
+        const uu = new Proxy(this, Es);
+        return Object.defineProperty(this, Yu, {
+          value: new kj(uu, this),
           enumerable: !1,
           writable: !0
-        }), arguments.length > 0 && this.push(...arguments), tt
+        }), arguments.length > 0 && this.push(...arguments), uu
       }
       static initializeForDecoder() {
-        const tt = Object.create(OO.prototype);
-        tt.items = [], tt.isMovingItems = !1, tt._needsCompaction = !1, tt[yt] = void 0, tt[Nt] = tt;
-        const et = new Proxy(tt, VO);
-        return PV(tt, et), et
+        const uu = Object.create(ss.prototype);
+        uu.items = [], uu.isMovingItems = !1, uu._needsCompaction = !1, uu[hu] = void 0, uu[Du] = uu;
+        const Eu = new Proxy(uu, Es);
+        return vj(uu, Eu), Eu
       }
-      set length(tt) {
-        0 === tt ? this.clear() : tt < this.items.length ? this.splice(tt, this.length - tt) : console.warn("ArraySchema: can't set .length to a higher value than its length.")
+      set length(uu) {
+        0 === uu ? this.clear() : uu < this.items.length ? this.splice(uu, this.length - uu) : console.warn("ArraySchema: can't set .length to a higher value than its length.")
       }
       get length() {
         return this.items.length
       }
       pauseTracking() {
-        this[wt].pause()
+        this[Yu].pause()
       }
       resumeTracking() {
-        this[wt].resume()
+        this[Yu].resume()
       }
-      untracked(tt) {
-        return this[wt].untracked(tt)
+      untracked(uu) {
+        return this[Yu].untracked(uu)
       }
       get isTrackingPaused() {
-        return this[wt].paused
+        return this[Yu].paused
       }
       push() {
-        const tt = this[Nt],
-          et = tt.items,
-          Vt = tt.tmpItems,
-          Ot = tt[wt],
-          Dt = tt[yt];
-        let mt = Vt.length;
-        for (let dt = 0, jt = arguments.length; dt < jt; dt++, mt++) {
-          const jt = dt < 0 || arguments.length <= dt ? void 0 : arguments[dt];
-          if (void 0 === jt || null === jt) return;
-          "object" === typeof jt && Dt && tO(jt, Dt, tt, dt), Ot.indexedOperation(mt, qt.ADD), et.push(jt), Vt.push(jt), jt[wt]?.setParent(this, Ot.root, mt)
+        const uu = this[Du],
+          Eu = uu.items,
+          ju = uu.tmpItems,
+          su = uu[Yu],
+          Zu = uu[hu];
+        let Xu = ju.length;
+        for (let lu = 0, qu = arguments.length; lu < qu; lu++, Xu++) {
+          const qu = lu < 0 || arguments.length <= lu ? void 0 : arguments[lu];
+          if (void 0 === qu || null === qu) return;
+          "object" === typeof qu && Zu && Rj(qu, Zu, uu, lu), su.indexedOperation(Xu, Uu.ADD), Eu.push(qu), ju.push(qu), qu[Yu]?.setParent(this, su.root, Xu)
         }
-        return mt
+        return Xu
       }
       pop() {
-        const tt = this[Nt],
-          et = tt.tmpItems,
-          Vt = tt.deletedIndexes;
-        let Ot = -1;
-        for (let Dt = et.length - 1; Dt >= 0; Dt--)
-          if (!0 !== Vt[Dt]) {
-            Ot = Dt;
+        const uu = this[Du],
+          Eu = uu.tmpItems,
+          ju = uu.deletedIndexes;
+        let su = -1;
+        for (let Zu = Eu.length - 1; Zu >= 0; Zu--)
+          if (!0 !== ju[Zu]) {
+            su = Zu;
             break
-          } if (Ot < 0) return;
-        const qt = tt.$isUnsentAdd(Ot);
-        return tt[wt].delete(Ot), qt ? tt.$cancelAdd(Ot) : Vt[Ot] = !0, tt.items.pop()
+          } if (su < 0) return;
+        const Uu = uu.$isUnsentAdd(su);
+        return uu[Yu].delete(su), Uu ? uu.$cancelAdd(su) : ju[su] = !0, uu.items.pop()
       }
-      at(tt) {
-        return tt < 0 && (tt += this.length), this.items[tt]
+      at(uu) {
+        return uu < 0 && (uu += this.length), this.items[uu]
       }
-      $wireIndex(tt) {
-        const et = this.deletedIndexes;
-        if (0 === et.length) return tt;
-        const Vt = this.tmpItems;
-        let Ot = 0;
-        for (let qt = 0; qt < Vt.length; qt++)
-          if (!0 !== et[qt]) {
-            if (Ot === tt) return qt;
-            Ot++
-          } return Vt.length + (tt - Ot)
+      $wireIndex(uu) {
+        const Eu = this.deletedIndexes;
+        if (0 === Eu.length) return uu;
+        const ju = this.tmpItems;
+        let su = 0;
+        for (let Uu = 0; Uu < ju.length; Uu++)
+          if (!0 !== Eu[Uu]) {
+            if (su === uu) return Uu;
+            su++
+          } return ju.length + (uu - su)
       }
-      $isUnsentAdd(tt) {
-        const et = this[wt];
-        return 0 === (576 & et.flags) && !et.paused && "string" !== typeof this[yt] && et.operationAt(tt) === qt.ADD
+      $isUnsentAdd(uu) {
+        const Eu = this[Yu];
+        return 0 === (576 & Eu.flags) && !Eu.paused && "string" !== typeof this[hu] && Eu.operationAt(uu) === Uu.ADD
       }
-      $cancelAdd(tt) {
-        let et = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        const Vt = this[wt],
-          Ot = this.tmpItems[tt];
-        this.tmpItems.splice(tt, 1), this.deletedIndexes.length > 0 && this.deletedIndexes.splice(tt, 1), Vt.removeAt(tt, 1);
-        const qt = Ot?.[wt];
-        void 0 !== qt && void 0 === qt.root && qt.removeParent(this), et && this.$reindexChildren(tt)
+      $cancelAdd(uu) {
+        let Eu = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        const ju = this[Yu],
+          su = this.tmpItems[uu];
+        this.tmpItems.splice(uu, 1), this.deletedIndexes.length > 0 && this.deletedIndexes.splice(uu, 1), ju.removeAt(uu, 1);
+        const Uu = su?.[Yu];
+        void 0 !== Uu && void 0 === Uu.root && Uu.removeParent(this), Eu && this.$reindexChildren(uu)
       }
-      $reindexChildren(tt, et) {
-        if (!this[wt].hasFilteredFields) return;
-        if ("string" === typeof this[yt]) return;
-        const Vt = this.tmpItems,
-          Ot = Vt.length;
-        if (void 0 !== et)
-          for (; tt < Ot && Vt[tt] === et[tt];) tt++;
-        for (let qt = tt; qt < Ot; qt++) Vt[qt]?.[wt]?.setParentIndex(this, qt)
+      $reindexChildren(uu, Eu) {
+        if (!this[Yu].hasFilteredFields) return;
+        if ("string" === typeof this[hu]) return;
+        const ju = this.tmpItems,
+          su = ju.length;
+        if (void 0 !== Eu)
+          for (; uu < su && ju[uu] === Eu[uu];) uu++;
+        for (let Uu = uu; Uu < su; Uu++) ju[Uu]?.[Yu]?.setParentIndex(this, Uu)
       }
-      $changeAt(tt, et) {
-        if (void 0 === et || null === et) return void console.error("ArraySchema items cannot be null nor undefined; Use `splice(index, 1)` instead.");
-        if (this.items[tt] === et) return;
-        const Vt = void 0 !== this.items[tt] ? "object" === typeof et ? qt.DELETE_AND_ADD : qt.REPLACE : qt.ADD,
-          Ot = this.$wireIndex(tt),
-          Dt = this[wt];
-        return Dt.change(Ot, Vt), et[wt]?.setParent(this, Dt.root, Ot), Ot
+      $changeAt(uu, Eu) {
+        if (void 0 === Eu || null === Eu) return void console.error("ArraySchema items cannot be null nor undefined; Use `splice(index, 1)` instead.");
+        if (this.items[uu] === Eu) return;
+        const ju = void 0 !== this.items[uu] ? "object" === typeof Eu ? Uu.DELETE_AND_ADD : Uu.REPLACE : Uu.ADD,
+          su = this.$wireIndex(uu),
+          Zu = this[Yu];
+        return Zu.change(su, ju), Eu[Yu]?.setParent(this, Zu.root, su), su
       }
-      $deleteAt(tt, et) {
-        this[wt].delete(this.$wireIndex(tt), et)
+      $deleteAt(uu, Eu) {
+        this[Yu].delete(this.$wireIndex(uu), Eu)
       }
-      $setAt(tt, et, Vt) {
-        Vt === qt.ADD && void 0 !== this.items[tt] ? this.items.splice(tt, 0, et) : Vt === qt.DELETE_AND_MOVE ? (this.items.splice(tt, 1), this.items[tt] = et) : (tt > this.items.length && (this._needsCompaction = !0), this.items[tt] = et)
+      $setAt(uu, Eu, ju) {
+        ju === Uu.ADD && void 0 !== this.items[uu] ? this.items.splice(uu, 0, Eu) : ju === Uu.DELETE_AND_MOVE ? (this.items.splice(uu, 1), this.items[uu] = Eu) : (uu > this.items.length && (this._needsCompaction = !0), this.items[uu] = Eu)
       }
       clear() {
-        const tt = this[Nt];
-        if (0 === tt.items.length) return;
-        const et = tt[wt];
-        et.forEachChild(((tt, Vt) => {
-          et.root?.remove(tt)
-        })), et.discard(), et.operation(qt.CLEAR), tt.items.length = 0, tt.tmpItems.length = 0
-      } [bt]() {
-        const tt = this[Nt] ?? this,
-          et = tt[wt];
-        if (et.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed ArraySchema (pooling not supported).");
-        const Vt = tt.items;
-        for (let Ot = 0; Ot < Vt.length; Ot++) Vt[Ot]?.[bt]?.();
-        tt.items.length = 0, tt.tmpItems.length = 0, tt.deletedIndexes.length = 0, et.recycle(), tt[dt] = void 0
+        const uu = this[Du];
+        if (0 === uu.items.length) return;
+        const Eu = uu[Yu];
+        Eu.forEachChild(((uu, ju) => {
+          Eu.root?.remove(uu)
+        })), Eu.discard(), Eu.operation(Uu.CLEAR), uu.items.length = 0, uu.tmpItems.length = 0
+      } [Mu]() {
+        const uu = this[Du] ?? this,
+          Eu = uu[Yu];
+        if (Eu.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed ArraySchema (pooling not supported).");
+        const ju = uu.items;
+        for (let su = 0; su < ju.length; su++) ju[su]?.[Mu]?.();
+        uu.items.length = 0, uu.tmpItems.length = 0, uu.deletedIndexes.length = 0, Eu.recycle(), uu[lu] = void 0
       }
       concat() {
-        return new OO(...this.items.concat(...arguments))
+        return new ss(...this.items.concat(...arguments))
       }
-      join(tt) {
-        return this.items.join(tt)
+      join(uu) {
+        return this.items.join(uu)
       }
       reverse() {
-        const tt = this[Nt],
-          et = tt[wt];
-        if (et.has() || tt.deletedIndexes.length > 0) {
-          const et = tt.items.slice().reverse();
-          return this.clear(), this.push(...et), this
+        const uu = this[Du],
+          Eu = uu[Yu];
+        if (Eu.has() || uu.deletedIndexes.length > 0) {
+          const Eu = uu.items.slice().reverse();
+          return this.clear(), this.push(...Eu), this
         }
-        return et.operation(qt.REVERSE), tt.items.reverse(), tt.tmpItems.reverse(), tt.$reindexChildren(0), this
+        return Eu.operation(Uu.REVERSE), uu.items.reverse(), uu.tmpItems.reverse(), uu.$reindexChildren(0), this
       }
       shift() {
-        const tt = this[Nt],
-          et = tt.items;
-        if (0 === et.length) return;
-        const Vt = tt[wt],
-          Ot = tt.deletedIndexes;
-        let Dt = 0;
-        for (; !0 === Ot[Dt];) Dt++;
-        const mt = tt.$isUnsentAdd(Dt);
-        return Vt.delete(Dt, qt.DELETE), mt ? tt.$cancelAdd(Dt) : Ot[Dt] = !0, et.shift()
+        const uu = this[Du],
+          Eu = uu.items;
+        if (0 === Eu.length) return;
+        const ju = uu[Yu],
+          su = uu.deletedIndexes;
+        let Zu = 0;
+        for (; !0 === su[Zu];) Zu++;
+        const Xu = uu.$isUnsentAdd(Zu);
+        return ju.delete(Zu, Uu.DELETE), Xu ? uu.$cancelAdd(Zu) : su[Zu] = !0, Eu.shift()
       }
-      slice(tt, et) {
-        const Vt = new OO;
-        return Vt.push(...this.items.slice(tt, et)), Vt
+      slice(uu, Eu) {
+        const ju = new ss;
+        return ju.push(...this.items.slice(uu, Eu)), ju
       }
       sort() {
-        let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : eO;
-        const et = this[Nt];
-        et.isMovingItems = !0;
-        const Vt = et[wt];
-        return et.items.sort(tt).forEach(((tt, et) => Vt.change(et, qt.REPLACE))), et.tmpItems.sort(tt), et.$reindexChildren(0), et.isMovingItems = !1, this
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : us;
+        const Eu = this[Du];
+        Eu.isMovingItems = !0;
+        const ju = Eu[Yu];
+        return Eu.items.sort(uu).forEach(((uu, Eu) => ju.change(Eu, Uu.REPLACE))), Eu.tmpItems.sort(uu), Eu.$reindexChildren(0), Eu.isMovingItems = !1, this
       }
-      splice(tt, et) {
-        const Vt = this[Nt],
-          Ot = Vt[wt],
-          Dt = Vt.items,
-          mt = Vt.tmpItems,
-          dt = Vt.deletedIndexes,
-          jt = Dt.length,
-          Ht = mt.length;
-        for (var Xt = arguments.length, Qt = new Array(Xt > 2 ? Xt - 2 : 0), lt = 2; lt < Xt; lt++) Qt[lt - 2] = arguments[lt];
-        const Et = Qt.length,
-          ft = [];
-        for (let qt = 0; qt < Ht; qt++) !0 !== dt[qt] && ft.push(qt);
-        let yt;
-        if (jt > tt) {
-          void 0 === et && (et = jt - tt);
-          for (let Dt = tt; Dt < tt + et; Dt++) {
-            const tt = ft[Dt],
-              et = Vt.$isUnsentAdd(tt);
-            Ot.delete(tt, qt.DELETE), et ? (yt ??= []).push(tt) : dt[tt] = !0
+      splice(uu, Eu) {
+        const ju = this[Du],
+          su = ju[Yu],
+          Zu = ju.items,
+          Xu = ju.tmpItems,
+          lu = ju.deletedIndexes,
+          qu = Zu.length,
+          fu = Xu.length;
+        for (var Cu = arguments.length, bu = new Array(Cu > 2 ? Cu - 2 : 0), cu = 2; cu < Cu; cu++) bu[cu - 2] = arguments[cu];
+        const Nu = bu.length,
+          Ou = [];
+        for (let Uu = 0; Uu < fu; Uu++) !0 !== lu[Uu] && Ou.push(Uu);
+        let hu;
+        if (qu > uu) {
+          void 0 === Eu && (Eu = qu - uu);
+          for (let Zu = uu; Zu < uu + Eu; Zu++) {
+            const uu = Ou[Zu],
+              Eu = ju.$isUnsentAdd(uu);
+            su.delete(uu, Uu.DELETE), Eu ? (hu ??= []).push(uu) : lu[uu] = !0
           }
-        } else et = 0;
-        if (Et > 0) {
-          const Dt = ft[tt] ?? jt,
-            Ht = Math.min(Et, et);
-          for (let tt = 0; tt < Ht; tt++) {
-            const et = Dt + tt;
-            let Vt;
-            const jt = void 0 !== yt ? yt.indexOf(et) : -1; - 1 !== jt ? (yt.splice(jt, 1), Vt = qt.ADD) : Vt = dt[et] ? qt.DELETE_AND_ADD : qt.ADD, Ot.indexedOperation(et, Vt), mt[et] = Qt[tt], dt[et] = !1, Qt[tt][wt]?.setParent(this, Ot.root, et)
+        } else Eu = 0;
+        if (Nu > 0) {
+          const Zu = Ou[uu] ?? qu,
+            fu = Math.min(Nu, Eu);
+          for (let uu = 0; uu < fu; uu++) {
+            const Eu = Zu + uu;
+            let ju;
+            const qu = void 0 !== hu ? hu.indexOf(Eu) : -1; - 1 !== qu ? (hu.splice(qu, 1), ju = Uu.ADD) : ju = lu[Eu] ? Uu.DELETE_AND_ADD : Uu.ADD, su.indexedOperation(Eu, ju), Xu[Eu] = bu[uu], lu[Eu] = !1, bu[uu][Yu]?.setParent(this, su.root, Eu)
           }
-          const Xt = Et - Ht;
-          if (Xt > 0) {
-            const tt = Dt + Ht;
-            Ot.insertAt(tt, Xt);
-            for (let et = 0; et < Xt; et++) Qt[Ht + et][wt]?.setParent(this, Ot.root, tt + et);
-            dt.length > 0 && dt.splice(tt, 0, ...new Array(Xt).fill(!1)), mt.splice(tt, 0, ...Qt.slice(Ht)), Vt.$reindexChildren(tt + Xt)
+          const Cu = Nu - fu;
+          if (Cu > 0) {
+            const uu = Zu + fu;
+            su.insertAt(uu, Cu);
+            for (let Eu = 0; Eu < Cu; Eu++) bu[fu + Eu][Yu]?.setParent(this, su.root, uu + Eu);
+            lu.length > 0 && lu.splice(uu, 0, ...new Array(Cu).fill(!1)), Xu.splice(uu, 0, ...bu.slice(fu)), ju.$reindexChildren(uu + Cu)
           }
         }
-        if (void 0 !== yt && yt.length > 0) {
-          for (let tt = yt.length - 1; tt >= 0; tt--) Vt.$cancelAdd(yt[tt], !1);
-          Vt.$reindexChildren(yt[0])
+        if (void 0 !== hu && hu.length > 0) {
+          for (let uu = hu.length - 1; uu >= 0; uu--) ju.$cancelAdd(hu[uu], !1);
+          ju.$reindexChildren(hu[0])
         }
-        return Ot.root?.enqueueChangeTree(Ot), Dt.splice(tt, et, ...Qt)
+        return su.root?.enqueueChangeTree(su), Zu.splice(uu, Eu, ...bu)
       }
       unshift() {
-        const tt = this[Nt],
-          et = tt[wt];
-        et.unshift(arguments.length);
-        for (let Ot = 0; Ot < arguments.length; Ot++)(Ot < 0 || arguments.length <= Ot ? void 0 : arguments[Ot])?.[wt]?.setParent(this, et.root, Ot);
-        const Vt = tt.deletedIndexes;
-        return Vt.length > 0 && Vt.unshift(...new Array(arguments.length).fill(!1)), tt.tmpItems.unshift(...arguments), tt.$reindexChildren(arguments.length), tt.items.unshift(...arguments)
+        const uu = this[Du],
+          Eu = uu[Yu];
+        Eu.unshift(arguments.length);
+        for (let su = 0; su < arguments.length; su++)(su < 0 || arguments.length <= su ? void 0 : arguments[su])?.[Yu]?.setParent(this, Eu.root, su);
+        const ju = uu.deletedIndexes;
+        return ju.length > 0 && ju.unshift(...new Array(arguments.length).fill(!1)), uu.tmpItems.unshift(...arguments), uu.$reindexChildren(arguments.length), uu.items.unshift(...arguments)
       }
-      indexOf(tt, et) {
-        return this.items.indexOf(tt, et)
+      indexOf(uu, Eu) {
+        return this.items.indexOf(uu, Eu)
       }
-      lastIndexOf(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length - 1;
-        return this.items.lastIndexOf(tt, et)
+      lastIndexOf(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length - 1;
+        return this.items.lastIndexOf(uu, Eu)
       }
-      every(tt, et) {
-        return this.items.every(tt, et)
+      every(uu, Eu) {
+        return this.items.every(uu, Eu)
       }
-      some(tt, et) {
-        return this.items.some(tt, et)
+      some(uu, Eu) {
+        return this.items.some(uu, Eu)
       }
-      forEach(tt, et) {
-        return this.items.forEach(tt, et)
+      forEach(uu, Eu) {
+        return this.items.forEach(uu, Eu)
       }
-      map(tt, et) {
-        return this.items.map(tt, et)
+      map(uu, Eu) {
+        return this.items.map(uu, Eu)
       }
-      filter(tt, et) {
-        return this.items.filter(tt, et)
+      filter(uu, Eu) {
+        return this.items.filter(uu, Eu)
       }
-      reduce(tt, et) {
+      reduce(uu, Eu) {
         return this.items.reduce.apply(this.items, arguments)
       }
-      reduceRight(tt, et) {
+      reduceRight(uu, Eu) {
         return this.items.reduceRight.apply(this.items, arguments)
       }
-      find(tt, et) {
-        return this.items.find(tt, et)
+      find(uu, Eu) {
+        return this.items.find(uu, Eu)
       }
-      findIndex(tt, et) {
-        return this.items.findIndex(tt, et)
+      findIndex(uu, Eu) {
+        return this.items.findIndex(uu, Eu)
       }
-      fill(tt, et, Vt) {
+      fill(uu, Eu, ju) {
         throw new Error("ArraySchema#fill() not implemented")
       }
-      copyWithin(tt, et, Vt) {
+      copyWithin(uu, Eu, ju) {
         throw new Error("ArraySchema#copyWithin() not implemented")
       }
       toString() {
@@ -4349,7 +4349,7 @@ export const modules = {
         return this.items[Symbol.iterator]()
       }
       static get[Symbol.species]() {
-        return OO
+        return ss
       } [Symbol.unscopables];
       entries() {
         return this.items.entries()
@@ -4360,118 +4360,118 @@ export const modules = {
       values() {
         return this.items.values()
       }
-      includes(tt, et) {
-        return this.items.includes(tt, et)
+      includes(uu, Eu) {
+        return this.items.includes(uu, Eu)
       }
-      flatMap(tt, et) {
+      flatMap(uu, Eu) {
         throw new Error("ArraySchema#flatMap() is not supported.")
       }
-      flat(tt) {
+      flat(uu) {
         throw new Error("ArraySchema#flat() is not supported.")
       }
       findLast() {
         return this.items.findLast.apply(this.items, arguments)
       }
       findLastIndex() {
-        for (var tt = arguments.length, et = new Array(tt), Vt = 0; Vt < tt; Vt++) et[Vt] = arguments[Vt];
+        for (var uu = arguments.length, Eu = new Array(uu), ju = 0; ju < uu; ju++) Eu[ju] = arguments[ju];
         return this.items.findLastIndex.apply(this.items, arguments)
       }
-      with(tt, et) {
-        const Vt = this.items.slice();
-        return tt < 0 && (tt += this.length), Vt[tt] = et, new OO(...Vt)
+      with(uu, Eu) {
+        const ju = this.items.slice();
+        return uu < 0 && (uu += this.length), ju[uu] = Eu, new ss(...ju)
       }
       toReversed() {
         return this.items.slice().reverse()
       }
-      toSorted(tt) {
-        return this.items.slice().sort(tt)
+      toSorted(uu) {
+        return this.items.slice().sort(uu)
       }
-      toSpliced(tt, et) {
-        for (var Vt = arguments.length, Ot = new Array(Vt > 2 ? Vt - 2 : 0), qt = 2; qt < Vt; qt++) Ot[qt - 2] = arguments[qt];
-        const Dt = this.items.slice();
-        return Dt.splice.apply(Dt, arguments), Dt
+      toSpliced(uu, Eu) {
+        for (var ju = arguments.length, su = new Array(ju > 2 ? ju - 2 : 0), Uu = 2; Uu < ju; Uu++) su[Uu - 2] = arguments[Uu];
+        const Zu = this.items.slice();
+        return Zu.splice.apply(Zu, arguments), Zu
       }
       shuffle() {
-        return this.move((tt => {
-          let et = this.items.length;
-          for (; 0 != et;) {
-            let tt = Math.floor(Math.random() * et);
-            et--, [this[et], this[tt]] = [this[tt], this[et]]
+        return this.move((uu => {
+          let Eu = this.items.length;
+          for (; 0 != Eu;) {
+            let uu = Math.floor(Math.random() * Eu);
+            Eu--, [this[Eu], this[uu]] = [this[uu], this[Eu]]
           }
         }))
       }
-      move(tt) {
-        return this.isMovingItems = !0, tt(this), this.isMovingItems = !1, this
-      } [lt](tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const Vt = this[Nt] ?? this;
-        return et || Vt.deletedIndexes[tt] ? Vt.items[tt] : Vt.tmpItems[tt] || Vt.items[tt]
-      } [Et](tt) {
-        const et = this[Nt] ?? this;
-        et.items[tt] = void 0, et._needsCompaction = !0
-      } [Mt]() {
-        const tt = this.tmpItems;
-        this.tmpItems = this.items.slice(), this.deletedIndexes.length > 0 && (this.$reindexChildren(0, tt), this.deletedIndexes.length = 0)
-      } [Jt]() {
-        const tt = this[Nt] ?? this;
-        tt._needsCompaction && (tt._needsCompaction = !1, tt.items = tt.items.filter((tt => void 0 !== tt)))
-      } [ft](tt, et, Vt) {
-        const Ot = this[Nt] ?? this,
-          qt = Ot.items;
-        let Dt = !1;
-        for (let mt = 0; mt < qt.length; mt++) {
-          const dt = qt[mt];
-          tt.has(mt) ? Vt(dt) : (Dt = !0, et(dt, mt), Ot[Et](mt))
+      move(uu) {
+        return this.isMovingItems = !0, uu(this), this.isMovingItems = !1, this
+      } [cu](uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const ju = this[Du] ?? this;
+        return Eu || ju.deletedIndexes[uu] ? ju.items[uu] : ju.tmpItems[uu] || ju.items[uu]
+      } [Nu](uu) {
+        const Eu = this[Du] ?? this;
+        Eu.items[uu] = void 0, Eu._needsCompaction = !0
+      } [gu]() {
+        const uu = this.tmpItems;
+        this.tmpItems = this.items.slice(), this.deletedIndexes.length > 0 && (this.$reindexChildren(0, uu), this.deletedIndexes.length = 0)
+      } [eu]() {
+        const uu = this[Du] ?? this;
+        uu._needsCompaction && (uu._needsCompaction = !1, uu.items = uu.items.filter((uu => void 0 !== uu)))
+      } [Ou](uu, Eu, ju) {
+        const su = this[Du] ?? this,
+          Uu = su.items;
+        let Zu = !1;
+        for (let Xu = 0; Xu < Uu.length; Xu++) {
+          const lu = Uu[Xu];
+          uu.has(Xu) ? ju(lu) : (Zu = !0, Eu(lu, Xu), su[Nu](Xu))
         }
-        Dt && Ot[Jt]()
+        Zu && su[eu]()
       }
       toArray() {
         return this.items.slice(0)
       }
       toJSON() {
-        return this.toArray().map((tt => "function" === typeof tt.toJSON ? tt.toJSON() : tt))
+        return this.toArray().map((uu => "function" === typeof uu.toJSON ? uu.toJSON() : uu))
       }
-      clone(tt) {
-        let et;
-        return tt ? (et = new OO, et.push(...this.items)) : et = new OO(...this.map((tt => tt[wt] ? tt.clone() : tt))), et
+      clone(uu) {
+        let Eu;
+        return uu ? (Eu = new ss, Eu.push(...this.items)) : Eu = new ss(...this.map((uu => uu[Yu] ? uu.clone() : uu))), Eu
       }
     }
-    ue("array", {
-      constructor: OO
+    pE("array", {
+      constructor: ss
     });
-    class qO {
+    class Us {
       keyByIndex = new Map;
       indexByKey = Object.create(null);
       nextIndex = 0;
       snapshots;
-      indexOf(tt) {
-        const et = this.indexByKey[tt];
-        return void 0 === et ? void 0 : et
+      indexOf(uu) {
+        const Eu = this.indexByKey[uu];
+        return void 0 === Eu ? void 0 : Eu
       }
-      assign(tt) {
-        const et = this.nextIndex++;
-        return this.indexByKey[tt] = et, this.keyByIndex.set(et, tt), et
+      assign(uu) {
+        const Eu = this.nextIndex++;
+        return this.indexByKey[uu] = Eu, this.keyByIndex.set(Eu, uu), Eu
       }
-      snapshot(tt, et) {
-        (this.snapshots ??= new Map).set(tt, et)
+      snapshot(uu, Eu) {
+        (this.snapshots ??= new Map).set(uu, Eu)
       }
-      forgetSnapshot(tt) {
-        this.snapshots?.delete(tt)
+      forgetSnapshot(uu) {
+        this.snapshots?.delete(uu)
       }
-      snapshotAt(tt) {
-        return this.snapshots?.get(tt)
+      snapshotAt(uu) {
+        return this.snapshots?.get(uu)
       }
-      setIndex(tt, et) {
-        this.keyByIndex.set(tt, et), this.indexByKey[et] = tt
+      setIndex(uu, Eu) {
+        this.keyByIndex.set(uu, Eu), this.indexByKey[Eu] = uu
       }
-      keyOf(tt) {
-        return this.keyByIndex.get(tt)
+      keyOf(uu) {
+        return this.keyByIndex.get(uu)
       }
       cleanupAfterEncode() {
         if (void 0 !== this.snapshots) {
-          for (const [tt] of this.snapshots) {
-            const et = this.keyByIndex.get(tt);
-            void 0 !== et && (delete this.indexByKey[et], this.keyByIndex.delete(tt))
+          for (const [uu] of this.snapshots) {
+            const Eu = this.keyByIndex.get(uu);
+            void 0 !== Eu && (delete this.indexByKey[Eu], this.keyByIndex.delete(uu))
           }
           this.snapshots.clear()
         }
@@ -4480,25 +4480,25 @@ export const modules = {
         this.indexByKey = Object.create(null), this.keyByIndex.clear(), this.snapshots?.clear(), this.nextIndex = 0
       }
     }
-    class DO {
-      [wt];
-      [dt];
+    class Zs {
+      [Yu];
+      [lu];
       childType;
-      [yt];
+      [hu];
       $items = new Map;
-      journal = new qO;
+      journal = new Us;
       _stream;
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(tt) {
-        (this._stream ??= ve()).maxPerTick = tt
+      set maxPerTick(uu) {
+        (this._stream ??= dE()).maxPerTick = uu
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(tt) {
-        (this._stream ??= ve()).priority = tt
+      set priority(uu) {
+        (this._stream ??= dE()).priority = uu
       }
       get $indexes() {
         return this.journal.keyByIndex
@@ -4506,30 +4506,30 @@ export const modules = {
       get _collectionIndexes() {
         return this.journal.indexByKey
       }
-      static[Ht] = FV;
-      static[Xt] = gV;
-      static COLLECTION_KIND = AV;
-      static[Qt](tt, et, Vt) {
-        if (!Vt || "string" === typeof tt[yt]) return !0;
-        const Ot = tt[lt](et) ?? tt.journal.snapshotAt(et);
-        return Vt.isChangeTreeVisible(Ot[wt])
+      static[fu] = rj;
+      static[Cu] = nj;
+      static COLLECTION_KIND = Bj;
+      static[bu](uu, Eu, ju) {
+        if (!ju || "string" === typeof uu[hu]) return !0;
+        const su = uu[cu](Eu) ?? uu.journal.snapshotAt(Eu);
+        return ju.isChangeTreeVisible(su[Yu])
       }
-      static is(tt) {
-        return void 0 !== tt.map
+      static is(uu) {
+        return void 0 !== uu.map
       }
-      constructor(tt) {
-        if (Object.defineProperty(this, wt, {
-            value: new RV(this),
+      constructor(uu) {
+        if (Object.defineProperty(this, Yu, {
+            value: new kj(this),
             enumerable: !1,
             writable: !0
-          }), this[yt] = void 0, tt)
-          if (tt instanceof Map || tt instanceof DO) tt.forEach(((tt, et) => this.set(et, tt)));
+          }), this[hu] = void 0, uu)
+          if (uu instanceof Map || uu instanceof Zs) uu.forEach(((uu, Eu) => this.set(Eu, uu)));
           else
-            for (const et in tt) this.set(et, tt[et])
+            for (const Eu in uu) this.set(Eu, uu[Eu])
       }
       static initializeForDecoder() {
-        const tt = Object.create(DO.prototype);
-        return tt.$items = new Map, tt.journal = new qO, tt[yt] = void 0, PV(tt), tt
+        const uu = Object.create(Zs.prototype);
+        return uu.$items = new Map, uu.journal = new Us, uu[hu] = void 0, vj(uu), uu
       } [Symbol.iterator]() {
         return this.$items[Symbol.iterator]()
       }
@@ -4537,61 +4537,61 @@ export const modules = {
         return this.$items[Symbol.toStringTag]
       }
       static get[Symbol.species]() {
-        return DO
+        return Zs
       }
-      set(tt, et) {
-        if (void 0 === et || null === et) throw new Error(`MapSchema#set('${tt}', ${et}): trying to set ${et} value on '${tt}'.`);
-        "object" === typeof et && this[yt] && tO(et, this[yt], this, tt), tt = tt.toString();
-        const Vt = this[wt],
-          Ot = void 0 !== et[wt],
-          Dt = this.journal;
-        let mt, dt = Dt.indexOf(tt);
-        if (void 0 !== dt) {
-          mt = qt.REPLACE;
-          const Vt = this.$items.get(tt);
-          if (Vt === et) return;
-          Ot && (mt = qt.DELETE_AND_ADD, void 0 !== Vt && Vt[wt].root?.remove(Vt[wt])), void 0 !== Dt.snapshotAt(dt) && Dt.forgetSnapshot(dt)
-        } else dt = Dt.assign(tt), mt = qt.ADD;
-        return this.$items.set(tt, et), mt === qt.ADD && Vt.isStreamCollection ? void 0 !== Vt.root && Se(this, Vt.root, dt) : Vt.change(dt, mt), Ot && et[wt].setParent(this, Vt.root, dt), this
+      set(uu, Eu) {
+        if (void 0 === Eu || null === Eu) throw new Error(`MapSchema#set('${uu}', ${Eu}): trying to set ${Eu} value on '${uu}'.`);
+        "object" === typeof Eu && this[hu] && Rj(Eu, this[hu], this, uu), uu = uu.toString();
+        const ju = this[Yu],
+          su = void 0 !== Eu[Yu],
+          Zu = this.journal;
+        let Xu, lu = Zu.indexOf(uu);
+        if (void 0 !== lu) {
+          Xu = Uu.REPLACE;
+          const ju = this.$items.get(uu);
+          if (ju === Eu) return;
+          su && (Xu = Uu.DELETE_AND_ADD, void 0 !== ju && ju[Yu].root?.remove(ju[Yu])), void 0 !== Zu.snapshotAt(lu) && Zu.forgetSnapshot(lu)
+        } else lu = Zu.assign(uu), Xu = Uu.ADD;
+        return this.$items.set(uu, Eu), Xu === Uu.ADD && ju.isStreamCollection ? void 0 !== ju.root && PE(this, ju.root, lu) : ju.change(lu, Xu), su && Eu[Yu].setParent(this, ju.root, lu), this
       }
-      get(tt) {
-        return this.$items.get(tt)
+      get(uu) {
+        return this.$items.get(uu)
       }
-      getOrInsert(tt, et) {
-        return this.$items.has(tt) ? this.$items.get(tt) : (this.set(tt, et), et)
+      getOrInsert(uu, Eu) {
+        return this.$items.has(uu) ? this.$items.get(uu) : (this.set(uu, Eu), Eu)
       }
-      getOrInsertComputed(tt, et) {
-        if (this.$items.has(tt)) return this.$items.get(tt);
-        const Vt = et(tt);
-        return this.set(tt, Vt), Vt
+      getOrInsertComputed(uu, Eu) {
+        if (this.$items.has(uu)) return this.$items.get(uu);
+        const ju = Eu(uu);
+        return this.set(uu, ju), ju
       }
-      delete(tt) {
-        if (!this.$items.has(tt)) return !1;
-        const et = this.journal.indexOf(tt),
-          Vt = this.$items.get(tt),
-          Ot = this[wt];
-        if (Ot.isStreamCollection) {
-          const qt = Ot.root;
-          let Dt = !1;
-          return void 0 !== qt && (Dt = ce(this, qt, this[dt], et)), void 0 !== Vt?.[wt] && qt?.remove(Vt[wt]), this.$items.delete(tt), Dt || this.journal.snapshot(et, Vt), !0
+      delete(uu) {
+        if (!this.$items.has(uu)) return !1;
+        const Eu = this.journal.indexOf(uu),
+          ju = this.$items.get(uu),
+          su = this[Yu];
+        if (su.isStreamCollection) {
+          const Uu = su.root;
+          let Zu = !1;
+          return void 0 !== Uu && (Zu = oE(this, Uu, this[lu], Eu)), void 0 !== ju?.[Yu] && Uu?.remove(ju[Yu]), this.$items.delete(uu), Zu || this.journal.snapshot(Eu, ju), !0
         }
-        return this.journal.snapshot(et, Vt), Ot.delete(et), this.$items.delete(tt)
+        return this.journal.snapshot(Eu, ju), su.delete(Eu), this.$items.delete(uu)
       }
       clear() {
-        const tt = this[wt];
-        tt.discard(), tt.forEachChild(((et, Vt) => {
-          tt.root?.remove(et)
-        })), this.journal.reset(), this.$items.clear(), tt.operation(qt.CLEAR)
-      } [bt]() {
-        const tt = this[wt];
-        if (tt.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed MapSchema (pooling not supported).");
-        this.$items.forEach((tt => tt?.[bt]?.())), this.$items.clear(), this.journal.reset(), tt.recycle(), this[dt] = void 0
+        const uu = this[Yu];
+        uu.discard(), uu.forEachChild(((Eu, ju) => {
+          uu.root?.remove(Eu)
+        })), this.journal.reset(), this.$items.clear(), uu.operation(Uu.CLEAR)
+      } [Mu]() {
+        const uu = this[Yu];
+        if (uu.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed MapSchema (pooling not supported).");
+        this.$items.forEach((uu => uu?.[Mu]?.())), this.$items.clear(), this.journal.reset(), uu.recycle(), this[lu] = void 0
       }
-      has(tt) {
-        return this.$items.has(tt)
+      has(uu) {
+        return this.$items.has(uu)
       }
-      forEach(tt) {
-        this.$items.forEach(tt)
+      forEach(uu) {
+        this.$items.forEach(uu)
       }
       entries() {
         return this.$items.entries()
@@ -4606,69 +4606,69 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[wt].pause()
+        this[Yu].pause()
       }
       resumeTracking() {
-        this[wt].resume()
+        this[Yu].resume()
       }
-      untracked(tt) {
-        return this[wt].untracked(tt)
+      untracked(uu) {
+        return this[Yu].untracked(uu)
       }
       get isTrackingPaused() {
-        return this[wt].paused
+        return this[Yu].paused
       }
-      setIndex(tt, et) {
-        this.journal.setIndex(tt, et)
+      setIndex(uu, Eu) {
+        this.journal.setIndex(uu, Eu)
       }
-      getIndex(tt) {
-        return this.journal.keyOf(tt)
-      } [lt](tt) {
-        const et = this.journal.keyOf(tt);
-        return void 0 !== et ? this.$items.get(et) : void 0
-      } [Et](tt) {
-        const et = this.journal.keyOf(tt);
-        void 0 !== et && (this.$items.delete(et), this.journal.keyByIndex.delete(tt))
-      } [ft](tt, et, Vt) {
-        let Ot = null;
-        if (this.$items.forEach(((qt, Dt) => {
-            tt.has(Dt) ? Vt(qt) : ((Ot ??= new Set).add(Dt), et(qt, Dt))
-          })), null !== Ot) {
-          Ot.forEach((tt => {
-            this.$items.delete(tt), delete this.journal.indexByKey[tt]
+      getIndex(uu) {
+        return this.journal.keyOf(uu)
+      } [cu](uu) {
+        const Eu = this.journal.keyOf(uu);
+        return void 0 !== Eu ? this.$items.get(Eu) : void 0
+      } [Nu](uu) {
+        const Eu = this.journal.keyOf(uu);
+        void 0 !== Eu && (this.$items.delete(Eu), this.journal.keyByIndex.delete(uu))
+      } [Ou](uu, Eu, ju) {
+        let su = null;
+        if (this.$items.forEach(((Uu, Zu) => {
+            uu.has(Zu) ? ju(Uu) : ((su ??= new Set).add(Zu), Eu(Uu, Zu))
+          })), null !== su) {
+          su.forEach((uu => {
+            this.$items.delete(uu), delete this.journal.indexByKey[uu]
           }));
-          const tt = [];
-          this.journal.keyByIndex.forEach(((et, Vt) => {
-            Ot.has(et) && tt.push(Vt)
+          const uu = [];
+          this.journal.keyByIndex.forEach(((Eu, ju) => {
+            su.has(Eu) && uu.push(ju)
           }));
-          for (let et = 0; et < tt.length; et++) this.journal.keyByIndex.delete(tt[et])
+          for (let Eu = 0; Eu < uu.length; Eu++) this.journal.keyByIndex.delete(uu[Eu])
         }
-      } [Mt]() {
+      } [gu]() {
         this.journal.cleanupAfterEncode()
       }
-      _dropView(tt) {
-        Ze(this, tt)
+      _dropView(uu) {
+        KE(this, uu)
       }
       _unregister() {}
       toJSON() {
-        return Object.fromEntries(Array.from(this, (tt => {
-          let [et, Vt] = tt;
-          return [et, "function" === typeof Vt.toJSON ? Vt.toJSON() : Vt]
+        return Object.fromEntries(Array.from(this, (uu => {
+          let [Eu, ju] = uu;
+          return [Eu, "function" === typeof ju.toJSON ? ju.toJSON() : ju]
         })))
       }
-      clone(tt) {
-        let et;
-        return tt ? et = Object.assign(new DO, this) : (et = new DO, this.forEach(((tt, Vt) => {
-          tt[wt] ? et.set(Vt, tt.clone()) : et.set(Vt, tt)
-        }))), et
+      clone(uu) {
+        let Eu;
+        return uu ? Eu = Object.assign(new Zs, this) : (Eu = new Zs, this.forEach(((uu, ju) => {
+          uu[Yu] ? Eu.set(ju, uu.clone()) : Eu.set(ju, uu)
+        }))), Eu
       }
     }
-    ue("map", {
-      constructor: DO
+    pE("map", {
+      constructor: Zs
     });
-    class mO {
-      [wt];
-      [dt];
-      [yt];
+    class Xs {
+      [Yu];
+      [lu];
+      [hu];
       $items = new Map;
       deletedItems = {};
       $refId = 0;
@@ -4676,79 +4676,79 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(tt) {
-        (this._stream ??= ve()).maxPerTick = tt
+      set maxPerTick(uu) {
+        (this._stream ??= dE()).maxPerTick = uu
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(tt) {
-        (this._stream ??= ve()).priority = tt
+      set priority(uu) {
+        (this._stream ??= dE()).priority = uu
       }
-      static[Ht] = kV;
-      static[Xt] = gV;
-      static COLLECTION_KIND = BV;
-      static[Qt](tt, et, Vt) {
-        return !Vt || "string" === typeof tt[yt] || Vt.isChangeTreeVisible((tt[lt](et) ?? tt.deletedItems[et])[wt])
+      static[fu] = Qj;
+      static[Cu] = nj;
+      static COLLECTION_KIND = xj;
+      static[bu](uu, Eu, ju) {
+        return !ju || "string" === typeof uu[hu] || ju.isChangeTreeVisible((uu[cu](Eu) ?? uu.deletedItems[Eu])[Yu])
       }
-      static is(tt) {
-        return void 0 !== tt.collection
+      static is(uu) {
+        return void 0 !== uu.collection
       }
-      constructor(tt) {
-        Object.defineProperty(this, wt, {
-          value: new RV(this),
+      constructor(uu) {
+        Object.defineProperty(this, Yu, {
+          value: new kj(this),
           enumerable: !1,
           writable: !0
-        }), this[yt] = void 0, tt && tt.forEach((tt => this.add(tt)))
+        }), this[hu] = void 0, uu && uu.forEach((uu => this.add(uu)))
       }
       static initializeForDecoder() {
-        const tt = Object.create(mO.prototype);
-        return tt.$items = new Map, tt.deletedItems = {}, tt.$refId = 0, tt[yt] = void 0, PV(tt), tt
+        const uu = Object.create(Xs.prototype);
+        return uu.$items = new Map, uu.deletedItems = {}, uu.$refId = 0, uu[hu] = void 0, vj(uu), uu
       }
-      add(tt) {
-        const et = this.$refId++,
-          Vt = this[wt];
-        return this.$items.set(et, tt), Vt.isStreamCollection ? void 0 !== Vt.root && Se(this, Vt.root, et) : Vt.change(et), void 0 !== tt[wt] && tt[wt].setParent(this, Vt.root, et), et
+      add(uu) {
+        const Eu = this.$refId++,
+          ju = this[Yu];
+        return this.$items.set(Eu, uu), ju.isStreamCollection ? void 0 !== ju.root && PE(this, ju.root, Eu) : ju.change(Eu), void 0 !== uu[Yu] && uu[Yu].setParent(this, ju.root, Eu), Eu
       }
-      at(tt) {
-        const et = Array.from(this.$items.keys())[tt];
-        return this.$items.get(et)
+      at(uu) {
+        const Eu = Array.from(this.$items.keys())[uu];
+        return this.$items.get(Eu)
       }
       entries() {
         return this.$items.entries()
       }
-      delete(tt) {
-        const et = this.$items.entries();
-        let Vt, Ot;
+      delete(uu) {
+        const Eu = this.$items.entries();
+        let ju, su;
         for (;
-          (Ot = et.next()) && !Ot.done;)
-          if (tt === Ot.value[1]) {
-            Vt = Ot.value[0];
+          (su = Eu.next()) && !su.done;)
+          if (uu === su.value[1]) {
+            ju = su.value[0];
             break
-          } if (void 0 === Vt) return !1;
-        const qt = this[wt];
-        if (qt.isStreamCollection) {
-          const tt = qt.root,
-            et = this.$items.get(Vt);
-          return void 0 !== tt && ce(this, tt, this[dt], Vt), void 0 !== et?.[wt] && tt?.remove(et[wt]), this.deletedItems[Vt] = et, this.$items.delete(Vt)
+          } if (void 0 === ju) return !1;
+        const Uu = this[Yu];
+        if (Uu.isStreamCollection) {
+          const uu = Uu.root,
+            Eu = this.$items.get(ju);
+          return void 0 !== uu && oE(this, uu, this[lu], ju), void 0 !== Eu?.[Yu] && uu?.remove(Eu[Yu]), this.deletedItems[ju] = Eu, this.$items.delete(ju)
         }
-        return this.deletedItems[Vt] = qt.delete(Vt), this.$items.delete(Vt)
+        return this.deletedItems[ju] = Uu.delete(ju), this.$items.delete(ju)
       }
       clear() {
-        const tt = this[wt];
-        tt.discard(), tt.forEachChild(((et, Vt) => {
-          tt.root?.remove(et)
-        })), this.$items.clear(), tt.operation(qt.CLEAR)
-      } [bt]() {
-        const tt = this[wt];
-        if (tt.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed CollectionSchema (pooling not supported).");
-        this.$items.forEach((tt => tt?.[bt]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, tt.recycle(), this[dt] = void 0
+        const uu = this[Yu];
+        uu.discard(), uu.forEachChild(((Eu, ju) => {
+          uu.root?.remove(Eu)
+        })), this.$items.clear(), uu.operation(Uu.CLEAR)
+      } [Mu]() {
+        const uu = this[Yu];
+        if (uu.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed CollectionSchema (pooling not supported).");
+        this.$items.forEach((uu => uu?.[Mu]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, uu.recycle(), this[lu] = void 0
       }
-      has(tt) {
-        return Array.from(this.$items.values()).some((et => et === tt))
+      has(uu) {
+        return Array.from(this.$items.values()).some((Eu => Eu === uu))
       }
-      forEach(tt) {
-        this.$items.forEach(((et, Vt, Ot) => tt(et, Vt, this)))
+      forEach(uu) {
+        this.$items.forEach(((Eu, ju, su) => uu(Eu, ju, this)))
       }
       values() {
         return this.$items.values()
@@ -4757,62 +4757,62 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[wt].pause()
+        this[Yu].pause()
       }
       resumeTracking() {
-        this[wt].resume()
+        this[Yu].resume()
       }
-      untracked(tt) {
-        return this[wt].untracked(tt)
+      untracked(uu) {
+        return this[Yu].untracked(uu)
       }
       get isTrackingPaused() {
-        return this[wt].paused
+        return this[Yu].paused
       } [Symbol.iterator]() {
         return this.$items.values()
       }
-      setIndex(tt, et) {}
-      getIndex(tt) {
-        return tt
-      } [lt](tt) {
-        return this.$items.get(tt)
-      } [Et](tt) {
-        this.$items.delete(tt)
-      } [ft](tt, et, Vt) {
-        let Ot = null;
-        if (this.$items.forEach(((qt, Dt) => {
-            tt.has(Dt) ? Vt(qt) : ((Ot ??= []).push(Dt), et(qt, Dt))
-          })), null !== Ot)
-          for (let qt = 0; qt < Ot.length; qt++) this[Et](Ot[qt])
-      } [Mt]() {
-        for (const tt in this.deletedItems) delete this.deletedItems[tt]
+      setIndex(uu, Eu) {}
+      getIndex(uu) {
+        return uu
+      } [cu](uu) {
+        return this.$items.get(uu)
+      } [Nu](uu) {
+        this.$items.delete(uu)
+      } [Ou](uu, Eu, ju) {
+        let su = null;
+        if (this.$items.forEach(((Uu, Zu) => {
+            uu.has(Zu) ? ju(Uu) : ((su ??= []).push(Zu), Eu(Uu, Zu))
+          })), null !== su)
+          for (let Uu = 0; Uu < su.length; Uu++) this[Nu](su[Uu])
+      } [gu]() {
+        for (const uu in this.deletedItems) delete this.deletedItems[uu]
       }
-      _dropView(tt) {
-        Ze(this, tt)
+      _dropView(uu) {
+        KE(this, uu)
       }
       _unregister() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const tt = [];
-        return this.forEach(((et, Vt) => {
-          tt.push("function" === typeof et.toJSON ? et.toJSON() : et)
-        })), tt
+        const uu = [];
+        return this.forEach(((Eu, ju) => {
+          uu.push("function" === typeof Eu.toJSON ? Eu.toJSON() : Eu)
+        })), uu
       }
-      clone(tt) {
-        let et;
-        return tt ? et = Object.assign(new mO, this) : (et = new mO, this.forEach((tt => {
-          tt[wt] ? et.add(tt.clone()) : et.add(tt)
-        }))), et
+      clone(uu) {
+        let Eu;
+        return uu ? Eu = Object.assign(new Xs, this) : (Eu = new Xs, this.forEach((uu => {
+          uu[Yu] ? Eu.add(uu.clone()) : Eu.add(uu)
+        }))), Eu
       }
     }
-    ue("collection", {
-      constructor: mO
+    pE("collection", {
+      constructor: Xs
     });
-    class dO {
-      [wt];
-      [dt];
-      [yt];
+    class ls {
+      [Yu];
+      [lu];
+      [hu];
       $items = new Map;
       deletedItems = {};
       $refId = 0;
@@ -4820,81 +4820,81 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(tt) {
-        (this._stream ??= ve()).maxPerTick = tt
+      set maxPerTick(uu) {
+        (this._stream ??= dE()).maxPerTick = uu
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(tt) {
-        (this._stream ??= ve()).priority = tt
+      set priority(uu) {
+        (this._stream ??= dE()).priority = uu
       }
-      static[Ht] = kV;
-      static[Xt] = gV;
-      static COLLECTION_KIND = YV;
-      static[Qt](tt, et, Vt) {
-        return !Vt || "string" === typeof tt[yt] || Vt.isVisible((tt[lt](et) ?? tt.deletedItems[et])[wt])
+      static[fu] = Qj;
+      static[Cu] = nj;
+      static COLLECTION_KIND = tj;
+      static[bu](uu, Eu, ju) {
+        return !ju || "string" === typeof uu[hu] || ju.isVisible((uu[cu](Eu) ?? uu.deletedItems[Eu])[Yu])
       }
-      static is(tt) {
-        return void 0 !== tt.set
+      static is(uu) {
+        return void 0 !== uu.set
       }
-      constructor(tt) {
-        Object.defineProperty(this, wt, {
-          value: new RV(this),
+      constructor(uu) {
+        Object.defineProperty(this, Yu, {
+          value: new kj(this),
           enumerable: !1,
           writable: !0
-        }), this[yt] = void 0, tt && tt.forEach((tt => this.add(tt)))
+        }), this[hu] = void 0, uu && uu.forEach((uu => this.add(uu)))
       }
       static initializeForDecoder() {
-        const tt = Object.create(dO.prototype);
-        return tt.$items = new Map, tt.deletedItems = {}, tt.$refId = 0, tt[yt] = void 0, PV(tt), tt
+        const uu = Object.create(ls.prototype);
+        return uu.$items = new Map, uu.deletedItems = {}, uu.$refId = 0, uu[hu] = void 0, vj(uu), uu
       }
-      add(tt) {
-        if (this.has(tt)) return !1;
-        const et = this.$refId++,
-          Vt = this[wt];
-        return this.$items.set(et, tt), Vt.isStreamCollection ? void 0 !== Vt.root && Se(this, Vt.root, et) : Vt.change(et, qt.ADD), void 0 !== tt[wt] && tt[wt].setParent(this, Vt.root, et), et
+      add(uu) {
+        if (this.has(uu)) return !1;
+        const Eu = this.$refId++,
+          ju = this[Yu];
+        return this.$items.set(Eu, uu), ju.isStreamCollection ? void 0 !== ju.root && PE(this, ju.root, Eu) : ju.change(Eu, Uu.ADD), void 0 !== uu[Yu] && uu[Yu].setParent(this, ju.root, Eu), Eu
       }
       entries() {
         return this.$items.entries()
       }
-      delete(tt) {
-        const et = this.$items.entries();
-        let Vt, Ot;
+      delete(uu) {
+        const Eu = this.$items.entries();
+        let ju, su;
         for (;
-          (Ot = et.next()) && !Ot.done;)
-          if (tt === Ot.value[1]) {
-            Vt = Ot.value[0];
+          (su = Eu.next()) && !su.done;)
+          if (uu === su.value[1]) {
+            ju = su.value[0];
             break
-          } if (void 0 === Vt) return !1;
-        const qt = this[wt];
-        if (qt.isStreamCollection) {
-          const tt = qt.root,
-            et = this.$items.get(Vt);
-          return void 0 !== tt && ce(this, tt, this[dt], Vt), void 0 !== et?.[wt] && tt?.remove(et[wt]), this.deletedItems[Vt] = et, this.$items.delete(Vt)
+          } if (void 0 === ju) return !1;
+        const Uu = this[Yu];
+        if (Uu.isStreamCollection) {
+          const uu = Uu.root,
+            Eu = this.$items.get(ju);
+          return void 0 !== uu && oE(this, uu, this[lu], ju), void 0 !== Eu?.[Yu] && uu?.remove(Eu[Yu]), this.deletedItems[ju] = Eu, this.$items.delete(ju)
         }
-        return this.deletedItems[Vt] = qt.delete(Vt), this.$items.delete(Vt)
+        return this.deletedItems[ju] = Uu.delete(ju), this.$items.delete(ju)
       }
       clear() {
-        const tt = this[wt];
-        tt.discard(), this.$items.clear(), tt.operation(qt.CLEAR)
-      } [bt]() {
-        const tt = this[wt];
-        if (tt.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed SetSchema (pooling not supported).");
-        this.$items.forEach((tt => tt?.[bt]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, tt.recycle(), this[dt] = void 0
+        const uu = this[Yu];
+        uu.discard(), this.$items.clear(), uu.operation(Uu.CLEAR)
+      } [Mu]() {
+        const uu = this[Yu];
+        if (uu.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed SetSchema (pooling not supported).");
+        this.$items.forEach((uu => uu?.[Mu]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, uu.recycle(), this[lu] = void 0
       }
-      has(tt) {
-        const et = this.$items.values();
-        let Vt, Ot = !1;
+      has(uu) {
+        const Eu = this.$items.values();
+        let ju, su = !1;
         for (;
-          (Vt = et.next()) && !Vt.done;)
-          if (tt === Vt.value) {
-            Ot = !0;
+          (ju = Eu.next()) && !ju.done;)
+          if (uu === ju.value) {
+            su = !0;
             break
-          } return Ot
+          } return su
       }
-      forEach(tt) {
-        this.$items.forEach(((et, Vt, Ot) => tt(et, Vt, this)))
+      forEach(uu) {
+        this.$items.forEach(((Eu, ju, su) => uu(Eu, ju, this)))
       }
       values() {
         return this.$items.values()
@@ -4903,62 +4903,62 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[wt].pause()
+        this[Yu].pause()
       }
       resumeTracking() {
-        this[wt].resume()
+        this[Yu].resume()
       }
-      untracked(tt) {
-        return this[wt].untracked(tt)
+      untracked(uu) {
+        return this[Yu].untracked(uu)
       }
       get isTrackingPaused() {
-        return this[wt].paused
+        return this[Yu].paused
       } [Symbol.iterator]() {
         return this.$items.values()
       }
-      setIndex(tt, et) {}
-      getIndex(tt) {
-        return tt
-      } [lt](tt) {
-        return this.$items.get(tt)
-      } [Et](tt) {
-        this.$items.delete(tt)
-      } [ft](tt, et, Vt) {
-        let Ot = null;
-        if (this.$items.forEach(((qt, Dt) => {
-            tt.has(Dt) ? Vt(qt) : ((Ot ??= []).push(Dt), et(qt, Dt))
-          })), null !== Ot)
-          for (let qt = 0; qt < Ot.length; qt++) this[Et](Ot[qt])
-      } [Mt]() {
-        for (const tt in this.deletedItems) delete this.deletedItems[tt]
+      setIndex(uu, Eu) {}
+      getIndex(uu) {
+        return uu
+      } [cu](uu) {
+        return this.$items.get(uu)
+      } [Nu](uu) {
+        this.$items.delete(uu)
+      } [Ou](uu, Eu, ju) {
+        let su = null;
+        if (this.$items.forEach(((Uu, Zu) => {
+            uu.has(Zu) ? ju(Uu) : ((su ??= []).push(Zu), Eu(Uu, Zu))
+          })), null !== su)
+          for (let Uu = 0; Uu < su.length; Uu++) this[Nu](su[Uu])
+      } [gu]() {
+        for (const uu in this.deletedItems) delete this.deletedItems[uu]
       }
-      _dropView(tt) {
-        Ze(this, tt)
+      _dropView(uu) {
+        KE(this, uu)
       }
       _unregister() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const tt = [];
-        return this.forEach(((et, Vt) => {
-          tt.push("function" === typeof et.toJSON ? et.toJSON() : et)
-        })), tt
+        const uu = [];
+        return this.forEach(((Eu, ju) => {
+          uu.push("function" === typeof Eu.toJSON ? Eu.toJSON() : Eu)
+        })), uu
       }
-      clone(tt) {
-        let et;
-        return tt ? et = Object.assign(new dO, this) : (et = new dO, this.forEach((tt => {
-          tt[wt] ? et.add(tt.clone()) : et.add(tt)
-        }))), et
+      clone(uu) {
+        let Eu;
+        return uu ? Eu = Object.assign(new ls, this) : (Eu = new ls, this.forEach((uu => {
+          uu[Yu] ? Eu.add(uu.clone()) : Eu.add(uu)
+        }))), Eu
       }
     }
-    ue("set", {
-      constructor: dO
+    pE("set", {
+      constructor: ls
     });
-    class jO {
-      [wt];
-      [dt];
-      [yt];
+    class qs {
+      [Yu];
+      [lu];
+      [hu];
       $items = new Map;
       $nextPosition = 0;
       _itemIndex = new Map;
@@ -4966,81 +4966,81 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(tt) {
-        (this._stream ??= ve()).maxPerTick = tt
+      set maxPerTick(uu) {
+        (this._stream ??= dE()).maxPerTick = uu
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(tt) {
-        (this._stream ??= ve()).priority = tt
+      set priority(uu) {
+        (this._stream ??= dE()).priority = uu
       }
       static $isStream = !0;
-      static[Ht] = kV;
-      static[Xt] = gV;
-      static COLLECTION_KIND = pV;
-      static[Qt](tt, et, Vt) {
-        if (!Vt) return !0;
-        const Ot = tt[lt](et);
-        return void 0 !== Ot && Vt.isVisible(Ot[wt])
+      static[fu] = Qj;
+      static[Cu] = nj;
+      static COLLECTION_KIND = Tj;
+      static[bu](uu, Eu, ju) {
+        if (!ju) return !0;
+        const su = uu[cu](Eu);
+        return void 0 !== su && ju.isVisible(su[Yu])
       }
-      static is(tt) {
-        return tt && void 0 !== tt.stream
+      static is(uu) {
+        return uu && void 0 !== uu.stream
       }
       constructor() {
-        Object.defineProperty(this, wt, {
-          value: new RV(this),
+        Object.defineProperty(this, Yu, {
+          value: new kj(this),
           enumerable: !1,
           writable: !0
-        }), this[yt] = void 0
+        }), this[hu] = void 0
       }
       static initializeForDecoder() {
-        const tt = Object.create(jO.prototype);
-        return tt.$items = new Map, tt.$nextPosition = 0, tt._itemIndex = new Map, tt[yt] = void 0, PV(tt), tt
+        const uu = Object.create(qs.prototype);
+        return uu.$items = new Map, uu.$nextPosition = 0, uu._itemIndex = new Map, uu[hu] = void 0, vj(uu), uu
       }
-      add(tt) {
-        if (this._itemIndex.has(tt)) return -1;
-        const et = this.$nextPosition++;
-        this.$items.set(et, tt), this._itemIndex.set(tt, et);
-        const Vt = this[wt].root;
-        return void 0 !== tt[wt] && tt[wt].setParent(this, Vt, et), void 0 !== Vt && Se(this, Vt, et), et
+      add(uu) {
+        if (this._itemIndex.has(uu)) return -1;
+        const Eu = this.$nextPosition++;
+        this.$items.set(Eu, uu), this._itemIndex.set(uu, Eu);
+        const ju = this[Yu].root;
+        return void 0 !== uu[Yu] && uu[Yu].setParent(this, ju, Eu), void 0 !== ju && PE(this, ju, Eu), Eu
       }
-      remove(tt) {
-        const et = this._itemIndex.get(tt);
-        if (void 0 === et) return !1;
-        this._itemIndex.delete(tt), this.$items.delete(et);
-        const Vt = this[wt].root;
-        return void 0 !== Vt && (ce(this, Vt, this[dt], et), void 0 !== tt[wt] && Vt.remove(tt[wt])), !0
+      remove(uu) {
+        const Eu = this._itemIndex.get(uu);
+        if (void 0 === Eu) return !1;
+        this._itemIndex.delete(uu), this.$items.delete(Eu);
+        const ju = this[Yu].root;
+        return void 0 !== ju && (oE(this, ju, this[lu], Eu), void 0 !== uu[Yu] && ju.remove(uu[Yu])), !0
       }
-      has(tt) {
-        return this._itemIndex.has(tt)
+      has(uu) {
+        return this._itemIndex.has(uu)
       }
       clear() {
-        const tt = this[wt].root;
-        if (void 0 !== tt) {
-          ! function(tt, et, Vt) {
-            const Ot = tt._stream;
-            if (void 0 !== Ot) {
-              Ot.broadcastPending.clear();
-              for (const tt of Ot.sentBroadcast) Ot.broadcastDeletes.add(tt);
-              Ot.sentBroadcast.clear(), et.forEachActiveView((tt => {
-                Ot.pendingByView.get(tt.id)?.clear();
-                const et = Ot.sentByView.get(tt.id);
-                if (void 0 !== et && et.size > 0) {
-                  let Ot = tt.changes.get(Vt);
-                  void 0 === Ot && (Ot = new Map, tt.changes.set(Vt, Ot));
-                  for (const tt of et) Ot.set(tt, qt.DELETE);
-                  et.clear()
+        const uu = this[Yu].root;
+        if (void 0 !== uu) {
+          ! function(uu, Eu, ju) {
+            const su = uu._stream;
+            if (void 0 !== su) {
+              su.broadcastPending.clear();
+              for (const uu of su.sentBroadcast) su.broadcastDeletes.add(uu);
+              su.sentBroadcast.clear(), Eu.forEachActiveView((uu => {
+                su.pendingByView.get(uu.id)?.clear();
+                const Eu = su.sentByView.get(uu.id);
+                if (void 0 !== Eu && Eu.size > 0) {
+                  let su = uu.changes.get(ju);
+                  void 0 === su && (su = new Map, uu.changes.set(ju, su));
+                  for (const uu of Eu) su.set(uu, Uu.DELETE);
+                  Eu.clear()
                 }
               }))
             }
-          }(this, tt, this[dt]);
-          for (const et of this.$items.values()) void 0 !== et[wt] && tt.remove(et[wt])
+          }(this, uu, this[lu]);
+          for (const Eu of this.$items.values()) void 0 !== Eu[Yu] && uu.remove(Eu[Yu])
         }
         this.$items.clear(), this._itemIndex.clear()
       }
-      forEach(tt) {
-        for (const [et, Vt] of this.$items) tt(Vt, et, this)
+      forEach(uu) {
+        for (const [Eu, ju] of this.$items) uu(ju, Eu, this)
       }
       values() {
         return this.$items.values()
@@ -5056,43 +5056,43 @@ export const modules = {
       get length() {
         return this.$items.size
       }
-      setIndex(tt, et) {}
-      getIndex(tt) {
-        return tt
-      } [lt](tt) {
-        return this.$items.get(tt)
-      } [Et](tt) {
-        const et = this.$items.get(tt);
-        void 0 !== et && (this._itemIndex.delete(et), this.$items.delete(tt))
-      } [ft]() {} [Mt]() {}
+      setIndex(uu, Eu) {}
+      getIndex(uu) {
+        return uu
+      } [cu](uu) {
+        return this.$items.get(uu)
+      } [Nu](uu) {
+        const Eu = this.$items.get(uu);
+        void 0 !== Eu && (this._itemIndex.delete(Eu), this.$items.delete(uu))
+      } [Ou]() {} [gu]() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const tt = [];
-        return this.forEach((et => {
-          tt.push("function" === typeof et?.toJSON ? et.toJSON() : et)
-        })), tt
+        const uu = [];
+        return this.forEach((Eu => {
+          uu.push("function" === typeof Eu?.toJSON ? Eu.toJSON() : Eu)
+        })), uu
       }
-      clone(tt) {
-        if (tt) {
-          return Object.assign(new jO, this)
+      clone(uu) {
+        if (uu) {
+          return Object.assign(new qs, this)
         }
-        const et = new jO;
-        return et.maxPerTick = this.maxPerTick, this.forEach((tt => {
-          et.add("function" === typeof tt?.clone ? tt.clone() : tt)
-        })), et
+        const Eu = new qs;
+        return Eu.maxPerTick = this.maxPerTick, this.forEach((uu => {
+          Eu.add("function" === typeof uu?.clone ? uu.clone() : uu)
+        })), Eu
       }
-      _dropView(tt) {
-        Ze(this, tt)
+      _dropView(uu) {
+        KE(this, uu)
       }
       _unregister() {}
     }
-    ue("stream", {
-      constructor: jO
+    pE("stream", {
+      constructor: qs
     });
-    class HO {
-      [ut] = !0;
+    class fs {
+      [pu] = !0;
       _type;
       _default = void 0;
       _hasDefault = !1;
@@ -5106,14 +5106,14 @@ export const modules = {
       _optional = !1;
       _noSync = !1;
       _streamPriority = void 0;
-      constructor(tt) {
-        this._type = tt
+      constructor(uu) {
+        this._type = uu
       }
-      default (tt) {
-        return this._default = tt, this._hasDefault = !0, this
+      default (uu) {
+        return this._default = uu, this._hasDefault = !0, this
       }
-      view(tt) {
-        return this._view = tt ?? -1, this
+      view(uu) {
+        return this._view = uu ?? -1, this
       }
       unreliable() {
         return this._unreliable = !0, this
@@ -5128,16 +5128,16 @@ export const modules = {
         return this._noSync = !0, this
       }
       stream() {
-        const tt = this._type;
-        if (tt && "object" === typeof tt && void 0 !== tt.array) throw new Error(he);
+        const uu = this._type;
+        if (uu && "object" === typeof uu && void 0 !== uu.array) throw new Error(JE);
         return this._stream = !0, this
       }
-      priority(tt) {
-        return this._streamPriority = tt, this
+      priority(uu) {
+        return this._streamPriority = uu, this
       }
       deprecated() {
-        let tt = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        return this._deprecated = !0, this._deprecatedThrows = tt, this
+        let uu = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        return this._deprecated = !0, this._deprecatedThrows = uu, this
       }
       optional() {
         return this._optional = !0, this
@@ -5161,135 +5161,135 @@ export const modules = {
       }
     }
 
-    function XO(tt) {
-      return null != tt && !0 === tt[ut]
+    function Cs(uu) {
+      return null != uu && !0 === uu[pu]
     }
 
-    function QO(tt) {
-      return () => new HO(tt)
+    function bs(uu) {
+      return () => new fs(uu)
     }
 
-    function lO(tt) {
-      if (XO(tt)) {
-        const et = tt._type;
-        throw new Error(`t.array/map/set/collection(): a t.* builder is not a valid element type \u2014 ${"string"===typeof et?`use the type name instead: t.array("${et}")`:'collections accept a Schema class or a primitive type name ("string", "number", \u2026)'}.`)
+    function cs(uu) {
+      if (Cs(uu)) {
+        const Eu = uu._type;
+        throw new Error(`t.array/map/set/collection(): a t.* builder is not a valid element type \u2014 ${"string"===typeof Eu?`use the type name instead: t.array("${Eu}")`:'collections accept a Schema class or a primitive type name ("string", "number", \u2026)'}.`)
       }
-      return tt
+      return uu
     }
 
-    function EO(tt) {
-      return new HO({
-        quantized: Fe(tt)
+    function Ns(uu) {
+      return new fs({
+        quantized: rE(uu)
       })
     }
-    const fO = Object.freeze({
-        string: QO("string"),
-        number: QO("number"),
-        boolean: QO("boolean"),
-        int8: QO("int8"),
-        uint8: QO("uint8"),
-        int16: QO("int16"),
-        uint16: QO("uint16"),
-        int32: QO("int32"),
-        uint32: QO("uint32"),
-        int64: QO("int64"),
-        uint64: QO("uint64"),
-        float32: QO("float32"),
-        float64: QO("float64"),
-        bigint64: QO("bigint64"),
-        biguint64: QO("biguint64"),
-        ref: tt => new HO(tt),
-        array: tt => new HO({
-          array: lO(tt)
+    const Os = Object.freeze({
+        string: bs("string"),
+        number: bs("number"),
+        boolean: bs("boolean"),
+        int8: bs("int8"),
+        uint8: bs("uint8"),
+        int16: bs("int16"),
+        uint16: bs("uint16"),
+        int32: bs("int32"),
+        uint32: bs("uint32"),
+        int64: bs("int64"),
+        uint64: bs("uint64"),
+        float32: bs("float32"),
+        float64: bs("float64"),
+        bigint64: bs("bigint64"),
+        biguint64: bs("biguint64"),
+        ref: uu => new fs(uu),
+        array: uu => new fs({
+          array: cs(uu)
         }),
-        map: tt => new HO({
-          map: lO(tt)
+        map: uu => new fs({
+          map: cs(uu)
         }),
-        set: tt => new HO({
-          set: lO(tt)
+        set: uu => new fs({
+          set: cs(uu)
         }),
-        collection: tt => new HO({
-          collection: lO(tt)
+        collection: uu => new fs({
+          collection: cs(uu)
         }),
-        stream: tt => {
-          const et = new HO({
-            stream: lO(tt)
+        stream: uu => {
+          const Eu = new fs({
+            stream: cs(uu)
           });
-          return et._stream = !0, et
+          return Eu._stream = !0, Eu
         },
-        quantized: EO,
-        angle: tt => EO({
+        quantized: Ns,
+        angle: uu => Ns({
           min: 0,
           max: 2 * Math.PI,
           mode: "wrap",
-          bits: tt?.bits ?? 16
+          bits: uu?.bits ?? 16
         })
       }),
-      wO = -1;
+      Ys = -1;
 
-    function yO(tt) {
-      return re.register(tt), tt
+    function hs(uu) {
+      return IE.register(uu), uu
     }
 
-    function NO() {
-      let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : wO;
-      return function(et, Vt) {
-        const Ot = xe.initialize(et.constructor);
-        xe.setTag(Ot, Vt, tt)
+    function Ds() {
+      let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Ys;
+      return function(Eu, ju) {
+        const su = HE.initialize(Eu.constructor);
+        HE.setTag(su, ju, uu)
       }
     }
 
-    function aO(tt, et) {
-      const Vt = xe.initialize(tt.constructor);
-      xe.setUnreliable(Vt, et)
+    function gs(uu, Eu) {
+      const ju = HE.initialize(uu.constructor);
+      HE.setUnreliable(ju, Eu)
     }
 
-    function MO(tt, et) {
-      const Vt = xe.initialize(tt.constructor);
-      xe.setPatchOnly(Vt, et)
+    function Ms(uu, Eu) {
+      const ju = HE.initialize(uu.constructor);
+      HE.setPatchOnly(ju, Eu)
     }
 
-    function bO(tt, et) {
-      const Vt = xe.initialize(tt.constructor);
-      xe.setFullStateOnly(Vt, et)
+    function es(uu, Eu) {
+      const ju = HE.initialize(uu.constructor);
+      HE.setFullStateOnly(ju, Eu)
     }
 
-    function JO(tt, et) {
-      return function(Vt, Ot) {
-        const qt = Vt.constructor;
-        if (!tt) throw new Error(`${qt.name}: @type() reference provided for "${Ot}" is undefined. Make sure you don't have any circular dependencies.`);
-        tt = Ae(tt, `${qt.name}.${Ot}`), re.register(qt);
-        const Dt = Object.getPrototypeOf(qt)[Symbol.metadata],
-          mt = xe.initialize(qt);
-        let dt = mt[Ot];
-        if (void 0 !== mt[dt]) {
-          if (mt[dt].deprecated) return;
-          if (void 0 !== mt[dt].type) {
-            const tt = new Error(`@colyseus/schema: Duplicate '${Ot}' definition on '${qt.name}'.\nCheck @type() annotation`);
-            throw new Error(`${tt.message} ${tt.stack.split("\n")[4].trim()}`)
+    function Gs(uu, Eu) {
+      return function(ju, su) {
+        const Uu = ju.constructor;
+        if (!uu) throw new Error(`${Uu.name}: @type() reference provided for "${su}" is undefined. Make sure you don't have any circular dependencies.`);
+        uu = BE(uu, `${Uu.name}.${su}`), IE.register(Uu);
+        const Zu = Object.getPrototypeOf(Uu)[Symbol.metadata],
+          Xu = HE.initialize(Uu);
+        let lu = Xu[su];
+        if (void 0 !== Xu[lu]) {
+          if (Xu[lu].deprecated) return;
+          if (void 0 !== Xu[lu].type) {
+            const uu = new Error(`@colyseus/schema: Duplicate '${su}' definition on '${Uu.name}'.\nCheck @type() annotation`);
+            throw new Error(`${uu.message} ${uu.stack.split("\n")[4].trim()}`)
           }
-        } else dt = mt[Wt] ?? (Dt && Dt[Wt]) ?? -1, dt++;
-        if (et && et.manual) xe.addField(mt, dt, Ot, tt, {
+        } else lu = Xu[au] ?? (Zu && Zu[au]) ?? -1, lu++;
+        if (Eu && Eu.manual) HE.addField(Xu, lu, su, uu, {
           enumerable: !0,
           configurable: !0,
           writable: !0
         });
         else {
           const {
-            complexTypeKlass: et,
-            childType: Vt
-          } = Ue(tt);
-          xe.addField(mt, dt, Ot, tt, uO(Ot, dt, Vt, et))
+            complexTypeKlass: Eu,
+            childType: ju
+          } = FE(uu);
+          HE.addField(Xu, lu, su, uu, ws(su, lu, ju, Eu))
         }
-        mt[Kt][Ot] && Object.defineProperty(Vt, Ot, mt[Kt][Ot]), ("string" === typeof tt || ke(tt)) && (mt[vt] || Object.defineProperty(mt, vt, {
+        Xu[wu][su] && Object.defineProperty(ju, su, Xu[wu][su]), ("string" === typeof uu || QE(uu)) && (Xu[du] || Object.defineProperty(Xu, du, {
           value: [],
           enumerable: !1,
           configurable: !0,
           writable: !0
-        }), mt[vt][dt] = "string" === typeof tt ? Ve[tt] : oe(tt.quantized))
+        }), Xu[du][lu] = "string" === typeof uu ? EE[uu] : SE(uu.quantized))
       }
     }
-    const CO = {
+    const ps = {
       number: "number",
       int8: "number",
       uint8: "number",
@@ -5307,432 +5307,432 @@ export const modules = {
       boolean: "boolean"
     };
 
-    function uO(tt, et, Vt, Ot) {
-      let Dt;
-      return Dt = Ot ? function(tt, et, Vt, Ot) {
-        const Dt = Ot.constructor === OO,
-          mt = Ot.constructor === DO;
-        return function(tt) {
-          const Ot = this[Ct],
-            dt = Ot[et];
-          if (tt !== dt) {
-            if (void 0 !== tt && null !== tt) {
-              if (!Dt || tt instanceof OO)
-                if (!mt || tt instanceof DO) tt[yt] = Vt;
+    function ws(uu, Eu, ju, su) {
+      let Zu;
+      return Zu = su ? function(uu, Eu, ju, su) {
+        const Zu = su.constructor === ss,
+          Xu = su.constructor === Zs;
+        return function(uu) {
+          const su = this[Gu],
+            lu = su[Eu];
+          if (uu !== lu) {
+            if (void 0 !== uu && null !== uu) {
+              if (!Zu || uu instanceof ss)
+                if (!Xu || uu instanceof Zs) uu[hu] = ju;
                 else {
-                  const et = new DO;
-                  if (et[yt] = Vt, tt instanceof Map) tt.forEach(((tt, Vt) => et.set(Vt, tt)));
+                  const Eu = new Zs;
+                  if (Eu[hu] = ju, uu instanceof Map) uu.forEach(((uu, ju) => Eu.set(ju, uu)));
                   else
-                    for (const Vt in tt) et.set(Vt, tt[Vt]);
-                  tt = et
+                    for (const ju in uu) Eu.set(ju, uu[ju]);
+                  uu = Eu
                 }
               else {
-                const et = new OO;
-                et[yt] = Vt, et.push(...tt), tt = et
+                const Eu = new ss;
+                Eu[hu] = ju, Eu.push(...uu), uu = Eu
               }
-              const Ot = this[wt],
-                Ht = this.constructor;
-              void 0 !== dt && null !== dt && dt[wt] ? (Ot.root?.remove(dt[wt]), Ht[jt](Ot, et, qt.DELETE_AND_ADD)) : Ht[jt](Ot, et, qt.ADD), tt[wt]?.setParent(this, Ot.root, et)
-            } else void 0 !== dt && null !== dt && this[wt].delete(et);
-            Ot[et] = tt
+              const su = this[Yu],
+                fu = this.constructor;
+              void 0 !== lu && null !== lu && lu[Yu] ? (su.root?.remove(lu[Yu]), fu[qu](su, Eu, Uu.DELETE_AND_ADD)) : fu[qu](su, Eu, Uu.ADD), uu[Yu]?.setParent(this, su.root, Eu)
+            } else void 0 !== lu && null !== lu && this[Yu].delete(Eu);
+            su[Eu] = uu
           }
         }
-      }(0, et, Vt, Ot) : "string" === typeof Vt ? function(tt, et, Vt) {
-        const Ot = CO[Vt],
-          Dt = "string" === Vt,
-          mt = "boolean" === Vt;
-        return function(Vt) {
-          const dt = this[Ct],
-            Ht = dt[et];
-          if (Vt !== Ht) {
-            if (void 0 !== Vt && null !== Vt) {
-              if (!mt && void 0 !== Ot && typeof Vt !== Ot && (!Dt || null !== Vt)) {
-                const et = Vt && Vt.constructor ? ` (${Vt.constructor.name})` : "";
-                throw new nV(`a '${Ot}' was expected, but '${JSON.stringify(Vt)}'${et} was provided in ${this.constructor.name}#${tt}`)
+      }(0, Eu, ju, su) : "string" === typeof ju ? function(uu, Eu, ju) {
+        const su = ps[ju],
+          Zu = "string" === ju,
+          Xu = "boolean" === ju;
+        return function(ju) {
+          const lu = this[Gu],
+            fu = lu[Eu];
+          if (ju !== fu) {
+            if (void 0 !== ju && null !== ju) {
+              if (!Xu && void 0 !== su && typeof ju !== su && (!Zu || null !== ju)) {
+                const Eu = ju && ju.constructor ? ` (${ju.constructor.name})` : "";
+                throw new zj(`a '${su}' was expected, but '${JSON.stringify(ju)}'${Eu} was provided in ${this.constructor.name}#${uu}`)
               }
-              this.constructor[jt](this[wt], et, qt.ADD)
-            } else void 0 !== Ht && null !== Ht && this[wt].delete(et);
-            dt[et] = Vt
+              this.constructor[qu](this[Yu], Eu, Uu.ADD)
+            } else void 0 !== fu && null !== fu && this[Yu].delete(Eu);
+            lu[Eu] = ju
           }
         }
-      }(tt, et, Vt) : ke(Vt) ? function(tt, et, Vt) {
-        return function(Ot) {
-          const Dt = this[Ct],
-            mt = Dt[et];
-          if (void 0 !== Ot && null !== Ot) {
-            if ("number" !== typeof Ot) throw new nV(`a 'number' was expected, but '${JSON.stringify(Ot)}' was provided in ${this.constructor.name}#${tt}`);
-            if ((Ot = ze(Vt, Ge(Vt, Ot))) === mt) return;
-            this.constructor[jt](this[wt], et, qt.ADD)
+      }(uu, Eu, ju) : QE(ju) ? function(uu, Eu, ju) {
+        return function(su) {
+          const Zu = this[Gu],
+            Xu = Zu[Eu];
+          if (void 0 !== su && null !== su) {
+            if ("number" !== typeof su) throw new zj(`a 'number' was expected, but '${JSON.stringify(su)}' was provided in ${this.constructor.name}#${uu}`);
+            if ((su = WE(ju, iE(ju, su))) === Xu) return;
+            this.constructor[qu](this[Yu], Eu, Uu.ADD)
           } else {
-            if (Ot === mt) return;
-            void 0 !== mt && null !== mt && this[wt].delete(et)
+            if (su === Xu) return;
+            void 0 !== Xu && null !== Xu && this[Yu].delete(Eu)
           }
-          Dt[et] = Ot
+          Zu[Eu] = su
         }
-      }(tt, et, Vt.quantized) : function(tt, et, Vt) {
-        return function(Ot) {
-          const Dt = this[Ct],
-            mt = Dt[et];
-          if (Ot !== mt) {
-            if (void 0 !== Ot && null !== Ot) {
-              tO(Ot, Vt, this, tt);
-              const Dt = this[wt],
-                dt = this.constructor;
-              void 0 !== mt && null !== mt && mt[wt] ? (Dt.root?.remove(mt[wt]), dt[jt](Dt, et, qt.DELETE_AND_ADD)) : dt[jt](Dt, et, qt.ADD), Ot[wt]?.setParent(this, Dt.root, et)
-            } else void 0 !== mt && null !== mt && this[wt].delete(et);
-            Dt[et] = Ot
+      }(uu, Eu, ju.quantized) : function(uu, Eu, ju) {
+        return function(su) {
+          const Zu = this[Gu],
+            Xu = Zu[Eu];
+          if (su !== Xu) {
+            if (void 0 !== su && null !== su) {
+              Rj(su, ju, this, uu);
+              const Zu = this[Yu],
+                lu = this.constructor;
+              void 0 !== Xu && null !== Xu && Xu[Yu] ? (Zu.root?.remove(Xu[Yu]), lu[qu](Zu, Eu, Uu.DELETE_AND_ADD)) : lu[qu](Zu, Eu, Uu.ADD), su[Yu]?.setParent(this, Zu.root, Eu)
+            } else void 0 !== Xu && null !== Xu && this[Yu].delete(Eu);
+            Zu[Eu] = su
           }
         }
-      }(tt, et, Vt), {
+      }(uu, Eu, ju), {
         get: function() {
-          return this[Ct][et]
+          return this[Gu][Eu]
         },
-        set: Dt,
+        set: Zu,
         enumerable: !0,
         configurable: !0
       }
     }
 
-    function KO() {
-      let tt = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-      return function(et, Vt) {
-        const Ot = xe.initialize(et.constructor);
-        xe.setDeprecated(Ot, Vt), tt && (Ot[Kt] ??= {}, Ot[Kt][Vt] = {
+    function ds() {
+      let uu = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+      return function(Eu, ju) {
+        const su = HE.initialize(Eu.constructor);
+        HE.setDeprecated(su, ju), uu && (su[wu] ??= {}, su[wu][ju] = {
           get: function() {
-            throw new Error(`${Vt} is deprecated.`)
+            throw new Error(`${ju} is deprecated.`)
           },
-          set: function(tt) {},
+          set: function(uu) {},
           enumerable: !1,
           configurable: !0
-        }, Object.defineProperty(et, Vt, Ot[Kt][Vt]))
+        }, Object.defineProperty(Eu, ju, su[wu][ju]))
       }
     }
-    let hO = !1;
+    let as = !1;
 
-    function vO(tt, et, Vt) {
-      hO || (hO = !0, console.warn("@colyseus/schema: defineTypes() is deprecated and will be removed in a future release. Use schema() with t.* field builders instead \u2192 https://docs.colyseus.io/state/schema"));
-      for (let Ot in et) JO(et[Ot], Vt)(tt.prototype, Ot);
-      return tt
+    function Ps(uu, Eu, ju) {
+      as || (as = !0, console.warn("@colyseus/schema: defineTypes() is deprecated and will be removed in a future release. Use schema() with t.* field builders instead \u2192 https://docs.colyseus.io/state/schema"));
+      for (let su in Eu) Gs(Eu[su], ju)(uu.prototype, su);
+      return uu
     }
 
-    function WO(tt, et) {
-      let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : cO;
-      if (null == tt || "object" !== typeof tt) throw new Error(`schema(): first argument must be a fields object (got ${typeof tt}).`);
-      const Ot = {},
-        qt = {},
-        Dt = {},
-        mt = {},
-        dt = (tt, et) => {
-          if (et.hasDefault)((tt, et) => {
-            "function" === typeof et ? mt[tt] = et : et && "function" === typeof et.clone ? mt[tt] = () => et.clone() : Dt[tt] = et
-          })(tt, et.default);
-          else if (!et.optional) {
-            const Vt = function(tt) {
-              if (tt && "object" === typeof tt) {
-                if (void 0 !== tt.array) return () => new OO;
-                if (void 0 !== tt.map) return () => new DO;
-                if (void 0 !== tt.set) return () => new dO;
-                if (void 0 !== tt.collection) return () => new mO;
-                if (void 0 !== tt.stream) return () => new jO
-              } else if ("function" === typeof tt && cO.is(tt) && (!tt.prototype.initialize || 0 === tt.prototype.initialize.length)) return () => new tt
-            }(et.type);
-            Vt && (mt[tt] = Vt)
+    function os(uu, Eu) {
+      let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : ms;
+      if (null == uu || "object" !== typeof uu) throw new Error(`schema(): first argument must be a fields object (got ${typeof uu}).`);
+      const su = {},
+        Uu = {},
+        Zu = {},
+        Xu = {},
+        lu = (uu, Eu) => {
+          if (Eu.hasDefault)((uu, Eu) => {
+            "function" === typeof Eu ? Xu[uu] = Eu : Eu && "function" === typeof Eu.clone ? Xu[uu] = () => Eu.clone() : Zu[uu] = Eu
+          })(uu, Eu.default);
+          else if (!Eu.optional) {
+            const ju = function(uu) {
+              if (uu && "object" === typeof uu) {
+                if (void 0 !== uu.array) return () => new ss;
+                if (void 0 !== uu.map) return () => new Zs;
+                if (void 0 !== uu.set) return () => new ls;
+                if (void 0 !== uu.collection) return () => new Xs;
+                if (void 0 !== uu.stream) return () => new qs
+              } else if ("function" === typeof uu && ms.is(uu) && (!uu.prototype.initialize || 0 === uu.prototype.initialize.length)) return () => new uu
+            }(Eu.type);
+            ju && (Xu[uu] = ju)
           }
         },
-        jt = {},
-        Ht = [],
-        Xt = [],
-        Qt = {},
-        lt = [],
-        Et = [],
-        ft = {},
-        wt = [];
-      for (const Ct in tt) {
-        const Vt = tt[Ct],
-          Dt = `schema(${et?`'${et}'`:""}): field '${Ct}'`;
-        if (XO(Vt)) {
-          const tt = Vt.toDefinition();
-          if (tt.noSync) {
-            if (void 0 !== tt.view || tt.unreliable || tt.patchOnly || tt.fullStateOnly || tt.stream) throw new Error(`${Dt} uses .noSync() together with a sync-only modifier (.view/.unreliable/.patchOnly/.fullStateOnly/.stream). A local-only field cannot be synchronized.`);
-            dt(Ct, tt);
+        qu = {},
+        fu = [],
+        Cu = [],
+        bu = {},
+        cu = [],
+        Nu = [],
+        Ou = {},
+        Yu = [];
+      for (const Gu in uu) {
+        const ju = uu[Gu],
+          Zu = `schema(${Eu?`'${Eu}'`:""}): field '${Gu}'`;
+        if (Cs(ju)) {
+          const uu = ju.toDefinition();
+          if (uu.noSync) {
+            if (void 0 !== uu.view || uu.unreliable || uu.patchOnly || uu.fullStateOnly || uu.stream) throw new Error(`${Zu} uses .noSync() together with a sync-only modifier (.view/.unreliable/.patchOnly/.fullStateOnly/.stream). A local-only field cannot be synchronized.`);
+            lu(Gu, uu);
             continue
           }
-          if (tt.patchOnly && tt.fullStateOnly) throw new Error(`${Dt} uses .patchOnly() together with .fullStateOnly(). Those are the only two delivery channels, so the field would never reach a client \u2014 use .noSync() if that is intended.`);
-          const et = Ae(tt.type, Dt);
-          if ("function" === typeof et && !cO.is(et)) throw new Error(`${Dt} is a synced ref to non-Schema class '${et.name||"(anonymous)"}' \u2014 use .noSync(), or Metadata.setFields().`);
-          Ot[Ct] = et, void 0 !== tt.view && (jt[Ct] = tt.view), tt.unreliable && Ht.push(Ct), tt.patchOnly && Xt.push(Ct), tt.deprecated && (Qt[Ct] = tt.deprecatedThrows), tt.fullStateOnly && lt.push(Ct), tt.stream && Et.push(Ct), void 0 !== tt.streamPriority && (ft[Ct] = tt.streamPriority), tt.optional && wt.push(Ct), dt(Ct, tt)
+          if (uu.patchOnly && uu.fullStateOnly) throw new Error(`${Zu} uses .patchOnly() together with .fullStateOnly(). Those are the only two delivery channels, so the field would never reach a client \u2014 use .noSync() if that is intended.`);
+          const Eu = BE(uu.type, Zu);
+          if ("function" === typeof Eu && !ms.is(Eu)) throw new Error(`${Zu} is a synced ref to non-Schema class '${Eu.name||"(anonymous)"}' \u2014 use .noSync(), or Metadata.setFields().`);
+          su[Gu] = Eu, void 0 !== uu.view && (qu[Gu] = uu.view), uu.unreliable && fu.push(Gu), uu.patchOnly && Cu.push(Gu), uu.deprecated && (bu[Gu] = uu.deprecatedThrows), uu.fullStateOnly && cu.push(Gu), uu.stream && Nu.push(Gu), void 0 !== uu.streamPriority && (Ou[Gu] = uu.streamPriority), uu.optional && Yu.push(Gu), lu(Gu, uu)
         } else {
-          if ("function" !== typeof Vt) throw new Error(`${Dt} must be a t.* builder, Schema subclass, or method (got ${typeof Vt}).`);
-          cO.is(Vt) ? (Ot[Ct] = Vt, Vt.prototype.initialize && 0 !== Vt.prototype.initialize.length || (mt[Ct] = () => new Vt)) : qt[Ct] = Vt
+          if ("function" !== typeof ju) throw new Error(`${Zu} must be a t.* builder, Schema subclass, or method (got ${typeof ju}).`);
+          ms.is(ju) ? (su[Gu] = ju, ju.prototype.initialize && 0 !== ju.prototype.initialize.length || (Xu[Gu] = () => new ju)) : Uu[Gu] = ju
         }
       }
-      const yt = tt => {
-          for (const et in Dt) tt[et] = Dt[et];
-          for (const et in mt) tt[et] = mt[et]()
+      const hu = uu => {
+          for (const Eu in Zu) uu[Eu] = Zu[Eu];
+          for (const Eu in Xu) uu[Eu] = Xu[Eu]()
         },
-        Nt = () => {
-          const tt = {};
-          return yt(tt), tt
+        Du = () => {
+          const uu = {};
+          return hu(uu), uu
         },
-        Mt = "function" === typeof qt.initialize,
-        bt = qt.initialize ?? Vt._initialize,
-        Jt = class extends Vt {
+        gu = "function" === typeof Uu.initialize,
+        Mu = Uu.initialize ?? ju._initialize,
+        eu = class extends ju {
           constructor() {
-            for (var tt = arguments.length, et = new Array(tt), Vt = 0; Vt < tt; Vt++) et[Vt] = arguments[Vt];
-            const qt = et[0];
-            void 0 === qt ? (super(), yt(this)) : super(Object.assign(Nt(), Mt ? (tt => {
-              const et = Object.keys(Ot),
-                Vt = {};
-              for (const Ot in tt) et.includes(Ot) || (Vt[Ot] = tt[Ot]);
-              return Vt
-            })(qt) : qt)), bt && new.target === Jt && bt.apply(this, et)
+            for (var uu = arguments.length, Eu = new Array(uu), ju = 0; ju < uu; ju++) Eu[ju] = arguments[ju];
+            const Uu = Eu[0];
+            void 0 === Uu ? (super(), hu(this)) : super(Object.assign(Du(), gu ? (uu => {
+              const Eu = Object.keys(su),
+                ju = {};
+              for (const su in uu) Eu.includes(su) || (ju[su] = uu[su]);
+              return ju
+            })(Uu) : Uu)), Mu && new.target === eu && Mu.apply(this, Eu)
           }
         };
-      et && Object.defineProperty(Jt, "name", {
-        value: et
-      }), xe.setFields(Jt, Ot), Jt._getDefaultValues = Nt, Jt._initialize = bt, Object.assign(Jt.prototype, qt);
-      for (const Ct in jt) NO(jt[Ct])(Jt.prototype, Ct);
-      for (const Ct of Ht) aO(Jt.prototype, Ct);
-      for (const Ct of Xt) MO(Jt.prototype, Ct);
-      for (const Ct in Qt) KO(Qt[Ct])(Jt.prototype, Ct);
-      if (lt.length > 0 || Et.length > 0) {
-        const tt = Jt[Symbol.metadata];
-        for (const et of lt) xe.setFullStateOnly(tt, et);
-        for (const et of Et) xe.setStream(tt, et);
-        for (const et in ft) xe.setStreamPriority(tt, et, ft[et])
+      Eu && Object.defineProperty(eu, "name", {
+        value: Eu
+      }), HE.setFields(eu, su), eu._getDefaultValues = Du, eu._initialize = Mu, Object.assign(eu.prototype, Uu);
+      for (const Gu in qu) Ds(qu[Gu])(eu.prototype, Gu);
+      for (const Gu of fu) gs(eu.prototype, Gu);
+      for (const Gu of Cu) Ms(eu.prototype, Gu);
+      for (const Gu in bu) ds(bu[Gu])(eu.prototype, Gu);
+      if (cu.length > 0 || Nu.length > 0) {
+        const uu = eu[Symbol.metadata];
+        for (const Eu of cu) HE.setFullStateOnly(uu, Eu);
+        for (const Eu of Nu) HE.setStream(uu, Eu);
+        for (const Eu in Ou) HE.setStreamPriority(uu, Eu, Ou[Eu])
       }
-      if (wt.length > 0) {
-        const tt = Jt[Symbol.metadata];
-        for (const et of wt) tt[tt[et]].optional = !0
+      if (Yu.length > 0) {
+        const uu = eu[Symbol.metadata];
+        for (const Eu of Yu) uu[uu[Eu]].optional = !0
       }
-      return Jt.extend = (tt, et) => WO(tt, et, Jt), Jt
+      return eu.extend = (uu, Eu) => os(uu, Eu, eu), eu
     }
 
-    function SO(tt) {
-      const et = tt[wt].root,
-        Vt = {
+    function ks(uu) {
+      const Eu = uu[Yu].root,
+        ju = {
           ops: {},
           refs: []
         };
-      let Ot = et.changes.next;
-      for (; Ot;) {
-        const tt = Ot.changeTree;
-        void 0 !== tt ? (Vt.refs.push(`refId#${tt.ref[dt]}`), tt.forEach(((tt, et) => {
-          if (tt < 0 || !et) return;
-          const Ot = qt[et];
-          Vt.ops[Ot] || (Vt.ops[Ot] = 0), Vt.ops[Ot]++
-        })), Ot = Ot.next) : Ot = Ot.next
+      let su = Eu.changes.next;
+      for (; su;) {
+        const uu = su.changeTree;
+        void 0 !== uu ? (ju.refs.push(`refId#${uu.ref[lu]}`), uu.forEach(((uu, Eu) => {
+          if (uu < 0 || !Eu) return;
+          const su = Uu[Eu];
+          ju.ops[su] || (ju.ops[su] = 0), ju.ops[su]++
+        })), su = su.next) : su = su.next
       }
-      return Vt
+      return ju
     }
-    class cO {
-      static[Ht] = LV;
-      static[Xt] = TV;
-      [dt];
-      [Ct];
-      static initialize(tt) {
-        Object.defineProperty(tt, wt, {
-          value: new RV(tt),
+    class ms {
+      static[fu] = Vj;
+      static[Cu] = Aj;
+      [lu];
+      [Gu];
+      static initialize(uu) {
+        Object.defineProperty(uu, Yu, {
+          value: new kj(uu),
           enumerable: !1,
           writable: !0
-        }), tt[Ct] = []
+        }), uu[Gu] = []
       }
       static initializeForDecoder() {
-        const tt = Object.create(this.prototype);
-        return PV(tt), tt[Ct] = [], tt
+        const uu = Object.create(this.prototype);
+        return vj(uu), uu[Gu] = [], uu
       }
-      static reset(tt) {
-        const et = tt?.[wt];
-        if (void 0 === et || "function" !== typeof et.recycle) throw new Error("@colyseus/schema: Schema.reset() requires a tracked (encoder-side) instance.");
-        if (void 0 !== et.extraParents) throw new Error(`@colyseus/schema: cannot reset a shared instance (${tt.constructor.name}) with multiple parents.`);
-        tt[bt]()
-      } [bt]() {
-        const tt = this.constructor[Symbol.metadata],
-          et = tt?.[St] ?? [],
-          Vt = this[Ct];
-        for (let Ot = 0; Ot < et.length; Ot++) {
-          const tt = Vt[et[Ot]];
-          tt?.[bt]?.()
+      static reset(uu) {
+        const Eu = uu?.[Yu];
+        if (void 0 === Eu || "function" !== typeof Eu.recycle) throw new Error("@colyseus/schema: Schema.reset() requires a tracked (encoder-side) instance.");
+        if (void 0 !== Eu.extraParents) throw new Error(`@colyseus/schema: cannot reset a shared instance (${uu.constructor.name}) with multiple parents.`);
+        uu[Mu]()
+      } [Mu]() {
+        const uu = this.constructor[Symbol.metadata],
+          Eu = uu?.[Pu] ?? [],
+          ju = this[Gu];
+        for (let su = 0; su < Eu.length; su++) {
+          const uu = ju[Eu[su]];
+          uu?.[Mu]?.()
         }
-        this[wt].recycle(), this[dt] = void 0
+        this[Yu].recycle(), this[lu] = void 0
       }
-      static is(tt) {
-        const et = tt[Symbol.metadata];
-        return "object" === typeof et && null !== et
+      static is(uu) {
+        const Eu = uu[Symbol.metadata];
+        return "object" === typeof Eu && null !== Eu
       }
-      static isSchema(tt) {
-        return "function" === typeof tt?.assign
+      static isSchema(uu) {
+        return "function" === typeof uu?.assign
       }
-      static[jt](tt, et) {
-        let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : qt.ADD;
-        tt.change(et, Vt)
+      static[qu](uu, Eu) {
+        let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Uu.ADD;
+        uu.change(Eu, ju)
       }
-      static[Qt](tt, et, Vt) {
-        const Ot = tt.constructor[Symbol.metadata],
-          qt = Ot[et]?.tag;
-        return void 0 === Vt ? void 0 === qt : void 0 === qt || (qt === wO ? Vt.isChangeTreeVisible(tt[wt]) : Vt.hasTagOnTree(tt[wt], qt))
+      static[bu](uu, Eu, ju) {
+        const su = uu.constructor[Symbol.metadata],
+          Uu = su[Eu]?.tag;
+        return void 0 === ju ? void 0 === Uu : void 0 === Uu || (Uu === Ys ? ju.isChangeTreeVisible(uu[Yu]) : ju.hasTagOnTree(uu[Yu], Uu))
       }
-      constructor(tt) {
-        cO.initialize(this), tt && cO.assignProps(this, tt)
+      constructor(uu) {
+        ms.initialize(this), uu && ms.assignProps(this, uu)
       }
-      assign(tt) {
-        return cO.assignProps(this, tt), this
+      assign(uu) {
+        return ms.assignProps(this, uu), this
       }
-      static assignProps(tt, et) {
-        const Vt = tt.constructor[Symbol.metadata];
-        if (Vt && void 0 !== Vt[Wt])
-          for (let qt = 0; qt <= Vt[Wt]; qt++) {
-            const Ot = Vt[qt];
-            if (!Ot) continue;
-            const Dt = et[Ot.name];
-            void 0 !== Dt && (tt[Ot.name] = Dt)
+      static assignProps(uu, Eu) {
+        const ju = uu.constructor[Symbol.metadata];
+        if (ju && void 0 !== ju[au])
+          for (let Uu = 0; Uu <= ju[au]; Uu++) {
+            const su = ju[Uu];
+            if (!su) continue;
+            const Zu = Eu[su.name];
+            void 0 !== Zu && (uu[su.name] = Zu)
           }
-        const Ot = Object.keys(et);
-        for (let qt = 0; qt < Ot.length; qt++) {
-          const Dt = Ot[qt];
-          Vt && void 0 !== Vt[Dt] || (tt[Dt] = et[Dt])
+        const su = Object.keys(Eu);
+        for (let Uu = 0; Uu < su.length; Uu++) {
+          const Zu = su[Uu];
+          ju && void 0 !== ju[Zu] || (uu[Zu] = Eu[Zu])
         }
       }
-      restore(tt) {
-        const et = this.constructor[Symbol.metadata];
-        for (const Vt in et) {
-          const Ot = et[Vt],
-            qt = Ot.name,
-            Dt = Ot.type,
-            mt = tt[qt];
-          if (void 0 !== mt && null !== mt)
-            if ("string" === typeof Dt) this[qt] = mt;
-            else if (cO.is(Dt)) {
-            const tt = new Dt;
-            tt.restore(mt), this[qt] = tt
-          } else if ("object" === typeof Dt) {
-            const tt = Object.keys(Dt)[0],
-              et = Dt[tt];
-            if ("map" === tt) {
-              const tt = this[qt];
-              for (const Vt in mt)
-                if (cO.is(et)) {
-                  const Ot = new et;
-                  Ot.restore(mt[Vt]), tt.set(Vt, Ot)
-                } else tt.set(Vt, mt[Vt])
-            } else if ("array" === tt) {
-              const tt = this[qt];
-              for (let Vt = 0; Vt < mt.length; Vt++)
-                if (cO.is(et)) {
-                  const Ot = new et;
-                  Ot.restore(mt[Vt]), tt.push(Ot)
-                } else tt.push(mt[Vt])
+      restore(uu) {
+        const Eu = this.constructor[Symbol.metadata];
+        for (const ju in Eu) {
+          const su = Eu[ju],
+            Uu = su.name,
+            Zu = su.type,
+            Xu = uu[Uu];
+          if (void 0 !== Xu && null !== Xu)
+            if ("string" === typeof Zu) this[Uu] = Xu;
+            else if (ms.is(Zu)) {
+            const uu = new Zu;
+            uu.restore(Xu), this[Uu] = uu
+          } else if ("object" === typeof Zu) {
+            const uu = Object.keys(Zu)[0],
+              Eu = Zu[uu];
+            if ("map" === uu) {
+              const uu = this[Uu];
+              for (const ju in Xu)
+                if (ms.is(Eu)) {
+                  const su = new Eu;
+                  su.restore(Xu[ju]), uu.set(ju, su)
+                } else uu.set(ju, Xu[ju])
+            } else if ("array" === uu) {
+              const uu = this[Uu];
+              for (let ju = 0; ju < Xu.length; ju++)
+                if (ms.is(Eu)) {
+                  const su = new Eu;
+                  su.restore(Xu[ju]), uu.push(su)
+                } else uu.push(Xu[ju])
             }
           }
         }
         return this
       }
-      setDirty(tt, et) {
-        const Vt = this.constructor[Symbol.metadata];
-        this[wt].change(Vt[Vt[tt]].index, et)
+      setDirty(uu, Eu) {
+        const ju = this.constructor[Symbol.metadata];
+        this[Yu].change(ju[ju[uu]].index, Eu)
       }
       pauseTracking() {
-        this[wt].pause()
+        this[Yu].pause()
       }
       resumeTracking() {
-        this[wt].resume()
+        this[Yu].resume()
       }
-      untracked(tt) {
-        return this[wt].untracked(tt)
+      untracked(uu) {
+        return this[Yu].untracked(uu)
       }
       get isTrackingPaused() {
-        return this[wt].paused
+        return this[Yu].paused
       }
       clone() {
-        const tt = Object.create(this.constructor.prototype);
-        cO.initialize(tt);
-        const et = this.constructor[Symbol.metadata];
-        for (const Vt in et) {
-          const Ot = et[Vt].name;
-          "object" === typeof this[Ot] && "function" === typeof this[Ot]?.clone ? tt[Ot] = this[Ot].clone() : tt[Ot] = this[Ot]
+        const uu = Object.create(this.constructor.prototype);
+        ms.initialize(uu);
+        const Eu = this.constructor[Symbol.metadata];
+        for (const ju in Eu) {
+          const su = Eu[ju].name;
+          "object" === typeof this[su] && "function" === typeof this[su]?.clone ? uu[su] = this[su].clone() : uu[su] = this[su]
         }
-        return tt
+        return uu
       }
       toJSON() {
-        const tt = {},
-          et = this.constructor[Symbol.metadata];
-        for (const Vt in et) {
-          const Ot = et[Vt],
-            qt = Ot.name;
-          Ot.deprecated || null === this[qt] || "undefined" === typeof this[qt] || (tt[qt] = "function" === typeof this[qt].toJSON ? this[qt].toJSON() : this[qt])
+        const uu = {},
+          Eu = this.constructor[Symbol.metadata];
+        for (const ju in Eu) {
+          const su = Eu[ju],
+            Uu = su.name;
+          su.deprecated || null === this[Uu] || "undefined" === typeof this[Uu] || (uu[Uu] = "function" === typeof this[Uu].toJSON ? this[Uu].toJSON() : this[Uu])
         }
-        return tt
+        return uu
       }
       discardAllChanges() {
-        this[wt].discardAll()
-      } [lt](tt) {
-        return this[this.constructor[Symbol.metadata][tt].name]
-      } [Et](tt) {
-        this[this.constructor[Symbol.metadata][tt].name] = void 0
+        this[Yu].discardAll()
+      } [cu](uu) {
+        return this[this.constructor[Symbol.metadata][uu].name]
+      } [Nu](uu) {
+        this[this.constructor[Symbol.metadata][uu].name] = void 0
       }
-      static debugRefIds(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          Ot = arguments.length > 3 ? arguments[3] : void 0,
-          qt = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "";
-        const Dt = et ? ` - ${JSON.stringify(tt.toJSON())}` : "",
-          mt = tt[wt],
-          jt = tt[dt],
-          Ht = Ot ? Ot.root.refCount[jt] : mt.refCount,
-          Xt = Ht > 1 ? ` [\xd7${Ht}]` : "";
-        let Qt = `${function(tt){return new Array(tt).fill(0).map(((et,Vt)=>Vt===tt-1?"\u2514\u2500 ":"   ")).join("")}(Vt)}${qt}${tt.constructor.name} (refId: ${jt})${Xt}${Dt}\n`;
-        return mt.forEachChild(((qt, Dt) => {
-          let mt = Dt;
-          "number" === typeof Dt && tt.$indexes && (mt = tt.$indexes.get(Dt) ?? Dt);
-          const dt = void 0 !== tt.forEach && void 0 !== mt ? `["${mt}"]: ` : "";
-          Qt += this.debugRefIds(qt.ref, et, Vt + 1, Ot, dt)
-        })), Qt
+      static debugRefIds(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          su = arguments.length > 3 ? arguments[3] : void 0,
+          Uu = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "";
+        const Zu = Eu ? ` - ${JSON.stringify(uu.toJSON())}` : "",
+          Xu = uu[Yu],
+          qu = uu[lu],
+          fu = su ? su.root.refCount[qu] : Xu.refCount,
+          Cu = fu > 1 ? ` [\xd7${fu}]` : "";
+        let bu = `${function(uu){return new Array(uu).fill(0).map(((Eu,ju)=>ju===uu-1?"\u2514\u2500 ":"   ")).join("")}(ju)}${Uu}${uu.constructor.name} (refId: ${qu})${Cu}${Zu}\n`;
+        return Xu.forEachChild(((Uu, Zu) => {
+          let Xu = Zu;
+          "number" === typeof Zu && uu.$indexes && (Xu = uu.$indexes.get(Zu) ?? Zu);
+          const lu = void 0 !== uu.forEach && void 0 !== Xu ? `["${Xu}"]: ` : "";
+          bu += this.debugRefIds(Uu.ref, Eu, ju + 1, su, lu)
+        })), bu
       }
-      static debugRefIdEncodingOrder(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "allChanges";
-        const Vt = [],
-          Ot = tt[wt];
-        if ("changes" === et) {
-          let tt = Ot.root.changes?.next;
-          for (; tt;) tt.changeTree && Vt.push(tt.changeTree.ref[dt]), tt = tt.next;
-          return Vt
+      static debugRefIdEncodingOrder(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "allChanges";
+        const ju = [],
+          su = uu[Yu];
+        if ("changes" === Eu) {
+          let uu = su.root.changes?.next;
+          for (; uu;) uu.changeTree && ju.push(uu.changeTree.ref[lu]), uu = uu.next;
+          return ju
         }
-        const qt = "allFilteredChanges" === et,
-          Dt = new Set,
-          mt = tt => {
-            Dt.has(tt) || (Dt.add(tt), tt.isFiltered === qt && Vt.push(tt.ref[dt]), tt.forEachChild(((tt, et) => mt(tt))))
+        const Uu = "allFilteredChanges" === Eu,
+          Zu = new Set,
+          Xu = uu => {
+            Zu.has(uu) || (Zu.add(uu), uu.isFiltered === Uu && ju.push(uu.ref[lu]), uu.forEachChild(((uu, Eu) => Xu(uu))))
           };
-        return mt(Ot), Vt
+        return Xu(su), ju
       }
-      static debugRefIdsFromDecoder(tt) {
-        return this.debugRefIds(tt.state, !1, 0, tt)
+      static debugRefIdsFromDecoder(uu) {
+        return this.debugRefIds(uu.state, !1, 0, uu)
       }
-      static debugChanges(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const Vt = tt[wt],
-          Ot = et ? "allChanges" : "changes";
-        let Dt = `${tt.constructor.name} (${tt[dt]}) -> .${Ot}:\n`;
-        return et ? Vt.forEachLive((tt => {
-          Dt += `- [${tt}]: ADD (${JSON.stringify(Vt.getValue(Number(tt),!0))})\n`
-        })) : Vt.forEach(((tt, et) => {
-          tt < 0 || !et || (Dt += `- [${tt}]: ${qt[et]} (${JSON.stringify(Vt.getValue(Number(tt),!1))})\n`)
-        })), Dt
+      static debugChanges(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const ju = uu[Yu],
+          su = Eu ? "allChanges" : "changes";
+        let Zu = `${uu.constructor.name} (${uu[lu]}) -> .${su}:\n`;
+        return Eu ? ju.forEachLive((uu => {
+          Zu += `- [${uu}]: ADD (${JSON.stringify(ju.getValue(Number(uu),!0))})\n`
+        })) : ju.forEach(((uu, Eu) => {
+          uu < 0 || !Eu || (Zu += `- [${uu}]: ${Uu[Eu]} (${JSON.stringify(ju.getValue(Number(uu),!1))})\n`)
+        })), Zu
       }
     }
-    Dt(cO);
-    const RO = {
+    Zu(ms);
+    const vs = {
       value: 0,
       enumerable: !1,
       writable: !0
     };
-    class IO {
+    class Ks {
       types;
       nextUniqueId = 0;
       changeTrees = {};
       get refCount() {
-        const tt = {};
-        for (const et in this.changeTrees) tt[et] = this.changeTrees[et].refCount;
-        return tt
+        const uu = {};
+        for (const Eu in this.changeTrees) uu[Eu] = this.changeTrees[Eu].refCount;
+        return uu
       }
       changes = {
         next: void 0,
@@ -5745,8 +5745,8 @@ export const modules = {
         nextPosition: 0
       };
       pendingFilterRefresh = [];
-      enqueueFilterRefresh(tt) {
-        this.types.hasFilters && (tt.flags & SV || (tt.flags |= SV, this.pendingFilterRefresh.push(tt)))
+      enqueueFilterRefresh(uu) {
+        this.types.hasFilters && (uu.flags & Pj || (uu.flags |= Pj, this.pendingFilterRefresh.push(uu)))
       }
       _nodePool = [];
       _nextViewId = 0;
@@ -5754,144 +5754,144 @@ export const modules = {
       acquireViewId() {
         return this._freeViewIds.length > 0 ? this._freeViewIds.pop() : this._nextViewId++
       }
-      releaseViewId(tt) {
-        this._freeViewIds.push(tt)
+      releaseViewId(uu) {
+        this._freeViewIds.push(uu)
       }
       activeViews = new Map;
       streamTrees = new Set;
-      registerView(tt) {
-        this.activeViews.set(tt.id, new WeakRef(tt))
+      registerView(uu) {
+        this.activeViews.set(uu.id, new WeakRef(uu))
       }
-      unregisterView(tt) {
-        this.activeViews.delete(tt.id);
-        const et = tt.id;
-        for (const Vt of this.streamTrees) Vt._dropView(et)
+      unregisterView(uu) {
+        this.activeViews.delete(uu.id);
+        const Eu = uu.id;
+        for (const ju of this.streamTrees) ju._dropView(Eu)
       }
-      forEachActiveView(tt) {
-        for (const [et, Vt] of this.activeViews) {
-          const Ot = Vt.deref();
-          if (void 0 !== Ot) tt(Ot);
+      forEachActiveView(uu) {
+        for (const [Eu, ju] of this.activeViews) {
+          const su = ju.deref();
+          if (void 0 !== su) uu(su);
           else {
-            this.activeViews.delete(et);
-            for (const tt of this.streamTrees) tt._dropView(et)
+            this.activeViews.delete(Eu);
+            for (const uu of this.streamTrees) uu._dropView(Eu)
           }
         }
       }
-      registerStream(tt) {
-        this.streamTrees.add(tt)
+      registerStream(uu) {
+        this.streamTrees.add(uu)
       }
-      unregisterStream(tt) {
-        this.streamTrees.delete(tt)
+      unregisterStream(uu) {
+        this.streamTrees.delete(uu)
       }
-      constructor(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        this.types = tt, this.nextUniqueId = et
+      constructor(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        this.types = uu, this.nextUniqueId = Eu
       }
-      add(tt) {
-        const et = tt.ref;
-        void 0 === et[dt] && (RO.value = this.nextUniqueId++, Object.defineProperty(et, dt, RO));
-        const Vt = et[dt],
-          Ot = void 0 === this.changeTrees[Vt];
-        Ot && (this.changeTrees[Vt] = tt), tt.needsRestage && (tt.needsRestage = !1, tt.forEachLiveWithCtx(tt, OV));
-        const qt = Ot ? 0 : tt.refCount;
-        return tt.refCount = qt + 1, qt > 0 && this.enqueueFilterRefresh(tt), Ot
+      add(uu) {
+        const Eu = uu.ref;
+        void 0 === Eu[lu] && (vs.value = this.nextUniqueId++, Object.defineProperty(Eu, lu, vs));
+        const ju = Eu[lu],
+          su = void 0 === this.changeTrees[ju];
+        su && (this.changeTrees[ju] = uu), uu.needsRestage && (uu.needsRestage = !1, uu.forEachLiveWithCtx(uu, jj));
+        const Uu = su ? 0 : uu.refCount;
+        return uu.refCount = Uu + 1, Uu > 0 && this.enqueueFilterRefresh(uu), su
       }
-      remove(tt) {
-        const et = tt.refCount - 1;
-        if (et <= 0) {
-          if (tt.root = void 0, delete this.changeTrees[tt.ref[dt]], tt.isStreamCollection) {
-            const et = tt.ref;
-            et._unregister?.(), this.unregisterStream(et)
+      remove(uu) {
+        const Eu = uu.refCount - 1;
+        if (Eu <= 0) {
+          if (uu.root = void 0, delete this.changeTrees[uu.ref[lu]], uu.isStreamCollection) {
+            const Eu = uu.ref;
+            Eu._unregister?.(), this.unregisterStream(Eu)
           }
-          this.removeFromQueue(tt), this.removeFromUnreliableQueue(tt), tt.refCount = 0, tt.needsRestage = !0, tt.forEachChild(((et, Vt) => {
-            et.removeParent(tt.ref) && (void 0 === et.parentRef || et.refCount > 0 ? this.remove(et) : this.moveNextToParent(et))
+          this.removeFromQueue(uu), this.removeFromUnreliableQueue(uu), uu.refCount = 0, uu.needsRestage = !0, uu.forEachChild(((Eu, ju) => {
+            Eu.removeParent(uu.ref) && (void 0 === Eu.parentRef || Eu.refCount > 0 ? this.remove(Eu) : this.moveNextToParent(Eu))
           }))
-        } else tt.refCount = et, this.enqueueFilterRefresh(tt), this.recursivelyMoveNextToParent(tt);
-        return et
+        } else uu.refCount = Eu, this.enqueueFilterRefresh(uu), this.recursivelyMoveNextToParent(uu);
+        return Eu
       }
-      recursivelyMoveNextToParent(tt) {
-        this.moveNextToParent(tt), tt.forEachChild(((tt, et) => this.recursivelyMoveNextToParent(tt)))
+      recursivelyMoveNextToParent(uu) {
+        this.moveNextToParent(uu), uu.forEachChild(((uu, Eu) => this.recursivelyMoveNextToParent(uu)))
       }
-      moveNextToParent(tt) {
-        tt.changesNode && this._moveNextToParentInList(this.changes, tt, tt.changesNode, "changesNode"), tt.unreliableChangesNode && this._moveNextToParentInList(this.unreliableChanges, tt, tt.unreliableChangesNode, "unreliableChangesNode")
+      moveNextToParent(uu) {
+        uu.changesNode && this._moveNextToParentInList(this.changes, uu, uu.changesNode, "changesNode"), uu.unreliableChangesNode && this._moveNextToParentInList(this.unreliableChanges, uu, uu.unreliableChangesNode, "unreliableChangesNode")
       }
-      _moveNextToParentInList(tt, et, Vt, Ot) {
-        const qt = et.parent;
-        if (!qt || !qt[wt]) return;
-        const Dt = qt[wt][Ot];
-        Dt && Dt !== Vt && (Vt.position > Dt.position || (Vt.prev ? Vt.prev.next = Vt.next : tt.next = Vt.next, Vt.next ? Vt.next.prev = Vt.prev : tt.tail = Vt.prev, Vt.prev = tt.tail, Vt.next = void 0, tt.tail.next = Vt, tt.tail = Vt, Vt.position = tt.nextPosition++))
+      _moveNextToParentInList(uu, Eu, ju, su) {
+        const Uu = Eu.parent;
+        if (!Uu || !Uu[Yu]) return;
+        const Zu = Uu[Yu][su];
+        Zu && Zu !== ju && (ju.position > Zu.position || (ju.prev ? ju.prev.next = ju.next : uu.next = ju.next, ju.next ? ju.next.prev = ju.prev : uu.tail = ju.prev, ju.prev = uu.tail, ju.next = void 0, uu.tail.next = ju, uu.tail = ju, ju.position = uu.nextPosition++))
       }
-      enqueueChangeTree(tt) {
-        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : tt.changesNode) || (tt.changesNode = this._appendToList(this.changes, tt))
+      enqueueChangeTree(uu) {
+        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : uu.changesNode) || (uu.changesNode = this._appendToList(this.changes, uu))
       }
-      enqueueUnreliable(tt) {
-        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : tt.unreliableChangesNode) || (tt.unreliableChangesNode = this._appendToList(this.unreliableChanges, tt))
+      enqueueUnreliable(uu) {
+        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : uu.unreliableChangesNode) || (uu.unreliableChangesNode = this._appendToList(this.unreliableChanges, uu))
       }
-      _appendToList(tt, et) {
-        const Vt = this._nodePool;
-        let Ot;
-        return Vt.length > 0 ? (Ot = Vt.pop(), Ot.changeTree = et, Ot.next = void 0, Ot.prev = void 0) : Ot = {
-          changeTree: et,
+      _appendToList(uu, Eu) {
+        const ju = this._nodePool;
+        let su;
+        return ju.length > 0 ? (su = ju.pop(), su.changeTree = Eu, su.next = void 0, su.prev = void 0) : su = {
+          changeTree: Eu,
           next: void 0,
           prev: void 0,
           position: 0
-        }, tt.next ? (Ot.prev = tt.tail, tt.tail.next = Ot, tt.tail = Ot) : (tt.nextPosition = 0, tt.next = Ot, tt.tail = Ot), Ot.position = tt.nextPosition++, Ot
+        }, uu.next ? (su.prev = uu.tail, uu.tail.next = su, uu.tail = su) : (uu.nextPosition = 0, uu.next = su, uu.tail = su), su.position = uu.nextPosition++, su
       }
-      releaseNode(tt) {
-        tt.changeTree = void 0, tt.prev = void 0, tt.next = void 0, this._nodePool.push(tt)
+      releaseNode(uu) {
+        uu.changeTree = void 0, uu.prev = void 0, uu.next = void 0, this._nodePool.push(uu)
       }
-      removeFromQueue(tt) {
-        return this._removeNode(this.changes, tt, tt.changesNode, "changesNode")
+      removeFromQueue(uu) {
+        return this._removeNode(this.changes, uu, uu.changesNode, "changesNode")
       }
-      removeFromUnreliableQueue(tt) {
-        return this._removeNode(this.unreliableChanges, tt, tt.unreliableChangesNode, "unreliableChangesNode")
+      removeFromUnreliableQueue(uu) {
+        return this._removeNode(this.unreliableChanges, uu, uu.unreliableChangesNode, "unreliableChangesNode")
       }
-      _removeNode(tt, et, Vt, Ot) {
-        return !(!Vt || Vt.changeTree !== et) && (Vt.prev ? Vt.prev.next = Vt.next : tt.next = Vt.next, Vt.next ? Vt.next.prev = Vt.prev : tt.tail = Vt.prev, et[Ot] = void 0, this.releaseNode(Vt), !0)
+      _removeNode(uu, Eu, ju, su) {
+        return !(!ju || ju.changeTree !== Eu) && (ju.prev ? ju.prev.next = ju.next : uu.next = ju.next, ju.next ? ju.next.prev = ju.prev : uu.tail = ju.prev, Eu[su] = void 0, this.releaseNode(ju), !0)
       }
     }
 
-    function PO(tt, et) {
-      if (-1 === et || et >= tt.length) return !1;
-      const Vt = tt.length - 1;
-      for (let Ot = et; Ot < Vt; Ot++) tt[Ot] = tt[Ot + 1];
-      return tt.length = Vt, !0
+    function Vs(uu, Eu) {
+      if (-1 === Eu || Eu >= uu.length) return !1;
+      const ju = uu.length - 1;
+      for (let su = Eu; su < ju; su++) uu[su] = uu[su + 1];
+      return uu.length = ju, !0
     }
 
-    function ZO(tt, et, Vt) {
-      const Ot = ~Vt,
-        qt = tt.changeTrees;
-      for (const Dt in qt) {
-        const tt = qt[Dt],
-          Vt = tt.visibleViews;
-        void 0 !== Vt && et < Vt.length && (Vt[et] &= Ot);
-        const mt = tt.subscribedViews;
-        void 0 !== mt && et < mt.length && (mt[et] &= Ot);
-        const dt = tt.tagViews;
-        void 0 !== dt && dt.forEach((tt => {
-          et < tt.length && (tt[et] &= Ot)
+    function rs(uu, Eu, ju) {
+      const su = ~ju,
+        Uu = uu.changeTrees;
+      for (const Zu in Uu) {
+        const uu = Uu[Zu],
+          ju = uu.visibleViews;
+        void 0 !== ju && Eu < ju.length && (ju[Eu] &= su);
+        const Xu = uu.subscribedViews;
+        void 0 !== Xu && Eu < Xu.length && (Xu[Eu] &= su);
+        const lu = uu.tagViews;
+        void 0 !== lu && lu.forEach((uu => {
+          Eu < uu.length && (uu[Eu] &= su)
         }))
       }
     }
-    const LO = new FinalizationRegistry((tt => {
+    const Qs = new FinalizationRegistry((uu => {
       let {
-        root: et,
-        id: Vt,
-        slot: Ot,
-        bit: qt
-      } = tt;
-      ZO(et, Ot, qt), et.activeViews.delete(Vt);
-      for (const Dt of et.streamTrees) Dt._dropView(Vt);
-      et.releaseViewId(Vt)
+        root: Eu,
+        id: ju,
+        slot: su,
+        bit: Uu
+      } = uu;
+      rs(Eu, su, Uu), Eu.activeViews.delete(ju);
+      for (const Zu of Eu.streamTrees) Zu._dropView(ju);
+      Eu.releaseViewId(ju)
     }));
 
-    function FO(tt) {
-      if (void 0 === tt) return "undefined";
-      if (null === tt) return "null";
-      const et = typeof tt;
-      return "string" === et ? JSON.stringify(tt.length > 30 ? `${tt.slice(0,30)}\u2026` : tt) : "object" !== et && "function" !== et ? `${et} ${String(tt)}` : Array.isArray(tt) ? `Array(${tt.length})` : tt.constructor?.name ?? "Object"
+    function is(uu) {
+      if (void 0 === uu) return "undefined";
+      if (null === uu) return "null";
+      const Eu = typeof uu;
+      return "string" === Eu ? JSON.stringify(uu.length > 30 ? `${uu.slice(0,30)}\u2026` : uu) : "object" !== Eu && "function" !== Eu ? `${Eu} ${String(uu)}` : Array.isArray(uu) ? `Array(${uu.length})` : uu.constructor?.name ?? "Object"
     }
-    class kO {
+    class Ws {
       iterable;
       items;
       id = -1;
@@ -5900,385 +5900,385 @@ export const modules = {
       _bit = 0;
       changes = new Map;
       constructor() {
-        let tt = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        this.iterable = tt, tt && (this.items = [])
+        let uu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        this.iterable = uu, uu && (this.items = [])
       }
-      _bindRoot(tt) {
-        void 0 === this._root && (this._root = tt, this.id = tt.acquireViewId(), this._slot = this.id >> 5, this._bit = 1 << (31 & this.id), tt.registerView(this), LO.register(this, {
-          root: tt,
+      _bindRoot(uu) {
+        void 0 === this._root && (this._root = uu, this.id = uu.acquireViewId(), this._slot = this.id >> 5, this._bit = 1 << (31 & this.id), uu.registerView(this), Qs.register(this, {
+          root: uu,
           id: this.id,
           slot: this._slot,
           bit: this._bit
         }, this))
       }
       dispose() {
-        void 0 !== this._root && (this._root.unregisterView(this), ZO(this._root, this._slot, this._bit), this._root.releaseViewId(this.id), LO.unregister(this), this._root = void 0, this.id = -1)
+        void 0 !== this._root && (this._root.unregisterView(this), rs(this._root, this._slot, this._bit), this._root.releaseViewId(this.id), Qs.unregister(this), this._root = void 0, this.id = -1)
       }
-      isVisible(tt) {
-        const et = tt.visibleViews,
-          Vt = this._slot;
-        return void 0 !== et && Vt < et.length && 0 !== (et[Vt] & this._bit)
+      isVisible(uu) {
+        const Eu = uu.visibleViews,
+          ju = this._slot;
+        return void 0 !== Eu && ju < Eu.length && 0 !== (Eu[ju] & this._bit)
       }
-      markVisible(tt) {
-        const et = this._slot;
-        let Vt = tt.visibleViews;
-        for (void 0 === Vt && (Vt = tt.visibleViews = []); Vt.length <= et;) Vt.push(0);
-        Vt[et] |= this._bit
+      markVisible(uu) {
+        const Eu = this._slot;
+        let ju = uu.visibleViews;
+        for (void 0 === ju && (ju = uu.visibleViews = []); ju.length <= Eu;) ju.push(0);
+        ju[Eu] |= this._bit
       }
-      unmarkVisible(tt) {
-        const et = tt.visibleViews;
-        if (void 0 === et) return;
-        const Vt = this._slot;
-        Vt < et.length && (et[Vt] &= ~this._bit)
+      unmarkVisible(uu) {
+        const Eu = uu.visibleViews;
+        if (void 0 === Eu) return;
+        const ju = this._slot;
+        ju < Eu.length && (Eu[ju] &= ~this._bit)
       }
-      isSubscribed(tt) {
-        const et = tt.subscribedViews,
-          Vt = this._slot;
-        return void 0 !== et && Vt < et.length && 0 !== (et[Vt] & this._bit)
+      isSubscribed(uu) {
+        const Eu = uu.subscribedViews,
+          ju = this._slot;
+        return void 0 !== Eu && ju < Eu.length && 0 !== (Eu[ju] & this._bit)
       }
-      _setSubscribed(tt) {
-        const et = this._slot;
-        let Vt = tt.subscribedViews;
-        for (void 0 === Vt && (Vt = tt.subscribedViews = []); Vt.length <= et;) Vt.push(0);
-        Vt[et] |= this._bit
+      _setSubscribed(uu) {
+        const Eu = this._slot;
+        let ju = uu.subscribedViews;
+        for (void 0 === ju && (ju = uu.subscribedViews = []); ju.length <= Eu;) ju.push(0);
+        ju[Eu] |= this._bit
       }
-      _clearSubscribed(tt) {
-        const et = tt.subscribedViews;
-        if (void 0 === et) return;
-        const Vt = this._slot;
-        Vt < et.length && (et[Vt] &= ~this._bit)
+      _clearSubscribed(uu) {
+        const Eu = uu.subscribedViews;
+        if (void 0 === Eu) return;
+        const ju = this._slot;
+        ju < Eu.length && (Eu[ju] &= ~this._bit)
       }
-      hasTagOnTree(tt, et) {
-        const Vt = tt.tagViews;
-        if (void 0 === Vt) return !1;
-        const Ot = this._slot,
-          qt = this._bit;
-        for (let Dt = et; 0 !== Dt; Dt &= Dt - 1) {
-          const tt = Vt.get(Dt & -Dt);
-          if (void 0 !== tt && Ot < tt.length && 0 !== (tt[Ot] & qt)) return !0
+      hasTagOnTree(uu, Eu) {
+        const ju = uu.tagViews;
+        if (void 0 === ju) return !1;
+        const su = this._slot,
+          Uu = this._bit;
+        for (let Zu = Eu; 0 !== Zu; Zu &= Zu - 1) {
+          const uu = ju.get(Zu & -Zu);
+          if (void 0 !== uu && su < uu.length && 0 !== (uu[su] & Uu)) return !0
         }
         return !1
       }
-      addTag(tt, et) {
-        if (et === wO) return;
-        let Vt = tt.tagViews;
-        void 0 === Vt && (Vt = tt.tagViews = new Map);
-        const Ot = this._slot,
-          qt = this._bit;
-        for (let Dt = et; Dt > 0; Dt &= Dt - 1) {
-          const tt = Dt & -Dt;
-          let et = Vt.get(tt);
-          for (void 0 === et && (et = [], Vt.set(tt, et)); et.length <= Ot;) et.push(0);
-          et[Ot] |= qt
+      addTag(uu, Eu) {
+        if (Eu === Ys) return;
+        let ju = uu.tagViews;
+        void 0 === ju && (ju = uu.tagViews = new Map);
+        const su = this._slot,
+          Uu = this._bit;
+        for (let Zu = Eu; Zu > 0; Zu &= Zu - 1) {
+          const uu = Zu & -Zu;
+          let Eu = ju.get(uu);
+          for (void 0 === Eu && (Eu = [], ju.set(uu, Eu)); Eu.length <= su;) Eu.push(0);
+          Eu[su] |= Uu
         }
       }
-      removeTag(tt, et) {
-        if (et === wO) return;
-        const Vt = tt.tagViews;
-        if (void 0 === Vt) return;
-        const Ot = this._slot,
-          qt = ~this._bit;
-        for (let Dt = et; Dt > 0; Dt &= Dt - 1) {
-          const tt = Vt.get(Dt & -Dt);
-          void 0 !== tt && Ot < tt.length && (tt[Ot] &= qt)
+      removeTag(uu, Eu) {
+        if (Eu === Ys) return;
+        const ju = uu.tagViews;
+        if (void 0 === ju) return;
+        const su = this._slot,
+          Uu = ~this._bit;
+        for (let Zu = Eu; Zu > 0; Zu &= Zu - 1) {
+          const uu = ju.get(Zu & -Zu);
+          void 0 !== uu && su < uu.length && (uu[su] &= Uu)
         }
       }
-      removeAllTagsOnTree(tt) {
-        const et = tt.tagViews;
-        if (void 0 === et) return;
-        const Vt = this._slot,
-          Ot = ~this._bit;
-        et.forEach((tt => {
-          Vt < tt.length && (tt[Vt] &= Ot)
+      removeAllTagsOnTree(uu) {
+        const Eu = uu.tagViews;
+        if (void 0 === Eu) return;
+        const ju = this._slot,
+          su = ~this._bit;
+        Eu.forEach((uu => {
+          ju < uu.length && (uu[ju] &= su)
         }))
       }
-      add(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wO,
-          Vt = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        return this._add(tt, et, Vt, !1)
+      add(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Ys,
+          ju = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        return this._add(uu, Eu, ju, !1)
       }
-      _addImmediate(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wO;
-        this._add(tt, et, !0, !0)
+      _addImmediate(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Ys;
+        this._add(uu, Eu, !0, !0)
       }
-      _add(tt, et, Vt, Ot) {
-        const Dt = tt?.[wt];
-        if (!Dt) return console.warn(`StateView#add(): expected a Schema instance or collection, received ${FO(tt)}`), !1;
-        const mt = Dt.parent;
-        if (!mt && 0 !== tt[dt]) throw new Error(`Cannot add a detached instance to the StateView. Make sure to assign the "${Dt.ref.constructor.name}" instance to the state before calling view.add()`);
-        void 0 === this._root && void 0 !== Dt.root && this._bindRoot(Dt.root);
-        const jt = mt?.[wt];
-        if (!Ot && jt?.isStreamCollection) return Pe(mt, this.id, Dt.parentIndex), !0;
-        const Ht = tt.constructor[Symbol.metadata],
-          Xt = this.isVisible(Dt);
-        if (!this.iterable || !Vt || Xt && -1 !== this.items.indexOf(tt) || this.items.push(tt), this.markVisible(Dt), Vt && mt && this.addParentOf(Dt, et), !Ot && Dt.isStreamCollection) return !0;
-        if (et === wO && Dt.isNew) return this._markSubtreeVisible(Dt, et), !1;
-        let Qt = this.changes.get(tt[dt]);
-        void 0 === Qt && (Qt = new Map, this.changes.set(tt[dt], Qt));
-        let lt = !1;
-        const Et = Dt.encDescriptor.tags;
-        if (Dt.forEachChild(((tt, Vt) => {
-            const Ot = Et[Vt];
-            if (void 0 !== Ot) {
-              if (!(Ot === wO || et !== wO && 0 !== (Ot & et))) return
+      _add(uu, Eu, ju, su) {
+        const Zu = uu?.[Yu];
+        if (!Zu) return console.warn(`StateView#add(): expected a Schema instance or collection, received ${is(uu)}`), !1;
+        const Xu = Zu.parent;
+        if (!Xu && 0 !== uu[lu]) throw new Error(`Cannot add a detached instance to the StateView. Make sure to assign the "${Zu.ref.constructor.name}" instance to the state before calling view.add()`);
+        void 0 === this._root && void 0 !== Zu.root && this._bindRoot(Zu.root);
+        const qu = Xu?.[Yu];
+        if (!su && qu?.isStreamCollection) return vE(Xu, this.id, Zu.parentIndex), !0;
+        const fu = uu.constructor[Symbol.metadata],
+          Cu = this.isVisible(Zu);
+        if (!this.iterable || !ju || Cu && -1 !== this.items.indexOf(uu) || this.items.push(uu), this.markVisible(Zu), ju && Xu && this.addParentOf(Zu, Eu), !su && Zu.isStreamCollection) return !0;
+        if (Eu === Ys && Zu.isNew) return this._markSubtreeVisible(Zu, Eu), !1;
+        let bu = this.changes.get(uu[lu]);
+        void 0 === bu && (bu = new Map, this.changes.set(uu[lu], bu));
+        let cu = !1;
+        const Nu = Zu.encDescriptor.tags;
+        if (Zu.forEachChild(((uu, ju) => {
+            const su = Nu[ju];
+            if (void 0 !== su) {
+              if (!(su === Ys || Eu !== Ys && 0 !== (su & Eu))) return
             }
-            this.add(tt.ref, et, !1) && (lt = !0)
-          })), et !== wO) {
-          this.addTag(Dt, et);
-          const tt = Ht?.[Rt];
-          if (void 0 !== tt)
-            for (let Vt = et; Vt > 0; Vt &= Vt - 1) tt[Vt & -Vt]?.forEach((tt => {
-              Dt.getChange(tt) !== qt.DELETE && Qt.set(tt, qt.ADD)
+            this.add(uu.ref, Eu, !1) && (cu = !0)
+          })), Eu !== Ys) {
+          this.addTag(Zu, Eu);
+          const uu = fu?.[ku];
+          if (void 0 !== uu)
+            for (let ju = Eu; ju > 0; ju &= ju - 1) uu[ju & -ju]?.forEach((uu => {
+              Zu.getChange(uu) !== Uu.DELETE && bu.set(uu, Uu.ADD)
             }))
         }
-        if ((et === wO || !Xt) && (!Dt.isNew || lt))
-          if (Dt.isArray && "string" !== typeof Dt.refTarget[yt]) Dt.refTarget.items.length > 0 && (Qt.set(-1, qt.ADD), lt = !0);
+        if ((Eu === Ys || !Cu) && (!Zu.isNew || cu))
+          if (Zu.isArray && "string" !== typeof Zu.refTarget[hu]) Zu.refTarget.items.length > 0 && (bu.set(-1, Uu.ADD), cu = !0);
           else {
-            const tt = Dt.encDescriptor.tags;
-            Dt.forEachLive((Vt => {
-              const Ot = tt[Vt];
-              (void 0 === Ot || Ot === wO || et !== wO && 0 !== (Ot & et)) && (Qt.set(Vt, qt.ADD), lt = !0)
+            const uu = Zu.encDescriptor.tags;
+            Zu.forEachLive((ju => {
+              const su = uu[ju];
+              (void 0 === su || su === Ys || Eu !== Ys && 0 !== (su & Eu)) && (bu.set(ju, Uu.ADD), cu = !0)
             }))
-          } return lt
+          } return cu
       }
-      _markSubtreeVisible(tt, et) {
-        const Vt = tt.encDescriptor.tags;
-        tt.forEachChild(((tt, Ot) => {
-          const qt = Vt[Ot];
-          if (void 0 !== qt) {
-            if (!(qt === wO || et !== wO && 0 !== (qt & et))) return
+      _markSubtreeVisible(uu, Eu) {
+        const ju = uu.encDescriptor.tags;
+        uu.forEachChild(((uu, su) => {
+          const Uu = ju[su];
+          if (void 0 !== Uu) {
+            if (!(Uu === Ys || Eu !== Ys && 0 !== (Uu & Eu))) return
           }
-          tt.isNew ? (this.markVisible(tt), this._markSubtreeVisible(tt, et)) : this._add(tt.ref, et, !1, !1)
+          uu.isNew ? (this.markVisible(uu), this._markSubtreeVisible(uu, Eu)) : this._add(uu.ref, Eu, !1, !1)
         }))
       }
-      addParentOf(tt, et) {
-        const Vt = tt.parent[wt],
-          Ot = tt.parentIndex;
-        this.isVisible(Vt) || this.markVisible(Vt);
-        const Dt = Vt.parent?.[wt];
-        if (Dt && this.addParentOf(Vt, et), Vt.hasFilteredFields && Vt.getChange(Ot) !== qt.DELETE) {
-          let Dt = this.changes.get(Vt.ref[dt]);
-          void 0 === Dt && (Dt = new Map, this.changes.set(Vt.ref[dt], Dt));
-          const mt = Vt.encDescriptor.tags[Ot];
-          void 0 !== mt && mt !== wO && 0 !== (mt & et) && this.addTag(Vt, et), Dt.set(Vt.isArray ? tt : Ot, qt.ADD)
+      addParentOf(uu, Eu) {
+        const ju = uu.parent[Yu],
+          su = uu.parentIndex;
+        this.isVisible(ju) || this.markVisible(ju);
+        const Zu = ju.parent?.[Yu];
+        if (Zu && this.addParentOf(ju, Eu), ju.hasFilteredFields && ju.getChange(su) !== Uu.DELETE) {
+          let Zu = this.changes.get(ju.ref[lu]);
+          void 0 === Zu && (Zu = new Map, this.changes.set(ju.ref[lu], Zu));
+          const Xu = ju.encDescriptor.tags[su];
+          void 0 !== Xu && Xu !== Ys && 0 !== (Xu & Eu) && this.addTag(ju, Eu), Zu.set(ju.isArray ? uu : su, Uu.ADD)
         }
       }
-      _touchAncestorsOf(tt) {
-        let et = tt.parent?.[wt];
-        if (void 0 === et) return;
-        const Vt = [];
-        for (; void 0 !== et;) {
-          if (et.hasFilteredFields) {
-            const tt = et.ref[dt];
-            if (this.changes.has(tt)) break;
-            Vt.push(et)
+      _touchAncestorsOf(uu) {
+        let Eu = uu.parent?.[Yu];
+        if (void 0 === Eu) return;
+        const ju = [];
+        for (; void 0 !== Eu;) {
+          if (Eu.hasFilteredFields) {
+            const uu = Eu.ref[lu];
+            if (this.changes.has(uu)) break;
+            ju.push(Eu)
           }
-          et = et.parent?.[wt]
+          Eu = Eu.parent?.[Yu]
         }
-        for (let Ot = Vt.length - 1; Ot >= 0; Ot--) this.changes.set(Vt[Ot].ref[dt], new Map)
+        for (let su = ju.length - 1; su >= 0; su--) this.changes.set(ju[su].ref[lu], new Map)
       }
-      remove(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wO,
-          Vt = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const Ot = tt?.[wt];
-        if (!Ot) return console.warn(`StateView#remove(): expected a Schema instance or collection, received ${FO(tt)}`), this;
-        const Dt = Ot.parent?.[wt];
-        if (Dt?.isStreamCollection) return this.unmarkVisible(Ot), this.iterable && !Vt && PO(this.items, this.items.indexOf(tt)),
-          function(tt, et, Vt, Ot, Dt) {
-            const mt = tt._stream;
-            if (void 0 === mt) return !1;
-            const dt = mt.pendingByView.get(et);
-            if (dt?.has(Ot)) return dt.delete(Ot), !1;
-            const jt = mt.sentByView.get(et);
-            if (jt?.has(Ot)) {
-              jt.delete(Ot);
-              let tt = Dt.get(Vt);
-              return void 0 === tt && (tt = new Map, Dt.set(Vt, tt)), tt.set(Ot, qt.DELETE), !0
+      remove(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Ys,
+          ju = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const su = uu?.[Yu];
+        if (!su) return console.warn(`StateView#remove(): expected a Schema instance or collection, received ${is(uu)}`), this;
+        const Zu = su.parent?.[Yu];
+        if (Zu?.isStreamCollection) return this.unmarkVisible(su), this.iterable && !ju && Vs(this.items, this.items.indexOf(uu)),
+          function(uu, Eu, ju, su, Zu) {
+            const Xu = uu._stream;
+            if (void 0 === Xu) return !1;
+            const lu = Xu.pendingByView.get(Eu);
+            if (lu?.has(su)) return lu.delete(su), !1;
+            const qu = Xu.sentByView.get(Eu);
+            if (qu?.has(su)) {
+              qu.delete(su);
+              let uu = Zu.get(ju);
+              return void 0 === uu && (uu = new Map, Zu.set(ju, uu)), uu.set(su, Uu.DELETE), !0
             }
-          }(Ot.parent, this.id, Ot.parent[dt], Ot.parentIndex, this.changes), this._recursiveDeleteVisibleChangeTree(Ot), this;
-        if (Ot.isStreamCollection) {
-          this.unmarkVisible(Ot), this.iterable && !Vt && PO(this.items, this.items.indexOf(tt));
-          const et = Ot.ref,
-            Dt = et._stream;
-          if (void 0 !== Dt) {
-            Dt.pendingByView.get(this.id)?.clear();
-            const tt = Dt.sentByView.get(this.id);
-            if (void 0 !== tt && tt.size > 0) {
-              const Vt = et[dt];
-              let Ot = this.changes.get(Vt);
-              void 0 === Ot && (Ot = new Map, this.changes.set(Vt, Ot));
-              for (const et of tt) Ot.set(et, qt.DELETE);
-              tt.clear()
+          }(su.parent, this.id, su.parent[lu], su.parentIndex, this.changes), this._recursiveDeleteVisibleChangeTree(su), this;
+        if (su.isStreamCollection) {
+          this.unmarkVisible(su), this.iterable && !ju && Vs(this.items, this.items.indexOf(uu));
+          const Eu = su.ref,
+            Zu = Eu._stream;
+          if (void 0 !== Zu) {
+            Zu.pendingByView.get(this.id)?.clear();
+            const uu = Zu.sentByView.get(this.id);
+            if (void 0 !== uu && uu.size > 0) {
+              const ju = Eu[lu];
+              let su = this.changes.get(ju);
+              void 0 === su && (su = new Map, this.changes.set(ju, su));
+              for (const Eu of uu) su.set(Eu, Uu.DELETE);
+              uu.clear()
             }
           }
           return this
         }
-        this.unmarkVisible(Ot), this.iterable && !Vt && PO(this.items, this.items.indexOf(tt));
-        const mt = Ot.ref,
-          jt = mt.constructor[Symbol.metadata],
-          Ht = mt[dt];
-        this._touchAncestorsOf(Ot);
-        let Xt = this.changes.get(Ht);
-        if (void 0 === Xt && (Xt = new Map, this.changes.set(Ht, Xt)), et === wO) {
-          const tt = Ot.parent;
-          if (tt && !xe.isValidInstance(tt) && Ot.isFiltered) {
-            const et = Dt.isArray ? Ot : Ot.parentIndex,
-              Vt = tt[dt];
-            let mt = this.changes.get(Vt);
-            void 0 === mt ? (mt = new Map, this.changes.set(Vt, mt)) : mt.get(et) === qt.ADD && this._dropPendingEntries(Ot), mt.set(et, qt.DELETE), this._recursiveDeleteVisibleChangeTree(Ot)
-          } else jt?.[ct]?.forEach((tt => this._removeViewField(Ot, Xt, tt)))
+        this.unmarkVisible(su), this.iterable && !ju && Vs(this.items, this.items.indexOf(uu));
+        const Xu = su.ref,
+          qu = Xu.constructor[Symbol.metadata],
+          fu = Xu[lu];
+        this._touchAncestorsOf(su);
+        let Cu = this.changes.get(fu);
+        if (void 0 === Cu && (Cu = new Map, this.changes.set(fu, Cu)), Eu === Ys) {
+          const uu = su.parent;
+          if (uu && !HE.isValidInstance(uu) && su.isFiltered) {
+            const Eu = Zu.isArray ? su : su.parentIndex,
+              ju = uu[lu];
+            let Xu = this.changes.get(ju);
+            void 0 === Xu ? (Xu = new Map, this.changes.set(ju, Xu)) : Xu.get(Eu) === Uu.ADD && this._dropPendingEntries(su), Xu.set(Eu, Uu.DELETE), this._recursiveDeleteVisibleChangeTree(su)
+          } else qu?.[ou]?.forEach((uu => this._removeViewField(su, Cu, uu)))
         } else {
-          const tt = jt?.[Rt];
-          if (void 0 !== tt)
-            for (let Vt = et; Vt > 0; Vt &= Vt - 1) tt[Vt & -Vt]?.forEach((tt => this._removeViewField(Ot, Xt, tt)))
+          const uu = qu?.[ku];
+          if (void 0 !== uu)
+            for (let ju = Eu; ju > 0; ju &= ju - 1) uu[ju & -ju]?.forEach((uu => this._removeViewField(su, Cu, uu)))
         }
-        return void 0 === et ? this.removeAllTagsOnTree(Ot) : this.removeTag(Ot, et), this
+        return void 0 === Eu ? this.removeAllTagsOnTree(su) : this.removeTag(su, Eu), this
       }
-      has(tt) {
-        return this.isVisible(tt[wt])
+      has(uu) {
+        return this.isVisible(uu[Yu])
       }
-      hasTag(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wO;
-        return this.hasTagOnTree(tt[wt], et)
+      hasTag(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Ys;
+        return this.hasTagOnTree(uu[Yu], Eu)
       }
-      subscribe(tt, et) {
-        const Vt = tt?.[wt];
-        if (!Vt) return console.warn(`StateView#subscribe(): expected a Schema collection, received ${FO(tt)}`), this;
-        if (void 0 === this._root && void 0 !== Vt.root && this._bindRoot(Vt.root), void 0 !== et)
-          if (Vt.isStreamCollection) {
-            const Vt = We(tt);
-            null === et ? Vt.priorityByView?.delete(this.id) : (Vt.priorityByView ??= new Map).set(this.id, et)
+      subscribe(uu, Eu) {
+        const ju = uu?.[Yu];
+        if (!ju) return console.warn(`StateView#subscribe(): expected a Schema collection, received ${is(uu)}`), this;
+        if (void 0 === this._root && void 0 !== ju.root && this._bindRoot(ju.root), void 0 !== Eu)
+          if (ju.isStreamCollection) {
+            const ju = aE(uu);
+            null === Eu ? ju.priorityByView?.delete(this.id) : (ju.priorityByView ??= new Map).set(this.id, Eu)
           } else {
-            const et = tt?.constructor?.name ?? "collection",
-              Ot = Vt.parent;
-            if (void 0 === Ot) console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 this ${et} is not attached to a state yet, so it cannot be identified as a stream. Subscribe after assigning it to the state.`);
+            const Eu = uu?.constructor?.name ?? "collection",
+              su = ju.parent;
+            if (void 0 === su) console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 this ${Eu} is not attached to a state yet, so it cannot be identified as a stream. Subscribe after assigning it to the state.`);
             else {
-              const tt = Ot?.constructor?.[Symbol.metadata]?.[Vt.parentIndex]?.name,
-                qt = tt ? `${Ot.constructor.name}#${tt}` : et;
-              console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 ${qt} is a ${et}, not a streaming collection. Declare the field with .stream() (e.g. t.map(X).stream()) or use t.stream(X) to enable priority batching.`)
+              const uu = su?.constructor?.[Symbol.metadata]?.[ju.parentIndex]?.name,
+                Uu = uu ? `${su.constructor.name}#${uu}` : Eu;
+              console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 ${Uu} is a ${Eu}, not a streaming collection. Declare the field with .stream() (e.g. t.map(X).stream()) or use t.stream(X) to enable priority batching.`)
             }
-          } if (this.isSubscribed(Vt)) return this;
-        const Ot = void 0 !== Vt.parent && !this.isVisible(Vt);
-        if (Ot ? (this.addParentOf(Vt, wO), this._add(tt, wO, !1, !1)) : this.markVisible(Vt), this._setSubscribed(Vt), Vt.isStreamCollection) {
-          const et = tt;
-          Vt.forEachChild(((tt, Vt) => {
-            Pe(et, this.id, Vt)
+          } if (this.isSubscribed(ju)) return this;
+        const su = void 0 !== ju.parent && !this.isVisible(ju);
+        if (su ? (this.addParentOf(ju, Ys), this._add(uu, Ys, !1, !1)) : this.markVisible(ju), this._setSubscribed(ju), ju.isStreamCollection) {
+          const Eu = uu;
+          ju.forEachChild(((uu, ju) => {
+            vE(Eu, this.id, ju)
           }))
-        } else Ot || Vt.forEachChild((tt => {
-          this.markVisible(tt)
+        } else su || ju.forEachChild((uu => {
+          this.markVisible(uu)
         }));
         return this
       }
-      unsubscribe(tt) {
-        const et = tt?.[wt];
-        if (!et) return console.warn(`StateView#unsubscribe(): expected a Schema collection, received ${FO(tt)}`), this;
-        if (!this.isSubscribed(et)) return this;
-        this._clearSubscribed(et);
-        const Vt = et.ref[dt];
-        if (et.isStreamCollection) {
-          const et = tt._stream;
-          if (void 0 !== et) {
-            et.pendingByView.get(this.id)?.clear();
-            const tt = et.sentByView.get(this.id);
-            if (void 0 !== tt && tt.size > 0) {
-              let et = this.changes.get(Vt);
-              void 0 === et && (et = new Map, this.changes.set(Vt, et));
-              for (const Vt of tt) et.set(Vt, qt.DELETE);
-              tt.clear()
+      unsubscribe(uu) {
+        const Eu = uu?.[Yu];
+        if (!Eu) return console.warn(`StateView#unsubscribe(): expected a Schema collection, received ${is(uu)}`), this;
+        if (!this.isSubscribed(Eu)) return this;
+        this._clearSubscribed(Eu);
+        const ju = Eu.ref[lu];
+        if (Eu.isStreamCollection) {
+          const Eu = uu._stream;
+          if (void 0 !== Eu) {
+            Eu.pendingByView.get(this.id)?.clear();
+            const uu = Eu.sentByView.get(this.id);
+            if (void 0 !== uu && uu.size > 0) {
+              let Eu = this.changes.get(ju);
+              void 0 === Eu && (Eu = new Map, this.changes.set(ju, Eu));
+              for (const ju of uu) Eu.set(ju, Uu.DELETE);
+              uu.clear()
             }
           }
         } else {
-          const tt = et.isArray;
-          let Ot = this.changes.get(Vt);
-          et.forEachChild(((et, Dt) => {
-            void 0 === Ot && (Ot = new Map, this.changes.set(Vt, Ot)), Ot.set(tt ? et : Dt, qt.DELETE), this.unmarkVisible(et)
+          const uu = Eu.isArray;
+          let su = this.changes.get(ju);
+          Eu.forEachChild(((Eu, Zu) => {
+            void 0 === su && (su = new Map, this.changes.set(ju, su)), su.set(uu ? Eu : Zu, Uu.DELETE), this.unmarkVisible(Eu)
           }))
         }
-        return this.unmarkVisible(et), this
+        return this.unmarkVisible(Eu), this
       }
       clear() {
         if (!this.iterable) throw new Error("StateView#clear() is only available for iterable StateView's. Use StateView(iterable: true) constructor.");
-        for (let tt = 0, et = this.items.length; tt < et; tt++) this.remove(this.items[tt], wO, !0);
+        for (let uu = 0, Eu = this.items.length; uu < Eu; uu++) this.remove(this.items[uu], Ys, !0);
         this.items.length = 0
       }
-      isChangeTreeVisible(tt) {
-        let et = this.isVisible(tt);
-        if (!et && tt.isVisibilitySharedWithParent)
-          if (this.isVisible(tt.parent[wt])) this.markVisible(tt), et = !0;
+      isChangeTreeVisible(uu) {
+        let Eu = this.isVisible(uu);
+        if (!Eu && uu.isVisibilitySharedWithParent)
+          if (this.isVisible(uu.parent[Yu])) this.markVisible(uu), Eu = !0;
           else
-            for (let Vt = tt.extraParents; void 0 !== Vt; Vt = Vt.next) {
-              const Ot = Vt.ref[wt];
-              if (Ot.isFiltered && this.isVisible(Ot)) {
-                this.markVisible(tt), et = !0;
+            for (let ju = uu.extraParents; void 0 !== ju; ju = ju.next) {
+              const su = ju.ref[Yu];
+              if (su.isFiltered && this.isVisible(su)) {
+                this.markVisible(uu), Eu = !0;
                 break
               }
             }
-        return et
+        return Eu
       }
-      _recursiveDeleteVisibleChangeTree(tt) {
-        tt.forEachChild((tt => {
-          this.unmarkVisible(tt), this._recursiveDeleteVisibleChangeTree(tt)
+      _recursiveDeleteVisibleChangeTree(uu) {
+        uu.forEachChild((uu => {
+          this.unmarkVisible(uu), this._recursiveDeleteVisibleChangeTree(uu)
         }))
       }
-      _dropPendingEntries(tt) {
-        this.changes.delete(tt.ref[dt]), tt.forEachChild((tt => this._dropPendingEntries(tt)))
+      _dropPendingEntries(uu) {
+        this.changes.delete(uu.ref[lu]), uu.forEachChild((uu => this._dropPendingEntries(uu)))
       }
-      _removeViewField(tt, et, Vt) {
-        const Ot = et.get(Vt) === qt.ADD;
-        et.set(Vt, qt.DELETE);
-        const Dt = tt.ref[tt.encDescriptor.names[Vt]],
-          mt = Dt?.[wt];
-        mt && (this.unmarkVisible(mt), this._recursiveDeleteVisibleChangeTree(mt), Ot && this._dropPendingEntries(mt))
+      _removeViewField(uu, Eu, ju) {
+        const su = Eu.get(ju) === Uu.ADD;
+        Eu.set(ju, Uu.DELETE);
+        const Zu = uu.ref[uu.encDescriptor.names[ju]],
+          Xu = Zu?.[Yu];
+        Xu && (this.unmarkVisible(Xu), this._recursiveDeleteVisibleChangeTree(Xu), su && this._dropPendingEntries(Xu))
       }
     }
 
-    function GO(tt) {
-      tt.structSwitchEmitted || (tt.shouldEmitSwitch && (tt.buffer[tt.it.offset++] = 255, Ve.number(tt.buffer, tt.ref[dt], tt.it)), tt.structSwitchEmitted = !0)
+    function Ss(uu) {
+      uu.structSwitchEmitted || (uu.shouldEmitSwitch && (uu.buffer[uu.it.offset++] = 255, EE.number(uu.buffer, uu.ref[lu], uu.it)), uu.structSwitchEmitted = !0)
     }
 
-    function zO(tt, et) {
-      UO(tt, et, qt.ADD)
+    function Is(uu, Eu) {
+      Ls(uu, Eu, Uu.ADD)
     }
 
-    function oO(tt, et) {
-      if (et._fullSyncGen === tt.gen) return;
-      et._fullSyncGen = tt.gen;
-      if (!tt.hasView || tt.view.isChangeTreeVisible(et)) {
-        const Vt = et.encDescriptor;
-        tt.changeTree = et, tt.ref = et.ref, tt.encoder = Vt.encoder, tt.filter = Vt.filter, tt.metadata = Vt.metadata, tt.treeIsFiltered = et.isFiltered, tt.isSchema = Vt.isSchema, tt.filterBitmask = Vt.filterBitmask, tt.tags = Vt.tags, tt.structSwitchEmitted = !1, tt.shouldEmitSwitch = tt.hasView || tt.it.offset > tt.initialOffset || et !== tt.rootChangeTree, et.isArray && et.collDirty.size > 0 && (et.flags |= 512), DV(et, tt, zO)
+    function Fs(uu, Eu) {
+      if (Eu._fullSyncGen === uu.gen) return;
+      Eu._fullSyncGen = uu.gen;
+      if (!uu.hasView || uu.view.isChangeTreeVisible(Eu)) {
+        const ju = Eu.encDescriptor;
+        uu.changeTree = Eu, uu.ref = Eu.ref, uu.encoder = ju.encoder, uu.filter = ju.filter, uu.metadata = ju.metadata, uu.treeIsFiltered = Eu.isFiltered, uu.isSchema = ju.isSchema, uu.filterBitmask = ju.filterBitmask, uu.tags = ju.tags, uu.structSwitchEmitted = !1, uu.shouldEmitSwitch = uu.hasView || uu.it.offset > uu.initialOffset || Eu !== uu.rootChangeTree, Eu.isArray && Eu.collDirty.size > 0 && (Eu.flags |= 512), Uj(Eu, uu, Is)
       }
-      aV(et, tt, rO)
+      Dj(Eu, uu, Bs)
     }
 
-    function rO(tt, et, Vt) {
-      oO(tt, et)
+    function Bs(uu, Eu, ju) {
+      Fs(uu, Eu)
     }
 
-    function UO(tt, et, Vt) {
-      if (et < 0) {
-        if (tt.treeIsFiltered !== tt.emitFiltered) return;
-        return GO(tt), void(tt.buffer[tt.it.offset++] = 255 & Math.abs(et))
+    function Ls(uu, Eu, ju) {
+      if (Eu < 0) {
+        if (uu.treeIsFiltered !== uu.emitFiltered) return;
+        return Ss(uu), void(uu.buffer[uu.it.offset++] = 255 & Math.abs(Eu))
       }
-      if ((tt.isSchema ? tt.treeIsFiltered || (et < 32 ? 0 !== (tt.filterBitmask & 1 << et) : void 0 !== tt.tags[et]) : tt.treeIsFiltered) !== tt.emitFiltered) return;
-      const Ot = tt.isEncodeAll ? qt.ADD : Vt;
-      void 0 !== Ot && (void 0 === tt.filter || tt.filter(tt.ref, et, tt.view)) && (GO(tt), tt.encoder(tt.self, tt.buffer, tt.changeTree, et, Ot, tt.it, tt.isEncodeAll, tt.hasView, tt.metadata))
+      if ((uu.isSchema ? uu.treeIsFiltered || (Eu < 32 ? 0 !== (uu.filterBitmask & 1 << Eu) : void 0 !== uu.tags[Eu]) : uu.treeIsFiltered) !== uu.emitFiltered) return;
+      const su = uu.isEncodeAll ? Uu.ADD : ju;
+      void 0 !== su && (void 0 === uu.filter || uu.filter(uu.ref, Eu, uu.view)) && (Ss(uu), uu.encoder(uu.self, uu.buffer, uu.changeTree, Eu, su, uu.it, uu.isEncodeAll, uu.hasView, uu.metadata))
     }
 
-    function AO(tt, et) {
-      const Vt = new Uint8Array(tt.length + et.length);
-      return Vt.set(tt, 0), Vt.set(et, tt.length), Vt
+    function ts(uu, Eu) {
+      const ju = new Uint8Array(uu.length + Eu.length);
+      return ju.set(uu, 0), ju.set(Eu, uu.length), ju
     }
-    class iO {
+    class xs {
       static BUFFER_SIZE = 16384;
-      sharedBuffer = new Uint8Array(iO.BUFFER_SIZE);
+      sharedBuffer = new Uint8Array(xs.BUFFER_SIZE);
       context;
       state;
       root;
-      constructor(tt, et) {
-        this.context = re.cache(tt.constructor), this.root = et ?? new IO(this.context), this.setState(tt)
+      constructor(uu, Eu) {
+        this.context = IE.cache(uu.constructor), this.root = Eu ?? new Ks(this.context), this.setState(uu)
       }
-      setState(tt) {
-        this.state = tt, this.state[wt].setRoot(this.root)
+      setState(uu) {
+        this.state = uu, this.state[Yu].setRoot(this.root)
       }
       _encodeCtx = {
         self: void 0,
@@ -6306,271 +6306,271 @@ export const modules = {
       };
       _fullSyncGen = 0;
       encode() {
-        let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          et = arguments.length > 1 ? arguments[1] : void 0,
-          Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
-          Ot = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : tt.offset;
-        return this._encodeChannel(tt, et, Vt, Ot, !1)
+          Eu = arguments.length > 1 ? arguments[1] : void 0,
+          ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
+          su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : uu.offset;
+        return this._encodeChannel(uu, Eu, ju, su, !1)
       }
       encodeUnreliable() {
-        let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          et = arguments.length > 1 ? arguments[1] : void 0,
-          Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
-          Ot = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : tt.offset;
-        return this._encodeChannel(tt, et, Vt, Ot, !0)
+          Eu = arguments.length > 1 ? arguments[1] : void 0,
+          ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
+          su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : uu.offset;
+        return this._encodeChannel(uu, Eu, ju, su, !0)
       }
-      _encodeChannel(tt, et, Vt, Ot, qt) {
-        this.root.pendingFilterRefresh.length > 0 && dV(this.root);
-        const Dt = void 0 !== et,
-          mt = this.state[wt],
-          dt = this._encodeCtx;
-        dt.self = this, dt.buffer = Vt, dt.it = tt, dt.view = et, dt.isEncodeAll = !1, dt.hasView = Dt, dt.emitFiltered = Dt;
-        let jt = qt ? this.root.unreliableChanges : this.root.changes;
-        for (; jt = jt.next;) {
-          const Vt = jt.changeTree;
-          if (Dt && !et.isChangeTreeVisible(Vt)) continue;
-          const Ht = qt ? Vt.unreliableRecorder : Vt;
-          if (!Ht || !Ht.has()) continue;
-          const Xt = Vt.encDescriptor;
-          dt.changeTree = Vt, dt.ref = Vt.ref, dt.encoder = Xt.encoder, dt.filter = Xt.filter, dt.metadata = Xt.metadata, dt.treeIsFiltered = Vt.isFiltered, dt.isSchema = Xt.isSchema, dt.filterBitmask = Xt.filterBitmask, dt.tags = Xt.tags, dt.structSwitchEmitted = !1, dt.isRootTree = Vt === mt, dt.shouldEmitSwitch = Dt || tt.offset > Ot || !dt.isRootTree, Ht.forEachWithCtx(dt, UO)
+      _encodeChannel(uu, Eu, ju, su, Uu) {
+        this.root.pendingFilterRefresh.length > 0 && Xj(this.root);
+        const Zu = void 0 !== Eu,
+          Xu = this.state[Yu],
+          lu = this._encodeCtx;
+        lu.self = this, lu.buffer = ju, lu.it = uu, lu.view = Eu, lu.isEncodeAll = !1, lu.hasView = Zu, lu.emitFiltered = Zu;
+        let qu = Uu ? this.root.unreliableChanges : this.root.changes;
+        for (; qu = qu.next;) {
+          const ju = qu.changeTree;
+          if (Zu && !Eu.isChangeTreeVisible(ju)) continue;
+          const fu = Uu ? ju.unreliableRecorder : ju;
+          if (!fu || !fu.has()) continue;
+          const Cu = ju.encDescriptor;
+          lu.changeTree = ju, lu.ref = ju.ref, lu.encoder = Cu.encoder, lu.filter = Cu.filter, lu.metadata = Cu.metadata, lu.treeIsFiltered = ju.isFiltered, lu.isSchema = Cu.isSchema, lu.filterBitmask = Cu.filterBitmask, lu.tags = Cu.tags, lu.structSwitchEmitted = !1, lu.isRootTree = ju === Xu, lu.shouldEmitSwitch = Zu || uu.offset > su || !lu.isRootTree, fu.forEachWithCtx(lu, Ls)
         }
-        return qt || Dt || !this._isStreamBroadcastMode || this._emitStreamBroadcast(Vt, tt), tt.offset > Vt.byteLength ? (Vt = this._resizeBuffer(Vt, tt.offset), tt.offset = Ot, this._encodeChannel(tt, et, Vt, Ot, qt)) : Vt.subarray(0, tt.offset)
+        return Uu || Zu || !this._isStreamBroadcastMode || this._emitStreamBroadcast(ju, uu), uu.offset > ju.byteLength ? (ju = this._resizeBuffer(ju, uu.offset), uu.offset = su, this._encodeChannel(uu, Eu, ju, su, Uu)) : ju.subarray(0, uu.offset)
       }
-      encodeFullSync(tt, et, Vt, Ot) {
-        let qt = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : tt.offset;
-        this.root.pendingFilterRefresh.length > 0 && dV(this.root);
-        const Dt = void 0 !== Ot,
-          mt = this.state[wt],
-          dt = this._encodeCtx;
-        return dt.self = this, dt.buffer = et, dt.it = tt, dt.view = Ot, dt.isEncodeAll = !0, dt.hasView = Dt, dt.emitFiltered = Vt, dt.gen = ++this._fullSyncGen, dt.initialOffset = qt, dt.rootChangeTree = mt, oO(dt, mt), tt.offset > et.byteLength ? (et = this._resizeBuffer(et, tt.offset), tt.offset = qt, this.encodeFullSync(tt, et, Vt, Ot, qt)) : et.subarray(0, tt.offset)
+      encodeFullSync(uu, Eu, ju, su) {
+        let Uu = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : uu.offset;
+        this.root.pendingFilterRefresh.length > 0 && Xj(this.root);
+        const Zu = void 0 !== su,
+          Xu = this.state[Yu],
+          lu = this._encodeCtx;
+        return lu.self = this, lu.buffer = Eu, lu.it = uu, lu.view = su, lu.isEncodeAll = !0, lu.hasView = Zu, lu.emitFiltered = ju, lu.gen = ++this._fullSyncGen, lu.initialOffset = Uu, lu.rootChangeTree = Xu, Fs(lu, Xu), uu.offset > Eu.byteLength ? (Eu = this._resizeBuffer(Eu, uu.offset), uu.offset = Uu, this.encodeFullSync(uu, Eu, ju, su, Uu)) : Eu.subarray(0, uu.offset)
       }
-      _resizeBuffer(tt, et) {
-        const Vt = Math.ceil(et / iO.BUFFER_SIZE) * iO.BUFFER_SIZE,
-          Ot = new Uint8Array(Vt);
-        return Ot.set(tt), tt === this.sharedBuffer && (this.sharedBuffer = Ot), Ot
+      _resizeBuffer(uu, Eu) {
+        const ju = Math.ceil(Eu / xs.BUFFER_SIZE) * xs.BUFFER_SIZE,
+          su = new Uint8Array(ju);
+        return su.set(uu), uu === this.sharedBuffer && (this.sharedBuffer = su), su
       }
       encodeAll() {
-        let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.sharedBuffer;
-        return this.encodeFullSync(tt, et, !1)
+          Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.sharedBuffer;
+        return this.encodeFullSync(uu, Eu, !1)
       }
-      encodeAllView(tt, et, Vt) {
-        let Ot = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
-        const qt = Vt.offset;
-        return Ot = this.encodeFullSync(Vt, Ot, !0, tt, qt), AO(Ot.subarray(0, et), Ot.subarray(qt, Vt.offset))
+      encodeAllView(uu, Eu, ju) {
+        let su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
+        const Uu = ju.offset;
+        return su = this.encodeFullSync(ju, su, !0, uu, Uu), ts(su.subarray(0, Eu), su.subarray(Uu, ju.offset))
       }
-      ensureCapacity(tt, et) {
-        if (et + iO.BUFFER_SIZE <= tt.byteLength) return tt;
-        const Vt = Math.ceil((et + iO.BUFFER_SIZE) / iO.BUFFER_SIZE) * iO.BUFFER_SIZE,
-          Ot = new Uint8Array(Vt);
-        return Ot.set(tt.subarray(0, et)), tt === this.sharedBuffer && (this.sharedBuffer = Ot), Ot
+      ensureCapacity(uu, Eu) {
+        if (Eu + xs.BUFFER_SIZE <= uu.byteLength) return uu;
+        const ju = Math.ceil((Eu + xs.BUFFER_SIZE) / xs.BUFFER_SIZE) * xs.BUFFER_SIZE,
+          su = new Uint8Array(ju);
+        return su.set(uu.subarray(0, Eu)), uu === this.sharedBuffer && (this.sharedBuffer = su), su
       }
-      encodeView(tt, et, Vt) {
-        let Ot = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer,
-          Dt = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
-        const mt = Vt.offset;
-        this._emitStreamPriority(tt);
-        for (const jt of tt.changes.keys()) {
-          const et = tt.changes.get(jt),
-            Dt = this.root.changeTrees[jt];
-          if (void 0 === Dt) {
-            tt.changes.delete(jt);
+      encodeView(uu, Eu, ju) {
+        let su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer,
+          Zu = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
+        const Xu = ju.offset;
+        this._emitStreamPriority(uu);
+        for (const qu of uu.changes.keys()) {
+          const Eu = uu.changes.get(qu),
+            Zu = this.root.changeTrees[qu];
+          if (void 0 === Zu) {
+            uu.changes.delete(qu);
             continue
           }
-          if (0 === et.size) continue;
-          const mt = Dt.encDescriptor,
-            Ht = mt.encoder,
-            Xt = mt.metadata,
-            Qt = Dt.ref,
-            Et = Dt.refTarget;
-          Ot = this.ensureCapacity(Ot, Vt.offset), Ot[Vt.offset++] = 255, Ve.number(Ot, Qt[dt], Vt);
-          for (const [jt, ft] of et) {
-            let et;
-            if (-1 === jt) {
-              const tt = Et.tmpItems,
-                et = Et.deletedIndexes;
-              for (let mt = 0; mt < tt.length; mt++) void 0 !== tt[mt] && !0 !== et[mt] && Ht(this, Ot, Dt, mt, qt.ADD, Vt, !1, !0, Xt);
+          if (0 === Eu.size) continue;
+          const Xu = Zu.encDescriptor,
+            fu = Xu.encoder,
+            Cu = Xu.metadata,
+            bu = Zu.ref,
+            Nu = Zu.refTarget;
+          su = this.ensureCapacity(su, ju.offset), su[ju.offset++] = 255, EE.number(su, bu[lu], ju);
+          for (const [qu, Ou] of Eu) {
+            let Eu;
+            if (-1 === qu) {
+              const uu = Nu.tmpItems,
+                Eu = Nu.deletedIndexes;
+              for (let Xu = 0; Xu < uu.length; Xu++) void 0 !== uu[Xu] && !0 !== Eu[Xu] && fu(this, su, Zu, Xu, Uu.ADD, ju, !1, !0, Cu);
               continue
             }
-            if ("number" === typeof jt) et = jt;
+            if ("number" === typeof qu) Eu = qu;
             else {
-              const Vt = jt.indexInParent(Qt);
-              if (void 0 === Vt) continue;
-              if (et = Vt, ft === qt.ADD && Dt.getChange(et) === qt.DELETE) {
-                tt.changes.delete(jt.ref[dt]);
+              const ju = qu.indexInParent(bu);
+              if (void 0 === ju) continue;
+              if (Eu = ju, Ou === Uu.ADD && Zu.getChange(Eu) === Uu.DELETE) {
+                uu.changes.delete(qu.ref[lu]);
                 continue
               }
             }
-            Ht(this, Ot, Dt, et, void 0 !== Et[lt](et) && ft || qt.DELETE, Vt, !1, !0, Xt)
+            fu(this, su, Zu, Eu, void 0 !== Nu[cu](Eu) && Ou || Uu.DELETE, ju, !1, !0, Cu)
           }
         }
-        return tt.changes.clear(), Ot = this.encode(Vt, tt, Ot), Dt ? AO(Ot.subarray(0, et), Ot.subarray(mt, Vt.offset)) : Ot.subarray(mt, Vt.offset)
+        return uu.changes.clear(), su = this.encode(ju, uu, su), Zu ? ts(su.subarray(0, Eu), su.subarray(Xu, ju.offset)) : su.subarray(Xu, ju.offset)
       }
-      encodeUnreliableView(tt, et, Vt) {
-        let Ot = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
-        const qt = Vt.offset;
-        return Ot = this.encodeUnreliable(Vt, tt, Ot, qt), AO(Ot.subarray(0, et), Ot.subarray(qt, Vt.offset))
+      encodeUnreliableView(uu, Eu, ju) {
+        let su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
+        const Uu = ju.offset;
+        return su = this.encodeUnreliable(ju, uu, su, Uu), ts(su.subarray(0, Eu), su.subarray(Uu, ju.offset))
       }
-      _emitStreamBroadcast(tt, et) {
-        const Vt = this.root.streamTrees;
-        for (const Ot of Vt) {
-          const Vt = Ot,
-            Dt = Vt[wt],
-            mt = Vt[dt];
-          if (void 0 === mt) continue;
-          const jt = Vt._stream,
-            Ht = jt.broadcastDeletes,
-            Xt = jt.broadcastPending,
-            Qt = jt.sentBroadcast,
-            Et = Ht.size > 0,
-            ft = Xt.size > 0,
-            yt = Dt.encDescriptor,
-            Nt = yt.encoder,
-            Mt = yt.metadata;
-          if (Et || ft) {
-            if (tt[et.offset++] = 255, Ve.number(tt, mt, et), Et) {
-              for (const Vt of Ht) Nt(this, tt, Dt, Vt, qt.DELETE, et, !1, !1, Mt);
-              Ht.clear()
+      _emitStreamBroadcast(uu, Eu) {
+        const ju = this.root.streamTrees;
+        for (const su of ju) {
+          const ju = su,
+            Zu = ju[Yu],
+            Xu = ju[lu];
+          if (void 0 === Xu) continue;
+          const qu = ju._stream,
+            fu = qu.broadcastDeletes,
+            Cu = qu.broadcastPending,
+            bu = qu.sentBroadcast,
+            Nu = fu.size > 0,
+            Ou = Cu.size > 0,
+            hu = Zu.encDescriptor,
+            Du = hu.encoder,
+            gu = hu.metadata;
+          if (Nu || Ou) {
+            if (uu[Eu.offset++] = 255, EE.number(uu, Xu, Eu), Nu) {
+              for (const ju of fu) Du(this, uu, Zu, ju, Uu.DELETE, Eu, !1, !1, gu);
+              fu.clear()
             }
-            const Ot = jt.maxPerTick,
-              ft = [];
-            let yt = 0;
-            const bt = [];
-            for (const mt of Xt) {
-              if (yt >= Ot) break;
-              const dt = Vt[lt](mt);
-              void 0 !== dt ? (Nt(this, tt, Dt, mt, qt.ADD, et, !1, !1, Mt), Qt.add(mt), ft.push(dt), bt.push(mt), yt++) : bt.push(mt)
+            const su = qu.maxPerTick,
+              Ou = [];
+            let hu = 0;
+            const Mu = [];
+            for (const Xu of Cu) {
+              if (hu >= su) break;
+              const lu = ju[cu](Xu);
+              void 0 !== lu ? (Du(this, uu, Zu, Xu, Uu.ADD, Eu, !1, !1, gu), bu.add(Xu), Ou.push(lu), Mu.push(Xu), hu++) : Mu.push(Xu)
             }
-            for (const tt of bt) Xt.delete(tt);
-            for (const Vt of ft) {
-              const Ot = Vt[wt];
-              if (void 0 === Ot) continue;
-              const Dt = Vt[dt];
-              if (void 0 === Dt) continue;
-              tt[et.offset++] = 255, Ve.number(tt, Dt, et);
-              const mt = Ot.encDescriptor,
-                jt = mt.encoder,
-                Ht = mt.metadata;
-              Ot.forEachLive((Vt => {
-                xe.hasUnreliableAtIndex(Ht, Vt) || jt(this, tt, Ot, Vt, qt.ADD, et, !1, !1, Ht)
+            for (const uu of Mu) Cu.delete(uu);
+            for (const ju of Ou) {
+              const su = ju[Yu];
+              if (void 0 === su) continue;
+              const Zu = ju[lu];
+              if (void 0 === Zu) continue;
+              uu[Eu.offset++] = 255, EE.number(uu, Zu, Eu);
+              const Xu = su.encDescriptor,
+                qu = Xu.encoder,
+                fu = Xu.metadata;
+              su.forEachLive((ju => {
+                HE.hasUnreliableAtIndex(fu, ju) || qu(this, uu, su, ju, Uu.ADD, Eu, !1, !1, fu)
               }))
             }
           }
-          for (const Ot of Qt) {
-            const qt = Vt[lt](Ot);
-            if (void 0 === qt) continue;
-            const Dt = qt[wt];
-            if (void 0 === Dt || !Dt.has()) continue;
-            const mt = qt[dt];
-            if (void 0 === mt) continue;
-            tt[et.offset++] = 255, Ve.number(tt, mt, et);
-            const jt = Dt.encDescriptor,
-              Ht = jt.encoder,
-              Xt = jt.metadata;
-            Dt.forEach(((Vt, Ot) => {
-              Vt < 0 || xe.hasUnreliableAtIndex(Xt, Vt) || Ht(this, tt, Dt, Vt, Ot, et, !1, !1, Xt)
+          for (const su of bu) {
+            const Uu = ju[cu](su);
+            if (void 0 === Uu) continue;
+            const Zu = Uu[Yu];
+            if (void 0 === Zu || !Zu.has()) continue;
+            const Xu = Uu[lu];
+            if (void 0 === Xu) continue;
+            uu[Eu.offset++] = 255, EE.number(uu, Xu, Eu);
+            const qu = Zu.encDescriptor,
+              fu = qu.encoder,
+              Cu = qu.metadata;
+            Zu.forEach(((ju, su) => {
+              ju < 0 || HE.hasUnreliableAtIndex(Cu, ju) || fu(this, uu, Zu, ju, su, Eu, !1, !1, Cu)
             }))
           }
         }
       }
-      _emitStreamPriority(tt) {
-        const et = this.root.streamTrees;
-        if (0 === et.size) return;
-        const Vt = tt.id;
-        for (const Ot of et) {
-          const et = Ot,
-            Dt = et._stream,
-            mt = Dt.pendingByView.get(Vt);
-          if (void 0 === mt || 0 === mt.size) continue;
-          const jt = Dt.priorityByView?.get(Vt),
-            Ht = void 0 !== jt,
-            Xt = Dt.priority,
-            Qt = Dt.maxPerTick,
-            Et = [],
-            ft = [];
-          if (Ht || void 0 !== Xt) {
-            const Vt = [],
-              Ot = [];
-            let qt = 0;
-            for (const Dt of mt) {
-              const mt = et[lt](Dt);
-              if (void 0 === mt) {
-                ft.push(Dt);
+      _emitStreamPriority(uu) {
+        const Eu = this.root.streamTrees;
+        if (0 === Eu.size) return;
+        const ju = uu.id;
+        for (const su of Eu) {
+          const Eu = su,
+            Zu = Eu._stream,
+            Xu = Zu.pendingByView.get(ju);
+          if (void 0 === Xu || 0 === Xu.size) continue;
+          const qu = Zu.priorityByView?.get(ju),
+            fu = void 0 !== qu,
+            Cu = Zu.priority,
+            bu = Zu.maxPerTick,
+            Nu = [],
+            Ou = [];
+          if (fu || void 0 !== Cu) {
+            const ju = [],
+              su = [];
+            let Uu = 0;
+            for (const Zu of Xu) {
+              const Xu = Eu[cu](Zu);
+              if (void 0 === Xu) {
+                Ou.push(Zu);
                 continue
               }
-              const dt = Ht ? jt(mt) : Xt(tt, mt);
-              if (qt < Qt) {
-                let tt = qt++;
-                for (; tt > 0 && Ot[tt - 1] < dt;) Ot[tt] = Ot[tt - 1], Vt[tt] = Vt[tt - 1], tt--;
-                Ot[tt] = dt, Vt[tt] = Dt
-              } else if (dt > Ot[Qt - 1]) {
-                let tt = Qt - 1;
-                for (; tt > 0 && Ot[tt - 1] < dt;) Ot[tt] = Ot[tt - 1], Vt[tt] = Vt[tt - 1], tt--;
-                Ot[tt] = dt, Vt[tt] = Dt
+              const lu = fu ? qu(Xu) : Cu(uu, Xu);
+              if (Uu < bu) {
+                let uu = Uu++;
+                for (; uu > 0 && su[uu - 1] < lu;) su[uu] = su[uu - 1], ju[uu] = ju[uu - 1], uu--;
+                su[uu] = lu, ju[uu] = Zu
+              } else if (lu > su[bu - 1]) {
+                let uu = bu - 1;
+                for (; uu > 0 && su[uu - 1] < lu;) su[uu] = su[uu - 1], ju[uu] = ju[uu - 1], uu--;
+                su[uu] = lu, ju[uu] = Zu
               }
             }
-            for (let tt = 0; tt < qt; tt++) Et.push(Vt[tt])
+            for (let uu = 0; uu < Uu; uu++) Nu.push(ju[uu])
           } else
-            for (const tt of mt) {
-              if (Et.length >= Qt) break;
-              Et.push(tt)
+            for (const uu of Xu) {
+              if (Nu.length >= bu) break;
+              Nu.push(uu)
             }
-          for (const tt of ft) mt.delete(tt);
-          const yt = Et.length;
-          let Nt = Dt.sentByView.get(Vt);
-          void 0 === Nt && (Nt = new Set, Dt.sentByView.set(Vt, Nt));
-          for (let Vt = 0; Vt < yt; Vt++) {
-            const Ot = Et[Vt],
-              Dt = et[lt](Ot);
-            if (void 0 === Dt) {
-              mt.delete(Ot);
+          for (const uu of Ou) Xu.delete(uu);
+          const hu = Nu.length;
+          let Du = Zu.sentByView.get(ju);
+          void 0 === Du && (Du = new Set, Zu.sentByView.set(ju, Du));
+          for (let ju = 0; ju < hu; ju++) {
+            const su = Nu[ju],
+              Zu = Eu[cu](su);
+            if (void 0 === Zu) {
+              Xu.delete(su);
               continue
             }
-            tt._addImmediate(Dt);
-            const jt = Dt[wt];
-            if (void 0 !== jt) {
-              const et = Dt[dt];
-              let Vt = tt.changes.get(et);
-              void 0 === Vt && (Vt = new Map, tt.changes.set(et, Vt));
-              const Ot = jt.metadata;
-              jt.forEachLive((tt => {
-                xe.hasUnreliableAtIndex(Ot, tt) || Vt.set(tt, qt.ADD)
+            uu._addImmediate(Zu);
+            const qu = Zu[Yu];
+            if (void 0 !== qu) {
+              const Eu = Zu[lu];
+              let ju = uu.changes.get(Eu);
+              void 0 === ju && (ju = new Map, uu.changes.set(Eu, ju));
+              const su = qu.metadata;
+              qu.forEachLive((uu => {
+                HE.hasUnreliableAtIndex(su, uu) || ju.set(uu, Uu.ADD)
               }))
             }
-            mt.delete(Ot), Nt.add(Ot)
+            Xu.delete(su), Du.add(su)
           }
         }
       }
       discardChanges() {
-        const tt = this.root.changes;
-        let et = tt.next;
-        const Vt = this.root;
-        for (; et;) {
-          const tt = et.next;
-          et.changeTree.endEncode(), Vt.releaseNode(et), et = tt
+        const uu = this.root.changes;
+        let Eu = uu.next;
+        const ju = this.root;
+        for (; Eu;) {
+          const uu = Eu.next;
+          Eu.changeTree.endEncode(), ju.releaseNode(Eu), Eu = uu
         }
-        tt.next = void 0, tt.tail = void 0
+        uu.next = void 0, uu.tail = void 0
       }
       discardUnreliableChanges() {
-        const tt = this.root.unreliableChanges;
-        let et = tt.next;
-        const Vt = this.root;
-        for (; et;) {
-          const tt = et.next;
-          et.changeTree.endEncodeUnreliable(), Vt.releaseNode(et), et = tt
+        const uu = this.root.unreliableChanges;
+        let Eu = uu.next;
+        const ju = this.root;
+        for (; Eu;) {
+          const uu = Eu.next;
+          Eu.changeTree.endEncodeUnreliable(), ju.releaseNode(Eu), Eu = uu
         }
-        tt.next = void 0, tt.tail = void 0
+        uu.next = void 0, uu.tail = void 0
       }
-      tryEncodeTypeId(tt, et, Vt, Ot) {
-        const qt = this.context.getTypeId(et),
-          Dt = this.context.getTypeId(Vt);
-        void 0 !== Dt ? qt !== Dt && (tt[Ot.offset++] = 213, Ve.number(tt, Dt, Ot)) : console.warn(`@colyseus/schema WARNING: Class "${Vt.name}" is not registered on TypeRegistry - Please either tag the class with @entity or define a @type() field.`)
+      tryEncodeTypeId(uu, Eu, ju, su) {
+        const Uu = this.context.getTypeId(Eu),
+          Zu = this.context.getTypeId(ju);
+        void 0 !== Zu ? Uu !== Zu && (uu[su.offset++] = 213, EE.number(uu, Zu, su)) : console.warn(`@colyseus/schema WARNING: Class "${ju.name}" is not registered on TypeRegistry - Please either tag the class with @entity or define a @type() field.`)
       }
       get hasChanges() {
         return void 0 !== this.root.changes.next || this._hasStreamBacklog()
@@ -6579,28 +6579,28 @@ export const modules = {
         return 0 === this.root.activeViews.size && this.root.streamTrees.size > 0
       }
       _hasStreamBacklog() {
-        const tt = this.root;
-        if (0 === tt.streamTrees.size) return !1;
-        const et = 0 === tt.activeViews.size;
-        for (const Vt of tt.streamTrees)
-          if (et ? Ie(Vt) : Re(Vt, tt)) return !0;
+        const uu = this.root;
+        if (0 === uu.streamTrees.size) return !1;
+        const Eu = 0 === uu.activeViews.size;
+        for (const ju of uu.streamTrees)
+          if (Eu ? mE(ju) : kE(ju, uu)) return !0;
         return !1
       }
       get hasUnreliableChanges() {
         return void 0 !== this.root.unreliableChanges.next
       }
     }
-    class YO extends Error {
-      constructor(tt) {
-        super(tt), this.name = "DecodingWarning"
+    class Ts extends Error {
+      constructor(uu) {
+        super(uu), this.name = "DecodingWarning"
       }
     }
-    const BO = {
+    const Hs = {
       value: 0,
       enumerable: !1,
       writable: !0
     };
-    class pO {
+    class As {
       refs = new Map;
       refCount = {};
       deletedRefs = new Set;
@@ -6609,1181 +6609,1181 @@ export const modules = {
       getNextUniqueId() {
         return this.nextUniqueId++
       }
-      addRef(tt, et) {
-        let Vt = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        this.refs.set(tt, et), void 0 === et[dt] ? (BO.value = tt, Object.defineProperty(et, dt, BO)) : et[dt] !== tt && (et[dt] = tt), Vt && (this.refCount[tt] = (this.refCount[tt] || 0) + 1), this.deletedRefs.has(tt) && this.deletedRefs.delete(tt)
+      addRef(uu, Eu) {
+        let ju = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        this.refs.set(uu, Eu), void 0 === Eu[lu] ? (Hs.value = uu, Object.defineProperty(Eu, lu, Hs)) : Eu[lu] !== uu && (Eu[lu] = uu), ju && (this.refCount[uu] = (this.refCount[uu] || 0) + 1), this.deletedRefs.has(uu) && this.deletedRefs.delete(uu)
       }
-      removeRef(tt) {
-        const et = this.refCount[tt];
-        if (void 0 !== et)
-          if (0 !== et)(this.refCount[tt] = et - 1) <= 0 && this.deletedRefs.add(tt);
+      removeRef(uu) {
+        const Eu = this.refCount[uu];
+        if (void 0 !== Eu)
+          if (0 !== Eu)(this.refCount[uu] = Eu - 1) <= 0 && this.deletedRefs.add(uu);
           else try {
-            const et = this.refs.get(tt);
-            throw new YO(`trying to remove refId '${tt}' with 0 refCount (${et.constructor.name}: ${JSON.stringify(et)})`)
-          } catch (mq) {
-            console.warn(mq)
+            const Eu = this.refs.get(uu);
+            throw new Ts(`trying to remove refId '${uu}' with 0 refCount (${Eu.constructor.name}: ${JSON.stringify(Eu)})`)
+          } catch (lU) {
+            console.warn(lU)
           } else try {
-            throw new YO("trying to remove refId that doesn't exist: " + tt)
-          } catch (mq) {
-            console.warn(mq)
+            throw new Ts("trying to remove refId that doesn't exist: " + uu)
+          } catch (lU) {
+            console.warn(lU)
           }
       }
       clearRefs() {
         this.refs.clear(), this.deletedRefs.clear(), this.callbacks = {}, this.refCount = {}
       }
       garbageCollectDeletedRefs() {
-        this.deletedRefs.forEach((tt => {
-          if (this.refCount[tt] > 0) return;
-          const et = this.refs.get(tt),
-            Vt = et.constructor[Symbol.metadata];
-          if (null != Vt)
-            for (const Ot in Vt) {
-              const tt = et[Vt[Ot].name];
-              if ("object" === typeof tt && tt) {
-                const et = tt[dt];
-                void 0 === et || this.deletedRefs.has(et) || this.removeRef(et)
+        this.deletedRefs.forEach((uu => {
+          if (this.refCount[uu] > 0) return;
+          const Eu = this.refs.get(uu),
+            ju = Eu.constructor[Symbol.metadata];
+          if (null != ju)
+            for (const su in ju) {
+              const uu = Eu[ju[su].name];
+              if ("object" === typeof uu && uu) {
+                const Eu = uu[lu];
+                void 0 === Eu || this.deletedRefs.has(Eu) || this.removeRef(Eu)
               }
-            } else "function" === typeof et[yt] && Array.from(et.values()).forEach((tt => {
-              const et = tt[dt];
-              void 0 === et || this.deletedRefs.has(et) || this.removeRef(et)
+            } else "function" === typeof Eu[hu] && Array.from(Eu.values()).forEach((uu => {
+              const Eu = uu[lu];
+              void 0 === Eu || this.deletedRefs.has(Eu) || this.removeRef(Eu)
             }));
-          this.refs.delete(tt), delete this.refCount[tt], delete this.callbacks[tt]
+          this.refs.delete(uu), delete this.refCount[uu], delete this.callbacks[uu]
         })), this.deletedRefs.clear()
       }
-      addCallback(tt, et, Vt) {
-        if (void 0 === tt) {
-          const tt = "number" === typeof et ? qt[et] : et;
-          throw new Error(`Can't addCallback on '${tt}' (refId is undefined)`)
+      addCallback(uu, Eu, ju) {
+        if (void 0 === uu) {
+          const uu = "number" === typeof Eu ? Uu[Eu] : Eu;
+          throw new Error(`Can't addCallback on '${uu}' (refId is undefined)`)
         }
-        return this.callbacks[tt] || (this.callbacks[tt] = {}), this.callbacks[tt][et] || (this.callbacks[tt][et] = []), this.callbacks[tt][et].push(Vt), () => this.removeCallback(tt, et, Vt)
+        return this.callbacks[uu] || (this.callbacks[uu] = {}), this.callbacks[uu][Eu] || (this.callbacks[uu][Eu] = []), this.callbacks[uu][Eu].push(ju), () => this.removeCallback(uu, Eu, ju)
       }
-      removeCallback(tt, et, Vt) {
-        const Ot = this.callbacks?.[tt]?.[et]?.indexOf(Vt);
-        void 0 !== Ot && -1 !== Ot && PO(this.callbacks[tt][et], Ot)
+      removeCallback(uu, Eu, ju) {
+        const su = this.callbacks?.[uu]?.[Eu]?.indexOf(ju);
+        void 0 !== su && -1 !== su && Vs(this.callbacks[uu][Eu], su)
       }
     }
-    class xO {
+    class ns {
       context;
       state;
       root;
       currentRefId = 0;
-      kR;
+      iK;
       resyncVisited = null;
       resyncDamaged = !1;
-      constructor(tt, et) {
-        this.setState(tt), this.context = et || new re(tt.constructor)
+      constructor(uu, Eu) {
+        this.setState(uu), this.context = Eu || new IE(uu.constructor)
       }
-      setState(tt) {
-        this.state = tt, this.root = new pO, this.root.addRef(0, tt)
+      setState(uu) {
+        this.state = uu, this.root = new As, this.root.addRef(0, uu)
       }
-      decode(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+      decode(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
             offset: 0
           },
-          Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.state;
-        const qt = void 0 !== this.kR ? [] : null,
-          Dt = this.root,
-          mt = tt.byteLength;
-        let dt = Vt.constructor[Xt];
-        for (this.currentRefId = 0; et.offset < mt;) {
-          if (tt[et.offset] == Ot) {
-            et.offset++, Vt[Jt]?.();
-            const Ot = be.number(tt, et),
-              qt = Dt.refs.get(Ot);
-            qt ? (Vt = qt, dt = Vt.constructor[Xt], this.currentRefId = Ot) : (console.error(`"refId" not found: ${Ot}`, {
-              previousRef: Vt,
+          ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.state;
+        const Uu = void 0 !== this.iK ? [] : null,
+          Zu = this.root,
+          Xu = uu.byteLength;
+        let lu = ju.constructor[Cu];
+        for (this.currentRefId = 0; Eu.offset < Xu;) {
+          if (uu[Eu.offset] == su) {
+            Eu.offset++, ju[eu]?.();
+            const su = ME.number(uu, Eu),
+              Uu = Zu.refs.get(su);
+            Uu ? (ju = Uu, lu = ju.constructor[Cu], this.currentRefId = su) : (console.error(`"refId" not found: ${su}`, {
+              previousRef: ju,
               previousRefId: this.currentRefId
-            }), console.warn("Please report this issue to the developers."), this.skipCurrentStructure(tt, et, mt));
+            }), console.warn("Please report this issue to the developers."), this.skipCurrentStructure(uu, Eu, Xu));
             continue
-          } - 1 !== dt(this, tt, et, Vt, qt) || (console.warn("@colyseus/schema: definition mismatch"), this.skipCurrentStructure(tt, et, mt))
+          } - 1 !== lu(this, uu, Eu, ju, Uu) || (console.warn("@colyseus/schema: definition mismatch"), this.skipCurrentStructure(uu, Eu, Xu))
         }
-        return Vt[Jt]?.(), null !== this.resyncVisited && function(tt, et) {
-          tt.resyncDamaged ? console.warn("@colyseus/schema: resync sweep skipped \u2014 parts of the payload could not be decoded. Stale entries may persist until the next resync.") : rV(tt, tt.state, new Set, et)
-        }(this, qt), null !== qt && this.kR?.(qt), Dt.garbageCollectDeletedRefs(), qt
+        return ju[eu]?.(), null !== this.resyncVisited && function(uu, Eu) {
+          uu.resyncDamaged ? console.warn("@colyseus/schema: resync sweep skipped \u2014 parts of the payload could not be decoded. Stale entries may persist until the next resync.") : Ij(uu, uu.state, new Set, Eu)
+        }(this, Uu), null !== Uu && this.iK?.(Uu), Zu.garbageCollectDeletedRefs(), Uu
       }
-      decodeResync(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+      decodeResync(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
           offset: 0
         };
         this.resyncVisited = new Map, this.resyncDamaged = !1;
         try {
-          return this.decode(tt, et)
+          return this.decode(uu, Eu)
         } finally {
           this.resyncVisited = null
         }
       }
-      skipCurrentStructure(tt, et, Vt) {
+      skipCurrentStructure(uu, Eu, ju) {
         null !== this.resyncVisited && (this.resyncDamaged = !0);
-        const qt = {
-          offset: et.offset
+        const Uu = {
+          offset: Eu.offset
         };
-        for (; et.offset < Vt && (tt[et.offset] !== Ot || (qt.offset = et.offset + 1, !this.root.refs.has(be.number(tt, qt))));) et.offset++
+        for (; Eu.offset < ju && (uu[Eu.offset] !== su || (Uu.offset = Eu.offset + 1, !this.root.refs.has(ME.number(uu, Uu))));) Eu.offset++
       }
-      getInstanceType(tt, et, Vt) {
-        let Ot;
-        if (213 === tt[et.offset]) {
-          et.offset++;
-          const Vt = be.number(tt, et);
-          Ot = this.context.get(Vt)
+      getInstanceType(uu, Eu, ju) {
+        let su;
+        if (213 === uu[Eu.offset]) {
+          Eu.offset++;
+          const ju = ME.number(uu, Eu);
+          su = this.context.get(ju)
         }
-        return Ot || Vt
+        return su || ju
       }
-      createInstanceOfType(tt) {
-        return tt.initializeForDecoder()
+      createInstanceOfType(uu) {
+        return uu.initializeForDecoder()
       }
-      removeChildRefs(tt, et) {
-        const Vt = "string" !== typeof tt[yt],
-          Ot = tt[dt];
-        tt.forEach(((Dt, mt) => {
-          et?.push({
-            ref: tt,
-            refId: Ot,
-            op: qt.DELETE,
-            field: mt,
+      removeChildRefs(uu, Eu) {
+        const ju = "string" !== typeof uu[hu],
+          su = uu[lu];
+        uu.forEach(((Zu, Xu) => {
+          Eu?.push({
+            ref: uu,
+            refId: su,
+            op: Uu.DELETE,
+            field: Xu,
             value: void 0,
-            previousValue: Dt
-          }), Vt && this.root.removeRef(Dt[dt])
+            previousValue: Zu
+          }), ju && this.root.removeRef(Zu[lu])
         }))
       }
     }
-    const TO = WO({
-        min: fO.float64(),
-        max: fO.float64(),
-        bits: fO.uint8(),
-        mode: fO.uint8()
+    const ys = os({
+        min: Os.float64(),
+        max: Os.float64(),
+        bits: Os.uint8(),
+        mode: Os.uint8()
       }, "QuantizedDescriptor"),
-      gO = WO({
-        name: fO.string(),
-        type: fO.string(),
-        referencedType: fO.number(),
-        childPrimitive: fO.string(),
-        quantized: fO.ref(TO).optional()
+      zs = os({
+        name: Os.string(),
+        type: Os.string(),
+        referencedType: Os.number(),
+        childPrimitive: Os.string(),
+        quantized: Os.ref(ys).optional()
       }, "ReflectionField"),
-      sO = WO({
-        id: fO.number(),
-        extendsId: fO.number(),
-        fields: fO.array(gO)
+      Rs = os({
+        id: Os.number(),
+        extendsId: Os.number(),
+        fields: Os.array(zs)
       }, "ReflectionType"),
-      nO = WO({
-        types: fO.array(sO),
-        rootType: fO.number()
+      uU = os({
+        types: Os.array(Rs),
+        rootType: Os.number()
       }, "Reflection");
 
-    function tq(tt) {
-      const et = tt.root,
-        Vt = et.callbacks,
-        Ot = new WeakMap;
-      let Dt;
+    function EU(uu) {
+      const Eu = uu.root,
+        ju = Eu.callbacks,
+        su = new WeakMap;
+      let Zu;
 
-      function mt(tt, Vt) {
-        let Ht = Vt.instance?.constructor[Symbol.metadata] || tt,
-          Xt = Vt.instance && "function" === typeof Vt.instance.forEach || tt && !cO.is(tt);
-        if (Ht && !Xt) {
-          const tt = function(tt, qt, mt, jt) {
-            return jt && void 0 !== Vt.instance[qt] && !Ot.has(Dt) && mt(Vt.instance[qt], void 0), et.addCallback(tt[dt], qt, mt)
+      function Xu(uu, ju) {
+        let fu = ju.instance?.constructor[Symbol.metadata] || uu,
+          Cu = ju.instance && "function" === typeof ju.instance.forEach || uu && !ms.is(uu);
+        if (fu && !Cu) {
+          const uu = function(uu, Uu, Xu, qu) {
+            return qu && void 0 !== ju.instance[Uu] && !su.has(Zu) && Xu(ju.instance[Uu], void 0), Eu.addCallback(uu[lu], Uu, Xu)
           };
           return new Proxy({
-            listen: function(et, qt) {
-              let mt = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-              if (Vt.instance) return tt(Vt.instance, et, qt, mt);
+            listen: function(Eu, Uu) {
+              let Xu = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+              if (ju.instance) return uu(ju.instance, Eu, Uu, Xu);
               {
-                let dt = () => {};
-                return Vt.onInstanceAvailable(((Vt, jt) => {
-                  dt = tt(Vt, et, qt, mt && jt && !Ot.has(Dt))
-                })), () => dt()
+                let lu = () => {};
+                return ju.onInstanceAvailable(((ju, qu) => {
+                  lu = uu(ju, Eu, Uu, Xu && qu && !su.has(Zu))
+                })), () => lu()
               }
             },
-            onChange: function(tt) {
-              return et.addCallback(Vt.instance[dt], qt.REPLACE, tt)
+            onChange: function(uu) {
+              return Eu.addCallback(ju.instance[lu], Uu.REPLACE, uu)
             },
-            bindTo: function(tt, Ot) {
-              return Ot || (Ot = Object.keys(Ht).map((tt => Ht[tt].name))), et.addCallback(Vt.instance[dt], qt.REPLACE, (() => {
-                Ot.forEach((et => tt[et] = Vt.instance[et]))
+            bindTo: function(uu, su) {
+              return su || (su = Object.keys(fu).map((uu => fu[uu].name))), Eu.addCallback(ju.instance[lu], Uu.REPLACE, (() => {
+                su.forEach((Eu => uu[Eu] = ju.instance[Eu]))
               }))
             }
           }, {
-            get(tt, et) {
-              const Ot = Ht[Ht[et]];
-              if (Ot) {
-                const tt = Vt.instance?.[et],
-                  qt = Ot => {
-                    const qt = jt(Vt.instance).listen(et, ((tt, et) => {
-                      Ot(tt, !1), qt?.()
+            get(uu, Eu) {
+              const su = fu[fu[Eu]];
+              if (su) {
+                const uu = ju.instance?.[Eu],
+                  Uu = su => {
+                    const Uu = qu(ju.instance).listen(Eu, ((uu, Eu) => {
+                      su(uu, !1), Uu?.()
                     }), !1);
-                    void 0 !== tt?.[dt] && Ot(tt, !0)
+                    void 0 !== uu?.[lu] && su(uu, !0)
                   };
-                return mt(Ot.type, {
-                  instance: void 0 !== tt?.[dt] && tt,
-                  parentInstance: Vt.instance,
-                  onInstanceAvailable: qt
+                return Xu(su.type, {
+                  instance: void 0 !== uu?.[lu] && uu,
+                  parentInstance: ju.instance,
+                  onInstanceAvailable: Uu
                 })
               }
-              return tt[et]
+              return uu[Eu]
             },
-            has: (tt, et) => void 0 !== Ht[et],
-            set(tt, et, Vt) {
+            has: (uu, Eu) => void 0 !== fu[Eu],
+            set(uu, Eu, ju) {
               throw new Error("not allowed")
             },
-            deleteProperty(tt, et) {
+            deleteProperty(uu, Eu) {
               throw new Error("not allowed")
             }
           })
         } {
-          const tt = function(tt, Vt, mt) {
-              return mt && tt.forEach(((tt, et) => Vt(tt, et))), et.addCallback(tt[dt], qt.ADD, ((tt, et) => {
-                Ot.set(Vt, !0), Dt = Vt, Vt(tt, et), Ot.delete(Vt), Dt = void 0
+          const uu = function(uu, ju, Xu) {
+              return Xu && uu.forEach(((uu, Eu) => ju(uu, Eu))), Eu.addCallback(uu[lu], Uu.ADD, ((uu, Eu) => {
+                su.set(ju, !0), Zu = ju, ju(uu, Eu), su.delete(ju), Zu = void 0
               }))
             },
-            mt = function(tt, Vt) {
-              return et.addCallback(tt[dt], qt.DELETE, Vt)
+            Xu = function(uu, ju) {
+              return Eu.addCallback(uu[lu], Uu.DELETE, ju)
             },
-            jt = function(tt, Vt) {
-              return et.addCallback(tt[dt], qt.REPLACE, Vt)
+            qu = function(uu, ju) {
+              return Eu.addCallback(uu[lu], Uu.REPLACE, ju)
             };
           return new Proxy({
-            qJ: function(et) {
-              let qt = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-              if (Vt.instance) return tt(Vt.instance, et, qt && !Ot.has(Dt));
-              if (Vt.onInstanceAvailable) {
-                let mt = () => {};
-                return Vt.onInstanceAvailable(((Vt, dt) => {
-                  mt = tt(Vt, et, qt && dt && !Ot.has(Dt))
-                })), () => mt()
+            lG: function(Eu) {
+              let Uu = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+              if (ju.instance) return uu(ju.instance, Eu, Uu && !su.has(Zu));
+              if (ju.onInstanceAvailable) {
+                let Xu = () => {};
+                return ju.onInstanceAvailable(((ju, lu) => {
+                  Xu = uu(ju, Eu, Uu && lu && !su.has(Zu))
+                })), () => Xu()
               }
             },
-            nS: function(tt) {
-              if (Vt.instance) return mt(Vt.instance, tt);
-              if (Vt.onInstanceAvailable) {
-                let et = () => {};
-                return Vt.onInstanceAvailable((Vt => {
-                  et = mt(Vt, tt)
-                })), () => et()
+            jK: function(uu) {
+              if (ju.instance) return Xu(ju.instance, uu);
+              if (ju.onInstanceAvailable) {
+                let Eu = () => {};
+                return ju.onInstanceAvailable((ju => {
+                  Eu = Xu(ju, uu)
+                })), () => Eu()
               }
             },
-            onChange: function(tt) {
-              if (Vt.instance) return jt(Vt.instance, tt);
-              if (Vt.onInstanceAvailable) {
-                let et = () => {};
-                return Vt.onInstanceAvailable((Vt => {
-                  et = jt(Vt, tt)
-                })), () => et()
+            onChange: function(uu) {
+              if (ju.instance) return qu(ju.instance, uu);
+              if (ju.onInstanceAvailable) {
+                let Eu = () => {};
+                return ju.onInstanceAvailable((ju => {
+                  Eu = qu(ju, uu)
+                })), () => Eu()
               }
             }
           }, {
-            get(tt, et) {
-              if (!tt[et]) throw new Error(`Can't access '${et}' through callback proxy. access the instance directly.`);
-              return tt[et]
+            get(uu, Eu) {
+              if (!uu[Eu]) throw new Error(`Can't access '${Eu}' through callback proxy. access the instance directly.`);
+              return uu[Eu]
             },
-            has: (tt, et) => void 0 !== tt[et],
-            set(tt, et, Vt) {
+            has: (uu, Eu) => void 0 !== uu[Eu],
+            set(uu, Eu, ju) {
               throw new Error("not allowed")
             },
-            deleteProperty(tt, et) {
+            deleteProperty(uu, Eu) {
               throw new Error("not allowed")
             }
           })
         }
       }
 
-      function jt(tt) {
-        return mt(void 0, {
-          instance: tt
+      function qu(uu) {
+        return Xu(void 0, {
+          instance: uu
         })
       }
-      return tt.kR = function(tt) {
-        const et = new Set;
-        for (let Ot = 0, Dt = tt.length; Ot < Dt; Ot++) {
-          const Dt = tt[Ot],
-            mt = Dt.refId,
-            jt = Dt.ref,
-            Ht = Vt[mt];
-          if (Ht) {
-            if ((Dt.op & qt.DELETE) === qt.DELETE && cO.isSchema(Dt.previousValue)) {
-              const tt = Vt[Dt.previousValue[dt]]?.[qt.DELETE];
-              for (let et = tt?.length - 1; et >= 0; et--) tt[et]()
+      return uu.iK = function(uu) {
+        const Eu = new Set;
+        for (let su = 0, Zu = uu.length; su < Zu; su++) {
+          const Zu = uu[su],
+            Xu = Zu.refId,
+            qu = Zu.ref,
+            fu = ju[Xu];
+          if (fu) {
+            if ((Zu.op & Uu.DELETE) === Uu.DELETE && ms.isSchema(Zu.previousValue)) {
+              const uu = ju[Zu.previousValue[lu]]?.[Uu.DELETE];
+              for (let Eu = uu?.length - 1; Eu >= 0; Eu--) uu[Eu]()
             }
-            if (cO.isSchema(jt)) {
-              if (!et.has(mt)) {
-                const tt = Ht?.[qt.REPLACE];
-                for (let et = tt?.length - 1; et >= 0; et--) tt[et]()
+            if (ms.isSchema(qu)) {
+              if (!Eu.has(Xu)) {
+                const uu = fu?.[Uu.REPLACE];
+                for (let Eu = uu?.length - 1; Eu >= 0; Eu--) uu[Eu]()
               }
-              if (Ht.hasOwnProperty(Dt.field)) {
-                const tt = Ht[Dt.field];
-                for (let et = tt?.length - 1; et >= 0; et--) tt[et](Dt.value, Dt.previousValue)
+              if (fu.hasOwnProperty(Zu.field)) {
+                const uu = fu[Zu.field];
+                for (let Eu = uu?.length - 1; Eu >= 0; Eu--) uu[Eu](Zu.value, Zu.previousValue)
               }
             } else {
-              if ((Dt.op & qt.DELETE) === qt.DELETE) {
-                if (void 0 !== Dt.previousValue) {
-                  const tt = Ht[qt.DELETE];
-                  for (let et = tt?.length - 1; et >= 0; et--) tt[et](Dt.previousValue, Dt.dynamicIndex ?? Dt.field)
+              if ((Zu.op & Uu.DELETE) === Uu.DELETE) {
+                if (void 0 !== Zu.previousValue) {
+                  const uu = fu[Uu.DELETE];
+                  for (let Eu = uu?.length - 1; Eu >= 0; Eu--) uu[Eu](Zu.previousValue, Zu.dynamicIndex ?? Zu.field)
                 }
-                if ((Dt.op & qt.ADD) === qt.ADD) {
-                  const tt = Ht[qt.ADD];
-                  for (let et = tt?.length - 1; et >= 0; et--) tt[et](Dt.value, Dt.dynamicIndex ?? Dt.field)
+                if ((Zu.op & Uu.ADD) === Uu.ADD) {
+                  const uu = fu[Uu.ADD];
+                  for (let Eu = uu?.length - 1; Eu >= 0; Eu--) uu[Eu](Zu.value, Zu.dynamicIndex ?? Zu.field)
                 }
-              } else if ((Dt.op & qt.ADD) === qt.ADD && Dt.previousValue !== Dt.value) {
-                const tt = Ht[qt.ADD];
-                for (let et = tt?.length - 1; et >= 0; et--) tt[et](Dt.value, Dt.dynamicIndex ?? Dt.field)
+              } else if ((Zu.op & Uu.ADD) === Uu.ADD && Zu.previousValue !== Zu.value) {
+                const uu = fu[Uu.ADD];
+                for (let Eu = uu?.length - 1; Eu >= 0; Eu--) uu[Eu](Zu.value, Zu.dynamicIndex ?? Zu.field)
               }
-              if (Dt.value !== Dt.previousValue && (void 0 !== Dt.value || void 0 !== Dt.previousValue)) {
-                const tt = Ht[qt.REPLACE];
-                for (let et = tt?.length - 1; et >= 0; et--) tt[et](Dt.value, Dt.dynamicIndex ?? Dt.field)
+              if (Zu.value !== Zu.previousValue && (void 0 !== Zu.value || void 0 !== Zu.previousValue)) {
+                const uu = fu[Uu.REPLACE];
+                for (let Eu = uu?.length - 1; Eu >= 0; Eu--) uu[Eu](Zu.value, Zu.dynamicIndex ?? Zu.field)
               }
             }
-            et.add(mt)
+            Eu.add(Xu)
           }
         }
-      }, jt
+      }, qu
     }
 
-    function eq(tt, et) {
-      tt.kR = et
+    function jU(uu, Eu) {
+      uu.iK = Eu
     }
-    nO.encode = function(tt) {
-      let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+    uU.encode = function(uu) {
+      let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
         offset: 0
       };
-      const Vt = tt.context,
-        Ot = new nO,
-        qt = new iO(Ot),
-        Dt = Vt.schemas.get(tt.state.constructor);
-      Dt > 0 && (Ot.rootType = Dt);
-      const mt = new Set,
-        dt = {},
-        jt = tt => {
-          if (void 0 === tt.extendsId || mt.has(tt.extendsId)) {
-            mt.add(tt.id), Ot.types.push(tt);
-            const et = dt[tt.id];
-            void 0 !== et && (delete dt[tt.id], et.forEach((tt => jt(tt))))
-          } else void 0 === dt[tt.extendsId] && (dt[tt.extendsId] = []), dt[tt.extendsId].push(tt)
+      const ju = uu.context,
+        su = new uU,
+        Uu = new xs(su),
+        Zu = ju.schemas.get(uu.state.constructor);
+      Zu > 0 && (su.rootType = Zu);
+      const Xu = new Set,
+        lu = {},
+        qu = uu => {
+          if (void 0 === uu.extendsId || Xu.has(uu.extendsId)) {
+            Xu.add(uu.id), su.types.push(uu);
+            const Eu = lu[uu.id];
+            void 0 !== Eu && (delete lu[uu.id], Eu.forEach((uu => qu(uu))))
+          } else void 0 === lu[uu.extendsId] && (lu[uu.extendsId] = []), lu[uu.extendsId].push(uu)
         };
-      Vt.schemas.forEach(((tt, et) => {
-        const Ot = new sO;
-        Ot.id = Number(tt);
-        const qt = Object.getPrototypeOf(et);
-        qt !== cO && (Ot.extendsId = Vt.schemas.get(qt));
-        const Dt = et[Symbol.metadata];
-        if (Dt !== qt[Symbol.metadata]) {
-          const tt = Dt[Wt] ?? -1;
-          for (let et = 0; et <= tt; et++) {
-            const tt = Dt[et];
-            if (void 0 === tt) continue;
-            const qt = tt.name;
-            if (!Object.prototype.hasOwnProperty.call(Dt, qt)) continue;
-            const mt = new gO;
-            let dt;
-            if (mt.name = qt, "string" === typeof tt.type) dt = tt.type;
-            else if (ke(tt.type)) {
-              const et = tt.type.quantized;
-              dt = "quantized";
-              const Vt = new TO;
-              Vt.min = et.min, Vt.max = et.max, Vt.bits = et.bits, Vt.mode = et.wrap ? 1 : 0, mt.quantized = Vt
+      ju.schemas.forEach(((uu, Eu) => {
+        const su = new Rs;
+        su.id = Number(uu);
+        const Uu = Object.getPrototypeOf(Eu);
+        Uu !== ms && (su.extendsId = ju.schemas.get(Uu));
+        const Zu = Eu[Symbol.metadata];
+        if (Zu !== Uu[Symbol.metadata]) {
+          const uu = Zu[au] ?? -1;
+          for (let Eu = 0; Eu <= uu; Eu++) {
+            const uu = Zu[Eu];
+            if (void 0 === uu) continue;
+            const Uu = uu.name;
+            if (!Object.prototype.hasOwnProperty.call(Zu, Uu)) continue;
+            const Xu = new zs;
+            let lu;
+            if (Xu.name = Uu, "string" === typeof uu.type) lu = uu.type;
+            else if (QE(uu.type)) {
+              const Eu = uu.type.quantized;
+              lu = "quantized";
+              const ju = new ys;
+              ju.min = Eu.min, ju.max = Eu.max, ju.bits = Eu.bits, ju.mode = Eu.wrap ? 1 : 0, Xu.quantized = ju
             } else {
-              let et;
-              cO.is(tt.type) ? (dt = "ref", et = tt.type) : (dt = Object.keys(tt.type)[0], "string" === typeof tt.type[dt] ? mt.childPrimitive = tt.type[dt] : et = tt.type[dt]), mt.referencedType = et ? Vt.getTypeId(et) : -1
+              let Eu;
+              ms.is(uu.type) ? (lu = "ref", Eu = uu.type) : (lu = Object.keys(uu.type)[0], "string" === typeof uu.type[lu] ? Xu.childPrimitive = uu.type[lu] : Eu = uu.type[lu]), Xu.referencedType = Eu ? ju.getTypeId(Eu) : -1
             }
-            mt.type = dt, Ot.fields.push(mt)
+            Xu.type = lu, su.fields.push(Xu)
           }
         }
-        jt(Ot)
+        qu(su)
       }));
-      for (const Ht in dt) dt[Ht].forEach((tt => Ot.types.push(tt)));
-      return qt.encodeAll(et).slice(0, et.offset)
-    }, nO.decode = function(tt, et) {
-      const Vt = new nO;
-      new xO(Vt).decode(tt, et);
-      const Ot = new re;
-      Vt.types.forEach((tt => {
-        const et = Ot.get(tt.extendsId) ?? cO,
-          Vt = class extends et {};
-        re.register(Vt), Ot.add(Vt, tt.id)
+      for (const fu in lu) lu[fu].forEach((uu => su.types.push(uu)));
+      return Uu.encodeAll(Eu).slice(0, Eu.offset)
+    }, uU.decode = function(uu, Eu) {
+      const ju = new uU;
+      new ns(ju).decode(uu, Eu);
+      const su = new IE;
+      ju.types.forEach((uu => {
+        const Eu = su.get(uu.extendsId) ?? ms,
+          ju = class extends Eu {};
+        IE.register(ju), su.add(ju, uu.id)
       }), {});
-      Vt.types.forEach((tt => {
-        const et = Ot.get(tt.id),
-          qt = xe.initialize(et),
-          Dt = [];
-        let mt = tt;
+      ju.types.forEach((uu => {
+        const Eu = su.get(uu.id),
+          Uu = HE.initialize(Eu),
+          Zu = [];
+        let Xu = uu;
         do {
-          Dt.push(mt), mt = Vt.types.find((tt => tt.id === mt.extendsId))
-        } while (mt);
-        let dt = 0;
-        Dt.reverse().forEach((tt => {
-          ((tt, et, Vt) => {
-            et.fields.forEach(((et, qt) => {
-              const Dt = Vt + qt;
-              if (void 0 !== et.quantized) {
-                const Vt = et.quantized;
-                xe.addField(tt, Dt, et.name, {
-                  quantized: Fe({
-                    min: Vt.min,
-                    max: Vt.max,
-                    bits: Vt.bits,
-                    mode: 1 === Vt.mode ? "wrap" : "clamp"
+          Zu.push(Xu), Xu = ju.types.find((uu => uu.id === Xu.extendsId))
+        } while (Xu);
+        let lu = 0;
+        Zu.reverse().forEach((uu => {
+          ((uu, Eu, ju) => {
+            Eu.fields.forEach(((Eu, Uu) => {
+              const Zu = ju + Uu;
+              if (void 0 !== Eu.quantized) {
+                const ju = Eu.quantized;
+                HE.addField(uu, Zu, Eu.name, {
+                  quantized: rE({
+                    min: ju.min,
+                    max: ju.max,
+                    bits: ju.bits,
+                    mode: 1 === ju.mode ? "wrap" : "clamp"
                   })
                 })
-              } else if (void 0 !== et.referencedType) {
-                const Vt = et.type,
-                  qt = Ot.get(et.referencedType) ?? et.childPrimitive;
-                "ref" === Vt ? xe.addField(tt, Dt, et.name, qt) : xe.addField(tt, Dt, et.name, {
-                  [Vt]: qt
+              } else if (void 0 !== Eu.referencedType) {
+                const ju = Eu.type,
+                  Uu = su.get(Eu.referencedType) ?? Eu.childPrimitive;
+                "ref" === ju ? HE.addField(uu, Zu, Eu.name, Uu) : HE.addField(uu, Zu, Eu.name, {
+                  [ju]: Uu
                 })
-              } else xe.addField(tt, Dt, et.name, et.type)
+              } else HE.addField(uu, Zu, Eu.name, Eu.type)
             }))
-          })(qt, tt, dt), dt += tt.fields.length
+          })(Uu, uu, lu), lu += uu.fields.length
         }))
       }));
-      const qt = new(Ot.get(Vt.rootType || 0));
-      return new xO(qt, Ot)
-    }, nO.makeEncodable = function(tt) {
-      const et = tt[Symbol.metadata];
-      if (!et) return tt;
-      const Vt = et[Wt];
-      if (void 0 === Vt) return tt;
-      for (let Ot = 0; Ot <= Vt; Ot++) {
-        const Vt = et[Ot];
-        Vt && xe.defineField(tt, et, Ot, Vt.name, Vt.type)
+      const Uu = new(su.get(ju.rootType || 0));
+      return new ns(Uu, su)
+    }, uU.makeEncodable = function(uu) {
+      const Eu = uu[Symbol.metadata];
+      if (!Eu) return uu;
+      const ju = Eu[au];
+      if (void 0 === ju) return uu;
+      for (let su = 0; su <= ju; su++) {
+        const ju = Eu[su];
+        ju && HE.defineField(uu, Eu, su, ju.name, ju.type)
       }
-      return Object.prototype.hasOwnProperty.call(tt, ht) && delete tt[ht], tt
+      return Object.prototype.hasOwnProperty.call(uu, Ju) && delete uu[Ju], uu
     };
-    class Vq {
-      xE;
+    class sU {
+      zN;
       uniqueRefIds = new Set;
       isTriggering = !1;
-      constructor(tt) {
-        this.xE = tt, this.xE.kR = this.kR.bind(this)
+      constructor(uu) {
+        this.zN = uu, this.zN.iK = this.iK.bind(this)
       }
       get callbacks() {
-        return this.xE.root.callbacks
+        return this.zN.root.callbacks
       }
       get state() {
-        return this.xE.state
+        return this.zN.state
       }
-      addCallback(tt, et, Vt) {
-        return this.xE.root.addCallback(tt, et, Vt)
+      addCallback(uu, Eu, ju) {
+        return this.zN.root.addCallback(uu, Eu, ju)
       }
-      addCallbackOrWaitCollectionAvailable(tt, et, Vt, Ot) {
-        let Dt = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          mt = () => {};
-        const jt = () => mt(),
-          Ht = tt[et];
-        if (Ht && void 0 !== Ht[dt]) return Dt = Dt && !1 === this.isTriggering, Vt === qt.ADD && Dt && Ht.forEach(((tt, et) => {
-          Ot(tt, et)
-        })), this.addCallback(Ht[dt], Vt, Ot);
+      addCallbackOrWaitCollectionAvailable(uu, Eu, ju, su) {
+        let Zu = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          Xu = () => {};
+        const qu = () => Xu(),
+          fu = uu[Eu];
+        if (fu && void 0 !== fu[lu]) return Zu = Zu && !1 === this.isTriggering, ju === Uu.ADD && Zu && fu.forEach(((uu, Eu) => {
+          su(uu, Eu)
+        })), this.addCallback(fu[lu], ju, su);
         {
-          let qt;
-          return qt = this.addCallback(tt[dt], et, ((tt, et) => {
-            null !== tt && void 0 !== tt && (qt(), mt = this.addCallback(tt[dt], Vt, Ot))
-          })), mt = qt, jt
+          let Uu;
+          return Uu = this.addCallback(uu[lu], Eu, ((uu, Eu) => {
+            null !== uu && void 0 !== uu && (Uu(), Xu = this.addCallback(uu[lu], ju, su))
+          })), Xu = Uu, qu
         }
       }
       listen() {
         return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.listenInstance(this.state, arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], arguments.length <= 2 ? void 0 : arguments[2]) : this.listenInstance(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], arguments.length <= 2 ? void 0 : arguments[2], arguments.length <= 3 ? void 0 : arguments[3])
       }
-      listenInstance(tt, et, Vt) {
-        let Ot = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        Ot = Ot && !1 === this.isTriggering;
-        const qt = tt[et];
-        return Ot && null !== qt && void 0 !== qt && Vt(qt, void 0), this.addCallback(tt[dt], et, Vt)
+      listenInstance(uu, Eu, ju) {
+        let su = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        su = su && !1 === this.isTriggering;
+        const Uu = uu[Eu];
+        return su && null !== Uu && void 0 !== Uu && ju(Uu, void 0), this.addCallback(uu[lu], Eu, ju)
       }
       onChange() {
         if (2 === arguments.length && "string" !== typeof(arguments.length <= 0 ? void 0 : arguments[0])) {
-          const tt = arguments.length <= 0 ? void 0 : arguments[0],
-            et = arguments.length <= 1 ? void 0 : arguments[1];
-          return this.addCallback(tt[dt], qt.REPLACE, et)
+          const uu = arguments.length <= 0 ? void 0 : arguments[0],
+            Eu = arguments.length <= 1 ? void 0 : arguments[1];
+          return this.addCallback(uu[lu], Uu.REPLACE, Eu)
         }
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], qt.REPLACE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], qt.REPLACE, arguments.length <= 2 ? void 0 : arguments[2])
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Uu.REPLACE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Uu.REPLACE, arguments.length <= 2 ? void 0 : arguments[2])
       }
-      qJ() {
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], qt.ADD, arguments.length <= 1 ? void 0 : arguments[1], !1 !== (arguments.length <= 2 ? void 0 : arguments[2])) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], qt.ADD, arguments.length <= 2 ? void 0 : arguments[2], !1 !== (arguments.length <= 3 ? void 0 : arguments[3]))
+      lG() {
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Uu.ADD, arguments.length <= 1 ? void 0 : arguments[1], !1 !== (arguments.length <= 2 ? void 0 : arguments[2])) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Uu.ADD, arguments.length <= 2 ? void 0 : arguments[2], !1 !== (arguments.length <= 3 ? void 0 : arguments[3]))
       }
-      nS() {
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], qt.DELETE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], qt.DELETE, arguments.length <= 2 ? void 0 : arguments[2])
+      jK() {
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Uu.DELETE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Uu.DELETE, arguments.length <= 2 ? void 0 : arguments[2])
       }
-      bindTo(tt, et, Vt) {
-        let Ot = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        const Dt = tt.constructor[Symbol.metadata];
-        Vt || (Vt = Object.keys(Dt).filter((tt => !isNaN(Number(tt)))).map((tt => Dt[tt].name)));
-        const mt = () => {
-          for (const Ot of Vt) {
-            const Vt = tt[Ot];
-            void 0 !== Vt && (et[Ot] = Vt)
+      bindTo(uu, Eu, ju) {
+        let su = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        const Zu = uu.constructor[Symbol.metadata];
+        ju || (ju = Object.keys(Zu).filter((uu => !isNaN(Number(uu)))).map((uu => Zu[uu].name)));
+        const Xu = () => {
+          for (const su of ju) {
+            const ju = uu[su];
+            void 0 !== ju && (Eu[su] = ju)
           }
         };
-        return Ot && mt(), this.addCallback(tt[dt], qt.REPLACE, mt)
+        return su && Xu(), this.addCallback(uu[lu], Uu.REPLACE, Xu)
       }
-      kR(tt) {
+      iK(uu) {
         this.uniqueRefIds.clear(), this.isTriggering = !0;
-        for (let et = 0, Vt = tt.length; et < Vt; et++) {
-          const Vt = tt[et],
-            Ot = Vt.refId,
-            Dt = Vt.ref,
-            mt = this.callbacks[Ot];
-          if (mt) {
-            if ((Vt.op & qt.DELETE) === qt.DELETE && cO.isSchema(Vt.previousValue)) {
-              const tt = Vt.previousValue[dt],
-                et = this.callbacks[tt]?.[qt.DELETE];
-              if (et)
-                for (let Vt = et.length - 1; Vt >= 0; Vt--) try {
-                  et[Vt]()
-                } catch (mq) {
-                  console.error(mq)
+        for (let Eu = 0, ju = uu.length; Eu < ju; Eu++) {
+          const ju = uu[Eu],
+            su = ju.refId,
+            Zu = ju.ref,
+            Xu = this.callbacks[su];
+          if (Xu) {
+            if ((ju.op & Uu.DELETE) === Uu.DELETE && ms.isSchema(ju.previousValue)) {
+              const uu = ju.previousValue[lu],
+                Eu = this.callbacks[uu]?.[Uu.DELETE];
+              if (Eu)
+                for (let ju = Eu.length - 1; ju >= 0; ju--) try {
+                  Eu[ju]()
+                } catch (lU) {
+                  console.error(lU)
                 }
             }
-            if (cO.isSchema(Dt)) {
-              if (!this.uniqueRefIds.has(Ot)) {
-                const tt = mt[qt.REPLACE];
-                if (tt)
-                  for (let et = tt.length - 1; et >= 0; et--) try {
-                    tt[et]()
-                  } catch (mq) {
-                    console.error(mq)
+            if (ms.isSchema(Zu)) {
+              if (!this.uniqueRefIds.has(su)) {
+                const uu = Xu[Uu.REPLACE];
+                if (uu)
+                  for (let Eu = uu.length - 1; Eu >= 0; Eu--) try {
+                    uu[Eu]()
+                  } catch (lU) {
+                    console.error(lU)
                   }
               }
-              const tt = mt[Vt.field];
-              if (tt)
-                for (let et = tt.length - 1; et >= 0; et--) try {
-                  tt[et](Vt.value, Vt.previousValue)
-                } catch (mq) {
-                  console.error(mq)
+              const uu = Xu[ju.field];
+              if (uu)
+                for (let Eu = uu.length - 1; Eu >= 0; Eu--) try {
+                  uu[Eu](ju.value, ju.previousValue)
+                } catch (lU) {
+                  console.error(lU)
                 }
             } else {
-              const tt = Vt.dynamicIndex ?? Vt.field;
-              if ((Vt.op & qt.DELETE) === qt.DELETE) {
-                if (void 0 !== Vt.previousValue) {
-                  const et = mt[qt.DELETE];
-                  if (et)
-                    for (let Ot = et.length - 1; Ot >= 0; Ot--) try {
-                      et[Ot](Vt.previousValue, tt)
-                    } catch (mq) {
-                      console.error(mq)
+              const uu = ju.dynamicIndex ?? ju.field;
+              if ((ju.op & Uu.DELETE) === Uu.DELETE) {
+                if (void 0 !== ju.previousValue) {
+                  const Eu = Xu[Uu.DELETE];
+                  if (Eu)
+                    for (let su = Eu.length - 1; su >= 0; su--) try {
+                      Eu[su](ju.previousValue, uu)
+                    } catch (lU) {
+                      console.error(lU)
                     }
                 }
-                if ((Vt.op & qt.ADD) === qt.ADD) {
-                  const et = mt[qt.ADD];
-                  if (et)
-                    for (let Ot = et.length - 1; Ot >= 0; Ot--) try {
-                      et[Ot](Vt.value, tt)
-                    } catch (mq) {
-                      console.error(mq)
+                if ((ju.op & Uu.ADD) === Uu.ADD) {
+                  const Eu = Xu[Uu.ADD];
+                  if (Eu)
+                    for (let su = Eu.length - 1; su >= 0; su--) try {
+                      Eu[su](ju.value, uu)
+                    } catch (lU) {
+                      console.error(lU)
                     }
                 }
-              } else if ((Vt.op & qt.ADD) === qt.ADD && Vt.previousValue !== Vt.value) {
-                const et = mt[qt.ADD];
-                if (et)
-                  for (let Ot = et.length - 1; Ot >= 0; Ot--) try {
-                    et[Ot](Vt.value, tt)
-                  } catch (mq) {
-                    console.error(mq)
+              } else if ((ju.op & Uu.ADD) === Uu.ADD && ju.previousValue !== ju.value) {
+                const Eu = Xu[Uu.ADD];
+                if (Eu)
+                  for (let su = Eu.length - 1; su >= 0; su--) try {
+                    Eu[su](ju.value, uu)
+                  } catch (lU) {
+                    console.error(lU)
                   }
               }
-              if (Vt.value !== Vt.previousValue) {
-                const et = mt[qt.REPLACE];
-                if (et)
-                  for (let Ot = et.length - 1; Ot >= 0; Ot--) try {
-                    et[Ot](tt, Vt.value)
-                  } catch (mq) {
-                    console.error(mq)
+              if (ju.value !== ju.previousValue) {
+                const Eu = Xu[Uu.REPLACE];
+                if (Eu)
+                  for (let su = Eu.length - 1; su >= 0; su--) try {
+                    Eu[su](uu, ju.value)
+                  } catch (lU) {
+                    console.error(lU)
                   }
               }
             }
-            this.uniqueRefIds.add(Ot)
+            this.uniqueRefIds.add(su)
           }
         }
         this.isTriggering = !1
       }
     }
-    const Oq = {
-      get(tt) {
-        if (tt instanceof xO) return new Vq(tt);
-        if ("xE" in tt.ZN) return new Vq(tt.ZN.xE);
+    const UU = {
+      get(uu) {
+        if (uu instanceof ns) return new sU(uu);
+        if ("zN" in uu.pD) return new sU(uu.pD.zN);
         throw new Error("Invalid room or decoder")
       },
-      getLegacy(tt) {
-        if (tt instanceof xO) return tq(tt);
-        if ("xE" in tt.ZN) return tq(tt.ZN.xE);
+      getLegacy(uu) {
+        if (uu instanceof ns) return EU(uu);
+        if ("zN" in uu.pD) return EU(uu.pD.zN);
         throw new Error("Invalid room or decoder")
       },
-      getRawChanges: (tt, et) => eq(tt, et)
+      getRawChanges: (uu, Eu) => jU(uu, Eu)
     };
-    class qq {
+    class ZU {
       _free = [];
       _factory;
       _maxSize;
-      constructor(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this._factory = tt, this._maxSize = et.maxSize ?? 1 / 0;
-        const Vt = et.preallocate ?? 0;
-        for (let Ot = 0; Ot < Vt; Ot++) this._free.push(tt())
+      constructor(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this._factory = uu, this._maxSize = Eu.maxSize ?? 1 / 0;
+        const ju = Eu.preallocate ?? 0;
+        for (let su = 0; su < ju; su++) this._free.push(uu())
       }
       acquire() {
         return this._free.length > 0 ? this._free.pop() : this._factory()
       }
-      release(tt) {
-        cO.reset(tt), this._free.length < this._maxSize && this._free.push(tt)
+      release(uu) {
+        ms.reset(uu), this._free.length < this._maxSize && this._free.push(uu)
       }
       get size() {
         return this._free.length
       }
     }
 
-    function Dq(tt) {
-      return new qq((() => new tt), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
+    function XU(uu) {
+      return new ZU((() => new uu), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
     }
-    ue("map", {
-      constructor: DO
-    }), ue("array", {
-      constructor: OO
-    }), ue("set", {
-      constructor: dO
-    }), ue("collection", {
-      constructor: mO
+    pE("map", {
+      constructor: Zs
+    }), pE("array", {
+      constructor: ss
+    }), pE("set", {
+      constructor: ls
+    }), pE("collection", {
+      constructor: Xs
     })
   },
-  9324: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      __addDisposableResource: () => kt,
-      __assign: () => Dt,
-      __asyncDelegator: () => vt,
-      __asyncGenerator: () => ht,
-      __asyncValues: () => Wt,
-      __await: () => Kt,
-      __awaiter: () => ft,
-      __classPrivateFieldGet: () => Zt,
-      __classPrivateFieldIn: () => Ft,
-      __classPrivateFieldSet: () => Lt,
-      __createBinding: () => yt,
-      __decorate: () => dt,
-      __disposeResources: () => zt,
-      __esDecorate: () => Ht,
-      __exportStar: () => Nt,
-      __extends: () => qt,
-      __generator: () => wt,
-      __importDefault: () => Pt,
-      __importStar: () => It,
-      __makeTemplateObject: () => St,
-      __metadata: () => Et,
-      __param: () => jt,
-      __propKey: () => Qt,
-      __read: () => bt,
-      __rest: () => mt,
-      __rewriteRelativeImportExtension: () => ot,
-      __runInitializers: () => Xt,
-      __setFunctionName: () => lt,
-      __spread: () => Jt,
-      __spreadArray: () => ut,
-      __spreadArrays: () => Ct,
-      __values: () => Mt,
-      default: () => rt
+  9308: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      __addDisposableResource: () => Qu,
+      __assign: () => Zu,
+      __asyncDelegator: () => du,
+      __asyncGenerator: () => Ju,
+      __asyncValues: () => au,
+      __await: () => wu,
+      __awaiter: () => Ou,
+      __classPrivateFieldGet: () => Ku,
+      __classPrivateFieldIn: () => ru,
+      __classPrivateFieldSet: () => Vu,
+      __createBinding: () => hu,
+      __decorate: () => lu,
+      __disposeResources: () => Wu,
+      __esDecorate: () => fu,
+      __exportStar: () => Du,
+      __extends: () => Uu,
+      __generator: () => Yu,
+      __importDefault: () => vu,
+      __importStar: () => mu,
+      __makeTemplateObject: () => Pu,
+      __metadata: () => Nu,
+      __param: () => qu,
+      __propKey: () => bu,
+      __read: () => Mu,
+      __rest: () => Xu,
+      __rewriteRelativeImportExtension: () => Su,
+      __runInitializers: () => Cu,
+      __setFunctionName: () => cu,
+      __spread: () => eu,
+      __spreadArray: () => pu,
+      __spreadArrays: () => Gu,
+      __values: () => gu,
+      default: () => Iu
     });
-    var Ot = function(tt, et) {
-      return Ot = Object.setPrototypeOf || {
+    var su = function(uu, Eu) {
+      return su = Object.setPrototypeOf || {
         __proto__: []
       }
-      instanceof Array && function(tt, et) {
-        tt.__proto__ = et
-      } || function(tt, et) {
-        for (var Vt in et) Object.prototype.hasOwnProperty.call(et, Vt) && (tt[Vt] = et[Vt])
-      }, Ot(tt, et)
+      instanceof Array && function(uu, Eu) {
+        uu.__proto__ = Eu
+      } || function(uu, Eu) {
+        for (var ju in Eu) Object.prototype.hasOwnProperty.call(Eu, ju) && (uu[ju] = Eu[ju])
+      }, su(uu, Eu)
     };
 
-    function qt(tt, et) {
-      if ("function" !== typeof et && null !== et) throw new TypeError("Class extends value " + String(et) + " is not a constructor or null");
+    function Uu(uu, Eu) {
+      if ("function" !== typeof Eu && null !== Eu) throw new TypeError("Class extends value " + String(Eu) + " is not a constructor or null");
 
-      function Vt() {
-        this.constructor = tt
+      function ju() {
+        this.constructor = uu
       }
-      Ot(tt, et), tt.prototype = null === et ? Object.create(et) : (Vt.prototype = et.prototype, new Vt)
+      su(uu, Eu), uu.prototype = null === Eu ? Object.create(Eu) : (ju.prototype = Eu.prototype, new ju)
     }
-    var Dt = function() {
-      return Dt = Object.assign || function(tt) {
-        for (var et, Vt = 1, Ot = arguments.length; Vt < Ot; Vt++)
-          for (var qt in et = arguments[Vt]) Object.prototype.hasOwnProperty.call(et, qt) && (tt[qt] = et[qt]);
-        return tt
-      }, Dt.apply(this, arguments)
+    var Zu = function() {
+      return Zu = Object.assign || function(uu) {
+        for (var Eu, ju = 1, su = arguments.length; ju < su; ju++)
+          for (var Uu in Eu = arguments[ju]) Object.prototype.hasOwnProperty.call(Eu, Uu) && (uu[Uu] = Eu[Uu]);
+        return uu
+      }, Zu.apply(this, arguments)
     };
 
-    function mt(tt, et) {
-      var Vt = {};
-      for (var Ot in tt) Object.prototype.hasOwnProperty.call(tt, Ot) && et.indexOf(Ot) < 0 && (Vt[Ot] = tt[Ot]);
-      if (null != tt && "function" === typeof Object.getOwnPropertySymbols) {
-        var qt = 0;
-        for (Ot = Object.getOwnPropertySymbols(tt); qt < Ot.length; qt++) et.indexOf(Ot[qt]) < 0 && Object.prototype.propertyIsEnumerable.call(tt, Ot[qt]) && (Vt[Ot[qt]] = tt[Ot[qt]])
+    function Xu(uu, Eu) {
+      var ju = {};
+      for (var su in uu) Object.prototype.hasOwnProperty.call(uu, su) && Eu.indexOf(su) < 0 && (ju[su] = uu[su]);
+      if (null != uu && "function" === typeof Object.getOwnPropertySymbols) {
+        var Uu = 0;
+        for (su = Object.getOwnPropertySymbols(uu); Uu < su.length; Uu++) Eu.indexOf(su[Uu]) < 0 && Object.prototype.propertyIsEnumerable.call(uu, su[Uu]) && (ju[su[Uu]] = uu[su[Uu]])
       }
-      return Vt
+      return ju
     }
 
-    function dt(tt, et, Vt, Ot) {
-      var qt, Dt = arguments.length,
-        mt = Dt < 3 ? et : null === Ot ? Ot = Object.getOwnPropertyDescriptor(et, Vt) : Ot;
-      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) mt = Reflect.decorate(tt, et, Vt, Ot);
+    function lu(uu, Eu, ju, su) {
+      var Uu, Zu = arguments.length,
+        Xu = Zu < 3 ? Eu : null === su ? su = Object.getOwnPropertyDescriptor(Eu, ju) : su;
+      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) Xu = Reflect.decorate(uu, Eu, ju, su);
       else
-        for (var dt = tt.length - 1; dt >= 0; dt--)(qt = tt[dt]) && (mt = (Dt < 3 ? qt(mt) : Dt > 3 ? qt(et, Vt, mt) : qt(et, Vt)) || mt);
-      return Dt > 3 && mt && Object.defineProperty(et, Vt, mt), mt
+        for (var lu = uu.length - 1; lu >= 0; lu--)(Uu = uu[lu]) && (Xu = (Zu < 3 ? Uu(Xu) : Zu > 3 ? Uu(Eu, ju, Xu) : Uu(Eu, ju)) || Xu);
+      return Zu > 3 && Xu && Object.defineProperty(Eu, ju, Xu), Xu
     }
 
-    function jt(tt, et) {
-      return function(Vt, Ot) {
-        et(Vt, Ot, tt)
+    function qu(uu, Eu) {
+      return function(ju, su) {
+        Eu(ju, su, uu)
       }
     }
 
-    function Ht(tt, et, Vt, Ot, qt, Dt) {
-      function mt(tt) {
-        if (void 0 !== tt && "function" !== typeof tt) throw new TypeError("Function expected");
-        return tt
+    function fu(uu, Eu, ju, su, Uu, Zu) {
+      function Xu(uu) {
+        if (void 0 !== uu && "function" !== typeof uu) throw new TypeError("Function expected");
+        return uu
       }
-      for (var dt, jt = Ot.kind, Ht = "getter" === jt ? "get" : "setter" === jt ? "set" : "value", Xt = !et && tt ? Ot.static ? tt : tt.prototype : null, Qt = et || (Xt ? Object.getOwnPropertyDescriptor(Xt, Ot.name) : {}), lt = !1, Et = Vt.length - 1; Et >= 0; Et--) {
-        var ft = {};
-        for (var wt in Ot) ft[wt] = "access" === wt ? {} : Ot[wt];
-        for (var wt in Ot.access) ft.access[wt] = Ot.access[wt];
-        ft.addInitializer = function(tt) {
-          if (lt) throw new TypeError("Cannot add initializers after decoration has completed");
-          Dt.push(mt(tt || null))
+      for (var lu, qu = su.kind, fu = "getter" === qu ? "get" : "setter" === qu ? "set" : "value", Cu = !Eu && uu ? su.static ? uu : uu.prototype : null, bu = Eu || (Cu ? Object.getOwnPropertyDescriptor(Cu, su.name) : {}), cu = !1, Nu = ju.length - 1; Nu >= 0; Nu--) {
+        var Ou = {};
+        for (var Yu in su) Ou[Yu] = "access" === Yu ? {} : su[Yu];
+        for (var Yu in su.access) Ou.access[Yu] = su.access[Yu];
+        Ou.addInitializer = function(uu) {
+          if (cu) throw new TypeError("Cannot add initializers after decoration has completed");
+          Zu.push(Xu(uu || null))
         };
-        var yt = (0, Vt[Et])("accessor" === jt ? {
-          get: Qt.get,
-          set: Qt.set
-        } : Qt[Ht], ft);
-        if ("accessor" === jt) {
-          if (void 0 === yt) continue;
-          if (null === yt || "object" !== typeof yt) throw new TypeError("Object expected");
-          (dt = mt(yt.get)) && (Qt.get = dt), (dt = mt(yt.set)) && (Qt.set = dt), (dt = mt(yt.init)) && qt.unshift(dt)
-        } else(dt = mt(yt)) && ("field" === jt ? qt.unshift(dt) : Qt[Ht] = dt)
+        var hu = (0, ju[Nu])("accessor" === qu ? {
+          get: bu.get,
+          set: bu.set
+        } : bu[fu], Ou);
+        if ("accessor" === qu) {
+          if (void 0 === hu) continue;
+          if (null === hu || "object" !== typeof hu) throw new TypeError("Object expected");
+          (lu = Xu(hu.get)) && (bu.get = lu), (lu = Xu(hu.set)) && (bu.set = lu), (lu = Xu(hu.init)) && Uu.unshift(lu)
+        } else(lu = Xu(hu)) && ("field" === qu ? Uu.unshift(lu) : bu[fu] = lu)
       }
-      Xt && Object.defineProperty(Xt, Ot.name, Qt), lt = !0
+      Cu && Object.defineProperty(Cu, su.name, bu), cu = !0
     }
 
-    function Xt(tt, et, Vt) {
-      for (var Ot = arguments.length > 2, qt = 0; qt < et.length; qt++) Vt = Ot ? et[qt].call(tt, Vt) : et[qt].call(tt);
-      return Ot ? Vt : void 0
+    function Cu(uu, Eu, ju) {
+      for (var su = arguments.length > 2, Uu = 0; Uu < Eu.length; Uu++) ju = su ? Eu[Uu].call(uu, ju) : Eu[Uu].call(uu);
+      return su ? ju : void 0
     }
 
-    function Qt(tt) {
-      return "symbol" === typeof tt ? tt : "".concat(tt)
+    function bu(uu) {
+      return "symbol" === typeof uu ? uu : "".concat(uu)
     }
 
-    function lt(tt, et, Vt) {
-      return "symbol" === typeof et && (et = et.description ? "[".concat(et.description, "]") : ""), Object.defineProperty(tt, "name", {
+    function cu(uu, Eu, ju) {
+      return "symbol" === typeof Eu && (Eu = Eu.description ? "[".concat(Eu.description, "]") : ""), Object.defineProperty(uu, "name", {
         configurable: !0,
-        value: Vt ? "".concat(Vt, " ", et) : et
+        value: ju ? "".concat(ju, " ", Eu) : Eu
       })
     }
 
-    function Et(tt, et) {
-      if ("object" === typeof Reflect && "function" === typeof Reflect.metadata) return Reflect.metadata(tt, et)
+    function Nu(uu, Eu) {
+      if ("object" === typeof Reflect && "function" === typeof Reflect.metadata) return Reflect.metadata(uu, Eu)
     }
 
-    function ft(tt, et, Vt, Ot) {
-      return new(Vt || (Vt = Promise))((function(qt, Dt) {
-        function mt(tt) {
+    function Ou(uu, Eu, ju, su) {
+      return new(ju || (ju = Promise))((function(Uu, Zu) {
+        function Xu(uu) {
           try {
-            jt(Ot.next(tt))
-          } catch (et) {
-            Dt(et)
+            qu(su.next(uu))
+          } catch (Eu) {
+            Zu(Eu)
           }
         }
 
-        function dt(tt) {
+        function lu(uu) {
           try {
-            jt(Ot.throw(tt))
-          } catch (et) {
-            Dt(et)
+            qu(su.throw(uu))
+          } catch (Eu) {
+            Zu(Eu)
           }
         }
 
-        function jt(tt) {
-          var et;
-          tt.done ? qt(tt.value) : (et = tt.value, et instanceof Vt ? et : new Vt((function(tt) {
-            tt(et)
-          }))).then(mt, dt)
+        function qu(uu) {
+          var Eu;
+          uu.done ? Uu(uu.value) : (Eu = uu.value, Eu instanceof ju ? Eu : new ju((function(uu) {
+            uu(Eu)
+          }))).then(Xu, lu)
         }
-        jt((Ot = Ot.apply(tt, et || [])).next())
+        qu((su = su.apply(uu, Eu || [])).next())
       }))
     }
 
-    function wt(tt, et) {
-      var Vt, Ot, qt, Dt = {
+    function Yu(uu, Eu) {
+      var ju, su, Uu, Zu = {
           label: 0,
           sent: function() {
-            if (1 & qt[0]) throw qt[1];
-            return qt[1]
+            if (1 & Uu[0]) throw Uu[1];
+            return Uu[1]
           },
           trys: [],
           ops: []
         },
-        mt = Object.create(("function" === typeof Iterator ? Iterator : Object).prototype);
-      return mt.next = dt(0), mt.throw = dt(1), mt.return = dt(2), "function" === typeof Symbol && (mt[Symbol.iterator] = function() {
+        Xu = Object.create(("function" === typeof Iterator ? Iterator : Object).prototype);
+      return Xu.next = lu(0), Xu.throw = lu(1), Xu.return = lu(2), "function" === typeof Symbol && (Xu[Symbol.iterator] = function() {
         return this
-      }), mt;
+      }), Xu;
 
-      function dt(dt) {
-        return function(jt) {
-          return function(dt) {
-            if (Vt) throw new TypeError("Generator is already executing.");
-            for (; mt && (mt = 0, dt[0] && (Dt = 0)), Dt;) try {
-              if (Vt = 1, Ot && (qt = 2 & dt[0] ? Ot.return : dt[0] ? Ot.throw || ((qt = Ot.return) && qt.call(Ot), 0) : Ot.next) && !(qt = qt.call(Ot, dt[1])).done) return qt;
-              switch (Ot = 0, qt && (dt = [2 & dt[0], qt.value]), dt[0]) {
+      function lu(lu) {
+        return function(qu) {
+          return function(lu) {
+            if (ju) throw new TypeError("Generator is already executing.");
+            for (; Xu && (Xu = 0, lu[0] && (Zu = 0)), Zu;) try {
+              if (ju = 1, su && (Uu = 2 & lu[0] ? su.return : lu[0] ? su.throw || ((Uu = su.return) && Uu.call(su), 0) : su.next) && !(Uu = Uu.call(su, lu[1])).done) return Uu;
+              switch (su = 0, Uu && (lu = [2 & lu[0], Uu.value]), lu[0]) {
                 case 0:
                 case 1:
-                  qt = dt;
+                  Uu = lu;
                   break;
                 case 4:
-                  return Dt.label++, {
-                    value: dt[1],
+                  return Zu.label++, {
+                    value: lu[1],
                     done: !1
                   };
                 case 5:
-                  Dt.label++, Ot = dt[1], dt = [0];
+                  Zu.label++, su = lu[1], lu = [0];
                   continue;
                 case 7:
-                  dt = Dt.ops.pop(), Dt.trys.pop();
+                  lu = Zu.ops.pop(), Zu.trys.pop();
                   continue;
                 default:
-                  if (!(qt = (qt = Dt.trys).length > 0 && qt[qt.length - 1]) && (6 === dt[0] || 2 === dt[0])) {
-                    Dt = 0;
+                  if (!(Uu = (Uu = Zu.trys).length > 0 && Uu[Uu.length - 1]) && (6 === lu[0] || 2 === lu[0])) {
+                    Zu = 0;
                     continue
                   }
-                  if (3 === dt[0] && (!qt || dt[1] > qt[0] && dt[1] < qt[3])) {
-                    Dt.label = dt[1];
+                  if (3 === lu[0] && (!Uu || lu[1] > Uu[0] && lu[1] < Uu[3])) {
+                    Zu.label = lu[1];
                     break
                   }
-                  if (6 === dt[0] && Dt.label < qt[1]) {
-                    Dt.label = qt[1], qt = dt;
+                  if (6 === lu[0] && Zu.label < Uu[1]) {
+                    Zu.label = Uu[1], Uu = lu;
                     break
                   }
-                  if (qt && Dt.label < qt[2]) {
-                    Dt.label = qt[2], Dt.ops.push(dt);
+                  if (Uu && Zu.label < Uu[2]) {
+                    Zu.label = Uu[2], Zu.ops.push(lu);
                     break
                   }
-                  qt[2] && Dt.ops.pop(), Dt.trys.pop();
+                  Uu[2] && Zu.ops.pop(), Zu.trys.pop();
                   continue
               }
-              dt = et.call(tt, Dt)
-            } catch (jt) {
-              dt = [6, jt], Ot = 0
+              lu = Eu.call(uu, Zu)
+            } catch (qu) {
+              lu = [6, qu], su = 0
             } finally {
-              Vt = qt = 0
+              ju = Uu = 0
             }
-            if (5 & dt[0]) throw dt[1];
+            if (5 & lu[0]) throw lu[1];
             return {
-              value: dt[0] ? dt[1] : void 0,
+              value: lu[0] ? lu[1] : void 0,
               done: !0
             }
-          }([dt, jt])
+          }([lu, qu])
         }
       }
     }
-    var yt = Object.create ? function(tt, et, Vt, Ot) {
-      void 0 === Ot && (Ot = Vt);
-      var qt = Object.getOwnPropertyDescriptor(et, Vt);
-      qt && !("get" in qt ? !et.__esModule : qt.writable || qt.configurable) || (qt = {
+    var hu = Object.create ? function(uu, Eu, ju, su) {
+      void 0 === su && (su = ju);
+      var Uu = Object.getOwnPropertyDescriptor(Eu, ju);
+      Uu && !("get" in Uu ? !Eu.__esModule : Uu.writable || Uu.configurable) || (Uu = {
         enumerable: !0,
         get: function() {
-          return et[Vt]
+          return Eu[ju]
         }
-      }), Object.defineProperty(tt, Ot, qt)
-    } : function(tt, et, Vt, Ot) {
-      void 0 === Ot && (Ot = Vt), tt[Ot] = et[Vt]
+      }), Object.defineProperty(uu, su, Uu)
+    } : function(uu, Eu, ju, su) {
+      void 0 === su && (su = ju), uu[su] = Eu[ju]
     };
 
-    function Nt(tt, et) {
-      for (var Vt in tt) "default" === Vt || Object.prototype.hasOwnProperty.call(et, Vt) || yt(et, tt, Vt)
+    function Du(uu, Eu) {
+      for (var ju in uu) "default" === ju || Object.prototype.hasOwnProperty.call(Eu, ju) || hu(Eu, uu, ju)
     }
 
-    function Mt(tt) {
-      var et = "function" === typeof Symbol && Symbol.iterator,
-        Vt = et && tt[et],
-        Ot = 0;
-      if (Vt) return Vt.call(tt);
-      if (tt && "number" === typeof tt.length) return {
+    function gu(uu) {
+      var Eu = "function" === typeof Symbol && Symbol.iterator,
+        ju = Eu && uu[Eu],
+        su = 0;
+      if (ju) return ju.call(uu);
+      if (uu && "number" === typeof uu.length) return {
         next: function() {
-          return tt && Ot >= tt.length && (tt = void 0), {
-            value: tt && tt[Ot++],
-            done: !tt
+          return uu && su >= uu.length && (uu = void 0), {
+            value: uu && uu[su++],
+            done: !uu
           }
         }
       };
-      throw new TypeError(et ? "Object is not iterable." : "Symbol.iterator is not defined.")
+      throw new TypeError(Eu ? "Object is not iterable." : "Symbol.iterator is not defined.")
     }
 
-    function bt(tt, et) {
-      var Vt = "function" === typeof Symbol && tt[Symbol.iterator];
-      if (!Vt) return tt;
-      var Ot, qt, Dt = Vt.call(tt),
-        mt = [];
+    function Mu(uu, Eu) {
+      var ju = "function" === typeof Symbol && uu[Symbol.iterator];
+      if (!ju) return uu;
+      var su, Uu, Zu = ju.call(uu),
+        Xu = [];
       try {
         for (;
-          (void 0 === et || et-- > 0) && !(Ot = Dt.next()).done;) mt.push(Ot.value)
-      } catch (dt) {
-        qt = {
-          error: dt
+          (void 0 === Eu || Eu-- > 0) && !(su = Zu.next()).done;) Xu.push(su.value)
+      } catch (lu) {
+        Uu = {
+          error: lu
         }
       } finally {
         try {
-          Ot && !Ot.done && (Vt = Dt.return) && Vt.call(Dt)
+          su && !su.done && (ju = Zu.return) && ju.call(Zu)
         } finally {
-          if (qt) throw qt.error
+          if (Uu) throw Uu.error
         }
       }
-      return mt
+      return Xu
     }
 
-    function Jt() {
-      for (var tt = [], et = 0; et < arguments.length; et++) tt = tt.concat(bt(arguments[et]));
-      return tt
+    function eu() {
+      for (var uu = [], Eu = 0; Eu < arguments.length; Eu++) uu = uu.concat(Mu(arguments[Eu]));
+      return uu
     }
 
-    function Ct() {
-      for (var tt = 0, et = 0, Vt = arguments.length; et < Vt; et++) tt += arguments[et].length;
-      var Ot = Array(tt),
-        qt = 0;
-      for (et = 0; et < Vt; et++)
-        for (var Dt = arguments[et], mt = 0, dt = Dt.length; mt < dt; mt++, qt++) Ot[qt] = Dt[mt];
-      return Ot
+    function Gu() {
+      for (var uu = 0, Eu = 0, ju = arguments.length; Eu < ju; Eu++) uu += arguments[Eu].length;
+      var su = Array(uu),
+        Uu = 0;
+      for (Eu = 0; Eu < ju; Eu++)
+        for (var Zu = arguments[Eu], Xu = 0, lu = Zu.length; Xu < lu; Xu++, Uu++) su[Uu] = Zu[Xu];
+      return su
     }
 
-    function ut(tt, et, Vt) {
-      if (Vt || 2 === arguments.length)
-        for (var Ot, qt = 0, Dt = et.length; qt < Dt; qt++) !Ot && qt in et || (Ot || (Ot = Array.prototype.slice.call(et, 0, qt)), Ot[qt] = et[qt]);
-      return tt.concat(Ot || Array.prototype.slice.call(et))
+    function pu(uu, Eu, ju) {
+      if (ju || 2 === arguments.length)
+        for (var su, Uu = 0, Zu = Eu.length; Uu < Zu; Uu++) !su && Uu in Eu || (su || (su = Array.prototype.slice.call(Eu, 0, Uu)), su[Uu] = Eu[Uu]);
+      return uu.concat(su || Array.prototype.slice.call(Eu))
     }
 
-    function Kt(tt) {
-      return this instanceof Kt ? (this.v = tt, this) : new Kt(tt)
+    function wu(uu) {
+      return this instanceof wu ? (this.v = uu, this) : new wu(uu)
     }
 
-    function ht(tt, et, Vt) {
+    function Ju(uu, Eu, ju) {
       if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-      var Ot, qt = Vt.apply(tt, et || []),
-        Dt = [];
-      return Ot = Object.create(("function" === typeof AsyncIterator ? AsyncIterator : Object).prototype), mt("next"), mt("throw"), mt("return", (function(tt) {
-        return function(et) {
-          return Promise.resolve(et).then(tt, Ht)
+      var su, Uu = ju.apply(uu, Eu || []),
+        Zu = [];
+      return su = Object.create(("function" === typeof AsyncIterator ? AsyncIterator : Object).prototype), Xu("next"), Xu("throw"), Xu("return", (function(uu) {
+        return function(Eu) {
+          return Promise.resolve(Eu).then(uu, fu)
         }
-      })), Ot[Symbol.asyncIterator] = function() {
+      })), su[Symbol.asyncIterator] = function() {
         return this
-      }, Ot;
+      }, su;
 
-      function mt(tt, et) {
-        qt[tt] && (Ot[tt] = function(et) {
-          return new Promise((function(Vt, Ot) {
-            Dt.push([tt, et, Vt, Ot]) > 1 || dt(tt, et)
+      function Xu(uu, Eu) {
+        Uu[uu] && (su[uu] = function(Eu) {
+          return new Promise((function(ju, su) {
+            Zu.push([uu, Eu, ju, su]) > 1 || lu(uu, Eu)
           }))
-        }, et && (Ot[tt] = et(Ot[tt])))
+        }, Eu && (su[uu] = Eu(su[uu])))
       }
 
-      function dt(tt, et) {
+      function lu(uu, Eu) {
         try {
-          (Vt = qt[tt](et)).value instanceof Kt ? Promise.resolve(Vt.value.v).then(jt, Ht) : Xt(Dt[0][2], Vt)
-        } catch (Ot) {
-          Xt(Dt[0][3], Ot)
+          (ju = Uu[uu](Eu)).value instanceof wu ? Promise.resolve(ju.value.v).then(qu, fu) : Cu(Zu[0][2], ju)
+        } catch (su) {
+          Cu(Zu[0][3], su)
         }
-        var Vt
+        var ju
       }
 
-      function jt(tt) {
-        dt("next", tt)
+      function qu(uu) {
+        lu("next", uu)
       }
 
-      function Ht(tt) {
-        dt("throw", tt)
+      function fu(uu) {
+        lu("throw", uu)
       }
 
-      function Xt(tt, et) {
-        tt(et), Dt.shift(), Dt.length && dt(Dt[0][0], Dt[0][1])
+      function Cu(uu, Eu) {
+        uu(Eu), Zu.shift(), Zu.length && lu(Zu[0][0], Zu[0][1])
       }
     }
 
-    function vt(tt) {
-      var et, Vt;
-      return et = {}, Ot("next"), Ot("throw", (function(tt) {
-        throw tt
-      })), Ot("return"), et[Symbol.iterator] = function() {
+    function du(uu) {
+      var Eu, ju;
+      return Eu = {}, su("next"), su("throw", (function(uu) {
+        throw uu
+      })), su("return"), Eu[Symbol.iterator] = function() {
         return this
-      }, et;
+      }, Eu;
 
-      function Ot(Ot, qt) {
-        et[Ot] = tt[Ot] ? function(et) {
-          return (Vt = !Vt) ? {
-            value: Kt(tt[Ot](et)),
+      function su(su, Uu) {
+        Eu[su] = uu[su] ? function(Eu) {
+          return (ju = !ju) ? {
+            value: wu(uu[su](Eu)),
             done: !1
-          } : qt ? qt(et) : et
-        } : qt
+          } : Uu ? Uu(Eu) : Eu
+        } : Uu
       }
     }
 
-    function Wt(tt) {
+    function au(uu) {
       if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-      var et, Vt = tt[Symbol.asyncIterator];
-      return Vt ? Vt.call(tt) : (tt = Mt(tt), et = {}, Ot("next"), Ot("throw"), Ot("return"), et[Symbol.asyncIterator] = function() {
+      var Eu, ju = uu[Symbol.asyncIterator];
+      return ju ? ju.call(uu) : (uu = gu(uu), Eu = {}, su("next"), su("throw"), su("return"), Eu[Symbol.asyncIterator] = function() {
         return this
-      }, et);
+      }, Eu);
 
-      function Ot(Vt) {
-        et[Vt] = tt[Vt] && function(et) {
-          return new Promise((function(Ot, qt) {
-            (function(tt, et, Vt, Ot) {
-              Promise.resolve(Ot).then((function(et) {
-                tt({
-                  value: et,
-                  done: Vt
+      function su(ju) {
+        Eu[ju] = uu[ju] && function(Eu) {
+          return new Promise((function(su, Uu) {
+            (function(uu, Eu, ju, su) {
+              Promise.resolve(su).then((function(Eu) {
+                uu({
+                  value: Eu,
+                  done: ju
                 })
-              }), et)
-            })(Ot, qt, (et = tt[Vt](et)).done, et.value)
+              }), Eu)
+            })(su, Uu, (Eu = uu[ju](Eu)).done, Eu.value)
           }))
         }
       }
     }
 
-    function St(tt, et) {
-      return Object.defineProperty ? Object.defineProperty(tt, "raw", {
-        value: et
-      }) : tt.raw = et, tt
+    function Pu(uu, Eu) {
+      return Object.defineProperty ? Object.defineProperty(uu, "raw", {
+        value: Eu
+      }) : uu.raw = Eu, uu
     }
-    var ct = Object.create ? function(tt, et) {
-        Object.defineProperty(tt, "default", {
+    var ou = Object.create ? function(uu, Eu) {
+        Object.defineProperty(uu, "default", {
           enumerable: !0,
-          value: et
+          value: Eu
         })
-      } : function(tt, et) {
-        tt.default = et
+      } : function(uu, Eu) {
+        uu.default = Eu
       },
-      Rt = function(tt) {
-        return Rt = Object.getOwnPropertyNames || function(tt) {
-          var et = [];
-          for (var Vt in tt) Object.prototype.hasOwnProperty.call(tt, Vt) && (et[et.length] = Vt);
-          return et
-        }, Rt(tt)
+      ku = function(uu) {
+        return ku = Object.getOwnPropertyNames || function(uu) {
+          var Eu = [];
+          for (var ju in uu) Object.prototype.hasOwnProperty.call(uu, ju) && (Eu[Eu.length] = ju);
+          return Eu
+        }, ku(uu)
       };
 
-    function It(tt) {
-      if (tt && tt.__esModule) return tt;
-      var et = {};
-      if (null != tt)
-        for (var Vt = Rt(tt), Ot = 0; Ot < Vt.length; Ot++) "default" !== Vt[Ot] && yt(et, tt, Vt[Ot]);
-      return ct(et, tt), et
+    function mu(uu) {
+      if (uu && uu.__esModule) return uu;
+      var Eu = {};
+      if (null != uu)
+        for (var ju = ku(uu), su = 0; su < ju.length; su++) "default" !== ju[su] && hu(Eu, uu, ju[su]);
+      return ou(Eu, uu), Eu
     }
 
-    function Pt(tt) {
-      return tt && tt.__esModule ? tt : {
-        default: tt
+    function vu(uu) {
+      return uu && uu.__esModule ? uu : {
+        default: uu
       }
     }
 
-    function Zt(tt, et, Vt, Ot) {
-      if ("a" === Vt && !Ot) throw new TypeError("Private accessor was defined without a getter");
-      if ("function" === typeof et ? tt !== et || !Ot : !et.has(tt)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
-      return "m" === Vt ? Ot : "a" === Vt ? Ot.call(tt) : Ot ? Ot.value : et.get(tt)
+    function Ku(uu, Eu, ju, su) {
+      if ("a" === ju && !su) throw new TypeError("Private accessor was defined without a getter");
+      if ("function" === typeof Eu ? uu !== Eu || !su : !Eu.has(uu)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+      return "m" === ju ? su : "a" === ju ? su.call(uu) : su ? su.value : Eu.get(uu)
     }
 
-    function Lt(tt, et, Vt, Ot, qt) {
-      if ("m" === Ot) throw new TypeError("Private method is not writable");
-      if ("a" === Ot && !qt) throw new TypeError("Private accessor was defined without a setter");
-      if ("function" === typeof et ? tt !== et || !qt : !et.has(tt)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
-      return "a" === Ot ? qt.call(tt, Vt) : qt ? qt.value = Vt : et.set(tt, Vt), Vt
+    function Vu(uu, Eu, ju, su, Uu) {
+      if ("m" === su) throw new TypeError("Private method is not writable");
+      if ("a" === su && !Uu) throw new TypeError("Private accessor was defined without a setter");
+      if ("function" === typeof Eu ? uu !== Eu || !Uu : !Eu.has(uu)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+      return "a" === su ? Uu.call(uu, ju) : Uu ? Uu.value = ju : Eu.set(uu, ju), ju
     }
 
-    function Ft(tt, et) {
-      if (null === et || "object" !== typeof et && "function" !== typeof et) throw new TypeError("Cannot use 'in' operator on non-object");
-      return "function" === typeof tt ? et === tt : tt.has(et)
+    function ru(uu, Eu) {
+      if (null === Eu || "object" !== typeof Eu && "function" !== typeof Eu) throw new TypeError("Cannot use 'in' operator on non-object");
+      return "function" === typeof uu ? Eu === uu : uu.has(Eu)
     }
 
-    function kt(tt, et, Vt) {
-      if (null !== et && void 0 !== et) {
-        if ("object" !== typeof et && "function" !== typeof et) throw new TypeError("Object expected.");
-        var Ot, qt;
-        if (Vt) {
+    function Qu(uu, Eu, ju) {
+      if (null !== Eu && void 0 !== Eu) {
+        if ("object" !== typeof Eu && "function" !== typeof Eu) throw new TypeError("Object expected.");
+        var su, Uu;
+        if (ju) {
           if (!Symbol.asyncDispose) throw new TypeError("Symbol.asyncDispose is not defined.");
-          Ot = et[Symbol.asyncDispose]
+          su = Eu[Symbol.asyncDispose]
         }
-        if (void 0 === Ot) {
+        if (void 0 === su) {
           if (!Symbol.dispose) throw new TypeError("Symbol.dispose is not defined.");
-          Ot = et[Symbol.dispose], Vt && (qt = Ot)
+          su = Eu[Symbol.dispose], ju && (Uu = su)
         }
-        if ("function" !== typeof Ot) throw new TypeError("Object not disposable.");
-        qt && (Ot = function() {
+        if ("function" !== typeof su) throw new TypeError("Object not disposable.");
+        Uu && (su = function() {
           try {
-            qt.call(this)
-          } catch (tt) {
-            return Promise.reject(tt)
+            Uu.call(this)
+          } catch (uu) {
+            return Promise.reject(uu)
           }
-        }), tt.stack.push({
-          value: et,
-          dispose: Ot,
-          async: Vt
+        }), uu.stack.push({
+          value: Eu,
+          dispose: su,
+          async: ju
         })
-      } else Vt && tt.stack.push({
+      } else ju && uu.stack.push({
         async: !0
       });
-      return et
+      return Eu
     }
-    var Gt = "function" === typeof SuppressedError ? SuppressedError : function(tt, et, Vt) {
-      var Ot = new Error(Vt);
-      return Ot.name = "SuppressedError", Ot.error = tt, Ot.suppressed = et, Ot
+    var iu = "function" === typeof SuppressedError ? SuppressedError : function(uu, Eu, ju) {
+      var su = new Error(ju);
+      return su.name = "SuppressedError", su.error = uu, su.suppressed = Eu, su
     };
 
-    function zt(tt) {
-      function et(et) {
-        tt.error = tt.hasError ? new Gt(et, tt.error, "An error was suppressed during disposal.") : et, tt.hasError = !0
+    function Wu(uu) {
+      function Eu(Eu) {
+        uu.error = uu.hasError ? new iu(Eu, uu.error, "An error was suppressed during disposal.") : Eu, uu.hasError = !0
       }
-      var Vt, Ot = 0;
-      return function qt() {
-        for (; Vt = tt.stack.pop();) try {
-          if (!Vt.async && 1 === Ot) return Ot = 0, tt.stack.push(Vt), Promise.resolve().then(qt);
-          if (Vt.dispose) {
-            var Dt = Vt.dispose.call(Vt.value);
-            if (Vt.async) return Ot |= 2, Promise.resolve(Dt).then(qt, (function(tt) {
-              return et(tt), qt()
+      var ju, su = 0;
+      return function Uu() {
+        for (; ju = uu.stack.pop();) try {
+          if (!ju.async && 1 === su) return su = 0, uu.stack.push(ju), Promise.resolve().then(Uu);
+          if (ju.dispose) {
+            var Zu = ju.dispose.call(ju.value);
+            if (ju.async) return su |= 2, Promise.resolve(Zu).then(Uu, (function(uu) {
+              return Eu(uu), Uu()
             }))
-          } else Ot |= 1
-        } catch (mt) {
-          et(mt)
+          } else su |= 1
+        } catch (Xu) {
+          Eu(Xu)
         }
-        if (1 === Ot) return tt.hasError ? Promise.reject(tt.error) : Promise.resolve();
-        if (tt.hasError) throw tt.error
+        if (1 === su) return uu.hasError ? Promise.reject(uu.error) : Promise.resolve();
+        if (uu.hasError) throw uu.error
       }()
     }
 
-    function ot(tt, et) {
-      return "string" === typeof tt && /^\.\.?\//.test(tt) ? tt.replace(/\.(tsx)$|((?:\.d)?)((?:\.[^./]+?)?)\.([cm]?)ts$/i, (function(tt, Vt, Ot, qt, Dt) {
-        return Vt ? et ? ".jsx" : ".js" : !Ot || qt && Dt ? Ot + qt + "." + Dt.toLowerCase() + "js" : tt
-      })) : tt
+    function Su(uu, Eu) {
+      return "string" === typeof uu && /^\.\.?\//.test(uu) ? uu.replace(/\.(tsx)$|((?:\.d)?)((?:\.[^./]+?)?)\.([cm]?)ts$/i, (function(uu, ju, su, Uu, Zu) {
+        return ju ? Eu ? ".jsx" : ".js" : !su || Uu && Zu ? su + Uu + "." + Zu.toLowerCase() + "js" : uu
+      })) : uu
     }
-    const rt = {
-      __extends: qt,
-      __assign: Dt,
-      __rest: mt,
-      __decorate: dt,
-      __param: jt,
-      __esDecorate: Ht,
-      __runInitializers: Xt,
-      __propKey: Qt,
-      __setFunctionName: lt,
-      __metadata: Et,
-      __awaiter: ft,
-      __generator: wt,
-      __createBinding: yt,
-      __exportStar: Nt,
-      __values: Mt,
-      __read: bt,
-      __spread: Jt,
-      __spreadArrays: Ct,
-      __spreadArray: ut,
-      __await: Kt,
-      __asyncGenerator: ht,
-      __asyncDelegator: vt,
-      __asyncValues: Wt,
-      __makeTemplateObject: St,
-      __importStar: It,
-      __importDefault: Pt,
-      __classPrivateFieldGet: Zt,
-      __classPrivateFieldSet: Lt,
-      __classPrivateFieldIn: Ft,
-      __addDisposableResource: kt,
-      __disposeResources: zt,
-      __rewriteRelativeImportExtension: ot
+    const Iu = {
+      __extends: Uu,
+      __assign: Zu,
+      __rest: Xu,
+      __decorate: lu,
+      __param: qu,
+      __esDecorate: fu,
+      __runInitializers: Cu,
+      __propKey: bu,
+      __setFunctionName: cu,
+      __metadata: Nu,
+      __awaiter: Ou,
+      __generator: Yu,
+      __createBinding: hu,
+      __exportStar: Du,
+      __values: gu,
+      __read: Mu,
+      __spread: eu,
+      __spreadArrays: Gu,
+      __spreadArray: pu,
+      __await: wu,
+      __asyncGenerator: Ju,
+      __asyncDelegator: du,
+      __asyncValues: au,
+      __makeTemplateObject: Pu,
+      __importStar: mu,
+      __importDefault: vu,
+      __classPrivateFieldGet: Ku,
+      __classPrivateFieldSet: Vu,
+      __classPrivateFieldIn: ru,
+      __addDisposableResource: Qu,
+      __disposeResources: Wu,
+      __rewriteRelativeImportExtension: Su
     }
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

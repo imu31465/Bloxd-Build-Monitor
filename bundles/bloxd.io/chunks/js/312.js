@@ -1,472 +1,472 @@
 export const id = 312;
 export const ids = [311, 312];
 export const modules = {
-  42048: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      _DDSTextureLoader: () => Dt
+  42055: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      _DDSTextureLoader: () => Zu
     });
-    var Ot = Vt(40194),
-      qt = Vt(42023);
-    class Dt {
+    var su = ju(40245),
+      Uu = ju(42032);
+    class Zu {
       constructor() {
         this.supportCascades = !0
       }
-      loadCubeData(tt, et, Vt, Dt) {
-        const mt = et.Jf();
-        let dt, jt = !1,
-          Ht = 1e3;
-        if (Array.isArray(tt))
-          for (let Ot = 0; Ot < tt.length; Ot++) {
-            const Vt = tt[Ot];
-            dt = qt.DDSTools.GetDDSInfo(Vt), et.width = dt.width, et.height = dt.height, jt = (dt.isRGB || dt.isLuminance || dt.mipmapCount > 1) && et.generateMipMaps, mt._unpackFlipY(dt.isCompressed), qt.DDSTools.UploadDDSLevels(mt, et, Vt, dt, jt, 6, -1, Ot), dt.isFourCC || 1 !== dt.mipmapCount ? Ht = dt.mipmapCount - 1 : mt.generateMipMapsForCubemap(et)
+      loadCubeData(uu, Eu, ju, Zu) {
+        const Xu = Eu.wO();
+        let lu, qu = !1,
+          fu = 1e3;
+        if (Array.isArray(uu))
+          for (let su = 0; su < uu.length; su++) {
+            const ju = uu[su];
+            lu = Uu.DDSTools.GetDDSInfo(ju), Eu.width = lu.width, Eu.height = lu.height, qu = (lu.isRGB || lu.isLuminance || lu.mipmapCount > 1) && Eu.generateMipMaps, Xu._unpackFlipY(lu.isCompressed), Uu.DDSTools.UploadDDSLevels(Xu, Eu, ju, lu, qu, 6, -1, su), lu.isFourCC || 1 !== lu.mipmapCount ? fu = lu.mipmapCount - 1 : Xu.generateMipMapsForCubemap(Eu)
           } else {
-            const Dt = tt;
-            dt = qt.DDSTools.GetDDSInfo(Dt), et.width = dt.width, et.height = dt.height, Vt && (dt.sphericalPolynomial = new Ot.g), jt = (dt.isRGB || dt.isLuminance || dt.mipmapCount > 1) && et.generateMipMaps, mt._unpackFlipY(dt.isCompressed), qt.DDSTools.UploadDDSLevels(mt, et, Dt, dt, jt, 6), dt.isFourCC || 1 !== dt.mipmapCount ? Ht = dt.mipmapCount - 1 : mt.generateMipMapsForCubemap(et, !1)
+            const Zu = uu;
+            lu = Uu.DDSTools.GetDDSInfo(Zu), Eu.width = lu.width, Eu.height = lu.height, ju && (lu.sphericalPolynomial = new su.e), qu = (lu.isRGB || lu.isLuminance || lu.mipmapCount > 1) && Eu.generateMipMaps, Xu._unpackFlipY(lu.isCompressed), Uu.DDSTools.UploadDDSLevels(Xu, Eu, Zu, lu, qu, 6), lu.isFourCC || 1 !== lu.mipmapCount ? fu = lu.mipmapCount - 1 : Xu.generateMipMapsForCubemap(Eu, !1)
           }
-        mt._setCubeMapTextureParams(et, jt, Ht), et.isReady = !0, et.onLoadedObservable.notifyObservers(et), et.onLoadedObservable.clear(), Dt && Dt({
+        Xu._setCubeMapTextureParams(Eu, qu, fu), Eu.isReady = !0, Eu.onLoadedObservable.notifyObservers(Eu), Eu.onLoadedObservable.clear(), Zu && Zu({
           isDDS: !0,
-          width: et.width,
-          info: dt,
-          data: tt,
-          texture: et
+          width: Eu.width,
+          info: lu,
+          data: uu,
+          texture: Eu
         })
       }
-      loadData(tt, et, Vt) {
-        const Ot = qt.DDSTools.GetDDSInfo(tt),
-          Dt = (Ot.isRGB || Ot.isLuminance || Ot.mipmapCount > 1) && et.generateMipMaps && Math.max(Ot.width, Ot.height) >> Ot.mipmapCount - 1 === 1;
-        Vt(Ot.width, Ot.height, Dt, Ot.isFourCC, (() => {
-          qt.DDSTools.UploadDDSLevels(et.Jf(), et, tt, Ot, Dt, 1)
+      loadData(uu, Eu, ju) {
+        const su = Uu.DDSTools.GetDDSInfo(uu),
+          Zu = (su.isRGB || su.isLuminance || su.mipmapCount > 1) && Eu.generateMipMaps && Math.max(su.width, su.height) >> su.mipmapCount - 1 === 1;
+        ju(su.width, su.height, Zu, su.isFourCC, (() => {
+          Uu.DDSTools.UploadDDSLevels(Eu.wO(), Eu, uu, su, Zu, 1)
         }))
       }
     }
   },
-  42031: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => Ht
+  42037: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => fu
     });
-    var Ot = Vt(37336),
-      qt = Vt(37372),
-      Dt = Vt(40194),
-      mt = Vt(37342),
-      dt = Vt(37513);
-    class jt {
-      constructor(tt, et, Vt, Ot) {
-        this.name = tt, this.worldAxisForNormal = et, this.worldAxisForFileX = Vt, this.worldAxisForFileY = Ot
+    var su = ju(37494),
+      Uu = ju(37519),
+      Zu = ju(40245),
+      Xu = ju(37496),
+      lu = ju(37680);
+    class qu {
+      constructor(uu, Eu, ju, su) {
+        this.name = uu, this.worldAxisForNormal = Eu, this.worldAxisForFileX = ju, this.worldAxisForFileY = su
       }
     }
-    class Ht {
-      static _NearestPow2Floor(tt) {
-        return tt <= 1 ? 1 : 1 << Math.floor(Math.log2(tt))
+    class fu {
+      static _NearestPow2Floor(uu) {
+        return uu <= 1 ? 1 : 1 << Math.floor(Math.log2(uu))
       }
-      static ConvertCubeMapTextureToSphericalPolynomial(tt) {
-        if (!tt.isCube) return null;
-        tt.vI()?.Jf().flushFramebuffer();
-        const et = tt.getSize().width,
-          Vt = tt._sphericalPolynomialTargetSize,
-          Ot = Vt > 0 ? this._NearestPow2Floor(Vt) : 0,
-          qt = !tt.noMipmap && !0 === tt._texture?.generateMipMaps,
-          Dt = Ot > 0 && Ot < et && qt,
-          mt = Dt ? Math.max(0, Math.round(Math.log2(et / Ot))) : 0,
-          dt = Dt ? Math.max(1, Math.floor(et / Math.pow(2, mt))) : et,
-          jt = tt.readPixels(0, mt, void 0, !1),
-          Ht = tt.readPixels(1, mt, void 0, !1);
-        let Xt, Qt;
-        tt.isRenderTarget ? (Xt = tt.readPixels(3, mt, void 0, !1), Qt = tt.readPixels(2, mt, void 0, !1)) : (Xt = tt.readPixels(2, mt, void 0, !1), Qt = tt.readPixels(3, mt, void 0, !1));
-        const lt = tt.readPixels(4, mt, void 0, !1),
-          Et = tt.readPixels(5, mt, void 0, !1),
-          ft = tt.gammaSpace,
-          wt = Ot > 0 && Ot < et && !Dt;
-        return new Promise((tt => {
-          Promise.all([Ht, jt, Xt, Qt, lt, Et]).then((Vt => {
-            let [qt, Dt, mt, jt, Ht, Xt] = Vt, Qt = dt;
-            if (wt) {
-              const tt = 4;
-              qt = this._DownsampleFace(qt, et, Ot, tt), Dt = this._DownsampleFace(Dt, et, Ot, tt), mt = this._DownsampleFace(mt, et, Ot, tt), jt = this._DownsampleFace(jt, et, Ot, tt), Ht = this._DownsampleFace(Ht, et, Ot, tt), Xt = this._DownsampleFace(Xt, et, Ot, tt), Qt = Ot
+      static ConvertCubeMapTextureToSphericalPolynomial(uu) {
+        if (!uu.isCube) return null;
+        uu.hV()?.wO().flushFramebuffer();
+        const Eu = uu.getSize().width,
+          ju = uu._sphericalPolynomialTargetSize,
+          su = ju > 0 ? this._NearestPow2Floor(ju) : 0,
+          Uu = !uu.noMipmap && !0 === uu._texture?.generateMipMaps,
+          Zu = su > 0 && su < Eu && Uu,
+          Xu = Zu ? Math.max(0, Math.round(Math.log2(Eu / su))) : 0,
+          lu = Zu ? Math.max(1, Math.floor(Eu / Math.pow(2, Xu))) : Eu,
+          qu = uu.readPixels(0, Xu, void 0, !1),
+          fu = uu.readPixels(1, Xu, void 0, !1);
+        let Cu, bu;
+        uu.isRenderTarget ? (Cu = uu.readPixels(3, Xu, void 0, !1), bu = uu.readPixels(2, Xu, void 0, !1)) : (Cu = uu.readPixels(2, Xu, void 0, !1), bu = uu.readPixels(3, Xu, void 0, !1));
+        const cu = uu.readPixels(4, Xu, void 0, !1),
+          Nu = uu.readPixels(5, Xu, void 0, !1),
+          Ou = uu.gammaSpace,
+          Yu = su > 0 && su < Eu && !Zu;
+        return new Promise((uu => {
+          Promise.all([fu, qu, Cu, bu, cu, Nu]).then((ju => {
+            let [Uu, Zu, Xu, qu, fu, Cu] = ju, bu = lu;
+            if (Yu) {
+              const uu = 4;
+              Uu = this._DownsampleFace(Uu, Eu, su, uu), Zu = this._DownsampleFace(Zu, Eu, su, uu), Xu = this._DownsampleFace(Xu, Eu, su, uu), qu = this._DownsampleFace(qu, Eu, su, uu), fu = this._DownsampleFace(fu, Eu, su, uu), Cu = this._DownsampleFace(Cu, Eu, su, uu), bu = su
             }
-            const lt = {
-              size: Qt,
-              right: Dt,
-              left: qt,
-              up: mt,
-              down: jt,
-              front: Ht,
-              back: Xt,
+            const cu = {
+              size: bu,
+              right: Zu,
+              left: Uu,
+              up: Xu,
+              down: qu,
+              front: fu,
+              back: Cu,
               format: 5,
-              type: qt instanceof Float32Array ? 1 : 0,
-              gammaSpace: ft
+              type: Uu instanceof Float32Array ? 1 : 0,
+              gammaSpace: Ou
             };
-            tt(this.ConvertCubeMapToSphericalPolynomial(lt))
+            uu(this.ConvertCubeMapToSphericalPolynomial(cu))
           }))
         }))
       }
-      static _AreaElement(tt, et) {
-        return Math.atan2(tt * et, Math.sqrt(tt * tt + et * et + 1))
+      static _AreaElement(uu, Eu) {
+        return Math.atan2(uu * Eu, Math.sqrt(uu * uu + Eu * Eu + 1))
       }
-      static _DownsampleFace(tt, et, Vt, Ot) {
-        const qt = tt instanceof Float32Array ? tt : Float32Array.from(tt),
-          Dt = Vt * Vt * Ot,
-          mt = new Float32Array(Dt),
-          dt = et / Vt,
-          jt = 1 / (dt * dt);
-        for (let Xt = 0; Xt < Vt; Xt++) {
-          const tt = Math.floor(Xt * dt),
-            Dt = Math.floor((Xt + 1) * dt);
-          for (let Ht = 0; Ht < Vt; Ht++) {
-            const Qt = Math.floor(Ht * dt),
-              lt = Math.floor((Ht + 1) * dt),
-              Et = (Xt * Vt + Ht) * Ot;
-            for (let Vt = 0; Vt < Ot; Vt++) {
-              let dt = 0;
-              for (let mt = tt; mt < Dt; mt++)
-                for (let tt = Qt; tt < lt; tt++) dt += qt[(mt * et + tt) * Ot + Vt];
-              mt[Et + Vt] = dt * jt
+      static _DownsampleFace(uu, Eu, ju, su) {
+        const Uu = uu instanceof Float32Array ? uu : Float32Array.from(uu),
+          Zu = ju * ju * su,
+          Xu = new Float32Array(Zu),
+          lu = Eu / ju,
+          qu = 1 / (lu * lu);
+        for (let Cu = 0; Cu < ju; Cu++) {
+          const uu = Math.floor(Cu * lu),
+            Zu = Math.floor((Cu + 1) * lu);
+          for (let fu = 0; fu < ju; fu++) {
+            const bu = Math.floor(fu * lu),
+              cu = Math.floor((fu + 1) * lu),
+              Nu = (Cu * ju + fu) * su;
+            for (let ju = 0; ju < su; ju++) {
+              let lu = 0;
+              for (let Xu = uu; Xu < Zu; Xu++)
+                for (let uu = bu; uu < cu; uu++) lu += Uu[(Xu * Eu + uu) * su + ju];
+              Xu[Nu + ju] = lu * qu
             }
           }
         }
-        if (tt instanceof Float32Array) return mt;
-        const Ht = new(0, tt.constructor)(Dt);
-        for (let Xt = 0; Xt < Dt; Xt++) Ht[Xt] = mt[Xt] + .5 | 0;
-        return Ht
+        if (uu instanceof Float32Array) return Xu;
+        const fu = new(0, uu.constructor)(Zu);
+        for (let Cu = 0; Cu < Zu; Cu++) fu[Cu] = Xu[Cu] + .5 | 0;
+        return fu
       }
-      static ConvertCubeMapToSphericalPolynomial(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const Vt = et > 0 ? this._NearestPow2Floor(et) : 0;
-        if (Vt > 0 && tt.size > Vt) {
-          const et = 5 === tt.format ? 4 : 3,
-            Ot = ["right", "left", "up", "down", "front", "back"],
-            qt = {};
-          for (const Dt of Ot) qt[Dt] = this._DownsampleFace(tt[Dt], tt.size, Vt, et);
-          tt = {
-            ...tt,
-            ...qt,
-            size: Vt
+      static ConvertCubeMapToSphericalPolynomial(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const ju = Eu > 0 ? this._NearestPow2Floor(Eu) : 0;
+        if (ju > 0 && uu.size > ju) {
+          const Eu = 5 === uu.format ? 4 : 3,
+            su = ["right", "left", "up", "down", "front", "back"],
+            Uu = {};
+          for (const Zu of su) Uu[Zu] = this._DownsampleFace(uu[Zu], uu.size, ju, Eu);
+          uu = {
+            ...uu,
+            ...Uu,
+            size: ju
           }
         }
-        const Ot = new Dt.e;
-        let jt = 0;
-        const Ht = 2 / tt.size,
-          Xt = Ht,
-          Qt = .5 * Ht,
-          lt = Qt - 1;
-        for (let Dt = 0; Dt < 6; Dt++) {
-          const et = this._FileFaces[Dt],
-            Vt = tt[et.name];
-          let Et = lt;
-          const ft = 5 === tt.format ? 4 : 3;
-          for (let Dt = 0; Dt < tt.size; Dt++) {
-            let wt = lt;
-            for (let Xt = 0; Xt < tt.size; Xt++) {
-              const lt = et.worldAxisForFileX.scale(wt).add(et.worldAxisForFileY.scale(Et)).add(et.worldAxisForNormal);
-              lt.normalize();
-              const yt = this._AreaElement(wt - Qt, Et - Qt) - this._AreaElement(wt - Qt, Et + Qt) - this._AreaElement(wt + Qt, Et - Qt) + this._AreaElement(wt + Qt, Et + Qt);
-              let Nt = Vt[Dt * tt.size * ft + Xt * ft + 0],
-                Mt = Vt[Dt * tt.size * ft + Xt * ft + 1],
-                bt = Vt[Dt * tt.size * ft + Xt * ft + 2];
-              isNaN(Nt) && (Nt = 0), isNaN(Mt) && (Mt = 0), isNaN(bt) && (bt = 0), 0 === tt.type && (Nt /= 255, Mt /= 255, bt /= 255), tt.gammaSpace && (Nt = Math.pow((0, qt.Clamp)(Nt), mt.i), Mt = Math.pow((0, qt.Clamp)(Mt), mt.i), bt = Math.pow((0, qt.Clamp)(bt), mt.i));
-              const Jt = this.MAX_HDRI_VALUE;
+        const su = new Zu.b;
+        let qu = 0;
+        const fu = 2 / uu.size,
+          Cu = fu,
+          bu = .5 * fu,
+          cu = bu - 1;
+        for (let Zu = 0; Zu < 6; Zu++) {
+          const Eu = this._FileFaces[Zu],
+            ju = uu[Eu.name];
+          let Nu = cu;
+          const Ou = 5 === uu.format ? 4 : 3;
+          for (let Zu = 0; Zu < uu.size; Zu++) {
+            let Yu = cu;
+            for (let Cu = 0; Cu < uu.size; Cu++) {
+              const cu = Eu.worldAxisForFileX.scale(Yu).add(Eu.worldAxisForFileY.scale(Nu)).add(Eu.worldAxisForNormal);
+              cu.normalize();
+              const hu = this._AreaElement(Yu - bu, Nu - bu) - this._AreaElement(Yu - bu, Nu + bu) - this._AreaElement(Yu + bu, Nu - bu) + this._AreaElement(Yu + bu, Nu + bu);
+              let Du = ju[Zu * uu.size * Ou + Cu * Ou + 0],
+                gu = ju[Zu * uu.size * Ou + Cu * Ou + 1],
+                Mu = ju[Zu * uu.size * Ou + Cu * Ou + 2];
+              isNaN(Du) && (Du = 0), isNaN(gu) && (gu = 0), isNaN(Mu) && (Mu = 0), 0 === uu.type && (Du /= 255, gu /= 255, Mu /= 255), uu.gammaSpace && (Du = Math.pow((0, Uu.Clamp)(Du), Xu.i), gu = Math.pow((0, Uu.Clamp)(gu), Xu.i), Mu = Math.pow((0, Uu.Clamp)(Mu), Xu.i));
+              const eu = this.MAX_HDRI_VALUE;
               if (this.PRESERVE_CLAMPED_COLORS) {
-                const tt = Math.max(Nt, Mt, bt);
-                if (tt > Jt) {
-                  const et = Jt / tt;
-                  Nt *= et, Mt *= et, bt *= et
+                const uu = Math.max(Du, gu, Mu);
+                if (uu > eu) {
+                  const Eu = eu / uu;
+                  Du *= Eu, gu *= Eu, Mu *= Eu
                 }
-              } else Nt = (0, qt.Clamp)(Nt, 0, Jt), Mt = (0, qt.Clamp)(Mt, 0, Jt), bt = (0, qt.Clamp)(bt, 0, Jt);
-              const Ct = new dt.b(Nt, Mt, bt);
-              Ot.addLight(lt, Ct, yt), jt += yt, wt += Ht
+              } else Du = (0, Uu.Clamp)(Du, 0, eu), gu = (0, Uu.Clamp)(gu, 0, eu), Mu = (0, Uu.Clamp)(Mu, 0, eu);
+              const Gu = new lu.c(Du, gu, Mu);
+              su.addLight(cu, Gu, hu), qu += hu, Yu += fu
             }
-            Et += Xt
+            Nu += Cu
           }
         }
-        const Et = 6 * (4 * Math.PI) / 6 / jt;
-        return Ot.scaleInPlace(Et), Ot.convertIncidentRadianceToIrradiance(), Ot.convertIrradianceToLambertianRadiance(), Dt.g.FromHarmonics(Ot)
+        const Nu = 6 * (4 * Math.PI) / 6 / qu;
+        return su.scaleInPlace(Nu), su.convertIncidentRadianceToIrradiance(), su.convertIrradianceToLambertianRadiance(), Zu.e.FromHarmonics(su)
       }
     }
-    Ht._FileFaces = [new jt("right", new Ot.n(1, 0, 0), new Ot.n(0, 0, -1), new Ot.n(0, -1, 0)), new jt("left", new Ot.n(-1, 0, 0), new Ot.n(0, 0, 1), new Ot.n(0, -1, 0)), new jt("up", new Ot.n(0, 1, 0), new Ot.n(1, 0, 0), new Ot.n(0, 0, 1)), new jt("down", new Ot.n(0, -1, 0), new Ot.n(1, 0, 0), new Ot.n(0, 0, -1)), new jt("front", new Ot.n(0, 0, 1), new Ot.n(1, 0, 0), new Ot.n(0, -1, 0)), new jt("back", new Ot.n(0, 0, -1), new Ot.n(-1, 0, 0), new Ot.n(0, -1, 0))], Ht.MAX_HDRI_VALUE = 4096, Ht.PRESERVE_CLAMPED_COLORS = !1
+    fu._FileFaces = [new qu("right", new su.t(1, 0, 0), new su.t(0, 0, -1), new su.t(0, -1, 0)), new qu("left", new su.t(-1, 0, 0), new su.t(0, 0, 1), new su.t(0, -1, 0)), new qu("up", new su.t(0, 1, 0), new su.t(1, 0, 0), new su.t(0, 0, 1)), new qu("down", new su.t(0, -1, 0), new su.t(1, 0, 0), new su.t(0, 0, -1)), new qu("front", new su.t(0, 0, 1), new su.t(1, 0, 0), new su.t(0, -1, 0)), new qu("back", new su.t(0, 0, -1), new su.t(-1, 0, 0), new su.t(0, -1, 0))], fu.MAX_HDRI_VALUE = 4096, fu.PRESERVE_CLAMPED_COLORS = !1
   },
-  42023: (tt, et, Vt) => {
-    Vt.d(et, {
-      DDSTools: () => ft
+  42032: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      DDSTools: () => Ou
     });
-    var Ot = Vt(37372),
-      qt = Vt(38899),
-      Dt = Vt(42031),
-      mt = Vt(40272);
-    const dt = 131072,
-      jt = 131072;
+    var su = ju(37519),
+      Uu = ju(39032),
+      Zu = ju(42037),
+      Xu = ju(40326);
+    const lu = 131072,
+      qu = 131072;
 
-    function Ht(tt) {
-      return tt.charCodeAt(0) + (tt.charCodeAt(1) << 8) + (tt.charCodeAt(2) << 16) + (tt.charCodeAt(3) << 24)
+    function fu(uu) {
+      return uu.charCodeAt(0) + (uu.charCodeAt(1) << 8) + (uu.charCodeAt(2) << 16) + (uu.charCodeAt(3) << 24)
     }
-    const Xt = Ht("DXT1"),
-      Qt = Ht("DXT3"),
-      lt = Ht("DXT5"),
-      Et = Ht("DX10");
-    class ft {
-      static GetDDSInfo(tt) {
-        const et = new Int32Array(tt.buffer, tt.byteOffset, 31),
-          Vt = new Int32Array(tt.buffer, tt.byteOffset, 35);
-        let Ot = 1;
-        et[2] & dt && (Ot = Math.max(1, et[7]));
-        const qt = et[21],
-          Dt = qt === Et ? Vt[32] : 0;
-        let mt = 0;
-        switch (qt) {
+    const Cu = fu("DXT1"),
+      bu = fu("DXT3"),
+      cu = fu("DXT5"),
+      Nu = fu("DX10");
+    class Ou {
+      static GetDDSInfo(uu) {
+        const Eu = new Int32Array(uu.buffer, uu.byteOffset, 31),
+          ju = new Int32Array(uu.buffer, uu.byteOffset, 35);
+        let su = 1;
+        Eu[2] & lu && (su = Math.max(1, Eu[7]));
+        const Uu = Eu[21],
+          Zu = Uu === Nu ? ju[32] : 0;
+        let Xu = 0;
+        switch (Uu) {
           case 113:
-            mt = 2;
+            Xu = 2;
             break;
           case 116:
-            mt = 1;
+            Xu = 1;
             break;
-          case Et:
-            if (10 === Dt) {
-              mt = 2;
+          case Nu:
+            if (10 === Zu) {
+              Xu = 2;
               break
             }
-            if (2 === Dt) {
-              mt = 1;
+            if (2 === Zu) {
+              Xu = 1;
               break
             }
         }
         return {
-          width: et[4],
-          height: et[3],
-          mipmapCount: Ot,
-          isFourCC: 4 === (4 & et[20]),
-          isRGB: 64 === (64 & et[20]),
-          isLuminance: (et[20] & jt) === jt,
-          isCube: 512 === (512 & et[28]),
-          isCompressed: qt === Xt || qt === Qt || qt === lt,
-          dxgiFormat: Dt,
-          textureType: mt
+          width: Eu[4],
+          height: Eu[3],
+          mipmapCount: su,
+          isFourCC: 4 === (4 & Eu[20]),
+          isRGB: 64 === (64 & Eu[20]),
+          isLuminance: (Eu[20] & qu) === qu,
+          isCube: 512 === (512 & Eu[28]),
+          isCompressed: Uu === Cu || Uu === bu || Uu === cu,
+          dxgiFormat: Zu,
+          textureType: Xu
         }
       }
-      static _GetHalfFloatAsFloatRGBAArrayBuffer(tt, et, Vt, Ot, qt, Dt) {
-        const dt = new Float32Array(Ot),
-          jt = new Uint16Array(qt, Vt);
-        let Ht = 0;
-        for (let Xt = 0; Xt < et; Xt++)
-          for (let et = 0; et < tt; et++) {
-            const Vt = 4 * (et + Xt * tt);
-            dt[Ht] = (0, mt.e)(jt[Vt]), dt[Ht + 1] = (0, mt.e)(jt[Vt + 1]), dt[Ht + 2] = (0, mt.e)(jt[Vt + 2]), ft.StoreLODInAlphaChannel ? dt[Ht + 3] = Dt : dt[Ht + 3] = (0, mt.e)(jt[Vt + 3]), Ht += 4
+      static _GetHalfFloatAsFloatRGBAArrayBuffer(uu, Eu, ju, su, Uu, Zu) {
+        const lu = new Float32Array(su),
+          qu = new Uint16Array(Uu, ju);
+        let fu = 0;
+        for (let Cu = 0; Cu < Eu; Cu++)
+          for (let Eu = 0; Eu < uu; Eu++) {
+            const ju = 4 * (Eu + Cu * uu);
+            lu[fu] = (0, Xu.e)(qu[ju]), lu[fu + 1] = (0, Xu.e)(qu[ju + 1]), lu[fu + 2] = (0, Xu.e)(qu[ju + 2]), Ou.StoreLODInAlphaChannel ? lu[fu + 3] = Zu : lu[fu + 3] = (0, Xu.e)(qu[ju + 3]), fu += 4
           }
-        return dt
+        return lu
       }
-      static _GetHalfFloatRGBAArrayBuffer(tt, et, Vt, Ot, qt, Dt) {
-        if (ft.StoreLODInAlphaChannel) {
-          const dt = new Uint16Array(Ot),
-            jt = new Uint16Array(qt, Vt);
-          let Ht = 0;
-          for (let Vt = 0; Vt < et; Vt++)
-            for (let et = 0; et < tt; et++) {
-              const Ot = 4 * (et + Vt * tt);
-              dt[Ht] = jt[Ot], dt[Ht + 1] = jt[Ot + 1], dt[Ht + 2] = jt[Ot + 2], dt[Ht + 3] = (0, mt.k)(Dt), Ht += 4
+      static _GetHalfFloatRGBAArrayBuffer(uu, Eu, ju, su, Uu, Zu) {
+        if (Ou.StoreLODInAlphaChannel) {
+          const lu = new Uint16Array(su),
+            qu = new Uint16Array(Uu, ju);
+          let fu = 0;
+          for (let ju = 0; ju < Eu; ju++)
+            for (let Eu = 0; Eu < uu; Eu++) {
+              const su = 4 * (Eu + ju * uu);
+              lu[fu] = qu[su], lu[fu + 1] = qu[su + 1], lu[fu + 2] = qu[su + 2], lu[fu + 3] = (0, Xu.k)(Zu), fu += 4
             }
-          return dt
+          return lu
         }
-        return new Uint16Array(qt, Vt, Ot)
+        return new Uint16Array(Uu, ju, su)
       }
-      static _GetFloatRGBAArrayBuffer(tt, et, Vt, Ot, qt, Dt) {
-        if (ft.StoreLODInAlphaChannel) {
-          const mt = new Float32Array(Ot),
-            dt = new Float32Array(qt, Vt);
-          let jt = 0;
-          for (let Vt = 0; Vt < et; Vt++)
-            for (let et = 0; et < tt; et++) {
-              const Ot = 4 * (et + Vt * tt);
-              mt[jt] = dt[Ot], mt[jt + 1] = dt[Ot + 1], mt[jt + 2] = dt[Ot + 2], mt[jt + 3] = Dt, jt += 4
+      static _GetFloatRGBAArrayBuffer(uu, Eu, ju, su, Uu, Zu) {
+        if (Ou.StoreLODInAlphaChannel) {
+          const Xu = new Float32Array(su),
+            lu = new Float32Array(Uu, ju);
+          let qu = 0;
+          for (let ju = 0; ju < Eu; ju++)
+            for (let Eu = 0; Eu < uu; Eu++) {
+              const su = 4 * (Eu + ju * uu);
+              Xu[qu] = lu[su], Xu[qu + 1] = lu[su + 1], Xu[qu + 2] = lu[su + 2], Xu[qu + 3] = Zu, qu += 4
             }
-          return mt
+          return Xu
         }
-        return new Float32Array(qt, Vt, Ot)
+        return new Float32Array(Uu, ju, su)
       }
-      static _GetFloatAsHalfFloatRGBAArrayBuffer(tt, et, Vt, Ot, qt, Dt) {
-        const dt = new Uint16Array(Ot),
-          jt = new Float32Array(qt, Vt);
-        let Ht = 0;
-        for (let Xt = 0; Xt < et; Xt++)
-          for (let et = 0; et < tt; et++) dt[Ht] = (0, mt.k)(jt[Ht]), dt[Ht + 1] = (0, mt.k)(jt[Ht + 1]), dt[Ht + 2] = (0, mt.k)(jt[Ht + 2]), ft.StoreLODInAlphaChannel ? dt[Ht + 3] = (0, mt.k)(Dt) : dt[Ht + 3] = (0, mt.k)(jt[Ht + 3]), Ht += 4;
-        return dt
+      static _GetFloatAsHalfFloatRGBAArrayBuffer(uu, Eu, ju, su, Uu, Zu) {
+        const lu = new Uint16Array(su),
+          qu = new Float32Array(Uu, ju);
+        let fu = 0;
+        for (let Cu = 0; Cu < Eu; Cu++)
+          for (let Eu = 0; Eu < uu; Eu++) lu[fu] = (0, Xu.k)(qu[fu]), lu[fu + 1] = (0, Xu.k)(qu[fu + 1]), lu[fu + 2] = (0, Xu.k)(qu[fu + 2]), Ou.StoreLODInAlphaChannel ? lu[fu + 3] = (0, Xu.k)(Zu) : lu[fu + 3] = (0, Xu.k)(qu[fu + 3]), fu += 4;
+        return lu
       }
-      static _GetFloatAsUIntRGBAArrayBuffer(tt, et, Vt, qt, Dt, mt) {
-        const dt = new Uint8Array(qt),
-          jt = new Float32Array(Dt, Vt);
-        let Ht = 0;
-        for (let Xt = 0; Xt < et; Xt++)
-          for (let et = 0; et < tt; et++) {
-            const Vt = 4 * (et + Xt * tt);
-            dt[Ht] = 255 * (0, Ot.Clamp)(jt[Vt]), dt[Ht + 1] = 255 * (0, Ot.Clamp)(jt[Vt + 1]), dt[Ht + 2] = 255 * (0, Ot.Clamp)(jt[Vt + 2]), ft.StoreLODInAlphaChannel ? dt[Ht + 3] = mt : dt[Ht + 3] = 255 * (0, Ot.Clamp)(jt[Vt + 3]), Ht += 4
+      static _GetFloatAsUIntRGBAArrayBuffer(uu, Eu, ju, Uu, Zu, Xu) {
+        const lu = new Uint8Array(Uu),
+          qu = new Float32Array(Zu, ju);
+        let fu = 0;
+        for (let Cu = 0; Cu < Eu; Cu++)
+          for (let Eu = 0; Eu < uu; Eu++) {
+            const ju = 4 * (Eu + Cu * uu);
+            lu[fu] = 255 * (0, su.Clamp)(qu[ju]), lu[fu + 1] = 255 * (0, su.Clamp)(qu[ju + 1]), lu[fu + 2] = 255 * (0, su.Clamp)(qu[ju + 2]), Ou.StoreLODInAlphaChannel ? lu[fu + 3] = Xu : lu[fu + 3] = 255 * (0, su.Clamp)(qu[ju + 3]), fu += 4
           }
-        return dt
+        return lu
       }
-      static _GetHalfFloatAsUIntRGBAArrayBuffer(tt, et, Vt, qt, Dt, dt) {
-        const jt = new Uint8Array(qt),
-          Ht = new Uint16Array(Dt, Vt);
-        let Xt = 0;
-        for (let Qt = 0; Qt < et; Qt++)
-          for (let et = 0; et < tt; et++) {
-            const Vt = 4 * (et + Qt * tt);
-            jt[Xt] = 255 * (0, Ot.Clamp)((0, mt.e)(Ht[Vt])), jt[Xt + 1] = 255 * (0, Ot.Clamp)((0, mt.e)(Ht[Vt + 1])), jt[Xt + 2] = 255 * (0, Ot.Clamp)((0, mt.e)(Ht[Vt + 2])), ft.StoreLODInAlphaChannel ? jt[Xt + 3] = dt : jt[Xt + 3] = 255 * (0, Ot.Clamp)((0, mt.e)(Ht[Vt + 3])), Xt += 4
+      static _GetHalfFloatAsUIntRGBAArrayBuffer(uu, Eu, ju, Uu, Zu, lu) {
+        const qu = new Uint8Array(Uu),
+          fu = new Uint16Array(Zu, ju);
+        let Cu = 0;
+        for (let bu = 0; bu < Eu; bu++)
+          for (let Eu = 0; Eu < uu; Eu++) {
+            const ju = 4 * (Eu + bu * uu);
+            qu[Cu] = 255 * (0, su.Clamp)((0, Xu.e)(fu[ju])), qu[Cu + 1] = 255 * (0, su.Clamp)((0, Xu.e)(fu[ju + 1])), qu[Cu + 2] = 255 * (0, su.Clamp)((0, Xu.e)(fu[ju + 2])), Ou.StoreLODInAlphaChannel ? qu[Cu + 3] = lu : qu[Cu + 3] = 255 * (0, su.Clamp)((0, Xu.e)(fu[ju + 3])), Cu += 4
           }
-        return jt
+        return qu
       }
-      static _GetRGBAArrayBuffer(tt, et, Vt, Ot, qt, Dt, mt, dt, jt) {
-        const Ht = new Uint8Array(Ot),
-          Xt = new Uint8Array(qt, Vt);
-        let Qt = 0;
-        for (let lt = 0; lt < et; lt++)
-          for (let et = 0; et < tt; et++) {
-            const Vt = 4 * (et + lt * tt);
-            Ht[Qt] = Xt[Vt + Dt], Ht[Qt + 1] = Xt[Vt + mt], Ht[Qt + 2] = Xt[Vt + dt], Ht[Qt + 3] = Xt[Vt + jt], Qt += 4
+      static _GetRGBAArrayBuffer(uu, Eu, ju, su, Uu, Zu, Xu, lu, qu) {
+        const fu = new Uint8Array(su),
+          Cu = new Uint8Array(Uu, ju);
+        let bu = 0;
+        for (let cu = 0; cu < Eu; cu++)
+          for (let Eu = 0; Eu < uu; Eu++) {
+            const ju = 4 * (Eu + cu * uu);
+            fu[bu] = Cu[ju + Zu], fu[bu + 1] = Cu[ju + Xu], fu[bu + 2] = Cu[ju + lu], fu[bu + 3] = Cu[ju + qu], bu += 4
           }
-        return Ht
+        return fu
       }
-      static _ExtractLongWordOrder(tt) {
-        return 0 === tt || 255 === tt || -16777216 === tt ? 0 : 1 + ft._ExtractLongWordOrder(tt >> 8)
+      static _ExtractLongWordOrder(uu) {
+        return 0 === uu || 255 === uu || -16777216 === uu ? 0 : 1 + Ou._ExtractLongWordOrder(uu >> 8)
       }
-      static _GetRGBArrayBuffer(tt, et, Vt, Ot, qt, Dt, mt, dt) {
-        const jt = new Uint8Array(Ot),
-          Ht = new Uint8Array(qt, Vt);
-        let Xt = 0;
-        for (let Qt = 0; Qt < et; Qt++)
-          for (let et = 0; et < tt; et++) {
-            const Vt = 3 * (et + Qt * tt);
-            jt[Xt] = Ht[Vt + Dt], jt[Xt + 1] = Ht[Vt + mt], jt[Xt + 2] = Ht[Vt + dt], Xt += 3
+      static _GetRGBArrayBuffer(uu, Eu, ju, su, Uu, Zu, Xu, lu) {
+        const qu = new Uint8Array(su),
+          fu = new Uint8Array(Uu, ju);
+        let Cu = 0;
+        for (let bu = 0; bu < Eu; bu++)
+          for (let Eu = 0; Eu < uu; Eu++) {
+            const ju = 3 * (Eu + bu * uu);
+            qu[Cu] = fu[ju + Zu], qu[Cu + 1] = fu[ju + Xu], qu[Cu + 2] = fu[ju + lu], Cu += 3
           }
-        return jt
+        return qu
       }
-      static _GetLuminanceArrayBuffer(tt, et, Vt, Ot, qt) {
-        const Dt = new Uint8Array(Ot),
-          mt = new Uint8Array(qt, Vt);
-        let dt = 0;
-        for (let jt = 0; jt < et; jt++)
-          for (let et = 0; et < tt; et++) {
-            const Vt = et + jt * tt;
-            Dt[dt] = mt[Vt], dt++
+      static _GetLuminanceArrayBuffer(uu, Eu, ju, su, Uu) {
+        const Zu = new Uint8Array(su),
+          Xu = new Uint8Array(Uu, ju);
+        let lu = 0;
+        for (let qu = 0; qu < Eu; qu++)
+          for (let Eu = 0; Eu < uu; Eu++) {
+            const ju = Eu + qu * uu;
+            Zu[lu] = Xu[ju], lu++
           }
-        return Dt
+        return Zu
       }
-      static UploadDDSLevels(tt, et, Vt, Ot, mt, jt) {
-        let Ht = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : -1,
-          wt = arguments.length > 7 ? arguments[7] : void 0,
-          yt = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
-          Nt = null;
-        Ot.sphericalPolynomial && (Nt = []);
-        const Mt = !!tt.getCaps().s3tc;
-        et.generateMipMaps = mt;
-        const bt = new Int32Array(Vt.buffer, Vt.byteOffset, 31);
-        let Jt, Ct, ut, Kt, ht, vt, Wt, St = 0,
-          ct = 0,
-          Rt = 1;
-        if (542327876 !== bt[0]) return void qt.d.Error("Invalid magic number in DDS header");
-        if (!Ot.isFourCC && !Ot.isRGB && !Ot.isLuminance) return void qt.d.Error("Unsupported format, must contain a FourCC, RGB or LUMINANCE code");
-        if (Ot.isCompressed && !Mt) return void qt.d.Error("Compressed textures are not supported on this platform.");
-        let It = bt[22];
-        Kt = bt[1] + 4;
-        let Pt = !1;
-        if (Ot.isFourCC) switch (Jt = bt[21], Jt) {
-          case Xt:
-            Rt = 8, ct = 33777;
+      static UploadDDSLevels(uu, Eu, ju, su, Xu, qu) {
+        let fu = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : -1,
+          Yu = arguments.length > 7 ? arguments[7] : void 0,
+          hu = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
+          Du = null;
+        su.sphericalPolynomial && (Du = []);
+        const gu = !!uu.getCaps().s3tc;
+        Eu.generateMipMaps = Xu;
+        const Mu = new Int32Array(ju.buffer, ju.byteOffset, 31);
+        let eu, Gu, pu, wu, Ju, du, au, Pu = 0,
+          ou = 0,
+          ku = 1;
+        if (542327876 !== Mu[0]) return void Uu.b.Error("Invalid magic number in DDS header");
+        if (!su.isFourCC && !su.isRGB && !su.isLuminance) return void Uu.b.Error("Unsupported format, must contain a FourCC, RGB or LUMINANCE code");
+        if (su.isCompressed && !gu) return void Uu.b.Error("Compressed textures are not supported on this platform.");
+        let mu = Mu[22];
+        wu = Mu[1] + 4;
+        let vu = !1;
+        if (su.isFourCC) switch (eu = Mu[21], eu) {
+          case Cu:
+            ku = 8, ou = 33777;
             break;
-          case Qt:
-            Rt = 16, ct = 33778;
+          case bu:
+            ku = 16, ou = 33778;
             break;
-          case lt:
-            Rt = 16, ct = 33779;
+          case cu:
+            ku = 16, ou = 33779;
             break;
           case 113:
-            Pt = !0, It = 64;
+            vu = !0, mu = 64;
             break;
           case 116:
-            Pt = !0, It = 128;
+            vu = !0, mu = 128;
             break;
-          case Et: {
-            Kt += 20;
-            let tt = !1;
-            switch (Ot.dxgiFormat) {
+          case Nu: {
+            wu += 20;
+            let uu = !1;
+            switch (su.dxgiFormat) {
               case 10:
-                Pt = !0, It = 64, tt = !0;
+                vu = !0, mu = 64, uu = !0;
                 break;
               case 2:
-                Pt = !0, It = 128, tt = !0;
+                vu = !0, mu = 128, uu = !0;
                 break;
               case 88:
-                Ot.isRGB = !0, Ot.isFourCC = !1, It = 32, tt = !0
+                su.isRGB = !0, su.isFourCC = !1, mu = 32, uu = !0
             }
-            if (tt) break
+            if (uu) break
           }
           default:
-            return void qt.d.Error(["Unsupported FourCC code:", (Zt = Jt, String.fromCharCode(255 & Zt, Zt >> 8 & 255, Zt >> 16 & 255, Zt >> 24 & 255))])
+            return void Uu.b.Error(["Unsupported FourCC code:", (Ku = eu, String.fromCharCode(255 & Ku, Ku >> 8 & 255, Ku >> 16 & 255, Ku >> 24 & 255))])
         }
-        var Zt;
-        const Lt = ft._ExtractLongWordOrder(bt[23]),
-          Ft = ft._ExtractLongWordOrder(bt[24]),
-          kt = ft._ExtractLongWordOrder(bt[25]),
-          Gt = ft._ExtractLongWordOrder(bt[26]);
-        Pt && (ct = tt._getRGBABufferInternalSizedFormat(Ot.textureType)), vt = 1, bt[2] & dt && !1 !== mt && (vt = Math.max(1, bt[7]));
-        const zt = wt || 0,
-          ot = tt.getCaps();
-        for (let qt = zt; qt < jt; qt++) {
-          for (Ct = bt[4], ut = bt[3], Wt = 0; Wt < vt; ++Wt) {
-            if (-1 === Ht || Ht === Wt) {
-              const Dt = -1 === Ht ? Wt : 0;
-              if (!Ot.isCompressed && Ot.isFourCC) {
-                et.format = 5, St = Ct * ut * 4;
-                let Ot = null;
-                if (tt._badOS || tt._badDesktopOS || !ot.textureHalfFloat && !ot.textureFloat) 128 === It ? (Ot = ft._GetFloatAsUIntRGBAArrayBuffer(Ct, ut, Vt.byteOffset + Kt, St, Vt.buffer, Dt), Nt && 0 == Dt && Nt.push(ft._GetFloatRGBAArrayBuffer(Ct, ut, Vt.byteOffset + Kt, St, Vt.buffer, Dt))) : 64 === It && (Ot = ft._GetHalfFloatAsUIntRGBAArrayBuffer(Ct, ut, Vt.byteOffset + Kt, St, Vt.buffer, Dt), Nt && 0 == Dt && Nt.push(ft._GetHalfFloatAsFloatRGBAArrayBuffer(Ct, ut, Vt.byteOffset + Kt, St, Vt.buffer, Dt))), et.type = 0;
+        var Ku;
+        const Vu = Ou._ExtractLongWordOrder(Mu[23]),
+          ru = Ou._ExtractLongWordOrder(Mu[24]),
+          Qu = Ou._ExtractLongWordOrder(Mu[25]),
+          iu = Ou._ExtractLongWordOrder(Mu[26]);
+        vu && (ou = uu._getRGBABufferInternalSizedFormat(su.textureType)), du = 1, Mu[2] & lu && !1 !== Xu && (du = Math.max(1, Mu[7]));
+        const Wu = Yu || 0,
+          Su = uu.getCaps();
+        for (let Uu = Wu; Uu < qu; Uu++) {
+          for (Gu = Mu[4], pu = Mu[3], au = 0; au < du; ++au) {
+            if (-1 === fu || fu === au) {
+              const Zu = -1 === fu ? au : 0;
+              if (!su.isCompressed && su.isFourCC) {
+                Eu.format = 5, Pu = Gu * pu * 4;
+                let su = null;
+                if (uu._badOS || uu._badDesktopOS || !Su.textureHalfFloat && !Su.textureFloat) 128 === mu ? (su = Ou._GetFloatAsUIntRGBAArrayBuffer(Gu, pu, ju.byteOffset + wu, Pu, ju.buffer, Zu), Du && 0 == Zu && Du.push(Ou._GetFloatRGBAArrayBuffer(Gu, pu, ju.byteOffset + wu, Pu, ju.buffer, Zu))) : 64 === mu && (su = Ou._GetHalfFloatAsUIntRGBAArrayBuffer(Gu, pu, ju.byteOffset + wu, Pu, ju.buffer, Zu), Du && 0 == Zu && Du.push(Ou._GetHalfFloatAsFloatRGBAArrayBuffer(Gu, pu, ju.byteOffset + wu, Pu, ju.buffer, Zu))), Eu.type = 0;
                 else {
-                  const tt = ot.textureFloat && (yt && ot.textureFloatLinearFiltering || !yt),
-                    qt = ot.textureHalfFloat && (yt && ot.textureHalfFloatLinearFiltering || !yt),
-                    mt = (128 === It || 64 === It && !qt) && tt ? 1 : (64 === It || 128 === It && !tt) && qt ? 2 : 0;
-                  let dt, jt = null;
-                  if (128 === It) switch (mt) {
+                  const uu = Su.textureFloat && (hu && Su.textureFloatLinearFiltering || !hu),
+                    Uu = Su.textureHalfFloat && (hu && Su.textureHalfFloatLinearFiltering || !hu),
+                    Xu = (128 === mu || 64 === mu && !Uu) && uu ? 1 : (64 === mu || 128 === mu && !uu) && Uu ? 2 : 0;
+                  let lu, qu = null;
+                  if (128 === mu) switch (Xu) {
                     case 1:
-                      dt = ft._GetFloatRGBAArrayBuffer, jt = null;
+                      lu = Ou._GetFloatRGBAArrayBuffer, qu = null;
                       break;
                     case 2:
-                      dt = ft._GetFloatAsHalfFloatRGBAArrayBuffer, jt = ft._GetFloatRGBAArrayBuffer;
+                      lu = Ou._GetFloatAsHalfFloatRGBAArrayBuffer, qu = Ou._GetFloatRGBAArrayBuffer;
                       break;
                     case 0:
-                      dt = ft._GetFloatAsUIntRGBAArrayBuffer, jt = ft._GetFloatRGBAArrayBuffer
-                  } else switch (mt) {
+                      lu = Ou._GetFloatAsUIntRGBAArrayBuffer, qu = Ou._GetFloatRGBAArrayBuffer
+                  } else switch (Xu) {
                     case 1:
-                      dt = ft._GetHalfFloatAsFloatRGBAArrayBuffer, jt = null;
+                      lu = Ou._GetHalfFloatAsFloatRGBAArrayBuffer, qu = null;
                       break;
                     case 2:
-                      dt = ft._GetHalfFloatRGBAArrayBuffer, jt = ft._GetHalfFloatAsFloatRGBAArrayBuffer;
+                      lu = Ou._GetHalfFloatRGBAArrayBuffer, qu = Ou._GetHalfFloatAsFloatRGBAArrayBuffer;
                       break;
                     case 0:
-                      dt = ft._GetHalfFloatAsUIntRGBAArrayBuffer, jt = ft._GetHalfFloatAsFloatRGBAArrayBuffer
+                      lu = Ou._GetHalfFloatAsUIntRGBAArrayBuffer, qu = Ou._GetHalfFloatAsFloatRGBAArrayBuffer
                   }
-                  et.type = mt, Ot = dt(Ct, ut, Vt.byteOffset + Kt, St, Vt.buffer, Dt), Nt && 0 == Dt && Nt.push(jt ? jt(Ct, ut, Vt.byteOffset + Kt, St, Vt.buffer, Dt) : Ot)
+                  Eu.type = Xu, su = lu(Gu, pu, ju.byteOffset + wu, Pu, ju.buffer, Zu), Du && 0 == Zu && Du.push(qu ? qu(Gu, pu, ju.byteOffset + wu, Pu, ju.buffer, Zu) : su)
                 }
-                Ot && tt._uploadDataToTextureDirectly(et, Ot, qt, Dt)
-              } else if (Ot.isRGB) et.type = 0, 24 === It ? (et.format = 4, St = Ct * ut * 3, ht = ft._GetRGBArrayBuffer(Ct, ut, Vt.byteOffset + Kt, St, Vt.buffer, Lt, Ft, kt), tt._uploadDataToTextureDirectly(et, ht, qt, Dt)) : (et.format = 5, St = Ct * ut * 4, ht = ft._GetRGBAArrayBuffer(Ct, ut, Vt.byteOffset + Kt, St, Vt.buffer, Lt, Ft, kt, Gt), tt._uploadDataToTextureDirectly(et, ht, qt, Dt));
-              else if (Ot.isLuminance) {
-                const Ot = tt._getUnpackAlignement(),
-                  mt = Ct;
-                St = Math.floor((Ct + Ot - 1) / Ot) * Ot * (ut - 1) + mt, ht = ft._GetLuminanceArrayBuffer(Ct, ut, Vt.byteOffset + Kt, St, Vt.buffer), et.format = 1, et.type = 0, tt._uploadDataToTextureDirectly(et, ht, qt, Dt)
-              } else St = Math.max(4, Ct) / 4 * Math.max(4, ut) / 4 * Rt, ht = new Uint8Array(Vt.buffer, Vt.byteOffset + Kt, St), et.type = 0, tt._uploadCompressedDataToTextureDirectly(et, ct, Ct, ut, ht, qt, Dt)
+                su && uu._uploadDataToTextureDirectly(Eu, su, Uu, Zu)
+              } else if (su.isRGB) Eu.type = 0, 24 === mu ? (Eu.format = 4, Pu = Gu * pu * 3, Ju = Ou._GetRGBArrayBuffer(Gu, pu, ju.byteOffset + wu, Pu, ju.buffer, Vu, ru, Qu), uu._uploadDataToTextureDirectly(Eu, Ju, Uu, Zu)) : (Eu.format = 5, Pu = Gu * pu * 4, Ju = Ou._GetRGBAArrayBuffer(Gu, pu, ju.byteOffset + wu, Pu, ju.buffer, Vu, ru, Qu, iu), uu._uploadDataToTextureDirectly(Eu, Ju, Uu, Zu));
+              else if (su.isLuminance) {
+                const su = uu._getUnpackAlignement(),
+                  Xu = Gu;
+                Pu = Math.floor((Gu + su - 1) / su) * su * (pu - 1) + Xu, Ju = Ou._GetLuminanceArrayBuffer(Gu, pu, ju.byteOffset + wu, Pu, ju.buffer), Eu.format = 1, Eu.type = 0, uu._uploadDataToTextureDirectly(Eu, Ju, Uu, Zu)
+              } else Pu = Math.max(4, Gu) / 4 * Math.max(4, pu) / 4 * ku, Ju = new Uint8Array(ju.buffer, ju.byteOffset + wu, Pu), Eu.type = 0, uu._uploadCompressedDataToTextureDirectly(Eu, ou, Gu, pu, Ju, Uu, Zu)
             }
-            Kt += It ? Ct * ut * (It / 8) : St, Ct *= .5, ut *= .5, Ct = Math.max(1, Ct), ut = Math.max(1, ut)
+            wu += mu ? Gu * pu * (mu / 8) : Pu, Gu *= .5, pu *= .5, Gu = Math.max(1, Gu), pu = Math.max(1, pu)
           }
-          if (void 0 !== wt) break
+          if (void 0 !== Yu) break
         }
-        Nt && Nt.length > 0 ? Ot.sphericalPolynomial = Dt.e.ConvertCubeMapToSphericalPolynomial({
-          size: bt[4],
-          right: Nt[0],
-          left: Nt[1],
-          up: Nt[2],
-          down: Nt[3],
-          front: Nt[4],
-          back: Nt[5],
+        Du && Du.length > 0 ? su.sphericalPolynomial = Zu.e.ConvertCubeMapToSphericalPolynomial({
+          size: Mu[4],
+          right: Du[0],
+          left: Du[1],
+          up: Du[2],
+          down: Du[3],
+          front: Du[4],
+          back: Du[5],
           format: 5,
           type: 1,
           gammaSpace: !1
-        }) : Ot.sphericalPolynomial = void 0
+        }) : su.sphericalPolynomial = void 0
       }
     }
-    ft.StoreLODInAlphaChannel = !1
+    Ou.StoreLODInAlphaChannel = !1
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

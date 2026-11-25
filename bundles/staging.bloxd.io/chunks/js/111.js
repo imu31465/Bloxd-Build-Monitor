@@ -1,89 +1,89 @@
 export const id = 111;
 export const ids = [111, 402];
 export const modules = {
-  5134: (tt, et, Vt) => {
-    var Ot = Vt(5136);
+  5131: (uu, Eu, ju) => {
+    var su = ju(5135);
 
-    function qt() {}
+    function Uu() {}
 
-    function Dt() {}
-    Dt.resetWarningCache = qt, tt.exports = function() {
-      function tt(tt, et, Vt, qt, Dt, mt) {
-        if (mt !== Ot) {
-          var dt = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
-          throw dt.name = "Invariant Violation", dt
+    function Zu() {}
+    Zu.resetWarningCache = Uu, uu.exports = function() {
+      function uu(uu, Eu, ju, Uu, Zu, Xu) {
+        if (Xu !== su) {
+          var lu = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
+          throw lu.name = "Invariant Violation", lu
         }
       }
 
-      function et() {
-        return tt
+      function Eu() {
+        return uu
       }
-      tt.isRequired = tt;
-      var Vt = {
-        array: tt,
-        bigint: tt,
-        bool: tt,
-        func: tt,
-        number: tt,
-        object: tt,
-        string: tt,
-        symbol: tt,
-        any: tt,
-        arrayOf: et,
-        element: tt,
-        elementType: tt,
-        instanceOf: et,
-        node: tt,
-        objectOf: et,
-        oneOf: et,
-        oneOfType: et,
-        shape: et,
-        exact: et,
-        checkPropTypes: Dt,
-        resetWarningCache: qt
+      uu.isRequired = uu;
+      var ju = {
+        array: uu,
+        bigint: uu,
+        bool: uu,
+        func: uu,
+        number: uu,
+        object: uu,
+        string: uu,
+        symbol: uu,
+        any: uu,
+        arrayOf: Eu,
+        element: uu,
+        elementType: uu,
+        instanceOf: Eu,
+        node: uu,
+        objectOf: Eu,
+        oneOf: Eu,
+        oneOfType: Eu,
+        shape: Eu,
+        exact: Eu,
+        checkPropTypes: Zu,
+        resetWarningCache: Uu
       };
-      return Vt.PropTypes = Vt, Vt
+      return ju.PropTypes = ju, ju
     }
   },
-  5127: (tt, et, Vt) => {
-    tt.exports = Vt(5134)()
+  5128: (uu, Eu, ju) => {
+    uu.exports = ju(5131)()
   },
-  5136: tt => {
-    tt.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
+  5135: uu => {
+    uu.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
   },
-  6788: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      default: () => Xt
+  6787: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      default: () => Cu
     });
-    var Ot = Vt(1613),
-      qt = Vt(1556),
-      Dt = Vt(1286),
-      mt = Vt(6797),
-      dt = Vt(6772),
-      jt = Vt(6754),
-      Ht = Vt(1188);
+    var su = ju(1570),
+      Uu = ju(1506),
+      Zu = ju(1244),
+      Xu = ju(6796),
+      lu = ju(6771),
+      qu = ju(6761),
+      fu = ju(1154);
 
-    function Xt() {
+    function Cu() {
       const {
-        t: tt
-      } = (0, Dt.H)(), et = (0, Ot.useNavigatePreserveSearch)();
-      return (0, dt.e)(), (0, Ht.jsxs)("div", {
+        t: uu
+      } = (0, Zu.A)(), Eu = (0, su.useNavigatePreserveSearch)();
+      return (0, lu.b)(), (0, fu.jsxs)("div", {
         className: "ShaderPackPublishPage AnimFadeIn",
-        children: [(0, Ht.jsx)("div", {
+        children: [(0, fu.jsx)("div", {
           className: "ShaderPackPublishBack",
-          children: (0, Ht.jsx)(qt.d, {
+          children: (0, fu.jsx)(Uu.d, {
             onClick: () => {
-              et(jt.Z)
+              Eu(qu.R)
             },
-            children: tt("shaderPackListing:backToPacks")
+            children: uu("shaderPackListing:backToPacks")
           })
-        }), (0, Ht.jsx)("h1", {
+        }), (0, fu.jsx)("h1", {
           className: "ShaderPackPublishTitle",
-          children: tt("shaderPackListing:publishTitle")
-        }), (0, Ht.jsx)(mt.ShaderPackPublishForm, {
+          children: uu("shaderPackListing:publishTitle")
+        }), (0, fu.jsx)(Xu.ShaderPackPublishForm, {
           existing: null,
-          onPublished: tt => {
-            et((0, jt.cb)(tt.packId), {
+          onPublished: uu => {
+            Eu((0, qu.U)(uu.packId), {
               replace: !0
             })
           }
@@ -91,131 +91,131 @@ export const modules = {
       })
     }
   },
-  6772: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => lt,
-      f: () => Et,
-      g: () => Qt,
-      h: () => ft
+  6771: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => cu,
+      c: () => Nu,
+      f: () => bu,
+      g: () => Ou
     });
-    var Ot = Vt(63),
-      qt = Vt(6756),
-      Dt = Vt(1600),
-      mt = Vt(6754),
-      dt = Vt(6776),
-      jt = Vt(1218);
-    const Ht = "shaderPackListingView",
-      Xt = "shaderPackListingFilterOpen";
+    var su = ju(58),
+      Uu = ju(6764),
+      Zu = ju(1559),
+      Xu = ju(6761),
+      lu = ju(6777),
+      qu = ju(1178);
+    const fu = "shaderPackListingView",
+      Cu = "shaderPackListingFilterOpen";
 
-    function Qt() {
-      var tt;
-      const [et, Vt] = (0, dt.c)(Ht, qt.G[0]);
-      return [null !== (tt = qt.G.find((tt => tt === et))) && void 0 !== tt ? tt : qt.G[0], Vt]
+    function bu() {
+      var uu;
+      const [Eu, ju] = (0, lu.c)(fu, Uu.M[0]);
+      return [null !== (uu = Uu.M.find((uu => uu === Eu))) && void 0 !== uu ? uu : Uu.M[0], ju]
     }
 
-    function lt() {
-      (0, Ot.useEffect)((() => () => {
-        window.location.pathname.startsWith(mt.Z) || (0, mt.k)()
+    function cu() {
+      (0, su.useEffect)((() => () => {
+        window.location.pathname.startsWith(Xu.R) || (0, Xu.l)()
       }), [])
     }
 
-    function Et() {
-      return (0, dt.c)(Xt, !1)
+    function Nu() {
+      return (0, lu.c)(Cu, !1)
     }
 
-    function ft() {
+    function Ou() {
       const {
-        userContext: tt,
-        isUserContextUpdating: et
-      } = (0, jt.d)(), [Vt, qt] = (0, Ot.useState)(null), mt = (0, Ot.useRef)(new Set);
+        userContext: uu,
+        isUserContextUpdating: Eu
+      } = (0, qu.c)(), [ju, Uu] = (0, su.useState)(null), Xu = (0, su.useRef)(new Set);
 
-      function dt(tt, et) {
-        qt((Vt => {
-          const Ot = new Set(Vt);
-          return et ? Ot.add(tt) : Ot.delete(tt), Ot
+      function lu(uu, Eu) {
+        Uu((ju => {
+          const su = new Set(ju);
+          return Eu ? su.add(uu) : su.delete(uu), su
         }))
       }
-      return (0, Ot.useEffect)((() => {
-        if (et) return;
-        let Vt = !1;
-        return Dt.e.getFavouriteShaderPacks(tt).then((tt => {
-          Vt || qt(new Set(tt))
-        })).catch((tt => {
-          console.error("Failed to get favourite shader packs", tt), Vt || qt(new Set)
+      return (0, su.useEffect)((() => {
+        if (Eu) return;
+        let ju = !1;
+        return Zu.b.getFavouriteShaderPacks(uu).then((uu => {
+          ju || Uu(new Set(uu))
+        })).catch((uu => {
+          console.error("Failed to get favourite shader packs", uu), ju || Uu(new Set)
         })), () => {
-          Vt = !0
+          ju = !0
         }
-      }), [tt, et]), {
-        isFavourite: tt => null === Vt ? null : Vt.has(tt),
-        toggle: function(et) {
-          if (null === Vt || mt.current.has(et)) return;
-          mt.current.add(et);
-          const Ot = !Vt.has(et);
-          dt(et, Ot), (Ot ? Dt.e.favouriteShaderPack(tt, et) : Dt.e.unfavouriteShaderPack(tt, et)).catch((tt => {
-            console.error("Failed to change a favourite shader pack", tt), dt(et, !Ot)
+      }), [uu, Eu]), {
+        isFavourite: uu => null === ju ? null : ju.has(uu),
+        toggle: function(Eu) {
+          if (null === ju || Xu.current.has(Eu)) return;
+          Xu.current.add(Eu);
+          const su = !ju.has(Eu);
+          lu(Eu, su), (su ? Zu.b.favouriteShaderPack(uu, Eu) : Zu.b.unfavouriteShaderPack(uu, Eu)).catch((uu => {
+            console.error("Failed to change a favourite shader pack", uu), lu(Eu, !su)
           })).finally((() => {
-            mt.current.delete(et)
+            Xu.current.delete(Eu)
           }))
         }
       }
     }
   },
-  6754: (tt, et, Vt) => {
-    Vt.d(et, {
-      B: () => ft,
-      E: () => Nt,
-      I: () => St,
-      L: () => Xt,
-      O: () => Rt,
-      Q: () => wt,
-      U: () => zt,
-      X: () => kt,
-      Z: () => mt,
-      _: () => Gt,
-      c: () => Mt,
-      cb: () => jt,
-      f: () => vt,
-      fb: () => dt,
-      g: () => yt,
-      ib: () => Lt,
-      k: () => lt,
-      lb: () => Ft,
-      n: () => Qt,
-      nb: () => bt,
-      qb: () => ct,
-      r: () => It,
-      s: () => Et,
-      v: () => Pt,
-      z: () => ot
+  6761: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      A: () => Du,
+      B: () => Pu,
+      F: () => Cu,
+      H: () => ku,
+      I: () => Yu,
+      M: () => Wu,
+      N: () => Qu,
+      R: () => Xu,
+      T: () => iu,
+      U: () => qu,
+      V: () => lu,
+      Y: () => Vu,
+      ab: () => ru,
+      d: () => gu,
+      eb: () => Mu,
+      gb: () => ou,
+      h: () => du,
+      k: () => hu,
+      l: () => cu,
+      o: () => bu,
+      r: () => mu,
+      s: () => Nu,
+      w: () => vu,
+      x: () => Su,
+      y: () => Ou
     });
-    var Ot = Vt(6756),
-      qt = Vt(184),
-      Dt = Vt(4691);
-    const mt = "/shader-packs",
-      dt = `${mt}/publish`;
+    var su = ju(6764),
+      Uu = ju(166),
+      Zu = ju(4740);
+    const Xu = "/shader-packs",
+      lu = `${Xu}/publish`;
 
-    function jt(tt) {
-      return `${mt}/${encodeURIComponent(tt)}`
+    function qu(uu) {
+      return `${Xu}/${encodeURIComponent(uu)}`
     }
-    let Ht = null;
+    let fu = null;
 
-    function Xt(tt) {
-      Ht = tt
-    }
-
-    function Qt() {
-      return Ht
+    function Cu(uu) {
+      fu = uu
     }
 
-    function lt() {
-      Ht = null
+    function bu() {
+      return fu
     }
 
-    function Et(tt) {
-      return tt.playerHasRank("developer") || tt.playerHasRank("admin")
+    function cu() {
+      fu = null
     }
-    const ft = ["terrain", "water", "models", "sunShadows", "strict"],
-      wt = {
+
+    function Nu(uu) {
+      return uu.playerHasRank("developer") || uu.playerHasRank("admin")
+    }
+    const Ou = ["terrain", "water", "models", "sunShadows", "strict"],
+      Yu = {
         terrain: "shaderPackListing:filterTerrain",
         water: "shaderPackListing:filterWater",
         models: "shaderPackListing:filterModels",
@@ -223,89 +223,89 @@ export const modules = {
         strict: "shaderPackListing:filterAllGames"
       };
 
-    function yt(tt, et) {
-      return tt.withFeatures.includes(et) ? "with" : tt.withoutFeatures.includes(et) ? "without" : null
+    function hu(uu, Eu) {
+      return uu.withFeatures.includes(Eu) ? "with" : uu.withoutFeatures.includes(Eu) ? "without" : null
     }
 
-    function Nt(tt) {
-      return null === tt ? "with" : "with" === tt ? "without" : null
+    function Du(uu) {
+      return null === uu ? "with" : "with" === uu ? "without" : null
     }
 
-    function Mt(tt) {
-      return "with" === tt ? "only" : null === tt ? "include" : void 0
+    function gu(uu) {
+      return "with" === uu ? "only" : null === uu ? "include" : void 0
     }
 
-    function bt(tt, et) {
-      const Vt = yt(tt, et),
-        Ot = tt => tt.filter((tt => tt !== et));
+    function Mu(uu, Eu) {
+      const ju = hu(uu, Eu),
+        su = uu => uu.filter((uu => uu !== Eu));
       return {
-        withFeatures: null === Vt ? [...tt.withFeatures, et] : Ot(tt.withFeatures),
-        withoutFeatures: "with" === Vt ? [...tt.withoutFeatures, et] : Ot(tt.withoutFeatures)
+        withFeatures: null === ju ? [...uu.withFeatures, Eu] : su(uu.withFeatures),
+        withoutFeatures: "with" === ju ? [...uu.withoutFeatures, Eu] : su(uu.withoutFeatures)
       }
     }
-    const Jt = "section",
-      Ct = "sort",
-      ut = "filters",
-      Kt = "q",
-      ht = "banned",
-      vt = "popular",
-      Wt = "strict";
+    const eu = "section",
+      Gu = "sort",
+      pu = "filters",
+      wu = "q",
+      Ju = "banned",
+      du = "popular",
+      au = "strict";
 
-    function St(tt) {
-      var et, Vt, qt;
-      const mt = tt.get(Jt),
-        dt = (null !== (et = tt.get(ut)) && void 0 !== et ? et : Wt).split(","),
-        jt = tt.get(ht);
+    function Pu(uu) {
+      var Eu, ju, Uu;
+      const Xu = uu.get(eu),
+        lu = (null !== (Eu = uu.get(pu)) && void 0 !== Eu ? Eu : au).split(","),
+        qu = uu.get(Ju);
       return {
-        section: "favourites" === mt || "mine" === mt ? mt : "explore",
-        sort: null !== (Vt = Ot.x.find((et => et === tt.get(Ct)))) && void 0 !== Vt ? Vt : vt,
-        withFeatures: ft.filter((tt => dt.includes(tt) && !dt.includes(`-${tt}`))),
-        withoutFeatures: ft.filter((tt => dt.includes(`-${tt}`))),
-        searchQuery: (null === (qt = tt.get(Kt)) || void 0 === qt ? void 0 : qt.slice(0, Ot.I)) || null,
-        pageNumber: (0, Dt.h)(tt.get(Dt.d)),
-        banned: "only" === jt ? "with" : "include" === jt ? null : "without"
+        section: "favourites" === Xu || "mine" === Xu ? Xu : "explore",
+        sort: null !== (ju = su.E.find((Eu => Eu === uu.get(Gu)))) && void 0 !== ju ? ju : du,
+        withFeatures: Ou.filter((uu => lu.includes(uu) && !lu.includes(`-${uu}`))),
+        withoutFeatures: Ou.filter((uu => lu.includes(`-${uu}`))),
+        searchQuery: (null === (Uu = uu.get(wu)) || void 0 === Uu ? void 0 : Uu.slice(0, su.R)) || null,
+        pageNumber: (0, Zu.c)(uu.get(Zu.b)),
+        banned: "only" === qu ? "with" : "include" === qu ? null : "without"
       }
     }
 
-    function ct(tt, et) {
-      var Vt;
-      const Ot = Zt(et);
-      (0, Dt.j)(tt, Jt, "explore" === et.section ? null : et.section), (0, Dt.j)(tt, Ct, et.sort === vt ? null : et.sort), (0, Dt.j)(tt, ut, Ot === Wt ? null : Ot), (0, Dt.j)(tt, Kt, et.searchQuery), (0, Dt.j)(tt, ht, null !== (Vt = Mt(et.banned)) && void 0 !== Vt ? Vt : null), (0, Dt.n)(tt, et.pageNumber)
+    function ou(uu, Eu) {
+      var ju;
+      const su = Ku(Eu);
+      (0, Zu.f)(uu, eu, "explore" === Eu.section ? null : Eu.section), (0, Zu.f)(uu, Gu, Eu.sort === du ? null : Eu.sort), (0, Zu.f)(uu, pu, su === au ? null : su), (0, Zu.f)(uu, wu, Eu.searchQuery), (0, Zu.f)(uu, Ju, null !== (ju = gu(Eu.banned)) && void 0 !== ju ? ju : null), (0, Zu.i)(uu, Eu.pageNumber)
     }
 
-    function Rt(tt) {
-      const et = new URLSearchParams;
-      return ct(et, {
+    function ku(uu) {
+      const Eu = new URLSearchParams;
+      return ou(Eu, {
         section: "explore",
-        sort: vt,
-        withFeatures: "strict" === tt ? [tt] : [tt, "strict"],
+        sort: du,
+        withFeatures: "strict" === uu ? [uu] : [uu, "strict"],
         withoutFeatures: [],
         searchQuery: null,
         pageNumber: 1,
         banned: "without"
-      }), `${mt}?${et.toString()}`
+      }), `${Xu}?${Eu.toString()}`
     }
 
-    function It(tt) {
-      return Zt(tt) === Wt
+    function mu(uu) {
+      return Ku(uu) === au
     }
 
-    function Pt(tt) {
-      return null !== tt.searchQuery || "with" === tt.banned || Zt(tt) !== Wt
+    function vu(uu) {
+      return null !== uu.searchQuery || "with" === uu.banned || Ku(uu) !== au
     }
 
-    function Zt(tt) {
-      return ft.flatMap((et => {
-        const Vt = yt(tt, et);
-        return "with" === Vt ? [et] : "without" === Vt ? [`-${et}`] : []
+    function Ku(uu) {
+      return Ou.flatMap((Eu => {
+        const ju = hu(uu, Eu);
+        return "with" === ju ? [Eu] : "without" === ju ? [`-${Eu}`] : []
       })).join(",")
     }
-    const Lt = {
+    const Vu = {
         popular: "shaderPackListing:sortPopular",
         updated: "shaderPackListing:sortUpdated",
         newest: "shaderPackListing:sortNewest"
       },
-      Ft = {
+      ru = {
         forest: "shaderPackListing:viewForest",
         desert: "shaderPackListing:viewDesert",
         water: "shaderPackListing:viewWater",
@@ -313,107 +313,107 @@ export const modules = {
         cave: "shaderPackListing:viewCave"
       };
 
-    function kt(tt) {
-      return Math.round(100 * Math.max(0, 1 - 1 / tt))
+    function Qu(uu) {
+      return Math.round(100 * Math.max(0, 1 - 1 / uu))
     }
 
-    function Gt(tt, et, Vt, qt) {
-      const Dt = [];
-      tt.isBanned && Dt.push({
+    function iu(uu, Eu, ju, Uu) {
+      const Zu = [];
+      uu.isBanned && Zu.push({
         tone: "warning",
-        text: qt("shaderPackListing:ownerBanned"),
+        text: Uu("shaderPackListing:ownerBanned"),
         detail: null
       });
       const {
-        pending: mt
-      } = tt;
-      if (null === tt.brokenError || mt && !mt.error || Dt.push({
+        pending: Xu
+      } = uu;
+      if (null === uu.brokenError || Xu && !Xu.error || Zu.push({
           tone: "warning",
-          text: qt("shaderPackListing:ownerBroken"),
-          detail: tt.brokenError
-        }), null !== mt && void 0 !== mt && mt.error) Dt.push({
+          text: Uu("shaderPackListing:ownerBroken"),
+          detail: uu.brokenError
+        }), null !== Xu && void 0 !== Xu && Xu.error) Zu.push({
         tone: "warning",
-        text: qt(et ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
-        detail: (0, Ot.q)(mt.error) ? null : mt.error
+        text: Uu(Eu ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
+        detail: (0, su.r)(Xu.error) ? null : Xu.error
       });
-      else if (mt) {
-        const tt = null === mt.renderNotBefore ? 0 : mt.renderNotBefore - Vt,
-          Ot = String(Math.ceil(tt / 6e4)),
-          dt = qt(et ? tt > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : tt > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
-            minutes: Ot
+      else if (Xu) {
+        const uu = null === Xu.renderNotBefore ? 0 : Xu.renderNotBefore - ju,
+          su = String(Math.ceil(uu / 6e4)),
+          lu = Uu(Eu ? uu > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : uu > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
+            minutes: su
           });
-        Dt.push({
+        Zu.push({
           tone: "info",
-          text: dt,
+          text: lu,
           detail: null
         })
       }
-      return tt.listed || Dt.push({
+      return uu.listed || Zu.push({
         tone: "info",
-        text: qt("shaderPackListing:ownerUnlisted"),
+        text: Uu("shaderPackListing:ownerUnlisted"),
         detail: null
-      }), Dt
+      }), Zu
     }
 
-    function zt(tt) {
-      return Math.max(1, Math.round(tt / 1024))
+    function Wu(uu) {
+      return Math.max(1, Math.round(uu / 1024))
     }
 
-    function ot(tt, et, Vt) {
-      return tt instanceof qt.e && tt.errorMessageForUser ? tt.errorMessageForUser : et(Vt)
+    function Su(uu, Eu, ju) {
+      return uu instanceof Uu.b && uu.errorMessageForUser ? uu.errorMessageForUser : Eu(ju)
     }
   },
-  6776: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => Dt
+  6777: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => Zu
     });
-    var Ot = Vt(63),
-      qt = Vt(39);
+    var su = ju(58),
+      Uu = ju(31);
 
-    function Dt(tt, et) {
-      var Vt;
-      const [Dt, mt] = (0, Ot.useState)(null !== (Vt = qt.e.getItem(tt)) && void 0 !== Vt ? Vt : et);
-      return [Dt, et => {
-        qt.e.setItem(tt, et), mt(et)
+    function Zu(uu, Eu) {
+      var ju;
+      const [Zu, Xu] = (0, su.useState)(null !== (ju = Uu.k.getItem(uu)) && void 0 !== ju ? ju : Eu);
+      return [Zu, Eu => {
+        Uu.k.setItem(uu, Eu), Xu(Eu)
       }]
     }
   },
-  6873: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => qt,
-      g: () => Dt
+  6854: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => Uu,
+      e: () => Zu
     });
-    var Ot = Vt(39);
-    const qt = "shaderPack";
-    async function Dt() {
-      var tt;
-      let et = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (tt = await Ot.c.getItem(qt, et)) && void 0 !== tt ? tt : null
+    var su = ju(31);
+    const Uu = "shaderPack";
+    async function Zu() {
+      var uu;
+      let Eu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (uu = await su.h.getItem(Uu, Eu)) && void 0 !== uu ? uu : null
     }
   },
-  6756: (tt, et, Vt) => {
-    Vt.d(et, {
-      B: () => dt,
-      E: () => mt,
-      G: () => Ot,
-      H: () => lt,
-      I: () => Xt,
-      K: () => Jt,
-      L: () => Qt,
-      P: () => Ht,
-      e: () => ft,
-      i: () => yt,
-      k: () => wt,
-      o: () => Et,
-      q: () => bt,
-      t: () => ut,
-      u: () => jt,
-      v: () => qt,
-      w: () => Ct,
-      x: () => Dt
+  6764: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      C: () => Gu,
+      E: () => Zu,
+      F: () => lu,
+      I: () => Xu,
+      M: () => su,
+      Q: () => cu,
+      R: () => Cu,
+      U: () => eu,
+      X: () => bu,
+      _: () => fu,
+      c: () => Ou,
+      f: () => hu,
+      j: () => Yu,
+      n: () => Nu,
+      r: () => Mu,
+      t: () => pu,
+      x: () => qu,
+      z: () => Uu
     });
-    const Ot = ["forest", "desert", "water", "night", "cave"];
-    const qt = {
+    const su = ["forest", "desert", "water", "night", "cave"];
+    const Uu = {
         full: {
           width: 3840,
           height: 2160
@@ -427,49 +427,49 @@ export const modules = {
           height: 360
         }
       },
-      Dt = ["popular", "updated", "newest"],
-      mt = 3,
-      dt = 32,
-      jt = 300;
+      Zu = ["popular", "updated", "newest"],
+      Xu = 3,
+      lu = 32,
+      qu = 300;
 
-    function Ht(tt, et) {
-      return tt.slice(0, et).replace(/[\uD800-\uDBFF]$/, "")
+    function fu(uu, Eu) {
+      return uu.slice(0, Eu).replace(/[\uD800-\uDBFF]$/, "")
     }
-    const Xt = 64,
-      Qt = 512,
-      lt = 18e5;
+    const Cu = 64,
+      bu = 512,
+      cu = 18e5;
 
-    function Et(tt) {
-      const et = tt,
-        Vt = null === et || void 0 === et ? void 0 : et.files;
-      return "number" === typeof(null === et || void 0 === et ? void 0 : et.apiVersion) && "string" === typeof et.name && (null === et.author || "string" === typeof et.author) && (void 0 === et.keepCircleShadows || "boolean" === typeof et.keepCircleShadows) && "object" === typeof Vt && null !== Vt && Object.values(Vt).every((tt => "string" === typeof tt))
+    function Nu(uu) {
+      const Eu = uu,
+        ju = null === Eu || void 0 === Eu ? void 0 : Eu.files;
+      return "number" === typeof(null === Eu || void 0 === Eu ? void 0 : Eu.apiVersion) && "string" === typeof Eu.name && (null === Eu.author || "string" === typeof Eu.author) && (void 0 === Eu.keepCircleShadows || "boolean" === typeof Eu.keepCircleShadows) && "object" === typeof ju && null !== ju && Object.values(ju).every((uu => "string" === typeof uu))
     }
-    const ft = "Bloxdhub",
-      wt = "https://bloxdhub.com/shaders";
+    const Ou = "Bloxdhub",
+      Yu = "https://bloxdhub.com/shaders";
 
-    function yt(tt) {
-      return `https://bloxdhub.com/workshop/${encodeURIComponent(tt)}`
+    function hu(uu) {
+      return `https://bloxdhub.com/workshop/${encodeURIComponent(uu)}`
     }
-    const Nt = "Screenshot generation failed.",
-      Mt = "Its screenshots couldn't be generated:";
+    const Du = "Screenshot generation failed.",
+      gu = "Its screenshots couldn't be generated:";
 
-    function bt(tt) {
-      var et;
-      return tt === Nt || null !== (et = null === tt || void 0 === tt ? void 0 : tt.startsWith(Mt)) && void 0 !== et && et
-    }
-
-    function Jt(tt, et) {
-      return `shaderPacks/${tt}/${et}.json`
+    function Mu(uu) {
+      var Eu;
+      return uu === Du || null !== (Eu = null === uu || void 0 === uu ? void 0 : uu.startsWith(gu)) && void 0 !== Eu && Eu
     }
 
-    function Ct(tt, et, Vt, Ot) {
-      return null === et.renderId ? ut(tt, et.baselineVersion, Vt, Ot) : `${tt}/${function(tt,et,Vt,Ot){return`shaderPacks/${tt}/${et}/${Vt}-${Ot}.webp`}(et.packId,et.renderId,Vt,Ot)}`
+    function eu(uu, Eu) {
+      return `shaderPacks/${uu}/${Eu}.json`
     }
 
-    function ut(tt, et, Vt, Ot) {
-      return `${tt}/${function(tt,et,Vt){return`shaderPacks/baseline/${tt}/${et}-${Vt}.webp`}(et,Vt,Ot)}`
+    function Gu(uu, Eu, ju, su) {
+      return null === Eu.renderId ? pu(uu, Eu.baselineVersion, ju, su) : `${uu}/${function(uu,Eu,ju,su){return`shaderPacks/${uu}/${Eu}/${ju}-${su}.webp`}(Eu.packId,Eu.renderId,ju,su)}`
+    }
+
+    function pu(uu, Eu, ju, su) {
+      return `${uu}/${function(uu,Eu,ju){return`shaderPacks/baseline/${uu}/${Eu}-${ju}.webp`}(Eu,ju,su)}`
     }
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

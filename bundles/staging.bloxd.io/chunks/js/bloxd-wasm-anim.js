@@ -1,271 +1,271 @@
 export const id = 5;
 export const ids = [5];
 export const modules = {
-  42897: (tt, et, Vt) => {
-    tt.exports = Vt.p + "static/media/bloxd_wasm_anim_bg.032c073578fc29078ee2.wasm"
+  42918: (uu, Eu, ju) => {
+    uu.exports = ju.p + "static/media/bloxd_wasm_anim_bg.f947c22ef067e991ee5e.wasm"
   },
-  42890: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      BloxdAnimWasmError: () => Ft,
-      compileAnimationPackInWasm: () => ot
+  42912: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      BloxdAnimWasmError: () => ru,
+      compileAnimationPackInWasm: () => Su
     });
-    var Ot = {};
+    var su = {};
 
-    function qt(tt, et, Vt, Ot, qt, Dt) {
-      const mt = Mt(tt, St.H3GJ),
-        dt = ct,
-        jt = Mt(et, St.H3GJ),
-        Ht = ct,
-        Xt = Mt(Vt, St.H3GJ),
-        Qt = ct,
-        lt = Mt(Ot, St.H3GJ),
-        ft = ct,
-        wt = Mt(qt, St.H3GJ),
-        yt = ct;
-      var bt = Nt(Dt) ? 0 : function(tt, et) {
-          const Vt = et(1 * tt.length, 1) >>> 0;
-          return Et().set(tt, Vt / 1), ct = tt.length, Vt
-        }(Dt, St.H3GJ),
-        Ct = ct;
-      const ut = St.Nhfa(mt, dt, jt, Ht, Xt, Qt, lt, ft, wt, yt, bt, Ct);
-      if (ut[3]) throw Jt(ut[2]);
-      var Kt, ht, vt = (Kt = ut[0], ht = ut[1], Kt >>>= 0, Et().subarray(Kt / 1, Kt / 1 + ht)).slice();
-      return St.M1VR(ut[0], 1 * ut[1], 1), vt
+    function Uu(uu, Eu, ju, su, Uu, Zu) {
+      const Xu = gu(uu, Pu.WdXm),
+        lu = ou,
+        qu = gu(Eu, Pu.WdXm),
+        fu = ou,
+        Cu = gu(ju, Pu.WdXm),
+        bu = ou,
+        cu = gu(su, Pu.WdXm),
+        Ou = ou,
+        Yu = gu(Uu, Pu.WdXm),
+        hu = ou;
+      var Mu = Du(Zu) ? 0 : function(uu, Eu) {
+          const ju = Eu(1 * uu.length, 1) >>> 0;
+          return Nu().set(uu, ju / 1), ou = uu.length, ju
+        }(Zu, Pu.WdXm),
+        Gu = ou;
+      const pu = Pu.uQhP(Xu, lu, qu, fu, Cu, bu, cu, Ou, Yu, hu, Mu, Gu);
+      if (pu[3]) throw eu(pu[2]);
+      var wu, Ju, du = (wu = pu[0], Ju = pu[1], wu >>>= 0, Nu().subarray(wu / 1, wu / 1 + Ju)).slice();
+      return Pu.zgPY(pu[0], 1 * pu[1], 1), du
     }
 
-    function Dt(tt, et) {
-      const Vt = bt(tt, St.H3GJ, St.XhUa),
-        Ot = ct,
-        qt = St.hH2Y(Vt, Ot, et);
-      if (qt[1]) throw Jt(qt[0])
+    function Zu(uu, Eu) {
+      const ju = Mu(uu, Pu.WdXm, Pu.EECR),
+        su = ou,
+        Uu = Pu.dI49(ju, su, Eu);
+      if (Uu[1]) throw eu(Uu[0])
     }
 
-    function mt() {
-      St.P55S()
+    function Xu() {
+      Pu.hkhq()
     }
 
-    function dt() {
+    function lu() {
       return {
         __proto__: null,
-        c5te: {
+        Nmrj: {
           __proto__: null,
-          xOnj: function(tt, et) {
-            return jt(Error(Qt(tt, et)))
+          fIEe: function(uu, Eu) {
+            return qu(Error(bu(uu, Eu)))
           },
-          D3Nw: function(tt, et) {
-            const Vt = ft(et),
-              Ot = "string" === typeof Vt ? Vt : void 0;
-            var qt = Nt(Ot) ? 0 : bt(Ot, St.H3GJ, St.XhUa),
-              Dt = ct;
-            Xt().setInt32(tt + 4, Dt, !0), Xt().setInt32(tt + 0, qt, !0)
+          VTqC: function(uu, Eu) {
+            const ju = Ou(Eu),
+              su = "string" === typeof ju ? ju : void 0;
+            var Uu = Du(su) ? 0 : Mu(su, Pu.WdXm, Pu.EECR),
+              Zu = ou;
+            Cu().setInt32(uu + 4, Zu, !0), Cu().setInt32(uu + 0, Uu, !0)
           },
-          aFf3: function(tt, et) {
-            throw new Error(Qt(tt, et))
+          YYHf: function(uu, Eu) {
+            throw new Error(bu(uu, Eu))
           },
-          WVI3: function(tt, et) {
-            console.error(Qt(tt, et))
+          hGGF: function(uu, Eu) {
+            console.error(bu(uu, Eu))
           },
-          uavJ: function(tt) {
-            Jt(tt)
+          x8Gb: function(uu) {
+            eu(uu)
           }
         }
       }
     }
 
-    function jt(tt) {
-      yt === wt.length && wt.push(wt.length + 1);
-      const et = yt;
-      return yt = wt[et], wt[et] = tt, et
+    function qu(uu) {
+      hu === Yu.length && Yu.push(Yu.length + 1);
+      const Eu = hu;
+      return hu = Yu[Eu], Yu[Eu] = uu, Eu
     }
-    Vt.r(Ot), Vt.d(Ot, {
-      wdt: () => qt,
-      mQ: () => Dt,
-      default: () => Pt,
-      initSync: () => It,
-      dQ: () => mt
+    ju.r(su), ju.d(su, {
+      SXu: () => Uu,
+      jb: () => Zu,
+      default: () => vu,
+      initSync: () => mu,
+      sb: () => Xu
     });
-    let Ht = null;
+    let fu = null;
 
-    function Xt() {
-      return null !== Ht && Ht.buffer === St.memory.buffer || (Ht = new DataView(St.memory.buffer)), Ht
+    function Cu() {
+      return null !== fu && fu.buffer === Pu.memory.buffer || (fu = new DataView(Pu.memory.buffer)), fu
     }
 
-    function Qt(tt, et) {
-      return function(tt, et) {
-        Kt += et, Kt >= ut && (Ct = new TextDecoder("utf-8", {
+    function bu(uu, Eu) {
+      return function(uu, Eu) {
+        wu += Eu, wu >= pu && (Gu = new TextDecoder("utf-8", {
           ignoreBOM: !0,
           fatal: !0
-        }), Ct.decode(), Kt = et);
-        return Ct.decode(Et().subarray(tt, tt + et))
-      }(tt >>> 0, et)
+        }), Gu.decode(), wu = Eu);
+        return Gu.decode(Nu().subarray(uu, uu + Eu))
+      }(uu >>> 0, Eu)
     }
-    let lt = null;
+    let cu = null;
 
-    function Et() {
-      return null !== lt && 0 !== lt.byteLength || (lt = new Uint8Array(St.memory.buffer)), lt
-    }
-
-    function ft(tt) {
-      return wt[tt]
-    }
-    let wt = new Array(1024).fill(void 0);
-    wt.push(void 0, null, !0, !1);
-    let yt = wt.length;
-
-    function Nt(tt) {
-      return void 0 === tt || null === tt
+    function Nu() {
+      return null !== cu && 0 !== cu.byteLength || (cu = new Uint8Array(Pu.memory.buffer)), cu
     }
 
-    function Mt(tt, et) {
-      const Vt = et(4 * tt.length, 4) >>> 0,
-        Ot = Xt();
-      for (let qt = 0; qt < tt.length; qt++) Ot.setUint32(Vt + 4 * qt, jt(tt[qt]), !0);
-      return ct = tt.length, Vt
+    function Ou(uu) {
+      return Yu[uu]
+    }
+    let Yu = new Array(1024).fill(void 0);
+    Yu.push(void 0, null, !0, !1);
+    let hu = Yu.length;
+
+    function Du(uu) {
+      return void 0 === uu || null === uu
     }
 
-    function bt(tt, et, Vt) {
-      if (void 0 === Vt) {
-        const Vt = ht.encode(tt),
-          Ot = et(Vt.length, 1) >>> 0;
-        return Et().subarray(Ot, Ot + Vt.length).set(Vt), ct = Vt.length, Ot
+    function gu(uu, Eu) {
+      const ju = Eu(4 * uu.length, 4) >>> 0,
+        su = Cu();
+      for (let Uu = 0; Uu < uu.length; Uu++) su.setUint32(ju + 4 * Uu, qu(uu[Uu]), !0);
+      return ou = uu.length, ju
+    }
+
+    function Mu(uu, Eu, ju) {
+      if (void 0 === ju) {
+        const ju = Ju.encode(uu),
+          su = Eu(ju.length, 1) >>> 0;
+        return Nu().subarray(su, su + ju.length).set(ju), ou = ju.length, su
       }
-      let Ot = tt.length,
-        qt = et(Ot, 1) >>> 0;
-      const Dt = Et();
-      let mt = 0;
-      for (; mt < Ot; mt++) {
-        const et = tt.charCodeAt(mt);
-        if (et > 127) break;
-        Dt[qt + mt] = et
+      let su = uu.length,
+        Uu = Eu(su, 1) >>> 0;
+      const Zu = Nu();
+      let Xu = 0;
+      for (; Xu < su; Xu++) {
+        const Eu = uu.charCodeAt(Xu);
+        if (Eu > 127) break;
+        Zu[Uu + Xu] = Eu
       }
-      if (mt !== Ot) {
-        0 !== mt && (tt = tt.slice(mt)), qt = Vt(qt, Ot, Ot = mt + 3 * tt.length, 1) >>> 0;
-        const et = Et().subarray(qt + mt, qt + Ot);
-        mt += ht.encodeInto(tt, et).written, qt = Vt(qt, Ot, mt, 1) >>> 0
+      if (Xu !== su) {
+        0 !== Xu && (uu = uu.slice(Xu)), Uu = ju(Uu, su, su = Xu + 3 * uu.length, 1) >>> 0;
+        const Eu = Nu().subarray(Uu + Xu, Uu + su);
+        Xu += Ju.encodeInto(uu, Eu).written, Uu = ju(Uu, su, Xu, 1) >>> 0
       }
-      return ct = mt, qt
+      return ou = Xu, Uu
     }
 
-    function Jt(tt) {
-      const et = ft(tt);
-      return function(tt) {
-        tt < 1028 || (wt[tt] = yt, yt = tt)
-      }(tt), et
+    function eu(uu) {
+      const Eu = Ou(uu);
+      return function(uu) {
+        uu < 1028 || (Yu[uu] = hu, hu = uu)
+      }(uu), Eu
     }
-    let Ct = new TextDecoder("utf-8", {
+    let Gu = new TextDecoder("utf-8", {
       ignoreBOM: !0,
       fatal: !0
     });
-    Ct.decode();
-    const ut = 2146435072;
-    let Kt = 0;
-    const ht = new TextEncoder;
-    "encodeInto" in ht || (ht.encodeInto = function(tt, et) {
-      const Vt = ht.encode(tt);
-      return et.set(Vt), {
-        read: tt.length,
-        written: Vt.length
+    Gu.decode();
+    const pu = 2146435072;
+    let wu = 0;
+    const Ju = new TextEncoder;
+    "encodeInto" in Ju || (Ju.encodeInto = function(uu, Eu) {
+      const ju = Ju.encode(uu);
+      return Eu.set(ju), {
+        read: uu.length,
+        written: ju.length
       }
     });
-    let vt, Wt, St, ct = 0;
+    let du, au, Pu, ou = 0;
 
-    function Rt(tt, et) {
-      return Wt = tt, St = tt.exports, vt = et, Ht = null, lt = null, St.PnDx(), St
+    function ku(uu, Eu) {
+      return au = uu, Pu = uu.exports, du = Eu, fu = null, cu = null, Pu.nwig(), Pu
     }
 
-    function It(tt) {
-      if (void 0 !== St) return St;
-      void 0 !== tt && (Object.getPrototypeOf(tt) === Object.prototype ? ({
-        module: tt
-      } = tt) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
-      const et = dt();
-      tt instanceof WebAssembly.Module || (tt = new WebAssembly.Module(tt));
-      return Rt(new WebAssembly.Instance(tt, et), tt)
+    function mu(uu) {
+      if (void 0 !== Pu) return Pu;
+      void 0 !== uu && (Object.getPrototypeOf(uu) === Object.prototype ? ({
+        module: uu
+      } = uu) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
+      const Eu = lu();
+      uu instanceof WebAssembly.Module || (uu = new WebAssembly.Module(uu));
+      return ku(new WebAssembly.Instance(uu, Eu), uu)
     }
-    async function Pt(tt) {
-      if (void 0 !== St) return St;
-      void 0 !== tt && (Object.getPrototypeOf(tt) === Object.prototype ? ({
-        module_or_path: tt
-      } = tt) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
-      const et = dt();
-      ("string" === typeof tt || "function" === typeof Request && tt instanceof Request || "function" === typeof URL && tt instanceof URL) && (tt = fetch(tt));
+    async function vu(uu) {
+      if (void 0 !== Pu) return Pu;
+      void 0 !== uu && (Object.getPrototypeOf(uu) === Object.prototype ? ({
+        module_or_path: uu
+      } = uu) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
+      const Eu = lu();
+      ("string" === typeof uu || "function" === typeof Request && uu instanceof Request || "function" === typeof URL && uu instanceof URL) && (uu = fetch(uu));
       const {
-        instance: Vt,
-        module: Ot
-      } = await async function(tt, et) {
-        if ("function" === typeof Response && tt instanceof Response) {
-          if (!tt.ok) throw new Error(`failed to fetch Wasm: ${tt.status} ${tt.statusText} fetching '${tt.url}'`);
+        instance: ju,
+        module: su
+      } = await async function(uu, Eu) {
+        if ("function" === typeof Response && uu instanceof Response) {
+          if (!uu.ok) throw new Error(`failed to fetch Wasm: ${uu.status} ${uu.statusText} fetching '${uu.url}'`);
           if ("function" === typeof WebAssembly.instantiateStreaming) try {
-            return await WebAssembly.instantiateStreaming(tt, et)
-          } catch (Vt) {
-            if (! function(tt) {
-                switch (tt) {
+            return await WebAssembly.instantiateStreaming(uu, Eu)
+          } catch (ju) {
+            if (! function(uu) {
+                switch (uu) {
                   case "basic":
                   case "cors":
                   case "default":
                     return !0
                 }
                 return !1
-              }(tt.type) || "application/wasm" === tt.headers.get("Content-Type")) throw Vt;
-            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", Vt)
+              }(uu.type) || "application/wasm" === uu.headers.get("Content-Type")) throw ju;
+            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", ju)
           }
-          const Ot = await tt.arrayBuffer();
-          return await WebAssembly.instantiate(Ot, et)
+          const su = await uu.arrayBuffer();
+          return await WebAssembly.instantiate(su, Eu)
         } {
-          const Vt = await WebAssembly.instantiate(tt, et);
-          return Vt instanceof WebAssembly.Instance ? {
-            instance: Vt,
-            module: tt
-          } : Vt
+          const ju = await WebAssembly.instantiate(uu, Eu);
+          return ju instanceof WebAssembly.Instance ? {
+            instance: ju,
+            module: uu
+          } : ju
         }
-      }(await tt, et);
-      return Rt(Vt, Ot)
+      }(await uu, Eu);
+      return ku(ju, su)
     }
-    var Zt = Vt(2965),
-      Lt = Vt(6820);
-    class Ft extends Error {
+    var Ku = ju(3020),
+      Vu = ju(6818);
+    class ru extends Error {
       stage;
-      constructor(tt, et) {
-        super((0, Zt.F)(tt, et), {
-          cause: et
-        }), this.name = "BloxdAnimWasmError", this.stage = tt
+      constructor(uu, Eu) {
+        super((0, Ku.F)(uu, Eu), {
+          cause: Eu
+        }), this.name = "BloxdAnimWasmError", this.stage = uu
       }
     }
-    let kt = null,
-      Gt = null;
+    let Qu = null,
+      iu = null;
 
-    function zt() {
-      if (Gt) throw Gt
+    function Wu() {
+      if (iu) throw iu
     }
-    async function ot(tt, et, qt) {
-      zt();
-      const Dt = await (kt ??= (async () => {
-        let tt;
+    async function Su(uu, Eu, Uu) {
+      Wu();
+      const Zu = await (Qu ??= (async () => {
+        let uu;
         try {
-          tt = await (0, Zt.G)(new Vt.U(Vt(42897)), (0, Lt.c)("bloxd_wasm_anim"))
-        } catch (et) {
-          throw new Ft((0, Zt.J)(et), et)
+          uu = await (0, Ku.I)(new ju.U(ju(42918)), (0, Vu.b)("bloxd_wasm_anim"))
+        } catch (Eu) {
+          throw new ru((0, Ku.L)(Eu), Eu)
         }
         try {
-          await Pt({
-            module_or_path: tt
+          await vu({
+            module_or_path: uu
           })
-        } catch (et) {
-          throw new Ft("instantiate", et)
+        } catch (Eu) {
+          throw new ru("instantiate", Eu)
         }
-        return Ot
-      })(), kt.catch((() => {
-        kt = null
-      })), kt);
-      zt();
+        return su
+      })(), Qu.catch((() => {
+        Qu = null
+      })), Qu);
+      Wu();
       try {
-        return Dt.wdt(Object.entries(tt).flat(), [...et.mobTypes], [...et.vehicleTypes], [...et.mobAiStates], [...et.playerPoses], "builtIns" in qt ? qt.builtIns : void 0)
-      } catch (mt) {
-        const tt = new Ft("call", mt);
-        throw mt instanceof WebAssembly.RuntimeError && (Gt = tt), tt
+        return Zu.SXu(Object.entries(uu).flat(), [...Eu.mobTypes], [...Eu.vehicleTypes], [...Eu.mobAiStates], [...Eu.playerPoses], "builtIns" in Uu ? Uu.builtIns : void 0)
+      } catch (Xu) {
+        const uu = new ru("call", Xu);
+        throw Xu instanceof WebAssembly.RuntimeError && (iu = uu), uu
       }
     }
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

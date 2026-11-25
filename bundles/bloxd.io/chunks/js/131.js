@@ -1,40 +1,40 @@
 export const id = 131;
 export const ids = [131];
 export const modules = {
-  41269: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      ShaderPackCategory: () => Pt
+  41292: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      ShaderPackCategory: () => vu
     });
-    var Ot = Vt(63),
-      qt = Vt(1623),
-      Dt = Vt(1556),
-      mt = Vt(1613),
-      dt = Vt(1286),
-      jt = Vt(106),
-      Ht = Vt(26),
-      Xt = Vt(1732),
-      Qt = Vt(6816),
-      lt = Vt(366),
-      Et = Vt(6866),
-      ft = Vt(6857),
-      wt = Vt(6873),
-      yt = Vt(6754),
-      Nt = Vt(5155),
-      Mt = Vt(5208),
-      bt = Vt(6810),
-      Jt = Vt(3533);
+    var su = ju(58),
+      Uu = ju(1580),
+      Zu = ju(1506),
+      Xu = ju(1570),
+      lu = ju(1244),
+      qu = ju(91),
+      fu = ju(22),
+      Cu = ju(1687),
+      bu = ju(6810),
+      cu = ju(326),
+      Nu = ju(6851),
+      Ou = ju(6849),
+      Yu = ju(6854),
+      hu = ju(6761),
+      Du = ju(5155),
+      gu = ju(5197),
+      Mu = ju(6806),
+      eu = ju(3653);
 
-    function Ct(tt, et) {
-      const Vt = (0, Et.storedPackOutcome)(tt, et);
-      return "none" !== Vt.kind || "noCompiler" === Vt.reason
+    function Gu(uu, Eu) {
+      const ju = (0, Nu.storedPackOutcome)(uu, Eu);
+      return "none" !== ju.kind || "noCompiler" === ju.reason
     }
-    var ut = Vt(1140),
-      Kt = Vt.n(ut),
-      ht = Vt(5216),
-      vt = Vt(1152),
-      Wt = Vt(6801),
-      St = Vt(1188);
-    const ct = {
+    var pu = ju(1105),
+      wu = ju.n(pu),
+      Ju = ju(5206),
+      du = ju(1116),
+      au = ju(6800),
+      Pu = ju(1154);
+    const ou = {
       ready: "shaderPack:statusReady",
       readyAfterReload: "shaderPack:statusReadyAfterReload",
       noWebGpu: "shaderPack:statusNoWebGpu",
@@ -47,249 +47,249 @@ export const modules = {
       noCompiler: "shaderPack:statusNoCompiler"
     };
 
-    function Rt(tt, et) {
-      return "failedRecheck" === tt && et.listing ? "shaderPack:statusFailedRecheckListed" : ct[tt]
+    function ku(uu, Eu) {
+      return "failedRecheck" === uu && Eu.listing ? "shaderPack:statusFailedRecheckListed" : ou[uu]
     }
 
-    function It(tt) {
+    function mu(uu) {
       let {
-        stored: et,
-        checking: Vt,
-        webGpuUsable: Ot,
-        changePending: qt,
-        compiler: Dt,
-        t: mt
-      } = tt;
-      const dt = function(tt, et, Vt, Ot, qt) {
-          const Dt = (0, Et.storedPackOutcome)(tt, qt);
-          return "none" === Dt.kind ? "noCompiler" === Dt.reason ? et ? "checking" : "noCompiler" : "otherApiVersion" === Dt.reason ? "wrongApiVersion" : "failed" : (0, Jt.f)() ? "harnessBuild" : "blocked" === Dt.kind ? (0, Et.shaderPackNeedsCheck)(tt, qt) ? et ? "checking" : !1 === Vt ? "noWebGpu" : "unchecked" : "failedRecheck" : !1 === Vt ? "offNoWebGpu" : Ot ? "readyAfterReload" : "ready"
-        }(et, Vt, Ot, qt, Dt),
-        jt = "failed" === dt || "failedRecheck" === dt,
-        Ht = jt || "wrongApiVersion" === dt || "noCompiler" === dt,
-        Xt = "ready" === dt || "readyAfterReload" === dt ? et.validation.offInStrict : [];
-      return (0, St.jsxs)(St.Fragment, {
-        children: [(0, St.jsxs)("div", {
-          className: Kt()("ShaderPackStatus", {
-            Ready: "ready" === dt,
-            Failed: Ht
+        stored: Eu,
+        checking: ju,
+        webGpuUsable: su,
+        changePending: Uu,
+        compiler: Zu,
+        t: Xu
+      } = uu;
+      const lu = function(uu, Eu, ju, su, Uu) {
+          const Zu = (0, Nu.storedPackOutcome)(uu, Uu);
+          return "none" === Zu.kind ? "noCompiler" === Zu.reason ? Eu ? "checking" : "noCompiler" : "otherApiVersion" === Zu.reason ? "wrongApiVersion" : "failed" : (0, eu.h)() ? "harnessBuild" : "blocked" === Zu.kind ? (0, Nu.shaderPackNeedsCheck)(uu, Uu) ? Eu ? "checking" : !1 === ju ? "noWebGpu" : "unchecked" : "failedRecheck" : !1 === ju ? "offNoWebGpu" : su ? "readyAfterReload" : "ready"
+        }(Eu, ju, su, Uu, Zu),
+        qu = "failed" === lu || "failedRecheck" === lu,
+        fu = qu || "wrongApiVersion" === lu || "noCompiler" === lu,
+        Cu = "ready" === lu || "readyAfterReload" === lu ? Eu.validation.offInStrict : [];
+      return (0, Pu.jsxs)(Pu.Fragment, {
+        children: [(0, Pu.jsxs)("div", {
+          className: wu()("ShaderPackStatus", {
+            Ready: "ready" === lu,
+            Failed: fu
           }),
-          children: ["ready" === dt && (0, St.jsx)(vt.b, {
+          children: ["ready" === lu && (0, Pu.jsx)(du.e, {
             name: "circle-check"
-          }), Ht && (0, St.jsx)(vt.b, {
+          }), fu && (0, Pu.jsx)(du.e, {
             name: "triangle-exclamation"
-          }), "harnessBuild" === dt ? (0, Jt.e)() : mt(Rt(dt, et), {
-            packVersion: String(et.manifest.apiVersion),
-            version: String(ht.d)
+          }), "harnessBuild" === lu ? (0, eu.e)() : Xu(ku(lu, Eu), {
+            packVersion: String(Eu.manifest.apiVersion),
+            version: String(Ju.d)
           })]
-        }), jt && (0, St.jsx)(Wt.b, {
-          diagnostics: et.validation.errors,
-          more: et.validation.moreErrors,
-          t: mt
-        }), Xt.length > 0 && (0, St.jsxs)(St.Fragment, {
-          children: [(0, St.jsxs)("div", {
+        }), qu && (0, Pu.jsx)(au.d, {
+          diagnostics: Eu.validation.errors,
+          more: Eu.validation.moreErrors,
+          t: Xu
+        }), Cu.length > 0 && (0, Pu.jsxs)(Pu.Fragment, {
+          children: [(0, Pu.jsxs)("div", {
             className: "ShaderPackStatus OffInStrict",
-            children: [(0, St.jsx)(vt.b, {
+            children: [(0, Pu.jsx)(du.e, {
               name: "triangle-exclamation"
-            }), mt("shaderPack:offInStrict")]
-          }), (0, St.jsx)(Wt.b, {
-            diagnostics: Xt,
-            t: mt
+            }), Xu("shaderPack:offInStrict")]
+          }), (0, Pu.jsx)(au.d, {
+            diagnostics: Cu,
+            t: Xu
           })]
         })]
       })
     }
 
-    function Pt(tt) {
+    function vu(uu) {
       let {
-        setApplySettingsCallback: et
-      } = tt;
+        setApplySettingsCallback: Eu
+      } = uu;
       const {
-        t: Vt
-      } = (0, dt.H)(), [qt, mt] = (0, Ot.useState)(null), [Ht, Xt] = (0, Ot.useState)(null), [Jt, ut] = (0, Ot.useState)(null), [Kt] = (0, Ot.useState)(lt.g), [ht, vt] = (0, Ot.useState)(!0), [Wt, ct] = (0, Ot.useState)(!1), {
-        loading: Rt,
-        error: Pt,
-        setError: Lt,
-        onFiles: Ft
-      } = (0, bt.e)((async tt => {
-        const et = await (0, Qt.loadPageShaderPackCompiler)();
-        if (!et) return void Lt(Vt("shaderPack:compilerUnavailable"));
-        Xt(et);
-        const Ot = (0, Et.toStoredShaderPack)(tt, await (0, ft.f)(et, tt.files));
-        await (0, Et.saveShaderPack)(Ot, et) ? (mt(Ot), kt(qt, Ot, et)) : Lt(Vt("shaderPack:saveFailed"))
+        t: ju
+      } = (0, lu.A)(), [Uu, Xu] = (0, su.useState)(null), [fu, Cu] = (0, su.useState)(null), [eu, pu] = (0, su.useState)(null), [wu] = (0, su.useState)(cu.g), [Ju, du] = (0, su.useState)(!0), [au, ou] = (0, su.useState)(!1), {
+        loading: ku,
+        error: vu,
+        setError: Vu,
+        onFiles: ru
+      } = (0, Mu.g)((async uu => {
+        const Eu = await (0, bu.loadPageShaderPackCompiler)();
+        if (!Eu) return void Vu(ju("shaderPack:compilerUnavailable"));
+        Cu(Eu);
+        const su = (0, Nu.toStoredShaderPack)(uu, await (0, Ou.e)(Eu, uu.files));
+        await (0, Nu.saveShaderPack)(su, Eu) ? (Xu(su), Qu(Uu, su, Eu)) : Vu(ju("shaderPack:saveFailed"))
       }));
 
-      function kt(tt, Vt, Ot) {
-        (function(tt, et, Vt, Ot) {
-          return Vt || Ct(tt, Ot) || Ct(et, Ot)
-        })(tt, Vt, (0, Et.isShaderPackChangePending)(), Ot) && ((0, Et.markShaderPackChangePending)(), et((() => Nt.j)))
+      function Qu(uu, ju, su) {
+        (function(uu, Eu, ju, su) {
+          return ju || Gu(uu, su) || Gu(Eu, su)
+        })(uu, ju, (0, Nu.isShaderPackChangePending)(), su) && ((0, Nu.markShaderPackChangePending)(), Eu((() => Du.l)))
       }
-      return (0, Ot.useEffect)((() => {
-        let tt = !1;
+      return (0, su.useEffect)((() => {
+        let uu = !1;
         return async function() {
-          const et = (0, jt.hasUsableWebGpuAdapter)(),
-            Vt = await (0, wt.g)();
-          if (tt) return;
-          mt(Vt), ct(!0), vt(!1);
-          const Ot = null !== Vt ? (0, Qt.loadPageShaderPackCompiler)() : null,
-            qt = await et;
-          if (tt) return;
-          ut(qt);
-          const Dt = await Ot;
-          if (!tt && (Xt(Dt), null !== Vt && qt && null !== Dt && (0, Et.shaderPackNeedsCheck)(Vt, Dt))) {
-            const et = await (0, ft.b)(Vt, Dt);
-            tt || mt((tt => tt === Vt ? et : tt))
+          const Eu = (0, qu.hasUsableWebGpuAdapter)(),
+            ju = await (0, Yu.e)();
+          if (uu) return;
+          Xu(ju), ou(!0), du(!1);
+          const su = null !== ju ? (0, bu.loadPageShaderPackCompiler)() : null,
+            Uu = await Eu;
+          if (uu) return;
+          pu(Uu);
+          const Zu = await su;
+          if (!uu && (Cu(Zu), null !== ju && Uu && null !== Zu && (0, Nu.shaderPackNeedsCheck)(ju, Zu))) {
+            const Eu = await (0, Ou.d)(ju, Zu);
+            uu || Xu((uu => uu === ju ? Eu : uu))
           }
-        }().catch((et => {
-          console.error("Failed to load the stored shader pack", et), tt || Lt(Vt("shaderPack:unexpectedError"))
+        }().catch((Eu => {
+          console.error("Failed to load the stored shader pack", Eu), uu || Vu(ju("shaderPack:unexpectedError"))
         })).finally((() => {
-          tt || (vt(!1), ct(!1))
+          uu || (du(!1), ou(!1))
         })), () => {
-          tt = !0
+          uu = !0
         }
-      }), []), (0, St.jsxs)("div", {
+      }), []), (0, Pu.jsxs)("div", {
         className: "ShaderPackCategory SettingsMenuRightInner",
-        children: [(0, St.jsx)("div", {
+        children: [(0, Pu.jsx)("div", {
           className: "ShaderPackIntro",
-          children: Vt("shaderPack:intro")
-        }), (0, St.jsx)(Zt, {
-          to: yt.Z,
+          children: ju("shaderPack:intro")
+        }), (0, Pu.jsx)(Ku, {
+          to: hu.R,
           className: "ShaderPackBrowseLink",
-          children: (0, St.jsx)(Dt.m, {
+          children: (0, Pu.jsx)(Zu.p, {
             className: "ShaderPackBrowseButton",
-            children: Vt("shaderPackListing:browse")
+            children: ju("shaderPackListing:browse")
           })
-        }), !1 === Jt && (0, St.jsx)("div", {
+        }), !1 === eu && (0, Pu.jsx)("div", {
           className: "SettingsBoxWarning",
-          children: Vt(Kt ? "shaderPack:needsWebGpuDisabledUntilRestart" : "shaderPack:needsWebGpu")
-        }), null !== Pt && (0, St.jsxs)("div", {
+          children: ju(wu ? "shaderPack:needsWebGpuDisabledUntilRestart" : "shaderPack:needsWebGpu")
+        }), null !== vu && (0, Pu.jsxs)("div", {
           className: "ShaderPackCategoryError",
-          children: [Vt("general:error"), ": ", Pt]
-        }), qt && (0, St.jsxs)("div", {
+          children: [ju("general:error"), ": ", vu]
+        }), Uu && (0, Pu.jsxs)("div", {
           className: "SettingBox ShaderPackSummary",
-          children: [(0, St.jsxs)("div", {
+          children: [(0, Pu.jsxs)("div", {
             className: "ShaderPackSummaryHeader",
-            children: [(0, St.jsxs)("div", {
-              children: [(0, St.jsx)("div", {
+            children: [(0, Pu.jsxs)("div", {
+              children: [(0, Pu.jsx)("div", {
                 className: "ShaderPackName",
-                children: qt.manifest.name
-              }), qt.manifest.author && (0, St.jsx)("div", {
+                children: Uu.manifest.name
+              }), Uu.manifest.author && (0, Pu.jsx)("div", {
                 className: "ShaderPackAuthor",
-                children: (0, Mt.j)(Vt, "shaderPack:byAuthor", {
-                  author: qt.manifest.author
+                children: (0, gu.g)(ju, "shaderPack:byAuthor", {
+                  author: Uu.manifest.author
                 })
-              }), qt.manifest.description && (0, St.jsx)("div", {
+              }), Uu.manifest.description && (0, Pu.jsx)("div", {
                 className: "ShaderPackDescription",
-                children: qt.manifest.description
-              }), qt.listing && (0, St.jsx)("div", {
+                children: Uu.manifest.description
+              }), Uu.listing && (0, Pu.jsx)("div", {
                 className: "ShaderPackAuthor",
-                children: (0, St.jsx)(Zt, {
-                  to: (0, yt.cb)(qt.listing.packId),
+                children: (0, Pu.jsx)(Ku, {
+                  to: (0, hu.U)(Uu.listing.packId),
                   className: "ShaderPackListingLink",
-                  children: Vt("shaderPackListing:openPackPage")
+                  children: ju("shaderPackListing:openPackPage")
                 })
               })]
-            }), (0, St.jsx)(Dt.K, {
-              disabled: ht || Rt,
+            }), (0, Pu.jsx)(Zu.U, {
+              disabled: Ju || ku,
               onClick: async function() {
-                vt(!0), Lt(null), await (0, Et.removeShaderPack)(), mt(null), vt(!1), kt(qt, null, Ht)
+                du(!0), Vu(null), await (0, Nu.removeShaderPack)(), Xu(null), du(!1), Qu(Uu, null, fu)
               },
-              children: Vt("shaderPack:removePack")
+              children: ju("shaderPack:removePack")
             })]
-          }), (0, St.jsx)(It, {
-            stored: qt,
-            checking: Wt,
-            webGpuUsable: Jt,
-            changePending: (0, Et.isShaderPackChangePending)(),
-            compiler: Ht,
-            t: Vt
+          }), (0, Pu.jsx)(mu, {
+            stored: Uu,
+            checking: au,
+            webGpuUsable: eu,
+            changePending: (0, Nu.isShaderPackChangePending)(),
+            compiler: fu,
+            t: ju
           })]
-        }), (0, St.jsx)(bt.d, {
-          busy: ht || Rt || Wt,
-          disabled: ht || Rt || Wt || !0 !== Jt,
-          onFiles: Ft
+        }), (0, Pu.jsx)(Mu.c, {
+          busy: Ju || ku || au,
+          disabled: Ju || ku || au || !0 !== eu,
+          onFiles: ru
         })]
       })
     }
 
-    function Zt(tt) {
+    function Ku(uu) {
       let {
-        to: et,
-        className: Vt,
-        children: Ot
-      } = tt;
+        to: Eu,
+        className: ju,
+        children: su
+      } = uu;
       const {
-        gameState: Dt
-      } = (0, Ht.k)(["gameState"]), {
-        pathname: dt,
-        search: jt
-      } = (0, qt.s)(), Qt = "landingPage" !== Dt && "studio" !== Dt;
-      return (0, St.jsx)(mt.LinkPreserveSearch, {
-        to: et,
-        className: Vt,
-        target: Qt ? "_blank" : void 0,
+        gameState: Zu
+      } = (0, fu.l)(["gameState"]), {
+        pathname: lu,
+        search: qu
+      } = (0, Uu.r)(), bu = "landingPage" !== Zu && "studio" !== Zu;
+      return (0, Pu.jsx)(Xu.LinkPreserveSearch, {
+        to: Eu,
+        className: ju,
+        target: bu ? "_blank" : void 0,
         onClick: () => {
-          Qt || ((0, yt.L)(`${dt}${jt}`), (0, Xt.f)())
+          bu || ((0, hu.F)(`${lu}${qu}`), (0, Cu.h)())
         },
-        children: Ot
+        children: su
       })
     }
   },
-  6754: (tt, et, Vt) => {
-    Vt.d(et, {
-      B: () => ft,
-      E: () => Nt,
-      I: () => St,
-      L: () => Xt,
-      O: () => Rt,
-      Q: () => wt,
-      U: () => zt,
-      X: () => kt,
-      Z: () => mt,
-      _: () => Gt,
-      c: () => Mt,
-      cb: () => jt,
-      f: () => vt,
-      fb: () => dt,
-      g: () => yt,
-      ib: () => Lt,
-      k: () => lt,
-      lb: () => Ft,
-      n: () => Qt,
-      nb: () => bt,
-      qb: () => ct,
-      r: () => It,
-      s: () => Et,
-      v: () => Pt,
-      z: () => ot
+  6761: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      A: () => Du,
+      B: () => Pu,
+      F: () => Cu,
+      H: () => ku,
+      I: () => Yu,
+      M: () => Wu,
+      N: () => Qu,
+      R: () => Xu,
+      T: () => iu,
+      U: () => qu,
+      V: () => lu,
+      Y: () => Vu,
+      ab: () => ru,
+      d: () => gu,
+      eb: () => Mu,
+      gb: () => ou,
+      h: () => du,
+      k: () => hu,
+      l: () => cu,
+      o: () => bu,
+      r: () => mu,
+      s: () => Nu,
+      w: () => vu,
+      x: () => Su,
+      y: () => Ou
     });
-    var Ot = Vt(6756),
-      qt = Vt(184),
-      Dt = Vt(4691);
-    const mt = "/shader-packs",
-      dt = `${mt}/publish`;
+    var su = ju(6764),
+      Uu = ju(166),
+      Zu = ju(4740);
+    const Xu = "/shader-packs",
+      lu = `${Xu}/publish`;
 
-    function jt(tt) {
-      return `${mt}/${encodeURIComponent(tt)}`
+    function qu(uu) {
+      return `${Xu}/${encodeURIComponent(uu)}`
     }
-    let Ht = null;
+    let fu = null;
 
-    function Xt(tt) {
-      Ht = tt
-    }
-
-    function Qt() {
-      return Ht
+    function Cu(uu) {
+      fu = uu
     }
 
-    function lt() {
-      Ht = null
+    function bu() {
+      return fu
     }
 
-    function Et(tt) {
-      return tt.playerHasRank("developer") || tt.playerHasRank("admin")
+    function cu() {
+      fu = null
     }
-    const ft = ["terrain", "water", "models", "sunShadows", "strict"],
-      wt = {
+
+    function Nu(uu) {
+      return uu.playerHasRank("developer") || uu.playerHasRank("admin")
+    }
+    const Ou = ["terrain", "water", "models", "sunShadows", "strict"],
+      Yu = {
         terrain: "shaderPackListing:filterTerrain",
         water: "shaderPackListing:filterWater",
         models: "shaderPackListing:filterModels",
@@ -297,89 +297,89 @@ export const modules = {
         strict: "shaderPackListing:filterAllGames"
       };
 
-    function yt(tt, et) {
-      return tt.withFeatures.includes(et) ? "with" : tt.withoutFeatures.includes(et) ? "without" : null
+    function hu(uu, Eu) {
+      return uu.withFeatures.includes(Eu) ? "with" : uu.withoutFeatures.includes(Eu) ? "without" : null
     }
 
-    function Nt(tt) {
-      return null === tt ? "with" : "with" === tt ? "without" : null
+    function Du(uu) {
+      return null === uu ? "with" : "with" === uu ? "without" : null
     }
 
-    function Mt(tt) {
-      return "with" === tt ? "only" : null === tt ? "include" : void 0
+    function gu(uu) {
+      return "with" === uu ? "only" : null === uu ? "include" : void 0
     }
 
-    function bt(tt, et) {
-      const Vt = yt(tt, et),
-        Ot = tt => tt.filter((tt => tt !== et));
+    function Mu(uu, Eu) {
+      const ju = hu(uu, Eu),
+        su = uu => uu.filter((uu => uu !== Eu));
       return {
-        withFeatures: null === Vt ? [...tt.withFeatures, et] : Ot(tt.withFeatures),
-        withoutFeatures: "with" === Vt ? [...tt.withoutFeatures, et] : Ot(tt.withoutFeatures)
+        withFeatures: null === ju ? [...uu.withFeatures, Eu] : su(uu.withFeatures),
+        withoutFeatures: "with" === ju ? [...uu.withoutFeatures, Eu] : su(uu.withoutFeatures)
       }
     }
-    const Jt = "section",
-      Ct = "sort",
-      ut = "filters",
-      Kt = "q",
-      ht = "banned",
-      vt = "popular",
-      Wt = "strict";
+    const eu = "section",
+      Gu = "sort",
+      pu = "filters",
+      wu = "q",
+      Ju = "banned",
+      du = "popular",
+      au = "strict";
 
-    function St(tt) {
-      var et, Vt, qt;
-      const mt = tt.get(Jt),
-        dt = (null !== (et = tt.get(ut)) && void 0 !== et ? et : Wt).split(","),
-        jt = tt.get(ht);
+    function Pu(uu) {
+      var Eu, ju, Uu;
+      const Xu = uu.get(eu),
+        lu = (null !== (Eu = uu.get(pu)) && void 0 !== Eu ? Eu : au).split(","),
+        qu = uu.get(Ju);
       return {
-        section: "favourites" === mt || "mine" === mt ? mt : "explore",
-        sort: null !== (Vt = Ot.x.find((et => et === tt.get(Ct)))) && void 0 !== Vt ? Vt : vt,
-        withFeatures: ft.filter((tt => dt.includes(tt) && !dt.includes(`-${tt}`))),
-        withoutFeatures: ft.filter((tt => dt.includes(`-${tt}`))),
-        searchQuery: (null === (qt = tt.get(Kt)) || void 0 === qt ? void 0 : qt.slice(0, Ot.I)) || null,
-        pageNumber: (0, Dt.h)(tt.get(Dt.d)),
-        banned: "only" === jt ? "with" : "include" === jt ? null : "without"
+        section: "favourites" === Xu || "mine" === Xu ? Xu : "explore",
+        sort: null !== (ju = su.E.find((Eu => Eu === uu.get(Gu)))) && void 0 !== ju ? ju : du,
+        withFeatures: Ou.filter((uu => lu.includes(uu) && !lu.includes(`-${uu}`))),
+        withoutFeatures: Ou.filter((uu => lu.includes(`-${uu}`))),
+        searchQuery: (null === (Uu = uu.get(wu)) || void 0 === Uu ? void 0 : Uu.slice(0, su.R)) || null,
+        pageNumber: (0, Zu.c)(uu.get(Zu.b)),
+        banned: "only" === qu ? "with" : "include" === qu ? null : "without"
       }
     }
 
-    function ct(tt, et) {
-      var Vt;
-      const Ot = Zt(et);
-      (0, Dt.j)(tt, Jt, "explore" === et.section ? null : et.section), (0, Dt.j)(tt, Ct, et.sort === vt ? null : et.sort), (0, Dt.j)(tt, ut, Ot === Wt ? null : Ot), (0, Dt.j)(tt, Kt, et.searchQuery), (0, Dt.j)(tt, ht, null !== (Vt = Mt(et.banned)) && void 0 !== Vt ? Vt : null), (0, Dt.n)(tt, et.pageNumber)
+    function ou(uu, Eu) {
+      var ju;
+      const su = Ku(Eu);
+      (0, Zu.f)(uu, eu, "explore" === Eu.section ? null : Eu.section), (0, Zu.f)(uu, Gu, Eu.sort === du ? null : Eu.sort), (0, Zu.f)(uu, pu, su === au ? null : su), (0, Zu.f)(uu, wu, Eu.searchQuery), (0, Zu.f)(uu, Ju, null !== (ju = gu(Eu.banned)) && void 0 !== ju ? ju : null), (0, Zu.i)(uu, Eu.pageNumber)
     }
 
-    function Rt(tt) {
-      const et = new URLSearchParams;
-      return ct(et, {
+    function ku(uu) {
+      const Eu = new URLSearchParams;
+      return ou(Eu, {
         section: "explore",
-        sort: vt,
-        withFeatures: "strict" === tt ? [tt] : [tt, "strict"],
+        sort: du,
+        withFeatures: "strict" === uu ? [uu] : [uu, "strict"],
         withoutFeatures: [],
         searchQuery: null,
         pageNumber: 1,
         banned: "without"
-      }), `${mt}?${et.toString()}`
+      }), `${Xu}?${Eu.toString()}`
     }
 
-    function It(tt) {
-      return Zt(tt) === Wt
+    function mu(uu) {
+      return Ku(uu) === au
     }
 
-    function Pt(tt) {
-      return null !== tt.searchQuery || "with" === tt.banned || Zt(tt) !== Wt
+    function vu(uu) {
+      return null !== uu.searchQuery || "with" === uu.banned || Ku(uu) !== au
     }
 
-    function Zt(tt) {
-      return ft.flatMap((et => {
-        const Vt = yt(tt, et);
-        return "with" === Vt ? [et] : "without" === Vt ? [`-${et}`] : []
+    function Ku(uu) {
+      return Ou.flatMap((Eu => {
+        const ju = hu(uu, Eu);
+        return "with" === ju ? [Eu] : "without" === ju ? [`-${Eu}`] : []
       })).join(",")
     }
-    const Lt = {
+    const Vu = {
         popular: "shaderPackListing:sortPopular",
         updated: "shaderPackListing:sortUpdated",
         newest: "shaderPackListing:sortNewest"
       },
-      Ft = {
+      ru = {
         forest: "shaderPackListing:viewForest",
         desert: "shaderPackListing:viewDesert",
         water: "shaderPackListing:viewWater",
@@ -387,79 +387,79 @@ export const modules = {
         cave: "shaderPackListing:viewCave"
       };
 
-    function kt(tt) {
-      return Math.round(100 * Math.max(0, 1 - 1 / tt))
+    function Qu(uu) {
+      return Math.round(100 * Math.max(0, 1 - 1 / uu))
     }
 
-    function Gt(tt, et, Vt, qt) {
-      const Dt = [];
-      tt.isBanned && Dt.push({
+    function iu(uu, Eu, ju, Uu) {
+      const Zu = [];
+      uu.isBanned && Zu.push({
         tone: "warning",
-        text: qt("shaderPackListing:ownerBanned"),
+        text: Uu("shaderPackListing:ownerBanned"),
         detail: null
       });
       const {
-        pending: mt
-      } = tt;
-      if (null === tt.brokenError || mt && !mt.error || Dt.push({
+        pending: Xu
+      } = uu;
+      if (null === uu.brokenError || Xu && !Xu.error || Zu.push({
           tone: "warning",
-          text: qt("shaderPackListing:ownerBroken"),
-          detail: tt.brokenError
-        }), null !== mt && void 0 !== mt && mt.error) Dt.push({
+          text: Uu("shaderPackListing:ownerBroken"),
+          detail: uu.brokenError
+        }), null !== Xu && void 0 !== Xu && Xu.error) Zu.push({
         tone: "warning",
-        text: qt(et ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
-        detail: (0, Ot.q)(mt.error) ? null : mt.error
+        text: Uu(Eu ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
+        detail: (0, su.r)(Xu.error) ? null : Xu.error
       });
-      else if (mt) {
-        const tt = null === mt.renderNotBefore ? 0 : mt.renderNotBefore - Vt,
-          Ot = String(Math.ceil(tt / 6e4)),
-          dt = qt(et ? tt > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : tt > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
-            minutes: Ot
+      else if (Xu) {
+        const uu = null === Xu.renderNotBefore ? 0 : Xu.renderNotBefore - ju,
+          su = String(Math.ceil(uu / 6e4)),
+          lu = Uu(Eu ? uu > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : uu > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
+            minutes: su
           });
-        Dt.push({
+        Zu.push({
           tone: "info",
-          text: dt,
+          text: lu,
           detail: null
         })
       }
-      return tt.listed || Dt.push({
+      return uu.listed || Zu.push({
         tone: "info",
-        text: qt("shaderPackListing:ownerUnlisted"),
+        text: Uu("shaderPackListing:ownerUnlisted"),
         detail: null
-      }), Dt
+      }), Zu
     }
 
-    function zt(tt) {
-      return Math.max(1, Math.round(tt / 1024))
+    function Wu(uu) {
+      return Math.max(1, Math.round(uu / 1024))
     }
 
-    function ot(tt, et, Vt) {
-      return tt instanceof qt.e && tt.errorMessageForUser ? tt.errorMessageForUser : et(Vt)
+    function Su(uu, Eu, ju) {
+      return uu instanceof Uu.b && uu.errorMessageForUser ? uu.errorMessageForUser : Eu(ju)
     }
   },
-  6756: (tt, et, Vt) => {
-    Vt.d(et, {
-      B: () => dt,
-      E: () => mt,
-      G: () => Ot,
-      H: () => lt,
-      I: () => Xt,
-      K: () => Jt,
-      L: () => Qt,
-      P: () => Ht,
-      e: () => ft,
-      i: () => yt,
-      k: () => wt,
-      o: () => Et,
-      q: () => bt,
-      t: () => ut,
-      u: () => jt,
-      v: () => qt,
-      w: () => Ct,
-      x: () => Dt
+  6764: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      C: () => Gu,
+      E: () => Zu,
+      F: () => lu,
+      I: () => Xu,
+      M: () => su,
+      Q: () => cu,
+      R: () => Cu,
+      U: () => eu,
+      X: () => bu,
+      _: () => fu,
+      c: () => Ou,
+      f: () => hu,
+      j: () => Yu,
+      n: () => Nu,
+      r: () => Mu,
+      t: () => pu,
+      x: () => qu,
+      z: () => Uu
     });
-    const Ot = ["forest", "desert", "water", "night", "cave"];
-    const qt = {
+    const su = ["forest", "desert", "water", "night", "cave"];
+    const Uu = {
         full: {
           width: 3840,
           height: 2160
@@ -473,49 +473,49 @@ export const modules = {
           height: 360
         }
       },
-      Dt = ["popular", "updated", "newest"],
-      mt = 3,
-      dt = 32,
-      jt = 300;
+      Zu = ["popular", "updated", "newest"],
+      Xu = 3,
+      lu = 32,
+      qu = 300;
 
-    function Ht(tt, et) {
-      return tt.slice(0, et).replace(/[\uD800-\uDBFF]$/, "")
+    function fu(uu, Eu) {
+      return uu.slice(0, Eu).replace(/[\uD800-\uDBFF]$/, "")
     }
-    const Xt = 64,
-      Qt = 512,
-      lt = 18e5;
+    const Cu = 64,
+      bu = 512,
+      cu = 18e5;
 
-    function Et(tt) {
-      const et = tt,
-        Vt = null === et || void 0 === et ? void 0 : et.files;
-      return "number" === typeof(null === et || void 0 === et ? void 0 : et.apiVersion) && "string" === typeof et.name && (null === et.author || "string" === typeof et.author) && (void 0 === et.keepCircleShadows || "boolean" === typeof et.keepCircleShadows) && "object" === typeof Vt && null !== Vt && Object.values(Vt).every((tt => "string" === typeof tt))
+    function Nu(uu) {
+      const Eu = uu,
+        ju = null === Eu || void 0 === Eu ? void 0 : Eu.files;
+      return "number" === typeof(null === Eu || void 0 === Eu ? void 0 : Eu.apiVersion) && "string" === typeof Eu.name && (null === Eu.author || "string" === typeof Eu.author) && (void 0 === Eu.keepCircleShadows || "boolean" === typeof Eu.keepCircleShadows) && "object" === typeof ju && null !== ju && Object.values(ju).every((uu => "string" === typeof uu))
     }
-    const ft = "Bloxdhub",
-      wt = "https://bloxdhub.com/shaders";
+    const Ou = "Bloxdhub",
+      Yu = "https://bloxdhub.com/shaders";
 
-    function yt(tt) {
-      return `https://bloxdhub.com/workshop/${encodeURIComponent(tt)}`
+    function hu(uu) {
+      return `https://bloxdhub.com/workshop/${encodeURIComponent(uu)}`
     }
-    const Nt = "Screenshot generation failed.",
-      Mt = "Its screenshots couldn't be generated:";
+    const Du = "Screenshot generation failed.",
+      gu = "Its screenshots couldn't be generated:";
 
-    function bt(tt) {
-      var et;
-      return tt === Nt || null !== (et = null === tt || void 0 === tt ? void 0 : tt.startsWith(Mt)) && void 0 !== et && et
-    }
-
-    function Jt(tt, et) {
-      return `shaderPacks/${tt}/${et}.json`
+    function Mu(uu) {
+      var Eu;
+      return uu === Du || null !== (Eu = null === uu || void 0 === uu ? void 0 : uu.startsWith(gu)) && void 0 !== Eu && Eu
     }
 
-    function Ct(tt, et, Vt, Ot) {
-      return null === et.renderId ? ut(tt, et.baselineVersion, Vt, Ot) : `${tt}/${function(tt,et,Vt,Ot){return`shaderPacks/${tt}/${et}/${Vt}-${Ot}.webp`}(et.packId,et.renderId,Vt,Ot)}`
+    function eu(uu, Eu) {
+      return `shaderPacks/${uu}/${Eu}.json`
     }
 
-    function ut(tt, et, Vt, Ot) {
-      return `${tt}/${function(tt,et,Vt){return`shaderPacks/baseline/${tt}/${et}-${Vt}.webp`}(et,Vt,Ot)}`
+    function Gu(uu, Eu, ju, su) {
+      return null === Eu.renderId ? pu(uu, Eu.baselineVersion, ju, su) : `${uu}/${function(uu,Eu,ju,su){return`shaderPacks/${uu}/${Eu}/${ju}-${su}.webp`}(Eu.packId,Eu.renderId,ju,su)}`
+    }
+
+    function pu(uu, Eu, ju, su) {
+      return `${uu}/${function(uu,Eu,ju){return`shaderPacks/baseline/${uu}/${Eu}-${ju}.webp`}(Eu,ju,su)}`
     }
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

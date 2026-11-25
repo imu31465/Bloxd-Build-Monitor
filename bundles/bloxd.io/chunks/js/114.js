@@ -1,530 +1,530 @@
 export const id = 114;
 export const ids = [114];
 export const modules = {
-  5228: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => Xt,
-      g: () => Ht
+  5216: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => Cu,
+      h: () => fu
     });
-    var Ot = Vt(63),
-      qt = Vt(1556),
-      Dt = Vt(1286),
-      mt = Vt(106),
-      dt = Vt(3207),
-      jt = Vt(1188);
+    var su = ju(58),
+      Uu = ju(1506),
+      Zu = ju(1244),
+      Xu = ju(91),
+      lu = ju(3318),
+      qu = ju(1154);
 
-    function Ht() {
-      return !(0, mt.isMobile)()
+    function fu() {
+      return !(0, Xu.isMobile)()
     }
 
-    function Xt(tt) {
+    function Cu(uu) {
       let {
-        disabled: et,
-        openFolderPicker: Vt,
-        onFiles: mt
-      } = tt;
+        disabled: Eu,
+        openFolderPicker: ju,
+        onFiles: Xu
+      } = uu;
       const {
-        t: Xt
-      } = (0, Dt.H)(), Qt = (0, Ot.useRef)(null);
-      return (0, jt.jsxs)("div", {
+        t: Cu
+      } = (0, Zu.A)(), bu = (0, su.useRef)(null);
+      return (0, qu.jsxs)("div", {
         className: "PackPickButtons",
         "data-pad-mouse-only": !0,
-        children: [(0, jt.jsx)("input", {
-          ref: Qt,
+        children: [(0, qu.jsx)("input", {
+          ref: bu,
           type: "file",
           accept: ".zip,application/zip",
           hidden: !0,
-          onChange: function(tt) {
-            const et = Array.from(tt.target.files);
-            tt.target.value = "", mt(et)
+          onChange: function(uu) {
+            const Eu = Array.from(uu.target.files);
+            uu.target.value = "", Xu(Eu)
           }
-        }), Ht() && (0, jt.jsx)(qt.f, {
-          disabled: et,
-          onClick: Vt,
-          children: Xt("general:chooseFolder")
-        }), (0, jt.jsx)(qt.f, {
-          disabled: et,
+        }), fu() && (0, qu.jsx)(Uu.f, {
+          disabled: Eu,
+          onClick: ju,
+          children: Cu("general:chooseFolder")
+        }), (0, qu.jsx)(Uu.f, {
+          disabled: Eu,
           onClick: () => {
-            (0, dt.f)(Qt.current)
+            (0, lu.e)(bu.current)
           },
-          children: Xt("general:chooseZip")
+          children: Cu("general:chooseZip")
         })]
       })
     }
   },
-  5208: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => dt,
-      f: () => mt,
-      j: () => Dt
+  5197: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => lu,
+      f: () => Xu,
+      g: () => Zu
     });
-    var Ot = Vt(5216);
-    const qt = [tt => tt.strict ? "strict" : "nonStrict", tt => tt.program];
+    var su = ju(5206);
+    const Uu = [uu => uu.strict ? "strict" : "nonStrict", uu => uu.program];
 
-    function Dt(tt, et) {
-      let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const Ot = {};
-      for (const qt in Vt) Ot[qt] = `\0${qt}\0`;
-      return tt(et, Ot).replace(/\0(\w+)\0/g, ((tt, et) => Vt[et]))
+    function Zu(uu, Eu) {
+      let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const su = {};
+      for (const Uu in ju) su[Uu] = `\0${Uu}\0`;
+      return uu(Eu, su).replace(/\0(\w+)\0/g, ((uu, Eu) => ju[Eu]))
     }
 
-    function mt(tt) {
-      return null === tt.file ? null : tt.line > 0 ? `${tt.file}:${tt.line}` : tt.file
+    function Xu(uu) {
+      return null === uu.file ? null : uu.line > 0 ? `${uu.file}:${uu.line}` : uu.file
     }
 
-    function dt(tt) {
-      const et = new Map(tt.map((tt => [jt(tt).join("."), tt])));
-      if (0 === et.size) return [];
-      const Vt = Xt([...et.values()]);
-      return 0 === Vt[0].length ? [] : Vt
+    function lu(uu) {
+      const Eu = new Map(uu.map((uu => [qu(uu).join("."), uu])));
+      if (0 === Eu.size) return [];
+      const ju = Cu([...Eu.values()]);
+      return 0 === ju[0].length ? [] : ju
     }
 
-    function jt(tt) {
-      return qt.map((et => et(tt)))
+    function qu(uu) {
+      return Uu.map((Eu => Eu(uu)))
     }
-    const Ht = qt.map((tt => new Set(Ot.g.map(tt)).size));
+    const fu = Uu.map((uu => new Set(su.h.map(uu)).size));
 
-    function Xt(tt) {
-      const et = qt.map((et => new Set(tt.map(et)))),
-        Vt = et.reduce(((tt, et) => tt * et.size), 1),
-        Ot = et.every(((tt, et) => 1 === tt.size || tt.size === Ht[et]));
-      if (Vt === tt.length && Ot) return [qt.filter(((tt, Vt) => 1 === et[Vt].size)).map((et => et(tt[0])))];
-      let Dt = null;
-      for (let mt = 0; mt < qt.length; mt++) {
-        if (1 === et[mt].size) continue;
-        const Vt = Qt(tt, qt[mt]).flatMap(Xt);
-        (null === Dt || Vt.length < Dt.length) && (Dt = Vt)
+    function Cu(uu) {
+      const Eu = Uu.map((Eu => new Set(uu.map(Eu)))),
+        ju = Eu.reduce(((uu, Eu) => uu * Eu.size), 1),
+        su = Eu.every(((uu, Eu) => 1 === uu.size || uu.size === fu[Eu]));
+      if (ju === uu.length && su) return [Uu.filter(((uu, ju) => 1 === Eu[ju].size)).map((Eu => Eu(uu[0])))];
+      let Zu = null;
+      for (let Xu = 0; Xu < Uu.length; Xu++) {
+        if (1 === Eu[Xu].size) continue;
+        const ju = bu(uu, Uu[Xu]).flatMap(Cu);
+        (null === Zu || ju.length < Zu.length) && (Zu = ju)
       }
-      return Dt
+      return Zu
     }
 
-    function Qt(tt, et) {
-      const Vt = new Map;
-      for (const qt of tt) {
-        var Ot;
-        const tt = et(qt);
-        Vt.set(tt, [...null !== (Ot = Vt.get(tt)) && void 0 !== Ot ? Ot : [], qt])
+    function bu(uu, Eu) {
+      const ju = new Map;
+      for (const Uu of uu) {
+        var su;
+        const uu = Eu(Uu);
+        ju.set(uu, [...null !== (su = ju.get(uu)) && void 0 !== su ? su : [], Uu])
       }
-      return [...Vt.values()]
+      return [...ju.values()]
     }
   },
-  6797: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      ShaderPackPublishForm: () => bt
+  6796: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      ShaderPackPublishForm: () => Mu
     });
-    var Ot = Vt(63),
-      qt = Vt(6756),
-      Dt = Vt(233),
-      mt = Vt(5223),
-      dt = Vt(1152),
-      jt = Vt(1556),
-      Ht = Vt(1770),
-      Xt = Vt(1218),
-      Qt = Vt(6801),
-      lt = Vt(6810),
-      Et = Vt(1600),
-      ft = Vt(1286),
-      wt = Vt(6816),
-      yt = Vt(6857),
-      Nt = Vt(6754),
-      Mt = Vt(1188);
+    var su = ju(58),
+      Uu = ju(6764),
+      Zu = ju(204),
+      Xu = ju(5209),
+      lu = ju(1116),
+      qu = ju(1506),
+      fu = ju(1723),
+      Cu = ju(1178),
+      bu = ju(6800),
+      cu = ju(6806),
+      Nu = ju(1559),
+      Ou = ju(1244),
+      Yu = ju(6810),
+      hu = ju(6849),
+      Du = ju(6761),
+      gu = ju(1154);
 
-    function bt(tt) {
-      var et, Vt, Qt;
+    function Mu(uu) {
+      var Eu, ju, bu;
       let {
-        existing: bt,
-        onPublished: Ct
-      } = tt;
+        existing: Mu,
+        onPublished: Gu
+      } = uu;
       const {
-        t: Kt
-      } = (0, ft.H)(), {
-        userContext: ht,
-        isUserContextUpdating: vt
-      } = (0, Xt.d)(), [Wt, St] = (0, Ot.useState)(null), [ct, Rt] = (0, Ot.useState)(0), [It, Pt] = (0, Ot.useState)(null !== (et = null === bt || void 0 === bt ? void 0 : bt.name) && void 0 !== et ? et : ""), Zt = (0, Ot.useRef)(It), Lt = (0, Ot.useRef)(""), Ft = tt => {
-        Zt.current = tt, Pt(tt)
-      }, [kt, Gt] = (0, Ot.useState)(null !== (Vt = null === bt || void 0 === bt ? void 0 : bt.description) && void 0 !== Vt ? Vt : ""), zt = (0, Ot.useRef)(kt), ot = (0, Ot.useRef)(""), rt = tt => {
-        zt.current = tt, Gt(tt)
-      }, [Ut, At] = (0, Ot.useState)(!1), {
-        loading: it,
-        error: Yt,
-        setError: Bt,
-        onFiles: pt
-      } = (0, lt.e)((async tt => {
-        const et = await (0, wt.loadPageShaderPackCompiler)();
-        if (!et) return void Bt(Kt("shaderPack:compilerUnavailable"));
-        const Vt = await (0, yt.f)(et, tt.files);
-        if (St({
-            pack: tt,
-            validation: Vt,
-            sourceBytes: (0, mt.E)(tt.files)
-          }), !bt) {
-          var Ot;
-          if ("" !== Zt.current.trim() && Zt.current !== Lt.current || (Lt.current = (0, qt.P)(tt.manifest.name.trim(), qt.B), Ft(Lt.current)), "" === zt.current.trim() || zt.current === ot.current) ot.current = (0, qt.P)((null !== (Ot = tt.manifest.description) && void 0 !== Ot ? Ot : "").trim(), qt.u), rt(ot.current);
-          Rt((tt => tt + 1))
+        t: wu
+      } = (0, Ou.A)(), {
+        userContext: Ju,
+        isUserContextUpdating: du
+      } = (0, Cu.c)(), [au, Pu] = (0, su.useState)(null), [ou, ku] = (0, su.useState)(0), [mu, vu] = (0, su.useState)(null !== (Eu = null === Mu || void 0 === Mu ? void 0 : Mu.name) && void 0 !== Eu ? Eu : ""), Ku = (0, su.useRef)(mu), Vu = (0, su.useRef)(""), ru = uu => {
+        Ku.current = uu, vu(uu)
+      }, [Qu, iu] = (0, su.useState)(null !== (ju = null === Mu || void 0 === Mu ? void 0 : Mu.description) && void 0 !== ju ? ju : ""), Wu = (0, su.useRef)(Qu), Su = (0, su.useRef)(""), Iu = uu => {
+        Wu.current = uu, iu(uu)
+      }, [Fu, Bu] = (0, su.useState)(!1), {
+        loading: Lu,
+        error: tu,
+        setError: xu,
+        onFiles: Tu
+      } = (0, cu.g)((async uu => {
+        const Eu = await (0, Yu.loadPageShaderPackCompiler)();
+        if (!Eu) return void xu(wu("shaderPack:compilerUnavailable"));
+        const ju = await (0, hu.e)(Eu, uu.files);
+        if (Pu({
+            pack: uu,
+            validation: ju,
+            sourceBytes: (0, Xu.A)(uu.files)
+          }), !Mu) {
+          var su;
+          if ("" !== Ku.current.trim() && Ku.current !== Vu.current || (Vu.current = (0, Uu._)(uu.manifest.name.trim(), Uu.F), ru(Vu.current)), "" === Wu.current.trim() || Wu.current === Su.current) Su.current = (0, Uu._)((null !== (su = uu.manifest.description) && void 0 !== su ? su : "").trim(), Uu.x), Iu(Su.current);
+          ku((uu => uu + 1))
         }
-      })), xt = !vt && !ht.isLoggedIn() && !Dt.b.offlineMode, Tt = It.trim(), gt = Tt.length < qt.E, st = null !== Wt && !1 !== (null === (Qt = Wt.validation) || void 0 === Qt ? void 0 : Qt.ok) && !it && !gt && !xt && !vt;
-      return (0, Mt.jsxs)("div", {
+      })), Hu = !du && !Ju.isLoggedIn() && !Zu.d.offlineMode, Au = mu.trim(), nu = Au.length < Uu.I, yu = null !== au && !1 !== (null === (bu = au.validation) || void 0 === bu ? void 0 : bu.ok) && !Lu && !nu && !Hu && !du;
+      return (0, gu.jsxs)("div", {
         className: "ShaderPackPublishForm",
-        children: [(0, Mt.jsx)("p", {
+        children: [(0, gu.jsx)("p", {
           className: "ShaderPackPublishIntro",
-          children: bt ? Kt("shaderPackListing:uploadIntro", {
-            minutes: String(qt.H / 6e4)
-          }) : Kt("shaderPackListing:publishIntro")
-        }), (0, Mt.jsx)(ut, {}), xt && (0, Mt.jsx)("div", {
+          children: Mu ? wu("shaderPackListing:uploadIntro", {
+            minutes: String(Uu.Q / 6e4)
+          }) : wu("shaderPackListing:publishIntro")
+        }), (0, gu.jsx)(pu, {}), Hu && (0, gu.jsx)("div", {
           className: "ShaderPackPublishNote Warning",
-          children: Kt("shaderPackListing:publishNeedsLogin")
-        }), (0, Mt.jsx)(lt.d, {
-          busy: it,
-          disabled: it || Ut,
-          onFiles: tt => {
-            St(null), pt(tt)
+          children: wu("shaderPackListing:publishNeedsLogin")
+        }), (0, gu.jsx)(cu.c, {
+          busy: Lu,
+          disabled: Lu || Fu,
+          onFiles: uu => {
+            Pu(null), Tu(uu)
           }
-        }), Wt && (0, Mt.jsxs)("div", {
+        }), au && (0, gu.jsxs)("div", {
           className: "ShaderPackPublishSummary",
-          children: [(0, Mt.jsx)("div", {
+          children: [(0, gu.jsx)("div", {
             className: "ShaderPackPublishPackName",
-            children: Wt.pack.manifest.name
-          }), (0, Mt.jsxs)("div", {
+            children: au.pack.manifest.name
+          }), (0, gu.jsxs)("div", {
             className: "ShaderPackPublishPackSize",
-            children: [Kt("shaderPackListing:sizeValue", {
-              kilobytes: String((0, Nt.U)(Wt.sourceBytes))
-            }), " \xb7", " ", Kt("shaderPackListing:filesValue", {
-              files: String(Wt.pack.files.length)
+            children: [wu("shaderPackListing:sizeValue", {
+              kilobytes: String((0, Du.M)(au.sourceBytes))
+            }), " \xb7", " ", wu("shaderPackListing:filesValue", {
+              files: String(au.pack.files.length)
             })]
-          }), (0, Mt.jsx)(Jt, {
-            picked: Wt
+          }), (0, gu.jsx)(eu, {
+            picked: au
           })]
-        }), !bt && (0, Mt.jsxs)(Mt.Fragment, {
-          children: [(0, Mt.jsxs)("label", {
+        }), !Mu && (0, gu.jsxs)(gu.Fragment, {
+          children: [(0, gu.jsxs)("label", {
             className: "ShaderPackPublishField",
-            children: [(0, Mt.jsx)("span", {
-              children: Kt("general:name")
-            }), (0, Mt.jsx)(Ht.d, {
+            children: [(0, gu.jsx)("span", {
+              children: wu("general:name")
+            }), (0, gu.jsx)(fu.d, {
               className: "ShaderPackPublishInput",
-              defaultValue: It,
-              maxLength: qt.B,
-              onValueChange: Ft
-            }, ct), Wt && gt && (0, Mt.jsx)("span", {
+              defaultValue: mu,
+              maxLength: Uu.F,
+              onValueChange: ru
+            }, ou), au && nu && (0, gu.jsx)("span", {
               className: "ShaderPackPublishHint",
-              children: Kt("shaderPackListing:nameTooShort", {
-                min: String(qt.E)
+              children: wu("shaderPackListing:nameTooShort", {
+                min: String(Uu.I)
               })
             })]
-          }), (0, Mt.jsxs)("label", {
+          }), (0, gu.jsxs)("label", {
             className: "ShaderPackPublishField",
-            children: [(0, Mt.jsx)("span", {
-              children: Kt("general:description")
-            }), (0, Mt.jsx)(Ht.d, {
+            children: [(0, gu.jsx)("span", {
+              children: wu("general:description")
+            }), (0, gu.jsx)(fu.d, {
               className: "ShaderPackPublishInput ShaderPackPublishDescription",
-              defaultValue: kt,
-              maxLength: qt.u,
-              onValueChange: rt,
+              defaultValue: Qu,
+              maxLength: Uu.x,
+              onValueChange: Iu,
               useTextarea: !0
-            }, ct)]
+            }, ou)]
           })]
-        }), Yt && (0, Mt.jsx)("div", {
+        }), tu && (0, gu.jsx)("div", {
           className: "ShaderPackPublishNote Error",
-          children: Yt
-        }), (0, Mt.jsxs)(jt.m, {
+          children: tu
+        }), (0, gu.jsxs)(qu.p, {
           className: "ShaderPackPublishButton",
-          disabled: !st,
-          loading: Ut,
+          disabled: !yu,
+          loading: Fu,
           onClick: () => {
             !async function() {
-              var tt;
-              if (!Wt) return;
+              var uu;
+              if (!au) return;
               const {
-                name: et,
-                description: Vt
-              } = null !== bt && void 0 !== bt ? bt : {
-                name: Tt,
-                description: kt.trim()
-              }, Ot = {
-                packId: null !== (tt = null === bt || void 0 === bt ? void 0 : bt.packId) && void 0 !== tt ? tt : null,
-                name: et,
-                description: Vt,
-                apiVersion: Wt.pack.manifest.apiVersion,
-                files: (0, mt.C)(Wt.pack.files),
-                keepCircleShadows: !0 === Wt.pack.manifest.keepCircleShadows
+                name: Eu,
+                description: ju
+              } = null !== Mu && void 0 !== Mu ? Mu : {
+                name: Au,
+                description: Qu.trim()
+              }, su = {
+                packId: null !== (uu = null === Mu || void 0 === Mu ? void 0 : Mu.packId) && void 0 !== uu ? uu : null,
+                name: Eu,
+                description: ju,
+                apiVersion: au.pack.manifest.apiVersion,
+                files: (0, Xu.w)(au.pack.files),
+                keepCircleShadows: !0 === au.pack.manifest.keepCircleShadows
               };
-              if ((new TextEncoder).encode(JSON.stringify(Ot)).byteLength > 1024 * qt.L) Bt(Kt("shaderPackListing:publishTooBig", {
-                kilobytes: String(qt.L)
+              if ((new TextEncoder).encode(JSON.stringify(su)).byteLength > 1024 * Uu.X) xu(wu("shaderPackListing:publishTooBig", {
+                kilobytes: String(Uu.X)
               }));
               else {
-                At(!0), Bt(null);
+                Bu(!0), xu(null);
                 try {
-                  Ct(await Et.e.publishShaderPack(ht, Ot))
-                } catch (Dt) {
-                  console.error("Failed to publish the shader pack", Dt), Bt((0, Nt.z)(Dt, Kt, "shaderPackListing:publishFailed"))
+                  Gu(await Nu.b.publishShaderPack(Ju, su))
+                } catch (Zu) {
+                  console.error("Failed to publish the shader pack", Zu), xu((0, Du.x)(Zu, wu, "shaderPackListing:publishFailed"))
                 } finally {
-                  At(!1)
+                  Bu(!1)
                 }
               }
             }()
           },
-          children: [(0, Mt.jsx)(dt.b, {
+          children: [(0, gu.jsx)(lu.e, {
             name: "upload"
-          }), " ", Kt(bt ? "shaderPackListing:uploadButton" : "shaderPackListing:publishButton")]
+          }), " ", wu(Mu ? "shaderPackListing:uploadButton" : "shaderPackListing:publishButton")]
         })]
       })
     }
 
-    function Jt(tt) {
+    function eu(uu) {
       let {
-        picked: et
-      } = tt;
+        picked: Eu
+      } = uu;
       const {
-        t: Vt
-      } = (0, ft.H)(), {
-        validation: Ot
-      } = et;
-      return null === Ot ? (0, Mt.jsx)("div", {
+        t: ju
+      } = (0, Ou.A)(), {
+        validation: su
+      } = Eu;
+      return null === su ? (0, gu.jsx)("div", {
         className: "ShaderPackPublishNote",
-        children: Vt("shaderPackListing:publishUnchecked")
-      }) : Ot.ok ? (0, Mt.jsxs)(Mt.Fragment, {
-        children: [(0, Mt.jsxs)("div", {
+        children: ju("shaderPackListing:publishUnchecked")
+      }) : su.ok ? (0, gu.jsxs)(gu.Fragment, {
+        children: [(0, gu.jsxs)("div", {
           className: "ShaderPackPublishNote Ready",
-          children: [(0, Mt.jsx)(dt.b, {
+          children: [(0, gu.jsx)(lu.e, {
             name: "circle-check"
-          }), " ", Vt("shaderPackListing:publishReady")]
-        }), Ot.offInStrict.length > 0 && (0, Mt.jsxs)(Mt.Fragment, {
-          children: [(0, Mt.jsxs)("div", {
+          }), " ", ju("shaderPackListing:publishReady")]
+        }), su.offInStrict.length > 0 && (0, gu.jsxs)(gu.Fragment, {
+          children: [(0, gu.jsxs)("div", {
             className: "ShaderPackPublishNote Warning",
-            children: [(0, Mt.jsx)(dt.b, {
+            children: [(0, gu.jsx)(lu.e, {
               name: "triangle-exclamation"
-            }), " ", Vt("shaderPack:offInStrict")]
-          }), (0, Mt.jsx)(Qt.b, {
-            diagnostics: Ot.offInStrict,
-            t: Vt
+            }), " ", ju("shaderPack:offInStrict")]
+          }), (0, gu.jsx)(bu.d, {
+            diagnostics: su.offInStrict,
+            t: ju
           })]
         })]
-      }) : (0, Mt.jsxs)(Mt.Fragment, {
-        children: [(0, Mt.jsxs)("div", {
+      }) : (0, gu.jsxs)(gu.Fragment, {
+        children: [(0, gu.jsxs)("div", {
           className: "ShaderPackPublishNote Error",
-          children: [(0, Mt.jsx)(dt.b, {
+          children: [(0, gu.jsx)(lu.e, {
             name: "triangle-exclamation"
-          }), " ", Vt("shaderPackListing:publishHasErrors")]
-        }), (0, Mt.jsx)(Qt.b, {
-          diagnostics: Ot.errors,
-          more: Ot.moreErrors,
-          t: Vt
+          }), " ", ju("shaderPackListing:publishHasErrors")]
+        }), (0, gu.jsx)(bu.d, {
+          diagnostics: su.errors,
+          more: su.moreErrors,
+          t: ju
         })]
       })
     }
-    const Ct = "\0";
+    const Gu = "\0";
 
-    function ut() {
+    function pu() {
       const {
-        t: tt
-      } = (0, ft.H)(), [et, Vt] = tt("shaderPackListing:bloxdhubHelp", {
-        site: Ct
-      }).split(Ct);
-      return (0, Mt.jsxs)("p", {
+        t: uu
+      } = (0, Ou.A)(), [Eu, ju] = uu("shaderPackListing:bloxdhubHelp", {
+        site: Gu
+      }).split(Gu);
+      return (0, gu.jsxs)("p", {
         className: "ShaderPackPublishIntro",
-        children: [et, (0, Mt.jsx)("a", {
+        children: [Eu, (0, gu.jsx)("a", {
           className: "ShaderPackPublishLink",
-          href: qt.k,
+          href: Uu.j,
           target: "_blank",
           rel: "noopener noreferrer",
-          children: qt.e
-        }), Vt]
+          children: Uu.c
+        }), ju]
       })
     }
   },
-  5216: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => Ot.k,
-      g: () => qt,
-      h: () => Ot.s
+  5206: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => su.h,
+      h: () => Uu,
+      k: () => su.o
     });
-    var Ot = Vt(5223);
-    const qt = [!1, !0].flatMap((tt => ["terrain", "liquid", "model"].map((et => ({
-      strict: tt,
-      program: et
+    var su = ju(5209);
+    const Uu = [!1, !0].flatMap((uu => ["terrain", "liquid", "model"].map((Eu => ({
+      strict: uu,
+      program: Eu
     })))))
   },
-  5223: (tt, et, Vt) => {
-    Vt.d(et, {
-      C: () => Xt,
-      E: () => lt,
-      e: () => dt,
-      h: () => mt,
-      k: () => Ot,
-      m: () => wt,
-      p: () => Qt,
-      s: () => qt,
-      u: () => Dt,
-      y: () => Ht
+  5209: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      A: () => cu,
+      c: () => lu,
+      e: () => Xu,
+      h: () => su,
+      j: () => Yu,
+      k: () => bu,
+      o: () => Uu,
+      p: () => Zu,
+      s: () => fu,
+      w: () => Cu
     });
-    const Ot = 5;
+    const su = 5;
 
-    function qt(tt) {
-      return tt === Ot
+    function Uu(uu) {
+      return uu === su
     }
 
-    function Dt(tt) {
-      return [...tt.features]
+    function Zu(uu) {
+      return [...uu.features]
     }
-    const mt = 262144,
-      dt = 256,
-      jt = 256;
+    const Xu = 262144,
+      lu = 256,
+      qu = 256;
 
-    function Ht(tt) {
-      if ("object" !== typeof tt || null === tt || Array.isArray(tt)) return "The pack has no files.";
-      const et = [];
-      for (const [Vt, Ot] of Object.entries(tt)) {
-        if ("string" !== typeof Ot) return `${Vt} isn't text.`;
-        et.push({
-          path: Vt,
-          source: Ot
+    function fu(uu) {
+      if ("object" !== typeof uu || null === uu || Array.isArray(uu)) return "The pack has no files.";
+      const Eu = [];
+      for (const [ju, su] of Object.entries(uu)) {
+        if ("string" !== typeof su) return `${ju} isn't text.`;
+        Eu.push({
+          path: ju,
+          source: su
         })
       }
-      return et.sort(((tt, et) => Qt(tt.path, et.path))),
-        function(tt) {
-          if (0 === tt.length) return "The pack has no .wgsl files.";
-          if (tt.length > dt) return `The pack has more than ${dt} .wgsl files.`;
-          const et = new Set;
+      return Eu.sort(((uu, Eu) => bu(uu.path, Eu.path))),
+        function(uu) {
+          if (0 === uu.length) return "The pack has no .wgsl files.";
+          if (uu.length > lu) return `The pack has more than ${lu} .wgsl files.`;
+          const Eu = new Set;
           for (const {
-              path: Vt
+              path: ju
             }
-            of tt) {
-            const tt = Et(Vt);
-            if (null !== tt) return tt;
-            if (et.has(Vt)) return `The pack has two files at ${Vt}.`;
-            et.add(Vt)
+            of uu) {
+            const uu = Nu(ju);
+            if (null !== uu) return uu;
+            if (Eu.has(ju)) return `The pack has two files at ${ju}.`;
+            Eu.add(ju)
           }
-          return lt(tt) > mt ? `The pack's .wgsl files are over ${mt/1024} KB in total.` : null
-        }(et) ?? et
+          return cu(uu) > Xu ? `The pack's .wgsl files are over ${Xu/1024} KB in total.` : null
+        }(Eu) ?? Eu
     }
 
-    function Xt(tt) {
-      const et = {};
-      for (const Vt of tt) et[Vt.path] = Vt.source;
-      return et
+    function Cu(uu) {
+      const Eu = {};
+      for (const ju of uu) Eu[ju.path] = ju.source;
+      return Eu
     }
 
-    function Qt(tt, et) {
-      return tt < et ? -1 : tt > et ? 1 : 0
+    function bu(uu, Eu) {
+      return uu < Eu ? -1 : uu > Eu ? 1 : 0
     }
 
-    function lt(tt) {
-      const et = new TextEncoder;
-      let Vt = 0;
+    function cu(uu) {
+      const Eu = new TextEncoder;
+      let ju = 0;
       for (const {
-          source: Ot
+          source: su
         }
-        of tt) Vt += et.encode(Ot).byteLength;
-      return Vt
+        of uu) ju += Eu.encode(su).byteLength;
+      return ju
     }
 
-    function Et(tt) {
-      if (!tt.toLowerCase().endsWith(".wgsl")) return `${tt} isn't a .wgsl file.`;
-      if (tt.length > jt) return `A file path is over ${jt} characters.`;
-      if (tt.includes("\\") || /[\u0000-\u001f]/.test(tt)) return `${tt} isn't a valid file path.`;
-      return tt.split("/").some((tt => "" === tt || "." === tt || ".." === tt)) ? `${tt} isn't a valid file path.` : null
+    function Nu(uu) {
+      if (!uu.toLowerCase().endsWith(".wgsl")) return `${uu} isn't a .wgsl file.`;
+      if (uu.length > qu) return `A file path is over ${qu} characters.`;
+      if (uu.includes("\\") || /[\u0000-\u001f]/.test(uu)) return `${uu} isn't a valid file path.`;
+      return uu.split("/").some((uu => "" === uu || "." === uu || ".." === uu)) ? `${uu} isn't a valid file path.` : null
     }
-    const ft = /^(.*)\[rot\[([1-4])$/;
+    const Ou = /^(.*)\[rot\[([1-4])$/;
 
-    function wt(tt, et) {
-      let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const Ot = new Map;
-      et.forEach(((tt, et) => {
+    function Yu(uu, Eu) {
+      let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const su = new Map;
+      Eu.forEach(((uu, Eu) => {
         let {
-          numAnimStates: Vt,
-          animStartIdx: qt
-        } = tt;
-        for (let Dt = 1; Dt < Vt; Dt++) Ot.set(qt + Dt - 1, et)
+          numAnimStates: ju,
+          animStartIdx: Uu
+        } = uu;
+        for (let Zu = 1; Zu < ju; Zu++) su.set(Uu + Zu - 1, Eu)
       }));
-      const qt = Object.entries(tt),
-        Dt = new Map;
-      for (const [wt, yt] of qt) {
-        const tt = ft.exec(wt);
-        "1" === tt?.[2] && Dt.set(tt[1], yt + 1)
+      const Uu = Object.entries(uu),
+        Zu = new Map;
+      for (const [Yu, hu] of Uu) {
+        const uu = Ou.exec(Yu);
+        "1" === uu?.[2] && Zu.set(uu[1], hu + 1)
       }
-      const mt = tt => {
-          const et = ft.exec(tt);
-          return et && Dt.has(et[1]) ? {
-            root: et[1],
-            rotation: Number(et[2]) - 1
+      const Xu = uu => {
+          const Eu = Ou.exec(uu);
+          return Eu && Zu.has(Eu[1]) ? {
+            root: Eu[1],
+            rotation: Number(Eu[2]) - 1
           } : null
         },
-        dt = new Set(qt.map((tt => {
-          let [et] = tt;
-          return mt(et)?.root ?? et
+        lu = new Set(Uu.map((uu => {
+          let [Eu] = uu;
+          return Xu(Eu)?.root ?? Eu
         }))),
-        jt = (tt, Vt) => {
-          const Ot = tt.replace(/_?0$/, "");
-          return (et[Vt]?.numAnimStates ?? 0) > 1 && !dt.has(Ot) ? Ot : tt
+        qu = (uu, ju) => {
+          const su = uu.replace(/_?0$/, "");
+          return (Eu[ju]?.numAnimStates ?? 0) > 1 && !lu.has(su) ? su : uu
         },
-        Ht = new Map;
-      for (const [ft, wt] of qt) Ht.set(wt, jt(mt(ft)?.root ?? ft, wt));
-      const Xt = qt.reduce(((tt, et) => {
-          let [, Vt] = et;
-          return Math.max(tt, Vt + 1)
+        fu = new Map;
+      for (const [Ou, Yu] of Uu) fu.set(Yu, qu(Xu(Ou)?.root ?? Ou, Yu));
+      const Cu = Uu.reduce(((uu, Eu) => {
+          let [, ju] = Eu;
+          return Math.max(uu, ju + 1)
         }), 0),
-        Qt = Array.from({
-          length: Xt
-        }, ((tt, et) => ({
-          id: et + 1,
+        bu = Array.from({
+          length: Cu
+        }, ((uu, Eu) => ({
+          id: Eu + 1,
           rotation: 0
         }))),
-        lt = new Map,
-        Et = new Map;
-      for (const [ft, wt] of qt) {
-        const tt = mt(ft),
-          et = Ot.get(wt);
-        if (void 0 !== et) {
-          const Vt = Ht.get(et);
-          Et.set(ft, {
-            name: ft,
-            texture: Vt,
+        cu = new Map,
+        Nu = new Map;
+      for (const [Ou, Yu] of Uu) {
+        const uu = Xu(Ou),
+          Eu = su.get(Yu);
+        if (void 0 !== Eu) {
+          const ju = fu.get(Eu);
+          Nu.set(Ou, {
+            name: Ou,
+            texture: ju,
             kind: "frame"
-          }), tt && !Et.has(tt.root) && Et.set(tt.root, {
-            name: tt.root,
-            texture: Vt,
+          }), uu && !Nu.has(uu.root) && Nu.set(uu.root, {
+            name: uu.root,
+            texture: ju,
             kind: "frame"
           });
           continue
         }
-        const Vt = Ht.get(wt),
-          qt = tt?.root ?? ft;
-        if (Vt !== qt && Et.set(qt, {
-            name: qt,
-            texture: Vt,
+        const ju = fu.get(Yu),
+          Uu = uu?.root ?? Ou;
+        if (ju !== Uu && Nu.set(Uu, {
+            name: Uu,
+            texture: ju,
             kind: "frame"
-          }), tt) {
-          const et = Dt.get(tt.root);
-          Qt[wt] = {
-            id: et,
-            rotation: tt.rotation
-          }, lt.set(Vt, et), Et.set(ft, {
-            name: ft,
-            texture: Vt,
+          }), uu) {
+          const Eu = Zu.get(uu.root);
+          bu[Yu] = {
+            id: Eu,
+            rotation: uu.rotation
+          }, cu.set(ju, Eu), Nu.set(Ou, {
+            name: Ou,
+            texture: ju,
             kind: "rotation"
           })
-        } else lt.set(Vt, wt + 1)
+        } else cu.set(ju, Yu + 1)
       }
-      for (const ft of lt.keys()) Et.delete(ft);
-      for (const [ft, wt] of Vt) {
-        const tt = lt.get(wt);
-        void 0 === tt || lt.has(ft) || (lt.set(ft, tt), Et.delete(ft))
+      for (const Ou of cu.keys()) Nu.delete(Ou);
+      for (const [Ou, Yu] of ju) {
+        const uu = cu.get(Yu);
+        void 0 === uu || cu.has(Ou) || (cu.set(Ou, uu), Nu.delete(Ou))
       }
       return {
-        named: [...lt].sort(((tt, et) => {
-          let [Vt] = tt, [Ot] = et;
-          return Vt < Ot ? -1 : Vt > Ot ? 1 : 0
-        })).map((tt => {
-          let [et, Vt] = tt;
+        named: [...cu].sort(((uu, Eu) => {
+          let [ju] = uu, [su] = Eu;
+          return ju < su ? -1 : ju > su ? 1 : 0
+        })).map((uu => {
+          let [Eu, ju] = uu;
           return {
-            name: et,
-            id: Vt
+            name: Eu,
+            id: ju
           }
         })),
-        aliases: [...Et.values()],
-        layers: Qt
+        aliases: [...Nu.values()],
+        layers: bu
       }
     }
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

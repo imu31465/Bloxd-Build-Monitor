@@ -1,139 +1,139 @@
 export const id = 31;
 export const ids = [31];
 export const modules = {
-  6909: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      BaseExtension: () => eV,
-      BaseInstrumentation: () => VV,
-      BaseTransport: () => sq,
-      CSPInstrumentation: () => hq,
-      ConsoleInstrumentation: () => PV,
-      ConsoleTransport: () => OD,
-      EVENT_CLICK: () => be,
-      EVENT_NAVIGATION: () => Je,
-      EVENT_ROUTE_CHANGE: () => We,
-      EVENT_SESSION_EXTEND: () => he,
-      EVENT_SESSION_RESUME: () => Ke,
-      EVENT_SESSION_START: () => ue,
-      EVENT_VIEW_CHANGED: () => Ce,
-      ErrorsInstrumentation: () => LV,
-      FetchTransport: () => JD,
-      InternalLoggerLevel: () => Ye,
-      LogLevel: () => bV,
-      MAX_SESSION_PERSISTENCE_TIME: () => jt,
-      NavigationInstrumentation: () => rq,
-      Observable: () => MV,
-      PerformanceInstrumentation: () => pO,
-      PersistentSessionsManager: () => Ge,
-      SESSION_EXPIRATION_TIME: () => Dt,
-      SESSION_INACTIVITY_TIME: () => mt,
-      STORAGE_KEY: () => qt,
-      SessionInstrumentation: () => qV,
-      TransportItemType: () => nq,
-      UserActionInstrumentation: () => Kq,
-      UserActionState: () => wq,
-      VERSION: () => OV,
-      ViewInstrumentation: () => kV,
-      VolatileSessionsManager: () => ze,
-      WebVitalsInstrumentation: () => ZO,
-      allLogLevels: () => CV,
-      browserMeta: () => pq,
-      buildStackFrame: () => DV,
-      captureMetas: () => kD,
-      createInternalLogger: () => vD,
-      createPromiseBuffer: () => ED,
-      createSession: () => Tq,
-      deepEqual: () => Me,
-      defaultEventDomain: () => Ot,
-      defaultExceptionType: () => vV,
-      defaultGlobalObjectKey: () => WD,
-      defaultInternalLoggerLevel: () => pe,
-      defaultLogLevel: () => JV,
-      faro: () => wt,
-      genShortID: () => ae,
-      getCurrentTimestamp: () => we,
-      getDataFromSafariExtensions: () => EV,
-      getIgnoreUrls: () => xt,
-      getInternalFaroFromGlobalObject: () => lt,
-      getStackFramesFromError: () => wV,
-      getTransportBody: () => VD,
-      getUrlFromResource: () => gt,
-      getWebInstrumentations: () => Uq,
-      globalObject: () => Xt,
-      initializeFaro: () => sD,
-      internalGlobalObjectKey: () => Qt,
-      isArray: () => Rt,
-      isBoolean: () => vt,
-      isDomError: () => ot,
-      isDomException: () => rt,
-      isElement: () => At,
-      isElementDefined: () => Ut,
-      sE: () => pt,
-      isError: () => Gt,
-      isErrorDefined: () => kt,
-      isErrorEvent: () => zt,
-      isEvent: () => Ft,
-      isEventDefined: () => Lt,
-      isFunction: () => ct,
-      isInstanceOf: () => bt,
-      isInt: () => ht,
-      isInternalFaroOnGlobalObject: () => ft,
-      isMap: () => Yt,
-      isMapDefined: () => it,
-      isNull: () => Ct,
-      isNumber: () => Kt,
-      isObject: () => St,
-      isPrimitive: () => Zt,
-      isRegExp: () => It,
-      isString: () => ut,
-      isSymbol: () => Wt,
-      isSyntheticEvent: () => Bt,
-      isThenable: () => Pt,
-      isToString: () => Mt,
-      isTypeof: () => Nt,
-      isUndefined: () => Jt,
-      makeCoreConfig: () => RD,
-      noop: () => ie,
-      osMeta: () => xq,
-      parseStacktrace: () => yV,
-      sdkMeta: () => gq,
-      setInternalFaroOnGlobalObject: () => Et,
-      transportItemTypeToBodyKey: () => tD,
-      unknownString: () => FV,
-      userActionDataAttribute: () => xO,
-      userActionTimeoutDataAttribute: () => TO
+  6899: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      BaseExtension: () => uj,
+      BaseInstrumentation: () => Ej,
+      BaseTransport: () => RU,
+      CSPInstrumentation: () => aU,
+      ConsoleInstrumentation: () => vj,
+      ConsoleTransport: () => UZ,
+      EVENT_CLICK: () => ME,
+      EVENT_NAVIGATION: () => eE,
+      EVENT_ROUTE_CHANGE: () => aE,
+      EVENT_SESSION_EXTEND: () => JE,
+      EVENT_SESSION_RESUME: () => wE,
+      EVENT_SESSION_START: () => pE,
+      EVENT_VIEW_CHANGED: () => GE,
+      ErrorsInstrumentation: () => Vj,
+      FetchTransport: () => pZ,
+      InternalLoggerLevel: () => tE,
+      LogLevel: () => Mj,
+      MAX_SESSION_PERSISTENCE_TIME: () => qu,
+      NavigationInstrumentation: () => BU,
+      Observable: () => gj,
+      PerformanceInstrumentation: () => As,
+      PersistentSessionsManager: () => iE,
+      SESSION_EXPIRATION_TIME: () => Zu,
+      SESSION_INACTIVITY_TIME: () => Xu,
+      STORAGE_KEY: () => Uu,
+      SessionInstrumentation: () => sj,
+      TransportItemType: () => uZ,
+      UserActionInstrumentation: () => dU,
+      UserActionState: () => hU,
+      VERSION: () => jj,
+      ViewInstrumentation: () => Qj,
+      VolatileSessionsManager: () => WE,
+      WebVitalsInstrumentation: () => rs,
+      allLogLevels: () => Gj,
+      browserMeta: () => AU,
+      buildStackFrame: () => Uj,
+      captureMetas: () => WZ,
+      createInternalLogger: () => PZ,
+      createPromiseBuffer: () => OZ,
+      createSession: () => yU,
+      deepEqual: () => gE,
+      defaultEventDomain: () => su,
+      defaultExceptionType: () => dj,
+      defaultGlobalObjectKey: () => oZ,
+      defaultInternalLoggerLevel: () => TE,
+      defaultLogLevel: () => ej,
+      faro: () => Yu,
+      genShortID: () => DE,
+      getCurrentTimestamp: () => OE,
+      getDataFromSafariExtensions: () => cj,
+      getIgnoreUrls: () => Hu,
+      getInternalFaroFromGlobalObject: () => cu,
+      getStackFramesFromError: () => Oj,
+      getTransportBody: () => sZ,
+      getUrlFromResource: () => nu,
+      getWebInstrumentations: () => LU,
+      globalObject: () => Cu,
+      initializeFaro: () => RZ,
+      internalGlobalObjectKey: () => bu,
+      isArray: () => ku,
+      isBoolean: () => du,
+      isDomError: () => Su,
+      isDomException: () => Iu,
+      isElement: () => Bu,
+      isElementDefined: () => Fu,
+      EO: () => Tu,
+      isError: () => iu,
+      isErrorDefined: () => Qu,
+      isErrorEvent: () => Wu,
+      isEvent: () => ru,
+      isEventDefined: () => Vu,
+      isFunction: () => ou,
+      isInstanceOf: () => Mu,
+      isInt: () => Ju,
+      isInternalFaroOnGlobalObject: () => Ou,
+      isMap: () => tu,
+      isMapDefined: () => Lu,
+      isNull: () => Gu,
+      isNumber: () => wu,
+      isObject: () => Pu,
+      isPrimitive: () => Ku,
+      isRegExp: () => mu,
+      isString: () => pu,
+      isSymbol: () => au,
+      isSyntheticEvent: () => xu,
+      isThenable: () => vu,
+      isToString: () => gu,
+      isTypeof: () => Du,
+      isUndefined: () => eu,
+      makeCoreConfig: () => vZ,
+      noop: () => LE,
+      osMeta: () => nU,
+      parseStacktrace: () => Yj,
+      sdkMeta: () => zU,
+      setInternalFaroOnGlobalObject: () => Nu,
+      transportItemTypeToBodyKey: () => EZ,
+      unknownString: () => rj,
+      userActionDataAttribute: () => ns,
+      userActionTimeoutDataAttribute: () => ys
     });
-    const Ot = "browser",
-      qt = "com.grafana.faro.session",
-      Dt = 144e5,
-      mt = 9e5,
-      dt = 1e3,
-      jt = mt,
-      Ht = {
+    const su = "browser",
+      Uu = "com.grafana.faro.session",
+      Zu = 144e5,
+      Xu = 9e5,
+      lu = 1e3,
+      qu = Xu,
+      fu = {
         enabled: !0,
         persistent: !1,
-        maxSessionPersistenceTime: jt
+        maxSessionPersistenceTime: qu
       };
-    const Xt = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof Vt.g ? Vt.g : "undefined" !== typeof self ? self : void 0;
-    const Qt = "_faroInternal";
+    const Cu = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof ju.g ? ju.g : "undefined" !== typeof self ? self : void 0;
+    const bu = "_faroInternal";
 
-    function lt() {
-      return Xt[Qt]
+    function cu() {
+      return Cu[bu]
     }
 
-    function Et(tt) {
-      tt.config.isolate ? tt.internalLogger.debug("Skipping registering internal Faro instance on global object") : (tt.internalLogger.debug("Registering internal Faro instance on global object"), Object.defineProperty(Xt, Qt, {
+    function Nu(uu) {
+      uu.config.isolate ? uu.internalLogger.debug("Skipping registering internal Faro instance on global object") : (uu.internalLogger.debug("Registering internal Faro instance on global object"), Object.defineProperty(Cu, bu, {
         configurable: !1,
         enumerable: !1,
         writable: !1,
-        value: tt
+        value: uu
       }))
     }
 
-    function ft() {
-      return Qt in Xt
+    function Ou() {
+      return bu in Cu
     }
-    let wt = {
+    let Yu = {
       api: {
         pushLog: () => {},
         pushError: () => {},
@@ -160,592 +160,592 @@ export const modules = {
       }
     };
 
-    function yt(tt, et, Vt, Ot, qt, Dt, mt) {
-      return et.debug("Initializing Faro"), wt = {
-          api: Dt,
-          config: Vt,
-          instrumentations: mt,
-          internalLogger: et,
-          metas: Ot,
-          pause: qt.pause,
-          transports: qt,
-          unpatchedConsole: tt,
-          unpause: qt.unpause
-        }, Et(wt),
-        function(tt) {
-          if (tt.config.preventGlobalExposure) tt.internalLogger.debug("Skipping registering public Faro instance in the global scope");
+    function hu(uu, Eu, ju, su, Uu, Zu, Xu) {
+      return Eu.debug("Initializing Faro"), Yu = {
+          api: Zu,
+          config: ju,
+          instrumentations: Xu,
+          internalLogger: Eu,
+          metas: su,
+          pause: Uu.pause,
+          transports: Uu,
+          unpatchedConsole: uu,
+          unpause: Uu.unpause
+        }, Nu(Yu),
+        function(uu) {
+          if (uu.config.preventGlobalExposure) uu.internalLogger.debug("Skipping registering public Faro instance in the global scope");
           else {
-            if (tt.internalLogger.debug(`Registering public faro reference in the global scope using "${tt.config.globalObjectKey}" key`), tt.config.globalObjectKey in Xt) return void tt.internalLogger.warn(`Skipping global registration due to key "${tt.config.globalObjectKey}" being used already. Please set "globalObjectKey" to something else or set "preventGlobalExposure" to "true"`);
-            Object.defineProperty(Xt, tt.config.globalObjectKey, {
+            if (uu.internalLogger.debug(`Registering public faro reference in the global scope using "${uu.config.globalObjectKey}" key`), uu.config.globalObjectKey in Cu) return void uu.internalLogger.warn(`Skipping global registration due to key "${uu.config.globalObjectKey}" being used already. Please set "globalObjectKey" to something else or set "preventGlobalExposure" to "true"`);
+            Object.defineProperty(Cu, uu.config.globalObjectKey, {
               configurable: !1,
               writable: !1,
-              value: tt
+              value: uu
             })
           }
-        }(wt), wt
+        }(Yu), Yu
     }
 
-    function Nt(tt, et) {
-      return typeof tt === et
+    function Du(uu, Eu) {
+      return typeof uu === Eu
     }
 
-    function Mt(tt, et) {
-      return Object.prototype.toString.call(tt) === `[object ${et}]`
+    function gu(uu, Eu) {
+      return Object.prototype.toString.call(uu) === `[object ${Eu}]`
     }
 
-    function bt(tt, et) {
+    function Mu(uu, Eu) {
       try {
-        return tt instanceof et
-      } catch (Vt) {
+        return uu instanceof Eu
+      } catch (ju) {
         return !1
       }
     }
-    const Jt = tt => Nt(tt, "undefined"),
-      Ct = tt => Nt(tt, "null"),
-      ut = tt => Nt(tt, "string"),
-      Kt = tt => Nt(tt, "number") && !isNaN(tt) || Nt(tt, "bigint"),
-      ht = tt => Kt(tt) && Number.isInteger(tt),
-      vt = tt => Nt(tt, "boolean"),
-      Wt = tt => Nt(tt, "symbol"),
-      St = tt => !Ct(tt) && Nt(tt, "object"),
-      ct = tt => Nt(tt, "function"),
-      Rt = tt => Mt(tt, "Array"),
-      It = tt => Mt(tt, "RegExp"),
-      Pt = tt => ct(null === tt || void 0 === tt ? void 0 : tt.then),
-      Zt = tt => !St(tt) && !ct(tt),
-      Lt = "undefined" !== typeof Event,
-      Ft = tt => Lt && bt(tt, Event),
-      kt = "undefined" !== typeof Error,
-      Gt = tt => kt && bt(tt, Error),
-      zt = tt => Mt(tt, "ErrorEvent"),
-      ot = tt => Mt(tt, "DOMError"),
-      rt = tt => Mt(tt, "DOMException"),
-      Ut = "undefined" !== typeof Element,
-      At = tt => Ut && bt(tt, Element),
-      it = "undefined" !== typeof Map,
-      Yt = tt => it && bt(tt, Map),
-      Bt = tt => St(tt) && "nativeEvent" in tt && "preventDefault" in tt && "stopPropagation" in tt;
+    const eu = uu => Du(uu, "undefined"),
+      Gu = uu => Du(uu, "null"),
+      pu = uu => Du(uu, "string"),
+      wu = uu => Du(uu, "number") && !isNaN(uu) || Du(uu, "bigint"),
+      Ju = uu => wu(uu) && Number.isInteger(uu),
+      du = uu => Du(uu, "boolean"),
+      au = uu => Du(uu, "symbol"),
+      Pu = uu => !Gu(uu) && Du(uu, "object"),
+      ou = uu => Du(uu, "function"),
+      ku = uu => gu(uu, "Array"),
+      mu = uu => gu(uu, "RegExp"),
+      vu = uu => ou(null === uu || void 0 === uu ? void 0 : uu.then),
+      Ku = uu => !Pu(uu) && !ou(uu),
+      Vu = "undefined" !== typeof Event,
+      ru = uu => Vu && Mu(uu, Event),
+      Qu = "undefined" !== typeof Error,
+      iu = uu => Qu && Mu(uu, Error),
+      Wu = uu => gu(uu, "ErrorEvent"),
+      Su = uu => gu(uu, "DOMError"),
+      Iu = uu => gu(uu, "DOMException"),
+      Fu = "undefined" !== typeof Element,
+      Bu = uu => Fu && Mu(uu, Element),
+      Lu = "undefined" !== typeof Map,
+      tu = uu => Lu && Mu(uu, Map),
+      xu = uu => Pu(uu) && "nativeEvent" in uu && "preventDefault" in uu && "stopPropagation" in uu;
 
-    function pt(tt) {
-      return null == tt || (Rt(tt) || ut(tt) ? 0 === tt.length : !!St(tt) && 0 === Object.keys(tt).length)
+    function Tu(uu) {
+      return null == uu || (ku(uu) || pu(uu) ? 0 === uu.length : !!Pu(uu) && 0 === Object.keys(uu).length)
     }
 
-    function xt() {
-      return wt.transports.transports.flatMap((tt => tt.getIgnoreUrls()))
+    function Hu() {
+      return Yu.transports.transports.flatMap((uu => uu.getIgnoreUrls()))
     }
 
-    function Tt() {
-      let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-      return xt().some((et => tt && null != tt.match(et)))
+    function Au() {
+      let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+      return Hu().some((Eu => uu && null != uu.match(Eu)))
     }
 
-    function gt(tt) {
-      return ut(tt) ? tt : tt instanceof URL ? tt.href : !pt(tt) && ct(null === tt || void 0 === tt ? void 0 : tt.toString) ? tt.toString() : void 0
+    function nu(uu) {
+      return pu(uu) ? uu : uu instanceof URL ? uu.href : !Tu(uu) && ou(null === uu || void 0 === uu ? void 0 : uu.toString) ? uu.toString() : void 0
     }
-    const st = "sessionStorage",
-      nt = "localStorage";
+    const yu = "sessionStorage",
+      zu = "localStorage";
 
-    function te(tt) {
+    function Ru(uu) {
       try {
-        let et;
-        et = window[tt];
-        const Vt = "__faro_storage_test__";
-        return et.setItem(Vt, Vt), et.removeItem(Vt), !0
-      } catch (Vt) {
-        var et;
-        return null === (et = wt.internalLogger) || void 0 === et || et.info(`Web storage of type ${tt} is not available. Reason: ${Vt}`), !1
+        let Eu;
+        Eu = window[uu];
+        const ju = "__faro_storage_test__";
+        return Eu.setItem(ju, ju), Eu.removeItem(ju), !0
+      } catch (ju) {
+        var Eu;
+        return null === (Eu = Yu.internalLogger) || void 0 === Eu || Eu.info(`Web storage of type ${uu} is not available. Reason: ${ju}`), !1
       }
     }
 
-    function ee(tt, et) {
-      return me(et) ? window[et].getItem(tt) : null
+    function uE(uu, Eu) {
+      return ZE(Eu) ? window[Eu].getItem(uu) : null
     }
 
-    function Ve(tt, et, Vt) {
-      if (me(Vt)) try {
-        window[Vt].setItem(tt, et)
-      } catch (Ot) {}
+    function EE(uu, Eu, ju) {
+      if (ZE(ju)) try {
+        window[ju].setItem(uu, Eu)
+      } catch (su) {}
     }
 
-    function Oe(tt, et) {
-      me(et) && window[et].removeItem(tt)
+    function jE(uu, Eu) {
+      ZE(Eu) && window[Eu].removeItem(uu)
     }
-    const qe = te(nt),
-      De = te(st);
+    const sE = Ru(zu),
+      UE = Ru(yu);
 
-    function me(tt) {
-      return tt === nt ? qe : tt === st && De
-    }
-
-    function de(tt) {
-      return de = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(tt) {
-        return typeof tt
-      } : function(tt) {
-        return tt && "function" == typeof Symbol && tt.constructor === Symbol && tt !== Symbol.prototype ? "symbol" : typeof tt
-      }, de(tt)
+    function ZE(uu) {
+      return uu === zu ? sE : uu === yu && UE
     }
 
-    function je(tt) {
-      var et = function(tt, et) {
-        if ("object" != de(tt) || !tt) return tt;
-        var Vt = tt[Symbol.toPrimitive];
-        if (void 0 !== Vt) {
-          var Ot = Vt.call(tt, et || "default");
-          if ("object" != de(Ot)) return Ot;
+    function XE(uu) {
+      return XE = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(uu) {
+        return typeof uu
+      } : function(uu) {
+        return uu && "function" == typeof Symbol && uu.constructor === Symbol && uu !== Symbol.prototype ? "symbol" : typeof uu
+      }, XE(uu)
+    }
+
+    function lE(uu) {
+      var Eu = function(uu, Eu) {
+        if ("object" != XE(uu) || !uu) return uu;
+        var ju = uu[Symbol.toPrimitive];
+        if (void 0 !== ju) {
+          var su = ju.call(uu, Eu || "default");
+          if ("object" != XE(su)) return su;
           throw new TypeError("@@toPrimitive must return a primitive value.")
         }
-        return ("string" === et ? String : Number)(tt)
-      }(tt, "string");
-      return "symbol" == de(et) ? et : et + ""
+        return ("string" === Eu ? String : Number)(uu)
+      }(uu, "string");
+      return "symbol" == XE(Eu) ? Eu : Eu + ""
     }
 
-    function He(tt, et, Vt) {
-      return (et = je(et)) in tt ? Object.defineProperty(tt, et, {
-        value: Vt,
+    function qE(uu, Eu, ju) {
+      return (Eu = lE(Eu)) in uu ? Object.defineProperty(uu, Eu, {
+        value: ju,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : tt[et] = Vt, tt
+      }) : uu[Eu] = ju, uu
     }
 
-    function Xe(tt, et) {
-      var Vt = Object.keys(tt);
+    function fE(uu, Eu) {
+      var ju = Object.keys(uu);
       if (Object.getOwnPropertySymbols) {
-        var Ot = Object.getOwnPropertySymbols(tt);
-        et && (Ot = Ot.filter((function(et) {
-          return Object.getOwnPropertyDescriptor(tt, et).enumerable
-        }))), Vt.push.apply(Vt, Ot)
+        var su = Object.getOwnPropertySymbols(uu);
+        Eu && (su = su.filter((function(Eu) {
+          return Object.getOwnPropertyDescriptor(uu, Eu).enumerable
+        }))), ju.push.apply(ju, su)
       }
-      return Vt
+      return ju
     }
 
-    function Qe(tt) {
-      for (var et = 1; et < arguments.length; et++) {
-        var Vt = null != arguments[et] ? arguments[et] : {};
-        et % 2 ? Xe(Object(Vt), !0).forEach((function(et) {
-          He(tt, et, Vt[et])
-        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(tt, Object.getOwnPropertyDescriptors(Vt)) : Xe(Object(Vt)).forEach((function(et) {
-          Object.defineProperty(tt, et, Object.getOwnPropertyDescriptor(Vt, et))
+    function CE(uu) {
+      for (var Eu = 1; Eu < arguments.length; Eu++) {
+        var ju = null != arguments[Eu] ? arguments[Eu] : {};
+        Eu % 2 ? fE(Object(ju), !0).forEach((function(Eu) {
+          qE(uu, Eu, ju[Eu])
+        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(uu, Object.getOwnPropertyDescriptors(ju)) : fE(Object(ju)).forEach((function(Eu) {
+          Object.defineProperty(uu, Eu, Object.getOwnPropertyDescriptor(ju, Eu))
         }))
       }
-      return tt
+      return uu
     }
 
-    function le() {
-      let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : wt;
-      var et, Vt, Ot;
-      const qt = tt.config.sessionTracking,
-        Dt = null !== (et = null !== (Vt = null === qt || void 0 === qt || null === (Ot = qt.sampler) || void 0 === Ot ? void 0 : Ot.call(qt, {
-          metas: tt.metas.value
-        })) && void 0 !== Vt ? Vt : null === qt || void 0 === qt ? void 0 : qt.samplingRate) && void 0 !== et ? et : 1,
-        mt = "number" === typeof Dt ? function(tt) {
-          return Math.min(1, Math.max(0, tt))
-        }(Dt) : 0;
-      if (!(mt > 0)) return !1;
-      if (1 === mt) return !0;
+    function bE() {
+      let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Yu;
+      var Eu, ju, su;
+      const Uu = uu.config.sessionTracking,
+        Zu = null !== (Eu = null !== (ju = null === Uu || void 0 === Uu || null === (su = Uu.sampler) || void 0 === su ? void 0 : su.call(Uu, {
+          metas: uu.metas.value
+        })) && void 0 !== ju ? ju : null === Uu || void 0 === Uu ? void 0 : Uu.samplingRate) && void 0 !== Eu ? Eu : 1,
+        Xu = "number" === typeof Zu ? function(uu) {
+          return Math.min(1, Math.max(0, uu))
+        }(Zu) : 0;
+      if (!(Xu > 0)) return !1;
+      if (1 === Xu) return !0;
       try {
-        const tt = "undefined" !== typeof window ? window.crypto : void 0;
-        if ("function" === typeof(null === tt || void 0 === tt ? void 0 : tt.getRandomValues)) {
-          const et = new Uint32Array(1);
-          return tt.getRandomValues(et), et[0] / Math.pow(2, 32) < mt
+        const uu = "undefined" !== typeof window ? window.crypto : void 0;
+        if ("function" === typeof(null === uu || void 0 === uu ? void 0 : uu.getRandomValues)) {
+          const Eu = new Uint32Array(1);
+          return uu.getRandomValues(Eu), Eu[0] / Math.pow(2, 32) < Xu
         }
-      } catch (dt) {}
-      return Math.random() < mt
+      } catch (lu) {}
+      return Math.random() < Xu
     }
 
-    function Ee() {
+    function cE() {
       return Date.now()
     }
 
-    function fe() {
+    function NE() {
       return "undefined" !== typeof performance && "function" === typeof performance.now ? performance.now() : Date.now()
     }
 
-    function we() {
+    function OE() {
       return (new Date).toISOString()
     }
 
-    function ye(tt) {
-      return new Date(tt).toISOString()
+    function YE(uu) {
+      return new Date(uu).toISOString()
     }
-    const Ne = "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ0123456789";
+    const hE = "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ0123456789";
 
-    function ae() {
-      let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
-      const et = new Uint32Array(tt),
-        Vt = "undefined" !== typeof globalThis ? globalThis.crypto : void 0;
-      if (null === Vt || void 0 === Vt ? void 0 : Vt.getRandomValues) Vt.getRandomValues(et);
+    function DE() {
+      let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
+      const Eu = new Uint32Array(uu),
+        ju = "undefined" !== typeof globalThis ? globalThis.crypto : void 0;
+      if (null === ju || void 0 === ju ? void 0 : ju.getRandomValues) ju.getRandomValues(Eu);
       else
-        for (let qt = 0; qt < tt; qt++) et[qt] = Math.floor(4294967296 * Math.random());
-      let Ot = "";
-      for (let qt = 0; qt < tt; qt++) Ot += Ne[et[qt] % 59];
-      return Ot
+        for (let Uu = 0; Uu < uu; Uu++) Eu[Uu] = Math.floor(4294967296 * Math.random());
+      let su = "";
+      for (let Uu = 0; Uu < uu; Uu++) su += hE[Eu[Uu] % 59];
+      return su
     }
 
-    function Me(tt, et) {
-      if (tt === et) return !0;
-      if (Nt(tt, "number") && isNaN(tt)) return Nt(et, "number") && isNaN(et);
-      const Vt = Rt(tt),
-        Ot = Rt(et);
-      if (Vt !== Ot) return !1;
-      if (Vt && Ot) {
-        const Vt = tt.length;
-        if (Vt !== et.length) return !1;
-        for (let Ot = Vt; 0 !== Ot--;)
-          if (!Me(tt[Ot], et[Ot])) return !1;
+    function gE(uu, Eu) {
+      if (uu === Eu) return !0;
+      if (Du(uu, "number") && isNaN(uu)) return Du(Eu, "number") && isNaN(Eu);
+      const ju = ku(uu),
+        su = ku(Eu);
+      if (ju !== su) return !1;
+      if (ju && su) {
+        const ju = uu.length;
+        if (ju !== Eu.length) return !1;
+        for (let su = ju; 0 !== su--;)
+          if (!gE(uu[su], Eu[su])) return !1;
         return !0
       }
-      const qt = St(tt),
-        Dt = St(et);
-      if (qt !== Dt) return !1;
-      if (tt && et && qt && Dt) {
-        const Vt = Object.keys(tt),
-          Ot = Object.keys(et);
-        if (Vt.length !== Ot.length) return !1;
-        for (let tt of Vt)
-          if (!Ot.includes(tt)) return !1;
-        for (let qt of Vt)
-          if (!Me(tt[qt], et[qt])) return !1;
+      const Uu = Pu(uu),
+        Zu = Pu(Eu);
+      if (Uu !== Zu) return !1;
+      if (uu && Eu && Uu && Zu) {
+        const ju = Object.keys(uu),
+          su = Object.keys(Eu);
+        if (ju.length !== su.length) return !1;
+        for (let uu of ju)
+          if (!su.includes(uu)) return !1;
+        for (let Uu of ju)
+          if (!gE(uu[Uu], Eu[Uu])) return !1;
         return !0
       }
       return !1
     }
-    const be = "click",
-      Je = "navigation",
-      Ce = "view_changed",
-      ue = "session_start",
-      Ke = "session_resume",
-      he = "session_extend",
-      ve = "service_name_override",
-      We = "route_change";
+    const ME = "click",
+      eE = "navigation",
+      GE = "view_changed",
+      pE = "session_start",
+      wE = "session_resume",
+      JE = "session_extend",
+      dE = "service_name_override",
+      aE = "route_change";
 
-    function Se() {
+    function PE() {
       let {
-        sessionId: tt,
-        started: et,
-        lastActivity: Vt,
-        isSampled: Ot = !0
-      } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, qt = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wt;
-      var Dt;
-      const mt = Ee(),
-        dt = null === (Dt = qt.config) || void 0 === Dt || null === (Dt = Dt.sessionTracking) || void 0 === Dt ? void 0 : Dt.generateSessionId;
-      return null == tt && (tt = "function" === typeof dt ? dt() : ae()), {
-        sessionId: tt,
-        lastActivity: null !== Vt && void 0 !== Vt ? Vt : mt,
-        started: null !== et && void 0 !== et ? et : mt,
-        isSampled: Ot
+        sessionId: uu,
+        started: Eu,
+        lastActivity: ju,
+        isSampled: su = !0
+      } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, Uu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Yu;
+      var Zu;
+      const Xu = cE(),
+        lu = null === (Zu = Uu.config) || void 0 === Zu || null === (Zu = Zu.sessionTracking) || void 0 === Zu ? void 0 : Zu.generateSessionId;
+      return null == uu && (uu = "function" === typeof lu ? lu() : DE()), {
+        sessionId: uu,
+        lastActivity: null !== ju && void 0 !== ju ? ju : Xu,
+        started: null !== Eu && void 0 !== Eu ? Eu : Xu,
+        isSampled: su
       }
     }
 
-    function ce(tt) {
-      if (null == tt) return !1;
-      const et = Ee();
-      return et - tt.started < 144e5 && et - tt.lastActivity < mt
+    function oE(uu) {
+      if (null == uu) return !1;
+      const Eu = cE();
+      return Eu - uu.started < 144e5 && Eu - uu.lastActivity < Xu
     }
 
-    function Re(tt) {
+    function kE(uu) {
       let {
-        fetchUserSession: et,
-        storeUserSession: Vt,
-        adoptSession: Ot,
-        updateInterval: qt = 0
-      } = tt, dt = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wt, jt = 0;
+        fetchUserSession: Eu,
+        storeUserSession: ju,
+        adoptSession: su,
+        updateInterval: Uu = 0
+      } = uu, lu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Yu, qu = 0;
       return function() {
         let {
-          forceSessionExtend: tt = !1,
-          refreshActivity: Ht = !0
+          forceSessionExtend: uu = !1,
+          refreshActivity: fu = !0
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        var Xt, Qt;
-        if (!et || !Vt) return;
-        const lt = Ee();
-        if (!tt && lt < jt && jt - lt <= qt) return;
-        const Et = dt.config.sessionTracking,
-          ft = null === Et || void 0 === Et ? void 0 : Et.persistent;
-        if (ft && !qe || !ft && !De) return;
-        const wt = et();
-        if (jt = Math.min(lt + qt, (null !== (Xt = null === wt || void 0 === wt ? void 0 : wt.started) && void 0 !== Xt ? Xt : lt) + Dt, (null !== (Qt = null === wt || void 0 === wt ? void 0 : wt.lastActivity) && void 0 !== Qt ? Qt : lt) + mt), !1 === tt && ce(wt)) {
-          var yt;
-          Ht && Vt(Qe(Qe({}, wt), {}, {
-            lastActivity: lt
+        var Cu, bu;
+        if (!Eu || !ju) return;
+        const cu = cE();
+        if (!uu && cu < qu && qu - cu <= Uu) return;
+        const Nu = lu.config.sessionTracking,
+          Ou = null === Nu || void 0 === Nu ? void 0 : Nu.persistent;
+        if (Ou && !sE || !Ou && !UE) return;
+        const Yu = Eu();
+        if (qu = Math.min(cu + Uu, (null !== (Cu = null === Yu || void 0 === Yu ? void 0 : Yu.started) && void 0 !== Cu ? Cu : cu) + Zu, (null !== (bu = null === Yu || void 0 === Yu ? void 0 : Yu.lastActivity) && void 0 !== bu ? bu : cu) + Xu), !1 === uu && oE(Yu)) {
+          var hu;
+          fu && ju(CE(CE({}, Yu), {}, {
+            lastActivity: cu
           }));
-          const tt = null === (yt = dt.metas.value.session) || void 0 === yt ? void 0 : yt.id;
-          null != Ot && null != wt.sessionMeta && wt.sessionId !== tt && Ot(wt.sessionMeta)
+          const uu = null === (hu = lu.metas.value.session) || void 0 === hu ? void 0 : hu.id;
+          null != su && null != Yu.sessionMeta && Yu.sessionId !== uu && su(Yu.sessionMeta)
         } else {
-          var Nt, Mt, bt;
-          let tt = Pe(Se({
-            isSampled: le(dt)
-          }, dt), wt, dt);
-          jt = lt + qt, Vt(tt), null === (Nt = dt.api) || void 0 === Nt || Nt.setSession(tt.sessionMeta), null === Et || void 0 === Et || null === (Mt = Et.onSessionChange) || void 0 === Mt || Mt.call(Et, null !== (bt = null === wt || void 0 === wt ? void 0 : wt.sessionMeta) && void 0 !== bt ? bt : null, tt.sessionMeta)
+          var Du, gu, Mu;
+          let uu = vE(PE({
+            isSampled: bE(lu)
+          }, lu), Yu, lu);
+          qu = cu + Uu, ju(uu), null === (Du = lu.api) || void 0 === Du || Du.setSession(uu.sessionMeta), null === Nu || void 0 === Nu || null === (gu = Nu.onSessionChange) || void 0 === gu || gu.call(Nu, null !== (Mu = null === Yu || void 0 === Yu ? void 0 : Yu.sessionMeta) && void 0 !== Mu ? Mu : null, uu.sessionMeta)
         }
       }
     }
 
-    function Ie(tt) {
-      let et, {
-          fetchUserSession: Vt,
-          storeUserSession: Ot,
-          updateInterval: qt = 0
-        } = tt,
-        Dt = 0;
-      return tt => {
-        const mt = Ee();
-        if (tt === et && mt < Dt && Dt - mt <= qt) return;
-        et = tt, Dt = mt + qt;
-        const dt = Vt();
-        (null === dt || void 0 === dt ? void 0 : dt.sessionId) === tt && ce(dt) && Ot(Qe(Qe({}, dt), {}, {
-          lastActivity: mt
+    function mE(uu) {
+      let Eu, {
+          fetchUserSession: ju,
+          storeUserSession: su,
+          updateInterval: Uu = 0
+        } = uu,
+        Zu = 0;
+      return uu => {
+        const Xu = cE();
+        if (uu === Eu && Xu < Zu && Zu - Xu <= Uu) return;
+        Eu = uu, Zu = Xu + Uu;
+        const lu = ju();
+        (null === lu || void 0 === lu ? void 0 : lu.sessionId) === uu && oE(lu) && su(CE(CE({}, lu), {}, {
+          lastActivity: Xu
         }))
       }
     }
 
-    function Pe(tt, et) {
-      let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : wt;
-      var Ot, qt, Dt, mt, dt, jt;
-      const Ht = Qe(Qe({}, tt), {}, {
+    function vE(uu, Eu) {
+      let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Yu;
+      var su, Uu, Zu, Xu, lu, qu;
+      const fu = CE(CE({}, uu), {}, {
           sessionMeta: {
-            id: tt.sessionId,
-            attributes: Le(Qe(Qe(Qe({}, null === (Ot = Vt.config.sessionTracking) || void 0 === Ot || null === (Ot = Ot.session) || void 0 === Ot ? void 0 : Ot.attributes), null !== (qt = null === (Dt = Vt.metas.value.session) || void 0 === Dt ? void 0 : Dt.attributes) && void 0 !== qt ? qt : {}), {}, {
-              isSampled: tt.isSampled.toString()
+            id: uu.sessionId,
+            attributes: VE(CE(CE(CE({}, null === (su = ju.config.sessionTracking) || void 0 === su || null === (su = su.session) || void 0 === su ? void 0 : su.attributes), null !== (Uu = null === (Zu = ju.metas.value.session) || void 0 === Zu ? void 0 : Zu.attributes) && void 0 !== Uu ? Uu : {}), {}, {
+              isSampled: uu.isSampled.toString()
             }))
           }
         }),
-        Xt = null !== (mt = null === (dt = Vt.metas.value.session) || void 0 === dt ? void 0 : dt.overrides) && void 0 !== mt ? mt : null === et || void 0 === et || null === (jt = et.sessionMeta) || void 0 === jt ? void 0 : jt.overrides;
-      pt(Xt) || (Ht.sessionMeta.overrides = Xt);
-      const Qt = null === et || void 0 === et ? void 0 : et.sessionId;
-      return null != Qt && (Ht.sessionMeta.attributes.previousSession = Qt), Ht
+        Cu = null !== (Xu = null === (lu = ju.metas.value.session) || void 0 === lu ? void 0 : lu.overrides) && void 0 !== Xu ? Xu : null === Eu || void 0 === Eu || null === (qu = Eu.sessionMeta) || void 0 === qu ? void 0 : qu.overrides;
+      Tu(Cu) || (fu.sessionMeta.overrides = Cu);
+      const bu = null === Eu || void 0 === Eu ? void 0 : Eu.sessionId;
+      return null != bu && (fu.sessionMeta.attributes.previousSession = bu), fu
     }
 
-    function Ze(tt) {
+    function KE(uu) {
       let {
-        fetchUserSession: et,
-        storeUserSession: Vt
-      } = tt, Ot = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wt, qt = !1;
-      return function(tt) {
-        if (qt) return;
-        const Dt = tt.session,
-          mt = et();
-        let dt = null === Dt || void 0 === Dt ? void 0 : Dt.id;
-        const jt = null === Dt || void 0 === Dt ? void 0 : Dt.attributes,
-          Ht = null === Dt || void 0 === Dt ? void 0 : Dt.overrides,
-          Xt = null === mt || void 0 === mt ? void 0 : mt.sessionMeta,
-          Qt = null === Xt || void 0 === Xt ? void 0 : Xt.overrides,
-          lt = !!Ht && !Me(Ht, Qt),
-          Et = !!jt && !Me(jt, null === Xt || void 0 === Xt ? void 0 : Xt.attributes);
-        if (Dt && dt !== (null === mt || void 0 === mt ? void 0 : mt.sessionId) || Et || lt) {
-          var ft, wt;
-          const tt = null != mt && dt === mt.sessionId,
-            et = Pe(tt ? mt : Se({
-              sessionId: dt,
-              isSampled: le(Ot)
-            }, Ot), mt, Ot),
-            Dt = null === mt || void 0 === mt || null === (ft = mt.sessionMeta) || void 0 === ft || null === (ft = ft.attributes) || void 0 === ft ? void 0 : ft.previousSession;
-          tt && null != Dt && Dt !== et.sessionId && (et.sessionMeta.attributes.previousSession = Dt), (null === (wt = et.sessionMeta.attributes) || void 0 === wt ? void 0 : wt.previousSession) === et.sessionId && delete et.sessionMeta.attributes.previousSession, Vt(et),
-            function(tt, et) {
-              let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                Ot = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-              var qt, Dt, mt;
-              if (!et) return;
-              const dt = Vt.serviceName,
-                jt = null !== (qt = null !== (Dt = Ot.serviceName) && void 0 !== Dt ? Dt : null === (mt = tt.metas.value.app) || void 0 === mt ? void 0 : mt.name) && void 0 !== qt ? qt : "";
-              dt && dt !== jt && tt.api.pushEvent(ve, {
-                serviceName: dt,
-                previousServiceName: jt
+        fetchUserSession: Eu,
+        storeUserSession: ju
+      } = uu, su = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Yu, Uu = !1;
+      return function(uu) {
+        if (Uu) return;
+        const Zu = uu.session,
+          Xu = Eu();
+        let lu = null === Zu || void 0 === Zu ? void 0 : Zu.id;
+        const qu = null === Zu || void 0 === Zu ? void 0 : Zu.attributes,
+          fu = null === Zu || void 0 === Zu ? void 0 : Zu.overrides,
+          Cu = null === Xu || void 0 === Xu ? void 0 : Xu.sessionMeta,
+          bu = null === Cu || void 0 === Cu ? void 0 : Cu.overrides,
+          cu = !!fu && !gE(fu, bu),
+          Nu = !!qu && !gE(qu, null === Cu || void 0 === Cu ? void 0 : Cu.attributes);
+        if (Zu && lu !== (null === Xu || void 0 === Xu ? void 0 : Xu.sessionId) || Nu || cu) {
+          var Ou, Yu;
+          const uu = null != Xu && lu === Xu.sessionId,
+            Eu = vE(uu ? Xu : PE({
+              sessionId: lu,
+              isSampled: bE(su)
+            }, su), Xu, su),
+            Zu = null === Xu || void 0 === Xu || null === (Ou = Xu.sessionMeta) || void 0 === Ou || null === (Ou = Ou.attributes) || void 0 === Ou ? void 0 : Ou.previousSession;
+          uu && null != Zu && Zu !== Eu.sessionId && (Eu.sessionMeta.attributes.previousSession = Zu), (null === (Yu = Eu.sessionMeta.attributes) || void 0 === Yu ? void 0 : Yu.previousSession) === Eu.sessionId && delete Eu.sessionMeta.attributes.previousSession, ju(Eu),
+            function(uu, Eu) {
+              let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+                su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+              var Uu, Zu, Xu;
+              if (!Eu) return;
+              const lu = ju.serviceName,
+                qu = null !== (Uu = null !== (Zu = su.serviceName) && void 0 !== Zu ? Zu : null === (Xu = uu.metas.value.app) || void 0 === Xu ? void 0 : Xu.name) && void 0 !== Uu ? Uu : "";
+              lu && lu !== qu && uu.api.pushEvent(dE, {
+                serviceName: lu,
+                previousServiceName: qu
               })
-            }(Ot, lt, Ht, Qt), qt = !0;
+            }(su, cu, fu, bu), Uu = !0;
           try {
-            Ot.api.setSession(et.sessionMeta)
+            su.api.setSession(Eu.sessionMeta)
           } finally {
-            qt = !1
+            Uu = !1
           }
         }
       }
     }
 
-    function Le(tt) {
-      const et = {};
-      for (const Vt of Object.keys(tt)) {
-        const Ot = tt[Vt];
-        void 0 !== Ot && (et[Vt] = Ot)
+    function VE(uu) {
+      const Eu = {};
+      for (const ju of Object.keys(uu)) {
+        const su = uu[ju];
+        void 0 !== su && (Eu[ju] = su)
       }
-      return et
+      return Eu
     }
 
-    function Fe() {
-      let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      return JSON.stringify(null !== tt && void 0 !== tt ? tt : {}, function() {
-        const tt = new WeakSet;
-        return function(et, Vt) {
-          if (St(Vt) && null !== Vt) {
-            if (tt.has(Vt)) return null;
-            tt.add(Vt)
+    function rE() {
+      let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      return JSON.stringify(null !== uu && void 0 !== uu ? uu : {}, function() {
+        const uu = new WeakSet;
+        return function(Eu, ju) {
+          if (Pu(ju) && null !== ju) {
+            if (uu.has(ju)) return null;
+            uu.add(ju)
           }
-          return Vt
+          return ju
         }
       }())
     }
 
-    function ke() {
-      let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      const et = {};
-      for (const [Vt, Ot] of Object.entries(tt)) et[Vt] = St(Ot) && null !== Ot ? Fe(Ot) : String(Ot);
-      return et
+    function QE() {
+      let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      const Eu = {};
+      for (const [ju, su] of Object.entries(uu)) Eu[ju] = Pu(su) && null !== su ? rE(su) : String(su);
+      return Eu
     }
-    var Ge = class tt {
+    var iE = class uu {
       constructor() {
-        var et = this;
-        let Vt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : wt;
-        this.context = Vt, this.adopting = !1, this.isAdopting = () => this.adopting, this.adoptSession = tt => {
+        var Eu = this;
+        let ju = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Yu;
+        this.context = ju, this.adopting = !1, this.isAdopting = () => this.adopting, this.adoptSession = uu => {
           this.adopting = !0;
           try {
-            var et;
-            null === (et = this.context.api) || void 0 === et || et.setSession(tt)
+            var Eu;
+            null === (Eu = this.context.api) || void 0 === Eu || Eu.setSession(uu)
           } finally {
             this.adopting = !1
           }
         }, this.updateSession = function() {
           let {
-            refreshActivity: tt = !0
+            refreshActivity: uu = !0
           } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          return et.updateUserSession({
-            refreshActivity: tt
+          return Eu.updateUserSession({
+            refreshActivity: uu
           })
-        }, this.recordActivity = Ie({
-          fetchUserSession: tt.fetchUserSession,
-          storeUserSession: tt.storeUserSession,
-          updateInterval: dt
-        }), this.updateUserSession = Re({
-          fetchUserSession: tt.fetchUserSession,
-          storeUserSession: tt.storeUserSession,
+        }, this.recordActivity = mE({
+          fetchUserSession: uu.fetchUserSession,
+          storeUserSession: uu.storeUserSession,
+          updateInterval: lu
+        }), this.updateUserSession = kE({
+          fetchUserSession: uu.fetchUserSession,
+          storeUserSession: uu.storeUserSession,
           adoptSession: this.adoptSession,
-          updateInterval: dt
-        }, Vt), this.init()
+          updateInterval: lu
+        }, ju), this.init()
       }
       static removeUserSession() {
-        Oe(qt, tt.storageTypeLocal)
+        jE(Uu, uu.storageTypeLocal)
       }
-      static storeUserSession(et) {
-        Ve(qt, Fe(et), tt.storageTypeLocal)
+      static storeUserSession(Eu) {
+        EE(Uu, rE(Eu), uu.storageTypeLocal)
       }
       static fetchUserSession() {
-        const et = ee(qt, tt.storageTypeLocal);
-        return et ? JSON.parse(et) : null
+        const Eu = uE(Uu, uu.storageTypeLocal);
+        return Eu ? JSON.parse(Eu) : null
       }
       init() {
         document.addEventListener("visibilitychange", (() => {
           if ("visible" === document.visibilityState) {
-            var tt;
+            var uu;
             this.updateSession({
               refreshActivity: !1
             });
-            const et = null === (tt = this.context.api) || void 0 === tt || null === (tt = tt.getSession()) || void 0 === tt ? void 0 : tt.id;
-            et && this.recordActivity(et)
+            const Eu = null === (uu = this.context.api) || void 0 === uu || null === (uu = uu.getSession()) || void 0 === uu ? void 0 : uu.id;
+            Eu && this.recordActivity(Eu)
           }
-        })), this.context.metas.addListener(Ze({
-          fetchUserSession: tt.fetchUserSession,
-          storeUserSession: tt.storeUserSession
+        })), this.context.metas.addListener(KE({
+          fetchUserSession: uu.fetchUserSession,
+          storeUserSession: uu.storeUserSession
         }, this.context))
       }
     };
-    Ge.storageTypeLocal = nt;
-    var ze = class tt {
+    iE.storageTypeLocal = zu;
+    var WE = class uu {
       constructor() {
-        var et = this;
-        let Vt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : wt;
-        this.context = Vt, this.isAdopting = () => !1, this.updateSession = function() {
+        var Eu = this;
+        let ju = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Yu;
+        this.context = ju, this.isAdopting = () => !1, this.updateSession = function() {
           let {
-            refreshActivity: tt = !0
+            refreshActivity: uu = !0
           } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          return et.updateUserSession({
-            refreshActivity: tt
+          return Eu.updateUserSession({
+            refreshActivity: uu
           })
-        }, this.recordActivity = Ie({
-          fetchUserSession: tt.fetchUserSession,
-          storeUserSession: tt.storeUserSession,
-          updateInterval: dt
-        }), this.updateUserSession = Re({
-          fetchUserSession: tt.fetchUserSession,
-          storeUserSession: tt.storeUserSession,
-          updateInterval: dt
-        }, Vt), this.init()
+        }, this.recordActivity = mE({
+          fetchUserSession: uu.fetchUserSession,
+          storeUserSession: uu.storeUserSession,
+          updateInterval: lu
+        }), this.updateUserSession = kE({
+          fetchUserSession: uu.fetchUserSession,
+          storeUserSession: uu.storeUserSession,
+          updateInterval: lu
+        }, ju), this.init()
       }
       static removeUserSession() {
-        Oe(qt, tt.storageTypeSession)
+        jE(Uu, uu.storageTypeSession)
       }
-      static storeUserSession(et) {
-        Ve(qt, Fe(et), tt.storageTypeSession)
+      static storeUserSession(Eu) {
+        EE(Uu, rE(Eu), uu.storageTypeSession)
       }
       static fetchUserSession() {
-        const et = ee(qt, tt.storageTypeSession);
-        return et ? JSON.parse(et) : null
+        const Eu = uE(Uu, uu.storageTypeSession);
+        return Eu ? JSON.parse(Eu) : null
       }
       init() {
         document.addEventListener("visibilitychange", (() => {
           if ("visible" === document.visibilityState) {
-            var tt;
+            var uu;
             this.updateSession({
               refreshActivity: !1
             });
-            const et = null === (tt = this.context.api) || void 0 === tt || null === (tt = tt.getSession()) || void 0 === tt ? void 0 : tt.id;
-            et && this.recordActivity(et)
+            const Eu = null === (uu = this.context.api) || void 0 === uu || null === (uu = uu.getSession()) || void 0 === uu ? void 0 : uu.id;
+            Eu && this.recordActivity(Eu)
           }
-        })), this.context.metas.addListener(Ze({
-          fetchUserSession: tt.fetchUserSession,
-          storeUserSession: tt.storeUserSession
+        })), this.context.metas.addListener(KE({
+          fetchUserSession: uu.fetchUserSession,
+          storeUserSession: uu.storeUserSession
         }, this.context))
       }
     };
-    ze.storageTypeSession = st;
-    const oe = new WeakMap;
+    WE.storageTypeSession = yu;
+    const SE = new WeakMap;
 
-    function re(tt) {
-      let et = oe.get(tt);
-      if (!et) {
-        let Vt = [],
-          Ot = [];
-        et = {
-          addSessionUpdateListener: tt => {
-            Vt.push(tt)
+    function IE(uu) {
+      let Eu = SE.get(uu);
+      if (!Eu) {
+        let ju = [],
+          su = [];
+        Eu = {
+          addSessionUpdateListener: uu => {
+            ju.push(uu)
           },
-          removeSessionUpdateListener: tt => {
-            Vt = Vt.filter((et => et !== tt))
+          removeSessionUpdateListener: uu => {
+            ju = ju.filter((Eu => Eu !== uu))
           },
-          notifySessionUpdate: tt => {
-            Vt.forEach((et => et(tt)))
+          notifySessionUpdate: uu => {
+            ju.forEach((Eu => Eu(uu)))
           },
-          shouldCapture: () => Ot.every((tt => tt())),
-          addCaptureFilter: tt => {
-            Ot.push(tt)
+          shouldCapture: () => su.every((uu => uu())),
+          addCaptureFilter: uu => {
+            su.push(uu)
           },
-          removeCaptureFilter: tt => {
-            Ot = Ot.filter((et => et !== tt))
+          removeCaptureFilter: uu => {
+            su = su.filter((Eu => Eu !== uu))
           }
-        }, oe.set(tt, et)
+        }, SE.set(uu, Eu)
       }
-      return et
+      return Eu
     }
-    var Ue = class {
-      constructor(tt, et, Vt) {
-        this.metas = tt, this.transports = et, this.onActivate = Vt, this.waiting = !1, this.shouldCapture = () => !document.prerendering, this.discard = () => null, this.recordUpdate = tt => {
-          var et, Vt, Ot;
-          const qt = this.pending;
-          var Dt, mt;
-          if ("overrides" === tt.type) return void(this.pending = {
-            reset: null !== (Dt = null === qt || void 0 === qt ? void 0 : qt.reset) && void 0 !== Dt && Dt,
-            inheritOverrides: null === (mt = null === qt || void 0 === qt ? void 0 : qt.inheritOverrides) || void 0 === mt || mt,
-            session: Qe(Qe({}, null === qt || void 0 === qt ? void 0 : qt.session), {}, {
-              overrides: Qe(Qe({}, null === qt || void 0 === qt ? void 0 : qt.session.overrides), tt.overrides)
+    var FE = class {
+      constructor(uu, Eu, ju) {
+        this.metas = uu, this.transports = Eu, this.onActivate = ju, this.waiting = !1, this.shouldCapture = () => !document.prerendering, this.discard = () => null, this.recordUpdate = uu => {
+          var Eu, ju, su;
+          const Uu = this.pending;
+          var Zu, Xu;
+          if ("overrides" === uu.type) return void(this.pending = {
+            reset: null !== (Zu = null === Uu || void 0 === Uu ? void 0 : Uu.reset) && void 0 !== Zu && Zu,
+            inheritOverrides: null === (Xu = null === Uu || void 0 === Uu ? void 0 : Uu.inheritOverrides) || void 0 === Xu || Xu,
+            session: CE(CE({}, null === Uu || void 0 === Uu ? void 0 : Uu.session), {}, {
+              overrides: CE(CE({}, null === Uu || void 0 === Uu ? void 0 : Uu.session.overrides), uu.overrides)
             })
           });
-          const dt = tt.session,
-            jt = pt(dt) || null != dt && "id" in dt && !dt.id,
-            Ht = null !== (et = null === dt || void 0 === dt ? void 0 : dt.overrides) && void 0 !== et ? et : null === qt || void 0 === qt ? void 0 : qt.session.overrides;
+          const lu = uu.session,
+            qu = Tu(lu) || null != lu && "id" in lu && !lu.id,
+            fu = null !== (Eu = null === lu || void 0 === lu ? void 0 : lu.overrides) && void 0 !== Eu ? Eu : null === Uu || void 0 === Uu ? void 0 : Uu.session.overrides;
           this.pending = {
-            reset: jt || !(null === dt || void 0 === dt ? void 0 : dt.id) && null !== (Vt = null === qt || void 0 === qt ? void 0 : qt.reset) && void 0 !== Vt && Vt,
-            inheritOverrides: !(!tt.overrides && void 0 !== (null === dt || void 0 === dt ? void 0 : dt.overrides)) && (null === (Ot = null === qt || void 0 === qt ? void 0 : qt.inheritOverrides) || void 0 === Ot || Ot),
+            reset: qu || !(null === lu || void 0 === lu ? void 0 : lu.id) && null !== (ju = null === Uu || void 0 === Uu ? void 0 : Uu.reset) && void 0 !== ju && ju,
+            inheritOverrides: !(!uu.overrides && void 0 !== (null === lu || void 0 === lu ? void 0 : lu.overrides)) && (null === (su = null === Uu || void 0 === Uu ? void 0 : Uu.inheritOverrides) || void 0 === su || su),
             session: {
-              id: null === dt || void 0 === dt ? void 0 : dt.id,
-              attributes: (null === dt || void 0 === dt ? void 0 : dt.attributes) && Qe({}, dt.attributes),
-              overrides: tt.overrides ? Qe(Qe({}, null === qt || void 0 === qt ? void 0 : qt.session.overrides), tt.overrides) : Ht && Qe({}, Ht)
+              id: null === lu || void 0 === lu ? void 0 : lu.id,
+              attributes: (null === lu || void 0 === lu ? void 0 : lu.attributes) && CE({}, lu.attributes),
+              overrides: uu.overrides ? CE(CE({}, null === Uu || void 0 === Uu ? void 0 : Uu.session.overrides), uu.overrides) : fu && CE({}, fu)
             }
           }
         }, this.activate = () => {
@@ -753,553 +753,553 @@ export const modules = {
         }
       }
       initialize() {
-        var tt, et;
-        this.waiting = !0, re(this.metas).addSessionUpdateListener(this.recordUpdate), re(this.metas).addCaptureFilter(this.shouldCapture), this.transports.addBeforeSendHooks(this.discard), document.addEventListener("prerenderingchange", this.activate), null === (tt = (et = this.metas).addCaptureListener) || void 0 === tt || tt.call(et, this.activate), this.activate()
+        var uu, Eu;
+        this.waiting = !0, IE(this.metas).addSessionUpdateListener(this.recordUpdate), IE(this.metas).addCaptureFilter(this.shouldCapture), this.transports.addBeforeSendHooks(this.discard), document.addEventListener("prerenderingchange", this.activate), null === (uu = (Eu = this.metas).addCaptureListener) || void 0 === uu || uu.call(Eu, this.activate), this.activate()
       }
       destroy() {
-        var tt, et;
-        this.waiting = !1, document.removeEventListener("prerenderingchange", this.activate), re(this.metas).removeSessionUpdateListener(this.recordUpdate), null === (tt = (et = this.metas).removeCaptureListener) || void 0 === tt || tt.call(et, this.activate), re(this.metas).removeCaptureFilter(this.shouldCapture), this.transports.removeBeforeSendHooks(this.discard)
+        var uu, Eu;
+        this.waiting = !1, document.removeEventListener("prerenderingchange", this.activate), IE(this.metas).removeSessionUpdateListener(this.recordUpdate), null === (uu = (Eu = this.metas).removeCaptureListener) || void 0 === uu || uu.call(Eu, this.activate), IE(this.metas).removeCaptureFilter(this.shouldCapture), this.transports.removeBeforeSendHooks(this.discard)
       }
     };
 
-    function Ae(tt) {
-      return (null === tt || void 0 === tt ? void 0 : tt.persistent) ? Ge : ze
+    function BE(uu) {
+      return (null === uu || void 0 === uu ? void 0 : uu.persistent) ? iE : WE
     }
 
-    function ie() {}
-    let Ye = function(tt) {
-      return tt[tt.OFF = 0] = "OFF", tt[tt.ERROR = 1] = "ERROR", tt[tt.WARN = 2] = "WARN", tt[tt.INFO = 3] = "INFO", tt[tt.VERBOSE = 4] = "VERBOSE", tt
+    function LE() {}
+    let tE = function(uu) {
+      return uu[uu.OFF = 0] = "OFF", uu[uu.ERROR = 1] = "ERROR", uu[uu.WARN = 2] = "WARN", uu[uu.INFO = 3] = "INFO", uu[uu.VERBOSE = 4] = "VERBOSE", uu
     }({});
-    const Be = {
-        debug: ie,
-        error: ie,
-        info: ie,
+    const xE = {
+        debug: LE,
+        error: LE,
+        info: LE,
         prefix: "Faro",
-        warn: ie
+        warn: LE
       },
-      pe = 1;
+      TE = 1;
 
-    function xe(tt) {
-      return xe = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(tt) {
-        return typeof tt
-      } : function(tt) {
-        return tt && "function" == typeof Symbol && tt.constructor === Symbol && tt !== Symbol.prototype ? "symbol" : typeof tt
-      }, xe(tt)
+    function HE(uu) {
+      return HE = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(uu) {
+        return typeof uu
+      } : function(uu) {
+        return uu && "function" == typeof Symbol && uu.constructor === Symbol && uu !== Symbol.prototype ? "symbol" : typeof uu
+      }, HE(uu)
     }
 
-    function Te(tt) {
-      var et = function(tt, et) {
-        if ("object" != xe(tt) || !tt) return tt;
-        var Vt = tt[Symbol.toPrimitive];
-        if (void 0 !== Vt) {
-          var Ot = Vt.call(tt, et || "default");
-          if ("object" != xe(Ot)) return Ot;
+    function AE(uu) {
+      var Eu = function(uu, Eu) {
+        if ("object" != HE(uu) || !uu) return uu;
+        var ju = uu[Symbol.toPrimitive];
+        if (void 0 !== ju) {
+          var su = ju.call(uu, Eu || "default");
+          if ("object" != HE(su)) return su;
           throw new TypeError("@@toPrimitive must return a primitive value.")
         }
-        return ("string" === et ? String : Number)(tt)
-      }(tt, "string");
-      return "symbol" == xe(et) ? et : et + ""
+        return ("string" === Eu ? String : Number)(uu)
+      }(uu, "string");
+      return "symbol" == HE(Eu) ? Eu : Eu + ""
     }
 
-    function ge(tt, et, Vt) {
-      return (et = Te(et)) in tt ? Object.defineProperty(tt, et, {
-        value: Vt,
+    function nE(uu, Eu, ju) {
+      return (Eu = AE(Eu)) in uu ? Object.defineProperty(uu, Eu, {
+        value: ju,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : tt[et] = Vt, tt
+      }) : uu[Eu] = ju, uu
     }
 
-    function se(tt, et) {
-      var Vt = Object.keys(tt);
+    function yE(uu, Eu) {
+      var ju = Object.keys(uu);
       if (Object.getOwnPropertySymbols) {
-        var Ot = Object.getOwnPropertySymbols(tt);
-        et && (Ot = Ot.filter((function(et) {
-          return Object.getOwnPropertyDescriptor(tt, et).enumerable
-        }))), Vt.push.apply(Vt, Ot)
+        var su = Object.getOwnPropertySymbols(uu);
+        Eu && (su = su.filter((function(Eu) {
+          return Object.getOwnPropertyDescriptor(uu, Eu).enumerable
+        }))), ju.push.apply(ju, su)
       }
-      return Vt
+      return ju
     }
 
-    function ne(tt) {
-      for (var et = 1; et < arguments.length; et++) {
-        var Vt = null != arguments[et] ? arguments[et] : {};
-        et % 2 ? se(Object(Vt), !0).forEach((function(et) {
-          ge(tt, et, Vt[et])
-        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(tt, Object.getOwnPropertyDescriptors(Vt)) : se(Object(Vt)).forEach((function(et) {
-          Object.defineProperty(tt, et, Object.getOwnPropertyDescriptor(Vt, et))
+    function zE(uu) {
+      for (var Eu = 1; Eu < arguments.length; Eu++) {
+        var ju = null != arguments[Eu] ? arguments[Eu] : {};
+        Eu % 2 ? yE(Object(ju), !0).forEach((function(Eu) {
+          nE(uu, Eu, ju[Eu])
+        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(uu, Object.getOwnPropertyDescriptors(ju)) : yE(Object(ju)).forEach((function(Eu) {
+          Object.defineProperty(uu, Eu, Object.getOwnPropertyDescriptor(ju, Eu))
         }))
       }
-      return tt
+      return uu
     }
-    const tV = ne({}, console);
-    var eV = class {
+    const RE = zE({}, console);
+    var uj = class {
         constructor() {
-          this.unpatchedConsole = tV, this.internalLogger = Be, this.config = {}, this.metas = {}
+          this.unpatchedConsole = RE, this.internalLogger = xE, this.config = {}, this.metas = {}
         }
         logDebug() {
-          for (var tt = arguments.length, et = new Array(tt), Vt = 0; Vt < tt; Vt++) et[Vt] = arguments[Vt];
-          this.internalLogger.debug(`${this.name}\n`, ...et)
+          for (var uu = arguments.length, Eu = new Array(uu), ju = 0; ju < uu; ju++) Eu[ju] = arguments[ju];
+          this.internalLogger.debug(`${this.name}\n`, ...Eu)
         }
         logInfo() {
-          for (var tt = arguments.length, et = new Array(tt), Vt = 0; Vt < tt; Vt++) et[Vt] = arguments[Vt];
-          this.internalLogger.info(`${this.name}\n`, ...et)
+          for (var uu = arguments.length, Eu = new Array(uu), ju = 0; ju < uu; ju++) Eu[ju] = arguments[ju];
+          this.internalLogger.info(`${this.name}\n`, ...Eu)
         }
         logWarn() {
-          for (var tt = arguments.length, et = new Array(tt), Vt = 0; Vt < tt; Vt++) et[Vt] = arguments[Vt];
-          this.internalLogger.warn(`${this.name}\n`, ...et)
+          for (var uu = arguments.length, Eu = new Array(uu), ju = 0; ju < uu; ju++) Eu[ju] = arguments[ju];
+          this.internalLogger.warn(`${this.name}\n`, ...Eu)
         }
         logError() {
-          for (var tt = arguments.length, et = new Array(tt), Vt = 0; Vt < tt; Vt++) et[Vt] = arguments[Vt];
-          this.internalLogger.error(`${this.name}\n`, ...et)
+          for (var uu = arguments.length, Eu = new Array(uu), ju = 0; ju < uu; ju++) Eu[ju] = arguments[ju];
+          this.internalLogger.error(`${this.name}\n`, ...Eu)
         }
       },
-      VV = class extends eV {
+      Ej = class extends uj {
         constructor() {
           super(...arguments), this.api = {}, this.transports = {}
         }
       };
-    const OV = "2.12.1";
-    var qV = class extends VV {
+    const jj = "2.12.1";
+    var sj = class extends Ej {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-session", this.version = OV, this.isAdoptingSession = () => !1
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-session", this.version = jj, this.isAdoptingSession = () => !1
       }
-      sendSessionStartEvent(tt) {
-        var et;
-        const Vt = tt.session;
-        if (Vt && Vt.id !== (null === (et = this.notifiedSession) || void 0 === et ? void 0 : et.id)) {
-          var Ot;
-          if (this.isAdoptingSession()) return void(this.notifiedSession = Vt);
-          if (this.notifiedSession && this.notifiedSession.id === (null === (Ot = Vt.attributes) || void 0 === Ot ? void 0 : Ot.previousSession)) return this.api.pushEvent(he, {}, void 0, {
+      sendSessionStartEvent(uu) {
+        var Eu;
+        const ju = uu.session;
+        if (ju && ju.id !== (null === (Eu = this.notifiedSession) || void 0 === Eu ? void 0 : Eu.id)) {
+          var su;
+          if (this.isAdoptingSession()) return void(this.notifiedSession = ju);
+          if (this.notifiedSession && this.notifiedSession.id === (null === (su = ju.attributes) || void 0 === su ? void 0 : su.previousSession)) return this.api.pushEvent(JE, {}, void 0, {
             skipDedupe: !0
-          }), void(this.notifiedSession = Vt);
-          this.notifiedSession = Vt, this.api.pushEvent(ue, {}, void 0, {
+          }), void(this.notifiedSession = ju);
+          this.notifiedSession = ju, this.api.pushEvent(pE, {}, void 0, {
             skipDedupe: !0
           })
         }
       }
-      createInitialSession(tt, et, Vt) {
-        const Ot = null === Vt || void 0 === Vt ? void 0 : Vt.session;
-        let qt, Dt, mt = tt.fetchUserSession();
-        if (et.persistent && et.maxSessionPersistenceTime && mt) {
-          const tt = Ee();
-          mt.lastActivity < tt - et.maxSessionPersistenceTime && (Ge.removeUserSession(), mt = null)
+      createInitialSession(uu, Eu, ju) {
+        const su = null === ju || void 0 === ju ? void 0 : ju.session;
+        let Uu, Zu, Xu = uu.fetchUserSession();
+        if (Eu.persistent && Eu.maxSessionPersistenceTime && Xu) {
+          const uu = cE();
+          Xu.lastActivity < uu - Eu.maxSessionPersistenceTime && (iE.removeUserSession(), Xu = null)
         }
-        const dt = ce(mt);
-        if ((null === Vt || void 0 === Vt ? void 0 : Vt.reset) || !dt || (null === Ot || void 0 === Ot ? void 0 : Ot.id) && Ot.id !== (null === mt || void 0 === mt ? void 0 : mt.sessionId)) {
-          var jt, Ht, Xt, Qt, lt, Et;
-          Dt = Se({
-            sessionId: (null === Vt || void 0 === Vt ? void 0 : Vt.reset) ? void 0 : null !== (jt = null === Ot || void 0 === Ot ? void 0 : Ot.id) && void 0 !== jt ? jt : null === (Ht = et.session) || void 0 === Ht ? void 0 : Ht.id,
-            isSampled: le(this)
+        const lu = oE(Xu);
+        if ((null === ju || void 0 === ju ? void 0 : ju.reset) || !lu || (null === su || void 0 === su ? void 0 : su.id) && su.id !== (null === Xu || void 0 === Xu ? void 0 : Xu.sessionId)) {
+          var qu, fu, Cu, bu, cu, Nu;
+          Zu = PE({
+            sessionId: (null === ju || void 0 === ju ? void 0 : ju.reset) ? void 0 : null !== (qu = null === su || void 0 === su ? void 0 : su.id) && void 0 !== qu ? qu : null === (fu = Eu.session) || void 0 === fu ? void 0 : fu.id,
+            isSampled: bE(this)
           }, this);
-          const tt = Dt.sessionId,
-            ft = Vt && dt ? null === mt || void 0 === mt || null === (Xt = mt.sessionMeta) || void 0 === Xt ? void 0 : Xt.overrides : void 0,
-            wt = ft ? Qe(Qe({}, null === (Qt = et.session) || void 0 === Qt ? void 0 : Qt.overrides), ft) : null === (lt = et.session) || void 0 === lt ? void 0 : lt.overrides;
-          Dt.sessionMeta = Qe({
-            id: tt,
-            attributes: Qe({
-              isSampled: Dt.isSampled.toString()
-            }, null === (Et = et.session) || void 0 === Et ? void 0 : Et.attributes)
-          }, wt ? {
-            overrides: wt
-          } : {}), qt = ue
+          const uu = Zu.sessionId,
+            Ou = ju && lu ? null === Xu || void 0 === Xu || null === (Cu = Xu.sessionMeta) || void 0 === Cu ? void 0 : Cu.overrides : void 0,
+            Yu = Ou ? CE(CE({}, null === (bu = Eu.session) || void 0 === bu ? void 0 : bu.overrides), Ou) : null === (cu = Eu.session) || void 0 === cu ? void 0 : cu.overrides;
+          Zu.sessionMeta = CE({
+            id: uu,
+            attributes: CE({
+              isSampled: Zu.isSampled.toString()
+            }, null === (Nu = Eu.session) || void 0 === Nu ? void 0 : Nu.attributes)
+          }, Yu ? {
+            overrides: Yu
+          } : {}), Uu = pE
         } else {
-          var ft, wt;
-          const tt = null === mt || void 0 === mt ? void 0 : mt.sessionId;
-          Dt = Se({
-            sessionId: tt,
-            isSampled: mt.isSampled || !1,
-            started: null === mt || void 0 === mt ? void 0 : mt.started
+          var Ou, Yu;
+          const uu = null === Xu || void 0 === Xu ? void 0 : Xu.sessionId;
+          Zu = PE({
+            sessionId: uu,
+            isSampled: Xu.isSampled || !1,
+            started: null === Xu || void 0 === Xu ? void 0 : Xu.started
           }, this);
-          const Vt = null === mt || void 0 === mt ? void 0 : mt.sessionMeta,
-            Ot = Qe(Qe({}, null === (ft = et.session) || void 0 === ft ? void 0 : ft.overrides), null === Vt || void 0 === Vt ? void 0 : Vt.overrides);
-          Dt.sessionMeta = Qe(Qe({}, et.session), {}, {
-            id: tt,
-            attributes: Qe(Qe(Qe({}, null === (wt = et.session) || void 0 === wt ? void 0 : wt.attributes), null === Vt || void 0 === Vt ? void 0 : Vt.attributes), {}, {
-              isSampled: Dt.isSampled.toString()
+          const ju = null === Xu || void 0 === Xu ? void 0 : Xu.sessionMeta,
+            su = CE(CE({}, null === (Ou = Eu.session) || void 0 === Ou ? void 0 : Ou.overrides), null === ju || void 0 === ju ? void 0 : ju.overrides);
+          Zu.sessionMeta = CE(CE({}, Eu.session), {}, {
+            id: uu,
+            attributes: CE(CE(CE({}, null === (Yu = Eu.session) || void 0 === Yu ? void 0 : Yu.attributes), null === ju || void 0 === ju ? void 0 : ju.attributes), {}, {
+              isSampled: Zu.isSampled.toString()
             }),
-            overrides: Ot
-          }), qt = Ke
+            overrides: su
+          }), Uu = wE
         }
-        var yt;
-        if (Ot && (Dt.sessionMeta = Qe(Qe({}, Dt.sessionMeta), {}, {
-            attributes: Qe(Qe(Qe({}, null === (yt = Dt.sessionMeta) || void 0 === yt ? void 0 : yt.attributes), Ot.attributes), {}, {
-              isSampled: Dt.isSampled.toString()
+        var hu;
+        if (su && (Zu.sessionMeta = CE(CE({}, Zu.sessionMeta), {}, {
+            attributes: CE(CE(CE({}, null === (hu = Zu.sessionMeta) || void 0 === hu ? void 0 : hu.attributes), su.attributes), {}, {
+              isSampled: Zu.isSampled.toString()
             })
-          }), Ot.overrides)) {
-          const tt = (null === Vt || void 0 === Vt ? void 0 : Vt.inheritOverrides) ? Qe(Qe({}, Dt.sessionMeta.overrides), Ot.overrides) : Ot.overrides;
-          Object.keys(tt).length > 0 ? Dt.sessionMeta.overrides = tt : delete Dt.sessionMeta.overrides
+          }), su.overrides)) {
+          const uu = (null === ju || void 0 === ju ? void 0 : ju.inheritOverrides) ? CE(CE({}, Zu.sessionMeta.overrides), su.overrides) : su.overrides;
+          Object.keys(uu).length > 0 ? Zu.sessionMeta.overrides = uu : delete Zu.sessionMeta.overrides
         }
         return {
-          initialSession: Dt,
-          lifecycleType: qt
+          initialSession: Zu,
+          lifecycleType: Uu
         }
       }
-      registerBeforeSendHook(tt) {
-        var et;
-        this.beforeSendHook = et => {
-          var Vt, Ot;
-          const qt = null === (Vt = et.meta.session) || void 0 === Vt ? void 0 : Vt.id;
-          qt && !this.transports.isPaused() && tt(qt);
-          const Dt = null === (Ot = et.meta.session) || void 0 === Ot ? void 0 : Ot.attributes;
-          if (Dt && "true" === (null === Dt || void 0 === Dt ? void 0 : Dt.isSampled)) {
-            var mt;
-            let tt = JSON.parse(JSON.stringify(et));
-            const Vt = null === (mt = tt.meta.session) || void 0 === mt ? void 0 : mt.attributes;
-            var dt;
-            if (null === Vt || void 0 === Vt || delete Vt.isSampled, 0 === Object.keys(null !== Vt && void 0 !== Vt ? Vt : {}).length) null === (dt = tt.meta.session) || void 0 === dt || delete dt.attributes;
-            return tt
+      registerBeforeSendHook(uu) {
+        var Eu;
+        this.beforeSendHook = Eu => {
+          var ju, su;
+          const Uu = null === (ju = Eu.meta.session) || void 0 === ju ? void 0 : ju.id;
+          Uu && !this.transports.isPaused() && uu(Uu);
+          const Zu = null === (su = Eu.meta.session) || void 0 === su ? void 0 : su.attributes;
+          if (Zu && "true" === (null === Zu || void 0 === Zu ? void 0 : Zu.isSampled)) {
+            var Xu;
+            let uu = JSON.parse(JSON.stringify(Eu));
+            const ju = null === (Xu = uu.meta.session) || void 0 === Xu ? void 0 : Xu.attributes;
+            var lu;
+            if (null === ju || void 0 === ju || delete ju.isSampled, 0 === Object.keys(null !== ju && void 0 !== ju ? ju : {}).length) null === (lu = uu.meta.session) || void 0 === lu || delete lu.attributes;
+            return uu
           }
           return null
-        }, null === (et = this.transports) || void 0 === et || et.addBeforeSendHooks(this.beforeSendHook)
+        }, null === (Eu = this.transports) || void 0 === Eu || Eu.addBeforeSendHooks(this.beforeSendHook)
       }
       initialize() {
-        var tt;
+        var uu;
         this.logDebug("init session instrumentation");
-        const et = document.prerendering;
-        var Vt;
-        if ((null === (tt = this.config.sessionTracking) || void 0 === tt ? void 0 : tt.enabled) && (et || this.prerenderSession)) return null !== (Vt = this.prerenderSession) && void 0 !== Vt || (this.prerenderSession = new Ue(this.metas, this.transports, (tt => {
-          this.prerenderSession = void 0, this.initializeSession(tt)
+        const Eu = document.prerendering;
+        var ju;
+        if ((null === (uu = this.config.sessionTracking) || void 0 === uu ? void 0 : uu.enabled) && (Eu || this.prerenderSession)) return null !== (ju = this.prerenderSession) && void 0 !== ju || (this.prerenderSession = new FE(this.metas, this.transports, (uu => {
+          this.prerenderSession = void 0, this.initializeSession(uu)
         }))), void this.prerenderSession.initialize();
         this.initializeSession()
       }
-      initializeSession(tt) {
-        const et = this.config.sessionTracking;
-        if (null === et || void 0 === et ? void 0 : et.enabled) {
-          var Vt, Ot;
-          const qt = Ae(et),
-            Dt = new qt(this);
-          this.isAdoptingSession = Dt.isAdopting, this.registerBeforeSendHook(Dt.recordActivity);
+      initializeSession(uu) {
+        const Eu = this.config.sessionTracking;
+        if (null === Eu || void 0 === Eu ? void 0 : Eu.enabled) {
+          var ju, su;
+          const Uu = BE(Eu),
+            Zu = new Uu(this);
+          this.isAdoptingSession = Zu.isAdopting, this.registerBeforeSendHook(Zu.recordActivity);
           const {
-            initialSession: mt,
-            lifecycleType: dt
-          } = this.createInitialSession(qt, et, tt);
-          qt.storeUserSession(mt);
-          const jt = mt.sessionMeta;
-          this.notifiedSession = jt, this.api.setSession(jt), this.captureListener = () => {
-            this.transports.isPaused() || Dt.updateSession({
+            initialSession: Xu,
+            lifecycleType: lu
+          } = this.createInitialSession(Uu, Eu, uu);
+          Uu.storeUserSession(Xu);
+          const qu = Xu.sessionMeta;
+          this.notifiedSession = qu, this.api.setSession(qu), this.captureListener = () => {
+            this.transports.isPaused() || Zu.updateSession({
               refreshActivity: !1
             })
-          }, null === (Vt = (Ot = this.metas).addCaptureListener) || void 0 === Vt || Vt.call(Ot, this.captureListener), dt === ue && this.api.pushEvent(ue, {}, void 0, {
+          }, null === (ju = (su = this.metas).addCaptureListener) || void 0 === ju || ju.call(su, this.captureListener), lu === pE && this.api.pushEvent(pE, {}, void 0, {
             skipDedupe: !0
-          }), dt === Ke && this.api.pushEvent(Ke, {}, void 0, {
+          }), lu === wE && this.api.pushEvent(wE, {}, void 0, {
             skipDedupe: !0
           })
         }
         this.sessionStartListener = this.sendSessionStartEvent.bind(this), this.metas.addListener(this.sessionStartListener)
       }
       destroy() {
-        var tt, et, Vt;
-        (null === (tt = this.prerenderSession) || void 0 === tt || tt.destroy(), this.captureListener) && (null === (et = (Vt = this.metas).removeCaptureListener) || void 0 === et || et.call(Vt, this.captureListener), this.captureListener = void 0);
+        var uu, Eu, ju;
+        (null === (uu = this.prerenderSession) || void 0 === uu || uu.destroy(), this.captureListener) && (null === (Eu = (ju = this.metas).removeCaptureListener) || void 0 === Eu || Eu.call(ju, this.captureListener), this.captureListener = void 0);
         this.beforeSendHook && (this.transports.removeBeforeSendHooks(this.beforeSendHook), this.beforeSendHook = void 0), this.sessionStartListener && (this.metas.removeListener(this.sessionStartListener), this.sessionStartListener = void 0)
       }
     };
 
-    function DV(tt, et, Vt, Ot) {
-      const qt = {
-        filename: tt || document.location.href,
-        function: et || "?"
+    function Uj(uu, Eu, ju, su) {
+      const Uu = {
+        filename: uu || document.location.href,
+        function: Eu || "?"
       };
-      return void 0 !== Vt && (qt.lineno = Vt), void 0 !== Ot && (qt.colno = Ot), qt
+      return void 0 !== ju && (Uu.lineno = ju), void 0 !== su && (Uu.colno = su), Uu
     }
-    const mV = /^\s*at (?:(?![a-z]+:\/\/)([^(]+?) ?\((?:address at )?)?((?:file|https?|blob|chrome-extension|address|native|eval|webpack|<anonymous>|[-a-z]+:|.*bundle|\/)?.*?)(?::(\d+))?(?::(\d+))?\)?\s*$/i,
-      dV = /\((\S*)(?::(\d+))(?::(\d+))\)/,
-      jV = /^(?=[\s\S]*?(?:\/|bundle|\.js|\[native code]))\s*(.*?)(?:\((.*?)\))?(?:^|@)?((?:file|https?|blob|chrome|webpack|resource|moz-extension|safari-extension|safari-web-extension|capacitor)?:\/.*?|\[native code]|[^@]*(?:bundle|\d+\.js)|\/[\w\-. /=]+)(?::(\d+))?(?::(\d+))?\s*$/i,
-      HV = /(\S+) line (\d+)(?: > eval line \d+)* > eval/i,
-      XV = "safari-extension",
-      QV = "safari-web-extension",
-      lV = /Minified React error #\d+;/i;
+    const Zj = /^\s*at (?:(?![a-z]+:\/\/)([^(]+?) ?\((?:address at )?)?((?:file|https?|blob|chrome-extension|address|native|eval|webpack|<anonymous>|[-a-z]+:|.*bundle|\/)?.*?)(?::(\d+))?(?::(\d+))?\)?\s*$/i,
+      Xj = /\((\S*)(?::(\d+))(?::(\d+))\)/,
+      lj = /^(?=[\s\S]*?(?:\/|bundle|\.js|\[native code]))\s*(.*?)(?:\((.*?)\))?(?:^|@)?((?:file|https?|blob|chrome|webpack|resource|moz-extension|safari-extension|safari-web-extension|capacitor)?:\/.*?|\[native code]|[^@]*(?:bundle|\d+\.js)|\/[\w\-. /=]+)(?::(\d+))?(?::(\d+))?\s*$/i,
+      qj = /(\S+) line (\d+)(?: > eval line \d+)* > eval/i,
+      fj = "safari-extension",
+      Cj = "safari-web-extension",
+      bj = /Minified React error #\d+;/i;
 
-    function EV(tt, et) {
-      const Vt = null === tt || void 0 === tt ? void 0 : tt.includes(XV),
-        Ot = !Vt && (null === tt || void 0 === tt ? void 0 : tt.includes("safari-web-extension"));
-      return Vt || Ot ? [(null === tt || void 0 === tt ? void 0 : tt.includes("@")) ? tt.split("@")[0] : tt, Vt ? `${XV}:${et}` : `${QV}:${et}`] : [tt, et]
+    function cj(uu, Eu) {
+      const ju = null === uu || void 0 === uu ? void 0 : uu.includes(fj),
+        su = !ju && (null === uu || void 0 === uu ? void 0 : uu.includes("safari-web-extension"));
+      return ju || su ? [(null === uu || void 0 === uu ? void 0 : uu.includes("@")) ? uu.split("@")[0] : uu, ju ? `${fj}:${Eu}` : `${Cj}:${Eu}`] : [uu, Eu]
     }
-    const fV = 1024;
+    const Nj = 1024;
 
-    function wV(tt) {
-      let et = [];
-      tt.stacktrace ? et = tt.stacktrace.split("\n").filter(((tt, et) => et % 2 === 0)) : tt.stack && (et = tt.stack.split("\n"));
-      const Vt = et.reduce(((et, Vt, Ot) => {
-        if (Vt.length > fV) return et;
-        let qt, Dt, mt, dt, jt;
-        if (qt = mV.exec(Vt)) {
-          if (Dt = qt[1], mt = qt[2], dt = qt[3], jt = qt[4], null === mt || void 0 === mt ? void 0 : mt.startsWith("eval")) {
-            const tt = dV.exec(mt);
-            tt && (mt = tt[1], dt = tt[2], jt = tt[3])
+    function Oj(uu) {
+      let Eu = [];
+      uu.stacktrace ? Eu = uu.stacktrace.split("\n").filter(((uu, Eu) => Eu % 2 === 0)) : uu.stack && (Eu = uu.stack.split("\n"));
+      const ju = Eu.reduce(((Eu, ju, su) => {
+        if (ju.length > Nj) return Eu;
+        let Uu, Zu, Xu, lu, qu;
+        if (Uu = Zj.exec(ju)) {
+          if (Zu = Uu[1], Xu = Uu[2], lu = Uu[3], qu = Uu[4], null === Xu || void 0 === Xu ? void 0 : Xu.startsWith("eval")) {
+            const uu = Xj.exec(Xu);
+            uu && (Xu = uu[1], lu = uu[2], qu = uu[3])
           }
-          mt = (null === mt || void 0 === mt ? void 0 : mt.startsWith("address at ")) ? mt.substring(11) : mt, [Dt, mt] = EV(Dt, mt)
-        } else if (qt = jV.exec(Vt)) {
-          if (Dt = qt[1], mt = qt[3], dt = qt[4], jt = qt[5], mt && mt.includes(" > eval")) {
-            const tt = HV.exec(mt);
-            tt && (Dt = Dt || "eval", mt = tt[1], dt = tt[2])
-          } else 0 === Ot && !jt && Kt(tt.columnNumber) && (jt = String(tt.columnNumber + 1));
-          [Dt, mt] = EV(Dt, mt)
+          Xu = (null === Xu || void 0 === Xu ? void 0 : Xu.startsWith("address at ")) ? Xu.substring(11) : Xu, [Zu, Xu] = cj(Zu, Xu)
+        } else if (Uu = lj.exec(ju)) {
+          if (Zu = Uu[1], Xu = Uu[3], lu = Uu[4], qu = Uu[5], Xu && Xu.includes(" > eval")) {
+            const uu = qj.exec(Xu);
+            uu && (Zu = Zu || "eval", Xu = uu[1], lu = uu[2])
+          } else 0 === su && !qu && wu(uu.columnNumber) && (qu = String(uu.columnNumber + 1));
+          [Zu, Xu] = cj(Zu, Xu)
         }
-        return (mt || Dt) && et.push(DV(mt, Dt, dt ? Number(dt) : void 0, jt ? Number(jt) : void 0)), et
+        return (Xu || Zu) && Eu.push(Uj(Xu, Zu, lu ? Number(lu) : void 0, qu ? Number(qu) : void 0)), Eu
       }), []);
-      return lV.test(tt.message) ? Vt.slice(1) : Vt
+      return bj.test(uu.message) ? ju.slice(1) : ju
     }
 
-    function yV(tt) {
+    function Yj(uu) {
       return {
-        frames: wV(tt)
+        frames: Oj(uu)
       }
     }
-    const NV = "http-request-start",
-      aV = "http-request-end";
-    var MV = class tt {
+    const hj = "http-request-start",
+      Dj = "http-request-end";
+    var gj = class uu {
       constructor() {
         this.subscribers = []
       }
-      subscribe(tt) {
-        return this.subscribers.push(tt), {
-          unsubscribe: () => this.unsubscribe(tt)
+      subscribe(uu) {
+        return this.subscribers.push(uu), {
+          unsubscribe: () => this.unsubscribe(uu)
         }
       }
-      unsubscribe(tt) {
-        this.subscribers = this.subscribers.filter((et => et !== tt))
+      unsubscribe(uu) {
+        this.subscribers = this.subscribers.filter((Eu => Eu !== uu))
       }
-      notify(tt) {
-        this.subscribers.forEach((et => et(tt)))
+      notify(uu) {
+        this.subscribers.forEach((Eu => Eu(uu)))
       }
       first() {
-        const et = new tt,
-          Vt = tt => {
-            et.notify(tt), Ot.unsubscribe()
+        const Eu = new uu,
+          ju = uu => {
+            Eu.notify(uu), su.unsubscribe()
           },
-          Ot = this.subscribe(Vt),
-          qt = et.unsubscribe.bind(et);
-        return this.withUnsubscribeOverride(et, qt, Vt)
+          su = this.subscribe(ju),
+          Uu = Eu.unsubscribe.bind(Eu);
+        return this.withUnsubscribeOverride(Eu, Uu, ju)
       }
-      takeWhile(et) {
-        const Vt = new tt,
-          Ot = tt => {
-            et(tt) ? Vt.notify(tt) : Vt.unsubscribe(Ot)
+      takeWhile(Eu) {
+        const ju = new uu,
+          su = uu => {
+            Eu(uu) ? ju.notify(uu) : ju.unsubscribe(su)
           };
-        this.subscribe(Ot);
-        const qt = Vt.unsubscribe.bind(Vt);
-        return this.withUnsubscribeOverride(Vt, qt, Ot)
+        this.subscribe(su);
+        const Uu = ju.unsubscribe.bind(ju);
+        return this.withUnsubscribeOverride(ju, Uu, su)
       }
-      filter(et) {
-        const Vt = new tt,
-          Ot = tt => {
-            et(tt) && Vt.notify(tt)
+      filter(Eu) {
+        const ju = new uu,
+          su = uu => {
+            Eu(uu) && ju.notify(uu)
           };
-        this.subscribe(Ot);
-        const qt = Vt.unsubscribe.bind(Vt);
-        return this.withUnsubscribeOverride(Vt, qt, Ot)
+        this.subscribe(su);
+        const Uu = ju.unsubscribe.bind(ju);
+        return this.withUnsubscribeOverride(ju, Uu, su)
       }
       merge() {
-        const et = new tt,
-          Vt = [];
-        for (var Ot = arguments.length, qt = new Array(Ot), Dt = 0; Dt < Ot; Dt++) qt[Dt] = arguments[Dt];
-        qt.forEach((tt => {
-          const Ot = tt.subscribe((tt => {
-            et.notify(tt)
+        const Eu = new uu,
+          ju = [];
+        for (var su = arguments.length, Uu = new Array(su), Zu = 0; Zu < su; Zu++) Uu[Zu] = arguments[Zu];
+        Uu.forEach((uu => {
+          const su = uu.subscribe((uu => {
+            Eu.notify(uu)
           }));
-          Vt.push(Ot)
+          ju.push(su)
         }));
-        const mt = et.unsubscribeAll.bind(et);
-        return et.unsubscribe = () => {
-          Vt.forEach((tt => tt.unsubscribe())), mt()
-        }, et
+        const Xu = Eu.unsubscribeAll.bind(Eu);
+        return Eu.unsubscribe = () => {
+          ju.forEach((uu => uu.unsubscribe())), Xu()
+        }, Eu
       }
-      withUnsubscribeOverride(tt, et, Vt) {
-        return tt.unsubscribe = tt => {
-          et(tt), this.unsubscribe(Vt)
-        }, tt
+      withUnsubscribeOverride(uu, Eu, ju) {
+        return uu.unsubscribe = uu => {
+          Eu(uu), this.unsubscribe(ju)
+        }, uu
       }
       unsubscribeAll() {
         this.subscribers = []
       }
     };
-    let bV = function(tt) {
-      return tt.TRACE = "trace", tt.DEBUG = "debug", tt.INFO = "info", tt.LOG = "log", tt.WARN = "warn", tt.ERROR = "error", tt
+    let Mj = function(uu) {
+      return uu.TRACE = "trace", uu.DEBUG = "debug", uu.INFO = "info", uu.LOG = "log", uu.WARN = "warn", uu.ERROR = "error", uu
     }({});
-    const JV = "log",
-      CV = ["trace", "debug", "info", "log", "warn", "error"];
-    let uV, KV = !1;
-    const hV = /^(?:[Uu]ncaught (?:exception: )?)?(?:((?:Eval|Internal|Range|Reference|Syntax|Type|URI|)Error): )?(.*)$/i,
-      vV = "Error",
-      WV = tt => tt.map((tt => St(tt) ? Fe(tt) : String(tt))).join(" ");
+    const ej = "log",
+      Gj = ["trace", "debug", "info", "log", "warn", "error"];
+    let pj, wj = !1;
+    const Jj = /^(?:[Uu]ncaught (?:exception: )?)?(?:((?:Eval|Internal|Range|Reference|Syntax|Type|URI|)Error): )?(.*)$/i,
+      dj = "Error",
+      aj = uu => uu.map((uu => Pu(uu) ? rE(uu) : String(uu))).join(" ");
 
-    function SV(tt) {
-      let et, Vt, Ot, qt, Dt = [];
-      if (zt(tt) && tt.error) et = tt.error.message, Vt = tt.error.name, Dt = wV(tt.error);
-      else if ((Ot = ot(tt)) || rt(tt)) {
+    function Pj(uu) {
+      let Eu, ju, su, Uu, Zu = [];
+      if (Wu(uu) && uu.error) Eu = uu.error.message, ju = uu.error.name, Zu = Oj(uu.error);
+      else if ((su = Su(uu)) || Iu(uu)) {
         const {
-          name: qt,
-          message: Dt
-        } = tt;
-        Vt = null !== qt && void 0 !== qt ? qt : Ot ? "DOMError" : "DOMException", et = Dt ? `${Vt}: ${Dt}` : Vt
-      } else Gt(tt) ? (Vt = tt.name, et = tt.message, Dt = wV(tt)) : (St(tt) || (qt = Ft(tt))) && (Vt = qt ? tt.constructor.name : void 0, et = `Non-Error exception captured with keys: ${Object.keys(tt)}`);
-      return [et, Vt, Dt]
+          name: Uu,
+          message: Zu
+        } = uu;
+        ju = null !== Uu && void 0 !== Uu ? Uu : su ? "DOMError" : "DOMException", Eu = Zu ? `${ju}: ${Zu}` : ju
+      } else iu(uu) ? (ju = uu.name, Eu = uu.message, Zu = Oj(uu)) : (Pu(uu) || (Uu = ru(uu))) && (ju = Uu ? uu.constructor.name : void 0, Eu = `Non-Error exception captured with keys: ${Object.keys(uu)}`);
+      return [Eu, ju, Zu]
     }
 
-    function cV(tt) {
-      const [et, Vt, Ot, qt, Dt] = tt;
-      let mt, dt, jt = [];
-      const Ht = ut(et),
-        Xt = DV(Vt, "?", Ot, qt);
-      return Dt || !Ht ? ([mt, dt, jt] = SV(null !== Dt && void 0 !== Dt ? Dt : et), 0 === jt.length && (jt = [Xt])) : Ht && ([mt, dt] = function(tt) {
-        var et, Vt;
-        const Ot = tt.match(hV),
-          qt = null !== (et = null === Ot || void 0 === Ot ? void 0 : Ot[1]) && void 0 !== et ? et : vV;
-        return [null !== (Vt = null === Ot || void 0 === Ot ? void 0 : Ot[2]) && void 0 !== Vt ? Vt : tt, qt]
-      }(et), jt = [Xt]), {
-        value: mt,
-        type: dt,
-        stackFrames: jt
+    function oj(uu) {
+      const [Eu, ju, su, Uu, Zu] = uu;
+      let Xu, lu, qu = [];
+      const fu = pu(Eu),
+        Cu = Uj(ju, "?", su, Uu);
+      return Zu || !fu ? ([Xu, lu, qu] = Pj(null !== Zu && void 0 !== Zu ? Zu : Eu), 0 === qu.length && (qu = [Cu])) : fu && ([Xu, lu] = function(uu) {
+        var Eu, ju;
+        const su = uu.match(Jj),
+          Uu = null !== (Eu = null === su || void 0 === su ? void 0 : su[1]) && void 0 !== Eu ? Eu : dj;
+        return [null !== (ju = null === su || void 0 === su ? void 0 : su[2]) && void 0 !== ju ? ju : uu, Uu]
+      }(Eu), qu = [Cu]), {
+        value: Xu,
+        type: lu,
+        stackFrames: qu
       }
     }
 
-    function RV(tt, et) {
-      return Gt(tt[0]) ? cV(tt) : {
-        value: et(tt)
+    function kj(uu, Eu) {
+      return iu(uu[0]) ? oj(uu) : {
+        value: Eu(uu)
       }
     }
-    const IV = tt => tt.map((tt => {
+    const mj = uu => uu.map((uu => {
       try {
-        return String(tt)
-      } catch (et) {
+        return String(uu)
+      } catch (Eu) {
         return ""
       }
     })).join(" ");
-    var PV = class tt extends VV {
+    var vj = class uu extends Ej {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-console", this.version = OV, this.errorSerializer = IV
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-console", this.version = jj, this.errorSerializer = mj
       }
       initialize() {
-        var et, Vt;
-        const Ot = this.config.consoleInstrumentation,
-          qt = (null === Ot || void 0 === Ot ? void 0 : Ot.serializeErrors) || !!(null === Ot || void 0 === Ot ? void 0 : Ot.errorSerializer);
-        this.errorSerializer = qt ? null !== (et = null === Ot || void 0 === Ot ? void 0 : Ot.errorSerializer) && void 0 !== et ? et : WV : IV;
-        const Dt = null !== (Vt = null === Ot || void 0 === Ot ? void 0 : Ot.disabledLevels) && void 0 !== Vt ? Vt : tt.defaultDisabledLevels,
-          mt = function(tt) {
-            if (uV || (uV = new MV), !KV) {
-              const et = null !== tt && void 0 !== tt ? tt : tV;
-              CV.forEach((tt => {
-                console[tt] = function() {
-                  for (var Vt, Ot = arguments.length, qt = new Array(Ot), Dt = 0; Dt < Ot; Dt++) qt[Dt] = arguments[Dt];
-                  uV.notify({
+        var Eu, ju;
+        const su = this.config.consoleInstrumentation,
+          Uu = (null === su || void 0 === su ? void 0 : su.serializeErrors) || !!(null === su || void 0 === su ? void 0 : su.errorSerializer);
+        this.errorSerializer = Uu ? null !== (Eu = null === su || void 0 === su ? void 0 : su.errorSerializer) && void 0 !== Eu ? Eu : aj : mj;
+        const Zu = null !== (ju = null === su || void 0 === su ? void 0 : su.disabledLevels) && void 0 !== ju ? ju : uu.defaultDisabledLevels,
+          Xu = function(uu) {
+            if (pj || (pj = new gj), !wj) {
+              const Eu = null !== uu && void 0 !== uu ? uu : RE;
+              Gj.forEach((uu => {
+                console[uu] = function() {
+                  for (var ju, su = arguments.length, Uu = new Array(su), Zu = 0; Zu < su; Zu++) Uu[Zu] = arguments[Zu];
+                  pj.notify({
                     type: "console",
-                    level: tt,
-                    args: qt
-                  }), null === (Vt = et[tt]) || void 0 === Vt || Vt.apply(console, qt)
+                    level: uu,
+                    args: Uu
+                  }), null === (ju = Eu[uu]) || void 0 === ju || ju.apply(console, Uu)
                 }
-              })), KV = !0
+              })), wj = !0
             }
-            return uV
+            return pj
           }(this.unpatchedConsole);
-        this.subscription = mt.subscribe((et => {
+        this.subscription = Xu.subscribe((Eu => {
           let {
-            level: Vt,
-            args: qt
-          } = et;
-          if (!Dt.includes(Vt)) try {
-            if (Vt !== bV.ERROR || (null === Ot || void 0 === Ot ? void 0 : Ot.consoleErrorAsLog))
-              if (Vt === bV.ERROR && (null === Ot || void 0 === Ot ? void 0 : Ot.consoleErrorAsLog)) {
+            level: ju,
+            args: Uu
+          } = Eu;
+          if (!Zu.includes(ju)) try {
+            if (ju !== Mj.ERROR || (null === su || void 0 === su ? void 0 : su.consoleErrorAsLog))
+              if (ju === Mj.ERROR && (null === su || void 0 === su ? void 0 : su.consoleErrorAsLog)) {
                 const {
-                  value: et,
-                  type: Ot,
-                  stackFrames: Dt
-                } = RV(qt, this.errorSerializer);
-                this.api.pushLog(et ? [tt.consoleErrorPrefix + et] : qt, {
-                  level: Vt,
+                  value: Eu,
+                  type: su,
+                  stackFrames: Zu
+                } = kj(Uu, this.errorSerializer);
+                this.api.pushLog(Eu ? [uu.consoleErrorPrefix + Eu] : Uu, {
+                  level: ju,
                   context: {
-                    value: null !== et && void 0 !== et ? et : "",
-                    type: null !== Ot && void 0 !== Ot ? Ot : "",
-                    stackFrames: (null === Dt || void 0 === Dt ? void 0 : Dt.length) ? WV(Dt) : ""
+                    value: null !== Eu && void 0 !== Eu ? Eu : "",
+                    type: null !== su && void 0 !== su ? su : "",
+                    stackFrames: (null === Zu || void 0 === Zu ? void 0 : Zu.length) ? aj(Zu) : ""
                   }
                 })
-              } else this.api.pushLog(qt, {
-                level: Vt
+              } else this.api.pushLog(Uu, {
+                level: ju
               });
             else {
               const {
-                value: et,
-                type: Vt,
-                stackFrames: Ot
-              } = RV(qt, this.errorSerializer);
-              if (et && !Vt && !Ot) return void this.api.pushError(new Error(tt.consoleErrorPrefix + et));
-              this.api.pushError(new Error(tt.consoleErrorPrefix + et), {
-                type: Vt,
-                stackFrames: Ot
+                value: Eu,
+                type: ju,
+                stackFrames: su
+              } = kj(Uu, this.errorSerializer);
+              if (Eu && !ju && !su) return void this.api.pushError(new Error(uu.consoleErrorPrefix + Eu));
+              this.api.pushError(new Error(uu.consoleErrorPrefix + Eu), {
+                type: ju,
+                stackFrames: su
               })
             }
-          } catch (mt) {
-            this.logError(mt)
+          } catch (Xu) {
+            this.logError(Xu)
           }
         }))
       }
       destroy() {
-        var tt;
-        null === (tt = this.subscription) || void 0 === tt || tt.unsubscribe(), this.subscription = void 0
+        var uu;
+        null === (uu = this.subscription) || void 0 === uu || uu.unsubscribe(), this.subscription = void 0
       }
     };
-    PV.defaultDisabledLevels = [bV.DEBUG, bV.TRACE, bV.LOG], PV.consoleErrorPrefix = "console.error: ";
-    const ZV = [];
-    var LV = class extends VV {
+    vj.defaultDisabledLevels = [Mj.DEBUG, Mj.TRACE, Mj.LOG], vj.consoleErrorPrefix = "console.error: ";
+    const Kj = [];
+    var Vj = class extends Ej {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-errors", this.version = OV
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-errors", this.version = jj
       }
       initialize() {
         this.logDebug("Initializing"),
-          function(tt) {
-            const et = window.onerror;
+          function(uu) {
+            const Eu = window.onerror;
             window.onerror = function() {
-              for (var Vt = arguments.length, Ot = new Array(Vt), qt = 0; qt < Vt; qt++) Ot[qt] = arguments[qt];
+              for (var ju = arguments.length, su = new Array(ju), Uu = 0; Uu < ju; Uu++) su[Uu] = arguments[Uu];
               try {
                 const {
-                  value: et,
-                  type: Vt,
-                  stackFrames: qt
-                } = cV(Ot), Dt = Ot[4];
-                if (et) {
-                  const Ot = {
-                    type: Vt,
-                    stackFrames: qt
+                  value: Eu,
+                  type: ju,
+                  stackFrames: Uu
+                } = oj(su), Zu = su[4];
+                if (Eu) {
+                  const su = {
+                    type: ju,
+                    stackFrames: Uu
                   };
-                  null != Dt && (Ot.originalError = Dt), tt.pushError(new Error(et), Ot)
+                  null != Zu && (su.originalError = Zu), uu.pushError(new Error(Eu), su)
                 }
               } finally {
-                null === et || void 0 === et || et.apply(window, Ot)
+                null === Eu || void 0 === Eu || Eu.apply(window, su)
               }
             }
           }(this.api),
-          function(tt) {
-            const et = et => {
-              var Vt;
-              let Ot, qt, Dt = et;
-              if (Dt.reason) Dt = et.reason;
-              else if (null === (Vt = et.detail) || void 0 === Vt ? void 0 : Vt.reason) {
-                var mt;
-                Dt = null === (mt = et.detail) || void 0 === mt ? void 0 : mt.reason
+          function(uu) {
+            const Eu = Eu => {
+              var ju;
+              let su, Uu, Zu = Eu;
+              if (Zu.reason) Zu = Eu.reason;
+              else if (null === (ju = Eu.detail) || void 0 === ju ? void 0 : ju.reason) {
+                var Xu;
+                Zu = null === (Xu = Eu.detail) || void 0 === Xu ? void 0 : Xu.reason
               }
-              let dt = [];
-              Zt(Dt) ? (Ot = `Non-Error promise rejection captured with value: ${String(Dt)}`, qt = "UnhandledRejection") : [Ot, qt, dt] = SV(Dt), Ot && tt.pushError(new Error(Ot), {
-                type: qt,
-                stackFrames: dt
+              let lu = [];
+              Ku(Zu) ? (su = `Non-Error promise rejection captured with value: ${String(Zu)}`, Uu = "UnhandledRejection") : [su, Uu, lu] = Pj(Zu), su && uu.pushError(new Error(su), {
+                type: Uu,
+                stackFrames: lu
               })
             };
-            window.addEventListener("unhandledrejection", et), ZV.push(et)
+            window.addEventListener("unhandledrejection", Eu), Kj.push(Eu)
           }(this.api)
       }
     };
-    const FV = "unknown";
-    var kV = class extends VV {
+    const rj = "unknown";
+    var Qj = class extends Ej {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-view", this.version = OV, this.waitingForActivation = !1, this.sendViewChangedEvent = tt => {
-          var et;
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-view", this.version = jj, this.waitingForActivation = !1, this.sendViewChangedEvent = uu => {
+          var Eu;
           if (this.waitingForActivation || document.prerendering) return;
-          const Vt = tt.view;
-          if (Vt && Vt.name !== (null === (et = this.notifiedView) || void 0 === et ? void 0 : et.name)) {
-            var Ot, qt, Dt;
-            const tt = null !== (Ot = null === (qt = this.notifiedView) || void 0 === qt ? void 0 : qt.name) && void 0 !== Ot ? Ot : FV;
-            this.notifiedView = Vt, this.api.pushEvent(Ce, {
-              fromView: tt,
-              toView: null !== (Dt = Vt.name) && void 0 !== Dt ? Dt : FV
+          const ju = uu.view;
+          if (ju && ju.name !== (null === (Eu = this.notifiedView) || void 0 === Eu ? void 0 : Eu.name)) {
+            var su, Uu, Zu;
+            const uu = null !== (su = null === (Uu = this.notifiedView) || void 0 === Uu ? void 0 : Uu.name) && void 0 !== su ? su : rj;
+            this.notifiedView = ju, this.api.pushEvent(GE, {
+              fromView: uu,
+              toView: null !== (Zu = ju.name) && void 0 !== Zu ? Zu : rj
             }, void 0, {
               skipDedupe: !0
             })
@@ -1319,1292 +1319,1292 @@ export const modules = {
         this.waitingForActivation = !1, this.metas.removeListener(this.sendViewChangedEvent), document.removeEventListener("prerenderingchange", this.prerenderListener)
       }
     };
-    class GV {
+    class ij {
       t;
       o = 0;
       i = [];
-      l(tt) {
-        if (tt.hadRecentInput) return;
-        const et = this.i[0],
-          Vt = this.i.at(-1);
-        this.o && et && Vt && tt.startTime - Vt.startTime < 1e3 && tt.startTime - et.startTime < 5e3 ? (this.o += tt.value, this.i.push(tt)) : (this.o = tt.value, this.i = [tt]), this.t?.(tt)
+      l(uu) {
+        if (uu.hadRecentInput) return;
+        const Eu = this.i[0],
+          ju = this.i.at(-1);
+        this.o && Eu && ju && uu.startTime - ju.startTime < 1e3 && uu.startTime - Eu.startTime < 5e3 ? (this.o += uu.value, this.i.push(uu)) : (this.o = uu.value, this.i = [uu]), this.t?.(uu)
       }
     }
-    const zV = () => {
-        const tt = performance.getEntriesByType("navigation")[0];
-        if (tt && tt.responseStart > 0 && tt.responseStart < performance.now()) return tt
+    const Wj = () => {
+        const uu = performance.getEntriesByType("navigation")[0];
+        if (uu && uu.responseStart > 0 && uu.responseStart < performance.now()) return uu
       },
-      oV = tt => {
+      Sj = uu => {
         if ("loading" === document.readyState) return "loading";
-        const et = zV();
-        if (et) {
-          if (tt < et.domInteractive) return "loading";
-          if (0 === et.domContentLoadedEventStart || tt < et.domContentLoadedEventStart) return "dom-interactive";
-          if (0 === et.domComplete || tt < et.domComplete) return "dom-content-loaded"
+        const Eu = Wj();
+        if (Eu) {
+          if (uu < Eu.domInteractive) return "loading";
+          if (0 === Eu.domContentLoadedEventStart || uu < Eu.domContentLoadedEventStart) return "dom-interactive";
+          if (0 === Eu.domComplete || uu < Eu.domComplete) return "dom-content-loaded"
         }
         return "complete"
       },
-      rV = tt => {
-        const et = tt.nodeName;
-        return 1 === tt.nodeType ? et.toLowerCase() : et.toUpperCase().replace(/^#/, "")
+      Ij = uu => {
+        const Eu = uu.nodeName;
+        return 1 === uu.nodeType ? Eu.toLowerCase() : Eu.toUpperCase().replace(/^#/, "")
       },
-      UV = tt => {
-        let et = "";
+      Fj = uu => {
+        let Eu = "";
         try {
-          for (; 9 !== tt?.nodeType;) {
-            const Vt = tt,
-              Ot = Vt.id ? "#" + Vt.id : [rV(Vt), ...Array.from(Vt.classList ?? []).sort()].join(".");
-            if (et.length + Ot.length > 99) return et || Ot;
-            if (et = et ? Ot + ">" + et : Ot, Vt.id) break;
-            tt = Vt.parentNode
+          for (; 9 !== uu?.nodeType;) {
+            const ju = uu,
+              su = ju.id ? "#" + ju.id : [Ij(ju), ...Array.from(ju.classList ?? []).sort()].join(".");
+            if (Eu.length + su.length > 99) return Eu || su;
+            if (Eu = Eu ? su + ">" + Eu : su, ju.id) break;
+            uu = ju.parentNode
           }
         } catch {}
-        return et
+        return Eu
       },
-      AV = new WeakMap;
+      Bj = new WeakMap;
 
-    function iV(tt, et) {
-      let Vt = AV.get(et);
-      return Vt || (Vt = new WeakMap, AV.set(et, Vt)), Vt.get(tt) || Vt.set(tt, new et), Vt.get(tt)
+    function Lj(uu, Eu) {
+      let ju = Bj.get(Eu);
+      return ju || (ju = new WeakMap, Bj.set(Eu, ju)), ju.get(uu) || ju.set(uu, new Eu), ju.get(uu)
     }
-    let YV = -1;
-    const BV = () => YV,
-      pV = tt => {
-        addEventListener("pageshow", (et => {
-          et.persisted && (YV = et.timeStamp, tt(et))
+    let tj = -1;
+    const xj = () => tj,
+      Tj = uu => {
+        addEventListener("pageshow", (Eu => {
+          Eu.persisted && (tj = Eu.timeStamp, uu(Eu))
         }), !0)
       },
-      xV = (tt, et, Vt, Ot) => {
-        let qt, Dt;
-        return mt => {
-          et.value >= 0 && (mt || Ot) && (Dt = et.value - (qt ?? 0), (Dt || void 0 === qt) && (qt = et.value, et.delta = Dt, et.rating = ((tt, et) => tt > et[1] ? "poor" : tt > et[0] ? "needs-improvement" : "good")(et.value, Vt), tt(et)))
+      Hj = (uu, Eu, ju, su) => {
+        let Uu, Zu;
+        return Xu => {
+          Eu.value >= 0 && (Xu || su) && (Zu = Eu.value - (Uu ?? 0), (Zu || void 0 === Uu) && (Uu = Eu.value, Eu.delta = Zu, Eu.rating = ((uu, Eu) => uu > Eu[1] ? "poor" : uu > Eu[0] ? "needs-improvement" : "good")(Eu.value, ju), uu(Eu)))
         }
       },
-      TV = tt => {
-        requestAnimationFrame((() => requestAnimationFrame((() => tt()))))
+      Aj = uu => {
+        requestAnimationFrame((() => requestAnimationFrame((() => uu()))))
       },
-      gV = () => zV()?.activationStart ?? 0;
-    let sV = -1;
-    const nV = new Set,
-      tO = () => "hidden" !== document.visibilityState || document.prerendering ? 1 / 0 : 0,
-      eO = tt => {
+      nj = () => Wj()?.activationStart ?? 0;
+    let yj = -1;
+    const zj = new Set,
+      Rj = () => "hidden" !== document.visibilityState || document.prerendering ? 1 / 0 : 0,
+      us = uu => {
         if ("hidden" === document.visibilityState) {
-          if ("visibilitychange" === tt.type)
-            for (const tt of nV) tt();
-          isFinite(sV) || (sV = "visibilitychange" === tt.type ? tt.timeStamp : 0, removeEventListener("prerenderingchange", eO, !0))
+          if ("visibilitychange" === uu.type)
+            for (const uu of zj) uu();
+          isFinite(yj) || (yj = "visibilitychange" === uu.type ? uu.timeStamp : 0, removeEventListener("prerenderingchange", us, !0))
         }
       },
-      VO = function() {
-        if (arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && (sV = 1 / 0), sV < 0) {
-          const tt = gV(),
-            et = document.prerendering ? void 0 : globalThis.performance.getEntriesByType("visibility-state").find((et => "hidden" === et.name && et.startTime >= tt))?.startTime;
-          sV = et ?? tO(), addEventListener("visibilitychange", eO, !0), addEventListener("prerenderingchange", eO, !0), pV((() => {
+      Es = function() {
+        if (arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && (yj = 1 / 0), yj < 0) {
+          const uu = nj(),
+            Eu = document.prerendering ? void 0 : globalThis.performance.getEntriesByType("visibility-state").find((Eu => "hidden" === Eu.name && Eu.startTime >= uu))?.startTime;
+          yj = Eu ?? Rj(), addEventListener("visibilitychange", us, !0), addEventListener("prerenderingchange", us, !0), Tj((() => {
             setTimeout((() => {
-              sV = tO()
+              yj = Rj()
             }))
           }))
         }
         return {
           get firstHiddenTime() {
-            return sV
+            return yj
           },
-          onHidden(tt) {
-            nV.add(tt)
+          onHidden(uu) {
+            zj.add(uu)
           }
         }
       },
-      OO = function(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
-          Vt = arguments.length > 2 ? arguments[2] : void 0,
-          Ot = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          qt = arguments.length > 4 ? arguments[4] : void 0,
-          Dt = arguments.length > 5 ? arguments[5] : void 0,
-          mt = arguments.length > 6 ? arguments[6] : void 0;
-        const dt = zV(),
-          jt = dt?.navigationId || 0;
-        let Ht = "navigate";
-        return Vt ? Ht = Vt : BV() >= 0 ? Ht = "back-forward-cache" : dt && (document.prerendering || gV() > 0 ? Ht = "prerender" : document.wasDiscarded ? Ht = "restore" : dt.type && (Ht = dt.type.replace(/_/g, "-"))), {
-          name: tt,
-          value: et,
+      ss = function(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+          ju = arguments.length > 2 ? arguments[2] : void 0,
+          su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+          Uu = arguments.length > 4 ? arguments[4] : void 0,
+          Zu = arguments.length > 5 ? arguments[5] : void 0,
+          Xu = arguments.length > 6 ? arguments[6] : void 0;
+        const lu = Wj(),
+          qu = lu?.navigationId || 0;
+        let fu = "navigate";
+        return ju ? fu = ju : xj() >= 0 ? fu = "back-forward-cache" : lu && (document.prerendering || nj() > 0 ? fu = "prerender" : document.wasDiscarded ? fu = "restore" : lu.type && (fu = lu.type.replace(/_/g, "-"))), {
+          name: uu,
+          value: Eu,
           rating: "good",
           delta: 0,
           entries: [],
           id: `v6-${Date.now()}-${Math.floor(8999999999999*Math.random())+1e12}`,
-          navigationType: Ht,
-          navigationId: Ot || jt,
-          navigationInteractionId: qt,
-          navigationURL: Dt || dt?.name,
-          navigationStartTime: mt || 0
+          navigationType: fu,
+          navigationId: su || qu,
+          navigationInteractionId: Uu,
+          navigationURL: Zu || lu?.name,
+          navigationStartTime: Xu || 0
         }
       },
-      qO = function(tt, et) {
-        let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      Us = function(uu, Eu) {
+        let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         try {
-          const Ot = tt.filter((tt => PerformanceObserver.supportedEntryTypes.includes(tt)));
-          if (Ot.length > 0) {
-            const tt = new PerformanceObserver((tt => {
+          const su = uu.filter((uu => PerformanceObserver.supportedEntryTypes.includes(uu)));
+          if (su.length > 0) {
+            const uu = new PerformanceObserver((uu => {
               queueMicrotask((() => {
-                const Vt = tt.getEntries();
-                Ot.length > 1 && Vt.sort(((tt, et) => tt.startTime + tt.duration - (et.startTime + et.duration))), et(Vt)
+                const ju = uu.getEntries();
+                su.length > 1 && ju.sort(((uu, Eu) => uu.startTime + uu.duration - (Eu.startTime + Eu.duration))), Eu(ju)
               }))
             }));
-            for (const et of Ot) tt.observe({
-              type: et,
+            for (const Eu of su) uu.observe({
+              type: Eu,
               buffered: !0,
-              ...Vt
+              ...ju
             });
-            return tt
+            return uu
           }
         } catch {}
       },
-      DO = tt => globalThis.PerformanceObserver?.supportedEntryTypes?.includes("soft-navigation") && "function" == typeof globalThis.PerformanceSoftNavigation?.prototype?.getLargestInteractionContentfulPaint && tt && tt.reportSoftNavs,
-      mO = (tt, et) => {
-        if (tt.set(et.navigationId, et), tt.size > 2) {
-          const et = tt.keys().next().value;
-          void 0 !== et && tt.delete(et)
+      Zs = uu => globalThis.PerformanceObserver?.supportedEntryTypes?.includes("soft-navigation") && "function" == typeof globalThis.PerformanceSoftNavigation?.prototype?.getLargestInteractionContentfulPaint && uu && uu.reportSoftNavs,
+      Xs = (uu, Eu) => {
+        if (uu.set(Eu.navigationId, Eu), uu.size > 2) {
+          const Eu = uu.keys().next().value;
+          void 0 !== Eu && uu.delete(Eu)
         }
       },
-      dO = tt => {
-        let et = !1;
+      ls = uu => {
+        let Eu = !1;
         return () => {
-          et || (tt(), et = !0)
+          Eu || (uu(), Eu = !0)
         }
       };
-    class jO {
+    class qs {
       u
     }
-    const HO = tt => {
-        document.prerendering ? addEventListener("prerenderingchange", tt, !0) : tt()
+    const fs = uu => {
+        document.prerendering ? addEventListener("prerenderingchange", uu, !0) : uu()
       },
-      XO = [1800, 3e3],
-      QO = function(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const Vt = DO(et);
-        HO((() => {
-          const Ot = iV(et, jO),
-            qt = VO();
-          let Dt, mt = OO("FCP");
-          const dt = qO(["paint"], (tt => {
-            for (const et of tt) "first-contentful-paint" === et.name && (dt.disconnect(), et.startTime < qt.firstHiddenTime && (mt.value = Math.max(et.startTime - gV(), 0), mt.entries.push(et), mt.navigationId = et.navigationId || mt.navigationId, Dt(!0)))
+      Cs = [1800, 3e3],
+      bs = function(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const ju = Zs(Eu);
+        fs((() => {
+          const su = Lj(Eu, qs),
+            Uu = Es();
+          let Zu, Xu = ss("FCP");
+          const lu = Us(["paint"], (uu => {
+            for (const Eu of uu) "first-contentful-paint" === Eu.name && (lu.disconnect(), Eu.startTime < Uu.firstHiddenTime && (Xu.value = Math.max(Eu.startTime - nj(), 0), Xu.entries.push(Eu), Xu.navigationId = Eu.navigationId || Xu.navigationId, Zu(!0)))
           }));
-          dt && (Dt = xV(tt, mt, XO, et.reportAllChanges), pV((Vt => {
-            mt = OO("FCP", -1, "back-forward-cache", mt.navigationId, mt.navigationInteractionId, mt.navigationURL, BV()), Dt = xV(tt, mt, XO, et.reportAllChanges), TV((() => {
-              mt.value = performance.now() - Vt.timeStamp, Dt(!0)
+          lu && (Zu = Hj(uu, Xu, Cs, Eu.reportAllChanges), Tj((ju => {
+            Xu = ss("FCP", -1, "back-forward-cache", Xu.navigationId, Xu.navigationInteractionId, Xu.navigationURL, xj()), Zu = Hj(uu, Xu, Cs, Eu.reportAllChanges), Aj((() => {
+              Xu.value = performance.now() - ju.timeStamp, Zu(!0)
             }))
-          }))), Vt && qO(["soft-navigation"], (Vt => {
-            Vt.forEach((Vt => {
-              Ot.u && Vt.navigationId && mO(Ot.u, Vt);
-              const qt = Math.max((Vt.presentationTime || Vt.paintTime || 0) - Vt.startTime, 0);
-              mt = OO("FCP", qt, "soft-navigation", Vt.navigationId, Vt.interactionId, Vt.name, Vt.startTime), Dt = xV(tt, mt, XO, et.reportAllChanges), Dt(!0)
+          }))), ju && Us(["soft-navigation"], (ju => {
+            ju.forEach((ju => {
+              su.u && ju.navigationId && Xs(su.u, ju);
+              const Uu = Math.max((ju.presentationTime || ju.paintTime || 0) - ju.startTime, 0);
+              Xu = ss("FCP", Uu, "soft-navigation", ju.navigationId, ju.interactionId, ju.name, ju.startTime), Zu = Hj(uu, Xu, Cs, Eu.reportAllChanges), Zu(!0)
             }))
-          }), et)
+          }), Eu)
         }))
       },
-      lO = [.1, .25],
-      EO = tt => tt.find((tt => 1 === tt.node?.nodeType)) || tt[0];
-    let fO = 0,
-      wO = 1 / 0,
-      yO = 0;
-    const NO = tt => {
-      for (const et of tt) et.interactionId && (wO = Math.min(wO, et.interactionId), yO = Math.max(yO, et.interactionId), fO = yO ? (yO - wO) / 7 + 1 : 0)
+      cs = [.1, .25],
+      Ns = uu => uu.find((uu => 1 === uu.node?.nodeType)) || uu[0];
+    let Os = 0,
+      Ys = 1 / 0,
+      hs = 0;
+    const Ds = uu => {
+      for (const Eu of uu) Eu.interactionId && (Ys = Math.min(Ys, Eu.interactionId), hs = Math.max(hs, Eu.interactionId), Os = hs ? (hs - Ys) / 7 + 1 : 0)
     };
-    let aO;
-    const MO = () => aO ? fO : performance.interactionCount ?? 0;
-    class bO {
+    let gs;
+    const Ms = () => gs ? Os : performance.interactionCount ?? 0;
+    class es {
       h = 0;
       v = [];
       p = new Map;
       m;
       M;
       T() {
-        return MO() - this.h
+        return Ms() - this.h
       }
       D() {
-        this.h = MO(), this.v.length = 0, this.p.clear()
+        this.h = Ms(), this.v.length = 0, this.p.clear()
       }
-      S(tt) {
-        const et = this.T(),
-          Vt = Math.min(this.v.length - 1, Math.floor(et / 50));
-        return !et || -1 !== Vt || "soft-navigation" !== tt && "back-forward-cache" !== tt ? this.v[Vt] : {
+      S(uu) {
+        const Eu = this.T(),
+          ju = Math.min(this.v.length - 1, Math.floor(Eu / 50));
+        return !Eu || -1 !== ju || "soft-navigation" !== uu && "back-forward-cache" !== uu ? this.v[ju] : {
           k: 8,
           id: -1,
           entries: []
         }
       }
-      l(tt) {
-        if (this.m?.(tt), !tt.interactionId) return;
-        const et = this.v.at(-1);
-        let Vt = this.p.get(tt.interactionId);
-        if (Vt || this.v.length < 10 || tt.duration > et.k) {
-          if (Vt ? tt.duration > Vt.k ? (Vt.entries = [tt], Vt.k = tt.duration) : tt.duration === Vt.k && tt.startTime === Vt.entries[0].startTime && Vt.entries.push(tt) : (Vt = {
-              id: tt.interactionId,
-              entries: [tt],
-              k: tt.duration
-            }, this.p.set(Vt.id, Vt), this.v.push(Vt)), this.v.sort(((tt, et) => et.k - tt.k)), this.v.length > 10) {
-            const tt = this.v.splice(10);
-            for (const et of tt) this.p.delete(et.id)
+      l(uu) {
+        if (this.m?.(uu), !uu.interactionId) return;
+        const Eu = this.v.at(-1);
+        let ju = this.p.get(uu.interactionId);
+        if (ju || this.v.length < 10 || uu.duration > Eu.k) {
+          if (ju ? uu.duration > ju.k ? (ju.entries = [uu], ju.k = uu.duration) : uu.duration === ju.k && uu.startTime === ju.entries[0].startTime && ju.entries.push(uu) : (ju = {
+              id: uu.interactionId,
+              entries: [uu],
+              k: uu.duration
+            }, this.p.set(ju.id, ju), this.v.push(ju)), this.v.sort(((uu, Eu) => Eu.k - uu.k)), this.v.length > 10) {
+            const uu = this.v.splice(10);
+            for (const Eu of uu) this.p.delete(Eu.id)
           }
-          this.M?.(Vt)
+          this.M?.(ju)
         }
       }
     }
-    const JO = tt => {
-        const et = "requestIdleCallback" in globalThis ? 1e3 : 0,
-          Vt = globalThis.requestIdleCallback || setTimeout,
-          Ot = globalThis.cancelIdleCallback || clearTimeout;
-        if ("hidden" === document.visibilityState) tt();
+    const Gs = uu => {
+        const Eu = "requestIdleCallback" in globalThis ? 1e3 : 0,
+          ju = globalThis.requestIdleCallback || setTimeout,
+          su = globalThis.cancelIdleCallback || clearTimeout;
+        if ("hidden" === document.visibilityState) uu();
         else {
-          const qt = dO(tt);
-          let Dt = -1;
-          const mt = () => {
-            Ot(Dt), qt()
+          const Uu = ls(uu);
+          let Zu = -1;
+          const Xu = () => {
+            su(Zu), Uu()
           };
-          addEventListener("visibilitychange", mt, {
+          addEventListener("visibilitychange", Xu, {
             once: !0,
             capture: !0
-          }), Dt = Vt((() => {
-            removeEventListener("visibilitychange", mt, {
+          }), Zu = ju((() => {
+            removeEventListener("visibilitychange", Xu, {
               capture: !0
-            }), qt()
+            }), Uu()
           }), {
-            timeout: et
+            timeout: Eu
           })
         }
       },
-      CO = [200, 500],
-      uO = function(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const Vt = iV(et = Object.assign({}, et), bO);
-        let Ot = [],
-          qt = [],
-          Dt = 0;
-        const mt = new WeakMap,
-          dt = new WeakMap;
-        let jt = !1;
-        const Ht = () => {
-            jt || (jt = !0, JO(Xt))
+      ps = [200, 500],
+      ws = function(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const ju = Lj(Eu = Object.assign({}, Eu), es);
+        let su = [],
+          Uu = [],
+          Zu = 0;
+        const Xu = new WeakMap,
+          lu = new WeakMap;
+        let qu = !1;
+        const fu = () => {
+            qu || (qu = !0, Gs(Cu))
           },
-          Xt = () => {
-            const tt = new Set(Vt.v.map((tt => mt.get(tt.entries[0])))),
-              et = qt.length - 10;
-            qt = qt.filter(((Vt, Ot) => Ot >= et || tt.has(Vt)));
-            const dt = new Set;
-            for (const Vt of qt) {
-              const tt = Qt(Vt.startTime, Vt.processingEnd);
-              for (const et of tt) dt.add(et)
+          Cu = () => {
+            const uu = new Set(ju.v.map((uu => Xu.get(uu.entries[0])))),
+              Eu = Uu.length - 10;
+            Uu = Uu.filter(((ju, su) => su >= Eu || uu.has(ju)));
+            const lu = new Set;
+            for (const ju of Uu) {
+              const uu = bu(ju.startTime, ju.processingEnd);
+              for (const Eu of uu) lu.add(Eu)
             }
-            const Ht = Ot.length - 10;
-            Ot = Ot.filter(((tt, et) => dt.has(tt) || et >= Ht && tt.startTime > Dt)), jt = !1
+            const fu = su.length - 10;
+            su = su.filter(((uu, Eu) => lu.has(uu) || Eu >= fu && uu.startTime > Zu)), qu = !1
           };
-        Vt.m = tt => {
-          const Vt = tt.startTime + tt.duration;
-          let Ot;
-          Dt = Math.max(Dt, tt.processingEnd);
-          for (let Dt = qt.length - 1; Dt >= 0; Dt--) {
-            const mt = qt[Dt];
-            if (Math.abs(Vt - mt.renderTime) <= 8) {
-              Ot = mt, Ot.startTime = Math.min(tt.startTime, Ot.startTime), Ot.processingStart = Math.min(tt.processingStart, Ot.processingStart), Ot.processingEnd = Math.max(tt.processingEnd, Ot.processingEnd), et.includeProcessedEventEntries && Ot.entries.push(tt);
+        ju.m = uu => {
+          const ju = uu.startTime + uu.duration;
+          let su;
+          Zu = Math.max(Zu, uu.processingEnd);
+          for (let Zu = Uu.length - 1; Zu >= 0; Zu--) {
+            const Xu = Uu[Zu];
+            if (Math.abs(ju - Xu.renderTime) <= 8) {
+              su = Xu, su.startTime = Math.min(uu.startTime, su.startTime), su.processingStart = Math.min(uu.processingStart, su.processingStart), su.processingEnd = Math.max(uu.processingEnd, su.processingEnd), Eu.includeProcessedEventEntries && su.entries.push(uu);
               break
             }
           }
-          Ot || (Ot = {
-            startTime: tt.startTime,
-            processingStart: tt.processingStart,
-            processingEnd: tt.processingEnd,
-            renderTime: Vt,
-            entries: et.includeProcessedEventEntries ? [tt] : []
-          }, qt.push(Ot)), tt.interactionId && mt.set(tt, Ot), Ht()
-        }, Vt.M = tt => {
-          if (!dt.get(tt)) {
-            const Vt = tt.entries.find((tt => tt.target))?.target;
-            if (Vt) {
-              const Ot = et.generateTarget?.(Vt) ?? UV(Vt);
-              dt.set(tt, Ot)
+          su || (su = {
+            startTime: uu.startTime,
+            processingStart: uu.processingStart,
+            processingEnd: uu.processingEnd,
+            renderTime: ju,
+            entries: Eu.includeProcessedEventEntries ? [uu] : []
+          }, Uu.push(su)), uu.interactionId && Xu.set(uu, su), fu()
+        }, ju.M = uu => {
+          if (!lu.get(uu)) {
+            const ju = uu.entries.find((uu => uu.target))?.target;
+            if (ju) {
+              const su = Eu.generateTarget?.(ju) ?? Fj(ju);
+              lu.set(uu, su)
             } else {
-              const et = tt.entries.find((tt => tt.targetSelector))?.targetSelector;
-              et && dt.set(tt, et)
+              const Eu = uu.entries.find((uu => uu.targetSelector))?.targetSelector;
+              Eu && lu.set(uu, Eu)
             }
           }
         };
-        const Qt = (tt, et) => {
-          const Vt = [];
-          for (const qt of Ot)
-            if (!(qt.startTime + qt.duration < tt)) {
-              if (qt.startTime > et) break;
-              Vt.push(qt)
-            } return Vt
+        const bu = (uu, Eu) => {
+          const ju = [];
+          for (const Uu of su)
+            if (!(Uu.startTime + Uu.duration < uu)) {
+              if (Uu.startTime > Eu) break;
+              ju.push(Uu)
+            } return ju
         };
-        qO(["long-animation-frame"], (tt => {
-            Ot = Ot.concat(tt), Ht()
-          }), et),
-          function(tt) {
-            let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        Us(["long-animation-frame"], (uu => {
+            su = su.concat(uu), fu()
+          }), Eu),
+          function(uu) {
+            let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             if (!globalThis.PerformanceEventTiming || !("interactionId" in PerformanceEventTiming.prototype)) return;
-            const Vt = VO();
-            HO((() => {
-              "interactionCount" in performance || aO || (aO = qO(["event"], NO, {
+            const ju = Es();
+            fs((() => {
+              "interactionCount" in performance || gs || (gs = Us(["event"], Ds, {
                 durationThreshold: 0
               }));
-              let Ot, qt = OO("INP");
-              const Dt = iV(et, bO),
-                mt = (Vt, mt, dt, jt, Ht) => {
-                  Dt.D(), qt = OO("INP", -1, Vt, mt, dt, jt, Ht), Ot = xV(tt, qt, CO, et.reportAllChanges)
+              let su, Uu = ss("INP");
+              const Zu = Lj(Eu, es),
+                Xu = (ju, Xu, lu, qu, fu) => {
+                  Zu.D(), Uu = ss("INP", -1, ju, Xu, lu, qu, fu), su = Hj(uu, Uu, ps, Eu.reportAllChanges)
                 },
-                dt = () => {
-                  const tt = Dt.S(qt.navigationType);
-                  tt && tt.k !== qt.value && (qt.value = tt.k, qt.entries = tt.entries, Ot())
+                lu = () => {
+                  const uu = Zu.S(Uu.navigationType);
+                  uu && uu.k !== Uu.value && (Uu.value = uu.k, Uu.entries = uu.entries, su())
                 },
-                jt = tt => {
-                  dt(), Ot(!0), mt("soft-navigation", tt.navigationId, tt.interactionId, tt.name, tt.startTime)
+                qu = uu => {
+                  lu(), su(!0), Xu("soft-navigation", uu.navigationId, uu.interactionId, uu.name, uu.startTime)
                 },
-                Ht = function(tt) {
-                  let et = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                  JO((() => {
-                    for (const et of tt) "soft-navigation" !== et.entryType ? Dt.l(et) : jt(et);
-                    dt(), et && Ot(!0)
+                fu = function(uu) {
+                  let Eu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+                  Gs((() => {
+                    for (const Eu of uu) "soft-navigation" !== Eu.entryType ? Zu.l(Eu) : qu(Eu);
+                    lu(), Eu && su(!0)
                   }))
                 },
-                Xt = ["event", "first-input"];
-              DO(et) && Xt.push("soft-navigation");
-              const Qt = qO(Xt, Ht, {
-                ...et,
-                durationThreshold: et.durationThreshold ?? 40
+                Cu = ["event", "first-input"];
+              Zs(Eu) && Cu.push("soft-navigation");
+              const bu = Us(Cu, fu, {
+                ...Eu,
+                durationThreshold: Eu.durationThreshold ?? 40
               });
-              Ot = xV(tt, qt, CO, et.reportAllChanges), Qt && (Vt.onHidden((() => {
-                Ht(Qt.takeRecords(), !0)
-              })), pV((() => {
-                mt("back-forward-cache", qt.navigationId, qt.navigationInteractionId, qt.navigationURL, BV())
+              su = Hj(uu, Uu, ps, Eu.reportAllChanges), bu && (ju.onHidden((() => {
+                fu(bu.takeRecords(), !0)
+              })), Tj((() => {
+                Xu("back-forward-cache", Uu.navigationId, Uu.navigationInteractionId, Uu.navigationURL, xj())
               })))
             }))
-          }((et => {
-            tt((tt => {
-              if (0 === tt.entries.length) {
-                const et = tt.navigationStartTime || 0,
-                  Vt = {
+          }((Eu => {
+            uu((uu => {
+              if (0 === uu.entries.length) {
+                const Eu = uu.navigationStartTime || 0,
+                  ju = {
                     processedEventEntries: [],
                     longAnimationFrameEntries: [],
                     inputDelay: 0,
                     processingDuration: 0,
-                    presentationDelay: tt.value,
-                    loadState: oV(et)
+                    presentationDelay: uu.value,
+                    loadState: Sj(Eu)
                   };
-                return Object.assign(tt, {
-                  attribution: Vt
+                return Object.assign(uu, {
+                  attribution: ju
                 })
               }
-              const et = tt.entries[0],
-                Ot = mt.get(et),
-                qt = Math.max(Ot.processingStart, et.startTime),
-                Dt = Math.max(et.startTime + et.duration, qt),
-                jt = Math.min(Ot.processingEnd, Dt),
-                Ht = Ot.entries.sort(((tt, et) => tt.processingStart - et.processingStart)),
-                Xt = Qt(et.startTime, jt),
-                lt = Vt.p.get(et.interactionId),
-                Et = {
-                  interactionTarget: dt.get(lt),
-                  interactionType: et.name.startsWith("key") ? "keyboard" : "pointer",
-                  interactionTime: et.startTime,
-                  nextPaintTime: Dt,
-                  processedEventEntries: Ht,
-                  longAnimationFrameEntries: Xt,
-                  inputDelay: qt - et.startTime,
-                  processingDuration: jt - qt,
-                  presentationDelay: Dt - jt,
-                  loadState: oV(et.startTime),
+              const Eu = uu.entries[0],
+                su = Xu.get(Eu),
+                Uu = Math.max(su.processingStart, Eu.startTime),
+                Zu = Math.max(Eu.startTime + Eu.duration, Uu),
+                qu = Math.min(su.processingEnd, Zu),
+                fu = su.entries.sort(((uu, Eu) => uu.processingStart - Eu.processingStart)),
+                Cu = bu(Eu.startTime, qu),
+                cu = ju.p.get(Eu.interactionId),
+                Nu = {
+                  interactionTarget: lu.get(cu),
+                  interactionType: Eu.name.startsWith("key") ? "keyboard" : "pointer",
+                  interactionTime: Eu.startTime,
+                  nextPaintTime: Zu,
+                  processedEventEntries: fu,
+                  longAnimationFrameEntries: Cu,
+                  inputDelay: Uu - Eu.startTime,
+                  processingDuration: qu - Uu,
+                  presentationDelay: Zu - qu,
+                  loadState: Sj(Eu.startTime),
                   longestScript: void 0,
                   totalScriptDuration: void 0,
                   totalStyleAndLayoutDuration: void 0,
                   totalPaintDuration: void 0,
                   totalUnattributedDuration: void 0
                 };
-              return (tt => {
-                const et = tt.interactionTime,
-                  Vt = tt.nextPaintTime;
-                if (!tt.longAnimationFrameEntries?.length || !et || !Vt) return;
-                const Ot = tt.inputDelay,
-                  qt = tt.processingDuration;
-                let Dt, mt, dt = 0,
-                  jt = 0,
-                  Ht = 0,
-                  Xt = 0;
-                for (const Et of tt.longAnimationFrameEntries) {
-                  jt = jt + Et.startTime + Et.duration - Et.styleAndLayoutStart;
-                  for (const tt of Et.scripts) {
-                    const Vt = tt.startTime + tt.duration;
-                    if (Vt < et) continue;
-                    const Ht = Vt - Math.max(et, tt.startTime),
-                      Qt = tt.duration ? Ht / tt.duration * tt.forcedStyleAndLayoutDuration : 0;
-                    dt += Ht - Qt, jt += Qt, Ht > Xt && (mt = tt.startTime < et + Ot ? "input-delay" : tt.startTime >= et + Ot + qt ? "presentation-delay" : "processing-duration", Dt = tt, Xt = Ht)
+              return (uu => {
+                const Eu = uu.interactionTime,
+                  ju = uu.nextPaintTime;
+                if (!uu.longAnimationFrameEntries?.length || !Eu || !ju) return;
+                const su = uu.inputDelay,
+                  Uu = uu.processingDuration;
+                let Zu, Xu, lu = 0,
+                  qu = 0,
+                  fu = 0,
+                  Cu = 0;
+                for (const Nu of uu.longAnimationFrameEntries) {
+                  qu = qu + Nu.startTime + Nu.duration - Nu.styleAndLayoutStart;
+                  for (const uu of Nu.scripts) {
+                    const ju = uu.startTime + uu.duration;
+                    if (ju < Eu) continue;
+                    const fu = ju - Math.max(Eu, uu.startTime),
+                      bu = uu.duration ? fu / uu.duration * uu.forcedStyleAndLayoutDuration : 0;
+                    lu += fu - bu, qu += bu, fu > Cu && (Xu = uu.startTime < Eu + su ? "input-delay" : uu.startTime >= Eu + su + Uu ? "presentation-delay" : "processing-duration", Zu = uu, Cu = fu)
                   }
                 }
-                const Qt = tt.longAnimationFrameEntries.at(-1),
-                  lt = Qt ? Qt.startTime + Qt.duration : 0;
-                lt >= et + Ot + qt && (Ht = Vt - lt), Dt && mt && (tt.longestScript = {
-                  entry: Dt,
-                  subpart: mt,
-                  intersectingDuration: Xt
-                }), tt.totalScriptDuration = dt, tt.totalStyleAndLayoutDuration = jt, tt.totalPaintDuration = Ht, tt.totalUnattributedDuration = Vt - et - dt - jt - Ht
-              })(Et), Object.assign(tt, {
-                attribution: Et
+                const bu = uu.longAnimationFrameEntries.at(-1),
+                  cu = bu ? bu.startTime + bu.duration : 0;
+                cu >= Eu + su + Uu && (fu = ju - cu), Zu && Xu && (uu.longestScript = {
+                  entry: Zu,
+                  subpart: Xu,
+                  intersectingDuration: Cu
+                }), uu.totalScriptDuration = lu, uu.totalStyleAndLayoutDuration = qu, uu.totalPaintDuration = fu, uu.totalUnattributedDuration = ju - Eu - lu - qu - fu
+              })(Nu), Object.assign(uu, {
+                attribution: Nu
               })
-            })(et))
-          }), et)
+            })(Eu))
+          }), Eu)
       };
-    class KO {
+    class ds {
       m;
       u;
-      l(tt) {
-        this.m?.(tt)
+      l(uu) {
+        this.m?.(uu)
       }
     }
-    const hO = [2500, 4e3];
-    let vO = 50;
-    const WO = [];
-    qO(["resource"], (tt => {
-      for (const et of tt) WO.push(et), WO.length > vO && WO.shift()
+    const as = [2500, 4e3];
+    let Ps = 50;
+    const os = [];
+    Us(["resource"], (uu => {
+      for (const Eu of uu) os.push(Eu), os.length > Ps && os.shift()
     }));
-    const SO = [800, 1800],
-      cO = tt => {
-        document.prerendering ? HO((() => cO(tt))) : "complete" !== document.readyState ? addEventListener("load", (() => cO(tt)), !0) : setTimeout(tt)
+    const ks = [800, 1800],
+      ms = uu => {
+        document.prerendering ? fs((() => ms(uu))) : "complete" !== document.readyState ? addEventListener("load", (() => ms(uu)), !0) : setTimeout(uu)
       },
-      RO = "load_state",
-      IO = "time_to_first_byte";
-    var PO = class {
-        constructor(tt, et) {
-          this.corePushMeasurement = tt, this.webVitalConfig = et
+      vs = "load_state",
+      Ks = "time_to_first_byte";
+    var Vs = class {
+        constructor(uu, Eu) {
+          this.corePushMeasurement = uu, this.webVitalConfig = Eu
         }
         initialize() {
           this.measureCLS(), this.measureFCP(), this.measureINP(), this.measureLCP(), this.measureTTFB()
         }
         measureCLS() {
-          var tt;
-          ! function(tt) {
-            let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            const Vt = iV(et = Object.assign({}, et), GV),
-              Ot = new WeakMap;
-            Vt.t = tt => {
-                if (tt?.sources?.length) {
-                  const Vt = EO(tt.sources),
-                    qt = Vt?.node;
-                  if (qt) {
-                    const tt = et.generateTarget?.(qt) ?? UV(qt);
-                    Ot.set(Vt, tt)
+          var uu;
+          ! function(uu) {
+            let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            const ju = Lj(Eu = Object.assign({}, Eu), ij),
+              su = new WeakMap;
+            ju.t = uu => {
+                if (uu?.sources?.length) {
+                  const ju = Ns(uu.sources),
+                    Uu = ju?.node;
+                  if (Uu) {
+                    const uu = Eu.generateTarget?.(Uu) ?? Fj(Uu);
+                    su.set(ju, uu)
                   }
                 }
               },
-              function(tt) {
-                let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                const Vt = VO();
-                QO(dO((() => {
-                  let Ot, qt = OO("CLS", 0);
-                  const Dt = iV(et, GV),
-                    mt = (Vt, mt, dt, jt, Ht) => {
-                      qt = OO("CLS", 0, Vt, mt, dt, jt, Ht), Dt.o = 0, Ot = xV(tt, qt, lO, et.reportAllChanges)
+              function(uu) {
+                let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+                const ju = Es();
+                bs(ls((() => {
+                  let su, Uu = ss("CLS", 0);
+                  const Zu = Lj(Eu, ij),
+                    Xu = (ju, Xu, lu, qu, fu) => {
+                      Uu = ss("CLS", 0, ju, Xu, lu, qu, fu), Zu.o = 0, su = Hj(uu, Uu, cs, Eu.reportAllChanges)
                     },
-                    dt = function() {
-                      let tt = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                      Dt.o > qt.value && (qt.value = Dt.o, qt.entries = Dt.i), Ot(tt)
+                    lu = function() {
+                      let uu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+                      Zu.o > Uu.value && (Uu.value = Zu.o, Uu.entries = Zu.i), su(uu)
                     },
-                    jt = tt => {
-                      dt(!0), mt("soft-navigation", tt.navigationId, tt.interactionId, tt.name, tt.startTime)
+                    qu = uu => {
+                      lu(!0), Xu("soft-navigation", uu.navigationId, uu.interactionId, uu.name, uu.startTime)
                     },
-                    Ht = tt => {
-                      for (const et of tt) "soft-navigation" !== et.entryType ? Dt.l(et) : jt(et);
-                      dt()
+                    fu = uu => {
+                      for (const Eu of uu) "soft-navigation" !== Eu.entryType ? Zu.l(Eu) : qu(Eu);
+                      lu()
                     },
-                    Xt = ["layout-shift"];
-                  DO(et) && Xt.push("soft-navigation");
-                  const Qt = qO(Xt, Ht);
-                  Qt && (Ot = xV(tt, qt, lO, et.reportAllChanges), Vt.onHidden((() => {
-                    Ht(Qt.takeRecords()), Ot(!0)
-                  })), pV((() => {
-                    mt("back-forward-cache", qt.navigationId, qt.navigationInteractionId, qt.navigationURL, BV()), TV(Ot)
-                  })), setTimeout(Ot))
+                    Cu = ["layout-shift"];
+                  Zs(Eu) && Cu.push("soft-navigation");
+                  const bu = Us(Cu, fu);
+                  bu && (su = Hj(uu, Uu, cs, Eu.reportAllChanges), ju.onHidden((() => {
+                    fu(bu.takeRecords()), su(!0)
+                  })), Tj((() => {
+                    Xu("back-forward-cache", Uu.navigationId, Uu.navigationInteractionId, Uu.navigationURL, xj()), Aj(su)
+                  })), setTimeout(su))
                 })))
-              }((et => {
-                tt((tt => {
-                  let et = {};
-                  if (tt.entries.length) {
-                    const Vt = tt.entries.reduce(((tt, et) => tt.value > et.value ? tt : et));
-                    if (Vt?.sources?.length) {
-                      const tt = EO(Vt.sources);
-                      tt && (et = {
-                        largestShiftTarget: Ot.get(tt),
-                        largestShiftTime: Vt.startTime,
-                        largestShiftValue: Vt.value,
-                        largestShiftSource: tt,
-                        largestShiftEntry: Vt,
-                        loadState: oV(Vt.startTime)
+              }((Eu => {
+                uu((uu => {
+                  let Eu = {};
+                  if (uu.entries.length) {
+                    const ju = uu.entries.reduce(((uu, Eu) => uu.value > Eu.value ? uu : Eu));
+                    if (ju?.sources?.length) {
+                      const uu = Ns(ju.sources);
+                      uu && (Eu = {
+                        largestShiftTarget: su.get(uu),
+                        largestShiftTime: ju.startTime,
+                        largestShiftValue: ju.value,
+                        largestShiftSource: uu,
+                        largestShiftEntry: ju,
+                        loadState: Sj(ju.startTime)
                       })
                     }
                   }
-                  return Object.assign(tt, {
-                    attribution: et
+                  return Object.assign(uu, {
+                    attribution: Eu
                   })
-                })(et))
-              }), et)
-          }((tt => {
+                })(Eu))
+              }), Eu)
+          }((uu => {
             const {
-              loadState: et,
-              largestShiftValue: Vt,
-              largestShiftTime: Ot,
-              largestShiftTarget: qt
-            } = tt.attribution, Dt = this.buildInitialValues(tt);
-            this.addIfPresent(Dt, "largest_shift_value", Vt), this.addIfPresent(Dt, "largest_shift_time", Ot);
-            const mt = this.buildInitialContext(tt);
-            this.addIfPresent(mt, RO, et), this.addIfPresent(mt, "largest_shift_target", qt), this.pushMeasurement(Dt, mt)
+              loadState: Eu,
+              largestShiftValue: ju,
+              largestShiftTime: su,
+              largestShiftTarget: Uu
+            } = uu.attribution, Zu = this.buildInitialValues(uu);
+            this.addIfPresent(Zu, "largest_shift_value", ju), this.addIfPresent(Zu, "largest_shift_time", su);
+            const Xu = this.buildInitialContext(uu);
+            this.addIfPresent(Xu, vs, Eu), this.addIfPresent(Xu, "largest_shift_target", Uu), this.pushMeasurement(Zu, Xu)
           }), {
-            reportAllChanges: null === (tt = this.webVitalConfig) || void 0 === tt ? void 0 : tt.reportAllChanges
+            reportAllChanges: null === (uu = this.webVitalConfig) || void 0 === uu ? void 0 : uu.reportAllChanges
           })
         }
         measureFCP() {
-          var tt;
-          ! function(tt) {
-            let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            const Vt = iV(et = Object.assign({}, et), jO);
-            DO(et) && (Vt.u = new Map), QO((et => {
-              tt((tt => {
-                let et = {
+          var uu;
+          ! function(uu) {
+            let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            const ju = Lj(Eu = Object.assign({}, Eu), qs);
+            Zs(Eu) && (ju.u = new Map), bs((Eu => {
+              uu((uu => {
+                let Eu = {
                   timeToFirstByte: 0,
-                  firstByteToFCP: tt.value,
-                  loadState: oV(BV())
+                  firstByteToFCP: uu.value,
+                  loadState: Sj(xj())
                 };
-                if ("soft-navigation" !== tt.navigationType) {
-                  if (tt.entries.length) {
-                    const Vt = zV(),
-                      Ot = tt.entries.at(-1);
-                    if (Vt) {
-                      const qt = Vt.responseStart,
-                        Dt = Vt.activationStart || 0,
-                        mt = Math.max(0, qt - Dt);
-                      et = {
-                        timeToFirstByte: mt,
-                        firstByteToFCP: tt.value - mt,
-                        loadState: oV(tt.entries[0].startTime),
-                        navigationEntry: Vt,
-                        fcpEntry: Ot
+                if ("soft-navigation" !== uu.navigationType) {
+                  if (uu.entries.length) {
+                    const ju = Wj(),
+                      su = uu.entries.at(-1);
+                    if (ju) {
+                      const Uu = ju.responseStart,
+                        Zu = ju.activationStart || 0,
+                        Xu = Math.max(0, Uu - Zu);
+                      Eu = {
+                        timeToFirstByte: Xu,
+                        firstByteToFCP: uu.value - Xu,
+                        loadState: Sj(uu.entries[0].startTime),
+                        navigationEntry: ju,
+                        fcpEntry: su
                       }
                     }
                   }
                 } else {
-                  const Ot = Vt.u?.get(tt.navigationId);
-                  Ot && (et = {
+                  const su = ju.u?.get(uu.navigationId);
+                  su && (Eu = {
                     timeToFirstByte: 0,
-                    firstByteToFCP: tt.value,
+                    firstByteToFCP: uu.value,
                     loadState: "complete",
-                    navigationEntry: Ot
+                    navigationEntry: su
                   })
                 }
-                return Object.assign(tt, {
-                  attribution: et
+                return Object.assign(uu, {
+                  attribution: Eu
                 })
-              })(et))
-            }), et)
-          }((tt => {
+              })(Eu))
+            }), Eu)
+          }((uu => {
             const {
-              firstByteToFCP: et,
-              timeToFirstByte: Vt,
-              loadState: Ot
-            } = tt.attribution, qt = this.buildInitialValues(tt);
-            this.addIfPresent(qt, "first_byte_to_fcp", et), this.addIfPresent(qt, IO, Vt);
-            const Dt = this.buildInitialContext(tt);
-            this.addIfPresent(Dt, RO, Ot), this.pushMeasurement(qt, Dt)
+              firstByteToFCP: Eu,
+              timeToFirstByte: ju,
+              loadState: su
+            } = uu.attribution, Uu = this.buildInitialValues(uu);
+            this.addIfPresent(Uu, "first_byte_to_fcp", Eu), this.addIfPresent(Uu, Ks, ju);
+            const Zu = this.buildInitialContext(uu);
+            this.addIfPresent(Zu, vs, su), this.pushMeasurement(Uu, Zu)
           }), {
-            reportAllChanges: null === (tt = this.webVitalConfig) || void 0 === tt ? void 0 : tt.reportAllChanges
+            reportAllChanges: null === (uu = this.webVitalConfig) || void 0 === uu ? void 0 : uu.reportAllChanges
           })
         }
         measureINP() {
-          var tt;
-          uO((tt => {
-            var et;
+          var uu;
+          ws((uu => {
+            var Eu;
             const {
-              interactionTime: Vt,
-              presentationDelay: Ot,
-              inputDelay: qt,
-              processingDuration: Dt,
-              nextPaintTime: mt,
-              loadState: dt,
-              interactionTarget: jt,
-              interactionType: Ht,
-              totalScriptDuration: Xt,
-              totalStyleAndLayoutDuration: Qt,
-              totalPaintDuration: lt,
-              totalUnattributedDuration: Et,
-              longestScript: ft
-            } = tt.attribution, wt = this.buildInitialValues(tt);
-            this.addIfPresent(wt, "interaction_time", Vt), this.addIfPresent(wt, "presentation_delay", Ot), this.addIfPresent(wt, "input_delay", qt), this.addIfPresent(wt, "processing_duration", Dt), this.addIfPresent(wt, "next_paint_time", mt), this.addNumberIfDefined(wt, "total_script_duration", Xt), this.addNumberIfDefined(wt, "total_style_and_layout_duration", Qt), this.addNumberIfDefined(wt, "total_paint_duration", lt), this.addNumberIfDefined(wt, "total_unattributed_duration", Et), this.addNumberIfDefined(wt, "longest_script_intersecting_duration", null === ft || void 0 === ft ? void 0 : ft.intersectingDuration);
-            const yt = this.buildInitialContext(tt);
-            this.addIfPresent(yt, RO, dt), this.addIfPresent(yt, "interaction_target", jt), this.addIfPresent(yt, "interaction_type", Ht), this.addIfPresent(yt, "longest_script_subpart", null === ft || void 0 === ft ? void 0 : ft.subpart), this.addIfPresent(yt, "longest_script_invoker_type", null === ft || void 0 === ft ? void 0 : ft.entry.invokerType), (null === (et = this.webVitalConfig) || void 0 === et ? void 0 : et.trackAttributionSources) && (this.addIfPresent(yt, "longest_script_invoker", null === ft || void 0 === ft ? void 0 : ft.entry.invoker), this.addIfPresent(yt, "longest_script_source_url", null === ft || void 0 === ft ? void 0 : ft.entry.sourceURL), this.addIfPresent(yt, "longest_script_source_function_name", null === ft || void 0 === ft ? void 0 : ft.entry.sourceFunctionName), this.addIfPresent(yt, "longest_script_source_char_position", void 0 !== (null === ft || void 0 === ft ? void 0 : ft.entry.sourceCharPosition) ? String(ft.entry.sourceCharPosition) : void 0)), this.pushMeasurement(wt, yt)
+              interactionTime: ju,
+              presentationDelay: su,
+              inputDelay: Uu,
+              processingDuration: Zu,
+              nextPaintTime: Xu,
+              loadState: lu,
+              interactionTarget: qu,
+              interactionType: fu,
+              totalScriptDuration: Cu,
+              totalStyleAndLayoutDuration: bu,
+              totalPaintDuration: cu,
+              totalUnattributedDuration: Nu,
+              longestScript: Ou
+            } = uu.attribution, Yu = this.buildInitialValues(uu);
+            this.addIfPresent(Yu, "interaction_time", ju), this.addIfPresent(Yu, "presentation_delay", su), this.addIfPresent(Yu, "input_delay", Uu), this.addIfPresent(Yu, "processing_duration", Zu), this.addIfPresent(Yu, "next_paint_time", Xu), this.addNumberIfDefined(Yu, "total_script_duration", Cu), this.addNumberIfDefined(Yu, "total_style_and_layout_duration", bu), this.addNumberIfDefined(Yu, "total_paint_duration", cu), this.addNumberIfDefined(Yu, "total_unattributed_duration", Nu), this.addNumberIfDefined(Yu, "longest_script_intersecting_duration", null === Ou || void 0 === Ou ? void 0 : Ou.intersectingDuration);
+            const hu = this.buildInitialContext(uu);
+            this.addIfPresent(hu, vs, lu), this.addIfPresent(hu, "interaction_target", qu), this.addIfPresent(hu, "interaction_type", fu), this.addIfPresent(hu, "longest_script_subpart", null === Ou || void 0 === Ou ? void 0 : Ou.subpart), this.addIfPresent(hu, "longest_script_invoker_type", null === Ou || void 0 === Ou ? void 0 : Ou.entry.invokerType), (null === (Eu = this.webVitalConfig) || void 0 === Eu ? void 0 : Eu.trackAttributionSources) && (this.addIfPresent(hu, "longest_script_invoker", null === Ou || void 0 === Ou ? void 0 : Ou.entry.invoker), this.addIfPresent(hu, "longest_script_source_url", null === Ou || void 0 === Ou ? void 0 : Ou.entry.sourceURL), this.addIfPresent(hu, "longest_script_source_function_name", null === Ou || void 0 === Ou ? void 0 : Ou.entry.sourceFunctionName), this.addIfPresent(hu, "longest_script_source_char_position", void 0 !== (null === Ou || void 0 === Ou ? void 0 : Ou.entry.sourceCharPosition) ? String(Ou.entry.sourceCharPosition) : void 0)), this.pushMeasurement(Yu, hu)
           }), {
-            reportAllChanges: null === (tt = this.webVitalConfig) || void 0 === tt ? void 0 : tt.reportAllChanges
+            reportAllChanges: null === (uu = this.webVitalConfig) || void 0 === uu ? void 0 : uu.reportAllChanges
           })
         }
         measureLCP() {
-          var tt;
-          ! function(tt) {
-            let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            null != (et = Object.assign({}, et)).resourceBufferSize && (vO = et.resourceBufferSize);
-            const Vt = iV(et, KO),
-              Ot = new WeakMap;
-            DO(et) && (Vt.u = new Map), Vt.m = tt => {
-                const Vt = tt.element;
-                if (Vt) {
-                  const qt = et.generateTarget?.(Vt) ?? UV(Vt);
-                  Ot.set(tt, qt)
-                } else tt.id && Ot.set(tt, `#${tt.id}`)
+          var uu;
+          ! function(uu) {
+            let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            null != (Eu = Object.assign({}, Eu)).resourceBufferSize && (Ps = Eu.resourceBufferSize);
+            const ju = Lj(Eu, ds),
+              su = new WeakMap;
+            Zs(Eu) && (ju.u = new Map), ju.m = uu => {
+                const ju = uu.element;
+                if (ju) {
+                  const Uu = Eu.generateTarget?.(ju) ?? Fj(ju);
+                  su.set(uu, Uu)
+                } else uu.id && su.set(uu, `#${uu.id}`)
               },
-              function(tt) {
-                let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                  Vt = !1;
-                const Ot = DO(et);
-                HO((() => {
-                  let qt, Dt = VO(),
-                    mt = OO("LCP");
-                  const dt = iV(et, KO),
-                    jt = (Ot, dt, jt, Ht, Xt) => {
-                      mt = OO("LCP", -1, Ot, dt, jt, Ht, Xt), qt = xV(tt, mt, hO, et.reportAllChanges), Vt = !1, "soft-navigation" === Ot && (Dt = VO(!0))
+              function(uu) {
+                let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                  ju = !1;
+                const su = Zs(Eu);
+                fs((() => {
+                  let Uu, Zu = Es(),
+                    Xu = ss("LCP");
+                  const lu = Lj(Eu, ds),
+                    qu = (su, lu, qu, fu, Cu) => {
+                      Xu = ss("LCP", -1, su, lu, qu, fu, Cu), Uu = Hj(uu, Xu, as, Eu.reportAllChanges), ju = !1, "soft-navigation" === su && (Zu = Es(!0))
                     },
-                    Ht = tt => {
-                      dt.u && tt.navigationId && mO(dt.u, tt), Vt || qt(!0), jt("soft-navigation", tt.navigationId, tt.interactionId, tt.name, tt.startTime);
-                      const et = tt.getLargestInteractionContentfulPaint?.();
-                      et && Xt([et])
+                    fu = uu => {
+                      lu.u && uu.navigationId && Xs(lu.u, uu), ju || Uu(!0), qu("soft-navigation", uu.navigationId, uu.interactionId, uu.name, uu.startTime);
+                      const Eu = uu.getLargestInteractionContentfulPaint?.();
+                      Eu && Cu([Eu])
                     },
-                    Xt = tt => {
-                      et.reportAllChanges || Ot || (tt = tt.slice(-1));
-                      for (const et of tt) {
-                        if (!et) continue;
-                        if ("soft-navigation" === et.entryType) {
-                          Ht(et);
+                    Cu = uu => {
+                      Eu.reportAllChanges || su || (uu = uu.slice(-1));
+                      for (const Eu of uu) {
+                        if (!Eu) continue;
+                        if ("soft-navigation" === Eu.entryType) {
+                          fu(Eu);
                           continue
                         }
-                        let tt = 0,
-                          Vt = [],
-                          Ot = et.startTime;
-                        if ("largest-contentful-paint" === et.entryType) tt = Math.max(et.startTime - gV(), 0), dt.l(et), Vt = [et];
-                        else if ("interaction-contentful-paint" === et.entryType) {
-                          const qt = et;
-                          if (!mt.navigationId) continue;
-                          if ("interactionId" in qt && qt.interactionId != mt.navigationInteractionId) continue;
-                          Ot = qt.largestContentfulPaint?.renderTime || 0, tt = Math.max(Ot - et.startTime, 0), qt.largestContentfulPaint && (dt.l(qt.largestContentfulPaint), Vt = [qt.largestContentfulPaint])
+                        let uu = 0,
+                          ju = [],
+                          su = Eu.startTime;
+                        if ("largest-contentful-paint" === Eu.entryType) uu = Math.max(Eu.startTime - nj(), 0), lu.l(Eu), ju = [Eu];
+                        else if ("interaction-contentful-paint" === Eu.entryType) {
+                          const Uu = Eu;
+                          if (!Xu.navigationId) continue;
+                          if ("interactionId" in Uu && Uu.interactionId != Xu.navigationInteractionId) continue;
+                          su = Uu.largestContentfulPaint?.renderTime || 0, uu = Math.max(su - Eu.startTime, 0), Uu.largestContentfulPaint && (lu.l(Uu.largestContentfulPaint), ju = [Uu.largestContentfulPaint])
                         }
-                        Ot < Dt.firstHiddenTime && (mt.value = tt, mt.entries = Vt, qt())
+                        su < Zu.firstHiddenTime && (Xu.value = uu, Xu.entries = ju, Uu())
                       }
                     },
-                    Qt = ["largest-contentful-paint"];
-                  Ot && Qt.push("interaction-contentful-paint", "soft-navigation");
-                  const lt = qO(Qt, Xt);
-                  if (lt) {
-                    qt = xV(tt, mt, hO, et.reportAllChanges);
-                    const Dt = ["keydown", "click", "visibilitychange"],
-                      dt = tt => {
-                        if (tt.isTrusted && !Vt) {
-                          const tt = mt.id;
-                          JO((() => {
-                            if (!Vt) {
-                              if (!Ot) {
-                                lt.disconnect();
-                                for (const tt of Dt) removeEventListener(tt, dt, {
+                    bu = ["largest-contentful-paint"];
+                  su && bu.push("interaction-contentful-paint", "soft-navigation");
+                  const cu = Us(bu, Cu);
+                  if (cu) {
+                    Uu = Hj(uu, Xu, as, Eu.reportAllChanges);
+                    const Zu = ["keydown", "click", "visibilitychange"],
+                      lu = uu => {
+                        if (uu.isTrusted && !ju) {
+                          const uu = Xu.id;
+                          Gs((() => {
+                            if (!ju) {
+                              if (!su) {
+                                cu.disconnect();
+                                for (const uu of Zu) removeEventListener(uu, lu, {
                                   capture: !0
                                 })
                               }
-                              tt === mt.id && (Vt = !0, qt(!0))
+                              uu === Xu.id && (ju = !0, Uu(!0))
                             }
                           }))
                         }
                       };
-                    for (const tt of Dt) addEventListener(tt, dt, {
+                    for (const uu of Zu) addEventListener(uu, lu, {
                       capture: !0
                     });
-                    pV((Ot => {
-                      jt("back-forward-cache", mt.navigationId, mt.navigationInteractionId, mt.navigationURL, BV()), qt = xV(tt, mt, hO, et.reportAllChanges), TV((() => {
-                        mt.value = performance.now() - Ot.timeStamp, Vt = !0, qt(!0)
+                    Tj((su => {
+                      qu("back-forward-cache", Xu.navigationId, Xu.navigationInteractionId, Xu.navigationURL, xj()), Uu = Hj(uu, Xu, as, Eu.reportAllChanges), Aj((() => {
+                        Xu.value = performance.now() - su.timeStamp, ju = !0, Uu(!0)
                       }))
                     }))
                   }
                 }))
-              }((et => {
-                tt((tt => {
-                  let et = {
+              }((Eu => {
+                uu((uu => {
+                  let Eu = {
                     timeToFirstByte: 0,
                     resourceLoadDelay: 0,
                     resourceLoadDuration: 0,
-                    elementRenderDelay: tt.value
+                    elementRenderDelay: uu.value
                   };
-                  if (tt.entries.length) {
-                    const qt = tt.entries.at(-1),
-                      Dt = tt => tt.name === qt.url && (tt.requestStart || tt.startTime) <= qt.startTime,
-                      mt = qt.url && (WO.findLast(Dt) || performance.getEntriesByType("resource").findLast(Dt));
-                    let dt;
-                    et.target = Ot.get(qt), et.lcpEntry = qt, qt.url && (et.url = qt.url), mt && (et.lcpResourceEntry = mt);
-                    let jt = 0,
-                      Ht = 0;
-                    if ("soft-navigation" !== tt.navigationType ? (dt = zV(), jt = dt?.activationStart ?? 0, Ht = dt?.responseStart ?? 0) : (jt = tt.navigationStartTime || 0, dt = Vt.u?.get(tt.navigationId)), dt) {
-                      const Vt = Math.max(0, Ht - jt),
-                        Ot = Math.max(Vt, mt ? (mt.requestStart || mt.startTime) - jt : 0),
-                        qt = Math.min(tt.value, Math.max(Ot, mt ? mt.responseEnd - jt : 0));
-                      et = {
-                        ...et,
-                        timeToFirstByte: Vt,
-                        resourceLoadDelay: Ot - Vt,
-                        resourceLoadDuration: qt - Ot,
-                        elementRenderDelay: tt.value - qt,
-                        navigationEntry: dt
+                  if (uu.entries.length) {
+                    const Uu = uu.entries.at(-1),
+                      Zu = uu => uu.name === Uu.url && (uu.requestStart || uu.startTime) <= Uu.startTime,
+                      Xu = Uu.url && (os.findLast(Zu) || performance.getEntriesByType("resource").findLast(Zu));
+                    let lu;
+                    Eu.target = su.get(Uu), Eu.lcpEntry = Uu, Uu.url && (Eu.url = Uu.url), Xu && (Eu.lcpResourceEntry = Xu);
+                    let qu = 0,
+                      fu = 0;
+                    if ("soft-navigation" !== uu.navigationType ? (lu = Wj(), qu = lu?.activationStart ?? 0, fu = lu?.responseStart ?? 0) : (qu = uu.navigationStartTime || 0, lu = ju.u?.get(uu.navigationId)), lu) {
+                      const ju = Math.max(0, fu - qu),
+                        su = Math.max(ju, Xu ? (Xu.requestStart || Xu.startTime) - qu : 0),
+                        Uu = Math.min(uu.value, Math.max(su, Xu ? Xu.responseEnd - qu : 0));
+                      Eu = {
+                        ...Eu,
+                        timeToFirstByte: ju,
+                        resourceLoadDelay: su - ju,
+                        resourceLoadDuration: Uu - su,
+                        elementRenderDelay: uu.value - Uu,
+                        navigationEntry: lu
                       }
                     }
                   }
-                  return Object.assign(tt, {
-                    attribution: et
+                  return Object.assign(uu, {
+                    attribution: Eu
                   })
-                })(et))
-              }), et)
-          }((tt => {
-            var et;
+                })(Eu))
+              }), Eu)
+          }((uu => {
+            var Eu;
             const {
-              elementRenderDelay: Vt,
-              resourceLoadDelay: Ot,
-              resourceLoadDuration: qt,
-              timeToFirstByte: Dt,
-              target: mt,
-              url: dt,
-              lcpResourceEntry: jt
-            } = tt.attribution, Ht = this.buildInitialValues(tt);
-            this.addIfPresent(Ht, "element_render_delay", Vt), this.addIfPresent(Ht, "resource_load_delay", Ot), this.addIfPresent(Ht, "resource_load_duration", qt), this.addIfPresent(Ht, IO, Dt);
-            const Xt = this.buildInitialContext(tt);
-            this.addIfPresent(Xt, "element", mt), (null === (et = this.webVitalConfig) || void 0 === et ? void 0 : et.trackAttributionSources) && (this.addIfPresent(Xt, "resource_url", dt), this.addIfPresent(Xt, "resource_delivery_type", null === jt || void 0 === jt ? void 0 : jt.deliveryType), this.addIfPresent(Xt, "resource_initiator_type", null === jt || void 0 === jt ? void 0 : jt.initiatorType)), this.pushMeasurement(Ht, Xt)
+              elementRenderDelay: ju,
+              resourceLoadDelay: su,
+              resourceLoadDuration: Uu,
+              timeToFirstByte: Zu,
+              target: Xu,
+              url: lu,
+              lcpResourceEntry: qu
+            } = uu.attribution, fu = this.buildInitialValues(uu);
+            this.addIfPresent(fu, "element_render_delay", ju), this.addIfPresent(fu, "resource_load_delay", su), this.addIfPresent(fu, "resource_load_duration", Uu), this.addIfPresent(fu, Ks, Zu);
+            const Cu = this.buildInitialContext(uu);
+            this.addIfPresent(Cu, "element", Xu), (null === (Eu = this.webVitalConfig) || void 0 === Eu ? void 0 : Eu.trackAttributionSources) && (this.addIfPresent(Cu, "resource_url", lu), this.addIfPresent(Cu, "resource_delivery_type", null === qu || void 0 === qu ? void 0 : qu.deliveryType), this.addIfPresent(Cu, "resource_initiator_type", null === qu || void 0 === qu ? void 0 : qu.initiatorType)), this.pushMeasurement(fu, Cu)
           }), {
-            reportAllChanges: null === (tt = this.webVitalConfig) || void 0 === tt ? void 0 : tt.reportAllChanges
+            reportAllChanges: null === (uu = this.webVitalConfig) || void 0 === uu ? void 0 : uu.reportAllChanges
           })
         }
         measureTTFB() {
-          var tt;
-          ! function(tt) {
-            ! function(tt) {
-              let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-              const Vt = DO(et);
-              let Ot = OO("TTFB"),
-                qt = xV(tt, Ot, SO, et.reportAllChanges);
-              cO((() => {
-                const Dt = zV();
-                if (Dt) {
-                  const mt = Dt.responseStart;
-                  Ot.value = Math.max(mt - gV(), 0), Ot.entries = [Dt], qt(!0), pV((() => {
-                    Ot = OO("TTFB", 0, "back-forward-cache", Ot.navigationId, Ot.navigationInteractionId, Ot.navigationURL, BV()), qt = xV(tt, Ot, SO, et.reportAllChanges), qt(!0)
-                  })), Vt && qO(["soft-navigation"], (Vt => {
-                    Vt.forEach((Vt => {
-                      Vt.navigationId && (Ot = OO("TTFB", 0, "soft-navigation", Vt.navigationId, Vt.interactionId, Vt.name, Vt.startTime), Ot.entries = [Vt], qt = xV(tt, Ot, SO, et.reportAllChanges), qt(!0))
+          var uu;
+          ! function(uu) {
+            ! function(uu) {
+              let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+              const ju = Zs(Eu);
+              let su = ss("TTFB"),
+                Uu = Hj(uu, su, ks, Eu.reportAllChanges);
+              ms((() => {
+                const Zu = Wj();
+                if (Zu) {
+                  const Xu = Zu.responseStart;
+                  su.value = Math.max(Xu - nj(), 0), su.entries = [Zu], Uu(!0), Tj((() => {
+                    su = ss("TTFB", 0, "back-forward-cache", su.navigationId, su.navigationInteractionId, su.navigationURL, xj()), Uu = Hj(uu, su, ks, Eu.reportAllChanges), Uu(!0)
+                  })), ju && Us(["soft-navigation"], (ju => {
+                    ju.forEach((ju => {
+                      ju.navigationId && (su = ss("TTFB", 0, "soft-navigation", ju.navigationId, ju.interactionId, ju.name, ju.startTime), su.entries = [ju], Uu = Hj(uu, su, ks, Eu.reportAllChanges), Uu(!0))
                     }))
-                  }), et)
+                  }), Eu)
                 }
               }))
-            }((et => {
-              tt((tt => {
-                const et = tt.entries[0];
-                let Vt = {
+            }((Eu => {
+              uu((uu => {
+                const Eu = uu.entries[0];
+                let ju = {
                   waitingDuration: 0,
                   cacheDuration: 0,
                   dnsDuration: 0,
                   connectionDuration: 0,
                   requestDuration: 0,
-                  navigationEntry: et
+                  navigationEntry: Eu
                 };
-                if (tt.entries.length && et instanceof PerformanceNavigationTiming) {
-                  const Ot = et.activationStart || 0,
-                    qt = Math.max((et.workerStart || et.fetchStart || 0) - Ot, 0),
-                    Dt = Math.max(et.domainLookupStart - Ot, 0),
-                    mt = Math.max(et.connectStart - Ot, 0),
-                    dt = Math.max(et.connectEnd - Ot, 0);
-                  Vt = {
-                    waitingDuration: qt,
-                    cacheDuration: Dt - qt,
-                    dnsDuration: mt - Dt,
-                    connectionDuration: dt - mt,
-                    requestDuration: tt.value - dt,
-                    navigationEntry: et
+                if (uu.entries.length && Eu instanceof PerformanceNavigationTiming) {
+                  const su = Eu.activationStart || 0,
+                    Uu = Math.max((Eu.workerStart || Eu.fetchStart || 0) - su, 0),
+                    Zu = Math.max(Eu.domainLookupStart - su, 0),
+                    Xu = Math.max(Eu.connectStart - su, 0),
+                    lu = Math.max(Eu.connectEnd - su, 0);
+                  ju = {
+                    waitingDuration: Uu,
+                    cacheDuration: Zu - Uu,
+                    dnsDuration: Xu - Zu,
+                    connectionDuration: lu - Xu,
+                    requestDuration: uu.value - lu,
+                    navigationEntry: Eu
                   }
                 }
-                return Object.assign(tt, {
-                  attribution: Vt
+                return Object.assign(uu, {
+                  attribution: ju
                 })
-              })(et))
+              })(Eu))
             }), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
-          }((tt => {
+          }((uu => {
             const {
-              dnsDuration: et,
-              connectionDuration: Vt,
-              requestDuration: Ot,
-              waitingDuration: qt,
-              cacheDuration: Dt
-            } = tt.attribution, mt = this.buildInitialValues(tt);
-            this.addIfPresent(mt, "dns_duration", et), this.addIfPresent(mt, "connection_duration", Vt), this.addIfPresent(mt, "request_duration", Ot), this.addIfPresent(mt, "waiting_duration", qt), this.addIfPresent(mt, "cache_duration", Dt);
-            const dt = this.buildInitialContext(tt);
-            this.pushMeasurement(mt, dt)
+              dnsDuration: Eu,
+              connectionDuration: ju,
+              requestDuration: su,
+              waitingDuration: Uu,
+              cacheDuration: Zu
+            } = uu.attribution, Xu = this.buildInitialValues(uu);
+            this.addIfPresent(Xu, "dns_duration", Eu), this.addIfPresent(Xu, "connection_duration", ju), this.addIfPresent(Xu, "request_duration", su), this.addIfPresent(Xu, "waiting_duration", Uu), this.addIfPresent(Xu, "cache_duration", Zu);
+            const lu = this.buildInitialContext(uu);
+            this.pushMeasurement(Xu, lu)
           }), {
-            reportAllChanges: null === (tt = this.webVitalConfig) || void 0 === tt ? void 0 : tt.reportAllChanges
+            reportAllChanges: null === (uu = this.webVitalConfig) || void 0 === uu ? void 0 : uu.reportAllChanges
           })
         }
-        buildInitialValues(tt) {
+        buildInitialValues(uu) {
           return {
-            [tt.name.toLowerCase()]: tt.value,
-            delta: tt.delta
+            [uu.name.toLowerCase()]: uu.value,
+            delta: uu.delta
           }
         }
-        buildInitialContext(tt) {
-          var et;
-          const Vt = null !== (et = ee("com.grafana.faro.lastNavigationId", st)) && void 0 !== et ? et : FV;
+        buildInitialContext(uu) {
+          var Eu;
+          const ju = null !== (Eu = uE("com.grafana.faro.lastNavigationId", yu)) && void 0 !== Eu ? Eu : rj;
           return {
-            id: tt.id,
-            rating: tt.rating,
-            navigation_type: tt.navigationType,
-            navigation_entry_id: Vt
+            id: uu.id,
+            rating: uu.rating,
+            navigation_type: uu.navigationType,
+            navigation_entry_id: ju
           }
         }
-        pushMeasurement(tt, et) {
+        pushMeasurement(uu, Eu) {
           this.corePushMeasurement({
             type: "web-vitals",
-            values: tt
+            values: uu
           }, {
-            context: et
+            context: Eu
           })
         }
-        addIfPresent(tt, et, Vt) {
-          Vt && (tt[et] = Vt)
+        addIfPresent(uu, Eu, ju) {
+          ju && (uu[Eu] = ju)
         }
-        addNumberIfDefined(tt, et, Vt) {
-          void 0 !== Vt && (tt[et] = Vt)
+        addNumberIfDefined(uu, Eu, ju) {
+          void 0 !== ju && (uu[Eu] = ju)
         }
       },
-      ZO = class extends VV {
+      rs = class extends Ej {
         constructor() {
-          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-web-vitals", this.version = OV
+          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-web-vitals", this.version = jj
         }
         initialize() {
-          this.logDebug("Initializing"), new PO(this.api.pushMeasurement, this.config.webVitalsInstrumentation).initialize()
+          this.logDebug("Initializing"), new Vs(this.api.pushMeasurement, this.config.webVitalsInstrumentation).initialize()
         }
       };
-    const LO = /^00-[a-f0-9]{32}-[a-f0-9]{16}-[0-9]{1,2}$/;
+    const Qs = /^00-[a-f0-9]{32}-[a-f0-9]{16}-[0-9]{1,2}$/;
 
-    function FO() {
-      let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-      for (const et of tt)
-        if ("traceparent" === et.name) {
-          if (!LO.test(et.description)) continue;
-          const [, tt, Vt] = et.description.split("-");
-          if (null != tt && null != Vt) return {
-            traceId: tt,
-            spanId: Vt
+    function is() {
+      let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+      for (const Eu of uu)
+        if ("traceparent" === Eu.name) {
+          if (!Qs.test(Eu.description)) continue;
+          const [, uu, ju] = Eu.description.split("-");
+          if (null != uu && null != ju) return {
+            traceId: uu,
+            spanId: ju
           };
           break
         }
     }
 
-    function kO(tt) {
-      let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+    function Ws(uu) {
+      let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
         wallNow: Date.now(),
         monoNow: performance.now()
       };
       const {
-        wallNow: Vt,
-        monoNow: Ot
-      } = et;
-      return Math.min(Vt, Vt - (Ot - tt))
+        wallNow: ju,
+        monoNow: su
+      } = Eu;
+      return Math.min(ju, ju - (su - uu))
     }
 
-    function GO(tt) {
-      let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      for (const [Vt, Ot] of Object.entries(et)) {
-        const et = tt[Vt];
-        return null != et && (Rt(Ot) ? Ot.includes(et) : et === Ot)
+    function Ss(uu) {
+      let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      for (const [ju, su] of Object.entries(Eu)) {
+        const Eu = uu[ju];
+        return null != Eu && (ku(su) ? su.includes(Eu) : Eu === su)
       }
       return !0
     }
 
-    function zO(tt) {
+    function Is(uu) {
       const {
-        connectEnd: et,
-        connectStart: Vt,
-        decodedBodySize: Ot,
-        domainLookupEnd: qt,
-        domainLookupStart: Dt,
-        duration: mt,
-        encodedBodySize: dt,
-        fetchStart: jt,
-        initiatorType: Ht,
-        name: Xt,
-        nextHopProtocol: Qt,
-        redirectEnd: lt,
-        redirectStart: Et,
-        renderBlockingStatus: ft,
-        requestStart: wt,
-        responseEnd: yt,
-        responseStart: Nt,
-        responseStatus: Mt,
-        secureConnectionStart: bt,
-        transferSize: Jt,
-        workerStart: Ct
-      } = tt;
+        connectEnd: Eu,
+        connectStart: ju,
+        decodedBodySize: su,
+        domainLookupEnd: Uu,
+        domainLookupStart: Zu,
+        duration: Xu,
+        encodedBodySize: lu,
+        fetchStart: qu,
+        initiatorType: fu,
+        name: Cu,
+        nextHopProtocol: bu,
+        redirectEnd: cu,
+        redirectStart: Nu,
+        renderBlockingStatus: Ou,
+        requestStart: Yu,
+        responseEnd: hu,
+        responseStart: Du,
+        responseStatus: gu,
+        secureConnectionStart: Mu,
+        transferSize: eu,
+        workerStart: Gu
+      } = uu;
       return {
-        name: Xt,
-        httpHost: rO(Xt),
-        duration: UO(mt),
-        tcpHandshakeTime: UO(et - Vt),
-        dnsLookupTime: UO(qt - Dt),
-        tlsNegotiationTime: UO(et - bt),
-        responseStatus: UO(Mt),
-        redirectTime: UO(lt - Et),
-        requestTime: UO(Nt - wt),
-        responseTime: UO(yt - Nt),
-        fetchTime: UO(yt - jt),
-        serviceWorkerTime: UO(Ct > 0 ? jt - Ct : 0),
-        decodedBodySize: UO(Ot),
-        encodedBodySize: UO(dt),
+        name: Cu,
+        httpHost: Bs(Cu),
+        duration: Ls(Xu),
+        tcpHandshakeTime: Ls(Eu - ju),
+        dnsLookupTime: Ls(Uu - Zu),
+        tlsNegotiationTime: Ls(Eu - Mu),
+        responseStatus: Ls(gu),
+        redirectTime: Ls(cu - Nu),
+        requestTime: Ls(Du - Yu),
+        responseTime: Ls(hu - Du),
+        fetchTime: Ls(hu - qu),
+        serviceWorkerTime: Ls(Gu > 0 ? qu - Gu : 0),
+        decodedBodySize: Ls(su),
+        encodedBodySize: Ls(lu),
         cacheHitStatus: function() {
-          let tt = "fullLoad";
-          0 === Jt ? Ot > 0 && (tt = "cache") : null != Mt ? 304 === Mt && (tt = "conditionalFetch") : dt > 0 && Jt < dt && (tt = "conditionalFetch");
-          return tt
+          let uu = "fullLoad";
+          0 === eu ? su > 0 && (uu = "cache") : null != gu ? 304 === gu && (uu = "conditionalFetch") : lu > 0 && eu < lu && (uu = "conditionalFetch");
+          return uu
         }(),
-        renderBlockingStatus: UO(ft),
-        protocol: Qt,
-        initiatorType: Ht,
+        renderBlockingStatus: Ls(Ou),
+        protocol: bu,
+        initiatorType: fu,
         visibilityState: document.visibilityState,
-        ttfb: UO(Nt - wt),
-        transferSize: UO(Jt)
+        ttfb: Ls(Du - Yu),
+        transferSize: Ls(eu)
       }
     }
 
-    function oO(tt) {
+    function Fs(uu) {
       const {
-        activationStart: et,
-        domComplete: Vt,
-        domContentLoadedEventEnd: Ot,
-        domContentLoadedEventStart: qt,
-        domInteractive: Dt,
-        fetchStart: mt,
-        loadEventEnd: dt,
-        loadEventStart: jt,
-        responseStart: Ht,
-        type: Xt
-      } = tt, Qt = function() {
-        var tt;
-        return null != (null === (tt = performance.timing) || void 0 === tt ? void 0 : tt.domLoading) ? performance.timing.domLoading - performance.timeOrigin : null
+        activationStart: Eu,
+        domComplete: ju,
+        domContentLoadedEventEnd: su,
+        domContentLoadedEventStart: Uu,
+        domInteractive: Zu,
+        fetchStart: Xu,
+        loadEventEnd: lu,
+        loadEventStart: qu,
+        responseStart: fu,
+        type: Cu
+      } = uu, bu = function() {
+        var uu;
+        return null != (null === (uu = performance.timing) || void 0 === uu ? void 0 : uu.domLoading) ? performance.timing.domLoading - performance.timeOrigin : null
       }();
-      return Qe(Qe({}, zO(tt)), {}, {
-        pageLoadTime: UO(Vt - mt),
-        documentParsingTime: UO(Qt ? Dt - Qt : null),
-        domProcessingTime: UO(Vt - Dt),
-        domContentLoadHandlerTime: UO(Ot - qt),
-        onLoadTime: UO(dt - jt),
-        ttfb: UO(Math.max(Ht - (null !== et && void 0 !== et ? et : 0), 0)),
-        type: Xt
+      return CE(CE({}, Is(uu)), {}, {
+        pageLoadTime: Ls(ju - Xu),
+        documentParsingTime: Ls(bu ? Zu - bu : null),
+        domProcessingTime: Ls(ju - Zu),
+        domContentLoadHandlerTime: Ls(su - Uu),
+        onLoadTime: Ls(lu - qu),
+        ttfb: Ls(Math.max(fu - (null !== Eu && void 0 !== Eu ? Eu : 0), 0)),
+        type: Cu
       })
     }
 
-    function rO(tt) {
+    function Bs(uu) {
       try {
-        return new URL(tt).host || FV
-      } catch (et) {
-        return FV
+        return new URL(uu).host || rj
+      } catch (Eu) {
+        return rj
       }
     }
 
-    function UO(tt) {
-      return null == tt ? FV : "number" === typeof tt ? Math.round(tt > 0 ? tt : 0).toString() : tt.toString()
+    function Ls(uu) {
+      return null == uu ? rj : "number" === typeof uu ? Math.round(uu > 0 ? uu : 0).toString() : uu.toString()
     }
-    const AO = {
+    const ts = {
       initiatorType: ["xmlhttprequest", "fetch"]
     };
 
-    function iO(tt, et, Vt, Ot, qt, Dt, mt) {
+    function xs(uu, Eu, ju, su, Uu, Zu, Xu) {
       try {
-        var dt = tt[Dt](mt),
-          jt = dt.value
-      } catch (tt) {
-        return void Vt(tt)
+        var lu = uu[Zu](Xu),
+          qu = lu.value
+      } catch (uu) {
+        return void ju(uu)
       }
-      dt.done ? et(jt) : Promise.resolve(jt).then(Ot, qt)
+      lu.done ? Eu(qu) : Promise.resolve(qu).then(su, Uu)
     }
 
-    function YO(tt) {
+    function Ts(uu) {
       return function() {
-        var et = this,
-          Vt = arguments;
-        return new Promise((function(Ot, qt) {
-          var Dt = tt.apply(et, Vt);
+        var Eu = this,
+          ju = arguments;
+        return new Promise((function(su, Uu) {
+          var Zu = uu.apply(Eu, ju);
 
-          function mt(tt) {
-            iO(Dt, Ot, qt, mt, dt, "next", tt)
+          function Xu(uu) {
+            xs(Zu, su, Uu, Xu, lu, "next", uu)
           }
 
-          function dt(tt) {
-            iO(Dt, Ot, qt, mt, dt, "throw", tt)
+          function lu(uu) {
+            xs(Zu, su, Uu, Xu, lu, "throw", uu)
           }
-          mt(void 0)
+          Xu(void 0)
         }))
       }
     }
-    const BO = new MV;
-    var pO = class extends VV {
+    const Hs = new gj;
+    var As = class extends Ej {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-performance", this.version = OV
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-performance", this.version = jj
       }
       initialize() {
-        var tt = this;
+        var uu = this;
         if (!("PerformanceObserver" in window)) return void this.logDebug("performance observer not supported. Disable performance instrumentation.");
-        let et = !1;
-        const Vt = () => {
-          ! function(tt) {
-            if ("complete" === document.readyState) tt();
+        let Eu = !1;
+        const ju = () => {
+          ! function(uu) {
+            if ("complete" === document.readyState) uu();
             else {
-              const et = () => {
-                "complete" === document.readyState && (tt(), document.removeEventListener("readystatechange", et))
+              const Eu = () => {
+                "complete" === document.readyState && (uu(), document.removeEventListener("readystatechange", Eu))
               };
-              document.addEventListener("readystatechange", et)
+              document.addEventListener("readystatechange", Eu)
             }
-          }(YO((function*() {
-            if (et) return;
-            const Vt = tt.api.pushEvent,
+          }(Ts((function*() {
+            if (Eu) return;
+            const ju = uu.api.pushEvent,
               {
-                faroNavigationId: Ot
-              } = yield function(tt) {
-                let et;
-                const Vt = new Promise((tt => {
-                  et = tt
+                faroNavigationId: su
+              } = yield function(uu) {
+                let Eu;
+                const ju = new Promise((uu => {
+                  Eu = uu
                 }));
-                return new PerformanceObserver((Vt => {
-                  var Ot;
-                  const [qt] = Vt.getEntries();
-                  if (null == qt || Tt(qt.name)) return;
-                  const Dt = qt.toJSON();
-                  let mt = FO(null === Dt || void 0 === Dt ? void 0 : Dt.serverTiming);
-                  const dt = null !== (Ot = ee("com.grafana.faro.lastNavigationId", st)) && void 0 !== Ot ? Ot : FV,
-                    jt = Qe(Qe({}, oO(Dt)), {}, {
-                      faroNavigationId: ae(),
-                      faroPreviousNavigationId: dt
+                return new PerformanceObserver((ju => {
+                  var su;
+                  const [Uu] = ju.getEntries();
+                  if (null == Uu || Au(Uu.name)) return;
+                  const Zu = Uu.toJSON();
+                  let Xu = is(null === Zu || void 0 === Zu ? void 0 : Zu.serverTiming);
+                  const lu = null !== (su = uE("com.grafana.faro.lastNavigationId", yu)) && void 0 !== su ? su : rj,
+                    qu = CE(CE({}, Fs(Zu)), {}, {
+                      faroNavigationId: DE(),
+                      faroPreviousNavigationId: lu
                     });
-                  Ve("com.grafana.faro.lastNavigationId", jt.faroNavigationId, st), tt("faro.performance.navigation", jt, void 0, {
-                    spanContext: mt,
-                    timestampOverwriteMs: kO(Dt.startTime)
-                  }), et(jt)
+                  EE("com.grafana.faro.lastNavigationId", qu.faroNavigationId, yu), uu("faro.performance.navigation", qu, void 0, {
+                    spanContext: Xu,
+                    timestampOverwriteMs: Ws(Zu.startTime)
+                  }), Eu(qu)
                 })).observe({
                   type: "navigation",
                   buffered: !0
-                }), Vt
-              }(Vt);
-            et || null == Ot || function(tt, et, Vt, Ot) {
-              const qt = Ot.trackResources;
-              new PerformanceObserver((Ot => {
-                const Dt = Ot.getEntries(),
-                  mt = {
+                }), ju
+              }(ju);
+            Eu || null == su || function(uu, Eu, ju, su) {
+              const Uu = su.trackResources;
+              new PerformanceObserver((su => {
+                const Zu = su.getEntries(),
+                  Xu = {
                     wallNow: Date.now(),
                     monoNow: performance.now()
                   };
-                for (const dt of Dt) {
-                  if (Tt(dt.name)) continue;
-                  null === Vt || void 0 === Vt || Vt.notify({
+                for (const lu of Zu) {
+                  if (Au(lu.name)) continue;
+                  null === ju || void 0 === ju || ju.notify({
                     type: "resource"
                   });
-                  const Ot = dt.toJSON();
-                  let Dt = FO(null === Ot || void 0 === Ot ? void 0 : Ot.serverTiming);
-                  (null == qt && GO(Ot, AO) || qt) && et("faro.performance.resource", Qe(Qe({}, zO(Ot)), {}, {
-                    faroNavigationId: tt,
-                    faroResourceId: ae()
+                  const su = lu.toJSON();
+                  let Zu = is(null === su || void 0 === su ? void 0 : su.serverTiming);
+                  (null == Uu && Ss(su, ts) || Uu) && Eu("faro.performance.resource", CE(CE({}, Is(su)), {}, {
+                    faroNavigationId: uu,
+                    faroResourceId: DE()
                   }), void 0, {
-                    spanContext: Dt,
-                    timestampOverwriteMs: kO(Ot.startTime, mt)
+                    spanContext: Zu,
+                    timestampOverwriteMs: Ws(su.startTime, Xu)
                   })
                 }
               })).observe({
                 type: "resource",
                 buffered: !0
               })
-            }(Ot, Vt, BO, tt.config)
+            }(su, ju, Hs, uu.config)
           })))
         };
         this.cancelInitialization = () => {
-          et = !0, document.removeEventListener("prerenderingchange", Vt)
-        }, document.prerendering ? document.addEventListener("prerenderingchange", Vt, {
+          Eu = !0, document.removeEventListener("prerenderingchange", ju)
+        }, document.prerendering ? document.addEventListener("prerenderingchange", ju, {
           once: !0
-        }) : Vt()
+        }) : ju()
       }
       destroy() {
-        var tt;
-        null === (tt = this.cancelInitialization) || void 0 === tt || tt.call(this), this.cancelInitialization = void 0
+        var uu;
+        null === (uu = this.cancelInitialization) || void 0 === uu || uu.call(this), this.cancelInitialization = void 0
       }
     };
-    const xO = "data-faro-user-action-name",
-      TO = xO.replace(/-name$/, "-timeout"),
-      gO = 1e3;
+    const ns = "data-faro-user-action-name",
+      ys = ns.replace(/-name$/, "-timeout"),
+      zs = 1e3;
 
-    function sO(tt) {
-      return `data-${(tt.startsWith("data-")?tt.slice(5):tt).replace(/([a-z0-9])([A-Z])/g,"$1-$2").toLowerCase()}`
+    function Rs(uu) {
+      return `data-${(uu.startsWith("data-")?uu.slice(5):uu).replace(/([a-z0-9])([A-Z])/g,"$1-$2").toLowerCase()}`
     }
 
-    function nO(tt) {
-      let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100,
-        Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : ie;
-      if (void 0 === tt) return et;
-      let Ot = NaN;
+    function uU(uu) {
+      let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100,
+        ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : LE;
+      if (void 0 === uu) return Eu;
+      let su = NaN;
       try {
-        Ot = "string" === typeof tt && "" === tt.trim() ? NaN : Number(tt)
-      } catch (qt) {}
-      return !Number.isFinite(Ot) || Ot <= 0 ? (Vt(`initialActivityTimeout must be a finite number greater than zero; using ${et} ms`), et) : Ot > 1e3 ? (Vt(`initialActivityTimeout cannot exceed ${gO} ms; clamping to the maximum`), gO) : Ot
+        su = "string" === typeof uu && "" === uu.trim() ? NaN : Number(uu)
+      } catch (Uu) {}
+      return !Number.isFinite(su) || su <= 0 ? (ju(`initialActivityTimeout must be a finite number greater than zero; using ${Eu} ms`), Eu) : su > 1e3 ? (ju(`initialActivityTimeout cannot exceed ${zs} ms; clamping to the maximum`), zs) : su
     }
 
-    function tq(tt, et, Vt) {
-      return void 0 !== tt && window.clearTimeout(tt), window.setTimeout((() => {
-        et()
-      }), Vt)
+    function EU(uu, Eu, ju) {
+      return void 0 !== uu && window.clearTimeout(uu), window.setTimeout((() => {
+        Eu()
+      }), ju)
     }
 
-    function eq(tt) {
-      return tt.type === aV
+    function jU(uu) {
+      return uu.type === Dj
     }
-    let Vq, Oq;
+    let sU, UU;
 
-    function qq() {
-      return Vq || (Vq = new MV), Oq || (Oq = new MutationObserver(((tt, et) => {
-        Vq.notify({
+    function ZU() {
+      return sU || (sU = new gj), UU || (UU = new MutationObserver(((uu, Eu) => {
+        sU.notify({
           type: "dom-mutation"
         })
-      })), Oq.observe(document, {
+      })), UU.observe(document, {
         attributes: !0,
         childList: !0,
         subtree: !0,
         characterData: !0
-      })), Vq
+      })), sU
     }
-    const Dq = "fetch",
-      mq = "xhr";
-    let dq, jq, Hq, Xq, Qq = !1;
+    const XU = "fetch",
+      lU = "xhr";
+    let qU, fU, CU, bU, cU = !1;
 
-    function lq() {
-      if (dq) return dq;
+    function NU() {
+      if (qU) return qU;
 
-      function tt(tt) {
-        dq.notify({
-          type: NV,
-          request: tt
+      function uu(uu) {
+        qU.notify({
+          type: hj,
+          request: uu
         })
       }
 
-      function et(tt) {
-        dq.notify({
-          type: aV,
-          request: tt
+      function Eu(uu) {
+        qU.notify({
+          type: Dj,
+          request: uu
         })
       }
-      return dq = new MV, Qq || (! function(tt) {
+      return qU = new gj, cU || (! function(uu) {
         let {
-          onRequestEnd: et,
-          onRequestStart: Vt
-        } = tt;
-        Hq || (Hq = window.fetch);
+          onRequestEnd: Eu,
+          onRequestStart: ju
+        } = uu;
+        CU || (CU = window.fetch);
         window.fetch = function() {
-          var tt, Ot;
-          const qt = null !== (tt = gt(arguments[0])) && void 0 !== tt ? tt : "",
-            Dt = Tt(qt),
-            mt = (null !== (Ot = arguments[1]) && void 0 !== Ot ? Ot : {}).method,
-            dt = ae();
-          return Dt || Vt({
-            url: qt,
-            method: mt,
-            requestId: dt,
-            apiType: Dq
-          }), Hq.apply(this, arguments).then((tt => (Dt || et({
-            url: qt,
-            method: mt,
-            requestId: dt,
-            apiType: Dq
-          }), tt))).catch((tt => {
-            throw Dt || et({
-              url: qt,
-              method: mt,
-              requestId: dt,
-              apiType: Dq
-            }), tt
+          var uu, su;
+          const Uu = null !== (uu = nu(arguments[0])) && void 0 !== uu ? uu : "",
+            Zu = Au(Uu),
+            Xu = (null !== (su = arguments[1]) && void 0 !== su ? su : {}).method,
+            lu = DE();
+          return Zu || ju({
+            url: Uu,
+            method: Xu,
+            requestId: lu,
+            apiType: XU
+          }), CU.apply(this, arguments).then((uu => (Zu || Eu({
+            url: Uu,
+            method: Xu,
+            requestId: lu,
+            apiType: XU
+          }), uu))).catch((uu => {
+            throw Zu || Eu({
+              url: Uu,
+              method: Xu,
+              requestId: lu,
+              apiType: XU
+            }), uu
           }))
         }
       }({
-        onRequestStart: tt,
-        onRequestEnd: et
-      }), function(tt) {
+        onRequestStart: uu,
+        onRequestEnd: Eu
+      }), function(uu) {
         let {
-          onRequestStart: et,
-          onRequestEnd: Vt
-        } = tt;
-        jq || (jq = XMLHttpRequest.prototype.open);
+          onRequestStart: Eu,
+          onRequestEnd: ju
+        } = uu;
+        fU || (fU = XMLHttpRequest.prototype.open);
         XMLHttpRequest.prototype.open = function() {
-          const tt = arguments[1],
-            Ot = Tt(tt),
-            qt = arguments[0],
-            Dt = ae();
+          const uu = arguments[1],
+            su = Au(uu),
+            Uu = arguments[0],
+            Zu = DE();
           this.addEventListener("loadstart", (function() {
-            Ot || et({
-              url: tt,
-              method: qt,
-              requestId: Dt,
-              apiType: mq
+            su || Eu({
+              url: uu,
+              method: Uu,
+              requestId: Zu,
+              apiType: lU
             })
           })), this.addEventListener("load", (function() {
-            Ot || Vt({
-              url: tt,
-              method: qt,
-              requestId: Dt,
-              apiType: mq
+            su || ju({
+              url: uu,
+              method: Uu,
+              requestId: Zu,
+              apiType: lU
             })
           })), this.addEventListener("error", (function() {
-            Ot || Vt({
-              url: tt,
-              method: qt,
-              requestId: Dt,
-              apiType: mq
+            su || ju({
+              url: uu,
+              method: Uu,
+              requestId: Zu,
+              apiType: lU
             })
           })), this.addEventListener("abort", (function() {
-            Ot || Vt({
-              url: tt,
-              method: qt,
-              requestId: Dt,
-              apiType: mq
+            su || ju({
+              url: uu,
+              method: Uu,
+              requestId: Zu,
+              apiType: lU
             })
-          })), jq.apply(this, arguments)
+          })), fU.apply(this, arguments)
         }
       }({
-        onRequestStart: tt,
-        onRequestEnd: et
-      }), Qq = !0), dq
+        onRequestStart: uu,
+        onRequestEnd: Eu
+      }), cU = !0), qU
     }
-    let Eq, fq = !1;
-    let wq = function(tt) {
-      return tt[tt.Started = 0] = "Started", tt[tt.Halted = 1] = "Halted", tt[tt.Cancelled = 2] = "Cancelled", tt[tt.Ended = 3] = "Ended", tt
+    let OU, YU = !1;
+    let hU = function(uu) {
+      return uu[uu.Started = 0] = "Started", uu[uu.Halted = 1] = "Halted", uu[uu.Cancelled = 2] = "Cancelled", uu[uu.Ended = 3] = "Ended", uu
     }({});
-    var yq = class {
-      constructor(tt, et) {
-        let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 100;
-        this.userAction = tt, this.logDebug = et, this.initialActivityTimeout = Vt, this.http = lq(), this.dom = qq(), this.perf = (Xq || (Xq = new MV), fq || (Eq = BO.subscribe((tt => {
-          "resource" === tt.type && Xq.notify({
+    var DU = class {
+      constructor(uu, Eu) {
+        let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 100;
+        this.userAction = uu, this.logDebug = Eu, this.initialActivityTimeout = ju, this.http = NU(), this.dom = ZU(), this.perf = (bU || (bU = new gj), YU || (OU = Hs.subscribe((uu => {
+          "resource" === uu.type && bU.notify({
             type: "resource-entry"
           })
-        })), fq = !0), Xq), this.isValid = !1, this.runningRequests = new Map
+        })), YU = !0), bU), this.isValid = !1, this.runningRequests = new Map
       }
       attach() {
-        this.allMonitorsSub = (new MV).merge(this.http, this.dom, this.perf).takeWhile((() => [wq.Started, wq.Halted].includes(this.userAction.getState()))).filter((tt => !!(this.userAction.getState() !== wq.Halted || eq(tt) && this.runningRequests.has(tt.request.requestId)))).subscribe((tt => {
-          (function(tt) {
-            return tt.type === NV
-          })(tt) && this.runningRequests.set(tt.request.requestId, tt.request), eq(tt) && this.runningRequests.delete(tt.request.requestId), eq(tt) ? this.userAction.getState() === wq.Halted && 0 === this.runningRequests.size && this.endAction() : (this.isValid || (this.isValid = !0, this.clearTimer(this.startupTid)), this.scheduleFollowUp())
-        })), this.stateSub = this.userAction.filter((tt => [wq.Ended, wq.Cancelled].includes(tt))).first().subscribe((() => this.cleanup())), this.startupTid = tq(this.startupTid, (() => {
+        this.allMonitorsSub = (new gj).merge(this.http, this.dom, this.perf).takeWhile((() => [hU.Started, hU.Halted].includes(this.userAction.getState()))).filter((uu => !!(this.userAction.getState() !== hU.Halted || jU(uu) && this.runningRequests.has(uu.request.requestId)))).subscribe((uu => {
+          (function(uu) {
+            return uu.type === hj
+          })(uu) && this.runningRequests.set(uu.request.requestId, uu.request), jU(uu) && this.runningRequests.delete(uu.request.requestId), jU(uu) ? this.userAction.getState() === hU.Halted && 0 === this.runningRequests.size && this.endAction() : (this.isValid || (this.isValid = !0, this.clearTimer(this.startupTid)), this.scheduleFollowUp())
+        })), this.stateSub = this.userAction.filter((uu => [hU.Ended, hU.Cancelled].includes(uu))).first().subscribe((() => this.cleanup())), this.startupTid = EU(this.startupTid, (() => {
           this.logDebug("User action not sent; no DOM, resource, or HTTP activity:", this.userAction.name), this.cancelAction()
         }), this.initialActivityTimeout)
       }
       scheduleFollowUp() {
         this.clearTimer(this.followUpTid), this.followUpTid = window.setTimeout((() => {
-          this.userAction.getState() === wq.Started && this.runningRequests.size > 0 ? this.haltAction() : this.isValid ? this.endAction() : this.cancelAction()
+          this.userAction.getState() === hU.Started && this.runningRequests.size > 0 ? this.haltAction() : this.isValid ? this.endAction() : this.cancelAction()
         }), 100)
       }
       haltAction() {
-        this.userAction.getState() === wq.Started && (this.userAction.halt(), this.startHaltTimeout())
+        this.userAction.getState() === hU.Started && (this.userAction.halt(), this.startHaltTimeout())
       }
       startHaltTimeout() {
-        this.clearTimer(this.haltTid), this.haltTid = tq(this.haltTid, (() => {
-          this.userAction.getState() === wq.Halted && this.endAction()
+        this.clearTimer(this.haltTid), this.haltTid = EU(this.haltTid, (() => {
+          this.userAction.getState() === hU.Halted && this.endAction()
         }), 1e4)
       }
       endAction() {
@@ -2614,183 +2614,183 @@ export const modules = {
         this.userAction.cancel(), this.cleanup()
       }
       cleanup() {
-        var tt, et;
-        this.clearTimer(this.startupTid), this.clearTimer(this.followUpTid), this.clearTimer(this.haltTid), null === (tt = this.allMonitorsSub) || void 0 === tt || tt.unsubscribe(), null === (et = this.stateSub) || void 0 === et || et.unsubscribe(), this.allMonitorsSub = void 0, this.stateSub = void 0, this.runningRequests.clear()
+        var uu, Eu;
+        this.clearTimer(this.startupTid), this.clearTimer(this.followUpTid), this.clearTimer(this.haltTid), null === (uu = this.allMonitorsSub) || void 0 === uu || uu.unsubscribe(), null === (Eu = this.stateSub) || void 0 === Eu || Eu.unsubscribe(), this.allMonitorsSub = void 0, this.stateSub = void 0, this.runningRequests.clear()
       }
-      clearTimer(tt) {
-        void 0 !== tt && window.clearTimeout(tt)
+      clearTimer(uu) {
+        void 0 !== uu && window.clearTimeout(uu)
       }
     };
 
-    function Nq(tt) {
-      let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ie;
-      var Vt;
+    function gU(uu) {
+      let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : LE;
+      var ju;
       const {
-        api: Ot,
-        config: qt,
-        internalLogger: Dt
-      } = tt, mt = nO(null === (Vt = qt.userActionsInstrumentation) || void 0 === Vt ? void 0 : Vt.initialActivityTimeout, 100, et);
+        api: su,
+        config: Uu,
+        internalLogger: Zu
+      } = uu, Xu = uU(null === (ju = Uu.userActionsInstrumentation) || void 0 === ju ? void 0 : ju.initialActivityTimeout, 100, Eu);
       return {
-        processUserEvent: function(tt) {
-          var et, Vt;
-          const Dt = null !== (et = null === (Vt = qt.userActionsInstrumentation) || void 0 === Vt ? void 0 : Vt.dataAttributeName) && void 0 !== et ? et : xO,
-            mt = tt.target;
-          if (!(mt instanceof Element)) return;
-          const dt = function(tt, et) {
-              let Vt = tt;
-              for (; Vt;) {
-                if (Vt.hasAttribute(et)) return Vt;
-                Vt = Vt.parentElement
+        processUserEvent: function(uu) {
+          var Eu, ju;
+          const Zu = null !== (Eu = null === (ju = Uu.userActionsInstrumentation) || void 0 === ju ? void 0 : ju.dataAttributeName) && void 0 !== Eu ? Eu : ns,
+            Xu = uu.target;
+          if (!(Xu instanceof Element)) return;
+          const lu = function(uu, Eu) {
+              let ju = uu;
+              for (; ju;) {
+                if (ju.hasAttribute(Eu)) return ju;
+                ju = ju.parentElement
               }
               return null
-            }(mt, sO(Dt)),
-            jt = function(tt, et) {
-              if (!tt) return;
-              const Vt = function(tt) {
-                  return sO(tt).slice(5).replace(/-(.)/g, ((tt, et) => et.toUpperCase()))
-                }(et),
-                Ot = tt.dataset;
-              for (const qt in Ot)
-                if (qt === Vt) return Ot[qt]
-            }(dt, Dt);
-          if (!dt || !jt) return;
-          const Ht = function(tt, et) {
-            const Vt = tt.getAttribute(function(tt) {
-              const et = sO(tt);
-              return et.endsWith("-name") ? `${et.slice(0,-5)}-timeout` : `${et}-timeout`
-            }(et));
-            return null === Vt ? void 0 : Number(Vt)
-          }(dt, Dt);
-          Ot.startUserAction(jt, {}, {
-            triggerName: tt.type,
-            initialActivityTimeout: Ht
+            }(Xu, Rs(Zu)),
+            qu = function(uu, Eu) {
+              if (!uu) return;
+              const ju = function(uu) {
+                  return Rs(uu).slice(5).replace(/-(.)/g, ((uu, Eu) => Eu.toUpperCase()))
+                }(Eu),
+                su = uu.dataset;
+              for (const Uu in su)
+                if (Uu === ju) return su[Uu]
+            }(lu, Zu);
+          if (!lu || !qu) return;
+          const fu = function(uu, Eu) {
+            const ju = uu.getAttribute(function(uu) {
+              const Eu = Rs(uu);
+              return Eu.endsWith("-name") ? `${Eu.slice(0,-5)}-timeout` : `${Eu}-timeout`
+            }(Eu));
+            return null === ju ? void 0 : Number(ju)
+          }(lu, Zu);
+          su.startUserAction(qu, {}, {
+            triggerName: uu.type,
+            initialActivityTimeout: fu
           })
         },
-        processUserActionStarted: function(tt, Vt) {
-          const Ot = tt,
-            qt = nO(Vt, mt, et);
-          new yq(Ot, Dt.debug, qt).attach()
+        processUserActionStarted: function(uu, ju) {
+          const su = uu,
+            Uu = uU(ju, Xu, Eu);
+          new DU(su, Zu.debug, Uu).attach()
         }
       }
     }
-    const aq = "user_action_start",
-      Mq = {
+    const MU = "user_action_start",
+      eU = {
         Normal: "normal",
         Critical: "critical"
       };
-    var bq = class {
+    var GU = class {
         constructor() {
           this.buffer = []
         }
-        addItem(tt) {
-          this.buffer.push(tt)
+        addItem(uu) {
+          this.buffer.push(uu)
         }
-        flushBuffer(tt) {
-          if (ct(tt))
-            for (const et of this.buffer) tt(et);
+        flushBuffer(uu) {
+          if (ou(uu))
+            for (const Eu of this.buffer) uu(Eu);
           this.buffer.length = 0
         }
         size() {
           return this.buffer.length
         }
       },
-      Jq = class extends MV {
-        constructor(tt) {
+      pU = class extends gj {
+        constructor(uu) {
           let {
-            name: et,
-            parentId: Vt,
-            trigger: Ot,
-            transports: qt,
-            attributes: Dt,
-            trackUserActionsExcludeItem: mt,
-            importance: dt = Mq.Normal,
-            pushEvent: jt
-          } = tt;
-          super(), this.name = et, this.attributes = Dt, this.id = ae(), this.trigger = Ot, this.parentId = null !== Vt && void 0 !== Vt ? Vt : this.id, this.trackUserActionsExcludeItem = mt, this.importance = dt, this._pushEvent = jt, this._itemBuffer = new bq, this._transports = qt, this._state = 0, this._start()
+            name: Eu,
+            parentId: ju,
+            trigger: su,
+            transports: Uu,
+            attributes: Zu,
+            trackUserActionsExcludeItem: Xu,
+            importance: lu = eU.Normal,
+            pushEvent: qu
+          } = uu;
+          super(), this.name = Eu, this.attributes = Zu, this.id = DE(), this.trigger = su, this.parentId = null !== ju && void 0 !== ju ? ju : this.id, this.trackUserActionsExcludeItem = Xu, this.importance = lu, this._pushEvent = qu, this._itemBuffer = new GU, this._transports = Uu, this._state = 0, this._start()
         }
-        addItem(tt) {
-          return 0 === this._state && (this._itemBuffer.addItem(tt), !0)
+        addItem(uu) {
+          return 0 === this._state && (this._itemBuffer.addItem(uu), !0)
         }
         _start() {
-          this._state = 0, 0 === this._state && (this.startTime = Ee(), this._startTimeMono = fe())
+          this._state = 0, 0 === this._state && (this.startTime = cE(), this._startTimeMono = NE())
         }
         halt() {
           0 === this._state && (this._state = 1, this.notify(this._state))
         }
         cancel() {
-          0 === this._state && this._itemBuffer.flushBuffer((tt => {
-            this._transports.execute(tt)
+          0 === this._state && this._itemBuffer.flushBuffer((uu => {
+            this._transports.execute(uu)
           })), this._state = 2, this.notify(this._state)
         }
         end() {
           if (2 === this._state) return;
-          const tt = Ee(),
-            et = fe() - this._startTimeMono;
-          this._state = 3, this._itemBuffer.flushBuffer((tt => {
-            if (function(tt, et) {
-                return (null === et || void 0 === et ? void 0 : et(tt)) || "measurement" === tt.type && "web-vitals" === tt.payload.type
-              }(tt, this.trackUserActionsExcludeItem)) return void this._transports.execute(tt);
-            const et = ne(ne({}, tt), {}, {
-              payload: ne(ne({}, tt.payload), {}, {
+          const uu = cE(),
+            Eu = NE() - this._startTimeMono;
+          this._state = 3, this._itemBuffer.flushBuffer((uu => {
+            if (function(uu, Eu) {
+                return (null === Eu || void 0 === Eu ? void 0 : Eu(uu)) || "measurement" === uu.type && "web-vitals" === uu.payload.type
+              }(uu, this.trackUserActionsExcludeItem)) return void this._transports.execute(uu);
+            const Eu = zE(zE({}, uu), {}, {
+              payload: zE(zE({}, uu.payload), {}, {
                 action: {
                   parentId: this.id,
                   name: this.name
                 }
               })
             });
-            this._transports.execute(et)
-          })), this._state = 3, this.notify(this._state), this._pushEvent("faro.user.action", ne({
+            this._transports.execute(Eu)
+          })), this._state = 3, this.notify(this._state), this._pushEvent("faro.user.action", zE({
             userActionName: this.name,
             userActionStartTime: this.startTime.toString(),
-            userActionEndTime: tt.toString(),
-            userActionDuration: et.toString(),
+            userActionEndTime: uu.toString(),
+            userActionDuration: Eu.toString(),
             userActionTrigger: this.trigger,
             userActionImportance: this.importance
-          }, ke(this.attributes)), void 0, {
+          }, QE(this.attributes)), void 0, {
             timestampOverwriteMs: this.startTime,
-            customPayloadTransformer: tt => (tt.action = {
+            customPayloadTransformer: uu => (uu.action = {
               id: this.id,
               name: this.name
-            }, tt)
+            }, uu)
           })
         }
         getState() {
           return this._state
         }
       };
-    const Cq = new MV;
+    const wU = new gj;
 
-    function uq(tt, et) {
-      return !!tt && (0 === (null === tt || void 0 === tt ? void 0 : tt.getState()) && (tt.addItem(et), !0))
+    function JU(uu, Eu) {
+      return !!uu && (0 === (null === uu || void 0 === uu ? void 0 : uu.getState()) && (uu.addItem(Eu), !0))
     }
-    var Kq = class extends VV {
+    var dU = class extends Ej {
         constructor() {
-          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-user-action", this.version = OV
+          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-user-action", this.version = jj
         }
         initialize() {
           const {
-            processUserEvent: tt,
-            processUserActionStarted: et
-          } = Nq(wt, (tt => this.logWarn(tt)));
-          this._processUserEvent = tt, this._processKeydown = et => {
-            [" ", "Enter"].includes(et.key) && tt(et)
-          }, window.addEventListener("pointerdown", this._processUserEvent), window.addEventListener("keydown", this._processKeydown), this._userActionSub = Cq.subscribe((tt => {
+            processUserEvent: uu,
+            processUserActionStarted: Eu
+          } = gU(Yu, (uu => this.logWarn(uu)));
+          this._processUserEvent = uu, this._processKeydown = Eu => {
+            [" ", "Enter"].includes(Eu.key) && uu(Eu)
+          }, window.addEventListener("pointerdown", this._processUserEvent), window.addEventListener("keydown", this._processKeydown), this._userActionSub = wU.subscribe((uu => {
             let {
-              type: Vt,
-              userAction: Ot,
-              initialActivityTimeout: qt
-            } = tt;
-            "user_action_start" === Vt && et(Ot, qt)
+              type: ju,
+              userAction: su,
+              initialActivityTimeout: Uu
+            } = uu;
+            "user_action_start" === ju && Eu(su, Uu)
           }))
         }
         destroy() {
-          var tt;
-          this._processUserEvent && window.removeEventListener("pointerdown", this._processUserEvent), this._processKeydown && window.removeEventListener("keydown", this._processKeydown), null === (tt = this._userActionSub) || void 0 === tt || tt.unsubscribe()
+          var uu;
+          this._processUserEvent && window.removeEventListener("pointerdown", this._processUserEvent), this._processKeydown && window.removeEventListener("keydown", this._processKeydown), null === (uu = this._userActionSub) || void 0 === uu || uu.unsubscribe()
         }
       },
-      hq = class extends VV {
+      aU = class extends Ej {
         constructor() {
-          super(), this.name = "@grafana/faro-web-sdk:instrumentation-csp", this.version = OV, this.boundSecuritypolicyviolationHandler = this.securitypolicyviolationHandler.bind(this)
+          super(), this.name = "@grafana/faro-web-sdk:instrumentation-csp", this.version = jj, this.boundSecuritypolicyviolationHandler = this.securitypolicyviolationHandler.bind(this)
         }
         initialize() {
           document.addEventListener("securitypolicyviolation", this.boundSecuritypolicyviolationHandler)
@@ -2798,239 +2798,239 @@ export const modules = {
         destroy() {
           document.removeEventListener("securitypolicyviolation", this.boundSecuritypolicyviolationHandler)
         }
-        securitypolicyviolationHandler(tt) {
-          const et = {
-            blockedURI: tt.blockedURI,
-            columnNumber: tt.columnNumber,
-            disposition: tt.disposition,
-            documentURI: tt.documentURI,
-            effectiveDirective: tt.effectiveDirective,
-            lineNumber: tt.lineNumber,
-            originalPolicy: tt.originalPolicy,
-            referrer: tt.referrer,
-            sample: tt.sample,
-            sourceFile: tt.sourceFile,
-            statusCode: tt.statusCode,
-            violatedDirective: tt.violatedDirective
+        securitypolicyviolationHandler(uu) {
+          const Eu = {
+            blockedURI: uu.blockedURI,
+            columnNumber: uu.columnNumber,
+            disposition: uu.disposition,
+            documentURI: uu.documentURI,
+            effectiveDirective: uu.effectiveDirective,
+            lineNumber: uu.lineNumber,
+            originalPolicy: uu.originalPolicy,
+            referrer: uu.referrer,
+            sample: uu.sample,
+            sourceFile: uu.sourceFile,
+            statusCode: uu.statusCode,
+            violatedDirective: uu.violatedDirective
           };
-          this.api.pushEvent("securitypolicyviolation", ke(et))
+          this.api.pushEvent("securitypolicyviolation", QE(Eu))
         }
       };
-    var vq = class extends MV {
-      constructor(tt, et) {
-        var Vt, Ot, qt, Dt;
-        super(), this._tracking = !1, this.eventsObservable = tt, this._options = {
-          inactivityMs: null !== (Vt = null === et || void 0 === et ? void 0 : et.inactivityMs) && void 0 !== Vt ? Vt : 100,
-          drainTimeoutMs: null !== (Ot = null === et || void 0 === et ? void 0 : et.drainTimeoutMs) && void 0 !== Ot ? Ot : 1e4,
-          isOperationStart: null !== (qt = null === et || void 0 === et ? void 0 : et.isOperationStart) && void 0 !== qt ? qt : () => {},
-          isOperationEnd: null !== (Dt = null === et || void 0 === et ? void 0 : et.isOperationEnd) && void 0 !== Dt ? Dt : () => {}
+    var PU = class extends gj {
+      constructor(uu, Eu) {
+        var ju, su, Uu, Zu;
+        super(), this._tracking = !1, this.eventsObservable = uu, this._options = {
+          inactivityMs: null !== (ju = null === Eu || void 0 === Eu ? void 0 : Eu.inactivityMs) && void 0 !== ju ? ju : 100,
+          drainTimeoutMs: null !== (su = null === Eu || void 0 === Eu ? void 0 : Eu.drainTimeoutMs) && void 0 !== su ? su : 1e4,
+          isOperationStart: null !== (Uu = null === Eu || void 0 === Eu ? void 0 : Eu.isOperationStart) && void 0 !== Uu ? Uu : () => {},
+          isOperationEnd: null !== (Zu = null === Eu || void 0 === Eu ? void 0 : Eu.isOperationEnd) && void 0 !== Zu ? Zu : () => {}
         }, this._initialize()
       }
       _initialize() {
-        this.eventsObservable.filter((() => this._tracking)).subscribe((tt => {
-          var et;
-          this._lastEventTime = fe(), null === (et = this._currentEvents) || void 0 === et || et.push(tt);
-          const Vt = this._options.isOperationStart(tt);
-          var Ot;
-          Vt && (null === (Ot = this._activeOperations) || void 0 === Ot || Ot.set(Vt, !0));
-          const qt = this._options.isOperationEnd(tt);
-          var Dt;
-          qt && (null === (Dt = this._activeOperations) || void 0 === Dt || Dt.delete(qt));
+        this.eventsObservable.filter((() => this._tracking)).subscribe((uu => {
+          var Eu;
+          this._lastEventTime = NE(), null === (Eu = this._currentEvents) || void 0 === Eu || Eu.push(uu);
+          const ju = this._options.isOperationStart(uu);
+          var su;
+          ju && (null === (su = this._activeOperations) || void 0 === su || su.set(ju, !0));
+          const Uu = this._options.isOperationEnd(uu);
+          var Zu;
+          Uu && (null === (Zu = this._activeOperations) || void 0 === Zu || Zu.delete(Uu));
           this._scheduleInactivityCheck()
         }))
       }
       startTracking() {
-        this._tracking || (this._tracking = !0, this._startTime = fe(), this._lastEventTime = this._startTime, this.notify({
+        this._tracking || (this._tracking = !0, this._startTime = NE(), this._lastEventTime = this._startTime, this.notify({
           message: "tracking-started"
         }), this._currentEvents = [], this._activeOperations = new Map, this._scheduleInactivityCheck())
       }
       stopTracking() {
-        let tt;
-        this._tracking = !1, this._clearTimer(this._inactivityTid), this._clearTimer(this._drainTid), tt = this.hasActiveOperations() ? fe() - this._startTime : this._lastEventTime ? this._lastEventTime - this._startTime : 0, this.notify({
+        let uu;
+        this._tracking = !1, this._clearTimer(this._inactivityTid), this._clearTimer(this._drainTid), uu = this.hasActiveOperations() ? NE() - this._startTime : this._lastEventTime ? this._lastEventTime - this._startTime : 0, this.notify({
           message: "tracking-ended",
           events: this._currentEvents,
-          duration: tt
+          duration: uu
         })
       }
       _scheduleInactivityCheck() {
-        this._inactivityTid = Wq(this._inactivityTid, (() => {
+        this._inactivityTid = oU(this._inactivityTid, (() => {
           this.hasActiveOperations() ? this._startDrainTimeout() : this.stopTracking()
         }), this._options.inactivityMs)
       }
       _startDrainTimeout() {
-        this._drainTid = Wq(this._drainTid, (() => {
+        this._drainTid = oU(this._drainTid, (() => {
           this.stopTracking()
         }), this._options.drainTimeoutMs)
       }
       hasActiveOperations() {
         return !!this._activeOperations && this._activeOperations.size > 0
       }
-      _clearTimer(tt) {
-        tt && clearTimeout(tt)
+      _clearTimer(uu) {
+        uu && clearTimeout(uu)
       }
     };
 
-    function Wq(tt, et, Vt) {
-      return tt && clearTimeout(tt), tt = setTimeout((() => {
-        et()
-      }), Vt)
+    function oU(uu, Eu, ju) {
+      return uu && clearTimeout(uu), uu = setTimeout((() => {
+        Eu()
+      }), ju)
     }
-    let Sq;
-    const cq = new Set,
-      Rq = new Map;
-    let Iq, Pq, Zq, Lq, Fq, kq, Gq, zq, oq = !1;
-    var rq = class extends VV {
+    let kU;
+    const mU = new Set,
+      vU = new Map;
+    let KU, VU, rU, QU, iU, WU, SU, IU, FU = !1;
+    var BU = class extends Ej {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-navigation", this.version = OV
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-navigation", this.version = jj
       }
       initialize() {
-        const tt = lq(),
-          et = qq(),
-          Vt = function() {
-            function tt(tt, et) {
-              const Vt = null !== et && void 0 !== et ? et : location.href;
-              Vt !== Pq && (Iq.notify({
+        const uu = NU(),
+          Eu = ZU(),
+          ju = function() {
+            function uu(uu, Eu) {
+              const ju = null !== Eu && void 0 !== Eu ? Eu : location.href;
+              ju !== VU && (KU.notify({
                 type: "url-change",
-                from: Pq,
-                to: Vt,
-                trigger: tt
-              }), Pq = Vt)
+                from: VU,
+                to: ju,
+                trigger: uu
+              }), VU = ju)
             }
-            if (Iq || (Iq = new MV, Pq = location.href), !oq)
+            if (KU || (KU = new gj, VU = location.href), !FU)
               if ("navigation" in window && "NavigateEvent" in window) {
-                Gq = et => {
+                SU = Eu => {
                   try {
-                    const Vt = null === et || void 0 === et ? void 0 : et.destination;
-                    (null === Vt || void 0 === Vt ? void 0 : Vt.sameDocument) && "string" === typeof Vt.url && tt("navigate", Vt.url)
-                  } catch (Vt) {}
-                }, window.navigation.addEventListener("navigate", Gq);
-                const et = window.NavigateEvent;
-                et && et.prototype && "function" === typeof et.prototype.intercept && (zq || (zq = et.prototype.intercept), et.prototype.intercept = function(et) {
+                    const ju = null === Eu || void 0 === Eu ? void 0 : Eu.destination;
+                    (null === ju || void 0 === ju ? void 0 : ju.sameDocument) && "string" === typeof ju.url && uu("navigate", ju.url)
+                  } catch (ju) {}
+                }, window.navigation.addEventListener("navigate", SU);
+                const Eu = window.NavigateEvent;
+                Eu && Eu.prototype && "function" === typeof Eu.prototype.intercept && (IU || (IU = Eu.prototype.intercept), Eu.prototype.intercept = function(Eu) {
                   try {
-                    const et = !!(null === this || void 0 === this ? void 0 : this.canIntercept),
-                      Vt = null === this || void 0 === this ? void 0 : this.destination;
-                    et && Vt && !1 === Vt.sameDocument && "string" === typeof Vt.url && tt("navigate-intercept", Vt.url)
-                  } catch (Vt) {}
-                  return zq.call(this, et)
-                }), oq = !0
-              } else Zq || (Zq = window.history.pushState), window.history.pushState = function() {
-                for (var et = arguments.length, Vt = new Array(et), Ot = 0; Ot < et; Ot++) Vt[Ot] = arguments[Ot];
-                const qt = Zq.apply(window.history, Vt);
-                return tt("pushState"), qt
-              }, Lq || (Lq = window.history.replaceState), window.history.replaceState = function() {
-                for (var et = arguments.length, Vt = new Array(et), Ot = 0; Ot < et; Ot++) Vt[Ot] = arguments[Ot];
-                const qt = Lq.apply(window.history, Vt);
-                return tt("replaceState"), qt
-              }, Fq = () => tt("popstate"), kq = () => tt("hashchange"), window.addEventListener("popstate", Fq), window.addEventListener("hashchange", kq), oq = !0;
-            return Iq
+                    const Eu = !!(null === this || void 0 === this ? void 0 : this.canIntercept),
+                      ju = null === this || void 0 === this ? void 0 : this.destination;
+                    Eu && ju && !1 === ju.sameDocument && "string" === typeof ju.url && uu("navigate-intercept", ju.url)
+                  } catch (ju) {}
+                  return IU.call(this, Eu)
+                }), FU = !0
+              } else rU || (rU = window.history.pushState), window.history.pushState = function() {
+                for (var Eu = arguments.length, ju = new Array(Eu), su = 0; su < Eu; su++) ju[su] = arguments[su];
+                const Uu = rU.apply(window.history, ju);
+                return uu("pushState"), Uu
+              }, QU || (QU = window.history.replaceState), window.history.replaceState = function() {
+                for (var Eu = arguments.length, ju = new Array(Eu), su = 0; su < Eu; su++) ju[su] = arguments[su];
+                const Uu = QU.apply(window.history, ju);
+                return uu("replaceState"), Uu
+              }, iU = () => uu("popstate"), WU = () => uu("hashchange"), window.addEventListener("popstate", iU), window.addEventListener("hashchange", WU), FU = !0;
+            return KU
           }(),
-          Ot = (qt = ["pointerdown", "keydown"], Sq || (Sq = new MV), qt.forEach((tt => {
-            if (!cq.has(tt)) {
-              const et = () => {
-                Sq.notify({
+          su = (Uu = ["pointerdown", "keydown"], kU || (kU = new gj), Uu.forEach((uu => {
+            if (!mU.has(uu)) {
+              const Eu = () => {
+                kU.notify({
                   type: "interaction",
-                  name: tt
+                  name: uu
                 })
               };
-              window.addEventListener(tt, et), cq.add(tt), Rq.set(tt, et)
+              window.addEventListener(uu, Eu), mU.add(uu), vU.set(uu, Eu)
             }
-          })), Sq);
-        var qt;
-        const Dt = new vq((new MV).merge(tt, et, Vt), {
+          })), kU);
+        var Uu;
+        const Zu = new PU((new gj).merge(uu, Eu, ju), {
           inactivityMs: 100,
           drainTimeoutMs: 1e4,
-          isOperationStart: tt => function(tt) {
-            return tt.type === NV
-          }(tt) ? tt.request.requestId : void 0,
-          isOperationEnd: tt => function(tt) {
-            return tt.type === aV
-          }(tt) ? tt.request.requestId : void 0
+          isOperationStart: uu => function(uu) {
+            return uu.type === hj
+          }(uu) ? uu.request.requestId : void 0,
+          isOperationEnd: uu => function(uu) {
+            return uu.type === Dj
+          }(uu) ? uu.request.requestId : void 0
         });
-        Dt.filter((tt => "tracking-ended" === tt.message)).subscribe((tt => {
-          var et, Vt;
-          if ((null === (et = tt.events) || void 0 === et ? void 0 : et.some((tt => "url-change" === tt.type))) && (null === (Vt = tt.events) || void 0 === Vt ? void 0 : Vt.some((tt => "dom-mutation" === tt.type)))) {
-            var Ot;
-            const et = null === (Ot = tt.events) || void 0 === Ot ? void 0 : Ot.find((tt => "url-change" === tt.type));
-            wt.api.pushEvent("faro.navigation", {
-              fromUrl: null === et || void 0 === et ? void 0 : et.from,
-              toUrl: null === et || void 0 === et ? void 0 : et.to,
+        Zu.filter((uu => "tracking-ended" === uu.message)).subscribe((uu => {
+          var Eu, ju;
+          if ((null === (Eu = uu.events) || void 0 === Eu ? void 0 : Eu.some((uu => "url-change" === uu.type))) && (null === (ju = uu.events) || void 0 === ju ? void 0 : ju.some((uu => "dom-mutation" === uu.type)))) {
+            var su;
+            const Eu = null === (su = uu.events) || void 0 === su ? void 0 : su.find((uu => "url-change" === uu.type));
+            Yu.api.pushEvent("faro.navigation", {
+              fromUrl: null === Eu || void 0 === Eu ? void 0 : Eu.from,
+              toUrl: null === Eu || void 0 === Eu ? void 0 : Eu.to,
               sameDocument: String(!0),
-              duration: tt.duration
+              duration: uu.duration
             })
           }
-        })), Ot.subscribe((() => {
-          Dt.startTracking()
+        })), su.subscribe((() => {
+          Zu.startTracking()
         }))
       }
     };
 
-    function Uq() {
-      let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      const et = [new Kq, new LV, new ZO, new qV, new kV, new rq];
-      return !1 !== tt.enablePerformanceInstrumentation && et.unshift(new pO), !1 !== tt.enableContentSecurityPolicyInstrumentation && et.push(new hq), !1 !== tt.captureConsole && et.push(new PV), et
+    function LU() {
+      let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      const Eu = [new dU, new Vj, new rs, new sj, new Qj, new BU];
+      return !1 !== uu.enablePerformanceInstrumentation && Eu.unshift(new As), !1 !== uu.enableContentSecurityPolicyInstrumentation && Eu.push(new aU), !1 !== uu.captureConsole && Eu.push(new vj), Eu
     }
-    var Aq = Vt(6918);
-    let iq, Yq;
+    var tU = ju(6908);
+    let xU, TU;
 
-    function Bq() {
-      const tt = "undefined" !== typeof navigator ? navigator.userAgent : "";
-      return iq === tt && Yq || (Yq = new Aq.UAParser(tt).getResult(), iq = tt), Yq
+    function HU() {
+      const uu = "undefined" !== typeof navigator ? navigator.userAgent : "";
+      return xU === uu && TU || (TU = new tU.UAParser(uu).getResult(), xU = uu), TU
     }
-    const pq = () => {
+    const AU = () => {
         const {
-          browser: tt,
-          os: et,
-          ua: Vt
-        } = Bq(), {
-          name: Ot,
-          version: qt
-        } = tt, {
-          name: Dt,
-          version: mt
-        } = et, dt = navigator.language, jt = Vt.includes("Mobi"), Ht = function() {
-          if (!Ot || !qt) return;
+          browser: uu,
+          os: Eu,
+          ua: ju
+        } = HU(), {
+          name: su,
+          version: Uu
+        } = uu, {
+          name: Zu,
+          version: Xu
+        } = Eu, lu = navigator.language, qu = ju.includes("Mobi"), fu = function() {
+          if (!su || !Uu) return;
           if ("userAgentData" in navigator && navigator.userAgentData) return navigator.userAgentData.brands
         }();
         return {
           browser: {
-            name: null !== Ot && void 0 !== Ot ? Ot : FV,
-            version: null !== qt && void 0 !== qt ? qt : FV,
-            os: `${null!==Dt&&void 0!==Dt?Dt:FV} ${null!==mt&&void 0!==mt?mt:FV}`,
-            userAgent: null !== Vt && void 0 !== Vt ? Vt : FV,
-            language: null !== dt && void 0 !== dt ? dt : FV,
-            mobile: jt,
-            brands: null !== Ht && void 0 !== Ht ? Ht : FV,
+            name: null !== su && void 0 !== su ? su : rj,
+            version: null !== Uu && void 0 !== Uu ? Uu : rj,
+            os: `${null!==Zu&&void 0!==Zu?Zu:rj} ${null!==Xu&&void 0!==Xu?Xu:rj}`,
+            userAgent: null !== ju && void 0 !== ju ? ju : rj,
+            language: null !== lu && void 0 !== lu ? lu : rj,
+            mobile: qu,
+            brands: null !== fu && void 0 !== fu ? fu : rj,
             viewportWidth: `${window.innerWidth}`,
             viewportHeight: `${window.innerHeight}`
           }
         }
       },
-      xq = () => {
+      nU = () => {
         const {
-          name: tt,
-          version: et
-        } = Bq().os;
-        if (!tt && !et) return {};
-        const Vt = {};
-        return tt && (Vt.name = tt), et && (Vt.version = et), {
-          os: Vt
+          name: uu,
+          version: Eu
+        } = HU().os;
+        if (!uu && !Eu) return {};
+        const ju = {};
+        return uu && (ju.name = uu), Eu && (ju.version = Eu), {
+          os: ju
         }
       };
 
-    function Tq(tt) {
-      var et, Vt, Ot;
+    function yU(uu) {
+      var Eu, ju, su;
       return {
-        id: null !== (et = null === (Vt = wt.config) || void 0 === Vt || null === (Vt = Vt.sessionTracking) || void 0 === Vt || null === (Ot = Vt.generateSessionId) || void 0 === Ot ? void 0 : Ot.call(Vt)) && void 0 !== et ? et : ae(),
-        attributes: tt
+        id: null !== (Eu = null === (ju = Yu.config) || void 0 === ju || null === (ju = ju.sessionTracking) || void 0 === ju || null === (su = ju.generateSessionId) || void 0 === su ? void 0 : su.call(ju)) && void 0 !== Eu ? Eu : DE(),
+        attributes: uu
       }
     }
-    const gq = () => ({
+    const zU = () => ({
       sdk: {
         name: "faro-web",
-        version: OV
+        version: jj
       }
     });
-    var sq = class extends eV {
+    var RU = class extends uj {
       isBatched() {
         return !1
       }
@@ -3038,10 +3038,10 @@ export const modules = {
         return []
       }
     };
-    let nq = function(tt) {
-      return tt.EXCEPTION = "exception", tt.LOG = "log", tt.MEASUREMENT = "measurement", tt.TRACE = "trace", tt.EVENT = "event", tt
+    let uZ = function(uu) {
+      return uu.EXCEPTION = "exception", uu.LOG = "log", uu.MEASUREMENT = "measurement", uu.TRACE = "trace", uu.EVENT = "event", uu
     }({});
-    const tD = {
+    const EZ = {
       exception: "exceptions",
       log: "logs",
       measurement: "measurements",
@@ -3049,356 +3049,356 @@ export const modules = {
       event: "events"
     };
 
-    function eD(tt, et) {
-      var Vt, Ot;
-      if (void 0 === et) return tt;
-      if (void 0 === tt) return {
-        resourceSpans: et
+    function jZ(uu, Eu) {
+      var ju, su;
+      if (void 0 === Eu) return uu;
+      if (void 0 === uu) return {
+        resourceSpans: Eu
       };
-      const qt = null === (Vt = tt.resourceSpans) || void 0 === Vt ? void 0 : Vt[0];
-      if (void 0 === qt) return tt;
-      const Dt = (null === qt || void 0 === qt ? void 0 : qt.scopeSpans) || [],
-        mt = (null === et || void 0 === et || null === (Ot = et[0]) || void 0 === Ot ? void 0 : Ot.scopeSpans) || [];
-      return ne(ne({}, tt), {}, {
-        resourceSpans: [ne(ne({}, qt), {}, {
-          scopeSpans: [...Dt, ...mt]
+      const Uu = null === (ju = uu.resourceSpans) || void 0 === ju ? void 0 : ju[0];
+      if (void 0 === Uu) return uu;
+      const Zu = (null === Uu || void 0 === Uu ? void 0 : Uu.scopeSpans) || [],
+        Xu = (null === Eu || void 0 === Eu || null === (su = Eu[0]) || void 0 === su ? void 0 : su.scopeSpans) || [];
+      return zE(zE({}, uu), {}, {
+        resourceSpans: [zE(zE({}, Uu), {}, {
+          scopeSpans: [...Zu, ...Xu]
         })]
       })
     }
 
-    function VD(tt) {
-      let et = {
+    function sZ(uu) {
+      let Eu = {
         meta: {}
       };
-      return void 0 !== tt[0] && (et.meta = tt[0].meta), tt.forEach((tt => {
-        switch (tt.type) {
+      return void 0 !== uu[0] && (Eu.meta = uu[0].meta), uu.forEach((uu => {
+        switch (uu.type) {
           case "log":
           case "event":
           case "exception":
           case "measurement": {
-            const Vt = tD[tt.type],
-              Ot = et[Vt];
-            et = ne(ne({}, et), {}, {
-              [Vt]: void 0 === Ot ? [tt.payload] : [...Ot, tt.payload]
+            const ju = EZ[uu.type],
+              su = Eu[ju];
+            Eu = zE(zE({}, Eu), {}, {
+              [ju]: void 0 === su ? [uu.payload] : [...su, uu.payload]
             });
             break
           }
           case "trace":
-            et = ne(ne({}, et), {}, {
-              traces: eD(et.traces, tt.payload.resourceSpans)
+            Eu = zE(zE({}, Eu), {}, {
+              traces: jZ(Eu.traces, uu.payload.resourceSpans)
             })
         }
-      })), et
+      })), Eu
     }
-    var OD = class extends sq {
+    var UZ = class extends RU {
       constructor() {
-        let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        super(), this.options = tt, this.name = "@grafana/faro-web-sdk:transport-console", this.version = OV
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        super(), this.options = uu, this.name = "@grafana/faro-web-sdk:transport-console", this.version = jj
       }
-      send(tt) {
-        var et;
-        return this.unpatchedConsole[null !== (et = this.options.level) && void 0 !== et ? et : bV.DEBUG]("New event", VD([tt]))
+      send(uu) {
+        var Eu;
+        return this.unpatchedConsole[null !== (Eu = this.options.level) && void 0 !== Eu ? Eu : Mj.DEBUG]("New event", sZ([uu]))
       }
     };
-    const qD = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([0-9]{2}) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) ([0-9]{4}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
-      DD = /^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), ([0-9]{2})-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)-([0-9]{2}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
-      mD = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (?:(?:([0-9]{2}))|(?: ([0-9]))) ([0-9]{2}):([0-9]{2}):([0-9]{2}) ([0-9]{4})$/,
-      dD = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-      jD = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      HD = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const ZZ = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([0-9]{2}) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) ([0-9]{4}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
+      XZ = /^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), ([0-9]{2})-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)-([0-9]{2}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
+      lZ = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (?:(?:([0-9]{2}))|(?: ([0-9]))) ([0-9]{2}):([0-9]{2}):([0-9]{2}) ([0-9]{4})$/,
+      qZ = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+      fZ = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      CZ = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-    function XD(tt) {
+    function bZ(uu) {
       let {
-        weekday: et,
-        day: Vt,
-        month: Ot,
-        year: qt,
-        hour: Dt,
-        minute: mt,
-        second: dt
-      } = tt;
-      if (qt < 1900 || Vt < 1 || Dt > 23 || mt > 59 || dt > 60) return;
-      const jt = 60 === dt,
-        Ht = new Date(0);
-      return Ht.setUTCFullYear(qt, Ot, Vt), Ht.setUTCHours(Dt, mt, jt ? 59 : dt, 0), Ht.getUTCDay() === et && Ht.getUTCDate() === Vt && Ht.getUTCMonth() === Ot && Ht.getUTCFullYear() === qt && Ht.getUTCHours() === Dt && Ht.getUTCMinutes() === mt && Ht.getUTCSeconds() === (jt ? 59 : dt) ? Ht.getTime() + (jt ? 1e3 : 0) : void 0
+        weekday: Eu,
+        day: ju,
+        month: su,
+        year: Uu,
+        hour: Zu,
+        minute: Xu,
+        second: lu
+      } = uu;
+      if (Uu < 1900 || ju < 1 || Zu > 23 || Xu > 59 || lu > 60) return;
+      const qu = 60 === lu,
+        fu = new Date(0);
+      return fu.setUTCFullYear(Uu, su, ju), fu.setUTCHours(Zu, Xu, qu ? 59 : lu, 0), fu.getUTCDay() === Eu && fu.getUTCDate() === ju && fu.getUTCMonth() === su && fu.getUTCFullYear() === Uu && fu.getUTCHours() === Zu && fu.getUTCMinutes() === Xu && fu.getUTCSeconds() === (qu ? 59 : lu) ? fu.getTime() + (qu ? 1e3 : 0) : void 0
     }
-    var QD = class {
-      constructor(tt) {
-        this.options = tt, this.admitted = 0, this.inProgress = 0, this.sequence = 0, this.nextSendAt = 0, this.attemptQueue = [], this.waiting = [], this.unloading = !1
+    var cZ = class {
+      constructor(uu) {
+        this.options = uu, this.admitted = 0, this.inProgress = 0, this.sequence = 0, this.nextSendAt = 0, this.attemptQueue = [], this.waiting = [], this.unloading = !1
       }
       reserve() {
-        var tt = this;
+        var uu = this;
         if (this.admitted >= this.options.bufferSize) return;
         this.admitted++;
-        const et = this.sequence++;
-        let Vt = !1;
+        const Eu = this.sequence++;
+        let ju = !1;
         return {
           deliver: function() {
-            var Vt = YO((function*(Vt) {
-              const Ot = tt.options.getNow();
-              let qt, Dt = 0;
+            var ju = Ts((function*(ju) {
+              const su = uu.options.getNow();
+              let Uu, Zu = 0;
               for (;;) {
-                var mt, dt, jt;
-                const Ht = tt.options.retry.maxAttempts - Dt,
-                  Xt = yield tt.runAttempt((() => Vt(Ht, tt.unloading)), Dt > 0);
-                if (Dt += Xt.attemptsMade, "success" === Xt.kind) return {
+                var Xu, lu, qu;
+                const fu = uu.options.retry.maxAttempts - Zu,
+                  Cu = yield uu.runAttempt((() => ju(fu, uu.unloading)), Zu > 0);
+                if (Zu += Cu.attemptsMade, "success" === Cu.kind) return {
                   kind: "success",
-                  attempts: Dt,
-                  elapsedTimeMs: tt.options.getNow() - Ot
+                  attempts: Zu,
+                  elapsedTimeMs: uu.options.getNow() - su
                 };
-                if (qt = Xt.failure, "terminal" === Xt.kind || tt.unloading) return {
+                if (Uu = Cu.failure, "terminal" === Cu.kind || uu.unloading) return {
                   kind: "terminal",
-                  attempts: Dt,
-                  elapsedTimeMs: tt.options.getNow() - Ot,
-                  failure: qt
+                  attempts: Zu,
+                  elapsedTimeMs: uu.options.getNow() - su,
+                  failure: Uu
                 };
-                if (Dt >= tt.options.retry.maxAttempts) return {
+                if (Zu >= uu.options.retry.maxAttempts) return {
                   kind: "terminal",
-                  attempts: Dt,
-                  elapsedTimeMs: tt.options.getNow() - Ot,
-                  failure: qt,
+                  attempts: Zu,
+                  elapsedTimeMs: uu.options.getNow() - su,
+                  failure: Uu,
                   reason: "retries-exhausted"
                 };
-                if (null != Xt.retryAfterMs && Xt.retryAfterMs > tt.options.retry.maxBackoffMs) return {
+                if (null != Cu.retryAfterMs && Cu.retryAfterMs > uu.options.retry.maxBackoffMs) return {
                   kind: "terminal",
-                  attempts: Dt,
-                  elapsedTimeMs: tt.options.getNow() - Ot,
-                  failure: qt,
+                  attempts: Zu,
+                  elapsedTimeMs: uu.options.getNow() - su,
+                  failure: Uu,
                   reason: "retry-after-too-long"
                 };
-                const Qt = Math.min(null !== (mt = Xt.retryAfterMs) && void 0 !== mt ? mt : tt.options.retry.initialBackoffMs * Math.pow(tt.options.retry.backoffMultiplier, Dt - 1), tt.options.retry.maxBackoffMs);
-                if (null === (dt = (jt = tt.options).onRetry) || void 0 === dt || dt.call(jt, Qt, Dt + 1), yield tt.waitForTurn(et, Qt)) {
-                  const et = tt.options.retry.maxAttempts - Dt,
-                    qt = yield tt.runAttempt((() => Vt(et, !0)));
-                  return Dt += qt.attemptsMade, {
-                    kind: "success" === qt.kind ? "success" : "terminal",
-                    attempts: Dt,
-                    elapsedTimeMs: tt.options.getNow() - Ot,
-                    failure: "success" === qt.kind ? void 0 : qt.failure
+                const bu = Math.min(null !== (Xu = Cu.retryAfterMs) && void 0 !== Xu ? Xu : uu.options.retry.initialBackoffMs * Math.pow(uu.options.retry.backoffMultiplier, Zu - 1), uu.options.retry.maxBackoffMs);
+                if (null === (lu = (qu = uu.options).onRetry) || void 0 === lu || lu.call(qu, bu, Zu + 1), yield uu.waitForTurn(Eu, bu)) {
+                  const Eu = uu.options.retry.maxAttempts - Zu,
+                    Uu = yield uu.runAttempt((() => ju(Eu, !0)));
+                  return Zu += Uu.attemptsMade, {
+                    kind: "success" === Uu.kind ? "success" : "terminal",
+                    attempts: Zu,
+                    elapsedTimeMs: uu.options.getNow() - su,
+                    failure: "success" === Uu.kind ? void 0 : Uu.failure
                   }
                 }
               }
             }));
-            return function(tt) {
-              return Vt.apply(this, arguments)
+            return function(uu) {
+              return ju.apply(this, arguments)
             }
           }(),
           release: () => {
-            Vt || (Vt = !0, this.admitted--)
+            ju || (ju = !0, this.admitted--)
           }
         }
       }
       flush() {
         this.unloading = !0, this.nextSendAt = 0;
-        const tt = this.waiting.splice(0);
+        const uu = this.waiting.splice(0);
         null != this.redeliveryTimer && (clearTimeout(this.redeliveryTimer), this.redeliveryTimer = void 0), null != this.waitingTimer && (clearTimeout(this.waitingTimer), this.waitingTimer = void 0);
-        for (const et of tt) et.resolve(!0);
+        for (const Eu of uu) Eu.resolve(!0);
         this.runNextAttempt()
       }
       resume() {
         this.unloading = !1
       }
-      runAttempt(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return new Promise(((Vt, Ot) => {
+      runAttempt(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return new Promise(((ju, su) => {
           this.attemptQueue.push({
             run: () => {
               this.inProgress++;
-              const et = () => {
+              const Eu = () => {
                 this.inProgress--, this.runNextAttempt()
               };
-              tt().then((tt => {
-                et(), Vt(tt)
-              }), (tt => {
-                et(), Ot(tt)
+              uu().then((uu => {
+                Eu(), ju(uu)
+              }), (uu => {
+                Eu(), su(uu)
               }))
             },
-            isRedelivery: et
+            isRedelivery: Eu
           }), this.runNextAttempt()
         }))
       }
       runNextAttempt() {
         for (null != this.redeliveryTimer && (clearTimeout(this.redeliveryTimer), this.redeliveryTimer = void 0); this.inProgress < this.options.concurrency && this.attemptQueue.length > 0;) {
-          const tt = this.options.getNow(),
-            et = this.attemptQueue.findIndex((et => {
+          const uu = this.options.getNow(),
+            Eu = this.attemptQueue.findIndex((Eu => {
               let {
-                isRedelivery: Vt
-              } = et;
-              return this.unloading || !Vt || tt >= this.nextSendAt
+                isRedelivery: ju
+              } = Eu;
+              return this.unloading || !ju || uu >= this.nextSendAt
             }));
-          if (et < 0) return void(this.redeliveryTimer = setTimeout((() => {
+          if (Eu < 0) return void(this.redeliveryTimer = setTimeout((() => {
             this.redeliveryTimer = void 0, this.runNextAttempt()
-          }), Math.max(0, this.nextSendAt - tt)));
-          const [Vt] = this.attemptQueue.splice(et, 1);
-          Vt.isRedelivery && !this.unloading && (this.nextSendAt = tt + 1), Vt.run()
+          }), Math.max(0, this.nextSendAt - uu)));
+          const [ju] = this.attemptQueue.splice(Eu, 1);
+          ju.isRedelivery && !this.unloading && (this.nextSendAt = uu + 1), ju.run()
         }
       }
-      waitForTurn(tt, et) {
-        const Vt = Math.min(et * (1 + .2 * this.options.getRandom()), this.options.retry.maxBackoffMs);
-        return new Promise((et => {
+      waitForTurn(uu, Eu) {
+        const ju = Math.min(Eu * (1 + .2 * this.options.getRandom()), this.options.retry.maxBackoffMs);
+        return new Promise((Eu => {
           this.waiting.push({
-            sequence: tt,
-            readyAt: this.options.getNow() + Vt,
-            resolve: et
-          }), this.waiting.sort(((tt, et) => tt.readyAt === et.readyAt ? tt.sequence - et.sequence : tt.readyAt - et.readyAt)), null != this.waitingTimer && (clearTimeout(this.waitingTimer), this.waitingTimer = void 0), this.scheduleNext()
+            sequence: uu,
+            readyAt: this.options.getNow() + ju,
+            resolve: Eu
+          }), this.waiting.sort(((uu, Eu) => uu.readyAt === Eu.readyAt ? uu.sequence - Eu.sequence : uu.readyAt - Eu.readyAt)), null != this.waitingTimer && (clearTimeout(this.waitingTimer), this.waitingTimer = void 0), this.scheduleNext()
         }))
       }
       scheduleNext() {
         if (null != this.waitingTimer || 0 === this.waiting.length) return;
-        const tt = this.waiting[0],
-          et = tt.readyAt;
+        const uu = this.waiting[0],
+          Eu = uu.readyAt;
         this.waitingTimer = setTimeout((() => {
           this.waitingTimer = void 0;
-          const et = this.waiting.indexOf(tt);
-          et >= 0 && this.waiting.splice(et, 1), tt.resolve(!1), this.scheduleNext()
-        }), Math.max(0, et - this.options.getNow()))
+          const Eu = this.waiting.indexOf(uu);
+          Eu >= 0 && this.waiting.splice(Eu, 1), uu.resolve(!1), this.scheduleNext()
+        }), Math.max(0, Eu - this.options.getNow()))
       }
     };
 
-    function lD(tt, et) {
-      if (null == tt) return {};
-      var Vt, Ot, qt = function(tt, et) {
-        if (null == tt) return {};
-        var Vt = {};
-        for (var Ot in tt)
-          if ({}.hasOwnProperty.call(tt, Ot)) {
-            if (et.includes(Ot)) continue;
-            Vt[Ot] = tt[Ot]
-          } return Vt
-      }(tt, et);
+    function NZ(uu, Eu) {
+      if (null == uu) return {};
+      var ju, su, Uu = function(uu, Eu) {
+        if (null == uu) return {};
+        var ju = {};
+        for (var su in uu)
+          if ({}.hasOwnProperty.call(uu, su)) {
+            if (Eu.includes(su)) continue;
+            ju[su] = uu[su]
+          } return ju
+      }(uu, Eu);
       if (Object.getOwnPropertySymbols) {
-        var Dt = Object.getOwnPropertySymbols(tt);
-        for (Ot = 0; Ot < Dt.length; Ot++) Vt = Dt[Ot], et.includes(Vt) || {}.propertyIsEnumerable.call(tt, Vt) && (qt[Vt] = tt[Vt])
+        var Zu = Object.getOwnPropertySymbols(uu);
+        for (su = 0; su < Zu.length; su++) ju = Zu[su], Eu.includes(ju) || {}.propertyIsEnumerable.call(uu, ju) && (Uu[ju] = uu[ju])
       }
-      return qt
+      return Uu
     }
 
-    function ED(tt) {
+    function OZ(uu) {
       const {
-        size: et,
-        concurrency: Vt
-      } = tt, Ot = [];
-      let qt = 0;
-      const Dt = () => {
-        if (qt < Vt && Ot.length) {
+        size: Eu,
+        concurrency: ju
+      } = uu, su = [];
+      let Uu = 0;
+      const Zu = () => {
+        if (Uu < ju && su.length) {
           const {
-            producer: tt,
-            resolve: et,
-            reject: Vt
-          } = Ot.shift();
-          qt++, tt().then((tt => {
-            qt--, Dt(), et(tt)
-          }), (tt => {
-            qt--, Dt(), Vt(tt)
+            producer: uu,
+            resolve: Eu,
+            reject: ju
+          } = su.shift();
+          Uu++, uu().then((uu => {
+            Uu--, Zu(), Eu(uu)
+          }), (uu => {
+            Uu--, Zu(), ju(uu)
           }))
         }
       };
       return {
-        add: tt => {
-          if (Ot.length + qt >= et) throw new Error("Task buffer full");
-          return new Promise(((et, Vt) => {
-            Ot.push({
-              producer: tt,
-              resolve: et,
-              reject: Vt
-            }), Dt()
+        add: uu => {
+          if (su.length + Uu >= Eu) throw new Error("Task buffer full");
+          return new Promise(((Eu, ju) => {
+            su.push({
+              producer: uu,
+              resolve: Eu,
+              reject: ju
+            }), Zu()
           }))
         }
       }
     }
-    const fD = ["headers"],
-      wD = ["keepalive", "signal"],
-      yD = new Set([408, 425, 429, 500, 502, 503, 504]),
-      ND = new Set([429, 503]);
-    let aD = 0,
-      MD = 0;
-    var bD = class extends Error {};
-    var JD = class extends sq {
-      constructor(tt) {
-        var et, Vt, Ot, qt, Dt, mt, dt, jt, Ht, Xt, Qt, lt, Et, ft, wt, yt, Nt;
-        super(), this.options = tt, this.name = "@grafana/faro-web-sdk:transport-fetch", this.version = OV, this.pendingCustomSends = 0, this.getNow = null !== (et = tt.getNow) && void 0 !== et ? et : Date.now, this.requestTimeoutMs = null !== (Vt = tt.requestTimeoutMs) && void 0 !== Vt ? Vt : 1e4, this.compressionEnabled = null !== (Ot = tt.requestCompression) && void 0 !== Ot && Ot && "undefined" !== typeof CompressionStream, tt.requestCompression && !this.compressionEnabled && this.logWarn("requestCompression is enabled but CompressionStream is not available. Falling back to uncompressed."), this.requestTimeoutMs > 0 && "undefined" === typeof AbortController && this.logWarn("AbortController is unavailable. Requests will be sent without the configured timeout."), this.deliveryQueue = new QD({
-          bufferSize: null !== (qt = tt.bufferSize) && void 0 !== qt ? qt : 30,
-          concurrency: null !== (Dt = tt.concurrency) && void 0 !== Dt ? Dt : 5,
+    const YZ = ["headers"],
+      hZ = ["keepalive", "signal"],
+      DZ = new Set([408, 425, 429, 500, 502, 503, 504]),
+      gZ = new Set([429, 503]);
+    let MZ = 0,
+      eZ = 0;
+    var GZ = class extends Error {};
+    var pZ = class extends RU {
+      constructor(uu) {
+        var Eu, ju, su, Uu, Zu, Xu, lu, qu, fu, Cu, bu, cu, Nu, Ou, Yu, hu, Du;
+        super(), this.options = uu, this.name = "@grafana/faro-web-sdk:transport-fetch", this.version = jj, this.pendingCustomSends = 0, this.getNow = null !== (Eu = uu.getNow) && void 0 !== Eu ? Eu : Date.now, this.requestTimeoutMs = null !== (ju = uu.requestTimeoutMs) && void 0 !== ju ? ju : 1e4, this.compressionEnabled = null !== (su = uu.requestCompression) && void 0 !== su && su && "undefined" !== typeof CompressionStream, uu.requestCompression && !this.compressionEnabled && this.logWarn("requestCompression is enabled but CompressionStream is not available. Falling back to uncompressed."), this.requestTimeoutMs > 0 && "undefined" === typeof AbortController && this.logWarn("AbortController is unavailable. Requests will be sent without the configured timeout."), this.deliveryQueue = new cZ({
+          bufferSize: null !== (Uu = uu.bufferSize) && void 0 !== Uu ? Uu : 30,
+          concurrency: null !== (Zu = uu.concurrency) && void 0 !== Zu ? Zu : 5,
           retry: {
-            maxAttempts: null !== (mt = null === (dt = tt.retry) || void 0 === dt ? void 0 : dt.maxAttempts) && void 0 !== mt ? mt : 3,
-            initialBackoffMs: null !== (jt = null !== (Ht = null === (Xt = tt.retry) || void 0 === Xt ? void 0 : Xt.initialBackoffMs) && void 0 !== Ht ? Ht : tt.defaultRateLimitBackoffMs) && void 0 !== jt ? jt : 1e3,
-            maxBackoffMs: null !== (Qt = null === (lt = tt.retry) || void 0 === lt ? void 0 : lt.maxBackoffMs) && void 0 !== Qt ? Qt : 3e4,
-            backoffMultiplier: null !== (Et = null === (ft = tt.retry) || void 0 === ft ? void 0 : ft.backoffMultiplier) && void 0 !== Et ? Et : 2
+            maxAttempts: null !== (Xu = null === (lu = uu.retry) || void 0 === lu ? void 0 : lu.maxAttempts) && void 0 !== Xu ? Xu : 3,
+            initialBackoffMs: null !== (qu = null !== (fu = null === (Cu = uu.retry) || void 0 === Cu ? void 0 : Cu.initialBackoffMs) && void 0 !== fu ? fu : uu.defaultRateLimitBackoffMs) && void 0 !== qu ? qu : 1e3,
+            maxBackoffMs: null !== (bu = null === (cu = uu.retry) || void 0 === cu ? void 0 : cu.maxBackoffMs) && void 0 !== bu ? bu : 3e4,
+            backoffMultiplier: null !== (Nu = null === (Ou = uu.retry) || void 0 === Ou ? void 0 : Ou.backoffMultiplier) && void 0 !== Nu ? Nu : 2
           },
           getNow: this.getNow,
-          getRandom: null !== (wt = tt.getRandom) && void 0 !== wt ? wt : Math.random,
-          onRetry: (tt, et) => {
-            this.logDebug(`Retrying failed request after ${tt}ms. Attempt ${et}.`)
+          getRandom: null !== (Yu = uu.getRandom) && void 0 !== Yu ? Yu : Math.random,
+          onRetry: (uu, Eu) => {
+            this.logDebug(`Retrying failed request after ${uu}ms. Attempt ${Eu}.`)
           }
-        }), this.customPromiseBuffer = ED({
-          size: null !== (yt = tt.bufferSize) && void 0 !== yt ? yt : 30,
-          concurrency: null !== (Nt = tt.concurrency) && void 0 !== Nt ? Nt : 5
+        }), this.customPromiseBuffer = OZ({
+          size: null !== (hu = uu.bufferSize) && void 0 !== hu ? hu : 30,
+          concurrency: null !== (Du = uu.concurrency) && void 0 !== Du ? Du : 5
         }), this.defaultPromiseBuffer = {
-          add: tt => {
-            if (this.promiseBuffer !== this.defaultPromiseBuffer || this.promiseBuffer.add !== this.defaultBufferAdd || this.pendingCustomSends > 0) return this.customPromiseBuffer.add(tt);
-            const et = this.deliveryQueue.reserve();
-            if (!et) throw new Error("Task buffer full");
-            return this.runBufferedTask(et, tt)
+          add: uu => {
+            if (this.promiseBuffer !== this.defaultPromiseBuffer || this.promiseBuffer.add !== this.defaultBufferAdd || this.pendingCustomSends > 0) return this.customPromiseBuffer.add(uu);
+            const Eu = this.deliveryQueue.reserve();
+            if (!Eu) throw new Error("Task buffer full");
+            return this.runBufferedTask(Eu, uu)
           }
-        }, this.defaultBufferAdd = this.defaultPromiseBuffer.add, this.promiseBuffer = this.defaultPromiseBuffer, "undefined" !== typeof window && (window.addEventListener("pagehide", (() => this.deliveryQueue.flush())), window.addEventListener("pageshow", (tt => {
-          tt.persisted && this.deliveryQueue.resume()
+        }, this.defaultBufferAdd = this.defaultPromiseBuffer.add, this.promiseBuffer = this.defaultPromiseBuffer, "undefined" !== typeof window && (window.addEventListener("pagehide", (() => this.deliveryQueue.flush())), window.addEventListener("pageshow", (uu => {
+          uu.persisted && this.deliveryQueue.resume()
         })))
       }
-      send(tt) {
-        var et = this;
-        return YO((function*() {
-          const Vt = et.promiseBuffer;
-          if (Vt !== et.defaultPromiseBuffer || Vt.add !== et.defaultBufferAdd) {
-            et.pendingCustomSends++;
+      send(uu) {
+        var Eu = this;
+        return Ts((function*() {
+          const ju = Eu.promiseBuffer;
+          if (ju !== Eu.defaultPromiseBuffer || ju.add !== Eu.defaultBufferAdd) {
+            Eu.pendingCustomSends++;
             try {
-              yield Vt.add((() => et.deliver(tt)))
-            } catch (Ot) {
-              et.logError("Permanent delivery failure", {
-                error: Ot,
+              yield ju.add((() => Eu.deliver(uu)))
+            } catch (su) {
+              Eu.logError("Permanent delivery failure", {
+                error: su,
                 attempts: 0,
                 elapsedTimeMs: 0
               })
             } finally {
-              et.pendingCustomSends--
+              Eu.pendingCustomSends--
             }
-          } else yield et.deliver(tt)
+          } else yield Eu.deliver(uu)
         }))()
       }
-      runBufferedTask(tt, et) {
-        return YO((function*() {
-          let Vt;
+      runBufferedTask(uu, Eu) {
+        return Ts((function*() {
+          let ju;
           try {
-            return yield tt.deliver(YO((function*() {
-              return Vt = yield et(), {
+            return yield uu.deliver(Ts((function*() {
+              return ju = yield Eu(), {
                 kind: "success",
                 attemptsMade: 1
               }
-            }))), Vt
+            }))), ju
           } finally {
-            tt.release()
+            uu.release()
           }
         }))()
       }
-      deliver(tt) {
-        var et = this;
-        return YO((function*() {
-          const Vt = et.deliveryQueue.reserve();
-          if (Vt) try {
-            const Ot = yield et.prepareRequest(tt), qt = yield Vt.deliver(((tt, Vt) => et.performAttempt(Ot, tt, Vt)));
-            "terminal" === qt.kind && et.logError("retries-exhausted" === qt.reason ? "Delivery retries exhausted" : "Permanent delivery failure", Qe(Qe({}, qt.failure), {}, {
-              reason: qt.reason,
-              attempts: qt.attempts,
-              elapsedTimeMs: qt.elapsedTimeMs
+      deliver(uu) {
+        var Eu = this;
+        return Ts((function*() {
+          const ju = Eu.deliveryQueue.reserve();
+          if (ju) try {
+            const su = yield Eu.prepareRequest(uu), Uu = yield ju.deliver(((uu, ju) => Eu.performAttempt(su, uu, ju)));
+            "terminal" === Uu.kind && Eu.logError("retries-exhausted" === Uu.reason ? "Delivery retries exhausted" : "Permanent delivery failure", CE(CE({}, Uu.failure), {}, {
+              reason: Uu.reason,
+              attempts: Uu.attempts,
+              elapsedTimeMs: Uu.elapsedTimeMs
             }))
-          } catch (Ot) {
-            et.logError("Permanent delivery failure", {
-              error: Ot,
+          } catch (su) {
+            Eu.logError("Permanent delivery failure", {
+              error: su,
               attempts: 0,
               elapsedTimeMs: 0
             })
           } finally {
-            Vt.release()
-          } else et.logError("Permanent delivery failure", {
+            ju.release()
+          } else Eu.logError("Permanent delivery failure", {
             error: "Reliable delivery queue is full",
             attempts: 0,
             elapsedTimeMs: 0
@@ -3406,477 +3406,477 @@ export const modules = {
         }))()
       }
       getIgnoreUrls() {
-        var tt;
-        return [this.options.url].concat(null !== (tt = this.config.ignoreUrls) && void 0 !== tt ? tt : [])
+        var uu;
+        return [this.options.url].concat(null !== (uu = this.config.ignoreUrls) && void 0 !== uu ? uu : [])
       }
       isBatched() {
         return !0
       }
-      prepareRequest(tt) {
-        var et = this;
-        return YO((function*() {
-          var Vt, Ot;
-          const qt = VD(tt),
-            Dt = null === (Vt = qt.meta.session) || void 0 === Vt ? void 0 : Vt.id,
-            mt = JSON.stringify(qt),
-            dt = null !== (Ot = et.options.requestOptions) && void 0 !== Ot ? Ot : {},
+      prepareRequest(uu) {
+        var Eu = this;
+        return Ts((function*() {
+          var ju, su;
+          const Uu = sZ(uu),
+            Zu = null === (ju = Uu.meta.session) || void 0 === ju ? void 0 : ju.id,
+            Xu = JSON.stringify(Uu),
+            lu = null !== (su = Eu.options.requestOptions) && void 0 !== su ? su : {},
             {
-              headers: jt = {}
-            } = dt,
-            Ht = lD(dt, fD),
+              headers: qu = {}
+            } = lu,
+            fu = NZ(lu, YZ),
             {
-              keepalive: Xt,
-              signal: Qt
-            } = Ht,
-            lt = lD(Ht, wD),
-            Et = {};
-          for (const [tt, et] of Object.entries(jt)) Et[tt] = "function" === typeof et ? yield et(): et;
-          let ft = mt,
-            wt = function(tt) {
-              return "undefined" === typeof TextEncoder ? tt.length : (new TextEncoder).encode(tt).byteLength
-            }(mt);
-          const yt = {};
-          return et.compressionEnabled && (ft = yield et.compress(mt), wt = ft.size, yt["Content-Encoding"] = "gzip"), {
-            bodySize: wt,
-            sessionId: Dt,
-            requestInit: Qe({
+              keepalive: Cu,
+              signal: bu
+            } = fu,
+            cu = NZ(fu, hZ),
+            Nu = {};
+          for (const [uu, Eu] of Object.entries(qu)) Nu[uu] = "function" === typeof Eu ? yield Eu(): Eu;
+          let Ou = Xu,
+            Yu = function(uu) {
+              return "undefined" === typeof TextEncoder ? uu.length : (new TextEncoder).encode(uu).byteLength
+            }(Xu);
+          const hu = {};
+          return Eu.compressionEnabled && (Ou = yield Eu.compress(Xu), Yu = Ou.size, hu["Content-Encoding"] = "gzip"), {
+            bodySize: Yu,
+            sessionId: Zu,
+            requestInit: CE({
               method: "POST",
-              headers: Qe(Qe(Qe(Qe(Qe({
+              headers: CE(CE(CE(CE(CE({
                 "Content-Type": "application/json"
-              }, yt), Et), et.options.apiKey ? {
-                "x-api-key": et.options.apiKey
-              } : {}), Dt ? {
-                "x-faro-session-id": Dt
+              }, hu), Nu), Eu.options.apiKey ? {
+                "x-api-key": Eu.options.apiKey
+              } : {}), Zu ? {
+                "x-faro-session-id": Zu
               } : {}), {}, {
-                "Idempotency-Key": ae(20)
+                "Idempotency-Key": DE(20)
               }),
-              body: ft
-            }, lt)
+              body: Ou
+            }, cu)
           }
         }))()
       }
-      performAttempt(tt, et, Vt) {
-        var Ot = this;
-        return YO((function*() {
-          var qt;
-          const Dt = null === (qt = Ot.options.requestOptions) || void 0 === qt ? void 0 : qt.signal;
-          if (null === Dt || void 0 === Dt ? void 0 : Dt.aborted) return {
+      performAttempt(uu, Eu, ju) {
+        var su = this;
+        return Ts((function*() {
+          var Uu;
+          const Zu = null === (Uu = su.options.requestOptions) || void 0 === Uu ? void 0 : Uu.signal;
+          if (null === Zu || void 0 === Zu ? void 0 : Zu.aborted) return {
             kind: "terminal",
             failure: {
-              error: Dt.reason
+              error: Zu.reason
             },
             attemptsMade: 0
           };
-          let mt = 0;
+          let Xu = 0;
           try {
-            var dt;
-            const qt = yield Ot.fetchWithKeepaliveFallback(tt.requestInit, tt.bodySize, !!Vt || (null === (dt = Ot.options.requestOptions) || void 0 === dt ? void 0 : dt.keepalive), et, (() => mt++));
-            if (Ot.handleResponse(qt, tt.sessionId), qt.status >= 200 && qt.status < 300) return {
+            var lu;
+            const Uu = yield su.fetchWithKeepaliveFallback(uu.requestInit, uu.bodySize, !!ju || (null === (lu = su.options.requestOptions) || void 0 === lu ? void 0 : lu.keepalive), Eu, (() => Xu++));
+            if (su.handleResponse(Uu, uu.sessionId), Uu.status >= 200 && Uu.status < 300) return {
               kind: "success",
-              attemptsMade: mt
+              attemptsMade: Xu
             };
-            const Dt = {
-              status: qt.status
+            const Zu = {
+              status: Uu.status
             };
-            return !yD.has(qt.status) || Vt ? {
+            return !DZ.has(Uu.status) || ju ? {
               kind: "terminal",
-              failure: Dt,
-              attemptsMade: mt
+              failure: Zu,
+              attemptsMade: Xu
             } : {
               kind: "retry",
-              failure: Dt,
-              attemptsMade: mt,
-              retryAfterMs: ND.has(qt.status) ? Ot.getRetryAfterDelayMs(qt) : void 0
+              failure: Zu,
+              attemptsMade: Xu,
+              retryAfterMs: gZ.has(Uu.status) ? su.getRetryAfterDelayMs(Uu) : void 0
             }
-          } catch (jt) {
-            const tt = {
-              error: jt
+          } catch (qu) {
+            const uu = {
+              error: qu
             };
-            return (null === Dt || void 0 === Dt ? void 0 : Dt.aborted) || !Ot.isFetchNetworkError(jt) || Vt ? {
+            return (null === Zu || void 0 === Zu ? void 0 : Zu.aborted) || !su.isFetchNetworkError(qu) || ju ? {
               kind: "terminal",
-              failure: tt,
-              attemptsMade: mt
+              failure: uu,
+              attemptsMade: Xu
             } : {
               kind: "retry",
-              failure: tt,
-              attemptsMade: mt
+              failure: uu,
+              attemptsMade: Xu
             }
           }
         }))()
       }
-      fetchWithKeepaliveFallback(tt, et, Vt, Ot, qt) {
-        var Dt = this;
-        return YO((function*() {
-          const mt = Dt.getNow(),
-            dt = Dt.reserveKeepalive(et, Vt);
+      fetchWithKeepaliveFallback(uu, Eu, ju, su, Uu) {
+        var Zu = this;
+        return Ts((function*() {
+          const Xu = Zu.getNow(),
+            lu = Zu.reserveKeepalive(Eu, ju);
           try {
-            return yield Dt.fetchWithTimeout(Qe(Qe({}, tt), {}, {
-              keepalive: dt.keepalive
-            }), Dt.requestTimeoutMs, qt)
-          } catch (Ht) {
-            var jt;
-            if (dt.keepalive && Ot > 1 && Dt.isFetchNetworkError(Ht) && !(Ht instanceof bD) && !(null === (jt = Dt.options.requestOptions) || void 0 === jt || null === (jt = jt.signal) || void 0 === jt ? void 0 : jt.aborted)) {
-              Dt.logDebug("Retrying failed keepalive request with keepalive disabled.");
-              const et = Dt.requestTimeoutMs - (Dt.getNow() - mt);
-              return Dt.fetchWithTimeout(Qe(Qe({}, tt), {}, {
+            return yield Zu.fetchWithTimeout(CE(CE({}, uu), {}, {
+              keepalive: lu.keepalive
+            }), Zu.requestTimeoutMs, Uu)
+          } catch (fu) {
+            var qu;
+            if (lu.keepalive && su > 1 && Zu.isFetchNetworkError(fu) && !(fu instanceof GZ) && !(null === (qu = Zu.options.requestOptions) || void 0 === qu || null === (qu = qu.signal) || void 0 === qu ? void 0 : qu.aborted)) {
+              Zu.logDebug("Retrying failed keepalive request with keepalive disabled.");
+              const Eu = Zu.requestTimeoutMs - (Zu.getNow() - Xu);
+              return Zu.fetchWithTimeout(CE(CE({}, uu), {}, {
                 keepalive: !1
-              }), et, qt)
+              }), Eu, Uu)
             }
-            throw Ht
+            throw fu
           } finally {
-            dt.release()
+            lu.release()
           }
         }))()
       }
-      fetchWithTimeout(tt, et, Vt) {
-        var Ot = this;
-        return YO((function*() {
-          var qt;
-          const Dt = null === (qt = Ot.options.requestOptions) || void 0 === qt ? void 0 : qt.signal;
-          if (Ot.requestTimeoutMs <= 0 || "undefined" === typeof AbortController) return Vt(), fetch(Ot.options.url, Qe(Qe({}, tt), {}, {
-            signal: Dt
+      fetchWithTimeout(uu, Eu, ju) {
+        var su = this;
+        return Ts((function*() {
+          var Uu;
+          const Zu = null === (Uu = su.options.requestOptions) || void 0 === Uu ? void 0 : Uu.signal;
+          if (su.requestTimeoutMs <= 0 || "undefined" === typeof AbortController) return ju(), fetch(su.options.url, CE(CE({}, uu), {}, {
+            signal: Zu
           }));
-          if (et <= 0) throw new bD("Request timed out");
-          const mt = new AbortController,
-            dt = () => mt.abort(null === Dt || void 0 === Dt ? void 0 : Dt.reason);
-          null === Dt || void 0 === Dt || Dt.addEventListener("abort", dt, {
+          if (Eu <= 0) throw new GZ("Request timed out");
+          const Xu = new AbortController,
+            lu = () => Xu.abort(null === Zu || void 0 === Zu ? void 0 : Zu.reason);
+          null === Zu || void 0 === Zu || Zu.addEventListener("abort", lu, {
             once: !0
           });
-          let jt = !1;
-          const Ht = setTimeout((() => {
-            jt = !0, mt.abort()
-          }), et);
+          let qu = !1;
+          const fu = setTimeout((() => {
+            qu = !0, Xu.abort()
+          }), Eu);
           try {
-            return Vt(), yield fetch(Ot.options.url, Qe(Qe({}, tt), {}, {
-              signal: mt.signal
+            return ju(), yield fetch(su.options.url, CE(CE({}, uu), {}, {
+              signal: Xu.signal
             }))
-          } catch (Xt) {
-            if (jt && !(null === Dt || void 0 === Dt ? void 0 : Dt.aborted)) throw new bD("Request timed out");
-            throw Xt
+          } catch (Cu) {
+            if (qu && !(null === Zu || void 0 === Zu ? void 0 : Zu.aborted)) throw new GZ("Request timed out");
+            throw Cu
           } finally {
-            clearTimeout(Ht), null === Dt || void 0 === Dt || Dt.removeEventListener("abort", dt)
+            clearTimeout(fu), null === Zu || void 0 === Zu || Zu.removeEventListener("abort", lu)
           }
         }))()
       }
-      getRetryAfterDelayMs(tt) {
-        const et = tt.headers.get("Retry-After");
-        if (!et) return;
-        if (/^\d+$/.test(et)) {
-          const tt = 1e3 * Number(et);
-          return Number.isFinite(tt) ? tt : Number.POSITIVE_INFINITY
+      getRetryAfterDelayMs(uu) {
+        const Eu = uu.headers.get("Retry-After");
+        if (!Eu) return;
+        if (/^\d+$/.test(Eu)) {
+          const uu = 1e3 * Number(Eu);
+          return Number.isFinite(uu) ? uu : Number.POSITIVE_INFINITY
         }
-        const Vt = this.getNow(),
-          Ot = function(tt, et) {
-            const Vt = qD.exec(tt);
-            if (Vt) {
-              const [, tt, et, Ot, qt, Dt, mt, dt] = Vt;
-              return XD({
-                weekday: dD.indexOf(tt),
-                day: Number(et),
-                month: HD.indexOf(Ot),
-                year: Number(qt),
-                hour: Number(Dt),
-                minute: Number(mt),
-                second: Number(dt)
+        const ju = this.getNow(),
+          su = function(uu, Eu) {
+            const ju = ZZ.exec(uu);
+            if (ju) {
+              const [, uu, Eu, su, Uu, Zu, Xu, lu] = ju;
+              return bZ({
+                weekday: qZ.indexOf(uu),
+                day: Number(Eu),
+                month: CZ.indexOf(su),
+                year: Number(Uu),
+                hour: Number(Zu),
+                minute: Number(Xu),
+                second: Number(lu)
               })
             }
-            const Ot = DD.exec(tt);
-            if (Ot) {
-              const [, tt, Vt, mt, dt, jt, Ht, Xt] = Ot, Qt = new Date(et);
-              if (Number.isNaN(Qt.getTime())) return;
-              const lt = Qt.getUTCFullYear();
-              let Et = 100 * Math.floor(lt / 100) + Number(dt);
-              Et < lt && (Et += 100);
-              const ft = HD.indexOf(mt),
-                wt = {
-                  month: ft,
-                  day: Number(Vt),
-                  hour: Number(jt),
-                  minute: Number(Ht),
-                  second: Number(Xt),
+            const su = XZ.exec(uu);
+            if (su) {
+              const [, uu, ju, Xu, lu, qu, fu, Cu] = su, bu = new Date(Eu);
+              if (Number.isNaN(bu.getTime())) return;
+              const cu = bu.getUTCFullYear();
+              let Nu = 100 * Math.floor(cu / 100) + Number(lu);
+              Nu < cu && (Nu += 100);
+              const Ou = CZ.indexOf(Xu),
+                Yu = {
+                  month: Ou,
+                  day: Number(ju),
+                  hour: Number(qu),
+                  minute: Number(fu),
+                  second: Number(Cu),
                   millisecond: 0
                 },
-                yt = {
-                  month: Qt.getUTCMonth(),
-                  day: Qt.getUTCDate(),
-                  hour: Qt.getUTCHours(),
-                  minute: Qt.getUTCMinutes(),
-                  second: Qt.getUTCSeconds(),
-                  millisecond: Qt.getUTCMilliseconds()
+                hu = {
+                  month: bu.getUTCMonth(),
+                  day: bu.getUTCDate(),
+                  hour: bu.getUTCHours(),
+                  minute: bu.getUTCMinutes(),
+                  second: bu.getUTCSeconds(),
+                  millisecond: bu.getUTCMilliseconds()
                 };
-              return (Et > lt + 50 || Et === lt + 50 && (Dt = yt, ((qt = wt).month - Dt.month || qt.day - Dt.day || qt.hour - Dt.hour || qt.minute - Dt.minute || qt.second - Dt.second || qt.millisecond - Dt.millisecond) > 0)) && (Et -= 100), XD({
-                weekday: jD.indexOf(tt),
-                day: Number(Vt),
-                month: ft,
-                year: Et,
-                hour: Number(jt),
-                minute: Number(Ht),
-                second: Number(Xt)
+              return (Nu > cu + 50 || Nu === cu + 50 && (Zu = hu, ((Uu = Yu).month - Zu.month || Uu.day - Zu.day || Uu.hour - Zu.hour || Uu.minute - Zu.minute || Uu.second - Zu.second || Uu.millisecond - Zu.millisecond) > 0)) && (Nu -= 100), bZ({
+                weekday: fZ.indexOf(uu),
+                day: Number(ju),
+                month: Ou,
+                year: Nu,
+                hour: Number(qu),
+                minute: Number(fu),
+                second: Number(Cu)
               })
             }
-            var qt, Dt;
-            const mt = mD.exec(tt);
-            if (!mt) return;
-            const [, dt, jt, Ht, Xt, Qt, lt, Et, ft] = mt;
-            return XD({
-              weekday: dD.indexOf(dt),
-              day: Number(null !== Ht && void 0 !== Ht ? Ht : Xt),
-              month: HD.indexOf(jt),
-              year: Number(ft),
-              hour: Number(Qt),
-              minute: Number(lt),
-              second: Number(Et)
+            var Uu, Zu;
+            const Xu = lZ.exec(uu);
+            if (!Xu) return;
+            const [, lu, qu, fu, Cu, bu, cu, Nu, Ou] = Xu;
+            return bZ({
+              weekday: qZ.indexOf(lu),
+              day: Number(null !== fu && void 0 !== fu ? fu : Cu),
+              month: CZ.indexOf(qu),
+              year: Number(Ou),
+              hour: Number(bu),
+              minute: Number(cu),
+              second: Number(Nu)
             })
-          }(et, Vt);
-        return null == Ot ? void 0 : Math.max(0, Ot - Vt)
+          }(Eu, ju);
+        return null == su ? void 0 : Math.max(0, su - ju)
       }
-      reserveKeepalive(tt, et) {
-        if (!1 === et || tt > 6e4 || aD + tt > 6e4 || MD >= 9) return {
+      reserveKeepalive(uu, Eu) {
+        if (!1 === Eu || uu > 6e4 || MZ + uu > 6e4 || eZ >= 9) return {
           keepalive: !1,
-          release: ie
+          release: LE
         };
-        aD += tt, MD++;
-        let Vt = !1;
+        MZ += uu, eZ++;
+        let ju = !1;
         return {
           keepalive: !0,
           release: () => {
-            Vt || (Vt = !0, aD -= tt, MD--)
+            ju || (ju = !0, MZ -= uu, eZ--)
           }
         }
       }
-      handleResponse(tt, et) {
-        202 === tt.status && "invalid" === tt.headers.get("X-Faro-Session-Status") && this.extendFaroSession(this.config, this.logDebug.bind(this), et), tt.text().catch(ie)
+      handleResponse(uu, Eu) {
+        202 === uu.status && "invalid" === uu.headers.get("X-Faro-Session-Status") && this.extendFaroSession(this.config, this.logDebug.bind(this), Eu), uu.text().catch(LE)
       }
-      isFetchNetworkError(tt) {
-        return tt instanceof TypeError || tt instanceof bD || tt instanceof DOMException && "AbortError" === tt.name
+      isFetchNetworkError(uu) {
+        return uu instanceof TypeError || uu instanceof GZ || uu instanceof DOMException && "AbortError" === uu.name
       }
-      compress(tt) {
-        return YO((function*() {
-          const et = [],
-            Vt = new ReadableStream({
-              start(et) {
-                et.enqueue((new TextEncoder).encode(tt)), et.close()
+      compress(uu) {
+        return Ts((function*() {
+          const Eu = [],
+            ju = new ReadableStream({
+              start(Eu) {
+                Eu.enqueue((new TextEncoder).encode(uu)), Eu.close()
               }
             }).pipeThrough(new CompressionStream("gzip")).getReader();
           for (;;) {
             const {
-              done: tt,
-              value: Ot
-            } = yield Vt.read();
-            if (tt) return new Blob(et);
-            et.push(Ot)
+              done: uu,
+              value: su
+            } = yield ju.read();
+            if (uu) return new Blob(Eu);
+            Eu.push(su)
           }
         }))()
       }
-      extendFaroSession(tt, et, Vt) {
-        var Ot, qt;
-        const Dt = tt.sessionTracking;
-        if (!(null === Dt || void 0 === Dt ? void 0 : Dt.enabled)) return void et("Session expired.");
+      extendFaroSession(uu, Eu, ju) {
+        var su, Uu;
+        const Zu = uu.sessionTracking;
+        if (!(null === Zu || void 0 === Zu ? void 0 : Zu.enabled)) return void Eu("Session expired.");
         const {
-          fetchUserSession: mt,
-          storeUserSession: dt
-        } = Ae(Dt), jt = null === (Ot = this.metas.value.session) || void 0 === Ot ? void 0 : Ot.id, Ht = null === (qt = mt()) || void 0 === qt ? void 0 : qt.sessionId;
-        Vt && Vt === jt && Vt === Ht ? (Re({
-          fetchUserSession: mt,
-          storeUserSession: dt
+          fetchUserSession: Xu,
+          storeUserSession: lu
+        } = BE(Zu), qu = null === (su = this.metas.value.session) || void 0 === su ? void 0 : su.id, fu = null === (Uu = Xu()) || void 0 === Uu ? void 0 : Uu.sessionId;
+        ju && ju === qu && ju === fu ? (kE({
+          fetchUserSession: Xu,
+          storeUserSession: lu
         })({
           forceSessionExtend: !0
-        }), et("Session expired; created new session.")) : et("Ignoring stale or cross-tab session-invalid response; request session no longer current.")
+        }), Eu("Session expired; created new session.")) : Eu("Ignoring stale or cross-tab session-invalid response; request session no longer current.")
       }
     };
-    const CD = () => {
-      const tt = window.k6;
+    const wZ = () => {
+      const uu = window.k6;
       return {
-        k6: Qe({
+        k6: CE({
           isK6Browser: !0
-        }, (null === tt || void 0 === tt ? void 0 : tt.testRunId) && {
-          testRunId: null === tt || void 0 === tt ? void 0 : tt.testRunId
+        }, (null === uu || void 0 === uu ? void 0 : uu.testRunId) && {
+          testRunId: null === uu || void 0 === uu ? void 0 : uu.testRunId
         })
       }
     };
-    let uD, KD;
+    let JZ, dZ;
 
-    function hD() {
+    function aZ() {
       let {
-        generatePageId: tt,
-        initialPageMeta: et
+        generatePageId: uu,
+        initialPageMeta: Eu
       } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
       return () => {
-        const Vt = location.href;
-        return ct(tt) && uD !== Vt && (uD = Vt, KD = tt(location)), {
-          page: Qe(Qe({
-            url: Vt
-          }, KD ? {
-            id: KD
-          } : {}), et)
+        const ju = location.href;
+        return ou(uu) && JZ !== ju && (JZ = ju, dZ = uu(location)), {
+          page: CE(CE({
+            url: ju
+          }, dZ ? {
+            id: dZ
+          } : {}), Eu)
         }
       }
     }
 
-    function vD() {
-      let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : tV,
-        et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-      const Vt = Be;
-      return et > 0 && (Vt.error = et >= 1 ? function() {
-        for (var et = arguments.length, Ot = new Array(et), qt = 0; qt < et; qt++) Ot[qt] = arguments[qt];
-        tt.error(`${Vt.prefix}\n`, ...Ot)
-      } : ie, Vt.warn = et >= 2 ? function() {
-        for (var et = arguments.length, Ot = new Array(et), qt = 0; qt < et; qt++) Ot[qt] = arguments[qt];
-        tt.warn(`${Vt.prefix}\n`, ...Ot)
-      } : ie, Vt.info = et >= 3 ? function() {
-        for (var et = arguments.length, Ot = new Array(et), qt = 0; qt < et; qt++) Ot[qt] = arguments[qt];
-        tt.info(`${Vt.prefix}\n`, ...Ot)
-      } : ie, Vt.debug = et >= 4 ? function() {
-        for (var et = arguments.length, Ot = new Array(et), qt = 0; qt < et; qt++) Ot[qt] = arguments[qt];
-        tt.debug(`${Vt.prefix}\n`, ...Ot)
-      } : ie), Vt
+    function PZ() {
+      let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : RE,
+        Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+      const ju = xE;
+      return Eu > 0 && (ju.error = Eu >= 1 ? function() {
+        for (var Eu = arguments.length, su = new Array(Eu), Uu = 0; Uu < Eu; Uu++) su[Uu] = arguments[Uu];
+        uu.error(`${ju.prefix}\n`, ...su)
+      } : LE, ju.warn = Eu >= 2 ? function() {
+        for (var Eu = arguments.length, su = new Array(Eu), Uu = 0; Uu < Eu; Uu++) su[Uu] = arguments[Uu];
+        uu.warn(`${ju.prefix}\n`, ...su)
+      } : LE, ju.info = Eu >= 3 ? function() {
+        for (var Eu = arguments.length, su = new Array(Eu), Uu = 0; Uu < Eu; Uu++) su[Uu] = arguments[Uu];
+        uu.info(`${ju.prefix}\n`, ...su)
+      } : LE, ju.debug = Eu >= 4 ? function() {
+        for (var Eu = arguments.length, su = new Array(Eu), Uu = 0; Uu < Eu; Uu++) su[Uu] = arguments[Uu];
+        uu.debug(`${ju.prefix}\n`, ...su)
+      } : LE), ju
     }
-    const WD = "faro",
-      SD = {
+    const oZ = "faro",
+      kZ = {
         enabled: !0,
         sendTimeout: 250,
         itemLimit: 50
       },
-      cD = ["dedupe", "eventDomain", "globalObjectKey", "instrumentations", "internalLoggerLevel", "isolate", "logArgsSerializer", "metas", "paused", "preventGlobalExposure", "unpatchedConsole", "url", "experimental"];
+      mZ = ["dedupe", "eventDomain", "globalObjectKey", "instrumentations", "internalLoggerLevel", "isolate", "logArgsSerializer", "metas", "paused", "preventGlobalExposure", "unpatchedConsole", "url", "experimental"];
 
-    function RD(tt) {
-      var et, Vt, qt, Dt, mt, dt;
-      const jt = [],
-        Xt = vD(tt.unpatchedConsole, tt.internalLoggerLevel);
-      tt.transports ? ((tt.url || tt.apiKey) && Xt.error('if "transports" is defined, "url" and "apiKey" should not be defined'), jt.push(...tt.transports)) : tt.url ? jt.push(new JD({
-        url: tt.url,
-        apiKey: tt.apiKey,
-        requestCompression: tt.requestCompression
-      })) : Xt.error('either "url" or "transports" must be defined');
+    function vZ(uu) {
+      var Eu, ju, Uu, Zu, Xu, lu;
+      const qu = [],
+        Cu = PZ(uu.unpatchedConsole, uu.internalLoggerLevel);
+      uu.transports ? ((uu.url || uu.apiKey) && Cu.error('if "transports" is defined, "url" and "apiKey" should not be defined'), qu.push(...uu.transports)) : uu.url ? qu.push(new pZ({
+        url: uu.url,
+        apiKey: uu.apiKey,
+        requestCompression: uu.requestCompression
+      })) : Cu.error('either "url" or "transports" must be defined');
       const {
-        dedupe: Qt = !0,
-        eventDomain: lt = Ot,
-        globalObjectKey: Et = WD,
-        instrumentations: ft = Uq(),
-        internalLoggerLevel: wt = pe,
-        isolate: yt = !1,
-        logArgsSerializer: Nt = IV,
-        metas: Mt = PD(tt),
-        paused: bt = !1,
-        preventGlobalExposure: Jt = !1,
-        unpatchedConsole: Ct = tV,
-        url: ut,
-        experimental: Kt
-      } = tt, ht = lD(tt, cD), vt = null !== (et = null === Kt || void 0 === Kt ? void 0 : Kt.trackNavigation) && void 0 !== et && et, Wt = {
-        dataAttributeName: sO(null !== (Vt = null === (qt = tt.userActionsInstrumentation) || void 0 === qt ? void 0 : qt.dataAttributeName) && void 0 !== Vt ? Vt : xO),
-        excludeItem: null === (Dt = tt.userActionsInstrumentation) || void 0 === Dt ? void 0 : Dt.excludeItem,
-        initialActivityTimeout: nO(null === (mt = tt.userActionsInstrumentation) || void 0 === mt ? void 0 : mt.initialActivityTimeout, 100, (tt => Xt.warn(tt)))
+        dedupe: bu = !0,
+        eventDomain: cu = su,
+        globalObjectKey: Nu = oZ,
+        instrumentations: Ou = LU(),
+        internalLoggerLevel: Yu = TE,
+        isolate: hu = !1,
+        logArgsSerializer: Du = mj,
+        metas: gu = VZ(uu),
+        paused: Mu = !1,
+        preventGlobalExposure: eu = !1,
+        unpatchedConsole: Gu = RE,
+        url: pu,
+        experimental: wu
+      } = uu, Ju = NZ(uu, mZ), du = null !== (Eu = null === wu || void 0 === wu ? void 0 : wu.trackNavigation) && void 0 !== Eu && Eu, au = {
+        dataAttributeName: Rs(null !== (ju = null === (Uu = uu.userActionsInstrumentation) || void 0 === Uu ? void 0 : Uu.dataAttributeName) && void 0 !== ju ? ju : ns),
+        excludeItem: null === (Zu = uu.userActionsInstrumentation) || void 0 === Zu ? void 0 : Zu.excludeItem,
+        initialActivityTimeout: uU(null === (Xu = uu.userActionsInstrumentation) || void 0 === Xu ? void 0 : Xu.initialActivityTimeout, 100, (uu => Cu.warn(uu)))
       };
-      return Qe(Qe({}, ht), {}, {
-        batching: Qe(Qe({}, SD), tt.batching),
-        dedupe: Qt,
-        globalObjectKey: Et,
-        instrumentations: ID(ft, tt),
-        internalLoggerLevel: wt,
-        isolate: yt,
-        logArgsSerializer: Nt,
-        metas: Mt,
-        parseStacktrace: yV,
-        paused: bt,
-        preventGlobalExposure: Jt,
-        transports: jt,
-        unpatchedConsole: Ct,
-        eventDomain: lt,
-        ignoreUrls: [...null !== (dt = tt.ignoreUrls) && void 0 !== dt ? dt : [], ...ut ? [ut] : [], /\/collect(?:\/[\w]*)?$/],
-        sessionTracking: Qe(Qe(Qe({}, Ht), tt.sessionTracking), ZD({
-          trackGeolocation: tt.trackGeolocation,
-          sessionTracking: tt.sessionTracking
+      return CE(CE({}, Ju), {}, {
+        batching: CE(CE({}, kZ), uu.batching),
+        dedupe: bu,
+        globalObjectKey: Nu,
+        instrumentations: KZ(Ou, uu),
+        internalLoggerLevel: Yu,
+        isolate: hu,
+        logArgsSerializer: Du,
+        metas: gu,
+        parseStacktrace: Yj,
+        paused: Mu,
+        preventGlobalExposure: eu,
+        transports: qu,
+        unpatchedConsole: Gu,
+        eventDomain: cu,
+        ignoreUrls: [...null !== (lu = uu.ignoreUrls) && void 0 !== lu ? lu : [], ...pu ? [pu] : [], /\/collect(?:\/[\w]*)?$/],
+        sessionTracking: CE(CE(CE({}, fu), uu.sessionTracking), rZ({
+          trackGeolocation: uu.trackGeolocation,
+          sessionTracking: uu.sessionTracking
         })),
-        userActionsInstrumentation: Wt,
+        userActionsInstrumentation: au,
         experimental: {
-          trackNavigation: vt
+          trackNavigation: du
         }
       })
     }
 
-    function ID(tt, et) {
+    function KZ(uu, Eu) {
       let {
-        experimental: Vt
-      } = et;
-      var Ot;
-      const qt = null !== (Ot = null === Vt || void 0 === Vt ? void 0 : Vt.trackNavigation) && void 0 !== Ot && Ot;
-      return tt.filter((tt => !("@grafana/faro-web-sdk:instrumentation-navigation" === tt.name && !qt)))
+        experimental: ju
+      } = Eu;
+      var su;
+      const Uu = null !== (su = null === ju || void 0 === ju ? void 0 : ju.trackNavigation) && void 0 !== su && su;
+      return uu.filter((uu => !("@grafana/faro-web-sdk:instrumentation-navigation" === uu.name && !Uu)))
     }
 
-    function PD(tt) {
-      var et, Vt, Ot;
+    function VZ(uu) {
+      var Eu, ju, su;
       const {
-        page: qt,
-        generatePageId: Dt
-      } = null !== (et = null === tt || void 0 === tt ? void 0 : tt.pageTracking) && void 0 !== et ? et : {}, mt = [pq, xq, hD({
-        generatePageId: Dt,
-        initialPageMeta: qt
-      }), ...null !== (Vt = tt.metas) && void 0 !== Vt ? Vt : [], gq];
-      return St(null === (Ot = window) || void 0 === Ot ? void 0 : Ot.k6) ? [...mt, CD] : mt
+        page: Uu,
+        generatePageId: Zu
+      } = null !== (Eu = null === uu || void 0 === uu ? void 0 : uu.pageTracking) && void 0 !== Eu ? Eu : {}, Xu = [AU, nU, aZ({
+        generatePageId: Zu,
+        initialPageMeta: Uu
+      }), ...null !== (ju = uu.metas) && void 0 !== ju ? ju : [], zU];
+      return Pu(null === (su = window) || void 0 === su ? void 0 : su.k6) ? [...Xu, wZ] : Xu
     }
 
-    function ZD(tt) {
+    function rZ(uu) {
       let {
-        trackGeolocation: et,
-        sessionTracking: Vt
-      } = tt;
-      var Ot;
-      const qt = {};
-      return vt(et) && (qt.geoLocationTrackingEnabled = et), pt(qt) ? {} : {
-        session: Qe(Qe({}, null !== (Ot = null === Vt || void 0 === Vt ? void 0 : Vt.session) && void 0 !== Ot ? Ot : {}), {}, {
-          overrides: qt
+        trackGeolocation: Eu,
+        sessionTracking: ju
+      } = uu;
+      var su;
+      const Uu = {};
+      return du(Eu) && (Uu.geoLocationTrackingEnabled = Eu), Tu(Uu) ? {} : {
+        session: CE(CE({}, null !== (su = null === ju || void 0 === ju ? void 0 : ju.session) && void 0 !== su ? su : {}), {}, {
+          overrides: Uu
         })
       }
     }
-    const LD = new WeakSet;
+    const QZ = new WeakSet;
 
-    function FD(tt) {
-      return LD.add(tt), tt
+    function iZ(uu) {
+      return QZ.add(uu), uu
     }
 
-    function kD(tt, et) {
-      if (tt.capture) return FD(tt.capture(et));
-      const Vt = FD(tt.value);
-      return null === et || void 0 === et || et(), Vt
+    function WZ(uu, Eu) {
+      if (uu.capture) return iZ(uu.capture(Eu));
+      const ju = iZ(uu.value);
+      return null === Eu || void 0 === Eu || Eu(), ju
     }
 
-    function GD(tt) {
-      const et = `__faroBundleId_${tt}`,
-        Vt = null === Xt || void 0 === Xt ? void 0 : Xt[et];
-      if ("string" === typeof Vt && "" !== Vt) return Vt;
-      const Ot = "undefined" !== typeof window ? window[et] : void 0;
-      return "string" === typeof Ot && "" !== Ot ? Ot : void 0
+    function SZ(uu) {
+      const Eu = `__faroBundleId_${uu}`,
+        ju = null === Cu || void 0 === Cu ? void 0 : Cu[Eu];
+      if ("string" === typeof ju && "" !== ju) return ju;
+      const su = "undefined" !== typeof window ? window[Eu] : void 0;
+      return "string" === typeof su && "" !== su ? su : void 0
     }
 
-    function zD(tt) {
-      var et, Vt;
-      const Ot = tt.config.app.name,
-        qt = Ot ? function(tt) {
-          return null === Xt || void 0 === Xt ? void 0 : Xt[`__faroGitHash_${tt}`]
-        }(Ot) : void 0,
-        Dt = {
+    function IZ(uu) {
+      var Eu, ju;
+      const su = uu.config.app.name,
+        Uu = su ? function(uu) {
+          return null === Cu || void 0 === Cu ? void 0 : Cu[`__faroGitHash_${uu}`]
+        }(su) : void 0,
+        Zu = {
           sdk: {
-            version: OV,
+            version: jj,
             name: "faro"
           },
-          app: ne({
-            bundleId: Ot && GD(Ot)
-          }, void 0 !== qt ? {
-            gitHash: qt
+          app: zE({
+            bundleId: su && SZ(su)
+          }, void 0 !== Uu ? {
+            gitHash: Uu
           } : {})
         },
-        mt = null === (et = tt.config.sessionTracking) || void 0 === et ? void 0 : et.session;
-      mt && tt.api.setSession(mt), tt.config.app && (Dt.app = ne(ne({}, tt.config.app), Dt.app)), tt.config.user && (Dt.user = tt.config.user), tt.config.view && (Dt.view = tt.config.view), tt.metas.add(Dt, ...null !== (Vt = tt.config.metas) && void 0 !== Vt ? Vt : [])
+        Xu = null === (Eu = uu.config.sessionTracking) || void 0 === Eu ? void 0 : Eu.session;
+      Xu && uu.api.setSession(Xu), uu.config.app && (Zu.app = zE(zE({}, uu.config.app), Zu.app)), uu.config.user && (Zu.user = uu.config.user), uu.config.view && (Zu.view = uu.config.view), uu.metas.add(Zu, ...null !== (ju = uu.config.metas) && void 0 !== ju ? ju : [])
     }
-    var oD = class {
-      constructor(tt, et) {
-        var Vt, Ot;
-        this.signalBuffer = [], this.itemLimit = null !== (Vt = null === et || void 0 === et ? void 0 : et.itemLimit) && void 0 !== Vt ? Vt : 50, this.sendTimeout = null !== (Ot = null === et || void 0 === et ? void 0 : et.sendTimeout) && void 0 !== Ot ? Ot : 250, this.paused = (null === et || void 0 === et ? void 0 : et.paused) || !1, this.sendFn = tt, this.paused || this.start(), "undefined" !== typeof document && document.addEventListener("visibilitychange", (() => {
+    var FZ = class {
+      constructor(uu, Eu) {
+        var ju, su;
+        this.signalBuffer = [], this.itemLimit = null !== (ju = null === Eu || void 0 === Eu ? void 0 : Eu.itemLimit) && void 0 !== ju ? ju : 50, this.sendTimeout = null !== (su = null === Eu || void 0 === Eu ? void 0 : Eu.sendTimeout) && void 0 !== su ? su : 250, this.paused = (null === Eu || void 0 === Eu ? void 0 : Eu.paused) || !1, this.sendFn = uu, this.paused || this.start(), "undefined" !== typeof document && document.addEventListener("visibilitychange", (() => {
           "hidden" === document.visibilityState && this.flush()
         }))
       }
-      addItem(tt) {
-        this.paused || (this.signalBuffer.push(tt), this.signalBuffer.length >= this.itemLimit && this.flush())
+      addItem(uu) {
+        this.paused || (this.signalBuffer.push(uu), this.signalBuffer.length >= this.itemLimit && this.flush())
       }
       start() {
         this.paused = !1, this.sendTimeout > 0 && (this.flushInterval = setInterval((() => this.flush()), this.sendTimeout))
@@ -3884,22 +3884,22 @@ export const modules = {
       pause() {
         this.paused = !0, clearInterval(this.flushInterval)
       }
-      groupItems(tt) {
-        const et = new Map;
-        return tt.forEach((tt => {
-          const Vt = JSON.stringify(tt.meta);
-          let Ot = et.get(Vt);
-          Ot = void 0 === Ot ? [tt] : [...Ot, tt], et.set(Vt, Ot)
-        })), Array.from(et.values())
+      groupItems(uu) {
+        const Eu = new Map;
+        return uu.forEach((uu => {
+          const ju = JSON.stringify(uu.meta);
+          let su = Eu.get(ju);
+          su = void 0 === su ? [uu] : [...su, uu], Eu.set(ju, su)
+        })), Array.from(Eu.values())
       }
       flush() {
         if (this.paused || 0 === this.signalBuffer.length) return;
-        const tt = this.signalBuffer;
+        const uu = this.signalBuffer;
         this.signalBuffer = [];
         try {
-          this.groupItems(tt).forEach(this.sendFn)
-        } catch (et) {
-          throw this.signalBuffer = [...tt, ...this.signalBuffer], this.trimBufferToLimit(), et
+          this.groupItems(uu).forEach(this.sendFn)
+        } catch (Eu) {
+          throw this.signalBuffer = [...uu, ...this.signalBuffer], this.trimBufferToLimit(), Eu
         }
       }
       trimBufferToLimit() {
@@ -3907,710 +3907,710 @@ export const modules = {
       }
     };
 
-    function rD(tt, et, Vt, Ot) {
-      var qt;
-      et.debug("Initializing transports");
-      const Dt = [];
-      let mt = [];
-      const dt = tt => {
-        let et = tt;
-        for (const Ot of mt) {
-          const tt = et.map(Ot).filter(Boolean);
-          if (0 === tt.length) return [];
-          et = UD(tt, Vt)
+    function BZ(uu, Eu, ju, su) {
+      var Uu;
+      Eu.debug("Initializing transports");
+      const Zu = [];
+      let Xu = [];
+      const lu = uu => {
+        let Eu = uu;
+        for (const su of Xu) {
+          const uu = Eu.map(su).filter(Boolean);
+          if (0 === uu.length) return [];
+          Eu = LZ(uu, ju)
         }
-        return et
+        return Eu
       };
-      let jt;
-      (null === (qt = Vt.batching) || void 0 === qt ? void 0 : qt.enabled) && (jt = new oD((tt => {
-        const Vt = dt(tt);
-        if (0 !== Vt.length)
-          for (const Ot of Dt) et.debug(`Transporting item using ${Ot.name}\n`, Vt), Ot.isBatched() && Ot.send(Vt)
+      let qu;
+      (null === (Uu = ju.batching) || void 0 === Uu ? void 0 : Uu.enabled) && (qu = new FZ((uu => {
+        const ju = lu(uu);
+        if (0 !== ju.length)
+          for (const su of Zu) Eu.debug(`Transporting item using ${su.name}\n`, ju), su.isBatched() && su.send(ju)
       }), {
-        sendTimeout: Vt.batching.sendTimeout,
-        itemLimit: Vt.batching.itemLimit,
-        paused: Vt.paused
+        sendTimeout: ju.batching.sendTimeout,
+        itemLimit: ju.batching.itemLimit,
+        paused: ju.paused
       }));
       return {
         add: function() {
-          et.debug("Adding transports");
-          for (var qt = arguments.length, mt = new Array(qt), dt = 0; dt < qt; dt++) mt[dt] = arguments[dt];
-          mt.forEach((qt => {
-            et.debug(`Adding "${qt.name}" transport`), Dt.some((tt => tt === qt)) ? et.warn(`Transport ${qt.name} is already added`) : (qt.unpatchedConsole = tt, qt.internalLogger = et, qt.config = Vt, qt.metas = Ot, Dt.push(qt))
+          Eu.debug("Adding transports");
+          for (var Uu = arguments.length, Xu = new Array(Uu), lu = 0; lu < Uu; lu++) Xu[lu] = arguments[lu];
+          Xu.forEach((Uu => {
+            Eu.debug(`Adding "${Uu.name}" transport`), Zu.some((uu => uu === Uu)) ? Eu.warn(`Transport ${Uu.name} is already added`) : (Uu.unpatchedConsole = uu, Uu.internalLogger = Eu, Uu.config = ju, Uu.metas = su, Zu.push(Uu))
           }))
         },
         addBeforeSendHooks: function() {
-          et.debug("Adding beforeSendHooks\n", mt);
-          for (var tt = arguments.length, Vt = new Array(tt), Ot = 0; Ot < tt; Ot++) Vt[Ot] = arguments[Ot];
-          Vt.forEach((tt => {
-            tt && mt.push(tt)
+          Eu.debug("Adding beforeSendHooks\n", Xu);
+          for (var uu = arguments.length, ju = new Array(uu), su = 0; su < uu; su++) ju[su] = arguments[su];
+          ju.forEach((uu => {
+            uu && Xu.push(uu)
           }))
         },
-        getBeforeSendHooks: () => [...mt],
-        execute: tt => {
-          var qt;
-          if (!Vt.paused && re(Ot).shouldCapture()) {
-            if (Qt = tt.meta, !LD.has(Qt)) {
-              var mt, Ht, Xt;
-              const et = null === (mt = Ot.value.session) || void 0 === mt ? void 0 : mt.id,
-                qt = kD(Ot);
-              if (Vt.paused) return;
-              const Dt = ne({}, tt.meta);
-              (null === (Ht = Dt.session) || void 0 === Ht ? void 0 : Ht.id) === et && (null === (Xt = qt.session) || void 0 === Xt ? void 0 : Xt.id) !== et && (void 0 === qt.session ? delete Dt.session : Dt.session = qt.session), tt = ne(ne({}, tt), {}, {
-                meta: FD(Dt)
+        getBeforeSendHooks: () => [...Xu],
+        execute: uu => {
+          var Uu;
+          if (!ju.paused && IE(su).shouldCapture()) {
+            if (bu = uu.meta, !QZ.has(bu)) {
+              var Xu, fu, Cu;
+              const Eu = null === (Xu = su.value.session) || void 0 === Xu ? void 0 : Xu.id,
+                Uu = WZ(su);
+              if (ju.paused) return;
+              const Zu = zE({}, uu.meta);
+              (null === (fu = Zu.session) || void 0 === fu ? void 0 : fu.id) === Eu && (null === (Cu = Uu.session) || void 0 === Cu ? void 0 : Cu.id) !== Eu && (void 0 === Uu.session ? delete Zu.session : Zu.session = Uu.session), uu = zE(zE({}, uu), {}, {
+                meta: iZ(Zu)
               })
             }
-            var Qt;
-            (null === (qt = Vt.batching) || void 0 === qt ? void 0 : qt.enabled) && (null === jt || void 0 === jt || jt.addItem(tt)), (tt => {
-              var Ot;
-              if ((null === (Ot = Vt.batching) || void 0 === Ot ? void 0 : Ot.enabled) && Dt.every((tt => tt.isBatched()))) return;
-              const [qt] = dt([tt]);
-              if (void 0 !== qt)
-                for (const dt of Dt) {
-                  var mt;
-                  et.debug(`Transporting item using ${dt.name}\n`, qt), dt.isBatched() ? (null === (mt = Vt.batching) || void 0 === mt ? void 0 : mt.enabled) || dt.send([qt]) : dt.send(qt)
+            var bu;
+            (null === (Uu = ju.batching) || void 0 === Uu ? void 0 : Uu.enabled) && (null === qu || void 0 === qu || qu.addItem(uu)), (uu => {
+              var su;
+              if ((null === (su = ju.batching) || void 0 === su ? void 0 : su.enabled) && Zu.every((uu => uu.isBatched()))) return;
+              const [Uu] = lu([uu]);
+              if (void 0 !== Uu)
+                for (const lu of Zu) {
+                  var Xu;
+                  Eu.debug(`Transporting item using ${lu.name}\n`, Uu), lu.isBatched() ? (null === (Xu = ju.batching) || void 0 === Xu ? void 0 : Xu.enabled) || lu.send([Uu]) : lu.send(Uu)
                 }
-            })(tt)
+            })(uu)
           }
         },
-        isPaused: () => Vt.paused,
+        isPaused: () => ju.paused,
         pause: () => {
-          et.debug("Pausing transports"), null === jt || void 0 === jt || jt.pause(), Vt.paused = !0
+          Eu.debug("Pausing transports"), null === qu || void 0 === qu || qu.pause(), ju.paused = !0
         },
         remove: function() {
-          et.debug("Removing transports");
-          for (var tt = arguments.length, Vt = new Array(tt), Ot = 0; Ot < tt; Ot++) Vt[Ot] = arguments[Ot];
-          Vt.forEach((tt => {
-            et.debug(`Removing "${tt.name}" transport`);
-            const Vt = Dt.indexOf(tt); - 1 !== Vt ? Dt.splice(Vt, 1) : et.warn(`Transport "${tt.name}" is not added`)
+          Eu.debug("Removing transports");
+          for (var uu = arguments.length, ju = new Array(uu), su = 0; su < uu; su++) ju[su] = arguments[su];
+          ju.forEach((uu => {
+            Eu.debug(`Removing "${uu.name}" transport`);
+            const ju = Zu.indexOf(uu); - 1 !== ju ? Zu.splice(ju, 1) : Eu.warn(`Transport "${uu.name}" is not added`)
           }))
         },
         removeBeforeSendHooks: function() {
-          for (var tt = arguments.length, Vt = new Array(tt), Ot = 0; Ot < tt; Ot++) Vt[Ot] = arguments[Ot];
-          et.debug("Removing beforeSendHooks"), mt = mt.filter((tt => !Vt.includes(tt)))
+          for (var uu = arguments.length, ju = new Array(uu), su = 0; su < uu; su++) ju[su] = arguments[su];
+          Eu.debug("Removing beforeSendHooks"), Xu = Xu.filter((uu => !ju.includes(uu)))
         },
         get transports() {
-          return [...Dt]
+          return [...Zu]
         },
         unpause: () => {
-          et.debug("Unpausing transports"), null === jt || void 0 === jt || jt.start(), Vt.paused = !1
+          Eu.debug("Unpausing transports"), null === qu || void 0 === qu || qu.start(), ju.paused = !1
         }
       }
     }
 
-    function UD(tt, et) {
-      if (et.preserveOriginalError)
-        for (const Vt of tt) "exception" === Vt.type && delete Vt.payload.originalError;
-      return tt
+    function LZ(uu, Eu) {
+      if (Eu.preserveOriginalError)
+        for (const ju of uu) "exception" === ju.type && delete ju.payload.originalError;
+      return uu
     }
-    let AD = tV;
+    let tZ = RE;
 
-    function iD(tt) {
-      var et;
-      return AD = null !== (et = tt.unpatchedConsole) && void 0 !== et ? et : AD, AD
+    function xZ(uu) {
+      var Eu;
+      return tZ = null !== (Eu = uu.unpatchedConsole) && void 0 !== Eu ? Eu : tZ, tZ
     }
-    let YD, BD = Be;
+    let TZ, HZ = xE;
 
-    function pD(tt, et) {
-      return BD = vD(tt, et.internalLoggerLevel), BD
+    function AZ(uu, Eu) {
+      return HZ = PZ(uu, Eu.internalLoggerLevel), HZ
     }
 
-    function xD(tt) {
+    function nZ(uu) {
       let {
-        internalLogger: et,
-        config: Vt,
-        metas: Ot,
-        transports: qt,
-        tracesApi: Dt,
-        userActionsApi: mt
-      } = tt;
-      var dt;
-      et.debug("Initializing exceptions API");
-      let jt = null;
-      YD = null !== (dt = Vt.parseStacktrace) && void 0 !== dt ? dt : YD;
-      const Ht = tt => {
-          et.debug("Changing stacktrace parser"), YD = null !== tt && void 0 !== tt ? tt : YD
+        internalLogger: Eu,
+        config: ju,
+        metas: su,
+        transports: Uu,
+        tracesApi: Zu,
+        userActionsApi: Xu
+      } = uu;
+      var lu;
+      Eu.debug("Initializing exceptions API");
+      let qu = null;
+      TZ = null !== (lu = ju.parseStacktrace) && void 0 !== lu ? lu : TZ;
+      const fu = uu => {
+          Eu.debug("Changing stacktrace parser"), TZ = null !== uu && void 0 !== uu ? uu : TZ
         },
         {
-          ignoreErrors: Xt = [],
-          preserveOriginalError: Qt
-        } = Vt;
-      return Ht(Vt.parseStacktrace), {
-        changeStacktraceParser: Ht,
-        getStacktraceParser: () => YD,
-        pushError: function(tt) {
+          ignoreErrors: Cu = [],
+          preserveOriginalError: bu
+        } = ju;
+      return fu(ju.parseStacktrace), {
+        changeStacktraceParser: fu,
+        getStacktraceParser: () => TZ,
+        pushError: function(uu) {
           let {
-            skipDedupe: dt,
-            stackFrames: Ht,
-            type: lt,
-            context: Et,
-            spanContext: ft,
-            timestampOverwriteMs: wt,
-            originalError: yt,
-            fingerprint: Nt,
-            fatal: Mt
+            skipDedupe: lu,
+            stackFrames: fu,
+            type: cu,
+            context: Nu,
+            spanContext: Ou,
+            timestampOverwriteMs: Yu,
+            originalError: hu,
+            fingerprint: Du,
+            fatal: gu
           } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          if (! function(tt, et) {
+          if (! function(uu, Eu) {
               const {
-                message: Vt,
-                name: Ot,
-                stack: qt
-              } = et;
-              return Dt = tt, mt = Vt + " " + Ot + " " + qt, Dt.some((tt => ut(tt) ? mt.includes(tt) : !!mt.match(tt)));
-              var Dt, mt
-            }(Xt, null !== yt && void 0 !== yt ? yt : tt)) try {
-            var bt, Jt;
-            if (!re(Ot).shouldCapture()) return;
-            const Xt = ke(ne(ne({}, function(tt) {
-                let et = tt.cause;
-                Gt(et) ? et = tt.cause.toString() : null !== et && (St(tt.cause) || Rt(tt.cause)) ? et = Fe(tt.cause) : null != et && (et = tt.cause.toString());
-                return null == et ? {} : {
-                  cause: et
+                message: ju,
+                name: su,
+                stack: Uu
+              } = Eu;
+              return Zu = uu, Xu = ju + " " + su + " " + Uu, Zu.some((uu => pu(uu) ? Xu.includes(uu) : !!Xu.match(uu)));
+              var Zu, Xu
+            }(Cu, null !== hu && void 0 !== hu ? hu : uu)) try {
+            var Mu, eu;
+            if (!IE(su).shouldCapture()) return;
+            const Cu = QE(zE(zE({}, function(uu) {
+                let Eu = uu.cause;
+                iu(Eu) ? Eu = uu.cause.toString() : null !== Eu && (Pu(uu.cause) || ku(uu.cause)) ? Eu = rE(uu.cause) : null != Eu && (Eu = uu.cause.toString());
+                return null == Eu ? {} : {
+                  cause: Eu
                 }
-              }(null !== yt && void 0 !== yt ? yt : tt)), null !== Et && void 0 !== Et ? Et : {})),
-              ut = ne(ne(ne(ne({
-                type: lt || tt.name || "Error",
-                value: tt.message,
-                timestamp: wt ? ye(wt) : we(),
-                trace: ft ? {
-                  trace_id: ft.traceId,
-                  span_id: ft.spanId
-                } : Dt.getTraceContext()
-              }, pt(Xt) ? {} : {
-                context: Xt
-              }), Qt ? {
-                originalError: yt
-              } : {}), Nt ? {
-                fingerprint: Nt
-              } : {}), void 0 !== Mt ? {
-                fatal: Mt
+              }(null !== hu && void 0 !== hu ? hu : uu)), null !== Nu && void 0 !== Nu ? Nu : {})),
+              pu = zE(zE(zE(zE({
+                type: cu || uu.name || "Error",
+                value: uu.message,
+                timestamp: Yu ? YE(Yu) : OE(),
+                trace: Ou ? {
+                  trace_id: Ou.traceId,
+                  span_id: Ou.spanId
+                } : Zu.getTraceContext()
+              }, Tu(Cu) ? {} : {
+                context: Cu
+              }), bu ? {
+                originalError: hu
+              } : {}), Du ? {
+                fingerprint: Du
+              } : {}), void 0 !== gu ? {
+                fatal: gu
               } : {});
-            Ht = null !== (bt = Ht) && void 0 !== bt ? bt : tt.stack ? null === YD || void 0 === YD ? void 0 : YD(tt).frames : void 0, (null === Ht || void 0 === Ht ? void 0 : Ht.length) && (ut.stacktrace = {
-              frames: Ht
+            fu = null !== (Mu = fu) && void 0 !== Mu ? Mu : uu.stack ? null === TZ || void 0 === TZ ? void 0 : TZ(uu).frames : void 0, (null === fu || void 0 === fu ? void 0 : fu.length) && (pu.stacktrace = {
+              frames: fu
             });
-            const Kt = {
-              type: ut.type,
-              value: ut.value,
-              stacktrace: ut.stacktrace,
-              context: ut.context,
-              fingerprint: ut.fingerprint,
-              fatal: null !== (Jt = ut.fatal) && void 0 !== Jt && Jt
+            const wu = {
+              type: pu.type,
+              value: pu.value,
+              stacktrace: pu.stacktrace,
+              context: pu.context,
+              fingerprint: pu.fingerprint,
+              fatal: null !== (eu = pu.fatal) && void 0 !== eu && eu
             };
-            if (!dt && Vt.dedupe && !Ct(jt) && Me(Kt, jt)) return void et.debug("Skipping error push because it is the same as the last one\n", ut);
-            const ht = jt,
-              vt = kD(Ot);
-            if (jt !== ht && !dt && Vt.dedupe && Me(Kt, jt)) return;
-            jt = Kt;
-            const Wt = {
-              meta: vt,
-              payload: ut,
+            if (!lu && ju.dedupe && !Gu(qu) && gE(wu, qu)) return void Eu.debug("Skipping error push because it is the same as the last one\n", pu);
+            const Ju = qu,
+              du = WZ(su);
+            if (qu !== Ju && !lu && ju.dedupe && gE(wu, qu)) return;
+            qu = wu;
+            const au = {
+              meta: du,
+              payload: pu,
               type: "exception"
             };
-            et.debug("Pushing exception\n", Wt), uq(mt.getActiveUserAction(), Wt) || qt.execute(Wt)
-          } catch (Kt) {
-            et.error("Error pushing event", Kt)
+            Eu.debug("Pushing exception\n", au), JU(Xu.getActiveUserAction(), au) || Uu.execute(au)
+          } catch (wu) {
+            Eu.error("Error pushing event", wu)
           }
         }
       }
     }
 
-    function TD(tt, et, Vt, Ot, qt) {
-      et.debug("Initializing API");
-      let Dt = null;
-      const mt = function(tt) {
+    function yZ(uu, Eu, ju, su, Uu) {
+      Eu.debug("Initializing API");
+      let Zu = null;
+      const Xu = function(uu) {
           let {
-            transports: et,
-            internalLogger: Vt,
-            config: Ot,
-            pushEvent: qt
-          } = tt;
-          var Dt;
-          const mt = null === (Dt = Ot.userActionsInstrumentation) || void 0 === Dt ? void 0 : Dt.excludeItem;
-          let dt;
-          const jt = () => dt;
+            transports: Eu,
+            internalLogger: ju,
+            config: su,
+            pushEvent: Uu
+          } = uu;
+          var Zu;
+          const Xu = null === (Zu = su.userActionsInstrumentation) || void 0 === Zu ? void 0 : Zu.excludeItem;
+          let lu;
+          const qu = () => lu;
           return {
-            startUserAction: (tt, Ot, Dt) => {
-              if (void 0 === jt()) {
-                const Vt = new Jq({
-                  name: tt,
-                  transports: et,
-                  attributes: Ot,
-                  trigger: (null === Dt || void 0 === Dt ? void 0 : Dt.triggerName) || "faroApiCall",
-                  importance: (null === Dt || void 0 === Dt ? void 0 : Dt.importance) || Mq.Normal,
-                  trackUserActionsExcludeItem: mt,
-                  pushEvent: qt
+            startUserAction: (uu, su, Zu) => {
+              if (void 0 === qu()) {
+                const ju = new pU({
+                  name: uu,
+                  transports: Eu,
+                  attributes: su,
+                  trigger: (null === Zu || void 0 === Zu ? void 0 : Zu.triggerName) || "faroApiCall",
+                  importance: (null === Zu || void 0 === Zu ? void 0 : Zu.importance) || eU.Normal,
+                  trackUserActionsExcludeItem: Xu,
+                  pushEvent: Uu
                 });
-                return Vt.filter((tt => [3, 2].includes(tt))).first().subscribe((() => {
-                  dt = void 0
-                })), Cq.notify({
-                  type: aq,
-                  userAction: Vt,
-                  initialActivityTimeout: null === Dt || void 0 === Dt ? void 0 : Dt.initialActivityTimeout
-                }), dt = Vt, dt
+                return ju.filter((uu => [3, 2].includes(uu))).first().subscribe((() => {
+                  lu = void 0
+                })), wU.notify({
+                  type: MU,
+                  userAction: ju,
+                  initialActivityTimeout: null === Zu || void 0 === Zu ? void 0 : Zu.initialActivityTimeout
+                }), lu = ju, lu
               }
-              Vt.error("Attempted to create a new user action while one is already running. This is not possible.")
+              ju.error("Attempted to create a new user action while one is already running. This is not possible.")
             },
-            getActiveUserAction: jt
+            getActiveUserAction: qu
           }
         }({
-          transports: qt,
-          config: Vt,
-          internalLogger: et,
-          pushEvent: (tt, Vt, Ot, qt) => {
-            Dt ? Dt(tt, Vt, Ot, qt) : et.warn("pushEventImpl is not initialized. Event dropped:", {
-              name: tt,
-              attributes: Vt,
-              domain: Ot,
-              options: qt
+          transports: Uu,
+          config: ju,
+          internalLogger: Eu,
+          pushEvent: (uu, ju, su, Uu) => {
+            Zu ? Zu(uu, ju, su, Uu) : Eu.warn("pushEventImpl is not initialized. Event dropped:", {
+              name: uu,
+              attributes: ju,
+              domain: su,
+              options: Uu
             })
           }
         }),
-        dt = function(tt, et, Vt, Ot, qt) {
-          let Dt;
-          return et.debug("Initializing traces API"), {
-            getOTEL: () => Dt,
+        lu = function(uu, Eu, ju, su, Uu) {
+          let Zu;
+          return Eu.debug("Initializing traces API"), {
+            getOTEL: () => Zu,
             getTraceContext: () => {
-              const tt = null === Dt || void 0 === Dt ? void 0 : Dt.trace.getSpanContext(Dt.context.active());
-              return tt ? {
-                trace_id: tt.traceId,
-                span_id: tt.spanId
+              const uu = null === Zu || void 0 === Zu ? void 0 : Zu.trace.getSpanContext(Zu.context.active());
+              return uu ? {
+                trace_id: uu.traceId,
+                span_id: uu.spanId
               } : void 0
             },
-            initOTEL: (tt, Vt) => {
-              et.debug("Initializing OpenTelemetry"), Dt = {
-                trace: tt,
-                context: Vt
+            initOTEL: (uu, ju) => {
+              Eu.debug("Initializing OpenTelemetry"), Zu = {
+                trace: uu,
+                context: ju
               }
             },
-            isOTELInitialized: () => !!Dt,
-            pushTraces: tt => {
+            isOTELInitialized: () => !!Zu,
+            pushTraces: uu => {
               try {
-                if (!re(Ot).shouldCapture()) return;
-                const Vt = {
+                if (!IE(su).shouldCapture()) return;
+                const ju = {
                   type: "trace",
-                  payload: tt,
-                  meta: kD(Ot)
+                  payload: uu,
+                  meta: WZ(su)
                 };
-                et.debug("Pushing trace\n", Vt), qt.execute(Vt)
-              } catch (Vt) {
-                et.error("Error pushing trace\n", Vt)
+                Eu.debug("Pushing trace\n", ju), Uu.execute(ju)
+              } catch (ju) {
+                Eu.error("Error pushing trace\n", ju)
               }
             }
           }
-        }(0, et, 0, Ot, qt),
-        jt = {
-          unpatchedConsole: tt,
-          internalLogger: et,
-          userActionsApi: mt,
-          config: Vt,
-          metas: Ot,
-          transports: qt,
-          tracesApi: dt
+        }(0, Eu, 0, su, Uu),
+        qu = {
+          unpatchedConsole: uu,
+          internalLogger: Eu,
+          userActionsApi: Xu,
+          config: ju,
+          metas: su,
+          transports: Uu,
+          tracesApi: lu
         },
-        Ht = function(tt) {
+        fu = function(uu) {
           let {
-            internalLogger: et,
-            config: Vt,
-            metas: Ot,
-            transports: qt,
-            tracesApi: Dt,
-            userActionsApi: mt
-          } = tt, dt = null;
+            internalLogger: Eu,
+            config: ju,
+            metas: su,
+            transports: Uu,
+            tracesApi: Zu,
+            userActionsApi: Xu
+          } = uu, lu = null;
           return {
-            pushEvent: function(tt, jt, Ht) {
+            pushEvent: function(uu, qu, fu) {
               let {
-                skipDedupe: Xt,
-                spanContext: Qt,
-                timestampOverwriteMs: lt,
-                customPayloadTransformer: Et = tt => tt
+                skipDedupe: Cu,
+                spanContext: bu,
+                timestampOverwriteMs: cu,
+                customPayloadTransformer: Nu = uu => uu
               } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
               try {
-                if (!re(Ot).shouldCapture()) return;
-                const ft = ke(jt),
-                  wt = Et({
-                    name: tt,
-                    domain: null !== Ht && void 0 !== Ht ? Ht : Vt.eventDomain,
-                    attributes: pt(ft) ? void 0 : ft,
-                    timestamp: lt ? ye(lt) : we(),
-                    trace: Qt ? {
-                      trace_id: Qt.traceId,
-                      span_id: Qt.spanId
-                    } : Dt.getTraceContext()
+                if (!IE(su).shouldCapture()) return;
+                const Ou = QE(qu),
+                  Yu = Nu({
+                    name: uu,
+                    domain: null !== fu && void 0 !== fu ? fu : ju.eventDomain,
+                    attributes: Tu(Ou) ? void 0 : Ou,
+                    timestamp: cu ? YE(cu) : OE(),
+                    trace: bu ? {
+                      trace_id: bu.traceId,
+                      span_id: bu.spanId
+                    } : Zu.getTraceContext()
                   }),
-                  yt = {
-                    name: wt.name,
-                    attributes: wt.attributes,
-                    domain: wt.domain
+                  hu = {
+                    name: Yu.name,
+                    attributes: Yu.attributes,
+                    domain: Yu.domain
                   };
-                if (!Xt && Vt.dedupe && !Ct(dt) && Me(yt, dt)) return void et.debug("Skipping event push because it is the same as the last one\n", wt);
-                const Nt = dt,
-                  Mt = kD(Ot);
-                if (dt !== Nt && !Xt && Vt.dedupe && Me(yt, dt)) return;
-                dt = yt;
-                const bt = {
-                  meta: Mt,
-                  payload: wt,
+                if (!Cu && ju.dedupe && !Gu(lu) && gE(hu, lu)) return void Eu.debug("Skipping event push because it is the same as the last one\n", Yu);
+                const Du = lu,
+                  gu = WZ(su);
+                if (lu !== Du && !Cu && ju.dedupe && gE(hu, lu)) return;
+                lu = hu;
+                const Mu = {
+                  meta: gu,
+                  payload: Yu,
                   type: "event"
                 };
-                et.debug("Pushing event\n", bt), uq(mt.getActiveUserAction(), bt) || qt.execute(bt)
-              } catch (ft) {
-                et.error("Error pushing event", ft)
+                Eu.debug("Pushing event\n", Mu), JU(Xu.getActiveUserAction(), Mu) || Uu.execute(Mu)
+              } catch (Ou) {
+                Eu.error("Error pushing event", Ou)
               }
             }
           }
-        }(jt);
-      return Dt = Ht.pushEvent, ne(ne(ne(ne(ne(ne(ne({}, dt), xD(jt)), function(tt) {
-        let et, Vt, Ot, qt, {
-          internalLogger: Dt,
-          metas: mt
-        } = tt;
-        Dt.debug("Initializing meta API");
-        const dt = tt => {
-            Vt && mt.remove(Vt), Vt = {
-              user: tt
-            }, mt.add(Vt)
+        }(qu);
+      return Zu = fu.pushEvent, zE(zE(zE(zE(zE(zE(zE({}, lu), nZ(qu)), function(uu) {
+        let Eu, ju, su, Uu, {
+          internalLogger: Zu,
+          metas: Xu
+        } = uu;
+        Zu.debug("Initializing meta API");
+        const lu = uu => {
+            ju && Xu.remove(ju), ju = {
+              user: uu
+            }, Xu.add(ju)
           },
-          jt = (tt, Vt) => {
-            var Ot;
-            const qt = null === Vt || void 0 === Vt ? void 0 : Vt.overrides,
-              Dt = qt ? {
-                overrides: ne(ne({}, null === et || void 0 === et || null === (Ot = et.session) || void 0 === Ot ? void 0 : Ot.overrides), qt)
+          qu = (uu, ju) => {
+            var su;
+            const Uu = null === ju || void 0 === ju ? void 0 : ju.overrides,
+              Zu = Uu ? {
+                overrides: zE(zE({}, null === Eu || void 0 === Eu || null === (su = Eu.session) || void 0 === su ? void 0 : su.overrides), Uu)
               } : {};
-            et && mt.remove(et), et = {
-              session: ne(ne({}, pt(tt) ? void 0 : tt), Dt)
-            }, mt.add(et)
+            Eu && Xu.remove(Eu), Eu = {
+              session: zE(zE({}, Tu(uu) ? void 0 : uu), Zu)
+            }, Xu.add(Eu)
           },
-          Ht = (tt, et) => {
-            re(mt).notifySessionUpdate({
+          fu = (uu, Eu) => {
+            IE(Xu).notifySessionUpdate({
               type: "replace",
-              session: tt,
-              overrides: null === et || void 0 === et ? void 0 : et.overrides
-            }), jt(tt, et)
+              session: uu,
+              overrides: null === Eu || void 0 === Eu ? void 0 : Eu.overrides
+            }), qu(uu, Eu)
           },
-          Xt = () => mt.value.session,
-          Qt = () => mt.value.page;
+          Cu = () => Xu.value.session,
+          bu = () => Xu.value.page;
         return {
-          setUser: dt,
-          resetUser: dt,
-          setSession: Ht,
-          resetSession: Ht,
-          getSession: Xt,
-          setView: (tt, et) => {
-            var Vt;
-            if ((null === et || void 0 === et ? void 0 : et.overrides) && (re(mt).notifySessionUpdate({
+          setUser: lu,
+          resetUser: lu,
+          setSession: fu,
+          resetSession: fu,
+          getSession: Cu,
+          setView: (uu, Eu) => {
+            var ju;
+            if ((null === Eu || void 0 === Eu ? void 0 : Eu.overrides) && (IE(Xu).notifySessionUpdate({
                 type: "overrides",
-                overrides: et.overrides
-              }), jt(Xt(), {
-                overrides: et.overrides
-              })), (null === Ot || void 0 === Ot || null === (Vt = Ot.view) || void 0 === Vt ? void 0 : Vt.name) === (null === tt || void 0 === tt ? void 0 : tt.name)) return;
-            const qt = Ot;
-            Ot = {
-              view: tt
-            }, mt.add(Ot), qt && mt.remove(qt)
+                overrides: Eu.overrides
+              }), qu(Cu(), {
+                overrides: Eu.overrides
+              })), (null === su || void 0 === su || null === (ju = su.view) || void 0 === ju ? void 0 : ju.name) === (null === uu || void 0 === uu ? void 0 : uu.name)) return;
+            const Uu = su;
+            su = {
+              view: uu
+            }, Xu.add(su), Uu && Xu.remove(Uu)
           },
-          getView: () => mt.value.view,
-          setPage: tt => {
-            var et;
-            const Vt = ut(tt) ? ne(ne({}, null !== (et = null === qt || void 0 === qt ? void 0 : qt.page) && void 0 !== et ? et : Qt()), {}, {
-              id: tt
-            }) : tt;
-            qt && mt.remove(qt), qt = {
-              page: Vt
-            }, mt.add(qt)
+          getView: () => Xu.value.view,
+          setPage: uu => {
+            var Eu;
+            const ju = pu(uu) ? zE(zE({}, null !== (Eu = null === Uu || void 0 === Uu ? void 0 : Uu.page) && void 0 !== Eu ? Eu : bu()), {}, {
+              id: uu
+            }) : uu;
+            Uu && Xu.remove(Uu), Uu = {
+              page: ju
+            }, Xu.add(Uu)
           },
-          getPage: Qt
+          getPage: bu
         }
-      }(jt)), function(tt) {
+      }(qu)), function(uu) {
         let {
-          internalLogger: et,
-          config: Vt,
-          metas: Ot,
-          transports: qt,
-          tracesApi: Dt,
-          userActionsApi: mt
-        } = tt;
-        var dt;
-        et.debug("Initializing logs API");
-        let jt = null;
-        const Ht = null !== (dt = Vt.logArgsSerializer) && void 0 !== dt ? dt : IV;
+          internalLogger: Eu,
+          config: ju,
+          metas: su,
+          transports: Uu,
+          tracesApi: Zu,
+          userActionsApi: Xu
+        } = uu;
+        var lu;
+        Eu.debug("Initializing logs API");
+        let qu = null;
+        const fu = null !== (lu = ju.logArgsSerializer) && void 0 !== lu ? lu : mj;
         return {
-          pushLog: function(tt) {
+          pushLog: function(uu) {
             let {
-              context: dt,
-              level: Xt,
-              skipDedupe: Qt,
-              spanContext: lt,
-              timestampOverwriteMs: Et
+              context: lu,
+              level: Cu,
+              skipDedupe: bu,
+              spanContext: cu,
+              timestampOverwriteMs: Nu
             } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             try {
-              if (!re(Ot).shouldCapture()) return;
-              const ft = ke(dt),
-                wt = {
-                  message: Ht(tt),
-                  level: null !== Xt && void 0 !== Xt ? Xt : "log",
-                  context: pt(ft) ? void 0 : ft,
-                  timestamp: Et ? ye(Et) : we(),
-                  trace: lt ? {
-                    trace_id: lt.traceId,
-                    span_id: lt.spanId
-                  } : Dt.getTraceContext()
+              if (!IE(su).shouldCapture()) return;
+              const Ou = QE(lu),
+                Yu = {
+                  message: fu(uu),
+                  level: null !== Cu && void 0 !== Cu ? Cu : "log",
+                  context: Tu(Ou) ? void 0 : Ou,
+                  timestamp: Nu ? YE(Nu) : OE(),
+                  trace: cu ? {
+                    trace_id: cu.traceId,
+                    span_id: cu.spanId
+                  } : Zu.getTraceContext()
                 },
-                yt = {
-                  message: wt.message,
-                  level: wt.level,
-                  context: wt.context
+                hu = {
+                  message: Yu.message,
+                  level: Yu.level,
+                  context: Yu.context
                 };
-              if (!Qt && Vt.dedupe && !Ct(jt) && Me(yt, jt)) return void et.debug("Skipping log push because it is the same as the last one\n", wt);
-              const Nt = jt,
-                Mt = kD(Ot);
-              if (jt !== Nt && !Qt && Vt.dedupe && Me(yt, jt)) return;
-              jt = yt;
-              const bt = {
+              if (!bu && ju.dedupe && !Gu(qu) && gE(hu, qu)) return void Eu.debug("Skipping log push because it is the same as the last one\n", Yu);
+              const Du = qu,
+                gu = WZ(su);
+              if (qu !== Du && !bu && ju.dedupe && gE(hu, qu)) return;
+              qu = hu;
+              const Mu = {
                 type: "log",
-                payload: wt,
-                meta: Mt
+                payload: Yu,
+                meta: gu
               };
-              et.debug("Pushing log\n", bt), uq(mt.getActiveUserAction(), bt) || qt.execute(bt)
-            } catch (ft) {
-              et.error("Error pushing log\n", ft)
+              Eu.debug("Pushing log\n", Mu), JU(Xu.getActiveUserAction(), Mu) || Uu.execute(Mu)
+            } catch (Ou) {
+              Eu.error("Error pushing log\n", Ou)
             }
           }
         }
-      }(jt)), function(tt) {
+      }(qu)), function(uu) {
         let {
-          internalLogger: et,
-          config: Vt,
-          metas: Ot,
-          transports: qt,
-          tracesApi: Dt,
-          userActionsApi: mt
-        } = tt;
-        et.debug("Initializing measurements API");
-        let dt = null;
+          internalLogger: Eu,
+          config: ju,
+          metas: su,
+          transports: Uu,
+          tracesApi: Zu,
+          userActionsApi: Xu
+        } = uu;
+        Eu.debug("Initializing measurements API");
+        let lu = null;
         return {
-          pushMeasurement: function(tt) {
+          pushMeasurement: function(uu) {
             let {
-              skipDedupe: jt,
-              context: Ht,
-              spanContext: Xt,
-              timestampOverwriteMs: Qt
+              skipDedupe: qu,
+              context: fu,
+              spanContext: Cu,
+              timestampOverwriteMs: bu
             } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             try {
-              if (!re(Ot).shouldCapture()) return;
-              const lt = ke(Ht),
-                Et = ne(ne({}, tt), {}, {
-                  trace: Xt ? {
-                    trace_id: Xt.traceId,
-                    span_id: Xt.spanId
-                  } : Dt.getTraceContext(),
-                  timestamp: Qt ? ye(Qt) : we(),
-                  context: pt(lt) ? void 0 : lt
+              if (!IE(su).shouldCapture()) return;
+              const cu = QE(fu),
+                Nu = zE(zE({}, uu), {}, {
+                  trace: Cu ? {
+                    trace_id: Cu.traceId,
+                    span_id: Cu.spanId
+                  } : Zu.getTraceContext(),
+                  timestamp: bu ? YE(bu) : OE(),
+                  context: Tu(cu) ? void 0 : cu
                 }),
-                ft = {
-                  type: Et.type,
-                  values: Et.values,
-                  context: Et.context
+                Ou = {
+                  type: Nu.type,
+                  values: Nu.values,
+                  context: Nu.context
                 };
-              if (!jt && Vt.dedupe && !Ct(dt) && Me(ft, dt)) return void et.debug("Skipping measurement push because it is the same as the last one\n", Et);
-              const wt = dt,
-                yt = kD(Ot);
-              if (dt !== wt && !jt && Vt.dedupe && Me(ft, dt)) return;
-              dt = ft;
-              const Nt = {
+              if (!qu && ju.dedupe && !Gu(lu) && gE(Ou, lu)) return void Eu.debug("Skipping measurement push because it is the same as the last one\n", Nu);
+              const Yu = lu,
+                hu = WZ(su);
+              if (lu !== Yu && !qu && ju.dedupe && gE(Ou, lu)) return;
+              lu = Ou;
+              const Du = {
                 type: "measurement",
-                payload: Et,
-                meta: yt
+                payload: Nu,
+                meta: hu
               };
-              et.debug("Pushing measurement\n", Nt), uq(mt.getActiveUserAction(), Nt) || qt.execute(Nt)
-            } catch (lt) {
-              et.error("Error pushing measurement\n", lt)
+              Eu.debug("Pushing measurement\n", Du), JU(Xu.getActiveUserAction(), Du) || Uu.execute(Du)
+            } catch (cu) {
+              Eu.error("Error pushing measurement\n", cu)
             }
           }
         }
-      }(jt)), Ht), mt)
+      }(qu)), fu), Xu)
     }
 
-    function gD(tt) {
-      const et = iD(tt),
-        Vt = pD(et, tt);
-      if (ft() && !tt.isolate) return void Vt.error('Faro is already registered. Either add instrumentations, transports etc. to the global faro instance or use the "isolate" property');
-      Vt.debug("Initializing");
-      const Ot = function(tt, et) {
-          let Vt, Ot = [],
-            qt = [],
-            Dt = [],
-            mt = 0,
-            dt = 0;
-          const jt = () => Ot.reduce(((tt, et) => Object.assign(tt, ct(et) ? et() : et)), {}),
-            Ht = () => {
-              if (qt.length) {
-                const tt = jt();
-                qt.forEach((et => et(tt)))
+    function zZ(uu) {
+      const Eu = xZ(uu),
+        ju = AZ(Eu, uu);
+      if (Ou() && !uu.isolate) return void ju.error('Faro is already registered. Either add instrumentations, transports etc. to the global faro instance or use the "isolate" property');
+      ju.debug("Initializing");
+      const su = function(uu, Eu) {
+          let ju, su = [],
+            Uu = [],
+            Zu = [],
+            Xu = 0,
+            lu = 0;
+          const qu = () => su.reduce(((uu, Eu) => Object.assign(uu, ou(Eu) ? Eu() : Eu)), {}),
+            fu = () => {
+              if (Uu.length) {
+                const uu = qu();
+                Uu.forEach((Eu => Eu(uu)))
               }
             };
           return {
             add: function() {
-              for (var tt = arguments.length, Vt = new Array(tt), qt = 0; qt < tt; qt++) Vt[qt] = arguments[qt];
-              et.debug("Adding metas\n", Vt), Ot.push(...Vt), Ht()
+              for (var uu = arguments.length, ju = new Array(uu), Uu = 0; Uu < uu; Uu++) ju[Uu] = arguments[Uu];
+              Eu.debug("Adding metas\n", ju), su.push(...ju), fu()
             },
             remove: function() {
-              for (var tt = arguments.length, Vt = new Array(tt), qt = 0; qt < tt; qt++) Vt[qt] = arguments[qt];
-              et.debug("Removing metas\n", Vt), Ot = Ot.filter((tt => !Vt.includes(tt))), Ht()
+              for (var uu = arguments.length, ju = new Array(uu), Uu = 0; Uu < uu; Uu++) ju[Uu] = arguments[Uu];
+              Eu.debug("Removing metas\n", ju), su = su.filter((uu => !ju.includes(uu))), fu()
             },
-            addListener: tt => {
-              et.debug("Adding metas listener\n", tt), qt.push(tt)
+            addListener: uu => {
+              Eu.debug("Adding metas listener\n", uu), Uu.push(uu)
             },
-            removeListener: tt => {
-              et.debug("Removing metas listener\n", tt), qt = qt.filter((et => et !== tt))
+            removeListener: uu => {
+              Eu.debug("Removing metas listener\n", uu), Uu = Uu.filter((Eu => Eu !== uu))
             },
-            capture: tt => {
-              var et;
-              const Ot = void 0 !== Vt,
-                qt = null !== (et = Vt) && void 0 !== et ? et : Dt;
-              Ot || (Vt = qt, mt = 0, dt = qt.length);
+            capture: uu => {
+              var Eu;
+              const su = void 0 !== ju,
+                Uu = null !== (Eu = ju) && void 0 !== Eu ? Eu : Zu;
+              su || (ju = Uu, Xu = 0, lu = Uu.length);
               try {
-                for (; mt < dt;) {
-                  const tt = qt[mt++];
-                  null === tt || void 0 === tt || tt()
+                for (; Xu < lu;) {
+                  const uu = Uu[Xu++];
+                  null === uu || void 0 === uu || uu()
                 }
-                const et = FD(jt());
-                return null === tt || void 0 === tt || tt(), et
+                const Eu = iZ(qu());
+                return null === uu || void 0 === uu || uu(), Eu
               } finally {
-                Ot || (Vt = void 0)
+                su || (ju = void 0)
               }
             },
-            addCaptureListener: tt => {
-              Dt.push(tt)
+            addCaptureListener: uu => {
+              Zu.push(uu)
             },
-            removeCaptureListener: tt => {
-              Dt = Dt.filter((et => et !== tt))
+            removeCaptureListener: uu => {
+              Zu = Zu.filter((Eu => Eu !== uu))
             },
             get value() {
-              return jt()
+              return qu()
             }
           }
-        }(0, Vt),
-        qt = rD(et, Vt, tt, Ot),
-        Dt = TD(et, Vt, tt, Ot, qt),
-        mt = function(tt, et, Vt, Ot, qt, Dt) {
-          et.debug("Initializing instrumentations");
-          const mt = [];
+        }(0, ju),
+        Uu = BZ(Eu, ju, uu, su),
+        Zu = yZ(Eu, ju, uu, su, Uu),
+        Xu = function(uu, Eu, ju, su, Uu, Zu) {
+          Eu.debug("Initializing instrumentations");
+          const Xu = [];
           return {
             add: function() {
-              et.debug("Adding instrumentations");
-              for (var dt = arguments.length, jt = new Array(dt), Ht = 0; Ht < dt; Ht++) jt[Ht] = arguments[Ht];
-              jt.forEach((dt => {
-                et.debug(`Adding "${dt.name}" instrumentation`), mt.some((tt => tt.name === dt.name)) ? et.warn(`Instrumentation ${dt.name} is already added`) : (dt.unpatchedConsole = tt, dt.internalLogger = et, dt.config = Vt, dt.metas = Ot, dt.transports = qt, dt.api = Dt, mt.push(dt), dt.initialize())
+              Eu.debug("Adding instrumentations");
+              for (var lu = arguments.length, qu = new Array(lu), fu = 0; fu < lu; fu++) qu[fu] = arguments[fu];
+              qu.forEach((lu => {
+                Eu.debug(`Adding "${lu.name}" instrumentation`), Xu.some((uu => uu.name === lu.name)) ? Eu.warn(`Instrumentation ${lu.name} is already added`) : (lu.unpatchedConsole = uu, lu.internalLogger = Eu, lu.config = ju, lu.metas = su, lu.transports = Uu, lu.api = Zu, Xu.push(lu), lu.initialize())
               }))
             },
             get instrumentations() {
-              return [...mt]
+              return [...Xu]
             },
             remove: function() {
-              et.debug("Removing instrumentations");
-              for (var tt = arguments.length, Vt = new Array(tt), Ot = 0; Ot < tt; Ot++) Vt[Ot] = arguments[Ot];
-              Vt.forEach((tt => {
-                var Vt, Ot;
-                et.debug(`Removing "${tt.name}" instrumentation`);
-                const qt = mt.reduce(((et, Vt, Ot) => null === et && Vt.name === tt.name ? Ot : null), null);
-                null !== qt ? (null === (Vt = (Ot = mt[qt]).destroy) || void 0 === Vt || Vt.call(Ot), mt.splice(qt, 1)) : et.warn(`Instrumentation "${tt.name}" is not added`)
+              Eu.debug("Removing instrumentations");
+              for (var uu = arguments.length, ju = new Array(uu), su = 0; su < uu; su++) ju[su] = arguments[su];
+              ju.forEach((uu => {
+                var ju, su;
+                Eu.debug(`Removing "${uu.name}" instrumentation`);
+                const Uu = Xu.reduce(((Eu, ju, su) => null === Eu && ju.name === uu.name ? su : null), null);
+                null !== Uu ? (null === (ju = (su = Xu[Uu]).destroy) || void 0 === ju || ju.call(su), Xu.splice(Uu, 1)) : Eu.warn(`Instrumentation "${uu.name}" is not added`)
               }))
             }
           }
-        }(et, Vt, tt, Ot, qt, Dt),
-        dt = yt(et, Vt, tt, Ot, qt, Dt, mt);
-      return zD(dt),
-        function(tt) {
-          tt.transports.add(...tt.config.transports), tt.transports.addBeforeSendHooks(tt.config.beforeSend)
-        }(dt),
-        function(tt) {
-          tt.instrumentations.add(...tt.config.instrumentations)
-        }(dt), dt
+        }(Eu, ju, uu, su, Uu, Zu),
+        lu = hu(Eu, ju, uu, su, Uu, Zu, Xu);
+      return IZ(lu),
+        function(uu) {
+          uu.transports.add(...uu.config.transports), uu.transports.addBeforeSendHooks(uu.config.beforeSend)
+        }(lu),
+        function(uu) {
+          uu.instrumentations.add(...uu.config.instrumentations)
+        }(lu), lu
     }
 
-    function sD(tt) {
-      const et = RD(tt);
-      if (et) return gD(et)
+    function RZ(uu) {
+      const Eu = vZ(uu);
+      if (Eu) return zZ(Eu)
     }
   },
-  6918: function(tt, et, Vt) {
-    var Ot;
-    ! function(qt, Dt) {
-      var mt = "function",
-        dt = "undefined",
-        jt = "object",
-        Ht = "string",
-        Xt = "major",
-        Qt = "model",
-        lt = "name",
-        Et = "type",
-        ft = "vendor",
-        wt = "version",
-        yt = "architecture",
-        Nt = "console",
-        Mt = "mobile",
-        bt = "tablet",
-        Jt = "smarttv",
-        Ct = "wearable",
-        ut = "embedded",
-        Kt = "Amazon",
-        ht = "Apple",
-        vt = "ASUS",
-        Wt = "BlackBerry",
-        St = "Browser",
-        ct = "Chrome",
-        Rt = "Firefox",
-        It = "Google",
-        Pt = "Honor",
-        Zt = "Huawei",
-        Lt = "LG",
-        Ft = "Microsoft",
-        kt = "Motorola",
-        Gt = "Nvidia",
-        zt = "OnePlus",
-        ot = "Opera",
-        rt = "OPPO",
-        Ut = "Samsung",
-        At = "Sharp",
-        it = "Sony",
-        Yt = "Xiaomi",
-        Bt = "Zebra",
-        pt = "Facebook",
-        xt = "Chromium OS",
-        Tt = "Mac OS",
-        gt = " Browser",
-        st = function(tt) {
-          for (var et = {}, Vt = 0; Vt < tt.length; Vt++) et[tt[Vt].toUpperCase()] = tt[Vt];
-          return et
+  6908: function(uu, Eu, ju) {
+    var su;
+    ! function(Uu, Zu) {
+      var Xu = "function",
+        lu = "undefined",
+        qu = "object",
+        fu = "string",
+        Cu = "major",
+        bu = "model",
+        cu = "name",
+        Nu = "type",
+        Ou = "vendor",
+        Yu = "version",
+        hu = "architecture",
+        Du = "console",
+        gu = "mobile",
+        Mu = "tablet",
+        eu = "smarttv",
+        Gu = "wearable",
+        pu = "embedded",
+        wu = "Amazon",
+        Ju = "Apple",
+        du = "ASUS",
+        au = "BlackBerry",
+        Pu = "Browser",
+        ou = "Chrome",
+        ku = "Firefox",
+        mu = "Google",
+        vu = "Honor",
+        Ku = "Huawei",
+        Vu = "LG",
+        ru = "Microsoft",
+        Qu = "Motorola",
+        iu = "Nvidia",
+        Wu = "OnePlus",
+        Su = "Opera",
+        Iu = "OPPO",
+        Fu = "Samsung",
+        Bu = "Sharp",
+        Lu = "Sony",
+        tu = "Xiaomi",
+        xu = "Zebra",
+        Tu = "Facebook",
+        Hu = "Chromium OS",
+        Au = "Mac OS",
+        nu = " Browser",
+        yu = function(uu) {
+          for (var Eu = {}, ju = 0; ju < uu.length; ju++) Eu[uu[ju].toUpperCase()] = uu[ju];
+          return Eu
         },
-        nt = function(tt, et) {
-          return typeof tt === Ht && -1 !== te(et).indexOf(te(tt))
+        zu = function(uu, Eu) {
+          return typeof uu === fu && -1 !== Ru(Eu).indexOf(Ru(uu))
         },
-        te = function(tt) {
-          return tt.toLowerCase()
+        Ru = function(uu) {
+          return uu.toLowerCase()
         },
-        ee = function(tt, et) {
-          if (typeof tt === Ht) return tt = tt.replace(/^\s\s*/, ""), typeof et === dt ? tt : tt.substring(0, 500)
+        uE = function(uu, Eu) {
+          if (typeof uu === fu) return uu = uu.replace(/^\s\s*/, ""), typeof Eu === lu ? uu : uu.substring(0, 500)
         },
-        Ve = function(tt, et) {
-          for (var Vt, Ot, qt, dt, Ht, Xt, Qt = 0; Qt < et.length && !Ht;) {
-            var lt = et[Qt],
-              Et = et[Qt + 1];
-            for (Vt = Ot = 0; Vt < lt.length && !Ht && lt[Vt];)
-              if (Ht = lt[Vt++].exec(tt))
-                for (qt = 0; qt < Et.length; qt++) Xt = Ht[++Ot], typeof(dt = Et[qt]) === jt && dt.length > 0 ? 2 === dt.length ? typeof dt[1] == mt ? this[dt[0]] = dt[1].call(this, Xt) : this[dt[0]] = dt[1] : 3 === dt.length ? typeof dt[1] !== mt || dt[1].exec && dt[1].test ? this[dt[0]] = Xt ? Xt.replace(dt[1], dt[2]) : Dt : this[dt[0]] = Xt ? dt[1].call(this, Xt, dt[2]) : Dt : 4 === dt.length && (this[dt[0]] = Xt ? dt[3].call(this, Xt.replace(dt[1], dt[2])) : Dt) : this[dt] = Xt || Dt;
-            Qt += 2
+        EE = function(uu, Eu) {
+          for (var ju, su, Uu, lu, fu, Cu, bu = 0; bu < Eu.length && !fu;) {
+            var cu = Eu[bu],
+              Nu = Eu[bu + 1];
+            for (ju = su = 0; ju < cu.length && !fu && cu[ju];)
+              if (fu = cu[ju++].exec(uu))
+                for (Uu = 0; Uu < Nu.length; Uu++) Cu = fu[++su], typeof(lu = Nu[Uu]) === qu && lu.length > 0 ? 2 === lu.length ? typeof lu[1] == Xu ? this[lu[0]] = lu[1].call(this, Cu) : this[lu[0]] = lu[1] : 3 === lu.length ? typeof lu[1] !== Xu || lu[1].exec && lu[1].test ? this[lu[0]] = Cu ? Cu.replace(lu[1], lu[2]) : Zu : this[lu[0]] = Cu ? lu[1].call(this, Cu, lu[2]) : Zu : 4 === lu.length && (this[lu[0]] = Cu ? lu[3].call(this, Cu.replace(lu[1], lu[2])) : Zu) : this[lu] = Cu || Zu;
+            bu += 2
           }
         },
-        Oe = function(tt, et) {
-          for (var Vt in et)
-            if (typeof et[Vt] === jt && et[Vt].length > 0) {
-              for (var Ot = 0; Ot < et[Vt].length; Ot++)
-                if (nt(et[Vt][Ot], tt)) return "?" === Vt ? Dt : Vt
-            } else if (nt(et[Vt], tt)) return "?" === Vt ? Dt : Vt;
-          return et.hasOwnProperty("*") ? et["*"] : tt
+        jE = function(uu, Eu) {
+          for (var ju in Eu)
+            if (typeof Eu[ju] === qu && Eu[ju].length > 0) {
+              for (var su = 0; su < Eu[ju].length; su++)
+                if (zu(Eu[ju][su], uu)) return "?" === ju ? Zu : ju
+            } else if (zu(Eu[ju], uu)) return "?" === ju ? Zu : ju;
+          return Eu.hasOwnProperty("*") ? Eu["*"] : uu
         },
-        qe = {
+        sE = {
           ME: "4.90",
           "NT 3.11": "NT3.51",
           "NT 4.0": "NT4.0",
@@ -4623,110 +4623,110 @@ export const modules = {
           10: ["NT 6.4", "NT 10.0"],
           RT: "ARM"
         },
-        De = {
+        UE = {
           browser: [
             [/\b(?:crmo|crios)\/([\w\.]+)/i],
-            [wt, [lt, "Chrome"]],
+            [Yu, [cu, "Chrome"]],
             [/edg(?:e|ios|a)?\/([\w\.]+)/i],
-            [wt, [lt, "Edge"]],
+            [Yu, [cu, "Edge"]],
             [/(opera mini)\/([-\w\.]+)/i, /(opera [mobiletab]{3,6})\b.+version\/([-\w\.]+)/i, /(opera)(?:.+version\/|[\/ ]+)([\w\.]+)/i],
-            [lt, wt],
+            [cu, Yu],
             [/opios[\/ ]+([\w\.]+)/i],
-            [wt, [lt, ot + " Mini"]],
+            [Yu, [cu, Su + " Mini"]],
             [/\bop(?:rg)?x\/([\w\.]+)/i],
-            [wt, [lt, ot + " GX"]],
+            [Yu, [cu, Su + " GX"]],
             [/\bopr\/([\w\.]+)/i],
-            [wt, [lt, ot]],
+            [Yu, [cu, Su]],
             [/\bb[ai]*d(?:uhd|[ub]*[aekoprswx]{5,6})[\/ ]?([\w\.]+)/i],
-            [wt, [lt, "Baidu"]],
+            [Yu, [cu, "Baidu"]],
             [/\b(?:mxbrowser|mxios|myie2)\/?([-\w\.]*)\b/i],
-            [wt, [lt, "Maxthon"]],
+            [Yu, [cu, "Maxthon"]],
             [/(kindle)\/([\w\.]+)/i, /(lunascape|maxthon|netfront|jasmine|blazer|sleipnir)[\/ ]?([\w\.]*)/i, /(avant|iemobile|slim(?:browser|boat|jet))[\/ ]?([\d\.]*)/i, /(?:ms|\()(ie) ([\w\.]+)/i, /(flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium|phantomjs|bowser|qupzilla|falkon|rekonq|puffin|brave|whale(?!.+naver)|qqbrowserlite|duckduckgo|klar|helio|(?=comodo_)?dragon)\/([-\w\.]+)/i, /(heytap|ovi|115)browser\/([\d\.]+)/i, /(weibo)__([\d\.]+)/i],
-            [lt, wt],
+            [cu, Yu],
             [/quark(?:pc)?\/([-\w\.]+)/i],
-            [wt, [lt, "Quark"]],
+            [Yu, [cu, "Quark"]],
             [/\bddg\/([\w\.]+)/i],
-            [wt, [lt, "DuckDuckGo"]],
+            [Yu, [cu, "DuckDuckGo"]],
             [/(?:\buc? ?browser|(?:juc.+)ucweb)[\/ ]?([\w\.]+)/i],
-            [wt, [lt, "UC" + St]],
+            [Yu, [cu, "UC" + Pu]],
             [/microm.+\bqbcore\/([\w\.]+)/i, /\bqbcore\/([\w\.]+).+microm/i, /micromessenger\/([\w\.]+)/i],
-            [wt, [lt, "WeChat"]],
+            [Yu, [cu, "WeChat"]],
             [/konqueror\/([\w\.]+)/i],
-            [wt, [lt, "Konqueror"]],
+            [Yu, [cu, "Konqueror"]],
             [/trident.+rv[: ]([\w\.]{1,9})\b.+like gecko/i],
-            [wt, [lt, "IE"]],
+            [Yu, [cu, "IE"]],
             [/ya(?:search)?browser\/([\w\.]+)/i],
-            [wt, [lt, "Yandex"]],
+            [Yu, [cu, "Yandex"]],
             [/slbrowser\/([\w\.]+)/i],
-            [wt, [lt, "Smart Lenovo " + St]],
+            [Yu, [cu, "Smart Lenovo " + Pu]],
             [/(avast|avg)\/([\w\.]+)/i],
             [
-              [lt, /(.+)/, "$1 Secure " + St], wt
+              [cu, /(.+)/, "$1 Secure " + Pu], Yu
             ],
             [/\bfocus\/([\w\.]+)/i],
-            [wt, [lt, Rt + " Focus"]],
+            [Yu, [cu, ku + " Focus"]],
             [/\bopt\/([\w\.]+)/i],
-            [wt, [lt, ot + " Touch"]],
+            [Yu, [cu, Su + " Touch"]],
             [/coc_coc\w+\/([\w\.]+)/i],
-            [wt, [lt, "Coc Coc"]],
+            [Yu, [cu, "Coc Coc"]],
             [/dolfin\/([\w\.]+)/i],
-            [wt, [lt, "Dolphin"]],
+            [Yu, [cu, "Dolphin"]],
             [/coast\/([\w\.]+)/i],
-            [wt, [lt, ot + " Coast"]],
+            [Yu, [cu, Su + " Coast"]],
             [/miuibrowser\/([\w\.]+)/i],
-            [wt, [lt, "MIUI" + gt]],
+            [Yu, [cu, "MIUI" + nu]],
             [/fxios\/([\w\.-]+)/i],
-            [wt, [lt, Rt]],
+            [Yu, [cu, ku]],
             [/\bqihoobrowser\/?([\w\.]*)/i],
-            [wt, [lt, "360"]],
+            [Yu, [cu, "360"]],
             [/\b(qq)\/([\w\.]+)/i],
             [
-              [lt, /(.+)/, "$1Browser"], wt
+              [cu, /(.+)/, "$1Browser"], Yu
             ],
             [/(oculus|sailfish|huawei|vivo|pico)browser\/([\w\.]+)/i],
             [
-              [lt, /(.+)/, "$1" + gt], wt
+              [cu, /(.+)/, "$1" + nu], Yu
             ],
             [/samsungbrowser\/([\w\.]+)/i],
-            [wt, [lt, Ut + " Internet"]],
+            [Yu, [cu, Fu + " Internet"]],
             [/metasr[\/ ]?([\d\.]+)/i],
-            [wt, [lt, "Sogou Explorer"]],
+            [Yu, [cu, "Sogou Explorer"]],
             [/(sogou)mo\w+\/([\d\.]+)/i],
             [
-              [lt, "Sogou Mobile"], wt
+              [cu, "Sogou Mobile"], Yu
             ],
             [/(electron)\/([\w\.]+) safari/i, /(tesla)(?: qtcarbrowser|\/(20\d\d\.[-\w\.]+))/i, /m?(qqbrowser|2345(?=browser|chrome|explorer))\w*[\/ ]?v?([\w\.]+)/i],
-            [lt, wt],
+            [cu, Yu],
             [/(lbbrowser|rekonq)/i, /\[(linkedin)app\]/i],
-            [lt],
+            [cu],
             [/ome\/([\w\.]+) \w* ?(iron) saf/i, /ome\/([\w\.]+).+qihu (360)[es]e/i],
-            [wt, lt],
+            [Yu, cu],
             [/((?:fban\/fbios|fb_iab\/fb4a)(?!.+fbav)|;fbav\/([\w\.]+);)/i],
             [
-              [lt, pt], wt
+              [cu, Tu], Yu
             ],
             [/(Klarna)\/([\w\.]+)/i, /(kakao(?:talk|story))[\/ ]([\w\.]+)/i, /(naver)\(.*?(\d+\.[\w\.]+).*\)/i, /(daum)apps[\/ ]([\w\.]+)/i, /safari (line)\/([\w\.]+)/i, /\b(line)\/([\w\.]+)\/iab/i, /(alipay)client\/([\w\.]+)/i, /(twitter)(?:and| f.+e\/([\w\.]+))/i, /(chromium|instagram|snapchat)[\/ ]([-\w\.]+)/i],
-            [lt, wt],
+            [cu, Yu],
             [/\bgsa\/([\w\.]+) .*safari\//i],
-            [wt, [lt, "GSA"]],
+            [Yu, [cu, "GSA"]],
             [/musical_ly(?:.+app_?version\/|_)([\w\.]+)/i],
-            [wt, [lt, "TikTok"]],
+            [Yu, [cu, "TikTok"]],
             [/headlesschrome(?:\/([\w\.]+)| )/i],
-            [wt, [lt, ct + " Headless"]],
+            [Yu, [cu, ou + " Headless"]],
             [/ wv\).+(chrome)\/([\w\.]+)/i],
             [
-              [lt, ct + " WebView"], wt
+              [cu, ou + " WebView"], Yu
             ],
             [/droid.+ version\/([\w\.]+)\b.+(?:mobile safari|safari)/i],
-            [wt, [lt, "Android " + St]],
+            [Yu, [cu, "Android " + Pu]],
             [/(chrome|omniweb|arora|[tizenoka]{5} ?browser)\/v?([\w\.]+)/i],
-            [lt, wt],
+            [cu, Yu],
             [/version\/([\w\.\,]+) .*mobile\/\w+ (safari)/i],
-            [wt, [lt, "Mobile Safari"]],
+            [Yu, [cu, "Mobile Safari"]],
             [/version\/([\w(\.|\,)]+) .*(mobile ?safari|safari)/i],
-            [wt, lt],
+            [Yu, cu],
             [/webkit.+?(mobile ?safari|safari)(\/[\w\.]+)/i],
-            [lt, [wt, Oe, {
+            [cu, [Yu, jE, {
               "1.0": "/8",
               1.2: "/1",
               1.3: "/3",
@@ -4737,642 +4737,642 @@ export const modules = {
               "?": "/"
             }]],
             [/(webkit|khtml)\/([\w\.]+)/i],
-            [lt, wt],
+            [cu, Yu],
             [/(navigator|netscape\d?)\/([-\w\.]+)/i],
             [
-              [lt, "Netscape"], wt
+              [cu, "Netscape"], Yu
             ],
             [/(wolvic|librewolf)\/([\w\.]+)/i],
-            [lt, wt],
+            [cu, Yu],
             [/mobile vr; rv:([\w\.]+)\).+firefox/i],
-            [wt, [lt, Rt + " Reality"]],
+            [Yu, [cu, ku + " Reality"]],
             [/ekiohf.+(flow)\/([\w\.]+)/i, /(swiftfox)/i, /(icedragon|iceweasel|camino|chimera|fennec|maemo browser|minimo|conkeror)[\/ ]?([\w\.\+]+)/i, /(seamonkey|k-meleon|icecat|iceape|firebird|phoenix|palemoon|basilisk|waterfox)\/([-\w\.]+)$/i, /(firefox)\/([\w\.]+)/i, /(mozilla)\/([\w\.]+) .+rv\:.+gecko\/\d+/i, /(amaya|dillo|doris|icab|ladybird|lynx|mosaic|netsurf|obigo|polaris|w3m|(?:go|ice|up)[\. ]?browser)[-\/ ]?v?([\w\.]+)/i, /\b(links) \(([\w\.]+)/i],
-            [lt, [wt, /_/g, "."]],
+            [cu, [Yu, /_/g, "."]],
             [/(cobalt)\/([\w\.]+)/i],
-            [lt, [wt, /master.|lts./, ""]]
+            [cu, [Yu, /master.|lts./, ""]]
           ],
           cpu: [
             [/\b((amd|x|x86[-_]?|wow|win)64)\b/i],
             [
-              [yt, "amd64"]
+              [hu, "amd64"]
             ],
             [/(ia32(?=;))/i, /\b((i[346]|x)86)(pc)?\b/i],
             [
-              [yt, "ia32"]
+              [hu, "ia32"]
             ],
             [/\b(aarch64|arm(v?[89]e?l?|_?64))\b/i],
             [
-              [yt, "arm64"]
+              [hu, "arm64"]
             ],
             [/\b(arm(v[67])?ht?n?[fl]p?)\b/i],
             [
-              [yt, "armhf"]
+              [hu, "armhf"]
             ],
             [/( (ce|mobile); ppc;|\/[\w\.]+arm\b)/i],
             [
-              [yt, "arm"]
+              [hu, "arm"]
             ],
             [/((ppc|powerpc)(64)?)( mac|;|\))/i],
             [
-              [yt, /ower/, "", te]
+              [hu, /ower/, "", Ru]
             ],
             [/ sun4\w[;\)]/i],
             [
-              [yt, "sparc"]
+              [hu, "sparc"]
             ],
             [/\b(avr32|ia64(?=;)|68k(?=\))|\barm(?=v([1-7]|[5-7]1)l?|;|eabi)|(irix|mips|sparc)(64)?\b|pa-risc)/i],
             [
-              [yt, te]
+              [hu, Ru]
             ]
           ],
           device: [
             [/\b(sch-i[89]0\d|shw-m380s|sm-[ptx]\w{2,4}|gt-[pn]\d{2,4}|sgh-t8[56]9|nexus 10)/i],
-            [Qt, [ft, Ut],
-              [Et, bt]
+            [bu, [Ou, Fu],
+              [Nu, Mu]
             ],
             [/\b((?:s[cgp]h|gt|sm)-(?![lr])\w+|sc[g-]?[\d]+a?|galaxy nexus)/i, /samsung[- ]((?!sm-[lr])[-\w]+)/i, /sec-(sgh\w+)/i],
-            [Qt, [ft, Ut],
-              [Et, Mt]
+            [bu, [Ou, Fu],
+              [Nu, gu]
             ],
             [/(?:\/|\()(ip(?:hone|od)[\w, ]*)(?:\/|;)/i],
-            [Qt, [ft, ht],
-              [Et, Mt]
+            [bu, [Ou, Ju],
+              [Nu, gu]
             ],
             [/\((ipad);[-\w\),; ]+apple/i, /applecoremedia\/[\w\.]+ \((ipad)/i, /\b(ipad)\d\d?,\d\d?[;\]].+ios/i],
-            [Qt, [ft, ht],
-              [Et, bt]
+            [bu, [Ou, Ju],
+              [Nu, Mu]
             ],
             [/(macintosh);/i],
-            [Qt, [ft, ht]],
+            [bu, [Ou, Ju]],
             [/\b(sh-?[altvz]?\d\d[a-ekm]?)/i],
-            [Qt, [ft, At],
-              [Et, Mt]
+            [bu, [Ou, Bu],
+              [Nu, gu]
             ],
             [/\b((?:brt|eln|hey2?|gdi|jdn)-a?[lnw]09|(?:ag[rm]3?|jdn2|kob2)-a?[lw]0[09]hn)(?: bui|\)|;)/i],
-            [Qt, [ft, Pt],
-              [Et, bt]
+            [bu, [Ou, vu],
+              [Nu, Mu]
             ],
             [/honor([-\w ]+)[;\)]/i],
-            [Qt, [ft, Pt],
-              [Et, Mt]
+            [bu, [Ou, vu],
+              [Nu, gu]
             ],
             [/\b((?:ag[rs][2356]?k?|bah[234]?|bg[2o]|bt[kv]|cmr|cpn|db[ry]2?|jdn2|got|kob2?k?|mon|pce|scm|sht?|[tw]gr|vrd)-[ad]?[lw][0125][09]b?|605hw|bg2-u03|(?:gem|fdr|m2|ple|t1)-[7a]0[1-4][lu]|t1-a2[13][lw]|mediapad[\w\. ]*(?= bui|\)))\b(?!.+d\/s)/i],
-            [Qt, [ft, Zt],
-              [Et, bt]
+            [bu, [Ou, Ku],
+              [Nu, Mu]
             ],
             [/(?:huawei)([-\w ]+)[;\)]/i, /\b(nexus 6p|\w{2,4}e?-[atu]?[ln][\dx][012359c][adn]?)\b(?!.+d\/s)/i],
-            [Qt, [ft, Zt],
-              [Et, Mt]
+            [bu, [Ou, Ku],
+              [Nu, gu]
             ],
             [/oid[^\)]+; (2[\dbc]{4}(182|283|rp\w{2})[cgl]|m2105k81a?c)(?: bui|\))/i, /\b((?:red)?mi[-_ ]?pad[\w- ]*)(?: bui|\))/i],
             [
-              [Qt, /_/g, " "],
-              [ft, Yt],
-              [Et, bt]
+              [bu, /_/g, " "],
+              [Ou, tu],
+              [Nu, Mu]
             ],
             [/\b(poco[\w ]+|m2\d{3}j\d\d[a-z]{2})(?: bui|\))/i, /\b; (\w+) build\/hm\1/i, /\b(hm[-_ ]?note?[_ ]?(?:\d\w)?) bui/i, /\b(redmi[\-_ ]?(?:note|k)?[\w_ ]+)(?: bui|\))/i, /oid[^\)]+; (m?[12][0-389][01]\w{3,6}[c-y])( bui|; wv|\))/i, /\b(mi[-_ ]?(?:a\d|one|one[_ ]plus|note lte|max|cc)?[_ ]?(?:\d?\w?)[_ ]?(?:plus|se|lite|pro)?)(?: bui|\))/i, / ([\w ]+) miui\/v?\d/i],
             [
-              [Qt, /_/g, " "],
-              [ft, Yt],
-              [Et, Mt]
+              [bu, /_/g, " "],
+              [Ou, tu],
+              [Nu, gu]
             ],
             [/; (\w+) bui.+ oppo/i, /\b(cph[12]\d{3}|p(?:af|c[al]|d\w|e[ar])[mt]\d0|x9007|a101op)\b/i],
-            [Qt, [ft, rt],
-              [Et, Mt]
+            [bu, [Ou, Iu],
+              [Nu, gu]
             ],
             [/\b(opd2(\d{3}a?))(?: bui|\))/i],
-            [Qt, [ft, Oe, {
+            [bu, [Ou, jE, {
                 OnePlus: ["304", "403", "203"],
-                "*": rt
+                "*": Iu
               }],
-              [Et, bt]
+              [Nu, Mu]
             ],
             [/vivo (\w+)(?: bui|\))/i, /\b(v[12]\d{3}\w?[at])(?: bui|;)/i],
-            [Qt, [ft, "Vivo"],
-              [Et, Mt]
+            [bu, [Ou, "Vivo"],
+              [Nu, gu]
             ],
             [/\b(rmx[1-3]\d{3})(?: bui|;|\))/i],
-            [Qt, [ft, "Realme"],
-              [Et, Mt]
+            [bu, [Ou, "Realme"],
+              [Nu, gu]
             ],
             [/\b(milestone|droid(?:[2-4x]| (?:bionic|x2|pro|razr))?:?( 4g)?)\b[\w ]+build\//i, /\bmot(?:orola)?[- ](\w*)/i, /((?:moto(?! 360)[\w\(\) ]+|xt\d{3,4}|nexus 6)(?= bui|\)))/i],
-            [Qt, [ft, kt],
-              [Et, Mt]
+            [bu, [Ou, Qu],
+              [Nu, gu]
             ],
             [/\b(mz60\d|xoom[2 ]{0,2}) build\//i],
-            [Qt, [ft, kt],
-              [Et, bt]
+            [bu, [Ou, Qu],
+              [Nu, Mu]
             ],
             [/((?=lg)?[vl]k\-?\d{3}) bui| 3\.[-\w; ]{10}lg?-([06cv9]{3,4})/i],
-            [Qt, [ft, Lt],
-              [Et, bt]
+            [bu, [Ou, Vu],
+              [Nu, Mu]
             ],
             [/(lm(?:-?f100[nv]?|-[\w\.]+)(?= bui|\))|nexus [45])/i, /\blg[-e;\/ ]+((?!browser|netcast|android tv|watch)\w+)/i, /\blg-?([\d\w]+) bui/i],
-            [Qt, [ft, Lt],
-              [Et, Mt]
+            [bu, [Ou, Vu],
+              [Nu, gu]
             ],
             [/(ideatab[-\w ]+|602lv|d-42a|a101lv|a2109a|a3500-hv|s[56]000|pb-6505[my]|tb-?x?\d{3,4}(?:f[cu]|xu|[av])|yt\d?-[jx]?\d+[lfmx])( bui|;|\)|\/)/i, /lenovo ?(b[68]0[08]0-?[hf]?|tab(?:[\w- ]+?)|tb[\w-]{6,7})( bui|;|\)|\/)/i],
-            [Qt, [ft, "Lenovo"],
-              [Et, bt]
+            [bu, [Ou, "Lenovo"],
+              [Nu, Mu]
             ],
             [/(nokia) (t[12][01])/i],
-            [ft, Qt, [Et, bt]],
+            [Ou, bu, [Nu, Mu]],
             [/(?:maemo|nokia).*(n900|lumia \d+|rm-\d+)/i, /nokia[-_ ]?(([-\w\. ]*))/i],
             [
-              [Qt, /_/g, " "],
-              [Et, Mt],
-              [ft, "Nokia"]
+              [bu, /_/g, " "],
+              [Nu, gu],
+              [Ou, "Nokia"]
             ],
             [/(pixel (c|tablet))\b/i],
-            [Qt, [ft, It],
-              [Et, bt]
+            [bu, [Ou, mu],
+              [Nu, Mu]
             ],
             [/droid.+; (pixel[\daxl ]{0,6})(?: bui|\))/i],
-            [Qt, [ft, It],
-              [Et, Mt]
+            [bu, [Ou, mu],
+              [Nu, gu]
             ],
             [/droid.+; (a?\d[0-2]{2}so|[c-g]\d{4}|so[-gl]\w+|xq-a\w[4-7][12])(?= bui|\).+chrome\/(?![1-6]{0,1}\d\.))/i],
-            [Qt, [ft, it],
-              [Et, Mt]
+            [bu, [Ou, Lu],
+              [Nu, gu]
             ],
             [/sony tablet [ps]/i, /\b(?:sony)?sgp\w+(?: bui|\))/i],
             [
-              [Qt, "Xperia Tablet"],
-              [ft, it],
-              [Et, bt]
+              [bu, "Xperia Tablet"],
+              [Ou, Lu],
+              [Nu, Mu]
             ],
             [/ (kb2005|in20[12]5|be20[12][59])\b/i, /(?:one)?(?:plus)? (a\d0\d\d)(?: b|\))/i],
-            [Qt, [ft, zt],
-              [Et, Mt]
+            [bu, [Ou, Wu],
+              [Nu, gu]
             ],
             [/(alexa)webm/i, /(kf[a-z]{2}wi|aeo(?!bc)\w\w)( bui|\))/i, /(kf[a-z]+)( bui|\)).+silk\//i],
-            [Qt, [ft, Kt],
-              [Et, bt]
+            [bu, [Ou, wu],
+              [Nu, Mu]
             ],
             [/((?:sd|kf)[0349hijorstuw]+)( bui|\)).+silk\//i],
             [
-              [Qt, /(.+)/g, "Fire Phone $1"],
-              [ft, Kt],
-              [Et, Mt]
+              [bu, /(.+)/g, "Fire Phone $1"],
+              [Ou, wu],
+              [Nu, gu]
             ],
             [/(playbook);[-\w\),; ]+(rim)/i],
-            [Qt, ft, [Et, bt]],
+            [bu, Ou, [Nu, Mu]],
             [/\b((?:bb[a-f]|st[hv])100-\d)/i, /\(bb10; (\w+)/i],
-            [Qt, [ft, Wt],
-              [Et, Mt]
+            [bu, [Ou, au],
+              [Nu, gu]
             ],
             [/(?:\b|asus_)(transfo[prime ]{4,10} \w+|eeepc|slider \w+|nexus 7|padfone|p00[cj])/i],
-            [Qt, [ft, vt],
-              [Et, bt]
+            [bu, [Ou, du],
+              [Nu, Mu]
             ],
             [/ (z[bes]6[027][012][km][ls]|zenfone \d\w?)\b/i],
-            [Qt, [ft, vt],
-              [Et, Mt]
+            [bu, [Ou, du],
+              [Nu, gu]
             ],
             [/(nexus 9)/i],
-            [Qt, [ft, "HTC"],
-              [Et, bt]
+            [bu, [Ou, "HTC"],
+              [Nu, Mu]
             ],
             [/(htc)[-;_ ]{1,2}([\w ]+(?=\)| bui)|\w+)/i, /(zte)[- ]([\w ]+?)(?: bui|\/|\))/i, /(alcatel|geeksphone|nexian|panasonic(?!(?:;|\.))|sony(?!-bra))[-_ ]?([-\w]*)/i],
-            [ft, [Qt, /_/g, " "],
-              [Et, Mt]
+            [Ou, [bu, /_/g, " "],
+              [Nu, gu]
             ],
             [/droid [\w\.]+; ((?:8[14]9[16]|9(?:0(?:48|60|8[01])|1(?:3[27]|66)|2(?:6[69]|9[56])|466))[gqswx])\w*(\)| bui)/i],
-            [Qt, [ft, "TCL"],
-              [Et, bt]
+            [bu, [Ou, "TCL"],
+              [Nu, Mu]
             ],
             [/(itel) ((\w+))/i],
             [
-              [ft, te], Qt, [Et, Oe, {
+              [Ou, Ru], bu, [Nu, jE, {
                 tablet: ["p10001l", "w7001"],
                 "*": "mobile"
               }]
             ],
             [/droid.+; ([ab][1-7]-?[0178a]\d\d?)/i],
-            [Qt, [ft, "Acer"],
-              [Et, bt]
+            [bu, [Ou, "Acer"],
+              [Nu, Mu]
             ],
             [/droid.+; (m[1-5] note) bui/i, /\bmz-([-\w]{2,})/i],
-            [Qt, [ft, "Meizu"],
-              [Et, Mt]
+            [bu, [Ou, "Meizu"],
+              [Nu, gu]
             ],
             [/; ((?:power )?armor(?:[\w ]{0,8}))(?: bui|\))/i],
-            [Qt, [ft, "Ulefone"],
-              [Et, Mt]
+            [bu, [Ou, "Ulefone"],
+              [Nu, gu]
             ],
             [/; (energy ?\w+)(?: bui|\))/i, /; energizer ([\w ]+)(?: bui|\))/i],
-            [Qt, [ft, "Energizer"],
-              [Et, Mt]
+            [bu, [Ou, "Energizer"],
+              [Nu, gu]
             ],
             [/; cat (b35);/i, /; (b15q?|s22 flip|s48c|s62 pro)(?: bui|\))/i],
-            [Qt, [ft, "Cat"],
-              [Et, Mt]
+            [bu, [Ou, "Cat"],
+              [Nu, gu]
             ],
             [/((?:new )?andromax[\w- ]+)(?: bui|\))/i],
-            [Qt, [ft, "Smartfren"],
-              [Et, Mt]
+            [bu, [Ou, "Smartfren"],
+              [Nu, gu]
             ],
             [/droid.+; (a(?:015|06[35]|142p?))/i],
-            [Qt, [ft, "Nothing"],
-              [Et, Mt]
+            [bu, [Ou, "Nothing"],
+              [Nu, gu]
             ],
             [/; (x67 5g|tikeasy \w+|ac[1789]\d\w+)( b|\))/i, /archos ?(5|gamepad2?|([\w ]*[t1789]|hello) ?\d+[\w ]*)( b|\))/i],
-            [Qt, [ft, "Archos"],
-              [Et, bt]
+            [bu, [Ou, "Archos"],
+              [Nu, Mu]
             ],
             [/archos ([\w ]+)( b|\))/i, /; (ac[3-6]\d\w{2,8})( b|\))/i],
-            [Qt, [ft, "Archos"],
-              [Et, Mt]
+            [bu, [Ou, "Archos"],
+              [Nu, gu]
             ],
             [/(imo) (tab \w+)/i, /(infinix) (x1101b?)/i],
-            [ft, Qt, [Et, bt]],
+            [Ou, bu, [Nu, Mu]],
             [/(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus(?! zenw)|dell|jolla|meizu|motorola|polytron|infinix|tecno|micromax|advan)[-_ ]?([-\w]*)/i, /; (hmd|imo) ([\w ]+?)(?: bui|\))/i, /(hp) ([\w ]+\w)/i, /(microsoft); (lumia[\w ]+)/i, /(lenovo)[-_ ]?([-\w ]+?)(?: bui|\)|\/)/i, /(oppo) ?([\w ]+) bui/i],
-            [ft, Qt, [Et, Mt]],
+            [Ou, bu, [Nu, gu]],
             [/(kobo)\s(ereader|touch)/i, /(hp).+(touchpad(?!.+tablet)|tablet)/i, /(kindle)\/([\w\.]+)/i, /(nook)[\w ]+build\/(\w+)/i, /(dell) (strea[kpr\d ]*[\dko])/i, /(le[- ]+pan)[- ]+(\w{1,9}) bui/i, /(trinity)[- ]*(t\d{3}) bui/i, /(gigaset)[- ]+(q\w{1,9}) bui/i, /(vodafone) ([\w ]+)(?:\)| bui)/i],
-            [ft, Qt, [Et, bt]],
+            [Ou, bu, [Nu, Mu]],
             [/(surface duo)/i],
-            [Qt, [ft, Ft],
-              [Et, bt]
+            [bu, [Ou, ru],
+              [Nu, Mu]
             ],
             [/droid [\d\.]+; (fp\du?)(?: b|\))/i],
-            [Qt, [ft, "Fairphone"],
-              [Et, Mt]
+            [bu, [Ou, "Fairphone"],
+              [Nu, gu]
             ],
             [/(u304aa)/i],
-            [Qt, [ft, "AT&T"],
-              [Et, Mt]
+            [bu, [Ou, "AT&T"],
+              [Nu, gu]
             ],
             [/\bsie-(\w*)/i],
-            [Qt, [ft, "Siemens"],
-              [Et, Mt]
+            [bu, [Ou, "Siemens"],
+              [Nu, gu]
             ],
             [/\b(rct\w+) b/i],
-            [Qt, [ft, "RCA"],
-              [Et, bt]
+            [bu, [Ou, "RCA"],
+              [Nu, Mu]
             ],
             [/\b(venue[\d ]{2,7}) b/i],
-            [Qt, [ft, "Dell"],
-              [Et, bt]
+            [bu, [Ou, "Dell"],
+              [Nu, Mu]
             ],
             [/\b(q(?:mv|ta)\w+) b/i],
-            [Qt, [ft, "Verizon"],
-              [Et, bt]
+            [bu, [Ou, "Verizon"],
+              [Nu, Mu]
             ],
             [/\b(?:barnes[& ]+noble |bn[rt])([\w\+ ]*) b/i],
-            [Qt, [ft, "Barnes & Noble"],
-              [Et, bt]
+            [bu, [Ou, "Barnes & Noble"],
+              [Nu, Mu]
             ],
             [/\b(tm\d{3}\w+) b/i],
-            [Qt, [ft, "NuVision"],
-              [Et, bt]
+            [bu, [Ou, "NuVision"],
+              [Nu, Mu]
             ],
             [/\b(k88) b/i],
-            [Qt, [ft, "ZTE"],
-              [Et, bt]
+            [bu, [Ou, "ZTE"],
+              [Nu, Mu]
             ],
             [/\b(nx\d{3}j) b/i],
-            [Qt, [ft, "ZTE"],
-              [Et, Mt]
+            [bu, [Ou, "ZTE"],
+              [Nu, gu]
             ],
             [/\b(gen\d{3}) b.+49h/i],
-            [Qt, [ft, "Swiss"],
-              [Et, Mt]
+            [bu, [Ou, "Swiss"],
+              [Nu, gu]
             ],
             [/\b(zur\d{3}) b/i],
-            [Qt, [ft, "Swiss"],
-              [Et, bt]
+            [bu, [Ou, "Swiss"],
+              [Nu, Mu]
             ],
             [/\b((zeki)?tb.*\b) b/i],
-            [Qt, [ft, "Zeki"],
-              [Et, bt]
+            [bu, [Ou, "Zeki"],
+              [Nu, Mu]
             ],
             [/\b([yr]\d{2}) b/i, /\b(dragon[- ]+touch |dt)(\w{5}) b/i],
             [
-              [ft, "Dragon Touch"], Qt, [Et, bt]
+              [Ou, "Dragon Touch"], bu, [Nu, Mu]
             ],
             [/\b(ns-?\w{0,9}) b/i],
-            [Qt, [ft, "Insignia"],
-              [Et, bt]
+            [bu, [Ou, "Insignia"],
+              [Nu, Mu]
             ],
             [/\b((nxa|next)-?\w{0,9}) b/i],
-            [Qt, [ft, "NextBook"],
-              [Et, bt]
+            [bu, [Ou, "NextBook"],
+              [Nu, Mu]
             ],
             [/\b(xtreme\_)?(v(1[045]|2[015]|[3469]0|7[05])) b/i],
             [
-              [ft, "Voice"], Qt, [Et, Mt]
+              [Ou, "Voice"], bu, [Nu, gu]
             ],
             [/\b(lvtel\-)?(v1[12]) b/i],
             [
-              [ft, "LvTel"], Qt, [Et, Mt]
+              [Ou, "LvTel"], bu, [Nu, gu]
             ],
             [/\b(ph-1) /i],
-            [Qt, [ft, "Essential"],
-              [Et, Mt]
+            [bu, [Ou, "Essential"],
+              [Nu, gu]
             ],
             [/\b(v(100md|700na|7011|917g).*\b) b/i],
-            [Qt, [ft, "Envizen"],
-              [Et, bt]
+            [bu, [Ou, "Envizen"],
+              [Nu, Mu]
             ],
             [/\b(trio[-\w\. ]+) b/i],
-            [Qt, [ft, "MachSpeed"],
-              [Et, bt]
+            [bu, [Ou, "MachSpeed"],
+              [Nu, Mu]
             ],
             [/\btu_(1491) b/i],
-            [Qt, [ft, "Rotor"],
-              [Et, bt]
+            [bu, [Ou, "Rotor"],
+              [Nu, Mu]
             ],
             [/((?:tegranote|shield t(?!.+d tv))[\w- ]*?)(?: b|\))/i],
-            [Qt, [ft, Gt],
-              [Et, bt]
+            [bu, [Ou, iu],
+              [Nu, Mu]
             ],
             [/(sprint) (\w+)/i],
-            [ft, Qt, [Et, Mt]],
+            [Ou, bu, [Nu, gu]],
             [/(kin\.[onetw]{3})/i],
             [
-              [Qt, /\./g, " "],
-              [ft, Ft],
-              [Et, Mt]
+              [bu, /\./g, " "],
+              [Ou, ru],
+              [Nu, gu]
             ],
             [/droid.+; (cc6666?|et5[16]|mc[239][23]x?|vc8[03]x?)\)/i],
-            [Qt, [ft, Bt],
-              [Et, bt]
+            [bu, [Ou, xu],
+              [Nu, Mu]
             ],
             [/droid.+; (ec30|ps20|tc[2-8]\d[kx])\)/i],
-            [Qt, [ft, Bt],
-              [Et, Mt]
+            [bu, [Ou, xu],
+              [Nu, gu]
             ],
             [/smart-tv.+(samsung)/i],
-            [ft, [Et, Jt]],
+            [Ou, [Nu, eu]],
             [/hbbtv.+maple;(\d+)/i],
             [
-              [Qt, /^/, "SmartTV"],
-              [ft, Ut],
-              [Et, Jt]
+              [bu, /^/, "SmartTV"],
+              [Ou, Fu],
+              [Nu, eu]
             ],
             [/(nux; netcast.+smarttv|lg (netcast\.tv-201\d|android tv))/i],
             [
-              [ft, Lt],
-              [Et, Jt]
+              [Ou, Vu],
+              [Nu, eu]
             ],
             [/(apple) ?tv/i],
-            [ft, [Qt, ht + " TV"],
-              [Et, Jt]
+            [Ou, [bu, Ju + " TV"],
+              [Nu, eu]
             ],
             [/crkey/i],
             [
-              [Qt, ct + "cast"],
-              [ft, It],
-              [Et, Jt]
+              [bu, ou + "cast"],
+              [Ou, mu],
+              [Nu, eu]
             ],
             [/droid.+aft(\w+)( bui|\))/i],
-            [Qt, [ft, Kt],
-              [Et, Jt]
+            [bu, [Ou, wu],
+              [Nu, eu]
             ],
             [/(shield \w+ tv)/i],
-            [Qt, [ft, Gt],
-              [Et, Jt]
+            [bu, [Ou, iu],
+              [Nu, eu]
             ],
             [/\(dtv[\);].+(aquos)/i, /(aquos-tv[\w ]+)\)/i],
-            [Qt, [ft, At],
-              [Et, Jt]
+            [bu, [Ou, Bu],
+              [Nu, eu]
             ],
             [/(bravia[\w ]+)( bui|\))/i],
-            [Qt, [ft, it],
-              [Et, Jt]
+            [bu, [Ou, Lu],
+              [Nu, eu]
             ],
             [/(mi(tv|box)-?\w+) bui/i],
-            [Qt, [ft, Yt],
-              [Et, Jt]
+            [bu, [Ou, tu],
+              [Nu, eu]
             ],
             [/Hbbtv.*(technisat) (.*);/i],
-            [ft, Qt, [Et, Jt]],
+            [Ou, bu, [Nu, eu]],
             [/\b(roku)[\dx]*[\)\/]((?:dvp-)?[\d\.]*)/i, /hbbtv\/\d+\.\d+\.\d+ +\([\w\+ ]*; *([\w\d][^;]*);([^;]*)/i],
             [
-              [ft, ee],
-              [Qt, ee],
-              [Et, Jt]
+              [Ou, uE],
+              [bu, uE],
+              [Nu, eu]
             ],
             [/droid.+; ([\w- ]+) (?:android tv|smart[- ]?tv)/i],
-            [Qt, [Et, Jt]],
+            [bu, [Nu, eu]],
             [/\b(android tv|smart[- ]?tv|opera tv|tv; rv:)\b/i],
             [
-              [Et, Jt]
+              [Nu, eu]
             ],
             [/(ouya)/i, /(nintendo) ([wids3utch]+)/i],
-            [ft, Qt, [Et, Nt]],
+            [Ou, bu, [Nu, Du]],
             [/droid.+; (shield)( bui|\))/i],
-            [Qt, [ft, Gt],
-              [Et, Nt]
+            [bu, [Ou, iu],
+              [Nu, Du]
             ],
             [/(playstation \w+)/i],
-            [Qt, [ft, it],
-              [Et, Nt]
+            [bu, [Ou, Lu],
+              [Nu, Du]
             ],
             [/\b(xbox(?: one)?(?!; xbox))[\); ]/i],
-            [Qt, [ft, Ft],
-              [Et, Nt]
+            [bu, [Ou, ru],
+              [Nu, Du]
             ],
             [/\b(sm-[lr]\d\d[0156][fnuw]?s?|gear live)\b/i],
-            [Qt, [ft, Ut],
-              [Et, Ct]
+            [bu, [Ou, Fu],
+              [Nu, Gu]
             ],
             [/((pebble))app/i, /(asus|google|lg|oppo) ((pixel |zen)?watch[\w ]*)( bui|\))/i],
-            [ft, Qt, [Et, Ct]],
+            [Ou, bu, [Nu, Gu]],
             [/(ow(?:19|20)?we?[1-3]{1,3})/i],
-            [Qt, [ft, rt],
-              [Et, Ct]
+            [bu, [Ou, Iu],
+              [Nu, Gu]
             ],
             [/(watch)(?: ?os[,\/]|\d,\d\/)[\d\.]+/i],
-            [Qt, [ft, ht],
-              [Et, Ct]
+            [bu, [Ou, Ju],
+              [Nu, Gu]
             ],
             [/(opwwe\d{3})/i],
-            [Qt, [ft, zt],
-              [Et, Ct]
+            [bu, [Ou, Wu],
+              [Nu, Gu]
             ],
             [/(moto 360)/i],
-            [Qt, [ft, kt],
-              [Et, Ct]
+            [bu, [Ou, Qu],
+              [Nu, Gu]
             ],
             [/(smartwatch 3)/i],
-            [Qt, [ft, it],
-              [Et, Ct]
+            [bu, [Ou, Lu],
+              [Nu, Gu]
             ],
             [/(g watch r)/i],
-            [Qt, [ft, Lt],
-              [Et, Ct]
+            [bu, [Ou, Vu],
+              [Nu, Gu]
             ],
             [/droid.+; (wt63?0{2,3})\)/i],
-            [Qt, [ft, Bt],
-              [Et, Ct]
+            [bu, [Ou, xu],
+              [Nu, Gu]
             ],
             [/droid.+; (glass) \d/i],
-            [Qt, [ft, It],
-              [Et, Ct]
+            [bu, [Ou, mu],
+              [Nu, Gu]
             ],
             [/(pico) (4|neo3(?: link|pro)?)/i],
-            [ft, Qt, [Et, Ct]],
+            [Ou, bu, [Nu, Gu]],
             [/; (quest( \d| pro)?)/i],
-            [Qt, [ft, pt],
-              [Et, Ct]
+            [bu, [Ou, Tu],
+              [Nu, Gu]
             ],
             [/(tesla)(?: qtcarbrowser|\/[-\w\.]+)/i],
-            [ft, [Et, ut]],
+            [Ou, [Nu, pu]],
             [/(aeobc)\b/i],
-            [Qt, [ft, Kt],
-              [Et, ut]
+            [bu, [Ou, wu],
+              [Nu, pu]
             ],
             [/(homepod).+mac os/i],
-            [Qt, [ft, ht],
-              [Et, ut]
+            [bu, [Ou, Ju],
+              [Nu, pu]
             ],
             [/windows iot/i],
             [
-              [Et, ut]
+              [Nu, pu]
             ],
             [/droid .+?; ([^;]+?)(?: bui|; wv\)|\) applew).+? mobile safari/i],
-            [Qt, [Et, Mt]],
+            [bu, [Nu, gu]],
             [/droid .+?; ([^;]+?)(?: bui|\) applew).+?(?! mobile) safari/i],
-            [Qt, [Et, bt]],
+            [bu, [Nu, Mu]],
             [/\b((tablet|tab)[;\/]|focus\/\d(?!.+mobile))/i],
             [
-              [Et, bt]
+              [Nu, Mu]
             ],
             [/(phone|mobile(?:[;\/]| [ \w\/\.]*safari)|pda(?=.+windows ce))/i],
             [
-              [Et, Mt]
+              [Nu, gu]
             ],
             [/droid .+?; ([\w\. -]+)( bui|\))/i],
-            [Qt, [ft, "Generic"]]
+            [bu, [Ou, "Generic"]]
           ],
           engine: [
             [/windows.+ edge\/([\w\.]+)/i],
-            [wt, [lt, "EdgeHTML"]],
+            [Yu, [cu, "EdgeHTML"]],
             [/(arkweb)\/([\w\.]+)/i],
-            [lt, wt],
+            [cu, Yu],
             [/webkit\/537\.36.+chrome\/(?!27)([\w\.]+)/i],
-            [wt, [lt, "Blink"]],
+            [Yu, [cu, "Blink"]],
             [/(presto)\/([\w\.]+)/i, /(webkit|trident|netfront|netsurf|amaya|lynx|w3m|goanna|servo)\/([\w\.]+)/i, /ekioh(flow)\/([\w\.]+)/i, /(khtml|tasman|links)[\/ ]\(?([\w\.]+)/i, /(icab)[\/ ]([23]\.[\d\.]+)/i, /\b(libweb)/i],
-            [lt, wt],
+            [cu, Yu],
             [/ladybird\//i],
             [
-              [lt, "LibWeb"]
+              [cu, "LibWeb"]
             ],
             [/rv\:([\w\.]{1,9})\b.+(gecko)/i],
-            [wt, lt]
+            [Yu, cu]
           ],
           os: [
             [/microsoft (windows) (vista|xp)/i],
-            [lt, wt],
+            [cu, Yu],
             [/(windows (?:phone(?: os)?|mobile|iot))[\/ ]?([\d\.\w ]*)/i],
-            [lt, [wt, Oe, qe]],
+            [cu, [Yu, jE, sE]],
             [/windows nt 6\.2; (arm)/i, /windows[\/ ]([ntce\d\. ]+\w)(?!.+xbox)/i, /(?:win(?=3|9|n)|win 9x )([nt\d\.]+)/i],
             [
-              [wt, Oe, qe],
-              [lt, "Windows"]
+              [Yu, jE, sE],
+              [cu, "Windows"]
             ],
             [/[adehimnop]{4,7}\b(?:.*os ([\w]+) like mac|; opera)/i, /(?:ios;fbsv\/|iphone.+ios[\/ ])([\d\.]+)/i, /cfnetwork\/.+darwin/i],
             [
-              [wt, /_/g, "."],
-              [lt, "iOS"]
+              [Yu, /_/g, "."],
+              [cu, "iOS"]
             ],
             [/(mac os x) ?([\w\. ]*)/i, /(macintosh|mac_powerpc\b)(?!.+haiku)/i],
             [
-              [lt, Tt],
-              [wt, /_/g, "."]
+              [cu, Au],
+              [Yu, /_/g, "."]
             ],
             [/droid ([\w\.]+)\b.+(android[- ]x86|harmonyos)/i],
-            [wt, lt],
+            [Yu, cu],
             [/(ubuntu) ([\w\.]+) like android/i],
             [
-              [lt, /(.+)/, "$1 Touch"], wt
+              [cu, /(.+)/, "$1 Touch"], Yu
             ],
             [/(android|bada|blackberry|kaios|maemo|meego|openharmony|qnx|rim tablet os|sailfish|series40|symbian|tizen|webos)\w*[-\/; ]?([\d\.]*)/i],
-            [lt, wt],
+            [cu, Yu],
             [/\(bb(10);/i],
-            [wt, [lt, Wt]],
+            [Yu, [cu, au]],
             [/(?:symbian ?os|symbos|s60(?=;)|series ?60)[-\/ ]?([\w\.]*)/i],
-            [wt, [lt, "Symbian"]],
+            [Yu, [cu, "Symbian"]],
             [/mozilla\/[\d\.]+ \((?:mobile|tablet|tv|mobile; [\w ]+); rv:.+ gecko\/([\w\.]+)/i],
-            [wt, [lt, Rt + " OS"]],
+            [Yu, [cu, ku + " OS"]],
             [/web0s;.+rt(tv)/i, /\b(?:hp)?wos(?:browser)?\/([\w\.]+)/i],
-            [wt, [lt, "webOS"]],
+            [Yu, [cu, "webOS"]],
             [/watch(?: ?os[,\/]|\d,\d\/)([\d\.]+)/i],
-            [wt, [lt, "watchOS"]],
+            [Yu, [cu, "watchOS"]],
             [/crkey\/([\d\.]+)/i],
-            [wt, [lt, ct + "cast"]],
+            [Yu, [cu, ou + "cast"]],
             [/(cros) [\w]+(?:\)| ([\w\.]+)\b)/i],
             [
-              [lt, xt], wt
+              [cu, Hu], Yu
             ],
             [/panasonic;(viera)/i, /(netrange)mmh/i, /(nettv)\/(\d+\.[\w\.]+)/i, /(nintendo|playstation) ([wids345portablevuch]+)/i, /(xbox); +xbox ([^\);]+)/i, /\b(joli|palm)\b ?(?:os)?\/?([\w\.]*)/i, /(mint)[\/\(\) ]?(\w*)/i, /(mageia|vectorlinux)[; ]/i, /([kxln]?ubuntu|debian|suse|opensuse|gentoo|arch(?= linux)|slackware|fedora|mandriva|centos|pclinuxos|red ?hat|zenwalk|linpus|raspbian|plan 9|minix|risc os|contiki|deepin|manjaro|elementary os|sabayon|linspire)(?: gnu\/linux)?(?: enterprise)?(?:[- ]linux)?(?:-gnu)?[-\/ ]?(?!chrom|package)([-\w\.]*)/i, /(hurd|linux)(?: arm\w*| x86\w*| ?)([\w\.]*)/i, /(gnu) ?([\w\.]*)/i, /\b([-frentopcghs]{0,5}bsd|dragonfly)[\/ ]?(?!amd|[ix346]{1,2}86)([\w\.]*)/i, /(haiku) (\w+)/i],
-            [lt, wt],
+            [cu, Yu],
             [/(sunos) ?([\w\.\d]*)/i],
             [
-              [lt, "Solaris"], wt
+              [cu, "Solaris"], Yu
             ],
             [/((?:open)?solaris)[-\/ ]?([\w\.]*)/i, /(aix) ((\d)(?=\.|\)| )[\w\.])*/i, /\b(beos|os\/2|amigaos|morphos|openvms|fuchsia|hp-ux|serenityos)/i, /(unix) ?([\w\.]*)/i],
-            [lt, wt]
+            [cu, Yu]
           ]
         },
-        me = function(tt, et) {
-          if (typeof tt === jt && (et = tt, tt = Dt), !(this instanceof me)) return new me(tt, et).getResult();
-          var Vt = typeof qt !== dt && qt.navigator ? qt.navigator : Dt,
-            Ot = tt || (Vt && Vt.userAgent ? Vt.userAgent : ""),
-            Nt = Vt && Vt.userAgentData ? Vt.userAgentData : Dt,
-            Jt = et ? function(tt, et) {
-              var Vt = {};
-              for (var Ot in tt) et[Ot] && et[Ot].length % 2 === 0 ? Vt[Ot] = et[Ot].concat(tt[Ot]) : Vt[Ot] = tt[Ot];
-              return Vt
-            }(De, et) : De,
-            Ct = Vt && Vt.userAgent == Ot;
+        ZE = function(uu, Eu) {
+          if (typeof uu === qu && (Eu = uu, uu = Zu), !(this instanceof ZE)) return new ZE(uu, Eu).getResult();
+          var ju = typeof Uu !== lu && Uu.navigator ? Uu.navigator : Zu,
+            su = uu || (ju && ju.userAgent ? ju.userAgent : ""),
+            Du = ju && ju.userAgentData ? ju.userAgentData : Zu,
+            eu = Eu ? function(uu, Eu) {
+              var ju = {};
+              for (var su in uu) Eu[su] && Eu[su].length % 2 === 0 ? ju[su] = Eu[su].concat(uu[su]) : ju[su] = uu[su];
+              return ju
+            }(UE, Eu) : UE,
+            Gu = ju && ju.userAgent == su;
           return this.getBrowser = function() {
-            var tt, et = {};
-            return et[lt] = Dt, et[wt] = Dt, Ve.call(et, Ot, Jt.browser), et[Xt] = typeof(tt = et[wt]) === Ht ? tt.replace(/[^\d\.]/g, "").split(".")[0] : Dt, Ct && Vt && Vt.brave && typeof Vt.brave.isBrave == mt && (et[lt] = "Brave"), et
+            var uu, Eu = {};
+            return Eu[cu] = Zu, Eu[Yu] = Zu, EE.call(Eu, su, eu.browser), Eu[Cu] = typeof(uu = Eu[Yu]) === fu ? uu.replace(/[^\d\.]/g, "").split(".")[0] : Zu, Gu && ju && ju.brave && typeof ju.brave.isBrave == Xu && (Eu[cu] = "Brave"), Eu
           }, this.getCPU = function() {
-            var tt = {};
-            return tt[yt] = Dt, Ve.call(tt, Ot, Jt.cpu), tt
+            var uu = {};
+            return uu[hu] = Zu, EE.call(uu, su, eu.cpu), uu
           }, this.getDevice = function() {
-            var tt = {};
-            return tt[ft] = Dt, tt[Qt] = Dt, tt[Et] = Dt, Ve.call(tt, Ot, Jt.device), Ct && !tt[Et] && Nt && Nt.mobile && (tt[Et] = Mt), Ct && "Macintosh" == tt[Qt] && Vt && typeof Vt.standalone !== dt && Vt.maxTouchPoints && Vt.maxTouchPoints > 2 && (tt[Qt] = "iPad", tt[Et] = bt), tt
-          }, this.Jf = function() {
-            var tt = {};
-            return tt[lt] = Dt, tt[wt] = Dt, Ve.call(tt, Ot, Jt.engine), tt
+            var uu = {};
+            return uu[Ou] = Zu, uu[bu] = Zu, uu[Nu] = Zu, EE.call(uu, su, eu.device), Gu && !uu[Nu] && Du && Du.mobile && (uu[Nu] = gu), Gu && "Macintosh" == uu[bu] && ju && typeof ju.standalone !== lu && ju.maxTouchPoints && ju.maxTouchPoints > 2 && (uu[bu] = "iPad", uu[Nu] = Mu), uu
+          }, this.wO = function() {
+            var uu = {};
+            return uu[cu] = Zu, uu[Yu] = Zu, EE.call(uu, su, eu.engine), uu
           }, this.getOS = function() {
-            var tt = {};
-            return tt[lt] = Dt, tt[wt] = Dt, Ve.call(tt, Ot, Jt.os), Ct && !tt[lt] && Nt && Nt.platform && "Unknown" != Nt.platform && (tt[lt] = Nt.platform.replace(/chrome os/i, xt).replace(/macos/i, Tt)), tt
+            var uu = {};
+            return uu[cu] = Zu, uu[Yu] = Zu, EE.call(uu, su, eu.os), Gu && !uu[cu] && Du && Du.platform && "Unknown" != Du.platform && (uu[cu] = Du.platform.replace(/chrome os/i, Hu).replace(/macos/i, Au)), uu
           }, this.getResult = function() {
             return {
               ua: this.getUA(),
               browser: this.getBrowser(),
-              engine: this.Jf(),
+              engine: this.wO(),
               os: this.getOS(),
               device: this.getDevice(),
               cpu: this.getCPU()
             }
           }, this.getUA = function() {
-            return Ot
-          }, this.setUA = function(tt) {
-            return Ot = typeof tt === Ht && tt.length > 500 ? ee(tt, 500) : tt, this
-          }, this.setUA(Ot), this
+            return su
+          }, this.setUA = function(uu) {
+            return su = typeof uu === fu && uu.length > 500 ? uE(uu, 500) : uu, this
+          }, this.setUA(su), this
         };
-      me.VERSION = "1.0.41", me.BROWSER = st([lt, wt, Xt]), me.CPU = st([yt]), me.DEVICE = st([Qt, ft, Et, Nt, Mt, Jt, bt, Ct, ut]), me.ENGINE = me.OS = st([lt, wt]), typeof et !== dt ? (tt.exports && (et = tt.exports = me), et.UAParser = me) : Vt.amdO ? (Ot = function() {
-        return me
-      }.call(et, Vt, et, tt)) === Dt || (tt.exports = Ot) : typeof qt !== dt && (qt.UAParser = me);
-      var de = typeof qt !== dt && (qt.jQuery || qt.Zepto);
-      if (de && !de.ua) {
-        var je = new me;
-        de.ua = je.getResult(), de.ua.get = function() {
-          return je.getUA()
-        }, de.ua.set = function(tt) {
-          je.setUA(tt);
-          var et = je.getResult();
-          for (var Vt in et) de.ua[Vt] = et[Vt]
+      ZE.VERSION = "1.0.41", ZE.BROWSER = yu([cu, Yu, Cu]), ZE.CPU = yu([hu]), ZE.DEVICE = yu([bu, Ou, Nu, Du, gu, eu, Mu, Gu, pu]), ZE.ENGINE = ZE.OS = yu([cu, Yu]), typeof Eu !== lu ? (uu.exports && (Eu = uu.exports = ZE), Eu.UAParser = ZE) : ju.amdO ? (su = function() {
+        return ZE
+      }.call(Eu, ju, Eu, uu)) === Zu || (uu.exports = su) : typeof Uu !== lu && (Uu.UAParser = ZE);
+      var XE = typeof Uu !== lu && (Uu.jQuery || Uu.Zepto);
+      if (XE && !XE.ua) {
+        var lE = new ZE;
+        XE.ua = lE.getResult(), XE.ua.get = function() {
+          return lE.getUA()
+        }, XE.ua.set = function(uu) {
+          lE.setUA(uu);
+          var Eu = lE.getResult();
+          for (var ju in Eu) XE.ua[ju] = Eu[ju]
         }
       }
     }("object" === typeof window ? window : this)
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

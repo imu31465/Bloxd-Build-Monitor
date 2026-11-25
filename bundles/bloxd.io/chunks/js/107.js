@@ -1,184 +1,184 @@
 export const id = 107;
 export const ids = [107];
 export const modules = {
-  5104: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => Qt,
-      i: () => Xt,
-      j: () => lt
+  5102: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => bu,
+      e: () => Cu,
+      h: () => cu
     });
-    Vt(5108);
-    var Ot = Vt(1286),
-      qt = Vt(1140),
-      Dt = Vt.n(qt),
-      mt = Vt(1464),
-      dt = (Vt(63), Vt(4475)),
-      jt = Vt(1152),
-      Ht = Vt(1188);
+    ju(5105);
+    var su = ju(1244),
+      Uu = ju(1105),
+      Zu = ju.n(Uu),
+      Xu = ju(1419),
+      lu = (ju(58), ju(4528)),
+      qu = ju(1116),
+      fu = ju(1154);
 
-    function Xt(tt) {
+    function Cu(uu) {
       let {
-        children: et,
-        label: Vt,
-        className: qt,
-        circleInfoText: dt,
-        disabled: Xt,
-        onLabelClick: Qt
-      } = tt;
+        children: Eu,
+        label: ju,
+        className: Uu,
+        circleInfoText: lu,
+        disabled: Cu,
+        onLabelClick: bu
+      } = uu;
       const {
-        t: lt
-      } = (0, Ot.H)(), Et = (0, Ht.jsxs)("div", {
-        className: Dt()("Label", {
-          ClickableLabel: void 0 !== Qt
+        t: cu
+      } = (0, su.A)(), Nu = (0, fu.jsxs)("div", {
+        className: Zu()("Label", {
+          ClickableLabel: void 0 !== bu
         }),
-        onClick: Qt,
-        children: [lt(Vt), dt && (0, Ht.jsx)(jt.b, {
+        onClick: bu,
+        children: [cu(ju), lu && (0, fu.jsx)(qu.e, {
           name: "circle-info"
         })]
       });
-      return (0, Ht.jsxs)("div", {
-        className: Dt()("LabeledInput", {
-          [qt]: qt,
-          DisabledLabelInput: Xt
+      return (0, fu.jsxs)("div", {
+        className: Zu()("LabeledInput", {
+          [Uu]: Uu,
+          DisabledLabelInput: Cu
         }),
-        children: [dt && (0, Ht.jsx)(mt.g, {
-          tooltipInner: (0, Ht.jsx)("div", {
+        children: [lu && (0, fu.jsx)(Xu.e, {
+          tooltipInner: (0, fu.jsx)("div", {
             className: "LabeledInputTooltip",
-            children: lt(dt)
+            children: cu(lu)
           }),
-          children: Et
-        }), !dt && Et, et]
+          children: Nu
+        }), !lu && Nu, Eu]
       })
     }
 
-    function Qt(tt) {
+    function bu(uu) {
       let {
-        checked: et,
-        setChecked: Vt
-      } = tt;
-      return (0, Ht.jsx)("div", {
+        checked: Eu,
+        setChecked: ju
+      } = uu;
+      return (0, fu.jsx)("div", {
         className: "OtherInput ClickableOtherInput",
         "data-pad-focusable": !0,
-        onClick: tt => {
-          Vt(!et)
+        onClick: uu => {
+          ju(!Eu)
         },
-        children: (0, Ht.jsx)(dt.b, {
-          checked: et,
-          onChange: tt => {
-            Vt(tt.target.checked)
+        children: (0, fu.jsx)(lu.d, {
+          checked: Eu,
+          onChange: uu => {
+            ju(uu.target.checked)
           },
           disabled: !1
         })
       })
     }
 
-    function lt(tt) {
+    function cu(uu) {
       let {
-        checked: et,
-        setChecked: Vt,
-        disabled: Ot
-      } = tt;
-      return (0, Ht.jsx)("div", {
-        className: Dt()("SwitchContainer", {
-          SwitchContainerDisabled: Ot
+        checked: Eu,
+        setChecked: ju,
+        disabled: su
+      } = uu;
+      return (0, fu.jsx)("div", {
+        className: Zu()("SwitchContainer", {
+          SwitchContainerDisabled: su
         }),
         onClick: () => {
-          Ot || Vt(!et)
+          su || ju(!Eu)
         },
-        children: (0, Ht.jsx)(dt.b, {
+        children: (0, fu.jsx)(lu.d, {
           className: "SwitchCheckbox",
-          checked: et,
-          onChange: tt => {
-            Vt(tt.target.checked)
+          checked: Eu,
+          onChange: uu => {
+            ju(uu.target.checked)
           },
-          disabled: !!Ot
+          disabled: !!su
         })
       })
     }
   },
-  5116: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => Ht
+  5110: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => fu
     });
-    var Ot = Vt(1140),
-      qt = Vt.n(Ot),
-      Dt = Vt(4771),
-      mt = Vt(1286),
-      dt = Vt(1188);
-    const jt = [...Dt.k, "tpRequests", "spawnProtection", "spawnReset", "smpMarketplace"];
+    var su = ju(1105),
+      Uu = ju.n(su),
+      Zu = ju(4809),
+      Xu = ju(1244),
+      lu = ju(1154);
+    const qu = [...Zu.l, "tpRequests", "spawnProtection", "spawnReset", "smpMarketplace"];
 
-    function Ht(tt) {
+    function fu(uu) {
       const {
-        disabled: et,
-        hideWrapper: Vt
-      } = tt, {
-        t: Ot
-      } = (0, mt.H)(), Ht = tt.advancedMode ? jt.map((et => [et, tt.callbacks[et]])) : Dt.k.map((et => [et, tt.callbacks[et]])), Qt = (0, dt.jsx)("div", {
-        className: qt()("PluginsGrid", {
-          SectionBody: !Vt
+        disabled: Eu,
+        hideWrapper: ju
+      } = uu, {
+        t: su
+      } = (0, Xu.A)(), fu = uu.advancedMode ? qu.map((Eu => [Eu, uu.callbacks[Eu]])) : Zu.l.map((Eu => [Eu, uu.callbacks[Eu]])), bu = (0, lu.jsx)("div", {
+        className: Uu()("PluginsGrid", {
+          SectionBody: !ju
         }),
-        children: Ht.map((tt => {
-          let [Vt, Ot] = tt;
-          return (0, dt.jsx)(Xt, {
-            plugin: Vt,
-            callbacks: Ot,
-            disabled: et
-          }, Vt)
+        children: fu.map((uu => {
+          let [ju, su] = uu;
+          return (0, lu.jsx)(Cu, {
+            plugin: ju,
+            callbacks: su,
+            disabled: Eu
+          }, ju)
         }))
       });
-      return Vt ? Qt : (0, dt.jsxs)("div", {
+      return ju ? bu : (0, lu.jsxs)("div", {
         className: "BloxdForm",
-        children: [(0, dt.jsx)("div", {
+        children: [(0, lu.jsx)("div", {
           className: "SectionTitle",
-          children: Ot("worldBuilder:pluginsSection")
-        }), Qt]
+          children: su("worldBuilder:pluginsSection")
+        }), bu]
       })
     }
 
-    function Xt(tt) {
+    function Cu(uu) {
       let {
-        plugin: et,
+        plugin: Eu,
         callbacks: {
-          isEnabled: Vt,
-          Av: Ot
+          isEnabled: ju,
+          Wk: su
         },
-        disabled: Dt
-      } = tt;
+        disabled: Zu
+      } = uu;
       const {
-        t: jt
-      } = (0, mt.H)(), Ht = Vt();
-      return (0, dt.jsxs)("div", {
-        className: qt()("PluginCard", {
-          PluginCardEnabled: Ht,
-          PluginCardDisabledForm: Dt
+        t: qu
+      } = (0, Xu.A)(), fu = ju();
+      return (0, lu.jsxs)("div", {
+        className: Uu()("PluginCard", {
+          PluginCardEnabled: fu,
+          PluginCardDisabledForm: Zu
         }),
         "data-pad-focusable": !0,
-        "aria-disabled": Dt || void 0,
+        "aria-disabled": Zu || void 0,
         onClick: () => {
-          Dt || Ot(!Ht)
+          Zu || su(!fu)
         },
-        children: [(0, dt.jsx)("div", {
+        children: [(0, lu.jsx)("div", {
           className: "PluginCardIcon",
-          children: (0, dt.jsx)("img", {
-            src: `/textures/games/classic/customGames/${et}.png`,
-            alt: et
+          children: (0, lu.jsx)("img", {
+            src: `/textures/games/classic/customGames/${Eu}.png`,
+            alt: Eu
           })
-        }), (0, dt.jsxs)("div", {
+        }), (0, lu.jsxs)("div", {
           className: "PluginCardBody",
-          children: [(0, dt.jsx)("div", {
+          children: [(0, lu.jsx)("div", {
             className: "PluginCardTitle",
-            children: jt(Qt[et])
-          }), (0, dt.jsx)("div", {
+            children: qu(bu[Eu])
+          }), (0, lu.jsx)("div", {
             className: "PluginCardDescription",
-            children: jt(lt[et])
+            children: qu(cu[Eu])
           })]
-        }), (0, dt.jsx)("span", {
+        }), (0, lu.jsx)("span", {
           className: "PluginCardToggleLabel",
-          children: jt(Ht ? "general:on" : "general:off")
+          children: qu(fu ? "general:on" : "general:off")
         })]
       })
     }
-    const Qt = {
+    const bu = {
         fallDamage: "classic:enableFallDamage",
         tpRequests: "classic:enableTpRequests",
         spawnProtection: "classic:enableSpawnProtection",
@@ -187,7 +187,7 @@ export const modules = {
         survivalGuns: "classic:enableSurvivalGuns",
         dayNight: "classic:enableDayNight"
       },
-      lt = {
+      cu = {
         fallDamage: "classic:enableFallDamageDescription",
         tpRequests: "classic:enableTpRequestsDescription",
         spawnProtection: "classic:enableSpawnProtectionDescription",
@@ -197,656 +197,656 @@ export const modules = {
         dayNight: "classic:enableDayNightDescription"
       }
   },
-  5101: (tt, et, Vt) => {
-    Vt.d(et, {
-      k: () => De,
-      d: () => qe,
-      g: () => Oe,
-      o: () => me
+  5099: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      h: () => UE,
+      c: () => sE,
+      f: () => jE,
+      i: () => ZE
     });
-    var Ot = Vt(63),
-      qt = Vt(1450),
-      Dt = Vt(1556),
-      mt = Vt(1770),
-      dt = Vt(1286),
-      jt = Vt(1436),
-      Ht = Vt(1464),
-      Xt = Vt(1152),
-      Qt = Vt(1308),
-      lt = Vt(1140),
-      Et = Vt.n(lt),
-      ft = Vt(377),
-      wt = Vt(4771),
-      yt = Vt(1325),
-      Nt = Vt(5104),
-      Mt = Vt(3192),
-      bt = Vt(5116),
-      Jt = Vt(1188);
+    var su = ju(58),
+      Uu = ju(1405),
+      Zu = ju(1506),
+      Xu = ju(1723),
+      lu = ju(1244),
+      qu = ju(1393),
+      fu = ju(1419),
+      Cu = ju(1116),
+      bu = ju(1278),
+      cu = ju(1105),
+      Nu = ju.n(cu),
+      Ou = ju(337),
+      Yu = ju(4809),
+      hu = ju(1298),
+      Du = ju(5102),
+      gu = ju(3309),
+      Mu = ju(5110),
+      eu = ju(1154);
 
-    function Ct(tt) {
+    function Gu(uu) {
       let {
-        icon: et,
-        title: Vt,
-        disabled: Ot,
-        children: qt
-      } = tt;
-      return (0, Jt.jsxs)("div", {
-        className: Et()("ManageCard", {
-          ManageCardDisabled: Ot
+        icon: Eu,
+        title: ju,
+        disabled: su,
+        children: Uu
+      } = uu;
+      return (0, eu.jsxs)("div", {
+        className: Nu()("ManageCard", {
+          ManageCardDisabled: su
         }),
-        children: [(0, Jt.jsxs)("div", {
+        children: [(0, eu.jsxs)("div", {
           className: "ManageCardHead",
-          children: [(0, Jt.jsx)("div", {
+          children: [(0, eu.jsx)("div", {
             className: "ManageCardIcon",
-            children: (0, Jt.jsx)(Xt.b, {
-              name: et
+            children: (0, eu.jsx)(Cu.e, {
+              name: Eu
             })
-          }), (0, Jt.jsx)("div", {
-            children: (0, Jt.jsx)("h2", {
+          }), (0, eu.jsx)("div", {
+            children: (0, eu.jsx)("h2", {
               className: "ManageCardTitle",
-              children: Vt
+              children: ju
             })
           })]
-        }), (0, Jt.jsxs)("div", {
+        }), (0, eu.jsxs)("div", {
           className: "ManageCardBody",
-          children: [qt, Ot && (0, Jt.jsx)("div", {
+          children: [Uu, su && (0, eu.jsx)("div", {
             className: "ManageCardDisabledOverlay"
           })]
         })]
       })
     }
 
-    function ut(tt) {
+    function pu(uu) {
       let {
-        label: et,
-        caption: Vt,
-        children: Ot
-      } = tt;
-      return (0, Jt.jsxs)("div", {
+        label: Eu,
+        caption: ju,
+        children: su
+      } = uu;
+      return (0, eu.jsxs)("div", {
         className: "ManageStackedField",
-        children: [(0, Jt.jsx)("div", {
+        children: [(0, eu.jsx)("div", {
           className: "ManageStackedFieldLabel",
-          children: et
-        }), Ot, Vt && (0, Jt.jsx)("div", {
+          children: Eu
+        }), su, ju && (0, eu.jsx)("div", {
           className: "ManageStackedFieldCaption",
-          children: Vt
+          children: ju
         })]
       })
     }
 
-    function Kt(tt) {
+    function wu(uu) {
       let {
-        label: et,
-        caption: Vt,
-        disabled: Ot,
-        children: qt
-      } = tt;
-      return (0, Jt.jsxs)("div", {
-        className: Et()("ManageField", {
-          ManageFieldDisabled: Ot
+        label: Eu,
+        caption: ju,
+        disabled: su,
+        children: Uu
+      } = uu;
+      return (0, eu.jsxs)("div", {
+        className: Nu()("ManageField", {
+          ManageFieldDisabled: su
         }),
-        children: [(0, Jt.jsxs)("div", {
+        children: [(0, eu.jsxs)("div", {
           className: "ManageFieldText",
-          children: [(0, Jt.jsx)("div", {
+          children: [(0, eu.jsx)("div", {
             className: "ManageFieldLabel",
-            children: et
-          }), (0, Jt.jsx)("div", {
+            children: Eu
+          }), (0, eu.jsx)("div", {
             className: "ManageFieldCaption",
-            children: Vt
+            children: ju
           })]
-        }), (0, Jt.jsx)("div", {
+        }), (0, eu.jsx)("div", {
           className: "ManageFieldControl",
-          children: qt
+          children: Uu
         })]
       })
     }
 
-    function ht(tt) {
-      var et, Vt;
+    function Ju(uu) {
+      var Eu, ju;
       let {
-        schematicData: Ot,
-        updateSchematicData: qt,
-        publishFormEnabled: Dt,
-        formEnabled: mt
-      } = tt;
+        schematicData: su,
+        updateSchematicData: Uu,
+        publishFormEnabled: Zu,
+        formEnabled: Xu
+      } = uu;
       const {
-        t: jt
-      } = (0, dt.H)(), Ht = !Dt, Xt = {
+        t: qu
+      } = (0, lu.A)(), fu = !Zu, Cu = {
         tpRequests: {
-          isEnabled: () => !Ot.disableTpRequests,
-          Av: tt => qt("disableTpRequests", !tt)
+          isEnabled: () => !su.disableTpRequests,
+          Wk: uu => Uu("disableTpRequests", !uu)
         },
         spawnProtection: {
-          isEnabled: () => !Ot.disableSpawnProtection,
-          Av: tt => qt("disableSpawnProtection", !tt)
+          isEnabled: () => !su.disableSpawnProtection,
+          Wk: uu => Uu("disableSpawnProtection", !uu)
         },
         spawnReset: {
-          isEnabled: () => !!Ot.enableSpawnReset,
-          Av: tt => qt("enableSpawnReset", tt)
+          isEnabled: () => !!su.enableSpawnReset,
+          Wk: uu => Uu("enableSpawnReset", uu)
         },
         smpMarketplace: {
-          isEnabled: () => !!Ot.enableSmpMarketplace,
-          Av: tt => qt("enableSmpMarketplace", tt)
+          isEnabled: () => !!su.enableSmpMarketplace,
+          Wk: uu => Uu("enableSmpMarketplace", uu)
         },
         survivalGuns: {
-          isEnabled: () => !!Ot.enableSurvivalGuns,
-          Av: tt => qt("enableSurvivalGuns", tt)
+          isEnabled: () => !!su.enableSurvivalGuns,
+          Wk: uu => Uu("enableSurvivalGuns", uu)
         },
         fallDamage: {
-          isEnabled: () => !Ot.disableFallDamage,
-          Av: tt => qt("disableFallDamage", !tt)
+          isEnabled: () => !su.disableFallDamage,
+          Wk: uu => Uu("disableFallDamage", !uu)
         },
         dayNight: {
-          isEnabled: () => !!Ot.enableDayNight,
-          Av: tt => qt("enableDayNight", tt)
+          isEnabled: () => !!su.enableDayNight,
+          Wk: uu => Uu("enableDayNight", uu)
         }
       };
-      return (0, Jt.jsxs)(Jt.Fragment, {
-        children: [!1 === Ot.schematicContainsSpawnBlock && (0, Jt.jsx)("div", {
+      return (0, eu.jsxs)(eu.Fragment, {
+        children: [!1 === su.schematicContainsSpawnBlock && (0, eu.jsx)("div", {
           className: "ManageWarningBanner",
-          children: jt("worldBuilder:mustContainSpawnBlock")
-        }), (0, Jt.jsxs)("div", {
+          children: qu("worldBuilder:mustContainSpawnBlock")
+        }), (0, eu.jsxs)("div", {
           className: "ManageSettingsGrid",
-          children: [(0, Jt.jsxs)(Ct, {
+          children: [(0, eu.jsxs)(Gu, {
             icon: "globe",
-            title: jt("worldBuilder:worldRulesSection"),
-            disabled: !mt,
-            children: [(0, Jt.jsx)(Kt, {
-              label: jt("classic:defaultGamemode"),
-              caption: jt("classic:defaultGamemodeDescription"),
-              disabled: Ht,
-              children: (0, Jt.jsx)(Mt.e, {
+            title: qu("worldBuilder:worldRulesSection"),
+            disabled: !Xu,
+            children: [(0, eu.jsx)(wu, {
+              label: qu("classic:defaultGamemode"),
+              caption: qu("classic:defaultGamemodeDescription"),
+              disabled: fu,
+              children: (0, eu.jsx)(gu.c, {
                 controlClassName: "ManageDropdown",
-                options: wt.I.map((tt => ({
-                  value: tt,
-                  label: ft.p[tt]
+                options: Yu.G.map((uu => ({
+                  value: uu,
+                  label: Ou.r[uu]
                 }))),
-                value: Ot.defaultGamemode,
-                onChange: tt => qt("defaultGamemode", tt.value)
+                value: su.defaultGamemode,
+                onChange: uu => Uu("defaultGamemode", uu.value)
               })
-            }), (0, Jt.jsx)(Kt, {
-              label: jt("classic:voidDeathHeight"),
-              caption: jt("classic:voidDeathHeightDescription"),
-              disabled: Ht,
-              children: (0, Jt.jsxs)("div", {
+            }), (0, eu.jsx)(wu, {
+              label: qu("classic:voidDeathHeight"),
+              caption: qu("classic:voidDeathHeightDescription"),
+              disabled: fu,
+              children: (0, eu.jsxs)("div", {
                 className: "ManageNumberField",
-                children: [(0, Jt.jsx)("input", {
+                children: [(0, eu.jsx)("input", {
                   type: "number",
-                  max: yt.H,
-                  value: null !== (et = Ot.voidDeathHeight) && void 0 !== et ? et : "",
-                  onChange: tt => {
-                    const et = parseInt(tt.target.value);
-                    qt("voidDeathHeight", et)
+                  max: hu.D,
+                  value: null !== (Eu = su.voidDeathHeight) && void 0 !== Eu ? Eu : "",
+                  onChange: uu => {
+                    const Eu = parseInt(uu.target.value);
+                    Uu("voidDeathHeight", Eu)
                   }
-                }), (0, Jt.jsx)("span", {
+                }), (0, eu.jsx)("span", {
                   className: "ManageFieldUnit",
-                  children: jt("worldBuilder:blocksUnit")
+                  children: qu("worldBuilder:blocksUnit")
                 })]
               })
-            }), (0, Jt.jsx)(Kt, {
-              label: jt("classic:worldBorder"),
-              caption: jt("classic:worldBorderDescription"),
-              disabled: Ht,
-              children: (0, Jt.jsxs)("div", {
+            }), (0, eu.jsx)(wu, {
+              label: qu("classic:worldBorder"),
+              caption: qu("classic:worldBorderDescription"),
+              disabled: fu,
+              children: (0, eu.jsxs)("div", {
                 className: "ManageNumberField",
-                children: [(0, Jt.jsx)("input", {
+                children: [(0, eu.jsx)("input", {
                   type: "number",
-                  min: yt.M,
-                  max: yt.J,
-                  placeholder: jt("worldBuilder:noWorldBorderLimit"),
-                  value: null !== (Vt = Ot.worldBorder) && void 0 !== Vt ? Vt : "",
-                  onChange: tt => {
-                    const et = parseInt(tt.target.value);
-                    qt("worldBorder", isNaN(et) ? null : et)
+                  min: hu.I,
+                  max: hu.E,
+                  placeholder: qu("worldBuilder:noWorldBorderLimit"),
+                  value: null !== (ju = su.worldBorder) && void 0 !== ju ? ju : "",
+                  onChange: uu => {
+                    const Eu = parseInt(uu.target.value);
+                    Uu("worldBorder", isNaN(Eu) ? null : Eu)
                   }
-                }), (0, Jt.jsx)("span", {
+                }), (0, eu.jsx)("span", {
                   className: "ManageFieldUnit",
-                  children: jt("worldBuilder:blocksUnit")
+                  children: qu("worldBuilder:blocksUnit")
                 })]
               })
-            }), (0, Jt.jsx)(Kt, {
-              label: jt("classic:disableMobs"),
-              caption: jt("classic:disableMobsDescription"),
-              disabled: Ht,
-              children: (0, Jt.jsx)(Nt.j, {
-                checked: Ot.disableMobs,
-                setChecked: tt => qt("disableMobs", tt),
-                disabled: Ht
+            }), (0, eu.jsx)(wu, {
+              label: qu("classic:disableMobs"),
+              caption: qu("classic:disableMobsDescription"),
+              disabled: fu,
+              children: (0, eu.jsx)(Du.h, {
+                checked: su.disableMobs,
+                setChecked: uu => Uu("disableMobs", uu),
+                disabled: fu
               })
             })]
-          }), (0, Jt.jsxs)(Ct, {
+          }), (0, eu.jsxs)(Gu, {
             icon: "user-group",
-            title: jt("worldBuilder:playerAndLobbySection"),
-            disabled: !mt,
-            children: [(0, Jt.jsx)(Kt, {
-              label: jt("classic:disableKeepInventory"),
-              caption: jt("classic:disableKeepInventoryDescription"),
-              disabled: Ht,
-              children: (0, Jt.jsx)(Nt.j, {
-                checked: Ot.disableKeepInventory,
-                setChecked: tt => qt("disableKeepInventory", tt),
-                disabled: Ht
+            title: qu("worldBuilder:playerAndLobbySection"),
+            disabled: !Xu,
+            children: [(0, eu.jsx)(wu, {
+              label: qu("classic:disableKeepInventory"),
+              caption: qu("classic:disableKeepInventoryDescription"),
+              disabled: fu,
+              children: (0, eu.jsx)(Du.h, {
+                checked: su.disableKeepInventory,
+                setChecked: uu => Uu("disableKeepInventory", uu),
+                disabled: fu
               })
-            }), (0, Jt.jsx)(Kt, {
-              label: jt("classic:persistInventory"),
-              caption: jt("classic:persistInventoryDescription"),
-              disabled: Ht,
-              children: (0, Jt.jsx)(Mt.e, {
+            }), (0, eu.jsx)(wu, {
+              label: qu("classic:persistInventory"),
+              caption: qu("classic:persistInventoryDescription"),
+              disabled: fu,
+              children: (0, eu.jsx)(gu.c, {
                 controlClassName: "ManageDropdown",
-                options: wt.l.map((tt => ({
-                  value: tt,
-                  label: ft.f[tt]
+                options: Yu.n.map((uu => ({
+                  value: uu,
+                  label: Ou.h[uu]
                 }))),
-                value: Ot.persistInventory,
-                onChange: tt => qt("persistInventory", tt.value)
+                value: su.persistInventory,
+                onChange: uu => Uu("persistInventory", uu.value)
               })
-            }), (0, Jt.jsx)(Kt, {
-              label: jt("classic:persistWorld"),
-              caption: jt("classic:persistWorldDescription"),
-              disabled: Ht,
-              children: (0, Jt.jsx)(Nt.j, {
-                checked: Ot.persistWorld,
-                setChecked: tt => qt("persistWorld", tt),
-                disabled: Ht
+            }), (0, eu.jsx)(wu, {
+              label: qu("classic:persistWorld"),
+              caption: qu("classic:persistWorldDescription"),
+              disabled: fu,
+              children: (0, eu.jsx)(Du.h, {
+                checked: su.persistWorld,
+                setChecked: uu => Uu("persistWorld", uu),
+                disabled: fu
               })
-            }), (0, Jt.jsx)(Kt, {
-              label: jt("classic:disableLobbySpawn"),
-              caption: jt("classic:disableLobbySpawnDescription"),
-              disabled: Ht,
-              children: (0, Jt.jsx)(Nt.j, {
-                checked: Ot.disableLobbySpawn,
-                setChecked: tt => qt("disableLobbySpawn", tt),
-                disabled: Ht
+            }), (0, eu.jsx)(wu, {
+              label: qu("classic:disableLobbySpawn"),
+              caption: qu("classic:disableLobbySpawnDescription"),
+              disabled: fu,
+              children: (0, eu.jsx)(Du.h, {
+                checked: su.disableLobbySpawn,
+                setChecked: uu => Uu("disableLobbySpawn", uu),
+                disabled: fu
               })
-            }), (0, Jt.jsx)(Kt, {
-              label: jt("classic:hideLobbyCode"),
-              caption: jt("classic:hideLobbyCodeDescription"),
-              disabled: Ht,
-              children: (0, Jt.jsx)(Nt.j, {
-                checked: Ot.hideLobbyCode,
-                setChecked: tt => qt("hideLobbyCode", tt),
-                disabled: Ht
+            }), (0, eu.jsx)(wu, {
+              label: qu("classic:hideLobbyCode"),
+              caption: qu("classic:hideLobbyCodeDescription"),
+              disabled: fu,
+              children: (0, eu.jsx)(Du.h, {
+                checked: su.hideLobbyCode,
+                setChecked: uu => Uu("hideLobbyCode", uu),
+                disabled: fu
               })
             })]
           })]
-        }), (0, Jt.jsx)(Ct, {
+        }), (0, eu.jsx)(Gu, {
           icon: "layer-group",
-          title: jt("worldBuilder:pluginsSection"),
-          disabled: !mt,
-          children: (0, Jt.jsx)(bt.c, {
-            callbacks: Xt,
-            disabled: Ht,
+          title: qu("worldBuilder:pluginsSection"),
+          disabled: !Xu,
+          children: (0, eu.jsx)(Mu.d, {
+            callbacks: Cu,
+            disabled: fu,
             advancedMode: !0,
             hideWrapper: !0
           })
         })]
       })
     }
-    var vt = Vt(5118),
-      Wt = Vt(4475),
-      St = Vt(1600),
-      ct = Vt(3555),
-      Rt = Vt(1218),
-      It = Vt(5081),
-      Pt = Vt(5124),
-      Zt = Vt(1564);
-    const Lt = 50,
-      Ft = .3;
-    async function kt(tt) {
-      const et = await
-      function(tt) {
-        return new Promise(((et, Vt) => {
-          const Ot = new FileReader;
-          Ot.onload = () => et(Ot.result), Ot.onerror = Vt, Ot.readAsDataURL(tt)
+    var du = ju(5115),
+      au = ju(4528),
+      Pu = ju(1559),
+      ou = ju(3678),
+      ku = ju(1178),
+      mu = ju(5077),
+      vu = ju(5120),
+      Ku = ju(1510);
+    const Vu = 50,
+      ru = .3;
+    async function Qu(uu) {
+      const Eu = await
+      function(uu) {
+        return new Promise(((Eu, ju) => {
+          const su = new FileReader;
+          su.onload = () => Eu(su.result), su.onerror = ju, su.readAsDataURL(uu)
         }))
-      }(tt), Vt = await
-      function(tt) {
-        return new Promise(((et, Vt) => {
-          const Ot = new Image;
-          Ot.onload = () => et(Ot), Ot.onerror = () => Vt(new Error("Failed to load image")), Ot.src = tt
+      }(uu), ju = await
+      function(uu) {
+        return new Promise(((Eu, ju) => {
+          const su = new Image;
+          su.onload = () => Eu(su), su.onerror = () => ju(new Error("Failed to load image")), su.src = uu
         }))
-      }(et);
-      if (Vt.naturalHeight > Vt.naturalWidth) throw new Gt;
-      const Ot = 1024 * Lt,
+      }(Eu);
+      if (ju.naturalHeight > ju.naturalWidth) throw new iu;
+      const su = 1024 * Vu,
         {
-          dataUrl: qt,
-          finalQuality: Dt
-        } = function(tt, et) {
-          const Vt = document.createElement("canvas");
-          Vt.width = tt.naturalWidth, Vt.height = tt.naturalHeight, Vt.getContext("2d").drawImage(tt, 0, 0);
-          let Ot = .92,
-            qt = Vt.toDataURL("image/jpeg", Ot);
-          for (; .75 * qt.length > et && Ot > .05;) Ot -= .05, qt = Vt.toDataURL("image/jpeg", Ot);
+          dataUrl: Uu,
+          finalQuality: Zu
+        } = function(uu, Eu) {
+          const ju = document.createElement("canvas");
+          ju.width = uu.naturalWidth, ju.height = uu.naturalHeight, ju.getContext("2d").drawImage(uu, 0, 0);
+          let su = .92,
+            Uu = ju.toDataURL("image/jpeg", su);
+          for (; .75 * Uu.length > Eu && su > .05;) su -= .05, Uu = ju.toDataURL("image/jpeg", su);
           return {
-            dataUrl: qt,
-            finalQuality: Ot
+            dataUrl: Uu,
+            finalQuality: su
           }
-        }(Vt, Ot);
-      if (Math.ceil(.75 * qt.length) > Ot) throw new zt;
+        }(ju, su);
+      if (Math.ceil(.75 * Uu.length) > su) throw new Wu;
       return {
-        base64Jpg: qt,
-        heavilyCompressed: Dt < Ft
+        base64Jpg: Uu,
+        heavilyCompressed: Zu < ru
       }
     }
-    class Gt extends Error {}
-    class zt extends Error {}
-    var ot = function(tt) {
-      return tt[tt.NOT_LOGGED_IN = 0] = "NOT_LOGGED_IN", tt[tt.THUMBNAIL_LIMIT_REACHED = 1] = "THUMBNAIL_LIMIT_REACHED", tt
-    }(ot || {});
+    class iu extends Error {}
+    class Wu extends Error {}
+    var Su = function(uu) {
+      return uu[uu.NOT_LOGGED_IN = 0] = "NOT_LOGGED_IN", uu[uu.THUMBNAIL_LIMIT_REACHED = 1] = "THUMBNAIL_LIMIT_REACHED", uu
+    }(Su || {});
 
-    function rt(tt) {
-      var et;
+    function Iu(uu) {
+      var Eu;
       let {
-        schematicId: Vt,
-        hasReadUploadPolicy: qt,
-        onPolicyValidationError: jt,
-        onThumbnailReady: Ht
-      } = tt;
+        schematicId: ju,
+        hasReadUploadPolicy: Uu,
+        onPolicyValidationError: qu,
+        onThumbnailReady: fu
+      } = uu;
       const {
-        t: lt
-      } = (0, dt.H)(), [ft, wt] = (0, Ot.useState)(null), [yt, Nt] = (0, Ot.useState)(""), [Mt, bt] = (0, Ot.useState)(""), [Ct, ut] = (0, Ot.useState)(!0), [Kt, ht] = (0, Ot.useState)(!1), vt = (0, Ot.useRef)(!1), [Wt, St] = (0, Ot.useState)(null), [ct, Rt] = (0, Ot.useState)(!1), [It, Zt] = (0, Ot.useState)(!1), Lt = (0, Ot.useRef)(0), {
-        getRootProps: Ft,
-        getInputProps: ot,
-        isDragActive: rt
-      } = (0, Pt.e)({
+        t: cu
+      } = (0, lu.A)(), [Ou, Yu] = (0, su.useState)(null), [hu, Du] = (0, su.useState)(""), [gu, Mu] = (0, su.useState)(""), [Gu, pu] = (0, su.useState)(!0), [wu, Ju] = (0, su.useState)(!1), du = (0, su.useRef)(!1), [au, Pu] = (0, su.useState)(null), [ou, ku] = (0, su.useState)(!1), [mu, Ku] = (0, su.useState)(!1), Vu = (0, su.useRef)(0), {
+        getRootProps: ru,
+        getInputProps: Su,
+        isDragActive: Iu
+      } = (0, vu.c)({
         accept: {
           "image/*": [".png", ".jpg", ".jpeg", ".webp", ".gif", ".bmp"]
         },
         multiple: !1,
-        onDrop: async tt => {
-          if (0 === tt.length) return;
-          const et = tt[0],
-            Vt = ++Lt.current;
-          St(null), Rt(!1), wt(null), Nt(et.name);
+        onDrop: async uu => {
+          if (0 === uu.length) return;
+          const Eu = uu[0],
+            ju = ++Vu.current;
+          Pu(null), ku(!1), Yu(null), Du(Eu.name);
           try {
-            const tt = await kt(et);
-            if (Vt !== Lt.current) return;
-            wt(tt), Rt(tt.heavilyCompressed)
-          } catch (Ot) {
-            if (Vt !== Lt.current) return;
-            St(lt(Ot instanceof Gt ? "thumbnail:portraitImagesNotAllowed" : Ot instanceof zt ? "thumbnail:couldNotCompressImage" : "thumbnail:failedToUploadImage"))
+            const uu = await Qu(Eu);
+            if (ju !== Vu.current) return;
+            Yu(uu), ku(uu.heavilyCompressed)
+          } catch (su) {
+            if (ju !== Vu.current) return;
+            Pu(cu(su instanceof iu ? "thumbnail:portraitImagesNotAllowed" : su instanceof Wu ? "thumbnail:couldNotCompressImage" : "thumbnail:failedToUploadImage"))
           }
         },
         useFsAccessApi: !1
-      }), Ut = yt.length <= 30 ? yt : `${yt.slice(0,27)}...`, At = null !== (et = null === ft || void 0 === ft ? void 0 : ft.base64Jpg) && void 0 !== et ? et : null, it = Mt.trim(), Yt = it.length >= Qt.k && it.length <= Qt.i, Bt = It && !ft && !Wt, pt = It && !Yt;
-      return (0, Jt.jsxs)("div", {
+      }), Fu = hu.length <= 30 ? hu : `${hu.slice(0,27)}...`, Bu = null !== (Eu = null === Ou || void 0 === Ou ? void 0 : Ou.base64Jpg) && void 0 !== Eu ? Eu : null, Lu = gu.trim(), tu = Lu.length >= bu.l && Lu.length <= bu.j, xu = mu && !Ou && !au, Tu = mu && !tu;
+      return (0, eu.jsxs)("div", {
         className: "ThumbnailUploadContainer",
-        children: [(0, Jt.jsxs)("div", {
-          ...Ft({
-            className: Et()("ThumbnailUploadDropzone", {
-              ActiveDrag: rt,
-              ValidationError: Bt
+        children: [(0, eu.jsxs)("div", {
+          ...ru({
+            className: Nu()("ThumbnailUploadDropzone", {
+              ActiveDrag: Iu,
+              ValidationError: xu
             })
           }),
-          children: [(0, Jt.jsx)("input", {
-            ...ot()
-          }), !rt && At ? (0, Jt.jsxs)(Jt.Fragment, {
-            children: [(0, Jt.jsxs)("div", {
+          children: [(0, eu.jsx)("input", {
+            ...Su()
+          }), !Iu && Bu ? (0, eu.jsxs)(eu.Fragment, {
+            children: [(0, eu.jsxs)("div", {
               className: "ThumbnailAspectPreviews",
-              children: [(0, Jt.jsxs)("div", {
+              children: [(0, eu.jsxs)("div", {
                 className: "ThumbnailAspectPreview",
-                children: [(0, Jt.jsx)("div", {
+                children: [(0, eu.jsx)("div", {
                   className: "ThumbnailAspectLabel",
                   children: "1:1"
-                }), (0, Jt.jsx)("div", {
+                }), (0, eu.jsx)("div", {
                   className: "ThumbnailAspectFrame Square",
-                  children: (0, Jt.jsx)("img", {
-                    src: At,
+                  children: (0, eu.jsx)("img", {
+                    src: Bu,
                     alt: "1:1 preview"
                   })
                 })]
-              }), (0, Jt.jsxs)("div", {
+              }), (0, eu.jsxs)("div", {
                 className: "ThumbnailAspectPreview",
-                children: [(0, Jt.jsx)("div", {
+                children: [(0, eu.jsx)("div", {
                   className: "ThumbnailAspectLabel",
                   children: "16:9"
-                }), (0, Jt.jsx)("div", {
+                }), (0, eu.jsx)("div", {
                   className: "ThumbnailAspectFrame Wide",
-                  children: (0, Jt.jsx)("img", {
-                    src: At,
+                  children: (0, eu.jsx)("img", {
+                    src: Bu,
                     alt: "16:9 preview"
                   })
                 })]
               })]
-            }), (0, Jt.jsxs)("div", {
-              children: [(0, Jt.jsx)("div", {
+            }), (0, eu.jsxs)("div", {
+              children: [(0, eu.jsx)("div", {
                 className: "ThumbnailUploadInstructions Active",
-                children: Ut
-              }), (0, Jt.jsx)("div", {
+                children: Fu
+              }), (0, eu.jsx)("div", {
                 className: "ThumbnailUploadInstructions Preview",
-                children: lt("thumbnail:preview")
+                children: cu("thumbnail:preview")
               })]
             })]
-          }) : (0, Jt.jsxs)(Jt.Fragment, {
-            children: [(0, Jt.jsx)("div", {
+          }) : (0, eu.jsxs)(eu.Fragment, {
+            children: [(0, eu.jsx)("div", {
               className: "ThumbnailUploadIcon",
-              children: (0, Jt.jsx)(Xt.b, {
+              children: (0, eu.jsx)(Cu.e, {
                 name: "image"
               })
-            }), (0, Jt.jsx)("div", {
+            }), (0, eu.jsx)("div", {
               className: "ThumbnailUploadInstructions",
-              children: lt("thumbnail:dragImageHere")
+              children: cu("thumbnail:dragImageHere")
             })]
           })]
-        }), Bt && (0, Jt.jsx)("div", {
+        }), xu && (0, eu.jsx)("div", {
           className: "ThumbnailUploadError",
-          children: lt("thumbnail:imageRequired")
-        }), (0, Jt.jsx)(mt.d, {
-          className: Et()("ThumbnailUploadNameInput", {
-            ValidationError: pt
+          children: cu("thumbnail:imageRequired")
+        }), (0, eu.jsx)(Xu.d, {
+          className: Nu()("ThumbnailUploadNameInput", {
+            ValidationError: Tu
           }),
-          placeholderText: lt("thumbnail:thumbnailName"),
-          defaultValue: Mt,
-          onValueChange: tt => {
-            bt(tt)
+          placeholderText: cu("thumbnail:thumbnailName"),
+          defaultValue: gu,
+          onValueChange: uu => {
+            Mu(uu)
           },
-          maxLength: Qt.i
-        }), pt && (0, Jt.jsx)("div", {
+          maxLength: bu.j
+        }), Tu && (0, eu.jsx)("div", {
           className: "ThumbnailUploadError",
-          children: lt("thumbnail:nameRequired", {
-            min: Qt.k,
-            max: Qt.i
+          children: cu("thumbnail:nameRequired", {
+            min: bu.l,
+            max: bu.j
           })
-        }), (0, Jt.jsxs)("label", {
+        }), (0, eu.jsxs)("label", {
           className: "ThumbnailUploadCheckbox",
-          children: [(0, Jt.jsx)("input", {
+          children: [(0, eu.jsx)("input", {
             type: "checkbox",
-            checked: Ct,
-            onChange: tt => {
-              ut(tt.target.checked)
+            checked: Gu,
+            onChange: uu => {
+              pu(uu.target.checked)
             }
-          }), lt("thumbnail:setAsThumbnailOnceApproved")]
-        }), ct && (0, Jt.jsx)("div", {
+          }), cu("thumbnail:setAsThumbnailOnceApproved")]
+        }), ou && (0, eu.jsx)("div", {
           className: "ThumbnailUploadWarning",
-          children: lt("thumbnail:heavyCompressionWarning")
-        }), Wt && (0, Jt.jsx)("div", {
+          children: cu("thumbnail:heavyCompressionWarning")
+        }), au && (0, eu.jsx)("div", {
           className: "ThumbnailUploadError",
-          children: Wt
-        }), (0, Jt.jsx)(Dt.m, {
-          disabled: Kt,
+          children: au
+        }), (0, eu.jsx)(Zu.p, {
+          disabled: wu,
           className: "ThumbnailUploadButton",
           onClick: async () => {
-            if (Zt(!0), !vt.current && ft && Yt && qt) {
-              vt.current = !0, ht(!0), St(null);
+            if (Ku(!0), !du.current && Ou && tu && Uu) {
+              du.current = !0, Ju(!0), Pu(null);
               try {
-                await Ht(ft.base64Jpg, it, Ct ? Vt : null)
-              } catch (tt) {
-                St(tt.errorMessageForUser ? lt(tt.errorMessageForUser, tt.errorMessageTranslationParams) : lt("thumbnail:failedToUploadImage"))
+                await fu(Ou.base64Jpg, Lu, Gu ? ju : null)
+              } catch (uu) {
+                Pu(uu.errorMessageForUser ? cu(uu.errorMessageForUser, uu.errorMessageTranslationParams) : cu("thumbnail:failedToUploadImage"))
               } finally {
-                vt.current = !1, ht(!1)
+                du.current = !1, Ju(!1)
               }
-            } else qt || jt()
+            } else Uu || qu()
           },
-          children: lt(Kt ? "thumbnail:processing" : "thumbnail:uploadThumbnail")
+          children: cu(wu ? "thumbnail:processing" : "thumbnail:uploadThumbnail")
         })]
       })
     }
-    const Ut = 2e3;
+    const Fu = 2e3;
 
-    function At(tt) {
+    function Bu(uu) {
       let {
-        schematicId: et,
-        ownedThumbnailCount: Vt,
-        onClose: qt,
-        onThumbnailReady: Dt
-      } = tt;
+        schematicId: Eu,
+        ownedThumbnailCount: ju,
+        onClose: Uu,
+        onThumbnailReady: Zu
+      } = uu;
       const {
-        t: mt
-      } = (0, dt.H)(), {
-        userContext: jt
-      } = (0, Rt.d)(), [Ht, lt] = (0, Ot.useState)(!1), [ft, wt] = (0, Ot.useState)(!1), [yt, Nt] = (0, Ot.useState)(!1), Mt = (0, Ot.useRef)();
-      (0, Ot.useEffect)((() => () => {
-        clearTimeout(Mt.current)
+        t: Xu
+      } = (0, lu.A)(), {
+        userContext: qu
+      } = (0, ku.c)(), [fu, cu] = (0, su.useState)(!1), [Ou, Yu] = (0, su.useState)(!1), [hu, Du] = (0, su.useState)(!1), gu = (0, su.useRef)();
+      (0, su.useEffect)((() => () => {
+        clearTimeout(gu.current)
       }), []);
-      const bt = function(tt, et) {
-        const Vt = [];
-        return tt.isLoggedIn() || Vt.push(ot.NOT_LOGGED_IN), et >= Qt.Y && Vt.push(ot.THUMBNAIL_LIMIT_REACHED), Vt
-      }(jt, Vt);
-      if (bt.length > 0) {
-        const tt = {
-          [ot.NOT_LOGGED_IN]: {
+      const Mu = function(uu, Eu) {
+        const ju = [];
+        return uu.isLoggedIn() || ju.push(Su.NOT_LOGGED_IN), Eu >= bu.V && ju.push(Su.THUMBNAIL_LIMIT_REACHED), ju
+      }(qu, ju);
+      if (Mu.length > 0) {
+        const uu = {
+          [Su.NOT_LOGGED_IN]: {
             key: "thumbnail:mustBeLoggedInToUpload"
           },
-          [ot.THUMBNAIL_LIMIT_REACHED]: {
+          [Su.THUMBNAIL_LIMIT_REACHED]: {
             key: "thumbnail:thumbnailLimitReachedPleaseDelete",
             params: {
-              max: Qt.Y
+              max: bu.V
             }
           }
         };
-        return (0, Jt.jsxs)("div", {
+        return (0, eu.jsxs)("div", {
           className: "ThumbnailUploaderInner",
-          children: [(0, Jt.jsx)("h1", {
+          children: [(0, eu.jsx)("h1", {
             className: "SchematicPopupTitle",
-            children: mt("thumbnail:cannotUploadThumbnail")
-          }), bt.map(((et, Vt) => {
-            const Ot = tt[et];
-            return (0, Jt.jsxs)("div", {
+            children: Xu("thumbnail:cannotUploadThumbnail")
+          }), Mu.map(((Eu, ju) => {
+            const su = uu[Eu];
+            return (0, eu.jsxs)("div", {
               className: "CannotUploadThumbnailItem",
-              children: [(0, Jt.jsx)(Xt.b, {
+              children: [(0, eu.jsx)(Cu.e, {
                 name: "triangle-exclamation"
-              }), (0, Jt.jsx)("span", {
-                children: mt(Ot.key, Ot.params)
+              }), (0, eu.jsx)("span", {
+                children: Xu(su.key, su.params)
               })]
-            }, Vt)
+            }, ju)
           }))]
         })
       }
-      return (0, Jt.jsxs)("div", {
-        className: Et()("ThumbnailUploaderInner", {
-          ThumbnailUploaderSuccess: Ht
+      return (0, eu.jsxs)("div", {
+        className: Nu()("ThumbnailUploaderInner", {
+          ThumbnailUploaderSuccess: fu
         }),
-        children: [Ht && (0, Jt.jsxs)("div", {
+        children: [fu && (0, eu.jsxs)("div", {
           className: "ThumbnailUploadSuccessOverlay",
-          children: [(0, Jt.jsxs)("div", {
+          children: [(0, eu.jsxs)("div", {
             className: "ThumbnailUploadSuccessIcon FullyFancyText AnimFadeInScaleUp",
-            children: [(0, Jt.jsx)(Xt.b, {
+            children: [(0, eu.jsx)(Cu.e, {
               name: "check"
-            }), (0, Jt.jsx)(Zt.e, {})]
-          }), (0, Jt.jsx)("div", {
+            }), (0, eu.jsx)(Ku.c, {})]
+          }), (0, eu.jsx)("div", {
             className: "ThumbnailUploadSuccessText AnimFadeInScaleUp",
-            children: mt("thumbnail:thumbnailUploaded")
+            children: Xu("thumbnail:thumbnailUploaded")
           })]
-        }), (0, Jt.jsx)("h1", {
+        }), (0, eu.jsx)("h1", {
           className: "SchematicPopupTitle",
-          children: mt("thumbnail:uploadThumbnail")
-        }), (0, Jt.jsxs)("div", {
+          children: Xu("thumbnail:uploadThumbnail")
+        }), (0, eu.jsxs)("div", {
           className: "ThumbnailUploaderBody",
-          children: [(0, Jt.jsxs)("div", {
+          children: [(0, eu.jsxs)("div", {
             className: "ThumbnailUploaderLeft",
-            children: [(0, Jt.jsx)("h3", {
+            children: [(0, eu.jsx)("h3", {
               className: "SchematicPopupSubtitle",
-              children: mt("thumbnail:chooseImage", {
-                maxSizeKb: Lt
+              children: Xu("thumbnail:chooseImage", {
+                maxSizeKb: Vu
               })
-            }), (0, Jt.jsx)(rt, {
-              schematicId: et,
-              hasReadUploadPolicy: ft,
+            }), (0, eu.jsx)(Iu, {
+              schematicId: Eu,
+              hasReadUploadPolicy: Ou,
               onPolicyValidationError: () => {
-                Nt(!0)
+                Du(!0)
               },
-              onThumbnailReady: async (tt, et, Vt) => {
-                await Dt(tt, et, Vt), lt(!0), Mt.current = setTimeout(qt, Ut)
+              onThumbnailReady: async (uu, Eu, ju) => {
+                await Zu(uu, Eu, ju), cu(!0), gu.current = setTimeout(Uu, Fu)
               }
             })]
-          }), (0, Jt.jsxs)("div", {
+          }), (0, eu.jsxs)("div", {
             className: "ThumbnailUploadPolicy",
-            children: [(0, Jt.jsx)("h3", {
+            children: [(0, eu.jsx)("h3", {
               className: "ThumbnailUploadPolicyTitle",
-              children: mt("thumbnail:uploadPolicy")
-            }), (0, Jt.jsxs)("ul", {
+              children: Xu("thumbnail:uploadPolicy")
+            }), (0, eu.jsxs)("ul", {
               className: "ThumbnailUploadPolicyList",
-              children: [(0, Jt.jsxs)("li", {
+              children: [(0, eu.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem Allowed",
-                children: [(0, Jt.jsx)(Xt.b, {
+                children: [(0, eu.jsx)(Cu.e, {
                   name: "check"
-                }), (0, Jt.jsx)("span", {
-                  children: mt("thumbnail:policyFollowGuidelines")
+                }), (0, eu.jsx)("span", {
+                  children: Xu("thumbnail:policyFollowGuidelines")
                 })]
-              }), (0, Jt.jsxs)("li", {
+              }), (0, eu.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem Allowed",
-                children: [(0, Jt.jsx)(Xt.b, {
+                children: [(0, eu.jsx)(Cu.e, {
                   name: "check"
-                }), (0, Jt.jsx)("span", {
-                  children: mt("thumbnail:policyInGameAssets")
+                }), (0, eu.jsx)("span", {
+                  children: Xu("thumbnail:policyInGameAssets")
                 })]
-              }), (0, Jt.jsxs)("li", {
+              }), (0, eu.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem Allowed",
-                children: [(0, Jt.jsx)(Xt.b, {
+                children: [(0, eu.jsx)(Cu.e, {
                   name: "check"
-                }), (0, Jt.jsx)("span", {
-                  children: mt("thumbnail:policyLimitText")
+                }), (0, eu.jsx)("span", {
+                  children: Xu("thumbnail:policyLimitText")
                 })]
-              }), (0, Jt.jsxs)("li", {
+              }), (0, eu.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem NotAllowed",
-                children: [(0, Jt.jsx)(Xt.b, {
+                children: [(0, eu.jsx)(Cu.e, {
                   name: "x"
-                }), (0, Jt.jsx)("span", {
-                  children: mt("thumbnail:policyCopyrightContent")
+                }), (0, eu.jsx)("span", {
+                  children: Xu("thumbnail:policyCopyrightContent")
                 })]
-              }), (0, Jt.jsxs)("li", {
+              }), (0, eu.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem NotAllowed",
-                children: [(0, Jt.jsx)(Xt.b, {
+                children: [(0, eu.jsx)(Cu.e, {
                   name: "x"
-                }), (0, Jt.jsx)("span", {
-                  children: mt("thumbnail:policyOutOfGameAssets")
+                }), (0, eu.jsx)("span", {
+                  children: Xu("thumbnail:policyOutOfGameAssets")
                 })]
-              }), (0, Jt.jsxs)("li", {
+              }), (0, eu.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem NotAllowed",
-                children: [(0, Jt.jsx)(Xt.b, {
+                children: [(0, eu.jsx)(Cu.e, {
                   name: "x"
-                }), (0, Jt.jsx)("span", {
-                  children: mt("thumbnail:policyBloxdTags")
+                }), (0, eu.jsx)("span", {
+                  children: Xu("thumbnail:policyBloxdTags")
                 })]
-              }), (0, Jt.jsxs)("li", {
+              }), (0, eu.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem NotAllowed",
-                children: [(0, Jt.jsx)(Xt.b, {
+                children: [(0, eu.jsx)(Cu.e, {
                   name: "x"
-                }), (0, Jt.jsx)("span", {
-                  children: mt("thumbnail:policyMustReflectGame")
+                }), (0, eu.jsx)("span", {
+                  children: Xu("thumbnail:policyMustReflectGame")
                 })]
               })]
-            }), (0, Jt.jsxs)("label", {
-              className: Et()("ThumbnailUploadCheckbox Policy", {
-                ValidationError: yt && !ft
+            }), (0, eu.jsxs)("label", {
+              className: Nu()("ThumbnailUploadCheckbox Policy", {
+                ValidationError: hu && !Ou
               }),
-              children: [(0, Jt.jsx)("input", {
+              children: [(0, eu.jsx)("input", {
                 type: "checkbox",
-                checked: ft,
-                onChange: tt => {
-                  wt(tt.target.checked)
+                checked: Ou,
+                onChange: uu => {
+                  Yu(uu.target.checked)
                 }
-              }), mt("thumbnail:agreeToUploadPolicy")]
-            }), yt && !ft && (0, Jt.jsx)("div", {
+              }), Xu("thumbnail:agreeToUploadPolicy")]
+            }), hu && !Ou && (0, eu.jsx)("div", {
               className: "ThumbnailPolicyError",
-              children: mt("thumbnail:policyRequired")
+              children: Xu("thumbnail:policyRequired")
             })]
           })]
         })]
       })
     }
-    var it = Vt(1293);
-    const Yt = {
+    var Lu = ju(1255);
+    const tu = {
       "custom-game-bad-thumbnail": {
         reason: "thumbnail:rejectionInappropriate",
         tips: ["thumbnail:rejectionInappropriateTip1", "thumbnail:rejectionInappropriateTip2", "thumbnail:rejectionInappropriateTip3"]
@@ -877,207 +877,207 @@ export const modules = {
       }
     };
 
-    function Bt(tt) {
-      var et, Vt;
+    function xu(uu) {
+      var Eu, ju;
       let {
-        schematicData: mt,
-        updateSchematicData: Ht,
-        publishFormEnabled: Qt,
-        onClose: lt
-      } = tt;
+        schematicData: Xu,
+        updateSchematicData: fu,
+        publishFormEnabled: bu,
+        onClose: cu
+      } = uu;
       const {
-        t: ft
-      } = (0, dt.H)(), {
-        userContext: wt,
-        isUserContextUpdating: yt
-      } = (0, Rt.d)(), Nt = (0, ct.b)(), [Mt, bt] = (0, Ot.useState)([]), [Ct, ut] = (0, Ot.useState)([]), [Kt, ht] = (0, Ot.useState)(!0), [vt, Wt] = (0, Ot.useState)(null !== (et = mt.customThumbnailId) && void 0 !== et ? et : null), [Pt, Zt] = (0, Ot.useState)(null), Lt = (0, Ot.useRef)(null !== (Vt = mt.customThumbnailId) && void 0 !== Vt ? Vt : null), Ft = (0, Ot.useRef)(0), kt = (0, Ot.useRef)(null), Gt = (0, Ot.useRef)(null), zt = (0, Ot.useRef)(null), ot = (0, Ot.useRef)(!1);
+        t: Ou
+      } = (0, lu.A)(), {
+        userContext: Yu,
+        isUserContextUpdating: hu
+      } = (0, ku.c)(), Du = (0, ou.c)(), [gu, Mu] = (0, su.useState)([]), [Gu, pu] = (0, su.useState)([]), [wu, Ju] = (0, su.useState)(!0), [du, au] = (0, su.useState)(null !== (Eu = Xu.customThumbnailId) && void 0 !== Eu ? Eu : null), [vu, Ku] = (0, su.useState)(null), Vu = (0, su.useRef)(null !== (ju = Xu.customThumbnailId) && void 0 !== ju ? ju : null), ru = (0, su.useRef)(0), Qu = (0, su.useRef)(null), iu = (0, su.useRef)(null), Wu = (0, su.useRef)(null), Su = (0, su.useRef)(!1);
 
-      function rt(tt, et) {
-        zt.current && (clearTimeout(zt.current), zt.current = null), Zt(tt), null !== tt && et && (zt.current = setTimeout((() => {
-          Zt(null), zt.current = null
+      function Iu(uu, Eu) {
+        Wu.current && (clearTimeout(Wu.current), Wu.current = null), Ku(uu), null !== uu && Eu && (Wu.current = setTimeout((() => {
+          Ku(null), Wu.current = null
         }), 5e3))
-      }(0, Ot.useEffect)((() => () => {
-        clearTimeout(Gt.current), clearTimeout(zt.current)
+      }(0, su.useEffect)((() => () => {
+        clearTimeout(iu.current), clearTimeout(Wu.current)
       }), []);
-      const Ut = (0, Ot.useCallback)((() => {
-        ht(!0), St.e.getOwnedThumbnails(wt).then((tt => {
-          const et = [],
-            Vt = [];
-          for (const Ot of tt.thumbnails) Ot.rejectionPolicyId ? et.push(Ot) : Vt.push(Ot);
-          et.sort(((tt, et) => tt.lastUpdatedAt - et.lastUpdatedAt)), Vt.sort(((tt, et) => {
-            const Vt = tt.approved ? 1 : 0,
-              Ot = (et.approved ? 1 : 0) - Vt;
-            return 0 !== Ot ? Ot : et.lastUpdatedAt - tt.lastUpdatedAt
-          })), ut(et), bt(Vt)
-        })).catch((tt => {
-          console.error("Failed to fetch thumbnails:", tt)
+      const Fu = (0, su.useCallback)((() => {
+        Ju(!0), Pu.b.getOwnedThumbnails(Yu).then((uu => {
+          const Eu = [],
+            ju = [];
+          for (const su of uu.thumbnails) su.rejectionPolicyId ? Eu.push(su) : ju.push(su);
+          Eu.sort(((uu, Eu) => uu.lastUpdatedAt - Eu.lastUpdatedAt)), ju.sort(((uu, Eu) => {
+            const ju = uu.approved ? 1 : 0,
+              su = (Eu.approved ? 1 : 0) - ju;
+            return 0 !== su ? su : Eu.lastUpdatedAt - uu.lastUpdatedAt
+          })), pu(Eu), Mu(ju)
+        })).catch((uu => {
+          console.error("Failed to fetch thumbnails:", uu)
         })).finally((() => {
-          ht(!1)
+          Ju(!1)
         }))
-      }), [wt]);
-      async function Yt(tt, et, Vt) {
-        return St.e.uploadSchematicThumbnail(wt, tt, et, Vt).then((() => {
-          rt({
-            text: ft("thumbnail:uploadedAwaitingModeration"),
+      }), [Yu]);
+      async function tu(uu, Eu, ju) {
+        return Pu.b.uploadSchematicThumbnail(Yu, uu, Eu, ju).then((() => {
+          Iu({
+            text: Ou("thumbnail:uploadedAwaitingModeration"),
             type: "success"
-          }, !0), Ut()
+          }, !0), Fu()
         }))
       }
 
-      function Bt() {
-        Ft.current = Date.now(), Gt.current = null;
-        const tt = kt.current;
-        kt.current = null, rt({
-          text: ft("thumbnail:settingThumbnail"),
+      function xu() {
+        ru.current = Date.now(), iu.current = null;
+        const uu = Qu.current;
+        Qu.current = null, Iu({
+          text: Ou("thumbnail:settingThumbnail"),
           type: "info"
-        }, !1), St.e.setSchematicThumbnail(wt, mt.schematicId, tt).then((() => {
-          Nt.current && (rt({
-            text: ft("thumbnail:thumbnailUpdated"),
+        }, !1), Pu.b.setSchematicThumbnail(Yu, Xu.schematicId, uu).then((() => {
+          Du.current && (Iu({
+            text: Ou("thumbnail:thumbnailUpdated"),
             type: "success"
-          }, !0), Lt.current = tt, Ht("customThumbnailId", tt), Ht("customThumbnailBlurhash", void 0), Ht("customThumbnailVariants", void 0))
-        })).catch((tt => {
-          Nt.current && (rt({
-            text: tt.errorMessageForUser ? ft(tt.errorMessageForUser, tt.errorMessageTranslationParams) : ft("thumbnail:failedToSetThumbnail"),
+          }, !0), Vu.current = uu, fu("customThumbnailId", uu), fu("customThumbnailBlurhash", void 0), fu("customThumbnailVariants", void 0))
+        })).catch((uu => {
+          Du.current && (Iu({
+            text: uu.errorMessageForUser ? Ou(uu.errorMessageForUser, uu.errorMessageTranslationParams) : Ou("thumbnail:failedToSetThumbnail"),
             type: "error"
-          }, !0), Wt(Lt.current))
+          }, !0), au(Vu.current))
         }))
       }
 
-      function Tt(tt) {
-        Wt(tt), kt.current = tt;
-        const et = Date.now() - Ft.current;
-        et >= 1e3 ? Bt() : (rt({
-          text: ft("thumbnail:settingThumbnail"),
+      function Au(uu) {
+        au(uu), Qu.current = uu;
+        const Eu = Date.now() - ru.current;
+        Eu >= 1e3 ? xu() : (Iu({
+          text: Ou("thumbnail:settingThumbnail"),
           type: "info"
-        }, !1), Gt.current || (Gt.current = setTimeout((() => {
-          Bt()
-        }), 1e3 - et)))
+        }, !1), iu.current || (iu.current = setTimeout((() => {
+          xu()
+        }), 1e3 - Eu)))
       }
-      return (0, Ot.useEffect)((() => {
-        !1 === yt && Ut()
-      }), [yt, Ut]), Ct.length > 0 ? (0, Jt.jsx)(pt, {
-        rejectedThumbnails: Ct,
-        userContext: wt,
-        isMountedRef: Nt,
-        onAcknowledged: Ut
-      }) : (0, Jt.jsxs)("div", {
+      return (0, su.useEffect)((() => {
+        !1 === hu && Fu()
+      }), [hu, Fu]), Gu.length > 0 ? (0, eu.jsx)(Tu, {
+        rejectedThumbnails: Gu,
+        userContext: Yu,
+        isMountedRef: Du,
+        onAcknowledged: Fu
+      }) : (0, eu.jsxs)("div", {
         className: "BloxdForm ThumbnailSection",
-        children: [(0, Jt.jsxs)("div", {
+        children: [(0, eu.jsxs)("div", {
           className: "SectionTitle",
-          children: [ft("thumbnail:gameThumbnail"), Pt && (0, Jt.jsx)("span", {
-            className: Et()("ThumbnailActionMsg", `ThumbnailActionMsg--${Pt.type}`),
-            children: Pt.text
+          children: [Ou("thumbnail:gameThumbnail"), vu && (0, eu.jsx)("span", {
+            className: Nu()("ThumbnailActionMsg", `ThumbnailActionMsg--${vu.type}`),
+            children: vu.text
           })]
-        }), (0, Jt.jsx)("div", {
+        }), (0, eu.jsx)("div", {
           className: "SectionBody",
-          children: (0, Jt.jsxs)("div", {
+          children: (0, eu.jsxs)("div", {
             className: "ThumbnailGrid",
-            children: [(0, Jt.jsxs)("div", {
-              className: Et()("ThumbnailGridItem ThumbnailGridItemDefault", {
-                ThumbnailGridItemSelected: null === vt
+            children: [(0, eu.jsxs)("div", {
+              className: Nu()("ThumbnailGridItem ThumbnailGridItemDefault", {
+                ThumbnailGridItemSelected: null === du
               }),
-              onClick: () => Tt(null),
-              children: [(0, Jt.jsx)(It.b, {
+              onClick: () => Au(null),
+              children: [(0, eu.jsx)(mu.b, {
                 game: {
-                  schematicId: mt.schematicId,
-                  imageBlurhash: mt.imageBlurhash
+                  schematicId: Xu.schematicId,
+                  imageBlurhash: Xu.imageBlurhash
                 }
-              }), (0, Jt.jsx)("div", {
+              }), (0, eu.jsx)("div", {
                 className: "ThumbnailGridItemLabel ThumbnailDefaultLabel",
-                children: ft("general:default")
+                children: Ou("general:default")
               })]
-            }), Kt && (0, Jt.jsx)(jt.b, {}), Mt.map(((tt, et) => (0, Jt.jsxs)("div", {
-              className: Et()("ThumbnailGridItem", {
-                ThumbnailGridItemSelected: vt === tt.id,
-                ThumbnailGridItemPending: !tt.approved
+            }), wu && (0, eu.jsx)(qu.b, {}), gu.map(((uu, Eu) => (0, eu.jsxs)("div", {
+              className: Nu()("ThumbnailGridItem", {
+                ThumbnailGridItemSelected: du === uu.id,
+                ThumbnailGridItemPending: !uu.approved
               }),
               onClick: () => {
-                tt.approved && Tt(tt.id)
+                uu.approved && Au(uu.id)
               },
-              children: [tt.approved && (0, Jt.jsx)("img", {
-                src: `${it.clientSideServerUrls.s3Url}/customThumbnails/${tt.id}.jpg`,
+              children: [uu.approved && (0, eu.jsx)("img", {
+                src: `${Lu.clientSideServerUrls.s3Url}/customThumbnails/${uu.id}.jpg`,
                 alt: "Thumbnail"
-              }), tt.approved && (0, Jt.jsx)("div", {
+              }), uu.approved && (0, eu.jsx)("div", {
                 className: "ThumbnailGridItemLabel",
-                children: tt.name
-              }), tt.id && (0, Jt.jsx)(Dt.G, {
+                children: uu.name
+              }), uu.id && (0, eu.jsx)(Zu.R, {
                 className: "ThumbnailDeleteButton",
-                onClick: et => async function(tt, et, Vt) {
-                  tt.stopPropagation();
-                  const Ot = await qt.NotificationProvider.showCustomPopup({
-                      body: tt => (0, Jt.jsx)(xt, {
-                        thumbnailId: et,
-                        thumbnailName: Vt,
-                        onClose: et => {
-                          et && (ot.current = !0), tt()
+                onClick: Eu => async function(uu, Eu, ju) {
+                  uu.stopPropagation();
+                  const su = await Uu.NotificationProvider.showCustomPopup({
+                      body: uu => (0, eu.jsx)(Hu, {
+                        thumbnailId: Eu,
+                        thumbnailName: ju,
+                        onClose: Eu => {
+                          Eu && (Su.current = !0), uu()
                         }
                       }),
                       middleScreenPopupClassName: "ThumbnailDeleteConfirmPopup",
-                      onClose: lt
+                      onClose: cu
                     }).getResult(),
-                    Dt = ot.current;
-                  ot.current = !1, Dt && !0 === Ot && (Nt.current && rt({
-                    text: ft("thumbnail:deletingThumbnail"),
+                    Zu = Su.current;
+                  Su.current = !1, Zu && !0 === su && (Du.current && Iu({
+                    text: Ou("thumbnail:deletingThumbnail"),
                     type: "info"
-                  }, !1), St.e.deleteSchematicThumbnail(wt, et).then((() => {
-                    Nt.current && (rt({
-                      text: ft("thumbnail:thumbnailDeleted"),
+                  }, !1), Pu.b.deleteSchematicThumbnail(Yu, Eu).then((() => {
+                    Du.current && (Iu({
+                      text: Ou("thumbnail:thumbnailDeleted"),
                       type: "success"
-                    }, !0), Lt.current === et && Tt(null), Ut())
-                  })).catch((tt => {
-                    Nt.current && rt({
-                      text: tt.errorMessageForUser ? ft(tt.errorMessageForUser, tt.errorMessageTranslationParams) : ft("thumbnail:failedToDeleteThumbnail"),
+                    }, !0), Vu.current === Eu && Au(null), Fu())
+                  })).catch((uu => {
+                    Du.current && Iu({
+                      text: uu.errorMessageForUser ? Ou(uu.errorMessageForUser, uu.errorMessageTranslationParams) : Ou("thumbnail:failedToDeleteThumbnail"),
                       type: "error"
                     }, !0)
                   })))
-                }(et, tt.id, tt.name),
-                children: (0, Jt.jsx)(Xt.b, {
+                }(Eu, uu.id, uu.name),
+                children: (0, eu.jsx)(Cu.e, {
                   name: "trash-can"
                 })
-              }), !tt.approved && (0, Jt.jsx)("div", {
+              }), !uu.approved && (0, eu.jsx)("div", {
                 className: "ThumbnailUnapprovedIcon",
-                children: (0, Jt.jsx)(Xt.b, {
+                children: (0, eu.jsx)(Cu.e, {
                   name: "hourglass-clock"
                 })
-              }), !tt.approved && (0, Jt.jsxs)("div", {
+              }), !uu.approved && (0, eu.jsxs)("div", {
                 className: "ThumbnailGridItemLabel ThumbnailPendingLabel",
-                children: [tt.name, (0, Jt.jsx)("br", {}), ft("thumbnail:pendingApproval")]
+                children: [uu.name, (0, eu.jsx)("br", {}), Ou("thumbnail:pendingApproval")]
               })]
-            }, et))), (0, Jt.jsxs)("div", {
-              className: Et()("ThumbnailGridItem ThumbnailUploadTile", {
-                ThumbnailUploadTileDisabled: !Qt
+            }, Eu))), (0, eu.jsxs)("div", {
+              className: Nu()("ThumbnailGridItem ThumbnailUploadTile", {
+                ThumbnailUploadTileDisabled: !bu
               }),
               onClick: () => {
-                Qt && function(tt) {
+                bu && function(uu) {
                   let {
-                    schematicId: et,
-                    ownedThumbnailCount: Vt,
-                    onThumbnailReady: Ot,
-                    onClose: Dt
-                  } = tt;
-                  qt.NotificationProvider.showCustomPopup({
-                    body: tt => (0, Jt.jsx)(At, {
-                      schematicId: et,
-                      ownedThumbnailCount: Vt,
-                      onClose: tt,
-                      onThumbnailReady: Ot
+                    schematicId: Eu,
+                    ownedThumbnailCount: ju,
+                    onThumbnailReady: su,
+                    onClose: Zu
+                  } = uu;
+                  Uu.NotificationProvider.showCustomPopup({
+                    body: uu => (0, eu.jsx)(Bu, {
+                      schematicId: Eu,
+                      ownedThumbnailCount: ju,
+                      onClose: uu,
+                      onThumbnailReady: su
                     }),
                     middleScreenPopupClassName: "SchematicThumbnailPopup",
-                    onClose: Dt,
+                    onClose: Zu,
                     unlockPointerKey: "schematicThumbnailUploaderPopup"
                   })
                 }({
-                  schematicId: mt.schematicId,
-                  ownedThumbnailCount: Mt.length,
-                  onThumbnailReady: Yt,
-                  onClose: lt
+                  schematicId: Xu.schematicId,
+                  ownedThumbnailCount: gu.length,
+                  onThumbnailReady: tu,
+                  onClose: cu
                 })
               },
-              children: [(0, Jt.jsx)(Xt.b, {
+              children: [(0, eu.jsx)(Cu.e, {
                 name: "plus"
-              }), (0, Jt.jsx)("div", {
+              }), (0, eu.jsx)("div", {
                 className: "ThumbnailGridItemLabel",
-                children: ft("thumbnail:uploadThumbnail")
+                children: Ou("thumbnail:uploadThumbnail")
               })]
             })]
           })
@@ -1085,640 +1085,640 @@ export const modules = {
       })
     }
 
-    function pt(tt) {
+    function Tu(uu) {
       let {
-        rejectedThumbnails: et,
-        userContext: Vt,
-        isMountedRef: qt,
-        onAcknowledged: mt
-      } = tt;
+        rejectedThumbnails: Eu,
+        userContext: ju,
+        isMountedRef: Uu,
+        onAcknowledged: Xu
+      } = uu;
       const {
-        t: Ht
-      } = (0, dt.H)(), [Qt, lt] = (0, Ot.useState)(!1), [Et, ft] = (0, Ot.useState)(!1), wt = function(tt) {
-        const et = new Map;
-        for (const Vt of tt) {
-          const tt = Vt.rejectionPolicyId,
-            Ot = et.get(tt);
-          Ot ? Ot.push(Vt) : et.set(tt, [Vt])
+        t: fu
+      } = (0, lu.A)(), [bu, cu] = (0, su.useState)(!1), [Nu, Ou] = (0, su.useState)(!1), Yu = function(uu) {
+        const Eu = new Map;
+        for (const ju of uu) {
+          const uu = ju.rejectionPolicyId,
+            su = Eu.get(uu);
+          su ? su.push(ju) : Eu.set(uu, [ju])
         }
-        return et
-      }(et);
-      return (0, Jt.jsxs)("div", {
+        return Eu
+      }(Eu);
+      return (0, eu.jsxs)("div", {
         className: "ThumbnailRejectionNotice",
-        children: [(0, Jt.jsxs)("div", {
+        children: [(0, eu.jsxs)("div", {
           className: "ThumbnailRejectionNoticeTitle",
-          children: [(0, Jt.jsx)(Xt.b, {
+          children: [(0, eu.jsx)(Cu.e, {
             name: "triangle-exclamation"
-          }), " ", Ht("thumbnail:thumbnailsRejected"), " ", (0, Jt.jsx)(Xt.b, {
+          }), " ", fu("thumbnail:thumbnailsRejected"), " ", (0, eu.jsx)(Cu.e, {
             name: "triangle-exclamation"
           })]
-        }), (0, Jt.jsx)("div", {
+        }), (0, eu.jsx)("div", {
           className: "ThumbnailRejectionNoticeSubtitle",
-          children: Ht("thumbnail:thumbnailsRejectedDescription")
-        }), (0, Jt.jsx)("div", {
+          children: fu("thumbnail:thumbnailsRejectedDescription")
+        }), (0, eu.jsx)("div", {
           className: "ThumbnailRejectionNoticeList",
-          children: [...wt.entries()].map((tt => {
-            let [et, Vt] = tt;
-            const Ot = Yt[et];
-            return (0, Jt.jsxs)("div", {
+          children: [...Yu.entries()].map((uu => {
+            let [Eu, ju] = uu;
+            const su = tu[Eu];
+            return (0, eu.jsxs)("div", {
               className: "ThumbnailRejectionNoticeGroup",
-              children: [(0, Jt.jsx)("div", {
+              children: [(0, eu.jsx)("div", {
                 className: "ThumbnailRejectionNoticeItems",
-                children: Vt.map((tt => (0, Jt.jsxs)("div", {
+                children: ju.map((uu => (0, eu.jsxs)("div", {
                   className: "ThumbnailRejectionNoticeItem",
-                  children: [(0, Jt.jsx)("div", {
+                  children: [(0, eu.jsx)("div", {
                     className: "ThumbnailRejectionNoticeItemIcon",
-                    children: (0, Jt.jsx)(Xt.b, {
+                    children: (0, eu.jsx)(Cu.e, {
                       name: "image-slash"
                     })
-                  }), (0, Jt.jsx)("div", {
+                  }), (0, eu.jsx)("div", {
                     className: "ThumbnailRejectionNoticeItemDetails",
-                    children: (0, Jt.jsx)("div", {
+                    children: (0, eu.jsx)("div", {
                       className: "ThumbnailRejectionNoticeItemName",
-                      children: tt.name
+                      children: uu.name
                     })
                   })]
-                }, tt.id)))
-              }), (0, Jt.jsxs)("div", {
+                }, uu.id)))
+              }), (0, eu.jsxs)("div", {
                 className: "ThumbnailRejectionNoticeGroupReason",
-                children: [Ht("thumbnail:rejectionReason"), " ", Ot ? Ht(Ot.reason) : et]
-              }), Ot && (0, Jt.jsx)("ul", {
+                children: [fu("thumbnail:rejectionReason"), " ", su ? fu(su.reason) : Eu]
+              }), su && (0, eu.jsx)("ul", {
                 className: "ThumbnailRejectionNoticeGroupTips",
-                children: Ot.tips.map((tt => (0, Jt.jsx)("li", {
-                  children: Ht(tt)
-                }, tt)))
+                children: su.tips.map((uu => (0, eu.jsx)("li", {
+                  children: fu(uu)
+                }, uu)))
               })]
-            }, et)
+            }, Eu)
           }))
-        }), (0, Jt.jsxs)("label", {
+        }), (0, eu.jsxs)("label", {
           className: "ThumbnailRejectionNoticeCheckbox",
-          children: [(0, Jt.jsx)(Wt.b, {
-            checked: Qt,
-            onChange: tt => lt(tt.target.checked),
-            disabled: Et
-          }), (0, Jt.jsx)("span", {
-            children: Ht("thumbnail:haveReadRejectionReasons")
+          children: [(0, eu.jsx)(au.d, {
+            checked: bu,
+            onChange: uu => cu(uu.target.checked),
+            disabled: Nu
+          }), (0, eu.jsx)("span", {
+            children: fu("thumbnail:haveReadRejectionReasons")
           })]
-        }), (0, Jt.jsx)(Dt.m, {
+        }), (0, eu.jsx)(Zu.p, {
           onClick: async function() {
-            ft(!0);
-            const tt = await Promise.allSettled(et.map((tt => St.e.deleteSchematicThumbnail(Vt, tt.id))));
-            if (!qt.current) return;
-            const Ot = tt.filter((tt => "rejected" === tt.status));
-            Ot.length > 0 && console.error("Some rejected thumbnails failed to delete:", Ot), mt()
+            Ou(!0);
+            const uu = await Promise.allSettled(Eu.map((uu => Pu.b.deleteSchematicThumbnail(ju, uu.id))));
+            if (!Uu.current) return;
+            const su = uu.filter((uu => "rejected" === uu.status));
+            su.length > 0 && console.error("Some rejected thumbnails failed to delete:", su), Xu()
           },
-          disabled: !Qt || Et,
+          disabled: !bu || Nu,
           className: "ThumbnailRejectionNoticeAcceptButton",
-          children: Et ? (0, Jt.jsx)(jt.b, {}) : Ht("general:accept")
+          children: Nu ? (0, eu.jsx)(qu.b, {}) : fu("general:accept")
         })]
       })
     }
 
-    function xt(tt) {
+    function Hu(uu) {
       let {
-        thumbnailId: et,
-        thumbnailName: Vt,
-        onClose: Ot
-      } = tt;
+        thumbnailId: Eu,
+        thumbnailName: ju,
+        onClose: su
+      } = uu;
       const {
-        t: qt
-      } = (0, dt.H)();
-      return (0, Jt.jsxs)("div", {
+        t: Uu
+      } = (0, lu.A)();
+      return (0, eu.jsxs)("div", {
         className: "ThumbnailDeleteConfirm",
-        children: [(0, Jt.jsx)("div", {
+        children: [(0, eu.jsx)("div", {
           className: "ThumbnailDeleteConfirmTitle",
-          children: qt("thumbnail:deleteThumbnail")
-        }), (0, Jt.jsxs)("div", {
+          children: Uu("thumbnail:deleteThumbnail")
+        }), (0, eu.jsxs)("div", {
           className: "ThumbnailDeleteConfirmImageContainer",
-          children: [(0, Jt.jsx)("img", {
+          children: [(0, eu.jsx)("img", {
             className: "ThumbnailDeleteConfirmImage",
-            src: `${it.clientSideServerUrls.s3Url}/customThumbnails/${et}.jpg`,
+            src: `${Lu.clientSideServerUrls.s3Url}/customThumbnails/${Eu}.jpg`,
             alt: "Thumbnail to delete"
-          }), (0, Jt.jsx)("div", {
+          }), (0, eu.jsx)("div", {
             className: "ThumbnailGridItemLabel",
-            children: Vt
+            children: ju
           })]
-        }), (0, Jt.jsx)("div", {
+        }), (0, eu.jsx)("div", {
           className: "ThumbnailDeleteConfirmSubtitle",
-          children: qt("thumbnail:deleteThumbnailConfirmation")
-        }), (0, Jt.jsxs)("div", {
+          children: Uu("thumbnail:deleteThumbnailConfirmation")
+        }), (0, eu.jsxs)("div", {
           className: "ThumbnailDeleteConfirmButtons",
-          children: [(0, Jt.jsxs)(Dt.G, {
+          children: [(0, eu.jsxs)(Zu.R, {
             className: "ThumbnailDeleteConfirmButton",
-            onClick: () => Ot(!0),
-            children: [(0, Jt.jsx)(Xt.b, {
+            onClick: () => su(!0),
+            children: [(0, eu.jsx)(Cu.e, {
               name: "trash-can"
-            }), " ", qt("general:delete")]
-          }), (0, Jt.jsx)(Dt.g, {
+            }), " ", Uu("general:delete")]
+          }), (0, eu.jsx)(Zu.i, {
             className: "ThumbnailDeleteConfirmButton",
-            onClick: () => Ot(!1),
-            children: qt("general:cancel")
+            onClick: () => su(!1),
+            children: Uu("general:cancel")
           })]
         })]
       })
     }
-    var Tt = Vt(2219),
-      gt = Vt(5145),
-      st = Vt(5150),
-      nt = Vt(5200);
+    var Au = ju(2239),
+      nu = ju(5146),
+      yu = ju(5151),
+      zu = ju(5188);
 
-    function te(tt) {
+    function Ru(uu) {
       let {
-        schematicData: et,
-        setTexturePack: Vt,
-        initializeTexturePack: qt,
-        publishFormEnabled: Dt
-      } = tt;
+        schematicData: Eu,
+        setTexturePack: ju,
+        initializeTexturePack: Uu,
+        publishFormEnabled: Zu
+      } = uu;
       const {
-        t: mt
-      } = (0, dt.H)(), [jt, Ht] = (0, Ot.useState)(null), [Xt, Qt] = (0, Ot.useState)(null), [lt, ft] = (0, Ot.useState)(!1), wt = (0, ct.b)(), yt = Dt && !lt, Nt = et.customTexturePackKey;
+        t: Xu
+      } = (0, lu.A)(), [qu, fu] = (0, su.useState)(null), [Cu, bu] = (0, su.useState)(null), [cu, Ou] = (0, su.useState)(!1), Yu = (0, ou.c)(), hu = Zu && !cu, Du = Eu.customTexturePackKey;
 
-      function Mt(tt) {
-        var et;
-        Ht(tt.metaData.id), Qt(null !== (et = tt.metaData.fromFolderName) && void 0 !== et ? et : null), (tt.metaData.id !== Tt.p.CUSTOM || tt.metaData.fromFolderName) && Vt(tt)
+      function gu(uu) {
+        var Eu;
+        fu(uu.metaData.id), bu(null !== (Eu = uu.metaData.fromFolderName) && void 0 !== Eu ? Eu : null), (uu.metaData.id !== Au.p.CUSTOM || uu.metaData.fromFolderName) && ju(uu)
       }
-      return (0, Ot.useEffect)((() => {
-        Nt && (ft(!0), (0, gt.e)(Nt).then((tt => {
-          var et;
-          wt.current && (tt ? (Ht(tt.metaData.id), Qt(null !== (et = tt.metaData.fromFolderName) && void 0 !== et ? et : null), qt(tt)) : console.error(`No texture pack at ${Nt}`))
-        })).catch((tt => {
-          console.error("Error fetching texture pack: ", tt)
+      return (0, su.useEffect)((() => {
+        Du && (Ou(!0), (0, nu.c)(Du).then((uu => {
+          var Eu;
+          Yu.current && (uu ? (fu(uu.metaData.id), bu(null !== (Eu = uu.metaData.fromFolderName) && void 0 !== Eu ? Eu : null), Uu(uu)) : console.error(`No texture pack at ${Du}`))
+        })).catch((uu => {
+          console.error("Error fetching texture pack: ", uu)
         })).finally((() => {
-          ft(!1)
+          Ou(!1)
         })))
-      }), [Nt, qt, wt]), (0, Jt.jsxs)("div", {
+      }), [Du, Uu, Yu]), (0, eu.jsxs)("div", {
         className: "BloxdForm TexturePackSection",
-        children: [(0, Jt.jsx)("div", {
+        children: [(0, eu.jsx)("div", {
           className: "SectionTitle",
-          children: mt("customTexturePack:customTexturePack")
-        }), (0, Jt.jsxs)("div", {
+          children: Xu("customTexturePack:customTexturePack")
+        }), (0, eu.jsxs)("div", {
           className: "TexturePackList",
-          children: [(0, Jt.jsx)("div", {
-            className: Et()("TexturePack", {
-              Selected: null === jt && !lt,
-              Disabled: !yt
+          children: [(0, eu.jsx)("div", {
+            className: Nu()("TexturePack", {
+              Selected: null === qu && !cu,
+              Disabled: !hu
             }),
             onClick: () => {
-              yt && (Ht(null), Vt(null), Qt(null))
+              hu && (fu(null), ju(null), bu(null))
             },
-            children: (0, Jt.jsx)("div", {
+            children: (0, eu.jsx)("div", {
               className: "TexturePackName",
               children: "No Override"
             })
-          }), Object.values(Tt.p).map((tt => (0, Jt.jsx)(st.g, {
-            id: tt,
-            isSelected: tt === jt,
-            setSelected: Mt,
-            disabled: !yt
-          }, tt)))]
-        }), jt === Tt.p.CUSTOM && (0, Jt.jsx)(nt.c, {
-          folderName: Xt,
-          onTexturePackUpdated: Mt,
-          disabled: !yt,
+          }), Object.values(Au.p).map((uu => (0, eu.jsx)(yu.g, {
+            id: uu,
+            isSelected: uu === qu,
+            setSelected: gu,
+            disabled: !hu
+          }, uu)))]
+        }), qu === Au.p.CUSTOM && (0, eu.jsx)(zu.e, {
+          folderName: Cu,
+          onTexturePackUpdated: gu,
+          disabled: !hu,
           maxFileSizeMb: 25,
           packOwner: "customGame"
         })]
       })
     }
-    var ee = Vt(5248);
+    var uE = ju(5234);
 
-    function Ve(tt) {
-      var et;
+    function EE(uu) {
+      var Eu;
       let {
-        gameCategory: Vt,
-        setGameCategory: Ot,
-        disabled: qt
-      } = tt;
-      const mt = null !== (et = (0, ft.Z)(Vt)) && void 0 !== et ? et : "other";
-      return (0, Jt.jsxs)("div", {
+        gameCategory: ju,
+        setGameCategory: su,
+        disabled: Uu
+      } = uu;
+      const Xu = null !== (Eu = (0, Ou.lb)(ju)) && void 0 !== Eu ? Eu : "other";
+      return (0, eu.jsxs)("div", {
         className: "GameCategoryPicker",
-        children: [(0, Jt.jsx)(Nt.i, {
+        children: [(0, eu.jsx)(Du.e, {
           label: "worldBuilder:gameCategoryGroup",
           className: "GameCategoryGroup",
-          disabled: qt,
-          children: (0, Jt.jsx)(Mt.e, {
-            options: ft.N.map((tt => ({
-              value: tt,
-              label: ft.M[tt]
+          disabled: Uu,
+          children: (0, eu.jsx)(gu.c, {
+            options: Ou.ab.map((uu => ({
+              value: uu,
+              label: Ou.$[uu]
             }))),
-            value: mt,
-            onChange: tt => {
-              tt.value !== mt && Ot(ft.I[tt.value][0])
+            value: Xu,
+            onChange: uu => {
+              uu.value !== Xu && su(Ou.U[uu.value][0])
             }
           })
-        }), (0, Jt.jsx)(Nt.i, {
+        }), (0, eu.jsx)(Du.e, {
           label: "worldBuilder:gameCategory",
           className: "GameCategory",
-          disabled: qt,
-          children: (0, Jt.jsx)("div", {
+          disabled: Uu,
+          children: (0, eu.jsx)("div", {
             className: "GameCategoryOptions",
-            children: ft.I[mt].map((tt => (0, Jt.jsx)(Dt.Q, {
-              active: tt === Vt,
+            children: Ou.U[Xu].map((uu => (0, eu.jsx)(Zu.$, {
+              active: uu === ju,
               onClick: () => {
-                Ot(tt)
+                su(uu)
               },
-              children: (0, ft.Y)(tt)
-            }, tt)))
+              children: (0, Ou.ib)(uu)
+            }, uu)))
           })
         })]
       })
     }
 
-    function Oe(tt) {
+    function jE(uu) {
       let {
-        editor: et,
-        onClose: Vt
-      } = tt;
+        editor: Eu,
+        onClose: ju
+      } = uu;
       const {
-        t: Ot
-      } = (0, dt.H)(), {
-        schematicData: qt,
-        updateSchematicData: Dt,
-        publishFormEnabled: jt,
-        formEnabled: Ht
-      } = et;
-      return (0, Jt.jsxs)(Jt.Fragment, {
-        children: [(0, Jt.jsxs)(Ct, {
+        t: su
+      } = (0, lu.A)(), {
+        schematicData: Uu,
+        updateSchematicData: Zu,
+        publishFormEnabled: qu,
+        formEnabled: fu
+      } = Eu;
+      return (0, eu.jsxs)(eu.Fragment, {
+        children: [(0, eu.jsxs)(Gu, {
           icon: "pen-to-square",
-          title: Ot("worldBuilder:basicsSection"),
-          disabled: !Ht,
-          children: [(0, Jt.jsx)(ut, {
-            label: Ot("general:name"),
-            caption: Ot("worldBuilder:schematicNameTagsHint"),
-            children: (0, Jt.jsx)(mt.d, {
+          title: su("worldBuilder:basicsSection"),
+          disabled: !fu,
+          children: [(0, eu.jsx)(pu, {
+            label: su("general:name"),
+            caption: su("worldBuilder:schematicNameTagsHint"),
+            children: (0, eu.jsx)(Xu.d, {
               className: "SchematicPageName",
-              defaultValue: qt.name,
-              onValueChange: tt => Dt("name", tt),
-              placeholderText: Ot("worldBuilder:schematicNamePlaceholder"),
-              maxLength: Qt.ub
+              defaultValue: Uu.name,
+              onValueChange: uu => Zu("name", uu),
+              placeholderText: su("worldBuilder:schematicNamePlaceholder"),
+              maxLength: bu.sb
             })
-          }), (0, Jt.jsx)(ut, {
-            label: Ot("general:description"),
-            children: (0, Jt.jsx)(mt.d, {
+          }), (0, eu.jsx)(pu, {
+            label: su("general:description"),
+            children: (0, eu.jsx)(Xu.d, {
               className: "SchematicPageDescription",
               useTextarea: !0,
-              defaultValue: qt.description,
-              onValueChange: tt => Dt("description", tt),
-              placeholderText: Ot("worldBuilder:schematicDescriptionPlaceholder"),
-              maxLength: Qt.qb
+              defaultValue: Uu.description,
+              onValueChange: uu => Zu("description", uu),
+              placeholderText: su("worldBuilder:schematicDescriptionPlaceholder"),
+              maxLength: bu.pb
             })
-          }), (0, Jt.jsx)(Ve, {
-            gameCategory: qt.gameCategory,
-            setGameCategory: tt => Dt("gameCategory", tt),
-            disabled: !jt
-          }), !0 === qt.gamePublished && (0, Jt.jsx)(Bt, {
-            schematicData: qt,
-            updateSchematicData: Dt,
-            publishFormEnabled: jt,
+          }), (0, eu.jsx)(EE, {
+            gameCategory: Uu.gameCategory,
+            setGameCategory: uu => Zu("gameCategory", uu),
+            disabled: !qu
+          }), !0 === Uu.gamePublished && (0, eu.jsx)(xu, {
+            schematicData: Uu,
+            updateSchematicData: Zu,
+            publishFormEnabled: qu,
             onClose: function() {
-              null === Vt || void 0 === Vt || Vt()
+              null === ju || void 0 === ju || ju()
             }
           })]
-        }), (0, Jt.jsx)(ht, {
-          schematicData: qt,
-          updateSchematicData: Dt,
-          publishFormEnabled: jt,
-          formEnabled: Ht
-        }), !0 === qt.gamePublished && (0, Jt.jsx)(Ct, {
+        }), (0, eu.jsx)(Ju, {
+          schematicData: Uu,
+          updateSchematicData: Zu,
+          publishFormEnabled: qu,
+          formEnabled: fu
+        }), !0 === Uu.gamePublished && (0, eu.jsx)(Gu, {
           icon: "palette",
-          title: Ot("worldBuilder:texturePackSection"),
-          disabled: !Ht,
-          children: (0, Jt.jsx)(te, {
-            schematicData: qt,
-            setTexturePack: et.setTexturePack,
-            initializeTexturePack: et.initializeTexturePack,
-            publishFormEnabled: jt
+          title: su("worldBuilder:texturePackSection"),
+          disabled: !fu,
+          children: (0, eu.jsx)(Ru, {
+            schematicData: Uu,
+            setTexturePack: Eu.setTexturePack,
+            initializeTexturePack: Eu.initializeTexturePack,
+            publishFormEnabled: qu
           })
         })]
       })
     }
 
-    function qe(tt) {
+    function sE(uu) {
       let {
-        editor: et
-      } = tt;
+        editor: Eu
+      } = uu;
       const {
-        t: Vt
-      } = (0, dt.H)(), {
-        schematicData: Ot,
-        formEnabled: qt,
-        hasUnsavedChanges: mt
-      } = et, Qt = qt && mt;
-      return (0, Jt.jsxs)("footer", {
+        t: ju
+      } = (0, lu.A)(), {
+        schematicData: su,
+        formEnabled: Uu,
+        hasUnsavedChanges: Xu
+      } = Eu, bu = Uu && Xu;
+      return (0, eu.jsxs)("footer", {
         className: "SchematicPageFooter",
-        children: [qt && mt && (0, Jt.jsxs)("div", {
+        children: [Uu && Xu && (0, eu.jsxs)("div", {
           className: "SchematicPageFooterStatus",
-          children: [(0, Jt.jsx)("span", {
+          children: [(0, eu.jsx)("span", {
             className: "SchematicPageFooterStatusDot"
-          }), Vt("worldBuilder:unsavedChanges")]
-        }), (0, Jt.jsx)(Ht.g, {
-          tooltipInner: (0, Jt.jsx)("div", {
+          }), ju("worldBuilder:unsavedChanges")]
+        }), (0, eu.jsx)(fu.e, {
+          tooltipInner: (0, eu.jsx)("div", {
             className: "SaveButtonTooltip",
-            children: Vt(qt && !mt ? "worldBuilder:saveChangesNoneDescription" : "worldBuilder:saveChangesDescription")
+            children: ju(Uu && !Xu ? "worldBuilder:saveChangesNoneDescription" : "worldBuilder:saveChangesDescription")
           }),
-          children: (0, Jt.jsxs)(Dt.f, {
+          children: (0, eu.jsxs)(Zu.f, {
             className: "SaveChangesButton",
-            onClick: () => et.saveSchematic(Ot.gamePublished),
-            disabled: !Qt,
-            children: [(0, Jt.jsxs)("span", {
-              className: qt ? "" : "SaveChangesButtonBodyHidden",
-              children: [(0, Jt.jsx)(Xt.b, {
+            onClick: () => Eu.saveSchematic(su.gamePublished),
+            disabled: !bu,
+            children: [(0, eu.jsxs)("span", {
+              className: Uu ? "" : "SaveChangesButtonBodyHidden",
+              children: [(0, eu.jsx)(Cu.e, {
                 name: "wrench"
-              }), " ", Vt("worldBuilder:saveChanges")]
-            }), !qt && (0, Jt.jsx)(jt.b, {})]
+              }), " ", ju("worldBuilder:saveChanges")]
+            }), !Uu && (0, eu.jsx)(qu.b, {})]
           })
         })]
       })
     }
 
-    function De(tt) {
+    function UE(uu) {
       let {
-        schematic: et,
-        onSchematicUpdate: Vt,
-        onClose: qt,
-        inSourceWorld: mt
-      } = tt;
+        schematic: Eu,
+        onSchematicUpdate: ju,
+        onClose: Uu,
+        inSourceWorld: Xu
+      } = uu;
       const {
-        t: jt
-      } = (0, dt.H)();
+        t: qu
+      } = (0, lu.A)();
 
-      function Ht() {
-        null === qt || void 0 === qt || qt()
+      function fu() {
+        null === Uu || void 0 === Uu || Uu()
       }
-      const Xt = (0, ee.d)(et, {
-        onNavigateAway: Ht,
-        inSourceWorld: mt
+      const Cu = (0, uE.e)(Eu, {
+        onNavigateAway: fu,
+        inSourceWorld: Xu
       });
-      return (0, Ot.useEffect)((() => {
-        null === Vt || void 0 === Vt || Vt(Xt.schematicData)
-      }), [Xt.schematicData, Vt]), (0, Jt.jsxs)("div", {
+      return (0, su.useEffect)((() => {
+        null === ju || void 0 === ju || ju(Cu.schematicData)
+      }), [Cu.schematicData, ju]), (0, eu.jsxs)("div", {
         className: "SchematicPage SchematicPagePopupVariant",
-        children: [(0, Jt.jsxs)("div", {
+        children: [(0, eu.jsxs)("div", {
           className: "SchematicPageBody",
-          children: [(0, Jt.jsx)(Dt.d, {
-            onClick: Ht,
-            children: jt("worldBuilder:back")
-          }), (0, Jt.jsx)(Ct, {
+          children: [(0, eu.jsx)(Zu.d, {
+            onClick: fu,
+            children: qu("worldBuilder:back")
+          }), (0, eu.jsx)(Gu, {
             icon: "rocket-launch",
-            title: jt("worldBuilder:actionsSection"),
-            disabled: !Xt.formEnabled,
-            children: (0, Jt.jsx)(vt.c, {
-              editor: Xt
+            title: qu("worldBuilder:actionsSection"),
+            disabled: !Cu.formEnabled,
+            children: (0, eu.jsx)(du.d, {
+              editor: Cu
             })
-          }), (0, Jt.jsx)(Oe, {
-            editor: Xt,
-            onClose: Ht
+          }), (0, eu.jsx)(jE, {
+            editor: Cu,
+            onClose: fu
           })]
-        }), (0, Jt.jsx)(qe, {
-          editor: Xt
+        }), (0, eu.jsx)(sE, {
+          editor: Cu
         })]
       })
     }
 
-    function me(tt) {
+    function ZE(uu) {
       let {
-        schematic: et,
-        onSchematicUpdate: Vt,
-        onClose: Ot,
-        inSourceWorld: Dt
-      } = tt;
-      qt.NotificationProvider.showCustomPopup({
-        body: tt => (0, Jt.jsx)(De, {
-          schematic: et,
-          onSchematicUpdate: Vt,
-          onClose: tt,
-          inSourceWorld: Dt
+        schematic: Eu,
+        onSchematicUpdate: ju,
+        onClose: su,
+        inSourceWorld: Zu
+      } = uu;
+      Uu.NotificationProvider.showCustomPopup({
+        body: uu => (0, eu.jsx)(UE, {
+          schematic: Eu,
+          onSchematicUpdate: ju,
+          onClose: uu,
+          inSourceWorld: Zu
         }),
         middleScreenPopupClassName: "SchematicPopup",
-        onClose: Ot,
+        onClose: su,
         unlockPointerKey: "schematicPagePopup"
       })
     }
   },
-  5118: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => Qt
+  5115: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => bu
     });
-    var Ot = Vt(1140),
-      qt = Vt.n(Ot),
-      Dt = Vt(1286),
-      mt = Vt(1152),
-      dt = Vt(1556),
-      jt = Vt(1464),
-      Ht = Vt(1436),
-      Xt = Vt(1188);
+    var su = ju(1105),
+      Uu = ju.n(su),
+      Zu = ju(1244),
+      Xu = ju(1116),
+      lu = ju(1506),
+      qu = ju(1419),
+      fu = ju(1393),
+      Cu = ju(1154);
 
-    function Qt(tt) {
+    function bu(uu) {
       let {
-        editor: et,
-        className: Vt
-      } = tt;
+        editor: Eu,
+        className: ju
+      } = uu;
       const {
-        t: Ot
-      } = (0, Dt.H)(), {
-        schematicData: Qt,
-        formEnabled: lt,
-        publishFormEnabled: Et
-      } = et, ft = !lt || !Et;
-      return (0, Xt.jsxs)("div", {
-        className: qt()("PublishButtonContainer", Vt),
-        children: [et.canEditSourceWorld && (0, Xt.jsxs)(dt.f, {
-          onClick: et.editSourceWorld,
-          disabled: ft,
-          children: [(0, Xt.jsx)(mt.b, {
+        t: su
+      } = (0, Zu.A)(), {
+        schematicData: bu,
+        formEnabled: cu,
+        publishFormEnabled: Nu
+      } = Eu, Ou = !cu || !Nu;
+      return (0, Cu.jsxs)("div", {
+        className: Uu()("PublishButtonContainer", ju),
+        children: [Eu.canEditSourceWorld && (0, Cu.jsxs)(lu.f, {
+          onClick: Eu.editSourceWorld,
+          disabled: Ou,
+          children: [(0, Cu.jsx)(Xu.e, {
             name: "edit"
-          }), " ", Ot("worldBuilder:editSourceWorld")]
-        }), !Qt.gamePublished && (0, Xt.jsx)(jt.g, {
-          tooltipInner: (0, Xt.jsx)("div", {
+          }), " ", su("worldBuilder:editSourceWorld")]
+        }), !bu.gamePublished && (0, Cu.jsx)(qu.e, {
+          tooltipInner: (0, Cu.jsx)("div", {
             className: "PublishButtonTooltip",
-            children: Ot("worldBuilder:publishAsGameDescription")
+            children: su("worldBuilder:publishAsGameDescription")
           }),
-          children: (0, Xt.jsxs)(dt.m, {
-            onClick: () => et.saveSchematic(!0),
-            disabled: ft,
-            children: [(0, Xt.jsx)(mt.b, {
+          children: (0, Cu.jsxs)(lu.p, {
+            onClick: () => Eu.saveSchematic(!0),
+            disabled: Ou,
+            children: [(0, Cu.jsx)(Xu.e, {
               name: "rocket-launch"
-            }), " ", Ot("worldBuilder:publishAsGame"), " ", (0, Xt.jsx)(mt.b, {
+            }), " ", su("worldBuilder:publishAsGame"), " ", (0, Cu.jsx)(Xu.e, {
               name: "info-circle"
             })]
           })
-        }), !0 === Qt.gamePublished && (0, Xt.jsxs)(Xt.Fragment, {
-          children: [(0, Xt.jsx)(jt.g, {
-            tooltipInner: (0, Xt.jsx)("div", {
+        }), !0 === bu.gamePublished && (0, Cu.jsxs)(Cu.Fragment, {
+          children: [(0, Cu.jsx)(qu.e, {
+            tooltipInner: (0, Cu.jsx)("div", {
               className: "PublishButtonTooltip",
-              children: Ot("worldBuilder:unpublishAsGameDescription")
+              children: su("worldBuilder:unpublishAsGameDescription")
             }),
-            children: (0, Xt.jsxs)(dt.G, {
-              onClick: et.unpublishSchematic,
-              disabled: ft,
-              children: [(0, Xt.jsx)(mt.b, {
+            children: (0, Cu.jsxs)(lu.R, {
+              onClick: Eu.unpublishSchematic,
+              disabled: Ou,
+              children: [(0, Cu.jsx)(Xu.e, {
                 name: "rocket-launch"
-              }), " ", Ot("worldBuilder:unpublishAsGame"), " ", (0, Xt.jsx)(mt.b, {
+              }), " ", su("worldBuilder:unpublishAsGame"), " ", (0, Cu.jsx)(Xu.e, {
                 name: "info-circle"
               })]
             })
-          }), (0, Xt.jsxs)(dt.f, {
-            onClick: et.playGame,
-            disabled: ft,
-            children: [(0, Xt.jsx)(mt.b, {
+          }), (0, Cu.jsxs)(lu.f, {
+            onClick: Eu.playGame,
+            disabled: Ou,
+            children: [(0, Cu.jsx)(Xu.e, {
               name: "joystick"
-            }), " ", Ot("general:playGame")]
+            }), " ", su("general:playGame")]
           })]
-        }), !lt && (0, Xt.jsx)(Ht.b, {
+        }), !cu && (0, Cu.jsx)(fu.b, {
           loaderType: "Secondary"
         })]
       })
     }
   },
-  5145: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => qt
+  5146: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => Uu
     });
-    var Ot = Vt(1293);
-    async function qt(tt) {
-      const et = await fetch(`${Ot.clientSideServerUrls.s3Url}/${tt}`, {
+    var su = ju(1255);
+    async function Uu(uu) {
+      const Eu = await fetch(`${su.clientSideServerUrls.s3Url}/${uu}`, {
         headers: {
           Accept: "application/json"
         }
       });
-      if (404 === et.status || 403 === et.status) return null;
-      if (!et.ok) throw new Error(`Failed to download the texture pack (${et.status})`);
-      return await et.json()
+      if (404 === Eu.status || 403 === Eu.status) return null;
+      if (!Eu.ok) throw new Error(`Failed to download the texture pack (${Eu.status})`);
+      return await Eu.json()
     }
   },
-  5248: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => yt
+  5234: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => hu
     });
-    var Ot = Vt(63),
-      qt = Vt(1429),
-      Dt = Vt(1103),
-      mt = Vt(184),
-      dt = Vt(1641),
-      jt = Vt(26),
-      Ht = Vt(2024),
-      Xt = Vt(1600),
-      Qt = Vt(4725),
-      lt = Vt(1450),
-      Et = Vt(1218),
-      ft = Vt(1613);
+    var su = ju(58),
+      Uu = ju(1376),
+      Zu = ju(1069),
+      Xu = ju(166),
+      lu = ju(1600),
+      qu = ju(22),
+      fu = ju(1986),
+      Cu = ju(1559),
+      bu = ju(4769),
+      cu = ju(1405),
+      Nu = ju(1178),
+      Ou = ju(1570);
 
-    function wt(tt, et) {
+    function Yu(uu, Eu) {
       return {
-        schematicId: tt.schematicId,
-        name: tt.name,
-        description: tt.description,
-        gamePublished: et,
-        gameCategory: tt.gameCategory,
-        defaultGamemode: tt.defaultGamemode,
-        voidDeathHeight: tt.voidDeathHeight,
-        disableKeepInventory: tt.disableKeepInventory,
-        disableTpRequests: tt.disableTpRequests,
-        disableLobbySpawn: tt.disableLobbySpawn,
-        disableMobs: tt.disableMobs,
-        disableSpawnProtection: tt.disableSpawnProtection,
-        disableFallDamage: tt.disableFallDamage,
-        worldBorder: tt.worldBorder,
-        hideLobbyCode: tt.hideLobbyCode,
-        enableSmpMarketplace: tt.enableSmpMarketplace,
-        enableSurvivalGuns: tt.enableSurvivalGuns,
-        enableSpawnReset: tt.enableSpawnReset,
-        enableDayNight: tt.enableDayNight,
-        persistWorld: tt.persistWorld,
-        persistInventory: tt.persistInventory
+        schematicId: uu.schematicId,
+        name: uu.name,
+        description: uu.description,
+        gamePublished: Eu,
+        gameCategory: uu.gameCategory,
+        defaultGamemode: uu.defaultGamemode,
+        voidDeathHeight: uu.voidDeathHeight,
+        disableKeepInventory: uu.disableKeepInventory,
+        disableTpRequests: uu.disableTpRequests,
+        disableLobbySpawn: uu.disableLobbySpawn,
+        disableMobs: uu.disableMobs,
+        disableSpawnProtection: uu.disableSpawnProtection,
+        disableFallDamage: uu.disableFallDamage,
+        worldBorder: uu.worldBorder,
+        hideLobbyCode: uu.hideLobbyCode,
+        enableSmpMarketplace: uu.enableSmpMarketplace,
+        enableSurvivalGuns: uu.enableSurvivalGuns,
+        enableSpawnReset: uu.enableSpawnReset,
+        enableDayNight: uu.enableDayNight,
+        persistWorld: uu.persistWorld,
+        persistInventory: uu.persistInventory
       }
     }
 
-    function yt(tt) {
+    function hu(uu) {
       let {
-        onNavigateAway: et,
-        inSourceWorld: Vt = !1
+        onNavigateAway: Eu,
+        inSourceWorld: ju = !1
       } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
       const {
-        userContext: yt
-      } = (0, Et.d)(), Nt = (0, ft.useNavigatePreserveSearch)(), [Mt, bt] = (0, Ot.useState)({
-        ...tt
-      }), [Jt, Ct] = (0, Ot.useState)("Enter"), [ut, Kt] = (0, Ot.useState)(void 0), ht = (0, Ot.useRef)(wt(tt, tt.gamePublished)), vt = (0, Ot.useRef)(void 0), Wt = "Enter" === Jt, St = yt.playerHasRank("developer") || yt.playerHasRank("admin") || "Enter" === Jt && !1 !== Mt.schematicContainsSpawnBlock, ct = void 0 !== ut && ut !== vt.current || JSON.stringify(wt(Mt, Mt.gamePublished)) !== JSON.stringify(ht.current);
+        userContext: hu
+      } = (0, Nu.c)(), Du = (0, Ou.useNavigatePreserveSearch)(), [gu, Mu] = (0, su.useState)({
+        ...uu
+      }), [eu, Gu] = (0, su.useState)("Enter"), [pu, wu] = (0, su.useState)(void 0), Ju = (0, su.useRef)(Yu(uu, uu.gamePublished)), du = (0, su.useRef)(void 0), au = "Enter" === eu, Pu = hu.playerHasRank("developer") || hu.playerHasRank("admin") || "Enter" === eu && !1 !== gu.schematicContainsSpawnBlock, ou = void 0 !== pu && pu !== du.current || JSON.stringify(Yu(gu, gu.gamePublished)) !== JSON.stringify(Ju.current);
 
-      function Rt(tt, et) {
-        bt((Vt => ({
-          ...Vt,
-          [tt]: et
+      function ku(uu, Eu) {
+        Mu((ju => ({
+          ...ju,
+          [uu]: Eu
         })))
       }
-      const It = (0, Ot.useCallback)((tt => {
-        vt.current = tt, Kt(tt)
+      const mu = (0, su.useCallback)((uu => {
+        du.current = uu, wu(uu)
       }), []);
 
-      function Pt(tt) {
-        Ct("Loading");
-        const et = wt(Mt, tt),
-          Vt = ut !== vt.current ? ut : void 0;
-        Xt.e.updateSchematic(yt, et, Vt).then((Vt => {
+      function vu(uu) {
+        Gu("Loading");
+        const Eu = Yu(gu, uu),
+          ju = pu !== du.current ? pu : void 0;
+        Cu.b.updateSchematic(hu, Eu, ju).then((ju => {
           let {
-            customTexturePackKey: Ot
-          } = Vt;
-          Ct("Success"), Rt("customTexturePackKey", Ot), ht.current = et, vt.current = void 0, Kt(void 0), setTimeout((() => {
-            Rt("gamePublished", tt), Ct("Enter")
+            customTexturePackKey: su
+          } = ju;
+          Gu("Success"), ku("customTexturePackKey", su), Ju.current = Eu, du.current = void 0, wu(void 0), setTimeout((() => {
+            ku("gamePublished", uu), Gu("Enter")
           }), 1e3)
-        })).catch((tt => {
-          var et;
-          (console.error("Failed to save schematic:", tt), Ct("Error"), tt instanceof mt.e && tt.errorMessageForUser) && lt.NotificationProvider.showAlertPopup({
+        })).catch((uu => {
+          var Eu;
+          (console.error("Failed to save schematic:", uu), Gu("Error"), uu instanceof Xu.b && uu.errorMessageForUser) && cu.NotificationProvider.showAlertPopup({
             title: "worldBuilder:changesNotSaved",
-            subtitle: tt.errorMessageForUser,
+            subtitle: uu.errorMessageForUser,
             textOpts: {
-              subtitle: null !== (et = tt.errorMessageTranslationParams) && void 0 !== et ? et : void 0
+              subtitle: null !== (Eu = uu.errorMessageTranslationParams) && void 0 !== Eu ? Eu : void 0
             },
             confirmText: "general:ok"
           });
           setTimeout((() => {
-            Ct("Enter")
+            Gu("Enter")
           }), 1e3)
         }))
       }
       return {
-        schematicData: Mt,
-        updateSchematicData: Rt,
-        setTexturePack: Kt,
-        initializeTexturePack: It,
-        updateState: Jt,
-        formEnabled: Wt,
-        publishFormEnabled: St,
-        hasUnsavedChanges: ct,
-        canEditSourceWorld: !Vt,
-        saveSchematic: Pt,
+        schematicData: gu,
+        updateSchematicData: ku,
+        setTexturePack: wu,
+        initializeTexturePack: mu,
+        updateState: eu,
+        formEnabled: au,
+        publishFormEnabled: Pu,
+        hasUnsavedChanges: ou,
+        canEditSourceWorld: !ju,
+        saveSchematic: vu,
         unpublishSchematic: function() {
-          lt.NotificationProvider.showPromptPopup({
+          cu.NotificationProvider.showPromptPopup({
             icon: "rocket-launch",
             title: "worldBuilder:unpublishAsGameConfirmTitle",
             subtitle: "worldBuilder:unpublishAsGameConfirmSubtitle",
             confirmText: "worldBuilder:unpublishAsGame",
             cancelText: "general:cancel",
             unlockPointerKey: "unpublishGamePrompt"
-          }).getResult().then((tt => {
-            !0 === tt && Pt(!1)
+          }).getResult().then((uu => {
+            !0 === uu && vu(!1)
           }))
         },
         editSourceWorld: function() {
-          Ct("Loading"), Qt.e.getSourceWorld(Mt.schematicId).then((tt => {
-            Ht.gameBridge.send("leaveGame", {
+          Gu("Loading"), bu.d.getSourceWorld(gu.schematicId).then((uu => {
+            fu.gameBridge.send("leaveGame", {
               reloadPath: "/"
-            }), (0, jt.i)("other"), Nt((0, qt.c)("classic", tt)), null === et || void 0 === et || et()
-          })).catch((tt => {
-            console.error("Failed to get source world:", tt), Ct("Error"), setTimeout((() => {
-              Ct("Enter")
+            }), (0, qu.j)("other"), Du((0, Uu.c)("classic", uu)), null === Eu || void 0 === Eu || Eu()
+          })).catch((uu => {
+            console.error("Failed to get source world:", uu), Gu("Error"), setTimeout((() => {
+              Gu("Enter")
             }), 1e3)
           }))
         },
         playGame: function() {
-          Ht.gameBridge.send("leaveGame", {
+          fu.gameBridge.send("leaveGame", {
             reloadPath: "/"
-          }), Nt((0, dt.v)((0, Dt.u)(Mt.schematicId), Mt)), null === et || void 0 === et || et()
+          }), Du((0, lu.F)((0, Zu.w)(gu.schematicId), gu)), null === Eu || void 0 === Eu || Eu()
         }
       }
     }
   },
-  5108: () => {}
+  5105: () => {}
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

@@ -1,106 +1,106 @@
 export const id = 116;
 export const ids = [116, 118, 138, 139];
 export const modules = {
-  5216: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => Ot.k,
-      g: () => qt,
-      h: () => Ot.s
+  5206: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => su.h,
+      h: () => Uu,
+      k: () => su.o
     });
-    var Ot = Vt(5223);
-    const qt = [!1, !0].flatMap((tt => ["terrain", "liquid", "model"].map((et => ({
-      strict: tt,
-      program: et
+    var su = ju(5209);
+    const Uu = [!1, !0].flatMap((uu => ["terrain", "liquid", "model"].map((Eu => ({
+      strict: uu,
+      program: Eu
     })))))
   },
-  6866: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      forgetShaderPackActiveHint: () => ct,
-      isOtherApiVersion: () => ht,
-      isShaderPackActive: () => Jt,
-      isShaderPackChangePending: () => Kt,
-      markShaderPackChangePending: () => ut,
-      pageShaderPackValidationVersion: () => vt,
-      reconcileStoredShaderPackHint: () => St,
-      removeShaderPack: () => bt,
-      replaceShaderPack: () => yt,
-      saveShaderPack: () => wt,
-      shaderPackNeedsCheck: () => Wt,
-      storedPackOutcome: () => Ct,
-      storedShaderPackFiles: () => lt,
-      toStoredShaderPack: () => Qt
+  6851: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      forgetShaderPackActiveHint: () => ou,
+      isOtherApiVersion: () => Ju,
+      isShaderPackActive: () => eu,
+      isShaderPackChangePending: () => wu,
+      markShaderPackChangePending: () => pu,
+      pageShaderPackValidationVersion: () => du,
+      reconcileStoredShaderPackHint: () => Pu,
+      removeShaderPack: () => Mu,
+      replaceShaderPack: () => hu,
+      saveShaderPack: () => Yu,
+      shaderPackNeedsCheck: () => au,
+      storedPackOutcome: () => Gu,
+      storedShaderPackFiles: () => cu,
+      toStoredShaderPack: () => bu
     });
-    var Ot = Vt(5223),
-      qt = Vt(5216),
-      Dt = Vt(39),
-      mt = Vt(3524),
-      dt = Vt(6873),
-      jt = Vt(6830);
-    const Ht = "shaderPackChangePending";
-    let Xt = null;
+    var su = ju(5209),
+      Uu = ju(5206),
+      Zu = ju(31),
+      Xu = ju(3651),
+      lu = ju(6854),
+      qu = ju(6827);
+    const fu = "shaderPackChangePending";
+    let Cu = null;
 
-    function Qt(tt, et, Vt) {
+    function bu(uu, Eu, ju) {
       return {
-        manifest: tt.manifest,
-        files: (0, Ot.C)(tt.files),
-        validation: et,
-        ...Vt && {
-          listing: Vt
+        manifest: uu.manifest,
+        files: (0, su.w)(uu.files),
+        validation: Eu,
+        ...ju && {
+          listing: ju
         }
       }
     }
 
-    function lt(tt) {
-      return Object.keys(tt.files).map((et => ({
-        path: et,
-        source: tt.files[et]
+    function cu(uu) {
+      return Object.keys(uu.files).map((Eu => ({
+        path: Eu,
+        source: uu.files[Eu]
       })))
     }
-    let Et = Promise.resolve();
+    let Nu = Promise.resolve();
 
-    function ft(tt) {
-      const et = Et.then(tt);
-      return Et = et.catch((() => {})), et
-    }
-
-    function wt(tt, et) {
-      return ft((() => Nt(tt, et)))
+    function Ou(uu) {
+      const Eu = Nu.then(uu);
+      return Nu = Eu.catch((() => {})), Eu
     }
 
-    function yt(tt, et, Vt) {
-      return ft((async () => JSON.stringify(await (0, dt.g)()) === JSON.stringify(tt) && (null === et ? (await Mt(), !0) : Nt(et, Vt))))
-    }
-    async function Nt(tt, et) {
-      const Vt = await Dt.c.setItem(dt.e, tt);
-      return Vt && Rt(tt, et), Vt
-    }
-    async function Mt() {
-      await Dt.c.removeItem(dt.e), Dt.e.removeItem(mt.e)
+    function Yu(uu, Eu) {
+      return Ou((() => Du(uu, Eu)))
     }
 
-    function bt() {
-      return ft(Mt)
+    function hu(uu, Eu, ju) {
+      return Ou((async () => JSON.stringify(await (0, lu.e)()) === JSON.stringify(uu) && (null === Eu ? (await gu(), !0) : Du(Eu, ju))))
+    }
+    async function Du(uu, Eu) {
+      const ju = await Zu.h.setItem(lu.b, uu);
+      return ju && ku(uu, Eu), ju
+    }
+    async function gu() {
+      await Zu.h.removeItem(lu.b), Zu.k.removeItem(Xu.c)
     }
 
-    function Jt(tt, et) {
-      return "active" === Ct(tt, et).kind
+    function Mu() {
+      return Ou(gu)
     }
 
-    function Ct(tt, et) {
-      var Vt;
-      return null === tt ? {
+    function eu(uu, Eu) {
+      return "active" === Gu(uu, Eu).kind
+    }
+
+    function Gu(uu, Eu) {
+      var ju;
+      return null === uu ? {
         kind: "none",
         reason: "nothingStored"
-      } : ht(tt) ? {
+      } : Ju(uu) ? {
         kind: "none",
         reason: "otherApiVersion"
-      } : !1 !== (null === (Vt = tt.validation) || void 0 === Vt ? void 0 : Vt.ok) || tt.validation.fromRecheck ? null === et ? {
+      } : !1 !== (null === (ju = uu.validation) || void 0 === ju ? void 0 : ju.ok) || uu.validation.fromRecheck ? null === Eu ? {
         kind: "none",
         reason: "noCompiler"
-      } : Wt(tt, et) ? {
+      } : au(uu, Eu) ? {
         kind: "blocked",
         messageKey: "shaderPack:failedUnchecked"
-      } : tt.validation.ok ? {
+      } : uu.validation.ok ? {
         kind: "active"
       } : {
         kind: "blocked",
@@ -111,263 +111,263 @@ export const modules = {
       }
     }
 
-    function ut() {
-      Dt.h.setItem(Ht, performance.timeOrigin)
+    function pu() {
+      Zu.l.setItem(fu, performance.timeOrigin)
     }
 
-    function Kt() {
-      return Dt.h.getItem(Ht) === performance.timeOrigin
+    function wu() {
+      return Zu.l.getItem(fu) === performance.timeOrigin
     }
 
-    function ht(tt) {
-      return !(0, qt.h)(tt.manifest.apiVersion)
+    function Ju(uu) {
+      return !(0, Uu.k)(uu.manifest.apiVersion)
     }
 
-    function vt(tt) {
-      return Xt ??= tt.yI((0, jt.shaderPackTextures)()), Xt
+    function du(uu) {
+      return Cu ??= uu.fV((0, qu.shaderPackTextures)()), Cu
     }
 
-    function Wt(tt, et) {
-      var Vt;
-      return (null === (Vt = tt.validation) || void 0 === Vt ? void 0 : Vt.headerVersion) !== vt(et)
+    function au(uu, Eu) {
+      var ju;
+      return (null === (ju = uu.validation) || void 0 === ju ? void 0 : ju.headerVersion) !== du(Eu)
     }
 
-    function St(tt) {
-      return ft((async () => {
-        Rt(await (0, dt.g)(!0), tt)
+    function Pu(uu) {
+      return Ou((async () => {
+        ku(await (0, lu.e)(!0), uu)
       }))
     }
 
-    function ct() {
-      return ft((async () => {
-        Dt.e.removeItem(mt.e)
+    function ou() {
+      return Ou((async () => {
+        Zu.k.removeItem(Xu.c)
       }))
     }
 
-    function Rt(tt, et) {
-      Jt(tt, et) ? Dt.e.setItem(mt.e, !0) : Dt.e.removeItem(mt.e)
+    function ku(uu, Eu) {
+      eu(uu, Eu) ? Zu.k.setItem(Xu.c, !0) : Zu.k.removeItem(Xu.c)
     }
   },
-  6873: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => qt,
-      g: () => Dt
+  6854: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => Uu,
+      e: () => Zu
     });
-    var Ot = Vt(39);
-    const qt = "shaderPack";
-    async function Dt() {
-      var tt;
-      let et = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (tt = await Ot.c.getItem(qt, et)) && void 0 !== tt ? tt : null
+    var su = ju(31);
+    const Uu = "shaderPack";
+    async function Zu() {
+      var uu;
+      let Eu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (uu = await su.h.getItem(Uu, Eu)) && void 0 !== uu ? uu : null
     }
   },
-  6830: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      loadShaderPackTextures: () => mt,
-      shaderPackTextures: () => dt
+  6827: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      loadShaderPackTextures: () => Xu,
+      shaderPackTextures: () => lu
     });
-    var Ot = Vt(5223);
-    let qt = null,
-      Dt = null;
+    var su = ju(5209);
+    let Uu = null,
+      Zu = null;
 
-    function mt() {
-      return Dt ??= Promise.all([Vt.e(73), Vt.e(190)]).then((() => Vt(40674))).then((tt => {
+    function Xu() {
+      return Zu ??= Promise.all([ju.e(73), ju.e(190)]).then((() => ju(40746))).then((uu => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: et,
-          textureNameToIndex: Vt,
-          textureAnimationData: Dt
-        } = tt;
-        return qt ??= (0, Ot.m)(Vt, Dt, et), qt
-      })), Dt
+          FORMER_BLOCK_IMAGE_NAMES: Eu,
+          textureNameToIndex: ju,
+          textureAnimationData: Zu
+        } = uu;
+        return Uu ??= (0, su.j)(ju, Zu, Eu), Uu
+      })), Zu
     }
 
-    function dt() {
-      if (null === qt) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return qt
+    function lu() {
+      if (null === Uu) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return Uu
     }
   },
-  5223: (tt, et, Vt) => {
-    Vt.d(et, {
-      C: () => Xt,
-      E: () => lt,
-      e: () => dt,
-      h: () => mt,
-      k: () => Ot,
-      m: () => wt,
-      p: () => Qt,
-      s: () => qt,
-      u: () => Dt,
-      y: () => Ht
+  5209: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      A: () => cu,
+      c: () => lu,
+      e: () => Xu,
+      h: () => su,
+      j: () => Yu,
+      k: () => bu,
+      o: () => Uu,
+      p: () => Zu,
+      s: () => fu,
+      w: () => Cu
     });
-    const Ot = 5;
+    const su = 5;
 
-    function qt(tt) {
-      return tt === Ot
+    function Uu(uu) {
+      return uu === su
     }
 
-    function Dt(tt) {
-      return [...tt.features]
+    function Zu(uu) {
+      return [...uu.features]
     }
-    const mt = 262144,
-      dt = 256,
-      jt = 256;
+    const Xu = 262144,
+      lu = 256,
+      qu = 256;
 
-    function Ht(tt) {
-      if ("object" !== typeof tt || null === tt || Array.isArray(tt)) return "The pack has no files.";
-      const et = [];
-      for (const [Vt, Ot] of Object.entries(tt)) {
-        if ("string" !== typeof Ot) return `${Vt} isn't text.`;
-        et.push({
-          path: Vt,
-          source: Ot
+    function fu(uu) {
+      if ("object" !== typeof uu || null === uu || Array.isArray(uu)) return "The pack has no files.";
+      const Eu = [];
+      for (const [ju, su] of Object.entries(uu)) {
+        if ("string" !== typeof su) return `${ju} isn't text.`;
+        Eu.push({
+          path: ju,
+          source: su
         })
       }
-      return et.sort(((tt, et) => Qt(tt.path, et.path))),
-        function(tt) {
-          if (0 === tt.length) return "The pack has no .wgsl files.";
-          if (tt.length > dt) return `The pack has more than ${dt} .wgsl files.`;
-          const et = new Set;
+      return Eu.sort(((uu, Eu) => bu(uu.path, Eu.path))),
+        function(uu) {
+          if (0 === uu.length) return "The pack has no .wgsl files.";
+          if (uu.length > lu) return `The pack has more than ${lu} .wgsl files.`;
+          const Eu = new Set;
           for (const {
-              path: Vt
+              path: ju
             }
-            of tt) {
-            const tt = Et(Vt);
-            if (null !== tt) return tt;
-            if (et.has(Vt)) return `The pack has two files at ${Vt}.`;
-            et.add(Vt)
+            of uu) {
+            const uu = Nu(ju);
+            if (null !== uu) return uu;
+            if (Eu.has(ju)) return `The pack has two files at ${ju}.`;
+            Eu.add(ju)
           }
-          return lt(tt) > mt ? `The pack's .wgsl files are over ${mt/1024} KB in total.` : null
-        }(et) ?? et
+          return cu(uu) > Xu ? `The pack's .wgsl files are over ${Xu/1024} KB in total.` : null
+        }(Eu) ?? Eu
     }
 
-    function Xt(tt) {
-      const et = {};
-      for (const Vt of tt) et[Vt.path] = Vt.source;
-      return et
+    function Cu(uu) {
+      const Eu = {};
+      for (const ju of uu) Eu[ju.path] = ju.source;
+      return Eu
     }
 
-    function Qt(tt, et) {
-      return tt < et ? -1 : tt > et ? 1 : 0
+    function bu(uu, Eu) {
+      return uu < Eu ? -1 : uu > Eu ? 1 : 0
     }
 
-    function lt(tt) {
-      const et = new TextEncoder;
-      let Vt = 0;
+    function cu(uu) {
+      const Eu = new TextEncoder;
+      let ju = 0;
       for (const {
-          source: Ot
+          source: su
         }
-        of tt) Vt += et.encode(Ot).byteLength;
-      return Vt
+        of uu) ju += Eu.encode(su).byteLength;
+      return ju
     }
 
-    function Et(tt) {
-      if (!tt.toLowerCase().endsWith(".wgsl")) return `${tt} isn't a .wgsl file.`;
-      if (tt.length > jt) return `A file path is over ${jt} characters.`;
-      if (tt.includes("\\") || /[\u0000-\u001f]/.test(tt)) return `${tt} isn't a valid file path.`;
-      return tt.split("/").some((tt => "" === tt || "." === tt || ".." === tt)) ? `${tt} isn't a valid file path.` : null
+    function Nu(uu) {
+      if (!uu.toLowerCase().endsWith(".wgsl")) return `${uu} isn't a .wgsl file.`;
+      if (uu.length > qu) return `A file path is over ${qu} characters.`;
+      if (uu.includes("\\") || /[\u0000-\u001f]/.test(uu)) return `${uu} isn't a valid file path.`;
+      return uu.split("/").some((uu => "" === uu || "." === uu || ".." === uu)) ? `${uu} isn't a valid file path.` : null
     }
-    const ft = /^(.*)\[rot\[([1-4])$/;
+    const Ou = /^(.*)\[rot\[([1-4])$/;
 
-    function wt(tt, et) {
-      let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const Ot = new Map;
-      et.forEach(((tt, et) => {
+    function Yu(uu, Eu) {
+      let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const su = new Map;
+      Eu.forEach(((uu, Eu) => {
         let {
-          numAnimStates: Vt,
-          animStartIdx: qt
-        } = tt;
-        for (let Dt = 1; Dt < Vt; Dt++) Ot.set(qt + Dt - 1, et)
+          numAnimStates: ju,
+          animStartIdx: Uu
+        } = uu;
+        for (let Zu = 1; Zu < ju; Zu++) su.set(Uu + Zu - 1, Eu)
       }));
-      const qt = Object.entries(tt),
-        Dt = new Map;
-      for (const [wt, yt] of qt) {
-        const tt = ft.exec(wt);
-        "1" === tt?.[2] && Dt.set(tt[1], yt + 1)
+      const Uu = Object.entries(uu),
+        Zu = new Map;
+      for (const [Yu, hu] of Uu) {
+        const uu = Ou.exec(Yu);
+        "1" === uu?.[2] && Zu.set(uu[1], hu + 1)
       }
-      const mt = tt => {
-          const et = ft.exec(tt);
-          return et && Dt.has(et[1]) ? {
-            root: et[1],
-            rotation: Number(et[2]) - 1
+      const Xu = uu => {
+          const Eu = Ou.exec(uu);
+          return Eu && Zu.has(Eu[1]) ? {
+            root: Eu[1],
+            rotation: Number(Eu[2]) - 1
           } : null
         },
-        dt = new Set(qt.map((tt => {
-          let [et] = tt;
-          return mt(et)?.root ?? et
+        lu = new Set(Uu.map((uu => {
+          let [Eu] = uu;
+          return Xu(Eu)?.root ?? Eu
         }))),
-        jt = (tt, Vt) => {
-          const Ot = tt.replace(/_?0$/, "");
-          return (et[Vt]?.numAnimStates ?? 0) > 1 && !dt.has(Ot) ? Ot : tt
+        qu = (uu, ju) => {
+          const su = uu.replace(/_?0$/, "");
+          return (Eu[ju]?.numAnimStates ?? 0) > 1 && !lu.has(su) ? su : uu
         },
-        Ht = new Map;
-      for (const [ft, wt] of qt) Ht.set(wt, jt(mt(ft)?.root ?? ft, wt));
-      const Xt = qt.reduce(((tt, et) => {
-          let [, Vt] = et;
-          return Math.max(tt, Vt + 1)
+        fu = new Map;
+      for (const [Ou, Yu] of Uu) fu.set(Yu, qu(Xu(Ou)?.root ?? Ou, Yu));
+      const Cu = Uu.reduce(((uu, Eu) => {
+          let [, ju] = Eu;
+          return Math.max(uu, ju + 1)
         }), 0),
-        Qt = Array.from({
-          length: Xt
-        }, ((tt, et) => ({
-          id: et + 1,
+        bu = Array.from({
+          length: Cu
+        }, ((uu, Eu) => ({
+          id: Eu + 1,
           rotation: 0
         }))),
-        lt = new Map,
-        Et = new Map;
-      for (const [ft, wt] of qt) {
-        const tt = mt(ft),
-          et = Ot.get(wt);
-        if (void 0 !== et) {
-          const Vt = Ht.get(et);
-          Et.set(ft, {
-            name: ft,
-            texture: Vt,
+        cu = new Map,
+        Nu = new Map;
+      for (const [Ou, Yu] of Uu) {
+        const uu = Xu(Ou),
+          Eu = su.get(Yu);
+        if (void 0 !== Eu) {
+          const ju = fu.get(Eu);
+          Nu.set(Ou, {
+            name: Ou,
+            texture: ju,
             kind: "frame"
-          }), tt && !Et.has(tt.root) && Et.set(tt.root, {
-            name: tt.root,
-            texture: Vt,
+          }), uu && !Nu.has(uu.root) && Nu.set(uu.root, {
+            name: uu.root,
+            texture: ju,
             kind: "frame"
           });
           continue
         }
-        const Vt = Ht.get(wt),
-          qt = tt?.root ?? ft;
-        if (Vt !== qt && Et.set(qt, {
-            name: qt,
-            texture: Vt,
+        const ju = fu.get(Yu),
+          Uu = uu?.root ?? Ou;
+        if (ju !== Uu && Nu.set(Uu, {
+            name: Uu,
+            texture: ju,
             kind: "frame"
-          }), tt) {
-          const et = Dt.get(tt.root);
-          Qt[wt] = {
-            id: et,
-            rotation: tt.rotation
-          }, lt.set(Vt, et), Et.set(ft, {
-            name: ft,
-            texture: Vt,
+          }), uu) {
+          const Eu = Zu.get(uu.root);
+          bu[Yu] = {
+            id: Eu,
+            rotation: uu.rotation
+          }, cu.set(ju, Eu), Nu.set(Ou, {
+            name: Ou,
+            texture: ju,
             kind: "rotation"
           })
-        } else lt.set(Vt, wt + 1)
+        } else cu.set(ju, Yu + 1)
       }
-      for (const ft of lt.keys()) Et.delete(ft);
-      for (const [ft, wt] of Vt) {
-        const tt = lt.get(wt);
-        void 0 === tt || lt.has(ft) || (lt.set(ft, tt), Et.delete(ft))
+      for (const Ou of cu.keys()) Nu.delete(Ou);
+      for (const [Ou, Yu] of ju) {
+        const uu = cu.get(Yu);
+        void 0 === uu || cu.has(Ou) || (cu.set(Ou, uu), Nu.delete(Ou))
       }
       return {
-        named: [...lt].sort(((tt, et) => {
-          let [Vt] = tt, [Ot] = et;
-          return Vt < Ot ? -1 : Vt > Ot ? 1 : 0
-        })).map((tt => {
-          let [et, Vt] = tt;
+        named: [...cu].sort(((uu, Eu) => {
+          let [ju] = uu, [su] = Eu;
+          return ju < su ? -1 : ju > su ? 1 : 0
+        })).map((uu => {
+          let [Eu, ju] = uu;
           return {
-            name: et,
-            id: Vt
+            name: Eu,
+            id: ju
           }
         })),
-        aliases: [...Et.values()],
-        layers: Qt
+        aliases: [...Nu.values()],
+        layers: bu
       }
     }
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

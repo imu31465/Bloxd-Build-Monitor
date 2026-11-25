@@ -1,311 +1,311 @@
 export const id = 221;
 export const ids = [221];
 export const modules = {
-  36635: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => Wt,
-      e: () => St,
-      g: () => bt
+  36784: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => au,
+      g: () => Pu,
+      k: () => Mu
     });
-    var Ot = Vt(318),
-      qt = Vt(106);
-    const Dt = new(Vt(36637).b)(new URL(Vt.p + Vt.u(3), Vt.b), {
+    var su = ju(284),
+      Uu = ju(91);
+    const Zu = new(ju(36792).d)(new URL(ju.p + ju.u(3), ju.b), {
       name: "blockIconWorker",
       type: "module"
     });
-    var mt = Vt(1883),
-      dt = Vt(2214);
-    const jt = 1e4,
-      Ht = 3e4;
-    let Xt = null,
-      Qt = null,
-      lt = null,
-      Et = !1,
-      ft = 0;
-    const wt = new Map;
-    let yt = null;
-    const Nt = new Map,
-      Mt = new Map;
+    var Xu = ju(1843),
+      lu = ju(2230);
+    const qu = 1e4,
+      fu = 3e4;
+    let Cu = null,
+      bu = null,
+      cu = null,
+      Nu = !1,
+      Ou = 0;
+    const Yu = new Map;
+    let hu = null;
+    const Du = new Map,
+      gu = new Map;
 
-    function bt(tt) {
-      const et = new Promise(((et, Vt) => {
-        const Ot = new Image;
-        Ot.crossOrigin = "anonymous", Ot.fetchPriority = "high", Ot.onload = () => {
-          et(Ot)
-        }, Ot.onerror = () => {
-          Vt(new Error(`A block icon's texture did not load: ${tt.slice(0,100)}`))
-        }, Ot.src = tt
+    function Mu(uu) {
+      const Eu = new Promise(((Eu, ju) => {
+        const su = new Image;
+        su.crossOrigin = "anonymous", su.fetchPriority = "high", su.onload = () => {
+          Eu(su)
+        }, su.onerror = () => {
+          ju(new Error(`A block icon's texture did not load: ${uu.slice(0,100)}`))
+        }, su.src = uu
       }));
-      return (0, dt.f)(et)
+      return (0, lu.d)(Eu)
     }
 
-    function Jt(tt) {
-      var et, Vt;
-      Et || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${tt}`), Et = !0, null === (et = Xt) || void 0 === et || et.terminate(), Xt = null, Qt = null, Nt.clear(), Mt.clear();
-      for (const Ot of wt.values()) Ot(null);
-      wt.clear(), null === (Vt = yt) || void 0 === Vt || Vt()
+    function eu(uu) {
+      var Eu, ju;
+      Nu || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${uu}`), Nu = !0, null === (Eu = Cu) || void 0 === Eu || Eu.terminate(), Cu = null, bu = null, Du.clear(), gu.clear();
+      for (const su of Yu.values()) su(null);
+      Yu.clear(), null === (ju = hu) || void 0 === ju || ju()
     }
 
-    function Ct() {
-      return lt ??= async function() {
+    function Gu() {
+      return cu ??= async function() {
         if ("undefined" === typeof Worker || "undefined" === typeof OffscreenCanvas || "undefined" === typeof createImageBitmap) return;
-        if ("page" === Ot.c.ios_icon_worker_v1 && (0, qt.isWebKit)()) return;
+        if ("page" === su.d.ios_icon_worker_v1 && (0, Uu.isWebKit)()) return;
         try {
-          Xt = await async function() {
-            return await Dt.ready(), Dt.start()
+          Cu = await async function() {
+            return await Zu.ready(), Zu.start()
           }()
-        } catch (dt) {
-          return void Jt(`did not start (${String(dt)})`)
+        } catch (lu) {
+          return void eu(`did not start (${String(lu)})`)
         }
-        let tt = () => {};
-        const et = new Promise((et => {
-          tt = et
+        let uu = () => {};
+        const Eu = new Promise((Eu => {
+          uu = Eu
         }));
-        Xt.onmessage = et => {
+        Cu.onmessage = Eu => {
           let {
-            data: Vt
-          } = et;
-          if ("started" === Vt.type) Qt = Xt, tt();
-          else if ("failed" === Vt.type) Jt(`failed a draw (${Vt.message})`);
+            data: ju
+          } = Eu;
+          if ("started" === ju.type) bu = Cu, uu();
+          else if ("failed" === ju.type) eu(`failed a draw (${ju.message})`);
           else {
-            var Ot, qt;
-            null === (Ot = wt.get(Vt.id)) || void 0 === Ot || Ot(Vt.url), wt.delete(Vt.id), null === (qt = yt) || void 0 === qt || qt()
+            var su, Uu;
+            null === (su = Yu.get(ju.id)) || void 0 === su || su(ju.url), Yu.delete(ju.id), null === (Uu = hu) || void 0 === Uu || Uu()
           }
-        }, Xt.onerror = et => {
-          et.preventDefault(), Jt(`stopped (${et.message||"its script did not load or run"})`), tt()
+        }, Cu.onerror = Eu => {
+          Eu.preventDefault(), eu(`stopped (${Eu.message||"its script did not load or run"})`), uu()
         };
-        const Vt = `did not start in ${Ht/1e3} s`;
-        await (0, mt.h)(et, Ht, Vt).catch((() => {
-          Jt(Vt)
+        const ju = `did not start in ${fu/1e3} s`;
+        await (0, Xu.i)(Eu, fu, ju).catch((() => {
+          eu(ju)
         }))
-      }(), lt
+      }(), cu
     }
 
-    function ut() {
-      if (null !== yt || 0 === wt.size) return;
-      const tt = new Promise((tt => {
-          yt = tt
+    function pu() {
+      if (null !== hu || 0 === Yu.size) return;
+      const uu = new Promise((uu => {
+          hu = uu
         })),
-        et = `did not answer in ${jt/1e3} s`;
-      (0, mt.h)(tt, jt, et).then((() => {
-        yt = null, ut()
+        Eu = `did not answer in ${qu/1e3} s`;
+      (0, Xu.i)(uu, qu, Eu).then((() => {
+        hu = null, pu()
       }), (() => {
-        yt = null, Jt(et)
+        hu = null, eu(Eu)
       }))
     }
 
-    function Kt(tt, et) {
-      let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      tt.postMessage(et, Vt)
+    function wu(uu, Eu) {
+      let ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      uu.postMessage(Eu, ju)
     }
 
-    function ht(tt, et, Vt, Ot) {
-      let qt = et.get(Vt);
-      return void 0 === qt && (qt = Ot().then((async et => {
+    function Ju(uu, Eu, ju, su) {
+      let Uu = Eu.get(ju);
+      return void 0 === Uu && (Uu = su().then((async Eu => {
         let {
-          image: Vt,
-          request: Ot
-        } = et;
+          image: ju,
+          request: su
+        } = Eu;
         try {
-          const et = await createImageBitmap(Vt);
-          Kt(tt, Ot(et), [et])
-        } catch (qt) {
-          Jt(`could not take an image (${String(qt)})`)
+          const Eu = await createImageBitmap(ju);
+          wu(uu, su(Eu), [Eu])
+        } catch (Uu) {
+          eu(`could not take an image (${String(Uu)})`)
         }
-      })), qt.catch((() => {
-        et.get(Vt) === qt && et.delete(Vt)
-      })), et.set(Vt, qt)), qt
+      })), Uu.catch((() => {
+        Eu.get(ju) === Uu && Eu.delete(ju)
+      })), Eu.set(ju, Uu)), Uu
     }
-    async function vt(tt, et) {
-      Ct();
-      const Vt = Qt;
-      if (null === Vt) return null;
-      if (await tt(Vt), Qt !== Vt) return null;
-      const Ot = ++ft;
-      return new Promise((tt => {
-        wt.set(Ot, tt), Kt(Vt, et(Ot)), ut()
+    async function du(uu, Eu) {
+      Gu();
+      const ju = bu;
+      if (null === ju) return null;
+      if (await uu(ju), bu !== ju) return null;
+      const su = ++Ou;
+      return new Promise((uu => {
+        Yu.set(su, uu), wu(ju, Eu(su)), pu()
       }))
     }
 
-    function Wt(tt, et, Vt) {
-      return vt((et => Promise.all([tt.top, tt.left, tt.right].map((tt => function(tt, et) {
-        return ht(tt, Nt, et, (async () => ({
-          image: await bt(et),
-          request: tt => ({
+    function au(uu, Eu, ju) {
+      return du((Eu => Promise.all([uu.top, uu.left, uu.right].map((uu => function(uu, Eu) {
+        return Ju(uu, Du, Eu, (async () => ({
+          image: await Mu(Eu),
+          request: uu => ({
             type: "texture",
-            url: et,
-            bitmap: tt
+            url: Eu,
+            bitmap: uu
           })
         })))
-      }(et, tt))))), (Ot => ({
+      }(Eu, uu))))), (su => ({
         type: "draw",
-        id: Ot,
-        ...tt,
-        size: et,
-        outlineWidth: Vt
+        id: su,
+        ...uu,
+        size: Eu,
+        outlineWidth: ju
       })))
     }
 
-    function St(tt, et, Vt, Ot) {
-      return vt((Vt => function(tt, et, Vt) {
-        return ht(tt, Mt, et, (async () => {
+    function Pu(uu, Eu, ju, su) {
+      return du((ju => function(uu, Eu, ju) {
+        return Ju(uu, gu, Eu, (async () => {
           const {
-            texture: tt,
-            ...Ot
-          } = await Vt();
+            texture: uu,
+            ...su
+          } = await ju();
           return {
-            image: await bt(tt),
-            request: tt => ({
+            image: await Mu(uu),
+            request: uu => ({
               type: "model",
-              name: et,
-              bitmap: tt,
-              geometry: Ot
+              name: Eu,
+              bitmap: uu,
+              geometry: su
             })
           }
         }))
-      }(Vt, tt, et)), (et => ({
+      }(ju, uu, Eu)), (Eu => ({
         type: "drawModel",
-        id: et,
-        name: tt,
-        size: Vt,
-        outlineWidth: Ot
+        id: Eu,
+        name: uu,
+        size: ju,
+        outlineWidth: su
       })))
     }
   },
-  36632: (tt, et, Vt) => {
-    Vt.d(et, {
-      d: () => Ot,
-      h: () => jt,
-      l: () => mt,
-      o: () => lt,
-      s: () => Ht
+  36779: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => su,
+      e: () => qu,
+      f: () => Xu,
+      j: () => cu,
+      m: () => fu
     });
-    const Ot = {
+    const su = {
         across: Math.SQRT1_2,
         down: Math.SQRT1_2 / 2,
         up: Math.sqrt(3) / 2
       },
-      qt = .6,
-      Dt = {
-        width: 2 * Ot.across,
-        height: 2 * Ot.down + Ot.up
+      Uu = .6,
+      Zu = {
+        width: 2 * su.across,
+        height: 2 * su.down + su.up
       };
 
-    function mt(tt, et) {
-      const Vt = et > 0 ? et + 1 : 0,
-        mt = tt * qt - et / Ot.across;
-      return Math.max(0, Math.min(mt, (tt - 2 * Vt) / Dt.height))
+    function Xu(uu, Eu) {
+      const ju = Eu > 0 ? Eu + 1 : 0,
+        Xu = uu * Uu - Eu / su.across;
+      return Math.max(0, Math.min(Xu, (uu - 2 * ju) / Zu.height))
     }
-    const dt = [15, 15, 15],
-      jt = {
+    const lu = [15, 15, 15],
+      qu = {
         top: 1,
         left: .85,
         right: .7
       };
 
-    function Ht(tt, et, Vt, Ot) {
+    function fu(uu, Eu, ju, su) {
       const {
-        vertices: qt,
-        uvs: dt,
-        indices: jt,
-        shades: Ht
-      } = tt, Xt = function(tt, et) {
-        const Vt = mt(tt, et),
-          Ot = Dt.width * Vt,
-          qt = Dt.height * Vt;
+        vertices: Uu,
+        uvs: lu,
+        indices: qu,
+        shades: fu
+      } = uu, Cu = function(uu, Eu) {
+        const ju = Xu(uu, Eu),
+          su = Zu.width * ju,
+          Uu = Zu.height * ju;
         return {
-          left: (tt - Ot) / 2,
-          top: (tt - qt) / 2,
-          width: Ot,
-          height: qt
+          left: (uu - su) / 2,
+          top: (uu - Uu) / 2,
+          width: su,
+          height: Uu
         }
-      }(Vt, Ot), Qt = new Float32Array(qt.length);
-      for (let Dt = 0; Dt < qt.length; Dt += 3) Qt[Dt] = Xt.left + qt[Dt] * Xt.width, Qt[Dt + 1] = Xt.top + qt[Dt + 1] * Xt.height, Qt[Dt + 2] = qt[Dt + 2];
-      const Et = new Float32Array(Vt * Vt).fill(-1 / 0),
-        ft = new Uint8ClampedArray(Vt * Vt * 4),
-        wt = 255 * tt.alphaCutoff;
-      for (let Dt = 0; Dt < jt.length; Dt += 3) {
-        const [tt, Ot, qt] = [jt[Dt], jt[Dt + 1], jt[Dt + 2]], [mt, Xt, lt] = [3 * tt, 3 * Ot, 3 * qt], [yt, Nt, Mt, bt, Jt, Ct] = [Qt[mt], Qt[mt + 1], Qt[Xt], Qt[Xt + 1], Qt[lt], Qt[lt + 1]], ut = (Mt - yt) * (Ct - Nt) - (Jt - yt) * (bt - Nt);
-        if (Math.abs(ut) < 1e-9) continue;
-        const Kt = Ht[Dt / 3],
-          [ht, vt, Wt, St, ct, Rt] = [dt[2 * tt], dt[2 * tt + 1], dt[2 * Ot], dt[2 * Ot + 1], dt[2 * qt], dt[2 * qt + 1]],
-          It = Math.max(0, Math.floor(Math.min(yt, Mt, Jt))),
-          Pt = Math.min(Vt - 1, Math.ceil(Math.max(yt, Mt, Jt))),
-          Zt = Math.max(0, Math.floor(Math.min(Nt, bt, Ct))),
-          Lt = Math.min(Vt - 1, Math.ceil(Math.max(Nt, bt, Ct)));
-        for (let Dt = Zt; Dt <= Lt; Dt++)
-          for (let tt = It; tt <= Pt; tt++) {
-            const [Ot, qt] = [tt + .5, Dt + .5], dt = ((Ot - yt) * (Ct - Nt) - (Jt - yt) * (qt - Nt)) / ut, jt = ((Mt - yt) * (qt - Nt) - (Ot - yt) * (bt - Nt)) / ut, Ht = 1 - dt - jt;
-            if (Ht < 0 || dt < 0 || jt < 0) continue;
-            const It = Ht * Qt[mt + 2] + dt * Qt[Xt + 2] + jt * Qt[lt + 2],
-              Pt = Dt * Vt + tt;
-            if (It <= Et[Pt]) continue;
-            const Zt = Math.max(0, Math.min(et.width - 1, Math.floor((Ht * ht + dt * Wt + jt * ct) * et.width))),
-              Lt = 4 * (Math.max(0, Math.min(et.height - 1, Math.floor((Ht * vt + dt * St + jt * Rt) * et.height))) * et.width + Zt);
-            et.pixels[Lt + 3] < wt || (Et[Pt] = It, ft[4 * Pt] = et.pixels[Lt] * Kt, ft[4 * Pt + 1] = et.pixels[Lt + 1] * Kt, ft[4 * Pt + 2] = et.pixels[Lt + 2] * Kt, ft[4 * Pt + 3] = 255)
+      }(ju, su), bu = new Float32Array(Uu.length);
+      for (let Zu = 0; Zu < Uu.length; Zu += 3) bu[Zu] = Cu.left + Uu[Zu] * Cu.width, bu[Zu + 1] = Cu.top + Uu[Zu + 1] * Cu.height, bu[Zu + 2] = Uu[Zu + 2];
+      const Nu = new Float32Array(ju * ju).fill(-1 / 0),
+        Ou = new Uint8ClampedArray(ju * ju * 4),
+        Yu = 255 * uu.alphaCutoff;
+      for (let Zu = 0; Zu < qu.length; Zu += 3) {
+        const [uu, su, Uu] = [qu[Zu], qu[Zu + 1], qu[Zu + 2]], [Xu, Cu, cu] = [3 * uu, 3 * su, 3 * Uu], [hu, Du, gu, Mu, eu, Gu] = [bu[Xu], bu[Xu + 1], bu[Cu], bu[Cu + 1], bu[cu], bu[cu + 1]], pu = (gu - hu) * (Gu - Du) - (eu - hu) * (Mu - Du);
+        if (Math.abs(pu) < 1e-9) continue;
+        const wu = fu[Zu / 3],
+          [Ju, du, au, Pu, ou, ku] = [lu[2 * uu], lu[2 * uu + 1], lu[2 * su], lu[2 * su + 1], lu[2 * Uu], lu[2 * Uu + 1]],
+          mu = Math.max(0, Math.floor(Math.min(hu, gu, eu))),
+          vu = Math.min(ju - 1, Math.ceil(Math.max(hu, gu, eu))),
+          Ku = Math.max(0, Math.floor(Math.min(Du, Mu, Gu))),
+          Vu = Math.min(ju - 1, Math.ceil(Math.max(Du, Mu, Gu)));
+        for (let Zu = Ku; Zu <= Vu; Zu++)
+          for (let uu = mu; uu <= vu; uu++) {
+            const [su, Uu] = [uu + .5, Zu + .5], lu = ((su - hu) * (Gu - Du) - (eu - hu) * (Uu - Du)) / pu, qu = ((gu - hu) * (Uu - Du) - (su - hu) * (Mu - Du)) / pu, fu = 1 - lu - qu;
+            if (fu < 0 || lu < 0 || qu < 0) continue;
+            const mu = fu * bu[Xu + 2] + lu * bu[Cu + 2] + qu * bu[cu + 2],
+              vu = Zu * ju + uu;
+            if (mu <= Nu[vu]) continue;
+            const Ku = Math.max(0, Math.min(Eu.width - 1, Math.floor((fu * Ju + lu * au + qu * ou) * Eu.width))),
+              Vu = 4 * (Math.max(0, Math.min(Eu.height - 1, Math.floor((fu * du + lu * Pu + qu * ku) * Eu.height))) * Eu.width + Ku);
+            Eu.pixels[Vu + 3] < Yu || (Nu[vu] = mu, Ou[4 * vu] = Eu.pixels[Vu] * wu, Ou[4 * vu + 1] = Eu.pixels[Vu + 1] * wu, Ou[4 * vu + 2] = Eu.pixels[Vu + 2] * wu, Ou[4 * vu + 3] = 255)
           }
       }
-      return lt(ft, Vt, Ot), ft
+      return cu(Ou, ju, su), Ou
     }
-    let Xt = NaN,
-      Qt = new Int32Array(0);
+    let Cu = NaN,
+      bu = new Int32Array(0);
 
-    function lt(tt, et, Vt) {
-      let Ot = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : et => 0 !== tt[4 * et + 3];
-      const qt = new Uint8Array(et * et);
-      for (let dt = 0; dt < et * et; dt++) qt[dt] = Ot(dt) ? 1 : 0;
-      const Dt = (tt, Vt) => tt >= 0 && Vt >= 0 && tt < et && Vt < et && 0 === qt[Vt * et + tt],
-        mt = new Float32Array(et * et).fill(1 / 0),
-        jt = function(tt) {
-          if (tt !== Xt) {
-            const et = Math.ceil(tt + 1),
-              Vt = [];
-            for (let Ot = -et; Ot <= et; Ot++)
-              for (let qt = -et; qt <= et; qt++) {
-                const et = qt * qt + Ot * Ot;
-                et > 0 && et < (tt + 1) ** 2 && Vt.push(qt, Ot, et)
+    function cu(uu, Eu, ju) {
+      let su = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Eu => 0 !== uu[4 * Eu + 3];
+      const Uu = new Uint8Array(Eu * Eu);
+      for (let lu = 0; lu < Eu * Eu; lu++) Uu[lu] = su(lu) ? 1 : 0;
+      const Zu = (uu, ju) => uu >= 0 && ju >= 0 && uu < Eu && ju < Eu && 0 === Uu[ju * Eu + uu],
+        Xu = new Float32Array(Eu * Eu).fill(1 / 0),
+        qu = function(uu) {
+          if (uu !== Cu) {
+            const Eu = Math.ceil(uu + 1),
+              ju = [];
+            for (let su = -Eu; su <= Eu; su++)
+              for (let Uu = -Eu; Uu <= Eu; Uu++) {
+                const Eu = Uu * Uu + su * su;
+                Eu > 0 && Eu < (uu + 1) ** 2 && ju.push(Uu, su, Eu)
               }
-            Xt = tt, Qt = Int32Array.from(Vt)
+            Cu = uu, bu = Int32Array.from(ju)
           }
-          return Qt
-        }(Vt);
-      for (let dt = 0; dt < et; dt++)
-        for (let tt = 0; tt < et; tt++) {
-          if (1 === qt[dt * et + tt] && (Dt(tt - 1, dt) || Dt(tt + 1, dt) || Dt(tt, dt - 1) || Dt(tt, dt + 1)))
-            for (let Vt = 0; Vt < jt.length; Vt += 3) {
-              const Ot = tt + jt[Vt],
-                qt = dt + jt[Vt + 1];
-              if (Ot >= 0 && qt >= 0 && Ot < et && qt < et) {
-                const tt = qt * et + Ot;
-                mt[tt] = Math.min(mt[tt], jt[Vt + 2])
+          return bu
+        }(ju);
+      for (let lu = 0; lu < Eu; lu++)
+        for (let uu = 0; uu < Eu; uu++) {
+          if (1 === Uu[lu * Eu + uu] && (Zu(uu - 1, lu) || Zu(uu + 1, lu) || Zu(uu, lu - 1) || Zu(uu, lu + 1)))
+            for (let ju = 0; ju < qu.length; ju += 3) {
+              const su = uu + qu[ju],
+                Uu = lu + qu[ju + 1];
+              if (su >= 0 && Uu >= 0 && su < Eu && Uu < Eu) {
+                const uu = Uu * Eu + su;
+                Xu[uu] = Math.min(Xu[uu], qu[ju + 2])
               }
             }
         }
-      for (let Ht = 0; Ht < et * et; Ht++) 1 !== qt[Ht] && mt[Ht] !== 1 / 0 && (tt.set(dt, 4 * Ht), tt[4 * Ht + 3] = Math.round(255 * Math.min(1, Vt + 1 - Math.sqrt(mt[Ht]))))
+      for (let fu = 0; fu < Eu * Eu; fu++) 1 !== Uu[fu] && Xu[fu] !== 1 / 0 && (uu.set(lu, 4 * fu), uu[4 * fu + 3] = Math.round(255 * Math.min(1, ju + 1 - Math.sqrt(Xu[fu]))))
     }
   },
-  36637: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => qt
+  36792: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => Uu
     });
-    const Ot = {
-      wait: function(tt) {
-        return new Promise((et => {
-          setTimeout(et, tt)
+    const su = {
+      wait: function(uu) {
+        return new Promise((Eu => {
+          setTimeout(Eu, uu)
         }))
       },
       stallMs: 2e4
     };
-    class qt {
-      constructor(tt) {
-        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Ot;
-        this.url = tt, this.options = et, this.timing = Vt, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = tt
+    class Uu {
+      constructor(uu) {
+        let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          ju = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : su;
+        this.url = uu, this.options = Eu, this.timing = ju, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = uu
       }
       ready() {
         if (null === this.fetched) {
-          const tt = new AbortController;
-          this.fetchAbort = tt, this.fetched = this.fetchWithRetries(tt.signal).then((et => (this.fetchAbort === tt && (this.fetchAbort = null), et)))
+          const uu = new AbortController;
+          this.fetchAbort = uu, this.fetched = this.fetchWithRetries(uu.signal).then((Eu => (this.fetchAbort === uu && (this.fetchAbort = null), Eu)))
         }
         return this.fetched
       }
@@ -318,51 +318,51 @@ export const modules = {
       start() {
         return new Worker(this.scriptUrl, this.options)
       }
-      async fetchWithRetries(tt) {
-        for (let et = 0;; et++) {
-          const Vt = new URL(this.url);
-          if (et > 0 && Vt.searchParams.set("cache-bust", `${Date.now()}-${et}`), await this.fetchWhole(Vt, tt)) return this.scriptUrl = Vt, !0;
-          if (et >= 3 || tt.aborted) return !1;
-          if (await this.timing.wait(500 * 2 ** et), tt.aborted) return !1
+      async fetchWithRetries(uu) {
+        for (let Eu = 0;; Eu++) {
+          const ju = new URL(this.url);
+          if (Eu > 0 && ju.searchParams.set("cache-bust", `${Date.now()}-${Eu}`), await this.fetchWhole(ju, uu)) return this.scriptUrl = ju, !0;
+          if (Eu >= 3 || uu.aborted) return !1;
+          if (await this.timing.wait(500 * 2 ** Eu), uu.aborted) return !1
         }
       }
-      async fetchWhole(tt, et) {
-        const Vt = new AbortController;
-        let Ot;
-        const qt = () => {
-            clearTimeout(Ot), Ot = setTimeout((() => {
-              Vt.abort()
+      async fetchWhole(uu, Eu) {
+        const ju = new AbortController;
+        let su;
+        const Uu = () => {
+            clearTimeout(su), su = setTimeout((() => {
+              ju.abort()
             }), this.timing.stallMs)
           },
-          Dt = () => {
-            Vt.abort()
+          Zu = () => {
+            ju.abort()
           };
-        et.addEventListener("abort", Dt, {
+        Eu.addEventListener("abort", Zu, {
           once: !0
-        }), qt();
+        }), Uu();
         try {
-          var mt;
-          const et = await fetch(tt, {
-            signal: Vt.signal
+          var Xu;
+          const Eu = await fetch(uu, {
+            signal: ju.signal
           });
-          if (!et.ok) return !1;
-          const Ot = null === (mt = et.body) || void 0 === mt ? void 0 : mt.getReader();
-          if (!Ot) return !1;
+          if (!Eu.ok) return !1;
+          const su = null === (Xu = Eu.body) || void 0 === Xu ? void 0 : Xu.getReader();
+          if (!su) return !1;
           for (;;) {
             const {
-              done: tt
-            } = await Ot.read();
-            if (tt) return !0;
-            qt()
+              done: uu
+            } = await su.read();
+            if (uu) return !0;
+            Uu()
           }
         } catch {
           return !1
         } finally {
-          clearTimeout(Ot), et.removeEventListener("abort", Dt)
+          clearTimeout(su), Eu.removeEventListener("abort", Zu)
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

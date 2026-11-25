@@ -1,69 +1,69 @@
 export const id = 33;
 export const ids = [33];
 export const modules = {
-  34232: (tt, et, Vt) => {
-    function Ot(tt, et) {
-      return 0 === tt.length ? 0 : tt[Math.min(tt.length - 1, Math.floor(et * tt.length))]
+  34416: (uu, Eu, ju) => {
+    function su(uu, Eu) {
+      return 0 === uu.length ? 0 : uu[Math.min(uu.length - 1, Math.floor(Eu * uu.length))]
     }
 
-    function qt(tt) {
-      return tt.toFixed(1)
+    function Uu(uu) {
+      return uu.toFixed(1)
     }
-    Vt.d(et, {
-      d: () => qt,
-      g: () => Ot
+    ju.d(Eu, {
+      d: () => Uu,
+      g: () => su
     })
   },
-  34223: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      FIRST_SUMMARIES_FOR_MS: () => yt,
-      FIRST_SUMMARY_MS: () => wt,
-      FrameDebugLog: () => ht,
-      OUTLIER_BURST: () => Mt,
-      OUTLIER_MS: () => Nt,
-      OUTLIER_REFILL_MS: () => bt,
-      SUMMARY_MS: () => ft,
-      startFrameDebug: () => Wt
+  34409: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      FIRST_SUMMARIES_FOR_MS: () => hu,
+      FIRST_SUMMARY_MS: () => Yu,
+      FrameDebugLog: () => Ju,
+      OUTLIER_BURST: () => gu,
+      OUTLIER_MS: () => Du,
+      OUTLIER_REFILL_MS: () => Mu,
+      SUMMARY_MS: () => Ou,
+      startFrameDebug: () => au
     });
-    var Ot = Vt(4963),
-      qt = Vt(4958),
-      Dt = Vt(34232),
-      mt = Vt(2902),
-      dt = Vt(1178),
-      jt = Vt(3043);
-    class Ht {
+    var su = ju(4976),
+      Uu = ju(4965),
+      Zu = ju(34416),
+      Xu = ju(2943),
+      lu = ju(1145),
+      qu = ju(3143);
+    class fu {
       constructor() {
-        this.kind = void 0, this.entries = new Float64Array(256), this.next = 0, this.size = 0, this.onLongFrame = tt => {
-          const et = tt;
-          this.add(et.startTime, et.duration, et.blockingDuration, (0, dt.i)(et))
-        }, this.onLongTask = tt => {
-          this.add(tt.startTime, tt.duration, 0, 0)
-        }, null !== (0, jt.e)("long-animation-frame", this.onLongFrame) ? this.kind = "loaf" : this.kind = null !== (0, jt.e)("longtask", this.onLongTask) ? "longtask" : null
+        this.kind = void 0, this.entries = new Float64Array(256), this.next = 0, this.size = 0, this.onLongFrame = uu => {
+          const Eu = uu;
+          this.add(Eu.startTime, Eu.duration, Eu.blockingDuration, (0, lu.o)(Eu))
+        }, this.onLongTask = uu => {
+          this.add(uu.startTime, uu.duration, 0, 0)
+        }, null !== (0, qu.b)("long-animation-frame", this.onLongFrame) ? this.kind = "loaf" : this.kind = null !== (0, qu.b)("longtask", this.onLongTask) ? "longtask" : null
       }
-      add(tt, et, Vt, Ot) {
-        this.entries.set([tt, et, Vt, Ot], 4 * this.next), this.next = (this.next + 1) % 64, this.size = Math.min(this.size + 1, 64)
+      add(uu, Eu, ju, su) {
+        this.entries.set([uu, Eu, ju, su], 4 * this.next), this.next = (this.next + 1) % 64, this.size = Math.min(this.size + 1, 64)
       }
-      describe(tt, et) {
+      describe(uu, Eu) {
         if (null === this.kind) return "long tasks n/a";
-        let Vt = 0,
-          Ot = 0,
-          qt = 0,
-          Dt = 0;
-        for (let dt = 0; dt < this.size; dt++) {
-          const mt = 4 * dt,
-            jt = this.entries[mt] + this.entries[mt + 1];
-          jt > tt && jt <= et + 2 && (Vt++, Ot += this.entries[mt + 1], qt += this.entries[mt + 2], Dt += this.entries[mt + 3])
+        let ju = 0,
+          su = 0,
+          Uu = 0,
+          Zu = 0;
+        for (let lu = 0; lu < this.size; lu++) {
+          const Xu = 4 * lu,
+            qu = this.entries[Xu] + this.entries[Xu + 1];
+          qu > uu && qu <= Eu + 2 && (ju++, su += this.entries[Xu + 1], Uu += this.entries[Xu + 2], Zu += this.entries[Xu + 3])
         }
-        const mt = "loaf" === this.kind && Vt > 0 ? ` (blocking ${qt.toFixed(0)}, script ${Dt.toFixed(0)})` : "";
-        return `${Vt} ${this.kind} ${Ot.toFixed(0)} ms${mt}`
+        const Xu = "loaf" === this.kind && ju > 0 ? ` (blocking ${Uu.toFixed(0)}, script ${Zu.toFixed(0)})` : "";
+        return `${ju} ${this.kind} ${su.toFixed(0)} ms${Xu}`
       }
     }
-    var Xt = Vt(34235);
+    var Cu = ju(34424);
 
-    function Qt(tt, et) {
-      return et < 0 || tt < et ? tt : tt - et
+    function bu(uu, Eu) {
+      return Eu < 0 || uu < Eu ? uu : uu - Eu
     }
-    class lt {
+    class cu {
       constructor() {
         this.source = null, this.now = {
           chunksReceived: -1,
@@ -83,15 +83,15 @@ export const modules = {
           jobsInFlight: -1,
           workersLive: -1,
           workersRetired: -1
-        }, this.lastMs = 0, this.hidden = new Xt.d, this.hiddenBefore = {
+        }, this.lastMs = 0, this.hidden = new Cu.b, this.hiddenBefore = {
           changes: 0,
           hiddenMs: 0
         }
       }
-      setSource(tt) {
-        this.source = tt
+      setSource(uu) {
+        this.source = uu
       }
-      start(tt) {
+      start(uu) {
         this.before = {
           chunksReceived: -1,
           chunksCancelled: -1,
@@ -101,123 +101,123 @@ export const modules = {
           jobsInFlight: -1,
           workersLive: -1,
           workersRetired: -1
-        }, this.lastMs = tt
+        }, this.lastMs = uu
       }
-      take(tt) {
-        var et;
-        const Vt = [];
-        if (!0 === (null === (et = this.source) || void 0 === et ? void 0 : et.call(this, this.now)) && (Ot = this.now, qt = this.before, Ot.chunksReceived !== qt.chunksReceived || Ot.chunksCancelled !== qt.chunksCancelled || Ot.chunksStored !== qt.chunksStored || Ot.jobsSent !== qt.jobsSent || Ot.jobsDone !== qt.jobsDone || Ot.jobsInFlight !== qt.jobsInFlight || Ot.workersLive !== qt.workersLive || Ot.workersRetired !== qt.workersRetired)) {
-          Vt.push(function(tt, et) {
-            const Vt = [`chunks +${Qt(tt.chunksReceived,et.chunksReceived)} got`, `+${Qt(tt.chunksCancelled,et.chunksCancelled)} cancelled`];
-            tt.chunksStored >= 0 && Vt.push(`${tt.chunksStored} stored`);
-            const Ot = `jobs +${Qt(tt.jobsSent,et.jobsSent)} sent, +${Qt(tt.jobsDone,et.jobsDone)} done, ${tt.jobsInFlight} in flight`;
-            return `${Vt.join(", ")}; ${Ot}; workers ${tt.workersLive} live, ${tt.workersRetired} retired`
+      take(uu) {
+        var Eu;
+        const ju = [];
+        if (!0 === (null === (Eu = this.source) || void 0 === Eu ? void 0 : Eu.call(this, this.now)) && (su = this.now, Uu = this.before, su.chunksReceived !== Uu.chunksReceived || su.chunksCancelled !== Uu.chunksCancelled || su.chunksStored !== Uu.chunksStored || su.jobsSent !== Uu.jobsSent || su.jobsDone !== Uu.jobsDone || su.jobsInFlight !== Uu.jobsInFlight || su.workersLive !== Uu.workersLive || su.workersRetired !== Uu.workersRetired)) {
+          ju.push(function(uu, Eu) {
+            const ju = [`chunks +${bu(uu.chunksReceived,Eu.chunksReceived)} got`, `+${bu(uu.chunksCancelled,Eu.chunksCancelled)} cancelled`];
+            uu.chunksStored >= 0 && ju.push(`${uu.chunksStored} stored`);
+            const su = `jobs +${bu(uu.jobsSent,Eu.jobsSent)} sent, +${bu(uu.jobsDone,Eu.jobsDone)} done, ${uu.jobsInFlight} in flight`;
+            return `${ju.join(", ")}; ${su}; workers ${uu.workersLive} live, ${uu.workersRetired} retired`
           }(this.now, this.before));
-          const tt = this.before;
-          this.before = this.now, this.now = tt
+          const uu = this.before;
+          this.before = this.now, this.now = uu
         }
-        var Ot, qt;
-        const Dt = this.hidden.totals(tt),
-          mt = Dt.changes - this.hiddenBefore.changes,
-          dt = Dt.hiddenMs - this.hiddenBefore.hiddenMs;
-        if ((mt > 0 || dt > 0) && (Vt.push((0, Xt.f)({
-            changes: mt,
-            hiddenMs: dt
-          })), this.hiddenBefore = Dt), 0 === Vt.length) return null;
-        const jt = `load ${Math.round((tt-this.lastMs)/1e3)}s: ${Vt.join("; ")}`;
-        return this.lastMs = tt, jt
+        var su, Uu;
+        const Zu = this.hidden.totals(uu),
+          Xu = Zu.changes - this.hiddenBefore.changes,
+          lu = Zu.hiddenMs - this.hiddenBefore.hiddenMs;
+        if ((Xu > 0 || lu > 0) && (ju.push((0, Cu.d)({
+            changes: Xu,
+            hiddenMs: lu
+          })), this.hiddenBefore = Zu), 0 === ju.length) return null;
+        const qu = `load ${Math.round((uu-this.lastMs)/1e3)}s: ${ju.join("; ")}`;
+        return this.lastMs = uu, qu
       }
     }
-    class Et {
+    class Nu {
       constructor() {
         this.count = 0, this.paced = 0, this.skipped = 0, this.run = 0, this.longest = 0, this.longestMs = 0, this.longestAhead = -1
       }
       drawn() {
         this.run = 0
       }
-      add(tt, et, Vt) {
-        this.count++, "paced" === tt ? this.paced++ : "skipped" === tt && this.skipped++, this.run++, this.run > this.longest && (this.longest = this.run, this.longestMs = et, this.longestAhead = Vt)
+      add(uu, Eu, ju) {
+        this.count++, "paced" === uu ? this.paced++ : "skipped" === uu && this.skipped++, this.run++, this.run > this.longest && (this.longest = this.run, this.longestMs = Eu, this.longestAhead = ju)
       }
       describe() {
         if (0 === this.count) return "0 undrawn";
-        const tt = this.count - this.paced - this.skipped;
-        return `${this.count} undrawn: ${this.paced} paced, ${this.skipped} skipped, ${tt} other, longest ${this.longest} in ${(0,Dt.d)(this.longestMs)} ms at ${this.longestAhead} ahead`
+        const uu = this.count - this.paced - this.skipped;
+        return `${this.count} undrawn: ${this.paced} paced, ${this.skipped} skipped, ${uu} other, longest ${this.longest} in ${(0,Zu.d)(this.longestMs)} ms at ${this.longestAhead} ahead`
       }
       reset() {
         this.count = 0, this.paced = 0, this.skipped = 0, this.longest = 0, this.longestMs = 0, this.longestAhead = -1
       }
     }
-    const ft = 2e4,
-      wt = 5e3,
-      yt = 6e4,
-      Nt = 250,
-      Mt = 10,
-      bt = 6e4,
-      Jt = 8192;
+    const Ou = 2e4,
+      Yu = 5e3,
+      hu = 6e4,
+      Du = 250,
+      gu = 10,
+      Mu = 6e4,
+      eu = 8192;
 
-    function Ct(tt) {
-      return tt.mainMs = 0, tt.renderMs = 0, tt.ticks = 0, tt.tickMs = 0, tt.rafs = 0, tt.pendingBefore = -1, tt.pendingMax = -1, tt.pendingAfter = -1, tt
+    function Gu(uu) {
+      return uu.mainMs = 0, uu.renderMs = 0, uu.ticks = 0, uu.tickMs = 0, uu.rafs = 0, uu.pendingBefore = -1, uu.pendingMax = -1, uu.pendingAfter = -1, uu
     }
 
-    function ut() {
-      return Ct({})
+    function pu() {
+      return Gu({})
     }
-    class Kt {
+    class wu {
       constructor() {
-        this.intervals = new Float64Array(Jt), this.totals = ut(), this.frames = 0, this.slow = 0, this.maxMs = 0, this.undrawn = new Et, this.shown = 0, this.dropped = 0
+        this.intervals = new Float64Array(eu), this.totals = pu(), this.frames = 0, this.slow = 0, this.maxMs = 0, this.undrawn = new Nu, this.shown = 0, this.dropped = 0
       }
       reset() {
-        Ct(this.totals), this.frames = 0, this.slow = 0, this.maxMs = 0, this.undrawn.reset(), this.shown = 0, this.dropped = 0
+        Gu(this.totals), this.frames = 0, this.slow = 0, this.maxMs = 0, this.undrawn.reset(), this.shown = 0, this.dropped = 0
       }
     }
-    class ht {
+    class Ju {
       constructor() {
-        this.longTasks = new Ht, this.summary = new Kt, this.current = ut(), this.lastDrawnStartMs = -1, this.lastPending = -1, this.ahead = -1, this.tokens = Mt, this.lastRefillMs = performance.now(), this.waiting = [], this.outlierTimer = null, this.flushTimer = null, this.startedMs = 0, this.lastFlushMs = 0, this.loadLine = new lt, this.inGameSinceFlush = !1, this.visibilityChanged = () => {
+        this.longTasks = new fu, this.summary = new wu, this.current = pu(), this.lastDrawnStartMs = -1, this.lastPending = -1, this.ahead = -1, this.tokens = gu, this.lastRefillMs = performance.now(), this.waiting = [], this.outlierTimer = null, this.flushTimer = null, this.startedMs = 0, this.lastFlushMs = 0, this.loadLine = new cu, this.inGameSinceFlush = !1, this.visibilityChanged = () => {
           this.restart(), this.loadLine.hidden.changed(performance.now())
         }, this.restart = () => {
           this.lastDrawnStartMs = -1
         }, this.animationFrame = () => {
           this.current.rafs++
-        }, this.wasmFrame = (tt, et, Vt, qt, Dt, mt) => {
-          this.ahead = tt.headerWord(Ot.J.Pacing) & Ot.bb.AheadMask, this.frame(et, Vt, qt, Dt, tt.headerWord(Ot.J.RenderUs) / 1e3, tt.headerWord(Ot.J.TicksRun), mt, tt.headerWord(Ot.J.RenderPending))
-        }, this.wasmPeekPaced = tt => {
-          const et = performance.now();
-          this.frame(et, et, "paced", tt, 0, 0, 0, this.lastPending)
-        }, this.jsFrame = (tt, et, Vt) => {
-          this.frame(tt, et, "drawn", Vt, et - tt, 0, 0, -1)
-        }, this.jsTick = tt => {
-          this.current.mainMs += tt, this.current.ticks++, this.current.tickMs += tt
+        }, this.wasmFrame = (uu, Eu, ju, Uu, Zu, Xu) => {
+          this.ahead = uu.headerWord(su.K.Pacing) & su.cb.AheadMask, this.frame(Eu, ju, Uu, Zu, uu.headerWord(su.K.RenderUs) / 1e3, uu.headerWord(su.K.TicksRun), Xu, uu.headerWord(su.K.RenderPending))
+        }, this.wasmPeekPaced = uu => {
+          const Eu = performance.now();
+          this.frame(Eu, Eu, "paced", uu, 0, 0, 0, this.lastPending)
+        }, this.jsFrame = (uu, Eu, ju) => {
+          this.frame(uu, Eu, "drawn", ju, Eu - uu, 0, 0, -1)
+        }, this.jsTick = uu => {
+          this.current.mainMs += uu, this.current.ticks++, this.current.tickMs += uu
         }, this.logOutliers = () => {
           this.outlierTimer = null;
-          const tt = performance.now();
-          let et = 0;
-          for (const Vt of this.waiting) {
-            if (Vt.dueMs > tt) {
-              this.waiting[et++] = Vt;
+          const uu = performance.now();
+          let Eu = 0;
+          for (const ju of this.waiting) {
+            if (ju.dueMs > uu) {
+              this.waiting[Eu++] = ju;
               continue
             }
-            const Ot = [`long frame ${(0,Dt.d)(Vt.intervalMs)} ms ending at ${(0,Dt.d)(Vt.endMs)} ms: main ${(0,Dt.d)(Vt.mainMs)} (render ${(0,Dt.d)(Vt.renderMs)}, ${Vt.ticks} ticks ${(0,Dt.d)(Vt.tickMs)}), outside ${(0,Dt.d)(Vt.intervalMs-Vt.mainMs)}`, `${Vt.rafs} rafs`];
-            Vt.pendingBefore >= 0 && Ot.push(`pending ${Vt.pendingBefore} -> ${Vt.pendingAfter} (max ${Vt.pendingMax})`), Ot.push(this.longTasks.describe(Vt.endMs - Vt.intervalMs, Vt.endMs)), (0, mt.n)("frame", Ot.join("; "))
+            const su = [`long frame ${(0,Zu.d)(ju.intervalMs)} ms ending at ${(0,Zu.d)(ju.endMs)} ms: main ${(0,Zu.d)(ju.mainMs)} (render ${(0,Zu.d)(ju.renderMs)}, ${ju.ticks} ticks ${(0,Zu.d)(ju.tickMs)}), outside ${(0,Zu.d)(ju.intervalMs-ju.mainMs)}`, `${ju.rafs} rafs`];
+            ju.pendingBefore >= 0 && su.push(`pending ${ju.pendingBefore} -> ${ju.pendingAfter} (max ${ju.pendingMax})`), su.push(this.longTasks.describe(ju.endMs - ju.intervalMs, ju.endMs)), (0, Xu.k)("frame", su.join("; "))
           }
-          this.waiting.length = et, et > 0 && (this.outlierTimer = setTimeout(this.logOutliers, this.waiting[0].dueMs - tt))
+          this.waiting.length = Eu, Eu > 0 && (this.outlierTimer = setTimeout(this.logOutliers, this.waiting[0].dueMs - uu))
         }, this.flush = () => {
           this.flushTimer = null;
-          const tt = performance.now(),
-            et = Math.round((tt - this.lastFlushMs) / 1e3);
-          this.lastFlushMs = tt, this.scheduleFlush();
-          if (this.logSummary(et) || this.inGameSinceFlush) {
-            const et = this.loadLine.take(tt);
-            null !== et && (0, mt.n)("frame", et)
+          const uu = performance.now(),
+            Eu = Math.round((uu - this.lastFlushMs) / 1e3);
+          this.lastFlushMs = uu, this.scheduleFlush();
+          if (this.logSummary(Eu) || this.inGameSinceFlush) {
+            const Eu = this.loadLine.take(uu);
+            null !== Eu && (0, Xu.k)("frame", Eu)
           }
           this.inGameSinceFlush = !1, this.summary.reset()
         }, document.addEventListener("visibilitychange", this.visibilityChanged)
       }
-      start(tt, et) {
-        var Vt;
-        this.restart(), this.startedMs = performance.now(), this.lastFlushMs = this.startedMs, this.loadLine.start(this.startedMs), this.scheduleFlush(), (0, mt.n)("frame", `start: ${tt} client, ${et}, dpr ${window.devicePixelRatio}, long tasks ${null!==(Vt=this.longTasks.kind)&&void 0!==Vt?Vt:"n/a"}; a summary each ${ft/1e3} s in game (${wt/1e3} s for the first ${yt/1e3} s), outliers over ${Nt} ms`)
+      start(uu, Eu) {
+        var ju;
+        this.restart(), this.startedMs = performance.now(), this.lastFlushMs = this.startedMs, this.loadLine.start(this.startedMs), this.scheduleFlush(), (0, Xu.k)("frame", `start: ${uu} client, ${Eu}, dpr ${window.devicePixelRatio}, long tasks ${null!==(ju=this.longTasks.kind)&&void 0!==ju?ju:"n/a"}; a summary each ${Ou/1e3} s in game (${Yu/1e3} s for the first ${hu/1e3} s), outliers over ${Du} ms`)
       }
-      setLoadCounts(tt) {
-        this.loadLine.setSource(tt)
+      setLoadCounts(uu) {
+        this.loadLine.setSource(uu)
       }
       joined() {
         this.startedMs = performance.now(), this.scheduleFlush()
@@ -227,68 +227,68 @@ export const modules = {
       }
       scheduleFlush() {
         null !== this.flushTimer && clearTimeout(this.flushTimer);
-        const tt = performance.now() - this.startedMs < yt;
-        this.flushTimer = setTimeout(this.flush, tt ? wt : ft)
+        const uu = performance.now() - this.startedMs < hu;
+        this.flushTimer = setTimeout(this.flush, uu ? Yu : Ou)
       }
-      frame(tt, et, Vt, Ot, Dt, mt, dt, jt) {
-        if (!Ot) return this.restart(), void(this.lastPending = jt);
-        const Ht = this.current;
-        (0, qt.d)(Vt) ? (this.lastDrawnStartMs >= 0 && (Ht.pendingAfter = this.lastPending, this.closeInterval(tt - this.lastDrawnStartMs, tt)), this.lastDrawnStartMs = tt, Ct(Ht).pendingBefore = this.lastPending, this.summary.undrawn.drawn()) : this.lastDrawnStartMs >= 0 && this.summary.undrawn.add(Vt, et - this.lastDrawnStartMs, this.ahead), Ht.mainMs += et - tt, Ht.renderMs += Dt, Ht.ticks += mt, Ht.tickMs += dt, Ht.pendingMax = Math.max(Ht.pendingMax, jt), this.lastPending = jt, this.summary.totals.pendingMax = Math.max(this.summary.totals.pendingMax, jt)
+      frame(uu, Eu, ju, su, Zu, Xu, lu, qu) {
+        if (!su) return this.restart(), void(this.lastPending = qu);
+        const fu = this.current;
+        (0, Uu.e)(ju) ? (this.lastDrawnStartMs >= 0 && (fu.pendingAfter = this.lastPending, this.closeInterval(uu - this.lastDrawnStartMs, uu)), this.lastDrawnStartMs = uu, Gu(fu).pendingBefore = this.lastPending, this.summary.undrawn.drawn()) : this.lastDrawnStartMs >= 0 && this.summary.undrawn.add(ju, Eu - this.lastDrawnStartMs, this.ahead), fu.mainMs += Eu - uu, fu.renderMs += Zu, fu.ticks += Xu, fu.tickMs += lu, fu.pendingMax = Math.max(fu.pendingMax, qu), this.lastPending = qu, this.summary.totals.pendingMax = Math.max(this.summary.totals.pendingMax, qu)
       }
-      closeInterval(tt, et) {
-        const Vt = this.summary,
-          Ot = this.current;
-        Vt.frames < Jt && (Vt.intervals[Vt.frames] = tt), Vt.frames++, Vt.maxMs = Math.max(Vt.maxMs, tt);
-        const qt = Vt.totals;
-        qt.mainMs += Ot.mainMs, qt.renderMs += Ot.renderMs, qt.ticks += Ot.ticks, qt.tickMs += Ot.tickMs, qt.rafs += Ot.rafs, tt > 50 && Vt.slow++, tt > Nt && this.outlier(tt, et)
+      closeInterval(uu, Eu) {
+        const ju = this.summary,
+          su = this.current;
+        ju.frames < eu && (ju.intervals[ju.frames] = uu), ju.frames++, ju.maxMs = Math.max(ju.maxMs, uu);
+        const Uu = ju.totals;
+        Uu.mainMs += su.mainMs, Uu.renderMs += su.renderMs, Uu.ticks += su.ticks, Uu.tickMs += su.tickMs, Uu.rafs += su.rafs, uu > 50 && ju.slow++, uu > Du && this.outlier(uu, Eu)
       }
-      outlier(tt, et) {
-        const Vt = Math.floor((et - this.lastRefillMs) / bt);
-        Vt > 0 && (this.tokens = Math.min(Mt, this.tokens + Vt), this.lastRefillMs += Vt * bt), 0 !== this.tokens ? (this.tokens--, this.summary.shown++, this.waiting.push({
+      outlier(uu, Eu) {
+        const ju = Math.floor((Eu - this.lastRefillMs) / Mu);
+        ju > 0 && (this.tokens = Math.min(gu, this.tokens + ju), this.lastRefillMs += ju * Mu), 0 !== this.tokens ? (this.tokens--, this.summary.shown++, this.waiting.push({
           ...this.current,
-          endMs: et,
-          intervalMs: tt,
+          endMs: Eu,
+          intervalMs: uu,
           dueMs: performance.now() + 1e3
         }), this.outlierTimer ??= setTimeout(this.logOutliers, 1e3)) : this.summary.dropped++
       }
-      logSummary(tt) {
-        const et = this.summary,
-          Vt = et.totals;
-        if (0 === et.frames) return et.undrawn.count > 0 && (0, mt.n)("frame", `${tt}s: no frames drawn, ${et.undrawn.describe()}; pending max ${Vt.pendingMax}`), et.undrawn.count > 0;
-        const Ot = et.intervals.subarray(0, Math.min(et.frames, Jt)).sort(),
-          qt = [`${et.frames} frames, median ${(0,Dt.d)((0,Dt.g)(Ot,.5))} p95 ${(0,Dt.d)((0,Dt.g)(Ot,.95))} max ${(0,Dt.d)(et.maxMs)} ms, ${et.slow} over 50, ${et.shown+et.dropped} over ${Nt}`, `${Vt.rafs} rafs, ${et.undrawn.describe()}`, `main ${(0,Dt.d)(Vt.mainMs)} ms (render ${(0,Dt.d)(Vt.renderMs)}, ${Vt.ticks} ticks ${(0,Dt.d)(Vt.tickMs)})`];
-        return Vt.pendingMax >= 0 && qt.push(`pending max ${Vt.pendingMax}`), this.ahead >= 0 && qt.push(`${this.ahead} frames ahead`), qt.push(`outliers ${et.shown} logged, ${et.dropped} dropped`), (0, mt.n)("frame", `${tt}s: ${qt.join("; ")}`), !0
+      logSummary(uu) {
+        const Eu = this.summary,
+          ju = Eu.totals;
+        if (0 === Eu.frames) return Eu.undrawn.count > 0 && (0, Xu.k)("frame", `${uu}s: no frames drawn, ${Eu.undrawn.describe()}; pending max ${ju.pendingMax}`), Eu.undrawn.count > 0;
+        const su = Eu.intervals.subarray(0, Math.min(Eu.frames, eu)).sort(),
+          Uu = [`${Eu.frames} frames, median ${(0,Zu.d)((0,Zu.g)(su,.5))} p95 ${(0,Zu.d)((0,Zu.g)(su,.95))} max ${(0,Zu.d)(Eu.maxMs)} ms, ${Eu.slow} over 50, ${Eu.shown+Eu.dropped} over ${Du}`, `${ju.rafs} rafs, ${Eu.undrawn.describe()}`, `main ${(0,Zu.d)(ju.mainMs)} ms (render ${(0,Zu.d)(ju.renderMs)}, ${ju.ticks} ticks ${(0,Zu.d)(ju.tickMs)})`];
+        return ju.pendingMax >= 0 && Uu.push(`pending max ${ju.pendingMax}`), this.ahead >= 0 && Uu.push(`${this.ahead} frames ahead`), Uu.push(`outliers ${Eu.shown} logged, ${Eu.dropped} dropped`), (0, Xu.k)("frame", `${uu}s: ${Uu.join("; ")}`), !0
       }
     }
-    let vt = null;
+    let du = null;
 
-    function Wt(tt, et) {
-      return vt ??= new ht, vt.start(tt, et), vt
+    function au(uu, Eu) {
+      return du ??= new Ju, du.start(uu, Eu), du
     }
   },
-  34235: (tt, et, Vt) => {
-    function Ot(tt) {
-      return `hidden ${tt.changes} changes, ${Math.round(tt.hiddenMs)} ms`
+  34424: (uu, Eu, ju) => {
+    function su(uu) {
+      return `hidden ${uu.changes} changes, ${Math.round(uu.hiddenMs)} ms`
     }
-    Vt.d(et, {
-      d: () => qt,
-      f: () => Ot
+    ju.d(Eu, {
+      b: () => Uu,
+      d: () => su
     });
-    class qt {
+    class Uu {
       constructor() {
         this.changes = 0, this.hiddenMs = 0, this.hiddenSinceMs = document.hidden ? performance.now() : -1
       }
-      changed(tt) {
-        this.changes++, document.hidden ? this.hiddenSinceMs = tt : this.hiddenSinceMs >= 0 && (this.hiddenMs += tt - this.hiddenSinceMs, this.hiddenSinceMs = -1)
+      changed(uu) {
+        this.changes++, document.hidden ? this.hiddenSinceMs = uu : this.hiddenSinceMs >= 0 && (this.hiddenMs += uu - this.hiddenSinceMs, this.hiddenSinceMs = -1)
       }
-      totals(tt) {
+      totals(uu) {
         return {
           changes: this.changes,
-          hiddenMs: this.hiddenMs + (this.hiddenSinceMs >= 0 ? tt - this.hiddenSinceMs : 0)
+          hiddenMs: this.hiddenMs + (this.hiddenSinceMs >= 0 ? uu - this.hiddenSinceMs : 0)
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

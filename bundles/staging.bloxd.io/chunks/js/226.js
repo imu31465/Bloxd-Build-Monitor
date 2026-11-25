@@ -1,8 +1,8 @@
 export const id = 226;
 export const ids = [226];
 export const modules = {
-  36897: tt => {
-    tt.exports = {
+  37025: uu => {
+    uu.exports = {
       aliceblue: [240, 248, 255],
       antiquewhite: [250, 235, 215],
       aqua: [0, 255, 255],
@@ -153,363 +153,363 @@ export const modules = {
       yellowgreen: [154, 205, 50]
     }
   },
-  36889: (tt, et, Vt) => {
-    var Ot = Vt(36897),
-      qt = Vt(36902),
-      Dt = Object.hasOwnProperty,
-      mt = Object.create(null);
-    for (var dt in Ot) Dt.call(Ot, dt) && (mt[Ot[dt]] = dt);
-    var jt = tt.exports = {
+  37022: (uu, Eu, ju) => {
+    var su = ju(37025),
+      Uu = ju(37027),
+      Zu = Object.hasOwnProperty,
+      Xu = Object.create(null);
+    for (var lu in su) Zu.call(su, lu) && (Xu[su[lu]] = lu);
+    var qu = uu.exports = {
       to: {},
       get: {}
     };
 
-    function Ht(tt, et, Vt) {
-      return Math.min(Math.max(et, tt), Vt)
+    function fu(uu, Eu, ju) {
+      return Math.min(Math.max(Eu, uu), ju)
     }
 
-    function Xt(tt) {
-      var et = Math.round(tt).toString(16).toUpperCase();
-      return et.length < 2 ? "0" + et : et
+    function Cu(uu) {
+      var Eu = Math.round(uu).toString(16).toUpperCase();
+      return Eu.length < 2 ? "0" + Eu : Eu
     }
-    jt.get = function(tt) {
-      var et, Vt;
-      switch (tt.substring(0, 3).toLowerCase()) {
+    qu.get = function(uu) {
+      var Eu, ju;
+      switch (uu.substring(0, 3).toLowerCase()) {
         case "hsl":
-          et = jt.get.hsl(tt), Vt = "hsl";
+          Eu = qu.get.hsl(uu), ju = "hsl";
           break;
         case "hwb":
-          et = jt.get.hwb(tt), Vt = "hwb";
+          Eu = qu.get.hwb(uu), ju = "hwb";
           break;
         default:
-          et = jt.get.rgb(tt), Vt = "rgb"
+          Eu = qu.get.rgb(uu), ju = "rgb"
       }
-      return et ? {
-        model: Vt,
-        value: et
+      return Eu ? {
+        model: ju,
+        value: Eu
       } : null
-    }, jt.get.rgb = function(tt) {
-      if (!tt) return null;
-      var et, Vt, qt, mt = [0, 0, 0, 1];
-      if (et = tt.match(/^#([a-f0-9]{6})([a-f0-9]{2})?$/i)) {
-        for (qt = et[2], et = et[1], Vt = 0; Vt < 3; Vt++) {
-          var dt = 2 * Vt;
-          mt[Vt] = parseInt(et.slice(dt, dt + 2), 16)
+    }, qu.get.rgb = function(uu) {
+      if (!uu) return null;
+      var Eu, ju, Uu, Xu = [0, 0, 0, 1];
+      if (Eu = uu.match(/^#([a-f0-9]{6})([a-f0-9]{2})?$/i)) {
+        for (Uu = Eu[2], Eu = Eu[1], ju = 0; ju < 3; ju++) {
+          var lu = 2 * ju;
+          Xu[ju] = parseInt(Eu.slice(lu, lu + 2), 16)
         }
-        qt && (mt[3] = parseInt(qt, 16) / 255)
-      } else if (et = tt.match(/^#([a-f0-9]{3,4})$/i)) {
-        for (qt = (et = et[1])[3], Vt = 0; Vt < 3; Vt++) mt[Vt] = parseInt(et[Vt] + et[Vt], 16);
-        qt && (mt[3] = parseInt(qt + qt, 16) / 255)
-      } else if (et = tt.match(/^rgba?\(\s*([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/)) {
-        for (Vt = 0; Vt < 3; Vt++) mt[Vt] = parseInt(et[Vt + 1], 0);
-        et[4] && (et[5] ? mt[3] = .01 * parseFloat(et[4]) : mt[3] = parseFloat(et[4]))
+        Uu && (Xu[3] = parseInt(Uu, 16) / 255)
+      } else if (Eu = uu.match(/^#([a-f0-9]{3,4})$/i)) {
+        for (Uu = (Eu = Eu[1])[3], ju = 0; ju < 3; ju++) Xu[ju] = parseInt(Eu[ju] + Eu[ju], 16);
+        Uu && (Xu[3] = parseInt(Uu + Uu, 16) / 255)
+      } else if (Eu = uu.match(/^rgba?\(\s*([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/)) {
+        for (ju = 0; ju < 3; ju++) Xu[ju] = parseInt(Eu[ju + 1], 0);
+        Eu[4] && (Eu[5] ? Xu[3] = .01 * parseFloat(Eu[4]) : Xu[3] = parseFloat(Eu[4]))
       } else {
-        if (!(et = tt.match(/^rgba?\(\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/))) return (et = tt.match(/^(\w+)$/)) ? "transparent" === et[1] ? [0, 0, 0, 0] : Dt.call(Ot, et[1]) ? ((mt = Ot[et[1]])[3] = 1, mt) : null : null;
-        for (Vt = 0; Vt < 3; Vt++) mt[Vt] = Math.round(2.55 * parseFloat(et[Vt + 1]));
-        et[4] && (et[5] ? mt[3] = .01 * parseFloat(et[4]) : mt[3] = parseFloat(et[4]))
+        if (!(Eu = uu.match(/^rgba?\(\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/))) return (Eu = uu.match(/^(\w+)$/)) ? "transparent" === Eu[1] ? [0, 0, 0, 0] : Zu.call(su, Eu[1]) ? ((Xu = su[Eu[1]])[3] = 1, Xu) : null : null;
+        for (ju = 0; ju < 3; ju++) Xu[ju] = Math.round(2.55 * parseFloat(Eu[ju + 1]));
+        Eu[4] && (Eu[5] ? Xu[3] = .01 * parseFloat(Eu[4]) : Xu[3] = parseFloat(Eu[4]))
       }
-      for (Vt = 0; Vt < 3; Vt++) mt[Vt] = Ht(mt[Vt], 0, 255);
-      return mt[3] = Ht(mt[3], 0, 1), mt
-    }, jt.get.hsl = function(tt) {
-      if (!tt) return null;
-      var et = tt.match(/^hsla?\(\s*([+-]?(?:\d{0,3}\.)?\d+)(?:deg)?\s*,?\s*([+-]?[\d\.]+)%\s*,?\s*([+-]?[\d\.]+)%\s*(?:[,|\/]\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
-      if (et) {
-        var Vt = parseFloat(et[4]);
-        return [(parseFloat(et[1]) % 360 + 360) % 360, Ht(parseFloat(et[2]), 0, 100), Ht(parseFloat(et[3]), 0, 100), Ht(isNaN(Vt) ? 1 : Vt, 0, 1)]
-      }
-      return null
-    }, jt.get.hwb = function(tt) {
-      if (!tt) return null;
-      var et = tt.match(/^hwb\(\s*([+-]?\d{0,3}(?:\.\d+)?)(?:deg)?\s*,\s*([+-]?[\d\.]+)%\s*,\s*([+-]?[\d\.]+)%\s*(?:,\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
-      if (et) {
-        var Vt = parseFloat(et[4]);
-        return [(parseFloat(et[1]) % 360 + 360) % 360, Ht(parseFloat(et[2]), 0, 100), Ht(parseFloat(et[3]), 0, 100), Ht(isNaN(Vt) ? 1 : Vt, 0, 1)]
+      for (ju = 0; ju < 3; ju++) Xu[ju] = fu(Xu[ju], 0, 255);
+      return Xu[3] = fu(Xu[3], 0, 1), Xu
+    }, qu.get.hsl = function(uu) {
+      if (!uu) return null;
+      var Eu = uu.match(/^hsla?\(\s*([+-]?(?:\d{0,3}\.)?\d+)(?:deg)?\s*,?\s*([+-]?[\d\.]+)%\s*,?\s*([+-]?[\d\.]+)%\s*(?:[,|\/]\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
+      if (Eu) {
+        var ju = parseFloat(Eu[4]);
+        return [(parseFloat(Eu[1]) % 360 + 360) % 360, fu(parseFloat(Eu[2]), 0, 100), fu(parseFloat(Eu[3]), 0, 100), fu(isNaN(ju) ? 1 : ju, 0, 1)]
       }
       return null
-    }, jt.to.hex = function() {
-      var tt = qt(arguments);
-      return "#" + Xt(tt[0]) + Xt(tt[1]) + Xt(tt[2]) + (tt[3] < 1 ? Xt(Math.round(255 * tt[3])) : "")
-    }, jt.to.rgb = function() {
-      var tt = qt(arguments);
-      return tt.length < 4 || 1 === tt[3] ? "rgb(" + Math.round(tt[0]) + ", " + Math.round(tt[1]) + ", " + Math.round(tt[2]) + ")" : "rgba(" + Math.round(tt[0]) + ", " + Math.round(tt[1]) + ", " + Math.round(tt[2]) + ", " + tt[3] + ")"
-    }, jt.to.rgb.percent = function() {
-      var tt = qt(arguments),
-        et = Math.round(tt[0] / 255 * 100),
-        Vt = Math.round(tt[1] / 255 * 100),
-        Ot = Math.round(tt[2] / 255 * 100);
-      return tt.length < 4 || 1 === tt[3] ? "rgb(" + et + "%, " + Vt + "%, " + Ot + "%)" : "rgba(" + et + "%, " + Vt + "%, " + Ot + "%, " + tt[3] + ")"
-    }, jt.to.hsl = function() {
-      var tt = qt(arguments);
-      return tt.length < 4 || 1 === tt[3] ? "hsl(" + tt[0] + ", " + tt[1] + "%, " + tt[2] + "%)" : "hsla(" + tt[0] + ", " + tt[1] + "%, " + tt[2] + "%, " + tt[3] + ")"
-    }, jt.to.hwb = function() {
-      var tt = qt(arguments),
-        et = "";
-      return tt.length >= 4 && 1 !== tt[3] && (et = ", " + tt[3]), "hwb(" + tt[0] + ", " + tt[1] + "%, " + tt[2] + "%" + et + ")"
-    }, jt.to.keyword = function(tt) {
-      return mt[tt.slice(0, 3)]
+    }, qu.get.hwb = function(uu) {
+      if (!uu) return null;
+      var Eu = uu.match(/^hwb\(\s*([+-]?\d{0,3}(?:\.\d+)?)(?:deg)?\s*,\s*([+-]?[\d\.]+)%\s*,\s*([+-]?[\d\.]+)%\s*(?:,\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
+      if (Eu) {
+        var ju = parseFloat(Eu[4]);
+        return [(parseFloat(Eu[1]) % 360 + 360) % 360, fu(parseFloat(Eu[2]), 0, 100), fu(parseFloat(Eu[3]), 0, 100), fu(isNaN(ju) ? 1 : ju, 0, 1)]
+      }
+      return null
+    }, qu.to.hex = function() {
+      var uu = Uu(arguments);
+      return "#" + Cu(uu[0]) + Cu(uu[1]) + Cu(uu[2]) + (uu[3] < 1 ? Cu(Math.round(255 * uu[3])) : "")
+    }, qu.to.rgb = function() {
+      var uu = Uu(arguments);
+      return uu.length < 4 || 1 === uu[3] ? "rgb(" + Math.round(uu[0]) + ", " + Math.round(uu[1]) + ", " + Math.round(uu[2]) + ")" : "rgba(" + Math.round(uu[0]) + ", " + Math.round(uu[1]) + ", " + Math.round(uu[2]) + ", " + uu[3] + ")"
+    }, qu.to.rgb.percent = function() {
+      var uu = Uu(arguments),
+        Eu = Math.round(uu[0] / 255 * 100),
+        ju = Math.round(uu[1] / 255 * 100),
+        su = Math.round(uu[2] / 255 * 100);
+      return uu.length < 4 || 1 === uu[3] ? "rgb(" + Eu + "%, " + ju + "%, " + su + "%)" : "rgba(" + Eu + "%, " + ju + "%, " + su + "%, " + uu[3] + ")"
+    }, qu.to.hsl = function() {
+      var uu = Uu(arguments);
+      return uu.length < 4 || 1 === uu[3] ? "hsl(" + uu[0] + ", " + uu[1] + "%, " + uu[2] + "%)" : "hsla(" + uu[0] + ", " + uu[1] + "%, " + uu[2] + "%, " + uu[3] + ")"
+    }, qu.to.hwb = function() {
+      var uu = Uu(arguments),
+        Eu = "";
+      return uu.length >= 4 && 1 !== uu[3] && (Eu = ", " + uu[3]), "hwb(" + uu[0] + ", " + uu[1] + "%, " + uu[2] + "%" + Eu + ")"
+    }, qu.to.keyword = function(uu) {
+      return Xu[uu.slice(0, 3)]
     }
   },
-  36885: (tt, et, Vt) => {
-    const Ot = Vt(36889),
-      qt = Vt(36913),
-      Dt = ["keyword", "gray", "hex"],
-      mt = {};
-    for (const Et of Object.keys(qt)) mt[[...qt[Et].labels].sort().join("")] = Et;
-    const dt = {};
+  37013: (uu, Eu, ju) => {
+    const su = ju(37022),
+      Uu = ju(37034),
+      Zu = ["keyword", "gray", "hex"],
+      Xu = {};
+    for (const Nu of Object.keys(Uu)) Xu[[...Uu[Nu].labels].sort().join("")] = Nu;
+    const lu = {};
 
-    function jt(tt, et) {
-      if (!(this instanceof jt)) return new jt(tt, et);
-      if (et && et in Dt && (et = null), et && !(et in qt)) throw new Error("Unknown model: " + et);
-      let Vt, Ht;
-      if (null == tt) this.model = "rgb", this.color = [0, 0, 0], this.valpha = 1;
-      else if (tt instanceof jt) this.model = tt.model, this.color = [...tt.color], this.valpha = tt.valpha;
-      else if ("string" === typeof tt) {
-        const et = Ot.get(tt);
-        if (null === et) throw new Error("Unable to parse color from string: " + tt);
-        this.model = et.model, Ht = qt[this.model].channels, this.color = et.value.slice(0, Ht), this.valpha = "number" === typeof et.value[Ht] ? et.value[Ht] : 1
-      } else if (tt.length > 0) {
-        this.model = et || "rgb", Ht = qt[this.model].channels;
-        const Vt = Array.prototype.slice.call(tt, 0, Ht);
-        this.color = lt(Vt, Ht), this.valpha = "number" === typeof tt[Ht] ? tt[Ht] : 1
-      } else if ("number" === typeof tt) this.model = "rgb", this.color = [tt >> 16 & 255, tt >> 8 & 255, 255 & tt], this.valpha = 1;
+    function qu(uu, Eu) {
+      if (!(this instanceof qu)) return new qu(uu, Eu);
+      if (Eu && Eu in Zu && (Eu = null), Eu && !(Eu in Uu)) throw new Error("Unknown model: " + Eu);
+      let ju, fu;
+      if (null == uu) this.model = "rgb", this.color = [0, 0, 0], this.valpha = 1;
+      else if (uu instanceof qu) this.model = uu.model, this.color = [...uu.color], this.valpha = uu.valpha;
+      else if ("string" === typeof uu) {
+        const Eu = su.get(uu);
+        if (null === Eu) throw new Error("Unable to parse color from string: " + uu);
+        this.model = Eu.model, fu = Uu[this.model].channels, this.color = Eu.value.slice(0, fu), this.valpha = "number" === typeof Eu.value[fu] ? Eu.value[fu] : 1
+      } else if (uu.length > 0) {
+        this.model = Eu || "rgb", fu = Uu[this.model].channels;
+        const ju = Array.prototype.slice.call(uu, 0, fu);
+        this.color = cu(ju, fu), this.valpha = "number" === typeof uu[fu] ? uu[fu] : 1
+      } else if ("number" === typeof uu) this.model = "rgb", this.color = [uu >> 16 & 255, uu >> 8 & 255, 255 & uu], this.valpha = 1;
       else {
         this.valpha = 1;
-        const et = Object.keys(tt);
-        "alpha" in tt && (et.splice(et.indexOf("alpha"), 1), this.valpha = "number" === typeof tt.alpha ? tt.alpha : 0);
-        const Ot = et.sort().join("");
-        if (!(Ot in mt)) throw new Error("Unable to parse color from object: " + JSON.stringify(tt));
-        this.model = mt[Ot];
+        const Eu = Object.keys(uu);
+        "alpha" in uu && (Eu.splice(Eu.indexOf("alpha"), 1), this.valpha = "number" === typeof uu.alpha ? uu.alpha : 0);
+        const su = Eu.sort().join("");
+        if (!(su in Xu)) throw new Error("Unable to parse color from object: " + JSON.stringify(uu));
+        this.model = Xu[su];
         const {
-          labels: Dt
-        } = qt[this.model], dt = [];
-        for (Vt = 0; Vt < Dt.length; Vt++) dt.push(tt[Dt[Vt]]);
-        this.color = lt(dt)
+          labels: Zu
+        } = Uu[this.model], lu = [];
+        for (ju = 0; ju < Zu.length; ju++) lu.push(uu[Zu[ju]]);
+        this.color = cu(lu)
       }
-      if (dt[this.model])
-        for (Ht = qt[this.model].channels, Vt = 0; Vt < Ht; Vt++) {
-          const tt = dt[this.model][Vt];
-          tt && (this.color[Vt] = tt(this.color[Vt]))
+      if (lu[this.model])
+        for (fu = Uu[this.model].channels, ju = 0; ju < fu; ju++) {
+          const uu = lu[this.model][ju];
+          uu && (this.color[ju] = uu(this.color[ju]))
         }
       this.valpha = Math.max(0, Math.min(1, this.valpha)), Object.freeze && Object.freeze(this)
     }
-    jt.prototype = {
+    qu.prototype = {
       toString() {
         return this.string()
       },
       toJSON() {
         return this[this.model]()
       },
-      string(tt) {
-        let et = this.model in Ot.to ? this : this.rgb();
-        et = et.round("number" === typeof tt ? tt : 1);
-        const Vt = 1 === et.valpha ? et.color : [...et.color, this.valpha];
-        return Ot.to[et.model](Vt)
+      string(uu) {
+        let Eu = this.model in su.to ? this : this.rgb();
+        Eu = Eu.round("number" === typeof uu ? uu : 1);
+        const ju = 1 === Eu.valpha ? Eu.color : [...Eu.color, this.valpha];
+        return su.to[Eu.model](ju)
       },
-      percentString(tt) {
-        const et = this.rgb().round("number" === typeof tt ? tt : 1),
-          Vt = 1 === et.valpha ? et.color : [...et.color, this.valpha];
-        return Ot.to.rgb.percent(Vt)
+      percentString(uu) {
+        const Eu = this.rgb().round("number" === typeof uu ? uu : 1),
+          ju = 1 === Eu.valpha ? Eu.color : [...Eu.color, this.valpha];
+        return su.to.rgb.percent(ju)
       },
       array() {
         return 1 === this.valpha ? [...this.color] : [...this.color, this.valpha]
       },
       object() {
-        const tt = {},
+        const uu = {},
           {
-            channels: et
-          } = qt[this.model],
+            channels: Eu
+          } = Uu[this.model],
           {
-            labels: Vt
-          } = qt[this.model];
-        for (let Ot = 0; Ot < et; Ot++) tt[Vt[Ot]] = this.color[Ot];
-        return 1 !== this.valpha && (tt.alpha = this.valpha), tt
+            labels: ju
+          } = Uu[this.model];
+        for (let su = 0; su < Eu; su++) uu[ju[su]] = this.color[su];
+        return 1 !== this.valpha && (uu.alpha = this.valpha), uu
       },
       unitArray() {
-        const tt = this.rgb().color;
-        return tt[0] /= 255, tt[1] /= 255, tt[2] /= 255, 1 !== this.valpha && tt.push(this.valpha), tt
+        const uu = this.rgb().color;
+        return uu[0] /= 255, uu[1] /= 255, uu[2] /= 255, 1 !== this.valpha && uu.push(this.valpha), uu
       },
       unitObject() {
-        const tt = this.rgb().object();
-        return tt.r /= 255, tt.g /= 255, tt.b /= 255, 1 !== this.valpha && (tt.alpha = this.valpha), tt
+        const uu = this.rgb().object();
+        return uu.r /= 255, uu.g /= 255, uu.b /= 255, 1 !== this.valpha && (uu.alpha = this.valpha), uu
       },
-      round(tt) {
-        return tt = Math.max(tt || 0, 0), new jt([...this.color.map(Ht(tt)), this.valpha], this.model)
+      round(uu) {
+        return uu = Math.max(uu || 0, 0), new qu([...this.color.map(fu(uu)), this.valpha], this.model)
       },
-      alpha(tt) {
-        return void 0 !== tt ? new jt([...this.color, Math.max(0, Math.min(1, tt))], this.model) : this.valpha
+      alpha(uu) {
+        return void 0 !== uu ? new qu([...this.color, Math.max(0, Math.min(1, uu))], this.model) : this.valpha
       },
-      red: Xt("rgb", 0, Qt(255)),
-      green: Xt("rgb", 1, Qt(255)),
-      blue: Xt("rgb", 2, Qt(255)),
-      hue: Xt(["hsl", "hsv", "hsl", "hwb", "hcg"], 0, (tt => (tt % 360 + 360) % 360)),
-      saturationl: Xt("hsl", 1, Qt(100)),
-      lightness: Xt("hsl", 2, Qt(100)),
-      saturationv: Xt("hsv", 1, Qt(100)),
-      value: Xt("hsv", 2, Qt(100)),
-      chroma: Xt("hcg", 1, Qt(100)),
-      gray: Xt("hcg", 2, Qt(100)),
-      white: Xt("hwb", 1, Qt(100)),
-      wblack: Xt("hwb", 2, Qt(100)),
-      cyan: Xt("cmyk", 0, Qt(100)),
-      magenta: Xt("cmyk", 1, Qt(100)),
-      yellow: Xt("cmyk", 2, Qt(100)),
-      black: Xt("cmyk", 3, Qt(100)),
-      x: Xt("xyz", 0, Qt(95.047)),
-      y: Xt("xyz", 1, Qt(100)),
-      z: Xt("xyz", 2, Qt(108.833)),
-      l: Xt("lab", 0, Qt(100)),
-      a: Xt("lab", 1),
-      b: Xt("lab", 2),
-      keyword(tt) {
-        return void 0 !== tt ? new jt(tt) : qt[this.model].keyword(this.color)
+      red: Cu("rgb", 0, bu(255)),
+      green: Cu("rgb", 1, bu(255)),
+      blue: Cu("rgb", 2, bu(255)),
+      hue: Cu(["hsl", "hsv", "hsl", "hwb", "hcg"], 0, (uu => (uu % 360 + 360) % 360)),
+      saturationl: Cu("hsl", 1, bu(100)),
+      lightness: Cu("hsl", 2, bu(100)),
+      saturationv: Cu("hsv", 1, bu(100)),
+      value: Cu("hsv", 2, bu(100)),
+      chroma: Cu("hcg", 1, bu(100)),
+      gray: Cu("hcg", 2, bu(100)),
+      white: Cu("hwb", 1, bu(100)),
+      wblack: Cu("hwb", 2, bu(100)),
+      cyan: Cu("cmyk", 0, bu(100)),
+      magenta: Cu("cmyk", 1, bu(100)),
+      yellow: Cu("cmyk", 2, bu(100)),
+      black: Cu("cmyk", 3, bu(100)),
+      x: Cu("xyz", 0, bu(95.047)),
+      y: Cu("xyz", 1, bu(100)),
+      z: Cu("xyz", 2, bu(108.833)),
+      l: Cu("lab", 0, bu(100)),
+      a: Cu("lab", 1),
+      b: Cu("lab", 2),
+      keyword(uu) {
+        return void 0 !== uu ? new qu(uu) : Uu[this.model].keyword(this.color)
       },
-      hex(tt) {
-        return void 0 !== tt ? new jt(tt) : Ot.to.hex(this.rgb().round().color)
+      hex(uu) {
+        return void 0 !== uu ? new qu(uu) : su.to.hex(this.rgb().round().color)
       },
-      hexa(tt) {
-        if (void 0 !== tt) return new jt(tt);
-        const et = this.rgb().round().color;
-        let Vt = Math.round(255 * this.valpha).toString(16).toUpperCase();
-        return 1 === Vt.length && (Vt = "0" + Vt), Ot.to.hex(et) + Vt
+      hexa(uu) {
+        if (void 0 !== uu) return new qu(uu);
+        const Eu = this.rgb().round().color;
+        let ju = Math.round(255 * this.valpha).toString(16).toUpperCase();
+        return 1 === ju.length && (ju = "0" + ju), su.to.hex(Eu) + ju
       },
       rgbNumber() {
-        const tt = this.rgb().color;
-        return (255 & tt[0]) << 16 | (255 & tt[1]) << 8 | 255 & tt[2]
+        const uu = this.rgb().color;
+        return (255 & uu[0]) << 16 | (255 & uu[1]) << 8 | 255 & uu[2]
       },
       luminosity() {
-        const tt = this.rgb().color,
-          et = [];
-        for (const [Vt, Ot] of tt.entries()) {
-          const tt = Ot / 255;
-          et[Vt] = tt <= .04045 ? tt / 12.92 : ((tt + .055) / 1.055) ** 2.4
+        const uu = this.rgb().color,
+          Eu = [];
+        for (const [ju, su] of uu.entries()) {
+          const uu = su / 255;
+          Eu[ju] = uu <= .04045 ? uu / 12.92 : ((uu + .055) / 1.055) ** 2.4
         }
-        return .2126 * et[0] + .7152 * et[1] + .0722 * et[2]
+        return .2126 * Eu[0] + .7152 * Eu[1] + .0722 * Eu[2]
       },
-      contrast(tt) {
-        const et = this.luminosity(),
-          Vt = tt.luminosity();
-        return et > Vt ? (et + .05) / (Vt + .05) : (Vt + .05) / (et + .05)
+      contrast(uu) {
+        const Eu = this.luminosity(),
+          ju = uu.luminosity();
+        return Eu > ju ? (Eu + .05) / (ju + .05) : (ju + .05) / (Eu + .05)
       },
-      level(tt) {
-        const et = this.contrast(tt);
-        return et >= 7 ? "AAA" : et >= 4.5 ? "AA" : ""
+      level(uu) {
+        const Eu = this.contrast(uu);
+        return Eu >= 7 ? "AAA" : Eu >= 4.5 ? "AA" : ""
       },
       isDark() {
-        const tt = this.rgb().color;
-        return (2126 * tt[0] + 7152 * tt[1] + 722 * tt[2]) / 1e4 < 128
+        const uu = this.rgb().color;
+        return (2126 * uu[0] + 7152 * uu[1] + 722 * uu[2]) / 1e4 < 128
       },
       isLight() {
         return !this.isDark()
       },
-      gq() {
-        const tt = this.rgb();
-        for (let et = 0; et < 3; et++) tt.color[et] = 255 - tt.color[et];
-        return tt
+      nZ() {
+        const uu = this.rgb();
+        for (let Eu = 0; Eu < 3; Eu++) uu.color[Eu] = 255 - uu.color[Eu];
+        return uu
       },
-      lighten(tt) {
-        const et = this.hsl();
-        return et.color[2] += et.color[2] * tt, et
+      lighten(uu) {
+        const Eu = this.hsl();
+        return Eu.color[2] += Eu.color[2] * uu, Eu
       },
-      darken(tt) {
-        const et = this.hsl();
-        return et.color[2] -= et.color[2] * tt, et
+      darken(uu) {
+        const Eu = this.hsl();
+        return Eu.color[2] -= Eu.color[2] * uu, Eu
       },
-      saturate(tt) {
-        const et = this.hsl();
-        return et.color[1] += et.color[1] * tt, et
+      saturate(uu) {
+        const Eu = this.hsl();
+        return Eu.color[1] += Eu.color[1] * uu, Eu
       },
-      desaturate(tt) {
-        const et = this.hsl();
-        return et.color[1] -= et.color[1] * tt, et
+      desaturate(uu) {
+        const Eu = this.hsl();
+        return Eu.color[1] -= Eu.color[1] * uu, Eu
       },
-      whiten(tt) {
-        const et = this.hwb();
-        return et.color[1] += et.color[1] * tt, et
+      whiten(uu) {
+        const Eu = this.hwb();
+        return Eu.color[1] += Eu.color[1] * uu, Eu
       },
-      blacken(tt) {
-        const et = this.hwb();
-        return et.color[2] += et.color[2] * tt, et
+      blacken(uu) {
+        const Eu = this.hwb();
+        return Eu.color[2] += Eu.color[2] * uu, Eu
       },
       grayscale() {
-        const tt = this.rgb().color,
-          et = .3 * tt[0] + .59 * tt[1] + .11 * tt[2];
-        return jt.rgb(et, et, et)
+        const uu = this.rgb().color,
+          Eu = .3 * uu[0] + .59 * uu[1] + .11 * uu[2];
+        return qu.rgb(Eu, Eu, Eu)
       },
-      fade(tt) {
-        return this.alpha(this.valpha - this.valpha * tt)
+      fade(uu) {
+        return this.alpha(this.valpha - this.valpha * uu)
       },
-      opaquer(tt) {
-        return this.alpha(this.valpha + this.valpha * tt)
+      opaquer(uu) {
+        return this.alpha(this.valpha + this.valpha * uu)
       },
-      rotate(tt) {
-        const et = this.hsl();
-        let Vt = et.color[0];
-        return Vt = (Vt + tt) % 360, Vt = Vt < 0 ? 360 + Vt : Vt, et.color[0] = Vt, et
+      rotate(uu) {
+        const Eu = this.hsl();
+        let ju = Eu.color[0];
+        return ju = (ju + uu) % 360, ju = ju < 0 ? 360 + ju : ju, Eu.color[0] = ju, Eu
       },
-      mix(tt, et) {
-        if (!tt || !tt.rgb) throw new Error('Argument to "mix" was not a Color instance, but rather an instance of ' + typeof tt);
-        const Vt = tt.rgb(),
-          Ot = this.rgb(),
-          qt = void 0 === et ? .5 : et,
-          Dt = 2 * qt - 1,
-          mt = Vt.alpha() - Ot.alpha(),
-          dt = ((Dt * mt === -1 ? Dt : (Dt + mt) / (1 + Dt * mt)) + 1) / 2,
-          Ht = 1 - dt;
-        return jt.rgb(dt * Vt.red() + Ht * Ot.red(), dt * Vt.green() + Ht * Ot.green(), dt * Vt.blue() + Ht * Ot.blue(), Vt.alpha() * qt + Ot.alpha() * (1 - qt))
+      mix(uu, Eu) {
+        if (!uu || !uu.rgb) throw new Error('Argument to "mix" was not a Color instance, but rather an instance of ' + typeof uu);
+        const ju = uu.rgb(),
+          su = this.rgb(),
+          Uu = void 0 === Eu ? .5 : Eu,
+          Zu = 2 * Uu - 1,
+          Xu = ju.alpha() - su.alpha(),
+          lu = ((Zu * Xu === -1 ? Zu : (Zu + Xu) / (1 + Zu * Xu)) + 1) / 2,
+          fu = 1 - lu;
+        return qu.rgb(lu * ju.red() + fu * su.red(), lu * ju.green() + fu * su.green(), lu * ju.blue() + fu * su.blue(), ju.alpha() * Uu + su.alpha() * (1 - Uu))
       }
     };
-    for (const Et of Object.keys(qt)) {
-      if (Dt.includes(Et)) continue;
+    for (const Nu of Object.keys(Uu)) {
+      if (Zu.includes(Nu)) continue;
       const {
-        channels: tt
-      } = qt[Et];
-      jt.prototype[Et] = function() {
-        if (this.model === Et) return new jt(this);
-        for (var tt = arguments.length, et = new Array(tt), Vt = 0; Vt < tt; Vt++) et[Vt] = arguments[Vt];
-        return et.length > 0 ? new jt(et, Et) : new jt([...(Ot = qt[this.model][Et].raw(this.color), Array.isArray(Ot) ? Ot : [Ot]), this.valpha], Et);
-        var Ot
-      }, jt[Et] = function() {
-        for (var et = arguments.length, Vt = new Array(et), Ot = 0; Ot < et; Ot++) Vt[Ot] = arguments[Ot];
-        let qt = Vt[0];
-        return "number" === typeof qt && (qt = lt(Vt, tt)), new jt(qt, Et)
+        channels: uu
+      } = Uu[Nu];
+      qu.prototype[Nu] = function() {
+        if (this.model === Nu) return new qu(this);
+        for (var uu = arguments.length, Eu = new Array(uu), ju = 0; ju < uu; ju++) Eu[ju] = arguments[ju];
+        return Eu.length > 0 ? new qu(Eu, Nu) : new qu([...(su = Uu[this.model][Nu].raw(this.color), Array.isArray(su) ? su : [su]), this.valpha], Nu);
+        var su
+      }, qu[Nu] = function() {
+        for (var Eu = arguments.length, ju = new Array(Eu), su = 0; su < Eu; su++) ju[su] = arguments[su];
+        let Uu = ju[0];
+        return "number" === typeof Uu && (Uu = cu(ju, uu)), new qu(Uu, Nu)
       }
     }
 
-    function Ht(tt) {
-      return function(et) {
-        return function(tt, et) {
-          return Number(tt.toFixed(et))
-        }(et, tt)
+    function fu(uu) {
+      return function(Eu) {
+        return function(uu, Eu) {
+          return Number(uu.toFixed(Eu))
+        }(Eu, uu)
       }
     }
 
-    function Xt(tt, et, Vt) {
-      tt = Array.isArray(tt) ? tt : [tt];
-      for (const Ot of tt)(dt[Ot] || (dt[Ot] = []))[et] = Vt;
-      return tt = tt[0],
-        function(Ot) {
-          let qt;
-          return void 0 !== Ot ? (Vt && (Ot = Vt(Ot)), qt = this[tt](), qt.color[et] = Ot, qt) : (qt = this[tt]().color[et], Vt && (qt = Vt(qt)), qt)
+    function Cu(uu, Eu, ju) {
+      uu = Array.isArray(uu) ? uu : [uu];
+      for (const su of uu)(lu[su] || (lu[su] = []))[Eu] = ju;
+      return uu = uu[0],
+        function(su) {
+          let Uu;
+          return void 0 !== su ? (ju && (su = ju(su)), Uu = this[uu](), Uu.color[Eu] = su, Uu) : (Uu = this[uu]().color[Eu], ju && (Uu = ju(Uu)), Uu)
         }
     }
 
-    function Qt(tt) {
-      return function(et) {
-        return Math.max(0, Math.min(tt, et))
+    function bu(uu) {
+      return function(Eu) {
+        return Math.max(0, Math.min(uu, Eu))
       }
     }
 
-    function lt(tt, et) {
-      for (let Vt = 0; Vt < et; Vt++) "number" !== typeof tt[Vt] && (tt[Vt] = 0);
-      return tt
+    function cu(uu, Eu) {
+      for (let ju = 0; ju < Eu; ju++) "number" !== typeof uu[ju] && (uu[ju] = 0);
+      return uu
     }
-    tt.exports = jt
+    uu.exports = qu
   },
-  36918: (tt, et, Vt) => {
-    const Ot = Vt(36921),
-      qt = {};
-    for (const mt of Object.keys(Ot)) qt[Ot[mt]] = mt;
-    const Dt = {
+  37036: (uu, Eu, ju) => {
+    const su = ju(37044),
+      Uu = {};
+    for (const Xu of Object.keys(su)) Uu[su[Xu]] = Xu;
+    const Zu = {
       rgb: {
         channels: 3,
         labels: "rgb"
@@ -571,422 +571,422 @@ export const modules = {
         labels: ["gray"]
       }
     };
-    tt.exports = Dt;
-    for (const mt of Object.keys(Dt)) {
-      if (!("channels" in Dt[mt])) throw new Error("missing channels property: " + mt);
-      if (!("labels" in Dt[mt])) throw new Error("missing channel labels property: " + mt);
-      if (Dt[mt].labels.length !== Dt[mt].channels) throw new Error("channel and label counts mismatch: " + mt);
+    uu.exports = Zu;
+    for (const Xu of Object.keys(Zu)) {
+      if (!("channels" in Zu[Xu])) throw new Error("missing channels property: " + Xu);
+      if (!("labels" in Zu[Xu])) throw new Error("missing channel labels property: " + Xu);
+      if (Zu[Xu].labels.length !== Zu[Xu].channels) throw new Error("channel and label counts mismatch: " + Xu);
       const {
-        channels: tt,
-        labels: et
-      } = Dt[mt];
-      delete Dt[mt].channels, delete Dt[mt].labels, Object.defineProperty(Dt[mt], "channels", {
-        value: tt
-      }), Object.defineProperty(Dt[mt], "labels", {
-        value: et
+        channels: uu,
+        labels: Eu
+      } = Zu[Xu];
+      delete Zu[Xu].channels, delete Zu[Xu].labels, Object.defineProperty(Zu[Xu], "channels", {
+        value: uu
+      }), Object.defineProperty(Zu[Xu], "labels", {
+        value: Eu
       })
     }
-    Dt.rgb.hsl = function(tt) {
-      const et = tt[0] / 255,
-        Vt = tt[1] / 255,
-        Ot = tt[2] / 255,
-        qt = Math.min(et, Vt, Ot),
-        Dt = Math.max(et, Vt, Ot),
-        mt = Dt - qt;
-      let dt, jt;
-      Dt === qt ? dt = 0 : et === Dt ? dt = (Vt - Ot) / mt : Vt === Dt ? dt = 2 + (Ot - et) / mt : Ot === Dt && (dt = 4 + (et - Vt) / mt), dt = Math.min(60 * dt, 360), dt < 0 && (dt += 360);
-      const Ht = (qt + Dt) / 2;
-      return jt = Dt === qt ? 0 : Ht <= .5 ? mt / (Dt + qt) : mt / (2 - Dt - qt), [dt, 100 * jt, 100 * Ht]
-    }, Dt.rgb.hsv = function(tt) {
-      let et, Vt, Ot, qt, Dt;
-      const mt = tt[0] / 255,
-        dt = tt[1] / 255,
-        jt = tt[2] / 255,
-        Ht = Math.max(mt, dt, jt),
-        Xt = Ht - Math.min(mt, dt, jt),
-        Qt = function(tt) {
-          return (Ht - tt) / 6 / Xt + .5
+    Zu.rgb.hsl = function(uu) {
+      const Eu = uu[0] / 255,
+        ju = uu[1] / 255,
+        su = uu[2] / 255,
+        Uu = Math.min(Eu, ju, su),
+        Zu = Math.max(Eu, ju, su),
+        Xu = Zu - Uu;
+      let lu, qu;
+      Zu === Uu ? lu = 0 : Eu === Zu ? lu = (ju - su) / Xu : ju === Zu ? lu = 2 + (su - Eu) / Xu : su === Zu && (lu = 4 + (Eu - ju) / Xu), lu = Math.min(60 * lu, 360), lu < 0 && (lu += 360);
+      const fu = (Uu + Zu) / 2;
+      return qu = Zu === Uu ? 0 : fu <= .5 ? Xu / (Zu + Uu) : Xu / (2 - Zu - Uu), [lu, 100 * qu, 100 * fu]
+    }, Zu.rgb.hsv = function(uu) {
+      let Eu, ju, su, Uu, Zu;
+      const Xu = uu[0] / 255,
+        lu = uu[1] / 255,
+        qu = uu[2] / 255,
+        fu = Math.max(Xu, lu, qu),
+        Cu = fu - Math.min(Xu, lu, qu),
+        bu = function(uu) {
+          return (fu - uu) / 6 / Cu + .5
         };
-      return 0 === Xt ? (qt = 0, Dt = 0) : (Dt = Xt / Ht, et = Qt(mt), Vt = Qt(dt), Ot = Qt(jt), mt === Ht ? qt = Ot - Vt : dt === Ht ? qt = 1 / 3 + et - Ot : jt === Ht && (qt = 2 / 3 + Vt - et), qt < 0 ? qt += 1 : qt > 1 && (qt -= 1)), [360 * qt, 100 * Dt, 100 * Ht]
-    }, Dt.rgb.hwb = function(tt) {
-      const et = tt[0],
-        Vt = tt[1];
-      let Ot = tt[2];
-      const qt = Dt.rgb.hsl(tt)[0],
-        mt = 1 / 255 * Math.min(et, Math.min(Vt, Ot));
-      return Ot = 1 - 1 / 255 * Math.max(et, Math.max(Vt, Ot)), [qt, 100 * mt, 100 * Ot]
-    }, Dt.rgb.cmyk = function(tt) {
-      const et = tt[0] / 255,
-        Vt = tt[1] / 255,
-        Ot = tt[2] / 255,
-        qt = Math.min(1 - et, 1 - Vt, 1 - Ot);
-      return [100 * ((1 - et - qt) / (1 - qt) || 0), 100 * ((1 - Vt - qt) / (1 - qt) || 0), 100 * ((1 - Ot - qt) / (1 - qt) || 0), 100 * qt]
-    }, Dt.rgb.keyword = function(tt) {
-      const et = qt[tt];
-      if (et) return et;
-      let Vt, Dt = 1 / 0;
-      for (const qt of Object.keys(Ot)) {
-        const et = Ot[qt],
-          jt = (dt = et, ((mt = tt)[0] - dt[0]) ** 2 + (mt[1] - dt[1]) ** 2 + (mt[2] - dt[2]) ** 2);
-        jt < Dt && (Dt = jt, Vt = qt)
+      return 0 === Cu ? (Uu = 0, Zu = 0) : (Zu = Cu / fu, Eu = bu(Xu), ju = bu(lu), su = bu(qu), Xu === fu ? Uu = su - ju : lu === fu ? Uu = 1 / 3 + Eu - su : qu === fu && (Uu = 2 / 3 + ju - Eu), Uu < 0 ? Uu += 1 : Uu > 1 && (Uu -= 1)), [360 * Uu, 100 * Zu, 100 * fu]
+    }, Zu.rgb.hwb = function(uu) {
+      const Eu = uu[0],
+        ju = uu[1];
+      let su = uu[2];
+      const Uu = Zu.rgb.hsl(uu)[0],
+        Xu = 1 / 255 * Math.min(Eu, Math.min(ju, su));
+      return su = 1 - 1 / 255 * Math.max(Eu, Math.max(ju, su)), [Uu, 100 * Xu, 100 * su]
+    }, Zu.rgb.cmyk = function(uu) {
+      const Eu = uu[0] / 255,
+        ju = uu[1] / 255,
+        su = uu[2] / 255,
+        Uu = Math.min(1 - Eu, 1 - ju, 1 - su);
+      return [100 * ((1 - Eu - Uu) / (1 - Uu) || 0), 100 * ((1 - ju - Uu) / (1 - Uu) || 0), 100 * ((1 - su - Uu) / (1 - Uu) || 0), 100 * Uu]
+    }, Zu.rgb.keyword = function(uu) {
+      const Eu = Uu[uu];
+      if (Eu) return Eu;
+      let ju, Zu = 1 / 0;
+      for (const Uu of Object.keys(su)) {
+        const Eu = su[Uu],
+          qu = (lu = Eu, ((Xu = uu)[0] - lu[0]) ** 2 + (Xu[1] - lu[1]) ** 2 + (Xu[2] - lu[2]) ** 2);
+        qu < Zu && (Zu = qu, ju = Uu)
       }
-      var mt, dt;
-      return Vt
-    }, Dt.keyword.rgb = function(tt) {
-      return Ot[tt]
-    }, Dt.rgb.xyz = function(tt) {
-      let et = tt[0] / 255,
-        Vt = tt[1] / 255,
-        Ot = tt[2] / 255;
-      et = et > .04045 ? ((et + .055) / 1.055) ** 2.4 : et / 12.92, Vt = Vt > .04045 ? ((Vt + .055) / 1.055) ** 2.4 : Vt / 12.92, Ot = Ot > .04045 ? ((Ot + .055) / 1.055) ** 2.4 : Ot / 12.92;
-      return [100 * (.4124 * et + .3576 * Vt + .1805 * Ot), 100 * (.2126 * et + .7152 * Vt + .0722 * Ot), 100 * (.0193 * et + .1192 * Vt + .9505 * Ot)]
-    }, Dt.rgb.lab = function(tt) {
-      const et = Dt.rgb.xyz(tt);
-      let Vt = et[0],
-        Ot = et[1],
-        qt = et[2];
-      Vt /= 95.047, Ot /= 100, qt /= 108.883, Vt = Vt > .008856 ? Vt ** (1 / 3) : 7.787 * Vt + 16 / 116, Ot = Ot > .008856 ? Ot ** (1 / 3) : 7.787 * Ot + 16 / 116, qt = qt > .008856 ? qt ** (1 / 3) : 7.787 * qt + 16 / 116;
-      return [116 * Ot - 16, 500 * (Vt - Ot), 200 * (Ot - qt)]
-    }, Dt.hsl.rgb = function(tt) {
-      const et = tt[0] / 360,
-        Vt = tt[1] / 100,
-        Ot = tt[2] / 100;
-      let qt, Dt, mt;
-      if (0 === Vt) return mt = 255 * Ot, [mt, mt, mt];
-      qt = Ot < .5 ? Ot * (1 + Vt) : Ot + Vt - Ot * Vt;
-      const dt = 2 * Ot - qt,
-        jt = [0, 0, 0];
-      for (let Ht = 0; Ht < 3; Ht++) Dt = et + 1 / 3 * -(Ht - 1), Dt < 0 && Dt++, Dt > 1 && Dt--, mt = 6 * Dt < 1 ? dt + 6 * (qt - dt) * Dt : 2 * Dt < 1 ? qt : 3 * Dt < 2 ? dt + (qt - dt) * (2 / 3 - Dt) * 6 : dt, jt[Ht] = 255 * mt;
-      return jt
-    }, Dt.hsl.hsv = function(tt) {
-      const et = tt[0];
-      let Vt = tt[1] / 100,
-        Ot = tt[2] / 100,
-        qt = Vt;
-      const Dt = Math.max(Ot, .01);
-      Ot *= 2, Vt *= Ot <= 1 ? Ot : 2 - Ot, qt *= Dt <= 1 ? Dt : 2 - Dt;
-      return [et, 100 * (0 === Ot ? 2 * qt / (Dt + qt) : 2 * Vt / (Ot + Vt)), 100 * ((Ot + Vt) / 2)]
-    }, Dt.hsv.rgb = function(tt) {
-      const et = tt[0] / 60,
-        Vt = tt[1] / 100;
-      let Ot = tt[2] / 100;
-      const qt = Math.floor(et) % 6,
-        Dt = et - Math.floor(et),
-        mt = 255 * Ot * (1 - Vt),
-        dt = 255 * Ot * (1 - Vt * Dt),
-        jt = 255 * Ot * (1 - Vt * (1 - Dt));
-      switch (Ot *= 255, qt) {
+      var Xu, lu;
+      return ju
+    }, Zu.keyword.rgb = function(uu) {
+      return su[uu]
+    }, Zu.rgb.xyz = function(uu) {
+      let Eu = uu[0] / 255,
+        ju = uu[1] / 255,
+        su = uu[2] / 255;
+      Eu = Eu > .04045 ? ((Eu + .055) / 1.055) ** 2.4 : Eu / 12.92, ju = ju > .04045 ? ((ju + .055) / 1.055) ** 2.4 : ju / 12.92, su = su > .04045 ? ((su + .055) / 1.055) ** 2.4 : su / 12.92;
+      return [100 * (.4124 * Eu + .3576 * ju + .1805 * su), 100 * (.2126 * Eu + .7152 * ju + .0722 * su), 100 * (.0193 * Eu + .1192 * ju + .9505 * su)]
+    }, Zu.rgb.lab = function(uu) {
+      const Eu = Zu.rgb.xyz(uu);
+      let ju = Eu[0],
+        su = Eu[1],
+        Uu = Eu[2];
+      ju /= 95.047, su /= 100, Uu /= 108.883, ju = ju > .008856 ? ju ** (1 / 3) : 7.787 * ju + 16 / 116, su = su > .008856 ? su ** (1 / 3) : 7.787 * su + 16 / 116, Uu = Uu > .008856 ? Uu ** (1 / 3) : 7.787 * Uu + 16 / 116;
+      return [116 * su - 16, 500 * (ju - su), 200 * (su - Uu)]
+    }, Zu.hsl.rgb = function(uu) {
+      const Eu = uu[0] / 360,
+        ju = uu[1] / 100,
+        su = uu[2] / 100;
+      let Uu, Zu, Xu;
+      if (0 === ju) return Xu = 255 * su, [Xu, Xu, Xu];
+      Uu = su < .5 ? su * (1 + ju) : su + ju - su * ju;
+      const lu = 2 * su - Uu,
+        qu = [0, 0, 0];
+      for (let fu = 0; fu < 3; fu++) Zu = Eu + 1 / 3 * -(fu - 1), Zu < 0 && Zu++, Zu > 1 && Zu--, Xu = 6 * Zu < 1 ? lu + 6 * (Uu - lu) * Zu : 2 * Zu < 1 ? Uu : 3 * Zu < 2 ? lu + (Uu - lu) * (2 / 3 - Zu) * 6 : lu, qu[fu] = 255 * Xu;
+      return qu
+    }, Zu.hsl.hsv = function(uu) {
+      const Eu = uu[0];
+      let ju = uu[1] / 100,
+        su = uu[2] / 100,
+        Uu = ju;
+      const Zu = Math.max(su, .01);
+      su *= 2, ju *= su <= 1 ? su : 2 - su, Uu *= Zu <= 1 ? Zu : 2 - Zu;
+      return [Eu, 100 * (0 === su ? 2 * Uu / (Zu + Uu) : 2 * ju / (su + ju)), 100 * ((su + ju) / 2)]
+    }, Zu.hsv.rgb = function(uu) {
+      const Eu = uu[0] / 60,
+        ju = uu[1] / 100;
+      let su = uu[2] / 100;
+      const Uu = Math.floor(Eu) % 6,
+        Zu = Eu - Math.floor(Eu),
+        Xu = 255 * su * (1 - ju),
+        lu = 255 * su * (1 - ju * Zu),
+        qu = 255 * su * (1 - ju * (1 - Zu));
+      switch (su *= 255, Uu) {
         case 0:
-          return [Ot, jt, mt];
+          return [su, qu, Xu];
         case 1:
-          return [dt, Ot, mt];
+          return [lu, su, Xu];
         case 2:
-          return [mt, Ot, jt];
+          return [Xu, su, qu];
         case 3:
-          return [mt, dt, Ot];
+          return [Xu, lu, su];
         case 4:
-          return [jt, mt, Ot];
+          return [qu, Xu, su];
         case 5:
-          return [Ot, mt, dt]
+          return [su, Xu, lu]
       }
-    }, Dt.hsv.hsl = function(tt) {
-      const et = tt[0],
-        Vt = tt[1] / 100,
-        Ot = tt[2] / 100,
-        qt = Math.max(Ot, .01);
-      let Dt, mt;
-      mt = (2 - Vt) * Ot;
-      const dt = (2 - Vt) * qt;
-      return Dt = Vt * qt, Dt /= dt <= 1 ? dt : 2 - dt, Dt = Dt || 0, mt /= 2, [et, 100 * Dt, 100 * mt]
-    }, Dt.hwb.rgb = function(tt) {
-      const et = tt[0] / 360;
-      let Vt = tt[1] / 100,
-        Ot = tt[2] / 100;
-      const qt = Vt + Ot;
-      let Dt;
-      qt > 1 && (Vt /= qt, Ot /= qt);
-      const mt = Math.floor(6 * et),
-        dt = 1 - Ot;
-      Dt = 6 * et - mt, 0 !== (1 & mt) && (Dt = 1 - Dt);
-      const jt = Vt + Dt * (dt - Vt);
-      let Ht, Xt, Qt;
-      switch (mt) {
+    }, Zu.hsv.hsl = function(uu) {
+      const Eu = uu[0],
+        ju = uu[1] / 100,
+        su = uu[2] / 100,
+        Uu = Math.max(su, .01);
+      let Zu, Xu;
+      Xu = (2 - ju) * su;
+      const lu = (2 - ju) * Uu;
+      return Zu = ju * Uu, Zu /= lu <= 1 ? lu : 2 - lu, Zu = Zu || 0, Xu /= 2, [Eu, 100 * Zu, 100 * Xu]
+    }, Zu.hwb.rgb = function(uu) {
+      const Eu = uu[0] / 360;
+      let ju = uu[1] / 100,
+        su = uu[2] / 100;
+      const Uu = ju + su;
+      let Zu;
+      Uu > 1 && (ju /= Uu, su /= Uu);
+      const Xu = Math.floor(6 * Eu),
+        lu = 1 - su;
+      Zu = 6 * Eu - Xu, 0 !== (1 & Xu) && (Zu = 1 - Zu);
+      const qu = ju + Zu * (lu - ju);
+      let fu, Cu, bu;
+      switch (Xu) {
         default:
         case 6:
         case 0:
-          Ht = dt, Xt = jt, Qt = Vt;
+          fu = lu, Cu = qu, bu = ju;
           break;
         case 1:
-          Ht = jt, Xt = dt, Qt = Vt;
+          fu = qu, Cu = lu, bu = ju;
           break;
         case 2:
-          Ht = Vt, Xt = dt, Qt = jt;
+          fu = ju, Cu = lu, bu = qu;
           break;
         case 3:
-          Ht = Vt, Xt = jt, Qt = dt;
+          fu = ju, Cu = qu, bu = lu;
           break;
         case 4:
-          Ht = jt, Xt = Vt, Qt = dt;
+          fu = qu, Cu = ju, bu = lu;
           break;
         case 5:
-          Ht = dt, Xt = Vt, Qt = jt
+          fu = lu, Cu = ju, bu = qu
       }
-      return [255 * Ht, 255 * Xt, 255 * Qt]
-    }, Dt.cmyk.rgb = function(tt) {
-      const et = tt[0] / 100,
-        Vt = tt[1] / 100,
-        Ot = tt[2] / 100,
-        qt = tt[3] / 100;
-      return [255 * (1 - Math.min(1, et * (1 - qt) + qt)), 255 * (1 - Math.min(1, Vt * (1 - qt) + qt)), 255 * (1 - Math.min(1, Ot * (1 - qt) + qt))]
-    }, Dt.xyz.rgb = function(tt) {
-      const et = tt[0] / 100,
-        Vt = tt[1] / 100,
-        Ot = tt[2] / 100;
-      let qt, Dt, mt;
-      return qt = 3.2406 * et + -1.5372 * Vt + -.4986 * Ot, Dt = -.9689 * et + 1.8758 * Vt + .0415 * Ot, mt = .0557 * et + -.204 * Vt + 1.057 * Ot, qt = qt > .0031308 ? 1.055 * qt ** (1 / 2.4) - .055 : 12.92 * qt, Dt = Dt > .0031308 ? 1.055 * Dt ** (1 / 2.4) - .055 : 12.92 * Dt, mt = mt > .0031308 ? 1.055 * mt ** (1 / 2.4) - .055 : 12.92 * mt, qt = Math.min(Math.max(0, qt), 1), Dt = Math.min(Math.max(0, Dt), 1), mt = Math.min(Math.max(0, mt), 1), [255 * qt, 255 * Dt, 255 * mt]
-    }, Dt.xyz.lab = function(tt) {
-      let et = tt[0],
-        Vt = tt[1],
-        Ot = tt[2];
-      et /= 95.047, Vt /= 100, Ot /= 108.883, et = et > .008856 ? et ** (1 / 3) : 7.787 * et + 16 / 116, Vt = Vt > .008856 ? Vt ** (1 / 3) : 7.787 * Vt + 16 / 116, Ot = Ot > .008856 ? Ot ** (1 / 3) : 7.787 * Ot + 16 / 116;
-      return [116 * Vt - 16, 500 * (et - Vt), 200 * (Vt - Ot)]
-    }, Dt.lab.xyz = function(tt) {
-      let et, Vt, Ot;
-      Vt = (tt[0] + 16) / 116, et = tt[1] / 500 + Vt, Ot = Vt - tt[2] / 200;
-      const qt = Vt ** 3,
-        Dt = et ** 3,
-        mt = Ot ** 3;
-      return Vt = qt > .008856 ? qt : (Vt - 16 / 116) / 7.787, et = Dt > .008856 ? Dt : (et - 16 / 116) / 7.787, Ot = mt > .008856 ? mt : (Ot - 16 / 116) / 7.787, et *= 95.047, Vt *= 100, Ot *= 108.883, [et, Vt, Ot]
-    }, Dt.lab.lch = function(tt) {
-      const et = tt[0],
-        Vt = tt[1],
-        Ot = tt[2];
-      let qt;
-      qt = 360 * Math.atan2(Ot, Vt) / 2 / Math.PI, qt < 0 && (qt += 360);
-      return [et, Math.sqrt(Vt * Vt + Ot * Ot), qt]
-    }, Dt.lch.lab = function(tt) {
-      const et = tt[0],
-        Vt = tt[1],
-        Ot = tt[2] / 360 * 2 * Math.PI;
-      return [et, Vt * Math.cos(Ot), Vt * Math.sin(Ot)]
-    }, Dt.rgb.ansi16 = function(tt) {
-      let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const [Vt, Ot, qt] = tt;
-      let mt = null === et ? Dt.rgb.hsv(tt)[2] : et;
-      if (mt = Math.round(mt / 50), 0 === mt) return 30;
-      let dt = 30 + (Math.round(qt / 255) << 2 | Math.round(Ot / 255) << 1 | Math.round(Vt / 255));
-      return 2 === mt && (dt += 60), dt
-    }, Dt.hsv.ansi16 = function(tt) {
-      return Dt.rgb.ansi16(Dt.hsv.rgb(tt), tt[2])
-    }, Dt.rgb.ansi256 = function(tt) {
-      const et = tt[0],
-        Vt = tt[1],
-        Ot = tt[2];
-      if (et === Vt && Vt === Ot) return et < 8 ? 16 : et > 248 ? 231 : Math.round((et - 8) / 247 * 24) + 232;
-      return 16 + 36 * Math.round(et / 255 * 5) + 6 * Math.round(Vt / 255 * 5) + Math.round(Ot / 255 * 5)
-    }, Dt.ansi16.rgb = function(tt) {
-      let et = tt % 10;
-      if (0 === et || 7 === et) return tt > 50 && (et += 3.5), et = et / 10.5 * 255, [et, et, et];
-      const Vt = .5 * (1 + ~~(tt > 50));
-      return [(1 & et) * Vt * 255, (et >> 1 & 1) * Vt * 255, (et >> 2 & 1) * Vt * 255]
-    }, Dt.ansi256.rgb = function(tt) {
-      if (tt >= 232) {
-        const et = 10 * (tt - 232) + 8;
-        return [et, et, et]
+      return [255 * fu, 255 * Cu, 255 * bu]
+    }, Zu.cmyk.rgb = function(uu) {
+      const Eu = uu[0] / 100,
+        ju = uu[1] / 100,
+        su = uu[2] / 100,
+        Uu = uu[3] / 100;
+      return [255 * (1 - Math.min(1, Eu * (1 - Uu) + Uu)), 255 * (1 - Math.min(1, ju * (1 - Uu) + Uu)), 255 * (1 - Math.min(1, su * (1 - Uu) + Uu))]
+    }, Zu.xyz.rgb = function(uu) {
+      const Eu = uu[0] / 100,
+        ju = uu[1] / 100,
+        su = uu[2] / 100;
+      let Uu, Zu, Xu;
+      return Uu = 3.2406 * Eu + -1.5372 * ju + -.4986 * su, Zu = -.9689 * Eu + 1.8758 * ju + .0415 * su, Xu = .0557 * Eu + -.204 * ju + 1.057 * su, Uu = Uu > .0031308 ? 1.055 * Uu ** (1 / 2.4) - .055 : 12.92 * Uu, Zu = Zu > .0031308 ? 1.055 * Zu ** (1 / 2.4) - .055 : 12.92 * Zu, Xu = Xu > .0031308 ? 1.055 * Xu ** (1 / 2.4) - .055 : 12.92 * Xu, Uu = Math.min(Math.max(0, Uu), 1), Zu = Math.min(Math.max(0, Zu), 1), Xu = Math.min(Math.max(0, Xu), 1), [255 * Uu, 255 * Zu, 255 * Xu]
+    }, Zu.xyz.lab = function(uu) {
+      let Eu = uu[0],
+        ju = uu[1],
+        su = uu[2];
+      Eu /= 95.047, ju /= 100, su /= 108.883, Eu = Eu > .008856 ? Eu ** (1 / 3) : 7.787 * Eu + 16 / 116, ju = ju > .008856 ? ju ** (1 / 3) : 7.787 * ju + 16 / 116, su = su > .008856 ? su ** (1 / 3) : 7.787 * su + 16 / 116;
+      return [116 * ju - 16, 500 * (Eu - ju), 200 * (ju - su)]
+    }, Zu.lab.xyz = function(uu) {
+      let Eu, ju, su;
+      ju = (uu[0] + 16) / 116, Eu = uu[1] / 500 + ju, su = ju - uu[2] / 200;
+      const Uu = ju ** 3,
+        Zu = Eu ** 3,
+        Xu = su ** 3;
+      return ju = Uu > .008856 ? Uu : (ju - 16 / 116) / 7.787, Eu = Zu > .008856 ? Zu : (Eu - 16 / 116) / 7.787, su = Xu > .008856 ? Xu : (su - 16 / 116) / 7.787, Eu *= 95.047, ju *= 100, su *= 108.883, [Eu, ju, su]
+    }, Zu.lab.lch = function(uu) {
+      const Eu = uu[0],
+        ju = uu[1],
+        su = uu[2];
+      let Uu;
+      Uu = 360 * Math.atan2(su, ju) / 2 / Math.PI, Uu < 0 && (Uu += 360);
+      return [Eu, Math.sqrt(ju * ju + su * su), Uu]
+    }, Zu.lch.lab = function(uu) {
+      const Eu = uu[0],
+        ju = uu[1],
+        su = uu[2] / 360 * 2 * Math.PI;
+      return [Eu, ju * Math.cos(su), ju * Math.sin(su)]
+    }, Zu.rgb.ansi16 = function(uu) {
+      let Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const [ju, su, Uu] = uu;
+      let Xu = null === Eu ? Zu.rgb.hsv(uu)[2] : Eu;
+      if (Xu = Math.round(Xu / 50), 0 === Xu) return 30;
+      let lu = 30 + (Math.round(Uu / 255) << 2 | Math.round(su / 255) << 1 | Math.round(ju / 255));
+      return 2 === Xu && (lu += 60), lu
+    }, Zu.hsv.ansi16 = function(uu) {
+      return Zu.rgb.ansi16(Zu.hsv.rgb(uu), uu[2])
+    }, Zu.rgb.ansi256 = function(uu) {
+      const Eu = uu[0],
+        ju = uu[1],
+        su = uu[2];
+      if (Eu === ju && ju === su) return Eu < 8 ? 16 : Eu > 248 ? 231 : Math.round((Eu - 8) / 247 * 24) + 232;
+      return 16 + 36 * Math.round(Eu / 255 * 5) + 6 * Math.round(ju / 255 * 5) + Math.round(su / 255 * 5)
+    }, Zu.ansi16.rgb = function(uu) {
+      let Eu = uu % 10;
+      if (0 === Eu || 7 === Eu) return uu > 50 && (Eu += 3.5), Eu = Eu / 10.5 * 255, [Eu, Eu, Eu];
+      const ju = .5 * (1 + ~~(uu > 50));
+      return [(1 & Eu) * ju * 255, (Eu >> 1 & 1) * ju * 255, (Eu >> 2 & 1) * ju * 255]
+    }, Zu.ansi256.rgb = function(uu) {
+      if (uu >= 232) {
+        const Eu = 10 * (uu - 232) + 8;
+        return [Eu, Eu, Eu]
       }
-      let et;
-      tt -= 16;
-      return [Math.floor(tt / 36) / 5 * 255, Math.floor((et = tt % 36) / 6) / 5 * 255, et % 6 / 5 * 255]
-    }, Dt.rgb.hex = function(tt) {
-      const et = (((255 & Math.round(tt[0])) << 16) + ((255 & Math.round(tt[1])) << 8) + (255 & Math.round(tt[2]))).toString(16).toUpperCase();
-      return "000000".substring(et.length) + et
-    }, Dt.hex.rgb = function(tt) {
-      const et = tt.toString(16).match(/[a-f0-9]{6}|[a-f0-9]{3}/i);
-      if (!et) return [0, 0, 0];
-      let Vt = et[0];
-      3 === et[0].length && (Vt = Vt.split("").map((tt => tt + tt)).join(""));
-      const Ot = parseInt(Vt, 16);
-      return [Ot >> 16 & 255, Ot >> 8 & 255, 255 & Ot]
-    }, Dt.rgb.hcg = function(tt) {
-      const et = tt[0] / 255,
-        Vt = tt[1] / 255,
-        Ot = tt[2] / 255,
-        qt = Math.max(Math.max(et, Vt), Ot),
-        Dt = Math.min(Math.min(et, Vt), Ot),
-        mt = qt - Dt;
-      let dt, jt;
-      return dt = mt < 1 ? Dt / (1 - mt) : 0, jt = mt <= 0 ? 0 : qt === et ? (Vt - Ot) / mt % 6 : qt === Vt ? 2 + (Ot - et) / mt : 4 + (et - Vt) / mt, jt /= 6, jt %= 1, [360 * jt, 100 * mt, 100 * dt]
-    }, Dt.hsl.hcg = function(tt) {
-      const et = tt[1] / 100,
-        Vt = tt[2] / 100,
-        Ot = Vt < .5 ? 2 * et * Vt : 2 * et * (1 - Vt);
-      let qt = 0;
-      return Ot < 1 && (qt = (Vt - .5 * Ot) / (1 - Ot)), [tt[0], 100 * Ot, 100 * qt]
-    }, Dt.hsv.hcg = function(tt) {
-      const et = tt[1] / 100,
-        Vt = tt[2] / 100,
-        Ot = et * Vt;
-      let qt = 0;
-      return Ot < 1 && (qt = (Vt - Ot) / (1 - Ot)), [tt[0], 100 * Ot, 100 * qt]
-    }, Dt.hcg.rgb = function(tt) {
-      const et = tt[0] / 360,
-        Vt = tt[1] / 100,
-        Ot = tt[2] / 100;
-      if (0 === Vt) return [255 * Ot, 255 * Ot, 255 * Ot];
-      const qt = [0, 0, 0],
-        Dt = et % 1 * 6,
-        mt = Dt % 1,
-        dt = 1 - mt;
-      let jt = 0;
-      switch (Math.floor(Dt)) {
+      let Eu;
+      uu -= 16;
+      return [Math.floor(uu / 36) / 5 * 255, Math.floor((Eu = uu % 36) / 6) / 5 * 255, Eu % 6 / 5 * 255]
+    }, Zu.rgb.hex = function(uu) {
+      const Eu = (((255 & Math.round(uu[0])) << 16) + ((255 & Math.round(uu[1])) << 8) + (255 & Math.round(uu[2]))).toString(16).toUpperCase();
+      return "000000".substring(Eu.length) + Eu
+    }, Zu.hex.rgb = function(uu) {
+      const Eu = uu.toString(16).match(/[a-f0-9]{6}|[a-f0-9]{3}/i);
+      if (!Eu) return [0, 0, 0];
+      let ju = Eu[0];
+      3 === Eu[0].length && (ju = ju.split("").map((uu => uu + uu)).join(""));
+      const su = parseInt(ju, 16);
+      return [su >> 16 & 255, su >> 8 & 255, 255 & su]
+    }, Zu.rgb.hcg = function(uu) {
+      const Eu = uu[0] / 255,
+        ju = uu[1] / 255,
+        su = uu[2] / 255,
+        Uu = Math.max(Math.max(Eu, ju), su),
+        Zu = Math.min(Math.min(Eu, ju), su),
+        Xu = Uu - Zu;
+      let lu, qu;
+      return lu = Xu < 1 ? Zu / (1 - Xu) : 0, qu = Xu <= 0 ? 0 : Uu === Eu ? (ju - su) / Xu % 6 : Uu === ju ? 2 + (su - Eu) / Xu : 4 + (Eu - ju) / Xu, qu /= 6, qu %= 1, [360 * qu, 100 * Xu, 100 * lu]
+    }, Zu.hsl.hcg = function(uu) {
+      const Eu = uu[1] / 100,
+        ju = uu[2] / 100,
+        su = ju < .5 ? 2 * Eu * ju : 2 * Eu * (1 - ju);
+      let Uu = 0;
+      return su < 1 && (Uu = (ju - .5 * su) / (1 - su)), [uu[0], 100 * su, 100 * Uu]
+    }, Zu.hsv.hcg = function(uu) {
+      const Eu = uu[1] / 100,
+        ju = uu[2] / 100,
+        su = Eu * ju;
+      let Uu = 0;
+      return su < 1 && (Uu = (ju - su) / (1 - su)), [uu[0], 100 * su, 100 * Uu]
+    }, Zu.hcg.rgb = function(uu) {
+      const Eu = uu[0] / 360,
+        ju = uu[1] / 100,
+        su = uu[2] / 100;
+      if (0 === ju) return [255 * su, 255 * su, 255 * su];
+      const Uu = [0, 0, 0],
+        Zu = Eu % 1 * 6,
+        Xu = Zu % 1,
+        lu = 1 - Xu;
+      let qu = 0;
+      switch (Math.floor(Zu)) {
         case 0:
-          qt[0] = 1, qt[1] = mt, qt[2] = 0;
+          Uu[0] = 1, Uu[1] = Xu, Uu[2] = 0;
           break;
         case 1:
-          qt[0] = dt, qt[1] = 1, qt[2] = 0;
+          Uu[0] = lu, Uu[1] = 1, Uu[2] = 0;
           break;
         case 2:
-          qt[0] = 0, qt[1] = 1, qt[2] = mt;
+          Uu[0] = 0, Uu[1] = 1, Uu[2] = Xu;
           break;
         case 3:
-          qt[0] = 0, qt[1] = dt, qt[2] = 1;
+          Uu[0] = 0, Uu[1] = lu, Uu[2] = 1;
           break;
         case 4:
-          qt[0] = mt, qt[1] = 0, qt[2] = 1;
+          Uu[0] = Xu, Uu[1] = 0, Uu[2] = 1;
           break;
         default:
-          qt[0] = 1, qt[1] = 0, qt[2] = dt
+          Uu[0] = 1, Uu[1] = 0, Uu[2] = lu
       }
-      return jt = (1 - Vt) * Ot, [255 * (Vt * qt[0] + jt), 255 * (Vt * qt[1] + jt), 255 * (Vt * qt[2] + jt)]
-    }, Dt.hcg.hsv = function(tt) {
-      const et = tt[1] / 100,
-        Vt = et + tt[2] / 100 * (1 - et);
-      let Ot = 0;
-      return Vt > 0 && (Ot = et / Vt), [tt[0], 100 * Ot, 100 * Vt]
-    }, Dt.hcg.hsl = function(tt) {
-      const et = tt[1] / 100,
-        Vt = tt[2] / 100 * (1 - et) + .5 * et;
-      let Ot = 0;
-      return Vt > 0 && Vt < .5 ? Ot = et / (2 * Vt) : Vt >= .5 && Vt < 1 && (Ot = et / (2 * (1 - Vt))), [tt[0], 100 * Ot, 100 * Vt]
-    }, Dt.hcg.hwb = function(tt) {
-      const et = tt[1] / 100,
-        Vt = et + tt[2] / 100 * (1 - et);
-      return [tt[0], 100 * (Vt - et), 100 * (1 - Vt)]
-    }, Dt.hwb.hcg = function(tt) {
-      const et = tt[1] / 100,
-        Vt = 1 - tt[2] / 100,
-        Ot = Vt - et;
-      let qt = 0;
-      return Ot < 1 && (qt = (Vt - Ot) / (1 - Ot)), [tt[0], 100 * Ot, 100 * qt]
-    }, Dt.apple.rgb = function(tt) {
-      return [tt[0] / 65535 * 255, tt[1] / 65535 * 255, tt[2] / 65535 * 255]
-    }, Dt.rgb.apple = function(tt) {
-      return [tt[0] / 255 * 65535, tt[1] / 255 * 65535, tt[2] / 255 * 65535]
-    }, Dt.gray.rgb = function(tt) {
-      return [tt[0] / 100 * 255, tt[0] / 100 * 255, tt[0] / 100 * 255]
-    }, Dt.gray.hsl = function(tt) {
-      return [0, 0, tt[0]]
-    }, Dt.gray.hsv = Dt.gray.hsl, Dt.gray.hwb = function(tt) {
-      return [0, 100, tt[0]]
-    }, Dt.gray.cmyk = function(tt) {
-      return [0, 0, 0, tt[0]]
-    }, Dt.gray.lab = function(tt) {
-      return [tt[0], 0, 0]
-    }, Dt.gray.hex = function(tt) {
-      const et = 255 & Math.round(tt[0] / 100 * 255),
-        Vt = ((et << 16) + (et << 8) + et).toString(16).toUpperCase();
-      return "000000".substring(Vt.length) + Vt
-    }, Dt.rgb.gray = function(tt) {
-      return [(tt[0] + tt[1] + tt[2]) / 3 / 255 * 100]
+      return qu = (1 - ju) * su, [255 * (ju * Uu[0] + qu), 255 * (ju * Uu[1] + qu), 255 * (ju * Uu[2] + qu)]
+    }, Zu.hcg.hsv = function(uu) {
+      const Eu = uu[1] / 100,
+        ju = Eu + uu[2] / 100 * (1 - Eu);
+      let su = 0;
+      return ju > 0 && (su = Eu / ju), [uu[0], 100 * su, 100 * ju]
+    }, Zu.hcg.hsl = function(uu) {
+      const Eu = uu[1] / 100,
+        ju = uu[2] / 100 * (1 - Eu) + .5 * Eu;
+      let su = 0;
+      return ju > 0 && ju < .5 ? su = Eu / (2 * ju) : ju >= .5 && ju < 1 && (su = Eu / (2 * (1 - ju))), [uu[0], 100 * su, 100 * ju]
+    }, Zu.hcg.hwb = function(uu) {
+      const Eu = uu[1] / 100,
+        ju = Eu + uu[2] / 100 * (1 - Eu);
+      return [uu[0], 100 * (ju - Eu), 100 * (1 - ju)]
+    }, Zu.hwb.hcg = function(uu) {
+      const Eu = uu[1] / 100,
+        ju = 1 - uu[2] / 100,
+        su = ju - Eu;
+      let Uu = 0;
+      return su < 1 && (Uu = (ju - su) / (1 - su)), [uu[0], 100 * su, 100 * Uu]
+    }, Zu.apple.rgb = function(uu) {
+      return [uu[0] / 65535 * 255, uu[1] / 65535 * 255, uu[2] / 65535 * 255]
+    }, Zu.rgb.apple = function(uu) {
+      return [uu[0] / 255 * 65535, uu[1] / 255 * 65535, uu[2] / 255 * 65535]
+    }, Zu.gray.rgb = function(uu) {
+      return [uu[0] / 100 * 255, uu[0] / 100 * 255, uu[0] / 100 * 255]
+    }, Zu.gray.hsl = function(uu) {
+      return [0, 0, uu[0]]
+    }, Zu.gray.hsv = Zu.gray.hsl, Zu.gray.hwb = function(uu) {
+      return [0, 100, uu[0]]
+    }, Zu.gray.cmyk = function(uu) {
+      return [0, 0, 0, uu[0]]
+    }, Zu.gray.lab = function(uu) {
+      return [uu[0], 0, 0]
+    }, Zu.gray.hex = function(uu) {
+      const Eu = 255 & Math.round(uu[0] / 100 * 255),
+        ju = ((Eu << 16) + (Eu << 8) + Eu).toString(16).toUpperCase();
+      return "000000".substring(ju.length) + ju
+    }, Zu.rgb.gray = function(uu) {
+      return [(uu[0] + uu[1] + uu[2]) / 3 / 255 * 100]
     }
   },
-  36913: (tt, et, Vt) => {
-    const Ot = Vt(36918),
-      qt = Vt(36923),
-      Dt = {};
-    Object.keys(Ot).forEach((tt => {
-      Dt[tt] = {}, Object.defineProperty(Dt[tt], "channels", {
-        value: Ot[tt].channels
-      }), Object.defineProperty(Dt[tt], "labels", {
-        value: Ot[tt].labels
+  37034: (uu, Eu, ju) => {
+    const su = ju(37036),
+      Uu = ju(37053),
+      Zu = {};
+    Object.keys(su).forEach((uu => {
+      Zu[uu] = {}, Object.defineProperty(Zu[uu], "channels", {
+        value: su[uu].channels
+      }), Object.defineProperty(Zu[uu], "labels", {
+        value: su[uu].labels
       });
-      const et = qt(tt);
-      Object.keys(et).forEach((Vt => {
-        const Ot = et[Vt];
-        Dt[tt][Vt] = function(tt) {
-          const et = function() {
-            for (var et = arguments.length, Vt = new Array(et), Ot = 0; Ot < et; Ot++) Vt[Ot] = arguments[Ot];
-            const qt = Vt[0];
-            if (void 0 === qt || null === qt) return qt;
-            qt.length > 1 && (Vt = qt);
-            const Dt = tt(Vt);
-            if ("object" === typeof Dt)
-              for (let tt = Dt.length, mt = 0; mt < tt; mt++) Dt[mt] = Math.round(Dt[mt]);
-            return Dt
+      const Eu = Uu(uu);
+      Object.keys(Eu).forEach((ju => {
+        const su = Eu[ju];
+        Zu[uu][ju] = function(uu) {
+          const Eu = function() {
+            for (var Eu = arguments.length, ju = new Array(Eu), su = 0; su < Eu; su++) ju[su] = arguments[su];
+            const Uu = ju[0];
+            if (void 0 === Uu || null === Uu) return Uu;
+            Uu.length > 1 && (ju = Uu);
+            const Zu = uu(ju);
+            if ("object" === typeof Zu)
+              for (let uu = Zu.length, Xu = 0; Xu < uu; Xu++) Zu[Xu] = Math.round(Zu[Xu]);
+            return Zu
           };
-          return "conversion" in tt && (et.conversion = tt.conversion), et
-        }(Ot), Dt[tt][Vt].raw = function(tt) {
-          const et = function() {
-            for (var et = arguments.length, Vt = new Array(et), Ot = 0; Ot < et; Ot++) Vt[Ot] = arguments[Ot];
-            const qt = Vt[0];
-            return void 0 === qt || null === qt ? qt : (qt.length > 1 && (Vt = qt), tt(Vt))
+          return "conversion" in uu && (Eu.conversion = uu.conversion), Eu
+        }(su), Zu[uu][ju].raw = function(uu) {
+          const Eu = function() {
+            for (var Eu = arguments.length, ju = new Array(Eu), su = 0; su < Eu; su++) ju[su] = arguments[su];
+            const Uu = ju[0];
+            return void 0 === Uu || null === Uu ? Uu : (Uu.length > 1 && (ju = Uu), uu(ju))
           };
-          return "conversion" in tt && (et.conversion = tt.conversion), et
-        }(Ot)
+          return "conversion" in uu && (Eu.conversion = uu.conversion), Eu
+        }(su)
       }))
-    })), tt.exports = Dt
+    })), uu.exports = Zu
   },
-  36923: (tt, et, Vt) => {
-    const Ot = Vt(36918);
+  37053: (uu, Eu, ju) => {
+    const su = ju(37036);
 
-    function qt(tt) {
-      const et = function() {
-          const tt = {},
-            et = Object.keys(Ot);
-          for (let Vt = et.length, Ot = 0; Ot < Vt; Ot++) tt[et[Ot]] = {
+    function Uu(uu) {
+      const Eu = function() {
+          const uu = {},
+            Eu = Object.keys(su);
+          for (let ju = Eu.length, su = 0; su < ju; su++) uu[Eu[su]] = {
             distance: -1,
             parent: null
           };
-          return tt
+          return uu
         }(),
-        Vt = [tt];
-      for (et[tt].distance = 0; Vt.length;) {
-        const tt = Vt.pop(),
-          qt = Object.keys(Ot[tt]);
-        for (let Ot = qt.length, Dt = 0; Dt < Ot; Dt++) {
-          const Ot = qt[Dt],
-            mt = et[Ot]; - 1 === mt.distance && (mt.distance = et[tt].distance + 1, mt.parent = tt, Vt.unshift(Ot))
+        ju = [uu];
+      for (Eu[uu].distance = 0; ju.length;) {
+        const uu = ju.pop(),
+          Uu = Object.keys(su[uu]);
+        for (let su = Uu.length, Zu = 0; Zu < su; Zu++) {
+          const su = Uu[Zu],
+            Xu = Eu[su]; - 1 === Xu.distance && (Xu.distance = Eu[uu].distance + 1, Xu.parent = uu, ju.unshift(su))
         }
       }
-      return et
+      return Eu
     }
 
-    function Dt(tt, et) {
-      return function(Vt) {
-        return et(tt(Vt))
+    function Zu(uu, Eu) {
+      return function(ju) {
+        return Eu(uu(ju))
       }
     }
 
-    function mt(tt, et) {
-      const Vt = [et[tt].parent, tt];
-      let qt = Ot[et[tt].parent][tt],
-        mt = et[tt].parent;
-      for (; et[mt].parent;) Vt.unshift(et[mt].parent), qt = Dt(Ot[et[mt].parent][mt], qt), mt = et[mt].parent;
-      return qt.conversion = Vt, qt
+    function Xu(uu, Eu) {
+      const ju = [Eu[uu].parent, uu];
+      let Uu = su[Eu[uu].parent][uu],
+        Xu = Eu[uu].parent;
+      for (; Eu[Xu].parent;) ju.unshift(Eu[Xu].parent), Uu = Zu(su[Eu[Xu].parent][Xu], Uu), Xu = Eu[Xu].parent;
+      return Uu.conversion = ju, Uu
     }
-    tt.exports = function(tt) {
-      const et = qt(tt),
-        Vt = {},
-        Ot = Object.keys(et);
-      for (let qt = Ot.length, Dt = 0; Dt < qt; Dt++) {
-        const tt = Ot[Dt];
-        null !== et[tt].parent && (Vt[tt] = mt(tt, et))
+    uu.exports = function(uu) {
+      const Eu = Uu(uu),
+        ju = {},
+        su = Object.keys(Eu);
+      for (let Uu = su.length, Zu = 0; Zu < Uu; Zu++) {
+        const uu = su[Zu];
+        null !== Eu[uu].parent && (ju[uu] = Xu(uu, Eu))
       }
-      return Vt
+      return ju
     }
   },
-  36921: tt => {
-    tt.exports = {
+  37044: uu => {
+    uu.exports = {
       aliceblue: [240, 248, 255],
       antiquewhite: [250, 235, 215],
       aqua: [0, 255, 255],
@@ -1137,28 +1137,28 @@ export const modules = {
       yellowgreen: [154, 205, 50]
     }
   },
-  36902: (tt, et, Vt) => {
-    var Ot = Vt(36905),
-      qt = Array.prototype.concat,
-      Dt = Array.prototype.slice,
-      mt = tt.exports = function(tt) {
-        for (var et = [], Vt = 0, mt = tt.length; Vt < mt; Vt++) {
-          var dt = tt[Vt];
-          Ot(dt) ? et = qt.call(et, Dt.call(dt)) : et.push(dt)
+  37027: (uu, Eu, ju) => {
+    var su = ju(37032),
+      Uu = Array.prototype.concat,
+      Zu = Array.prototype.slice,
+      Xu = uu.exports = function(uu) {
+        for (var Eu = [], ju = 0, Xu = uu.length; ju < Xu; ju++) {
+          var lu = uu[ju];
+          su(lu) ? Eu = Uu.call(Eu, Zu.call(lu)) : Eu.push(lu)
         }
-        return et
+        return Eu
       };
-    mt.wrap = function(tt) {
+    Xu.wrap = function(uu) {
       return function() {
-        return tt(mt(arguments))
+        return uu(Xu(arguments))
       }
     }
   },
-  36905: tt => {
-    tt.exports = function(tt) {
-      return !(!tt || "string" === typeof tt) && (tt instanceof Array || Array.isArray(tt) || tt.length >= 0 && (tt.splice instanceof Function || Object.getOwnPropertyDescriptor(tt, tt.length - 1) && "String" !== tt.constructor.name))
+  37032: uu => {
+    uu.exports = function(uu) {
+      return !(!uu || "string" === typeof uu) && (uu instanceof Array || Array.isArray(uu) || uu.length >= 0 && (uu.splice instanceof Function || Object.getOwnPropertyDescriptor(uu, uu.length - 1) && "String" !== uu.constructor.name))
     }
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

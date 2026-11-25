@@ -1,48 +1,48 @@
 export const id = 125;
 export const ids = [125];
 export const modules = {
-  6716: (tt, et, Vt) => {
-    Vt.d(et, {
-      WorldCodeAiChatGptNotice: () => Xt,
-      WorldCodeAiDeepSeekNotice: () => Ht,
-      d: () => mt,
-      h: () => jt,
-      l: () => dt
+  6732: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      WorldCodeAiChatGptNotice: () => Cu,
+      WorldCodeAiDeepSeekNotice: () => fu,
+      c: () => Xu,
+      d: () => qu,
+      f: () => lu
     });
-    var Ot = Vt(1286),
-      qt = Vt(6723),
-      Dt = Vt(1188);
-    const mt = "https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html",
-      dt = "https://openai.com/policies/terms-of-use/",
-      jt = "https://openai.com/policies/privacy-policy/";
+    var su = ju(1244),
+      Uu = ju(6737),
+      Zu = ju(1154);
+    const Xu = "https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html",
+      lu = "https://openai.com/policies/terms-of-use/",
+      qu = "https://openai.com/policies/privacy-policy/";
 
-    function Ht() {
+    function fu() {
       const {
-        t: tt
-      } = (0, Ot.H)();
-      return (0, Dt.jsxs)(Dt.Fragment, {
-        children: [tt("superBotXd:deepSeekNotice"), " ", (0, Dt.jsx)(qt.b, {
-          href: mt,
-          children: tt("superBotXd:deepSeekPrivacyPolicy")
+        t: uu
+      } = (0, su.A)();
+      return (0, Zu.jsxs)(Zu.Fragment, {
+        children: [uu("superBotXd:deepSeekNotice"), " ", (0, Zu.jsx)(Uu.c, {
+          href: Xu,
+          children: uu("superBotXd:deepSeekPrivacyPolicy")
         })]
       })
     }
 
-    function Xt() {
+    function Cu() {
       const {
-        t: tt
-      } = (0, Ot.H)();
-      return (0, Dt.jsxs)(Dt.Fragment, {
-        children: [tt("aiHelperChatGpt:notice"), " ", (0, Dt.jsx)(qt.b, {
-          href: dt,
-          children: tt("aiHelperChatGpt:terms")
-        }), " ", (0, Dt.jsx)(qt.b, {
-          href: jt,
-          children: tt("aiHelperChatGpt:privacyPolicy")
+        t: uu
+      } = (0, su.A)();
+      return (0, Zu.jsxs)(Zu.Fragment, {
+        children: [uu("aiHelperChatGpt:notice"), " ", (0, Zu.jsx)(Uu.c, {
+          href: lu,
+          children: uu("aiHelperChatGpt:terms")
+        }), " ", (0, Zu.jsx)(Uu.c, {
+          href: qu,
+          children: uu("aiHelperChatGpt:privacyPolicy")
         })]
       })
     }
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);

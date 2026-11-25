@@ -1,128 +1,128 @@
 export const id = 17;
 export const ids = [17];
 export const modules = {
-  36853: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => Et,
-      g: () => ft,
-      i: () => lt,
-      m: () => Qt
+  36990: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => Nu,
+      h: () => Ou,
+      k: () => cu,
+      n: () => bu
     });
-    var Ot = Vt(34371),
-      qt = Vt(36861),
-      Dt = Vt(36867),
-      mt = Vt(8936),
-      dt = Vt(1554),
-      jt = Vt(63),
-      Ht = Vt(83),
-      Xt = Vt(1188);
+    var su = ju(34547),
+      Uu = ju(36992),
+      Zu = ju(36998),
+      Xu = ju(8942),
+      lu = ju(1499),
+      qu = ju(58),
+      fu = ju(65),
+      Cu = ju(1154);
 
-    function Qt() {
-      var tt;
-      return (0, dt.h)(qt.b, (0, qt.l)()), (0, Xt.jsx)(Xt.Fragment, {
-        children: null === (tt = (0, qt.l)()) || void 0 === tt ? void 0 : tt.content
+    function bu() {
+      var uu;
+      return (0, lu.g)(Uu.c, (0, Uu.l)()), (0, Cu.jsx)(Cu.Fragment, {
+        children: null === (uu = (0, Uu.l)()) || void 0 === uu ? void 0 : uu.content
       })
     }
 
-    function lt(tt) {
-      var et;
+    function cu(uu) {
+      var Eu;
       let {
-        show: Vt
-      } = tt;
-      (0, dt.h)(qt.b, (0, qt.l)());
-      const Ht = null === (et = (0, qt.l)()) || void 0 === et ? void 0 : et.menu;
-      return (0, jt.useEffect)((() => {
-        var tt;
-        Vt || (null === Ht || void 0 === Ht || null === (tt = Ht.onClose) || void 0 === tt || tt.call(Ht), (0, Dt.t)())
-      }), [Vt, Ht]), (0, jt.useEffect)((() => Vt ? (0, mt.g)(Dt.A, Dt.f) : void 0), [Vt]), (0, Xt.jsx)(Ot.b, {
-        showing: Vt,
+        show: ju
+      } = uu;
+      (0, lu.g)(Uu.c, (0, Uu.l)());
+      const fu = null === (Eu = (0, Uu.l)()) || void 0 === Eu ? void 0 : Eu.menu;
+      return (0, qu.useEffect)((() => {
+        var uu;
+        ju || (null === fu || void 0 === fu || null === (uu = fu.onClose) || void 0 === uu || uu.call(fu), (0, Zu.q)())
+      }), [ju, fu]), (0, qu.useEffect)((() => ju ? (0, Xu.f)(Zu.x, Zu.h) : void 0), [ju]), (0, Cu.jsx)(su.b, {
+        showing: ju,
         globallyUniqueKey: "clientGameMenu",
-        children: null === Ht || void 0 === Ht ? void 0 : Ht.content
+        children: null === fu || void 0 === fu ? void 0 : fu.content
       })
     }
 
-    function Et(tt) {
+    function Nu(uu) {
       let {
-        placement: et = "bottom"
-      } = tt;
-      return (0, Xt.jsx)("div", {
-        id: `clientGameHud-${et}`,
+        placement: Eu = "bottom"
+      } = uu;
+      return (0, Cu.jsx)("div", {
+        id: `clientGameHud-${Eu}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function ft(tt) {
+    function Ou(uu) {
       let {
-        children: et,
-        placement: Vt = "bottom"
-      } = tt;
-      const [Ot, qt] = (0, jt.useState)(null);
-      return (0, jt.useEffect)((() => {
-        qt(document.getElementById(`clientGameHud-${Vt}`))
-      }), [Vt]), Ot ? (0, Ht.createPortal)(et, Ot) : null
+        children: Eu,
+        placement: ju = "bottom"
+      } = uu;
+      const [su, Uu] = (0, qu.useState)(null);
+      return (0, qu.useEffect)((() => {
+        Uu(document.getElementById(`clientGameHud-${ju}`))
+      }), [ju]), su ? (0, fu.createPortal)(Eu, su) : null
     }
   },
-  34371: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => Dt
+  34547: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      b: () => Zu
     });
-    var Ot = Vt(4668),
-      qt = Vt(4677);
+    var su = ju(4723),
+      Uu = ju(4726);
 
-    function Dt(tt) {
+    function Zu(uu) {
       let {
-        children: et,
-        showing: Vt,
-        globallyUniqueKey: Dt,
-        alwaysMountChildren: mt = !1,
-        doGameplayStartStopOnShow: dt = !0,
-        keepsMovement: jt = !1
-      } = tt;
-      return (0, qt.d)(!0, Vt, Dt, jt), (0, Ot.e)(dt, Vt), Vt || mt ? et : null
+        children: Eu,
+        showing: ju,
+        globallyUniqueKey: Zu,
+        alwaysMountChildren: Xu = !1,
+        doGameplayStartStopOnShow: lu = !0,
+        keepsMovement: qu = !1
+      } = uu;
+      return (0, Uu.e)(!0, ju, Zu, qu), (0, su.e)(lu, ju), ju || Xu ? Eu : null
     }
   },
-  36941: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => Dt,
-      d: () => mt,
-      h: () => dt,
-      j: () => jt
+  37075: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => Zu,
+      f: () => Xu,
+      i: () => lu,
+      l: () => qu
     });
-    var Ot = Vt(63),
-      qt = Vt(3176);
-    const Dt = 8,
-      mt = "InGameHeaderContainer",
-      dt = "TopRightElements";
+    var su = ju(58),
+      Uu = ju(3285);
+    const Zu = 8,
+      Xu = "InGameHeaderContainer",
+      lu = "TopRightElements";
 
-    function jt(tt) {
-      const [et] = (0, qt.c)(), [Vt, jt] = (0, Ot.useState)(!1);
-      return (0, Ot.useLayoutEffect)((() => {
-        if (!tt) return;
-        const et = document.querySelector(`.${mt}`),
-          Vt = document.querySelector(`.${dt}`),
-          Ot = () => {
-            const Ot = tt.getBoundingClientRect(),
-              qt = et ? et.getBoundingClientRect().right : 0,
-              mt = Vt ? Vt.getBoundingClientRect().left : window.innerWidth,
-              dt = Ot.left < qt + Dt,
-              Ht = Ot.right > mt - Dt;
-            jt(dt || Ht)
+    function qu(uu) {
+      const [Eu] = (0, Uu.d)(), [ju, qu] = (0, su.useState)(!1);
+      return (0, su.useLayoutEffect)((() => {
+        if (!uu) return;
+        const Eu = document.querySelector(`.${Xu}`),
+          ju = document.querySelector(`.${lu}`),
+          su = () => {
+            const su = uu.getBoundingClientRect(),
+              Uu = Eu ? Eu.getBoundingClientRect().right : 0,
+              Xu = ju ? ju.getBoundingClientRect().left : window.innerWidth,
+              lu = su.left < Uu + Zu,
+              fu = su.right > Xu - Zu;
+            qu(lu || fu)
           };
-        Ot();
-        const qt = new ResizeObserver(Ot);
-        return qt.observe(tt), et && qt.observe(et), Vt && qt.observe(Vt), () => {
-          qt.disconnect()
+        su();
+        const Uu = new ResizeObserver(su);
+        return Uu.observe(uu), Eu && Uu.observe(Eu), ju && Uu.observe(ju), () => {
+          Uu.disconnect()
         }
-      }), [tt, et]), Vt
+      }), [uu, Eu]), ju
     }
   },
-  36932: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => qt
+  37066: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => Uu
     });
-    const Ot = [{
+    const su = [{
       maxDist: 30,
       timeBetweenSoftChecks: 1e3,
       softUpdateDist: 2,
@@ -139,214 +139,214 @@ export const modules = {
       hardUpdateDist: 100
     }];
 
-    function qt(tt, et, Vt) {
-      const qt = Math.abs(tt - et),
-        Dt = Date.now() - Vt;
-      for (const mt of Ot)
-        if (tt < mt.maxDist) return qt >= mt.hardUpdateDist || Dt > mt.timeBetweenSoftChecks && qt >= mt.softUpdateDist;
+    function Uu(uu, Eu, ju) {
+      const Uu = Math.abs(uu - Eu),
+        Zu = Date.now() - ju;
+      for (const Xu of su)
+        if (uu < Xu.maxDist) return Uu >= Xu.hardUpdateDist || Zu > Xu.timeBetweenSoftChecks && Uu >= Xu.softUpdateDist;
       return !1
     }
   },
-  8936: (tt, et, Vt) => {
-    Vt.d(et, {
-      c: () => Dt,
-      g: () => qt
+  8942: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => Zu,
+      f: () => Uu
     });
-    let Ot = null;
-    const qt = function(tt) {
-        const et = {
-          cycle: tt,
+    let su = null;
+    const Uu = function(uu) {
+        const Eu = {
+          cycle: uu,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return Ot = et, () => {
-          Ot === et && (Ot = null)
+        return su = Eu, () => {
+          su === Eu && (su = null)
         }
       },
-      Dt = () => {
-        var tt;
-        return null !== (tt = Ot) && void 0 !== tt && tt.canCycle() ? Ot.cycle : null
+      Zu = () => {
+        var uu;
+        return null !== (uu = su) && void 0 !== uu && uu.canCycle() ? su.cycle : null
       }
   },
-  38751: (tt, et, Vt) => {
-    function Ot(tt, et, Vt) {
-      var Ot;
+  38857: (uu, Eu, ju) => {
+    function su(uu, Eu, ju) {
+      var su;
       const {
-        width: qt,
-        height: Dt
-      } = Vt, mt = null !== (Ot = tt.text) && void 0 !== Ot ? Ot : tt, dt = (mt.x / 100 - .5) * qt, jt = (mt.y / 100 - .5) * Dt, Ht = qt / 2 - et.x;
-      if (null !== tt.text && Math.abs(dt) <= Ht && jt >= et.top - Dt / 2 && jt <= Dt / 2 - et.bottom) return {
-        x: mt.x,
-        y: mt.y
+        width: Uu,
+        height: Zu
+      } = ju, Xu = null !== (su = uu.text) && void 0 !== su ? su : uu, lu = (Xu.x / 100 - .5) * Uu, qu = (Xu.y / 100 - .5) * Zu, fu = Uu / 2 - Eu.x;
+      if (null !== uu.text && Math.abs(lu) <= fu && qu >= Eu.top - Zu / 2 && qu <= Zu / 2 - Eu.bottom) return {
+        x: Xu.x,
+        y: Xu.y
       };
-      const Xt = Math.min(0 === dt ? 1 / 0 : Ht / Math.abs(dt), jt > 0 ? (Dt / 2 - et.bottom) / jt : jt < 0 ? (et.top - Dt / 2) / jt : 1 / 0);
-      return !Number.isFinite(Xt) || Xt < 0 ? {
+      const Cu = Math.min(0 === lu ? 1 / 0 : fu / Math.abs(lu), qu > 0 ? (Zu / 2 - Eu.bottom) / qu : qu < 0 ? (Eu.top - Zu / 2) / qu : 1 / 0);
+      return !Number.isFinite(Cu) || Cu < 0 ? {
         x: 50,
         y: 50
       } : {
-        x: 50 + dt * Xt / qt * 100,
-        y: 50 + jt * Xt / Dt * 100
+        x: 50 + lu * Cu / Uu * 100,
+        y: 50 + qu * Cu / Zu * 100
       }
     }
-    Vt.d(et, {
-      b: () => Ot
+    ju.d(Eu, {
+      d: () => su
     })
   },
-  36867: (tt, et, Vt) => {
-    Vt.d(et, {
-      A: () => ft,
-      E: () => Mt,
-      d: () => Dt,
-      f: () => wt,
-      j: () => yt,
-      n: () => dt,
-      q: () => lt,
-      t: () => Nt,
-      w: () => Qt,
-      y: () => bt
+  36998: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => Zu,
+      h: () => Yu,
+      j: () => hu,
+      k: () => lu,
+      o: () => cu,
+      q: () => Du,
+      r: () => bu,
+      t: () => Mu,
+      x: () => Ou,
+      y: () => gu
     });
-    var Ot = Vt(26),
-      qt = Vt(31);
-    const Dt = "clientGameInventoryButtonsChanged",
-      mt = new Map;
+    var su = ju(22),
+      Uu = ju(24);
+    const Zu = "clientGameInventoryButtonsChanged",
+      Xu = new Map;
 
-    function dt() {
-      return [...mt.values()].sort(((tt, et) => {
-        var Vt, Ot;
-        return (null !== (Vt = tt.order) && void 0 !== Vt ? Vt : 0) - (null !== (Ot = et.order) && void 0 !== Ot ? Ot : 0)
+    function lu() {
+      return [...Xu.values()].sort(((uu, Eu) => {
+        var ju, su;
+        return (null !== (ju = uu.order) && void 0 !== ju ? ju : 0) - (null !== (su = Eu.order) && void 0 !== su ? su : 0)
       }))
     }
-    let jt = null;
+    let qu = null;
 
-    function Ht(tt) {
-      jt = tt
+    function fu(uu) {
+      qu = uu
     }
-    let Xt = !1;
+    let Cu = !1;
 
-    function Qt(tt) {
-      Xt = !0;
+    function bu(uu) {
+      Cu = !0;
       try {
-        tt.onClick()
+        uu.onClick()
       } finally {
-        Xt = !1
+        Cu = !1
       }
-      tt.panel && "clientGame" === Ot.b.get("openInGameMenuName") && Ht(tt.id)
+      uu.panel && "clientGame" === su.d.get("openInGameMenuName") && fu(uu.id)
     }
 
-    function lt() {
-      return Xt
+    function cu() {
+      return Cu
     }
 
-    function Et() {
-      return dt().filter((tt => tt.panel && !tt.disabled))
+    function Nu() {
+      return lu().filter((uu => uu.panel && !uu.disabled))
     }
 
-    function ft(tt) {
-      const et = Et(),
-        Vt = et.findIndex((tt => tt.id === jt));
-      return !(Vt < 0 || et.length < 2) && (Qt(et[(Vt + tt + et.length) % et.length]), !0)
+    function Ou(uu) {
+      const Eu = Nu(),
+        ju = Eu.findIndex((uu => uu.id === qu));
+      return !(ju < 0 || Eu.length < 2) && (bu(Eu[(ju + uu + Eu.length) % Eu.length]), !0)
     }
 
-    function wt() {
-      return null !== jt && Et().length > 1
+    function Yu() {
+      return null !== qu && Nu().length > 1
     }
 
-    function yt() {
-      Ht(null)
+    function hu() {
+      fu(null)
     }
 
-    function Nt() {
-      "inventory" !== Ot.b.get("openInGameMenuName") && Ht(null)
+    function Du() {
+      "inventory" !== su.d.get("openInGameMenuName") && fu(null)
     }
 
-    function Mt() {
-      const tt = jt;
-      return Ht(null), tt
+    function gu() {
+      const uu = qu;
+      return fu(null), uu
     }
 
-    function bt(tt) {
-      return mt.set(tt.id, tt), qt.j.sw(Dt, dt(), !0), () => {
-        mt.get(tt.id) === tt && (mt.delete(tt.id), qt.j.sw(Dt, dt()))
+    function Mu(uu) {
+      return Xu.set(uu.id, uu), Uu.h.TY(Zu, lu(), !0), () => {
+        Xu.get(uu.id) === uu && (Xu.delete(uu.id), Uu.h.TY(Zu, lu()))
       }
     }
   },
-  36861: (tt, et, Vt) => {
-    Vt.d(et, {
-      b: () => dt,
-      c: () => yt,
-      g: () => Nt,
-      i: () => lt,
-      l: () => Ht,
-      m: () => wt,
-      o: () => Et,
-      q: () => Xt
+  36992: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => lu,
+      e: () => hu,
+      g: () => Du,
+      k: () => cu,
+      l: () => fu,
+      m: () => Yu,
+      n: () => Nu,
+      o: () => Cu
     });
-    var Ot = Vt(26),
-      qt = Vt(31),
-      Dt = Vt(1387),
-      mt = Vt(36867);
-    const dt = "clientGameUiChanged";
-    let jt = null;
+    var su = ju(22),
+      Uu = ju(24),
+      Zu = ju(1343),
+      Xu = ju(36998);
+    const lu = "clientGameUiChanged";
+    let qu = null;
 
-    function Ht() {
-      return jt
+    function fu() {
+      return qu
     }
 
-    function Xt(tt, et) {
-      const Vt = {
-        content: tt,
-        menu: et
+    function Cu(uu, Eu) {
+      const ju = {
+        content: uu,
+        menu: Eu
       };
-      return jt = Vt, qt.j.sw(dt, jt, !0), () => {
-        jt === Vt && (jt = null, ft = !1, yt(), qt.j.sw(dt, null))
+      return qu = ju, Uu.h.TY(lu, qu, !0), () => {
+        qu === ju && (qu = null, Ou = !1, hu(), Uu.h.TY(lu, null))
       }
     }
-    let Qt = null;
+    let bu = null;
 
-    function lt() {
-      return Qt
+    function cu() {
+      return bu
     }
 
-    function Et(tt) {
-      return Qt = tt, () => {
-        Qt === tt && (Qt = null)
+    function Nu(uu) {
+      return bu = uu, () => {
+        bu === uu && (bu = null)
       }
     }
-    let ft = !1;
+    let Ou = !1;
 
-    function wt() {
-      const tt = Ot.b.get("openInGameMenuName");
-      "clientGame" !== tt && (ft = "inventory" === tt), (0, mt.q)() || (0, mt.j)(), (0, Dt.p)(Dt.c), Ot.b.set({
+    function Yu() {
+      const uu = su.d.get("openInGameMenuName");
+      "clientGame" !== uu && (Ou = "inventory" === uu), (0, Xu.o)() || (0, Xu.j)(), (0, Zu.t)(Zu.b), su.d.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function yt() {
-      Mt(!1)
+    function hu() {
+      gu(!1)
     }
 
-    function Nt() {
-      Mt(ft)
+    function Du() {
+      gu(Ou)
     }
 
-    function Mt(tt) {
-      "clientGame" === Ot.b.get("openInGameMenuName") && Ot.b.set({
-        openInGameMenuName: tt ? "inventory" : null
-      }), tt || (0, mt.j)(), ft = !1
+    function gu(uu) {
+      "clientGame" === su.d.get("openInGameMenuName") && su.d.set({
+        openInGameMenuName: uu ? "inventory" : null
+      }), uu || (0, Xu.j)(), Ou = !1
     }
   },
-  39650: (tt, et, Vt) => {
-    Vt.r(et), Vt.d(et, {
-      default: () => Ne
+  39728: (uu, Eu, ju) => {
+    ju.r(Eu), ju.d(Eu, {
+      default: () => hE
     });
-    const Ot = ["skin", "head", "body", "legs", "shoes", "eyebrows", "eyes"];
-    var qt = Vt(63),
-      Dt = Vt(36861),
-      mt = Vt(37273),
-      dt = Vt(36872),
-      jt = Vt(1826),
-      Ht = Vt(31);
-    const Xt = {
+    const su = ["skin", "head", "body", "legs", "shoes", "eyebrows", "eyes"];
+    var Uu = ju(58),
+      Zu = ju(36992),
+      Xu = ju(37428),
+      lu = ju(37007),
+      qu = ju(1779),
+      fu = ju(24);
+    const Cu = {
       M1911: "pistol",
       Deagle: "pistol",
       "Block-19": "pistol",
@@ -372,284 +372,284 @@ export const modules = {
       "Splash Instant Healing Potion": "throwable",
       Snowdash: "throwable"
     };
-    const Qt = 32;
+    const bu = 32;
 
-    function lt(tt, et, Vt, Ot) {
+    function cu(uu, Eu, ju, su) {
       return {
         tag: "line",
         attrs: {
-          x1: tt,
-          y1: et,
-          x2: Vt,
-          y2: Ot,
+          x1: uu,
+          y1: Eu,
+          x2: ju,
+          y2: su,
           "stroke-width": arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 2
         }
       }
     }
 
-    function Et(tt) {
+    function Nu(uu) {
       return {
         tag: "circle",
         attrs: {
-          cx: Qt,
-          cy: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Qt,
-          r: tt,
+          cx: bu,
+          cy: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : bu,
+          r: uu,
           class: "Fill"
         }
       }
     }
 
-    function ft(tt, et) {
+    function Ou(uu, Eu) {
       return {
         tag: "path",
         attrs: {
-          d: tt,
-          "stroke-width": et
+          d: uu,
+          "stroke-width": Eu
         }
       }
     }
 
-    function wt(tt, et, Vt) {
+    function Yu(uu, Eu, ju) {
       return {
         tag: "circle",
         attrs: {
-          cx: Qt,
-          cy: Qt,
-          r: tt,
-          "stroke-width": et,
-          class: Vt
+          cx: bu,
+          cy: bu,
+          r: uu,
+          "stroke-width": Eu,
+          class: ju
         }
       }
     }
 
-    function yt(tt, et, Vt) {
+    function hu(uu, Eu, ju) {
       return {
         tag: "text",
         attrs: {
-          x: tt,
-          y: et,
+          x: uu,
+          y: Eu,
           class: "Fill Label"
         },
-        text: Vt
+        text: ju
       }
     }
-    const Nt = {
-      pistol: tt => [lt(Qt, Qt - tt - 5, Qt, Qt - tt), lt(Qt - tt - 5, Qt, Qt - tt, Qt), lt(Qt + tt, Qt, Qt + tt + 5, Qt), Et(1.4)],
-      rifle: tt => [lt(Qt, Qt - tt - 8, Qt, Qt - tt), lt(Qt, Qt + tt, Qt, Qt + tt + 8), lt(Qt - tt - 8, Qt, Qt - tt, Qt), lt(Qt + tt, Qt, Qt + tt + 8, Qt), Et(1)],
-      smg: tt => {
-        const et = Math.PI / 2,
-          Vt = [];
-        for (let mt = 0; mt < 4; mt++) Vt.push((qt = mt * et + .35, Dt = (mt + 1) * et - .35, ft(`M${Qt+(Ot=6+tt)*Math.cos(qt)} ${Qt+Ot*Math.sin(qt)} A${Ot} ${Ot} 0 0 1 ${Qt+Ot*Math.cos(Dt)} ${Qt+Ot*Math.sin(Dt)}`, 2)));
-        var Ot, qt, Dt;
-        return [...Vt, Et(1.4)]
+    const Du = {
+      pistol: uu => [cu(bu, bu - uu - 5, bu, bu - uu), cu(bu - uu - 5, bu, bu - uu, bu), cu(bu + uu, bu, bu + uu + 5, bu), Nu(1.4)],
+      rifle: uu => [cu(bu, bu - uu - 8, bu, bu - uu), cu(bu, bu + uu, bu, bu + uu + 8), cu(bu - uu - 8, bu, bu - uu, bu), cu(bu + uu, bu, bu + uu + 8, bu), Nu(1)],
+      smg: uu => {
+        const Eu = Math.PI / 2,
+          ju = [];
+        for (let Xu = 0; Xu < 4; Xu++) ju.push((Uu = Xu * Eu + .35, Zu = (Xu + 1) * Eu - .35, Ou(`M${bu+(su=6+uu)*Math.cos(Uu)} ${bu+su*Math.sin(Uu)} A${su} ${su} 0 0 1 ${bu+su*Math.cos(Zu)} ${bu+su*Math.sin(Zu)}`, 2)));
+        var su, Uu, Zu;
+        return [...ju, Nu(1.4)]
       },
-      shotgun: tt => [wt(tt, 3, "Ring Outline"), wt(tt, 1.5, "Ring")],
-      marksman: tt => [ft(`M${26-tt/2} ${39+tt/2} L32 33 L${38+tt/2} ${39+tt/2}`, 2), lt(14 - tt, Qt, 24 - tt, Qt, 1.5), lt(40 + tt, Qt, 50 + tt, Qt, 1.5), lt(14 - tt, 30, 14 - tt, 34, 1.5), lt(50 + tt, 30, 50 + tt, 34, 1.5)],
-      machineGun: tt => {
-        const et = 10 + tt,
-          Vt = [];
-        for (const [Ot, qt] of [
+      shotgun: uu => [Yu(uu, 3, "Ring Outline"), Yu(uu, 1.5, "Ring")],
+      marksman: uu => [Ou(`M${26-uu/2} ${39+uu/2} L32 33 L${38+uu/2} ${39+uu/2}`, 2), cu(14 - uu, bu, 24 - uu, bu, 1.5), cu(40 + uu, bu, 50 + uu, bu, 1.5), cu(14 - uu, 30, 14 - uu, 34, 1.5), cu(50 + uu, 30, 50 + uu, 34, 1.5)],
+      machineGun: uu => {
+        const Eu = 10 + uu,
+          ju = [];
+        for (const [su, Uu] of [
             [-1, -1],
             [1, -1],
             [-1, 1],
             [1, 1]
-          ]) Vt.push(ft(`M${Qt+Ot*et} ${Qt+qt*(et-5)} L${Qt+Ot*et} ${Qt+qt*et} L${Qt+Ot*(et-5)} ${Qt+qt*et}`, 2));
-        return [...Vt, lt(Qt, 28, Qt, 36, 1.5), lt(28, Qt, 36, Qt, 1.5)]
+          ]) ju.push(Ou(`M${bu+su*Eu} ${bu+Uu*(Eu-5)} L${bu+su*Eu} ${bu+Uu*Eu} L${bu+su*(Eu-5)} ${bu+Uu*Eu}`, 2));
+        return [...ju, cu(bu, 28, bu, 36, 1.5), cu(28, bu, 36, bu, 1.5)]
       },
-      launcher: () => [lt(14, 30, 50, 30, 1.5), lt(Qt, 24, Qt, 52, 1.5), lt(28, 38, 36, 38, 1.5), lt(29, 44, 35, 44, 1.5), lt(30, 50, 34, 50, 1.5), yt(38, 40, "100"), yt(37, 46, "200"), Et(1.4, 30)],
-      melee: () => [ft("M32 26 L38 32 L32 38 L26 32 Z", 1.5), Et(1.2)],
-      throwable: () => [Et(1.6)]
+      launcher: () => [cu(14, 30, 50, 30, 1.5), cu(bu, 24, bu, 52, 1.5), cu(28, 38, 36, 38, 1.5), cu(29, 44, 35, 44, 1.5), cu(30, 50, 34, 50, 1.5), hu(38, 40, "100"), hu(37, 46, "200"), Nu(1.4, 30)],
+      melee: () => [Ou("M32 26 L38 32 L32 38 L26 32 Z", 1.5), Nu(1.2)],
+      throwable: () => [Nu(1.6)]
     };
 
-    function Mt(tt) {
+    function gu(uu) {
       let {
-        tag: et,
-        attrs: Vt,
-        text: Ot
-      } = tt, qt = `<${et}`;
-      for (const [Dt, mt] of Object.entries(Vt)) qt += ` ${Dt}="${mt}"`;
-      return void 0 === Ot ? `${qt}/>` : `${qt}>${Ot}</${et}>`
+        tag: Eu,
+        attrs: ju,
+        text: su
+      } = uu, Uu = `<${Eu}`;
+      for (const [Zu, Xu] of Object.entries(ju)) Uu += ` ${Zu}="${Xu}"`;
+      return void 0 === su ? `${Uu}/>` : `${Uu}>${su}</${Eu}>`
     }
-    class bt {
-      constructor(tt, et) {
-        this.api = tt, this.localPlayerId = et, this.element = null, this.drawnFamily = null, this.shapes = [], this.drawnGap = 0, this.coneDrawn = !1, this.drawnVisible = null, this.drawnPressed = null, this.shownRadius = 0, this.ownsCrosshair = !1, this.enabled = !0, this.sniperOverlay = !1, this.mouseDown = !1, this.gapPerVh = 0, this.tokens = void 0, this.bindElement = tt => {
-          this.element = tt, this.drawnFamily = null, this.drawnVisible = null, this.drawnPressed = null, tt && !this.enabled && (tt.style.display = "none")
+    class Mu {
+      constructor(uu, Eu) {
+        this.api = uu, this.localPlayerId = Eu, this.element = null, this.drawnFamily = null, this.shapes = [], this.drawnGap = 0, this.coneDrawn = !1, this.drawnVisible = null, this.drawnPressed = null, this.shownRadius = 0, this.ownsCrosshair = !1, this.enabled = !0, this.sniperOverlay = !1, this.mouseDown = !1, this.gapPerVh = 0, this.tokens = void 0, this.bindElement = uu => {
+          this.element = uu, this.drawnFamily = null, this.drawnVisible = null, this.drawnPressed = null, uu && !this.enabled && (uu.style.display = "none")
         }, this.measure = () => {
-          this.gapPerVh = window.innerHeight / 100 * (64 / (4 * (0, jt.getRemInPx)()))
-        }, this.tokens = [Ht.j.subscribe("aimingOverlay", (tt => {
-          this.sniperOverlay = "sniper" === tt
-        })), Ht.j.subscribe("mouseState", (tt => {
+          this.gapPerVh = window.innerHeight / 100 * (64 / (4 * (0, qu.getRemInPx)()))
+        }, this.tokens = [fu.h.subscribe("aimingOverlay", (uu => {
+          this.sniperOverlay = "sniper" === uu
+        })), fu.h.subscribe("mouseState", (uu => {
           let {
-            isDown: et
-          } = tt;
-          this.mouseDown = et
+            isDown: Eu
+          } = uu;
+          this.mouseDown = Eu
         }))], window.addEventListener("resize", this.measure), this.measure()
       }
-      Av(tt) {
-        tt !== this.enabled && (this.enabled = tt, this.drawnVisible = null, tt || (this.setOwnsCrosshair(!1), this.element && (this.element.style.display = "none")))
+      Wk(uu) {
+        uu !== this.enabled && (this.enabled = uu, this.drawnVisible = null, uu || (this.setOwnsCrosshair(!1), this.element && (this.element.style.display = "none")))
       }
-      frame(tt, et) {
-        var Vt, Ot;
+      frame(uu, Eu) {
+        var ju, su;
         if (!this.enabled) return;
         const {
-          api: qt
-        } = this, Dt = qt.isAlive(this.localPlayerId) && null !== (Vt = null === (Ot = qt.bVt(this.localPlayerId)) || void 0 === Ot ? void 0 : Ot.name) && void 0 !== Vt ? Vt : null, mt = (dt = Dt) && Xt[dt] || null;
-        var dt;
-        if (this.setOwnsCrosshair(null !== mt), !this.element) return;
-        const jt = qt.getHeldGunInaccuracy(),
-          Ht = null !== jt,
-          Qt = null !== mt && !this.sniperOverlay && qt.isCrosshairShown();
-        if (Qt !== this.drawnVisible && (this.drawnVisible = Qt, this.element.style.display = Qt ? "block" : "none"), !Qt) return;
-        const lt = Ht ? function(tt) {
-            return "launcher" === tt || "melee" === tt || "throwable" === tt ? "none" : "shotgun" === tt ? "cone" : "offset"
-          }(mt) : "none",
-          Et = null !== jt && void 0 !== jt ? jt : 0;
-        "cone" === lt ? this.drawCone(mt, this.coneRadiusVh(Et, et) * this.gapPerVh, tt) : (this.coneDrawn = !1, this.draw(mt, "none" === lt ? 2 : this.offsetGap(Et)));
-        const ft = !Ht && this.mouseDown;
-        ft !== this.drawnPressed && (this.drawnPressed = ft, this.element.classList.toggle("Pressed", ft))
+          api: Uu
+        } = this, Zu = Uu.isAlive(this.localPlayerId) && null !== (ju = null === (su = Uu.yEu(this.localPlayerId)) || void 0 === su ? void 0 : su.name) && void 0 !== ju ? ju : null, Xu = (lu = Zu) && Cu[lu] || null;
+        var lu;
+        if (this.setOwnsCrosshair(null !== Xu), !this.element) return;
+        const qu = Uu.getHeldGunInaccuracy(),
+          fu = null !== qu,
+          bu = null !== Xu && !this.sniperOverlay && Uu.isCrosshairShown();
+        if (bu !== this.drawnVisible && (this.drawnVisible = bu, this.element.style.display = bu ? "block" : "none"), !bu) return;
+        const cu = fu ? function(uu) {
+            return "launcher" === uu || "melee" === uu || "throwable" === uu ? "none" : "shotgun" === uu ? "cone" : "offset"
+          }(Xu) : "none",
+          Nu = null !== qu && void 0 !== qu ? qu : 0;
+        "cone" === cu ? this.drawCone(Xu, this.coneRadiusVh(Nu, Eu) * this.gapPerVh, uu) : (this.coneDrawn = !1, this.draw(Xu, "none" === cu ? 2 : this.offsetGap(Nu)));
+        const Ou = !fu && this.mouseDown;
+        Ou !== this.drawnPressed && (this.drawnPressed = Ou, this.element.classList.toggle("Pressed", Ou))
       }
       dispose() {
-        for (const tt of this.tokens) Ht.j.unsubscribe(tt);
+        for (const uu of this.tokens) fu.h.unsubscribe(uu);
         window.removeEventListener("resize", this.measure), this.setOwnsCrosshair(!1)
       }
-      draw(tt, et) {
-        var Vt, Ot;
-        tt !== this.drawnFamily ? (this.drawnFamily = tt, this.drawnGap = et, this.element.innerHTML = function(tt, et) {
-          return `<svg viewBox="0 0 64 64">${Nt[tt](et).map(Mt).join("")}</svg>`
-        }(tt, et), this.shapes = Array.from(null !== (Vt = null === (Ot = this.element.firstElementChild) || void 0 === Ot ? void 0 : Ot.children) && void 0 !== Vt ? Vt : [])) : et !== this.drawnGap && (this.drawnGap = et, function(tt, et, Vt) {
-          const Ot = Nt[et](Vt);
-          for (let qt = 0; qt < Ot.length; qt++)
-            for (const [et, Vt] of Object.entries(Ot[qt].attrs)) {
-              const Ot = String(Vt);
-              tt[qt].getAttribute(et) !== Ot && tt[qt].setAttribute(et, Ot)
+      draw(uu, Eu) {
+        var ju, su;
+        uu !== this.drawnFamily ? (this.drawnFamily = uu, this.drawnGap = Eu, this.element.innerHTML = function(uu, Eu) {
+          return `<svg viewBox="0 0 64 64">${Du[uu](Eu).map(gu).join("")}</svg>`
+        }(uu, Eu), this.shapes = Array.from(null !== (ju = null === (su = this.element.firstElementChild) || void 0 === su ? void 0 : su.children) && void 0 !== ju ? ju : [])) : Eu !== this.drawnGap && (this.drawnGap = Eu, function(uu, Eu, ju) {
+          const su = Du[Eu](ju);
+          for (let Uu = 0; Uu < su.length; Uu++)
+            for (const [Eu, ju] of Object.entries(su[Uu].attrs)) {
+              const su = String(ju);
+              uu[Uu].getAttribute(Eu) !== su && uu[Uu].setAttribute(Eu, su)
             }
-        }(this.shapes, tt, et))
+        }(this.shapes, uu, Eu))
       }
-      drawCone(tt, et, Vt) {
-        tt === this.drawnFamily && this.coneDrawn ? this.shownRadius += (et - this.shownRadius) * (1 - Math.exp(-Vt / 80)) : this.shownRadius = et, this.coneDrawn = !0, this.draw(tt, Math.round(4 * this.shownRadius) / 4)
+      drawCone(uu, Eu, ju) {
+        uu === this.drawnFamily && this.coneDrawn ? this.shownRadius += (Eu - this.shownRadius) * (1 - Math.exp(-ju / 80)) : this.shownRadius = Eu, this.coneDrawn = !0, this.draw(uu, Math.round(4 * this.shownRadius) / 4)
       }
-      coneRadiusVh(tt, et) {
-        if (!(et > 0)) return 1;
-        const Vt = tt * mt.g / 2;
-        return Math.max(50 * Math.tan(Vt) / et, 1)
+      coneRadiusVh(uu, Eu) {
+        if (!(Eu > 0)) return 1;
+        const ju = uu * Xu.h / 2;
+        return Math.max(50 * Math.tan(ju) / Eu, 1)
       }
-      offsetGap(tt) {
-        const et = 2 + ((0, dt.c)(tt) - 1) * this.gapPerVh;
-        return Math.min(24, Math.round(2 * et) / 2)
+      offsetGap(uu) {
+        const Eu = 2 + ((0, lu.e)(uu) - 1) * this.gapPerVh;
+        return Math.min(24, Math.round(2 * Eu) / 2)
       }
-      setOwnsCrosshair(tt) {
-        tt !== this.ownsCrosshair && (this.ownsCrosshair = tt, document.body.classList.toggle("FrontlineCustomCrosshair", tt))
+      setOwnsCrosshair(uu) {
+        uu !== this.ownsCrosshair && (this.ownsCrosshair = uu, document.body.classList.toggle("FrontlineCustomCrosshair", uu))
       }
     }
-    const Jt = "FrontlineCustomDamage",
-      Ct = .45,
-      ut = .2;
-    class Kt {
-      constructor(tt, et) {
-        this.api = tt, this.localPlayerId = et, this.root = null, this.lowLayer = null, this.arcLayer = null, this.arcs = [], this.flashes = [], this.lastHealthPool = null, this.lastDrop = {
+    const eu = "FrontlineCustomDamage",
+      Gu = .45,
+      pu = .2;
+    class wu {
+      constructor(uu, Eu) {
+        this.api = uu, this.localPlayerId = Eu, this.root = null, this.lowLayer = null, this.arcLayer = null, this.arcs = [], this.flashes = [], this.lastHealthPool = null, this.lastDrop = {
           frac: 0,
           at: -1 / 0
-        }, this.maxHealth = null, this.Lt = 1, this.dead = !1, this.enabled = !0, this.cameraHeading = 0, this.token = void 0, this.readHealth = NaN, this.readShield = NaN, this.readMaxHealth = NaN, this.bindElement = tt => {
-          var et, Vt;
-          this.clearHits(), this.root = tt, this.lowLayer = null !== (et = null === tt || void 0 === tt ? void 0 : tt.querySelector(".FrontlineDamageLow")) && void 0 !== et ? et : null, this.arcLayer = null !== (Vt = null === tt || void 0 === tt ? void 0 : tt.querySelector(".FrontlineDamageArcs")) && void 0 !== Vt ? Vt : null, this.showRoot(), this.drawLow()
-        }, this.token = Ht.j.subscribe("damagedByOtherPlayer", (tt => {
+        }, this.maxHealth = null, this.ru = 1, this.dead = !1, this.enabled = !0, this.cameraHeading = 0, this.token = void 0, this.readHealth = NaN, this.readShield = NaN, this.readMaxHealth = NaN, this.bindElement = uu => {
+          var Eu, ju;
+          this.clearHits(), this.root = uu, this.lowLayer = null !== (Eu = null === uu || void 0 === uu ? void 0 : uu.querySelector(".FrontlineDamageLow")) && void 0 !== Eu ? Eu : null, this.arcLayer = null !== (ju = null === uu || void 0 === uu ? void 0 : uu.querySelector(".FrontlineDamageArcs")) && void 0 !== ju ? ju : null, this.showRoot(), this.drawLow()
+        }, this.token = fu.h.subscribe("damagedByOtherPlayer", (uu => {
           let {
-            direction: et,
-            Pt: Vt
-          } = tt;
-          this.onHurt(et, Vt)
-        })), this.syncHealth(), document.body.classList.add(Jt)
+            direction: Eu,
+            Ku: ju
+          } = uu;
+          this.onHurt(Eu, ju)
+        })), this.syncHealth(), document.body.classList.add(eu)
       }
-      Av(tt) {
-        tt !== this.enabled && (this.enabled = tt, document.body.classList.toggle(Jt, tt), tt || this.clearHits(), this.showRoot())
+      Wk(uu) {
+        uu !== this.enabled && (this.enabled = uu, document.body.classList.toggle(eu, uu), uu || this.clearHits(), this.showRoot())
       }
-      frame(tt) {
-        this.syncHealth(), this.cameraHeading = tt;
-        for (const et of this.arcs) this.drawArcAngle(et)
+      frame(uu) {
+        this.syncHealth(), this.cameraHeading = uu;
+        for (const Eu of this.arcs) this.drawArcAngle(Eu)
       }
       dispose() {
-        Ht.j.unsubscribe(this.token), this.clearHits(), document.body.classList.remove(Jt)
+        fu.h.unsubscribe(this.token), this.clearHits(), document.body.classList.remove(eu)
       }
       showRoot() {
         this.root && (this.root.style.display = this.enabled ? "" : "none")
       }
       syncHealth() {
-        const tt = this.api.getClientOption(this.localPlayerId, "_health"),
-          et = this.api.getClientOption(this.localPlayerId, "_shield"),
-          Vt = this.api.getClientOption(this.localPlayerId, "_totalMaxHealth");
-        if (Object.is(tt, this.readHealth) && Object.is(et, this.readShield) && Object.is(Vt, this.readMaxHealth)) return;
-        if (this.readHealth = tt, this.readShield = et, this.readMaxHealth = Vt, null === tt || void 0 === tt || !Vt) return this.lastHealthPool = null, this.maxHealth = null, this.Lt = 1, this.dead = !1, void this.drawLow();
-        const Ot = tt + (null !== et && void 0 !== et ? et : 0);
-        if (null !== this.lastHealthPool && Ot < this.lastHealthPool) {
-          const tt = performance.now(),
-            et = (this.lastHealthPool - Ot) / Vt;
-          this.lastDrop = tt - this.lastDrop.at < 300 ? {
-            frac: this.lastDrop.frac + et,
+        const uu = this.api.getClientOption(this.localPlayerId, "_health"),
+          Eu = this.api.getClientOption(this.localPlayerId, "_shield"),
+          ju = this.api.getClientOption(this.localPlayerId, "_totalMaxHealth");
+        if (Object.is(uu, this.readHealth) && Object.is(Eu, this.readShield) && Object.is(ju, this.readMaxHealth)) return;
+        if (this.readHealth = uu, this.readShield = Eu, this.readMaxHealth = ju, null === uu || void 0 === uu || !ju) return this.lastHealthPool = null, this.maxHealth = null, this.ru = 1, this.dead = !1, void this.drawLow();
+        const su = uu + (null !== Eu && void 0 !== Eu ? Eu : 0);
+        if (null !== this.lastHealthPool && su < this.lastHealthPool) {
+          const uu = performance.now(),
+            Eu = (this.lastHealthPool - su) / ju;
+          this.lastDrop = uu - this.lastDrop.at < 300 ? {
+            frac: this.lastDrop.frac + Eu,
             at: this.lastDrop.at
           } : {
-            frac: et,
-            at: tt
+            frac: Eu,
+            at: uu
           }
         }
-        this.dead = tt <= 0, this.dead && this.clearHits(), this.lastHealthPool = Ot, this.maxHealth = Vt, this.Lt = tt > 0 ? tt / Vt : 1, this.drawLow()
+        this.dead = uu <= 0, this.dead && this.clearHits(), this.lastHealthPool = su, this.maxHealth = ju, this.ru = uu > 0 ? uu / ju : 1, this.drawLow()
       }
-      onHurt(tt, et) {
+      onHurt(uu, Eu) {
         if (this.syncHealth(), this.dead || !this.enabled) return;
-        const Vt = Math.min(1, this.takeDamageFrac(et) / .3);
-        null !== tt && this.showArc(tt, Vt), this.flashEdge(null === tt ? null : tt - this.cameraHeading, .4 + .6 * Vt)
+        const ju = Math.min(1, this.takeDamageFrac(Eu) / .3);
+        null !== uu && this.showArc(uu, ju), this.flashEdge(null === uu ? null : uu - this.cameraHeading, .4 + .6 * ju)
       }
-      takeDamageFrac(tt) {
-        if (void 0 !== tt && this.maxHealth) return tt / this.maxHealth;
+      takeDamageFrac(uu) {
+        if (void 0 !== uu && this.maxHealth) return uu / this.maxHealth;
         if (performance.now() - this.lastDrop.at >= 300) return .12;
         const {
-          frac: et
+          frac: Eu
         } = this.lastDrop;
         return this.lastDrop = {
           frac: 0,
           at: -1 / 0
-        }, et
+        }, Eu
       }
       drawLow() {
         if (!this.lowLayer) return;
-        const tt = vt((Ct - this.Lt) / .25),
-          et = vt((ut - this.Lt) / .15000000000000002),
-          Vt = this.Lt < Ct;
-        this.lowLayer.classList.toggle("Active", Vt), this.lowLayer.classList.toggle("Critical", this.Lt < ut), this.lowLayer.style.opacity = String(Vt ? .55 + .3 * tt + .15 * et : 0)
+        const uu = du((Gu - this.ru) / .25),
+          Eu = du((pu - this.ru) / .15000000000000002),
+          ju = this.ru < Gu;
+        this.lowLayer.classList.toggle("Active", ju), this.lowLayer.classList.toggle("Critical", this.ru < pu), this.lowLayer.style.opacity = String(ju ? .55 + .3 * uu + .15 * Eu : 0)
       }
-      showArc(tt, et) {
-        var Vt, Ot;
+      showArc(uu, Eu) {
+        var ju, su;
         if (!this.arcLayer) return;
-        let qt = this.arcs.find((et => ht(et.direction, tt) < .6));
-        if (!qt) {
-          const et = document.createElement("div");
-          et.className = "FrontlineDamageArc", et.appendChild(document.createElement("div")).className = "FrontlineDamageArcBand", this.arcLayer.appendChild(et), qt = {
-            element: et,
-            direction: tt,
+        let Uu = this.arcs.find((Eu => Ju(Eu.direction, uu) < .6));
+        if (!Uu) {
+          const Eu = document.createElement("div");
+          Eu.className = "FrontlineDamageArc", Eu.appendChild(document.createElement("div")).className = "FrontlineDamageArcBand", this.arcLayer.appendChild(Eu), Uu = {
+            element: Eu,
+            direction: uu,
             drawnAngle: null,
             fade: null,
             pop: null
-          }, this.arcs.push(qt)
+          }, this.arcs.push(Uu)
         }
-        qt.direction = tt, this.drawArcAngle(qt);
-        const Dt = qt.fade ? Number(getComputedStyle(qt.element).opacity) : 0;
-        null === (Vt = qt.fade) || void 0 === Vt || Vt.cancel(), null === (Ot = qt.pop) || void 0 === Ot || Ot.cancel(), qt.element.style.opacity = "1";
-        const mt = qt.element.animate([{
-          opacity: Dt
+        Uu.direction = uu, this.drawArcAngle(Uu);
+        const Zu = Uu.fade ? Number(getComputedStyle(Uu.element).opacity) : 0;
+        null === (ju = Uu.fade) || void 0 === ju || ju.cancel(), null === (su = Uu.pop) || void 0 === su || su.cancel(), Uu.element.style.opacity = "1";
+        const Xu = Uu.element.animate([{
+          opacity: Zu
         }, {
           opacity: 1
         }], 144);
-        qt.fade = mt, qt.pop = qt.element.animate([{
-          scale: 1.1 + (1.16 - 1.1) * et
+        Uu.fade = Xu, Uu.pop = Uu.element.animate([{
+          scale: 1.1 + (1.16 - 1.1) * Eu
         }, {
           scale: 1
         }], {
           duration: 160,
           easing: "cubic-bezier(0.2, 0.7, 0.3, 1)"
         });
-        const dt = qt;
-        mt.onfinish = () => {
-          if (dt.fade !== mt) return;
-          const tt = dt.element.animate([{
+        const lu = Uu;
+        Xu.onfinish = () => {
+          if (lu.fade !== Xu) return;
+          const uu = lu.element.animate([{
             opacity: 1
           }, {
             opacity: 0
@@ -659,128 +659,128 @@ export const modules = {
             easing: "cubic-bezier(0.4, 0, 0.7, 1)",
             fill: "forwards"
           });
-          tt.startTime = mt.startTime, dt.fade = tt, tt.onfinish = () => {
-            dt.fade === tt && (dt.element.remove(), Wt(this.arcs, dt))
+          uu.startTime = Xu.startTime, lu.fade = uu, uu.onfinish = () => {
+            lu.fade === uu && (lu.element.remove(), au(this.arcs, lu))
           }
         }
       }
-      drawArcAngle(tt) {
-        const et = tt.direction - this.cameraHeading;
-        (null === tt.drawnAngle || Math.abs(et - tt.drawnAngle) > .005) && (tt.drawnAngle = et, tt.element.style.rotate = `${et}rad`)
+      drawArcAngle(uu) {
+        const Eu = uu.direction - this.cameraHeading;
+        (null === uu.drawnAngle || Math.abs(Eu - uu.drawnAngle) > .005) && (uu.drawnAngle = Eu, uu.element.style.rotate = `${Eu}rad`)
       }
-      flashEdge(tt, et) {
-        var Vt, Ot, qt;
+      flashEdge(uu, Eu) {
+        var ju, su, Uu;
         if (!this.root) return;
-        let Dt = this.flashes.find((et => null === et.angle || null === tt ? et.angle === tt : ht(et.angle, tt) < .5));
-        if (!Dt) {
-          const et = document.createElement("div");
-          et.className = "FrontlineDamageFlash";
-          const Vt = et.appendChild(document.createElement("div"));
-          Vt.className = "FrontlineDamageFlashGlow", this.root.insertBefore(et, this.arcLayer), Dt = {
-            element: et,
-            glow: Vt,
-            angle: tt,
+        let Zu = this.flashes.find((Eu => null === Eu.angle || null === uu ? Eu.angle === uu : Ju(Eu.angle, uu) < .5));
+        if (!Zu) {
+          const Eu = document.createElement("div");
+          Eu.className = "FrontlineDamageFlash";
+          const ju = Eu.appendChild(document.createElement("div"));
+          ju.className = "FrontlineDamageFlashGlow", this.root.insertBefore(Eu, this.arcLayer), Zu = {
+            element: Eu,
+            glow: ju,
+            angle: uu,
             level: 0,
             animation: null
-          }, this.flashes.push(Dt)
+          }, this.flashes.push(Zu)
         }
-        const mt = null === (Vt = Dt.animation) || void 0 === Vt || null === (Ot = Vt.effect) || void 0 === Ot ? void 0 : Ot.getComputedTiming().progress,
-          dt = null === mt || void 0 === mt ? 0 : Dt.level * (1 - mt);
-        Dt.level = Math.min(1, Math.max(et, dt + .6 * et)), Dt.angle = tt;
+        const Xu = null === (ju = Zu.animation) || void 0 === ju || null === (su = ju.effect) || void 0 === su ? void 0 : su.getComputedTiming().progress,
+          lu = null === Xu || void 0 === Xu ? 0 : Zu.level * (1 - Xu);
+        Zu.level = Math.min(1, Math.max(Eu, lu + .6 * Eu)), Zu.angle = uu;
         const {
-          x: jt,
-          y: Ht,
-          rx: Xt,
-          ry: Qt
-        } = function(tt, et) {
-          const Vt = window.innerWidth,
-            Ot = window.innerHeight;
-          if (null === tt) return {
-            x: Vt / 2,
-            y: Ot / 2,
+          x: qu,
+          y: fu,
+          rx: Cu,
+          ry: bu
+        } = function(uu, Eu) {
+          const ju = window.innerWidth,
+            su = window.innerHeight;
+          if (null === uu) return {
+            x: ju / 2,
+            y: su / 2,
             rx: 0,
             ry: 0
           };
-          const qt = Math.sin(tt),
-            Dt = -Math.cos(tt),
-            mt = Vt / 2 / Math.max(1e-6, Math.abs(qt)),
-            dt = Ot / 2 / Math.max(1e-6, Math.abs(Dt)),
-            jt = Math.min(mt, dt),
-            Ht = Math.round(Vt / 2 + qt * jt),
-            Xt = Math.round(Ot / 2 + Dt * jt),
-            Qt = Ot / 100 * (.85 + .25 * et),
-            lt = mt <= dt,
-            Et = Math.round((lt ? 30 : 74) * Qt),
-            ft = Math.round((lt ? 58 : 26) * Qt);
+          const Uu = Math.sin(uu),
+            Zu = -Math.cos(uu),
+            Xu = ju / 2 / Math.max(1e-6, Math.abs(Uu)),
+            lu = su / 2 / Math.max(1e-6, Math.abs(Zu)),
+            qu = Math.min(Xu, lu),
+            fu = Math.round(ju / 2 + Uu * qu),
+            Cu = Math.round(su / 2 + Zu * qu),
+            bu = su / 100 * (.85 + .25 * Eu),
+            cu = Xu <= lu,
+            Nu = Math.round((cu ? 30 : 74) * bu),
+            Ou = Math.round((cu ? 58 : 26) * bu);
           return {
-            x: Ht,
-            y: Xt,
-            rx: Et,
-            ry: ft
+            x: fu,
+            y: Cu,
+            rx: Nu,
+            ry: Ou
           }
-        }(tt, Dt.level), {
-          style: lt
-        } = Dt.glow;
-        Dt.glow.classList.toggle("Everywhere", null === tt), lt.setProperty("--glowX", `${jt}px`), lt.setProperty("--glowY", `${Ht}px`), lt.setProperty("--glowRx", `${Xt}px`), lt.setProperty("--glowRy", `${Qt}px`), Dt.element.style.transformOrigin = `${jt}px ${Ht}px`, null === (qt = Dt.animation) || void 0 === qt || qt.cancel();
-        const Et = Dt.element.animate([{
+        }(uu, Zu.level), {
+          style: cu
+        } = Zu.glow;
+        Zu.glow.classList.toggle("Everywhere", null === uu), cu.setProperty("--glowX", `${qu}px`), cu.setProperty("--glowY", `${fu}px`), cu.setProperty("--glowRx", `${Cu}px`), cu.setProperty("--glowRy", `${bu}px`), Zu.element.style.transformOrigin = `${qu}px ${fu}px`, null === (Uu = Zu.animation) || void 0 === Uu || Uu.cancel();
+        const Nu = Zu.element.animate([{
           opacity: 0,
           scale: .82,
           easing: "cubic-bezier(0.2, 0.8, 0.3, 1)"
         }, {
-          opacity: Dt.level,
+          opacity: Zu.level,
           scale: 1,
           offset: .12,
           easing: "linear"
         }, {
-          opacity: .8 * Dt.level,
+          opacity: .8 * Zu.level,
           offset: .38,
           easing: "cubic-bezier(0.4, 0, 0.7, 1)"
         }, {
           opacity: 0,
           scale: .92
         }], {
-          duration: 520 + 180 * Dt.level
+          duration: 520 + 180 * Zu.level
         });
-        Dt.animation = Et;
-        const ft = Dt;
-        Et.onfinish = () => {
-          ft.animation === Et && (ft.element.remove(), Wt(this.flashes, ft))
+        Zu.animation = Nu;
+        const Ou = Zu;
+        Nu.onfinish = () => {
+          Ou.animation === Nu && (Ou.element.remove(), au(this.flashes, Ou))
         }
       }
       clearHits() {
-        for (const Ot of this.arcs) {
-          var tt, et;
-          null === (tt = Ot.fade) || void 0 === tt || tt.cancel(), Ot.fade = null, null === (et = Ot.pop) || void 0 === et || et.cancel(), Ot.element.remove()
+        for (const su of this.arcs) {
+          var uu, Eu;
+          null === (uu = su.fade) || void 0 === uu || uu.cancel(), su.fade = null, null === (Eu = su.pop) || void 0 === Eu || Eu.cancel(), su.element.remove()
         }
         this.arcs.length = 0;
-        for (const Ot of this.flashes) {
-          var Vt;
-          null === (Vt = Ot.animation) || void 0 === Vt || Vt.cancel(), Ot.element.remove()
+        for (const su of this.flashes) {
+          var ju;
+          null === (ju = su.animation) || void 0 === ju || ju.cancel(), su.element.remove()
         }
         this.flashes.length = 0
       }
     }
 
-    function ht(tt, et) {
-      return Math.abs(Math.atan2(Math.sin(tt - et), Math.cos(tt - et)))
+    function Ju(uu, Eu) {
+      return Math.abs(Math.atan2(Math.sin(uu - Eu), Math.cos(uu - Eu)))
     }
 
-    function vt(tt) {
-      return Math.max(0, Math.min(1, tt))
+    function du(uu) {
+      return Math.max(0, Math.min(1, uu))
     }
 
-    function Wt(tt, et) {
-      const Vt = tt.indexOf(et); - 1 !== Vt && tt.splice(Vt, 1)
+    function au(uu, Eu) {
+      const ju = uu.indexOf(Eu); - 1 !== ju && uu.splice(ju, 1)
     }
-    var St = Vt(1140),
-      ct = Vt.n(St),
-      Rt = Vt(36853),
-      It = Vt(36941),
-      Pt = Vt(1286),
-      Zt = Vt(1554);
-    const Lt = "frontlineHudChanged",
-      Ft = "frontlineScoreboardChanged";
-    class kt {
+    var Pu = ju(1105),
+      ou = ju.n(Pu),
+      ku = ju(36990),
+      mu = ju(37075),
+      vu = ju(1244),
+      Ku = ju(1499);
+    const Vu = "frontlineHudChanged",
+      ru = "frontlineScoreboardChanged";
+    class Qu {
       constructor() {
         this.wire = ["none"], this.scoreboard = {
           wire: ["none"],
@@ -793,101 +793,101 @@ export const modules = {
       getScoreboard() {
         return this.scoreboard
       }
-      Qf(tt) {
-        this.wire = tt, Ht.j.sw(Lt, tt, !0)
+      NO(uu) {
+        this.wire = uu, fu.h.TY(Vu, uu, !0)
       }
-      receiveScoreboard(tt) {
-        let et = "scoreboard" === tt[0] ? performance.now() + tt[5] : 0;
-        const Vt = this.scoreboard.endsAt;
-        0 !== et && 0 !== Vt && Math.abs(et - Vt) < 1e3 && (et = Vt), this.scoreboard = {
-          wire: tt,
-          endsAt: et
-        }, Ht.j.sw(Ft, this.scoreboard, !0)
+      receiveScoreboard(uu) {
+        let Eu = "scoreboard" === uu[0] ? performance.now() + uu[5] : 0;
+        const ju = this.scoreboard.endsAt;
+        0 !== Eu && 0 !== ju && Math.abs(Eu - ju) < 1e3 && (Eu = ju), this.scoreboard = {
+          wire: uu,
+          endsAt: Eu
+        }, fu.h.TY(ru, this.scoreboard, !0)
       }
     }
-    var Gt = Vt(1188);
-    const zt = {
+    var iu = ju(1154);
+    const Wu = {
       Red: "frontlineHud:teamRed",
       Blue: "frontlineHud:teamBlue"
     };
 
-    function ot(tt) {
-      const [et, Vt] = (0, qt.useState)((() => (tt - performance.now()) / 1e3));
-      return (0, qt.useEffect)((() => {
-        if (0 === tt) return;
-        const et = () => {
-          Vt((tt - performance.now()) / 1e3)
+    function Su(uu) {
+      const [Eu, ju] = (0, Uu.useState)((() => (uu - performance.now()) / 1e3));
+      return (0, Uu.useEffect)((() => {
+        if (0 === uu) return;
+        const Eu = () => {
+          ju((uu - performance.now()) / 1e3)
         };
-        et();
-        const Ot = window.setInterval(et, 250);
+        Eu();
+        const su = window.setInterval(Eu, 250);
         return () => {
-          window.clearInterval(Ot)
+          window.clearInterval(su)
         }
-      }), [tt]), et
+      }), [uu]), Eu
     }
 
-    function rt(tt) {
+    function Iu(uu) {
       let {
-        className: et,
-        point: Vt
-      } = tt;
-      const [Ot, qt, Dt, mt, dt, jt] = Vt;
-      return (0, Gt.jsxs)("div", {
-        className: ct()(et, `Owner-${qt||"None"}`, `Leader-${mt||"None"}`, {
-          Contested: dt,
-          Here: jt
+        className: Eu,
+        point: ju
+      } = uu;
+      const [su, Uu, Zu, Xu, lu, qu] = ju;
+      return (0, iu.jsxs)("div", {
+        className: ou()(Eu, `Owner-${Uu||"None"}`, `Leader-${Xu||"None"}`, {
+          Contested: lu,
+          Here: qu
         }),
-        children: [(0, Gt.jsx)("span", {
+        children: [(0, iu.jsx)("span", {
           className: "FrontlinePointLetter",
-          children: Ot
-        }), (0, Gt.jsx)("i", {
+          children: su
+        }), (0, iu.jsx)("i", {
           className: "FrontlinePointFill",
           style: {
-            width: `${Dt}%`
+            width: `${Zu}%`
           }
         })]
       })
     }
-    const Ut = (0, qt.memo)((function(tt) {
+    const Fu = (0, Uu.memo)((function(uu) {
         let {
-          points: et,
-          markers: Vt
-        } = tt;
+          points: Eu,
+          markers: ju
+        } = uu;
         const {
-          t: Ot
-        } = (0, Pt.H)();
-        return et ? (0, Gt.jsx)("div", {
+          t: su
+        } = (0, vu.A)();
+        return Eu ? (0, iu.jsx)("div", {
           className: "FrontlinePointMarkers",
-          children: et.map((tt => {
-            const [et, , , , , , , qt] = tt;
-            return (0, Gt.jsxs)("div", {
-              ref: Vt.bindMarker(et),
+          children: Eu.map((uu => {
+            const [Eu, , , , , , , Uu] = uu;
+            return (0, iu.jsxs)("div", {
+              ref: ju.bindMarker(Eu),
               className: "FrontlinePointMarker",
-              children: [(0, Gt.jsx)(rt, {
+              children: [(0, iu.jsx)(Iu, {
                 className: "FrontlinePointMarkerTile",
-                point: tt
-              }), (0, Gt.jsxs)("div", {
+                point: uu
+              }), (0, iu.jsxs)("div", {
                 className: "FrontlinePointMarkerLabels",
-                children: [qt && (0, Gt.jsx)("span", {
-                  className: ct()("FrontlinePointMarkerHomeTurf", `Team-${qt}`),
-                  children: Ot("frontlineHud:homeTurf", {
-                    team: Ot(zt[qt])
+                children: [Uu && (0, iu.jsx)("span", {
+                  className: ou()("FrontlinePointMarkerHomeTurf", `Team-${Uu}`),
+                  children: su("frontlineHud:homeTurf", {
+                    team: su(Wu[Uu])
                   })
-                }), (0, Gt.jsx)("span", {
+                }), (0, iu.jsx)("span", {
                   className: "FrontlinePointMarkerDistance"
                 })]
               })]
-            }, et)
+            }, Eu)
           }))
         }) : null
       })),
-      At = {
+      Bu = {
         capturing: "frontlineHud:capturing",
         contesting: "frontlineHud:contesting",
         defending: "frontlineHud:defending",
         captured: "frontlineHud:captured"
       },
-      it = {
+      Lu = {
         captured: "frontlineHud:capturedTag",
         lost: "frontlineHud:lostTag",
         milestone: "frontlineHud:milestoneTag",
@@ -895,321 +895,321 @@ export const modules = {
         reinforcements: "frontlineHud:reinforcementsTag"
       };
 
-    function Yt(tt) {
+    function tu(uu) {
       let {
-        hud: et,
-        crosshair: Vt,
-        damage: Ot,
-        markers: qt
-      } = tt;
-      const Dt = (0, Zt.h)(Lt, et.getWire()),
-        mt = (0, Zt.h)(Ft, et.getScoreboard());
-      return (0, Gt.jsxs)(Gt.Fragment, {
-        children: [(0, Gt.jsx)(Bt, {
-          damage: Ot
-        }), (0, Gt.jsx)(Ut, {
-          points: "scoreboard" === mt.wire[0] ? mt.wire[6] : null,
-          markers: qt
-        }), (0, Gt.jsx)(xt, {
-          view: mt
-        }), (0, Gt.jsx)("div", {
+        hud: Eu,
+        crosshair: ju,
+        damage: su,
+        markers: Uu
+      } = uu;
+      const Zu = (0, Ku.g)(Vu, Eu.getWire()),
+        Xu = (0, Ku.g)(ru, Eu.getScoreboard());
+      return (0, iu.jsxs)(iu.Fragment, {
+        children: [(0, iu.jsx)(xu, {
+          damage: su
+        }), (0, iu.jsx)(Fu, {
+          points: "scoreboard" === Xu.wire[0] ? Xu.wire[6] : null,
+          markers: Uu
+        }), (0, iu.jsx)(Hu, {
+          view: Xu
+        }), (0, iu.jsx)("div", {
           className: "FrontlineReticle",
-          ref: Vt.bindElement
-        }), (0, Gt.jsx)(Rt.g, {
-          children: (0, Gt.jsx)(pt, {
-            wire: Dt
+          ref: ju.bindElement
+        }), (0, iu.jsx)(ku.h, {
+          children: (0, iu.jsx)(Tu, {
+            wire: Zu
           })
         })]
       })
     }
-    const Bt = (0, qt.memo)((function(tt) {
+    const xu = (0, Uu.memo)((function(uu) {
         let {
-          damage: et
-        } = tt;
-        return (0, Gt.jsxs)("div", {
+          damage: Eu
+        } = uu;
+        return (0, iu.jsxs)("div", {
           className: "FrontlineDamage",
-          ref: et.bindElement,
-          children: [(0, Gt.jsx)("div", {
+          ref: Eu.bindElement,
+          children: [(0, iu.jsx)("div", {
             className: "FrontlineDamageLow",
-            children: (0, Gt.jsx)("div", {
+            children: (0, iu.jsx)("div", {
               className: "FrontlineDamageShade"
             })
-          }), (0, Gt.jsx)("div", {
+          }), (0, iu.jsx)("div", {
             className: "FrontlineDamageArcs"
           })]
         })
       })),
-      pt = (0, qt.memo)((function(tt) {
+      Tu = (0, Uu.memo)((function(uu) {
         let {
-          wire: et
-        } = tt;
+          wire: Eu
+        } = uu;
         const {
-          t: Vt
-        } = (0, Pt.H)();
-        if ("capture" === et[0]) {
-          const [, tt, Ot, qt, Dt, mt, dt] = et, jt = Math.round(qt / 100 * 24);
-          return (0, Gt.jsxs)("div", {
-            className: ct()("FrontlinePlate", `Status-${Ot}`, `Leader-${Dt||"None"}`),
-            children: [(0, Gt.jsx)(nt, {}), (0, Gt.jsxs)("div", {
+          t: ju
+        } = (0, vu.A)();
+        if ("capture" === Eu[0]) {
+          const [, uu, su, Uu, Zu, Xu, lu] = Eu, qu = Math.round(Uu / 100 * 24);
+          return (0, iu.jsxs)("div", {
+            className: ou()("FrontlinePlate", `Status-${su}`, `Leader-${Zu||"None"}`),
+            children: [(0, iu.jsx)(zu, {}), (0, iu.jsxs)("div", {
               className: "FrontlinePlateRow",
-              children: [(0, Gt.jsx)("span", {
+              children: [(0, iu.jsx)("span", {
                 className: "FrontlineObjective",
-                children: tt
-              }), (0, Gt.jsxs)("div", {
+                children: uu
+              }), (0, iu.jsxs)("div", {
                 className: "FrontlinePlateMiddle",
-                children: [(0, Gt.jsx)("div", {
+                children: [(0, iu.jsx)("div", {
                   className: "FrontlinePlateMeta",
-                  children: Vt("frontlineHud:objective", {
-                    point: tt,
-                    friendly: mt,
-                    enemy: dt
+                  children: ju("frontlineHud:objective", {
+                    point: uu,
+                    friendly: Xu,
+                    enemy: lu
                   })
-                }), (0, Gt.jsx)("div", {
+                }), (0, iu.jsx)("div", {
                   className: "FrontlinePlateStatus",
-                  children: Vt(At[Ot])
+                  children: ju(Bu[su])
                 })]
-              }), (0, Gt.jsxs)("span", {
+              }), (0, iu.jsxs)("span", {
                 className: "FrontlinePercent",
-                children: [String(qt).padStart(3, "0"), (0, Gt.jsx)("small", {
+                children: [String(Uu).padStart(3, "0"), (0, iu.jsx)("small", {
                   children: "%"
                 })]
               })]
-            }), (0, Gt.jsx)(gt, {
+            }), (0, iu.jsx)(nu, {
               segments: 24,
-              lit: jt
+              lit: qu
             })]
           })
         }
-        if ("alert" === et[0]) {
-          const [, tt, Ot, qt] = et;
-          return (0, Gt.jsxs)("div", {
-            className: ct()("FrontlinePlate", "FrontlineAlert", `Tone-${qt}`),
-            children: [(0, Gt.jsx)(nt, {}), (0, Gt.jsx)("div", {
+        if ("alert" === Eu[0]) {
+          const [, uu, su, Uu] = Eu;
+          return (0, iu.jsxs)("div", {
+            className: ou()("FrontlinePlate", "FrontlineAlert", `Tone-${Uu}`),
+            children: [(0, iu.jsx)(zu, {}), (0, iu.jsx)("div", {
               className: "FrontlinePlateMeta",
-              children: Vt(it[tt])
-            }), (0, Gt.jsx)("div", {
+              children: ju(Lu[uu])
+            }), (0, iu.jsx)("div", {
               className: "FrontlinePlateStatus",
-              children: Ot
+              children: su
             })]
           })
         }
         return null
       })),
-      xt = (0, qt.memo)((function(tt) {
+      Hu = (0, Uu.memo)((function(uu) {
         let {
-          view: et
-        } = tt;
+          view: Eu
+        } = uu;
         const {
-          t: Vt
-        } = (0, Pt.H)(), Ot = (0, qt.useRef)(null), Dt = function(tt, et) {
-          const [Vt, Ot] = (0, qt.useState)(!1);
-          return (0, qt.useLayoutEffect)((() => {
-            const et = tt.current;
-            if (!et) return;
-            const Vt = document.querySelector(`.${It.d}`),
-              qt = document.querySelector(`.${It.h}`),
-              Dt = () => {
-                var tt;
-                const Dt = et.querySelector(".FrontlineTeamTrack"),
-                  mt = (0, jt.getRemInPx)(),
-                  dt = et.getBoundingClientRect().width - 2 * (null !== (tt = null === Dt || void 0 === Dt ? void 0 : Dt.getBoundingClientRect().width) && void 0 !== tt ? tt : 0),
-                  Ht = window.innerWidth / 2,
-                  Xt = Vt ? Vt.getBoundingClientRect().right : 0,
-                  Qt = qt ? qt.getBoundingClientRect().left : window.innerWidth,
-                  lt = Math.min(Ht - Xt, Qt - Ht) - It.b - dt / 2,
-                  Et = lt < 6 * mt,
-                  ft = Et ? (window.innerWidth - dt) / 2 - It.b : lt;
-                et.style.setProperty("--frontlineTrackWidth", `${Math.max(0,Math.floor(Math.min(ft,14*mt)))}px`), Ot(Et)
+          t: ju
+        } = (0, vu.A)(), su = (0, Uu.useRef)(null), Zu = function(uu, Eu) {
+          const [ju, su] = (0, Uu.useState)(!1);
+          return (0, Uu.useLayoutEffect)((() => {
+            const Eu = uu.current;
+            if (!Eu) return;
+            const ju = document.querySelector(`.${mu.f}`),
+              Uu = document.querySelector(`.${mu.i}`),
+              Zu = () => {
+                var uu;
+                const Zu = Eu.querySelector(".FrontlineTeamTrack"),
+                  Xu = (0, qu.getRemInPx)(),
+                  lu = Eu.getBoundingClientRect().width - 2 * (null !== (uu = null === Zu || void 0 === Zu ? void 0 : Zu.getBoundingClientRect().width) && void 0 !== uu ? uu : 0),
+                  fu = window.innerWidth / 2,
+                  Cu = ju ? ju.getBoundingClientRect().right : 0,
+                  bu = Uu ? Uu.getBoundingClientRect().left : window.innerWidth,
+                  cu = Math.min(fu - Cu, bu - fu) - mu.e - lu / 2,
+                  Nu = cu < 6 * Xu,
+                  Ou = Nu ? (window.innerWidth - lu) / 2 - mu.e : cu;
+                Eu.style.setProperty("--frontlineTrackWidth", `${Math.max(0,Math.floor(Math.min(Ou,14*Xu)))}px`), su(Nu)
               };
-            Dt();
-            const mt = new ResizeObserver(Dt);
-            for (const tt of [et, Vt, qt]) tt && mt.observe(tt);
-            return window.addEventListener("resize", Dt), () => {
-              mt.disconnect(), window.removeEventListener("resize", Dt)
+            Zu();
+            const Xu = new ResizeObserver(Zu);
+            for (const uu of [Eu, ju, Uu]) uu && Xu.observe(uu);
+            return window.addEventListener("resize", Zu), () => {
+              Xu.disconnect(), window.removeEventListener("resize", Zu)
             }
-          }), [tt, et]), Vt
-        }(Ot, "scoreboard" === et.wire[0]);
-        if ("scoreboard" !== et.wire[0]) return null;
-        const [, mt, dt, Ht, Xt, , Qt] = et.wire, lt = "Red" === mt ? "Blue" : "Red";
-        return (0, Gt.jsxs)("div", {
-          className: ct()("FrontlineScoreboardContainer", {
-            Below: Dt
+          }), [uu, Eu]), ju
+        }(su, "scoreboard" === Eu.wire[0]);
+        if ("scoreboard" !== Eu.wire[0]) return null;
+        const [, Xu, lu, fu, Cu, , bu] = Eu.wire, cu = "Red" === Xu ? "Blue" : "Red";
+        return (0, iu.jsxs)("div", {
+          className: ou()("FrontlineScoreboardContainer", {
+            Below: Zu
           }),
-          children: [(0, Gt.jsxs)("div", {
-            ref: Ot,
+          children: [(0, iu.jsxs)("div", {
+            ref: su,
             className: "FrontlineScoreboard",
-            children: [(0, Gt.jsx)(nt, {}), (0, Gt.jsx)(Tt, {
-              team: mt,
-              tickets: dt,
-              goal: Xt,
+            children: [(0, iu.jsx)(zu, {}), (0, iu.jsx)(Au, {
+              team: Xu,
+              tickets: lu,
+              goal: Cu,
               side: "Friendly"
-            }), (0, Gt.jsx)("div", {
+            }), (0, iu.jsx)("div", {
               className: "FrontlinePoints",
-              children: Qt.map((tt => (0, Gt.jsx)(rt, {
+              children: bu.map((uu => (0, iu.jsx)(Iu, {
                 className: "FrontlinePoint",
-                point: tt
-              }, tt[0])))
-            }), (0, Gt.jsx)(Tt, {
-              team: lt,
-              tickets: Ht,
-              goal: Xt,
+                point: uu
+              }, uu[0])))
+            }), (0, iu.jsx)(Au, {
+              team: cu,
+              tickets: fu,
+              goal: Cu,
               side: "Enemy"
             })]
-          }), (0, Gt.jsxs)("div", {
+          }), (0, iu.jsxs)("div", {
             className: "FrontlineClockTab",
-            children: [(0, Gt.jsx)(st, {
-              endsAt: et.endsAt
-            }), (0, Gt.jsx)("div", {
+            children: [(0, iu.jsx)(yu, {
+              endsAt: Eu.endsAt
+            }), (0, iu.jsx)("div", {
               className: "FrontlinePlateMeta",
-              children: Vt("frontlineHud:ticketGoal", {
-                goal: Xt
+              children: ju("frontlineHud:ticketGoal", {
+                goal: Cu
               })
             })]
           })]
         })
       }));
 
-    function Tt(tt) {
+    function Au(uu) {
       let {
-        team: et,
-        tickets: Vt,
-        goal: Ot,
-        side: qt
-      } = tt;
+        team: Eu,
+        tickets: ju,
+        goal: su,
+        side: Uu
+      } = uu;
       const {
-        t: Dt
-      } = (0, Pt.H)(), mt = String(Vt).padStart(3, "0"), dt = mt.search(/[1-9]/), jt = -1 === dt ? mt : mt.slice(0, dt), Ht = Math.min(20, Math.floor(Vt / Ot * 20));
-      return (0, Gt.jsxs)("div", {
-        className: ct()("FrontlineTeamScore", qt, `Team-${et}`),
-        children: [(0, Gt.jsxs)("div", {
+        t: Zu
+      } = (0, vu.A)(), Xu = String(ju).padStart(3, "0"), lu = Xu.search(/[1-9]/), qu = -1 === lu ? Xu : Xu.slice(0, lu), fu = Math.min(20, Math.floor(ju / su * 20));
+      return (0, iu.jsxs)("div", {
+        className: ou()("FrontlineTeamScore", Uu, `Team-${Eu}`),
+        children: [(0, iu.jsxs)("div", {
           className: "FrontlineTickets",
-          children: [(0, Gt.jsx)("span", {
+          children: [(0, iu.jsx)("span", {
             className: "Lead",
-            children: jt
-          }), -1 !== dt && mt.slice(dt)]
-        }), (0, Gt.jsxs)("div", {
+            children: qu
+          }), -1 !== lu && Xu.slice(lu)]
+        }), (0, iu.jsxs)("div", {
           className: "FrontlineTeamTrack",
-          children: [(0, Gt.jsx)("div", {
+          children: [(0, iu.jsx)("div", {
             className: "FrontlinePlateMeta",
-            children: Dt(zt[et])
-          }), (0, Gt.jsx)(gt, {
+            children: Zu(Wu[Eu])
+          }), (0, iu.jsx)(nu, {
             segments: 20,
-            lit: Ht
+            lit: fu
           })]
         })]
       })
     }
 
-    function gt(tt) {
+    function nu(uu) {
       let {
-        segments: et,
-        lit: Vt
-      } = tt;
-      return (0, Gt.jsx)("div", {
+        segments: Eu,
+        lit: ju
+      } = uu;
+      return (0, iu.jsx)("div", {
         className: "FrontlineBar",
         children: Array.from({
-          length: et
-        }, ((tt, et) => (0, Gt.jsx)("i", {
-          className: ct()({
-            Lit: et < Vt
+          length: Eu
+        }, ((uu, Eu) => (0, iu.jsx)("i", {
+          className: ou()({
+            Lit: Eu < ju
           })
-        }, et)))
+        }, Eu)))
       })
     }
 
-    function st(tt) {
+    function yu(uu) {
       let {
-        endsAt: et
-      } = tt;
-      const Vt = Math.max(0, Math.ceil(ot(et)));
-      return (0, Gt.jsxs)("div", {
-        className: ct()("FrontlineClock", {
-          Urgent: Vt <= 60
+        endsAt: Eu
+      } = uu;
+      const ju = Math.max(0, Math.ceil(Su(Eu)));
+      return (0, iu.jsxs)("div", {
+        className: ou()("FrontlineClock", {
+          Urgent: ju <= 60
         }),
-        children: [Math.floor(Vt / 60), ":", String(Vt % 60).padStart(2, "0")]
+        children: [Math.floor(ju / 60), ":", String(ju % 60).padStart(2, "0")]
       })
     }
 
-    function nt() {
-      return (0, Gt.jsxs)(Gt.Fragment, {
-        children: [(0, Gt.jsx)("i", {
+    function zu() {
+      return (0, iu.jsxs)(iu.Fragment, {
+        children: [(0, iu.jsx)("i", {
           className: "FrontlineBracket TopRight"
-        }), (0, Gt.jsx)("i", {
+        }), (0, iu.jsx)("i", {
           className: "FrontlineBracket BottomLeft"
         })]
       })
     }
-    var te = Vt(36932),
-      ee = Vt(1338),
-      Ve = Vt(38716),
-      Oe = Vt(38751);
-    class qe {
-      constructor(tt) {
-        var et;
-        this.hud = tt, this.markers = new Map, this.refs = new Map, this.viewport = {
+    var Ru = ju(37066),
+      uE = ju(1303),
+      EE = ju(38813),
+      jE = ju(38857);
+    class sE {
+      constructor(uu) {
+        var Eu;
+        this.hud = uu, this.markers = new Map, this.refs = new Map, this.viewport = {
           width: window.innerWidth,
           height: window.innerHeight
-        }, this.render = null, this.df = !1, this.iN = () => {
+        }, this.render = null, this.fO = !1, this.rD = () => {
           this.viewport = {
             width: window.innerWidth,
             height: window.innerHeight
           }
-        }, window.addEventListener("resize", this.iN), null === (et = window.visualViewport) || void 0 === et || et.addEventListener("resize", this.iN)
+        }, window.addEventListener("resize", this.rD), null === (Eu = window.visualViewport) || void 0 === Eu || Eu.addEventListener("resize", this.rD)
       }
-      bindMarker(tt) {
-        let et = this.refs.get(tt);
-        return et || (et = et => {
-          var Vt;
-          null === (Vt = this.markers.get(tt)) || void 0 === Vt || Vt.stopObserving(), this.markers.delete(tt), et && !this.df && this.markers.set(tt, this.mount(et))
-        }, this.refs.set(tt, et)), et
+      bindMarker(uu) {
+        let Eu = this.refs.get(uu);
+        return Eu || (Eu = Eu => {
+          var ju;
+          null === (ju = this.markers.get(uu)) || void 0 === ju || ju.stopObserving(), this.markers.delete(uu), Eu && !this.fO && this.markers.set(uu, this.mount(Eu))
+        }, this.refs.set(uu, Eu)), Eu
       }
-      frame(tt, et) {
-        this.render = tt;
-        const Vt = this.hud.getScoreboard().wire;
-        if ("scoreboard" === Vt[0] && 0 !== this.markers.size)
-          for (const [Ot, , , , , , qt] of Vt[6]) {
-            const tt = this.markers.get(Ot);
-            tt && qt && (tt.target ??= [0, 0, 0], tt.target[0] = qt[0], tt.target[1] = qt[1] + 2.5, tt.target[2] = qt[2], this.place(tt), this.Ye(tt, et && Math.hypot(qt[0] - et[0], qt[1] - et[1], qt[2] - et[2])))
+      frame(uu, Eu) {
+        this.render = uu;
+        const ju = this.hud.getScoreboard().wire;
+        if ("scoreboard" === ju[0] && 0 !== this.markers.size)
+          for (const [su, , , , , , Uu] of ju[6]) {
+            const uu = this.markers.get(su);
+            uu && Uu && (uu.target ??= [0, 0, 0], uu.target[0] = Uu[0], uu.target[1] = Uu[1] + 2.5, uu.target[2] = Uu[2], this.place(uu), this.rE(uu, Eu && Math.hypot(Uu[0] - Eu[0], Uu[1] - Eu[1], Uu[2] - Eu[2])))
           }
       }
       dispose() {
-        var tt;
-        this.df = !0, window.removeEventListener("resize", this.iN), null === (tt = window.visualViewport) || void 0 === tt || tt.removeEventListener("resize", this.iN);
-        for (const et of this.markers.values()) et.stopObserving();
+        var uu;
+        this.fO = !0, window.removeEventListener("resize", this.rD), null === (uu = window.visualViewport) || void 0 === uu || uu.removeEventListener("resize", this.rD);
+        for (const Eu of this.markers.values()) Eu.stopObserving();
         this.markers.clear(), this.refs.clear(), this.render = null
       }
-      place(tt) {
+      place(uu) {
         const {
-          render: et,
-          viewport: Vt
+          render: Eu,
+          viewport: ju
         } = this;
-        if (!et || !tt.target) return;
-        const Ot = (50 - et.screenBandPct.y) / 100 * Vt.height,
-          qt = {
-            x: tt.halfSize.width + 8,
-            top: tt.halfSize.height + 8,
-            bottom: tt.halfSize.height + tt.labelsBelow + Ot
+        if (!Eu || !uu.target) return;
+        const su = (50 - Eu.screenBandPct.y) / 100 * ju.height,
+          Uu = {
+            x: uu.halfSize.width + 8,
+            top: uu.halfSize.height + 8,
+            bottom: uu.halfSize.height + uu.labelsBelow + su
           },
-          Dt = et.projectWorldPosToViewport(tt.target),
-          mt = null !== Dt && void 0 !== Dt ? Dt : et.projectWorldPosToScreenPos(tt.target),
-          dt = (0, Oe.b)({
-            x: mt.x,
-            y: mt.y,
-            text: Dt
-          }, qt, Vt);
-        (0, Ve.e)(tt.root, Math.round(100 * dt.x) / 100, Math.round(100 * dt.y) / 100)
+          Zu = Eu.projectWorldPosToViewport(uu.target),
+          Xu = null !== Zu && void 0 !== Zu ? Zu : Eu.projectWorldPosToScreenPos(uu.target),
+          lu = (0, jE.d)({
+            x: Xu.x,
+            y: Xu.y,
+            text: Zu
+          }, Uu, ju);
+        (0, EE.d)(uu.root, Math.round(100 * lu.x) / 100, Math.round(100 * lu.y) / 100)
       }
-      Ye(tt, et) {
-        if (null === et) return void(null !== tt.metres && (tt.metres = null, tt.distance.textContent = ""));
-        const Vt = Date.now();
-        (null === tt.metres || (0, te.e)(et, tt.metres, tt.metresShownAt)) && (tt.metres = Math.round(et), tt.metresShownAt = Vt, tt.distance.textContent = (0, Pt.A)(ee.e.get().getCurrentLanguageCode(), "frontlineHud:markerDistance", {
-          distance: String(tt.metres)
+      rE(uu, Eu) {
+        if (null === Eu) return void(null !== uu.metres && (uu.metres = null, uu.distance.textContent = ""));
+        const ju = Date.now();
+        (null === uu.metres || (0, Ru.c)(Eu, uu.metres, uu.metresShownAt)) && (uu.metres = Math.round(Eu), uu.metresShownAt = ju, uu.distance.textContent = (0, vu.x)(uE.h.get().getCurrentLanguageCode(), "frontlineHud:markerDistance", {
+          distance: String(uu.metres)
         }))
       }
-      mount(tt) {
-        const et = {
-            root: tt,
-            distance: tt.querySelector(".FrontlinePointMarkerDistance"),
+      mount(uu) {
+        const Eu = {
+            root: uu,
+            distance: uu.querySelector(".FrontlinePointMarkerDistance"),
             halfSize: {
               width: 0,
               height: 0
@@ -1220,26 +1220,26 @@ export const modules = {
             metresShownAt: 0,
             stopObserving: () => {}
           },
-          Vt = tt.querySelector(".FrontlinePointMarkerLabels"),
-          Ot = new ResizeObserver((() => {
-            et.halfSize = {
-              width: Math.max(tt.offsetWidth, Vt.offsetWidth) / 2,
-              height: tt.offsetHeight / 2
-            }, et.labelsBelow = Vt.offsetTop + Vt.offsetHeight - tt.offsetHeight, this.place(et)
+          ju = uu.querySelector(".FrontlinePointMarkerLabels"),
+          su = new ResizeObserver((() => {
+            Eu.halfSize = {
+              width: Math.max(uu.offsetWidth, ju.offsetWidth) / 2,
+              height: uu.offsetHeight / 2
+            }, Eu.labelsBelow = ju.offsetTop + ju.offsetHeight - uu.offsetHeight, this.place(Eu)
           }));
-        return Ot.observe(tt, {
+        return su.observe(uu, {
           box: "border-box"
-        }), Ot.observe(Vt, {
+        }), su.observe(ju, {
           box: "border-box"
-        }), et.stopObserving = () => {
-          Ot.disconnect()
-        }, et
+        }), Eu.stopObserving = () => {
+          su.disconnect()
+        }, Eu
       }
     }
-    var De = Vt(6631),
-      me = Vt(2719);
-    const de = "frontlineRoundEndChanged";
-    class je {
+    var UE = ju(6644),
+      ZE = ju(2742);
+    const XE = "frontlineRoundEndChanged";
+    class lE {
       constructor() {
         this.view = {
           wire: ["none"],
@@ -1250,245 +1250,245 @@ export const modules = {
       getView() {
         return this.view
       }
-      Qf(tt) {
-        const et = "roundEnd" === tt[0] ? performance.now() + tt[5] : 0;
+      NO(uu) {
+        const Eu = "roundEnd" === uu[0] ? performance.now() + uu[5] : 0;
         this.view = {
-          wire: tt,
+          wire: uu,
           key: this.view.key + 1,
-          endsAt: et
-        }, Ht.j.sw(de, this.view, !0)
+          endsAt: Eu
+        }, fu.h.TY(XE, this.view, !0)
       }
     }
-    const He = (0, qt.lazy)((() => (0, me.e)(Promise.all([Vt.e(239), Vt.e(202)]).then((() => Vt(42021))), (tt => tt.FrontlineMvpLineup)))),
-      Xe = [4800, 4e3, 3200],
-      Qe = [1, 0, 2],
-      le = {
+    const qE = (0, Uu.lazy)((() => (0, ZE.d)(Promise.all([ju.e(239), ju.e(202)]).then((() => ju(42023))), (uu => uu.FrontlineMvpLineup)))),
+      fE = [4800, 4e3, 3200],
+      CE = [1, 0, 2],
+      bE = {
         victory: "frontlineRoundEnd:victory",
         defeat: "frontlineRoundEnd:defeat",
         draw: "frontlineRoundEnd:draw"
       },
-      Ee = ["frontlineRoundEnd:mvp", "frontlineRoundEnd:second", "frontlineRoundEnd:third"];
+      cE = ["frontlineRoundEnd:mvp", "frontlineRoundEnd:second", "frontlineRoundEnd:third"];
 
-    function fe(tt) {
+    function NE(uu) {
       let {
-        controller: et
-      } = tt;
-      const Vt = (0, Zt.h)(de, et.getView()),
-        Ot = ot(Vt.endsAt);
-      return "roundEnd" !== Vt.wire[0] || 1e3 * Ot < -2e3 ? null : (0, Gt.jsx)(we, {
-        wire: Vt.wire,
-        secondsLeft: Math.max(0, Math.ceil(Ot))
-      }, Vt.key)
+        controller: Eu
+      } = uu;
+      const ju = (0, Ku.g)(XE, Eu.getView()),
+        su = Su(ju.endsAt);
+      return "roundEnd" !== ju.wire[0] || 1e3 * su < -2e3 ? null : (0, iu.jsx)(OE, {
+        wire: ju.wire,
+        secondsLeft: Math.max(0, Math.ceil(su))
+      }, ju.key)
     }
-    const we = (0, qt.memo)((function(tt) {
+    const OE = (0, Uu.memo)((function(uu) {
       let {
-        wire: et,
-        secondsLeft: Vt
-      } = tt;
+        wire: Eu,
+        secondsLeft: ju
+      } = uu;
       const {
-        t: Dt
-      } = (0, Pt.H)(), [, mt, dt, jt, Ht, , Xt, Qt] = et, lt = (0, qt.useMemo)((() => Qe.filter((tt => tt < Qt.length))), [Qt]), Et = (0, qt.useMemo)((() => lt.map((tt => {
-        const [, , , , , et, Vt] = Qt[tt];
+        t: Zu
+      } = (0, vu.A)(), [, Xu, lu, qu, fu, , Cu, bu] = Eu, cu = (0, Uu.useMemo)((() => CE.filter((uu => uu < bu.length))), [bu]), Nu = (0, Uu.useMemo)((() => cu.map((uu => {
+        const [, , , , , Eu, ju] = bu[uu];
         return {
-          cosmetics: Ot.map(((tt, Vt) => [tt, et[Vt]])),
-          size: 0 === tt ? 1.15 : .85,
+          cosmetics: su.map(((uu, ju) => [uu, Eu[ju]])),
+          size: 0 === uu ? 1.15 : .85,
           heldGun: {
-            name: Vt,
-            aimed: 0 === tt
+            name: ju,
+            aimed: 0 === uu
           },
-          showAfterMs: Xe[tt]
+          showAfterMs: fE[uu]
         }
-      }))), [Qt, lt]);
-      return (0, Gt.jsxs)("div", {
-        className: ct()("FrontlineRoundEnd", `Result-${mt}`),
+      }))), [bu, cu]);
+      return (0, iu.jsxs)("div", {
+        className: ou()("FrontlineRoundEnd", `Result-${Xu}`),
         style: {
           "--titleRiseMs": "2600ms"
         },
-        children: [(0, Gt.jsx)("div", {
+        children: [(0, iu.jsx)("div", {
           className: "FrontlineRoundEndVeil"
-        }), (0, Gt.jsxs)("div", {
+        }), (0, iu.jsxs)("div", {
           className: "FrontlineRoundEndTitle",
-          children: [(0, Gt.jsxs)("div", {
+          children: [(0, iu.jsxs)("div", {
             className: "FrontlineRoundEndResult",
-            children: [(0, Gt.jsx)("i", {
+            children: [(0, iu.jsx)("i", {
               className: "FrontlineBracket TopLeft"
-            }), (0, Gt.jsx)("i", {
+            }), (0, iu.jsx)("i", {
               className: "FrontlineBracket BottomRight"
-            }), (ft = Dt(le[mt]), /\p{Script=Arabic}/u.test(ft) ? [ft] : (0, De.e)(ft)).map(((tt, et) => (0, Gt.jsx)("span", {
+            }), (Ou = Zu(bE[Xu]), /\p{Script=Arabic}/u.test(Ou) ? [Ou] : (0, UE.c)(Ou)).map(((uu, Eu) => (0, iu.jsx)("span", {
               style: {
-                "--letter": et
+                "--letter": Eu
               },
-              children: tt
-            }, et)))]
-          }), (0, Gt.jsxs)("div", {
+              children: uu
+            }, Eu)))]
+          }), (0, iu.jsxs)("div", {
             className: "FrontlineRoundEndScore",
-            children: [dt && "victory" === mt && (0, Gt.jsx)("span", {
+            children: [lu && "victory" === Xu && (0, iu.jsx)("span", {
               className: "FrontlineRoundEndComeback",
-              children: Dt("frontlineRoundEnd:comeback")
-            }), (0, Gt.jsxs)("span", {
+              children: Zu("frontlineRoundEnd:comeback")
+            }), (0, iu.jsxs)("span", {
               className: "FrontlineRoundEndTickets",
-              children: [(0, Gt.jsx)("b", {
+              children: [(0, iu.jsx)("b", {
                 className: "Friendly",
-                children: jt
-              }), " \u2013 ", (0, Gt.jsx)("b", {
+                children: qu
+              }), " \u2013 ", (0, iu.jsx)("b", {
                 className: "Enemy",
-                children: Ht
+                children: fu
               })]
             })]
           })]
-        }), lt.length > 0 && (0, Gt.jsxs)("div", {
+        }), cu.length > 0 && (0, iu.jsxs)("div", {
           className: "FrontlineRoundEndMvps",
           style: {
-            "--columns": lt.length
+            "--columns": cu.length
           },
-          children: [(0, Gt.jsx)(qt.Suspense, {
+          children: [(0, iu.jsx)(Uu.Suspense, {
             fallback: null,
-            children: (0, Gt.jsx)(He, {
+            children: (0, iu.jsx)(qE, {
               className: "FrontlineRoundEndLineup",
-              players: Et
+              players: Nu
             })
-          }), lt.map((tt => (0, Gt.jsx)(ye, {
-            mvp: Qt[tt],
-            place: tt
-          }, tt)))]
-        }), (0, Gt.jsx)("div", {
+          }), cu.map((uu => (0, iu.jsx)(YE, {
+            mvp: bu[uu],
+            place: uu
+          }, uu)))]
+        }), (0, iu.jsx)("div", {
           className: "FrontlineRoundEndNext",
-          children: Dt("frontlineRoundEnd:nextFront", {
-            map: Xt,
-            seconds: String(Vt)
+          children: Zu("frontlineRoundEnd:nextFront", {
+            map: Cu,
+            seconds: String(ju)
           })
         })]
       });
-      var ft
+      var Ou
     }));
 
-    function ye(tt) {
+    function YE(uu) {
       let {
-        mvp: et,
-        place: Vt
-      } = tt;
+        mvp: Eu,
+        place: ju
+      } = uu;
       const {
-        t: Ot
-      } = (0, Pt.H)(), [qt, Dt, mt, dt, jt] = et, [Ht, Xt] = Ot(function(tt, et) {
-        return 1 === et && "damage" !== tt ? `frontlineRoundEnd:${tt}One` : `frontlineRoundEnd:${tt}`
-      }(mt, dt), {
+        t: su
+      } = (0, vu.A)(), [Uu, Zu, Xu, lu, qu] = Eu, [fu, Cu] = su(function(uu, Eu) {
+        return 1 === Eu && "damage" !== uu ? `frontlineRoundEnd:${uu}One` : `frontlineRoundEnd:${uu}`
+      }(Xu, lu), {
         name: "\0",
-        count: dt.toLocaleString()
+        count: lu.toLocaleString()
       }).split("\0");
-      return (0, Gt.jsxs)("div", {
-        className: ct()("FrontlineMvpCard", `Place-${Vt+1}`, `Team-${Dt}`),
+      return (0, iu.jsxs)("div", {
+        className: ou()("FrontlineMvpCard", `Place-${ju+1}`, `Team-${Zu}`),
         style: {
-          "--revealMs": `${Xe[Vt]}ms`
+          "--revealMs": `${fE[ju]}ms`
         },
-        children: [(0, Gt.jsx)("i", {
+        children: [(0, iu.jsx)("i", {
           className: "FrontlineBracket TopRight"
-        }), (0, Gt.jsx)("i", {
+        }), (0, iu.jsx)("i", {
           className: "FrontlineBracket BottomLeft"
-        }), (0, Gt.jsx)("div", {
+        }), (0, iu.jsx)("div", {
           className: "FrontlineMvpPlace",
-          children: Ot(Ee[Vt])
-        }), (0, Gt.jsxs)("div", {
+          children: su(cE[ju])
+        }), (0, iu.jsxs)("div", {
           className: "FrontlineMvpLine",
-          children: [Ht, (0, Gt.jsx)("span", {
+          children: [fu, (0, iu.jsx)("span", {
             className: "FrontlineMvpName",
-            children: qt
-          }), Xt]
-        }), (0, Gt.jsx)("div", {
+            children: Uu
+          }), Cu]
+        }), (0, iu.jsx)("div", {
           className: "FrontlineMvpKit",
-          children: jt
+          children: qu
         })]
       })
     }
-    const Ne = function(tt, et, Vt, Ot) {
+    const hE = function(uu, Eu, ju, su) {
       let {
-        localPlayerId: mt
-      } = Ot;
-      const dt = new kt,
-        jt = new je;
-      let Ht = null,
-        Xt = null,
-        Qt = null,
-        lt = null,
-        Et = null,
-        ft = [!1, !1];
-      const wt = () => {
-        var tt, et;
-        const [Vt, Ot] = ft;
-        null === (tt = Xt) || void 0 === tt || tt.Av(!Vt), null === (et = Qt) || void 0 === et || et.Av(!Ot)
+        localPlayerId: Xu
+      } = su;
+      const lu = new Qu,
+        qu = new lE;
+      let fu = null,
+        Cu = null,
+        bu = null,
+        cu = null,
+        Nu = null,
+        Ou = [!1, !1];
+      const Yu = () => {
+        var uu, Eu;
+        const [ju, su] = Ou;
+        null === (uu = Cu) || void 0 === uu || uu.Wk(!ju), null === (Eu = bu) || void 0 === Eu || Eu.Wk(!su)
       };
       return {
-        onCreate: tt => {
-          Ht = tt, Xt = new bt(tt, mt), Qt = new Kt(tt, mt), lt = new qe(dt), wt(), Et = (0, Dt.q)((0, qt.createElement)(qt.Fragment, null, (0, qt.createElement)(Yt, {
-            hud: dt,
-            crosshair: Xt,
-            damage: Qt,
-            markers: lt
-          }), (0, qt.createElement)(fe, {
-            controller: jt
+        onCreate: uu => {
+          fu = uu, Cu = new Mu(uu, Xu), bu = new wu(uu, Xu), cu = new sE(lu), Yu(), Nu = (0, Zu.o)((0, Uu.createElement)(Uu.Fragment, null, (0, Uu.createElement)(tu, {
+            hud: lu,
+            crosshair: Cu,
+            damage: bu,
+            markers: cu
+          }), (0, Uu.createElement)(NE, {
+            controller: qu
           })))
         },
         onClose: () => {
-          var tt, et, Vt, Ot;
-          null === (tt = Et) || void 0 === tt || tt(), null === (et = Xt) || void 0 === et || et.dispose(), Xt = null, null === (Vt = Qt) || void 0 === Vt || Vt.dispose(), Qt = null, null === (Ot = lt) || void 0 === Ot || Ot.dispose(), lt = null, Ht = null
+          var uu, Eu, ju, su;
+          null === (uu = Nu) || void 0 === uu || uu(), null === (Eu = Cu) || void 0 === Eu || Eu.dispose(), Cu = null, null === (ju = bu) || void 0 === ju || ju.dispose(), bu = null, null === (su = cu) || void 0 === su || su.dispose(), cu = null, fu = null
         },
-        onAfterRender: (tt, et) => {
-          var Vt, Ot, qt, Dt;
-          null === (Vt = Xt) || void 0 === Vt || Vt.frame(tt, et.tanHalfFovY), null === (Ot = Qt) || void 0 === Ot || Ot.frame(et.cameraHeading), null === (qt = lt) || void 0 === qt || qt.frame(et, null !== (Dt = Ht) && void 0 !== Dt && Dt.checkValid(mt) ? Ht.YM(mt) : null)
+        onAfterRender: (uu, Eu) => {
+          var ju, su, Uu, Zu;
+          null === (ju = Cu) || void 0 === ju || ju.frame(uu, Eu.tanHalfFovY), null === (su = bu) || void 0 === su || su.frame(Eu.cameraHeading), null === (Uu = cu) || void 0 === Uu || Uu.frame(Eu, null !== (Zu = fu) && void 0 !== Zu && Zu.checkValid(Xu) ? fu.bM(Xu) : null)
         },
-        onReceivedMessageFromServer: (tt, et) => {
-          "frontlineHud" === tt ? dt.Qf(et) : "frontlineScoreboard" === tt ? dt.receiveScoreboard(et) : "frontlineRoundEnd" === tt ? jt.Qf(et) : "frontlinePrefs" === tt && (ft = et, wt())
+        onReceivedMessageFromServer: (uu, Eu) => {
+          "frontlineHud" === uu ? lu.NO(Eu) : "frontlineScoreboard" === uu ? lu.receiveScoreboard(Eu) : "frontlineRoundEnd" === uu ? qu.NO(Eu) : "frontlinePrefs" === uu && (Ou = Eu, Yu())
         }
       }
     }
   },
-  6631: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => qt
+  6644: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      c: () => Uu
     });
-    const Ot = "function" === typeof Intl.Segmenter ? new Intl.Segmenter(void 0, {
+    const su = "function" === typeof Intl.Segmenter ? new Intl.Segmenter(void 0, {
       granularity: "grapheme"
     }) : null;
 
-    function qt(tt) {
-      return null === Ot ? Array.from(tt) : Array.from(Ot.segment(tt), (tt => {
+    function Uu(uu) {
+      return null === su ? Array.from(uu) : Array.from(su.segment(uu), (uu => {
         let {
-          segment: et
-        } = tt;
-        return et
+          segment: Eu
+        } = uu;
+        return Eu
       }))
     }
   },
-  38716: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => mt,
-      g: () => Dt
+  38813: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      d: () => Xu,
+      f: () => Zu
     });
-    const Ot = new WeakMap;
+    const su = new WeakMap;
 
-    function qt(tt) {
-      let et = Ot.get(tt);
-      return et || (et = {
-        hidden: tt.hidden,
+    function Uu(uu) {
+      let Eu = su.get(uu);
+      return Eu || (Eu = {
+        hidden: uu.hidden,
         x: NaN,
         y: NaN
-      }, Ot.set(tt, et)), et
+      }, su.set(uu, Eu)), Eu
     }
 
-    function Dt(tt, et) {
-      const Vt = qt(tt);
-      Vt.hidden !== et && (Vt.hidden = et, tt.hidden = et)
+    function Zu(uu, Eu) {
+      const ju = Uu(uu);
+      ju.hidden !== Eu && (ju.hidden = Eu, uu.hidden = Eu)
     }
 
-    function mt(tt, et, Vt) {
-      const Ot = qt(tt);
-      Ot.x === et && Ot.y === Vt || (Ot.x = et, Ot.y = Vt, tt.style.translate = `${et}vw ${Vt}vh`)
+    function Xu(uu, Eu, ju) {
+      const su = Uu(uu);
+      su.x === Eu && su.y === ju || (su.x = Eu, su.y = ju, uu.style.translate = `${Eu}vw ${ju}vh`)
     }
   },
-  37306: (tt, et, Vt) => {
-    Vt.d(et, {
-      e: () => Ot
+  37467: (uu, Eu, ju) => {
+    ju.d(Eu, {
+      e: () => su
     });
-    const Ot = {
+    const su = {
       "skyblock:forged:astral-astral-astral": {
         name: "Heart of the Cosmos",
         lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
@@ -1650,4 +1650,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const tt in modules) Object.freeze(modules[tt]);
+for (const uu in modules) Object.freeze(modules[uu]);
