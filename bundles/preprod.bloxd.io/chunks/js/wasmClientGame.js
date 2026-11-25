@@ -1,91 +1,92 @@
-export const id = 57;
-export const ids = [57];
+export const id = 59;
+export const ids = [59];
 export const modules = {
-  42890: (pp, ip, cp) => {
-    var Op = {
-      "./bedwars/bedwarsClient": [39456, 9],
-      "./bridgeBattle/bridgeBattleClient": [39460, 10],
-      "./buildAFactory2/buildAFactory2Client": [38704, 76, 75, 74, 230, 225, 11],
-      "./classic/classicClient": [39464, 12],
-      "./clutch/clutchClient": [39472, 13],
-      "./containmentBreach/containmentBreachClient": [39474, 224, 14],
-      "./cooking/cookingClient": [39608, 15],
-      "./defusal/defusalClient": [39617, 16],
-      "./frontline/frontlineClient": [39623, 76, 75, 74, 17],
-      "./goalRush/goalRushClient": [39631, 18],
-      "./luckyBedwars/luckyBedwarsClient": [39640, 19],
-      "./ninetyNineNights/ninetyNineNightsClient": [39642, 20],
-      "./oneBlock/oneBlockClient": [39649, 21],
-      "./plots/plotsClient": [39655, 247, 224, 22],
-      "./pvpCiv/pvpCivClient": [39735, 23],
-      "./skyIslands/skyIslandsClient": [39744, 24],
-      "./skyblock/skyblockClient": [38739, 76, 239, 230, 192, 25],
-      "./tsunami/tsunamiClient": [39753, 26]
+  42886: (QQ, WQ, XQ) => {
+    var wQ = {
+      "./bedwars/bedwarsClient": [39560, 9],
+      "./bridgeBattle/bridgeBattleClient": [39569, 10],
+      "./buildAFactory2/buildAFactory2Client": [38774, 78, 77, 76, 234, 229, 11],
+      "./classic/classicClient": [39571, 12],
+      "./classic/smp2Client": [39578, 13],
+      "./clutch/clutchClient": [39581, 14],
+      "./containmentBreach/containmentBreachClient": [39587, 228, 15],
+      "./cooking/cookingClient": [39702, 16],
+      "./defusal/defusalClient": [39707, 17],
+      "./frontline/frontlineClient": [39712, 78, 77, 76, 18],
+      "./goalRush/goalRushClient": [39715, 19],
+      "./luckyBedwars/luckyBedwarsClient": [39723, 20],
+      "./ninetyNineNights/ninetyNineNightsClient": [39730, 21],
+      "./oneBlock/oneBlockClient": [39735, 22],
+      "./plots/plotsClient": [39738, 251, 228, 23],
+      "./pvpCiv/pvpCivClient": [39810, 24],
+      "./skyIslands/skyIslandsClient": [39818, 25],
+      "./skyblock/skyblockClient": [38809, 78, 243, 234, 194, 26],
+      "./tsunami/tsunamiClient": [39827, 27]
     };
 
-    function op(pp) {
-      if (!cp.o(Op, pp)) return Promise.resolve().then((() => {
-        var ip = new Error("Cannot find module '" + pp + "'");
-        throw ip.code = "MODULE_NOT_FOUND", ip
+    function qQ(QQ) {
+      if (!XQ.o(wQ, QQ)) return Promise.resolve().then((() => {
+        var WQ = new Error("Cannot find module '" + QQ + "'");
+        throw WQ.code = "MODULE_NOT_FOUND", WQ
       }));
-      var ip = Op[pp],
-        op = ip[0];
-      return Promise.all(ip.slice(1).map(cp.e)).then((() => cp(op)))
+      var WQ = wQ[QQ],
+        qQ = WQ[0];
+      return Promise.all(WQ.slice(1).map(XQ.e)).then((() => XQ(qQ)))
     }
-    op.keys = () => Object.keys(Op), op.id = 42890, pp.exports = op
+    qQ.keys = () => Object.keys(wQ), qQ.id = 42886, QQ.exports = qQ
   },
-  36591: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Dp,
-      c: () => xp,
-      g: () => Yp,
-      h: () => Lp,
-      l: () => Hp
+  36674: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      d: () => gQ,
+      g: () => sQ,
+      j: () => PQ,
+      k: () => FQ,
+      m: () => pQ
     });
-    var Op = cp(643),
-      op = cp(1779),
-      Ip = cp(4911);
-    class Sp {
-      constructor(pp, ip) {
-        this.width = pp, this.TA = ip, this.data = void 0, this.next = 0, this.size = 0, this.data = new Float64Array(pp * ip)
+    var wQ = XQ(670),
+      qQ = XQ(1812),
+      TQ = XQ(5140);
+    class zQ {
+      constructor(QQ, WQ) {
+        this.width = QQ, this.yJ = WQ, this.data = void 0, this.next = 0, this.size = 0, this.data = new Float64Array(QQ * WQ)
       }
-      push(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const cp = this.data,
-          Op = this.next * this.width;
-        for (let op = 0; op < this.width; op++) cp[Op + op] = pp[ip + op];
-        this.next = (this.next + 1) % this.TA, this.size = Math.min(this.size + 1, this.TA)
+      push(QQ) {
+        let WQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const XQ = this.data,
+          wQ = this.next * this.width;
+        for (let qQ = 0; qQ < this.width; qQ++) XQ[wQ + qQ] = QQ[WQ + qQ];
+        this.next = (this.next + 1) % this.yJ, this.size = Math.min(this.size + 1, this.yJ)
       }
       rows() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1 / 0;
-        const cp = [],
-          Op = (this.next - this.size + this.TA) % this.TA;
-        for (let op = 0; op < this.size; op++) {
-          const Ip = (Op + op) % this.TA * this.width;
-          this.data[Ip + pp] >= ip && cp.push(Array.from(this.data.subarray(Ip, Ip + this.width)))
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          WQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1 / 0;
+        const XQ = [],
+          wQ = (this.next - this.size + this.yJ) % this.yJ;
+        for (let qQ = 0; qQ < this.size; qQ++) {
+          const TQ = (wQ + qQ) % this.yJ * this.width;
+          this.data[TQ + QQ] >= WQ && XQ.push(Array.from(this.data.subarray(TQ, TQ + this.width)))
         }
-        return cp
+        return XQ
       }
       lines() {
-        return this.rows().map((pp => pp.join(",")))
+        return this.rows().map((QQ => QQ.join(",")))
       }
     }
-    const xp = 10,
-      Lp = {
+    const sQ = 10,
+      FQ = {
         idle: 0,
-        aW: 1,
-        FX: 2,
-        Al: 3,
-        Hw: 4
+        HI: 1,
+        oR: 2,
+        xR: 3,
+        Py: 4
       },
-      Yp = {
+      PQ = {
         none: 0,
         skipped: 1,
         paced: 2,
         drawn: 3
       },
-      Dp = {
+      gQ = {
         lockGained: 1,
         lockLost: 2,
         lockError: 3,
@@ -99,91 +100,91 @@ export const modules = {
         stepsLost: 11,
         cameraSetsLost: 12
       },
-      Ap = 12e3,
-      Pp = ["nowMs", "dtMs", "rawX", "rawY", "turnedX", "turnedY", "outcome", "velocityX", "velocityY", "limit"],
-      Wp = ["timeStamp", "nowMs", "movementX", "movementY", "locked"],
-      yp = ["nowMs", "dtMs", "heading", "pitch", "kind"],
-      Up = ["nowMs", "source", "headingBefore", "pitchBefore", "headingAfter", "pitchAfter"],
-      wp = ["nowMs", "change", "count"];
+      JQ = 12e3,
+      rQ = ["nowMs", "dtMs", "rawX", "rawY", "turnedX", "turnedY", "outcome", "velocityX", "velocityY", "limit"],
+      IQ = ["timeStamp", "nowMs", "movementX", "movementY", "locked"],
+      jQ = ["nowMs", "dtMs", "heading", "pitch", "kind"],
+      BQ = ["nowMs", "source", "headingBefore", "pitchBefore", "headingAfter", "pitchAfter"],
+      yQ = ["nowMs", "change", "count"];
 
-    function vp(pp) {
-      return "js" === pp ? Dp.jsClient : Dp.wasmClient
+    function VQ(QQ) {
+      return "js" === QQ ? gQ.jsClient : gQ.wasmClient
     }
-    class tp {
+    class DQ {
       constructor() {
-        this.steps = new Sp(xp, Ap), this.events = new Sp(Wp.length, Ap), this.frames = new Sp(yp.length, Ap), this.cameraSets = new Sp(Ip.e, 256), this.changes = new Sp(wp.length, 256)
+        this.steps = new zQ(sQ, JQ), this.events = new zQ(IQ.length, JQ), this.frames = new zQ(jQ.length, JQ), this.cameraSets = new zQ(TQ.f, 256), this.changes = new zQ(yQ.length, 256)
       }
     }
-    const Hp = new class {
+    const pQ = new class {
       constructor() {
-        this.rings = null, this.sample = new Float64Array(Wp.length), this.startedClient = null, this.startedAtMs = 0
+        this.rings = null, this.sample = new Float64Array(IQ.length), this.startedClient = null, this.startedAtMs = 0
       }
       get client() {
         return this.startedClient
       }
-      start(pp, ip) {
-        this.startedClient = pp, this.startedAtMs = performance.now(), null !== this.rings ? this.change(vp(pp)) : ip && this.allocate()
+      start(QQ, WQ) {
+        this.startedClient = QQ, this.startedAtMs = performance.now(), null !== this.rings ? this.change(VQ(QQ)) : WQ && this.allocate()
       }
       lockGained() {
-        this.allocate(), this.change(Dp.lockGained)
+        this.allocate(), this.change(gQ.lockGained)
       }
       allocate() {
-        null === this.rings && (this.rings = new tp, null !== this.startedClient && this.changeAt(this.startedAtMs, vp(this.startedClient), 1))
+        null === this.rings && (this.rings = new DQ, null !== this.startedClient && this.changeAt(this.startedAtMs, VQ(this.startedClient), 1))
       }
-      step(pp, ip) {
-        var cp;
-        pp[ip + 6] !== Lp.Hw && (null === (cp = this.rings) || void 0 === cp || cp.steps.push(pp, ip))
+      step(QQ, WQ) {
+        var XQ;
+        QQ[WQ + 6] !== FQ.Py && (null === (XQ = this.rings) || void 0 === XQ || XQ.steps.push(QQ, WQ))
       }
-      cameraSet(pp, ip) {
-        var cp;
-        null === (cp = this.rings) || void 0 === cp || cp.cameraSets.push(pp, ip)
+      cameraSet(QQ, WQ) {
+        var XQ;
+        null === (XQ = this.rings) || void 0 === XQ || XQ.cameraSets.push(QQ, WQ)
       }
-      mouseMove(pp, ip) {
-        const cp = this.rings;
-        if (null === cp) return;
-        const Op = this.sample;
-        Op[0] = pp.timeStamp, Op[1] = performance.now(), Op[2] = pp.movementX, Op[3] = pp.movementY, Op[4] = ip ? 1 : 0, cp.events.push(Op)
+      mouseMove(QQ, WQ) {
+        const XQ = this.rings;
+        if (null === XQ) return;
+        const wQ = this.sample;
+        wQ[0] = QQ.timeStamp, wQ[1] = performance.now(), wQ[2] = QQ.movementX, wQ[3] = QQ.movementY, wQ[4] = WQ ? 1 : 0, XQ.events.push(wQ)
       }
-      frame(pp, ip, cp, Op) {
-        const op = this.rings;
-        if (null === op || Op === Yp.none) return;
-        const Ip = this.sample;
-        Ip[0] = performance.now(), Ip[1] = pp, Ip[2] = ip, Ip[3] = cp, Ip[4] = Op, op.frames.push(Ip)
+      frame(QQ, WQ, XQ, wQ) {
+        const qQ = this.rings;
+        if (null === qQ || wQ === PQ.none) return;
+        const TQ = this.sample;
+        TQ[0] = performance.now(), TQ[1] = QQ, TQ[2] = WQ, TQ[3] = XQ, TQ[4] = wQ, qQ.frames.push(TQ)
       }
-      change(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        this.changeAt(performance.now(), pp, ip)
+      change(QQ) {
+        let WQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        this.changeAt(performance.now(), QQ, WQ)
       }
-      changeAt(pp, ip, cp) {
-        const Op = this.rings;
-        if (null === Op) return;
-        const op = this.sample;
-        op[0] = pp, op[1] = ip, op[2] = cp, Op.changes.push(op)
+      changeAt(QQ, WQ, XQ) {
+        const wQ = this.rings;
+        if (null === wQ) return;
+        const qQ = this.sample;
+        qQ[0] = QQ, qQ[1] = WQ, qQ[2] = XQ, wQ.changes.push(qQ)
       }
       dumpText() {
-        var pp, ip;
-        const cp = this.rings;
-        return [`look records (${this.startedClient}): ${Pp.join(",")}`, ...null !== (pp = null === cp || void 0 === cp ? void 0 : cp.steps.lines()) && void 0 !== pp ? pp : [], `mousemove events: ${Wp.join(",")}`, ...null !== (ip = null === cp || void 0 === cp ? void 0 : cp.events.lines()) && void 0 !== ip ? ip : []].join("\n")
+        var QQ, WQ;
+        const XQ = this.rings;
+        return [`look records (${this.startedClient}): ${rQ.join(",")}`, ...null !== (QQ = null === XQ || void 0 === XQ ? void 0 : XQ.steps.lines()) && void 0 !== QQ ? QQ : [], `mousemove events: ${IQ.join(",")}`, ...null !== (WQ = null === XQ || void 0 === XQ ? void 0 : XQ.events.lines()) && void 0 !== WQ ? WQ : []].join("\n")
       }
-      toJson(pp, ip) {
-        var cp;
-        const op = pp - 6e4,
-          Ip = this.rings,
-          Sp = function(pp, ip) {
-            var cp;
-            let Op = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-            const Ip = null !== (cp = null === pp || void 0 === pp ? void 0 : pp.rows(Op, op)) && void 0 !== cp ? cp : [];
+      toJson(QQ, WQ) {
+        var XQ;
+        const qQ = QQ - 6e4,
+          TQ = this.rings,
+          zQ = function(QQ, WQ) {
+            var XQ;
+            let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+            const TQ = null !== (XQ = null === QQ || void 0 === QQ ? void 0 : QQ.rows(wQ, qQ)) && void 0 !== XQ ? XQ : [];
             return {
-              columns: ip,
-              fromMs: 0 === Ip.length ? null : Ip[0][Op],
-              rows: Ip
+              columns: WQ,
+              fromMs: 0 === TQ.length ? null : TQ[0][wQ],
+              rows: TQ
             }
           };
         return {
-          version: Op.c,
-          client: null !== (cp = this.startedClient) && void 0 !== cp ? cp : "not started",
+          version: wQ.c,
+          client: null !== (XQ = this.startedClient) && void 0 !== XQ ? XQ : "not started",
           savedAt: (new Date).toISOString(),
-          savedAtMs: pp,
+          savedAtMs: QQ,
           keptMs: 6e4,
           page: window.location.href,
           userAgent: navigator.userAgent,
@@ -192,143 +193,143 @@ export const modules = {
             width: window.screen.width,
             height: window.screen.height
           },
-          rw: null !== document.pointerLockElement,
+          Sy: null !== document.pointerLockElement,
           visibility: document.visibilityState,
-          ...ip,
-          outcomes: Lp,
-          frameKinds: Yp,
-          changes: Dp,
-          lookSteps: Sp(null === Ip || void 0 === Ip ? void 0 : Ip.steps, Pp),
-          mouseMoves: Sp(null === Ip || void 0 === Ip ? void 0 : Ip.events, Wp, 1),
-          frames: Sp(null === Ip || void 0 === Ip ? void 0 : Ip.frames, yp),
-          cameraSets: Sp(null === Ip || void 0 === Ip ? void 0 : Ip.cameraSets, Up),
-          pageChanges: Sp(null === Ip || void 0 === Ip ? void 0 : Ip.changes, wp)
+          ...WQ,
+          outcomes: FQ,
+          frameKinds: PQ,
+          changes: gQ,
+          lookSteps: zQ(null === TQ || void 0 === TQ ? void 0 : TQ.steps, rQ),
+          mouseMoves: zQ(null === TQ || void 0 === TQ ? void 0 : TQ.events, IQ, 1),
+          frames: zQ(null === TQ || void 0 === TQ ? void 0 : TQ.frames, jQ),
+          cameraSets: zQ(null === TQ || void 0 === TQ ? void 0 : TQ.cameraSets, BQ),
+          pageChanges: zQ(null === TQ || void 0 === TQ ? void 0 : TQ.changes, yQ)
         }
       }
-      save(pp) {
-        const ip = JSON.stringify(this.toJson(performance.now(), pp));
-        (0, op.c)(new Blob([ip], {
+      save(QQ) {
+        const WQ = JSON.stringify(this.toJson(performance.now(), QQ));
+        (0, qQ.e)(new Blob([WQ], {
           type: "application/json"
         }), `bloxd-mouse-look-${(new Date).toISOString().replace(/[:.]/g,"-")}.json`)
       }
     }
   },
-  39210: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Ip,
-      f: () => op
+  39307: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      c: () => TQ,
+      f: () => qQ
     });
-    var Op = cp(34);
+    var wQ = XQ(31);
 
-    function op(pp) {
-      return "refetchCode" === pp || "devDownloadJson" === pp || pp.startsWith("Plugin")
+    function qQ(QQ) {
+      return "refetchCode" === QQ || "devDownloadJson" === QQ || QQ.startsWith("Plugin")
     }
 
-    function Ip(pp, ip) {
-      "refetchCode" !== pp ? "Plugin|MobAiPlugin|ShowPetUi" !== pp ? Promise.all([cp.e(109), cp.e(110), cp.e(105), cp.e(107), cp.e(218)]).then((() => cp(41985))).then((cp => {
+    function TQ(QQ, WQ) {
+      "refetchCode" !== QQ ? "Plugin|MobAiPlugin|ShowPetUi" !== QQ ? Promise.all([XQ.e(111), XQ.e(112), XQ.e(107), XQ.e(109), XQ.e(222)]).then((() => XQ(41986))).then((XQ => {
         let {
-          runClientGameMessage: Op
-        } = cp;
-        Op(pp, ip)
-      })).catch((ip => {
-        console.error(`Game message ${pp} failed`, ip)
-      })) : Op.m.GA("showPetUi", ip) : Op.m.GA("refetchCode")
+          runClientGameMessage: wQ
+        } = XQ;
+        wQ(QQ, WQ)
+      })).catch((WQ => {
+        console.error(`Game message ${QQ} failed`, WQ)
+      })) : wQ.k.mB("showPetUi", WQ) : wQ.k.mB("refetchCode")
     }
   },
-  42875: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Op,
-      e: () => op
+  42867: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      e: () => wQ,
+      i: () => qQ
     });
-    const Op = ["recording", "freecam", "keyframe"];
+    const wQ = ["recording", "freecam", "keyframe"];
 
-    function op() {
-      const pp = crypto.getRandomValues(new Uint32Array(2));
-      return BigInt(pp[1]) << 32n | BigInt(pp[0])
+    function qQ() {
+      const QQ = crypto.getRandomValues(new Uint32Array(2));
+      return BigInt(QQ[1]) << 32n | BigInt(QQ[0])
     }
   },
-  34361: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => xp,
-      h: () => Lp
+  34435: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      c: () => sQ,
+      d: () => FQ
     });
-    var Op = cp(25);
-    const op = 24,
-      Ip = "farNametags",
-      Sp = 1e5;
+    var wQ = XQ(26);
+    const qQ = 24,
+      TQ = "farNametags",
+      zQ = 1e5;
 
-    function xp() {
-      var pp;
-      return null === (pp = Op.c.get("showDistantNametags")) || void 0 === pp || pp
+    function sQ() {
+      var QQ;
+      return null === (QQ = wQ.b.get("showDistantNametags")) || void 0 === QQ || QQ
     }
 
-    function Lp() {
-      var pp;
-      return null !== (pp = function() {
-        const pp = new URLSearchParams(window.location.search).get(Ip),
-          ip = null === pp || "" === pp ? NaN : Number(pp);
-        return Number.isFinite(ip) && ip >= 0 ? Math.min(ip, Sp) : null
-      }()) && void 0 !== pp ? pp : xp() ? 0 : op
+    function FQ() {
+      var QQ;
+      return null !== (QQ = function() {
+        const QQ = new URLSearchParams(window.location.search).get(TQ),
+          WQ = null === QQ || "" === QQ ? NaN : Number(QQ);
+        return Number.isFinite(WQ) && WQ >= 0 ? Math.min(WQ, zQ) : null
+      }()) && void 0 !== QQ ? QQ : sQ() ? 0 : qQ
     }
   },
-  42870: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      blockIdOf: () => zL.e,
-      clearWasmCameraScreen: () => Io,
-      creativeItemIds: () => IO.creativeItemIds,
-      decodeMapSettings: () => VL,
-      drainTextRerasters: () => ax.d,
-      enchantmentPerksOf: () => IO.enchantmentPerksOf,
-      endGameHost: () => DY,
-      followCursorAim: () => KL,
-      followMenuPrefs: () => SI,
-      loadAudio: () => IY,
-      loadClientGame: () => oY,
-      loadTextIcons: () => ax.h,
-      rasterText: () => hx.d,
-      readBoardToEdit: () => ZL,
-      readDrawCensus: () => pY.c,
-      setTextHost: () => ax.k,
-      setTextLocalPlayer: () => ax.m,
-      showInCreativeInvenOf: () => IO.showInCreativeInvenOf,
-      startGameHost: () => YY,
-      startShellAnalytics: () => gL,
-      startSkyFeed: () => AL,
-      textChanged: () => ax.p,
-      warmText: () => hx.f,
-      wasmCameraScreen: () => oo
+  42859: (QQ, WQ, XQ) => {
+    XQ.r(WQ), XQ.d(WQ, {
+      blockIdOf: () => YF.e,
+      clearWasmCameraScreen: () => qq,
+      creativeItemIds: () => Xw.creativeItemIds,
+      decodeMapSettings: () => OF,
+      drainTextRerasters: () => ts.d,
+      enchantmentPerksOf: () => Xw.enchantmentPerksOf,
+      endGameHost: () => sP,
+      followCursorAim: () => ZF,
+      followMenuPrefs: () => wT,
+      loadAudio: () => XP,
+      loadClientGame: () => WP,
+      loadTextIcons: () => ts.g,
+      rasterText: () => Ss.d,
+      readBoardToEdit: () => xF,
+      readDrawCensus: () => KF.c,
+      setTextHost: () => ts.m,
+      setTextLocalPlayer: () => ts.o,
+      showInCreativeInvenOf: () => Xw.showInCreativeInvenOf,
+      startGameHost: () => zP,
+      startShellAnalytics: () => oF,
+      startSkyFeed: () => gF,
+      textChanged: () => ts.w,
+      warmText: () => Ss.f,
+      wasmCameraScreen: () => wq
     });
-    cp(36703);
-    var Op = cp(25),
-      op = cp(37021),
-      Ip = cp(39339),
-      Sp = cp(34),
-      xp = cp(3511),
-      Lp = cp(37019),
-      Yp = cp(1308),
-      Dp = cp(629),
-      Ap = cp(38443),
-      Pp = cp(4903),
-      Wp = cp(40842),
-      yp = cp(40769);
-    const Up = yp.xb / 4,
-      wp = yp.l.PlaySound,
-      vp = yp.l.SoundReset,
-      tp = Pp.bb.ReplayFailed,
-      Hp = Pp.bb.RecorderEvent;
-    class dp {
-      constructor(pp, ip) {
-        let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        this.core = pp, this.memory = ip, this.audio = cp, this.serverIds = new Int32Array(256).fill(yp.Nc), this.kinds = new Uint16Array(256), this.idStr = new Array(256).fill(null), this.indexById = new Map, this.queries = void 0, this.buffer = null, this.viewPtr = -1, this.view = new DataView(new ArrayBuffer(yp.q.BYTES)), this.renderPtr = 0, this.TA = 0, this.renderCapacity = 0, this.render = new Float32Array(0), this.visPtr = 0, this.vis = new Uint8Array(0), this.renderBuffer = null, this.eventsBuffer = null, this.eventsPtr = 0, this.eventsLen = 0, this.events = new DataView(new ArrayBuffer(0)), this.audioView = null, this.scratchPtr = -1, this.corruption = null, this.replay = null, this.queries = new yp.I(pp, (() => {
+    XQ(36814);
+    var wQ = XQ(26),
+      qQ = XQ(37114),
+      TQ = XQ(39434),
+      zQ = XQ(31),
+      sQ = XQ(3673),
+      FQ = XQ(37112),
+      PQ = XQ(1335),
+      gQ = XQ(651),
+      JQ = XQ(38512),
+      rQ = XQ(5134),
+      IQ = XQ(40864),
+      jQ = XQ(40813);
+    const BQ = jQ.Yb / 4,
+      yQ = jQ.u.PlaySound,
+      VQ = jQ.u.SoundReset,
+      DQ = rQ.Z.ReplayFailed,
+      pQ = rQ.Z.RecorderEvent;
+    class GQ {
+      constructor(QQ, WQ) {
+        let XQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        this.core = QQ, this.memory = WQ, this.audio = XQ, this.serverIds = new Int32Array(256).fill(jQ.xd), this.kinds = new Uint16Array(256), this.idStr = new Array(256).fill(null), this.indexById = new Map, this.queries = void 0, this.buffer = null, this.viewPtr = -1, this.view = new DataView(new ArrayBuffer(jQ.x.BYTES)), this.renderPtr = 0, this.yJ = 0, this.renderCapacity = 0, this.render = new Float32Array(0), this.visPtr = 0, this.vis = new Uint8Array(0), this.renderBuffer = null, this.eventsBuffer = null, this.eventsPtr = 0, this.eventsLen = 0, this.events = new DataView(new ArrayBuffer(0)), this.audioView = null, this.scratchPtr = -1, this.corruption = null, this.replay = null, this.queries = new jQ.db(QQ, (() => {
           this.scratchPtr = -1, this.ensureViews()
         }))
       }
       scratch() {
-        return this.scratchPtr < 0 && (this.scratchPtr = this.core.cIp(), this.ensureViews()), this.scratchPtr
+        return this.scratchPtr < 0 && (this.scratchPtr = this.core.LqQ(), this.ensureViews()), this.scratchPtr
       }
-      eventBytes(pp, ip) {
-        const cp = this.eventView();
-        return new Uint8Array(cp.buffer, cp.byteOffset + pp, ip)
+      eventBytes(QQ, WQ) {
+        const XQ = this.eventView();
+        return new Uint8Array(XQ.buffer, XQ.byteOffset + QQ, WQ)
       }
       get apiView() {
         return this.ensureViews(), this.view
@@ -337,348 +338,358 @@ export const modules = {
         this.memory().buffer !== this.buffer && this.reView()
       }
       get localId() {
-        return yp.q.localId(this.apiView, 0)
+        return jQ.x.localId(this.apiView, 0)
       }
       localDeaths() {
-        return yp.q.localDeaths(this.apiView, 0)
+        return jQ.x.localDeaths(this.apiView, 0)
       }
       rereadDirectory() {
-        const pp = this.apiView,
-          ip = yp.q.entRenderPtr(pp, 0),
-          cp = yp.q.entVisPtr(pp, 0),
-          Op = yp.q.entCapacity(pp, 0);
-        if (ip !== this.renderPtr || cp !== this.visPtr || Op !== this.TA || this.renderBuffer !== this.buffer) {
-          this.renderPtr = ip, this.visPtr = cp, this.TA = Op, this.renderBuffer = this.buffer;
-          const pp = this.memoryView(Float32Array, ip, Op * Up, "the render array"),
-            op = this.memoryView(Uint8Array, cp, Op, "the visibility array");
-          this.renderCapacity = pp && op ? Op : 0, this.render = pp && op ? pp : new Float32Array(0), this.vis = pp && op ? op : new Uint8Array(0)
+        const QQ = this.apiView,
+          WQ = jQ.x.entRenderPtr(QQ, 0),
+          XQ = jQ.x.entVisPtr(QQ, 0),
+          wQ = jQ.x.entCapacity(QQ, 0);
+        if (WQ !== this.renderPtr || XQ !== this.visPtr || wQ !== this.yJ || this.renderBuffer !== this.buffer) {
+          this.renderPtr = WQ, this.visPtr = XQ, this.yJ = wQ, this.renderBuffer = this.buffer;
+          const QQ = this.memoryView(Float32Array, WQ, wQ * BQ, "the render array"),
+            qQ = this.memoryView(Uint8Array, XQ, wQ, "the visibility array");
+          this.renderCapacity = QQ && qQ ? wQ : 0, this.render = QQ && qQ ? QQ : new Float32Array(0), this.vis = QQ && qQ ? qQ : new Uint8Array(0)
         }
       }
-      memoryView(pp, ip, cp, Op) {
+      memoryView(QQ, WQ, XQ, wQ) {
         try {
-          return (0, Wp.l)(pp, this.memory().buffer, ip, cp, Op)
-        } catch (op) {
-          return this.keepCorruption(op), null
+          return (0, IQ.n)(QQ, this.memory().buffer, WQ, XQ, wQ)
+        } catch (qQ) {
+          return this.keepCorruption(qQ), null
         }
       }
-      memoryData(pp, ip, cp, Op) {
+      memoryData(QQ, WQ, XQ, wQ) {
         try {
-          return (0, Wp.d)(this.memory().buffer, pp, ip, cp, Op)
-        } catch (op) {
-          return this.keepCorruption(op), null
+          return (0, IQ.g)(this.memory().buffer, QQ, WQ, XQ, wQ)
+        } catch (qQ) {
+          return this.keepCorruption(qQ), null
         }
       }
-      reportCorruption(pp) {
-        this.keepCorruption(new Wp.b(pp))
+      reportCorruption(QQ) {
+        this.keepCorruption(new IQ.d(QQ))
       }
-      keepCorruption(pp) {
-        if (!(pp instanceof Wp.b)) throw pp;
-        this.corruption ??= pp
+      keepCorruption(QQ) {
+        if (!(QQ instanceof IQ.d)) throw QQ;
+        this.corruption ??= QQ
       }
       throwCorruption() {
         if (this.corruption) throw this.corruption
       }
-      walk(pp, ip, cp) {
+      walk(QQ, WQ, XQ) {
         this.rereadDirectory(), this.throwCorruption();
         const {
-          ptr: Op,
-          len: op
-        } = pp;
-        this.eventsPtr = Op, this.eventsLen = op, this.eventsBuffer = null;
-        const Ip = this.eventView();
-        for (let Yp = 0; Yp < op;) {
-          const pp = Ip.getUint32(Yp, !0),
-            cp = 65535 & pp,
-            Op = pp >>> 16,
-            op = Yp + Pp.$;
-          if (cp === yp.l.EntitySpawned) {
-            var Sp;
-            if (Op !== yp.Ab.BYTES) throw Rp(cp, Yp, Op);
-            const pp = yp.Ab.serverId(Ip, op);
-            this.spawned(pp, yp.Ab.index(Ip, op), yp.Ab.kind(Ip, op)), null === (Sp = ip.entityAdded) || void 0 === Sp || Sp.call(ip, pp)
-          } else if ((cp === yp.l.ChunkSlot || cp === yp.l.EntityInfoChanged) && !(0, yp.$d)(cp, Ip, op, Op, ip)) throw Rp(cp, Yp, Op);
-          Yp = op + (0, Pp.ue)(Op)
+          ptr: wQ,
+          len: qQ
+        } = QQ;
+        this.eventsPtr = wQ, this.eventsLen = qQ, this.eventsBuffer = null;
+        const TQ = this.eventView();
+        for (let PQ = 0; PQ < qQ;) {
+          const QQ = TQ.getUint32(PQ, !0),
+            XQ = 65535 & QQ,
+            wQ = QQ >>> 16,
+            qQ = PQ + rQ.V;
+          if (XQ === jQ.u.EntitySpawned) {
+            var zQ;
+            if (wQ !== jQ.bc.BYTES) throw HQ(XQ, PQ, wQ);
+            const QQ = jQ.bc.serverId(TQ, qQ);
+            this.spawned(QQ, jQ.bc.index(TQ, qQ), jQ.bc.kind(TQ, qQ)), null === (zQ = WQ.entityAdded) || void 0 === zQ || zQ.call(WQ, QQ)
+          } else if ((XQ === jQ.u.ChunkSlot || XQ === jQ.u.EntityInfoChanged) && !(0, jQ.we)(XQ, TQ, qQ, wQ, WQ)) throw HQ(XQ, PQ, wQ);
+          PQ = qQ + (0, rQ.te)(wQ)
         }
         try {
-          var xp;
-          null === (xp = ip.afterPrescan) || void 0 === xp || xp.call(ip), this.throwCorruption(), !cp() && this.dispatch(pp, ip, cp) && (this.throwCorruption(), this.applyListener(), ip.afterWalk(pp.kind)), this.throwCorruption()
-        } catch (Lp) {
-          throw Lp instanceof Wp.b && (this.corruption ??= Lp), Lp
+          var sQ;
+          null === (sQ = WQ.afterPrescan) || void 0 === sQ || sQ.call(WQ), this.throwCorruption(), !XQ() && this.dispatch(QQ, WQ, XQ) && (this.throwCorruption(), this.applyListener(), WQ.afterWalk(QQ.kind)), this.throwCorruption()
+        } catch (FQ) {
+          throw FQ instanceof IQ.d && (this.corruption ??= FQ), FQ
         } finally {
-          cp() || null !== this.corruption || this.applyDespawns(op, ip)
+          XQ() || null !== this.corruption || this.applyDespawns(qQ, WQ)
         }
       }
-      applyDespawns(pp, ip) {
-        const cp = this.eventView();
-        for (let op = 0; op < pp;) {
-          const pp = cp.getUint32(op, !0),
-            Ip = op + Pp.$;
-          if ((65535 & pp) === yp.l.EntityDespawned && pp >>> 16 === yp.Ab.BYTES) {
-            const pp = yp.Ab.serverId(cp, Ip);
-            var Op;
-            if (this.despawned(pp, yp.Ab.index(cp, Ip))) null === (Op = ip.entityRemoved) || void 0 === Op || Op.call(ip, pp)
+      applyDespawns(QQ, WQ) {
+        const XQ = this.eventView();
+        for (let qQ = 0; qQ < QQ;) {
+          const QQ = XQ.getUint32(qQ, !0),
+            TQ = qQ + rQ.V;
+          if ((65535 & QQ) === jQ.u.EntityDespawned && QQ >>> 16 === jQ.bc.BYTES) {
+            const QQ = jQ.bc.serverId(XQ, TQ);
+            var wQ;
+            if (this.despawned(QQ, jQ.bc.index(XQ, TQ))) null === (wQ = WQ.entityRemoved) || void 0 === wQ || wQ.call(WQ, QQ)
           }
-          op = Ip + (0, Pp.ue)(pp >>> 16)
+          qQ = TQ + (0, rQ.te)(QQ >>> 16)
         }
         this.rereadDirectory()
       }
-      dispatch(pp, ip, cp) {
+      dispatch(QQ, WQ, XQ) {
         const {
-          len: Op,
-          net: op,
-          netOffsets: Ip
-        } = pp;
-        let Sp = this.eventView(),
-          xp = 0;
-        for (let jp = 0; jp < Op;) {
-          const pp = Sp.getUint32(jp, !0),
-            Op = 65535 & pp,
-            kp = pp >>> 16,
-            qp = jp + Pp.$;
-          let Mp = !1;
-          if (xp < op.length && Ip[xp] === jp) ip.netEvent(op[xp]), xp++, Mp = !0;
-          else if (Op === Pp.bb.LocalPlayerBound) {
-            var Lp;
-            if (kp !== Pp.Lb) throw Rp(Op, jp, kp);
-            null === (Lp = ip.localPlayerBound) || void 0 === Lp || Lp.call(ip, Sp.getInt32(qp, !0)), Mp = !0
-          } else if (Op === Pp.bb.LocalHurt) {
-            var Yp;
-            if (kp !== Pp.Kb) throw Rp(Op, jp, kp);
-            null === (Yp = ip.localHurt) || void 0 === Yp || Yp.call(ip, Sp.getInt32(qp, !0), Sp.getFloat32(qp + 4, !0), Sp.getUint32(qp + 8, !0)), Mp = !0
-          } else if (Op === Pp.bb.AttackHit) {
-            var Dp;
-            if (kp !== Pp.e) throw Rp(Op, jp, kp);
-            const pp = Sp.getFloat32(qp, !0),
-              cp = Sp.getFloat32(qp + 4, !0),
-              op = Sp.getFloat32(qp + 8, !0),
-              Ip = Sp.getUint32(qp + 12, !0);
-            null === (Dp = ip.attackHit) || void 0 === Dp || Dp.call(ip, pp, cp, op, 0 !== (Ip & Pp.o.Crit), 0 !== (Ip & Pp.o.HitSelf))
-          } else if (Op === Pp.bb.PhysicsType) {
-            var Ap;
-            if (kp !== Pp.dc) throw Rp(Op, jp, kp);
-            null === (Ap = ip.physicsType) || void 0 === Ap || Ap.call(ip, Sp.getUint32(qp, !0), Sp.getInt32(qp + 4, !0)), Mp = !0
-          } else if (Op === Pp.bb.VehicleEffect) {
-            var Wp;
-            const pp = mp(Sp, qp, kp);
-            if (null === pp) throw Rp(Op, jp, kp);
-            null === (Wp = ip.vehicleEffect) || void 0 === Wp || Wp.call(ip, pp.op, pp.name, pp.icon, pp.level, pp.durationMs), Mp = !0
-          } else if (Op === Pp.bb.ZoomChanged) {
-            var Up;
-            if (kp !== Pp.Zd) throw Rp(Op, jp, kp);
-            null === (Up = ip.zoomChanged) || void 0 === Up || Up.call(ip, Sp.getFloat32(qp, !0), Sp.getUint8(qp + 4)), Mp = !0
-          } else if (Op === Pp.bb.ZoomDisabled) {
-            var dp;
-            if (0 !== kp) throw Rp(Op, jp, kp);
-            null === (dp = ip.zoomDisabled) || void 0 === dp || dp.call(ip), Mp = !0
-          } else if (Op === Pp.bb.GameCamera) {
-            var ep;
-            null === (ep = ip.gameCamera) || void 0 === ep || ep.call(ip, new Uint8Array(Sp.buffer, Sp.byteOffset + qp, kp).slice()), Mp = !0
-          } else if (Op === yp.l.ChunkSlot || Op === yp.l.EntityInfoChanged);
-          else if (Op >= wp && Op <= vp) {
-            if (this.audio && !this.audio.onAudioEvent(Op, Sp, qp, kp)) throw Rp(Op, jp, kp)
-          } else if (Op >= tp && Op <= Hp) {
+          len: wQ,
+          net: qQ,
+          netOffsets: TQ
+        } = QQ;
+        let zQ = this.eventView(),
+          sQ = 0;
+        for (let vQ = 0; vQ < wQ;) {
+          const QQ = zQ.getUint32(vQ, !0),
+            wQ = 65535 & QQ,
+            aQ = QQ >>> 16,
+            lQ = vQ + rQ.V;
+          let hQ = !1;
+          if (sQ < qQ.length && TQ[sQ] === vQ) WQ.netEvent(qQ[sQ]), sQ++, hQ = !0;
+          else if (wQ === rQ.Z.LocalPlayerBound) {
+            var FQ;
+            if (aQ !== rQ.Jb) throw HQ(wQ, vQ, aQ);
+            null === (FQ = WQ.localPlayerBound) || void 0 === FQ || FQ.call(WQ, zQ.getInt32(lQ, !0)), hQ = !0
+          } else if (wQ === rQ.Z.LocalHurt) {
+            var PQ;
+            if (aQ !== rQ.Fb) throw HQ(wQ, vQ, aQ);
+            null === (PQ = WQ.localHurt) || void 0 === PQ || PQ.call(WQ, zQ.getInt32(lQ, !0), zQ.getFloat32(lQ + 4, !0), zQ.getUint32(lQ + 8, !0)), hQ = !0
+          } else if (wQ === rQ.Z.AttackHit) {
+            var gQ;
+            if (aQ !== rQ.e) throw HQ(wQ, vQ, aQ);
+            const QQ = zQ.getFloat32(lQ, !0),
+              XQ = zQ.getFloat32(lQ + 4, !0),
+              qQ = zQ.getFloat32(lQ + 8, !0),
+              TQ = zQ.getUint32(lQ + 12, !0);
+            null === (gQ = WQ.attackHit) || void 0 === gQ || gQ.call(WQ, QQ, XQ, qQ, 0 !== (TQ & rQ.k.Crit), 0 !== (TQ & rQ.k.HitSelf))
+          } else if (wQ === rQ.Z.PhysicsType) {
+            var JQ;
+            if (aQ !== rQ.kc) throw HQ(wQ, vQ, aQ);
+            null === (JQ = WQ.physicsType) || void 0 === JQ || JQ.call(WQ, zQ.getUint32(lQ, !0), zQ.getInt32(lQ + 4, !0)), hQ = !0
+          } else if (wQ === rQ.Z.VehicleEffect) {
+            var IQ;
+            const QQ = dQ(zQ, lQ, aQ);
+            if (null === QQ) throw HQ(wQ, vQ, aQ);
+            null === (IQ = WQ.vehicleEffect) || void 0 === IQ || IQ.call(WQ, QQ.op, QQ.name, QQ.icon, QQ.level, QQ.durationMs), hQ = !0
+          } else if (wQ === rQ.Z.ZoomChanged) {
+            var BQ;
+            if (aQ !== rQ.be) throw HQ(wQ, vQ, aQ);
+            null === (BQ = WQ.zoomChanged) || void 0 === BQ || BQ.call(WQ, zQ.getFloat32(lQ, !0), zQ.getUint8(lQ + 4)), hQ = !0
+          } else if (wQ === rQ.Z.ZoomDisabled) {
+            var GQ;
+            if (0 !== aQ) throw HQ(wQ, vQ, aQ);
+            null === (GQ = WQ.zoomDisabled) || void 0 === GQ || GQ.call(WQ), hQ = !0
+          } else if (wQ === rQ.Z.BhopDisabled) {
+            var UQ;
+            if (0 !== aQ) throw HQ(wQ, vQ, aQ);
+            null === (UQ = WQ.bhopDisabled) || void 0 === UQ || UQ.call(WQ), hQ = !0
+          } else if (wQ === rQ.Z.GameCamera) {
+            var bQ;
+            null === (bQ = WQ.gameCamera) || void 0 === bQ || bQ.call(WQ, new Uint8Array(zQ.buffer, zQ.byteOffset + lQ, aQ).slice()), hQ = !0
+          } else if (wQ === jQ.u.ChunkSlot || wQ === jQ.u.EntityInfoChanged);
+          else if (wQ >= yQ && wQ <= VQ) {
+            if (this.audio && !this.audio.onAudioEvent(wQ, zQ, lQ, aQ)) throw HQ(wQ, vQ, aQ)
+          } else if (wQ >= DQ && wQ <= pQ) {
             if (this.replay) {
-              if (!this.replay.onReplayEvent(Op, Sp, qp, kp)) throw Rp(Op, jp, kp);
-              Mp = !0
+              if (!this.replay.onReplayEvent(wQ, zQ, lQ, aQ)) throw HQ(wQ, vQ, aQ);
+              hQ = !0
             }
-          } else if (Op >= yp.cd && Op <= yp.dd && Op !== Pp.bb.EnvLighting) {
-            if (!(0, yp.$d)(Op, Sp, qp, kp, ip)) throw Rp(Op, jp, kp);
-            Mp = !0
+          } else if (wQ >= jQ.Kd && wQ <= jQ.Md && wQ !== rQ.Z.EnvLighting) {
+            if (!(0, jQ.we)(wQ, zQ, lQ, aQ, WQ)) throw HQ(wQ, vQ, aQ);
+            hQ = !0
           }
-          if (Mp) {
-            if (cp()) return !1;
-            Sp = this.eventView()
+          if (hQ) {
+            if (XQ()) return !1;
+            zQ = this.eventView()
           }
-          jp = qp + (0, Pp.ue)(kp)
+          vQ = lQ + (0, rQ.te)(aQ)
         }
-        return !cp()
+        return !XQ()
       }
       applyListener() {
-        var pp;
+        var QQ;
         if (!this.audio) return;
-        const ip = yp.q.audioViewPtr(this.apiView, 0),
-          cp = this.memory().buffer;
-        let Op = this.audioView;
-        (null === (pp = Op) || void 0 === pp ? void 0 : pp.buffer) === cp && Op.byteOffset === ip || (Op = (0, Wp.d)(cp, ip, yp.r.BYTES, 8, "the audio view"), this.audioView = Op), Op && this.audio.applyListener(Op)
+        const WQ = jQ.x.audioViewPtr(this.apiView, 0),
+          XQ = this.memory().buffer;
+        let wQ = this.audioView;
+        (null === (QQ = wQ) || void 0 === QQ ? void 0 : QQ.buffer) === XQ && wQ.byteOffset === WQ || (wQ = (0, IQ.g)(XQ, WQ, jQ.A.BYTES, 8, "the audio view"), this.audioView = wQ), wQ && this.audio.applyListener(wQ)
       }
-      indexOf(pp) {
-        return this.indexById.get("number" === typeof pp ? pp : +pp)
+      indexOf(QQ) {
+        return this.indexById.get("number" === typeof QQ ? QQ : +QQ)
       }
-      isLocal(pp) {
-        return pp !== yp.Nc && pp === yp.q.localId(this.apiView, 0)
+      isLocal(QQ) {
+        return QQ !== jQ.xd && QQ === jQ.x.localId(this.apiView, 0)
       }
-      sH(pp) {
-        const ip = [0, 0, 0];
-        return this.readPosition("number" === typeof pp ? pp : +pp, ip) ? ip : null
+      xV(QQ) {
+        const WQ = [0, 0, 0];
+        return this.readPosition("number" === typeof QQ ? QQ : +QQ, WQ) ? WQ : null
       }
-      readPosition(pp, ip) {
-        const cp = this.apiView;
-        if (void 0 !== this.indexById.get(pp) && this.isLocal(pp)) {
-          for (let pp = 0; pp < 3; pp++) ip[pp] = yp.q.localPos(cp, 0, pp);
+      readPosition(QQ, WQ) {
+        const XQ = this.apiView;
+        if (void 0 !== this.indexById.get(QQ) && this.isLocal(QQ)) {
+          for (let QQ = 0; QQ < 3; QQ++) WQ[QQ] = jQ.x.localPos(XQ, 0, QQ);
           return !0
         }
-        return this.readDrawnPosition(pp, ip)
+        return this.readDrawnPosition(QQ, WQ)
       }
-      readDrawnPosition(pp, ip) {
-        const cp = this.apiView,
-          Op = this.indexById.get(pp);
-        if (void 0 === Op || Op >= this.renderCapacity) return ip[0] = ip[1] = ip[2] = NaN, !1;
-        const op = Op * Up;
-        for (let Ip = 0; Ip < 3; Ip++) ip[Ip] = this.render[op + Ip] + yp.q.origin(cp, 0, Ip);
+      readDrawnPosition(QQ, WQ) {
+        const XQ = this.apiView,
+          wQ = this.indexById.get(QQ);
+        if (void 0 === wQ || wQ >= this.renderCapacity) return WQ[0] = WQ[1] = WQ[2] = NaN, !1;
+        const qQ = wQ * BQ;
+        for (let TQ = 0; TQ < 3; TQ++) WQ[TQ] = this.render[qQ + TQ] + jQ.x.origin(XQ, 0, TQ);
         return !0
       }
-      checkValid(pp) {
-        return void 0 !== this.indexOf(pp)
+      checkValid(QQ) {
+        return void 0 !== this.indexOf(QQ)
       }
-      isAlive(pp) {
-        const ip = this.indexOf(pp);
-        if (void 0 === ip) return null;
-        if (this.ensureViews(), ip >= this.renderCapacity) return null;
-        const cp = this.vis[ip];
-        return 0 === cp ? null : 0 !== (cp & yp._d.Alive)
+      isAlive(QQ) {
+        const WQ = this.indexOf(QQ);
+        if (void 0 === WQ) return null;
+        if (this.ensureViews(), WQ >= this.renderCapacity) return null;
+        const XQ = this.vis[WQ];
+        return 0 === XQ ? null : 0 !== (XQ & jQ.ve.Alive)
       }
-      getEntityType(pp) {
-        const ip = this.indexOf(pp);
-        return void 0 === ip ? this.isLocal("number" === typeof pp ? pp : +pp) ? "Player" : null : jp(this.kinds[ip])
+      getEntityType(QQ) {
+        const WQ = this.indexOf(QQ);
+        return void 0 === WQ ? this.isLocal("number" === typeof QQ ? QQ : +QQ) ? "Player" : null : bQ(this.kinds[WQ])
       }
-      spawned(pp, ip, cp) {
-        if (ip >= 1048576) throw new Wp.b(`entity ${pp} spawned at index ${ip}`);
-        this.ensureIndex(ip), this.serverIds[ip] === pp && null !== this.idStr[ip] || (this.idStr[ip] = String(pp)), this.serverIds[ip] = pp, this.kinds[ip] = cp, this.indexById.set(pp, ip)
+      spawned(QQ, WQ, XQ) {
+        if (WQ >= 1048576) throw new IQ.d(`entity ${QQ} spawned at index ${WQ}`);
+        this.ensureIndex(WQ), this.serverIds[WQ] === QQ && null !== this.idStr[WQ] || (this.idStr[WQ] = String(QQ)), this.serverIds[WQ] = QQ, this.kinds[WQ] = XQ, this.indexById.set(QQ, WQ)
       }
-      despawned(pp, ip) {
-        let cp = !1;
-        return this.indexById.get(pp) === ip && (this.indexById.delete(pp), cp = !0), ip < this.serverIds.length && this.serverIds[ip] === pp && (this.serverIds[ip] = yp.Nc, this.kinds[ip] = 0, this.idStr[ip] = null), cp
+      despawned(QQ, WQ) {
+        let XQ = !1;
+        return this.indexById.get(QQ) === WQ && (this.indexById.delete(QQ), XQ = !0), WQ < this.serverIds.length && this.serverIds[WQ] === QQ && (this.serverIds[WQ] = jQ.xd, this.kinds[WQ] = 0, this.idStr[WQ] = null), XQ
       }
-      ensureIndex(pp) {
-        const ip = this.serverIds.length;
-        if (pp < ip) return;
-        let cp = 2 * ip;
-        for (; cp <= pp;) cp *= 2;
-        const Op = new Int32Array(cp).fill(yp.Nc);
-        Op.set(this.serverIds), this.serverIds = Op;
-        const op = new Uint16Array(cp);
-        op.set(this.kinds), this.kinds = op;
-        for (let Ip = ip; Ip < cp; Ip++) this.idStr.push(null)
+      ensureIndex(QQ) {
+        const WQ = this.serverIds.length;
+        if (QQ < WQ) return;
+        let XQ = 2 * WQ;
+        for (; XQ <= QQ;) XQ *= 2;
+        const wQ = new Int32Array(XQ).fill(jQ.xd);
+        wQ.set(this.serverIds), this.serverIds = wQ;
+        const qQ = new Uint16Array(XQ);
+        qQ.set(this.kinds), this.kinds = qQ;
+        for (let TQ = WQ; TQ < XQ; TQ++) this.idStr.push(null)
       }
       eventView() {
-        const pp = this.memory().buffer;
-        return pp !== this.eventsBuffer && (this.eventsBuffer = pp, this.events = new DataView(pp, this.eventsPtr, this.eventsLen)), this.events
+        const QQ = this.memory().buffer;
+        return QQ !== this.eventsBuffer && (this.eventsBuffer = QQ, this.events = new DataView(QQ, this.eventsPtr, this.eventsLen)), this.events
       }
       reView() {
-        const pp = this.memory().buffer;
-        this.buffer = pp, this.viewPtr < 0 && (this.viewPtr = this.core.OIp()), this.view = new DataView(pp, this.viewPtr, yp.q.BYTES), this.rereadDirectory()
+        const QQ = this.memory().buffer;
+        this.buffer = QQ, this.viewPtr < 0 && (this.viewPtr = this.core.kqQ()), this.view = new DataView(QQ, this.viewPtr, jQ.x.BYTES), this.rereadDirectory()
       }
     }
 
-    function ep(pp) {
-      return pp >>> yp.b === yp.p.Item
+    function UQ(QQ) {
+      return QQ >>> jQ.e === jQ.w.Item
     }
 
-    function jp(pp) {
-      var ip, cp;
-      const Op = pp & yp.d;
-      switch (pp >>> yp.b) {
-        case yp.p.Lifeform:
-          return null !== (ip = Dp.i[Op]) && void 0 !== ip ? ip : null;
-        case yp.p.Throwable:
-          return null !== (cp = Ap.k[Op]) && void 0 !== cp ? cp : null;
-        case yp.p.Mesh:
+    function bQ(QQ) {
+      var WQ, XQ;
+      const wQ = QQ & jQ.i;
+      switch (QQ >>> jQ.e) {
+        case jQ.w.Lifeform:
+          return null !== (WQ = gQ.i[wQ]) && void 0 !== WQ ? WQ : null;
+        case jQ.w.Throwable:
+          return null !== (XQ = JQ.m[wQ]) && void 0 !== XQ ? XQ : null;
+        case jQ.w.Mesh:
           return "Mesh";
-        case yp.p.Audio:
+        case jQ.w.Audio:
           return "AudioEntity";
-        case yp.p.Item:
+        case jQ.w.Item:
           return "Item";
         default:
           return null
       }
     }
-    const kp = new TextDecoder;
+    const vQ = new TextDecoder;
 
-    function mp(pp, ip, cp) {
-      if (cp < Pp.Cd.HEAD_BYTES) return null;
-      const Op = pp.getUint32(ip, !0),
-        op = pp.getUint32(ip + 20, !0),
-        Ip = pp.getUint32(ip + 24, !0),
-        Sp = Pp.Cd.HEAD_BYTES + (0, Pp.ue)(op);
-      if (Op !== Pp.Cd.UPDATE && Op !== Pp.Cd.REMOVE || op > cp || Sp + Ip > cp) return null;
-      const xp = (cp, Op) => kp.decode(new Uint8Array(pp.buffer, pp.byteOffset + ip + cp, Op)),
-        Lp = pp.getFloat64(ip + 12, !0);
+    function dQ(QQ, WQ, XQ) {
+      if (XQ < rQ.Md.HEAD_BYTES) return null;
+      const wQ = QQ.getUint32(WQ, !0),
+        qQ = QQ.getUint32(WQ + 20, !0),
+        TQ = QQ.getUint32(WQ + 24, !0),
+        zQ = rQ.Md.HEAD_BYTES + (0, rQ.te)(qQ);
+      if (wQ !== rQ.Md.UPDATE && wQ !== rQ.Md.REMOVE || qQ > XQ || zQ + TQ > XQ) return null;
+      const sQ = (XQ, wQ) => vQ.decode(new Uint8Array(QQ.buffer, QQ.byteOffset + WQ + XQ, wQ)),
+        FQ = QQ.getFloat64(WQ + 12, !0);
       return {
-        op: Op,
-        level: pp.getFloat64(ip + 4, !0),
-        durationMs: Number.isNaN(Lp) ? null : Lp,
-        name: xp(Pp.Cd.HEAD_BYTES, op),
-        icon: xp(Sp, Ip)
+        op: wQ,
+        level: QQ.getFloat64(WQ + 4, !0),
+        durationMs: Number.isNaN(FQ) ? null : FQ,
+        name: sQ(rQ.Md.HEAD_BYTES, qQ),
+        icon: sQ(zQ, TQ)
       }
     }
 
-    function Rp(pp, ip, cp) {
-      return new Wp.b(`event ${pp} at ${ip} of ${cp} bytes`)
+    function HQ(QQ, WQ, XQ) {
+      return new IQ.d(`event ${QQ} at ${WQ} of ${XQ} bytes`)
     }
-    var qp = cp(337),
-      Mp = cp(1234),
-      Cp = cp(39210),
-      Ep = cp(1975),
-      Xp = cp(41225),
-      lp = cp(1927),
-      Qp = cp(39362),
-      Jp = cp(39385),
-      Bp = cp(39375),
-      Np = cp(40824),
-      Tp = cp(2463),
-      fp = cp(39356),
-      bp = cp(39383);
-    const hp = Math.max(yp.lb.BYTES, yp.eb.BYTES, yp.gb.BYTES);
+    var aQ = XQ(402),
+      lQ = XQ(1257),
+      hQ = XQ(39307),
+      iQ = XQ(2021),
+      cQ = XQ(41221),
+      AQ = XQ(1972),
+      RQ = XQ(39449),
+      EQ = XQ(39481),
+      CQ = XQ(39458),
+      uQ = XQ(40850),
+      LQ = XQ(2510),
+      kQ = XQ(39444),
+      fQ = XQ(39476);
+    const SQ = Math.max(jQ.Lb.BYTES, jQ.Cb.BYTES, jQ.Db.BYTES);
 
-    function ap(pp) {
-      if (!(0, bp.e)(pp)) return null;
-      const ip = Number(pp);
-      return (0 | ip) === ip ? ip : null
+    function tQ(QQ) {
+      if (!(0, fQ.f)(QQ)) return null;
+      const WQ = Number(QQ);
+      return (0 | WQ) === WQ ? WQ : null
     }
-    class np {
-      constructor(pp) {
-        this.api = pp, this.bodyHeading = 0, this.viewHeading = 0, this.defaultPose = (0, fp.i)(), this.defaultPoseRead = !1, this.defaultFov = 0, this.baseFov = 0, this.aspect = 1, this.KO = null, this.entityLive = !1, this.entityFeet = [0, 0, 0], this.entityAim = [0, 0, 0], this.entityHeading = 0, this.localId = yp.Nc, this.localName = String(yp.Nc), this.scratch = null
+    class oQ {
+      constructor(QQ) {
+        this.api = QQ, this.bodyHeading = 0, this.viewHeading = 0, this.defaultPose = (0, kQ.j)(), this.defaultPoseRead = !1, this.defaultFov = 0, this.baseFov = 0, this.aspect = 1, this.uw = null, this.entityLive = !1, this.entityFeet = [0, 0, 0], this.entityAim = [0, 0, 0], this.entityHeading = 0, this.entityPitch = null, this.entityLookHeading = null, this.localId = jQ.xd, this.localName = String(jQ.xd), this.scratch = null
       }
       readView() {
-        this.defaultPoseRead = !1, this.KO = null;
-        const pp = this.api.queries.directorView() >= yp.lb.BYTES ? this.scratchView() : null;
-        null !== pp && (this.defaultFov = (0, lp.C)(yp.lb.fov(pp, 0)), this.baseFov = (0, lp.C)(yp.lb.baseFov(pp, 0)), this.aspect = yp.lb.aspect(pp, 0), this.bodyHeading = yp.lb.bodyHeading(pp, 0))
+        this.defaultPoseRead = !1, this.uw = null;
+        const QQ = this.api.queries.directorView() >= jQ.Lb.BYTES ? this.scratchView() : null;
+        null !== QQ && (this.defaultFov = (0, AQ.y)(jQ.Lb.fov(QQ, 0)), this.baseFov = (0, AQ.y)(jQ.Lb.baseFov(QQ, 0)), this.aspect = jQ.Lb.aspect(QQ, 0), this.bodyHeading = jQ.Lb.bodyHeading(QQ, 0))
       }
       getViewHeading() {
         return this.viewHeading
       }
-      setViewHeading(pp) {
-        this.viewHeading = pp
+      setViewHeading(QQ) {
+        this.viewHeading = QQ
       }
       get localPlayerId() {
-        const pp = yp.q.localId(this.api.apiView, 0);
-        return pp !== this.localId && (this.localId = pp, this.localName = String(pp)), this.localName
+        const QQ = jQ.x.localId(this.api.apiView, 0);
+        return QQ !== this.localId && (this.localId = QQ, this.localName = String(QQ)), this.localName
       }
-      getEntityPosition(pp) {
-        return this.readEntity(pp) ? this.entityFeet : null
+      getEntityPosition(QQ) {
+        return this.readEntity(QQ) ? this.entityFeet : null
       }
-      getEntityAimPoint(pp) {
-        return this.readEntity(pp) ? this.entityAim : null
+      getEntityAimPoint(QQ) {
+        return this.readEntity(QQ) ? this.entityAim : null
       }
-      getEntityHeading(pp) {
-        const ip = ap(pp);
-        if (null === ip) return null;
-        const cp = yp.q.localId(this.api.apiView, 0);
-        return ip === cp && cp !== yp.Nc ? this.viewHeading : this.readEntity(pp) ? this.entityHeading : null
+      getEntityHeading(QQ) {
+        const WQ = tQ(QQ);
+        if (null === WQ) return null;
+        const XQ = jQ.x.localId(this.api.apiView, 0);
+        return WQ === XQ && XQ !== jQ.xd ? this.viewHeading : this.readEntity(QQ) ? this.entityHeading : null
       }
-      raycastTerrain(pp, ip, cp) {
-        const Op = this.api.queries.cameraSweep(pp[0], pp[1], pp[2], ip[0], ip[1], ip[2], cp);
-        return Op < cp - 1e-6 ? Op : null
+      getEntityPitch(QQ) {
+        return this.readEntity(QQ) ? this.entityPitch : null
+      }
+      getEntityLookHeading(QQ) {
+        return this.readEntity(QQ) ? this.entityLookHeading : null
+      }
+      raycastTerrain(QQ, WQ, XQ) {
+        const wQ = this.api.queries.cameraSweep(QQ[0], QQ[1], QQ[2], WQ[0], WQ[1], WQ[2], XQ);
+        return wQ < XQ - 1e-6 ? wQ : null
       }
       getDefaultPose() {
         if (this.defaultPoseRead) return this.defaultPose;
         this.defaultPoseRead = !0;
-        const pp = this.defaultPose;
-        pp.fov = this.defaultFov;
-        const ip = this.api.queries.directorDefaultPose() >= yp.eb.BYTES ? this.scratchView() : null;
-        if (null === ip) return pp;
-        for (let cp = 0; cp < 3; cp++) pp.position[cp] = yp.eb.eye(ip, 0, cp);
-        return pp.heading = yp.eb.heading(ip, 0), pp.pitch = yp.eb.pitch(ip, 0), pp
+        const QQ = this.defaultPose;
+        QQ.fov = this.defaultFov;
+        const WQ = this.api.queries.directorDefaultPose() >= jQ.Cb.BYTES ? this.scratchView() : null;
+        if (null === WQ) return QQ;
+        for (let XQ = 0; XQ < 3; XQ++) QQ.position[XQ] = jQ.Cb.eye(WQ, 0, XQ);
+        return QQ.heading = jQ.Cb.heading(WQ, 0), QQ.pitch = jQ.Cb.pitch(WQ, 0), QQ
       }
       getDefaultFov() {
         return this.defaultFov
@@ -689,365 +700,369 @@ export const modules = {
       getAspectRatio() {
         return this.aspect
       }
-      readEntity(pp) {
-        const ip = ap(pp);
-        if (null === ip) return !1;
-        if (ip === this.KO) return this.entityLive;
-        this.KO = ip;
-        const cp = this.api.queries.directorEntity(ip) >= yp.gb.BYTES ? this.scratchView() : null;
-        if (this.entityLive = null !== cp, null === cp) return !1;
-        for (let Op = 0; Op < 3; Op++) this.entityFeet[Op] = yp.gb.feet(cp, 0, Op), this.entityAim[Op] = this.entityFeet[Op];
-        return this.entityAim[1] += yp.gb.eyeHeight(cp, 0), this.entityHeading = yp.gb.heading(cp, 0), !0
+      readEntity(QQ) {
+        const WQ = tQ(QQ);
+        if (null === WQ) return !1;
+        if (WQ === this.uw) return this.entityLive;
+        this.uw = WQ;
+        const XQ = this.api.queries.directorEntity(WQ) >= jQ.Db.BYTES ? this.scratchView() : null;
+        if (this.entityLive = null !== XQ, null === XQ) return !1;
+        for (let TQ = 0; TQ < 3; TQ++) this.entityFeet[TQ] = jQ.Db.feet(XQ, 0, TQ), this.entityAim[TQ] = this.entityFeet[TQ];
+        this.entityAim[1] += jQ.Db.eyeHeight(XQ, 0), this.entityHeading = jQ.Db.heading(XQ, 0);
+        const wQ = jQ.Db.pitch(XQ, 0);
+        this.entityPitch = Number.isNaN(wQ) ? null : wQ;
+        const qQ = jQ.Db.lookHeading(XQ, 0);
+        return this.entityLookHeading = Number.isNaN(qQ) ? null : qQ, !0
       }
       scratchView() {
-        const pp = this.api.scratch(),
-          ip = this.api.memory().buffer,
-          cp = this.scratch;
-        return null !== cp && cp.buffer === ip && cp.byteOffset === pp ? cp : (this.scratch = this.api.memoryData(pp, hp, 8, "the director's record"), this.scratch)
+        const QQ = this.api.scratch(),
+          WQ = this.api.memory().buffer,
+          XQ = this.scratch;
+        return null !== XQ && XQ.buffer === WQ && XQ.byteOffset === QQ ? XQ : (this.scratch = this.api.memoryData(QQ, SQ, 8, "the director's record"), this.scratch)
       }
     }
-    const Fp = {
+    const eQ = {
         mode: "default"
       },
-      gp = {
+      nQ = {
         show: () => {},
         clear: () => {}
       };
 
-    function Gp() {
+    function xQ() {
       return "undefined" !== typeof document && "hidden" === document.visibilityState
     }
-    class rp {
-      constructor(pp) {
-        this.options = pp, this.WP = void 0, this.director = void 0, this.latest = Fp, this.pending = void 0, this.shownSettings = null, this.facing = "movement", this.mouseTurns = "view", this.look = {
-          QE: 0,
-          TE: 0
+    class YQ {
+      constructor(QQ) {
+        this.options = QQ, this.nJ = void 0, this.director = void 0, this.latest = eQ, this.pending = void 0, this.shownSettings = null, this.facing = "movement", this.mouseTurns = "view", this.look = {
+          jR: 0,
+          yR: 0
         }, this.pointedAt = {
           heading: 0,
           pitch: 0
-        }, this.engaged = !1, this.calledThisFrame = !1, this.holding = !1, this.lastCallMs = 0, this.answeredPose = !1, this.rc = new Int32Array(3 * yp.Dd), this.centresLen = 0, this.centresUnsent = !1, this.next = new Int32Array(3 * yp.Dd), this.WP = new np(pp.api), this.director = new Bp.c(this.WP)
+        }, this.engaged = !1, this.calledThisFrame = !1, this.holding = !1, this.lastCallMs = 0, this.answeredPose = !1, this.nB = new Int32Array(3 * jQ.ie), this.centresLen = 0, this.centresUnsent = !1, this.next = new Int32Array(3 * jQ.ie), this.nJ = new oQ(QQ.api), this.director = new CQ.b(this.nJ)
       }
-      settingsChanged(pp) {
-        let ip = Fp;
-        if (pp.length > 0) try {
-          ip = (0, Np.c)(pp)
+      settingsChanged(QQ) {
+        let WQ = eQ;
+        if (QQ.length > 0) try {
+          WQ = (0, uQ.d)(QQ)
         } catch {}
-        this.latest = ip, this.pending = ip
+        this.latest = WQ, this.pending = WQ
       }
-      call(pp, ip, cp, Op, op, Ip) {
-        var Sp, xp;
-        let Lp;
+      call(QQ, WQ, XQ, wQ, qQ, TQ) {
+        var zQ, sQ;
+        let FQ;
         this.holding = !1;
         try {
-          Lp = this.answer(pp, ip, cp, Op, op, Ip)
-        } catch (Pp) {
-          var Yp, Dp;
-          throw this.answeredPose = !1, null === (Yp = (Dp = this.options).showFacing) || void 0 === Yp || Yp.call(Dp, null), Pp
+          FQ = this.answer(QQ, WQ, XQ, wQ, qQ, TQ)
+        } catch (rQ) {
+          var PQ, gQ;
+          throw this.answeredPose = !1, null === (PQ = (gQ = this.options).showFacing) || void 0 === PQ || PQ.call(gQ, null), rQ
         }
-        const Ap = this.answeredPose && 0 === (Op & yp.ib.Held);
-        return this.answeredPose = Lp !== yp.cb.None, this.holding = this.answeredPose && !Ap, null === (Sp = (xp = this.options).showFacing) || void 0 === Sp || Sp.call(xp, this.holding ? this.facing : null), Lp
+        const JQ = this.answeredPose && 0 === (wQ & jQ.Hb.Held);
+        return this.answeredPose = FQ !== jQ.yb.None, this.holding = this.answeredPose && !JQ, null === (zQ = (sQ = this.options).showFacing) || void 0 === zQ || zQ.call(sQ, this.holding ? this.facing : null), FQ
       }
       holdsView() {
         return this.holding
       }
-      answer(pp, ip, cp, Op, op, Ip) {
+      answer(QQ, WQ, XQ, wQ, qQ, TQ) {
         this.calledThisFrame = !0, this.engaged = !0, this.lastCallMs = this.now();
         const {
-          WP: Sp
+          nJ: zQ
         } = this;
-        Sp.readView();
-        if (0 !== (Op & yp.ib.Held) || Sp.setViewHeading((0, Qp.y)(Sp.bodyHeading)), void 0 !== this.pending) {
-          const pp = this.pending;
-          this.pending = void 0, this.director.setSettings(pp), this.syncShownSettings()
+        zQ.readView();
+        if (0 !== (wQ & jQ.Hb.Held) || zQ.setViewHeading((0, RQ.w)(zQ.bodyHeading)), void 0 !== this.pending) {
+          const QQ = this.pending;
+          this.pending = void 0, this.director.setSettings(QQ), this.syncShownSettings()
         }
-        this.readLook((0, Tp.i)(ip), (0, Tp.i)(cp), Op, (0, Tp.i)(op), (0, Tp.i)(Ip));
-        const xp = this.director.update(pp / 1e3, this.look);
-        if (this.syncShownSettings(), this.writeCentres(this.director.getLoadingPositions()), this.hidden() || this.screen().show(this.director.getScreenFade(), this.director.getSettings()), !xp) return yp.cb.None;
-        const [Lp, Yp, Dp] = xp.position;
-        if (0 === this.options.api.queries.directorPose(Lp, Yp, Dp, (0, Qp.y)(xp.heading), (0, Qp.l)(xp.pitch), (0, lp.o)(xp.fov))) return yp.cb.None;
-        if ("default" === this.director.getSettings().mode) return yp.cb.Pose;
+        this.readLook((0, LQ.f)(WQ), (0, LQ.f)(XQ), wQ, (0, LQ.f)(qQ), (0, LQ.f)(TQ));
+        const sQ = this.director.update(QQ / 1e3, this.look);
+        if (this.syncShownSettings(), this.writeCentres(this.director.getLoadingPositions()), this.hidden() || this.screen().show(this.director.getScreenFade(), this.director.getSettings()), !sQ) return jQ.yb.None;
+        const [FQ, PQ, gQ] = sQ.position;
+        if (0 === this.options.api.queries.directorPose(FQ, PQ, gQ, (0, RQ.w)(sQ.heading), (0, RQ.j)(sQ.pitch), (0, AQ.j)(sQ.fov))) return jQ.yb.None;
+        if ("default" === this.director.getSettings().mode) return jQ.yb.Pose;
         switch (this.facing) {
           case "camera":
-            return yp.cb.FaceCamera;
+            return jQ.yb.FaceCamera;
           case "cursor":
-            return yp.cb.FaceCursor;
+            return jQ.yb.FaceCursor;
           default:
-            return yp.cb.FaceMovement
+            return jQ.yb.FaceMovement
         }
       }
-      afterFrame(pp) {
-        pp ? (this.calledThisFrame || (this.holding = !1, this.engaged && this.idle()), this.calledThisFrame = !1) : this.centresLen > 0 && this.hidden() && this.now() - this.lastCallMs > 1e3 && this.setCentres(0), this.centresUnsent && this.sendCentres()
+      afterFrame(QQ) {
+        QQ ? (this.calledThisFrame || (this.holding = !1, this.engaged && this.idle()), this.calledThisFrame = !1) : this.centresLen > 0 && this.hidden() && this.now() - this.lastCallMs > 1e3 && this.setCentres(0), this.centresUnsent && this.sendCentres()
       }
       reset() {
-        this.latest = Fp, this.idle()
+        this.latest = eQ, this.idle()
       }
       restart() {
-        const pp = this.holding;
-        this.idle(), this.holding = pp
+        const QQ = this.holding;
+        this.idle(), this.holding = QQ
       }
       idle() {
-        var pp, ip;
-        this.engaged && this.screen().clear(), this.engaged = !1, this.holding = !1, this.director = new Bp.c(this.WP), this.pending = this.latest, this.shownSettings = null, this.facing = "movement", this.mouseTurns = "view", this.answeredPose = !1, null === (pp = (ip = this.options).showFacing) || void 0 === pp || pp.call(ip, null), this.setCentres(0)
+        var QQ, WQ;
+        this.engaged && this.screen().clear(), this.engaged = !1, this.holding = !1, this.director = new CQ.b(this.nJ), this.pending = this.latest, this.shownSettings = null, this.facing = "movement", this.mouseTurns = "view", this.answeredPose = !1, null === (QQ = (WQ = this.options).showFacing) || void 0 === QQ || QQ.call(WQ, null), this.setCentres(0)
       }
       syncShownSettings() {
-        const pp = this.director.getSettings();
-        if (pp === this.shownSettings) return;
-        this.shownSettings = pp;
-        const ip = (0, Jp.g)(pp);
-        this.facing = ip.facing, this.mouseTurns = ip.mouseTurns
+        const QQ = this.director.getSettings();
+        if (QQ === this.shownSettings) return;
+        this.shownSettings = QQ;
+        const WQ = (0, EQ.f)(QQ);
+        this.facing = WQ.facing, this.mouseTurns = WQ.mouseTurns
       }
-      readLook(pp, ip, cp, Op, op) {
-        const Ip = this.look,
-          Sp = 0 !== (cp & yp.ib.LookPointed);
-        if (null === this.mouseTurns && !Sp) return Ip.QE = 0, Ip.TE = 0, void(Ip.pointedAt = void 0);
-        let xp;
-        Sp && (this.pointedAt.heading = Op, this.pointedAt.pitch = op, xp = this.pointedAt);
+      readLook(QQ, WQ, XQ, wQ, qQ) {
+        const TQ = this.look,
+          zQ = 0 !== (XQ & jQ.Hb.LookPointed);
+        if (null === this.mouseTurns && !zQ) return TQ.jR = 0, TQ.yR = 0, void(TQ.pointedAt = void 0);
+        let sQ;
+        zQ && (this.pointedAt.heading = wQ, this.pointedAt.pitch = qQ, sQ = this.pointedAt);
         const {
-          WP: Lp
+          nJ: FQ
         } = this;
-        Lp.setViewHeading((0, Jp.d)(Lp.getViewHeading(), pp, ip, xp, "look" === this.mouseTurns, Ip))
+        FQ.setViewHeading((0, EQ.c)(FQ.getViewHeading(), QQ, WQ, sQ, "look" === this.mouseTurns, TQ))
       }
-      writeCentres(pp) {
-        const ip = this.next,
-          cp = Math.min(pp.length, yp.Dd);
-        for (let Op = 0; Op < cp; Op++)
-          for (let cp = 0; cp < 3; cp++) ip[3 * Op + cp] = Math.floor(pp[Op][cp] / yp.v);
-        this.setCentres(cp)
+      writeCentres(QQ) {
+        const WQ = this.next,
+          XQ = Math.min(QQ.length, jQ.ie);
+        for (let wQ = 0; wQ < XQ; wQ++)
+          for (let XQ = 0; XQ < 3; XQ++) WQ[3 * wQ + XQ] = Math.floor(QQ[wQ][XQ] / jQ.H);
+        this.setCentres(XQ)
       }
-      setCentres(pp) {
+      setCentres(QQ) {
         const {
-          rc: ip,
-          next: cp
+          nB: WQ,
+          next: XQ
         } = this;
-        let Op = pp === this.centresLen;
-        for (let op = 0; Op && op < 3 * pp; op++) Op = ip[op] === cp[op];
-        Op || (ip.fill(0), ip.set(cp.subarray(0, 3 * pp)), this.centresLen = pp, this.centresUnsent = !0, this.sendCentres())
+        let wQ = QQ === this.centresLen;
+        for (let qQ = 0; wQ && qQ < 3 * QQ; qQ++) wQ = WQ[qQ] === XQ[qQ];
+        wQ || (WQ.fill(0), WQ.set(XQ.subarray(0, 3 * QQ)), this.centresLen = QQ, this.centresUnsent = !0, this.sendCentres())
       }
       sendCentres() {
-        const pp = this.options.cmd();
-        null !== pp && (0, yp.Af)(pp, 0, this.rc, this.centresLen) && (this.centresUnsent = !1)
+        const QQ = this.options.cmd();
+        null !== QQ && (0, jQ.If)(QQ, 0, this.nB, this.centresLen) && (this.centresUnsent = !1)
       }
       screen() {
-        var pp, ip, cp;
-        return null !== (pp = null === (ip = (cp = this.options).screen) || void 0 === ip ? void 0 : ip.call(cp)) && void 0 !== pp ? pp : gp
+        var QQ, WQ, XQ;
+        return null !== (QQ = null === (WQ = (XQ = this.options).screen) || void 0 === WQ ? void 0 : WQ.call(XQ)) && void 0 !== QQ ? QQ : nQ
       }
       hidden() {
-        var pp;
-        return (null !== (pp = this.options.isPageHidden) && void 0 !== pp ? pp : Gp)()
+        var QQ;
+        return (null !== (QQ = this.options.isPageHidden) && void 0 !== QQ ? QQ : xQ)()
       }
       now() {
-        var pp, ip, cp;
-        return null !== (pp = null === (ip = (cp = this.options).now) || void 0 === ip ? void 0 : ip.call(cp)) && void 0 !== pp ? pp : performance.now()
+        var QQ, WQ, XQ;
+        return null !== (QQ = null === (WQ = (XQ = this.options).now) || void 0 === WQ ? void 0 : WQ.call(XQ)) && void 0 !== QQ ? QQ : performance.now()
       }
     }
-    var Zp = cp(40978);
-    const zp = yp.v * yp.v * yp.v,
-      sp = Math.log2(yp.v),
-      Kp = yp.v - 1,
-      Vp = yp.E.BYTES / 4,
-      ii = new Uint16Array(zp);
+    var NQ = XQ(40994);
+    const ZQ = jQ.H * jQ.H * jQ.H,
+      OQ = Math.log2(jQ.H),
+      KQ = jQ.H - 1,
+      mQ = jQ.T.BYTES / 4,
+      MQ = new Uint16Array(ZQ);
 
-    function ci(pp, ip, cp) {
-      return pp * yp.v * yp.v + ip * yp.v + cp
+    function QW(QQ, WQ, XQ) {
+      return QQ * jQ.H * jQ.H + WQ * jQ.H + XQ
     }
-    class Oi {
-      constructor(pp) {
-        this.chunk = pp
+    class WW {
+      constructor(QQ) {
+        this.chunk = QQ
       }
       get data() {
         return this.chunk.gameVoxels()
       }
-      index(pp, ip, cp) {
-        return ci(pp, ip, cp)
+      index(QQ, WQ, XQ) {
+        return QW(QQ, WQ, XQ)
       }
     }
-    class oi {
+    class XW {
       constructor() {
         this.ids = new Map, this.cleared = new Set, this.layers = 0, this.patched = null, this.from = null
       }
     }
-    class Ii {
-      constructor(pp, ip, cp, Op) {
-        this.table = pp, this.slot = ip, this.generation = cp, this.epoch = Op, this.hP = new Oi(this), this.writes = null, this.writeCount = 0, this.shownVersion = 0, this.shownCore = -1, this.shownWrites = -1, this.data = ii, this.dataPtr = 0, this.dataBuffer = null, this.dataStamp = -1, this.version = 0, this.layers = null, this.layersVersion = -1, this.layersPtr = -1, this.staleLayers = 0
+    class wW {
+      constructor(QQ, WQ, XQ, wQ) {
+        this.table = QQ, this.slot = WQ, this.generation = XQ, this.epoch = wQ, this.Gr = new WW(this), this.writes = null, this.writeCount = 0, this.shownVersion = 0, this.shownCore = -1, this.shownWrites = -1, this.data = MQ, this.dataPtr = 0, this.dataBuffer = null, this.dataStamp = -1, this.version = 0, this.layers = null, this.layersVersion = -1, this.layersPtr = -1, this.staleLayers = 0
       }
-      get YU() {
+      get Sj() {
         return this.voxelData(), this.version === this.shownCore && this.writeCount === this.shownWrites || (this.shownCore = this.version, this.shownWrites = this.writeCount, this.shownVersion = this.table.nextVersion()), this.shownVersion
       }
-      get TW() {
-        const pp = this.gameVoxels(),
-          ip = this.layers ??= new Uint16Array(yp.v);
+      get UI() {
+        const QQ = this.gameVoxels(),
+          WQ = this.layers ??= new Uint16Array(jQ.H);
         this.layersVersion === this.version && this.layersPtr === this.dataPtr || (this.layersVersion = this.version, this.layersPtr = this.dataPtr, this.staleLayers = -1);
-        for (let cp = 0; 0 !== this.staleLayers; cp++) {
-          const Op = 1 << cp;
-          0 !== (this.staleLayers & Op) && (this.staleLayers &= ~Op, ip[cp] = Si(pp, cp))
+        for (let XQ = 0; 0 !== this.staleLayers; XQ++) {
+          const wQ = 1 << XQ;
+          0 !== (this.staleLayers & wQ) && (this.staleLayers &= ~wQ, WQ[XQ] = qW(QQ, XQ))
         }
-        return ip
+        return WQ
       }
       voxelData() {
         return this.dataStamp === this.table.stamp && 0 !== this.data.length ? this.data : this.reread()
       }
       gameVoxels() {
-        const pp = this.voxelData(),
-          ip = this.writes;
-        if (null === ip || 0 === ip.ids.size) return pp;
-        if (ip.from !== pp) {
-          const cp = ip.patched ??= new Uint16Array(zp);
-          cp.set(pp);
-          for (const [pp, Op] of ip.ids) cp[pp] = Op;
-          ip.from = pp
+        const QQ = this.voxelData(),
+          WQ = this.writes;
+        if (null === WQ || 0 === WQ.ids.size) return QQ;
+        if (WQ.from !== QQ) {
+          const XQ = WQ.patched ??= new Uint16Array(ZQ);
+          XQ.set(QQ);
+          for (const [QQ, wQ] of WQ.ids) XQ[QQ] = wQ;
+          WQ.from = QQ
         }
-        return ip.patched
+        return WQ.patched
       }
-      written(pp) {
-        var ip;
-        return null === (ip = this.writes) || void 0 === ip ? void 0 : ip.ids.get(pp)
+      written(QQ) {
+        var WQ;
+        return null === (WQ = this.writes) || void 0 === WQ ? void 0 : WQ.ids.get(QQ)
       }
       hasWrites() {
         return null !== this.writes && 0 !== this.writes.ids.size
       }
-      write(pp, ip, cp) {
-        const Op = this.writes ??= new oi;
-        Op.ids.set(pp, ip), cp && Op.cleared.add(pp), null !== Op.from && (Op.patched[pp] = ip);
-        const op = 1 << (pp >> sp & Kp);
-        Op.layers |= op, this.staleLayers |= op, this.writeCount++
+      write(QQ, WQ, XQ) {
+        const wQ = this.writes ??= new XW;
+        wQ.ids.set(QQ, WQ), XQ && wQ.cleared.add(QQ), null !== wQ.from && (wQ.patched[QQ] = WQ);
+        const qQ = 1 << (QQ >> OQ & KQ);
+        wQ.layers |= qQ, this.staleLayers |= qQ, this.writeCount++
       }
       clearWrites() {
-        const pp = this.writes;
-        null !== pp && (this.staleLayers |= pp.layers, pp.ids.clear(), pp.cleared.clear(), pp.layers = 0, pp.from = null)
+        const QQ = this.writes;
+        null !== QQ && (this.staleLayers |= QQ.layers, QQ.ids.clear(), QQ.cleared.clear(), QQ.layers = 0, QQ.from = null)
       }
-      dataCleared(pp) {
-        var ip;
-        return !0 === (null === (ip = this.writes) || void 0 === ip ? void 0 : ip.cleared.has(pp))
+      dataCleared(QQ) {
+        var WQ;
+        return !0 === (null === (WQ = this.writes) || void 0 === WQ ? void 0 : WQ.cleared.has(QQ))
       }
       reread() {
         this.dataStamp = this.table.stamp;
-        const pp = this.table.slotWords(),
-          ip = this.slot * Vp;
-        if (this.epoch !== this.table.epoch || ip + Vp > pp.length || 0 === pp[ip + 3] || pp[ip + 2] !== this.generation) return this.data = ii, this.dataPtr = 0, ii;
-        this.version = pp[ip + 1];
-        const cp = pp[ip + 0],
-          Op = pp.buffer;
-        return cp === this.dataPtr && Op === this.dataBuffer || (this.dataPtr = cp, this.dataBuffer = Op, this.data = this.table.voxelsAt(Op, cp)), this.data
+        const QQ = this.table.slotWords(),
+          WQ = this.slot * mQ;
+        if (this.epoch !== this.table.epoch || WQ + mQ > QQ.length || 0 === QQ[WQ + 3] || QQ[WQ + 2] !== this.generation) return this.data = MQ, this.dataPtr = 0, MQ;
+        this.version = QQ[WQ + 1];
+        const XQ = QQ[WQ + 0],
+          wQ = QQ.buffer;
+        return XQ === this.dataPtr && wQ === this.dataBuffer || (this.dataPtr = XQ, this.dataBuffer = wQ, this.data = this.table.voxelsAt(wQ, XQ)), this.data
       }
     }
 
-    function Si(pp, ip) {
-      const cp = pp[ip * yp.v];
-      for (let Op = 0; Op < yp.v; Op++) {
-        const op = ci(Op, ip, 0);
-        for (let ip = 0; ip < yp.v; ip++)
-          if (pp[op + ip] !== cp) return 65535
+    function qW(QQ, WQ) {
+      const XQ = QQ[WQ * jQ.H];
+      for (let wQ = 0; wQ < jQ.H; wQ++) {
+        const qQ = QW(wQ, WQ, 0);
+        for (let WQ = 0; WQ < jQ.H; WQ++)
+          if (QQ[qQ + WQ] !== XQ) return 65535
       }
-      return cp
+      return XQ
     }
-    const xi = new Uint32Array(0);
+    const TW = new Uint32Array(0);
 
-    function Li(pp, ip, cp) {
-      return ci(pp & Kp, ip & Kp, cp & Kp)
+    function zW(QQ, WQ, XQ) {
+      return QW(QQ & KQ, WQ & KQ, XQ & KQ)
     }
-    class Yi {
-      constructor(pp, ip) {
-        this.memory = pp, this.apiView = ip, this.chunks = new Map, this.written = [], this.lastKey = -1, this.lastChunk = void 0, this.slotsPtr = 0, this.slotsLen = 0, this.slotsBuffer = null, this.slots = xi, this.walkPtr = 0, this.walkLen = 0, this.walkBuffer = null, this.walk = xi, this.epoch = 0, this.stamp = 0, this.versions = 0, this.corruption = null
+    class sW {
+      constructor(QQ, WQ) {
+        this.memory = QQ, this.apiView = WQ, this.chunks = new Map, this.written = [], this.lastKey = -1, this.lastChunk = void 0, this.slotsPtr = 0, this.slotsLen = 0, this.slotsBuffer = null, this.slots = TW, this.walkPtr = 0, this.walkLen = 0, this.walkBuffer = null, this.walk = TW, this.epoch = 0, this.stamp = 0, this.versions = 0, this.corruption = null
       }
-      apply(pp, ip, cp, Op, op, Ip) {
-        if (this.lastKey = -1, this.lastChunk = void 0, this.stamp++, Ip === yp.F.ResetAll) return this.chunks.clear(), void this.epoch++;
-        if (Ip !== yp.F.Stored && Ip !== yp.F.Unloaded) throw new Wp.b(`ChunkSlot flags ${Ip}`);
-        const Sp = (0, Zp.e)(pp, ip, cp);
-        if (Sp < 0) return;
-        if (Ip === yp.F.Unloaded) return void this.chunks.delete(Sp);
-        const xp = this.chunks.get(Sp);
-        (null === xp || void 0 === xp ? void 0 : xp.slot) === Op && xp.generation === op || this.chunks.set(Sp, new Ii(this, Op, op, this.epoch))
+      apply(QQ, WQ, XQ, wQ, qQ, TQ) {
+        if (this.lastKey = -1, this.lastChunk = void 0, this.stamp++, TQ === jQ.X.ResetAll) return this.chunks.clear(), void this.epoch++;
+        if (TQ !== jQ.X.Stored && TQ !== jQ.X.Unloaded) throw new IQ.d(`ChunkSlot flags ${TQ}`);
+        const zQ = (0, NQ.e)(QQ, WQ, XQ);
+        if (zQ < 0) return;
+        if (TQ === jQ.X.Unloaded) return void this.chunks.delete(zQ);
+        const sQ = this.chunks.get(zQ);
+        (null === sQ || void 0 === sQ ? void 0 : sQ.slot) === wQ && sQ.generation === qQ || this.chunks.set(zQ, new wW(this, wQ, qQ, this.epoch))
       }
       touch() {
         this.stamp++, this.clearOverlay(), this.viewWalkThrough()
       }
       refresh() {
         if (this.stamp++, this.corruption) throw this.corruption;
-        const pp = this.apiView(),
-          ip = yp.q.chunkSlotsPtr(pp, 0),
-          cp = yp.q.chunkSlotsLen(pp, 0);
-        ip === this.slotsPtr && cp === this.slotsLen || (this.slotsPtr = ip, this.slotsLen = cp, this.slotsBuffer = null, this.slotWords()), this.viewWalkThrough(), this.clearOverlay()
+        const QQ = this.apiView(),
+          WQ = jQ.x.chunkSlotsPtr(QQ, 0),
+          XQ = jQ.x.chunkSlotsLen(QQ, 0);
+        WQ === this.slotsPtr && XQ === this.slotsLen || (this.slotsPtr = WQ, this.slotsLen = XQ, this.slotsBuffer = null, this.slotWords()), this.viewWalkThrough(), this.clearOverlay()
       }
       viewWalkThrough() {
-        const pp = this.apiView(),
-          ip = yp.q.walkThroughPtr(pp, 0),
-          cp = yp.q.walkThroughLen(pp, 0);
-        ip === this.walkPtr && cp === this.walkLen || (this.walkPtr = ip, this.walkLen = cp, this.walkBuffer = null, this.walkWords())
+        const QQ = this.apiView(),
+          WQ = jQ.x.walkThroughPtr(QQ, 0),
+          XQ = jQ.x.walkThroughLen(QQ, 0);
+        WQ === this.walkPtr && XQ === this.walkLen || (this.walkPtr = WQ, this.walkLen = XQ, this.walkBuffer = null, this.walkWords())
       }
       clearOverlay() {
-        for (const pp of this.written) pp.clearWrites();
+        for (const QQ of this.written) QQ.clearWrites();
         this.written.length = 0
       }
       nextVersion() {
         return ++this.versions
       }
       slotWords() {
-        const pp = this.memory().buffer;
-        var ip;
-        pp !== this.slotsBuffer && (this.slotsBuffer = pp, this.slots = null !== (ip = (0, Wp.l)(Uint32Array, pp, this.slotsPtr, this.slotsLen * Vp, "the chunk directory")) && void 0 !== ip ? ip : xi);
+        const QQ = this.memory().buffer;
+        var WQ;
+        QQ !== this.slotsBuffer && (this.slotsBuffer = QQ, this.slots = null !== (WQ = (0, IQ.n)(Uint32Array, QQ, this.slotsPtr, this.slotsLen * mQ, "the chunk directory")) && void 0 !== WQ ? WQ : TW);
         return this.slots
       }
-      voxelsAt(pp, ip) {
+      voxelsAt(QQ, WQ) {
         try {
-          var cp;
-          return null !== (cp = (0, Wp.l)(Uint16Array, pp, ip, zp, "a chunk's voxels")) && void 0 !== cp ? cp : ii
-        } catch (Op) {
-          if (!(Op instanceof Wp.b)) throw Op;
-          return this.corruption ??= Op, ii
+          var XQ;
+          return null !== (XQ = (0, IQ.n)(Uint16Array, QQ, WQ, ZQ, "a chunk's voxels")) && void 0 !== XQ ? XQ : MQ
+        } catch (wQ) {
+          if (!(wQ instanceof IQ.d)) throw wQ;
+          return this.corruption ??= wQ, MQ
         }
       }
-      chunk(pp, ip, cp) {
-        var Op;
-        return null !== (Op = this.chunks.get((0, Zp.e)(pp, ip, cp))) && void 0 !== Op ? Op : null
+      chunk(QQ, WQ, XQ) {
+        var wQ;
+        return null !== (wQ = this.chunks.get((0, NQ.e)(QQ, WQ, XQ))) && void 0 !== wQ ? wQ : null
       }
-      isLoaded(pp, ip, cp) {
-        return void 0 !== this.chunkAt(Math.floor(pp), Math.floor(ip), Math.floor(cp))
+      isLoaded(QQ, WQ, XQ) {
+        return void 0 !== this.chunkAt(Math.floor(QQ), Math.floor(WQ), Math.floor(XQ))
       }
-      tx(pp, ip, cp) {
-        var Op;
-        const op = Math.floor(pp),
-          Ip = Math.floor(ip),
-          Sp = Math.floor(cp),
-          xp = this.chunkAt(op, Ip, Sp);
-        if (!xp) return 0;
-        const Lp = Li(op, Ip, Sp);
-        return null !== (Op = xp.written(Lp)) && void 0 !== Op ? Op : xp.voxelData()[Lp]
+      ez(QQ, WQ, XQ) {
+        var wQ;
+        const qQ = Math.floor(QQ),
+          TQ = Math.floor(WQ),
+          zQ = Math.floor(XQ),
+          sQ = this.chunkAt(qQ, TQ, zQ);
+        if (!sQ) return 0;
+        const FQ = zW(qQ, TQ, zQ);
+        return null !== (wQ = sQ.written(FQ)) && void 0 !== wQ ? wQ : sQ.voxelData()[FQ]
       }
-      setOverlay(pp, ip, cp, Op) {
-        let op = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const Ip = this.chunkAt(pp, ip, cp);
-        return !!Ip && (Ip.hasWrites() || this.written.push(Ip), Ip.write(Li(pp, ip, cp), Op, op), !0)
+      setOverlay(QQ, WQ, XQ, wQ) {
+        let qQ = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const TQ = this.chunkAt(QQ, WQ, XQ);
+        return !!TQ && (TQ.hasWrites() || this.written.push(TQ), TQ.write(zW(QQ, WQ, XQ), wQ, qQ), !0)
       }
-      version(pp, ip, cp) {
-        var Op, op;
-        return null !== (Op = null === (op = this.chunks.get((0, Zp.e)(pp, ip, cp))) || void 0 === op ? void 0 : op.YU) && void 0 !== Op ? Op : null
+      version(QQ, WQ, XQ) {
+        var wQ, qQ;
+        return null !== (wQ = null === (qQ = this.chunks.get((0, NQ.e)(QQ, WQ, XQ))) || void 0 === qQ ? void 0 : qQ.Sj) && void 0 !== wQ ? wQ : null
       }
-      scan(pp, ip, cp, Op, op, Ip, Sp, xp) {
-        const Lp = yp.v;
-        let Yp = 0;
-        for (let Dp = Math.floor(ip / Lp); Dp * Lp < op; Dp++) {
-          const Ap = Dp * Lp,
-            Pp = Math.min(op - Ap, Lp);
-          for (let op = Math.floor(pp / Lp); op * Lp < Op; op++) {
-            const Wp = op * Lp,
-              yp = Math.min(Op - Wp, Lp);
-            for (let Op = Math.floor(cp / Lp); Op * Lp < Ip; Op++) {
-              const Up = this.chunks.get((0, Zp.e)(op, Dp, Op));
-              if (!Up) continue;
-              const wp = Op * Lp,
-                vp = Math.max(cp - wp, 0),
-                tp = Math.min(Ip - wp, Lp),
-                Hp = Up.TW,
-                dp = Up.gameVoxels();
-              for (let cp = Math.max(ip - Ap, 0); cp < Pp; cp++) {
-                const ip = Hp[cp];
-                if (65535 === ip || 0 !== Sp[ip]) {
-                  Yp++;
-                  for (let ip = Math.max(pp - Wp, 0); ip < yp; ip++) {
-                    const pp = ci(ip, cp, 0);
-                    for (let Op = vp; Op < tp; Op++) {
-                      const op = dp[pp + Op];
-                      0 !== Sp[op] && xp.push(Wp + ip, Ap + cp, wp + Op, op)
+      scan(QQ, WQ, XQ, wQ, qQ, TQ, zQ, sQ) {
+        const FQ = jQ.H;
+        let PQ = 0;
+        for (let gQ = Math.floor(WQ / FQ); gQ * FQ < qQ; gQ++) {
+          const JQ = gQ * FQ,
+            rQ = Math.min(qQ - JQ, FQ);
+          for (let qQ = Math.floor(QQ / FQ); qQ * FQ < wQ; qQ++) {
+            const IQ = qQ * FQ,
+              jQ = Math.min(wQ - IQ, FQ);
+            for (let wQ = Math.floor(XQ / FQ); wQ * FQ < TQ; wQ++) {
+              const BQ = this.chunks.get((0, NQ.e)(qQ, gQ, wQ));
+              if (!BQ) continue;
+              const yQ = wQ * FQ,
+                VQ = Math.max(XQ - yQ, 0),
+                DQ = Math.min(TQ - yQ, FQ),
+                pQ = BQ.UI,
+                GQ = BQ.gameVoxels();
+              for (let XQ = Math.max(WQ - JQ, 0); XQ < rQ; XQ++) {
+                const WQ = pQ[XQ];
+                if (65535 === WQ || 0 !== zQ[WQ]) {
+                  PQ++;
+                  for (let WQ = Math.max(QQ - IQ, 0); WQ < jQ; WQ++) {
+                    const QQ = QW(WQ, XQ, 0);
+                    for (let wQ = VQ; wQ < DQ; wQ++) {
+                      const qQ = GQ[QQ + wQ];
+                      0 !== zQ[qQ] && sQ.push(IQ + WQ, JQ + XQ, yQ + wQ, qQ)
                     }
                   }
                 }
@@ -1055,42 +1070,42 @@ export const modules = {
             }
           }
         }
-        return Yp
+        return PQ
       }
-      dataCleared(pp, ip, cp) {
-        var Op;
-        const op = Math.floor(pp),
-          Ip = Math.floor(ip),
-          Sp = Math.floor(cp);
-        return !0 === (null === (Op = this.chunkAt(op, Ip, Sp)) || void 0 === Op ? void 0 : Op.dataCleared(Li(op, Ip, Sp)))
+      dataCleared(QQ, WQ, XQ) {
+        var wQ;
+        const qQ = Math.floor(QQ),
+          TQ = Math.floor(WQ),
+          zQ = Math.floor(XQ);
+        return !0 === (null === (wQ = this.chunkAt(qQ, TQ, zQ)) || void 0 === wQ ? void 0 : wQ.dataCleared(zW(qQ, TQ, zQ)))
       }
-      isWalkThrough(pp) {
-        if (!Number.isInteger(pp) || pp < 0 || pp > 65535) return !1;
-        const ip = this.walkWords(),
-          cp = pp >>> 5;
-        return cp < ip.length && 1 === (ip[cp] >>> (31 & pp) & 1)
+      isWalkThrough(QQ) {
+        if (!Number.isInteger(QQ) || QQ < 0 || QQ > 65535) return !1;
+        const WQ = this.walkWords(),
+          XQ = QQ >>> 5;
+        return XQ < WQ.length && 1 === (WQ[XQ] >>> (31 & QQ) & 1)
       }
       walkWords() {
-        const pp = this.memory().buffer;
-        var ip;
-        pp !== this.walkBuffer && (this.walkBuffer = pp, this.walk = null !== (ip = (0, Wp.l)(Uint32Array, pp, this.walkPtr, this.walkLen, "the walk-through bits")) && void 0 !== ip ? ip : xi);
+        const QQ = this.memory().buffer;
+        var WQ;
+        QQ !== this.walkBuffer && (this.walkBuffer = QQ, this.walk = null !== (WQ = (0, IQ.n)(Uint32Array, QQ, this.walkPtr, this.walkLen, "the walk-through bits")) && void 0 !== WQ ? WQ : TW);
         return this.walk
       }
-      chunkAt(pp, ip, cp) {
-        if ((0 | pp) !== pp || (0 | ip) !== ip || (0 | cp) !== cp) return;
-        const Op = (0, Zp.e)(pp >> sp, ip >> sp, cp >> sp);
-        return Op !== this.lastKey && (this.lastKey = Op, this.lastChunk = this.chunks.get(Op)), this.lastChunk
+      chunkAt(QQ, WQ, XQ) {
+        if ((0 | QQ) !== QQ || (0 | WQ) !== WQ || (0 | XQ) !== XQ) return;
+        const wQ = (0, NQ.e)(QQ >> OQ, WQ >> OQ, XQ >> OQ);
+        return wQ !== this.lastKey && (this.lastKey = wQ, this.lastChunk = this.chunks.get(wQ)), this.lastChunk
       }
     }
-    var Di = cp(38726),
-      Ai = cp(38033),
-      Pi = cp(36994),
-      Wi = cp(36819),
-      yi = cp(34386),
-      Ui = cp(39295),
-      wi = cp(195);
-    const vi = ["ambient", "cars", "crowd", "customGame_horror", "dig", "fire", "fishing", "gameStart", "gunMisc", "gunPistol", "gunRifle", "gunSemiAutomatic", "gunShotgun", "gunSubmachineGun", "mobBear", "mobCat", "mobCow", "mobCrone", "mobDeer", "mobDog", "mobFennec", "mobGolem", "mobGorilla", "mobHorse", "mobKnight", "mobPig", "mobReaver", "mobSheep", "mobSkeleton", "mobStag", "mobStalker", "mobWarper", "mobWraith", "mobZombie", "note", "phoneAndMoney", "police", "randomBeep", "randomCannon", "randomCash", "randomExp", "randomFallsmall", "randomFire", "randomFirecracker", "randomItems", "randomLaugh", "randomMagic", "randomSplash", "rpg", "step", "survivalFactory", "town"],
-      ti = [
+    var FW = XQ(38792),
+      PW = XQ(38084),
+      gW = XQ(37091),
+      JW = XQ(36920),
+      rW = XQ(34469),
+      IW = XQ(39391),
+      jW = XQ(231);
+    const BW = ["ambient", "cars", "crowd", "customGame_horror", "dig", "fire", "fishing", "gameStart", "gunMisc", "gunPistol", "gunRifle", "gunSemiAutomatic", "gunShotgun", "gunSubmachineGun", "mobBear", "mobCat", "mobCow", "mobCrone", "mobDeer", "mobDog", "mobFennec", "mobGolem", "mobGorilla", "mobHorse", "mobKnight", "mobPig", "mobReaver", "mobSheep", "mobSkeleton", "mobStag", "mobStalker", "mobWarper", "mobWraith", "mobZombie", "note", "phoneAndMoney", "police", "randomBeep", "randomCannon", "randomCash", "randomExp", "randomFallsmall", "randomFire", "randomFirecracker", "randomItems", "randomLaugh", "randomMagic", "randomSplash", "rpg", "step", "survivalFactory", "town"],
+      yW = [
         ["ZombieGrunt1", 33],
         ["ZombieGrunt2", 33],
         ["ZombieGrunt3", 33],
@@ -1535,73 +1550,73 @@ export const modules = {
         ["zapAccent1", 3],
         ["zapAccent2", 3]
       ],
-      Hi = ti.map((pp => {
-        let [ip] = pp;
-        return ip
+      VW = yW.map((QQ => {
+        let [WQ] = QQ;
+        return WQ
       })),
-      di = Uint8Array.from(ti, (pp => {
-        let [, ip] = pp;
-        return ip
+      DW = Uint8Array.from(yW, (QQ => {
+        let [, WQ] = QQ;
+        return WQ
       })),
-      ei = {
+      pW = {
         semi_automatic: 11,
         submachine: 13,
         rifle: 10,
         pistol: 9,
         shotgun: 12
       },
-      ui = 8;
-    var ji = cp(36950),
-      ki = cp(36974),
-      mi = cp(36965),
-      Ri = cp(249);
-    class qi {
-      constructor(pp, ip) {
-        let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Ri.b;
-        this.sheet = pp, this.onError = ip, this.idle = cp, this.queue = [], this.asked = new Set, this.cancelIdle = null, this.gen = 0, this.onIdle = pp => {
+      GW = 8;
+    var UW = XQ(37052),
+      bW = XQ(37074),
+      vW = XQ(37067),
+      dW = XQ(291);
+    class HW {
+      constructor(QQ, WQ) {
+        let XQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : dW.e;
+        this.sheet = QQ, this.onError = WQ, this.idle = XQ, this.queue = [], this.asked = new Set, this.cancelIdle = null, this.gen = 0, this.onIdle = QQ => {
           this.cancelIdle = null;
           try {
-            if (pp.timeRemaining() >= 1) {
-              let pp = this.queue.shift();
-              for (; void 0 !== pp && !this.load(pp);) pp = this.queue.shift()
+            if (QQ.timeRemaining() >= 1) {
+              let QQ = this.queue.shift();
+              for (; void 0 !== QQ && !this.load(QQ);) QQ = this.queue.shift()
             }
-          } catch (ip) {
-            this.onError(ip)
+          } catch (WQ) {
+            this.onError(WQ)
           } finally {
             this.schedule()
           }
         }
       }
-      preload(pp) {
-        const ip = [...pp].sort(((pp, ip) => pp - ip));
-        for (const cp of ip) this.asked.has(cp) || (this.asked.add(cp), this.queue.push(cp));
+      preload(QQ) {
+        const WQ = [...QQ].sort(((QQ, WQ) => QQ - WQ));
+        for (const XQ of WQ) this.asked.has(XQ) || (this.asked.add(XQ), this.queue.push(XQ));
         this.schedule()
       }
       cancel() {
-        var pp;
-        this.queue.length = 0, this.asked.clear(), this.gen++, null === (pp = this.cancelIdle) || void 0 === pp || pp.call(this), this.cancelIdle = null
+        var QQ;
+        this.queue.length = 0, this.asked.clear(), this.gen++, null === (QQ = this.cancelIdle) || void 0 === QQ || QQ.call(this), this.cancelIdle = null
       }
       schedule() {
         null === this.cancelIdle && this.queue.length > 0 && (this.cancelIdle = this.idle(this.onIdle))
       }
-      load(pp) {
-        const ip = this.sheet(pp, !1),
-          cp = this.sheet(pp, !0),
-          [Op, op] = "unloaded" === ip.state() && "unloaded" !== cp.state() ? [cp, ip] : [ip, cp],
-          Ip = this.gen,
-          Sp = () => {
+      load(QQ) {
+        const WQ = this.sheet(QQ, !1),
+          XQ = this.sheet(QQ, !0),
+          [wQ, qQ] = "unloaded" === WQ.state() && "unloaded" !== XQ.state() ? [XQ, WQ] : [WQ, XQ],
+          TQ = this.gen,
+          zQ = () => {
             try {
-              Ip === this.gen && "unloaded" === op.state() && op.load()
-            } catch (pp) {
-              this.onError(pp)
+              TQ === this.gen && "unloaded" === qQ.state() && qQ.load()
+            } catch (QQ) {
+              this.onError(QQ)
             }
           },
-          xp = Op.state();
-        return "unloaded" === xp ? (Op.once("load", Sp), Op.load(), !0) : "unloaded" === op.state() && ("loading" === xp ? (Op.once("load", Sp), !1) : (op.load(), !0))
+          sQ = wQ.state();
+        return "unloaded" === sQ ? (wQ.once("load", zQ), wQ.load(), !0) : "unloaded" === qQ.state() && ("loading" === sQ ? (wQ.once("load", zQ), !1) : (qQ.load(), !0))
       }
     }
-    var Mi = cp(41091);
-    const Ci = {
+    var aW = XQ(41106);
+    const lW = {
         coneInnerAngle: 360,
         coneOuterAngle: 360,
         coneOuterGain: 0,
@@ -1610,39 +1625,39 @@ export const modules = {
         panningModel: "HRTF",
         rolloffFactor: 1
       },
-      Ei = wi.g.Vw * wi.g.playerEyeToHeightRatio,
-      Xi = [0, 0, -1, 0, 1, 0],
-      li = vi.indexOf("note");
+      hW = jW.h.xy * jW.h.playerEyeToHeightRatio,
+      iW = [0, 0, -1, 0, 1, 0],
+      cW = BW.indexOf("note");
 
-    function Qi(pp) {
-      return pp >= 0 ? Math.min(1, pp) : 0
+    function AW(QQ) {
+      return QQ >= 0 ? Math.min(1, QQ) : 0
     }
 
-    function Ji(pp) {
-      var ip;
-      let cp = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
-      const Op = function(pp) {
-        let ip = 0,
-          cp = Hi.length;
-        for (; ip < cp;) {
-          const Op = ip + cp >>> 1;
-          Hi[Op] < pp ? ip = Op + 1 : cp = Op
+    function RW(QQ) {
+      var WQ;
+      let XQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
+      const wQ = function(QQ) {
+        let WQ = 0,
+          XQ = VW.length;
+        for (; WQ < XQ;) {
+          const wQ = WQ + XQ >>> 1;
+          VW[wQ] < QQ ? WQ = wQ + 1 : XQ = wQ
         }
-        return ip
-      }(pp);
-      if ("" === pp || null === (ip = Hi[Op]) || void 0 === ip || !ip.startsWith(pp)) return -1;
-      if (Hi[Op] === pp) return Op;
-      let op = Op + 1;
-      for (; op < Hi.length && Hi[op].startsWith(pp);) op++;
-      return Op + Math.floor(cp() * (op - Op))
+        return WQ
+      }(QQ);
+      if ("" === QQ || null === (WQ = VW[wQ]) || void 0 === WQ || !WQ.startsWith(QQ)) return -1;
+      if (VW[wQ] === QQ) return wQ;
+      let qQ = wQ + 1;
+      for (; qQ < VW.length && VW[qQ].startsWith(QQ);) qQ++;
+      return wQ + Math.floor(XQ() * (qQ - wQ))
     }
-    class Bi {
-      constructor(pp, ip, cp, Op, op) {
-        this.group = pp, this.loudness = ip, this.startMs = cp, this.howl = Op, this.host = op, this.id = 0, this.direct = !1
+    class EW {
+      constructor(QQ, WQ, XQ, wQ, qQ) {
+        this.group = QQ, this.loudness = WQ, this.startMs = XQ, this.howl = wQ, this.host = qQ, this.id = 0, this.direct = !1
       }
       getDurationMs() {
-        const pp = this.host.alive(this.id);
-        return pp ? 1e3 * this.howl.duration(this.id) / pp.rate : 0
+        const QQ = this.host.alive(this.id);
+        return QQ ? 1e3 * this.howl.duration(this.id) / QQ.rate : 0
       }
       isAlive() {
         return void 0 !== this.host.alive(this.id)
@@ -1654,1037 +1669,1037 @@ export const modules = {
         this.host.drop(this.id)
       }
     }
-    class Ni {
-      constructor(pp, ip) {
-        let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => performance.now(),
-          Op = arguments.length > 3 ? arguments[3] : void 0;
-        this.createHowl = pp, this.listener = ip, this.now = cp, this.errors = 0, this.sheets = new Map, this.unloading = new Uint16Array(vi.length), this.live = new Map, this.core = new Map, this.level = 1, this.master = 1, this.pose = new Float64Array(9), this.nextPose = new Float64Array(9), this.posed = !1, this.loader = void 0, this.voices = new mi.b, this.failed = new Set, this.started = new Set, this.voiceHost = {
-          alive: pp => this.aliveVoice(pp),
-          started: pp => this.started.has(pp),
-          drop: pp => {
-            var ip;
-            null === (ip = this.live.get(pp)) || void 0 === ip || ip.howl.stop(pp), this.forget(pp)
+    class CW {
+      constructor(QQ, WQ) {
+        let XQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => performance.now(),
+          wQ = arguments.length > 3 ? arguments[3] : void 0;
+        this.createHowl = QQ, this.listener = WQ, this.now = XQ, this.errors = 0, this.sheets = new Map, this.unloading = new Uint16Array(BW.length), this.live = new Map, this.core = new Map, this.level = 1, this.master = 1, this.pose = new Float64Array(9), this.nextPose = new Float64Array(9), this.posed = !1, this.loader = void 0, this.voices = new vW.b, this.failed = new Set, this.started = new Set, this.voiceHost = {
+          alive: QQ => this.aliveVoice(QQ),
+          started: QQ => this.started.has(QQ),
+          drop: QQ => {
+            var WQ;
+            null === (WQ = this.live.get(QQ)) || void 0 === WQ || WQ.howl.stop(QQ), this.forget(QQ)
           }
         }, this.handlers = {
-          playSound: (pp, ip, cp, Op, op, Ip, Sp, xp, Lp) => {
-            if (Op >= Hi.length) return;
-            const Yp = 0 !== (op & yp.Od.Loop);
-            op & yp.Od.TwoD ? this.start(Op, !1, Sp, Ip, xp, Yp) : this.startSpatial(Op, Sp, Ip, xp, Yp, pp, ip, cp, Lp, this.earDistSq(pp, ip, cp))
+          playSound: (QQ, WQ, XQ, wQ, qQ, TQ, zQ, sQ, FQ) => {
+            if (wQ >= VW.length) return;
+            const PQ = 0 !== (qQ & jQ.pe.Loop);
+            qQ & jQ.pe.TwoD ? this.start(wQ, !1, zQ, TQ, sQ, PQ) : this.startSpatial(wQ, zQ, TQ, sQ, PQ, QQ, WQ, XQ, FQ, this.earDistSq(QQ, WQ, XQ))
           },
-          soundPos: (pp, ip, cp, Op) => {
-            const op = this.core.get(Op);
-            var Ip;
-            void 0 !== op && (null === (Ip = this.live.get(op)) || void 0 === Ip || Ip.howl.pos(cp, ip, pp, op))
+          soundPos: (QQ, WQ, XQ, wQ) => {
+            const qQ = this.core.get(wQ);
+            var TQ;
+            void 0 !== qQ && (null === (TQ = this.live.get(qQ)) || void 0 === TQ || TQ.howl.pos(XQ, WQ, QQ, qQ))
           },
-          soundSet: (pp, ip, cp, Op) => {
-            const op = this.core.get(pp),
-              Ip = void 0 === op ? void 0 : this.live.get(op);
-            void 0 !== op && Ip && (this.setRel(op, ip), Ip.rate = cp, Ip.howl.rate(cp, op), Ip.spatial && Ip.howl.pannerAttr({
-              refDistance: Op
-            }, op))
+          soundSet: (QQ, WQ, XQ, wQ) => {
+            const qQ = this.core.get(QQ),
+              TQ = void 0 === qQ ? void 0 : this.live.get(qQ);
+            void 0 !== qQ && TQ && (this.setRel(qQ, WQ), TQ.rate = XQ, TQ.howl.rate(XQ, qQ), TQ.spatial && TQ.howl.pannerAttr({
+              refDistance: wQ
+            }, qQ))
           },
-          soundFade: (pp, ip, cp, Op) => {
-            const op = this.core.get(pp);
-            void 0 !== op && this.fade(op, ip, cp, 0 !== (Op & yp.Ld.StopAfter))
+          soundFade: (QQ, WQ, XQ, wQ) => {
+            const qQ = this.core.get(QQ);
+            void 0 !== qQ && this.fade(qQ, WQ, XQ, 0 !== (wQ & jQ.me.StopAfter))
           },
-          soundStop: pp => {
-            const ip = this.core.get(pp);
-            var cp;
-            void 0 !== ip && (null === (cp = this.live.get(ip)) || void 0 === cp || cp.howl.stop(ip), this.forget(ip))
+          soundStop: QQ => {
+            const WQ = this.core.get(QQ);
+            var XQ;
+            void 0 !== WQ && (null === (XQ = this.live.get(WQ)) || void 0 === XQ || XQ.howl.stop(WQ), this.forget(WQ))
           },
           soundReset: () => {
             this.stopCore()
           }
-        }, this.loader = new qi(((pp, ip) => this.sheet(pp, ip)), (pp => {
-          this.errors++, console.error("Audio preload failed", pp)
-        }), Op)
+        }, this.loader = new HW(((QQ, WQ) => this.sheet(QQ, WQ)), (QQ => {
+          this.errors++, console.error("Audio preload failed", QQ)
+        }), wQ)
       }
       prepare() {
-        for (let pp = 0; pp < vi.length; pp++) this.prepareSheet(pp)
+        for (let QQ = 0; QQ < BW.length; QQ++) this.prepareSheet(QQ)
       }
-      prepareSheet(pp) {
-        this.sheet(pp, !1), this.sheet(pp, !0)
+      prepareSheet(QQ) {
+        this.sheet(QQ, !1), this.sheet(QQ, !0)
       }
-      preload(pp) {
-        this.loader.preload(pp)
+      preload(QQ) {
+        this.loader.preload(QQ)
       }
       cancelPreload() {
         this.loader.cancel()
       }
       freeSheetsAfterGame() {
-        for (let pp = 0; pp < vi.length; pp++) {
-          if (ki.b.has(vi[pp])) continue;
-          const ip = [];
-          for (const Op of [!1, !0]) {
-            const cp = Ti(pp, Op),
-              op = this.sheets.get(cp);
-            void 0 !== op && "loading" !== op.state() && ip.push({
-              key: cp,
-              howl: op
+        for (let QQ = 0; QQ < BW.length; QQ++) {
+          if (bW.b.has(BW[QQ])) continue;
+          const WQ = [];
+          for (const wQ of [!1, !0]) {
+            const XQ = uW(QQ, wQ),
+              qQ = this.sheets.get(XQ);
+            void 0 !== qQ && "loading" !== qQ.state() && WQ.push({
+              key: XQ,
+              howl: qQ
             })
           }
-          if (!ip.some((pp => {
+          if (!WQ.some((QQ => {
               let {
-                howl: ip
-              } = pp;
-              return "loaded" === ip.state()
+                howl: WQ
+              } = QQ;
+              return "loaded" === WQ.state()
             }))) continue;
-          this.unloading[pp] += ip.length;
-          const cp = () => {
-            this.unloading[pp]--, 0 === this.unloading[pp] && this.prepareSheet(pp)
+          this.unloading[QQ] += WQ.length;
+          const XQ = () => {
+            this.unloading[QQ]--, 0 === this.unloading[QQ] && this.prepareSheet(QQ)
           };
           for (const {
-              key: pp,
-              howl: Op
+              key: QQ,
+              howl: wQ
             }
-            of ip) this.sheets.delete(pp), "loaded" === Op.state() ? (0, ji.d)(Op, cp) : (Op.unload(), cp())
+            of WQ) this.sheets.delete(QQ), "loaded" === wQ.state() ? (0, UW.e)(wQ, XQ) : (wQ.unload(), XQ())
         }
       }
-      onAudioEvent(pp, ip, cp, Op) {
-        if (pp < yp.l.PlaySound || pp > yp.l.SoundReset) return !1;
+      onAudioEvent(QQ, WQ, XQ, wQ) {
+        if (QQ < jQ.u.PlaySound || QQ > jQ.u.SoundReset) return !1;
         try {
-          return (0, yp.$d)(pp, ip, cp, Op, this.handlers)
-        } catch (op) {
-          return this.errors++, console.error("Audio event failed", op), !0
+          return (0, jQ.we)(QQ, WQ, XQ, wQ, this.handlers)
+        } catch (qQ) {
+          return this.errors++, console.error("Audio event failed", qQ), !0
         }
       }
-      applyListener(pp) {
-        const ip = this.nextPose;
-        for (let Op = 0; Op < 3; Op++) ip[2 - Op] = yp.r.listener(pp, 0, Op), ip[5 - Op] = yp.r.forward(pp, 0, Op), ip[8 - Op] = yp.r.up(pp, 0, Op);
-        0 === ip[3] && 0 === ip[4] && 0 === ip[5] && ip.set(this.posed ? this.pose.subarray(3) : Xi, 3);
-        for (let Op = 0; Op < 9; Op++)
-          if (!Number.isFinite(ip[Op])) return;
-        const cp = this.pose;
+      applyListener(QQ) {
+        const WQ = this.nextPose;
+        for (let wQ = 0; wQ < 3; wQ++) WQ[2 - wQ] = jQ.A.listener(QQ, 0, wQ), WQ[5 - wQ] = jQ.A.forward(QQ, 0, wQ), WQ[8 - wQ] = jQ.A.up(QQ, 0, wQ);
+        0 === WQ[3] && 0 === WQ[4] && 0 === WQ[5] && WQ.set(this.posed ? this.pose.subarray(3) : iW, 3);
+        for (let wQ = 0; wQ < 9; wQ++)
+          if (!Number.isFinite(WQ[wQ])) return;
+        const XQ = this.pose;
         if (this.posed) {
-          let pp = !0;
-          for (let Op = 0; Op < 9 && pp; Op++) pp = ip[Op] === cp[Op];
-          if (pp) return
+          let QQ = !0;
+          for (let wQ = 0; wQ < 9 && QQ; wQ++) QQ = WQ[wQ] === XQ[wQ];
+          if (QQ) return
         }
-        this.listener.apply(ip) && (cp.set(ip), this.posed = !0)
+        this.listener.apply(WQ) && (XQ.set(WQ), this.posed = !0)
       }
-      playGame(pp, ip, cp, Op, op, Ip, Sp) {
-        const xp = Ji(pp);
-        if (xp < 0) return Mi.c;
-        if (!cp) {
+      playGame(QQ, WQ, XQ, wQ, qQ, TQ, zQ) {
+        const sQ = RW(QQ);
+        if (sQ < 0) return aW.e;
+        if (!XQ) {
           const {
-            howl: pp,
-            id: cp
-          } = this.start(xp, !1, ip, 0, 1, Sp);
-          return this.gameSound(pp, cp, !1)
+            howl: QQ,
+            id: XQ
+          } = this.start(sQ, !1, WQ, 0, 1, zQ);
+          return this.gameSound(QQ, XQ, !1)
         }
-        const Lp = cp[0],
-          Yp = cp[1] + Ei,
-          Dp = cp[2];
-        if (!Number.isFinite(Lp) || !Number.isFinite(Yp) || !Number.isFinite(Dp)) return Mi.c;
-        let Ap;
-        if (Op) {
-          const pp = Lp - Op[0],
-            ip = Yp - Op[1],
-            cp = Dp - Op[2];
-          if (Ap = pp * pp + ip * ip + cp * cp, Ap > op * op) return Mi.c
-        } else Ap = this.earDistSq(Lp, Yp, Dp);
-        const Pp = this.startSpatial(xp, ip, 0, 1, Sp, Lp, Yp, Dp, Ip, Ap);
-        return Pp ? this.gameSound(Pp.howl, Pp.id, !0) : Mi.c
+        const FQ = XQ[0],
+          PQ = XQ[1] + hW,
+          gQ = XQ[2];
+        if (!Number.isFinite(FQ) || !Number.isFinite(PQ) || !Number.isFinite(gQ)) return aW.e;
+        let JQ;
+        if (wQ) {
+          const QQ = FQ - wQ[0],
+            WQ = PQ - wQ[1],
+            XQ = gQ - wQ[2];
+          if (JQ = QQ * QQ + WQ * WQ + XQ * XQ, JQ > qQ * qQ) return aW.e
+        } else JQ = this.earDistSq(FQ, PQ, gQ);
+        const rQ = this.startSpatial(sQ, WQ, 0, 1, zQ, FQ, PQ, gQ, TQ, JQ);
+        return rQ ? this.gameSound(rQ.howl, rQ.id, !0) : aW.e
       }
-      setMaster(pp, ip) {
-        this.level = Qi(pp);
-        const cp = ip ? this.level : 0;
-        if (cp !== this.master) {
-          this.master = cp;
-          for (const [pp, ip] of this.live) ip.fadeMs = 0, ip.gain = ip.rel * this.master, ip.howl.volume(ip.gain, pp)
+      setMaster(QQ, WQ) {
+        this.level = AW(QQ);
+        const XQ = WQ ? this.level : 0;
+        if (XQ !== this.master) {
+          this.master = XQ;
+          for (const [QQ, WQ] of this.live) WQ.fadeMs = 0, WQ.gain = WQ.rel * this.master, WQ.howl.volume(WQ.gain, QQ)
         }
       }
       stopCore() {
-        for (const ip of [...this.core.values()]) {
-          var pp;
-          null === (pp = this.live.get(ip)) || void 0 === pp || pp.howl.stop(ip)
+        for (const WQ of [...this.core.values()]) {
+          var QQ;
+          null === (QQ = this.live.get(WQ)) || void 0 === QQ || QQ.howl.stop(WQ)
         }
         this.core.clear()
       }
       stopAll() {
         this.cancelPreload();
-        for (const [pp, ip] of [...this.live]) ip.howl.stop(pp), this.forget(pp);
+        for (const [QQ, WQ] of [...this.live]) WQ.howl.stop(QQ), this.forget(QQ);
         this.core.clear()
       }
-      gameSound(pp, ip, cp) {
-        const Op = {
-          stop: () => (this.live.has(ip) && pp.stop(ip), Op),
-          fade: (pp, cp, op) => {
-            var Ip, Sp;
-            const xp = this.level > 0 ? cp / this.level : cp > 0 && null !== (Ip = null === (Sp = this.live.get(ip)) || void 0 === Sp ? void 0 : Sp.rel) && void 0 !== Ip ? Ip : 0;
-            return this.fade(ip, xp, op, !1), Op
+      gameSound(QQ, WQ, XQ) {
+        const wQ = {
+          stop: () => (this.live.has(WQ) && QQ.stop(WQ), wQ),
+          fade: (QQ, XQ, qQ) => {
+            var TQ, zQ;
+            const sQ = this.level > 0 ? XQ / this.level : XQ > 0 && null !== (TQ = null === (zQ = this.live.get(WQ)) || void 0 === zQ ? void 0 : zQ.rel) && void 0 !== TQ ? TQ : 0;
+            return this.fade(WQ, sQ, qQ, !1), wQ
           },
-          rate: cp => {
-            const op = this.live.get(ip);
-            return op && (op.rate = function(pp) {
-              return pp > 0 && pp < 1 / 0 ? pp : 1
-            }(cp), pp.rate(op.rate, ip)), Op
+          rate: XQ => {
+            const qQ = this.live.get(WQ);
+            return qQ && (qQ.rate = function(QQ) {
+              return QQ > 0 && QQ < 1 / 0 ? QQ : 1
+            }(XQ), QQ.rate(qQ.rate, WQ)), wQ
           },
           getVolume: () => {
-            var pp, cp;
-            return (null !== (pp = null === (cp = this.live.get(ip)) || void 0 === cp ? void 0 : cp.rel) && void 0 !== pp ? pp : 0) * this.level
+            var QQ, XQ;
+            return (null !== (QQ = null === (XQ = this.live.get(WQ)) || void 0 === XQ ? void 0 : XQ.rel) && void 0 !== QQ ? QQ : 0) * this.level
           },
           getRelativeVolume: () => {
-            var pp, cp;
-            return null !== (pp = null === (cp = this.live.get(ip)) || void 0 === cp ? void 0 : cp.rel) && void 0 !== pp ? pp : 0
+            var QQ, XQ;
+            return null !== (QQ = null === (XQ = this.live.get(WQ)) || void 0 === XQ ? void 0 : XQ.rel) && void 0 !== QQ ? QQ : 0
           },
-          setRelativeVolume: pp => (this.setRel(ip, pp), Op),
-          setPannerAttr: op => {
-            if (cp && this.live.has(ip)) {
-              const cp = {
-                ...Ci,
-                refDistance: Pi.k
+          setRelativeVolume: QQ => (this.setRel(WQ, QQ), wQ),
+          setPannerAttr: qQ => {
+            if (XQ && this.live.has(WQ)) {
+              const XQ = {
+                ...lW,
+                refDistance: gW.h
               };
-              for (const [pp, ip] of Object.entries(op)) "number" !== typeof ip && "string" !== typeof ip || (cp[pp] = ip);
-              pp.pannerAttr({
-                coneOuterAngle: cp.coneOuterAngle
-              }, ip), pp.pannerAttr(cp, ip)
+              for (const [QQ, WQ] of Object.entries(qQ)) "number" !== typeof WQ && "string" !== typeof WQ || (XQ[QQ] = WQ);
+              QQ.pannerAttr({
+                coneOuterAngle: XQ.coneOuterAngle
+              }, WQ), QQ.pannerAttr(XQ, WQ)
             }
-            return Op
+            return wQ
           },
-          setPosition: op => (cp && this.live.has(ip) && Number.isFinite(op[0] + op[1] + op[2]) && pp.pos(op[2], op[1], op[0], ip), Op)
+          setPosition: qQ => (XQ && this.live.has(WQ) && Number.isFinite(qQ[0] + qQ[1] + qQ[2]) && QQ.pos(qQ[2], qQ[1], qQ[0], WQ), wQ)
         };
-        return Op
+        return wQ
       }
-      startSpatial(pp, ip, cp, Op, op, Ip, Sp, xp, Lp, Yp) {
-        const Dp = this.sheet(di[pp], !0);
-        let Ap = null;
-        if (!op) {
-          if (this.failed.has(Dp)) return null;
-          const cp = di[pp] === li ? null : (0, mi.f)(Hi[pp]),
-            Op = (0, mi.c)(Qi(ip), Math.sqrt(Yp), Lp);
-          if (Ap = new Bi(cp, Op, this.now(), Dp, this.voiceHost), !this.voices.admit(Ap)) return null
+      startSpatial(QQ, WQ, XQ, wQ, qQ, TQ, zQ, sQ, FQ, PQ) {
+        const gQ = this.sheet(DW[QQ], !0);
+        let JQ = null;
+        if (!qQ) {
+          if (this.failed.has(gQ)) return null;
+          const XQ = DW[QQ] === cW ? null : (0, vW.f)(VW[QQ]),
+            wQ = (0, vW.e)(AW(WQ), Math.sqrt(PQ), FQ);
+          if (JQ = new EW(XQ, wQ, this.now(), gQ, this.voiceHost), !this.voices.admit(JQ)) return null
         }
-        const Pp = this.start(pp, !0, ip, cp, Op, op);
-        return Ap && (Ap.id = Pp.id, Ap.direct = "loaded" === Dp.state() && !Dp._playLock), Dp.pannerAttr({
+        const rQ = this.start(QQ, !0, WQ, XQ, wQ, qQ);
+        return JQ && (JQ.id = rQ.id, JQ.direct = "loaded" === gQ.state() && !gQ._playLock), gQ.pannerAttr({
           coneOuterAngle: 360
-        }, Pp.id), Dp.pannerAttr({
-          ...Ci,
-          refDistance: Lp
-        }, Pp.id), Dp.pos(xp, Sp, Ip, Pp.id), Pp
+        }, rQ.id), gQ.pannerAttr({
+          ...lW,
+          refDistance: FQ
+        }, rQ.id), gQ.pos(sQ, zQ, TQ, rQ.id), rQ
       }
-      aliveVoice(pp) {
-        const ip = this.live.get(pp);
-        if (!ip) return;
-        const cp = ip.howl._soundById(pp);
-        if (cp && !cp._ended) return ip;
-        this.forget(pp)
+      aliveVoice(QQ) {
+        const WQ = this.live.get(QQ);
+        if (!WQ) return;
+        const XQ = WQ.howl._soundById(QQ);
+        if (XQ && !XQ._ended) return WQ;
+        this.forget(QQ)
       }
-      earDistSq(pp, ip, cp) {
+      earDistSq(QQ, WQ, XQ) {
         if (!this.posed) return 0;
-        const Op = pp - this.pose[2],
-          op = ip - this.pose[1],
-          Ip = cp - this.pose[0];
-        return Op * Op + op * op + Ip * Ip
+        const wQ = QQ - this.pose[2],
+          qQ = WQ - this.pose[1],
+          TQ = XQ - this.pose[0];
+        return wQ * wQ + qQ * qQ + TQ * TQ
       }
-      start(pp, ip, cp, Op, op, Ip) {
-        const Sp = Qi(cp),
-          xp = this.sheet(di[pp], ip);
-        "unloaded" === xp.state() && xp.load();
-        const Lp = xp.play(Hi[pp]),
-          Yp = Sp * this.master;
-        return xp.volume(Yp, Lp), this.live.set(Lp, {
-          howl: xp,
-          rel: Sp,
-          gain: Yp,
-          fadeFrom: Yp,
+      start(QQ, WQ, XQ, wQ, qQ, TQ) {
+        const zQ = AW(XQ),
+          sQ = this.sheet(DW[QQ], WQ);
+        "unloaded" === sQ.state() && sQ.load();
+        const FQ = sQ.play(VW[QQ]),
+          PQ = zQ * this.master;
+        return sQ.volume(PQ, FQ), this.live.set(FQ, {
+          howl: sQ,
+          rel: zQ,
+          gain: PQ,
+          fadeFrom: PQ,
           fadeAt: 0,
           fadeMs: 0,
-          rate: op,
-          handle: Op,
-          spatial: ip,
+          rate: qQ,
+          handle: wQ,
+          spatial: WQ,
           stopTimer: void 0
-        }), 0 !== Op && this.core.set(Op, Lp), 1 !== op && xp.rate(op, Lp), Ip && xp.loop(!0, Lp), {
-          howl: xp,
-          id: Lp
+        }), 0 !== wQ && this.core.set(wQ, FQ), 1 !== qQ && sQ.rate(qQ, FQ), TQ && sQ.loop(!0, FQ), {
+          howl: sQ,
+          id: FQ
         }
       }
-      sheet(pp, ip) {
-        const cp = Ti(pp, ip);
-        let Op = this.sheets.get(cp);
-        if (!Op) {
-          const op = this.createHowl(vi[pp], ip);
-          op.on("end", (pp => {
-            op.loop(pp) || this.forget(pp)
-          })), op.on("stop", (pp => {
-            this.forget(pp)
-          })), op.on("play", (pp => {
-            this.live.has(pp) && this.started.add(pp)
-          })), op.on("loaderror", (pp => {
-            if ("loaded" !== op.state()) {
-              this.failed.add(op);
-              for (const [pp, ip] of this.live) ip.howl === op && this.forget(pp)
-            } else "number" === typeof pp && this.forget(pp)
-          })), this.sheets.set(cp, op), Op = op
+      sheet(QQ, WQ) {
+        const XQ = uW(QQ, WQ);
+        let wQ = this.sheets.get(XQ);
+        if (!wQ) {
+          const qQ = this.createHowl(BW[QQ], WQ);
+          qQ.on("end", (QQ => {
+            qQ.loop(QQ) || this.forget(QQ)
+          })), qQ.on("stop", (QQ => {
+            this.forget(QQ)
+          })), qQ.on("play", (QQ => {
+            this.live.has(QQ) && this.started.add(QQ)
+          })), qQ.on("loaderror", (QQ => {
+            if ("loaded" !== qQ.state()) {
+              this.failed.add(qQ);
+              for (const [QQ, WQ] of this.live) WQ.howl === qQ && this.forget(QQ)
+            } else "number" === typeof QQ && this.forget(QQ)
+          })), this.sheets.set(XQ, qQ), wQ = qQ
         }
-        return Op
+        return wQ
       }
-      setRel(pp, ip) {
-        const cp = this.live.get(pp);
-        cp && (fi(cp), cp.fadeMs = 0, cp.rel = Qi(ip), cp.gain = cp.rel * this.master, cp.howl.volume(cp.gain, pp))
+      setRel(QQ, WQ) {
+        const XQ = this.live.get(QQ);
+        XQ && (LW(XQ), XQ.fadeMs = 0, XQ.rel = AW(WQ), XQ.gain = XQ.rel * this.master, XQ.howl.volume(XQ.gain, QQ))
       }
-      fade(pp, ip, cp, Op) {
-        const op = this.live.get(pp);
-        if (!op) return;
-        fi(op);
+      fade(QQ, WQ, XQ, wQ) {
+        const qQ = this.live.get(QQ);
+        if (!qQ) return;
+        LW(qQ);
         const {
-          howl: Ip
-        } = op, Sp = this.gainNow(op);
-        op.rel = Qi(ip), op.gain = op.rel * this.master;
-        const xp = cp > 0 ? Math.min(cp, 65535) : 0,
-          Lp = 0 === xp || Sp === op.gain;
-        op.fadeMs = Lp ? 0 : xp, Lp ? Ip.volume(op.gain, pp) : (op.fadeFrom = Sp, op.fadeAt = this.now(), Ip.fade(Sp, op.gain, xp, pp)), Op && (Lp ? Ip.stop(pp) : op.stopTimer = setTimeout((() => {
-          op.stopTimer = void 0, Ip.stop(pp)
-        }), xp))
+          howl: TQ
+        } = qQ, zQ = this.gainNow(qQ);
+        qQ.rel = AW(WQ), qQ.gain = qQ.rel * this.master;
+        const sQ = XQ > 0 ? Math.min(XQ, 65535) : 0,
+          FQ = 0 === sQ || zQ === qQ.gain;
+        qQ.fadeMs = FQ ? 0 : sQ, FQ ? TQ.volume(qQ.gain, QQ) : (qQ.fadeFrom = zQ, qQ.fadeAt = this.now(), TQ.fade(zQ, qQ.gain, sQ, QQ)), wQ && (FQ ? TQ.stop(QQ) : qQ.stopTimer = setTimeout((() => {
+          qQ.stopTimer = void 0, TQ.stop(QQ)
+        }), sQ))
       }
-      gainNow(pp) {
-        if (pp.fadeMs > 0) {
-          const ip = (this.now() - pp.fadeAt) / pp.fadeMs;
-          if (ip < 1) return pp.fadeFrom + (pp.gain - pp.fadeFrom) * Math.max(0, ip);
-          pp.fadeMs = 0
+      gainNow(QQ) {
+        if (QQ.fadeMs > 0) {
+          const WQ = (this.now() - QQ.fadeAt) / QQ.fadeMs;
+          if (WQ < 1) return QQ.fadeFrom + (QQ.gain - QQ.fadeFrom) * Math.max(0, WQ);
+          QQ.fadeMs = 0
         }
-        return pp.gain
+        return QQ.gain
       }
-      forget(pp) {
-        this.started.delete(pp);
-        const ip = this.live.get(pp);
-        ip && (fi(ip), this.live.delete(pp), 0 !== ip.handle && this.core.get(ip.handle) === pp && this.core.delete(ip.handle))
+      forget(QQ) {
+        this.started.delete(QQ);
+        const WQ = this.live.get(QQ);
+        WQ && (LW(WQ), this.live.delete(QQ), 0 !== WQ.handle && this.core.get(WQ.handle) === QQ && this.core.delete(WQ.handle))
       }
     }
 
-    function Ti(pp, ip) {
-      return 2 * pp + (ip ? 1 : 0)
+    function uW(QQ, WQ) {
+      return 2 * QQ + (WQ ? 1 : 0)
     }
 
-    function fi(pp) {
-      void 0 !== pp.stopTimer && (clearTimeout(pp.stopTimer), pp.stopTimer = void 0)
+    function LW(QQ) {
+      void 0 !== QQ.stopTimer && (clearTimeout(QQ.stopTimer), QQ.stopTimer = void 0)
     }
-    var bi = cp(40806),
-      ai = cp(39304);
-    class ni {
-      constructor(pp, ip, cp, Op) {
-        this.key = pp, this.model = ip, this.host = Op, this.TA = void 0, this.records = void 0, this.origin = [0, 0, 0], this.count = 0, this.YIp = Number.NaN, this.sentOrigin = [Number.NaN, Number.NaN, Number.NaN], this.dirtyList = [], this.isDirty = void 0, this.tail = void 0, this.tailView = void 0, this.tailCut = new Uint8Array(0), this.made = !1, this.Ry = !1, this.TA = Math.max(1, Math.ceil(cp)), this.records = new Float32Array(this.TA * Di.e), this.isDirty = new Uint8Array(this.TA), this.tail = new Uint8Array(this.TA * yp.jc.Bytes), this.tailView = new DataView(this.tail.buffer), this.make(Op.cmd())
+    var kW = XQ(40839),
+      fW = XQ(39400);
+    class SW {
+      constructor(QQ, WQ, XQ, wQ) {
+        this.key = QQ, this.model = WQ, this.host = wQ, this.yJ = void 0, this.records = void 0, this.origin = [0, 0, 0], this.count = 0, this.nqQ = Number.NaN, this.sentOrigin = [Number.NaN, Number.NaN, Number.NaN], this.dirtyList = [], this.isDirty = void 0, this.tail = void 0, this.tailView = void 0, this.tailCut = new Uint8Array(0), this.made = !1, this.zj = !1, this.yJ = Math.max(1, Math.ceil(XQ)), this.records = new Float32Array(this.yJ * FW.b), this.isDirty = new Uint8Array(this.yJ), this.tail = new Uint8Array(this.yJ * jQ.Oc.Bytes), this.tailView = new DataView(this.tail.buffer), this.make(wQ.cmd())
       }
-      setOrigin(pp, ip, cp) {
-        this.origin[0] = pp, this.origin[1] = ip, this.origin[2] = cp
+      setOrigin(QQ, WQ, XQ) {
+        this.origin[0] = QQ, this.origin[1] = WQ, this.origin[2] = XQ
       }
-      markDirty(pp) {
-        !this.Ry && pp >= 0 && pp < this.TA && pp < yp.jc.Max && this.pU(pp, pp + 1)
+      markDirty(QQ) {
+        !this.zj && QQ >= 0 && QQ < this.yJ && QQ < jQ.Oc.Max && this.ij(QQ, QQ + 1)
       }
-      commit(pp) {
-        if (this.Ry) return;
-        (pp = Math.min(Math.max(Math.floor(pp), 0), this.TA, yp.jc.Max)) > this.count && this.pU(this.count, pp), this.count = pp;
+      commit(QQ) {
+        if (this.zj) return;
+        (QQ = Math.min(Math.max(Math.floor(QQ), 0), this.yJ, jQ.Oc.Max)) > this.count && this.ij(this.count, QQ), this.count = QQ;
         const {
-          origin: ip,
-          sentOrigin: cp,
-          dirtyList: Op
-        } = this, op = this.YIp !== pp, Ip = cp[0] !== ip[0] || cp[1] !== ip[1] || cp[2] !== ip[2];
-        if (0 === Op.length && !op && !Ip) return;
-        const Sp = this.host.cmd();
-        if (!Sp || !this.make(Sp)) return;
-        const xp = Op.length,
+          origin: WQ,
+          sentOrigin: XQ,
+          dirtyList: wQ
+        } = this, qQ = this.nqQ !== QQ, TQ = XQ[0] !== WQ[0] || XQ[1] !== WQ[1] || XQ[2] !== WQ[2];
+        if (0 === wQ.length && !qQ && !TQ) return;
+        const zQ = this.host.cmd();
+        if (!zQ || !this.make(zQ)) return;
+        const sQ = wQ.length,
           {
-            records: Lp,
-            tailView: Yp
+            records: FQ,
+            tailView: PQ
           } = this;
-        for (let Dp = 0; Dp < xp; Dp++) {
-          const pp = Op[Dp],
-            ip = pp * Di.e,
-            cp = Dp * yp.jc.Bytes,
-            op = 0 !== Lp[ip + Di.h] ? yp.jc.Hidden : 0;
-          Yp.setUint32(cp, (pp | op) >>> 0, !0), Yp.setFloat32(cp + 4, Lp[ip], !0), Yp.setFloat32(cp + 8, Lp[ip + 1], !0), Yp.setFloat32(cp + 12, Lp[ip + 2], !0)
+        for (let gQ = 0; gQ < sQ; gQ++) {
+          const QQ = wQ[gQ],
+            WQ = QQ * FW.b,
+            XQ = gQ * jQ.Oc.Bytes,
+            qQ = 0 !== FQ[WQ + FW.c] ? jQ.Oc.Hidden : 0;
+          PQ.setUint32(XQ, (QQ | qQ) >>> 0, !0), PQ.setFloat32(XQ + 4, FQ[WQ], !0), PQ.setFloat32(XQ + 8, FQ[WQ + 1], !0), PQ.setFloat32(XQ + 12, FQ[WQ + 2], !0)
         }
-        if ((0, yp.Fe)(Sp, 0, this.key, pp, ip, xp, this.tailOf(xp))) {
-          for (let pp = 0; pp < xp; pp++) this.isDirty[Op[pp]] = 0;
-          Op.length = 0, this.YIp = pp, cp[0] = ip[0], cp[1] = ip[1], cp[2] = ip[2]
+        if ((0, jQ.Te)(zQ, 0, this.key, QQ, WQ, sQ, this.tailOf(sQ))) {
+          for (let QQ = 0; QQ < sQ; QQ++) this.isDirty[wQ[QQ]] = 0;
+          wQ.length = 0, this.nqQ = QQ, XQ[0] = WQ[0], XQ[1] = WQ[1], XQ[2] = WQ[2]
         }
       }
-      grow(pp) {
-        (pp = Math.ceil(pp)) <= this.TA || this.Ry || (this.records = (0, ai.d)(this.records, new Float32Array(pp * Di.e)), this.isDirty = (0, ai.d)(this.isDirty, new Uint8Array(pp)), this.tail = new Uint8Array(pp * yp.jc.Bytes), this.tailView = new DataView(this.tail.buffer), this.TA = pp)
+      grow(QQ) {
+        (QQ = Math.ceil(QQ)) <= this.yJ || this.zj || (this.records = (0, fW.d)(this.records, new Float32Array(QQ * FW.b)), this.isDirty = (0, fW.d)(this.isDirty, new Uint8Array(QQ)), this.tail = new Uint8Array(QQ * jQ.Oc.Bytes), this.tailView = new DataView(this.tail.buffer), this.yJ = QQ)
       }
       dispose() {
-        this.Ry || (this.Ry = !0, this.host.Ry(this, this.made ? this.key : null))
+        this.zj || (this.zj = !0, this.host.zj(this, this.made ? this.key : null))
       }
-      make(pp) {
-        if (!this.made && pp) {
+      make(QQ) {
+        if (!this.made && QQ) {
           const {
-            item: ip,
-            scale: cp,
-            yaw: Op
+            item: WQ,
+            scale: XQ,
+            yaw: wQ
           } = this.model;
-          this.made = (0, yp.Ne)(pp, 0, this.key, ip, cp, Op)
+          this.made = (0, jQ.Xe)(QQ, 0, this.key, WQ, XQ, wQ)
         }
         return this.made
       }
-      tailOf(pp) {
-        const ip = pp * yp.jc.Bytes;
-        return this.tailCut.buffer === this.tail.buffer && this.tailCut.length === ip || (this.tailCut = this.tail.subarray(0, ip)), this.tailCut
+      tailOf(QQ) {
+        const WQ = QQ * jQ.Oc.Bytes;
+        return this.tailCut.buffer === this.tail.buffer && this.tailCut.length === WQ || (this.tailCut = this.tail.subarray(0, WQ)), this.tailCut
       }
-      pU(pp, ip) {
+      ij(QQ, WQ) {
         const {
-          dirtyList: cp,
-          isDirty: Op
+          dirtyList: XQ,
+          isDirty: wQ
         } = this;
-        for (let op = pp; op < ip; op++) 0 === Op[op] && (Op[op] = 1, cp.push(op))
+        for (let qQ = QQ; qQ < WQ; qQ++) 0 === wQ[qQ] && (wQ[qQ] = 1, XQ.push(qQ))
       }
     }
-    var Fi = cp(636);
-    class gi {
-      constructor(pp) {
+    var tW = XQ(658);
+    class oW {
+      constructor(QQ) {
         this.keys = 0, this.live = new Set, this.owing = new Set, this.host = void 0, this.host = {
-          cmd: pp,
-          owes: pp => {
-            this.owing.add(pp)
+          cmd: QQ,
+          owes: QQ => {
+            this.owing.add(QQ)
           },
-          settled: (pp, ip) => {
-            this.owing.delete(pp), ip && this.live.delete(pp)
+          settled: (QQ, WQ) => {
+            this.owing.delete(QQ), WQ && this.live.delete(QQ)
           }
         }
       }
-      create(pp, ip) {
-        if (cp = pp, !Fi.o.includes(cp)) return null;
-        var cp;
-        const Op = new Gi(++this.keys, Dp.i.indexOf(pp), ip, this.host);
-        return this.live.add(Op), Op
+      create(QQ, WQ) {
+        if (XQ = QQ, !tW.j.includes(XQ)) return null;
+        var XQ;
+        const wQ = new eW(++this.keys, gQ.i.indexOf(QQ), WQ, this.host);
+        return this.live.add(wQ), wQ
       }
       disposeAll() {
-        for (const pp of [...this.live]) pp.dispose()
+        for (const QQ of [...this.live]) QQ.dispose()
       }
       flush() {
         if (0 === this.owing.size) return;
-        const pp = this.host.cmd();
-        for (const ip of this.owing)
-          if (!ip.sync(pp)) return
+        const QQ = this.host.cmd();
+        for (const WQ of this.owing)
+          if (!WQ.sync(QQ)) return
       }
     }
-    class Gi {
-      constructor(pp, ip, cp, Op) {
-        this.key = pp, this.lifeform = ip, this.scale = cp, this.host = Op, this.feet = [0, 0, 0], this.yaw = 0, this.visible = !1, this.owed = 1, this.Ry = !1, this.sync()
+    class eW {
+      constructor(QQ, WQ, XQ, wQ) {
+        this.key = QQ, this.lifeform = WQ, this.scale = XQ, this.host = wQ, this.feet = [0, 0, 0], this.yaw = 0, this.visible = !1, this.owed = 1, this.zj = !1, this.sync()
       }
-      setPose(pp, ip) {
-        this.Ry || (this.feet[0] = pp[0], this.feet[1] = pp[1], this.feet[2] = pp[2], this.yaw = ip, this.owed |= 2, this.sync())
+      setPose(QQ, WQ) {
+        this.zj || (this.feet[0] = QQ[0], this.feet[1] = QQ[1], this.feet[2] = QQ[2], this.yaw = WQ, this.owed |= 2, this.sync())
       }
-      setVisible(pp) {
-        this.Ry || pp === this.visible || (this.visible = pp, this.owed |= 4, this.sync())
+      setVisible(QQ) {
+        this.zj || QQ === this.visible || (this.visible = QQ, this.owed |= 4, this.sync())
       }
       dispose() {
-        this.Ry || (this.Ry = !0, this.owed = 1 & this.owed ? 0 : 8, this.sync())
+        this.zj || (this.zj = !0, this.owed = 1 & this.owed ? 0 : 8, this.sync())
       }
       sync() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.host.cmd();
-        return this.write(pp) ? (this.host.settled(this, this.Ry), !0) : (this.host.owes(this), !1)
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.host.cmd();
+        return this.write(QQ) ? (this.host.settled(this, this.zj), !0) : (this.host.owes(this), !1)
       }
-      write(pp) {
-        if (!pp) return this.owed = 0, !0;
+      write(QQ) {
+        if (!QQ) return this.owed = 0, !0;
         if (1 & this.owed) {
-          if (!(0, yp.Ve)(pp, 0, this.key, this.lifeform, this.scale)) return !1;
+          if (!(0, jQ.ef)(QQ, 0, this.key, this.lifeform, this.scale)) return !1;
           this.owed &= -2
         }
-        const ip = (2 & this.owed ? yp.Hc.Pose : 0) | (4 & this.owed ? yp.Hc.Visible : 0);
-        if (0 !== ip) {
-          if (!(0, yp.Re)(pp, 0, this.key, ip, this.visible ? 1 : 0, this.feet, this.yaw)) return !1;
+        const WQ = (2 & this.owed ? jQ.rd.Pose : 0) | (4 & this.owed ? jQ.rd.Visible : 0);
+        if (0 !== WQ) {
+          if (!(0, jQ.cf)(QQ, 0, this.key, WQ, this.visible ? 1 : 0, this.feet, this.yaw)) return !1;
           this.owed &= -7
         }
         if (8 & this.owed) {
-          if (!(0, yp.Oe)(pp, 0, this.key)) return !1;
+          if (!(0, jQ.$e)(QQ, 0, this.key)) return !1;
           this.owed = 0
         }
         return !0
       }
     }
-    var ri = cp(41208);
+    var nW = XQ(41204);
 
-    function Zi(pp, ip, cp, Op) {
-      return (0, ri.e)(), (0, yp.Df)(pp, ip, cp, Op)
+    function xW(QQ, WQ, XQ, wQ) {
+      return (0, nW.c)(), (0, jQ.Kf)(QQ, WQ, XQ, wQ)
     }
-    var zi = cp(39310),
-      si = cp(40792);
-    const Ki = [0, 0, 0],
-      Vi = [0, 0, 0],
-      pc = [0, 0, 0],
-      ic = [0, 0, 0],
-      cc = {
+    var YW = XQ(39409),
+      NW = XQ(40835);
+    const ZW = [0, 0, 0],
+      OW = [0, 0, 0],
+      KW = [0, 0, 0],
+      mW = [0, 0, 0],
+      MW = {
         origin: [0, 0, 0],
         direction: [0, 0, 1]
       },
-      Oc = [0, 0, 0],
-      oc = [0, 0],
-      Ic = [1, 1, 1],
-      Sc = 1 / 3;
-    const xc = Ai.f;
+      QX = [0, 0, 0],
+      WX = [0, 0],
+      XX = [1, 1, 1],
+      wX = 1 / 3;
+    const qX = PW.g;
 
-    function Lc(pp) {
-      const ip = Ai.d[pp],
-        cp = ip && Ai.f[ip.mainMultiblock];
-      return cp && {
-        main: cp,
-        x: ip.compX,
-        y: ip.compY,
-        z: ip.compZ
+    function TX(QQ) {
+      const WQ = PW.d[QQ],
+        XQ = WQ && PW.g[WQ.mainMultiblock];
+      return XQ && {
+        main: XQ,
+        x: WQ.compX,
+        y: WQ.compY,
+        z: WQ.compZ
       }
     }
 
-    function Yc(pp) {
-      if (null === pp || void 0 === pp) return yp.Nc;
-      const ip = +pp;
-      return Number.isInteger(ip) && ip >= -2147483648 && ip <= 2147483647 && String(ip) === String(pp) ? ip : yp.Nc
+    function zX(QQ) {
+      if (null === QQ || void 0 === QQ) return jQ.xd;
+      const WQ = +QQ;
+      return Number.isInteger(WQ) && WQ >= -2147483648 && WQ <= 2147483647 && String(WQ) === String(QQ) ? WQ : jQ.xd
     }
 
-    function Dc(pp, ip, cp) {
-      return (0, yp.Mf)(pp, 0, ip, null !== cp && void 0 !== cp ? cp : Number.NaN)
+    function sX(QQ, WQ, XQ) {
+      return (0, jQ.Nf)(QQ, 0, WQ, null !== XQ && void 0 !== XQ ? XQ : Number.NaN)
     }
-    class Ac {
-      constructor(pp) {
-        this.deps = pp, this.api = void 0, this.live = void 0, this.chunks = void 0, this.items = void 0, this.tables = void 0, this.meshKeys = 0, this.liveMeshes = new Set, this.poolKeys = 0, this.livePools = new Set, this.cameraTurn = new zi.b((() => this.tables.getClientOption("forcedCameraDirectionTransitionMs")), (pp => {
-          var ip, cp;
-          null === (ip = (cp = this.deps).setLocalOptions) || void 0 === ip || ip.call(cp, pp)
-        })), this.mobModels = new gi((() => this.deps.cmd())), this.owedFrees = [], this.pendingStyle = void 0, this.pendingFar = void 0, this.farSet = !1, this.routeMesh = 0, this.routeOffset = 0, this.routeLook = "", this.routeSlide = {
+    class FX {
+      constructor(QQ) {
+        this.deps = QQ, this.api = void 0, this.live = void 0, this.chunks = void 0, this.items = void 0, this.tables = void 0, this.meshKeys = 0, this.liveMeshes = new Set, this.poolKeys = 0, this.livePools = new Set, this.cameraTurn = new YW.e((() => this.tables.getClientOption("forcedCameraDirectionTransitionMs")), (QQ => {
+          var WQ, XQ;
+          null === (WQ = (XQ = this.deps).setLocalOptions) || void 0 === WQ || WQ.call(XQ, QQ)
+        })), this.mobModels = new oW((() => this.deps.cmd())), this.owedFrees = [], this.pendingStyle = void 0, this.pendingFar = void 0, this.farSet = !1, this.routeMesh = 0, this.routeOffset = 0, this.routeLook = "", this.routeSlide = {
           uvOffset: [0, 0]
         }, this.poolHost = {
           cmd: () => this.deps.cmd(),
-          Ry: (pp, ip) => {
-            this.livePools.delete(pp), null !== ip && (this.owedFrees.push(ip), this.flushOwed())
+          zj: (QQ, WQ) => {
+            this.livePools.delete(QQ), null !== WQ && (this.owedFrees.push(WQ), this.flushOwed())
           }
-        }, this.api = pp.api, this.live = pp.live, this.chunks = pp.chunks, this.items = pp.items, this.tables = pp.tables
+        }, this.api = QQ.api, this.live = QQ.live, this.chunks = QQ.chunks, this.items = QQ.items, this.tables = QQ.tables
       }
-      isLocal(pp) {
-        return null !== pp && void 0 !== pp && +pp === this.api.localId
+      isLocal(QQ) {
+        return null !== QQ && void 0 !== QQ && +QQ === this.api.localId
       }
-      assertLocal(pp, ip) {
-        if (!this.isLocal(pp)) throw new Error(`Attempted to ${ip} for a player that is not the local player`)
+      assertLocal(QQ, WQ) {
+        if (!this.isLocal(QQ)) throw new Error(`Attempted to ${WQ} for a player that is not the local player`)
       }
-      sH(pp) {
-        const ip = this.api.sH(pp);
-        if (!ip) throw new Error(`Entity ${pp} has no replicated position`);
-        return ip
+      xV(QQ) {
+        const WQ = this.api.xV(QQ);
+        if (!WQ) throw new Error(`Entity ${QQ} has no replicated position`);
+        return WQ
       }
-      checkValid(pp) {
-        return !!this.deps.isSessionLive() && (null === pp || void 0 === pp || this.api.checkValid(pp))
+      checkValid(QQ) {
+        return !!this.deps.isSessionLive() && (null === QQ || void 0 === QQ || this.api.checkValid(QQ))
       }
-      isAlive(pp) {
-        return !1 !== this.api.isAlive(pp)
+      isAlive(QQ) {
+        return !1 !== this.api.isAlive(QQ)
       }
-      getItemStat(pp, ip, cp) {
-        return this.isLocal(pp) || null !== pp && "Player" === this.api.getEntityType(pp) ? this.tables.getItemStat(ip, cp) : this.tables.getDefaultItemStat(ip, cp)
+      getItemStat(QQ, WQ, XQ) {
+        return this.isLocal(QQ) || null !== QQ && "Player" === this.api.getEntityType(QQ) ? this.tables.getItemStat(WQ, XQ) : this.tables.getDefaultItemStat(WQ, XQ)
       }
-      getClientOption(pp, ip) {
-        return this.assertLocal(pp, "get a client option"), this.tables.getClientOption(ip)
+      getClientOption(QQ, WQ) {
+        return this.assertLocal(QQ, "get a client option"), this.tables.getClientOption(WQ)
       }
-      openShop(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          cp = arguments.length > 2 ? arguments[2] : void 0;
-        this.assertLocal(pp, "open shop"), Sp.m.GA("showShopFromServer", {
-          toggle: ip,
-          Dp: cp
+      openShop(QQ) {
+        let WQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          XQ = arguments.length > 2 ? arguments[2] : void 0;
+        this.assertLocal(QQ, "open shop"), zQ.k.mB("showShopFromServer", {
+          toggle: WQ,
+          FQ: XQ
         }, !0)
       }
-      sendMessage(pp, ip, cp) {
-        this.assertLocal(pp, "send a message");
-        const Op = "string" === typeof ip ? [{
-          str: ip,
-          style: cp
-        }] : ip;
-        Sp.m.GA("chat", {
-          content: Op
+      sendMessage(QQ, WQ, XQ) {
+        this.assertLocal(QQ, "send a message");
+        const wQ = "string" === typeof WQ ? [{
+          str: WQ,
+          style: XQ
+        }] : WQ;
+        zQ.k.mB("chat", {
+          content: wQ
         }, !0)
       }
-      getEntityType(pp) {
-        return this.api.getEntityType(pp)
+      getEntityType(QQ) {
+        return this.api.getEntityType(QQ)
       }
-      getEntityName(pp) {
-        const ip = Yc(pp);
-        return ip === yp.Nc ? void 0 : (0, bi.k)(this.api, ip)
+      getEntityName(QQ) {
+        const WQ = zX(QQ);
+        return WQ === jQ.xd ? void 0 : (0, kW.i)(this.api, WQ)
       }
-      hasEffect(pp, ip) {
-        const cp = Yc(pp);
-        return cp !== yp.Nc && (0, bi.h)(this.api, cp, ip)
+      hasEffect(QQ, WQ) {
+        const XQ = zX(QQ);
+        return XQ !== jQ.xd && (0, kW.e)(this.api, XQ, WQ)
       }
-      getMetaInfo(pp) {
-        return this.tables.getMetaInfo(pp)
+      getMetaInfo(QQ) {
+        return this.tables.getMetaInfo(QQ)
       }
-      getPlayerDbId(pp) {
-        return this.assertLocal(pp, "get a DB ID"), this.deps.playerDbId()
+      getPlayerDbId(QQ) {
+        return this.assertLocal(QQ, "get a DB ID"), this.deps.playerDbId()
       }
-      getBlockData(pp, ip, cp) {
-        if (!this.chunks.dataCleared(pp, ip, cp)) return (0, bi.d)(this.api, pp, ip, cp)
+      getBlockData(QQ, WQ, XQ) {
+        if (!this.chunks.dataCleared(QQ, WQ, XQ)) return (0, kW.b)(this.api, QQ, WQ, XQ)
       }
-      qE(pp, ip, cp, Op) {
-        this.setBlockId(pp, ip, cp, this.tables.getItemId(Op))
+      hA(QQ, WQ, XQ, wQ) {
+        this.setBlockId(QQ, WQ, XQ, this.tables.getItemId(wQ))
       }
-      setOtherEntitySetting(pp, ip, cp, Op) {
-        if (!this.isLocal(pp)) throw new Error("Attempted to set an other-entity setting for a player that is not the local player");
-        if (!Object.hasOwn(yp.$c, cp)) throw new Error(`Unknown other-entity setting ${cp}`);
-        const op = yp.$c[cp],
-          Ip = Yc(ip);
-        if (Ip === yp.Nc || !this.deps.beforeWrite()) return;
-        const Sp = (0, Np.f)(Op);
-        if (Sp.length > 16384) throw new Error(`The other-entity setting ${cp}'s value is over 16384 bytes`);
-        const xp = this.api.memoryView(Uint8Array, this.api.scratch(), Sp.length, "set_other_entity_setting's value");
-        xp && (xp.set(Sp), this.api.queries.setOtherEntitySetting(Ip, op, Sp.length))
+      setOtherEntitySetting(QQ, WQ, XQ, wQ) {
+        if (!this.isLocal(QQ)) throw new Error("Attempted to set an other-entity setting for a player that is not the local player");
+        if (!Object.hasOwn(jQ.Jd, XQ)) throw new Error(`Unknown other-entity setting ${XQ}`);
+        const qQ = jQ.Jd[XQ],
+          TQ = zX(WQ);
+        if (TQ === jQ.xd || !this.deps.beforeWrite()) return;
+        const zQ = (0, uQ.e)(wQ);
+        if (zQ.length > 16384) throw new Error(`The other-entity setting ${XQ}'s value is over 16384 bytes`);
+        const sQ = this.api.memoryView(Uint8Array, this.api.scratch(), zQ.length, "set_other_entity_setting's value");
+        sQ && (sQ.set(zQ), this.api.queries.setOtherEntitySetting(TQ, qQ, zQ.length))
       }
-      getPositionView(pp) {
-        return this.live.position(+pp)
+      getPositionView(QQ) {
+        return this.live.position(+QQ)
       }
-      readDrawnPosition(pp, ip) {
-        return this.api.readDrawnPosition(Yc(pp), ip)
+      readDrawnPosition(QQ, WQ) {
+        return this.api.readDrawnPosition(zX(QQ), WQ)
       }
-      getDrawnHeading(pp) {
-        const ip = Yc(pp),
-          cp = (ip === yp.Nc ? 0 : this.api.queries.directorEntity(ip)) >= yp.gb.BYTES ? this.api.memoryData(this.api.scratch(), yp.gb.BYTES, 8, "getDrawnHeading's DirectorEntity") : null;
-        if (!cp) return null;
-        if (1 === yp.gb.headingIsDrawn(cp, 0)) return yp.gb.heading(cp, 0);
-        const Op = this.api.apiView;
-        return this.isLocal(pp) && 0 === (yp.q.playerFlags(Op, 0) & yp.wd.FreeCam) ? yp.q.heading(Op, 0) : null
+      getDrawnHeading(QQ) {
+        const WQ = zX(QQ),
+          XQ = (WQ === jQ.xd ? 0 : this.api.queries.directorEntity(WQ)) >= jQ.Db.BYTES ? this.api.memoryData(this.api.scratch(), jQ.Db.BYTES, 8, "getDrawnHeading's DirectorEntity") : null;
+        if (!XQ) return null;
+        if (1 === jQ.Db.headingIsDrawn(XQ, 0)) return jQ.Db.heading(XQ, 0);
+        const wQ = this.api.apiView;
+        return this.isLocal(QQ) && 0 === (jQ.x.playerFlags(wQ, 0) & jQ.ae.FreeCam) ? jQ.x.heading(wQ, 0) : null
       }
       getLocalPlayerMovement() {
-        const pp = yp.q.playerFlags(this.api.apiView, 0);
-        return 0 === (pp & yp.wd.Replay) && this.api.readDrawnPosition(this.api.localId, pc) ? {
-          onGround: 0 !== (pp & yp.wd.OnGround),
-          jumpHeld: 0 !== (pp & yp.wd.JumpHeld)
+        const QQ = jQ.x.playerFlags(this.api.apiView, 0);
+        return 0 === (QQ & jQ.ae.Replay) && this.api.readDrawnPosition(this.api.localId, KW) ? {
+          onGround: 0 !== (QQ & jQ.ae.OnGround),
+          jumpHeld: 0 !== (QQ & jQ.ae.JumpHeld)
         } : null
       }
-      Acp(pp) {
-        return this.isLocal(pp) ? this.items.sx() : null
+      wXQ(QQ) {
+        return this.isLocal(QQ) ? this.items.Ds() : null
       }
       getInventoryItems() {
         return this.items.playerItems()
       }
       getHeldGunInaccuracy() {
-        var pp, ip;
-        return "Gun" === (null === (pp = this.aliveHeld()) || void 0 === pp || null === (ip = pp.typeObj) || void 0 === ip ? void 0 : ip.type) ? this.items.inaccuracy : null
+        var QQ, WQ;
+        return "Gun" === (null === (QQ = this.aliveHeld()) || void 0 === QQ || null === (WQ = QQ.typeObj) || void 0 === WQ ? void 0 : WQ.type) ? this.items.inaccuracy : null
       }
       aliveHeld() {
-        return !1 === this.api.isAlive(this.api.localId) ? null : this.items.sx()
+        return !1 === this.api.isAlive(this.api.localId) ? null : this.items.Ds()
       }
       isCrosshairShown() {
-        var pp, ip;
-        const cp = (0, Wi.d)(Op.c.get("crosshairGameView"), Op.c.get("crosshairShownOverride"));
-        if (null !== cp) return cp;
-        const op = null === (pp = this.aliveHeld()) || void 0 === pp ? void 0 : pp.typeObj,
-          Ip = "Gun" === (null === op || void 0 === op ? void 0 : op.type),
-          Sp = Ip || !0 === (null === op || void 0 === op ? void 0 : op.showsAimingUi),
-          xp = 0 === (yp.q.playerFlags(this.api.apiView, 0) & yp.wd.ZoomFirstPerson),
-          Lp = null !== (ip = this.tables.getClientOption("gunshotOrigin")) && void 0 !== ip ? ip : null;
-        return (0, Wi.h)({
-          gun: Ip,
-          aimable: Sp
-        }, xp, (0, yi.c)(), Lp)
+        var QQ, WQ;
+        const XQ = (0, JW.e)(wQ.b.get("crosshairGameView"), wQ.b.get("crosshairShownOverride"));
+        if (null !== XQ) return XQ;
+        const qQ = null === (QQ = this.aliveHeld()) || void 0 === QQ ? void 0 : QQ.typeObj,
+          TQ = "Gun" === (null === qQ || void 0 === qQ ? void 0 : qQ.type),
+          zQ = TQ || !0 === (null === qQ || void 0 === qQ ? void 0 : qQ.showsAimingUi),
+          sQ = 0 === (jQ.x.playerFlags(this.api.apiView, 0) & jQ.ae.ZoomFirstPerson),
+          FQ = null !== (WQ = this.tables.getClientOption("gunshotOrigin")) && void 0 !== WQ ? WQ : null;
+        return (0, JW.l)({
+          gun: TQ,
+          aimable: zQ
+        }, sQ, (0, rW.c)(), FQ)
       }
-      setCrosshairShown(pp) {
-        Op.c.set({
-          crosshairShownOverride: pp
+      setCrosshairShown(QQ) {
+        wQ.b.set({
+          crosshairShownOverride: QQ
         })
       }
-      getInventoryFreeSlotCount(pp) {
-        return this.isLocal(pp) ? this.items.freeSlots() : null
+      getInventoryFreeSlotCount(QQ) {
+        return this.isLocal(QQ) ? this.items.freeSlots() : null
       }
-      getSelectedInventorySlotI(pp) {
-        return this.isLocal(pp) ? this.items.selectedSlot : null
+      getSelectedInventorySlotI(QQ) {
+        return this.isLocal(QQ) ? this.items.selectedSlot : null
       }
-      getItemSlot(pp, ip) {
-        return this.isLocal(pp) ? this.items.slot(ip) : null
+      getItemSlot(QQ, WQ) {
+        return this.isLocal(QQ) ? this.items.slot(WQ) : null
       }
-      swapInventorySlots(pp, ip) {
-        return this.items.swap(pp, ip)
+      swapInventorySlots(QQ, WQ) {
+        return this.items.swap(QQ, WQ)
       }
-      isPlayerCrouching(pp) {
-        if (this.isLocal(pp)) return 0 !== (yp.q.playerFlags(this.api.apiView, 0) & yp.wd.Crouching);
-        const ip = Yc(pp);
-        return ip !== yp.Nc && 1 === this.api.queries.entityCrouching(ip)
+      isPlayerCrouching(QQ) {
+        if (this.isLocal(QQ)) return 0 !== (jQ.x.playerFlags(this.api.apiView, 0) & jQ.ae.Crouching);
+        const WQ = zX(QQ);
+        return WQ !== jQ.xd && 1 === this.api.queries.entityCrouching(WQ)
       }
       getMiningBlock() {
         return this.live.breakingPosition()
       }
       isMining() {
-        return 0 !== (yp.q.playerFlags(this.api.apiView, 0) & yp.wd.AttemptingBreak)
+        return 0 !== (jQ.x.playerFlags(this.api.apiView, 0) & jQ.ae.AttemptingBreak)
       }
       getTargetedBlock() {
-        return this.live.Rpp()
+        return this.live.CQQ()
       }
       getActionRay() {
-        const pp = this.api.apiView;
-        for (let ip = 0; ip < 3; ip++) cc.origin[ip] = yp.q.gpp(pp, 0, ip), cc.direction[ip] = yp.q.actionDir(pp, 0, ip);
-        return cc
+        const QQ = this.api.apiView;
+        for (let WQ = 0; WQ < 3; WQ++) MW.origin[WQ] = jQ.x.MQQ(QQ, 0, WQ), MW.direction[WQ] = jQ.x.actionDir(QQ, 0, WQ);
+        return MW
       }
-      canModifyBlockAt(pp, ip, cp) {
-        return 1 === this.api.queries.canModify(pp, ip, cp)
+      canModifyBlockAt(QQ, WQ, XQ) {
+        return 1 === this.api.queries.canModify(QQ, WQ, XQ)
       }
-      isSolidToPlayerBlockId(pp) {
-        return this.tables.isSolidBlockId(pp) && !this.chunks.isWalkThrough(pp)
+      isSolidToPlayerBlockId(QQ) {
+        return this.tables.isSolidBlockId(QQ) && !this.chunks.isWalkThrough(QQ)
       }
-      blockNameToBlockId(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return this.tables.blockNameToBlockId(pp, ip)
+      blockNameToBlockId(QQ) {
+        let WQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return this.tables.blockNameToBlockId(QQ, WQ)
       }
-      blockIdToBlockName(pp) {
-        return this.tables.nameOfId(pp)
+      blockIdToBlockName(QQ) {
+        return this.tables.nameOfId(QQ)
       }
-      eip(pp, ip, cp, Op, op) {
-        return 1 === this.api.queries.terrainBlocked(Op, pp, ip, cp, Yc(null !== op && void 0 !== op ? op : null))
+      vWQ(QQ, WQ, XQ, wQ, qQ) {
+        return 1 === this.api.queries.terrainBlocked(wQ, QQ, WQ, XQ, zX(null !== qQ && void 0 !== qQ ? qQ : null))
       }
-      getChunkVersion(pp, ip, cp) {
-        return this.chunks.version(pp, ip, cp)
+      getChunkVersion(QQ, WQ, XQ) {
+        return this.chunks.version(QQ, WQ, XQ)
       }
-      scanBlocks(pp, ip, cp, Op, op, Ip, Sp, xp) {
-        return this.chunks.scan(pp, ip, cp, Op, op, Ip, Sp, xp)
+      scanBlocks(QQ, WQ, XQ, wQ, qQ, TQ, zQ, sQ) {
+        return this.chunks.scan(QQ, WQ, XQ, wQ, qQ, TQ, zQ, sQ)
       }
-      isBlockInLoadedChunk(pp, ip, cp) {
-        return this.chunks.isLoaded(pp, ip, cp)
+      isBlockInLoadedChunk(QQ, WQ, XQ) {
+        return this.chunks.isLoaded(QQ, WQ, XQ)
       }
-      getBlockId(pp, ip, cp) {
-        return this.chunks.tx(pp, ip, cp)
+      getBlockId(QQ, WQ, XQ) {
+        return this.chunks.ez(QQ, WQ, XQ)
       }
-      playSound(pp, ip, cp, Op, op) {
-        let Ip = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-        if (!this.isLocal(pp)) return null;
-        const Sp = this.playSoundFrom(ip, cp, op, Ip);
-        return 1 === Op ? Sp : Sp.rate(Op)
+      playSound(QQ, WQ, XQ, wQ, qQ) {
+        let TQ = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+        if (!this.isLocal(QQ)) return null;
+        const zQ = this.playSoundFrom(WQ, XQ, qQ, TQ);
+        return 1 === wQ ? zQ : zQ.rate(wQ)
       }
-      preloadSounds(pp) {
-        var ip, cp;
-        null === (ip = (cp = this.deps).preloadSounds) || void 0 === ip || ip.call(cp, pp)
+      preloadSounds(QQ) {
+        var WQ, XQ;
+        null === (WQ = (XQ = this.deps).preloadSounds) || void 0 === WQ || WQ.call(XQ, QQ)
       }
-      playSoundFrom(pp, ip, cp, Op) {
-        var op, Ip;
-        const Sp = this.deps.playSound;
-        if (!Sp) return Mi.c;
-        const xp = null === cp || void 0 === cp ? void 0 : cp.Sp,
-          Lp = null !== (op = null === cp || void 0 === cp ? void 0 : cp.maxHearDist) && void 0 !== op ? op : Pi.g,
-          Yp = null !== (Ip = null === cp || void 0 === cp ? void 0 : cp.refDistance) && void 0 !== Ip ? Ip : Pi.k;
-        let Dp = null;
-        if (Array.isArray(xp)) Ki[0] = xp[0], Ki[1] = xp[1], Ki[2] = xp[2], Dp = Ki;
-        else if (void 0 !== xp && null !== xp) {
-          const pp = Yc(xp);
-          if (!this.api.isLocal(pp)) {
-            if (!this.api.readPosition(pp, Ki)) return Mi.c;
-            Dp = Ki
+      playSoundFrom(QQ, WQ, XQ, wQ) {
+        var qQ, TQ;
+        const zQ = this.deps.playSound;
+        if (!zQ) return aW.e;
+        const sQ = null === XQ || void 0 === XQ ? void 0 : XQ.qQ,
+          FQ = null !== (qQ = null === XQ || void 0 === XQ ? void 0 : XQ.maxHearDist) && void 0 !== qQ ? qQ : gW.e,
+          PQ = null !== (TQ = null === XQ || void 0 === XQ ? void 0 : XQ.refDistance) && void 0 !== TQ ? TQ : gW.h;
+        let gQ = null;
+        if (Array.isArray(sQ)) ZW[0] = sQ[0], ZW[1] = sQ[1], ZW[2] = sQ[2], gQ = ZW;
+        else if (void 0 !== sQ && null !== sQ) {
+          const QQ = zX(sQ);
+          if (!this.api.isLocal(QQ)) {
+            if (!this.api.readPosition(QQ, ZW)) return aW.e;
+            gQ = ZW
           }
         }
-        return Sp(pp, ip, Dp, Dp && this.ear(), Lp, Yp, Op)
+        return zQ(QQ, WQ, gQ, gQ && this.ear(), FQ, PQ, wQ)
       }
       ear() {
-        if (this.api.readPosition(this.api.localId, Vi)) Vi[1] += Ei;
+        if (this.api.readPosition(this.api.localId, OW)) OW[1] += hW;
         else {
-          const pp = this.api.apiView;
-          if (0 === yp.q.viewProj(pp, 0, 3) && 0 === yp.q.viewProj(pp, 0, 7) && 0 === yp.q.viewProj(pp, 0, 11)) return null;
-          for (let ip = 0; ip < 3; ip++) Vi[ip] = yp.q.eye(pp, 0, ip)
+          const QQ = this.api.apiView;
+          if (0 === jQ.x.viewProj(QQ, 0, 3) && 0 === jQ.x.viewProj(QQ, 0, 7) && 0 === jQ.x.viewProj(QQ, 0, 11)) return null;
+          for (let WQ = 0; WQ < 3; WQ++) OW[WQ] = jQ.x.eye(QQ, 0, WQ)
         }
-        return Number.isFinite(Vi[0] + Vi[1] + Vi[2]) ? Vi : null
+        return Number.isFinite(OW[0] + OW[1] + OW[2]) ? OW : null
       }
-      setBlockId(pp, ip, cp, Op) {
-        if (!Number.isInteger(Op) || Op < 0 || Op > 65535) throw new Error(`Invalid block id ${Op}`);
-        if (!this.deps.beforeWrite() || !this.chunks.isLoaded(pp, ip, cp)) return;
-        const op = Math.floor(pp),
-          Ip = Math.floor(ip),
-          Sp = Math.floor(cp),
-          xp = this.predictedCells(op, Ip, Sp, Op);
-        if (1 === this.api.queries.qE(op, Ip, Sp, Op)) {
-          for (let pp = 0; pp < xp.length; pp += 5) this.chunks.setOverlay(xp[pp], xp[pp + 1], xp[pp + 2], xp[pp + 3], 1 === xp[pp + 4]);
+      setBlockId(QQ, WQ, XQ, wQ) {
+        if (!Number.isInteger(wQ) || wQ < 0 || wQ > 65535) throw new Error(`Invalid block id ${wQ}`);
+        if (!this.deps.beforeWrite() || !this.chunks.isLoaded(QQ, WQ, XQ)) return;
+        const qQ = Math.floor(QQ),
+          TQ = Math.floor(WQ),
+          zQ = Math.floor(XQ),
+          sQ = this.predictedCells(qQ, TQ, zQ, wQ);
+        if (1 === this.api.queries.hA(qQ, TQ, zQ, wQ)) {
+          for (let QQ = 0; QQ < sQ.length; QQ += 5) this.chunks.setOverlay(sQ[QQ], sQ[QQ + 1], sQ[QQ + 2], sQ[QQ + 3], 1 === sQ[QQ + 4]);
           this.live.refreshTarget()
         }
       }
       particlesEnabled() {
         return this.deps.particles.enabled()
       }
-      createParticles(pp, ip) {
-        return this.deps.particles.create(pp, ip)
+      createParticles(QQ, WQ) {
+        return this.deps.particles.create(QQ, WQ)
       }
-      playParticleEffect(pp) {
-        this.deps.particles.playEffect(pp)
+      playParticleEffect(QQ) {
+        this.deps.particles.playEffect(QQ)
       }
-      burstParticlePreset(pp, ip, cp) {
-        this.deps.particles.burstPreset(pp, ip, cp)
+      burstParticlePreset(QQ, WQ, XQ) {
+        this.deps.particles.burstPreset(QQ, WQ, XQ)
       }
-      createGameMesh(pp, ip, cp) {
-        const Op = ++this.meshKeys,
-          op = this.deps.cmd();
-        if (!op) return Op;
+      createGameMesh(QQ, WQ, XQ) {
+        const wQ = ++this.meshKeys,
+          qQ = this.deps.cmd();
+        if (!qQ) return wQ;
         const {
-          look: Ip,
-          colour: Sp
-        } = function(pp) {
-          switch (pp.kind) {
+          look: TQ,
+          colour: zQ
+        } = function(QQ) {
+          switch (QQ.kind) {
             case void 0:
             case "flatEmissive":
-              return pp.onTop ? {
-                look: yp.Lb.FlatOnTop,
-                colour: [...pp.rgb, pp.alpha]
-              } : pp.opaque ? {
-                look: yp.Lb.FlatOpaque,
-                colour: [...pp.rgb, 1]
+              return QQ.onTop ? {
+                look: jQ.sc.FlatOnTop,
+                colour: [...QQ.rgb, QQ.alpha]
+              } : QQ.opaque ? {
+                look: jQ.sc.FlatOpaque,
+                colour: [...QQ.rgb, 1]
               } : {
-                look: yp.Lb.Flat,
-                colour: [...pp.rgb, pp.alpha]
+                look: jQ.sc.Flat,
+                colour: [...QQ.rgb, QQ.alpha]
               };
             case "chevronPath":
               return {
-                look: yp.Lb.Chevrons, colour: [...(0, Ui.b)(pp.colour), pp.alpha]
+                look: jQ.sc.Chevrons, colour: [...(0, IW.c)(QQ.colour), QQ.alpha]
               };
             case "furnaceFire":
               return {
-                look: yp.Lb.FurnaceFire, colour: [1, 1, 1, 1]
+                look: jQ.sc.FurnaceFire, colour: [1, 1, 1, 1]
               }
           }
-        }(ip), xp = Math.floor(pp.positions.length / 3), Lp = function(pp, ip) {
-          const cp = Math.floor(pp.positions.length / 3),
-            Op = pp.indices.length,
-            op = cp * (ip ? 5 : 3),
-            Ip = new Uint8Array(4 * (op + Op)),
-            Sp = new DataView(Ip.buffer);
-          for (let Yp = 0; Yp < 3 * cp; Yp++) Sp.setFloat32(4 * Yp, pp.positions[Yp], !0);
-          if (ip) {
-            var xp;
-            const ip = null !== (xp = pp.uvs) && void 0 !== xp ? xp : [];
-            for (let pp = 0; pp < 2 * cp; pp++) {
-              var Lp;
-              Sp.setFloat32(4 * (3 * cp + pp), null !== (Lp = ip[pp]) && void 0 !== Lp ? Lp : 0, !0)
+        }(WQ), sQ = Math.floor(QQ.positions.length / 3), FQ = function(QQ, WQ) {
+          const XQ = Math.floor(QQ.positions.length / 3),
+            wQ = QQ.indices.length,
+            qQ = XQ * (WQ ? 5 : 3),
+            TQ = new Uint8Array(4 * (qQ + wQ)),
+            zQ = new DataView(TQ.buffer);
+          for (let PQ = 0; PQ < 3 * XQ; PQ++) zQ.setFloat32(4 * PQ, QQ.positions[PQ], !0);
+          if (WQ) {
+            var sQ;
+            const WQ = null !== (sQ = QQ.uvs) && void 0 !== sQ ? sQ : [];
+            for (let QQ = 0; QQ < 2 * XQ; QQ++) {
+              var FQ;
+              zQ.setFloat32(4 * (3 * XQ + QQ), null !== (FQ = WQ[QQ]) && void 0 !== FQ ? FQ : 0, !0)
             }
           }
-          for (let Yp = 0; Yp < Op; Yp++) Sp.setUint32(4 * (op + Yp), pp.indices[Yp], !0);
-          return Ip
-        }(pp, (0, Di.j)(ip));
-        return (0, yp.se)(op, 0, Op, Ip, Sp, cp, xp, pp.indices.length, Lp) && this.liveMeshes.add(Op), Op
+          for (let PQ = 0; PQ < wQ; PQ++) zQ.setUint32(4 * (qQ + PQ), QQ.indices[PQ], !0);
+          return TQ
+        }(QQ, (0, FW.g)(WQ));
+        return (0, jQ.Le)(qQ, 0, wQ, TQ, zQ, XQ, sQ, QQ.indices.length, FQ) && this.liveMeshes.add(wQ), wQ
       }
-      setGameMesh(pp, ip) {
-        var cp;
-        const Op = this.deps.cmd();
-        if (!Op) return;
-        let op = 0;
-        ip.anchor && (op |= yp.Pb.Anchor, Oc[0] = ip.anchor[0], Oc[1] = ip.anchor[1], Oc[2] = ip.anchor[2]), void 0 !== ip.visible && (op |= yp.Pb.Visible), ip.uvOffset && (op |= yp.Pb.UvOffset, oc[0] = ip.uvOffset[0], oc[1] = ip.uvOffset[1]);
-        const Ip = null !== (cp = ip.visibility) && void 0 !== cp ? cp : 1;
-        void 0 !== ip.visibility && (op |= yp.Pb.Visibility), ip.scale && (op |= yp.Pb.Scale, Ic[0] = ip.scale[0], Ic[1] = ip.scale[1], Ic[2] = ip.scale[2]), 0 !== op && (0, yp.ze)(Op, 0, pp, op, ip.visible ? 1 : 0, Oc, oc, Ip, Ic)
+      setGameMesh(QQ, WQ) {
+        var XQ;
+        const wQ = this.deps.cmd();
+        if (!wQ) return;
+        let qQ = 0;
+        WQ.anchor && (qQ |= jQ.tc.Anchor, QX[0] = WQ.anchor[0], QX[1] = WQ.anchor[1], QX[2] = WQ.anchor[2]), void 0 !== WQ.visible && (qQ |= jQ.tc.Visible), WQ.uvOffset && (qQ |= jQ.tc.UvOffset, WX[0] = WQ.uvOffset[0], WX[1] = WQ.uvOffset[1]);
+        const TQ = null !== (XQ = WQ.visibility) && void 0 !== XQ ? XQ : 1;
+        void 0 !== WQ.visibility && (qQ |= jQ.tc.Visibility), WQ.scale && (qQ |= jQ.tc.Scale, XX[0] = WQ.scale[0], XX[1] = WQ.scale[1], XX[2] = WQ.scale[2]), 0 !== qQ && (0, jQ.Re)(wQ, 0, QQ, qQ, WQ.visible ? 1 : 0, QX, WX, TQ, XX)
       }
-      disposeGameMesh(pp) {
-        const ip = this.deps.cmd();
-        ip && !(0, yp.we)(ip, 0, pp) || this.liveMeshes.delete(pp)
+      disposeGameMesh(QQ) {
+        const WQ = this.deps.cmd();
+        WQ && !(0, jQ.Ne)(WQ, 0, QQ) || this.liveMeshes.delete(QQ)
       }
-      hasPackModel(pp) {
-        var ip, cp, Op;
-        return null !== (ip = null === (cp = (Op = this.deps).hasPackModel) || void 0 === cp ? void 0 : cp.call(Op, pp)) && void 0 !== ip && ip
+      hasPackModel(QQ) {
+        var WQ, XQ, wQ;
+        return null !== (WQ = null === (XQ = (wQ = this.deps).hasPackModel) || void 0 === XQ ? void 0 : XQ.call(wQ, QQ)) && void 0 !== WQ && WQ
       }
       disposeGameOutput() {
-        const pp = pp => {
+        const QQ = QQ => {
           try {
-            pp()
-          } catch (ip) {
-            console.error("Error freeing client game output", ip)
+            QQ()
+          } catch (WQ) {
+            console.error("Error freeing client game output", WQ)
           }
         };
-        for (const ip of [...this.liveMeshes]) pp((() => {
-          this.disposeGameMesh(ip)
+        for (const WQ of [...this.liveMeshes]) QQ((() => {
+          this.disposeGameMesh(WQ)
         }));
-        for (const ip of [...this.livePools]) pp((() => {
-          ip.dispose()
+        for (const WQ of [...this.livePools]) QQ((() => {
+          WQ.dispose()
         }));
-        pp((() => {
+        QQ((() => {
           this.mobModels.disposeAll()
-        })), pp((() => {
+        })), QQ((() => {
           this.setGroundArrowStyle(null)
-        })), pp((() => {
+        })), QQ((() => {
           this.setRouteChevrons(null), this.routeOffset = 0, this.routeLook = ""
-        })), pp((() => {
+        })), QQ((() => {
           this.setCrosshairShown(null)
-        })), pp((() => {
+        })), QQ((() => {
           this.cameraTurn.dispose()
-        })), pp((() => {
+        })), QQ((() => {
           this.farSet && (this.farSet = !1, this.setCameraFar(null))
         }))
       }
-      createInstancePool(pp, ip) {
-        const cp = this.tables.idOf(pp.item);
-        if (void 0 === cp) return null;
-        const Op = new ni(++this.poolKeys, {
-          item: cp,
-          scale: pp.scale,
-          yaw: pp.yaw
-        }, ip, this.poolHost);
-        return this.livePools.add(Op), Op
+      createInstancePool(QQ, WQ) {
+        const XQ = this.tables.idOf(QQ.item);
+        if (void 0 === XQ) return null;
+        const wQ = new SW(++this.poolKeys, {
+          item: XQ,
+          scale: QQ.scale,
+          yaw: QQ.yaw
+        }, WQ, this.poolHost);
+        return this.livePools.add(wQ), wQ
       }
-      createMobModel(pp, ip) {
-        return this.mobModels.create(pp, ip)
+      createMobModel(QQ, WQ) {
+        return this.mobModels.create(QQ, WQ)
       }
-      setRouteChevrons(pp) {
-        if (0 !== this.routeMesh && (this.disposeGameMesh(this.routeMesh), this.routeMesh = 0), !pp || 0 === pp.cells.length) return;
-        const ip = `${pp.colour} ${pp.alpha}`;
-        ip !== this.routeLook && (this.routeLook = ip, this.routeOffset = 0), this.routeMesh = this.createGameMesh(function(pp) {
-          const [ip, cp, Op] = pp[0].pos, op = [], Ip = [], Sp = [];
-          return pp.forEach(((pp, xp) => {
+      setRouteChevrons(QQ) {
+        if (0 !== this.routeMesh && (this.disposeGameMesh(this.routeMesh), this.routeMesh = 0), !QQ || 0 === QQ.cells.length) return;
+        const WQ = `${QQ.colour} ${QQ.alpha}`;
+        WQ !== this.routeLook && (this.routeLook = WQ, this.routeOffset = 0), this.routeMesh = this.createGameMesh(function(QQ) {
+          const [WQ, XQ, wQ] = QQ[0].pos, qQ = [], TQ = [], zQ = [];
+          return QQ.forEach(((QQ, sQ) => {
             let {
-              pos: Lp,
-              way: [Yp, Dp]
-            } = pp;
-            const Ap = Lp[0] - ip + .5,
-              Pp = Lp[1] - cp + .04,
-              Wp = Lp[2] - Op + .5,
-              [yp, Up] = [.35 * -Dp, .35 * Yp],
-              [wp, vp] = [xp * Sc, (xp + 1) * Sc],
-              tp = op.length / 3;
-            op.push(Ap - .5 * Yp + yp, Pp, Wp - .5 * Dp + Up), op.push(Ap - .5 * Yp - yp, Pp, Wp - .5 * Dp - Up), op.push(Ap + .5 * Yp + yp, Pp, Wp + .5 * Dp + Up), op.push(Ap + .5 * Yp - yp, Pp, Wp + .5 * Dp - Up), Ip.push(0, wp, 1, wp, 0, vp, 1, vp), Sp.push(tp, tp + 1, tp + 2, tp + 1, tp + 3, tp + 2)
+              pos: FQ,
+              way: [PQ, gQ]
+            } = QQ;
+            const JQ = FQ[0] - WQ + .5,
+              rQ = FQ[1] - XQ + .04,
+              IQ = FQ[2] - wQ + .5,
+              [jQ, BQ] = [.35 * -gQ, .35 * PQ],
+              [yQ, VQ] = [sQ * wX, (sQ + 1) * wX],
+              DQ = qQ.length / 3;
+            qQ.push(JQ - .5 * PQ + jQ, rQ, IQ - .5 * gQ + BQ), qQ.push(JQ - .5 * PQ - jQ, rQ, IQ - .5 * gQ - BQ), qQ.push(JQ + .5 * PQ + jQ, rQ, IQ + .5 * gQ + BQ), qQ.push(JQ + .5 * PQ - jQ, rQ, IQ + .5 * gQ - BQ), TQ.push(0, yQ, 1, yQ, 0, VQ, 1, VQ), zQ.push(DQ, DQ + 1, DQ + 2, DQ + 1, DQ + 3, DQ + 2)
           })), {
-            positions: op,
-            uvs: Ip,
-            indices: Sp
+            positions: qQ,
+            uvs: TQ,
+            indices: zQ
           }
-        }(pp.cells), {
+        }(QQ.cells), {
           kind: "chevronPath",
-          colour: pp.colour,
-          alpha: pp.alpha
-        }, pp.cells[0].pos), this.setRouteSlide()
+          colour: QQ.colour,
+          alpha: QQ.alpha
+        }, QQ.cells[0].pos), this.setRouteSlide()
       }
-      slideRoute(pp) {
-        0 !== this.routeMesh && (this.routeOffset = (this.routeOffset + Math.min(pp, 250) / 1e3 * 1.2 * Sc) % 1, this.setRouteSlide())
+      slideRoute(QQ) {
+        0 !== this.routeMesh && (this.routeOffset = (this.routeOffset + Math.min(QQ, 250) / 1e3 * 1.2 * wX) % 1, this.setRouteSlide())
       }
       setRouteSlide() {
         this.routeSlide.uvOffset[1] = -this.routeOffset, this.setGameMesh(this.routeMesh, this.routeSlide)
       }
-      setGroundArrowStyle(pp) {
-        this.pendingStyle = pp, this.flushOwed()
+      setGroundArrowStyle(QQ) {
+        this.pendingStyle = QQ, this.flushOwed()
       }
       flushOwed() {
         this.mobModels.flush();
-        const pp = this.owedFrees;
-        if (0 === pp.length && void 0 === this.pendingStyle && void 0 === this.pendingFar) return;
-        const ip = this.deps.cmd();
-        if (!ip) return pp.length = 0, void(this.pendingFar = void 0);
-        let cp = 0;
-        for (; cp < pp.length && (0, yp.Je)(ip, 0, pp[cp]);) cp++;
-        pp.splice(0, cp);
-        const Op = this.pendingStyle;
-        if (void 0 !== Op) {
-          (Op ? (0, yp.Pf)(ip, 0, Op.width, Op.alpha, 1, Op.endAtSolidFace ? 1 : 0) : (0, yp.Pf)(ip, 0, 0, 0, 0, 0)) && (this.pendingStyle = void 0)
+        const QQ = this.owedFrees;
+        if (0 === QQ.length && void 0 === this.pendingStyle && void 0 === this.pendingFar) return;
+        const WQ = this.deps.cmd();
+        if (!WQ) return QQ.length = 0, void(this.pendingFar = void 0);
+        let XQ = 0;
+        for (; XQ < QQ.length && (0, jQ.We)(WQ, 0, QQ[XQ]);) XQ++;
+        QQ.splice(0, XQ);
+        const wQ = this.pendingStyle;
+        if (void 0 !== wQ) {
+          (wQ ? (0, jQ.Of)(WQ, 0, wQ.width, wQ.alpha, 1, wQ.endAtSolidFace ? 1 : 0) : (0, jQ.Of)(WQ, 0, 0, 0, 0, 0)) && (this.pendingStyle = void 0)
         }
-        const op = this.pendingFar;
-        void 0 !== op && (0, yp.Jf)(ip, 0, null !== op && void 0 !== op ? op : 0, null === op ? 1 : 0) && (this.pendingFar = void 0)
+        const qQ = this.pendingFar;
+        void 0 !== qQ && (0, jQ.Mf)(WQ, 0, null !== qQ && void 0 !== qQ ? qQ : 0, null === qQ ? 1 : 0) && (this.pendingFar = void 0)
       }
-      setNametagOffset(pp, ip) {
-        const cp = this.deps.cmd(),
-          Op = Yc(pp);
-        cp && Op !== yp.Nc && (0, yp.Zf)(cp, 0, Op, ip)
+      setNametagOffset(QQ, WQ) {
+        const XQ = this.deps.cmd(),
+          wQ = zX(QQ);
+        XQ && wQ !== jQ.xd && (0, jQ.Yf)(XQ, 0, wQ, WQ)
       }
-      setFacingTolerance(pp, ip) {
-        const cp = this.deps.cmd(),
-          Op = Yc(pp);
-        cp && Op !== yp.Nc && Dc(cp, Op, ip)
+      setFacingTolerance(QQ, WQ) {
+        const XQ = this.deps.cmd(),
+          wQ = zX(QQ);
+        XQ && wQ !== jQ.xd && sX(XQ, wQ, WQ)
       }
-      forEachEntity(pp) {
+      forEachEntity(QQ) {
         const {
-          api: ip
+          api: WQ
         } = this;
-        for (let cp = 0; cp < ip.idStr.length; cp++) {
-          const Op = ip.idStr[cp];
-          null === Op || ep(ip.kinds[cp]) || pp(Op)
+        for (let XQ = 0; XQ < WQ.idStr.length; XQ++) {
+          const wQ = WQ.idStr[XQ];
+          null === wQ || UQ(WQ.kinds[XQ]) || QQ(wQ)
         }
       }
-      getEntityInfo(pp) {
-        return this.deps.entityInfo.get(pp)
+      getEntityInfo(QQ) {
+        return this.deps.entityInfo.get(QQ)
       }
-      isEntityInteractable(pp) {
-        const ip = Yc(pp);
-        return ip !== yp.Nc && 1 === this.api.queries.entityInteractable(ip)
+      isEntityInteractable(QQ) {
+        const WQ = zX(QQ);
+        return WQ !== jQ.xd && 1 === this.api.queries.entityInteractable(WQ)
       }
-      isLocalPlayer(pp) {
-        return this.isLocal(pp)
+      isLocalPlayer(QQ) {
+        return this.isLocal(QQ)
       }
-      getLineOwner(pp) {
-        var ip;
-        const cp = null === (ip = this.deps.entityInfo.get(pp)) || void 0 === ip ? void 0 : ip.meshOpts;
-        if (!cp) return null;
+      getLineOwner(QQ) {
+        var WQ;
+        const XQ = null === (WQ = this.deps.entityInfo.get(QQ)) || void 0 === WQ ? void 0 : WQ.meshOpts;
+        if (!XQ) return null;
         try {
           const {
-            lineToEId: pp
-          } = JSON.parse(cp);
-          return null !== pp && void 0 !== pp ? pp : null
+            lineToEId: QQ
+          } = JSON.parse(XQ);
+          return null !== QQ && void 0 !== QQ ? QQ : null
         } catch {
           return null
         }
       }
       getCameraPosition() {
-        const pp = this.api.apiView;
-        return ic[0] = yp.q.eye(pp, 0, 0), ic[1] = yp.q.eye(pp, 0, 1), ic[2] = yp.q.eye(pp, 0, 2), ic
+        const QQ = this.api.apiView;
+        return mW[0] = jQ.x.eye(QQ, 0, 0), mW[1] = jQ.x.eye(QQ, 0, 1), mW[2] = jQ.x.eye(QQ, 0, 2), mW
       }
       getCameraFar() {
-        return yp.q.cameraFar(this.api.apiView, 0)
+        return jQ.x.cameraFar(this.api.apiView, 0)
       }
-      setCameraFar(pp) {
-        null !== pp && (this.farSet = !0), this.pendingFar = pp, this.flushOwed()
+      setCameraFar(QQ) {
+        null !== QQ && (this.farSet = !0), this.pendingFar = QQ, this.flushOwed()
       }
-      turnCamera(pp, ip) {
-        this.cameraTurn.turn(pp, ip)
+      turnCamera(QQ, WQ) {
+        this.cameraTurn.turn(QQ, WQ)
       }
-      clearPickupDelay(pp) {
-        const ip = this.deps.cmd(),
-          cp = Yc(pp);
-        ip && cp !== yp.Nc && (0, yp.ce)(ip, 0, cp)
+      clearPickupDelay(QQ) {
+        const WQ = this.deps.cmd(),
+          XQ = zX(QQ);
+        WQ && XQ !== jQ.xd && (0, jQ.Be)(WQ, 0, XQ)
       }
-      sendChat(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        const cp = this.deps.sendCmd();
-        cp && Zi(cp, 0, si.c.Chat, (0, Np.f)((0, si.k)({
-          VD: pp,
-          pA: ip
+      sendChat(QQ) {
+        let WQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        const XQ = this.deps.sendCmd();
+        XQ && xW(XQ, 0, NW.d.Chat, (0, uQ.e)((0, NW.j)({
+          cg: QQ,
+          Ag: WQ
         })))
       }
-      sendCommand(pp) {
-        pp.length <= 119 && this.sendChat(`/${pp}`)
+      sendCommand(QQ) {
+        QQ.length <= 119 && this.sendChat(`/${QQ}`)
       }
-      predictedCells(pp, ip, cp, Op) {
-        const op = this.chunks,
-          Ip = [],
-          Sp = (pp, ip, cp, Op, op) => {
-            Ip.push(pp, ip, cp, Op, this.tables.blockRootId(op) === this.tables.blockRootId(Op) ? 0 : 1)
+      predictedCells(QQ, WQ, XQ, wQ) {
+        const qQ = this.chunks,
+          TQ = [],
+          zQ = (QQ, WQ, XQ, wQ, qQ) => {
+            TQ.push(QQ, WQ, XQ, wQ, this.tables.blockRootId(qQ) === this.tables.blockRootId(wQ) ? 0 : 1)
           },
-          xp = op.tx(pp, ip, cp),
-          Lp = Lc(xp);
-        if (Lp) {
-          const [Op, Ip, Yp] = [pp - Lp.x, ip - Lp.y, cp - Lp.z], Dp = xc[op.tx(Op, Ip, Yp)], Ap = null === Dp || void 0 === Dp ? void 0 : Dp.positions.some((pp => pp.id === xp && pp.x === Lp.x && pp.y === Lp.y && pp.z === Lp.z));
-          for (const pp of (Ap && Dp ? Dp : Lp.main).positions) op.tx(Op + pp.x, Ip + pp.y, Yp + pp.z) === pp.id && Sp(Op + pp.x, Ip + pp.y, Yp + pp.z, 0, pp.id)
+          sQ = qQ.ez(QQ, WQ, XQ),
+          FQ = TX(sQ);
+        if (FQ) {
+          const [wQ, TQ, PQ] = [QQ - FQ.x, WQ - FQ.y, XQ - FQ.z], gQ = qX[qQ.ez(wQ, TQ, PQ)], JQ = null === gQ || void 0 === gQ ? void 0 : gQ.positions.some((QQ => QQ.id === sQ && QQ.x === FQ.x && QQ.y === FQ.y && QQ.z === FQ.z));
+          for (const QQ of (JQ && gQ ? gQ : FQ.main).positions) qQ.ez(wQ + QQ.x, TQ + QQ.y, PQ + QQ.z) === QQ.id && zQ(wQ + QQ.x, TQ + QQ.y, PQ + QQ.z, 0, QQ.id)
         }
-        const Yp = Lc(Op);
-        if (Yp)
-          for (const Ap of Yp.main.positions) {
-            const [Op, Ip, xp] = [pp + Ap.x - Yp.x, ip + Ap.y - Yp.y, cp + Ap.z - Yp.z];
-            Sp(Op, Ip, xp, Ap.id, op.tx(Op, Ip, xp))
-          } else Sp(pp, ip, cp, Op, xp);
-        const Dp = this.tables;
-        if ((0 !== Dp.attachedTopOf(xp) || 0 !== Dp.attachedTopOf(Op)) && op.isLoaded(pp, ip + 1, cp)) {
-          let Lp = op.tx(pp, ip + 1, cp);
-          for (let Op = 0; Op < Ip.length; Op += 5) Ip[Op] === pp && Ip[Op + 1] === ip + 1 && Ip[Op + 2] === cp && (Lp = Ip[Op + 3]);
-          const Yp = this.attachedTopWrite(xp, Op, Lp);
-          void 0 !== Yp && Sp(pp, ip + 1, cp, Yp, Lp)
+        const PQ = TX(wQ);
+        if (PQ)
+          for (const JQ of PQ.main.positions) {
+            const [wQ, TQ, sQ] = [QQ + JQ.x - PQ.x, WQ + JQ.y - PQ.y, XQ + JQ.z - PQ.z];
+            zQ(wQ, TQ, sQ, JQ.id, qQ.ez(wQ, TQ, sQ))
+          } else zQ(QQ, WQ, XQ, wQ, sQ);
+        const gQ = this.tables;
+        if ((0 !== gQ.attachedTopOf(sQ) || 0 !== gQ.attachedTopOf(wQ)) && qQ.isLoaded(QQ, WQ + 1, XQ)) {
+          let FQ = qQ.ez(QQ, WQ + 1, XQ);
+          for (let wQ = 0; wQ < TQ.length; wQ += 5) TQ[wQ] === QQ && TQ[wQ + 1] === WQ + 1 && TQ[wQ + 2] === XQ && (FQ = TQ[wQ + 3]);
+          const PQ = this.attachedTopWrite(sQ, wQ, FQ);
+          void 0 !== PQ && zQ(QQ, WQ + 1, XQ, PQ, FQ)
         }
-        return Ip
+        return TQ
       }
-      attachedTopWrite(pp, ip, cp) {
-        const Op = this.tables,
-          op = Op.attachedTopOf(pp),
-          Ip = Op.attachedTopOf(ip),
-          Sp = 0 !== op && 0 !== cp && Op.blockRootId(cp) === Op.blockRootId(op);
-        return 0 !== op && 0 !== Ip && Op.blockRootId(pp) === Op.blockRootId(ip) ? Sp && cp !== Ip ? Ip : void 0 : 0 === Ip || !Sp && 0 !== cp ? Sp ? 0 : void 0 : Ip
+      attachedTopWrite(QQ, WQ, XQ) {
+        const wQ = this.tables,
+          qQ = wQ.attachedTopOf(QQ),
+          TQ = wQ.attachedTopOf(WQ),
+          zQ = 0 !== qQ && 0 !== XQ && wQ.blockRootId(XQ) === wQ.blockRootId(qQ);
+        return 0 !== qQ && 0 !== TQ && wQ.blockRootId(QQ) === wQ.blockRootId(WQ) ? zQ && XQ !== TQ ? TQ : void 0 : 0 === TQ || !zQ && 0 !== XQ ? zQ ? 0 : void 0 : TQ
       }
     }
-    const Pc = yp.cc + yp.gc * yp.nc.BYTES,
-      Wc = 2147483647,
-      yc = new TextDecoder,
-      Uc = new TextEncoder,
-      wc = Object.freeze({
-        gD: 0,
-        eL: null,
+    const PX = jQ.Gc + jQ.Kc * jQ.Tc.BYTES,
+      gX = 2147483647,
+      JX = new TextDecoder,
+      rX = new TextEncoder,
+      IX = Object.freeze({
+        bg: 0,
+        QF: null,
         amountAddedToSlot: 0
       }),
-      vc = new Proxy({}, {
-        get: () => () => yp.Xc
+      jX = new Proxy({}, {
+        get: () => () => jQ.Gd
       });
 
-    function tc(pp) {
-      return Number.isInteger(pp) && pp >= 0 && pp <= 65535
+    function BX(QQ) {
+      return Number.isInteger(QQ) && QQ >= 0 && QQ <= 65535
     }
 
-    function Hc(pp) {
-      return Number.isInteger(pp) && pp >= 0 && pp <= 4294967295
+    function yX(QQ) {
+      return Number.isInteger(QQ) && QQ >= 0 && QQ <= 4294967295
     }
-    class dc {
-      constructor(pp) {
-        this.deps = pp, this.WI = [0, 0, 0], this.inaccuracy = 0, this.version = 0, this.notified = 0, this.iconChanged = !1, this.facades = new Array(yp.gc), this.ids = new Uint16Array(yp.gc), this.amounts = new Uint16Array(yp.gc), this.attrRead = new Float64Array(yp.gc).fill(-1), this.stale = new Uint16Array(yp.gc), this.staleVersion = new Uint32Array(yp.gc), this.instances = new Uint32Array(yp.gc), this.viewPtr = 0, this.viewVersion = -1, this.len = 0, this.selected = 0, this.slotIconId = 0, this.stopped = !1, this.listeners = new Set
+    class VX {
+      constructor(QQ) {
+        this.deps = QQ, this.Sq = [0, 0, 0], this.inaccuracy = 0, this.version = 0, this.notified = 0, this.iconChanged = !1, this.facades = new Array(jQ.Kc), this.ids = new Uint16Array(jQ.Kc), this.amounts = new Uint16Array(jQ.Kc), this.attrRead = new Float64Array(jQ.Kc).fill(-1), this.stale = new Uint16Array(jQ.Kc), this.staleVersion = new Uint32Array(jQ.Kc), this.instances = new Uint32Array(jQ.Kc), this.viewPtr = 0, this.viewVersion = -1, this.len = 0, this.selected = 0, this.slotIconId = 0, this.stopped = !1, this.listeners = new Set
       }
       get length() {
         return this.len
@@ -2698,261 +2713,261 @@ export const modules = {
       get changes() {
         return this.version
       }
-      slot(pp) {
-        var ip;
-        return Number.isInteger(pp) && pp >= 0 && pp < this.len && 0 !== this.ids[pp] && null !== (ip = this.facades[pp]) && void 0 !== ip ? ip : null
+      slot(QQ) {
+        var WQ;
+        return Number.isInteger(QQ) && QQ >= 0 && QQ < this.len && 0 !== this.ids[QQ] && null !== (WQ = this.facades[QQ]) && void 0 !== WQ ? WQ : null
       }
-      sx() {
+      Ds() {
         return this.slot(this.selected)
       }
       playerItems() {
-        const pp = [];
-        for (let ip = 0; ip < Math.min(yp.fd, this.len); ip++) pp.push(this.slot(ip));
-        return pp
+        const QQ = [];
+        for (let WQ = 0; WQ < Math.min(jQ.Pd, this.len); WQ++) QQ.push(this.slot(WQ));
+        return QQ
       }
       freeSlots() {
-        let pp = 0;
-        for (let ip = 0; ip < Math.min(yp.fd - yp.e, this.len); ip++) 0 === this.ids[ip] && pp++;
-        return pp
+        let QQ = 0;
+        for (let WQ = 0; WQ < Math.min(jQ.Pd - jQ.l, this.len); WQ++) 0 === this.ids[WQ] && QQ++;
+        return QQ
       }
-      amountOf(pp) {
-        let ip = 0;
-        for (let Op = 0; Op < Math.min(yp.fd, this.len); Op++) {
-          const op = this.slot(Op);
-          var cp;
-          if ((null === op || void 0 === op ? void 0 : op.name) === pp) ip += null !== (cp = op.amount) && void 0 !== cp ? cp : 1
+      amountOf(QQ) {
+        let WQ = 0;
+        for (let wQ = 0; wQ < Math.min(jQ.Pd, this.len); wQ++) {
+          const qQ = this.slot(wQ);
+          var XQ;
+          if ((null === qQ || void 0 === qQ ? void 0 : qQ.name) === QQ) WQ += null !== (XQ = qQ.amount) && void 0 !== XQ ? XQ : 1
         }
-        return ip
+        return WQ
       }
-      instance(pp) {
-        var ip;
-        return null !== (ip = this.instances[pp]) && void 0 !== ip ? ip : 0
+      instance(QQ) {
+        var WQ;
+        return null !== (WQ = this.instances[QQ]) && void 0 !== WQ ? WQ : 0
       }
-      watch(pp) {
-        return this.listeners.add(pp), () => {
-          this.listeners.delete(pp)
+      watch(QQ) {
+        return this.listeners.add(QQ), () => {
+          this.listeners.delete(QQ)
         }
       }
       touch() {
         this.version++
       }
-      flush(pp) {
+      flush(QQ) {
         if (this.version !== this.notified || this.iconChanged) {
           this.notified = this.version, this.iconChanged = !1;
-          for (const cp of [...this.listeners]) try {
-            cp()
-          } catch (ip) {
-            pp(ip)
+          for (const XQ of [...this.listeners]) try {
+            XQ()
+          } catch (WQ) {
+            QQ(WQ)
           }
         }
       }
-      chestOpened(pp, ip, cp) {
-        this.WI[0] = pp, this.WI[1] = ip, this.WI[2] = cp, this.version++
+      chestOpened(QQ, WQ, XQ) {
+        this.Sq[0] = QQ, this.Sq[1] = WQ, this.Sq[2] = XQ, this.version++
       }
       refresh() {
-        const pp = this.deps.api.apiView,
-          ip = yp.q.inventoryViewPtr(pp, 0),
-          cp = yp.q.inventoryVersion(pp, 0),
-          Op = yp.q.selectedSlot(pp, 0);
-        Op !== this.selected && (this.selected = Op, this.version++);
-        const op = yp.q.slotIcon(pp, 0);
-        if (op !== this.slotIconId && (this.slotIconId = op, this.iconChanged = !0), ip === this.viewPtr && cp === this.viewVersion) return;
-        this.viewPtr = ip, this.viewVersion = cp;
-        const Ip = this.deps.api.memoryData(ip, Pc, 4, "the inventory view"),
-          Sp = Ip ? Math.min(Ip.getUint32(0, !0), yp.gc) : 0;
-        Sp !== this.len && (this.len = Sp, this.version++);
-        let xp = 0;
-        for (let Lp = 0; Lp < yp.gc; Lp++) {
-          const pp = yp.cc + Lp * yp.nc.BYTES,
-            ip = null !== Ip && Lp < Sp ? yp.nc.item(Ip, pp) : 0;
-          if (0 === ip || null === Ip) {
-            0 !== this.ids[Lp] && (this.ids[Lp] = 0, this.attrRead[Lp] = -1, this.instances[Lp]++, this.version++);
+        const QQ = this.deps.api.apiView,
+          WQ = jQ.x.inventoryViewPtr(QQ, 0),
+          XQ = jQ.x.inventoryVersion(QQ, 0),
+          wQ = jQ.x.selectedSlot(QQ, 0);
+        wQ !== this.selected && (this.selected = wQ, this.version++);
+        const qQ = jQ.x.slotIcon(QQ, 0);
+        if (qQ !== this.slotIconId && (this.slotIconId = qQ, this.iconChanged = !0), WQ === this.viewPtr && XQ === this.viewVersion) return;
+        this.viewPtr = WQ, this.viewVersion = XQ;
+        const TQ = this.deps.api.memoryData(WQ, PX, 4, "the inventory view"),
+          zQ = TQ ? Math.min(TQ.getUint32(0, !0), jQ.Kc) : 0;
+        zQ !== this.len && (this.len = zQ, this.version++);
+        let sQ = 0;
+        for (let FQ = 0; FQ < jQ.Kc; FQ++) {
+          const QQ = jQ.Gc + FQ * jQ.Tc.BYTES,
+            WQ = null !== TQ && FQ < zQ ? jQ.Tc.item(TQ, QQ) : 0;
+          if (0 === WQ || null === TQ) {
+            0 !== this.ids[FQ] && (this.ids[FQ] = 0, this.attrRead[FQ] = -1, this.instances[FQ]++, this.version++);
             continue
           }
-          const cp = yp.nc.amount(Ip, pp),
-            Op = yp.nc.attrVersion(Ip, pp);
-          ip === this.ids[Lp] && cp === this.amounts[Lp] || this.fill(Lp, ip, cp), Op !== this.attrRead[Lp] && (this.stale[xp] = Lp, this.staleVersion[xp] = Op, xp++)
+          const XQ = jQ.Tc.amount(TQ, QQ),
+            wQ = jQ.Tc.attrVersion(TQ, QQ);
+          WQ === this.ids[FQ] && XQ === this.amounts[FQ] || this.fill(FQ, WQ, XQ), wQ !== this.attrRead[FQ] && (this.stale[sQ] = FQ, this.staleVersion[sQ] = wQ, sQ++)
         }
-        xp > 0 && this.fetchAttributes(xp)
+        sQ > 0 && this.fetchAttributes(sQ)
       }
-      fill(pp, ip, cp) {
+      fill(QQ, WQ, XQ) {
         const {
-          tables: Op
-        } = this.deps, op = ip !== this.ids[pp];
-        let Ip = this.facades[pp];
-        Ip || (Ip = {
+          tables: wQ
+        } = this.deps, qQ = WQ !== this.ids[QQ];
+        let TQ = this.facades[QQ];
+        TQ || (TQ = {
           name: "",
           amount: null,
           attributes: {
             customAttributes: {}
           },
           typeObj: null
-        }, this.facades[pp] = Ip), op && (Ip.name = Op.nameOfId(ip), Ip.typeObj = Op.itemType(ip), Ip.attributes = {
+        }, this.facades[QQ] = TQ), qQ && (TQ.name = wQ.nameOfId(WQ), TQ.typeObj = wQ.itemType(WQ), TQ.attributes = {
           customAttributes: {}
-        }, this.attrRead[pp] = -1, this.instances[pp]++), Ip.amount = 0 === cp ? null : cp, this.ids[pp] = ip, this.amounts[pp] = cp, this.version++
+        }, this.attrRead[QQ] = -1, this.instances[QQ]++), TQ.amount = 0 === XQ ? null : XQ, this.ids[QQ] = WQ, this.amounts[QQ] = XQ, this.version++
       }
-      fetchAttributes(pp) {
+      fetchAttributes(QQ) {
         const {
-          api: ip,
-          onError: cp
-        } = this.deps, Op = ip.memoryView(Uint16Array, ip.scratch(), pp, "item_attributes_batch's slots");
-        if (!Op) return void this.markRead(pp);
-        Op.set(this.stale.subarray(0, pp));
-        const op = ip.queries.itemAttributesBatch(pp),
-          Ip = 4294967295 === op ? null : ip.memoryData(ip.scratch(), op, 4, "item_attributes_batch's answer");
-        if (!Ip) return void this.markRead(pp);
-        const Sp = new Uint8Array(Ip.buffer, Ip.byteOffset, op);
-        for (let Lp = 0; Lp + 8 <= op;) {
-          const pp = Ip.getUint16(Lp, !0),
-            ip = Ip.getUint32(Lp + 4, !0),
-            Op = Sp.subarray(Lp + 8, Lp + 8 + ip);
-          Lp += 8 + (0, Pp.ue)(ip);
-          const op = this.facades[pp];
-          if (op && 0 !== this.ids[pp] && 0 !== ip) {
+          api: WQ,
+          onError: XQ
+        } = this.deps, wQ = WQ.memoryView(Uint16Array, WQ.scratch(), QQ, "item_attributes_batch's slots");
+        if (!wQ) return void this.markRead(QQ);
+        wQ.set(this.stale.subarray(0, QQ));
+        const qQ = WQ.queries.itemAttributesBatch(QQ),
+          TQ = 4294967295 === qQ ? null : WQ.memoryData(WQ.scratch(), qQ, 4, "item_attributes_batch's answer");
+        if (!TQ) return void this.markRead(QQ);
+        const zQ = new Uint8Array(TQ.buffer, TQ.byteOffset, qQ);
+        for (let FQ = 0; FQ + 8 <= qQ;) {
+          const QQ = TQ.getUint16(FQ, !0),
+            WQ = TQ.getUint32(FQ + 4, !0),
+            wQ = zQ.subarray(FQ + 8, FQ + 8 + WQ);
+          FQ += 8 + (0, rQ.te)(WQ);
+          const qQ = this.facades[QQ];
+          if (qQ && 0 !== this.ids[QQ] && 0 !== WQ) {
             try {
-              op.attributes = JSON.parse(yc.decode(Op))
-            } catch (xp) {
-              cp(xp)
+              qQ.attributes = JSON.parse(JX.decode(wQ))
+            } catch (sQ) {
+              XQ(sQ)
             }
             this.version++
           }
         }
-        this.markRead(pp)
+        this.markRead(QQ)
       }
-      markRead(pp) {
-        for (let ip = 0; ip < pp; ip++) this.attrRead[this.stale[ip]] = this.staleVersion[ip]
+      markRead(QQ) {
+        for (let WQ = 0; WQ < QQ; WQ++) this.attrRead[this.stale[WQ]] = this.staleVersion[WQ]
       }
-      swap(pp, ip) {
-        return tc(pp) && tc(ip) && this.settle(this.queries().invSwap(pp, ip))
+      swap(QQ, WQ) {
+        return BX(QQ) && BX(WQ) && this.settle(this.queries().invSwap(QQ, WQ))
       }
-      move(pp, ip, cp) {
-        return tc(pp) && tc(ip) && Hc(cp) && this.settle(this.queries().invMove(pp, ip, cp))
+      move(QQ, WQ, XQ) {
+        return BX(QQ) && BX(WQ) && yX(XQ) && this.settle(this.queries().invMove(QQ, WQ, XQ))
       }
-      quickMove(pp, ip, cp, Op) {
-        var op, Ip;
-        if (!tc(pp) || !tc(ip) || !tc(cp) || null !== Op && !Hc(Op)) return null;
-        const Sp = this.queries().invQuickMove(pp, ip, cp, null === Op ? -1 : Math.min(Op, Wc)),
-          xp = Sp === yp.Xc ? yp.yb : null !== (op = null === (Ip = this.extras()) || void 0 === Ip ? void 0 : Ip[1]) && void 0 !== op ? op : yp.yb;
-        return this.settle(Sp), xp === yp.yb ? null : xp
+      quickMove(QQ, WQ, XQ, wQ) {
+        var qQ, TQ;
+        if (!BX(QQ) || !BX(WQ) || !BX(XQ) || null !== wQ && !yX(wQ)) return null;
+        const zQ = this.queries().invQuickMove(QQ, WQ, XQ, null === wQ ? -1 : Math.min(wQ, gX)),
+          sQ = zQ === jQ.Gd ? jQ.Zb : null !== (qQ = null === (TQ = this.extras()) || void 0 === TQ ? void 0 : TQ[1]) && void 0 !== qQ ? qQ : jQ.Zb;
+        return this.settle(zQ), sQ === jQ.Zb ? null : sQ
       }
-      remove(pp, ip, cp) {
-        return tc(pp) && Hc(ip) && this.settle(this.queries().invRemove(pp, ip, cp ? 1 : 0))
+      remove(QQ, WQ, XQ) {
+        return BX(QQ) && yX(WQ) && this.settle(this.queries().invRemove(QQ, WQ, XQ ? 1 : 0))
       }
-      selectSlot(pp) {
-        return tc(pp) && this.settle(this.queries().selectSlot(pp))
+      selectSlot(QQ) {
+        return BX(QQ) && this.settle(this.queries().selectSlot(QQ))
       }
       closeChest() {
         return this.settle(this.queries().closeChest())
       }
-      enchant(pp, ip, cp) {
-        if (!tc(pp) || !Number.isInteger(ip)) return !1;
-        const [Op, op, Ip] = cp;
-        return this.settle(this.queries().invEnchant(pp, ip, Math.floor(Op), Math.floor(op), Math.floor(Ip)))
+      enchant(QQ, WQ, XQ) {
+        if (!BX(QQ) || !Number.isInteger(WQ)) return !1;
+        const [wQ, qQ, TQ] = XQ;
+        return this.settle(this.queries().invEnchant(QQ, WQ, Math.floor(wQ), Math.floor(qQ), Math.floor(TQ)))
       }
-      craft(pp, ip, cp) {
-        let Op;
+      craft(QQ, WQ, XQ) {
+        let wQ;
         try {
-          Op = this.deps.tables.getItemId(pp)
+          wQ = this.deps.tables.getItemId(QQ)
         } catch {
-          return wc
+          return IX
         }
-        if (!tc(ip) || null !== cp && (Number.isNaN(cp) || cp < 0)) return wc;
-        const op = null === cp || cp > Wc ? -1 : Math.floor(cp),
-          Ip = this.queries().craft(Op, ip, op);
-        let Sp = wc;
-        const xp = Ip === yp.Xc ? null : this.extras();
-        if (xp) {
-          const [pp, ip, cp] = xp;
-          Sp = {
-            gD: pp,
-            eL: ip === yp.yb ? null : ip,
-            amountAddedToSlot: cp
+        if (!BX(WQ) || null !== XQ && (Number.isNaN(XQ) || XQ < 0)) return IX;
+        const qQ = null === XQ || XQ > gX ? -1 : Math.floor(XQ),
+          TQ = this.queries().craft(wQ, WQ, qQ);
+        let zQ = IX;
+        const sQ = TQ === jQ.Gd ? null : this.extras();
+        if (sQ) {
+          const [QQ, WQ, XQ] = sQ;
+          zQ = {
+            bg: QQ,
+            QF: WQ === jQ.Zb ? null : WQ,
+            amountAddedToSlot: XQ
           }
         }
-        return this.settle(Ip), Sp
+        return this.settle(TQ), zQ
       }
-      salvage(pp, ip, cp) {
-        let Op;
+      salvage(QQ, WQ, XQ) {
+        let wQ;
         try {
-          Op = this.deps.tables.getItemId(ip)
+          wQ = this.deps.tables.getItemId(WQ)
         } catch {
           return !1
         }
-        return tc(pp) && Number.isInteger(cp) && this.settle(this.queries().salvage(pp, Op, Math.max(Math.min(cp, Wc), -Wc)))
+        return BX(QQ) && Number.isInteger(XQ) && this.settle(this.queries().salvage(QQ, wQ, Math.max(Math.min(XQ, gX), -gX)))
       }
-      craftingView(pp, ip, cp) {
-        var Op;
+      craftingView(QQ, WQ, XQ) {
+        var wQ;
         if (this.stopped) return null;
         const {
-          api: op,
-          onError: Ip
-        } = this.deps, Sp = pp ? Uc.encode(pp) : null;
-        if (null !== Sp) {
-          if (Sp.length > 1024) return Ip(new Error(`The crafting station ${pp}'s name is over 1024 bytes`)), null;
-          const ip = op.memoryView(Uint8Array, op.scratch(), Sp.length, "crafting_view's station");
-          if (!ip) return null;
-          ip.set(Sp)
+          api: qQ,
+          onError: TQ
+        } = this.deps, zQ = QQ ? rX.encode(QQ) : null;
+        if (null !== zQ) {
+          if (zQ.length > 1024) return TQ(new Error(`The crafting station ${QQ}'s name is over 1024 bytes`)), null;
+          const WQ = qQ.memoryView(Uint8Array, qQ.scratch(), zQ.length, "crafting_view's station");
+          if (!WQ) return null;
+          WQ.set(zQ)
         }
-        const xp = tc(ip) && tc(cp),
-          Lp = op.queries.craftingView(null !== (Op = null === Sp || void 0 === Sp ? void 0 : Sp.length) && void 0 !== Op ? Op : 0, xp ? ip : 0, xp ? cp : 0);
-        return Lp < yp._.BYTES ? (op.reportCorruption(`crafting_view's answer of ${Lp} bytes`), null) : op.memoryData(op.scratch(), Lp, 1, "crafting_view's answer")
+        const sQ = BX(WQ) && BX(XQ),
+          FQ = qQ.queries.craftingView(null !== (wQ = null === zQ || void 0 === zQ ? void 0 : zQ.length) && void 0 !== wQ ? wQ : 0, sQ ? WQ : 0, sQ ? XQ : 0);
+        return FQ < jQ.ub.BYTES ? (qQ.reportCorruption(`crafting_view's answer of ${FQ} bytes`), null) : qQ.memoryData(qQ.scratch(), FQ, 1, "crafting_view's answer")
       }
       queries() {
-        var pp, ip;
-        return !1 === (null === (pp = (ip = this.deps).beforeOp) || void 0 === pp ? void 0 : pp.call(ip)) ? (this.stopped = !0, vc) : this.deps.api.queries
+        var QQ, WQ;
+        return !1 === (null === (QQ = (WQ = this.deps).beforeOp) || void 0 === QQ ? void 0 : QQ.call(WQ)) ? (this.stopped = !0, jX) : this.deps.api.queries
       }
       extras() {
         const {
-          api: pp
+          api: QQ
         } = this.deps;
-        return pp.memoryView(Uint32Array, pp.scratch(), 3, "a sync query's extra words")
+        return QQ.memoryView(Uint32Array, QQ.scratch(), 3, "a sync query's extra words")
       }
-      settle(pp) {
-        if (pp === yp.Tc)(0, ri.e)();
-        else if (pp !== yp.Xc) {
-          const ip = this.deps.cmd();
-          ip && function(pp, ip, cp) {
-            return (0, ri.e)(), (0, yp.hg)(pp, ip, cp)
-          }(ip, 0, pp) || this.deps.onError(new Error(`Sync op ${pp}'s marker didn't fit the command ring: its send goes after the next frame's commands`))
+      settle(QQ) {
+        if (QQ === jQ.Fd)(0, nW.c)();
+        else if (QQ !== jQ.Gd) {
+          const WQ = this.deps.cmd();
+          WQ && function(QQ, WQ, XQ) {
+            return (0, nW.c)(), (0, jQ.dg)(QQ, WQ, XQ)
+          }(WQ, 0, QQ) || this.deps.onError(new Error(`Sync op ${QQ}'s marker didn't fit the command ring: its send goes after the next frame's commands`))
         }
-        return this.stopped || this.refresh(), pp !== yp.Xc
+        return this.stopped || this.refresh(), QQ !== jQ.Gd
       }
     }
-    const ec = 1 / .6,
-      uc = [0, 1, 0],
-      jc = [0, 0, 0],
-      kc = new Uint8Array(0),
-      mc = 1.2 * wi.g.Kw,
-      Rc = new TextEncoder,
-      qc = [0, 0, 0],
-      Mc = [0, 0, 0],
-      Cc = new Map;
+    const DX = 1 / .6,
+      pX = [0, 1, 0],
+      GX = [0, 0, 0],
+      UX = new Uint8Array(0),
+      bX = 1.2 * jW.h.ny,
+      vX = new TextEncoder,
+      dX = [0, 0, 0],
+      HX = [0, 0, 0],
+      aX = new Map;
 
-    function Ec(pp) {
-      let ip = Cc.get(pp);
-      return ip || (Cc.size >= 64 && Cc.clear(), ip = Rc.encode(`{"emitRate":${pp}}`), Cc.set(pp, ip)), ip
+    function lX(QQ) {
+      let WQ = aX.get(QQ);
+      return WQ || (aX.size >= 64 && aX.clear(), WQ = vX.encode(`{"emitRate":${QQ}}`), aX.set(QQ, WQ)), WQ
     }
 
-    function Xc(pp) {
-      return Number.isFinite(pp) && pp > 0 ? pp : 0
+    function hX(QQ) {
+      return Number.isFinite(QQ) && QQ > 0 ? QQ : 0
     }
 
-    function lc(pp, ip) {
-      for (let cp = 0; cp < 3; cp++) {
-        const Op = Math.abs(ip[cp]);
-        qc[cp] = pp[cp] - Op, Mc[cp] = 2 * Op
+    function iX(QQ, WQ) {
+      for (let XQ = 0; XQ < 3; XQ++) {
+        const wQ = Math.abs(WQ[XQ]);
+        dX[XQ] = QQ[XQ] - wQ, HX[XQ] = 2 * wQ
       }
-      return Number.isFinite(qc[0] + qc[1] + qc[2] + Mc[0] + Mc[1] + Mc[2])
+      return Number.isFinite(dX[0] + dX[1] + dX[2] + HX[0] + HX[1] + HX[2])
     }
 
-    function Qc(pp, ip) {
-      return "pos1" === pp || "pos2" === pp ? void 0 : ip
+    function cX(QQ, WQ) {
+      return "pos1" === QQ || "pos2" === QQ ? void 0 : WQ
     }
 
-    function Jc(pp, ip, cp) {
-      return pp.length > yp.ud.MaxOpts ? (cp(new Error(`${ip}'s particle opts are over ${yp.ud.MaxOpts} bytes of JSON`)), null) : pp
+    function AX(QQ, WQ, XQ) {
+      return QQ.length > jQ._d.MaxOpts ? (XQ(new Error(`${WQ}'s particle opts are over ${jQ._d.MaxOpts} bytes of JSON`)), null) : QQ
     }
-    const Bc = {
+    const RX = {
       moveTo() {},
       setEmitRate() {},
       emit() {},
@@ -2961,9 +2976,9 @@ export const modules = {
       stop() {},
       dispose() {}
     };
-    class Nc {
-      constructor(pp) {
-        this.deps = pp, this.session = 0, this.nextKey = 1, this.live = 0, this.started = !1
+    class EX {
+      constructor(QQ) {
+        this.deps = QQ, this.session = 0, this.nextKey = 1, this.live = 0, this.started = !1
       }
       enabled() {
         return null !== this.sink()
@@ -2971,113 +2986,113 @@ export const modules = {
       sink() {
         return this.deps.isSessionLive() ? this.deps.cmd() : null
       }
-      create(pp, ip) {
-        var cp;
-        const Op = this.sink(),
-          op = null !== (cp = ip.half) && void 0 !== cp ? cp : jc;
-        if (!Op || this.live >= yp.ud.MaxLiveKeys || this.nextKey > yp.ud.MaxKey || !lc(ip.pos, op)) return Bc;
-        const Ip = this.nextKey,
-          Sp = Jc(function(pp) {
-            var ip, cp, Op;
-            const op = JSON.stringify({
-              texture: "string" === typeof pp.texture ? pp.texture : "smokePuff",
-              TA: pp.TA,
-              minLifeTime: pp.minLifeTime,
-              maxLifeTime: pp.maxLifeTime,
-              minSize: pp.minSize,
-              maxSize: pp.maxSize,
-              minEmitPower: pp.minEmitPower,
-              maxEmitPower: pp.maxEmitPower,
-              emitRate: Xc(pp.emitRate),
-              gravity: null !== (ip = pp.gravity) && void 0 !== ip ? ip : jc,
-              dir1: null !== (cp = pp.dir1) && void 0 !== cp ? cp : uc,
-              dir2: null !== (Op = pp.dir2) && void 0 !== Op ? Op : uc,
-              colorGradients: pp.colorGradients,
-              blendMode: pp.blendMode
+      create(QQ, WQ) {
+        var XQ;
+        const wQ = this.sink(),
+          qQ = null !== (XQ = WQ.half) && void 0 !== XQ ? XQ : GX;
+        if (!wQ || this.live >= jQ._d.MaxLiveKeys || this.nextKey > jQ._d.MaxKey || !iX(WQ.pos, qQ)) return RX;
+        const TQ = this.nextKey,
+          zQ = AX(function(QQ) {
+            var WQ, XQ, wQ;
+            const qQ = JSON.stringify({
+              texture: "string" === typeof QQ.texture ? QQ.texture : "smokePuff",
+              yJ: QQ.yJ,
+              minLifeTime: QQ.minLifeTime,
+              maxLifeTime: QQ.maxLifeTime,
+              minSize: QQ.minSize,
+              maxSize: QQ.maxSize,
+              minEmitPower: QQ.minEmitPower,
+              maxEmitPower: QQ.maxEmitPower,
+              emitRate: hX(QQ.emitRate),
+              gravity: null !== (WQ = QQ.gravity) && void 0 !== WQ ? WQ : GX,
+              dir1: null !== (XQ = QQ.dir1) && void 0 !== XQ ? XQ : pX,
+              dir2: null !== (wQ = QQ.dir2) && void 0 !== wQ ? wQ : pX,
+              colorGradients: QQ.colorGradients,
+              blendMode: QQ.blendMode
             });
-            return Rc.encode(op)
-          }(pp), "createParticles", this.deps.onError);
-        return Sp && (0, yp.ff)(Op, 0, Ip, 0, yp.ud.PresetNone, 0, qc, Mc, Sp) ? (this.nextKey++, this.live++, this.started = !0, new Tc(this, this.session, Ip, pp, op)) : Bc
+            return vX.encode(qQ)
+          }(QQ), "createParticles", this.deps.onError);
+        return zQ && (0, jQ.mf)(wQ, 0, TQ, 0, jQ._d.PresetNone, 0, dX, HX, zQ) ? (this.nextKey++, this.live++, this.started = !0, new CX(this, this.session, TQ, QQ, qQ)) : RX
       }
-      playEffect(pp) {
-        const ip = this.sink(),
+      playEffect(QQ) {
+        const WQ = this.sink(),
           {
-            pos1: cp,
-            pos2: Op
-          } = pp;
-        if (!ip || !cp || !Op) return;
-        for (let Ip = 0; Ip < 3; Ip++) qc[Ip] = Math.min(cp[Ip], Op[Ip]), Mc[Ip] = Math.abs(Op[Ip] - cp[Ip]);
-        if (!Number.isFinite(qc[0] + qc[1] + qc[2] + Mc[0] + Mc[1] + Mc[2])) return;
-        const op = Jc(Rc.encode(JSON.stringify(pp, Qc)), "playParticleEffect", this.deps.onError);
-        op && (0, yp.$e)(ip, 0, 0, yp.ud.PresetNone, yp.ud.HasBox, 0, qc, Mc, op)
+            pos1: XQ,
+            pos2: wQ
+          } = QQ;
+        if (!WQ || !XQ || !wQ) return;
+        for (let TQ = 0; TQ < 3; TQ++) dX[TQ] = Math.min(XQ[TQ], wQ[TQ]), HX[TQ] = Math.abs(wQ[TQ] - XQ[TQ]);
+        if (!Number.isFinite(dX[0] + dX[1] + dX[2] + HX[0] + HX[1] + HX[2])) return;
+        const qQ = AX(vX.encode(JSON.stringify(QQ, cX)), "playParticleEffect", this.deps.onError);
+        qQ && (0, jQ.kf)(WQ, 0, 0, jQ._d.PresetNone, jQ._d.HasBox, 0, dX, HX, qQ)
       }
-      burstPreset(pp, ip, cp) {
-        const Op = this.sink(),
-          op = Math.min(Math.floor(cp), yp.ud.MaxBurst);
-        if (!Op || !Object.hasOwn(yp.Tb, pp) || !(op > 0)) return;
-        const Ip = mc;
-        for (let Sp = 0; Sp < 3; Sp++) qc[Sp] = ip[Sp] - Ip / 2, Mc[Sp] = Ip;
-        Number.isFinite(qc[0] + qc[1] + qc[2]) && (0, yp.$e)(Op, 0, 0, yp.Tb[pp], yp.ud.HasBox, op, qc, Mc, kc)
+      burstPreset(QQ, WQ, XQ) {
+        const wQ = this.sink(),
+          qQ = Math.min(Math.floor(XQ), jQ._d.MaxBurst);
+        if (!wQ || !Object.hasOwn(jQ.vc, QQ) || !(qQ > 0)) return;
+        const TQ = bX;
+        for (let zQ = 0; zQ < 3; zQ++) dX[zQ] = WQ[zQ] - TQ / 2, HX[zQ] = TQ;
+        Number.isFinite(dX[0] + dX[1] + dX[2]) && (0, jQ.kf)(wQ, 0, 0, jQ.vc[QQ], jQ._d.HasBox, qQ, dX, HX, UX)
       }
       sessionEnded() {
         this.session++;
-        const pp = this.started ? this.deps.cmd() : null;
-        return this.started = !1, this.nextKey = 1, this.live = 0, !pp || (0, yp.if)(pp, 0)
+        const QQ = this.started ? this.deps.cmd() : null;
+        return this.started = !1, this.nextKey = 1, this.live = 0, !QQ || (0, jQ.nf)(QQ, 0)
       }
-      sinkFor(pp) {
-        return pp === this.session ? this.deps.cmd() : null
+      sinkFor(QQ) {
+        return QQ === this.session ? this.deps.cmd() : null
       }
-      stop(pp, ip) {
-        const cp = this.sinkFor(pp);
-        cp && (0, yp.lf)(cp, 0, ip) && this.live--
+      stop(QQ, WQ) {
+        const XQ = this.sinkFor(QQ);
+        XQ && (0, jQ.of)(XQ, 0, WQ) && this.live--
       }
     }
-    class Tc {
-      constructor(pp, ip, cp, Op, op) {
-        this.owner = pp, this.session = ip, this.key = cp, this.half = void 0, this.rate = void 0, this.stopDelayMs = void 0, this.emitted = void 0, this.stopped = !1, this.freed = !1, this.half = [Math.abs(op[0]), Math.abs(op[1]), Math.abs(op[2])], this.rate = Xc(Op.emitRate), this.emitted = this.rate > 0;
-        const Ip = Op.maxLifeTime * ec * 1e3 + 250;
-        this.stopDelayMs = Ip >= 0 ? Math.min(Ip, 2147483647) : 250
+    class CX {
+      constructor(QQ, WQ, XQ, wQ, qQ) {
+        this.owner = QQ, this.session = WQ, this.key = XQ, this.half = void 0, this.rate = void 0, this.stopDelayMs = void 0, this.emitted = void 0, this.stopped = !1, this.freed = !1, this.half = [Math.abs(qQ[0]), Math.abs(qQ[1]), Math.abs(qQ[2])], this.rate = hX(wQ.emitRate), this.emitted = this.rate > 0;
+        const TQ = wQ.maxLifeTime * DX * 1e3 + 250;
+        this.stopDelayMs = TQ >= 0 ? Math.min(TQ, 2147483647) : 250
       }
       sink() {
         return this.stopped ? null : this.owner.sinkFor(this.session)
       }
-      moveTo(pp, ip) {
-        const cp = this.sink();
-        if (cp) {
-          if (ip)
-            for (let pp = 0; pp < 3; pp++) this.half[pp] = Math.abs(ip[pp]);
-          lc(pp, this.half) && (0, yp.mf)(cp, 0, this.key, yp.ud.HasBox, qc, Mc, kc)
+      moveTo(QQ, WQ) {
+        const XQ = this.sink();
+        if (XQ) {
+          if (WQ)
+            for (let QQ = 0; QQ < 3; QQ++) this.half[QQ] = Math.abs(WQ[QQ]);
+          iX(QQ, this.half) && (0, jQ.sf)(XQ, 0, this.key, jQ._d.HasBox, dX, HX, UX)
         }
       }
-      setEmitRate(pp) {
-        const ip = this.sink(),
-          cp = Xc(pp);
-        ip && cp !== this.rate && (0, yp.mf)(ip, 0, this.key, 0, jc, jc, Ec(cp)) && (this.rate = cp, this.emitted ||= cp > 0)
+      setEmitRate(QQ) {
+        const WQ = this.sink(),
+          XQ = hX(QQ);
+        WQ && XQ !== this.rate && (0, jQ.sf)(WQ, 0, this.key, 0, GX, GX, lX(XQ)) && (this.rate = XQ, this.emitted ||= XQ > 0)
       }
-      emit(pp) {
-        const ip = this.sink(),
-          cp = Math.min(Math.floor(pp), yp.ud.MaxBurst);
-        ip && cp > 0 && (0, yp.$e)(ip, 0, this.key, yp.ud.PresetNone, 0, cp, jc, jc, kc) && (this.emitted = !0)
+      emit(QQ) {
+        const WQ = this.sink(),
+          XQ = Math.min(Math.floor(QQ), jQ._d.MaxBurst);
+        WQ && XQ > 0 && (0, jQ.kf)(WQ, 0, this.key, jQ._d.PresetNone, 0, XQ, GX, GX, UX) && (this.emitted = !0)
       }
-      emitPoints(pp, ip, cp) {
-        const Op = this.sink(),
-          op = Math.min(Math.floor(cp), yp.ud.MaxPoints, Math.floor(ip.length / 4));
-        if (!Op || !(op > 0) || !Number.isFinite(pp[0] + pp[1] + pp[2])) return;
-        const Ip = new Uint8Array(ip.buffer, ip.byteOffset, op * yp.ud.PointBytes);
-        (0, yp.cf)(Op, 0, this.key, op, pp, Ip) && (this.emitted = !0)
+      emitPoints(QQ, WQ, XQ) {
+        const wQ = this.sink(),
+          qQ = Math.min(Math.floor(XQ), jQ._d.MaxPoints, Math.floor(WQ.length / 4));
+        if (!wQ || !(qQ > 0) || !Number.isFinite(QQ[0] + QQ[1] + QQ[2])) return;
+        const TQ = new Uint8Array(WQ.buffer, WQ.byteOffset, qQ * jQ._d.PointBytes);
+        (0, jQ.lf)(wQ, 0, this.key, qQ, QQ, TQ) && (this.emitted = !0)
       }
-      setDirections(pp, ip) {
-        const cp = this.sink();
-        if (!cp || !Number.isFinite(pp[0] + pp[1] + pp[2] + ip[0] + ip[1] + ip[2])) return;
-        const Op = Rc.encode(JSON.stringify({
-          dir1: [pp[0], pp[1], pp[2]],
-          dir2: [ip[0], ip[1], ip[2]]
+      setDirections(QQ, WQ) {
+        const XQ = this.sink();
+        if (!XQ || !Number.isFinite(QQ[0] + QQ[1] + QQ[2] + WQ[0] + WQ[1] + WQ[2])) return;
+        const wQ = vX.encode(JSON.stringify({
+          dir1: [QQ[0], QQ[1], QQ[2]],
+          dir2: [WQ[0], WQ[1], WQ[2]]
         }));
-        (0, yp.mf)(cp, 0, this.key, 0, jc, jc, Op)
+        (0, jQ.sf)(XQ, 0, this.key, 0, GX, GX, wQ)
       }
       stop() {
-        const pp = this.sink();
-        this.stopped = !0, pp && (this.emitted ? (this.rate > 0 && (0, yp.mf)(pp, 0, this.key, 0, jc, jc, Ec(0)), setTimeout((() => {
+        const QQ = this.sink();
+        this.stopped = !0, QQ && (this.emitted ? (this.rate > 0 && (0, jQ.sf)(QQ, 0, this.key, 0, GX, GX, lX(0)), setTimeout((() => {
           this.free()
         }), this.stopDelayMs)) : this.free())
       }
@@ -3088,266 +3103,266 @@ export const modules = {
         this.freed || (this.freed = !0, this.owner.stop(this.session, this.key))
       }
     }
-    const fc = Fi.p,
-      bc = new TextDecoder;
+    const uX = tW.l,
+      LX = new TextDecoder;
 
-    function hc(pp, ip) {
+    function kX(QQ, WQ) {
       const {
-        serverIds: cp,
-        kinds: Op
-      } = pp;
-      let op = 0;
-      for (let Ip = 0; Ip < cp.length; Ip++) {
-        const pp = cp[Ip];
-        if (pp !== yp.Nc && !ep(Op[Ip])) {
-          if (op === ip.length) {
-            const pp = new Int32Array(Math.max(64, 2 * op));
-            pp.set(ip), ip = pp
+        serverIds: XQ,
+        kinds: wQ
+      } = QQ;
+      let qQ = 0;
+      for (let TQ = 0; TQ < XQ.length; TQ++) {
+        const QQ = XQ[TQ];
+        if (QQ !== jQ.xd && !UQ(wQ[TQ])) {
+          if (qQ === WQ.length) {
+            const QQ = new Int32Array(Math.max(64, 2 * qQ));
+            QQ.set(WQ), WQ = QQ
           }
-          ip[op++] = pp
+          WQ[qQ++] = QQ
         }
       }
       return {
-        ids: ip,
-        count: op
+        ids: WQ,
+        count: qQ
       }
     }
 
-    function ac(pp, ip) {
-      return pp.length >= ip ? pp : new Int32Array(Math.max(ip, 2 * pp.length))
+    function fX(QQ, WQ) {
+      return QQ.length >= WQ ? QQ : new Int32Array(Math.max(WQ, 2 * QQ.length))
     }
 
-    function nc(pp, ip, cp, Op) {
-      for (let op = 0; op < cp; op += 4096) {
-        const Ip = Math.min(4096, cp - op),
-          Sp = pp.memoryView(Int32Array, pp.scratch(), Ip, "entity_info_batch's ids");
-        if (!Sp) return !1;
-        Sp.set(ip.subarray(op, op + Ip));
-        const xp = pp.queries.entityInfoBatch(Ip),
-          Lp = 4294967295 === xp ? null : pp.memoryData(pp.scratch(), xp, 4, "entity_info_batch's records");
-        if (!Lp) return !1;
-        for (let pp = 0; pp + yp.Eb.BYTES <= xp;) {
-          const ip = yp.Eb.len(Lp, pp);
-          Op(yp.Eb.serverId(Lp, pp), Fc(Lp, pp, ip)), pp += yp.Eb.BYTES + (0, Pp.ue)(ip)
+    function SX(QQ, WQ, XQ, wQ) {
+      for (let qQ = 0; qQ < XQ; qQ += 4096) {
+        const TQ = Math.min(4096, XQ - qQ),
+          zQ = QQ.memoryView(Int32Array, QQ.scratch(), TQ, "entity_info_batch's ids");
+        if (!zQ) return !1;
+        zQ.set(WQ.subarray(qQ, qQ + TQ));
+        const sQ = QQ.queries.entityInfoBatch(TQ),
+          FQ = 4294967295 === sQ ? null : QQ.memoryData(QQ.scratch(), sQ, 4, "entity_info_batch's records");
+        if (!FQ) return !1;
+        for (let QQ = 0; QQ + jQ.hc.BYTES <= sQ;) {
+          const WQ = jQ.hc.len(FQ, QQ);
+          wQ(jQ.hc.serverId(FQ, QQ), tX(FQ, QQ, WQ)), QQ += jQ.hc.BYTES + (0, rQ.te)(WQ)
         }
       }
       return !0
     }
 
-    function Fc(pp, ip, cp) {
-      var Op, op, Ip;
-      const Sp = yp.Eb.kind(pp, ip),
-        xp = 0 === Sp ? null : jp(Sp);
-      if (null === xp) return null;
-      const Lp = yp.Eb.variation(pp, ip),
-        Yp = yp.Eb.pose(pp, ip),
-        Dp = yp.Eb.meta(pp, ip),
-        Ap = yp.Eb.mesh(pp, ip),
-        Pp = 0 !== (yp.Eb.flags(pp, ip) & yp.Cb.HasOpts),
-        Wp = fc[xp];
+    function tX(QQ, WQ, XQ) {
+      var wQ, qQ, TQ;
+      const zQ = jQ.hc.kind(QQ, WQ),
+        sQ = 0 === zQ ? null : bQ(zQ);
+      if (null === sQ) return null;
+      const FQ = jQ.hc.variation(QQ, WQ),
+        PQ = jQ.hc.pose(QQ, WQ),
+        gQ = jQ.hc.meta(QQ, WQ),
+        JQ = jQ.hc.mesh(QQ, WQ),
+        rQ = 0 !== (jQ.hc.flags(QQ, WQ) & jQ.ec.HasOpts),
+        IQ = uX[sQ];
       return Object.freeze({
-        type: xp,
-        variation: Lp === yp.Sc ? void 0 : null !== (Op = null !== (op = null === Wp || void 0 === Wp ? void 0 : Wp[Lp]) && void 0 !== op ? op : null === Wp || void 0 === Wp ? void 0 : Wp[0]) && void 0 !== Op ? Op : "default",
-        pose: Yp === yp._b ? void 0 : null !== (Ip = yp.tb[Yp]) && void 0 !== Ip ? Ip : yp.tb[0],
-        metaInfo: Dp === yp._b ? void 0 : yp.Gc[Dp],
-        meshKind: Ap === yp._b ? void 0 : yp.Fc[Ap],
-        meshOpts: Pp ? bc.decode(new Uint8Array(pp.buffer, pp.byteOffset + ip + yp.Eb.BYTES, cp)) : void 0
+        type: sQ,
+        variation: FQ === jQ.Ed ? void 0 : null !== (wQ = null !== (qQ = null === IQ || void 0 === IQ ? void 0 : IQ[FQ]) && void 0 !== qQ ? qQ : null === IQ || void 0 === IQ ? void 0 : IQ[0]) && void 0 !== wQ ? wQ : "default",
+        pose: PQ === jQ.Cc ? void 0 : null !== (TQ = jQ.Vb[PQ]) && void 0 !== TQ ? TQ : jQ.Vb[0],
+        metaInfo: gQ === jQ.Cc ? void 0 : jQ.pd[gQ],
+        meshKind: JQ === jQ.Cc ? void 0 : jQ.nd[JQ],
+        meshOpts: rQ ? LX.decode(new Uint8Array(QQ.buffer, QQ.byteOffset + WQ + jQ.hc.BYTES, XQ)) : void 0
       })
     }
-    const gc = 1,
-      Gc = 2;
-    class rc {
-      constructor(pp) {
-        this.deps = pp, this.wanted = 0, this.sx = !1, this.refused = !1
+    const oX = 1,
+      eX = 2;
+    class nX {
+      constructor(QQ) {
+        this.deps = QQ, this.wanted = 0, this.Ds = !1, this.refused = !1
       }
       get on() {
-        return this.sx
+        return this.Ds
       }
-      want(pp, ip) {
-        this.wanted = ip ? this.wanted | pp : this.wanted & ~pp;
-        const cp = 0 !== this.wanted;
-        if (cp === this.sx) return;
-        const Op = this.deps.cmd();
-        null !== Op ? (0, yp.kg)(Op, 0, cp ? 1 : 0) ? (this.sx = cp, this.refused = !1) : this.refused || (this.refused = !0, this.deps.onError(new Error("WatchEntityInfo didn't fit the command ring"))) : this.sx = !1
+      want(QQ, WQ) {
+        this.wanted = WQ ? this.wanted | QQ : this.wanted & ~QQ;
+        const XQ = 0 !== this.wanted;
+        if (XQ === this.Ds) return;
+        const wQ = this.deps.cmd();
+        null !== wQ ? (0, jQ.gg)(wQ, 0, XQ ? 1 : 0) ? (this.Ds = XQ, this.refused = !1) : this.refused || (this.refused = !0, this.deps.onError(new Error("WatchEntityInfo didn't fit the command ring"))) : this.Ds = !1
       }
     }
-    class Zc {
-      constructor(pp) {
-        this.deps = pp, this.entries = new Map, this.complete = !1, this.refill = !1, this.midFrame = !1, this.pending = new Int32Array(64), this.pendingCount = 0, this.ids = new Int32Array(64)
+    class xX {
+      constructor(QQ) {
+        this.deps = QQ, this.entries = new Map, this.complete = !1, this.refill = !1, this.midFrame = !1, this.pending = new Int32Array(64), this.pendingCount = 0, this.ids = new Int32Array(64)
       }
-      get(pp) {
-        var ip;
-        return this.complete || this.fill(), null !== (ip = this.entries.get("string" === typeof pp ? pp : String(pp))) && void 0 !== ip ? ip : null
+      get(QQ) {
+        var WQ;
+        return this.complete || this.fill(), null !== (WQ = this.entries.get("string" === typeof QQ ? QQ : String(QQ))) && void 0 !== WQ ? WQ : null
       }
       inCoreCall() {
         this.midFrame = !0
       }
-      stale(pp) {
+      stale(QQ) {
         if (this.complete) {
           if (this.pendingCount === this.pending.length) {
-            const pp = new Int32Array(2 * this.pending.length);
-            pp.set(this.pending), this.pending = pp
+            const QQ = new Int32Array(2 * this.pending.length);
+            QQ.set(this.pending), this.pending = QQ
           }
-          this.pending[this.pendingCount++] = pp
+          this.pending[this.pendingCount++] = QQ
         }
       }
-      removed(pp) {
-        this.entries.size > 0 && this.entries.delete(String(pp))
+      removed(QQ) {
+        this.entries.size > 0 && this.entries.delete(String(QQ))
       }
       refresh() {
-        const pp = this.pendingCount;
+        const QQ = this.pendingCount;
         if (this.pendingCount = 0, this.midFrame = !1, !this.deps.watch.on || this.refill) return this.complete = !1, void(this.refill = !1);
-        if (pp > 0 && this.complete) {
+        if (QQ > 0 && this.complete) {
           const {
-            api: ip
+            api: WQ
           } = this.deps;
-          let cp = 0;
-          const Op = this.ids = ac(this.ids, pp);
-          for (let op = 0; op < pp; op++) {
-            const pp = this.pending[op],
-              Ip = ip.indexById.get(pp);
-            void 0 === Ip || ep(ip.kinds[Ip]) ? this.entries.delete(String(pp)) : Op[cp++] = pp
+          let XQ = 0;
+          const wQ = this.ids = fX(this.ids, QQ);
+          for (let qQ = 0; qQ < QQ; qQ++) {
+            const QQ = this.pending[qQ],
+              TQ = WQ.indexById.get(QQ);
+            void 0 === TQ || UQ(WQ.kinds[TQ]) ? this.entries.delete(String(QQ)) : wQ[XQ++] = QQ
           }
-          cp > 0 && !this.batch(Op, cp) && (this.complete = !1)
+          XQ > 0 && !this.batch(wQ, XQ) && (this.complete = !1)
         }
       }
       sessionEnded() {
-        this.entries.clear(), this.complete = !1, this.refill = !1, this.midFrame = !1, this.pendingCount = 0, this.deps.watch.want(gc, !1)
+        this.entries.clear(), this.complete = !1, this.refill = !1, this.midFrame = !1, this.pendingCount = 0, this.deps.watch.want(oX, !1)
       }
       fill() {
         const {
-          api: pp
+          api: QQ
         } = this.deps;
         if (this.complete = !0, this.pendingCount = 0, this.entries.clear(), this.deps.isSessionLive()) {
           const {
-            watch: pp
-          } = this.deps, ip = pp.on;
-          pp.want(gc, !0), !ip && pp.on && (this.refill = this.midFrame)
+            watch: QQ
+          } = this.deps, WQ = QQ.on;
+          QQ.want(oX, !0), !WQ && QQ.on && (this.refill = this.midFrame)
         }
         const {
-          ids: ip,
-          count: cp
-        } = hc(pp, this.ids);
-        this.ids = ip, cp > 0 && !this.batch(ip, cp) && (this.refill = !0)
+          ids: WQ,
+          count: XQ
+        } = kX(QQ, this.ids);
+        this.ids = WQ, XQ > 0 && !this.batch(WQ, XQ) && (this.refill = !0)
       }
-      batch(pp, ip) {
-        return nc(this.deps.api, pp, ip, ((pp, ip) => {
-          null === ip ? this.entries.delete(String(pp)) : this.entries.set(String(pp), ip)
+      batch(QQ, WQ) {
+        return SX(this.deps.api, QQ, WQ, ((QQ, WQ) => {
+          null === WQ ? this.entries.delete(String(QQ)) : this.entries.set(String(QQ), WQ)
         }))
       }
     }
-    var zc = cp(4911);
+    var YX = XQ(5140);
 
-    function sc(pp) {
-      if ("message" !== pp.type || pp.VD !== zc.Zb.NewClientOptions || pp.payloadKind !== Pp.kc.Msgpack) return null;
-      const ip = (0, Np.c)(pp.payload);
-      if (null === ip || "object" !== typeof ip || Array.isArray(ip)) throw new Error("NewClientOptions whose body isn't an object of options");
-      return ip
+    function NX(QQ) {
+      if ("message" !== QQ.type || QQ.cg !== YX.gc.NewClientOptions || QQ.payloadKind !== rQ.rc.Msgpack) return null;
+      const WQ = (0, uQ.d)(QQ.payload);
+      if (null === WQ || "object" !== typeof WQ || Array.isArray(WQ)) throw new Error("NewClientOptions whose body isn't an object of options");
+      return WQ
     }
-    var Kc = cp(1251),
-      Vc = cp(36828);
+    var ZX = XQ(1273),
+      OX = XQ(36926);
 
-    function pO(pp, ip, cp, Op, op, Ip, xp) {
-      var Lp, Yp, Dp;
-      switch (pp) {
-        case yp.Sd.ToggleMenu: {
-          const pp = yp.A[ip];
-          Sp.m.GA("toggleMenu", void 0 === pp ? "inventory" : `inventory|${pp}`);
+    function KX(QQ, WQ, XQ, wQ, qQ, TQ, sQ) {
+      var FQ, PQ, gQ;
+      switch (QQ) {
+        case jQ.qe.ToggleMenu: {
+          const QQ = jQ.N[WQ];
+          zQ.k.mB("toggleMenu", void 0 === QQ ? "inventory" : `inventory|${QQ}`);
           break
         }
-        case yp.Sd.EditBoard:
-          Sp.m.GA("EditBoard", {
-            pos: 0 === ip ? null : cp
+        case jQ.qe.EditBoard:
+          zQ.k.mB("EditBoard", {
+            pos: 0 === WQ ? null : XQ
           });
           break;
-        case yp.Sd.EditCodeBlock:
-        case yp.Sd.ViewCodeBlock:
-          Sp.m.GA("EditCodeBlock", {
-            pos: cp,
-            canChangePos: pp === yp.Sd.EditCodeBlock
+        case jQ.qe.EditCodeBlock:
+        case jQ.qe.ViewCodeBlock:
+          zQ.k.mB("EditCodeBlock", {
+            pos: XQ,
+            canChangePos: QQ === jQ.qe.EditCodeBlock
           });
           break;
-        case yp.Sd.EditCustomLobbyBlock:
-          Sp.m.GA("EditCustomLobbyBlock", {
-            pos: cp
+        case jQ.qe.EditCustomLobbyBlock:
+          zQ.k.mB("EditCustomLobbyBlock", {
+            pos: XQ
           });
           break;
-        case yp.Sd.OpenIronChest:
-          Sp.m.GA("OpenIronChest", {
-            pos: cp
+        case jQ.qe.OpenIronChest:
+          zQ.k.mB("OpenIronChest", {
+            pos: XQ
           });
           break;
-        case yp.Sd.EditNameTag:
-          Sp.m.GA("EditNameTag", null !== (Lp = null === (Yp = op.sx()) || void 0 === Yp || null === (Dp = Yp.attributes.customAttributes) || void 0 === Dp ? void 0 : Dp.text) && void 0 !== Lp ? Lp : "");
+        case jQ.qe.EditNameTag:
+          zQ.k.mB("EditNameTag", null !== (FQ = null === (PQ = qQ.Ds()) || void 0 === PQ || null === (gQ = PQ.attributes.customAttributes) || void 0 === gQ ? void 0 : gQ.text) && void 0 !== FQ ? FQ : "");
           break;
-        case yp.Sd.EditBook: {
-          var Ap, Pp, Up;
-          const pp = null === (Ap = op.sx()) || void 0 === Ap ? void 0 : Ap.attributes;
-          Sp.m.GA("EditBook", {
-            pages: (0, Kc.P)(null === pp || void 0 === pp || null === (Pp = pp.customAttributes) || void 0 === Pp ? void 0 : Pp.pages),
-            title: null !== (Up = null === pp || void 0 === pp ? void 0 : pp.customDisplayName) && void 0 !== Up ? Up : "Title",
-            isPublished: !(null === pp || void 0 === pp || !pp.customDescription)
+        case jQ.qe.EditBook: {
+          var JQ, rQ, BQ;
+          const QQ = null === (JQ = qQ.Ds()) || void 0 === JQ ? void 0 : JQ.attributes;
+          zQ.k.mB("EditBook", {
+            pages: (0, ZX.S)(null === QQ || void 0 === QQ || null === (rQ = QQ.customAttributes) || void 0 === rQ ? void 0 : rQ.pages),
+            title: null !== (BQ = null === QQ || void 0 === QQ ? void 0 : QQ.customDisplayName) && void 0 !== BQ ? BQ : "Title",
+            isPublished: !(null === QQ || void 0 === QQ || !QQ.customDescription)
           });
           break
         }
-        case yp.Sd.CantChangeBlock:
-          ! function(pp, ip) {
-            const cp = ip.getClientOption("cantChangeError"),
-              Op = ip.getClientOption(pp ? "cantBuildError" : "cantBreakError"),
-              op = pp ? cp : Op;
-            (ip.getClientOption("canChange") || op || "You cannot modify this block" !== cp) && Sp.m.GA("showBottomMessage", {
-              message: Op || cp,
+        case jQ.qe.CantChangeBlock:
+          ! function(QQ, WQ) {
+            const XQ = WQ.getClientOption("cantChangeError"),
+              wQ = WQ.getClientOption(QQ ? "cantBuildError" : "cantBreakError"),
+              qQ = QQ ? XQ : wQ;
+            (WQ.getClientOption("canChange") || qQ || "You cannot modify this block" !== XQ) && zQ.k.mB("showBottomMessage", {
+              message: wQ || XQ,
               type: "Error"
             })
-          }(1 === ip, Ip);
+          }(1 === WQ, TQ);
           break;
-        case yp.Sd.MiddleBarStart:
-          Sp.m.GA("middleScreenBarInitiate", {
-            duration: Op,
-            OI: 1 === cp[0],
-            horizBarRemOffset: ip
+        case jQ.qe.MiddleBarStart:
+          zQ.k.mB("middleScreenBarInitiate", {
+            duration: wQ,
+            cq: 1 === XQ[0],
+            horizBarRemOffset: WQ
           });
           break;
-        case yp.Sd.MiddleBarStop:
-          Sp.m.GA("middleScreenBarRemove");
+        case jQ.qe.MiddleBarStop:
+          zQ.k.mB("middleScreenBarRemove");
           break;
-        case yp.Sd.Hitmarker:
-          Sp.m.GA("localGunHitmarker", {
-            cc: 1 === ip
+        case jQ.qe.Hitmarker:
+          zQ.k.mB("localGunHitmarker", {
+            fW: 1 === WQ
           });
           break;
-        case yp.Sd.ShotsLeft:
-          Sp.m.GA("localPlayerNewShotsLeft", Op);
+        case jQ.qe.ShotsLeft:
+          zQ.k.mB("localPlayerNewShotsLeft", wQ);
           break;
-        case yp.Sd.AimingOverlay:
-          Sp.m.GA("aimingOverlay", 3 === (3 & ip) ? "sniper" : "none");
+        case jQ.qe.AimingOverlay:
+          zQ.k.mB("aimingOverlay", 3 === (3 & WQ) ? "sniper" : "none");
           break;
-        case yp.Sd.BottomMessage:
-          Sp.m.GA("showBottomMessage", JSON.parse(xp()));
+        case jQ.qe.BottomMessage:
+          zQ.k.mB("showBottomMessage", JSON.parse(sQ()));
           break;
-        case yp.Sd.Crosshair:
-          op.inaccuracy = (0, Tp.i)(Op), (0, Vc.e)().crosshairAccuracy(op.inaccuracy);
+        case jQ.qe.Crosshair:
+          qQ.inaccuracy = (0, LQ.f)(wQ), (0, OX.e)().crosshairAccuracy(qQ.inaccuracy);
           break;
-        case yp.Sd.ChargeStage:
+        case jQ.qe.ChargeStage:
           break;
-        case yp.Sd.EmoteWheelClose:
-          Sp.m.GA("requestEmoteWheelClose");
+        case jQ.qe.EmoteWheelClose:
+          zQ.k.mB("requestEmoteWheelClose");
           break;
-        case yp.Sd.BlockMined:
-          Sp.m.GA("localBlockMined");
+        case jQ.qe.BlockMined:
+          zQ.k.mB("localBlockMined");
           break;
         default:
-          throw new Wp.b(`UiEvent of no kind: what ${pp}`)
+          throw new IQ.d(`UiEvent of no kind: what ${QQ}`)
       }
     }
-    var iO = cp(38218),
-      cO = cp(34438),
-      OO = cp(1996),
-      oO = cp(37010),
-      IO = cp(34448),
-      SO = cp(4886);
-    const xO = 10,
-      LO = {
+    var mX = XQ(38277),
+      MX = XQ(34516),
+      Qw = XQ(2048),
+      Ww = XQ(37105),
+      Xw = XQ(34529),
+      ww = XQ(5118);
+    const qw = 10,
+      Tw = {
         player: [],
         chestOrCreative: [],
         chest: null,
@@ -3355,678 +3370,679 @@ export const modules = {
         selectedSlot: 0,
         freeSlots: 0
       },
-      YO = {
+      zw = {
         items: [],
         ammo: 0,
         selectedSlot: 0
       },
-      DO = {
+      sw = {
         gun: !1,
         aimable: !1,
         chargeName: null
       };
 
-    function AO(pp, ip) {
-      let cp, Op = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-        op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-      const Ip = () => (cp = (0, OO.s)(cp, ip()), cp);
+    function Fw(QQ, WQ) {
+      let XQ, wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+        qQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+      const TQ = () => (XQ = (0, Qw.j)(XQ, WQ()), XQ);
       return {
-        current: Ip,
-        watch(ip) {
-          const cp = () => {
-              ip(Ip())
+        current: TQ,
+        watch(WQ) {
+          const XQ = () => {
+              WQ(TQ())
             },
-            Sp = [pp.watch(cp)];
-          return null !== Op && Sp.push((0, OO.v)((pp => {
-            pp.some(Op) && cp()
-          }))), null !== op && Sp.push(op(cp)), () => {
-            for (const pp of Sp) pp()
+            zQ = [QQ.watch(XQ)];
+          return null !== wQ && zQ.push((0, Qw.k)((QQ => {
+            QQ.some(wQ) && XQ()
+          }))), null !== qQ && zQ.push(qQ(XQ)), () => {
+            for (const QQ of zQ) QQ()
           }
         }
       }
     }
 
-    function PO(pp) {
-      return pp && {
-        name: pp.name,
-        amount: pp.amount,
-        attributes: pp.attributes
+    function Pw(QQ) {
+      return QQ && {
+        name: QQ.name,
+        amount: QQ.amount,
+        attributes: QQ.attributes
       }
     }
-    const WO = new WeakMap;
+    const gw = new WeakMap;
 
-    function yO(pp) {
-      let ip = WO.get(pp);
-      return void 0 === ip && (ip = (0, IO.creativeItemIds)().map((ip => ({
-        name: pp.nameOfId(ip),
-        amount: pp.isStackableId(ip) ? 1 : null,
-        attributes: (0, iO.e)("Gun" === (0, IO.itemTypeOf)(ip) ? {
+    function Jw(QQ) {
+      let WQ = gw.get(QQ);
+      return void 0 === WQ && (WQ = (0, Xw.creativeItemIds)().map((WQ => ({
+        name: QQ.nameOfId(WQ),
+        amount: QQ.isStackableId(WQ) ? 1 : null,
+        attributes: (0, mX.c)("Gun" === (0, Xw.itemTypeOf)(WQ) ? {
           type: "Gun",
-          clipSize: (0, IO.clipSizeOf)(ip)
+          clipSize: (0, Xw.clipSizeOf)(WQ)
         } : void 0)
-      }))), WO.set(pp, ip)), ip
+      }))), gw.set(QQ, WQ)), WQ
     }
 
-    function UO(pp, ip, cp, Op) {
-      const op = ip => (pp.flush(Op), ip),
-        Ip = cp => {
-          var Op, op, Ip, Sp, xp, Lp, Yp;
-          const Dp = pp.slot(cp);
-          if (!Dp) return null;
+    function rw(QQ, WQ, XQ, wQ) {
+      const qQ = WQ => (QQ.flush(wQ), WQ),
+        TQ = XQ => {
+          var wQ, qQ, TQ, zQ, sQ, FQ, PQ;
+          const gQ = QQ.slot(XQ);
+          if (!gQ) return null;
           const {
-            rootName: Ap,
-            metaStr: Pp
-          } = ip.getMetaInfo(Dp.name);
+            rootName: JQ,
+            metaStr: rQ
+          } = WQ.getMetaInfo(gQ.name);
           return {
-            name: Dp.name,
-            amount: Dp.amount,
-            attributes: Dp.attributes,
-            instance: pp.instance(cp),
-            displayName: null !== (Op = Dp.attributes.customDisplayName) && void 0 !== Op ? Op : ip.getDisplayName(Ap),
-            requiresAmmo: "RequiresAmmo" === Pp,
-            clipSize: null !== (op = null !== (Ip = null === (Sp = Dp.attributes.customAttributes) || void 0 === Sp || null === (xp = Sp.gunStats) || void 0 === xp ? void 0 : xp.clipSize) && void 0 !== Ip ? Ip : null === (Lp = ip.getGunStats(Ap)) || void 0 === Lp ? void 0 : Lp.clipSize) && void 0 !== op ? op : null === (Yp = Dp.typeObj) || void 0 === Yp ? void 0 : Yp.clipSize
+            name: gQ.name,
+            amount: gQ.amount,
+            attributes: gQ.attributes,
+            instance: QQ.instance(XQ),
+            displayName: null !== (wQ = gQ.attributes.customDisplayName) && void 0 !== wQ ? wQ : WQ.getDisplayName(JQ),
+            requiresAmmo: "RequiresAmmo" === rQ,
+            clipSize: null !== (qQ = null !== (TQ = null === (zQ = gQ.attributes.customAttributes) || void 0 === zQ || null === (sQ = zQ.gunStats) || void 0 === sQ ? void 0 : sQ.clipSize) && void 0 !== TQ ? TQ : null === (FQ = WQ.getGunStats(JQ)) || void 0 === FQ ? void 0 : FQ.clipSize) && void 0 !== qQ ? qQ : null === (PQ = gQ.typeObj) || void 0 === PQ ? void 0 : PQ.clipSize
           }
         },
-        xp = function(pp, ip) {
-          let cp = null,
-            Op = {
+        sQ = function(QQ, WQ) {
+          let XQ = null,
+            wQ = {
               focus: null,
               recipes: [],
               detail: null
             },
-            op = -1;
-          const Ip = new Set;
+            qQ = -1;
+          const TQ = new Set;
           return {
             read() {
-              var Ip, Sp;
-              if (null === cp) return null !== Op.focus && (Op = {
-                ...Op,
+              var TQ, zQ;
+              if (null === XQ) return null !== wQ.focus && (wQ = {
+                ...wQ,
                 focus: null
-              }), Op;
-              if (Op.focus === cp && op === pp.changes) return Op;
-              if (op = pp.changes, 0 === pp.length) return Op = {
-                focus: cp,
+              }), wQ;
+              if (wQ.focus === XQ && qQ === QQ.changes) return wQ;
+              if (qQ = QQ.changes, 0 === QQ.length) return wQ = {
+                focus: XQ,
                 recipes: [],
                 detail: null
-              }, Op;
-              let xp = 0;
-              if (null !== cp.recipe) try {
-                xp = ip.getItemId(cp.recipe.name)
+              }, wQ;
+              let sQ = 0;
+              if (null !== XQ.recipe) try {
+                sQ = WQ.getItemId(XQ.recipe.name)
               } catch {}
-              const Lp = pp.craftingView(cp.station, xp, null !== (Ip = null === (Sp = cp.recipe) || void 0 === Sp ? void 0 : Sp.FD) && void 0 !== Ip ? Ip : 0);
-              return Op = null === Lp ? {
-                focus: cp,
+              const FQ = QQ.craftingView(XQ.station, sQ, null !== (TQ = null === (zQ = XQ.recipe) || void 0 === zQ ? void 0 : zQ.Ug) && void 0 !== TQ ? TQ : 0);
+              return wQ = null === FQ ? {
+                focus: XQ,
                 recipes: [],
                 detail: null
-              } : function(pp, ip, cp) {
-                let Op = yp._.BYTES;
-                const op = [];
-                for (let Dp = yp._.recipes(pp, 0); Dp > 0; Dp--) {
-                  const cp = yp.S.flags(pp, Op),
-                    Ip = {
-                      name: ip.nameOfId(yp.S.item(pp, Op)),
-                      FD: yp.S.recipe(pp, Op),
+              } : function(QQ, WQ, XQ) {
+                let wQ = jQ.ub.BYTES;
+                const qQ = [];
+                for (let gQ = jQ.ub.recipes(QQ, 0); gQ > 0; gQ--) {
+                  const XQ = jQ.ob.flags(QQ, wQ),
+                    TQ = {
+                      name: WQ.nameOfId(jQ.ob.item(QQ, wQ)),
+                      Ug: jQ.ob.recipe(QQ, wQ),
                       requires: [],
-                      produces: yp.S.produces(pp, Op),
-                      haveIngredients: 0 !== (cp & yp.P.HaveIngredients),
-                      listed: 0 !== (cp & yp.P.Listed)
+                      produces: jQ.ob.produces(QQ, wQ),
+                      haveIngredients: 0 !== (XQ & jQ.kb.HaveIngredients),
+                      listed: 0 !== (XQ & jQ.kb.Listed)
                     };
-                  let Sp = yp.S.requires(pp, Op);
-                  for (Op += yp.S.BYTES; Sp > 0; Sp--) {
-                    const cp = yp.V.items(pp, Op);
-                    Ip.requires.push({
-                      items: tO(pp, Op + yp.V.BYTES, cp, ip),
-                      amt: yp.V.amount(pp, Op)
-                    }), Op += yp.V.BYTES + 2 * cp
+                  let zQ = jQ.ob.requires(QQ, wQ);
+                  for (wQ += jQ.ob.BYTES; zQ > 0; zQ--) {
+                    const XQ = jQ.pb.items(QQ, wQ);
+                    TQ.requires.push({
+                      items: Bw(QQ, wQ + jQ.pb.BYTES, XQ, WQ),
+                      amt: jQ.pb.amount(QQ, wQ)
+                    }), wQ += jQ.pb.BYTES + 2 * XQ
                   }
-                  op.push(Ip)
+                  qQ.push(TQ)
                 }
-                const Ip = yp._.flags(pp, 0);
-                if (null === cp.recipe || 0 === (Ip & yp.Y.Detail)) return {
-                  focus: cp,
-                  recipes: op,
+                const TQ = jQ.ub.flags(QQ, 0);
+                if (null === XQ.recipe || 0 === (TQ & jQ.tb.Detail)) return {
+                  focus: XQ,
+                  recipes: qQ,
                   detail: null
                 };
-                const Sp = {},
-                  xp = {};
-                for (let Dp = yp._.ingredients(pp, 0); Dp > 0; Dp--) {
-                  const cp = yp.M.item(pp, Op),
-                    op = yp.M.from(pp, Op),
-                    Ip = yp.M.amount(pp, Op);
-                  Op += yp.M.BYTES;
-                  const Lp = op === yp.y ? null : tO(pp, Op, op, ip);
-                  if (null !== Lp && (Op += 2 * op), 0 === cp) continue;
-                  const Yp = ip.nameOfId(cp);
-                  Sp[Yp] = Ip, null !== Lp && (xp[Yp] = Lp)
+                const zQ = {},
+                  sQ = {};
+                for (let gQ = jQ.ub.ingredients(QQ, 0); gQ > 0; gQ--) {
+                  const XQ = jQ.gb.item(QQ, wQ),
+                    qQ = jQ.gb.from(QQ, wQ),
+                    TQ = jQ.gb.amount(QQ, wQ);
+                  wQ += jQ.gb.BYTES;
+                  const FQ = qQ === jQ.J ? null : Bw(QQ, wQ, qQ, WQ);
+                  if (null !== FQ && (wQ += 2 * qQ), 0 === XQ) continue;
+                  const PQ = WQ.nameOfId(XQ);
+                  zQ[PQ] = TQ, null !== FQ && (sQ[PQ] = FQ)
                 }
                 const {
-                  name: Lp,
-                  FD: Yp
-                } = cp.recipe;
+                  name: FQ,
+                  Ug: PQ
+                } = XQ.recipe;
                 return {
-                  focus: cp,
-                  recipes: op,
+                  focus: XQ,
+                  recipes: qQ,
                   detail: {
-                    name: Lp,
-                    FD: Yp,
-                    craftAllTimes: yp._.craftAllTimes(pp, 0),
-                    roomForOne: 0 !== (Ip & yp.Y.RoomForOne),
-                    resultStackable: Boolean(ip.getItemStat(Lp, "stackable")),
-                    amounts: Sp,
-                    ingredientsCraftedFrom: xp
+                    name: FQ,
+                    Ug: PQ,
+                    craftAllTimes: jQ.ub.craftAllTimes(QQ, 0),
+                    roomForOne: 0 !== (TQ & jQ.tb.RoomForOne),
+                    resultStackable: Boolean(WQ.getItemStat(FQ, "stackable")),
+                    amounts: zQ,
+                    ingredientsCraftedFrom: sQ
                   }
                 }
-              }(Lp, ip, cp), Op
+              }(FQ, WQ, XQ), wQ
             },
-            setFocus(pp) {
-              cp = pp;
-              for (const ip of [...Ip]) ip()
+            setFocus(QQ) {
+              XQ = QQ;
+              for (const WQ of [...TQ]) WQ()
             },
-            watchFocus: pp => (Ip.add(pp), () => {
-              Ip.delete(pp)
+            watchFocus: QQ => (TQ.add(QQ), () => {
+              TQ.delete(QQ)
             })
           }
-        }(pp, ip);
+        }(QQ, WQ);
       return {
         states: {
-          inventory: AO(pp, (() => {
-            const cp = pp.length;
-            if (0 === cp) return LO;
-            const Op = [];
-            for (let ip = 0; ip < yp.fd; ip++) Op.push(PO(pp.slot(ip)));
-            const op = pp.slotIcon,
-              Ip = Op[pp.selectedSlot];
-            0 !== op && Ip && (Op[pp.selectedSlot] = {
-              ...Ip,
-              icon: ip.nameOfId(op)
+          inventory: Fw(QQ, (() => {
+            const XQ = QQ.length;
+            if (0 === XQ) return Tw;
+            const wQ = [];
+            for (let WQ = 0; WQ < jQ.Pd; WQ++) wQ.push(Pw(QQ.slot(WQ)));
+            const qQ = QQ.slotIcon,
+              TQ = wQ[QQ.selectedSlot];
+            0 !== qQ && TQ && (wQ[QQ.selectedSlot] = {
+              ...TQ,
+              icon: WQ.nameOfId(qQ)
             });
-            const Sp = !0 === ip.getClientOption("creative");
-            let xp = [],
-              Lp = null;
-            if (cp > yp.fd) {
-              for (let ip = yp.fd; ip < cp; ip++) xp.push(PO(pp.slot(ip)));
-              Lp = {
+            const zQ = !0 === WQ.getClientOption("creative");
+            let sQ = [],
+              FQ = null;
+            if (XQ > jQ.Pd) {
+              for (let WQ = jQ.Pd; WQ < XQ; WQ++) sQ.push(Pw(QQ.slot(WQ)));
+              FQ = {
                 type: null,
-                pos: [...pp.WI],
-                numSlots: cp - yp.fd,
+                pos: [...QQ.Sq],
+                numSlots: XQ - jQ.Pd,
                 ironChest: null
               }
-            } else Sp && (xp = yO(ip));
+            } else zQ && (sQ = Jw(WQ));
             return {
-              player: Op,
-              chestOrCreative: xp,
-              chest: Lp,
-              creative: Sp,
-              selectedSlot: pp.selectedSlot,
-              freeSlots: pp.freeSlots()
+              player: wQ,
+              chestOrCreative: sQ,
+              chest: FQ,
+              creative: zQ,
+              selectedSlot: QQ.selectedSlot,
+              freeSlots: QQ.freeSlots()
             }
-          }), (0, OO.l)("creative")),
-          hotbar: AO(pp, (() => {
-            if (0 === pp.length) return YO;
-            const ip = [];
-            for (let pp = 0; pp < xO; pp++) ip.push(Ip(pp));
+          }), (0, Qw.g)("creative")),
+          hotbar: Fw(QQ, (() => {
+            if (0 === QQ.length) return zw;
+            const WQ = [];
+            for (let QQ = 0; QQ < qw; QQ++) WQ.push(TQ(QQ));
             return {
-              items: ip,
-              ammo: pp.amountOf("Ammo"),
-              selectedSlot: pp.selectedSlot
+              items: WQ,
+              ammo: QQ.amountOf("Ammo"),
+              selectedSlot: QQ.selectedSlot
             }
-          }), (0, OO.i)("DisplayName", "GunStats")),
-          crafting: AO(pp, xp.read, null, xp.watchFocus),
-          heldItemAim: AO(pp, (() => {
-            var ip;
-            if (!cp()) return DO;
-            const Op = null === (ip = pp.sx()) || void 0 === ip ? void 0 : ip.typeObj,
-              op = "Gun" === (null === Op || void 0 === Op ? void 0 : Op.type);
+          }), (0, Qw.f)("DisplayName", "GunStats")),
+          crafting: Fw(QQ, sQ.read, null, sQ.watchFocus),
+          heldItemAim: Fw(QQ, (() => {
+            var WQ;
+            if (!XQ()) return sw;
+            const wQ = null === (WQ = QQ.Ds()) || void 0 === WQ ? void 0 : WQ.typeObj,
+              qQ = "Gun" === (null === wQ || void 0 === wQ ? void 0 : wQ.type);
             return {
-              gun: op,
-              aimable: op || !0 === (null === Op || void 0 === Op ? void 0 : Op.showsAimingUi),
-              chargeName: "Chargeable" === (null === Op || void 0 === Op ? void 0 : Op.type) ? Op.name : null
+              gun: qQ,
+              aimable: qQ || !0 === (null === wQ || void 0 === wQ ? void 0 : wQ.showsAimingUi),
+              chargeName: "Chargeable" === (null === wQ || void 0 === wQ ? void 0 : wQ.type) ? wQ.name : null
             }
-          }), null, (pp => function(pp, ip) {
-            let cp = pp();
-            return (0, SO.s)((() => {
-              const Op = pp();
-              Op !== cp && (cp = Op, ip(Op))
+          }), null, (QQ => function(QQ, WQ) {
+            let XQ = QQ();
+            return (0, ww.w)((() => {
+              const wQ = QQ();
+              wQ !== XQ && (XQ = wQ, WQ(wQ))
             }))
-          }(cp, pp)))
+          }(XQ, QQ)))
         },
         events: {
-          hotbarSlotRequested: (0, OO.e)("setSelectedInventorySlotI"),
-          hotbarScrolled: (0, OO.e)("ScrollInventorySlot"),
-          numberKeyPressed: (0, OO.e)("numkeyPressed"),
-          inventoryDropRequested: (0, OO.e)("DropInvenItem"),
-          chestToggled: (0, OO.e)("chestToggleFromServer"),
-          chestRefreshed: (0, OO.e)("chestRefreshedFromServer", vO),
-          inventorySynced: (0, OO.e)("syncedInvenFromServer", vO),
-          enchantingTableOpened: (0, OO.e)("enchantingTable", (pp => {
+          hotbarSlotRequested: (0, Qw.c)("setSelectedInventorySlotI"),
+          hotbarScrolled: (0, Qw.c)("ScrollInventorySlot"),
+          numberKeyPressed: (0, Qw.c)("numkeyPressed"),
+          inventoryDropRequested: (0, Qw.c)("DropInvenItem"),
+          chestToggled: (0, Qw.c)("chestToggleFromServer"),
+          chestRefreshed: (0, Qw.c)("chestRefreshedFromServer", jw),
+          inventorySynced: (0, Qw.c)("syncedInvenFromServer", jw),
+          enchantingTableOpened: (0, Qw.c)("enchantingTable", (QQ => {
             let {
-              position: cp,
-              tx: Op
-            } = pp;
+              position: XQ,
+              ez: wQ
+            } = QQ;
             return {
-              position: [...cp],
-              blockName: ip.getMetaInfo(Op).rootName
+              position: [...XQ],
+              blockName: WQ.getMetaInfo(wQ).rootName
             }
           }))
         },
         commands: {
-          selectHotbarSlot(ip) {
-            pp.selectSlot(ip), pp.flush(Op)
+          selectHotbarSlot(WQ) {
+            QQ.selectSlot(WQ), QQ.flush(wQ)
           },
-          removeInventoryItem(ip) {
+          removeInventoryItem(WQ) {
             let {
-              slot: cp,
-              amount: Op,
-              drop: Ip
-            } = ip;
-            return op(pp.remove(cp, Op, Ip))
+              slot: XQ,
+              amount: wQ,
+              drop: TQ
+            } = WQ;
+            return qQ(QQ.remove(XQ, wQ, TQ))
           },
-          swapInventorySlots(ip) {
+          swapInventorySlots(WQ) {
             let {
-              a: cp,
-              b: Op
-            } = ip;
-            return op(pp.swap(cp, Op))
+              a: XQ,
+              b: wQ
+            } = WQ;
+            return qQ(QQ.swap(XQ, wQ))
           },
-          moveInventoryItem(ip) {
+          moveInventoryItem(WQ) {
             let {
-              from: cp,
-              to: Op,
-              amount: Ip
-            } = ip;
-            return op(pp.move(cp, Op, Ip))
+              from: XQ,
+              to: wQ,
+              amount: TQ
+            } = WQ;
+            return qQ(QQ.move(XQ, wQ, TQ))
           },
-          quickMoveInventoryItem(ip) {
+          quickMoveInventoryItem(WQ) {
             let {
-              slot: cp,
-              start: Op,
-              end: Ip,
-              amount: Sp
-            } = ip;
-            return op(pp.quickMove(cp, Op, Ip, Sp))
+              slot: XQ,
+              start: wQ,
+              end: TQ,
+              amount: zQ
+            } = WQ;
+            return qQ(QQ.quickMove(XQ, wQ, TQ, zQ))
           },
           closeChest() {
-            pp.closeChest(), pp.flush(Op), Sp.m.GA("chestClosedByPlayer")
+            QQ.closeChest(), QQ.flush(wQ), zQ.k.mB("chestClosedByPlayer")
           },
-          focusCrafting(pp) {
-            xp.setFocus(pp)
+          focusCrafting(QQ) {
+            sQ.setFocus(QQ)
           },
-          craftRecipe(ip) {
+          craftRecipe(WQ) {
             let {
-              name: cp,
-              FD: Op,
-              times: Ip
-            } = ip;
-            return op(pp.craft(cp, Op, Ip))
+              name: XQ,
+              Ug: wQ,
+              times: TQ
+            } = WQ;
+            return qQ(QQ.craft(XQ, wQ, TQ))
           },
-          salvageItem(ip) {
+          salvageItem(WQ) {
             let {
-              slot: cp,
-              name: Op,
-              amount: Ip
-            } = ip;
-            return op(pp.salvage(cp, Op, Ip))
+              slot: XQ,
+              name: wQ,
+              amount: TQ
+            } = WQ;
+            return qQ(QQ.salvage(XQ, wQ, TQ))
           },
-          enchantItem(ip) {
+          enchantItem(WQ) {
             let {
-              slot: cp,
-              level: Op,
-              tablePos: op
-            } = ip;
-            pp.enchant(cp, Op, op)
+              slot: XQ,
+              level: wQ,
+              tablePos: qQ
+            } = WQ;
+            QQ.enchant(XQ, wQ, qQ)
           }
         },
         queries: {
-          enchantingOffer(cp) {
+          enchantingOffer(XQ) {
             let {
-              slot: Op,
-              blockName: op
-            } = cp;
-            return function(pp, ip, cp, Op) {
-              const op = pp.slot(cp);
-              if (!op || !ip.getClientOption("canCraft") || !(0, cO.r)(Op) || (0, cO.q)(op.attributes)) return wO;
-              const Ip = (0, IO.enchantmentPerksOf)(ip.getItemId(op.name));
-              if (0 === Ip.length) return wO;
-              const Sp = [];
-              for (let xp = 0; xp < oO.d; xp++) {
+              slot: wQ,
+              blockName: qQ
+            } = XQ;
+            return function(QQ, WQ, XQ, wQ) {
+              const qQ = QQ.slot(XQ);
+              if (!qQ || !WQ.getClientOption("canCraft") || !(0, MX.m)(wQ) || (0, MX.k)(qQ.attributes)) return Iw;
+              const TQ = (0, Xw.enchantmentPerksOf)(WQ.getItemId(qQ.name));
+              if (0 === TQ.length) return Iw;
+              const zQ = [];
+              for (let sQ = 0; sQ < Ww.b; sQ++) {
                 const {
-                  commonProb: pp,
-                  uncommonProb: ip,
-                  rareProb: cp,
-                  epicProb: op,
-                  legendaryProb: Ip,
-                  level: Lp
-                } = (0, cO.g)(Op, xp);
-                Sp.push({
-                  level: Lp,
-                  odds: [pp, ip, cp, op, Ip].map((pp => 100 * pp))
+                  commonProb: QQ,
+                  uncommonProb: WQ,
+                  rareProb: XQ,
+                  epicProb: qQ,
+                  legendaryProb: TQ,
+                  level: FQ
+                } = (0, MX.c)(wQ, sQ);
+                zQ.push({
+                  level: FQ,
+                  odds: [QQ, WQ, XQ, qQ, TQ].map((QQ => 100 * QQ))
                 })
               }
               return {
-                perks: [...Ip],
-                options: Sp
+                perks: [...TQ],
+                options: zQ
               }
-            }(pp, ip, Op, op)
+            }(QQ, WQ, wQ, qQ)
           }
         }
       }
     }
-    const wO = Object.freeze({
+    const Iw = Object.freeze({
       perks: [],
       options: []
     });
 
-    function vO() {
+    function jw() {
       return null
     }
 
-    function tO(pp, ip, cp, Op) {
-      const op = [];
-      for (let Ip = 0; Ip < cp; Ip++) {
-        const cp = pp.getUint16(ip + 2 * Ip, !0);
-        0 !== cp && op.push(Op.nameOfId(cp))
+    function Bw(QQ, WQ, XQ, wQ) {
+      const qQ = [];
+      for (let TQ = 0; TQ < XQ; TQ++) {
+        const XQ = QQ.getUint16(WQ + 2 * TQ, !0);
+        0 !== XQ && qQ.push(wQ.nameOfId(XQ))
       }
-      return op
+      return qQ
     }
-    class HO {
-      constructor(pp) {
-        this.api = pp, this.positions = new Map, this.targeted = {
-          KV: 0,
+    class yw {
+      constructor(QQ) {
+        this.api = QQ, this.positions = new Map, this.targeted = {
+          w6: 0,
           position: [0, 0, 0],
           normal: [0, 0, 0],
-          nY: [0, 0, 0]
+          OB: [0, 0, 0]
         }, this.hasTarget = !1, this.breaking = [0, 0, 0], this.isBreaking = !1
       }
-      position(pp) {
-        let ip = this.positions.get(pp);
-        return ip || (this.api.checkValid(pp) || this.api.isLocal(pp) ? (ip = [NaN, NaN, NaN], this.api.readPosition(pp, ip), this.positions.set(pp, ip), ip) : null)
+      position(QQ) {
+        let WQ = this.positions.get(QQ);
+        return WQ || (this.api.checkValid(QQ) || this.api.isLocal(QQ) ? (WQ = [NaN, NaN, NaN], this.api.readPosition(QQ, WQ), this.positions.set(QQ, WQ), WQ) : null)
       }
-      Rpp() {
+      CQQ() {
         return this.hasTarget ? this.targeted : null
       }
       breakingPosition() {
         return this.isBreaking ? this.breaking : null
       }
       refresh() {
-        for (const [ip, cp] of this.positions) this.api.readPosition(ip, cp) || this.api.checkValid(ip) || this.api.isLocal(ip) || this.positions.delete(ip);
-        const pp = this.api.apiView;
-        if (this.refreshTarget(), this.isBreaking = 0 !== (yp.q.playerFlags(pp, 0) & yp.wd.Breaking) && yp.q.breakingProgress(pp, 0) >= 0, this.isBreaking)
-          for (let ip = 0; ip < 3; ip++) this.breaking[ip] = yp.q.breakingPos(pp, 0, ip)
+        for (const [WQ, XQ] of this.positions) this.api.readPosition(WQ, XQ) || this.api.checkValid(WQ) || this.api.isLocal(WQ) || this.positions.delete(WQ);
+        const QQ = this.api.apiView;
+        if (this.refreshTarget(), this.isBreaking = 0 !== (jQ.x.playerFlags(QQ, 0) & jQ.ae.Breaking) && jQ.x.breakingProgress(QQ, 0) >= 0, this.isBreaking)
+          for (let WQ = 0; WQ < 3; WQ++) this.breaking[WQ] = jQ.x.breakingPos(QQ, 0, WQ)
       }
       refreshTarget() {
-        const pp = this.api.apiView,
-          ip = yp.q.targetBlockId(pp, 0);
-        if (this.hasTarget = ip !== yp.Rc, this.hasTarget) {
-          const cp = this.targeted;
-          cp.KV = ip;
-          for (let ip = 0; ip < 3; ip++) cp.position[ip] = yp.q.targetBlock(pp, 0, ip), cp.normal[ip] = yp.q.targetNormal(pp, 0, ip), cp.nY[ip] = yp.q.targetAdjacent(pp, 0, ip)
+        const QQ = this.api.apiView,
+          WQ = jQ.x.targetBlockId(QQ, 0);
+        if (this.hasTarget = WQ !== jQ.Ad, this.hasTarget) {
+          const XQ = this.targeted;
+          XQ.w6 = WQ;
+          for (let WQ = 0; WQ < 3; WQ++) XQ.position[WQ] = jQ.x.targetBlock(QQ, 0, WQ), XQ.normal[WQ] = jQ.x.targetNormal(QQ, 0, WQ), XQ.OB[WQ] = jQ.x.targetAdjacent(QQ, 0, WQ)
         }
       }
-      despawned(pp) {
-        const ip = this.positions.get(pp);
-        ip && !this.api.isLocal(pp) && (ip.fill(NaN), this.positions.delete(pp))
+      despawned(QQ) {
+        const WQ = this.positions.get(QQ);
+        WQ && !this.api.isLocal(QQ) && (WQ.fill(NaN), this.positions.delete(QQ))
       }
     }
-    var dO = cp(40831),
-      eO = cp(40813),
-      uO = cp(36591),
-      jO = cp(37001);
-    const kO = 1,
-      mO = 2;
-    class RO {
+    var Vw = XQ(40853),
+      Dw = XQ(40845),
+      pw = XQ(36674),
+      Gw = XQ(37098);
+    const Uw = 1,
+      bw = 2;
+    class vw {
       constructor() {
-        this.game = new jO.c, this.client = new jO.c, this.sx = 0, this.movesFly = null
+        this.game = new Gw.h, this.client = new Gw.h, this.Ds = 0, this.movesFly = null
       }
-      setGame(pp) {
-        if (null === pp || "object" !== typeof pp) return !1;
+      setGame(QQ) {
+        if (null === QQ || "object" !== typeof QQ) return !1;
         const {
-          key: ip,
-          value: cp
-        } = pp;
-        return "string" === typeof ip && (this.game.setBooleanType(ip, Boolean(cp)), !0)
+          key: WQ,
+          value: XQ
+        } = QQ;
+        return "string" === typeof WQ && (this.game.setBooleanType(WQ, Boolean(XQ)), !0)
       }
-      setClient(pp, ip) {
-        this.client.setBooleanType(pp, ip)
+      setClient(QQ, WQ) {
+        this.client.setBooleanType(QQ, WQ)
       }
       clearGame() {
-        this.game = new jO.c, this.movesFly = null
+        this.game = new Gw.h, this.movesFly = null
       }
-      setMovesFly(pp) {
-        this.movesFly = pp
+      setMovesFly(QQ) {
+        this.movesFly = QQ
       }
       perms() {
-        return (this.game._getTotalBooleanVal() ? kO : 0) | (this.client._getTotalBooleanVal() ? mO : 0)
+        return (this.game._getTotalBooleanVal() ? Uw : 0) | (this.client._getTotalBooleanVal() ? bw : 0)
       }
-      write(pp) {
-        const ip = this.perms(),
+      write(QQ) {
+        const WQ = this.perms(),
           {
-            movesFly: cp
+            movesFly: XQ
           } = this;
-        if (ip === this.sx && null === cp) return !0;
-        let Op = yp.Hb.Keep;
-        return null !== cp && (Op = cp ? yp.Hb.On : yp.Hb.Off), !(!pp || !(0, yp.me)(pp, 0, Op, ip, cp ? 1 : 0)) && (this.sx = ip, this.movesFly = null, !0)
+        if (WQ === this.Ds && null === XQ) return !0;
+        let wQ = jQ.lc.Keep;
+        return null !== XQ && (wQ = XQ ? jQ.lc.On : jQ.lc.Off), !(!QQ || !(0, jQ.Je)(QQ, 0, wQ, WQ, XQ ? 1 : 0)) && (this.Ds = WQ, this.movesFly = null, !0)
       }
     }
-    class qO {
-      constructor(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => 35;
-        this.api = pp, this.screenBandPct = void 0, this.clipX = 0, this.clipY = 0, this.clipW = 0, this.eye = [0, 0, 0], this.forward = [0, 0, 1], this.along = [0, 0, 0], this.screenBandPct = {
-          x: xp.d,
+    class dw {
+      constructor(QQ) {
+        let WQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => 35;
+        this.api = QQ, this.screenBandPct = void 0, this.clipX = 0, this.clipY = 0, this.clipW = 0, this.eye = [0, 0, 0], this.forward = [0, 0, 1], this.along = [0, 0, 0], this.screenBandPct = {
+          x: sQ.b,
           get y() {
-            return ip()
+            return WQ()
           }
         }
       }
       get hasView() {
-        const pp = this.api.apiView,
-          ip = yp.q.viewProj;
-        return 0 !== ip(pp, 0, 3) || 0 !== ip(pp, 0, 7) || 0 !== ip(pp, 0, 11) || 0 !== ip(pp, 0, 15)
+        const QQ = this.api.apiView,
+          WQ = jQ.x.viewProj;
+        return 0 !== WQ(QQ, 0, 3) || 0 !== WQ(QQ, 0, 7) || 0 !== WQ(QQ, 0, 11) || 0 !== WQ(QQ, 0, 15)
       }
       get cameraPosition() {
-        const pp = this.api.apiView,
+        const QQ = this.api.apiView,
           {
-            eye: ip
+            eye: WQ
           } = this;
-        for (let cp = 0; cp < 3; cp++) ip[cp] = yp.q.eye(pp, 0, cp);
-        return ip
+        for (let XQ = 0; XQ < 3; XQ++) WQ[XQ] = jQ.x.eye(QQ, 0, XQ);
+        return WQ
       }
       get cameraDirection() {
-        const pp = this.api.apiView,
-          ip = yp.q.viewProj,
-          cp = ip(pp, 0, 3),
-          Op = ip(pp, 0, 7),
-          op = ip(pp, 0, 11),
-          Ip = Math.hypot(cp, Op, op),
+        const QQ = this.api.apiView,
+          WQ = jQ.x.viewProj,
+          XQ = WQ(QQ, 0, 3),
+          wQ = WQ(QQ, 0, 7),
+          qQ = WQ(QQ, 0, 11),
+          TQ = Math.hypot(XQ, wQ, qQ),
           {
-            forward: Sp
+            forward: zQ
           } = this;
-        return Ip > 0 && (Sp[0] = cp / Ip, Sp[1] = Op / Ip, Sp[2] = op / Ip), Sp
+        return TQ > 0 && (zQ[0] = XQ / TQ, zQ[1] = wQ / TQ, zQ[2] = qQ / TQ), zQ
       }
       get cameraHeading() {
-        return yp.q.heading(this.api.apiView, 0)
+        return jQ.x.heading(this.api.apiView, 0)
       }
       get cameraPitch() {
-        return yp.q.pitch(this.api.apiView, 0)
+        return jQ.x.pitch(this.api.apiView, 0)
       }
       get tanHalfFovX() {
-        return yp.q.tanHalfFovX(this.api.apiView, 0)
+        return jQ.x.tanHalfFovX(this.api.apiView, 0)
       }
       get tanHalfFovY() {
-        return yp.q.tanHalfFovY(this.api.apiView, 0)
+        return jQ.x.tanHalfFovY(this.api.apiView, 0)
       }
-      projectWorldPosToScreenPos(pp) {
-        this.clip(pp);
+      projectWorldPosToScreenPos(QQ) {
+        this.clip(QQ);
         const {
-          clipX: ip,
-          clipY: cp,
-          clipW: Op
+          clipX: WQ,
+          clipY: XQ,
+          clipW: wQ
         } = this;
-        if (Op > 0) {
-          const pp = ip / Op * 50,
-            op = -cp / Op * 50;
-          return Math.abs(pp) <= this.screenBandPct.x && Math.abs(op) <= this.screenBandPct.y ? {
-            x: 50 + pp,
-            y: 50 + op
-          } : this.clampToBand(pp, op)
+        if (wQ > 0) {
+          const QQ = WQ / wQ * 50,
+            qQ = -XQ / wQ * 50;
+          return Math.abs(QQ) <= this.screenBandPct.x && Math.abs(qQ) <= this.screenBandPct.y ? {
+            x: 50 + QQ,
+            y: 50 + qQ
+          } : this.clampToBand(QQ, qQ)
         }
-        const op = this.cameraPosition,
-          Ip = Math.hypot(pp[0] - op[0], pp[1] - op[1], pp[2] - op[2]),
-          Sp = this.api.apiView,
-          xp = yp.q.viewProj,
-          Lp = Ip > 0 ? ip / Ip : 0,
-          Yp = Ip > 0 ? -cp / Ip : 0,
-          Dp = Math.hypot(xp(Sp, 0, 1), xp(Sp, 0, 5), xp(Sp, 0, 9)),
-          Ap = Lp / Math.hypot(xp(Sp, 0, 0), xp(Sp, 0, 4), xp(Sp, 0, 8)),
-          Pp = Yp / Dp,
-          Wp = !(Math.abs(Ap) >= .001 || Math.abs(Pp) >= .001);
-        return this.clampToBand(Lp, Wp ? -(Dp || 1) : Yp)
+        const qQ = this.cameraPosition,
+          TQ = Math.hypot(QQ[0] - qQ[0], QQ[1] - qQ[1], QQ[2] - qQ[2]),
+          zQ = this.api.apiView,
+          sQ = jQ.x.viewProj,
+          FQ = TQ > 0 ? WQ / TQ : 0,
+          PQ = TQ > 0 ? -XQ / TQ : 0,
+          gQ = Math.hypot(sQ(zQ, 0, 1), sQ(zQ, 0, 5), sQ(zQ, 0, 9)),
+          JQ = FQ / Math.hypot(sQ(zQ, 0, 0), sQ(zQ, 0, 4), sQ(zQ, 0, 8)),
+          rQ = PQ / gQ,
+          IQ = !(Math.abs(JQ) >= .001 || Math.abs(rQ) >= .001);
+        return this.clampToBand(FQ, IQ ? -(gQ || 1) : PQ)
       }
-      projectDirectionToScreenPos(pp) {
+      projectDirectionToScreenPos(QQ) {
         if (!this.hasView) return;
-        const ip = this.cameraPosition,
-          cp = this.along;
-        for (let Op = 0; Op < 3; Op++) cp[Op] = ip[Op] + 10 * pp[Op];
-        return this.projectWorldPosToScreenPos(cp)
+        const WQ = this.cameraPosition,
+          XQ = this.along;
+        for (let wQ = 0; wQ < 3; wQ++) XQ[wQ] = WQ[wQ] + 10 * QQ[wQ];
+        return this.projectWorldPosToScreenPos(XQ)
       }
-      projectWorldPosToViewport(pp) {
-        this.clip(pp);
+      projectWorldPosToViewport(QQ) {
+        this.clip(QQ);
         const {
-          clipX: ip,
-          clipY: cp,
-          clipW: Op
+          clipX: WQ,
+          clipY: XQ,
+          clipW: wQ
         } = this;
-        return Op > 0 ? {
-          x: 50 + ip / Op * 50,
-          y: 50 - cp / Op * 50
+        return wQ > 0 ? {
+          x: 50 + WQ / wQ * 50,
+          y: 50 - XQ / wQ * 50
         } : null
       }
-      clip(pp) {
-        const ip = this.api.apiView,
-          cp = pp[0] - yp.q.origin(ip, 0, 0),
-          Op = pp[1] - yp.q.origin(ip, 0, 1),
-          op = pp[2] - yp.q.origin(ip, 0, 2),
-          Ip = yp.q.viewProj;
-        this.clipX = Ip(ip, 0, 0) * cp + Ip(ip, 0, 4) * Op + Ip(ip, 0, 8) * op + Ip(ip, 0, 12), this.clipY = Ip(ip, 0, 1) * cp + Ip(ip, 0, 5) * Op + Ip(ip, 0, 9) * op + Ip(ip, 0, 13), this.clipW = Ip(ip, 0, 3) * cp + Ip(ip, 0, 7) * Op + Ip(ip, 0, 11) * op + Ip(ip, 0, 15)
+      clip(QQ) {
+        const WQ = this.api.apiView,
+          XQ = QQ[0] - jQ.x.origin(WQ, 0, 0),
+          wQ = QQ[1] - jQ.x.origin(WQ, 0, 1),
+          qQ = QQ[2] - jQ.x.origin(WQ, 0, 2),
+          TQ = jQ.x.viewProj;
+        this.clipX = TQ(WQ, 0, 0) * XQ + TQ(WQ, 0, 4) * wQ + TQ(WQ, 0, 8) * qQ + TQ(WQ, 0, 12), this.clipY = TQ(WQ, 0, 1) * XQ + TQ(WQ, 0, 5) * wQ + TQ(WQ, 0, 9) * qQ + TQ(WQ, 0, 13), this.clipW = TQ(WQ, 0, 3) * XQ + TQ(WQ, 0, 7) * wQ + TQ(WQ, 0, 11) * qQ + TQ(WQ, 0, 15)
       }
-      clampToBand(pp, ip) {
-        return (0, xp.h)(pp, ip, this.screenBandPct.x, this.screenBandPct.y)
+      clampToBand(QQ, WQ) {
+        return (0, sQ.e)(QQ, WQ, this.screenBandPct.x, this.screenBandPct.y)
       }
     }
-    var MO = cp(4921);
-    const CO = new TextEncoder,
-      EO = new Uint8Array(yp.C * yp.B);
-    class XO {
+    var Hw = XQ(5148);
+    const aw = new TextEncoder,
+      lw = new Uint8Array(jQ.S * jQ.R);
+    class hw {
       constructor() {
-        this.buttons = [], this.sx = !0
+        this.buttons = [], this.Ds = !0
       }
-      set(pp) {
-        this.buttons = pp, this.sx = !1
+      set(QQ) {
+        this.buttons = QQ, this.Ds = !1
       }
       attached() {
-        this.sx = 0 === this.buttons.length
+        this.Ds = 0 === this.buttons.length
       }
-      write(pp) {
-        if (this.sx) return;
-        const ip = new Uint8Array(yp.C),
-          cp = new Uint8Array(yp.C);
-        let Op = 0,
-          op = 0;
+      write(QQ) {
+        if (this.Ds) return;
+        const WQ = new Uint8Array(jQ.S),
+          XQ = new Uint8Array(jQ.S);
+        let wQ = 0,
+          qQ = 0;
         for (const {
-            id: Ip,
-            keycode: Sp
+            id: TQ,
+            keycode: zQ
           }
           of this.buttons) {
-          if (Op === yp.C) break;
+          if (wQ === jQ.S) break;
           const {
-            read: pp,
-            written: xp
-          } = CO.encodeInto(Ip, EO.subarray(op, op + yp.B));
-          if (pp < Ip.length) continue;
-          const Lp = MO.j[Sp];
-          ip[Op] = "number" === typeof Lp ? Lp : 0, cp[Op] = xp, Op++, op += xp
+            read: QQ,
+            written: sQ
+          } = aw.encodeInto(TQ, lw.subarray(qQ, qQ + jQ.R));
+          if (QQ < TQ.length) continue;
+          const FQ = Hw.i[zQ];
+          WQ[wQ] = "number" === typeof FQ ? FQ : 0, XQ[wQ] = sQ, wQ++, qQ += sQ
         }
-        this.sx = (0, yp.ae)(pp, 0, Op, ip, cp, EO.subarray(0, op))
+        this.Ds = (0, jQ.xe)(QQ, 0, wQ, WQ, XQ, lw.subarray(0, qQ))
       }
     }
 
-    function lO(pp, ip, cp) {
-      const Op = CO.encode(ip);
-      return Op.length <= yp.B && function(pp, ip, cp, Op) {
-        return (0, ri.e)(), (0, yp.nf)(pp, ip, cp, Op)
-      }(pp, 0, cp ? 1 : 0, Op)
+    function iw(QQ, WQ, XQ) {
+      const wQ = aw.encode(WQ);
+      return wQ.length <= jQ.R && function(QQ, WQ, XQ, wQ) {
+        return (0, nW.c)(), (0, jQ.uf)(QQ, WQ, XQ, wQ)
+      }(QQ, 0, XQ ? 1 : 0, wQ)
     }
-    const QO = new TextDecoder,
-      JO = new TextEncoder,
-      BO = new Uint8Array(0),
-      NO = [0, 0, 0],
-      TO = {
-        off: yp.xd.Off,
-        key: yp.xd.Key,
-        touch: yp.xd.Touch
+    var Aw = XQ(39509);
+    const Rw = new TextDecoder,
+      Ew = new TextEncoder,
+      Cw = new Uint8Array(0),
+      uw = [0, 0, 0],
+      Lw = {
+        off: jQ.ce.Off,
+        key: jQ.ce.Key,
+        touch: jQ.ce.Touch
       };
-    class fO {
-      constructor(pp) {
-        var ip;
-        this.options = pp, this.renderFrame = void 0, this.live = void 0, this.chunks = void 0, this.items = void 0, this.entityInfo = void 0, this.entityInfoWatch = void 0, this.particles = void 0, this.clientApi = void 0, this.scriptedCamera = void 0, this.owners = [], this.tickers = [], this.renderers = [], this.receivers = [], this.failures = [], this.vetoSet = !1, this.hooksSet = !1, this.writtenPublicLobby = !1, this.promptWatch = "off", this.promptWatchSent = "off", this.customButtons = new XO, this.generation = 0, this.sessionLive = !1, this.boundId = 0, this.session = null, this.activeConn = 0, this.closedThrough = 0, this.openSocket = 0, this.socketLeftSinceAttach = !1, this.ticks = 0, this.zoomUnshown = !1, this.zoomHeld = !1, this.overflowGen = 0, this.resyncOwed = !1, this.zoom = 0, this.pendingZoom = null, this.highlight = null, this.highlightOwed = !1, this.cmd = null, this.freeCam = new RO, this.stopped = () => !1, this.onError = void 0, this.api = void 0, this.tables = void 0, this.itemSources = null, this.fault = void 0, this.Yy = pp => {
-          if ((0, Wp.f)(pp)) throw pp;
-          this.onError(pp)
-        }, this.api = pp.api, this.tables = pp.tables, this.onError = null !== (ip = pp.onError) && void 0 !== ip ? ip : pp => {
-          console.error("Error in client game callback", pp)
-        }, this.renderFrame = new qO(this.api, pp.screenBandY), this.live = new HO(this.api), this.chunks = new Yi(this.api.memory, (() => this.api.apiView)), this.items = new dc({
+    class kw {
+      constructor(QQ) {
+        var WQ;
+        this.options = QQ, this.renderFrame = void 0, this.live = void 0, this.chunks = void 0, this.items = void 0, this.entityInfo = void 0, this.entityInfoWatch = void 0, this.particles = void 0, this.clientApi = void 0, this.scriptedCamera = void 0, this.owners = [], this.tickers = [], this.renderers = [], this.receivers = [], this.failures = [], this.vetoSet = !1, this.hooksSet = !1, this.writtenPublicLobby = !1, this.promptWatch = "off", this.promptWatchSent = "off", this.customButtons = new hw, this.generation = 0, this.sessionLive = !1, this.boundId = 0, this.session = null, this.activeConn = 0, this.closedThrough = 0, this.openSocket = 0, this.socketLeftSinceAttach = !1, this.ticks = 0, this.zoomUnshown = !1, this.zoomHeld = !1, this.overflowGen = 0, this.resyncOwed = !1, this.zoom = 0, this.pendingZoom = null, this.highlight = null, this.highlightOwed = !1, this.cmd = null, this.freeCam = new vw, this.stopped = () => !1, this.onError = void 0, this.api = void 0, this.tables = void 0, this.itemSources = null, this.fault = void 0, this.nI = QQ => {
+          if ((0, IQ.h)(QQ)) throw QQ;
+          this.onError(QQ)
+        }, this.api = QQ.api, this.tables = QQ.tables, this.onError = null !== (WQ = QQ.onError) && void 0 !== WQ ? WQ : QQ => {
+          console.error("Error in client game callback", QQ)
+        }, this.renderFrame = new dw(this.api, QQ.screenBandY), this.live = new yw(this.api), this.chunks = new sW(this.api.memory, (() => this.api.apiView)), this.items = new VX({
           api: this.api,
-          tables: pp.tables,
+          tables: QQ.tables,
           cmd: () => this.cmd,
           onError: this.onError,
-          beforeOp: pp.beforeOp
+          beforeOp: QQ.beforeOp
         });
-        const cp = () => this.stopped() ? null : this.cmd,
-          Op = () => this.sessionLive;
-        this.entityInfoWatch = new rc({
-          cmd: cp,
+        const XQ = () => this.stopped() ? null : this.cmd,
+          wQ = () => this.sessionLive;
+        this.entityInfoWatch = new nX({
+          cmd: XQ,
           onError: this.onError
-        }), this.entityInfo = new Zc({
+        }), this.entityInfo = new xX({
           api: this.api,
           watch: this.entityInfoWatch,
-          isSessionLive: Op
-        }), this.particles = new Nc({
-          cmd: cp,
-          isSessionLive: Op,
+          isSessionLive: wQ
+        }), this.particles = new EX({
+          cmd: XQ,
+          isSessionLive: wQ,
           onError: this.onError
-        }), this.clientApi = new Ac({
+        }), this.clientApi = new FX({
           api: this.api,
           live: this.live,
           chunks: this.chunks,
           items: this.items,
           entityInfo: this.entityInfo,
           particles: this.particles,
-          tables: pp.tables,
-          cmd: cp,
+          tables: QQ.tables,
+          cmd: XQ,
           sendCmd: () => this.sendCmd(),
-          isSessionLive: Op,
+          isSessionLive: wQ,
           beforeWrite: () => {
-            var ip;
+            var WQ;
             if (this.stopped()) return !1;
-            const cp = this.generation;
-            return !1 !== (null === (ip = pp.beforeWrite) || void 0 === ip ? void 0 : ip.call(pp)) && cp === this.generation
+            const XQ = this.generation;
+            return !1 !== (null === (WQ = QQ.beforeWrite) || void 0 === WQ ? void 0 : WQ.call(QQ)) && XQ === this.generation
           },
           playerDbId: () => {
-            const pp = this.session;
-            if (null === pp) throw new Error("No game session has started, so the local player has no DB id");
-            return pp.playerDbId
+            const QQ = this.session;
+            if (null === QQ) throw new Error("No game session has started, so the local player has no DB id");
+            return QQ.playerDbId
           },
-          playSound: pp.playSound,
-          preloadSounds: pp.preloadSounds,
-          setLocalOptions: pp.setLocalOptions,
-          hasPackModel: pp.hasPackModel
-        }), this.scriptedCamera = new rp({
+          playSound: QQ.playSound,
+          preloadSounds: QQ.preloadSounds,
+          setLocalOptions: QQ.setLocalOptions,
+          hasPackModel: QQ.hasPackModel
+        }), this.scriptedCamera = new YQ({
           api: this.api,
           cmd: () => this.stopped() ? null : this.cmd,
-          screen: pp.cameraScreen,
-          showFacing: pp.showCameraFacing
+          screen: QQ.cameraScreen,
+          showFacing: QQ.showCameraFacing
         })
       }
       get itemBridgeSources() {
-        return this.itemSources ??= UO(this.items, this.tables, (() => this.localPlayerAlive()), this.Yy), this.itemSources
+        return this.itemSources ??= rw(this.items, this.tables, (() => this.localPlayerAlive()), this.nI), this.itemSources
       }
       get isSessionLive() {
         return this.sessionLive
@@ -4040,52 +4056,52 @@ export const modules = {
       localDeaths() {
         return this.isCoreRunning ? this.api.localDeaths() : null
       }
-      clickCodeBlock(pp) {
-        const ip = this.sessionLive ? this.sendCmd() : null;
-        return null !== ip && (cp = ip, Op = 0, op = pp[0], Ip = pp[1], Sp = pp[2], (0, ri.e)(), (0, yp.ge)(cp, Op, op, Ip, Sp));
-        var cp, Op, op, Ip, Sp
+      clickCodeBlock(QQ) {
+        const WQ = this.sessionLive ? this.sendCmd() : null;
+        return null !== WQ && (XQ = WQ, wQ = 0, qQ = QQ[0], TQ = QQ[1], zQ = QQ[2], (0, nW.c)(), (0, jQ.Fe)(XQ, wQ, qQ, TQ, zQ));
+        var XQ, wQ, qQ, TQ, zQ
       }
       cameraZoom() {
         return this.zoom
       }
-      setCameraZoom(pp) {
-        const ip = this.liveCmd();
-        return null === ip ? (this.pendingZoom = pp, !1) : (this.pendingZoom = null, (0, yp.eg)(ip, 0, pp, 1))
+      setCameraZoom(QQ) {
+        const WQ = this.liveCmd();
+        return null === WQ ? (this.pendingZoom = QQ, !1) : (this.pendingZoom = null, (0, jQ.cg)(WQ, 0, QQ, 1))
       }
-      ZC(pp) {
-        const ip = this.stopped() ? null : this.cmd;
-        return null !== ip && (0, yp._f)(ip, 0, pp ? 1 : 0)
+      Bl(QQ) {
+        const WQ = this.stopped() ? null : this.cmd;
+        return null !== WQ && (0, jQ._f)(WQ, 0, QQ ? 1 : 0)
       }
       respawn() {
-        const pp = this.sessionLive ? this.sendCmd() : null;
-        return null !== pp && (ip = pp, cp = 0, (0, ri.e)(), (0, yp.yf)(ip, cp));
-        var ip, cp
+        const QQ = this.sessionLive ? this.sendCmd() : null;
+        return null !== QQ && (WQ = QQ, XQ = 0, (0, nW.c)(), (0, jQ.Gf)(WQ, XQ));
+        var WQ, XQ
       }
-      bindCustomButtonKeys(pp) {
-        this.customButtons.set(pp)
+      bindCustomButtonKeys(QQ) {
+        this.customButtons.set(QQ)
       }
-      pressCustomButton(pp, ip) {
-        const cp = this.sessionLive ? this.sendCmd() : null;
-        return null !== cp && lO(cp, pp, ip)
+      pressCustomButton(QQ, WQ) {
+        const XQ = this.sessionLive ? this.sendCmd() : null;
+        return null !== XQ && iw(XQ, QQ, WQ)
       }
-      padMove(pp, ip, cp, Op, op, Ip) {
-        const Sp = this.liveCmd();
-        return null !== Sp && (0, yp.Ye)(Sp, 0, pp, ip, cp, Op, op, Ip)
+      padMove(QQ, WQ, XQ, wQ, qQ, TQ) {
+        const zQ = this.liveCmd();
+        return null !== zQ && (0, jQ.if)(zQ, 0, QQ, WQ, XQ, wQ, qQ, TQ)
       }
-      thirdPersonFor(pp) {
-        const ip = this.liveCmd();
-        return null !== ip && (0, yp.jg)(ip, 0, null !== pp && void 0 !== pp ? pp : 1 / 0)
+      thirdPersonFor(QQ) {
+        const WQ = this.liveCmd();
+        return null !== WQ && (0, jQ.fg)(WQ, 0, null !== QQ && void 0 !== QQ ? QQ : 1 / 0)
       }
-      send(pp, ip) {
-        let cp = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const Op = 0 !== this.openSocket || this.sessionLive ? this.sendCmd() : null;
-        return null !== Op && Zi(Op, cp ? Pp.od : 0, pp, (0, Np.f)(ip))
+      send(QQ, WQ) {
+        let XQ = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const wQ = 0 !== this.openSocket || this.sessionLive ? this.sendCmd() : null;
+        return null !== wQ && xW(wQ, XQ ? rQ.Ad : 0, QQ, (0, uQ.e)(WQ))
       }
-      socketAttached(pp) {
-        this.openSocket = pp, this.socketLeftSinceAttach = !1
+      socketAttached(QQ) {
+        this.openSocket = QQ, this.socketLeftSinceAttach = !1
       }
-      socketDetached(pp) {
-        this.openSocket === pp && (this.openSocket = 0)
+      socketDetached(QQ) {
+        this.openSocket === QQ && (this.openSocket = 0)
       }
       socketLeft() {
         this.openSocket = 0, this.socketLeftSinceAttach = !0
@@ -4096,455 +4112,458 @@ export const modules = {
       liveCmd() {
         return this.isCoreRunning ? this.cmd : null
       }
-      attach(pp) {
-        const ip = () => pp.isStopped;
-        this.stopped = ip, this.cmd = pp.rings.cmd, this.promptWatchSent = "off", this.writePromptWatch(), this.customButtons.attached(), this.writeCustomButtons();
-        const cp = this.api.apiView;
-        this.overflowGen = yp.q.eventOverflowGen(cp, 0), this.resyncOwed = 0 !== yp.q.eventOverflowMask(cp, 0), pp.setGameHost(this), pp.setEventWalker((pp => {
-          this.api.walk(pp, this, ip)
+      attach(QQ) {
+        const WQ = () => QQ.isStopped;
+        this.stopped = WQ, this.cmd = QQ.rings.cmd, this.promptWatchSent = "off", this.writePromptWatch(), this.customButtons.attached(), this.writeCustomButtons();
+        const XQ = this.api.apiView;
+        this.overflowGen = jQ.x.eventOverflowGen(XQ, 0), this.resyncOwed = 0 !== jQ.x.eventOverflowMask(XQ, 0), QQ.setGameHost(this), QQ.setEventWalker((QQ => {
+          this.api.walk(QQ, this, WQ)
         }))
       }
-      watchPromptPick(pp) {
-        this.promptWatch = pp, this.writePromptWatch()
+      watchPromptPick(QQ) {
+        this.promptWatch = QQ, this.writePromptWatch()
       }
       get promptEntity() {
-        return "off" === this.promptWatch || this.stopped() ? null : bO(yp.q.promptEntity(this.api.apiView, 0))
+        return "off" === this.promptWatch || this.stopped() ? null : fw(jQ.x.promptEntity(this.api.apiView, 0))
       }
       get interactLabel() {
-        return "touch" !== this.promptWatch || this.stopped() ? yp.mc.None : yp.q.interactLabel(this.api.apiView, 0)
+        return "touch" !== this.promptWatch || this.stopped() ? jQ.Sc.None : jQ.x.interactLabel(this.api.apiView, 0)
       }
       get interactIcon() {
-        return "touch" !== this.promptWatch || this.stopped() ? 0 : yp.q.interactIcon(this.api.apiView, 0)
+        return "touch" !== this.promptWatch || this.stopped() ? 0 : jQ.x.interactIcon(this.api.apiView, 0)
       }
       closeGame() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        (0 === pp || pp >= this.openSocket) && (this.openSocket = 0), this.closedThrough = Math.max(this.closedThrough, pp, this.activeConn), this.activeConn = 0, this.endSession(), this.endGameGrants(), this.dropGameCamera()
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        (0 === QQ || QQ >= this.openSocket) && (this.openSocket = 0), this.closedThrough = Math.max(this.closedThrough, QQ, this.activeConn), this.activeConn = 0, this.endSession(), this.endGameGrants(), this.dropGameCamera()
       }
-      gameCamera(pp) {
-        0 !== this.activeConn && this.scriptedCamera.settingsChanged(pp)
+      gameCamera(QQ) {
+        0 !== this.activeConn && this.scriptedCamera.settingsChanged(QQ)
       }
-      netEvent(pp) {
-        "connection" === pp.type ? pp.phase === Pp.H.Activated && pp.conn !== this.activeConn && pp.conn > this.closedThrough ? (this.endSession(), this.activeConn = pp.conn, this.endGameGrants(), this.dropGameCamera()) : pp.phase !== Pp.H.Left && pp.phase !== Pp.H.Closed || pp.conn !== this.activeConn ? pp.phase === Pp.H.Resumed && 0 !== this.activeConn && pp.conn > this.closedThrough && (this.activeConn = pp.conn) : this.closeGame() : pp.conn === this.activeConn && 0 !== pp.conn && (pp.VD === eO.w ? this.gunHit(pp.payload) : pp.VD === zc.Zb.EditItemCraftingRecipes || pp.VD === eO.Q ? this.items.touch() : (this.serverOptions(pp), this.gameMessage(pp)));
-        const ip = this.options.onNetEvent;
-        ip && this.guard((() => {
-          ip(pp)
+      netEvent(QQ) {
+        "connection" === QQ.type ? QQ.phase === rQ.E.Activated && QQ.conn !== this.activeConn && QQ.conn > this.closedThrough ? (this.endSession(), this.activeConn = QQ.conn, this.endGameGrants(), this.dropGameCamera()) : QQ.phase !== rQ.E.Left && QQ.phase !== rQ.E.Closed || QQ.conn !== this.activeConn ? QQ.phase === rQ.E.Resumed && 0 !== this.activeConn && QQ.conn > this.closedThrough && (this.activeConn = QQ.conn) : this.closeGame() : QQ.conn === this.activeConn && 0 !== QQ.conn && (QQ.cg === Dw.q ? this.gunHit(QQ.payload) : QQ.cg === YX.gc.EditItemCraftingRecipes || QQ.cg === Dw.P ? this.items.touch() : (this.serverOptions(QQ), this.gameMessage(QQ)));
+        const WQ = this.options.onNetEvent;
+        WQ && this.guard((() => {
+          WQ(QQ)
         }))
       }
-      serverOptions(pp) {
-        const ip = this.options.serverOptions,
-          cp = ip ? this.decoded(sc, pp) : null;
-        ip && cp && this.guard((() => {
-          ip.applyNewClientOptions(cp)
+      serverOptions(QQ) {
+        const WQ = this.options.serverOptions,
+          XQ = WQ ? this.decoded(NX, QQ) : null;
+        WQ && XQ && this.guard((() => {
+          WQ.applyNewClientOptions(XQ)
         }))
       }
-      gameMessage(pp) {
-        let ip = null;
+      gameMessage(QQ) {
+        let WQ = null;
         try {
-          ip = function(pp) {
-            if ("message" !== pp.type || pp.VD !== zc.Zb.GameCodeMessage || pp.payloadKind !== Pp.kc.Msgpack) return null;
-            const ip = (0, Np.c)(pp.payload);
-            if (null === ip || "object" !== typeof ip || "string" !== typeof ip.messageType) throw new Error("GameCodeMessage without a messageType");
-            return ip
-          }(pp)
-        } catch (cp) {
-          this.sessionLive && this.onError(cp)
+          WQ = function(QQ) {
+            if ("message" !== QQ.type || QQ.cg !== YX.gc.GameCodeMessage || QQ.payloadKind !== rQ.rc.Msgpack) return null;
+            const WQ = (0, uQ.d)(QQ.payload);
+            if (null === WQ || "object" !== typeof WQ || "string" !== typeof WQ.messageType) throw new Error("GameCodeMessage without a messageType");
+            return WQ
+          }(QQ)
+        } catch (XQ) {
+          this.sessionLive && this.onError(XQ)
         }
-        if (ip) {
+        if (WQ) {
           const {
-            messageType: pp,
-            data: cp
-          } = ip;
-          if ((0, Cp.f)(pp)) return void this.guard((() => {
-            (0, Cp.d)(pp, cp)
+            messageType: QQ,
+            data: XQ
+          } = WQ;
+          if ((0, hQ.f)(QQ)) return void this.guard((() => {
+            (0, hQ.c)(QQ, XQ)
           }));
-          "freeCamPerms" === pp && this.freeCam.setGame(cp) && this.writeFreeCam(), this.sessionLive && this.round(this.receivers, (ip => {
-            ip.onReceivedMessageFromServer(pp, cp)
+          "freeCamPerms" === QQ && this.freeCam.setGame(XQ) && this.writeFreeCam(), this.sessionLive && this.round(this.receivers, (WQ => {
+            WQ.onReceivedMessageFromServer(QQ, XQ)
           }))
         }
       }
-      decoded(pp, ip) {
+      decoded(QQ, WQ) {
         try {
-          return pp(ip)
-        } catch (cp) {
-          return this.onError(cp), null
+          return QQ(WQ)
+        } catch (XQ) {
+          return this.onError(XQ), null
         }
       }
-      setClientFreeCameraGrant(pp, ip) {
-        this.freeCam.setClient(pp, ip), this.writeFreeCam()
+      setClientFreeCameraGrant(QQ, WQ) {
+        this.freeCam.setClient(QQ, WQ), this.writeFreeCam()
       }
       freeCameraAllowed() {
         return 0 !== this.freeCam.perms()
       }
-      setFreeCameraMovesFly(pp) {
-        this.freeCam.setMovesFly(pp), this.writeFreeCam()
+      setFreeCameraMovesFly(QQ) {
+        this.freeCam.setMovesFly(QQ), this.writeFreeCam()
       }
-      setBlockHighlight(pp) {
-        this.highlight = pp, this.highlightOwed = !0, this.writeOwedHighlight()
+      setBlockHighlight(QQ) {
+        this.highlight = QQ, this.highlightOwed = !0, this.writeOwedHighlight()
       }
       writeOwedHighlight() {
-        const pp = this.liveCmd();
-        if (null === pp || !this.highlightOwed) return;
-        const ip = this.highlight;
-        this.highlightOwed = null === ip ? !(0, yp.De)(pp, 0, NO, NO, 0) : !(0, yp.De)(pp, 0, ip.pos, ip.normal, 1)
+        const QQ = this.liveCmd();
+        if (null === QQ || !this.highlightOwed) return;
+        const WQ = this.highlight;
+        this.highlightOwed = null === WQ ? !(0, jQ.Se)(QQ, 0, uw, uw, 0) : !(0, jQ.Se)(QQ, 0, WQ.pos, WQ.normal, 1)
       }
-      localPlayerBound(pp) {
-        var ip, cp;
-        if (0 === this.activeConn || this.sessionLive && pp === this.boundId) return;
-        const Op = this.sessionLive;
-        let op, Ip, Sp, xp;
-        this.endSession(), Op && this.restartGameCamera();
+      localPlayerBound(QQ) {
+        var WQ, XQ;
+        if (0 === this.activeConn || this.sessionLive && QQ === this.boundId) return;
+        const wQ = this.sessionLive;
+        let qQ, TQ, zQ, sQ;
+        this.endSession(), wQ && this.restartGameCamera();
         try {
-          var Lp;
+          var FQ;
           this.session = null;
-          const pp = this.options.sessionInfo(this.activeConn);
-          if (this.session = pp, !pp) return;
-          op = pp.gameNameWithVariation, Ip = null !== (Lp = (0, qp.Ib)(op)) && void 0 !== Lp ? Lp : void 0, Sp = (0, Mp.w)(pp.lobbyName), xp = (0, Mp.I)(pp.lobbyName)
-        } catch (tp) {
-          return void this.onError(tp)
+          const QQ = this.options.sessionInfo(this.activeConn);
+          if (this.session = QQ, !QQ) return;
+          qQ = QQ.gameNameWithVariation, TQ = null !== (FQ = (0, aQ.Fb)(qQ)) && void 0 !== FQ ? FQ : void 0, zQ = (0, lQ.s)(QQ.lobbyName), sQ = (0, lQ.I)(QQ.lobbyName)
+        } catch (DQ) {
+          return void this.onError(DQ)
         }
-        const Yp = {
-          localPlayerId: String(pp)
+        const PQ = {
+          localPlayerId: String(QQ)
         };
-        let Dp = {},
-          Ap = {};
+        let gQ = {},
+          JQ = {};
         try {
-          var Pp, Wp;
-          Dp = null !== (Pp = null === (Wp = this.options.gameFactory((0, qp.Mb)(op))) || void 0 === Wp ? void 0 : Wp(xp, Sp, Ip, Yp)) && void 0 !== Pp ? Pp : {}
-        } catch (tp) {
-          this.Yy(tp)
+          var rQ, IQ;
+          gQ = null !== (rQ = null === (IQ = this.options.gameFactory((0, aQ.Mb)(qQ))) || void 0 === IQ ? void 0 : IQ(sQ, zQ, TQ, PQ)) && void 0 !== rQ ? rQ : {}
+        } catch (DQ) {
+          this.nI(DQ)
         }
         try {
-          var yp, Up;
-          Ap = {
-            ...null === (yp = (Up = this.options).defaultPlugins) || void 0 === yp ? void 0 : yp.call(Up, xp, Sp, Ip, Yp),
-            ...Dp.plugins
+          var jQ, BQ;
+          JQ = {
+            ...null === (jQ = (BQ = this.options).defaultPlugins) || void 0 === jQ ? void 0 : jQ.call(BQ, sQ, zQ, TQ, PQ),
+            ...gQ.plugins
           }
-        } catch (tp) {
-          this.Yy(tp)
+        } catch (DQ) {
+          this.nI(DQ)
         }
-        const wp = [Dp, ...Object.values(Ap)];
-        this.owners = wp, this.tickers = wp.filter((pp => void 0 !== pp.LP)), this.renderers = wp.filter((pp => void 0 !== pp.onAfterRender)), this.receivers = wp.filter((pp => void 0 !== pp.onReceivedMessageFromServer)), this.writeAltVeto(wp), this.writeHooks(wp), this.writePublicLobby(xp), this.writeLocalDbId(null !== (ip = null === (cp = this.session) || void 0 === cp ? void 0 : cp.playerDbId) && void 0 !== ip ? ip : null), this.boundId = pp, this.sessionLive = !0, this.generation++, null !== this.pendingZoom && this.setCameraZoom(this.pendingZoom), this.highlightOwed ||= null !== this.highlight, this.writeOwedHighlight(), this.round(wp, (pp => {
-          var ip;
-          null === (ip = pp.onCreate) || void 0 === ip || ip.call(pp, this.clientApi)
+        const yQ = [gQ, ...Object.values(JQ)];
+        this.owners = yQ, this.tickers = yQ.filter((QQ => void 0 !== QQ.fJ)), this.renderers = yQ.filter((QQ => void 0 !== QQ.onAfterRender)), this.receivers = yQ.filter((QQ => void 0 !== QQ.onReceivedMessageFromServer)), this.writeAltVeto(yQ), this.writeHooks(yQ), this.writePublicLobby(sQ), this.writeLocalDbId(null !== (WQ = null === (XQ = this.session) || void 0 === XQ ? void 0 : XQ.playerDbId) && void 0 !== WQ ? WQ : null), this.boundId = QQ, this.sessionLive = !0, this.generation++, null !== this.pendingZoom && this.setCameraZoom(this.pendingZoom), this.highlightOwed ||= null !== this.highlight, this.writeOwedHighlight(), this.round(yQ, (QQ => {
+          var WQ;
+          null === (WQ = QQ.onCreate) || void 0 === WQ || WQ.call(QQ, this.clientApi)
         }));
-        const vp = this.generation;
+        const VQ = this.generation;
         setTimeout((() => {
-          vp === this.generation && !0 === this.tables.getClientOption("creative") && yO(this.tables)
+          VQ === this.generation && !0 === this.tables.getClientOption("creative") && Jw(this.tables)
         }), 0)
       }
-      chunkSlot(pp, ip, cp, Op, op, Ip) {
-        this.chunks.apply(pp, ip, cp, Op, op, Ip)
+      chunkSlot(QQ, WQ, XQ, wQ, qQ, TQ) {
+        this.chunks.apply(QQ, WQ, XQ, wQ, qQ, TQ)
       }
-      entityAdded(pp) {
-        var ip;
-        this.entityInfo.stale(pp), null === (ip = this.options.replayEntities) || void 0 === ip || ip.entityAdded(pp)
+      entityAdded(QQ) {
+        var WQ;
+        this.entityInfo.stale(QQ), null === (WQ = this.options.replayEntities) || void 0 === WQ || WQ.entityAdded(QQ)
       }
-      entityInfoChanged(pp) {
-        var ip;
-        this.entityInfo.stale(pp), null === (ip = this.options.replayEntities) || void 0 === ip || ip.entityInfoChanged(pp)
+      entityInfoChanged(QQ) {
+        var WQ;
+        this.entityInfo.stale(QQ), null === (WQ = this.options.replayEntities) || void 0 === WQ || WQ.entityInfoChanged(QQ)
       }
       afterPrescan() {
         this.items.refresh(), this.entityInfo.refresh(), this.api.rereadDirectory(), this.chunks.refresh(), this.live.refresh()
       }
       tickEnd() {
         if (this.ticks++, this.tickers.length > 0) {
-          const pp = performance.now();
-          this.round(this.tickers, hO), (0, SO.b)(performance.now() - pp)
+          const QQ = performance.now();
+          this.round(this.tickers, Sw), (0, ww.d)(performance.now() - QQ)
         }
       }
-      afterWalk(pp) {
+      afterWalk(QQ) {
         this.ackEventOverflow(), this.clientApi.flushOwed(), this.writeOwedHighlight();
-        const ip = this.options.replayEntities;
-        ip && this.guard((() => {
-          this.entityInfoWatch.want(Gc, ip.wantsWatch), ip.flush(this.entityInfoWatch.on)
+        const WQ = this.options.replayEntities;
+        WQ && this.guard((() => {
+          this.entityInfoWatch.want(eX, WQ.wantsWatch), WQ.flush(this.entityInfoWatch.on)
         }));
-        const cp = this.api.apiView,
-          Op = yp.q.frameMs(cp, 0);
-        uO.l.frame(Op, yp.q.heading(cp, 0), yp.q.pitch(cp, 0), uO.g[pp]);
-        const op = (0, SO.h)(pp, Op);
-        if (null !== op) {
-          const pp = this.renderFrame;
+        const XQ = this.api.apiView,
+          wQ = jQ.x.frameMs(XQ, 0);
+        pw.m.frame(wQ, jQ.x.heading(XQ, 0), jQ.x.pitch(XQ, 0), pw.j[QQ]);
+        const qQ = (0, ww.h)(QQ, wQ);
+        if (null !== qQ) {
+          const QQ = this.renderFrame;
           this.guard((() => {
-            (0, Vc.e)().turnDamageIndicators(pp.cameraHeading)
+            (0, OX.e)().turnDamageIndicators(QQ.cameraHeading)
           })), this.guard((() => {
-            this.clientApi.slideRoute(op)
-          })), this.round(this.renderers, (ip => {
-            ip.onAfterRender(op, pp)
+            this.clientApi.slideRoute(qQ)
+          })), this.round(this.renderers, (WQ => {
+            WQ.onAfterRender(qQ, QQ)
           }))
         }
         this.writeFreeCam();
         try {
-          this.scriptedCamera.afterFrame(null !== op)
-        } catch (Sp) {
-          this.Yy(Sp)
+          this.scriptedCamera.afterFrame(null !== qQ)
+        } catch (zQ) {
+          this.nI(zQ)
         }
-        this.showZoom(), this.items.flush(this.Yy), this.writePromptWatch(), this.writeCustomButtons();
-        const Ip = this.ticks;
-        this.ticks = 0, (0, SO.f)(Ip, pp, op, this.Yy)
+        this.showZoom(), this.items.flush(this.nI), this.writePromptWatch(), this.writeCustomButtons();
+        const TQ = this.ticks;
+        this.ticks = 0, (0, ww.g)(TQ, QQ, qQ, this.nI)
       }
-      entityRemoved(pp) {
-        this.live.despawned(pp), this.entityInfo.removed(pp)
+      entityRemoved(QQ) {
+        this.live.despawned(QQ), this.entityInfo.removed(QQ)
       }
       ackEventOverflow() {
-        const pp = this.api.apiView,
-          ip = yp.q.eventOverflowGen(pp, 0),
-          cp = ip - this.overflowGen >>> 0;
-        if (0 === cp && !this.resyncOwed) return;
-        this.overflowGen = ip;
-        const Op = yp.q.eventOverflowMask(pp, 0),
-          op = this.cmd;
-        0 === Op || null === op || this.stopped() ? this.resyncOwed = !1 : this.resyncOwed = !(0, yp.ke)(op, 0, Op);
-        const Ip = this.options.onEventOverflow;
-        0 !== cp && Ip && this.guard((() => {
-          Ip(Op, cp)
+        const QQ = this.api.apiView,
+          WQ = jQ.x.eventOverflowGen(QQ, 0),
+          XQ = WQ - this.overflowGen >>> 0;
+        if (0 === XQ && !this.resyncOwed) return;
+        this.overflowGen = WQ;
+        const wQ = jQ.x.eventOverflowMask(QQ, 0),
+          qQ = this.cmd;
+        0 === wQ || null === qQ || this.stopped() ? this.resyncOwed = !1 : this.resyncOwed = !(0, jQ.He)(qQ, 0, wQ);
+        const TQ = this.options.onEventOverflow;
+        0 !== XQ && TQ && this.guard((() => {
+          TQ(wQ, XQ)
         }))
       }
-      gameCall(pp, ip, cp, Op, op, Ip, Sp, xp, Lp) {
-        if (pp === yp.Zb.Director) try {
-          return this.scriptedCamera.call(ip, cp, Op, op, Ip, Sp)
-        } catch (Yp) {
-          return this.Yy(Yp), yp.cb.None
+      gameCall(QQ, WQ, XQ, wQ, qQ, TQ, zQ, sQ, FQ) {
+        if (QQ === jQ.yc.Director) try {
+          return this.scriptedCamera.call(WQ, XQ, wQ, qQ, TQ, zQ)
+        } catch (PQ) {
+          return this.nI(PQ), jQ.yb.None
         }
-        if (!this.sessionLive || void 0 !== this.fault) return pp === yp.Zb.AltVeto ? yp.g.Allow : 0;
+        if (!this.sessionLive || void 0 !== this.fault) return QQ === jQ.yc.AltVeto ? jQ.o.Allow : 0;
         try {
-          return this.callGames(pp, ip, cp, Op, op, Ip, Sp, xp)
-        } catch (Yp) {
-          throw (0, Wp.f)(Yp) && (this.fault = Yp), Yp
+          return this.callGames(QQ, WQ, XQ, wQ, qQ, TQ, zQ, sQ)
+        } catch (PQ) {
+          throw (0, IQ.h)(PQ) && (this.fault = PQ), PQ
         }
       }
       takeFault() {
-        const pp = this.fault;
-        return this.fault = void 0, pp
+        const QQ = this.fault;
+        return this.fault = void 0, QQ
       }
-      callGames(pp, ip, cp, Op, op, Ip, Sp, xp) {
+      callGames(QQ, WQ, XQ, wQ, qQ, TQ, zQ, sQ) {
         this.api.rereadDirectory(), this.chunks.touch(), this.items.refresh(), this.live.refresh(), this.entityInfo.inCoreCall();
         const {
-          tables: Lp
-        } = this.options, Yp = String(this.boundId);
-        switch (pp) {
-          case yp.Zb.AltVeto:
-          case yp.Zb.AltAction: {
-            const xp = 0 !== Sp,
-              [Dp, Ap, Pp] = xp ? [ip, cp, Op] : [void 0, void 0, void 0],
-              Wp = xp ? Lp.nameOfId(op) : "Air",
-              Up = bO(Ip);
-            if (pp === yp.Zb.AltAction) return this.first((pp => {
-              var ip;
-              return null === (ip = pp.onPlayerAltAction) || void 0 === ip ? void 0 : ip.call(pp, Yp, Dp, Ap, Pp, Wp, Up)
+          tables: FQ
+        } = this.options, PQ = String(this.boundId);
+        switch (QQ) {
+          case jQ.yc.AltVeto:
+          case jQ.yc.AltAction: {
+            const sQ = 0 !== zQ,
+              [gQ, JQ, rQ] = sQ ? [WQ, XQ, wQ] : [void 0, void 0, void 0],
+              IQ = sQ ? FQ.nameOfId(qQ) : "Air",
+              BQ = fw(TQ);
+            if (QQ === jQ.yc.AltAction) return this.first((QQ => {
+              var WQ;
+              return null === (WQ = QQ.onPlayerAltAction) || void 0 === WQ ? void 0 : WQ.call(QQ, PQ, gQ, JQ, rQ, IQ, BQ)
             })), 0;
-            const wp = this.first((pp => {
-              var ip;
-              return null === (ip = pp.onPlayerAttemptAltAction) || void 0 === ip ? void 0 : ip.call(pp, Yp, Dp, Ap, Pp, Wp, Up)
+            const yQ = this.first((QQ => {
+              var WQ;
+              return null === (WQ = QQ.onPlayerAttemptAltAction) || void 0 === WQ ? void 0 : WQ.call(QQ, PQ, gQ, JQ, rQ, IQ, BQ)
             }));
-            return "preventAction" === wp ? yp.g.Prevent : "preventPlacement" === wp ? yp.g.PreventPlacement : yp.g.Allow
+            return "preventAction" === yQ ? jQ.o.Prevent : "preventPlacement" === yQ ? jQ.o.PreventPlacement : jQ.o.Allow
           }
-          case yp.Zb.Click: {
-            const pp = xp,
-              Dp = 0 !== (pp & yp.H.Alt),
-              Ap = 0 !== (pp & yp.H.HasPos),
-              Pp = Ap ? Lp.nameOfId(op) : "Air",
-              [Wp, Up, wp] = Ap ? [ip, cp, Op] : [null, null, null],
-              vp = bO(Ip),
-              tp = 0 !== (pp & yp.H.Up),
-              Hp = bO(Sp);
-            if (0 === (pp & yp.H.AttackOnly) && this.first((pp => {
-                var ip, cp;
-                return tp ? null === (ip = pp.onPlayerClickUp) || void 0 === ip ? void 0 : ip.call(pp, Yp, Dp, Wp, Up, wp, Pp, vp) : null === (cp = pp.onPlayerClick) || void 0 === cp ? void 0 : cp.call(pp, Yp, Dp, Wp, Up, wp, Pp, vp)
-              })), !tp && !Dp && null !== Hp) {
-              const pp = this.clientApi.getPositionView(Hp),
-                ip = pp ? [pp[0], pp[1], pp[2]] : [0, 0, 0];
-              this.first((pp => {
-                var cp;
-                return null === (cp = pp.onPlayerAttackEntity) || void 0 === cp ? void 0 : cp.call(pp, Yp, Hp, ip)
+          case jQ.yc.Click: {
+            const QQ = sQ,
+              gQ = 0 !== (QQ & jQ.$.Alt),
+              JQ = 0 !== (QQ & jQ.$.HasPos),
+              rQ = JQ ? FQ.nameOfId(qQ) : "Air",
+              [IQ, BQ, yQ] = JQ ? [WQ, XQ, wQ] : [null, null, null],
+              VQ = fw(TQ),
+              DQ = 0 !== (QQ & jQ.$.Up),
+              pQ = fw(zQ);
+            if (0 === (QQ & jQ.$.AttackOnly) && this.first((QQ => {
+                var WQ, XQ;
+                return DQ ? null === (WQ = QQ.onPlayerClickUp) || void 0 === WQ ? void 0 : WQ.call(QQ, PQ, gQ, IQ, BQ, yQ, rQ, VQ) : null === (XQ = QQ.onPlayerClick) || void 0 === XQ ? void 0 : XQ.call(QQ, PQ, gQ, IQ, BQ, yQ, rQ, VQ)
+              })), !DQ && !gQ && null !== pQ) {
+              const QQ = this.clientApi.getPositionView(pQ),
+                WQ = QQ ? [QQ[0], QQ[1], QQ[2]] : [0, 0, 0];
+              this.first((QQ => {
+                var XQ;
+                return null === (XQ = QQ.onPlayerAttackEntity) || void 0 === XQ ? void 0 : XQ.call(QQ, PQ, pQ, WQ)
               }))
             }
             return 0
           }
-          case yp.Zb.ChangeBlock: {
-            const pp = Lp.nameOfId(op),
-              Sp = Lp.nameOfId(Ip);
-            return this.first((op => {
-              var Ip;
-              return null === (Ip = op.onPlayerChangeBlock) || void 0 === Ip ? void 0 : Ip.call(op, Yp, ip, cp, Op, pp, Sp)
+          case jQ.yc.ChangeBlock: {
+            const QQ = FQ.nameOfId(qQ),
+              zQ = FQ.nameOfId(TQ);
+            return this.first((qQ => {
+              var TQ;
+              return null === (TQ = qQ.onPlayerChangeBlock) || void 0 === TQ ? void 0 : TQ.call(qQ, PQ, WQ, XQ, wQ, QQ, zQ)
             })), 0
           }
-          case yp.Zb.DropItem: {
-            const pp = Lp.nameOfId(ip);
-            return this.first((ip => {
-              var op;
-              return null === (op = ip.onPlayerDropItem) || void 0 === op ? void 0 : op.call(ip, Yp, pp, cp, Op)
+          case jQ.yc.DropItem: {
+            const QQ = FQ.nameOfId(WQ);
+            return this.first((WQ => {
+              var qQ;
+              return null === (qQ = WQ.onPlayerDropItem) || void 0 === qQ ? void 0 : qQ.call(WQ, PQ, QQ, XQ, wQ)
             })), 0
           }
           default:
-            return this.onError(new Error(`Unknown game call kind ${pp}`)), 0
+            return this.onError(new Error(`Unknown game call kind ${QQ}`)), 0
         }
       }
-      changeBlockFail(pp, ip, cp, Op, op, Ip, Sp) {
-        const xp = op === yp.Ic ? null : QO.decode(this.api.eventBytes(Ip, Math.min(op, Sp)));
+      changeBlockFail(QQ, WQ, XQ, wQ, qQ, TQ, zQ) {
+        const sQ = qQ === jQ.td ? null : Rw.decode(this.api.eventBytes(TQ, Math.min(qQ, zQ)));
         this.failures.push({
-          dp: [pp, ip, cp],
-          jp: Op,
-          kp: xp
+          DQ: [QQ, WQ, XQ],
+          pQ: wQ,
+          GQ: sQ
         })
       }
       changeBlockFailEnd() {
-        const pp = this.failures;
-        this.failures = [], this.sessionLive && this.round(this.owners, (ip => {
-          var cp;
-          null === (cp = ip.onChangeBlockFail) || void 0 === cp || cp.call(ip, pp)
-        })), this.GA("EditBoard", {
+        const QQ = this.failures;
+        this.failures = [], this.sessionLive && this.round(this.owners, (WQ => {
+          var XQ;
+          null === (XQ = WQ.onChangeBlockFail) || void 0 === XQ || XQ.call(WQ, QQ)
+        })), this.mB("EditBoard", {
           pos: null
-        }), this.GA("EditCodeBlock", {
+        }), this.mB("EditCodeBlock", {
           pos: null,
           canChangePos: null
         })
       }
-      inventoryEvent(pp, ip, cp, Op, op, Ip) {
-        pp === yp.rc.ChestOpened ? this.items.chestOpened(cp, Op, op) : pp !== yp.rc.Synced && pp !== yp.rc.ChestClosed && pp !== yp.rc.ChestRefreshed || this.items.touch(), this.guard((() => {
-          ! function(pp, ip, cp, Op) {
-            switch (pp) {
-              case yp.rc.Synced:
-                Sp.m.GA("syncedInvenFromServer");
+      inventoryEvent(QQ, WQ, XQ, wQ, qQ, TQ) {
+        QQ === jQ.Xc.ChestOpened ? this.items.chestOpened(XQ, wQ, qQ) : QQ !== jQ.Xc.Synced && QQ !== jQ.Xc.ChestClosed && QQ !== jQ.Xc.ChestRefreshed || this.items.touch(), this.guard((() => {
+          ! function(QQ, WQ, XQ, wQ) {
+            switch (QQ) {
+              case jQ.Xc.Synced:
+                zQ.k.mB("syncedInvenFromServer");
                 break;
-              case yp.rc.ChestOpened:
-              case yp.rc.ChestClosed:
-                Sp.m.GA("chestToggleFromServer", pp === yp.rc.ChestOpened, !0);
+              case jQ.Xc.ChestOpened:
+              case jQ.Xc.ChestClosed:
+                zQ.k.mB("chestToggleFromServer", QQ === jQ.Xc.ChestOpened, !0);
                 break;
-              case yp.rc.ChestRefreshed:
-                Sp.m.GA("chestRefreshedFromServer");
+              case jQ.Xc.ChestRefreshed:
+                zQ.k.mB("chestRefreshedFromServer");
                 break;
-              case yp.rc.EnchantingTable:
-                Sp.m.GA("enchantingTable", {
-                  tx: Op,
-                  position: cp
+              case jQ.Xc.EnchantingTable:
+                zQ.k.mB("enchantingTable", {
+                  ez: wQ,
+                  position: XQ
                 });
                 break;
-              case yp.rc.HotbarRequest:
-                Sp.m.GA("setSelectedInventorySlotI", ip, !0);
+              case jQ.Xc.HotbarRequest:
+                zQ.k.mB("setSelectedInventorySlotI", WQ, !0);
                 break;
-              case yp.rc.Scrolled:
-                Sp.m.GA("ScrollInventorySlot", ip);
+              case jQ.Xc.Scrolled:
+                zQ.k.mB("ScrollInventorySlot", WQ);
                 break;
-              case yp.rc.NumberKey:
-                Sp.m.GA("numkeyPressed", ip + 1);
+              case jQ.Xc.NumberKey:
+                zQ.k.mB("numkeyPressed", WQ + 1);
                 break;
-              case yp.rc.DropRequested:
-                Sp.m.GA("DropInvenItem", 0 !== ip);
+              case jQ.Xc.DropRequested:
+                zQ.k.mB("DropInvenItem", 0 !== WQ);
                 break;
               default:
-                throw new Wp.b(`InventoryEvent of no kind: what ${pp}`)
+                throw new IQ.d(`InventoryEvent of no kind: what ${QQ}`)
             }
-          }(pp, ip, [cp, Op, op], Ip)
+          }(QQ, WQ, [XQ, wQ, qQ], TQ)
         }))
       }
       heldItemChanged() {
         this.items.touch()
       }
-      shotDamage(pp, ip, cp, Op) {
-        this.GA("shotPlayer", {
-          playerId: String(pp),
-          damage: ip,
-          wasCrit: 0 !== Op,
-          distance: cp
+      shotDamage(QQ, WQ, XQ, wQ) {
+        this.mB("shotPlayer", {
+          playerId: String(QQ),
+          damage: WQ,
+          wasCrit: 0 !== wQ,
+          distance: XQ
         })
       }
-      localHurt(pp, ip) {
-        this.GA("closeShopOnDamaged", null), this.guard((() => {
-          Sp.m.GA("damagedByOtherPlayer", {
-            Ec: null,
-            direction: Number.isNaN(ip) ? null : ip,
-            Qp: pp
+      localHurt(QQ, WQ) {
+        this.mB("closeShopOnDamaged", null), this.guard((() => {
+          zQ.k.mB("damagedByOtherPlayer", {
+            jX: null,
+            direction: Number.isNaN(WQ) ? null : WQ,
+            iQ: QQ
           })
         }))
       }
-      attackHit(pp, ip, cp, Op, op) {
+      attackHit(QQ, WQ, XQ, wQ, qQ) {
         this.guard((() => {
-          Sp.m.GA("yourAttackHit", {
-            cc: Op,
-            screenPos: this.renderFrame.projectDirectionToScreenPos([pp, ip, cp]),
-            hitSelf: op
+          zQ.k.mB("yourAttackHit", {
+            fW: wQ,
+            screenPos: this.renderFrame.projectDirectionToScreenPos([QQ, WQ, XQ]),
+            hitSelf: qQ
           })
         }))
       }
-      physicsType(pp) {
-        this.GA("PlayerPhysicsTypeUpdate", pp)
+      physicsType(QQ) {
+        this.mB("PlayerPhysicsTypeUpdate", QQ)
       }
-      vehicleEffect(pp, ip, cp, Op, op) {
+      vehicleEffect(QQ, WQ, XQ, wQ, qQ) {
         this.guard((() => {
-          pp === Pp.Cd.UPDATE ? (0, Xp.h)(ip, {
-            icon: cp,
-            level: Op,
+          QQ === rQ.Md.UPDATE ? (0, cQ.j)(WQ, {
+            icon: XQ,
+            level: wQ,
             displayName: null,
-            durationMs: op
-          }) : Ep.e.remove(ip)
+            durationMs: qQ
+          }) : iQ.b.remove(WQ)
         }))
       }
-      zoomChanged(pp) {
-        this.zoom = pp, this.zoomUnshown = !0
+      zoomChanged(QQ) {
+        this.zoom = QQ, this.zoomUnshown = !0
       }
       zoomDisabled() {
-        this.GA("showBottomMessage", {
+        this.mB("showBottomMessage", {
           message: "Zoom is disabled",
           timeoutLength: 2e3,
           type: "Error"
         })
       }
-      showZoom() {
-        const pp = this.scriptedCamera.holdsView();
-        !this.zoomUnshown || pp && this.zoomHeld || (this.zoomUnshown = !1, this.GA("cameraZoomSet", this.zoom)), this.zoomHeld = pp
+      bhopDisabled() {
+        this.mB("showBottomMessage", Aw.d)
       }
-      gunHit(pp) {
+      showZoom() {
+        const QQ = this.scriptedCamera.holdsView();
+        !this.zoomUnshown || QQ && this.zoomHeld || (this.zoomUnshown = !1, this.mB("cameraZoomSet", this.zoom)), this.zoomHeld = QQ
+      }
+      gunHit(QQ) {
         this.guard((() => {
           const {
-            Ec: ip,
-            Xc: cp
-          } = (0, dO.b)(eO.w, pp);
-          Sp.m.GA("damagedByOtherPlayer", {
-            Ec: ip,
-            direction: cp
+            jX: WQ,
+            BX: XQ
+          } = (0, Vw.c)(Dw.q, QQ);
+          zQ.k.mB("damagedByOtherPlayer", {
+            jX: WQ,
+            direction: XQ
           })
         }))
       }
-      uiEvent(pp, ip, cp, Op, op, Ip, Sp, xp) {
+      uiEvent(QQ, WQ, XQ, wQ, qQ, TQ, zQ, sQ) {
         this.guard((() => {
-          pO(pp, ip, [cp, Op, op], Ip, this.items, this.options.tables, (() => QO.decode(this.api.eventBytes(Sp, xp))))
+          KX(QQ, WQ, [XQ, wQ, qQ], TQ, this.items, this.options.tables, (() => Rw.decode(this.api.eventBytes(zQ, sQ))))
         }))
       }
-      writeAltVeto(pp) {
-        const ip = this.cmd;
-        if (!ip) return;
-        let cp;
+      writeAltVeto(QQ) {
+        const WQ = this.cmd;
+        if (!WQ) return;
+        let XQ;
         try {
-          cp = function(pp, ip) {
-            const cp = new Set;
-            let Op = !1;
-            for (const op of pp)
-              if (op.onPlayerAttemptAltAction) {
-                if (Op = !0, !op.altVetoBlocks) return {
-                  mode: yp.Wd.All,
+          XQ = function(QQ, WQ) {
+            const XQ = new Set;
+            let wQ = !1;
+            for (const qQ of QQ)
+              if (qQ.onPlayerAttemptAltAction) {
+                if (wQ = !0, !qQ.altVetoBlocks) return {
+                  mode: jQ.se.All,
                   roots: []
                 };
-                for (const pp of op.altVetoBlocks) cp.add(ip.getMetaInfo(pp).rootId)
-              } return Op ? cp.size > yp.Ec ? {
-              mode: yp.Wd.All,
+                for (const QQ of qQ.altVetoBlocks) XQ.add(WQ.getMetaInfo(QQ).rootId)
+              } return wQ ? XQ.size > jQ.jd ? {
+              mode: jQ.se.All,
               roots: []
             } : {
-              mode: yp.Wd.Filter,
-              roots: [...cp]
+              mode: jQ.se.Filter,
+              roots: [...XQ]
             } : {
-              mode: yp.Wd.Off,
+              mode: jQ.se.Off,
               roots: []
             }
-          }(pp, this.options.tables)
-        } catch (op) {
-          this.onError(op), cp = {
-            mode: yp.Wd.All,
+          }(QQ, this.options.tables)
+        } catch (qQ) {
+          this.onError(qQ), XQ = {
+            mode: jQ.se.All,
             roots: []
           }
         }
-        if (cp.mode === yp.Wd.Off && !this.vetoSet) return;
-        const Op = new Uint8Array(new Uint32Array(cp.roots).buffer);
-        (0, yp.Ff)(ip, 0, cp.mode, cp.roots.length, Op) ? this.vetoSet = cp.mode !== yp.Wd.Off: this.onError(new Error("SetAltVeto didn't fit the command ring"))
+        if (XQ.mode === jQ.se.Off && !this.vetoSet) return;
+        const wQ = new Uint8Array(new Uint32Array(XQ.roots).buffer);
+        (0, jQ.Lf)(WQ, 0, XQ.mode, XQ.roots.length, wQ) ? this.vetoSet = XQ.mode !== jQ.se.Off: this.onError(new Error("SetAltVeto didn't fit the command ring"))
       }
       endGameGrants() {
         this.freeCam.clearGame(), this.writeFreeCam()
@@ -4552,472 +4571,472 @@ export const modules = {
       writeFreeCam() {
         this.stopped() || this.freeCam.write(this.cmd)
       }
-      writeHooks(pp) {
-        const ip = this.cmd;
-        if (!ip) return;
-        const cp = function(pp) {
-          let ip = 0;
-          for (const cp of pp) cp.onPlayerAltAction && (ip |= 1 << yp.Zb.AltAction), (cp.onPlayerClick || cp.onPlayerClickUp || cp.onPlayerAttackEntity) && (ip |= 1 << yp.Zb.Click), cp.onPlayerChangeBlock && (ip |= 1 << yp.Zb.ChangeBlock), cp.onPlayerDropItem && (ip |= 1 << yp.Zb.DropItem);
-          return ip
-        }(pp);
-        (0 !== cp || this.hooksSet) && ((0, yp.Tf)(ip, 0, cp) ? this.hooksSet = 0 !== cp : this.onError(new Error("SetHooks didn't fit the command ring")))
+      writeHooks(QQ) {
+        const WQ = this.cmd;
+        if (!WQ) return;
+        const XQ = function(QQ) {
+          let WQ = 0;
+          for (const XQ of QQ) XQ.onPlayerAltAction && (WQ |= 1 << jQ.yc.AltAction), (XQ.onPlayerClick || XQ.onPlayerClickUp || XQ.onPlayerAttackEntity) && (WQ |= 1 << jQ.yc.Click), XQ.onPlayerChangeBlock && (WQ |= 1 << jQ.yc.ChangeBlock), XQ.onPlayerDropItem && (WQ |= 1 << jQ.yc.DropItem);
+          return WQ
+        }(QQ);
+        (0 !== XQ || this.hooksSet) && ((0, jQ.Sf)(WQ, 0, XQ) ? this.hooksSet = 0 !== XQ : this.onError(new Error("SetHooks didn't fit the command ring")))
       }
       writeCustomButtons() {
-        const pp = this.cmd;
-        pp && !this.stopped() && this.customButtons.write(pp)
+        const QQ = this.cmd;
+        QQ && !this.stopped() && this.customButtons.write(QQ)
       }
       writePromptWatch() {
-        const pp = this.cmd,
-          ip = this.promptWatch;
-        ip !== this.promptWatchSent && pp && !this.stopped() && (0, yp.lg)(pp, 0, TO[ip]) && (this.promptWatchSent = ip)
+        const QQ = this.cmd,
+          WQ = this.promptWatch;
+        WQ !== this.promptWatchSent && QQ && !this.stopped() && (0, jQ.hg)(QQ, 0, Lw[WQ]) && (this.promptWatchSent = WQ)
       }
-      writePublicLobby(pp) {
-        const ip = this.cmd;
-        ip && pp !== this.writtenPublicLobby && ((0, yp.ag)(ip, 0, pp ? 1 : 0) ? this.writtenPublicLobby = pp : this.onError(new Error("SetPublicLobby didn't fit the command ring")))
+      writePublicLobby(QQ) {
+        const WQ = this.cmd;
+        WQ && QQ !== this.writtenPublicLobby && ((0, jQ.ag)(WQ, 0, QQ ? 1 : 0) ? this.writtenPublicLobby = QQ : this.onError(new Error("SetPublicLobby didn't fit the command ring")))
       }
-      writeLocalDbId(pp) {
-        const ip = this.cmd;
-        ip && ((0, yp.Xf)(ip, 0, null === pp ? 0 : 1, null === pp ? BO : JO.encode(pp)) || this.onError(new Error("SetLocalDbId didn't fit the command ring")))
+      writeLocalDbId(QQ) {
+        const WQ = this.cmd;
+        WQ && ((0, jQ.Uf)(WQ, 0, null === QQ ? 0 : 1, null === QQ ? Cw : Ew.encode(QQ)) || this.onError(new Error("SetLocalDbId didn't fit the command ring")))
       }
-      first(pp) {
-        const ip = this.generation;
-        for (const Op of this.owners) {
-          if (ip !== this.generation) break;
+      first(QQ) {
+        const WQ = this.generation;
+        for (const wQ of this.owners) {
+          if (WQ !== this.generation) break;
           try {
-            const ip = pp(Op);
-            if (void 0 !== ip) return ip
-          } catch (cp) {
-            this.Yy(cp)
+            const WQ = QQ(wQ);
+            if (void 0 !== WQ) return WQ
+          } catch (XQ) {
+            this.nI(XQ)
           }
         }
       }
-      GA(pp, ip) {
+      mB(QQ, WQ) {
         this.guard((() => {
-          Sp.m.GA(pp, ip)
+          zQ.k.mB(QQ, WQ)
         }))
       }
       dropGameCamera() {
         try {
           this.scriptedCamera.reset()
-        } catch (pp) {
-          this.Yy(pp)
+        } catch (QQ) {
+          this.nI(QQ)
         }
       }
       restartGameCamera() {
         try {
           this.scriptedCamera.restart()
-        } catch (pp) {
-          this.Yy(pp)
+        } catch (QQ) {
+          this.nI(QQ)
         }
       }
       endSession() {
         if (!this.sessionLive) return;
         this.sessionLive = !1;
-        const pp = this.owners;
-        let ip;
+        const QQ = this.owners;
+        let WQ;
         if (this.owners = this.tickers = this.renderers = this.receivers = [], this.generation++, !this.stopped()) try {
           this.writeAltVeto([]), this.writeHooks([]), this.writePublicLobby(!1), this.writeLocalDbId(null)
-        } catch (Op) {
-          ip = Op
+        } catch (wQ) {
+          WQ = wQ
         }
         try {
           this.entityInfo.sessionEnded()
-        } catch (Op) {
-          ip ??= Op
+        } catch (wQ) {
+          WQ ??= wQ
         }
-        this.round(pp, aO, !0);
+        this.round(QQ, tw, !0);
         try {
           this.particles.sessionEnded() || this.onError(new Error("ParticleStopAll didn't fit the command ring"))
-        } catch (Op) {
-          ip ??= Op
+        } catch (wQ) {
+          WQ ??= wQ
         }
         try {
           this.clientApi.disposeGameOutput()
-        } catch (Op) {
-          ip ??= Op
+        } catch (wQ) {
+          WQ ??= wQ
         }
-        const cp = this.options.onSessionEnd;
-        if (cp) try {
-          cp()
-        } catch (Op) {
-          this.onError(Op)
+        const XQ = this.options.onSessionEnd;
+        if (XQ) try {
+          XQ()
+        } catch (wQ) {
+          this.onError(wQ)
         }
-        void 0 !== ip && this.Yy(ip)
+        void 0 !== WQ && this.nI(WQ)
       }
-      round(pp, ip) {
-        let cp = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const Op = this.generation;
-        for (const Ip of pp) {
-          if (Op !== this.generation) break;
+      round(QQ, WQ) {
+        let XQ = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const wQ = this.generation;
+        for (const TQ of QQ) {
+          if (wQ !== this.generation) break;
           try {
-            ip(Ip)
-          } catch (op) {
-            cp ? this.onError(op) : this.Yy(op)
+            WQ(TQ)
+          } catch (qQ) {
+            XQ ? this.onError(qQ) : this.nI(qQ)
           }
         }
       }
-      guard(pp) {
+      guard(QQ) {
         try {
-          pp()
-        } catch (ip) {
-          this.Yy(ip)
+          QQ()
+        } catch (WQ) {
+          this.nI(WQ)
         }
       }
     }
 
-    function bO(pp) {
-      return pp === yp.Jc ? null : String(pp)
+    function fw(QQ) {
+      return QQ === jQ.wd ? null : String(QQ)
     }
 
-    function hO(pp) {
-      pp.LP(Pp.wd)
+    function Sw(QQ) {
+      QQ.fJ(rQ.Id)
     }
 
-    function aO(pp) {
-      var ip;
-      null === (ip = pp.onClose) || void 0 === ip || ip.call(pp)
+    function tw(QQ) {
+      var WQ;
+      null === (WQ = QQ.onClose) || void 0 === WQ || WQ.call(QQ)
     }
 
-    function nO(pp, ip) {
-      pp.watch((() => {
-        const cp = function(pp) {
-          const ip = [],
-            cp = Math.min(xO, pp.length);
-          for (let op = 0; op < cp; op++) {
-            var Op;
-            const cp = null === (Op = pp.slot(op)) || void 0 === Op ? void 0 : Op.typeObj,
-              Ip = cp ? (0, IO.gunTypeOf)(cp.id) : void 0;
-            void 0 !== Ip && ip.push(ei[Ip])
+    function ow(QQ, WQ) {
+      QQ.watch((() => {
+        const XQ = function(QQ) {
+          const WQ = [],
+            XQ = Math.min(qw, QQ.length);
+          for (let qQ = 0; qQ < XQ; qQ++) {
+            var wQ;
+            const XQ = null === (wQ = QQ.slot(qQ)) || void 0 === wQ ? void 0 : wQ.typeObj,
+              TQ = XQ ? (0, Xw.gunTypeOf)(XQ.id) : void 0;
+            void 0 !== TQ && WQ.push(pW[TQ])
           }
-          return ip
-        }(pp);
-        cp.length > 0 && (ip.preload(cp), ip.preload([ui]))
+          return WQ
+        }(QQ);
+        XQ.length > 0 && (WQ.preload(XQ), WQ.preload([GW]))
       }))
     }
-    var FO = cp(36654),
-      gO = cp(4974),
-      GO = cp(36948),
-      rO = cp(36980);
+    var ew = XQ(36750),
+      nw = XQ(5212),
+      xw = XQ(37049),
+      Yw = XQ(37081);
 
-    function ZO(pp) {
-      const ip = (0, FO.countDecodesAs)(new gO.Howl({
-          ...(0, GO.e)(pp),
+    function Nw(QQ) {
+      const WQ = (0, ew.countDecodesAs)(new nw.Howl({
+          ...(0, xw.h)(QQ),
           pool: 15,
           preload: !1
         }), "sheet"),
-        cp = ip.load.bind(ip);
-      return ip.load = () => (ip._preload = !0, (0, rO.b)(pp), cp()), ip
+        XQ = WQ.load.bind(WQ);
+      return WQ.load = () => (WQ._preload = !0, (0, Yw.e)(QQ), XQ()), WQ
     }
 
-    function zO(pp, ip, cp) {
-      const Op = pp.listener;
-      if (Op.positionX) sO(Op.positionX, ip, cp, 0), sO(Op.positionY, ip, cp, 1), sO(Op.positionZ, ip, cp, 2), sO(Op.forwardX, ip, cp, 3), sO(Op.forwardY, ip, cp, 4), sO(Op.forwardZ, ip, cp, 5), sO(Op.upX, ip, cp, 6), sO(Op.upY, ip, cp, 7), sO(Op.upZ, ip, cp, 8);
+    function Zw(QQ, WQ, XQ) {
+      const wQ = QQ.listener;
+      if (wQ.positionX) Ow(wQ.positionX, WQ, XQ, 0), Ow(wQ.positionY, WQ, XQ, 1), Ow(wQ.positionZ, WQ, XQ, 2), Ow(wQ.forwardX, WQ, XQ, 3), Ow(wQ.forwardY, WQ, XQ, 4), Ow(wQ.forwardZ, WQ, XQ, 5), Ow(wQ.upX, WQ, XQ, 6), Ow(wQ.upY, WQ, XQ, 7), Ow(wQ.upZ, WQ, XQ, 8);
       else {
-        let pp = !1;
-        for (let Op = 0; Op < 9; Op++) pp ||= ip[Op] !== cp[Op];
-        pp && (Op.setPosition(ip[0], ip[1], ip[2]), Op.setOrientation(ip[3], ip[4], ip[5], ip[6], ip[7], ip[8]), cp.set(ip))
+        let QQ = !1;
+        for (let wQ = 0; wQ < 9; wQ++) QQ ||= WQ[wQ] !== XQ[wQ];
+        QQ && (wQ.setPosition(WQ[0], WQ[1], WQ[2]), wQ.setOrientation(WQ[3], WQ[4], WQ[5], WQ[6], WQ[7], WQ[8]), XQ.set(WQ))
       }
     }
 
-    function sO(pp, ip, cp, Op) {
-      ip[Op] !== cp[Op] && (pp.value = ip[Op], cp[Op] = ip[Op])
+    function Ow(QQ, WQ, XQ, wQ) {
+      WQ[wQ] !== XQ[wQ] && (QQ.value = WQ[wQ], XQ[wQ] = WQ[wQ])
     }
-    class KO {
+    class Kw {
       constructor() {
         this.pose = new Float64Array(9), this.written = new Float64Array(9).fill(Number.NaN), this.watchedCtx = void 0
       }
-      apply(pp) {
-        this.pose.set(pp);
-        const ip = gO.Howler.ctx;
-        return !!ip && (ip !== this.watchedCtx && (this.watchedCtx = ip, this.written.fill(Number.NaN), ip.addEventListener("statechange", (() => {
-          "running" === ip.state && zO(ip, this.pose, this.written)
-        }))), "running" === ip.state && zO(ip, pp, this.written), !0)
+      apply(QQ) {
+        this.pose.set(QQ);
+        const WQ = nw.Howler.ctx;
+        return !!WQ && (WQ !== this.watchedCtx && (this.watchedCtx = WQ, this.written.fill(Number.NaN), WQ.addEventListener("statechange", (() => {
+          "running" === WQ.state && Zw(WQ, this.pose, this.written)
+        }))), "running" === WQ.state && Zw(WQ, QQ, this.written), !0)
       }
     }
-    var VO = cp(36764),
-      po = cp(39391);
-    let io = null,
-      co = null;
+    var mw = XQ(36864),
+      Mw = XQ(39489);
+    let Qq = null,
+      Wq = null;
 
-    function Oo() {
-      return null === io && (io = document.createElement("div"), io.className = "WasmCameraLayer", io.style.cssText = "position:fixed;top:0;right:0;bottom:0;left:0;pointer-events:none", document.body.append(io)), io
+    function Xq() {
+      return null === Qq && (Qq = document.createElement("div"), Qq.className = "WasmCameraLayer", Qq.style.cssText = "position:fixed;top:0;right:0;bottom:0;left:0;pointer-events:none", document.body.append(Qq)), Qq
     }
 
-    function oo() {
-      return co ??= new po.e(new VO.c(Oo)), co
+    function wq() {
+      return Wq ??= new Mw.c(new mw.d(Xq)), Wq
     }
 
-    function Io() {
-      var pp;
-      null === (pp = co) || void 0 === pp || pp.clear(), So(null)
+    function qq() {
+      var QQ;
+      null === (QQ = Wq) || void 0 === QQ || QQ.clear(), Tq(null)
     }
 
-    function So(pp) {
-      Op.c.get("scriptedCameraFacing") !== pp && Op.c.set({
-        scriptedCameraFacing: pp
+    function Tq(QQ) {
+      wQ.b.get("scriptedCameraFacing") !== QQ && wQ.b.set({
+        scriptedCameraFacing: QQ
       })
     }
-    var xo = cp(9436),
-      Lo = cp(9385),
-      Yo = cp(39425),
-      Do = cp(41251),
-      Ao = cp(3400);
-    const Po = Object.entries(yp.Xb).reduce(((pp, ip) => {
-      let [cp, Op] = ip;
-      return pp[Op] = cp, pp
+    var zq = XQ(9679),
+      sq = XQ(9634),
+      Fq = XQ(39527),
+      Pq = XQ(41245),
+      gq = XQ(3555);
+    const Jq = Object.entries(jQ.wc).reduce(((QQ, WQ) => {
+      let [XQ, wQ] = WQ;
+      return QQ[wQ] = XQ, QQ
     }), []);
 
-    function Wo(pp, ip) {
-      var cp;
-      return 0 !== ((null !== (cp = pp.itemFlags[ip]) && void 0 !== cp ? cp : 0) & yp.vc.Stackable)
+    function rq(QQ, WQ) {
+      var XQ;
+      return 0 !== ((null !== (XQ = QQ.itemFlags[WQ]) && void 0 !== XQ ? XQ : 0) & jQ.$c.Stackable)
     }
-    const yo = /^(0|[1-9][0-9]*)$/,
-      Uo = {
-        displayName: (pp, ip) => (0, IO.displayNameOf)(ip),
-        description: (pp, ip) => (0, IO.descriptionOf)(ip),
-        type: (pp, ip) => (0, IO.itemTypeOf)(ip),
-        clipSize: (pp, ip) => (0, IO.clipSizeOf)(ip),
-        armourReduction: (pp, ip) => (0, IO.armourReductionOf)(ip),
-        scopeType: (pp, ip) => (0, IO.scopeTypeOf)(ip),
-        stackable: Wo,
-        harvestType: (pp, ip) => Po[pp.blockHarvestTypes[ip]],
-        harvestLevel: (pp, ip) => {
-          const cp = pp.blockHarvestLevels[ip];
-          return cp === yp.Ac ? void 0 : cp
+    const Iq = /^(0|[1-9][0-9]*)$/,
+      jq = {
+        displayName: (QQ, WQ) => (0, Xw.displayNameOf)(WQ),
+        description: (QQ, WQ) => (0, Xw.descriptionOf)(WQ),
+        type: (QQ, WQ) => (0, Xw.itemTypeOf)(WQ),
+        clipSize: (QQ, WQ) => (0, Xw.clipSizeOf)(WQ),
+        armourReduction: (QQ, WQ) => (0, Xw.armourReductionOf)(WQ),
+        scopeType: (QQ, WQ) => (0, Xw.scopeTypeOf)(WQ),
+        stackable: rq,
+        harvestType: (QQ, WQ) => Jq[QQ.blockHarvestTypes[WQ]],
+        harvestLevel: (QQ, WQ) => {
+          const XQ = QQ.blockHarvestLevels[WQ];
+          return XQ === jQ.ed ? void 0 : XQ
         },
-        harvests: (pp, ip) => {
-          var cp;
-          const Op = null !== (cp = pp.itemHarvests[ip]) && void 0 !== cp ? cp : 0;
-          return 0 !== Op ? Po[Op] : void 0 === (0, IO.harvestsNullLevelOf)(ip) ? void 0 : null
+        harvests: (QQ, WQ) => {
+          var XQ;
+          const wQ = null !== (XQ = QQ.itemHarvests[WQ]) && void 0 !== XQ ? XQ : 0;
+          return 0 !== wQ ? Jq[wQ] : void 0 === (0, Xw.harvestsNullLevelOf)(WQ) ? void 0 : null
         },
-        level: (pp, ip) => {
-          var cp, Op;
-          const op = null !== (cp = pp.itemLevels[ip]) && void 0 !== cp ? cp : yp.Ac;
-          return op !== yp.Ac ? op : null !== (Op = (0, IO.harvestsNullLevelOf)(ip)) && void 0 !== Op ? Op : void 0
+        level: (QQ, WQ) => {
+          var XQ, wQ;
+          const qQ = null !== (XQ = QQ.itemLevels[WQ]) && void 0 !== XQ ? XQ : jQ.ed;
+          return qQ !== jQ.ed ? qQ : null !== (wQ = (0, Xw.harvestsNullLevelOf)(WQ)) && void 0 !== wQ ? wQ : void 0
         }
       };
 
-    function wo(pp, ip, cp) {
-      return to(new Uint8Array(Math.floor(pp.length / ip)), pp, ip, cp)
+    function Bq(QQ, WQ, XQ) {
+      return Vq(new Uint8Array(Math.floor(QQ.length / WQ)), QQ, WQ, XQ)
     }
 
-    function vo(pp, ip, cp) {
-      return to(new Uint16Array(Math.floor(pp.length / ip)), pp, ip, cp)
+    function yq(QQ, WQ, XQ) {
+      return Vq(new Uint16Array(Math.floor(QQ.length / WQ)), QQ, WQ, XQ)
     }
 
-    function to(pp, ip, cp, Op) {
-      const op = new DataView(ip.buffer, ip.byteOffset, ip.byteLength);
-      for (let Ip = 0; Ip < pp.length; Ip++) pp[Ip] = Op(op, Ip * cp);
-      return pp
+    function Vq(QQ, WQ, XQ, wQ) {
+      const qQ = new DataView(WQ.buffer, WQ.byteOffset, WQ.byteLength);
+      for (let TQ = 0; TQ < QQ.length; TQ++) QQ[TQ] = wQ(qQ, TQ * XQ);
+      return QQ
     }
-    class Ho {
-      constructor(pp, ip) {
-        this.options = ip, this.metas = [], this.types = new Map, this.props = void 0, this.rootIdOf = pp => {
-          const ip = this.idOf(pp);
-          if (void 0 === ip) throw new Error(`No item is named ${pp}, an item's root`);
-          return ip
+    class Dq {
+      constructor(QQ, WQ) {
+        this.options = WQ, this.metas = [], this.types = new Map, this.props = void 0, this.rootIdOf = QQ => {
+          const WQ = this.idOf(QQ);
+          if (void 0 === WQ) throw new Error(`No item is named ${QQ}, an item's root`);
+          return WQ
         };
-        const cp = ip => {
-            const cp = ip();
-            return new Uint8Array(pp.memory().buffer, pp.scratch(), cp).slice()
+        const XQ = WQ => {
+            const XQ = WQ();
+            return new Uint8Array(QQ.memory().buffer, QQ.scratch(), XQ).slice()
           },
-          Op = (new TextDecoder).decode(cp((() => pp.queries.itemNames()))).split("\n"),
-          op = cp((() => pp.queries.blockProps())),
-          Ip = cp((() => pp.queries.itemProps()));
+          wQ = (new TextDecoder).decode(XQ((() => QQ.queries.itemNames()))).split("\n"),
+          qQ = XQ((() => QQ.queries.blockProps())),
+          TQ = XQ((() => QQ.queries.itemProps()));
         this.props = {
-          blockFlags: wo(op, yp.u.BYTES, yp.u.flags),
-          blockHarvestTypes: wo(op, yp.u.BYTES, yp.u.harvestType),
-          blockHarvestLevels: wo(op, yp.u.BYTES, yp.u.harvestLevel),
-          blockAttachedTops: vo(op, yp.u.BYTES, yp.u.attachedTop),
-          itemFlags: wo(Ip, yp.xc.BYTES, yp.xc.flags),
-          itemHarvests: wo(Ip, yp.xc.BYTES, yp.xc.harvests),
-          itemLevels: wo(Ip, yp.xc.BYTES, yp.xc.level)
-        }, (0, Ao.k)(Object.freeze(Op)), (0, Do.f)()
+          blockFlags: Bq(qQ, jQ.F.BYTES, jQ.F.flags),
+          blockHarvestTypes: Bq(qQ, jQ.F.BYTES, jQ.F.harvestType),
+          blockHarvestLevels: Bq(qQ, jQ.F.BYTES, jQ.F.harvestLevel),
+          blockAttachedTops: yq(qQ, jQ.F.BYTES, jQ.F.attachedTop),
+          itemFlags: Bq(TQ, jQ.dd.BYTES, jQ.dd.flags),
+          itemHarvests: Bq(TQ, jQ.dd.BYTES, jQ.dd.harvests),
+          itemLevels: Bq(TQ, jQ.dd.BYTES, jQ.dd.level)
+        }, (0, gq.i)(Object.freeze(wQ)), (0, Pq.e)()
       }
-      idOf(pp) {
-        if ("number" === typeof pp) return void 0 === (0, Ao.d)(pp) ? void 0 : pp;
-        const ip = (0, Ao.c)(pp);
-        return void 0 === ip && yo.test(pp) ? void 0 === (0, Ao.d)(+pp) ? void 0 : +pp : ip
+      idOf(QQ) {
+        if ("number" === typeof QQ) return void 0 === (0, gq.e)(QQ) ? void 0 : QQ;
+        const WQ = (0, gq.c)(QQ);
+        return void 0 === WQ && Iq.test(QQ) ? void 0 === (0, gq.e)(+QQ) ? void 0 : +QQ : WQ
       }
-      getMetaInfo(pp) {
-        if (!pp || pp === xo.d) return xo.h;
-        const ip = this.idOf(pp);
-        if (void 0 === ip) throw new Error(`Item ${pp} not found in registry`);
-        return this.metaOf(ip)
+      getMetaInfo(QQ) {
+        if (!QQ || QQ === zq.b) return zq.c;
+        const WQ = this.idOf(QQ);
+        if (void 0 === WQ) throw new Error(`Item ${QQ} not found in registry`);
+        return this.metaOf(WQ)
       }
-      blockRootId(pp) {
-        return 0 !== pp && void 0 !== (0, Ao.d)(pp) ? this.metaOf(pp).rootId : pp
+      blockRootId(QQ) {
+        return 0 !== QQ && void 0 !== (0, gq.e)(QQ) ? this.metaOf(QQ).rootId : QQ
       }
-      metaOf(pp) {
-        return this.metas[pp] ??= (0, Lo.l)((0, Ao.d)(pp), pp, this.rootIdOf, (0, IO.rootMetaDescOf)(pp))
+      metaOf(QQ) {
+        return this.metas[QQ] ??= (0, sq.j)((0, gq.e)(QQ), QQ, this.rootIdOf, (0, Xw.rootMetaDescOf)(QQ))
       }
-      getItemId(pp) {
-        if (!pp || pp === xo.d) return 0;
-        const ip = this.idOf(pp);
-        if (void 0 === ip) throw new Error(`Invalid block name. You sent ${pp}. The only valid item names are 'Air' and those contained within the blockMetadata/itemMetadata files`);
-        return ip
+      getItemId(QQ) {
+        if (!QQ || QQ === zq.b) return 0;
+        const WQ = this.idOf(QQ);
+        if (void 0 === WQ) throw new Error(`Invalid block name. You sent ${QQ}. The only valid item names are 'Air' and those contained within the blockMetadata/itemMetadata files`);
+        return WQ
       }
-      getItemName(pp) {
-        if (!pp || pp === xo.d) return xo.d;
-        const ip = this.idOf(pp);
-        if (void 0 === ip) throw new Error(`Item ${pp} not found in registry`);
-        return (0, Ao.d)(ip)
+      getItemName(QQ) {
+        if (!QQ || QQ === zq.b) return zq.b;
+        const WQ = this.idOf(QQ);
+        if (void 0 === WQ) throw new Error(`Item ${QQ} not found in registry`);
+        return (0, gq.e)(WQ)
       }
-      blockNameToBlockId(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        if (pp === xo.d) return 0;
-        let cp = this.idOf(pp);
-        if (void 0 === cp || !this.isBlockId(cp)) {
-          const ip = pp.indexOf("|"),
-            Op = ip > 0 ? (0, Ao.c)(pp.slice(0, ip)) : void 0;
-          cp = void 0 !== Op && this.isBlockId(Op) && (0, IO.rootMetaDescOf)(Op) === pp ? Op : void 0
+      blockNameToBlockId(QQ) {
+        let WQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        if (QQ === zq.b) return 0;
+        let XQ = this.idOf(QQ);
+        if (void 0 === XQ || !this.isBlockId(XQ)) {
+          const WQ = QQ.indexOf("|"),
+            wQ = WQ > 0 ? (0, gq.c)(QQ.slice(0, WQ)) : void 0;
+          XQ = void 0 !== wQ && this.isBlockId(wQ) && (0, Xw.rootMetaDescOf)(wQ) === QQ ? wQ : void 0
         }
-        if (void 0 !== cp) return cp;
-        if (!ip) throw new Error(`Invalid block name. You sent ${pp}. The only valid block names are 'Air' and those contained within the blockMetadata.ts file`);
+        if (void 0 !== XQ) return XQ;
+        if (!WQ) throw new Error(`Invalid block name. You sent ${QQ}. The only valid block names are 'Air' and those contained within the blockMetadata.ts file`);
         return null
       }
-      isBlockId(pp) {
-        return pp > 0 && pp < this.props.blockFlags.length
+      isBlockId(QQ) {
+        return QQ > 0 && QQ < this.props.blockFlags.length
       }
-      nameOfId(pp) {
-        return 0 !== pp && (0, Ao.d)(pp) || xo.d
+      nameOfId(QQ) {
+        return 0 !== QQ && (0, gq.e)(QQ) || zq.b
       }
-      itemType(pp) {
-        const ip = pp ? this.idOf(pp) : void 0;
-        if (!ip) return null;
-        let cp = this.types.get(ip);
-        return void 0 === cp && (cp = Object.freeze({
-          id: ip,
-          name: (0, Ao.d)(ip),
-          meta: this.getMetaInfo(ip),
-          stackable: Wo(this.props, ip),
-          type: (0, IO.itemTypeNameOf)(ip),
-          clipSize: (0, IO.clipSizeOf)(ip),
-          scopeType: (0, IO.scopeTypeOf)(ip),
-          showsAimingUi: (0, IO.showsAimingUi)(ip)
-        }), this.types.set(ip, cp)), cp
+      itemType(QQ) {
+        const WQ = QQ ? this.idOf(QQ) : void 0;
+        if (!WQ) return null;
+        let XQ = this.types.get(WQ);
+        return void 0 === XQ && (XQ = Object.freeze({
+          id: WQ,
+          name: (0, gq.e)(WQ),
+          meta: this.getMetaInfo(WQ),
+          stackable: rq(this.props, WQ),
+          type: (0, Xw.itemTypeNameOf)(WQ),
+          clipSize: (0, Xw.clipSizeOf)(WQ),
+          scopeType: (0, Xw.scopeTypeOf)(WQ),
+          showsAimingUi: (0, Xw.showsAimingUi)(WQ)
+        }), this.types.set(WQ, XQ)), XQ
       }
-      getItemStat(pp, ip) {
-        if (Yo.b.has(ip)) {
-          const cp = "minChargeStateToUse" === ip ? this.getMetaInfo(pp).rootName : this.getItemName(pp),
-            Op = this.options.get((0, Yo.d)(cp, ip));
-          if (null !== Op && void 0 !== Op) return Op
+      getItemStat(QQ, WQ) {
+        if (Fq.e.has(WQ)) {
+          const XQ = "minChargeStateToUse" === WQ ? this.getMetaInfo(QQ).rootName : this.getItemName(QQ),
+            wQ = this.options.get((0, Fq.f)(XQ, WQ));
+          if (null !== wQ && void 0 !== wQ) return wQ
         }
-        return this.defaultStat(pp, ip, this.statOf(ip))
+        return this.defaultStat(QQ, WQ, this.statOf(WQ))
       }
-      getDisplayName(pp) {
-        return this.getItemStat(pp, "displayName")
+      getDisplayName(QQ) {
+        return this.getItemStat(QQ, "displayName")
       }
-      getDefaultItemStat(pp, ip) {
-        return this.defaultStat(pp, ip, this.statOf(ip))
+      getDefaultItemStat(QQ, WQ) {
+        return this.defaultStat(QQ, WQ, this.statOf(WQ))
       }
-      statOf(pp) {
-        const ip = Uo[pp];
-        return void 0 === ip && function(pp, ip) {
-          throw new Error(`ClientApi.${pp} is not available yet in the wasm client (${ip})`)
-        }(`getItemStat("${pp}")`, `a table of the stat: the wasm client answers ${Object.keys(Uo).join(", ")}`), ip
+      statOf(QQ) {
+        const WQ = jq[QQ];
+        return void 0 === WQ && function(QQ, WQ) {
+          throw new Error(`ClientApi.${QQ} is not available yet in the wasm client (${WQ})`)
+        }(`getItemStat("${QQ}")`, `a table of the stat: the wasm client answers ${Object.keys(jq).join(", ")}`), WQ
       }
-      defaultStat(pp, ip, cp) {
-        const Op = this.idOf(pp),
-          op = void 0 === Op ? void 0 : cp(this.props, Op);
-        return null !== op && void 0 !== op || "displayName" !== ip ? op : this.getItemName(pp)
+      defaultStat(QQ, WQ, XQ) {
+        const wQ = this.idOf(QQ),
+          qQ = void 0 === wQ ? void 0 : XQ(this.props, wQ);
+        return null !== qQ && void 0 !== qQ || "displayName" !== WQ ? qQ : this.getItemName(QQ)
       }
-      getClientOption(pp) {
-        return this.options.get(pp)
+      getClientOption(QQ) {
+        return this.options.get(QQ)
       }
-      getGunStats(pp) {
-        return this.getClientOption(`${pp}GunStats`)
+      getGunStats(QQ) {
+        return this.getClientOption(`${QQ}GunStats`)
       }
-      watchClientOption(pp, ip) {
-        return this.options.subscribe(pp, ip)
+      watchClientOption(QQ, WQ) {
+        return this.options.subscribe(QQ, WQ)
       }
-      isSolidBlockId(pp) {
-        var ip;
-        return 0 !== ((null !== (ip = this.props.blockFlags[pp]) && void 0 !== ip ? ip : 0) & yp.s.Solid)
+      isSolidBlockId(QQ) {
+        var WQ;
+        return 0 !== ((null !== (WQ = this.props.blockFlags[QQ]) && void 0 !== WQ ? WQ : 0) & jQ.C.Solid)
       }
-      isStackableId(pp) {
-        return Wo(this.props, pp)
+      isStackableId(QQ) {
+        return rq(this.props, QQ)
       }
-      isFluidBlockId(pp) {
-        var ip;
-        return 0 !== ((null !== (ip = this.props.blockFlags[pp]) && void 0 !== ip ? ip : 0) & yp.s.Fluid)
+      isFluidBlockId(QQ) {
+        var WQ;
+        return 0 !== ((null !== (WQ = this.props.blockFlags[QQ]) && void 0 !== WQ ? WQ : 0) & jQ.C.Fluid)
       }
-      canPlaceOverBlockId(pp) {
-        var ip;
-        return 0 !== ((null !== (ip = this.props.blockFlags[pp]) && void 0 !== ip ? ip : 0) & yp.s.PlaceOver)
+      canPlaceOverBlockId(QQ) {
+        var WQ;
+        return 0 !== ((null !== (WQ = this.props.blockFlags[QQ]) && void 0 !== WQ ? WQ : 0) & jQ.C.PlaceOver)
       }
-      attachedTopOf(pp) {
-        var ip;
-        return null !== (ip = this.props.blockAttachedTops[pp]) && void 0 !== ip ? ip : 0
+      attachedTopOf(QQ) {
+        var WQ;
+        return null !== (WQ = this.props.blockAttachedTops[QQ]) && void 0 !== WQ ? WQ : 0
       }
-      isDroplessBlockId(pp) {
-        return (0, IO.dropsNothing)(pp)
+      isDroplessBlockId(QQ) {
+        return (0, Xw.dropsNothing)(QQ)
       }
     }
 
-    function eo(pp, ip) {
-      const cp = new Map;
-      return (Op, op) => {
-        const Ip = ip.idOf(Op),
-          Sp = void 0 === Ip ? null : (Op => {
-            let op = cp.get(Op);
-            if (void 0 === op) {
-              const Ip = pp.queries.salvageRecipe(Op),
-                Sp = new DataView(pp.memory().buffer, pp.scratch(), Ip),
-                xp = [];
-              for (let pp = 0; pp + yp.Id.BYTES <= Ip; pp += yp.Id.BYTES) xp.push(Object.freeze({
-                item: ip.nameOfId(yp.Id.item(Sp, pp)),
-                amt: yp.Id.amount(Sp, pp)
+    function pq(QQ, WQ) {
+      const XQ = new Map;
+      return (wQ, qQ) => {
+        const TQ = WQ.idOf(wQ),
+          zQ = void 0 === TQ ? null : (wQ => {
+            let qQ = XQ.get(wQ);
+            if (void 0 === qQ) {
+              const TQ = QQ.queries.salvageRecipe(wQ),
+                zQ = new DataView(QQ.memory().buffer, QQ.scratch(), TQ),
+                sQ = [];
+              for (let QQ = 0; QQ + jQ.ke.BYTES <= TQ; QQ += jQ.ke.BYTES) sQ.push(Object.freeze({
+                item: WQ.nameOfId(jQ.ke.item(zQ, QQ)),
+                amt: jQ.ke.amount(zQ, QQ)
               }));
-              op = 0 === xp.length ? null : Object.freeze(xp), cp.set(Op, op)
+              qQ = 0 === sQ.length ? null : Object.freeze(sQ), XQ.set(wQ, qQ)
             }
-            return op
-          })(Ip);
-        if (null === Sp || void 0 === op) return Sp;
-        const xp = op <= 0 ? 1 : op;
-        return Sp.map((pp => {
+            return qQ
+          })(TQ);
+        if (null === zQ || void 0 === qQ) return zQ;
+        const sQ = qQ <= 0 ? 1 : qQ;
+        return zQ.map((QQ => {
           let {
-            item: ip,
-            amt: cp
-          } = pp;
+            item: WQ,
+            amt: XQ
+          } = QQ;
           return {
-            item: ip,
-            amt: cp * xp
+            item: WQ,
+            amt: XQ * sQ
           }
         }))
       }
     }
-    var uo = cp(40967),
-      jo = cp(37169),
-      ko = cp(37151),
-      mo = cp(37156),
-      Ro = cp(36693),
-      qo = cp(40879),
-      Mo = cp(42875);
-    const Co = -1,
-      Eo = new Uint8Array(0),
-      Xo = new TextEncoder;
+    var Gq = XQ(40984),
+      Uq = XQ(37229),
+      bq = XQ(37219),
+      vq = XQ(37221),
+      dq = XQ(36809),
+      Hq = XQ(40902),
+      aq = XQ(42867);
+    const lq = -1,
+      hq = new Uint8Array(0),
+      iq = new TextEncoder;
 
-    function Qo(pp) {
-      if (null === pp) return null;
-      const ip = Xo.encode(pp);
-      return ip.byteLength < Pp.Dc ? ip : ip.subarray(0, Pp.Dc - 1)
+    function cq(QQ) {
+      if (null === QQ) return null;
+      const WQ = iq.encode(QQ);
+      return WQ.byteLength < rQ.Qc ? WQ : WQ.subarray(0, rQ.Qc - 1)
     }
-    class Jo {
-      constructor(pp) {
-        this.deps = pp, this.lastView = null, this.lastKeyframes = [], this.keyframesVersion = Co, this.keyframesSettled = !1, this.reloadFrom = Co
+    class Aq {
+      constructor(QQ) {
+        this.deps = QQ, this.lastView = null, this.lastKeyframes = [], this.keyframesVersion = lq, this.keyframesSettled = !1, this.reloadFrom = lq
       }
       reloadKeyframes() {
-        var pp, ip;
-        this.keyframesVersion = Co, this.reloadFrom = null !== (pp = null === (ip = this.view()) || void 0 === ip ? void 0 : ip.version) && void 0 !== pp ? pp : Co
+        var QQ, WQ;
+        this.keyframesVersion = lq, this.reloadFrom = null !== (QQ = null === (WQ = this.view()) || void 0 === WQ ? void 0 : WQ.version) && void 0 !== QQ ? QQ : lq
       }
-      setPlayback(pp) {
-        const ip = 1 === this.deps.core.wIp(pp);
-        return ip && (this.lastView = null, this.lastKeyframes = [], this.keyframesVersion = Co, this.reloadFrom = Co), ip
+      setPlayback(QQ) {
+        const WQ = 1 === this.deps.core.mqQ(QQ);
+        return WQ && (this.lastView = null, this.lastKeyframes = [], this.keyframesVersion = lq, this.reloadFrom = lq), WQ
       }
-      async open(pp, ip) {
-        const cp = await this.deps.replay.open(pp, ip);
-        return "opening" === cp && (this.reloadKeyframes(), this.deps.recorder.prefetch()), cp
+      async open(QQ, WQ) {
+        const XQ = await this.deps.replay.open(QQ, WQ);
+        return "opening" === XQ && (this.reloadKeyframes(), this.deps.recorder.prefetch()), XQ
       }
       play() {
         this.deps.replay.play()
@@ -5025,282 +5044,282 @@ export const modules = {
       pause() {
         this.deps.replay.pause()
       }
-      seek(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        this.deps.replay.seek(Math.max(0, Math.floor(pp)), ip)
+      seek(QQ) {
+        let WQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        this.deps.replay.seek(Math.max(0, Math.floor(QQ)), WQ)
       }
-      setSpeed(pp) {
-        this.deps.replay.setSpeed(pp)
+      setSpeed(QQ) {
+        this.deps.replay.setSpeed(QQ)
       }
-      setCameraMode(pp) {
-        this.deps.replay.setCameraMode(Mo.b.indexOf(pp))
+      setCameraMode(QQ) {
+        this.deps.replay.setCameraMode(aq.e.indexOf(QQ))
       }
       view() {
-        var pp;
-        const ip = yp.q.replayViewPtr(this.deps.apiView(), 0);
-        if (0 === ip) return this.lastView = null, null;
-        const cp = new DataView(this.deps.buffer(), ip, yp.Cd.BYTES),
-          Op = yp.Cd.version(cp, 0),
-          op = this.lastView;
-        if (null !== op && op.version === Op) return op;
-        const Ip = yp.Cd.markIn(cp, 0),
-          Sp = {
-            version: Op,
-            state: yp.Cd.state(cp, 0),
-            cameraMode: null !== (pp = Mo.b[yp.Cd.cameraMode(cp, 0)]) && void 0 !== pp ? pp : "recording",
-            LP: yp.Cd.LP(cp, 0),
-            totalTicks: yp.Cd.totalTicks(cp, 0),
-            speed: yp.Cd.speed(cp, 0),
-            mark: Ip === yp.Bd ? null : {
-              inTick: Ip,
-              outTick: yp.Cd.markOut(cp, 0)
+        var QQ;
+        const WQ = jQ.x.replayViewPtr(this.deps.apiView(), 0);
+        if (0 === WQ) return this.lastView = null, null;
+        const XQ = new DataView(this.deps.buffer(), WQ, jQ.he.BYTES),
+          wQ = jQ.he.version(XQ, 0),
+          qQ = this.lastView;
+        if (null !== qQ && qQ.version === wQ) return qQ;
+        const TQ = jQ.he.markIn(XQ, 0),
+          zQ = {
+            version: wQ,
+            state: jQ.he.state(XQ, 0),
+            cameraMode: null !== (QQ = aq.e[jQ.he.cameraMode(XQ, 0)]) && void 0 !== QQ ? QQ : "recording",
+            fJ: jQ.he.fJ(XQ, 0),
+            totalTicks: jQ.he.totalTicks(XQ, 0),
+            speed: jQ.he.speed(XQ, 0),
+            mark: TQ === jQ.ee ? null : {
+              inTick: TQ,
+              outTick: jQ.he.markOut(XQ, 0)
             },
-            editVersion: yp.Cd.editVersion(cp, 0)
+            editVersion: jQ.he.editVersion(XQ, 0)
           };
-        return this.lastView = Sp, Sp
+        return this.lastView = zQ, zQ
       }
       keyframes() {
-        const pp = this.view();
-        if (null === pp) return [];
-        pp.version !== this.reloadFrom && (this.reloadFrom = Co);
-        const ip = this.reloadFrom === Co && pp.state !== Pp.jd.Cropping && pp.state !== Pp.jd.None,
-          cp = ip ? pp.editVersion : pp.version;
-        if (cp === this.keyframesVersion && ip === this.keyframesSettled) return this.lastKeyframes;
+        const QQ = this.view();
+        if (null === QQ) return [];
+        QQ.version !== this.reloadFrom && (this.reloadFrom = lq);
+        const WQ = this.reloadFrom === lq && QQ.state !== rQ.td.Cropping && QQ.state !== rQ.td.None,
+          XQ = WQ ? QQ.editVersion : QQ.version;
+        if (XQ === this.keyframesVersion && WQ === this.keyframesSettled) return this.lastKeyframes;
         const {
-          core: Op
-        } = this.deps, op = Op.vIp(), Ip = Op.gw(), Sp = [];
-        if (0 !== Ip && op > 0) {
-          const pp = new DataView(this.deps.buffer(), Ip, op * Pp.uc);
-          for (let ip = 0; ip < op; ip++) {
-            const cp = ip * Pp.uc,
-              Op = ip => pp.getFloat64(cp + ip, !0);
-            Sp.push({
-              LP: pp.getUint32(cp + Pp.Bc, !0),
-              position: [Op(Pp.Ac), Op(Pp.Ac + 8), Op(Pp.Ac + 16)],
-              direction: [Op(Pp.vc), Op(Pp.vc + 8), Op(Pp.vc + 16)],
-              easing: [Op(Pp.wc), Op(Pp.wc + 8), Op(Pp.wc + 16), Op(Pp.wc + 24)]
+          core: wQ
+        } = this.deps, qQ = wQ.MqQ(), TQ = wQ.Ly(), zQ = [];
+        if (0 !== TQ && qQ > 0) {
+          const QQ = new DataView(this.deps.buffer(), TQ, qQ * rQ.Fc);
+          for (let WQ = 0; WQ < qQ; WQ++) {
+            const XQ = WQ * rQ.Fc,
+              wQ = WQ => QQ.getFloat64(XQ + WQ, !0);
+            zQ.push({
+              fJ: QQ.getUint32(XQ + rQ.Pc, !0),
+              position: [wQ(rQ.Lc), wQ(rQ.Lc + 8), wQ(rQ.Lc + 16)],
+              direction: [wQ(rQ.Gc), wQ(rQ.Gc + 8), wQ(rQ.Gc + 16)],
+              easing: [wQ(rQ.Jc), wQ(rQ.Jc + 8), wQ(rQ.Jc + 16), wQ(rQ.Jc + 24)]
             })
           }
         }
-        return this.keyframesVersion = cp, this.keyframesSettled = ip, this.lastKeyframes = Sp, Sp
+        return this.keyframesVersion = XQ, this.keyframesSettled = WQ, this.lastKeyframes = zQ, zQ
       }
       addKeyframe() {
-        const pp = this.deps.apiView(),
-          ip = [yp.q.eye(pp, 0, 0), yp.q.eye(pp, 0, 1), yp.q.eye(pp, 0, 2)];
-        return this.deps.replay.addKeyframe(ip, function(pp, ip) {
-          const cp = Math.cos(ip);
-          return [cp * Math.sin(pp), -Math.sin(ip), cp * Math.cos(pp)]
-        }(yp.q.heading(pp, 0), yp.q.pitch(pp, 0)))
+        const QQ = this.deps.apiView(),
+          WQ = [jQ.x.eye(QQ, 0, 0), jQ.x.eye(QQ, 0, 1), jQ.x.eye(QQ, 0, 2)];
+        return this.deps.replay.addKeyframe(WQ, function(QQ, WQ) {
+          const XQ = Math.cos(WQ);
+          return [XQ * Math.sin(QQ), -Math.sin(WQ), XQ * Math.cos(QQ)]
+        }(jQ.x.heading(QQ, 0), jQ.x.pitch(QQ, 0)))
       }
-      setKeyframe(pp) {
-        return this.deps.replay.setKeyframe(pp.LP, Float64Array.from([...pp.position, ...pp.direction, ...pp.easing]))
+      setKeyframe(QQ) {
+        return this.deps.replay.setKeyframe(QQ.fJ, Float64Array.from([...QQ.position, ...QQ.direction, ...QQ.easing]))
       }
-      moveKeyframe(pp, ip) {
-        return this.deps.replay.moveKeyframe(pp, ip)
+      moveKeyframe(QQ, WQ) {
+        return this.deps.replay.moveKeyframe(QQ, WQ)
       }
-      deleteKeyframes(pp, ip) {
-        return this.deps.replay.deleteKeyframes(pp, ip)
+      deleteKeyframes(QQ, WQ) {
+        return this.deps.replay.deleteKeyframes(QQ, WQ)
       }
-      setMark(pp) {
-        var ip, cp;
-        return this.deps.replay.setMark(null !== (ip = null === pp || void 0 === pp ? void 0 : pp.inTick) && void 0 !== ip ? ip : -1, null !== (cp = null === pp || void 0 === pp ? void 0 : pp.outTick) && void 0 !== cp ? cp : -1)
+      setMark(QQ) {
+        var WQ, XQ;
+        return this.deps.replay.setMark(null !== (WQ = null === QQ || void 0 === QQ ? void 0 : QQ.inTick) && void 0 !== WQ ? WQ : -1, null !== (XQ = null === QQ || void 0 === QQ ? void 0 : QQ.outTick) && void 0 !== XQ ? XQ : -1)
       }
-      crop(pp, ip) {
-        const cp = this.deps.replay.crop(pp, ip);
-        return cp && this.reloadKeyframes(), cp
+      crop(QQ, WQ) {
+        const XQ = this.deps.replay.crop(QQ, WQ);
+        return XQ && this.reloadKeyframes(), XQ
       }
-      save(pp) {
-        return this.deps.replay.askSave(), this.deps.recorder.saveEdited(pp)
+      save(QQ) {
+        return this.deps.replay.askSave(), this.deps.recorder.saveEdited(QQ)
       }
-      recorderControl(pp) {
-        this.deps.recorder.control(pp)
+      recorderControl(QQ) {
+        this.deps.recorder.control(QQ)
       }
-      recorderPrefs(pp, ip) {
-        this.deps.recorder.prefs(pp, ip)
+      recorderPrefs(QQ, WQ) {
+        this.deps.recorder.prefs(QQ, WQ)
       }
-      recorderOption(pp, ip) {
-        const cp = this.deps.cmd();
-        return null !== cp && (0, yp.uf)(cp, 0, pp, null === ip ? Eo : Xo.encode(ip))
+      recorderOption(QQ, WQ) {
+        const XQ = this.deps.cmd();
+        return null !== XQ && (0, jQ.Cf)(XQ, 0, QQ, null === WQ ? hq : iq.encode(WQ))
       }
-      recordFlyingText(pp, ip, cp, Op) {
-        const op = this.deps.cmd(),
-          Ip = Math.max(0, Math.min(4294967295, Math.round(Op)));
-        return null !== op && (0, yp.pf)(op, 0, ip, cp, Ip, Xo.encode(pp))
+      recordFlyingText(QQ, WQ, XQ, wQ) {
+        const qQ = this.deps.cmd(),
+          TQ = Math.max(0, Math.min(4294967295, Math.round(wQ)));
+        return null !== qQ && (0, jQ.wf)(qQ, 0, WQ, XQ, TQ, iq.encode(QQ))
       }
-      recordPlayerKilled(pp, ip, cp, Op) {
-        const op = this.deps.cmd();
-        return null !== op && (0, yp.wf)(op, 0, pp, ip, Math.max(0, cp), Xo.encode(Op))
+      recordPlayerKilled(QQ, WQ, XQ, wQ) {
+        const qQ = this.deps.cmd();
+        return null !== qQ && (0, jQ.Ef)(qQ, 0, QQ, WQ, Math.max(0, XQ), iq.encode(wQ))
       }
-      recordKillfeed(pp, ip, cp) {
-        var Op, op;
-        const Ip = this.deps.cmd(),
-          Sp = function(pp) {
-            const ip = pp.reduce(((pp, ip) => {
-                var cp;
-                return pp + zc.lb + (null !== (cp = null === ip || void 0 === ip ? void 0 : ip.byteLength) && void 0 !== cp ? cp : 0)
+      recordKillfeed(QQ, WQ, XQ) {
+        var wQ, qQ;
+        const TQ = this.deps.cmd(),
+          zQ = function(QQ) {
+            const WQ = QQ.reduce(((QQ, WQ) => {
+                var XQ;
+                return QQ + YX.ub + (null !== (XQ = null === WQ || void 0 === WQ ? void 0 : WQ.byteLength) && void 0 !== XQ ? XQ : 0)
               }), 0),
-              cp = new Uint8Array(ip),
-              Op = new DataView(cp.buffer);
-            let op = 0;
-            for (const Sp of pp) {
-              var Ip;
-              Op.setUint16(op, null !== (Ip = null === Sp || void 0 === Sp ? void 0 : Sp.byteLength) && void 0 !== Ip ? Ip : Pp.Dc, !0), op += zc.lb, null !== Sp && (cp.set(Sp, op), op += Sp.byteLength)
+              XQ = new Uint8Array(WQ),
+              wQ = new DataView(XQ.buffer);
+            let qQ = 0;
+            for (const zQ of QQ) {
+              var TQ;
+              wQ.setUint16(qQ, null !== (TQ = null === zQ || void 0 === zQ ? void 0 : zQ.byteLength) && void 0 !== TQ ? TQ : rQ.Qc, !0), qQ += YX.ub, null !== zQ && (XQ.set(zQ, qQ), qQ += zQ.byteLength)
             }
-            return cp
-          }([Qo(pp.name), Qo(pp.colour), Qo(ip.name), Qo(ip.colour), Qo(cp)]);
-        return null !== Ip && (0, yp.rf)(Ip, 0, null !== (Op = pp.id) && void 0 !== Op ? Op : yp.Nc, null !== (op = ip.id) && void 0 !== op ? op : yp.Nc, Sp)
+            return XQ
+          }([cq(QQ.name), cq(QQ.colour), cq(WQ.name), cq(WQ.colour), cq(XQ)]);
+        return null !== TQ && (0, jQ.zf)(TQ, 0, null !== (wQ = QQ.id) && void 0 !== wQ ? wQ : jQ.xd, null !== (qQ = WQ.id) && void 0 !== qQ ? qQ : jQ.xd, zQ)
       }
-      recorderSession(pp, ip) {
+      recorderSession(QQ, WQ) {
         this.deps.recorder.session({
-          session: ip,
-          lobbyType: pp.lobbyType,
-          game: pp.gameNameWithVariation,
-          lobby: pp.lobbyName
+          session: WQ,
+          lobbyType: QQ.lobbyType,
+          game: QQ.gameNameWithVariation,
+          lobby: QQ.lobbyName
         })
       }
       recorderClose() {
-        this.deps.core.tIp()
+        this.deps.core.QTQ()
       }
-      filePartDone(pp, ip) {
-        this.deps.recorder.filePartDone(pp, ip)
+      filePartDone(QQ, WQ) {
+        this.deps.recorder.filePartDone(QQ, WQ)
       }
-      fileDone(pp) {
-        this.deps.recorder.fileDone(pp)
+      fileDone(QQ) {
+        this.deps.recorder.fileDone(QQ)
       }
     }
-    const Bo = -2147483648;
-    class No {
-      constructor(pp) {
-        var ip;
-        this.deps = pp, this.state = {
+    const Rq = -2147483648;
+    class Eq {
+      constructor(QQ) {
+        var WQ;
+        this.deps = QQ, this.state = {
           recording: !1,
           clipping: !1,
           hasClipBuffer: !1,
           seconds: 0
-        }, this.recordingSince = null, this.clipTickPending = !1, this.now = void 0, this.now = null !== (ip = pp.now) && void 0 !== ip ? ip : () => performance.now()
+        }, this.recordingSince = null, this.clipTickPending = !1, this.now = void 0, this.now = null !== (WQ = QQ.now) && void 0 !== WQ ? WQ : () => performance.now()
       }
       get current() {
         return this.state
       }
       get live() {
-        var pp, ip, cp;
-        return null === (pp = null === (ip = (cp = this.deps).live) || void 0 === ip ? void 0 : ip.call(cp)) || void 0 === pp || pp
+        var QQ, WQ, XQ;
+        return null === (QQ = null === (WQ = (XQ = this.deps).live) || void 0 === WQ ? void 0 : WQ.call(XQ)) || void 0 === QQ || QQ
       }
-      activated(pp) {
-        var ip, cp;
-        this.live && (this.viewerShown(!0 === (null === (ip = (cp = this.deps).viewerOpen) || void 0 === ip ? void 0 : ip.call(cp))), this.deps.client.recorderSession(pp, (0, Mo.e)()))
+      activated(QQ) {
+        var WQ, XQ;
+        this.live && (this.viewerShown(!0 === (null === (WQ = (XQ = this.deps).viewerOpen) || void 0 === WQ ? void 0 : WQ.call(XQ))), this.deps.client.recorderSession(QQ, (0, aq.i)()))
       }
       closed() {
         this.deps.client.recorderClose()
       }
       toggleRecording() {
-        var pp, ip;
-        this.live && (this.state.recording || !0 !== (null === (pp = (ip = this.deps).viewerOpen) || void 0 === pp ? void 0 : pp.call(ip))) ? this.deps.client.recorderControl(Pp.Uc.ToggleRecording) : this.deps.notify(mo.c.closeViewerFirst)
+        var QQ, WQ;
+        this.live && (this.state.recording || !0 !== (null === (QQ = (WQ = this.deps).viewerOpen) || void 0 === QQ ? void 0 : QQ.call(WQ))) ? this.deps.client.recorderControl(rQ.ad.ToggleRecording) : this.deps.notify(vq.b.closeViewerFirst)
       }
       saveClip() {
-        this.live ? this.deps.client.recorderControl(Pp.Uc.SaveClip) : this.deps.notify(mo.c.clippingNotOn)
+        this.live ? this.deps.client.recorderControl(rQ.ad.SaveClip) : this.deps.notify(vq.b.clippingNotOn)
       }
-      viewerShown(pp) {
-        this.live && this.deps.client.recorderControl(pp ? Pp.Uc.ViewerOpened : Pp.Uc.ViewerClosed)
+      viewerShown(QQ) {
+        this.live && this.deps.client.recorderControl(QQ ? rQ.ad.ViewerOpened : rQ.ad.ViewerClosed)
       }
-      setPrefs(pp, ip) {
-        this.live && this.deps.client.recorderPrefs(pp, ip)
+      setPrefs(QQ, WQ) {
+        this.live && this.deps.client.recorderPrefs(QQ, WQ)
       }
-      setOption(pp, ip) {
-        this.live && this.deps.client.recorderOption(pp, ip)
+      setOption(QQ, WQ) {
+        this.live && this.deps.client.recorderOption(QQ, WQ)
       }
-      recordFlyingText(pp, ip, cp, Op) {
-        this.live && this.deps.client.recordFlyingText(pp, ip, cp, Op)
+      recordFlyingText(QQ, WQ, XQ, wQ) {
+        this.live && this.deps.client.recordFlyingText(QQ, WQ, XQ, wQ)
       }
-      recordPlayerKilled(pp, ip, cp, Op) {
-        this.live && this.deps.client.recordPlayerKilled(pp, ip, cp, Op)
+      recordPlayerKilled(QQ, WQ, XQ, wQ) {
+        this.live && this.deps.client.recordPlayerKilled(QQ, WQ, XQ, wQ)
       }
-      recordKillfeed(pp, ip, cp) {
-        this.live && this.deps.client.recordKillfeed(pp, ip, cp)
+      recordKillfeed(QQ, WQ, XQ) {
+        this.live && this.deps.client.recordKillfeed(QQ, WQ, XQ)
       }
-      LP() {
-        let pp = this.state;
-        if (this.clipTickPending && (this.clipTickPending = !1, pp = {
-            ...pp,
+      fJ() {
+        let QQ = this.state;
+        if (this.clipTickPending && (this.clipTickPending = !1, QQ = {
+            ...QQ,
             hasClipBuffer: !0
           }), null !== this.recordingSince) {
-          const ip = Math.floor((this.now() - this.recordingSince) / 1e3);
-          ip !== pp.seconds && (pp = {
-            ...pp,
-            seconds: ip
+          const WQ = Math.floor((this.now() - this.recordingSince) / 1e3);
+          WQ !== QQ.seconds && (QQ = {
+            ...QQ,
+            seconds: WQ
           })
         }
-        this.set(pp)
+        this.set(QQ)
       }
-      onEvent(pp) {
-        var ip, cp;
+      onEvent(QQ) {
+        var WQ, XQ;
         const {
-          notify: Op
-        } = this.deps, op = mo.c;
-        switch (pp.what) {
-          case Pp.Sc.RecordingStarted:
+          notify: wQ
+        } = this.deps, qQ = vq.b;
+        switch (QQ.what) {
+          case rQ.Yc.RecordingStarted:
             this.recordingSince = this.now(), this.set({
               ...this.state,
               recording: !0,
               seconds: 0
-            }), Op(op.recordingStarted);
+            }), wQ(qQ.recordingStarted);
             break;
-          case Pp.Sc.RecordingStopped:
-            this.stopRecording(), Op(op.recordingStopped), this.saveState(Pp.ad.Recording, "saving");
+          case rQ.Yc.RecordingStopped:
+            this.stopRecording(), wQ(qQ.recordingStopped), this.saveState(rQ.md.Recording, "saving");
             break;
-          case Pp.Sc.RecordingDiscarded:
-            this.stopRecording(), Op(op.recordingDiscarded);
+          case rQ.Yc.RecordingDiscarded:
+            this.stopRecording(), wQ(qQ.recordingDiscarded);
             break;
-          case Pp.Sc.RecordingTurnedOff:
-            this.stopRecording(), Op(op.recordingTurnedOff);
+          case rQ.Yc.RecordingTurnedOff:
+            this.stopRecording(), wQ(qQ.recordingTurnedOff);
             break;
-          case Pp.Sc.LimitReached:
-            Op(op.limitReached);
+          case rQ.Yc.LimitReached:
+            wQ(qQ.limitReached);
             break;
-          case Pp.Sc.ClipSaved:
-            this.saveState(Pp.ad.Clip, "saving");
+          case rQ.Yc.ClipSaved:
+            this.saveState(rQ.md.Clip, "saving");
             break;
-          case Pp.Sc.ClipEmpty:
-            Op(op.clipEmpty);
+          case rQ.Yc.ClipEmpty:
+            wQ(qQ.clipEmpty);
             break;
-          case Pp.Sc.ClippingNotOn:
-            Op(op.clippingNotOn);
+          case rQ.Yc.ClippingNotOn:
+            wQ(qQ.clippingNotOn);
             break;
-          case Pp.Sc.Disallowed:
-            Op(op.disallowed);
+          case rQ.Yc.Disallowed:
+            wQ(qQ.disallowed);
             break;
-          case Pp.Sc.ClippingOn:
+          case rQ.Yc.ClippingOn:
             this.clipTickPending = !0, this.set({
               ...this.state,
               clipping: !0,
               hasClipBuffer: !1
             });
             break;
-          case Pp.Sc.ClippingOff:
+          case rQ.Yc.ClippingOff:
             this.clipTickPending = !1, this.set({
               ...this.state,
               clipping: !1,
               hasClipBuffer: !1
             });
             break;
-          case Pp.Sc.ClipSettingsChanged:
+          case rQ.Yc.ClipSettingsChanged:
             this.clipTickPending = this.state.clipping, this.set({
               ...this.state,
               hasClipBuffer: !1
             });
             break;
-          case Pp.Sc.SaveBusy:
-            null === (ip = (cp = this.deps).onSaveState) || void 0 === ip || ip.call(cp, pp.kind, "busy"), Op(op.saveBusy);
+          case rQ.Yc.SaveBusy:
+            null === (WQ = (XQ = this.deps).onSaveState) || void 0 === WQ || WQ.call(XQ, QQ.kind, "busy"), wQ(qQ.saveBusy);
             break;
-          case Pp.Sc.CloseViewerFirst:
-            Op(op.closeViewerFirst)
+          case rQ.Yc.CloseViewerFirst:
+            wQ(qQ.closeViewerFirst)
         }
       }
-      fileReady(pp, ip) {
-        this.deps.download(ip), this.saveState(pp, "done"), this.deps.notify(pp === Pp.ad.Clip ? mo.c.clipSaved : mo.c.recordingSaved)
+      fileReady(QQ, WQ) {
+        this.deps.download(WQ), this.saveState(QQ, "done"), this.deps.notify(QQ === rQ.md.Clip ? vq.b.clipSaved : vq.b.recordingSaved)
       }
-      failed(pp) {
-        this.saveState(pp, "failed"), this.deps.notify(pp === Pp.ad.Clip ? mo.c.clipFailed : mo.c.recordingFailed)
+      failed(QQ) {
+        this.saveState(QQ, "failed"), this.deps.notify(QQ === rQ.md.Clip ? vq.b.clipFailed : vq.b.recordingFailed)
       }
       stopRecording() {
         this.recordingSince = null, this.set({
@@ -5309,2370 +5328,2328 @@ export const modules = {
           seconds: 0
         })
       }
-      saveState(pp, ip) {
-        var cp, Op;
-        null === (cp = (Op = this.deps).onSaveState) || void 0 === cp || cp.call(Op, pp, ip)
+      saveState(QQ, WQ) {
+        var XQ, wQ;
+        null === (XQ = (wQ = this.deps).onSaveState) || void 0 === XQ || XQ.call(wQ, QQ, WQ)
       }
-      set(pp) {
-        pp !== this.state && (this.state = pp, this.deps.onState(pp))
+      set(QQ) {
+        QQ !== this.state && (this.state = QQ, this.deps.onState(QQ))
       }
     }
-    const To = new TextDecoder;
+    const Cq = new TextDecoder;
 
-    function fo(pp, ip, cp, Op) {
-      const op = [];
-      for (let Ip = 0; Ip < Op; Ip++) {
-        if (ip + zc.lb > cp) return null;
-        const Op = pp.getUint16(ip, !0);
-        if (ip += zc.lb, Op !== Pp.Dc) {
-          if (ip + Op > cp) return null;
-          op.push(To.decode(new Uint8Array(pp.buffer, pp.byteOffset + ip, Op))), ip += Op
-        } else op.push(null)
+    function uq(QQ, WQ, XQ, wQ) {
+      const qQ = [];
+      for (let TQ = 0; TQ < wQ; TQ++) {
+        if (WQ + YX.ub > XQ) return null;
+        const wQ = QQ.getUint16(WQ, !0);
+        if (WQ += YX.ub, wQ !== rQ.Qc) {
+          if (WQ + wQ > XQ) return null;
+          qQ.push(Cq.decode(new Uint8Array(QQ.buffer, QQ.byteOffset + WQ, wQ))), WQ += wQ
+        } else qQ.push(null)
       }
-      return ip === cp ? op : null
+      return WQ === XQ ? qQ : null
     }
 
-    function bo(pp, ip) {
-      let cp = new DataView(new ArrayBuffer(0)),
-        Op = !0;
-      const op = {
-        replayFailed: (ip, cp, Op) => {
-          pp.replayFailed({
-            reason: ip,
-            code: cp,
-            version: Op
+    function Lq(QQ, WQ) {
+      let XQ = new DataView(new ArrayBuffer(0)),
+        wQ = !0;
+      const qQ = {
+        replayFailed: (WQ, XQ, wQ) => {
+          QQ.replayFailed({
+            reason: WQ,
+            code: XQ,
+            version: wQ
           })
         },
-        replayOption: (ip, op, Ip, Sp) => {
-          const xp = function(pp, ip, cp, Op) {
-            switch (ip) {
-              case Pp.dd.Cleared:
-                return 0 === Op ? null : void 0;
-              case Pp.dd.Text:
-                return To.decode(new Uint8Array(pp.buffer, pp.byteOffset + cp, Op));
-              case Pp.dd.Int:
-                return Op === Int32Array.BYTES_PER_ELEMENT ? pp.getInt32(cp, !0) : void 0;
-              case Pp.dd.Double:
-                return Op === Float64Array.BYTES_PER_ELEMENT ? pp.getFloat64(cp, !0) : void 0;
+        replayOption: (WQ, qQ, TQ, zQ) => {
+          const sQ = function(QQ, WQ, XQ, wQ) {
+            switch (WQ) {
+              case rQ.od.Cleared:
+                return 0 === wQ ? null : void 0;
+              case rQ.od.Text:
+                return Cq.decode(new Uint8Array(QQ.buffer, QQ.byteOffset + XQ, wQ));
+              case rQ.od.Int:
+                return wQ === Int32Array.BYTES_PER_ELEMENT ? QQ.getInt32(XQ, !0) : void 0;
+              case rQ.od.Double:
+                return wQ === Float64Array.BYTES_PER_ELEMENT ? QQ.getFloat64(XQ, !0) : void 0;
               default:
                 return
             }
-          }(cp, op, Ip, Sp);
-          void 0 !== xp ? pp.replayOption({
-            key: ip,
-            value: xp
-          }) : Op = !1
+          }(XQ, qQ, TQ, zQ);
+          void 0 !== sQ ? QQ.replayOption({
+            key: WQ,
+            value: sQ
+          }) : wQ = !1
         },
-        replayUiEvent: (ip, op, Ip, Sp, xp, Lp) => {
-          const Yp = function(pp, ip, cp, Op, op, Ip, Sp) {
-            const xp = Ip + Sp;
-            switch (ip) {
-              case Pp.gd.FlyingText: {
-                const Sp = fo(pp, Ip, xp, 1);
-                return null !== Sp && null !== Sp[0] ? {
-                  what: ip,
-                  cS: cp,
-                  iS: Op,
-                  angle: op,
-                  contentJson: Sp[0]
+        replayUiEvent: (WQ, qQ, TQ, zQ, sQ, FQ) => {
+          const PQ = function(QQ, WQ, XQ, wQ, qQ, TQ, zQ) {
+            const sQ = TQ + zQ;
+            switch (WQ) {
+              case rQ.rd.FlyingText: {
+                const zQ = uq(QQ, TQ, sQ, 1);
+                return null !== zQ && null !== zQ[0] ? {
+                  what: WQ,
+                  hT: XQ,
+                  lT: wQ,
+                  angle: qQ,
+                  contentJson: zQ[0]
                 } : null
               }
-              case Pp.gd.PlayerKilled: {
-                const Op = fo(pp, Ip, xp, 3);
-                return Op ? {
-                  what: ip,
-                  killstreak: cp,
-                  dead: Op[0],
-                  killer: Op[1],
-                  withItem: Op[2]
+              case rQ.rd.PlayerKilled: {
+                const wQ = uq(QQ, TQ, sQ, 3);
+                return wQ ? {
+                  what: WQ,
+                  killstreak: XQ,
+                  dead: wQ[0],
+                  killer: wQ[1],
+                  withItem: wQ[2]
                 } : null
               }
-              case Pp.gd.Killfeed: {
-                const cp = fo(pp, Ip, xp, 7);
-                return cp ? {
-                  what: ip,
-                  killerId: cp[0],
-                  killerName: cp[1],
-                  killerColour: cp[2],
-                  victimId: cp[3],
-                  victimName: cp[4],
-                  victimColour: cp[5],
-                  withItem: cp[6]
+              case rQ.rd.Killfeed: {
+                const XQ = uq(QQ, TQ, sQ, 7);
+                return XQ ? {
+                  what: WQ,
+                  killerId: XQ[0],
+                  killerName: XQ[1],
+                  killerColour: XQ[2],
+                  victimId: XQ[3],
+                  victimName: XQ[4],
+                  victimColour: XQ[5],
+                  withItem: XQ[6]
                 } : null
               }
               default:
                 return null
             }
-          }(cp, ip, op, Ip, Sp, xp, Lp);
-          null !== Yp ? pp.replayUiEvent(Yp) : Op = !1
+          }(XQ, WQ, qQ, TQ, zQ, sQ, FQ);
+          null !== PQ ? QQ.replayUiEvent(PQ) : wQ = !1
         },
-        replayFilePart: (cp, op, Ip, Sp) => {
-          const xp = ip();
-          Ip + Sp > xp.byteLength ? Op = !1 : pp.filePart(cp, op, new Uint8Array(xp, Ip, Sp).slice())
+        replayFilePart: (XQ, qQ, TQ, zQ) => {
+          const sQ = WQ();
+          TQ + zQ > sQ.byteLength ? wQ = !1 : QQ.filePart(XQ, qQ, new Uint8Array(sQ, TQ, zQ).slice())
         },
-        replayFileReady: (ip, cp, Op, op) => {
-          pp.fileReady({
-            save: ip,
-            kind: cp,
-            parts: Op,
-            bytes: op
+        replayFileReady: (WQ, XQ, wQ, qQ) => {
+          QQ.fileReady({
+            save: WQ,
+            kind: XQ,
+            parts: wQ,
+            bytes: qQ
           })
         },
-        recorderEvent: (ip, cp, Op) => {
-          pp.recorderEvent({
-            what: ip,
-            kind: cp,
-            save: Op
+        recorderEvent: (WQ, XQ, wQ) => {
+          QQ.recorderEvent({
+            what: WQ,
+            kind: XQ,
+            save: wQ
           })
         },
-        replayOpened: (ip, Op, op) => {
-          pp.replayOpened(To.decode(new Uint8Array(cp.buffer, cp.byteOffset + Op, op)))
+        replayOpened: (WQ, wQ, qQ) => {
+          QQ.replayOpened(Cq.decode(new Uint8Array(XQ.buffer, XQ.byteOffset + wQ, qQ)))
         }
       };
-      return (pp, ip, Ip, Sp) => !(pp < Pp.bb.ReplayFailed || pp > Pp.bb.RecorderEvent) && (cp = ip, Op = !0, (0, yp.$d)(pp, ip, Ip, Sp, op) && Op)
+      return (QQ, WQ, TQ, zQ) => !(QQ < rQ.Z.ReplayFailed || QQ > rQ.Z.RecorderEvent) && (XQ = WQ, wQ = !0, (0, jQ.we)(QQ, WQ, TQ, zQ, qQ) && wQ)
     }
 
-    function ho(pp) {
-      let ip = null;
-      const cp = bo(pp, (() => {
-        if (null === ip) throw new Error("a recorder event read outside recorderEventReader's call");
-        return ip.buffer
+    function kq(QQ) {
+      let WQ = null;
+      const XQ = Lq(QQ, (() => {
+        if (null === WQ) throw new Error("a recorder event read outside recorderEventReader's call");
+        return WQ.buffer
       }));
-      return (pp, Op) => {
-        ip = Op;
+      return (QQ, wQ) => {
+        WQ = wQ;
         try {
-          ! function(pp, ip) {
-            const cp = pp.slice(),
-              Op = new DataView(cp.buffer);
-            for (let op = 0; op < cp.byteLength;) {
-              if (op + Pp.$ > cp.byteLength) throw new Error(`the recorder module's events end mid-head at ${op}`);
-              const pp = Op.getUint32(op, !0),
-                Ip = 65535 & pp,
-                Sp = pp >>> 16,
-                xp = op + Pp.$;
-              if (xp + Sp > cp.byteLength || !ip(Ip, Op, xp, Sp)) throw new Error(`the recorder module wrote a malformed event ${Ip} (${Sp} bytes) at ${op}`);
-              op = xp + (0, Pp.ue)(Sp)
+          ! function(QQ, WQ) {
+            const XQ = QQ.slice(),
+              wQ = new DataView(XQ.buffer);
+            for (let qQ = 0; qQ < XQ.byteLength;) {
+              if (qQ + rQ.V > XQ.byteLength) throw new Error(`the recorder module's events end mid-head at ${qQ}`);
+              const QQ = wQ.getUint32(qQ, !0),
+                TQ = 65535 & QQ,
+                zQ = QQ >>> 16,
+                sQ = qQ + rQ.V;
+              if (sQ + zQ > XQ.byteLength || !WQ(TQ, wQ, sQ, zQ)) throw new Error(`the recorder module wrote a malformed event ${TQ} (${zQ} bytes) at ${qQ}`);
+              qQ = sQ + (0, rQ.te)(zQ)
             }
-          }(pp, cp)
+          }(QQ, XQ)
         } finally {
-          ip = null
+          WQ = null
         }
       }
     }
-    class ao {
-      constructor(pp, ip) {
-        this.acks = pp, this.handlers = ip, this.parts = new Map
+    class fq {
+      constructor(QQ, WQ) {
+        this.acks = QQ, this.handlers = WQ, this.parts = new Map
       }
-      onPart(pp, ip, cp) {
-        let Op = this.parts.get(pp);
-        Op || (Op = [], this.parts.set(pp, Op)), Op[ip] = cp, this.acks.filePartDone(pp, ip)
+      onPart(QQ, WQ, XQ) {
+        let wQ = this.parts.get(QQ);
+        wQ || (wQ = [], this.parts.set(QQ, wQ)), wQ[WQ] = XQ, this.acks.filePartDone(QQ, WQ)
       }
-      onReady(pp) {
-        var ip;
-        const cp = null !== (ip = this.parts.get(pp.save)) && void 0 !== ip ? ip : [];
-        this.parts.delete(pp.save);
-        const Op = function(pp, ip, cp) {
-          if (pp.length !== ip) return null;
-          let Op = 0;
-          for (let Sp = 0; Sp < ip; Sp++) {
-            if (void 0 === pp[Sp]) return null;
-            Op += pp[Sp].byteLength
+      onReady(QQ) {
+        var WQ;
+        const XQ = null !== (WQ = this.parts.get(QQ.save)) && void 0 !== WQ ? WQ : [];
+        this.parts.delete(QQ.save);
+        const wQ = function(QQ, WQ, XQ) {
+          if (QQ.length !== WQ) return null;
+          let wQ = 0;
+          for (let zQ = 0; zQ < WQ; zQ++) {
+            if (void 0 === QQ[zQ]) return null;
+            wQ += QQ[zQ].byteLength
           }
-          if (Op !== cp) return null;
-          if (1 === ip) return pp[0];
-          const op = new Uint8Array(cp);
-          let Ip = 0;
-          for (const Sp of pp) op.set(Sp, Ip), Ip += Sp.byteLength;
-          return op
-        }(cp, pp.parts, pp.bytes);
-        this.acks.fileDone(pp.save), null === Op ? this.handlers.fileIncomplete(pp.save, pp.kind) : this.handlers.fileReady(pp.save, pp.kind, Op)
+          if (wQ !== XQ) return null;
+          if (1 === WQ) return QQ[0];
+          const qQ = new Uint8Array(XQ);
+          let TQ = 0;
+          for (const zQ of QQ) qQ.set(zQ, TQ), TQ += zQ.byteLength;
+          return qQ
+        }(XQ, QQ.parts, QQ.bytes);
+        this.acks.fileDone(QQ.save), null === wQ ? this.handlers.fileIncomplete(QQ.save, QQ.kind) : this.handlers.fileReady(QQ.save, QQ.kind, wQ)
       }
-      onDiscarded(pp) {
-        this.parts.delete(pp)
+      onDiscarded(QQ) {
+        this.parts.delete(QQ)
       }
     }
 
-    function no() {
-      return cp.e(61).then((() => cp(60725)))
+    function Sq() {
+      return XQ.e(63).then((() => XQ(60861)))
     }
-    class Fo {
-      constructor(pp) {
-        this.deps = pp, this.sink = void 0, this.recorder = void 0, this.recorderEvents = void 0, this.parts = void 0, this.viewerChunk = null, this.viewer = null;
+    class tq {
+      constructor(QQ) {
+        this.deps = QQ, this.sink = void 0, this.recorder = void 0, this.recorderEvents = void 0, this.parts = void 0, this.viewerChunk = null, this.viewer = null;
         const {
-          client: ip
-        } = pp;
-        this.recorder = new No({
-          client: ip,
+          client: WQ
+        } = QQ;
+        this.recorder = new Eq({
+          client: WQ,
           live: () => {
-            var pp;
-            return !0 !== (null === (pp = this.viewer) || void 0 === pp ? void 0 : pp.inPlayback)
+            var QQ;
+            return !0 !== (null === (QQ = this.viewer) || void 0 === QQ ? void 0 : QQ.inPlayback)
           },
-          viewerOpen: pp.viewerOpen,
-          notify: pp.notify,
-          download: ip => {
-            var cp;
-            null === (cp = pp.download) || void 0 === cp || cp.call(pp, ip)
+          viewerOpen: QQ.viewerOpen,
+          notify: QQ.notify,
+          download: WQ => {
+            var XQ;
+            null === (XQ = QQ.download) || void 0 === XQ || XQ.call(QQ, WQ)
           },
-          onState: pp.onRecorderState,
-          onSaveState: pp.onSaveState
-        }), this.parts = new ao(ip, {
-          fileReady: (pp, ip, cp) => {
-            var Op;
-            ip === Pp.ad.Edited ? null === (Op = this.viewer) || void 0 === Op || Op.saveDone(cp) : this.recorder.fileReady(ip, cp)
+          onState: QQ.onRecorderState,
+          onSaveState: QQ.onSaveState
+        }), this.parts = new fq(WQ, {
+          fileReady: (QQ, WQ, XQ) => {
+            var wQ;
+            WQ === rQ.md.Edited ? null === (wQ = this.viewer) || void 0 === wQ || wQ.saveDone(XQ) : this.recorder.fileReady(WQ, XQ)
           },
-          fileIncomplete: (pp, ip) => {
-            this.saveFailed(ip)
+          fileIncomplete: (QQ, WQ) => {
+            this.saveFailed(WQ)
           }
         });
-        const cp = {
-          replayFailed: pp => {
-            var ip;
-            null === (ip = this.viewer) || void 0 === ip || ip.onFailed(pp)
+        const XQ = {
+          replayFailed: QQ => {
+            var WQ;
+            null === (WQ = this.viewer) || void 0 === WQ || WQ.onFailed(QQ)
           },
-          replayOption: ip => {
-            var cp;
-            null === (cp = pp.onReplayOption) || void 0 === cp || cp.call(pp, ip)
+          replayOption: WQ => {
+            var XQ;
+            null === (XQ = QQ.onReplayOption) || void 0 === XQ || XQ.call(QQ, WQ)
           },
-          replayUiEvent: ip => {
-            var cp;
-            null === (cp = pp.onReplayUiEvent) || void 0 === cp || cp.call(pp, ip)
+          replayUiEvent: WQ => {
+            var XQ;
+            null === (XQ = QQ.onReplayUiEvent) || void 0 === XQ || XQ.call(QQ, WQ)
           },
-          filePart: (pp, ip, cp) => {
-            this.parts.onPart(pp, ip, cp)
+          filePart: (QQ, WQ, XQ) => {
+            this.parts.onPart(QQ, WQ, XQ)
           },
-          fileReady: pp => {
-            this.parts.onReady(pp)
+          fileReady: QQ => {
+            this.parts.onReady(QQ)
           },
-          replayOpened: ip => {
-            var cp;
-            null === (cp = pp.onReplayOpened) || void 0 === cp || cp.call(pp, ip)
+          replayOpened: WQ => {
+            var XQ;
+            null === (XQ = QQ.onReplayOpened) || void 0 === XQ || XQ.call(QQ, WQ)
           },
-          recorderEvent: pp => {
-            var ip;
-            switch (pp.what) {
-              case Pp.Sc.FileDiscarded:
-                this.parts.onDiscarded(pp.save);
+          recorderEvent: QQ => {
+            var WQ;
+            switch (QQ.what) {
+              case rQ.Yc.FileDiscarded:
+                this.parts.onDiscarded(QQ.save);
                 break;
-              case Pp.Sc.SaveFailed:
-                this.saveFailed(pp.kind);
+              case rQ.Yc.SaveFailed:
+                this.saveFailed(QQ.kind);
                 break;
-              case Pp.Sc.SaveBusy:
-                if (null !== (ip = this.viewer) && void 0 !== ip && ip.savePending) {
+              case rQ.Yc.SaveBusy:
+                if (null !== (WQ = this.viewer) && void 0 !== WQ && WQ.savePending) {
                   this.viewer.saveFailed(!0);
                   break
                 }
-                this.recorder.onEvent(pp);
+                this.recorder.onEvent(QQ);
                 break;
               default:
-                this.recorder.onEvent(pp)
+                this.recorder.onEvent(QQ)
             }
           }
         };
-        this.sink = function(pp, ip) {
+        this.sink = function(QQ, WQ) {
           return {
-            onReplayEvent: bo(pp, ip)
+            onReplayEvent: Lq(QQ, WQ)
           }
-        }(cp, pp.buffer), this.recorderEvents = ho(cp)
+        }(XQ, QQ.buffer), this.recorderEvents = kq(XQ)
       }
       get currentViewer() {
         return this.viewer
       }
       loadViewer() {
-        var pp;
-        return this.viewer ? Promise.resolve(this.viewer) : (this.viewerChunk ??= (null !== (pp = this.deps.loadViewer) && void 0 !== pp ? pp : no)().catch((pp => {
-          throw this.viewerChunk = null, pp
-        })), this.viewerChunk.then((pp => (this.viewer ??= new pp.ReplayViewer({
+        var QQ;
+        return this.viewer ? Promise.resolve(this.viewer) : (this.viewerChunk ??= (null !== (QQ = this.deps.loadViewer) && void 0 !== QQ ? QQ : Sq)().catch((QQ => {
+          throw this.viewerChunk = null, QQ
+        })), this.viewerChunk.then((QQ => (this.viewer ??= new QQ.ReplayViewer({
           client: this.deps.client,
           setHoldDraws: this.deps.setHoldDraws,
           meshPending: this.deps.meshPending,
           notify: this.deps.notify,
           onChange: () => {
-            var pp, ip;
-            null === (pp = (ip = this.deps).onViewerChange) || void 0 === pp || pp.call(ip)
+            var QQ, WQ;
+            null === (QQ = (WQ = this.deps).onViewerChange) || void 0 === QQ || QQ.call(WQ)
           }
         }), this.viewer))))
       }
-      activated(pp) {
-        this.recorder.activated(pp)
+      activated(QQ) {
+        this.recorder.activated(QQ)
       }
-      afterFrame(pp) {
+      afterFrame(QQ) {
         try {
-          pp > 0 && this.recorder.LP()
+          QQ > 0 && this.recorder.fJ()
         } finally {
-          var ip;
-          null === (ip = this.viewer) || void 0 === ip || ip.afterFrame()
+          var WQ;
+          null === (WQ = this.viewer) || void 0 === WQ || WQ.afterFrame()
         }
       }
       end() {
-        var pp;
-        null === (pp = this.viewer) || void 0 === pp || pp.end()
+        var QQ;
+        null === (QQ = this.viewer) || void 0 === QQ || QQ.end()
       }
-      saveFailed(pp) {
-        var ip;
-        pp === Pp.ad.Edited ? null === (ip = this.viewer) || void 0 === ip || ip.saveFailed(!1) : this.recorder.failed(pp)
+      saveFailed(QQ) {
+        var WQ;
+        QQ === rQ.md.Edited ? null === (WQ = this.viewer) || void 0 === WQ || WQ.saveFailed(!1) : this.recorder.failed(QQ)
       }
     }
-    var go = cp(40818),
-      Go = cp(40837),
-      ro = cp(4919),
-      Zo = cp(41120);
-    class zo {
-      constructor(pp) {
-        this.deps = pp, this.analogue = [0, 0], this.keys = 0, this.unsent = !1
+    var oq = XQ(40847),
+      eq = XQ(40857),
+      nq = XQ(5146),
+      xq = XQ(41136);
+    class Yq {
+      constructor(QQ) {
+        this.deps = QQ, this.analogue = [0, 0], this.keys = 0, this.unsent = !1
       }
-      drag(pp, ip) {
-        if (!this.deps.live() || 0 === pp && 0 === ip) return;
-        const cp = (0, Tp.v)(0, performance.now()),
-          Op = this.deps.dragScale();
-        (0, Zo.g)((() => {
-          (0, Tp.A)(Pp.wb.MouseDown, 0, 0, 0, cp), (0, Tp.A)(Pp.wb.MouseMove, 0, pp * Op, ip * Op, 0), (0, Tp.A)(Pp.wb.MouseUp, 0, 0, 0, cp)
+      drag(QQ, WQ) {
+        if (!this.deps.live() || 0 === QQ && 0 === WQ) return;
+        const XQ = (0, LQ.s)(0, performance.now()),
+          wQ = this.deps.dragScale();
+        (0, xq.h)((() => {
+          (0, LQ.w)(rQ.qb.MouseDown, 0, 0, 0, XQ), (0, LQ.w)(rQ.qb.MouseMove, 0, QQ * wQ, WQ * wQ, 0), (0, LQ.w)(rQ.qb.MouseUp, 0, 0, 0, XQ)
         }))
       }
-      move(pp) {
-        var ip, cp;
-        this.analogue[0] = null !== (ip = null === pp || void 0 === pp ? void 0 : pp.x) && void 0 !== ip ? ip : 0, this.analogue[1] = null !== (cp = null === pp || void 0 === pp ? void 0 : pp.y) && void 0 !== cp ? cp : 0, this.send()
+      move(QQ) {
+        var WQ, XQ;
+        this.analogue[0] = null !== (WQ = null === QQ || void 0 === QQ ? void 0 : QQ.x) && void 0 !== WQ ? WQ : 0, this.analogue[1] = null !== (XQ = null === QQ || void 0 === QQ ? void 0 : QQ.y) && void 0 !== XQ ? XQ : 0, this.send()
       }
-      holdVertical(pp, ip) {
-        const cp = "freeCamUp" === pp ? yp.Kb.Up : yp.Kb.Down;
-        this.keys = ip ? this.keys | cp : this.keys & ~cp, this.send()
+      holdVertical(QQ, WQ) {
+        const XQ = "freeCamUp" === QQ ? jQ.pc.Up : jQ.pc.Down;
+        this.keys = WQ ? this.keys | XQ : this.keys & ~XQ, this.send()
       }
       flush() {
         this.unsent && this.send()
       }
       send() {
-        const pp = this.deps.live() ? this.deps.cmd() : null;
-        this.unsent = null !== pp && !(0, yp.oe)(pp, 0, this.analogue, this.keys)
+        const QQ = this.deps.live() ? this.deps.cmd() : null;
+        this.unsent = null !== QQ && !(0, jQ.Ke)(QQ, 0, this.analogue, this.keys)
       }
     }
-    var so = cp(3657),
-      Ko = cp(732),
-      Vo = cp(272),
-      pI = cp(104),
-      iI = cp(34361),
-      cI = cp(716),
-      OI = cp(36783);
+    var Nq = XQ(3810),
+      Zq = XQ(761),
+      Oq = XQ(318),
+      Kq = XQ(105),
+      mq = XQ(34435),
+      Mq = XQ(747),
+      QT = XQ(36888);
 
-    function oI() {
-      const pp = Op.c.get("clientEscMenuOptions"),
-        ip = (0, Ko.n)(pp);
+    function WT() {
+      const QQ = wQ.b.get("clientEscMenuOptions"),
+        WQ = (0, Zq.u)(QQ);
       return {
-        mouse: (0, pI.isMobile)() ? ip : pp.mouseSensitivity,
-        touch: ip,
-        fovPercent: pp.cameraFOV
+        mouse: (0, Kq.isMobile)() ? WQ : QQ.mouseSensitivity,
+        touch: WQ,
+        fovPercent: QQ.cameraFOV
       }
     }
 
-    function II() {
-      const pp = Op.c.get("clientEscMenuOptions"),
-        ip = Op.c.get("isTouchScreen") ? (0, Ko.n)(pp) : pp.mouseSensitivity,
-        cp = oI().mouse;
-      return cp > 0 ? ip / cp : 1
+    function XT() {
+      const QQ = wQ.b.get("clientEscMenuOptions"),
+        WQ = wQ.b.get("isTouchScreen") ? (0, Zq.u)(QQ) : QQ.mouseSensitivity,
+        XQ = WT().mouse;
+      return XQ > 0 ? WQ / XQ : 1
     }
 
-    function SI(pp) {
-      const ip = () => {
-        pp.setSoundPrefs(Op.c.get("soundVolume"), Op.c.get("soundOnFromAd"))
+    function wT(QQ) {
+      const WQ = () => {
+        QQ.setSoundPrefs(wQ.b.get("soundVolume"), wQ.b.get("soundOnFromAd"))
       };
-      let cp = null;
-      const op = () => {
+      let XQ = null;
+      const qQ = () => {
         const {
-          showFog: ip,
-          enableLighting: op,
-          fogChunkDistance: Ip,
-          chunkFadeIn: Sp
-        } = Op.c.get("clientEscMenuOptions"), xp = {
-          showFog: ip,
-          lighting: op,
-          fogChunks: Ip,
-          chunkFade: Sp,
-          cellLight: (0, so.n)("cellLight") ? (0, so.n)("cellLightUnlit") ? "all" : "lit" : "off"
+          showFog: WQ,
+          enableLighting: qQ,
+          fogChunkDistance: TQ,
+          chunkFadeIn: zQ
+        } = wQ.b.get("clientEscMenuOptions"), sQ = {
+          showFog: WQ,
+          lighting: qQ,
+          fogChunks: TQ,
+          chunkFade: zQ,
+          cellLight: (0, Nq.e)("cellLight") ? (0, Nq.e)("cellLightUnlit") ? "all" : "lit" : "off"
         };
-        cp && (0, Pp.ce)(cp) === (0, Pp.ce)(xp) && cp.fogChunks === Ip || (cp = xp, pp.setEnvPrefs(cp))
+        XQ && (0, rQ.fe)(XQ) === (0, rQ.fe)(sQ) && XQ.fogChunks === TQ || (XQ = sQ, QQ.setEnvPrefs(XQ))
       };
-      let Ip = null;
-      const xp = () => {
-        const ip = function() {
-          const pp = Op.c.get("clientEscMenuOptions");
+      let TQ = null;
+      const sQ = () => {
+        const WQ = function() {
+          const QQ = wQ.b.get("clientEscMenuOptions");
           return {
-            nametagsHidden: Op.c.get("areNametagsHidden"),
-            crouchToggle: pp.crouchIsToggle,
-            bhopDisabled: pp.disableBunnyHopping,
-            disableBobbing: pp.disableBobbing,
-            ezTowering: pp.ezTowering ? (0, Vo.h)() : null,
-            ezBridging: pp.ezBridging,
-            showChunkBorders: pp.showChunkBorders,
-            touchWalk: !(0, OI.d)(),
-            edgeGuard: pp.touchEdgeGuard,
-            edgeGuardLong: (0, cI.c)(),
-            nametagCutDistance: (0, iI.h)()
+            nametagsHidden: wQ.b.get("areNametagsHidden"),
+            crouchToggle: QQ.crouchIsToggle,
+            bhopDisabled: QQ.disableBunnyHopping,
+            disableBobbing: QQ.disableBobbing,
+            ezTowering: QQ.ezTowering ? (0, Oq.f)() : null,
+            ezBridging: QQ.ezBridging,
+            showChunkBorders: QQ.showChunkBorders,
+            touchWalk: !(0, QT.f)(),
+            edgeGuard: QQ.touchEdgeGuard,
+            edgeGuardLong: (0, Mq.c)(),
+            nametagCutDistance: (0, mq.d)()
           }
         }();
-        (0, qp.Td)(Ip, ip) || (Ip = ip, pp.setUiPrefs(ip))
+        (0, aQ.Wd)(TQ, WQ) || (TQ = WQ, QQ.setUiPrefs(WQ))
       };
-      let Lp = null;
-      const Yp = () => {
-        const ip = oI();
-        (0, qp.Td)(Lp, ip) || (Lp = ip, pp.setLookPrefs(ip))
+      let FQ = null;
+      const PQ = () => {
+        const WQ = WT();
+        (0, aQ.Wd)(FQ, WQ) || (FQ = WQ, QQ.setLookPrefs(WQ))
       };
-      ip(), op(), xp(), Yp();
-      const Dp = [(0, Sp.n)("appManagerUpdated|soundVolume", ip), (0, Sp.n)("appManagerUpdated|soundOnFromAd", ip), (0, Sp.n)("appManagerUpdated|clientEscMenuOptions", (() => {
-        op(), xp(), Yp()
-      })), (0, Sp.n)(OI.c, xp), (0, Sp.n)("appManagerUpdated|enabledDebugFeatures", op), (0, Sp.n)("appManagerUpdated|areNametagsHidden", xp), (0, Sp.n)("appManagerUpdated|showDistantNametags", xp)];
+      WQ(), qQ(), sQ(), PQ();
+      const gQ = [(0, zQ.o)("appManagerUpdated|soundVolume", WQ), (0, zQ.o)("appManagerUpdated|soundOnFromAd", WQ), (0, zQ.o)("appManagerUpdated|clientEscMenuOptions", (() => {
+        qQ(), sQ(), PQ()
+      })), (0, zQ.o)(QT.c, sQ), (0, zQ.o)("appManagerUpdated|enabledDebugFeatures", qQ), (0, zQ.o)("appManagerUpdated|areNametagsHidden", sQ), (0, zQ.o)("appManagerUpdated|showDistantNametags", sQ)];
       return () => {
-        for (const pp of Dp) pp()
+        for (const QQ of gQ) QQ()
       }
     }
-    var xI = cp(41096),
-      LI = cp(41104);
-    var YI = (0, LI.c)("lend"),
-      DI = (0, LI.c)("starting"),
-      AI = (0, LI.c)("generation"),
-      PI = (0, LI.c)("end");
-    class WI {
-      constructor(pp) {
-        this.deps = pp, Object.defineProperty(this, PI, {
-          value: yI
-        }), Object.defineProperty(this, YI, {
+    var qT = XQ(41114),
+      TT = XQ(41122);
+    var zT = (0, TT.b)("lend"),
+      sT = (0, TT.b)("starting"),
+      FT = (0, TT.b)("generation"),
+      PT = (0, TT.b)("end");
+    class gT {
+      constructor(QQ) {
+        this.deps = QQ, Object.defineProperty(this, PT, {
+          value: JT
+        }), Object.defineProperty(this, zT, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, DI, {
+        }), Object.defineProperty(this, sT, {
           writable: !0,
           value: !1
-        }), Object.defineProperty(this, AI, {
+        }), Object.defineProperty(this, FT, {
           writable: !0,
           value: 0
         })
       }
       get active() {
-        return null !== (0, xI.e)(this, YI)[YI] || (0, xI.e)(this, DI)[DI]
+        return null !== (0, qT.d)(this, zT)[zT] || (0, qT.d)(this, sT)[sT]
       }
-      async start(pp) {
+      async start(QQ) {
         if (this.active) return "busy";
-        const ip = (0, xI.e)(this, AI)[AI];
-        (0, xI.e)(this, DI)[DI] = !0;
+        const WQ = (0, qT.d)(this, FT)[FT];
+        (0, qT.d)(this, sT)[sT] = !0;
         try {
           if (!await this.deps.ensureLoaded()) return "refused"
         } finally {
-          (0, xI.e)(this, DI)[DI] = !1
+          (0, qT.d)(this, sT)[sT] = !1
         }
-        if (ip !== (0, xI.e)(this, AI)[AI]) return "refused";
-        const cp = this.deps.beginSave();
-        if (!cp) return "refused";
-        const Op = Number(BigInt.asUintN(32, pp)),
-          op = Number(BigInt.asUintN(32, pp >> 32n));
-        let Ip = "refused";
-        return this.deps.recorderCall(((pp, ip) => {
-          const Sp = cp.editState,
-            xp = pp.stage(Sp.length);
-          0 !== xp ? (new Uint8Array(ip.buffer, xp, Sp.length).set(Sp), pp.HIp(cp.headLen, Op, op) && (Ip = "sealing")) : Ip = "tooLarge"
-        }), !0), "sealing" !== Ip ? (cp.end(), Ip) : ((0, xI.e)(this, YI)[YI] = cp, "sealing")
+        if (WQ !== (0, qT.d)(this, FT)[FT]) return "refused";
+        const XQ = this.deps.beginSave();
+        if (!XQ) return "refused";
+        const wQ = Number(BigInt.asUintN(32, QQ)),
+          qQ = Number(BigInt.asUintN(32, QQ >> 32n));
+        let TQ = "refused";
+        return this.deps.recorderCall(((QQ, WQ) => {
+          const zQ = XQ.editState,
+            sQ = QQ.stage(zQ.length);
+          0 !== sQ ? (new Uint8Array(WQ.buffer, sQ, zQ.length).set(zQ), QQ.WTQ(XQ.headLen, wQ, qQ) && (TQ = "sealing")) : TQ = "tooLarge"
+        }), !0), "sealing" !== TQ ? (XQ.end(), TQ) : ((0, qT.d)(this, zT)[zT] = XQ, "sealing")
       }
       beforeRecorderStep() {
-        const pp = (0, xI.e)(this, YI)[YI];
-        if (!pp) return null;
-        let ip = -1,
-          cp = 0;
-        if (!this.deps.recorderCall((pp => {
-            ip = pp.dIp(), ip > 0 && (cp = pp.eIp())
-          }))) return (0, xI.e)(this, PI)[PI](pp, "stopped");
-        if (ip < 0) return (0, xI.e)(this, PI)[PI](pp, "read");
-        if (0 === ip) return null;
-        const Op = pp.head(cp, ip);
-        let op = !1;
-        if (Op && this.deps.recorderCall(((pp, cp) => {
-            const Ip = pp.stage(ip);
-            0 !== Ip && (new Uint8Array(cp.buffer, Ip, ip).set(Op), op = !0)
-          }), !0), op) return null;
-        const Ip = pp.givenUp();
-        this.deps.recorderCall((pp => {
-          pp.uIp()
+        const QQ = (0, qT.d)(this, zT)[zT];
+        if (!QQ) return null;
+        let WQ = -1,
+          XQ = 0;
+        if (!this.deps.recorderCall((QQ => {
+            WQ = QQ.XTQ(), WQ > 0 && (XQ = QQ.wTQ())
+          }))) return (0, qT.d)(this, PT)[PT](QQ, "stopped");
+        if (WQ < 0) return (0, qT.d)(this, PT)[PT](QQ, "read");
+        if (0 === WQ) return null;
+        const wQ = QQ.head(XQ, WQ);
+        let qQ = !1;
+        if (wQ && this.deps.recorderCall(((QQ, XQ) => {
+            const TQ = QQ.stage(WQ);
+            0 !== TQ && (new Uint8Array(XQ.buffer, TQ, WQ).set(wQ), qQ = !0)
+          }), !0), qQ) return null;
+        const TQ = QQ.givenUp();
+        this.deps.recorderCall((QQ => {
+          QQ.qTQ()
         }));
-        const Sp = (0, xI.e)(this, PI)[PI](pp, Ip ? "givenUp" : "stopped");
-        return Ip && this.deps.givenUp("Reopen the replay you were editing to make your edits again, as they weren't saved when another replay opened."), Sp
+        const zQ = (0, qT.d)(this, PT)[PT](QQ, TQ ? "givenUp" : "stopped");
+        return TQ && this.deps.givenUp("Reopen the replay you were editing to make your edits again, as they weren't saved when another replay opened."), zQ
       }
       stop() {
-        (0, xI.e)(this, AI)[AI]++;
-        const pp = (0, xI.e)(this, YI)[YI];
-        pp && (this.deps.recorderCall((pp => {
-          pp.uIp()
-        })), (0, xI.e)(this, PI)[PI](pp, "stopped"))
+        (0, qT.d)(this, FT)[FT]++;
+        const QQ = (0, qT.d)(this, zT)[zT];
+        QQ && (this.deps.recorderCall((QQ => {
+          QQ.qTQ()
+        })), (0, qT.d)(this, PT)[PT](QQ, "stopped"))
       }
     }
 
-    function yI(pp, ip) {
-      return (0, xI.e)(this, YI)[YI] = null, pp.end(), ip
+    function JT(QQ, WQ) {
+      return (0, qT.d)(this, zT)[zT] = null, QQ.end(), WQ
     }
 
-    function UI(pp, ip) {
-      const cp = new Uint8Array(4),
-        Op = new DataView(cp.buffer);
-      return Op.setUint8(0, pp ? 1 : 0), Op.setUint16(2, Math.max(0, Math.min(65535, Math.round(ip))), !0), cp
+    function rT(QQ, WQ) {
+      const XQ = new Uint8Array(4),
+        wQ = new DataView(XQ.buffer);
+      return wQ.setUint8(0, QQ ? 1 : 0), wQ.setUint16(2, Math.max(0, Math.min(65535, Math.round(WQ))), !0), XQ
     }
 
-    function wI(pp, ip) {
-      return pp > function(pp) {
-        return 16777216 + 314572.8 * Math.max(0, pp)
-      }(ip) + 33554432
+    function IT(QQ, WQ) {
+      return QQ > function(QQ) {
+        return 16777216 + 314572.8 * Math.max(0, QQ)
+      }(WQ) + 33554432
     }
-    let vI = null;
+    let jT = null;
 
-    function tI(pp) {
-      return vI ??= async function(pp) {
-        const ip = pp.loadInFlight();
-        ip && await ip.catch((() => {}));
-        if (pp.trapped()) return "trapped";
-        if (pp.busy() || !wI(pp.memoryBytes(), pp.clipSeconds())) return "aW";
-        pp.unload();
-        let cp = !1;
+    function BT(QQ) {
+      return jT ??= async function(QQ) {
+        const WQ = QQ.loadInFlight();
+        WQ && await WQ.catch((() => {}));
+        if (QQ.trapped()) return "trapped";
+        if (QQ.busy() || !IT(QQ.memoryBytes(), QQ.clipSeconds())) return "HI";
+        QQ.unload();
+        let XQ = !1;
         try {
-          cp = await pp.load()
+          XQ = await QQ.load()
         } catch {
-          cp = !1
+          XQ = !1
         }
-        if (!cp) return pp.trapped() ? "trapped" : pp.Ry() ? "Ry" : "failed";
+        if (!XQ) return QQ.trapped() ? "trapped" : QQ.zj() ? "zj" : "failed";
         return "recycled"
-      }(pp).finally((() => {
-        vI = null
-      })), vI
+      }(QQ).finally((() => {
+        jT = null
+      })), jT
     }
-    const HI = "Replay recording couldn't load, so try again.",
-      dI = new Set([Pp.Uc.ToggleRecording, Pp.Uc.SaveClip]);
-    var eI = (0, LI.c)("bindings"),
-      uI = (0, LI.c)("module"),
-      jI = (0, LI.c)("memory"),
-      kI = (0, LI.c)("trapped"),
-      mI = (0, LI.c)("Ry"),
-      RI = (0, LI.c)("recycleDue"),
-      qI = (0, LI.c)("loading"),
-      MI = (0, LI.c)("generation"),
-      CI = (0, LI.c)("viewDrawn"),
-      EI = (0, LI.c)("clip"),
-      XI = (0, LI.c)("session"),
-      lI = (0, LI.c)("control"),
-      QI = (0, LI.c)("deferred"),
-      JI = (0, LI.c)("coreU8"),
-      BI = (0, LI.c)("coreU32"),
-      NI = (0, LI.c)("moduleU8"),
-      TI = (0, LI.c)("edited"),
-      fI = (0, LI.c)("sendSession"),
-      bI = (0, LI.c)("checkNotInEvents"),
-      hI = (0, LI.c)("clipping"),
-      aI = (0, LI.c)("busy"),
-      nI = (0, LI.c)("use"),
-      FI = (0, LI.c)("ensureLoaded"),
-      gI = (0, LI.c)("loadOnce"),
-      GI = (0, LI.c)("recycleAfterStep"),
-      rI = (0, LI.c)("settleRecycle"),
-      ZI = (0, LI.c)("load"),
-      zI = (0, LI.c)("attach"),
-      sI = (0, LI.c)("resendHeld"),
-      KI = (0, LI.c)("recycle"),
-      VI = (0, LI.c)("send"),
-      pS = (0, LI.c)("unload"),
-      iS = (0, LI.c)("dropModule"),
-      cS = (0, LI.c)("coreBytes"),
-      OS = (0, LI.c)("coreWords"),
-      oS = (0, LI.c)("moduleBytes"),
-      IS = (0, LI.c)("loadFailed"),
-      SS = (0, LI.c)("call"),
-      xS = (0, LI.c)("guard"),
-      LS = (0, LI.c)("trapOn");
-    class YS {
-      constructor(pp) {
-        this.deps = pp, Object.defineProperty(this, LS, {
-          value: lS
-        }), Object.defineProperty(this, xS, {
-          value: XS
-        }), Object.defineProperty(this, SS, {
-          value: ES
-        }), Object.defineProperty(this, IS, {
-          value: CS
-        }), Object.defineProperty(this, oS, {
-          value: MS
-        }), Object.defineProperty(this, OS, {
-          value: qS
-        }), Object.defineProperty(this, cS, {
-          value: RS
-        }), Object.defineProperty(this, iS, {
-          value: mS
-        }), Object.defineProperty(this, pS, {
-          value: kS
-        }), Object.defineProperty(this, VI, {
-          value: jS
-        }), Object.defineProperty(this, KI, {
-          value: uS
-        }), Object.defineProperty(this, sI, {
-          value: eS
-        }), Object.defineProperty(this, zI, {
-          value: dS
-        }), Object.defineProperty(this, ZI, {
-          value: HS
-        }), Object.defineProperty(this, rI, {
-          value: tS
-        }), Object.defineProperty(this, GI, {
-          value: vS
-        }), Object.defineProperty(this, gI, {
-          value: wS
-        }), Object.defineProperty(this, FI, {
-          value: US
-        }), Object.defineProperty(this, nI, {
-          value: yS
-        }), Object.defineProperty(this, aI, {
-          value: WS
-        }), Object.defineProperty(this, hI, {
-          value: PS
-        }), Object.defineProperty(this, bI, {
-          value: AS
-        }), Object.defineProperty(this, fI, {
-          value: DS
-        }), Object.defineProperty(this, eI, {
+    const yT = "Replay recording couldn't load, so try again.",
+      VT = new Set([rQ.ad.ToggleRecording, rQ.ad.SaveClip]);
+    var DT = (0, TT.b)("bindings"),
+      pT = (0, TT.b)("module"),
+      GT = (0, TT.b)("memory"),
+      UT = (0, TT.b)("trapped"),
+      bT = (0, TT.b)("zj"),
+      vT = (0, TT.b)("recycleDue"),
+      dT = (0, TT.b)("loading"),
+      HT = (0, TT.b)("generation"),
+      aT = (0, TT.b)("viewDrawn"),
+      lT = (0, TT.b)("clip"),
+      hT = (0, TT.b)("session"),
+      iT = (0, TT.b)("control"),
+      cT = (0, TT.b)("deferred"),
+      AT = (0, TT.b)("coreU8"),
+      RT = (0, TT.b)("coreU32"),
+      ET = (0, TT.b)("moduleU8"),
+      CT = (0, TT.b)("edited"),
+      uT = (0, TT.b)("sendSession"),
+      LT = (0, TT.b)("checkNotInEvents"),
+      kT = (0, TT.b)("clipping"),
+      fT = (0, TT.b)("busy"),
+      ST = (0, TT.b)("use"),
+      tT = (0, TT.b)("ensureLoaded"),
+      oT = (0, TT.b)("loadOnce"),
+      eT = (0, TT.b)("recycleAfterStep"),
+      nT = (0, TT.b)("settleRecycle"),
+      xT = (0, TT.b)("load"),
+      YT = (0, TT.b)("attach"),
+      NT = (0, TT.b)("resendHeld"),
+      ZT = (0, TT.b)("recycle"),
+      OT = (0, TT.b)("send"),
+      KT = (0, TT.b)("unload"),
+      mT = (0, TT.b)("dropModule"),
+      MT = (0, TT.b)("coreBytes"),
+      Qz = (0, TT.b)("coreWords"),
+      Wz = (0, TT.b)("moduleBytes"),
+      Xz = (0, TT.b)("loadFailed"),
+      wz = (0, TT.b)("call"),
+      qz = (0, TT.b)("guard"),
+      Tz = (0, TT.b)("trapOn");
+    class zz {
+      constructor(QQ) {
+        this.deps = QQ, Object.defineProperty(this, Tz, {
+          value: iz
+        }), Object.defineProperty(this, qz, {
+          value: hz
+        }), Object.defineProperty(this, wz, {
+          value: lz
+        }), Object.defineProperty(this, Xz, {
+          value: az
+        }), Object.defineProperty(this, Wz, {
+          value: Hz
+        }), Object.defineProperty(this, Qz, {
+          value: dz
+        }), Object.defineProperty(this, MT, {
+          value: vz
+        }), Object.defineProperty(this, mT, {
+          value: bz
+        }), Object.defineProperty(this, KT, {
+          value: Uz
+        }), Object.defineProperty(this, OT, {
+          value: Gz
+        }), Object.defineProperty(this, ZT, {
+          value: pz
+        }), Object.defineProperty(this, NT, {
+          value: Dz
+        }), Object.defineProperty(this, YT, {
+          value: Vz
+        }), Object.defineProperty(this, xT, {
+          value: yz
+        }), Object.defineProperty(this, nT, {
+          value: Bz
+        }), Object.defineProperty(this, eT, {
+          value: jz
+        }), Object.defineProperty(this, oT, {
+          value: Iz
+        }), Object.defineProperty(this, tT, {
+          value: rz
+        }), Object.defineProperty(this, ST, {
+          value: Jz
+        }), Object.defineProperty(this, fT, {
+          value: gz
+        }), Object.defineProperty(this, kT, {
+          value: Pz
+        }), Object.defineProperty(this, LT, {
+          value: Fz
+        }), Object.defineProperty(this, uT, {
+          value: sz
+        }), Object.defineProperty(this, DT, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, uI, {
+        }), Object.defineProperty(this, pT, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, jI, {
+        }), Object.defineProperty(this, GT, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, kI, {
+        }), Object.defineProperty(this, UT, {
           writable: !0,
           value: !1
-        }), Object.defineProperty(this, mI, {
+        }), Object.defineProperty(this, bT, {
           writable: !0,
           value: !1
-        }), Object.defineProperty(this, RI, {
+        }), Object.defineProperty(this, vT, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, qI, {
+        }), Object.defineProperty(this, dT, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, MI, {
+        }), Object.defineProperty(this, HT, {
           writable: !0,
           value: 0
-        }), Object.defineProperty(this, CI, {
+        }), Object.defineProperty(this, aT, {
           writable: !0,
           value: !1
-        }), Object.defineProperty(this, EI, {
+        }), Object.defineProperty(this, lT, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, XI, {
+        }), Object.defineProperty(this, hT, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, lI, {
+        }), Object.defineProperty(this, iT, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, QI, {
+        }), Object.defineProperty(this, cT, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, JI, {
+        }), Object.defineProperty(this, AT, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, BI, {
+        }), Object.defineProperty(this, RT, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, NI, {
+        }), Object.defineProperty(this, ET, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, TI, {
+        }), Object.defineProperty(this, CT, {
           writable: !0,
           value: void 0
-        }), (0, xI.e)(this, TI)[TI] = new WI({
-          ensureLoaded: () => (0, xI.e)(this, FI)[FI](),
-          recorderCall: (pp, ip) => {
-            ip && (0, xI.e)(this, bI)[bI]("an edited save's stage");
-            const cp = (0, xI.e)(this, SS)[SS](((ip, cp) => (pp(ip, cp), !0)));
-            return null !== cp && void 0 !== cp && cp
+        }), (0, qT.d)(this, CT)[CT] = new gT({
+          ensureLoaded: () => (0, qT.d)(this, tT)[tT](),
+          recorderCall: (QQ, WQ) => {
+            WQ && (0, qT.d)(this, LT)[LT]("an edited save's stage");
+            const XQ = (0, qT.d)(this, wz)[wz](((WQ, XQ) => (QQ(WQ, XQ), !0)));
+            return null !== XQ && void 0 !== XQ && XQ
           },
-          beginSave: pp.beginSave,
-          givenUp: pp.givenUp
+          beginSave: QQ.beginSave,
+          givenUp: QQ.givenUp
         })
       }
       get active() {
-        return null !== (0, xI.e)(this, uI)[uI]
+        return null !== (0, qT.d)(this, pT)[pT]
       }
       get trapped() {
-        return (0, xI.e)(this, kI)[kI]
+        return (0, qT.d)(this, UT)[UT]
       }
       get loading() {
-        return null !== (0, xI.e)(this, qI)[qI]
+        return null !== (0, qT.d)(this, dT)[dT]
       }
       prefetch() {
-        (0, xI.e)(this, mI)[mI] || (0, xI.e)(this, kI)[kI] || (0, xI.e)(this, uI)[uI] || (0, xI.e)(this, qI)[qI] || this.deps.prefetch()
+        (0, qT.d)(this, bT)[bT] || (0, qT.d)(this, UT)[UT] || (0, qT.d)(this, pT)[pT] || (0, qT.d)(this, dT)[dT] || this.deps.prefetch()
       }
       viewDrawn() {
-        (0, xI.e)(this, CI)[CI] = !0, (0, xI.e)(this, hI)[hI]() && (0, xI.e)(this, nI)[nI]()
+        (0, qT.d)(this, aT)[aT] = !0, (0, qT.d)(this, kT)[kT]() && (0, qT.d)(this, ST)[ST]()
       }
-      prefs(pp, ip) {
-        (0, xI.e)(this, EI)[EI] = {
-          on: pp,
-          seconds: ip
-        }, (0, xI.e)(this, VI)[VI](Pp.Pc.Prefs, UI(pp, ip)), pp && (0, xI.e)(this, CI)[CI] && (0, xI.e)(this, nI)[nI]()
+      prefs(QQ, WQ) {
+        (0, qT.d)(this, lT)[lT] = {
+          on: QQ,
+          seconds: WQ
+        }, (0, qT.d)(this, OT)[OT](rQ.Xc.Prefs, rT(QQ, WQ)), QQ && (0, qT.d)(this, aT)[aT] && (0, qT.d)(this, ST)[ST]()
       }
-      control(pp) {
-        const ip = function(pp) {
-          return new Uint8Array([pp, 0, 0, 0])
-        }(pp);
-        if (dI.has(pp)) return (0, xI.e)(this, uI)[uI] ? void(0, xI.e)(this, VI)[VI](Pp.Pc.Control, ip) : ((0, xI.e)(this, lI)[lI] = ip, void(0, xI.e)(this, nI)[nI]());
-        (0, xI.e)(this, mI)[mI] || this.deps.coreCommand(Pp.Pc.Control, ip)
+      control(QQ) {
+        const WQ = function(QQ) {
+          return new Uint8Array([QQ, 0, 0, 0])
+        }(QQ);
+        if (VT.has(QQ)) return (0, qT.d)(this, pT)[pT] ? void(0, qT.d)(this, OT)[OT](rQ.Xc.Control, WQ) : ((0, qT.d)(this, iT)[iT] = WQ, void(0, qT.d)(this, ST)[ST]());
+        (0, qT.d)(this, bT)[bT] || this.deps.coreCommand(rQ.Xc.Control, WQ)
       }
-      session(pp) {
-        (0, xI.e)(this, XI)[XI] = pp, (0, xI.e)(this, fI)[fI](pp)
+      session(QQ) {
+        (0, qT.d)(this, hT)[hT] = QQ, (0, qT.d)(this, uT)[uT](QQ)
       }
-      filePartDone(pp, ip) {
-        (0, xI.e)(this, VI)[VI](Pp.Pc.FilePartDone, function(pp, ip) {
-          const cp = new Uint8Array(8),
-            Op = new DataView(cp.buffer);
-          return Op.setUint32(0, pp, !0), Op.setUint32(4, ip, !0), cp
-        }(pp, ip))
+      filePartDone(QQ, WQ) {
+        (0, qT.d)(this, OT)[OT](rQ.Xc.FilePartDone, function(QQ, WQ) {
+          const XQ = new Uint8Array(8),
+            wQ = new DataView(XQ.buffer);
+          return wQ.setUint32(0, QQ, !0), wQ.setUint32(4, WQ, !0), XQ
+        }(QQ, WQ))
       }
-      fileDone(pp) {
-        return (0, xI.e)(this, VI)[VI](Pp.Pc.FileDone, function(pp) {
-          const ip = new Uint8Array(4);
-          return new DataView(ip.buffer).setUint32(0, pp, !0), ip
-        }(pp)), (0, xI.e)(this, GI)[GI]()
+      fileDone(QQ) {
+        return (0, qT.d)(this, OT)[OT](rQ.Xc.FileDone, function(QQ) {
+          const WQ = new Uint8Array(4);
+          return new DataView(WQ.buffer).setUint32(0, QQ, !0), WQ
+        }(QQ)), (0, qT.d)(this, eT)[eT]()
       }
-      saveEdited(pp) {
-        return (0, xI.e)(this, bI)[bI]("saveEdited"), (0, xI.e)(this, TI)[TI].start(pp)
+      saveEdited(QQ) {
+        return (0, qT.d)(this, LT)[LT]("saveEdited"), (0, qT.d)(this, CT)[CT].start(QQ)
       }
       afterFrame() {
-        if (!(0, xI.e)(this, uI)[uI]) return;
-        "read" === (0, xI.e)(this, TI)[TI].beforeRecorderStep() && (0, xI.e)(this, GI)[GI]();
-        const pp = (0, xI.e)(this, RI)[RI];
-        (0, xI.e)(this, RI)[RI] = null;
-        const ip = (0, xI.e)(this, uI)[uI],
-          cp = (0, xI.e)(this, jI)[jI];
-        if (!ip || !cp) return void(null === pp || void 0 === pp || pp.resolve((0, xI.e)(this, kI)[kI] ? "trapped" : "aW"));
+        if (!(0, qT.d)(this, pT)[pT]) return;
+        "read" === (0, qT.d)(this, CT)[CT].beforeRecorderStep() && (0, qT.d)(this, eT)[eT]();
+        const QQ = (0, qT.d)(this, vT)[vT];
+        (0, qT.d)(this, vT)[vT] = null;
+        const WQ = (0, qT.d)(this, pT)[pT],
+          XQ = (0, qT.d)(this, GT)[GT];
+        if (!WQ || !XQ) return void(null === QQ || void 0 === QQ || QQ.resolve((0, qT.d)(this, UT)[UT] ? "trapped" : "HI"));
         const {
-          core: Op
-        } = this.deps, op = Op.mIp(2);
-        let Ip, Sp, xp, Lp, Yp = 0,
-          Dp = 0;
-        if (0 !== op) {
-          var Ap, Pp;
-          const pp = (0, xI.e)(this, OS)[OS]();
-          Yp = null !== (Ap = pp[op >>> 2]) && void 0 !== Ap ? Ap : 0, Dp = null !== (Pp = pp[1 + (op >>> 2)]) && void 0 !== Pp ? Pp : 0
+          core: wQ
+        } = this.deps, qQ = wQ.sTQ(2);
+        let TQ, zQ, sQ, FQ, PQ = 0,
+          gQ = 0;
+        if (0 !== qQ) {
+          var JQ, rQ;
+          const QQ = (0, qT.d)(this, Qz)[Qz]();
+          PQ = null !== (JQ = QQ[qQ >>> 2]) && void 0 !== JQ ? JQ : 0, gQ = null !== (rQ = QQ[1 + (qQ >>> 2)]) && void 0 !== rQ ? rQ : 0
         }
         try {
-          if (Dp > 0) {
-            const pp = ip.feed(Dp);
-            0 !== pp && (0, xI.e)(this, oS)[oS](cp).set((0, xI.e)(this, cS)[cS]().subarray(Yp, Yp + Dp), pp)
+          if (gQ > 0) {
+            const QQ = WQ.feed(gQ);
+            0 !== QQ && (0, qT.d)(this, Wz)[Wz](XQ).set((0, qT.d)(this, MT)[MT]().subarray(PQ, PQ + gQ), QQ)
           }
-          Ip = ip.step(), Sp = ip.RIp(), xp = ip.qIp(), Lp = ip.MIp()
-        } catch (Wp) {
-          if (!(0, xI.e)(this, LS)[LS](Wp)) throw null === pp || void 0 === pp || pp.resolve("aW"), Wp;
-          return void(null === pp || void 0 === pp || pp.resolve("trapped"))
+          TQ = WQ.step(), zQ = WQ.FTQ(), sQ = WQ.PTQ(), FQ = WQ.gTQ()
+        } catch (IQ) {
+          if (!(0, qT.d)(this, Tz)[Tz](IQ)) throw null === QQ || void 0 === QQ || QQ.resolve("HI"), IQ;
+          return void(null === QQ || void 0 === QQ || QQ.resolve("trapped"))
         }
-        if (Ip > 0) {
-          const pp = Op.CIp(2, Ip);
-          0 !== pp && (0, xI.e)(this, cS)[cS]().set((0, xI.e)(this, oS)[oS](cp).subarray(Sp, Sp + Ip), pp)
+        if (TQ > 0) {
+          const QQ = wQ.JTQ(2, TQ);
+          0 !== QQ && (0, qT.d)(this, MT)[MT]().set((0, qT.d)(this, Wz)[Wz](XQ).subarray(zQ, zQ + TQ), QQ)
         }
-        if (xp > 0) {
-          (0, xI.e)(this, QI)[QI] = [];
+        if (sQ > 0) {
+          (0, qT.d)(this, cT)[cT] = [];
           try {
-            this.deps.events(new Uint8Array(cp.buffer, Lp, xp), cp)
-          } catch (Wp) {
-            throw null === pp || void 0 === pp || pp.resolve("aW"), Wp
+            this.deps.events(new Uint8Array(XQ.buffer, FQ, sQ), XQ)
+          } catch (IQ) {
+            throw null === QQ || void 0 === QQ || QQ.resolve("HI"), IQ
           } finally {
-            const pp = (0, xI.e)(this, QI)[QI];
-            (0, xI.e)(this, QI)[QI] = null;
-            for (const [ip, cp] of pp)(0, xI.e)(this, VI)[VI](ip, cp)
+            const QQ = (0, qT.d)(this, cT)[cT];
+            (0, qT.d)(this, cT)[cT] = null;
+            for (const [WQ, XQ] of QQ)(0, qT.d)(this, OT)[OT](WQ, XQ)
           }
         }
-        if (!(0, xI.e)(this, hI)[hI]() && !(0, xI.e)(this, aI)[aI]()) return (0, xI.e)(this, pS)[pS](), void(null === pp || void 0 === pp || pp.resolve("aW"));
-        null === pp || void 0 === pp || pp.resolve((0, xI.e)(this, KI)[KI]())
+        if (!(0, qT.d)(this, kT)[kT]() && !(0, qT.d)(this, fT)[fT]()) return (0, qT.d)(this, KT)[KT](), void(null === QQ || void 0 === QQ || QQ.resolve("HI"));
+        null === QQ || void 0 === QQ || QQ.resolve((0, qT.d)(this, ZT)[ZT]())
       }
       dispose() {
-        (0, xI.e)(this, mI)[mI] = !0, (0, xI.e)(this, pS)[pS]()
+        (0, qT.d)(this, bT)[bT] = !0, (0, qT.d)(this, KT)[KT]()
       }
     }
 
-    function DS(pp) {
-      (0, xI.e)(this, VI)[VI](Pp.Pc.Session, function(pp) {
-        const ip = new TextEncoder,
-          cp = ip.encode(pp.game).subarray(0, 65535),
-          Op = ip.encode(pp.lobby).subarray(0, 65535),
-          op = new Uint8Array(22 + cp.length + 2 + Op.length),
-          Ip = new DataView(op.buffer);
-        Ip.setFloat64(0, pp.unixMs, !0), Ip.setBigUint64(8, BigInt.asUintN(64, pp.session), !0), Ip.setUint8(16, pp.lobbyType);
-        let Sp = 20;
-        for (const xp of [cp, Op]) Ip.setUint16(Sp, xp.length, !0), op.set(xp, Sp + 2), Sp += 2 + xp.length;
-        return op
+    function sz(QQ) {
+      (0, qT.d)(this, OT)[OT](rQ.Xc.Session, function(QQ) {
+        const WQ = new TextEncoder,
+          XQ = WQ.encode(QQ.game).subarray(0, 65535),
+          wQ = WQ.encode(QQ.lobby).subarray(0, 65535),
+          qQ = new Uint8Array(22 + XQ.length + 2 + wQ.length),
+          TQ = new DataView(qQ.buffer);
+        TQ.setFloat64(0, QQ.unixMs, !0), TQ.setBigUint64(8, BigInt.asUintN(64, QQ.session), !0), TQ.setUint8(16, QQ.lobbyType);
+        let zQ = 20;
+        for (const sQ of [XQ, wQ]) TQ.setUint16(zQ, sQ.length, !0), qQ.set(sQ, zQ + 2), zQ += 2 + sQ.length;
+        return qQ
       }({
-        ...pp,
+        ...QQ,
         unixMs: this.deps.unixNow()
       }))
     }
 
-    function AS(pp) {
+    function Fz(QQ) {
       false
     }
 
-    function PS() {
-      var pp, ip;
-      return null !== (pp = null === (ip = (0, xI.e)(this, EI)[EI]) || void 0 === ip ? void 0 : ip.on) && void 0 !== pp && pp
+    function Pz() {
+      var QQ, WQ;
+      return null !== (QQ = null === (WQ = (0, qT.d)(this, lT)[lT]) || void 0 === WQ ? void 0 : WQ.on) && void 0 !== QQ && QQ
     }
 
-    function WS() {
-      const pp = (0, xI.e)(this, uI)[uI];
-      let ip = !0;
-      if (pp) try {
-        ip = pp.busy()
-      } catch (cp) {
-        if (!(0, xI.e)(this, LS)[LS](cp)) throw cp
+    function gz() {
+      const QQ = (0, qT.d)(this, pT)[pT];
+      let WQ = !0;
+      if (QQ) try {
+        WQ = QQ.busy()
+      } catch (XQ) {
+        if (!(0, qT.d)(this, Tz)[Tz](XQ)) throw XQ
       }
-      return ip || (0, xI.e)(this, TI)[TI].active
+      return WQ || (0, qT.d)(this, CT)[CT].active
     }
-    async function yS() {
-      !(0, xI.e)(this, mI)[mI] && this.deps.allowed() ? await (0, xI.e)(this, FI)[FI]() : (0, xI.e)(this, lI)[lI] = null
+    async function Jz() {
+      !(0, qT.d)(this, bT)[bT] && this.deps.allowed() ? await (0, qT.d)(this, tT)[tT]() : (0, qT.d)(this, iT)[iT] = null
     }
 
-    function US() {
-      return (0, xI.e)(this, kI)[kI] || (0, xI.e)(this, mI)[mI] ? Promise.resolve(!1) : (0, xI.e)(this, uI)[uI] ? Promise.resolve(!0) : ((0, xI.e)(this, qI)[qI] ??= (0, xI.e)(this, gI)[gI](), (0, xI.e)(this, qI)[qI])
+    function rz() {
+      return (0, qT.d)(this, UT)[UT] || (0, qT.d)(this, bT)[bT] ? Promise.resolve(!1) : (0, qT.d)(this, pT)[pT] ? Promise.resolve(!0) : ((0, qT.d)(this, dT)[dT] ??= (0, qT.d)(this, oT)[oT](), (0, qT.d)(this, dT)[dT])
     }
-    async function wS() {
-      let pp = !1;
+    async function Iz() {
+      let QQ = !1;
       try {
-        return pp = await (0, xI.e)(this, ZI)[ZI](), pp
+        return QQ = await (0, qT.d)(this, xT)[xT](), QQ
       } finally {
-        pp || ((0, xI.e)(this, lI)[lI] = null), (0, xI.e)(this, qI)[qI] = null
+        QQ || ((0, qT.d)(this, iT)[iT] = null), (0, qT.d)(this, dT)[dT] = null
       }
     }
 
-    function vS() {
-      if (!(0, xI.e)(this, uI)[uI]) return Promise.resolve((0, xI.e)(this, kI)[kI] ? "trapped" : "aW");
-      if (!(0, xI.e)(this, RI)[RI]) {
-        let pp = () => {};
-        const ip = new Promise((ip => {
-          pp = ip
+    function jz() {
+      if (!(0, qT.d)(this, pT)[pT]) return Promise.resolve((0, qT.d)(this, UT)[UT] ? "trapped" : "HI");
+      if (!(0, qT.d)(this, vT)[vT]) {
+        let QQ = () => {};
+        const WQ = new Promise((WQ => {
+          QQ = WQ
         }));
-        (0, xI.e)(this, RI)[RI] = {
-          promise: ip,
-          resolve: pp
+        (0, qT.d)(this, vT)[vT] = {
+          promise: WQ,
+          resolve: QQ
         }
       }
-      return (0, xI.e)(this, RI)[RI].promise
+      return (0, qT.d)(this, vT)[vT].promise
     }
 
-    function tS(pp) {
-      const ip = (0, xI.e)(this, RI)[RI];
-      (0, xI.e)(this, RI)[RI] = null, null === ip || void 0 === ip || ip.resolve(pp)
+    function Bz(QQ) {
+      const WQ = (0, qT.d)(this, vT)[vT];
+      (0, qT.d)(this, vT)[vT] = null, null === WQ || void 0 === WQ || WQ.resolve(QQ)
     }
-    async function HS() {
-      let pp = (0, xI.e)(this, eI)[eI];
-      if (!pp) {
-        const ip = (0, xI.e)(this, MI)[MI];
+    async function yz() {
+      let QQ = (0, qT.d)(this, DT)[DT];
+      if (!QQ) {
+        const WQ = (0, qT.d)(this, HT)[HT];
         try {
-          pp = await this.deps.load()
-        } catch (cp) {
-          return ip === (0, xI.e)(this, MI)[MI] && await (0, xI.e)(this, IS)[IS](cp), !1
+          QQ = await this.deps.load()
+        } catch (XQ) {
+          return WQ === (0, qT.d)(this, HT)[HT] && await (0, qT.d)(this, Xz)[Xz](XQ), !1
         }
-        if (ip !== (0, xI.e)(this, MI)[MI]) return this.deps.unload(), !1;
-        const Op = pp,
-          op = (0, xI.e)(this, xS)[xS]((() => Op.EIp()));
-        if (void 0 === op) return !1;
-        const Ip = this.deps.core.XIp();
-        if (op !== Ip) return await (0, xI.e)(this, IS)[IS](new Error(`recorder port version ${op}, the core's ${Ip}`)), !1;
-        (0, xI.e)(this, eI)[eI] = pp
+        if (WQ !== (0, qT.d)(this, HT)[HT]) return this.deps.unload(), !1;
+        const wQ = QQ,
+          qQ = (0, qT.d)(this, qz)[qz]((() => wQ.rTQ()));
+        if (void 0 === qQ) return !1;
+        const TQ = this.deps.core.ITQ();
+        if (qQ !== TQ) return await (0, qT.d)(this, Xz)[Xz](new Error(`recorder port version ${qQ}, the core's ${TQ}`)), !1;
+        (0, qT.d)(this, DT)[DT] = QQ
       }
-      const ip = pp;
+      const WQ = QQ;
       try {
-        if (!(0, xI.e)(this, xS)[xS]((() => ((0, xI.e)(this, uI)[uI] = new ip.lIp, (0, xI.e)(this, jI)[jI] = ip.jIp(), !0)))) return !1;
-        (0, xI.e)(this, sI)[sI]();
-        const pp = (0, xI.e)(this, lI)[lI];
-        return (0, xI.e)(this, lI)[lI] = null, pp && (0, xI.e)(this, VI)[VI](Pp.Pc.Control, pp), (0, xI.e)(this, zI)[zI]()
-      } catch (cp) {
-        return (0, xI.e)(this, pS)[pS](), await (0, xI.e)(this, IS)[IS](cp), !1
+        if (!(0, qT.d)(this, qz)[qz]((() => ((0, qT.d)(this, pT)[pT] = new WQ.jTQ, (0, qT.d)(this, GT)[GT] = WQ.TTQ(), !0)))) return !1;
+        (0, qT.d)(this, NT)[NT]();
+        const QQ = (0, qT.d)(this, iT)[iT];
+        return (0, qT.d)(this, iT)[iT] = null, QQ && (0, qT.d)(this, OT)[OT](rQ.Xc.Control, QQ), (0, qT.d)(this, YT)[YT]()
+      } catch (XQ) {
+        return (0, qT.d)(this, KT)[KT](), await (0, qT.d)(this, Xz)[Xz](XQ), !1
       }
     }
 
-    function dS() {
-      return this.deps.core.QIp(0), 1 === this.deps.core.QIp(1) || ((0, xI.e)(this, pS)[pS](), this.deps.failed(HI), !1)
+    function Vz() {
+      return this.deps.core.BTQ(0), 1 === this.deps.core.BTQ(1) || ((0, qT.d)(this, KT)[KT](), this.deps.failed(yT), !1)
     }
 
-    function eS() {
-      (0, xI.e)(this, EI)[EI] && (0, xI.e)(this, VI)[VI](Pp.Pc.Prefs, UI((0, xI.e)(this, EI)[EI].on, (0, xI.e)(this, EI)[EI].seconds)), (0, xI.e)(this, XI)[XI] && (0, xI.e)(this, fI)[fI]((0, xI.e)(this, XI)[XI])
+    function Dz() {
+      (0, qT.d)(this, lT)[lT] && (0, qT.d)(this, OT)[OT](rQ.Xc.Prefs, rT((0, qT.d)(this, lT)[lT].on, (0, qT.d)(this, lT)[lT].seconds)), (0, qT.d)(this, hT)[hT] && (0, qT.d)(this, uT)[uT]((0, qT.d)(this, hT)[hT])
     }
 
-    function uS() {
-      return tI({
+    function pz() {
+      return BT({
         memoryBytes: this.deps.memoryBytes,
         clipSeconds: () => {
-          var pp, ip;
-          return null !== (pp = null === (ip = (0, xI.e)(this, EI)[EI]) || void 0 === ip ? void 0 : ip.seconds) && void 0 !== pp ? pp : 0
+          var QQ, WQ;
+          return null !== (QQ = null === (WQ = (0, qT.d)(this, lT)[lT]) || void 0 === WQ ? void 0 : WQ.seconds) && void 0 !== QQ ? QQ : 0
         },
-        trapped: () => (0, xI.e)(this, kI)[kI],
-        busy: () => (0, xI.e)(this, aI)[aI](),
-        loadInFlight: () => (0, xI.e)(this, qI)[qI],
-        Ry: () => (0, xI.e)(this, mI)[mI],
+        trapped: () => (0, qT.d)(this, UT)[UT],
+        busy: () => (0, qT.d)(this, fT)[fT](),
+        loadInFlight: () => (0, qT.d)(this, dT)[dT],
+        zj: () => (0, qT.d)(this, bT)[bT],
         unload: () => {
-          (0, xI.e)(this, pS)[pS]()
+          (0, qT.d)(this, KT)[KT]()
         },
-        load: () => (0, xI.e)(this, FI)[FI]()
+        load: () => (0, qT.d)(this, tT)[tT]()
       })
     }
 
-    function jS(pp, ip) {
-      (0, xI.e)(this, QI)[QI] ? (0, xI.e)(this, QI)[QI].push([pp, ip]): (0, xI.e)(this, SS)[SS](((cp, Op) => {
-        const op = cp.kIp(ip.length);
-        0 !== op && (new Uint8Array(Op.buffer, op, ip.length).set(ip), cp.command(pp, ip.length))
+    function Gz(QQ, WQ) {
+      (0, qT.d)(this, cT)[cT] ? (0, qT.d)(this, cT)[cT].push([QQ, WQ]): (0, qT.d)(this, wz)[wz](((XQ, wQ) => {
+        const qQ = XQ.zTQ(WQ.length);
+        0 !== qQ && (new Uint8Array(wQ.buffer, qQ, WQ.length).set(WQ), XQ.command(QQ, WQ.length))
       }))
     }
 
-    function kS() {
-      (0, xI.e)(this, MI)[MI]++, (0, xI.e)(this, rI)[rI]("aW"), (0, xI.e)(this, TI)[TI].stop(), this.deps.core.QIp(0), (0, xI.e)(this, iS)[iS](), (0, xI.e)(this, kI)[kI] || ((0, xI.e)(this, eI)[eI] = null, this.deps.unload())
+    function Uz() {
+      (0, qT.d)(this, HT)[HT]++, (0, qT.d)(this, nT)[nT]("HI"), (0, qT.d)(this, CT)[CT].stop(), this.deps.core.BTQ(0), (0, qT.d)(this, mT)[mT](), (0, qT.d)(this, UT)[UT] || ((0, qT.d)(this, DT)[DT] = null, this.deps.unload())
     }
 
-    function mS() {
-      (0, xI.e)(this, SS)[SS]((pp => {
-        pp.free()
-      })), (0, xI.e)(this, uI)[uI] = null, (0, xI.e)(this, jI)[jI] = null, (0, xI.e)(this, NI)[NI] = null
+    function bz() {
+      (0, qT.d)(this, wz)[wz]((QQ => {
+        QQ.free()
+      })), (0, qT.d)(this, pT)[pT] = null, (0, qT.d)(this, GT)[GT] = null, (0, qT.d)(this, ET)[ET] = null
     }
 
-    function RS() {
-      var pp;
-      const ip = this.deps.coreBuffer();
-      return (null === (pp = (0, xI.e)(this, JI)[JI]) || void 0 === pp ? void 0 : pp.buffer) !== ip && ((0, xI.e)(this, JI)[JI] = new Uint8Array(ip)), (0, xI.e)(this, JI)[JI]
+    function vz() {
+      var QQ;
+      const WQ = this.deps.coreBuffer();
+      return (null === (QQ = (0, qT.d)(this, AT)[AT]) || void 0 === QQ ? void 0 : QQ.buffer) !== WQ && ((0, qT.d)(this, AT)[AT] = new Uint8Array(WQ)), (0, qT.d)(this, AT)[AT]
     }
 
-    function qS() {
-      var pp;
-      const ip = this.deps.coreBuffer();
-      return (null === (pp = (0, xI.e)(this, BI)[BI]) || void 0 === pp ? void 0 : pp.buffer) !== ip && ((0, xI.e)(this, BI)[BI] = new Uint32Array(ip, 0, ip.byteLength >>> 2)), (0, xI.e)(this, BI)[BI]
+    function dz() {
+      var QQ;
+      const WQ = this.deps.coreBuffer();
+      return (null === (QQ = (0, qT.d)(this, RT)[RT]) || void 0 === QQ ? void 0 : QQ.buffer) !== WQ && ((0, qT.d)(this, RT)[RT] = new Uint32Array(WQ, 0, WQ.byteLength >>> 2)), (0, qT.d)(this, RT)[RT]
     }
 
-    function MS(pp) {
-      var ip;
-      const cp = pp.buffer;
-      return (null === (ip = (0, xI.e)(this, NI)[NI]) || void 0 === ip ? void 0 : ip.buffer) !== cp && ((0, xI.e)(this, NI)[NI] = new Uint8Array(cp)), (0, xI.e)(this, NI)[NI]
+    function Hz(QQ) {
+      var WQ;
+      const XQ = QQ.buffer;
+      return (null === (WQ = (0, qT.d)(this, ET)[ET]) || void 0 === WQ ? void 0 : WQ.buffer) !== XQ && ((0, qT.d)(this, ET)[ET] = new Uint8Array(XQ)), (0, qT.d)(this, ET)[ET]
     }
-    async function CS(pp) {
-      await this.deps.staleOr(pp, (() => {
-        this.deps.failed(HI)
+    async function az(QQ) {
+      await this.deps.staleOr(QQ, (() => {
+        this.deps.failed(yT)
       }))
     }
 
-    function ES(pp) {
-      const ip = (0, xI.e)(this, uI)[uI],
-        cp = (0, xI.e)(this, jI)[jI];
-      if (ip && cp) return (0, xI.e)(this, xS)[xS]((() => pp(ip, cp)))
+    function lz(QQ) {
+      const WQ = (0, qT.d)(this, pT)[pT],
+        XQ = (0, qT.d)(this, GT)[GT];
+      if (WQ && XQ) return (0, qT.d)(this, qz)[qz]((() => QQ(WQ, XQ)))
     }
 
-    function XS(pp) {
-      if (!(0, xI.e)(this, kI)[kI]) try {
-        return pp()
-      } catch (ip) {
-        if (!(0, xI.e)(this, LS)[LS](ip)) throw ip;
+    function hz(QQ) {
+      if (!(0, qT.d)(this, UT)[UT]) try {
+        return QQ()
+      } catch (WQ) {
+        if (!(0, qT.d)(this, Tz)[Tz](WQ)) throw WQ;
         return
       }
     }
 
-    function lS(pp) {
-      return pp instanceof WebAssembly.RuntimeError && ((0, xI.e)(this, kI)[kI] = !0, (0, xI.e)(this, uI)[uI] = null, (0, xI.e)(this, jI)[jI] = null, (0, xI.e)(this, NI)[NI] = null, (0, xI.e)(this, eI)[eI] = null, (0, xI.e)(this, lI)[lI] = null, (0, xI.e)(this, rI)[rI]("trapped"), this.deps.core.QIp(0), (0, xI.e)(this, TI)[TI].stop(), this.deps.crash(this.deps.markTrapped(pp)), this.deps.failed("Replay recording stopped working, so reload the page to record replays again."), !0)
+    function iz(QQ) {
+      return QQ instanceof WebAssembly.RuntimeError && ((0, qT.d)(this, UT)[UT] = !0, (0, qT.d)(this, pT)[pT] = null, (0, qT.d)(this, GT)[GT] = null, (0, qT.d)(this, ET)[ET] = null, (0, qT.d)(this, DT)[DT] = null, (0, qT.d)(this, iT)[iT] = null, (0, qT.d)(this, nT)[nT]("trapped"), this.deps.core.BTQ(0), (0, qT.d)(this, CT)[CT].stop(), this.deps.crash(this.deps.markTrapped(QQ)), this.deps.failed("Replay recording stopped working, so reload the page to record replays again."), !0)
     }
-    var QS = cp(38866);
-    const JS = new Map([
-      ["skyblock", () => cp.e(52).then((() => cp(38864)))]
+    var cz = XQ(38928);
+    const Az = new Map([
+      ["skyblock", () => XQ.e(54).then((() => XQ(38926)))]
     ]);
 
-    function BS(pp) {
-      const ip = JS.get(pp);
-      return ip ? ip().then((() => {
-        const ip = (0, QS.d)(pp);
-        if (!ip) throw new Error(`${pp}'s replay hook module registered no hook`);
-        return ip
+    function Rz(QQ) {
+      const WQ = Az.get(QQ);
+      return WQ ? WQ().then((() => {
+        const WQ = (0, cz.b)(QQ);
+        if (!WQ) throw new Error(`${QQ}'s replay hook module registered no hook`);
+        return WQ
       })) : null
     }
-    class NS {
-      constructor(pp) {
-        this.deps = pp, this.game = null, this.hook = null, this.generation = 0, this.all = !1, this.pending = new Map, this.ids = new Int32Array(64)
+    class Ez {
+      constructor(QQ) {
+        this.deps = QQ, this.game = null, this.hook = null, this.generation = 0, this.all = !1, this.pending = new Map, this.ids = new Int32Array(64)
       }
       get wantsWatch() {
         return null !== this.hook
       }
-      opened(pp) {
-        if (this.pending.clear(), pp === this.game && null !== this.hook) return void(this.all = !0);
-        const ip = ++this.generation;
-        this.game = pp, this.hook = null, this.all = !1;
-        const cp = this.deps.loadHook(pp);
-        null === cp || void 0 === cp || cp.then((pp => {
-          ip === this.generation && (this.hook = pp, this.all = !0)
-        }), (pp => {
-          ip === this.generation && this.deps.onError(pp)
+      opened(QQ) {
+        if (this.pending.clear(), QQ === this.game && null !== this.hook) return void(this.all = !0);
+        const WQ = ++this.generation;
+        this.game = QQ, this.hook = null, this.all = !1;
+        const XQ = this.deps.loadHook(QQ);
+        null === XQ || void 0 === XQ || XQ.then((QQ => {
+          WQ === this.generation && (this.hook = QQ, this.all = !0)
+        }), (QQ => {
+          WQ === this.generation && this.deps.onError(QQ)
         }))
       }
       ended() {
         this.generation++, this.game = null, this.hook = null, this.all = !1, this.pending.clear()
       }
-      entityAdded(pp) {
-        null === this.hook || this.all || this.pending.set(pp, !0)
+      entityAdded(QQ) {
+        null === this.hook || this.all || this.pending.set(QQ, !0)
       }
-      entityInfoChanged(pp) {
-        null === this.hook || this.all || this.pending.has(pp) || this.pending.set(pp, !1)
+      entityInfoChanged(QQ) {
+        null === this.hook || this.all || this.pending.has(QQ) || this.pending.set(QQ, !1)
       }
-      flush(pp) {
+      flush(QQ) {
         const {
-          hook: ip
+          hook: WQ
         } = this;
-        if (null === ip || !pp || !this.all && 0 === this.pending.size) return;
-        const cp = this.deps.cmd();
-        if (null === cp) return;
+        if (null === WQ || !QQ || !this.all && 0 === this.pending.size) return;
+        const XQ = this.deps.cmd();
+        if (null === XQ) return;
         const {
-          api: Op
+          api: wQ
         } = this.deps;
         if (this.all) {
           this.all = !1, this.pending.clear();
           const {
-            ids: pp,
-            count: ip
-          } = hc(Op, this.ids);
-          this.ids = pp;
-          for (let cp = 0; cp < ip; cp++) this.pending.set(pp[cp], !0)
+            ids: QQ,
+            count: WQ
+          } = kX(wQ, this.ids);
+          this.ids = QQ;
+          for (let XQ = 0; XQ < WQ; XQ++) this.pending.set(QQ[XQ], !0)
         }
-        const op = this.ids = ac(this.ids, this.pending.size);
-        let Ip = 0;
-        for (const Yp of this.pending.keys()) op[Ip++] = Yp;
-        const Sp = [],
-          xp = nc(Op, op, Ip, ((pp, ip) => {
-            null !== ip && Sp.push({
-              serverId: pp,
-              info: ip,
-              spawned: !0 === this.pending.get(pp)
+        const qQ = this.ids = fX(this.ids, this.pending.size);
+        let TQ = 0;
+        for (const PQ of this.pending.keys()) qQ[TQ++] = PQ;
+        const zQ = [],
+          sQ = SX(wQ, qQ, TQ, ((QQ, WQ) => {
+            null !== WQ && zQ.push({
+              serverId: QQ,
+              info: WQ,
+              spawned: !0 === this.pending.get(QQ)
             })
           }));
-        if (xp) {
+        if (sQ) {
           this.pending.clear();
           for (const {
-              serverId: pp,
-              info: Op,
-              spawned: op
+              serverId: QQ,
+              info: wQ,
+              spawned: qQ
             }
-            of Sp) try {
-            ip(Op, {
-              setFacingTolerance: ip => {
-                null === ip && op || Dc(cp, pp, ip) || this.pending.set(pp, op)
+            of zQ) try {
+            WQ(wQ, {
+              setFacingTolerance: WQ => {
+                null === WQ && qQ || sX(XQ, QQ, WQ) || this.pending.set(QQ, qQ)
               }
             })
-          } catch (Lp) {
-            this.deps.onError(Lp)
+          } catch (FQ) {
+            this.deps.onError(FQ)
           }
         }
       }
     }
-    var TS = (0, LI.c)("bindings"),
-      fS = (0, LI.c)("module"),
-      bS = (0, LI.c)("memory"),
-      hS = (0, LI.c)("trapped"),
-      aS = (0, LI.c)("generation"),
-      nS = (0, LI.c)("loading"),
-      FS = (0, LI.c)("lend"),
-      gS = (0, LI.c)("givenUp"),
-      GS = (0, LI.c)("afterSave"),
-      rS = (0, LI.c)("opens"),
-      ZS = (0, LI.c)("saveAskedAt"),
-      zS = (0, LI.c)("unload"),
-      sS = (0, LI.c)("dropModule"),
-      KS = (0, LI.c)("loadFailed"),
-      VS = (0, LI.c)("saveReadsBody"),
-      px = (0, LI.c)("command"),
-      ix = (0, LI.c)("call"),
-      cx = (0, LI.c)("guard"),
-      Ox = (0, LI.c)("trapOn");
-    class ox {
-      constructor(pp) {
-        this.deps = pp, Object.defineProperty(this, Ox, {
-          value: Px
-        }), Object.defineProperty(this, cx, {
-          value: Ax
-        }), Object.defineProperty(this, ix, {
-          value: Dx
-        }), Object.defineProperty(this, px, {
-          value: Yx
-        }), Object.defineProperty(this, VS, {
-          get: Lx,
+    var Cz = (0, TT.b)("bindings"),
+      uz = (0, TT.b)("module"),
+      Lz = (0, TT.b)("memory"),
+      kz = (0, TT.b)("trapped"),
+      fz = (0, TT.b)("generation"),
+      Sz = (0, TT.b)("loading"),
+      tz = (0, TT.b)("lend"),
+      oz = (0, TT.b)("givenUp"),
+      ez = (0, TT.b)("afterSave"),
+      nz = (0, TT.b)("opens"),
+      xz = (0, TT.b)("saveAskedAt"),
+      Yz = (0, TT.b)("unload"),
+      Nz = (0, TT.b)("dropModule"),
+      Zz = (0, TT.b)("loadFailed"),
+      Oz = (0, TT.b)("saveReadsBody"),
+      Kz = (0, TT.b)("command"),
+      mz = (0, TT.b)("call"),
+      Mz = (0, TT.b)("guard"),
+      Qs = (0, TT.b)("trapOn");
+    class Ws {
+      constructor(QQ) {
+        this.deps = QQ, Object.defineProperty(this, Qs, {
+          value: Ps
+        }), Object.defineProperty(this, Mz, {
+          value: Fs
+        }), Object.defineProperty(this, mz, {
+          value: ss
+        }), Object.defineProperty(this, Kz, {
+          value: zs
+        }), Object.defineProperty(this, Oz, {
+          get: Ts,
           set: void 0
-        }), Object.defineProperty(this, KS, {
-          value: xx
-        }), Object.defineProperty(this, sS, {
-          value: Sx
-        }), Object.defineProperty(this, zS, {
-          value: Ix
-        }), Object.defineProperty(this, TS, {
+        }), Object.defineProperty(this, Zz, {
+          value: qs
+        }), Object.defineProperty(this, Nz, {
+          value: ws
+        }), Object.defineProperty(this, Yz, {
+          value: Xs
+        }), Object.defineProperty(this, Cz, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, fS, {
+        }), Object.defineProperty(this, uz, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, bS, {
+        }), Object.defineProperty(this, Lz, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, hS, {
+        }), Object.defineProperty(this, kz, {
           writable: !0,
           value: !1
-        }), Object.defineProperty(this, aS, {
+        }), Object.defineProperty(this, fz, {
           writable: !0,
           value: 0
-        }), Object.defineProperty(this, nS, {
+        }), Object.defineProperty(this, Sz, {
           writable: !0,
           value: 0
-        }), Object.defineProperty(this, FS, {
+        }), Object.defineProperty(this, tz, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, gS, {
+        }), Object.defineProperty(this, oz, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, GS, {
+        }), Object.defineProperty(this, ez, {
           writable: !0,
           value: null
-        }), Object.defineProperty(this, rS, {
+        }), Object.defineProperty(this, nz, {
           writable: !0,
           value: 0
-        }), Object.defineProperty(this, ZS, {
+        }), Object.defineProperty(this, xz, {
           writable: !0,
           value: null
         })
       }
       get active() {
-        return null !== (0, xI.e)(this, fS)[fS] && null === (0, xI.e)(this, GS)[GS]
+        return null !== (0, qT.d)(this, uz)[uz] && null === (0, qT.d)(this, ez)[ez]
       }
-      async open(pp, ip) {
-        if ((0, xI.e)(this, hS)[hS]) return Pp._c.ModuleTrap;
-        let cp = (0, xI.e)(this, TS)[TS];
-        if (!cp) {
-          const pp = (0, xI.e)(this, aS)[aS];
-          (0, xI.e)(this, nS)[nS]++;
+      async open(QQ, WQ) {
+        if ((0, qT.d)(this, kz)[kz]) return rQ.id.ModuleTrap;
+        let XQ = (0, qT.d)(this, Cz)[Cz];
+        if (!XQ) {
+          const QQ = (0, qT.d)(this, fz)[fz];
+          (0, qT.d)(this, Sz)[Sz]++;
           try {
-            cp = await this.deps.load()
-          } catch (op) {
-            return (0, xI.e)(this, nS)[nS]--, pp !== (0, xI.e)(this, aS)[aS] ? "stopped" : (0, xI.e)(this, KS)[KS](op, ip)
+            XQ = await this.deps.load()
+          } catch (qQ) {
+            return (0, qT.d)(this, Sz)[Sz]--, QQ !== (0, qT.d)(this, fz)[fz] ? "stopped" : (0, qT.d)(this, Zz)[Zz](qQ, WQ)
           }
-          if ((0, xI.e)(this, nS)[nS]--, pp !== (0, xI.e)(this, aS)[aS]) return (0, xI.e)(this, TS)[TS] || 0 !== (0, xI.e)(this, nS)[nS] || (0, xI.e)(this, hS)[hS] || this.deps.unload(), "stopped";
-          if ((0, xI.e)(this, hS)[hS]) return Pp._c.ModuleTrap;
-          const Op = cp.EIp(),
-            Ip = this.deps.core.XIp();
-          if (Op !== Ip) return (0, xI.e)(this, KS)[KS](new Error(`replay port version ${Op}, the core's ${Ip}`), ip);
-          (0, xI.e)(this, TS)[TS] = cp
+          if ((0, qT.d)(this, Sz)[Sz]--, QQ !== (0, qT.d)(this, fz)[fz]) return (0, qT.d)(this, Cz)[Cz] || 0 !== (0, qT.d)(this, Sz)[Sz] || (0, qT.d)(this, kz)[kz] || this.deps.unload(), "stopped";
+          if ((0, qT.d)(this, kz)[kz]) return rQ.id.ModuleTrap;
+          const wQ = XQ.rTQ(),
+            TQ = this.deps.core.ITQ();
+          if (wQ !== TQ) return (0, qT.d)(this, Zz)[Zz](new Error(`replay port version ${wQ}, the core's ${TQ}`), WQ);
+          (0, qT.d)(this, Cz)[Cz] = XQ
         }
-        if (!(0, xI.e)(this, fS)[fS]) {
-          const pp = cp;
-          if (!(0, xI.e)(this, cx)[cx]((() => {
-              (0, xI.e)(this, fS)[fS] = new pp.JIp, (0, xI.e)(this, bS)[bS] = pp.BIp()
-            }))) return Pp._c.ModuleTrap
+        if (!(0, qT.d)(this, uz)[uz]) {
+          const QQ = XQ;
+          if (!(0, qT.d)(this, Mz)[Mz]((() => {
+              (0, qT.d)(this, uz)[uz] = new QQ.yTQ, (0, qT.d)(this, Lz)[Lz] = QQ.VTQ()
+            }))) return rQ.id.ModuleTrap
         }
-        let Op = !1;
-        return (0, xI.e)(this, ix)[ix](((ip, cp) => {
-          null !== (0, xI.e)(this, GS)[GS] && ip.step(0, 0);
-          const op = ip.stage(pp.length);
-          0 !== op && (new Uint8Array(cp.buffer, op, pp.length).set(pp), ip.open(), (0, xI.e)(this, gS)[gS] = (0, xI.e)(this, FS)[FS], (0, xI.e)(this, GS)[GS] = null, (0, xI.e)(this, rS)[rS]++, Op = !0)
-        })) ? Op ? "opening" : Pp._c.TooLarge : Pp._c.ModuleTrap
+        let wQ = !1;
+        return (0, qT.d)(this, mz)[mz](((WQ, XQ) => {
+          null !== (0, qT.d)(this, ez)[ez] && WQ.step(0, 0);
+          const qQ = WQ.stage(QQ.length);
+          0 !== qQ && (new Uint8Array(XQ.buffer, qQ, QQ.length).set(QQ), WQ.open(), (0, qT.d)(this, oz)[oz] = (0, qT.d)(this, tz)[tz], (0, qT.d)(this, ez)[ez] = null, (0, qT.d)(this, nz)[nz]++, wQ = !0)
+        })) ? wQ ? "opening" : rQ.id.TooLarge : rQ.id.ModuleTrap
       }
-      beforeFrame(pp) {
-        const ip = (0, xI.e)(this, fS)[fS],
-          cp = (0, xI.e)(this, bS)[bS];
-        if (!ip || !cp || null !== (0, xI.e)(this, GS)[GS]) return;
+      beforeFrame(QQ) {
+        const WQ = (0, qT.d)(this, uz)[uz],
+          XQ = (0, qT.d)(this, Lz)[Lz];
+        if (!WQ || !XQ || null !== (0, qT.d)(this, ez)[ez]) return;
         const {
-          core: Op
-        } = this.deps, op = Op.NIp(pp);
-        if (op < 0) return;
-        const Ip = Math.floor(op);
-        let Sp, xp;
+          core: wQ
+        } = this.deps, qQ = wQ.DTQ(QQ);
+        if (qQ < 0) return;
+        const TQ = Math.floor(qQ);
+        let zQ, sQ;
         try {
-          Sp = ip.step(Ip, op - Ip), xp = ip.RIp()
-        } catch (Yp) {
-          return void(0, xI.e)(this, Ox)[Ox](Yp)
+          zQ = WQ.step(TQ, qQ - TQ), sQ = WQ.FTQ()
+        } catch (PQ) {
+          return void(0, qT.d)(this, Qs)[Qs](PQ)
         }
-        const Lp = Op.CIp(1, Sp);
-        if (0 === Lp) {
-          const pp = (0, xI.e)(this, ix)[ix]((pp => {
-            pp.close()
+        const FQ = wQ.JTQ(1, zQ);
+        if (0 === FQ) {
+          const QQ = (0, qT.d)(this, mz)[mz]((QQ => {
+            QQ.close()
           }));
-          if (!pp) return;
-          return (0, xI.e)(this, VS)[VS] ? (0, xI.e)(this, GS)[GS] = "drop" : (0, xI.e)(this, sS)[sS](), void Op.TIp(Pp._c.Port)
+          if (!QQ) return;
+          return (0, qT.d)(this, Oz)[Oz] ? (0, qT.d)(this, ez)[ez] = "drop" : (0, qT.d)(this, Nz)[Nz](), void wQ.pTQ(rQ.id.Port)
         }
-        new Uint8Array(this.deps.coreBuffer(), Lp, Sp).set(new Uint8Array(cp.buffer, xp, Sp))
+        new Uint8Array(this.deps.coreBuffer(), FQ, zQ).set(new Uint8Array(XQ.buffer, sQ, zQ))
       }
       play() {
-        (0, xI.e)(this, px)[px]((pp => {
-          pp.play()
+        (0, qT.d)(this, Kz)[Kz]((QQ => {
+          QQ.play()
         }))
       }
       pause() {
-        (0, xI.e)(this, px)[px]((pp => {
-          pp.pause()
+        (0, qT.d)(this, Kz)[Kz]((QQ => {
+          QQ.pause()
         }))
       }
-      seek(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        (0, xI.e)(this, px)[px]((cp => {
-          cp.seek(pp, ip)
+      seek(QQ) {
+        let WQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        (0, qT.d)(this, Kz)[Kz]((XQ => {
+          XQ.seek(QQ, WQ)
         }))
       }
-      setMark(pp, ip) {
-        return (0, xI.e)(this, px)[px]((cp => {
-          cp.fIp(pp, ip)
+      setMark(QQ, WQ) {
+        return (0, qT.d)(this, Kz)[Kz]((XQ => {
+          XQ.UTQ(QQ, WQ)
         }))
       }
-      addKeyframe(pp, ip) {
-        return (0, xI.e)(this, px)[px]((cp => {
-          cp.bIp(pp[0], pp[1], pp[2], ip[0], ip[1], ip[2])
+      addKeyframe(QQ, WQ) {
+        return (0, qT.d)(this, Kz)[Kz]((XQ => {
+          XQ.bTQ(QQ[0], QQ[1], QQ[2], WQ[0], WQ[1], WQ[2])
         }))
       }
-      setKeyframe(pp, ip) {
-        return (0, xI.e)(this, px)[px]((cp => {
-          cp.hIp(pp, ip)
+      setKeyframe(QQ, WQ) {
+        return (0, qT.d)(this, Kz)[Kz]((XQ => {
+          XQ.vTQ(QQ, WQ)
         }))
       }
-      moveKeyframe(pp, ip) {
-        return (0, xI.e)(this, px)[px]((cp => {
-          cp.aIp(pp, ip)
+      moveKeyframe(QQ, WQ) {
+        return (0, qT.d)(this, Kz)[Kz]((XQ => {
+          XQ.dTQ(QQ, WQ)
         }))
       }
-      deleteKeyframes(pp, ip) {
-        return (0, xI.e)(this, px)[px]((cp => {
-          cp.nIp(pp, ip)
+      deleteKeyframes(QQ, WQ) {
+        return (0, qT.d)(this, Kz)[Kz]((XQ => {
+          XQ.HTQ(QQ, WQ)
         }))
       }
-      crop(pp, ip) {
-        return null === (0, xI.e)(this, FS)[FS] && (0, xI.e)(this, px)[px]((cp => {
-          cp.crop(pp, ip)
+      crop(QQ, WQ) {
+        return null === (0, qT.d)(this, tz)[tz] && (0, qT.d)(this, Kz)[Kz]((XQ => {
+          XQ.crop(QQ, WQ)
         }))
       }
       beginSave() {
-        const pp = (0, xI.e)(this, ZS)[ZS];
-        if ((0, xI.e)(this, ZS)[ZS] = null, null !== pp && pp !== (0, xI.e)(this, rS)[rS]) return null;
-        let ip = 0,
-          cp = null;
-        if ((0, xI.e)(this, ix)[ix](((pp, Op) => {
-            ip = pp.save(), 0 !== ip && (cp = new Uint8Array(Op.buffer, pp.FIp(), pp.gIp()).slice())
-          })), 0 === ip || !cp) return null;
-        const Op = {
-          headLen: ip,
-          editState: cp,
-          givenUp: () => (0, xI.e)(this, gS)[gS] === Op,
-          head: (pp, ip) => {
-            if ((0, xI.e)(this, FS)[FS] !== Op || !(0, xI.e)(this, VS)[VS]) return null;
-            let cp = null;
-            return (0, xI.e)(this, ix)[ix](((Op, op) => {
-              const Ip = Op.GIp();
-              0 !== Ip && pp >= 0 && ip >= 0 && pp + ip <= Ip && (cp = new Uint8Array(op.buffer, Op.rIp() + pp, ip))
-            })), cp
+        const QQ = (0, qT.d)(this, xz)[xz];
+        if ((0, qT.d)(this, xz)[xz] = null, null !== QQ && QQ !== (0, qT.d)(this, nz)[nz]) return null;
+        let WQ = 0,
+          XQ = null;
+        if ((0, qT.d)(this, mz)[mz](((QQ, wQ) => {
+            WQ = QQ.save(), 0 !== WQ && (XQ = new Uint8Array(wQ.buffer, QQ.aTQ(), QQ.lTQ()).slice())
+          })), 0 === WQ || !XQ) return null;
+        const wQ = {
+          headLen: WQ,
+          editState: XQ,
+          givenUp: () => (0, qT.d)(this, oz)[oz] === wQ,
+          head: (QQ, WQ) => {
+            if ((0, qT.d)(this, tz)[tz] !== wQ || !(0, qT.d)(this, Oz)[Oz]) return null;
+            let XQ = null;
+            return (0, qT.d)(this, mz)[mz](((wQ, qQ) => {
+              const TQ = wQ.hTQ();
+              0 !== TQ && QQ >= 0 && WQ >= 0 && QQ + WQ <= TQ && (XQ = new Uint8Array(qQ.buffer, wQ.iTQ() + QQ, WQ))
+            })), XQ
           },
           end: () => {
-            if ((0, xI.e)(this, FS)[FS] !== Op) return;
-            (0, xI.e)(this, FS)[FS] = null, (0, xI.e)(this, gS)[gS] = null, (0, xI.e)(this, ix)[ix]((pp => {
-              pp.ZIp()
+            if ((0, qT.d)(this, tz)[tz] !== wQ) return;
+            (0, qT.d)(this, tz)[tz] = null, (0, qT.d)(this, oz)[oz] = null, (0, qT.d)(this, mz)[mz]((QQ => {
+              QQ.cTQ()
             }));
-            const pp = (0, xI.e)(this, GS)[GS];
-            (0, xI.e)(this, GS)[GS] = null, "unload" === pp ? (0, xI.e)(this, zS)[zS]() : "drop" === pp && (0, xI.e)(this, sS)[sS]()
+            const QQ = (0, qT.d)(this, ez)[ez];
+            (0, qT.d)(this, ez)[ez] = null, "unload" === QQ ? (0, qT.d)(this, Yz)[Yz]() : "drop" === QQ && (0, qT.d)(this, Nz)[Nz]()
           }
         };
-        return (0, xI.e)(this, FS)[FS] = Op, Op
+        return (0, qT.d)(this, tz)[tz] = wQ, wQ
       }
       askSave() {
-        (0, xI.e)(this, ZS)[ZS] = (0, xI.e)(this, rS)[rS]
+        (0, qT.d)(this, xz)[xz] = (0, qT.d)(this, nz)[nz]
       }
-      setSpeed(pp) {
-        (0, xI.e)(this, px)[px]((ip => {
-          ip.zIp(pp)
+      setSpeed(QQ) {
+        (0, qT.d)(this, Kz)[Kz]((WQ => {
+          WQ.RTQ(QQ)
         }))
       }
-      setCameraMode(pp) {
-        (0, xI.e)(this, px)[px]((ip => {
-          ip.sIp(pp)
+      setCameraMode(QQ) {
+        (0, qT.d)(this, Kz)[Kz]((WQ => {
+          WQ.ETQ(QQ)
         }))
       }
       close() {
-        (0, xI.e)(this, px)[px]((pp => {
-          pp.close()
+        (0, qT.d)(this, Kz)[Kz]((QQ => {
+          QQ.close()
         }))
       }
       stop() {
-        (0, xI.e)(this, aS)[aS]++, (0, xI.e)(this, VS)[VS] && ((0, xI.e)(this, ix)[ix]((pp => {
-          pp.close()
-        })), (0, xI.e)(this, fS)[fS]) ? (0, xI.e)(this, GS)[GS] = "unload" : (0, xI.e)(this, zS)[zS]()
+        (0, qT.d)(this, fz)[fz]++, (0, qT.d)(this, Oz)[Oz] && ((0, qT.d)(this, mz)[mz]((QQ => {
+          QQ.close()
+        })), (0, qT.d)(this, uz)[uz]) ? (0, qT.d)(this, ez)[ez] = "unload" : (0, qT.d)(this, Yz)[Yz]()
       }
     }
 
-    function Ix() {
-      (0, xI.e)(this, sS)[sS](), (0, xI.e)(this, hS)[hS] || ((0, xI.e)(this, TS)[TS] = null, this.deps.unload())
+    function Xs() {
+      (0, qT.d)(this, Nz)[Nz](), (0, qT.d)(this, kz)[kz] || ((0, qT.d)(this, Cz)[Cz] = null, this.deps.unload())
     }
 
-    function Sx() {
-      (0, xI.e)(this, ix)[ix]((pp => {
-        pp.free()
-      })), (0, xI.e)(this, fS)[fS] = null, (0, xI.e)(this, bS)[bS] = null
+    function ws() {
+      (0, qT.d)(this, mz)[mz]((QQ => {
+        QQ.free()
+      })), (0, qT.d)(this, uz)[uz] = null, (0, qT.d)(this, Lz)[Lz] = null
     }
-    async function xx(pp, ip) {
-      return await this.deps.staleOr(pp, (() => {}), {
-        beforeReload: ip
-      }) ? "reloading" : Pp._c.ModuleLoad
-    }
-
-    function Lx() {
-      return null !== (0, xI.e)(this, FS)[FS] && (0, xI.e)(this, gS)[gS] !== (0, xI.e)(this, FS)[FS]
+    async function qs(QQ, WQ) {
+      return await this.deps.staleOr(QQ, (() => {}), {
+        beforeReload: WQ
+      }) ? "reloading" : rQ.id.ModuleLoad
     }
 
-    function Yx(pp) {
-      return null === (0, xI.e)(this, GS)[GS] && (0, xI.e)(this, ix)[ix](pp)
+    function Ts() {
+      return null !== (0, qT.d)(this, tz)[tz] && (0, qT.d)(this, oz)[oz] !== (0, qT.d)(this, tz)[tz]
     }
 
-    function Dx(pp) {
-      const ip = (0, xI.e)(this, fS)[fS],
-        cp = (0, xI.e)(this, bS)[bS];
-      return !(!ip || !cp) && (0, xI.e)(this, cx)[cx]((() => {
-        pp(ip, cp)
+    function zs(QQ) {
+      return null === (0, qT.d)(this, ez)[ez] && (0, qT.d)(this, mz)[mz](QQ)
+    }
+
+    function ss(QQ) {
+      const WQ = (0, qT.d)(this, uz)[uz],
+        XQ = (0, qT.d)(this, Lz)[Lz];
+      return !(!WQ || !XQ) && (0, qT.d)(this, Mz)[Mz]((() => {
+        QQ(WQ, XQ)
       }))
     }
 
-    function Ax(pp) {
-      if ((0, xI.e)(this, hS)[hS]) return !1;
+    function Fs(QQ) {
+      if ((0, qT.d)(this, kz)[kz]) return !1;
       try {
-        return pp(), !0
-      } catch (ip) {
-        return (0, xI.e)(this, Ox)[Ox](ip), !1
+        return QQ(), !0
+      } catch (WQ) {
+        return (0, qT.d)(this, Qs)[Qs](WQ), !1
       }
     }
 
-    function Px(pp) {
-      if (!(pp instanceof WebAssembly.RuntimeError)) throw pp;
-      (0, xI.e)(this, hS)[hS] = !0, (0, xI.e)(this, fS)[fS] = null, (0, xI.e)(this, bS)[bS] = null, (0, xI.e)(this, TS)[TS] = null, this.deps.crash(this.deps.markTrapped(pp)), this.deps.core.TIp(Pp._c.ModuleTrap)
+    function Ps(QQ) {
+      if (!(QQ instanceof WebAssembly.RuntimeError)) throw QQ;
+      (0, qT.d)(this, kz)[kz] = !0, (0, qT.d)(this, uz)[uz] = null, (0, qT.d)(this, Lz)[Lz] = null, (0, qT.d)(this, Cz)[Cz] = null, this.deps.crash(this.deps.markTrapped(QQ)), this.deps.core.pTQ(rQ.id.ModuleTrap)
     }
-    var Wx = cp(6613),
-      yx = cp(41240);
-    const Ux = "[bloxd-wasm-client]";
-    const wx = String(Bo);
+    var gs = XQ(6880),
+      rs = XQ(41229);
+    const Is = "[bloxd-wasm-client]";
+    const Bs = String(Rq);
 
-    function vx(pp) {
-      return null === pp || pp === wx ? void 0 : pp
+    function ys(QQ) {
+      return null === QQ || QQ === Bs ? void 0 : QQ
     }
 
-    function tx(pp) {
-      var ip, cp, Op, op, Ip, xp, Lp;
-      switch (pp.what) {
-        case Pp.gd.FlyingText: {
-          let ip;
+    function Vs(QQ) {
+      var WQ, XQ, wQ, qQ, TQ, sQ, FQ;
+      switch (QQ.what) {
+        case rQ.rd.FlyingText: {
+          let WQ;
           try {
-            ip = JSON.parse(pp.contentJson)
-          } catch (Yp) {
-            return void console.warn(`${Ux} a replay's flying text isn't JSON`, Yp)
+            WQ = JSON.parse(QQ.contentJson)
+          } catch (PQ) {
+            return void console.warn(`${Is} a replay's flying text isn't JSON`, PQ)
           }
-          Sp.m.GA("forceFlyingMiddleMessage", {
-            content: ip,
-            iS: pp.iS,
-            angle: pp.angle,
-            cS: pp.cS
+          zQ.k.mB("forceFlyingMiddleMessage", {
+            content: WQ,
+            lT: QQ.lT,
+            angle: QQ.angle,
+            hT: QQ.hT
           });
           break
         }
-        case Pp.gd.PlayerKilled:
-          (0, yx.h)({
+        case rQ.rd.PlayerKilled:
+          (0, rs.h)({
             kind: "killed",
             body: {
-              deadEId: null !== (ip = vx(pp.dead)) && void 0 !== ip ? ip : "",
-              killerEId: vx(pp.killer),
-              withItem: null !== (cp = pp.withItem) && void 0 !== cp ? cp : "",
-              killstreak: pp.killstreak
+              deadEId: null !== (WQ = ys(QQ.dead)) && void 0 !== WQ ? WQ : "",
+              killerEId: ys(QQ.killer),
+              withItem: null !== (XQ = QQ.withItem) && void 0 !== XQ ? XQ : "",
+              killstreak: QQ.killstreak
             }
           });
           break;
-        case Pp.gd.Killfeed:
-          (0, yx.h)({
+        case rQ.rd.Killfeed:
+          (0, rs.h)({
             kind: "custom",
             body: {
               killer: {
-                eId: vx(pp.killerId),
-                name: null !== (Op = pp.killerName) && void 0 !== Op ? Op : void 0,
-                colour: null !== (op = pp.killerColour) && void 0 !== op ? op : void 0
+                eId: ys(QQ.killerId),
+                name: null !== (wQ = QQ.killerName) && void 0 !== wQ ? wQ : void 0,
+                colour: null !== (qQ = QQ.killerColour) && void 0 !== qQ ? qQ : void 0
               },
               victim: {
-                eId: vx(pp.victimId),
-                name: null !== (Ip = pp.victimName) && void 0 !== Ip ? Ip : void 0,
-                colour: null !== (xp = pp.victimColour) && void 0 !== xp ? xp : void 0
+                eId: ys(QQ.victimId),
+                name: null !== (TQ = QQ.victimName) && void 0 !== TQ ? TQ : void 0,
+                colour: null !== (sQ = QQ.victimColour) && void 0 !== sQ ? sQ : void 0
               },
-              withItem: null !== (Lp = pp.withItem) && void 0 !== Lp ? Lp : ""
+              withItem: null !== (FQ = QQ.withItem) && void 0 !== FQ ? FQ : ""
             }
           })
       }
     }
-    const Hx = "[bloxd-wasm-client]";
+    const Ds = "[bloxd-wasm-client]";
 
-    function dx(pp) {
-      if (void 0 === pp || null === pp || "" === pp) return null;
-      const ip = Number(pp);
-      return Number.isInteger(ip) && ip > Bo && ip <= 2147483647 ? ip : null
+    function ps(QQ) {
+      if (void 0 === QQ || null === QQ || "" === QQ) return null;
+      const WQ = Number(QQ);
+      return Number.isInteger(WQ) && WQ > Rq && WQ <= 2147483647 ? WQ : null
     }
 
-    function ex(pp) {
+    function Gs(QQ) {
       return {
-        id: dx(pp.eId),
-        name: "string" === typeof pp.name ? pp.name : null,
-        colour: "string" === typeof pp.colour ? pp.colour : null
+        id: ps(QQ.eId),
+        name: "string" === typeof QQ.name ? QQ.name : null,
+        colour: "string" === typeof QQ.colour ? QQ.colour : null
       }
     }
 
-    function ux(pp) {
-      const ip = (0, Go.h)(zc.Zb.PlayerKilled, (ip => {
-          var cp, Op;
-          const op = (0, go.i)(ip);
-          if (!(0, go.b)(op)) return;
+    function Us(QQ) {
+      const WQ = (0, eq.j)(YX.gc.PlayerKilled, (WQ => {
+          var XQ, wQ;
+          const qQ = (0, oq.h)(WQ);
+          if (!(0, oq.c)(qQ)) return;
           const {
-            deadEId: Ip,
-            killerEId: Sp,
-            withItem: xp,
-            killstreak: Lp
-          } = op;
-          pp.recordPlayerKilled(null !== (cp = dx(Ip)) && void 0 !== cp ? cp : Bo, null !== (Op = dx(Sp)) && void 0 !== Op ? Op : Bo, "number" === typeof Lp ? Lp : 0, "string" === typeof xp ? xp : "")
+            deadEId: TQ,
+            killerEId: zQ,
+            withItem: sQ,
+            killstreak: FQ
+          } = qQ;
+          QQ.recordPlayerKilled(null !== (XQ = ps(TQ)) && void 0 !== XQ ? XQ : Rq, null !== (wQ = ps(zQ)) && void 0 !== wQ ? wQ : Rq, "number" === typeof FQ ? FQ : 0, "string" === typeof sQ ? sQ : "")
         })),
-        cp = (0, Go.h)(zc.Zb.CustomKillfeed, (ip => {
-          const cp = (0, go.i)(ip);
-          if (!(0, go.b)(cp) || !(0, go.b)(cp.killer) || !(0, go.b)(cp.victim)) return;
+        XQ = (0, eq.j)(YX.gc.CustomKillfeed, (WQ => {
+          const XQ = (0, oq.h)(WQ);
+          if (!(0, oq.c)(XQ) || !(0, oq.c)(XQ.killer) || !(0, oq.c)(XQ.victim)) return;
           const {
-            killer: Op,
-            victim: op,
-            withItem: Ip
-          } = cp;
-          pp.recordKillfeed(ex(Op), ex(op), "string" === typeof Ip ? Ip : null)
+            killer: wQ,
+            victim: qQ,
+            withItem: TQ
+          } = XQ;
+          QQ.recordKillfeed(Gs(wQ), Gs(qQ), "string" === typeof TQ ? TQ : null)
         }));
       return () => {
-        ip(), cp()
+        WQ(), XQ()
       }
     }
 
-    function jx(pp) {
-      var ip;
-      return void 0 === pp || null === pp ? null : null !== (ip = JSON.stringify(pp)) && void 0 !== ip ? ip : null
+    function bs(QQ) {
+      var WQ;
+      return void 0 === QQ || null === QQ ? null : null !== (WQ = JSON.stringify(QQ)) && void 0 !== WQ ? WQ : null
     }
 
-    function kx(pp) {
-      let ip = null;
-      const cp = () => {
+    function vs(QQ) {
+      let WQ = null;
+      const XQ = () => {
         const {
-          enableClipping: cp,
-          clipDurationSeconds: op
-        } = Op.c.get("clientEscMenuOptions"), Ip = `${cp}:${op}`;
-        Ip !== ip && (ip = Ip, pp.recorder.setPrefs(cp, op))
+          enableClipping: XQ,
+          clipDurationSeconds: qQ
+        } = wQ.b.get("clientEscMenuOptions"), TQ = `${XQ}:${qQ}`;
+        TQ !== WQ && (WQ = TQ, QQ.recorder.setPrefs(XQ, qQ))
       };
-      return cp(), (0, Sp.n)("appManagerUpdated|clientEscMenuOptions", cp)
+      return XQ(), (0, zQ.o)("appManagerUpdated|clientEscMenuOptions", XQ)
     }
-    const mx = "replayModule",
-      Rx = "recorderModule";
+    const ds = "replayModule",
+      Hs = "recorderModule";
 
-    function qx(pp, ip, cp) {
+    function as(QQ, WQ, XQ) {
       return function() {
-        return pp.isStopped ? cp : ip(...arguments)
+        return QQ.isStopped ? XQ : WQ(...arguments)
       }
     }
-    const Mx = {
-      open: () => Promise.reject(new Error(mo.c.coreStopped.text)),
+    const ls = {
+      open: () => Promise.reject(new Error(vq.b.coreStopped.text)),
       replayKey: () => null,
       encode: () => Promise.resolve(null),
       fileHandle: () => null,
       markSaved: () => {}
     };
 
-    function Cx() {
-      return cp.e(65).then((() => cp(61572)))
+    function hs() {
+      return XQ.e(67).then((() => XQ(61735)))
     }
 
-    function Ex(pp) {
-      (0, mo.f)({
-        text: pp,
+    function is(QQ) {
+      (0, vq.e)({
+        text: QQ,
         type: "Error"
       })
     }
-    class Xx {
-      constructor(pp) {
-        this.deps = pp, this.runtime = void 0, this.entityHooks = void 0, this.recordedOptions = void 0, this.stops = void 0, this.activeConn = 0, this.stopped = !1, this.bench = null, this.replay = void 0, this.recorder = void 0, this.freecam = void 0, this.drawn = !1;
+    class cs {
+      constructor(QQ) {
+        this.deps = QQ, this.runtime = void 0, this.entityHooks = void 0, this.recordedOptions = void 0, this.stops = void 0, this.activeConn = 0, this.stopped = !1, this.bench = null, this.replay = void 0, this.recorder = void 0, this.freecam = void 0, this.drawn = !1;
         const {
-          running: ip,
-          api: Op,
-          core: op
-        } = pp, Ip = () => pp.memory().buffer, Sp = () => ip.isStopped ? null : ip.rings.cmd, xp = qx(ip, ((pp, ip) => op.CIp(pp, ip)), 0), Lp = () => op.XIp();
-        let Yp = null;
-        this.replay = new ox({
+          running: WQ,
+          api: wQ,
+          core: qQ
+        } = QQ, TQ = () => QQ.memory().buffer, zQ = () => WQ.isStopped ? null : WQ.rings.cmd, sQ = as(WQ, ((QQ, WQ) => qQ.JTQ(QQ, WQ)), 0), FQ = () => qQ.ITQ();
+        let PQ = null;
+        this.replay = new Ws({
           core: {
-            NIp: qx(ip, (pp => op.NIp(pp)), -1),
-            CIp: xp,
-            XIp: Lp,
-            TIp: qx(ip, (pp => {
-              op.TIp(pp)
+            DTQ: as(WQ, (QQ => qQ.DTQ(QQ)), -1),
+            JTQ: sQ,
+            ITQ: FQ,
+            pTQ: as(WQ, (QQ => {
+              qQ.pTQ(QQ)
             }), void 0)
           },
-          coreBuffer: Ip,
-          load: async () => (Yp = await cp.e(66).then((() => cp(61579))), Yp.loadReplayModule()),
+          coreBuffer: TQ,
+          load: async () => (PQ = await XQ.e(68).then((() => XQ(61750))), PQ.loadReplayModule()),
           unload: () => {
-            var pp;
-            null === (pp = Yp) || void 0 === pp || pp.unloadReplayModule()
+            var QQ;
+            null === (QQ = PQ) || void 0 === QQ || QQ.unloadReplayModule()
           },
-          markTrapped: pp => Yp ? Yp.markReplayTrapped(pp) : new Error(String(pp)),
-          staleOr: (ip, cp, Op) => pp.staleOr(mx, ip, cp, Op),
-          crash: ip => {
-            pp.reportFault(mx, ip)
+          markTrapped: QQ => PQ ? PQ.markReplayTrapped(QQ) : new Error(String(QQ)),
+          staleOr: (WQ, XQ, wQ) => QQ.staleOr(ds, WQ, XQ, wQ),
+          crash: WQ => {
+            QQ.reportFault(ds, WQ)
           }
         });
-        let Dp = null;
-        this.recorder = new YS({
+        let gQ = null;
+        this.recorder = new zz({
           core: {
-            QIp: qx(ip, (pp => op.QIp(pp)), 0),
-            mIp: qx(ip, (pp => op.mIp(pp)), 0),
-            CIp: xp,
-            XIp: Lp
+            BTQ: as(WQ, (QQ => qQ.BTQ(QQ)), 0),
+            sTQ: as(WQ, (QQ => qQ.sTQ(QQ)), 0),
+            JTQ: sQ,
+            ITQ: FQ
           },
-          coreCommand: (pp, ip) => {
-            var cp, Op;
-            return null !== (cp = null === (Op = Sp()) || void 0 === Op ? void 0 : Op.writeCmd(pp, 0, ip)) && void 0 !== cp && cp
+          coreCommand: (QQ, WQ) => {
+            var XQ, wQ;
+            return null !== (XQ = null === (wQ = zQ()) || void 0 === wQ ? void 0 : wQ.writeCmd(QQ, 0, WQ)) && void 0 !== XQ && XQ
           },
-          coreBuffer: Ip,
-          load: async () => (Dp = await Cx(), Dp.loadRecorderModule()),
+          coreBuffer: TQ,
+          load: async () => (gQ = await hs(), gQ.loadRecorderModule()),
           prefetch: () => {
-            Cx().then((pp => pp.prefetchRecorderModule())).catch((pp => {
-              console.warn(`${Hx} the recorder module didn't prefetch, so a save loads it:`, pp)
+            hs().then((QQ => QQ.prefetchRecorderModule())).catch((QQ => {
+              console.warn(`${Ds} the recorder module didn't prefetch, so a save loads it:`, QQ)
             }))
           },
           unload: () => {
-            var pp;
-            null === (pp = Dp) || void 0 === pp || pp.unloadRecorderModule()
+            var QQ;
+            null === (QQ = gQ) || void 0 === QQ || QQ.unloadRecorderModule()
           },
-          markTrapped: pp => Dp ? Dp.markRecorderTrapped(pp) : new Error(String(pp)),
+          markTrapped: QQ => gQ ? gQ.markRecorderTrapped(QQ) : new Error(String(QQ)),
           memoryBytes: () => {
-            var pp, ip;
-            return null !== (pp = null === (ip = Dp) || void 0 === ip ? void 0 : ip.recorderMemoryBytes()) && void 0 !== pp ? pp : 0
+            var QQ, WQ;
+            return null !== (QQ = null === (WQ = gQ) || void 0 === WQ ? void 0 : WQ.recorderMemoryBytes()) && void 0 !== QQ ? QQ : 0
           },
-          staleOr: (ip, cp) => pp.staleOr(Rx, ip, cp),
-          crash: ip => {
-            pp.reportFault(Rx, ip)
+          staleOr: (WQ, XQ) => QQ.staleOr(Hs, WQ, XQ),
+          crash: WQ => {
+            QQ.reportFault(Hs, WQ)
           },
-          allowed: () => !0 === pp.options.get("canRecordReplays"),
-          failed: Ex,
-          events: (pp, ip) => {
-            this.runtime.recorderEvents(pp, ip)
+          allowed: () => !0 === QQ.options.get("canRecordReplays"),
+          failed: is,
+          events: (QQ, WQ) => {
+            this.runtime.recorderEvents(QQ, WQ)
           },
           beginSave: () => this.replay.beginSave(),
-          givenUp: Ex,
+          givenUp: is,
           unixNow: () => Date.now()
         });
-        const Ap = new Jo({
+        const JQ = new Aq({
           core: {
-            wIp: qx(ip, (pp => op.wIp(pp)), 0),
-            tIp: qx(ip, (() => {
-              op.tIp()
+            mqQ: as(WQ, (QQ => qQ.mqQ(QQ)), 0),
+            QTQ: as(WQ, (() => {
+              qQ.QTQ()
             }), void 0),
-            gw: qx(ip, (() => op.gw()), 0),
-            vIp: qx(ip, (() => op.vIp()), 0)
+            Ly: as(WQ, (() => qQ.Ly()), 0),
+            MqQ: as(WQ, (() => qQ.MqQ()), 0)
           },
-          buffer: Ip,
-          apiView: () => Op.apiView,
-          cmd: Sp,
+          buffer: TQ,
+          apiView: () => wQ.apiView,
+          cmd: zQ,
           replay: this.replay,
           recorder: this.recorder
         });
-        this.entityHooks = new NS({
-          api: Op,
-          cmd: Sp,
-          loadHook: BS,
-          onError: pp => {
-            console.warn(`${Hx} the recorded game's replay hooks:`, pp)
+        this.entityHooks = new Ez({
+          api: wQ,
+          cmd: zQ,
+          loadHook: Rz,
+          onError: QQ => {
+            console.warn(`${Ds} the recorded game's replay hooks:`, QQ)
           }
         });
-        const Pp = new Fo({
-          client: Ap,
-          buffer: Ip,
-          setHoldDraws: pp => {
-            ip.setHoldDraws(pp)
+        const rQ = new tq({
+          client: JQ,
+          buffer: TQ,
+          setHoldDraws: QQ => {
+            WQ.setHoldDraws(QQ)
           },
-          notify: mo.f,
+          notify: vq.e,
           onRecorderState: () => {
-            var pp;
-            null === (pp = (0, qo.e)()) || void 0 === pp || pp.recorderChanged()
+            var QQ;
+            null === (QQ = (0, Hq.d)()) || void 0 === QQ || QQ.recorderChanged()
           },
           onViewerChange: () => {
-            var pp;
-            null === (pp = (0, qo.e)()) || void 0 === pp || pp.viewerChanged()
+            var QQ;
+            null === (QQ = (0, Hq.d)()) || void 0 === QQ || QQ.viewerChanged()
           },
-          onReplayOption: ip => {
-            ! function(pp, ip) {
-              var cp, Op;
-              const op = zc.kb[ip.key];
-              if (void 0 === op) return;
-              let Ip = null !== (cp = ip.value) && void 0 !== cp ? cp : JSON.parse(JSON.stringify(null !== (Op = Wx.b[op]) && void 0 !== Op ? Op : null));
-              if (null !== ip.value && ip.key < zc.Kb.Environment && "string" === typeof Ip) try {
-                Ip = JSON.parse(Ip)
-              } catch (Sp) {
-                return void console.warn(`${Ux} a replay's ${op} isn't JSON`, Sp)
+          onReplayOption: WQ => {
+            ! function(QQ, WQ) {
+              var XQ, wQ;
+              const qQ = YX.tb[WQ.key];
+              if (void 0 === qQ) return;
+              let TQ = null !== (XQ = WQ.value) && void 0 !== XQ ? XQ : JSON.parse(JSON.stringify(null !== (wQ = gs.b[qQ]) && void 0 !== wQ ? wQ : null));
+              if (null !== WQ.value && WQ.key < YX.Nb.Environment && "string" === typeof TQ) try {
+                TQ = JSON.parse(TQ)
+              } catch (zQ) {
+                return void console.warn(`${Is} a replay's ${qQ} isn't JSON`, zQ)
               }
-              pp.applyNewClientOptions({
-                [op]: Ip
+              QQ.applyNewClientOptions({
+                [qQ]: TQ
               })
-            }(pp.options, ip)
+            }(QQ.options, WQ)
           },
-          onReplayUiEvent: tx,
-          onReplayOpened: ip => {
-            this.entityHooks.opened((0, qp.Mb)(ip)), pp.replayShaderPack(ip)
+          onReplayUiEvent: Vs,
+          onReplayOpened: WQ => {
+            this.entityHooks.opened((0, aQ.Mb)(WQ)), QQ.replayShaderPack(WQ)
           },
           meshPending: () => {
-            var pp, cp;
-            return null !== (pp = null === (cp = ip.lastHeader) || void 0 === cp ? void 0 : cp.renderPending) && void 0 !== pp ? pp : 0
+            var QQ, XQ;
+            return null !== (QQ = null === (XQ = WQ.lastHeader) || void 0 === XQ ? void 0 : XQ.renderPending) && void 0 !== QQ ? QQ : 0
           },
-          viewerOpen: Ro.c,
-          download: pp => {
-            (0, jo.h)(pp)
+          viewerOpen: dq.e,
+          download: QQ => {
+            (0, Uq.j)(QQ)
           }
         });
-        this.runtime = Pp, Op.replay = Pp.sink, (0, qo.s)(Pp);
-        const Wp = new zo({
+        this.runtime = rQ, wQ.replay = rQ.sink, (0, Hq.o)(rQ);
+        const IQ = new Yq({
           live: () => {
-            var pp;
-            return !ip.isStopped && !0 === (null === (pp = Pp.currentViewer) || void 0 === pp ? void 0 : pp.inPlayback)
+            var QQ;
+            return !WQ.isStopped && !0 === (null === (QQ = rQ.currentViewer) || void 0 === QQ ? void 0 : QQ.inPlayback)
           },
-          cmd: Sp,
-          dragScale: II
+          cmd: zQ,
+          dragScale: XT
         });
-        this.freecam = Wp, (0, qo.o)(Wp), this.recordedOptions = function(pp, ip) {
-          const cp = zc.kb,
-            Op = cp.map(((cp, Op) => ip.subscribe(cp, (ip => {
-              pp.setOption(Op, jx(ip))
+        this.freecam = IQ, (0, Hq.n)(IQ), this.recordedOptions = function(QQ, WQ) {
+          const XQ = YX.tb,
+            wQ = XQ.map(((XQ, wQ) => WQ.subscribe(XQ, (WQ => {
+              QQ.setOption(wQ, bs(WQ))
             }))));
           return {
             sendAll() {
-              cp.forEach(((cp, Op) => {
-                pp.setOption(Op, jx(ip.get(cp)))
+              XQ.forEach(((XQ, wQ) => {
+                QQ.setOption(wQ, bs(WQ.get(XQ)))
               }))
             },
             stop() {
-              for (const pp of Op) pp()
+              for (const QQ of wQ) QQ()
             }
           }
-        }(Pp.recorder, pp.options), this.stops = [(0, SO.j)((pp => {
-          Wp.flush();
+        }(rQ.recorder, QQ.options), this.stops = [(0, ww.k)((QQ => {
+          IQ.flush();
           try {
-            this.replay.beforeFrame(pp)
-          } catch (ip) {
-            this.deps.reportFault("replayFrame", ip)
+            this.replay.beforeFrame(QQ)
+          } catch (WQ) {
+            this.deps.reportFault("replayFrame", WQ)
           }
-        })), (0, SO.u)(((pp, ip) => {
+        })), (0, ww.x)(((QQ, WQ) => {
           try {
-            this.recorder.afterFrame(), ip && !this.drawn && (this.drawn = !0, this.recorder.viewDrawn())
-          } catch (cp) {
-            this.deps.reportFault("recorderFrame", cp)
+            this.recorder.afterFrame(), WQ && !this.drawn && (this.drawn = !0, this.recorder.viewDrawn())
+          } catch (XQ) {
+            this.deps.reportFault("recorderFrame", XQ)
           }
           try {
-            Pp.afterFrame(pp)
-          } catch (cp) {
-            this.deps.reportFault("replayRuntime", cp)
+            rQ.afterFrame(QQ)
+          } catch (XQ) {
+            this.deps.reportFault("replayRuntime", XQ)
           }
-        })), kx(Pp), () => {
+        })), vs(rQ), () => {
           this.recordedOptions.stop()
-        }, ux(Pp.recorder), (0, ro.f)((pp => {
+        }, Us(rQ.recorder), (0, nq.j)((QQ => {
           let {
-            action: ip,
-            down: cp
-          } = pp;
-          var Op;
-          cp && (null === (Op = (0, qo.e)()) || void 0 === Op || Op.keyDown(ip))
+            action: WQ,
+            down: XQ
+          } = QQ;
+          var wQ;
+          XQ && (null === (wQ = (0, Hq.d)()) || void 0 === wQ || wQ.keyDown(WQ))
         }))];
-        const yp = () => {
-          const pp = Pp.currentViewer;
-          return !0 === (null === pp || void 0 === pp ? void 0 : pp.isOpen) ? pp : null
+        const jQ = () => {
+          const QQ = rQ.currentViewer;
+          return !0 === (null === QQ || void 0 === QQ ? void 0 : QQ.isOpen) ? QQ : null
         };
-        (0, ko.f)({
-          open: (pp, ip) => this.open(pp, ip),
+        (0, bq.e)({
+          open: (QQ, WQ) => this.open(QQ, WQ),
           replayKey: () => {
-            var pp, ip;
-            return null !== (pp = null === (ip = yp()) || void 0 === ip ? void 0 : ip.id) && void 0 !== pp ? pp : null
+            var QQ, WQ;
+            return null !== (QQ = null === (WQ = jQ()) || void 0 === WQ ? void 0 : WQ.id) && void 0 !== QQ ? QQ : null
           },
           saveRefusal: () => {
-            var pp, ip;
-            return null !== (pp = null === (ip = yp()) || void 0 === ip ? void 0 : ip.saveRefusal) && void 0 !== pp ? pp : null
+            var QQ, WQ;
+            return null !== (QQ = null === (WQ = jQ()) || void 0 === WQ ? void 0 : WQ.saveRefusal) && void 0 !== QQ ? QQ : null
           },
           encode: () => {
-            var pp, ip;
-            return null !== (pp = null === (ip = yp()) || void 0 === ip ? void 0 : ip.save()) && void 0 !== pp ? pp : Promise.resolve(null)
+            var QQ, WQ;
+            return null !== (QQ = null === (WQ = jQ()) || void 0 === WQ ? void 0 : WQ.save()) && void 0 !== QQ ? QQ : Promise.resolve(null)
           },
           fileHandle: () => {
-            var pp, ip;
-            return null !== (pp = null === (ip = Pp.currentViewer) || void 0 === ip ? void 0 : ip.fileHandle) && void 0 !== pp ? pp : null
+            var QQ, WQ;
+            return null !== (QQ = null === (WQ = rQ.currentViewer) || void 0 === WQ ? void 0 : WQ.fileHandle) && void 0 !== QQ ? QQ : null
           },
-          markSaved: (pp, ip) => {
-            var cp;
-            null === (cp = Pp.currentViewer) || void 0 === cp || cp.markSaved(pp, ip)
+          markSaved: (QQ, WQ) => {
+            var XQ;
+            null === (XQ = rQ.currentViewer) || void 0 === XQ || XQ.markSaved(QQ, WQ)
           }
         })
       }
-      netEvent(pp) {
-        if ("connection" === pp.type)
-          if (pp.phase === Pp.H.Activated) {
-            this.activeConn = pp.conn;
-            const ip = this.deps.sessionInfo(pp.conn);
-            null !== ip && (this.runtime.activated({
-              lobbyType: (0, Mp.w)(ip.lobbyName),
-              gameNameWithVariation: ip.gameNameWithVariation,
-              lobbyName: ip.lobbyName
+      netEvent(QQ) {
+        if ("connection" === QQ.type)
+          if (QQ.phase === rQ.E.Activated) {
+            this.activeConn = QQ.conn;
+            const WQ = this.deps.sessionInfo(QQ.conn);
+            null !== WQ && (this.runtime.activated({
+              lobbyType: (0, lQ.s)(WQ.lobbyName),
+              gameNameWithVariation: WQ.gameNameWithVariation,
+              lobbyName: WQ.lobbyName
             }), this.recordedOptions.sendAll())
-          } else pp.phase !== Pp.H.Left && pp.phase !== Pp.H.Closed || pp.conn !== this.activeConn || (this.activeConn = 0, this.runtime.recorder.closed())
+          } else QQ.phase !== rQ.E.Left && QQ.phase !== rQ.E.Closed || QQ.conn !== this.activeConn || (this.activeConn = 0, this.runtime.recorder.closed())
       }
       stop() {
         if (!this.stopped) {
           this.stopped = !0;
-          for (const pp of this.stops) pp();
-          this.runtime.end(), this.entityHooks.ended(), this.replay.stop(), this.recorder.dispose(), (0, qo.i)() === this.runtime && (0, qo.s)(null), (0, qo.f)() === this.freecam && (0, qo.o)(null), (0, ko.f)(Mx), null !== this.bench && window.wasmReplayBench === this.bench && (window.wasmReplayBench = void 0)
+          for (const QQ of this.stops) QQ();
+          this.runtime.end(), this.entityHooks.ended(), this.replay.stop(), this.recorder.dispose(), (0, Hq.f)() === this.runtime && (0, Hq.o)(null), (0, Hq.e)() === this.freecam && (0, Hq.n)(null), (0, bq.e)(ls), null !== this.bench && window.wasmReplayBench === this.bench && (window.wasmReplayBench = void 0)
         }
       }
-      async open(pp, ip) {
+      async open(QQ, WQ) {
         const {
-          running: cp
+          running: XQ
         } = this.deps;
-        if (cp.isStopped) throw new Error(mo.c.coreStopped.text);
-        if (pp.byteLength > 67108864) throw new Error(mo.c.cantOpen.text);
-        let Op;
+        if (XQ.isStopped) throw new Error(vq.b.coreStopped.text);
+        if (QQ.byteLength > 67108864) throw new Error(vq.b.cantOpen.text);
+        let wQ;
         try {
-          Op = await async function(pp) {
-            const ip = await pp.loadViewer();
-            return ip.inPlayback || (0, SO.H)().leaveGame(null), ip
+          wQ = await async function(QQ) {
+            const WQ = await QQ.loadViewer();
+            return WQ.inPlayback || (0, ww.H)().leaveGame(null), WQ
           }(this.runtime)
-        } catch (op) {
-          throw console.warn(`${Hx} the replay viewer didn't load`, op), new Error(mo.c.viewerLoadFailed.text)
+        } catch (qQ) {
+          throw console.warn(`${Ds} the replay viewer didn't load`, qQ), new Error(vq.b.viewerLoadFailed.text)
         }
-        if (cp.isStopped) throw new Error(mo.c.coreStopped.text);
-        await Op.open(pp, ip)
+        if (XQ.isStopped) throw new Error(vq.b.coreStopped.text);
+        await wQ.open(QQ, WQ)
       }
     }
-    var lx = cp(1982);
+    var As = XQ(2036);
 
-    function Qx(pp, ip) {
+    function Rs(QQ, WQ) {
       const {
-        aux: cp,
-        payload: Op
-      } = function(pp) {
+        aux: XQ,
+        payload: wQ
+      } = function(QQ) {
         return {
-          aux: pp.reset ? Pp.cc.ResetFirst : 0,
-          payload: Bx(pp.changes)
+          aux: QQ.reset ? rQ.gc.ResetFirst : 0,
+          payload: Cs(QQ.changes)
         }
-      }(ip);
-      pp.queueOptions(cp, Op) && (ip.reset && lx.c.reset(), lx.c.apply(ip.changes))
+      }(WQ);
+      QQ.queueOptions(XQ, wQ) && (WQ.reset && As.e.reset(), As.e.apply(WQ.changes))
     }
-    const Jx = new TextEncoder;
+    const Es = new TextEncoder;
 
-    function Bx(pp) {
-      const ip = new Nx;
-      return fx(ip, pp), ip.bytes()
+    function Cs(QQ) {
+      const WQ = new us;
+      return ks(WQ, QQ), WQ.bytes()
     }
-    class Nx {
+    class us {
       constructor() {
         this.buf = new Uint8Array(256), this.view = new DataView(this.buf.buffer), this.len = 0
       }
-      room(pp) {
-        if (this.len + pp <= this.buf.length) return;
-        const ip = new Uint8Array(Math.max(2 * this.buf.length, this.len + pp));
-        ip.set(this.buf.subarray(0, this.len)), this.buf = ip, this.view = new DataView(ip.buffer)
+      room(QQ) {
+        if (this.len + QQ <= this.buf.length) return;
+        const WQ = new Uint8Array(Math.max(2 * this.buf.length, this.len + QQ));
+        WQ.set(this.buf.subarray(0, this.len)), this.buf = WQ, this.view = new DataView(WQ.buffer)
       }
-      u8(pp) {
-        this.room(1), this.buf[this.len++] = pp
+      u8(QQ) {
+        this.room(1), this.buf[this.len++] = QQ
       }
-      tagged(pp, ip, cp) {
-        this.room(1 + ip), this.buf[this.len++] = pp, 1 === ip ? this.view.setUint8(this.len, cp) : 2 === ip ? this.view.setUint16(this.len, cp) : this.view.setUint32(this.len, cp), this.len += ip
+      tagged(QQ, WQ, XQ) {
+        this.room(1 + WQ), this.buf[this.len++] = QQ, 1 === WQ ? this.view.setUint8(this.len, XQ) : 2 === WQ ? this.view.setUint16(this.len, XQ) : this.view.setUint32(this.len, XQ), this.len += WQ
       }
-      signed(pp, ip, cp) {
-        this.room(1 + ip), this.buf[this.len++] = pp, 1 === ip ? this.view.setInt8(this.len, cp) : 2 === ip ? this.view.setInt16(this.len, cp) : this.view.setInt32(this.len, cp), this.len += ip
+      signed(QQ, WQ, XQ) {
+        this.room(1 + WQ), this.buf[this.len++] = QQ, 1 === WQ ? this.view.setInt8(this.len, XQ) : 2 === WQ ? this.view.setInt16(this.len, XQ) : this.view.setInt32(this.len, XQ), this.len += WQ
       }
-      f64(pp) {
-        this.room(9), this.buf[this.len++] = 203, this.view.setFloat64(this.len, pp), this.len += 8
+      f64(QQ) {
+        this.room(9), this.buf[this.len++] = 203, this.view.setFloat64(this.len, QQ), this.len += 8
       }
-      raw(pp) {
-        this.room(pp.length), this.buf.set(pp, this.len), this.len += pp.length
+      raw(QQ) {
+        this.room(QQ.length), this.buf.set(QQ, this.len), this.len += QQ.length
       }
       bytes() {
         return this.buf.slice(0, this.len)
       }
     }
 
-    function Tx(pp, ip, cp, Op, op, Ip, Sp) {
-      ip < Op ? pp.u8(cp | ip) : null !== op && ip < 256 ? pp.tagged(op, 1, ip) : ip < 65536 ? pp.tagged(Ip, 2, ip) : pp.tagged(Sp, 4, ip)
+    function Ls(QQ, WQ, XQ, wQ, qQ, TQ, zQ) {
+      WQ < wQ ? QQ.u8(XQ | WQ) : null !== qQ && WQ < 256 ? QQ.tagged(qQ, 1, WQ) : WQ < 65536 ? QQ.tagged(TQ, 2, WQ) : QQ.tagged(zQ, 4, WQ)
     }
 
-    function fx(pp, ip) {
-      switch (typeof ip) {
+    function ks(QQ, WQ) {
+      switch (typeof WQ) {
         case "undefined":
-          return void pp.raw(bx);
+          return void QQ.raw(fs);
         case "boolean":
-          return void pp.u8(ip ? 195 : 194);
+          return void QQ.u8(WQ ? 195 : 194);
         case "number":
           return void
-          function(pp, ip) {
-            ip >>> 0 === ip ? ip < 128 ? pp.u8(ip) : ip < 256 ? pp.tagged(204, 1, ip) : ip < 65536 ? pp.tagged(205, 2, ip) : pp.tagged(206, 4, ip) : (ip | 0) === ip ? ip >= -32 ? pp.u8(255 & ip) : ip >= -128 ? pp.signed(208, 1, ip) : ip >= -32768 ? pp.signed(209, 2, ip) : pp.signed(210, 4, ip) : pp.f64(ip)
-          }(pp, ip);
+          function(QQ, WQ) {
+            WQ >>> 0 === WQ ? WQ < 128 ? QQ.u8(WQ) : WQ < 256 ? QQ.tagged(204, 1, WQ) : WQ < 65536 ? QQ.tagged(205, 2, WQ) : QQ.tagged(206, 4, WQ) : (WQ | 0) === WQ ? WQ >= -32 ? QQ.u8(255 & WQ) : WQ >= -128 ? QQ.signed(208, 1, WQ) : WQ >= -32768 ? QQ.signed(209, 2, WQ) : QQ.signed(210, 4, WQ) : QQ.f64(WQ)
+          }(QQ, WQ);
         case "string": {
-          const cp = Jx.encode(ip);
-          return Tx(pp, cp.length, 160, 32, 217, 218, 219), void pp.raw(cp)
+          const XQ = Es.encode(WQ);
+          return Ls(QQ, XQ.length, 160, 32, 217, 218, 219), void QQ.raw(XQ)
         }
         case "object":
           break;
         default:
-          return void pp.u8(192)
+          return void QQ.u8(192)
       }
-      if (null === ip) pp.u8(192);
-      else if (Array.isArray(ip)) {
-        Tx(pp, ip.length, 144, 16, null, 220, 221);
-        for (const cp of ip) fx(pp, cp)
-      } else if (ip instanceof Uint8Array) Tx(pp, ip.length, 0, 0, 196, 197, 198), pp.raw(ip);
+      if (null === WQ) QQ.u8(192);
+      else if (Array.isArray(WQ)) {
+        Ls(QQ, WQ.length, 144, 16, null, 220, 221);
+        for (const XQ of WQ) ks(QQ, XQ)
+      } else if (WQ instanceof Uint8Array) Ls(QQ, WQ.length, 0, 0, 196, 197, 198), QQ.raw(WQ);
       else {
-        const cp = Object.keys(ip);
-        Tx(pp, cp.length, 128, 0, null, 222, 223);
-        for (const Op of cp) fx(pp, Op), fx(pp, ip[Op])
+        const XQ = Object.keys(WQ);
+        Ls(QQ, XQ.length, 128, 0, null, 222, 223);
+        for (const wQ of XQ) ks(QQ, wQ), ks(QQ, WQ[wQ])
       }
     }
-    const bx = new Uint8Array([212, 0, 0]);
-    var hx = cp(42879),
-      ax = cp(42885),
-      nx = cp(41147),
-      Fx = cp(41200),
-      gx = cp(2970);
-    const Gx = [1e3, 3e3, 9e3];
-    class rx {
-      constructor(pp) {
-        this.host = pp, this.sets = new Map, this.table = [], this.generation = 0, this.Ry = !1
+    const fs = new Uint8Array([212, 0, 0]);
+    var Ss = XQ(42871),
+      ts = XQ(42878),
+      os = XQ(41164),
+      es = XQ(41202),
+      ns = XQ(3110);
+    const xs = [1e3, 3e3, 9e3];
+    class Ys {
+      constructor(QQ) {
+        this.host = QQ, this.sets = new Map, this.table = [], this.generation = 0, this.zj = !1
       }
-      onEvent(pp) {
-        const ip = function(pp) {
-          if (pp.byteLength !== Pp.qd) return null;
-          const ip = new DataView(pp.buffer, pp.byteOffset, pp.byteLength);
+      onEvent(QQ) {
+        const WQ = function(QQ) {
+          if (QQ.byteLength !== rQ.Cd) return null;
+          const WQ = new DataView(QQ.buffer, QQ.byteOffset, QQ.byteLength);
           return {
-            want: ip.getUint16(0, !0),
-            release: ip.getUint16(2, !0)
+            want: WQ.getUint16(0, !0),
+            release: WQ.getUint16(2, !0)
           }
-        }(pp);
-        ip && !this.Ry && (ip.release !== Pp.sd && this.release(ip.release), ip.want !== Pp.sd && this.want(ip.want))
+        }(QQ);
+        WQ && !this.zj && (WQ.release !== rQ.Fd && this.release(WQ.release), WQ.want !== rQ.Fd && this.want(WQ.want))
       }
-      reset(pp) {
-        if (!this.Ry) {
-          for (const [pp, ip] of this.sets) "ready" === ip.state && this.releaseAll(ip.distinct), this.sets.delete(pp);
-          this.table = pp, this.generation++
+      reset(QQ) {
+        if (!this.zj) {
+          for (const [QQ, WQ] of this.sets) "ready" === WQ.state && this.releaseAll(WQ.distinct), this.sets.delete(QQ);
+          this.table = QQ, this.generation++
         }
       }
       dispose() {
-        if (this.Ry) return;
-        this.Ry = !0, this.generation++, this.table = [];
-        const pp = [...this.sets.values()];
+        if (this.zj) return;
+        this.zj = !0, this.generation++, this.table = [];
+        const QQ = [...this.sets.values()];
         this.sets.clear();
-        let ip = null;
-        for (const Op of pp)
-          for (const pp of "ready" === Op.state ? Op.distinct : []) try {
-            this.host.mOp(pp)
-          } catch (cp) {
-            ip ??= {
-              error: cp
+        let WQ = null;
+        for (const wQ of QQ)
+          for (const QQ of "ready" === wQ.state ? wQ.distinct : []) try {
+            this.host.BwQ(QQ)
+          } catch (XQ) {
+            WQ ??= {
+              error: XQ
             }
           }
-        if (ip) throw ip.error
+        if (WQ) throw WQ.error
       }
-      isReady(pp) {
-        var ip;
-        return "ready" === (null === (ip = this.sets.get(pp)) || void 0 === ip ? void 0 : ip.state)
+      isReady(QQ) {
+        var WQ;
+        return "ready" === (null === (WQ = this.sets.get(QQ)) || void 0 === WQ ? void 0 : WQ.state)
       }
-      want(pp) {
-        const ip = this.sets.get(pp);
-        if ("loading" === (null === ip || void 0 === ip ? void 0 : ip.state)) return ip.wanted = !0, void this.capAnswer(pp, ip);
-        if ("ready" === (null === ip || void 0 === ip ? void 0 : ip.state)) return void this.host.sendReady(zx(pp, ip.images, ip.size));
-        const cp = this.table[pp];
-        if (!cp || 1 !== cp.urls.length && cp.urls.length !== zc.Vb.CubeFaces) return this.host.sendReady(sx(pp)), void this.host.onLoadFailed(pp, "", new Error(`no image set ${pp}`));
-        const Op = {
+      want(QQ) {
+        const WQ = this.sets.get(QQ);
+        if ("loading" === (null === WQ || void 0 === WQ ? void 0 : WQ.state)) return WQ.wanted = !0, void this.capAnswer(QQ, WQ);
+        if ("ready" === (null === WQ || void 0 === WQ ? void 0 : WQ.state)) return void this.host.sendReady(Zs(QQ, WQ.images, WQ.size));
+        const XQ = this.table[QQ];
+        if (!XQ || 1 !== XQ.urls.length && XQ.urls.length !== YX.dc.CubeFaces) return this.host.sendReady(Os(QQ)), void this.host.onLoadFailed(QQ, "", new Error(`no image set ${QQ}`));
+        const wQ = {
           state: "loading",
           wanted: !0
         };
-        this.sets.set(pp, Op), this.load(pp, cp, Op, this.generation, 0), this.capAnswer(pp, Op)
+        this.sets.set(QQ, wQ), this.load(QQ, XQ, wQ, this.generation, 0), this.capAnswer(QQ, wQ)
       }
-      capAnswer(pp, ip) {
+      capAnswer(QQ, WQ) {
         this.host.wait(4e3, (() => {
-          this.sets.get(pp) === ip && ip.wanted && this.host.sendReady(sx(pp))
+          this.sets.get(QQ) === WQ && WQ.wanted && this.host.sendReady(Os(QQ))
         }))
       }
-      load(pp, ip, cp, Op, op) {
-        const Ip = [...new Set(ip.urls)];
-        Promise.allSettled(Ip.map((pp => this.host.loadImage(pp, ip.orientation)))).then((Sp => {
-          const xp = Sp.flatMap((pp => "fulfilled" === pp.status ? [pp.value] : [])),
-            Lp = Op === this.generation && this.sets.get(pp) === cp,
-            Yp = Sp.findIndex((pp => "rejected" === pp.status));
-          if (!Lp || !cp.wanted) return this.Ry ? void this.releaseAfterDispose(xp.map(Zx)) : (this.releaseAll(xp.map(Zx)), void(Lp && this.sets.delete(pp)));
-          Yp < 0 ? this.loaded(pp, ip, Ip, xp) : (this.releaseAll(xp.map(Zx)), this.host.sendReady(sx(pp)), op < Gx.length ? this.host.wait(Gx[op], (() => {
-            Op === this.generation && this.sets.get(pp) === cp && (cp.wanted ? this.load(pp, ip, cp, Op, op + 1) : this.sets.delete(pp))
-          })) : (this.sets.delete(pp), this.host.onLoadFailed(pp, Ip[Yp], Sp[Yp].reason)))
+      load(QQ, WQ, XQ, wQ, qQ) {
+        const TQ = [...new Set(WQ.urls)];
+        Promise.allSettled(TQ.map((QQ => this.host.loadImage(QQ, WQ.orientation)))).then((zQ => {
+          const sQ = zQ.flatMap((QQ => "fulfilled" === QQ.status ? [QQ.value] : [])),
+            FQ = wQ === this.generation && this.sets.get(QQ) === XQ,
+            PQ = zQ.findIndex((QQ => "rejected" === QQ.status));
+          if (!FQ || !XQ.wanted) return this.zj ? void this.releaseAfterDispose(sQ.map(Ns)) : (this.releaseAll(sQ.map(Ns)), void(FQ && this.sets.delete(QQ)));
+          PQ < 0 ? this.loaded(QQ, WQ, TQ, sQ) : (this.releaseAll(sQ.map(Ns)), this.host.sendReady(Os(QQ)), qQ < xs.length ? this.host.wait(xs[qQ], (() => {
+            wQ === this.generation && this.sets.get(QQ) === XQ && (XQ.wanted ? this.load(QQ, WQ, XQ, wQ, qQ + 1) : this.sets.delete(QQ))
+          })) : (this.sets.delete(QQ), this.host.onLoadFailed(QQ, TQ[PQ], zQ[PQ].reason)))
         }))
       }
-      loaded(pp, ip, cp, Op) {
-        const [op] = Op, Ip = [op.width, op.height], Sp = Op.every((pp => pp.width === Ip[0] && pp.height === Ip[1])), xp = ip.urls.length === zc.Vb.CubeFaces;
-        if (!Sp || Ip[0] <= 0 || Ip[1] <= 0 || Ip[0] > 65535 || Ip[1] > 65535 || xp && Ip[0] !== Ip[1]) {
-          this.releaseAll(Op.map(Zx)), this.sets.delete(pp), this.host.sendReady(sx(pp));
-          const cp = Op.map((pp => `${pp.width}x${pp.height}`));
-          return void this.host.onLoadFailed(pp, ip.urls[0], new Error(`set ${pp}'s images can't make its texture: ${cp.join(", ")}`))
+      loaded(QQ, WQ, XQ, wQ) {
+        const [qQ] = wQ, TQ = [qQ.width, qQ.height], zQ = wQ.every((QQ => QQ.width === TQ[0] && QQ.height === TQ[1])), sQ = WQ.urls.length === YX.dc.CubeFaces;
+        if (!zQ || TQ[0] <= 0 || TQ[1] <= 0 || TQ[0] > 65535 || TQ[1] > 65535 || sQ && TQ[0] !== TQ[1]) {
+          this.releaseAll(wQ.map(Ns)), this.sets.delete(QQ), this.host.sendReady(Os(QQ));
+          const XQ = wQ.map((QQ => `${QQ.width}x${QQ.height}`));
+          return void this.host.onLoadFailed(QQ, WQ.urls[0], new Error(`set ${QQ}'s images can't make its texture: ${XQ.join(", ")}`))
         }
-        const Lp = ip.urls.map((pp => Op[cp.indexOf(pp)].id)),
-          Yp = Op.map(Zx);
-        this.sets.set(pp, {
+        const FQ = WQ.urls.map((QQ => wQ[XQ.indexOf(QQ)].id)),
+          PQ = wQ.map(Ns);
+        this.sets.set(QQ, {
           state: "ready",
-          images: Lp,
-          distinct: Yp,
-          size: Ip
-        }), this.host.sendReady(zx(pp, Lp, Ip))
+          images: FQ,
+          distinct: PQ,
+          size: TQ
+        }), this.host.sendReady(Zs(QQ, FQ, TQ))
       }
-      release(pp) {
-        const ip = this.sets.get(pp);
-        "loading" === (null === ip || void 0 === ip ? void 0 : ip.state) ? ip.wanted = !1: "ready" === (null === ip || void 0 === ip ? void 0 : ip.state) && (this.releaseAll(ip.distinct), this.sets.delete(pp))
+      release(QQ) {
+        const WQ = this.sets.get(QQ);
+        "loading" === (null === WQ || void 0 === WQ ? void 0 : WQ.state) ? WQ.wanted = !1: "ready" === (null === WQ || void 0 === WQ ? void 0 : WQ.state) && (this.releaseAll(WQ.distinct), this.sets.delete(QQ))
       }
-      releaseAll(pp) {
-        for (const ip of pp) this.host.mOp(ip)
+      releaseAll(QQ) {
+        for (const WQ of QQ) this.host.BwQ(WQ)
       }
-      releaseAfterDispose(pp) {
-        for (const ip of pp) try {
-          this.host.mOp(ip)
+      releaseAfterDispose(QQ) {
+        for (const WQ of QQ) try {
+          this.host.BwQ(WQ)
         } catch {}
       }
     }
 
-    function Zx(pp) {
-      return pp.id
+    function Ns(QQ) {
+      return QQ.id
     }
 
-    function zx(pp, ip, cp) {
-      const Op = new Uint8Array(zc.Vb.SkyImagesReadyBytes),
-        op = new DataView(Op.buffer);
-      return op.setUint16(0, pp, !0), op.setUint16(2, ip.length, !0), op.setUint16(4, cp[0], !0), op.setUint16(6, cp[1], !0), ip.slice(0, zc.Vb.CubeFaces).forEach(((pp, ip) => {
-        op.setUint32(8 + 4 * ip, pp, !0)
-      })), Op
+    function Zs(QQ, WQ, XQ) {
+      const wQ = new Uint8Array(YX.dc.SkyImagesReadyBytes),
+        qQ = new DataView(wQ.buffer);
+      return qQ.setUint16(0, QQ, !0), qQ.setUint16(2, WQ.length, !0), qQ.setUint16(4, XQ[0], !0), qQ.setUint16(6, XQ[1], !0), WQ.slice(0, YX.dc.CubeFaces).forEach(((QQ, WQ) => {
+        qQ.setUint32(8 + 4 * WQ, QQ, !0)
+      })), wQ
     }
 
-    function sx(pp) {
-      const ip = new Uint8Array(zc.Vb.SkyImagesReadyBytes),
-        cp = new DataView(ip.buffer);
-      return cp.setUint16(0, pp, !0), cp.setUint16(2, zc.Vb.Failed, !0), ip
+    function Os(QQ) {
+      const WQ = new Uint8Array(YX.dc.SkyImagesReadyBytes),
+        XQ = new DataView(WQ.buffer);
+      return XQ.setUint16(0, QQ, !0), XQ.setUint16(2, YX.dc.Failed, !0), WQ
     }
-    let Kx = Promise.resolve();
-    async function Vx(pp, ip) {
-      let cp;
+    let Ks = Promise.resolve();
+    async function ms(QQ, WQ) {
+      let XQ;
       try {
-        cp = await (0, gx.F)(pp)
-      } catch (Ip) {
-        throw new nx.e("fetch", pp, {
-          cause: Ip
+        XQ = await (0, ns.K)(QQ)
+      } catch (TQ) {
+        throw new os.e("fetch", QQ, {
+          cause: TQ
         })
       }
-      const Op = Kx.then((() => async function(pp, ip) {
-        const cp = new Blob([pp.slice()]);
-        let Op = await createImageBitmap(cp, {
+      const wQ = Ks.then((() => async function(QQ, WQ) {
+        const XQ = new Blob([QQ.slice()]);
+        let wQ = await createImageBitmap(XQ, {
           premultiplyAlpha: "none",
           colorSpaceConversion: "none",
-          imageOrientation: ip
+          imageOrientation: WQ
         });
-        const op = 1024 / Math.max(Op.width, Op.height);
-        if (op < 1) {
-          const pp = Op;
+        const qQ = 1024 / Math.max(wQ.width, wQ.height);
+        if (qQ < 1) {
+          const QQ = wQ;
           try {
-            Op = await createImageBitmap(pp, {
-              resizeWidth: Math.max(1, Math.round(pp.width * op)),
-              resizeHeight: Math.max(1, Math.round(pp.height * op)),
+            wQ = await createImageBitmap(QQ, {
+              resizeWidth: Math.max(1, Math.round(QQ.width * qQ)),
+              resizeHeight: Math.max(1, Math.round(QQ.height * qQ)),
               resizeQuality: "high",
               premultiplyAlpha: "none",
               colorSpaceConversion: "none"
             })
           } finally {
-            pp.close()
+            QQ.close()
           }
         }
-        return Op
-      }(cp, ip)));
-      let op;
-      Kx = Op.catch((() => {}));
+        return wQ
+      }(XQ, WQ)));
+      let qQ;
+      Ks = wQ.catch((() => {}));
       try {
-        op = await Op
-      } catch (Ip) {
-        throw new nx.e("decode", pp, {
-          cause: Ip
+        qQ = await wQ
+      } catch (TQ) {
+        throw new os.e("decode", QQ, {
+          cause: TQ
         })
       }
       return {
-        id: (0, nx.p)(op),
-        width: op.width,
-        height: op.height
+        id: (0, os.l)(qQ),
+        width: qQ.width,
+        height: qQ.height
       }
     }
-    var pL = cp(2187),
-      iL = cp(34258),
-      cL = cp(39403);
-    const OL = pL.f.length,
-      oL = new Set([...pL.f, "earth"]);
+    var Ms = XQ(2226),
+      QF = XQ(34315),
+      WF = XQ(39502);
+    const XF = Ms.d.length,
+      wF = new Set([...Ms.d, "earth"]);
 
-    function IL(pp) {
-      const ip = [],
-        cp = [],
-        Op = (pp, Op) => {
-          if ("custom" === Op.type) {
-            cp.push({
-              id: pp,
-              kind: zc.Vb.KindCustom,
-              set: ip.length,
+    function qF(QQ) {
+      const WQ = [],
+        XQ = [],
+        wQ = (QQ, wQ) => {
+          if ("custom" === wQ.type) {
+            XQ.push({
+              id: QQ,
+              kind: YX.dc.KindCustom,
+              set: WQ.length,
               earth: null
             });
-            const op = [Op.px, Op.py, Op.pz, Op.nx, Op.ny, Op.nz];
-            ip.push({
-              urls: (0, cL.g)(op),
+            const qQ = [wQ.px, wQ.py, wQ.pz, wQ.nx, wQ.ny, wQ.nz];
+            WQ.push({
+              urls: (0, WF.f)(qQ),
               orientation: "none"
             })
-          } else cp.push({
-            id: pp,
-            kind: zc.Vb.KindEarth,
+          } else XQ.push({
+            id: QQ,
+            kind: YX.dc.KindEarth,
             set: 0,
-            earth: Op
+            earth: wQ
           })
         };
-      pL.f.forEach(((ip, cp) => {
-        var op;
-        Op(cp, null !== (op = SL(pp[ip])) && void 0 !== op ? op : iL.l[ip])
+      Ms.d.forEach(((WQ, XQ) => {
+        var qQ;
+        wQ(XQ, null !== (qQ = TF(QQ[WQ])) && void 0 !== qQ ? qQ : QF.m[WQ])
       }));
-      const op = SL(pp.earth);
-      "earth" === (null === op || void 0 === op ? void 0 : op.type) && Op(OL, op);
-      const Ip = new TextEncoder,
-        Sp = [],
-        xp = [];
-      for (const [Wp, yp] of Object.entries(pp)) {
-        const pp = oL.has(Wp) ? null : SL(yp);
-        if (null === pp) continue;
-        const ip = Ip.encode(Wp);
-        ip.length > 255 ? xp.push(`Ignoring texture pack skybox ${Wp}, whose name is over 255 bytes`) : Sp.length === zc.Vb.MaxAdded ? xp.push(`Ignoring texture pack skybox ${Wp}, past the ${zc.Vb.MaxAdded} skies a pack can add`) : (Sp.push(ip), Op(zc.Vb.AddedId, pp))
+      const qQ = TF(QQ.earth);
+      "earth" === (null === qQ || void 0 === qQ ? void 0 : qQ.type) && wQ(XF, qQ);
+      const TQ = new TextEncoder,
+        zQ = [],
+        sQ = [];
+      for (const [IQ, jQ] of Object.entries(QQ)) {
+        const QQ = wF.has(IQ) ? null : TF(jQ);
+        if (null === QQ) continue;
+        const WQ = TQ.encode(IQ);
+        WQ.length > 255 ? sQ.push(`Ignoring texture pack skybox ${IQ}, whose name is over 255 bytes`) : zQ.length === YX.dc.MaxAdded ? sQ.push(`Ignoring texture pack skybox ${IQ}, past the ${YX.dc.MaxAdded} skies a pack can add`) : (zQ.push(WQ), wQ(YX.dc.AddedId, QQ))
       }
-      const Lp = ip.length;
-      ip.push({
-        urls: iL.c.map((pp => iL.d + pp)),
+      const FQ = WQ.length;
+      WQ.push({
+        urls: QF.g.map((QQ => QF.h + QQ)),
         orientation: "none"
-      }), ip.push({
-        urls: [iL.h],
+      }), WQ.push({
+        urls: [QF.l],
         orientation: "flipY"
-      }), ip.push({
-        urls: [iL.b],
+      }), WQ.push({
+        urls: [QF.d],
         orientation: "flipY"
       });
-      const Yp = zc.Vb.SkyTableHeaderBytes + cp.length * zc.Vb.SkyTableEntryBytes,
-        Dp = new Uint8Array(Yp + Sp.reduce(((pp, ip) => pp + 1 + ip.length), 0)),
-        Ap = new DataView(Dp.buffer);
-      Ap.setUint16(0, Lp, !0), Ap.setUint16(2, Lp + 1, !0), Ap.setUint16(4, Lp + 2, !0), Ap.setUint16(6, cp.length, !0), cp.forEach(((pp, ip) => {
-        const cp = zc.Vb.SkyTableHeaderBytes + ip * zc.Vb.SkyTableEntryBytes;
-        Ap.setUint16(cp, pp.id, !0), Ap.setUint8(cp + 2, pp.kind);
-        const Op = cp + 4;
-        pp.earth ? function(pp, ip, cp) {
-          const Op = pp;
-          let op = 0,
-            Ip = 0;
-          for (const [Sp, xp] of xL) {
-            const pp = Op[Sp];
-            "number" === typeof pp && Number.isFinite(pp) && (ip.setFloat32(cp + 4 * xp, pp, !0), op |= 1 << xp)
+      const PQ = YX.dc.SkyTableHeaderBytes + XQ.length * YX.dc.SkyTableEntryBytes,
+        gQ = new Uint8Array(PQ + zQ.reduce(((QQ, WQ) => QQ + 1 + WQ.length), 0)),
+        JQ = new DataView(gQ.buffer);
+      JQ.setUint16(0, FQ, !0), JQ.setUint16(2, FQ + 1, !0), JQ.setUint16(4, FQ + 2, !0), JQ.setUint16(6, XQ.length, !0), XQ.forEach(((QQ, WQ) => {
+        const XQ = YX.dc.SkyTableHeaderBytes + WQ * YX.dc.SkyTableEntryBytes;
+        JQ.setUint16(XQ, QQ.id, !0), JQ.setUint8(XQ + 2, QQ.kind);
+        const wQ = XQ + 4;
+        QQ.earth ? function(QQ, WQ, XQ) {
+          const wQ = QQ;
+          let qQ = 0,
+            TQ = 0;
+          for (const [zQ, sQ] of zF) {
+            const QQ = wQ[zQ];
+            "number" === typeof QQ && Number.isFinite(QQ) && (WQ.setFloat32(XQ + 4 * sQ, QQ, !0), qQ |= 1 << sQ)
           }
-          for (const [Sp, xp, Lp] of LL) {
-            const pp = Op[Sp];
-            Array.isArray(pp) && 3 === pp.length && pp.every((pp => "number" === typeof pp && Number.isFinite(pp))) && (pp.forEach(((pp, Op) => {
-              ip.setFloat32(cp + Lp + 4 * Op, pp, !0)
-            })), op |= xp)
+          for (const [zQ, sQ, FQ] of sF) {
+            const QQ = wQ[zQ];
+            Array.isArray(QQ) && 3 === QQ.length && QQ.every((QQ => "number" === typeof QQ && Number.isFinite(QQ))) && (QQ.forEach(((QQ, wQ) => {
+              WQ.setFloat32(XQ + FQ + 4 * wQ, QQ, !0)
+            })), qQ |= sQ)
           }
-          YL.forEach(((pp, Ip) => {
-            let [Sp, xp] = pp;
-            const Lp = Op[Sp];
-            "number" === typeof Lp && Number.isFinite(Lp) && (ip.setFloat32(cp + zc.q.CameraOffsetAt + 4 * Ip, Lp, !0), op |= xp)
+          FF.forEach(((QQ, TQ) => {
+            let [zQ, sQ] = QQ;
+            const FQ = wQ[zQ];
+            "number" === typeof FQ && Number.isFinite(FQ) && (WQ.setFloat32(XQ + YX.r.CameraOffsetAt + 4 * TQ, FQ, !0), qQ |= sQ)
           }));
-          for (const [Sp, xp] of DL) {
-            const pp = Op[Sp];
-            null !== pp && void 0 !== pp && (op |= xp, pp && (Ip |= xp >>> 14))
+          for (const [zQ, sQ] of PF) {
+            const QQ = wQ[zQ];
+            null !== QQ && void 0 !== QQ && (qQ |= sQ, QQ && (TQ |= sQ >>> 14))
           }
-          ip.setUint32(cp + zc.q.PresentAt, op, !0), ip.setUint8(cp + zc.q.FlagsAt, Ip)
-        }(pp.earth, Ap, Op) : Ap.setUint16(Op, pp.set, !0)
+          WQ.setUint32(XQ + YX.r.PresentAt, qQ, !0), WQ.setUint8(XQ + YX.r.FlagsAt, TQ)
+        }(QQ.earth, JQ, wQ) : JQ.setUint16(wQ, QQ.set, !0)
       }));
-      let Pp = Yp;
-      for (const Wp of Sp) Dp[Pp] = Wp.length, Dp.set(Wp, Pp + 1), Pp += 1 + Wp.length;
+      let rQ = PQ;
+      for (const IQ of zQ) gQ[rQ] = IQ.length, gQ.set(IQ, rQ + 1), rQ += 1 + IQ.length;
       return {
-        payload: Dp,
-        sets: ip,
-        leftOut: xp
+        payload: gQ,
+        sets: WQ,
+        leftOut: sQ
       }
     }
 
-    function SL(pp) {
-      if ("object" !== typeof pp || null === pp) return null;
-      const ip = pp;
-      if ("earth" === ip.type) return pp;
-      return "custom" === ip.type && ["px", "py", "pz", "nx", "ny", "nz"].every((pp => {
-        const cp = ip[pp];
-        return "string" === typeof cp && cp.length > 0
-      })) ? pp : null
+    function TF(QQ) {
+      if ("object" !== typeof QQ || null === QQ) return null;
+      const WQ = QQ;
+      if ("earth" === WQ.type) return QQ;
+      return "custom" === WQ.type && ["px", "py", "pz", "nx", "ny", "nz"].every((QQ => {
+        const XQ = WQ[QQ];
+        return "string" === typeof XQ && XQ.length > 0
+      })) ? QQ : null
     }
-    const xL = [
-        ["inclination", zc.q.Inclination],
-        ["turbidity", zc.q.Turbidity],
-        ["luminance", zc.q.Luminance],
-        ["rayleigh", zc.q.Rayleigh],
-        ["mieCoefficient", zc.q.MieCoefficient],
-        ["mieDirectionalG", zc.q.MieDirectionalG],
-        ["distance", zc.q.Distance],
-        ["azimuth", zc.q.Azimuth]
+    const zF = [
+        ["inclination", YX.r.Inclination],
+        ["turbidity", YX.r.Turbidity],
+        ["luminance", YX.r.Luminance],
+        ["rayleigh", YX.r.Rayleigh],
+        ["mieCoefficient", YX.r.MieCoefficient],
+        ["mieDirectionalG", YX.r.MieDirectionalG],
+        ["distance", YX.r.Distance],
+        ["azimuth", YX.r.Azimuth]
       ],
-      LL = [
-        ["sunPosition", zc.q.SunPosition, zc.q.SunPositionAt],
-        ["up", zc.q.Up, zc.q.UpAt],
-        ["vertexTint", zc.q.VertexTint, zc.q.VertexTintAt]
+      sF = [
+        ["sunPosition", YX.r.SunPosition, YX.r.SunPositionAt],
+        ["up", YX.r.Up, YX.r.UpAt],
+        ["vertexTint", YX.r.VertexTint, YX.r.VertexTintAt]
       ],
-      YL = [
-        ["xCameraOffset", zc.q.CameraOffsetX],
-        ["yCameraOffset", zc.q.CameraOffsetY],
-        ["zCameraOffset", zc.q.CameraOffsetZ]
+      FF = [
+        ["xCameraOffset", YX.r.CameraOffsetX],
+        ["yCameraOffset", YX.r.CameraOffsetY],
+        ["zCameraOffset", YX.r.CameraOffsetZ]
       ],
-      DL = [
-        ["useSunPosition", zc.q.UseSunPosition],
-        ["dithering", zc.q.Dithering],
-        ["infiniteDistance", zc.q.InfiniteDistance]
+      PF = [
+        ["useSunPosition", YX.r.UseSunPosition],
+        ["dithering", YX.r.Dithering],
+        ["infiniteDistance", YX.r.InfiniteDistance]
       ];
 
-    function AL(pp, ip, cp) {
-      const Op = new WL({
-        writeCmd: pp,
-        warn: ip,
-        followPack: PL(cp, ip)
+    function gF(QQ, WQ, XQ) {
+      const wQ = new rF({
+        writeCmd: QQ,
+        warn: WQ,
+        followPack: JF(XQ, WQ)
       });
-      return Op.start(), Op
+      return wQ.start(), wQ
     }
 
-    function PL(pp, ip) {
-      return cp => {
-        let Op = () => {};
-        const op = pp((pp => {
-          Op(), Op = () => {}, null !== pp ? Op = pp.subscribe((pp => {
-            cp(function(pp, ip, cp) {
-              if ("object" !== typeof pp || null === pp) return null;
-              const Op = pp.skyBoxes;
-              if ("object" !== typeof Op || null === Op) return null;
-              if ("player" === ip) return Op;
-              return Object.fromEntries(Object.entries(Op).filter((pp => {
-                let [ip, Op] = pp;
-                return !! function(pp) {
-                  if ("object" !== typeof pp || null === pp) return !1;
-                  return "earth" === pp.type || Object.entries(pp).every((pp => {
-                    let [ip, cp] = pp;
-                    return "type" === ip || ("" === (Op = cp) || null !== function(pp) {
-                      var ip, cp, Op;
-                      return "string" !== typeof pp ? null : null !== (ip = null === (cp = yL.exec(pp)) || void 0 === cp || null === (Op = cp.groups) || void 0 === Op ? void 0 : Op.base64) && void 0 !== ip ? ip : null
-                    }(Op));
-                    var Op
+    function JF(QQ, WQ) {
+      return XQ => {
+        let wQ = () => {};
+        const qQ = QQ((QQ => {
+          wQ(), wQ = () => {}, null !== QQ ? wQ = QQ.subscribe((QQ => {
+            XQ(function(QQ, WQ, XQ) {
+              if ("object" !== typeof QQ || null === QQ) return null;
+              const wQ = QQ.skyBoxes;
+              if ("object" !== typeof wQ || null === wQ) return null;
+              if ("player" === WQ) return wQ;
+              return Object.fromEntries(Object.entries(wQ).filter((QQ => {
+                let [WQ, wQ] = QQ;
+                return !! function(QQ) {
+                  if ("object" !== typeof QQ || null === QQ) return !1;
+                  return "earth" === QQ.type || Object.entries(QQ).every((QQ => {
+                    let [WQ, XQ] = QQ;
+                    return "type" === WQ || ("" === (wQ = XQ) || null !== function(QQ) {
+                      var WQ, XQ, wQ;
+                      return "string" !== typeof QQ ? null : null !== (WQ = null === (XQ = IF.exec(QQ)) || void 0 === XQ || null === (wQ = XQ.groups) || void 0 === wQ ? void 0 : wQ.base64) && void 0 !== WQ ? WQ : null
+                    }(wQ));
+                    var wQ
                   }))
-                }(Op) || (cp(`Ignoring texture pack skybox ${ip}, whose faces are not all data URLs`, null), !1)
+                }(wQ) || (XQ(`Ignoring texture pack skybox ${WQ}, whose faces are not all data URLs`, null), !1)
               })))
-            }(pp.pack, null === pp.gameSource ? "player" : "customGame", ip))
-          })) : cp(null)
+            }(QQ.pack, null === QQ.gameSource ? "player" : "customGame", WQ))
+          })) : XQ(null)
         }));
         return () => {
-          op(), Op()
+          qQ(), wQ()
         }
       }
     }
-    class WL {
-      constructor(pp) {
-        var ip, cp, Op;
-        this.host = pp, this.loader = void 0, this.wait = void 0, this.queue = [], this.written = null, this.stopFollowing = () => {}, this.Ry = !1, this.wait = null !== (ip = pp.wait) && void 0 !== ip ? ip : (pp, ip) => {
-          setTimeout(ip, pp)
-        }, this.loader = new rx({
-          loadImage: null !== (cp = pp.loadImage) && void 0 !== cp ? cp : Vx,
-          mOp: null !== (Op = pp.mOp) && void 0 !== Op ? Op : nx.q,
-          sendReady: pp => {
+    class rF {
+      constructor(QQ) {
+        var WQ, XQ, wQ;
+        this.host = QQ, this.loader = void 0, this.wait = void 0, this.queue = [], this.written = null, this.stopFollowing = () => {}, this.zj = !1, this.wait = null !== (WQ = QQ.wait) && void 0 !== WQ ? WQ : (QQ, WQ) => {
+          setTimeout(WQ, QQ)
+        }, this.loader = new Ys({
+          loadImage: null !== (XQ = QQ.loadImage) && void 0 !== XQ ? XQ : ms,
+          BwQ: null !== (wQ = QQ.BwQ) && void 0 !== wQ ? wQ : os.p,
+          sendReady: QQ => {
             this.queue.push({
-              kind: zc.Vb.SkyImagesReady,
-              payload: pp
+              kind: YX.dc.SkyImagesReady,
+              payload: QQ
             })
           },
-          onLoadFailed: (ip, cp, Op) => {
-            pp.warn(`sky image set ${ip} (${cp}) didn't load: the last sky stays`, Op)
+          onLoadFailed: (WQ, XQ, wQ) => {
+            QQ.warn(`sky image set ${WQ} (${XQ}) didn't load: the last sky stays`, wQ)
           },
           wait: this.wait
         })
       }
       start() {
-        this.wait(Fx.b, (() => {
+        this.wait(es.c, (() => {
           null === this.written && this.write({})
-        })), this.stopFollowing = this.host.followPack((pp => {
-          this.write(null !== pp && void 0 !== pp ? pp : {})
+        })), this.stopFollowing = this.host.followPack((QQ => {
+          this.write(null !== QQ && void 0 !== QQ ? QQ : {})
         }))
       }
-      onEvent(pp) {
-        this.loader.onEvent(pp)
+      onEvent(QQ) {
+        this.loader.onEvent(QQ)
       }
       drain() {
         if (0 === this.queue.length) return;
-        let pp = 0;
-        for (; pp < this.queue.length && this.host.writeCmd(this.queue[pp].kind, 0, this.queue[pp].payload);) pp++;
-        pp > 0 && this.queue.splice(0, pp)
+        let QQ = 0;
+        for (; QQ < this.queue.length && this.host.writeCmd(this.queue[QQ].kind, 0, this.queue[QQ].payload);) QQ++;
+        QQ > 0 && this.queue.splice(0, QQ)
       }
       dispose() {
-        this.Ry = !0, this.stopFollowing(), this.queue = [], this.loader.dispose()
+        this.zj = !0, this.stopFollowing(), this.queue = [], this.loader.dispose()
       }
-      write(pp) {
-        if (this.Ry) return;
-        const ip = IL(pp);
-        if (!(this.written && (cp = this.written, Op = ip, cp.payload.length === Op.payload.length && cp.payload.every(((pp, ip) => pp === Op.payload[ip])) && cp.sets.length === Op.sets.length && cp.sets.every(((pp, ip) => {
-            const cp = Op.sets[ip];
-            return pp.orientation === cp.orientation && pp.urls.length === cp.urls.length && pp.urls.every(((pp, ip) => pp === cp.urls[ip]))
+      write(QQ) {
+        if (this.zj) return;
+        const WQ = qF(QQ);
+        if (!(this.written && (XQ = this.written, wQ = WQ, XQ.payload.length === wQ.payload.length && XQ.payload.every(((QQ, WQ) => QQ === wQ.payload[WQ])) && XQ.sets.length === wQ.sets.length && XQ.sets.every(((QQ, WQ) => {
+            const XQ = wQ.sets[WQ];
+            return QQ.orientation === XQ.orientation && QQ.urls.length === XQ.urls.length && QQ.urls.every(((QQ, WQ) => QQ === XQ.urls[WQ]))
           }))))) {
-          var cp, Op;
-          for (const pp of ip.leftOut) this.host.warn(pp, null);
-          this.written = ip, this.loader.reset(ip.sets), this.queue = this.queue.filter((pp => pp.kind !== zc.Vb.SkyImagesReady)), this.queue.push({
-            kind: zc.Vb.SkyTable,
-            payload: ip.payload
+          var XQ, wQ;
+          for (const QQ of WQ.leftOut) this.host.warn(QQ, null);
+          this.written = WQ, this.loader.reset(WQ.sets), this.queue = this.queue.filter((QQ => QQ.kind !== YX.dc.SkyImagesReady)), this.queue.push({
+            kind: YX.dc.SkyTable,
+            payload: WQ.payload
           })
         }
       }
     }
-    const yL = /^data:[\w.+/-]*;base64,(?<base64>[A-Za-z0-9+/]*={0,2})$/;
-    var UL = cp(2874),
-      wL = cp(3085),
-      vL = cp(283),
-      tL = cp(185),
-      HL = cp(2883),
-      dL = cp(2892),
-      eL = cp(257),
-      uL = cp(259),
-      jL = cp(2990),
-      kL = cp(3012),
-      mL = cp(3023),
-      RL = cp(116),
-      qL = cp(314),
-      ML = cp(41025);
-    class CL {
+    const IF = /^data:[\w.+/-]*;base64,(?<base64>[A-Za-z0-9+/]*={0,2})$/;
+    var jF = XQ(3021),
+      BF = XQ(3243),
+      yF = XQ(325),
+      VF = XQ(218),
+      DF = XQ(3029),
+      pF = XQ(3034),
+      GF = XQ(299),
+      UF = XQ(307),
+      bF = XQ(3139),
+      vF = XQ(3160),
+      dF = XQ(3173),
+      HF = XQ(129),
+      aF = XQ(367),
+      lF = XQ(41039);
+    class hF {
       constructor() {
-        this.id = null, this.sentMs = null, this.roundTripMs = null, this.stopReplies = void 0, this.stopReplies = (0, Go.h)(eO.K, (pp => {
-          this.onReply((0, go.f)(eO.K, pp), performance.now())
+        this.id = null, this.sentMs = null, this.roundTripMs = null, this.stopReplies = void 0, this.stopReplies = (0, eq.j)(Dw.H, (QQ => {
+          this.onReply((0, oq.d)(Dw.H, QQ), performance.now())
         }))
       }
-      onFrame(pp, ip) {
-        null === this.id ? this.id = pp : pp !== this.id && (this.id = pp, this.sentMs = document.hidden ? null : ip)
+      onFrame(QQ, WQ) {
+        null === this.id ? this.id = QQ : QQ !== this.id && (this.id = QQ, this.sentMs = document.hidden ? null : WQ)
       }
       onVisibilityChange() {
         this.sentMs = null
       }
-      onReply(pp, ip) {
-        pp === this.id && null !== this.sentMs && (this.roundTripMs = Math.round(ip - this.sentMs), this.sentMs = null)
+      onReply(QQ, WQ) {
+        QQ === this.id && null !== this.sentMs && (this.roundTripMs = Math.round(WQ - this.sentMs), this.sentMs = null)
       }
       take() {
-        const pp = this.roundTripMs;
-        return this.roundTripMs = null, pp
+        const QQ = this.roundTripMs;
+        return this.roundTripMs = null, QQ
       }
       stop() {
         this.stopReplies()
       }
     }
-    class EL {
+    class iF {
       constructor() {
         this.sampled = 0, this.timed = 0, this.frameUs = 0, this.primed = !1, this.windowTimed = 0, this.windowUs = 0
       }
-      onFrame(pp, ip, cp, Op) {
-        const op = pp - this.sampled >>> 0,
-          Ip = ip - this.timed >>> 0,
-          Sp = cp - this.frameUs >>> 0,
-          xp = this.primed;
-        return this.sampled = pp, this.timed = ip, this.frameUs = cp, this.primed = !0, !(!xp || op > 64 || Ip > 64) && (Op && Sp <= 1e6 * Ip && (this.windowTimed += Ip, this.windowUs += Sp), Op && op > 0)
+      onFrame(QQ, WQ, XQ, wQ) {
+        const qQ = QQ - this.sampled >>> 0,
+          TQ = WQ - this.timed >>> 0,
+          zQ = XQ - this.frameUs >>> 0,
+          sQ = this.primed;
+        return this.sampled = QQ, this.timed = WQ, this.frameUs = XQ, this.primed = !0, !(!sQ || qQ > 64 || TQ > 64) && (wQ && zQ <= 1e6 * TQ && (this.windowTimed += TQ, this.windowUs += zQ), wQ && qQ > 0)
       }
       reset() {}
       snapshotAndReset() {
-        const pp = this.windowTimed > 0 ? this.windowUs / this.windowTimed / 1e3 : null;
+        const QQ = this.windowTimed > 0 ? this.windowUs / this.windowTimed / 1e3 : null;
         return this.windowTimed = 0, this.windowUs = 0, {
-          passMs: pp,
+          passMs: QQ,
           submitToDoneMs: null
         }
       }
     }
-    const XL = {
+    const cF = {
       lagP50Ms: null,
       lagP90Ms: null
     };
-    class lL {
+    class AF {
       constructor() {
         this.samples = new Float64Array(4096), this.count = 0
       }
-      add(pp, ip) {
-        const cp = Math.min(4096, this.count + ip);
-        this.samples.fill(pp, this.count, cp), this.count = cp
+      add(QQ, WQ) {
+        const XQ = Math.min(4096, this.count + WQ);
+        this.samples.fill(QQ, this.count, XQ), this.count = XQ
       }
       clear() {
         this.count = 0
       }
       take() {
-        const pp = this.count;
-        if (this.count = 0, pp < 30) return XL;
-        const ip = this.samples.subarray(0, pp).sort(),
-          cp = cp => ip[Math.min(pp - 1, Math.floor(cp * pp))];
+        const QQ = this.count;
+        if (this.count = 0, QQ < 30) return cF;
+        const WQ = this.samples.subarray(0, QQ).sort(),
+          XQ = XQ => WQ[Math.min(QQ - 1, Math.floor(XQ * QQ))];
         return {
-          lagP50Ms: cp(.5),
-          lagP90Ms: cp(.9)
+          lagP50Ms: XQ(.5),
+          lagP90Ms: XQ(.9)
         }
       }
     }
-    class QL {
+    class RF {
       constructor() {
-        this.word = 0, this.lagUs = 0, this.primed = !1, this.lags = new lL
+        this.word = 0, this.lagUs = 0, this.primed = !1, this.lags = new AF
       }
-      onFrame(pp, ip) {
-        const cp = pp.headerWord(zc.x.Pacing),
-          Op = pp.headerWord(zc.x.PacingLagUs),
-          op = (cp >>> zc.O.LagsShift) - (this.word >>> zc.O.LagsShift) & zc.O.CountMask,
-          Ip = op > 0 ? (Op - this.lagUs >>> 0) / op / 1e3 : 0,
-          Sp = this.primed && op <= 64 && Ip <= 6e4;
-        this.word = cp, this.lagUs = Op, this.primed = !0, Sp && ip && op > 0 && 0 !== (cp & zc.O.Defaulted) && this.lags.add(Ip, op)
+      onFrame(QQ, WQ) {
+        const XQ = QQ.headerWord(YX.F.Pacing),
+          wQ = QQ.headerWord(YX.F.PacingLagUs),
+          qQ = (XQ >>> YX.Z.LagsShift) - (this.word >>> YX.Z.LagsShift) & YX.Z.CountMask,
+          TQ = qQ > 0 ? (wQ - this.lagUs >>> 0) / qQ / 1e3 : 0,
+          zQ = this.primed && qQ <= 64 && TQ <= 6e4;
+        this.word = XQ, this.lagUs = wQ, this.primed = !0, zQ && WQ && qQ > 0 && 0 !== (XQ & YX.Z.Defaulted) && this.lags.add(TQ, qQ)
       }
       onJoin() {
         this.lags.clear()
       }
-      snapshotAndReset(pp) {
-        return pp ? this.lags.take() : (this.lags.clear(), XL)
+      snapshotAndReset(QQ) {
+        return QQ ? this.lags.take() : (this.lags.clear(), cF)
       }
     }
-    var JL = cp(301);
-
-    function BL() {
-      return Date.now() - performance.now()
-    }
-    class NL {
-      constructor() {
-        this.rafs = 0, this.sx = 0, this.heldAtRaf = -1, this.heldRunStartMs = 0, this.startMs = performance.now(), this.startClockOffsetMs = BL(), this.focused = document.hasFocus(), this.blurred = !1, this.resumed = !1, this.embedded = (0, JL.h)(), this.onBlur = () => {
-          this.focused = !1, this.blurred = !0
-        }, this.onFocus = () => {
-          this.focused = !0
-        }, this.onLifecycle = () => {
-          this.resumed = !0
-        }, window.addEventListener("blur", this.onBlur), window.addEventListener("focus", this.onFocus), document.addEventListener("freeze", this.onLifecycle), document.addEventListener("resume", this.onLifecycle)
-      }
-      animationFrame() {
-        this.rafs++
-      }
-      paced() {
-        (0 === this.sx || this.heldAtRaf < this.rafs - 1) && (this.heldRunStartMs = 1 === this.rafs ? this.startMs : performance.now()), this.sx++, this.heldAtRaf = this.rafs
-      }
-      words(pp) {
-        const ip = pp ? this.rafs - 1 : this.rafs;
-        return function(pp) {
-          let ip = 0 === pp.rafs ? "raf:none" : "raf:some";
-          return pp.sx > 0 && (ip += " pace:held"), pp.heldRunMs > 1e4 && (ip += " pace:stalled"), pp.blurred && (ip += " blur"), pp.resumed && (ip += " resumed"), pp.embedded && (ip += " embedded"), pp.clockGainMs > 2e3 && (ip += " clockjump"), ip
-        }({
-          clockGainMs: BL() - this.startClockOffsetMs,
-          rafs: ip,
-          sx: this.sx,
-          heldRunMs: this.sx > 0 && this.heldAtRaf === ip ? performance.now() - this.heldRunStartMs : 0,
-          blurred: this.blurred,
-          resumed: this.resumed,
-          embedded: this.embedded
-        })
-      }
-      restart(pp) {
-        this.rafs = 0, this.sx = 0, this.heldAtRaf = -1, this.startMs = pp, this.startClockOffsetMs = BL(), this.blurred = !this.focused, this.resumed = !1
-      }
-      stop() {
-        window.removeEventListener("blur", this.onBlur), window.removeEventListener("focus", this.onFocus), document.removeEventListener("freeze", this.onLifecycle), document.removeEventListener("resume", this.onLifecycle)
-      }
-    }
-    var TL = cp(34367),
-      fL = cp(2993),
-      bL = cp(41087),
-      hL = cp(34364),
-      aL = cp(2899),
-      nL = cp(3e3);
-    const FL = {
+    var EF = XQ(3130),
+      CF = XQ(34448),
+      uF = XQ(3146),
+      LF = XQ(41102),
+      kF = XQ(34443),
+      fF = XQ(3041),
+      SF = XQ(3152);
+    const tF = {
       none: !0,
       compatibility_mode: !0,
       not_requested: !1,
@@ -7685,6 +7662,7 @@ export const modules = {
       safari_26: !1,
       no_webgpu_api: !1,
       no_adapter: !0,
+      compatibility_held: !0,
       software_adapter: !0,
       adapter_error: !0,
       load_failed: !0,
@@ -7694,455 +7672,446 @@ export const modules = {
       _unloaded: null
     };
 
-    function gL(pp) {
-      return new GL(pp)
+    function oF(QQ) {
+      return new eF(QQ)
     }
-    class GL {
-      constructor(pp) {
-        this.shell = pp, this.tracker = new dL.d, this.gpu = new EL, this.pacing = new QL, this.timers = [], this.inGameAtLastFlush = !1, this.hasFlushedSinceConnect = !1, this.sendsDropped = 0, this.pendingLightFailures = 0, this.unsentPage = null, this.game = null, this.fpsSpanStartMs = -1, this.fpsFrames = 0, this.fpsOverTime = null, this.firstSpanFps = null, this.initialFps = null, this.ping = new CL, this.pacedCpuMs = 0, this.sendsStartMs = -1, this.sendsEndMs = -1, this.frameDebug = null, this.lastDrawnMs = -1, this.stallPending = !1, this.stallGap = new NL, this.onVisibility = () => {
-          this.tracker.onVisibilityChange(), this.ping.onVisibilityChange(), this.lastDrawnMs = -1, !document.hidden && this.fpsSpanStartMs >= 0 && (this.fpsFrames = 0, this.fpsSpanStartMs = performance.now())
+    class eF {
+      constructor(QQ) {
+        this.shell = QQ, this.tracker = new pF.d, this.gpu = new iF, this.pacing = new RF, this.timers = [], this.inGameAtLastFlush = !1, this.hasFlushedSinceConnect = !1, this.sendsDropped = 0, this.pendingLightFailures = 0, this.unsentPage = null, this.game = null, this.fpsSpanStartMs = -1, this.fpsFrames = 0, this.fpsOverTime = null, this.firstSpanFps = null, this.initialFps = null, this.ping = new hF, this.pacedCpuMs = 0, this.sendsStartMs = -1, this.sendsEndMs = -1, this.frameDebug = null, this.mainStall = new EF.c(this.tracker, ((QQ, WQ, XQ, wQ) => {
+          this.shell.mainStalled(QQ, WQ, XQ, wQ)
+        })), this.onVisibility = () => {
+          this.tracker.onVisibilityChange(), this.ping.onVisibilityChange(), this.mainStall.reset(), !document.hidden && this.fpsSpanStartMs >= 0 && (this.fpsFrames = 0, this.fpsSpanStartMs = performance.now())
         }, this.onBeforeUnload = () => {
-          this.checkMainStall(performance.now(), !1), this.lastDrawnMs = -1
-        }, (0, TL.d)(pp.backend, pp.canvas, pp.adapterVendor), this.tracker.start((() => !pp.inGame()), this.gpu, "wasm"), document.addEventListener("visibilitychange", this.onVisibility), window.addEventListener("beforeunload", this.onBeforeUnload), (0, aL.b)("wasm", (() => {
+          this.mainStall.unloading()
+        }, (0, CF.b)(QQ.backend, QQ.canvas, QQ.adapterVendor), this.tracker.start((() => !QQ.inGame()), this.gpu, "wasm"), document.addEventListener("visibilitychange", this.onVisibility), window.addEventListener("beforeunload", this.onBeforeUnload), (0, fF.d)("wasm", (() => {
           const {
-            n: ip,
-            sampleCount: cp
-          } = (0, bL.g)();
-          return `${pp.backend}, quality steps aim at up to ${nL.d.target.maxFps} fps, pixel n ${ip}, msaa ${cp}`
-        }), (ip => {
-          ip.setLoadCounts(pp.readLoadCounts), this.frameDebug = ip
+            n: WQ,
+            sampleCount: XQ
+          } = (0, LF.f)();
+          return `${QQ.backend}, quality steps aim at up to ${SF.c.target.maxFps} fps, pixel n ${WQ}, msaa ${XQ}`
+        }), (WQ => {
+          WQ.setLoadCounts(QQ.readLoadCounts), this.frameDebug = WQ
         })), this.timers.push(setInterval((() => {
           this.flush(), this.fpsOverTime = null, this.initialFps = null
         }), 1e4), setInterval((() => {
           this.followGame() && this.shell.canSend() && (this.hasFlushedSinceConnect || (this.flush(), this.hasFlushedSinceConnect = !0))
         }), 250))
       }
-      animationFrame(pp) {
-        var ip;
-        this.stallGap.animationFrame(), this.tracker.onAnimationFrame(pp), null === (ip = this.frameDebug) || void 0 === ip || ip.animationFrame()
+      animationFrame(QQ) {
+        var WQ;
+        this.mainStall.animationFrame(), this.tracker.onAnimationFrame(QQ), null === (WQ = this.frameDebug) || void 0 === WQ || WQ.animationFrame()
       }
-      sendsWent(pp, ip, cp) {
-        this.ping.onFrame(pp.headerWord(zc.x.PingSent), ip), this.sendsStartMs = ip, this.sendsEndMs = cp
+      sendsWent(QQ, WQ, XQ) {
+        this.ping.onFrame(QQ.headerWord(YX.F.PingSent), WQ), this.sendsStartMs = WQ, this.sendsEndMs = XQ
       }
-      frameRan(pp, ip, cp, Op) {
-        var op;
-        this.ping.onFrame(pp.headerWord(zc.x.PingSent), cp);
-        const Ip = this.tracker;
-        this.pacing.onFrame(pp, Ip.isSampling());
-        const Sp = pp.headerWord(zc.x.TickUs) / 1e3 + (0, SO.K)();
-        var xp;
-        (Ip.gH(Sp), null === (op = this.frameDebug) || void 0 === op || op.wasmFrame(pp, ip, cp, Op, Ip.isSampling(), Sp), null !== this.game) && (null === (xp = this.frameDebug) || void 0 === xp || xp.inGame());
-        const Lp = this.sendsStartMs >= ip ? this.sendsEndMs - this.sendsStartMs : 0,
-          Yp = Math.max(0, cp - ip - Sp - Lp);
-        if ("drawn" !== Op) return void("paced" === Op ? (this.pacedCpuMs += Yp, this.stallGap.paced()) : "skipped" === Op && (this.lastDrawnMs = -1));
-        this.followGame(), this.checkMainStall(ip, !0), Ip.onFrameStart(ip);
-        this.gpu.onFrame(pp.headerWord(zc.x.GpuSampled), pp.headerWord(zc.x.GpuTimed), pp.headerWord(zc.x.GpuFrameUs), Ip.isSampling()) && Ip.onGpuSampleStarted(), Ip.onFrameCpu(Yp + this.pacedCpuMs), this.pacedCpuMs = 0, this.countFpsFrame(ip)
+      frameRan(QQ, WQ, XQ, wQ) {
+        var qQ;
+        this.ping.onFrame(QQ.headerWord(YX.F.PingSent), XQ);
+        const TQ = this.tracker;
+        this.pacing.onFrame(QQ, TQ.isSampling());
+        const zQ = QQ.headerWord(YX.F.TickUs) / 1e3 + (0, ww.I)();
+        var sQ;
+        (TQ.tV(zQ), null === (qQ = this.frameDebug) || void 0 === qQ || qQ.wasmFrame(QQ, WQ, XQ, wQ, TQ.isSampling(), zQ), null !== this.game) && (null === (sQ = this.frameDebug) || void 0 === sQ || sQ.inGame());
+        const FQ = this.sendsStartMs >= WQ ? this.sendsEndMs - this.sendsStartMs : 0,
+          PQ = Math.max(0, XQ - WQ - zQ - FQ);
+        if ("drawn" !== wQ) return void("paced" === wQ ? (this.pacedCpuMs += PQ, this.mainStall.paced()) : "skipped" === wQ && this.mainStall.reset());
+        this.followGame(), this.mainStall.drawn(WQ), TQ.onFrameStart(WQ);
+        this.gpu.onFrame(QQ.headerWord(YX.F.GpuSampled), QQ.headerWord(YX.F.GpuTimed), QQ.headerWord(YX.F.GpuFrameUs), TQ.isSampling()) && TQ.onGpuSampleStarted(), TQ.onFrameCpu(PQ + this.pacedCpuMs), this.pacedCpuMs = 0, this.countFpsFrame(WQ)
       }
       framePaced() {
-        var pp;
-        this.stallGap.paced(), null === (pp = this.frameDebug) || void 0 === pp || pp.wasmPeekPaced(this.tracker.isSampling())
+        var QQ;
+        this.mainStall.paced(), null === (QQ = this.frameDebug) || void 0 === QQ || QQ.wasmPeekPaced(this.tracker.isSampling())
       }
       stop() {
-        for (const pp of this.timers) clearInterval(pp);
-        this.timers.length = 0, document.removeEventListener("visibilitychange", this.onVisibility), window.removeEventListener("beforeunload", this.onBeforeUnload), this.stallGap.stop(), this.ping.stop(), this.tracker.limiterTelemetry.stop()
+        for (const QQ of this.timers) clearInterval(QQ);
+        this.timers.length = 0, document.removeEventListener("visibilitychange", this.onVisibility), window.removeEventListener("beforeunload", this.onBeforeUnload), this.mainStall.stop(), this.ping.stop(), this.tracker.limiterTelemetry.stop()
       }
       followGame() {
-        const pp = this.shell.joinedGame();
-        if (pp !== this.game) {
-          var ip;
-          if (this.game = pp, null !== pp) null === (ip = this.frameDebug) || void 0 === ip || ip.joined();
-          this.tracker.snapshotAndReset(), this.pacing.onJoin(), this.hasFlushedSinceConnect = !1, this.inGameAtLastFlush = !1, this.fpsSpanStartMs = -1, this.fpsFrames = 0, this.pacedCpuMs = 0, this.firstSpanFps = null, this.fpsOverTime = null, this.initialFps = null, this.lastDrawnMs = -1
+        const QQ = this.shell.joinedGame();
+        if (QQ !== this.game) {
+          var WQ;
+          if (this.game = QQ, null !== QQ) null === (WQ = this.frameDebug) || void 0 === WQ || WQ.joined();
+          this.tracker.snapshotAndReset(), this.pacing.onJoin(), this.hasFlushedSinceConnect = !1, this.inGameAtLastFlush = !1, this.fpsSpanStartMs = -1, this.fpsFrames = 0, this.pacedCpuMs = 0, this.firstSpanFps = null, this.fpsOverTime = null, this.initialFps = null, this.mainStall.reset()
         }
-        return null !== pp
+        return null !== QQ
       }
-      checkMainStall(pp, ip) {
-        if (!this.tracker.isSampling()) return void(this.lastDrawnMs = -1);
-        const cp = this.tracker.limiterTelemetry.longAnimationFrameTracker,
-          Op = this.lastDrawnMs < 0 ? 0 : pp - this.lastDrawnMs;
-        this.lastDrawnMs = pp;
-        const op = !this.stallPending && Op > 5e3,
-          Ip = op ? this.stallGap.words(ip) : "";
-        this.stallGap.restart(pp), this.stallPending || (op ? (this.stallPending = !0, setTimeout((() => {
-          this.stallPending = !1, this.shell.mainStalled(Op, cp.blockingSinceMark(), Ip)
-        }), 0)) : cp.markFrame(pp))
-      }
-      countFpsFrame(pp) {
+      countFpsFrame(QQ) {
         if (this.fpsSpanStartMs < 0) {
           if (!this.shell.inGame()) return;
-          this.fpsSpanStartMs = pp
+          this.fpsSpanStartMs = QQ
         }
         this.fpsFrames++;
-        const ip = pp - this.fpsSpanStartMs;
-        if (!(ip < mL.b)) {
+        const WQ = QQ - this.fpsSpanStartMs;
+        if (!(WQ < dF.c)) {
           if (!document.hidden) {
-            const pp = 1e3 * this.fpsFrames / ip;
-            this.firstSpanFps ??= pp, this.initialFps = this.firstSpanFps, this.fpsOverTime = pp
+            const QQ = 1e3 * this.fpsFrames / WQ;
+            this.firstSpanFps ??= QQ, this.initialFps = this.firstSpanFps, this.fpsOverTime = QQ
           }
-          this.fpsFrames = 0, this.fpsSpanStartMs = pp
+          this.fpsFrames = 0, this.fpsSpanStartMs = QQ
         }
       }
       flush() {
-        const pp = this.followGame(),
+        const QQ = this.followGame(),
           {
-            cpuFrameMs: ip,
-            refreshHz: cp,
-            cpuBottleneck: op,
-            frameIntervalCv: Ip,
-            ...Sp
+            cpuFrameMs: WQ,
+            refreshHz: XQ,
+            cpuBottleneck: qQ,
+            frameIntervalCv: TQ,
+            ...zQ
           } = this.tracker.snapshotAndReset(),
-          xp = this.shell.inGame(),
-          Lp = xp && this.inGameAtLastFlush,
-          Yp = Lp ? Sp : (0, HL.d)(Sp),
-          Dp = this.pacing.snapshotAndReset(Lp);
-        if (this.inGameAtLastFlush = xp, this.pendingLightFailures += this.shell.takeFailedMeshJobs(), !pp || !this.shell.canSend()) return;
-        const Ap = performance.now(),
-          Wp = (0, kL.t)((0, kL.s)(Ap), this.unsentPage),
-          Up = function(pp, ip, cp, op, Ip, Sp, xp, Lp) {
-            var Yp, Dp, Ap, Pp, Wp;
-            const yp = {},
+          sQ = this.shell.inGame(),
+          FQ = sQ && this.inGameAtLastFlush,
+          PQ = FQ ? zQ : (0, DF.f)(zQ),
+          gQ = this.pacing.snapshotAndReset(FQ);
+        if (this.inGameAtLastFlush = sQ, this.pendingLightFailures += this.shell.takeFailedMeshJobs(), !QQ || !this.shell.canSend()) return;
+        const JQ = performance.now(),
+          IQ = (0, vF.v)((0, vF.u)(JQ), this.unsentPage),
+          BQ = function(QQ, WQ, XQ, qQ, TQ, zQ, sQ, FQ) {
+            var PQ, gQ, JQ, rQ, IQ;
+            const jQ = {},
               {
-                canvas: Up
-              } = pp,
-              wp = (0, jL.j)({
-                refreshHz: ip.refreshHz,
-                msaa: pp.msaa(),
-                autoMsaaOff: (0, hL.d)()
+                canvas: BQ
+              } = QQ,
+              yQ = (0, bF.h)({
+                refreshHz: WQ.refreshHz,
+                msaa: QQ.msaa(),
+                autoMsaaOff: (0, kF.e)()
               });
-            for (const vp of (0, wL.c)()) {
-              const tp = vp.name;
-              let Hp;
-              if ((0, vL.x)(tp)) Hp = (0, kL.d)(tp);
-              else if ((0, kL.i)(tp)) Hp = Lp[tp];
-              else if ((0, jL.m)(tp)) Hp = wp[tp];
-              else switch (tp) {
+            for (const VQ of (0, BF.f)()) {
+              const DQ = VQ.name;
+              let pQ;
+              if ((0, yF.B)(DQ)) pQ = (0, vF.e)(DQ);
+              else if ((0, vF.i)(DQ)) pQ = FQ[DQ];
+              else if ((0, bF.l)(DQ)) pQ = yQ[DQ];
+              else switch (DQ) {
                 case "fps":
-                  Hp = op;
+                  pQ = qQ;
                   break;
-                case "ZL":
-                  Hp = Ip;
+                case "HF":
+                  pQ = TQ;
                   break;
-                case "pY":
-                  Hp = (0, fL.y)((0, bL.g)().n);
+                case "cF":
+                  pQ = (0, uF.C)((0, LF.f)().n);
                   break;
-                case "iY":
-                  Hp = Math.max(Up.width, Up.height);
+                case "AF":
+                  pQ = Math.max(BQ.width, BQ.height);
                   break;
-                case "cY":
-                  Hp = Math.min(Up.width, Up.height);
+                case "RF":
+                  pQ = Math.min(BQ.width, BQ.height);
                   break;
-                case "OY":
-                  Hp = navigator.hardwareConcurrency || null;
+                case "EF":
+                  pQ = navigator.hardwareConcurrency || null;
                   break;
-                case "oY":
-                  Hp = (0, pI.getWebGpuSupported)();
+                case "CF":
+                  pQ = (0, Kq.getWebGpuSupported)();
                   break;
-                case "IY":
-                  Hp = null === pp.fallbackReason ? null : FL[pp.fallbackReason];
+                case "uF":
+                  pQ = null === QQ.fallbackReason ? null : tF[QQ.fallbackReason];
                   break;
-                case "SY":
-                  Hp = ip.cpuFrameMs;
+                case "LF":
+                  pQ = WQ.cpuFrameMs;
                   break;
-                case "xY":
-                  Hp = ip.refreshHz;
+                case "kF":
+                  pQ = WQ.refreshHz;
                   break;
-                case "LY":
-                  Hp = ip.cpuBottleneck;
+                case "fF":
+                  pQ = WQ.cpuBottleneck;
                   break;
-                case "YY":
-                  Hp = ip.frameIntervalCv;
+                case "SF":
+                  pQ = WQ.frameIntervalCv;
                   break;
-                case "DY":
-                  Hp = ip.frameMs;
+                case "tF":
+                  pQ = WQ.frameMs;
                   break;
-                case "AY":
-                  Hp = ip.tickMs;
+                case "oF":
+                  pQ = WQ.tickMs;
                   break;
-                case "UY":
-                  Hp = ip.mainBusyShare;
+                case "NF":
+                  pQ = WQ.mainBusyShare;
                   break;
-                case "wY":
-                  Hp = ip.mainProbeDelayMs;
+                case "ZF":
+                  pQ = WQ.mainProbeDelayMs;
                   break;
-                case "PY":
-                  Hp = ip.longAnimationFramesPerMin;
+                case "eF":
+                  pQ = WQ.longAnimationFramesPerMin;
                   break;
-                case "WY":
-                  Hp = ip.longAnimationFrameTimeShare;
+                case "nF":
+                  pQ = WQ.longAnimationFrameTimeShare;
                   break;
-                case "yY":
-                  Hp = ip.longAnimationFrameScriptShare;
+                case "YF":
+                  pQ = WQ.longAnimationFrameScriptShare;
                   break;
-                case "vY":
-                  Hp = ip.gpuPassMs;
+                case "OF":
+                  pQ = WQ.gpuPassMs;
                   break;
-                case "tY":
-                  Hp = ip.gpuSubmitToDoneMs;
+                case "KF":
+                  pQ = WQ.gpuSubmitToDoneMs;
                   break;
-                case "HY":
-                  Hp = cp.lagP50Ms;
+                case "mF":
+                  pQ = XQ.lagP50Ms;
                   break;
-                case "dY":
-                  Hp = cp.lagP90Ms;
+                case "MF":
+                  pQ = XQ.lagP90Ms;
                   break;
-                case "lY":
-                  Hp = (0, UL.l)(Sp);
+                case "JP":
+                  pQ = (0, jF.h)(zQ);
                   break;
-                case "VL":
-                  Hp = xp;
+                case "iF":
+                  pQ = sQ;
                   break;
-                case "eY":
-                case "uY":
-                case "jY":
-                case "kY":
-                case "mY":
-                case "RY":
-                case "qY":
-                case "MY":
-                case "CY":
-                case "EY":
-                case "XY":
-                case "QY":
-                case "JY":
-                case "BY":
-                case "NY":
-                  Hp = null;
+                case "QP":
+                case "WP":
+                case "XP":
+                case "wP":
+                case "qP":
+                case "TP":
+                case "zP":
+                case "sP":
+                case "FP":
+                case "PP":
+                case "gP":
+                case "rP":
+                case "IP":
+                case "jP":
+                case "BP":
+                  pQ = null;
                   break;
-                case "VY":
-                  Hp = (0, pI.getPlatformType)();
+                case "iP":
+                  pQ = (0, Kq.getPlatformType)();
                   break;
-                case "pD":
-                  Hp = (0, pI.getGpuVendor)();
+                case "cP":
+                  pQ = (0, Kq.getGpuVendor)();
                   break;
-                case "iD":
-                  Hp = ML.b[pp.backend];
+                case "AP":
+                  pQ = lF.e[QQ.backend];
                   break;
-                case "cD":
-                  Hp = (0, RL.c)();
+                case "RP":
+                  pQ = (0, HF.c)();
                   break;
-                case "OD":
-                  Hp = (0, pI.getOperatingSystem)();
+                case "EP":
+                  pQ = (0, Kq.getOperatingSystem)();
                   break;
-                case "oD":
-                  Hp = (0, pI.getTrafficSource)();
+                case "CP":
+                  pQ = (0, Kq.getTrafficSource)();
                   break;
-                case "SD":
-                  Hp = null !== (Yp = Op.c.get("gameEntrySource")) && void 0 !== Yp ? Yp : tL.g;
+                case "uP":
+                  pQ = null !== (PQ = wQ.b.get("gameEntrySource")) && void 0 !== PQ ? PQ : VF.g;
                   break;
-                case "xD":
-                  Hp = null !== (Dp = ip.frameLimiter) && void 0 !== Dp ? Dp : tL.g;
+                case "LP":
+                  pQ = null !== (gQ = WQ.frameLimiter) && void 0 !== gQ ? gQ : VF.g;
                   break;
-                case "LD":
-                  Hp = (0, eL.i)();
+                case "kP":
+                  pQ = (0, GF.g)();
                   break;
-                case "YD":
-                  Hp = null !== (Ap = (0, uL.c)()) && void 0 !== Ap ? Ap : tL.g;
+                case "fP":
+                  pQ = null !== (JQ = (0, UF.b)()) && void 0 !== JQ ? JQ : VF.g;
                   break;
-                case "DD":
-                  Hp = (0, eL.e)(Up.width, Up.height);
+                case "SP":
+                  pQ = (0, GF.d)(BQ.width, BQ.height);
                   break;
-                case "AD":
-                  Hp = (0, wL.g)(-(new Date).getTimezoneOffset());
+                case "tP":
+                  pQ = (0, BF.g)(-(new Date).getTimezoneOffset());
                   break;
-                case "yD":
-                  Hp = null !== (Pp = pp.fallbackReason) && void 0 !== Pp ? Pp : tL.g;
+                case "nP":
+                  pQ = null !== (rQ = QQ.fallbackReason) && void 0 !== rQ ? rQ : VF.g;
                   break;
-                case "vD":
-                  Hp = "ready";
+                case "NP":
+                  pQ = "ready";
                   break;
-                case "tD":
-                  Hp = (0, pI.getSoftwareRenderer)();
+                case "ZP":
+                  pQ = (0, Kq.getSoftwareRenderer)();
                   break;
-                case "WD":
-                  Hp = null !== pp.shaderPackReach() ? "true" : "false";
+                case "eP":
+                  pQ = null !== QQ.shaderPackReach() ? "true" : "false";
                   break;
-                case "HD":
-                  Hp = null !== (Wp = pp.shaderPackReach()) && void 0 !== Wp && Wp.sceneDepth ? "true" : "false";
+                case "OP":
+                  pQ = null !== (IQ = QQ.shaderPackReach()) && void 0 !== IQ && IQ.sceneDepth ? "true" : "false";
                   break;
-                case "dD": {
-                  const ip = pp.shaderPackReach();
-                  Hp = null !== ip && void 0 !== ip && ip.sunShadow ? "all" : null !== ip && void 0 !== ip && ip.airShadow ? "air" : "none";
+                case "KP": {
+                  const WQ = QQ.shaderPackReach();
+                  pQ = null !== WQ && void 0 !== WQ && WQ.sunShadow ? "all" : null !== WQ && void 0 !== WQ && WQ.airShadow ? "air" : "none";
                   break
                 }
-                case "eD":
-                  Hp = qL.C;
+                case "mP":
+                  pQ = aF.A;
                   break;
-                case "MD":
-                  Hp = (0, kL.k)();
+                case "Tg":
+                  pQ = (0, vF.l)();
                   break;
-                case "PD": {
-                  const ip = pp.ZU();
-                  Hp = null === ip ? tL.g : String(ip);
+                case "oP": {
+                  const WQ = QQ.HB();
+                  pQ = null === WQ ? VF.g : String(WQ);
                   break
                 }
-                case "UD":
-                case "wD":
-                  Hp = tL.g;
+                case "xP":
+                case "YP":
+                  pQ = VF.g;
                   break;
                 default:
-                  throw new Error(`Unhandled field name: ${tp}`)
+                  throw new Error(`Unhandled field name: ${DQ}`)
               }
-              if (void 0 === Hp) throw new Error(`Metric ${tp} has no value`);
-              yp[tp] = Hp
+              if (void 0 === pQ) throw new Error(`Metric ${DQ} has no value`);
+              jQ[DQ] = pQ
             }
-            return yp
+            return jQ
           }(this.shell, {
-            cpuFrameMs: ip,
-            refreshHz: cp,
-            cpuBottleneck: op,
-            frameIntervalCv: Ip,
-            ...Yp
-          }, Dp, this.fpsOverTime, this.initialFps, this.pendingLightFailures, this.ping.take(), Wp);
-        if (! function(pp, ip, cp) {
-            return (0, ri.e)(), pp(yp.k.Send, ip, cp)
-          }(this.shell.writeCmd, Pp.od, function(pp) {
-            const ip = (0, Np.f)((0, si.d)(pp)),
-              cp = new Uint8Array(yp.Jd.BYTES + ip.length);
-            return new DataView(cp.buffer).setUint16(0, si.c.AnalyticsUpdate, !0), cp.set(ip, yp.Jd.BYTES), cp
-          }(Up))) return this.unsentPage = Wp, void(0 === this.sendsDropped++ && console.warn("[wasm-client] an analytics update found the cmd ring full: dropped"));
-        this.unsentPage = null, this.pendingLightFailures -= Math.min(this.pendingLightFailures, UL.h), (0, kL.q)(Up, "wasm", Ap)
+            cpuFrameMs: WQ,
+            refreshHz: XQ,
+            cpuBottleneck: qQ,
+            frameIntervalCv: TQ,
+            ...PQ
+          }, gQ, this.fpsOverTime, this.initialFps, this.pendingLightFailures, this.ping.take(), IQ);
+        if (! function(QQ, WQ, XQ) {
+            return (0, nW.c)(), QQ(jQ.s.Send, WQ, XQ)
+          }(this.shell.writeCmd, rQ.Ad, function(QQ) {
+            const WQ = (0, uQ.e)((0, NW.e)(QQ)),
+              XQ = new Uint8Array(jQ.le.BYTES + WQ.length);
+            return new DataView(XQ.buffer).setUint16(0, NW.d.AnalyticsUpdate, !0), XQ.set(WQ, jQ.le.BYTES), XQ
+          }(BQ))) return this.unsentPage = IQ, void(0 === this.sendsDropped++ && console.warn("[wasm-client] an analytics update found the cmd ring full: dropped"));
+        this.unsentPage = null, this.pendingLightFailures -= Math.min(this.pendingLightFailures, jF.f), (0, vF.q)(BQ, "wasm", JQ)
       }
     }
-    var rL = cp(39818);
+    var nF = XQ(39887);
 
-    function ZL(pp, ip, cp) {
-      const Op = new Map;
-      return (0, rL.b)(((pp, cp, Op) => ip.tx(pp, cp, Op)), ((ip, cp, op) => {
-        const Ip = `${ip},${cp},${op}`;
-        return Op.has(Ip) || Op.set(Ip, (0, bi.d)(pp, ip, cp, op)), Op.get(Ip)
-      }), cp)
+    function xF(QQ, WQ, XQ) {
+      const wQ = new Map;
+      return (0, nF.b)(((QQ, XQ, wQ) => WQ.ez(QQ, XQ, wQ)), ((WQ, XQ, qQ) => {
+        const TQ = `${WQ},${XQ},${qQ}`;
+        return wQ.has(TQ) || wQ.set(TQ, (0, kW.b)(QQ, WQ, XQ, qQ)), wQ.get(TQ)
+      }), XQ)
     }
-    var zL = cp(39827),
-      sL = cp(41079);
+    var YF = XQ(39893),
+      NF = XQ(41094);
 
-    function KL(pp) {
-      const ip = null !== pp && 0 !== (yp.q.playerFlags(pp.api.apiView, 0) & yp.wd.CursorAim);
-      ip !== (0, sL.n)() && (0, sL.K)(ip, null !== pp)
-    }
-
-    function VL(pp) {
-      return (0, dO.b)(eO.G, pp)
-    }
-    var pY = cp(41248);
-    const iY = new Ip.e((pp => cp(42890)(`./${pp}/${pp}Client`)));
-    let cY = null,
-      OY = null;
-    async function oY(pp) {
-      cY ??= cp.e(27).then((() => cp(39324))).then((pp => {
-        OY = pp.createDefaultClientPlugins
-      }), (pp => {
-        throw cY = null, pp
-      })), await Promise.all([iY.load(pp), cY])
+    function ZF(QQ) {
+      const WQ = null !== QQ && 0 !== (jQ.x.playerFlags(QQ.api.apiView, 0) & jQ.ae.CursorAim);
+      WQ !== (0, NF.l)() && (0, NF.H)(WQ, null !== QQ)
     }
 
-    function IY(pp) {
-      pp.load(new Ni(ZO, new KO))
+    function OF(QQ) {
+      return (0, Vw.c)(Dw.B, QQ)
     }
-    let SY = !1;
-    const xY = new WeakMap;
+    var KF = XQ(41238);
+    const mF = new TQ.c((QQ => XQ(42886)(`./${QQ}/${QQ}Client`)));
+    let MF = null,
+      QP = null;
+    async function WP(QQ) {
+      MF ??= XQ.e(28).then((() => XQ(39421))).then((QQ => {
+        QP = QQ.createDefaultClientPlugins
+      }), (QQ => {
+        throw MF = null, QQ
+      })), await Promise.all([mF.load(QQ), MF])
+    }
 
-    function LY(pp) {
+    function XP(QQ) {
+      QQ.load(new CW(Nw, new Kw))
+    }
+    let wP = !1;
+    const qP = new WeakMap;
+
+    function TP(QQ) {
       try {
-        pp()
-      } catch (ip) {
-        console.error("[bloxd-wasm-client] a session-end step failed", ip)
+        QQ()
+      } catch (WQ) {
+        console.error("[bloxd-wasm-client] a session-end step failed", WQ)
       }
     }
 
-    function YY(pp, ip) {
+    function zP(QQ, WQ) {
       ! function() {
-        var pp, ip;
-        gO.Howler.volume();
-        const cp = gO.Howler;
-        null === (pp = cp._autoResume) || void 0 === pp || pp.call(cp), null === (ip = cp._autoSuspend) || void 0 === ip || ip.call(cp)
-      }(), ip.audio.prepare();
-      const cp = new dp(ip.core, ip.memory, ip.audio);
-      let Ip;
+        var QQ, WQ;
+        nw.Howler.volume();
+        const XQ = nw.Howler;
+        null === (QQ = XQ._autoResume) || void 0 === QQ || QQ.call(XQ), null === (WQ = XQ._autoSuspend) || void 0 === WQ || WQ.call(XQ)
+      }(), WQ.audio.prepare();
+      const XQ = new GQ(WQ.core, WQ.memory, WQ.audio);
+      let TQ;
       try {
-        Ip = new Ho(cp, ip.options)
-      } catch (Pp) {
-        return pp.crash(uo.u, Pp), null
-      }(0, Lp.f)(eo(cp, Ip));
-      const Dp = new Xx({
-        running: pp,
-        api: cp,
-        core: ip.core,
-        memory: ip.memory,
-        staleOr: ip.staleOr,
-        reportFault: ip.reportReplayFault,
-        options: ip.options,
-        sessionInfo: ip.sessionInfo,
-        replayShaderPack: ip.replayShaderPack
+        TQ = new Dq(XQ, WQ.options)
+      } catch (rQ) {
+        return QQ.crash(Gq.D, rQ), null
+      }(0, FQ.f)(pq(XQ, TQ));
+      const gQ = new cs({
+        running: QQ,
+        api: XQ,
+        core: WQ.core,
+        memory: WQ.memory,
+        staleOr: WQ.staleOr,
+        reportFault: WQ.reportReplayFault,
+        options: WQ.options,
+        sessionInfo: WQ.sessionInfo,
+        replayShaderPack: WQ.replayShaderPack
       });
-      (0, SO.y)();
-      const Ap = new fO({
-        api: cp,
-        tables: Ip,
-        sessionInfo: ip.sessionInfo,
-        gameFactory: pp => iY.loadedFactory(pp),
-        defaultPlugins: (pp, ip, cp, Op) => {
-          if (null === OY) throw new Error("The default plugins started before they loaded");
-          return OY(pp, ip, cp, Op)
+      (0, ww.y)();
+      const JQ = new kw({
+        api: XQ,
+        tables: TQ,
+        sessionInfo: WQ.sessionInfo,
+        gameFactory: QQ => mF.loadedFactory(QQ),
+        defaultPlugins: (QQ, WQ, XQ, wQ) => {
+          if (null === QP) throw new Error("The default plugins started before they loaded");
+          return QP(QQ, WQ, XQ, wQ)
         },
-        serverOptions: ip.options,
-        onNetEvent: pp => {
-          Dp.netEvent(pp), ip.onNetEvent(pp)
+        serverOptions: WQ.options,
+        onNetEvent: QQ => {
+          gQ.netEvent(QQ), WQ.onNetEvent(QQ)
         },
-        setLocalOptions: ip => {
-          Qx(pp, {
-            changes: ip,
+        setLocalOptions: WQ => {
+          Rs(QQ, {
+            changes: WQ,
             reset: !1
           })
         },
-        playSound: (pp, cp, Op, op, Ip, Sp, xp) => ip.audio.playGame(pp, cp, Op, op, Ip, Sp, xp),
-        preloadSounds: pp => {
-          ip.audio.preload(function(pp) {
-            const ip = [];
-            for (const cp of pp) {
-              const pp = Ji(cp);
-              pp >= 0 && ip.push(di[pp])
+        playSound: (QQ, XQ, wQ, qQ, TQ, zQ, sQ) => WQ.audio.playGame(QQ, XQ, wQ, qQ, TQ, zQ, sQ),
+        preloadSounds: QQ => {
+          WQ.audio.preload(function(QQ) {
+            const WQ = [];
+            for (const XQ of QQ) {
+              const QQ = RW(XQ);
+              QQ >= 0 && WQ.push(DW[QQ])
             }
-            return ip
-          }(pp))
+            return WQ
+          }(QQ))
         },
         onSessionEnd: () => {
-          LY(op.n), LY(Io), LY((() => {
-            Op.c.set({
+          TP(qQ.m), TP(qq), TP((() => {
+            wQ.b.set({
               openInGameMenuName: null
             })
-          })), LY((() => {
-            ip.audio.endSession()
+          })), TP((() => {
+            WQ.audio.endSession()
           }))
         },
-        beforeWrite: ip.beforeWrite,
-        beforeOp: ip.beforeOp,
-        cameraScreen: oo,
-        showCameraFacing: So,
-        onEventOverflow: ip.onEventOverflow,
-        screenBandY: xp.k,
-        replayEntities: Dp.entityHooks,
-        hasPackModel: ip.hasPackModel
+        beforeWrite: WQ.beforeWrite,
+        beforeOp: WQ.beforeOp,
+        cameraScreen: wq,
+        showCameraFacing: Tq,
+        onEventOverflow: WQ.onEventOverflow,
+        screenBandY: sQ.k,
+        replayEntities: gQ.entityHooks,
+        hasPackModel: WQ.hasPackModel
       });
-      return Ap.attach(pp), xY.set(Ap, Dp), nO(Ap.items, ip.audio),
-        function(pp) {
-          pp.setClientFreeCameraGrant("isDev", !1);
-          const ip = ip => {
-            pp.setClientFreeCameraGrant("hasDeveloperRank", ip.playerHasRank("developer"))
+      return JQ.attach(QQ), qP.set(JQ, gQ), ow(JQ.items, WQ.audio),
+        function(QQ) {
+          QQ.setClientFreeCameraGrant("isDev", !1);
+          const WQ = WQ => {
+            QQ.setClientFreeCameraGrant("hasDeveloperRank", WQ.playerHasRank("developer"))
           };
-          (0, Sp.n)("userContextUpdated", ip)
-        }(Ap), SY || (SY = !0, (0, Sp.n)("appManagerUpdated|openInGameMenuName", (pp => {
-          !pp && (0, Yp.q)().includes(Yp.c) && (0, Yp.r)(Yp.c)
-        }))), Ap
+          (0, zQ.o)("userContextUpdated", WQ)
+        }(JQ), wP || (wP = !0, (0, zQ.o)("appManagerUpdated|openInGameMenuName", (QQ => {
+          !QQ && (0, PQ.u)().includes(PQ.e) && (0, PQ.y)(PQ.e)
+        }))), JQ
     }
 
-    function DY(pp) {
+    function sP(QQ) {
       try {
-        pp.closeGame()
+        QQ.closeGame()
       } finally {
-        var ip;
-        null === (ip = xY.get(pp)) || void 0 === ip || ip.stop(), xY.delete(pp)
+        var WQ;
+        null === (WQ = qP.get(QQ)) || void 0 === WQ || WQ.stop(), qP.delete(QQ)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

@@ -1,1140 +1,1164 @@
 export const id = 230;
 export const ids = [230];
 export const modules = {
-  38690: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => yp
-    });
-    var Op = cp(195),
-      op = cp(37861);
-    const Ip = 1.2,
-      Sp = {
-        poseRig: "golem",
-        physicsBodyDimensions: {
-          width: .5,
-          height: 2.5
-        },
-        hitBoxDimensions: {
-          width: 2.2,
-          height: 2.8
-        },
-        eyeHeight: 2.3,
-        rideHeight: 2.3,
-        Gx: .5,
-        bip: !1
-      },
-      xp = {
-        physicsBodyDimensions: {
-          width: .5,
-          height: 2.5
-        },
-        hitBoxDimensions: {
-          width: 1.8,
-          height: 2.6
-        },
-        eyeHeight: 2.3,
-        rideHeight: 2.3,
-        Gx: .5,
-        bip: !1
-      },
-      Lp = {
-        physicsBodyDimensions: {
-          width: Op.g.Kw,
-          height: Op.g.Vw
-        },
-        hitBoxDimensions: {
-          width: Op.g.Kw + .4,
-          height: Op.g.Vw + .6
-        },
-        eyeHeight: Op.g.Vw * Op.g.playerEyeToHeightRatio,
-        rideHeight: Op.g.Vw - .3,
-        Gx: .5,
-        bip: !1
-      },
-      Yp = {
-        physicsBodyDimensions: {
-          width: .5,
-          height: .95
-        },
-        hitBoxDimensions: {
-          width: 1.6,
-          height: 1.1
-        },
-        eyeHeight: .9,
-        rideHeight: .5,
-        Gx: .5,
-        bip: !1
-      },
-      Dp = {
-        physicsBodyDimensions: {
-          width: .5,
-          height: 1.8
-        },
-        hitBoxDimensions: {
-          width: 1.7,
-          height: 1.9
-        },
-        eyeHeight: 1.3,
-        rideHeight: 1.3,
-        Gx: .5,
-        bip: !1
-      },
-      Ap = {
-        physicsBodyDimensions: {
-          width: .5,
-          height: 1.9
-        },
-        hitBoxDimensions: {
-          width: 1.5,
-          height: 2.1
-        },
-        eyeHeight: 1.9,
-        rideHeight: 1,
-        Gx: .5,
-        bip: !1
-      },
-      Pp = {
-        physicsBodyDimensions: {
-          width: .5,
-          height: 1.9
-        },
-        hitBoxDimensions: {
-          width: 1.5,
-          height: 2.4
-        },
-        eyeHeight: 2,
-        rideHeight: 1.8,
-        Gx: .5,
-        bip: !1
-      },
-      Wp = {
-        Player: {
-          defaultName: "Player",
-          physicsBodyDimensions: {
-            width: Op.g.Kw,
-            height: Op.g.Vw
-          },
-          hitBoxDimensions: {
-            width: Op.g.Kw + .4,
-            height: Op.g.Vw + .6
-          },
-          eyeHeight: Op.g.Vw * Op.g.playerEyeToHeightRatio,
-          rideHeight: Op.g.Vw - .1,
-          Gx: op.f.Gx,
-          bip: !0
-        },
-        Pig: {
-          poseNameRise: {
-            sitting: 1.4
-          },
-          physicsBodyDimensions: {
-            width: .5,
-            height: .8
-          },
-          hitBoxDimensions: {
-            width: 1.5,
-            height: 1.2
-          },
-          eyeHeight: .8,
-          rideHeight: .5,
-          Gx: .5,
-          bip: !1
-        },
-        Cow: {
-          physicsBodyDimensions: {
-            width: .5,
-            height: 1.1
-          },
-          hitBoxDimensions: {
-            width: 1.6,
-            height: 1.4
-          },
-          eyeHeight: 1.2,
-          rideHeight: 1,
-          Gx: .5,
-          bip: !1
-        },
-        Sheep: {
-          physicsBodyDimensions: {
-            width: .5,
-            height: 1.1
-          },
-          hitBoxDimensions: {
-            width: 1.6,
-            height: 1.3
-          },
-          eyeHeight: 1.2,
-          rideHeight: .8,
-          Gx: .5,
-          bip: !1
-        },
-        Horse: {
-          physicsBodyDimensions: {
-            width: .5,
-            height: 1.9
-          },
-          hitBoxDimensions: {
-            width: 1.5,
-            height: 2.1
-          },
-          eyeHeight: 1.9,
-          rideHeight: .9,
-          Gx: .5,
-          bip: !1
-        },
-        Camel: {
-          modelScale: Ip,
-          physicsBodyDimensions: {
-            width: .6,
-            height: 2.52
-          },
-          hitBoxDimensions: {
-            width: 1.92,
-            height: 2.76
-          },
-          eyeHeight: 2.52,
-          rideHeight: 1.7999999999999998,
-          Gx: .5,
-          bip: !1
-        },
-        Slime: {
-          physicsBodyDimensions: {
-            width: .6,
-            height: .8
-          },
-          hitBoxDimensions: {
-            width: 1,
-            height: .9
-          },
-          eyeHeight: .5,
-          rideHeight: .5,
-          Gx: .5,
-          bip: !1
-        },
-        "Cave Golem": Sp,
-        "Draugr Zombie": {
-          ...Lp,
-          defaultPose: "zombie"
-        },
-        "Draugr Skeleton": Lp,
-        "Frost Golem": Sp,
-        "Frost Zombie": {
-          ...Lp,
-          defaultPose: "zombie"
-        },
-        "Frost Skeleton": Lp,
-        "Draugr Knight": {
-          physicsBodyDimensions: {
-            width: Op.g.Kw,
-            height: Op.g.Vw
-          },
-          hitBoxDimensions: {
-            width: Op.g.Kw + .4,
-            height: 2.8
-          },
-          eyeHeight: 1.9,
-          rideHeight: 1.8,
-          Gx: .5,
-          bip: !1
-        },
-        Wolf: Yp,
-        Bear: Dp,
-        Deer: {
-          physicsBodyDimensions: {
-            width: .5,
-            height: 1.9
-          },
-          hitBoxDimensions: {
-            width: 1.5,
-            height: 2.1
-          },
-          eyeHeight: 1.8,
-          rideHeight: .8,
-          Gx: .5,
-          bip: !1
-        },
-        Stag: Ap,
-        "Gold Watermelon Stag": {
-          physicsBodyDimensions: {
-            width: .5,
-            height: 1.9
-          },
-          hitBoxDimensions: {
-            width: 1.5,
-            height: 2.1
-          },
-          eyeHeight: 1.9,
-          rideHeight: 1,
-          Gx: .5,
-          bip: !1
-        },
-        Gorilla: Pp,
-        Wildcat: {
-          physicsBodyDimensions: {
-            width: .5,
-            height: .7
-          },
-          hitBoxDimensions: {
-            width: 1.5,
-            height: .7
-          },
-          eyeHeight: .55,
-          rideHeight: .4,
-          Gx: .5,
-          bip: !1
-        },
-        "Draugr Huntress": Lp,
-        "Magma Golem": Sp,
-        "Spirit Golem": Sp,
-        "Spirit Wolf": Yp,
-        "Spirit Bear": Dp,
-        "Spirit Stag": Ap,
-        "Spirit Gorilla": Pp,
-        "Draugr Warper": {
-          physicsBodyDimensions: {
-            width: .5,
-            height: 2.5
-          },
-          hitBoxDimensions: {
-            width: .6,
-            height: 3
-          },
-          eyeHeight: 2.4,
-          rideHeight: 2.8,
-          Gx: .5,
-          bip: !1
-        },
-        "Frost Wraith": {
-          poseRig: "wraith",
-          physicsBodyDimensions: {
-            width: .5,
-            height: 2.7
-          },
-          hitBoxDimensions: {
-            width: .6,
-            height: 2.8
-          },
-          eyeHeight: 2.3,
-          rideHeight: 2.6,
-          Gx: .5,
-          bip: !1
-        },
-        "Draugr Reaver": {
-          physicsBodyDimensions: {
-            width: .5,
-            height: 2.6
-          },
-          hitBoxDimensions: {
-            width: .6,
-            height: 2.7
-          },
-          eyeHeight: 2.2,
-          rideHeight: 2.5,
-          Gx: .5,
-          bip: !1
-        },
-        NPC: {
-          physicsBodyDimensions: {
-            width: Op.g.Kw,
-            height: Op.g.Vw
-          },
-          hitBoxDimensions: {
-            width: Op.g.Kw + .4,
-            height: Op.g.Vw + .6
-          },
-          eyeHeight: Op.g.Vw * Op.g.playerEyeToHeightRatio,
-          rideHeight: Op.g.Vw - .1,
-          Gx: .5,
-          bip: !1
-        },
-        67: {
-          physicsBodyDimensions: {
-            width: .5,
-            height: 2.5
-          },
-          hitBoxDimensions: {
-            width: 3,
-            height: 2.5
-          },
-          eyeHeight: 1.9,
-          rideHeight: 2.5,
-          Gx: .5,
-          bip: !1
-        },
-        "Bobino Musculino": {
-          physicsBodyDimensions: {
-            width: Op.g.Kw,
-            height: Op.g.Vw
-          },
-          hitBoxDimensions: {
-            width: Op.g.Kw + .4,
-            height: Op.g.Vw + .6
-          },
-          eyeHeight: Op.g.Vw * Op.g.playerEyeToHeightRatio,
-          rideHeight: Op.g.Vw - .1,
-          Gx: .5,
-          bip: !1
-        },
-        "Capitano Explovissimo": {
-          physicsBodyDimensions: {
-            width: .5,
-            height: 1.8
-          },
-          hitBoxDimensions: {
-            width: .5,
-            height: 2.5
-          },
-          eyeHeight: 1.5,
-          rideHeight: 2,
-          Gx: .5,
-          bip: !1
-        },
-        "Desert Fennec": {
-          physicsBodyDimensions: {
-            width: .4,
-            height: .8
-          },
-          hitBoxDimensions: {
-            width: .8,
-            height: .8
-          },
-          eyeHeight: .65,
-          rideHeight: .6,
-          Gx: .5,
-          bip: !1
-        },
-        "Armour Collector": {
-          physicsBodyDimensions: {
-            width: 1,
-            height: 3.5
-          },
-          hitBoxDimensions: {
-            width: 2,
-            height: 3.7
-          },
-          eyeHeight: 3.1,
-          rideHeight: 3.6,
-          Gx: .5,
-          bip: !1
-        },
-        "Furnace Knight": {
-          physicsBodyDimensions: {
-            width: .8,
-            height: 2.4
-          },
-          hitBoxDimensions: {
-            width: 1.6,
-            height: 2.5
-          },
-          eyeHeight: 2,
-          rideHeight: 2.45,
-          Gx: .5,
-          bip: !1
-        },
-        "Lil Knight": {
-          physicsBodyDimensions: {
-            width: .8,
-            height: 2.4
-          },
-          hitBoxDimensions: {
-            width: 1.6,
-            height: 2.55
-          },
-          eyeHeight: 2,
-          rideHeight: 2.5,
-          Gx: .5,
-          bip: !1
-        },
-        "Glass Gremlin": {
-          physicsBodyDimensions: {
-            width: .6,
-            height: 2.5
-          },
-          hitBoxDimensions: {
-            width: 1,
-            height: 2.6
-          },
-          eyeHeight: 2.2,
-          rideHeight: 2.55,
-          Gx: .5,
-          bip: !1
-        },
-        "Glass Bro": {
-          physicsBodyDimensions: {
-            width: .8,
-            height: 2.1
-          },
-          hitBoxDimensions: {
-            width: 1.3,
-            height: 2.2
-          },
-          eyeHeight: 1.8,
-          rideHeight: 2.1,
-          Gx: .5,
-          bip: !1
-        },
-        "Lord Vulcan": {
-          physicsBodyDimensions: {
-            width: 1.2,
-            height: 5.4
-          },
-          hitBoxDimensions: {
-            width: 2.4,
-            height: 5.4
-          },
-          eyeHeight: 4.1,
-          rideHeight: 5.4,
-          Gx: .5,
-          bip: !1
-        },
-        Zombie: {
-          ...Lp,
-          defaultPose: "zombie"
-        },
-        Skeleton: Lp,
-        Mummy: {
-          ...Lp,
-          defaultPose: "zombie"
-        },
-        Scorpion: {
-          physicsBodyDimensions: {
-            width: 1,
-            height: .9
-          },
-          hitBoxDimensions: {
-            width: 1.6,
-            height: 1.4
-          },
-          eyeHeight: .6,
-          rideHeight: .9,
-          Gx: .5,
-          bip: !1
-        },
-        Vulcanite: {
-          physicsBodyDimensions: {
-            width: .8,
-            height: 2
-          },
-          hitBoxDimensions: {
-            width: 1.3,
-            height: 2.1
-          },
-          eyeHeight: 1.6,
-          rideHeight: 2.1,
-          Gx: .5,
-          bip: !1
-        },
-        "Evil Tome": {
-          physicsBodyDimensions: {
-            width: .6,
-            height: .9
-          },
-          hitBoxDimensions: {
-            width: .9,
-            height: .95
-          },
-          eyeHeight: .6,
-          rideHeight: .95,
-          Gx: .5,
-          bip: !1
-        },
-        "Magma Toad": {
-          physicsBodyDimensions: {
-            width: 1,
-            height: 1
-          },
-          hitBoxDimensions: {
-            width: 1.5,
-            height: 1.15
-          },
-          eyeHeight: 1,
-          rideHeight: 1.1,
-          Gx: .5,
-          bip: !1
-        },
-        Stalker: {
-          physicsBodyDimensions: {
-            width: .5,
-            height: 2.6
-          },
-          hitBoxDimensions: {
-            width: .6,
-            height: 2.9
-          },
-          eyeHeight: 2.4,
-          rideHeight: 2.5,
-          Gx: .5,
-          bip: !1
-        },
-        Crone: {
-          turnRate: 1.2,
-          physicsBodyDimensions: {
-            width: .6,
-            height: 2.9
-          },
-          hitBoxDimensions: {
-            width: .7,
-            height: 3.2
-          },
-          eyeHeight: 2.7,
-          rideHeight: 2.8,
-          Gx: .5,
-          bip: !1
-        },
-        "Iron Guardian": xp,
-        "Gold Guardian": xp,
-        "Diamond Guardian": xp,
-        "Moonstone Guardian": xp,
-        "Iron Goofy Golem": xp,
-        "Gold Goofy Golem": xp,
-        "Diamond Goofy Golem": xp,
-        "Moonstone Goofy Golem": xp,
-        "Tiki Terror": {
-          poseRig: "tiki",
-          physicsBodyDimensions: {
-            width: 1,
-            height: 4.3
-          },
-          hitBoxDimensions: {
-            width: 2.4,
-            height: 4.5
-          },
-          eyeHeight: 3.9,
-          rideHeight: 4.3,
-          Gx: .5,
-          bip: !1
-        }
-      };
-
-    function yp(pp) {
-      return Wp[pp]
+  36942: QQ => {
+    QQ.exports = {
+      aliceblue: [240, 248, 255],
+      antiquewhite: [250, 235, 215],
+      aqua: [0, 255, 255],
+      aquamarine: [127, 255, 212],
+      azure: [240, 255, 255],
+      beige: [245, 245, 220],
+      bisque: [255, 228, 196],
+      black: [0, 0, 0],
+      blanchedalmond: [255, 235, 205],
+      blue: [0, 0, 255],
+      blueviolet: [138, 43, 226],
+      brown: [165, 42, 42],
+      burlywood: [222, 184, 135],
+      cadetblue: [95, 158, 160],
+      chartreuse: [127, 255, 0],
+      chocolate: [210, 105, 30],
+      coral: [255, 127, 80],
+      cornflowerblue: [100, 149, 237],
+      cornsilk: [255, 248, 220],
+      crimson: [220, 20, 60],
+      cyan: [0, 255, 255],
+      darkblue: [0, 0, 139],
+      darkcyan: [0, 139, 139],
+      darkgoldenrod: [184, 134, 11],
+      darkgray: [169, 169, 169],
+      darkgreen: [0, 100, 0],
+      darkgrey: [169, 169, 169],
+      darkkhaki: [189, 183, 107],
+      darkmagenta: [139, 0, 139],
+      darkolivegreen: [85, 107, 47],
+      darkorange: [255, 140, 0],
+      darkorchid: [153, 50, 204],
+      darkred: [139, 0, 0],
+      darksalmon: [233, 150, 122],
+      darkseagreen: [143, 188, 143],
+      darkslateblue: [72, 61, 139],
+      darkslategray: [47, 79, 79],
+      darkslategrey: [47, 79, 79],
+      darkturquoise: [0, 206, 209],
+      darkviolet: [148, 0, 211],
+      deeppink: [255, 20, 147],
+      deepskyblue: [0, 191, 255],
+      dimgray: [105, 105, 105],
+      dimgrey: [105, 105, 105],
+      dodgerblue: [30, 144, 255],
+      firebrick: [178, 34, 34],
+      floralwhite: [255, 250, 240],
+      forestgreen: [34, 139, 34],
+      fuchsia: [255, 0, 255],
+      gainsboro: [220, 220, 220],
+      ghostwhite: [248, 248, 255],
+      gold: [255, 215, 0],
+      goldenrod: [218, 165, 32],
+      gray: [128, 128, 128],
+      green: [0, 128, 0],
+      greenyellow: [173, 255, 47],
+      grey: [128, 128, 128],
+      honeydew: [240, 255, 240],
+      hotpink: [255, 105, 180],
+      indianred: [205, 92, 92],
+      indigo: [75, 0, 130],
+      ivory: [255, 255, 240],
+      khaki: [240, 230, 140],
+      lavender: [230, 230, 250],
+      lavenderblush: [255, 240, 245],
+      lawngreen: [124, 252, 0],
+      lemonchiffon: [255, 250, 205],
+      lightblue: [173, 216, 230],
+      lightcoral: [240, 128, 128],
+      lightcyan: [224, 255, 255],
+      lightgoldenrodyellow: [250, 250, 210],
+      lightgray: [211, 211, 211],
+      lightgreen: [144, 238, 144],
+      lightgrey: [211, 211, 211],
+      lightpink: [255, 182, 193],
+      lightsalmon: [255, 160, 122],
+      lightseagreen: [32, 178, 170],
+      lightskyblue: [135, 206, 250],
+      lightslategray: [119, 136, 153],
+      lightslategrey: [119, 136, 153],
+      lightsteelblue: [176, 196, 222],
+      lightyellow: [255, 255, 224],
+      lime: [0, 255, 0],
+      limegreen: [50, 205, 50],
+      linen: [250, 240, 230],
+      magenta: [255, 0, 255],
+      maroon: [128, 0, 0],
+      mediumaquamarine: [102, 205, 170],
+      mediumblue: [0, 0, 205],
+      mediumorchid: [186, 85, 211],
+      mediumpurple: [147, 112, 219],
+      mediumseagreen: [60, 179, 113],
+      mediumslateblue: [123, 104, 238],
+      mediumspringgreen: [0, 250, 154],
+      mediumturquoise: [72, 209, 204],
+      mediumvioletred: [199, 21, 133],
+      midnightblue: [25, 25, 112],
+      mintcream: [245, 255, 250],
+      mistyrose: [255, 228, 225],
+      moccasin: [255, 228, 181],
+      navajowhite: [255, 222, 173],
+      navy: [0, 0, 128],
+      oldlace: [253, 245, 230],
+      olive: [128, 128, 0],
+      olivedrab: [107, 142, 35],
+      orange: [255, 165, 0],
+      orangered: [255, 69, 0],
+      orchid: [218, 112, 214],
+      palegoldenrod: [238, 232, 170],
+      palegreen: [152, 251, 152],
+      paleturquoise: [175, 238, 238],
+      palevioletred: [219, 112, 147],
+      papayawhip: [255, 239, 213],
+      peachpuff: [255, 218, 185],
+      peru: [205, 133, 63],
+      pink: [255, 192, 203],
+      plum: [221, 160, 221],
+      powderblue: [176, 224, 230],
+      purple: [128, 0, 128],
+      rebeccapurple: [102, 51, 153],
+      red: [255, 0, 0],
+      rosybrown: [188, 143, 143],
+      royalblue: [65, 105, 225],
+      saddlebrown: [139, 69, 19],
+      salmon: [250, 128, 114],
+      sandybrown: [244, 164, 96],
+      seagreen: [46, 139, 87],
+      seashell: [255, 245, 238],
+      sienna: [160, 82, 45],
+      silver: [192, 192, 192],
+      skyblue: [135, 206, 235],
+      slateblue: [106, 90, 205],
+      slategray: [112, 128, 144],
+      slategrey: [112, 128, 144],
+      snow: [255, 250, 250],
+      springgreen: [0, 255, 127],
+      steelblue: [70, 130, 180],
+      tan: [210, 180, 140],
+      teal: [0, 128, 128],
+      thistle: [216, 191, 216],
+      tomato: [255, 99, 71],
+      turquoise: [64, 224, 208],
+      violet: [238, 130, 238],
+      wheat: [245, 222, 179],
+      white: [255, 255, 255],
+      whitesmoke: [245, 245, 245],
+      yellow: [255, 255, 0],
+      yellowgreen: [154, 205, 50]
     }
   },
-  37286: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Op
-    });
-    const Op = {
-      "skyblock:forged:astral-astral-astral": {
-        name: "Heart of the Cosmos",
-        lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
-        damageMultiplier: 1.8,
-        cooldownMultiplier: .8,
-        ability: "starfall"
-      },
-      "skyblock:forged:astral-moonstone-sanguine": {
-        name: "Eclipse Edge",
-        lore: "Moonlight over starlight over blood: the sky goes dark wherever it is drawn.",
-        damageMultiplier: 1.7,
-        cooldownMultiplier: .81,
-        ability: "eclipseField"
-      },
-      "skyblock:forged:astral-diamond-moonstone": {
-        name: "Starcutter",
-        lore: "A blade so sharp the Forge Mother swears it once cut a falling star in two.",
-        damageMultiplier: 1.65,
-        cooldownMultiplier: .83,
-        ability: "starfall"
-      },
-      "skyblock:forged:astral-sanguine-magmasteel": {
-        name: "Triune Flame",
-        lore: "Each of Lord Vulcan's three faces, bound into one burning edge.",
-        damageMultiplier: 1.65,
-        cooldownMultiplier: .83,
-        ability: "magmaWave"
-      },
-      "skyblock:forged:magmasteel-magmasteel-magmasteel": {
-        name: "Vulcan's Bane",
-        lore: "Forged in the heat of his own rift. It remembers the way down.",
-        damageMultiplier: 1.56,
-        cooldownMultiplier: .83,
-        ability: "magmaWave"
-      },
-      "skyblock:forged:magmasteel-astral-sanguine": {
-        name: "Comet's Wake",
-        lore: "It leaves a trail of fire through the air, like something falling from very far up.",
-        damageMultiplier: 1.56,
-        cooldownMultiplier: .83,
-        ability: "starfall"
-      },
-      "skyblock:forged:magmasteel-sanguine-astral": {
-        name: "Vulcan's Ruin",
-        lore: "The Forge Mother made only one, then sat down for a long while.",
-        damageMultiplier: 1.6,
-        cooldownMultiplier: .83,
-        ability: "warcry"
-      },
-      "skyblock:forged:magmasteel-iron-stone": {
-        name: "Forgehand",
-        lore: "A smith's sword: plain to look at, and it hits like a hammer.",
-        damageMultiplier: 1.4,
-        cooldownMultiplier: .9,
-        ability: "quake"
-      },
-      "skyblock:forged:sanguine-sanguine-sanguine": {
-        name: "Crimson Covenant",
-        lore: "It drinks, and so do you.",
-        damageMultiplier: 1.53,
-        cooldownMultiplier: .83,
-        ability: "bloodPact"
-      },
-      "skyblock:forged:sanguine-astral-moonstone": {
-        name: "Nightbloom",
-        lore: "A red flower that only opens after dark.",
-        damageMultiplier: 1.56,
-        cooldownMultiplier: .83,
-        ability: "eclipseField"
-      },
-      "skyblock:forged:sanguine-iron-wood": {
-        name: "Butcher's Oath",
-        lore: "Heavy, honest and always hungry.",
-        damageMultiplier: 1.35,
-        cooldownMultiplier: .95,
-        ability: "bloodPact"
-      },
-      "skyblock:forged:moonstone-moonstone-moonstone": {
-        name: "Lunar Requiem",
-        lore: "Swung, it leaves a pale arc that lingers like a second moon.",
-        damageMultiplier: 1.35,
-        cooldownMultiplier: .85,
-        ability: "moonDash"
-      },
-      "skyblock:forged:moonstone-astral-moonstone": {
-        name: "Silver Tide",
-        lore: "Pulled by the same moon that pulls the sea.",
-        damageMultiplier: 1.4,
-        cooldownMultiplier: .84,
-        ability: "moonDash"
-      },
-      "skyblock:forged:diamond-diamond-diamond": {
-        name: "Prism Fang",
-        lore: "Every facet catches a different light, and every strike finds a different weakness.",
-        damageMultiplier: 1.29,
-        cooldownMultiplier: .88,
-        ability: "gildedEdge",
-        traits: {
-          crit: 1.8
+  36939: (QQ, WQ, XQ) => {
+    var wQ = XQ(36942),
+      qQ = XQ(36948),
+      TQ = Object.hasOwnProperty,
+      zQ = Object.create(null);
+    for (var sQ in wQ) TQ.call(wQ, sQ) && (zQ[wQ[sQ]] = sQ);
+    var FQ = QQ.exports = {
+      to: {},
+      get: {}
+    };
+
+    function PQ(QQ, WQ, XQ) {
+      return Math.min(Math.max(WQ, QQ), XQ)
+    }
+
+    function gQ(QQ) {
+      var WQ = Math.round(QQ).toString(16).toUpperCase();
+      return WQ.length < 2 ? "0" + WQ : WQ
+    }
+    FQ.get = function(QQ) {
+      var WQ, XQ;
+      switch (QQ.substring(0, 3).toLowerCase()) {
+        case "hsl":
+          WQ = FQ.get.hsl(QQ), XQ = "hsl";
+          break;
+        case "hwb":
+          WQ = FQ.get.hwb(QQ), XQ = "hwb";
+          break;
+        default:
+          WQ = FQ.get.rgb(QQ), XQ = "rgb"
+      }
+      return WQ ? {
+        model: XQ,
+        value: WQ
+      } : null
+    }, FQ.get.rgb = function(QQ) {
+      if (!QQ) return null;
+      var WQ, XQ, qQ, zQ = [0, 0, 0, 1];
+      if (WQ = QQ.match(/^#([a-f0-9]{6})([a-f0-9]{2})?$/i)) {
+        for (qQ = WQ[2], WQ = WQ[1], XQ = 0; XQ < 3; XQ++) {
+          var sQ = 2 * XQ;
+          zQ[XQ] = parseInt(WQ.slice(sQ, sQ + 2), 16)
         }
-      },
-      "skyblock:forged:diamond-moonstone-gold": {
-        name: "Jeweller's Pride",
-        lore: "Too pretty to fight with. Fight with it anyway.",
-        damageMultiplier: 1.24,
-        cooldownMultiplier: .91,
-        ability: "gildedEdge"
-      },
-      "skyblock:forged:gold-gold-gold": {
-        name: "King's Ransom",
-        lore: "Worth more than the treasure it guards.",
-        damageMultiplier: 1.18,
-        cooldownMultiplier: .91,
-        ability: "gildedEdge",
-        traits: {
-          coins: 2.5
+        qQ && (zQ[3] = parseInt(qQ, 16) / 255)
+      } else if (WQ = QQ.match(/^#([a-f0-9]{3,4})$/i)) {
+        for (qQ = (WQ = WQ[1])[3], XQ = 0; XQ < 3; XQ++) zQ[XQ] = parseInt(WQ[XQ] + WQ[XQ], 16);
+        qQ && (zQ[3] = parseInt(qQ + qQ, 16) / 255)
+      } else if (WQ = QQ.match(/^rgba?\(\s*([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/)) {
+        for (XQ = 0; XQ < 3; XQ++) zQ[XQ] = parseInt(WQ[XQ + 1], 0);
+        WQ[4] && (WQ[5] ? zQ[3] = .01 * parseFloat(WQ[4]) : zQ[3] = parseFloat(WQ[4]))
+      } else {
+        if (!(WQ = QQ.match(/^rgba?\(\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/))) return (WQ = QQ.match(/^(\w+)$/)) ? "transparent" === WQ[1] ? [0, 0, 0, 0] : TQ.call(wQ, WQ[1]) ? ((zQ = wQ[WQ[1]])[3] = 1, zQ) : null : null;
+        for (XQ = 0; XQ < 3; XQ++) zQ[XQ] = Math.round(2.55 * parseFloat(WQ[XQ + 1]));
+        WQ[4] && (WQ[5] ? zQ[3] = .01 * parseFloat(WQ[4]) : zQ[3] = parseFloat(WQ[4]))
+      }
+      for (XQ = 0; XQ < 3; XQ++) zQ[XQ] = PQ(zQ[XQ], 0, 255);
+      return zQ[3] = PQ(zQ[3], 0, 1), zQ
+    }, FQ.get.hsl = function(QQ) {
+      if (!QQ) return null;
+      var WQ = QQ.match(/^hsla?\(\s*([+-]?(?:\d{0,3}\.)?\d+)(?:deg)?\s*,?\s*([+-]?[\d\.]+)%\s*,?\s*([+-]?[\d\.]+)%\s*(?:[,|\/]\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
+      if (WQ) {
+        var XQ = parseFloat(WQ[4]);
+        return [(parseFloat(WQ[1]) % 360 + 360) % 360, PQ(parseFloat(WQ[2]), 0, 100), PQ(parseFloat(WQ[3]), 0, 100), PQ(isNaN(XQ) ? 1 : XQ, 0, 1)]
+      }
+      return null
+    }, FQ.get.hwb = function(QQ) {
+      if (!QQ) return null;
+      var WQ = QQ.match(/^hwb\(\s*([+-]?\d{0,3}(?:\.\d+)?)(?:deg)?\s*,\s*([+-]?[\d\.]+)%\s*,\s*([+-]?[\d\.]+)%\s*(?:,\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
+      if (WQ) {
+        var XQ = parseFloat(WQ[4]);
+        return [(parseFloat(WQ[1]) % 360 + 360) % 360, PQ(parseFloat(WQ[2]), 0, 100), PQ(parseFloat(WQ[3]), 0, 100), PQ(isNaN(XQ) ? 1 : XQ, 0, 1)]
+      }
+      return null
+    }, FQ.to.hex = function() {
+      var QQ = qQ(arguments);
+      return "#" + gQ(QQ[0]) + gQ(QQ[1]) + gQ(QQ[2]) + (QQ[3] < 1 ? gQ(Math.round(255 * QQ[3])) : "")
+    }, FQ.to.rgb = function() {
+      var QQ = qQ(arguments);
+      return QQ.length < 4 || 1 === QQ[3] ? "rgb(" + Math.round(QQ[0]) + ", " + Math.round(QQ[1]) + ", " + Math.round(QQ[2]) + ")" : "rgba(" + Math.round(QQ[0]) + ", " + Math.round(QQ[1]) + ", " + Math.round(QQ[2]) + ", " + QQ[3] + ")"
+    }, FQ.to.rgb.percent = function() {
+      var QQ = qQ(arguments),
+        WQ = Math.round(QQ[0] / 255 * 100),
+        XQ = Math.round(QQ[1] / 255 * 100),
+        wQ = Math.round(QQ[2] / 255 * 100);
+      return QQ.length < 4 || 1 === QQ[3] ? "rgb(" + WQ + "%, " + XQ + "%, " + wQ + "%)" : "rgba(" + WQ + "%, " + XQ + "%, " + wQ + "%, " + QQ[3] + ")"
+    }, FQ.to.hsl = function() {
+      var QQ = qQ(arguments);
+      return QQ.length < 4 || 1 === QQ[3] ? "hsl(" + QQ[0] + ", " + QQ[1] + "%, " + QQ[2] + "%)" : "hsla(" + QQ[0] + ", " + QQ[1] + "%, " + QQ[2] + "%, " + QQ[3] + ")"
+    }, FQ.to.hwb = function() {
+      var QQ = qQ(arguments),
+        WQ = "";
+      return QQ.length >= 4 && 1 !== QQ[3] && (WQ = ", " + QQ[3]), "hwb(" + QQ[0] + ", " + QQ[1] + "%, " + QQ[2] + "%" + WQ + ")"
+    }, FQ.to.keyword = function(QQ) {
+      return zQ[QQ.slice(0, 3)]
+    }
+  },
+  36932: (QQ, WQ, XQ) => {
+    const wQ = XQ(36939),
+      qQ = XQ(36956),
+      TQ = ["keyword", "gray", "hex"],
+      zQ = {};
+    for (const IQ of Object.keys(qQ)) zQ[[...qQ[IQ].labels].sort().join("")] = IQ;
+    const sQ = {};
+
+    function FQ(QQ, WQ) {
+      if (!(this instanceof FQ)) return new FQ(QQ, WQ);
+      if (WQ && WQ in TQ && (WQ = null), WQ && !(WQ in qQ)) throw new Error("Unknown model: " + WQ);
+      let XQ, PQ;
+      if (null == QQ) this.model = "rgb", this.color = [0, 0, 0], this.valpha = 1;
+      else if (QQ instanceof FQ) this.model = QQ.model, this.color = [...QQ.color], this.valpha = QQ.valpha;
+      else if ("string" === typeof QQ) {
+        const WQ = wQ.get(QQ);
+        if (null === WQ) throw new Error("Unable to parse color from string: " + QQ);
+        this.model = WQ.model, PQ = qQ[this.model].channels, this.color = WQ.value.slice(0, PQ), this.valpha = "number" === typeof WQ.value[PQ] ? WQ.value[PQ] : 1
+      } else if (QQ.length > 0) {
+        this.model = WQ || "rgb", PQ = qQ[this.model].channels;
+        const XQ = Array.prototype.slice.call(QQ, 0, PQ);
+        this.color = rQ(XQ, PQ), this.valpha = "number" === typeof QQ[PQ] ? QQ[PQ] : 1
+      } else if ("number" === typeof QQ) this.model = "rgb", this.color = [QQ >> 16 & 255, QQ >> 8 & 255, 255 & QQ], this.valpha = 1;
+      else {
+        this.valpha = 1;
+        const WQ = Object.keys(QQ);
+        "alpha" in QQ && (WQ.splice(WQ.indexOf("alpha"), 1), this.valpha = "number" === typeof QQ.alpha ? QQ.alpha : 0);
+        const wQ = WQ.sort().join("");
+        if (!(wQ in zQ)) throw new Error("Unable to parse color from object: " + JSON.stringify(QQ));
+        this.model = zQ[wQ];
+        const {
+          labels: TQ
+        } = qQ[this.model], sQ = [];
+        for (XQ = 0; XQ < TQ.length; XQ++) sQ.push(QQ[TQ[XQ]]);
+        this.color = rQ(sQ)
+      }
+      if (sQ[this.model])
+        for (PQ = qQ[this.model].channels, XQ = 0; XQ < PQ; XQ++) {
+          const QQ = sQ[this.model][XQ];
+          QQ && (this.color[XQ] = QQ(this.color[XQ]))
         }
+      this.valpha = Math.max(0, Math.min(1, this.valpha)), Object.freeze && Object.freeze(this)
+    }
+    FQ.prototype = {
+      toString() {
+        return this.string()
       },
-      "skyblock:forged:gold-moonstone-gold": {
-        name: "Midas Moon",
-        lore: "Mobs it fells seem to rattle with coins.",
-        damageMultiplier: 1.18,
-        cooldownMultiplier: .92,
-        ability: "gildedEdge",
-        traits: {
-          coins: 2,
-          bossBane: .6
+      toJSON() {
+        return this[this.model]()
+      },
+      string(QQ) {
+        let WQ = this.model in wQ.to ? this : this.rgb();
+        WQ = WQ.round("number" === typeof QQ ? QQ : 1);
+        const XQ = 1 === WQ.valpha ? WQ.color : [...WQ.color, this.valpha];
+        return wQ.to[WQ.model](XQ)
+      },
+      percentString(QQ) {
+        const WQ = this.rgb().round("number" === typeof QQ ? QQ : 1),
+          XQ = 1 === WQ.valpha ? WQ.color : [...WQ.color, this.valpha];
+        return wQ.to.rgb.percent(XQ)
+      },
+      array() {
+        return 1 === this.valpha ? [...this.color] : [...this.color, this.valpha]
+      },
+      object() {
+        const QQ = {},
+          {
+            channels: WQ
+          } = qQ[this.model],
+          {
+            labels: XQ
+          } = qQ[this.model];
+        for (let wQ = 0; wQ < WQ; wQ++) QQ[XQ[wQ]] = this.color[wQ];
+        return 1 !== this.valpha && (QQ.alpha = this.valpha), QQ
+      },
+      unitArray() {
+        const QQ = this.rgb().color;
+        return QQ[0] /= 255, QQ[1] /= 255, QQ[2] /= 255, 1 !== this.valpha && QQ.push(this.valpha), QQ
+      },
+      unitObject() {
+        const QQ = this.rgb().object();
+        return QQ.r /= 255, QQ.g /= 255, QQ.b /= 255, 1 !== this.valpha && (QQ.alpha = this.valpha), QQ
+      },
+      round(QQ) {
+        return QQ = Math.max(QQ || 0, 0), new FQ([...this.color.map(PQ(QQ)), this.valpha], this.model)
+      },
+      alpha(QQ) {
+        return void 0 !== QQ ? new FQ([...this.color, Math.max(0, Math.min(1, QQ))], this.model) : this.valpha
+      },
+      red: gQ("rgb", 0, JQ(255)),
+      green: gQ("rgb", 1, JQ(255)),
+      blue: gQ("rgb", 2, JQ(255)),
+      hue: gQ(["hsl", "hsv", "hsl", "hwb", "hcg"], 0, (QQ => (QQ % 360 + 360) % 360)),
+      saturationl: gQ("hsl", 1, JQ(100)),
+      lightness: gQ("hsl", 2, JQ(100)),
+      saturationv: gQ("hsv", 1, JQ(100)),
+      value: gQ("hsv", 2, JQ(100)),
+      chroma: gQ("hcg", 1, JQ(100)),
+      gray: gQ("hcg", 2, JQ(100)),
+      white: gQ("hwb", 1, JQ(100)),
+      wblack: gQ("hwb", 2, JQ(100)),
+      cyan: gQ("cmyk", 0, JQ(100)),
+      magenta: gQ("cmyk", 1, JQ(100)),
+      yellow: gQ("cmyk", 2, JQ(100)),
+      black: gQ("cmyk", 3, JQ(100)),
+      x: gQ("xyz", 0, JQ(95.047)),
+      y: gQ("xyz", 1, JQ(100)),
+      z: gQ("xyz", 2, JQ(108.833)),
+      l: gQ("lab", 0, JQ(100)),
+      a: gQ("lab", 1),
+      b: gQ("lab", 2),
+      keyword(QQ) {
+        return void 0 !== QQ ? new FQ(QQ) : qQ[this.model].keyword(this.color)
+      },
+      hex(QQ) {
+        return void 0 !== QQ ? new FQ(QQ) : wQ.to.hex(this.rgb().round().color)
+      },
+      hexa(QQ) {
+        if (void 0 !== QQ) return new FQ(QQ);
+        const WQ = this.rgb().round().color;
+        let XQ = Math.round(255 * this.valpha).toString(16).toUpperCase();
+        return 1 === XQ.length && (XQ = "0" + XQ), wQ.to.hex(WQ) + XQ
+      },
+      rgbNumber() {
+        const QQ = this.rgb().color;
+        return (255 & QQ[0]) << 16 | (255 & QQ[1]) << 8 | 255 & QQ[2]
+      },
+      luminosity() {
+        const QQ = this.rgb().color,
+          WQ = [];
+        for (const [XQ, wQ] of QQ.entries()) {
+          const QQ = wQ / 255;
+          WQ[XQ] = QQ <= .04045 ? QQ / 12.92 : ((QQ + .055) / 1.055) ** 2.4
         }
+        return .2126 * WQ[0] + .7152 * WQ[1] + .0722 * WQ[2]
       },
-      "skyblock:forged:iron-iron-iron": {
-        name: "Old Faithful",
-        lore: "It has never let anyone down. It never will.",
-        damageMultiplier: 1.15,
-        cooldownMultiplier: .94,
-        ability: "warcry"
+      contrast(QQ) {
+        const WQ = this.luminosity(),
+          XQ = QQ.luminosity();
+        return WQ > XQ ? (WQ + .05) / (XQ + .05) : (XQ + .05) / (WQ + .05)
       },
-      "skyblock:forged:iron-wood-wood": {
-        name: "Militia Blade",
-        lore: "Handed out at the outpost gate when the rift first opened.",
-        damageMultiplier: 1.09,
-        cooldownMultiplier: .97,
-        ability: "warcry"
+      level(QQ) {
+        const WQ = this.contrast(QQ);
+        return WQ >= 7 ? "AAA" : WQ >= 4.5 ? "AA" : ""
       },
-      "skyblock:forged:stone-stone-stone": {
-        name: "Quarryman's Cleaver",
-        lore: "Chipped from one block of stone, handle and all.",
-        damageMultiplier: 1.09,
-        cooldownMultiplier: .97,
-        ability: "quake"
+      isDark() {
+        const QQ = this.rgb().color;
+        return (2126 * QQ[0] + 7152 * QQ[1] + 722 * QQ[2]) / 1e4 < 128
       },
-      "skyblock:forged:wood-wood-wood": {
-        name: "Lorenzo's Lesson",
-        lore: "Courage matters more than the blade. This one is mostly courage.",
-        damageMultiplier: 1.06,
-        cooldownMultiplier: .97,
-        ability: "warcry"
+      isLight() {
+        return !this.isDark()
+      },
+      pg() {
+        const QQ = this.rgb();
+        for (let WQ = 0; WQ < 3; WQ++) QQ.color[WQ] = 255 - QQ.color[WQ];
+        return QQ
+      },
+      lighten(QQ) {
+        const WQ = this.hsl();
+        return WQ.color[2] += WQ.color[2] * QQ, WQ
+      },
+      darken(QQ) {
+        const WQ = this.hsl();
+        return WQ.color[2] -= WQ.color[2] * QQ, WQ
+      },
+      saturate(QQ) {
+        const WQ = this.hsl();
+        return WQ.color[1] += WQ.color[1] * QQ, WQ
+      },
+      desaturate(QQ) {
+        const WQ = this.hsl();
+        return WQ.color[1] -= WQ.color[1] * QQ, WQ
+      },
+      whiten(QQ) {
+        const WQ = this.hwb();
+        return WQ.color[1] += WQ.color[1] * QQ, WQ
+      },
+      blacken(QQ) {
+        const WQ = this.hwb();
+        return WQ.color[2] += WQ.color[2] * QQ, WQ
+      },
+      grayscale() {
+        const QQ = this.rgb().color,
+          WQ = .3 * QQ[0] + .59 * QQ[1] + .11 * QQ[2];
+        return FQ.rgb(WQ, WQ, WQ)
+      },
+      fade(QQ) {
+        return this.alpha(this.valpha - this.valpha * QQ)
+      },
+      opaquer(QQ) {
+        return this.alpha(this.valpha + this.valpha * QQ)
+      },
+      rotate(QQ) {
+        const WQ = this.hsl();
+        let XQ = WQ.color[0];
+        return XQ = (XQ + QQ) % 360, XQ = XQ < 0 ? 360 + XQ : XQ, WQ.color[0] = XQ, WQ
+      },
+      mix(QQ, WQ) {
+        if (!QQ || !QQ.rgb) throw new Error('Argument to "mix" was not a Color instance, but rather an instance of ' + typeof QQ);
+        const XQ = QQ.rgb(),
+          wQ = this.rgb(),
+          qQ = void 0 === WQ ? .5 : WQ,
+          TQ = 2 * qQ - 1,
+          zQ = XQ.alpha() - wQ.alpha(),
+          sQ = ((TQ * zQ === -1 ? TQ : (TQ + zQ) / (1 + TQ * zQ)) + 1) / 2,
+          PQ = 1 - sQ;
+        return FQ.rgb(sQ * XQ.red() + PQ * wQ.red(), sQ * XQ.green() + PQ * wQ.green(), sQ * XQ.blue() + PQ * wQ.blue(), XQ.alpha() * qQ + wQ.alpha() * (1 - qQ))
+      }
+    };
+    for (const IQ of Object.keys(qQ)) {
+      if (TQ.includes(IQ)) continue;
+      const {
+        channels: QQ
+      } = qQ[IQ];
+      FQ.prototype[IQ] = function() {
+        if (this.model === IQ) return new FQ(this);
+        for (var QQ = arguments.length, WQ = new Array(QQ), XQ = 0; XQ < QQ; XQ++) WQ[XQ] = arguments[XQ];
+        return WQ.length > 0 ? new FQ(WQ, IQ) : new FQ([...(wQ = qQ[this.model][IQ].raw(this.color), Array.isArray(wQ) ? wQ : [wQ]), this.valpha], IQ);
+        var wQ
+      }, FQ[IQ] = function() {
+        for (var WQ = arguments.length, XQ = new Array(WQ), wQ = 0; wQ < WQ; wQ++) XQ[wQ] = arguments[wQ];
+        let qQ = XQ[0];
+        return "number" === typeof qQ && (qQ = rQ(XQ, QQ)), new FQ(qQ, IQ)
       }
     }
+
+    function PQ(QQ) {
+      return function(WQ) {
+        return function(QQ, WQ) {
+          return Number(QQ.toFixed(WQ))
+        }(WQ, QQ)
+      }
+    }
+
+    function gQ(QQ, WQ, XQ) {
+      QQ = Array.isArray(QQ) ? QQ : [QQ];
+      for (const wQ of QQ)(sQ[wQ] || (sQ[wQ] = []))[WQ] = XQ;
+      return QQ = QQ[0],
+        function(wQ) {
+          let qQ;
+          return void 0 !== wQ ? (XQ && (wQ = XQ(wQ)), qQ = this[QQ](), qQ.color[WQ] = wQ, qQ) : (qQ = this[QQ]().color[WQ], XQ && (qQ = XQ(qQ)), qQ)
+        }
+    }
+
+    function JQ(QQ) {
+      return function(WQ) {
+        return Math.max(0, Math.min(QQ, WQ))
+      }
+    }
+
+    function rQ(QQ, WQ) {
+      for (let XQ = 0; XQ < WQ; XQ++) "number" !== typeof QQ[XQ] && (QQ[XQ] = 0);
+      return QQ
+    }
+    QQ.exports = FQ
   },
-  37868: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Sp
-    });
-    var Op = cp(343),
-      op = cp.n(Op),
-      Ip = cp(1927);
-    let Sp;
-    var xp, Lp, Yp, Dp, Ap, Pp, Wp, yp, Up;
-    const wp = ["b", 0, 1, 8, "c", 101, 171, "g", 21, "f", 4, 255, "length", 104, 64, "e", "undefined", void 0, 42, 2, "a", 63, 6, "fromCodePoint", 7, 12, "push", 201, 3, 118, 91, 8191, 88, 13, 14, 5, 174, 43, 44, !1, !0, "h", "i", "d", 127, 124, 128, 136, 137, 138, null, 132, 133, 134, 135, 139, 140, 141, 129, 130, 131, 147, 148, 144, 202, 103, 10, "fp", 234, 117, 169, 38, 114, 160, 149, 122, 9, 59, 246, 33554432, 67108864, 107, 71, 54, 150, 244, 154, 197, "on"];
-
-    function vp(...pp) {
-      return pp[wp[12]] = wp[2], typeof xp[pp[wp[1]]] === wp[16] ? xp[pp[wp[1]]] = function(...pp) {
-        for (Cp(pp[wp[12]] = wp[2], pp[-wp[5]] = '_}waFeY!JM(@f%R~y/X56mEt9K8dx,N)lBrj+hZ&s^D[{v7;#z.A*4|LIucWQ3Onob2=>:`0"?TGVqPHp]ig1$<USCk', pp[wp[0]] = "" + (pp[wp[1]] || ""), pp[wp[4]] = pp[wp[0]].length, pp[wp[10]] = [], pp[-wp[8]] = wp[1], pp[wp[9]] = wp[1], pp[wp[7]] = -wp[2]), pp[wp[3]] = wp[1]; pp[wp[3]] < pp[wp[4]]; pp[wp[3]]++)
-          if (pp[-wp[6]] = pp[-wp[5]].indexOf(pp[wp[0]][pp[wp[3]]]), pp[-wp[6]] !== -wp[2])
-            if (pp[wp[7]] < wp[1]) pp[wp[7]] = pp[-wp[6]];
-            else {
-              Cp(pp[wp[7]] += pp[-wp[6]] * wp[30], pp[-wp[8]] |= pp[wp[7]] << pp[wp[9]], pp[wp[9]] += (pp[wp[7]] & wp[31]) > wp[32] ? wp[33] : wp[34]);
-              do {
-                Cp(pp[wp[10]].push(pp[-wp[8]] & wp[11]), pp[-wp[8]] >>= wp[3], pp[wp[9]] -= wp[3])
-              } while (pp[wp[9]] > wp[24]);
-              pp[wp[7]] = -wp[2]
-            } return pp[wp[7]] > -wp[2] && pp[wp[10]].push((pp[-wp[8]] | pp[wp[7]] << pp[wp[9]]) & wp[11]), tp(pp[wp[10]])
-      }(Lp[pp[wp[1]]]) : xp[pp[wp[1]]]
+  36964: (QQ, WQ, XQ) => {
+    const wQ = XQ(36973),
+      qQ = {};
+    for (const zQ of Object.keys(wQ)) qQ[wQ[zQ]] = zQ;
+    const TQ = {
+      rgb: {
+        channels: 3,
+        labels: "rgb"
+      },
+      hsl: {
+        channels: 3,
+        labels: "hsl"
+      },
+      hsv: {
+        channels: 3,
+        labels: "hsv"
+      },
+      hwb: {
+        channels: 3,
+        labels: "hwb"
+      },
+      cmyk: {
+        channels: 4,
+        labels: "cmyk"
+      },
+      xyz: {
+        channels: 3,
+        labels: "xyz"
+      },
+      lab: {
+        channels: 3,
+        labels: "lab"
+      },
+      lch: {
+        channels: 3,
+        labels: "lch"
+      },
+      hex: {
+        channels: 1,
+        labels: ["hex"]
+      },
+      keyword: {
+        channels: 1,
+        labels: ["keyword"]
+      },
+      ansi16: {
+        channels: 1,
+        labels: ["ansi16"]
+      },
+      ansi256: {
+        channels: 1,
+        labels: ["ansi256"]
+      },
+      hcg: {
+        channels: 3,
+        labels: ["h", "c", "g"]
+      },
+      apple: {
+        channels: 3,
+        labels: ["r16", "g16", "b16"]
+      },
+      gray: {
+        channels: 1,
+        labels: ["gray"]
+      }
+    };
+    QQ.exports = TQ;
+    for (const zQ of Object.keys(TQ)) {
+      if (!("channels" in TQ[zQ])) throw new Error("missing channels property: " + zQ);
+      if (!("labels" in TQ[zQ])) throw new Error("missing channel labels property: " + zQ);
+      if (TQ[zQ].labels.length !== TQ[zQ].channels) throw new Error("channel and label counts mismatch: " + zQ);
+      const {
+        channels: QQ,
+        labels: WQ
+      } = TQ[zQ];
+      delete TQ[zQ].channels, delete TQ[zQ].labels, Object.defineProperty(TQ[zQ], "channels", {
+        value: QQ
+      }), Object.defineProperty(TQ[zQ], "labels", {
+        value: WQ
+      })
     }
-
-    function tp(...pp) {
-      return pp[wp[12]] = wp[2], typeof Dp !== wp[16] && Dp ? (new Dp).decode(new Ap(pp[wp[1]])) : typeof Pp !== wp[16] && Pp ? Pp.from(pp[wp[1]]).toString("utf-8") : Up(pp[wp[1]])
+    TQ.rgb.hsl = function(QQ) {
+      const WQ = QQ[0] / 255,
+        XQ = QQ[1] / 255,
+        wQ = QQ[2] / 255,
+        qQ = Math.min(WQ, XQ, wQ),
+        TQ = Math.max(WQ, XQ, wQ),
+        zQ = TQ - qQ;
+      let sQ, FQ;
+      TQ === qQ ? sQ = 0 : WQ === TQ ? sQ = (XQ - wQ) / zQ : XQ === TQ ? sQ = 2 + (wQ - WQ) / zQ : wQ === TQ && (sQ = 4 + (WQ - XQ) / zQ), sQ = Math.min(60 * sQ, 360), sQ < 0 && (sQ += 360);
+      const PQ = (qQ + TQ) / 2;
+      return FQ = TQ === qQ ? 0 : PQ <= .5 ? zQ / (TQ + qQ) : zQ / (2 - TQ - qQ), [sQ, 100 * FQ, 100 * PQ]
+    }, TQ.rgb.hsv = function(QQ) {
+      let WQ, XQ, wQ, qQ, TQ;
+      const zQ = QQ[0] / 255,
+        sQ = QQ[1] / 255,
+        FQ = QQ[2] / 255,
+        PQ = Math.max(zQ, sQ, FQ),
+        gQ = PQ - Math.min(zQ, sQ, FQ),
+        JQ = function(QQ) {
+          return (PQ - QQ) / 6 / gQ + .5
+        };
+      return 0 === gQ ? (qQ = 0, TQ = 0) : (TQ = gQ / PQ, WQ = JQ(zQ), XQ = JQ(sQ), wQ = JQ(FQ), zQ === PQ ? qQ = wQ - XQ : sQ === PQ ? qQ = 1 / 3 + WQ - wQ : FQ === PQ && (qQ = 2 / 3 + XQ - WQ), qQ < 0 ? qQ += 1 : qQ > 1 && (qQ -= 1)), [360 * qQ, 100 * TQ, 100 * PQ]
+    }, TQ.rgb.hwb = function(QQ) {
+      const WQ = QQ[0],
+        XQ = QQ[1];
+      let wQ = QQ[2];
+      const qQ = TQ.rgb.hsl(QQ)[0],
+        zQ = 1 / 255 * Math.min(WQ, Math.min(XQ, wQ));
+      return wQ = 1 - 1 / 255 * Math.max(WQ, Math.max(XQ, wQ)), [qQ, 100 * zQ, 100 * wQ]
+    }, TQ.rgb.cmyk = function(QQ) {
+      const WQ = QQ[0] / 255,
+        XQ = QQ[1] / 255,
+        wQ = QQ[2] / 255,
+        qQ = Math.min(1 - WQ, 1 - XQ, 1 - wQ);
+      return [100 * ((1 - WQ - qQ) / (1 - qQ) || 0), 100 * ((1 - XQ - qQ) / (1 - qQ) || 0), 100 * ((1 - wQ - qQ) / (1 - qQ) || 0), 100 * qQ]
+    }, TQ.rgb.keyword = function(QQ) {
+      const WQ = qQ[QQ];
+      if (WQ) return WQ;
+      let XQ, TQ = 1 / 0;
+      for (const qQ of Object.keys(wQ)) {
+        const WQ = wQ[qQ],
+          FQ = (sQ = WQ, ((zQ = QQ)[0] - sQ[0]) ** 2 + (zQ[1] - sQ[1]) ** 2 + (zQ[2] - sQ[2]) ** 2);
+        FQ < TQ && (TQ = FQ, XQ = qQ)
+      }
+      var zQ, sQ;
+      return XQ
+    }, TQ.keyword.rgb = function(QQ) {
+      return wQ[QQ]
+    }, TQ.rgb.xyz = function(QQ) {
+      let WQ = QQ[0] / 255,
+        XQ = QQ[1] / 255,
+        wQ = QQ[2] / 255;
+      WQ = WQ > .04045 ? ((WQ + .055) / 1.055) ** 2.4 : WQ / 12.92, XQ = XQ > .04045 ? ((XQ + .055) / 1.055) ** 2.4 : XQ / 12.92, wQ = wQ > .04045 ? ((wQ + .055) / 1.055) ** 2.4 : wQ / 12.92;
+      return [100 * (.4124 * WQ + .3576 * XQ + .1805 * wQ), 100 * (.2126 * WQ + .7152 * XQ + .0722 * wQ), 100 * (.0193 * WQ + .1192 * XQ + .9505 * wQ)]
+    }, TQ.rgb.lab = function(QQ) {
+      const WQ = TQ.rgb.xyz(QQ);
+      let XQ = WQ[0],
+        wQ = WQ[1],
+        qQ = WQ[2];
+      XQ /= 95.047, wQ /= 100, qQ /= 108.883, XQ = XQ > .008856 ? XQ ** (1 / 3) : 7.787 * XQ + 16 / 116, wQ = wQ > .008856 ? wQ ** (1 / 3) : 7.787 * wQ + 16 / 116, qQ = qQ > .008856 ? qQ ** (1 / 3) : 7.787 * qQ + 16 / 116;
+      return [116 * wQ - 16, 500 * (XQ - wQ), 200 * (wQ - qQ)]
+    }, TQ.hsl.rgb = function(QQ) {
+      const WQ = QQ[0] / 360,
+        XQ = QQ[1] / 100,
+        wQ = QQ[2] / 100;
+      let qQ, TQ, zQ;
+      if (0 === XQ) return zQ = 255 * wQ, [zQ, zQ, zQ];
+      qQ = wQ < .5 ? wQ * (1 + XQ) : wQ + XQ - wQ * XQ;
+      const sQ = 2 * wQ - qQ,
+        FQ = [0, 0, 0];
+      for (let PQ = 0; PQ < 3; PQ++) TQ = WQ + 1 / 3 * -(PQ - 1), TQ < 0 && TQ++, TQ > 1 && TQ--, zQ = 6 * TQ < 1 ? sQ + 6 * (qQ - sQ) * TQ : 2 * TQ < 1 ? qQ : 3 * TQ < 2 ? sQ + (qQ - sQ) * (2 / 3 - TQ) * 6 : sQ, FQ[PQ] = 255 * zQ;
+      return FQ
+    }, TQ.hsl.hsv = function(QQ) {
+      const WQ = QQ[0];
+      let XQ = QQ[1] / 100,
+        wQ = QQ[2] / 100,
+        qQ = XQ;
+      const TQ = Math.max(wQ, .01);
+      wQ *= 2, XQ *= wQ <= 1 ? wQ : 2 - wQ, qQ *= TQ <= 1 ? TQ : 2 - TQ;
+      return [WQ, 100 * (0 === wQ ? 2 * qQ / (TQ + qQ) : 2 * XQ / (wQ + XQ)), 100 * ((wQ + XQ) / 2)]
+    }, TQ.hsv.rgb = function(QQ) {
+      const WQ = QQ[0] / 60,
+        XQ = QQ[1] / 100;
+      let wQ = QQ[2] / 100;
+      const qQ = Math.floor(WQ) % 6,
+        TQ = WQ - Math.floor(WQ),
+        zQ = 255 * wQ * (1 - XQ),
+        sQ = 255 * wQ * (1 - XQ * TQ),
+        FQ = 255 * wQ * (1 - XQ * (1 - TQ));
+      switch (wQ *= 255, qQ) {
+        case 0:
+          return [wQ, FQ, zQ];
+        case 1:
+          return [sQ, wQ, zQ];
+        case 2:
+          return [zQ, wQ, FQ];
+        case 3:
+          return [zQ, sQ, wQ];
+        case 4:
+          return [FQ, zQ, wQ];
+        case 5:
+          return [wQ, zQ, sQ]
+      }
+    }, TQ.hsv.hsl = function(QQ) {
+      const WQ = QQ[0],
+        XQ = QQ[1] / 100,
+        wQ = QQ[2] / 100,
+        qQ = Math.max(wQ, .01);
+      let TQ, zQ;
+      zQ = (2 - XQ) * wQ;
+      const sQ = (2 - XQ) * qQ;
+      return TQ = XQ * qQ, TQ /= sQ <= 1 ? sQ : 2 - sQ, TQ = TQ || 0, zQ /= 2, [WQ, 100 * TQ, 100 * zQ]
+    }, TQ.hwb.rgb = function(QQ) {
+      const WQ = QQ[0] / 360;
+      let XQ = QQ[1] / 100,
+        wQ = QQ[2] / 100;
+      const qQ = XQ + wQ;
+      let TQ;
+      qQ > 1 && (XQ /= qQ, wQ /= qQ);
+      const zQ = Math.floor(6 * WQ),
+        sQ = 1 - wQ;
+      TQ = 6 * WQ - zQ, 0 !== (1 & zQ) && (TQ = 1 - TQ);
+      const FQ = XQ + TQ * (sQ - XQ);
+      let PQ, gQ, JQ;
+      switch (zQ) {
+        default:
+        case 6:
+        case 0:
+          PQ = sQ, gQ = FQ, JQ = XQ;
+          break;
+        case 1:
+          PQ = FQ, gQ = sQ, JQ = XQ;
+          break;
+        case 2:
+          PQ = XQ, gQ = sQ, JQ = FQ;
+          break;
+        case 3:
+          PQ = XQ, gQ = FQ, JQ = sQ;
+          break;
+        case 4:
+          PQ = FQ, gQ = XQ, JQ = sQ;
+          break;
+        case 5:
+          PQ = sQ, gQ = XQ, JQ = FQ
+      }
+      return [255 * PQ, 255 * gQ, 255 * JQ]
+    }, TQ.cmyk.rgb = function(QQ) {
+      const WQ = QQ[0] / 100,
+        XQ = QQ[1] / 100,
+        wQ = QQ[2] / 100,
+        qQ = QQ[3] / 100;
+      return [255 * (1 - Math.min(1, WQ * (1 - qQ) + qQ)), 255 * (1 - Math.min(1, XQ * (1 - qQ) + qQ)), 255 * (1 - Math.min(1, wQ * (1 - qQ) + qQ))]
+    }, TQ.xyz.rgb = function(QQ) {
+      const WQ = QQ[0] / 100,
+        XQ = QQ[1] / 100,
+        wQ = QQ[2] / 100;
+      let qQ, TQ, zQ;
+      return qQ = 3.2406 * WQ + -1.5372 * XQ + -.4986 * wQ, TQ = -.9689 * WQ + 1.8758 * XQ + .0415 * wQ, zQ = .0557 * WQ + -.204 * XQ + 1.057 * wQ, qQ = qQ > .0031308 ? 1.055 * qQ ** (1 / 2.4) - .055 : 12.92 * qQ, TQ = TQ > .0031308 ? 1.055 * TQ ** (1 / 2.4) - .055 : 12.92 * TQ, zQ = zQ > .0031308 ? 1.055 * zQ ** (1 / 2.4) - .055 : 12.92 * zQ, qQ = Math.min(Math.max(0, qQ), 1), TQ = Math.min(Math.max(0, TQ), 1), zQ = Math.min(Math.max(0, zQ), 1), [255 * qQ, 255 * TQ, 255 * zQ]
+    }, TQ.xyz.lab = function(QQ) {
+      let WQ = QQ[0],
+        XQ = QQ[1],
+        wQ = QQ[2];
+      WQ /= 95.047, XQ /= 100, wQ /= 108.883, WQ = WQ > .008856 ? WQ ** (1 / 3) : 7.787 * WQ + 16 / 116, XQ = XQ > .008856 ? XQ ** (1 / 3) : 7.787 * XQ + 16 / 116, wQ = wQ > .008856 ? wQ ** (1 / 3) : 7.787 * wQ + 16 / 116;
+      return [116 * XQ - 16, 500 * (WQ - XQ), 200 * (XQ - wQ)]
+    }, TQ.lab.xyz = function(QQ) {
+      let WQ, XQ, wQ;
+      XQ = (QQ[0] + 16) / 116, WQ = QQ[1] / 500 + XQ, wQ = XQ - QQ[2] / 200;
+      const qQ = XQ ** 3,
+        TQ = WQ ** 3,
+        zQ = wQ ** 3;
+      return XQ = qQ > .008856 ? qQ : (XQ - 16 / 116) / 7.787, WQ = TQ > .008856 ? TQ : (WQ - 16 / 116) / 7.787, wQ = zQ > .008856 ? zQ : (wQ - 16 / 116) / 7.787, WQ *= 95.047, XQ *= 100, wQ *= 108.883, [WQ, XQ, wQ]
+    }, TQ.lab.lch = function(QQ) {
+      const WQ = QQ[0],
+        XQ = QQ[1],
+        wQ = QQ[2];
+      let qQ;
+      qQ = 360 * Math.atan2(wQ, XQ) / 2 / Math.PI, qQ < 0 && (qQ += 360);
+      return [WQ, Math.sqrt(XQ * XQ + wQ * wQ), qQ]
+    }, TQ.lch.lab = function(QQ) {
+      const WQ = QQ[0],
+        XQ = QQ[1],
+        wQ = QQ[2] / 360 * 2 * Math.PI;
+      return [WQ, XQ * Math.cos(wQ), XQ * Math.sin(wQ)]
+    }, TQ.rgb.ansi16 = function(QQ) {
+      let WQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const [XQ, wQ, qQ] = QQ;
+      let zQ = null === WQ ? TQ.rgb.hsv(QQ)[2] : WQ;
+      if (zQ = Math.round(zQ / 50), 0 === zQ) return 30;
+      let sQ = 30 + (Math.round(qQ / 255) << 2 | Math.round(wQ / 255) << 1 | Math.round(XQ / 255));
+      return 2 === zQ && (sQ += 60), sQ
+    }, TQ.hsv.ansi16 = function(QQ) {
+      return TQ.rgb.ansi16(TQ.hsv.rgb(QQ), QQ[2])
+    }, TQ.rgb.ansi256 = function(QQ) {
+      const WQ = QQ[0],
+        XQ = QQ[1],
+        wQ = QQ[2];
+      if (WQ === XQ && XQ === wQ) return WQ < 8 ? 16 : WQ > 248 ? 231 : Math.round((WQ - 8) / 247 * 24) + 232;
+      return 16 + 36 * Math.round(WQ / 255 * 5) + 6 * Math.round(XQ / 255 * 5) + Math.round(wQ / 255 * 5)
+    }, TQ.ansi16.rgb = function(QQ) {
+      let WQ = QQ % 10;
+      if (0 === WQ || 7 === WQ) return QQ > 50 && (WQ += 3.5), WQ = WQ / 10.5 * 255, [WQ, WQ, WQ];
+      const XQ = .5 * (1 + ~~(QQ > 50));
+      return [(1 & WQ) * XQ * 255, (WQ >> 1 & 1) * XQ * 255, (WQ >> 2 & 1) * XQ * 255]
+    }, TQ.ansi256.rgb = function(QQ) {
+      if (QQ >= 232) {
+        const WQ = 10 * (QQ - 232) + 8;
+        return [WQ, WQ, WQ]
+      }
+      let WQ;
+      QQ -= 16;
+      return [Math.floor(QQ / 36) / 5 * 255, Math.floor((WQ = QQ % 36) / 6) / 5 * 255, WQ % 6 / 5 * 255]
+    }, TQ.rgb.hex = function(QQ) {
+      const WQ = (((255 & Math.round(QQ[0])) << 16) + ((255 & Math.round(QQ[1])) << 8) + (255 & Math.round(QQ[2]))).toString(16).toUpperCase();
+      return "000000".substring(WQ.length) + WQ
+    }, TQ.hex.rgb = function(QQ) {
+      const WQ = QQ.toString(16).match(/[a-f0-9]{6}|[a-f0-9]{3}/i);
+      if (!WQ) return [0, 0, 0];
+      let XQ = WQ[0];
+      3 === WQ[0].length && (XQ = XQ.split("").map((QQ => QQ + QQ)).join(""));
+      const wQ = parseInt(XQ, 16);
+      return [wQ >> 16 & 255, wQ >> 8 & 255, 255 & wQ]
+    }, TQ.rgb.hcg = function(QQ) {
+      const WQ = QQ[0] / 255,
+        XQ = QQ[1] / 255,
+        wQ = QQ[2] / 255,
+        qQ = Math.max(Math.max(WQ, XQ), wQ),
+        TQ = Math.min(Math.min(WQ, XQ), wQ),
+        zQ = qQ - TQ;
+      let sQ, FQ;
+      return sQ = zQ < 1 ? TQ / (1 - zQ) : 0, FQ = zQ <= 0 ? 0 : qQ === WQ ? (XQ - wQ) / zQ % 6 : qQ === XQ ? 2 + (wQ - WQ) / zQ : 4 + (WQ - XQ) / zQ, FQ /= 6, FQ %= 1, [360 * FQ, 100 * zQ, 100 * sQ]
+    }, TQ.hsl.hcg = function(QQ) {
+      const WQ = QQ[1] / 100,
+        XQ = QQ[2] / 100,
+        wQ = XQ < .5 ? 2 * WQ * XQ : 2 * WQ * (1 - XQ);
+      let qQ = 0;
+      return wQ < 1 && (qQ = (XQ - .5 * wQ) / (1 - wQ)), [QQ[0], 100 * wQ, 100 * qQ]
+    }, TQ.hsv.hcg = function(QQ) {
+      const WQ = QQ[1] / 100,
+        XQ = QQ[2] / 100,
+        wQ = WQ * XQ;
+      let qQ = 0;
+      return wQ < 1 && (qQ = (XQ - wQ) / (1 - wQ)), [QQ[0], 100 * wQ, 100 * qQ]
+    }, TQ.hcg.rgb = function(QQ) {
+      const WQ = QQ[0] / 360,
+        XQ = QQ[1] / 100,
+        wQ = QQ[2] / 100;
+      if (0 === XQ) return [255 * wQ, 255 * wQ, 255 * wQ];
+      const qQ = [0, 0, 0],
+        TQ = WQ % 1 * 6,
+        zQ = TQ % 1,
+        sQ = 1 - zQ;
+      let FQ = 0;
+      switch (Math.floor(TQ)) {
+        case 0:
+          qQ[0] = 1, qQ[1] = zQ, qQ[2] = 0;
+          break;
+        case 1:
+          qQ[0] = sQ, qQ[1] = 1, qQ[2] = 0;
+          break;
+        case 2:
+          qQ[0] = 0, qQ[1] = 1, qQ[2] = zQ;
+          break;
+        case 3:
+          qQ[0] = 0, qQ[1] = sQ, qQ[2] = 1;
+          break;
+        case 4:
+          qQ[0] = zQ, qQ[1] = 0, qQ[2] = 1;
+          break;
+        default:
+          qQ[0] = 1, qQ[1] = 0, qQ[2] = sQ
+      }
+      return FQ = (1 - XQ) * wQ, [255 * (XQ * qQ[0] + FQ), 255 * (XQ * qQ[1] + FQ), 255 * (XQ * qQ[2] + FQ)]
+    }, TQ.hcg.hsv = function(QQ) {
+      const WQ = QQ[1] / 100,
+        XQ = WQ + QQ[2] / 100 * (1 - WQ);
+      let wQ = 0;
+      return XQ > 0 && (wQ = WQ / XQ), [QQ[0], 100 * wQ, 100 * XQ]
+    }, TQ.hcg.hsl = function(QQ) {
+      const WQ = QQ[1] / 100,
+        XQ = QQ[2] / 100 * (1 - WQ) + .5 * WQ;
+      let wQ = 0;
+      return XQ > 0 && XQ < .5 ? wQ = WQ / (2 * XQ) : XQ >= .5 && XQ < 1 && (wQ = WQ / (2 * (1 - XQ))), [QQ[0], 100 * wQ, 100 * XQ]
+    }, TQ.hcg.hwb = function(QQ) {
+      const WQ = QQ[1] / 100,
+        XQ = WQ + QQ[2] / 100 * (1 - WQ);
+      return [QQ[0], 100 * (XQ - WQ), 100 * (1 - XQ)]
+    }, TQ.hwb.hcg = function(QQ) {
+      const WQ = QQ[1] / 100,
+        XQ = 1 - QQ[2] / 100,
+        wQ = XQ - WQ;
+      let qQ = 0;
+      return wQ < 1 && (qQ = (XQ - wQ) / (1 - wQ)), [QQ[0], 100 * wQ, 100 * qQ]
+    }, TQ.apple.rgb = function(QQ) {
+      return [QQ[0] / 65535 * 255, QQ[1] / 65535 * 255, QQ[2] / 65535 * 255]
+    }, TQ.rgb.apple = function(QQ) {
+      return [QQ[0] / 255 * 65535, QQ[1] / 255 * 65535, QQ[2] / 255 * 65535]
+    }, TQ.gray.rgb = function(QQ) {
+      return [QQ[0] / 100 * 255, QQ[0] / 100 * 255, QQ[0] / 100 * 255]
+    }, TQ.gray.hsl = function(QQ) {
+      return [0, 0, QQ[0]]
+    }, TQ.gray.hsv = TQ.gray.hsl, TQ.gray.hwb = function(QQ) {
+      return [0, 100, QQ[0]]
+    }, TQ.gray.cmyk = function(QQ) {
+      return [0, 0, 0, QQ[0]]
+    }, TQ.gray.lab = function(QQ) {
+      return [QQ[0], 0, 0]
+    }, TQ.gray.hex = function(QQ) {
+      const WQ = 255 & Math.round(QQ[0] / 100 * 255),
+        XQ = ((WQ << 16) + (WQ << 8) + WQ).toString(16).toUpperCase();
+      return "000000".substring(XQ.length) + XQ
+    }, TQ.rgb.gray = function(QQ) {
+      return [(QQ[0] + QQ[1] + QQ[2]) / 3 / 255 * 100]
     }
-
-    function Hp() {}
-    Cp(xp = {}, Lp = ["zu|xY:Rc{O(h9WprC&n**h);BXMMb#W//MWJS.d;V4[#Zzf", "30n|bQA}kW?Ku#F[3xU*d", "Fz;*vIg^z|>Q*~Ctj>Sz$./5%WW*d.=KAAS|!L/5d60`?9D)_~UF", "Br|F~+[5,R_Gg;_N*Y(A/+h;s6Lp}", "M0MAMQHAX~YcuF", "u0~V4iG!}|IRe+H8HhyB{`b:]M*:f#ot`ONz)$_", "?OtY0:>XKRv9(e(6XhH?(#_", '*r_M9WP94ou@/"v&_|<xSu7fm|TEX3.rlr["j3roVJj', "d7(,si_<lX/OW`e9wXY*B$4}UoSfwKf", "$)t??Qm,nnb`p;e[7)?Y27DNScqJ}", "lQhT9Z):OJ|:{ya/PvNMJ+wcVW%bnZsZ{O,(9ZX`i|v?[wZ)?WV4_L>7{mZ", "{f4!kWUu+us9AZY", "cbl?5P@%PWx*%y<j(h`*f.p72nF>Q+O/zAyB6sG!:5f3#aJhBs~MzGVYF", "HW<){pscHJ?`!a=9MF2J:T.w*u#pM]=/>ra", "[uBAWA^;K6Z:YZa/h0cl8?irGW~h<K7&zvwe]g?Gw|;LhFWDq@l|B*e!hoL", "d,n?q+ss!c8bURUsQ#HVq:j:zMV72:@K.b5,fL*w", 'yh3L>r9w{@b@~Z4d6TOV9s$}{m>j4"hK3rrAJHN9aowrtwZK_,YLF+_', "lr:0pVd]kR&!l;c^bY9Px", '{)CA8|%n0%7!b+N9Ba/d+$"c724:n`ahS?L*|`);?b<71;m^KbGJ', 'K85"$*p<%Wi7V~w/"Aa', "}QdlHg.sPWsp5gDK|MlNX", "W|bJU;9T?bFrnR*r?#$!c7e^A|Rrd.R", "h~I|[hY*=f*23FY", "&bm)js#pY(", "gv$*~Z>Xq@&!uFR&D8HMN;_", "7b;?T:~;pM&O(e]dt>a", 'I0XlWrWtzQzz<:h5l~pzpZ#oq@o?s"}+Ls%TlWxf!', "Vr:!1:e%{I`lzQC^8tyP#zt4pM0`;dcxDu<FM#_", '.A:(L4T9U6MazQjN$&{T="rwAo2nY]>NC#@T1gu})2wGRR!', "@hwdnrcsMORi#~1r/0wGU0#*~~)Wy;wN5|j(qTRw", "l>YL/L89zf7OO%Ed800|34/}+5gKhFEsTt1,w+qA5Q!%}", "ga>eQcq^Bn&*h#/dGbc4$:3^f/$,<z~&|s8l$$pfX5", "N|^|.`pf{IcpMe?Xn|ZM(:lw", "@F:8:Q^u{JFysaq5|b,Lvp_D%Xd6Zhr9.s&xsnE*Qb|2D%KxqRE)|i_", "T)bYYrfXM/zRtR3jfXf(8?V<;~>2q99DObKY0:_", 'eTJ|"#aK5uyhKyZ9*_', 'MTHVYLNf4cg,dZND+|8")P?nBn+)q+M', "vO}Grp@%HI4Ku9x+mu+(c`pcBu^::%N+/}", "1DlYw7~!*oKONez8i_", 'b/e)/uswi~(h[`Z91?NVt.`N7IdHQFO9)r`xg0j;KO"7=`eh$WxqOqHAJ/$T_', 'p?,)"./jqI(tnRv58rf(e+YN7X6Ld8;&DOTeHv6+fm,!z"z&', "Yz~BOr<T?/6Y4F:ZS6ZFoQ0^F", "|a_N^33nQJ*WeyCr%~SM", "$a7!m*3,|%~c_0mdzaN)~L^}.~|?3FNtbO}", "(74TdZ@:W@A9Xe5r_MlY:+_c,OIIzFPd5A/lm", '0D%!H0:^v40@la;8Iv^NUv`f%m^p)0*xMu*TQrxJ;fH~}"!X=O4)]Lyo&%8', 'Q#BN2OL!>%$.tZl+mTr"U;]jQW1Qu+kDHRVTk|W}u6L', "Rh`L;iA5b|L`%e", "JtQ(#cN*cb~HnRO+])!M[G(NRX", "{tp|HZ_", 'HA~*ZpM^@Ol)^"~8SOBYCB_', "^OsA8Z=^kW+:K3mdNhLzQqe}", "s>XlN3A}GI:nR3gdsa~B%T_", "%slM73[ua|z)#d!)PKUx[G_Nv@Tj9W;d9>;V:TnA7mPF:#,tZ|a", "6Tdq?V.**MuquyahCa$.,WEw", "UWEBAncTvm/GV~%", "S#RV[`^${J", "PbF.6*,,!", "5ATqP.$/#mEb,F#rfsFemV_", "l7/GzIv!r~4XUwJhfuFey]/5&o]E~wD5tsEVj33nd/9H]#2/^>}", 'P>`!.`cwW6CqIdQ,Cr)M);e4Ucj"J&x+48q)P#:t]|^jDz)D8|w', "<DkJrP/^3X$+oWM", "hulGw#5%h%[R{a|xh[9|LAlX15rr/y)h5TY!7zJc=5uV5Z&XFQldO1z;^/UE}", ',60x_"C:guH`iw5x*twlD?C}vXFY+;W^XA_Pb1H$gM1n]9#8d}', '"A7V$VV*Ycq+<:h5#YiJzIDcB~Lx[i!XTAV)+j}nsc;zO%UELR"|:+I7e', "!tY!dj~%[6BRYeVKY>cqd", "oAtVV:W}oMP4)ia/pK9NIHq:[WD", "xMW,!T/]?bM3PK%ZKt/Y7cOf%X%>ZR_td7WT)?_", 'Bt>.@.<rpuqnq"AdZ#)M', "H/&MMuQ9YoI!BF", "I#`L<vW^inEiq+Ijd7+,+;!:,WS=XwR", ')TExor1pw|@hv"WD*s,T^hP7"bbp`R:KmugqnQFcF', "3h#Yrje}qREc=R<jUbiAm.n,;mha!ip81K+q/", 'UaR*jW?,9%P4ncCj|>:T|7]!xWlV8RxNoWz"!+NXq4+rvF', "6n2q]+(+_2aw5w", "?Re.y*XcruzRfaI^{TNF7>h!>%^!i][Z", "|#X,w<IciMuVIFlD=v>,O73Gm5q4HR>)=_", "3RSM<v=j,XP7t.}/kRYL]+J+)n0j6W)NdQsA(<99Z%`pZZG8a,)MpTuGwQ*", "Fu;xFLsN}f", "2?E*d0PrdR*:jg4js/Gqn1IpN2n?Cp&Z_joY(#9NwQC7}", ")r`x0L0}", "$`DdAns*6|(>/#l9yfN)x0$tk@)VyWe)VA[,YQI7#mz", 'FfPF@OaG_2KLjc"83/a', "6XIYzGssTOb}=`o9^#T4jGG%q4!;p~@5Zah)[z|7kbulOKU^/MZVVgNXNm(6}", "]Rp|~]9JqWk,E3Y95uY)Z|g,7Wq~jc+NjQhLBj&!/MTKAcaK", "LsZ!KP]HM/FHhzMK>?GJ{n4t*%,:4F0X|uTqLr%;bnBm^yX6$vz|AI_", 'QOe*L`EJucU=dR3NH/j",', "_j:(CZo<3W4FAZQjj[M|8?VToQ<Tl;B9<6{,U.4!u6?p#a", 'Yzwe?u4tW/h9"g}/0OJY0T5j.f!yu#:9', "]bEVCZ_X(W?pF&f5r[?|HuY9pfjH2]8Dr~&xw<4jyfaH|Z#8.06))Wn;F", "RnNMQ&L,{Wg=UjJZF8>..A&5OW3Ii]ZKSW+!Yr7NQ/T?i`6x{O7?E:1*>oA", '66d"_");QRf"BK<dL#we', 'yQ2eb#)GR2BVp#Q+5l1,,*.X"c`~ZhE^2#G,POfX;Q.', '"DJP>#]jzM~6%1=NOWHx"+{sRmz*lgx+:Y;*`4kf4oZ', '.vB|Dpt!Y5)(UwCr/~"M.GxwNnlVx;5^zMsze4}^Wb1=re', 'S@9|_&8*d6yA~wPstu,VH+L$vWke3+c,x8m)".f9DR7VU~1sORuA%', '+t^No&*wuR(c`KY)v>{L0L^;sc)"JQHdd|F)?]f<2QF"U~Y', '^bfq<P;;6|$l~8>X"v~|7po9HQDjIgy8Yz#ApOSTA5Q', 'N>PVb"bupf.)e1<xk6^|F7irrQ0Q+dXr+uw', 'h|SAd;VfMcJY4y*dz8<0T:g^n4}P8.*x"O}GT]Zw9/1J6WW/y~w', "cspYiZRwCR", ',TPx(+gufW|Vdintx~kA=4&;(bjdyW{5K6LzEu+cgf|XQdCy"D0xsifJ)n#', "r~zAR#m!5fS~}Q|x.bT4n4xwwMP]dwID2>?l1.~KKb:}}#R", "0heTtWOY*o>IjZ})e~n?:r_", "@z2qyuiT/~]}1jm^s[*(", "Z/n?HuXw", "Ft4(xZEoF", "t7M|8?4;W6", "=AtB2#u}AfxcOz~&rfh)n7Owyu3F$F", "{A0z7zC/_Qq]VgU^qxx(!T`*VRv", "`ATJ%:W,%2^OUZs)IAkJ$VTs(/<={F%8ZArlLr7XCO^WUR,,ZazY%+^5a", "&/|LG#l*&%MtXe&X(fZ!Sg0G5u@GCQwNt}", "BQ$)Mud4qRw%]9Ls&ty|(<C^F", "@[Sz~]h%1M*2IW=/kRZF8WA}!", '[u10R+xN)Q/Oa8Ed*uEz)?TYym_Y"dr9(}', 'rTd,o+~}C6"=`KCj2>9N}L?!d6rr=cKx', 'HrNVTu$/ho&af;,tQsy|7iV7j5aY@R"5laOF', "Sr5lMO]}", "2AZ)q]6w", "1vKA6W6w", "&(r#ZKcb", "/>p4", "|^r4%,A", "/(dg", "t70>]{G", "Fy^o3t},", ")y6sNX},", "yyPo", "Fy:Lag2,", "kyDt}t?,", "@m:LAQz,", "R;<L?", "Fy:L}t?,", "@m^o)l<,", "2/=%RXF,", "l@=RRQ2,", "{_[R!LF,", "1_XtLj?,", "smLqr:7,", "S/6s~l?,", "R5Xt]LOJ", "UTTR8", "+y^o", "Py:qE", "/;SR+", 'sZI_^z",', "[]b>8", "S/_RVe3,", "R>_%+XG", "S/_R8Q),", "@m=RAt;J", "smiR.lZ,", "+5Xt]LG", "S/_R8Qv+1E", "R]}LxQ[Etd", "#C_%yqEj6", "ol1OgW=x", "cfUu", "X5@n", 'G"=k', "7!@n", "bs4p?", "x^Hk", "OTiu", "D]i%", "Ny<LQj/,", "nTh^I![u", 'J9co"Uv,', ")}{tjj},", "i>Y%", "p/b>", "1;_Rp:7,", "[qY%", ");YRgt<,", ";5bV;l3,", "!1?olj?,", "I7{D.lG", "UK*^|fhw", "M/*n", "tQvh54|l", "(3.OWcA", ":W5dT!`w", "A2*^]L1w", '1xP9"f&w', "l^yLQ+V<T&", "zpb_>LIn=b", "%xL|GojDjN", "w?GJv}__2r", "WPSB?}Vz", "n@G#A4A8|C.", "6Dp%[{nc6|R", "Ay,^uP!pZaR", "j){JSWxseKd", "i!b,WUnDH~!", "WPe0W<L+X.R", ".D_,eVLx9", '[Y`H"l1zFMt,X)pH.DPJd:ksnj2R=82', ".MNJ>6&Xr>{E;qQ?8RX,FWq@:.*E_jp", "!!B%LU2UPAt,z,Kh[RRLSWxC.TQC(l2", 'k=C_DW2UJTcO)c"h/)q%8UrQ5a:lOcf', "/)_,IV,snjME;qQ?8R/,FWq@^bxi5wb", "BD_,+1Lx!TQC{n5u/mg9)W!2u0*ie", "j/gne3k", "<|$/UEf6", "!grm[", "e_XtLj?,", ");YRiL|,"]), Cp(Yp = function(...pp) {
-      Cp(pp[wp[12]] = wp[1], pp[-wp[14]] = [function() {
-        return globalThis
-      }, function() {
-        return global
-      }, function() {
-        return window
-      }, function() {
-        return new Function("return this")()
-      }], pp[wp[2]] = wp[17], pp[wp[4]] = []);
-      try {
-        Cp(pp[wp[2]] = Object, pp[wp[4]][wp[26]]("".__proto__.constructor.name))
-      } catch (Lp) {}
-      pp: for (pp[-wp[13]] = wp[1]; pp[-wp[13]] < pp[-wp[14]][wp[12]]; pp[-wp[13]]++) try {
-        for (pp[wp[2]] = pp[-wp[14]][pp[-wp[13]]](), pp[wp[15]] = wp[1]; pp[wp[15]] < pp[wp[4]][wp[12]]; pp[wp[15]]++)
-          if (typeof pp[wp[2]][pp[wp[4]][pp[wp[15]]]] === wp[16]) continue pp;
-        return pp[wp[2]]
-      } catch (Lp) {}
-      return pp[wp[2]] || this
-    }() || {}, Dp = Yp.TextDecoder, Ap = Yp.Uint8Array, Pp = Yp.my, Wp = Yp.String || String, yp = Yp.Array || Array, Up = function() {
-      var pp, ip, cp = new yp(wp[46]);
-      return Cp(pp = Wp[wp[23]] || Wp.fromCharCode, ip = []),
-        function(...Op) {
-          for (Cp(Op[wp[12]] = wp[2], Op[wp[20]] = wp[17], Op[wp[19]] = wp[17], Op[-wp[18]] = Op[wp[1]][wp[12]], ip[wp[12]] = wp[1]), Op[wp[10]] = wp[1]; Op[wp[10]] < Op[-wp[18]];) Cp(Op[wp[19]] = Op[wp[1]][Op[wp[10]]++], Op[wp[19]] <= wp[44] ? Op[wp[20]] = Op[wp[19]] : Op[wp[19]] <= 223 ? Op[wp[20]] = (31 & Op[wp[19]]) << wp[22] | Op[wp[1]][Op[wp[10]]++] & wp[21] : Op[wp[19]] <= 239 ? Op[wp[20]] = (15 & Op[wp[19]]) << wp[25] | (Op[wp[1]][Op[wp[10]]++] & wp[21]) << wp[22] | Op[wp[1]][Op[wp[10]]++] & wp[21] : Wp[wp[23]] ? Op[wp[20]] = (Op[wp[19]] & wp[24]) << 18 | (Op[wp[1]][Op[wp[10]]++] & wp[21]) << wp[25] | (Op[wp[1]][Op[wp[10]]++] & wp[21]) << wp[22] | Op[wp[1]][Op[wp[10]]++] & wp[21] : (Op[wp[20]] = wp[21], Op[wp[10]] += wp[28]), ip[wp[26]](cp[Op[wp[20]]] || (cp[Op[wp[20]]] = pp(Op[wp[20]]))));
-          return ip.join("")
-        }
-    }());
-    const dp = op()[vp(wp[29])](),
-      ep = op()[vp(wp[29])](),
-      jp = op()[vp(wp[29])](),
-      kp = op()[vp(wp[29])](),
-      mp = op()[vp(wp[29])](),
-      Rp = op()[vp(wp[29])](),
-      qp = op()[vp(wp[29])](),
-      Mp = (...pp) => {
-        function ip(...pp) {
-          return pp[wp[12]] = wp[2], typeof xp[pp[wp[1]]] === wp[16] ? xp[pp[wp[1]]] = function(pp) {
-            var ip, cp, Op, op, Ip, Sp, xp;
-            for (Cp(ip = "" + (pp || ""), cp = ip.length, Op = [], op = wp[1], Ip = wp[1], Sp = -wp[2]), xp = wp[1]; xp < cp; xp++) {
-              var Lp = 'AWbhGHuS4^g@!_8LRQvz$dweq?}/9[%l#Vcn)&tY=1B(o+`Z7JMrCEP]2jUI6:DO|sNXK<~,5T>x{Fy."0ipkmfa3*;'.indexOf(ip[xp]);
-              if (Lp !== -wp[2])
-                if (Sp < wp[1]) Sp = Lp;
-                else {
-                  Cp(Sp += Lp * wp[30], op |= Sp << Ip, Ip += (Sp & wp[31]) > wp[32] ? wp[33] : wp[34]);
-                  do {
-                    Cp(Op.push(op & wp[11]), op >>= wp[3], Ip -= wp[3])
-                  } while (Ip > wp[24]);
-                  Sp = -wp[2]
-                }
-            }
-            return Sp > -wp[2] && Op.push((op | Sp << Ip) & wp[11]), tp(Op)
-          }(Lp[pp[wp[1]]]) : xp[pp[wp[1]]]
-        }
-        pp[wp[12]] = wp[28], vp(119) in Hp && function() {
-          var pp, ip, cp, Op = function(...ip) {
-            return Cp(ip[wp[12]] = wp[2], ip[wp[2]] = []), (ip[wp[1]] === wp[2] || ip[wp[1]] >= wp[10]) && pp(ip[wp[2]], [], ip[wp[1]], wp[1]), ip[wp[2]]
+  },
+  36956: (QQ, WQ, XQ) => {
+    const wQ = XQ(36964),
+      qQ = XQ(36976),
+      TQ = {};
+    Object.keys(wQ).forEach((QQ => {
+      TQ[QQ] = {}, Object.defineProperty(TQ[QQ], "channels", {
+        value: wQ[QQ].channels
+      }), Object.defineProperty(TQ[QQ], "labels", {
+        value: wQ[QQ].labels
+      });
+      const WQ = qQ(QQ);
+      Object.keys(WQ).forEach((XQ => {
+        const wQ = WQ[XQ];
+        TQ[QQ][XQ] = function(QQ) {
+          const WQ = function() {
+            for (var WQ = arguments.length, XQ = new Array(WQ), wQ = 0; wQ < WQ; wQ++) XQ[wQ] = arguments[wQ];
+            const qQ = XQ[0];
+            if (void 0 === qQ || null === qQ) return qQ;
+            qQ.length > 1 && (XQ = qQ);
+            const TQ = QQ(XQ);
+            if ("object" === typeof TQ)
+              for (let QQ = TQ.length, zQ = 0; zQ < QQ; zQ++) TQ[zQ] = Math.round(TQ[zQ]);
+            return TQ
           };
-          Cp(pp = function(...Op) {
-            for (Op[wp[12]] = wp[10], Op[wp[10]] = Op[wp[28]]; Op[wp[10]] < Op[wp[19]]; Op[wp[10]]++) {
-              if (Op[wp[2]].length !== Op[wp[10]]) return;
-              for (Op[wp[35]] = wp[1]; Op[wp[35]] < Op[wp[19]]; Op[wp[35]]++) cp(Op[wp[2]], [Op[wp[10]], Op[wp[35]]]) && (Cp(Op[wp[2]].push([Op[wp[10]], Op[wp[35]]]), pp(Op[wp[1]], Op[wp[2]], Op[wp[19]], Op[wp[10]] + wp[2])), Op[wp[2]].length === Op[wp[19]] && Op[wp[1]].push(ip(Op[wp[2]])), Op[wp[2]].pop())
-            }
-          }, ip = function(...pp) {
-            for (Cp(pp[wp[12]] = wp[2], pp[-wp[37]] = [], pp[wp[19]] = pp[wp[1]].length), pp[-wp[36]] = wp[1]; pp[-wp[36]] < pp[wp[19]]; pp[-wp[36]]++)
-              for (pp[-wp[37]][pp[-wp[36]]] = "", pp[wp[38]] = wp[1]; pp[wp[38]] < pp[wp[19]]; pp[wp[38]]++) pp[-wp[37]][pp[-wp[36]]] += pp[wp[1]][pp[-wp[36]]][wp[2]] === pp[wp[38]] ? "Q" : ".";
-            return pp[-wp[37]]
-          }, cp = function(...pp) {
-            for (Cp(pp[wp[12]] = wp[19], pp[wp[20]] = pp[wp[1]].length), pp[wp[28]] = wp[1]; pp[wp[28]] < pp[wp[20]]; pp[wp[28]]++) {
-              if (pp[wp[1]][pp[wp[28]]][wp[1]] === pp[wp[2]][wp[1]] || pp[wp[1]][pp[wp[28]]][wp[2]] === pp[wp[2]][wp[2]]) return wp[39];
-              if (Math.abs((pp[wp[1]][pp[wp[28]]][wp[1]] - pp[wp[2]][wp[1]]) / (pp[wp[1]][pp[wp[28]]][wp[2]] - pp[wp[2]][wp[2]])) === wp[2]) return wp[39]
-            }
-            return wp[40]
-          }, console.log(Op))
-        }();
-        const cp = Rp;
-        return op()[ip(120) + ip(121)](cp, pp[wp[19]]), op()[ip(wp[75])](pp[wp[1]], cp, op()[ip(123)](cp, pp[wp[2]]))
-      };
+          return "conversion" in QQ && (WQ.conversion = QQ.conversion), WQ
+        }(wQ), TQ[QQ][XQ].raw = function(QQ) {
+          const WQ = function() {
+            for (var WQ = arguments.length, XQ = new Array(WQ), wQ = 0; wQ < WQ; wQ++) XQ[wQ] = arguments[wQ];
+            const qQ = XQ[0];
+            return void 0 === qQ || null === qQ ? qQ : (qQ.length > 1 && (XQ = qQ), QQ(XQ))
+          };
+          return "conversion" in QQ && (WQ.conversion = QQ.conversion), WQ
+        }(wQ)
+      }))
+    })), QQ.exports = TQ
+  },
+  36976: (QQ, WQ, XQ) => {
+    const wQ = XQ(36964);
 
-    function Cp() {
-      Cp = function() {}
+    function qQ(QQ) {
+      const WQ = function() {
+          const QQ = {},
+            WQ = Object.keys(wQ);
+          for (let XQ = WQ.length, wQ = 0; wQ < XQ; wQ++) QQ[WQ[wQ]] = {
+            distance: -1,
+            parent: null
+          };
+          return QQ
+        }(),
+        XQ = [QQ];
+      for (WQ[QQ].distance = 0; XQ.length;) {
+        const QQ = XQ.pop(),
+          qQ = Object.keys(wQ[QQ]);
+        for (let wQ = qQ.length, TQ = 0; TQ < wQ; TQ++) {
+          const wQ = qQ[TQ],
+            zQ = WQ[wQ]; - 1 === zQ.distance && (zQ.distance = WQ[QQ].distance + 1, zQ.parent = QQ, XQ.unshift(wQ))
+        }
+      }
+      return WQ
     }
-    Sp = (pp, ip, cp, Op, Sp, Yp, Dp, Ap) => {
-      function Pp(...pp) {
-        return pp[wp[12]] = wp[2], typeof xp[pp[wp[1]]] === wp[16] ? xp[pp[wp[1]]] = function(...pp) {
-          for (Cp(pp[wp[12]] = wp[2], pp[wp[20]] = 'GJ,T9P6`%>o4}#ky3dFE<^xN|8/[?a+DR~7S)12wm.n;r@"pvfz_ucZs$5&i](!Cb*B=:e{X0VqOtLQhljUYWgKMHAI', pp[wp[19]] = "" + (pp[wp[1]] || ""), pp[wp[33]] = pp[wp[19]].length, pp[wp[43]] = [], pp[wp[15]] = wp[1], pp[wp[22]] = wp[1], pp[wp[24]] = -wp[2]), pp[wp[41]] = wp[1]; pp[wp[41]] < pp[wp[33]]; pp[wp[41]]++)
-            if (pp[wp[42]] = pp[wp[20]].indexOf(pp[wp[19]][pp[wp[41]]]), pp[wp[42]] !== -wp[2])
-              if (pp[wp[24]] < wp[1]) pp[wp[24]] = pp[wp[42]];
-              else {
-                Cp(pp[wp[24]] += pp[wp[42]] * wp[30], pp[wp[15]] |= pp[wp[24]] << pp[wp[22]], pp[wp[22]] += (pp[wp[24]] & wp[31]) > wp[32] ? wp[33] : wp[34]);
-                do {
-                  Cp(pp[wp[43]].push(pp[wp[15]] & wp[11]), pp[wp[15]] >>= wp[3], pp[wp[22]] -= wp[3])
-                } while (pp[wp[22]] > wp[24]);
-                pp[wp[24]] = -wp[2]
-              } return pp[wp[24]] > -wp[2] && pp[wp[43]].push((pp[wp[15]] | pp[wp[24]] << pp[wp[22]]) & wp[11]), tp(pp[wp[43]])
-        }(Lp[pp[wp[1]]]) : xp[pp[wp[1]]]
+
+    function TQ(QQ, WQ) {
+      return function(XQ) {
+        return WQ(QQ(XQ))
       }
-      const Wp = pp[Pp(wp[45])][Pp(125) + Pp(126) + Pp(wp[44])](ip);
-      let yp = pp[Pp(wp[45])][Pp(wp[46]) + Pp(wp[58]) + Pp(wp[59]) + Pp(wp[60])](Wp);
-      const Up = yp === wp[50] ? pp[Pp(wp[45])][Pp(wp[51]) + Pp(wp[52]) + Pp(wp[53]) + Pp(wp[54])](ip, Pp(wp[47]) + Pp(wp[48]) + Pp(wp[49]) + wp[15]) : yp[Pp(wp[47]) + Pp(wp[48]) + Pp(wp[49]) + wp[15]],
-        vp = yp === wp[50] ? pp[Pp(wp[45])][Pp(wp[51]) + Pp(wp[52]) + Pp(wp[53]) + Pp(wp[54])](ip, Pp(wp[55]) + Pp(wp[56]) + Pp(wp[57])) : yp[Pp(wp[55]) + Pp(wp[56]) + Pp(wp[57])];
-      Cp(op()[Pp(142)](dp, wp[1], wp[1], Yp), op().wi(dp, dp, op()[Pp(143)], Op.heading), op()[Pp(wp[63])](qp, Sp.tw), qp[wp[2]] = wp[1]);
-      const Rp = cp[Pp(145) + Pp(146)]();
-      yp = pp[Pp(wp[45])][Pp(wp[46]) + Pp(wp[58]) + Pp(wp[59]) + Pp(wp[60])](Wp);
-      let Ep = yp === wp[50] ? pp[Pp(wp[45])][Pp(wp[51]) + Pp(wp[52]) + Pp(wp[53]) + Pp(wp[54])](ip, Pp(wp[61]) + Pp(wp[62])) : yp[Pp(wp[61]) + Pp(wp[62])];
-      if (!Rp && op()[wp[67]](qp) && (yp === wp[50] ? pp[Pp(wp[45])][Pp(wp[51]) + Pp(wp[52]) + Pp(wp[53]) + Pp(wp[54])](ip, Pp(wp[74]) + Pp(wp[84]) + Pp(151) + Pp(152)) : yp[Pp(153) + Pp(wp[86]) + Pp(155)])) {
-        function Np(...pp) {
-          for (Cp(pp[wp[12]] = wp[2], pp[wp[2]] = 'qx1B^vAFunkRT<t5)Z_,.=mX/b!G9OPcsjW3Sh4wd?;"a0:7Y6DE~HJQzrLUf>gp@CKMlo}`%VIie]&*+#[{2$(|y8N', pp[wp[19]] = "" + (pp[wp[1]] || ""), pp[wp[4]] = pp[wp[19]].length, pp[-wp[36]] = [], pp[wp[65]] = wp[1], pp[wp[9]] = wp[1], pp[-wp[64]] = -wp[2]), pp[-wp[63]] = wp[1]; pp[-wp[63]] < pp[wp[4]]; pp[-wp[63]]++)
-            if (pp[wp[45]] = pp[wp[2]].indexOf(pp[wp[19]][pp[-wp[63]]]), pp[wp[45]] !== -wp[2])
-              if (pp[-wp[64]] < wp[1]) pp[-wp[64]] = pp[wp[45]];
-              else {
-                Cp(pp[-wp[64]] += pp[wp[45]] * wp[30], pp[wp[65]] |= pp[-wp[64]] << pp[wp[9]], pp[wp[9]] += (pp[-wp[64]] & wp[31]) > wp[32] ? wp[33] : wp[34]);
-                do {
-                  Cp(pp[-wp[36]].push(pp[wp[65]] & wp[11]), pp[wp[65]] >>= wp[3], pp[wp[9]] -= wp[3])
-                } while (pp[wp[9]] > wp[24]);
-                pp[-wp[64]] = -wp[2]
-              } return pp[-wp[64]] > -wp[2] && pp[-wp[36]].push((pp[wp[65]] | pp[-wp[64]] << pp[wp[9]]) & wp[11]), tp(pp[-wp[36]])
-        }
+    }
 
-        function Tp(...pp) {
-          return pp[wp[12]] = wp[2], typeof xp[pp[wp[1]]] === wp[16] ? xp[pp[wp[1]]] = Np(Lp[pp[wp[1]]]) : xp[pp[wp[1]]]
-        }
-
-        function fp(...pp) {
-          function ip() {}
-          pp[wp[12]] = wp[1], Cp(pp[wp[0]] = function(pp, cp) {
-            var Op, op, Ip, Sp, xp, Lp = wp[1];
-            for (Cp(Op = wp[1], op = new ip(wp[1]), Ip = op, Sp = pp, xp = cp); Sp !== wp[50] || xp !== wp[50];) Cp(Op = (Sp ? Sp.val : wp[1]) + (xp ? xp.val : wp[1]) + Lp, Lp = Math.floor(Op / wp[66]), Ip.next = new ip(Op % wp[66]), Ip = Ip.next, Sp = Sp ? Sp.next : wp[50], xp = xp ? xp.next : wp[50]);
-            return Lp && (Ip.next = new ip(Lp)), op.next
-          }, console.log(pp[wp[0]]))
-        }
-        Tp(156) in Hp && fp(), Cp(Mp(ep, dp, qp), Mp(jp, qp, dp), op()[Tp(157)](kp, qp, jp));
-        const bp = op()[Tp(158)](qp),
-          hp = op()[Tp(159)](dp, qp) / Yp / bp,
-          ap = Math[Tp(wp[73])](hp, wp[1]) + wp[2];
-        if (Yp * Yp < op()[wp[67]](jp)) {
-          function np(...pp) {
-            for (Cp(pp[wp[12]] = wp[2], pp[wp[2]] = 'dAQj14uf9qp0xWtsv#hBe27bG!<M?@"RV8H$I3:XO=)~Em[a&(U6ckD>;]_ro,+PCn}l/{5gKy`|^*iFw.SNJZLzTY%', pp[-wp[68]] = "" + (pp[wp[1]] || ""), pp[-wp[70]] = pp[-wp[68]].length, pp[-wp[72]] = [], pp[wp[15]] = wp[1], pp[wp[9]] = wp[1], pp[wp[24]] = -wp[2]), pp[wp[69]] = wp[1]; pp[wp[69]] < pp[-wp[70]]; pp[wp[69]]++)
-              if (pp[wp[71]] = pp[wp[2]].indexOf(pp[-wp[68]][pp[wp[69]]]), pp[wp[71]] !== -wp[2])
-                if (pp[wp[24]] < wp[1]) pp[wp[24]] = pp[wp[71]];
-                else {
-                  Cp(pp[wp[24]] += pp[wp[71]] * wp[30], pp[wp[15]] |= pp[wp[24]] << pp[wp[9]], pp[wp[9]] += (pp[wp[24]] & wp[31]) > wp[32] ? wp[33] : wp[34]);
-                  do {
-                    Cp(pp[-wp[72]].push(pp[wp[15]] & wp[11]), pp[wp[15]] >>= wp[3], pp[wp[9]] -= wp[3])
-                  } while (pp[wp[9]] > wp[24]);
-                  pp[wp[24]] = -wp[2]
-                } return pp[wp[24]] > -wp[2] && pp[-wp[72]].push((pp[wp[15]] | pp[wp[24]] << pp[wp[9]]) & wp[11]), tp(pp[-wp[72]])
-          }
-
-          function Fp(...pp) {
-            return pp[wp[12]] = wp[2], typeof xp[pp[wp[1]]] === wp[16] ? xp[pp[wp[1]]] = np(Lp[pp[wp[1]]]) : xp[pp[wp[1]]]
-          }
-          op()[Fp(161)](dp, dp, jp, ap)
-        }
-        Cp(Ep = (0, Ip.y)(Ep, 1, Math[Tp(wp[73])](wp[2], Math[Tp(162)](wp[1], -hp, wp[2] - bp / Yp))), op()[Tp(163)](dp, dp, kp))
+    function zQ(QQ, WQ) {
+      const XQ = [WQ[QQ].parent, QQ];
+      let qQ = wQ[WQ[QQ].parent][QQ],
+        zQ = WQ[QQ].parent;
+      for (; WQ[zQ].parent;) XQ.unshift(WQ[zQ].parent), qQ = TQ(wQ[WQ[zQ].parent][zQ], qQ), zQ = WQ[zQ].parent;
+      return qQ.conversion = XQ, qQ
+    }
+    QQ.exports = function(QQ) {
+      const WQ = qQ(QQ),
+        XQ = {},
+        wQ = Object.keys(WQ);
+      for (let qQ = wQ.length, TQ = 0; TQ < qQ; TQ++) {
+        const QQ = wQ[TQ];
+        null !== WQ[QQ].parent && (XQ[QQ] = zQ(QQ, WQ))
       }
-      const Xp = mp;
-      Cp(op()[Pp(164)](Xp, dp, qp), Xp[wp[2]] = wp[1]);
-      let lp = op()[Pp(165)](Xp);
-      if (!Rp) {
-        function gp(...pp) {
-          for (Cp(pp[wp[12]] = wp[2], pp[wp[74]] = 'G}u$<_Dn7W36V,:vo9eCM8@YXObhzmi+BZUH!Sl`[EL|{p(J/T;xqF~Ar1t4N&d>%P.?Q=gka2^jcf5#Is*0wR]y"K)', pp[-wp[75]] = "" + (pp[wp[1]] || ""), pp[wp[4]] = pp[-wp[75]].length, pp[wp[43]] = [], pp[wp[78]] = wp[1], pp[wp[9]] = wp[1], pp[wp[77]] = -wp[2]), pp[wp[41]] = wp[1]; pp[wp[41]] < pp[wp[4]]; pp[wp[41]]++)
-            if (pp[wp[76]] = pp[wp[74]].indexOf(pp[-wp[75]][pp[wp[41]]]), pp[wp[76]] !== -wp[2])
-              if (pp[wp[77]] < wp[1]) pp[wp[77]] = pp[wp[76]];
-              else {
-                Cp(pp[wp[77]] += pp[wp[76]] * wp[30], pp[wp[78]] |= pp[wp[77]] << pp[wp[9]], pp[wp[9]] += (pp[wp[77]] & wp[31]) > wp[32] ? wp[33] : wp[34]);
-                do {
-                  Cp(pp[wp[43]].push(pp[wp[78]] & wp[11]), pp[wp[78]] >>= wp[3], pp[wp[9]] -= wp[3])
-                } while (pp[wp[9]] > wp[24]);
-                pp[wp[77]] = -wp[2]
-              } return pp[wp[77]] > -wp[2] && pp[wp[43]].push((pp[wp[78]] | pp[wp[77]] << pp[wp[9]]) & wp[11]), tp(pp[wp[43]])
-        }
-
-        function Gp(...pp) {
-          return pp[wp[12]] = wp[2], typeof xp[pp[wp[1]]] === wp[16] ? xp[pp[wp[1]]] = gp(Lp[pp[wp[1]]]) : xp[pp[wp[1]]]
-        }
-
-        function rp(...pp) {
-          function ip(...pp) {
-            return pp[wp[12]] = wp[2], pp[wp[1]][wp[2]] * wp[80] + (pp[wp[1]][wp[1]] < wp[1] ? wp[79] | pp[wp[1]][wp[1]] : pp[wp[1]][wp[1]])
-          }
-
-          function cp(...pp) {
-            switch (pp[wp[12]] = wp[2], ((pp[wp[1]] & wp[79]) !== wp[1]) * wp[2] + (pp[wp[1]] < wp[1]) * wp[19]) {
-              case wp[1]:
-                return [pp[wp[1]] % wp[79], Math.trunc(pp[wp[1]] / wp[80])];
-              case wp[2]:
-                return [pp[wp[1]] % wp[79] - wp[79], Math.trunc(pp[wp[1]] / wp[80]) + wp[2]];
-              case wp[19]:
-                return [((pp[wp[1]] + wp[79]) % wp[79] + wp[79]) % wp[79], Math.round(pp[wp[1]] / wp[80])];
-              case wp[28]:
-                return [pp[wp[1]] % wp[79], Math.trunc(pp[wp[1]] / wp[80])]
-            }
-          }
-          pp[wp[12]] = wp[1], Cp(pp[-wp[37]] = ip([wp[19], wp[10]]), pp[-wp[81]] = ip([wp[2], wp[19]]), pp[wp[43]] = pp[-wp[37]] + pp[-wp[81]], pp[wp[71]] = pp[wp[43]] - pp[-wp[81]], pp[-wp[82]] = pp[wp[71]] * wp[19], pp[-wp[83]] = pp[-wp[82]] / wp[19], console.log(cp(pp[wp[43]])), console.log(cp(pp[wp[71]])), console.log(cp(pp[-wp[82]])), console.log(cp(pp[-wp[83]])))
-        }
-        Gp(166) in Hp && rp(), lp *= Ep
-      }
-      const Qp = Dp[Pp(167) + Pp(168) + Pp(wp[70])],
-        Jp = Qp ? Math[Pp(170)](Qp, lp) : lp;
-      op()[Pp(wp[6]) + Pp(172)](Xp, Xp);
-      const Bp = Ap !== wp[50] && void 0 !== Ap ? Ap : Dp[Pp(173) + Pp(wp[36]) + Pp(175) + Pp(176)];
-      if (Jp > wp[1]) {
-        function Zp(...pp) {
-          for (Cp(pp[wp[12]] = wp[2], pp[wp[2]] = 'k6w7RP4<n/d{Z5)W0_s(1urVo[2Nq:em^ST+U;`=hJ&K"8|@pfYgtAi?~x]FQzIMj.y,O}H3%BbG9L!C$>#*lEaXDcv', pp[wp[0]] = "" + (pp[wp[1]] || ""), pp[wp[4]] = pp[wp[0]].length, pp[wp[10]] = [], pp[wp[35]] = wp[1], pp[wp[9]] = wp[1], pp[wp[7]] = -wp[2]), pp[-wp[84]] = wp[1]; pp[-wp[84]] < pp[wp[4]]; pp[-wp[84]]++)
-            if (pp[wp[76]] = pp[wp[2]].indexOf(pp[wp[0]][pp[-wp[84]]]), pp[wp[76]] !== -wp[2])
-              if (pp[wp[7]] < wp[1]) pp[wp[7]] = pp[wp[76]];
-              else {
-                Cp(pp[wp[7]] += pp[wp[76]] * wp[30], pp[wp[35]] |= pp[wp[7]] << pp[wp[9]], pp[wp[9]] += (pp[wp[7]] & wp[31]) > wp[32] ? wp[33] : wp[34]);
-                do {
-                  Cp(pp[wp[10]].push(pp[wp[35]] & wp[11]), pp[wp[35]] >>= wp[3], pp[wp[9]] -= wp[3])
-                } while (pp[wp[9]] > wp[24]);
-                pp[wp[7]] = -wp[2]
-              } return pp[wp[7]] > -wp[2] && pp[wp[10]].push((pp[wp[35]] | pp[wp[7]] << pp[wp[9]]) & wp[11]), tp(pp[wp[10]])
-        }
-
-        function zp(...pp) {
-          return pp[wp[12]] = wp[2], typeof xp[pp[wp[1]]] === wp[16] ? xp[pp[wp[1]]] = Zp(Lp[pp[wp[1]]]) : xp[pp[wp[1]]]
-        }
-        let sp = cp[zp(177) + zp(178)] * Bp;
-        if (!Rp) {
-          function Vp(...pp) {
-            for (Cp(pp[wp[12]] = wp[2], pp[wp[20]] = 'ALluab7_G=OY]"0~q`kFgB9CP5Q<.iNHhX^t*3RM{2pZ;jS:n}fvD[|U@oK$zI(V,6?1xJE/!8&dT+4eWc>syrw)%#m', pp[wp[0]] = "" + (pp[wp[1]] || ""), pp[wp[85]] = pp[wp[0]].length, pp[wp[87]] = [], pp[wp[15]] = wp[1], pp[wp[22]] = wp[1], pp[wp[7]] = -wp[2]), pp[wp[3]] = wp[1]; pp[wp[3]] < pp[wp[85]]; pp[wp[3]]++)
-              if (pp[wp[86]] = pp[wp[20]].indexOf(pp[wp[0]][pp[wp[3]]]), pp[wp[86]] !== -wp[2])
-                if (pp[wp[7]] < wp[1]) pp[wp[7]] = pp[wp[86]];
-                else {
-                  Cp(pp[wp[7]] += pp[wp[86]] * wp[30], pp[wp[15]] |= pp[wp[7]] << pp[wp[22]], pp[wp[22]] += (pp[wp[7]] & wp[31]) > wp[32] ? wp[33] : wp[34]);
-                  do {
-                    Cp(pp[wp[87]].push(pp[wp[15]] & wp[11]), pp[wp[15]] >>= wp[3], pp[wp[22]] -= wp[3])
-                  } while (pp[wp[22]] > wp[24]);
-                  pp[wp[7]] = -wp[2]
-                } return pp[wp[7]] > -wp[2] && pp[wp[87]].push((pp[wp[15]] | pp[wp[7]] << pp[wp[22]]) & wp[11]), tp(pp[wp[87]])
-          }
-
-          function ii(...pp) {
-            return pp[wp[12]] = wp[2], typeof xp[pp[wp[1]]] === wp[16] ? xp[pp[wp[1]]] = Vp(Lp[pp[wp[1]]]) : xp[pp[wp[1]]]
-          }
-          sp *= cp[ii(179) + ii(180)]
-        }
-        let Kp = cp[zp(181) + zp(182) + "ss"] * Jp;
-        if (Jp < .3) {
-          function ci(...pp) {
-            function ip(...pp) {
-              return pp[wp[12]] = wp[2], typeof xp[pp[wp[1]]] === wp[16] ? xp[pp[wp[1]]] = function(pp) {
-                var ip, cp, Op, op, Ip, Sp, xp;
-                for (Cp(ip = "" + (pp || ""), cp = ip.length, Op = [], op = wp[1], Ip = wp[1], Sp = -wp[2]), xp = wp[1]; xp < cp; xp++) {
-                  var Lp = 'eIz9qf2b^0ZNpchYuTKrd~&D8=JLW[_#Hv?nV)1o:;$PG"EQR,|saB/.!iwM>jACU6t`<OX%7m@+]4}3lky{(x5*gFS'.indexOf(ip[xp]);
-                  if (Lp !== -wp[2])
-                    if (Sp < wp[1]) Sp = Lp;
-                    else {
-                      Cp(Sp += Lp * wp[30], op |= Sp << Ip, Ip += (Sp & wp[31]) > wp[32] ? wp[33] : wp[34]);
-                      do {
-                        Cp(Op.push(op & wp[11]), op >>= wp[3], Ip -= wp[3])
-                      } while (Ip > wp[24]);
-                      Sp = -wp[2]
-                    }
-                }
-                return Sp > -wp[2] && Op.push((op | Sp << Ip) & wp[11]), tp(Op)
-              }(Lp[pp[wp[1]]]) : xp[pp[wp[1]]]
-            }
-            pp[wp[12]] = wp[1], Cp(pp[wp[20]] = ip(184) + ip(185) + ip(186) + ip(187) + ip(188), pp[-wp[65]] = ip(189) + ip(190) + ip(191) + ip(192) + ip(193) + ip(194) + ip(195), pp[wp[19]] = ip(196) + ip(wp[87]) + ip(198) + ip(199) + ip(200) + ip(wp[27]), pp[wp[20]].match(pp[-wp[65]] + pp[wp[19]]))
-          }
-          zp(183) in Hp && ci(), Kp *= Jp
-        }
-        sp > Kp && (sp = Kp), Cp(op()[zp(wp[64])](Xp, Xp, sp), Sp[zp(203) + zp(204)](Xp))
-      }
-      Sp[Pp(205) + wp[88]] = cp[Pp(206) + Pp(wp[48]) + wp[88]] * (Rp ? Up : vp)
+      return XQ
     }
   },
-  37861: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Lp,
-      f: () => xp
-    });
-    var Op = cp(37868),
-      op = cp(1927);
-    const Ip = 2,
-      Sp = 1,
-      xp = {
-        Gx: 1,
-        fluidDrag: -1,
-        fluidDragHorizontal: -1,
-        fluidDragVertical: -1,
-        gravityMultiplier: 2,
-        width: .5,
-        height: 1.8,
-        canRun: !0,
-        jumpMultiplier: 1,
-        upwardImpulseOnUse: 0,
-        canAutoStep: !0,
-        canAutoStepByBlock: {},
-        riderOffset: [0, 0, 0],
-        pose: "standing",
-        effect: null,
-        standingFriction: 5,
-        maxPushDistance: 0,
-        movementForceMultiplier: 1,
-        disableBaseMovement: !1,
-        speedMultiplier: 1,
-        landSpeedMultiplier: 1,
-        fluidSpeedMultiplier: 1,
-        airSpeedMultiplier: 1,
-        speedMultiplierByBlock: {},
-        disableFootstepSounds: !1,
-        horizontalBounciness: 0,
-        verticalBounciness: 0,
-        minHorizontalSpeedToBounce: 0,
-        minVerticalSpeedToBounce: 0,
-        horizontalImpactCameraShake: null,
-        verticalImpactCameraShake: null,
-        steering: null,
-        fixedHeading: null,
-        fluidSkip: null,
-        airborneMode: null,
-        airborneMovement: null,
-        airborneFallSpeedLimit: null
+  36973: QQ => {
+    QQ.exports = {
+      aliceblue: [240, 248, 255],
+      antiquewhite: [250, 235, 215],
+      aqua: [0, 255, 255],
+      aquamarine: [127, 255, 212],
+      azure: [240, 255, 255],
+      beige: [245, 245, 220],
+      bisque: [255, 228, 196],
+      black: [0, 0, 0],
+      blanchedalmond: [255, 235, 205],
+      blue: [0, 0, 255],
+      blueviolet: [138, 43, 226],
+      brown: [165, 42, 42],
+      burlywood: [222, 184, 135],
+      cadetblue: [95, 158, 160],
+      chartreuse: [127, 255, 0],
+      chocolate: [210, 105, 30],
+      coral: [255, 127, 80],
+      cornflowerblue: [100, 149, 237],
+      cornsilk: [255, 248, 220],
+      crimson: [220, 20, 60],
+      cyan: [0, 255, 255],
+      darkblue: [0, 0, 139],
+      darkcyan: [0, 139, 139],
+      darkgoldenrod: [184, 134, 11],
+      darkgray: [169, 169, 169],
+      darkgreen: [0, 100, 0],
+      darkgrey: [169, 169, 169],
+      darkkhaki: [189, 183, 107],
+      darkmagenta: [139, 0, 139],
+      darkolivegreen: [85, 107, 47],
+      darkorange: [255, 140, 0],
+      darkorchid: [153, 50, 204],
+      darkred: [139, 0, 0],
+      darksalmon: [233, 150, 122],
+      darkseagreen: [143, 188, 143],
+      darkslateblue: [72, 61, 139],
+      darkslategray: [47, 79, 79],
+      darkslategrey: [47, 79, 79],
+      darkturquoise: [0, 206, 209],
+      darkviolet: [148, 0, 211],
+      deeppink: [255, 20, 147],
+      deepskyblue: [0, 191, 255],
+      dimgray: [105, 105, 105],
+      dimgrey: [105, 105, 105],
+      dodgerblue: [30, 144, 255],
+      firebrick: [178, 34, 34],
+      floralwhite: [255, 250, 240],
+      forestgreen: [34, 139, 34],
+      fuchsia: [255, 0, 255],
+      gainsboro: [220, 220, 220],
+      ghostwhite: [248, 248, 255],
+      gold: [255, 215, 0],
+      goldenrod: [218, 165, 32],
+      gray: [128, 128, 128],
+      green: [0, 128, 0],
+      greenyellow: [173, 255, 47],
+      grey: [128, 128, 128],
+      honeydew: [240, 255, 240],
+      hotpink: [255, 105, 180],
+      indianred: [205, 92, 92],
+      indigo: [75, 0, 130],
+      ivory: [255, 255, 240],
+      khaki: [240, 230, 140],
+      lavender: [230, 230, 250],
+      lavenderblush: [255, 240, 245],
+      lawngreen: [124, 252, 0],
+      lemonchiffon: [255, 250, 205],
+      lightblue: [173, 216, 230],
+      lightcoral: [240, 128, 128],
+      lightcyan: [224, 255, 255],
+      lightgoldenrodyellow: [250, 250, 210],
+      lightgray: [211, 211, 211],
+      lightgreen: [144, 238, 144],
+      lightgrey: [211, 211, 211],
+      lightpink: [255, 182, 193],
+      lightsalmon: [255, 160, 122],
+      lightseagreen: [32, 178, 170],
+      lightskyblue: [135, 206, 250],
+      lightslategray: [119, 136, 153],
+      lightslategrey: [119, 136, 153],
+      lightsteelblue: [176, 196, 222],
+      lightyellow: [255, 255, 224],
+      lime: [0, 255, 0],
+      limegreen: [50, 205, 50],
+      linen: [250, 240, 230],
+      magenta: [255, 0, 255],
+      maroon: [128, 0, 0],
+      mediumaquamarine: [102, 205, 170],
+      mediumblue: [0, 0, 205],
+      mediumorchid: [186, 85, 211],
+      mediumpurple: [147, 112, 219],
+      mediumseagreen: [60, 179, 113],
+      mediumslateblue: [123, 104, 238],
+      mediumspringgreen: [0, 250, 154],
+      mediumturquoise: [72, 209, 204],
+      mediumvioletred: [199, 21, 133],
+      midnightblue: [25, 25, 112],
+      mintcream: [245, 255, 250],
+      mistyrose: [255, 228, 225],
+      moccasin: [255, 228, 181],
+      navajowhite: [255, 222, 173],
+      navy: [0, 0, 128],
+      oldlace: [253, 245, 230],
+      olive: [128, 128, 0],
+      olivedrab: [107, 142, 35],
+      orange: [255, 165, 0],
+      orangered: [255, 69, 0],
+      orchid: [218, 112, 214],
+      palegoldenrod: [238, 232, 170],
+      palegreen: [152, 251, 152],
+      paleturquoise: [175, 238, 238],
+      palevioletred: [219, 112, 147],
+      papayawhip: [255, 239, 213],
+      peachpuff: [255, 218, 185],
+      peru: [205, 133, 63],
+      pink: [255, 192, 203],
+      plum: [221, 160, 221],
+      powderblue: [176, 224, 230],
+      purple: [128, 0, 128],
+      rebeccapurple: [102, 51, 153],
+      red: [255, 0, 0],
+      rosybrown: [188, 143, 143],
+      royalblue: [65, 105, 225],
+      saddlebrown: [139, 69, 19],
+      salmon: [250, 128, 114],
+      sandybrown: [244, 164, 96],
+      seagreen: [46, 139, 87],
+      seashell: [255, 245, 238],
+      sienna: [160, 82, 45],
+      silver: [192, 192, 192],
+      skyblue: [135, 206, 235],
+      slateblue: [106, 90, 205],
+      slategray: [112, 128, 144],
+      slategrey: [112, 128, 144],
+      snow: [255, 250, 250],
+      springgreen: [0, 255, 127],
+      steelblue: [70, 130, 180],
+      tan: [210, 180, 140],
+      teal: [0, 128, 128],
+      thistle: [216, 191, 216],
+      tomato: [255, 99, 71],
+      turquoise: [64, 224, 208],
+      violet: [238, 130, 238],
+      wheat: [245, 222, 179],
+      white: [255, 255, 255],
+      whitesmoke: [245, 245, 245],
+      yellow: [255, 255, 0],
+      yellowgreen: [154, 205, 50]
+    }
+  },
+  36948: (QQ, WQ, XQ) => {
+    var wQ = XQ(36952),
+      qQ = Array.prototype.concat,
+      TQ = Array.prototype.slice,
+      zQ = QQ.exports = function(QQ) {
+        for (var WQ = [], XQ = 0, zQ = QQ.length; XQ < zQ; XQ++) {
+          var sQ = QQ[XQ];
+          wQ(sQ) ? WQ = qQ.call(WQ, TQ.call(sQ)) : WQ.push(sQ)
+        }
+        return WQ
       };
-
-    function Lp(pp, ip, cp, xp, Lp, Yp, Dp) {
-      if (Lp.speed) return (0, Op.e)(ip, cp, xp, Lp, Yp, Dp, pp), void(Lp.ticksToReachMaxIdleFriction = Ip);
-      const Ap = xp.isOnGround(),
-        Pp = ip.bloxd.getSyncedClientOptions(ip.bloxd.getPlayerReader(cp)),
-        Wp = null === Pp ? ip.bloxd.getClientPredictedOption(cp, "groundFrictionScale") : Pp.groundFrictionScale,
-        yp = null === Pp ? ip.bloxd.getClientPredictedOption(cp, "airFrictionScale") : Pp.airFrictionScale,
-        Up = Ap ? Wp : yp,
-        wp = Math.max(Sp, Up),
-        vp = Lp.ticksToReachMaxIdleFriction / Ip,
-        tp = (0, op.y)(wp, Up, vp);
-      Yp.friction = pp.standingFriction * ((null === Pp ? ip.bloxd.getClientPredictedOption(cp, "airMomentumConservation") : Pp.airMomentumConservation) ? tp : Up), Lp.ticksToReachMaxIdleFriction > 0 && Lp.ticksToReachMaxIdleFriction--
+    zQ.wrap = function(QQ) {
+      return function() {
+        return QQ(zQ(arguments))
+      }
+    }
+  },
+  36952: QQ => {
+    QQ.exports = function(QQ) {
+      return !(!QQ || "string" === typeof QQ) && (QQ instanceof Array || Array.isArray(QQ) || QQ.length >= 0 && (QQ.splice instanceof Function || Object.getOwnPropertyDescriptor(QQ, QQ.length - 1) && "String" !== QQ.constructor.name))
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

@@ -1,116 +1,116 @@
-export const id = 26;
-export const ids = [26];
+export const id = 27;
+export const ids = [27];
 export const modules = {
-  39753: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      default: () => xp
+  39827: (QQ, WQ, XQ) => {
+    XQ.r(WQ), XQ.d(WQ, {
+      default: () => sQ
     });
-    var Op = cp(34453);
-    const op = 1e3 / 3;
+    var wQ = XQ(34536);
+    const qQ = 1e3 / 3;
 
-    function Ip(pp, ip, cp) {
-      if ("parenthetical-seconds" === ip) return ` (${pp}s)`;
-      const Op = `${Math.floor(pp/60)}:${(pp%60).toString().padStart(2,"0")}`;
-      return cp ? `${cp}${Op}` : Op
+    function TQ(QQ, WQ, XQ) {
+      if ("parenthetical-seconds" === WQ) return ` (${QQ}s)`;
+      const wQ = `${Math.floor(QQ/60)}:${(QQ%60).toString().padStart(2,"0")}`;
+      return XQ ? `${XQ}${wQ}` : wQ
     }
 
-    function Sp(pp, ip, cp, op, Ip) {
-      var Sp;
-      const xp = {
-        ...op.baseNametag
+    function zQ(QQ, WQ, XQ, qQ, TQ) {
+      var zQ;
+      const sQ = {
+        ...qQ.baseNametag
       };
-      xp.content = [...null !== (Sp = op.baseNametag.content) && void 0 !== Sp ? Sp : [], {
+      sQ.content = [...null !== (zQ = qQ.baseNametag.content) && void 0 !== zQ ? zQ : [], {
         str: " "
       }, {
         icon: "Gold Coin"
       }, {
-        str: `: ${(0,Op.e)(Ip)}`
-      }], pp.setOtherEntitySetting(ip, cp, "nameTagInfo", xp)
+        str: `: ${(0,wQ.d)(TQ)}`
+      }], QQ.setOtherEntitySetting(WQ, XQ, "nameTagInfo", sQ)
     }
-    const xp = function(pp, ip, cp, Op) {
-      let xp, {
-        localPlayerId: Lp
-      } = Op;
-      const Yp = new Map,
-        Dp = new Map;
-      let Ap = 0,
-        Pp = 0;
+    const sQ = function(QQ, WQ, XQ, wQ) {
+      let sQ, {
+        localPlayerId: FQ
+      } = wQ;
+      const PQ = new Map,
+        gQ = new Map;
+      let JQ = 0,
+        rQ = 0;
       return {
-        onCreate: pp => {
-          xp = pp
+        onCreate: QQ => {
+          sQ = QQ
         },
-        LP: pp => {
-          const ip = Date.now();
-          for (const [Op, op] of Yp) {
-            const pp = Math.floor((ip - op.startTime) / 1e3),
-              Sp = Math.max(0, op.remainingSeconds - pp);
-            if (Sp === op.lastRenderedSecond) continue;
-            op.lastRenderedSecond = Sp;
-            const Dp = {
-                str: Ip(Sp, op.format, op.prefix),
-                style: op.style
+        fJ: QQ => {
+          const WQ = Date.now();
+          for (const [wQ, qQ] of PQ) {
+            const QQ = Math.floor((WQ - qQ.startTime) / 1e3),
+              zQ = Math.max(0, qQ.remainingSeconds - QQ);
+            if (zQ === qQ.lastRenderedSecond) continue;
+            qQ.lastRenderedSecond = zQ;
+            const gQ = {
+                str: TQ(zQ, qQ.format, qQ.prefix),
+                style: qQ.style
               },
-              Ap = {
-                ...op.baseNametag
+              JQ = {
+                ...qQ.baseNametag
               };
-            var cp;
-            if ("content" === op.location) Ap.content = [...null !== (cp = op.baseNametag.content) && void 0 !== cp ? cp : [], Dp];
-            else Ap.subtitle = [Dp];
-            xp.setOtherEntitySetting(Lp, Op, "nameTagInfo", Ap), Sp <= 0 && Yp.delete(Op)
+            var XQ;
+            if ("content" === qQ.location) JQ.content = [...null !== (XQ = qQ.baseNametag.content) && void 0 !== XQ ? XQ : [], gQ];
+            else JQ.subtitle = [gQ];
+            sQ.setOtherEntitySetting(FQ, wQ, "nameTagInfo", JQ), zQ <= 0 && PQ.delete(wQ)
           }
-          if (Dp.size > 0 && ip - Ap >= op) {
-            Ap = ip, Pp = (Pp + 1) % 3;
-            let pp = 0;
-            for (const [cp, Op] of Dp) {
-              if (pp++ % 3 !== Pp) continue;
-              const op = Math.floor((ip - Op.startTime) / 1e3);
-              if (op === Op.lastRenderedSecond) continue;
-              Op.lastRenderedSecond = op;
-              const Ip = Op.accumulatedIncome + Op.incomePerSecond * BigInt(op);
-              Sp(xp, Lp, cp, Op, Ip)
+          if (gQ.size > 0 && WQ - JQ >= qQ) {
+            JQ = WQ, rQ = (rQ + 1) % 3;
+            let QQ = 0;
+            for (const [XQ, wQ] of gQ) {
+              if (QQ++ % 3 !== rQ) continue;
+              const qQ = Math.floor((WQ - wQ.startTime) / 1e3);
+              if (qQ === wQ.lastRenderedSecond) continue;
+              wQ.lastRenderedSecond = qQ;
+              const TQ = wQ.accumulatedIncome + wQ.incomePerSecond * BigInt(qQ);
+              zQ(sQ, FQ, XQ, wQ, TQ)
             }
           }
         },
-        onReceivedMessageFromServer: (pp, ip) => {
-          if ("startCountdown" === pp) Yp.set(ip.eId, {
-            baseNametag: ip.baseNametag,
-            remainingSeconds: ip.remainingSeconds,
+        onReceivedMessageFromServer: (QQ, WQ) => {
+          if ("startCountdown" === QQ) PQ.set(WQ.eId, {
+            baseNametag: WQ.baseNametag,
+            remainingSeconds: WQ.remainingSeconds,
             startTime: Date.now(),
-            format: ip.format,
-            location: ip.location,
-            prefix: ip.prefix,
-            style: ip.style,
+            format: WQ.format,
+            location: WQ.location,
+            prefix: WQ.prefix,
+            style: WQ.style,
             lastRenderedSecond: -1
           });
-          else if ("stopCountdown" === pp) Yp.delete(ip.eId);
-          else if ("startIncomeTicking" === pp) {
-            const pp = {
-              baseNametag: ip.baseNametag,
-              accumulatedIncome: BigInt(ip.accumulatedIncome),
-              incomePerSecond: BigInt(ip.incomePerSecond),
+          else if ("stopCountdown" === QQ) PQ.delete(WQ.eId);
+          else if ("startIncomeTicking" === QQ) {
+            const QQ = {
+              baseNametag: WQ.baseNametag,
+              accumulatedIncome: BigInt(WQ.accumulatedIncome),
+              incomePerSecond: BigInt(WQ.incomePerSecond),
               startTime: Date.now(),
               lastRenderedSecond: -1
             };
-            Dp.set(ip.eId, pp), Sp(xp, Lp, ip.eId, pp, pp.accumulatedIncome)
-          } else "stopIncomeTicking" === pp && Dp.delete(ip.eId) && xp.setOtherEntitySetting(Lp, ip.eId, "nameTagInfo", {
+            gQ.set(WQ.eId, QQ), zQ(sQ, FQ, WQ.eId, QQ, QQ.accumulatedIncome)
+          } else "stopIncomeTicking" === QQ && gQ.delete(WQ.eId) && sQ.setOtherEntitySetting(FQ, WQ.eId, "nameTagInfo", {
             content: []
           })
         },
-        onPlayerAltAction: (pp, ip, cp, Op, op, Ip) => {
-          if (Ip && "Mesh" === xp.getEntityType(Ip)) {
-            const ip = xp.getEntityName(Ip);
-            "Upgrades" === ip ? xp.openShop(pp, !1, "Upgrades") : "Items" === ip ? xp.openShop(pp, !1, "Items") : "Prestige" === ip ? xp.openShop(pp, !1, "Prestige") : "Collections" === ip ? xp.openShop(pp, !1, "Collections") : "Base Skins" === ip ? xp.openShop(pp, !1, "Base Skins") : "Gauntlet" === ip ? xp.openShop(pp, !1, "Gauntlet") : "Diamond Shop" === ip && xp.openShop(pp, !1, "Diamond Shop")
+        onPlayerAltAction: (QQ, WQ, XQ, wQ, qQ, TQ) => {
+          if (TQ && "Mesh" === sQ.getEntityType(TQ)) {
+            const WQ = sQ.getEntityName(TQ);
+            "Upgrades" === WQ ? sQ.openShop(QQ, !1, "Upgrades") : "Items" === WQ ? sQ.openShop(QQ, !1, "Items") : "Prestige" === WQ ? sQ.openShop(QQ, !1, "Prestige") : "Collections" === WQ ? sQ.openShop(QQ, !1, "Collections") : "Base Skins" === WQ ? sQ.openShop(QQ, !1, "Base Skins") : "Gauntlet" === WQ ? sQ.openShop(QQ, !1, "Gauntlet") : "Diamond Shop" === WQ && sQ.openShop(QQ, !1, "Diamond Shop")
           }
         }
       }
     }
   },
-  34453: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => op,
-      g: () => Sp
+  34536: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      d: () => qQ,
+      f: () => zQ
     });
-    const Op = [{
+    const wQ = [{
       threshold: 10n ** 180n,
       suffix: "NoQig"
     }, {
@@ -292,67 +292,67 @@ export const modules = {
       suffix: "K"
     }];
 
-    function op(pp) {
-      let ip, cp = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
-      if ("number" === typeof pp) {
-        if (!Number.isFinite(pp)) return "0";
-        if (Math.abs(pp) < 100) {
-          const ip = pp < 0 ? "-" : "",
-            cp = Math.abs(pp);
-          return cp >= 10 ? `${ip}${cp.toFixed(1).replace(/\.0$/,"")}` : `${ip}${cp.toFixed(2).replace(/\.?0+$/,"")}`
+    function qQ(QQ) {
+      let WQ, XQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
+      if ("number" === typeof QQ) {
+        if (!Number.isFinite(QQ)) return "0";
+        if (Math.abs(QQ) < 100) {
+          const WQ = QQ < 0 ? "-" : "",
+            XQ = Math.abs(QQ);
+          return XQ >= 10 ? `${WQ}${XQ.toFixed(1).replace(/\.0$/,"")}` : `${WQ}${XQ.toFixed(2).replace(/\.?0+$/,"")}`
         }
-        ip = BigInt(Math.floor(pp))
-      } else ip = pp;
-      const op = ip < 0n ? -ip : ip,
-        Ip = ip < 0n ? "-" : "",
-        Sp = op.toString();
-      if (Sp.length <= cp) return `${Ip}${Sp}`;
-      const xp = 3 * Math.floor((Sp.length - 1) / 3);
-      if (xp < 3) return `${Ip}${Sp}`;
-      if (xp > 3 * Op.length) {
-        const pp = Sp[0],
-          ip = Sp.slice(1, 3).replace(/0+$/, "");
-        return `${Ip}${ip?`${pp}.${ip}`:pp}e${Sp.length-1}`
+        WQ = BigInt(Math.floor(QQ))
+      } else WQ = QQ;
+      const qQ = WQ < 0n ? -WQ : WQ,
+        TQ = WQ < 0n ? "-" : "",
+        zQ = qQ.toString();
+      if (zQ.length <= XQ) return `${TQ}${zQ}`;
+      const sQ = 3 * Math.floor((zQ.length - 1) / 3);
+      if (sQ < 3) return `${TQ}${zQ}`;
+      if (sQ > 3 * wQ.length) {
+        const QQ = zQ[0],
+          WQ = zQ.slice(1, 3).replace(/0+$/, "");
+        return `${TQ}${WQ?`${QQ}.${WQ}`:QQ}e${zQ.length-1}`
       }
       const {
-        threshold: Lp,
-        suffix: Yp
-      } = Op[Op.length - xp / 3], Dp = op / Lp, Ap = Number(1000n * (op % Lp) / Lp), Pp = Number(Dp) + Ap / 1e3;
-      let Wp;
-      return Wp = Pp >= 100 ? Math.floor(Pp).toString() : Pp >= 10 ? Pp.toFixed(1).replace(/\.0$/, "") : Pp.toFixed(2).replace(/\.?0+$/, ""), `${Ip}${Wp}${Yp}`
+        threshold: FQ,
+        suffix: PQ
+      } = wQ[wQ.length - sQ / 3], gQ = qQ / FQ, JQ = Number(1000n * (qQ % FQ) / FQ), rQ = Number(gQ) + JQ / 1e3;
+      let IQ;
+      return IQ = rQ >= 100 ? Math.floor(rQ).toString() : rQ >= 10 ? rQ.toFixed(1).replace(/\.0$/, "") : rQ.toFixed(2).replace(/\.?0+$/, ""), `${TQ}${IQ}${PQ}`
     }
-    const Ip = Op.map((pp => {
+    const TQ = wQ.map((QQ => {
       let {
-        threshold: ip,
-        suffix: cp
-      } = pp;
+        threshold: WQ,
+        suffix: XQ
+      } = QQ;
       return {
-        threshold: Number(ip),
-        suffix: cp
+        threshold: Number(WQ),
+        suffix: XQ
       }
-    })).filter((pp => {
+    })).filter((QQ => {
       let {
-        threshold: ip
-      } = pp;
-      return Number.isFinite(ip)
+        threshold: WQ
+      } = QQ;
+      return Number.isFinite(WQ)
     }));
 
-    function Sp(pp) {
-      const ip = Math.abs(pp),
-        cp = pp < 0 ? "-" : "";
+    function zQ(QQ) {
+      const WQ = Math.abs(QQ),
+        XQ = QQ < 0 ? "-" : "";
       for (const {
-          threshold: Op,
-          suffix: op
+          threshold: wQ,
+          suffix: qQ
         }
-        of Ip)
-        if (ip >= Op) {
-          const pp = ip / Op;
-          if (pp >= 1e3) return `${cp}${ip.toExponential(2).replace("e+","e")}`;
-          let Ip;
-          return Ip = pp >= 100 ? Math.floor(pp).toString() : pp >= 10 ? pp.toFixed(1).replace(/\.0$/, "") : pp.toFixed(2).replace(/\.?0+$/, ""), `${cp}${Ip}${op}`
-        } return `${cp}${ip}`
+        of TQ)
+        if (WQ >= wQ) {
+          const QQ = WQ / wQ;
+          if (QQ >= 1e3) return `${XQ}${WQ.toExponential(2).replace("e+","e")}`;
+          let TQ;
+          return TQ = QQ >= 100 ? Math.floor(QQ).toString() : QQ >= 10 ? QQ.toFixed(1).replace(/\.0$/, "") : QQ.toFixed(2).replace(/\.?0+$/, ""), `${XQ}${TQ}${qQ}`
+        } return `${XQ}${WQ}`
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

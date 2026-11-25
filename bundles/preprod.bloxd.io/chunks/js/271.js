@@ -1,1043 +1,369 @@
-/*! For license information please see sn3sfj.271.47f11aee.chunk.js.LICENSE.txt */
 export const id = 271;
 export const ids = [271];
 export const modules = {
-  40713: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      getAnalytics: () => zi,
-      getGoogleAnalyticsClientId: () => pc,
-      initializeAnalytics: () => si,
-      isSupported: () => Ki,
-      logEvent: () => Ic,
-      setAnalyticsCollectionEnabled: () => Oc,
-      setConsent: () => Sc,
-      setCurrentScreen: () => Vi,
-      setDefaultEventParameters: () => oc,
-      setUserId: () => ic,
-      setUserProperties: () => cc,
-      settings: () => ri
+  41834: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      b: () => wQ
     });
-    var Op = cp(40687),
-      op = cp(40704),
-      Ip = cp(40700),
-      Sp = cp(40692);
-    let xp, Lp;
-    const Yp = new WeakMap,
-      Dp = new WeakMap,
-      Ap = new WeakMap,
-      Pp = new WeakMap,
-      Wp = new WeakMap;
-    let yp = {
-      get(pp, ip, cp) {
-        if (pp instanceof IDBTransaction) {
-          if ("done" === ip) return Dp.get(pp);
-          if ("objectStoreNames" === ip) return pp.objectStoreNames || Ap.get(pp);
-          if ("store" === ip) return cp.objectStoreNames[1] ? void 0 : cp.objectStore(cp.objectStoreNames[0])
+    class wQ {}
+    wQ.AUTOSAMPLERSUFFIX = "Sampler", wQ.DISABLEUA = "#define DISABLE_UNIFORMITY_ANALYSIS", wQ.ALPHA_DISABLE = 0, wQ.ALPHA_ADD = 1, wQ.ALPHA_COMBINE = 2, wQ.ALPHA_SUBTRACT = 3, wQ.ALPHA_MULTIPLY = 4, wQ.ALPHA_MAXIMIZED = 5, wQ.ALPHA_ONEONE = 6, wQ.ALPHA_PREMULTIPLIED = 7, wQ.ALPHA_PREMULTIPLIED_PORTERDUFF = 8, wQ.ALPHA_INTERPOLATE = 9, wQ.ALPHA_SCREENMODE = 10, wQ.ALPHA_ONEONE_ONEONE = 11, wQ.ALPHA_ALPHATOCOLOR = 12, wQ.ALPHA_REVERSEONEMINUS = 13, wQ.ALPHA_SRC_DSTONEMINUSSRCALPHA = 14, wQ.ALPHA_ONEONE_ONEZERO = 15, wQ.ALPHA_EXCLUSION = 16, wQ.ALPHA_LAYER_ACCUMULATE = 17, wQ.ALPHA_MIN = 18, wQ.ALPHA_MAX = 19, wQ.ALPHA_DUAL_SRC0_ADD_SRC1xDST = 20, wQ.ALPHA_REPLACE_COLOR = 21, wQ.ALPHA_EQUATION_ADD = 0, wQ.ALPHA_EQUATION_SUBSTRACT = 1, wQ.ALPHA_EQUATION_REVERSE_SUBTRACT = 2, wQ.ALPHA_EQUATION_MAX = 3, wQ.ALPHA_EQUATION_MIN = 4, wQ.ALPHA_EQUATION_DARKEN = 5, wQ.DELAYLOADSTATE_NONE = 0, wQ.DELAYLOADSTATE_LOADED = 1, wQ.DELAYLOADSTATE_LOADING = 2, wQ.DELAYLOADSTATE_NOTLOADED = 4, wQ.NEVER = 512, wQ.ALWAYS = 519, wQ.LESS = 513, wQ.EQUAL = 514, wQ.LEQUAL = 515, wQ.GREATER = 516, wQ.GEQUAL = 518, wQ.NOTEQUAL = 517, wQ.KEEP = 7680, wQ.ZERO = 0, wQ.REPLACE = 7681, wQ.INCR = 7682, wQ.DECR = 7683, wQ.INVERT = 5386, wQ.INCR_WRAP = 34055, wQ.DECR_WRAP = 34056, wQ.TEXTURE_CLAMP_ADDRESSMODE = 0, wQ.TEXTURE_WRAP_ADDRESSMODE = 1, wQ.TEXTURE_MIRROR_ADDRESSMODE = 2, wQ.TEXTURE_REPETITION_NONE = 0, wQ.TEXTURE_REPETITION_NOISE_BLEND = 1, wQ.TEXTURE_REPETITION_HEX_TILING = 2, wQ.TEXTURE_REPETITION_TILE_RANDOMIZATION = 3, wQ.TEXTURE_REPETITION_VORONOI_BOMBING = 4, wQ.TEXTURE_CREATIONFLAG_STORAGE = 1, wQ.TEXTUREFORMAT_ALPHA = 0, wQ.TEXTUREFORMAT_LUMINANCE = 1, wQ.TEXTUREFORMAT_LUMINANCE_ALPHA = 2, wQ.TEXTUREFORMAT_RGB = 4, wQ.TEXTUREFORMAT_RGBA = 5, wQ.TEXTUREFORMAT_RED = 6, wQ.TEXTUREFORMAT_R = 6, wQ.TEXTUREFORMAT_R16_UNORM = 33322, wQ.TEXTUREFORMAT_RG16_UNORM = 33324, wQ.TEXTUREFORMAT_RGB16_UNORM = 32852, wQ.TEXTUREFORMAT_RGBA16_UNORM = 32859, wQ.TEXTUREFORMAT_R16_SNORM = 36760, wQ.TEXTUREFORMAT_RG16_SNORM = 36761, wQ.TEXTUREFORMAT_RGB16_SNORM = 36762, wQ.TEXTUREFORMAT_RGBA16_SNORM = 36763, wQ.TEXTUREFORMAT_RG = 7, wQ.TEXTUREFORMAT_RED_INTEGER = 8, wQ.TEXTUREFORMAT_R_INTEGER = 8, wQ.TEXTUREFORMAT_RG_INTEGER = 9, wQ.TEXTUREFORMAT_RGB_INTEGER = 10, wQ.TEXTUREFORMAT_RGBA_INTEGER = 11, wQ.TEXTUREFORMAT_BGRA = 12, wQ.TEXTUREFORMAT_DEPTH24_STENCIL8 = 13, wQ.TEXTUREFORMAT_DEPTH32_FLOAT = 14, wQ.TEXTUREFORMAT_DEPTH16 = 15, wQ.TEXTUREFORMAT_DEPTH24 = 16, wQ.TEXTUREFORMAT_DEPTH24UNORM_STENCIL8 = 17, wQ.TEXTUREFORMAT_DEPTH32FLOAT_STENCIL8 = 18, wQ.TEXTUREFORMAT_STENCIL8 = 19, wQ.TEXTUREFORMAT_UNDEFINED = 4294967295, wQ.TEXTUREFORMAT_COMPRESSED_RGBA_BPTC_UNORM = 36492, wQ.TEXTUREFORMAT_COMPRESSED_SRGB_ALPHA_BPTC_UNORM = 36493, wQ.TEXTUREFORMAT_COMPRESSED_RGB_BPTC_UNSIGNED_FLOAT = 36495, wQ.TEXTUREFORMAT_COMPRESSED_RGB_BPTC_SIGNED_FLOAT = 36494, wQ.TEXTUREFORMAT_COMPRESSED_RGBA_S3TC_DXT5 = 33779, wQ.TEXTUREFORMAT_COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT = 35919, wQ.TEXTUREFORMAT_COMPRESSED_RGBA_S3TC_DXT3 = 33778, wQ.TEXTUREFORMAT_COMPRESSED_SRGB_ALPHA_S3TC_DXT3_EXT = 35918, wQ.TEXTUREFORMAT_COMPRESSED_RGBA_S3TC_DXT1 = 33777, wQ.TEXTUREFORMAT_COMPRESSED_RGB_S3TC_DXT1 = 33776, wQ.TEXTUREFORMAT_COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT = 35917, wQ.TEXTUREFORMAT_COMPRESSED_SRGB_S3TC_DXT1_EXT = 35916, wQ.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_4x4 = 37808, wQ.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_5x4 = 37809, wQ.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_5x5 = 37810, wQ.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_6x5 = 37811, wQ.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_6x6 = 37812, wQ.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_8x5 = 37813, wQ.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_8x6 = 37814, wQ.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_8x8 = 37815, wQ.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_10x5 = 37816, wQ.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_10x6 = 37817, wQ.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_10x8 = 37818, wQ.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_10x10 = 37819, wQ.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_12x10 = 37820, wQ.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_12x12 = 37821, wQ.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_4x4_KHR = 37840, wQ.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_5x4_KHR = 37841, wQ.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_5x5_KHR = 37842, wQ.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_6x5_KHR = 37843, wQ.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_6x6_KHR = 37844, wQ.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_8x5_KHR = 37845, wQ.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_8x6_KHR = 37846, wQ.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_8x8_KHR = 37847, wQ.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_10x5_KHR = 37848, wQ.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_10x6_KHR = 37849, wQ.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_10x8_KHR = 37850, wQ.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_10x10_KHR = 37851, wQ.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_12x10_KHR = 37852, wQ.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_12x12_KHR = 37853, wQ.TEXTUREFORMAT_COMPRESSED_RGB_ETC1_WEBGL = 36196, wQ.TEXTUREFORMAT_COMPRESSED_RGB8_ETC2 = 37492, wQ.TEXTUREFORMAT_COMPRESSED_SRGB8_ETC2 = 37493, wQ.TEXTUREFORMAT_COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2 = 37494, wQ.TEXTUREFORMAT_COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2 = 37495, wQ.TEXTUREFORMAT_COMPRESSED_RGBA8_ETC2_EAC = 37496, wQ.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ETC2_EAC = 37497, wQ.TEXTURETYPE_UNSIGNED_BYTE = 0, wQ.TEXTURETYPE_UNSIGNED_INT = 0, wQ.TEXTURETYPE_FLOAT = 1, wQ.TEXTURETYPE_HALF_FLOAT = 2, wQ.TEXTURETYPE_BYTE = 3, wQ.TEXTURETYPE_SHORT = 4, wQ.TEXTURETYPE_UNSIGNED_SHORT = 5, wQ.TEXTURETYPE_INT = 6, wQ.TEXTURETYPE_UNSIGNED_INTEGER = 7, wQ.TEXTURETYPE_UNSIGNED_SHORT_4_4_4_4 = 8, wQ.TEXTURETYPE_UNSIGNED_SHORT_5_5_5_1 = 9, wQ.TEXTURETYPE_UNSIGNED_SHORT_5_6_5 = 10, wQ.TEXTURETYPE_UNSIGNED_INT_2_10_10_10_REV = 11, wQ.TEXTURETYPE_UNSIGNED_INT_24_8 = 12, wQ.TEXTURETYPE_UNSIGNED_INT_10F_11F_11F_REV = 13, wQ.TEXTURETYPE_UNSIGNED_INT_5_9_9_9_REV = 14, wQ.TEXTURETYPE_FLOAT_32_UNSIGNED_INT_24_8_REV = 15, wQ.TEXTURETYPE_UNDEFINED = 16, wQ.TEXTURE_2D = 3553, wQ.TEXTURE_2D_ARRAY = 35866, wQ.TEXTURE_CUBE_MAP = 34067, wQ.TEXTURE_CUBE_MAP_ARRAY = 3735928559, wQ.TEXTURE_3D = 32879, wQ.TEXTURE_NEAREST_SAMPLINGMODE = 1, wQ.TEXTURE_NEAREST_NEAREST = 1, wQ.TEXTURE_BILINEAR_SAMPLINGMODE = 2, wQ.TEXTURE_LINEAR_LINEAR = 2, wQ.TEXTURE_TRILINEAR_SAMPLINGMODE = 3, wQ.TEXTURE_LINEAR_LINEAR_MIPLINEAR = 3, wQ.TEXTURE_NEAREST_NEAREST_MIPNEAREST = 4, wQ.TEXTURE_NEAREST_LINEAR_MIPNEAREST = 5, wQ.TEXTURE_NEAREST_LINEAR_MIPLINEAR = 6, wQ.TEXTURE_NEAREST_LINEAR = 7, wQ.TEXTURE_NEAREST_NEAREST_MIPLINEAR = 8, wQ.TEXTURE_LINEAR_NEAREST_MIPNEAREST = 9, wQ.TEXTURE_LINEAR_NEAREST_MIPLINEAR = 10, wQ.TEXTURE_LINEAR_LINEAR_MIPNEAREST = 11, wQ.TEXTURE_LINEAR_NEAREST = 12, wQ.TEXTURE_EXPLICIT_MODE = 0, wQ.TEXTURE_SPHERICAL_MODE = 1, wQ.TEXTURE_PLANAR_MODE = 2, wQ.TEXTURE_CUBIC_MODE = 3, wQ.TEXTURE_PROJECTION_MODE = 4, wQ.TEXTURE_SKYBOX_MODE = 5, wQ.TEXTURE_INVCUBIC_MODE = 6, wQ.TEXTURE_EQUIRECTANGULAR_MODE = 7, wQ.TEXTURE_FIXED_EQUIRECTANGULAR_MODE = 8, wQ.TEXTURE_FIXED_EQUIRECTANGULAR_MIRRORED_MODE = 9, wQ.TEXTURE_FILTERING_QUALITY_OFFLINE = 4096, wQ.TEXTURE_FILTERING_QUALITY_HIGH = 64, wQ.TEXTURE_FILTERING_QUALITY_MEDIUM = 16, wQ.TEXTURE_FILTERING_QUALITY_LOW = 8, wQ.SCALEMODE_FLOOR = 1, wQ.SCALEMODE_NEAREST = 2, wQ.SCALEMODE_CEILING = 3, wQ.MATERIAL_TextureDirtyFlag = 1, wQ.MATERIAL_LightDirtyFlag = 2, wQ.MATERIAL_FresnelDirtyFlag = 4, wQ.MATERIAL_AttributesDirtyFlag = 8, wQ.MATERIAL_MiscDirtyFlag = 16, wQ.MATERIAL_PrePassDirtyFlag = 32, wQ.MATERIAL_ImageProcessingDirtyFlag = 64, wQ.MATERIAL_AllDirtyFlag = 127, wQ.MATERIAL_TriangleFillMode = 0, wQ.MATERIAL_WireFrameFillMode = 1, wQ.MATERIAL_PointFillMode = 2, wQ.MATERIAL_PointListDrawMode = 3, wQ.MATERIAL_LineListDrawMode = 4, wQ.MATERIAL_LineLoopDrawMode = 5, wQ.MATERIAL_LineStripDrawMode = 6, wQ.MATERIAL_TriangleStripDrawMode = 7, wQ.MATERIAL_TriangleFanDrawMode = 8, wQ.MATERIAL_ClockWiseSideOrientation = 0, wQ.MATERIAL_CounterClockWiseSideOrientation = 1, wQ.MATERIAL_DIFFUSE_MODEL_E_OREN_NAYAR = 0, wQ.MATERIAL_DIFFUSE_MODEL_BURLEY = 1, wQ.MATERIAL_DIFFUSE_MODEL_LAMBERT = 2, wQ.MATERIAL_DIFFUSE_MODEL_LEGACY = 3, wQ.MATERIAL_DIELECTRIC_SPECULAR_MODEL_GLTF = 0, wQ.MATERIAL_DIELECTRIC_SPECULAR_MODEL_OPENPBR = 1, wQ.MATERIAL_CONDUCTOR_SPECULAR_MODEL_GLTF = 0, wQ.MATERIAL_CONDUCTOR_SPECULAR_MODEL_OPENPBR = 1, wQ.ACTION_NothingTrigger = 0, wQ.ACTION_OnPickTrigger = 1, wQ.ACTION_OnLeftPickTrigger = 2, wQ.ACTION_OnRightPickTrigger = 3, wQ.ACTION_OnCenterPickTrigger = 4, wQ.ACTION_OnPickDownTrigger = 5, wQ.ACTION_OnDoublePickTrigger = 6, wQ.ACTION_OnPickUpTrigger = 7, wQ.ACTION_OnPickOutTrigger = 16, wQ.ACTION_OnLongPressTrigger = 8, wQ.ACTION_OnPointerOverTrigger = 9, wQ.ACTION_OnPointerOutTrigger = 10, wQ.ACTION_OnEveryFrameTrigger = 11, wQ.ACTION_OnIntersectionEnterTrigger = 12, wQ.ACTION_OnIntersectionExitTrigger = 13, wQ.ACTION_OnKeyDownTrigger = 14, wQ.ACTION_OnKeyUpTrigger = 15, wQ.PARTICLES_BILLBOARDMODE_Y = 2, wQ.PARTICLES_BILLBOARDMODE_ALL = 7, wQ.PARTICLES_BILLBOARDMODE_STRETCHED = 8, wQ.PARTICLES_BILLBOARDMODE_STRETCHED_LOCAL = 9, wQ.MESHES_CULLINGSTRATEGY_STANDARD = 0, wQ.MESHES_CULLINGSTRATEGY_BOUNDINGSPHERE_ONLY = 1, wQ.MESHES_CULLINGSTRATEGY_OPTIMISTIC_INCLUSION = 2, wQ.MESHES_CULLINGSTRATEGY_OPTIMISTIC_INCLUSION_THEN_BSPHERE_ONLY = 3, wQ.SCENELOADER_NO_LOGGING = 0, wQ.SCENELOADER_MINIMAL_LOGGING = 1, wQ.SCENELOADER_SUMMARY_LOGGING = 2, wQ.SCENELOADER_DETAILED_LOGGING = 3, wQ.PREPASS_IRRADIANCE_LEGACY_TEXTURE_TYPE = 0, wQ.PREPASS_POSITION_TEXTURE_TYPE = 1, wQ.PREPASS_VELOCITY_TEXTURE_TYPE = 2, wQ.PREPASS_REFLECTIVITY_TEXTURE_TYPE = 3, wQ.PREPASS_COLOR_TEXTURE_TYPE = 4, wQ.PREPASS_DEPTH_TEXTURE_TYPE = 5, wQ.PREPASS_NORMAL_TEXTURE_TYPE = 6, wQ.PREPASS_ALBEDO_SQRT_TEXTURE_TYPE = 7, wQ.PREPASS_WORLD_NORMAL_TEXTURE_TYPE = 8, wQ.PREPASS_LOCAL_POSITION_TEXTURE_TYPE = 9, wQ.PREPASS_SCREENSPACE_DEPTH_TEXTURE_TYPE = 10, wQ.PREPASS_VELOCITY_LINEAR_TEXTURE_TYPE = 11, wQ.PREPASS_ALBEDO_TEXTURE_TYPE = 12, wQ.PREPASS_NORMALIZED_VIEW_DEPTH_TEXTURE_TYPE = 13, wQ.PREPASS_IRRADIANCE_TEXTURE_TYPE = 14, wQ.PREPASS_OBJECT_ID_TEXTURE_TYPE = 15, wQ.PREPASS_MESH_BLEND_TAG_TEXTURE_TYPE = 16, wQ.BUFFER_CREATIONFLAG_READ = 1, wQ.BUFFER_CREATIONFLAG_WRITE = 2, wQ.BUFFER_CREATIONFLAG_READWRITE = 3, wQ.BUFFER_CREATIONFLAG_UNIFORM = 4, wQ.BUFFER_CREATIONFLAG_VERTEX = 8, wQ.BUFFER_CREATIONFLAG_INDEX = 16, wQ.BUFFER_CREATIONFLAG_STORAGE = 32, wQ.BUFFER_CREATIONFLAG_INDIRECT = 64, wQ.RENDERPASS_MAIN = 0, wQ.INPUT_ALT_KEY = 18, wQ.INPUT_CTRL_KEY = 17, wQ.INPUT_META_KEY1 = 91, wQ.INPUT_META_KEY2 = 92, wQ.INPUT_META_KEY3 = 93, wQ.INPUT_SHIFT_KEY = 16, wQ.SNAPSHOTRENDERING_STANDARD = 0, wQ.SNAPSHOTRENDERING_FAST = 1, wQ.PERSPECTIVE_CAMERA = 0, wQ.ORTHOGRAPHIC_CAMERA = 1, wQ.FOVMODE_VERTICAL_FIXED = 0, wQ.FOVMODE_HORIZONTAL_FIXED = 1, wQ.RIG_MODE_NONE = 0, wQ.RIG_MODE_STEREOSCOPIC_ANAGLYPH = 10, wQ.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_PARALLEL = 11, wQ.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED = 12, wQ.RIG_MODE_STEREOSCOPIC_OVERUNDER = 13, wQ.RIG_MODE_STEREOSCOPIC_INTERLACED = 14, wQ.RIG_MODE_VR = 20, wQ.RIG_MODE_CUSTOM = 22, wQ.MAX_SUPPORTED_UV_SETS = 6, wQ.GL_ALPHA_EQUATION_ADD = 32774, wQ.GL_ALPHA_EQUATION_MIN = 32775, wQ.GL_ALPHA_EQUATION_MAX = 32776, wQ.GL_ALPHA_EQUATION_SUBTRACT = 32778, wQ.GL_ALPHA_EQUATION_REVERSE_SUBTRACT = 32779, wQ.GL_ALPHA_FUNCTION_SRC = 768, wQ.GL_ALPHA_FUNCTION_ONE_MINUS_SRC_COLOR = 769, wQ.GL_ALPHA_FUNCTION_SRC_ALPHA = 770, wQ.GL_ALPHA_FUNCTION_ONE_MINUS_SRC_ALPHA = 771, wQ.GL_ALPHA_FUNCTION_DST_ALPHA = 772, wQ.GL_ALPHA_FUNCTION_ONE_MINUS_DST_ALPHA = 773, wQ.GL_ALPHA_FUNCTION_DST_COLOR = 774, wQ.GL_ALPHA_FUNCTION_ONE_MINUS_DST_COLOR = 775, wQ.GL_ALPHA_FUNCTION_SRC_ALPHA_SATURATED = 776, wQ.GL_ALPHA_FUNCTION_CONSTANT_COLOR = 32769, wQ.GL_ALPHA_FUNCTION_ONE_MINUS_CONSTANT_COLOR = 32770, wQ.GL_ALPHA_FUNCTION_CONSTANT_ALPHA = 32771, wQ.GL_ALPHA_FUNCTION_ONE_MINUS_CONSTANT_ALPHA = 32772, wQ.GL_ALPHA_FUNCTION_SRC1_COLOR = 35065, wQ.GL_ALPHA_FUNCTION_ONE_MINUS_SRC1_COLOR = 35066, wQ.GL_ALPHA_FUNCTION_SRC1_ALPHA = 34185, wQ.GL_ALPHA_FUNCTION_ONE_MINUS_SRC1_ALPHA = 35067, wQ.SnippetUrl = "https://snippet.babylonjs.com", wQ.FOGMODE_NONE = 0, wQ.FOGMODE_EXP = 1, wQ.FOGMODE_EXP2 = 2, wQ.FOGMODE_LINEAR = 3, wQ.BYTE = 5120, wQ.UNSIGNED_BYTE = 5121, wQ.SHORT = 5122, wQ.UNSIGNED_SHORT = 5123, wQ.INT = 5124, wQ.UNSIGNED_INT = 5125, wQ.FLOAT = 5126, wQ.HALF_FLOAT = 5131, wQ.PositionKind = "position", wQ.NormalKind = "normal", wQ.TangentKind = "tangent", wQ.UVKind = "uv", wQ.UV2Kind = "uv2", wQ.UV3Kind = "uv3", wQ.UV4Kind = "uv4", wQ.UV5Kind = "uv5", wQ.UV6Kind = "uv6", wQ.ColorKind = "color", wQ.ColorInstanceKind = "instanceColor", wQ.MatricesIndicesKind = "matricesIndices", wQ.MatricesWeightsKind = "matricesWeights", wQ.MatricesIndicesExtraKind = "matricesIndicesExtra", wQ.MatricesWeightsExtraKind = "matricesWeightsExtra", wQ.ANIMATIONTYPE_FLOAT = 0, wQ.ANIMATIONTYPE_VECTOR3 = 1, wQ.ANIMATIONTYPE_QUATERNION = 2, wQ.ANIMATIONTYPE_MATRIX = 3, wQ.ANIMATIONTYPE_COLOR3 = 4, wQ.ANIMATIONTYPE_COLOR4 = 7, wQ.ANIMATIONTYPE_VECTOR2 = 5, wQ.ANIMATIONTYPE_SIZE = 6, wQ.ShadowMinZ = 0, wQ.ShadowMaxZ = 1e4, wQ.OUTLINELAYER_SAMPLING_TRIDIRECTIONAL = 0, wQ.OUTLINELAYER_SAMPLING_OCTADIRECTIONAL = 1
+  },
+  41824: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      e: () => FQ
+    });
+    var wQ = XQ(40260),
+      qQ = XQ(40268),
+      TQ = XQ(37370),
+      zQ = XQ(40525),
+      sQ = XQ(40496);
+    let FQ = (() => {
+      var QQ;
+      let WQ, XQ, FQ, PQ, gQ = zQ.d,
+        JQ = [];
+      return QQ = class extends gQ {
+        constructor() {
+          super(...arguments), this._position = (0, wQ.n)(this, JQ), this._needProjectionMatrixCompute = !0, this._viewMatrix = TQ.e.Identity(), this._projectionMatrix = TQ.e.Identity()
         }
-        return vp(pp[ip])
-      },
-      set: (pp, ip, cp) => (pp[ip] = cp, !0),
-      has: (pp, ip) => pp instanceof IDBTransaction && ("done" === ip || "store" === ip) || ip in pp
-    };
-
-    function Up(pp) {
-      return pp !== IDBDatabase.prototype.transaction || "objectStoreNames" in IDBTransaction.prototype ? (Lp || (Lp = [IDBCursor.prototype.advance, IDBCursor.prototype.continue, IDBCursor.prototype.continuePrimaryKey])).includes(pp) ? function() {
-        for (var ip = arguments.length, cp = new Array(ip), Op = 0; Op < ip; Op++) cp[Op] = arguments[Op];
-        return pp.apply(tp(this), cp), vp(Yp.get(this))
-      } : function() {
-        for (var ip = arguments.length, cp = new Array(ip), Op = 0; Op < ip; Op++) cp[Op] = arguments[Op];
-        return vp(pp.apply(tp(this), cp))
-      } : function(ip) {
-        for (var cp = arguments.length, Op = new Array(cp > 1 ? cp - 1 : 0), op = 1; op < cp; op++) Op[op - 1] = arguments[op];
-        const Ip = pp.call(tp(this), ip, ...Op);
-        return Ap.set(Ip, ip.sort ? ip.sort() : [ip]), vp(Ip)
-      }
-    }
-
-    function wp(pp) {
-      return "function" === typeof pp ? Up(pp) : (pp instanceof IDBTransaction && function(pp) {
-        if (Dp.has(pp)) return;
-        const ip = new Promise(((ip, cp) => {
-          const Op = () => {
-              pp.removeEventListener("complete", op), pp.removeEventListener("error", Ip), pp.removeEventListener("abort", Ip)
-            },
-            op = () => {
-              ip(), Op()
-            },
-            Ip = () => {
-              cp(pp.error || new DOMException("AbortError", "AbortError")), Op()
-            };
-          pp.addEventListener("complete", op), pp.addEventListener("error", Ip), pp.addEventListener("abort", Ip)
-        }));
-        Dp.set(pp, ip)
-      }(pp), ip = pp, (xp || (xp = [IDBDatabase, IDBObjectStore, IDBIndex, IDBCursor, IDBTransaction])).some((pp => ip instanceof pp)) ? new Proxy(pp, yp) : pp);
-      var ip
-    }
-
-    function vp(pp) {
-      if (pp instanceof IDBRequest) return function(pp) {
-        const ip = new Promise(((ip, cp) => {
-          const Op = () => {
-              pp.removeEventListener("success", op), pp.removeEventListener("error", Ip)
-            },
-            op = () => {
-              ip(vp(pp.result)), Op()
-            },
-            Ip = () => {
-              cp(pp.error), Op()
-            };
-          pp.addEventListener("success", op), pp.addEventListener("error", Ip)
-        }));
-        return ip.then((ip => {
-          ip instanceof IDBCursor && Yp.set(ip, pp)
-        })).catch((() => {})), Wp.set(ip, pp), ip
-      }(pp);
-      if (Pp.has(pp)) return Pp.get(pp);
-      const ip = wp(pp);
-      return ip !== pp && (Pp.set(pp, ip), Wp.set(ip, pp)), ip
-    }
-    const tp = pp => Wp.get(pp);
-    const Hp = ["get", "getKey", "getAll", "getAllKeys", "count"],
-      dp = ["put", "add", "delete", "clear"],
-      ep = new Map;
-
-    function jp(pp, ip) {
-      if (!(pp instanceof IDBDatabase) || ip in pp || "string" !== typeof ip) return;
-      if (ep.get(ip)) return ep.get(ip);
-      const cp = ip.replace(/FromIndex$/, ""),
-        Op = ip !== cp,
-        op = dp.includes(cp);
-      if (!(cp in (Op ? IDBIndex : IDBObjectStore).prototype) || !op && !Hp.includes(cp)) return;
-      const Ip = async function(pp) {
-        const ip = this.transaction(pp, op ? "readwrite" : "readonly");
-        let Ip = ip.store;
-        for (var Sp = arguments.length, xp = new Array(Sp > 1 ? Sp - 1 : 0), Lp = 1; Lp < Sp; Lp++) xp[Lp - 1] = arguments[Lp];
-        return Op && (Ip = Ip.index(xp.shift())), (await Promise.all([Ip[cp](...xp), op && ip.done]))[0]
-      };
-      return ep.set(ip, Ip), Ip
-    }
-    yp = (pp => ({
-      ...pp,
-      get: (ip, cp, Op) => jp(ip, cp) || pp.get(ip, cp, Op),
-      has: (ip, cp) => !!jp(ip, cp) || pp.has(ip, cp)
-    }))(yp);
-    const kp = "@firebase/installations",
-      mp = "0.6.4",
-      Rp = 1e4,
-      qp = `w:${mp}`,
-      Mp = "FIS_v2",
-      Cp = 36e5,
-      Ep = {
-        "missing-app-config-values": 'Missing App configuration value: "{$valueName}"',
-        "not-registered": "Firebase Installation is not registered.",
-        "installation-not-found": "Firebase Installation not found.",
-        "request-failed": '{$requestName} request failed with error "{$serverCode} {$serverStatus}: {$serverMessage}"',
-        "app-offline": "Could not process request. Application offline.",
-        "delete-pending-registration": "Can't delete installation while there is a pending registration request."
-      },
-      Xp = new Ip.i("installations", "Installations", Ep);
-
-    function lp(pp) {
-      return pp instanceof Ip.l && pp.code.includes("request-failed")
-    }
-
-    function Qp(pp) {
-      let {
-        projectId: ip
-      } = pp;
-      return `https://firebaseinstallations.googleapis.com/v1/projects/${ip}/installations`
-    }
-
-    function Jp(pp) {
-      return {
-        token: pp.token,
-        requestStatus: 2,
-        expiresIn: (ip = pp.expiresIn, Number(ip.replace("s", "000"))),
-        creationTime: Date.now()
-      };
-      var ip
-    }
-    async function Bp(pp, ip) {
-      const cp = (await ip.json()).error;
-      return Xp.create("request-failed", {
-        requestName: pp,
-        serverCode: cp.code,
-        serverMessage: cp.message,
-        serverStatus: cp.status
-      })
-    }
-
-    function Np(pp) {
-      let {
-        apiKey: ip
-      } = pp;
-      return new Headers({
-        "Content-Type": "application/json",
-        Accept: "application/json",
-        "x-goog-api-key": ip
-      })
-    }
-
-    function Tp(pp, ip) {
-      let {
-        refreshToken: cp
-      } = ip;
-      const Op = Np(pp);
-      return Op.append("Authorization", function(pp) {
-        return `${Mp} ${pp}`
-      }(cp)), Op
-    }
-    async function fp(pp) {
-      const ip = await pp();
-      return ip.status >= 500 && ip.status < 600 ? pp() : ip
-    }
-
-    function bp(pp) {
-      return new Promise((ip => {
-        setTimeout(ip, pp)
-      }))
-    }
-    const hp = /^[cdef][\w-]{21}$/;
-
-    function ap() {
-      try {
-        const pp = new Uint8Array(17);
-        (self.crypto || self.msCrypto).getRandomValues(pp), pp[0] = 112 + pp[0] % 16;
-        const ip = function(pp) {
-          const ip = (cp = pp, btoa(String.fromCharCode(...cp)).replace(/\+/g, "-").replace(/\//g, "_"));
-          var cp;
-          return ip.substr(0, 22)
-        }(pp);
-        return hp.test(ip) ? ip : ""
-      } catch (pp) {
-        return ""
-      }
-    }
-
-    function np(pp) {
-      return `${pp.appName}!${pp.appId}`
-    }
-    const Fp = new Map;
-
-    function gp(pp, ip) {
-      const cp = np(pp);
-      Gp(cp, ip),
-        function(pp, ip) {
-          const cp = Zp();
-          cp && cp.postMessage({
-            key: pp,
-            fid: ip
-          });
-          zp()
-        }(cp, ip)
-    }
-
-    function Gp(pp, ip) {
-      const cp = Fp.get(pp);
-      if (cp)
-        for (const Op of cp) Op(ip)
-    }
-    let rp = null;
-
-    function Zp() {
-      return !rp && "BroadcastChannel" in self && (rp = new BroadcastChannel("[Firebase] FID Change"), rp.onmessage = pp => {
-        Gp(pp.data.key, pp.data.fid)
-      }), rp
-    }
-
-    function zp() {
-      0 === Fp.size && rp && (rp.close(), rp = null)
-    }
-    const sp = "firebase-installations-store";
-    let Kp = null;
-
-    function Vp() {
-      return Kp || (Kp = function(pp, ip) {
-        let {
-          blocked: cp,
-          upgrade: Op,
-          blocking: op,
-          terminated: Ip
-        } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const Sp = indexedDB.open(pp, ip),
-          xp = vp(Sp);
-        return Op && Sp.addEventListener("upgradeneeded", (pp => {
-          Op(vp(Sp.result), pp.oldVersion, pp.newVersion, vp(Sp.transaction))
-        })), cp && Sp.addEventListener("blocked", (() => cp())), xp.then((pp => {
-          Ip && pp.addEventListener("close", (() => Ip())), op && pp.addEventListener("versionchange", (() => op()))
-        })).catch((() => {})), xp
-      }("firebase-installations-database", 1, {
-        upgrade: (pp, ip) => {
-          if (0 === ip) pp.createObjectStore(sp)
+        _setPosition(QQ) {
+          this._position = QQ
         }
-      })), Kp
-    }
-    async function ii(pp, ip) {
-      const cp = np(pp),
-        Op = (await Vp()).transaction(sp, "readwrite"),
-        op = Op.objectStore(sp),
-        Ip = await op.get(cp);
-      return await op.put(ip, cp), await Op.done, Ip && Ip.fid === ip.fid || gp(pp, ip.fid), ip
-    }
-    async function ci(pp) {
-      const ip = np(pp),
-        cp = (await Vp()).transaction(sp, "readwrite");
-      await cp.objectStore(sp).delete(ip), await cp.done
-    }
-    async function Oi(pp, ip) {
-      const cp = np(pp),
-        Op = (await Vp()).transaction(sp, "readwrite"),
-        op = Op.objectStore(sp),
-        Ip = await op.get(cp),
-        Sp = ip(Ip);
-      return void 0 === Sp ? await op.delete(cp) : await op.put(Sp, cp), await Op.done, !Sp || Ip && Ip.fid === Sp.fid || gp(pp, Sp.fid), Sp
-    }
-    async function oi(pp) {
-      let ip;
-      const cp = await Oi(pp.appConfig, (cp => {
-        const Op = function(pp) {
-            const ip = pp || {
-              fid: ap(),
-              registrationStatus: 0
-            };
-            return xi(ip)
-          }(cp),
-          op = function(pp, ip) {
-            if (0 === ip.registrationStatus) {
-              if (!navigator.onLine) {
-                return {
-                  installationEntry: ip,
-                  registrationPromise: Promise.reject(Xp.create("app-offline"))
-                }
-              }
-              const cp = {
-                  fid: ip.fid,
-                  registrationStatus: 1,
-                  registrationTime: Date.now()
-                },
-                Op = async function(pp, ip) {
-                  try {
-                    const cp = await async function(pp, ip) {
-                      let {
-                        appConfig: cp,
-                        heartbeatServiceProvider: Op
-                      } = pp, {
-                        fid: op
-                      } = ip;
-                      const Ip = Qp(cp),
-                        Sp = Np(cp),
-                        xp = Op.getImmediate({
-                          optional: !0
-                        });
-                      if (xp) {
-                        const pp = await xp.getHeartbeatsHeader();
-                        pp && Sp.append("x-firebase-client", pp)
-                      }
-                      const Lp = {
-                          fid: op,
-                          authVersion: Mp,
-                          appId: cp.appId,
-                          sdkVersion: qp
-                        },
-                        Yp = {
-                          method: "POST",
-                          headers: Sp,
-                          body: JSON.stringify(Lp)
-                        },
-                        Dp = await fp((() => fetch(Ip, Yp)));
-                      if (Dp.ok) {
-                        const pp = await Dp.json();
-                        return {
-                          fid: pp.fid || op,
-                          registrationStatus: 2,
-                          refreshToken: pp.refreshToken,
-                          authToken: Jp(pp.authToken)
-                        }
-                      }
-                      throw await Bp("Create Installation", Dp)
-                    }(pp, ip);
-                    return ii(pp.appConfig, cp)
-                  } catch (cp) {
-                    throw lp(cp) && 409 === cp.customData.serverCode ? await ci(pp.appConfig) : await ii(pp.appConfig, {
-                      fid: ip.fid,
-                      registrationStatus: 0
-                    }), cp
-                  }
-                }(pp, cp);
-              return {
-                installationEntry: cp,
-                registrationPromise: Op
-              }
-            }
-            return 1 === ip.registrationStatus ? {
-              installationEntry: ip,
-              registrationPromise: Ii(pp)
-            } : {
-              installationEntry: ip
-            }
-          }(pp, Op);
-        return ip = op.registrationPromise, op.installationEntry
-      }));
-      return "" === cp.fid ? {
-        installationEntry: await ip
-      } : {
-        installationEntry: cp,
-        registrationPromise: ip
-      }
-    }
-    async function Ii(pp) {
-      let ip = await Si(pp.appConfig);
-      for (; 1 === ip.registrationStatus;) await bp(100), ip = await Si(pp.appConfig);
-      if (0 === ip.registrationStatus) {
-        const {
-          installationEntry: ip,
-          registrationPromise: cp
-        } = await oi(pp);
-        return cp || ip
-      }
-      return ip
-    }
-
-    function Si(pp) {
-      return Oi(pp, (pp => {
-        if (!pp) throw Xp.create("installation-not-found");
-        return xi(pp)
-      }))
-    }
-
-    function xi(pp) {
-      return 1 === (ip = pp).registrationStatus && ip.registrationTime + Rp < Date.now() ? {
-        fid: pp.fid,
-        registrationStatus: 0
-      } : pp;
-      var ip
-    }
-    async function Li(pp, ip) {
-      let {
-        appConfig: cp,
-        heartbeatServiceProvider: Op
-      } = pp;
-      const op = function(pp, ip) {
-          let {
-            fid: cp
-          } = ip;
-          return `${Qp(pp)}/${cp}/authTokens:generate`
-        }(cp, ip),
-        Ip = Tp(cp, ip),
-        Sp = Op.getImmediate({
-          optional: !0
-        });
-      if (Sp) {
-        const pp = await Sp.getHeartbeatsHeader();
-        pp && Ip.append("x-firebase-client", pp)
-      }
-      const xp = {
-          installation: {
-            sdkVersion: qp,
-            appId: cp.appId
-          }
-        },
-        Lp = {
-          method: "POST",
-          headers: Ip,
-          body: JSON.stringify(xp)
-        },
-        Yp = await fp((() => fetch(op, Lp)));
-      if (Yp.ok) {
-        return Jp(await Yp.json())
-      }
-      throw await Bp("Generate Auth Token", Yp)
-    }
-    async function Yi(pp) {
-      let ip, cp = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      const Op = await Oi(pp.appConfig, (Op => {
-        if (!Ai(Op)) throw Xp.create("not-registered");
-        const op = Op.authToken;
-        if (!cp && function(pp) {
-            return 2 === pp.requestStatus && ! function(pp) {
-              const ip = Date.now();
-              return ip < pp.creationTime || pp.creationTime + pp.expiresIn < ip + Cp
-            }(pp)
-          }(op)) return Op;
-        if (1 === op.requestStatus) return ip = async function(pp, ip) {
-          let cp = await Di(pp.appConfig);
-          for (; 1 === cp.authToken.requestStatus;) await bp(100), cp = await Di(pp.appConfig);
-          const Op = cp.authToken;
-          return 0 === Op.requestStatus ? Yi(pp, ip) : Op
-        }(pp, cp), Op;
-        {
-          if (!navigator.onLine) throw Xp.create("app-offline");
-          const cp = function(pp) {
-            const ip = {
-              requestStatus: 1,
-              requestTime: Date.now()
-            };
-            return Object.assign(Object.assign({}, pp), {
-              authToken: ip
-            })
-          }(Op);
-          return ip = async function(pp, ip) {
-            try {
-              const cp = await Li(pp, ip),
-                Op = Object.assign(Object.assign({}, ip), {
-                  authToken: cp
-                });
-              return await ii(pp.appConfig, Op), cp
-            } catch (cp) {
-              if (!lp(cp) || 401 !== cp.customData.serverCode && 404 !== cp.customData.serverCode) {
-                const cp = Object.assign(Object.assign({}, ip), {
-                  authToken: {
-                    requestStatus: 0
-                  }
-                });
-                await ii(pp.appConfig, cp)
-              } else await ci(pp.appConfig);
-              throw cp
-            }
-          }(pp, cp), cp
+        get position() {
+          return this._position
         }
-      }));
-      return ip ? await ip : Op.authToken
-    }
-
-    function Di(pp) {
-      return Oi(pp, (pp => {
-        if (!Ai(pp)) throw Xp.create("not-registered");
-        const ip = pp.authToken;
-        return 1 === (cp = ip).requestStatus && cp.requestTime + Rp < Date.now() ? Object.assign(Object.assign({}, pp), {
-          authToken: {
-            requestStatus: 0
-          }
-        }) : pp;
-        var cp
-      }))
-    }
-
-    function Ai(pp) {
-      return void 0 !== pp && 2 === pp.registrationStatus
-    }
-    async function Pi(pp) {
-      let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      const cp = pp;
-      await async function(pp) {
-        const {
-          registrationPromise: ip
-        } = await oi(pp);
-        ip && await ip
-      }(cp);
-      return (await Yi(cp, ip)).token
-    }
-
-    function Wi(pp) {
-      return Xp.create("missing-app-config-values", {
-        valueName: pp
-      })
-    }
-    const yi = "installations",
-      Ui = pp => {
-        const ip = pp.getProvider("app").getImmediate(),
-          cp = function(pp) {
-            if (!pp || !pp.options) throw Wi("App Configuration");
-            if (!pp.name) throw Wi("App Name");
-            const ip = ["projectId", "apiKey", "appId"];
-            for (const cp of ip)
-              if (!pp.options[cp]) throw Wi(cp);
-            return {
-              appName: pp.name,
-              projectId: pp.options.projectId,
-              apiKey: pp.options.apiKey,
-              appId: pp.options.appId
-            }
-          }(ip);
-        return {
-          app: ip,
-          appConfig: cp,
-          heartbeatServiceProvider: (0, Op.x)(ip, "heartbeat"),
-          _delete: () => Promise.resolve()
+        set position(QQ) {
+          this._setPosition(QQ)
         }
-      },
-      wi = pp => {
-        const ip = pp.getProvider("app").getImmediate(),
-          cp = (0, Op.x)(ip, yi).getImmediate();
-        return {
-          getId: () => async function(pp) {
-            const ip = pp,
-              {
-                installationEntry: cp,
-                registrationPromise: Op
-              } = await oi(ip);
-            return Op ? Op.catch(console.error) : Yi(ip).catch(console.error), cp.fid
-          }(cp),
-          getToken: pp => Pi(cp, pp)
+        _setDirection(QQ) {
+          this._direction = QQ
         }
-      };
-    (0, Op.z)(new Sp.d(yi, Ui, "PUBLIC")), (0, Op.z)(new Sp.d("installations-internal", wi, "PRIVATE")), (0, Op.S)(kp, mp), (0, Op.S)(kp, mp, "esm2017");
-    const vi = "analytics",
-      ti = "https://www.googletagmanager.com/gtag/js",
-      Hi = new op.d("@firebase/analytics"),
-      di = {
-        "already-exists": "A Firebase Analytics instance with the appId {$id}  already exists. Only one Firebase Analytics instance can be created for each appId.",
-        "already-initialized": "initializeAnalytics() cannot be called again with different options than those it was initially called with. It can be called again with the same options to return the existing instance, or getAnalytics() can be used to get a reference to the already-intialized instance.",
-        "already-initialized-settings": "Firebase Analytics has already been initialized.settings() must be called before initializing any Analytics instanceor it will have no effect.",
-        "interop-component-reg-failed": "Firebase Analytics Interop Component failed to instantiate: {$reason}",
-        "invalid-analytics-context": "Firebase Analytics is not supported in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: {$errorInfo}",
-        "indexeddb-unavailable": "IndexedDB unavailable or restricted in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: {$errorInfo}",
-        "fetch-throttle": "The config fetch request timed out while in an exponential backoff state. Unix timestamp in milliseconds when fetch request throttling ends: {$throttleEndTimeMillis}.",
-        "config-fetch-failed": "Dynamic config fetch failed: [{$httpStatus}] {$responseMessage}",
-        "no-api-key": 'The "apiKey" field is empty in the local Firebase config. Firebase Analytics requires this field tocontain a valid API key.',
-        "no-app-id": 'The "appId" field is empty in the local Firebase config. Firebase Analytics requires this field tocontain a valid app ID.',
-        "no-client-id": 'The "client_id" field is empty.',
-        "invalid-gtag-resource": "Trusted Types detected an invalid gtag resource: {$gtagURL}."
-      },
-      ei = new Ip.i("analytics", "Analytics", di);
-
-    function ui(pp) {
-      if (!pp.startsWith(ti)) {
-        const ip = ei.create("invalid-gtag-resource", {
-          gtagURL: pp
-        });
-        return Hi.warn(ip.message), ""
-      }
-      return pp
-    }
-
-    function ji(pp) {
-      return Promise.all(pp.map((pp => pp.catch((pp => pp)))))
-    }
-
-    function ki(pp, ip) {
-      const cp = function(pp, ip) {
-          let cp;
-          return window.trustedTypes && (cp = window.trustedTypes.createPolicy(pp, ip)), cp
-        }("firebase-js-sdk-policy", {
-          createScriptURL: ui
-        }),
-        Op = document.createElement("script"),
-        op = `${ti}?l=${pp}&id=${ip}`;
-      Op.src = cp ? null === cp || void 0 === cp ? void 0 : cp.createScriptURL(op) : op, Op.async = !0, document.head.appendChild(Op)
-    }
-
-    function mi(pp, ip, cp, Op) {
-      return async function(op) {
-        try {
-          for (var Ip = arguments.length, Sp = new Array(Ip > 1 ? Ip - 1 : 0), xp = 1; xp < Ip; xp++) Sp[xp - 1] = arguments[xp];
-          if ("event" === op) {
-            const [Op, op] = Sp;
-            await async function(pp, ip, cp, Op, op) {
-              try {
-                let Ip = [];
-                if (op && op.send_to) {
-                  let pp = op.send_to;
-                  Array.isArray(pp) || (pp = [pp]);
-                  const Op = await ji(cp);
-                  for (const cp of pp) {
-                    const pp = Op.find((pp => pp.measurementId === cp)),
-                      op = pp && ip[pp.appId];
-                    if (!op) {
-                      Ip = [];
-                      break
-                    }
-                    Ip.push(op)
-                  }
-                }
-                0 === Ip.length && (Ip = Object.values(ip)), await Promise.all(Ip), pp("event", Op, op || {})
-              } catch (Ip) {
-                Hi.error(Ip)
-              }
-            }(pp, ip, cp, Op, op)
-          } else if ("config" === op) {
-            const [op, Ip] = Sp;
-            await async function(pp, ip, cp, Op, op, Ip) {
-              const Sp = Op[op];
-              try {
-                if (Sp) await ip[Sp];
-                else {
-                  const pp = (await ji(cp)).find((pp => pp.measurementId === op));
-                  pp && await ip[pp.appId]
-                }
-              } catch (xp) {
-                Hi.error(xp)
-              }
-              pp("config", op, Ip)
-            }(pp, ip, cp, Op, op, Ip)
-          } else if ("consent" === op) {
-            const [ip] = Sp;
-            pp("consent", "update", ip)
-          } else if ("get" === op) {
-            const [ip, cp, Op] = Sp;
-            pp("get", ip, cp, Op)
-          } else if ("set" === op) {
-            const [ip] = Sp;
-            pp("set", ip)
-          } else pp(op, ...Sp)
-        } catch (Lp) {
-          Hi.error(Lp)
+        get direction() {
+          return this._direction
         }
+        set direction(QQ) {
+          this._setDirection(QQ)
+        }
+        get shadowMinZ() {
+          return this._shadowMinZ
+        }
+        set shadowMinZ(QQ) {
+          this._shadowMinZ = QQ, this.forceProjectionMatrixCompute()
+        }
+        get shadowMaxZ() {
+          return this._shadowMaxZ
+        }
+        set shadowMaxZ(QQ) {
+          this._shadowMaxZ = QQ, this.forceProjectionMatrixCompute()
+        }
+        computeTransformedInformation() {
+          return !(!this.parent || !this.parent.getWorldMatrix) && (this.transformedPosition || (this.transformedPosition = TQ.s.Zero()), TQ.s.TransformCoordinatesToRef(this.position, this.parent.getWorldMatrix(), this.transformedPosition), this.direction && (this.transformedDirection || (this.transformedDirection = TQ.s.Zero()), TQ.s.TransformNormalToRef(this.direction, this.parent.getWorldMatrix(), this.transformedDirection)), !0)
+        }
+        getDepthScale() {
+          return 50
+        }
+        getShadowDirection(QQ) {
+          return this.transformedDirection ? this.transformedDirection : this.direction
+        }
+        getAbsolutePosition() {
+          return this.transformedPosition ? this.transformedPosition : this.position
+        }
+        setDirectionToTarget(QQ) {
+          return this.direction = TQ.s.Normalize(QQ.subtract(this.position)), this.direction
+        }
+        getRotation() {
+          this.direction.normalize();
+          const QQ = TQ.s.Cross(this.direction, sQ.c.Y),
+            WQ = TQ.s.Cross(QQ, this.direction);
+          return TQ.s.RotationFromAxis(QQ, WQ, this.direction)
+        }
+        needCube() {
+          return !1
+        }
+        needProjectionMatrixCompute() {
+          return this._needProjectionMatrixCompute
+        }
+        forceProjectionMatrixCompute() {
+          this._needProjectionMatrixCompute = !0
+        }
+        _initCache() {
+          super._initCache(), this._cache.position = TQ.s.Zero()
+        }
+        _isSynchronized() {
+          return !!this._cache.position.equals(this.position)
+        }
+        computeWorldMatrix(QQ) {
+          return !QQ && this.isSynchronized() ? (this._currentRenderId = this.sE().getRenderId(), this._worldMatrix) : (this._updateCache(), this._cache.position.WH(this.position), this._worldMatrix || (this._worldMatrix = TQ.e.Identity()), TQ.e.TranslationToRef(this.position.x, this.position.y, this.position.z, this._worldMatrix), this.parent && this.parent.getWorldMatrix && (this._worldMatrix.multiplyToRef(this.parent.getWorldMatrix(), this._worldMatrix), this._markSyncedWithParent()), this._worldMatrixDeterminantIsDirty = !0, this._worldMatrix)
+        }
+        getDepthMinZ(QQ) {
+          return void 0 !== this.shadowMinZ ? this.shadowMinZ : QQ?.minZ || 0
+        }
+        getDepthMaxZ(QQ) {
+          return void 0 !== this.shadowMaxZ ? this.shadowMaxZ : QQ?.maxZ || 1e4
+        }
+        setShadowProjectionMatrix(QQ, WQ, XQ) {
+          return this.customProjectionMatrixBuilder ? this.customProjectionMatrixBuilder(WQ, XQ, QQ) : this._setDefaultShadowProjectionMatrix(QQ, WQ, XQ), this
+        }
+        _syncParentEnabledState() {
+          super._syncParentEnabledState(), this.parent && this.parent.getWorldMatrix || (this.transformedPosition = null, this.transformedDirection = null)
+        }
+        getViewMatrix(QQ) {
+          const WQ = TQ.m.vj[0];
+          let XQ = this.position;
+          this.computeTransformedInformation() && (XQ = this.transformedPosition), TQ.s.NormalizeToRef(this.getShadowDirection(QQ), WQ), 1 === Math.abs(TQ.s.Dot(WQ, TQ.s.Up())) && (WQ.z = 1e-13);
+          const wQ = TQ.m.vj[1];
+          return XQ.addToRef(WQ, wQ), TQ.e.LookAtLHToRef(XQ, wQ, TQ.s.Up(), this._viewMatrix), this._viewMatrix
+        }
+        getProjectionMatrix(QQ, WQ) {
+          return this.setShadowProjectionMatrix(this._projectionMatrix, QQ ?? this._viewMatrix, WQ ?? []), this._projectionMatrix
+        }
+      }, (() => {
+        const TQ = "function" === typeof Symbol && Symbol.metadata ? Object.create(gQ[Symbol.metadata] ?? null) : void 0;
+        WQ = [(0, qQ.F)()], XQ = [(0, qQ.F)()], FQ = [(0, qQ.I)()], PQ = [(0, qQ.I)()], (0, wQ.k)(QQ, null, WQ, {
+          kind: "getter",
+          name: "position",
+          static: !1,
+          private: !1,
+          access: {
+            has: QQ => "position" in QQ,
+            get: QQ => QQ.position
+          },
+          metadata: TQ
+        }, null, JQ), (0, wQ.k)(QQ, null, XQ, {
+          kind: "getter",
+          name: "direction",
+          static: !1,
+          private: !1,
+          access: {
+            has: QQ => "direction" in QQ,
+            get: QQ => QQ.direction
+          },
+          metadata: TQ
+        }, null, JQ), (0, wQ.k)(QQ, null, FQ, {
+          kind: "getter",
+          name: "shadowMinZ",
+          static: !1,
+          private: !1,
+          access: {
+            has: QQ => "shadowMinZ" in QQ,
+            get: QQ => QQ.shadowMinZ
+          },
+          metadata: TQ
+        }, null, JQ), (0, wQ.k)(QQ, null, PQ, {
+          kind: "getter",
+          name: "shadowMaxZ",
+          static: !1,
+          private: !1,
+          access: {
+            has: QQ => "shadowMaxZ" in QQ,
+            get: QQ => QQ.shadowMaxZ
+          },
+          metadata: TQ
+        }, null, JQ), TQ && Object.defineProperty(QQ, Symbol.metadata, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: TQ
+        })
+      })(), QQ
+    })()
+  },
+  41832: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      b: () => qQ
+    });
+    var wQ = XQ(40724);
+    class qQ extends wQ.g {
+      constructor(QQ, WQ, XQ, qQ, TQ) {
+        let zQ = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+          sQ = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
+          FQ = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 3,
+          PQ = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0,
+          gQ = arguments.length > 9 ? arguments[9] : void 0,
+          JQ = arguments.length > 10 ? arguments[10] : void 0,
+          rQ = arguments.length > 11 ? arguments[11] : void 0,
+          IQ = arguments.length > 12 ? arguments[12] : void 0;
+        super(null, TQ, !zQ, sQ, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, gQ), this.format = qQ, this._engine && (this._engine._caps.textureFloatLinearFiltering || 1 !== PQ || (FQ = 1), this._engine._caps.textureHalfFloatLinearFiltering || 2 !== PQ || (FQ = 1), this._texture = this._engine.createRawTexture(QQ, WQ, XQ, qQ, zQ, sQ, FQ, null, PQ, gQ ?? 0, JQ ?? !1, IQ), this.wrapU = wQ.g.CLAMP_ADDRESSMODE, this.wrapV = wQ.g.CLAMP_ADDRESSMODE, this._waitingForData = !!rQ && !QQ)
+      }
+      update(QQ) {
+        this.updateMipLevel(QQ, 0)
+      }
+      updateMipLevel(QQ, WQ) {
+        this._getEngine().updateRawTexture(this._texture, QQ, this._texture.format, this._texture.invertY, null, this._texture.type, this._texture._useSRGBBuffer, WQ), this._waitingForData = !1
+      }
+      clone() {
+        if (!this._texture) return super.clone();
+        const QQ = new qQ(null, this.getSize().width, this.getSize().height, this.format, this.sE(), this._texture.generateMipMaps, this._invertY, this.samplingMode, this._texture.type, this._texture._creationFlags, this._useSRGBBuffer);
+        return QQ._texture = this._texture, this._texture.incrementReferences(), QQ
+      }
+      isReady() {
+        return super.isReady() && !this._waitingForData
+      }
+      static CreateLuminanceTexture(QQ, WQ, XQ, wQ) {
+        return new qQ(QQ, WQ, XQ, 1, wQ, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3)
+      }
+      static CreateLuminanceAlphaTexture(QQ, WQ, XQ, wQ) {
+        return new qQ(QQ, WQ, XQ, 2, wQ, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3)
+      }
+      static CreateAlphaTexture(QQ, WQ, XQ, wQ) {
+        return new qQ(QQ, WQ, XQ, 0, wQ, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3)
+      }
+      static CreateRGBTexture(QQ, WQ, XQ, wQ) {
+        return new qQ(QQ, WQ, XQ, 4, wQ, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0, arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0, arguments.length > 9 && void 0 !== arguments[9] && arguments[9])
+      }
+      static CreateRGBATexture(QQ, WQ, XQ, wQ) {
+        return new qQ(QQ, WQ, XQ, 5, wQ, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0, arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0, arguments.length > 9 && void 0 !== arguments[9] && arguments[9], arguments.length > 10 && void 0 !== arguments[10] && arguments[10])
+      }
+      static CreateRGBAStorageTexture(QQ, WQ, XQ, wQ) {
+        return new qQ(QQ, WQ, XQ, 5, wQ, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0, 1, arguments.length > 8 && void 0 !== arguments[8] && arguments[8])
+      }
+      static CreateRTexture(QQ, WQ, XQ, TQ) {
+        let zQ = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          sQ = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+          FQ = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : wQ.g.TRILINEAR_SAMPLINGMODE;
+        return new qQ(QQ, WQ, XQ, 6, TQ, zQ, sQ, FQ, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 1)
+      }
+      static CreateRStorageTexture(QQ, WQ, XQ, TQ) {
+        let zQ = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          sQ = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+          FQ = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : wQ.g.TRILINEAR_SAMPLINGMODE;
+        return new qQ(QQ, WQ, XQ, 6, TQ, zQ, sQ, FQ, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 1, 1)
       }
     }
-    const Ri = new class {
-      constructor() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-          ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1e3;
-        this.throttleMetadata = pp, this.intervalMillis = ip
+  },
+  41870: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      c: () => wQ.c
+    });
+    var wQ = XQ(40683);
+    (0, wQ.g)()
+  },
+  41827: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      d: () => wQ.e
+    });
+    var wQ = XQ(40705);
+    (0, wQ.f)()
+  },
+  40705: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      e: () => rQ,
+      f: () => BQ
+    });
+    var wQ, qQ, TQ = XQ(37546),
+      zQ = XQ(40404),
+      sQ = XQ(40651),
+      FQ = XQ(40712),
+      PQ = XQ(40551),
+      gQ = XQ(40717),
+      JQ = XQ(40153);
+    class rQ extends sQ.d {
+      _isShaderMaterial(QQ) {
+        return !!QQ && "ShaderMaterial" === QQ.getClassName()
       }
-      getThrottleMetadata(pp) {
-        return this.throttleMetadata[pp]
-      }
-      setThrottleMetadata(pp, ip) {
-        this.throttleMetadata[pp] = ip
-      }
-      deleteThrottleMetadata(pp) {
-        delete this.throttleMetadata[pp]
-      }
-    };
-
-    function qi(pp) {
-      return new Headers({
-        Accept: "application/json",
-        "x-goog-api-key": pp
-      })
-    }
-    async function Mi(pp) {
-      let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Ri,
-        cp = arguments.length > 2 ? arguments[2] : void 0;
-      const {
-        appId: Op,
-        apiKey: op,
-        measurementId: Ip
-      } = pp.options;
-      if (!Op) throw ei.create("no-app-id");
-      if (!op) {
-        if (Ip) return {
-          measurementId: Ip,
-          appId: Op
+      constructor(QQ) {
+        let WQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+          wQ = arguments.length > 5 ? arguments[5] : void 0,
+          qQ = arguments.length > 6 ? arguments[6] : void 0,
+          sQ = arguments.length > 7 ? arguments[7] : void 0;
+        super(QQ, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null, WQ, arguments.length > 4 ? arguments[4] : void 0), this.useVertexColor = wQ, this.useVertexAlpha = qQ, this.color = new TQ.b(1, 1, 1), this.alpha = 1, this._shaderLanguage = 0, this._ownsMaterial = !1, WQ && (this.color = WQ.color.clone(), this.alpha = WQ.alpha, this.useVertexColor = WQ.useVertexColor, this.useVertexAlpha = WQ.useVertexAlpha), this.intersectionThreshold = .1;
+        const FQ = {
+          attributes: [zQ.l.PositionKind],
+          uniforms: ["world", "viewProjection"],
+          needAlphaBlending: !0,
+          defines: [],
+          useClipPlane: null,
+          shaderLanguage: 0
         };
-        throw ei.create("no-api-key")
-      }
-      const Sp = ip.getThrottleMetadata(Op) || {
-          backoffCount: 0,
-          throttleEndTimeMillis: Date.now()
-        },
-        xp = new Ei;
-      return setTimeout((async () => {
-        xp.abort()
-      }), void 0 !== cp ? cp : 6e4), Ci({
-        appId: Op,
-        apiKey: op,
-        measurementId: Ip
-      }, Sp, xp, ip)
-    }
-    async function Ci(pp, ip, cp) {
-      let {
-        throttleEndTimeMillis: Op,
-        backoffCount: op
-      } = ip, Sp = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Ri;
-      var xp;
-      const {
-        appId: Lp,
-        measurementId: Yp
-      } = pp;
-      try {
-        await
-        function(pp, ip) {
-          return new Promise(((cp, Op) => {
-            const op = Math.max(ip - Date.now(), 0),
-              Ip = setTimeout(cp, op);
-            pp.addEventListener((() => {
-              clearTimeout(Ip), Op(ei.create("fetch-throttle", {
-                throttleEndTimeMillis: ip
-              }))
-            }))
-          }))
-        }(cp, Op)
-      } catch (Dp) {
-        if (Yp) return Hi.warn(`Timed out fetching this Firebase app's measurement ID from the server. Falling back to the measurement ID ${Yp} provided in the "measurementId" field in the local Firebase config. [${null===Dp||void 0===Dp?void 0:Dp.message}]`), {
-          appId: Lp,
-          measurementId: Yp
-        };
-        throw Dp
-      }
-      try {
-        const ip = await async function(pp) {
-          var ip;
-          const {
-            appId: cp,
-            apiKey: Op
-          } = pp, op = {
-            method: "GET",
-            headers: qi(Op)
-          }, Ip = "https://firebase.googleapis.com/v1alpha/projects/-/apps/{app-id}/webConfig".replace("{app-id}", cp), Sp = await fetch(Ip, op);
-          if (200 !== Sp.status && 304 !== Sp.status) {
-            let pp = "";
-            try {
-              const cp = await Sp.json();
-              (null === (ip = cp.error) || void 0 === ip ? void 0 : ip.message) && (pp = cp.error.message)
-            } catch (xp) {}
-            throw ei.create("config-fetch-failed", {
-              httpStatus: Sp.status,
-              responseMessage: pp
-            })
-          }
-          return Sp.json()
-        }(pp);
-        return Sp.deleteThrottleMetadata(Lp), ip
-      } catch (Dp) {
-        const ip = Dp;
-        if (! function(pp) {
-            if (!(pp instanceof Ip.l) || !pp.customData) return !1;
-            const ip = Number(pp.customData.httpStatus);
-            return 429 === ip || 500 === ip || 503 === ip || 504 === ip
-          }(ip)) {
-          if (Sp.deleteThrottleMetadata(Lp), Yp) return Hi.warn(`Failed to fetch this Firebase app's measurement ID from the server. Falling back to the measurement ID ${Yp} provided in the "measurementId" field in the local Firebase config. [${null===ip||void 0===ip?void 0:ip.message}]`), {
-            appId: Lp,
-            measurementId: Yp
+        if (this.useVertexAlpha ? FQ.defines.push("#define VERTEXALPHA") : FQ.needAlphaBlending = !1, this.useVertexColor ? (FQ.defines.push("#define VERTEXCOLOR"), FQ.attributes.push(zQ.l.ColorKind)) : (FQ.uniforms.push("color"), this._color4 = new TQ.d), sQ) this.material = sQ;
+        else {
+          this.sE().Uj().isWebGPU && !rQ.ForceGLSL && (this._shaderLanguage = 1), FQ.shaderLanguage = this._shaderLanguage, FQ.extraInitializationsAsync = async () => {
+            1 === this._shaderLanguage ? await Promise.all([XQ.e(353).then((() => XQ(42833))), XQ.e(359).then((() => XQ(42839)))]) : await Promise.all([XQ.e(335).then((() => XQ(42843))), XQ.e(341).then((() => XQ(42851)))])
           };
-          throw Dp
+          const QQ = new gQ.t("colorShader", this.sE(), "color", FQ, !1);
+          QQ.doNotSerialize = !0, this._ownsMaterial = !0, this._setInternalMaterial(QQ)
         }
-        const Op = 503 === Number(null === (xp = null === ip || void 0 === ip ? void 0 : ip.customData) || void 0 === xp ? void 0 : xp.httpStatus) ? (0, Ip.v)(op, Sp.intervalMillis, 30) : (0, Ip.v)(op, Sp.intervalMillis),
-          Ap = {
-            throttleEndTimeMillis: Date.now() + Op,
-            backoffCount: op + 1
-          };
-        return Sp.setThrottleMetadata(Lp, Ap), Hi.debug(`Calling attemptFetch again in ${Op} millis`), Ci(pp, Ap, cp, Sp)
       }
-    }
-    class Ei {
-      constructor() {
-        this.listeners = []
+      getClassName() {
+        return "LinesMesh"
       }
-      addEventListener(pp) {
-        this.listeners.push(pp)
+      get material() {
+        return this._internalAbstractMeshDataInfo._material
       }
-      abort() {
-        this.listeners.forEach((pp => pp()))
+      set material(QQ) {
+        const WQ = this.material;
+        if (WQ === QQ) return;
+        const XQ = WQ && this._ownsMaterial;
+        this._ownsMaterial = !1, this._setInternalMaterial(QQ), XQ && WQ?.dispose()
       }
-    }
-    let Xi, li;
-
-    function Qi(pp) {
-      li = pp
-    }
-
-    function Ji(pp) {
-      Xi = pp
-    }
-    async function Bi(pp, ip, cp, Op, op, Sp, xp) {
-      var Lp;
-      const Yp = Mi(pp);
-      Yp.then((ip => {
-        cp[ip.measurementId] = ip.appId, pp.options.measurementId && ip.measurementId !== pp.options.measurementId && Hi.warn(`The measurement ID in the local Firebase config (${pp.options.measurementId}) does not match the measurement ID fetched from the server (${ip.measurementId}). To ensure analytics events are always sent to the correct Analytics property, update the measurement ID field in the local config or remove it from the local config.`)
-      })).catch((pp => Hi.error(pp))), ip.push(Yp);
-      const Dp = async function() {
-        if (!(0, Ip.Q)()) return Hi.warn(ei.create("indexeddb-unavailable", {
-          errorInfo: "IndexedDB is not available in this environment."
-        }).message), !1;
-        try {
-          await (0, Ip.gb)()
-        } catch (pp) {
-          return Hi.warn(ei.create("indexeddb-unavailable", {
-            errorInfo: null === pp || void 0 === pp ? void 0 : pp.toString()
-          }).message), !1
-        }
-        return !0
-      }().then((pp => pp ? Op.getId() : void 0)), [Ap, Pp] = await Promise.all([Yp, Dp]);
-      (function(pp) {
-        const ip = window.document.getElementsByTagName("script");
-        for (const cp of Object.values(ip))
-          if (cp.src && cp.src.includes(ti) && cp.src.includes(pp)) return cp;
-        return null
-      })(Sp) || ki(Sp, Ap.measurementId), li && (op("consent", "default", li), Qi(void 0)), op("js", new Date);
-      const Wp = null !== (Lp = null === xp || void 0 === xp ? void 0 : xp.config) && void 0 !== Lp ? Lp : {};
-      return Wp.origin = "firebase", Wp.update = !0, null != Pp && (Wp.firebase_id = Pp), op("config", Ap.measurementId, Wp), Xi && (op("set", Xi), Ji(void 0)), Ap.measurementId
-    }
-    class Ni {
-      constructor(pp) {
-        this.app = pp
+      _setInternalMaterial(QQ) {
+        this._setMaterial(QQ), this.material && (this.material.fillMode = PQ.b.LineListDrawMode, this.material.disableLighting = !0)
       }
-      _delete() {
-        return delete Ti[this.app.options.appId], Promise.resolve()
-      }
-    }
-    let Ti = {},
-      fi = [];
-    const bi = {};
-    let ai, ni, Fi = "dataLayer",
-      gi = "gtag",
-      Gi = !1;
-
-    function ri(pp) {
-      if (Gi) throw ei.create("already-initialized");
-      pp.dataLayerName && (Fi = pp.dataLayerName), pp.gtagName && (gi = pp.gtagName)
-    }
-
-    function Zi(pp, ip, cp) {
-      ! function() {
-        const pp = [];
-        if ((0, Ip.K)() && pp.push("This is a browser extension environment."), (0, Ip.o)() || pp.push("Cookies are not available."), pp.length > 0) {
-          const ip = pp.map(((pp, ip) => `(${ip+1}) ${pp}`)).join(" "),
-            cp = ei.create("invalid-analytics-context", {
-              errorInfo: ip
-            });
-          Hi.warn(cp.message)
-        }
-      }();
-      const Op = pp.options.appId;
-      if (!Op) throw ei.create("no-app-id");
-      if (!pp.options.apiKey) {
-        if (!pp.options.measurementId) throw ei.create("no-api-key");
-        Hi.warn(`The "apiKey" field is empty in the local Firebase config. This is needed to fetch the latest measurement ID for this Firebase app. Falling back to the measurement ID ${pp.options.measurementId} provided in the "measurementId" field in the local Firebase config.`)
-      }
-      if (null != Ti[Op]) throw ei.create("already-exists", {
-        id: Op
-      });
-      if (!Gi) {
-        ! function(pp) {
-          let ip = [];
-          Array.isArray(window[pp]) ? ip = window[pp] : window[pp] = ip
-        }(Fi);
-        const {
-          wrappedGtag: pp,
-          gtagCore: ip
-        } = function(pp, ip, cp, Op, op) {
-          let Ip = function() {
-            for (var pp = arguments.length, ip = new Array(pp), cp = 0; cp < pp; cp++) ip[cp] = arguments[cp];
-            window[Op].push(arguments)
-          };
-          return window[op] && "function" === typeof window[op] && (Ip = window[op]), window[op] = mi(Ip, pp, ip, cp), {
-            gtagCore: Ip,
-            wrappedGtag: window[op]
-          }
-        }(Ti, fi, bi, Fi, gi);
-        ni = pp, ai = ip, Gi = !0
-      }
-      Ti[Op] = Bi(pp, fi, bi, ip, ai, Fi, cp);
-      return new Ni(pp)
-    }
-
-    function zi() {
-      let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, Op.J)();
-      pp = (0, Ip.F)(pp);
-      const ip = (0, Op.x)(pp, vi);
-      return ip.isInitialized() ? ip.getImmediate() : si(pp)
-    }
-
-    function si(pp) {
-      let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      const cp = (0, Op.x)(pp, vi);
-      if (cp.isInitialized()) {
-        const pp = cp.getImmediate();
-        if ((0, Ip.y)(ip, cp.getOptions())) return pp;
-        throw ei.create("already-initialized")
-      }
-      return cp.initialize({
-        options: ip
-      })
-    }
-    async function Ki() {
-      if ((0, Ip.K)()) return !1;
-      if (!(0, Ip.o)()) return !1;
-      if (!(0, Ip.Q)()) return !1;
-      try {
-        return await (0, Ip.gb)()
-      } catch (pp) {
+      get checkCollisions() {
         return !1
       }
-    }
-
-    function Vi(pp, ip, cp) {
-      pp = (0, Ip.F)(pp), async function(pp, ip, cp, Op) {
-        if (Op && Op.global) return pp("set", {
-          screen_name: cp
-        }), Promise.resolve();
-        pp("config", await ip, {
-          update: !0,
-          screen_name: cp
-        })
-      }(ni, Ti[pp.app.options.appId], ip, cp).catch((pp => Hi.error(pp)))
-    }
-    async function pc(pp) {
-      return pp = (0, Ip.F)(pp), async function(pp, ip) {
-        const cp = await ip;
-        return new Promise(((ip, Op) => {
-          pp("get", cp, "client_id", (pp => {
-            pp || Op(ei.create("no-client-id")), ip(pp)
-          }))
-        }))
-      }(ni, Ti[pp.app.options.appId])
-    }
-
-    function ic(pp, ip, cp) {
-      pp = (0, Ip.F)(pp), async function(pp, ip, cp, Op) {
-        if (Op && Op.global) return pp("set", {
-          user_id: cp
-        }), Promise.resolve();
-        pp("config", await ip, {
-          update: !0,
-          user_id: cp
-        })
-      }(ni, Ti[pp.app.options.appId], ip, cp).catch((pp => Hi.error(pp)))
-    }
-
-    function cc(pp, ip, cp) {
-      pp = (0, Ip.F)(pp), async function(pp, ip, cp, Op) {
-        if (Op && Op.global) {
-          const ip = {};
-          for (const pp of Object.keys(cp)) ip[`user_properties.${pp}`] = cp[pp];
-          return pp("set", ip), Promise.resolve()
+      set checkCollisions(QQ) {}
+      _bind(QQ, WQ) {
+        if (!this._geometry) return this;
+        const XQ = this.isUnIndexed ? null : this._geometry.getIndexBuffer();
+        if (!this._userInstancedBuffersStorage || this.hasThinInstances ? this._geometry._bind(WQ, XQ) : this._geometry._bind(WQ, XQ, this._userInstancedBuffersStorage.vertexBuffers, this._userInstancedBuffersStorage.vertexArrayObjects), !this.useVertexColor && this._isShaderMaterial(this.material)) {
+          const {
+            r: QQ,
+            g: WQ,
+            b: XQ
+          } = this.color;
+          this._color4.set(QQ, WQ, XQ, this.alpha), this.material.setColor4("color", this._color4)
         }
-        pp("config", await ip, {
-          update: !0,
-          user_properties: cp
-        })
-      }(ni, Ti[pp.app.options.appId], ip, cp).catch((pp => Hi.error(pp)))
-    }
-
-    function Oc(pp, ip) {
-      pp = (0, Ip.F)(pp), async function(pp, ip) {
-        const cp = await pp;
-        window[`ga-disable-${cp}`] = !ip
-      }(Ti[pp.app.options.appId], ip).catch((pp => Hi.error(pp)))
-    }
-
-    function oc(pp) {
-      ni ? ni("set", pp) : Ji(pp)
-    }
-
-    function Ic(pp, ip, cp, Op) {
-      pp = (0, Ip.F)(pp), async function(pp, ip, cp, Op, op) {
-        if (op && op.global) pp("event", cp, Op);
-        else {
-          const op = await ip;
-          pp("event", cp, Object.assign(Object.assign({}, Op), {
-            send_to: op
-          }))
-        }
-      }(ni, Ti[pp.app.options.appId], ip, cp, Op).catch((pp => Hi.error(pp)))
-    }
-
-    function Sc(pp) {
-      ni ? ni("consent", "update", pp) : Qi(pp)
-    }
-    const xc = "@firebase/analytics",
-      Lc = "0.10.0";
-    (0, Op.z)(new Sp.d(vi, ((pp, ip) => {
-      let {
-        options: cp
-      } = ip;
-      return Zi(pp.getProvider("app").getImmediate(), pp.getProvider("installations-internal").getImmediate(), cp)
-    }), "PUBLIC")), (0, Op.z)(new Sp.d("analytics-internal", (function(pp) {
-      try {
-        const ip = pp.getProvider(vi).getImmediate();
-        return {
-          logEvent: (pp, cp, Op) => Ic(ip, pp, cp, Op)
-        }
-      } catch (ip) {
-        throw ei.create("interop-component-reg-failed", {
-          reason: ip
-        })
+        return this
       }
-    }), "PRIVATE")), (0, Op.S)(xc, Lc), (0, Op.S)(xc, Lc, "esm2017")
+      _draw(QQ, WQ, XQ) {
+        if (!this._geometry || !this._geometry.getVertexBuffers() || !this._unIndexed && !this._geometry.getIndexBuffer()) return this;
+        const wQ = this.sE().Uj();
+        return this._unIndexed ? wQ.drawArraysType(PQ.b.LineListDrawMode, QQ.verticesStart, QQ.verticesCount, XQ) : wQ.drawElementsType(PQ.b.LineListDrawMode, QQ.indexStart, QQ.indexCount, XQ), this
+      }
+      dispose(QQ) {
+        let WQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        (arguments.length > 2 ? arguments[2] : void 0) || (this._ownsMaterial || WQ) && this.material?.dispose(!1, !1, !0), super.dispose(QQ)
+      }
+      clone(QQ) {
+        let WQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          XQ = arguments.length > 2 ? arguments[2] : void 0;
+        if (WQ && void 0 === WQ._addToSceneRootNodes) {
+          const XQ = WQ;
+          return XQ.source = this, new rQ(QQ, this.sE(), XQ.parent, XQ.source, XQ.doNotCloneChildren)
+        }
+        return new rQ(QQ, this.sE(), WQ, this, XQ)
+      }
+      createInstance(QQ) {
+        const WQ = new IQ(QQ, this);
+        if (this.bC) {
+          WQ.bC = {};
+          for (const QQ in this.bC) WQ.bC[QQ] = this.bC[QQ]
+        }
+        return WQ
+      }
+      serialize(QQ) {
+        super.serialize(QQ), QQ.color = this.color.awQ(), QQ.alpha = this.alpha
+      }
+      static Parse(QQ, WQ) {
+        const XQ = new rQ(QQ.name, WQ);
+        return XQ.color = TQ.b.FromArray(QQ.color), XQ.alpha = QQ.alpha, XQ
+      }
+    }
+    rQ.ForceGLSL = !1;
+    class IQ extends FQ.b {
+      constructor(QQ, WQ) {
+        super(QQ, WQ), this.intersectionThreshold = WQ.intersectionThreshold
+      }
+      getClassName() {
+        return "InstancedLinesMesh"
+      }
+    }
+    let jQ = !1;
+
+    function BQ() {
+      jQ || (jQ = !0, sQ.d._LinesMeshParser = (QQ, WQ) => rQ.Parse(QQ, WQ))
+    }(wQ = rQ.prototype).enableEdgesRendering ?? (wQ.enableEdgesRendering = (0, JQ.h)("LinesMesh", "enableEdgesRendering")), (qQ = IQ.prototype).enableEdgesRendering ?? (qQ.enableEdgesRendering = (0, JQ.h)("InstancedLinesMesh", "enableEdgesRendering"))
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

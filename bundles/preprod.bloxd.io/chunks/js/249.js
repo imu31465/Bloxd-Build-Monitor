@@ -1,399 +1,260 @@
 export const id = 249;
-export const ids = [249];
+export const ids = [248, 249];
 export const modules = {
-  41309: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Sp,
-      h: () => Dp,
-      k: () => Yp
+  61529: (QQ, WQ, XQ) => {
+    XQ.r(WQ), XQ.d(WQ, {
+      RegisterShaderMaterial: () => wQ.c,
+      ShaderMaterial: () => wQ.t,
+      ShaderMaterialCreateFromSnippetAsync: () => wQ.g,
+      ShaderMaterialParse: () => wQ.r,
+      ShaderMaterialParseFromFileAsync: () => wQ.j,
+      ShaderMaterialParseFromSnippetAsync: () => wQ.n
     });
-    var Op, op = cp(37356),
-      Ip = cp(37320);
-    ! function(pp) {
-      pp[pp.CW = 0] = "CW", pp[pp.CCW = 1] = "CCW"
-    }(Op || (Op = {}));
-    class Sp {
-      static Interpolate(pp, ip, cp, Op, op) {
-        if (0 === pp) return 0;
-        const Ip = 1 - 3 * Op + 3 * ip,
-          Sp = 3 * Op - 6 * ip,
-          xp = 3 * ip;
-        let Lp = pp;
-        for (let Yp = 0; Yp < 5; Yp++) {
-          const ip = Lp * Lp;
-          Lp -= (Ip * (ip * Lp) + Sp * ip + xp * Lp - pp) * (1 / (3 * Ip * ip + 2 * Sp * Lp + xp)), Lp = Math.min(1, Math.max(0, Lp))
-        }
-        return 3 * Math.pow(1 - Lp, 2) * Lp * cp + 3 * (1 - Lp) * Math.pow(Lp, 2) * op + Math.pow(Lp, 3)
+    var wQ = XQ(40717);
+    (0, wQ.c)()
+  },
+  38041: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      e: () => qQ
+    });
+    var wQ = XQ(38047);
+    class qQ {
+      static GetPlanes(QQ) {
+        const WQ = [];
+        for (let XQ = 0; XQ < 6; XQ++) WQ.push(new wQ.b(0, 0, 0, 0));
+        return qQ.GetPlanesToRef(QQ, WQ), WQ
       }
-    }
-    class xp {
-      constructor(pp) {
-        this._radians = pp, this._radians < 0 && (this._radians += 2 * Math.PI)
+      static GetNearPlaneToRef(QQ, WQ) {
+        const XQ = QQ.m;
+        WQ.normal.x = XQ[3] + XQ[2], WQ.normal.y = XQ[7] + XQ[6], WQ.normal.z = XQ[11] + XQ[10], WQ.d = XQ[15] + XQ[14], WQ.normalize()
       }
-      degrees() {
-        return 180 * this._radians / Math.PI
+      static GetFarPlaneToRef(QQ, WQ) {
+        const XQ = QQ.m;
+        WQ.normal.x = XQ[3] - XQ[2], WQ.normal.y = XQ[7] - XQ[6], WQ.normal.z = XQ[11] - XQ[10], WQ.d = XQ[15] - XQ[14], WQ.normalize()
       }
-      radians() {
-        return this._radians
+      static GetLeftPlaneToRef(QQ, WQ) {
+        const XQ = QQ.m;
+        WQ.normal.x = XQ[3] + XQ[0], WQ.normal.y = XQ[7] + XQ[4], WQ.normal.z = XQ[11] + XQ[8], WQ.d = XQ[15] + XQ[12], WQ.normalize()
       }
-      static BetweenTwoPoints(pp, ip) {
-        const cp = ip.subtract(pp),
-          Op = Math.atan2(cp.y, cp.x);
-        return new xp(Op)
+      static GetRightPlaneToRef(QQ, WQ) {
+        const XQ = QQ.m;
+        WQ.normal.x = XQ[3] - XQ[0], WQ.normal.y = XQ[7] - XQ[4], WQ.normal.z = XQ[11] - XQ[8], WQ.d = XQ[15] - XQ[12], WQ.normalize()
       }
-      static BetweenTwoVectors(pp, ip) {
-        let cp = pp.lengthSquared() * ip.lengthSquared();
-        if (0 === cp) return new xp(Math.PI / 2);
-        cp = Math.sqrt(cp);
-        let Op = pp.dot(ip) / cp;
-        Op = (0, op.Clamp)(Op, -1, 1);
-        const Ip = Math.acos(Op);
-        return new xp(Ip)
+      static GetTopPlaneToRef(QQ, WQ) {
+        const XQ = QQ.m;
+        WQ.normal.x = XQ[3] - XQ[1], WQ.normal.y = XQ[7] - XQ[5], WQ.normal.z = XQ[11] - XQ[9], WQ.d = XQ[15] - XQ[13], WQ.normalize()
       }
-      static FromRadians(pp) {
-        return new xp(pp)
+      static GetBottomPlaneToRef(QQ, WQ) {
+        const XQ = QQ.m;
+        WQ.normal.x = XQ[3] + XQ[1], WQ.normal.y = XQ[7] + XQ[5], WQ.normal.z = XQ[11] + XQ[9], WQ.d = XQ[15] + XQ[13], WQ.normalize()
       }
-      static FromDegrees(pp) {
-        return new xp(pp * Math.PI / 180)
+      static GetPlanesToRef(QQ, WQ) {
+        qQ.GetNearPlaneToRef(QQ, WQ[0]), qQ.GetFarPlaneToRef(QQ, WQ[1]), qQ.GetLeftPlaneToRef(QQ, WQ[2]), qQ.GetRightPlaneToRef(QQ, WQ[3]), qQ.GetTopPlaneToRef(QQ, WQ[4]), qQ.GetBottomPlaneToRef(QQ, WQ[5])
       }
-    }
-    class Lp {
-      constructor(pp, ip, cp) {
-        this.startPoint = pp, this.midPoint = ip, this.endPoint = cp;
-        const Op = Math.pow(ip.x, 2) + Math.pow(ip.y, 2),
-          op = (Math.pow(pp.x, 2) + Math.pow(pp.y, 2) - Op) / 2,
-          Sp = (Op - Math.pow(cp.x, 2) - Math.pow(cp.y, 2)) / 2,
-          Lp = (pp.x - ip.x) * (ip.y - cp.y) - (ip.x - cp.x) * (pp.y - ip.y);
-        this.centerPoint = new Ip.l((op * (ip.y - cp.y) - Sp * (pp.y - ip.y)) / Lp, ((pp.x - ip.x) * Sp - (ip.x - cp.x) * op) / Lp), this.radius = this.centerPoint.subtract(this.startPoint).length(), this.startAngle = xp.BetweenTwoPoints(this.centerPoint, this.startPoint);
-        const Yp = this.startAngle.degrees();
-        let Dp = xp.BetweenTwoPoints(this.centerPoint, this.midPoint).degrees(),
-          Ap = xp.BetweenTwoPoints(this.centerPoint, this.endPoint).degrees();
-        Dp - Yp > 180 && (Dp -= 360), Dp - Yp < -180 && (Dp += 360), Ap - Dp > 180 && (Ap -= 360), Ap - Dp < -180 && (Ap += 360), this.orientation = Dp - Yp < 0 ? 0 : 1, this.angle = xp.FromDegrees(0 === this.orientation ? Yp - Ap : Ap - Yp)
-      }
-    }
-    class Yp {
-      constructor(pp, ip) {
-        this._points = new Array, this._length = 0, this.closed = !1, this._points.push(new Ip.l(pp, ip))
-      }
-      addLineTo(pp, ip) {
-        if (this.closed) return this;
-        const cp = new Ip.l(pp, ip),
-          Op = this._points[this._points.length - 1];
-        return this._points.push(cp), this._length += cp.subtract(Op).length(), this
-      }
-      addArcTo(pp, ip, cp, Op) {
-        let op = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 36;
-        if (this.closed) return this;
-        const Sp = this._points[this._points.length - 1],
-          xp = new Ip.l(pp, ip),
-          Yp = new Ip.l(cp, Op),
-          Dp = new Lp(Sp, xp, Yp);
-        let Ap = Dp.angle.radians() / op;
-        0 === Dp.orientation && (Ap *= -1);
-        let Pp = Dp.startAngle.radians() + Ap;
-        for (let Ip = 0; Ip < op; Ip++) {
-          const pp = Math.cos(Pp) * Dp.radius + Dp.centerPoint.x,
-            ip = Math.sin(Pp) * Dp.radius + Dp.centerPoint.y;
-          this.addLineTo(pp, ip), Pp += Ap
-        }
-        return this
-      }
-      addQuadraticCurveTo(pp, ip, cp, Op) {
-        let op = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 36;
-        if (this.closed) return this;
-        const Ip = (pp, ip, cp, Op) => (1 - pp) * (1 - pp) * ip + 2 * pp * (1 - pp) * cp + pp * pp * Op,
-          Sp = this._points[this._points.length - 1];
-        for (let xp = 0; xp <= op; xp++) {
-          const Lp = xp / op,
-            Yp = Ip(Lp, Sp.x, pp, cp),
-            Dp = Ip(Lp, Sp.y, ip, Op);
-          this.addLineTo(Yp, Dp)
-        }
-        return this
-      }
-      addBezierCurveTo(pp, ip, cp, Op, op, Ip) {
-        let Sp = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 36;
-        if (this.closed) return this;
-        const xp = (pp, ip, cp, Op, op) => (1 - pp) * (1 - pp) * (1 - pp) * ip + 3 * pp * (1 - pp) * (1 - pp) * cp + 3 * pp * pp * (1 - pp) * Op + pp * pp * pp * op,
-          Lp = this._points[this._points.length - 1];
-        for (let Yp = 0; Yp <= Sp; Yp++) {
-          const Dp = Yp / Sp,
-            Ap = xp(Dp, Lp.x, pp, cp, op),
-            Pp = xp(Dp, Lp.y, ip, Op, Ip);
-          this.addLineTo(Ap, Pp)
-        }
-        return this
-      }
-      isPointInside(pp) {
-        let ip = !1;
-        const cp = this._points.length;
-        for (let Op = cp - 1, op = 0; op < cp; Op = op++) {
-          let cp = this._points[Op],
-            Ip = this._points[op],
-            Sp = Ip.x - cp.x,
-            xp = Ip.y - cp.y;
-          if (Math.abs(xp) > Number.EPSILON) {
-            if (xp < 0 && (cp = this._points[op], Sp = -Sp, Ip = this._points[Op], xp = -xp), pp.y < cp.y || pp.y > Ip.y) continue;
-            if (pp.y === cp.y && pp.x === cp.x) return !0;
-            {
-              const Op = xp * (pp.x - cp.x) - Sp * (pp.y - cp.y);
-              if (0 === Op) return !0;
-              if (Op < 0) continue;
-              ip = !ip
-            }
-          } else {
-            if (pp.y !== cp.y) continue;
-            if (Ip.x <= pp.x && pp.x <= cp.x || cp.x <= pp.x && pp.x <= Ip.x) return !0
-          }
-        }
-        return ip
-      }
-      close() {
-        return this.closed = !0, this
-      }
-      length() {
-        let pp = this._length;
-        if (this.closed) {
-          const ip = this._points[this._points.length - 1];
-          pp += this._points[0].subtract(ip).length()
-        }
-        return pp
-      }
-      area() {
-        const pp = this._points.length;
-        let ip = 0;
-        for (let cp = pp - 1, Op = 0; Op < pp; cp = Op++) ip += this._points[cp].x * this._points[Op].y - this._points[Op].x * this._points[cp].y;
-        return .5 * ip
-      }
-      getPoints() {
-        return this._points
-      }
-      getPointAtLengthPosition(pp) {
-        if (pp < 0 || pp > 1) return Ip.l.Zero();
-        const ip = pp * this.length();
-        let cp = 0;
-        for (let Op = 0; Op < this._points.length; Op++) {
-          const pp = (Op + 1) % this._points.length,
-            op = this._points[Op],
-            Sp = this._points[pp].subtract(op),
-            xp = Sp.length() + cp;
-          if (ip >= cp && ip <= xp) {
-            const pp = Sp.normalize(),
-              Op = ip - cp;
-            return new Ip.l(op.x + pp.x * Op, op.y + pp.y * Op)
-          }
-          cp = xp
-        }
-        return Ip.l.Zero()
-      }
-      static StartingAt(pp, ip) {
-        return new Yp(pp, ip)
-      }
-    }
-    class Dp {
-      static CreateQuadraticBezier(pp, ip, cp, Op) {
-        Op = Op > 2 ? Op : 3;
-        const op = [],
-          Sp = (pp, ip, cp, Op) => (1 - pp) * (1 - pp) * ip + 2 * pp * (1 - pp) * cp + pp * pp * Op;
-        for (let xp = 0; xp <= Op; xp++) op.push(new Ip.o(Sp(xp / Op, pp.x, ip.x, cp.x), Sp(xp / Op, pp.y, ip.y, cp.y), Sp(xp / Op, pp.z, ip.z, cp.z)));
-        return new Dp(op)
-      }
-      static CreateCubicBezier(pp, ip, cp, Op, op) {
-        op = op > 3 ? op : 4;
-        const Sp = [],
-          xp = (pp, ip, cp, Op, op) => (1 - pp) * (1 - pp) * (1 - pp) * ip + 3 * pp * (1 - pp) * (1 - pp) * cp + 3 * pp * pp * (1 - pp) * Op + pp * pp * pp * op;
-        for (let Lp = 0; Lp <= op; Lp++) Sp.push(new Ip.o(xp(Lp / op, pp.x, ip.x, cp.x, Op.x), xp(Lp / op, pp.y, ip.y, cp.y, Op.y), xp(Lp / op, pp.z, ip.z, cp.z, Op.z)));
-        return new Dp(Sp)
-      }
-      static CreateHermiteSpline(pp, ip, cp, Op, op) {
-        const Sp = [],
-          xp = 1 / op;
-        for (let Lp = 0; Lp <= op; Lp++) Sp.push(Ip.o.Hermite(pp, ip, cp, Op, Lp * xp));
-        return new Dp(Sp)
-      }
-      static CreateCatmullRomSpline(pp, ip, cp) {
-        const Op = [],
-          op = 1 / ip;
-        let Sp = 0;
-        if (cp) {
-          const cp = pp.length;
-          for (let xp = 0; xp < cp; xp++) {
-            Sp = 0;
-            for (let Lp = 0; Lp < ip; Lp++) Op.push(Ip.o.CatmullRom(pp[xp % cp], pp[(xp + 1) % cp], pp[(xp + 2) % cp], pp[(xp + 3) % cp], Sp)), Sp += op
-          }
-          Op.push(Op[0])
-        } else {
-          const cp = [];
-          cp.push(pp[0].clone()), cp.push(...pp), cp.push(pp[pp.length - 1].clone());
-          let xp = 0;
-          for (; xp < cp.length - 3; xp++) {
-            Sp = 0;
-            for (let pp = 0; pp < ip; pp++) Op.push(Ip.o.CatmullRom(cp[xp], cp[xp + 1], cp[xp + 2], cp[xp + 3], Sp)), Sp += op
-          }
-          xp--, Op.push(Ip.o.CatmullRom(cp[xp], cp[xp + 1], cp[xp + 2], cp[xp + 3], Sp))
-        }
-        return new Dp(Op)
-      }
-      static ArcThru3Points(pp, ip, cp) {
-        let Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 32,
-          op = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-          Sp = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-        const xp = [],
-          Lp = ip.subtract(pp),
-          Yp = cp.subtract(ip),
-          Ap = pp.subtract(cp),
-          Pp = Ip.o.Cross(Lp, Yp),
-          Wp = Pp.length();
-        if (Wp < Math.pow(10, -8)) return new Dp(xp);
-        const yp = Lp.lengthSquared(),
-          Up = Yp.lengthSquared(),
-          wp = Ap.lengthSquared(),
-          vp = Pp.lengthSquared(),
-          tp = .5 * Lp.length() * Yp.length() * Ap.length() / Wp,
-          Hp = -.5 * Up * Ip.o.Dot(Lp, Ap) / vp,
-          dp = -.5 * wp * Ip.o.Dot(Lp, Yp) / vp,
-          ep = -.5 * yp * Ip.o.Dot(Yp, Ap) / vp,
-          jp = pp.scale(Hp).add(ip.scale(dp)).add(cp.scale(ep)),
-          kp = pp.subtract(jp).normalize(),
-          mp = Ip.o.Cross(Pp, kp).normalize();
-        if (Sp) {
-          const ip = 2 * Math.PI / Op;
-          for (let pp = 0; pp <= 2 * Math.PI; pp += ip) xp.push(jp.add(kp.scale(tp * Math.cos(pp)).add(mp.scale(tp * Math.sin(pp)))));
-          xp.push(pp)
-        } else {
-          const ip = 1 / Op;
-          let Ip, Sp = 0;
-          do {
-            Ip = jp.add(kp.scale(tp * Math.cos(Sp)).add(mp.scale(tp * Math.sin(Sp)))), xp.push(Ip), Sp += ip
-          } while (!Ip.equalsWithEpsilon(cp, tp * ip * 1.1));
-          xp.push(cp), op && xp.push(pp)
-        }
-        return new Dp(xp)
-      }
-      constructor(pp) {
-        this._length = 0, this._points = pp, this._length = this._computeLength(pp)
-      }
-      getPoints() {
-        return this._points
-      }
-      length() {
-        return this._length
-      }
-      continue (pp) {
-        const ip = this._points[this._points.length - 1],
-          cp = this._points.slice(),
-          Op = pp.getPoints();
-        for (let op = 1; op < Op.length; op++) cp.push(Op[op].subtract(Op[0]).add(ip));
-        return new Dp(cp)
-      }
-      _computeLength(pp) {
-        let ip = 0;
-        for (let cp = 1; cp < pp.length; cp++) ip += pp[cp].subtract(pp[cp - 1]).length();
-        return ip
+      static IsPointInFrustum(QQ, WQ) {
+        for (let XQ = 0; XQ < 6; XQ++)
+          if (WQ[XQ].dotCoordinate(QQ) < 0) return !1;
+        return !0
       }
     }
   },
-  38900: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Ip
+  38047: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      b: () => qQ
     });
-    var Op = cp(38905);
-    const op = (pp, ip, cp) => pp ? pp.getClassName && "Mesh" === pp.getClassName() ? null : !pp.getClassName || "SubMesh" !== pp.getClassName() && "PhysicsBody" !== pp.getClassName() ? pp.clone ? pp.clone() : Array.isArray(pp) ? pp.slice() : cp && "object" === typeof pp ? {
-      ...pp
-    } : null : pp.clone(ip) : null;
-    class Ip {
-      static DeepCopy(pp, ip, cp, Ip) {
-        let Sp = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const xp = function(pp) {
-          const ip = [];
+    var wQ = XQ(37370);
+    class qQ {
+      constructor(QQ, WQ, XQ, qQ) {
+        this.normal = new wQ.s(QQ, WQ, XQ), this.d = qQ
+      }
+      awQ() {
+        return [this.normal.x, this.normal.y, this.normal.z, this.d]
+      }
+      clone() {
+        return new qQ(this.normal.x, this.normal.y, this.normal.z, this.d)
+      }
+      getClassName() {
+        return "Plane"
+      }
+      getHashCode() {
+        let QQ = this.normal.getHashCode();
+        return QQ = 397 * QQ ^ this.d, QQ
+      }
+      normalize() {
+        const QQ = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
+        let WQ = 0;
+        return 0 !== QQ && (WQ = 1 / QQ), this.normal.x *= WQ, this.normal.y *= WQ, this.normal.z *= WQ, this.d *= WQ, this
+      }
+      transform(QQ) {
+        const WQ = qQ._TmpMatrix;
+        QQ.invertToRef(WQ);
+        const XQ = WQ.m,
+          wQ = this.normal.x,
+          TQ = this.normal.y,
+          zQ = this.normal.z,
+          sQ = this.d,
+          FQ = wQ * XQ[0] + TQ * XQ[1] + zQ * XQ[2] + sQ * XQ[3],
+          PQ = wQ * XQ[4] + TQ * XQ[5] + zQ * XQ[6] + sQ * XQ[7],
+          gQ = wQ * XQ[8] + TQ * XQ[9] + zQ * XQ[10] + sQ * XQ[11],
+          JQ = wQ * XQ[12] + TQ * XQ[13] + zQ * XQ[14] + sQ * XQ[15];
+        return new qQ(FQ, PQ, gQ, JQ)
+      }
+      dotCoordinate(QQ) {
+        return this.normal.x * QQ.x + this.normal.y * QQ.y + this.normal.z * QQ.z + this.d
+      }
+      copyFromPoints(QQ, WQ, XQ) {
+        const wQ = WQ.x - QQ.x,
+          qQ = WQ.y - QQ.y,
+          TQ = WQ.z - QQ.z,
+          zQ = XQ.x - QQ.x,
+          sQ = XQ.y - QQ.y,
+          FQ = XQ.z - QQ.z,
+          PQ = qQ * FQ - TQ * sQ,
+          gQ = TQ * zQ - wQ * FQ,
+          JQ = wQ * sQ - qQ * zQ,
+          rQ = Math.sqrt(PQ * PQ + gQ * gQ + JQ * JQ);
+        let IQ;
+        return IQ = 0 !== rQ ? 1 / rQ : 0, this.normal.x = PQ * IQ, this.normal.y = gQ * IQ, this.normal.z = JQ * IQ, this.d = -(this.normal.x * QQ.x + this.normal.y * QQ.y + this.normal.z * QQ.z), this
+      }
+      isFrontFacingTo(QQ, WQ) {
+        return wQ.s.Dot(this.normal, QQ) <= WQ
+      }
+      signedDistanceTo(QQ) {
+        return wQ.s.Dot(QQ, this.normal) + this.d
+      }
+      static FromArray(QQ) {
+        return new qQ(QQ[0], QQ[1], QQ[2], QQ[3])
+      }
+      static FromPoints(QQ, WQ, XQ) {
+        const wQ = new qQ(0, 0, 0, 0);
+        return wQ.copyFromPoints(QQ, WQ, XQ), wQ
+      }
+      static FromPositionAndNormal(QQ, WQ) {
+        const XQ = new qQ(0, 0, 0, 0);
+        return this.FromPositionAndNormalToRef(QQ, WQ, XQ)
+      }
+      static FromPositionAndNormalToRef(QQ, WQ, XQ) {
+        return XQ.normal.WH(WQ), XQ.normal.normalize(), XQ.d = -QQ.dot(XQ.normal), XQ
+      }
+      static SignedDistanceToPlaneFromPositionAndNormal(QQ, WQ, XQ) {
+        const qQ = -(WQ.x * QQ.x + WQ.y * QQ.y + WQ.z * QQ.z);
+        return wQ.s.Dot(XQ, WQ) + qQ
+      }
+    }
+    qQ._TmpMatrix = wQ.e.Identity()
+  },
+  38947: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      d: () => TQ
+    });
+    var wQ = XQ(38956);
+    const qQ = (QQ, WQ, XQ) => QQ ? QQ.getClassName && "Mesh" === QQ.getClassName() ? null : !QQ.getClassName || "SubMesh" !== QQ.getClassName() && "PhysicsBody" !== QQ.getClassName() ? QQ.clone ? QQ.clone() : Array.isArray(QQ) ? QQ.slice() : XQ && "object" === typeof QQ ? {
+      ...QQ
+    } : null : QQ.clone(WQ) : null;
+    class TQ {
+      static DeepCopy(QQ, WQ, XQ, TQ) {
+        let zQ = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const sQ = function(QQ) {
+          const WQ = [];
           do {
-            const cp = Object.getOwnPropertyNames(pp);
-            for (const pp of cp) - 1 === ip.indexOf(pp) && ip.push(pp)
-          } while (pp = Object.getPrototypeOf(pp));
-          return ip
-        }(pp);
-        for (const Yp of xp) {
-          if ("_" === Yp[0] && (!Ip || -1 === Ip.indexOf(Yp))) continue;
-          if (Yp.endsWith("Observable")) continue;
-          if (cp && -1 !== cp.indexOf(Yp)) continue;
-          const xp = pp[Yp],
-            Dp = typeof xp;
-          if ("function" !== Dp) try {
-            if ("object" === Dp)
-              if (xp instanceof Uint8Array) ip[Yp] = Uint8Array.from(xp);
-              else if (xp instanceof Array) {
-              if (ip[Yp] = [], xp.length > 0)
-                if ("object" == typeof xp[0])
-                  for (let pp = 0; pp < xp.length; pp++) {
-                    const cp = op(xp[pp], ip, Sp); - 1 === ip[Yp].indexOf(cp) && ip[Yp].push(cp)
-                  } else ip[Yp] = xp.slice(0)
-            } else ip[Yp] = op(xp, ip, Sp);
-            else ip[Yp] = xp
-          } catch (Lp) {
-            Op.e.Warn(Lp.message)
+            const XQ = Object.getOwnPropertyNames(QQ);
+            for (const QQ of XQ) - 1 === WQ.indexOf(QQ) && WQ.push(QQ)
+          } while (QQ = Object.getPrototypeOf(QQ));
+          return WQ
+        }(QQ);
+        for (const PQ of sQ) {
+          if ("_" === PQ[0] && (!TQ || -1 === TQ.indexOf(PQ))) continue;
+          if (PQ.endsWith("Observable")) continue;
+          if (XQ && -1 !== XQ.indexOf(PQ)) continue;
+          const sQ = QQ[PQ],
+            gQ = typeof sQ;
+          if ("function" !== gQ) try {
+            if ("object" === gQ)
+              if (sQ instanceof Uint8Array) WQ[PQ] = Uint8Array.from(sQ);
+              else if (sQ instanceof Array) {
+              if (WQ[PQ] = [], sQ.length > 0)
+                if ("object" == typeof sQ[0])
+                  for (let QQ = 0; QQ < sQ.length; QQ++) {
+                    const XQ = qQ(sQ[QQ], WQ, zQ); - 1 === WQ[PQ].indexOf(XQ) && WQ[PQ].push(XQ)
+                  } else WQ[PQ] = sQ.slice(0)
+            } else WQ[PQ] = qQ(sQ, WQ, zQ);
+            else WQ[PQ] = sQ
+          } catch (FQ) {
+            wQ.b.Warn(FQ.message)
           }
         }
       }
     }
   },
-  38905: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Op
+  38191: (QQ, WQ, XQ) => {
+    function wQ() {
+      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (QQ => {
+        const WQ = 16 * Math.random() | 0;
+        return ("x" === QQ ? WQ : 3 & WQ | 8).toString(16)
+      }))
+    }
+    XQ.d(WQ, {
+      d: () => wQ
+    })
+  },
+  38956: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      b: () => wQ
     });
-    class Op {
-      static _CheckLimit(pp, ip) {
-        let cp = Op._LogLimitOutputs[pp];
-        return cp ? cp.current++ : (cp = {
-          limit: ip,
+    class wQ {
+      static _CheckLimit(QQ, WQ) {
+        let XQ = wQ._LogLimitOutputs[QQ];
+        return XQ ? XQ.current++ : (XQ = {
+          limit: WQ,
           current: 1
-        }, Op._LogLimitOutputs[pp] = cp), cp.current <= cp.limit
+        }, wQ._LogLimitOutputs[QQ] = XQ), XQ.current <= XQ.limit
       }
-      static _GenerateLimitMessage(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const cp = Op._LogLimitOutputs[pp];
-        if (!cp || !Op.MessageLimitReached) return;
-        const op = this._Levels[ip];
-        cp.current === cp.limit && Op[op.name](Op.MessageLimitReached.replace(/%LIMIT%/g, "" + cp.limit).replace(/%TYPE%/g, op.name ?? ""))
+      static _GenerateLimitMessage(QQ) {
+        let WQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const XQ = wQ._LogLimitOutputs[QQ];
+        if (!XQ || !wQ.MessageLimitReached) return;
+        const qQ = this._Levels[WQ];
+        XQ.current === XQ.limit && wQ[qQ.name](wQ.MessageLimitReached.replace(/%LIMIT%/g, "" + XQ.limit).replace(/%TYPE%/g, qQ.name ?? ""))
       }
-      static _AddLogEntry(pp) {
-        Op._LogCache = pp + Op._LogCache, Op.OnNewCacheEntry && Op.OnNewCacheEntry(pp)
+      static _AddLogEntry(QQ) {
+        wQ._LogCache = QQ + wQ._LogCache, wQ.OnNewCacheEntry && wQ.OnNewCacheEntry(QQ)
       }
-      static _FormatMessage(pp) {
-        const ip = pp => pp < 10 ? "0" + pp : "" + pp,
-          cp = new Date;
-        return "[" + ip(cp.getHours()) + ":" + ip(cp.getMinutes()) + ":" + ip(cp.getSeconds()) + "]: " + pp
+      static _FormatMessage(QQ) {
+        const WQ = QQ => QQ < 10 ? "0" + QQ : "" + QQ,
+          XQ = new Date;
+        return "[" + WQ(XQ.getHours()) + ":" + WQ(XQ.getMinutes()) + ":" + WQ(XQ.getSeconds()) + "]: " + QQ
       }
-      static _LogDisabled(pp, ip) {}
+      static _LogDisabled(QQ, WQ) {}
       static _LogEnabled() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          ip = arguments.length > 1 ? arguments[1] : void 0,
-          cp = arguments.length > 2 ? arguments[2] : void 0;
-        const op = Array.isArray(ip) ? ip[0] : ip;
-        if (void 0 !== cp && !Op._CheckLimit(op, cp)) return;
-        const Ip = Op._FormatMessage(op),
-          Sp = this._Levels[pp],
-          xp = Array.isArray(ip) ? ip.slice(1) : [];
-        Sp.logFunc && Sp.logFunc("BJS - " + Ip, ...xp);
-        const Lp = `<div style='color:${Sp.color}'>${Ip}</div><br>`;
-        Op._AddLogEntry(Lp), Op._GenerateLimitMessage(op, pp)
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          WQ = arguments.length > 1 ? arguments[1] : void 0,
+          XQ = arguments.length > 2 ? arguments[2] : void 0;
+        const qQ = Array.isArray(WQ) ? WQ[0] : WQ;
+        if (void 0 !== XQ && !wQ._CheckLimit(qQ, XQ)) return;
+        const TQ = wQ._FormatMessage(qQ),
+          zQ = this._Levels[QQ],
+          sQ = Array.isArray(WQ) ? WQ.slice(1) : [];
+        zQ.logFunc && zQ.logFunc("BJS - " + TQ, ...sQ);
+        const FQ = `<div style='color:${zQ.color}'>${TQ}</div><br>`;
+        wQ._AddLogEntry(FQ), wQ._GenerateLimitMessage(qQ, QQ)
       }
       static get LogCache() {
-        return Op._LogCache
+        return wQ._LogCache
       }
       static ClearLogCache() {
-        Op._LogCache = "", Op._LogLimitOutputs = {}, Op.errorsCount = 0
+        wQ._LogCache = "", wQ._LogLimitOutputs = {}, wQ.errorsCount = 0
       }
-      static set LogLevels(pp) {
-        Op.Log = Op._LogDisabled, Op.Warn = Op._LogDisabled, Op.Error = Op._LogDisabled;
-        const ip = [Op.MessageLogLevel, Op.WarningLogLevel, Op.ErrorLogLevel];
-        for (const cp of ip)
-          if ((pp & cp) === cp) {
-            const pp = this._Levels[cp];
-            Op[pp.name] = Op._LogEnabled.bind(Op, cp)
+      static set LogLevels(QQ) {
+        wQ.Log = wQ._LogDisabled, wQ.Warn = wQ._LogDisabled, wQ.Error = wQ._LogDisabled;
+        const WQ = [wQ.MessageLogLevel, wQ.WarningLogLevel, wQ.ErrorLogLevel];
+        for (const XQ of WQ)
+          if ((QQ & XQ) === XQ) {
+            const QQ = this._Levels[XQ];
+            wQ[QQ.name] = wQ._LogEnabled.bind(wQ, XQ)
           }
       }
     }
-    Op.NoneLogLevel = 0, Op.MessageLogLevel = 1, Op.WarningLogLevel = 2, Op.ErrorLogLevel = 4, Op.AllLogLevel = 7, Op.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Op._LogCache = "", Op._LogLimitOutputs = {}, Op._Levels = [{}, {
+    wQ.NoneLogLevel = 0, wQ.MessageLogLevel = 1, wQ.WarningLogLevel = 2, wQ.ErrorLogLevel = 4, wQ.AllLogLevel = 7, wQ.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", wQ._LogCache = "", wQ._LogLimitOutputs = {}, wQ._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -405,8 +266,8 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], Op.errorsCount = 0, Op.Log = Op._LogEnabled.bind(Op, Op.MessageLogLevel), Op.Warn = Op._LogEnabled.bind(Op, Op.WarningLogLevel), Op.Error = Op._LogEnabled.bind(Op, Op.ErrorLogLevel)
+    }], wQ.errorsCount = 0, wQ.Log = wQ._LogEnabled.bind(wQ, wQ.MessageLogLevel), wQ.Warn = wQ._LogEnabled.bind(wQ, wQ.WarningLogLevel), wQ.Error = wQ._LogEnabled.bind(wQ, wQ.ErrorLogLevel)
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

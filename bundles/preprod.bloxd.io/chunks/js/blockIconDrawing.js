@@ -1,181 +1,181 @@
 export const id = 2;
 export const ids = [2];
 export const modules = {
-  36611: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      drawBlockIcon: () => vp,
-      drawBlockIconUrl: () => tp,
-      getDrawnBlockIcon: () => wp
+  36698: (QQ, WQ, XQ) => {
+    XQ.r(WQ), XQ.d(WQ, {
+      drawBlockIcon: () => VQ,
+      drawBlockIconUrl: () => DQ,
+      getDrawnBlockIcon: () => yQ
     });
-    var Op = cp(36618);
-    const op = {
+    var wQ = XQ(36703);
+    const qQ = {
         boxes: [
           [0, 0, 0, 1, 1, 1]
         ],
         cropFaces: !1
       },
-      Ip = {
+      TQ = {
         boxes: [
           [0, 0, 0, 1, .5, 1]
         ],
         cropFaces: !1
       },
-      Sp = {
+      zQ = {
         boxes: [
           [0, 0, 0, 1, .5, 1],
           [0, .5, 0, .5, 1, 1]
         ],
         cropFaces: !0
       };
-    const xp = 1e-6;
+    const sQ = 1e-6;
 
-    function Lp(pp, ip, cp, Op) {
+    function FQ(QQ, WQ, XQ, wQ) {
       let {
-        origin: op,
-        across: Ip,
-        down: Sp,
-        texture: Lp,
-        rect: [Yp, Dp, Ap, Pp],
-        shade: Wp
-      } = Op;
-      const yp = Ip.x * Sp.y - Ip.y * Sp.x;
-      if (Math.abs(yp) < 1e-9) return;
-      const Up = [op.x, op.x + Ip.x, op.x + Sp.x, op.x + Ip.x + Sp.x],
-        wp = [op.y, op.y + Ip.y, op.y + Sp.y, op.y + Ip.y + Sp.y],
-        vp = Math.max(0, Math.floor(Math.min(...Up))),
-        tp = Math.min(cp - 1, Math.ceil(Math.max(...Up))),
-        Hp = Math.max(0, Math.floor(Math.min(...wp))),
-        dp = Math.min(cp - 1, Math.ceil(Math.max(...wp)));
-      for (let ep = Hp; ep <= dp; ep++)
-        for (let Op = vp; Op <= tp; Op++) {
-          const Up = Op + .5 - op.x,
-            wp = ep + .5 - op.y,
-            vp = (Up * Sp.y - wp * Sp.x) / yp,
-            tp = (Ip.x * wp - Ip.y * Up) / yp;
-          if (vp < -xp || vp > 1 + xp || tp < -xp || tp > 1 + xp) continue;
-          const Hp = ep * cp + Op;
-          ip[Hp] = 1;
-          const dp = Yp + Math.min(Math.max(vp, 0), 1) * (Ap - Yp),
-            jp = Dp + Math.min(Math.max(tp, 0), 1) * (Pp - Dp),
-            kp = Math.min(Lp.width - 1, Math.floor(dp * Lp.width)),
-            mp = 4 * (Math.min(Lp.height - 1, Math.floor(jp * Lp.height)) * Lp.width + kp),
-            Rp = Lp.pixels[mp + 3] / 255;
-          if (0 === Rp) continue;
-          const qp = 4 * Hp,
-            Mp = pp[qp + 3] / 255 * (1 - Rp),
-            Cp = Rp + Mp;
-          for (let ip = 0; ip < 3; ip++) pp[qp + ip] = (Lp.pixels[mp + ip] * Wp * Rp + pp[qp + ip] * Mp) / Cp;
-          pp[qp + 3] = 255 * Cp
+        origin: qQ,
+        across: TQ,
+        down: zQ,
+        texture: FQ,
+        rect: [PQ, gQ, JQ, rQ],
+        shade: IQ
+      } = wQ;
+      const jQ = TQ.x * zQ.y - TQ.y * zQ.x;
+      if (Math.abs(jQ) < 1e-9) return;
+      const BQ = [qQ.x, qQ.x + TQ.x, qQ.x + zQ.x, qQ.x + TQ.x + zQ.x],
+        yQ = [qQ.y, qQ.y + TQ.y, qQ.y + zQ.y, qQ.y + TQ.y + zQ.y],
+        VQ = Math.max(0, Math.floor(Math.min(...BQ))),
+        DQ = Math.min(XQ - 1, Math.ceil(Math.max(...BQ))),
+        pQ = Math.max(0, Math.floor(Math.min(...yQ))),
+        GQ = Math.min(XQ - 1, Math.ceil(Math.max(...yQ)));
+      for (let UQ = pQ; UQ <= GQ; UQ++)
+        for (let wQ = VQ; wQ <= DQ; wQ++) {
+          const BQ = wQ + .5 - qQ.x,
+            yQ = UQ + .5 - qQ.y,
+            VQ = (BQ * zQ.y - yQ * zQ.x) / jQ,
+            DQ = (TQ.x * yQ - TQ.y * BQ) / jQ;
+          if (VQ < -sQ || VQ > 1 + sQ || DQ < -sQ || DQ > 1 + sQ) continue;
+          const pQ = UQ * XQ + wQ;
+          WQ[pQ] = 1;
+          const GQ = PQ + Math.min(Math.max(VQ, 0), 1) * (JQ - PQ),
+            bQ = gQ + Math.min(Math.max(DQ, 0), 1) * (rQ - gQ),
+            vQ = Math.min(FQ.width - 1, Math.floor(GQ * FQ.width)),
+            dQ = 4 * (Math.min(FQ.height - 1, Math.floor(bQ * FQ.height)) * FQ.width + vQ),
+            HQ = FQ.pixels[dQ + 3] / 255;
+          if (0 === HQ) continue;
+          const aQ = 4 * pQ,
+            lQ = QQ[aQ + 3] / 255 * (1 - HQ),
+            hQ = HQ + lQ;
+          for (let WQ = 0; WQ < 3; WQ++) QQ[aQ + WQ] = (FQ.pixels[dQ + WQ] * IQ * HQ + QQ[aQ + WQ] * lQ) / hQ;
+          QQ[aQ + 3] = 255 * hQ
         }
     }
-    var Yp = cp(36622);
-    const Dp = new Map,
-      Ap = new Map,
-      Pp = new Map,
-      Wp = new Map;
+    var PQ = XQ(36711);
+    const gQ = new Map,
+      JQ = new Map,
+      rQ = new Map,
+      IQ = new Map;
 
-    function yp(pp, ip, cp) {
-      return `${ip}|${cp}|${pp}`
+    function jQ(QQ, WQ, XQ) {
+      return `${WQ}|${XQ}|${QQ}`
     }
 
-    function Up(pp, ip, cp) {
-      let Op = pp.get(ip);
-      return void 0 === Op && (Op = cp().catch((cp => {
-        throw pp.delete(ip), cp
-      })), pp.set(ip, Op)), Op
+    function BQ(QQ, WQ, XQ) {
+      let wQ = QQ.get(WQ);
+      return void 0 === wQ && (wQ = XQ().catch((XQ => {
+        throw QQ.delete(WQ), XQ
+      })), QQ.set(WQ, wQ)), wQ
     }
 
-    function wp(pp, ip) {
-      let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      return Ap.get(yp(pp, ip, cp))
+    function yQ(QQ, WQ) {
+      let XQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      return JQ.get(jQ(QQ, WQ, XQ))
     }
 
-    function vp(pp, ip, cp, Op) {
-      const op = yp(pp, ip, cp);
-      return Up(Dp, op, (async () => {
-        const Ip = await Hp(Op(pp), ip, cp);
-        return Ap.set(op, Ip), Ip
+    function VQ(QQ, WQ, XQ, wQ) {
+      const qQ = jQ(QQ, WQ, XQ);
+      return BQ(gQ, qQ, (async () => {
+        const TQ = await pQ(wQ(QQ), WQ, XQ);
+        return JQ.set(qQ, TQ), TQ
       }))
     }
 
-    function tp(pp, ip, cp, Op) {
-      return Up(Pp, yp(pp, ip, cp), (async () => {
-        var op;
-        const Ip = Op(pp);
-        return null !== (op = await (0, Yp.d)(Ip, ip, cp)) && void 0 !== op ? op : (await Hp(Ip, ip, cp)).toDataURL()
+    function DQ(QQ, WQ, XQ, wQ) {
+      return BQ(rQ, jQ(QQ, WQ, XQ), (async () => {
+        var qQ;
+        const TQ = wQ(QQ);
+        return null !== (qQ = await (0, PQ.e)(TQ, WQ, XQ)) && void 0 !== qQ ? qQ : (await pQ(TQ, WQ, XQ)).toDataURL()
       }))
     }
-    async function Hp(pp, ip, cp) {
+    async function pQ(QQ, WQ, XQ) {
       let {
-        top: xp,
-        left: Yp,
-        right: Dp,
-        itemType: Ap
-      } = pp;
-      const [Pp, Wp, yp] = await Promise.all([dp(xp), dp(Yp), dp(Dp)]), Up = function(pp, ip, cp, op) {
-        const Ip = (0, Op.g)(cp, op),
-          Sp = Ip * Op.c.across,
-          xp = Ip * Op.c.down,
-          Yp = Ip * Op.c.up,
-          Dp = Math.max(...ip.boxes.map((pp => pp[4]))),
-          Ap = cp / 2,
-          Pp = xp + (cp - xp - xp - Dp * Yp) / 2,
-          Wp = (pp, ip, cp) => ({
-            x: Ap + (pp - cp) * Sp,
-            y: Pp - xp + (pp + cp) * xp + (Dp - ip) * Yp
+        top: sQ,
+        left: PQ,
+        right: gQ,
+        itemType: JQ
+      } = QQ;
+      const [rQ, IQ, jQ] = await Promise.all([GQ(sQ), GQ(PQ), GQ(gQ)]), BQ = function(QQ, WQ, XQ, qQ) {
+        const TQ = (0, wQ.f)(XQ, qQ),
+          zQ = TQ * wQ.b.across,
+          sQ = TQ * wQ.b.down,
+          PQ = TQ * wQ.b.up,
+          gQ = Math.max(...WQ.boxes.map((QQ => QQ[4]))),
+          JQ = XQ / 2,
+          rQ = sQ + (XQ - sQ - sQ - gQ * PQ) / 2,
+          IQ = (QQ, WQ, XQ) => ({
+            x: JQ + (QQ - XQ) * zQ,
+            y: rQ - sQ + (QQ + XQ) * sQ + (gQ - WQ) * PQ
           }),
-          yp = (pp, cp, Op, op, Ip, Sp) => ({
-            origin: pp,
+          jQ = (QQ, XQ, wQ, qQ, TQ, zQ) => ({
+            origin: QQ,
             across: {
-              x: cp.x - pp.x,
-              y: cp.y - pp.y
+              x: XQ.x - QQ.x,
+              y: XQ.y - QQ.y
             },
             down: {
-              x: Op.x - pp.x,
-              y: Op.y - pp.y
+              x: wQ.x - QQ.x,
+              y: wQ.y - QQ.y
             },
-            texture: op,
-            rect: ip.cropFaces ? Ip : [0, 0, 1, 1],
-            shade: Sp
+            texture: qQ,
+            rect: WQ.cropFaces ? TQ : [0, 0, 1, 1],
+            shade: zQ
           }),
-          Up = new Uint8ClampedArray(cp * cp * 4),
-          wp = new Uint8Array(cp * cp),
-          vp = Op.d;
-        for (const [Op, tp, Hp, dp, ep, jp] of ip.boxes) {
-          const ip = yp(Wp(dp, ep, jp), Wp(dp, ep, Hp), Wp(dp, tp, jp), pp.right, [1 - jp, 1 - ep, 1 - Hp, 1 - tp], vp.right),
-            op = yp(Wp(Op, ep, jp), Wp(dp, ep, jp), Wp(Op, tp, jp), pp.left, [Op, 1 - ep, dp, 1 - tp], vp.left),
-            Ip = yp(Wp(Op, ep, Hp), Wp(dp, ep, Hp), Wp(Op, ep, jp), pp.top, [Op, Hp, dp, jp], vp.top);
-          for (const pp of [ip, op, Ip]) Lp(Up, wp, cp, pp)
+          BQ = new Uint8ClampedArray(XQ * XQ * 4),
+          yQ = new Uint8Array(XQ * XQ),
+          VQ = wQ.d;
+        for (const [wQ, DQ, pQ, GQ, UQ, bQ] of WQ.boxes) {
+          const WQ = jQ(IQ(GQ, UQ, bQ), IQ(GQ, UQ, pQ), IQ(GQ, DQ, bQ), QQ.right, [1 - bQ, 1 - UQ, 1 - pQ, 1 - DQ], VQ.right),
+            qQ = jQ(IQ(wQ, UQ, bQ), IQ(GQ, UQ, bQ), IQ(wQ, DQ, bQ), QQ.left, [wQ, 1 - UQ, GQ, 1 - DQ], VQ.left),
+            TQ = jQ(IQ(wQ, UQ, pQ), IQ(GQ, UQ, pQ), IQ(wQ, UQ, bQ), QQ.top, [wQ, pQ, GQ, bQ], VQ.top);
+          for (const QQ of [WQ, qQ, TQ]) FQ(BQ, yQ, XQ, QQ)
         }
-        return (0, Op.k)(Up, cp, op, (pp => 1 === wp[pp])), Up
+        return (0, wQ.i)(BQ, XQ, qQ, (QQ => 1 === yQ[QQ])), BQ
       }({
-        top: Pp,
-        left: Wp,
-        right: yp
-      }, function(pp) {
-        return "SlabBlock" === pp ? Ip : "StairsBlock" === pp ? Sp : op
-      }(Ap), ip, cp), wp = document.createElement("canvas");
-      wp.width = ip, wp.height = ip;
-      const vp = wp.getContext("2d");
-      if (!vp) throw new Error("Failed to get 2D context");
-      return vp.putImageData(new ImageData(Up, ip, ip), 0, 0), wp
+        top: rQ,
+        left: IQ,
+        right: jQ
+      }, function(QQ) {
+        return "SlabBlock" === QQ ? TQ : "StairsBlock" === QQ ? zQ : qQ
+      }(JQ), WQ, XQ), yQ = document.createElement("canvas");
+      yQ.width = WQ, yQ.height = WQ;
+      const VQ = yQ.getContext("2d");
+      if (!VQ) throw new Error("Failed to get 2D context");
+      return VQ.putImageData(new ImageData(BQ, WQ, WQ), 0, 0), yQ
     }
 
-    function dp(pp) {
-      return Up(Wp, pp, (async () => {
-        const ip = await (0, Yp.h)(pp),
-          cp = document.createElement("canvas");
-        cp.width = ip.width, cp.height = ip.height;
-        const Op = cp.getContext("2d");
-        if (!Op) throw new Error("Failed to get 2D context");
-        return Op.drawImage(ip, 0, 0), {
-          width: ip.width,
-          height: ip.height,
-          pixels: Op.getImageData(0, 0, ip.width, ip.height).data
+    function GQ(QQ) {
+      return BQ(IQ, QQ, (async () => {
+        const WQ = await (0, PQ.i)(QQ),
+          XQ = document.createElement("canvas");
+        XQ.width = WQ.width, XQ.height = WQ.height;
+        const wQ = XQ.getContext("2d");
+        if (!wQ) throw new Error("Failed to get 2D context");
+        return wQ.drawImage(WQ, 0, 0), {
+          width: WQ.width,
+          height: WQ.height,
+          pixels: wQ.getImageData(0, 0, WQ.width, WQ.height).data
         }
       }))
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

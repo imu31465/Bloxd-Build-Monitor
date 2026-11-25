@@ -1,19 +1,29 @@
 export const id = 369;
 export const ids = [369];
 export const modules = {
-  61516: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      lod3DPixelShader: () => Sp
-    });
-    var Op = cp(40062);
-    const op = "lod3DPixelShader",
-      Ip = "precision highp float;precision highp sampler3D;const float GammaEncodePowerApprox=1.0/2.2;varying vec2 vUV;uniform sampler3D textureSampler;uniform float lod;uniform float slice;uniform int gamma;void main(void)\n{ivec3 textureCoordinates=ivec3(vUV*vec2(textureSize(textureSampler,0).xy),int(slice));gl_FragColor=texelFetch(textureSampler,textureCoordinates,int(lod));if (gamma==0) {gl_FragColor.rgb=pow(gl_FragColor.rgb,vec3(GammaEncodePowerApprox));}}\n";
-    Op.b.ShadersStore[op] || (Op.b.ShadersStore[op] = Ip);
-    const Sp = {
-      name: op,
-      shader: Ip
+  61633: (QQ, WQ, XQ) => {
+    function wQ(QQ, WQ) {
+      for (const XQ of QQ._frameGraph._tasks)
+        if (XQ?._config && XQ._colorAttachment && (XQ._config.rt === WQ.scRT || XQ._config.rst === WQ.scRT)) return XQ
     }
+
+    function qQ(QQ, WQ) {
+      const XQ = QQ._renderingContexts[QQ._renderingContexts.length - 1];
+      if (!XQ?._frameGraph) return;
+      const qQ = wQ(WQ, QQ);
+      if (!qQ) return;
+      if (1 === QQ.msaaSamples) return void(qQ._config.clr = !1);
+      const TQ = qQ.enabled;
+      qQ._config.clr = !0, qQ.enabled = !1, WQ._beforeRender.unshift((() => {
+        const WQ = wQ(XQ, QQ),
+          zQ = WQ?._config.rst === QQ.scRT && WQ._config.rt._colorView;
+        qQ.enabled = !!zQ && TQ, qQ._config.clr = !zQ, zQ && (qQ._colorAttachment.view = zQ)
+      }))
+    }
+    XQ.r(WQ), XQ.d(WQ, {
+      configureSwapchainOverlayScene: () => qQ
+    })
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

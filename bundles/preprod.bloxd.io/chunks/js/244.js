@@ -1,261 +1,284 @@
 export const id = 244;
 export const ids = [244];
 export const modules = {
-  37985: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => op
+  61549: (QQ, WQ, XQ) => {
+    XQ.r(WQ), XQ.d(WQ, {
+      DEVTOOLS_SHADERS: () => TQ,
+      registerDevtoolsShader: () => zQ
     });
-    var Op = cp(37989);
-    class op {
-      static GetPlanes(pp) {
-        const ip = [];
-        for (let cp = 0; cp < 6; cp++) ip.push(new Op.e(0, 0, 0, 0));
-        return op.GetPlanesToRef(pp, ip), ip
-      }
-      static GetNearPlaneToRef(pp, ip) {
-        const cp = pp.m;
-        ip.normal.x = cp[3] + cp[2], ip.normal.y = cp[7] + cp[6], ip.normal.z = cp[11] + cp[10], ip.d = cp[15] + cp[14], ip.normalize()
-      }
-      static GetFarPlaneToRef(pp, ip) {
-        const cp = pp.m;
-        ip.normal.x = cp[3] - cp[2], ip.normal.y = cp[7] - cp[6], ip.normal.z = cp[11] - cp[10], ip.d = cp[15] - cp[14], ip.normalize()
-      }
-      static GetLeftPlaneToRef(pp, ip) {
-        const cp = pp.m;
-        ip.normal.x = cp[3] + cp[0], ip.normal.y = cp[7] + cp[4], ip.normal.z = cp[11] + cp[8], ip.d = cp[15] + cp[12], ip.normalize()
-      }
-      static GetRightPlaneToRef(pp, ip) {
-        const cp = pp.m;
-        ip.normal.x = cp[3] - cp[0], ip.normal.y = cp[7] - cp[4], ip.normal.z = cp[11] - cp[8], ip.d = cp[15] - cp[12], ip.normalize()
-      }
-      static GetTopPlaneToRef(pp, ip) {
-        const cp = pp.m;
-        ip.normal.x = cp[3] - cp[1], ip.normal.y = cp[7] - cp[5], ip.normal.z = cp[11] - cp[9], ip.d = cp[15] - cp[13], ip.normalize()
-      }
-      static GetBottomPlaneToRef(pp, ip) {
-        const cp = pp.m;
-        ip.normal.x = cp[3] + cp[1], ip.normal.y = cp[7] + cp[5], ip.normal.z = cp[11] + cp[9], ip.d = cp[15] + cp[13], ip.normalize()
-      }
-      static GetPlanesToRef(pp, ip) {
-        op.GetNearPlaneToRef(pp, ip[0]), op.GetFarPlaneToRef(pp, ip[1]), op.GetLeftPlaneToRef(pp, ip[2]), op.GetRightPlaneToRef(pp, ip[3]), op.GetTopPlaneToRef(pp, ip[4]), op.GetBottomPlaneToRef(pp, ip[5])
-      }
-      static IsPointInFrustum(pp, ip) {
-        for (let cp = 0; cp < 6; cp++)
-          if (ip[cp].dotCoordinate(pp) < 0) return !1;
-        return !0
-      }
-    }
-  },
-  37989: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => op
-    });
-    var Op = cp(37320);
-    class op {
-      constructor(pp, ip, cp, op) {
-        this.normal = new Op.o(pp, ip, cp), this.d = op
-      }
-      BOp() {
-        return [this.normal.x, this.normal.y, this.normal.z, this.d]
-      }
-      clone() {
-        return new op(this.normal.x, this.normal.y, this.normal.z, this.d)
-      }
-      getClassName() {
-        return "Plane"
-      }
-      getHashCode() {
-        let pp = this.normal.getHashCode();
-        return pp = 397 * pp ^ this.d, pp
-      }
-      normalize() {
-        const pp = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
-        let ip = 0;
-        return 0 !== pp && (ip = 1 / pp), this.normal.x *= ip, this.normal.y *= ip, this.normal.z *= ip, this.d *= ip, this
-      }
-      transform(pp) {
-        const ip = op._TmpMatrix;
-        pp.invertToRef(ip);
-        const cp = ip.m,
-          Op = this.normal.x,
-          Ip = this.normal.y,
-          Sp = this.normal.z,
-          xp = this.d,
-          Lp = Op * cp[0] + Ip * cp[1] + Sp * cp[2] + xp * cp[3],
-          Yp = Op * cp[4] + Ip * cp[5] + Sp * cp[6] + xp * cp[7],
-          Dp = Op * cp[8] + Ip * cp[9] + Sp * cp[10] + xp * cp[11],
-          Ap = Op * cp[12] + Ip * cp[13] + Sp * cp[14] + xp * cp[15];
-        return new op(Lp, Yp, Dp, Ap)
-      }
-      dotCoordinate(pp) {
-        return this.normal.x * pp.x + this.normal.y * pp.y + this.normal.z * pp.z + this.d
-      }
-      copyFromPoints(pp, ip, cp) {
-        const Op = ip.x - pp.x,
-          op = ip.y - pp.y,
-          Ip = ip.z - pp.z,
-          Sp = cp.x - pp.x,
-          xp = cp.y - pp.y,
-          Lp = cp.z - pp.z,
-          Yp = op * Lp - Ip * xp,
-          Dp = Ip * Sp - Op * Lp,
-          Ap = Op * xp - op * Sp,
-          Pp = Math.sqrt(Yp * Yp + Dp * Dp + Ap * Ap);
-        let Wp;
-        return Wp = 0 !== Pp ? 1 / Pp : 0, this.normal.x = Yp * Wp, this.normal.y = Dp * Wp, this.normal.z = Ap * Wp, this.d = -(this.normal.x * pp.x + this.normal.y * pp.y + this.normal.z * pp.z), this
-      }
-      isFrontFacingTo(pp, ip) {
-        return Op.o.Dot(this.normal, pp) <= ip
-      }
-      signedDistanceTo(pp) {
-        return Op.o.Dot(pp, this.normal) + this.d
-      }
-      static FromArray(pp) {
-        return new op(pp[0], pp[1], pp[2], pp[3])
-      }
-      static FromPoints(pp, ip, cp) {
-        const Op = new op(0, 0, 0, 0);
-        return Op.copyFromPoints(pp, ip, cp), Op
-      }
-      static FromPositionAndNormal(pp, ip) {
-        const cp = new op(0, 0, 0, 0);
-        return this.FromPositionAndNormalToRef(pp, ip, cp)
-      }
-      static FromPositionAndNormalToRef(pp, ip, cp) {
-        return cp.normal.rM(ip), cp.normal.normalize(), cp.d = -pp.dot(cp.normal), cp
-      }
-      static SignedDistanceToPlaneFromPositionAndNormal(pp, ip, cp) {
-        const op = -(ip.x * pp.x + ip.y * pp.y + ip.z * pp.z);
-        return Op.o.Dot(cp, ip) + op
-      }
-    }
-    op._TmpMatrix = Op.b.Identity()
-  },
-  38900: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Ip
-    });
-    var Op = cp(38905);
-    const op = (pp, ip, cp) => pp ? pp.getClassName && "Mesh" === pp.getClassName() ? null : !pp.getClassName || "SubMesh" !== pp.getClassName() && "PhysicsBody" !== pp.getClassName() ? pp.clone ? pp.clone() : Array.isArray(pp) ? pp.slice() : cp && "object" === typeof pp ? {
-      ...pp
-    } : null : pp.clone(ip) : null;
-    class Ip {
-      static DeepCopy(pp, ip, cp, Ip) {
-        let Sp = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const xp = function(pp) {
-          const ip = [];
-          do {
-            const cp = Object.getOwnPropertyNames(pp);
-            for (const pp of cp) - 1 === ip.indexOf(pp) && ip.push(pp)
-          } while (pp = Object.getPrototypeOf(pp));
-          return ip
-        }(pp);
-        for (const Yp of xp) {
-          if ("_" === Yp[0] && (!Ip || -1 === Ip.indexOf(Yp))) continue;
-          if (Yp.endsWith("Observable")) continue;
-          if (cp && -1 !== cp.indexOf(Yp)) continue;
-          const xp = pp[Yp],
-            Dp = typeof xp;
-          if ("function" !== Dp) try {
-            if ("object" === Dp)
-              if (xp instanceof Uint8Array) ip[Yp] = Uint8Array.from(xp);
-              else if (xp instanceof Array) {
-              if (ip[Yp] = [], xp.length > 0)
-                if ("object" == typeof xp[0])
-                  for (let pp = 0; pp < xp.length; pp++) {
-                    const cp = op(xp[pp], ip, Sp); - 1 === ip[Yp].indexOf(cp) && ip[Yp].push(cp)
-                  } else ip[Yp] = xp.slice(0)
-            } else ip[Yp] = op(xp, ip, Sp);
-            else ip[Yp] = xp
-          } catch (Lp) {
-            Op.e.Warn(Lp.message)
-          }
+    var wQ = XQ(40126),
+      qQ = XQ(37468);
+    const TQ = {
+      devtoolsNormal: function(QQ) {
+        return {
+          vertex: `\n\t\t\t${(0,qQ.d)(QQ,"position","vec3")}\n\t\t\t${(0,qQ.d)(QQ,"normal","vec3")}\n\t\t\t${(0,qQ.Fb)(QQ,"worldViewProjection","mat4")}\n\t\t\t${(0,qQ.Fb)(QQ,"world","mat4")}\n\t\t\t${(0,qQ.Nb)(QQ,"vNormal","vec3","mediump")}\n\n\t\t\t${(0,qQ.Ob)(QQ,`\n\t\t\t\t${(0,qQ.i)(QQ)} = ${(0,qQ.Jb)(QQ,"worldViewProjection")} * ${(0,qQ.l)(QQ,"vec4",(0,qQ.Sb)(QQ,"position"),"1.0")};\n\t\t\t\t${(0,qQ.Tb)(QQ,"vNormal")} = normalize((${(0,qQ.Jb)(QQ,"world")} * ${(0,qQ.l)(QQ,"vec4",(0,qQ.Sb)(QQ,"normal"),"0.0")}).xyz);\n\t\t\t`)}\n\t\t`,
+          fragment: `\n\t\t\t${(0,qQ.Nb)(QQ,"vNormal","vec3","mediump")}\n\n\t\t\t${(0,qQ.Q)(QQ,`\n\t\t\t\t\n\t\t\t\t${(0,qQ.A)(QQ,"vec3","normalColor",`abs(${(0,qQ.T)(QQ,"vNormal")})`)}\n\t\t\t\t${(0,qQ.L)(QQ)} = ${(0,qQ.l)(QQ,"vec4","normalColor","1.0")};\n\t\t\t`)}\n\t\t`
+        }
+      },
+      devtoolsWhite: function(QQ) {
+        return {
+          vertex: `\n\t\t\t${(0,qQ.d)(QQ,"position","vec3")}\n\t\t\t${(0,qQ.Fb)(QQ,"worldViewProjection","mat4")}\n\n\t\t\t${(0,qQ.Ob)(QQ,`\n\t\t\t\t${(0,qQ.i)(QQ)} = ${(0,qQ.Jb)(QQ,"worldViewProjection")} * ${(0,qQ.l)(QQ,"vec4",(0,qQ.Sb)(QQ,"position"),"1.0")};\n\t\t\t`)}\n\t\t`,
+          fragment: `\n\t\t\t${(0,qQ.Q)(QQ,`\n\t\t\t\t${(0,qQ.L)(QQ)} = ${(0,qQ.l)(QQ,"vec4","1.0","1.0","1.0","1.0")};\n\t\t\t`)}\n\t\t`
+        }
+      },
+      devtoolsDepth: function(QQ) {
+        return {
+          vertex: `\n\t\t\t${(0,qQ.d)(QQ,"position","vec3")}\n\t\t\t${(0,qQ.Fb)(QQ,"worldViewProjection","mat4")}\n\t\t\t${(0,qQ.Fb)(QQ,"world","mat4")}\n\t\t\t${(0,qQ.Fb)(QQ,"cameraPosition","vec3")}\n\t\t\t${(0,qQ.Nb)(QQ,"vDepth","float","mediump")}\n\n\t\t\t${(0,qQ.Ob)(QQ,`\n\t\t\t\t${(0,qQ.i)(QQ)} = ${(0,qQ.Jb)(QQ,"worldViewProjection")} * ${(0,qQ.l)(QQ,"vec4",(0,qQ.Sb)(QQ,"position"),"1.0")};\n\t\t\t\t${(0,qQ.A)(QQ,"vec3","worldPosition",`(${(0,qQ.Jb)(QQ,"world")} * ${(0,qQ.l)(QQ,"vec4",(0,qQ.Sb)(QQ,"position"),"1.0")}).xyz`)}\n\t\t\t\t${(0,qQ.Tb)(QQ,"vDepth")} = distance(worldPosition, ${(0,qQ.Jb)(QQ,"cameraPosition")});\n\t\t\t`)}\n\t\t`,
+          fragment: `\n\t\t\t${(0,qQ.Nb)(QQ,"vDepth","float","mediump")}\n\t\t\t${(0,qQ.Fb)(QQ,"maxDepth","float")}\n\t\t\t${(0,qQ.Fb)(QQ,"minDepth","float")}\n\n\t\t\t${(0,qQ.Q)(QQ,`\n\t\t\t\t\n\t\t\t\t${(0,qQ.A)(QQ,"float","normalizedDepth",`clamp((${(0,qQ.T)(QQ,"vDepth")} - ${(0,qQ.Jb)(QQ,"minDepth")}) / (${(0,qQ.Jb)(QQ,"maxDepth")} - ${(0,qQ.Jb)(QQ,"minDepth")}), 0.0, 1.0)`)}\n\t\t\t\t${(0,qQ.A)(QQ,"float","gray","1.0 - normalizedDepth")}\n\t\t\t\t${(0,qQ.L)(QQ)} = ${(0,qQ.l)(QQ,"vec4","gray","gray","gray","1.0")};\n\t\t\t`)}\n\t\t`
         }
       }
+    };
+
+    function zQ(QQ, WQ) {
+      const {
+        vertex: XQ,
+        fragment: qQ
+      } = TQ[QQ](WQ), zQ = wQ.b.GetShadersStore(WQ);
+      zQ[`${QQ}VertexShader`] = XQ, zQ[`${QQ}FragmentShader`] = qQ
     }
   },
-  38124: (pp, ip, cp) => {
-    function Op() {
-      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (pp => {
-        const ip = 16 * Math.random() | 0;
-        return ("x" === pp ? ip : 3 & ip | 8).toString(16)
-      }))
-    }
-    cp.d(ip, {
-      e: () => Op
-    })
-  },
-  38905: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Op
+  37468: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      $: () => qQ,
+      A: () => gQ,
+      Ab: () => UQ,
+      C: () => dQ,
+      D: () => AQ,
+      Eb: () => PQ,
+      Fb: () => VQ,
+      H: () => TQ,
+      Jb: () => iQ,
+      L: () => CQ,
+      Nb: () => yQ,
+      O: () => EQ,
+      Ob: () => pQ,
+      Q: () => GQ,
+      Sb: () => aQ,
+      T: () => hQ,
+      Tb: () => lQ,
+      X: () => cQ,
+      Z: () => kQ,
+      b: () => wQ,
+      cb: () => RQ,
+      d: () => BQ,
+      fb: () => SQ,
+      h: () => HQ,
+      i: () => DQ,
+      jb: () => oQ,
+      l: () => FQ,
+      mb: () => vQ,
+      n: () => uQ,
+      nb: () => bQ,
+      p: () => LQ,
+      r: () => rQ,
+      rb: () => tQ,
+      ub: () => eQ,
+      v: () => IQ,
+      wb: () => fQ,
+      y: () => JQ
     });
-    class Op {
-      static _CheckLimit(pp, ip) {
-        let cp = Op._LogLimitOutputs[pp];
-        return cp ? cp.current++ : (cp = {
-          limit: ip,
-          current: 1
-        }, Op._LogLimitOutputs[pp] = cp), cp.current <= cp.limit
+    const wQ = {
+      GLSL: 0,
+      WGSL: 1
+    };
+
+    function qQ(QQ) {
+      return QQ === wQ.WGSL
+    }
+
+    function TQ(QQ, WQ, XQ) {
+      return qQ(QQ) ? XQ : WQ
+    }
+    const zQ = new Map([
+      ["int", "i32"],
+      ["float", "f32"],
+      ["vec2", "vec2f"],
+      ["vec3", "vec3f"],
+      ["vec4", "vec4f"],
+      ["mat2", "mat2x2f"],
+      ["mat3", "mat3x3f"],
+      ["mat4", "mat4x4f"]
+    ]);
+
+    function sQ(QQ, WQ) {
+      if (!qQ(QQ)) return WQ;
+      const XQ = zQ.get(WQ);
+      if (!XQ) throw new Error(`No WGSL name for shader type "${WQ}"`);
+      return XQ
+    }
+
+    function FQ(QQ, WQ) {
+      for (var XQ = arguments.length, wQ = new Array(XQ > 2 ? XQ - 2 : 0), qQ = 2; qQ < XQ; qQ++) wQ[qQ - 2] = arguments[qQ];
+      return `${sQ(QQ,WQ)}(${wQ.join(", ")})`
+    }
+
+    function PQ(QQ, WQ) {
+      return FQ(QQ, "int", WQ)
+    }
+
+    function gQ(QQ, WQ, XQ, wQ, TQ) {
+      return qQ(QQ) ? `var ${XQ}: ${sQ(QQ,WQ)} = ${wQ};` : `${jQ(QQ,TQ)}${WQ} ${XQ} = ${wQ};`
+    }
+
+    function JQ(QQ, WQ, XQ) {
+      return qQ(QQ) ? `var ${XQ}: ${sQ(QQ,WQ)};` : `${WQ} ${XQ};`
+    }
+
+    function rQ(QQ, WQ, XQ, wQ) {
+      return qQ(QQ) ? `const ${XQ}: ${sQ(QQ,WQ)} = ${wQ};` : `const ${WQ} ${XQ} = ${wQ};`
+    }
+
+    function IQ(QQ, WQ, XQ, wQ, TQ) {
+      if (qQ(QQ)) {
+        return `fn ${XQ}(${wQ.map((WQ=>`${WQ.name}: ${sQ(QQ,WQ.type)}`)).join(", ")}) -> ${sQ(QQ,WQ)} {${TQ}}`
       }
-      static _GenerateLimitMessage(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const cp = Op._LogLimitOutputs[pp];
-        if (!cp || !Op.MessageLimitReached) return;
-        const op = this._Levels[ip];
-        cp.current === cp.limit && Op[op.name](Op.MessageLimitReached.replace(/%LIMIT%/g, "" + cp.limit).replace(/%TYPE%/g, op.name ?? ""))
+      return `${WQ} ${XQ}(${wQ.map((QQ=>`${QQ.type} ${QQ.name}`)).join(", ")}) {${TQ}}`
+    }
+
+    function jQ(QQ, WQ) {
+      return !WQ || qQ(QQ) ? "" : `${WQ} `
+    }
+
+    function BQ(QQ, WQ, XQ, wQ) {
+      return qQ(QQ) ? `attribute ${WQ}: ${sQ(QQ,XQ)};` : `attribute ${jQ(QQ,wQ)}${XQ} ${WQ};`
+    }
+
+    function yQ(QQ, WQ, XQ, wQ) {
+      return qQ(QQ) ? `varying ${WQ}: ${sQ(QQ,XQ)};` : `varying ${jQ(QQ,wQ)}${XQ} ${WQ};`
+    }
+
+    function VQ(QQ, WQ, XQ) {
+      return qQ(QQ) ? `uniform ${WQ}: ${sQ(QQ,XQ)};` : `uniform ${XQ} ${WQ};`
+    }
+
+    function DQ(QQ) {
+      return qQ(QQ) ? "vertexOutputs.position" : "gl_Position"
+    }
+
+    function pQ(QQ, WQ) {
+      return qQ(QQ) ? `@vertex\nfn main(input: VertexInputs) -> FragmentInputs {${WQ}}` : `void main() {${WQ}}`
+    }
+
+    function GQ(QQ, WQ) {
+      return qQ(QQ) ? `@fragment\nfn main(input: FragmentInputs) -> FragmentOutputs {${WQ}}` : `void main() {${WQ}}`
+    }
+
+    function UQ(QQ, WQ, XQ) {
+      if (qQ(QQ)) {
+        return [`var ${WQ}Sampler: sampler;`, `var ${WQ}: ${"2dArray"===XQ?"texture_2d_array<f32>":"texture_2d<f32>"};`].join("\n")
       }
-      static _AddLogEntry(pp) {
-        Op._LogCache = pp + Op._LogCache, Op.OnNewCacheEntry && Op.OnNewCacheEntry(pp)
+      return `uniform highp ${"2dArray"===XQ?"sampler2DArray":"sampler2D"} ${WQ};`
+    }
+
+    function bQ(QQ, WQ, XQ) {
+      return qQ(QQ) ? `textureSample(${WQ}, ${WQ}Sampler, ${XQ})` : `texture2D(${WQ}, ${XQ})`
+    }
+
+    function vQ(QQ, WQ, XQ, wQ, TQ) {
+      if (qQ(QQ)) {
+        return `${TQ?"textureSampleLevel":"textureSample"}(${WQ}, ${WQ}Sampler, ${XQ}, ${PQ(QQ,`round(${wQ})`)}${TQ?`, ${TQ}`:""})`
       }
-      static _FormatMessage(pp) {
-        const ip = pp => pp < 10 ? "0" + pp : "" + pp,
-          cp = new Date;
-        return "[" + ip(cp.getHours()) + ":" + ip(cp.getMinutes()) + ":" + ip(cp.getSeconds()) + "]: " + pp
-      }
-      static _LogDisabled(pp, ip) {}
-      static _LogEnabled() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          ip = arguments.length > 1 ? arguments[1] : void 0,
-          cp = arguments.length > 2 ? arguments[2] : void 0;
-        const op = Array.isArray(ip) ? ip[0] : ip;
-        if (void 0 !== cp && !Op._CheckLimit(op, cp)) return;
-        const Ip = Op._FormatMessage(op),
-          Sp = this._Levels[pp],
-          xp = Array.isArray(ip) ? ip.slice(1) : [];
-        Sp.logFunc && Sp.logFunc("BJS - " + Ip, ...xp);
-        const Lp = `<div style='color:${Sp.color}'>${Ip}</div><br>`;
-        Op._AddLogEntry(Lp), Op._GenerateLimitMessage(op, pp)
-      }
-      static get LogCache() {
-        return Op._LogCache
-      }
-      static ClearLogCache() {
-        Op._LogCache = "", Op._LogLimitOutputs = {}, Op.errorsCount = 0
-      }
-      static set LogLevels(pp) {
-        Op.Log = Op._LogDisabled, Op.Warn = Op._LogDisabled, Op.Error = Op._LogDisabled;
-        const ip = [Op.MessageLogLevel, Op.WarningLogLevel, Op.ErrorLogLevel];
-        for (const cp of ip)
-          if ((pp & cp) === cp) {
-            const pp = this._Levels[cp];
-            Op[pp.name] = Op._LogEnabled.bind(Op, cp)
-          }
+      const zQ = FQ(QQ, "vec3", XQ, wQ);
+      return TQ ? `textureLod(${WQ}, ${zQ}, ${TQ})` : `texture(${WQ}, ${zQ})`
+    }
+
+    function dQ(QQ) {
+      return qQ(QQ) ? "!baseColor\\=\\w+\\(diffuseSampler,diffuseSamplerSampler,fragmentInputs\\.vDiffuseUV\\+uvOffset\\);" : "!baseColor\\=\\w+\\(diffuseSampler,vDiffuseUV\\+uvOffset\\);"
+    }
+
+    function HQ(QQ) {
+      return qQ(QQ) ? {
+        "!varying vMainUV1: vec2f;": "centroid varying vMainUV1: vec2f;"
+      } : {
+        "!varying vec2 vMainUV1;": "#ifdef WEBGL2\ncentroid varying vec2 vMainUV1;\n#else\nvarying vec2 vMainUV1;\n#endif"
       }
     }
-    Op.NoneLogLevel = 0, Op.MessageLogLevel = 1, Op.WarningLogLevel = 2, Op.ErrorLogLevel = 4, Op.AllLogLevel = 7, Op.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Op._LogCache = "", Op._LogLimitOutputs = {}, Op._Levels = [{}, {
-      color: "white",
-      logFunc: console.log,
-      name: "Log"
-    }, {
-      color: "orange",
-      logFunc: console.warn,
-      name: "Warn"
-    }, {}, {
-      color: "red",
-      logFunc: console.error,
-      name: "Error"
-    }], Op.errorsCount = 0, Op.Log = Op._LogEnabled.bind(Op, Op.MessageLogLevel), Op.Warn = Op._LogEnabled.bind(Op, Op.WarningLogLevel), Op.Error = Op._LogEnabled.bind(Op, Op.ErrorLogLevel)
+
+    function aQ(QQ, WQ) {
+      return qQ(QQ) ? `vertexInputs.${WQ}` : WQ
+    }
+
+    function lQ(QQ, WQ) {
+      return qQ(QQ) ? `vertexOutputs.${WQ}` : WQ
+    }
+
+    function hQ(QQ, WQ) {
+      return qQ(QQ) ? `fragmentInputs.${WQ}` : WQ
+    }
+
+    function iQ(QQ, WQ) {
+      return qQ(QQ) ? `uniforms.${WQ}` : WQ
+    }
+
+    function cQ(QQ, WQ, XQ) {
+      return qQ(QQ) ? `frame.${WQ}` : XQ
+    }
+
+    function AQ(QQ) {
+      return qQ(QQ) ? "scene.vEyePosition" : "vEyePosition"
+    }
+
+    function RQ(QQ) {
+      return qQ(QQ) ? "mesh.visibility" : "visibility"
+    }
+
+    function EQ(QQ) {
+      return qQ(QQ) ? "fragmentInputs.position" : "gl_FragCoord"
+    }
+
+    function CQ(QQ) {
+      return qQ(QQ) ? "fragmentOutputs.color" : "gl_FragColor"
+    }
+
+    function uQ(QQ, WQ) {
+      return qQ(QQ) ? `dpdx(${WQ})` : `dFdx(${WQ})`
+    }
+
+    function LQ(QQ, WQ) {
+      return qQ(QQ) ? `dpdy(${WQ})` : `dFdy(${WQ})`
+    }
+
+    function kQ(QQ, WQ) {
+      return qQ(QQ) ? `inverseSqrt(${WQ})` : `inversesqrt(${WQ})`
+    }
+
+    function fQ(QQ, WQ, XQ, wQ) {
+      return qQ(QQ) ? `select(${wQ}, ${XQ}, ${WQ})` : `((${WQ}) ? (${XQ}) : (${wQ}))`
+    }
+
+    function SQ(QQ, WQ, XQ) {
+      return qQ(QQ) ? `((${WQ}) - (${XQ}) * floor((${WQ}) / (${XQ})))` : `mod(${WQ}, ${XQ})`
+    }
+
+    function tQ(QQ, WQ, XQ) {
+      return qQ(QQ) ? `${WQ} = vec4f(${XQ}, ${WQ}.a);` : `${WQ}.rgb = ${XQ};`
+    }
+
+    function oQ(QQ, WQ, XQ) {
+      return qQ(QQ) ? `${WQ} = vec4f(${WQ}.rgb * (${XQ}), ${WQ}.a);` : `${WQ}.rgb *= ${XQ};`
+    }
+
+    function eQ(QQ, WQ, XQ) {
+      return qQ(QQ) ? `${WQ} = vec4f(${XQ}, ${WQ}.w);` : `${WQ}.xyz = ${XQ};`
+    }
+  },
+  40126: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      b: () => wQ
+    });
+    class wQ {
+      static GetShadersRepository() {
+        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? wQ.ShadersRepository : wQ.ShadersRepositoryWGSL
+      }
+      static GetShadersStore() {
+        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? wQ.ShadersStore : wQ.ShadersStoreWGSL
+      }
+      static GetIncludesShadersStore() {
+        return 0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0) ? wQ.IncludesShadersStore : wQ.IncludesShadersStoreWGSL
+      }
+    }
+    wQ.ShadersRepository = "src/Shaders/", wQ.ShadersStore = {}, wQ.IncludesShadersStore = {}, wQ.ShadersRepositoryWGSL = "src/ShadersWGSL/", wQ.ShadersStoreWGSL = {}, wQ.IncludesShadersStoreWGSL = {}
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

@@ -1,22 +1,22 @@
 export const id = 10;
 export const ids = [10];
 export const modules = {
-  39460: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      default: () => Op
+  39569: (QQ, WQ, XQ) => {
+    XQ.r(WQ), XQ.d(WQ, {
+      default: () => wQ
     });
-    const Op = function(pp, ip, cp) {
-      let Op;
+    const wQ = function(QQ, WQ, XQ) {
+      let wQ;
       return {
-        onCreate: pp => {
-          Op = pp
+        onCreate: QQ => {
+          wQ = QQ
         },
-        onPlayerAltAction: (pp, ip, cp, op, Ip, Sp) => {
-          Sp && "Mesh" === Op.getEntityType(Sp) && ("Permanent Upgrades" === Op.getEntityName(Sp) ? Op.openShop(pp, !1, "Upgrades") : "Items" === Op.getEntityName(Sp) ? Op.openShop(pp, !1, "Items") : "Prestige" === Op.getEntityName(Sp) && Op.openShop(pp, !1, "Prestige"))
+        onPlayerAltAction: (QQ, WQ, XQ, qQ, TQ, zQ) => {
+          zQ && "Mesh" === wQ.getEntityType(zQ) && ("Permanent Upgrades" === wQ.getEntityName(zQ) ? wQ.openShop(QQ, !1, "Upgrades") : "Items" === wQ.getEntityName(zQ) ? wQ.openShop(QQ, !1, "Items") : "Prestige" === wQ.getEntityName(zQ) && wQ.openShop(QQ, !1, "Prestige"))
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

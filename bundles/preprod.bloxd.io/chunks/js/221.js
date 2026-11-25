@@ -1,368 +1,708 @@
 export const id = 221;
 export const ids = [221];
 export const modules = {
-  36622: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => qp,
-      f: () => Mp,
-      h: () => Hp
+  36634: (QQ, WQ, XQ) => {
+    XQ.r(WQ), XQ.d(WQ, {
+      CreateCustomLobby: () => iQ
     });
-    var Op = cp(272),
-      op = cp(104);
-    const Ip = new(cp(36630).b)(new URL(cp.p + cp.u(3), cp.b), {
-      name: "blockIconWorker",
-      type: "module"
-    });
-    var Sp = cp(1819),
-      xp = cp(2179);
-    const Lp = 1e4,
-      Yp = 3e4;
-    let Dp = null,
-      Ap = null,
-      Pp = null,
-      Wp = !1,
-      yp = 0;
-    const Up = new Map;
-    let wp = null;
-    const vp = new Map,
-      tp = new Map;
+    XQ(36641);
+    var wQ = XQ(4948),
+      qQ = XQ(61),
+      TQ = XQ(1739),
+      zQ = XQ(1081),
+      sQ = XQ.n(zQ),
+      FQ = XQ(3398),
+      PQ = XQ(1165),
+      gQ = XQ(1238),
+      JQ = XQ(4912),
+      rQ = XQ(1507),
+      IQ = XQ(36644),
+      jQ = XQ(1226),
+      BQ = XQ(1384),
+      yQ = XQ(1567),
+      VQ = XQ(26),
+      DQ = XQ(1514),
+      pQ = XQ(663),
+      GQ = XQ(5290),
+      UQ = XQ(814),
+      bQ = XQ(1273),
+      vQ = XQ(1257),
+      dQ = XQ(5304),
+      HQ = XQ(1094),
+      aQ = XQ(36653),
+      lQ = XQ(36658),
+      hQ = XQ(1145);
 
-    function Hp(pp) {
-      const ip = new Promise(((ip, cp) => {
-        const Op = new Image;
-        Op.crossOrigin = "anonymous", Op.fetchPriority = "high", Op.onload = () => {
-          ip(Op)
-        }, Op.onerror = () => {
-          cp(new Error(`A block icon's texture did not load: ${pp.slice(0,100)}`))
-        }, Op.src = pp
-      }));
-      return (0, xp.g)(ip)
-    }
-
-    function dp(pp) {
-      var ip, cp;
-      Wp || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${pp}`), Wp = !0, null === (ip = Dp) || void 0 === ip || ip.terminate(), Dp = null, Ap = null, vp.clear(), tp.clear();
-      for (const Op of Up.values()) Op(null);
-      Up.clear(), null === (cp = wp) || void 0 === cp || cp()
-    }
-
-    function ep() {
-      return Pp ??= async function() {
-        if ("undefined" === typeof Worker || "undefined" === typeof OffscreenCanvas || "undefined" === typeof createImageBitmap) return;
-        if ("page" === Op.d.ios_icon_worker_v1 && (0, op.isWebKit)()) return;
-        try {
-          Dp = await async function() {
-            return await Ip.ready(), Ip.start()
-          }()
-        } catch (xp) {
-          return void dp(`did not start (${String(xp)})`)
-        }
-        let pp = () => {};
-        const ip = new Promise((ip => {
-          pp = ip
-        }));
-        Dp.onmessage = ip => {
-          let {
-            data: cp
-          } = ip;
-          if ("started" === cp.type) Ap = Dp, pp();
-          else if ("failed" === cp.type) dp(`failed a draw (${cp.message})`);
-          else {
-            var Op, op;
-            null === (Op = Up.get(cp.id)) || void 0 === Op || Op(cp.url), Up.delete(cp.id), null === (op = wp) || void 0 === op || op()
-          }
-        }, Dp.onerror = ip => {
-          ip.preventDefault(), dp(`stopped (${ip.message||"its script did not load or run"})`), pp()
-        };
-        const cp = `did not start in ${Yp/1e3} s`;
-        await (0, Sp.k)(ip, Yp, cp).catch((() => {
-          dp(cp)
-        }))
-      }(), Pp
-    }
-
-    function jp() {
-      if (null !== wp || 0 === Up.size) return;
-      const pp = new Promise((pp => {
-          wp = pp
-        })),
-        ip = `did not answer in ${Lp/1e3} s`;
-      (0, Sp.k)(pp, Lp, ip).then((() => {
-        wp = null, jp()
-      }), (() => {
-        wp = null, dp(ip)
-      }))
-    }
-
-    function kp(pp, ip) {
-      let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      pp.postMessage(ip, cp)
-    }
-
-    function mp(pp, ip, cp, Op) {
-      let op = ip.get(cp);
-      return void 0 === op && (op = Op().then((async ip => {
-        let {
-          image: cp,
-          request: Op
-        } = ip;
-        try {
-          const ip = await createImageBitmap(cp);
-          kp(pp, Op(ip), [ip])
-        } catch (op) {
-          dp(`could not take an image (${String(op)})`)
-        }
-      })), op.catch((() => {
-        ip.get(cp) === op && ip.delete(cp)
-      })), ip.set(cp, op)), op
-    }
-    async function Rp(pp, ip) {
-      ep();
-      const cp = Ap;
-      if (null === cp) return null;
-      if (await pp(cp), Ap !== cp) return null;
-      const Op = ++yp;
-      return new Promise((pp => {
-        Up.set(Op, pp), kp(cp, ip(Op)), jp()
-      }))
-    }
-
-    function qp(pp, ip, cp) {
-      return Rp((ip => Promise.all([pp.top, pp.left, pp.right].map((pp => function(pp, ip) {
-        return mp(pp, vp, ip, (async () => ({
-          image: await Hp(ip),
-          request: pp => ({
-            type: "texture",
-            url: ip,
-            bitmap: pp
-          })
-        })))
-      }(ip, pp))))), (Op => ({
-        type: "draw",
-        id: Op,
-        ...pp,
-        size: ip,
-        outlineWidth: cp
-      })))
-    }
-
-    function Mp(pp, ip, cp, Op) {
-      return Rp((cp => function(pp, ip, cp) {
-        return mp(pp, tp, ip, (async () => {
-          const {
-            texture: pp,
-            ...Op
-          } = await cp();
-          return {
-            image: await Hp(pp),
-            request: pp => ({
-              type: "model",
-              name: ip,
-              bitmap: pp,
-              geometry: Op
-            })
-          }
-        }))
-      }(cp, pp, ip)), (ip => ({
-        type: "drawModel",
-        id: ip,
-        name: pp,
-        size: cp,
-        outlineWidth: Op
-      })))
-    }
-  },
-  36618: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Op,
-      d: () => Lp,
-      g: () => Sp,
-      k: () => Pp,
-      m: () => Yp
-    });
-    const Op = {
-        across: Math.SQRT1_2,
-        down: Math.SQRT1_2 / 2,
-        up: Math.sqrt(3) / 2
-      },
-      op = .6,
-      Ip = {
-        width: 2 * Op.across,
-        height: 2 * Op.down + Op.up
-      };
-
-    function Sp(pp, ip) {
-      const cp = ip > 0 ? ip + 1 : 0,
-        Sp = pp * op - ip / Op.across;
-      return Math.max(0, Math.min(Sp, (pp - 2 * cp) / Ip.height))
-    }
-    const xp = [15, 15, 15],
-      Lp = {
-        top: 1,
-        left: .85,
-        right: .7
-      };
-
-    function Yp(pp, ip, cp, Op) {
+    function iQ(QQ) {
+      var WQ, XQ, zQ, iQ;
+      let {
+        gameNameWithVariation: cQ,
+        close: AQ,
+        initialDefaultGamemode: RQ
+      } = QQ;
       const {
-        vertices: op,
-        uvs: xp,
-        indices: Lp,
-        shades: Yp
-      } = pp, Dp = function(pp, ip) {
-        const cp = Sp(pp, ip),
-          Op = Ip.width * cp,
-          op = Ip.height * cp;
-        return {
-          left: (pp - Op) / 2,
-          top: (pp - op) / 2,
-          width: Op,
-          height: op
-        }
-      }(cp, Op), Ap = new Float32Array(op.length);
-      for (let Ip = 0; Ip < op.length; Ip += 3) Ap[Ip] = Dp.left + op[Ip] * Dp.width, Ap[Ip + 1] = Dp.top + op[Ip + 1] * Dp.height, Ap[Ip + 2] = op[Ip + 2];
-      const Wp = new Float32Array(cp * cp).fill(-1 / 0),
-        yp = new Uint8ClampedArray(cp * cp * 4),
-        Up = 255 * pp.alphaCutoff;
-      for (let Ip = 0; Ip < Lp.length; Ip += 3) {
-        const [pp, Op, op] = [Lp[Ip], Lp[Ip + 1], Lp[Ip + 2]], [Sp, Dp, Pp] = [3 * pp, 3 * Op, 3 * op], [wp, vp, tp, Hp, dp, ep] = [Ap[Sp], Ap[Sp + 1], Ap[Dp], Ap[Dp + 1], Ap[Pp], Ap[Pp + 1]], jp = (tp - wp) * (ep - vp) - (dp - wp) * (Hp - vp);
-        if (Math.abs(jp) < 1e-9) continue;
-        const kp = Yp[Ip / 3],
-          [mp, Rp, qp, Mp, Cp, Ep] = [xp[2 * pp], xp[2 * pp + 1], xp[2 * Op], xp[2 * Op + 1], xp[2 * op], xp[2 * op + 1]],
-          Xp = Math.max(0, Math.floor(Math.min(wp, tp, dp))),
-          lp = Math.min(cp - 1, Math.ceil(Math.max(wp, tp, dp))),
-          Qp = Math.max(0, Math.floor(Math.min(vp, Hp, ep))),
-          Jp = Math.min(cp - 1, Math.ceil(Math.max(vp, Hp, ep)));
-        for (let Ip = Qp; Ip <= Jp; Ip++)
-          for (let pp = Xp; pp <= lp; pp++) {
-            const [Op, op] = [pp + .5, Ip + .5], xp = ((Op - wp) * (ep - vp) - (dp - wp) * (op - vp)) / jp, Lp = ((tp - wp) * (op - vp) - (Op - wp) * (Hp - vp)) / jp, Yp = 1 - xp - Lp;
-            if (Yp < 0 || xp < 0 || Lp < 0) continue;
-            const Xp = Yp * Ap[Sp + 2] + xp * Ap[Dp + 2] + Lp * Ap[Pp + 2],
-              lp = Ip * cp + pp;
-            if (Xp <= Wp[lp]) continue;
-            const Qp = Math.max(0, Math.min(ip.width - 1, Math.floor((Yp * mp + xp * qp + Lp * Cp) * ip.width))),
-              Jp = 4 * (Math.max(0, Math.min(ip.height - 1, Math.floor((Yp * Rp + xp * Mp + Lp * Ep) * ip.height))) * ip.width + Qp);
-            ip.pixels[Jp + 3] < Up || (Wp[lp] = Xp, yp[4 * lp] = ip.pixels[Jp] * kp, yp[4 * lp + 1] = ip.pixels[Jp + 1] * kp, yp[4 * lp + 2] = ip.pixels[Jp + 2] * kp, yp[4 * lp + 3] = 255)
-          }
-      }
-      return Pp(yp, cp, Op), yp
-    }
-    let Dp = NaN,
-      Ap = new Int32Array(0);
+        t: EQ
+      } = (0, jQ.C)(), CQ = (0, yQ.useNavigatePreserveSearch)(), [uQ, LQ] = (0, qQ.useState)("Enter"), [kQ, fQ] = (0, qQ.useState)(""), SQ = qQ.useRef(null), tQ = null === (WQ = UQ.e[cQ]) || void 0 === WQ ? void 0 : WQ.showWorldsInsteadOfCustomLobbies, oQ = tQ ? 1 : null === (XQ = UQ.e[cQ]) || void 0 === XQ ? void 0 : XQ.customLobbyCustomSchematicLimit, [eQ, nQ] = (0, qQ.useState)(!tQ);
+      RQ || (RQ = "classic_creative" === cQ || "classic_creativeFlat" === cQ ? "creative" : "classic" === cQ ? "peaceful" : "survival");
+      const xQ = {
+        baseOptions: {
+          gameNameWithVariation: tQ ? "classic" : cQ,
+          name: "",
+          visibility: "unlisted"
+        },
+        listedOptions: {
+          description: "",
+          color: "",
+          emojis: ""
+        },
+        mapOptions: {
+          mapType: "classic_creativeFlat" === cQ ? "flat" : "default",
+          schematicIdList: []
+        },
+        worldOptions: null
+      };
+      tQ && (xQ.worldOptions = {
+        defaultGamemode: RQ,
+        disableProtectors: !1,
+        spawnProtection: !0,
+        disableTpRequests: !1,
+        disableTribeCreation: !1,
+        disableLobbySpawn: !1,
+        voidDeathHeight: -1e4,
+        worldBorder: null,
+        disableFallDamage: !0,
+        disableMobs: !1,
+        worldGenSeed: "",
+        enableSmpMarketplace: !1,
+        enableSurvivalGuns: !1,
+        enableSpawnReset: !1,
+        enableDayNight: !0
+      });
+      const [YQ, NQ] = (0, qQ.useState)(xQ), [ZQ, OQ] = (0, qQ.useState)(null);
 
-    function Pp(pp, ip, cp) {
-      let Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : ip => 0 !== pp[4 * ip + 3];
-      const op = new Uint8Array(ip * ip);
-      for (let xp = 0; xp < ip * ip; xp++) op[xp] = Op(xp) ? 1 : 0;
-      const Ip = (pp, cp) => pp >= 0 && cp >= 0 && pp < ip && cp < ip && 0 === op[cp * ip + pp],
-        Sp = new Float32Array(ip * ip).fill(1 / 0),
-        Lp = function(pp) {
-          if (pp !== Dp) {
-            const ip = Math.ceil(pp + 1),
-              cp = [];
-            for (let Op = -ip; Op <= ip; Op++)
-              for (let op = -ip; op <= ip; op++) {
-                const ip = op * op + Op * Op;
-                ip > 0 && ip < (pp + 1) ** 2 && cp.push(op, Op, ip)
-              }
-            Dp = pp, Ap = Int32Array.from(cp)
+      function KQ(QQ, WQ) {
+        NQ({
+          ...YQ,
+          baseOptions: {
+            ...YQ.baseOptions,
+            [QQ]: WQ
           }
-          return Ap
-        }(cp);
-      for (let xp = 0; xp < ip; xp++)
-        for (let pp = 0; pp < ip; pp++) {
-          if (1 === op[xp * ip + pp] && (Ip(pp - 1, xp) || Ip(pp + 1, xp) || Ip(pp, xp - 1) || Ip(pp, xp + 1)))
-            for (let cp = 0; cp < Lp.length; cp += 3) {
-              const Op = pp + Lp[cp],
-                op = xp + Lp[cp + 1];
-              if (Op >= 0 && op >= 0 && Op < ip && op < ip) {
-                const pp = op * ip + Op;
-                Sp[pp] = Math.min(Sp[pp], Lp[cp + 2])
-              }
+        })
+      }
+
+      function mQ(QQ, WQ) {
+        NQ({
+          ...YQ,
+          listedOptions: {
+            ...YQ.listedOptions,
+            [QQ]: WQ
+          }
+        })
+      }
+
+      function MQ(QQ, WQ) {
+        NQ({
+          ...YQ,
+          worldOptions: {
+            ...YQ.worldOptions,
+            [QQ]: WQ
+          }
+        })
+      }
+
+      function QW(QQ) {
+        NQ({
+          ...YQ,
+          mapOptions: {
+            ...YQ.mapOptions,
+            ...QQ
+          }
+        })
+      }(0, qQ.useEffect)((() => {
+        JQ.b.getNewStarterName().then((QQ => {
+          NQ((WQ => "" !== WQ.baseOptions.name ? WQ : {
+            ...WQ,
+            baseOptions: {
+              ...WQ.baseOptions,
+              name: QQ
             }
-        }
-      for (let Yp = 0; Yp < ip * ip; Yp++) 1 !== op[Yp] && Sp[Yp] !== 1 / 0 && (pp.set(xp, 4 * Yp), pp[4 * Yp + 3] = Math.round(255 * Math.min(1, cp + 1 - Math.sqrt(Sp[Yp]))))
+          }))
+        })).catch((QQ => {
+          console.error("Error getting new starter name:", QQ)
+        }))
+      }), []), (0, qQ.useEffect)((() => {
+        "customSchematic" === YQ.mapOptions.mapType && null === ZQ && (0, PQ.postJsonWithMetricsCookiesAndJsonResponse)(`${gQ.clientSideServerUrls.indexUrl}/index/schematic/get-owned-schematics`, {}, {
+          retries: 0,
+          minTimeout: 3e3
+        }).then((QQ => {
+          OQ(QQ)
+        }))
+      }), [YQ.mapOptions.mapType, ZQ]);
+      const WW = {
+          tpRequests: {
+            isEnabled: () => !YQ.worldOptions.disableTpRequests,
+            UH: QQ => {
+              MQ("disableTpRequests", !QQ)
+            }
+          },
+          spawnProtection: {
+            isEnabled: () => YQ.worldOptions.spawnProtection,
+            UH: QQ => {
+              MQ("spawnProtection", QQ)
+            }
+          },
+          spawnReset: {
+            isEnabled: () => YQ.worldOptions.enableSpawnReset,
+            UH: QQ => {
+              MQ("enableSpawnReset", QQ)
+            }
+          },
+          smpMarketplace: {
+            isEnabled: () => YQ.worldOptions.enableSmpMarketplace,
+            UH: QQ => {
+              MQ("enableSmpMarketplace", QQ)
+            }
+          },
+          survivalGuns: {
+            isEnabled: () => YQ.worldOptions.enableSurvivalGuns,
+            UH: QQ => {
+              MQ("enableSurvivalGuns", QQ)
+            }
+          },
+          fallDamage: {
+            isEnabled: () => !YQ.worldOptions.disableFallDamage,
+            UH: QQ => {
+              MQ("disableFallDamage", !QQ)
+            }
+          },
+          dayNight: {
+            isEnabled: () => YQ.worldOptions.enableDayNight,
+            UH: QQ => {
+              MQ("enableDayNight", QQ)
+            }
+          }
+        },
+        XW = "Enter" !== uQ,
+        wW = (0, hQ.jsx)(GQ.h, {
+          className: "NameInput",
+          label: "general:name",
+          disabled: "Enter" !== uQ,
+          children: (0, hQ.jsx)(TQ.e, {
+            domRef: SQ,
+            onValueChange: (QQ, WQ) => {
+              const XQ = (0, vQ.qb)(QQ);
+              KQ("name", XQ), SQ.current.value = XQ
+            },
+            maxLength: vQ.K,
+            defaultValue: YQ.baseOptions.name
+          })
+        });
+      return (0, hQ.jsxs)("div", {
+        className: sQ()("CreateCustomLobby", {
+          CreateCustomLobbySuccess: "Success" === uQ,
+          AdvancedMode: eQ
+        }),
+        children: ["Success" === uQ && (0, hQ.jsxs)("div", {
+          className: "CreateCustomLobbySuccessOverlay",
+          children: [(0, hQ.jsxs)("div", {
+            className: "CreateCustomLobbySuccessTitle FullyFancyText AnimFadeInScaleUp",
+            children: [(0, hQ.jsx)(HQ.d, {
+              name: "check"
+            }), (0, hQ.jsx)(DQ.d, {})]
+          }), (0, hQ.jsx)("div", {
+            className: "CreateCustomLobbySuccessButtons AnimFadeInScaleUp",
+            children: (0, hQ.jsx)(rQ.s, {
+              padDefaultFocus: !0,
+              onClick: () => {
+                (0, VQ.m)("worldCreation"), CQ((0, BQ.c)(cQ, YQ.baseOptions.name))
+              },
+              children: EQ("homePage:joinLobbyName", {
+                lobbyName: YQ.baseOptions.name
+              })
+            })
+          })]
+        }), (0, hQ.jsx)("div", {
+          className: "CreateCustomLobbyTitleContainer",
+          children: (0, hQ.jsx)("div", {
+            className: "CreateCustomLobbyTitle",
+            children: EQ(tQ ? "homePage:createWorld" : "homePage:createCustomLobby")
+          })
+        }), (0, hQ.jsx)(lQ.c, {
+          locked: XW,
+          children: (0, hQ.jsxs)("div", {
+            className: "CreateCustomLobbyFields",
+            children: [!eQ && wW, eQ && (0, hQ.jsxs)("div", {
+              className: "BloxdForm",
+              children: [(0, hQ.jsx)("div", {
+                className: "SectionTitle",
+                children: EQ("customLobby:generalOptions")
+              }), (0, hQ.jsxs)("div", {
+                className: "SectionBody",
+                children: [wW, (0, hQ.jsx)(GQ.h, {
+                  label: "customLobby:visibility",
+                  circleInfoText: EQ("customLobby:visibilityDescription"),
+                  disabled: "Enter" !== uQ,
+                  children: (0, hQ.jsx)(FQ.c, {
+                    options: wQ.t.map((QQ => ({
+                      value: QQ,
+                      label: wQ.f[QQ]
+                    }))),
+                    value: YQ.baseOptions.visibility,
+                    onChange: QQ => {
+                      KQ("visibility", QQ.value)
+                    }
+                  })
+                })]
+              })]
+            }), tQ && (0, hQ.jsx)(aQ.e, {
+              value: YQ.worldOptions.defaultGamemode,
+              onChange: QQ => {
+                MQ("defaultGamemode", QQ)
+              },
+              showAll: eQ,
+              disabled: XW
+            }), (tQ || !(0, pQ.G)(oQ) && oQ > 0) && (0, hQ.jsx)(aQ.f, {
+              mapTypes: tQ ? wQ.I : wQ.p,
+              value: YQ.mapOptions.mapType,
+              onChange: QQ => {
+                const WQ = {
+                  mapType: QQ
+                };
+                "customSchematic" !== QQ && (WQ.schematicIdList = []), QW(WQ)
+              },
+              showAll: eQ,
+              disabled: XW,
+              children: "customSchematic" === YQ.mapOptions.mapType && (0, hQ.jsxs)(hQ.Fragment, {
+                children: [(0, hQ.jsxs)("div", {
+                  className: "SchematicListTitle AnimFadeIn",
+                  children: [tQ && EQ("customLobby:selectWorldSchematic"), !tQ && EQ("customLobby:selectCustomLobbySchematics", {
+                    schematicLimit: oQ
+                  })]
+                }), (0, hQ.jsx)("div", {
+                  className: sQ()("SchematicListContainer AnimFadeIn", {
+                    SchematicListContainerDisabled: "Enter" !== uQ
+                  }),
+                  children: (0, hQ.jsx)(IQ.e, {
+                    loading: null === ZQ,
+                    schematics: null !== ZQ && void 0 !== ZQ ? ZQ : [],
+                    onSchematicPicked: function(QQ) {
+                      const WQ = YQ.mapOptions.schematicIdList;
+                      if (WQ.includes(QQ.schematicId)) QW({
+                        schematicIdList: WQ.filter((WQ => WQ !== QQ.schematicId))
+                      });
+                      else {
+                        if (oQ && YQ.mapOptions.schematicIdList.length >= oQ) return;
+                        QW({
+                          schematicIdList: [...YQ.mapOptions.schematicIdList, QQ.schematicId]
+                        })
+                      }
+                    },
+                    selectedSchematicIdList: YQ.mapOptions.schematicIdList,
+                    disableAutoExport: !0
+                  })
+                })]
+              })
+            }), eQ && (0, hQ.jsxs)("div", {
+              className: "BloxdForm",
+              children: [(0, hQ.jsx)("div", {
+                className: "SectionTitle",
+                children: EQ("customLobby:listedOptions")
+              }), (0, hQ.jsxs)("div", {
+                className: "SectionBody",
+                children: [(0, hQ.jsx)(GQ.h, {
+                  label: "general:description",
+                  className: "CustomLobbyDescription",
+                  disabled: "Enter" !== uQ,
+                  children: (0, hQ.jsx)(TQ.e, {
+                    onValueChange: (QQ, WQ) => {
+                      mQ("description", QQ)
+                    },
+                    maxLength: 100,
+                    defaultValue: YQ.listedOptions.description
+                  })
+                }), (0, hQ.jsx)(GQ.h, {
+                  label: "general:color",
+                  circleInfoText: "customLobby:lobbyColorDescription",
+                  disabled: "Enter" !== uQ,
+                  children: (0, hQ.jsx)("div", {
+                    className: "OtherInput",
+                    children: (0, hQ.jsx)("input", {
+                      type: "color",
+                      value: YQ.listedOptions.color,
+                      onChange: QQ => {
+                        mQ("color", QQ.target.value)
+                      }
+                    })
+                  })
+                }), (0, hQ.jsx)(GQ.h, {
+                  label: "general:emojis",
+                  circleInfoText: "customLobby:lobbyEmojisDescription",
+                  disabled: "Enter" !== uQ,
+                  children: (0, hQ.jsx)(TQ.e, {
+                    onValueChange: (QQ, WQ) => {
+                      mQ("emojis", QQ)
+                    },
+                    maxLength: 6,
+                    defaultValue: YQ.listedOptions.emojis
+                  })
+                })]
+              })]
+            }), eQ && tQ && (0, hQ.jsxs)("div", {
+              className: "BloxdForm",
+              children: [(0, hQ.jsx)("div", {
+                className: "SectionTitle",
+                children: EQ("customLobby:advancedOptions")
+              }), (0, hQ.jsxs)("div", {
+                className: "SectionBody",
+                children: [(0, hQ.jsx)(GQ.h, {
+                  label: "classic:worldGenSeed",
+                  disabled: "Enter" !== uQ,
+                  children: (0, hQ.jsx)(TQ.e, {
+                    onValueChange: (QQ, WQ) => {
+                      MQ("worldGenSeed", QQ)
+                    },
+                    maxLength: vQ.K
+                  })
+                }), (0, hQ.jsx)(GQ.h, {
+                  label: "classic:disableProtectors",
+                  disabled: "Enter" !== uQ,
+                  children: (0, hQ.jsx)(GQ.d, {
+                    checked: YQ.worldOptions.disableProtectors,
+                    setChecked: QQ => {
+                      MQ("disableProtectors", QQ)
+                    }
+                  })
+                }), (0, hQ.jsx)(GQ.h, {
+                  label: "classic:disableTribeCreation",
+                  disabled: "Enter" !== uQ,
+                  children: (0, hQ.jsx)(GQ.d, {
+                    checked: YQ.worldOptions.disableTribeCreation,
+                    setChecked: QQ => {
+                      MQ("disableTribeCreation", QQ)
+                    }
+                  })
+                }), (0, hQ.jsx)(GQ.h, {
+                  label: "classic:voidDeathHeight",
+                  circleInfoText: "classic:voidDeathHeightDescription",
+                  disabled: "Enter" !== uQ,
+                  children: (0, hQ.jsx)("input", {
+                    type: "number",
+                    max: bQ.I,
+                    value: null !== (zQ = YQ.worldOptions.voidDeathHeight) && void 0 !== zQ ? zQ : "",
+                    onChange: QQ => {
+                      const WQ = parseInt(QQ.target.value);
+                      MQ("voidDeathHeight", isNaN(WQ) ? null : WQ)
+                    }
+                  })
+                }), (0, hQ.jsx)(GQ.h, {
+                  label: "classic:disableLobbySpawn",
+                  disabled: "Enter" !== uQ,
+                  children: (0, hQ.jsx)(GQ.d, {
+                    checked: YQ.worldOptions.disableLobbySpawn,
+                    setChecked: QQ => {
+                      MQ("disableLobbySpawn", QQ)
+                    }
+                  })
+                }), (0, hQ.jsx)(GQ.h, {
+                  label: "classic:worldBorder",
+                  circleInfoText: "classic:worldBorderDescription",
+                  disabled: "Enter" !== uQ,
+                  children: (0, hQ.jsx)("input", {
+                    type: "number",
+                    min: bQ.Q,
+                    max: bQ.K,
+                    value: null !== (iQ = YQ.worldOptions.worldBorder) && void 0 !== iQ ? iQ : "",
+                    onChange: QQ => {
+                      const WQ = parseInt(QQ.target.value);
+                      MQ("worldBorder", isNaN(WQ) ? null : WQ)
+                    }
+                  })
+                }), (0, hQ.jsx)(GQ.h, {
+                  label: "classic:disableMobs",
+                  disabled: "Enter" !== uQ,
+                  children: (0, hQ.jsx)(GQ.d, {
+                    checked: YQ.worldOptions.disableMobs,
+                    setChecked: QQ => {
+                      MQ("disableMobs", QQ)
+                    }
+                  })
+                })]
+              })]
+            }), tQ && (0, hQ.jsx)(dQ.c, {
+              callbacks: WW,
+              disabled: "Enter" !== uQ,
+              advancedMode: eQ
+            })]
+          })
+        }), (0, hQ.jsxs)("div", {
+          className: "CreateCustomLobbyFooter",
+          children: [(0, hQ.jsx)(rQ.s, {
+            className: "CreateCustomLobbyButton",
+            padDefaultFocus: !0,
+            loading: "Enter" !== uQ,
+            onClick: () => {
+              !async function() {
+                if ("Enter" === uQ) {
+                  LQ("Loading"), fQ("");
+                  try {
+                    await JQ.b.createCustomLobby(YQ), LQ("Success")
+                  } catch (QQ) {
+                    fQ(QQ.message), console.error(QQ.message), LQ("Enter")
+                  }
+                }
+              }()
+            },
+            children: EQ("general:create")
+          }), tQ && (0, hQ.jsx)("div", {
+            className: "CreateCustomLobbyAdvancedToggle",
+            "data-pad-ignore": XW || void 0,
+            children: (0, hQ.jsx)(GQ.h, {
+              label: "customLobby:showAdvancedOptions",
+              disabled: XW,
+              onLabelClick: () => {
+                nQ(!eQ)
+              },
+              children: (0, hQ.jsx)(GQ.d, {
+                checked: eQ,
+                setChecked: nQ
+              })
+            })
+          }), kQ && (0, hQ.jsx)("div", {
+            className: "CreateCustomLobbyError AnimFadeInScaleUp",
+            children: kQ
+          })]
+        })]
+      })
     }
   },
-  36630: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => op
+  36658: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      c: () => FQ
     });
-    const Op = {
-      wait: function(pp) {
-        return new Promise((ip => {
-          setTimeout(ip, pp)
-        }))
-      },
-      stallMs: 2e4
-    };
-    class op {
-      constructor(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Op;
-        this.url = pp, this.options = ip, this.timing = cp, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = pp
-      }
-      ready() {
-        if (null === this.fetched) {
-          const pp = new AbortController;
-          this.fetchAbort = pp, this.fetched = this.fetchWithRetries(pp.signal).then((ip => (this.fetchAbort === pp && (this.fetchAbort = null), ip)))
-        }
-        return this.fetched
-      }
-      cancel() {
-        null !== this.fetchAbort && (this.fetchAbort.abort(), this.fetchAbort = null, this.fetched = null)
-      }
-      forgetFailedFetch() {
-        this.fetched = null
-      }
-      start() {
-        return new Worker(this.scriptUrl, this.options)
-      }
-      async fetchWithRetries(pp) {
-        for (let ip = 0;; ip++) {
-          const cp = new URL(this.url);
-          if (ip > 0 && cp.searchParams.set("cache-bust", `${Date.now()}-${ip}`), await this.fetchWhole(cp, pp)) return this.scriptUrl = cp, !0;
-          if (ip >= 3 || pp.aborted) return !1;
-          if (await this.timing.wait(500 * 2 ** ip), pp.aborted) return !1
-        }
-      }
-      async fetchWhole(pp, ip) {
-        const cp = new AbortController;
-        let Op;
-        const op = () => {
-            clearTimeout(Op), Op = setTimeout((() => {
-              cp.abort()
-            }), this.timing.stallMs)
-          },
-          Ip = () => {
-            cp.abort()
-          };
-        ip.addEventListener("abort", Ip, {
-          once: !0
-        }), op();
-        try {
-          var Sp;
-          const ip = await fetch(pp, {
-            signal: cp.signal
-          });
-          if (!ip.ok) return !1;
-          const Op = null === (Sp = ip.body) || void 0 === Sp ? void 0 : Sp.getReader();
-          if (!Op) return !1;
-          for (;;) {
-            const {
-              done: pp
-            } = await Op.read();
-            if (pp) return !0;
-            op()
-          }
-        } catch {
-          return !1
-        } finally {
-          clearTimeout(Op), ip.removeEventListener("abort", Ip)
-        }
-      }
+    var wQ = XQ(1081),
+      qQ = XQ.n(wQ),
+      TQ = XQ(61),
+      zQ = XQ(4894),
+      sQ = XQ(1145);
+
+    function FQ(QQ) {
+      let {
+        locked: WQ,
+        children: XQ
+      } = QQ;
+      const wQ = (0, TQ.useRef)(null),
+        FQ = (0, zQ.b)(wQ, "y");
+      return (0, sQ.jsx)("div", {
+        ref: wQ,
+        className: qQ()("CreateCustomLobbyBody", {
+          CreateCustomLobbyBodyMoreAbove: FQ.before,
+          CreateCustomLobbyBodyMoreBelow: FQ.after
+        }),
+        "data-pad-ignore": WQ || void 0,
+        children: XQ
+      })
     }
-  }
+  },
+  36644: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      e: () => gQ,
+      f: () => rQ
+    });
+    var wQ = XQ(61),
+      qQ = XQ(1404),
+      TQ = XQ(1226),
+      zQ = XQ(1391),
+      sQ = XQ(3732),
+      FQ = XQ(5283),
+      PQ = XQ(1145);
+
+    function gQ(QQ) {
+      let {
+        loading: WQ,
+        schematics: XQ,
+        onSchematicPicked: wQ,
+        selectedSchematicIdList: qQ = [],
+        disableAutoExport: FQ
+      } = QQ;
+      const {
+        t: gQ
+      } = (0, TQ.C)();
+      return (0, PQ.jsxs)("div", {
+        className: "SchematicList",
+        children: [WQ && (0, PQ.jsx)(zQ.e, {}), !WQ && 0 === XQ.length && (0, PQ.jsx)("div", {
+          className: "NoSchematicsText",
+          children: gQ("worldBuilder:noSavedSchematic")
+        }), !WQ && XQ.map((QQ => (0, PQ.jsx)(sQ.d, {
+          source: {
+            type: "schematic",
+            schematic: QQ
+          },
+          gameWidth: "25%",
+          useLongRatio: !0,
+          onClick: () => {
+            wQ(QQ)
+          },
+          isSelected: qQ.includes(QQ.schematicId),
+          hideCcu: !0,
+          hideFavourites: !0,
+          showPublishedChip: !0,
+          hideUnpublishedChip: !0,
+          disabled: QQ.isAutoExported && FQ,
+          disabledReason: "worldBuilder:autoExportDisabled"
+        }, QQ.schematicId)))]
+      })
+    }
+
+    function JQ(QQ) {
+      let {
+        ownedSchematics: WQ,
+        currentWorldSchematicId: XQ,
+        onClose: qQ
+      } = QQ;
+      const {
+        t: zQ
+      } = (0, TQ.C)(), [sQ, JQ] = (0, wQ.useState)(null);
+      return (0, PQ.jsxs)("div", {
+        className: "SchematicListWindow",
+        children: [null === sQ && (0, PQ.jsxs)(PQ.Fragment, {
+          children: [(0, PQ.jsx)("h1", {
+            className: "SchematicPopupTitle",
+            children: zQ("worldBuilder:schematicList")
+          }), (0, PQ.jsx)("h2", {
+            className: "SchematicPopupSubtitle",
+            children: zQ("worldBuilder:clickSchematicForOptions")
+          }), (0, PQ.jsx)("div", {
+            className: "SchematicPopupSchematicListContainer",
+            children: (0, PQ.jsx)(gQ, {
+              loading: !1,
+              schematics: WQ,
+              onSchematicPicked: QQ => {
+                JQ(QQ)
+              },
+              disableAutoExport: !1
+            })
+          })]
+        }), null !== sQ && (0, PQ.jsx)(FQ.h, {
+          schematic: sQ,
+          inSourceWorld: sQ.schematicId === XQ,
+          onSchematicUpdate: QQ => {
+            JQ(QQ)
+          },
+          onClose: () => {
+            JQ(null), qQ()
+          }
+        })]
+      })
+    }
+
+    function rQ(QQ) {
+      let {
+        ownedSchematics: WQ,
+        currentWorldSchematicId: XQ,
+        onClose: wQ
+      } = QQ;
+      qQ.NotificationProvider.showCustomPopup({
+        body: QQ => (0, PQ.jsx)(JQ, {
+          ownedSchematics: WQ,
+          currentWorldSchematicId: XQ,
+          onClose: QQ
+        }),
+        middleScreenPopupClassName: "SchematicPopup",
+        onClose: wQ,
+        unlockPointerKey: "schematicListPopup"
+      })
+    }
+  },
+  36653: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      e: () => PQ,
+      f: () => gQ
+    });
+    XQ(61);
+    var wQ = XQ(1081),
+      qQ = XQ.n(wQ),
+      TQ = XQ(4948),
+      zQ = XQ(382),
+      sQ = XQ(1226),
+      FQ = XQ(1145);
+
+    function PQ(QQ) {
+      let {
+        value: WQ,
+        onChange: XQ,
+        showAll: wQ,
+        disabled: PQ = !1
+      } = QQ;
+      const {
+        t: gQ
+      } = (0, sQ.C)();
+      return (0, FQ.jsxs)("div", {
+        className: qQ()("BloxdForm GamemodeForm", {
+          BasicOptions: !wQ
+        }),
+        children: [(0, FQ.jsx)("div", {
+          className: "SectionTitle",
+          children: gQ("classic:defaultGamemode")
+        }), (0, FQ.jsx)("div", {
+          className: "SectionBody",
+          children: TQ.E.map((QQ => wQ || (0, TQ.y)(QQ) ? (0, FQ.jsx)("button", {
+            type: "button",
+            className: qQ()("WorldGamemode", {
+              Selected: WQ === QQ
+            }),
+            disabled: PQ,
+            onClick: () => {
+              XQ(QQ)
+            },
+            style: {
+              "--background-image": `url(${zQ.y[QQ]})`
+            },
+            children: zQ.u[QQ]
+          }, QQ) : null))
+        })]
+      })
+    }
+
+    function gQ(QQ) {
+      let {
+        mapTypes: WQ,
+        value: XQ,
+        onChange: wQ,
+        showAll: PQ,
+        disabled: gQ = !1,
+        children: JQ
+      } = QQ;
+      const {
+        t: rQ
+      } = (0, sQ.C)();
+      return (0, FQ.jsxs)("div", {
+        className: qQ()("BloxdForm MapTypeForm", {
+          BasicOptions: !PQ
+        }),
+        children: [(0, FQ.jsx)("div", {
+          className: "SectionTitle",
+          children: rQ("customLobby:mapType")
+        }), (0, FQ.jsx)("div", {
+          className: "SectionBody",
+          children: WQ.map((QQ => PQ || (0, TQ.z)(QQ) ? (0, FQ.jsx)("button", {
+            type: "button",
+            className: qQ()("MapType", {
+              Selected: XQ === QQ
+            }),
+            disabled: gQ,
+            onClick: () => {
+              wQ(QQ)
+            },
+            style: {
+              "--background-image": `url(${zQ.n[QQ]})`
+            },
+            children: zQ.k[QQ]
+          }, QQ) : null))
+        }), JQ]
+      })
+    }
+  },
+  36641: () => {}
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

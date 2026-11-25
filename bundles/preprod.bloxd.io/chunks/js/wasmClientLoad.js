@@ -1,262 +1,263 @@
-export const id = 59;
-export const ids = [59];
+export const id = 61;
+export const ids = [61];
 export const modules = {
-  36986: (pp, ip, cp) => {
-    async function Op(pp) {
-      const ip = await fetch(pp, {
+  37086: (QQ, WQ, XQ) => {
+    async function wQ(QQ) {
+      const WQ = await fetch(QQ, {
         priority: "low"
       });
-      if (!ip.ok) throw new Error(`Fetching ${pp} failed: HTTP ${ip.status}`);
-      const cp = ip.body.getReader();
-      for (; !(await cp.read()).done;);
+      if (!WQ.ok) throw new Error(`Fetching ${QQ} failed: HTTP ${WQ.status}`);
+      const XQ = WQ.body.getReader();
+      for (; !(await XQ.read()).done;);
     }
-    cp.d(ip, {
-      c: () => Op
+    XQ.d(WQ, {
+      c: () => wQ
     })
   },
-  39241: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Lp
+  39336: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      e: () => FQ
     });
-    var Op = cp(9034),
-      op = cp(36689),
-      Ip = cp(39244);
-    const Sp = {
+    var wQ = XQ(9285),
+      qQ = XQ(36795),
+      TQ = XQ(39341);
+    const zQ = {
         seat: "seat_timeout",
         socket_unopened: "socket_timeout_unopened",
         socket: "socket_timeout"
       },
-      xp = {
+      sQ = {
         seat: "seat_lost",
         socket_unopened: "socket_unopened",
         socket: "socket_closed"
       };
 
-    function Lp(pp, ip) {
-      if (pp instanceof op.f) return {
-        at: Sp[ip],
+    function FQ(QQ, WQ) {
+      if (QQ instanceof qQ.f) return {
+        at: zQ[WQ],
         code: 0
       };
-      const cp = (0, Op.f)(pp),
-        Lp = "number" === typeof cp ? cp : 0;
-      return null !== (0, Ip.h)(Lp).name ? {
+      const XQ = (0, wQ.g)(QQ),
+        FQ = "number" === typeof XQ ? XQ : 0;
+      return null !== (0, TQ.m)(FQ).name ? {
         at: "refused",
-        code: Lp
+        code: FQ
       } : {
-        at: xp[ip],
-        code: Lp
+        at: sQ[WQ],
+        code: FQ
       }
     }
   },
-  9034: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Ip,
-      f: () => Sp,
-      h: () => xp,
-      l: () => Yp,
-      o: () => Lp
+  9285: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      e: () => TQ,
+      g: () => zQ,
+      j: () => sQ,
+      k: () => PQ,
+      n: () => FQ
     });
-    var Op = cp(195),
-      op = cp(4719);
+    var wQ = XQ(231),
+      qQ = XQ(4948);
 
-    function Ip(pp) {
-      return Sp(pp) === Op.e.gameOrPluginOnPlayerAuthRejected.code
+    function TQ(QQ) {
+      return zQ(QQ) === wQ.e.gameOrPluginOnPlayerAuthRejected.code
     }
 
-    function Sp(pp) {
-      return "object" === typeof pp && null !== pp ? pp.code : void 0
+    function zQ(QQ) {
+      return "object" === typeof QQ && null !== QQ ? QQ.code : void 0
     }
 
-    function xp(pp) {
-      var ip;
-      return null !== (ip = Object.keys(op.c).find((ip => op.c[ip] === pp))) && void 0 !== ip ? ip : null
+    function sQ(QQ) {
+      var WQ;
+      return null !== (WQ = Object.keys(qQ.d).find((WQ => qQ.d[WQ] === QQ))) && void 0 !== WQ ? WQ : null
     }
 
-    function Lp(pp) {
-      return "notWhitelisted" === pp ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
+    function FQ(QQ) {
+      return "notWhitelisted" === QQ ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
     }
-    const Yp = {
+    const PQ = {
       private: "customLobby:cantJoinPrivate",
       notWhitelisted: "customLobby:cantJoinNotWhitelisted",
       banned: "customLobby:cantJoinBanned",
       adminLocked: "customLobby:cantJoinAdminLocked"
     }
   },
-  41270: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      prefetchWasmClient: () => jp,
-      startJoinLoad: () => tp,
-      startLoadAheadOfJoin: () => dp
+  41257: (QQ, WQ, XQ) => {
+    XQ.r(WQ), XQ.d(WQ, {
+      prefetchWasmClient: () => bQ,
+      probeWebgl2AheadOfJoin: () => PQ.N,
+      startJoinLoad: () => DQ,
+      startLoadAheadOfJoin: () => GQ
     });
-    var Op = cp(2963),
-      op = cp(36519),
-      Ip = cp(41058),
-      Sp = cp(1080),
-      xp = cp(40911),
-      Lp = (cp(40976), cp(36986)),
-      Yp = cp(40902),
-      Dp = cp(41185),
-      Ap = cp(41046);
-    const Pp = "[bloxd-wasm-client]";
-    let Wp = null,
-      yp = null,
-      Up = null,
-      wp = null,
-      vp = null;
+    var wQ = XQ(3107),
+      qQ = XQ(36608),
+      TQ = XQ(41076),
+      zQ = XQ(1109),
+      sQ = XQ(40930),
+      FQ = (XQ(40991), XQ(37086)),
+      PQ = XQ(40928),
+      gQ = XQ(41186),
+      JQ = XQ(41056);
+    const rQ = "[bloxd-wasm-client]";
+    let IQ = null,
+      jQ = null,
+      BQ = null,
+      yQ = null,
+      VQ = null;
 
-    function tp() {
-      return wp ??= (async () => {
+    function DQ() {
+      return yQ ??= (async () => {
         if ("undefined" === typeof WebAssembly) return;
-        const pp = await (0, Yp.L)();
-        if (null === pp) return;
-        if ((0, xp.s)(pp)) return (0, Yp.N)("none"), void Hp("none");
-        (0, Yp.N)(pp.backend);
-        const ip = await pp.load();
-        Hp(ip.name);
-        const cp = "unloaded" === (0, Op.E)();
-        if (cp && (0, Yp.j)(), !await (0, Dp.e)(ip)) return void console.warn(`${Pp} the join's early wasm load failed: the boot loads the client itself`);
-        if (!cp) return;
-        const Ip = (0, op.i)(ip.name);
-        void 0 !== Ip ? (0, Sp.logClientMeasurement)("wasm_join_compile", {
-          ms: Math.round(Ip.ms)
+        const QQ = await (0, PQ.J)();
+        if (null === QQ) return;
+        if ((0, sQ.n)(QQ)) return (0, PQ.O)("none"), void pQ("none");
+        (0, PQ.O)(QQ.backend);
+        const WQ = await QQ.load();
+        pQ(WQ.name);
+        const XQ = "unloaded" === (0, wQ.z)();
+        if (XQ && (0, PQ.n)(), !await (0, gQ.e)(WQ)) return void console.warn(`${rQ} the join's early wasm load failed: the boot loads the client itself`);
+        if (!XQ) return;
+        const TQ = (0, qQ.h)(WQ.name);
+        void 0 !== TQ ? (0, zQ.logClientMeasurement)("wasm_join_compile", {
+          ms: Math.round(TQ.ms)
         }, {
-          path: Ip.path,
-          build: ip.name
-        }) : console.warn(`${Pp} the join's wasm load left no record of how it compiled ${ip.name}`)
-      })().catch((pp => {
-        console.warn(`${Pp} the join's early wasm load did not start: the boot loads the client itself`, pp)
-      })), wp
+          path: TQ.path,
+          build: WQ.name
+        }) : console.warn(`${rQ} the join's wasm load left no record of how it compiled ${WQ.name}`)
+      })().catch((QQ => {
+        console.warn(`${rQ} the join's early wasm load did not start: the boot loads the client itself`, QQ)
+      })), yQ
     }
 
-    function Hp(pp) {
-      null !== vp && (0, Sp.logClientMeasurement)("wasm_compile_ahead", {
-        hit: vp === pp ? 1 : 0
+    function pQ(QQ) {
+      null !== VQ && (0, zQ.logClientMeasurement)("wasm_compile_ahead", {
+        hit: VQ === QQ ? 1 : 0
       }, {
-        guessed: vp,
-        loaded: pp
+        guessed: VQ,
+        loaded: QQ
       })
     }
 
-    function dp() {
-      let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      if (null === Up) {
-        var ip;
-        const cp = null !== (ip = pp.joinStarted) && void 0 !== ip ? ip : () => !1;
-        Up = Promise.all([jp(pp), ep(cp)]).then((() => {}))
+    function GQ() {
+      let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      if (null === BQ) {
+        var WQ;
+        const XQ = null !== (WQ = QQ.joinStarted) && void 0 !== WQ ? WQ : () => !1;
+        BQ = Promise.all([bQ(QQ), UQ(XQ)]).then((() => {}))
       }
-      return Up
+      return BQ
     }
 
-    function ep(pp) {
-      return yp ??= (async () => {
+    function UQ(QQ) {
+      return jQ ??= (async () => {
         if ("undefined" === typeof WebAssembly) return;
-        const ip = await (0, Yp.f)();
-        null === ip || pp() || "unloaded" !== (0, Op.E)() || (vp = ip.name, await (0, op.e)([ip, Ip.g], "low"))
-      })().catch((pp => {
-        console.warn(`${Pp} the compile ahead of the join did not start: the join loads the client itself`, pp)
-      })), yp
+        const WQ = await (0, PQ.f)();
+        null === WQ || QQ() || "unloaded" !== (0, wQ.z)() || (VQ = WQ.name, await (0, qQ.c)([WQ, TQ.e], "low"))
+      })().catch((QQ => {
+        console.warn(`${rQ} the compile ahead of the join did not start: the join loads the client itself`, QQ)
+      })), jQ
     }
 
-    function jp() {
+    function bQ() {
       let {
-        joinStarted: pp = () => !1,
-        language: ip = ""
+        joinStarted: QQ = () => !1,
+        language: WQ = ""
       } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      return Wp ??= async function(pp, ip) {
-        if (!await async function(pp) {
-            if (pp()) return !1;
-            let ip;
+      return IQ ??= async function(QQ, WQ) {
+        if (!await async function(QQ) {
+            if (QQ()) return !1;
+            let WQ;
             try {
-              var Op;
-              const pp = await fetch(`${cp.p}static/js/sn3sfj.wasmJoinFiles.json`, {
+              var wQ;
+              const QQ = await fetch(`${XQ.p}static/js/8104he.wasmJoinFiles.json`, {
                 priority: "low",
                 cache: "no-cache"
               });
-              if (!pp.ok) throw new Error(`HTTP ${pp.status}`);
-              if (/\bno-store\b/.test(null !== (Op = pp.headers.get("Cache-Control")) && void 0 !== Op ? Op : "")) return !1;
-              const op = await pp.json();
-              if (!Array.isArray(op)) throw new Error("not a list");
-              ip = op
-            } catch (Ip) {
-              return console.warn(`${Pp} the join's chunk list did not load: the join downloads its chunks itself`, Ip), !pp()
+              if (!QQ.ok) throw new Error(`HTTP ${QQ.status}`);
+              if (/\bno-store\b/.test(null !== (wQ = QQ.headers.get("Cache-Control")) && void 0 !== wQ ? wQ : "")) return !1;
+              const qQ = await QQ.json();
+              if (!Array.isArray(qQ)) throw new Error("not a list");
+              WQ = qQ
+            } catch (TQ) {
+              return console.warn(`${rQ} the join's chunk list did not load: the join downloads its chunks itself`, TQ), !QQ()
             }
-            if (pp()) return !1;
-            const op = document.createElement("link").relList.supports("prefetch");
-            for (const Sp of ip) {
-              const pp = `${cp.p}${Sp}`;
-              op ? kp(pp) : (0, Lp.c)(pp).catch((ip => {
-                console.warn(`${Pp} prefetching ${pp} failed`, ip)
+            if (QQ()) return !1;
+            const qQ = document.createElement("link").relList.supports("prefetch");
+            for (const zQ of WQ) {
+              const QQ = `${XQ.p}${zQ}`;
+              qQ ? vQ(QQ) : (0, FQ.c)(QQ).catch((WQ => {
+                console.warn(`${rQ} prefetching ${QQ} failed`, WQ)
               }))
             }
             return !0
-          }(pp)) return;
-        const Op = [(0, Lp.c)((0, Ap.f)())];
-        (0, Ap.e)(ip) && Op.push((0, Lp.c)((0, Ap.j)()));
-        await Promise.all(Op)
-      }(pp, ip).catch((pp => {
-        console.warn(`${Pp} the prefetch failed: the join downloads the client itself`, pp)
-      })), Wp
+          }(QQ)) return;
+        const wQ = [(0, FQ.c)((0, JQ.f)())];
+        (0, JQ.c)(WQ) && wQ.push((0, FQ.c)((0, JQ.g)()));
+        await Promise.all(wQ)
+      }(QQ, WQ).catch((QQ => {
+        console.warn(`${rQ} the prefetch failed: the join downloads the client itself`, QQ)
+      })), IQ
     }
 
-    function kp(pp) {
-      const ip = document.createElement("link");
-      ip.rel = "prefetch", ip.href = pp, pp.endsWith(".js") && (ip.crossOrigin = "anonymous"), document.head.appendChild(ip)
+    function vQ(QQ) {
+      const WQ = document.createElement("link");
+      WQ.rel = "prefetch", WQ.href = QQ, QQ.endsWith(".js") && (WQ.crossOrigin = "anonymous"), document.head.appendChild(WQ)
     }
   },
-  39244: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => op,
-      e: () => Ip,
-      g: () => xp,
-      h: () => Dp,
-      k: () => Lp,
-      n: () => Sp
+  39341: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      d: () => qQ,
+      e: () => TQ,
+      i: () => sQ,
+      m: () => gQ,
+      o: () => FQ,
+      q: () => zQ
     });
-    var Op = cp(195);
-    const op = 3e3,
-      Ip = 15e3;
+    var wQ = XQ(231);
+    const qQ = 3e3,
+      TQ = 15e3;
 
-    function Sp(pp) {
-      const ip = pp.endsWith(Op.l);
+    function zQ(QQ) {
+      const WQ = QQ.endsWith(wQ.n);
       return {
-        text: (ip ? pp.slice(0, -Op.l.length) : pp) || null,
-        dropsCache: ip
+        text: (WQ ? QQ.slice(0, -wQ.n.length) : QQ) || null,
+        dropsCache: WQ
       }
     }
-    const xp = "Either your internet isn't working or this is a bug.";
+    const sQ = "Either your internet isn't working or this is a bug.";
 
-    function Lp(pp, ip) {
-      const cp = Dp(pp);
-      return null !== cp.name && "" === Op.e[cp.name].text && null !== ip ? ip : cp.reason
+    function FQ(QQ, WQ) {
+      const XQ = gQ(QQ);
+      return null !== XQ.name && "" === wQ.e[XQ.name].text && null !== WQ ? WQ : XQ.reason
     }
-    const Yp = "You were removed from the game.";
+    const PQ = "You were removed from the game.";
 
-    function Dp(pp) {
-      var ip;
-      let cp = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const op = null !== (ip = Object.keys(Op.e).find((ip => Op.e[ip].code === pp))) && void 0 !== ip ? ip : null;
-      if (null === op) return {
-        code: pp,
-        name: op,
-        reason: null !== cp && void 0 !== cp ? cp : `${xp}\nCode: ${pp}`,
+    function gQ(QQ) {
+      var WQ;
+      let XQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const qQ = null !== (WQ = Object.keys(wQ.e).find((WQ => wQ.e[WQ].code === QQ))) && void 0 !== WQ ? WQ : null;
+      if (null === qQ) return {
+        code: QQ,
+        name: qQ,
+        reason: null !== XQ && void 0 !== XQ ? XQ : `${sQ}\nCode: ${QQ}`,
         canReconnect: !1,
         automaticallyReconnect: !1,
         requiresRefresh: !1
       };
       const {
-        text: Ip,
-        canReconnect: Sp = !1
-      } = Op.e[op], Lp = pp === Op.e.outdatedVersion.code || pp === Op.e.loadRecaptchaError.code;
+        text: TQ,
+        canReconnect: zQ = !1
+      } = wQ.e[qQ], FQ = QQ === wQ.e.outdatedVersion.code || QQ === wQ.e.loadRecaptchaError.code;
       return {
-        code: pp,
-        name: op,
-        reason: "" !== Ip ? Ip : null !== cp && void 0 !== cp ? cp : pp === Op.e.gameOrPluginKick.code ? Yp : `Code: ${pp}`,
-        canReconnect: Sp,
-        automaticallyReconnect: pp === Op.e.customGameUpdated.code || pp === Op.e.duplicateLobbyNameError.code,
-        requiresRefresh: Lp
+        code: QQ,
+        name: qQ,
+        reason: "" !== TQ ? TQ : null !== XQ && void 0 !== XQ ? XQ : QQ === wQ.e.gameOrPluginKick.code ? PQ : `Code: ${QQ}`,
+        canReconnect: zQ,
+        automaticallyReconnect: QQ === wQ.e.customGameUpdated.code || QQ === wQ.e.duplicateLobbyNameError.code,
+        requiresRefresh: FQ
       }
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

@@ -1,542 +1,506 @@
 export const id = 137;
-export const ids = [137];
+export const ids = [137, 140, 141];
 export const modules = {
-  36519: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => zp,
-      f: () => ii,
-      i: () => Kp,
-      k: () => Zp
+  6972: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      e: () => zQ
     });
-    var Op = cp(2963),
-      op = cp(2980),
-      Ip = cp(6762),
-      Sp = cp(4791),
-      xp = cp(2975),
-      Lp = cp(2970);
-    const Yp = "bloxd-wasmDownloaded",
-      Dp = 12;
+    var wQ = XQ(5386),
+      qQ = XQ(1145);
+    const TQ = {
+      strict: "shaderPack:variantStrict",
+      nonStrict: "shaderPack:variantNonStrict",
+      terrain: "shaderPack:variantTerrain",
+      liquid: "shaderPack:variantLiquid",
+      model: "shaderPack:variantModel"
+    };
 
-    function Ap(pp) {
-      return pp.pathname.slice(pp.pathname.lastIndexOf("/") + 1)
-    }
-
-    function Pp() {
-      try {
-        if ("undefined" === typeof localStorage) return null;
-        const pp = JSON.parse(localStorage.getItem(Yp) ?? "[]");
-        return Array.isArray(pp) ? pp.filter((pp => "string" === typeof pp)) : []
-      } catch (pp) {
-        return console.warn("Bloxd wasm: the record of downloaded modules could not be read: asking the HTTP cache for none", pp), null
-      }
-    }
-    const Wp = Reflect.apply,
-      yp = "undefined" === typeof Worker ? void 0 : Worker,
-      Up = yp?.prototype.postMessage,
-      wp = yp?.prototype.terminate,
-      vp = "undefined" === typeof EventTarget ? void 0 : EventTarget.prototype.addEventListener,
-      tp = "undefined" === typeof MessageEvent ? void 0 : Object.getOwnPropertyDescriptor(MessageEvent.prototype, "data")?.get,
-      Hp = Object.getOwnPropertyDescriptor(Object.getPrototypeOf(Uint8Array.prototype), "buffer").get,
-      dp = function() {
-        try {
-          return (0, Sp.i)(yp, "Worker", !0) && (0, Sp.i)(Up, "postMessage") && (0, Sp.i)(wp, "terminate") && (0, Sp.i)(Hp, "buffer") && void 0 !== vp && void 0 !== tp
-        } catch {
-          return !1
-        }
-      }();
-    let ep = !1;
-
-    function jp() {
-      return dp && !ep
-    }
-    class kp {
-      worker = null;
-      failed = !1;
-      constructor() {
-        if (jp()) try {
-          this.worker = Rp(), Wp(vp, this.worker, ["error", () => {
-            this.failed = !0
-          }])
-        } catch {
-          this.stop()
-        }
-      }
-      take() {
-        const pp = this.worker;
-        if (this.worker = null, null !== pp && this.failed) throw Wp(wp, pp, []), new Error("it did not run");
-        return pp
-      }
-      stop() {
-        const pp = this.worker;
-        this.worker = null, null !== pp && Wp(wp, pp, [])
-      }
-    }
-    class mp {
-      decoded;
-      worker;
-      reject;
-      constructor(pp, ip, cp, Op, Ip) {
-        try {
-          this.worker = Ip?.take() ?? Rp()
-        } catch (Yp) {
-          throw ep = !0, new Error(`The zstd decoder's worker did not start: ${(0,xp.f)(Yp)}`)
-        }
-        const Sp = this.worker;
-        this.decoded = (0, op.j)(((ip, op) => {
-          this.reject = op;
-          const Ip = (pp, ip) => {
-            Wp(vp, Sp, [pp, ip])
-          };
-          Ip("message", (pp => {
-            Op();
-            try {
-              const Op = Wp(tp, pp, []);
-              if (!0 === Op) ip();
-              else {
-                if ("string" === typeof Op) throw Op.startsWith(xp.e) && (ep = !0), new Error(Op);
-                cp(Op, Wp(Lp.q, Op, []))
-              }
-            } catch (Yp) {
-              op(Yp)
-            }
-          })), Ip("error", (() => {
-            ep = !0, op(new Error("The zstd decoder's worker did not run"))
-          })), Ip("messageerror", (() => {
-            op(new Error(`${pp}'s decoder sent a piece that could not be read`))
-          }))
-        })), (0, Lp.T)(this.decoded), Wp(Up, Sp, [
-          [pp, ip]
-        ])
-      }
-      push(pp) {
-        Wp(Up, this.worker, [pp, [Wp(Hp, pp, [])]])
-      }
-      end() {
-        Wp(Up, this.worker, [null])
-      }
-      markWorkerFailed() {
-        ep = !0
-      }
-      fail(pp) {
-        this.reject(pp), this.terminate()
-      }
-      terminate() {
-        Wp(wp, this.worker, [])
-      }
-    }
-
-    function Rp() {
-      if (globalThis.Worker !== yp) throw new Error("Worker is not the one the page loaded with");
-      return new Worker(new URL(cp.p + cp.u(68), cp.b), {
-        name: "wasmZstdDecoder",
-        type: "module"
-      })
-    }
-    const qp = Reflect.apply,
-      Mp = ArrayBuffer,
-      Cp = "undefined" === typeof Response ? void 0 : Response,
-      Ep = "undefined" === typeof ReadableStream ? void 0 : ReadableStream,
-      Xp = function() {
-        let pp;
-        void 0 !== Ep && new Ep({
-          __proto__: null,
-          start(ip) {
-            const {
-              enqueue: cp,
-              close: Op,
-              error: op
-            } = Object.getPrototypeOf(ip);
-            pp = {
-              enqueue: cp,
-              close: Op,
-              error: op
-            }
-          }
-        }, {
-          __proto__: null
-        });
-        return pp
-      }(),
-      lp = function() {
-        try {
-          return "undefined" !== typeof WebAssembly && "function" === typeof WebAssembly.compileStreaming && void 0 !== Xp && (0, Sp.i)(Cp, "Response", !0) && (0, Sp.i)(Ep, "ReadableStream", !0) && (0, Sp.i)(Xp.enqueue, "enqueue") && (0, Sp.i)(Xp.close, "close") && (0, Sp.i)(Xp.error, "error") && (0, Sp.i)(Lp.Y, "body") && (0, Sp.i)(Lp.K, "getReader") && (0, Sp.i)(Lp.V, "read")
-        } catch {
-          return !1
-        }
-      }();
-    async function Qp(pp, ip, cp, Op, Ip, Sp, Yp) {
-      const Dp = new Mp(ip),
-        {
-          controller: Ap,
-          compiled: Pp
-        } = function(pp) {
-          try {
-            let pp;
-            const ip = new Ep({
-                __proto__: null,
-                start(ip) {
-                  pp = ip
-                }
-              }, {
-                __proto__: null
-              }),
-              cp = new Cp(ip, {
-                __proto__: null,
-                headers: {
-                  __proto__: null,
-                  "Content-Type": "application/wasm"
-                }
-              });
-            return {
-              controller: pp,
-              compiled: (0, Lp.T)((0, Lp.x)((0, Lp.bb)(cp)))
-            }
-          } catch (ip) {
-            throw new Error(`${pp} could not be streamed into a compile: ${(0,xp.f)(ip)}`)
-          }
-        }(pp),
-        {
-          enqueue: Wp,
-          close: yp,
-          error: Up
-        } = Xp,
-        wp = pp => {
-          try {
-            qp(Up, Ap, [pp])
-          } catch {}
-        };
-      let vp = 0;
-      const tp = (cp, Op) => {
-        if (vp + Op > ip) throw new Error(`${pp} decoded past its module's ${ip} bytes`);
-        qp(Lp.Z, new Lp.k(Dp), [new Lp.k(cp), vp]);
-        try {
-          qp(Wp, Ap, [new Lp.k(Dp, vp, Op)])
-        } catch {}
-        vp += Op
-      };
-      let Hp, dp;
-      try {
-        Hp = new mp(pp, ip, tp, Op, Yp)
-      } catch (Rp) {
-        throw wp(Rp), Rp
-      }
-      const ep = pp => {
-        Hp.fail(pp), void 0 !== dp && Jp(dp)
-      };
-      let jp = !1;
-      cp.addEventListener("abort", (() => {
-        jp && Hp.markWorkerFailed(), ep(new Error(`${pp} stalled`))
-      }), {
-        once: !0
-      }), (0, op.u)(Pp, (() => {}), ep);
-      try {
-        let Sp;
-        try {
-          Sp = await fetch(pp, {
-            signal: cp
+    function zQ(QQ) {
+      let {
+        diagnostics: WQ,
+        more: XQ = 0,
+        t: zQ
+      } = QQ;
+      return (0, qQ.jsxs)("ul", {
+        className: "ShaderPackDiagnostics",
+        children: [WQ.map(((QQ, WQ) => {
+          const XQ = (0, wQ.i)(QQ),
+            sQ = function(QQ, WQ) {
+              const XQ = (0, wQ.e)(null !== QQ && void 0 !== QQ ? QQ : []);
+              if (0 === XQ.length) return null;
+              return XQ.map((QQ => QQ.map((QQ => WQ(TQ[QQ]))).join(", "))).join("; ")
+            }(QQ.variants, zQ);
+          return (0, qQ.jsxs)("li", {
+            children: [XQ && (0, qQ.jsx)("span", {
+              className: "ShaderPackDiagnosticLocation",
+              children: XQ
+            }), QQ.message, sQ && (0, qQ.jsx)("span", {
+              className: "ShaderPackDiagnosticVariants",
+              children: zQ("shaderPack:onlyIn", {
+                variants: sQ
+              })
+            })]
+          }, WQ)
+        })), XQ > 0 && (0, qQ.jsx)("li", {
+          children: zQ("shaderPack:moreErrors", {
+            count: String(XQ)
           })
-        } catch (Rp) {
-          throw new Error(`Fetching ${pp} failed: ${(0,xp.f)(Rp)}`)
-        }
-        const {
-          ok: Yp,
-          status: Dp,
-          body: Ap
-        } = function(pp, ip) {
-          try {
-            const {
-              ok: pp,
-              status: cp
-            } = ip;
-            return {
-              ok: pp,
-              status: cp,
-              body: qp(Lp.Y, ip, [])
-            }
-          } catch {
-            throw new Error(`${pp} came in a response a page script made`)
-          }
-        }(pp, Sp);
-        if (!Yp) throw new Error(`Fetching ${pp} failed: HTTP ${Dp}`);
-        Op();
-        const Pp = qp(Lp.K, Ap, []);
-        dp = Pp;
-        const Wp = () => {
-          Jp(Pp)
-        };
-        for ((0, op.u)(Hp.decoded, Wp, Wp);;) {
-          let ip;
-          try {
-            ip = await qp(Lp.V, Pp, [])
-          } catch (Rp) {
-            throw new Error(`Downloading ${pp} failed: ${(0,xp.f)(Rp)}`)
-          }
-          if (ip.done) break;
-          Op(), Hp.push(ip.value)
-        }
-        if (jp = !0, Hp.end(), await Hp.decoded, Ip(), vp !== ip) throw new Error(`${pp} ended before its module did`)
-      } catch (Rp) {
-        throw wp(Rp), ep(Rp), Rp
-      }
-      Hp.terminate();
-      try {
-        qp(yp, Ap, [])
-      } catch {}
-      const kp = await Pp;
-      return void 0 !== Sp && await (0, Lp.t)(pp, new Lp.k(Dp), {
-        sha256: Sp.sha256,
-        onMismatch: () => {}
-      }), kp
-    }
-
-    function Jp(pp) {
-      try {
-        (0, Lp.T)(pp.cancel())
-      } catch {}
-    }
-    const Bp = ".zst.bin",
-      Np = 1e3;
-    let Tp = null;
-
-    function fp(pp) {
-      return Tp ??= function() {
-        const pp = new Map,
-          ip = "bloxd_wasm_webgpu:5136608,bloxd_wasm_webgl:5516677,bloxd_wasm_webgl1:4851495,bloxd_wasm_workers:201241,bloxd_wasm_models:311531,bloxd_wasm_client:3713604";
-        for (const cp of ip?.split(",") ?? []) {
-          const [ip = "", Op] = cp.split(":"), op = Number(Op);
-          Number.isInteger(op) && op > 0 && pp.set(ip, op)
-        }
-        return pp
-      }(), Tp.get(pp)
-    }
-    async function bp(pp, ip) {
-      let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const Op = fp(pp.name);
-      if (void 0 === Op) return hp(await ap(pp, ip, cp), "cold-wasm");
-      const Ip = lp ? new kp : null;
-      let Sp;
-      try {
-        if (Yp = pp.url(), Pp()?.includes(Ap(Yp)) && await async function(pp) {
-            const ip = new AbortController;
-            let cp;
-            const Op = (0, op.j)((pp => {
-              cp = setTimeout((() => {
-                ip.abort(), pp(null)
-              }), Np)
-            }));
-            try {
-              const cp = fetch(pp.href, {
-                  cache: "only-if-cached",
-                  mode: "same-origin",
-                  signal: ip.signal
-                }),
-                Ip = await (0, op.q)([cp, Op]);
-              return !!Ip?.ok && ((0, Lp.T)(Ip.body.cancel()), !0)
-            } catch {
-              return !1
-            } finally {
-              clearTimeout(cp)
-            }
-          }(pp.url())) return Ip?.stop(), await async function(pp, ip, cp, Op) {
-          let op = !1;
-          const Ip = cp && {
-            sha256: cp.sha256,
-            onMismatch: () => {
-              op = !0
-            }
-          };
-          try {
-            return hp(await ap(pp, Ip, Op), "warm")
-          } catch (Sp) {
-            const Op = await np(pp, ip, cp, null);
-            if (null === Op) throw op && cp.onMismatch(), Sp;
-            return console.warn(`${pp.url().href} from the HTTP cache failed: ${(0,xp.f)(Sp)}: loaded its copy instead`), hp(Op, op ? "warm-refused" : "warm-broken")
-          }
-        }(pp, Op, ip, cp);
-        Sp = await np(pp, Op, ip, Ip)
-      } finally {
-        Ip?.stop()
-      }
-      var Yp;
-      return null !== Sp ? hp(Sp, "cold-worker") : hp(await ap(pp, ip, cp), "cold-wasm")
-    }
-
-    function hp(pp, ip) {
-      return {
-        __proto__: null,
-        module: pp,
-        path: ip
-      }
-    }
-
-    function ap(pp, ip, cp) {
-      return void 0 === fp(pp.name) ? (0, Lp.C)(pp.url(), ip, cp) : (0, Lp.C)(pp.url(), ip, {
-        ...cp,
-        hideThen: !0,
-        onDownloaded: () => {
-          ! function(pp) {
-            const ip = Pp();
-            if (null === ip) return;
-            const cp = Ap(pp),
-              Op = ip.filter((pp => pp !== cp));
-            Op.push(cp);
-            try {
-              localStorage.setItem(Yp, JSON.stringify(Op.slice(-Dp)))
-            } catch (op) {
-              console.warn(`Bloxd wasm: ${cp} could not be recorded as downloaded: a later join asks the HTTP cache nothing for it`, op)
-            }
-          }(pp.url()), cp.onDownloaded?.()
-        }
+        })]
       })
-    }
-    async function np(pp, ip, cp, Op) {
-      if (!lp || !jp()) return null;
-      const op = pp.url(),
-        Ip = `${op.href}${Bp}`;
-      try {
-        return await (0, Lp._)(Ip, ((pp, op, Sp) => Qp(Ip, ip, pp, op, Sp, cp, Op)))
-      } catch (Sp) {
-        return console.warn(`${(0,xp.f)(Sp)}: loading ${op.href} instead`), null
-      }
-    }
-    let Fp = null,
-      gp = !1;
-    const Gp = new Map,
-      rp = new Map;
-
-    function Zp(pp, ip, cp) {
-      return null === Fp ? Fp = sp(pp, ip, cp?.memoryMaximumBytes) : pp !== Fp.build ? console.warn(`Bloxd wasm: ${pp.name} was asked for after ${Fp.build.name} started loading, which this thread keeps`) : ip.name !== Fp.workers.name && console.warn(`Bloxd wasm: ${ip.name} was asked for workers after ${Fp.workers.name}, which this thread keeps`), cp?.reloadFailedDownload && !gp && (0, Op.fb)() && (gp = !0, Fp = sp(Fp.build, Fp.workers, Fp.memoryMaximumBytes)), Fp.loaded
-    }
-
-    function zp(pp, ip) {
-      if (null !== Fp) return (0, op.f)([]);
-      const cp = pp.filter((pp => !Gp.has(pp.name))).map((pp => {
-        const cp = new AbortController,
-          Op = {
-            compiled: ap(pp, (0, Ip.e)(pp.name), {
-              priority: ip,
-              OO: cp.signal,
-              onDownloaded: () => {
-                Op.downloaded = !0
-              },
-              retries: {
-                onRetry: () => {
-                  Op.downloaded = !1, null !== Fp && cp.abort()
-                }
-              }
-            }),
-            cancel: cp,
-            downloaded: !1
-          };
-        return Gp.set(pp.name, Op), (0, op.j)((ip => {
-          (0, op.u)(Op.compiled, (() => {
-            Op.downloaded = !0, ip()
-          }), (Op => {
-            cp.signal.aborted || console.warn(`Bloxd wasm: ${pp.name}'s compile ahead of the load failed: the load compiles it afresh`, Op), ip()
-          }))
-        }))
-      }));
-      return (0, op.f)(cp)
-    }
-
-    function sp(pp, ip, cp) {
-      const Ip = (0, Op.O)((async () => {
-        (0, Sp.x)(), rp.clear();
-        const cp = Vp(pp),
-          Op = ip.name === pp.name ? cp : Vp(ip);
-        for (const {
-            cancel: pp
-          }
-          of Gp.values()) pp.abort();
-        Gp.clear(), await (0, op.f)([cp, Op]);
-        const Ip = await cp,
-          xp = await Op;
-        return (0, Sp.x)(), {
-          module: Ip,
-          workerModule: xp
-        }
-      }), pp, cp);
-      return {
-        build: pp,
-        workers: ip,
-        memoryMaximumBytes: cp,
-        loaded: Ip
-      }
-    }
-
-    function Kp(pp) {
-      return rp.get(pp)
-    }
-
-    function Vp(pp) {
-      const ip = performance.now(),
-        cp = Gp.get(pp.name);
-      Gp.delete(pp.name);
-      const Op = !0 === cp?.downloaded ? cp : void 0;
-      return void 0 !== cp && void 0 === Op && cp.cancel.abort(), (0, op.j)(((cp, Ip) => {
-        const Sp = (Op, op) => {
-            rp.set(pp.name, {
-              path: op,
-              ms: performance.now() - ip
-            }), cp(Op)
-          },
-          xp = () => {
-            (0, op.u)(ci(pp), (pp => {
-              let {
-                module: ip,
-                path: cp
-              } = pp;
-              Sp(ip, cp)
-            }), Ip)
-          };
-        void 0 === Op ? xp() : (0, op.u)(Op.compiled, (pp => {
-          Sp(pp, "ahead")
-        }), xp)
-      }))
-    }
-    async function ii(pp, ip) {
-      const {
-        module: cp
-      } = await ci(pp, {
-        retries: ip
-      });
-      return cp
-    }
-    async function ci(pp) {
-      let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      return await bp(pp, (0, Ip.e)(pp.name), ip)
     }
   },
-  6762: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Sp
+  6979: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      b: () => bQ,
+      d: () => vQ
     });
-    var Op = cp(2970);
-    const op = {
-      bloxd_wasm: () => "b2340e61a7d448277a389ebeac9c8ae332a7699b283661cfa159ae4f9b5e0b46",
-      bloxd_wasm_client: () => "fc04a63668a4bc6b8108c23defb833287279306fc25451198e7e46db490160bc",
-      bloxd_wasm_workers: () => "97593e648fa195611cb0537edc597de1fb35e0ff06c7ba452104e324f7e81a2a",
-      bloxd_wasm_models: () => "2bf3307bf44a828cd7c420818a0ed5b061472ebe327b277c5eba216bf14f6d21",
-      bloxd_wasm_webgpu: () => "bb0d39b71cbd62566055f119cdde94768780e27f37f323027d63e6b3a5a43b04",
-      bloxd_wasm_webgl: () => "9b5a782f90a35f11a25813cfef777f781fa19f7f35be550f5ba3ccd789c15381",
-      bloxd_wasm_webgl1: () => "53c64fa3997d454ee8786274e88a96df2e92e734612cf00e45f3b10812d8ed86",
-      bloxd_wasm_replay: () => "6da56602c0cf1eac0fee1a30eb3409cd19788e1cf0bf82c91f41e9dc2ec26a17",
-      bloxd_wasm_recorder: () => "f89c2afc61048a96a7ea68674c418202687a5df82028a7c7506a545f43cf8a00",
-      bloxd_wasm_anim: () => "12c4beb6cacfbdea124da1b78d9d3bb64d476f26a1d82ae9031fb1eb6b45b89d",
-      bloxd_wasm_textures: () => "8da34a927a2e21429dd7b220d476b1d909f2b62d3b85d0f3e892b23b3c44d36f",
-      bloxd_wasm_shader_pack: () => "5e1ab13681c364aca3fb9e7bad689eb7302538f98091c87c0994a7538b0e884b"
-    };
-    var Ip = cp(4791);
+    var wQ = XQ(61),
+      qQ = XQ(1081),
+      TQ = XQ.n(qQ),
+      zQ = XQ(5310),
+      sQ = XQ(1391),
+      FQ = XQ(1094),
+      PQ = XQ(1226),
+      gQ = XQ(5396),
+      JQ = XQ(5394),
+      rQ = XQ(3435);
+    const IQ = 33554432,
+      jQ = 1024,
+      BQ = 65536;
+    async function yQ(QQ) {
+      const WQ = (0, rQ.m)(QQ);
+      if (WQ) {
+        if (WQ.size > IQ) throw new rQ.c("shaderPack:loadZipTooBig", {
+          megabytes: String(IQ / 1048576)
+        });
+        return async function(QQ) {
+          return VQ((0, rQ.j)(QQ, jQ).map((WQ => ({
+            path: WQ.path,
+            read: XQ => (0, rQ.l)(QQ, WQ, XQ)
+          }))))
+        }(new Uint8Array(await WQ.arrayBuffer()))
+      }
+      return VQ(QQ.map((QQ => ({
+        path: (0, rQ.k)(QQ),
+        read: WQ => async function(QQ, WQ) {
+          return QQ.size > WQ ? null : new Uint8Array(await QQ.arrayBuffer())
+        }(QQ, WQ)
+      }))))
+    }
+    async function VQ(QQ) {
+      const WQ = function(QQ) {
+          const WQ = QQ.length > 0 ? QQ[0].path.indexOf("/") : -1;
+          if (-1 === WQ) return QQ;
+          const XQ = QQ[0].path.slice(0, WQ + 1);
+          if (!QQ.every((QQ => QQ.path.startsWith(XQ)))) return QQ;
+          return QQ.map((QQ => ({
+            ...QQ,
+            path: QQ.path.slice(XQ.length)
+          })))
+        }(QQ.filter((QQ => !(0, rQ.f)(QQ.path)))),
+        XQ = WQ.filter((QQ => "pack.json" === QQ.path.toLowerCase()));
+      if (0 === XQ.length) throw new rQ.c("shaderPack:loadNoManifest");
+      if (XQ.length > 1) throw new rQ.c("shaderPack:loadDuplicateManifest");
+      const wQ = XQ[0],
+        qQ = await wQ.read(BQ);
+      if (null === qQ) throw new rQ.c("shaderPack:loadManifestTooBig", {
+        kilobytes: String(BQ / 1024)
+      });
+      const TQ = function(QQ) {
+          let WQ;
+          try {
+            WQ = JSON.parse(QQ)
+          } catch (sQ) {
+            throw new rQ.c("shaderPack:loadManifestNotJson", {
+              error: sQ.message
+            }, {
+              cause: sQ
+            })
+          }
+          if ("object" !== typeof WQ || null === WQ || Array.isArray(WQ)) throw new rQ.c("shaderPack:loadManifestNotObject");
+          const {
+            apiVersion: XQ,
+            name: wQ,
+            author: qQ,
+            description: TQ,
+            keepCircleShadows: zQ
+          } = WQ;
+          if (void 0 === XQ) throw new rQ.c("shaderPack:loadNoApiVersion", {
+            version: String(JQ.b)
+          });
+          if (!(0, JQ.g)(XQ)) throw new rQ.c("shaderPack:loadWrongApiVersion", {
+            packVersion: JSON.stringify(XQ),
+            version: String(JQ.b)
+          });
+          if ("string" !== typeof wQ || "" === wQ.trim()) throw new rQ.c("shaderPack:loadNoName");
+          if (void 0 !== qQ && null !== qQ && "string" !== typeof qQ) throw new rQ.c("shaderPack:loadAuthorNotString");
+          if (void 0 !== TQ && null !== TQ && "string" !== typeof TQ) throw new rQ.c("shaderPack:loadDescriptionNotString");
+          if (void 0 !== zQ && "boolean" !== typeof zQ) throw new rQ.c("shaderPack:loadKeepCircleShadowsNotBoolean");
+          return {
+            apiVersion: XQ,
+            name: wQ,
+            author: "string" === typeof qQ ? qQ : null,
+            description: "string" === typeof TQ && "" !== TQ.trim() ? TQ : null,
+            keepCircleShadows: !0 === zQ
+          }
+        }(DQ(qQ, wQ.path)),
+        zQ = WQ.filter((QQ => QQ.path.toLowerCase().endsWith(".wgsl"))).sort(((QQ, WQ) => (0, gQ.m)(QQ.path, WQ.path)));
+      if (0 === zQ.length) throw new rQ.c("shaderPack:loadNoWgsl");
+      if (zQ.length > gQ.d) throw new rQ.c("shaderPack:loadTooManyWgsl", {
+        count: String(gQ.d)
+      });
+      const sQ = zQ.find(((QQ, WQ) => WQ > 0 && QQ.path === zQ[WQ - 1].path));
+      if (sQ) throw new rQ.c("shaderPack:loadDuplicatePath", {
+        path: sQ.path
+      });
+      const FQ = [];
+      let PQ = gQ.f;
+      for (const JQ of zQ) {
+        const QQ = await JQ.read(PQ);
+        if (null === QQ) throw new rQ.c("shaderPack:loadSourceTooBig", {
+          kilobytes: String(gQ.f / 1024)
+        });
+        PQ -= QQ.byteLength, FQ.push({
+          path: JQ.path,
+          source: DQ(QQ, JQ.path)
+        })
+      }
+      return {
+        manifest: TQ,
+        files: FQ
+      }
+    }
 
-    function Sp(pp) {
-      const ip = Object.prototype.hasOwnProperty.call(op, pp) ? op[pp]() : void 0;
-      if (void 0 !== ip) return {
-        sha256: ip,
-        onMismatch: Ip.v
-      };
-      throw new Op.g(`${pp} has no release digest, so this build refuses it`)
+    function DQ(QQ, WQ) {
+      try {
+        return new TextDecoder("utf-8", {
+          fatal: !0
+        }).decode(QQ)
+      } catch (XQ) {
+        throw new rQ.c("shaderPack:loadNotUtf8", {
+          path: WQ
+        }, {
+          cause: XQ
+        })
+      }
+    }
+    var pQ = XQ(5386),
+      GQ = XQ(5398),
+      UQ = XQ(1145);
+
+    function bQ(QQ) {
+      let {
+        busy: WQ,
+        disabled: XQ,
+        onFiles: wQ
+      } = QQ;
+      const {
+        t: qQ
+      } = (0, PQ.C)(), {
+        getRootProps: gQ,
+        getInputProps: JQ,
+        isDragActive: rQ,
+        open: IQ
+      } = (0, zQ.c)({
+        onDrop: wQ,
+        noClick: !0,
+        noKeyboard: !0,
+        useFsAccessApi: !1,
+        disabled: XQ
+      });
+      return (0, UQ.jsxs)("div", {
+        ...gQ({
+          className: TQ()("ShaderPackDropZone", {
+            ActiveDrag: rQ,
+            Disabled: XQ
+          })
+        }),
+        children: [(0, UQ.jsx)("input", {
+          ...JQ({
+            webkitdirectory: "true"
+          })
+        }), WQ && (0, UQ.jsx)(sQ.e, {}), !WQ && (0, UQ.jsxs)(UQ.Fragment, {
+          children: [(0, UQ.jsx)("div", {
+            className: "ShaderPackDropZoneIcon",
+            children: (0, UQ.jsx)(FQ.d, {
+              name: "up-from-bracket"
+            })
+          }), (0, UQ.jsx)("div", {
+            className: "ShaderPackDropZoneInstructions",
+            children: qQ((0, GQ.e)() ? "shaderPack:dropHere" : "shaderPack:chooseZipInstructions")
+          }), (0, UQ.jsx)(GQ.d, {
+            disabled: XQ,
+            openFolderPicker: IQ,
+            onFiles: wQ
+          })]
+        })]
+      })
+    }
+
+    function vQ(QQ) {
+      const {
+        t: WQ
+      } = (0, PQ.C)(), [XQ, qQ] = (0, wQ.useState)(!1), [TQ, zQ] = (0, wQ.useState)(null), sQ = (0, wQ.useRef)(!1);
+      return {
+        loading: XQ,
+        error: TQ,
+        setError: zQ,
+        onFiles: async function(XQ) {
+          if (!sQ.current) {
+            sQ.current = !0, qQ(!0), zQ(null);
+            try {
+              await QQ(await yQ(XQ))
+            } catch (wQ) {
+              wQ instanceof rQ.c ? zQ((0, pQ.l)(WQ, wQ.translationKey, wQ.params)) : (console.error("Failed to load the shader pack", wQ), zQ(WQ("shaderPack:unexpectedError")))
+            } finally {
+              sQ.current = !1, qQ(!1)
+            }
+          }
+        }
+      }
+    }
+  },
+  7024: (QQ, WQ, XQ) => {
+    XQ.r(WQ), XQ.d(WQ, {
+      forgetShaderPackActiveHint: () => hQ,
+      isOtherApiVersion: () => dQ,
+      isShaderPackActive: () => GQ,
+      isShaderPackChangePending: () => vQ,
+      markShaderPackChangePending: () => bQ,
+      pageShaderPackValidationVersion: () => HQ,
+      reconcileStoredShaderPackHint: () => lQ,
+      removeShaderPack: () => pQ,
+      replaceShaderPack: () => yQ,
+      saveShaderPack: () => BQ,
+      shaderPackNeedsCheck: () => aQ,
+      storedPackOutcome: () => UQ,
+      storedShaderPackFiles: () => rQ,
+      toStoredShaderPack: () => JQ
+    });
+    var wQ = XQ(5396),
+      qQ = XQ(5394),
+      TQ = XQ(43),
+      zQ = XQ(3716),
+      sQ = XQ(7026),
+      FQ = XQ(7002);
+    const PQ = "shaderPackChangePending";
+    let gQ = null;
+
+    function JQ(QQ, WQ, XQ) {
+      return {
+        manifest: QQ.manifest,
+        files: (0, wQ.w)(QQ.files),
+        validation: WQ,
+        ...XQ && {
+          listing: XQ
+        }
+      }
+    }
+
+    function rQ(QQ) {
+      return Object.keys(QQ.files).map((WQ => ({
+        path: WQ,
+        source: QQ.files[WQ]
+      })))
+    }
+    let IQ = Promise.resolve();
+
+    function jQ(QQ) {
+      const WQ = IQ.then(QQ);
+      return IQ = WQ.catch((() => {})), WQ
+    }
+
+    function BQ(QQ, WQ) {
+      return jQ((() => VQ(QQ, WQ)))
+    }
+
+    function yQ(QQ, WQ, XQ) {
+      return jQ((async () => JSON.stringify(await (0, sQ.f)()) === JSON.stringify(QQ) && (null === WQ ? (await DQ(), !0) : VQ(WQ, XQ))))
+    }
+    async function VQ(QQ, WQ) {
+      const XQ = await TQ.f.setItem(sQ.b, QQ);
+      return XQ && iQ(QQ, WQ), XQ
+    }
+    async function DQ() {
+      await TQ.f.removeItem(sQ.b), TQ.i.removeItem(zQ.c)
+    }
+
+    function pQ() {
+      return jQ(DQ)
+    }
+
+    function GQ(QQ, WQ) {
+      return "active" === UQ(QQ, WQ).kind
+    }
+
+    function UQ(QQ, WQ) {
+      var XQ;
+      return null === QQ ? {
+        kind: "none",
+        reason: "nothingStored"
+      } : dQ(QQ) ? {
+        kind: "none",
+        reason: "otherApiVersion"
+      } : !1 !== (null === (XQ = QQ.validation) || void 0 === XQ ? void 0 : XQ.ok) || QQ.validation.fromRecheck ? null === WQ ? {
+        kind: "none",
+        reason: "noCompiler"
+      } : aQ(QQ, WQ) ? {
+        kind: "blocked",
+        messageKey: "shaderPack:failedUnchecked"
+      } : QQ.validation.ok ? {
+        kind: "active"
+      } : {
+        kind: "blocked",
+        messageKey: "shaderPack:failedValidation"
+      } : {
+        kind: "none",
+        reason: "failedWhenLoaded"
+      }
+    }
+
+    function bQ() {
+      TQ.m.setItem(PQ, performance.timeOrigin)
+    }
+
+    function vQ() {
+      return TQ.m.getItem(PQ) === performance.timeOrigin
+    }
+
+    function dQ(QQ) {
+      return !(0, qQ.g)(QQ.manifest.apiVersion)
+    }
+
+    function HQ(QQ) {
+      return gQ ??= QQ.WE((0, FQ.shaderPackTextures)()), gQ
+    }
+
+    function aQ(QQ, WQ) {
+      var XQ;
+      return (null === (XQ = QQ.validation) || void 0 === XQ ? void 0 : XQ.headerVersion) !== HQ(WQ)
+    }
+
+    function lQ(QQ) {
+      return jQ((async () => {
+        iQ(await (0, sQ.f)(!0), QQ)
+      }))
+    }
+
+    function hQ() {
+      return jQ((async () => {
+        TQ.i.removeItem(zQ.c)
+      }))
+    }
+
+    function iQ(QQ, WQ) {
+      GQ(QQ, WQ) ? TQ.i.setItem(zQ.c, !0) : TQ.i.removeItem(zQ.c)
+    }
+  },
+  7002: (QQ, WQ, XQ) => {
+    XQ.r(WQ), XQ.d(WQ, {
+      loadShaderPackTextures: () => zQ,
+      shaderPackTextures: () => sQ
+    });
+    var wQ = XQ(5396);
+    let qQ = null,
+      TQ = null;
+
+    function zQ() {
+      return TQ ??= Promise.all([XQ.e(75), XQ.e(192)]).then((() => XQ(40738))).then((QQ => {
+        let {
+          FORMER_BLOCK_IMAGE_NAMES: WQ,
+          textureNameToIndex: XQ,
+          textureAnimationData: TQ
+        } = QQ;
+        return qQ ??= (0, wQ.l)(XQ, TQ, WQ), qQ
+      })), TQ
+    }
+
+    function sQ() {
+      if (null === qQ) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return qQ
+    }
+  },
+  7018: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      e: () => FQ,
+      g: () => sQ
+    });
+    var wQ = XQ(7024),
+      qQ = XQ(7002),
+      TQ = XQ(134);
+    const zQ = 100;
+    async function sQ(QQ, WQ) {
+      var XQ;
+      let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (XQ = navigator.gpu) && void 0 !== XQ ? XQ : null;
+      const zQ = QQ.JQQ(WQ, (0, qQ.shaderPackTextures)());
+      if (zQ.errors.length > 0) return PQ(QQ, zQ.errors, zQ.offInStrict);
+      const sQ = await async function(QQ) {
+        if (!QQ) return null;
+        try {
+          const WQ = await (0, TQ.q)(QQ);
+          return WQ ? await WQ.requestDevice() : null
+        } catch (WQ) {
+          return console.error("Couldn't get a WebGPU device to validate the shader pack.", WQ), null
+        }
+      }(wQ);
+      if (!sQ) return null;
+      let FQ = !1;
+      sQ.lost.then((() => {
+        FQ = !0
+      }));
+      try {
+        const WQ = await Promise.all(zQ.validationModules.map((WQ => async function(QQ, WQ, XQ) {
+          WQ.pushErrorScope("validation");
+          const wQ = WQ.createShaderModule({
+              code: XQ.code
+            }),
+            qQ = WQ.popErrorScope(),
+            {
+              messages: TQ
+            } = await wQ.getCompilationInfo(),
+            zQ = TQ.filter((QQ => "error" === QQ.type)).map((WQ => QQ.mapValidationMessage(XQ, WQ))),
+            sQ = await qQ;
+          sQ && 0 === zQ.length && zQ.push({
+            file: null,
+            line: 0,
+            message: sQ.message,
+            variants: [XQ.key]
+          });
+          return zQ
+        }(QQ, sQ, WQ))));
+        return FQ ? null : PQ(QQ, QQ.gwQ(WQ.flat()), zQ.offInStrict)
+      } catch (gQ) {
+        return console.error("Couldn't validate the shader pack on WebGPU.", gQ), null
+      } finally {
+        sQ.destroy()
+      }
+    }
+    async function FQ(QQ, WQ) {
+      var XQ;
+      if (!(0, wQ.shaderPackNeedsCheck)(QQ, WQ) || (0, wQ.isOtherApiVersion)(QQ)) return QQ;
+      const qQ = await sQ(WQ, (0, wQ.storedShaderPackFiles)(QQ));
+      if (!qQ) return QQ;
+      const TQ = !1 === (null === (XQ = QQ.validation) || void 0 === XQ ? void 0 : XQ.ok) && !QQ.validation.fromRecheck,
+        zQ = {
+          ...QQ,
+          validation: TQ ? qQ : {
+            ...qQ,
+            fromRecheck: !0
+          }
+        };
+      return await (0, wQ.replaceShaderPack)(QQ, zQ, WQ) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), zQ
+    }
+
+    function PQ(QQ, WQ, XQ) {
+      return {
+        headerVersion: (0, wQ.pageShaderPackValidationVersion)(QQ),
+        ok: 0 === WQ.length,
+        errors: WQ.slice(0, zQ),
+        moreErrors: Math.max(0, WQ.length - zQ),
+        offInStrict: XQ
+      }
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

@@ -1,9 +1,1728 @@
 export const id = 83;
 export const ids = [83];
 export const modules = {
-  4861: pp => {
-    pp.exports = '# Block Names (1533 blocks)\n#\n# Each block name listed below is the ROOT block - use it exactly as shown (no suffix).\n# Some blocks also have meta variants, indicated by codes in brackets.\n#\n# ROOT BLOCK: Use the block name exactly as listed (e.g. "Maple Door", "Wheat", "Stone")\n#\n# META VARIANTS: If a block has codes in brackets, you can append suffixes to get variants:\n#   R  = rotation    -> BlockName|meta|rot1 through |meta|rot4\n#   O  = open/closed -> BlockName|meta|rot1|open or |closed (combine with R)\n#   H  = halfblockPlacement -> BlockName|meta|rot1|top or |bot or |side (combine with R; stairs have no |side)\n#   G  = growing     -> BlockName|Growing\n#   TB = treeBase    -> BlockName|TreeBase|<WoodType> (e.g. Maple Log|TreeBase|Maple)\n#   TC = treeCanopy  -> BlockName|TreeCanopy\n#   B  = books       -> BlockName|meta|rot1|books1 through |books6 (combine with R)\n#   FG = freshlyGrown -> BlockName|FreshlyGrown (harvestable crop state)\n#   RT = roots       -> BlockName|Roots (flower with roots for world gen)\n#   LV = lava        -> BlockName|Lava (lava-growing variant)\n#   TP = top         -> BlockName|Top (top half of tall plants)\n#   GR = grassRoots  -> BlockName|GrassRoots (dirt with grass roots)\n#   BK = breaking    -> BlockName|Breaking (breaking animation state)\n#   FL = flashing    -> BlockName|Flashing (flashing animation state)\n#   SC = stairsCorner -> BlockName|meta|rot1|bot|innerLeft, innerRight, outerLeft or outerRight (combine with R and H)\n#\n# Examples:\n#   Stone           -> Just use "Stone" (no brackets = no variants, root block only)\n#   Maple Door [O,R] -> Root: "Maple Door", Variants: "Maple Door|meta|rot2|open", etc.\n#   Wheat [FG]       -> Root: "Wheat", Variant: "Wheat|FreshlyGrown"\n#\nDirt [GR]\nMessy Dirt\nGrass Block\nSand\nClay\nGravel\nSnow\nMaple Log [TB]\nPine Log [TB]\nPlum Log [TB]\nCedar Log [TB]\nAspen Log [TB]\nJungle Log [TB]\nMaple Wood Planks\nAspen Wood Planks\nPlum Wood Planks\nJungle Wood Planks\nPine Wood Planks\nCedar Wood Planks\nBarkless Maple Log [TB]\nBarkless Aspen Log [TB]\nBarkless Plum Log [TB]\nBarkless Jungle Log [TB]\nBarkless Pine Log [TB]\nBarkless Cedar Log [TB]\nfree_placeholder2\nStone\nMessy Stone\nfree_placeholder\nSmooth Stone\nDiorite\nSmooth Diorite\nAndesite\nSmooth Andesite\nGranite\nSmooth Granite\nSandstone\nYellowstone\nCoal Ore\nIron Ore\nGold Ore\nLapis Lazuli Ore\nEmerald Ore\nDiamond Ore\nBlock of Coal\nBlock of Iron\nBlock of Gold\nBlock of Lapis Lazuli\nBlock of Emerald\nWhite Wool\nOrange Wool\nMagenta Wool\nLight Blue Wool\nYellow Wool\nLime Wool\nPink Wool\nGray Wool\nLight Gray Wool\nCyan Wool\nPurple Wool\nBlue Wool\nBrown Wool\nGreen Wool\nRed Wool\nBlack Wool\nBaked Clay\nWhite Baked Clay\nOrange Baked Clay\nMagenta Baked Clay\nLight Blue Baked Clay\nYellow Baked Clay\nLime Baked Clay\nPink Baked Clay\nGray Baked Clay\nLight Gray Baked Clay\nCyan Baked Clay\nPurple Baked Clay\nBlue Baked Clay\nBrown Baked Clay\nGreen Baked Clay\nRed Baked Clay\nBlack Baked Clay\nGray Concrete\nLight Gray Concrete\nBlack Concrete\nBlue Concrete\nBrown Concrete\nCyan Concrete\nLight Blue Concrete\nLime Concrete\nMagenta Concrete\nOrange Concrete\nPink Concrete\nPurple Concrete\nRed Concrete\nWhite Concrete\nGreen Concrete\nYellow Concrete\nPine Leaves [TC]\nAspen Leaves [TC]\nMaple Leaves [TC]\nJungle Leaves [TC]\nPumpkin_placeholder\nWatermelon\nGlass\nBlack Glass\nBlue Glass\nBrown Glass\nCyan Glass\nGray Glass\nLight Gray Glass\nGreen Glass\nLight Blue Glass\nLime Glass\nMagenta Glass\nOrange Glass\nPink Glass\nPurple Glass\nRed Glass\nWhite Glass\nYellow Glass\nUNUSED BLOCK TYPE\nDim Lamp On\nDim Lamp Off\nWater\nInvisible Solid\nBricks\nStone Bricks\nDark Red Brick\nDark Red Stone\nBlock of Quartz\nChiseled Block of Quartz\nEngraved Stone\nMossy Stone Bricks\nCracked Stone Bricks\nSmooth Sandstone\nEngraved Sandstone\nIce\nObsidian\nHay Bale\nSponge\nBeacon\ntemp\nGolden Decoration\nMoonstone Explosive\nBedrock\nSmooth Double Stone Slab\nCactus [G]\nGrass\nDandelion [RT]\nPoppy [RT]\nRed Tulip [RT]\nPink Tulip [RT]\nWhite Tulip [RT]\nOrange Tulip [RT]\nDaisy [RT]\nBluebell [RT]\nForget-me-not [RT]\nAllium [RT]\nAzure Bluet [RT]\nLily of the Valley [RT]\nShadow Rose [RT]\nFurnace [R]\nWorkbench [R]\nBlock of Diamond\nMaple Door [O,R]\n_Maple Door Top [O,R]\nMaple Trapdoor [O,R]\nAspen Sapling\nMaple Sapling\nJungle Sapling\nPlum Sapling\nPine Sapling\nCedar Sapling\nChest [R]\nProtector\nFat Cactus [G]\nDry Fat Cactus\nMaple Ladder [R]\nVines [G,R]\nIron Ladder [R]\nWhite Planks\nOrange Planks\nMagenta Planks\nLight Blue Planks\nYellow Planks\nLime Planks\nPink Planks\nGray Planks\nLight Gray Planks\nCyan Planks\nPurple Planks\nBlue Planks\nBrown Planks\nGreen Planks\nRed Planks\nBlack Planks\nArtisan Bench\nWhite Ceramic [R]\nOrange Ceramic [R]\nMagenta Ceramic [R]\nLight Blue Ceramic [R]\nYellow Ceramic [R]\nLime Ceramic [R]\nPink Ceramic [R]\nGray Ceramic [R]\nLight Gray Ceramic [R]\nCyan Ceramic [R]\nPurple Ceramic [R]\nBlue Ceramic [R]\nBrown Ceramic [R]\nGreen Ceramic [R]\nRed Ceramic [R]\nBlack Ceramic [R]\nWheat Seeds\nWheat_stage1\nWheat_stage2\nWheat_stage3\nWheat_stage4\nWheat_stage5\nWheat [FG]\nTilled Soil\nBread Block\nReservedBread BlockRotation1\nReservedBread BlockRotation2\nReservedBread BlockRotation3\nMossy Messy Stone\nWhite Bed [R]\n_White Bed Head [R]\nOrange Bed [R]\n_Orange Bed Head [R]\nMagenta Bed [R]\n_Magenta Bed Head [R]\nLight Blue Bed [R]\n_Light Blue Bed Head [R]\nYellow Bed [R]\n_Yellow Bed Head [R]\nLime Bed [R]\n_Lime Bed Head [R]\nPink Bed [R]\n_Pink Bed Head [R]\nGray Bed [R]\n_Gray Bed Head [R]\nLight Gray Bed [R]\n_Light Gray Bed Head [R]\nCyan Bed [R]\n_Cyan Bed Head [R]\nPurple Bed [R]\n_Purple Bed Head [R]\nBlue Bed [R]\n_Blue Bed Head [R]\nBrown Bed [R]\n_Brown Bed Head [R]\nGreen Bed [R]\n_Green Bed Head [R]\nRed Bed [R]\n_Red Bed Head [R]\nBlack Bed [R]\n_Black Bed Head [R]\nApple Block\nMoonstone Ore\nMoonstone Chest [R]\nBlock of Moonstone\nMagma\nUseless Soil\nMarked Sandstone\nRed Sandstone\nSmooth Red Sandstone\nEngraved Red Sandstone\nMarked Red Sandstone\nGreen Stone\nGreen Bricks\nDark Green Bricks\nSandstone Bricks\nEngraved Diorite\nDiorite Bricks\nEngraved Andesite\nAndesite Bricks\nEngraved Granite\nGranite Bricks\nIce Bricks\nPlaceholder Packed Ice\nPlaceholder Blue Ice\nPlum Leaves [TC]\nCedar Leaves [TC]\nPalm Leaves [TC]\nPalm Log [TB]\nPalm Wood Planks\nPalm Sapling\nPine Door [O,R]\n_Pine Door Top [O,R]\nPlum Door [O,R]\n_Plum Door Top [O,R]\nCedar Door [O,R]\n_Cedar Door Top [O,R]\nAspen Door [O,R]\n_Aspen Door Top [O,R]\nJungle Door [O,R]\n_Jungle Door Top [O,R]\nPalm Door [O,R]\n_Palm Door Top [O,R]\nPine Trapdoor [O,R]\nPlum Trapdoor [O,R]\nCedar Trapdoor [O,R]\nAspen Trapdoor [O,R]\nJungle Trapdoor [O,R]\nPalm Trapdoor [O,R]\nRed Sand\nRed Sandstone Bricks\nRocky Dirt\nAutumn Maple Leaves [TC]\nFallen Maple Leaves [H,R]\nMaple Slab [H,R]\nPine Slab [H,R]\nPlum Slab [H,R]\nCedar Slab [H,R]\nAspen Slab [H,R]\nJungle Slab [H,R]\nPalm Slab [H,R]\nDirt Slab [H,R]\nGrass Slab [H,R]\nMessy Stone Slab [H,R]\nStone Slab [H,R]\nSmooth Stone Slab [H,R]\nEngraved Stone Slab [H,R]\nStone Bricks Slab [H,R]\nMossy Stone Slab [H,R]\nMossy Stone Bricks Slab [H,R]\nAndesite Slab [H,R]\nSmooth Andesite Slab [H,R]\nEngraved Andesite Slab [H,R]\nAndesite Bricks Slab [H,R]\nDiorite Slab [H,R]\nSmooth Diorite Slab [H,R]\nEngraved Diorite Slab [H,R]\nDiorite Bricks Slab [H,R]\nGranite Slab [H,R]\nSmooth Granite Slab [H,R]\nEngraved Granite Slab [H,R]\nGranite Bricks Slab [H,R]\nSandstone Slab [H,R]\nSmooth Sandstone Slab [H,R]\nEngraved Sandstone Slab [H,R]\nMarked Sandstone Slab [H,R]\nSandstone Bricks Slab [H,R]\nRed Sandstone Slab [H,R]\nSmooth Red Sandstone Slab [H,R]\nEngraved Red Sandstone Slab [H,R]\nMarked Red Sandstone Slab [H,R]\nRed Sandstone Bricks Slab [H,R]\nBricks Slab [H,R]\nIce Bricks Slab [H,R]\nPlum Block\nCoconut Block\nPear Log [TB]\nPear Wood Planks\nPear Leaves [TC]\nPear Door [O,R]\n_Pear Door Top [O,R]\nPear Trapdoor [O,R]\nPear Sapling\nPear Slab [H,R]\nPear Block\nCompressed Messy Stone\nExtra Compressed Messy Stone\nSuper Compressed Messy Stone\nHyper Compressed Messy Stone\nUltra Compressed Messy Stone\nMega Compressed Messy Stone\nBoard [R]\nNet\nCobweb\nBrown Mushroom Block\nRed Mushroom Block\nMushroom Stem\nFireball Block\nIceball Block\nWatermelon Seeds [G]\nAttached Watermelon Stem [R]\nPumpkin Seeds [G]\nAttached Pumpkin Stem [R]\nPumpkin\nCarved Pumpkin [R]\nJack o\'Lantern [R]\nMelon Seeds [G]\nAttached Melon Stem [R]\nMelon\nIron Watermelon\nPatterned Black Glass\nPatterned Blue Glass\nPatterned Brown Glass\nPatterned Cyan Glass\nPatterned Gray Glass\nPatterned Light Gray Glass\nPatterned Green Glass\nPatterned Light Blue Glass\nPatterned Lime Glass\nPatterned Magenta Glass\nPatterned Orange Glass\nPatterned Pink Glass\nPatterned Purple Glass\nPatterned Red Glass\nPatterned White Glass\nPatterned Yellow Glass\nPotion Table [R]\nPine Ladder [R]\nPlum Ladder [R]\nCedar Ladder [R]\nAspen Ladder [R]\nJungle Ladder [R]\nPalm Ladder [R]\nPear Ladder [R]\nBlack Carpet\nBlue Carpet\nBrown Carpet\nCyan Carpet\nGray Carpet\nLight Gray Carpet\nGreen Carpet\nLight Blue Carpet\nLime Carpet\nMagenta Carpet\nOrange Carpet\nPink Carpet\nPurple Carpet\nRed Carpet\nWhite Carpet\nYellow Carpet\nBookshelf [B,R]\nEmpty Bookshelf [B,R]\nMailbox [R]\nRice [FG]\nRice_stage1\nRice_stage2\nRice_stage3\nRice_stage4\nRice_stage5\nCranberries\nCranberries_stage1\nCranberries_stage2\nRed Mushroom\nBrown Mushroom\nCotton Seeds\nCotton_stage1\nCotton_stage2\nCotton_stage3\nTribe Protector\nTall Grass [TP]\nFaction Protector\nBarkless Palm Log [TB]\nBarkless Pear Log [TB]\nMystery Block\nRocket\nSuper Rocket\nYellow Concrete Slab [H,R]\nWhite Concrete Slab [H,R]\nRed Concrete Slab [H,R]\nPurple Concrete Slab [H,R]\nPink Concrete Slab [H,R]\nOrange Concrete Slab [H,R]\nMagenta Concrete Slab [H,R]\nLime Concrete Slab [H,R]\nLight Gray Concrete Slab [H,R]\nLight Blue Concrete Slab [H,R]\nGreen Concrete Slab [H,R]\nGray Concrete Slab [H,R]\nCyan Concrete Slab [H,R]\nBrown Concrete Slab [H,R]\nBlue Concrete Slab [H,R]\nBlack Concrete Slab [H,R]\nGrenade\nCherry Log [TB]\nBarkless Cherry Log [TB]\nCherry Wood Planks\nCherry Leaves [TC]\nFallen Cherry Leaves [H,R]\nCherry Door [O,R]\n_Cherry Door Top [O,R]\nCherry Trapdoor [O,R]\nCherry Sapling\nCherry Slab [H,R]\nCherry Ladder [R]\nCherry Block\nBouncy Bomb Block\nObby Rocket\nWood Spikes\nStone Spikes\nIron Spikes\nGold Spikes\nDiamond Spikes\nKill Spikes\nCorn Block\nCorn Seeds [FG,G]\nCorn Seeds_stage1\nCorn Plant_stage1\nCorn Plant_stage2\nCorn Plant_stage3\nCorn Plant_stage4\nCorn Plant_stage5\nCorn Plant [FG]\nLoot Chest [R]\nMelting Ice [BK]\nYellow Paintball Explosive\nWhite Paintball Explosive\nRed Paintball Explosive\nPurple Paintball Explosive\nPink Paintball Explosive\nOrange Paintball Explosive\nMagenta Paintball Explosive\nLime Paintball Explosive\nLight Gray Paintball Explosive\nLight Blue Paintball Explosive\nGreen Paintball Explosive\nGray Paintball Explosive\nCyan Paintball Explosive\nBrown Paintball Explosive\nBlue Paintball Explosive\nBlack Paintball Explosive\nYellow Quick Paintball Explosive\nWhite Quick Paintball Explosive\nRed Quick Paintball Explosive\nPurple Quick Paintball Explosive\nPink Quick Paintball Explosive\nOrange Quick Paintball Explosive\nMagenta Quick Paintball Explosive\nLime Quick Paintball Explosive\nLight Gray Quick Paintball Explosive\nLight Blue Quick Paintball Explosive\nGreen Quick Paintball Explosive\nGray Quick Paintball Explosive\nCyan Quick Paintball Explosive\nBrown Quick Paintball Explosive\nBlue Quick Paintball Explosive\nBlack Quick Paintball Explosive\nYellow Seeking Paintball Explosive\nWhite Seeking Paintball Explosive\nRed Seeking Paintball Explosive\nPurple Seeking Paintball Explosive\nPink Seeking Paintball Explosive\nOrange Seeking Paintball Explosive\nMagenta Seeking Paintball Explosive\nLime Seeking Paintball Explosive\nLight Gray Seeking Paintball Explosive\nLight Blue Seeking Paintball Explosive\nGreen Seeking Paintball Explosive\nGray Seeking Paintball Explosive\nCyan Seeking Paintball Explosive\nBrown Seeking Paintball Explosive\nBlue Seeking Paintball Explosive\nBlack Seeking Paintball Explosive\nYellow Sticky Paintball Explosive\nWhite Sticky Paintball Explosive\nRed Sticky Paintball Explosive\nPurple Sticky Paintball Explosive\nPink Sticky Paintball Explosive\nOrange Sticky Paintball Explosive\nMagenta Sticky Paintball Explosive\nLime Sticky Paintball Explosive\nLight Gray Sticky Paintball Explosive\nLight Blue Sticky Paintball Explosive\nGreen Sticky Paintball Explosive\nGray Sticky Paintball Explosive\nCyan Sticky Paintball Explosive\nBrown Sticky Paintball Explosive\nBlue Sticky Paintball Explosive\nBlack Sticky Paintball Explosive\nWhite Strongbed [R]\n_White Strongbed Head [R]\nOrange Strongbed [R]\n_Orange Strongbed Head [R]\nMagenta Strongbed [R]\n_Magenta Strongbed Head [R]\nLight Blue Strongbed [R]\n_Light Blue Strongbed Head [R]\nYellow Strongbed [R]\n_Yellow Strongbed Head [R]\nLime Strongbed [R]\n_Lime Strongbed Head [R]\nPink Strongbed [R]\n_Pink Strongbed Head [R]\nGray Strongbed [R]\n_Gray Strongbed Head [R]\nLight Gray Strongbed [R]\n_Light Gray Strongbed Head [R]\nCyan Strongbed [R]\n_Cyan Strongbed Head [R]\nPurple Strongbed [R]\n_Purple Strongbed Head [R]\nBlue Strongbed [R]\n_Blue Strongbed Head [R]\nBrown Strongbed [R]\n_Brown Strongbed Head [R]\nGreen Strongbed [R]\n_Green Strongbed Head [R]\nRed Strongbed [R]\n_Red Strongbed Head [R]\nBlack Strongbed [R]\n_Black Strongbed Head [R]\nTimed Spike Bomb Block [FL]\nLava\nFat Brown Mushroom\nFat Red Mushroom\nChili Pepper Block\nChili Pepper Seeds [LV]\nChili Pepper Plant_stage1 [LV]\nChili Pepper Plant_stage2 [LV]\nChili Pepper Plant_stage3 [LV]\nChili Pepper Plant_stage4 [LV]\nChili Pepper Plant [FG,LV]\nChili Pepper Plant_stage5 [LV]\nCode Block\nToxin Ball Block\nSpawn Block (Yellow) [R]\nSpawn Block (White) [R]\nSpawn Block (Red) [R]\nSpawn Block (Purple) [R]\nSpawn Block (Pink) [R]\nSpawn Block (Orange) [R]\nSpawn Block (Magenta) [R]\nSpawn Block (Lime) [R]\nSpawn Block (Light Gray) [R]\nSpawn Block (Light Blue) [R]\nSpawn Block (Green) [R]\nSpawn Block (Gray) [R]\nSpawn Block (Cyan) [R]\nSpawn Block (Brown) [R]\nSpawn Block (Blue) [R]\nSpawn Block (Black) [R]\nCheckpoint Block [R]\nCustom Lobby Block [R]\nGenerator Spawn Block (Red)\nGenerator Spawn Block (Blue)\nGenerator Spawn Block (Lime)\nGenerator Spawn Block (Yellow)\nGenerator Spawn Block (Cyan)\nGenerator Spawn Block (White)\nGenerator Spawn Block (Pink)\nGenerator Spawn Block (Gray)\nTrader Shop Spawn Block [R]\nWizard Shop Spawn Block [R]\nGenerator Spawn Block (Diamond)\nGenerator Spawn Block (Moonstone)\nGenerator Spawn Block (Ore)\nGoal Block (Red)\nGoal Block (Blue)\nFinish Block\nDrop Location Block\nObby Death Block\nObby Absorb Block\nObby Absorb Death Block\nBone Block\nPig Spawner Block\nCow Spawner Block\nSheep Spawner Block\nCave Golem Spawner Block\nDraugr Zombie Spawner Block\nDraugr Skeleton Spawner Block\nEmpty Spawner Block\nFrost Golem Spawner Block\nFrost Zombie Spawner Block\nFrost Skeleton Spawner Block\nSnowy Messy Stone\nSnowy Stone Slab [H,R]\nDraugr Knight Spawner Block\nPacked Snow\nCarved Messy Stone\nSpectral Grass\nSpectral Log [TB]\nBarkless Spectral Log [TB]\nSpectral Wood Planks\nSpectral Leaves [TC]\nSpectral Door [O,R]\n_Spectral Door Top [O,R]\nSpectral Trapdoor [O,R]\nSpectral Sapling\nSpectral Slab [H,R]\nSpectral Ladder [R]\nWood Enchanting Table [R]\nStone Enchanting Table [R]\nIron Enchanting Table [R]\nGold Enchanting Table [R]\nDiamond Enchanting Table [R]\nPine Grass Block\nPine Grass Slab [H,R]\nPine Grass\nPine Fern\nFallen Pine Cone\nPine Cone Block\nWolf Spawner Block\nBear Spawner Block\nDeer Spawner Block\nStag Spawner Block\nBone Antlers [R]\nGold Antlers [R]\nGold Watermelon Stag Spawner Block\nSalvaging Table [R]\nChalk\nYellow Chalk\nWhite Chalk\nRed Chalk\nPurple Chalk\nPink Chalk\nOrange Chalk\nMagenta Chalk\nLime Chalk\nLight Gray Chalk\nLight Blue Chalk\nGreen Chalk\nGray Chalk\nCyan Chalk\nBrown Chalk\nBlue Chalk\nBlack Chalk\nYellow Chalk Bricks\nWhite Chalk Bricks\nRed Chalk Bricks\nPurple Chalk Bricks\nPink Chalk Bricks\nOrange Chalk Bricks\nMagenta Chalk Bricks\nLime Chalk Bricks\nLight Gray Chalk Bricks\nLight Blue Chalk Bricks\nGreen Chalk Bricks\nGray Chalk Bricks\nCyan Chalk Bricks\nBrown Chalk Bricks\nBlue Chalk Bricks\nBlack Chalk Bricks\nYellow Chalk Slab [H,R]\nWhite Chalk Slab [H,R]\nRed Chalk Slab [H,R]\nPurple Chalk Slab [H,R]\nPink Chalk Slab [H,R]\nOrange Chalk Slab [H,R]\nMagenta Chalk Slab [H,R]\nLime Chalk Slab [H,R]\nLight Gray Chalk Slab [H,R]\nLight Blue Chalk Slab [H,R]\nGreen Chalk Slab [H,R]\nGray Chalk Slab [H,R]\nCyan Chalk Slab [H,R]\nBrown Chalk Slab [H,R]\nBlue Chalk Slab [H,R]\nBlack Chalk Slab [H,R]\nYellow Chalk Bricks Slab [H,R]\nWhite Chalk Bricks Slab [H,R]\nRed Chalk Bricks Slab [H,R]\nPurple Chalk Bricks Slab [H,R]\nPink Chalk Bricks Slab [H,R]\nOrange Chalk Bricks Slab [H,R]\nMagenta Chalk Bricks Slab [H,R]\nLime Chalk Bricks Slab [H,R]\nLight Gray Chalk Bricks Slab [H,R]\nLight Blue Chalk Bricks Slab [H,R]\nGreen Chalk Bricks Slab [H,R]\nGray Chalk Bricks Slab [H,R]\nCyan Chalk Bricks Slab [H,R]\nBrown Chalk Bricks Slab [H,R]\nBlue Chalk Bricks Slab [H,R]\nBlack Chalk Bricks Slab [H,R]\nLeaf Bed [R]\n_Leaf Bed Head [R]\nJungle Grass Block\nJungle Grass Slab [H,R]\nJungle Tall Grass [TP]\nCatnip\nMango Log [TB]\nBarkless Mango Log [TB]\nMango Wood Planks\nMango Leaves [TC]\nMango Door [O,R]\n_Mango Door Top [O,R]\nMango Trapdoor [O,R]\nMango Sapling\nMango Slab [H,R]\nMango Ladder [R]\nMango Block\nBanana Block\nBanana Seeds [G]\nAttached Banana Stem [R]\nDangling Rope\nDangling Vine\nGorilla Spawner Block\nWildcat Spawner Block\nFruity Maple Leaves\nPine Cone Leaves\nFruity Plum Leaves\nFruity Palm Leaves\nFruity Pear Leaves\nFruity Cherry Leaves\nFruity Mango Leaves\nDraugr Huntress Spawner Block\nMagma Golem Spawner Block\nBlack Portal\nBlue Portal\nBrown Portal\nCyan Portal\nGray Portal\nGreen Portal\nGrey Portal\nLight Blue Portal\nLight Gray Portal\nLime Portal\nMagenta Portal\nOrange Portal\nPink Portal\nPurple Portal\nRed Portal\nWhite Portal\nYellow Portal\nLeather Block\nHorse Spawner Block\nTomato Plant [FG,TP]\nTomato Plant_stage1\nCarrot Plant [FG]\nCarrot Plant_stage1\nPotato Plant [FG]\nPotato Plant_stage1\nStrawberry Bush\nStrawberry Bush_stage1\nStrawberry Bush_stage2\nSugar Cane Plant [FG,TP]\nSugar Cane Plant_stage1\nLettuce Plant [FG]\nLettuce Plant_stage1\nCoffee Plant [FG]\nCoffee Plant_stage1\nCauliflower Plant [FG]\nCauliflower Plant_stage1\nParsnip Plant [FG]\nParsnip Plant_stage1\nBlueberry Bush\nBlueberry Bush_stage1\nBlueberry Bush_stage2\nRed Cabbage Plant [FG]\nRed Cabbage Plant_stage1\nBeetroot Plant [FG]\nBeetroot Plant_stage1\nAutumn Aspen Leaves [TC]\nAutumn Fern\nIron Chest [R]\nCrate\nCarrot Block\nCarrot Seeds\nPotato Block\nPotato Seeds\nBeetroot Block\nBeetroot Seeds\nWhite Banner [H,R]\n_White Banner Flag [H,R]\nOrange Banner [H,R]\n_Orange Banner Flag [H,R]\nMagenta Banner [H,R]\n_Magenta Banner Flag [H,R]\nLight Blue Banner [H,R]\n_Light Blue Banner Flag [H,R]\nYellow Banner [H,R]\n_Yellow Banner Flag [H,R]\nLime Banner [H,R]\n_Lime Banner Flag [H,R]\nPink Banner [H,R]\n_Pink Banner Flag [H,R]\nGray Banner [H,R]\n_Gray Banner Flag [H,R]\nLight Gray Banner [H,R]\n_Light Gray Banner Flag [H,R]\nCyan Banner [H,R]\n_Cyan Banner Flag [H,R]\nPurple Banner [H,R]\n_Purple Banner Flag [H,R]\nBlue Banner [H,R]\n_Blue Banner Flag [H,R]\nBrown Banner [H,R]\n_Brown Banner Flag [H,R]\nGreen Banner [H,R]\n_Green Banner Flag [H,R]\nRed Banner [H,R]\n_Red Banner Flag [H,R]\nBlack Banner [H,R]\n_Black Banner Flag [H,R]\nDraugr Banner [H,R]\n_Draugr Banner Flag [H,R]\nSpirit Golem Spawner Block\nSpirit Wolf Spawner Block\nSpirit Bear Spawner Block\nSpirit Stag Spawner Block\nSpirit Gorilla Spawner Block\nFertilised Soil\n_Grant Wool Top Left [R]\n_Grant Wool Top Right [R]\nGrant Wool [R]\n_Grant Wool Bottom Right [R]\n_Stampede Top Left [R]\n_Stampede Top Right [R]\nStampede [R]\n_Stampede Bottom Right [R]\n_Unforgotten Pig Top Left [R]\n_Unforgotten Pig Top Right [R]\nUnforgotten Pig [R]\n_Unforgotten Pig Bottom Right [R]\n_Sunbathed Gallope Top Left [R]\n_Sunbathed Gallope Top Right [R]\nSunbathed Gallope [R]\n_Sunbathed Gallope Bottom Right [R]\n_Dreaming Canine Top Left [R]\n_Dreaming Canine Top Right [R]\nDreaming Canine [R]\n_Dreaming Canine Bottom Right [R]\n_A Doe Through The Green Top Left [R]\n_A Doe Through The Green Top Right [R]\nA Doe Through The Green [R]\n_A Doe Through The Green Bottom Right [R]\n_Whiskers Top Left [R]\n_Whiskers Top Right [R]\nWhiskers [R]\n_Whiskers Bottom Right [R]\nHollow Crate\nDraugr Warper Spawner Block\nRadar [R]\n_Radar Back [R]\n_Radar Dish [R]\nInactive Radar [R]\n_Inactive Radar Back [R]\n_Inactive Radar Dish [R]\nActive Radar [R]\n_Active Radar Back [R]\n_Active Radar Dish [R]\nLucky Block\nUltra Lucky Block\nGold Trophy [R]\nSmall Magenta Pod\n_Small Magenta Pod Mid\n_Small Magenta Pod Top\nSmall Light Gray Pod\n_Small Light Gray Pod Mid\n_Small Light Gray Pod Top\nSmall Red Pod\n_Small Red Pod Mid\n_Small Red Pod Top\nINTERNAL_MESH_Gold Trophy\nFrost Wraith Spawner Block\nDraugr Reaver Spawner Block\nSmall White Pod\n_Small White Pod Mid\n_Small White Pod Top\nSmall Orange Pod\n_Small Orange Pod Mid\n_Small Orange Pod Top\nSmall Light Blue Pod\n_Small Light Blue Pod Mid\n_Small Light Blue Pod Top\nSmall Yellow Pod\n_Small Yellow Pod Mid\n_Small Yellow Pod Top\nSmall Lime Pod\n_Small Lime Pod Mid\n_Small Lime Pod Top\nSmall Pink Pod\n_Small Pink Pod Mid\n_Small Pink Pod Top\nSmall Gray Pod\n_Small Gray Pod Mid\n_Small Gray Pod Top\nSmall Cyan Pod\n_Small Cyan Pod Mid\n_Small Cyan Pod Top\nSmall Purple Pod\n_Small Purple Pod Mid\n_Small Purple Pod Top\nSmall Blue Pod\n_Small Blue Pod Mid\n_Small Blue Pod Top\nSmall Brown Pod\n_Small Brown Pod Mid\n_Small Brown Pod Top\nSmall Green Pod\n_Small Green Pod Mid\n_Small Green Pod Top\nSmall Black Pod\n_Small Black Pod Mid\n_Small Black Pod Top\nSkull Banner [H,R]\n_Skull Banner Flag [H,R]\nRainbow Banner [H,R]\n_Rainbow Banner Flag [H,R]\nDuo Blocchino Statue\nBebek Bebek Bebek Statue\nBobino Musculino Statue\nBobzilla Statue\nBrra Brra Pachim Statue\nCapitano Explovissimo Statue\nCappuccino Ninjino Statue\nChimpanzano Bananano Statue\nIl Wizardini Del Porko Statue\nLucchia Blocchi Statue\nMonsieur Bedwar Statue\nTwirlina Cappucina Statue\nWeapon Lucky Block\nBoiling Pot\nChopping Board\nFrying Pan\nHob Boiling\nHob Frying\nKitchen Worktop\nSlicing Board\nWood Trophy [R]\nINTERNAL_MESH_Wood Trophy\nStone Trophy [R]\nINTERNAL_MESH_Stone Trophy\nIron Trophy [R]\nINTERNAL_MESH_Iron Trophy\nDiamond Trophy [R]\nINTERNAL_MESH_Diamond Trophy\nMoonstone Trophy [R]\nINTERNAL_MESH_Moonstone Trophy\nBlack Wave\nBlue Wave\nBrown Wave\nCyan Wave\nGreen Wave\nGrey Wave\nLight Blue Wave\nLight Grey Wave\nLime Wave\nMagenta Wave\nOrange Wave\nPink Wave\nPurple Wave\nRed Wave\nWhite Wave\nYellow Wave\nWhite Directional Arrow [R]\nOrange Directional Arrow [R]\nMagenta Directional Arrow [R]\nLight Blue Directional Arrow [R]\nYellow Directional Arrow [R]\nLime Directional Arrow [R]\nPink Directional Arrow [R]\nGrey Directional Arrow [R]\nLight Grey Directional Arrow [R]\nCyan Directional Arrow [R]\nPurple Directional Arrow [R]\nBlue Directional Arrow [R]\nBrown Directional Arrow [R]\nGreen Directional Arrow [R]\nRed Directional Arrow [R]\nBlack Directional Arrow [R]\nBin\nVending Machine [R]\n_Vending Machine Top [R]\nJob Application Statue\nJohn Beef Statue\n67 Statue\nColoured Wheel\nUFO\nTorch [H,R]\nYellow Torch [H,R]\nWhite Torch [H,R]\nRed Torch [H,R]\nPurple Torch [H,R]\nPink Torch [H,R]\nOrange Torch [H,R]\nMagenta Torch [H,R]\nLime Torch [H,R]\nLight Gray Torch [H,R]\nLight Blue Torch [H,R]\nGreen Torch [H,R]\nGray Torch [H,R]\nCyan Torch [H,R]\nBrown Torch [H,R]\nBlue Torch [H,R]\nBlack Torch [H,R]\nYellow Neon\nWhite Neon\nRed Neon\nPurple Neon\nPink Neon\nOrange Neon\nMagenta Neon\nLime Neon\nLight Gray Neon\nLight Blue Neon\nGreen Neon\nGray Neon\nCyan Neon\nBrown Neon\nBlue Neon\nBlack Neon\nLanding Pad\nWeak Jump Pad\nJump Pad\nStrong Jump Pad\nSuper Jump Pad\nInvisible Yellow Light\nInvisible White Light\nInvisible Red Light\nInvisible Purple Light\nInvisible Pink Light\nInvisible Orange Light\nInvisible Magenta Light\nInvisible Lime Light\nInvisible Light Gray Light\nInvisible Light Blue Light\nInvisible Green Light\nInvisible Gray Light\nInvisible Cyan Light\nInvisible Brown Light\nInvisible Blue Light\nInvisible Black Light\nInvisible Sky Light\nGun Lucky Block\nGhost Chest\nGhost Lucky Block\nGhost Mystery Block\nFootball\nPet Lucky Block\nGlowing Mushroom [H,R]\nCrystal [H,R]\nSlime Trail [R]\nOvergrown Grass Block\nOvergrown Pine Grass Block\nOvergrown Jungle Grass Block\nSmoke Block\nPipe\nAuto Miner [R]\n_Auto Miner Drill Front [R]\n_Auto Miner Drill Back [R]\n_Auto Miner Foot Front [R]\n_Auto Miner Body [R]\nAuto Crafter\nRocket Ship\n_Rocket Ship Southwest L2\n_Rocket Ship Southwest L3\n_Rocket Ship Southwest L4\n_Rocket Ship Southwest L5\n_Rocket Ship Southeast L1\n_Rocket Ship Southeast L2\n_Rocket Ship Southeast L3\n_Rocket Ship Southeast L4\n_Rocket Ship Southeast L5\n_Rocket Ship Northwest L1\n_Rocket Ship Northwest L2\n_Rocket Ship Northwest L3\n_Rocket Ship Northwest L4\n_Rocket Ship Northwest L5\n_Rocket Ship Northeast L1\n_Rocket Ship Northeast L2\n_Rocket Ship Northeast L3\n_Rocket Ship Northeast L4\n_Rocket Ship Northeast L5\nRocket Ship S2\nRocket Ship S3\nRocket Ship S4\nRocket Ship S5\nINTERNAL_MESH_Rocket Ship Full\nExtractor Pipe\nSplitter Pipe\nSolar Panel [R]\n_Solar Panel SE [R]\n_Solar Panel NW [R]\n_Solar Panel NE [R]\nWire\nFilter Pipe\nMerger Pipe\nAuto Harvester\nStalker Spawner Block\nLunite Ore\nBlock of Lunite\nLunite Auto Miner [R]\n_Lunite Auto Miner Drill Front [R]\n_Lunite Auto Miner Drill Back [R]\n_Lunite Auto Miner Foot Front [R]\n_Lunite Auto Miner Body [R]\nLunite Auto Crafter\nLunite Auto Harvester\nBowling Alley Floor\nCrone Spawner Block\nSlime Spawner Block\nIron Guardian Spawner Block\nGold Guardian Spawner Block\nDiamond Guardian Spawner Block\nMoonstone Guardian Spawner Block\nDry Grass Block\nOvergrown Dry Grass Block\nDead Bush\nDry Grass Slab [H,R]\nLantern [H,R]\nLily Pad [R]\nCamel Spawner Block\n_Hump Day Top Left [R]\n_Hump Day Top Right [R]\nHump Day [R]\n_Hump Day Bottom Right [R]\nRare Lucky Block\nSuper Lucky Block\nRare Weapon Lucky Block\nSuper Weapon Lucky Block\nBuilding Lucky Block\nRare Building Lucky Block\nSuper Building Lucky Block\nArmour Lucky Block\nRare Armour Lucky Block\nSuper Armour Lucky Block\nTools Lucky Block\nRare Tools Lucky Block\nSuper Tools Lucky Block\nFood Lucky Block\nRare Food Lucky Block\nSuper Food Lucky Block\nPotion Lucky Block\nRare Potion Lucky Block\nSuper Potion Lucky Block\nBlock Destroyer TNT\nMaple Stairs [H,R,SC]\nPine Stairs [H,R,SC]\nPlum Stairs [H,R,SC]\nCedar Stairs [H,R,SC]\nAspen Stairs [H,R,SC]\nJungle Stairs [H,R,SC]\nPalm Stairs [H,R,SC]\nPear Stairs [H,R,SC]\nCherry Stairs [H,R,SC]\nSpectral Stairs [H,R,SC]\nMango Stairs [H,R,SC]\nMessy Stone Stairs [H,R,SC]\nStone Stairs [H,R,SC]\nSmooth Stone Stairs [H,R,SC]\nEngraved Stone Stairs [H,R,SC]\nStone Bricks Stairs [H,R,SC]\nMossy Stone Stairs [H,R,SC]\nMossy Stone Bricks Stairs [H,R,SC]\nAndesite Stairs [H,R,SC]\nSmooth Andesite Stairs [H,R,SC]\nEngraved Andesite Stairs [H,R,SC]\nAndesite Bricks Stairs [H,R,SC]\nDiorite Stairs [H,R,SC]\nSmooth Diorite Stairs [H,R,SC]\nEngraved Diorite Stairs [H,R,SC]\nDiorite Bricks Stairs [H,R,SC]\nGranite Stairs [H,R,SC]\nSmooth Granite Stairs [H,R,SC]\nEngraved Granite Stairs [H,R,SC]\nGranite Bricks Stairs [H,R,SC]\nSandstone Stairs [H,R,SC]\nSmooth Sandstone Stairs [H,R,SC]\nEngraved Sandstone Stairs [H,R,SC]\nMarked Sandstone Stairs [H,R,SC]\nSandstone Bricks Stairs [H,R,SC]\nRed Sandstone Stairs [H,R,SC]\nSmooth Red Sandstone Stairs [H,R,SC]\nEngraved Red Sandstone Stairs [H,R,SC]\nMarked Red Sandstone Stairs [H,R,SC]\nRed Sandstone Bricks Stairs [H,R,SC]\nBricks Stairs [H,R,SC]\nIce Bricks Stairs [H,R,SC]\nYellow Concrete Stairs [H,R,SC]\nWhite Concrete Stairs [H,R,SC]\nRed Concrete Stairs [H,R,SC]\nPurple Concrete Stairs [H,R,SC]\nPink Concrete Stairs [H,R,SC]\nOrange Concrete Stairs [H,R,SC]\nMagenta Concrete Stairs [H,R,SC]\nLime Concrete Stairs [H,R,SC]\nLight Gray Concrete Stairs [H,R,SC]\nLight Blue Concrete Stairs [H,R,SC]\nGreen Concrete Stairs [H,R,SC]\nGray Concrete Stairs [H,R,SC]\nCyan Concrete Stairs [H,R,SC]\nBrown Concrete Stairs [H,R,SC]\nBlue Concrete Stairs [H,R,SC]\nBlack Concrete Stairs [H,R,SC]\nYellow Chalk Stairs [H,R,SC]\nWhite Chalk Stairs [H,R,SC]\nRed Chalk Stairs [H,R,SC]\nPurple Chalk Stairs [H,R,SC]\nPink Chalk Stairs [H,R,SC]\nOrange Chalk Stairs [H,R,SC]\nMagenta Chalk Stairs [H,R,SC]\nLime Chalk Stairs [H,R,SC]\nLight Gray Chalk Stairs [H,R,SC]\nLight Blue Chalk Stairs [H,R,SC]\nGreen Chalk Stairs [H,R,SC]\nGray Chalk Stairs [H,R,SC]\nCyan Chalk Stairs [H,R,SC]\nBrown Chalk Stairs [H,R,SC]\nBlue Chalk Stairs [H,R,SC]\nBlack Chalk Stairs [H,R,SC]\nYellow Chalk Bricks Stairs [H,R,SC]\nWhite Chalk Bricks Stairs [H,R,SC]\nRed Chalk Bricks Stairs [H,R,SC]\nPurple Chalk Bricks Stairs [H,R,SC]\nPink Chalk Bricks Stairs [H,R,SC]\nOrange Chalk Bricks Stairs [H,R,SC]\nMagenta Chalk Bricks Stairs [H,R,SC]\nLime Chalk Bricks Stairs [H,R,SC]\nLight Gray Chalk Bricks Stairs [H,R,SC]\nLight Blue Chalk Bricks Stairs [H,R,SC]\nGreen Chalk Bricks Stairs [H,R,SC]\nGray Chalk Bricks Stairs [H,R,SC]\nCyan Chalk Bricks Stairs [H,R,SC]\nBrown Chalk Bricks Stairs [H,R,SC]\nBlue Chalk Bricks Stairs [H,R,SC]\nBlack Chalk Bricks Stairs [H,R,SC]\nToxic Waste Barrel\nToxic Waste\nAncient Maple Log\nEvil Lucky Block\nINTERNAL_MESH_Small Twin Icicle\nINTERNAL_MESH_Medium Icicle\nINTERNAL_MESH_Large Icicle\nINTERNAL_MESH_Large Twin Icicle\nNoticeboard Standing [R]\nNoticeboard Standing Top [R]\nNoticeboard Standing Bottom [R]\nNoticeboard Standing Left [R]\nNoticeboard Standing Right [R]\nNoticeboard Standing Top Left [R]\nNoticeboard Standing Top Right [R]\nNoticeboard Standing Bottom Left [R]\nNoticeboard Standing Bottom Right [R]\nNoticeboard Standing Leg [R]\nNoticeboard Wall [R]\nNoticeboard Wall Top [R]\nNoticeboard Wall Bottom [R]\nNoticeboard Wall Left [R]\nNoticeboard Wall Right [R]\nNoticeboard Wall Top Left [R]\nNoticeboard Wall Top Right [R]\nNoticeboard Wall Bottom Left [R]\nNoticeboard Wall Bottom Right [R]\nTiki Terror Spawner Block\nMaple Fence\n_Maple Fence Top\nPine Fence\n_Pine Fence Top\nPlum Fence\n_Plum Fence Top\nCedar Fence\n_Cedar Fence Top\nAspen Fence\n_Aspen Fence Top\nJungle Fence\n_Jungle Fence Top\nPalm Fence\n_Palm Fence Top\nPear Fence\n_Pear Fence Top\nCherry Fence\n_Cherry Fence Top\nSpectral Fence\n_Spectral Fence Top\nMango Fence\n_Mango Fence Top\nNoticeboard [R]\nStanding Noticeboard [R]\nPure Coal Ore\nPure Iron Ore\nPure Gold Ore\nPure Diamond Ore\nPure Moonstone Ore\nMaple Fence Gate [O,R]\n_Maple Fence Gate Top [O,R]\nPine Fence Gate [O,R]\n_Pine Fence Gate Top [O,R]\nPlum Fence Gate [O,R]\n_Plum Fence Gate Top [O,R]\nCedar Fence Gate [O,R]\n_Cedar Fence Gate Top [O,R]\nAspen Fence Gate [O,R]\n_Aspen Fence Gate Top [O,R]\nJungle Fence Gate [O,R]\n_Jungle Fence Gate Top [O,R]\nPalm Fence Gate [O,R]\n_Palm Fence Gate Top [O,R]\nPear Fence Gate [O,R]\n_Pear Fence Gate Top [O,R]\nCherry Fence Gate [O,R]\n_Cherry Fence Gate Top [O,R]\nSpectral Fence Gate [O,R]\n_Spectral Fence Gate Top [O,R]\nMango Fence Gate [O,R]\n_Mango Fence Gate Top [O,R]\nIron Goofy Golem Spawner Block\nGold Goofy Golem Spawner Block\nDiamond Goofy Golem Spawner Block\nMoonstone Goofy Golem Spawner Block\nCannon [R]\n_Cannon Bottom Front [R]\n_Cannon Barrel Back [R]\n_Cannon Barrel Front [R]\n_Cannon Top Back [R]\n_Cannon Top Front [R]\nCrystal Block\nRope Block\nAsh\nCoal Deposit\nIron Deposit\nStone Deposit\nCopper Deposit\nGold Deposit\nHomestead Core\nDrop Pad\nCopper Ore\nBurner Drill [R]\nCrusher [R]\nSmelter [R]\nGenerator [R]\nPress [R]\nWire Mill [R]\nConveyor Belt [R]\nSplitter [R]\nVoltite Ore\nAlloy Kiln [R]\nElectric Drill [R]\nAssembler [R]\nSorting Gate [R]\nBelt Loader [R]\nStorage Silo\nCharge Vault\nMachine Bench\nParts Bench\nTool Bench\n_Homestead Core Mid\n_Homestead Core Top\nTree Cutter [R]\nVoltite Deposit\nVolt Engine [R]\nDeep Drill [R]\nShatter Mill [R]\nSky Tap [R]\nFast Belt [R]\nCharging Pad\nCrystal Vat [R]\nStarframe\nForge Hopper\nComet Ore\nComet Heart\n_Starframe Spire\nRecycler [R]\nBelt Lift\nBelt Drop\nCrop Harvester [R]\nBelt Tunnel [R]\nPure Copper Ore\nPure Voltite Ore\nDarkstone\nDarkstone Bricks\nCracked Darkstone Bricks\nMolten Darkstone Bricks\nEngraved Darkstone\nSmooth Darkstone\nINTERNAL_MESH_Floor Quarters\nScorpion Eggs Block\nINTERNAL_MESH_Boss Target\nINTERNAL_MESH_Rune Sigil\nINTERNAL_MESH_Eclipse Dial\nINTERNAL_MESH_Beam Arm\nINTERNAL_MESH_Beam Arm Mirrored\nINTERNAL_MESH_Mortar\nTrading Terminal [R]\nStone Generator\nWheat Helper\nCarrot Helper\nMelon Helper\nShowcase\nPine Item Pedestal\nPlum Item Pedestal\nCedar Item Pedestal\nAspen Item Pedestal\nJungle Item Pedestal\nPalm Item Pedestal\nPear Item Pedestal\nCherry Item Pedestal\nSpectral Item Pedestal\nMango Item Pedestal\nUranium Ore\nUranium Deposit\nSky Spring\nAtomic Bench\nPump [R]\nCondenser [R]\nCentrifuge [R]\nSynthesizer [R]\nMob Farm [R]\nFluid Tank [R]\nReactor Controller [R]\nReactor Frame [R]\nReactor Casing\nReactor Glass [R]\nReactor Port [R]\nFuel Rod [R]\nGraphite Block\nCoolant Channel [R]\nReactor Slag\nAtomic Bomb\nBattery Controller [R]\nBattery Casing\nBattery Cell [R]\nCollider [R]\n_Collider Focus [R]\n_Collider Output [R]\nLaser [R]\nWireless Terminal [R]\nDense Silo\nExpress Belt [R]\nFast Loader [R]\nUranium Glass\nGlow Lamp\n_Jetpack Back\n_Atomic Spire\nIsotope Comet Ore\nIsotope Comet Heart\nFluid Pipe\nCoolant Mixer [R]\nCoolant Pipe\nScaffolding\nNova Trophy [R]\nUranium Block\nPure Uranium Ore\nCopper Block\nVoltite Block\nNova Bomb\nINTERNAL_MESH_White Directional Arrow\nINTERNAL_MESH_Light Grey Directional Arrow\nINTERNAL_MESH_Light Blue Directional Arrow\nINTERNAL_MESH_Cyan Directional Arrow\nINTERNAL_MESH_Green Directional Arrow\nINTERNAL_MESH_Lime Directional Arrow\nINTERNAL_MESH_Yellow Directional Arrow\nINTERNAL_MESH_Orange Directional Arrow\nINTERNAL_MESH_Magenta Directional Arrow\nINTERNAL_MESH_Red Directional Arrow\n'
+  5042: QQ => {
+    function WQ(QQ) {
+      return QQ instanceof Map ? QQ.clear = QQ.delete = QQ.set = function() {
+        throw new Error("map is read-only")
+      } : QQ instanceof Set && (QQ.add = QQ.clear = QQ.delete = function() {
+        throw new Error("set is read-only")
+      }), Object.freeze(QQ), Object.getOwnPropertyNames(QQ).forEach((XQ => {
+        const wQ = QQ[XQ],
+          qQ = typeof wQ;
+        "object" !== qQ && "function" !== qQ || Object.isFrozen(wQ) || WQ(wQ)
+      })), QQ
+    }
+    class XQ {
+      constructor(QQ) {
+        void 0 === QQ.data && (QQ.data = {}), this.data = QQ.data, this.isMatchIgnored = !1
+      }
+      ignoreMatch() {
+        this.isMatchIgnored = !0
+      }
+    }
+
+    function wQ(QQ) {
+      return QQ.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;")
+    }
+
+    function qQ(QQ) {
+      const WQ = Object.create(null);
+      for (const TQ in QQ) WQ[TQ] = QQ[TQ];
+      for (var XQ = arguments.length, wQ = new Array(XQ > 1 ? XQ - 1 : 0), qQ = 1; qQ < XQ; qQ++) wQ[qQ - 1] = arguments[qQ];
+      return wQ.forEach((function(QQ) {
+        for (const XQ in QQ) WQ[XQ] = QQ[XQ]
+      })), WQ
+    }
+    const TQ = QQ => !!QQ.scope;
+    class zQ {
+      constructor(QQ, WQ) {
+        this.buffer = "", this.classPrefix = WQ.classPrefix, QQ.walk(this)
+      }
+      addText(QQ) {
+        this.buffer += wQ(QQ)
+      }
+      openNode(QQ) {
+        if (!TQ(QQ)) return;
+        const WQ = ((QQ, WQ) => {
+          let {
+            prefix: XQ
+          } = WQ;
+          if (QQ.startsWith("language:")) return QQ.replace("language:", "language-");
+          if (QQ.includes(".")) {
+            const WQ = QQ.split(".");
+            return [`${XQ}${WQ.shift()}`, ...WQ.map(((QQ, WQ) => `${QQ}${"_".repeat(WQ+1)}`))].join(" ")
+          }
+          return `${XQ}${QQ}`
+        })(QQ.scope, {
+          prefix: this.classPrefix
+        });
+        this.span(WQ)
+      }
+      closeNode(QQ) {
+        TQ(QQ) && (this.buffer += "</span>")
+      }
+      value() {
+        return this.buffer
+      }
+      span(QQ) {
+        this.buffer += `<span class="${QQ}">`
+      }
+    }
+    const sQ = function() {
+      let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      const WQ = {
+        children: []
+      };
+      return Object.assign(WQ, QQ), WQ
+    };
+    class FQ {
+      constructor() {
+        this.oV = sQ(), this.stack = [this.oV]
+      }
+      get top() {
+        return this.stack[this.stack.length - 1]
+      }
+      get root() {
+        return this.oV
+      }
+      add(QQ) {
+        this.top.children.push(QQ)
+      }
+      openNode(QQ) {
+        const WQ = sQ({
+          scope: QQ
+        });
+        this.add(WQ), this.stack.push(WQ)
+      }
+      closeNode() {
+        if (this.stack.length > 1) return this.stack.pop()
+      }
+      closeAllNodes() {
+        for (; this.closeNode(););
+      }
+      toJSON() {
+        return JSON.stringify(this.oV, null, 4)
+      }
+      walk(QQ) {
+        return this.constructor._walk(QQ, this.oV)
+      }
+      static _walk(QQ, WQ) {
+        return "string" === typeof WQ ? QQ.addText(WQ) : WQ.children && (QQ.openNode(WQ), WQ.children.forEach((WQ => this._walk(QQ, WQ))), QQ.closeNode(WQ)), QQ
+      }
+      static _collapse(QQ) {
+        "string" !== typeof QQ && QQ.children && (QQ.children.every((QQ => "string" === typeof QQ)) ? QQ.children = [QQ.children.join("")] : QQ.children.forEach((QQ => {
+          FQ._collapse(QQ)
+        })))
+      }
+    }
+    class PQ extends FQ {
+      constructor(QQ) {
+        super(), this.options = QQ
+      }
+      addText(QQ) {
+        "" !== QQ && this.add(QQ)
+      }
+      startScope(QQ) {
+        this.openNode(QQ)
+      }
+      endScope() {
+        this.closeNode()
+      }
+      __addSublanguage(QQ, WQ) {
+        const XQ = QQ.root;
+        WQ && (XQ.scope = `language:${WQ}`), this.add(XQ)
+      }
+      toHTML() {
+        return new zQ(this, this.options).value()
+      }
+      finalize() {
+        return this.closeAllNodes(), !0
+      }
+    }
+
+    function gQ(QQ) {
+      return QQ ? "string" === typeof QQ ? QQ : QQ.source : null
+    }
+
+    function JQ(QQ) {
+      return jQ("(?=", QQ, ")")
+    }
+
+    function rQ(QQ) {
+      return jQ("(?:", QQ, ")*")
+    }
+
+    function IQ(QQ) {
+      return jQ("(?:", QQ, ")?")
+    }
+
+    function jQ() {
+      for (var QQ = arguments.length, WQ = new Array(QQ), XQ = 0; XQ < QQ; XQ++) WQ[XQ] = arguments[XQ];
+      return WQ.map((QQ => gQ(QQ))).join("")
+    }
+
+    function BQ() {
+      for (var QQ = arguments.length, WQ = new Array(QQ), XQ = 0; XQ < QQ; XQ++) WQ[XQ] = arguments[XQ];
+      const wQ = function(QQ) {
+        const WQ = QQ[QQ.length - 1];
+        return "object" === typeof WQ && WQ.constructor === Object ? (QQ.splice(QQ.length - 1, 1), WQ) : {}
+      }(WQ);
+      return "(" + (wQ.capture ? "" : "?:") + WQ.map((QQ => gQ(QQ))).join("|") + ")"
+    }
+
+    function yQ(QQ) {
+      return new RegExp(QQ.toString() + "|").exec("").length - 1
+    }
+    const VQ = /\[(?:[^\\\]]|\\.)*\]|\(\??|\\([1-9][0-9]*)|\\./;
+
+    function DQ(QQ, WQ) {
+      let {
+        joinWith: XQ
+      } = WQ, wQ = 0;
+      return QQ.map((QQ => {
+        wQ += 1;
+        const WQ = wQ;
+        let XQ = gQ(QQ),
+          qQ = "";
+        for (; XQ.length > 0;) {
+          const QQ = VQ.exec(XQ);
+          if (!QQ) {
+            qQ += XQ;
+            break
+          }
+          qQ += XQ.substring(0, QQ.index), XQ = XQ.substring(QQ.index + QQ[0].length), "\\" === QQ[0][0] && QQ[1] ? qQ += "\\" + String(Number(QQ[1]) + WQ) : (qQ += QQ[0], "(" === QQ[0] && wQ++)
+        }
+        return qQ
+      })).map((QQ => `(${QQ})`)).join(XQ)
+    }
+    const pQ = "[a-zA-Z]\\w*",
+      GQ = "[a-zA-Z_]\\w*",
+      UQ = "\\b\\d+(\\.\\d+)?",
+      bQ = "(-?)(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)",
+      vQ = "\\b(0b[01]+)",
+      dQ = {
+        gI: "\\\\[\\s\\S]",
+        relevance: 0
+      },
+      HQ = {
+        scope: "string",
+        gI: "'",
+        end: "'",
+        illegal: "\\n",
+        contains: [dQ]
+      },
+      aQ = {
+        scope: "string",
+        gI: '"',
+        end: '"',
+        illegal: "\\n",
+        contains: [dQ]
+      },
+      lQ = function(QQ, WQ) {
+        const XQ = qQ({
+          scope: "comment",
+          gI: QQ,
+          end: WQ,
+          contains: []
+        }, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {});
+        XQ.contains.push({
+          scope: "doctag",
+          gI: "[ ]*(?=(TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):)",
+          end: /(TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):/,
+          excludeBegin: !0,
+          relevance: 0
+        });
+        const wQ = BQ("I", "a", "is", "so", "us", "to", "at", "if", "in", "it", "on", /[A-Za-z]+['](d|ve|re|ll|t|s|n)/, /[A-Za-z]+[-][a-z]+/, /[A-Za-z][a-z]{2,}/);
+        return XQ.contains.push({
+          gI: jQ(/[ ]+/, "(", wQ, /[.]?[:]?([.][ ]|[ ])/, "){3}")
+        }), XQ
+      },
+      hQ = lQ("//", "$"),
+      iQ = lQ("/\\*", "\\*/"),
+      cQ = lQ("#", "$"),
+      AQ = {
+        scope: "number",
+        gI: UQ,
+        relevance: 0
+      },
+      RQ = {
+        scope: "number",
+        gI: bQ,
+        relevance: 0
+      },
+      EQ = {
+        scope: "number",
+        gI: vQ,
+        relevance: 0
+      },
+      CQ = {
+        scope: "regexp",
+        gI: /\/(?=[^/\n]*\/)/,
+        end: /\/[gimuy]*/,
+        contains: [dQ, {
+          gI: /\[/,
+          end: /\]/,
+          relevance: 0,
+          contains: [dQ]
+        }]
+      },
+      uQ = {
+        scope: "title",
+        gI: pQ,
+        relevance: 0
+      },
+      LQ = {
+        scope: "title",
+        gI: GQ,
+        relevance: 0
+      },
+      kQ = {
+        gI: "\\.\\s*" + GQ,
+        relevance: 0
+      };
+    var fQ = Object.freeze({
+      __proto__: null,
+      APOS_STRING_MODE: HQ,
+      BACKSLASH_ESCAPE: dQ,
+      BINARY_NUMBER_MODE: EQ,
+      BINARY_NUMBER_RE: vQ,
+      COMMENT: lQ,
+      C_BLOCK_COMMENT_MODE: iQ,
+      C_LINE_COMMENT_MODE: hQ,
+      C_NUMBER_MODE: RQ,
+      C_NUMBER_RE: bQ,
+      END_SAME_AS_BEGIN: function(QQ) {
+        return Object.assign(QQ, {
+          "on:begin": (QQ, WQ) => {
+            WQ.data._beginMatch = QQ[1]
+          },
+          "on:end": (QQ, WQ) => {
+            WQ.data._beginMatch !== QQ[1] && WQ.ignoreMatch()
+          }
+        })
+      },
+      HASH_COMMENT_MODE: cQ,
+      IDENT_RE: pQ,
+      MATCH_NOTHING_RE: /\b\B/,
+      METHOD_GUARD: kQ,
+      NUMBER_MODE: AQ,
+      NUMBER_RE: UQ,
+      PHRASAL_WORDS_MODE: {
+        gI: /\b(a|an|the|are|I'm|isn't|don't|doesn't|won't|but|just|should|pretty|simply|enough|gonna|going|wtf|so|such|will|you|your|they|like|more)\b/
+      },
+      QUOTE_STRING_MODE: aQ,
+      REGEXP_MODE: CQ,
+      RE_STARTERS_RE: "!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|-|-=|/=|/|:|;|<<|<<=|<=|<|===|==|=|>>>=|>>=|>=|>>>|>>|>|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~",
+      SHEBANG: function() {
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        const WQ = /^#![ ]*\//;
+        return QQ.binary && (QQ.gI = jQ(WQ, /.*\b/, QQ.binary, /\b.*/)), qQ({
+          scope: "meta",
+          gI: WQ,
+          end: /$/,
+          relevance: 0,
+          "on:begin": (QQ, WQ) => {
+            0 !== QQ.index && WQ.ignoreMatch()
+          }
+        }, QQ)
+      },
+      TITLE_MODE: uQ,
+      UNDERSCORE_IDENT_RE: GQ,
+      UNDERSCORE_TITLE_MODE: LQ
+    });
+
+    function SQ(QQ, WQ) {
+      "." === QQ.input[QQ.index - 1] && WQ.ignoreMatch()
+    }
+
+    function tQ(QQ, WQ) {
+      void 0 !== QQ.className && (QQ.scope = QQ.className, delete QQ.className)
+    }
+
+    function oQ(QQ, WQ) {
+      WQ && QQ.beginKeywords && (QQ.gI = "\\b(" + QQ.beginKeywords.split(" ").join("|") + ")(?!\\.)(?=\\b|\\s)", QQ.__beforeBegin = SQ, QQ.keywords = QQ.keywords || QQ.beginKeywords, delete QQ.beginKeywords, void 0 === QQ.relevance && (QQ.relevance = 0))
+    }
+
+    function eQ(QQ, WQ) {
+      Array.isArray(QQ.illegal) && (QQ.illegal = BQ(...QQ.illegal))
+    }
+
+    function nQ(QQ, WQ) {
+      if (QQ.match) {
+        if (QQ.gI || QQ.end) throw new Error("begin & end are not supported with match");
+        QQ.gI = QQ.match, delete QQ.match
+      }
+    }
+
+    function xQ(QQ, WQ) {
+      void 0 === QQ.relevance && (QQ.relevance = 1)
+    }
+    const YQ = (QQ, WQ) => {
+        if (!QQ.beforeMatch) return;
+        if (QQ.starts) throw new Error("beforeMatch cannot be used with starts");
+        const XQ = Object.assign({}, QQ);
+        Object.keys(QQ).forEach((WQ => {
+          delete QQ[WQ]
+        })), QQ.keywords = XQ.keywords, QQ.gI = jQ(XQ.beforeMatch, JQ(XQ.gI)), QQ.starts = {
+          relevance: 0,
+          contains: [Object.assign(XQ, {
+            endsParent: !0
+          })]
+        }, QQ.relevance = 0, delete XQ.beforeMatch
+      },
+      NQ = ["of", "and", "for", "in", "not", "or", "if", "then", "parent", "list", "value"];
+
+    function ZQ(QQ, WQ) {
+      let XQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "keyword";
+      const wQ = Object.create(null);
+      return "string" === typeof QQ ? qQ(XQ, QQ.split(" ")) : Array.isArray(QQ) ? qQ(XQ, QQ) : Object.keys(QQ).forEach((function(XQ) {
+        Object.assign(wQ, ZQ(QQ[XQ], WQ, XQ))
+      })), wQ;
+
+      function qQ(QQ, XQ) {
+        WQ && (XQ = XQ.map((QQ => QQ.toLowerCase()))), XQ.forEach((function(WQ) {
+          const XQ = WQ.split("|");
+          wQ[XQ[0]] = [QQ, OQ(XQ[0], XQ[1])]
+        }))
+      }
+    }
+
+    function OQ(QQ, WQ) {
+      return WQ ? Number(WQ) : function(QQ) {
+        return NQ.includes(QQ.toLowerCase())
+      }(QQ) ? 0 : 1
+    }
+    const KQ = {},
+      mQ = QQ => {
+        console.error(QQ)
+      },
+      MQ = function(QQ) {
+        for (var WQ = arguments.length, XQ = new Array(WQ > 1 ? WQ - 1 : 0), wQ = 1; wQ < WQ; wQ++) XQ[wQ - 1] = arguments[wQ];
+        console.log(`WARN: ${QQ}`, ...XQ)
+      },
+      QW = (QQ, WQ) => {
+        KQ[`${QQ}/${WQ}`] || (console.log(`Deprecated as of ${QQ}. ${WQ}`), KQ[`${QQ}/${WQ}`] = !0)
+      },
+      WW = new Error;
+
+    function XW(QQ, WQ, XQ) {
+      let {
+        key: wQ
+      } = XQ, qQ = 0;
+      const TQ = QQ[wQ],
+        zQ = {},
+        sQ = {};
+      for (let FQ = 1; FQ <= WQ.length; FQ++) sQ[FQ + qQ] = TQ[FQ], zQ[FQ + qQ] = !0, qQ += yQ(WQ[FQ - 1]);
+      QQ[wQ] = sQ, QQ[wQ]._emit = zQ, QQ[wQ]._multi = !0
+    }
+
+    function wW(QQ) {
+      ! function(QQ) {
+        QQ.scope && "object" === typeof QQ.scope && null !== QQ.scope && (QQ.beginScope = QQ.scope, delete QQ.scope)
+      }(QQ), "string" === typeof QQ.beginScope && (QQ.beginScope = {
+          _wrap: QQ.beginScope
+        }), "string" === typeof QQ.endScope && (QQ.endScope = {
+          _wrap: QQ.endScope
+        }),
+        function(QQ) {
+          if (Array.isArray(QQ.gI)) {
+            if (QQ.skip || QQ.excludeBegin || QQ.returnBegin) throw mQ("skip, excludeBegin, returnBegin not compatible with beginScope: {}"), WW;
+            if ("object" !== typeof QQ.beginScope || null === QQ.beginScope) throw mQ("beginScope must be object"), WW;
+            XW(QQ, QQ.gI, {
+              key: "beginScope"
+            }), QQ.gI = DQ(QQ.gI, {
+              joinWith: ""
+            })
+          }
+        }(QQ),
+        function(QQ) {
+          if (Array.isArray(QQ.end)) {
+            if (QQ.skip || QQ.excludeEnd || QQ.returnEnd) throw mQ("skip, excludeEnd, returnEnd not compatible with endScope: {}"), WW;
+            if ("object" !== typeof QQ.endScope || null === QQ.endScope) throw mQ("endScope must be object"), WW;
+            XW(QQ, QQ.end, {
+              key: "endScope"
+            }), QQ.end = DQ(QQ.end, {
+              joinWith: ""
+            })
+          }
+        }(QQ)
+    }
+
+    function qW(QQ) {
+      function WQ(WQ, XQ) {
+        return new RegExp(gQ(WQ), "m" + (QQ.case_insensitive ? "i" : "") + (QQ.unicodeRegex ? "u" : "") + (XQ ? "g" : ""))
+      }
+      class XQ {
+        constructor() {
+          this.matchIndexes = {}, this.regexes = [], this.matchAt = 1, this.position = 0
+        }
+        addRule(QQ, WQ) {
+          WQ.position = this.position++, this.matchIndexes[this.matchAt] = WQ, this.regexes.push([WQ, QQ]), this.matchAt += yQ(QQ) + 1
+        }
+        compile() {
+          0 === this.regexes.length && (this.exec = () => null);
+          const QQ = this.regexes.map((QQ => QQ[1]));
+          this.matcherRe = WQ(DQ(QQ, {
+            joinWith: "|"
+          }), !0), this.lastIndex = 0
+        }
+        exec(QQ) {
+          this.matcherRe.lastIndex = this.lastIndex;
+          const WQ = this.matcherRe.exec(QQ);
+          if (!WQ) return null;
+          const XQ = WQ.findIndex(((QQ, WQ) => WQ > 0 && void 0 !== QQ)),
+            wQ = this.matchIndexes[XQ];
+          return WQ.splice(0, XQ), Object.assign(WQ, wQ)
+        }
+      }
+      class wQ {
+        constructor() {
+          this.rules = [], this.multiRegexes = [], this.count = 0, this.lastIndex = 0, this.regexIndex = 0
+        }
+        getMatcher(QQ) {
+          if (this.multiRegexes[QQ]) return this.multiRegexes[QQ];
+          const WQ = new XQ;
+          return this.rules.slice(QQ).forEach((QQ => {
+            let [XQ, wQ] = QQ;
+            return WQ.addRule(XQ, wQ)
+          })), WQ.compile(), this.multiRegexes[QQ] = WQ, WQ
+        }
+        resumingScanAtSamePosition() {
+          return 0 !== this.regexIndex
+        }
+        considerAll() {
+          this.regexIndex = 0
+        }
+        addRule(QQ, WQ) {
+          this.rules.push([QQ, WQ]), "gI" === WQ.type && this.count++
+        }
+        exec(QQ) {
+          const WQ = this.getMatcher(this.regexIndex);
+          WQ.lastIndex = this.lastIndex;
+          let XQ = WQ.exec(QQ);
+          if (this.resumingScanAtSamePosition())
+            if (XQ && XQ.index === this.lastIndex);
+            else {
+              const WQ = this.getMatcher(0);
+              WQ.lastIndex = this.lastIndex + 1, XQ = WQ.exec(QQ)
+            } return XQ && (this.regexIndex += XQ.position + 1, this.regexIndex === this.count && this.considerAll()), XQ
+        }
+      }
+      if (QQ.compilerExtensions || (QQ.compilerExtensions = []), QQ.contains && QQ.contains.includes("self")) throw new Error("ERR: contains `self` is not supported at the top-level of a language.  See documentation.");
+      return QQ.classNameAliases = qQ(QQ.classNameAliases || {}),
+        function XQ(TQ, zQ) {
+          const sQ = TQ;
+          if (TQ.isCompiled) return sQ;
+          [tQ, nQ, wW, YQ].forEach((QQ => QQ(TQ, zQ))), QQ.compilerExtensions.forEach((QQ => QQ(TQ, zQ))), TQ.__beforeBegin = null, [oQ, eQ, xQ].forEach((QQ => QQ(TQ, zQ))), TQ.isCompiled = !0;
+          let FQ = null;
+          return "object" === typeof TQ.keywords && TQ.keywords.$pattern && (TQ.keywords = Object.assign({}, TQ.keywords), FQ = TQ.keywords.$pattern, delete TQ.keywords.$pattern), FQ = FQ || /\w+/, TQ.keywords && (TQ.keywords = ZQ(TQ.keywords, QQ.case_insensitive)), sQ.keywordPatternRe = WQ(FQ, !0), zQ && (TQ.gI || (TQ.gI = /\B|\b/), sQ.beginRe = WQ(sQ.gI), TQ.end || TQ.endsWithParent || (TQ.end = /\B|\b/), TQ.end && (sQ.endRe = WQ(sQ.end)), sQ.terminatorEnd = gQ(sQ.end) || "", TQ.endsWithParent && zQ.terminatorEnd && (sQ.terminatorEnd += (TQ.end ? "|" : "") + zQ.terminatorEnd)), TQ.illegal && (sQ.illegalRe = WQ(TQ.illegal)), TQ.contains || (TQ.contains = []), TQ.contains = [].concat(...TQ.contains.map((function(QQ) {
+            return function(QQ) {
+              QQ.variants && !QQ.cachedVariants && (QQ.cachedVariants = QQ.variants.map((function(WQ) {
+                return qQ(QQ, {
+                  variants: null
+                }, WQ)
+              })));
+              if (QQ.cachedVariants) return QQ.cachedVariants;
+              if (TW(QQ)) return qQ(QQ, {
+                starts: QQ.starts ? qQ(QQ.starts) : null
+              });
+              if (Object.isFrozen(QQ)) return qQ(QQ);
+              return QQ
+            }("self" === QQ ? TQ : QQ)
+          }))), TQ.contains.forEach((function(QQ) {
+            XQ(QQ, sQ)
+          })), TQ.starts && XQ(TQ.starts, zQ), sQ.matcher = function(QQ) {
+            const WQ = new wQ;
+            return QQ.contains.forEach((QQ => WQ.addRule(QQ.gI, {
+              rule: QQ,
+              type: "gI"
+            }))), QQ.terminatorEnd && WQ.addRule(QQ.terminatorEnd, {
+              type: "end"
+            }), QQ.illegal && WQ.addRule(QQ.illegal, {
+              type: "illegal"
+            }), WQ
+          }(sQ), sQ
+        }(QQ)
+    }
+
+    function TW(QQ) {
+      return !!QQ && (QQ.endsWithParent || TW(QQ.starts))
+    }
+    class zW extends Error {
+      constructor(QQ, WQ) {
+        super(QQ), this.name = "HTMLInjectionError", this.html = WQ
+      }
+    }
+    const sW = wQ,
+      FW = qQ,
+      PW = Symbol("nomatch"),
+      gW = function(QQ) {
+        const wQ = Object.create(null),
+          qQ = Object.create(null),
+          TQ = [];
+        let zQ = !0;
+        const sQ = "Could not find the language '{}', did you forget to load/include a language module?",
+          FQ = {
+            disableAutodetect: !0,
+            name: "Plain text",
+            contains: []
+          };
+        let gQ = {
+          ignoreUnescapedHTML: !1,
+          throwUnescapedHTML: !1,
+          noHighlightRe: /^(no-?highlight)$/i,
+          languageDetectRe: /\blang(?:uage)?-([\w-]+)\b/i,
+          classPrefix: "hljs-",
+          cssSelector: "pre code",
+          languages: null,
+          __emitter: PQ
+        };
+
+        function yQ(QQ) {
+          return gQ.noHighlightRe.test(QQ)
+        }
+
+        function VQ(QQ, WQ, XQ) {
+          let wQ = "",
+            qQ = "";
+          "object" === typeof WQ ? (wQ = QQ, XQ = WQ.ignoreIllegals, qQ = WQ.language) : (QW("10.7.0", "highlight(lang, code, ...args) has been deprecated."), QW("10.7.0", "Please use highlight(code, options) instead.\nhttps://github.com/highlightjs/highlight.js/issues/2277"), qQ = QQ, wQ = WQ), void 0 === XQ && (XQ = !0);
+          const TQ = {
+            code: wQ,
+            language: qQ
+          };
+          aQ("before:highlight", TQ);
+          const zQ = TQ.result ? TQ.result : DQ(TQ.language, TQ.code, XQ);
+          return zQ.code = TQ.code, aQ("after:highlight", zQ), zQ
+        }
+
+        function DQ(QQ, WQ, qQ, TQ) {
+          const FQ = Object.create(null);
+
+          function PQ() {
+            if (!aQ.keywords) return void hQ.addText(iQ);
+            let QQ = 0;
+            aQ.keywordPatternRe.lastIndex = 0;
+            let WQ = aQ.keywordPatternRe.exec(iQ),
+              XQ = "";
+            for (; WQ;) {
+              XQ += iQ.substring(QQ, WQ.index);
+              const qQ = bQ.case_insensitive ? WQ[0].toLowerCase() : WQ[0],
+                TQ = (wQ = qQ, aQ.keywords[wQ]);
+              if (TQ) {
+                const [QQ, wQ] = TQ;
+                if (hQ.addText(XQ), XQ = "", FQ[qQ] = (FQ[qQ] || 0) + 1, FQ[qQ] <= 7 && (cQ += wQ), QQ.startsWith("_")) XQ += WQ[0];
+                else {
+                  const XQ = bQ.classNameAliases[QQ] || QQ;
+                  rQ(WQ[0], XQ)
+                }
+              } else XQ += WQ[0];
+              QQ = aQ.keywordPatternRe.lastIndex, WQ = aQ.keywordPatternRe.exec(iQ)
+            }
+            var wQ;
+            XQ += iQ.substring(QQ), hQ.addText(XQ)
+          }
+
+          function JQ() {
+            null != aQ.subLanguage ? function() {
+              if ("" === iQ) return;
+              let QQ = null;
+              if ("string" === typeof aQ.subLanguage) {
+                if (!wQ[aQ.subLanguage]) return void hQ.addText(iQ);
+                QQ = DQ(aQ.subLanguage, iQ, !0, lQ[aQ.subLanguage]), lQ[aQ.subLanguage] = QQ._top
+              } else QQ = pQ(iQ, aQ.subLanguage.length ? aQ.subLanguage : null);
+              aQ.relevance > 0 && (cQ += QQ.relevance), hQ.__addSublanguage(QQ._emitter, QQ.language)
+            }() : PQ(), iQ = ""
+          }
+
+          function rQ(QQ, WQ) {
+            "" !== QQ && (hQ.startScope(WQ), hQ.addText(QQ), hQ.endScope())
+          }
+
+          function IQ(QQ, WQ) {
+            let XQ = 1;
+            const wQ = WQ.length - 1;
+            for (; XQ <= wQ;) {
+              if (!QQ._emit[XQ]) {
+                XQ++;
+                continue
+              }
+              const wQ = bQ.classNameAliases[QQ[XQ]] || QQ[XQ],
+                qQ = WQ[XQ];
+              wQ ? rQ(qQ, wQ) : (iQ = qQ, PQ(), iQ = ""), XQ++
+            }
+          }
+
+          function jQ(QQ, WQ) {
+            return QQ.scope && "string" === typeof QQ.scope && hQ.openNode(bQ.classNameAliases[QQ.scope] || QQ.scope), QQ.beginScope && (QQ.beginScope._wrap ? (rQ(iQ, bQ.classNameAliases[QQ.beginScope._wrap] || QQ.beginScope._wrap), iQ = "") : QQ.beginScope._multi && (IQ(QQ.beginScope, WQ), iQ = "")), aQ = Object.create(QQ, {
+              parent: {
+                value: aQ
+              }
+            }), aQ
+          }
+
+          function BQ(QQ, WQ, wQ) {
+            let qQ = function(QQ, WQ) {
+              const XQ = QQ && QQ.exec(WQ);
+              return XQ && 0 === XQ.index
+            }(QQ.endRe, wQ);
+            if (qQ) {
+              if (QQ["on:end"]) {
+                const wQ = new XQ(QQ);
+                QQ["on:end"](WQ, wQ), wQ.isMatchIgnored && (qQ = !1)
+              }
+              if (qQ) {
+                for (; QQ.endsParent && QQ.parent;) QQ = QQ.parent;
+                return QQ
+              }
+            }
+            if (QQ.endsWithParent) return BQ(QQ.parent, WQ, wQ)
+          }
+
+          function yQ(QQ) {
+            return 0 === aQ.matcher.regexIndex ? (iQ += QQ[0], 1) : (EQ = !0, 0)
+          }
+
+          function VQ(QQ) {
+            const XQ = QQ[0],
+              wQ = WQ.substring(QQ.index),
+              qQ = BQ(aQ, QQ, wQ);
+            if (!qQ) return PW;
+            const TQ = aQ;
+            aQ.endScope && aQ.endScope._wrap ? (JQ(), rQ(XQ, aQ.endScope._wrap)) : aQ.endScope && aQ.endScope._multi ? (JQ(), IQ(aQ.endScope, QQ)) : TQ.skip ? iQ += XQ : (TQ.returnEnd || TQ.excludeEnd || (iQ += XQ), JQ(), TQ.excludeEnd && (iQ = XQ));
+            do {
+              aQ.scope && hQ.closeNode(), aQ.skip || aQ.subLanguage || (cQ += aQ.relevance), aQ = aQ.parent
+            } while (aQ !== qQ.parent);
+            return qQ.starts && jQ(qQ.starts, QQ), TQ.returnEnd ? 0 : XQ.length
+          }
+          let GQ = {};
+
+          function UQ(wQ, TQ) {
+            const sQ = TQ && TQ[0];
+            if (iQ += wQ, null == sQ) return JQ(), 0;
+            if ("gI" === GQ.type && "end" === TQ.type && GQ.index === TQ.index && "" === sQ) {
+              if (iQ += WQ.slice(TQ.index, TQ.index + 1), !zQ) {
+                const WQ = new Error(`0 width match regex (${QQ})`);
+                throw WQ.languageName = QQ, WQ.badRule = GQ.rule, WQ
+              }
+              return 1
+            }
+            if (GQ = TQ, "gI" === TQ.type) return function(QQ) {
+              const WQ = QQ[0],
+                wQ = QQ.rule,
+                qQ = new XQ(wQ),
+                TQ = [wQ.__beforeBegin, wQ["on:begin"]];
+              for (const XQ of TQ)
+                if (XQ && (XQ(QQ, qQ), qQ.isMatchIgnored)) return yQ(WQ);
+              return wQ.skip ? iQ += WQ : (wQ.excludeBegin && (iQ += WQ), JQ(), wQ.returnBegin || wQ.excludeBegin || (iQ = WQ)), jQ(wQ, QQ), wQ.returnBegin ? 0 : WQ.length
+            }(TQ);
+            if ("illegal" === TQ.type && !qQ) {
+              const QQ = new Error('Illegal lexeme "' + sQ + '" for mode "' + (aQ.scope || "<unnamed>") + '"');
+              throw QQ.mode = aQ, QQ
+            }
+            if ("end" === TQ.type) {
+              const QQ = VQ(TQ);
+              if (QQ !== PW) return QQ
+            }
+            if ("illegal" === TQ.type && "" === sQ) return iQ += "\n", 1;
+            if (RQ > 1e5 && RQ > 3 * TQ.index) {
+              throw new Error("potential infinite loop, way more iterations than matches")
+            }
+            return iQ += sQ, sQ.length
+          }
+          const bQ = vQ(QQ);
+          if (!bQ) throw mQ(sQ.replace("{}", QQ)), new Error('Unknown language: "' + QQ + '"');
+          const dQ = qW(bQ);
+          let HQ = "",
+            aQ = TQ || dQ;
+          const lQ = {},
+            hQ = new gQ.__emitter(gQ);
+          ! function() {
+            const QQ = [];
+            for (let WQ = aQ; WQ !== bQ; WQ = WQ.parent) WQ.scope && QQ.unshift(WQ.scope);
+            QQ.forEach((QQ => hQ.openNode(QQ)))
+          }();
+          let iQ = "",
+            cQ = 0,
+            AQ = 0,
+            RQ = 0,
+            EQ = !1;
+          try {
+            if (bQ.__emitTokens) bQ.__emitTokens(WQ, hQ);
+            else {
+              for (aQ.matcher.considerAll();;) {
+                RQ++, EQ ? EQ = !1 : aQ.matcher.considerAll(), aQ.matcher.lastIndex = AQ;
+                const QQ = aQ.matcher.exec(WQ);
+                if (!QQ) break;
+                const XQ = UQ(WQ.substring(AQ, QQ.index), QQ);
+                AQ = QQ.index + XQ
+              }
+              UQ(WQ.substring(AQ))
+            }
+            return hQ.finalize(), HQ = hQ.toHTML(), {
+              language: QQ,
+              value: HQ,
+              relevance: cQ,
+              illegal: !1,
+              _emitter: hQ,
+              _top: aQ
+            }
+          } catch (CQ) {
+            if (CQ.message && CQ.message.includes("Illegal")) return {
+              language: QQ,
+              value: sW(WQ),
+              illegal: !0,
+              relevance: 0,
+              _illegalBy: {
+                message: CQ.message,
+                index: AQ,
+                context: WQ.slice(AQ - 100, AQ + 100),
+                mode: CQ.mode,
+                resultSoFar: HQ
+              },
+              _emitter: hQ
+            };
+            if (zQ) return {
+              language: QQ,
+              value: sW(WQ),
+              illegal: !1,
+              relevance: 0,
+              errorRaised: CQ,
+              _emitter: hQ,
+              _top: aQ
+            };
+            throw CQ
+          }
+        }
+
+        function pQ(QQ, WQ) {
+          WQ = WQ || gQ.languages || Object.keys(wQ);
+          const XQ = function(QQ) {
+              const WQ = {
+                value: sW(QQ),
+                illegal: !1,
+                relevance: 0,
+                _top: FQ,
+                _emitter: new gQ.__emitter(gQ)
+              };
+              return WQ._emitter.addText(QQ), WQ
+            }(QQ),
+            qQ = WQ.filter(vQ).filter(HQ).map((WQ => DQ(WQ, QQ, !1)));
+          qQ.unshift(XQ);
+          const TQ = qQ.sort(((QQ, WQ) => {
+              if (QQ.relevance !== WQ.relevance) return WQ.relevance - QQ.relevance;
+              if (QQ.language && WQ.language) {
+                if (vQ(QQ.language).supersetOf === WQ.language) return 1;
+                if (vQ(WQ.language).supersetOf === QQ.language) return -1
+              }
+              return 0
+            })),
+            [zQ, sQ] = TQ,
+            PQ = zQ;
+          return PQ.secondBest = sQ, PQ
+        }
+
+        function GQ(QQ) {
+          let WQ = null;
+          const XQ = function(QQ) {
+            let WQ = QQ.className + " ";
+            WQ += QQ.parentNode ? QQ.parentNode.className : "";
+            const XQ = gQ.languageDetectRe.exec(WQ);
+            if (XQ) {
+              const WQ = vQ(XQ[1]);
+              return WQ || (MQ(sQ.replace("{}", XQ[1])), MQ("Falling back to no-highlight mode for this block.", QQ)), WQ ? XQ[1] : "no-highlight"
+            }
+            return WQ.split(/\s+/).find((QQ => yQ(QQ) || vQ(QQ)))
+          }(QQ);
+          if (yQ(XQ)) return;
+          if (aQ("before:highlightElement", {
+              el: QQ,
+              language: XQ
+            }), QQ.dataset.highlighted) return void console.log("Element previously highlighted. To highlight again, first unset `dataset.highlighted`.", QQ);
+          if (QQ.children.length > 0 && (gQ.ignoreUnescapedHTML || (console.warn("One of your code blocks includes unescaped HTML. This is a potentially serious security risk."), console.warn("https://github.com/highlightjs/highlight.js/wiki/security"), console.warn("The element with unescaped HTML:"), console.warn(QQ)), gQ.throwUnescapedHTML)) {
+            throw new zW("One of your code blocks includes unescaped HTML.", QQ.innerHTML)
+          }
+          WQ = QQ;
+          const wQ = WQ.textContent,
+            TQ = XQ ? VQ(wQ, {
+              language: XQ,
+              ignoreIllegals: !0
+            }) : pQ(wQ);
+          QQ.innerHTML = TQ.value, QQ.dataset.highlighted = "yes",
+            function(QQ, WQ, XQ) {
+              const wQ = WQ && qQ[WQ] || XQ;
+              QQ.classList.add("hljs"), QQ.classList.add(`language-${wQ}`)
+            }(QQ, XQ, TQ.language), QQ.result = {
+              language: TQ.language,
+              re: TQ.relevance,
+              relevance: TQ.relevance
+            }, TQ.secondBest && (QQ.secondBest = {
+              language: TQ.secondBest.language,
+              relevance: TQ.secondBest.relevance
+            }), aQ("after:highlightElement", {
+              el: QQ,
+              result: TQ,
+              text: wQ
+            })
+        }
+        let UQ = !1;
+
+        function bQ() {
+          if ("loading" === document.readyState) return UQ || window.addEventListener("DOMContentLoaded", (function() {
+            bQ()
+          }), !1), void(UQ = !0);
+          document.querySelectorAll(gQ.cssSelector).forEach(GQ)
+        }
+
+        function vQ(QQ) {
+          return QQ = (QQ || "").toLowerCase(), wQ[QQ] || wQ[qQ[QQ]]
+        }
+
+        function dQ(QQ, WQ) {
+          let {
+            languageName: XQ
+          } = WQ;
+          "string" === typeof QQ && (QQ = [QQ]), QQ.forEach((QQ => {
+            qQ[QQ.toLowerCase()] = XQ
+          }))
+        }
+
+        function HQ(QQ) {
+          const WQ = vQ(QQ);
+          return WQ && !WQ.disableAutodetect
+        }
+
+        function aQ(QQ, WQ) {
+          const XQ = QQ;
+          TQ.forEach((function(QQ) {
+            QQ[XQ] && QQ[XQ](WQ)
+          }))
+        }
+        Object.assign(QQ, {
+          highlight: VQ,
+          highlightAuto: pQ,
+          highlightAll: bQ,
+          highlightElement: GQ,
+          highlightBlock: function(QQ) {
+            return QW("10.7.0", "highlightBlock will be removed entirely in v12.0"), QW("10.7.0", "Please use highlightElement now."), GQ(QQ)
+          },
+          configure: function(QQ) {
+            gQ = FW(gQ, QQ)
+          },
+          initHighlighting: () => {
+            bQ(), QW("10.6.0", "initHighlighting() deprecated.  Use highlightAll() now.")
+          },
+          initHighlightingOnLoad: function() {
+            bQ(), QW("10.6.0", "initHighlightingOnLoad() deprecated.  Use highlightAll() now.")
+          },
+          registerLanguage: function(WQ, XQ) {
+            let qQ = null;
+            try {
+              qQ = XQ(QQ)
+            } catch (TQ) {
+              if (mQ("Language definition for '{}' could not be registered.".replace("{}", WQ)), !zQ) throw TQ;
+              mQ(TQ), qQ = FQ
+            }
+            qQ.name || (qQ.name = WQ), wQ[WQ] = qQ, qQ.rawDefinition = XQ.bind(null, QQ), qQ.aliases && dQ(qQ.aliases, {
+              languageName: WQ
+            })
+          },
+          unregisterLanguage: function(QQ) {
+            delete wQ[QQ];
+            for (const WQ of Object.keys(qQ)) qQ[WQ] === QQ && delete qQ[WQ]
+          },
+          listLanguages: function() {
+            return Object.keys(wQ)
+          },
+          getLanguage: vQ,
+          registerAliases: dQ,
+          autoDetection: HQ,
+          inherit: FW,
+          addPlugin: function(QQ) {
+            ! function(QQ) {
+              QQ["before:highlightBlock"] && !QQ["before:highlightElement"] && (QQ["before:highlightElement"] = WQ => {
+                QQ["before:highlightBlock"](Object.assign({
+                  block: WQ.el
+                }, WQ))
+              }), QQ["after:highlightBlock"] && !QQ["after:highlightElement"] && (QQ["after:highlightElement"] = WQ => {
+                QQ["after:highlightBlock"](Object.assign({
+                  block: WQ.el
+                }, WQ))
+              })
+            }(QQ), TQ.push(QQ)
+          },
+          removePlugin: function(QQ) {
+            const WQ = TQ.indexOf(QQ); - 1 !== WQ && TQ.splice(WQ, 1)
+          }
+        }), QQ.debugMode = function() {
+          zQ = !1
+        }, QQ.safeMode = function() {
+          zQ = !0
+        }, QQ.versionString = "11.11.1", QQ.regex = {
+          concat: jQ,
+          lookahead: JQ,
+          either: BQ,
+          optional: IQ,
+          anyNumberOfTimes: rQ
+        };
+        for (const XQ in fQ) "object" === typeof fQ[XQ] && WQ(fQ[XQ]);
+        return Object.assign(QQ, fQ), QQ
+      },
+      JW = gW({});
+    JW.newInstance = () => gW({}), QQ.exports = JW, JW.HighlightJS = JW, JW.default = JW
+  },
+  5036: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      d: () => wQ
+    });
+    const wQ = XQ(5042)
+  },
+  5049: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      b: () => JQ
+    });
+    const wQ = "[A-Za-z$_][0-9A-Za-z$_]*",
+      qQ = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
+      TQ = ["true", "false", "null", "undefined", "NaN", "Infinity"],
+      zQ = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
+      sQ = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
+      FQ = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
+      PQ = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
+      gQ = [].concat(FQ, zQ, sQ);
+
+    function JQ(QQ) {
+      const WQ = QQ.regex,
+        XQ = wQ,
+        JQ = "<>",
+        rQ = "</>",
+        IQ = {
+          gI: /<[A-Za-z0-9\\._:-]+/,
+          end: /\/[A-Za-z0-9\\._:-]+>|\/>/,
+          isTrulyOpeningTag: (QQ, WQ) => {
+            const XQ = QQ[0].length + QQ.index,
+              wQ = QQ.input[XQ];
+            if ("<" === wQ || "," === wQ) return void WQ.ignoreMatch();
+            let qQ;
+            ">" === wQ && (((QQ, WQ) => {
+              let {
+                after: XQ
+              } = WQ;
+              const wQ = "</" + QQ[0].slice(1);
+              return -1 !== QQ.input.indexOf(wQ, XQ)
+            })(QQ, {
+              after: XQ
+            }) || WQ.ignoreMatch());
+            const TQ = QQ.input.substring(XQ);
+            ((qQ = TQ.match(/^\s*=/)) || (qQ = TQ.match(/^\s+extends\s+/)) && 0 === qQ.index) && WQ.ignoreMatch()
+          }
+        },
+        jQ = {
+          $pattern: wQ,
+          keyword: qQ,
+          literal: TQ,
+          built_in: gQ,
+          "variable.language": PQ
+        },
+        BQ = "[0-9](_?[0-9])*",
+        yQ = `\\.(${BQ})`,
+        VQ = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
+        DQ = {
+          className: "number",
+          variants: [{
+            gI: `(\\b(${VQ})((${yQ})|\\.)?|(${yQ}))[eE][+-]?(${BQ})\\b`
+          }, {
+            gI: `\\b(${VQ})\\b((${yQ})\\b|\\.)?|(${yQ})\\b`
+          }, {
+            gI: "\\b(0|[1-9](_?[0-9])*)n\\b"
+          }, {
+            gI: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
+          }, {
+            gI: "\\b0[bB][0-1](_?[0-1])*n?\\b"
+          }, {
+            gI: "\\b0[oO][0-7](_?[0-7])*n?\\b"
+          }, {
+            gI: "\\b0[0-7]+n?\\b"
+          }],
+          relevance: 0
+        },
+        pQ = {
+          className: "subst",
+          gI: "\\$\\{",
+          end: "\\}",
+          keywords: jQ,
+          contains: []
+        },
+        GQ = {
+          gI: ".?html`",
+          end: "",
+          starts: {
+            end: "`",
+            returnEnd: !1,
+            contains: [QQ.BACKSLASH_ESCAPE, pQ],
+            subLanguage: "xml"
+          }
+        },
+        UQ = {
+          gI: ".?css`",
+          end: "",
+          starts: {
+            end: "`",
+            returnEnd: !1,
+            contains: [QQ.BACKSLASH_ESCAPE, pQ],
+            subLanguage: "css"
+          }
+        },
+        bQ = {
+          gI: ".?gql`",
+          end: "",
+          starts: {
+            end: "`",
+            returnEnd: !1,
+            contains: [QQ.BACKSLASH_ESCAPE, pQ],
+            subLanguage: "graphql"
+          }
+        },
+        vQ = {
+          className: "string",
+          gI: "`",
+          end: "`",
+          contains: [QQ.BACKSLASH_ESCAPE, pQ]
+        },
+        dQ = {
+          className: "comment",
+          variants: [QQ.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
+            relevance: 0,
+            contains: [{
+              gI: "(?=@[A-Za-z]+)",
+              relevance: 0,
+              contains: [{
+                className: "doctag",
+                gI: "@[A-Za-z]+"
+              }, {
+                className: "type",
+                gI: "\\{",
+                end: "\\}",
+                excludeEnd: !0,
+                excludeBegin: !0,
+                relevance: 0
+              }, {
+                className: "variable",
+                gI: XQ + "(?=\\s*(-)|$)",
+                endsParent: !0,
+                relevance: 0
+              }, {
+                gI: /(?=[^\n])\s/,
+                relevance: 0
+              }]
+            }]
+          }), QQ.C_BLOCK_COMMENT_MODE, QQ.C_LINE_COMMENT_MODE]
+        },
+        HQ = [QQ.APOS_STRING_MODE, QQ.QUOTE_STRING_MODE, GQ, UQ, bQ, vQ, {
+          match: /\$\d+/
+        }, DQ];
+      pQ.contains = HQ.concat({
+        gI: /\{/,
+        end: /\}/,
+        keywords: jQ,
+        contains: ["self"].concat(HQ)
+      });
+      const aQ = [].concat(dQ, pQ.contains),
+        lQ = aQ.concat([{
+          gI: /(\s*)\(/,
+          end: /\)/,
+          keywords: jQ,
+          contains: ["self"].concat(aQ)
+        }]),
+        hQ = {
+          className: "params",
+          gI: /(\s*)\(/,
+          end: /\)/,
+          excludeBegin: !0,
+          excludeEnd: !0,
+          keywords: jQ,
+          contains: lQ
+        },
+        iQ = {
+          variants: [{
+            match: [/class/, /\s+/, XQ, /\s+/, /extends/, /\s+/, WQ.concat(XQ, "(", WQ.concat(/\./, XQ), ")*")],
+            scope: {
+              1: "keyword",
+              3: "title.class",
+              5: "keyword",
+              7: "title.class.inherited"
+            }
+          }, {
+            match: [/class/, /\s+/, XQ],
+            scope: {
+              1: "keyword",
+              3: "title.class"
+            }
+          }]
+        },
+        cQ = {
+          relevance: 0,
+          match: WQ.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
+          className: "title.class",
+          keywords: {
+            _: [...zQ, ...sQ]
+          }
+        },
+        AQ = {
+          variants: [{
+            match: [/function/, /\s+/, XQ, /(?=\s*\()/]
+          }, {
+            match: [/function/, /\s*(?=\()/]
+          }],
+          className: {
+            1: "keyword",
+            3: "title.function"
+          },
+          label: "func.def",
+          contains: [hQ],
+          illegal: /%/
+        };
+      const RQ = {
+        match: WQ.concat(/\b/, (EQ = [...FQ, "super", "import"].map((QQ => `${QQ}\\s*\\(`)), WQ.concat("(?!", EQ.join("|"), ")")), XQ, WQ.lookahead(/\s*\(/)),
+        className: "title.function",
+        relevance: 0
+      };
+      var EQ;
+      const CQ = {
+          gI: WQ.concat(/\./, WQ.lookahead(WQ.concat(XQ, /(?![0-9A-Za-z$_(])/))),
+          end: XQ,
+          excludeBegin: !0,
+          keywords: "prototype",
+          className: "property",
+          relevance: 0
+        },
+        uQ = {
+          match: [/get|set/, /\s+/, XQ, /(?=\()/],
+          className: {
+            1: "keyword",
+            3: "title.function"
+          },
+          contains: [{
+            gI: /\(\)/
+          }, hQ]
+        },
+        LQ = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + QQ.UNDERSCORE_IDENT_RE + ")\\s*=>",
+        kQ = {
+          match: [/const|var|let/, /\s+/, XQ, /\s*/, /=\s*/, /(async\s*)?/, WQ.lookahead(LQ)],
+          keywords: "async",
+          className: {
+            1: "keyword",
+            3: "title.function"
+          },
+          contains: [hQ]
+        };
+      return {
+        name: "JavaScript",
+        aliases: ["js", "jsx", "mjs", "cjs"],
+        keywords: jQ,
+        exports: {
+          PARAMS_CONTAINS: lQ,
+          CLASS_REFERENCE: cQ
+        },
+        illegal: /#(?![$_A-z])/,
+        contains: [QQ.SHEBANG({
+          label: "shebang",
+          binary: "node",
+          relevance: 5
+        }), {
+          label: "use_strict",
+          className: "meta",
+          relevance: 10,
+          gI: /^\s*['"]use (strict|asm)['"]/
+        }, QQ.APOS_STRING_MODE, QQ.QUOTE_STRING_MODE, GQ, UQ, bQ, vQ, dQ, {
+          match: /\$\d+/
+        }, DQ, cQ, {
+          scope: "attr",
+          match: XQ + WQ.lookahead(":"),
+          relevance: 0
+        }, kQ, {
+          gI: "(" + QQ.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
+          keywords: "return throw case",
+          relevance: 0,
+          contains: [dQ, QQ.REGEXP_MODE, {
+            className: "function",
+            gI: LQ,
+            returnBegin: !0,
+            end: "\\s*=>",
+            contains: [{
+              className: "params",
+              variants: [{
+                gI: QQ.UNDERSCORE_IDENT_RE,
+                relevance: 0
+              }, {
+                className: null,
+                gI: /\(\s*\)/,
+                skip: !0
+              }, {
+                gI: /(\s*)\(/,
+                end: /\)/,
+                excludeBegin: !0,
+                excludeEnd: !0,
+                keywords: jQ,
+                contains: lQ
+              }]
+            }]
+          }, {
+            gI: /,/,
+            relevance: 0
+          }, {
+            match: /\s+/,
+            relevance: 0
+          }, {
+            variants: [{
+              gI: JQ,
+              end: rQ
+            }, {
+              match: /<[A-Za-z0-9\\._:-]+\s*\/>/
+            }, {
+              gI: IQ.gI,
+              "on:begin": IQ.isTrulyOpeningTag,
+              end: IQ.end
+            }],
+            subLanguage: "xml",
+            contains: [{
+              gI: IQ.gI,
+              end: IQ.end,
+              skip: !0,
+              contains: ["self"]
+            }]
+          }]
+        }, AQ, {
+          beginKeywords: "while if switch catch for"
+        }, {
+          gI: "\\b(?!function)" + QQ.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
+          returnBegin: !0,
+          label: "func.def",
+          contains: [hQ, QQ.inherit(QQ.TITLE_MODE, {
+            gI: XQ,
+            className: "title.function"
+          })]
+        }, {
+          match: /\.\.\./,
+          relevance: 0
+        }, CQ, {
+          match: "\\$" + XQ,
+          relevance: 0
+        }, {
+          match: [/\bconstructor(?=\s*\()/],
+          className: {
+            1: "title.function"
+          },
+          contains: [hQ]
+        }, RQ, {
+          relevance: 0,
+          match: /\b[A-Z][A-Z_0-9]+\b/,
+          className: "variable.constant"
+        }, iQ, uQ, {
+          match: /\$[(.]/
+        }]
+      }
+    }
+  },
+  5057: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      c: () => rQ
+    });
+    const wQ = "[A-Za-z$_][0-9A-Za-z$_]*",
+      qQ = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
+      TQ = ["true", "false", "null", "undefined", "NaN", "Infinity"],
+      zQ = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
+      sQ = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
+      FQ = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
+      PQ = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
+      gQ = [].concat(FQ, zQ, sQ);
+
+    function JQ(QQ) {
+      const WQ = QQ.regex,
+        XQ = wQ,
+        JQ = "<>",
+        rQ = "</>",
+        IQ = {
+          gI: /<[A-Za-z0-9\\._:-]+/,
+          end: /\/[A-Za-z0-9\\._:-]+>|\/>/,
+          isTrulyOpeningTag: (QQ, WQ) => {
+            const XQ = QQ[0].length + QQ.index,
+              wQ = QQ.input[XQ];
+            if ("<" === wQ || "," === wQ) return void WQ.ignoreMatch();
+            let qQ;
+            ">" === wQ && (((QQ, WQ) => {
+              let {
+                after: XQ
+              } = WQ;
+              const wQ = "</" + QQ[0].slice(1);
+              return -1 !== QQ.input.indexOf(wQ, XQ)
+            })(QQ, {
+              after: XQ
+            }) || WQ.ignoreMatch());
+            const TQ = QQ.input.substring(XQ);
+            ((qQ = TQ.match(/^\s*=/)) || (qQ = TQ.match(/^\s+extends\s+/)) && 0 === qQ.index) && WQ.ignoreMatch()
+          }
+        },
+        jQ = {
+          $pattern: wQ,
+          keyword: qQ,
+          literal: TQ,
+          built_in: gQ,
+          "variable.language": PQ
+        },
+        BQ = "[0-9](_?[0-9])*",
+        yQ = `\\.(${BQ})`,
+        VQ = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
+        DQ = {
+          className: "number",
+          variants: [{
+            gI: `(\\b(${VQ})((${yQ})|\\.)?|(${yQ}))[eE][+-]?(${BQ})\\b`
+          }, {
+            gI: `\\b(${VQ})\\b((${yQ})\\b|\\.)?|(${yQ})\\b`
+          }, {
+            gI: "\\b(0|[1-9](_?[0-9])*)n\\b"
+          }, {
+            gI: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
+          }, {
+            gI: "\\b0[bB][0-1](_?[0-1])*n?\\b"
+          }, {
+            gI: "\\b0[oO][0-7](_?[0-7])*n?\\b"
+          }, {
+            gI: "\\b0[0-7]+n?\\b"
+          }],
+          relevance: 0
+        },
+        pQ = {
+          className: "subst",
+          gI: "\\$\\{",
+          end: "\\}",
+          keywords: jQ,
+          contains: []
+        },
+        GQ = {
+          gI: ".?html`",
+          end: "",
+          starts: {
+            end: "`",
+            returnEnd: !1,
+            contains: [QQ.BACKSLASH_ESCAPE, pQ],
+            subLanguage: "xml"
+          }
+        },
+        UQ = {
+          gI: ".?css`",
+          end: "",
+          starts: {
+            end: "`",
+            returnEnd: !1,
+            contains: [QQ.BACKSLASH_ESCAPE, pQ],
+            subLanguage: "css"
+          }
+        },
+        bQ = {
+          gI: ".?gql`",
+          end: "",
+          starts: {
+            end: "`",
+            returnEnd: !1,
+            contains: [QQ.BACKSLASH_ESCAPE, pQ],
+            subLanguage: "graphql"
+          }
+        },
+        vQ = {
+          className: "string",
+          gI: "`",
+          end: "`",
+          contains: [QQ.BACKSLASH_ESCAPE, pQ]
+        },
+        dQ = {
+          className: "comment",
+          variants: [QQ.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
+            relevance: 0,
+            contains: [{
+              gI: "(?=@[A-Za-z]+)",
+              relevance: 0,
+              contains: [{
+                className: "doctag",
+                gI: "@[A-Za-z]+"
+              }, {
+                className: "type",
+                gI: "\\{",
+                end: "\\}",
+                excludeEnd: !0,
+                excludeBegin: !0,
+                relevance: 0
+              }, {
+                className: "variable",
+                gI: XQ + "(?=\\s*(-)|$)",
+                endsParent: !0,
+                relevance: 0
+              }, {
+                gI: /(?=[^\n])\s/,
+                relevance: 0
+              }]
+            }]
+          }), QQ.C_BLOCK_COMMENT_MODE, QQ.C_LINE_COMMENT_MODE]
+        },
+        HQ = [QQ.APOS_STRING_MODE, QQ.QUOTE_STRING_MODE, GQ, UQ, bQ, vQ, {
+          match: /\$\d+/
+        }, DQ];
+      pQ.contains = HQ.concat({
+        gI: /\{/,
+        end: /\}/,
+        keywords: jQ,
+        contains: ["self"].concat(HQ)
+      });
+      const aQ = [].concat(dQ, pQ.contains),
+        lQ = aQ.concat([{
+          gI: /(\s*)\(/,
+          end: /\)/,
+          keywords: jQ,
+          contains: ["self"].concat(aQ)
+        }]),
+        hQ = {
+          className: "params",
+          gI: /(\s*)\(/,
+          end: /\)/,
+          excludeBegin: !0,
+          excludeEnd: !0,
+          keywords: jQ,
+          contains: lQ
+        },
+        iQ = {
+          variants: [{
+            match: [/class/, /\s+/, XQ, /\s+/, /extends/, /\s+/, WQ.concat(XQ, "(", WQ.concat(/\./, XQ), ")*")],
+            scope: {
+              1: "keyword",
+              3: "title.class",
+              5: "keyword",
+              7: "title.class.inherited"
+            }
+          }, {
+            match: [/class/, /\s+/, XQ],
+            scope: {
+              1: "keyword",
+              3: "title.class"
+            }
+          }]
+        },
+        cQ = {
+          relevance: 0,
+          match: WQ.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
+          className: "title.class",
+          keywords: {
+            _: [...zQ, ...sQ]
+          }
+        },
+        AQ = {
+          variants: [{
+            match: [/function/, /\s+/, XQ, /(?=\s*\()/]
+          }, {
+            match: [/function/, /\s*(?=\()/]
+          }],
+          className: {
+            1: "keyword",
+            3: "title.function"
+          },
+          label: "func.def",
+          contains: [hQ],
+          illegal: /%/
+        };
+      const RQ = {
+        match: WQ.concat(/\b/, (EQ = [...FQ, "super", "import"].map((QQ => `${QQ}\\s*\\(`)), WQ.concat("(?!", EQ.join("|"), ")")), XQ, WQ.lookahead(/\s*\(/)),
+        className: "title.function",
+        relevance: 0
+      };
+      var EQ;
+      const CQ = {
+          gI: WQ.concat(/\./, WQ.lookahead(WQ.concat(XQ, /(?![0-9A-Za-z$_(])/))),
+          end: XQ,
+          excludeBegin: !0,
+          keywords: "prototype",
+          className: "property",
+          relevance: 0
+        },
+        uQ = {
+          match: [/get|set/, /\s+/, XQ, /(?=\()/],
+          className: {
+            1: "keyword",
+            3: "title.function"
+          },
+          contains: [{
+            gI: /\(\)/
+          }, hQ]
+        },
+        LQ = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + QQ.UNDERSCORE_IDENT_RE + ")\\s*=>",
+        kQ = {
+          match: [/const|var|let/, /\s+/, XQ, /\s*/, /=\s*/, /(async\s*)?/, WQ.lookahead(LQ)],
+          keywords: "async",
+          className: {
+            1: "keyword",
+            3: "title.function"
+          },
+          contains: [hQ]
+        };
+      return {
+        name: "JavaScript",
+        aliases: ["js", "jsx", "mjs", "cjs"],
+        keywords: jQ,
+        exports: {
+          PARAMS_CONTAINS: lQ,
+          CLASS_REFERENCE: cQ
+        },
+        illegal: /#(?![$_A-z])/,
+        contains: [QQ.SHEBANG({
+          label: "shebang",
+          binary: "node",
+          relevance: 5
+        }), {
+          label: "use_strict",
+          className: "meta",
+          relevance: 10,
+          gI: /^\s*['"]use (strict|asm)['"]/
+        }, QQ.APOS_STRING_MODE, QQ.QUOTE_STRING_MODE, GQ, UQ, bQ, vQ, dQ, {
+          match: /\$\d+/
+        }, DQ, cQ, {
+          scope: "attr",
+          match: XQ + WQ.lookahead(":"),
+          relevance: 0
+        }, kQ, {
+          gI: "(" + QQ.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
+          keywords: "return throw case",
+          relevance: 0,
+          contains: [dQ, QQ.REGEXP_MODE, {
+            className: "function",
+            gI: LQ,
+            returnBegin: !0,
+            end: "\\s*=>",
+            contains: [{
+              className: "params",
+              variants: [{
+                gI: QQ.UNDERSCORE_IDENT_RE,
+                relevance: 0
+              }, {
+                className: null,
+                gI: /\(\s*\)/,
+                skip: !0
+              }, {
+                gI: /(\s*)\(/,
+                end: /\)/,
+                excludeBegin: !0,
+                excludeEnd: !0,
+                keywords: jQ,
+                contains: lQ
+              }]
+            }]
+          }, {
+            gI: /,/,
+            relevance: 0
+          }, {
+            match: /\s+/,
+            relevance: 0
+          }, {
+            variants: [{
+              gI: JQ,
+              end: rQ
+            }, {
+              match: /<[A-Za-z0-9\\._:-]+\s*\/>/
+            }, {
+              gI: IQ.gI,
+              "on:begin": IQ.isTrulyOpeningTag,
+              end: IQ.end
+            }],
+            subLanguage: "xml",
+            contains: [{
+              gI: IQ.gI,
+              end: IQ.end,
+              skip: !0,
+              contains: ["self"]
+            }]
+          }]
+        }, AQ, {
+          beginKeywords: "while if switch catch for"
+        }, {
+          gI: "\\b(?!function)" + QQ.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
+          returnBegin: !0,
+          label: "func.def",
+          contains: [hQ, QQ.inherit(QQ.TITLE_MODE, {
+            gI: XQ,
+            className: "title.function"
+          })]
+        }, {
+          match: /\.\.\./,
+          relevance: 0
+        }, CQ, {
+          match: "\\$" + XQ,
+          relevance: 0
+        }, {
+          match: [/\bconstructor(?=\s*\()/],
+          className: {
+            1: "title.function"
+          },
+          contains: [hQ]
+        }, RQ, {
+          relevance: 0,
+          match: /\b[A-Z][A-Z_0-9]+\b/,
+          className: "variable.constant"
+        }, iQ, uQ, {
+          match: /\$[(.]/
+        }]
+      }
+    }
+
+    function rQ(QQ) {
+      const WQ = QQ.regex,
+        XQ = JQ(QQ),
+        zQ = wQ,
+        sQ = ["any", "void", "number", "boolean", "string", "object", "never", "symbol", "bigint", "unknown"],
+        FQ = {
+          gI: [/namespace/, /\s+/, QQ.IDENT_RE],
+          beginScope: {
+            1: "keyword",
+            3: "title.class"
+          }
+        },
+        rQ = {
+          beginKeywords: "interface",
+          end: /\{/,
+          excludeEnd: !0,
+          keywords: {
+            keyword: "interface extends",
+            built_in: sQ
+          },
+          contains: [XQ.exports.CLASS_REFERENCE]
+        },
+        IQ = {
+          $pattern: wQ,
+          keyword: qQ.concat(["type", "interface", "public", "private", "protected", "implements", "declare", "abstract", "readonly", "enum", "override", "satisfies"]),
+          literal: TQ,
+          built_in: gQ.concat(sQ),
+          "variable.language": PQ
+        },
+        jQ = {
+          className: "meta",
+          gI: "@" + zQ
+        },
+        BQ = (QQ, WQ, XQ) => {
+          const wQ = QQ.contains.findIndex((QQ => QQ.label === WQ));
+          if (-1 === wQ) throw new Error("can not find mode to replace");
+          QQ.contains.splice(wQ, 1, XQ)
+        };
+      Object.assign(XQ.keywords, IQ), XQ.exports.PARAMS_CONTAINS.push(jQ);
+      const yQ = XQ.contains.find((QQ => "attr" === QQ.scope)),
+        VQ = Object.assign({}, yQ, {
+          match: WQ.concat(zQ, WQ.lookahead(/\s*\?:/))
+        });
+      XQ.exports.PARAMS_CONTAINS.push([XQ.exports.CLASS_REFERENCE, yQ, VQ]), XQ.contains = XQ.contains.concat([jQ, FQ, rQ, VQ]), BQ(XQ, "shebang", QQ.SHEBANG()), BQ(XQ, "use_strict", {
+        className: "meta",
+        relevance: 10,
+        gI: /^\s*['"]use strict['"]/
+      });
+      return XQ.contains.find((QQ => "func.def" === QQ.label)).relevance = 0, Object.assign(XQ, {
+        name: "TypeScript",
+        aliases: ["ts", "tsx", "mts", "cts"]
+      }), XQ
+    }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

@@ -1,409 +1,462 @@
 export const id = 322;
 export const ids = [322];
 export const modules = {
-  42298: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Sp
+  42092: (QQ, WQ, XQ) => {
+    XQ.r(WQ), XQ.d(WQ, {
+      _KTXTextureLoader: () => jQ
     });
-    var Op = cp(40062);
-    const op = "bakedVertexAnimation",
-      Ip = "#ifdef BAKED_VERTEX_ANIMATION_TEXTURE\n{\n#ifdef INSTANCES\n#define BVASNAME bakedVertexAnimationSettingsInstanced\n#else\n#define BVASNAME bakedVertexAnimationSettings\n#endif\nfloat VATStartFrame=BVASNAME.x;float VATEndFrame=BVASNAME.y;float VATOffsetFrame=BVASNAME.z;float VATSpeed=BVASNAME.w;float totalFrames=VATEndFrame-VATStartFrame+1.0;float time=bakedVertexAnimationTime*VATSpeed/totalFrames;float frameCorrection=time<1.0 ? 0.0 : 1.0;float numOfFrames=totalFrames-frameCorrection;float VATFrameNum=fract(time)*numOfFrames;VATFrameNum=mod(VATFrameNum+VATOffsetFrame,numOfFrames);VATFrameNum=floor(VATFrameNum);VATFrameNum+=VATStartFrame+frameCorrection;mat4 VATInfluence;VATInfluence=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndices[0],VATFrameNum)*matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndices[1],VATFrameNum)*matricesWeights[1];\n#endif\n#if NUM_BONE_INFLUENCERS>2\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndices[2],VATFrameNum)*matricesWeights[2];\n#endif\n#if NUM_BONE_INFLUENCERS>3\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndices[3],VATFrameNum)*matricesWeights[3];\n#endif\n#if NUM_BONE_INFLUENCERS>4\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndicesExtra[0],VATFrameNum)*matricesWeightsExtra[0];\n#endif\n#if NUM_BONE_INFLUENCERS>5\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndicesExtra[1],VATFrameNum)*matricesWeightsExtra[1];\n#endif\n#if NUM_BONE_INFLUENCERS>6\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndicesExtra[2],VATFrameNum)*matricesWeightsExtra[2];\n#endif\n#if NUM_BONE_INFLUENCERS>7\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndicesExtra[3],VATFrameNum)*matricesWeightsExtra[3];\n#endif\nfinalWorld=finalWorld*VATInfluence;}\n#endif\n";
-    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
-    const Sp = {
-      name: op,
-      shader: Ip
+    var wQ = XQ(38956);
+    class qQ {
+      constructor(QQ, WQ) {
+        if (this.data = QQ, this.isInvalid = !1, !qQ.IsValid(QQ)) return this.isInvalid = !0, void wQ.b.Error("texture missing KTX identifier");
+        const XQ = Uint32Array.BYTES_PER_ELEMENT,
+          TQ = new DataView(this.data.buffer, this.data.byteOffset + 12, 13 * XQ),
+          zQ = 67305985 === TQ.getUint32(0, !0);
+        return this.glType = TQ.getUint32(1 * XQ, zQ), this.glTypeSize = TQ.getUint32(2 * XQ, zQ), this.glFormat = TQ.getUint32(3 * XQ, zQ), this.glInternalFormat = TQ.getUint32(4 * XQ, zQ), this.glBaseInternalFormat = TQ.getUint32(5 * XQ, zQ), this.pixelWidth = TQ.getUint32(6 * XQ, zQ), this.pixelHeight = TQ.getUint32(7 * XQ, zQ), this.pixelDepth = TQ.getUint32(8 * XQ, zQ), this.numberOfArrayElements = TQ.getUint32(9 * XQ, zQ), this.numberOfFaces = TQ.getUint32(10 * XQ, zQ), this.numberOfMipmapLevels = TQ.getUint32(11 * XQ, zQ), this.bytesOfKeyValueData = TQ.getUint32(12 * XQ, zQ), 0 !== this.glType ? (wQ.b.Error("only compressed formats currently supported"), void(this.isInvalid = !0)) : (this.numberOfMipmapLevels = Math.max(1, this.numberOfMipmapLevels), 0 === this.pixelHeight || 0 !== this.pixelDepth ? (wQ.b.Error("only 2D textures currently supported"), void(this.isInvalid = !0)) : 0 !== this.numberOfArrayElements ? (wQ.b.Error("texture arrays not currently supported"), void(this.isInvalid = !0)) : this.numberOfFaces !== WQ ? (wQ.b.Error("number of faces expected" + WQ + ", but found " + this.numberOfFaces), void(this.isInvalid = !0)) : void(this.loadType = qQ.COMPRESSED_2D))
+      }
+      uploadLevels(QQ, WQ) {
+        switch (this.loadType) {
+          case qQ.COMPRESSED_2D:
+            this._upload2DCompressedLevels(QQ, WQ);
+          case qQ.TEX_2D:
+          case qQ.COMPRESSED_3D:
+          case qQ.TEX_3D:
+        }
+      }
+      _upload2DCompressedLevels(QQ, WQ) {
+        let XQ = qQ.HEADER_LEN + this.bytesOfKeyValueData,
+          wQ = this.pixelWidth,
+          TQ = this.pixelHeight;
+        const zQ = WQ ? this.numberOfMipmapLevels : 1;
+        for (let qQ = 0; qQ < zQ; qQ++) {
+          const WQ = new Int32Array(this.data.buffer, this.data.byteOffset + XQ, 1)[0];
+          XQ += 4;
+          for (let zQ = 0; zQ < this.numberOfFaces; zQ++) {
+            const sQ = new Uint8Array(this.data.buffer, this.data.byteOffset + XQ, WQ);
+            QQ.Uj()._uploadCompressedDataToTextureDirectly(QQ, QQ.format, wQ, TQ, sQ, zQ, qQ), XQ += WQ, XQ += 3 - (WQ + 3) % 4
+          }
+          wQ = Math.max(1, .5 * wQ), TQ = Math.max(1, .5 * TQ)
+        }
+      }
+      static IsValid(QQ) {
+        if (QQ.byteLength >= 12) {
+          const WQ = new Uint8Array(QQ.buffer, QQ.byteOffset, 12);
+          if (171 === WQ[0] && 75 === WQ[1] && 84 === WQ[2] && 88 === WQ[3] && 32 === WQ[4] && 49 === WQ[5] && 49 === WQ[6] && 187 === WQ[7] && 13 === WQ[8] && 10 === WQ[9] && 26 === WQ[10] && 10 === WQ[11]) return !0
+        }
+        return !1
+      }
+    }
+    qQ.HEADER_LEN = 64, qQ.COMPRESSED_2D = 0, qQ.COMPRESSED_3D = 1, qQ.TEX_2D = 2, qQ.TEX_3D = 3;
+    var TQ, zQ, sQ, FQ = XQ(42100),
+      PQ = XQ(40357);
+
+    function gQ(QQ, WQ) {
+      const XQ = WQ?.jsDecoderModule || KTX2DECODER;
+      QQ && (QQ.wasmBaseUrl && (XQ.Transcoder.WasmBaseUrl = QQ.wasmBaseUrl), QQ.wasmUASTCToASTC && (XQ.LiteTranscoder_UASTC_ASTC.WasmModuleURL = QQ.wasmUASTCToASTC), QQ.wasmUASTCToBC7 && (XQ.LiteTranscoder_UASTC_BC7.WasmModuleURL = QQ.wasmUASTCToBC7), QQ.wasmUASTCToRGBA_UNORM && (XQ.LiteTranscoder_UASTC_RGBA_UNORM.WasmModuleURL = QQ.wasmUASTCToRGBA_UNORM), QQ.wasmUASTCToRGBA_SRGB && (XQ.LiteTranscoder_UASTC_RGBA_SRGB.WasmModuleURL = QQ.wasmUASTCToRGBA_SRGB), QQ.wasmUASTCToR8_UNORM && (XQ.LiteTranscoder_UASTC_R8_UNORM.WasmModuleURL = QQ.wasmUASTCToR8_UNORM), QQ.wasmUASTCToRG8_UNORM && (XQ.LiteTranscoder_UASTC_RG8_UNORM.WasmModuleURL = QQ.wasmUASTCToRG8_UNORM), QQ.jsMSCTranscoder && (XQ.MSCTranscoder.JSModuleURL = QQ.jsMSCTranscoder), QQ.wasmMSCTranscoder && (XQ.MSCTranscoder.WasmModuleURL = QQ.wasmMSCTranscoder), QQ.wasmZSTDDecoder && (XQ.ZSTDDecoder.WasmModuleURL = QQ.wasmZSTDDecoder)), WQ && (WQ.wasmUASTCToASTC && (XQ.LiteTranscoder_UASTC_ASTC.WasmBinary = WQ.wasmUASTCToASTC), WQ.wasmUASTCToBC7 && (XQ.LiteTranscoder_UASTC_BC7.WasmBinary = WQ.wasmUASTCToBC7), WQ.wasmUASTCToRGBA_UNORM && (XQ.LiteTranscoder_UASTC_RGBA_UNORM.WasmBinary = WQ.wasmUASTCToRGBA_UNORM), WQ.wasmUASTCToRGBA_SRGB && (XQ.LiteTranscoder_UASTC_RGBA_SRGB.WasmBinary = WQ.wasmUASTCToRGBA_SRGB), WQ.wasmUASTCToR8_UNORM && (XQ.LiteTranscoder_UASTC_R8_UNORM.WasmBinary = WQ.wasmUASTCToR8_UNORM), WQ.wasmUASTCToRG8_UNORM && (XQ.LiteTranscoder_UASTC_RG8_UNORM.WasmBinary = WQ.wasmUASTCToRG8_UNORM), WQ.jsMSCTranscoder && (XQ.MSCTranscoder.JSModule = WQ.jsMSCTranscoder), WQ.wasmMSCTranscoder && (XQ.MSCTranscoder.WasmBinary = WQ.wasmMSCTranscoder), WQ.wasmZSTDDecoder && (XQ.ZSTDDecoder.WasmBinary = WQ.wasmZSTDDecoder))
+    }
+
+    function JQ(QQ) {
+      let WQ;
+      "undefined" === typeof QQ && "undefined" !== typeof KTX2DECODER && (QQ = KTX2DECODER), onmessage = XQ => {
+        if (XQ.data) switch (XQ.data.action) {
+          case "init": {
+            const wQ = XQ.data.urls;
+            wQ && (wQ.jsDecoderModule && "undefined" === typeof QQ && (importScripts(wQ.jsDecoderModule), QQ = KTX2DECODER), gQ(wQ)), XQ.data.wasmBinaries && gQ(void 0, {
+              ...XQ.data.wasmBinaries,
+              jsDecoderModule: QQ
+            }), WQ = new QQ.KTX2Decoder, postMessage({
+              action: "init"
+            });
+            break
+          }
+          case "setDefaultDecoderOptions":
+            QQ.KTX2Decoder.DefaultDecoderOptions = XQ.data.options;
+            break;
+          case "decode":
+            WQ.decode(XQ.data.data, XQ.data.caps, XQ.data.options).then((QQ => {
+              const WQ = [];
+              for (let XQ = 0; XQ < QQ.mipmaps.length; ++XQ) {
+                const wQ = QQ.mipmaps[XQ];
+                wQ && wQ.data && WQ.push(wQ.data.buffer)
+              }
+              postMessage({
+                action: "decoded",
+                success: !0,
+                decodedData: QQ
+              }, WQ)
+            })).catch((QQ => {
+              postMessage({
+                action: "decoded",
+                success: !1,
+                cg: QQ
+              })
+            }))
+        }
+      }
+    }! function(QQ) {
+      QQ[QQ.ETC1S = 0] = "ETC1S", QQ[QQ.UASTC4x4 = 1] = "UASTC4x4", QQ[QQ.RGBA32 = 2] = "RGBA32"
+    }(TQ || (TQ = {})),
+    function(QQ) {
+      QQ[QQ.ASTC_4X4_RGBA = 0] = "ASTC_4X4_RGBA", QQ[QQ.ASTC_4x4_RGBA = 0] = "ASTC_4x4_RGBA", QQ[QQ.BC7_RGBA = 1] = "BC7_RGBA", QQ[QQ.BC3_RGBA = 2] = "BC3_RGBA", QQ[QQ.BC1_RGB = 3] = "BC1_RGB", QQ[QQ.PVRTC1_4_RGBA = 4] = "PVRTC1_4_RGBA", QQ[QQ.PVRTC1_4_RGB = 5] = "PVRTC1_4_RGB", QQ[QQ.ETC2_RGBA = 6] = "ETC2_RGBA", QQ[QQ.ETC1_RGB = 7] = "ETC1_RGB", QQ[QQ.RGBA32 = 8] = "RGBA32", QQ[QQ.R8 = 9] = "R8", QQ[QQ.RG8 = 10] = "RG8"
+    }(zQ || (zQ = {})),
+    function(QQ) {
+      QQ[QQ.COMPRESSED_RGBA_BPTC_UNORM_EXT = 36492] = "COMPRESSED_RGBA_BPTC_UNORM_EXT", QQ[QQ.COMPRESSED_RGBA_ASTC_4X4_KHR = 37808] = "COMPRESSED_RGBA_ASTC_4X4_KHR", QQ[QQ.COMPRESSED_RGB_S3TC_DXT1_EXT = 33776] = "COMPRESSED_RGB_S3TC_DXT1_EXT", QQ[QQ.COMPRESSED_RGBA_S3TC_DXT5_EXT = 33779] = "COMPRESSED_RGBA_S3TC_DXT5_EXT", QQ[QQ.COMPRESSED_RGBA_PVRTC_4BPPV1_IMG = 35842] = "COMPRESSED_RGBA_PVRTC_4BPPV1_IMG", QQ[QQ.COMPRESSED_RGB_PVRTC_4BPPV1_IMG = 35840] = "COMPRESSED_RGB_PVRTC_4BPPV1_IMG", QQ[QQ.COMPRESSED_RGBA8_ETC2_EAC = 37496] = "COMPRESSED_RGBA8_ETC2_EAC", QQ[QQ.COMPRESSED_RGB8_ETC2 = 37492] = "COMPRESSED_RGB8_ETC2", QQ[QQ.COMPRESSED_RGB_ETC1_WEBGL = 36196] = "COMPRESSED_RGB_ETC1_WEBGL", QQ[QQ.RGBA8Format = 32856] = "RGBA8Format", QQ[QQ.R8Format = 33321] = "R8Format", QQ[QQ.RG8Format = 33323] = "RG8Format"
+    }(sQ || (sQ = {}));
+    class rQ {
+      static GetDefaultNumWorkers() {
+        return "object" === typeof navigator && navigator.hardwareConcurrency ? Math.min(Math.floor(.5 * navigator.hardwareConcurrency), 4) : 1
+      }
+      static _Initialize(QQ) {
+        if (rQ._WorkerPoolPromise || rQ._DecoderModulePromise) return;
+        const WQ = {
+          wasmBaseUrl: PQ.g.ScriptBaseUrl,
+          jsDecoderModule: PQ.g.GetBabylonScriptURL(this.URLConfig.jsDecoderModule, !0),
+          wasmUASTCToASTC: PQ.g.GetBabylonScriptURL(this.URLConfig.wasmUASTCToASTC, !0),
+          wasmUASTCToBC7: PQ.g.GetBabylonScriptURL(this.URLConfig.wasmUASTCToBC7, !0),
+          wasmUASTCToRGBA_UNORM: PQ.g.GetBabylonScriptURL(this.URLConfig.wasmUASTCToRGBA_UNORM, !0),
+          wasmUASTCToRGBA_SRGB: PQ.g.GetBabylonScriptURL(this.URLConfig.wasmUASTCToRGBA_SRGB, !0),
+          wasmUASTCToR8_UNORM: PQ.g.GetBabylonScriptURL(this.URLConfig.wasmUASTCToR8_UNORM, !0),
+          wasmUASTCToRG8_UNORM: PQ.g.GetBabylonScriptURL(this.URLConfig.wasmUASTCToRG8_UNORM, !0),
+          jsMSCTranscoder: PQ.g.GetBabylonScriptURL(this.URLConfig.jsMSCTranscoder, !0),
+          wasmMSCTranscoder: PQ.g.GetBabylonScriptURL(this.URLConfig.wasmMSCTranscoder, !0),
+          wasmZSTDDecoder: PQ.g.GetBabylonScriptURL(this.URLConfig.wasmZSTDDecoder, !0)
+        };
+        QQ && "function" === typeof Worker && "undefined" !== typeof URL ? rQ._WorkerPoolPromise = new Promise((XQ => {
+          const wQ = `${gQ}(${JQ})()`,
+            qQ = URL.createObjectURL(new Blob([wQ], {
+              type: "application/javascript"
+            }));
+          XQ(new FQ.e(QQ, (async () => await async function(QQ, WQ, XQ) {
+            return await new Promise(((wQ, qQ) => {
+              const TQ = WQ => {
+                  QQ.removeEventListener("error", TQ), QQ.removeEventListener("message", zQ), qQ(WQ)
+                },
+                zQ = WQ => {
+                  "init" === WQ.data.action && (QQ.removeEventListener("error", TQ), QQ.removeEventListener("message", zQ), wQ(QQ))
+                };
+              QQ.addEventListener("error", TQ), QQ.addEventListener("message", zQ), QQ.postMessage({
+                action: "init",
+                urls: XQ,
+                wasmBinaries: WQ
+              })
+            }))
+          }(new Worker(qQ), void 0, WQ))))
+        })) : "undefined" === typeof rQ._KTX2DecoderModule ? rQ._DecoderModulePromise = PQ.g.LoadBabylonScriptAsync(WQ.jsDecoderModule).then((() => (rQ._KTX2DecoderModule = KTX2DECODER, rQ._KTX2DecoderModule.MSCTranscoder.UseFromWorkerThread = !1, rQ._KTX2DecoderModule.WASMMemoryManager.LoadBinariesFromCurrentThread = !0, gQ(WQ, rQ._KTX2DecoderModule), new rQ._KTX2DecoderModule.KTX2Decoder))) : (rQ._KTX2DecoderModule.MSCTranscoder.UseFromWorkerThread = !1, rQ._KTX2DecoderModule.WASMMemoryManager.LoadBinariesFromCurrentThread = !0, rQ._DecoderModulePromise = Promise.resolve(new rQ._KTX2DecoderModule.KTX2Decoder))
+      }
+      constructor(QQ) {
+        let WQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : rQ.DefaultNumWorkers;
+        this._engine = QQ;
+        const XQ = "object" === typeof WQ && WQ.workerPool || rQ.WorkerPool;
+        if (XQ) rQ._WorkerPoolPromise = Promise.resolve(XQ);
+        else {
+          "object" === typeof WQ ? rQ._KTX2DecoderModule = WQ?.binariesAndModulesContainer?.jsDecoderModule : "undefined" !== typeof KTX2DECODER && (rQ._KTX2DecoderModule = KTX2DECODER);
+          const QQ = "number" === typeof WQ ? WQ : WQ.numWorkers ?? rQ.DefaultNumWorkers;
+          rQ._Initialize(QQ)
+        }
+      }
+      async _uploadAsync(QQ, WQ, XQ) {
+        const wQ = await this._decodeAsync(QQ, XQ);
+        this._createTexture(wQ, WQ, XQ)
+      }
+      async _decodeAsync(QQ, WQ) {
+        const XQ = this._engine.getCaps(),
+          wQ = {
+            astc: !!XQ.astc,
+            bptc: !!XQ.bptc,
+            s3tc: !!XQ.s3tc,
+            pvrtc: !!XQ.pvrtc,
+            etc2: !!XQ.etc2,
+            etc1: !!XQ.etc1
+          };
+        if (rQ._WorkerPoolPromise) {
+          const XQ = await rQ._WorkerPoolPromise;
+          return await new Promise(((qQ, TQ) => {
+            XQ.push(((XQ, zQ) => {
+              const sQ = QQ => {
+                  XQ.removeEventListener("error", sQ), XQ.removeEventListener("message", FQ), TQ(QQ), zQ()
+                },
+                FQ = QQ => {
+                  "decoded" === QQ.data.action && (XQ.removeEventListener("error", sQ), XQ.removeEventListener("message", FQ), QQ.data.success ? qQ(QQ.data.decodedData) : TQ({
+                    message: QQ.data.cg
+                  }), zQ())
+                };
+              XQ.addEventListener("error", sQ), XQ.addEventListener("message", FQ), XQ.postMessage({
+                action: "setDefaultDecoderOptions",
+                options: rQ.DefaultDecoderOptions._getKTX2DecoderOptions()
+              });
+              const PQ = new Uint8Array(QQ.byteLength);
+              PQ.set(new Uint8Array(QQ.buffer, QQ.byteOffset, QQ.byteLength)), XQ.postMessage({
+                action: "decode",
+                data: PQ,
+                caps: wQ,
+                options: WQ
+              }, [PQ.buffer])
+            }))
+          }))
+        }
+        if (rQ._DecoderModulePromise) {
+          const wQ = await rQ._DecoderModulePromise;
+          return rQ.DefaultDecoderOptions.isDirty && (rQ._KTX2DecoderModule.KTX2Decoder.DefaultDecoderOptions = rQ.DefaultDecoderOptions._getKTX2DecoderOptions()), await new Promise(((qQ, TQ) => {
+            wQ.decode(QQ, XQ, WQ).then((QQ => {
+              qQ(QQ)
+            })).catch((QQ => {
+              TQ({
+                message: QQ
+              })
+            }))
+          }))
+        }
+        throw new Error("KTX2 decoder module is not available")
+      }
+      _createTexture(QQ, WQ, XQ) {
+        if ((QQ.layerCount ?? 1) > 1) throw new Error("KTX2 container - array textures are not supported by this texture loader.");
+        this._engine._bindTextureDirectly(3553, WQ), XQ && (XQ.transcodedFormat = QQ.transcodedFormat, XQ.isInGammaSpace = QQ.isInGammaSpace, XQ.hasAlpha = QQ.hasAlpha, XQ.transcoderName = QQ.transcoderName);
+        let wQ = !0;
+        switch (QQ.transcodedFormat) {
+          case 32856:
+            WQ.type = 0, WQ.format = 5;
+            break;
+          case 33321:
+            WQ.type = 0, WQ.format = 6;
+            break;
+          case 33323:
+            WQ.type = 0, WQ.format = 7;
+            break;
+          default:
+            WQ.format = QQ.transcodedFormat, wQ = !1
+        }
+        if (WQ._gammaSpace = QQ.isInGammaSpace, WQ.generateMipMaps = QQ.mipmaps.length > 1, WQ.width = QQ.mipmaps[0].width, WQ.height = QQ.mipmaps[0].height, QQ.errors) throw new Error("KTX2 container - could not transcode the data. " + QQ.errors);
+        for (let qQ = 0; qQ < QQ.mipmaps.length; ++qQ) {
+          const XQ = QQ.mipmaps[qQ];
+          if (!XQ || !XQ.data) throw new Error("KTX2 container - could not transcode one of the image");
+          wQ ? (WQ.width = XQ.width, WQ.height = XQ.height, this._engine._uploadDataToTextureDirectly(WQ, XQ.data, 0, qQ, void 0, !0)) : this._engine._uploadCompressedDataToTextureDirectly(WQ, QQ.transcodedFormat, XQ.width, XQ.height, XQ.data, 0, qQ)
+        }
+        WQ._extension = ".ktx2", WQ.isReady = !0, this._engine._bindTextureDirectly(3553, null)
+      }
+      static IsValid(QQ) {
+        if (QQ.byteLength >= 12) {
+          const WQ = new Uint8Array(QQ.buffer, QQ.byteOffset, 12);
+          if (171 === WQ[0] && 75 === WQ[1] && 84 === WQ[2] && 88 === WQ[3] && 32 === WQ[4] && 50 === WQ[5] && 48 === WQ[6] && 187 === WQ[7] && 13 === WQ[8] && 10 === WQ[9] && 26 === WQ[10] && 10 === WQ[11]) return !0
+        }
+        return !1
+      }
+    }
+
+    function IQ(QQ) {
+      switch (QQ) {
+        case 35916:
+          return 33776;
+        case 35918:
+          return 33778;
+        case 35919:
+          return 33779;
+        case 37493:
+          return 37492;
+        case 37497:
+          return 37496;
+        case 37495:
+          return 37494;
+        case 37840:
+          return 37808;
+        case 37841:
+          return 37809;
+        case 37842:
+          return 37810;
+        case 37843:
+          return 37811;
+        case 37844:
+          return 37812;
+        case 37845:
+          return 37813;
+        case 37846:
+          return 37814;
+        case 37847:
+          return 37815;
+        case 37848:
+          return 37816;
+        case 37849:
+          return 37817;
+        case 37850:
+          return 37818;
+        case 37851:
+          return 37819;
+        case 37852:
+          return 37820;
+        case 37853:
+          return 37821;
+        case 36493:
+          return 36492
+      }
+      return null
+    }
+    rQ.URLConfig = {
+      jsDecoderModule: "https://cdn.babylonjs.com/babylon.ktx2Decoder.js",
+      wasmUASTCToASTC: null,
+      wasmUASTCToBC7: null,
+      wasmUASTCToRGBA_UNORM: null,
+      wasmUASTCToRGBA_SRGB: null,
+      wasmUASTCToR8_UNORM: null,
+      wasmUASTCToRG8_UNORM: null,
+      jsMSCTranscoder: null,
+      wasmMSCTranscoder: null,
+      wasmZSTDDecoder: null
+    }, rQ.DefaultNumWorkers = rQ.GetDefaultNumWorkers(), rQ.DefaultDecoderOptions = new class {
+      constructor() {
+        this._isDirty = !0, this._useRGBAIfOnlyBC1BC3AvailableWhenUASTC = !0, this._ktx2DecoderOptions = {}
+      }
+      get isDirty() {
+        return this._isDirty
+      }
+      get useRGBAIfASTCBC7NotAvailableWhenUASTC() {
+        return this._useRGBAIfASTCBC7NotAvailableWhenUASTC
+      }
+      set useRGBAIfASTCBC7NotAvailableWhenUASTC(QQ) {
+        this._useRGBAIfASTCBC7NotAvailableWhenUASTC !== QQ && (this._useRGBAIfASTCBC7NotAvailableWhenUASTC = QQ, this._isDirty = !0)
+      }
+      get useRGBAIfOnlyBC1BC3AvailableWhenUASTC() {
+        return this._useRGBAIfOnlyBC1BC3AvailableWhenUASTC
+      }
+      set useRGBAIfOnlyBC1BC3AvailableWhenUASTC(QQ) {
+        this._useRGBAIfOnlyBC1BC3AvailableWhenUASTC !== QQ && (this._useRGBAIfOnlyBC1BC3AvailableWhenUASTC = QQ, this._isDirty = !0)
+      }
+      get forceRGBA() {
+        return this._forceRGBA
+      }
+      set forceRGBA(QQ) {
+        this._forceRGBA !== QQ && (this._forceRGBA = QQ, this._isDirty = !0)
+      }
+      get forceR8() {
+        return this._forceR8
+      }
+      set forceR8(QQ) {
+        this._forceR8 !== QQ && (this._forceR8 = QQ, this._isDirty = !0)
+      }
+      get forceRG8() {
+        return this._forceRG8
+      }
+      set forceRG8(QQ) {
+        this._forceRG8 !== QQ && (this._forceRG8 = QQ, this._isDirty = !0)
+      }
+      get bypassTranscoders() {
+        return this._bypassTranscoders
+      }
+      set bypassTranscoders(QQ) {
+        this._bypassTranscoders !== QQ && (this._bypassTranscoders = QQ, this._isDirty = !0)
+      }
+      _getKTX2DecoderOptions() {
+        if (!this._isDirty) return this._ktx2DecoderOptions;
+        this._isDirty = !1;
+        const QQ = {};
+        return void 0 !== this._useRGBAIfASTCBC7NotAvailableWhenUASTC && (QQ.useRGBAIfASTCBC7NotAvailableWhenUASTC = this._useRGBAIfASTCBC7NotAvailableWhenUASTC), void 0 !== this._forceRGBA && (QQ.forceRGBA = this._forceRGBA), void 0 !== this._forceR8 && (QQ.forceR8 = this._forceR8), void 0 !== this._forceRG8 && (QQ.forceRG8 = this._forceRG8), void 0 !== this._bypassTranscoders && (QQ.bypassTranscoders = this._bypassTranscoders), this.useRGBAIfOnlyBC1BC3AvailableWhenUASTC && (QQ.transcodeFormatDecisionTree = {
+          UASTC: {
+            transcodeFormat: [zQ.BC1_RGB, zQ.BC3_RGBA],
+            yes: {
+              transcodeFormat: zQ.RGBA32,
+              engineFormat: 32856,
+              roundToMultiple4: !1
+            }
+          }
+        }), this._ktx2DecoderOptions = QQ, QQ
+      }
+    };
+    class jQ {
+      constructor() {
+        this.supportCascades = !1
+      }
+      loadCubeData(QQ, WQ, XQ, wQ) {
+        if (Array.isArray(QQ)) return;
+        WQ._invertVScale = !WQ.invertY;
+        const TQ = WQ.Uj(),
+          zQ = new qQ(QQ, 6),
+          sQ = IQ(zQ.glInternalFormat);
+        null !== sQ ? (WQ.format = sQ, WQ._useSRGBBuffer = TQ._getUseSRGBBuffer(!0, !WQ.generateMipMaps), WQ._gammaSpace = !0) : WQ.format = zQ.glInternalFormat;
+        const FQ = zQ.numberOfMipmapLevels > 1 && WQ.generateMipMaps;
+        TQ._unpackFlipY(!0), zQ.uploadLevels(WQ, WQ.generateMipMaps), WQ.width = zQ.pixelWidth, WQ.height = zQ.pixelHeight, TQ._setCubeMapTextureParams(WQ, FQ, zQ.numberOfMipmapLevels - 1), WQ.isReady = !0, WQ.onLoadedObservable.notifyObservers(WQ), WQ.onLoadedObservable.clear(), wQ && wQ()
+      }
+      loadData(QQ, WQ, XQ, TQ) {
+        if (qQ.IsValid(QQ)) {
+          WQ._invertVScale = !WQ.invertY;
+          const wQ = new qQ(QQ, 1),
+            TQ = IQ(wQ.glInternalFormat);
+          null !== TQ ? (WQ.format = TQ, WQ._useSRGBBuffer = WQ.Uj()._getUseSRGBBuffer(!0, !WQ.generateMipMaps), WQ._gammaSpace = !0) : WQ.format = wQ.glInternalFormat, XQ(wQ.pixelWidth, wQ.pixelHeight, WQ.generateMipMaps, !0, (() => {
+            wQ.uploadLevels(WQ, WQ.generateMipMaps)
+          }), wQ.isInvalid)
+        } else if (rQ.IsValid(QQ)) {
+          new rQ(WQ.Uj())._uploadAsync(QQ, WQ, TQ).then((() => {
+            XQ(WQ.width, WQ.height, WQ.generateMipMaps, !0, (() => {}), !1)
+          }), (QQ => {
+            wQ.b.Warn(`Failed to load KTX2 texture data: ${QQ.message}`), XQ(0, 0, !1, !1, (() => {}), !0)
+          }))
+        } else wQ.b.Error("texture missing KTX identifier"), XQ(0, 0, !1, !1, (() => {}), !0)
+      }
     }
   },
-  42182: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Sp
+  42100: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      e: () => qQ
     });
-    var Op = cp(40062);
-    const op = "bakedVertexAnimationDeclaration",
-      Ip = "#ifdef BAKED_VERTEX_ANIMATION_TEXTURE\nuniform float bakedVertexAnimationTime;\n#if !defined(WEBGL2) && !defined(WEBGPU)\nuniform vec2 bakedVertexAnimationTextureSizeInverted;\n#endif\nuniform vec4 bakedVertexAnimationSettings;uniform sampler2D bakedVertexAnimationTexture;\n#ifdef INSTANCES\nattribute vec4 bakedVertexAnimationSettingsInstanced;\n#endif\n#define inline\nmat4 readMatrixFromRawSamplerVAT(sampler2D smp,float index,float frame)\n{\n#if defined(WEBGL2) || defined(WEBGPU)\nint offset=int(index)*4;int frameUV=int(frame);vec4 m0=texelFetch(smp,ivec2(offset+0,frameUV),0);vec4 m1=texelFetch(smp,ivec2(offset+1,frameUV),0);vec4 m2=texelFetch(smp,ivec2(offset+2,frameUV),0);vec4 m3=texelFetch(smp,ivec2(offset+3,frameUV),0);return mat4(m0,m1,m2,m3);\n#else\nfloat offset=index*4.0;float frameUV=(frame+0.5)*bakedVertexAnimationTextureSizeInverted.y;float dx=bakedVertexAnimationTextureSizeInverted.x;vec4 m0=texture2D(smp,vec2(dx*(offset+0.5),frameUV));vec4 m1=texture2D(smp,vec2(dx*(offset+1.5),frameUV));vec4 m2=texture2D(smp,vec2(dx*(offset+2.5),frameUV));vec4 m3=texture2D(smp,vec2(dx*(offset+3.5),frameUV));return mat4(m0,m1,m2,m3);\n#endif\n}\n#endif\n";
-    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
-    const Sp = {
-      name: op,
-      shader: Ip
+    class wQ {
+      constructor(QQ) {
+        this._pendingActions = new Array, this._workerInfos = QQ.map((QQ => ({
+          workerPromise: Promise.resolve(QQ),
+          idle: !0
+        })))
+      }
+      dispose() {
+        for (const QQ of this._workerInfos) QQ.workerPromise.then((QQ => {
+          QQ.terminate()
+        }));
+        this._workerInfos.length = 0, this._pendingActions.length = 0
+      }
+      push(QQ) {
+        this._executeOnIdleWorker(QQ) || this._pendingActions.push(QQ)
+      }
+      _executeOnIdleWorker(QQ) {
+        for (const WQ of this._workerInfos)
+          if (WQ.idle) return this._execute(WQ, QQ), !0;
+        return !1
+      }
+      _execute(QQ, WQ) {
+        QQ.idle = !1, QQ.workerPromise.then((XQ => {
+          WQ(XQ, (() => {
+            const WQ = this._pendingActions.shift();
+            WQ ? this._execute(QQ, WQ) : QQ.idle = !0
+          }))
+        }))
+      }
     }
-  },
-  42178: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Sp
-    });
-    var Op = cp(40062);
-    const op = "bonesDeclaration",
-      Ip = "#if NUM_BONE_INFLUENCERS>0\nattribute vec4 matricesIndices;attribute vec4 matricesWeights;\n#if NUM_BONE_INFLUENCERS>4\nattribute vec4 matricesIndicesExtra;attribute vec4 matricesWeightsExtra;\n#endif\n#ifndef BAKED_VERTEX_ANIMATION_TEXTURE\n#ifdef BONETEXTURE\nuniform highp sampler2D boneSampler;uniform vec2 boneTextureInfo;\n#else\nuniform mat4 mBones[BonesPerMesh];\n#endif\n#ifdef BONES_VELOCITY_ENABLED\nuniform mat4 mPreviousBones[BonesPerMesh];\n#endif\n#ifdef BONETEXTURE\n#define inline\nmat4 readMatrixFromRawSampler(sampler2D smp,float index)\n{\n#if defined(WEBGL2) || defined(WEBGPU)\nint offset=int(index)*4; \nint textureWidth=int(boneTextureInfo.x);int y=int(offset)/textureWidth;int x=int(offset) % textureWidth;vec4 m0=texelFetch(smp,ivec2(x+0,y),0);vec4 m1=texelFetch(smp,ivec2(x+1,y),0);vec4 m2=texelFetch(smp,ivec2(x+2,y),0);vec4 m3=texelFetch(smp,ivec2(x+3,y),0);return mat4(m0,m1,m2,m3);\n#else\nfloat offset=index*4.0;float y=floor(offset/boneTextureInfo.x);float x=offset-y*boneTextureInfo.x;float dy=1.0/boneTextureInfo.y;float dx=1.0/boneTextureInfo.x;vec4 m0=texture2D(smp,vec2(dx*(x+0.5),dy*(y+0.5)));vec4 m1=texture2D(smp,vec2(dx*(x+1.5),dy*(y+0.5)));vec4 m2=texture2D(smp,vec2(dx*(x+2.5),dy*(y+0.5)));vec4 m3=texture2D(smp,vec2(dx*(x+3.5),dy*(y+0.5))); \nreturn mat4(m0,m1,m2,m3);\n#endif\n}\n#endif\n#endif\n#endif\n";
-    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
-    const Sp = {
-      name: op,
-      shader: Ip
+    class qQ extends wQ {
+      constructor(QQ, WQ) {
+        let XQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : qQ.DefaultOptions;
+        super([]), this._maxWorkers = QQ, this._createWorkerAsync = WQ, this._options = XQ
+      }
+      push(QQ) {
+        if (!this._executeOnIdleWorker(QQ))
+          if (this._workerInfos.length < this._maxWorkers) {
+            const WQ = {
+              workerPromise: this._createWorkerAsync(),
+              idle: !1
+            };
+            this._workerInfos.push(WQ), this._execute(WQ, QQ)
+          } else this._pendingActions.push(QQ)
+      }
+      _execute(QQ, WQ) {
+        QQ.timeoutId && (clearTimeout(QQ.timeoutId), delete QQ.timeoutId), super._execute(QQ, ((XQ, wQ) => {
+          WQ(XQ, (() => {
+            wQ(), QQ.idle && (QQ.timeoutId = setTimeout((() => {
+              QQ.workerPromise.then((QQ => {
+                QQ.terminate()
+              }));
+              const WQ = this._workerInfos.indexOf(QQ); - 1 !== WQ && this._workerInfos.splice(WQ, 1)
+            }), this._options.idleTimeElapsedBeforeRelease))
+          }))
+        }))
+      }
     }
-  },
-  42291: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Sp
-    });
-    var Op = cp(40062);
-    const op = "bonesVertex",
-      Ip = "#ifndef BAKED_VERTEX_ANIMATION_TEXTURE\n#if NUM_BONE_INFLUENCERS>0\nmat4 influence;\n#ifdef BONETEXTURE\ninfluence=readMatrixFromRawSampler(boneSampler,matricesIndices[0])*matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndices[1])*matricesWeights[1];\n#endif\n#if NUM_BONE_INFLUENCERS>2\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndices[2])*matricesWeights[2];\n#endif\n#if NUM_BONE_INFLUENCERS>3\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndices[3])*matricesWeights[3];\n#endif\n#if NUM_BONE_INFLUENCERS>4\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndicesExtra[0])*matricesWeightsExtra[0];\n#endif\n#if NUM_BONE_INFLUENCERS>5\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndicesExtra[1])*matricesWeightsExtra[1];\n#endif\n#if NUM_BONE_INFLUENCERS>6\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndicesExtra[2])*matricesWeightsExtra[2];\n#endif\n#if NUM_BONE_INFLUENCERS>7\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndicesExtra[3])*matricesWeightsExtra[3];\n#endif\n#else\ninfluence=mBones[int(matricesIndices[0])]*matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\ninfluence+=mBones[int(matricesIndices[1])]*matricesWeights[1];\n#endif\n#if NUM_BONE_INFLUENCERS>2\ninfluence+=mBones[int(matricesIndices[2])]*matricesWeights[2];\n#endif\n#if NUM_BONE_INFLUENCERS>3\ninfluence+=mBones[int(matricesIndices[3])]*matricesWeights[3];\n#endif\n#if NUM_BONE_INFLUENCERS>4\ninfluence+=mBones[int(matricesIndicesExtra[0])]*matricesWeightsExtra[0];\n#endif\n#if NUM_BONE_INFLUENCERS>5\ninfluence+=mBones[int(matricesIndicesExtra[1])]*matricesWeightsExtra[1];\n#endif\n#if NUM_BONE_INFLUENCERS>6\ninfluence+=mBones[int(matricesIndicesExtra[2])]*matricesWeightsExtra[2];\n#endif\n#if NUM_BONE_INFLUENCERS>7\ninfluence+=mBones[int(matricesIndicesExtra[3])]*matricesWeightsExtra[3];\n#endif\n#endif\nfinalWorld=finalWorld*influence;\n#endif\n#endif\n";
-    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
-    const Sp = {
-      name: op,
-      shader: Ip
-    }
-  },
-  42319: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Sp
-    });
-    var Op = cp(40062);
-    const op = "clipPlaneVertex",
-      Ip = "#ifdef CLIPPLANE\nfClipDistance=dot(worldPos,vClipPlane);\n#endif\n#ifdef CLIPPLANE2\nfClipDistance2=dot(worldPos,vClipPlane2);\n#endif\n#ifdef CLIPPLANE3\nfClipDistance3=dot(worldPos,vClipPlane3);\n#endif\n#ifdef CLIPPLANE4\nfClipDistance4=dot(worldPos,vClipPlane4);\n#endif\n#ifdef CLIPPLANE5\nfClipDistance5=dot(worldPos,vClipPlane5);\n#endif\n#ifdef CLIPPLANE6\nfClipDistance6=dot(worldPos,vClipPlane6);\n#endif\n";
-    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
-    const Sp = {
-      name: op,
-      shader: Ip
-    }
-  },
-  42226: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Sp
-    });
-    var Op = cp(40062);
-    const op = "clipPlaneVertexDeclaration",
-      Ip = "#ifdef CLIPPLANE\nuniform vec4 vClipPlane;varying float fClipDistance;\n#endif\n#ifdef CLIPPLANE2\nuniform vec4 vClipPlane2;varying float fClipDistance2;\n#endif\n#ifdef CLIPPLANE3\nuniform vec4 vClipPlane3;varying float fClipDistance3;\n#endif\n#ifdef CLIPPLANE4\nuniform vec4 vClipPlane4;varying float fClipDistance4;\n#endif\n#ifdef CLIPPLANE5\nuniform vec4 vClipPlane5;varying float fClipDistance5;\n#endif\n#ifdef CLIPPLANE6\nuniform vec4 vClipPlane6;varying float fClipDistance6;\n#endif\n";
-    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
-    const Sp = {
-      name: op,
-      shader: Ip
-    }
-  },
-  42151: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Sp
-    });
-    var Op = cp(40062);
-    const op = "decalVertexDeclaration",
-      Ip = "#ifdef DECAL\nuniform vec4 vDecalInfos;uniform mat4 decalMatrix;\n#endif\n";
-    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
-    const Sp = {
-      name: op,
-      shader: Ip
-    }
-  },
-  42327: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Sp
-    });
-    var Op = cp(40062);
-    const op = "fogVertex",
-      Ip = "#ifdef FOG\nvFogDistance=(view*worldPos).xyz;\n#endif\n";
-    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
-    const Sp = {
-      name: op,
-      shader: Ip
-    }
-  },
-  42232: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Sp
-    });
-    var Op = cp(40062);
-    const op = "fogVertexDeclaration",
-      Ip = "#ifdef FOG\nvarying vec3 vFogDistance;\n#endif\n";
-    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
-    const Sp = {
-      name: op,
-      shader: Ip
-    }
-  },
-  42174: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Sp
-    });
-    var Op = cp(40062);
-    const op = "helperFunctions",
-      Ip = "const float PI=3.1415926535897932384626433832795;const float TWO_PI=6.283185307179586;const float HALF_PI=1.5707963267948966;const float RECIPROCAL_PI=0.3183098861837907;const float RECIPROCAL_PI2=0.15915494309189535;const float RECIPROCAL_PI4=0.07957747154594767;const float HALF_MIN=5.96046448e-08; \nconst float LinearEncodePowerApprox=2.2;const float GammaEncodePowerApprox=1.0/LinearEncodePowerApprox;const vec3 LuminanceEncodeApprox=vec3(0.2126,0.7152,0.0722);const float Epsilon=0.0000001;\n#define saturate(x) clamp(x,0.0,1.0)\n#define absEps(x) abs(x)+Epsilon\n#define maxEps(x) max(x,Epsilon)\n#define saturateEps(x) clamp(x,Epsilon,1.0)\nmat3 transposeMat3(mat3 inMatrix) {vec3 i0=inMatrix[0];vec3 i1=inMatrix[1];vec3 i2=inMatrix[2];mat3 outMatrix=mat3(\nvec3(i0.x,i1.x,i2.x),\nvec3(i0.y,i1.y,i2.y),\nvec3(i0.z,i1.z,i2.z)\n);return outMatrix;}\nmat3 inverseMat3(mat3 inMatrix) {float a00=inMatrix[0][0],a01=inMatrix[0][1],a02=inMatrix[0][2];float a10=inMatrix[1][0],a11=inMatrix[1][1],a12=inMatrix[1][2];float a20=inMatrix[2][0],a21=inMatrix[2][1],a22=inMatrix[2][2];float b01=a22*a11-a12*a21;float b11=-a22*a10+a12*a20;float b21=a21*a10-a11*a20;float det=a00*b01+a01*b11+a02*b21;return mat3(b01,(-a22*a01+a02*a21),(a12*a01-a02*a11),\nb11,(a22*a00-a02*a20),(-a12*a00+a02*a10),\nb21,(-a21*a00+a01*a20),(a11*a00-a01*a10))/det;}\n#if USE_EXACT_SRGB_CONVERSIONS\nvec3 toLinearSpaceExact(vec3 color)\n{vec3 nearZeroSection=0.0773993808*color;vec3 remainingSection=pow(0.947867299*(color+vec3(0.055)),vec3(2.4));\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\nreturn mix(remainingSection,nearZeroSection,lessThanEqual(color,vec3(0.04045)));\n#else\nreturn\nvec3(\ncolor.r<=0.04045 ? nearZeroSection.r : remainingSection.r,\ncolor.g<=0.04045 ? nearZeroSection.g : remainingSection.g,\ncolor.b<=0.04045 ? nearZeroSection.b : remainingSection.b);\n#endif\n}\nvec3 toGammaSpaceExact(vec3 color)\n{vec3 nearZeroSection=12.92*color;vec3 remainingSection=1.055*pow(color,vec3(0.41666))-vec3(0.055);\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\nreturn mix(remainingSection,nearZeroSection,lessThanEqual(color,vec3(0.0031308)));\n#else\nreturn\nvec3(\ncolor.r<=0.0031308 ? nearZeroSection.r : remainingSection.r,\ncolor.g<=0.0031308 ? nearZeroSection.g : remainingSection.g,\ncolor.b<=0.0031308 ? nearZeroSection.b : remainingSection.b);\n#endif\n}\n#endif\nfloat toLinearSpace(float color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nfloat nearZeroSection=0.0773993808*color;float remainingSection=pow(0.947867299*(color+0.055),2.4);return color<=0.04045 ? nearZeroSection : remainingSection;\n#else\nreturn pow(color,LinearEncodePowerApprox);\n#endif\n}\nvec3 toLinearSpace(vec3 color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn toLinearSpaceExact(color);\n#else\nreturn pow(color,vec3(LinearEncodePowerApprox));\n#endif\n}\nvec4 toLinearSpace(vec4 color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn vec4(toLinearSpaceExact(color.rgb),color.a);\n#else\nreturn vec4(pow(color.rgb,vec3(LinearEncodePowerApprox)),color.a);\n#endif\n}\nfloat toGammaSpace(float color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nfloat nearZeroSection=12.92*color;float remainingSection=1.055*pow(color,0.41666)-0.055;return color<=0.0031308 ? nearZeroSection : remainingSection;\n#else\nreturn pow(color,GammaEncodePowerApprox);\n#endif\n}\nvec3 toGammaSpace(vec3 color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn toGammaSpaceExact(color);\n#else\nreturn pow(color,vec3(GammaEncodePowerApprox));\n#endif\n}\nvec4 toGammaSpace(vec4 color)\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn vec4(toGammaSpaceExact(color.rgb),color.a);\n#else\nreturn vec4(pow(color.rgb,vec3(GammaEncodePowerApprox)),color.a);\n#endif\n}\nfloat square(float value)\n{return value*value;}\nvec3 square(vec3 value)\n{return value*value;}\nfloat pow5(float value) {float sq=value*value;return sq*sq*value;}\nvec3 double_refract(vec3 I,vec3 N,float eta) {vec3 Tfront=refract(I,N,1.0/eta);vec3 Nback=normalize(reflect(N,Tfront));return refract(Tfront,-Nback,eta);}\nfloat getLuminanceUnclamped(vec3 color)\n{return dot(color,LuminanceEncodeApprox);}\nfloat getLuminance(vec3 color)\n{return saturate(getLuminanceUnclamped(color));}\nfloat getRand(vec2 seed) {return fract(sin(dot(seed.xy ,vec2(12.9898,78.233)))*43758.5453);}\nfloat dither(vec2 seed,float varianceAmount) {float rand=getRand(seed);float normVariance=varianceAmount/255.0;float dither=mix(-normVariance,normVariance,rand);return dither;}\nconst float rgbdMaxRange=255.;vec4 toRGBD(vec3 color) {float maxRGB=maxEps(max(color.r,max(color.g,color.b)));float D =max(rgbdMaxRange/maxRGB,1.);D =saturate(floor(D)/255.);vec3 rgb=color.rgb*D;rgb=toGammaSpace(rgb);return vec4(saturate(rgb),D);}\nvec3 fromRGBD(vec4 rgbd) {rgbd.rgb=toLinearSpace(rgbd.rgb);return rgbd.rgb/rgbd.a;}\nvec3 parallaxCorrectNormal( vec3 vertexPos,vec3 origVec,vec3 cubeSize,vec3 cubePos ) {vec3 invOrigVec=vec3(1.)/origVec;vec3 halfSize=cubeSize*0.5;vec3 intersecAtMaxPlane=(cubePos+halfSize-vertexPos)*invOrigVec;vec3 intersecAtMinPlane=(cubePos-halfSize-vertexPos)*invOrigVec;vec3 largestIntersec=max(intersecAtMaxPlane,intersecAtMinPlane);float distance=min(min(largestIntersec.x,largestIntersec.y),largestIntersec.z);vec3 intersectPositionWS=vertexPos+origVec*distance;return intersectPositionWS-cubePos;}\nvec3 equirectangularToCubemapDirection(vec2 uv) {float longitude=uv.x*TWO_PI-PI;float latitude=HALF_PI-uv.y*PI;vec3 direction;direction.x=cos(latitude)*sin(longitude);direction.y=sin(latitude);direction.z=cos(latitude)*cos(longitude);return direction;}\nfloat sqrtClamped(float value) {return sqrt(max(value,0.));}\nfloat avg(vec3 value) {return dot(value,vec3(0.333333333));}\n#if defined(WEBGL2) || defined(WEBGPU) || defined(NATIVE)\nprecision highp int;uint extractBits(uint value,int offset,int width) {return (value>>offset) & ((1u<<width)-1u);}\nint onlyBitPosition(uint value) {return (floatBitsToInt(float(value))>>23)-0x7f;}\nvec3 singleScatterToMultiScatterAlbedo(vec3 rho_ss) {vec3 s=sqrt(max(vec3(1.0)-rho_ss,vec3(0.0)));return (vec3(1.0)-s)*(vec3(1.0)-vec3(0.139)*s)/(vec3(1.0)+vec3(1.17)*s);}\nvec3 multiScatterToSingleScatterAlbedo(vec3 rho_ms) {vec3 s=4.09712+4.20863*rho_ms-sqrt(9.59217+41.6808*rho_ms+17.7126*rho_ms*rho_ms);return 1.0-s*s;}\nvec3 multiScatterToSingleScatterAlbedo(vec3 rho_ms,float aniso) {vec3 s=4.09712+4.20863*rho_ms-sqrt(9.59217+41.6808*rho_ms+17.7126*rho_ms*rho_ms);return (1.0-s*s)/maxEps(1.0-aniso*s*s);}\nfloat min3(vec3 v) {return min(v.x,min(v.y,v.z));}\nfloat max3(vec3 v) {return max(v.x,max(v.y,v.z));}\nfloat uint2float(uint i) {return uintBitsToFloat(0x3F800000u | (i>>9u))-1.0;}\nvec2 plasticSequence(const uint rstate) {return vec2(uint2float(rstate*3242174889u),\nuint2float(rstate*2447445414u));}\n#endif\n";
-    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
-    const Sp = {
-      name: op,
-      shader: Ip
-    }
-  },
-  42190: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Sp
-    });
-    var Op = cp(40062);
-    const op = "instancesDeclaration",
-      Ip = "#ifdef INSTANCES\nattribute vec4 world0;attribute vec4 world1;attribute vec4 world2;attribute vec4 world3;\n#ifdef INSTANCESCOLOR\nattribute vec4 instanceColor;\n#endif\n#if defined(THIN_INSTANCES) && !defined(WORLD_UBO)\nuniform mat4 world;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nattribute vec4 previousWorld0;attribute vec4 previousWorld1;attribute vec4 previousWorld2;attribute vec4 previousWorld3;\n#ifdef THIN_INSTANCES\nuniform mat4 previousWorld;\n#endif\n#endif\n#else\n#if !defined(WORLD_UBO)\nuniform mat4 world;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nuniform mat4 previousWorld;\n#endif\n#endif\n";
-    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
-    const Sp = {
-      name: op,
-      shader: Ip
-    }
-  },
-  42286: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Sp
-    });
-    var Op = cp(40062);
-    const op = "instancesVertex",
-      Ip = "#ifdef INSTANCES\nmat4 finalWorld=mat4(world0,world1,world2,world3);\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nmat4 finalPreviousWorld=mat4(previousWorld0,previousWorld1,\npreviousWorld2,previousWorld3);\n#endif\n#ifdef THIN_INSTANCES\nfinalWorld=world*finalWorld;\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nfinalPreviousWorld=previousWorld*finalPreviousWorld;\n#endif\n#endif\n#else\nmat4 finalWorld=world;\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nmat4 finalPreviousWorld=previousWorld;\n#endif\n#endif\n";
-    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
-    const Sp = {
-      name: op,
-      shader: Ip
-    }
-  },
-  42238: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Sp
-    });
-    var Op = cp(40062);
-    const op = "lightVxFragmentDeclaration",
-      Ip = "#ifdef LIGHT{X}\nuniform vec4 vLightData{X};uniform vec4 vLightDiffuse{X};\n#ifdef SPECULARTERM\nuniform vec4 vLightSpecular{X};\n#else\nvec4 vLightSpecular{X}=vec4(0.);\n#endif\n#ifdef SHADOW{X}\n#ifdef SHADOWCSM{X}\nuniform mat4 lightMatrix{X}[SHADOWCSMNUM_CASCADES{X}];varying vec4 vPositionFromLight{X}[SHADOWCSMNUM_CASCADES{X}];varying float vDepthMetric{X}[SHADOWCSMNUM_CASCADES{X}];varying vec4 vPositionFromCamera{X};\n#elif defined(SHADOWCUBE{X})\n#else\nvarying vec4 vPositionFromLight{X};varying float vDepthMetric{X};uniform mat4 lightMatrix{X};\n#endif\nuniform vec4 shadowsInfo{X};uniform vec2 depthValues{X};\n#endif\n#ifdef SPOTLIGHT{X}\nuniform vec4 vLightDirection{X};uniform vec4 vLightFalloff{X};\n#elif defined(POINTLIGHT{X})\nuniform vec4 vLightFalloff{X};\n#elif defined(HEMILIGHT{X})\nuniform vec3 vLightGround{X};\n#endif\n#if defined(AREALIGHT{X}) && defined(AREALIGHTUSED) && defined(AREALIGHTSUPPORTED)\nuniform vec4 vLightWidth{X};uniform vec4 vLightHeight{X};\n#endif\n#endif\n";
-    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
-    const Sp = {
-      name: op,
-      shader: Ip
-    }
-  },
-  42246: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Sp
-    });
-    var Op = cp(40062);
-    const op = "lightVxUboDeclaration",
-      Ip = "#ifdef LIGHT{X}\nuniform Light{X}\n{vec4 vLightData;vec4 vLightDiffuse;vec4 vLightSpecular;\n#ifdef SPOTLIGHT{X}\nvec4 vLightDirection;vec4 vLightFalloff;\n#elif defined(POINTLIGHT{X})\nvec4 vLightFalloff;\n#elif defined(HEMILIGHT{X})\nvec3 vLightGround;\n#elif defined(CLUSTLIGHT{X})\nvec2 vSliceData;vec2 vSliceRanges[CLUSTLIGHT_SLICES];\n#endif\n#if defined(AREALIGHT{X}) && defined(AREALIGHTUSED) && defined(AREALIGHTSUPPORTED)\nvec4 vLightWidth;vec4 vLightHeight;\n#endif\nvec4 shadowsInfo;vec2 depthValues;} light{X};\n#ifdef SHADOW{X}\n#ifdef SHADOWCSM{X}\nuniform mat4 lightMatrix{X}[SHADOWCSMNUM_CASCADES{X}];varying vec4 vPositionFromLight{X}[SHADOWCSMNUM_CASCADES{X}];varying float vDepthMetric{X}[SHADOWCSMNUM_CASCADES{X}];varying vec4 vPositionFromCamera{X};\n#elif defined(SHADOWCUBE{X})\n#else\nvarying vec4 vPositionFromLight{X};varying float vDepthMetric{X};uniform mat4 lightMatrix{X};\n#endif\n#endif\n#endif\n";
-    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
-    const Sp = {
-      name: op,
-      shader: Ip
-    }
-  },
-  42266: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Sp
-    });
-    var Op = cp(40062);
-    const op = "logDepthDeclaration",
-      Ip = "#ifdef LOGARITHMICDEPTH\nuniform float logarithmicDepthConstant;varying float vFragmentDepth;\n#endif\n";
-    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
-    const Sp = {
-      name: op,
-      shader: Ip
-    }
-  },
-  42346: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Sp
-    });
-    var Op = cp(40062);
-    const op = "logDepthVertex",
-      Ip = "#ifdef LOGARITHMICDEPTH\nvFragmentDepth=1.0+gl_Position.w;gl_Position.z=log2(max(0.000001,vFragmentDepth))*logarithmicDepthConstant;\n#endif\n";
-    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
-    const Sp = {
-      name: op,
-      shader: Ip
-    }
-  },
-  42206: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Sp
-    });
-    var Op = cp(40062);
-    const op = "mainUVVaryingDeclaration",
-      Ip = "#ifdef MAINUV{X}\nvarying vec2 vMainUV{X};\n#endif\n";
-    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
-    const Sp = {
-      name: op,
-      shader: Ip
-    }
-  },
-  42159: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Sp
-    });
-    var Op = cp(40062);
-    const op = "meshUboDeclaration",
-      Ip = "#ifdef WEBGL2\nuniform mat4 world;uniform float visibility;\n#else\nlayout(std140,column_major) uniform;uniform Mesh\n{mat4 world;float visibility;};\n#endif\n#define WORLD_UBO\n";
-    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
-    const Sp = {
-      name: op,
-      shader: Ip
-    }
-  },
-  42277: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Sp
-    });
-    var Op = cp(40062);
-    const op = "morphTargetsVertex",
-      Ip = "#ifdef MORPHTARGETS\n#ifdef MORPHTARGETS_TEXTURE\n#if {X}==0\nfor (int i=0; i<NUM_MORPH_INFLUENCERS; i++) {if (float(i)>=morphTargetCount) break;vertexID=float(gl_VertexID)*morphTargetTextureInfo.x;\n#ifdef MORPHTARGETS_POSITION\npositionUpdated+=(readVector3FromRawSampler(i,vertexID)-position)*morphTargetInfluences[i];\n#endif\n#ifdef MORPHTARGETTEXTURE_HASPOSITIONS\nvertexID+=1.0;\n#endif\n#ifdef MORPHTARGETS_NORMAL\nnormalUpdated+=(readVector3FromRawSampler(i,vertexID) -normal)*morphTargetInfluences[i];\n#endif\n#ifdef MORPHTARGETTEXTURE_HASNORMALS\nvertexID+=1.0;\n#endif\n#ifdef MORPHTARGETS_UV\nuvUpdated+=(readVector3FromRawSampler(i,vertexID).xy-uv)*morphTargetInfluences[i];\n#endif\n#ifdef MORPHTARGETTEXTURE_HASUVS\nvertexID+=1.0;\n#endif\n#ifdef MORPHTARGETS_TANGENT\ntangentUpdated.xyz+=(readVector3FromRawSampler(i,vertexID) -tangent.xyz)*morphTargetInfluences[i];\n#endif\n#ifdef MORPHTARGETTEXTURE_HASTANGENTS\nvertexID+=1.0;\n#endif\n#ifdef MORPHTARGETS_UV2\nuv2Updated+=(readVector3FromRawSampler(i,vertexID).xy-uv2)*morphTargetInfluences[i];\n#endif\n#ifdef MORPHTARGETTEXTURE_HASUV2S\nvertexID+=1.0;\n#endif\n#ifdef MORPHTARGETS_COLOR\ncolorUpdated+=(readVector4FromRawSampler(i,vertexID)-color)*morphTargetInfluences[i];\n#endif\n}\n#endif\n#else\n#ifdef MORPHTARGETS_POSITION\npositionUpdated+=(position{X}-position)*morphTargetInfluences[{X}];\n#endif\n#ifdef MORPHTARGETS_NORMAL\nnormalUpdated+=(normal{X}-normal)*morphTargetInfluences[{X}];\n#endif\n#ifdef MORPHTARGETS_TANGENT\ntangentUpdated.xyz+=(tangent{X}-tangent.xyz)*morphTargetInfluences[{X}];\n#endif\n#ifdef MORPHTARGETS_UV\nuvUpdated+=(uv_{X}-uv)*morphTargetInfluences[{X}];\n#endif\n#ifdef MORPHTARGETS_UV2\nuv2Updated+=(uv2_{X}-uv2)*morphTargetInfluences[{X}];\n#endif\n#ifdef MORPHTARGETS_COLOR\ncolorUpdated+=(color{X}-color)*morphTargetInfluences[{X}];\n#endif\n#endif\n#endif\n";
-    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
-    const Sp = {
-      name: op,
-      shader: Ip
-    }
-  },
-  42257: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Sp
-    });
-    var Op = cp(40062);
-    const op = "morphTargetsVertexDeclaration",
-      Ip = "#ifdef MORPHTARGETS\n#ifndef MORPHTARGETS_TEXTURE\n#ifdef MORPHTARGETS_POSITION\nattribute vec3 position{X};\n#endif\n#ifdef MORPHTARGETS_NORMAL\nattribute vec3 normal{X};\n#endif\n#ifdef MORPHTARGETS_TANGENT\nattribute vec3 tangent{X};\n#endif\n#ifdef MORPHTARGETS_UV\nattribute vec2 uv_{X};\n#endif\n#ifdef MORPHTARGETS_UV2\nattribute vec2 uv2_{X};\n#endif\n#ifdef MORPHTARGETS_COLOR\nattribute vec4 color{X};\n#endif\n#elif {X}==0\nuniform float morphTargetCount;\n#endif\n#endif\n";
-    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
-    const Sp = {
-      name: op,
-      shader: Ip
-    }
-  },
-  42272: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Sp
-    });
-    var Op = cp(40062);
-    const op = "morphTargetsVertexGlobal",
-      Ip = "#ifdef MORPHTARGETS\n#ifdef MORPHTARGETS_TEXTURE\nfloat vertexID;\n#endif\n#endif\n";
-    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
-    const Sp = {
-      name: op,
-      shader: Ip
-    }
-  },
-  42251: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Sp
-    });
-    var Op = cp(40062);
-    const op = "morphTargetsVertexGlobalDeclaration",
-      Ip = "#ifdef MORPHTARGETS\nuniform float morphTargetInfluences[NUM_MORPH_INFLUENCERS];\n#ifdef MORPHTARGETS_TEXTURE \nuniform float morphTargetTextureIndices[NUM_MORPH_INFLUENCERS];uniform vec3 morphTargetTextureInfo;uniform highp sampler2DArray morphTargets;vec3 readVector3FromRawSampler(int targetIndex,float vertexIndex)\n{ \n#if defined(WEBGL2) || defined(WEBGPU)\nint textureWidth=int(morphTargetTextureInfo.y);int y=int(vertexIndex)/textureWidth;int x=int(vertexIndex) % textureWidth;return texelFetch(morphTargets,ivec3(x,y,int(morphTargetTextureIndices[targetIndex])),0).xyz;\n#else\nfloat y=floor(vertexIndex/morphTargetTextureInfo.y);float x=vertexIndex-y*morphTargetTextureInfo.y;vec3 textureUV=vec3((x+0.5)/morphTargetTextureInfo.y,(y+0.5)/morphTargetTextureInfo.z,morphTargetTextureIndices[targetIndex]);return texture(morphTargets,textureUV).xyz;\n#endif\n}\nvec4 readVector4FromRawSampler(int targetIndex,float vertexIndex)\n{ \n#if defined(WEBGL2) || defined(WEBGPU)\nint textureWidth=int(morphTargetTextureInfo.y);int y=int(vertexIndex)/textureWidth;int x=int(vertexIndex) % textureWidth;return texelFetch(morphTargets,ivec3(x,y,int(morphTargetTextureIndices[targetIndex])),0);\n#else\nfloat y=floor(vertexIndex/morphTargetTextureInfo.y);float x=vertexIndex-y*morphTargetTextureInfo.y;vec3 textureUV=vec3((x+0.5)/morphTargetTextureInfo.y,(y+0.5)/morphTargetTextureInfo.z,morphTargetTextureIndices[targetIndex]);return texture(morphTargets,textureUV);\n#endif\n}\n#endif\n#endif\n";
-    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
-    const Sp = {
-      name: op,
-      shader: Ip
-    }
-  },
-  42302: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Sp
-    });
-    var Op = cp(40062);
-    const op = "prePassVertex",
-      Ip = "#ifdef PREPASS_DEPTH\nvViewPos=(view*worldPos).rgb;\n#endif\n#ifdef PREPASS_NORMALIZED_VIEW_DEPTH\nvNormViewDepth=((view*worldPos).z-cameraInfo.x)/(cameraInfo.y-cameraInfo.x);\n#endif\n#ifdef PREPASS_LOCAL_POSITION\nvPosition=positionUpdated.xyz;\n#endif\n#if (defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR)) && defined(BONES_VELOCITY_ENABLED)\nvCurrentPosition=viewProjection*worldPos;\n#if NUM_BONE_INFLUENCERS>0\nmat4 previousInfluence;previousInfluence=mPreviousBones[int(matricesIndices[0])]*matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\npreviousInfluence+=mPreviousBones[int(matricesIndices[1])]*matricesWeights[1];\n#endif \n#if NUM_BONE_INFLUENCERS>2\npreviousInfluence+=mPreviousBones[int(matricesIndices[2])]*matricesWeights[2];\n#endif \n#if NUM_BONE_INFLUENCERS>3\npreviousInfluence+=mPreviousBones[int(matricesIndices[3])]*matricesWeights[3];\n#endif\n#if NUM_BONE_INFLUENCERS>4\npreviousInfluence+=mPreviousBones[int(matricesIndicesExtra[0])]*matricesWeightsExtra[0];\n#endif \n#if NUM_BONE_INFLUENCERS>5\npreviousInfluence+=mPreviousBones[int(matricesIndicesExtra[1])]*matricesWeightsExtra[1];\n#endif \n#if NUM_BONE_INFLUENCERS>6\npreviousInfluence+=mPreviousBones[int(matricesIndicesExtra[2])]*matricesWeightsExtra[2];\n#endif \n#if NUM_BONE_INFLUENCERS>7\npreviousInfluence+=mPreviousBones[int(matricesIndicesExtra[3])]*matricesWeightsExtra[3];\n#endif\nvPreviousPosition=previousViewProjection*finalPreviousWorld*previousInfluence*vec4(positionUpdated,1.0);\n#else\nvPreviousPosition=previousViewProjection*finalPreviousWorld*vec4(positionUpdated,1.0);\n#endif\n#endif\n";
-    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
-    const Sp = {
-      name: op,
-      shader: Ip
-    }
-  },
-  42198: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Sp
-    });
-    var Op = cp(40062);
-    const op = "prePassVertexDeclaration",
-      Ip = "#ifdef PREPASS\n#ifdef PREPASS_LOCAL_POSITION\nvarying vec3 vPosition;\n#endif\n#ifdef PREPASS_DEPTH\nvarying vec3 vViewPos;\n#endif\n#ifdef PREPASS_NORMALIZED_VIEW_DEPTH\nvarying float vNormViewDepth;\n#endif\n#if defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR)\nuniform mat4 previousViewProjection;varying vec4 vCurrentPosition;varying vec4 vPreviousPosition;\n#endif\n#endif\n";
-    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
-    const Sp = {
-      name: op,
-      shader: Ip
-    }
-  },
-  42215: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Sp
-    });
-    var Op = cp(40062);
-    const op = "samplerVertexDeclaration",
-      Ip = "#if defined(_DEFINENAME_) && _DEFINENAME_DIRECTUV==0\nvarying vec2 v_VARYINGNAME_UV;\n#endif\n";
-    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
-    const Sp = {
-      name: op,
-      shader: Ip
-    }
-  },
-  42314: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Sp
-    });
-    var Op = cp(40062);
-    const op = "samplerVertexImplementation",
-      Ip = "#if defined(_DEFINENAME_) && _DEFINENAME_DIRECTUV==0\nif (v_INFONAME_==0.)\n{v_VARYINGNAME_UV=vec2(_MATRIXNAME_Matrix*vec4(uvUpdated,1.0,0.0));}\n#ifdef UV2\nelse if (v_INFONAME_==1.)\n{v_VARYINGNAME_UV=vec2(_MATRIXNAME_Matrix*vec4(uv2Updated,1.0,0.0));}\n#endif\n#ifdef UV3\nelse if (v_INFONAME_==2.)\n{v_VARYINGNAME_UV=vec2(_MATRIXNAME_Matrix*vec4(uv3,1.0,0.0));}\n#endif\n#ifdef UV4\nelse if (v_INFONAME_==3.)\n{v_VARYINGNAME_UV=vec2(_MATRIXNAME_Matrix*vec4(uv4,1.0,0.0));}\n#endif\n#ifdef UV5\nelse if (v_INFONAME_==4.)\n{v_VARYINGNAME_UV=vec2(_MATRIXNAME_Matrix*vec4(uv5,1.0,0.0));}\n#endif\n#ifdef UV6\nelse if (v_INFONAME_==5.)\n{v_VARYINGNAME_UV=vec2(_MATRIXNAME_Matrix*vec4(uv6,1.0,0.0));}\n#endif\n#endif\n";
-    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
-    const Sp = {
-      name: op,
-      shader: Ip
-    }
-  },
-  42157: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Sp
-    });
-    var Op = cp(40062);
-    const op = "sceneUboDeclaration",
-      Ip = "layout(std140,column_major) uniform;uniform Scene {mat4 viewProjection;\n#ifdef MULTIVIEW\nmat4 viewProjectionR;\n#endif \nmat4 view;mat4 projection;vec4 vEyePosition;mat4 inverseProjection;};\n";
-    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
-    const Sp = {
-      name: op,
-      shader: Ip
-    }
-  },
-  42336: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Sp
-    });
-    var Op = cp(40062);
-    const op = "shadowsVertex",
-      Ip = "#ifdef SHADOWS\n#if defined(SHADOWCSM{X})\nvPositionFromCamera{X}=view*worldPos;for (int i=0; i<SHADOWCSMNUM_CASCADES{X}; i++) {vPositionFromLight{X}[i]=lightMatrix{X}[i]*worldPos;\n#ifdef USE_REVERSE_DEPTHBUFFER\nvDepthMetric{X}[i]=(-vPositionFromLight{X}[i].z+light{X}.depthValues.x)/light{X}.depthValues.y;\n#else\nvDepthMetric{X}[i]=(vPositionFromLight{X}[i].z+light{X}.depthValues.x)/light{X}.depthValues.y;\n#endif\n}\n#elif defined(SHADOW{X}) && !defined(SHADOWCUBE{X})\nvPositionFromLight{X}=lightMatrix{X}*worldPos;\n#ifdef USE_REVERSE_DEPTHBUFFER\nvDepthMetric{X}=(-vPositionFromLight{X}.z+light{X}.depthValues.x)/light{X}.depthValues.y;\n#else\nvDepthMetric{X}=(vPositionFromLight{X}.z+light{X}.depthValues.x)/light{X}.depthValues.y;\n#endif\n#endif\n#endif\n";
-    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
-    const Sp = {
-      name: op,
-      shader: Ip
-    }
-  },
-  42166: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Sp
-    });
-    var Op = cp(40062);
-    const op = "uvAttributeDeclaration",
-      Ip = "#ifdef UV{X}\nattribute vec2 uv{X};\n#endif\n";
-    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
-    const Sp = {
-      name: op,
-      shader: Ip
-    }
-  },
-  42305: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Sp
-    });
-    var Op = cp(40062);
-    const op = "uvVariableDeclaration",
-      Ip = "#if !defined(UV{X}) && defined(MAINUV{X})\nvec2 uv{X}=vec2(0.,0.);\n#endif\n#ifdef MAINUV{X}\nvMainUV{X}=uv{X};\n#endif\n";
-    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
-    const Sp = {
-      name: op,
-      shader: Ip
-    }
-  },
-  42341: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Sp
-    });
-    var Op = cp(40062);
-    const op = "vertexColorMixing",
-      Ip = "#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvColor=vec4(1.0);\n#ifdef VERTEXCOLOR\n#ifdef VERTEXALPHA\nvColor*=colorUpdated;\n#else\nvColor.rgb*=colorUpdated.rgb;\n#endif\n#endif\n#ifdef INSTANCESCOLOR\nvColor*=instanceColor;\n#endif\n#endif\n";
-    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
-    const Sp = {
-      name: op,
-      shader: Ip
+    qQ.DefaultOptions = {
+      idleTimeElapsedBeforeRelease: 1e3
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

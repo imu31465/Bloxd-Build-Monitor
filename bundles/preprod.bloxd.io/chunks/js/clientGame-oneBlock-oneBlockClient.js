@@ -1,11 +1,11 @@
-export const id = 21;
-export const ids = [21];
+export const id = 22;
+export const ids = [22];
 export const modules = {
-  39649: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      default: () => Ip
+  39735: (QQ, WQ, XQ) => {
+    XQ.r(WQ), XQ.d(WQ, {
+      default: () => TQ
     });
-    const Op = {
+    const wQ = {
       Maverick: "Portal Config",
       "Bling Bling": "Bank",
       Fred: "Farmer",
@@ -14,45 +14,45 @@ export const modules = {
       Gill: "Farmer's Guild",
       Wren: "Travelling Trader"
     };
-    const op = 6400;
-    const Ip = function(pp, ip, cp, Ip) {
-      let Sp, {
-          localPlayerId: xp
-        } = Ip,
-        Lp = [];
+    const qQ = 6400;
+    const TQ = function(QQ, WQ, XQ, TQ) {
+      let zQ, {
+          localPlayerId: sQ
+        } = TQ,
+        FQ = [];
       return {
-        onCreate: pp => {
-          Sp = pp
+        onCreate: QQ => {
+          zQ = QQ
         },
-        onReceivedMessageFromServer: (pp, ip) => {
-          "oneBlockNextBlocks" === pp && (Lp = ip.blocks.map((pp => Sp.blockNameToBlockId(pp))))
+        onReceivedMessageFromServer: (QQ, WQ) => {
+          "oneBlockNextBlocks" === QQ && (FQ = WQ.blocks.map((QQ => zQ.blockNameToBlockId(QQ))))
         },
-        LP: () => {
-          if (0 === Lp.length) return;
-          const pp = Sp.getPositionView(xp),
-            ip = function(pp, ip) {
-              const cp = Math.ceil((pp - 3200) / op);
-              if (cp !== Math.ceil((ip - 3200) / op) || cp <= 0) return null;
-              const Op = cp * op + 6;
-              return [Op, 10, Op]
-            }(pp[0], pp[2]);
-          if (!ip) return;
-          const [cp, Op, Ip] = ip;
-          if (Sp.isBlockInLoadedChunk(cp, Op, Ip) && 0 === Sp.getBlockId(cp, Op, Ip)) {
-            const pp = Lp.shift();
-            Sp.setBlockId(cp, Op, Ip, pp)
+        fJ: () => {
+          if (0 === FQ.length) return;
+          const QQ = zQ.getPositionView(sQ),
+            WQ = function(QQ, WQ) {
+              const XQ = Math.ceil((QQ - 3200) / qQ);
+              if (XQ !== Math.ceil((WQ - 3200) / qQ) || XQ <= 0) return null;
+              const wQ = XQ * qQ + 6;
+              return [wQ, 10, wQ]
+            }(QQ[0], QQ[2]);
+          if (!WQ) return;
+          const [XQ, wQ, TQ] = WQ;
+          if (zQ.isBlockInLoadedChunk(XQ, wQ, TQ) && 0 === zQ.getBlockId(XQ, wQ, TQ)) {
+            const QQ = FQ.shift();
+            zQ.setBlockId(XQ, wQ, TQ, QQ)
           }
         },
-        onPlayerAltAction: (pp, ip, cp, op, Ip, xp) => {
-          ! function(pp, ip, cp, op) {
-            if (!cp || "Mesh" !== pp.getEntityType(cp)) return !1;
-            const Ip = Op[pp.getEntityName(cp)];
-            !!Ip && pp.openShop(ip, op, Ip)
-          }(Sp, pp, xp, !1)
+        onPlayerAltAction: (QQ, WQ, XQ, qQ, TQ, sQ) => {
+          ! function(QQ, WQ, XQ, qQ) {
+            if (!XQ || "Mesh" !== QQ.getEntityType(XQ)) return !1;
+            const TQ = wQ[QQ.getEntityName(XQ)];
+            !!TQ && QQ.openShop(WQ, qQ, TQ)
+          }(zQ, QQ, sQ, !1)
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

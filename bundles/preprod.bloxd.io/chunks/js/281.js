@@ -1,9 +1,97 @@
 export const id = 281;
-export const ids = [281];
+export const ids = [280, 281];
 export const modules = {
-  41410: pp => {
-    pp.exports = JSON.parse('{"texture":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARzQklUCAgICHwIZIgAAAEOSURBVHic7dpBDsFAFMbxjnQjqUTcxgHs7DmCvQv0ArbO4AB2DuA2ItHEklXFotR4U9/U/H/LZjrz8nmhXuoyo8NufbPcfzpfTecvVltnuX9gOv0P5KE2KoqR1/qquoQ62oQOCL1h2yfr2yldS74DCEBdgBoBqAtQIwB1AWrBnwNi+51vQweE2iiWZ3tfyXeAs/6f77vkOyC3TmT6LvkO8J6nHfdlp98Z03lpmvH5Sr4DCEBdgBoBqAtQIwB1AWoEoC5AjQDUBag95gHPs7x6utN0rRbL+tlyw/sBFo3zgE+vxbreBx0wGQ+z7MU8/92MP7b130q+AwhAXYAaAagLUCMAdQEAAAAAAAAA8Et35R5Q3XjmR/0AAAAASUVORK5CYII=","alphaCutoff":0.05,"vertices":[0.875,0.31076,0.4063,0.5,0.47932,0.8655,0.875,0.72364,0.0313,0.5,0.8922,0.4905,0.125,0.31076,0.4063,0.5,0.1422,-0.053,0.125,0.72364,0.0313,0.5,0.55509,-0.428,0.125,0.31076,0.4063,0.5,0.47932,0.8655,0.5,0.1422,-0.053,0.875,0.31076,0.4063,0.5,0.55509,-0.428,0.875,0.72364,0.0313,0.125,0.72364,0.0313,0.5,0.8922,0.4905,0.5,0.1422,-0.053,0.875,0.31076,0.4063,0.5,0.55509,-0.428,0.875,0.72364,0.0313,0.5,0.47932,0.8655,0.125,0.31076,0.4063,0.5,0.8922,0.4905,0.125,0.72364,0.0313,1,0.24195,0.4688,0.5,0.46669,1.0811,1,0.37958,0.3438,0.5,0.60432,0.9561,0,0.24195,0.4688,0.5,0.0172,-0.1436,0,0.37958,0.3438,0.5,0.15483,-0.2686,0,0.24195,0.4688,0.5,0.46669,1.0811,0.5,0.0172,-0.1436,1,0.24195,0.4688,0.5,0.15483,-0.2686,1,0.37958,0.3438,0,0.37958,0.3438,0.5,0.60432,0.9561,0.5,0.0172,-0.1436,1,0.24195,0.4688,0.5,0.15483,-0.2686,1,0.37958,0.3438,0.5,0.46669,1.0811,0,0.24195,0.4688,0.5,0.60432,0.9561,0,0.37958,0.3438,1,0.62042,0.125,0.5,0.84517,0.7374,1,0.75805,0,0.5,0.9828,0.6124,0,0.62042,0.125,0.5,0.39568,-0.4874,0,0.75805,0,0.5,0.53331,-0.6124,0,0.62042,0.125,0.5,0.84517,0.7374,0.5,0.39568,-0.4874,1,0.62042,0.125,0.5,0.53331,-0.6124,1,0.75805,0,0,0.75805,0,0.5,0.9828,0.6124,0.5,0.39568,-0.4874,1,0.62042,0.125,0.5,0.53331,-0.6124,1,0.75805,0,0.5,0.84517,0.7374,0,0.62042,0.125,0.5,0.9828,0.6124,0,0.75805,0],"uvs":[0.000244,0.500244,0.187256,0.500244,0.000244,0.687256,0.187256,0.687256,0.375244,0.500244,0.562256,0.500244,0.375244,0.687256,0.562256,0.687256,0.374756,0.499756,0.187744,0.499756,0.374756,0.312744,0.187744,0.312744,0.562256,0.312744,0.375244,0.312744,0.562256,0.499756,0.375244,0.499756,0.562744,0.500244,0.749756,0.500244,0.562744,0.687256,0.749756,0.687256,0.187744,0.500244,0.374756,0.500244,0.187744,0.687256,0.374756,0.687256,0.000244,0.250244,0.249756,0.250244,0.000244,0.312256,0.249756,0.312256,0.500244,0.250244,0.749756,0.250244,0.500244,0.312256,0.749756,0.312256,0.499756,0.249756,0.250244,0.249756,0.499756,0.000244,0.250244,0.000244,0.749756,0.000244,0.500244,0.000244,0.749756,0.249756,0.500244,0.249756,0.750244,0.250244,0.999756,0.250244,0.750244,0.312256,0.999756,0.312256,0.250244,0.250244,0.499756,0.250244,0.250244,0.312256,0.499756,0.312256,0.000244,0.250244,0.249756,0.250244,0.000244,0.312256,0.249756,0.312256,0.500244,0.250244,0.749756,0.250244,0.500244,0.312256,0.749756,0.312256,0.499756,0.249756,0.250244,0.249756,0.499756,0.000244,0.250244,0.000244,0.749756,0.000244,0.500244,0.000244,0.749756,0.249756,0.500244,0.249756,0.750244,0.250244,0.999756,0.250244,0.750244,0.312256,0.999756,0.312256,0.250244,0.250244,0.499756,0.250244,0.250244,0.312256,0.499756,0.312256],"indices":[0,2,1,2,3,1,4,6,5,6,7,5,8,10,9,10,11,9,12,14,13,14,15,13,16,18,17,18,19,17,20,22,21,22,23,21,24,26,25,26,27,25,28,30,29,30,31,29,32,34,33,34,35,33,36,38,37,38,39,37,40,42,41,42,43,41,44,46,45,46,47,45,48,50,49,50,51,49,52,54,53,54,55,53,56,58,57,58,59,57,60,62,61,62,63,61,64,66,65,66,67,65,68,70,69,70,71,69],"shades":[0.7,0.7,0.7,0.7,1,1,0.85,0.85,0.85,0.85,0.85,0.85,0.7,0.7,0.7,0.7,1,1,0.85,0.85,0.85,0.85,0.85,0.85,0.7,0.7,0.7,0.7,1,1,0.85,0.85,0.85,0.85,0.85,0.85]}')
+  41265: (QQ, WQ, XQ) => {
+    XQ.r(WQ), XQ.d(WQ, {
+      gamePackSource: () => TQ
+    });
+    var wQ = XQ(5340),
+      qQ = XQ(1548);
+
+    function TQ(QQ) {
+      return {
+        packKey: async WQ => (await qQ.e.getGame(QQ, WQ, !0)).customTexturePackKey,
+        fetchPack: wQ.e
+      }
+    }
+  },
+  51222: (QQ, WQ, XQ) => {
+    XQ.r(WQ), XQ.d(WQ, {
+      fetchGuestContext: () => rQ,
+      guestJoinTarget: () => pQ,
+      guestJoinWithPack: () => jQ,
+      guestPackForGame: () => IQ,
+      invalidateGuestTrafficCode: () => DQ
+    });
+    var wQ = XQ(1238),
+      qQ = XQ(1548),
+      TQ = XQ(105),
+      zQ = XQ(36766),
+      sQ = XQ(1165),
+      FQ = XQ(40963),
+      PQ = XQ(41265),
+      gQ = XQ(40926);
+
+    function JQ() {
+      if (TQ.featureFlags.useTurnstile) throw new FQ.TurnstilePageError
+    }
+
+    function rQ() {
+      return (0, sQ.fetchAnonymousUserContext)(!0).catch((QQ => (console.warn("the guest context didn't load", QQ), null)))
+    }
+    async function IQ(QQ, WQ, XQ, wQ) {
+      try {
+        const qQ = await XQ;
+        if (null === qQ) return void console.warn(`the texture pack step for ${QQ} has no guest context: the pack in play stays`);
+        await WQ.packForGame(QQ, (0, PQ.gamePackSource)(qQ), wQ)
+      } catch (qQ) {
+        console.warn(`the texture pack step for ${QQ} failed: the pack in play stays`, qQ)
+      }
+    }
+    async function jQ(QQ, WQ, XQ, wQ) {
+      JQ();
+      const qQ = rQ();
+      return await XQ(((WQ, XQ) => IQ(QQ, WQ, qQ, XQ))), pQ(QQ, WQ, wQ(), await qQ)
+    }
+    let BQ = null,
+      yQ = null;
+    async function VQ() {
+      if ((null === BQ || BQ.hasExpired()) && (yQ ??= (0, sQ.fetchAnonymousUserContext)(!0).then((QQ => {
+          BQ = QQ
+        })).finally((() => {
+          yQ = null
+        })), await yQ), null === BQ) throw new Error("no guest context to post as");
+      return BQ.getMetricsCookies()
+    }
+    async function DQ() {
+      var QQ;
+      await (null === (QQ = BQ) || void 0 === QQ ? void 0 : QQ.invalidateTrafficCode())
+    }
+    async function pQ(QQ, WQ, XQ) {
+      let TQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+      JQ();
+      const FQ = null !== TQ && void 0 !== TQ ? TQ : await (0, sQ.fetchAnonymousUserContext)(!0);
+      if (BQ = FQ, FQ.isLoggedIn()) throw new Error("the shell's page joins as a guest only");
+      const PQ = await qQ.e.matchmakePlayer(FQ, WQ, QQ, (0, zQ.c)()),
+        rQ = performance.now();
+      if (!("gameServerHost" in PQ)) throw new Error(`matchmaking refused: ${PQ.failReason}`);
+      const IQ = wQ.clientSideServerUrls.getServerWebSocketUrlFromServerUrl(PQ.gameServerHost);
+      if (IQ.isError()) throw new Error(`no socket URL for ${PQ.gameServerHost}: ${IQ.asError().message}`);
+      const jQ = {
+        endpoint: IQ.getValue(),
+        gameNameWithVariation: PQ.gameNameWithVariation,
+        lobbyName: PQ.lobbyName
+      };
+      return {
+        target: {
+          ...await (0, gQ.d)(FQ, jQ, XQ, !1),
+          postCookies: VQ
+        },
+        matchedAt: rQ,
+        freshMs: gQ.b
+      }
+    }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

@@ -1,25 +1,25 @@
-export const id = 53;
-export const ids = [53];
+export const id = 55;
+export const ids = [55];
 export const modules = {
-  4803: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      MAX_LINES: () => xp,
-      MAX_SETTLE_MS: () => Sp,
-      SETTLE_MS: () => Ip,
-      ScrollDebugLog: () => dp,
-      changeText: () => wp,
-      elementText: () => tp,
-      fullStateText: () => Up,
-      startScrollDebug: () => ep,
-      touchedText: () => Hp
+  5014: (QQ, WQ, XQ) => {
+    XQ.r(WQ), XQ.d(WQ, {
+      MAX_LINES: () => sQ,
+      MAX_SETTLE_MS: () => zQ,
+      SETTLE_MS: () => TQ,
+      ScrollDebugLog: () => GQ,
+      changeText: () => yQ,
+      elementText: () => DQ,
+      fullStateText: () => BQ,
+      startScrollDebug: () => UQ,
+      touchedText: () => pQ
     });
-    var Op = cp(25),
-      op = cp(2908);
-    const Ip = 300,
-      Sp = 2e3,
-      xp = 40,
-      Lp = 2,
-      Yp = {
+    var wQ = XQ(26),
+      qQ = XQ(3045);
+    const TQ = 300,
+      zQ = 2e3,
+      sQ = 40,
+      FQ = 2,
+      PQ = {
         vvOffsetTop: "vv offsetTop",
         vvOffsetLeft: "vv offsetLeft",
         vvPageTop: "vv pageTop",
@@ -31,142 +31,142 @@ export const modules = {
         scrollHeight: "scrollHeight",
         innerHeight: "innerHeight"
       },
-      Dp = Object.keys(Yp),
-      Ap = new Set(["scrollHeight", "innerHeight"]);
+      gQ = Object.keys(PQ),
+      JQ = new Set(["scrollHeight", "innerHeight"]);
 
-    function Pp(pp, ip) {
-      const cp = 10 ** ip;
-      return Math.round(pp * cp) / cp
+    function rQ(QQ, WQ) {
+      const XQ = 10 ** WQ;
+      return Math.round(QQ * XQ) / XQ
     }
 
-    function Wp() {
-      const pp = window.visualViewport;
+    function IQ() {
+      const QQ = window.visualViewport;
       return {
-        vvOffsetTop: Pp(pp.offsetTop, 1),
-        vvOffsetLeft: Pp(pp.offsetLeft, 1),
-        vvPageTop: Pp(pp.pageTop, 1),
-        vvPageLeft: Pp(pp.pageLeft, 1),
-        vvHeight: Pp(pp.height, 1),
-        vvScale: Pp(pp.scale, 3),
-        scrollX: Pp(window.scrollX, 1),
-        scrollY: Pp(window.scrollY, 1),
+        vvOffsetTop: rQ(QQ.offsetTop, 1),
+        vvOffsetLeft: rQ(QQ.offsetLeft, 1),
+        vvPageTop: rQ(QQ.pageTop, 1),
+        vvPageLeft: rQ(QQ.pageLeft, 1),
+        vvHeight: rQ(QQ.height, 1),
+        vvScale: rQ(QQ.scale, 3),
+        scrollX: rQ(window.scrollX, 1),
+        scrollY: rQ(window.scrollY, 1),
         scrollHeight: document.documentElement.scrollHeight,
         innerHeight: window.innerHeight
       }
     }
 
-    function yp(pp, ip) {
-      return `${Yp[pp]} ${ip}`
+    function jQ(QQ, WQ) {
+      return `${PQ[QQ]} ${WQ}`
     }
 
-    function Up(pp) {
-      return Dp.map((ip => yp(ip, String(pp[ip])))).join(", ")
+    function BQ(QQ) {
+      return gQ.map((WQ => jQ(WQ, String(QQ[WQ])))).join(", ")
     }
 
-    function wp(pp, ip, cp, Op) {
-      return Dp.flatMap((op => {
-        const Ip = pp[op] !== ip[op],
-          Sp = cp[op] < Math.min(pp[op], ip[op]) || Op[op] > Math.max(pp[op], ip[op]);
-        if (!Ip && !Sp && !Ap.has(op)) return [];
-        return [yp(op, `${Ip?`${pp[op]} -> ${ip[op]}`:String(ip[op])}${Sp?` (via ${cp[op]}..${Op[op]})`:""}`)]
+    function yQ(QQ, WQ, XQ, wQ) {
+      return gQ.flatMap((qQ => {
+        const TQ = QQ[qQ] !== WQ[qQ],
+          zQ = XQ[qQ] < Math.min(QQ[qQ], WQ[qQ]) || wQ[qQ] > Math.max(QQ[qQ], WQ[qQ]);
+        if (!TQ && !zQ && !JQ.has(qQ)) return [];
+        return [jQ(qQ, `${TQ?`${QQ[qQ]} -> ${WQ[qQ]}`:String(WQ[qQ])}${zQ?` (via ${XQ[qQ]}..${wQ[qQ]})`:""}`)]
       })).join(", ")
     }
 
-    function vp(pp, ip, cp) {
-      return Object.fromEntries(Dp.map((Op => [Op, cp(pp[Op], ip[Op])])))
+    function VQ(QQ, WQ, XQ) {
+      return Object.fromEntries(gQ.map((wQ => [wQ, XQ(QQ[wQ], WQ[wQ])])))
     }
 
-    function tp(pp) {
-      var ip;
-      const cp = (null !== (ip = pp.getAttribute("class")) && void 0 !== ip ? ip : "").trim().replace(/\s+/g, ".").slice(0, 40);
-      return `${pp.tagName.toLowerCase()}${cp?`.${cp}`:""}`
+    function DQ(QQ) {
+      var WQ;
+      const XQ = (null !== (WQ = QQ.getAttribute("class")) && void 0 !== WQ ? WQ : "").trim().replace(/\s+/g, ".").slice(0, 40);
+      return `${QQ.tagName.toLowerCase()}${XQ?`.${XQ}`:""}`
     }
 
-    function Hp(pp, ip) {
-      const cp = [];
-      for (let Op = pp.parentElement; null !== Op && cp.length < Lp; Op = Op.parentElement) {
-        const pp = ip(Op);
-        "auto" !== pp && cp.push(`${pp} on ${tp(Op)}`)
+    function pQ(QQ, WQ) {
+      const XQ = [];
+      for (let wQ = QQ.parentElement; null !== wQ && XQ.length < FQ; wQ = wQ.parentElement) {
+        const QQ = WQ(wQ);
+        "auto" !== QQ && XQ.push(`${QQ} on ${DQ(wQ)}`)
       }
-      return `${tp(pp)} touch-action ${ip(pp)}${cp.length>0?` (${cp.join(", ")})`:""}`
+      return `${DQ(QQ)} touch-action ${WQ(QQ)}${XQ.length>0?` (${XQ.join(", ")})`:""}`
     }
-    class dp {
-      constructor(pp) {
-        this.deps = pp, this.last = void 0, this.low = void 0, this.high = void 0, this.innerScrolled = null, this.burstInGame = !1, this.burstTouch = null, this.lines = 0, this.capped = !1, this.burstStartMs = 0, this.lastEventMs = 0, this.timer = null, this.settle = () => {
-          const pp = this.deps.now(),
-            ip = pp - this.lastEventMs;
-          if (ip < Ip && pp - this.burstStartMs < Sp) return void(this.timer = setTimeout(this.settle, Ip - ip));
+    class GQ {
+      constructor(QQ) {
+        this.deps = QQ, this.last = void 0, this.low = void 0, this.high = void 0, this.innerScrolled = null, this.burstInGame = !1, this.burstTouch = null, this.lines = 0, this.capped = !1, this.burstStartMs = 0, this.lastEventMs = 0, this.timer = null, this.settle = () => {
+          const QQ = this.deps.now(),
+            WQ = QQ - this.lastEventMs;
+          if (WQ < TQ && QQ - this.burstStartMs < zQ) return void(this.timer = setTimeout(this.settle, TQ - WQ));
           this.timer = null;
-          const cp = this.deps.read(),
+          const XQ = this.deps.read(),
             {
-              last: Op,
-              innerScrolled: op,
-              burstTouch: Lp
+              last: wQ,
+              innerScrolled: qQ,
+              burstTouch: FQ
             } = this,
-            Yp = vp(this.low, cp, Math.min),
-            Ap = vp(this.high, cp, Math.max);
-          if (this.last = cp, this.low = cp, this.high = cp, this.innerScrolled = null, Wp = Yp, yp = Ap, Dp.every((pp => Wp[pp] === yp[pp])) || !this.burstInGame || !this.deps.inGame()) return;
-          var Wp, yp;
-          if (this.lines === xp) return this.capped = !0, void this.deps.log(`further changes unlogged: ${xp} lines logged`);
+            PQ = VQ(this.low, XQ, Math.min),
+            JQ = VQ(this.high, XQ, Math.max);
+          if (this.last = XQ, this.low = XQ, this.high = XQ, this.innerScrolled = null, IQ = PQ, jQ = JQ, gQ.every((QQ => IQ[QQ] === jQ[QQ])) || !this.burstInGame || !this.deps.inGame()) return;
+          var IQ, jQ;
+          if (this.lines === sQ) return this.capped = !0, void this.deps.log(`further changes unlogged: ${sQ} lines logged`);
           this.lines++;
-          const Up = null === Lp ? "no touch yet" : `touch on ${Lp.text}, ${Math.round(this.burstStartMs-Lp.atMs)} ms before`,
-            Hp = null === op ? "" : `; inner scroll ${tp(op)} scrollTop ${Pp(op.scrollTop,1)}`;
-          this.deps.log(`moved over ${Math.round(pp-this.burstStartMs)} ms; ${Up}${Hp}: ${wp(Op,cp,Yp,Ap)}`)
-        }, this.last = pp.read(), this.low = this.last, this.high = this.last, pp.log(`start: ${Up(this.last)}`)
+          const BQ = null === FQ ? "no touch yet" : `touch on ${FQ.text}, ${Math.round(this.burstStartMs-FQ.atMs)} ms before`,
+            pQ = null === qQ ? "" : `; inner scroll ${DQ(qQ)} scrollTop ${rQ(qQ.scrollTop,1)}`;
+          this.deps.log(`moved over ${Math.round(QQ-this.burstStartMs)} ms; ${BQ}${pQ}: ${yQ(wQ,XQ,PQ,JQ)}`)
+        }, this.last = QQ.read(), this.low = this.last, this.high = this.last, QQ.log(`start: ${BQ(this.last)}`)
       }
       moved() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
         if (this.capped) return;
-        const ip = null === this.timer ? this.deps.lastTouch() : this.burstTouch;
-        if (null !== pp && (null === ip || !pp.contains(ip.target))) return;
-        const cp = this.deps.now();
-        this.lastEventMs = cp, null === this.timer && (this.burstStartMs = cp, this.burstInGame = this.deps.inGame(), this.burstTouch = ip, this.timer = setTimeout(this.settle, Ip));
-        const Op = this.deps.read();
-        this.low = vp(this.low, Op, Math.min), this.high = vp(this.high, Op, Math.max), this.innerScrolled = null !== pp && void 0 !== pp ? pp : this.innerScrolled
+        const WQ = null === this.timer ? this.deps.lastTouch() : this.burstTouch;
+        if (null !== QQ && (null === WQ || !QQ.contains(WQ.target))) return;
+        const XQ = this.deps.now();
+        this.lastEventMs = XQ, null === this.timer && (this.burstStartMs = XQ, this.burstInGame = this.deps.inGame(), this.burstTouch = WQ, this.timer = setTimeout(this.settle, TQ));
+        const wQ = this.deps.read();
+        this.low = VQ(this.low, wQ, Math.min), this.high = VQ(this.high, wQ, Math.max), this.innerScrolled = null !== QQ && void 0 !== QQ ? QQ : this.innerScrolled
       }
     }
 
-    function ep() {
-      let pp = null;
-      const ip = new dp({
-        read: Wp,
-        inGame: () => "inGame" === Op.c.get("gameState"),
-        lastTouch: () => pp,
-        log: pp => {
-          (0, op.n)("scroll", pp)
+    function UQ() {
+      let QQ = null;
+      const WQ = new GQ({
+        read: IQ,
+        inGame: () => "inGame" === wQ.b.get("gameState"),
+        lastTouch: () => QQ,
+        log: QQ => {
+          (0, qQ.j)("scroll", QQ)
         },
         now: () => performance.now()
       });
-      document.addEventListener("touchstart", (ip => {
-        if (ip.target instanceof Element) {
-          const cp = Hp(ip.target, (pp => getComputedStyle(pp).touchAction));
-          pp = {
-            target: ip.target,
-            text: cp,
+      document.addEventListener("touchstart", (WQ => {
+        if (WQ.target instanceof Element) {
+          const XQ = pQ(WQ.target, (QQ => getComputedStyle(QQ).touchAction));
+          QQ = {
+            target: WQ.target,
+            text: XQ,
             atMs: performance.now()
           }
         }
       }), {
         capture: !0,
         passive: !0
-      }), document.addEventListener("scroll", (pp => {
-        ip.moved(pp.target instanceof Element ? pp.target : null)
+      }), document.addEventListener("scroll", (QQ => {
+        WQ.moved(QQ.target instanceof Element ? QQ.target : null)
       }), {
         capture: !0,
         passive: !0
       });
-      const cp = () => {
-        ip.moved()
+      const XQ = () => {
+        WQ.moved()
       };
-      window.addEventListener("resize", cp, {
+      window.addEventListener("resize", XQ, {
         passive: !0
-      }), window.visualViewport.addEventListener("scroll", cp, {
+      }), window.visualViewport.addEventListener("scroll", XQ, {
         passive: !0
-      }), window.visualViewport.addEventListener("resize", cp, {
+      }), window.visualViewport.addEventListener("resize", XQ, {
         passive: !0
       })
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

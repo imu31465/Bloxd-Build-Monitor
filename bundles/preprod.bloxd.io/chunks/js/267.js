@@ -1,369 +1,884 @@
 export const id = 267;
 export const ids = [267];
 export const modules = {
-  41851: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Op
+  40525: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      d: () => rQ
     });
-    class Op {}
-    Op.AUTOSAMPLERSUFFIX = "Sampler", Op.DISABLEUA = "#define DISABLE_UNIFORMITY_ANALYSIS", Op.ALPHA_DISABLE = 0, Op.ALPHA_ADD = 1, Op.ALPHA_COMBINE = 2, Op.ALPHA_SUBTRACT = 3, Op.ALPHA_MULTIPLY = 4, Op.ALPHA_MAXIMIZED = 5, Op.ALPHA_ONEONE = 6, Op.ALPHA_PREMULTIPLIED = 7, Op.ALPHA_PREMULTIPLIED_PORTERDUFF = 8, Op.ALPHA_INTERPOLATE = 9, Op.ALPHA_SCREENMODE = 10, Op.ALPHA_ONEONE_ONEONE = 11, Op.ALPHA_ALPHATOCOLOR = 12, Op.ALPHA_REVERSEONEMINUS = 13, Op.ALPHA_SRC_DSTONEMINUSSRCALPHA = 14, Op.ALPHA_ONEONE_ONEZERO = 15, Op.ALPHA_EXCLUSION = 16, Op.ALPHA_LAYER_ACCUMULATE = 17, Op.ALPHA_MIN = 18, Op.ALPHA_MAX = 19, Op.ALPHA_DUAL_SRC0_ADD_SRC1xDST = 20, Op.ALPHA_REPLACE_COLOR = 21, Op.ALPHA_EQUATION_ADD = 0, Op.ALPHA_EQUATION_SUBSTRACT = 1, Op.ALPHA_EQUATION_REVERSE_SUBTRACT = 2, Op.ALPHA_EQUATION_MAX = 3, Op.ALPHA_EQUATION_MIN = 4, Op.ALPHA_EQUATION_DARKEN = 5, Op.DELAYLOADSTATE_NONE = 0, Op.DELAYLOADSTATE_LOADED = 1, Op.DELAYLOADSTATE_LOADING = 2, Op.DELAYLOADSTATE_NOTLOADED = 4, Op.NEVER = 512, Op.ALWAYS = 519, Op.LESS = 513, Op.EQUAL = 514, Op.LEQUAL = 515, Op.GREATER = 516, Op.GEQUAL = 518, Op.NOTEQUAL = 517, Op.KEEP = 7680, Op.ZERO = 0, Op.REPLACE = 7681, Op.INCR = 7682, Op.DECR = 7683, Op.INVERT = 5386, Op.INCR_WRAP = 34055, Op.DECR_WRAP = 34056, Op.TEXTURE_CLAMP_ADDRESSMODE = 0, Op.TEXTURE_WRAP_ADDRESSMODE = 1, Op.TEXTURE_MIRROR_ADDRESSMODE = 2, Op.TEXTURE_REPETITION_NONE = 0, Op.TEXTURE_REPETITION_NOISE_BLEND = 1, Op.TEXTURE_REPETITION_HEX_TILING = 2, Op.TEXTURE_REPETITION_TILE_RANDOMIZATION = 3, Op.TEXTURE_REPETITION_VORONOI_BOMBING = 4, Op.TEXTURE_CREATIONFLAG_STORAGE = 1, Op.TEXTUREFORMAT_ALPHA = 0, Op.TEXTUREFORMAT_LUMINANCE = 1, Op.TEXTUREFORMAT_LUMINANCE_ALPHA = 2, Op.TEXTUREFORMAT_RGB = 4, Op.TEXTUREFORMAT_RGBA = 5, Op.TEXTUREFORMAT_RED = 6, Op.TEXTUREFORMAT_R = 6, Op.TEXTUREFORMAT_R16_UNORM = 33322, Op.TEXTUREFORMAT_RG16_UNORM = 33324, Op.TEXTUREFORMAT_RGB16_UNORM = 32852, Op.TEXTUREFORMAT_RGBA16_UNORM = 32859, Op.TEXTUREFORMAT_R16_SNORM = 36760, Op.TEXTUREFORMAT_RG16_SNORM = 36761, Op.TEXTUREFORMAT_RGB16_SNORM = 36762, Op.TEXTUREFORMAT_RGBA16_SNORM = 36763, Op.TEXTUREFORMAT_RG = 7, Op.TEXTUREFORMAT_RED_INTEGER = 8, Op.TEXTUREFORMAT_R_INTEGER = 8, Op.TEXTUREFORMAT_RG_INTEGER = 9, Op.TEXTUREFORMAT_RGB_INTEGER = 10, Op.TEXTUREFORMAT_RGBA_INTEGER = 11, Op.TEXTUREFORMAT_BGRA = 12, Op.TEXTUREFORMAT_DEPTH24_STENCIL8 = 13, Op.TEXTUREFORMAT_DEPTH32_FLOAT = 14, Op.TEXTUREFORMAT_DEPTH16 = 15, Op.TEXTUREFORMAT_DEPTH24 = 16, Op.TEXTUREFORMAT_DEPTH24UNORM_STENCIL8 = 17, Op.TEXTUREFORMAT_DEPTH32FLOAT_STENCIL8 = 18, Op.TEXTUREFORMAT_STENCIL8 = 19, Op.TEXTUREFORMAT_UNDEFINED = 4294967295, Op.TEXTUREFORMAT_COMPRESSED_RGBA_BPTC_UNORM = 36492, Op.TEXTUREFORMAT_COMPRESSED_SRGB_ALPHA_BPTC_UNORM = 36493, Op.TEXTUREFORMAT_COMPRESSED_RGB_BPTC_UNSIGNED_FLOAT = 36495, Op.TEXTUREFORMAT_COMPRESSED_RGB_BPTC_SIGNED_FLOAT = 36494, Op.TEXTUREFORMAT_COMPRESSED_RGBA_S3TC_DXT5 = 33779, Op.TEXTUREFORMAT_COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT = 35919, Op.TEXTUREFORMAT_COMPRESSED_RGBA_S3TC_DXT3 = 33778, Op.TEXTUREFORMAT_COMPRESSED_SRGB_ALPHA_S3TC_DXT3_EXT = 35918, Op.TEXTUREFORMAT_COMPRESSED_RGBA_S3TC_DXT1 = 33777, Op.TEXTUREFORMAT_COMPRESSED_RGB_S3TC_DXT1 = 33776, Op.TEXTUREFORMAT_COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT = 35917, Op.TEXTUREFORMAT_COMPRESSED_SRGB_S3TC_DXT1_EXT = 35916, Op.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_4x4 = 37808, Op.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_5x4 = 37809, Op.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_5x5 = 37810, Op.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_6x5 = 37811, Op.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_6x6 = 37812, Op.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_8x5 = 37813, Op.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_8x6 = 37814, Op.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_8x8 = 37815, Op.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_10x5 = 37816, Op.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_10x6 = 37817, Op.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_10x8 = 37818, Op.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_10x10 = 37819, Op.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_12x10 = 37820, Op.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_12x12 = 37821, Op.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_4x4_KHR = 37840, Op.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_5x4_KHR = 37841, Op.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_5x5_KHR = 37842, Op.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_6x5_KHR = 37843, Op.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_6x6_KHR = 37844, Op.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_8x5_KHR = 37845, Op.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_8x6_KHR = 37846, Op.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_8x8_KHR = 37847, Op.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_10x5_KHR = 37848, Op.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_10x6_KHR = 37849, Op.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_10x8_KHR = 37850, Op.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_10x10_KHR = 37851, Op.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_12x10_KHR = 37852, Op.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_12x12_KHR = 37853, Op.TEXTUREFORMAT_COMPRESSED_RGB_ETC1_WEBGL = 36196, Op.TEXTUREFORMAT_COMPRESSED_RGB8_ETC2 = 37492, Op.TEXTUREFORMAT_COMPRESSED_SRGB8_ETC2 = 37493, Op.TEXTUREFORMAT_COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2 = 37494, Op.TEXTUREFORMAT_COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2 = 37495, Op.TEXTUREFORMAT_COMPRESSED_RGBA8_ETC2_EAC = 37496, Op.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ETC2_EAC = 37497, Op.TEXTURETYPE_UNSIGNED_BYTE = 0, Op.TEXTURETYPE_UNSIGNED_INT = 0, Op.TEXTURETYPE_FLOAT = 1, Op.TEXTURETYPE_HALF_FLOAT = 2, Op.TEXTURETYPE_BYTE = 3, Op.TEXTURETYPE_SHORT = 4, Op.TEXTURETYPE_UNSIGNED_SHORT = 5, Op.TEXTURETYPE_INT = 6, Op.TEXTURETYPE_UNSIGNED_INTEGER = 7, Op.TEXTURETYPE_UNSIGNED_SHORT_4_4_4_4 = 8, Op.TEXTURETYPE_UNSIGNED_SHORT_5_5_5_1 = 9, Op.TEXTURETYPE_UNSIGNED_SHORT_5_6_5 = 10, Op.TEXTURETYPE_UNSIGNED_INT_2_10_10_10_REV = 11, Op.TEXTURETYPE_UNSIGNED_INT_24_8 = 12, Op.TEXTURETYPE_UNSIGNED_INT_10F_11F_11F_REV = 13, Op.TEXTURETYPE_UNSIGNED_INT_5_9_9_9_REV = 14, Op.TEXTURETYPE_FLOAT_32_UNSIGNED_INT_24_8_REV = 15, Op.TEXTURETYPE_UNDEFINED = 16, Op.TEXTURE_2D = 3553, Op.TEXTURE_2D_ARRAY = 35866, Op.TEXTURE_CUBE_MAP = 34067, Op.TEXTURE_CUBE_MAP_ARRAY = 3735928559, Op.TEXTURE_3D = 32879, Op.TEXTURE_NEAREST_SAMPLINGMODE = 1, Op.TEXTURE_NEAREST_NEAREST = 1, Op.TEXTURE_BILINEAR_SAMPLINGMODE = 2, Op.TEXTURE_LINEAR_LINEAR = 2, Op.TEXTURE_TRILINEAR_SAMPLINGMODE = 3, Op.TEXTURE_LINEAR_LINEAR_MIPLINEAR = 3, Op.TEXTURE_NEAREST_NEAREST_MIPNEAREST = 4, Op.TEXTURE_NEAREST_LINEAR_MIPNEAREST = 5, Op.TEXTURE_NEAREST_LINEAR_MIPLINEAR = 6, Op.TEXTURE_NEAREST_LINEAR = 7, Op.TEXTURE_NEAREST_NEAREST_MIPLINEAR = 8, Op.TEXTURE_LINEAR_NEAREST_MIPNEAREST = 9, Op.TEXTURE_LINEAR_NEAREST_MIPLINEAR = 10, Op.TEXTURE_LINEAR_LINEAR_MIPNEAREST = 11, Op.TEXTURE_LINEAR_NEAREST = 12, Op.TEXTURE_EXPLICIT_MODE = 0, Op.TEXTURE_SPHERICAL_MODE = 1, Op.TEXTURE_PLANAR_MODE = 2, Op.TEXTURE_CUBIC_MODE = 3, Op.TEXTURE_PROJECTION_MODE = 4, Op.TEXTURE_SKYBOX_MODE = 5, Op.TEXTURE_INVCUBIC_MODE = 6, Op.TEXTURE_EQUIRECTANGULAR_MODE = 7, Op.TEXTURE_FIXED_EQUIRECTANGULAR_MODE = 8, Op.TEXTURE_FIXED_EQUIRECTANGULAR_MIRRORED_MODE = 9, Op.TEXTURE_FILTERING_QUALITY_OFFLINE = 4096, Op.TEXTURE_FILTERING_QUALITY_HIGH = 64, Op.TEXTURE_FILTERING_QUALITY_MEDIUM = 16, Op.TEXTURE_FILTERING_QUALITY_LOW = 8, Op.SCALEMODE_FLOOR = 1, Op.SCALEMODE_NEAREST = 2, Op.SCALEMODE_CEILING = 3, Op.MATERIAL_TextureDirtyFlag = 1, Op.MATERIAL_LightDirtyFlag = 2, Op.MATERIAL_FresnelDirtyFlag = 4, Op.MATERIAL_AttributesDirtyFlag = 8, Op.MATERIAL_MiscDirtyFlag = 16, Op.MATERIAL_PrePassDirtyFlag = 32, Op.MATERIAL_ImageProcessingDirtyFlag = 64, Op.MATERIAL_AllDirtyFlag = 127, Op.MATERIAL_TriangleFillMode = 0, Op.MATERIAL_WireFrameFillMode = 1, Op.MATERIAL_PointFillMode = 2, Op.MATERIAL_PointListDrawMode = 3, Op.MATERIAL_LineListDrawMode = 4, Op.MATERIAL_LineLoopDrawMode = 5, Op.MATERIAL_LineStripDrawMode = 6, Op.MATERIAL_TriangleStripDrawMode = 7, Op.MATERIAL_TriangleFanDrawMode = 8, Op.MATERIAL_ClockWiseSideOrientation = 0, Op.MATERIAL_CounterClockWiseSideOrientation = 1, Op.MATERIAL_DIFFUSE_MODEL_E_OREN_NAYAR = 0, Op.MATERIAL_DIFFUSE_MODEL_BURLEY = 1, Op.MATERIAL_DIFFUSE_MODEL_LAMBERT = 2, Op.MATERIAL_DIFFUSE_MODEL_LEGACY = 3, Op.MATERIAL_DIELECTRIC_SPECULAR_MODEL_GLTF = 0, Op.MATERIAL_DIELECTRIC_SPECULAR_MODEL_OPENPBR = 1, Op.MATERIAL_CONDUCTOR_SPECULAR_MODEL_GLTF = 0, Op.MATERIAL_CONDUCTOR_SPECULAR_MODEL_OPENPBR = 1, Op.ACTION_NothingTrigger = 0, Op.ACTION_OnPickTrigger = 1, Op.ACTION_OnLeftPickTrigger = 2, Op.ACTION_OnRightPickTrigger = 3, Op.ACTION_OnCenterPickTrigger = 4, Op.ACTION_OnPickDownTrigger = 5, Op.ACTION_OnDoublePickTrigger = 6, Op.ACTION_OnPickUpTrigger = 7, Op.ACTION_OnPickOutTrigger = 16, Op.ACTION_OnLongPressTrigger = 8, Op.ACTION_OnPointerOverTrigger = 9, Op.ACTION_OnPointerOutTrigger = 10, Op.ACTION_OnEveryFrameTrigger = 11, Op.ACTION_OnIntersectionEnterTrigger = 12, Op.ACTION_OnIntersectionExitTrigger = 13, Op.ACTION_OnKeyDownTrigger = 14, Op.ACTION_OnKeyUpTrigger = 15, Op.PARTICLES_BILLBOARDMODE_Y = 2, Op.PARTICLES_BILLBOARDMODE_ALL = 7, Op.PARTICLES_BILLBOARDMODE_STRETCHED = 8, Op.PARTICLES_BILLBOARDMODE_STRETCHED_LOCAL = 9, Op.MESHES_CULLINGSTRATEGY_STANDARD = 0, Op.MESHES_CULLINGSTRATEGY_BOUNDINGSPHERE_ONLY = 1, Op.MESHES_CULLINGSTRATEGY_OPTIMISTIC_INCLUSION = 2, Op.MESHES_CULLINGSTRATEGY_OPTIMISTIC_INCLUSION_THEN_BSPHERE_ONLY = 3, Op.SCENELOADER_NO_LOGGING = 0, Op.SCENELOADER_MINIMAL_LOGGING = 1, Op.SCENELOADER_SUMMARY_LOGGING = 2, Op.SCENELOADER_DETAILED_LOGGING = 3, Op.PREPASS_IRRADIANCE_LEGACY_TEXTURE_TYPE = 0, Op.PREPASS_POSITION_TEXTURE_TYPE = 1, Op.PREPASS_VELOCITY_TEXTURE_TYPE = 2, Op.PREPASS_REFLECTIVITY_TEXTURE_TYPE = 3, Op.PREPASS_COLOR_TEXTURE_TYPE = 4, Op.PREPASS_DEPTH_TEXTURE_TYPE = 5, Op.PREPASS_NORMAL_TEXTURE_TYPE = 6, Op.PREPASS_ALBEDO_SQRT_TEXTURE_TYPE = 7, Op.PREPASS_WORLD_NORMAL_TEXTURE_TYPE = 8, Op.PREPASS_LOCAL_POSITION_TEXTURE_TYPE = 9, Op.PREPASS_SCREENSPACE_DEPTH_TEXTURE_TYPE = 10, Op.PREPASS_VELOCITY_LINEAR_TEXTURE_TYPE = 11, Op.PREPASS_ALBEDO_TEXTURE_TYPE = 12, Op.PREPASS_NORMALIZED_VIEW_DEPTH_TEXTURE_TYPE = 13, Op.PREPASS_IRRADIANCE_TEXTURE_TYPE = 14, Op.PREPASS_OBJECT_ID_TEXTURE_TYPE = 15, Op.PREPASS_MESH_BLEND_TAG_TEXTURE_TYPE = 16, Op.BUFFER_CREATIONFLAG_READ = 1, Op.BUFFER_CREATIONFLAG_WRITE = 2, Op.BUFFER_CREATIONFLAG_READWRITE = 3, Op.BUFFER_CREATIONFLAG_UNIFORM = 4, Op.BUFFER_CREATIONFLAG_VERTEX = 8, Op.BUFFER_CREATIONFLAG_INDEX = 16, Op.BUFFER_CREATIONFLAG_STORAGE = 32, Op.BUFFER_CREATIONFLAG_INDIRECT = 64, Op.RENDERPASS_MAIN = 0, Op.INPUT_ALT_KEY = 18, Op.INPUT_CTRL_KEY = 17, Op.INPUT_META_KEY1 = 91, Op.INPUT_META_KEY2 = 92, Op.INPUT_META_KEY3 = 93, Op.INPUT_SHIFT_KEY = 16, Op.SNAPSHOTRENDERING_STANDARD = 0, Op.SNAPSHOTRENDERING_FAST = 1, Op.PERSPECTIVE_CAMERA = 0, Op.ORTHOGRAPHIC_CAMERA = 1, Op.FOVMODE_VERTICAL_FIXED = 0, Op.FOVMODE_HORIZONTAL_FIXED = 1, Op.RIG_MODE_NONE = 0, Op.RIG_MODE_STEREOSCOPIC_ANAGLYPH = 10, Op.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_PARALLEL = 11, Op.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED = 12, Op.RIG_MODE_STEREOSCOPIC_OVERUNDER = 13, Op.RIG_MODE_STEREOSCOPIC_INTERLACED = 14, Op.RIG_MODE_VR = 20, Op.RIG_MODE_CUSTOM = 22, Op.MAX_SUPPORTED_UV_SETS = 6, Op.GL_ALPHA_EQUATION_ADD = 32774, Op.GL_ALPHA_EQUATION_MIN = 32775, Op.GL_ALPHA_EQUATION_MAX = 32776, Op.GL_ALPHA_EQUATION_SUBTRACT = 32778, Op.GL_ALPHA_EQUATION_REVERSE_SUBTRACT = 32779, Op.GL_ALPHA_FUNCTION_SRC = 768, Op.GL_ALPHA_FUNCTION_ONE_MINUS_SRC_COLOR = 769, Op.GL_ALPHA_FUNCTION_SRC_ALPHA = 770, Op.GL_ALPHA_FUNCTION_ONE_MINUS_SRC_ALPHA = 771, Op.GL_ALPHA_FUNCTION_DST_ALPHA = 772, Op.GL_ALPHA_FUNCTION_ONE_MINUS_DST_ALPHA = 773, Op.GL_ALPHA_FUNCTION_DST_COLOR = 774, Op.GL_ALPHA_FUNCTION_ONE_MINUS_DST_COLOR = 775, Op.GL_ALPHA_FUNCTION_SRC_ALPHA_SATURATED = 776, Op.GL_ALPHA_FUNCTION_CONSTANT_COLOR = 32769, Op.GL_ALPHA_FUNCTION_ONE_MINUS_CONSTANT_COLOR = 32770, Op.GL_ALPHA_FUNCTION_CONSTANT_ALPHA = 32771, Op.GL_ALPHA_FUNCTION_ONE_MINUS_CONSTANT_ALPHA = 32772, Op.GL_ALPHA_FUNCTION_SRC1_COLOR = 35065, Op.GL_ALPHA_FUNCTION_ONE_MINUS_SRC1_COLOR = 35066, Op.GL_ALPHA_FUNCTION_SRC1_ALPHA = 34185, Op.GL_ALPHA_FUNCTION_ONE_MINUS_SRC1_ALPHA = 35067, Op.SnippetUrl = "https://snippet.babylonjs.com", Op.FOGMODE_NONE = 0, Op.FOGMODE_EXP = 1, Op.FOGMODE_EXP2 = 2, Op.FOGMODE_LINEAR = 3, Op.BYTE = 5120, Op.UNSIGNED_BYTE = 5121, Op.SHORT = 5122, Op.UNSIGNED_SHORT = 5123, Op.INT = 5124, Op.UNSIGNED_INT = 5125, Op.FLOAT = 5126, Op.HALF_FLOAT = 5131, Op.PositionKind = "position", Op.NormalKind = "normal", Op.TangentKind = "tangent", Op.UVKind = "uv", Op.UV2Kind = "uv2", Op.UV3Kind = "uv3", Op.UV4Kind = "uv4", Op.UV5Kind = "uv5", Op.UV6Kind = "uv6", Op.ColorKind = "color", Op.ColorInstanceKind = "instanceColor", Op.MatricesIndicesKind = "matricesIndices", Op.MatricesWeightsKind = "matricesWeights", Op.MatricesIndicesExtraKind = "matricesIndicesExtra", Op.MatricesWeightsExtraKind = "matricesWeightsExtra", Op.ANIMATIONTYPE_FLOAT = 0, Op.ANIMATIONTYPE_VECTOR3 = 1, Op.ANIMATIONTYPE_QUATERNION = 2, Op.ANIMATIONTYPE_MATRIX = 3, Op.ANIMATIONTYPE_COLOR3 = 4, Op.ANIMATIONTYPE_COLOR4 = 7, Op.ANIMATIONTYPE_VECTOR2 = 5, Op.ANIMATIONTYPE_SIZE = 6, Op.ShadowMinZ = 0, Op.ShadowMaxZ = 1e4, Op.OUTLINELAYER_SAMPLING_TRIDIRECTIONAL = 0, Op.OUTLINELAYER_SAMPLING_OCTADIRECTIONAL = 1
-  },
-  41823: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Lp
-    });
-    var Op = cp(40203),
-      op = cp(40210),
-      Ip = cp(37320),
-      Sp = cp(40451),
-      xp = cp(40423);
-    let Lp = (() => {
-      var pp;
-      let ip, cp, Lp, Yp, Dp = Sp.d,
-        Ap = [];
-      return pp = class extends Dp {
-        constructor() {
-          super(...arguments), this._position = (0, Op.l)(this, Ap), this._needProjectionMatrixCompute = !0, this._viewMatrix = Ip.b.Identity(), this._projectionMatrix = Ip.b.Identity()
+    var wQ = XQ(40260),
+      qQ = XQ(40268),
+      TQ = XQ(37370),
+      zQ = XQ(37546),
+      sQ = XQ(40491),
+      FQ = XQ(40400),
+      PQ = XQ(37418),
+      gQ = XQ(40470),
+      JQ = XQ(40286);
+    let rQ = (() => {
+      var QQ, WQ;
+      let XQ, rQ, IQ, jQ, BQ, yQ, VQ, DQ, pQ, GQ, UQ, bQ, vQ, dQ = sQ.e,
+        HQ = [],
+        aQ = [],
+        lQ = [],
+        hQ = [],
+        iQ = [],
+        cQ = [],
+        AQ = [],
+        RQ = [],
+        EQ = [],
+        CQ = [],
+        uQ = [],
+        LQ = [],
+        kQ = [],
+        fQ = [],
+        SQ = [],
+        tQ = [],
+        oQ = [],
+        eQ = [],
+        nQ = [],
+        xQ = [],
+        YQ = [];
+      return QQ = class extends dQ {
+        get range() {
+          return this._range
         }
-        _setPosition(pp) {
-          this._position = pp
+        set range(QQ) {
+          this._range = QQ, this._inverseSquaredRange = 1 / (this.range * this.range)
         }
-        get position() {
-          return this._position
+        get intensityMode() {
+          return this._intensityMode
         }
-        set position(pp) {
-          this._setPosition(pp)
+        set intensityMode(QQ) {
+          this._intensityMode = QQ, this._computePhotometricScale()
         }
-        _setDirection(pp) {
-          this._direction = pp
+        get radius() {
+          return this._radius
         }
-        get direction() {
-          return this._direction
+        set radius(QQ) {
+          this._radius = QQ, this._computePhotometricScale()
         }
-        set direction(pp) {
-          this._setDirection(pp)
+        get renderPriority() {
+          return (0, wQ.d)(this, WQ, "f")
         }
-        get shadowMinZ() {
-          return this._shadowMinZ
+        set renderPriority(QQ) {
+          (0, wQ.h)(this, WQ, QQ, "f")
         }
-        set shadowMinZ(pp) {
-          this._shadowMinZ = pp, this.forceProjectionMatrixCompute()
+        get shadowEnabled() {
+          return this._shadowEnabled
         }
-        get shadowMaxZ() {
-          return this._shadowMaxZ
+        set shadowEnabled(QQ) {
+          this._shadowEnabled !== QQ && (this._shadowEnabled = QQ, this._markMeshesAsLightDirty())
         }
-        set shadowMaxZ(pp) {
-          this._shadowMaxZ = pp, this.forceProjectionMatrixCompute()
+        get includedOnlyMeshes() {
+          return this._includedOnlyMeshes
         }
-        computeTransformedInformation() {
-          return !(!this.parent || !this.parent.getWorldMatrix) && (this.transformedPosition || (this.transformedPosition = Ip.o.Zero()), Ip.o.TransformCoordinatesToRef(this.position, this.parent.getWorldMatrix(), this.transformedPosition), this.direction && (this.transformedDirection || (this.transformedDirection = Ip.o.Zero()), Ip.o.TransformNormalToRef(this.direction, this.parent.getWorldMatrix(), this.transformedDirection)), !0)
+        set includedOnlyMeshes(QQ) {
+          this._includedOnlyMeshes = QQ, this._hookArrayForIncludedOnly(QQ)
         }
-        getDepthScale() {
-          return 50
+        get excludedMeshes() {
+          return this._excludedMeshes
         }
-        getShadowDirection(pp) {
-          return this.transformedDirection ? this.transformedDirection : this.direction
+        set excludedMeshes(QQ) {
+          this._excludedMeshes = QQ, this._hookArrayForExcluded(QQ)
         }
-        getAbsolutePosition() {
-          return this.transformedPosition ? this.transformedPosition : this.position
+        get excludeWithLayerMask() {
+          return this._excludeWithLayerMask
         }
-        setDirectionToTarget(pp) {
-          return this.direction = Ip.o.Normalize(pp.subtract(this.position)), this.direction
+        set excludeWithLayerMask(QQ) {
+          this._excludeWithLayerMask = QQ, this._resyncMeshes()
         }
-        getRotation() {
-          this.direction.normalize();
-          const pp = Ip.o.Cross(this.direction, xp.c.Y),
-            ip = Ip.o.Cross(pp, this.direction);
-          return Ip.o.RotationFromAxis(pp, ip, this.direction)
+        get includeOnlyWithLayerMask() {
+          return this._includeOnlyWithLayerMask
         }
-        needCube() {
-          return !1
+        set includeOnlyWithLayerMask(QQ) {
+          this._includeOnlyWithLayerMask = QQ, this._resyncMeshes()
         }
-        needProjectionMatrixCompute() {
-          return this._needProjectionMatrixCompute
+        get lightmapMode() {
+          return this._lightmapMode
         }
-        forceProjectionMatrixCompute() {
-          this._needProjectionMatrixCompute = !0
+        set lightmapMode(QQ) {
+          this._lightmapMode !== QQ && (this._lightmapMode = QQ, this._markMeshesAsLightDirty())
         }
-        _initCache() {
-          super._initCache(), this._cache.position = Ip.o.Zero()
+        getViewMatrix(QQ) {
+          return null
         }
-        _isSynchronized() {
-          return !!this._cache.position.equals(this.position)
+        getProjectionMatrix(QQ, WQ) {
+          return null
         }
-        computeWorldMatrix(pp) {
-          return !pp && this.isSynchronized() ? (this._currentRenderId = this.Gl().getRenderId(), this._worldMatrix) : (this._updateCache(), this._cache.position.rM(this.position), this._worldMatrix || (this._worldMatrix = Ip.b.Identity()), Ip.b.TranslationToRef(this.position.x, this.position.y, this.position.z, this._worldMatrix), this.parent && this.parent.getWorldMatrix && (this._worldMatrix.multiplyToRef(this.parent.getWorldMatrix(), this._worldMatrix), this._markSyncedWithParent()), this._worldMatrixDeterminantIsDirty = !0, this._worldMatrix)
+        constructor(XQ, qQ, TQ) {
+          super(XQ, qQ, !1), this.diffuse = ((0, wQ.n)(this, HQ), (0, wQ.n)(this, aQ, new zQ.b(1, 1, 1))), this.specular = ((0, wQ.n)(this, lQ), (0, wQ.n)(this, hQ, new zQ.b(1, 1, 1))), this.falloffType = ((0, wQ.n)(this, iQ), (0, wQ.n)(this, cQ, QQ.FALLOFF_DEFAULT)), this.intensity = ((0, wQ.n)(this, AQ), (0, wQ.n)(this, RQ, 1)), this._range = ((0, wQ.n)(this, EQ), Number.MAX_VALUE), this._inverseSquaredRange = 0, this._photometricScale = 1, this._intensityMode = QQ.INTENSITYMODE_AUTOMATIC, this._radius = 1e-5, this._renderPriority = (0, wQ.n)(this, CQ, void 0), WQ.set(this, ((0, wQ.n)(this, uQ), (0, wQ.n)(this, LQ, 0))), this._shadowEnabled = ((0, wQ.n)(this, kQ), (0, wQ.n)(this, fQ, !0)), this._includedOnlyMeshes = (0, wQ.n)(this, SQ), this._excludeWithLayerMask = (0, wQ.n)(this, tQ, 0), this._includeOnlyWithLayerMask = ((0, wQ.n)(this, oQ), (0, wQ.n)(this, eQ, 0)), this._lightmapMode = ((0, wQ.n)(this, nQ), (0, wQ.n)(this, xQ, 0)), this._shadowGenerators = ((0, wQ.n)(this, YQ), null), this._excludedMeshesIds = new Array, this._includedOnlyMeshesIds = new Array, this._currentViewDepth = 0, this._clusteredContainer = null, this._isLight = !0, TQ || this.sE().addLight(this), this._uniformBuffer = new FQ.c(this.sE().Uj(), void 0, void 0, XQ), this._buildUniformLayout(), this.includedOnlyMeshes = [], this.excludedMeshes = [], TQ || this._resyncMeshes()
         }
-        getDepthMinZ(pp) {
-          return void 0 !== this.shadowMinZ ? this.shadowMinZ : pp?.minZ || 0
+        transferTexturesToEffect(QQ, WQ) {
+          return this
         }
-        getDepthMaxZ(pp) {
-          return void 0 !== this.shadowMaxZ ? this.shadowMaxZ : pp?.maxZ || 1e4
+        _bindLight(QQ, WQ, XQ, wQ) {
+          let qQ = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
+          const TQ = QQ.toString();
+          let sQ = !1;
+          if (this._uniformBuffer.bindToEffect(XQ, "Light" + TQ), this._renderId !== WQ.getRenderId() || this._lastUseSpecular !== wQ || !this._uniformBuffer.useUbo) {
+            this._renderId = WQ.getRenderId(), this._lastUseSpecular = wQ;
+            const QQ = this.getScaledIntensity();
+            this.transferToEffect(XQ, TQ), this.diffuse.scaleToRef(QQ, zQ.l.Color3[0]), this._uniformBuffer.updateColor4("vLightDiffuse", zQ.l.Color3[0], this.range, TQ), wQ && (this.specular.scaleToRef(QQ, zQ.l.Color3[1]), this._uniformBuffer.updateColor4("vLightSpecular", zQ.l.Color3[1], this.radius, TQ)), sQ = !0
+          }
+          if (this.transferTexturesToEffect(XQ, TQ), WQ.shadowsEnabled && this.shadowEnabled && qQ) {
+            const QQ = this.getShadowGenerator(WQ.activeCamera) ?? this.getShadowGenerator();
+            QQ && (QQ.bindShadowLight(TQ, XQ), sQ = !0)
+          }
+          sQ ? this._uniformBuffer.update() : this._uniformBuffer.bindUniformBuffer()
         }
-        setShadowProjectionMatrix(pp, ip, cp) {
-          return this.customProjectionMatrixBuilder ? this.customProjectionMatrixBuilder(ip, cp, pp) : this._setDefaultShadowProjectionMatrix(pp, ip, cp), this
+        getClassName() {
+          return "Light"
+        }
+        toString(QQ) {
+          let WQ = "Name: " + this.name;
+          if (WQ += ", type: " + ["Point", "Directional", "Spot", "Hemispheric", "Clustered"][this.getTypeID()], this.animations)
+            for (let XQ = 0; XQ < this.animations.length; XQ++) WQ += ", animation[0]: " + this.animations[XQ].toString(QQ);
+          return WQ
         }
         _syncParentEnabledState() {
-          super._syncParentEnabledState(), this.parent && this.parent.getWorldMatrix || (this.transformedPosition = null, this.transformedDirection = null)
+          super._syncParentEnabledState(), this.rG() || this._resyncMeshes()
         }
-        getViewMatrix(pp) {
-          const ip = Ip.i.Zy[0];
-          let cp = this.position;
-          this.computeTransformedInformation() && (cp = this.transformedPosition), Ip.o.NormalizeToRef(this.getShadowDirection(pp), ip), 1 === Math.abs(Ip.o.Dot(ip, Ip.o.Up())) && (ip.z = 1e-13);
-          const Op = Ip.i.Zy[1];
-          return cp.addToRef(ip, Op), Ip.b.LookAtLHToRef(cp, Op, Ip.o.Up(), this._viewMatrix), this._viewMatrix
+        UH(QQ) {
+          super.UH(QQ), this._resyncMeshes()
         }
-        getProjectionMatrix(pp, ip) {
-          return this.setShadowProjectionMatrix(this._projectionMatrix, pp ?? this._viewMatrix, ip ?? []), this._projectionMatrix
+        getShadowGenerator() {
+          let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+          return null === this._shadowGenerators ? null : this._shadowGenerators.get(QQ) ?? null
         }
-      }, (() => {
-        const Ip = "function" === typeof Symbol && Symbol.metadata ? Object.create(Dp[Symbol.metadata] ?? null) : void 0;
-        ip = [(0, op.H)()], cp = [(0, op.H)()], Lp = [(0, op.K)()], Yp = [(0, op.K)()], (0, Op.j)(pp, null, ip, {
+        getShadowGenerators() {
+          return this._shadowGenerators
+        }
+        getAbsolutePosition() {
+          return TQ.s.Zero()
+        }
+        canAffectMesh(QQ) {
+          return !QQ || !(this.includedOnlyMeshes && this.includedOnlyMeshes.length > 0 && -1 === this.includedOnlyMeshes.indexOf(QQ)) && (!(this.excludedMeshes && this.excludedMeshes.length > 0 && -1 !== this.excludedMeshes.indexOf(QQ)) && ((0 === this.includeOnlyWithLayerMask || 0 !== (this.includeOnlyWithLayerMask & QQ.layerMask)) && !(0 !== this.excludeWithLayerMask && this.excludeWithLayerMask & QQ.layerMask)))
+        }
+        dispose(QQ) {
+          let WQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          if (this._shadowGenerators) {
+            const QQ = this._shadowGenerators.values();
+            for (let WQ = QQ.next(); !0 !== WQ.done; WQ = QQ.next()) {
+              WQ.value.dispose()
+            }
+            this._shadowGenerators = null
+          }
+          if (this.sE().stopAnimation(this), this._parentContainer) {
+            const QQ = this._parentContainer.lights.indexOf(this);
+            QQ > -1 && this._parentContainer.lights.splice(QQ, 1), this._parentContainer = null
+          }
+          for (const XQ of this.sE().meshes) XQ._removeLightSource(this, !0);
+          this._uniformBuffer.dispose(), this.sE().removeLight(this), super.dispose(QQ, WQ)
+        }
+        getTypeID() {
+          return 0
+        }
+        getScaledIntensity() {
+          return this._photometricScale * this.intensity
+        }
+        clone(WQ) {
+          let XQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+          const wQ = QQ.GetConstructorFromName(this.getTypeID(), WQ, this.sE());
+          if (!wQ) return null;
+          const qQ = JQ.b.Clone(wQ, this);
+          return WQ && (qQ.name = WQ), XQ && (qQ.parent = XQ), qQ.UH(this.isEnabled()), this.onClonedObservable.notifyObservers(qQ), qQ
+        }
+        serialize() {
+          const QQ = JQ.b.Serialize(this);
+          if (QQ.uniqueId = this.uniqueId, QQ.type = this.getTypeID(), this.parent && this.parent._serializeAsParent(QQ), this.excludedMeshes.length > 0) {
+            QQ.excludedMeshesIds = [];
+            for (const WQ of this.excludedMeshes) QQ.excludedMeshesIds.push(WQ.id)
+          }
+          if (this.includedOnlyMeshes.length > 0) {
+            QQ.includedOnlyMeshesIds = [];
+            for (const WQ of this.includedOnlyMeshes) QQ.includedOnlyMeshesIds.push(WQ.id)
+          }
+          return JQ.b.AppendSerializedAnimations(this, QQ), QQ.Qy = this.serializeAnimationRanges(), QQ.isEnabled = this.isEnabled(), QQ
+        }
+        static GetConstructorFromName(QQ, WQ, XQ) {
+          const wQ = sQ.e.Construct("Light_Type_" + QQ, WQ, XQ);
+          return wQ || null
+        }
+        static Parse(WQ, XQ) {
+          let wQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+          const qQ = QQ.GetConstructorFromName(WQ.type, WQ.name, XQ);
+          if (!qQ) return null;
+          const TQ = JQ.b.Parse(qQ, WQ, XQ, wQ);
+          if (WQ.excludedMeshesIds && (TQ._excludedMeshesIds = WQ.excludedMeshesIds), WQ.includedOnlyMeshesIds && (TQ._includedOnlyMeshesIds = WQ.includedOnlyMeshesIds), void 0 !== WQ.parentId && (TQ._waitingParentId = WQ.parentId), void 0 !== WQ.parentInstanceIndex && (TQ._waitingParentInstanceIndex = WQ.parentInstanceIndex), void 0 !== WQ.falloffType && (TQ.falloffType = WQ.falloffType), void 0 !== WQ.lightmapMode && (TQ.lightmapMode = WQ.lightmapMode), WQ.animations) {
+            for (let QQ = 0; QQ < WQ.animations.length; QQ++) {
+              const XQ = WQ.animations[QQ],
+                wQ = (0, PQ.b)("BABYLON.Animation");
+              wQ && TQ.animations.push(wQ.Parse(XQ))
+            }
+            sQ.e.ParseAnimationRanges(TQ, WQ, XQ)
+          }
+          return WQ.autoAnimate && XQ.beginAnimation(TQ, WQ.autoAnimateFrom, WQ.autoAnimateTo, WQ.autoAnimateLoop, WQ.autoAnimateSpeed || 1), void 0 !== WQ.isEnabled && TQ.UH(WQ.isEnabled), TQ._onParsed(WQ, XQ, wQ), TQ
+        }
+        _onParsed(QQ, WQ) {}
+        _hookArrayForExcluded(QQ) {
+          var WQ = this;
+          const XQ = QQ.push;
+          QQ.push = function() {
+            for (var wQ = arguments.length, qQ = new Array(wQ), TQ = 0; TQ < wQ; TQ++) qQ[TQ] = arguments[TQ];
+            const zQ = XQ.apply(QQ, qQ);
+            if (WQ._clusteredContainer) return zQ;
+            for (const QQ of qQ) QQ._resyncLightSource(WQ);
+            return zQ
+          };
+          const wQ = QQ.splice;
+          QQ.splice = (WQ, XQ) => {
+            const qQ = wQ.call(QQ, WQ, XQ ?? QQ.length);
+            if (this._clusteredContainer) return qQ;
+            for (const QQ of qQ) QQ._resyncLightSource(this);
+            return qQ
+          }, this._resyncMeshes()
+        }
+        _hookArrayForIncludedOnly(QQ) {
+          var WQ = this;
+          const XQ = QQ.push;
+          QQ.push = function() {
+            for (var wQ = arguments.length, qQ = new Array(wQ), TQ = 0; TQ < wQ; TQ++) qQ[TQ] = arguments[TQ];
+            const zQ = XQ.apply(QQ, qQ);
+            return WQ._resyncMeshes(), zQ
+          };
+          const wQ = QQ.splice;
+          QQ.splice = (WQ, XQ) => {
+            const qQ = wQ.call(QQ, WQ, XQ ?? QQ.length);
+            return this._resyncMeshes(), qQ
+          }, this._resyncMeshes()
+        }
+        _resyncMeshes() {
+          if (!this._clusteredContainer)
+            for (const QQ of this.sE().meshes) QQ._resyncLightSource(this)
+        }
+        _markMeshesAsLightDirty() {
+          for (const QQ of this.sE().meshes) - 1 !== QQ.lightSources.indexOf(this) && QQ._markSubMeshesAsLightDirty()
+        }
+        _computePhotometricScale() {
+          this._photometricScale = this._getPhotometricScale(), this.sE().resetCachedMaterial()
+        }
+        _getPhotometricScale() {
+          let WQ = 0;
+          const XQ = this.getTypeID();
+          let wQ = this.intensityMode;
+          switch (wQ === QQ.INTENSITYMODE_AUTOMATIC && (wQ = XQ === QQ.LIGHTTYPEID_DIRECTIONALLIGHT ? QQ.INTENSITYMODE_ILLUMINANCE : QQ.INTENSITYMODE_LUMINOUSINTENSITY), XQ) {
+            case QQ.LIGHTTYPEID_POINTLIGHT:
+            case QQ.LIGHTTYPEID_SPOTLIGHT:
+              switch (wQ) {
+                case QQ.INTENSITYMODE_LUMINOUSPOWER:
+                  WQ = 1 / (4 * Math.PI);
+                  break;
+                case QQ.INTENSITYMODE_LUMINOUSINTENSITY:
+                  WQ = 1;
+                  break;
+                case QQ.INTENSITYMODE_LUMINANCE:
+                  WQ = this.radius * this.radius
+              }
+              break;
+            case QQ.LIGHTTYPEID_DIRECTIONALLIGHT:
+              switch (wQ) {
+                case QQ.INTENSITYMODE_ILLUMINANCE:
+                  WQ = 1;
+                  break;
+                case QQ.INTENSITYMODE_LUMINANCE: {
+                  let QQ = this.radius;
+                  QQ = Math.max(QQ, .001);
+                  WQ = 2 * Math.PI * (1 - Math.cos(QQ));
+                  break
+                }
+              }
+              break;
+            case QQ.LIGHTTYPEID_HEMISPHERICLIGHT:
+            case QQ.LIGHTTYPEID_RECT_AREALIGHT:
+              WQ = 1
+          }
+          return WQ
+        }
+        _reorderLightsInScene() {
+          const QQ = this.sE();
+          0 != this._renderPriority && (QQ.requireLightSorting = !0), this.sE().sortLightsByPriority()
+        }
+        areLightTexturesReady() {
+          return !0
+        }
+        _isReady() {
+          return !0
+        }
+      }, WQ = new WeakMap, (() => {
+        const WQ = "function" === typeof Symbol && Symbol.metadata ? Object.create(dQ[Symbol.metadata] ?? null) : void 0;
+        XQ = [(0, qQ.l)()], rQ = [(0, qQ.l)()], IQ = [(0, qQ.I)()], jQ = [(0, qQ.I)()], BQ = [(0, qQ.I)()], yQ = [(0, qQ.I)()], VQ = [(0, qQ.I)()], DQ = [(0, qQ.I)()], pQ = [(0, qQ.e)("_reorderLightsInScene")], GQ = [(0, qQ.I)("shadowEnabled")], UQ = [(0, qQ.I)("excludeWithLayerMask")], bQ = [(0, qQ.I)("includeOnlyWithLayerMask")], vQ = [(0, qQ.I)("lightmapMode")], (0, wQ.k)(QQ, null, BQ, {
           kind: "getter",
-          name: "position",
+          name: "range",
           static: !1,
           private: !1,
           access: {
-            has: pp => "position" in pp,
-            get: pp => pp.position
+            has: QQ => "range" in QQ,
+            get: QQ => QQ.range
           },
-          metadata: Ip
-        }, null, Ap), (0, Op.j)(pp, null, cp, {
+          metadata: WQ
+        }, null, HQ), (0, wQ.k)(QQ, null, yQ, {
           kind: "getter",
-          name: "direction",
+          name: "intensityMode",
           static: !1,
           private: !1,
           access: {
-            has: pp => "direction" in pp,
-            get: pp => pp.direction
+            has: QQ => "intensityMode" in QQ,
+            get: QQ => QQ.intensityMode
           },
-          metadata: Ip
-        }, null, Ap), (0, Op.j)(pp, null, Lp, {
+          metadata: WQ
+        }, null, HQ), (0, wQ.k)(QQ, null, VQ, {
           kind: "getter",
-          name: "shadowMinZ",
+          name: "radius",
           static: !1,
           private: !1,
           access: {
-            has: pp => "shadowMinZ" in pp,
-            get: pp => pp.shadowMinZ
+            has: QQ => "radius" in QQ,
+            get: QQ => QQ.radius
           },
-          metadata: Ip
-        }, null, Ap), (0, Op.j)(pp, null, Yp, {
-          kind: "getter",
-          name: "shadowMaxZ",
+          metadata: WQ
+        }, null, HQ), (0, wQ.k)(QQ, null, pQ, {
+          kind: "accessor",
+          name: "renderPriority",
           static: !1,
           private: !1,
           access: {
-            has: pp => "shadowMaxZ" in pp,
-            get: pp => pp.shadowMaxZ
+            has: QQ => "renderPriority" in QQ,
+            get: QQ => QQ.renderPriority,
+            set: (QQ, WQ) => {
+              QQ.renderPriority = WQ
+            }
           },
-          metadata: Ip
-        }, null, Ap), Ip && Object.defineProperty(pp, Symbol.metadata, {
+          metadata: WQ
+        }, LQ, kQ), (0, wQ.k)(null, null, XQ, {
+          kind: "field",
+          name: "diffuse",
+          static: !1,
+          private: !1,
+          access: {
+            has: QQ => "diffuse" in QQ,
+            get: QQ => QQ.diffuse,
+            set: (QQ, WQ) => {
+              QQ.diffuse = WQ
+            }
+          },
+          metadata: WQ
+        }, aQ, lQ), (0, wQ.k)(null, null, rQ, {
+          kind: "field",
+          name: "specular",
+          static: !1,
+          private: !1,
+          access: {
+            has: QQ => "specular" in QQ,
+            get: QQ => QQ.specular,
+            set: (QQ, WQ) => {
+              QQ.specular = WQ
+            }
+          },
+          metadata: WQ
+        }, hQ, iQ), (0, wQ.k)(null, null, IQ, {
+          kind: "field",
+          name: "falloffType",
+          static: !1,
+          private: !1,
+          access: {
+            has: QQ => "falloffType" in QQ,
+            get: QQ => QQ.falloffType,
+            set: (QQ, WQ) => {
+              QQ.falloffType = WQ
+            }
+          },
+          metadata: WQ
+        }, cQ, AQ), (0, wQ.k)(null, null, jQ, {
+          kind: "field",
+          name: "intensity",
+          static: !1,
+          private: !1,
+          access: {
+            has: QQ => "intensity" in QQ,
+            get: QQ => QQ.intensity,
+            set: (QQ, WQ) => {
+              QQ.intensity = WQ
+            }
+          },
+          metadata: WQ
+        }, RQ, EQ), (0, wQ.k)(null, null, DQ, {
+          kind: "field",
+          name: "_renderPriority",
+          static: !1,
+          private: !1,
+          access: {
+            has: QQ => "_renderPriority" in QQ,
+            get: QQ => QQ._renderPriority,
+            set: (QQ, WQ) => {
+              QQ._renderPriority = WQ
+            }
+          },
+          metadata: WQ
+        }, CQ, uQ), (0, wQ.k)(null, null, GQ, {
+          kind: "field",
+          name: "_shadowEnabled",
+          static: !1,
+          private: !1,
+          access: {
+            has: QQ => "_shadowEnabled" in QQ,
+            get: QQ => QQ._shadowEnabled,
+            set: (QQ, WQ) => {
+              QQ._shadowEnabled = WQ
+            }
+          },
+          metadata: WQ
+        }, fQ, SQ), (0, wQ.k)(null, null, UQ, {
+          kind: "field",
+          name: "_excludeWithLayerMask",
+          static: !1,
+          private: !1,
+          access: {
+            has: QQ => "_excludeWithLayerMask" in QQ,
+            get: QQ => QQ._excludeWithLayerMask,
+            set: (QQ, WQ) => {
+              QQ._excludeWithLayerMask = WQ
+            }
+          },
+          metadata: WQ
+        }, tQ, oQ), (0, wQ.k)(null, null, bQ, {
+          kind: "field",
+          name: "_includeOnlyWithLayerMask",
+          static: !1,
+          private: !1,
+          access: {
+            has: QQ => "_includeOnlyWithLayerMask" in QQ,
+            get: QQ => QQ._includeOnlyWithLayerMask,
+            set: (QQ, WQ) => {
+              QQ._includeOnlyWithLayerMask = WQ
+            }
+          },
+          metadata: WQ
+        }, eQ, nQ), (0, wQ.k)(null, null, vQ, {
+          kind: "field",
+          name: "_lightmapMode",
+          static: !1,
+          private: !1,
+          access: {
+            has: QQ => "_lightmapMode" in QQ,
+            get: QQ => QQ._lightmapMode,
+            set: (QQ, WQ) => {
+              QQ._lightmapMode = WQ
+            }
+          },
+          metadata: WQ
+        }, xQ, YQ), WQ && Object.defineProperty(QQ, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: Ip
+          value: WQ
         })
-      })(), pp
+      })(), QQ.FALLOFF_DEFAULT = gQ.e.FALLOFF_DEFAULT, QQ.FALLOFF_PHYSICAL = gQ.e.FALLOFF_PHYSICAL, QQ.FALLOFF_GLTF = gQ.e.FALLOFF_GLTF, QQ.FALLOFF_STANDARD = gQ.e.FALLOFF_STANDARD, QQ.LIGHTMAP_DEFAULT = gQ.e.LIGHTMAP_DEFAULT, QQ.LIGHTMAP_SPECULAR = gQ.e.LIGHTMAP_SPECULAR, QQ.LIGHTMAP_SHADOWSONLY = gQ.e.LIGHTMAP_SHADOWSONLY, QQ.INTENSITYMODE_AUTOMATIC = gQ.e.INTENSITYMODE_AUTOMATIC, QQ.INTENSITYMODE_LUMINOUSPOWER = gQ.e.INTENSITYMODE_LUMINOUSPOWER, QQ.INTENSITYMODE_LUMINOUSINTENSITY = gQ.e.INTENSITYMODE_LUMINOUSINTENSITY, QQ.INTENSITYMODE_ILLUMINANCE = gQ.e.INTENSITYMODE_ILLUMINANCE, QQ.INTENSITYMODE_LUMINANCE = gQ.e.INTENSITYMODE_LUMINANCE, QQ.LIGHTTYPEID_POINTLIGHT = gQ.e.LIGHTTYPEID_POINTLIGHT, QQ.LIGHTTYPEID_DIRECTIONALLIGHT = gQ.e.LIGHTTYPEID_DIRECTIONALLIGHT, QQ.LIGHTTYPEID_SPOTLIGHT = gQ.e.LIGHTTYPEID_SPOTLIGHT, QQ.LIGHTTYPEID_HEMISPHERICLIGHT = gQ.e.LIGHTTYPEID_HEMISPHERICLIGHT, QQ.LIGHTTYPEID_RECT_AREALIGHT = gQ.e.LIGHTTYPEID_RECT_AREALIGHT, QQ
     })()
   },
-  41843: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => op
+  40491: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      e: () => JQ
     });
-    var Op = cp(40654);
-    class op extends Op.d {
-      constructor(pp, ip, cp, op, Ip) {
-        let Sp = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-          xp = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
-          Lp = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 3,
-          Yp = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0,
-          Dp = arguments.length > 9 ? arguments[9] : void 0,
-          Ap = arguments.length > 10 ? arguments[10] : void 0,
-          Pp = arguments.length > 11 ? arguments[11] : void 0,
-          Wp = arguments.length > 12 ? arguments[12] : void 0;
-        super(null, Ip, !Sp, xp, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, Dp), this.format = op, this._engine && (this._engine._caps.textureFloatLinearFiltering || 1 !== Yp || (Lp = 1), this._engine._caps.textureHalfFloatLinearFiltering || 2 !== Yp || (Lp = 1), this._texture = this._engine.createRawTexture(pp, ip, cp, op, Sp, xp, Lp, null, Yp, Dp ?? 0, Ap ?? !1, Wp), this.wrapU = Op.d.CLAMP_ADDRESSMODE, this.wrapV = Op.d.CLAMP_ADDRESSMODE, this._waitingForData = !!Pp && !pp)
-      }
-      update(pp) {
-        this.updateMipLevel(pp, 0)
-      }
-      updateMipLevel(pp, ip) {
-        this._getEngine().updateRawTexture(this._texture, pp, this._texture.format, this._texture.invertY, null, this._texture.type, this._texture._useSRGBBuffer, ip), this._waitingForData = !1
-      }
-      clone() {
-        if (!this._texture) return super.clone();
-        const pp = new op(null, this.getSize().width, this.getSize().height, this.format, this.Gl(), this._texture.generateMipMaps, this._invertY, this.samplingMode, this._texture.type, this._texture._creationFlags, this._useSRGBBuffer);
-        return pp._texture = this._texture, this._texture.incrementReferences(), pp
-      }
-      isReady() {
-        return super.isReady() && !this._waitingForData
-      }
-      static CreateLuminanceTexture(pp, ip, cp, Op) {
-        return new op(pp, ip, cp, 1, Op, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3)
-      }
-      static CreateLuminanceAlphaTexture(pp, ip, cp, Op) {
-        return new op(pp, ip, cp, 2, Op, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3)
-      }
-      static CreateAlphaTexture(pp, ip, cp, Op) {
-        return new op(pp, ip, cp, 0, Op, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3)
-      }
-      static CreateRGBTexture(pp, ip, cp, Op) {
-        return new op(pp, ip, cp, 4, Op, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0, arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0, arguments.length > 9 && void 0 !== arguments[9] && arguments[9])
-      }
-      static CreateRGBATexture(pp, ip, cp, Op) {
-        return new op(pp, ip, cp, 5, Op, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0, arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0, arguments.length > 9 && void 0 !== arguments[9] && arguments[9], arguments.length > 10 && void 0 !== arguments[10] && arguments[10])
-      }
-      static CreateRGBAStorageTexture(pp, ip, cp, Op) {
-        return new op(pp, ip, cp, 5, Op, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0, 1, arguments.length > 8 && void 0 !== arguments[8] && arguments[8])
-      }
-      static CreateRTexture(pp, ip, cp, Ip) {
-        let Sp = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          xp = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-          Lp = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : Op.d.TRILINEAR_SAMPLINGMODE;
-        return new op(pp, ip, cp, 6, Ip, Sp, xp, Lp, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 1)
-      }
-      static CreateRStorageTexture(pp, ip, cp, Ip) {
-        let Sp = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          xp = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-          Lp = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : Op.d.TRILINEAR_SAMPLINGMODE;
-        return new op(pp, ip, cp, 6, Ip, Sp, xp, Lp, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 1, 1)
+    var wQ = XQ(40260),
+      qQ = XQ(37370),
+      TQ = XQ(40268),
+      zQ = XQ(37399),
+      sQ = XQ(37392),
+      FQ = XQ(40153),
+      PQ = XQ(40286);
+    class gQ {
+      constructor() {
+        this._doNotSerialize = !1, this._isDisposed = !1, this._sceneRootNodesIndex = -1, this._isEnabled = !0, this._isParentEnabled = !0, this._isReady = !0, this._onEnabledStateChangedObservable = new zQ.b, this._onEffectiveEnabledStateChangedObservable = null, this._onClonedObservable = new zQ.b, this._inheritVisibility = !1, this._isVisible = !0
       }
     }
-  },
-  41884: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Op.b
-    });
-    var Op = cp(40614);
-    (0, Op.d)()
-  },
-  41826: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Op.e
-    });
-    var Op = cp(40631);
-    (0, Op.h)()
-  },
-  40631: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Pp,
-      h: () => Up
-    });
-    var Op, op, Ip = cp(37487),
-      Sp = cp(40342),
-      xp = cp(40577),
-      Lp = cp(40638),
-      Yp = cp(40476),
-      Dp = cp(40647),
-      Ap = cp(40096);
-    class Pp extends xp.d {
-      _isShaderMaterial(pp) {
-        return !!pp && "ShaderMaterial" === pp.getClassName()
-      }
-      constructor(pp) {
-        let ip = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-          Op = arguments.length > 5 ? arguments[5] : void 0,
-          op = arguments.length > 6 ? arguments[6] : void 0,
-          xp = arguments.length > 7 ? arguments[7] : void 0;
-        super(pp, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null, ip, arguments.length > 4 ? arguments[4] : void 0), this.useVertexColor = Op, this.useVertexAlpha = op, this.color = new Ip.d(1, 1, 1), this.alpha = 1, this._shaderLanguage = 0, this._ownsMaterial = !1, ip && (this.color = ip.color.clone(), this.alpha = ip.alpha, this.useVertexColor = ip.useVertexColor, this.useVertexAlpha = ip.useVertexAlpha), this.intersectionThreshold = .1;
-        const Lp = {
-          attributes: [Sp.j.PositionKind],
-          uniforms: ["world", "viewProjection"],
-          needAlphaBlending: !0,
-          defines: [],
-          useClipPlane: null,
-          shaderLanguage: 0
-        };
-        if (this.useVertexAlpha ? Lp.defines.push("#define VERTEXALPHA") : Lp.needAlphaBlending = !1, this.useVertexColor ? (Lp.defines.push("#define VERTEXCOLOR"), Lp.attributes.push(Sp.j.ColorKind)) : (Lp.uniforms.push("color"), this._color4 = new Ip.h), xp) this.material = xp;
-        else {
-          this.Gl().gy().isWebGPU && !Pp.ForceGLSL && (this._shaderLanguage = 1), Lp.shaderLanguage = this._shaderLanguage, Lp.extraInitializationsAsync = async () => {
-            1 === this._shaderLanguage ? await Promise.all([cp.e(349).then((() => cp(42847))), cp.e(355).then((() => cp(42853)))]) : await Promise.all([cp.e(331).then((() => cp(42861))), cp.e(337).then((() => cp(42863)))])
-          };
-          const pp = new Dp.q("colorShader", this.Gl(), "color", Lp, !1);
-          pp.doNotSerialize = !0, this._ownsMaterial = !0, this._setInternalMaterial(pp)
+    let JQ = (() => {
+      var QQ;
+      let WQ, XQ, JQ, rQ, IQ, jQ = [],
+        BQ = [],
+        yQ = [],
+        VQ = [],
+        DQ = [],
+        pQ = [],
+        GQ = [],
+        UQ = [],
+        bQ = [],
+        vQ = [];
+      return QQ = class {
+        static AddNodeConstructor(QQ, WQ) {
+          this._NodeConstructors[QQ] = WQ
         }
-      }
-      getClassName() {
-        return "LinesMesh"
-      }
-      get material() {
-        return this._internalAbstractMeshDataInfo._material
-      }
-      set material(pp) {
-        const ip = this.material;
-        if (ip === pp) return;
-        const cp = ip && this._ownsMaterial;
-        this._ownsMaterial = !1, this._setInternalMaterial(pp), cp && ip?.dispose()
-      }
-      _setInternalMaterial(pp) {
-        this._setMaterial(pp), this.material && (this.material.fillMode = Yp.b.LineListDrawMode, this.material.disableLighting = !0)
-      }
-      get checkCollisions() {
-        return !1
-      }
-      set checkCollisions(pp) {}
-      _bind(pp, ip) {
-        if (!this._geometry) return this;
-        const cp = this.isUnIndexed ? null : this._geometry.getIndexBuffer();
-        if (!this._userInstancedBuffersStorage || this.hasThinInstances ? this._geometry._bind(ip, cp) : this._geometry._bind(ip, cp, this._userInstancedBuffersStorage.vertexBuffers, this._userInstancedBuffersStorage.vertexArrayObjects), !this.useVertexColor && this._isShaderMaterial(this.material)) {
-          const {
-            r: pp,
-            g: ip,
-            b: cp
-          } = this.color;
-          this._color4.set(pp, ip, cp, this.alpha), this.material.setColor4("color", this._color4)
+        static Construct(QQ, WQ, XQ, wQ) {
+          const qQ = this._NodeConstructors[QQ];
+          return qQ ? qQ(WQ, XQ, wQ) : null
         }
-        return this
-      }
-      _draw(pp, ip, cp) {
-        if (!this._geometry || !this._geometry.getVertexBuffers() || !this._unIndexed && !this._geometry.getIndexBuffer()) return this;
-        const Op = this.Gl().gy();
-        return this._unIndexed ? Op.drawArraysType(Yp.b.LineListDrawMode, pp.verticesStart, pp.verticesCount, cp) : Op.drawElementsType(Yp.b.LineListDrawMode, pp.indexStart, pp.indexCount, cp), this
-      }
-      dispose(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        (arguments.length > 2 ? arguments[2] : void 0) || (this._ownsMaterial || ip) && this.material?.dispose(!1, !1, !0), super.dispose(pp)
-      }
-      clone(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          cp = arguments.length > 2 ? arguments[2] : void 0;
-        if (ip && void 0 === ip._addToSceneRootNodes) {
-          const cp = ip;
-          return cp.source = this, new Pp(pp, this.Gl(), cp.parent, cp.source, cp.doNotCloneChildren)
+        set accessibilityTag(QQ) {
+          this._accessibilityTag = QQ, this.onAccessibilityTagChangedObservable.notifyObservers(QQ)
         }
-        return new Pp(pp, this.Gl(), ip, this, cp)
-      }
-      createInstance(pp) {
-        const ip = new Wp(pp, this);
-        if (this.MJ) {
-          ip.MJ = {};
-          for (const pp in this.MJ) ip.MJ[pp] = this.MJ[pp]
+        get accessibilityTag() {
+          return this._accessibilityTag
         }
-        return ip
-      }
-      serialize(pp) {
-        super.serialize(pp), pp.color = this.color.BOp(), pp.alpha = this.alpha
-      }
-      static Parse(pp, ip) {
-        const cp = new Pp(pp.name, ip);
-        return cp.color = Ip.d.FromArray(pp.color), cp.alpha = pp.alpha, cp
-      }
-    }
-    Pp.ForceGLSL = !1;
-    class Wp extends Lp.d {
-      constructor(pp, ip) {
-        super(pp, ip), this.intersectionThreshold = ip.intersectionThreshold
-      }
-      getClassName() {
-        return "InstancedLinesMesh"
-      }
-    }
-    let yp = !1;
-
-    function Up() {
-      yp || (yp = !0, xp.d._LinesMeshParser = (pp, ip) => Pp.Parse(pp, ip))
-    }(Op = Pp.prototype).enableEdgesRendering ?? (Op.enableEdgesRendering = (0, Ap.k)("LinesMesh", "enableEdgesRendering")), (op = Wp.prototype).enableEdgesRendering ?? (op.enableEdgesRendering = (0, Ap.k)("InstancedLinesMesh", "enableEdgesRendering"))
+        get doNotSerialize() {
+          return !!this._nodeDataStorage._doNotSerialize || !!this._parentNode && this._parentNode.doNotSerialize
+        }
+        set doNotSerialize(QQ) {
+          this._nodeDataStorage._doNotSerialize = QQ
+        }
+        rG() {
+          return this._nodeDataStorage._isDisposed
+        }
+        set parent(QQ) {
+          if (this._parentNode === QQ) return;
+          const WQ = this._parentNode;
+          if (this._parentNode && void 0 !== this._parentNode._children && null !== this._parentNode._children) {
+            const WQ = this._parentNode._children.indexOf(this); - 1 !== WQ && this._parentNode._children.splice(WQ, 1), QQ || this._nodeDataStorage._isDisposed || this._addToSceneRootNodes()
+          }
+          this._parentNode = QQ, this._isDirty = !0, this._parentNode && (void 0 !== this._parentNode._children && null !== this._parentNode._children || (this._parentNode._children = new Array), this._parentNode._children.push(this), WQ || this._removeFromSceneRootNodes()), this._syncParentEnabledState()
+        }
+        get parent() {
+          return this._parentNode
+        }
+        get inheritVisibility() {
+          return this._nodeDataStorage._inheritVisibility
+        }
+        set inheritVisibility(QQ) {
+          this._nodeDataStorage._inheritVisibility = QQ
+        }
+        get isVisible() {
+          return !(this.inheritVisibility && this._parentNode && !this._parentNode.isVisible) && this._nodeDataStorage._isVisible
+        }
+        set isVisible(QQ) {
+          this._nodeDataStorage._isVisible = QQ
+        }
+        _serializeAsParent(QQ) {
+          QQ.parentId = this.uniqueId
+        }
+        _addToSceneRootNodes() {
+          -1 === this._nodeDataStorage._sceneRootNodesIndex && (this._nodeDataStorage._sceneRootNodesIndex = this._scene.rootNodes.length, this._scene.rootNodes.push(this))
+        }
+        _removeFromSceneRootNodes() {
+          if (-1 !== this._nodeDataStorage._sceneRootNodesIndex) {
+            const QQ = this._scene.rootNodes,
+              WQ = QQ.length - 1;
+            QQ[this._nodeDataStorage._sceneRootNodesIndex] = QQ[WQ], QQ[this._nodeDataStorage._sceneRootNodesIndex]._nodeDataStorage._sceneRootNodesIndex = this._nodeDataStorage._sceneRootNodesIndex, this._scene.rootNodes.pop(), this._nodeDataStorage._sceneRootNodesIndex = -1
+          }
+        }
+        get animationPropertiesOverride() {
+          return this._animationPropertiesOverride ? this._animationPropertiesOverride : this._scene.animationPropertiesOverride
+        }
+        set animationPropertiesOverride(QQ) {
+          this._animationPropertiesOverride = QQ
+        }
+        getClassName() {
+          return "Node"
+        }
+        set onDispose(QQ) {
+          this._onDisposeObserver && this.yE.remove(this._onDisposeObserver), this._onDisposeObserver = this.yE.add(QQ)
+        }
+        get onEnabledStateChangedObservable() {
+          return this._nodeDataStorage._onEnabledStateChangedObservable
+        }
+        get onEffectiveEnabledStateChangedObservable() {
+          var QQ;
+          return (QQ = this._nodeDataStorage)._onEffectiveEnabledStateChangedObservable ?? (QQ._onEffectiveEnabledStateChangedObservable = new zQ.b)
+        }
+        get onClonedObservable() {
+          return this._nodeDataStorage._onClonedObservable
+        }
+        constructor(QQ) {
+          let WQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+            XQ = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+          this._isDirty = !1, this._nodeDataStorage = new gQ, this.name = (0, wQ.n)(this, jQ, void 0), this.id = ((0, wQ.n)(this, BQ), (0, wQ.n)(this, yQ, void 0)), this.uniqueId = ((0, wQ.n)(this, VQ), (0, wQ.n)(this, DQ, void 0)), this.state = ((0, wQ.n)(this, pQ), (0, wQ.n)(this, GQ, "")), this.metadata = ((0, wQ.n)(this, UQ), (0, wQ.n)(this, bQ, null)), this._internalMetadata = (0, wQ.n)(this, vQ), this.reservedDataStore = null, this._accessibilityTag = null, this.onAccessibilityTagChangedObservable = new zQ.b, this._parentContainer = null, this.animations = [], this._ranges = {}, this.onReady = null, this._currentRenderId = -1, this._parentUpdateId = -1, this._childUpdateId = -1, this._waitingParentId = null, this._waitingParentInstanceIndex = null, this._waitingParsedUniqueId = null, this._cache = {}, this._parentNode = null, this._children = null, this._worldMatrix = qQ.e.Identity(), this._worldMatrixDeterminant = 0, this._worldMatrixDeterminantIsDirty = !0, this._animationPropertiesOverride = null, this._isNode = !0, this.yE = new zQ.b, this._onDisposeObserver = null, this._behaviors = new Array, this.name = QQ, this.id = QQ, this._scene = WQ || sQ.d.LastCreatedScene, this.uniqueId = this._scene.getUniqueId(), this._initCache(), XQ && this._addToSceneRootNodes()
+        }
+        sE() {
+          return this._scene
+        }
+        Uj() {
+          return this._scene.Uj()
+        }
+        addBehavior(QQ) {
+          let WQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          return -1 !== this._behaviors.indexOf(QQ) || (QQ.init(), this._scene.isLoading && !WQ ? this._scene.onDataLoadedObservable.addOnce((() => {
+            this._behaviors.includes(QQ) && QQ.attach(this)
+          })) : QQ.attach(this), this._behaviors.push(QQ)), this
+        }
+        removeBehavior(QQ) {
+          const WQ = this._behaviors.indexOf(QQ);
+          return -1 === WQ || (this._behaviors.splice(WQ, 1), QQ.detach()), this
+        }
+        get behaviors() {
+          return this._behaviors
+        }
+        getBehaviorByName(QQ) {
+          for (const WQ of this._behaviors)
+            if (WQ.name === QQ) return WQ;
+          return null
+        }
+        getWorldMatrix() {
+          return this._currentRenderId !== this._scene.getRenderId() && this.computeWorldMatrix(), this._worldMatrix
+        }
+        _getWorldMatrixDeterminant() {
+          return this._worldMatrixDeterminantIsDirty && (this._worldMatrixDeterminantIsDirty = !1, this._worldMatrixDeterminant = this._worldMatrix.determinant()), this._worldMatrixDeterminant
+        }
+        get worldMatrixFromCache() {
+          return this._worldMatrix
+        }
+        _initCache() {
+          this._cache = {}
+        }
+        updateCache(QQ) {
+          !QQ && this.isSynchronized() || this._updateCache()
+        }
+        _getActionManagerForTrigger(QQ) {
+          return this.parent ? this.parent._getActionManagerForTrigger(QQ, !1) : null
+        }
+        _updateCache(QQ) {}
+        _isSynchronized() {
+          return !0
+        }
+        _markSyncedWithParent() {
+          this._parentNode && (this._parentUpdateId = this._parentNode._childUpdateId)
+        }
+        isSynchronizedWithParent() {
+          return !this._parentNode || !this._parentNode._isDirty && this._parentUpdateId === this._parentNode._childUpdateId && this._parentNode.isSynchronized()
+        }
+        isSynchronized() {
+          return !(this._parentNode && !this.isSynchronizedWithParent()) && this._isSynchronized()
+        }
+        isReady() {
+          return this._nodeDataStorage._isReady
+        }
+        KWQ(QQ) {
+          return this._currentRenderId = Number.MAX_VALUE, this._isDirty = !0, this
+        }
+        isEnabled() {
+          return !1 === (!(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0]) ? this._nodeDataStorage._isEnabled : !!this._nodeDataStorage._isEnabled && this._nodeDataStorage._isParentEnabled
+        }
+        _hasEffectiveEnabledStateObservers() {
+          const QQ = this._nodeDataStorage._onEffectiveEnabledStateChangedObservable;
+          return !!QQ && QQ.hasObservers()
+        }
+        _syncParentEnabledState() {
+          const QQ = this._hasEffectiveEnabledStateObservers(),
+            WQ = QQ ? this.isEnabled() : null;
+          if (this._nodeDataStorage._isParentEnabled = !this._parentNode || this._parentNode.isEnabled(), this._children)
+            for (const XQ of this._children) XQ._syncParentEnabledState();
+          if (QQ) {
+            const QQ = this.isEnabled();
+            QQ !== WQ && this._nodeDataStorage._onEffectiveEnabledStateChangedObservable.notifyObservers(QQ)
+          }
+        }
+        UH(QQ) {
+          if (this._nodeDataStorage._isEnabled === QQ) return;
+          const WQ = this._hasEffectiveEnabledStateObservers(),
+            XQ = WQ ? this.isEnabled() : null;
+          if (this._nodeDataStorage._isEnabled = QQ, this._syncParentEnabledState(), this._nodeDataStorage._onEnabledStateChangedObservable.notifyObservers(QQ), WQ) {
+            const QQ = this.isEnabled();
+            QQ !== XQ && this._nodeDataStorage._onEffectiveEnabledStateChangedObservable.notifyObservers(QQ)
+          }
+        }
+        isDescendantOf(QQ) {
+          return !!this.parent && (this.parent === QQ || this.parent.isDescendantOf(QQ))
+        }
+        _getDescendants(QQ) {
+          let WQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            XQ = arguments.length > 2 ? arguments[2] : void 0;
+          if (this._children)
+            for (let wQ = 0; wQ < this._children.length; wQ++) {
+              const qQ = this._children[wQ];
+              XQ && !XQ(qQ) || QQ.push(qQ), WQ || qQ._getDescendants(QQ, !1, XQ)
+            }
+        }
+        getDescendants(QQ, WQ) {
+          const XQ = [];
+          return this._getDescendants(XQ, QQ, WQ), XQ
+        }
+        getChildMeshes(QQ, WQ) {
+          const XQ = [];
+          return this._getDescendants(XQ, QQ, (QQ => (!WQ || WQ(QQ)) && void 0 !== QQ.cullingStrategy)), XQ
+        }
+        getChildren(QQ) {
+          let WQ = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+          return this.getDescendants(WQ, QQ)
+        }
+        _setReady(QQ) {
+          QQ !== this._nodeDataStorage._isReady && (QQ ? (this.onReady && this.onReady(this), this._nodeDataStorage._isReady = !0) : this._nodeDataStorage._isReady = !1)
+        }
+        getAnimationByName(QQ) {
+          for (let WQ = 0; WQ < this.animations.length; WQ++) {
+            const XQ = this.animations[WQ];
+            if (XQ.name === QQ) return XQ
+          }
+          return null
+        }
+        createAnimationRange(WQ, XQ, wQ) {
+          if (!this._ranges[WQ]) {
+            this._ranges[WQ] = QQ._AnimationRangeFactory(WQ, XQ, wQ);
+            for (let QQ = 0, qQ = this.animations.length; QQ < qQ; QQ++) this.animations[QQ] && this.animations[QQ].createRange(WQ, XQ, wQ)
+          }
+        }
+        deleteAnimationRange(QQ) {
+          let WQ = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+          for (let XQ = 0, wQ = this.animations.length; XQ < wQ; XQ++) this.animations[XQ] && this.animations[XQ].deleteRange(QQ, WQ);
+          this._ranges[QQ] = null
+        }
+        getAnimationRange(QQ) {
+          return this._ranges[QQ] || null
+        }
+        clone(WQ, XQ, wQ) {
+          const qQ = PQ.b.Clone((() => new QQ(WQ, this.sE())), this);
+          if (XQ && (qQ.parent = XQ), !wQ) {
+            const QQ = this.getDescendants(!0);
+            for (let XQ = 0; XQ < QQ.length; XQ++) {
+              const wQ = QQ[XQ];
+              wQ.clone(WQ + "." + wQ.name, qQ)
+            }
+          }
+          return qQ
+        }
+        getAnimationRanges() {
+          const QQ = [];
+          let WQ;
+          for (WQ in this._ranges) QQ.push(this._ranges[WQ]);
+          return QQ
+        }
+        beginAnimation(QQ, WQ, XQ, wQ) {
+          const qQ = this.getAnimationRange(QQ);
+          return qQ ? this._scene.beginAnimation(this, qQ.from, qQ.to, WQ, XQ, wQ) : null
+        }
+        serializeAnimationRanges() {
+          const QQ = [];
+          for (const WQ in this._ranges) {
+            const XQ = this._ranges[WQ];
+            if (!XQ) continue;
+            const wQ = {};
+            wQ.name = WQ, wQ.from = XQ.from, wQ.to = XQ.to, QQ.push(wQ)
+          }
+          return QQ
+        }
+        computeWorldMatrix(QQ) {
+          return this._worldMatrix || (this._worldMatrix = qQ.e.Identity()), this._worldMatrix
+        }
+        dispose(QQ) {
+          let WQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          if (this._nodeDataStorage._isDisposed = !0, !QQ) {
+            const XQ = this.getDescendants(!0);
+            for (const wQ of XQ) wQ.dispose(QQ, WQ)
+          }
+          this.parent ? this.parent = null : this._removeFromSceneRootNodes(), this.yE.notifyObservers(this), this.yE.clear(), this.onEnabledStateChangedObservable.clear(), this._nodeDataStorage._onEffectiveEnabledStateChangedObservable?.clear(), this.onClonedObservable.clear();
+          for (const XQ of this._behaviors) XQ.detach();
+          this._behaviors.length = 0, this.metadata = null
+        }
+        static ParseAnimationRanges(QQ, WQ, XQ) {
+          if (WQ.Qy)
+            for (let wQ = 0; wQ < WQ.Qy.length; wQ++) {
+              const XQ = WQ.Qy[wQ];
+              QQ.createAnimationRange(XQ.name, XQ.from, XQ.to)
+            }
+        }
+        getHierarchyBoundingVectors() {
+          let QQ, WQ, XQ = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
+            wQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+          this.sE().incrementRenderId(), this.computeWorldMatrix(!0);
+          const TQ = this;
+          if (TQ.uC && TQ.ZD) {
+            const XQ = TQ.uC();
+            QQ = XQ.boundingBox.minimumWorld.clone(), WQ = XQ.boundingBox.maximumWorld.clone()
+          } else QQ = new qQ.s(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), WQ = new qQ.s(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE);
+          if (XQ) {
+            const XQ = this.getDescendants(!1);
+            for (const TQ of XQ) {
+              const XQ = TQ;
+              if (XQ.computeWorldMatrix(!0), wQ && !wQ(XQ)) continue;
+              if (!XQ.uC || 0 === XQ.getTotalVertices()) continue;
+              const zQ = XQ.uC().boundingBox,
+                sQ = zQ.minimumWorld,
+                FQ = zQ.maximumWorld;
+              qQ.s.CheckExtends(sQ, QQ, WQ), qQ.s.CheckExtends(FQ, QQ, WQ)
+            }
+          }
+          return {
+            min: QQ,
+            max: WQ
+          }
+        }
+      }, (() => {
+        const qQ = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        WQ = [(0, TQ.I)()], XQ = [(0, TQ.I)()], JQ = [(0, TQ.I)()], rQ = [(0, TQ.I)()], IQ = [(0, TQ.I)()], (0, wQ.k)(null, null, WQ, {
+          kind: "field",
+          name: "name",
+          static: !1,
+          private: !1,
+          access: {
+            has: QQ => "name" in QQ,
+            get: QQ => QQ.name,
+            set: (QQ, WQ) => {
+              QQ.name = WQ
+            }
+          },
+          metadata: qQ
+        }, jQ, BQ), (0, wQ.k)(null, null, XQ, {
+          kind: "field",
+          name: "id",
+          static: !1,
+          private: !1,
+          access: {
+            has: QQ => "id" in QQ,
+            get: QQ => QQ.id,
+            set: (QQ, WQ) => {
+              QQ.id = WQ
+            }
+          },
+          metadata: qQ
+        }, yQ, VQ), (0, wQ.k)(null, null, JQ, {
+          kind: "field",
+          name: "uniqueId",
+          static: !1,
+          private: !1,
+          access: {
+            has: QQ => "uniqueId" in QQ,
+            get: QQ => QQ.uniqueId,
+            set: (QQ, WQ) => {
+              QQ.uniqueId = WQ
+            }
+          },
+          metadata: qQ
+        }, DQ, pQ), (0, wQ.k)(null, null, rQ, {
+          kind: "field",
+          name: "state",
+          static: !1,
+          private: !1,
+          access: {
+            has: QQ => "state" in QQ,
+            get: QQ => QQ.state,
+            set: (QQ, WQ) => {
+              QQ.state = WQ
+            }
+          },
+          metadata: qQ
+        }, GQ, UQ), (0, wQ.k)(null, null, IQ, {
+          kind: "field",
+          name: "metadata",
+          static: !1,
+          private: !1,
+          access: {
+            has: QQ => "metadata" in QQ,
+            get: QQ => QQ.metadata,
+            set: (QQ, WQ) => {
+              QQ.metadata = WQ
+            }
+          },
+          metadata: qQ
+        }, bQ, vQ), qQ && Object.defineProperty(QQ, Symbol.metadata, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: qQ
+        })
+      })(), QQ._AnimationRangeFactory = (QQ, WQ, XQ) => {
+        throw (0, FQ.i)("AnimationRange")
+      }, QQ._NodeConstructors = {}, QQ
+    })()
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

@@ -1,169 +1,2307 @@
 export const id = 227;
 export const ids = [227];
 export const modules = {
-  36948: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => xi,
-      d: () => Di,
-      e: () => Wi,
-      i: () => Ai,
-      l: () => Pi
+  41289: (QQ, WQ, XQ) => {
+    XQ.r(WQ), XQ.d(WQ, {
+      LobbyManageView: () => bW
     });
-    const Op = JSON.parse('{"src":["/sounds/generatedSprites/gunSemiAutomatic.aef27960ef.ogg","/sounds/generatedSprites/gunSemiAutomatic.e56594fab5.m4a","/sounds/generatedSprites/gunSemiAutomatic.d3e434f4d0.mp3","/sounds/generatedSprites/gunSemiAutomatic.97d6a47358.ac3"],"sprite":{"semiAuto_cock_01":[0,500],"semiAuto_cock_02":[600,548.5714285714286],"semiAuto_cock_03":[1250,500],"semiAuto_cock_04":[1850,522.4489795918367],"semiAuto_cock_05":[2473.333333333333,500],"semiAuto_first_shot_01":[3073.333333333333,500],"semiAuto_magazine_load_01":[3673.3333333333335,548.5714285714286],"semiAuto_magazine_load_02":[4323.333333333333,500],"semiAuto_magazine_load_03":[4923.333333333333,548.5714285714286],"semiAuto_magazine_load_04":[5573.333333333333,500],"semiAuto_magazine_load_05":[6173.333333333333,500],"semiAuto_magazine_unload_01":[6773.333333333333,500],"semiAuto_magazine_unload_02":[7373.333333333333,500],"semiAuto_magazine_unload_03":[7973.333333333334,500],"semiAuto_magazine_unload_04":[8573.333333333334,500],"semiAuto_shot_01":[9173.333333333334,500],"semiAuto_shot_02":[9773.333333333334,500],"semiAuto_shot_03":[10373.333333333334,500],"semiAuto_shot_04":[10973.333333333332,500],"semiAuto_shot_05":[11573.333333333334,500],"semiAuto_shot_06":[12173.333333333334,500],"semiAuto_shot_07":[12773.333333333334,500],"semiAuto_shot_08":[13373.333333333334,500],"semiAuto_tail_only_shot_01":[13973.333333333332,2455.5102040816328]}}'),
-      op = JSON.parse('{"src":["/sounds/generatedSprites/gunSubmachineGun.9d869e4ca3.ogg","/sounds/generatedSprites/gunSubmachineGun.8736ce9068.m4a","/sounds/generatedSprites/gunSubmachineGun.0a429c7e98.mp3","/sounds/generatedSprites/gunSubmachineGun.1db2897c09.ac3"],"sprite":{"submachine_cock_01":[0,500],"submachine_cock_02":[600,500],"submachine_cock_03":[1200,500],"submachine_cock_04":[1800,500],"submachine_first_shot_01":[2400,500],"submachine_magazine_load_01":[3000,500],"submachine_magazine_load_02":[3600,500],"submachine_magazine_load_03":[4200,500],"submachine_magazine_load_04":[4800,500],"submachine_magazine_unload_01":[5400,500],"submachine_magazine_unload_02":[6000,500],"submachine_magazine_unload_03":[6600,500],"submachine_shot_01":[7200,500],"submachine_shot_02":[7800,500],"submachine_shot_03":[8400,500],"submachine_shot_04":[9000,500],"submachine_shot_05":[9600,500],"submachine_shot_06":[10200,500],"submachine_shot_07":[10800,500],"submachine_shot_08":[11400,500],"submachine_shot_09":[12000,500],"submachine_tail_only_shot_01":[12600,1858.8208616780046]}}'),
-      Ip = JSON.parse('{"src":["/sounds/generatedSprites/gunPistol.7432a47272.ogg","/sounds/generatedSprites/gunPistol.adec2d9f75.m4a","/sounds/generatedSprites/gunPistol.a9f647182b.mp3","/sounds/generatedSprites/gunPistol.f363b9fa6d.ac3"],"sprite":{"pistol_cock_01":[0,510],"pistol_cock_02":[610,500],"pistol_cock_03":[1210,500],"pistol_cock_06":[1810,500],"pistol_magazine_load_01":[2410,500],"pistol_magazine_load_02":[3010,500],"pistol_magazine_load_03":[3610,500],"pistol_magazine_unload_01":[4210,500],"pistol_magazine_unload_02":[4810,500],"pistol_magazine_unload_03":[5410,500],"pistol_shot_01":[6010,1500],"pistol_shot_02":[7610,1569.591836734694],"pistol_shot_03":[9280,1735.8956916099773],"pistol_shot_04":[11116.666666666668,1526.7120181405896],"pistol_shot_05":[12746.666666666666,1442.2222222222224]}}'),
-      Sp = JSON.parse('{"src":["/sounds/generatedSprites/gunRifle.ca54b877ed.ogg","/sounds/generatedSprites/gunRifle.94dfb28886.m4a","/sounds/generatedSprites/gunRifle.f2eb64407a.mp3","/sounds/generatedSprites/gunRifle.d268c1da8d.ac3"],"sprite":{"rifle_cock_01":[0,705.3061224489796],"rifle_cock_02":[806.6666666666666,1149.3877551020407],"rifle_magazine_load_01":[2056.6666666666665,500],"rifle_magazine_load_02":[2656.6666666666665,500],"rifle_magazine_load_03":[3256.666666666667,500],"rifle_magazine_unload_01":[3856.6666666666665,500],"rifle_magazine_unload_02":[4456.666666666667,500],"rifle_magazine_unload_04":[5056.666666666667,500],"rifle_shot_01":[5656.666666666666,2115.918367346939],"rifle_shot_02":[7873.333333333333,2429.3877551020405],"rifle_shot_03":[10403.333333333334,2298.7755102040815],"rifle_shot_04":[12803.333333333332,2481.6326530612246]}}'),
-      xp = JSON.parse('{"src":["/sounds/generatedSprites/gunMisc.35b4609d1c.ogg","/sounds/generatedSprites/gunMisc.acc63e7fe9.m4a","/sounds/generatedSprites/gunMisc.4403caaad2.mp3","/sounds/generatedSprites/gunMisc.97552f11dc.ac3"],"sprite":{"bullet_shell_bounce_general_07":[0,823.0612244897959],"bullet_shell_bounce_general_08":[923.3333333333334,907.0294784580499],"headshot_04":[1933.3333333333333,500],"headshot_06":[2533.333333333333,500],"headshot_08":[3133.3333333333335,500],"headshot_11":[3733.3333333333335,500]}}'),
-      Lp = JSON.parse('{"src":["/sounds/generatedSprites/gunShotgun.4e0220339e.ogg","/sounds/generatedSprites/gunShotgun.137d0e6b6f.m4a","/sounds/generatedSprites/gunShotgun.8b1144b235.mp3","/sounds/generatedSprites/gunShotgun.0b25a6370a.ac3"],"sprite":{"shotgun_cock_01":[0,914.2857142857142],"shotgun_cock_02":[1016.6666666666666,500],"shotgun_cock_03":[1616.6666666666667,679.1836734693878],"shotgun_cock_04":[2396.6666666666665,548.5714285714286],"shotgun_cock_05":[3046.666666666667,548.5714285714286],"shotgun_load_bullet_01":[3696.666666666667,548.5714285714286],"shotgun_load_bullet_02":[4346.666666666667,522.4489795918367],"shotgun_load_bullet_03":[4970,500],"shotgun_load_bullet_04":[5570,500],"shotgun_load_bullet_05":[6170,500],"shotgun_load_bullet_06":[6770,679.1836734693878],"shotgun_load_bullet_07":[7550,548.5714285714286],"shotgun_load_bullet_08":[8200,500],"shotgun_shot_01":[8800,2612.2448979591836],"shotgun_shot_02":[11513.333333333334,2507.7551020408164],"shotgun_shot_03":[14123.333333333334,2638.3673469387754],"shotgun_shot_04":[16863.333333333332,2037.5510204081634]}}'),
-      Yp = JSON.parse('{"src":["/sounds/generatedSprites/dig.affb4a6f05.ogg","/sounds/generatedSprites/dig.082c5b232c.m4a","/sounds/generatedSprites/dig.71feb10d5c.mp3","/sounds/generatedSprites/dig.4913c53dc2.ac3"],"sprite":{"cloth1":[0,1671.8367346938776],"cloth2":[1773.3333333333335,1671.8367346938776],"cloth3":[3546.666666666667,1671.8367346938776],"cloth4":[5320,1668.9342403628118],"glass1":[7090,1671.8367346938776],"glass2":[8863.333333333334,1671.8367346938776],"glass3":[10636.666666666666,1671.8367346938776],"grass1":[12410,500],"grass2":[13010,500],"grass3":[13610,835.9183673469388],"grass4":[14546.666666666666,835.9183673469388],"gravel1":[15483.333333333332,500],"gravel2":[16083.333333333332,500],"gravel3":[16683.333333333332,500],"gravel4":[17283.333333333336,500],"pickUp":[17883.333333333332,500],"sand1":[18483.333333333336,500],"sand2":[19083.333333333332,500],"sand3":[19683.333333333332,500],"sand4":[20283.333333333336,500],"snow1":[20883.333333333332,500],"snow2":[21483.333333333336,500],"snow3":[22083.333333333332,650.1587301587301],"snow4":[22836.666666666664,650.1587301587301],"stone1":[23590,500],"stone2":[24190,500],"stone3":[24790,500],"stone4":[25390,500],"wood1":[25990,928.7981859410431],"wood2":[27020,928.7981859410431],"wood3":[28050,928.7981859410431],"wood4":[29080,928.7981859410431]}}'),
-      Dp = JSON.parse('{"src":["/sounds/generatedSprites/step.52076ddc3a.ogg","/sounds/generatedSprites/step.d6260ef2cc.m4a","/sounds/generatedSprites/step.6e5286b3a8.mp3","/sounds/generatedSprites/step.cfb5f3dd8f.ac3"],"sprite":{"hit1":[0,557.2789115646258],"hit2":[660,650.1587301587301],"hit3":[1413.3333333333333,650.1587301587301],"step_cloth1":[2166.6666666666665,1671.8367346938776],"step_cloth2":[3940,1671.8367346938776],"step_cloth3":[5713.333333333333,1671.8367346938776],"step_cloth4":[7486.666666666666,1671.8367346938776],"step_grass1":[9260,500],"step_grass2":[9860,500],"step_grass3":[10460,500],"step_grass4":[11060,500],"step_grass5":[11660,1483.1746031746031],"step_gravel1":[13243.333333333334,1486.077097505669],"step_gravel2":[14830,1483.1746031746031],"step_gravel3":[16413.333333333336,1486.077097505669],"step_gravel4":[18000,1486.077097505669],"step_sand2":[19586.666666666664,1486.077097505669],"step_sand3":[21173.333333333332,1486.077097505669],"step_sand4":[22760,1486.077097505669],"step_sand5":[24346.666666666668,1486.077097505669],"step_snow1":[25933.333333333332,500],"step_snow2":[26533.333333333336,500],"step_snow3":[27133.333333333332,500],"step_snow4":[27733.333333333336,500],"step_stone1":[28333.333333333332,1486.077097505669],"step_stone2":[29920,1486.077097505669],"step_stone3":[31506.666666666668,1486.077097505669],"step_stone4":[33093.333333333336,1486.077097505669],"step_stone5":[34680,1486.077097505669],"step_stone6":[36266.666666666664,1486.077097505669],"step_wood1":[37853.33333333333,743.0385487528345],"step_wood2":[38696.666666666664,743.0385487528345],"step_wood3":[39540,743.0385487528345],"step_wood4":[40383.333333333336,743.0385487528345],"step_wood5":[41226.666666666664,743.0385487528345],"step_wood6":[42070,743.0385487528345],"sweep6":[42913.333333333336,1114.5578231292516]}}'),
-      Ap = JSON.parse('{"src":["/sounds/generatedSprites/randomBeep.7b90315654.ogg","/sounds/generatedSprites/randomBeep.0e88f6aa33.m4a","/sounds/generatedSprites/randomBeep.47ff5e799a.mp3","/sounds/generatedSprites/randomBeep.444034b8b7.ac3"],"sprite":{"beep":[100,2455.5102040816328]}}'),
-      Pp = JSON.parse('{"src":["/sounds/generatedSprites/randomCannon.f9d64818ea.ogg","/sounds/generatedSprites/randomCannon.52f7576d74.m4a","/sounds/generatedSprites/randomCannon.bde162aee8.mp3","/sounds/generatedSprites/randomCannon.4877805969.ac3"],"sprite":{"cannonFire1":[100,4880.748299319728],"cannonFire2":[5083.333333333333,4880.748299319728],"cannonFire3":[10066.666666666666,4880.748299319728]}}'),
-      Wp = JSON.parse('{"src":["/sounds/generatedSprites/randomCash.8ff82dcd92.ogg","/sounds/generatedSprites/randomCash.a86426509f.m4a","/sounds/generatedSprites/randomCash.48929d75f1.mp3","/sounds/generatedSprites/randomCash.f687b943c4.ac3"],"sprite":{"cashRegister":[100,3819.6825396825398]}}'),
-      yp = JSON.parse('{"src":["/sounds/generatedSprites/randomExp.fa5a4c9798.ogg","/sounds/generatedSprites/randomExp.a7e2faf290.m4a","/sounds/generatedSprites/randomExp.b4baff1a37.mp3","/sounds/generatedSprites/randomExp.4974715bbd.ac3"],"sprite":{"exp_collect":[100,1009.2063492063493],"exp_levelup":[1210,1469.863945578231]}}'),
-      Up = JSON.parse('{"src":["/sounds/generatedSprites/randomFallsmall.e0ec9ce0a7.ogg","/sounds/generatedSprites/randomFallsmall.a1f24b70c2.m4a","/sounds/generatedSprites/randomFallsmall.bcbd5fef60.mp3","/sounds/generatedSprites/randomFallsmall.a3b7d06594.ac3"],"sprite":{"fallsmall":[100,1764.716553287982]}}'),
-      wp = JSON.parse('{"src":["/sounds/generatedSprites/randomItems.380c31a312.ogg","/sounds/generatedSprites/randomItems.6ae69434b9.m4a","/sounds/generatedSprites/randomItems.85b5c2f034.mp3","/sounds/generatedSprites/randomItems.cdadb8aa52.ac3"],"sprite":{"bow":[100,500],"bucketEmpty1":[700,1114.5578231292516],"bucketEmpty2":[1916.6666666666667,1114.5578231292516],"bucketEmpty3":[3133.3333333333335,1114.5578231292516],"bucketFill1":[4350,1021.6780045351475],"bucketFill2":[5473.333333333334,1021.6780045351475],"bucketFill3":[6596.666666666667,1021.6780045351475],"burp":[7720,500],"chestClose":[8320,557.2789115646258],"chestOpen":[8980,743.0385487528345],"doorClose":[9823.333333333334,835.9183673469388],"doorClose2":[10760,835.9183673469388],"doorOpen-bloxd1":[11696.666666666668,743.0385487528345],"doorOpen-bloxd2":[12540,835.9183673469388],"drink":[13476.666666666666,500],"eat1":[14076.666666666666,500],"equip_leather1":[14676.666666666666,928.7981859410431],"hoeTill1":[15706.666666666668,1114.5578231292516],"hoeTill2":[16923.333333333332,557.2789115646258],"hoeTill3":[17583.333333333332,928.7981859410431],"hoeTill4":[18613.333333333332,928.7981859410431],"successfulBowHit":[19643.333333333336,500],"trapdoorOpen":[20243.333333333332,835.9183673469388]}}'),
-      vp = JSON.parse('{"src":["/sounds/generatedSprites/randomFire.06f418fc54.ogg","/sounds/generatedSprites/randomFire.7c5564dd14.m4a","/sounds/generatedSprites/randomFire.f61e3ab1f3.mp3","/sounds/generatedSprites/randomFire.5869bbefc8.ac3"],"sprite":{"fireBurn":[100,2827.3922902494332]}}'),
-      tp = JSON.parse('{"src":["/sounds/generatedSprites/randomFirecracker.ddc99cbc73.ogg","/sounds/generatedSprites/randomFirecracker.128308b436.m4a","/sounds/generatedSprites/randomFirecracker.d5635f7e7d.mp3","/sounds/generatedSprites/randomFirecracker.e5afa15901.ac3"],"sprite":{"firecracker1":[100,5302.857142857142],"firecracker2":[5503.333333333333,5250.6122448979595],"firecracker3":[10856.666666666668,5198.367346938776],"firecracker4":[16156.666666666666,5877.551020408164]}}'),
-      Hp = JSON.parse('{"src":["/sounds/generatedSprites/randomLaugh.1f5c9d311c.ogg","/sounds/generatedSprites/randomLaugh.02db6f5792.m4a","/sounds/generatedSprites/randomLaugh.c02a9027ee.mp3","/sounds/generatedSprites/randomLaugh.b47461e2ec.ac3"],"sprite":{"laugh1":[100,898.3219954648525],"laugh2":[1100,1919.092970521542],"laugh3":[3120,1668.2766439909299]}}'),
-      dp = JSON.parse('{"src":["/sounds/generatedSprites/randomMagic.44dbb5b632.ogg","/sounds/generatedSprites/randomMagic.502e091616.m4a","/sounds/generatedSprites/randomMagic.c1cd617a82.mp3","/sounds/generatedSprites/randomMagic.3b7411f618.ac3"],"sprite":{"magicAccent1":[100,5250.6122448979595],"magicAccent2":[5453.333333333333,5041.632653061224],"magicAccent3":[10596.666666666666,4963.265306122449],"magicAccent4":[15660,4728.163265306122]}}'),
-      ep = JSON.parse('{"src":["/sounds/generatedSprites/randomSplash.9fc2343518.ogg","/sounds/generatedSprites/randomSplash.9dadcfc844.m4a","/sounds/generatedSprites/randomSplash.4a42cdcbe6.mp3","/sounds/generatedSprites/randomSplash.55bd9b28eb.ac3"],"sprite":{"splash1":[100,1114.5578231292516]}}'),
-      jp = JSON.parse('{"src":["/sounds/generatedSprites/mobBear.4c3d96a174.ogg","/sounds/generatedSprites/mobBear.dd0c9eb6bb.m4a","/sounds/generatedSprites/mobBear.e67756bcc4.mp3","/sounds/generatedSprites/mobBear.e1520ed37f.ac3"],"sprite":{"bearRoar1":[100,1011.1791383219954],"bearRoar2":[1213.3333333333335,793.6507936507936],"bearRoar3":[2110,764.2630385487529],"bearRoar4":[2976.6666666666665,781.9047619047619],"bearRoar5":[3860,646.6666666666666]}}'),
-      kp = JSON.parse('{"src":["/sounds/generatedSprites/mobCat.b73d092913.ogg","/sounds/generatedSprites/mobCat.5a42170631.m4a","/sounds/generatedSprites/mobCat.d86dae12ac.mp3","/sounds/generatedSprites/mobCat.02f20eae51.ac3"],"sprite":{"catHiss1":[100,1252.0861678004535],"catHiss2":[1453.3333333333333,1064.2403628117913],"catHiss3":[2620,1082.6530612244899],"catHiss4":[3803.333333333333,978.8662131519275],"catHurt1":[4883.333333333334,809.795918367347],"catHurt2":[5793.333333333333,779.4104308390023],"catHurt3":[6673.333333333333,626.9387755102041],"catMeow1":[7403.333333333333,1306.1224489795918],"catMeow2":[8810,1384.4897959183672],"catMeow3":[10296.666666666666,1280],"catMeow4":[11676.666666666666,1567.3469387755101],"catMeow5":[13346.666666666666,1802.4489795918369]}}'),
-      mp = JSON.parse('{"src":["/sounds/generatedSprites/mobCow.9586369f60.ogg","/sounds/generatedSprites/mobCow.e3c14b3926.m4a","/sounds/generatedSprites/mobCow.b6b57a7270.mp3","/sounds/generatedSprites/mobCow.fbb45d50c5.ac3"],"sprite":{"cowHurt1":[100,522.6530612244899],"cowMoo1":[723.3333333333334,1574.331065759637],"cowMoo2":[2400,1947.4149659863947],"cowMoo3":[4450,2099.342403628118]}}'),
-      Rp = JSON.parse('{"src":["/sounds/generatedSprites/mobCrone.e0a7897675.ogg","/sounds/generatedSprites/mobCrone.94420ad1d3.m4a","/sounds/generatedSprites/mobCrone.abc38fe647.mp3","/sounds/generatedSprites/mobCrone.f4c461446a.ac3"],"sprite":{"croneAttack1":[100,500],"croneHurt1":[700,751.6780045351475],"croneIdle1":[1553.3333333333333,6756.8707482993195]}}'),
-      qp = JSON.parse('{"src":["/sounds/generatedSprites/mobDeer.84da9a6aa7.ogg","/sounds/generatedSprites/mobDeer.131a11da4b.m4a","/sounds/generatedSprites/mobDeer.453b17e89a.mp3","/sounds/generatedSprites/mobDeer.c03ab74dd5.ac3"],"sprite":{"deerGrunt1":[100,976.7346938775511],"deerHurt1":[1180,500]}}'),
-      Mp = JSON.parse('{"src":["/sounds/generatedSprites/mobDog.3ee507163b.ogg","/sounds/generatedSprites/mobDog.eda29eb0d7.m4a","/sounds/generatedSprites/mobDog.f9095be251.mp3","/sounds/generatedSprites/mobDog.4d3810ad3e.ac3"],"sprite":{"dogBark1":[100,500],"dogBark2":[700,500],"dogBark3":[1300,500],"dogGrowl1":[1900,634.8979591836734],"dogGrowl2":[2636.6666666666665,543.3560090702948],"dogGrowl3":[3283.333333333333,1361.360544217687],"dogHurt1":[4746.666666666667,500],"dogHurt2":[5346.666666666667,500]}}'),
-      Cp = JSON.parse('{"src":["/sounds/generatedSprites/mobFennec.3751df6e2d.ogg","/sounds/generatedSprites/mobFennec.705fd16691.m4a","/sounds/generatedSprites/mobFennec.85f4679beb.mp3","/sounds/generatedSprites/mobFennec.2073e3f92b.ac3"],"sprite":{"fennecYip1":[100,500],"fennecYip2":[700,500],"fennecYip3":[1300,500]}}'),
-      Ep = JSON.parse('{"src":["/sounds/generatedSprites/mobGolem.a66f14f106.ogg","/sounds/generatedSprites/mobGolem.ee5d8cc552.m4a","/sounds/generatedSprites/mobGolem.5404357abd.mp3","/sounds/generatedSprites/mobGolem.a3a7a2390c.ac3"],"sprite":{"golemGrunt1":[100,6687.34693877551],"golemGrunt2":[6890,4911.0204081632655]}}'),
-      Xp = JSON.parse('{"src":["/sounds/generatedSprites/mobGorilla.f0d8a54d8e.ogg","/sounds/generatedSprites/mobGorilla.449206cde8.m4a","/sounds/generatedSprites/mobGorilla.5f8caeb83c.mp3","/sounds/generatedSprites/mobGorilla.61c76198d2.ac3"],"sprite":{"gorillaIdle1":[100,898.140589569161],"gorillaIdle2":[1100,825.3061224489796],"gorillaIdle3":[2026.6666666666667,1357.233560090703],"gorillaIdle4":[3486.666666666667,1061.2698412698414],"gorillaRoar1":[4650,1002.6757369614512]}}'),
-      lp = JSON.parse('{"src":["/sounds/generatedSprites/mobHorse.67401e9b3e.ogg","/sounds/generatedSprites/mobHorse.f04d509143.m4a","/sounds/generatedSprites/mobHorse.0e1e0f5cb6.mp3","/sounds/generatedSprites/mobHorse.15d37b29ac.ac3"],"sprite":{"horseHurt1":[100,1044.8979591836735],"horseHurt2":[1246.6666666666665,1332.2448979591836],"horseIdle1":[2680,1410.6122448979593],"horseIdle2":[4193.333333333333,634.3310657596371],"horseIdle3":[4930,853.469387755102]}}'),
-      Qp = JSON.parse('{"src":["/sounds/generatedSprites/mobKnight.c561ff13d3.ogg","/sounds/generatedSprites/mobKnight.84a4b8bd84.m4a","/sounds/generatedSprites/mobKnight.1af7235af5.mp3","/sounds/generatedSprites/mobKnight.b98de5a663.ac3"],"sprite":{"knightGrunt1":[100,2026.6666666666667],"knightGrunt2":[2226.6666666666665,2154.671201814059],"knightGrunt3":[4483.333333333333,1674.671201814059]}}'),
-      Jp = JSON.parse('{"src":["/sounds/generatedSprites/mobPig.0db857ea30.ogg","/sounds/generatedSprites/mobPig.bbb66ff288.m4a","/sounds/generatedSprites/mobPig.725bf033a7.mp3","/sounds/generatedSprites/mobPig.60b70ab1da.ac3"],"sprite":{"pigHurt1":[100,705.6009070294784],"pigHurt2":[906.6666666666666,667.4603174603175],"pigHurt3":[1676.6666666666667,500],"pigOink1":[2276.666666666667,976.7573696145124],"pigOink2":[3356.6666666666665,1015.578231292517],"pigOink3":[4473.333333333334,500],"pigOink4":[5073.333333333333,500],"pigOink5":[5673.333333333333,519.4557823129252]}}'),
-      Bp = JSON.parse('{"src":["/sounds/generatedSprites/mobReaver.4baae47e8b.ogg","/sounds/generatedSprites/mobReaver.7742c608af.m4a","/sounds/generatedSprites/mobReaver.401630090d.mp3","/sounds/generatedSprites/mobReaver.5adc0b4978.ac3"],"sprite":{"reaverAttack1":[100,4031.1111111111113],"reaverAttack2":[4233.333333333333,1552.0181405895692],"reaverAttack3":[5886.666666666667,1857.5510204081634],"reaverGrunt1":[7846.666666666667,5073.5600907029475],"reaverGrunt2":[13023.333333333334,2950.090702947846],"reaverGrunt3":[16076.666666666668,6640.907029478458]}}'),
-      Np = JSON.parse('{"src":["/sounds/generatedSprites/mobSheep.b4eadc8b06.ogg","/sounds/generatedSprites/mobSheep.616ff99abb.m4a","/sounds/generatedSprites/mobSheep.3919f569bc.mp3","/sounds/generatedSprites/mobSheep.fb412e7f4a.ac3"],"sprite":{"sheepBaa1":[100,1039.3877551020407],"sheepBaa2":[1240,1243.968253968254],"sheepBaa3":[2586.6666666666665,827.7551020408164],"sheepBaa4":[3516.6666666666665,1048.1179138321997],"sheepHurt1":[4666.666666666667,700.2721088435375]}}'),
-      Tp = JSON.parse('{"src":["/sounds/generatedSprites/mobSkeleton.d5417ca887.ogg","/sounds/generatedSprites/mobSkeleton.3d1ccc92a9.m4a","/sounds/generatedSprites/mobSkeleton.74d2ef1a0f.mp3","/sounds/generatedSprites/mobSkeleton.845029b40c.ac3"],"sprite":{"skeletonRattle1":[100,1088.0045351473923],"skeletonRattle2":[1290,1499.9773242630386],"skeletonRattle3":[2890,750],"skeletonRattle4":[3740,650.6575963718822]}}'),
-      fp = JSON.parse('{"src":["/sounds/generatedSprites/mobStag.ebbaf714eb.ogg","/sounds/generatedSprites/mobStag.e96403c272.m4a","/sounds/generatedSprites/mobStag.341736664c.mp3","/sounds/generatedSprites/mobStag.25221ce4c8.ac3"],"sprite":{"stagGrunt1":[100,976.7346938775511],"stagHurt1":[1180,500]}}'),
-      bp = JSON.parse('{"src":["/sounds/generatedSprites/mobStalker.9d8e1c70b9.ogg","/sounds/generatedSprites/mobStalker.6c26b72bd3.m4a","/sounds/generatedSprites/mobStalker.a74c32a02a.mp3","/sounds/generatedSprites/mobStalker.a4b0299a76.ac3"],"sprite":{"stalkerAttack1":[100,963.6281179138322],"stalkerIdle1":[1166.6666666666667,2051.065759637188]}}'),
-      hp = JSON.parse('{"src":["/sounds/generatedSprites/mobWarper.be1c89ce4a.ogg","/sounds/generatedSprites/mobWarper.cdcbad67c6.m4a","/sounds/generatedSprites/mobWarper.e3baa96ab6.mp3","/sounds/generatedSprites/mobWarper.ef5578e201.ac3"],"sprite":{"warperGrunt1":[100,2883.605442176871],"warperGrunt2":[3086.6666666666665,6405.351473922902],"warperGrunt3":[9593.333333333334,4806.530612244898],"warperGrunt4":[14500,5781.768707482994],"warperGrunt5":[20383.333333333332,4284.081632653061],"warperPhase1":[24770,5867.256235827665],"warperPhase2":[30740,5866.916099773242]}}'),
-      ap = JSON.parse('{"src":["/sounds/generatedSprites/mobWraith.55365b10d2.ogg","/sounds/generatedSprites/mobWraith.316cca2df1.m4a","/sounds/generatedSprites/mobWraith.152101497f.mp3","/sounds/generatedSprites/mobWraith.c2a05a3e22.ac3"],"sprite":{"wraithGrunt1":[100,4111.995464852607],"wraithGrunt2":[4313.333333333333,5173.333333333333],"wraithHurt":[9586.666666666666,4277.324263038548]}}'),
-      np = JSON.parse('{"src":["/sounds/generatedSprites/mobZombie.3ea7f2781d.ogg","/sounds/generatedSprites/mobZombie.1dcf1ecf93.m4a","/sounds/generatedSprites/mobZombie.672ca05e55.mp3","/sounds/generatedSprites/mobZombie.faad107ffe.ac3"],"sprite":{"ZombieGrunt1":[100,2089.795918367347],"ZombieGrunt2":[2290,2351.0204081632655],"ZombieGrunt3":[4743.333333333333,1750.204081632653],"ZombieHurt1":[6596.666666666667,1593.4693877551022],"ZombieHurt2":[8293.333333333332,1906.938775510204],"ZombieHurt3":[10303.333333333332,1018.7755102040817],"ZombieHurt4":[11423.333333333334,1358.3673469387757]}}'),
-      Fp = JSON.parse('{"src":["/sounds/generatedSprites/note.55b41d5148.ogg","/sounds/generatedSprites/note.9d434eddc4.m4a","/sounds/generatedSprites/note.96cf50a66e.mp3","/sounds/generatedSprites/note.85cfed63f9.ac3"],"sprite":{"bass":[0,500],"bassattack":[600,500],"bd":[1200,500],"bigDrumSwish1":[1800,3892.2448979591836],"bigDrumSwish2":[5793.333333333333,3056.326530612245],"bigDrumSwish3":[8950,3578.7755102040815],"drumSwish1":[12630,4127.34693877551],"drumSwish2":[16860,4127.34693877551],"harp_pling":[21090,835.9183673469388],"hat":[22026.666666666668,500],"levelup":[22626.666666666664,4458.231292517006],"lowDrum1":[27186.666666666668,3683.265306122449],"lowDrum2":[30970,3840],"lowDrum3":[34910,4205.714285714285],"snare":[39216.66666666667,500],"sonarBeep":[39816.66666666667,4127.34693877551],"trumpetFlare":[44046.666666666664,1683.4467120181407],"trumpetNote1":[45833.333333333336,779.8412698412699],"trumpetNote2":[46713.33333333333,845.6916099773243],"trumpetNote3":[47660,1090.7256235827665]}}'),
-      gp = JSON.parse('{"src":["/sounds/generatedSprites/fishing.ff9694e93b.ogg","/sounds/generatedSprites/fishing.20b18e3c80.m4a","/sounds/generatedSprites/fishing.4388bd71de.mp3","/sounds/generatedSprites/fishing.09b8e92f3c.ac3"],"sprite":{"caughtFish":[0,1976.7573696145125],"reel":[2080,531.9501133786848]}}'),
-      Gp = JSON.parse('{"src":["/sounds/generatedSprites/gameStart.dcb4ad7e5f.ogg","/sounds/generatedSprites/gameStart.04192cc8d1.m4a","/sounds/generatedSprites/gameStart.203520cd23.mp3","/sounds/generatedSprites/gameStart.95d1462a45.ac3"],"sprite":{"game_start_countdown_01":[0,1000.7709750566893],"game_start_countdown_02":[1103.3333333333333,994.9206349206348],"game_start_countdown_03":[2200,1000.7709750566893],"game_start_countdown_final":[3303.333333333333,1583.1065759637188]}}'),
-      rp = JSON.parse('{"src":["/sounds/generatedSprites/customGame_horror.89bd01b3f6.ogg","/sounds/generatedSprites/customGame_horror.58571ce79e.m4a","/sounds/generatedSprites/customGame_horror.809f261ceb.mp3","/sounds/generatedSprites/customGame_horror.0a4350133e.ac3"],"sprite":{"cryptWhoosh":[0,1700],"doorKnock":[1800,1173.3333333333333],"futureStrangePulse":[3073.333333333333,2874.6938775510203],"hauntedHorrorImpact":[6050,1072.857142857143],"horrorAccent1":[7223.333333333334,1919.5238095238096],"horrorFright":[9243.333333333334,1630.952380952381],"horrorMaleDrone":[10976.666666666666,7933.492063492064],"intensiveRainLoop":[19013.333333333332,13037.687074829933],"metalDoorKnock":[32153.333333333336,4219.410430839002],"ominousBellHit":[36473.333333333336,8756.621315192744],"pulseFromTheDark":[45330,7653.582766439909],"suspenseRiser":[53086.666666666664,6825.396825396825],"thunderRain":[60013.333333333336,12085.986394557824],"zapAccent1":[72200,500],"zapAccent2":[72800,500]}}'),
-      Zp = JSON.parse('{"src":["/sounds/generatedSprites/crowd.842a12bd70.ogg","/sounds/generatedSprites/crowd.eb817b0986.m4a","/sounds/generatedSprites/crowd.718908450e.mp3","/sounds/generatedSprites/crowd.b61523a08f.ac3"],"sprite":{"crowdAmbience":[0,54935.51020408163],"crowdCheer":[55036.66666666667,6269.3877551020405],"refereeWhistle":[61406.666666666664,2089.795918367347]}}'),
-      zp = JSON.parse('{"src":["/sounds/generatedSprites/survivalFactory.83edaf137d.ogg","/sounds/generatedSprites/survivalFactory.39e38bf296.m4a","/sounds/generatedSprites/survivalFactory.e3538de2e7.mp3","/sounds/generatedSprites/survivalFactory.a8fc293f73.ac3"],"sprite":{"rocketEngineLoop":[0,13167.369614512472]}}'),
-      sp = JSON.parse('{"src":["/sounds/generatedSprites/rpg.a91934b789.ogg","/sounds/generatedSprites/rpg.48d078dd6a.m4a","/sounds/generatedSprites/rpg.0279bc17b2.mp3","/sounds/generatedSprites/rpg.833aede675.ac3"],"sprite":{"rpgBeltCloth1":[0,722.5396825396826],"rpgBeltCloth2":[823.3333333333334,753.3106575963718],"rpgBeltHandle1":[1676.6666666666667,500],"rpgBeltHandle2":[2276.666666666667,500],"rpgBookClose":[2876.6666666666665,500],"rpgBookFlip1":[3476.6666666666665,768.6621315192745],"rpgBookFlip2":[4346.666666666667,500],"rpgBookFlip3":[4946.666666666666,500],"rpgBookOpen":[5546.666666666667,500],"rpgBookPlace1":[6146.666666666666,500],"rpgBookPlace2":[6746.666666666667,500],"rpgBookPlace3":[7346.666666666667,500],"rpgChop":[7946.666666666666,500],"rpgCloth1":[8546.666666666666,661.0430839002267],"rpgCloth2":[9310,500],"rpgCloth3":[9910,500],"rpgCloth4":[10510,500],"rpgCreak1":[11110,661.0430839002267],"rpgCreak2":[11873.333333333334,830.1587301587302],"rpgCreak3":[12806.666666666666,500],"rpgDoorClose1":[13406.666666666666,675.0566893424036],"rpgDoorClose2":[14183.333333333334,612.4943310657596],"rpgDoorClose3":[14896.666666666666,713.9455782312925],"rpgDoorClose4":[15713.333333333332,603.3786848072561],"rpgDoorOpen1":[16420,918.9795918367347],"rpgDoorOpen2":[17440,1413.3333333333333],"rpgDrawKnife1":[18953.333333333332,500],"rpgDrawKnife2":[19553.333333333336,500],"rpgDrawKnife3":[20153.333333333332,500],"rpgDropLeather":[20753.333333333332,500],"rpgFootstep00":[21353.333333333332,500],"rpgFootstep01":[21953.333333333332,500],"rpgFootstep02":[22553.333333333336,500],"rpgFootstep03":[23153.333333333332,500],"rpgFootstep04":[23753.333333333332,500],"rpgFootstep05":[24353.333333333332,500],"rpgFootstep06":[24953.333333333332,500],"rpgFootstep07":[25553.333333333336,500],"rpgFootstep08":[26153.333333333332,500],"rpgFootstep09":[26753.333333333332,500],"rpgHandleCoins1":[27353.333333333332,845.5328798185941],"rpgHandleCoins2":[28300,500],"rpgHandleSmallLeather1":[28900,500],"rpgHandleSmallLeather2":[29500,500],"rpgKnifeSlice1":[30100,599.546485260771],"rpgKnifeSlice2":[30800,568.798185941043],"rpgMetalClick":[31470,500],"rpgMetalLatch":[32070,500],"rpgMetalPot1":[32670,1460.4761904761906],"rpgMetalPot2":[34233.333333333336,937.7777777777778],"rpgMetalPot3":[35273.333333333336,907.0068027210884]}}'),
-      Kp = JSON.parse('{"src":["/sounds/generatedSprites/ambient.3b059790c7.ogg","/sounds/generatedSprites/ambient.6309e24e3b.m4a","/sounds/generatedSprites/ambient.9483cf5093.mp3","/sounds/generatedSprites/ambient.c053085ec4.ac3"],"sprite":{"lavaFlow":[0,34000]}}'),
-      Vp = JSON.parse('{"src":["/sounds/generatedSprites/police.d9c6fc70bc.ogg","/sounds/generatedSprites/police.4fb44943a7.m4a","/sounds/generatedSprites/police.2a300c9c5e.mp3","/sounds/generatedSprites/police.4140927019.ac3"],"sprite":{"handcuffsLock":[0,626.9387755102041],"radioBeep":[730,650],"radioChatter":[1480,3372.9931972789113],"runningSteps":[4953.333333333333,3305.555555555555],"sirenChirp":[8360,924.1723356009071],"sirenWail":[9386.666666666666,5195.056689342404],"sirenYelp":[14683.333333333334,5239.3650793650795],"stunZap":[20023.333333333332,750],"whistle":[20873.333333333336,535.9183673469388]}}'),
-      ii = JSON.parse('{"src":["/sounds/generatedSprites/cars.0704d524d1.ogg","/sounds/generatedSprites/cars.ff965de8bb.m4a","/sounds/generatedSprites/cars.ce24c14295.mp3","/sounds/generatedSprites/cars.844fc9209b.ac3"],"sprite":{"carCrash":[0,539.7732426303855],"carDoorClose":[640,570.7029478458049],"carDoorOpen":[1313.3333333333333,720.5895691609977],"carDriveLoop":[2136.6666666666665,29642.721088435374],"carEngineStart":[31880,2800],"carHorn":[34780,500],"carIdleLoop":[35380,27663.94557823129],"carLockChirp":[63146.66666666667,600],"indicatorTick":[63846.666666666664,5266.303854875283],"reverseBeep":[69213.33333333334,5254.512471655329],"seatbeltClick":[74570,500],"tyreScreech":[75170,2000],"vanIdleLoop":[77270,17625.011337868484]}}'),
-      ci = JSON.parse('{"src":["/sounds/generatedSprites/fire.e86d968fb5.ogg","/sounds/generatedSprites/fire.79adfd2c5a.m4a","/sounds/generatedSprites/fire.c1e463a3cd.mp3","/sounds/generatedSprites/fire.6d0bbbc2ca.ac3"],"sprite":{"extinguisherSpray":[0,2598.7301587301586],"fireAlarmBell":[2700,7848.730158730158],"fireCrackle":[10650,17343.94557823129],"fireTruckHorn":[28096.666666666668,3546.485260770975]}}'),
-      Oi = JSON.parse('{"src":["/sounds/generatedSprites/phoneAndMoney.4739a7944b.ogg","/sounds/generatedSprites/phoneAndMoney.73a9e2118e.m4a","/sounds/generatedSprites/phoneAndMoney.a2500ea194.mp3","/sounds/generatedSprites/phoneAndMoney.841f719ee3.ac3"],"sprite":{"cameraShutter":[0,553.764172335601],"coinsDrop":[656.6666666666666,2106.190476190476],"jobComplete":[2863.3333333333335,2330.090702947846],"messageReceive":[5296.666666666667,600.204081632653],"phoneNotify":[6000,500],"phoneTap":[6600,500],"phoneVibrate":[7200,1062.7437641723357],"tillPurchase":[8363.333333333334,2754.4897959183672]}}'),
-      oi = JSON.parse('{"src":["/sounds/generatedSprites/town.422dd11fe2.ogg","/sounds/generatedSprites/town.7ae83b6b59.m4a","/sounds/generatedSprites/town.b6767431c7.mp3","/sounds/generatedSprites/town.a55c8585bb.ac3"],"sprite":{"crowdMurmur":[0,15708.140589569162],"doorbell":[15810,3017.4603174603176],"gateCreak":[18930,3720.9977324263036],"keysJingle":[22753.333333333332,2400],"kidsPlaying":[25253.333333333332,16534.67120181406],"parkBirds":[41890,13663.106575963719],"shopDoorbell":[55653.333333333336,925.0566893424036]}}');
-    var Ii = cp(1211);
-    const Si = {
-        gunSemiAutomatic: Op,
-        gunSubmachineGun: op,
-        gunShotgun: Lp,
-        gunRifle: Sp,
-        gunPistol: Ip,
-        gunMisc: xp,
-        dig: Yp,
-        step: Dp,
-        randomBeep: Ap,
-        randomCannon: Pp,
-        randomCash: Wp,
-        randomExp: yp,
-        randomFallsmall: Up,
-        randomItems: wp,
-        randomFire: vp,
-        randomFirecracker: tp,
-        randomLaugh: Hp,
-        randomMagic: dp,
-        randomSplash: ep,
-        mobBear: jp,
-        mobCat: kp,
-        mobCow: mp,
-        mobCrone: Rp,
-        mobDeer: qp,
-        mobDog: Mp,
-        mobFennec: Cp,
-        mobGolem: Ep,
-        mobGorilla: Xp,
-        mobHorse: lp,
-        mobKnight: Qp,
-        mobPig: Jp,
-        mobReaver: Bp,
-        mobSheep: Np,
-        mobSkeleton: Tp,
-        mobStag: fp,
-        mobStalker: bp,
-        mobWarper: hp,
-        mobWraith: ap,
-        mobZombie: np,
-        note: Fp,
-        fishing: gp,
-        gameStart: Gp,
-        customGame_horror: rp,
-        crowd: Zp,
-        survivalFactory: zp,
-        rpg: sp,
-        ambient: Kp,
-        police: Vp,
-        cars: ii,
-        fire: ci,
-        phoneAndMoney: Oi,
-        town: oi
+    var wQ = XQ(61),
+      qQ = XQ(1532),
+      TQ = XQ(37286),
+      zQ = XQ(2550),
+      sQ = XQ(2555),
+      FQ = XQ(2535),
+      PQ = XQ(36859);
+
+    function gQ() {
+      const [QQ, WQ] = (0, wQ.useState)(new Map);
+      return {
+        get: WQ => QQ.get(WQ),
+        hold: (0, wQ.useCallback)(((QQ, XQ, wQ) => {
+          WQ((WQ => new Map(WQ).set(QQ, XQ))), wQ.then((() => {
+            WQ((WQ => {
+              const XQ = new Map(WQ);
+              return XQ.delete(QQ), XQ
+            }))
+          }))
+        }), [])
+      }
+    }
+    var JQ = XQ(1081),
+      rQ = XQ.n(JQ),
+      IQ = XQ(1226),
+      jQ = XQ(1094),
+      BQ = XQ(1391),
+      yQ = XQ(2803),
+      VQ = XQ(5376),
+      DQ = XQ(3699);
+    var pQ = XQ(2052),
+      GQ = XQ(1507);
+
+    function UQ(QQ, WQ, XQ) {
+      const wQ = QQ.filter((QQ => QQ.name !== WQ)),
+        qQ = wQ.filter((QQ => "none" === QQ.role)).sort(((QQ, WQ) => WQ.at - QQ.at)),
+        TQ = wQ.filter((QQ => "none" !== QQ.role)).sort(((QQ, WQ) => XQ.indexOf(QQ.role) - XQ.indexOf(WQ.role) || WQ.at - QQ.at));
+      return [...QQ.some((QQ => QQ.name === WQ)) && null !== WQ ? [WQ] : [], ...[...qQ, ...TQ].map((QQ => QQ.name))]
+    }
+
+    function bQ(QQ, WQ) {
+      const XQ = QQ.banned.map((QQ => QQ.name)),
+        wQ = new Set(XQ);
+      return {
+        here: UQ(QQ.here, WQ, QQ.roles.map((QQ => QQ.role))),
+        away: QQ.away.filter((QQ => !wQ.has(QQ.name))).map((QQ => QQ.name)),
+        banned: XQ
+      }
+    }
+
+    function vQ(QQ, WQ) {
+      const XQ = QQ.here.find((QQ => QQ.name === WQ));
+      if (XQ) return {
+        section: "here",
+        player: XQ
+      };
+      const wQ = QQ.banned.find((QQ => QQ.name === WQ));
+      if (wQ) return {
+        section: "banned",
+        bannedAt: wQ.at
+      };
+      const qQ = QQ.away.find((QQ => QQ.name === WQ));
+      return qQ ? {
+        section: "away",
+        player: qQ
+      } : {
+        section: "gone"
+      }
+    }
+    const dQ = {
+      gamemode: !1,
+      roles: [],
+      fixedRole: null,
+      kick: !1,
+      ban: !1,
+      unban: !1
+    };
+    var HQ = XQ(2798),
+      aQ = XQ(2954),
+      lQ = XQ(37022),
+      hQ = XQ(3398),
+      iQ = XQ(402);
+
+    function cQ(QQ, WQ, XQ) {
+      return WQ.map((WQ => {
+        if ("string" === typeof WQ) return WQ;
+        const wQ = "str" in WQ ? WQ.str : WQ;
+        return "string" === typeof wQ ? wQ : "entityName" in wQ ? wQ.entityName : "translationKey" in wQ ? QQ(wQ.translationKey, (0, IQ.r)(wQ.params, XQ)) : ""
+      })).join("")
+    }
+
+    function AQ(QQ, WQ, XQ, wQ, qQ) {
+      return qQ - wQ < 6e4 ? QQ(`${XQ}JustNow`) : QQ(XQ, {
+        time: (0, iQ.bb)((0, IQ.n)(WQ, XQ), wQ, qQ)
+      })
+    }
+    var RQ = XQ(1975),
+      EQ = XQ(1739),
+      CQ = XQ(1145);
+
+    function uQ(QQ) {
+      let {
+        status: WQ
+      } = QQ;
+      return (0, CQ.jsx)("span", {
+        className: rQ()("LobbyManageStatus", {
+          LobbyManageStatusRefused: !WQ.ok
+        }),
+        children: (0, CQ.jsx)(RQ.e, {
+          text: WQ.text
+        })
+      })
+    }
+
+    function LQ(QQ) {
+      let {
+        names: WQ,
+        cap: XQ,
+        filterFrom: qQ,
+        moreLabel: TQ,
+        reveal: zQ = null,
+        renderRow: sQ
+      } = QQ;
+      const {
+        t: FQ
+      } = (0, IQ.C)(), [PQ, gQ] = (0, wQ.useState)(!1), [JQ, rQ] = (0, wQ.useState)(""), BQ = PQ || null !== zQ && WQ.indexOf(zQ) >= XQ, VQ = (BQ || WQ.length <= XQ) && null !== qQ && WQ.length > qQ, DQ = JQ.trim().toLowerCase();
+      let pQ = BQ ? WQ : WQ.slice(0, XQ);
+      return VQ && "" !== DQ && (pQ = pQ.filter((QQ => QQ.toLowerCase().includes(DQ)))), (0, CQ.jsxs)(CQ.Fragment, {
+        children: [VQ && (0, CQ.jsx)(EQ.e, {
+          className: "LobbyManageFilter",
+          placeholderText: FQ("lobbyManage:findName"),
+          ariaLabel: FQ("lobbyManage:findName"),
+          onValueChange: QQ => {
+            rQ(QQ)
+          }
+        }), pQ.length > 0 && (0, CQ.jsx)("div", {
+          className: "PlayerRows",
+          children: pQ.map(((QQ, WQ) => sQ(QQ, pQ.length - WQ)))
+        }), !BQ && WQ.length > XQ && (0, CQ.jsx)("div", {
+          className: "LobbyManageMore",
+          children: (0, CQ.jsx)(yQ.b, {
+            label: (0, CQ.jsxs)(CQ.Fragment, {
+              children: [TQ, " ", (0, CQ.jsx)(jQ.d, {
+                name: "angle-down"
+              })]
+            }),
+            onClick: () => {
+              gQ(!0)
+            }
+          })
+        })]
+      })
+    }
+
+    function kQ(QQ) {
+      let {
+        value: WQ,
+        placeholder: XQ,
+        ariaLabel: qQ,
+        maxLength: TQ,
+        wide: zQ = !1,
+        onSave: sQ
+      } = QQ;
+      const FQ = (0, wQ.useRef)(null),
+        [PQ, gQ] = (0, wQ.useState)(0),
+        JQ = (0, wQ.useRef)(!0),
+        IQ = (0, wQ.useRef)(null),
+        jQ = (0, wQ.useRef)({
+          value: WQ,
+          onSave: sQ
+        });
+      jQ.current = {
+        value: WQ,
+        onSave: sQ
+      };
+      const BQ = () => {
+        const QQ = IQ.current;
+        IQ.current = null, null !== QQ && QQ !== jQ.current.value && jQ.current.onSave(QQ).then((() => {
+          JQ.current && gQ((QQ => QQ + 1))
+        }))
+      };
+      return (0, wQ.useEffect)((() => {
+        null === IQ.current && FQ.current && (FQ.current.value = WQ)
+      }), [WQ, PQ]), (0, wQ.useEffect)((() => () => {
+        JQ.current = !1, BQ()
+      }), []), (0, CQ.jsx)("div", {
+        className: rQ()("LobbyManageRuleInput", {
+          LobbyManageRuleInputWide: zQ
+        }),
+        onBlur: BQ,
+        children: (0, CQ.jsx)(EQ.e, {
+          domRef: FQ,
+          defaultValue: WQ,
+          placeholderText: XQ,
+          ariaLabel: qQ,
+          maxLength: TQ,
+          onValueChange: QQ => {
+            IQ.current = QQ
+          },
+          onEnter: BQ
+        })
+      })
+    }
+    const fQ = ["mod", "coOwner"],
+      SQ = {
+        coOwner: "lobbyManage:roleCanCoOwner",
+        mod: "lobbyManage:roleCanMod",
+        coder: "lobbyManage:roleCanCoder",
+        builder: "lobbyManage:roleCanBuilder"
+      };
+
+    function tQ(QQ) {
+      var WQ, XQ, TQ;
+      let {
+        name: zQ,
+        place: sQ,
+        openedIn: FQ,
+        isYou: PQ,
+        manage: JQ,
+        hiddenNames: rQ,
+        zIndex: BQ
+      } = QQ;
+      const {
+        t: yQ,
+        selectedLanguage: VQ
+      } = (0, IQ.C)(), [DQ, pQ] = (0, wQ.useState)(null), {
+        state: UQ
+      } = JQ, bQ = `player:${zQ}`, vQ = function(QQ, WQ) {
+        if ("banned" === QQ.section) return {
+          ...dQ,
+          unban: !0
+        };
+        if ("gone" === QQ.section) return dQ;
+        const {
+          player: XQ
+        } = QQ, wQ = "here" === QQ.section, qQ = wQ || "none" !== XQ.role ? XQ.can.roles : [];
+        return {
+          gamemode: wQ && WQ && null !== XQ.gamemode && XQ.can.gamemode,
+          roles: qQ,
+          fixedRole: 0 === qQ.length && "none" !== XQ.role ? XQ.role : null,
+          kick: wQ && XQ.can.kick,
+          ban: XQ.can.ban,
+          unban: !1
+        }
+      }(sQ, null !== UQ.gamemodes), iQ = JQ.statusOf(bQ), RQ = JQ.isPending(bQ), EQ = gQ(), LQ = Date.now(), kQ = QQ => {
+        var WQ, XQ;
+        return null !== (WQ = null === (XQ = (QQ => UQ.roles.find((WQ => WQ.role === QQ)))(QQ)) || void 0 === XQ ? void 0 : XQ.label) && void 0 !== WQ ? WQ : QQ
+      }, tQ = QQ => {
+        const WQ = SQ[QQ];
+        return void 0 === WQ ? void 0 : yQ(WQ)
+      }, oQ = "here" === sQ.section || "away" === sQ.section ? sQ.player : null, eQ = "here" === sQ.section ? sQ.player.id : null, {
+        playerSocialPreview: nQ,
+        isFriend: xQ
+      } = null === eQ ? {
+        playerSocialPreview: (0, lQ.h)(zQ, null),
+        isFriend: !1
+      } : (0, aQ.e)(eQ, zQ), YQ = function() {
+        JQ.send(...arguments)
+      }, NQ = (QQ, WQ) => {
+        EQ.hold("role", QQ, JQ.send({
+          type: "setRole",
+          name: zQ,
+          role: QQ
+        }, bQ, WQ))
+      };
+      let ZQ = null;
+      if ("ban" === (null === DQ || void 0 === DQ ? void 0 : DQ.kind)) ZQ = yQ("lobbyManageEntry:banConfirm", {
+        playerName: zQ
+      });
+      else if ("role" === (null === DQ || void 0 === DQ ? void 0 : DQ.kind)) {
+        var OQ;
+        ZQ = `${yQ("lobbyManage:roleConfirm",{playerName:zQ,role:kQ(DQ.role)})} ${null!==(OQ=tQ(DQ.role))&&void 0!==OQ?OQ:""}`
+      } else if (iQ) ZQ = (0, CQ.jsx)(uQ, {
+        status: iQ
+      });
+      else if (PQ) ZQ = yQ("lobbyManage:you");
+      else if ("here" === sQ.section) "none" === sQ.player.role && LQ - sQ.player.at < 6e5 && (ZQ = AQ(yQ, VQ.code, "lobbyManage:joinedAgo", sQ.player.at, LQ));
+      else if ("away" === sQ.section) {
+        if (sQ.player.at > 0) {
+          const QQ = "kicked" === sQ.player.why ? "lobbyManage:kickedAgo" : "lobbyManage:leftAgo";
+          ZQ = AQ(yQ, VQ.code, QQ, sQ.player.at, LQ)
+        }
+      } else "banned" === sQ.section ? null !== sQ.bannedAt && (ZQ = AQ(yQ, VQ.code, "lobbyManage:bannedAgo", sQ.bannedAt, LQ)) : "banned" === FQ && (ZQ = yQ("lobbyManageEntry:unbanned"));
+      return (0, CQ.jsx)("div", {
+        className: "LobbyManagePlayerRow",
+        "data-lobby-manage-row": zQ,
+        children: (0, CQ.jsxs)(HQ.g, {
+          playerSocialPreview: nQ,
+          isFriend: xQ,
+          status: ZQ,
+          opensProfileCard: !PQ && (0, aQ.h)(!0, zQ, rQ),
+          zIndex: BQ,
+          children: [null !== DQ && (0, CQ.jsxs)("div", {
+            className: "LobbyManageButtons",
+            children: ["ban" === DQ.kind && (0, CQ.jsxs)(GQ.P, {
+              className: "LobbyManageIconButton SmallTextLight",
+              analyticsClick: {
+                id: "lobby_manage.ban",
+                value: "row"
+              },
+              onClick: () => {
+                pQ(null), YQ({
+                  type: "ban",
+                  name: zQ
+                }, bQ)
+              },
+              children: [(0, CQ.jsx)(jQ.d, {
+                name: "gavel"
+              }), (0, CQ.jsx)("span", {
+                className: "LobbyManageButtonLabel",
+                children: yQ("lobbyManageEntry:ban")
+              })]
+            }), "role" === DQ.kind && (0, CQ.jsx)(GQ.h, {
+              className: "LobbyManageIconButton SmallTextLight",
+              analyticsClick: {
+                id: "lobby_manage.set_role",
+                value: DQ.role
+              },
+              onClick: () => {
+                pQ(null), NQ(DQ.role)
+              },
+              children: yQ("lobbyManage:makeRole", {
+                role: kQ(DQ.role)
+              })
+            }), (0, CQ.jsx)(GQ.l, {
+              className: "LobbyManageIconButton SmallTextLight",
+              onClick: () => {
+                pQ(null)
+              },
+              children: yQ("general:cancel")
+            })]
+          }), null === DQ && (0, CQ.jsxs)(CQ.Fragment, {
+            children: [(0, CQ.jsxs)("div", {
+              className: "LobbyManageChoices",
+              children: [vQ.gamemode && null !== oQ && (0, CQ.jsx)(hQ.c, {
+                options: (null !== (WQ = UQ.gamemodes) && void 0 !== WQ ? WQ : []).map((QQ => ({
+                  value: QQ.value,
+                  label: cQ(yQ, QQ.label, rQ)
+                }))),
+                value: null !== (XQ = EQ.get("gamemode")) && void 0 !== XQ ? XQ : oQ.gamemode,
+                disabled: RQ,
+                onChange: QQ => {
+                  (0, qQ.reportAnalyticsClick)({
+                    id: "lobby_manage.set_gamemode",
+                    value: QQ.value
+                  }), EQ.hold("gamemode", QQ.value, JQ.send({
+                    type: "setGamemode",
+                    name: zQ,
+                    gamemode: QQ.value
+                  }, bQ))
+                }
+              }), vQ.roles.length > 0 && null !== oQ && (0, CQ.jsx)(hQ.c, {
+                options: [...UQ.roles].reverse().filter((QQ => vQ.roles.includes(QQ.role))).map((QQ => ({
+                  value: QQ.role,
+                  label: QQ.label
+                }))),
+                value: null !== (TQ = EQ.get("role")) && void 0 !== TQ ? TQ : oQ.role,
+                disabled: RQ,
+                onChange: QQ => {
+                  var WQ;
+                  (WQ = QQ.value) !== (null === oQ || void 0 === oQ ? void 0 : oQ.role) && (fQ.includes(WQ) ? pQ({
+                    kind: "role",
+                    role: WQ
+                  }) : ((0, qQ.reportAnalyticsClick)({
+                    id: "lobby_manage.set_role",
+                    value: WQ
+                  }), NQ(WQ, tQ(WQ))))
+                }
+              }), null !== vQ.fixedRole && (0, CQ.jsx)("div", {
+                className: "LobbyManageChoiceFixed",
+                children: kQ(vQ.fixedRole)
+              })]
+            }), (0, CQ.jsxs)("div", {
+              className: "LobbyManageButtons",
+              children: [vQ.kick && (0, CQ.jsxs)(GQ.l, {
+                className: "LobbyManageIconButton SmallTextLight",
+                ariaLabel: `${yQ("lobbyManageEntry:kick")} ${zQ}`,
+                disabled: RQ,
+                analyticsClick: {
+                  id: "lobby_manage.kick",
+                  value: "row"
+                },
+                onClick: () => {
+                  YQ({
+                    type: "kick",
+                    name: zQ
+                  }, bQ)
+                },
+                children: [(0, CQ.jsx)(jQ.d, {
+                  name: "person-falling-burst"
+                }), (0, CQ.jsx)("span", {
+                  className: "LobbyManageButtonLabel",
+                  children: yQ("lobbyManageEntry:kick")
+                })]
+              }), vQ.ban && (0, CQ.jsxs)(GQ.Q, {
+                className: "LobbyManageOutlineButton SmallTextLight",
+                ariaLabel: `${yQ("lobbyManageEntry:ban")} ${zQ}`,
+                disabled: RQ,
+                padDestructive: !0,
+                onClick: () => {
+                  pQ({
+                    kind: "ban"
+                  })
+                },
+                children: [(0, CQ.jsx)(jQ.d, {
+                  name: "gavel"
+                }), (0, CQ.jsx)("span", {
+                  className: "LobbyManageButtonLabel",
+                  children: yQ("lobbyManageEntry:ban")
+                })]
+              }), vQ.unban && (0, CQ.jsxs)(GQ.l, {
+                className: "LobbyManageIconButton SmallTextLight",
+                ariaLabel: `${yQ("lobbyManageEntry:unban")} ${zQ}`,
+                disabled: RQ,
+                analyticsClick: {
+                  id: "lobby_manage.unban"
+                },
+                onClick: () => {
+                  YQ({
+                    type: "unban",
+                    name: zQ
+                  }, bQ)
+                },
+                children: [(0, CQ.jsx)(jQ.d, {
+                  name: "user-unlock"
+                }), (0, CQ.jsx)("span", {
+                  className: "LobbyManageButtonLabel",
+                  children: yQ("lobbyManageEntry:unban")
+                })]
+              })]
+            })]
+          })]
+        })
+      })
+    }
+
+    function oQ(QQ) {
+      var WQ, XQ, qQ, TQ;
+      let {
+        manage: zQ,
+        focusRequest: sQ,
+        onFocused: FQ
+      } = QQ;
+      const {
+        t: PQ
+      } = (0, IQ.C)(), gQ = (0, pQ.e)("players"), JQ = (0, pQ.e)("hiddenPlayerNames"), rQ = (0, wQ.useRef)(null), {
+        state: BQ
+      } = zQ, VQ = null === gQ.localId ? null : null !== (WQ = null === (XQ = gQ.byId[gQ.localId]) || void 0 === XQ ? void 0 : XQ.name) && void 0 !== WQ ? WQ : null, [DQ] = (0, wQ.useState)((() => bQ(BQ, VQ))), UQ = function(QQ, WQ, XQ) {
+        const wQ = new Set([...QQ.here, ...QQ.away, ...QQ.banned]),
+          qQ = bQ(WQ, XQ),
+          TQ = WQ => {
+            const XQ = qQ[WQ].filter((QQ => !wQ.has(QQ)));
+            for (const QQ of XQ) wQ.add(QQ);
+            return [...QQ[WQ], ...XQ]
+          };
+        return {
+          here: TQ("here"),
+          away: TQ("away"),
+          banned: TQ("banned")
+        }
+      }(DQ, BQ, VQ), [dQ, HQ] = (0, wQ.useState)(!1), aQ = function(QQ, WQ) {
+        return QQ.here.filter((QQ => QQ.name !== WQ && "none" === QQ.role && QQ.can.kick)).length
+      }(BQ, VQ), lQ = zQ.statusOf("kickAll");
+      (0, wQ.useEffect)((() => {
+        var QQ, WQ;
+        if (null === sQ) return;
+        const XQ = null === (QQ = rQ.current) || void 0 === QQ ? void 0 : QQ.querySelector(`[data-lobby-manage-row="${CSS.escape(sQ.name)}"]`);
+        null === XQ || void 0 === XQ || XQ.scrollIntoView({
+          block: "center"
+        }), null === XQ || void 0 === XQ || null === (WQ = XQ.querySelector(".ProfilePreview")) || void 0 === WQ || WQ.focus({
+          preventScroll: !0
+        }), FQ(sQ.seq)
+      }), [null === sQ || void 0 === sQ ? void 0 : sQ.seq]);
+      const hQ = QQ => (WQ, XQ) => (0, CQ.jsx)(tQ, {
+        name: WQ,
+        place: vQ(BQ, WQ),
+        openedIn: QQ,
+        isYou: WQ === VQ,
+        manage: zQ,
+        hiddenNames: JQ,
+        zIndex: XQ
+      }, WQ);
+      return (0, CQ.jsxs)("div", {
+        ref: rQ,
+        className: "LobbyManagePage",
+        children: [UQ.here.length > 0 && (0, CQ.jsxs)("div", {
+          className: "LobbyManageBox",
+          children: [(0, CQ.jsxs)("div", {
+            className: "LobbyManageBoxHeading",
+            children: [(0, CQ.jsx)(yQ.b, {
+              label: PQ("lobbyManage:here"),
+              meta: BQ.here.length
+            }), aQ >= 2 && !dQ && (0, CQ.jsxs)(GQ.Q, {
+              className: "LobbyManageTitleAction SmallTextLight",
+              padDestructive: !0,
+              disabled: zQ.isPending("kickAll"),
+              onClick: () => {
+                HQ(!0)
+              },
+              children: [(0, CQ.jsx)(jQ.d, {
+                name: "person-falling-burst"
+              }), " ", PQ("lobbyManage:kickAll")]
+            })]
+          }), dQ && aQ >= 2 && (0, CQ.jsxs)("div", {
+            className: "LobbyManageConfirm",
+            children: [(0, CQ.jsx)("span", {
+              className: "LobbyManageConfirmText",
+              children: PQ("lobbyManage:kickAllConfirm", {
+                count: aQ
+              })
+            }), (0, CQ.jsxs)("div", {
+              className: "LobbyManageButtons",
+              children: [(0, CQ.jsx)(GQ.P, {
+                className: "LobbyManageIconButton SmallTextLight",
+                analyticsClick: {
+                  id: "lobby_manage.kick_all"
+                },
+                onClick: () => {
+                  HQ(!1), zQ.send({
+                    type: "kickAll"
+                  }, "kickAll")
+                },
+                children: PQ("lobbyManage:kickAll")
+              }), (0, CQ.jsx)(GQ.l, {
+                className: "LobbyManageIconButton SmallTextLight",
+                onClick: () => {
+                  HQ(!1)
+                },
+                children: PQ("general:cancel")
+              })]
+            })]
+          }), lQ && (0, CQ.jsx)("div", {
+            className: "LobbyManageBoxStatus",
+            children: (0, CQ.jsx)(uQ, {
+              status: lQ
+            })
+          }), (0, CQ.jsx)(LQ, {
+            names: UQ.here,
+            cap: UQ.here.length,
+            filterFrom: 20,
+            moreLabel: "",
+            renderRow: hQ("here")
+          })]
+        }), UQ.away.length > 0 && (0, CQ.jsxs)("div", {
+          className: "LobbyManageBox",
+          children: [(0, CQ.jsx)(yQ.b, {
+            label: PQ("lobbyManage:notHere"),
+            meta: UQ.away.length
+          }), (0, CQ.jsx)(LQ, {
+            names: UQ.away,
+            cap: 5,
+            filterFrom: null,
+            moreLabel: PQ("lobbyManage:allCount", {
+              count: UQ.away.length
+            }),
+            reveal: null !== (qQ = null === sQ || void 0 === sQ ? void 0 : sQ.name) && void 0 !== qQ ? qQ : null,
+            renderRow: hQ("away")
+          })]
+        }), UQ.banned.length > 0 && (0, CQ.jsxs)("div", {
+          className: "LobbyManageBox",
+          children: [(0, CQ.jsx)(yQ.b, {
+            label: PQ("lobbyManage:banned"),
+            meta: UQ.banned.length
+          }), (0, CQ.jsx)(LQ, {
+            names: UQ.banned,
+            cap: 5,
+            filterFrom: 20,
+            moreLabel: PQ("lobbyManage:allCount", {
+              count: UQ.banned.length
+            }),
+            reveal: null !== (TQ = null === sQ || void 0 === sQ ? void 0 : sQ.name) && void 0 !== TQ ? TQ : null,
+            renderRow: hQ("banned")
+          })]
+        })]
+      })
+    }
+    var eQ = XQ(4948),
+      nQ = XQ(1707),
+      xQ = XQ(37003),
+      YQ = XQ(37015),
+      NQ = XQ(37011),
+      ZQ = XQ(37008),
+      OQ = XQ(37038),
+      KQ = XQ(37024),
+      mQ = XQ(37031);
+
+    function MQ(QQ) {
+      const WQ = new Set;
+      for (const XQ of QQ) WQ.add(XQ.toLowerCase());
+      return WQ
+    }
+
+    function QW(QQ) {
+      var WQ, XQ;
+      let {
+        state: qQ,
+        lobbyName: TQ,
+        listed: zQ,
+        isListed: sQ,
+        tV: FQ,
+        PD: PQ,
+        statusOf: gQ
+      } = QQ;
+      const {
+        t: JQ,
+        selectedLanguage: rQ
+      } = (0, IQ.C)(), jQ = (0, nQ.j)(), BQ = (0, pQ.e)("players"), VQ = null === BQ.localId ? null : null !== (WQ = null === (XQ = BQ.byId[BQ.localId]) || void 0 === XQ ? void 0 : XQ.name) && void 0 !== WQ ? WQ : null, DQ = (0, wQ.useMemo)((() => (0, ZQ.g)(jQ.friends, TQ, qQ.here.map((QQ => QQ.name)))), [jQ.friends, TQ, qQ.here]), GQ = new Map(DQ.map((QQ => [QQ.friend.name.toLowerCase(), QQ]))), UQ = function(QQ) {
+        let {
+          refused: WQ,
+          listed: XQ,
+          here: wQ,
+          friends: qQ,
+          excluded: TQ
+        } = QQ;
+        const zQ = MQ(TQ),
+          sQ = QQ => QQ.filter((QQ => {
+            const WQ = QQ.toLowerCase();
+            return !zQ.has(WQ) && (zQ.add(WQ), !0)
+          }));
+        return {
+          added: [],
+          refused: sQ(WQ),
+          listed: sQ(XQ),
+          suggested: sQ([...wQ, ...qQ])
+        }
+      }({
+        refused: qQ.refused.map((QQ => QQ.name)),
+        listed: zQ,
+        here: qQ.here.map((QQ => QQ.name)),
+        friends: DQ.flatMap((QQ => "here" === QQ.place ? [] : [QQ.friend.name])),
+        excluded: [...null === VQ ? [] : [VQ], ...[...qQ.here, ...qQ.away].flatMap((QQ => "none" === QQ.role || (0, ZQ.j)(zQ, QQ.name) ? [] : [QQ.name]))]
+      }), [bQ] = (0, wQ.useState)(UQ), [vQ, dQ] = (0, wQ.useState)([]), HQ = function(QQ, WQ, XQ) {
+        const wQ = MQ(XQ),
+          qQ = MQ([...XQ, ...QQ.refused, ...QQ.listed, ...QQ.suggested]),
+          TQ = XQ => [...QQ[XQ].filter((QQ => !wQ.has(QQ.toLowerCase()))), ...WQ[XQ].filter((QQ => {
+            const WQ = QQ.toLowerCase();
+            return !qQ.has(WQ) && (qQ.add(WQ), !0)
+          }))];
+        return {
+          added: [...XQ],
+          refused: TQ("refused"),
+          listed: TQ("listed"),
+          suggested: TQ("suggested")
+        }
+      }(bQ, UQ, vQ), hQ = (QQ, WQ) => {
+        var XQ, wQ;
+        const TQ = QQ.toLowerCase(),
+          zQ = GQ.get(TQ),
+          PQ = qQ.here.find((QQ => QQ.name.toLowerCase() === TQ)),
+          IQ = qQ.refused.find((QQ => QQ.name.toLowerCase() === TQ)),
+          jQ = null !== (XQ = null === gQ || void 0 === gQ ? void 0 : gQ(QQ)) && void 0 !== XQ ? XQ : null;
+        let BQ = null;
+        jQ ? BQ = (0, CQ.jsx)(uQ, {
+          status: jQ
+        }) : IQ ? BQ = AQ(JQ, rQ.code, "lobbyManage:triedToJoinAgo", IQ.at, Date.now()) : zQ && PQ ? BQ = JQ("lobbyManage:friendHere") : zQ ? BQ = "online" === zQ.place ? JQ("lobbyManage:friendOnline") : JQ("lobbyManage:friend") : PQ && (BQ = JQ("lobbyManage:hereStatus"));
+        let yQ = null !== (wQ = null === zQ || void 0 === zQ ? void 0 : zQ.friend) && void 0 !== wQ ? wQ : (0, lQ.h)(QQ, null);
+        return !zQ && null !== PQ && void 0 !== PQ && PQ.id && (yQ = (0, aQ.e)(PQ.id, PQ.name).playerSocialPreview), (0, CQ.jsx)(KQ.c, {
+          playerSocialPreview: yQ,
+          isFriend: void 0 !== zQ,
+          hideFriendBadge: !0,
+          status: BQ,
+          zIndex: WQ,
+          fJ: {
+            on: sQ(QQ),
+            onChange: WQ => {
+              FQ(QQ, WQ)
+            }
+          }
+        }, TQ)
+      }, iQ = [...HQ.added, ...HQ.refused];
+      return (0, CQ.jsxs)("div", {
+        className: "LobbyManageBox",
+        children: [(0, CQ.jsx)(yQ.b, {
+          label: JQ("worldSocial:whitelist"),
+          meta: zQ.length
+        }), (0, CQ.jsx)(mQ.c, {
+          label: JQ("lobbyManage:add"),
+          icon: "user-check",
+          placeholder: JQ("socialBar:enterPlayerName"),
+          onSubmit: async QQ => {
+            const WQ = await PQ(QQ);
+            return WQ.ok && dQ((WQ => [QQ, ...WQ])), WQ
+          }
+        }), iQ.length > 0 && (0, CQ.jsx)("div", {
+          className: "PlayerRows",
+          children: iQ.map(((QQ, WQ) => hQ(QQ, iQ.length - WQ)))
+        }), (0, CQ.jsx)(LQ, {
+          names: HQ.listed,
+          cap: 8,
+          filterFrom: 8,
+          moreLabel: JQ("lobbyManage:allOnWhitelist", {
+            count: HQ.listed.length
+          }),
+          renderRow: hQ
+        }), (0, CQ.jsx)(LQ, {
+          names: HQ.suggested,
+          cap: 8,
+          filterFrom: null,
+          moreLabel: JQ("lobbyManage:allCount", {
+            count: HQ.suggested.length
+          }),
+          renderRow: hQ
+        })]
+      })
+    }
+
+    function WW(QQ) {
+      let {
+        manage: WQ,
+        listing: XQ
+      } = QQ;
+      const {
+        t: wQ
+      } = (0, IQ.C)(), TQ = (QQ, XQ) => ((0, qQ.reportAnalyticsClick)({
+        id: "lobby_manage.set_listing",
+        value: QQ
+      }), WQ.send({
+        type: "setListing",
+        field: QQ,
+        value: XQ
+      }, `listing:${QQ}`)), zQ = QQ => {
+        const XQ = WQ.statusOf(`listing:${QQ}`);
+        return XQ && !XQ.ok && (0, CQ.jsx)("div", {
+          className: "LobbyManageFieldError",
+          children: (0, CQ.jsx)(uQ, {
+            status: XQ
+          })
+        })
+      };
+      return (0, CQ.jsxs)("div", {
+        className: "LobbyManageBox LobbyManageListing",
+        children: [(0, CQ.jsx)(yQ.b, {
+          label: wQ("lobbyManage:inWorldsList")
+        }), (0, CQ.jsxs)("div", {
+          className: "LobbyManageRuleRow",
+          children: [(0, CQ.jsx)("div", {
+            className: "SliderText",
+            children: wQ("lobbyManage:description")
+          }), (0, CQ.jsx)(kQ, {
+            value: XQ.description,
+            ariaLabel: wQ("lobbyManage:description"),
+            wide: !0,
+            onSave: QQ => TQ("description", QQ)
+          })]
+        }), zQ("description"), (0, CQ.jsxs)("div", {
+          className: "LobbyManageRuleRow",
+          children: [(0, CQ.jsx)("div", {
+            className: "SliderText",
+            children: wQ("lobbyManage:emojis")
+          }), (0, CQ.jsx)(kQ, {
+            value: XQ.emojis,
+            ariaLabel: wQ("lobbyManage:emojis"),
+            onSave: QQ => TQ("emojis", QQ)
+          })]
+        }), zQ("emojis"), (0, CQ.jsxs)("div", {
+          className: "LobbyManageRuleRow",
+          children: [(0, CQ.jsx)("div", {
+            className: "SliderText",
+            children: wQ("lobbyManage:colour")
+          }), (0, CQ.jsx)(XW, {
+            value: XQ.colour,
+            ariaLabel: wQ("lobbyManage:colour"),
+            onSave: QQ => {
+              TQ("colour", QQ)
+            }
+          })]
+        }), zQ("colour")]
+      })
+    }
+
+    function XW(QQ) {
+      let {
+        value: WQ,
+        ariaLabel: XQ,
+        onSave: qQ
+      } = QQ;
+      const TQ = (0, wQ.useRef)(null),
+        zQ = (0, wQ.useRef)({
+          value: WQ,
+          onSave: qQ
+        });
+      zQ.current = {
+        value: WQ,
+        onSave: qQ
+      };
+      const sQ = (0, wQ.useRef)(null),
+        FQ = (0, wQ.useRef)(!1),
+        PQ = QQ => {
+          FQ.current && QQ.value !== zQ.current.value && QQ.value !== sQ.current && (sQ.current = QQ.value, zQ.current.onSave(QQ.value))
+        };
+      return (0, wQ.useEffect)((() => {
+        TQ.current && document.activeElement !== TQ.current && (TQ.current.value = WQ)
+      }), [WQ]), (0, wQ.useEffect)((() => {
+        const QQ = TQ.current,
+          WQ = () => {
+            PQ(QQ)
+          };
+        return QQ.addEventListener("change", WQ), () => {
+          QQ.removeEventListener("change", WQ), PQ(QQ)
+        }
+      }), []), (0, CQ.jsx)("input", {
+        ref: TQ,
+        type: "color",
+        className: "LobbyManageColour",
+        defaultValue: WQ,
+        "aria-label": XQ,
+        onInput: () => {
+          FQ.current = !0
+        },
+        onBlur: QQ => {
+          PQ(QQ.currentTarget)
+        }
+      })
+    }
+
+    function wW(QQ) {
+      let {
+        manage: WQ
+      } = QQ;
+      const {
+        lobbyName: XQ,
+        shownLobbyName: wQ
+      } = (0, pQ.e)("connectedGame");
+      return WQ.state.you.canSetVisibility && null !== XQ ? (0, CQ.jsx)(TW, {
+        manage: WQ,
+        lobbyName: XQ,
+        worldCode: null !== wQ && void 0 !== wQ ? wQ : XQ
+      }, XQ) : (0, CQ.jsx)(zW, {
+        manage: WQ,
+        lobbyName: null !== XQ && void 0 !== XQ ? XQ : ""
+      })
+    }
+
+    function qW(QQ) {
+      return QQ.map((QQ => QQ.toLowerCase())).sort().join(",")
+    }
+
+    function TW(QQ) {
+      var WQ;
+      let {
+        manage: XQ,
+        lobbyName: TQ,
+        worldCode: zQ
+      } = QQ;
+      const {
+        t: sQ
+      } = (0, IQ.C)(), {
+        settings: FQ,
+        loading: PQ,
+        change: gQ,
+        retry: JQ,
+        refresh: rQ
+      } = (0, xQ.h)(TQ), jQ = (0, nQ.j)(), {
+        state: VQ
+      } = XQ, DQ = (0, wQ.useRef)(FQ);
+      DQ.current = FQ;
+      const pQ = qW(null !== (WQ = VQ.whitelist) && void 0 !== WQ ? WQ : []),
+        UQ = null !== VQ.whitelist;
+      (0, wQ.useEffect)((() => {
+        const QQ = DQ.current;
+        null !== QQ && (QQ.visibility !== VQ.visibility || UQ && qW(QQ.whitelist) !== pQ) && rQ()
+      }), [VQ.visibility, pQ, UQ, rQ]);
+      const bQ = async (QQ, WQ) => {
+        let XQ = null;
+        return await gQ(QQ, WQ, {
+          quiet: !0,
+          onAnswer: QQ => {
+            XQ = QQ
+          }
+        }), XQ
+      }, vQ = (QQ, WQ) => {
+        null !== WQ && "error" in WQ && XQ.showStatus(QQ, {
+          ok: !1,
+          text: [sQ(WQ.error)]
+        })
+      }, dQ = async QQ => {
+        if (null === FQ || QQ === FQ.visibility) return;
+        (0, qQ.reportAnalyticsClick)({
+          id: "lobby_manage.set_mode",
+          value: QQ
+        });
+        const WQ = "whitelist" === QQ ? (0, ZQ.f)((0, ZQ.g)(jQ.friends, TQ, VQ.here.map((QQ => QQ.name))), (0, OQ.d)(TQ), FQ.whitelist) : [],
+          XQ = await bQ({
+            setVisibility: QQ
+          }, (WQ => ({
+            ...WQ,
+            visibility: QQ
+          })));
+        vQ("mode", XQ), null === XQ || "error" in XQ || await (async QQ => {
+          for (const WQ of (0, ZQ.m)(QQ, eQ.D))
+            if (!await gQ({
+                whitelistAdd: WQ
+              }, (QQ => (0, ZQ.r)(QQ, WQ, !0)))) return !1;
+          return !0
+        })(WQ)
+      }, HQ = (0, wQ.useMemo)((() => {
+        var QQ;
+        if (null === FQ) return [];
+        const WQ = null !== (QQ = VQ.whitelist) && void 0 !== QQ ? QQ : [];
+        return [...WQ.filter((QQ => (0, ZQ.j)(FQ.whitelist, QQ))), ...FQ.whitelist.filter((QQ => !(0, ZQ.j)(WQ, QQ)))]
+      }), [FQ, VQ.whitelist]), aQ = XQ.statusOf("mode");
+      return (0, CQ.jsxs)("div", {
+        className: "LobbyManagePage",
+        children: [(0, CQ.jsxs)("div", {
+          className: "LobbyManageBox",
+          children: [(0, CQ.jsx)(yQ.b, {
+            label: sQ("worldSocial:whoCanJoin")
+          }), null === FQ && PQ && (0, CQ.jsx)("div", {
+            className: "LobbyManageLoading",
+            children: (0, CQ.jsx)(BQ.e, {})
+          }), null === FQ && !PQ && (0, CQ.jsx)(GQ.l, {
+            className: "SmallTextLight",
+            onClick: JQ,
+            children: sQ("worldSocial:loadFailed")
+          }), null !== FQ && (0, CQ.jsx)(YQ.b, {
+            visibility: FQ.visibility,
+            onPick: QQ => {
+              dQ(QQ)
+            }
+          }), aQ && (0, CQ.jsx)("div", {
+            className: "LobbyManageFieldError",
+            children: (0, CQ.jsx)(uQ, {
+              status: aQ
+            })
+          }), null !== FQ && "private" !== FQ.visibility && (0, CQ.jsx)(NQ.b, {
+            worldCode: zQ,
+            message: null
+          })]
+        }), "whitelist" === (null === FQ || void 0 === FQ ? void 0 : FQ.visibility) && (0, CQ.jsx)(QW, {
+          state: VQ,
+          lobbyName: TQ,
+          listed: HQ,
+          isListed: QQ => (0, ZQ.j)(FQ.whitelist, QQ),
+          tV: (QQ, WQ) => {
+            (0, qQ.reportAnalyticsClick)(WQ ? {
+              id: "lobby_manage.whitelist_add",
+              value: "fJ"
+            } : {
+              id: "lobby_manage.whitelist_remove"
+            }), bQ(WQ ? {
+              whitelistAdd: [QQ]
+            } : {
+              whitelistRemove: QQ
+            }, (XQ => (0, ZQ.r)(XQ, [QQ], WQ))).then((WQ => {
+              vQ(`whitelist:${QQ.toLowerCase()}`, WQ)
+            }))
+          },
+          PD: async QQ => {
+            (0, qQ.reportAnalyticsClick)({
+              id: "lobby_manage.whitelist_add",
+              value: "field"
+            });
+            const WQ = await bQ({
+              whitelistAdd: [QQ]
+            }, (WQ => (0, ZQ.r)(WQ, [QQ], !0)));
+            return null === WQ ? {
+              ok: !1,
+              error: sQ("worldSocial:changeFailed")
+            } : "error" in WQ ? {
+              ok: !1,
+              error: sQ(WQ.error)
+            } : (0, ZQ.j)(WQ.notFound, QQ) ? {
+              ok: !1,
+              error: sQ("lobbyManage:noPlayerCalled", {
+                playerName: QQ
+              })
+            } : {
+              ok: !0
+            }
+          },
+          statusOf: QQ => XQ.statusOf(`whitelist:${QQ.toLowerCase()}`)
+        }), "public" === (null === FQ || void 0 === FQ ? void 0 : FQ.visibility) && null !== VQ.listing && (0, CQ.jsx)(WW, {
+          manage: XQ,
+          listing: VQ.listing
+        })]
+      })
+    }
+
+    function zW(QQ) {
+      var WQ;
+      let {
+        manage: XQ,
+        lobbyName: wQ
+      } = QQ;
+      const {
+        t: TQ
+      } = (0, IQ.C)(), {
+        state: zQ
+      } = XQ, sQ = gQ(), FQ = null !== (WQ = zQ.whitelist) && void 0 !== WQ ? WQ : [];
+      return (0, CQ.jsxs)("div", {
+        className: "LobbyManagePage",
+        children: [(0, CQ.jsxs)("div", {
+          className: "LobbyManageBox",
+          children: [(0, CQ.jsx)(yQ.b, {
+            label: TQ("worldSocial:whoCanJoin")
+          }), (0, CQ.jsx)("div", {
+            className: "LobbyManageModeText",
+            children: TQ(`worldSocial:${zQ.visibility}`)
+          })]
+        }), "whitelist" === zQ.visibility && zQ.you.canEditWhitelist && (0, CQ.jsx)(QW, {
+          state: zQ,
+          lobbyName: wQ,
+          listed: FQ,
+          isListed: QQ => {
+            var WQ;
+            return null !== (WQ = sQ.get(QQ.toLowerCase())) && void 0 !== WQ ? WQ : (0, ZQ.j)(FQ, QQ)
+          },
+          tV: (QQ, WQ) => {
+            (0, qQ.reportAnalyticsClick)(WQ ? {
+              id: "lobby_manage.whitelist_add",
+              value: "fJ"
+            } : {
+              id: "lobby_manage.whitelist_remove"
+            });
+            const wQ = QQ.toLowerCase();
+            sQ.hold(wQ, WQ, XQ.send(WQ ? {
+              type: "whitelistAdd",
+              names: [QQ]
+            } : {
+              type: "whitelistRemove",
+              name: QQ
+            }, `whitelist:${wQ}`))
+          },
+          PD: async QQ => {
+            (0, qQ.reportAnalyticsClick)({
+              id: "lobby_manage.whitelist_add",
+              value: "field"
+            });
+            const WQ = await XQ.send({
+              type: "whitelistAdd",
+              names: [QQ]
+            }, "whitelist-field");
+            return WQ.ok ? {
+              ok: !0
+            } : {
+              ok: !1,
+              error: (0, CQ.jsx)(RQ.e, {
+                text: WQ.message
+              })
+            }
+          },
+          statusOf: QQ => XQ.statusOf(`whitelist:${QQ.toLowerCase()}`)
+        }), "public" === zQ.visibility && null !== zQ.listing && (0, CQ.jsx)(WW, {
+          manage: XQ,
+          listing: zQ.listing
+        })]
+      })
+    }
+    var sW = XQ(5349),
+      FW = XQ(1416);
+    const PW = /[\p{Script_Extensions=Han}\p{Script_Extensions=Hiragana}\p{Script_Extensions=Katakana}\p{Script_Extensions=Hangul}\u{3000}-\u{303F}\u{FF01}-\u{FF60}\u{FFE0}-\u{FFE6}]/u;
+    const gW = (0, wQ.memo)((function(QQ) {
+      var WQ;
+      let {
+        rule: XQ,
+        value: wQ,
+        status: qQ,
+        pending: TQ,
+        hiddenNames: zQ,
+        WU: sQ,
+        onAction: FQ
+      } = QQ;
+      const {
+        t: PQ
+      } = (0, IQ.C)(), gQ = QQ => sQ(XQ, QQ), JQ = (QQ, WQ) => {
+        FQ(XQ, QQ, WQ)
+      }, rQ = cQ(PQ, XQ.label, zQ), jQ = XQ.info ? cQ(PQ, XQ.info, zQ) : void 0, BQ = XQ.placeholder ? cQ(PQ, XQ.placeholder, zQ) : void 0, yQ = (null !== (WQ = XQ.options) && void 0 !== WQ ? WQ : []).map((QQ => ({
+        value: QQ.value,
+        label: cQ(PQ, QQ.label, zQ)
+      }))), VQ = Math.max(0, ...yQ.map((QQ => function(QQ) {
+        let WQ = 0;
+        for (const XQ of QQ) WQ += PW.test(XQ) ? 2 : 1;
+        return WQ
+      }(QQ.label)))), DQ = qQ && (0, CQ.jsx)("div", {
+        className: "LobbyManageRuleStatus",
+        children: (0, CQ.jsx)(uQ, {
+          status: qQ
+        })
+      }), pQ = (0, CQ.jsxs)("div", {
+        className: "SliderText",
+        children: [rQ, void 0 !== jQ && (0, CQ.jsx)(FW.b, {
+          className: "SettingsTextInputCircleInfo",
+          hoverInfo: jQ
+        })]
+      });
+      return "toggle" === XQ.kind ? (0, CQ.jsxs)(CQ.Fragment, {
+        children: [(0, CQ.jsx)(sW.e, {
+          label: rQ,
+          checked: !0 === wQ,
+          circleInfoText: jQ,
+          disabled: TQ,
+          onClick: gQ
+        }), DQ]
+      }) : "choice" === XQ.kind && yQ.length <= 3 ? (0, CQ.jsxs)(CQ.Fragment, {
+        children: [(0, CQ.jsx)(sW.g, {
+          label: rQ,
+          options: yQ,
+          value: String(wQ),
+          circleInfoText: jQ,
+          onChange: gQ
+        }), DQ]
+      }) : (0, CQ.jsxs)("div", {
+        className: "SettingBox LobbyManageRuleRow",
+        children: [pQ, "choice" === XQ.kind && (0, CQ.jsx)("span", {
+          className: "LobbyManageRuleChoice",
+          style: {
+            "--lobby-choice-chars": VQ
+          },
+          children: (0, CQ.jsx)(hQ.c, {
+            options: yQ,
+            value: String(wQ),
+            disabled: TQ,
+            onChange: QQ => {
+              gQ(QQ.value)
+            }
+          })
+        }), ("number" === XQ.kind || "text" === XQ.kind) && (0, CQ.jsx)(kQ, {
+          value: null === wQ ? "" : String(wQ),
+          placeholder: BQ,
+          ariaLabel: rQ,
+          onSave: QQ => {
+            const WQ = QQ.trim(),
+              wQ = Number(WQ);
+            return gQ("number" === XQ.kind && "" !== WQ && Number.isFinite(wQ) ? wQ : WQ)
+          }
+        }), "action" === XQ.kind && (0, CQ.jsxs)("div", {
+          className: "LobbyManageRuleInput",
+          children: [yQ.length > 3 && (0, CQ.jsx)(hQ.c, {
+            options: yQ,
+            value: {
+              value: "",
+              label: null !== BQ && void 0 !== BQ ? BQ : rQ
+            },
+            disabled: TQ,
+            onChange: QQ => {
+              JQ(QQ.value)
+            }
+          }), yQ.length > 0 && yQ.length <= 3 && yQ.map((QQ => (0, CQ.jsx)(GQ.l, {
+            className: "SmallTextLight",
+            disabled: TQ,
+            onClick: () => {
+              JQ(QQ.value)
+            },
+            children: QQ.label
+          }, QQ.value))), 0 === yQ.length && (0, CQ.jsx)(GQ.l, {
+            className: "SmallTextLight",
+            disabled: TQ,
+            onClick: () => {
+              JQ()
+            },
+            children: null !== BQ && void 0 !== BQ ? BQ : rQ
+          })]
+        }), "names" === XQ.kind && (0, CQ.jsx)(JW, {
+          names: Array.isArray(wQ) ? wQ : [],
+          pending: TQ,
+          onAction: JQ
+        }), DQ]
+      })
+    }));
+
+    function JW(QQ) {
+      let {
+        names: WQ,
+        pending: XQ,
+        onAction: qQ
+      } = QQ;
+      const {
+        t: TQ
+      } = (0, IQ.C)(), zQ = (0, wQ.useRef)(null), [sQ, FQ] = (0, wQ.useState)(""), PQ = () => {
+        const QQ = sQ.trim();
+        "" !== QQ && (qQ(QQ, "add"), zQ.current && (zQ.current.value = ""), FQ(""))
+      };
+      return (0, CQ.jsxs)("div", {
+        className: "LobbyManageNames",
+        children: [WQ.map((QQ => (0, CQ.jsxs)("div", {
+          className: "LobbyManageName",
+          children: [(0, CQ.jsx)("span", {
+            className: "LobbyManageNameText",
+            children: QQ
+          }), (0, CQ.jsx)(GQ.l, {
+            className: "LobbyManageIconButton SmallTextLight",
+            ariaLabel: TQ("lobbyManage:removeName", {
+              name: QQ
+            }),
+            disabled: XQ,
+            onClick: () => {
+              qQ(QQ, "remove")
+            },
+            children: (0, CQ.jsx)(jQ.d, {
+              name: "xmark"
+            })
+          })]
+        }, QQ))), (0, CQ.jsxs)("div", {
+          className: "LobbyManageRuleInput",
+          children: [(0, CQ.jsx)(EQ.e, {
+            domRef: zQ,
+            placeholderText: TQ("lobbyManage:namePlaceholder"),
+            ariaLabel: TQ("lobbyManage:namePlaceholder"),
+            maxLength: 32,
+            onValueChange: QQ => {
+              FQ(QQ)
+            },
+            onEnter: PQ
+          }), (0, CQ.jsx)(GQ.l, {
+            className: "SmallTextLight",
+            disabled: XQ || "" === sQ.trim(),
+            onClick: PQ,
+            children: TQ("lobbyManage:addHere")
+          })]
+        })]
+      })
+    }
+    const rW = [{
+      group: "gameplay",
+      title: "lobbyManage:gameplay"
+    }, {
+      group: "world",
+      title: "lobbyManage:world"
+    }];
+
+    function IW(QQ, WQ) {
+      return rW.map((XQ => {
+        let {
+          group: wQ,
+          title: qQ
+        } = XQ;
+        const TQ = QQ.filter((QQ => QQ.group === wQ && void 0 === QQ.parent)).map((XQ => {
+          const wQ = !0 === WQ(XQ) ? QQ.filter((QQ => QQ.parent === XQ.key)) : [];
+          return {
+            rule: XQ,
+            children: wQ
+          }
+        }));
+        return {
+          group: wQ,
+          title: qQ,
+          items: TQ
+        }
+      }))
+    }
+
+    function jW(QQ) {
+      return QQ.flatMap((QQ => {
+        let {
+          items: WQ
+        } = QQ;
+        return WQ.flatMap((QQ => {
+          let {
+            rule: WQ,
+            children: XQ
+          } = QQ;
+          return [WQ, ...XQ]
+        }))
+      }))
+    }
+
+    function BW(QQ) {
+      let {
+        manage: WQ,
+        rowsShown: XQ
+      } = QQ;
+      const {
+        t: TQ
+      } = (0, IQ.C)(), zQ = (0, pQ.e)("hiddenPlayerNames"), {
+        rules: sQ
+      } = WQ.state, FQ = gQ(), PQ = QQ => {
+        const WQ = FQ.get(QQ.key);
+        return void 0 === WQ ? QQ.value : WQ
+      }, JQ = IW(sQ, PQ), [rQ] = (0, wQ.useState)((() => jW(JQ).map((QQ => QQ.key)))), jQ = XQ === 1 / 0 ? null : new Set(rQ.slice(0, XQ)), BQ = QQ => null === jQ || jQ.has(QQ.key), {
+        hold: VQ
+      } = FQ, DQ = (0, wQ.useCallback)(((QQ, XQ) => {
+        (0, qQ.reportAnalyticsClick)({
+          id: "lobby_manage.set_rule",
+          value: QQ.key
+        });
+        const wQ = WQ.send({
+          type: "setRule",
+          key: QQ.key,
+          value: XQ
+        }, `rule:${QQ.key}`);
+        return VQ(QQ.key, XQ, wQ), wQ
+      }), [WQ, VQ]), GQ = (0, wQ.useCallback)(((QQ, XQ, wQ) => {
+        (0, qQ.reportAnalyticsClick)({
+          id: "lobby_manage.set_rule",
+          value: QQ.key
+        }), WQ.send({
+          type: "ruleAction",
+          key: QQ.key,
+          ...void 0 === XQ ? {} : {
+            arg: XQ
+          },
+          ...void 0 === wQ ? {} : {
+            op: wQ
+          }
+        }, `rule:${QQ.key}`, void 0 === wQ ? TQ("lobbyManage:setJustNow") : void 0)
+      }), [WQ, TQ]), UQ = QQ => {
+        const XQ = `rule:${QQ.key}`;
+        return (0, CQ.jsx)(gW, {
+          rule: QQ,
+          value: PQ(QQ),
+          status: WQ.statusOf(XQ),
+          pending: WQ.isPending(XQ),
+          hiddenNames: zQ,
+          WU: DQ,
+          onAction: GQ
+        }, QQ.key)
+      };
+      return (0, CQ.jsx)("div", {
+        className: "LobbyManagePage LobbyManageRules",
+        children: JQ.map((QQ => {
+          let {
+            group: WQ,
+            title: XQ,
+            items: qQ
+          } = QQ;
+          const zQ = qQ.filter((QQ => {
+            let {
+              rule: WQ
+            } = QQ;
+            return BQ(WQ)
+          }));
+          return 0 === zQ.length ? null : (0, CQ.jsxs)(wQ.Fragment, {
+            children: [(0, CQ.jsx)(yQ.b, {
+              label: TQ(XQ)
+            }), zQ.map((QQ => {
+              let {
+                rule: WQ,
+                children: XQ
+              } = QQ;
+              return 0 === XQ.length ? UQ(WQ) : (0, CQ.jsxs)("div", {
+                className: "SettingBoxGroup",
+                children: [UQ(WQ), XQ.filter(BQ).map(UQ)]
+              }, WQ.key)
+            }))]
+          }, WQ)
+        }))
+      })
+    }
+    const yW = {
+        players: {
+          icon: "user-group",
+          title: "lobbyManage:players"
+        },
+        joining: {
+          icon: "door-open",
+          title: "lobbyManage:joining"
+        },
+        rules: {
+          icon: "list",
+          title: "lobbyManage:rules"
+        },
+        leaderboard: {
+          icon: "trophy",
+          title: "lobbyManage:leaderboard"
+        }
       },
-      xi = new Map(["mob", "random"].map((pp => {
-        const ip = Object.keys(Si).filter((ip => ip.startsWith(pp) && /^[A-Z]/.test(ip.slice(pp.length))));
-        return [pp, ip]
-      }))),
-      Li = {};
-    for (const Ui in Si) {
-      const pp = Si[Ui];
-      for (const ip in pp.sprite) {
-        if (Li[ip]) throw new Error(`duplicate sound name ${ip} in ${Li[ip]} and ${Ui}`);
-        Li[ip] = Ui
+      VW = 5,
+      DW = (0, wQ.memo)((function(QQ) {
+        let {
+          page: WQ,
+          manage: XQ,
+          leaderboard: qQ,
+          focusRequest: TQ,
+          onFocused: zQ,
+          ruleRowsShown: sQ
+        } = QQ;
+        return "leaderboard" === WQ ? (0, CQ.jsx)(wQ.Suspense, {
+          fallback: (0, CQ.jsx)("div", {
+            className: "LobbyManageLoading",
+            children: (0, CQ.jsx)(BQ.e, {})
+          }),
+          children: qQ
+        }) : "joining" === WQ ? (0, CQ.jsx)(wW, {
+          manage: XQ
+        }) : "rules" === WQ ? (0, CQ.jsx)(BW, {
+          manage: XQ,
+          rowsShown: sQ
+        }) : (0, CQ.jsx)(oQ, {
+          manage: XQ,
+          focusRequest: TQ,
+          onFocused: zQ
+        })
+      }));
+
+    function pW(QQ) {
+      let {
+        page: WQ
+      } = QQ;
+      const {
+        t: XQ
+      } = (0, IQ.C)(), wQ = yW[WQ];
+      return (0, CQ.jsxs)(CQ.Fragment, {
+        children: [(0, CQ.jsx)(jQ.d, {
+          name: wQ.icon
+        }), " ", (0, CQ.jsx)("span", {
+          className: "LobbyManagePageTitle",
+          children: XQ(wQ.title)
+        })]
+      })
+    }
+
+    function GW(QQ) {
+      var WQ;
+      const {
+        t: XQ
+      } = (0, IQ.C)(), {
+        pages: TQ,
+        landing: zQ
+      } = QQ, FQ = (0, wQ.useRef)(null), PQ = (0, wQ.useRef)(null), gQ = (0, wQ.useRef)(null), JQ = (0, wQ.useRef)(new Map), [jQ, BQ] = (0, wQ.useState)(null), pQ = (0, wQ.useRef)(jQ), GQ = (0, wQ.useRef)(0), [UQ, bQ] = (0, wQ.useState)(TQ[0]), vQ = null !== jQ && void 0 !== jQ ? jQ : TQ.includes(UQ) ? UQ : TQ[0], [dQ] = (0, wQ.useState)(null !== (WQ = null === zQ || void 0 === zQ ? void 0 : zQ.page) && void 0 !== WQ ? WQ : null), HQ = null !== dQ && TQ.includes(dQ) ? [dQ, ...TQ.filter((QQ => QQ !== dQ))] : TQ, [aQ] = (0, wQ.useState)((() => {
+        const WQ = jW(IW(QQ.manage.state.rules, (QQ => QQ.value)));
+        return Math.max(1, Math.ceil(WQ.length / VW))
+      })), lQ = HQ.flatMap((QQ => "rules" === QQ ? Array(aQ).fill(QQ) : [QQ])), hQ = function(QQ, WQ) {
+        const [XQ, qQ] = (0, wQ.useState)(QQ), TQ = XQ >= WQ;
+        return TQ && XQ !== 1 / 0 && qQ(1 / 0), (0, wQ.useLayoutEffect)((() => {
+          if (TQ) return;
+          let QQ = !0;
+          return (0, DQ.e)().then((() => {
+            QQ && qQ((QQ => QQ + 1))
+          })), () => {
+            QQ = !1
+          }
+        }), [XQ, TQ]), TQ ? 1 / 0 : XQ
+      }(1, lQ.length), iQ = lQ.slice(0, hQ), cQ = new Set(iQ), AQ = hQ < lQ.length, RQ = AQ ? iQ.filter((QQ => "rules" === QQ)).length * VW : 1 / 0, EQ = (0, wQ.useRef)(QQ.focusRequest);
+      EQ.current = QQ.focusRequest;
+      const uQ = QQ => {
+          pQ.current = QQ, BQ(QQ)
+        },
+        LQ = () => {
+          var QQ, WQ;
+          FQ.current.style.scrollPaddingTop = `${null!==(QQ=null===(WQ=gQ.current)||void 0===WQ?void 0:WQ.offsetHeight)&&void 0!==QQ?QQ:0}px`
+        },
+        kQ = QQ => {
+          const WQ = FQ.current,
+            XQ = JQ.current.get(QQ);
+          if (void 0 === XQ) return;
+          const wQ = document.activeElement,
+            qQ = EQ.current,
+            TQ = null === qQ ? null : XQ.querySelector(`[data-lobby-manage-row="${CSS.escape(qQ.name)}"]`);
+          LQ(), wQ instanceof HTMLElement && null !== TQ && void 0 !== TQ && TQ.contains(wQ) ? wQ.scrollIntoView({
+            block: "center"
+          }) : null === XQ.previousElementSibling ? WQ.scrollTop = 0 : XQ.scrollIntoView({
+            block: "start"
+          }), GQ.current = WQ.scrollTop
+        },
+        fQ = QQ => {
+          (0, qQ.reportAnalyticsClick)({
+            id: "lobby_manage.page",
+            value: QQ
+          }), uQ(QQ), kQ(QQ)
+        },
+        SQ = () => {
+          var QQ, WQ;
+          const XQ = FQ.current,
+            wQ = XQ.getBoundingClientRect().top + (null !== (QQ = null === (WQ = gQ.current) || void 0 === WQ ? void 0 : WQ.offsetHeight) && void 0 !== QQ ? QQ : 0),
+            qQ = TQ.map((QQ => {
+              var WQ, XQ;
+              return (null !== (WQ = null === (XQ = JQ.current.get(QQ)) || void 0 === XQ ? void 0 : XQ.getBoundingClientRect().top) && void 0 !== WQ ? WQ : 1 / 0) - wQ
+            })),
+            zQ = !AQ && XQ.scrollTop + XQ.clientHeight >= XQ.scrollHeight - 1;
+          bQ(TQ[(0, sQ.h)(qQ, zQ)])
+        },
+        tQ = () => {
+          null !== pQ.current && (uQ(null), SQ())
+        };
+      (0, wQ.useLayoutEffect)((() => {
+        null !== zQ && TQ.includes(zQ.page) && fQ(zQ.page)
+      }), [null === zQ || void 0 === zQ ? void 0 : zQ.seq]), (0, wQ.useLayoutEffect)((() => {
+        null === pQ.current || TQ.includes(pQ.current) || tQ()
+      }));
+      const {
+        onFocused: oQ
+      } = QQ, eQ = (0, wQ.useCallback)((QQ => {
+        null !== pQ.current && kQ(pQ.current), oQ(QQ)
+      }), [oQ]);
+      (0, wQ.useLayoutEffect)((() => {
+        const QQ = pQ.current;
+        null !== QQ && (!AQ || TQ.indexOf(lQ[hQ - 1]) < TQ.indexOf(QQ)) && kQ(QQ)
+      }), [hQ]), (0, wQ.useEffect)((() => {
+        const QQ = new ResizeObserver((() => {
+          null !== pQ.current ? kQ(pQ.current) : LQ()
+        }));
+        return QQ.observe(FQ.current), QQ.observe(PQ.current), () => {
+          QQ.disconnect()
+        }
+      }), []), (0, wQ.useLayoutEffect)((() => {
+        const QQ = gQ.current,
+          WQ = null === QQ || void 0 === QQ ? void 0 : QQ.querySelector(".SegmentedToggleOptionSelected");
+        WQ && (QQ.scrollLeft = Math.min(WQ.offsetLeft, Math.max(QQ.scrollLeft, WQ.offsetLeft + WQ.offsetWidth - QQ.clientWidth)))
+      }), [vQ]);
+      return (0, CQ.jsxs)("div", {
+        ref: FQ,
+        className: "MenuBody LobbyManageBody",
+        onScroll: () => {
+          null === pQ.current ? SQ() : Math.abs(FQ.current.scrollTop - GQ.current) > 1 && tQ()
+        },
+        onClick: QQ => {
+          var WQ;
+          null !== (WQ = gQ.current) && void 0 !== WQ && WQ.contains(QQ.target) || tQ()
+        },
+        onFocus: QQ => {
+          var WQ;
+          const XQ = null === pQ.current ? null : JQ.current.get(pQ.current);
+          !XQ || XQ.contains(QQ.target) || null !== (WQ = gQ.current) && void 0 !== WQ && WQ.contains(QQ.target) || tQ()
+        },
+        children: [TQ.length > 1 && (0, CQ.jsx)("div", {
+          ref: gQ,
+          className: "LobbyManageChips",
+          children: (0, CQ.jsx)(VQ.d, {
+            options: TQ.map((QQ => ({
+              value: QQ,
+              label: (0, CQ.jsx)(pW, {
+                page: QQ
+              }),
+              ariaLabel: XQ(yW[QQ].title)
+            }))),
+            value: vQ,
+            padTabs: "2",
+            ariaLabel: XQ("lobbyManageEntry:manageLobby"),
+            reselectable: !0,
+            onChange: fQ
+          })
+        }), (0, CQ.jsx)("div", {
+          ref: PQ,
+          className: rQ()("LobbyManageInner", {
+            Staging: AQ
+          }),
+          children: TQ.filter((QQ => cQ.has(QQ))).map((WQ => {
+            const XQ = WQ === jQ;
+            return (0, CQ.jsxs)("section", {
+              ref: QQ => {
+                QQ ? JQ.current.set(WQ, QQ) : JQ.current.delete(WQ)
+              },
+              className: "LobbyManageSection",
+              "data-pad-initial-area": XQ || void 0,
+              children: [TQ.length > 1 && (0, CQ.jsx)("div", {
+                className: "LobbyManageSectionHeading",
+                "data-pad-focusable": XQ || void 0,
+                "data-pad-unavailable": XQ || void 0,
+                children: (0, CQ.jsx)(yQ.b, {
+                  label: (0, CQ.jsx)(pW, {
+                    page: WQ
+                  })
+                })
+              }), (0, CQ.jsx)(DW, {
+                page: WQ,
+                manage: QQ.manage,
+                leaderboard: QQ.leaderboard,
+                focusRequest: QQ.focusRequest,
+                onFocused: eQ,
+                ruleRowsShown: "rules" === WQ ? RQ : 1 / 0
+              })]
+            }, WQ)
+          }))
+        })]
+      })
+    }
+
+    function UW(QQ) {
+      return void 0 === (null === QQ || void 0 === QQ ? void 0 : QQ.page) ? null : {
+        page: QQ.page,
+        seq: QQ.seq
       }
     }
-    for (const Ui in Si) {
-      const pp = Si[Ui];
-      for (let ip = 0; ip < pp.src.length; ip++) pp.src[ip] = Ii.clientSideServerUrls.staticUrl + pp.src[ip]
-    }
-    const Yi = {};
 
-    function Di(pp) {
-      if (Yi[pp]) return yi(Yi[pp]);
-      {
-        const ip = [];
-        for (const cp in Si)
-          for (const Op in Si[cp].sprite) Op.startsWith(pp) && ip.push(Op);
-        return Yi[pp] = ip, yi(ip)
+    function bW(QQ) {
+      let {
+        leaderboard: WQ
+      } = QQ;
+      const XQ = function() {
+          const QQ = (0, FQ.g)("lobbyManage"),
+            [WQ, XQ] = (0, wQ.useReducer)((QQ => QQ + 1), 0),
+            [qQ] = (0, wQ.useState)((() => new PQ.b(XQ)));
+          return (0, wQ.useEffect)((() => {
+            const QQ = qQ.nextDeadline();
+            if (null === QQ) return;
+            const WQ = setTimeout((() => {
+              qQ.expire(Date.now()), XQ()
+            }), Math.max(0, QQ - Date.now()));
+            return () => {
+              clearTimeout(WQ)
+            }
+          })), (0, wQ.useMemo)((() => null === QQ ? null : {
+            state: QQ,
+            send: (QQ, WQ, wQ) => {
+              const TQ = qQ.send(QQ, WQ, null !== wQ && void 0 !== wQ ? wQ : null);
+              return XQ(), TQ
+            },
+            statusOf: QQ => qQ.statusOf(QQ, Date.now()),
+            showStatus: (QQ, WQ) => {
+              qQ.show(QQ, WQ)
+            },
+            isPending: QQ => qQ.isPending(QQ)
+          }), [QQ, WQ, qQ])
+        }(),
+        gQ = (0, sQ.l)((0, TQ.d)()),
+        JQ = (0, zQ.k)(),
+        [rQ, IQ] = (0, wQ.useState)((() => UW(JQ))),
+        [jQ, BQ] = (0, wQ.useState)(null);
+      return (0, wQ.useEffect)((() => {
+        null === JQ && (0, qQ.reportAnalyticsClick)({
+          id: "lobby_manage.open",
+          value: "menu_tab"
+        })
+      }), []), (0, wQ.useEffect)((() => {
+        null !== JQ && (IQ((QQ => (null === QQ || void 0 === QQ ? void 0 : QQ.seq) === JQ.seq ? QQ : UW(JQ))), void 0 !== JQ.focusName && "players" === JQ.page ? BQ({
+          name: JQ.focusName,
+          seq: JQ.seq
+        }) : (0, zQ.j)(JQ.seq))
+      }), [null === JQ || void 0 === JQ ? void 0 : JQ.seq]), null === XQ ? null : (0, CQ.jsx)("div", {
+        className: "LobbyManage Menu",
+        children: (0, CQ.jsx)(GW, {
+          pages: (0, sQ.f)(XQ.state, gQ),
+          manage: XQ,
+          leaderboard: WQ,
+          focusRequest: jQ,
+          onFocused: zQ.j,
+          landing: rQ
+        })
+      })
+    }
+  },
+  36859: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      b: () => gQ,
+      c: () => FQ
+    });
+    var wQ = XQ(1532),
+      qQ = XQ(2036),
+      TQ = XQ(2003);
+    const zQ = 1e4;
+    let sQ = 0;
+
+    function FQ(QQ) {
+      const WQ = ++sQ;
+      return new Promise((XQ => {
+        const sQ = WQ => {
+            FQ(), clearTimeout(PQ), !1 === (null === WQ || void 0 === WQ ? void 0 : WQ.ok) && (0, wQ.reportAnalyticsClick)({
+              id: "lobby_manage.refused",
+              value: QQ.type
+            }), XQ(WQ)
+          },
+          FQ = qQ.e.subscribe("lobbyManage", (QQ => {
+            const XQ = function(QQ, WQ) {
+              var XQ;
+              return null !== (XQ = null === QQ || void 0 === QQ ? void 0 : QQ.results.find((QQ => QQ.requestId === WQ))) && void 0 !== XQ ? XQ : null
+            }(QQ, WQ);
+            null !== XQ && sQ(XQ)
+          })),
+          PQ = setTimeout((() => {
+            sQ(null)
+          }), zQ);
+        TQ.gameBridge.send("lobbyManage", {
+          ...QQ,
+          requestId: WQ
+        })
+      }))
+    }
+    const PQ = [{
+      translationKey: "lobbyManageEntry:noAnswer"
+    }];
+    class gQ {
+      constructor(QQ) {
+        let WQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : FQ;
+        this.onChange = QQ, this.sendAction = WQ, this.pending = new Map, this.statuses = new Map
+      }
+      send(QQ, WQ, XQ) {
+        var wQ;
+        return this.statuses.delete(WQ), this.pending.set(WQ, (null !== (wQ = this.pending.get(WQ)) && void 0 !== wQ ? wQ : 0) + 1), this.sendAction(QQ).then((QQ => {
+          var wQ;
+          const qQ = null !== QQ && void 0 !== QQ ? QQ : {
+              requestId: -1,
+              ok: !1,
+              message: PQ
+            },
+            TQ = (null !== (wQ = this.pending.get(WQ)) && void 0 !== wQ ? wQ : 1) - 1;
+          TQ > 0 ? this.pending.set(WQ, TQ) : this.pending.delete(WQ);
+          const zQ = !qQ.ok || qQ.message.length > 0 ? qQ.message : null === XQ ? null : [XQ];
+          return null !== zQ && this.statuses.set(WQ, {
+            ok: qQ.ok,
+            text: zQ,
+            until: Date.now() + 4e3
+          }), this.onChange(), qQ
+        }))
+      }
+      show(QQ, WQ) {
+        this.statuses.set(QQ, {
+          ...WQ,
+          until: Date.now() + 4e3
+        }), this.onChange()
+      }
+      expire(QQ) {
+        for (const [WQ, XQ] of this.statuses) XQ.until <= QQ && this.statuses.delete(WQ)
+      }
+      nextDeadline() {
+        let QQ = null;
+        for (const XQ of this.statuses.values()) {
+          var WQ;
+          QQ = Math.min(null !== (WQ = QQ) && void 0 !== WQ ? WQ : 1 / 0, XQ.until)
+        }
+        return QQ
+      }
+      statusOf(QQ, WQ) {
+        const XQ = this.statuses.get(QQ);
+        return !XQ || XQ.until <= WQ ? null : {
+          ok: XQ.ok,
+          text: XQ.text
+        }
+      }
+      isPending(QQ) {
+        return this.pending.has(QQ)
+      }
+    }
+  },
+  37031: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      c: () => JQ
+    });
+    var wQ = XQ(61),
+      qQ = XQ(1081),
+      TQ = XQ.n(qQ),
+      zQ = XQ(1739),
+      sQ = XQ(1507),
+      FQ = XQ(1391),
+      PQ = XQ(1094),
+      gQ = XQ(1145);
+
+    function JQ(QQ) {
+      let {
+        label: WQ,
+        icon: XQ,
+        placeholder: qQ,
+        onSubmit: JQ
+      } = QQ;
+      const rQ = (0, wQ.useRef)(null),
+        [IQ, jQ] = (0, wQ.useState)(""),
+        [BQ, yQ] = (0, wQ.useState)("Enter"),
+        [VQ, DQ] = (0, wQ.useState)(null);
+      (0, wQ.useEffect)((() => {
+        if ("Success" !== BQ && "Error" !== BQ) return;
+        const QQ = setTimeout((() => {
+          "Success" === BQ && rQ.current && (rQ.current.value = "", jQ("")), yQ("Enter")
+        }), "Success" === BQ ? 1e3 : 4e3);
+        return () => {
+          clearTimeout(QQ)
+        }
+      }), [BQ]);
+      const pQ = () => {
+        const QQ = IQ.trim();
+        "" !== QQ && "Enter" === BQ && (yQ("Loading"), JQ(QQ).then((QQ => {
+          rQ.current && ("error" in QQ ? null === QQ.error ? yQ("Enter") : (DQ(QQ.error), yQ("Error")) : yQ("Success"))
+        })))
+      };
+      return (0, gQ.jsxs)("div", {
+        className: "PlayerNameField",
+        onKeyDown: QQ => {
+          QQ.target === rQ.current && "Escape" !== QQ.key && QQ.stopPropagation()
+        },
+        children: [(0, gQ.jsxs)("div", {
+          className: TQ()("AddFriendBodyOverlay", `AddFriendBodyOverlay${BQ}`),
+          children: ["Loading" === BQ && (0, gQ.jsx)(FQ.e, {}), "Success" === BQ && (0, gQ.jsx)(PQ.d, {
+            name: "check"
+          }), "Error" === BQ && VQ]
+        }), (0, gQ.jsxs)("div", {
+          className: "PlayerSearch",
+          children: [(0, gQ.jsx)(zQ.e, {
+            className: "PlayerSearchInput",
+            domRef: rQ,
+            maxLength: 32,
+            placeholderText: qQ,
+            ariaLabel: qQ,
+            stopPropagation: !1,
+            onValueChange: QQ => {
+              jQ(QQ)
+            },
+            onEnter: pQ
+          }), (0, gQ.jsxs)(sQ.h, {
+            className: "PlayerSearchInputButton SmallTextLight",
+            disabled: "Enter" !== BQ || "" === IQ.trim(),
+            onClick: pQ,
+            children: [(0, gQ.jsx)(PQ.d, {
+              name: XQ
+            }), " ", WQ]
+          })]
+        })]
+      })
+    }
+  },
+  37015: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      b: () => JQ
+    });
+    var wQ = XQ(61),
+      qQ = XQ(1081),
+      TQ = XQ.n(qQ),
+      zQ = XQ(1226),
+      sQ = XQ(1094),
+      FQ = XQ(1145);
+    const PQ = {
+        unlisted: "link",
+        public: "globe",
+        whitelist: "user-check",
+        private: "lock"
+      },
+      gQ = ["unlisted", "public", "whitelist", "private"];
+
+    function JQ(QQ) {
+      let {
+        visibility: WQ,
+        onPick: XQ
+      } = QQ;
+      const {
+        t: qQ
+      } = (0, zQ.C)(), JQ = (0, wQ.useRef)([]);
+      return (0, FQ.jsx)("div", {
+        className: "WorldSocialTiles",
+        role: "group",
+        "aria-label": qQ("worldSocial:whoCanJoin"),
+        children: gQ.map(((QQ, wQ) => {
+          const zQ = QQ === WQ;
+          return (0, FQ.jsxs)("button", {
+            ref: QQ => {
+              JQ.current[wQ] = QQ
+            },
+            type: "button",
+            className: TQ()("WorldSocialTile", {
+              WorldSocialTileSelected: zQ
+            }),
+            "aria-pressed": zQ,
+            tabIndex: zQ ? 0 : -1,
+            onKeyDown: QQ => {
+              ((QQ, WQ) => {
+                const XQ = "ArrowRight" === QQ.key || "ArrowDown" === QQ.key ? 1 : "ArrowLeft" === QQ.key || "ArrowUp" === QQ.key ? -1 : 0;
+                var wQ;
+                0 !== XQ && (QQ.preventDefault(), null === (wQ = JQ.current[(WQ + XQ + gQ.length) % gQ.length]) || void 0 === wQ || wQ.focus())
+              })(QQ, wQ)
+            },
+            onClick: () => {
+              XQ(QQ)
+            },
+            children: [(0, FQ.jsx)("span", {
+              className: "WorldSocialTileIcon",
+              children: (0, FQ.jsx)(sQ.d, {
+                name: PQ[QQ]
+              })
+            }), (0, FQ.jsxs)("span", {
+              className: "WorldSocialTileText",
+              children: [(0, FQ.jsx)("span", {
+                className: "WorldSocialTileTitle",
+                children: qQ(`worldSocial:${QQ}`)
+              }), (0, FQ.jsx)("span", {
+                className: "WorldSocialTileDescription",
+                children: qQ(`worldSocial:${QQ}Description`)
+              })]
+            })]
+          }, QQ)
+        }))
+      })
+    }
+  },
+  37024: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      c: () => sQ
+    });
+    var wQ = XQ(1226),
+      qQ = XQ(2798),
+      TQ = XQ(4677),
+      zQ = XQ(1145);
+
+    function sQ(QQ) {
+      let {
+        fJ: WQ,
+        children: XQ,
+        ...sQ
+      } = QQ;
+      const {
+        t: FQ
+      } = (0, wQ.C)();
+      return (0, zQ.jsx)("div", {
+        className: "WhitelistTickRow",
+        onClick: () => {
+          WQ.onChange(!WQ.on)
+        },
+        children: (0, zQ.jsx)(qQ.g, {
+          ...sQ,
+          opensProfileCard: !1,
+          children: (0, zQ.jsxs)("div", {
+            className: "WhitelistTickRowActions",
+            onClick: QQ => {
+              QQ.stopPropagation()
+            },
+            children: [XQ, (0, zQ.jsx)("label", {
+              className: "WhitelistTickRowTick",
+              children: (0, zQ.jsx)(TQ.b, {
+                checked: WQ.on,
+                disabled: !1,
+                ariaLabel: FQ("worldSocial:letJoin", {
+                  playerName: sQ.playerSocialPreview.name
+                }),
+                onChange: QQ => {
+                  WQ.onChange(QQ.target.checked)
+                }
+              })
+            })]
+          })
+        })
+      })
+    }
+  },
+  37011: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      b: () => jQ
+    });
+    var wQ = XQ(61),
+      qQ = XQ(1226),
+      TQ = XQ(1927),
+      zQ = XQ(105),
+      sQ = XQ(26),
+      FQ = XQ(1532),
+      PQ = XQ(2833),
+      gQ = XQ(34408),
+      JQ = XQ(1507),
+      rQ = XQ(1094),
+      IQ = XQ(1145);
+
+    function jQ(QQ) {
+      let {
+        worldCode: WQ,
+        message: XQ
+      } = QQ;
+      const {
+        t: jQ
+      } = (0, qQ.C)(), {
+        isTouchScreen: BQ
+      } = (0, sQ.n)(["isTouchScreen"]), yQ = zQ.featureFlags.canUseInviteLinks, VQ = (0, gQ.f)(yQ && null === XQ), [DQ, pQ] = (0, PQ.h)(), GQ = (0, wQ.useRef)(null);
+      if (null !== XQ) return (0, IQ.jsxs)("div", {
+        className: "WorldSocialLinkRow WorldSocialLinkRowMessage",
+        children: [(0, IQ.jsx)(rQ.d, {
+          name: "lock"
+        }), (0, IQ.jsx)("span", {
+          children: XQ
+        })]
+      });
+      const UQ = yQ ? VQ : WQ,
+        bQ = BQ && yQ && (0, PQ.c)();
+      return (0, IQ.jsxs)("div", {
+        className: "WorldSocialLinkRow",
+        children: [!yQ && (0, IQ.jsx)("span", {
+          className: "WorldSocialCodeLabel",
+          children: jQ("worldSocial:worldCode")
+        }), (0, IQ.jsx)("input", {
+          ref: GQ,
+          className: "WorldSocialLink",
+          readOnly: !0,
+          value: null !== UQ && void 0 !== UQ ? UQ : "",
+          "aria-label": jQ(yQ ? "worldSocial:worldLink" : "worldSocial:worldCode"),
+          onFocus: QQ => {
+            QQ.currentTarget.select()
+          }
+        }), (0, IQ.jsxs)(JQ.h, {
+          className: "WorldSocialCopy",
+          disabled: null === UQ,
+          onClick: () => {
+            null !== UQ && (0, PQ.g)(UQ, {
+              useShareSheet: bQ,
+              onOutcome: QQ => {
+                if ((0, FQ.reportAnalyticsClick)({
+                    id: "world_social.copy_link",
+                    value: "copied" !== QQ || yQ ? QQ : "code"
+                  }), "copied" === QQ) pQ();
+                else if ("failed" === QQ) {
+                  var WQ;
+                  null === (WQ = GQ.current) || void 0 === WQ || WQ.focus(), TQ.g.showMessage({
+                    translationKey: "partyBar:copyFailed"
+                  })
+                }
+              }
+            })
+          },
+          children: [(0, IQ.jsx)(rQ.d, {
+            name: DQ ? "check" : bQ ? "up-from-bracket" : "copy"
+          }), " ", jQ(DQ ? "general:copied" : bQ ? "worldSocial:share" : "general:copy")]
+        })]
+      })
+    }
+  },
+  37022: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      c: () => IQ,
+      f: () => rQ,
+      h: () => JQ
+    });
+    var wQ = XQ(646),
+      qQ = XQ(1226),
+      TQ = XQ(1707),
+      zQ = XQ(2798),
+      sQ = XQ(2756),
+      FQ = XQ(1507),
+      PQ = XQ(37024),
+      gQ = XQ(1145);
+
+    function JQ(QQ, WQ) {
+      var XQ;
+      return {
+        isError: !1,
+        name: QQ,
+        ranks: [...arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : []],
+        cosmetics: null !== WQ && void 0 !== WQ ? WQ : {},
+        nameColour: null !== (XQ = null === WQ || void 0 === WQ ? void 0 : WQ.nameColour) && void 0 !== XQ ? XQ : wQ.e,
+        location: {
+          status: "offline"
+        }
       }
     }
 
-    function Ai(pp) {
-      const ip = Li[pp];
-      if (void 0 === ip) throw new Error(`Invalid sound name ${pp} (not in any sprite sheet)`);
-      return ip
+    function rQ(QQ) {
+      let {
+        player: WQ,
+        isFriend: XQ = !1,
+        status: wQ,
+        showLocation: FQ = void 0 === wQ,
+        fJ: JQ,
+        onSendFriendRequest: rQ,
+        actions: IQ,
+        zIndex: jQ
+      } = QQ;
+      const {
+        t: BQ
+      } = (0, qQ.C)();
+      let yQ = wQ;
+      null !== JQ && void 0 !== JQ && JQ.on && (yQ = (0, gQ.jsxs)(gQ.Fragment, {
+        children: [null !== wQ && void 0 !== wQ ? wQ : (0, gQ.jsx)(sQ.b, {
+          socialPreview: WQ
+        }), (0, gQ.jsxs)("span", {
+          className: "WorldSocialCanJoin",
+          children: [" \xb7 ", BQ("worldSocial:canJoin")]
+        })]
+      }));
+      const VQ = {
+        playerSocialPreview: WQ,
+        isFriend: XQ,
+        hideFriendBadge: !0,
+        onFriendRemoved: XQ ? QQ => {
+          TQ.d.removeFriendFromState(QQ)
+        } : void 0,
+        status: yQ,
+        showLocation: FQ,
+        onSendFriendRequest: rQ,
+        zIndex: jQ
+      };
+      return JQ ? (0, gQ.jsx)(PQ.c, {
+        ...VQ,
+        fJ: JQ,
+        children: IQ
+      }) : (0, gQ.jsx)(zQ.g, {
+        ...VQ,
+        opensProfileCard: !1,
+        children: IQ || void 0
+      })
     }
 
-    function Pi(pp, ip) {
-      if (!(pp in Si)) throw new Error("Invalid spriteTrack name");
-      return ip in Si[pp].sprite
+    function IQ(QQ) {
+      let {
+        row: WQ,
+        fJ: XQ,
+        canInvite: wQ,
+        invited: TQ,
+        onInvite: zQ,
+        zIndex: sQ
+      } = QQ;
+      const {
+        t: PQ
+      } = (0, qQ.C)(), JQ = "online" === WQ.place ? FQ.h : FQ.l;
+      return (0, gQ.jsx)(rQ, {
+        player: WQ.friend,
+        isFriend: !0,
+        status: "here" === WQ.place ? PQ("worldSocial:inThisWorld") : void 0,
+        showLocation: !0,
+        fJ: XQ,
+        zIndex: sQ,
+        actions: wQ && (0, gQ.jsx)(JQ, {
+          className: "WorldSocialInvite SmallTextLight",
+          disabled: TQ,
+          onClick: zQ,
+          ariaLabel: `${PQ("worldSocial:invite")} ${WQ.friend.name}`,
+          children: PQ(TQ ? "worldSocial:invited" : "worldSocial:invite")
+        })
+      })
+    }
+  },
+  37003: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      c: () => FQ,
+      g: () => zQ,
+      h: () => PQ
+    });
+    var wQ = XQ(61),
+      qQ = XQ(4912),
+      TQ = XQ(1927);
+
+    function zQ(QQ) {
+      const WQ = {
+        lobbyName: QQ,
+        answer: null,
+        response: qQ.b.getSocialSettings(QQ)
+      };
+      return WQ.response.then((QQ => {
+        WQ.answer = QQ
+      })), WQ
+    }
+    const sQ = new Map;
+
+    function FQ(QQ) {
+      sQ.set(QQ.lobbyName, QQ)
     }
 
-    function Wi(pp) {
-      if (!(pp in Si)) throw new Error("Invalid spritesheet name");
-      return Si[pp]
+    function PQ(QQ) {
+      const [WQ] = (0, wQ.useState)((() => function(QQ) {
+        var WQ;
+        const XQ = null !== (WQ = sQ.get(QQ)) && void 0 !== WQ ? WQ : null;
+        return null !== XQ && void 0 !== XQ && XQ.answer && "error" in XQ.answer ? null : XQ
+      }(QQ))), [XQ, zQ] = (0, wQ.useState)((() => null !== WQ && void 0 !== WQ && WQ.answer && "settings" in WQ.answer ? WQ.answer.settings : null)), [FQ, PQ] = (0, wQ.useState)(!0), [gQ, JQ] = (0, wQ.useState)(null !== XQ), rQ = (0, wQ.useRef)(XQ);
+      rQ.current = XQ;
+      const IQ = (0, wQ.useRef)(0),
+        jQ = (0, wQ.useRef)(0),
+        BQ = (0, wQ.useRef)(!1),
+        yQ = (0, wQ.useRef)(!0),
+        VQ = (0, wQ.useCallback)((async WQ => {
+          const XQ = ++IQ.current,
+            wQ = await (null !== WQ && void 0 !== WQ ? WQ : qQ.b.getSocialSettings(QQ));
+          yQ.current && XQ === IQ.current && (JQ(!0), PQ(!1), "error" in wQ || zQ(wQ.settings))
+        }), [QQ]),
+        DQ = (0, wQ.useCallback)((() => {
+          PQ(!0), VQ()
+        }), [VQ]),
+        pQ = (0, wQ.useCallback)((() => {
+          jQ.current > 0 ? BQ.current = !0 : VQ()
+        }), [VQ]);
+      (0, wQ.useEffect)((() => (yQ.current = !0, sQ.delete(QQ), PQ(!0), VQ(null === WQ || void 0 === WQ ? void 0 : WQ.response), () => {
+        yQ.current = !1
+      })), [VQ, QQ, WQ]);
+      const GQ = QQ => {
+        IQ.current++, PQ(!1), rQ.current = QQ, zQ(QQ)
+      };
+      return {
+        settings: XQ,
+        loading: FQ,
+        answered: gQ,
+        retry: DQ,
+        refresh: pQ,
+        change: async function(WQ, XQ) {
+          let {
+            quiet: wQ = !1,
+            onAnswer: zQ
+          } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+          const sQ = rQ.current;
+          if (null === sQ) return !1;
+          GQ(XQ(sQ)), jQ.current > 0 && (BQ.current = !0), jQ.current++;
+          const FQ = await qQ.b.setSocialSettings(QQ, WQ);
+          jQ.current--;
+          const PQ = !("error" in FQ);
+          if (!yQ.current) return PQ;
+          if (null === zQ || void 0 === zQ || zQ(FQ), wQ);
+          else if ("error" in FQ) TQ.g.showMessage({
+            translationKey: FQ.error
+          });
+          else
+            for (const QQ of FQ.notFound) TQ.g.showMessage({
+              translationKey: "worldSocial:notFound",
+              params: {
+                playerName: QQ
+              }
+            });
+          if (jQ.current > 0) return PQ;
+          const gQ = BQ.current;
+          return BQ.current = !1, !gQ && "settings" in FQ ? GQ(FQ.settings) : (gQ || GQ(sQ), VQ()), PQ
+        }
+      }
+    }
+  },
+  37038: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      d: () => zQ,
+      e: () => TQ
+    });
+    var wQ = XQ(193);
+    const qQ = new Map;
+
+    function TQ(QQ, WQ) {
+      var XQ;
+      const wQ = null !== (XQ = qQ.get(QQ)) && void 0 !== XQ ? XQ : new Map;
+      wQ.set(WQ, Date.now()), qQ.set(QQ, wQ)
     }
 
-    function yi(pp) {
-      return pp[Math.floor(Math.random() * pp.length)]
+    function zQ(QQ) {
+      const WQ = qQ.get(QQ);
+      if (!WQ) return [];
+      const XQ = Date.now();
+      for (const [qQ, TQ] of WQ) XQ - TQ >= wQ.i && WQ.delete(qQ);
+      return [...WQ.keys()]
+    }
+  },
+  37008: (QQ, WQ, XQ) => {
+    function wQ(QQ, WQ) {
+      const XQ = WQ.toLowerCase();
+      for (const wQ of QQ)
+        if (wQ.toLowerCase() === XQ) return !0;
+      return !1
+    }
+
+    function qQ(QQ, WQ, XQ) {
+      const qQ = [],
+        TQ = [],
+        zQ = [];
+      for (const sQ of QQ) !sQ.isError && sQ.name && ("inGame" === sQ.location.status && sQ.location.inLobbyName === WQ || wQ(XQ, sQ.name) ? TQ.push({
+        friend: sQ,
+        place: "here"
+      }) : "offline" === sQ.location.status ? zQ.push({
+        friend: sQ,
+        place: "offline"
+      }) : qQ.push({
+        friend: sQ,
+        place: "online"
+      }));
+      return [...qQ, ...TQ, ...zQ]
+    }
+
+    function TQ(QQ, WQ, XQ) {
+      const qQ = [],
+        TQ = QQ.flatMap((QQ => "here" === QQ.place ? [QQ.friend.name] : []));
+      for (const zQ of [...TQ, ...WQ]) wQ(qQ, zQ) || wQ(XQ, zQ) || qQ.push(zQ);
+      return qQ
+    }
+
+    function zQ(QQ, WQ) {
+      return null === QQ || void 0 === QQ || !QQ.canManage || wQ(QQ.whitelist, WQ) ? "none" : "whitelist" === QQ.visibility ? "required" : "quiet"
+    }
+
+    function sQ(QQ) {
+      if (null === QQ) return !0;
+      const {
+        visibility: WQ
+      } = QQ;
+      return "public" === WQ || "unlisted" === WQ || "whitelist" === WQ && QQ.canManage
+    }
+
+    function FQ(QQ, WQ, XQ) {
+      if (XQ) {
+        const XQ = WQ.filter((WQ => !wQ(QQ.whitelist, WQ)));
+        return {
+          ...QQ,
+          whitelist: [...QQ.whitelist, ...XQ]
+        }
+      }
+      return {
+        ...QQ,
+        whitelist: QQ.whitelist.filter((QQ => !wQ(WQ, QQ)))
+      }
+    }
+
+    function PQ(QQ, WQ) {
+      const XQ = [];
+      for (let wQ = 0; wQ < QQ.length; wQ += WQ) XQ.push(QQ.slice(wQ, wQ + WQ));
+      return XQ
+    }
+    XQ.d(WQ, {
+      c: () => sQ,
+      f: () => TQ,
+      g: () => qQ,
+      j: () => wQ,
+      m: () => PQ,
+      p: () => zQ,
+      r: () => FQ
+    })
+  },
+  37286: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      d: () => TQ
+    });
+    var wQ = XQ(61),
+      qQ = XQ(2535);
+
+    function TQ() {
+      const QQ = (0, qQ.g)("lobbyLeaderboardInfo");
+      return (0, wQ.useMemo)((() => function(QQ) {
+        if (null === QQ) return null;
+        const WQ = Object.entries(QQ),
+          XQ = WQ.filter((QQ => {
+            let [, WQ] = QQ;
+            return void 0 !== WQ
+          }));
+        if (XQ.length === WQ.length) return QQ;
+        const wQ = Object.fromEntries(XQ),
+          qQ = Object.keys(QQ).filter((QQ => !Object.hasOwn(wQ, QQ)));
+        return console.warn(`lobbyLeaderboardInfo left out its undefined columns: ${qQ.join(", ")}`), wQ
+      }(QQ)), [QQ])
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

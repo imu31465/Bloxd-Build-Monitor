@@ -1,559 +1,230 @@
 export const id = 206;
 export const ids = [206];
 export const modules = {
-  34493: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => lp,
-      e: () => Xp,
-      f: () => Ep
+  34529: (QQ, WQ, XQ) => {
+    XQ.r(WQ), XQ.d(WQ, {
+      MAX_BLOCK_ID: () => wQ,
+      armourReductionOf: () => tQ,
+      clipSizeOf: () => SQ,
+      creativeAltNames: () => zW,
+      creativeCategoryOf: () => mQ,
+      creativeItemCategories: () => sQ,
+      creativeItemCategoryIcons: () => FQ,
+      creativeItemIds: () => KQ,
+      descriptionOf: () => LQ,
+      displayNameOf: () => uQ,
+      dropsNothing: () => nQ,
+      enchantmentPerksOf: () => ZQ,
+      gunTypeOf: () => eQ,
+      harvestsNullLevelOf: () => xQ,
+      isDevOnlyItem: () => XW,
+      itemIsDisabled: () => qW,
+      itemTypeNameOf: () => fQ,
+      itemTypeOf: () => kQ,
+      rootMetaDescOf: () => NQ,
+      scopeTypeOf: () => oQ,
+      showInCreativeInvenOf: () => wW,
+      showOnlyInCreativeCategory: () => WW,
+      showOnlyInCreativeSearch: () => QW,
+      showsAimingUi: () => YQ
     });
-    var Op = cp(34496);
-    const op = {
-        fileBytes: 4194304,
-        vertices: 65535,
-        indices: 196608,
-        accessorElements: 196608,
-        primitives: 64,
-        nodes: 128,
-        meshes: 64,
-        materials: 8,
-        images: 8,
-        imageSide: 1024
-      },
-      Ip = {
-        items: 1024,
-        perFile: 1024,
-        surfaces: 256,
-        few: 64,
-        bounds: 16,
-        attributeMembers: 32
-      },
-      Sp = 1048576,
-      xp = "is not a binary glTF 2.0 file",
-      Lp = "loads data from outside the file",
-      Yp = new Set(["KHR_draco_mesh_compression", "KHR_materials_unlit", "KHR_texture_transform", "KHR_materials_specular", "KHR_materials_ior", "KHR_materials_anisotropy"]),
-      Dp = {
-        POSITION: "VEC3",
-        NORMAL: "VEC3",
-        TEXCOORD_0: "VEC2",
-        COLOR_0: "VEC4"
-      },
-      Ap = {
-        type: "VEC2",
-        componentTypes: [5126, 5121, 5123]
-      },
-      Pp = {
-        TANGENT: {
-          type: "VEC4",
-          componentTypes: [5126]
-        },
-        TEXCOORD_1: Ap,
-        TEXCOORD_2: Ap,
-        TEXCOORD_3: Ap,
-        TEXCOORD_4: Ap,
-        TEXCOORD_5: Ap
-      },
-      Wp = new Set(Op.h.map((pp => {
-        let [ip] = pp;
-        return ip
-      }))),
-      yp = {
-        1: "line",
-        2: "line loop",
-        3: "line strip",
-        5: "triangle strip",
-        6: "triangle fan"
-      },
-      Up = 5126;
-
-    function wp(pp) {
-      return pp.toLocaleString("en-US")
-    }
-
-    function vp(pp, ip, cp) {
-      return pp > ip ? `has ${wp(pp)} ${cp} (the limit is ${wp(ip)})` : null
-    }
-
-    function tp(pp, ip) {
-      return Number.isInteger(pp) && pp >= 0 && pp < (null !== ip && void 0 !== ip ? ip : 0)
-    }
-
-    function Hp(pp) {
-      return Number.isInteger(pp) && pp >= 0
-    }
-
-    function dp(pp, ip) {
-      return void 0 !== pp && (!Array.isArray(pp) || pp.length > ip)
-    }
-
-    function ep(pp, ip) {
-      return "object" === typeof pp && null !== pp && Object.keys(pp).length > ip
-    }
-
-    function jp(pp) {
-      var ip;
-      return `${pp.normalized?"normalized ":""}${null!==(ip=Op.f[pp.componentType])&&void 0!==ip?ip:pp.componentType} ${pp.type}`
-    }
-
-    function kp(pp) {
-      const ip = ip => {
-        var cp;
-        return null !== (cp = pp[ip]) && void 0 !== cp ? cp : -1
+    const wQ = 8558,
+      qQ = "''WL&M3GT%cM)MK$YE1aM2'I+F+O_*c^*=%'%%%%%%%K>F>%%)K=H=%%[*W5_5['[R$ZW$S%[X&NH&L5C$W$5,KS&%]]&I%^Z&NM&b7TK$Y6G,Y>%M%M7P6$WD%Vc$LZ$OY$%+Q[&;S$/G$N&W%F$W%F$S$N&G'.F$c%`'1+%)41(1(+49$(2=b$/`N,RN,K/c_&Q0EC$O(''P`&O$%-%%^R2-*)&%;NV/ZT%IT%3XM$%%%%%_U$%b73.%%`-T-%%%%%%L9$M8X7/$``3/Fa3T+%%%%SAQ<U6W<^7V]&&)*'OAO<Y6W<^7X]&+&)*'CG%%`)W<^7VW&C[&Tc%Wc%Tc%P;'O;Uc%PH%SH%]T$`T$J;^7S&ZX%S]%VX$ZF$U5W^/TF$aU/C$C$C$C$C$O7E7K<^7RX%33333`4E7K<^7_`$++++++O1K<^7_B$aR%%D'%b_$CH$%%%G3'Y*R?SH&]I&I>RO&KM&DC%L$/Q+C.Q0QH$''_b$TS$J-%%%%%%%%%)I%)$','G6b=E7K<^7NQ&%%%%%%%%%%%%%%%CW&S$S$S$S$S$S$S$S$S$S$S$S$S$S$S$G:+++++++++++++++S+%%%%Va$*$(50)2+,7:%)5>Q?^1S$]T$XG&333333333333333U[$333333333333333CN%)@G$))))X$`$))))P%W%]H(<3$3('<)%+.3$2+YJ2HH2*$&52)6%+/2%7&6MD%S$/G$N&W%F$W%F$S$N&G'.F$c%`'O['C%3S$R'S&R$S&R$C%R'S(2R$c&S)Xc&'+%)41(1(+49$(2=Q$S$/G$N&W%F$W%F$S$N&G'.F$c%`'C]&C%3S$R'S&R$S&R$C%R'S(2R$c&S)TI'+%)41(1(+49$(2=Q)S$/G$N&W%F$W%F$S$N&G'.F$c%`'C_&C%3S$R'S&R$S&R$C%R'S(2R$c&S)JW*34$*'9(-0,+.9('CZ$34$*'9(-0,+.9('M%%%%%%%%%%%%%%%%MM'cJ)%%%%%%%%%%%%%%%G-+++++++++++++++UZ(X-%%M.DE(//////G2E7K<^7_S%/Wa$M3MT%_b'//////QY$DY$///////////////////////`Y'3333333333MD*C&C&C&C&C&C&C&C&C&C&M.C$C$C$C$C$C$C$C$C$C$FW+333333333333333333333333333333M`,'cF2%CG2%%%%%%%%%'E8N7%%%''''''-+%)41(1(+49$(2=E$)$'%%/_%E+'%)%%)&)&)%'%%%%%%cI2)%G`12^,T,%%%[-%%%%%%%%%%%VD1+WD1(%%)$b<T%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%aD2%%E>WO%b`+%%%ab.EC&HC&U6UA%%%%LU$'5[5H<%%'%%3`;%QH$M&%UD$W$/%%%^L*cR-OK1%RN2+S$^L2%M$@%.%5%+%O$)%H$%5%.%M$%+%+%+%+)))%+N%L$%5%.%3+%)%T%%.%5%-$S%%.%5%+%)))+%)c&D$-7S%,R%Q$,=F$O$4F$W%-)))-)]0'%'%+['$W.+%)41(1(+49$(2=M<%'+%)41(1(+49$(2=%%'+%)41(1(+49$(2=V_$%%%%%%%%%%%%'%%%%%%%%%%%%%%%HL1%%%%%[Y1+++++++++5UU$%%%%'%%%%3%%%%'%%%%'%%%%N$%%%%RV$EY$3JJ%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Y6)&[$&3Z$&[$>.'/'>3?.Z1'%*W2%'F3%%M0W%RJ/--L+W+-D,%K*^3-VT(C[$G<G'+J'%%%%%%%%%%%%%%%U&%%%%%%%5%%6+1%%%%%%E'++++MI2%%%%%%aG2IU$C$C$C$SO$RN$C$C$KZ0%%%H$'-.c)55&Y$*V%%%'%%%%%%%'%%%%%''%%%%%%%%%%%%%%%%%%%'%%'%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%M$%%%%%%%%%%%%%K(Y$Y$Y$c'Y$Y$Y$c'Y$Y$Y$c'Y$Y$Y$c'Y$Y$Y$a'Y$Y$Y$F(Y$Y$Y$V'Y$Y$Y$]'Y$Y$Y$Z'Y$Y$Y$c'Y$Y$Y$a'Y$Y$Y$c'Y$Y$Y$c'Y$Y$Y$J(Y$Y$Y$D)Y$Y$Y$c'Y$Y$Y$_'Y$Y$Y$H(Y$Y$Y$c'Y$Y$Y$E$%%%%%%%%%%%%%%%%%+-%%%%%%%%%%%%%+-%%%%%%%%%%%%%+-%%%%%%%%%%%%%+-%%%%%%%%%%%%%%%VI6QX(%%%%%%%%%%%%%%%%",
+      TQ = "S-$SW$$R&$SG2$)$'$)$4$)$X*$I6$-$%$%$cC1$WD1$%%%$]5$b7$RH4$%$%$%$%$%$%$%$%$%$)$N+$EG&$ZT%$IT%$3$XM$$%$%$%$%$%$Z1$Y[$$O`0$'$'$'$-&+&%&)&4&1&(&1*(*+&4&9&$&(&2&=&E$&'&%&%&%&1%_%$TV3$%$D.$$$Uc&$S$$S$$S$$S$$S$$S$$S$&S$&S$$S$$S$$S$$S$$S$$S$$S$$^1$S$$]I($%$M/$+$N-$%$Z$$%$I6$3$Uc$$3$WR%$X$$T`%$F$$CC($R$$P_&$($I$$($W'$F$$WC'$R$$cZ&$F$$WE'$R$$Cc,$($[<$%$'$+$%$)$4$1$($1&(&+$4$9$$$($2$=$%$%$'$+$%$)$4$1$($1&(&+$4$9$$$($2$=$ZX$$%$%$%$%$%$%$%$%$%$cb0$MK2'T%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$aD2$%$%$E>$WO%$b`+$%$%$%$ab.$EC&$HC&$U6$UA$%$%$%$%$LU$$'$5$[5$H<$%$%$'$%$%$3$`;$%$QH$$M&$%$UD$$W$$/$%$%$%$^L*$FP0$QX($%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$%$L]%$OP1%%%S@&%'%'%'%'%%ZU0$C$$C$$C$$SO$$RN$$C$$C$$OZ0%/%",
+      zQ = "Crafting Table|Cauldron|Sign|Iron Nugget|Gold Nugget|Diamond Nugget|Moonstone Nugget|Iron Ingot|Gold Ingot|Draugr Knight Sword|Cooked Potato|Cooked Beef|Raw Lamb|Cooked Lamb|Gold Watermelon Stag Antlers|Bear Fur|Cave Golem Eye|Frost Golem Eye|Draugr Knight Heart|Fur Boots|Milk Bottle|Yellow Flower|Red Flower|Red Flower|Pink Flower|White Flower|Orange Flower|White Yellow Flower|Blue Flower|Blue Flower|Purple Flower|Black Flower|Cobblestone|Carved Cobblestone|Mossy Cobblestone|Snowy Cobblestone|Compressed Snow|Compressed Cobblestone|Extra Compressed Cobblestone|Super Compressed Cobblestone|Hyper Compressed Cobblestone|Ultra Compressed Cobblestone|Mega Compressed Cobblestone|Cobblestone Slab|Snowy Cobblestone Slab|Wood Hand Glider|Iron Hand Glider|Gold Hand Glider|Diamond Hand Glider|White Go Kart|White Cart|White Go Cart|Orange Go Kart|Orange Cart|Orange Go Cart|Magenta Go Kart|Magenta Cart|Magenta Go Cart|Light Blue Go Kart|Light Blue Cart|Light Blue Go Cart|Yellow Go Kart|Yellow Cart|Yellow Go Cart|Lime Go Kart|Lime Cart|Lime Go Cart|Pink Go Kart|Pink Cart|Pink Go Cart|Gray Go Kart|Gray Cart|Gray Go Cart|Grey Kart|Grey Go Kart|Grey Cart|Grey Go Cart|Light Gray Go Kart|Light Gray Cart|Light Gray Go Cart|Light Grey Kart|Light Grey Go Kart|Light Grey Cart|Light Grey Go Cart|Cyan Go Kart|Cyan Cart|Cyan Go Cart|Purple Go Kart|Purple Cart|Purple Go Cart|Blue Go Kart|Blue Cart|Blue Go Cart|Brown Go Kart|Brown Cart|Brown Go Cart|Green Go Kart|Green Cart|Green Go Cart|Red Go Kart|Red Cart|Red Go Cart|Black Go Kart|Black Cart|Black Go Cart|Off Road Jeep|Off Road Truck|Off Road Car|Drill|Mining Drill|Digger|Drill|Mining Drill|Digger|Drill|Mining Drill|Digger|Drill|Mining Drill|Digger|Light Blue Car|Light Blue Sedan|Hoverboat|Grey Planks|Light Grey Planks|Light Grey Wool|Grey Wool|White Flag|Orange Flag|Magenta Flag|Light Blue Flag|Yellow Flag|Lime Flag|Pink Flag|Gray Flag|Grey Banner|Grey Flag|Light Gray Flag|Light Grey Banner|Light Grey Flag|Cyan Flag|Purple Flag|Blue Flag|Brown Flag|Green Flag|Red Flag|Black Flag|Draugr Flag|Skull Flag|Rainbow Flag|Grey Baked Clay|Light Grey Baked Clay|Grey Ceramic|Light Grey Ceramic|Grey Glass|Light Grey Glass|Grey Concrete|Light Grey Concrete|Grey Bed|Light Grey Bed|Grey Strongbed|Light Grey Strongbed|Small Grey Pod|Small Light Grey Pod|Grey Concrete Slab|Light Grey Concrete Slab|Grey Concrete Stairs|Light Grey Concrete Stairs|Grey Chalk|Light Grey Chalk|Grey Chalk Bricks|Light Grey Chalk Bricks|Grey Chalk Slab|Light Grey Chalk Slab|Grey Chalk Stairs|Light Grey Chalk Stairs|Grey Chalk Bricks Slab|Light Grey Chalk Bricks Slab|Grey Chalk Bricks Stairs|Light Grey Chalk Bricks Stairs|Grey Balloon|Light Grey Balloon|Firework|Rainbow Firework|White Firework|Orange Firework|Magenta Firework|Light Blue Firework|Yellow Firework|Lime Firework|Pink Firework|Gray Firework|Grey Firework|Grey Firecracker|Light Gray Firework|Light Grey Firework|Light Grey Firecracker|Cyan Firework|Purple Firework|Blue Firework|Brown Firework|Green Firework|Red Firework|Black Firework|Firework Pebble|Rainbow Firework Pebble|White Firework Pebble|Orange Firework Pebble|Magenta Firework Pebble|Light Blue Firework Pebble|Yellow Firework Pebble|Lime Firework Pebble|Pink Firework Pebble|Gray Firework Pebble|Grey Firework Pebble|Grey Firecracker Pebble|Light Gray Firework Pebble|Light Grey Firework Pebble|Light Grey Firecracker Pebble|Cyan Firework Pebble|Purple Firework Pebble|Blue Firework Pebble|Brown Firework Pebble|Green Firework Pebble|Red Firework Pebble|Black Firework Pebble|Grey Wood Helmet|Grey Wood Chestplate|Grey Wood Leggings|Grey Wood Boots|Grey Wood Gauntlets|Light Grey Wood Helmet|Light Grey Wood Chestplate|Light Grey Wood Leggings|Light Grey Wood Boots|Light Grey Wood Gauntlets|Command Block|Mob Net|Catcher Net|Pet Net|Pet Catcher|Mob Pig Spawn Egg|Mob Cow Spawn Egg|Mob Sheep Spawn Egg|Mob Horse Spawn Egg|Mob Camel Spawn Egg|Mob Iron Goofy Golem Spawn Egg|Mob Gold Goofy Golem Spawn Egg|Mob Diamond Goofy Golem Spawn Egg|Mob Moonstone Goofy Golem Spawn Egg|Mob Deer Spawn Egg|Mob Slime Spawn Egg|Mob Wolf Spawn Egg|Mob Wildcat Spawn Egg|Mob Spirit Golem Spawn Egg|Mob Spirit Wolf Spawn Egg|Mob Spirit Bear Spawn Egg|Mob Spirit Stag Spawn Egg|Mob Spirit Gorilla Spawn Egg|Mob Bear Spawn Egg|Mob Stag Spawn Egg|Mob Gold Watermelon Stag Spawn Egg|Mob Gorilla Spawn Egg|Mob Cave Golem Spawn Egg|Mob Draugr Zombie Spawn Egg|Mob Draugr Skeleton Spawn Egg|Mob Frost Golem Spawn Egg|Mob Frost Zombie Spawn Egg|Mob Frost Skeleton Spawn Egg|Mob Draugr Knight Spawn Egg|Mob Draugr Huntress Spawn Egg|Mob Magma Golem Spawn Egg|Mob Draugr Warper Spawn Egg|Mob Frost Wraith Spawn Egg|Mob Draugr Reaver Spawn Egg|Mob Stalker Spawn Egg|Mob Crone Spawn Egg|Mob Iron Guardian Spawn Egg|Mob Gold Guardian Spawn Egg|Mob Diamond Guardian Spawn Egg|Mob Moonstone Guardian Spawn Egg|Mob Tiki Terror Spawn Egg|Pig Mob Spawner Block|Cow Mob Spawner Block|Sheep Mob Spawner Block|Horse Mob Spawner Block|Camel Mob Spawner Block|Iron Goofy Golem Mob Spawner Block|Gold Goofy Golem Mob Spawner Block|Diamond Goofy Golem Mob Spawner Block|Moonstone Goofy Golem Mob Spawner Block|Deer Mob Spawner Block|Slime Mob Spawner Block|Wolf Mob Spawner Block|Wildcat Mob Spawner Block|Spirit Golem Mob Spawner Block|Spirit Wolf Mob Spawner Block|Spirit Bear Mob Spawner Block|Spirit Stag Mob Spawner Block|Spirit Gorilla Mob Spawner Block|Bear Mob Spawner Block|Stag Mob Spawner Block|Gold Watermelon Stag Mob Spawner Block|Gorilla Mob Spawner Block|Cave Golem Mob Spawner Block|Draugr Zombie Mob Spawner Block|Draugr Skeleton Mob Spawner Block|Frost Golem Mob Spawner Block|Frost Zombie Mob Spawner Block|Frost Skeleton Mob Spawner Block|Draugr Knight Mob Spawner Block|Draugr Huntress Mob Spawner Block|Magma Golem Mob Spawner Block|Draugr Warper Mob Spawner Block|Frost Wraith Mob Spawner Block|Draugr Reaver Mob Spawner Block|Stalker Mob Spawner Block|Crone Mob Spawner Block|Iron Guardian Mob Spawner Block|Gold Guardian Mob Spawner Block|Diamond Guardian Mob Spawner Block|Moonstone Guardian Mob Spawner Block|Tiki Terror Mob Spawner Block|Barrier|Yellow Light Block|White Light Block|Red Light Block|Purple Light Block|Pink Light Block|Orange Light Block|Magenta Light Block|Lime Light Block|Light Gray Light Block|Light Blue Light Block|Green Light Block|Gray Light Block|Cyan Light Block|Brown Light Block|Blue Light Block|Black Light Block|Sky Light Block|Empty Mob Spawner Block|XRay Vision Potion|X Ray Vision Potion|Splash XRay Vision Potion|Splash X Ray Vision Potion|Experience Orb|EXP Orb|Enchanting Orb|Experience Potion|Enchanting Potion|Bottle of Enchanting|EXP Potion|Experience Potion II|Enchanting Potion II|Bottle of Enchanting II|EXP Potion II|Splash Experience Potion|Splash Enchanting Potion|Splash Bottle of Enchanting|Splash EXP Potion|Splash Experience Potion II|Splash Enchanting Potion II|Splash Bottle of Enchanting II|Splash EXP Potion II|Enchanting Arrow|EXP Arrow|Sheep Painting|Cow Painting|Pig Painting|Horse Painting|Camel Painting|Wolf Painting|Deer Painting|Wildcat Painting|Cow Milk|Cows Milk|Sheep Milk|Sheeps Milk",
+      sQ = ["building", "colours", "nature", "decoration", "utility", "tools", "combat", "food", "mobs", "materials", "worldTools"],
+      FQ = {
+        building: "Stone Bricks",
+        colours: "Magenta Wool",
+        nature: "Grass Block",
+        decoration: "Lantern",
+        utility: "Workbench",
+        tools: "Iron Pickaxe",
+        combat: "Iron Sword",
+        food: "Apple",
+        mobs: "Pig Spawn Orb",
+        materials: "Iron Bar",
+        worldTools: "Code Block"
       };
-      return 255 === ip(0) && 216 === ip(1) ? "JPEG" : 82 === ip(0) && 73 === ip(1) && 87 === ip(8) && 69 === ip(9) ? "WebP" : 171 === ip(0) && 75 === ip(1) && 84 === ip(2) && 88 === ip(3) ? "KTX2" : "non-PNG"
-    }
+    var PQ = XQ(3555),
+      gQ = XQ(3559);
+    const JQ = Object.freeze([]);
 
-    function mp(pp) {
-      return pp.length >= 24 && [137, 80, 78, 71, 13, 10, 26, 10].every(((ip, cp) => pp[cp] === ip)) && 73 === pp[12] && 72 === pp[13] && 68 === pp[14] && 82 === pp[15]
-    }
-
-    function Rp(pp) {
-      return /^[aeiou]/i.test(pp) ? `an ${pp}` : `a ${pp}`
-    }
-
-    function qp(pp) {
-      const ip = pp.byteStride;
-      return void 0 === ip || Number.isInteger(ip) && ip >= 4 && ip <= 252 && ip % 4 === 0
-    }
-
-    function Mp(pp, ip, cp) {
-      var Op, op;
-      const Ip = null === (Op = pp.bufferViews) || void 0 === Op ? void 0 : Op[cp];
-      if (!Ip || !ip || 0 !== Ip.buffer) return null;
-      const Sp = null !== (op = Ip.byteOffset) && void 0 !== op ? op : 0;
-      return !Hp(Sp) || !Hp(Ip.byteLength) || Sp + Ip.byteLength > ip.byteLength ? null : ip.subarray(Sp, Sp + Ip.byteLength)
-    }
-
-    function Cp(pp, ip) {
-      var cp, op, Ip;
-      const Sp = Op.r[ip.type],
-        xp = Op.c[ip.componentType];
-      if (!Sp || !xp || !Number.isInteger(ip.count) || ip.count < 0) return !1;
-      if (void 0 === ip.bufferView) return !0;
-      const Lp = null === (cp = pp.bufferViews) || void 0 === cp ? void 0 : cp[ip.bufferView],
-        Yp = null !== (op = ip.byteOffset) && void 0 !== op ? op : 0;
-      if (!Lp || !Hp(Yp) || Yp % xp !== 0) return !1;
-      const Dp = Sp * xp,
-        Ap = null !== (Ip = Lp.byteStride) && void 0 !== Ip ? Ip : Dp;
-      if (Ap < Dp) return !1;
-      return (0 === ip.count ? 0 : Yp + Ap * (ip.count - 1) + Dp) <= Lp.byteLength
-    }
-
-    function Ep(pp) {
-      return pp > op.fileBytes ? `is ${(pp/Sp).toFixed(1)} MiB (the limit is ${op.fileBytes/Sp} MiB)` : null
-    }
-
-    function Xp(pp, ip) {
-      try {
-        return function(pp, ip) {
-          var cp, Sp, Ap, wp, Hp, Ep, Xp, lp, Qp, Jp, Bp, Np, Tp, fp, bp, hp, ap;
-          const np = Array.isArray(pp.extensionsUsed) && pp.extensionsUsed.includes("KHR_draco_mesh_compression");
-          if (function(pp, ip) {
-              var cp, Op;
-              const {
-                items: op,
-                perFile: Sp,
-                surfaces: xp,
-                few: Lp,
-                bounds: Yp,
-                attributeMembers: Dp
-              } = Ip;
-              if (dp(pp.extensionsRequired, Lp) || dp(pp.animations, 1 / 0) || dp(pp.skins, 1 / 0)) return !0;
-              if (null !== (cp = pp.animations) && void 0 !== cp && cp.length || null !== (Op = pp.skins) && void 0 !== Op && Op.length) return !1;
-              if ([
-                  [pp.buffers, Lp],
-                  [pp.scenes, Lp],
-                  [pp.bufferViews, op],
-                  [pp.accessors, op],
-                  [pp.nodes, op],
-                  [pp.meshes, op],
-                  [pp.materials, xp],
-                  [pp.textures, xp],
-                  [pp.samplers, xp],
-                  [pp.images, xp]
-                ].some((pp => {
-                  let [ip, cp] = pp;
-                  return dp(ip, cp)
-                }))) return !0;
-              for (const Ip of null !== (Ap = pp.accessors) && void 0 !== Ap ? Ap : []) {
-                var Ap, Pp, Wp;
-                if (Number.isInteger(Ip.count) && (!Number.isSafeInteger(Ip.count) || Object.is(Ip.count, -0)) || dp(null !== (Pp = Ip.min) && void 0 !== Pp ? Pp : void 0, Yp) || dp(null !== (Wp = Ip.max) && void 0 !== Wp ? Wp : void 0, Yp)) return !0
-              }
-              for (const Ip of null !== (yp = pp.scenes) && void 0 !== yp ? yp : []) {
-                var yp;
-                if (dp(Ip.nodes, op)) return !0
-              }
-              let Up = 0;
-              for (const Ip of null !== (wp = pp.nodes) && void 0 !== wp ? wp : []) {
-                var wp, vp, tp;
-                if (dp(Ip.children, Sp)) return !0;
-                Up += null !== (vp = null === (tp = Ip.children) || void 0 === tp ? void 0 : tp.length) && void 0 !== vp ? vp : 0
-              }
-              if (Up > Sp) return !0;
-              let Hp = 0;
-              for (const Ip of null !== (jp = pp.meshes) && void 0 !== jp ? jp : []) {
-                var jp;
-                if (!Array.isArray(Ip.primitives)) return !0;
-                if (Hp += Ip.primitives.length, Hp > Sp) return !0;
-                for (const pp of Ip.primitives) {
-                  var kp;
-                  const cp = ip ? null === (kp = pp.extensions) || void 0 === kp ? void 0 : kp.KHR_draco_mesh_compression : void 0;
-                  if (ep(pp.attributes, Dp) || ep(null === cp || void 0 === cp ? void 0 : cp.attributes, Dp)) return !0
-                }
-              }
-              return !1
-            }(pp, np)) return xp;
-          const Fp = null === (cp = pp.asset) || void 0 === cp ? void 0 : cp.version;
-          if ("string" !== typeof Fp || !/^2\.\d+/.test(Fp)) return `uses glTF version ${null!==Fp&&void 0!==Fp?Fp:"(none)"}`;
-          const gp = null === (Sp = pp.asset) || void 0 === Sp ? void 0 : Sp.minVersion;
-          if (void 0 !== gp && "2.0" !== gp) return `uses glTF version ${gp}`;
-          for (const Op of null !== (Gp = pp.extensionsRequired) && void 0 !== Gp ? Gp : []) {
-            var Gp;
-            if (!Yp.has(Op)) return `requires the glTF extension ${Op}`
-          }
-          if (null !== (Ap = pp.animations) && void 0 !== Ap && Ap.length) return "has animations";
-          if (null !== (wp = pp.skins) && void 0 !== wp && wp.length) return "uses skins";
-          const rp = null !== (Hp = pp.buffers) && void 0 !== Hp ? Hp : [];
-          for (const [Op, op] of rp.entries()) {
-            if (void 0 !== op.uri) return Lp;
-            if (Op > 0 || !ip) return xp
-          }
-          for (const [Op, op] of(null !== (Zp = pp.bufferViews) && void 0 !== Zp ? Zp : []).entries()) {
-            var Zp;
-            if (!Mp(pp, ip, Op) || !qp(op)) return xp
-          }
-          const zp = null !== (Ep = pp.accessors) && void 0 !== Ep ? Ep : [];
-          for (const Op of zp) {
-            if (void 0 !== Op.sparse) return "uses sparse accessors";
-            const ip = Number.isInteger(Op.count) ? vp(Op.count, op.accessorElements, "elements in an accessor") : null;
-            if (ip) return ip;
-            if (!Cp(pp, Op)) return xp
-          }
-          const sp = null !== (Xp = pp.scenes) && void 0 !== Xp ? Xp : [];
-          if (1 !== sp.length) return `has ${sp.length} scenes`;
-          const Kp = (0, Op.y)(pp);
-          if (void 0 !== Kp && 0 !== Kp) return xp;
-          const Vp = null !== (lp = pp.nodes) && void 0 !== lp ? lp : [],
-            ii = null !== (Qp = pp.meshes) && void 0 !== Qp ? Qp : [],
-            ci = null !== (Jp = pp.materials) && void 0 !== Jp ? Jp : [],
-            Oi = null !== (Bp = pp.textures) && void 0 !== Bp ? Bp : [],
-            oi = null !== (Np = pp.images) && void 0 !== Np ? Np : [],
-            Ii = null !== (Tp = null !== (fp = null !== (bp = vp(Vp.length, op.nodes, "nodes")) && void 0 !== bp ? bp : vp(ii.length, op.meshes, "meshes")) && void 0 !== fp ? fp : vp(ci.length, op.materials, "materials")) && void 0 !== Tp ? Tp : vp(oi.length, op.images, "images");
-          if (Ii) return Ii;
-          const Si = new Set;
-          for (const Op of Vp)
-            for (const pp of null !== (xi = Op.children) && void 0 !== xi ? xi : []) {
-              var xi;
-              if (!tp(pp, Vp.length) || Si.has(pp)) return xp;
-              Si.add(pp)
-            }
-          const Li = new Set,
-            Yi = pp => {
-              var ip;
-              return !Li.has(pp) && (Li.add(pp), (null !== (ip = Vp[pp].children) && void 0 !== ip ? ip : []).every(Yi))
-            };
-          for (const Op of null !== (Di = sp[0].nodes) && void 0 !== Di ? Di : []) {
-            var Di;
-            if (!tp(Op, Vp.length) || Si.has(Op) || !Yi(Op)) return xp
-          }
-          for (const Op of Vp) {
-            if (void 0 !== Op.matrix) return "uses node matrices";
-            if (void 0 !== Op.skin) return "uses skins";
-            if (void 0 !== Op.weights) return "uses morph targets";
-            if (void 0 !== Op.mesh && !tp(Op.mesh, ii.length)) return xp;
-            const pp = [
-              [Op.translation, 3],
-              [Op.rotation, 4],
-              [Op.scale, 3]
-            ];
-            for (const [ip, cp] of pp)
-              if (void 0 !== ip && (!Array.isArray(ip) || ip.length !== cp || !ip.every((pp => Number.isFinite(pp))))) return xp
-          }
-          let Ai = -1,
-            Pi = 0,
-            Wi = 0,
-            yi = null;
-          for (const op of ii) {
-            if (void 0 !== op.weights) return "uses morph targets";
-            if (0 === op.primitives.length) return xp;
-            for (const cp of op.primitives) {
-              var Ui, wi;
-              const op = null !== (Ui = cp.mode) && void 0 !== Ui ? Ui : 4;
-              var vi;
-              if (4 !== op && 0 !== op) return `uses ${null!==(vi=yp[op])&&void 0!==vi?vi:`mode ${op}`} primitives`;
-              if (void 0 !== cp.targets) return "uses morph targets";
-              if (void 0 !== cp.material && !tp(cp.material, ci.length)) return xp;
-              const Ip = np ? null === (wi = cp.extensions) || void 0 === wi ? void 0 : wi.KHR_draco_mesh_compression : void 0;
-              if (Ip) {
-                if (4 !== op) return "uses Draco-compressed points";
-                if (!Mp(pp, ip, Ip.bufferView) || "object" !== typeof Ip.attributes) return xp
-              }
-              const Sp = cp.attributes;
-              if ("object" !== typeof Sp || null === Sp) return xp;
-              if (void 0 === Sp.POSITION) return "has a primitive with no positions";
-              if (!tp(Sp.POSITION, zp.length)) return xp;
-              const Lp = zp[Sp.POSITION].count;
-              for (const [pp, ip] of Object.entries(Sp)) {
-                if (!tp(ip, zp.length)) return xp;
-                if (/^(JOINTS|WEIGHTS)_\d+$/.test(pp)) return "uses skins";
-                const cp = zp[ip],
-                  Op = Dp[pp];
-                if (Op && (cp.componentType !== Up || cp.normalized || cp.type !== Op)) return `stores ${pp} as ${jp(cp)}`;
-                const op = Pp[pp];
-                if (op && (cp.type !== op.type || !op.componentTypes.includes(cp.componentType) || cp.componentType === Up === !!cp.normalized)) return `stores ${pp} as ${jp(cp)}`;
-                if (Wp.has(pp) && cp.count !== Lp) return "has vertex attributes of different lengths"
-              }
-              if (Ip) {
-                if (void 0 === cp.indices) return xp;
-                for (const ip in Ip.attributes)
-                  if (Wp.has(ip) && void 0 === Sp[ip]) return xp;
-                if (void 0 === Ip.attributes.POSITION) return xp;
-                const pp = tp(cp.indices, zp.length) ? zp[cp.indices].count : -1;
-                if (0 === pp) return xp;
-                if (-1 === Ai) Ai = Ip.bufferView, Pi = Lp, Wi = pp;
-                else {
-                  yi ??= new Map([
-                    [Ai, [Pi, Wi]]
-                  ]);
-                  const ip = yi.get(Ip.bufferView);
-                  if (ip && (ip[0] !== Lp || ip[1] !== pp)) return xp;
-                  yi.set(Ip.bufferView, null !== ip && void 0 !== ip ? ip : [Lp, pp])
-                }
-              }
-              let Yp = Lp;
-              if (void 0 !== cp.indices) {
-                if (!tp(cp.indices, zp.length)) return xp;
-                const pp = zp[cp.indices];
-                if ("SCALAR" !== pp.type) return xp;
-                if (5121 === pp.componentType) return "uses 8-bit indices";
-                var ti;
-                if (5123 !== pp.componentType && 5125 !== pp.componentType) return `stores indices as ${null!==(ti=Op.f[pp.componentType])&&void 0!==ti?ti:pp.componentType}`;
-                if (!Ip && void 0 === pp.bufferView) return xp;
-                Yp = pp.count
-              }
-              if (4 === op && Yp % 3 !== 0) return xp
-            }
-          }
-          let Hi = 0,
-            di = 0,
-            ei = 0;
-          for (let Op = 0; Op < Vp.length; Op++) {
-            const pp = Vp[Op].mesh;
-            if (void 0 !== pp && Li.has(Op))
-              for (const ip of ii[pp].primitives) ei++, Hi += zp[ip.attributes.POSITION].count, void 0 !== ip.indices && (di += zp[ip.indices].count)
-          }
-          const ui = null !== (hp = null !== (ap = vp(Hi, op.vertices, "vertices")) && void 0 !== ap ? ap : vp(di, op.indices, "indices")) && void 0 !== hp ? hp : vp(ei, op.primitives, "primitives");
-          if (ui) return ui;
-          for (const Op of ci) {
-            var ji, ki;
-            if (void 0 !== Op.emissiveTexture) return "uses an emissive texture";
-            const ip = null !== (ji = Op.alphaMode) && void 0 !== ji ? ji : "OPAQUE";
-            if ("OPAQUE" !== ip && "MASK" !== ip && "BLEND" !== ip) return xp;
-            const cp = null === (ki = Op.pbrMetallicRoughness) || void 0 === ki ? void 0 : ki.baseColorTexture;
-            if (cp) {
-              var mi, Ri, qi, Mi, Ci;
-              const ip = null !== (mi = pp.extensionsUsed) && void 0 !== mi && mi.includes("KHR_texture_transform") ? null === (Ri = cp.extensions) || void 0 === Ri ? void 0 : Ri.KHR_texture_transform : void 0;
-              if (0 !== (null !== (qi = cp.texCoord) && void 0 !== qi ? qi : 0) || 0 !== (null !== (Mi = null === ip || void 0 === ip ? void 0 : ip.texCoord) && void 0 !== Mi ? Mi : 0)) return "uses a second UV set";
-              const Op = Oi[cp.index];
-              if (!Op || !tp(Op.source, oi.length) || void 0 !== Op.sampler && !tp(Op.sampler, null === (Ci = pp.samplers) || void 0 === Ci ? void 0 : Ci.length)) return xp
-            }
-          }
-          for (const Op of oi) {
-            if (void 0 !== Op.uri) return Lp;
-            if (void 0 === Op.bufferView) return xp;
-            const cp = Mp(pp, ip, Op.bufferView);
-            if (!cp) return xp;
-            if ("image/png" !== Op.mimeType) {
-              var Ei, Xi, li;
-              return `has ${Rp(null!==(Ei=null!==(Xi={"image/jpeg":"JPEG","image/webp":"WebP","image/ktx2":"KTX2"}[null!==(li=Op.mimeType)&&void 0!==li?li:""])&&void 0!==Xi?Xi:Op.mimeType)&&void 0!==Ei?Ei:"untyped")} image`
-            }
-            if (!mp(cp)) return `has ${Rp(kp(cp))} image`;
-            const Ip = new DataView(cp.buffer, cp.byteOffset, cp.byteLength),
-              Sp = Ip.getUint32(16),
-              Yp = Ip.getUint32(20);
-            if (Sp > op.imageSide || Yp > op.imageSide) return `has a ${Sp} \xd7 ${Yp} image (the limit is ${op.imageSide})`
-          }
-          return null
-        }(pp, ip)
-      } catch {
-        return xp
+    function rQ(QQ) {
+      let WQ = null;
+      return XQ => {
+        var wQ;
+        return WQ ??= (0, gQ.E)(QQ, 10091), null !== (wQ = WQ[XQ]) && void 0 !== wQ ? wQ : 0
       }
     }
 
-    function lp(pp) {
-      const ip = Ep(pp.byteLength);
-      if (ip) return ip;
-      try {
-        const {
-          json: ip,
-          bin: cp
-        } = (0, Op.B)(pp);
-        return Xp(ip, cp)
-      } catch (cp) {
-        if (cp instanceof Op.o) return cp.reason;
-        throw cp
-      }
-    }
-  },
-  34496: (pp, ip, cp) => {
-    cp.d(ip, {
-      B: () => Yp,
-      c: () => Wp,
-      f: () => Pp,
-      h: () => Up,
-      k: () => Ip,
-      o: () => op,
-      r: () => yp,
-      s: () => Dp,
-      w: () => Ap,
-      y: () => Sp
-    });
-    var Op = cp(34503);
-    class op extends Error {
-      constructor(pp) {
-        super(`GLB refused: it ${pp}`), this.reason = pp, this.name = "GlbRefused"
-      }
-    }
-    class Ip extends Error {
-      constructor(pp) {
-        super(pp), this.name = "GlbError"
+    function IQ(QQ, WQ, XQ) {
+      const wQ = rQ(QQ);
+      let qQ = null,
+        TQ = [];
+      return QQ => {
+        const zQ = wQ(QQ);
+        if (0 !== zQ) return null === qQ && (qQ = WQ.split(gQ.v), TQ = new Array(qQ.length)), TQ[zQ - 1] ??= XQ(qQ[zQ - 1])
       }
     }
 
-    function Sp(pp) {
-      return Reflect.get(pp, "scene")
-    }
-    const xp = 5130562,
-      Lp = "is not a binary glTF 2.0 file";
-
-    function Yp(pp) {
-      var ip;
-      const cp = pp instanceof Uint8Array ? pp : new Uint8Array(pp),
-        Ip = (0, Op.f)(cp);
-      if (null === Ip) throw new op(Lp);
-      const Sp = Ip.json,
-        {
-          jsonEnd: Yp,
-          length: Dp
-        } = Ip,
-        Ap = new DataView(cp.buffer, cp.byteOffset, cp.byteLength);
-      let Pp = -1,
-        Wp = 0;
-      for (let wp = Yp; wp < Dp;) {
-        if (wp + 8 > Dp) throw new op(Lp);
-        const pp = Ap.getUint32(wp, !0),
-          ip = Ap.getUint32(wp + 4, !0);
-        if (wp + 8 + pp > Dp || ip === Op.b || ip === xp && -1 !== Pp) throw new op(Lp);
-        ip === xp && (Pp = wp + 8, Wp = pp), wp += 8 + pp
-      }
-      let yp = null;
-      const Up = null === (ip = Sp.buffers) || void 0 === ip ? void 0 : ip[0];
-      if (-1 !== Pp && Up && void 0 === Up.uri) {
-        if (!(Up.byteLength >= 0) || Up.byteLength > Wp) throw new op(Lp);
-        yp = new Uint8Array(cp.buffer, cp.byteOffset + Pp, Up.byteLength)
-      }
-      return {
-        json: Sp,
-        bin: yp,
-        fileBytes: cp.byteLength
-      }
+    function jQ(QQ) {
+      return QQ
     }
 
-    function Dp(pp) {
-      const ip = pp.slice(pp.indexOf(",") + 1),
-        cp = Uint8Array.fromBase64;
-      if (cp) return cp(ip).buffer;
-      const Op = atob(ip),
-        op = new Uint8Array(Op.length);
-      for (let Ip = 0; Ip < Op.length; Ip++) op[Ip] = Op.charCodeAt(Ip);
-      return op.buffer
+    function BQ(QQ) {
+      return QQ === gQ.g ? null : (0, gQ.H)(QQ)
     }
-    async function Ap(pp) {
-      if (pp.startsWith("data:")) return Dp(pp);
-      const ip = await fetch(pp);
-      if (!ip.ok) throw new Ip(`fetching ${pp} failed: ${ip.status} ${ip.statusText}`);
-      return await ip.arrayBuffer()
-    }
-    const Pp = {
-        5120: "i8",
-        5121: "u8",
-        5122: "i16",
-        5123: "u16",
-        5125: "u32",
-        5126: "f32"
-      },
-      Wp = {
-        5120: 1,
-        5121: 1,
-        5122: 2,
-        5123: 2,
-        5125: 4,
-        5126: 4
-      },
-      yp = {
-        SCALAR: 1,
-        VEC2: 2,
-        VEC3: 3,
-        VEC4: 4,
-        MAT2: 4,
-        MAT3: 9,
-        MAT4: 16
-      },
-      Up = [
-        ["POSITION", "position"],
-        ["NORMAL", "normal"],
-        ["TANGENT", "tangent"],
-        ["TEXCOORD_0", "uv"],
-        ["TEXCOORD_1", "uv2"],
-        ["TEXCOORD_2", "uv3"],
-        ["TEXCOORD_3", "uv4"],
-        ["TEXCOORD_4", "uv5"],
-        ["TEXCOORD_5", "uv6"],
-        ["COLOR_0", "color"]
-      ]
-  },
-  34503: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => op,
-      f: () => Ip,
-      h: () => Sp
-    });
-    const Op = 1179937895,
-      op = 1313821514;
+    const yQ = IQ("T$$#&#$T'#$F$#$$%$B#$>#$##=$$1$.)$*#$(&$)#)$N$#$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$+##$&#$$%$*/$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$T$&$($$$*$(#$$1$$1$$1$$1$$1$$1$$)$$)$$)$$)$$)$*)$N2#$.($$1$$)$T$$$,#$4#$)##$V'#$)#[$$+#$#$($$'#%$&$$N)*$4#$$1$$)$:$$##1$##.$#*####*C%$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$*&$,($$($&)$################################2R$$################1$##########-$####################/$##+$(#$$1$$)$T%$$########1$##+$################################################################-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#)$2&$(#$(#$$1$$)$<$$.#$####/$####/$####3$##)#'#'#'#)#'#'#'#'#'#'#'##$B#$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#9$9#1$###########$$R&$##)$**$**$0*$%##$%##$%#$#####$%##$%##$%##$%##$%##$%##$%##$%##$%##$%##$%##$%##$%#)$9#9$9#1$$.$*)$*#$*#$*#$*#$*3#)#)#)#)#)#)#)#)#)#)#)#)#)#)#)#,F'$$5$$&$(2$##U$$&2$*5$X$#$H%.$##-$(2$####$&#######'$@#$##$2#######################################b?$1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#1#IW&$b$I*b$J*b$K*b$L*b$M*b$N*b$O*b$P*b$Q*b$R*b$S*b$T*b$U*b$V*b$W*b$X*b$Y*b$Z*b$[*b$]*b$^*b$_*b$`*b$a*b$b*b$c*b$C+b$D+b$E+b$F+b$G+b$H+Z'&$##b$$A#b$$A#b$$A#b$$A#b$$A#b$$A#b$$A#b$$A#b$$A#b$$A#b$$A#b&$b&#;$1#1$1#1$1#1$1#1$1#1$1#1$1#1$1#1$1#1$1#1$1#########)$J&6$)#;$%#b$$)E,U&$##U&$$#$c&($I$#Y$$1#O%$####-$)I,Q'$b&#)$b&#G($<,$##[+$'#5$$#$$#$$#$$#$$#$$#$$#$B#$$2$,#$$'$$#$##%$##3$##'$########`%$7###S%$##################+$###$##%$###$##%$###$##%$###$##+$###$##%$###$##%$###$##+$###$##'$##%$###$##%$###$##%$###$##%$###$##/$#######$###$##/$$##$##$##$##$##$##$##$##$##$##$##$##$##$##$##$##$##$##S$$c&2$################################################################################################################################U)$2P'$###$##K%$##5$##O&$##C'$##+$##^&$##########A$##########################################)#)#######################################)#)#######################################)#)#######################################)#)###############Y)$##G$$############W'$##W$$", '*|forget-Me-Not|ladder|wheat|jackO\'Lantern|bookshelf|rice|cotton|rocket|cornSeeds|corn|chest|ice|yellowSpawnBlock|whiteSpawnBlock|redSpawnBlock|purpleSpawnBlock|pinkSpawnBlock|orangeSpawnBlock|magentaSpawnBlock|limeSpawnBlock|lightGraySpawnBlock|lightBlueSpawnBlock|greenSpawnBlock|graySpawnBlock|cyanSpawnBlock|brownSpawnBlock|blueSpawnBlock|blackSpawnBlock|redGeneratorSpawnBlock|blueGeneratorSpawnBlock|limeGeneratorSpawnBlock|yellowGeneratorSpawnBlock|cyanGeneratorSpawnBlock|whiteGeneratorSpawnBlock|pinkGeneratorSpawnBlock|grayGeneratorSpawnBlock|diamondGeneratorSpawnBlock|moonstoneGeneratorSpawnBlock|oreGeneratorSpawnBlock|redGoalBlock|blueGoalBlock|pigMobSpawnerBlock|cowMobSpawnerBlock|sheepMobSpawnerBlock|caveGolemMobSpawnerBlock|draugrZombieMobSpawnerBlock|draugrSkeletonMobSpawnerBlock|emptyMobSpawnerBlock|frostGolemMobSpawnerBlock|frostZombieMobSpawnerBlock|frostSkeletonMobSpawnerBlock|draugrKnightMobSpawnerBlock|wolfMobSpawnerBlock|bearMobSpawnerBlock|deerMobSpawnerBlock|stagMobSpawnerBlock|goldWatermelonStagMobSpawnerBlock|colouredChalk^colour=$t(colour:yellow)|colouredChalk^colour=$t(colour:white)|colouredChalk^colour=$t(colour:red)|colouredChalk^colour=$t(colour:purple)|colouredChalk^colour=$t(colour:pink)|colouredChalk^colour=$t(colour:orange)|colouredChalk^colour=$t(colour:magenta)|colouredChalk^colour=$t(colour:lime)|colouredChalk^colour=$t(colour:light_gray)|colouredChalk^colour=$t(colour:light_blue)|colouredChalk^colour=$t(colour:green)|colouredChalk^colour=$t(colour:gray)|colouredChalk^colour=$t(colour:cyan)|colouredChalk^colour=$t(colour:brown)|colouredChalk^colour=$t(colour:blue)|colouredChalk^colour=$t(colour:black)|colouredChalkBricks^colour=$t(colour:yellow)|colouredChalkBricks^colour=$t(colour:white)|colouredChalkBricks^colour=$t(colour:red)|colouredChalkBricks^colour=$t(colour:purple)|colouredChalkBricks^colour=$t(colour:pink)|colouredChalkBricks^colour=$t(colour:orange)|colouredChalkBricks^colour=$t(colour:magenta)|colouredChalkBricks^colour=$t(colour:lime)|colouredChalkBricks^colour=$t(colour:light_gray)|colouredChalkBricks^colour=$t(colour:light_blue)|colouredChalkBricks^colour=$t(colour:green)|colouredChalkBricks^colour=$t(colour:gray)|colouredChalkBricks^colour=$t(colour:cyan)|colouredChalkBricks^colour=$t(colour:brown)|colouredChalkBricks^colour=$t(colour:blue)|colouredChalkBricks^colour=$t(colour:black)|colouredChalkSlab^colour=$t(colour:yellow)|colouredChalkSlab^colour=$t(colour:white)|colouredChalkSlab^colour=$t(colour:red)|colouredChalkSlab^colour=$t(colour:purple)|colouredChalkSlab^colour=$t(colour:pink)|colouredChalkSlab^colour=$t(colour:orange)|colouredChalkSlab^colour=$t(colour:magenta)|colouredChalkSlab^colour=$t(colour:lime)|colouredChalkSlab^colour=$t(colour:light_gray)|colouredChalkSlab^colour=$t(colour:light_blue)|colouredChalkSlab^colour=$t(colour:green)|colouredChalkSlab^colour=$t(colour:gray)|colouredChalkSlab^colour=$t(colour:cyan)|colouredChalkSlab^colour=$t(colour:brown)|colouredChalkSlab^colour=$t(colour:blue)|colouredChalkSlab^colour=$t(colour:black)|colouredChalkBricksSlab^colour=$t(colour:yellow)|colouredChalkBricksSlab^colour=$t(colour:white)|colouredChalkBricksSlab^colour=$t(colour:red)|colouredChalkBricksSlab^colour=$t(colour:purple)|colouredChalkBricksSlab^colour=$t(colour:pink)|colouredChalkBricksSlab^colour=$t(colour:orange)|colouredChalkBricksSlab^colour=$t(colour:magenta)|colouredChalkBricksSlab^colour=$t(colour:lime)|colouredChalkBricksSlab^colour=$t(colour:light_gray)|colouredChalkBricksSlab^colour=$t(colour:light_blue)|colouredChalkBricksSlab^colour=$t(colour:green)|colouredChalkBricksSlab^colour=$t(colour:gray)|colouredChalkBricksSlab^colour=$t(colour:cyan)|colouredChalkBricksSlab^colour=$t(colour:brown)|colouredChalkBricksSlab^colour=$t(colour:blue)|colouredChalkBricksSlab^colour=$t(colour:black)|gorillaMobSpawnerBlock|wildcatMobSpawnerBlock|draugrHuntressMobSpawnerBlock|magmaGolemMobSpawnerBlock|lightbluePortal|lightgrayPortal|horseMobSpawnerBlock|tomato|carrotSeeds|potatoSeeds|strawberries|sugarCane|lettuce|coffeeBean|cauliflower|parsnip|blueberries|redCabbage|beetrootSeeds|whiteBanner|orangeBanner|magentaBanner|lightBlueBanner|yellowBanner|limeBanner|pinkBanner|grayBanner|lightGrayBanner|cyanBanner|purpleBanner|blueBanner|brownBanner|greenBanner|redBanner|blackBanner|draugrBanner|spiritGolemMobSpawnerBlock|spiritWolfMobSpawnerBlock|spiritBearMobSpawnerBlock|spiritStagMobSpawnerBlock|spiritGorillaMobSpawnerBlock|draugrWarperMobSpawnerBlock|smallMagentaPod|smallLightGrayPod|smallRedPod|frostWraithMobSpawnerBlock|draugrReaverMobSpawnerBlock|smallWhitePod|smallOrangePod|smallLightBluePod|smallYellowPod|smallLimePod|smallPinkPod|smallGrayPod|smallCyanPod|smallPurplePod|smallBluePod|smallBrownPod|smallGreenPod|smallBlackPod|skullBanner|rainbowBanner|directionalArrow^colour=$t(colour:white)|directionalArrow^colour=$t(colour:orange)|directionalArrow^colour=$t(colour:magenta)|directionalArrow^colour=$t(colour:light_blue)|directionalArrow^colour=$t(colour:yellow)|directionalArrow^colour=$t(colour:lime)|directionalArrow^colour=$t(colour:pink)|directionalArrow^colour=$t(colour:gray)|directionalArrow^colour=$t(colour:light_gray)|directionalArrow^colour=$t(colour:cyan)|directionalArrow^colour=$t(colour:purple)|directionalArrow^colour=$t(colour:blue)|directionalArrow^colour=$t(colour:brown)|directionalArrow^colour=$t(colour:green)|directionalArrow^colour=$t(colour:red)|directionalArrow^colour=$t(colour:black)|=Smoke Block|stalkerMobSpawnerBlock|croneMobSpawnerBlock|slimeMobSpawnerBlock|ironGuardianMobSpawnerBlock|goldGuardianMobSpawnerBlock|diamondGuardianMobSpawnerBlock|moonstoneGuardianMobSpawnerBlock|camelMobSpawnerBlock|=Rare Lucky Block|=Super Lucky Block|=Rare Weapon Lucky Block|=Super Weapon Lucky Block|=Building Lucky Block|=Rare Building Lucky Block|=Super Building Lucky Block|=Armour Lucky Block|=Rare Armour Lucky Block|=Super Armour Lucky Block|=Tools Lucky Block|=Rare Tools Lucky Block|=Super Tools Lucky Block|=Food Lucky Block|=Rare Food Lucky Block|=Super Food Lucky Block|=Potion Lucky Block|=Rare Potion Lucky Block|=Super Potion Lucky Block|=Block Destroyer TNT|colouredChalkStairs^colour=$t(colour:yellow)|colouredChalkStairs^colour=$t(colour:white)|colouredChalkStairs^colour=$t(colour:red)|colouredChalkStairs^colour=$t(colour:purple)|colouredChalkStairs^colour=$t(colour:pink)|colouredChalkStairs^colour=$t(colour:orange)|colouredChalkStairs^colour=$t(colour:magenta)|colouredChalkStairs^colour=$t(colour:lime)|colouredChalkStairs^colour=$t(colour:light_gray)|colouredChalkStairs^colour=$t(colour:light_blue)|colouredChalkStairs^colour=$t(colour:green)|colouredChalkStairs^colour=$t(colour:gray)|colouredChalkStairs^colour=$t(colour:cyan)|colouredChalkStairs^colour=$t(colour:brown)|colouredChalkStairs^colour=$t(colour:blue)|colouredChalkStairs^colour=$t(colour:black)|colouredChalkBricksStairs^colour=$t(colour:yellow)|colouredChalkBricksStairs^colour=$t(colour:white)|colouredChalkBricksStairs^colour=$t(colour:red)|colouredChalkBricksStairs^colour=$t(colour:purple)|colouredChalkBricksStairs^colour=$t(colour:pink)|colouredChalkBricksStairs^colour=$t(colour:orange)|colouredChalkBricksStairs^colour=$t(colour:magenta)|colouredChalkBricksStairs^colour=$t(colour:lime)|colouredChalkBricksStairs^colour=$t(colour:light_gray)|colouredChalkBricksStairs^colour=$t(colour:light_blue)|colouredChalkBricksStairs^colour=$t(colour:green)|colouredChalkBricksStairs^colour=$t(colour:gray)|colouredChalkBricksStairs^colour=$t(colour:cyan)|colouredChalkBricksStairs^colour=$t(colour:brown)|colouredChalkBricksStairs^colour=$t(colour:blue)|colouredChalkBricksStairs^colour=$t(colour:black)|tikiTerrorMobSpawnerBlock|mapleFence|pineFence|plumFence|cedarFence|aspenFence|jungleFence|palmFence|pearFence|cherryFence|spectralFence|mangoFence|noticeboard|mapleFenceGate|pineFenceGate|plumFenceGate|cedarFenceGate|aspenFenceGate|jungleFenceGate|palmFenceGate|pearFenceGate|cherryFenceGate|spectralFenceGate|mangoFenceGate|ironGoofyGolemMobSpawnerBlock|goldGoofyGolemMobSpawnerBlock|diamondGoofyGolemMobSpawnerBlock|moonstoneGoofyGolemMobSpawnerBlock|autoBench|homesteadCore|starframe|reactorFrame|collider|jetChestplate|atomicSpire|fluidPipe|waterPipe|=Artisan Axe|bowlOfCranberries|=Snowball Launcher|=Bullet|rpg|=67 Base Projectile|=67 Boosted Projectile|=Capitano Grenade|=Scatter Pellet|=Compass|=Chunk Map|=Teleport Heart|=Frost Shard|=Molten Cog|=Choir Bell|=Siege Core|=Flywheel|=Radiant Spark|=Brood Sac|=Bandolier|slownessPotionII|splashSlownessPotionII|poisonPotionII|splashPoisonPotionII|weaknessPotionII|splashWeaknessPotionII|instantDamagePotionII|splashInstantDamagePotionII|speedPotionII|splashSpeedPotionII|defensePotionII|splashDefensePotionII|strengthPotionII|splashStrengthPotionII|jumpPotionII|splashJumpPotionII|splashKnockbackPotionII|regenerationPotionII|splashRegenerationPotionII|instantHealingPotionII|splashInstantHealingPotionII|hastePotionII|splashHastePotionII|shieldPotionII|splashShieldPotionII|xRayVisionPotion|splashXRayVisionPotion|arrowOfXRayVision|miningYieldPotionII|splashMiningYieldPotionII|=AK-47|=M16|=MP40|=TAR-21|=M1911|=One Shot Pistol|=Double Barrel|=AWP|=Deagle|=Striker-12|=VSR|=DMR|=Minigun|=FMR|=SKAR|=Block-19|=Mini Izu|=GPMG|yellowPaintballExplosive|whitePaintballExplosive|redPaintballExplosive|purplePaintballExplosive|pinkPaintballExplosive|orangePaintballExplosive|magentaPaintballExplosive|limePaintballExplosive|lightGrayPaintballExplosive|lightBluePaintballExplosive|greenPaintballExplosive|grayPaintballExplosive|cyanPaintballExplosive|brownPaintballExplosive|bluePaintballExplosive|blackPaintballExplosive|yellowStickyPaintballExplosive|whiteStickyPaintballExplosive|redStickyPaintballExplosive|purpleStickyPaintballExplosive|pinkStickyPaintballExplosive|orangeStickyPaintballExplosive|magentaStickyPaintballExplosive|limeStickyPaintballExplosive|lightGrayStickyPaintballExplosive|lightBlueStickyPaintballExplosive|greenStickyPaintballExplosive|grayStickyPaintballExplosive|cyanStickyPaintballExplosive|brownStickyPaintballExplosive|blueStickyPaintballExplosive|blackStickyPaintballExplosive|yellowSeekingPaintballExplosive|whiteSeekingPaintballExplosive|redSeekingPaintballExplosive|purpleSeekingPaintballExplosive|pinkSeekingPaintballExplosive|orangeSeekingPaintballExplosive|magentaSeekingPaintballExplosive|limeSeekingPaintballExplosive|lightGraySeekingPaintballExplosive|lightBlueSeekingPaintballExplosive|greenSeekingPaintballExplosive|graySeekingPaintballExplosive|cyanSeekingPaintballExplosive|brownSeekingPaintballExplosive|blueSeekingPaintballExplosive|blackSeekingPaintballExplosive|yellowQuickPaintballExplosive|whiteQuickPaintballExplosive|redQuickPaintballExplosive|purpleQuickPaintballExplosive|pinkQuickPaintballExplosive|orangeQuickPaintballExplosive|magentaQuickPaintballExplosive|limeQuickPaintballExplosive|lightGrayQuickPaintballExplosive|lightBlueQuickPaintballExplosive|greenQuickPaintballExplosive|grayQuickPaintballExplosive|cyanQuickPaintballExplosive|brownQuickPaintballExplosive|blueQuickPaintballExplosive|blackQuickPaintballExplosive|auraXpPotionII|splashAuraXpPotionII|worldBuilderWand|barnacleJaw|triPointedNeedlefish|cowsMilk|sheepsMilk|[{"str":"Common Lottery Ticket","style":{"color":"#4d4d4d"}}]|[{"str":"Uncommon Lottery Ticket","style":{"color":"#A9FF21"}}]|[{"str":"Rare Lottery Ticket","style":{"color":"#84E0FF"}}]|[{"str":"Epic Lottery Ticket","style":{"color":"#800080"}}]|[{"str":"Legendary Lottery Ticket","style":{"color":"#ffa500"}}]|=Sword Upgrade|=Armour Upgrade|=Tools Upgrade|=Clovers|=Void Wings|=Lucky Bomb|=Unlucky Bomb|=Swap Orb|=Golden Clover|=Amethite|=Amethite Fragment|=Amethite Pickaxe|=Amethite Axe|=Amethite Spade|=Amethite Sword|=Amethite Hoe|=Amethite Helmet|=Amethite Chestplate|=Amethite Leggings|=Amethite Boots|=Amethite Gauntlets|=Amethite Bow|=Amethite Crossbow|=Amethite Crossbow Charged|=Amethite Spear|=Amethite Dagger|=Amethite Boomerang|=Amethite Club|=Amethite Mace|=Amethite Whip|=Magmasteel|=Magmasteel Fragment|=Magmasteel Pickaxe|=Magmasteel Axe|=Magmasteel Spade|=Magmasteel Sword|=Magmasteel Hoe|=Magmasteel Helmet|=Magmasteel Chestplate|=Magmasteel Leggings|=Magmasteel Boots|=Magmasteel Gauntlets|=Magmasteel Bow|=Magmasteel Crossbow|=Magmasteel Crossbow Charged|=Magmasteel Spear|=Magmasteel Dagger|=Magmasteel Boomerang|=Magmasteel Club|=Magmasteel Mace|=Magmasteel Whip|=Rubellite|=Rubellite Fragment|=Rubellite Pickaxe|=Rubellite Axe|=Rubellite Spade|=Rubellite Sword|=Rubellite Hoe|=Rubellite Helmet|=Rubellite Chestplate|=Rubellite Leggings|=Rubellite Boots|=Rubellite Gauntlets|=Rubellite Bow|=Rubellite Crossbow|=Rubellite Crossbow Charged|=Rubellite Spear|=Rubellite Dagger|=Rubellite Boomerang|=Rubellite Club|=Rubellite Mace|=Rubellite Whip|=Serpentite|=Serpentite Fragment|=Serpentite Pickaxe|=Serpentite Axe|=Serpentite Spade|=Serpentite Sword|=Serpentite Hoe|=Serpentite Helmet|=Serpentite Chestplate|=Serpentite Leggings|=Serpentite Boots|=Serpentite Gauntlets|=Serpentite Bow|=Serpentite Crossbow|=Serpentite Crossbow Charged|=Serpentite Spear|=Serpentite Dagger|=Serpentite Boomerang|=Serpentite Club|=Serpentite Mace|=Serpentite Whip|=Cracked Rubellite Pickaxe|depositSeedCopper|depositSeedGold|depositSeedVoltite|depositSeedCoal|depositSeedIron|depositSeedStone|depositSeedUranium', BQ),
+      VQ = IQ("$J$#$&$$F&$23$$J$$$A$$c$$,^'$&H2$$'$$'$$0$*9$$R$#49$$($$&$$%$$$#,C(##$$#$&U)#$#$$($B+#2R$$1#7$%#+$6#$$)$J$O$#*-$1#M1$$a$$&'#%$&)$$4$.&$(;$*%$$$$$#$$#$,Z/$$T&$&V$$$Z-$###$%/V$O$$&2$*5#X$#$V%.$&2$&#$*&$$5$$E$#c2R1$&$$cc$c]$$$R%$*G=$]/=$2:$J5-$b*#G$$,,#%$+##$#4+#+##$+#%$$*$$*$$^%$$#$&#$$#$$#$&#$*#$&#$$#$$'$$^$###%8<#$########[%#$#$7###'#/$###$##/$##%$#D$#A#D$#A#D$#A#D$#A%$$#$*$$##################+$###$##$#$###$##$#$###$##$#$###$##$#$##$#$###$##$#$###$##$#$###$##&#$$#$###$##&#$##$#$###$##$#$###$##$#$###$##$#$###$##&#$&#$&#$$#$###$##&#$&#$2H$$A#B2#A#A#AL%A#A#A#A#b&####################################################################################$2P'$###$##$#$C$##$C$##$$%$$*$$($$#$$6$$%$(E%$$&$F$*$.##-#-#-#-#-#A$+#A###################$###3#4#5#6#74'>#a&#b&#c&#C'#D'#E'$###3#4#5#6#74'>#a&#b&#c&#C'#D'#E'$#Q'#3#4#5#6#74'>#a&#b&#c&#C'#D'#E'$#Q'#3#4#5#6#74'>#a&#b&#c&#C'#D'#E'$1R'#63>#a&#b&#C'#D'#E'#C'$'Q'#63>#a&#b&#C'#D'#E'#C'$'Q'#63>#a&#b&#C'#D'#E'#C'$'R'#63>#a&#b&#C'#D'#E'#C'$,#W&$#######T'#U'#V'#T'#U'#V'#T'#U'#V'#T'#U'#V'#T'#U'#V'#T'#U'#V'#T'#U'#V'#T'#U'#V'#6b$$+#)$", "*|emptyBookshelfDescription|=Prevents other factions from changing blocks and\nopening chests in the placed chunk|spikesDescription|fatMushroomDescription|spawnBlockDescription|teamGeneratorSpawnBlockDescription|goalBlockDescription|enchantingTableDescription|antlersDescription|ceilingClimbableDescription|jumpPadDescription|rocketShipDescription|=Place it to start a 30 second fuse. When it goes off, every placed block on the map is removed. Lucky blocks survive.|fluidPipeDescription|pickaxeDescription|axeDescription|spadeDescription|swordDescription|hoeDescription|throwableItemDescription|=Rapidly fires snowballs!|=The base projectile for the 67 character in Heroes v Brainrots|=The boosted projectile for the 67 character in Heroes v Brainrots|=A small explosive grenade thrown by Capitano Explovissimo in Heroes v Brainrots|=Primary spread shot from Scatter in Heroes v Brainrots|bowDescription|compassDescription|=Drop into any locked chunk to instantly unlock it.|foodDescription|watermelonSliceDescription|melonSliceDescription|rawFoodDescription|=The still-beating core of a Blink. Salvaged from a Warp Stalker.|=A splinter of cryogenic shell that never melts. Salvaged from a Frost Revenant.|=A gear from an overload mechanism, seized mid-cycle. Salvaged from a Magma Warden.|=The toll that calls the dead. Salvaged from a Hollow Choir.|=The firing heart of a barrage. Salvaged from a Siege Engine.|=The wheel a room-mill spins around. Salvaged from a Carousel.|=A mote of the failure state itself. Salvaged from Breach Zero.|=A sac filled with an acidic bile. Still full. Salvaged from a Broodfather.|=Her charge belt. Three still on it, and nobody has volunteered to count again. Salvaged from a Deadlock.|slownessPotionDescription|splashSlownessPotionDescription|poisonPotionDescription|splashPoisonPotionDescription|weaknessPotionDescription|splashWeaknessPotionDescription|instantDamagePotionDescription|splashInstantDamagePotionDescription|milkPotionDescription|speedPotionDescription|splashSpeedPotionDescription|defensePotionDescription|splashDefensePotionDescription|strengthPotionDescription|splashStrengthPotionDescription|jumpPotionDescription|splashJumpPotionDescription|splashKnockbackPotionDescription|regenerationPotionDescription|splashRegenerationPotionDescription|instantHealingPotionDescription|splashInstantHealingPotionDescription|hastePotionDescription|splashHastePotionDescription|shieldPotionDescription|splashShieldPotionDescription|miningYieldPotionDescription|splashMiningYieldPotionDescription|balloonDescription|popupTowerDescription|paintballGunDescription|paintballDescription|paintballExplosiveDescription|stickyPaintballExplosiveDescription|seekingPaintballExplosiveDescription|quickPaintballExplosiveDescription|paintBowDescription|pigSpawnOrbDescription^mob=Pig|cowSpawnOrbDescription^mob=Cow|sheepSpawnOrbDescription^mob=Sheep|horseSpawnOrbDescription^mob=Horse|camelSpawnOrbDescription^mob=Camel|ironGoofyGolemSpawnOrbDescription^mob=Iron Goofy Golem|goldGoofyGolemSpawnOrbDescription^mob=Gold Goofy Golem|diamondGoofyGolemSpawnOrbDescription^mob=Diamond Goofy Golem|moonstoneGoofyGolemSpawnOrbDescription^mob=Moonstone Goofy Golem|deerSpawnOrbDescription^mob=Deer|slimeSpawnOrbDescription^mob=Slime|wolfSpawnOrbDescription^mob=Wolf|wildcatSpawnOrbDescription^mob=Wildcat|spiritGolemSpawnOrbDescription^mob=Spirit Golem|spiritWolfSpawnOrbDescription^mob=Spirit Wolf|spiritBearSpawnOrbDescription^mob=Spirit Bear|spiritStagSpawnOrbDescription^mob=Spirit Stag|spiritGorillaSpawnOrbDescription^mob=Spirit Gorilla|bearSpawnOrbDescription^mob=Bear|stagSpawnOrbDescription^mob=Stag|goldWatermelonStagSpawnOrbDescription^mob=Gold Watermelon Stag|gorillaSpawnOrbDescription^mob=Gorilla|caveGolemSpawnOrbDescription^mob=Cave Golem|draugrZombieSpawnOrbDescription^mob=Draugr Zombie|draugrSkeletonSpawnOrbDescription^mob=Draugr Skeleton|frostGolemSpawnOrbDescription^mob=Frost Golem|frostZombieSpawnOrbDescription^mob=Frost Zombie|frostSkeletonSpawnOrbDescription^mob=Frost Skeleton|draugrKnightSpawnOrbDescription^mob=Draugr Knight|draugrHuntressSpawnOrbDescription^mob=Draugr Huntress|magmaGolemSpawnOrbDescription^mob=Magma Golem|draugrWarperSpawnOrbDescription^mob=Draugr Warper|frostWraithSpawnOrbDescription^mob=Frost Wraith|draugrReaverSpawnOrbDescription^mob=Draugr Reaver|stalkerSpawnOrbDescription^mob=Stalker|croneSpawnOrbDescription^mob=Crone|ironGuardianSpawnOrbDescription^mob=Iron Guardian|goldGuardianSpawnOrbDescription^mob=Gold Guardian|diamondGuardianSpawnOrbDescription^mob=Diamond Guardian|moonstoneGuardianSpawnOrbDescription^mob=Moonstone Guardian|tikiTerrorSpawnOrbDescription^mob=Tiki Terror|auraXpPotionDescription|splashAuraXpPotionDescription|firecrackerDescription|firecrackerPebbleDescription|spearDescription|daggerDescription|boomerangDescription|clubDescription|maceDescription|whipDescription|=Take it to the Lottery stall in the spawn hub to redeem it for a reward.|clockDescription|=Use to permanently advance your Sword tier for this match. Share spare upgrades with your team.|=Use to permanently advance your Armour tier for this match. Share spare upgrades with your team.|=Use to permanently advance your Pickaxe and Axe tier for this match. Share spare upgrades with your team.|=Earned from lucky blocks, kills and beds. Spend them at your base's Lucky Trader and Lucky Upgrades.|=Keep one in your inventory. Falling into the void uses it up and puts you back on solid ground.|=A random lucky effect for everyone it splashes, you included. Usually good!|=A random unlucky effect for everyone it splashes, you included. Usually bad!|=Throw near an enemy or mob to swap places with them.|=A shiny golden four-leaf clover.|elementalShardDescription|forgeFragmentDescription|=Ruby calls it cracked, not beaten. A sturdy pickaxe ready for the stubborn stone in her mine.|swordBladeDescription|swordGuardDescription|swordHandleDescription|cagedMobDescription", BQ),
+      DQ = new Map,
+      pQ = new Map;
+    let GQ = -1;
 
-    function Ip(pp) {
-      const ip = new DataView(pp.buffer, pp.byteOffset, pp.byteLength);
-      if (pp.byteLength < 20 || ip.getUint32(0, !0) !== Op || 2 !== ip.getUint32(4, !0)) return null;
-      const cp = Math.min(ip.getUint32(8, !0), pp.byteLength),
-        Ip = ip.getUint32(12, !0);
-      if (ip.getUint32(16, !0) !== op || 20 + Ip > cp) return null;
-      let Sp;
-      try {
-        Sp = JSON.parse((new TextDecoder).decode(pp.subarray(20, 20 + Ip)))
-      } catch {
-        return null
-      }
-      return "object" === typeof Sp && null !== Sp ? {
-        json: Sp,
-        jsonEnd: 20 + Ip,
-        length: cp
-      } : null
+    function UQ(QQ, WQ, XQ) {
+      GQ !== (0, PQ.f)() && (GQ = (0, PQ.f)(), DQ.clear(), pQ.clear());
+      let wQ = QQ.get(WQ);
+      return void 0 === wQ && (wQ = XQ(), void 0 !== wQ && QQ.set(WQ, wQ)), wQ
     }
+    const bQ = IQ("_$QN+###Y$#b'#%$=%/#I'%##7%))+%[%(#%9##%)(#%9(#%?(I$%'('%%('%%('%%('%#(%%%('%%('%%('%#(%%%('%#('%%('%%('%%('%%('%#(%%#(%%#(%%%('%#(%%%(#%I%##%%)M&%A)A%A)b&%b&(Q.%)(#%)(W%%#(1%#(-%#(#%#(Q$%#(G(%/(#%1('%I%$b%%+$+&3(-$%%+$+&3(-$%%+$+&3(-$%%+$+&3(-$?&#%#$3(-$+&#%#$3(-$+&#%#$3(-$+&#%#$3(-$+&+%#$;%#$I$%#$1%#$5%+&W$%#$O$%/&#$-%#$'%", "Tool|Item|Armour|GrayscaleArmour|Chargeable|FullAuto|Directional|Gun", jQ),
+      vQ = IQ("J,##O$##$#%/$#%/$#%/$-%9$1%#$)%A$#%b&$1%-$[+%S%$%%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%/$#%9$M2#+%-$#%/$#%/$#%/$#%%$-&/$-%+$9%3$-%E$$b%%I%$A%#$%%=$b(&-$-&#%/$#%/$#%/$#%%$-&)%'$-%#$7%M'$E+%#$%%#$?%K)$5%#$-&#%%$#%+$#%/$#%/$#%/$#%%$-&Q$%#$-&'%#$C$%C%$b.&1%#$-&'%+$#%/$#%/$#%/$#%%$-&)%%$5%/$%%E$$O%%%$#%-$#%#$#%#$^<%#$b)%#$+%)$1%)$1%)$)%%$G*%#$I1%A$+%O$$#%#$A%)$U%%#$b%%A$E%%#$#%%$I$%'$5%%$#%#$-&U$%I$$bO$#)$bV('CQ$%+$Y/%G%$1&;$1&I($)&=$A&U%$#%#$-%1$7%^)$Y$&=$b&%1$b&%)$b*%5$)%+$5%^$###Y$#b'#%(=)/#I')##7))-+)[%,#)9##)),#)9,#)?,I$)',')%,')%,')%,')#,%)%,')%,')%,')#,%)%,')#,')%,')%,')%,')%,')#,%)#,%)#,%)%,')#,%)%,#)I%##)%-M&)A-A)A-b&)b&,Q.)),#)),W%)#,1)#,-)#,#)#,Q$)#,G()/,#)1,')I%(b%)+(+*3,-(%)+(+*3,-(%)+(+*3,-(%)+(+*3,-(?*#)#(3,-(+*#)#(3,-(+*#)#(3,-(+*#)#(3,-(+*+)#(;)#(I$)#(1)#(5)+*W$)#(O$)/*#(-)#(')", "CubeBlock|TwoDBlock|SlabBlock|StairsBlock|TwoDTool|TwoDItem|TwoDArmour|GrayscaleTwoDArmour|Chargeable|FullAuto|Directional|Gun", jQ),
+      dQ = IQ(".W]+#%#%#%#%#%#%#%#%%%#%#%#%%%#%#%#", "30|20|16|1|2|5|7|12|8|100|21|24|22|75", Number),
+      HQ = IQ("&PO+#####%####################$#%#,#%#####,%&#)#,#.#%#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1#$#'#,#0#1$bC$'#*#/#,#&$8'#*#/#,#&$8'#*#/#,#&$8'#*#/#,#&$1'#*#&#/#,#'#*#&#/#,#'#*#&#/#,$3'#*#&#/#,$3'#*#&#/#,$3'#*#&#/#,$3'#*#&#/#,$_$-#######&$U$######7#'#)#4", "0.07|0.09|0.11|0.13|0.18|0.21|0.24|0.22|0.1|0.14|0.16|0.19|0.05|0.06|0.08|0.25|0.12|0.2|0|0.27|0.15", Number),
+      aQ = IQ(">W]+#%#)$)%9$", "none|sniper", jQ),
+      lQ = IQ("*W]+#%#%#%#%$%#)&%(%%%$%%)$)'%&", "semi_automatic|submachine|rifle|pistol|shotgun", jQ),
+      hQ = rQ("]%LV+#c&M.$4_1$44$44$44$49$4/$4/$4/$"),
+      iQ = rQ("$a&#$9$Z$K?$&;$$[($(c($6Y&$$)$$$$&G%$*$$$*$(V*$Z$V$$$#$$#$&+$$#$$%$$$$$$$$$$&$$$#$$($,E0$$T&$&V$$D$`-$(%$6*$$%$T$M$$$L%$6;$$$$$2$$W:$*D^%$$N%$BB$BB$BB$BB$BB$BB$BB$BB$BB$BB$BB$2O'$2*$2*$2*$2*$2*$2*$2*$2*$2*$:*$0=$&^$$$N$$(Q$$$]$$.#$&6$$K%$:.$*I$$*&$*S+$6,$"),
+      cQ = IQ("$DO+#######%#$ZD$$#%#&#'%(#$#%#&#'%(#$#%#&#'%(#$#%#&#'%(#$#%#&#'%(#$#%#&#'%($U$(.1($'(.1($'(.1($'(.1($2(.+($((.+($((.+($((.+($C&($@$", "1|2|3|4|5", (QQ => "" === QQ ? null : Number(QQ))),
+      AQ = IQ("$F(#$%$$&#$)%$)%$0$$,$$%$$&$$6$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$@$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$'$$I$%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$.#$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$2%$)%$)%$,&$.$$.$$'$$&$$%$$'$$7$$%$$%$$%$$%$$%$$%$$%$$5#$%#$9#$J$&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$-&$'%$)%$)%$,&$'$$:$$G%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$B<$$R$$$%$$-$$%$$;&$0%$)%$)%$,&$'$$%$$%$$%$$%$$%$$&&$/$$%$$&$$F$&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'$$%$$&&$/%$)%$)%$,&$'$$)$$N%$$,&$%#$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$5&$%*$;$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$'$$%$$%$$%$$%$$%$$%$$%$$%$$'$$X$&$%*$5&$%*$I$$$&$$&$$&$$&$$6$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$&$$%$$*&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$U$&$'&$'$$)#$7$$%$$%$$%$$%$$?+$8$$%$$%$$%$$%+$7#$'#$+$$%$$%$$%$$%$$6&$'&$&$$&$$%$$%$$%$$9&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$Q^%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$%$$V3$$b$$$F%%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$-$$%$$%$$%$$%$$%$$0$$%$$%$$%$$%$$%$$%$$%$$&$$%$$%$$%$$%$$P$$$*$$)$$)$$)$$)$$&$$>$$+$$)$$A$$8$$)$$)$$)$$)$$*$$B$$,$$%$$%$$%$$%$$&$$-$$?+$b$$$)+$O)$0O(#$[%.$%.$%.$%.$%.$%.$%.$%.$%.$%.$+#*..:#.@#.,6.*#.&#.&%.$%.($.&$.&%.$%.&$.$%.&%.&%.&%.&%.$%.$$.$$.&$.$%.&$.$P).$%.$%.$%.$%.$%.$%.$%.$%.$%.$%.$%.$%.$%.$%.$%.$^(.*&.$M$.$*.$(.$#.$:.0U%.2#.$C&.$%.$8.$%.$8.$%.$8.$%.$=.$%.$3.$%.$3.$%.$3.$%.", "meta,rot1|meta,rot1,closed|meta,rot1,bot|meta,rot1,books6|meta,rot1,books0|meta,rot1,empty|meta,rot1,top|meta,conn,none|meta,input,none|meta,output,none|meta,charging1|meta,dir1", (QQ => QQ.split(gQ.o).join(gQ.v))),
+      RQ = IQ(",QN+####$/#+#+###+#4####1+##S(+$$#2A#$H%#$%0$%0$%0$%0$%0$%0$%0$%0$%0$U.0$%0$%0$%0$%0$%0$%0$%0$%0$%0$%0$%0$%0$%0$%0$%0:C/(:.($R$$#&#'#(#*++#0$%0&&(&$($$$#&#'#(#*++#0$%0&&(&$($$$#&#'#(#*++#0$%0&&(&$($$$#&#'#(#*++#0$%0&&(&$(?+$#(#0$%0&&(&#(,#+$#(#0$%0&&(&#(,#+$#(#0$%0&&(&#(,#+$#(#0$%0&&(&#(,#+$'$,X$+$=(09+", "Break Speed,Momentum,Mining Yield,Mining Aura|Break Speed,Momentum|Break Speed,Momentum,Lumber Aura|Break Speed,Momentum,Digging Aura|Damage,Attack Speed,Critical Damage|Damage,Attack Speed,Critical Damage,Horizontal Knockback|Break Speed,Momentum,Farming Yield,Farming Aura|Protection,Health,Health Regen|Protection,Health,Health Regen,Knockback Resist|Protection,Health,Health Regen,Stomp Damage|Horizontal Knockback,Vertical Knockback,Damage|Firecracker Cooldown,Firecracker Boost,Gliding Speed|Arrow Speed,Arrow Damage,Quick Charge", (QQ => Object.freeze(QQ.split(",")))),
+      EQ = IQ(",$#0#$-#-$&#%2#%(#$$$$'%B$##%b$&)$$#$#%A&$&#)%,$%#$#%$&%###%:#$$$$##$%)$%%#)$1).)$$#)$))%$#)$%$$&)B%&#)#&$%&$%&$%&$%&$%&$%&$%&$%&$%&$%&$%&$%&$%&$%&$%&$%$$'$&#$$%%$/)$))$))$))$))$))$))$))$))$))$))$))$))$))$))$))&)$#)$%%#$,#%2%%($$$*$$#%#$#)$1)$1)$1)$1)$1)$1)$))$))$))$))$))$)$#%%$$#$$'%$'%$'%$'%$'%$'%$'%$'$$'$$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%(-$#%#$#)$1)$)$$$%$'$-%##*%$$%$$'$$'$#%$%%$%$$'$B#&#)$%)$%)$%)$%)$%)$%)$%)B%*#)$%)$9)$)$$($($$$%)#$&$$$-&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&&($$#%%$$')$1)$)$$$%$')$%$.$)%$$R%)$))$))$))$))$))$))$))$))$))$))$))$))$))$))$))*,$$0'B#'$R$)$%'4%'$%'6%'#%5#%%$'+#$#%'$$#%#$#)$1)$)$$$%$')$%)$%)$%)$%)$%)&%$*'$)+#*$%*$%+#)$%%C%&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$'&$')&)$$'$(#$$#%#$#)$1)$)$$$%$')(%$$'*#$%+/$%+-)6#)#%#+$H$$$#$#).&$#*$9*$9*$9*$9*$9*$9*$9*$9*$9*$9*$9*$9*$9*$9*$9*$9*,9+$+*$1*$1*$1*$1*$1*$1*$*+&F$)#*$%*$$*$$*&%+#*$$*$$*$$*$$*$$*$$*$$*$$*$$*$$*$$*$$*$$*$9*$E$)$)*$&*$&*$&*$&*$6*$%*$%*$%*$%*$%*$%*$%*$%*$%*$%*$%*$%*$%*$%*$%*$3*$'*$'*$'*$'*$'*$'*$'*$'*$'*$'*$'*$'*$'*$'*$'*$'*B'&+)C$'$$)$&)#$$'$$'*(%$$Q'+$:%%+*&+'$$#$$'*$&$$%+$**$=%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$)&$+$$K_%*$I$+#*$Q$*$Q$*$Q$*$Q$*$Q$*$Q$*$Q$*$Q$*$Q$*$Q$*$Q$*$F'*$1*$1*$1*$1*$1*$1*$1*$1*$1*$1**1+&:%#$.Q)%$+%<]1#,#,-(-,Y)(#,8##&#-*%##-*#,$#,$#,$#,$#,$#,$#,$#,B#,$2,,#,$',$#(&#(4#((#($&($%($%($%($%($%($%($%($%($%($*(#,@..D$#.'-%+'-$++%-+.#().#().#().#(%.#().#().#().#(%.#().#('.#().#().#().#().#(%.#(%.#(%.#().#(%.#(#.&#($#($#($#($#($%($#($#($#($#($#($#($#($#($#($#($#($#-%(#,#(B&,V%R)+.U'.K%((#-#.1-#.--#.#-#.Q$-#.G'-',$&,0*.#(1.#(#-,#(,#(,#(,#(,#(,#($8,$),&2-',#(#,-($%(.&(%-',#(#,-($%(.&(%-',#(#,-($%(.&(%-',#(#,-($%(L$&(#-%($%(8&(#-%($%(8&(#-%($%(8&(#-%($%(8&(+-", "nature|building|colours|worldTools|combat|utility|decoration|mobs|tools|materials|food", jQ),
+      CQ = IQ("$b&#$R)#$)%$)%$)%$)%$1%$)%$)%$)%$)%$)%$)%$)%$)%$)%$_7%$'%$'%$'%$'%$'%$'%$-%$'%$'%$'%$'%$'%$'%$'%$a$#$T%%$)%$)%$)%$)%$1%$)%$)%$)%$)%$)%$)%$)%$)%$)%$>#B#'$V$&4%'$%'6%'$)#$b%#$%)$G$%$'%$'%$'%$'%$'%$'%$-%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$'%$-%$'%$'%$'%$'%$'%$'%$'%$`'%$9%$9%$9%$9%$Q$%$9%$9%$9%$9%$9%$9%$9%$9%$9%$9%&U(&$&%$$%$$%$'%$$%$$%$$%$'%$$%$$%$$%$$%$$%$$%$$%$$%$9%$E$&D$[*$$$&$&&$P5%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%$)%*CZ&)c'Q;%&N$%<#%(G$&$%&&#&&Q)&$#&$#&$#&$#&$%&$#&$#&$#&$#&$#&$#&$#&$#&$#&$#&$#&&,%<#%*W))$-)BS(%B$%", "6|2|8|10|17|9", Number);
 
-    function Sp(pp) {
-      var ip;
-      const cp = null === (ip = Ip(pp)) || void 0 === ip ? void 0 : ip.json;
-      if (void 0 === cp || !Array.isArray(cp.extensionsUsed) || !cp.extensionsUsed.includes("KHR_draco_mesh_compression")) return !1;
-      const Op = cp.meshes;
-      return Array.isArray(Op) && Op.some((pp => {
-        const ip = null === pp || void 0 === pp ? void 0 : pp.primitives;
-        return Array.isArray(ip) && ip.some((pp => {
-          const ip = null === pp || void 0 === pp ? void 0 : pp.extensions;
-          return null != (null === ip || void 0 === ip ? void 0 : ip.KHR_draco_mesh_compression)
-        }))
+    function uQ(QQ) {
+      const WQ = yQ(QQ);
+      return null !== WQ ? WQ : UQ(DQ, QQ, (() => {
+        const WQ = (0, PQ.e)(QQ);
+        return void 0 === WQ ? void 0 : (0, gQ.L)(WQ)
       }))
+    }
+
+    function LQ(QQ) {
+      const WQ = VQ(QQ);
+      return null !== WQ ? WQ : UQ(pQ, QQ, (() => {
+        var WQ;
+        return null !== (WQ = (0, gQ.I)(uQ(QQ))) && void 0 !== WQ ? WQ : void 0
+      }))
+    }
+
+    function kQ(QQ) {
+      return bQ(QQ)
+    }
+
+    function fQ(QQ) {
+      return vQ(QQ)
+    }
+
+    function SQ(QQ) {
+      return dQ(QQ)
+    }
+
+    function tQ(QQ) {
+      return HQ(QQ)
+    }
+
+    function oQ(QQ) {
+      return aQ(QQ)
+    }
+
+    function eQ(QQ) {
+      return lQ(QQ)
+    }
+
+    function nQ(QQ) {
+      return 0 !== iQ(QQ)
+    }
+
+    function xQ(QQ) {
+      return cQ(QQ)
+    }
+
+    function YQ(QQ) {
+      return 0 !== hQ(QQ)
+    }
+
+    function NQ(QQ) {
+      const WQ = AQ(QQ);
+      if (void 0 === WQ || WQ.startsWith(gQ.r)) return null === WQ || void 0 === WQ ? void 0 : WQ.slice(gQ.r.length);
+      const XQ = (0, PQ.e)(QQ);
+      return void 0 === XQ ? void 0 : `${XQ}${gQ.v}${WQ}`
+    }
+
+    function ZQ(QQ) {
+      var WQ;
+      return null !== (WQ = RQ(QQ)) && void 0 !== WQ ? WQ : JQ
+    }
+    let OQ = null;
+
+    function KQ() {
+      if (null === OQ) {
+        const QQ = [],
+          WQ = new gQ.z(qQ);
+        let XQ = 0;
+        for (; !WQ.done;) XQ += (0, gQ.N)(WQ.next()), QQ.push(XQ);
+        OQ = Object.freeze(QQ)
+      }
+      return OQ
+    }
+
+    function mQ(QQ) {
+      return EQ(QQ)
+    }
+
+    function MQ(QQ, WQ) {
+      var XQ;
+      return 0 !== ((null !== (XQ = CQ(QQ)) && void 0 !== XQ ? XQ : 0) & WQ)
+    }
+
+    function QW(QQ) {
+      return MQ(QQ, gQ.d.OnlyInSearch)
+    }
+
+    function WW(QQ) {
+      return MQ(QQ, gQ.d.OnlyInCategory)
+    }
+
+    function XW(QQ) {
+      return MQ(QQ, gQ.d.DevOnly)
+    }
+
+    function wW(QQ) {
+      return !MQ(QQ, gQ.d.HiddenByDefault) && void 0
+    }
+
+    function qW(QQ, WQ, XQ, wQ) {
+      var qQ;
+      const TQ = null !== (qQ = CQ(QQ)) && void 0 !== qQ ? qQ : 0;
+      return 0 !== (TQ & gQ.d.DisabledInPublicLobbies) && WQ || 0 !== (TQ & gQ.d.DisabledInProduction) && !0 || !XQ || !wQ && 0 !== (TQ & gQ.d.DevOnly)
+    }
+    let TW = null;
+
+    function zW() {
+      if (null === TW) {
+        const QQ = zQ.split(gQ.v),
+          WQ = new Map,
+          XQ = new gQ.z(TQ);
+        let wQ = 0,
+          qQ = 0;
+        for (; !XQ.done;) {
+          wQ += (0, gQ.N)(XQ.next());
+          const TQ = XQ.next();
+          WQ.set(wQ, Object.freeze(QQ.slice(qQ, qQ + TQ))), qQ += TQ
+        }
+        TW = WQ
+      }
+      return TW
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

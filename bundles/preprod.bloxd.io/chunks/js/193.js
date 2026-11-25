@@ -1,1741 +1,1370 @@
 export const id = 193;
 export const ids = [193];
 export const modules = {
-  39310: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Op
+  40847: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      c: () => FQ,
+      d: () => sQ,
+      h: () => zQ
     });
-    class Op {
-      constructor(pp, ip) {
-        this.read = pp, this.apply = ip, this.release = null
+    var wQ = XQ(40850),
+      qQ = XQ(5134),
+      TQ = XQ(40853);
+
+    function zQ(QQ) {
+      return QQ.payloadKind === qQ.rc.Msgpack ? (0, wQ.d)(QQ.payload) : void 0
+    }
+
+    function sQ(QQ, WQ) {
+      if (WQ.payloadKind === qQ.rc.Bytes || WQ.payloadKind === qQ.rc.MsgpackBin) return (0, TQ.c)(QQ, WQ.payload)
+    }
+
+    function FQ(QQ) {
+      return null !== QQ && "object" === typeof QQ
+    }
+  },
+  40857: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      c: () => JQ,
+      g: () => rQ,
+      h: () => IQ,
+      j: () => gQ,
+      n: () => yQ
+    });
+    var wQ = XQ(5134),
+      qQ = XQ(40864);
+    const TQ = new Map,
+      zQ = new Set,
+      sQ = new Set;
+    let FQ = 0,
+      PQ = 0;
+
+    function gQ(QQ, WQ) {
+      let XQ = TQ.get(QQ);
+      return XQ || (XQ = new Set, TQ.set(QQ, XQ)), XQ.add(WQ), () => {
+        XQ.delete(WQ)
       }
-      turn(pp, ip) {
-        const cp = null === this.release ? this.read() : this.release.transitionMs;
-        this.stop(!1), this.apply({
-          forcedCameraDirectionTransitionMs: ip,
-          forcedCameraDirection: [pp[0], pp[1], pp[2]]
-        }), this.release = {
-          timer: setTimeout((() => {
-            this.stop(!0)
-          }), ip + 100),
-          transitionMs: cp
+    }
+
+    function JQ() {
+      return 0 !== FQ
+    }
+
+    function rQ(QQ) {
+      return zQ.add(QQ), () => {
+        zQ.delete(QQ)
+      }
+    }
+
+    function IQ(QQ) {
+      return sQ.add(QQ), () => {
+        sQ.delete(QQ)
+      }
+    }
+    const jQ = "A raw message listener threw";
+
+    function BQ(QQ) {
+      let WQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : zQ;
+      for (const wQ of WQ) try {
+        wQ()
+      } catch (XQ) {
+        QQ ? (0, qQ.m)(XQ, jQ) : console.error(jQ, XQ)
+      }
+    }
+    const yQ = {
+      fire: function(QQ) {
+        if ("connection" === QQ.type) {
+          const WQ = QQ.phase === wQ.E.Activated && QQ.conn !== FQ && QQ.conn > PQ,
+            XQ = (QQ.phase === wQ.E.Left || QQ.phase === wQ.E.Closed) && QQ.conn === FQ;
+          return void(WQ || XQ ? (FQ = WQ ? QQ.conn : 0, BQ(!0)) : QQ.phase === wQ.E.Resumed && 0 !== FQ && QQ.conn > PQ && (FQ = QQ.conn, BQ(!0, sQ)))
         }
-      }
-      dispose() {
-        this.stop(!0)
-      }
-      stop(pp) {
-        null !== this.release && (clearTimeout(this.release.timer), pp && this.apply({
-          forcedCameraDirection: null,
-          forcedCameraDirectionTransitionMs: this.release.transitionMs
-        }), this.release = null)
-      }
-    }
-  },
-  38866: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Ip,
-      h: () => op
-    });
-    const Op = new Map;
-
-    function op(pp, ip) {
-      Op.set(pp, ip)
-    }
-
-    function Ip(pp) {
-      return pp ? Op.get(pp) : void 0
-    }
-  },
-  39818: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => op
-    });
-    var Op = cp(38430);
-
-    function op(pp, ip, cp) {
-      var op, Ip, Sp, xp, Lp, Yp, Dp;
-      const Ap = (0, Op.b)(pp, ip, cp[0], cp[1], cp[2]),
-        Pp = Ap ? null !== (op = Ap.textCell) && void 0 !== op ? op : Ap.rect.anchor : cp,
-        Wp = ip(Pp[0], Pp[1], Pp[2]);
-      return {
-        pos: [cp[0], cp[1], cp[2]],
-        noticeboardSpan: Ap && {
-          width: Ap.rect.width,
-          height: Ap.rect.height
-        },
-        text: null !== (Ip = null === Wp || void 0 === Wp || null === (Sp = Wp.persisted) || void 0 === Sp || null === (xp = Sp.shared) || void 0 === xp ? void 0 : xp.text) && void 0 !== Ip ? Ip : "",
-        textSize: null !== (Lp = null === Wp || void 0 === Wp || null === (Yp = Wp.persisted) || void 0 === Yp || null === (Dp = Yp.shared) || void 0 === Dp ? void 0 : Dp.textSize) && void 0 !== Lp ? Lp : null
-      }
-    }
-  },
-  38726: (pp, ip, cp) => {
-    function Op(pp) {
-      switch (pp.kind) {
-        case void 0:
-        case "flatEmissive":
-          return !1;
-        case "chevronPath":
-        case "furnaceFire":
-          return !0
-      }
-    }
-    cp.d(ip, {
-      e: () => op,
-      h: () => Ip,
-      j: () => Op
-    });
-    const op = 4,
-      Ip = 3
-  },
-  39339: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => op,
-      e: () => Ip
-    });
-    var Op = cp(337);
-    const op = new Set(["bedwars", "bridgeBattle", "buildAFactory2", "classic", "clutch", "containmentBreach", "cooking", "defusal", "frontline", "goalRush", "luckyBedwars", "ninetyNineNights", "oneBlock", "plots", "pvpCiv", "skyIslands", "skyblock", "tsunami"]);
-    class Ip {
-      constructor(pp) {
-        this.importGame = pp, this.loads = new Map, this.loaded = new Map
-      }
-      load(pp) {
-        const ip = (0, Op.Mb)(pp);
-        if (!op.has(ip)) return Promise.resolve(void 0);
-        let cp = this.loads.get(ip);
-        return cp || (cp = this.importGame(ip).then((pp => {
-          const cp = pp.default;
-          if ("function" !== typeof cp) throw new Error(`${ip}'s client code has no default-exported factory`);
-          return this.loaded.set(ip, cp), cp
-        })).catch((pp => {
-          throw this.loads.delete(ip), pp
-        })), this.loads.set(ip, cp)), cp
-      }
-      loadedFactory(pp) {
-        const ip = (0, Op.Mb)(pp);
-        if (!op.has(ip)) return;
-        const cp = this.loaded.get(ip);
-        if (!cp) throw new Error(`${ip}'s client code started before it loaded`);
-        return cp
-      }
-    }
-  },
-  39827: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Sp
-    });
-    var Op = cp(9436),
-      op = cp(34448),
-      Ip = cp(3400);
-
-    function Sp(pp) {
-      if (pp === Op.d) return 0;
-      const ip = (0, Ip.c)(pp);
-      if (void 0 !== ip && ip <= op.MAX_BLOCK_ID) return ip;
-      const cp = (0, Ip.c)(pp.split("|")[0]);
-      if (void 0 !== cp && cp <= op.MAX_BLOCK_ID && (0, op.rootMetaDescOf)(cp) === pp) return cp;
-      throw new Error(`Invalid block name. You sent ${pp}. The only valid block names are 'Air' and those contained within the blockMetadata.ts file`)
-    }
-  },
-  39391: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => op
-    });
-    var Op = cp(25);
-    class op {
-      constructor(pp) {
-        this.screen = pp, this.hidesHud = !1
-      }
-      show(pp, ip) {
-        this.screen.setFade(pp.colour, pp.alpha), this.screen.setLetterbox(!0 === ip.letterbox, pp.alpha < 1), this.setHudHidden(!0 === ip.hideHud)
-      }
-      clear() {
-        this.screen.clear(), this.setHudHidden(!1)
-      }
-      setHudHidden(pp) {
-        this.hidesHud !== pp && (this.hidesHud = pp, Op.c.set({
-          isUiHiddenByCamera: pp
-        }))
-      }
-    }
-  },
-  39362: (pp, ip, cp) => {
-    cp.d(ip, {
-      B: () => xp,
-      D: () => Dp,
-      e: () => Op,
-      i: () => Pp,
-      l: () => Ap,
-      m: () => Sp,
-      o: () => yp,
-      s: () => Lp,
-      w: () => Up,
-      y: () => Yp
-    });
-    const Op = Math.PI / 2 - .001,
-      op = 2 * Math.PI,
-      Ip = 1e-9;
-
-    function Sp(pp, ip) {
-      ip.heading = pp.heading, ip.pitch = pp.pitch
-    }
-
-    function xp(pp, ip) {
-      const cp = ip - pp;
-      return cp - op * Math.floor((cp + Math.PI) / op)
-    }
-
-    function Lp(pp, ip, cp) {
-      return pp + xp(pp, ip) * cp
-    }
-
-    function Yp(pp) {
-      if (!Number.isFinite(pp)) return pp;
-      const ip = pp - op * Math.floor(pp / op);
-      return ip < op ? ip : 0
-    }
-
-    function Dp(pp, ip) {
-      return pp + xp(pp, ip)
-    }
-
-    function Ap(pp) {
-      return Math.max(-Op, Math.min(Op, pp))
-    }
-
-    function Pp(pp, ip, cp) {
-      const Op = Math.cos(ip);
-      return cp[0] = Op * Math.sin(pp), cp[1] = -Math.sin(ip), cp[2] = Op * Math.cos(pp), cp
-    }
-
-    function Wp(pp, ip, cp, Op) {
-      const op = Math.sqrt(pp * pp + cp * cp);
-      return op < Ip && Math.abs(ip) < Ip || (op >= Ip && (Op.heading = Math.atan2(pp, cp)), Op.pitch = Ap(Math.atan2(-ip, op) + 0)), Op
-    }
-
-    function yp(pp, ip) {
-      return Wp(pp[0], pp[1], pp[2], ip)
-    }
-
-    function Up(pp, ip, cp) {
-      return Wp(ip[0] - pp[0], ip[1] - pp[1], ip[2] - pp[2], cp)
-    }
-  },
-  39385: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Ip,
-      g: () => op
-    });
-    var Op = cp(39362);
-
-    function op(pp) {
-      var ip;
-      const cp = "default" === pp.mode ? "movement" : null !== (ip = pp.playerFacing) && void 0 !== ip ? ip : "movement";
-      return "cursor" === cp ? {
-        facing: cp,
-        mouseTurns: null
-      } : {
-        facing: cp,
-        mouseTurns: "default" !== pp.mode && void 0 !== pp.playerLook ? "look" : "view"
-      }
-    }
-
-    function Ip(pp, ip, cp, op, Ip, Sp) {
-      return Sp.QE = 0, Sp.TE = 0, Sp.pointedAt = void 0, void 0 !== op ? Ip ? (Sp.pointedAt = op, pp) : (0, Op.y)(op.heading) : Ip ? (Sp.QE = ip, Sp.TE = cp, pp) : (0, Op.y)(pp + ip)
-    }
-  },
-  39375: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => np
-    });
-    var Op = cp(39380),
-      op = cp(39362),
-      Ip = cp(37207);
-
-    function Sp(pp, ip, cp, Op) {
-      if (!(Op > 0)) return ip;
-      const op = ip > pp ? Math.min(ip, pp + cp / Op) : Math.max(ip, pp - cp / Op);
-      return Math.abs(ip - op) < 1e-9 ? ip : op
-    }
-    class xp {
-      constructor() {
-        this.phase = null, this.outMs = 0, this.holdMs = 0, this.inMs = 0, this.heldMs = 0, this.sinceTurnMs = 1 / 0, this.clearMs = 1 / 0, this.waiting = null, this.screen = {
-          colour: Op.e,
-          alpha: 0
-        }
-      }
-      getScreen() {
-        return this.screen
-      }
-      fadeOut(pp) {
-        !this.isGoingOut() && this.sinceTurnMs < Op.j.minFadeTurnMs ? this.waiting = {
-          turn: "out",
-          transition: pp
-        } : (this.waiting = null, this.startOut(pp))
-      }
-      fadeIn(pp) {
-        this.isGoingOut() ? this.sinceTurnMs < Op.j.minFadeTurnMs ? this.waiting = {
-          turn: "in",
-          minMs: pp
-        } : (this.waiting = null, this.startIn(pp)) : this.waiting = null
-      }
-      advance(pp) {
-        const ip = this.waiting;
-        if (null === ip) return this.step(pp);
-        const cp = Op.j.minFadeTurnMs - this.sinceTurnMs;
-        if (cp > pp) return this.step(pp);
-        const op = this.step(cp);
-        return this.waiting = null, "out" === ip.turn ? this.startOut(ip.transition) : this.startIn(ip.minMs), this.step(pp - cp) || op
-      }
-      isGoingOut() {
-        return "out" === this.phase || "hold" === this.phase
-      }
-      startOut(pp) {
-        ("in" === this.phase || null === this.phase && this.clearMs < Op.j.minFadeTurnMs) && (this.sinceTurnMs = 0), this.phase = "out", 0 === this.screen.alpha && (this.screen.colour = pp.colour), this.outMs = pp.outMs, this.holdMs = pp.holdMs, this.inMs = pp.inMs
-      }
-      startIn(pp) {
-        this.isGoingOut() && (this.sinceTurnMs = 0), this.phase = "in", this.inMs = Math.max(pp, this.inMs)
-      }
-      step(pp) {
-        const ip = this.screen;
-        this.sinceTurnMs += pp, null === this.phase && (this.clearMs += pp);
-        let cp = !1,
-          op = pp;
-        if ("out" === this.phase) {
-          const Op = (1 - ip.alpha) * this.outMs;
-          if (ip.alpha = Sp(ip.alpha, 1, pp, this.outMs), ip.alpha < 1) return !1;
-          this.phase = "hold", this.heldMs = 0, op = Math.max(0, pp - Op), cp = !0
-        }
-        let Ip = pp;
-        if ("hold" === this.phase) {
-          this.heldMs += op;
-          const pp = Math.min(this.heldMs - this.holdMs, this.sinceTurnMs - Op.j.minFadeTurnMs);
-          if (pp < 0 || cp) return cp;
-          this.phase = "in", this.sinceTurnMs = pp, Ip = pp
-        }
-        return "in" === this.phase && (ip.alpha = Sp(ip.alpha, 0, Ip, this.inMs), ip.alpha <= 0 && (this.phase = null, this.clearMs = 0)), cp
-      }
-    }
-    var Lp = cp(39356),
-      Yp = cp(39383),
-      Dp = cp(1927),
-      Ap = cp(36767);
-
-    function Pp(pp, ip) {
-      for (let cp = 0; cp < ip.length; cp++) ip[cp] = pp[cp]
-    }
-
-    function Wp(pp, ip) {
-      var cp;
-      return null !== (cp = pp.fov) && void 0 !== cp ? cp : ip.getDefaultFov()
-    }
-
-    function yp(pp, ip, cp, Op, op) {
-      const Ip = 2 / Op,
-        Sp = Math.exp(-Ip * op);
-      for (let xp = 0; xp < pp.length; xp++) {
-        const Op = pp[xp] - cp[xp],
-          Lp = (ip[xp] + Ip * Op) * op;
-        pp[xp] = cp[xp] + (Op + Lp) * Sp, ip[xp] = (ip[xp] - Ip * Lp) * Sp
-      }
-    }
-    class Up {
-      constructor(pp, ip, cp, Op) {
-        var Ip, Sp, xp, Lp, Yp;
-        this.settings = pp, this.WP = ip, this.targets = cp, this.base = void 0, this.closestDistance = void 0, this.furthestDistance = void 0, this.goal = void 0, this.framedTargets = !1, this.smoothed = [0, 0, 0, 0, 0, 0], this.tw = [0, 0, 0, 0, 0, 0], this.started = !1, this.angles = {
-          heading: 0,
-          pitch: 0
-        }, this.points = [], this.forward = [0, 0, 0], this.base = {
-          heading: (0, op.y)((0, Dp.o)(null !== (Ip = pp.viewHeading) && void 0 !== Ip ? Ip : 0)),
-          pitch: (0, op.l)((0, Dp.o)(null !== (Sp = pp.viewElevation) && void 0 !== Sp ? Sp : 45))
-        }, this.closestDistance = null !== (xp = pp.closestDistance) && void 0 !== xp ? xp : Math.min(6, null !== (Lp = pp.furthestDistance) && void 0 !== Lp ? Lp : 1 / 0), this.furthestDistance = null !== (Yp = pp.furthestDistance) && void 0 !== Yp ? Yp : Math.max(64, this.closestDistance);
-        const Ap = (0, op.i)(this.base.heading, this.base.pitch, this.forward),
-          Pp = Op.position,
-          Wp = this.closestDistance;
-        this.goal = [Pp[0] + Ap[0] * Wp, Pp[1] + Ap[1] * Wp, Pp[2] + Ap[2] * Wp, Wp, this.base.heading, this.base.pitch]
-      }
-      update(pp, ip, cp) {
-        var Op, Ip;
-        this.placeGoal(null !== (Op = this.settings.fov) && void 0 !== Op ? Op : this.WP.getBaseFov()), this.goal[4] = (0, op.D)(this.smoothed[4], this.base.heading), this.goal[5] = this.base.pitch;
-        const Sp = null !== (Ip = this.settings.smoothMs) && void 0 !== Ip ? Ip : 400;
-        !this.started || Sp < 1 ? (Pp(this.goal, this.smoothed), this.tw.fill(0), this.started = !0) : yp(this.smoothed, this.tw, this.goal, Sp, pp), this.angles.heading = this.smoothed[4], this.angles.pitch = (0, op.l)(this.smoothed[5]), ip.apply(this.angles, cp);
-        const xp = (0, op.i)(cp.heading, cp.pitch, this.forward);
-        for (let op = 0; op < 3; op++) cp.position[op] = this.smoothed[op] - xp[op] * this.smoothed[3];
-        cp.fov = Wp(this.settings, this.WP)
-      }
-      continueFrom(pp) {
-        pp instanceof Up && (Pp(pp.goal, this.goal), Pp(pp.smoothed, this.smoothed), Pp(pp.tw, this.tw), this.framedTargets = pp.framedTargets, this.started = pp.started)
-      }
-      reset() {
-        this.tw.fill(0), this.started = !1
-      }
-      placeGoal(pp) {
-        var ip;
-        let cp = 0;
-        for (const Dp of this.settings.targets) {
-          const pp = this.targets.currentAimPoint(Dp);
-          pp && (0, Lp.g)(pp, this.pointAt(cp++))
-        }
-        if (cp > 0) this.framedTargets = !0;
-        else if (!this.framedTargets) {
-          const pp = this.targets.aimPoint(this.WP.localPlayerId);
-          pp && (0, Lp.g)(pp, this.pointAt(cp++))
-        }
-        const Op = this.goal;
-        if (0 === cp) return void(Op[3] = this.withinDistances(Op[3]));
-        for (let Lp = 0; Lp < 3; Lp++) {
-          let pp = 1 / 0,
-            ip = -1 / 0;
-          for (let Op = 0; Op < cp; Op++) pp = Math.min(pp, this.points[Op][Lp]), ip = Math.max(ip, this.points[Op][Lp]);
-          Op[Lp] = (pp + ip) / 2
-        }
-        let op = 0;
-        for (let Lp = 0; Lp < cp; Lp++) {
-          const pp = this.points[Lp];
-          op = Math.max(op, Math.hypot(pp[0] - Op[0], pp[1] - Op[1], pp[2] - Op[2]))
-        }
-        const Ip = Math.tan((0, Dp.o)(pp) / 2),
-          Sp = Math.atan(Ip * (!0 === this.settings.letterbox ? Ap.i : 1)),
-          xp = Math.atan(Ip * this.WP.getAspectRatio()),
-          Yp = (op + (null !== (ip = this.settings.padding) && void 0 !== ip ? ip : 2)) / Math.sin(Math.min(Sp, xp));
-        Op[3] = this.withinDistances(Yp)
-      }
-      withinDistances(pp) {
-        return Math.min(this.furthestDistance, Math.max(this.closestDistance, pp))
-      }
-      pointAt(pp) {
-        return pp === this.points.length && this.points.push([0, 0, 0]), this.points[pp]
-      }
-    }
-    class wp {
-      constructor(pp) {
-        this.limits = pp, this.yawOffset = 0, this.pitchOffset = 0, this.idleMs = 0, this.pointedAt = null
-      }
-      continueFrom(pp) {
-        this.limits && (this.yawOffset = pp.yawOffset, this.pitchOffset = pp.pitchOffset, this.idleMs = pp.idleMs)
-      }
-      update(pp, ip) {
-        const cp = this.limits;
-        if (!cp) return;
-        const Op = Number.isFinite(ip.QE) ? ip.QE : 0,
-          op = Number.isFinite(ip.TE) ? ip.TE : 0;
-        if (ip.pointedAt) this.idleMs = 0, this.pointedAt = {
-          heading: ip.pointedAt.heading,
-          pitch: ip.pointedAt.pitch
-        };
-        else if (0 !== Op || 0 !== op) this.idleMs = 0, this.yawOffset += Op, this.pitchOffset += op;
-        else {
-          const ip = Math.max(0, this.idleMs + pp - 200) - Math.max(0, this.idleMs - 200);
-          if (this.idleMs += pp, void 0 !== cp.returnMs && ip > 0) {
-            const pp = cp.returnMs > 0 ? Math.exp(-3 * ip / cp.returnMs) : 0;
-            this.yawOffset *= pp, this.pitchOffset *= pp
+        const WQ = TQ.get(QQ.cg);
+        if (WQ && QQ.conn === FQ && 0 !== FQ)
+          for (const wQ of WQ) try {
+            wQ(QQ)
+          } catch (XQ) {
+            (0, qQ.m)(XQ, jQ)
           }
+      },
+      close: function(QQ) {
+        PQ = Math.max(PQ, QQ, FQ), 0 !== FQ && (FQ = 0, BQ(!1))
+      }
+    }
+  },
+  40839: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      b: () => PQ,
+      e: () => FQ,
+      i: () => sQ
+    });
+    var wQ = XQ(1302),
+      qQ = XQ(40813);
+    const TQ = new TextDecoder,
+      zQ = new TextEncoder;
+
+    function sQ(QQ, WQ) {
+      const XQ = QQ.queries.entityName(WQ);
+      if (XQ === qQ.fd) return;
+      const zQ = QQ.memoryData(QQ.scratch(), 4 + XQ, 4, "entity_name's answer");
+      if (!zQ) return;
+      const sQ = zQ.getUint32(0, !0),
+        FQ = TQ.decode(new Uint8Array(zQ.buffer, zQ.byteOffset + 4, XQ));
+      return (0, wQ.c)(FQ, !1, sQ === qQ.je ? null : sQ)
+    }
+
+    function FQ(QQ, WQ, XQ) {
+      const wQ = zQ.encode(XQ);
+      if (wQ.length > qQ.Rb) return !1;
+      const TQ = QQ.memoryView(Uint8Array, QQ.scratch(), wQ.length, "has_effect's name");
+      return !!TQ && (TQ.set(wQ), 1 === QQ.queries.hasEffect(WQ, wQ.length))
+    }
+
+    function PQ(QQ, WQ, XQ, wQ) {
+      const zQ = QQ.queries.blockData(WQ, XQ, wQ);
+      if (zQ === qQ.fd) return;
+      const sQ = QQ.memoryView(Uint8Array, QQ.scratch(), zQ, "block_data's answer");
+      return sQ ? JSON.parse(TQ.decode(sQ)) : void 0
+    }
+  },
+  40850: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      d: () => qQ,
+      e: () => gQ
+    });
+    const wQ = new TextDecoder;
+
+    function qQ(QQ) {
+      const WQ = new TQ(QQ),
+        XQ = WQ.value();
+      if (WQ.at !== QQ.length) throw new Error(`msgpack: ${QQ.length-WQ.at} bytes after the value`);
+      return XQ
+    }
+    class TQ {
+      constructor(QQ) {
+        this.bytes = QQ, this.at = 0, this.depth = 0, this.view = void 0, this.view = new DataView(QQ.buffer, QQ.byteOffset, QQ.byteLength)
+      }
+      value() {
+        const QQ = this.u8();
+        if (QQ <= 127) return QQ;
+        if (QQ >= 224) return QQ - 256;
+        if (QQ >= 128 && QQ <= 143) return this.map(15 & QQ);
+        if (QQ >= 144 && QQ <= 159) return this.array(15 & QQ);
+        if (QQ >= 160 && QQ <= 191) return this.str(31 & QQ);
+        switch (QQ) {
+          case 192:
+            return null;
+          case 194:
+            return !1;
+          case 195:
+            return !0;
+          case 196:
+            return this.bin(this.u8());
+          case 197:
+            return this.bin(this.u16());
+          case 198:
+            return this.bin(this.u32());
+          case 199:
+            return this.ext(this.u8());
+          case 200:
+            return this.ext(this.u16());
+          case 201:
+            return this.ext(this.u32());
+          case 202:
+            return this.view.getFloat32(this.take(4), !1);
+          case 203:
+            return this.view.getFloat64(this.take(8), !1);
+          case 204:
+            return this.u8();
+          case 205:
+            return this.u16();
+          case 206:
+            return this.u32();
+          case 207:
+            return this.int64(!1);
+          case 208:
+            return this.view.getInt8(this.take(1));
+          case 209:
+            return this.view.getInt16(this.take(2), !1);
+          case 210:
+            return this.view.getInt32(this.take(4), !1);
+          case 211:
+            return this.int64(!0);
+          case 212:
+            return this.ext(1);
+          case 213:
+            return this.ext(2);
+          case 214:
+            return this.ext(4);
+          case 215:
+            return this.ext(8);
+          case 216:
+            return this.ext(16);
+          case 217:
+            return this.str(this.u8());
+          case 218:
+            return this.str(this.u16());
+          case 219:
+            return this.str(this.u32());
+          case 220:
+            return this.array(this.u16());
+          case 221:
+            return this.array(this.u32());
+          case 222:
+            return this.map(this.u16());
+          case 223:
+            return this.map(this.u32());
+          default:
+            throw new Error(`msgpack: unknown byte 0x${QQ.toString(16)} at ${this.at-1}`)
         }
-        this.clampOffsets(cp)
       }
-      clampOffsets(pp) {
-        if (pp.maxYaw >= 180) this.yawOffset = (0, op.B)(0, this.yawOffset);
-        else {
-          const ip = (0, Dp.o)(pp.maxYaw);
-          this.yawOffset = Math.max(-ip, Math.min(ip, this.yawOffset))
-        }
-        const ip = (0, Dp.o)(pp.maxPitch);
-        this.pitchOffset = Math.max(-ip, Math.min(ip, this.pitchOffset))
+      take(QQ) {
+        const WQ = this.at;
+        if (WQ + QQ > this.bytes.length) throw new Error(`msgpack: ${QQ} bytes past the end at ${WQ}`);
+        return this.at = WQ + QQ, WQ
       }
-      apply(pp, ip) {
-        this.pointedAt && this.limits && (this.yawOffset = (0, op.B)(pp.heading, this.pointedAt.heading), this.pitchOffset = this.pointedAt.pitch - pp.pitch, this.pointedAt = null, this.clampOffsets(this.limits));
-        const cp = (0, op.l)(pp.pitch + this.pitchOffset);
-        this.pitchOffset = cp - pp.pitch, ip.heading = (0, op.y)(pp.heading + this.yawOffset), ip.pitch = cp
+      u8() {
+        return this.view.getUint8(this.take(1))
       }
-      unapply(pp, ip) {
-        ip.heading = (0, op.y)(pp.heading - this.yawOffset), ip.pitch = (0, op.l)(pp.pitch - this.pitchOffset)
+      u16() {
+        return this.view.getUint16(this.take(2), !1)
       }
-    }
-    const vp = 1e-6;
-
-    function tp(pp) {
-      return Math.sqrt(pp[0] * pp[0] + pp[1] * pp[1] + pp[2] * pp[2])
-    }
-
-    function Hp(pp, ip, cp, Op, op) {
-      const Ip = op * op,
-        Sp = Ip * op;
-      return (2 * Sp - 3 * Ip + 1) * pp + (Sp - 2 * Ip + op) * ip + (-2 * Sp + 3 * Ip) * cp + (Sp - Ip) * Op
-    }
-
-    function dp(pp, ip, cp, Op, op) {
-      const Ip = op * op;
-      return (6 * Ip - 6 * op) * pp + (3 * Ip - 4 * op + 1) * ip + (-6 * Ip + 6 * op) * cp + (3 * Ip - 2 * op) * Op
-    }
-
-    function ep(pp, ip) {
-      const cp = ip[0] - pp[0],
-        Op = ip[1] - pp[1],
-        op = ip[2] - pp[2];
-      return Math.sqrt(cp * cp + Op * Op + op * op)
-    }
-
-    function jp(pp, ip, cp, Op, op, Ip) {
-      for (let Sp = 0; Sp < 3; Sp++) Ip[Sp] = op ? pp[Sp] * Op : cp[Sp] - ip[Sp];
-      return op && function(pp, ip) {
-        const cp = tp(pp);
-        if (cp > ip) {
-          const Op = ip / cp;
-          pp[0] *= Op, pp[1] *= Op, pp[2] *= Op
-        }
-      }(Ip, 3 * ep(ip, cp)), Ip
-    }
-
-    function kp(pp, ip, cp, Op) {
-      for (let op = 0; op < 3; op++) Op[op] = 6 * (ip[op] - pp[op]) - 2 * cp[op];
-      if (tp(Op) < vp)
-        for (let op = 0; op < 3; op++) Op[op] = ip[op] - pp[op];
-      return Op
-    }
-
-    function mp(pp, ip) {
-      return [2 * ip[0] - pp[0], 2 * ip[1] - pp[1], 2 * ip[2] - pp[2]]
-    }
-
-    function Rp(pp, ip, cp, Op, op, Ip, Sp) {
-      if (!Ip && !Sp) return 0;
-      const xp = Ip ? pp : 2 * ip - cp,
-        Lp = Sp ? cp : 2 * ip - pp,
-        Yp = Ip ? Op : op,
-        Dp = Sp ? op : Op,
-        Ap = (ip - xp) / Yp,
-        Pp = (Lp - ip) / Dp;
-      if (Ap * Pp <= 0) return 0;
-      const Wp = (Lp - xp) / (Yp + Dp),
-        yp = 3 * Math.min(Math.abs(Ap), Math.abs(Pp));
-      return Math.max(-yp, Math.min(yp, Wp))
-    }
-
-    function qp(pp, ip, cp, Op, op, Ip, Sp) {
-      const {
-        u: xp,
-        segmentMs: Lp
-      } = pp;
-      if (!pp.curved) return cp + (Op - cp) * xp;
-      return Hp(cp, Rp(ip, cp, Op, pp.beforeMs, Lp, Ip, !0) * Lp, Op, Rp(cp, Op, op, Lp, pp.afterMs, !0, Sp) * Lp, xp)
-    }
-
-    function Mp(pp) {
-      return Math.abs(pp.pitch) >= op.e
-    }
-    class Cp {
-      constructor(pp, ip, cp, Op, op) {
-        this.nodes = pp, this.prevNodes = cp, this.nextNodes = Op, this.tangents = void 0, this.derivative = [0, 0, 0], this.beforeAngles = {
-          heading: 0,
-          pitch: 0
-        }, this.fromAngles = {
-          heading: 0,
-          pitch: 0
-        }, this.toAngles = {
-          heading: 0,
-          pitch: 0
-        }, this.afterAngles = {
-          heading: 0,
-          pitch: 0
-        }, this.borrowedAngles = {
-          heading: 0,
-          pitch: 0
-        }, this.tangents = pp.map(((pp, cp) => this.nodeTangent(ip, op, cp)))
+      u32() {
+        return this.view.getUint32(this.take(4), !1)
       }
-      sample(pp, ip, cp) {
-        const {
-          index: Op,
-          toIndex: Ip,
-          segmentMs: Sp,
-          curved: xp
-        } = pp, Lp = this.fromAngles, Yp = this.toAngles, Dp = this.nodeAngles(Op, cp.position, ip, Lp), Ap = this.nodeAngles(Ip, cp.position, ip, Yp);
-        if (Sp > 0 && "aim" !== Dp && "aim" !== Ap && this.liveTangent(pp, Lp)) return cp.heading = (0, op.y)(Lp.heading), void(cp.pitch = Lp.pitch);
-        if ("none" === Dp && "none" === Ap) return;
-        !xp && Sp > 0 && ("tangent" === Dp && this.liveTangent(pp, Lp), "tangent" === Ap && this.liveTangent(pp, Yp)), "none" === Dp ? (0, op.m)(Yp, Lp) : "none" === Ap && (0, op.m)(Lp, Yp);
-        const Pp = xp && pp.beforeIndex >= 0 && "none" !== this.nodeAngles(pp.beforeIndex, cp.position, ip, this.beforeAngles),
-          Wp = xp && pp.afterIndex >= 0 && "none" !== this.nodeAngles(pp.afterIndex, cp.position, ip, this.afterAngles),
-          yp = (0, op.D)(Lp.heading, Yp.heading),
-          Up = qp(pp, Pp ? (0, op.D)(Lp.heading, this.beforeAngles.heading) : 0, Lp.heading, yp, Wp ? (0, op.D)(yp, this.afterAngles.heading) : 0, Pp, Wp);
-        cp.heading = (0, op.y)(Up), cp.pitch = (0, op.l)(qp(pp, this.beforeAngles.pitch, Lp.pitch, Yp.pitch, this.afterAngles.pitch, Pp, Wp))
+      int64(QQ) {
+        const WQ = this.take(8);
+        return QQ ? this.view.getBigInt64(WQ, !1) : this.view.getBigUint64(WQ, !1)
       }
-      nodeAngles(pp, ip, cp, Op) {
-        const op = this.rawNodeAngles(pp, ip, cp, Op);
-        return "none" !== op && Mp(Op) && !this.borrowHeading(this.prevNodes[pp], ip, cp, Op) && this.borrowHeading(this.nextNodes[pp], ip, cp, Op), op
-      }
-      borrowHeading(pp, ip, cp, Op) {
-        const op = this.borrowedAngles;
-        return !(pp < 0 || "none" === this.rawNodeAngles(pp, ip, cp, op) || Mp(op)) && (Op.heading = op.heading, !0)
-      }
-      rawNodeAngles(pp, ip, cp, Op) {
-        const Ip = this.nodes[pp].keyframe;
-        if (Ip.lookDirection) return (0, op.o)(Ip.lookDirection, Op), "aim";
-        if (void 0 !== Ip.lookAt) {
-          const pp = cp(Ip.lookAt);
-          if (pp) return (0, op.w)(ip, pp, Op), "aim"
-        }
-        const Sp = this.tangents[pp];
-        return Sp ? ((0, op.m)(Sp, Op), "tangent") : "none"
-      }
-      liveTangent(pp, ip) {
-        const cp = this.nodes[pp.index].position,
-          Op = this.nodes[pp.toIndex].position,
-          Ip = this.derivative;
-        for (let op = 0; op < 3; op++) Ip[op] = dp(cp[op], pp.fromTangent[op], Op[op], pp.toTangent[op], pp.u);
-        return tp(Ip) > 1e-9 ? ((0, op.o)(Ip, ip), !0) : !(ep(cp, Op) < vp) && ((0, op.o)(kp(cp, Op, pp.u < .5 ? pp.toTangent : pp.fromTangent, Ip), ip), !0)
-      }
-      nodeTangent(pp, ip, cp) {
-        var Op;
-        const Ip = pp[cp];
-        if (tp(Ip) > 1e-9) return (0, op.o)(Ip, {
-          heading: 0,
-          pitch: 0
-        });
-        const Sp = null !== (Op = this.restDirectionTo(cp, cp + 1, pp, ip)) && void 0 !== Op ? Op : this.restDirectionTo(cp, cp - 1, pp, ip);
-        return Sp ? (0, op.o)(Sp, {
-          heading: 0,
-          pitch: 0
-        }) : null
-      }
-      restDirectionTo(pp, ip, cp, Op) {
-        const op = this.nodes[pp],
-          Ip = this.nodes[ip];
-        if (!Ip || ep(op.position, Ip.position) < vp) return null;
-        const [Sp, xp] = ip > pp ? [op, Ip] : [Ip, op], Lp = jp(cp[ip], Sp.position, xp.position, xp.timeMs - Sp.timeMs, Op, [0, 0, 0]);
-        return kp(Sp.position, xp.position, Lp, [0, 0, 0])
-      }
-    }
-
-    function Ep(pp, ip) {
-      const cp = pp.lookDirection || ip.lookDirection ? function(pp, ip) {
-        if (!pp || !ip) return pp === ip;
-        const cp = tp(pp),
-          Op = tp(ip);
-        return Math.hypot(pp[0] / cp - ip[0] / Op, pp[1] / cp - ip[1] / Op, pp[2] / cp - ip[2] / Op) < vp
-      }(pp.lookDirection, ip.lookDirection) : (Op = pp.lookAt, op = ip.lookAt, "object" !== typeof Op || "object" !== typeof op ? Op === op : ep(Op, op) < vp);
-      var Op, op;
-      return ep(pp.position, ip.position) < vp && pp.fov === ip.fov && cp
-    }
-    class Xp {
-      constructor(pp, ip, cp) {
-        if (this.smooth = ip, this.nodes = void 0, this.velocities = void 0, this.prevNodes = void 0, this.nextNodes = void 0, this.prevGaps = void 0, this.nextGaps = void 0, this.loopMs = void 0, this.aim = void 0, this.segment = {
-            index: 0,
-            toIndex: 0,
-            u: 0,
-            segmentMs: 0,
-            curved: !1,
-            beforeIndex: -1,
-            afterIndex: -1,
-            beforeMs: 0,
-            afterMs: 0,
-            fromTangent: [0, 0, 0],
-            toTangent: [0, 0, 0]
-          }, 0 === pp.length) throw new Error("A camera path needs at least one keyframe");
-        for (let Ip = 1; Ip < pp.length; Ip++)
-          if (!(pp[Ip].timeMs > pp[Ip - 1].timeMs)) throw new Error("Camera path keyframe times must strictly increase");
-        this.nodes = pp.map((pp => {
-          var ip;
-          return {
-            timeMs: pp.timeMs,
-            position: [...pp.position],
-            keyframe: pp,
-            easing: (0, Ip.j)(null !== (ip = pp.easing) && void 0 !== ip ? ip : "linear")
+      str(QQ) {
+        const WQ = this.take(QQ),
+          XQ = this.bytes;
+        if (QQ < 16) {
+          let qQ = "";
+          for (let TQ = WQ; TQ < WQ + QQ; TQ++) {
+            const zQ = XQ[TQ];
+            if (zQ >= 128) return wQ.decode(XQ.subarray(WQ, WQ + QQ));
+            qQ += String.fromCharCode(zQ)
           }
-        }));
-        const Op = this.nodes[0],
-          op = this.nodes[this.nodes.length - 1],
-          Sp = cp && this.nodes.length > 1;
-        Sp && !Ep(Op.keyframe, op.keyframe) && this.nodes.push({
-          ...Op,
-          timeMs: op.timeMs + (op.timeMs - Op.timeMs) / (this.nodes.length - 1)
-        }), this.loopMs = Sp ? this.nodes[this.nodes.length - 1].timeMs - Op.timeMs : 0, this.prevNodes = this.nodes.map(((pp, ip) => this.neighbour(ip, -1))), this.nextNodes = this.nodes.map(((pp, ip) => this.neighbour(ip, 1))), this.prevGaps = this.prevNodes.map(((pp, ip) => pp >= 0 ? this.gapMs(ip, -1) : 0)), this.nextGaps = this.nextNodes.map(((pp, ip) => pp >= 0 ? this.gapMs(ip, 1) : 0)), this.velocities = this.nodes.map(((pp, ip) => {
-          const cp = this.prevNodes[ip],
-            Op = this.nextNodes[ip];
-          return function(pp, ip, cp, Op, op, Ip) {
-            if (Ip[0] = 0, Ip[1] = 0, Ip[2] = 0, !pp && !cp) return Ip;
-            const Sp = null !== pp && void 0 !== pp ? pp : mp(null !== cp && void 0 !== cp ? cp : ip, ip),
-              xp = null !== cp && void 0 !== cp ? cp : mp(null !== pp && void 0 !== pp ? pp : ip, ip),
-              Lp = pp ? Op : op,
-              Yp = cp ? op : Op,
-              Dp = ep(Sp, ip),
-              Ap = ep(ip, xp);
-            if (Dp < vp || Ap < vp) return Ip;
-            const Pp = Math.sqrt(Dp),
-              Wp = Math.sqrt(Ap),
-              yp = (Pp + Wp) / (Lp + Yp);
-            for (let Up = 0; Up < 3; Up++) {
-              const pp = (ip[Up] - Sp[Up]) / Pp - (xp[Up] - Sp[Up]) / (Pp + Wp) + (xp[Up] - ip[Up]) / Wp;
-              Ip[Up] = pp * yp
+          return qQ
+        }
+        return wQ.decode(XQ.subarray(WQ, WQ + QQ))
+      }
+      bin(QQ) {
+        const WQ = this.take(QQ);
+        return this.bytes.subarray(WQ, WQ + QQ)
+      }
+      enter() {
+        if (++this.depth > 512) throw new Error("msgpack: nested too deep")
+      }
+      array(QQ) {
+        this.enter();
+        const WQ = [];
+        for (let XQ = 0; XQ < QQ; XQ++) WQ.push(this.value());
+        return this.depth--, WQ
+      }
+      map(QQ) {
+        this.enter();
+        const WQ = {};
+        for (let XQ = 0; XQ < QQ; XQ++) {
+          const QQ = this.value(),
+            XQ = this.value();
+          WQ["__proto__" === QQ ? "__proto_" : String(QQ)] = XQ
+        }
+        return this.depth--, WQ
+      }
+      ext(QQ) {
+        const WQ = this.view.getInt8(this.take(1)),
+          XQ = this.take(QQ);
+        if (0 !== WQ) {
+          if (-1 === WQ) {
+            if (1 === QQ) return new Date(NaN);
+            if (4 === QQ) return new Date(1e3 * this.view.getUint32(XQ, !1));
+            if (8 === QQ) {
+              const QQ = this.view.getUint32(XQ, !1),
+                WQ = QQ >>> 2,
+                wQ = 4294967296 * (3 & QQ) + this.view.getUint32(XQ + 4, !1);
+              return new Date(1e3 * wQ + WQ / 1e6)
             }
-            return Ip
-          }(cp >= 0 ? this.nodes[cp].position : null, pp.position, Op >= 0 ? this.nodes[Op].position : null, this.prevGaps[ip], this.nextGaps[ip], [0, 0, 0])
-        })), this.aim = new Cp(this.nodes, this.velocities, this.prevNodes, this.nextNodes, ip)
-      }
-      sample(pp, ip, cp, Op) {
-        const op = this.findSegment(this.pathTime(pp));
-        this.samplePosition(op, Op.position), this.aim.sample(op, ip, Op);
-        const {
-          beforeIndex: Ip,
-          afterIndex: Sp
-        } = op;
-        Op.fov = qp(op, Ip >= 0 ? this.fovAt(Ip, cp) : 0, this.fovAt(op.index, cp), this.fovAt(op.toIndex, cp), Sp >= 0 ? this.fovAt(Sp, cp) : 0, Ip >= 0, Sp >= 0)
-      }
-      pathTime(pp) {
-        const ip = this.nodes[0].timeMs;
-        if (this.loopMs <= 0 || pp <= ip) return pp;
-        const cp = pp - ip;
-        return ip + cp - this.loopMs * Math.floor(cp / this.loopMs)
-      }
-      findSegment(pp) {
-        const ip = this.nodes,
-          cp = this.segment;
-        let Op = cp.index;
-        for (pp < ip[Op].timeMs && (Op = 0); Op < ip.length - 2 && ip[Op + 1].timeMs <= pp;) Op++;
-        const op = Math.min(Op + 1, ip.length - 1),
-          Sp = ip[op].timeMs - ip[Op].timeMs;
-        return cp.index = Op, cp.toIndex = op, cp.segmentMs = Sp, cp.u = Sp > 0 ? (0, Ip.i)((pp - ip[Op].timeMs) / Sp, ip[Op].easing) : 1, cp.curved = this.smooth && Sp > 0, cp.beforeIndex = this.prevNodes[Op], cp.afterIndex = this.nextNodes[op], cp.beforeMs = this.prevGaps[Op], cp.afterMs = this.nextGaps[op], cp
-      }
-      samplePosition(pp, ip) {
-        const {
-          fromTangent: cp,
-          toTangent: Op,
-          curved: op
-        } = pp, Ip = this.nodes[pp.index].position, Sp = this.nodes[pp.toIndex].position;
-        jp(this.velocities[pp.index], Ip, Sp, pp.segmentMs, op, cp), jp(this.velocities[pp.toIndex], Ip, Sp, pp.segmentMs, op, Op);
-        const xp = pp.u;
-        for (let Lp = 0; Lp < 3; Lp++) ip[Lp] = op ? Hp(Ip[Lp], cp[Lp], Sp[Lp], Op[Lp], xp) : Ip[Lp] + (Sp[Lp] - Ip[Lp]) * xp
-      }
-      fovAt(pp, ip) {
-        var cp;
-        return null !== (cp = this.nodes[pp].keyframe.fov) && void 0 !== cp ? cp : ip
-      }
-      neighbour(pp, ip) {
-        const cp = this.nodes.length - 1,
-          Op = pp + ip;
-        return Op >= 0 && Op <= cp ? Op : this.loopMs <= 0 || cp < 2 ? -1 : Op < 0 ? cp - 1 : 1
-      }
-      gapMs(pp, ip) {
-        const cp = this.nodes.length - 1;
-        if (1 === ip) {
-          const ip = pp === cp ? 0 : pp;
-          return this.nodes[ip + 1].timeMs - this.nodes[ip].timeMs
-        }
-        const Op = 0 === pp ? cp : pp;
-        return this.nodes[Op].timeMs - this.nodes[Op - 1].timeMs
-      }
-    }
-    class lp {
-      constructor(pp) {
-        this.WP = pp, this.lastFeet = new Map, this.lastAimPoints = new Map, this.lastHeadings = new Map, this.readFeet = void 0, this.readAimPoint = void 0, this.readFeet = ip => pp.getEntityPosition(ip), this.readAimPoint = ip => pp.getEntityAimPoint(ip)
-      }
-      aimPoint(pp) {
-        return "string" !== typeof pp ? (0, Lp.o)(pp, 3) ? pp : null : this.resolve(pp, this.readAimPoint, this.lastAimPoints)
-      }
-      currentAimPoint(pp) {
-        const ip = "string" === typeof pp ? this.WP.getEntityAimPoint(pp) : pp;
-        return ip && (0, Lp.o)(ip, 3) ? ip : null
-      }
-      feetPosition(pp) {
-        return this.resolve(pp, this.readFeet, this.lastFeet)
-      }
-      heading(pp) {
-        const ip = this.WP.getEntityHeading(pp);
-        if (null !== ip && Number.isFinite(ip)) return this.lastHeadings.set(pp, ip), ip;
-        const cp = this.lastHeadings.get(pp);
-        return void 0 !== cp ? cp : pp === this.WP.localPlayerId ? 0 : this.heading(this.WP.localPlayerId)
-      }
-      resolve(pp, ip, cp) {
-        const Op = ip(pp);
-        let op = cp.get(pp);
-        return Op && (0, Lp.o)(Op, 3) ? (op || (op = [0, 0, 0], cp.set(pp, op)), op[0] = Op[0], op[1] = Op[1], op[2] = Op[2], op) : op || (pp === this.WP.localPlayerId ? null : this.resolve(this.WP.localPlayerId, ip, cp))
-      }
-    }
-
-    function Qp(pp) {
-      return {
-        heading: pp.heading,
-        pitch: pp.pitch
-      }
-    }
-
-    function Jp(pp, ip) {
-      Number.isFinite(pp.heading) && Number.isFinite(pp.pitch) || (0, op.m)(ip, pp)
-    }
-
-    function Bp(pp, ip, cp, Op, Ip) {
-      if (ip) return void(0, op.o)(ip, Ip);
-      const Sp = Op.aimPoint(cp);
-      Sp && (0, op.w)(pp, Sp, Ip)
-    }
-    class Np {
-      constructor(pp, ip, cp, Op) {
-        this.settings = pp, this.WP = ip, this.targets = cp, this.base = void 0, this.base = Qp(Op)
-      }
-      update(pp, ip, cp) {
-        var Op;
-        const op = this.settings;
-        (0, Lp.g)(op.position, cp.position), Bp(op.position, op.lookDirection, null !== (Op = op.lookAt) && void 0 !== Op ? Op : this.WP.localPlayerId, this.targets, this.base), ip.apply(this.base, cp), cp.fov = Wp(op, this.WP)
-      }
-      continueFrom(pp) {
-        pp instanceof Np && (0, op.m)(pp.base, this.base)
-      }
-      reset(pp) {
-        Jp(this.base, pp)
-      }
-    }
-    class Tp {
-      constructor(pp, ip, cp, Op) {
-        this.settings = pp, this.WP = ip, this.targets = cp, this.base = void 0, this.goal = void 0, this.lastFeet = [0, 0, 0], this.foundFeet = !1, this.smoothed = [0, 0, 0], this.tw = [0, 0, 0], this.started = !1, this.distance = -1, this.toCamera = [0, 0, 0], this.aimOrigin = [0, 0, 0], this.base = Qp(Op), this.goal = [...Op.position]
-      }
-      update(pp, ip, cp) {
-        var Op, op, Ip;
-        const Sp = this.settings,
-          xp = null !== (Op = Sp.target) && void 0 !== Op ? Op : this.WP.localPlayerId,
-          Yp = this.targets.feetPosition(xp);
-        let Dp = !1;
-        Yp && (Dp = this.foundFeet && ep(this.lastFeet, Yp) > 32 + .1 * pp, (0, Lp.g)(Yp, this.lastFeet), this.foundFeet = !0, this.placeGoal(Yp, xp));
-        const Ap = null !== (op = Sp.smoothMs) && void 0 !== op ? op : 0;
-        !this.started || Ap < 1 || Dp ? ((0, Lp.g)(this.goal, this.smoothed), this.tw.fill(0), this.started = !0) : yp(this.smoothed, this.tw, this.goal, Ap, pp), Dp && (this.distance = -1), (0, Lp.g)(this.smoothed, cp.position);
-        const Pp = !0 === Sp.avoidTerrain ? this.pullIn(xp, pp, cp) : 1;
-        let Up = this.goal;
-        if ("target" === Sp.offsetSpace) Up = cp.position;
-        else if (Pp < 1) {
-          Up = this.aimOrigin;
-          for (let pp = 0; pp < 3; pp++) Up[pp] = cp.position[pp] + (this.goal[pp] - this.smoothed[pp]) * Pp
-        }
-        Bp(Up, Sp.lookDirection, null !== (Ip = Sp.lookAt) && void 0 !== Ip ? Ip : xp, this.targets, this.base), ip.apply(this.base, cp), cp.fov = Wp(Sp, this.WP)
-      }
-      continueFrom(pp) {
-        pp instanceof Tp && (0, Op.p)(pp.settings.target, this.settings.target) && ((0, op.m)(pp.base, this.base), (0, Lp.g)(pp.goal, this.goal), (0, Lp.g)(pp.lastFeet, this.lastFeet), this.foundFeet = pp.foundFeet, (0, Lp.g)(pp.smoothed, this.smoothed), (0, Lp.g)(pp.tw, this.tw), this.started = pp.started, !0 === pp.settings.avoidTerrain && (this.distance = pp.distance))
-      }
-      reset(pp) {
-        Jp(this.base, pp), this.tw.fill(0), this.started = !1, this.distance = -1
-      }
-      pullIn(pp, ip, cp) {
-        const Op = this.targets.aimPoint(pp);
-        if (!Op) return 1;
-        const op = cp.position,
-          Ip = ep(Op, op);
-        if (!(Ip > 0)) return 1;
-        const Sp = this.toCamera;
-        for (let Lp = 0; Lp < 3; Lp++) Sp[Lp] = (op[Lp] - Op[Lp]) / Ip;
-        const xp = function(pp, ip, cp) {
-          return pp < 0 || ip < pp ? ip : ip + (pp - ip) * Math.exp(-cp / 150)
-        }(this.distance, function(pp, ip, cp, Op) {
-          const op = pp.raycastTerrain(ip, cp, Op);
-          return null !== op && Number.isFinite(op) ? Math.min(Op, Math.max(0, op - .2)) : Op
-        }(this.WP, Op, Sp, Ip), ip);
-        if (Ip - xp < .001) return this.distance = -1, 1;
-        this.distance = xp;
-        for (let Lp = 0; Lp < 3; Lp++) op[Lp] = Op[Lp] + Sp[Lp] * xp;
-        return xp / Ip
-      }
-      placeGoal(pp, ip) {
-        const cp = this.settings.offset;
-        let Op = cp[0],
-          op = cp[2];
-        if ("target" === this.settings.offsetSpace) {
-          const pp = this.targets.heading(ip),
-            Ip = Math.cos(pp),
-            Sp = Math.sin(pp);
-          Op = cp[0] * Ip + cp[2] * Sp, op = -cp[0] * Sp + cp[2] * Ip
-        }
-        this.goal[0] = pp[0] + Op, this.goal[1] = pp[1] + cp[1], this.goal[2] = pp[2] + op
-      }
-    }
-    class fp {
-      constructor(pp, ip, cp, Op) {
-        var op, Ip;
-        this.settings = pp, this.WP = ip, this.sampler = void 0, this.base = void 0, this.resolveTarget = void 0, this.elapsedMs = 0, this.sampler = pp.keyframes.length > 0 ? new Xp(pp.keyframes, null === (op = pp.smooth) || void 0 === op || op, null !== (Ip = pp.loop) && void 0 !== Ip && Ip) : null, this.base = (0, Lp.e)(Op, (0, Lp.i)()), this.resolveTarget = pp => cp.aimPoint(pp)
-      }
-      update(pp, ip, cp) {
-        this.elapsedMs += pp;
-        const Op = Wp(this.settings, this.WP);
-        this.sampler ? this.sampler.sample(this.elapsedMs, this.resolveTarget, Op, this.base) : this.base.fov = Op, (0, Lp.g)(this.base.position, cp.position), cp.fov = this.base.fov, ip.apply(this.base, cp)
-      }
-      continueFrom(pp) {
-        pp instanceof fp && (0, Op.p)(pp.settings.keyframes, this.settings.keyframes) && (this.elapsedMs = pp.elapsedMs, (0, Lp.e)(pp.base, this.base))
-      }
-      reset(pp) {
-        Jp(this.base, pp), Number.isFinite(this.elapsedMs) || (this.elapsedMs = 0)
-      }
-    }
-
-    function bp(pp, ip) {
-      return (0, Op.q)(pp, ip)
-    }
-    class hp {
-      constructor(pp, ip, cp) {
-        var Op;
-        this.settings = pp, this.WP = ip, this.pose = void 0, this.lastGoodPose = void 0, this.look = void 0, this.targets = void 0, this.mode = void 0, this.warnedNonFinite = !1;
-        const op = null !== cp && cp.settings.mode === pp.mode,
-          Ip = op ? cp.pose : ip.getDefaultPose();
-        this.pose = (0, Lp.e)(Ip, (0, Lp.i)()), this.lastGoodPose = (0, Lp.e)(op ? cp.lastGoodPose : Ip, (0, Lp.i)()), this.look = new wp(pp.playerLook), this.targets = null !== (Op = null === cp || void 0 === cp ? void 0 : cp.targets) && void 0 !== Op ? Op : new lp(ip);
-        const Sp = (0, Lp.e)(Ip, (0, Lp.i)());
-        op && cp.look.unapply(Sp, Sp), this.mode = function(pp, ip, cp, Op) {
-          switch (pp.mode) {
-            case "fixed":
-              return new Np(pp, ip, cp, Op);
-            case "follow":
-              return new Tp(pp, ip, cp, Op);
-            case "path":
-              return new fp(pp, ip, cp, Op);
-            case "frame":
-              return new Up(pp, ip, cp, Op)
+            if (12 === QQ) {
+              const QQ = this.view.getUint32(XQ, !1),
+                WQ = 4294967296 * this.view.getInt32(XQ + 4, !1) + this.view.getUint32(XQ + 8, !1);
+              return new Date(1e3 * WQ + QQ / 1e6)
+            }
           }
-        }(pp, ip, this.targets, Sp), op && (this.look.continueFrom(cp.look), this.mode.continueFrom(cp.mode))
-      }
-      update(pp, ip) {
-        return this.look.update(pp, ip), this.mode.update(pp, this.look, this.pose), (0, Lp.k)(this.pose) ? (0, Lp.e)(this.pose, this.lastGoodPose) : (this.warnedNonFinite || (console.warn("Scripted camera produced a non-finite pose; holding the last good one"), this.warnedNonFinite = !0), (0, Lp.e)(this.lastGoodPose, this.pose), this.mode.reset((0, Lp.k)(this.lastGoodPose) ? this.lastGoodPose : this.WP.getDefaultPose())), this.pose
+          throw new Error(`msgpack: ext type ${WQ} of ${QQ} bytes`)
+        }
       }
     }
+    const zQ = new TextEncoder,
+      sQ = -(2n ** 63n),
+      FQ = 2n ** 63n - 1n,
+      PQ = 2n ** 64n - 1n;
 
-    function ap(pp) {
-      return [0, 0, pp[2], pp[3]]
+    function gQ(QQ) {
+      const WQ = new JQ;
+      return WQ.value(QQ, 0), WQ.bytes()
     }
-    class np {
-      constructor(pp) {
-        this.WP = pp, this.settings = {
-          mode: "default"
-        }, this.pending = null, this.fade = new xp, this.shot = null, this.blend = null, this.mixed = (0, Lp.i)(), this.output = (0, Lp.i)(), this.hasOutput = !1, this.loadingPositions = [], this.loadingSlots = Array.from({
-          length: 3
-        }, (() => [0, 0, 0]))
+    class JQ {
+      constructor() {
+        this.buf = new Uint8Array(64), this.view = new DataView(this.buf.buffer), this.at = 0
       }
-      setSettings(pp) {
-        const ip = (0, Yp.c)(pp);
-        if ((0, Op.p)(ip, this.pending ? this.pending.settings : this.settings)) return;
-        const cp = bp(this.settings, ip);
-        if (void 0 !== ip.transition && !cp) return this.pending = {
-          settings: ip,
-          shot: "default" === ip.mode ? null : new hp(ip, this.WP, null)
-        }, void this.fade.fadeOut(ip.transition);
-        const op = null !== this.pending;
-        this.pending = null, !op && cp || this.fade.fadeIn(Op.j.minTransitionFadeMs), this.show(ip, !1)
+      bytes() {
+        return this.buf.subarray(0, this.at)
       }
-      show(pp, ip) {
-        var cp, op;
-        if ((0, Op.p)(pp, this.settings)) return;
-        const Sp = !ip && bp(this.settings, pp);
-        this.settings = pp;
-        const xp = null !== this.blend && this.blend.elapsedMs > 0,
-          Yp = (0, Lp.e)(this.hasOutput ? this.output : this.WP.getDefaultPose(), (0, Lp.i)());
-        if (this.shot = "default" === pp.mode ? null : new hp(pp, this.WP, ip ? null : this.shot), Sp) return;
-        const Dp = ip || !this.shot && !this.hasOutput ? 0 : null !== (cp = pp.blendInMs) && void 0 !== cp ? cp : 0;
-        if (Dp <= 0) return void(this.blend = null);
-        const Ap = (0, Ip.j)(null !== (op = pp.blendEasing) && void 0 !== op ? op : "easeInOut");
-        this.blend = {
-          from: Yp,
-          fromScripted: this.hasOutput,
-          headingDelta: NaN,
-          elapsedMs: 0,
-          durationMs: Dp,
-          easing: xp ? ap(Ap) : Ap
+      value(QQ, WQ) {
+        if (WQ > 512) throw new Error("msgpack: nested too deep");
+        switch (typeof QQ) {
+          case "undefined":
+            return this.u8(212), this.u8(0), void this.u8(0);
+          case "boolean":
+            return void this.u8(QQ ? 195 : 194);
+          case "number":
+            return void this.number(QQ);
+          case "bigint":
+            return void this.bigint(QQ);
+          case "string":
+            return void this.string(QQ);
+          case "object":
+            if (null === QQ) this.u8(192);
+            else if (QQ instanceof Uint8Array) this.head(QQ.length, 196, -1, 197, 198), this.room(QQ.length), this.buf.set(QQ, this.at), this.at += QQ.length;
+            else if (Array.isArray(QQ)) {
+              this.head(QQ.length, 220, 144, 220, 221);
+              for (const XQ of QQ) this.value(XQ, WQ + 1)
+            } else {
+              var XQ, wQ;
+              if (Object.getPrototypeOf(QQ) !== Object.prototype && null !== Object.getPrototypeOf(QQ)) throw new Error(`msgpack: can't encode a ${null!==(XQ=null===(wQ=QQ.constructor)||void 0===wQ?void 0:wQ.name)&&void 0!==XQ?XQ:"object"}`);
+              {
+                const XQ = Object.keys(QQ);
+                this.head(XQ.length, 222, 128, 222, 223);
+                for (const wQ of XQ) this.string(wQ), this.value(QQ[wQ], WQ + 1)
+              }
+            }
+            return;
+          default:
+            throw new Error("msgpack: can't encode a " + typeof QQ)
         }
       }
-      getSettings() {
-        return this.settings
+      number(QQ) {
+        Number.isInteger(QQ) && QQ >= -2147483648 && QQ <= 4294967295 ? QQ >= 0 ? QQ < 128 ? this.u8(QQ) : QQ < 256 ? (this.u8(204), this.u8(QQ)) : QQ < 65536 ? (this.u8(205), this.u16(QQ)) : (this.u8(206), this.u32(QQ)) : QQ >= -32 ? this.u8(QQ + 256) : QQ >= -128 ? (this.u8(208), this.u8(QQ + 256)) : QQ >= -32768 ? (this.u8(209), this.u16(QQ + 65536)) : (this.u8(210), this.u32(QQ >>> 0)) : (this.u8(203), this.room(8), this.view.setFloat64(this.at, QQ, !1), this.at += 8)
       }
-      getScreenFade() {
-        return this.fade.getScreen()
+      bigint(QQ) {
+        const WQ = QQ >= sQ && QQ <= FQ;
+        if (!WQ && (QQ < 0n || QQ > PQ)) throw new Error("msgpack: a BigInt past 64 bits");
+        this.u8(WQ ? 211 : 207), this.room(8), WQ ? this.view.setBigInt64(this.at, QQ, !1) : this.view.setBigUint64(this.at, QQ, !1), this.at += 8
       }
-      getLoadingPositions() {
-        return this.loadingPositions
+      string(QQ) {
+        const WQ = zQ.encode(QQ);
+        this.head(WQ.length, 217, 160, 218, 219), this.room(WQ.length), this.buf.set(WQ, this.at), this.at += WQ.length
       }
-      isActive() {
-        return null !== this.shot || null !== this.blend
+      head(QQ, WQ, XQ, wQ, qQ) {
+        XQ >= 0 && QQ < (160 === XQ ? 32 : 16) ? this.u8(XQ | QQ) : WQ !== wQ && QQ < 256 ? (this.u8(WQ), this.u8(QQ)) : QQ < 65536 ? (this.u8(wQ), this.u16(QQ)) : (this.u8(qQ), this.u32(QQ))
       }
-      update(pp, ip) {
-        const cp = Number.isFinite(pp) && pp > 0 ? pp : 0;
-        if (this.fade.advance(cp) && null !== this.pending) {
-          const {
-            settings: pp
-          } = this.pending;
-          this.pending = null, this.show(pp, !0)
-        }
-        this.loadingPositions.length = 0;
-        const Op = this.pending;
-        if (null !== Op && void 0 !== Op && Op.shot) {
-          const pp = "path" === Op.settings.mode ? 0 : cp;
-          this.noteLoadingPosition(Op.shot.update(pp, Lp.b).position)
-        }
-        if (!this.isActive()) return this.hasOutput = !1, null;
-        const Sp = this.shot ? this.shot.update(cp, ip) : this.WP.getDefaultPose();
-        this.shot && this.noteLoadingPosition(Sp.position);
-        const xp = this.blend;
-        if (!xp) return this.writeOutput(Sp);
-        xp.elapsedMs += cp;
-        const Yp = Math.min(1, xp.elapsedMs / xp.durationMs);
-        if (xp.headingDelta = Number.isFinite(xp.headingDelta) ? (0, op.D)(xp.headingDelta, Sp.heading - xp.from.heading) : (0, op.B)(xp.from.heading, Sp.heading), (0, Lp.s)(xp.from, Sp, xp.headingDelta, (0, Ip.i)(Yp, xp.easing), this.mixed), Yp >= 1) {
-          if (this.blend = null, !this.shot) return this.hasOutput = !1, null
-        } else xp.fromScripted && this.noteLoadingPosition(xp.from.position);
-        return this.writeOutput(this.mixed)
+      room(QQ) {
+        if (this.at + QQ <= this.buf.length) return;
+        let WQ = 2 * this.buf.length;
+        for (; WQ < this.at + QQ;) WQ *= 2;
+        const XQ = new Uint8Array(WQ);
+        XQ.set(this.buf.subarray(0, this.at)), this.buf = XQ, this.view = new DataView(XQ.buffer)
       }
-      noteLoadingPosition(pp) {
-        if (pp.every(Number.isFinite)) {
-          const ip = this.loadingPositions;
-          ip.push((0, Lp.g)(pp, this.loadingSlots[ip.length]))
-        }
+      u8(QQ) {
+        this.room(1), this.buf[this.at++] = QQ
       }
-      writeOutput(pp) {
-        const ip = this.output;
-        (0, Lp.k)(pp) ? (0, Lp.e)(pp, ip) : this.hasOutput || (0, Lp.e)(this.WP.getDefaultPose(), ip), ip.pitch = (0, op.l)(ip.pitch);
-        const cp = this.WP.getDefaultFov(),
-          Ip = Number.isFinite(cp) && cp > 0 && cp < 180,
-          Sp = Ip ? Math.min(Op.j.minFov, cp) : Op.j.minFov,
-          xp = Ip ? Math.max(Op.j.maxFov, cp) : Op.j.maxFov;
-        return ip.fov = Number.isFinite(ip.fov) ? Math.min(xp, Math.max(Sp, ip.fov)) : xp, this.hasOutput = !0, ip
+      u16(QQ) {
+        this.room(2), this.view.setUint16(this.at, QQ, !1), this.at += 2
+      }
+      u32(QQ) {
+        this.room(4), this.view.setUint32(this.at, QQ, !1), this.at += 4
       }
     }
   },
-  39356: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => op,
-      e: () => xp,
-      g: () => Sp,
-      i: () => Ip,
-      k: () => Yp,
-      o: () => Lp,
-      s: () => Dp
+  40853: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      c: () => zQ
     });
-    var Op = cp(39362);
-    const op = {
-      QE: 0,
-      TE: 0
+    var wQ = XQ(40845);
+    const qQ = new TextDecoder("utf-8", {
+      ignoreBOM: !0
+    });
+    class TQ {
+      constructor(QQ) {
+        this.buf = QQ, this.at = 0, this.view = null
+      }
+      bool() {
+        return 0 !== this.u8()
+      }
+      long() {
+        let QQ = this.u8(),
+          WQ = 127 & QQ,
+          XQ = 128;
+        for (; 128 & QQ;) {
+          if (XQ > 2 ** 63) throw new RangeError("avro: varint too long");
+          QQ = this.u8(), WQ += (127 & QQ) * XQ, XQ *= 128
+        }
+        return WQ % 2 === 1 ? -(WQ + 1) / 2 : WQ / 2
+      }
+      float() {
+        const QQ = this.take(4);
+        return this.floats().getFloat32(QQ, !0)
+      }
+      double() {
+        const QQ = this.take(8);
+        return this.floats().getFloat64(QQ, !0)
+      }
+      str() {
+        const QQ = this.size(),
+          WQ = this.take(QQ),
+          XQ = WQ + QQ;
+        if (QQ <= 32) {
+          let QQ = "";
+          for (let wQ = WQ; wQ < XQ; wQ++) {
+            const TQ = this.buf[wQ];
+            if (TQ >= 128) return qQ.decode(this.buf.subarray(WQ, XQ));
+            QQ += String.fromCharCode(TQ)
+          }
+          return QQ
+        }
+        return qQ.decode(this.buf.subarray(WQ, XQ))
+      }
+      bytes() {
+        return this.fixed(this.size())
+      }
+      fixed(QQ) {
+        const WQ = this.take(QQ);
+        return this.buf.slice(WQ, WQ + QQ)
+      }
+      index(QQ) {
+        const WQ = this.long();
+        if (!(WQ >= 0 && WQ < QQ)) throw new RangeError(`avro: index ${WQ} of ${QQ}`);
+        return WQ
+      }
+      sj(QQ) {
+        const WQ = [];
+        for (let XQ = this.long(); 0 !== XQ; XQ = this.long()) {
+          XQ = this.block(XQ);
+          for (let wQ = 0; wQ < XQ; wQ++) WQ.push(QQ(this))
+        }
+        return WQ
+      }
+      map(QQ) {
+        const WQ = {};
+        for (let XQ = this.long(); 0 !== XQ; XQ = this.long()) {
+          XQ = this.block(XQ);
+          for (let wQ = 0; wQ < XQ; wQ++) {
+            WQ[this.str()] = QQ(this)
+          }
+        }
+        return WQ
+      }
+      end() {
+        if (this.at !== this.buf.length) throw new RangeError(`avro: ${this.buf.length-this.at} bytes after the value`)
+      }
+      block(QQ) {
+        let WQ = QQ;
+        if (WQ < 0 && (WQ = -WQ, this.long()), WQ > this.buf.length - this.at) throw new RangeError(`avro: block of ${WQ} items in ${this.buf.length-this.at} bytes`);
+        return WQ
+      }
+      floats() {
+        return this.view ??= new DataView(this.buf.buffer, this.buf.byteOffset, this.buf.byteLength), this.view
+      }
+      size() {
+        const QQ = this.long();
+        if (QQ < 0) throw new RangeError(`avro: length ${QQ}`);
+        return QQ
+      }
+      u8() {
+        const QQ = this.buf[this.at];
+        if (void 0 === QQ) throw new RangeError("avro: truncated");
+        return this.at++, QQ
+      }
+      take(QQ) {
+        const WQ = this.at;
+        if (QQ > this.buf.length - WQ) throw new RangeError("avro: truncated");
+        return this.at = WQ + QQ, WQ
+      }
+    }
+
+    function zQ(QQ, WQ) {
+      const XQ = new TQ(WQ),
+        qQ = (0, wQ.cb)(QQ, XQ);
+      return XQ.end(), qQ
+    }
+  },
+  40845: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      $: () => BQ,
+      A: () => zQ,
+      B: () => lQ,
+      C: () => qQ,
+      E: () => sQ,
+      H: () => IQ,
+      J: () => HQ,
+      N: () => dQ,
+      P: () => bQ,
+      Q: () => gQ,
+      U: () => JQ,
+      W: () => aQ,
+      X: () => jQ,
+      Y: () => pQ,
+      ab: () => FQ,
+      b: () => UQ,
+      cb: () => hQ,
+      f: () => yQ,
+      h: () => VQ,
+      j: () => DQ,
+      l: () => vQ,
+      n: () => wQ,
+      p: () => TQ,
+      q: () => GQ,
+      u: () => rQ,
+      x: () => PQ
+    });
+    const wQ = 2,
+      qQ = 12,
+      TQ = 27,
+      zQ = 40,
+      sQ = 52,
+      FQ = 59,
+      PQ = 63,
+      gQ = 83,
+      JQ = 84,
+      rQ = 89,
+      IQ = 91,
+      jQ = 93,
+      BQ = 94,
+      yQ = 95,
+      VQ = 97,
+      DQ = 101,
+      pQ = 102,
+      GQ = 73,
+      UQ = 16,
+      bQ = 86,
+      vQ = 60,
+      dQ = 17,
+      HQ = 56,
+      aQ = 100,
+      lQ = 81;
+
+    function hQ(QQ, WQ) {
+      switch (QQ) {
+        case wQ:
+          return function(QQ) {
+            return {
+              aT: ZQ(QQ),
+              lT: QQ.float(),
+              hT: QQ.long()
+            }
+          }(WQ);
+        case qQ:
+          return function(QQ) {
+            return {
+              Cq: EQ(QQ),
+              uq: EQ(QQ)
+            }
+          }(WQ);
+        case TQ:
+          return function(QQ) {
+            return {
+              sQ: QQ.bool(),
+              FQ: EQ(QQ)
+            }
+          }(WQ);
+        case zQ:
+          return WQ.str();
+        case sQ:
+          return function(QQ) {
+            return {
+              id: QQ.long(),
+              nQ: zW(QQ)
+            }
+          }(WQ);
+        case FQ:
+          return function(QQ) {
+            return {
+              nT: EQ(QQ),
+              xT: FW(QQ)
+            }
+          }(WQ);
+        case PQ:
+          return WQ.str();
+        case gQ:
+        case JQ:
+          return WQ.long();
+        case rQ:
+          return function(QQ) {
+            return {
+              iq: QQ.long(),
+              cq: QQ.bool(),
+              Aq: QQ.float()
+            }
+          }(WQ);
+        case IQ:
+          return WQ.long();
+        case jQ:
+          return function(QQ) {
+            return {
+              fW: QQ.bool(),
+              aQ: JW(QQ)
+            }
+          }(WQ);
+        case BQ:
+          return function(QQ) {
+            return {
+              id: QQ.str(),
+              position: gW(QQ),
+              iW: rW(QQ),
+              style: SQ(QQ),
+              AW: QQ.bool()
+            }
+          }(WQ);
+        case yQ:
+          return function(QQ) {
+            return {
+              id: EQ(QQ)
+            }
+          }(WQ);
+        case VQ:
+          return function(QQ) {
+            return {
+              Zq: QQ.long(),
+              Oq: QQ.str(),
+              Kq: qW(QQ),
+              mq: qW(QQ),
+              Mq: EQ(QQ),
+              QT: EQ(QQ),
+              WT: EQ(QQ),
+              XT: EQ(QQ),
+              wT: EQ(QQ),
+              qT: qW(QQ),
+              TT: qW(QQ),
+              zT: EQ(QQ),
+              sT: EQ(QQ),
+              FT: EQ(QQ)
+            }
+          }(WQ);
+        case DQ:
+          return WQ.str();
+        case pQ:
+          return WQ.long();
+        case GQ:
+          return function(QQ) {
+            return {
+              IX: QQ.long(),
+              jX: QQ.str(),
+              BX: QQ.float()
+            }
+          }(WQ);
+        case UQ:
+          return function(QQ) {
+            return {
+              Lq: QQ.bool(),
+              kq: EQ(QQ),
+              fq: QQ.str(),
+              Sq: jW(QQ),
+              tq: jW(QQ),
+              oq: QQ.bool(),
+              eq: QQ.long(),
+              nq: BW(QQ)
+            }
+          }(WQ);
+        case bQ:
+          return function(QQ) {
+            return {
+              hq: EQ(QQ)
+            }
+          }(WQ);
+        case vQ:
+          return function(QQ) {
+            return {
+              RQ: QQ.str(),
+              EQ: QQ.str(),
+              CQ: yW(QQ),
+              SW: QQ.str(),
+              tW: mQ(QQ),
+              oW: QQ.float()
+            }
+          }(WQ);
+        case dQ:
+          return function(QQ) {
+            return {
+              RQ: QQ.str(),
+              EQ: QQ.str(),
+              CQ: yW(QQ)
+            }
+          }(WQ);
+        case HQ:
+          return function(QQ) {
+            return QQ.sj(VW)
+          }(WQ);
+        case aQ:
+          return function(QQ) {
+            return {
+              uQ: pW(QQ),
+              tQ: eQ(QQ)
+            }
+          }(WQ);
+        case lQ:
+          return function(QQ) {
+            return {
+              eX: QQ.bool(),
+              xX: EQ(QQ),
+              YX: UW(QQ),
+              ZX: LW(QQ)
+            }
+          }(WQ);
+        default:
+          throw new Error(`no reader for to-client message ${QQ}`)
+      }
+    }
+
+    function iQ(QQ) {
+      return {
+        entityName: QQ.str()
+      }
+    }
+
+    function cQ(QQ) {
+      const WQ = QQ.index(4);
+      return 0 === WQ ? QQ.str() : 1 === WQ ? QQ.long() : 2 === WQ ? QQ.bool() : iQ(QQ)
+    }
+
+    function AQ(QQ) {
+      return 0 === QQ.index(2) ? null : function(QQ) {
+        return QQ.map(cQ)
+      }(QQ)
+    }
+
+    function RQ(QQ) {
+      return {
+        translationKey: QQ.str(),
+        params: AQ(QQ)
+      }
+    }
+
+    function EQ(QQ) {
+      return 0 === QQ.index(2) ? null : QQ.str()
+    }
+
+    function CQ(QQ) {
+      return 0 === QQ.index(2) ? null : function(QQ) {
+        return {
+          color: EQ(QQ),
+          colour: EQ(QQ),
+          fontSize: EQ(QQ)
+        }
+      }(QQ)
+    }
+
+    function uQ(QQ) {
+      return {
+        icon: QQ.str(),
+        style: CQ(QQ)
+      }
+    }
+
+    function LQ(QQ) {
+      const WQ = QQ.index(3);
+      return 0 === WQ ? {
+        string: QQ.str()
+      } : 1 === WQ ? {
+        styledEntityName: iQ(QQ)
+      } : {
+        styledTranslatedText: RQ(QQ)
+      }
+    }
+
+    function kQ(QQ) {
+      const WQ = QQ.index(3);
+      return 0 === WQ ? null : 1 === WQ ? QQ.str() : QQ.long()
+    }
+
+    function fQ(QQ) {
+      return 0 === QQ.index(2) ? null : QQ.float()
+    }
+
+    function SQ(QQ) {
+      return 0 === QQ.index(2) ? null : function(QQ) {
+        return {
+          color: EQ(QQ),
+          colour: EQ(QQ),
+          fontWeight: kQ(QQ),
+          fontStyle: EQ(QQ),
+          fontSize: EQ(QQ),
+          opacity: fQ(QQ)
+        }
+      }(QQ)
+    }
+
+    function tQ(QQ) {
+      return {
+        str: LQ(QQ),
+        style: SQ(QQ),
+        clickableUrl: EQ(QQ)
+      }
+    }
+
+    function oQ(QQ) {
+      return QQ.str()
+    }
+
+    function eQ(QQ) {
+      return QQ.sj(oQ)
+    }
+
+    function nQ(QQ) {
+      return 0 === QQ.index(2) ? null : eQ(QQ)
+    }
+
+    function xQ(QQ) {
+      return {
+        type: QQ.str(),
+        progress: QQ.float(),
+        width: EQ(QQ),
+        height: EQ(QQ),
+        colours: nQ(QQ),
+        backgroundColour: EQ(QQ)
+      }
+    }
+
+    function YQ(QQ) {
+      return {
+        type: QQ.str(),
+        action: QQ.str(),
+        style: SQ(QQ)
+      }
+    }
+
+    function NQ(QQ) {
+      const WQ = QQ.index(7);
+      return 0 === WQ ? {
+        string: QQ.str()
+      } : 1 === WQ ? {
+        entityName: iQ(QQ)
+      } : 2 === WQ ? {
+        translatedText: RQ(QQ)
+      } : 3 === WQ ? {
+        styledIcon: uQ(QQ)
+      } : 4 === WQ ? {
+        MQ: tQ(QQ)
+      } : 5 === WQ ? {
+        styledProgressBar: xQ(QQ)
+      } : {
+        styledKeyBinding: YQ(QQ)
+      }
+    }
+
+    function ZQ(QQ) {
+      return QQ.sj(NQ)
+    }
+    const OQ = ["progressBar", "timedClick", "gravityBar", "precisionBar", "rhythmClick"];
+
+    function KQ(QQ) {
+      return OQ[QQ.index(5)]
+    }
+
+    function mQ(QQ) {
+      return 0 === QQ.index(2) ? null : QQ.double()
+    }
+
+    function MQ(QQ) {
+      return 0 === QQ.index(2) ? null : function(QQ) {
+        return {
+          ZQ: mQ(QQ),
+          OQ: QQ.double(),
+          KQ: QQ.double(),
+          mQ: QQ.bool(),
+          description: ZQ(QQ),
+          WW: QQ.str(),
+          scale: mQ(QQ),
+          rotation: mQ(QQ)
+        }
+      }(QQ)
+    }
+
+    function QW(QQ) {
+      return 0 === QQ.index(2) ? null : QQ.bool()
+    }
+
+    function WW(QQ) {
+      return 0 === QQ.index(2) ? null : function(QQ) {
+        return {
+          wW: QQ.double(),
+          icon: QQ.str(),
+          label: ZQ(QQ),
+          qW: QQ.bool(),
+          scale: mQ(QQ),
+          rotation: mQ(QQ),
+          TW: QW(QQ)
+        }
+      }(QQ)
+    }
+
+    function XW(QQ) {
+      return 0 === QQ.index(2) ? null : function(QQ) {
+        return {
+          ZQ: mQ(QQ),
+          sW: QQ.double(),
+          FW: QQ.double(),
+          PW: QQ.double(),
+          gravity: QQ.double(),
+          gW: QQ.double(),
+          JW: QQ.double(),
+          rW: QQ.double(),
+          mQ: QQ.bool(),
+          description: ZQ(QQ),
+          icon: EQ(QQ)
+        }
+      }(QQ)
+    }
+
+    function wW(QQ) {
+      return 0 === QQ.index(2) ? null : function(QQ) {
+        return {
+          speed: QQ.double(),
+          jW: QQ.double(),
+          label: ZQ(QQ),
+          icon: EQ(QQ),
+          scale: mQ(QQ),
+          rotation: mQ(QQ)
+        }
+      }(QQ)
+    }
+
+    function qW(QQ) {
+      return 0 === QQ.index(2) ? null : QQ.long()
+    }
+
+    function TW(QQ) {
+      return 0 === QQ.index(2) ? null : function(QQ) {
+        return {
+          yW: QQ.long(),
+          VW: QQ.double(),
+          DW: QQ.double(),
+          pW: qW(QQ),
+          label: ZQ(QQ),
+          icon: EQ(QQ)
+        }
+      }(QQ)
+    }
+
+    function zW(QQ) {
+      return {
+        type: KQ(QQ),
+        progressBar: MQ(QQ),
+        timedClick: WW(QQ),
+        gravityBar: XW(QQ),
+        precisionBar: wW(QQ),
+        rhythmClick: TW(QQ)
+      }
+    }
+    const sW = ["playerGone", "rateLimited"];
+
+    function FW(QQ) {
+      return 0 === QQ.index(2) ? null : function(QQ) {
+        return sW[QQ.index(2)]
+      }(QQ)
+    }
+
+    function PW(QQ) {
+      return QQ.float()
+    }
+
+    function gW(QQ) {
+      return QQ.sj(PW)
+    }
+
+    function JW(QQ) {
+      return 0 === QQ.index(2) ? null : gW(QQ)
+    }
+
+    function rW(QQ) {
+      return 0 === QQ.index(2) ? null : ZQ(QQ)
+    }
+
+    function IW(QQ) {
+      return QQ.long()
+    }
+
+    function jW(QQ) {
+      return 0 === QQ.index(2) ? null : function(QQ) {
+        return QQ.sj(IW)
+      }(QQ)
+    }
+
+    function BW(QQ) {
+      return 0 === QQ.index(2) ? null : function(QQ) {
+        return {
+          Yq: QQ.str(),
+          Nq: QQ.long()
+        }
+      }(QQ)
+    }
+
+    function yW(QQ) {
+      const WQ = QQ.index(3);
+      return 0 === WQ ? null : 1 === WQ ? QQ.str() : RQ(QQ)
+    }
+
+    function VW(QQ) {
+      return {
+        vT: QQ.str(),
+        dT: QQ.str(),
+        HT: QQ.str()
+      }
+    }
+
+    function DW(QQ) {
+      return {
+        LQ: QQ.str(),
+        kQ: EQ(QQ),
+        fQ: EQ(QQ),
+        SQ: eQ(QQ)
+      }
+    }
+
+    function pW(QQ) {
+      return QQ.sj(DW)
+    }
+
+    function GW(QQ) {
+      return {
+        NX: QQ.str(),
+        x: QQ.long(),
+        y: QQ.long(),
+        z: QQ.long()
+      }
+    }
+
+    function UW(QQ) {
+      return QQ.sj(GW)
+    }
+
+    function bW(QQ) {
+      return 0 === QQ.index(2) ? null : function(QQ) {
+        return {
+          Bw: QQ.float(),
+          yw: QQ.long(),
+          Vw: QQ.long()
+        }
+      }(QQ)
+    }
+
+    function vW(QQ) {
+      return {
+        blockName: QQ.str(),
+        sw: QQ.bool(),
+        Fw: QQ.bool(),
+        Pw: QQ.bool(),
+        gw: QQ.float(),
+        Jw: QQ.float(),
+        rw: QQ.long(),
+        Iw: bW(QQ)
+      }
+    }
+
+    function dW(QQ) {
+      return 0 === QQ.index(2) ? null : function(QQ) {
+        return QQ.sj(vW)
+      }(QQ)
+    }
+
+    function HW(QQ) {
+      return {
+        qw: QQ.str(),
+        Tw: dW(QQ)
+      }
+    }
+
+    function aW(QQ) {
+      return {
+        blockName: QQ.str(),
+        frequency: QQ.float()
+      }
+    }
+
+    function lW(QQ) {
+      return QQ.sj(aW)
+    }
+
+    function hW(QQ) {
+      return {
+        Gw: QQ.str(),
+        Uw: QQ.str(),
+        frequency: QQ.float(),
+        bw: lW(QQ)
+      }
+    }
+
+    function iW(QQ) {
+      return QQ.sj(hW)
+    }
+
+    function cW(QQ) {
+      return {
+        blockName: QQ.str(),
+        radius: QQ.long(),
+        lw: QQ.long(),
+        mX: QQ.long(),
+        MX: QQ.long(),
+        hw: QQ.float()
+      }
+    }
+
+    function AW(QQ) {
+      return QQ.sj(cW)
+    }
+
+    function RW(QQ) {
+      return {
+        mX: QQ.long(),
+        MX: QQ.long(),
+        Qw: QQ.long(),
+        Ww: QQ.bool(),
+        Xw: HW(QQ),
+        Dw: iW(QQ),
+        Hw: AW(QQ)
+      }
+    }
+
+    function EW(QQ) {
+      return QQ.sj(RW)
+    }
+
+    function CW(QQ) {
+      return 0 === QQ.index(2) ? null : function(QQ) {
+        return {
+          name: QQ.str(),
+          Ew: EQ(QQ)
+        }
+      }(QQ)
+    }
+
+    function uW(QQ) {
+      return 0 === QQ.index(2) ? null : function(QQ) {
+        return {
+          terrain: CW(QQ),
+          Cw: AW(QQ)
+        }
+      }(QQ)
+    }
+
+    function LW(QQ) {
+      return 0 === QQ.index(2) ? null : function(QQ) {
+        return {
+          layers: EW(QQ),
+          iw: uW(QQ)
+        }
+      }(QQ)
+    }
+  },
+  40835: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      $: () => pQ,
+      C: () => GQ,
+      F: () => UQ,
+      G: () => yQ,
+      I: () => aQ,
+      M: () => AQ,
+      Q: () => jQ,
+      S: () => EQ,
+      U: () => DQ,
+      X: () => VQ,
+      bb: () => bQ,
+      d: () => qQ,
+      e: () => RQ,
+      g: () => cQ,
+      j: () => IQ,
+      m: () => BQ,
+      p: () => hQ,
+      r: () => dQ,
+      s: () => lQ,
+      t: () => HQ,
+      x: () => vQ,
+      z: () => iQ
+    });
+    var wQ = XQ(3243);
+    const qQ = {
+      Chat: 49,
+      UiRequestResponded: 91,
+      CodeCollab: 89,
+      SetCustomLobbyBlock: 60,
+      UpdateBook: 56,
+      UpdateBoard: 33,
+      UpdateMyCosmetic: 45,
+      PlayEmote: 90,
+      ReqDiscordReportKey: 9,
+      UserReport: 11,
+      LobbyReport: 12,
+      CustomGameReport: 13,
+      IgnoreUser: 34,
+      ShopMenuChanged: 26,
+      GeneralCookieSet: 72,
+      CompleteTask: 69,
+      OpenIronChest: 80,
+      ChangeIronChestPasskey: 81,
+      StopSleeping: 78,
+      AnalyticsUpdate: 3,
+      UiRequestResp: 15,
+      QteResponse: 16,
+      ItemBought: 25,
+      LeaderboardRequest: 40,
+      UpdateNameTag: 53,
+      LobbyManage: 96
     };
 
-    function Ip() {
-      return {
-        position: [0, 0, 0],
-        heading: 0,
-        pitch: 0,
-        fov: 0
+    function TQ(QQ, WQ) {
+      return !ArrayBuffer.isView(QQ) || QQ instanceof DataView ? Array.isArray(QQ) ? QQ.map((QQ => WQ(QQ))) : QQ : Array.from(QQ, (QQ => WQ(QQ)))
+    }
+
+    function zQ(QQ) {
+      if ("string" !== typeof QQ) return QQ;
+      for (let WQ = 0; WQ < QQ.length; WQ++) {
+        const XQ = QQ.charCodeAt(WQ);
+        if (XQ >= 55296 && XQ <= 57343) return FQ.decode(sQ.encode(QQ))
       }
+      return QQ
+    }
+    const sQ = new TextEncoder,
+      FQ = new TextDecoder;
+
+    function PQ(QQ) {
+      return QQ
+    }
+    let gQ;
+
+    function JQ(QQ) {
+      return null === QQ || "object" !== typeof QQ ? QQ : [zQ(QQ.mz), zQ(QQ.Mz)]
     }
 
-    function Sp(pp, ip) {
-      return ip[0] = pp[0], ip[1] = pp[1], ip[2] = pp[2], ip
+    function rQ(QQ) {
+      return null === QQ || "object" !== typeof QQ ? QQ : [TQ(QQ.Sq, PQ), TQ(QQ.ys, PQ)]
     }
 
-    function xp(pp, ip) {
-      return Sp(pp.position, ip.position), ip.heading = pp.heading, ip.pitch = pp.pitch, ip.fov = pp.fov, ip
+    function IQ(QQ) {
+      return null === (WQ = QQ) || "object" !== typeof WQ ? WQ : [zQ(WQ.cg), zQ(WQ.Ag)];
+      var WQ
     }
 
-    function Lp(pp, ip) {
-      return Array.isArray(pp) && pp.length === ip && pp.every(Number.isFinite)
+    function jQ(QQ) {
+      return null === (WQ = QQ) || "object" !== typeof WQ ? WQ : [WQ.id, WQ.yg];
+      var WQ
     }
 
-    function Yp(pp) {
-      return Lp(pp.position, 3) && Number.isFinite(pp.heading) && Number.isFinite(pp.pitch) && Number.isFinite(pp.fov)
+    function BQ(QQ) {
+      return null === (WQ = QQ) || "object" !== typeof WQ ? WQ : [WQ.Zq, zQ(WQ.Oq), WQ.Kq, zQ(WQ.QT), WQ.qT, WQ.TT, WQ.lg, zQ(WQ.hg), zQ(WQ.ig)];
+      var WQ
     }
 
-    function Dp(pp, ip, cp, op, Ip) {
-      for (let Op = 0; Op < 3; Op++) Ip.position[Op] = pp.position[Op] + (ip.position[Op] - pp.position[Op]) * op;
-      return Ip.heading = (0, Op.y)(pp.heading + cp * op), Ip.pitch = pp.pitch + (ip.pitch - pp.pitch) * op, Ip.fov = pp.fov + (ip.fov - pp.fov) * op, Ip
+    function yQ(QQ) {
+      return null === (WQ = QQ) || "object" !== typeof WQ ? WQ : [TQ(WQ.tz, PQ), WQ.ez];
+      var WQ
+    }
+
+    function VQ(QQ) {
+      return null === (WQ = QQ) || "object" !== typeof WQ ? WQ : [TQ(WQ.kz, (QQ => zQ(QQ))), zQ(WQ.fz), WQ.Sz];
+      var WQ
+    }
+
+    function DQ(QQ) {
+      return null === (WQ = QQ) || "object" !== typeof WQ ? WQ : [TQ(WQ.UF, PQ), zQ(WQ.bF), WQ.vF];
+      var WQ
+    }
+
+    function pQ(QQ) {
+      return null === (WQ = QQ) || "object" !== typeof WQ ? WQ : [zQ(WQ.dT), zQ(WQ.HT)];
+      var WQ
+    }
+
+    function GQ(QQ) {
+      return null === (WQ = QQ) || "object" !== typeof WQ ? WQ : [zQ(WQ.Rs)];
+      var WQ
+    }
+
+    function UQ(QQ) {
+      return zQ(QQ)
+    }
+
+    function bQ(QQ) {
+      return null === (WQ = QQ) || "object" !== typeof WQ ? WQ : [zQ(WQ.Ig), zQ(WQ.jg), zQ(WQ.mz), zQ(WQ.Mz)];
+      var WQ
+    }
+
+    function vQ(QQ) {
+      return JQ(QQ)
+    }
+
+    function dQ(QQ) {
+      return JQ(QQ)
+    }
+
+    function HQ(QQ) {
+      return null === (WQ = QQ) || "object" !== typeof WQ ? WQ : [zQ(WQ.IF)];
+      var WQ
+    }
+
+    function aQ(QQ) {
+      return QQ
+    }
+
+    function lQ(QQ) {
+      return null === (WQ = QQ) || "object" !== typeof WQ ? WQ : [zQ(WQ.Oz), zQ(WQ.Kz)];
+      var WQ
+    }
+
+    function hQ(QQ) {
+      return zQ(QQ)
+    }
+
+    function iQ(QQ) {
+      return rQ(QQ)
+    }
+
+    function cQ(QQ) {
+      return rQ(QQ)
+    }
+
+    function AQ(QQ) {
+      return null === (WQ = QQ) || "object" !== typeof WQ ? WQ : [zQ(WQ.dF)];
+      var WQ
+    }
+
+    function RQ(QQ) {
+      return (gQ ??= (0, wQ.f)().map((QQ => QQ.name)), gQ).map((WQ => {
+        return "string" === typeof(XQ = QQ[WQ]) ? zQ(XQ) : TQ(XQ, PQ);
+        var XQ
+      }))
+    }
+
+    function EQ(QQ) {
+      return null === (WQ = QQ) || "object" !== typeof WQ ? WQ : [WQ.gF, WQ.JF, WQ.rF];
+      var WQ
     }
   },
-  39383: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => kp,
-      e: () => Pp
+  9679: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      b: () => qQ,
+      c: () => TQ
     });
-    var Op = cp(39380),
-      op = cp(39356);
-    const Ip = Op.h,
-      Sp = Op.l;
-
-    function xp(pp, ip, cp, Op) {
-      return Number.isFinite(pp) ? Math.min(cp, Math.max(ip, pp)) : Op
-    }
-
-    function Lp(pp, ip, cp) {
-      return void 0 !== pp && Number.isFinite(pp) ? Math.min(cp, Math.max(ip, pp)) : void 0
-    }
-
-    function Yp(pp) {
-      const ip = Op.j.maxCoordinate;
-      return [Math.min(ip, Math.max(-ip, pp[0])), Math.min(ip, Math.max(-ip, pp[1])), Math.min(ip, Math.max(-ip, pp[2]))]
-    }
-
-    function Dp(pp) {
-      return "string" === typeof pp ? pp : (0, op.o)(pp, 3) ? Yp(pp) : void 0
-    }
-    const Ap = new RegExp(Op.o);
-
-    function Pp(pp) {
-      return "string" === typeof pp && Ap.test(pp)
-    }
-
-    function Wp(pp) {
-      const ip = [];
-      if (!Array.isArray(pp)) return ip;
-      for (const cp of pp.slice(0, Op.j.maxFrameTargets)) {
-        const pp = Dp(cp);
-        void 0 === pp || "string" === typeof pp && !Pp(pp) || ip.push(pp)
-      }
-      return ip
-    }
-
-    function yp(pp) {
-      if (!(0, op.o)(pp, 3)) return;
-      const ip = Math.max(Math.abs(pp[0]), Math.abs(pp[1]), Math.abs(pp[2])),
-        cp = Math.hypot(pp[0] / ip, pp[1] / ip, pp[2] / ip);
-      return 0 === ip || ip * cp < Op.j.minDirectionLength ? void 0 : [pp[0] / ip / cp, pp[1] / ip / cp, pp[2] / ip / cp]
-    }
-
-    function Up(pp) {
-      if (void 0 !== pp) return "string" === typeof pp ? Ip.includes(pp) ? pp : void 0 : (0, op.o)(pp, 4) ? [xp(pp[0], 0, 1, 0), xp(pp[1], Op.j.minEasingY, Op.j.maxEasingY, 0), xp(pp[2], 0, 1, 1), xp(pp[3], Op.j.minEasingY, Op.j.maxEasingY, 1)] : "linear"
-    }
-
-    function wp(pp) {
-      if (pp) return {
-        maxYaw: xp(pp.maxYaw, 0, Op.j.maxPlayerLook, 0),
-        maxPitch: xp(pp.maxPitch, 0, Op.j.maxPlayerLook, 0),
-        returnMs: Lp(pp.returnMs, 0, Op.j.maxReturnMs)
-      }
-    }
-    const vp = new RegExp(Op.b);
-
-    function tp(pp) {
-      var ip;
-      if ("object" !== typeof pp || null === pp) return;
-      const cp = Op.j.maxTransitionMs,
-        op = Op.j.minTransitionFadeMs;
-      return {
-        colour: "string" === typeof pp.colour && vp.test(pp.colour) ? pp.colour : Op.e,
-        outMs: xp(pp.outMs, op, cp, op),
-        holdMs: xp(null !== (ip = pp.holdMs) && void 0 !== ip ? ip : 0, 0, cp, 0),
-        inMs: xp(pp.inMs, op, cp, op)
-      }
-    }
-
-    function Hp(pp) {
-      return !0 === pp || void 0
-    }
-
-    function dp(pp) {
-      if ("object" !== typeof pp || null === pp) return !1;
-      const ip = pp.lookAt;
-      return Number.isFinite(pp.timeMs) && (0, op.o)(pp.position, 3) && (void 0 === ip || "string" === typeof ip || (0, op.o)(ip, 3))
-    }
-
-    function ep(pp) {
-      return {
-        ...pp,
-        timeMs: xp(pp.timeMs, 0, Op.j.maxPathMs, 0),
-        position: Yp(pp.position),
-        lookAt: Dp(pp.lookAt),
-        lookDirection: yp(pp.lookDirection),
-        fov: Lp(pp.fov, Op.j.minFov, Op.j.maxFov),
-        easing: Up(pp.easing)
-      }
-    }
-
-    function jp(pp) {
-      const ip = [];
-      if (!Array.isArray(pp)) return ip;
-      for (const cp of pp.slice(0, Op.j.maxKeyframes)) {
-        if (!dp(cp)) continue;
-        const pp = ep(cp);
-        (0 === ip.length || pp.timeMs > ip[ip.length - 1].timeMs) && ip.push(pp)
-      }
-      return ip
-    }
-
-    function kp(pp) {
-      if ("object" !== typeof pp || null === pp) return {
-        mode: "default"
-      };
-      const ip = {
-          blendInMs: Lp(pp.blendInMs, 0, Op.j.maxBlendInMs),
-          blendEasing: Up(pp.blendEasing),
-          transition: tp(pp.transition),
-          letterbox: Hp(pp.letterbox),
-          hideHud: Hp(pp.hideHud)
-        },
-        cp = {
-          mode: "default",
-          ...ip
-        };
-      if ("default" === pp.mode || "fixed" === pp.mode && !(0, op.o)(pp.position, 3)) return cp;
-      const Ip = {
-        ...ip,
-        fov: Lp(pp.fov, Op.j.minFov, Op.j.maxFov),
-        playerFacing: (Ap = pp.playerFacing, Sp.includes(Ap) ? Ap : void 0),
-        playerLook: wp(pp.playerLook)
-      };
-      var Ap, Pp;
-      switch (pp.mode) {
-        case "fixed":
-          return {
-            ...pp, ...Ip, position: Yp(pp.position), lookAt: Dp(pp.lookAt), lookDirection: yp(pp.lookDirection)
-          };
-        case "follow":
-          return {
-            ...pp, ...Ip, target: "string" === typeof pp.target ? pp.target : void 0, lookAt: Dp(pp.lookAt), offset: (Pp = pp.offset, Array.isArray(Pp) ? [xp(Pp[0], -Op.j.maxOffset, Op.j.maxOffset, 0), xp(Pp[1], -Op.j.maxOffset, Op.j.maxOffset, 0), xp(Pp[2], -Op.j.maxOffset, Op.j.maxOffset, 0)] : [0, 0, 0]), lookDirection: yp(pp.lookDirection), smoothMs: Lp(pp.smoothMs, 0, Op.j.maxSmoothMs)
-          };
-        case "path":
-          return {
-            ...pp, ...Ip, keyframes: jp(pp.keyframes)
-          };
-        case "frame":
-          return {
-            ...pp, ...Ip, targets: Wp(pp.targets), viewHeading: Lp(pp.viewHeading, -Op.j.maxFrameHeading, Op.j.maxFrameHeading), viewElevation: Lp(pp.viewElevation, 0, Op.j.maxFrameElevation), padding: Lp(pp.padding, 0, Op.j.maxFrameDistance), closestDistance: Lp(pp.closestDistance, 0, Op.j.maxFrameDistance), furthestDistance: Lp(pp.furthestDistance, 0, Op.j.maxFrameDistance), smoothMs: Lp(pp.smoothMs, 0, Op.j.maxSmoothMs)
-          };
-        default:
-          return cp
-      }
-    }
+    var wQ = XQ(9634);
+    const qQ = "Air",
+      TQ = Object.freeze(new wQ.d(qQ, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   },
-  38883: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => xp
+  39527: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      e: () => TQ,
+      f: () => sQ
     });
-    var Op = cp(1234);
+    var wQ = XQ(402),
+      qQ = XQ(4774);
+    const TQ = new Set(qQ.j),
+      zQ = new Map;
 
-    function op(pp) {
-      const ip = /(\d*\.?\d+)px/.exec(pp);
-      return ip ? Number(ip[1]) : null
+    function sQ(QQ, WQ) {
+      let XQ = zQ.get(WQ);
+      void 0 === XQ && (XQ = new Map, zQ.set(WQ, XQ));
+      let qQ = XQ.get(QQ);
+      return void 0 === qQ && (qQ = `${QQ}${(0,wQ.D)(WQ)}`, XQ.set(QQ, qQ)), qQ
     }
-
-    function Ip(pp) {
-      return pp.split(/[\s,]+/).pop()
-    }
-    let Sp = !1;
-    const xp = {
-      debug: !1,
-      align: "center",
-      vAlign: "middle",
-      fontSize: 14,
-      fontWeight: "",
-      fontStyle: "",
-      fontVariant: "",
-      font: "Arial",
-      lineHeight: null,
-      justify: !1,
-      drawText: function(pp, ip, Op, xp, Lp, Yp) {
-        if (Lp <= 0 || Yp <= 0 || this.fontSize <= 0) return {
-          height: 0
-        };
-        const {
-          fontStyle: Dp,
-          fontVariant: Ap,
-          fontWeight: Pp,
-          fontSize: Wp,
-          font: yp
-        } = this, Up = [Dp, Ap, Pp, `${Wp}px`, yp].filter(Boolean).join(" "), wp = [
-          [Pp, `${Wp}px`, Ip(yp)].filter(Boolean).join(" "), `${Wp}px sans-serif`
-        ], vp = pp.font, tp = function(pp, ip, cp) {
-          for (const Op of ip) {
-            pp.font = Op;
-            const ip = op(pp.font),
-              Sp = Ip(Op);
-            if (null !== ip && Math.abs(ip - cp) <= .5 && pp.font.toLowerCase().includes(Sp.toLowerCase())) return Op
-          }
-          return null
-        }(pp, [Up, ...wp], Wp);
-        tp !== Up && function(pp, ip, Op) {
-          Sp || (Sp = !0, Promise.resolve().then((() => cp(1080))).then((cp => {
-            let {
-              NU: op
-            } = cp;
-            op(new Error("A canvas didn't take canvasTxt's font"), {
-              font: pp,
-              aW: ip,
-              drawnWith: null !== Op && void 0 !== Op ? Op : "the kept font, scaled"
-            })
-          })).catch((() => {})))
-        }(Up, vp, tp);
-        const Hp = op(pp.font);
-        if (null === tp && null !== Hp && Hp > 0) {
-          const cp = Wp / Hp;
-          pp.save();
-          try {
-            return pp.scale(cp, cp), {
-              height: this.drawLines(pp, ip, Op / cp, xp / cp, Lp / cp, Yp / cp, Hp).height * cp
-            }
-          } finally {
-            pp.restore()
-          }
-        }
-        return this.drawLines(pp, ip, Op, xp, Lp, Yp, Wp)
-      },
-      drawLines: function(pp, ip, cp, op, Ip, Sp, xp) {
-        const Lp = cp + Ip,
-          Yp = op + Sp;
-        let Dp, Ap = op + Sp / 2 + xp / 2;
-        "right" === this.align ? (Dp = Lp, pp.textAlign = "right") : "left" === this.align ? (Dp = cp, pp.textAlign = "left") : (Dp = cp + Ip / 2, pp.textAlign = "center");
-        for (const Op of ip) {
-          pp.measureText(Op).width >= Ip && (ip = ip.replace(Op, ""))
-        }
-        ip = (0, Op.P)(ip);
-        const Pp = [],
-          Wp = ip.split("\n"),
-          yp = this.justify ? pp.measureText("\u200a").width : 0;
-        Wp.forEach((ip => {
-          let cp = pp.measureText(ip).width;
-          if (cp <= Ip) Pp.push(ip);
-          else {
-            let Op = ip;
-            const op = Ip;
-            let Sp, xp, Lp;
-            for (cp = pp.measureText(Op).width; cp > op;) {
-              for (Sp = 0, xp = 0, Lp = ""; xp < op;) Sp++, Lp = Op.substr(0, Sp), xp = pp.measureText(Lp).width;
-              Sp--, Lp = Lp.substr(0, Sp);
-              const ip = Sp;
-              if (" " !== Op.substr(Sp, 1)) {
-                for (;
-                  " " !== Op.substr(Sp, 1) && 0 !== Sp;) Sp--;
-                0 === Sp && (Sp = ip), Lp = Op.substr(0, Sp)
-              }
-              Lp = this.justify ? this.justifyLine(pp, Lp, yp, "\u200a", Ip) : Lp, Op = Op.substr(Sp), cp = pp.measureText(Op).width, Pp.push(Lp)
-            }
-            cp > 0 && Pp.push(Op)
-          }
-        }));
-        const Up = this.lineHeight ? this.lineHeight : this.getTextHeight(pp, ip),
-          wp = Up * (Pp.length - 1),
-          vp = wp / 2;
-        let tp = op;
-        "top" === this.vAlign ? Ap = op + xp : "bottom" === this.vAlign ? (Ap = Yp - wp, tp = Yp) : (tp = op + Sp / 2, Ap -= vp), Pp.forEach((ip => {
-          ip = ip.trim(), pp.fillText(ip, Dp, Ap), Ap += Up
-        })), this.debug && (pp.lineWidth = 3, pp.strokeStyle = "#00909e", pp.strokeRect(cp, op, Ip, Sp), pp.lineWidth = 2, pp.strokeStyle = "#f6d743", pp.beginPath(), pp.moveTo(Dp, op), pp.lineTo(Dp, Yp), pp.stroke(), pp.strokeStyle = "#ff6363", pp.beginPath(), pp.moveTo(cp, tp), pp.lineTo(Lp, tp), pp.stroke());
-        return {
-          height: wp + Up
-        }
-      },
-      getTextHeight: function(pp, ip) {
-        const cp = pp.textBaseline;
-        pp.textBaseline = "bottom";
-        const {
-          actualBoundingBoxAscent: Op
-        } = pp.measureText(ip);
-        return pp.textBaseline = cp, Op
-      },
-      justifyLine: function(pp, ip, cp, Op, op) {
-        const Ip = ip.trim(),
-          Sp = pp.measureText(Ip).width,
-          xp = Ip.split(/\s+/).length - 1,
-          Lp = Math.floor((op - Sp) / cp);
-        if (xp <= 0 || Lp <= 0) return Ip;
-        const Yp = Math.floor(Lp / xp);
-        let Dp = Lp - xp * Yp,
-          Ap = [];
-        for (let Pp = 0; Pp < Yp; Pp++) Ap.push(Op);
-        Ap = Ap.join("");
-        return Ip.replace(/\s+/g, (pp => {
-          const ip = Dp > 0 ? Ap + Op : Ap;
-          return Dp--, pp + ip
-        }))
-      }
-    }
-  },
-  39304: (pp, ip, cp) => {
-    function Op(pp, ip) {
-      return ip.set(pp), ip
-    }
-    cp.d(ip, {
-      d: () => Op
-    })
-  },
-  38890: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Up,
-      f: () => yp,
-      i: () => Pp,
-      l: () => Dp,
-      n: () => Ap
-    });
-    var Op = cp(4341),
-      op = cp(337);
-    const Ip = 1024,
-      Sp = 1536,
-      xp = 2 * Op.l + 1,
-      Lp = new Intl.NumberFormat("en", {
-        maximumSignificantDigits: 15
-      }),
-      Yp = 1.5;
-
-    function Dp(pp, ip, cp) {
-      if ("string" !== typeof pp) return ip;
-      try {
-        const cp = JSON.parse(pp);
-        return cp && "object" === typeof cp ? cp : ip
-      } catch (Op) {
-        return void 0 !== cp && console.error(`Couldn't parse ${cp}`, Op), ip
-      }
-    }
-
-    function Ap(pp) {
-      return Dp(pp, null, "a leaderboard's rows")
-    }
-
-    function Pp(pp, ip) {
-      var cp, Op;
-      return null !== ip && void 0 !== ip ? ip : {
-        status: null !== (cp = pp.status) && void 0 !== cp ? cp : "loading",
-        entries: null !== (Op = pp.entries) && void 0 !== Op ? Op : []
-      }
-    }
-
-    function Wp(pp, ip) {
-      return "number" === typeof pp && Number.isFinite(pp) && pp > 0 ? pp : ip
-    }
-
-    function yp(pp, ip) {
-      const cp = Wp(pp.size, 1);
-      let Op = Wp(pp.width, Wp(2.5 * cp, 2.5)),
-        op = Wp(pp.height, Wp(3.75 * cp, 3.75));
-      Number.isFinite(Ip * op / Op) && Number.isFinite(Sp * Op / op) || (Op = 2.5, op = 3.75);
-      const xp = op / Op,
-        Lp = Math.max(1, Math.min(Ip, ip / xp));
-      return {
-        width: Op,
-        height: op,
-        layoutWidth: Math.max(Ip, Sp / xp),
-        layoutHeight: Math.max(Sp, Ip * xp),
-        pixelWidth: Math.round(Lp),
-        pixelHeight: Math.round(Math.max(1, Math.min(ip, Lp * xp)))
-      }
-    }
-
-    function Up(pp, ip, cp, Sp, Dp, Ap) {
-      pp.setTransform(1, 0, 0, 1, 0, 0), pp.fillStyle = op.N.defaultNameTagBackground, pp.fillRect(0, 0, ip, cp), pp.scale(ip / Sp.layoutWidth, cp / Sp.layoutHeight), pp.translate((Sp.layoutWidth - Ip) / 2, 0),
-        function(pp, ip, cp, Ip) {
-          var Sp, Dp, Ap, Pp;
-          const {
-            top: Wp,
-            around: yp,
-            showPlayerText: Up,
-            localPlayerDbId: tp
-          } = cp, {
-            whiteUiText: Hp,
-            grayUiText: dp,
-            yellowUiText: ep
-          } = op.N;
-          pp.textBaseline = "middle";
-          const jp = function(ip, cp, Op, op, Ip, Sp) {
-              let xp = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
-              pp.font = `bold ${op}px 'Jetbrains Mono', monospace`, pp.fillStyle = Ip, pp.textAlign = xp;
-              let Lp = ip.replace(/[\r\n\t]/g, " ");
-              if (pp.measureText(Lp).width > Sp) {
-                for (; Lp.length > 0 && pp.measureText(`${Lp}\u2026`).width > Sp;) Lp = Lp.slice(0, -1);
-                Lp += "\u2026"
-              }
-              pp.fillText(Lp, cp, Op)
-            },
-            kp = ip => {
-              pp.fillStyle = Hp, pp.globalAlpha = .15, pp.fillRect(24, ip, 976, 2), pp.globalAlpha = 1
-            },
-            mp = null === tp ? null : (0, op.gc)(tp),
-            Rp = pp => null !== mp && pp.playerHash === mp,
-            qp = wp(Wp.entries, Op.n),
-            Mp = "ready" === Wp.status && qp.length > 0,
-            Cp = null === yp ? [] : wp(yp.entries, xp),
-            Ep = qp.some(Rp),
-            Xp = null === yp ? null : function(pp) {
-              const ip = pp;
-              if (!ip || !Number.isFinite(ip.rank) || !Number.isFinite(ip.tied) || !Number.isFinite(ip.total)) return null;
-              return ip
-            }(yp.standing),
-            lp = Cp.find(Rp),
-            Qp = qp.find(Rp),
-            Jp = null === Xp || void 0 === lp ? null : {
-              value: lp.value,
-              rank: Xp.rank
-            },
-            Bp = vp(qp, void 0 === Qp || Qp.value === (null === Jp || void 0 === Jp ? void 0 : Jp.value) ? Jp : null),
-            Np = vp(Cp, Jp),
-            Tp = (pp, ip) => {
-              const cp = pp.findIndex(Rp);
-              return cp >= 0 ? ip[cp] : null
-            },
-            fp = null !== (Sp = null !== (Dp = null === Xp || void 0 === Xp ? void 0 : Xp.rank) && void 0 !== Dp ? Dp : Tp(Cp, Np)) && void 0 !== Sp ? Sp : Tp(qp, Bp);
-          pp.font = "bold 34px 'Jetbrains Mono', monospace";
-          const bp = [...Mp ? Bp : [], ...Ep ? [] : Np],
-            hp = Math.min(280, Math.max(0, ...bp.map((ip => pp.measureText(Lp.format(ip)).width)))),
-            ap = hp <= 80,
-            np = ap ? 80 : 32 + hp,
-            Fp = ap ? 148 : np + 28,
-            gp = 660 - Fp;
-          jp(`TOP ${Op.n}  /  ALL TIME`, 24, 52, 28, dp, 976), jp(Up ? String(null !== (Ap = ip.title) && void 0 !== Ap ? Ap : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, Hp, 976), jp("RANK", 32, 174, 28, dp, Fp - 40), jp("PLAYER", Fp, 174, 28, dp, gp), jp(Up ? String(null !== (Pp = ip.scoreLabel) && void 0 !== Pp ? Pp : "Score").slice(0, 24) : "Score", 992, 174, 28, dp, 304, "right"), kp(202);
-          const Gp = (Ip - 232) / (Op.n + Yp + xp),
-            rp = 208 + Op.n * Gp,
-            Zp = rp + Yp * Gp,
-            zp = (ip, cp, Op, op) => {
-              const Ip = Rp(ip);
-              pp.fillStyle = Ip ? ep : Hp, pp.globalAlpha = Ip ? .15 : op ? .035 : 0, pp.fillRect(24, Op - Gp / 2 + 1, 976, Gp - 2), pp.globalAlpha = 1;
-              const Sp = Ip ? ep : Hp;
-              jp(Lp.format(cp), np, Op, 34, Sp, ap ? 80 : hp, ap ? "center" : "right"), jp(Up ? String(ip.name).slice(0, 64) : "Player", Fp, Op, 34, Sp, gp);
-              const xp = Lp.format(ip.value);
-              jp(pp.measureText(xp).width > 304 ? ip.value.toExponential(6) : xp, 992, Op, 34, Sp, 304, "right")
-            };
-          if (Mp)
-            for (const [Op, op] of qp.entries()) zp(op, Bp[Op], 208 + (Op + .5) * Gp, Op % 2 === 0);
-          else {
-            const pp = "error" === Wp.status,
-              ip = pp ? "Couldn't load leaderboard" : "ready" === Wp.status ? "No scores yet" : "Loading leaderboard\u2026",
-              cp = pp ? "Trying again shortly" : "ready" === Wp.status ? "Be the first on the board!" : "Fetching the top players",
-              Op = (208 + rp) / 2;
-            jp(ip, 512, Op - 28, 40, pp ? op.N.redUiText : Hp, 960, "center"), jp(cp, 512, Op + 27, 30, dp, 960, "center")
-          }
-          const sp = rp + Yp * Gp / 2;
-          if (null === fp) kp(sp);
-          else {
-            const ip = null === Xp ? 0 : Xp.tied - 1,
-              cp = `YOUR RANK #${Lp.format(fp)}${null===Xp?"":` of ${Lp.format(Xp.total)}`}`;
-            pp.font = "bold 36px 'Jetbrains Mono', monospace";
-            const Op = Math.max(20, Math.min(36, Math.floor(34560 / pp.measureText(cp).width)));
-            jp(cp, 512, sp - (ip > 0 ? 15 : 0), Op, ep, 960, "center"), ip > 0 && jp(`Tied with ${Lp.format(ip)} other${1===ip?"":"s"}`, 512, sp + 24, 24, dp, 960, "center")
-          }
-          if (null === yp) return;
-          const Kp = Zp + xp * Gp / 2;
-          if (Ep) jp(`You're in the top ${Op.n}!`, 512, Kp, 40, ep, 960, "center");
-          else if (0 === Cp.length) jp("You're not on this board yet", 512, Kp, 34, dp, 960, "center");
-          else
-            for (const [Op, op] of Cp.entries()) zp(op, Np[Op], Zp + (Op + .5) * Gp, Op % 2 === 0)
-        }(pp, Dp, Ap, Sp.layoutHeight)
-    }
-
-    function wp(pp, ip) {
-      return Array.isArray(pp) ? pp.slice(0, ip).filter((pp => pp && Number.isFinite(pp.rank) && Number.isFinite(pp.value))) : []
-    }
-
-    function vp(pp, ip) {
-      const cp = [];
-      let Op = !1;
-      return pp.forEach(((op, Ip) => {
-        if (null !== ip && op.value === ip.value) return void cp.push(ip.rank);
-        const Sp = Ip > 0 && op.value === pp[Ip - 1].value;
-        Sp || (Op = 0 === Ip && 1 !== op.rank), cp.push(Sp && !Op ? cp[Ip - 1] : op.rank)
-      })), cp
-    }
-  },
-  39076: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => op,
-      e: () => Ip
-    });
-    const Op = 32;
-
-    function op(pp) {
-      return Array.from(pp).length
-    }
-
-    function Ip(pp) {
-      const ip = [""];
-      let cp = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        op = "";
-      const Ip = () => {
-        ip.push(""), cp = 0, op = ""
-      };
-      for (const Sp of pp.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
-        if (/^\r?\n$/.test(Sp)) Ip();
-        else if (/^\s+$/.test(Sp)) op += Sp;
-      else if (Sp.length > 0) {
-        const pp = Array.from(Sp);
-        cp > 0 && cp + op.length + pp.length > Op && Ip(), ip[ip.length - 1] += op, cp += op.length, op = "";
-        for (const op of pp) cp >= Op && Ip(), ip[ip.length - 1] += op, cp++
-      }
-      return ip[ip.length - 1] += op, ip
-    }
-  },
-  39295: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Sp
-    });
-    var Op = cp(36832),
-      op = cp.n(Op);
-    const Ip = [1, 1, 1];
-
-    function Sp(pp) {
-      if (!pp) return [...Ip];
-      try {
-        const [ip, cp, Op] = op()(pp).rgb().array();
-        return [ip / 255, cp / 255, Op / 255]
-      } catch (ip) {
-        return console.warn(`Invalid groundArrowPath colour "${pp}":`, ip), [...Ip]
-      }
-    }
-  },
-  39403: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => xp,
-      g: () => Yp,
-      h: () => Lp
-    });
-    var Op = cp(298),
-      op = cp(2993);
-    const Ip = /\/textures\/skyBoxes\/(space_blue|space_lightblue|space_red_2|space_white)\/(_[np][xyz]\.jpg)$/,
-      Sp = 512;
-
-    function xp(pp) {
-      var ip;
-      const cp = Math.min(screen.width, screen.height) * (null !== (ip = (0, Op.e)()) && void 0 !== ip ? ip : (0, op.l)());
-      return Math.max(window.innerHeight * (0, op.l)(), cp) / (0, op.p)(pp)
-    }
-
-    function Lp(pp, ip, cp) {
-      return ip / (2 * Math.tan(cp / 2)) > Sp ? pp : Yp(pp)
-    }
-
-    function Yp(pp) {
-      return pp.map((pp => pp.replace(Ip, "/textures/skyBoxes/$1/1024/$2")))
-    }
-  },
-  34258: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Ip,
-      c: () => xp,
-      d: () => Sp,
-      h: () => op,
-      l: () => Op
-    });
-    const Op = {
-        default: {
-          type: "earth",
-          vertexTint: [137, 207, 240]
-        },
-        gloomy: {
-          type: "custom",
-          nx: "/textures/skyBoxes/gloomy/_nx.jpg",
-          ny: "/textures/skyBoxes/gloomy/_ny.jpg",
-          nz: "/textures/skyBoxes/gloomy/_nz.jpg",
-          px: "/textures/skyBoxes/gloomy/_px.jpg",
-          py: "/textures/skyBoxes/gloomy/_py.jpg",
-          pz: "/textures/skyBoxes/gloomy/_pz.jpg"
-        },
-        interstellar: {
-          type: "custom",
-          nx: "/textures/skyBoxes/interstellar/_nx.jpg",
-          ny: "/textures/skyBoxes/interstellar/_ny.jpg",
-          nz: "/textures/skyBoxes/interstellar/_nz.jpg",
-          px: "/textures/skyBoxes/interstellar/_px.jpg",
-          py: "/textures/skyBoxes/interstellar/_py.jpg",
-          pz: "/textures/skyBoxes/interstellar/_pz.jpg"
-        },
-        space_blue: {
-          type: "custom",
-          nx: "/textures/skyBoxes/space_blue/_nx.jpg",
-          ny: "/textures/skyBoxes/space_blue/_ny.jpg",
-          nz: "/textures/skyBoxes/space_blue/_nz.jpg",
-          px: "/textures/skyBoxes/space_blue/_px.jpg",
-          py: "/textures/skyBoxes/space_blue/_py.jpg",
-          pz: "/textures/skyBoxes/space_blue/_pz.jpg"
-        },
-        space_lightblue: {
-          type: "custom",
-          nx: "/textures/skyBoxes/space_lightblue/_nx.jpg",
-          ny: "/textures/skyBoxes/space_lightblue/_ny.jpg",
-          nz: "/textures/skyBoxes/space_lightblue/_nz.jpg",
-          px: "/textures/skyBoxes/space_lightblue/_px.jpg",
-          py: "/textures/skyBoxes/space_lightblue/_py.jpg",
-          pz: "/textures/skyBoxes/space_lightblue/_pz.jpg"
-        },
-        space_red: {
-          type: "custom",
-          nx: "/textures/skyBoxes/space_red/_nx.jpg",
-          ny: "/textures/skyBoxes/space_red/_ny.jpg",
-          nz: "/textures/skyBoxes/space_red/_nz.jpg",
-          px: "/textures/skyBoxes/space_red/_px.jpg",
-          py: "/textures/skyBoxes/space_red/_py.jpg",
-          pz: "/textures/skyBoxes/space_red/_pz.jpg"
-        },
-        underwater: {
-          type: "custom",
-          nx: "/textures/skyBoxes/underwater/water.jpg",
-          ny: "/textures/skyBoxes/underwater/water.jpg",
-          nz: "/textures/skyBoxes/underwater/water.jpg",
-          px: "/textures/skyBoxes/underwater/water.jpg",
-          py: "/textures/skyBoxes/underwater/water.jpg",
-          pz: "/textures/skyBoxes/underwater/water.jpg"
-        },
-        starry: {
-          type: "custom",
-          nx: "/textures/skyBoxes/starry/_nx.jpg",
-          ny: "/textures/skyBoxes/starry/_ny.jpg",
-          nz: "/textures/skyBoxes/starry/_nz.jpg",
-          px: "/textures/skyBoxes/starry/_px.jpg",
-          py: "/textures/skyBoxes/starry/_py.jpg",
-          pz: "/textures/skyBoxes/starry/_pz.jpg"
-        },
-        space_red_2: {
-          type: "custom",
-          nx: "/textures/skyBoxes/space_red_2/_nx.jpg",
-          ny: "/textures/skyBoxes/space_red_2/_ny.jpg",
-          nz: "/textures/skyBoxes/space_red_2/_nz.jpg",
-          px: "/textures/skyBoxes/space_red_2/_px.jpg",
-          py: "/textures/skyBoxes/space_red_2/_py.jpg",
-          pz: "/textures/skyBoxes/space_red_2/_pz.jpg"
-        },
-        space_white: {
-          type: "custom",
-          nx: "/textures/skyBoxes/space_white/_nx.jpg",
-          ny: "/textures/skyBoxes/space_white/_ny.jpg",
-          nz: "/textures/skyBoxes/space_white/_nz.jpg",
-          px: "/textures/skyBoxes/space_white/_px.jpg",
-          py: "/textures/skyBoxes/space_white/_py.jpg",
-          pz: "/textures/skyBoxes/space_white/_pz.jpg"
-        }
-      },
-      op = "/textures/dayNight/sun.png",
-      Ip = "/textures/dayNight/moon.png",
-      Sp = "/textures/dayNight/stars",
-      xp = ["_px.png", "_py.png", "_pz.png", "_nx.png", "_ny.png", "_nz.png"]
-  },
-  39380: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Dp,
-      e: () => Ap,
-      h: () => Op,
-      j: () => Lp,
-      l: () => op,
-      o: () => Yp,
-      p: () => xp,
-      q: () => Sp
-    });
-    const Op = ["linear", "easeIn", "easeOut", "easeInOut"],
-      op = ["movement", "camera", "cursor"],
-      Ip = ["targets", "playerFacing", "blendInMs", "blendEasing", "transition", "letterbox", "hideHud"];
-
-    function Sp(pp, ip) {
-      return xp(pp, ip, Ip)
-    }
-
-    function xp(pp, ip) {
-      let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      if (pp === ip || Number.isNaN(pp) && Number.isNaN(ip)) return !0;
-      if ("object" !== typeof pp || "object" !== typeof ip || null === pp || null === ip || Array.isArray(pp) !== Array.isArray(ip)) return !1;
-      const Op = pp,
-        op = ip;
-      for (const Ip of new Set([...Object.keys(Op), ...Object.keys(op)]))
-        if (!cp.includes(Ip) && !xp(Op[Ip], op[Ip])) return !1;
-      return !0
-    }
-    const Lp = {
-        maxBlendInMs: 1e4,
-        minFov: 10,
-        maxFov: 120,
-        maxOffset: 128,
-        maxSmoothMs: 5e3,
-        maxReturnMs: 1e4,
-        maxTransitionMs: 5e3,
-        minTransitionFadeMs: 200,
-        minFadeTurnMs: 333,
-        maxPlayerLook: 180,
-        maxKeyframes: 64,
-        maxPathMs: 6e5,
-        maxFrameTargets: 64,
-        maxFrameDistance: 128,
-        maxFrameHeading: 360,
-        maxFrameElevation: 90,
-        maxCoordinate: 1e6,
-        minDirectionLength: 1e-6,
-        minEasingY: -1,
-        maxEasingY: 2
-      },
-      Yp = "^-[1-9][0-9]*$",
-      Dp = "^#[0-9a-fA-F]{6}$",
-      Ap = "#000000"
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

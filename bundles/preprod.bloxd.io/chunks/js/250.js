@@ -1,954 +1,4045 @@
 export const id = 250;
 export const ids = [250];
 export const modules = {
-  39017: (pp, ip, cp) => {
-    var Op = {
-      "./cape_cow_cream.png": 28171,
-      "./cape_cow_normal.png": 28176,
-      "./cape_creator_level1.png": 28184,
-      "./cape_creator_level2.png": 28191,
-      "./cape_creator_level3.png": 28197,
-      "./cape_none.png": 28204,
-      "./cape_pig.png": 28213,
-      "./cape_sheep.png": 28217,
-      "./cape_super.png": 28226,
-      "./cape_super_inverted.png": 28234,
-      "./cape_youtuber.png": 28239
-    };
-
-    function op(pp) {
-      var ip = Ip(pp);
-      return cp(ip)
-    }
-
-    function Ip(pp) {
-      if (!cp.o(Op, pp)) {
-        var ip = new Error("Cannot find module '" + pp + "'");
-        throw ip.code = "MODULE_NOT_FOUND", ip
-      }
-      return Op[pp]
-    }
-    op.keys = function() {
-      return Object.keys(Op)
-    }, op.resolve = Ip, pp.exports = op, op.id = 39017
-  },
-  41400: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      openCharacterPreview: () => rp
+  38084: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      d: () => JQ,
+      g: () => zQ
     });
-    var Op = cp(38317),
-      op = cp(2849),
-      Ip = cp(620),
-      Sp = cp(37395),
-      xp = cp(2281),
-      Lp = cp(37385),
-      Yp = cp(40024),
-      Dp = cp(40289),
-      Ap = cp(41300),
-      Pp = cp(37313),
-      Wp = cp(40443),
-      yp = cp(37479),
-      Up = cp(40459),
-      wp = cp(41353),
-      vp = cp(37305),
-      tp = cp(1234),
-      Hp = cp(2276),
-      dp = cp(37459),
-      ep = cp(37551);
-    class jp {
-      constructor(pp, ip) {
-        this.pose = pp, this.nodes = void 0, this.nodes = pp.boneNames.map((pp => ip.get(pp)))
-      }
-      write(pp) {
-        this.pose.pose(pp);
-        const {
-          rotations: ip
-        } = this.pose;
-        for (let cp = 0; cp < this.nodes.length; cp++) {
-          const pp = 4 * cp;
-          this.nodes[cp].rotationQuaternion.set(ip[pp], ip[pp + 1], ip[pp + 2], ip[pp + 3])
-        }
-      }
-    }
-
-    function kp(pp) {
-      pp.unfreezeWorldMatrix();
-      for (const ip of pp.getChildren()) kp(ip)
-    }
-
-    function mp(pp, ip) {
-      pp.isVisible = ip;
-      for (const cp of pp.getChildMeshes()) cp.isVisible = ip
-    }
-    class Rp {
-      constructor(pp, ip, cp) {
-        this.pw = pp, this.thinInstMgr = ip, this.FQ = cp, this.modelCache = {}, this.attachmentsByType = {}, this.shownBones = [], this.cosmeticNames = {}
-      }
-      loadModel(pp, ip, cp) {
-        const Op = (0, dp.g)(pp, ip);
-        return Op in this.modelCache || (this.modelCache[Op] = (async () => {
-          try {
-            const Op = await (0, dp.j)(pp, this.pw),
-              op = new Map;
-            for (const pp of Op.getNodes()) op.set(pp.name, pp);
-            const Ip = (0, dp.e)(null !== ip && void 0 !== ip ? ip : pp, this.pw);
-            (0, dp.l)(Op, Ip, {
-              keepTransforms: void 0 !== cp,
-              onProcessedMesh: pp => {
-                (0, dp.o)(pp), this.pw.TOp(pp, !1), pp.isVisible = !1
-              }
-            });
-            for (const pp of Op.rootNodes) kp(pp);
-            const Sp = void 0 === cp ? null : (0, ep.e)(cp, (pp => {
-              var ip, cp;
-              return null !== (ip = null === (cp = op.get(pp)) || void 0 === cp ? void 0 : cp.rotationQuaternion) && void 0 !== ip ? ip : null
-            }));
-            return {
-              nodesByName: op,
-              bones: null === Sp ? null : new jp(Sp, op)
-            }
-          } catch (op) {
-            throw delete this.modelCache[Op], console.error(`Failed to load preview attachment ${Op}:`, op), op
-          }
-        })()), this.modelCache[Op]
-      }
-      async update(pp, ip) {
-        var cp;
-        const {
-          thinInstMgr: Op,
-          FQ: op
-        } = this;
-        this.cosmeticNames[pp] = ip;
-        const Ip = this.attachmentsByType[pp];
-        if (Ip)
-          for (const {
-              mesh: xp,
-              destNode: Lp,
-              bones: Yp
-            }
-            of Ip) {
-            null !== Yp && (0, tp.kb)(this.shownBones, Yp), mp(xp, !1);
-            const pp = Op.getNamedNode(op, Lp);
-            Op.detachTransformNodeIfFound(xp, op, pp)
-          }
-        this.attachmentsByType[pp] = [];
-        const Sp = (0, Hp.m)(pp, ip);
-        if (null !== Sp && void 0 !== Sp && null !== (cp = Sp.attachments) && void 0 !== cp && cp.length)
-          for (const xp of Sp.attachments) {
-            let cp;
-            try {
-              cp = await this.loadModel(xp.modelGlb, xp.texture, xp.animation)
-            } catch {
-              continue
-            }
-            if (this.cosmeticNames[pp] !== ip) return;
-            const Ip = cp.nodesByName.get(xp.modelNode);
-            if (!Ip) {
-              console.error(`Preview attachment node ${xp.modelNode} not found in ${xp.modelGlb}`);
-              continue
-            }
-            mp(Ip, !0), (0, dp.q)(Ip, xp.overlayColour);
-            const Sp = Op.getNamedNode(op, xp.destNode);
-            Op.attachTransformNode(Ip, op, Sp), this.attachmentsByType[pp].push({
-              mesh: Ip,
-              destNode: xp.destNode,
-              bones: cp.bones
-            }), null !== cp.bones && this.shownBones.push(cp.bones)
-          }
-      }
-      writePoses(pp) {
-        for (const ip of this.shownBones) ip.write(pp)
-      }
-    }
-    var qp = cp(37403),
-      Mp = (cp(41333), cp(40663), cp(41339), cp(34466));
-    let Cp, Ep, Xp, lp, Qp, Jp, Bp, Np, Tp, fp;
-    const bp = document.createElement("canvas");
-    async function hp() {
-      await new Promise((pp => {
-        setTimeout((() => {
-          pp()
-        }), 100)
-      }))
-    }
-    bp.classList.add("CharCustomisationPreviewCanvas");
-    const ap = {};
-
-    function np(pp, ip) {
-      bp.width = pp, bp.height = ip, Cp.resize()
-    }
-    let Fp = 0;
-    class gp {
-      constructor(pp, ip) {
-        this.framing = ip, this.ready = fp, this.dev = {
-          canvas: () => bp,
-          isolateHead(pp) {
-            const ip = Jp.getNodeNames(Bp);
-            for (let cp = 0; cp < ip.length; cp++) "HeadMesh" !== ip[cp] && "__root__" !== ip[cp] && "TorsoNode" !== ip[cp] && Jp.setNodeEnabled(Bp, cp, !1);
-            if (pp) {
-              const pp = Jp.getNamedNode(Bp, "HeadMesh");
-              Jp.setNodeDisableColorWrite(Bp, pp, !0, (pp => {
-                const ip = new Up.StandardMaterial(`${pp.name}_depthOnly`, pp.Gl());
-                return ip.disableColorWrite = !0, ip
-              }))
-            }
-            Jp.setPosition(Bp, 0, -12, 0)
-          }
-        }, this.closed = !1, this.resetCamera();
-        const cp = pp.getBoundingClientRect();
-        np(cp.width, cp.height), Fp++, Cp.stopRenderLoop(), Cp.runRenderLoop((() => {
-          var pp, ip;
-          null === (pp = Np) || void 0 === pp || pp.render(Cp.getDeltaTime()), null === (ip = Tp) || void 0 === ip || ip.writePoses(performance.now() / 1e3), Xp.render()
-        }))
-      }
-      isReady() {
-        return !!lp
-      }
-      setCosmetic(pp, ip) {
-        ! function(pp, ip) {
-          if (!lp) return;
-          const Sp = (0, op.g)();
-          Sp.ZC(!1), Op.d.Player.meshApi.updatePlayerCosmetic(Sp.NJ, Bp, pp, ip, !0), "cape" === pp && (ip === Ip.c ? Qp.eC(!1) : (Qp.eC(!0), Qp.material.diffuseTexture = new wp.d(cp(39017)(`./cape_${ip}.png`), Qp.Gl(), {
-            invertY: !1,
-            samplingMode: wp.d.NEAREST_NEAREST_MIPLINEAR
-          })));
-          ap[pp] = Tp.update(pp, ip)
-        }(pp, ip)
-      }
-      playEmote(pp) {
-        if (!Np) return;
-        if (!pp) return void Np.stopAnimation(Lp.e.Emote);
-        const ip = (0, Sp.d)((0, xp.g)(pp).animation);
-        Np.startAnimation(ip, Lp.e.Emote, 0, xp.c)
-      }
-      async untilDrawn(pp) {
-        if (await hp(), "cape" === pp && Qp) {
-          const pp = Qp.material,
-            ip = null === pp || void 0 === pp ? void 0 : pp.diffuseTexture;
-          ip && !ip.isReady() && (await new Promise((pp => {
-            ip.onLoadObservable.addOnce((() => {
-              pp()
-            }))
-          })), await hp())
-        }
-        ap[pp] && (await ap[pp], await hp()), await Xp.whenReadyAsync(), await new Promise((pp => {
-          Xp.onAfterRenderObservable.addOnce((() => {
-            pp()
-          }))
-        }))
-      }
-      setOrbit(pp) {
-        Gp(pp)
-      }
-      resetCamera() {
-        Ep.inertialAlphaOffset = 0, Ep.inertialBetaOffset = 0, Ep.inertialRadiusOffset = 0, Gp(Mp.b[this.framing])
-      }
-      resize(pp, ip) {
-        np(pp, ip)
-      }
-      close() {
-        this.closed || (this.closed = !0, Fp--, 0 === Fp && Cp.stopRenderLoop())
-      }
-    }
-
-    function Gp(pp) {
-      let {
-        yaw: ip,
-        pitch: cp,
-        radius: Op,
-        target: op
-      } = pp;
-      Ep.alpha = ip, Ep.beta = cp, Op && (Ep.radius = Op), op && Ep.target.set(op[0], op[1], op[2])
-    }
-
-    function rp(pp, ip) {
-      return pp.appendChild(bp), Cp || function() {
-        Cp = new Yp.d(bp, !0, {
-          preserveDrawingBuffer: !0
-        });
-        const pp = (0, op.g)();
-        Cp.lOp = pp.WU.engine.lOp, Xp = new Dp.c(Cp), Xp.clearColor = new yp.b(0, 0, 0, 0), Xp.ambientColor = new yp.Color3(1, 1, 1), Ep = new Ap.c("Gw", 0, 0, 1, Pp.Zy.Zero(), Xp), Ep.attachControl(bp, !0), Ep.panningSensibility = 0, fp = (0, Op.u)("Player", Xp, !0).then((ip => {
-          lp = ip.meshApi, Qp = ip.capeMesh, Jp = pp.WU.EQ;
-          const cp = 8.33;
-          Bp = (0, Op.n)("Player", cp, !0, !0), Jp.setPosition(Bp, 0, -8.33, 0);
-          const op = Jp.getNamedNode(Bp, "BodyMesh");
-          Jp.attachTransformNode(Qp, Bp, op), Jp.set(Bp, "aOpacity", 1), Jp.aJ(Bp, "aOpacity", 1), Tp = new Rp(Xp, Jp, Bp), Np = new vp.AnimatorState, Np.HP = pp, Np.thinInstMgr = Jp, Np.FQ = Bp, Np.iOp = Jp.QOp(Bp, 0), Np.modelLifeformType = "Player", Np.nodeNameAliases = (0, qp.d)("Player").nodeNameAliases;
-          const Ip = Qp.bJ().boundingBox;
-          Qp.position.y = ((24 - Ip.maximum.y + Ip.minimum.y) / 2 - 1 / 32) / cp, Qp.position.z = -1 / cp, Qp.rotationQuaternion = null;
-          const Sp = Math.PI / 18,
-            xp = Ip.maximum.y / cp;
-          Qp.rotation.x = Sp;
-          const Lp = Math.cos(Sp),
-            Yp = Math.sin(Sp);
-          Qp.position.y += xp * (1 - Lp) + 0 * Yp, Qp.position.z -= xp * Yp + 0 * (1 - Lp);
-          const Dp = new Up.StandardMaterial("capeMaterial", Qp.Gl());
-          Qp.material = Dp;
-          const Ap = new yp.Color3(1, 1, 1);
-          Dp.diffuseColor = new yp.Color3, Dp.specularColor = new yp.Color3, Dp.emissiveColor = new yp.Color3, Dp.ambientColor = new yp.Color3, Ap.scaleToRef(.43, Dp.diffuseColor), Ap.scaleToRef(1.75, Dp.ambientColor), Dp.freeze();
-          const wp = new Wp.d("light", new Pp.Zy(-.1, 1, -.3), Xp);
-          wp.diffuse = new yp.Color3(1, 1, 1), wp.specular = new yp.Color3(1, 1, 1), wp.groundColor = new yp.Color3(.5, .5, .5)
-        }))
-      }(), new gp(pp, ip)
-    }
-  },
-  39014: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Pp
-    });
-    var Op = cp(37413),
-      op = cp(37429),
-      Ip = cp(37662),
-      Sp = cp(37433),
-      xp = cp(37421);
-
-    function Lp(pp) {
-      return `\n\t\t\t\t${(0,xp.v)(pp,"mat2","rotate",[{name:"ang",type:"float"}],`\
-      n\ t\ t\ t\ t\ t$ {
-        (0, xp.A)(pp, "float", "s", "sin(ang)")
-      }\
-      n\ t\ t\ t\ t\ t$ {
-        (0, xp.A)(pp, "float", "c", "cos(ang)")
-      }\
-      n\ t\ t\ t\ t\ treturn $ {
-        (0, xp.j)(pp, "mat2", "c", "s", "-s", "c")
-      };\
-      n\ t\ t\ t\ t`)}\n\t\t\t`
-    }
-
-    function Yp(pp, ip) {
-      let cp = (0, xp.sb)(pp, "skele" + (ip - 1));
-      for (let op = ip - 2; op >= 0; op--) cp = (0, xp.jb)(pp, `boneIdx == ${op}`, (0, xp.sb)(pp, `skele${op}`), cp);
-      const Op = "bone.yz + rotate(bone.x) * pivot - pivot";
-      return `\n\t\t\t\t${(0,xp.A)(pp,"int","boneIdx",(0,xp.qb)(pp,"BLOXD_CAPE_MAX_Y - positionUpdated.y"))}\n\t\t\t\t${(0,xp.A)(pp,"vec3","bone",cp)}\n\t\t\t\t${(0,xp.A)(pp,"vec2","pivot",(0,xp.j)(pp,"vec2","0.0",`${(0,xp.zb)(pp,"position")}.z`))}\n\t\t\t\t${(0,xp.Y)(pp)?`positionUpdated = vec3f(positionUpdated.x, positionUpdated.yz + (${Op}));`:`positionUpdated.yz += ${Op};`}\n\t\t`
-    }
-
-    function Dp(pp) {
-      return `\n\t\t\t\t#ifdef NORMAL\n\t\t\t\tnormalUpdated = ${(0,xp.j)(pp,"vec3","normalUpdated.x","rotate(bone.x) * normalUpdated.yz")};\n\t\t\t\t#endif\n\t\t`
-    }
-    const Ap = {
-        x: 0,
-        y: 0,
-        z: 0,
-        vcp(pp, ip) {
-          return this.x = pp[ip], this.y = pp[ip + 1], this.z = pp[ip + 2], this
-        }
+    var wQ = XQ(9608),
+      qQ = XQ(9580),
+      TQ = XQ(402);
+    const zQ = {
+      "Maple Door": {
+        positions: [{
+          block: "Maple Door",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Maple Door Top",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
       },
-      Pp = {
-        name: "Cape",
-        className: "CapeMaterialPlugin",
-        priority: 200,
-        defines: (pp, ip) => ({
-          ...(0, Op.b)("CAPE"),
-          BLOXD_CAPE_BONES: `${pp}`,
-          BLOXD_CAPE_MAX_Y: (0, op.hb)(ip)
-        }),
-        getUniforms(pp) {
-          return (0, Ip.b)(function(pp) {
-            const ip = [];
-            for (let cp = 0; cp < pp; cp++) ip.push({
-              name: `skele${cp}`,
-              type: "highp vec3"
-            });
-            return ip
-          }(this.skeleLen), "vertex", pp)
-        },
-        bind(pp) {
-          for (let ip = 0; ip < this.skeleLen; ip++) pp.updateVector3(`skele${ip}`, Ap.vcp(this.skele, 3 * ip))
-        },
-        uniformsVersion() {
-          return this.bonesVersion
-        },
-        getCustomCode(pp, ip) {
-          return "vertex" !== pp ? null : {
-            CUSTOM_VERTEX_DEFINITIONS: Lp(ip),
-            CUSTOM_VERTEX_UPDATE_POSITION: Yp(ip, this.skeleLen),
-            CUSTOM_VERTEX_UPDATE_NORMAL: Dp(ip)
-          }
-        }
-      };
-    (0, Sp.q)(Pp)
-  },
-  38916: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Dp,
-      g: () => Ap
-    });
-    var Op = cp(37413),
-      op = cp(37662),
-      Ip = cp(37421),
-      Sp = cp(37433);
-    const xp = "bloxdTextLodBias",
-      Lp = [{
-        name: xp,
-        type: "float"
-      }],
-      Yp = "bloxdTextSample",
-      Dp = {
-        planes: -.5,
-        boards: -.5
+      "Maple Door|meta|rot1|open": {
+        positions: [{
+          block: "Maple Door|meta|rot1|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Maple Door Top|meta|rot1|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
       },
-      Ap = {
-        name: "TextSampler",
-        className: "TextSamplerMaterialPlugin",
-        priority: 60,
-        defines: () => (0, Op.b)("TEXT_SAMPLER"),
-        getUniforms: pp => (0, op.b)(Lp, "fragment", pp),
-        bind(pp) {
-          pp.updateFloat(xp, this.lodBias)
-        },
-        uniformsVersion: () => 0,
-        getCustomCode(pp, ip) {
-          if ("fragment" !== pp) return null;
-          const cp = (0, Ip.G)(ip, `vec4 ${Yp}(sampler2D s, vec2 uv, float bias)`, `fn ${Yp}(t: texture_2d<f32>, ts: sampler, uv: vec2f, bias: f32) -> vec4f`),
-            Op = (0, Ip.G)(ip, "texture2D(s, uv, bias)", "textureSampleBias(t, ts, uv, bias)"),
-            op = `${(0,Ip.R)(ip,"vDiffuseUV")} + uvOffset`,
-            Sp = (0, Ip.G)(ip, `${Yp}(diffuseSampler, ${op}, ${(0,Ip.sb)(ip,xp)})`, `${Yp}(diffuseSampler, diffuseSamplerSampler, ${op}, ${(0,Ip.sb)(ip,xp)})`);
-          return {
-            CUSTOM_FRAGMENT_DEFINITIONS: `\n\t\t\t\t${cp} {\n\t\t\t\t\t${(0,Ip.A)(ip,"vec4","texel",Op)}\n\t\t\t\t\t// 8-bit premultiplied rounding can put the quotient just over 1; only alpha 0 hits the floor,\n\t\t\t\t\t// where the colour is 0 anyway.\n\t\t\t\t\treturn ${(0,Ip.j)(ip,"vec4",`clamp(texel.rgb / max(texel.a, 1.0 / 255.0), ${(0,Ip.j)(ip,"vec3","0.0")}, ${(0,Ip.j)(ip,"vec3","1.0")})`,"texel.a")};\n\t\t\t\t}\n\t\t\t`,
-            [(0, Ip.B)(ip)]: `baseColor = ${Sp};`
-          }
-        }
-      };
-    (0, Sp.q)(Ap)
-  },
-  41339: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      CapeMaterialPlugin: () => dp,
-      HueTintMaterialPlugin: () => ep,
-      LifeformMaterialPlugin: () => jp,
-      OverlayMaterialPlugin: () => kp
-    });
-    var Op = cp(41345),
-      op = cp(38232);
-    class Ip extends((0, Op.d)(op.d)) {}(0, Op.g)(op.d, Ip);
-    var Sp = cp(37411);
-    class xp extends((0, Op.d)(Sp.h)) {}(0, Op.g)(Sp.h, xp);
-    var Lp = cp(38071);
-    class Yp extends((0, Op.d)(Lp.i)) {}(0, Op.g)(Lp.i, Yp);
-    var Dp = cp(37655),
-      Ap = cp(40459),
-      Pp = cp(37646);
-    class Wp extends((0, Op.d)(Pp.i)) {
-      constructor(pp, ip, cp) {
-        super(pp, ip, cp), (0, Dp.g)(pp)
-      }
-      dispose(pp) {
-        (0, Dp.i)(this._material), super.dispose(pp)
-      }
-    }(0, Op.g)(Pp.i, Wp), (0, Pp.j)({
-      disableUnusedSpecularTerm: Op.c,
-      isLightingDisabled: pp => pp instanceof Ap.StandardMaterial && pp.disableLighting
-    });
-    var yp = cp(38916);
-    class Up extends((0, Op.d)(yp.g)) {}(0, Op.g)(yp.g, Up);
-    var wp = cp(39014),
-      vp = cp(37496),
-      tp = cp(38352),
-      Hp = cp(37454);
-    class dp extends((0, Op.d)(wp.b)) {}(0, Op.g)(wp.b, dp);
-    class ep extends((0, Op.d)(vp.d)) {}(0, Op.g)(vp.d, ep);
-    class jp extends((0, Op.d)(tp.q)) {}(0, Op.g)(tp.q, jp);
-    class kp extends((0, Op.d)(Hp.d)) {}(0, Op.g)(Hp.d, kp)
-  },
-  41345: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => ap,
-      d: () => tp,
-      g: () => Zp
-    });
-    var Op = cp(40459),
-      op = cp(41347),
-      Ip = cp(41393),
-      Sp = cp(41353),
-      xp = cp(38045),
-      Lp = cp(38055),
-      Yp = cp(38061),
-      Dp = cp(38064),
-      Ap = cp(37445),
-      Pp = cp(37448),
-      Wp = cp(41359),
-      yp = cp(37433),
-      Up = cp(37436),
-      wp = cp(37421);
-
-    function vp(pp, ip) {
-      return Object.assign((function(pp, cp, Op, op) {
-        return ip(this.featureState, pp, cp, Op, op)
-      }), {
-        Py: pp
-      })
-    }
-
-    function tp(pp) {
-      const ip = class extends Wp.c {
-          constructor(ip, cp) {
-            const Op = (0, Up.$)(ip),
-              op = Op && (0, Up.s)(Op, pp.name);
-            for (var Ip = arguments.length, Sp = new Array(Ip > 2 ? Ip - 2 : 0), xp = 2; xp < Ip; xp++) Sp[xp - 2] = arguments[xp];
-            super(ip, pp.name, pp.priority, op ? op.defines : pp.defines(...Sp), !1), this.featureState = void 0, this.featureState = cp, this._pluginManager._addPlugin(this), this._enable(!0), (0, Up.v)(this._material, pp, this.featureState, this._pluginDefineNames)
-          }
-          getClassName() {
-            return pp.className
-          }
-          isCompatible(pp) {
-            return pp === wp.b.GLSL || pp === wp.b.WGSL
-          }
-        },
-        cp = (0, yp.l)(pp);
-      for (const [Op, op] of Object.entries(yp.e)) {
-        const Ip = pp[Op];
-        if (Ip) {
-          const pp = cp[Op];
-          Object.defineProperty(ip.prototype, op, {
-            value: vp(Ip, pp),
-            writable: !0,
-            configurable: !0
-          })
-        }
-      }
-      return ip
-    }
-    class Hp extends(tp(xp.d)) {}
-    var dp = cp(40024),
-      ep = cp(41367),
-      jp = cp(41375);
-
-    function kp(pp, ip, cp) {
-      return (0, jp.h)(cp, ip.urls, (() => async function(pp, ip, cp) {
-        const {
-          width: Op
-        } = pp[0].getSize(), op = pp.map(((pp, cp) => {
-          var op;
-          const Ip = Math.round(pp.getSize().height / Op),
-            Sp = null === ip || void 0 === ip ? void 0 : ip[cp];
-          return {
-            pixels: Sp && Sp.byteLength === Op * Op * Ip * 4 ? Sp : null !== (op = mp.get(pp.getInternalTexture())) && void 0 !== op ? op : pp._readPixelsSync(),
-            layers: Ip
-          }
-        })), Ip = cp.gy().getCaps().texture2DArrayMaxLayerCount, xp = (0, jp.d)(op, Op, Ip).map((pp => {
-          let {
-            pixels: ip,
-            layers: op
-          } = pp;
-          return {
-            atlas: new ep.c(ip, Op, Op, op, dp.d.TEXTUREFORMAT_RGBA, cp, !0, !1, Sp.d.NEAREST_NEAREST_MIPLINEAR),
-            layers: op
-          }
-        }));
-        return pp.forEach(((pp, ip) => {
-          const Op = pp.getInternalTexture();
-          mp.has(Op) || (! function(pp, ip) {
-            const cp = ip.createRawTexture(new Uint8Array(4), 1, 1, dp.d.TEXTUREFORMAT_RGBA, !1, !1, Sp.d.NEAREST_SAMPLINGMODE);
-            pp._hardwareTexture.release(), ip.unbindAllTextures(), cp._swapAndDie(pp, !1)
-          }(Op, cp.gy()), mp.set(Op, op[ip].pixels))
-        })), xp
-      }(pp, ip.pixels, cp)))
-    }
-    const mp = new WeakMap;
-    var Rp = cp(38069);
-    class qp extends(tp(Lp.f)) {
-      constructor(pp, ip) {
-        super(pp, ip), this.loaded = new Set, this.mirrors = void 0, this.mirrors = ip.textures.map((pp => pp.mirror)), this.mirrors.forEach(((pp, ip) => {
-          pp.onLoadObservable.add((pp => {
-            this.setTextureArrayData(pp, ip).catch((pp => {
-              console.error(`Failed to build the texture arrays, at atlas ${ip}`, pp)
-            }))
-          }))
-        })), (0, Rp.n)(ip, pp.shaderLanguage)
-      }
-      async setTextureArrayData(pp, ip) {
-        const cp = this.featureState,
-          {
-            width: Op,
-            height: op
-          } = pp.getSize(),
-          Ip = this._material.shaderLanguage;
-        if (!cp.useWebGL2) return void(0, Rp.f)(this._material, cp, ip, Op, Math.round(op / Op), Ip);
-        if (this.loaded.add(ip), this.loaded.size < this.mirrors.length) return;
-        const Sp = await kp(this.mirrors, cp.sources, this._material.Gl());
-        (0, Rp.b)(this._material, cp, Sp, Op, Ip)
-      }
-    }
-    var Mp = cp(41378),
-      Cp = cp(40498),
-      Ep = cp(37313),
-      Xp = cp(41383),
-      lp = cp(40589),
-      Qp = cp(40481),
-      Jp = cp(41325),
-      Bp = cp(37800),
-      Np = cp(41391);
-    class Tp extends Mp.c {
-      getData() {
-        return null
-      }
-      _rebuild() {}
-      restore() {
-        super._rebuild()
-      }
-    }
-    const fp = {
-      Mesh: Xp.c,
-      TransformNode: Jp.b,
-      my: Mp.c,
-      VertexBuffer: Mp.f,
-      BoundingInfo: Cp.d,
-      Zy: Ep.Zy,
-      ArenaBuffer: Tp,
-      SubMesh: Qp.d,
-      VertexData: lp.d,
-      MirroredGeometry: Np.b,
-      meshFromArrays: Np.e,
-      plainMeshFromArrays: Np.f
-    };
-    (0, Bp.g)(fp);
-    var bp = cp(37655);
-    class hp extends(tp(Dp.g)) {
-      constructor(pp, ip) {
-        if (super(pp, ip), pp instanceof Op.StandardMaterial && ip.dirLightCount > 0) {
-          const ip = pp,
-            cp = ip._blockDirtyMechanism;
-          ip._blockDirtyMechanism = !0, pp.disableLighting = !0, ip._blockDirtyMechanism = cp;
-          const Op = (0, Up.$)(pp);
-          Op && (Op.disableLighting = !0, (0, Up.Y)(Op))
-        }(0, bp.g)(pp)
-      }
-      dispose(pp) {
-        (0, bp.i)(this._material), super.dispose(pp)
-      }
-    }
-
-    function ap(pp, ip) {
-      if (!(ip instanceof Op.StandardMaterial) || ip.specularTexture) return;
-      const {
-        r: cp,
-        g: op,
-        b: Ip
-      } = ip.specularColor;
-      0 === cp && 0 === op && 0 === Ip && (pp.SPECULARTERM = !1)
-    }(0, Dp.d)({
-      disableUnusedSpecularTerm: ap
-    });
-    var np = cp(37519),
-      Fp = cp(37807);
-    const gp = new RegExp(`^#define ${Yp.b}\\s*$`, "m");
-    class Gp extends(tp(Yp.h)) {
-      constructor(pp, ip) {
-        super(pp, ip), this.Ry = !1, ip.ditherOnlyWhileFading && (Fp.d.add(pp), this.prewarmDitherTwins(pp))
-      }
-      prewarmDitherTwins(pp) {
-        const ip = new WeakSet;
-        pp.onEffectCreatedObservable.add((cp => {
-          let {
-            effect: Op,
-            subMesh: op
-          } = cp;
-          if (this.featureState.prewarmingDither || ip.has(Op)) return;
-          ip.add(Op);
-          const Ip = null === op || void 0 === op ? void 0 : op.getMesh();
-          Ip && !gp.test(Op.defines) && pp.Gl().onAfterRenderObservable.addOnce((() => {
-            this.prewarmDither(Ip) || ip.delete(Op)
-          }))
-        }))
-      }
-      prewarmDither(pp) {
-        if (this.Ry || pp.uR()) return !1;
-        const ip = new Qp.d(0, 0, 0, 0, 0, pp, void 0, !1, !1);
-        this.featureState.prewarmingDither = !0;
-        try {
-          this._material.isReadyForSubMesh(pp, ip)
-        } finally {
-          this.featureState.prewarmingDither = !1
-        }
-        return null !== ip.effect
-      }
-      dispose(pp) {
-        this.Ry = !0, super.dispose(pp)
-      }
-    }
-    const rp = new Map;
-
-    function Zp(pp, ip) {
-      rp.set(pp, ip)
-    }
-    Zp(xp.d, Hp), Zp(Lp.f, qp), Zp(Yp.h, Gp), Zp(Dp.g, hp), (0, Ap.e)({
-      create: (pp, ip) => {
-        const cp = new Op.StandardMaterial(pp.name, ip);
-        return (0, np.p)(pp, cp), cp.detailMap._pluginDefineNames
+      "Maple Door|meta|rot2|closed": {
+        positions: [{
+          block: "Maple Door|meta|rot2|closed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Maple Door Top|meta|rot2|closed",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
       },
-      write: (pp, ip, cp) => {
-        (0, np.S)(pp.mirror, ip, cp)
+      "Maple Door|meta|rot2|open": {
+        positions: [{
+          block: "Maple Door|meta|rot2|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Maple Door Top|meta|rot2|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
       },
-      addFeature: (pp, ip, cp) => {
-        const Op = rp.get(ip.feature);
-        if (!Op) throw new Error(`${ip.feature.name} has no plugin class (registerPluginClass)`);
-        new Op(pp.mirror, ip.state, ...cp)
+      "Maple Door|meta|rot3|closed": {
+        positions: [{
+          block: "Maple Door|meta|rot3|closed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Maple Door Top|meta|rot3|closed",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
       },
-      texture: (pp, ip, cp) => {
-        let {
-          url: Op,
-          noMipmap: op,
-          invertY: Ip,
-          samplingMode: xp,
-          data: Lp,
-          sets: Yp
-        } = cp;
-        if (!Lp) {
-          const cp = new Sp.d(Op, ip, op, Ip, xp);
-          return Object.assign(cp, Yp), void(0, Pp.K)(pp, cp)
-        }
-        const Dp = {},
-          Ap = new Promise(((pp, ip) => {
-            Dp.onLoad = pp, Dp.onError = (pp, cp) => {
-              ip(new Error(`${Lp.context}: ${(null===cp||void 0===cp?void 0:cp.message)||pp||"Failed to load texture"}`))
-            }
-          })),
-          {
-            mimeType: Wp,
-            bytes: yp,
-            label: Up
-          } = Lp,
-          wp = {
-            noMipmap: op,
-            invertY: !1,
-            samplingMode: xp,
-            ...Dp,
-            mimeType: Wp,
-            loaderOptions: void 0,
-            useSRGBBuffer: !1
+      "Maple Door|meta|rot3|open": {
+        positions: [{
+          block: "Maple Door|meta|rot3|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Maple Door Top|meta|rot3|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Maple Door|meta|rot4|closed": {
+        positions: [{
+          block: "Maple Door|meta|rot4|closed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Maple Door Top|meta|rot4|closed",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Maple Door|meta|rot4|open": {
+        positions: [{
+          block: "Maple Door|meta|rot4|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Maple Door Top|meta|rot4|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Pine Door": {
+        positions: [{
+          block: "Pine Door",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Pine Door Top",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Pine Door|meta|rot1|open": {
+        positions: [{
+          block: "Pine Door|meta|rot1|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Pine Door Top|meta|rot1|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Pine Door|meta|rot2|closed": {
+        positions: [{
+          block: "Pine Door|meta|rot2|closed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Pine Door Top|meta|rot2|closed",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Pine Door|meta|rot2|open": {
+        positions: [{
+          block: "Pine Door|meta|rot2|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Pine Door Top|meta|rot2|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Pine Door|meta|rot3|closed": {
+        positions: [{
+          block: "Pine Door|meta|rot3|closed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Pine Door Top|meta|rot3|closed",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Pine Door|meta|rot3|open": {
+        positions: [{
+          block: "Pine Door|meta|rot3|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Pine Door Top|meta|rot3|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Pine Door|meta|rot4|closed": {
+        positions: [{
+          block: "Pine Door|meta|rot4|closed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Pine Door Top|meta|rot4|closed",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Pine Door|meta|rot4|open": {
+        positions: [{
+          block: "Pine Door|meta|rot4|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Pine Door Top|meta|rot4|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Plum Door": {
+        positions: [{
+          block: "Plum Door",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Plum Door Top",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Plum Door|meta|rot1|open": {
+        positions: [{
+          block: "Plum Door|meta|rot1|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Plum Door Top|meta|rot1|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Plum Door|meta|rot2|closed": {
+        positions: [{
+          block: "Plum Door|meta|rot2|closed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Plum Door Top|meta|rot2|closed",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Plum Door|meta|rot2|open": {
+        positions: [{
+          block: "Plum Door|meta|rot2|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Plum Door Top|meta|rot2|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Plum Door|meta|rot3|closed": {
+        positions: [{
+          block: "Plum Door|meta|rot3|closed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Plum Door Top|meta|rot3|closed",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Plum Door|meta|rot3|open": {
+        positions: [{
+          block: "Plum Door|meta|rot3|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Plum Door Top|meta|rot3|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Plum Door|meta|rot4|closed": {
+        positions: [{
+          block: "Plum Door|meta|rot4|closed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Plum Door Top|meta|rot4|closed",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Plum Door|meta|rot4|open": {
+        positions: [{
+          block: "Plum Door|meta|rot4|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Plum Door Top|meta|rot4|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Cedar Door": {
+        positions: [{
+          block: "Cedar Door",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Cedar Door Top",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Cedar Door|meta|rot1|open": {
+        positions: [{
+          block: "Cedar Door|meta|rot1|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Cedar Door Top|meta|rot1|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Cedar Door|meta|rot2|closed": {
+        positions: [{
+          block: "Cedar Door|meta|rot2|closed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Cedar Door Top|meta|rot2|closed",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Cedar Door|meta|rot2|open": {
+        positions: [{
+          block: "Cedar Door|meta|rot2|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Cedar Door Top|meta|rot2|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Cedar Door|meta|rot3|closed": {
+        positions: [{
+          block: "Cedar Door|meta|rot3|closed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Cedar Door Top|meta|rot3|closed",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Cedar Door|meta|rot3|open": {
+        positions: [{
+          block: "Cedar Door|meta|rot3|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Cedar Door Top|meta|rot3|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Cedar Door|meta|rot4|closed": {
+        positions: [{
+          block: "Cedar Door|meta|rot4|closed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Cedar Door Top|meta|rot4|closed",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Cedar Door|meta|rot4|open": {
+        positions: [{
+          block: "Cedar Door|meta|rot4|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Cedar Door Top|meta|rot4|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Aspen Door": {
+        positions: [{
+          block: "Aspen Door",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Aspen Door Top",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Aspen Door|meta|rot1|open": {
+        positions: [{
+          block: "Aspen Door|meta|rot1|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Aspen Door Top|meta|rot1|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Aspen Door|meta|rot2|closed": {
+        positions: [{
+          block: "Aspen Door|meta|rot2|closed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Aspen Door Top|meta|rot2|closed",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Aspen Door|meta|rot2|open": {
+        positions: [{
+          block: "Aspen Door|meta|rot2|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Aspen Door Top|meta|rot2|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Aspen Door|meta|rot3|closed": {
+        positions: [{
+          block: "Aspen Door|meta|rot3|closed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Aspen Door Top|meta|rot3|closed",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Aspen Door|meta|rot3|open": {
+        positions: [{
+          block: "Aspen Door|meta|rot3|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Aspen Door Top|meta|rot3|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Aspen Door|meta|rot4|closed": {
+        positions: [{
+          block: "Aspen Door|meta|rot4|closed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Aspen Door Top|meta|rot4|closed",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Aspen Door|meta|rot4|open": {
+        positions: [{
+          block: "Aspen Door|meta|rot4|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Aspen Door Top|meta|rot4|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Jungle Door": {
+        positions: [{
+          block: "Jungle Door",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Jungle Door Top",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Jungle Door|meta|rot1|open": {
+        positions: [{
+          block: "Jungle Door|meta|rot1|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Jungle Door Top|meta|rot1|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Jungle Door|meta|rot2|closed": {
+        positions: [{
+          block: "Jungle Door|meta|rot2|closed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Jungle Door Top|meta|rot2|closed",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Jungle Door|meta|rot2|open": {
+        positions: [{
+          block: "Jungle Door|meta|rot2|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Jungle Door Top|meta|rot2|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Jungle Door|meta|rot3|closed": {
+        positions: [{
+          block: "Jungle Door|meta|rot3|closed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Jungle Door Top|meta|rot3|closed",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Jungle Door|meta|rot3|open": {
+        positions: [{
+          block: "Jungle Door|meta|rot3|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Jungle Door Top|meta|rot3|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Jungle Door|meta|rot4|closed": {
+        positions: [{
+          block: "Jungle Door|meta|rot4|closed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Jungle Door Top|meta|rot4|closed",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Jungle Door|meta|rot4|open": {
+        positions: [{
+          block: "Jungle Door|meta|rot4|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Jungle Door Top|meta|rot4|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Palm Door": {
+        positions: [{
+          block: "Palm Door",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Palm Door Top",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Palm Door|meta|rot1|open": {
+        positions: [{
+          block: "Palm Door|meta|rot1|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Palm Door Top|meta|rot1|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Palm Door|meta|rot2|closed": {
+        positions: [{
+          block: "Palm Door|meta|rot2|closed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Palm Door Top|meta|rot2|closed",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Palm Door|meta|rot2|open": {
+        positions: [{
+          block: "Palm Door|meta|rot2|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Palm Door Top|meta|rot2|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Palm Door|meta|rot3|closed": {
+        positions: [{
+          block: "Palm Door|meta|rot3|closed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Palm Door Top|meta|rot3|closed",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Palm Door|meta|rot3|open": {
+        positions: [{
+          block: "Palm Door|meta|rot3|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Palm Door Top|meta|rot3|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Palm Door|meta|rot4|closed": {
+        positions: [{
+          block: "Palm Door|meta|rot4|closed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Palm Door Top|meta|rot4|closed",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Palm Door|meta|rot4|open": {
+        positions: [{
+          block: "Palm Door|meta|rot4|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Palm Door Top|meta|rot4|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Pear Door": {
+        positions: [{
+          block: "Pear Door",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Pear Door Top",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Pear Door|meta|rot1|open": {
+        positions: [{
+          block: "Pear Door|meta|rot1|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Pear Door Top|meta|rot1|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Pear Door|meta|rot2|closed": {
+        positions: [{
+          block: "Pear Door|meta|rot2|closed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Pear Door Top|meta|rot2|closed",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Pear Door|meta|rot2|open": {
+        positions: [{
+          block: "Pear Door|meta|rot2|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Pear Door Top|meta|rot2|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Pear Door|meta|rot3|closed": {
+        positions: [{
+          block: "Pear Door|meta|rot3|closed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Pear Door Top|meta|rot3|closed",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Pear Door|meta|rot3|open": {
+        positions: [{
+          block: "Pear Door|meta|rot3|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Pear Door Top|meta|rot3|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Pear Door|meta|rot4|closed": {
+        positions: [{
+          block: "Pear Door|meta|rot4|closed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Pear Door Top|meta|rot4|closed",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Pear Door|meta|rot4|open": {
+        positions: [{
+          block: "Pear Door|meta|rot4|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Pear Door Top|meta|rot4|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Cherry Door": {
+        positions: [{
+          block: "Cherry Door",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Cherry Door Top",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Cherry Door|meta|rot1|open": {
+        positions: [{
+          block: "Cherry Door|meta|rot1|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Cherry Door Top|meta|rot1|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Cherry Door|meta|rot2|closed": {
+        positions: [{
+          block: "Cherry Door|meta|rot2|closed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Cherry Door Top|meta|rot2|closed",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Cherry Door|meta|rot2|open": {
+        positions: [{
+          block: "Cherry Door|meta|rot2|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Cherry Door Top|meta|rot2|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Cherry Door|meta|rot3|closed": {
+        positions: [{
+          block: "Cherry Door|meta|rot3|closed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Cherry Door Top|meta|rot3|closed",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Cherry Door|meta|rot3|open": {
+        positions: [{
+          block: "Cherry Door|meta|rot3|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Cherry Door Top|meta|rot3|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Cherry Door|meta|rot4|closed": {
+        positions: [{
+          block: "Cherry Door|meta|rot4|closed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Cherry Door Top|meta|rot4|closed",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Cherry Door|meta|rot4|open": {
+        positions: [{
+          block: "Cherry Door|meta|rot4|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Cherry Door Top|meta|rot4|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Spectral Door": {
+        positions: [{
+          block: "Spectral Door",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Spectral Door Top",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Spectral Door|meta|rot1|open": {
+        positions: [{
+          block: "Spectral Door|meta|rot1|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Spectral Door Top|meta|rot1|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Spectral Door|meta|rot2|closed": {
+        positions: [{
+          block: "Spectral Door|meta|rot2|closed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Spectral Door Top|meta|rot2|closed",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Spectral Door|meta|rot2|open": {
+        positions: [{
+          block: "Spectral Door|meta|rot2|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Spectral Door Top|meta|rot2|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Spectral Door|meta|rot3|closed": {
+        positions: [{
+          block: "Spectral Door|meta|rot3|closed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Spectral Door Top|meta|rot3|closed",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Spectral Door|meta|rot3|open": {
+        positions: [{
+          block: "Spectral Door|meta|rot3|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Spectral Door Top|meta|rot3|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Spectral Door|meta|rot4|closed": {
+        positions: [{
+          block: "Spectral Door|meta|rot4|closed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Spectral Door Top|meta|rot4|closed",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Spectral Door|meta|rot4|open": {
+        positions: [{
+          block: "Spectral Door|meta|rot4|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Spectral Door Top|meta|rot4|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Mango Door": {
+        positions: [{
+          block: "Mango Door",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Mango Door Top",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Mango Door|meta|rot1|open": {
+        positions: [{
+          block: "Mango Door|meta|rot1|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Mango Door Top|meta|rot1|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Mango Door|meta|rot2|closed": {
+        positions: [{
+          block: "Mango Door|meta|rot2|closed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Mango Door Top|meta|rot2|closed",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Mango Door|meta|rot2|open": {
+        positions: [{
+          block: "Mango Door|meta|rot2|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Mango Door Top|meta|rot2|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Mango Door|meta|rot3|closed": {
+        positions: [{
+          block: "Mango Door|meta|rot3|closed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Mango Door Top|meta|rot3|closed",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Mango Door|meta|rot3|open": {
+        positions: [{
+          block: "Mango Door|meta|rot3|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Mango Door Top|meta|rot3|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Mango Door|meta|rot4|closed": {
+        positions: [{
+          block: "Mango Door|meta|rot4|closed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Mango Door Top|meta|rot4|closed",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Mango Door|meta|rot4|open": {
+        positions: [{
+          block: "Mango Door|meta|rot4|open",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Mango Door Top|meta|rot4|open",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "White Bed": {
+        positions: [{
+          block: "White Bed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_White Bed Head",
+          x: 0,
+          y: 0,
+          z: -1
+        }]
+      },
+      "White Bed|meta|rot2": {
+        positions: [{
+          block: "White Bed|meta|rot2",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_White Bed Head|meta|rot2",
+          x: -1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "White Bed|meta|rot3": {
+        positions: [{
+          block: "White Bed|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_White Bed Head|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 1
+        }]
+      },
+      "White Bed|meta|rot4": {
+        positions: [{
+          block: "White Bed|meta|rot4",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_White Bed Head|meta|rot4",
+          x: 1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Orange Bed": {
+        positions: [{
+          block: "Orange Bed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Orange Bed Head",
+          x: 0,
+          y: 0,
+          z: -1
+        }]
+      },
+      "Orange Bed|meta|rot2": {
+        positions: [{
+          block: "Orange Bed|meta|rot2",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Orange Bed Head|meta|rot2",
+          x: -1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Orange Bed|meta|rot3": {
+        positions: [{
+          block: "Orange Bed|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Orange Bed Head|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 1
+        }]
+      },
+      "Orange Bed|meta|rot4": {
+        positions: [{
+          block: "Orange Bed|meta|rot4",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Orange Bed Head|meta|rot4",
+          x: 1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Magenta Bed": {
+        positions: [{
+          block: "Magenta Bed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Magenta Bed Head",
+          x: 0,
+          y: 0,
+          z: -1
+        }]
+      },
+      "Magenta Bed|meta|rot2": {
+        positions: [{
+          block: "Magenta Bed|meta|rot2",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Magenta Bed Head|meta|rot2",
+          x: -1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Magenta Bed|meta|rot3": {
+        positions: [{
+          block: "Magenta Bed|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Magenta Bed Head|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 1
+        }]
+      },
+      "Magenta Bed|meta|rot4": {
+        positions: [{
+          block: "Magenta Bed|meta|rot4",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Magenta Bed Head|meta|rot4",
+          x: 1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Light Blue Bed": {
+        positions: [{
+          block: "Light Blue Bed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Light Blue Bed Head",
+          x: 0,
+          y: 0,
+          z: -1
+        }]
+      },
+      "Light Blue Bed|meta|rot2": {
+        positions: [{
+          block: "Light Blue Bed|meta|rot2",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Light Blue Bed Head|meta|rot2",
+          x: -1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Light Blue Bed|meta|rot3": {
+        positions: [{
+          block: "Light Blue Bed|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Light Blue Bed Head|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 1
+        }]
+      },
+      "Light Blue Bed|meta|rot4": {
+        positions: [{
+          block: "Light Blue Bed|meta|rot4",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Light Blue Bed Head|meta|rot4",
+          x: 1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Yellow Bed": {
+        positions: [{
+          block: "Yellow Bed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Yellow Bed Head",
+          x: 0,
+          y: 0,
+          z: -1
+        }]
+      },
+      "Yellow Bed|meta|rot2": {
+        positions: [{
+          block: "Yellow Bed|meta|rot2",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Yellow Bed Head|meta|rot2",
+          x: -1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Yellow Bed|meta|rot3": {
+        positions: [{
+          block: "Yellow Bed|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Yellow Bed Head|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 1
+        }]
+      },
+      "Yellow Bed|meta|rot4": {
+        positions: [{
+          block: "Yellow Bed|meta|rot4",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Yellow Bed Head|meta|rot4",
+          x: 1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Lime Bed": {
+        positions: [{
+          block: "Lime Bed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Lime Bed Head",
+          x: 0,
+          y: 0,
+          z: -1
+        }]
+      },
+      "Lime Bed|meta|rot2": {
+        positions: [{
+          block: "Lime Bed|meta|rot2",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Lime Bed Head|meta|rot2",
+          x: -1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Lime Bed|meta|rot3": {
+        positions: [{
+          block: "Lime Bed|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Lime Bed Head|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 1
+        }]
+      },
+      "Lime Bed|meta|rot4": {
+        positions: [{
+          block: "Lime Bed|meta|rot4",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Lime Bed Head|meta|rot4",
+          x: 1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Pink Bed": {
+        positions: [{
+          block: "Pink Bed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Pink Bed Head",
+          x: 0,
+          y: 0,
+          z: -1
+        }]
+      },
+      "Pink Bed|meta|rot2": {
+        positions: [{
+          block: "Pink Bed|meta|rot2",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Pink Bed Head|meta|rot2",
+          x: -1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Pink Bed|meta|rot3": {
+        positions: [{
+          block: "Pink Bed|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Pink Bed Head|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 1
+        }]
+      },
+      "Pink Bed|meta|rot4": {
+        positions: [{
+          block: "Pink Bed|meta|rot4",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Pink Bed Head|meta|rot4",
+          x: 1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Gray Bed": {
+        positions: [{
+          block: "Gray Bed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Gray Bed Head",
+          x: 0,
+          y: 0,
+          z: -1
+        }]
+      },
+      "Gray Bed|meta|rot2": {
+        positions: [{
+          block: "Gray Bed|meta|rot2",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Gray Bed Head|meta|rot2",
+          x: -1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Gray Bed|meta|rot3": {
+        positions: [{
+          block: "Gray Bed|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Gray Bed Head|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 1
+        }]
+      },
+      "Gray Bed|meta|rot4": {
+        positions: [{
+          block: "Gray Bed|meta|rot4",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Gray Bed Head|meta|rot4",
+          x: 1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Light Gray Bed": {
+        positions: [{
+          block: "Light Gray Bed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Light Gray Bed Head",
+          x: 0,
+          y: 0,
+          z: -1
+        }]
+      },
+      "Light Gray Bed|meta|rot2": {
+        positions: [{
+          block: "Light Gray Bed|meta|rot2",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Light Gray Bed Head|meta|rot2",
+          x: -1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Light Gray Bed|meta|rot3": {
+        positions: [{
+          block: "Light Gray Bed|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Light Gray Bed Head|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 1
+        }]
+      },
+      "Light Gray Bed|meta|rot4": {
+        positions: [{
+          block: "Light Gray Bed|meta|rot4",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Light Gray Bed Head|meta|rot4",
+          x: 1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Cyan Bed": {
+        positions: [{
+          block: "Cyan Bed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Cyan Bed Head",
+          x: 0,
+          y: 0,
+          z: -1
+        }]
+      },
+      "Cyan Bed|meta|rot2": {
+        positions: [{
+          block: "Cyan Bed|meta|rot2",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Cyan Bed Head|meta|rot2",
+          x: -1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Cyan Bed|meta|rot3": {
+        positions: [{
+          block: "Cyan Bed|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Cyan Bed Head|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 1
+        }]
+      },
+      "Cyan Bed|meta|rot4": {
+        positions: [{
+          block: "Cyan Bed|meta|rot4",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Cyan Bed Head|meta|rot4",
+          x: 1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Purple Bed": {
+        positions: [{
+          block: "Purple Bed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Purple Bed Head",
+          x: 0,
+          y: 0,
+          z: -1
+        }]
+      },
+      "Purple Bed|meta|rot2": {
+        positions: [{
+          block: "Purple Bed|meta|rot2",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Purple Bed Head|meta|rot2",
+          x: -1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Purple Bed|meta|rot3": {
+        positions: [{
+          block: "Purple Bed|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Purple Bed Head|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 1
+        }]
+      },
+      "Purple Bed|meta|rot4": {
+        positions: [{
+          block: "Purple Bed|meta|rot4",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Purple Bed Head|meta|rot4",
+          x: 1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Blue Bed": {
+        positions: [{
+          block: "Blue Bed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Blue Bed Head",
+          x: 0,
+          y: 0,
+          z: -1
+        }]
+      },
+      "Blue Bed|meta|rot2": {
+        positions: [{
+          block: "Blue Bed|meta|rot2",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Blue Bed Head|meta|rot2",
+          x: -1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Blue Bed|meta|rot3": {
+        positions: [{
+          block: "Blue Bed|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Blue Bed Head|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 1
+        }]
+      },
+      "Blue Bed|meta|rot4": {
+        positions: [{
+          block: "Blue Bed|meta|rot4",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Blue Bed Head|meta|rot4",
+          x: 1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Brown Bed": {
+        positions: [{
+          block: "Brown Bed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Brown Bed Head",
+          x: 0,
+          y: 0,
+          z: -1
+        }]
+      },
+      "Brown Bed|meta|rot2": {
+        positions: [{
+          block: "Brown Bed|meta|rot2",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Brown Bed Head|meta|rot2",
+          x: -1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Brown Bed|meta|rot3": {
+        positions: [{
+          block: "Brown Bed|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Brown Bed Head|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 1
+        }]
+      },
+      "Brown Bed|meta|rot4": {
+        positions: [{
+          block: "Brown Bed|meta|rot4",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Brown Bed Head|meta|rot4",
+          x: 1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Green Bed": {
+        positions: [{
+          block: "Green Bed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Green Bed Head",
+          x: 0,
+          y: 0,
+          z: -1
+        }]
+      },
+      "Green Bed|meta|rot2": {
+        positions: [{
+          block: "Green Bed|meta|rot2",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Green Bed Head|meta|rot2",
+          x: -1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Green Bed|meta|rot3": {
+        positions: [{
+          block: "Green Bed|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Green Bed Head|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 1
+        }]
+      },
+      "Green Bed|meta|rot4": {
+        positions: [{
+          block: "Green Bed|meta|rot4",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Green Bed Head|meta|rot4",
+          x: 1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Red Bed": {
+        positions: [{
+          block: "Red Bed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Red Bed Head",
+          x: 0,
+          y: 0,
+          z: -1
+        }]
+      },
+      "Red Bed|meta|rot2": {
+        positions: [{
+          block: "Red Bed|meta|rot2",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Red Bed Head|meta|rot2",
+          x: -1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Red Bed|meta|rot3": {
+        positions: [{
+          block: "Red Bed|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Red Bed Head|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 1
+        }]
+      },
+      "Red Bed|meta|rot4": {
+        positions: [{
+          block: "Red Bed|meta|rot4",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Red Bed Head|meta|rot4",
+          x: 1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Black Bed": {
+        positions: [{
+          block: "Black Bed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Black Bed Head",
+          x: 0,
+          y: 0,
+          z: -1
+        }]
+      },
+      "Black Bed|meta|rot2": {
+        positions: [{
+          block: "Black Bed|meta|rot2",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Black Bed Head|meta|rot2",
+          x: -1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Black Bed|meta|rot3": {
+        positions: [{
+          block: "Black Bed|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Black Bed Head|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 1
+        }]
+      },
+      "Black Bed|meta|rot4": {
+        positions: [{
+          block: "Black Bed|meta|rot4",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Black Bed Head|meta|rot4",
+          x: 1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Tall Grass": {
+        positions: [{
+          block: "Tall Grass",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "Tall Grass|Top",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Jungle Tall Grass": {
+        positions: [{
+          block: "Jungle Tall Grass",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "Jungle Tall Grass|Top",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "White Strongbed": {
+        positions: [{
+          block: "White Strongbed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_White Strongbed Head",
+          x: 0,
+          y: 0,
+          z: -1
+        }]
+      },
+      "White Strongbed|meta|rot2": {
+        positions: [{
+          block: "White Strongbed|meta|rot2",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_White Strongbed Head|meta|rot2",
+          x: -1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "White Strongbed|meta|rot3": {
+        positions: [{
+          block: "White Strongbed|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_White Strongbed Head|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 1
+        }]
+      },
+      "White Strongbed|meta|rot4": {
+        positions: [{
+          block: "White Strongbed|meta|rot4",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_White Strongbed Head|meta|rot4",
+          x: 1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Orange Strongbed": {
+        positions: [{
+          block: "Orange Strongbed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Orange Strongbed Head",
+          x: 0,
+          y: 0,
+          z: -1
+        }]
+      },
+      "Orange Strongbed|meta|rot2": {
+        positions: [{
+          block: "Orange Strongbed|meta|rot2",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Orange Strongbed Head|meta|rot2",
+          x: -1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Orange Strongbed|meta|rot3": {
+        positions: [{
+          block: "Orange Strongbed|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Orange Strongbed Head|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 1
+        }]
+      },
+      "Orange Strongbed|meta|rot4": {
+        positions: [{
+          block: "Orange Strongbed|meta|rot4",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Orange Strongbed Head|meta|rot4",
+          x: 1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Magenta Strongbed": {
+        positions: [{
+          block: "Magenta Strongbed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Magenta Strongbed Head",
+          x: 0,
+          y: 0,
+          z: -1
+        }]
+      },
+      "Magenta Strongbed|meta|rot2": {
+        positions: [{
+          block: "Magenta Strongbed|meta|rot2",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Magenta Strongbed Head|meta|rot2",
+          x: -1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Magenta Strongbed|meta|rot3": {
+        positions: [{
+          block: "Magenta Strongbed|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Magenta Strongbed Head|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 1
+        }]
+      },
+      "Magenta Strongbed|meta|rot4": {
+        positions: [{
+          block: "Magenta Strongbed|meta|rot4",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Magenta Strongbed Head|meta|rot4",
+          x: 1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Light Blue Strongbed": {
+        positions: [{
+          block: "Light Blue Strongbed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Light Blue Strongbed Head",
+          x: 0,
+          y: 0,
+          z: -1
+        }]
+      },
+      "Light Blue Strongbed|meta|rot2": {
+        positions: [{
+          block: "Light Blue Strongbed|meta|rot2",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Light Blue Strongbed Head|meta|rot2",
+          x: -1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Light Blue Strongbed|meta|rot3": {
+        positions: [{
+          block: "Light Blue Strongbed|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Light Blue Strongbed Head|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 1
+        }]
+      },
+      "Light Blue Strongbed|meta|rot4": {
+        positions: [{
+          block: "Light Blue Strongbed|meta|rot4",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Light Blue Strongbed Head|meta|rot4",
+          x: 1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Yellow Strongbed": {
+        positions: [{
+          block: "Yellow Strongbed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Yellow Strongbed Head",
+          x: 0,
+          y: 0,
+          z: -1
+        }]
+      },
+      "Yellow Strongbed|meta|rot2": {
+        positions: [{
+          block: "Yellow Strongbed|meta|rot2",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Yellow Strongbed Head|meta|rot2",
+          x: -1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Yellow Strongbed|meta|rot3": {
+        positions: [{
+          block: "Yellow Strongbed|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Yellow Strongbed Head|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 1
+        }]
+      },
+      "Yellow Strongbed|meta|rot4": {
+        positions: [{
+          block: "Yellow Strongbed|meta|rot4",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Yellow Strongbed Head|meta|rot4",
+          x: 1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Lime Strongbed": {
+        positions: [{
+          block: "Lime Strongbed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Lime Strongbed Head",
+          x: 0,
+          y: 0,
+          z: -1
+        }]
+      },
+      "Lime Strongbed|meta|rot2": {
+        positions: [{
+          block: "Lime Strongbed|meta|rot2",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Lime Strongbed Head|meta|rot2",
+          x: -1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Lime Strongbed|meta|rot3": {
+        positions: [{
+          block: "Lime Strongbed|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Lime Strongbed Head|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 1
+        }]
+      },
+      "Lime Strongbed|meta|rot4": {
+        positions: [{
+          block: "Lime Strongbed|meta|rot4",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Lime Strongbed Head|meta|rot4",
+          x: 1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Pink Strongbed": {
+        positions: [{
+          block: "Pink Strongbed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Pink Strongbed Head",
+          x: 0,
+          y: 0,
+          z: -1
+        }]
+      },
+      "Pink Strongbed|meta|rot2": {
+        positions: [{
+          block: "Pink Strongbed|meta|rot2",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Pink Strongbed Head|meta|rot2",
+          x: -1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Pink Strongbed|meta|rot3": {
+        positions: [{
+          block: "Pink Strongbed|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Pink Strongbed Head|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 1
+        }]
+      },
+      "Pink Strongbed|meta|rot4": {
+        positions: [{
+          block: "Pink Strongbed|meta|rot4",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Pink Strongbed Head|meta|rot4",
+          x: 1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Gray Strongbed": {
+        positions: [{
+          block: "Gray Strongbed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Gray Strongbed Head",
+          x: 0,
+          y: 0,
+          z: -1
+        }]
+      },
+      "Gray Strongbed|meta|rot2": {
+        positions: [{
+          block: "Gray Strongbed|meta|rot2",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Gray Strongbed Head|meta|rot2",
+          x: -1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Gray Strongbed|meta|rot3": {
+        positions: [{
+          block: "Gray Strongbed|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Gray Strongbed Head|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 1
+        }]
+      },
+      "Gray Strongbed|meta|rot4": {
+        positions: [{
+          block: "Gray Strongbed|meta|rot4",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Gray Strongbed Head|meta|rot4",
+          x: 1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Light Gray Strongbed": {
+        positions: [{
+          block: "Light Gray Strongbed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Light Gray Strongbed Head",
+          x: 0,
+          y: 0,
+          z: -1
+        }]
+      },
+      "Light Gray Strongbed|meta|rot2": {
+        positions: [{
+          block: "Light Gray Strongbed|meta|rot2",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Light Gray Strongbed Head|meta|rot2",
+          x: -1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Light Gray Strongbed|meta|rot3": {
+        positions: [{
+          block: "Light Gray Strongbed|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Light Gray Strongbed Head|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 1
+        }]
+      },
+      "Light Gray Strongbed|meta|rot4": {
+        positions: [{
+          block: "Light Gray Strongbed|meta|rot4",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Light Gray Strongbed Head|meta|rot4",
+          x: 1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Cyan Strongbed": {
+        positions: [{
+          block: "Cyan Strongbed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Cyan Strongbed Head",
+          x: 0,
+          y: 0,
+          z: -1
+        }]
+      },
+      "Cyan Strongbed|meta|rot2": {
+        positions: [{
+          block: "Cyan Strongbed|meta|rot2",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Cyan Strongbed Head|meta|rot2",
+          x: -1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Cyan Strongbed|meta|rot3": {
+        positions: [{
+          block: "Cyan Strongbed|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Cyan Strongbed Head|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 1
+        }]
+      },
+      "Cyan Strongbed|meta|rot4": {
+        positions: [{
+          block: "Cyan Strongbed|meta|rot4",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Cyan Strongbed Head|meta|rot4",
+          x: 1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Purple Strongbed": {
+        positions: [{
+          block: "Purple Strongbed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Purple Strongbed Head",
+          x: 0,
+          y: 0,
+          z: -1
+        }]
+      },
+      "Purple Strongbed|meta|rot2": {
+        positions: [{
+          block: "Purple Strongbed|meta|rot2",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Purple Strongbed Head|meta|rot2",
+          x: -1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Purple Strongbed|meta|rot3": {
+        positions: [{
+          block: "Purple Strongbed|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Purple Strongbed Head|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 1
+        }]
+      },
+      "Purple Strongbed|meta|rot4": {
+        positions: [{
+          block: "Purple Strongbed|meta|rot4",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Purple Strongbed Head|meta|rot4",
+          x: 1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Blue Strongbed": {
+        positions: [{
+          block: "Blue Strongbed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Blue Strongbed Head",
+          x: 0,
+          y: 0,
+          z: -1
+        }]
+      },
+      "Blue Strongbed|meta|rot2": {
+        positions: [{
+          block: "Blue Strongbed|meta|rot2",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Blue Strongbed Head|meta|rot2",
+          x: -1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Blue Strongbed|meta|rot3": {
+        positions: [{
+          block: "Blue Strongbed|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Blue Strongbed Head|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 1
+        }]
+      },
+      "Blue Strongbed|meta|rot4": {
+        positions: [{
+          block: "Blue Strongbed|meta|rot4",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Blue Strongbed Head|meta|rot4",
+          x: 1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Brown Strongbed": {
+        positions: [{
+          block: "Brown Strongbed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Brown Strongbed Head",
+          x: 0,
+          y: 0,
+          z: -1
+        }]
+      },
+      "Brown Strongbed|meta|rot2": {
+        positions: [{
+          block: "Brown Strongbed|meta|rot2",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Brown Strongbed Head|meta|rot2",
+          x: -1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Brown Strongbed|meta|rot3": {
+        positions: [{
+          block: "Brown Strongbed|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Brown Strongbed Head|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 1
+        }]
+      },
+      "Brown Strongbed|meta|rot4": {
+        positions: [{
+          block: "Brown Strongbed|meta|rot4",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Brown Strongbed Head|meta|rot4",
+          x: 1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Green Strongbed": {
+        positions: [{
+          block: "Green Strongbed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Green Strongbed Head",
+          x: 0,
+          y: 0,
+          z: -1
+        }]
+      },
+      "Green Strongbed|meta|rot2": {
+        positions: [{
+          block: "Green Strongbed|meta|rot2",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Green Strongbed Head|meta|rot2",
+          x: -1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Green Strongbed|meta|rot3": {
+        positions: [{
+          block: "Green Strongbed|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Green Strongbed Head|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 1
+        }]
+      },
+      "Green Strongbed|meta|rot4": {
+        positions: [{
+          block: "Green Strongbed|meta|rot4",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Green Strongbed Head|meta|rot4",
+          x: 1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Red Strongbed": {
+        positions: [{
+          block: "Red Strongbed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Red Strongbed Head",
+          x: 0,
+          y: 0,
+          z: -1
+        }]
+      },
+      "Red Strongbed|meta|rot2": {
+        positions: [{
+          block: "Red Strongbed|meta|rot2",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Red Strongbed Head|meta|rot2",
+          x: -1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Red Strongbed|meta|rot3": {
+        positions: [{
+          block: "Red Strongbed|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Red Strongbed Head|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 1
+        }]
+      },
+      "Red Strongbed|meta|rot4": {
+        positions: [{
+          block: "Red Strongbed|meta|rot4",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Red Strongbed Head|meta|rot4",
+          x: 1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Black Strongbed": {
+        positions: [{
+          block: "Black Strongbed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Black Strongbed Head",
+          x: 0,
+          y: 0,
+          z: -1
+        }]
+      },
+      "Black Strongbed|meta|rot2": {
+        positions: [{
+          block: "Black Strongbed|meta|rot2",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Black Strongbed Head|meta|rot2",
+          x: -1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Black Strongbed|meta|rot3": {
+        positions: [{
+          block: "Black Strongbed|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Black Strongbed Head|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 1
+        }]
+      },
+      "Black Strongbed|meta|rot4": {
+        positions: [{
+          block: "Black Strongbed|meta|rot4",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Black Strongbed Head|meta|rot4",
+          x: 1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Leaf Bed": {
+        positions: [{
+          block: "Leaf Bed",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Leaf Bed Head",
+          x: 0,
+          y: 0,
+          z: -1
+        }]
+      },
+      "Leaf Bed|meta|rot2": {
+        positions: [{
+          block: "Leaf Bed|meta|rot2",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Leaf Bed Head|meta|rot2",
+          x: -1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Leaf Bed|meta|rot3": {
+        positions: [{
+          block: "Leaf Bed|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Leaf Bed Head|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 1
+        }]
+      },
+      "Leaf Bed|meta|rot4": {
+        positions: [{
+          block: "Leaf Bed|meta|rot4",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Leaf Bed Head|meta|rot4",
+          x: 1,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Vending Machine": {
+        positions: [{
+          block: "Vending Machine",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Vending Machine Top",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Vending Machine|meta|rot2": {
+        positions: [{
+          block: "Vending Machine|meta|rot2",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Vending Machine Top|meta|rot2",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Vending Machine|meta|rot3": {
+        positions: [{
+          block: "Vending Machine|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Vending Machine Top|meta|rot3",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      "Vending Machine|meta|rot4": {
+        positions: [{
+          block: "Vending Machine|meta|rot4",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Vending Machine Top|meta|rot4",
+          x: 0,
+          y: 1,
+          z: 0
+        }]
+      },
+      ...sQ("White"),
+      ...sQ("Orange"),
+      ...sQ("Magenta"),
+      ...sQ("Light Blue"),
+      ...sQ("Yellow"),
+      ...sQ("Lime"),
+      ...sQ("Pink"),
+      ...sQ("Gray"),
+      ...sQ("Light Gray"),
+      ...sQ("Cyan"),
+      ...sQ("Purple"),
+      ...sQ("Blue"),
+      ...sQ("Brown"),
+      ...sQ("Green"),
+      ...sQ("Red"),
+      ...sQ("Black"),
+      ...sQ("Draugr"),
+      ...sQ("Skull"),
+      ...sQ("Rainbow"),
+      ...FQ("Sheep"),
+      ...FQ("Cow"),
+      ...FQ("Pig"),
+      ...FQ("Horse"),
+      ...FQ("Camel"),
+      ...FQ("Wolf"),
+      ...FQ("Deer"),
+      ...FQ("Wildcat"),
+      ...PQ("Radar"),
+      ...PQ("Inactive Radar"),
+      ...PQ("Active Radar"),
+      ...gQ("Magenta"),
+      ...gQ("Light Gray"),
+      ...gQ("Red"),
+      ...gQ("White"),
+      ...gQ("Orange"),
+      ...gQ("Light Blue"),
+      ...gQ("Yellow"),
+      ...gQ("Lime"),
+      ...gQ("Pink"),
+      ...gQ("Gray"),
+      ...gQ("Cyan"),
+      ...gQ("Purple"),
+      ...gQ("Blue"),
+      ...gQ("Brown"),
+      ...gQ("Green"),
+      ...gQ("Black"),
+      "Auto Miner": {
+        positions: [{
+          block: "Auto Miner",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Auto Miner Body",
+          x: 0,
+          y: 1,
+          z: -1
+        }, {
+          block: "_Auto Miner Drill Front",
+          x: 0,
+          y: 1,
+          z: -2
+        }, {
+          block: "_Auto Miner Drill Back",
+          x: 0,
+          y: 1,
+          z: 0
+        }, {
+          block: "_Auto Miner Foot Front",
+          x: 0,
+          y: 0,
+          z: -2
+        }]
+      },
+      "Auto Miner|meta|rot2": {
+        positions: [{
+          block: "Auto Miner|meta|rot2",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Auto Miner Body|meta|rot2",
+          x: -1,
+          y: 1,
+          z: 0
+        }, {
+          block: "_Auto Miner Drill Front|meta|rot2",
+          x: -2,
+          y: 1,
+          z: 0
+        }, {
+          block: "_Auto Miner Drill Back|meta|rot2",
+          x: 0,
+          y: 1,
+          z: 0
+        }, {
+          block: "_Auto Miner Foot Front|meta|rot2",
+          x: -2,
+          y: 0,
+          z: 0
+        }]
+      },
+      "Auto Miner|meta|rot3": {
+        positions: [{
+          block: "Auto Miner|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Auto Miner Body|meta|rot3",
+          x: 0,
+          y: 1,
+          z: 1
+        }, {
+          block: "_Auto Miner Drill Front|meta|rot3",
+          x: 0,
+          y: 1,
+          z: 2
+        }, {
+          block: "_Auto Miner Drill Back|meta|rot3",
+          x: 0,
+          y: 1,
+          z: 0
+        }, {
+          block: "_Auto Miner Foot Front|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 2
+        }]
+      },
+      "Auto Miner|meta|rot4": {
+        positions: [{
+          block: "Auto Miner|meta|rot4",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Auto Miner Body|meta|rot4",
+          x: 1,
+          y: 1,
+          z: 0
+        }, {
+          block: "_Auto Miner Drill Front|meta|rot4",
+          x: 2,
+          y: 1,
+          z: 0
+        }, {
+          block: "_Auto Miner Drill Back|meta|rot4",
+          x: 0,
+          y: 1,
+          z: 0
+        }, {
+          block: "_Auto Miner Foot Front|meta|rot4",
+          x: 2,
+          y: 0,
+          z: 0
+        }]
+      },
+      ... function() {
+        const QQ = "Lunite Auto Miner";
+        return {
+          [QQ]: {
+            positions: [{
+              block: QQ,
+              x: 0,
+              y: 0,
+              z: 0
+            }, {
+              block: "_Lunite Auto Miner Body",
+              x: 0,
+              y: 1,
+              z: -1
+            }, {
+              block: "_Lunite Auto Miner Drill Front",
+              x: 0,
+              y: 1,
+              z: -2
+            }, {
+              block: "_Lunite Auto Miner Drill Back",
+              x: 0,
+              y: 1,
+              z: 0
+            }, {
+              block: "_Lunite Auto Miner Foot Front",
+              x: 0,
+              y: 0,
+              z: -2
+            }]
           },
-          vp = new Sp.d(null, ip, wp);
-        np.t.set(vp, Ap), Object.assign(vp, Yp), vp.updateURL(Op, yp);
-        const tp = vp.getInternalTexture();
-        tp && (tp.label = Up), pp.uvSet = vp.coordinatesIndex, pp.matrix.set((0, np.L)(vp)), (0, Pp.K)(pp, vp)
+          [`${QQ}|meta|rot2`]: {
+            positions: [{
+              block: `${QQ}|meta|rot2`,
+              x: 0,
+              y: 0,
+              z: 0
+            }, {
+              block: "_Lunite Auto Miner Body|meta|rot2",
+              x: -1,
+              y: 1,
+              z: 0
+            }, {
+              block: "_Lunite Auto Miner Drill Front|meta|rot2",
+              x: -2,
+              y: 1,
+              z: 0
+            }, {
+              block: "_Lunite Auto Miner Drill Back|meta|rot2",
+              x: 0,
+              y: 1,
+              z: 0
+            }, {
+              block: "_Lunite Auto Miner Foot Front|meta|rot2",
+              x: -2,
+              y: 0,
+              z: 0
+            }]
+          },
+          [`${QQ}|meta|rot3`]: {
+            positions: [{
+              block: `${QQ}|meta|rot3`,
+              x: 0,
+              y: 0,
+              z: 0
+            }, {
+              block: "_Lunite Auto Miner Body|meta|rot3",
+              x: 0,
+              y: 1,
+              z: 1
+            }, {
+              block: "_Lunite Auto Miner Drill Front|meta|rot3",
+              x: 0,
+              y: 1,
+              z: 2
+            }, {
+              block: "_Lunite Auto Miner Drill Back|meta|rot3",
+              x: 0,
+              y: 1,
+              z: 0
+            }, {
+              block: "_Lunite Auto Miner Foot Front|meta|rot3",
+              x: 0,
+              y: 0,
+              z: 2
+            }]
+          },
+          [`${QQ}|meta|rot4`]: {
+            positions: [{
+              block: `${QQ}|meta|rot4`,
+              x: 0,
+              y: 0,
+              z: 0
+            }, {
+              block: "_Lunite Auto Miner Body|meta|rot4",
+              x: 1,
+              y: 1,
+              z: 0
+            }, {
+              block: "_Lunite Auto Miner Drill Front|meta|rot4",
+              x: 2,
+              y: 1,
+              z: 0
+            }, {
+              block: "_Lunite Auto Miner Drill Back|meta|rot4",
+              x: 0,
+              y: 1,
+              z: 0
+            }, {
+              block: "_Lunite Auto Miner Foot Front|meta|rot4",
+              x: 2,
+              y: 0,
+              z: 0
+            }]
+          }
+        }
+      }(),
+      ... function() {
+        const QQ = {
+            1: QQ => ({
+              x: 0,
+              z: QQ
+            }),
+            2: QQ => ({
+              x: QQ,
+              z: 0
+            }),
+            3: QQ => ({
+              x: 0,
+              z: -QQ
+            }),
+            4: QQ => ({
+              x: -QQ,
+              z: 0
+            })
+          },
+          WQ = {};
+        for (let XQ = 1; XQ <= 4; XQ++) {
+          const qQ = 1 === XQ ? "" : `|meta|rot${XQ}`;
+          WQ[`${wQ.c[0].block}${qQ}`] = {
+            positions: wQ.c.map((WQ => {
+              let {
+                block: wQ,
+                y: TQ,
+                z: zQ
+              } = WQ;
+              return {
+                block: `${wQ}${qQ}`,
+                y: TQ,
+                ...QQ[XQ](zQ)
+              }
+            }))
+          }
+        }
+        return WQ
+      }(),
+      ... function() {
+        const QQ = {};
+        for (let WQ = 1; WQ <= wQ.j; WQ++) {
+          const XQ = (0, wQ.Xb)(WQ),
+            qQ = wQ.m[WQ - 1],
+            TQ = [{
+              block: XQ,
+              x: 0,
+              y: 0,
+              z: 0
+            }];
+          for (const QQ of wQ.f)
+            for (let WQ = 1; WQ <= qQ; WQ++) {
+              if ("southwest" === QQ && 1 === WQ) continue;
+              const {
+                x: XQ,
+                z: qQ
+              } = wQ.i[QQ];
+              TQ.push({
+                block: (0, wQ.Tb)(QQ, WQ),
+                x: XQ,
+                y: WQ - 1,
+                z: qQ
+              })
+            }
+          QQ[XQ] = {
+            positions: TQ
+          }
+        }
+        return QQ
+      }(),
+      "Solar Panel": {
+        positions: [{
+          block: "Solar Panel",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Solar Panel SE",
+          x: 1,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Solar Panel NW",
+          x: 0,
+          y: 0,
+          z: -1
+        }, {
+          block: "_Solar Panel NE",
+          x: 1,
+          y: 0,
+          z: -1
+        }]
       },
-      cube: (pp, ip, cp) => {
-        let {
-          rootUrl: Op,
-          files: Ip,
-          noMipmap: xp,
-          luminance: Lp
-        } = cp;
-        const {
-          samplingMode: Yp
-        } = pp.sampler, Dp = Yp === (0, Pp.z)(xp) ? null : () => {
-          (0, np.J)(Ap, Yp)
-        }, Ap = new op.b(Op, ip, null, xp, Ip, Dp, null, (0, Pp.w)(Lp));
-        Ap.coordinatesMode = Sp.d.SKYBOX_MODE, (0, Pp.K)(pp, Ap)
+      "Solar Panel|meta|rot2": {
+        positions: [{
+          block: "Solar Panel|meta|rot2",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Solar Panel SE|meta|rot2",
+          x: 0,
+          y: 0,
+          z: -1
+        }, {
+          block: "_Solar Panel NW|meta|rot2",
+          x: -1,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Solar Panel NE|meta|rot2",
+          x: -1,
+          y: 0,
+          z: -1
+        }]
       },
-      canvas: (pp, ip, cp) => {
-        let {
-          width: Op,
-          height: op,
-          mipmaps: xp,
-          samplingMode: Lp,
-          hasAlpha: Yp = !1,
-          wrap: Dp = Sp.d.CLAMP_ADDRESSMODE
-        } = cp;
-        const Ap = new Ip.e(ip, {
-          width: Op,
-          height: op
-        }, pp, xp, Lp);
-        Ap.hasAlpha = Yp, Ap.wrapU = Dp, Ap.wrapV = Dp;
-        const Pp = (0, np.B)(Ap);
-        return (0, np.D)(Pp, Ap), Pp
+      "Solar Panel|meta|rot3": {
+        positions: [{
+          block: "Solar Panel|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Solar Panel SE|meta|rot3",
+          x: -1,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Solar Panel NW|meta|rot3",
+          x: 0,
+          y: 0,
+          z: 1
+        }, {
+          block: "_Solar Panel NE|meta|rot3",
+          x: -1,
+          y: 0,
+          z: 1
+        }]
+      },
+      "Solar Panel|meta|rot4": {
+        positions: [{
+          block: "Solar Panel|meta|rot4",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Solar Panel SE|meta|rot4",
+          x: 0,
+          y: 0,
+          z: 1
+        }, {
+          block: "_Solar Panel NW|meta|rot4",
+          x: 1,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Solar Panel NE|meta|rot4",
+          x: 1,
+          y: 0,
+          z: 1
+        }]
+      },
+      "Homestead Core": {
+        positions: [{
+          block: "Homestead Core",
+          x: 0,
+          y: 0,
+          z: 0
+        }, {
+          block: "_Homestead Core Mid",
+          x: 0,
+          y: 1,
+          z: 0
+        }, {
+          block: "_Homestead Core Top",
+          x: 0,
+          y: 2,
+          z: 0
+        }]
       }
+    };
+
+    function sQ(QQ) {
+      return {
+        [`${QQ} Banner`]: {
+          positions: [{
+            block: `${QQ} Banner`,
+            x: 0,
+            y: 0,
+            z: 0
+          }, {
+            block: `_${QQ} Banner Flag|meta|rot1|bot`,
+            x: 0,
+            y: 1,
+            z: 0
+          }]
+        },
+        [`${QQ} Banner|meta|rot2|bot`]: {
+          positions: [{
+            block: `${QQ} Banner|meta|rot2|bot`,
+            x: 0,
+            y: 0,
+            z: 0
+          }, {
+            block: `_${QQ} Banner Flag|meta|rot2|bot`,
+            x: 0,
+            y: 1,
+            z: 0
+          }]
+        },
+        [`${QQ} Banner|meta|rot3|bot`]: {
+          positions: [{
+            block: `${QQ} Banner|meta|rot3|bot`,
+            x: 0,
+            y: 0,
+            z: 0
+          }, {
+            block: `_${QQ} Banner Flag|meta|rot3|bot`,
+            x: 0,
+            y: 1,
+            z: 0
+          }]
+        },
+        [`${QQ} Banner|meta|rot4|bot`]: {
+          positions: [{
+            block: `${QQ} Banner|meta|rot4|bot`,
+            x: 0,
+            y: 0,
+            z: 0
+          }, {
+            block: `_${QQ} Banner Flag|meta|rot4|bot`,
+            x: 0,
+            y: 1,
+            z: 0
+          }]
+        },
+        [`${QQ} Banner|meta|rot1|side`]: {
+          positions: [{
+            block: `${QQ} Banner|meta|rot1|side`,
+            x: 0,
+            y: 0,
+            z: 0
+          }, {
+            block: `_${QQ} Banner Flag|meta|rot1|side`,
+            x: 0,
+            y: -1,
+            z: 0
+          }]
+        },
+        [`${QQ} Banner|meta|rot2|side`]: {
+          positions: [{
+            block: `${QQ} Banner|meta|rot2|side`,
+            x: 0,
+            y: 0,
+            z: 0
+          }, {
+            block: `_${QQ} Banner Flag|meta|rot2|side`,
+            x: 0,
+            y: -1,
+            z: 0
+          }]
+        },
+        [`${QQ} Banner|meta|rot3|side`]: {
+          positions: [{
+            block: `${QQ} Banner|meta|rot3|side`,
+            x: 0,
+            y: 0,
+            z: 0
+          }, {
+            block: `_${QQ} Banner Flag|meta|rot3|side`,
+            x: 0,
+            y: -1,
+            z: 0
+          }]
+        },
+        [`${QQ} Banner|meta|rot4|side`]: {
+          positions: [{
+            block: `${QQ} Banner|meta|rot4|side`,
+            x: 0,
+            y: 0,
+            z: 0
+          }, {
+            block: `_${QQ} Banner Flag|meta|rot4|side`,
+            x: 0,
+            y: -1,
+            z: 0
+          }]
+        },
+        [`${QQ} Banner|meta|rot1|top`]: {
+          positions: [{
+            block: `${QQ} Banner|meta|rot1|top`,
+            x: 0,
+            y: 0,
+            z: 0
+          }, {
+            block: `_${QQ} Banner Flag`,
+            x: 0,
+            y: -1,
+            z: 0
+          }]
+        },
+        [`${QQ} Banner|meta|rot2|top`]: {
+          positions: [{
+            block: `${QQ} Banner|meta|rot2|top`,
+            x: 0,
+            y: 0,
+            z: 0
+          }, {
+            block: `_${QQ} Banner Flag|meta|rot2|top`,
+            x: 0,
+            y: -1,
+            z: 0
+          }]
+        },
+        [`${QQ} Banner|meta|rot3|top`]: {
+          positions: [{
+            block: `${QQ} Banner|meta|rot3|top`,
+            x: 0,
+            y: 0,
+            z: 0
+          }, {
+            block: `_${QQ} Banner Flag|meta|rot3|top`,
+            x: 0,
+            y: -1,
+            z: 0
+          }]
+        },
+        [`${QQ} Banner|meta|rot4|top`]: {
+          positions: [{
+            block: `${QQ} Banner|meta|rot4|top`,
+            x: 0,
+            y: 0,
+            z: 0
+          }, {
+            block: `_${QQ} Banner Flag|meta|rot4|top`,
+            x: 0,
+            y: -1,
+            z: 0
+          }]
+        }
+      }
+    }
+
+    function FQ(QQ) {
+      const WQ = (0, TQ.Qb)(QQ);
+      return {
+        [WQ]: {
+          positions: [{
+            block: WQ,
+            x: 0,
+            y: 0,
+            z: 0
+          }, {
+            block: `_${WQ} Top Left`,
+            x: 0,
+            y: 1,
+            z: 0
+          }, {
+            block: `_${WQ} Top Right`,
+            x: -1,
+            y: 1,
+            z: 0
+          }, {
+            block: `_${WQ} Bottom Right`,
+            x: -1,
+            y: 0,
+            z: 0
+          }]
+        },
+        [`${WQ}|meta|rot2`]: {
+          positions: [{
+            block: `${WQ}|meta|rot2`,
+            x: 0,
+            y: 0,
+            z: 0
+          }, {
+            block: `_${WQ} Top Left|meta|rot2`,
+            x: 0,
+            y: 1,
+            z: 0
+          }, {
+            block: `_${WQ} Top Right|meta|rot2`,
+            x: 0,
+            y: 1,
+            z: 1
+          }, {
+            block: `_${WQ} Bottom Right|meta|rot2`,
+            x: 0,
+            y: 0,
+            z: 1
+          }]
+        },
+        [`${WQ}|meta|rot3`]: {
+          positions: [{
+            block: `${WQ}|meta|rot3`,
+            x: 0,
+            y: 0,
+            z: 0
+          }, {
+            block: `_${WQ} Top Left|meta|rot3`,
+            x: 0,
+            y: 1,
+            z: 0
+          }, {
+            block: `_${WQ} Top Right|meta|rot3`,
+            x: 1,
+            y: 1,
+            z: 0
+          }, {
+            block: `_${WQ} Bottom Right|meta|rot3`,
+            x: 1,
+            y: 0,
+            z: 0
+          }]
+        },
+        [`${WQ}|meta|rot4`]: {
+          positions: [{
+            block: `${WQ}|meta|rot4`,
+            x: 0,
+            y: 0,
+            z: 0
+          }, {
+            block: `_${WQ} Top Left|meta|rot4`,
+            x: 0,
+            y: 1,
+            z: 0
+          }, {
+            block: `_${WQ} Top Right|meta|rot4`,
+            x: 0,
+            y: 1,
+            z: -1
+          }, {
+            block: `_${WQ} Bottom Right|meta|rot4`,
+            x: 0,
+            y: 0,
+            z: -1
+          }]
+        }
+      }
+    }
+
+    function PQ(QQ) {
+      const WQ = `_${QQ} Back`,
+        XQ = `_${QQ} Dish`;
+      return {
+        [QQ]: {
+          positions: [{
+            block: QQ,
+            x: 0,
+            y: 0,
+            z: 0
+          }, {
+            block: WQ,
+            x: 0,
+            y: 0,
+            z: -1
+          }, {
+            block: XQ,
+            x: 0,
+            y: 1,
+            z: -1
+          }]
+        },
+        [`${QQ}|meta|rot2`]: {
+          positions: [{
+            block: `${QQ}|meta|rot2`,
+            x: 0,
+            y: 0,
+            z: 0
+          }, {
+            block: `${WQ}|meta|rot2`,
+            x: -1,
+            y: 0,
+            z: 0
+          }, {
+            block: `${XQ}|meta|rot2`,
+            x: -1,
+            y: 1,
+            z: 0
+          }]
+        },
+        [`${QQ}|meta|rot3`]: {
+          positions: [{
+            block: `${QQ}|meta|rot3`,
+            x: 0,
+            y: 0,
+            z: 0
+          }, {
+            block: `${WQ}|meta|rot3`,
+            x: 0,
+            y: 0,
+            z: 1
+          }, {
+            block: `${XQ}|meta|rot3`,
+            x: 0,
+            y: 1,
+            z: 1
+          }]
+        },
+        [`${QQ}|meta|rot4`]: {
+          positions: [{
+            block: `${QQ}|meta|rot4`,
+            x: 0,
+            y: 0,
+            z: 0
+          }, {
+            block: `${WQ}|meta|rot4`,
+            x: 1,
+            y: 0,
+            z: 0
+          }, {
+            block: `${XQ}|meta|rot4`,
+            x: 1,
+            y: 1,
+            z: 0
+          }]
+        }
+      }
+    }
+
+    function gQ(QQ) {
+      const WQ = `Small ${QQ} Pod`;
+      return {
+        [WQ]: {
+          positions: [{
+            block: WQ,
+            x: 0,
+            y: 0,
+            z: 0
+          }, {
+            block: `_Small ${QQ} Pod Mid`,
+            x: 0,
+            y: 1,
+            z: 0
+          }, {
+            block: `_Small ${QQ} Pod Top`,
+            x: 0,
+            y: 2,
+            z: 0
+          }]
+        }
+      }
+    }
+    for (const rQ in zQ) {
+      for (const QQ of zQ[rQ].positions)
+        if (QQ.id = qQ.h[QQ.block].id, rQ === QQ.block && (0 !== QQ.x || 0 !== QQ.y || 0 !== QQ.z)) throw new Error(`Multiblock "${rQ}" has main block "${QQ.block}" at non-origin position (${QQ.x}, ${QQ.y}, ${QQ.z}) - if you need to do something like this, you'll need to rethink your approach: Banners are a good template to follow.`);
+      zQ[qQ.h[rQ].id] = zQ[rQ]
+    }
+    const JQ = {};
+    for (const rQ in zQ)
+      for (const {
+          block: QQ,
+          x: WQ,
+          y: XQ,
+          z: wQ
+        }
+        of zQ[rQ].positions) {
+        const TQ = {
+          mainMultiblock: rQ,
+          compX: WQ,
+          compY: XQ,
+          compZ: wQ
+        };
+        JQ[QQ] = TQ, JQ[qQ.h[QQ].id] = TQ
+      }
+  },
+  38505: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      e: () => FQ,
+      f: () => sQ
+    });
+    var wQ = XQ(9580),
+      qQ = XQ(9637),
+      TQ = XQ(9645);
+    const zQ = qQ.t.map((QQ => {
+      let {
+        dx: WQ,
+        dz: XQ
+      } = QQ;
+      return [WQ, 0, XQ]
+    }));
+
+    function sQ(QQ) {
+      const WQ = wQ.h[QQ];
+      return !!WQ && QQ !== wQ.e && !WQ.model && !WQ.XI && !1 !== WQ.solid && !WQ.Xy
+    }
+    class FQ {
+      constructor(QQ) {
+        this.model = QQ, this.reshapeOffsets = [...zQ, [0, -1, 0]]
+      }
+      handles(QQ) {
+        const WQ = wQ.h[QQ];
+        return (null === WQ || void 0 === WQ ? void 0 : WQ.model) === this.model && void 0 !== WQ.attachedTop
+      }
+      affects(QQ) {
+        return this.handles(QQ) || sQ(QQ) || (0, TQ.w)(wQ.h[QQ])
+      }
+      shape(QQ, WQ, XQ, zQ, FQ) {
+        let PQ = this.handles(QQ(WQ, XQ + 1, zQ)) ? qQ.i : 0;
+        return qQ.t.forEach(((FQ, gQ) => {
+          let {
+            dx: JQ,
+            dz: rQ
+          } = FQ;
+          const IQ = QQ(WQ + JQ, XQ, zQ + rQ);
+          (this.handles(IQ) || sQ(IQ) || function(QQ, WQ) {
+            const XQ = wQ.h[QQ];
+            return (0, TQ.w)(XQ) && (0, TQ.r)(XQ.meta.rot) === (0 !== qQ.t[WQ].dx)
+          }(IQ, gQ)) && (PQ |= 1 << gQ)
+        })), (0, wQ.k)((0, qQ.l)(wQ.h[FQ].meta.rootName, PQ))
+      }
+    }
+  },
+  38277: (QQ, WQ, XQ) => {
+    function wQ(QQ, WQ) {
+      var XQ;
+      WQ || (WQ = {});
+      const wQ = null !== (XQ = WQ.customAttributes) && void 0 !== XQ ? XQ : {};
+      var qQ, TQ, zQ;
+      "Gun" === (null === QQ || void 0 === QQ ? void 0 : QQ.type) && (wQ.shotsLeft = null !== (qQ = null !== (TQ = wQ.shotsLeft) && void 0 !== TQ ? TQ : null === (zQ = wQ.gunStats) || void 0 === zQ ? void 0 : zQ.clipSize) && void 0 !== qQ ? qQ : QQ.clipSize);
+      if (wQ.enchantmentTier && (wQ.enchantmentTier = wQ.enchantmentTier.toString()), wQ.enchantments)
+        for (const JQ in wQ.enchantments) {
+          const QQ = wQ.enchantments[JQ];
+          if ("number" !== typeof QQ) {
+            const WQ = parseInt(QQ);
+            isNaN(WQ) || WQ < 0 ? wQ.enchantments[JQ] = void 0 : wQ.enchantments[JQ] = WQ > 1e9 ? 1e9 : WQ
+          }
+        }
+      if (wQ.enchantmentData)
+        for (const JQ in wQ.enchantmentData) {
+          const QQ = wQ.enchantmentData[JQ];
+          if (!QQ) continue;
+          if ("object" !== typeof QQ) {
+            wQ.enchantmentData[JQ] = void 0;
+            continue
+          }
+          const WQ = QQ.icon,
+            XQ = QQ.description;
+          var sQ, FQ, PQ, gQ;
+          if ("string" !== typeof WQ) wQ.enchantmentData[JQ].icon = null !== (sQ = null === WQ || void 0 === WQ || null === (FQ = WQ.toString) || void 0 === FQ ? void 0 : FQ.call(WQ)) && void 0 !== sQ ? sQ : void 0;
+          if ("string" !== typeof XQ) wQ.enchantmentData[JQ].description = null !== (PQ = null === XQ || void 0 === XQ || null === (gQ = XQ.toString) || void 0 === gQ ? void 0 : gQ.call(XQ)) && void 0 !== PQ ? PQ : void 0
+        }
+      return WQ.customAttributes = wQ, WQ
+    }
+    XQ.d(WQ, {
+      c: () => wQ
     })
   },
-  41391: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Dp,
-      e: () => Ap,
-      f: () => Pp
+  38499: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      e: () => vQ,
+      h: () => VQ,
+      j: () => FQ,
+      n: () => JQ,
+      q: () => dQ
     });
-    var Op = cp(41378),
-      op = cp(40273),
-      Ip = cp(40498),
-      Sp = cp(40593),
-      xp = cp(41383),
-      Lp = cp(40589),
-      Yp = cp(37698);
-    class Dp extends Sp.b {
-      constructor() {
-        super(...arguments), this.model = null, this.onGeometryUpdated = (pp, ip) => {
-          this.releaseUnlessInstanced(ip)
-        }, this.onLinked = null
-      }
-      link(pp) {
-        var ip;
-        (0, Yp.m)(pp), this.model = pp, null === (ip = this.onLinked) || void 0 === ip || ip.call(this, pp)
-      }
-      relink() {
-        this.release();
-        const pp = [];
-        for (const op of Object.values(this._vertexBuffers))
-          if (!op.getIsInstanced()) {
-            const {
-              byteOffset: ip,
-              byteStride: cp,
-              type: Op,
-              normalized: Ip
-            } = op;
-            pp.push({
-              kind: op.getKind(),
-              data: op.getData(),
-              offset: ip,
-              stride: cp,
-              components: op.getSize(),
-              glType: Op,
-              isNormalized: Ip
-            })
-          } const ip = this._indices.length ? this._indices : null,
-          {
-            minimum: cp,
-            maximum: Op
-          } = this.extend;
-        this.link(new Yp.f(pp, ip, this.getTotalVertices(), new Float64Array(cp.BOp()), new Float64Array(Op.BOp())))
-      }
-      copy(pp) {
-        if (!this.model) return super.copy(pp);
-        const ip = new Dp(pp, this.Gl()),
-          cp = this.NOp(void 0, !0);
-        cp && ip.setIndices(cp);
-        let Sp = !1;
-        for (const Ip in this._vertexBuffers) {
-          const pp = this._vertexBuffers[Ip],
-            cp = pp.getData();
-          if (!cp) continue;
-          const xp = pp.getSize(),
-            {
-              type: Lp,
-              byteOffset: Yp,
-              byteStride: Dp,
-              normalized: Ap
-            } = pp;
-          Sp ||= pp.isUpdatable();
-          const Pp = pp.getIsInstanced() ? (cp instanceof Array ? 4 * cp.length : cp.byteLength) / Dp : this.getTotalVertices(),
-            Wp = (0, op.s)(cp, xp, Lp, Yp, Dp, Pp, !0),
-            yp = {
-              updatable: pp.isUpdatable(),
-              stride: xp,
-              type: Lp,
-              normalized: Ap,
-              takeBufferOwnership: !0,
-              instanced: pp.getIsInstanced()
-            };
-          ip.setVerticesBuffer(new Op.f(this.gy(), Wp, Ip, yp), Pp)
+    var wQ = XQ(9580),
+      qQ = XQ(9616),
+      TQ = XQ(38505);
+    const zQ = (0, wQ.k)("Noticeboard"),
+      sQ = (0, wQ.k)("Standing Noticeboard|meta|rot4|lrud");
+
+    function FQ(QQ) {
+      return zQ <= QQ && QQ <= sQ
+    }
+    const PQ = new Uint8Array(sQ - zQ + 1);
+    for (let HQ = zQ; HQ <= sQ; HQ++) PQ[HQ - zQ] = (0, qQ.n)(wQ.h[HQ].meta.metaStr);
+    const gQ = 64,
+      JQ = gQ * gQ,
+      [rQ, IQ, jQ, BQ] = [0, 1, 2, 3];
+
+    function yQ(QQ) {
+      var WQ, XQ;
+      return "string" === typeof(null === QQ || void 0 === QQ || null === (WQ = QQ.persisted) || void 0 === WQ || null === (XQ = WQ.shared) || void 0 === XQ ? void 0 : XQ.text)
+    }
+
+    function VQ(QQ) {
+      return yQ(QQ) && "" !== QQ.persisted.shared.text.trim()
+    }
+
+    function DQ(QQ, WQ) {
+      let [XQ, , wQ] = WQ;
+      const [TQ, , zQ] = qQ.s[QQ][IQ];
+      return XQ * TQ + wQ * zQ
+    }
+
+    function pQ(QQ, WQ, XQ) {
+      return XQ[1] - WQ[1] || DQ(QQ, WQ) - DQ(QQ, XQ)
+    }
+
+    function GQ(QQ, WQ, XQ, TQ, sQ) {
+      var FQ;
+      let gQ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : QQ(WQ[0], WQ[1], WQ[2]);
+      if (!(PQ[gQ - zQ] & 1 << XQ)) return null;
+      const [JQ, rQ, IQ] = qQ.s[sQ][XQ], jQ = [WQ[0] + JQ, WQ[1] + rQ, WQ[2] + IQ], BQ = QQ(jQ[0], jQ[1], jQ[2]), yQ = null === (FQ = wQ.h[BQ]) || void 0 === FQ ? void 0 : FQ.meta;
+      return (null === yQ || void 0 === yQ ? void 0 : yQ.rootId) === TQ && yQ.rot === sQ && PQ[BQ - zQ] & 1 << (1 ^ XQ) ? jQ : null
+    }
+
+    function UQ(QQ, WQ, XQ, TQ) {
+      const zQ = QQ(WQ, XQ, TQ);
+      if (!FQ(zQ)) return null;
+      const {
+        rootId: sQ,
+        rot: PQ
+      } = wQ.h[zQ].meta, JQ = (WQ, XQ) => {
+        let wQ = WQ,
+          qQ = 1;
+        for (let TQ = GQ(QQ, wQ, XQ, sQ, PQ); TQ && qQ < gQ; TQ = GQ(QQ, wQ, XQ, sQ, PQ)) wQ = TQ, qQ++;
+        return {
+          end: wQ,
+          cells: qQ
         }
-        return ip._updatable = Sp, ip._boundingInfo = new Ip.d(this.extend.minimum, this.extend.maximum), ip.relink(), ip
-      }
-      static mergeMeshes(pp, ip, cp, Op, op, Ip) {
-        const Lp = pp[0].Gl(),
-          Yp = new xp.c(pp[0].name + "_merged", Lp),
-          Ap = new Dp(Sp.b.RandomId(), Lp, void 0, !1, Yp);
-        try {
-          if (!xp.c.MergeMeshes(pp, ip, cp, Yp, op, Ip)) return Yp.dispose(), null
-        } catch (Pp) {
-          throw Yp.dispose(), Pp
-        }
-        return Ap.relink(), Yp
-      }
-      removeVerticesData(pp) {
-        this.releaseUnlessInstanced(pp), super.removeVerticesData(pp)
-      }
-      dispose() {
-        this.release(), super.dispose()
-      }
-      releaseUnlessInstanced(pp) {
-        var ip;
-        pp && null !== (ip = this.getVertexBuffer(pp)) && void 0 !== ip && ip.getIsInstanced() || this.release()
-      }
-      release() {
-        this.model && ((0, Yp.v)(this.model), this.model = null)
+      }, yQ = JQ(JQ([WQ, XQ, TQ], rQ).end, jQ).end, VQ = JQ(yQ, IQ).cells, [DQ, , pQ] = qQ.s[PQ][IQ];
+      let UQ = 1;
+      QQ: for (; UQ < gQ; UQ++)
+        for (let WQ = 0; WQ < VQ; WQ++)
+          if (!GQ(QQ, [yQ[0] + DQ * WQ, yQ[1] - UQ + 1, yQ[2] + pQ * WQ], BQ, sQ, PQ)) break QQ;
+      return {
+        anchor: yQ,
+        rootId: sQ,
+        rot: PQ,
+        width: VQ,
+        height: UQ
       }
     }
 
-    function Ap(pp, ip, cp) {
-      let Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new xp.c(pp, cp);
-      const op = (0, Yp.j)(ip),
-        {
-          positions: Ip,
-          normals: Ap,
-          uvs: Pp,
-          indices: Wp,
-          named: yp = {}
-        } = ip,
-        Up = new Lp.d;
-      Up.positions = Ip, Up.normals = null !== Ap && void 0 !== Ap ? Ap : null, Up.uvs = null !== Pp && void 0 !== Pp ? Pp : null, Up.indices = Wp;
-      const wp = new Dp(Sp.b.RandomId(), cp, Up, !1, Op);
-      for (const {
-          kind: Sp,
-          components: xp
-        }
-        of op.vertexAttributes) Sp in yp && Op.setVerticesData(Sp, yp[Sp], !1, xp);
-      return wp.link(op), Op
+    function bQ(QQ, WQ) {
+      for (const XQ of function(QQ) {
+          let {
+            anchor: WQ,
+            rot: XQ,
+            width: wQ,
+            height: TQ
+          } = QQ;
+          const [zQ, , sQ] = qQ.s[XQ][IQ], FQ = [];
+          for (let qQ = 0; qQ < TQ; qQ++)
+            for (let QQ = 0; QQ < wQ; QQ++) FQ.push([WQ[0] + zQ * QQ, WQ[1] - qQ, WQ[2] + sQ * QQ]);
+          return FQ
+        }(QQ))
+        if (yQ(WQ(XQ[0], XQ[1], XQ[2]))) return XQ;
+      return null
     }
 
-    function Pp(pp, ip, cp) {
-      let Op = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      const op = new xp.c(pp, cp),
-        {
-          positions: Ip,
-          normals: Sp,
-          uvs: Yp,
-          indices: Dp
-        } = ip;
-      return Object.assign(new Lp.d, {
-        positions: Ip,
-        normals: Sp,
-        uvs: Yp,
-        indices: Dp
-      }).applyToMesh(op, Op), op
+    function vQ(QQ, WQ, XQ, qQ, TQ) {
+      const zQ = QQ(XQ, qQ, TQ);
+      if (!FQ(zQ)) return null;
+      const {
+        rootId: sQ,
+        rot: PQ
+      } = wQ.h[zQ].meta, gQ = [
+        [XQ, qQ, TQ]
+      ], rQ = new Set([gQ[0].join()]);
+      let IQ = gQ[0],
+        jQ = null;
+      for (let wQ = 0; wQ < gQ.length; wQ++) {
+        const XQ = gQ[wQ];
+        if (pQ(PQ, XQ, IQ) < 0 && (IQ = XQ), yQ(WQ(XQ[0], XQ[1], XQ[2]))) {
+          const WQ = UQ(QQ, XQ[0], XQ[1], XQ[2]);
+          (!jQ || pQ(PQ, WQ.anchor, jQ.anchor) < 0) && (jQ = WQ)
+        }
+        for (let WQ = 0; WQ < 4 && gQ.length < JQ; WQ++) {
+          const wQ = GQ(QQ, XQ, WQ, sQ, PQ);
+          wQ && !rQ.has(wQ.join()) && (rQ.add(wQ.join()), gQ.push(wQ))
+        }
+      }
+      return jQ ??= UQ(QQ, IQ[0], IQ[1], IQ[2]), {
+        cells: gQ,
+        topLeft: IQ,
+        rect: jQ,
+        textCell: bQ(jQ, WQ)
+      }
+    }
+
+    function dQ(QQ, WQ, XQ, zQ, sQ) {
+      if (null !== XQ && FQ(XQ)) {
+        const {
+          rootName: QQ,
+          rot: WQ
+        } = wQ.h[XQ].meta;
+        if (qQ.s[WQ].some((QQ => {
+            let [WQ, XQ, wQ] = QQ;
+            return WQ === zQ[0] && XQ === zQ[1] && wQ === zQ[2]
+          }))) return {
+          root: QQ,
+          rot: WQ
+        }
+      }
+      const [PQ, gQ] = qQ.i[sQ], JQ = QQ(WQ[0] - PQ, WQ[1], WQ[2] - gQ);
+      return {
+        root: (0, TQ.f)(JQ) ? qQ.w : qQ.t,
+        rot: sQ
+      }
     }
   },
-  41375: (pp, ip, cp) => {
-    function Op(pp, ip, cp) {
-      const Op = ip * ip * 4,
-        op = pp[0].layers,
-        Ip = op * (pp.length - 1) + pp[pp.length - 1].layers,
-        Sp = new Uint8Array(Ip * Op);
-      pp.forEach(((ip, cp) => {
-        const Ip = cp + 1 < pp.length ? Math.min(ip.layers, op) : ip.layers;
-        Sp.set(new Uint8Array(ip.pixels.buffer, ip.pixels.byteOffset, Ip * Op), cp * op * Op)
-      }));
-      const xp = Math.max(1, Math.min(Ip, cp || Ip));
-      if (xp === Ip) return [{
-        pixels: Sp,
-        layers: Ip
-      }];
-      const Lp = [];
-      for (let Yp = 0; Yp < Ip; Yp += xp) {
-        const pp = Math.min(Ip, Yp + xp);
-        Lp.push({
-          pixels: Sp.slice(Yp * Op, pp * Op),
-          layers: pp - Yp
-        })
-      }
-      return Lp
-    }
-    cp.d(ip, {
-      d: () => Op,
-      h: () => Ip
+  38512: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      c: () => TQ,
+      f: () => zQ,
+      j: () => qQ,
+      m: () => sQ
     });
-    const op = new WeakMap;
+    var wQ = XQ(407);
+    const qQ = ["Snowball", "Snowball Launcher", "Pebble", "Reinforced Pebble", "Ball", "Reinforced Ball", "Mango", "Moonstone Orb", ...XQ(658).p.map((QQ => `${QQ} Spawn Orb`)), "Fireball", "RPG", "Obby RPG", "Super RPG", "Grenade Launcher", "Iceball", "Bouncy Bomb", "Coconut", "Splash Speed Potion", "Splash Speed Potion II", "Splash Defense Potion", "Splash Defense Potion II", "Splash Strength Potion", "Splash Strength Potion II", "Splash Invisibility Potion", "Splash Jump Potion", "Splash Jump Potion II", "Splash Knockback Potion", "Splash Knockback Potion II", "Splash Poison Potion", "Splash Poison Potion II", "Splash Slowness Potion", "Splash Slowness Potion II", "Splash Weakness Potion", "Splash Weakness Potion II", "Splash Milk Potion", "Splash Instant Damage Potion", "Splash Instant Damage Potion II", "Splash Regeneration Potion", "Splash Regeneration Potion II", "Splash Instant Healing Potion", "Splash Instant Healing Potion II", "Splash Haste Potion", "Splash Haste Potion II", "Splash Shield Potion", "Splash Shield Potion II", "Splash Double Jump Potion", "Splash Heat Resistance Potion", "Splash X-Ray Vision Potion", "Splash Mining Yield Potion", "Splash Mining Yield Potion II", "Splash Brain Rot Potion", "Yellow Paintball Gun", "White Paintball Gun", "Red Paintball Gun", "Purple Paintball Gun", "Pink Paintball Gun", "Orange Paintball Gun", "Magenta Paintball Gun", "Lime Paintball Gun", "Light Gray Paintball Gun", "Light Blue Paintball Gun", "Green Paintball Gun", "Gray Paintball Gun", "Cyan Paintball Gun", "Brown Paintball Gun", "Blue Paintball Gun", "Black Paintball Gun", "Yellow Heavy Paintball Gun", "White Heavy Paintball Gun", "Red Heavy Paintball Gun", "Purple Heavy Paintball Gun", "Pink Heavy Paintball Gun", "Orange Heavy Paintball Gun", "Magenta Heavy Paintball Gun", "Lime Heavy Paintball Gun", "Light Gray Heavy Paintball Gun", "Light Blue Heavy Paintball Gun", "Green Heavy Paintball Gun", "Gray Heavy Paintball Gun", "Cyan Heavy Paintball Gun", "Brown Heavy Paintball Gun", "Blue Heavy Paintball Gun", "Black Heavy Paintball Gun", "Toxin Ball", "Splash Aura XP Potion", "Splash Aura XP Potion II", "Firecracker", "Rainbow Firecracker", "White Firecracker", "Orange Firecracker", "Magenta Firecracker", "Light Blue Firecracker", "Yellow Firecracker", "Lime Firecracker", "Pink Firecracker", "Gray Firecracker", "Light Gray Firecracker", "Cyan Firecracker", "Purple Firecracker", "Blue Firecracker", "Brown Firecracker", "Green Firecracker", "Red Firecracker", "Black Firecracker", "Firecracker Pebble", "Rainbow Firecracker Pebble", "White Firecracker Pebble", "Orange Firecracker Pebble", "Magenta Firecracker Pebble", "Light Blue Firecracker Pebble", "Yellow Firecracker Pebble", "Lime Firecracker Pebble", "Pink Firecracker Pebble", "Gray Firecracker Pebble", "Light Gray Firecracker Pebble", "Cyan Firecracker Pebble", "Purple Firecracker Pebble", "Blue Firecracker Pebble", "Brown Firecracker Pebble", "Green Firecracker Pebble", "Red Firecracker Pebble", "Black Firecracker Pebble", "Blinding Pebble", "Poop", "Wood Boomerang", "Stone Boomerang", "Iron Boomerang", "Gold Boomerang", "Diamond Boomerang", "Moonstone Boomerang", ...wQ.i, "67 Base Projectile", "67 Boosted Projectile", "Capitano Grenade", "Scatter Pellet", "Lucky Bomb", "Unlucky Bomb", "Swap Orb"],
+      TQ = ["Obby RPG"];
 
-    function Ip(pp, ip, cp) {
-      var Op, Ip;
-      const Sp = null !== (Op = op.get(pp)) && void 0 !== Op ? Op : new Map;
-      op.set(pp, Sp);
-      const xp = null !== (Ip = Sp.get(ip[0])) && void 0 !== Ip ? Ip : [];
-      Sp.set(ip[0], xp);
-      const Lp = xp.find((pp => pp.urls.length === ip.length && pp.urls.every(((pp, cp) => pp === ip[cp]))));
-      if (Lp) return Lp.built;
-      const Yp = {
-        urls: [...ip],
-        built: cp()
-      };
-      return xp.push(Yp), Yp.built.catch((() => {
-        xp.splice(xp.indexOf(Yp), 1)
-      })), Yp.built
+    function zQ(QQ) {
+      const WQ = QQ.indexOf("|");
+      return -1 === WQ ? {
+        item: QQ,
+        clientPredictedThrower: null
+      } : {
+        item: QQ.slice(0, WQ),
+        clientPredictedThrower: QQ.slice(WQ + 1)
+      }
     }
+    const sQ = [...qQ, "Arrow", "Arrow of Speed", "Arrow of Slowness", "Arrow of Poison", "Arrow of Weakness", "Arrow of Knockback", "Arrow of Strength", "Arrow of Defense", "Arrow of Invisibility", "Arrow of Jumping", "Arrow of Milk", "Arrow of Instant Damage", "Arrow of Regeneration", "Arrow of Instant Healing", "Arrow of Haste", "Arrow of Shield", "Arrow of Double Jump", "Arrow of Heat Resistance", "Arrow of X-Ray Vision", "Arrow of Mining Yield", "Arrow of Brain Rot", "Arrow of Aura XP", "Bullet"]
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

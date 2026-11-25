@@ -1,303 +1,303 @@
-export const id = 27;
-export const ids = [27];
+export const id = 28;
+export const ids = [28];
 export const modules = {
-  4964: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Jp,
-      h: () => Qp
+  5187: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      c: () => EQ,
+      f: () => RQ
     });
-    var Op = cp(4970),
-      op = cp(322);
-    const Ip = 120,
-      Sp = 260,
-      xp = 1.15,
-      Lp = 1.2,
-      Yp = 2,
-      Dp = 1.08,
-      Ap = .8,
-      Pp = .95,
-      Wp = 8,
-      yp = "[\"')\\]\u300d\u300f\uff09]*",
-      Up = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${yp}$`),
-      wp = new RegExp(`[?\uff1f]${yp}$`),
-      vp = new RegExp(`[!\uff01]${yp}$`),
-      tp = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-      Hp = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-      dp = new RegExp(`[${Hp}]`),
-      ep = new RegExp(`[${Hp}]|[^${Hp}]+`, "g"),
-      jp = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+    var wQ = XQ(5196),
+      qQ = XQ(382);
+    const TQ = 120,
+      zQ = 260,
+      sQ = 1.15,
+      FQ = 1.2,
+      PQ = 2,
+      gQ = 1.08,
+      JQ = .8,
+      rQ = .95,
+      IQ = 8,
+      jQ = "[\"')\\]\u300d\u300f\uff09]*",
+      BQ = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${jQ}$`),
+      yQ = new RegExp(`[?\uff1f]${jQ}$`),
+      VQ = new RegExp(`[!\uff01]${jQ}$`),
+      DQ = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+      pQ = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+      GQ = new RegExp(`[${pQ}]`),
+      UQ = new RegExp(`[${pQ}]|[^${pQ}]+`, "g"),
+      bQ = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-    function kp(pp) {
-      let ip = 2166136261;
-      for (let cp = 0; cp < pp.length; cp++) ip ^= pp.charCodeAt(cp), ip = Math.imul(ip, 16777619);
-      return (ip >>> 0) / 4294967295 * 2 - 1
+    function vQ(QQ) {
+      let WQ = 2166136261;
+      for (let XQ = 0; XQ < QQ.length; XQ++) WQ ^= QQ.charCodeAt(XQ), WQ = Math.imul(WQ, 16777619);
+      return (WQ >>> 0) / 4294967295 * 2 - 1
     }
 
-    function mp(pp) {
-      var ip;
-      if (dp.test(pp)) return 1;
-      const cp = pp.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-        Op = cp.replace(/[^0-9]/g, "");
-      if (Op.length > 0 && !/\p{L}/u.test(cp)) return Math.min(Op.length, 4);
-      const op = null !== (ip = cp.match(jp)) && void 0 !== ip ? ip : [];
-      if (0 === op.length) {
-        var Ip, Sp;
-        const pp = null !== (Ip = null === (Sp = cp.match(/\p{L}/gu)) || void 0 === Sp ? void 0 : Sp.length) && void 0 !== Ip ? Ip : 0;
-        return 0 === pp ? 0 : Math.min(Math.max(1, Math.round(pp / 2.5)), Wp)
+    function dQ(QQ) {
+      var WQ;
+      if (GQ.test(QQ)) return 1;
+      const XQ = QQ.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+        wQ = XQ.replace(/[^0-9]/g, "");
+      if (wQ.length > 0 && !/\p{L}/u.test(XQ)) return Math.min(wQ.length, 4);
+      const qQ = null !== (WQ = XQ.match(bQ)) && void 0 !== WQ ? WQ : [];
+      if (0 === qQ.length) {
+        var TQ, zQ;
+        const QQ = null !== (TQ = null === (zQ = XQ.match(/\p{L}/gu)) || void 0 === zQ ? void 0 : zQ.length) && void 0 !== TQ ? TQ : 0;
+        return 0 === QQ ? 0 : Math.min(Math.max(1, Math.round(QQ / 2.5)), IQ)
       }
-      const xp = cp.replace(/[^\p{L}]/gu, ""),
-        Lp = op.length > 1 && "e" === op.at(-1) && xp.endsWith("e") && !xp.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(pp.replace(/[^\p{L}]/gu, ""));
-      return Math.min(op.length - (Lp ? 1 : 0), Wp)
+      const sQ = XQ.replace(/[^\p{L}]/gu, ""),
+        FQ = qQ.length > 1 && "e" === qQ.at(-1) && sQ.endsWith("e") && !sQ.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(QQ.replace(/[^\p{L}]/gu, ""));
+      return Math.min(qQ.length - (FQ ? 1 : 0), IQ)
     }
 
-    function Rp(pp) {
-      return pp.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+    function HQ(QQ) {
+      return QQ.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
     }
 
-    function qp(pp) {
-      const ip = pp.replace(/[^\p{L}]/gu, "");
-      return ip.length >= 2 && ip === ip.toUpperCase() && ip !== ip.toLowerCase()
+    function aQ(QQ) {
+      const WQ = QQ.replace(/[^\p{L}]/gu, "");
+      return WQ.length >= 2 && WQ === WQ.toUpperCase() && WQ !== WQ.toLowerCase()
     }
 
-    function Mp(pp, ip) {
-      var cp;
-      const Wp = ip && (0, Op.m)(ip),
-        yp = null !== (cp = null === Wp || void 0 === Wp ? void 0 : Wp.syllableMs) && void 0 !== cp ? cp : Op.d,
-        Hp = function(pp) {
-          const ip = [];
-          for (const Op of (0, op.nc)(pp))
-            if ("string" === typeof Op)
-              for (const pp of Op.split(/(\s+)/)) {
-                if ("" === pp) continue;
-                if (/^\s+$/.test(pp)) {
-                  ip.push({
+    function lQ(QQ, WQ) {
+      var XQ;
+      const IQ = WQ && (0, wQ.l)(WQ),
+        jQ = null !== (XQ = null === IQ || void 0 === IQ ? void 0 : IQ.syllableMs) && void 0 !== XQ ? XQ : wQ.d,
+        pQ = function(QQ) {
+          const WQ = [];
+          for (const wQ of (0, qQ.gc)(QQ))
+            if ("string" === typeof wQ)
+              for (const QQ of wQ.split(/(\s+)/)) {
+                if ("" === QQ) continue;
+                if (/^\s+$/.test(QQ)) {
+                  WQ.push({
                     kind: "space",
-                    text: pp
+                    text: QQ
                   });
                   continue
                 }
-                if (!dp.test(pp)) {
-                  ip.push({
+                if (!GQ.test(QQ)) {
+                  WQ.push({
                     kind: "word",
-                    text: pp,
+                    text: QQ,
                     delayMs: 0
                   });
                   continue
                 }
-                let Op = !0;
-                for (const op of null !== (cp = pp.match(ep)) && void 0 !== cp ? cp : []) {
-                  var cp;
-                  const pp = ip.at(-1);
-                  Op || "word" !== (null === pp || void 0 === pp ? void 0 : pp.kind) || dp.test(op) || /[\p{L}\p{N}]/u.test(op) ? (Op || ip.push({
+                let wQ = !0;
+                for (const qQ of null !== (XQ = QQ.match(UQ)) && void 0 !== XQ ? XQ : []) {
+                  var XQ;
+                  const QQ = WQ.at(-1);
+                  wQ || "word" !== (null === QQ || void 0 === QQ ? void 0 : QQ.kind) || GQ.test(qQ) || /[\p{L}\p{N}]/u.test(qQ) ? (wQ || WQ.push({
                     kind: "space",
                     text: "\u200b"
-                  }), ip.push({
+                  }), WQ.push({
                     kind: "word",
-                    text: op,
+                    text: qQ,
                     delayMs: 0
-                  }), Op = !1) : pp.text += op
+                  }), wQ = !1) : QQ.text += qQ
                 }
-              } else ip.push({
+              } else WQ.push({
                 kind: "icon",
-                text: Op.icon,
+                text: wQ.icon,
                 delayMs: 0
               });
-          return ip
-        }(pp),
-        jp = [];
-      let Mp = [];
-      for (const Op of Hp) "space" !== Op.kind && (Mp.push(Op), Up.test(Op.text) && (jp.push(Mp), Mp = []));
-      jp.push(Mp);
-      const Cp = [];
-      let Ep = 0;
-      for (const Op of jp) {
-        var Xp, lp;
-        const pp = null !== (Xp = null === (lp = Op.at(-1)) || void 0 === lp ? void 0 : lp.text) && void 0 !== Xp ? Xp : "",
-          ip = wp.test(pp),
-          cp = vp.test(pp),
-          op = Op.map((pp => "word" === pp.kind ? mp(pp.text) : 1)),
-          Hp = op.findLastIndex((pp => pp > 0));
-        for (const [wp, vp] of Op.entries()) {
-          const pp = "word" === vp.kind,
-            Op = op[wp];
-          vp.delayMs = Ep;
-          for (let op = 0; Wp && op < Op; op++) {
+          return WQ
+        }(QQ),
+        bQ = [];
+      let lQ = [];
+      for (const wQ of pQ) "space" !== wQ.kind && (lQ.push(wQ), BQ.test(wQ.text) && (bQ.push(lQ), lQ = []));
+      bQ.push(lQ);
+      const hQ = [];
+      let iQ = 0;
+      for (const wQ of bQ) {
+        var cQ, AQ;
+        const QQ = null !== (cQ = null === (AQ = wQ.at(-1)) || void 0 === AQ ? void 0 : AQ.text) && void 0 !== cQ ? cQ : "",
+          WQ = yQ.test(QQ),
+          XQ = VQ.test(QQ),
+          qQ = wQ.map((QQ => "word" === QQ.kind ? dQ(QQ.text) : 1)),
+          pQ = qQ.findLastIndex((QQ => QQ > 0));
+        for (const [yQ, VQ] of wQ.entries()) {
+          const QQ = "word" === VQ.kind,
+            wQ = qQ[yQ];
+          VQ.delayMs = iQ;
+          for (let qQ = 0; IQ && qQ < wQ; qQ++) {
             const {
-              intonation: Ip
-            } = Wp;
-            let Sp = Hp > 0 ? -Ip.declineSemitones * (wp / Hp) : 0;
-            Sp += kp(`${Rp(vp.text)}|${op}`) * Ip.variationSemitones;
-            const Up = Math.min(1, Ip.variationSemitones);
-            let tp = Wp.glideSemitones,
-              dp = 1;
-            cp && (Sp += Ip.exclaimLiftSemitones, dp *= xp), ip && wp === Hp && (Sp += Ip.questionRiseSemitones * (Op > 1 ? .5 + .5 * op / (Op - 1) : 1), op === Op - 1 && (tp = Math.abs(tp) + Ip.questionRiseSemitones / 2)), pp && qp(vp.text) && (Sp += Yp * Up, dp *= Lp), Op > 1 && 0 === op && (Sp += Ap * Up, dp *= Dp), Cp.push({
-              atMs: Ep + op * yp,
-              semitones: Sp,
-              glideSemitones: tp,
-              durationMs: op < Op - 1 ? Math.min(Wp.durationMs, yp * Pp) : Wp.durationMs,
-              level: dp
+              intonation: TQ
+            } = IQ;
+            let zQ = pQ > 0 ? -TQ.declineSemitones * (yQ / pQ) : 0;
+            zQ += vQ(`${HQ(VQ.text)}|${qQ}`) * TQ.variationSemitones;
+            const BQ = Math.min(1, TQ.variationSemitones);
+            let DQ = IQ.glideSemitones,
+              GQ = 1;
+            XQ && (zQ += TQ.exclaimLiftSemitones, GQ *= sQ), WQ && yQ === pQ && (zQ += TQ.questionRiseSemitones * (wQ > 1 ? .5 + .5 * qQ / (wQ - 1) : 1), qQ === wQ - 1 && (DQ = Math.abs(DQ) + TQ.questionRiseSemitones / 2)), QQ && aQ(VQ.text) && (zQ += PQ * BQ, GQ *= FQ), wQ > 1 && 0 === qQ && (zQ += JQ * BQ, GQ *= gQ), hQ.push({
+              atMs: iQ + qQ * jQ,
+              semitones: zQ,
+              glideSemitones: DQ,
+              durationMs: qQ < wQ - 1 ? Math.min(IQ.durationMs, jQ * rQ) : IQ.durationMs,
+              level: GQ
             })
           }
-          Ep += Op * yp + (Up.test(vp.text) ? Sp : tp.test(vp.text) ? Ip : 0)
+          iQ += wQ * jQ + (BQ.test(VQ.text) ? zQ : DQ.test(VQ.text) ? TQ : 0)
         }
       }
       return {
-        pieces: Hp.map((pp => "space" === pp.kind ? pp : "icon" === pp.kind ? {
+        pieces: pQ.map((QQ => "space" === QQ.kind ? QQ : "icon" === QQ.kind ? {
           kind: "icon",
-          icon: pp.text,
-          delayMs: pp.delayMs
+          icon: QQ.text,
+          delayMs: QQ.delayMs
         } : {
           kind: "word",
-          text: pp.text,
-          delayMs: pp.delayMs
+          text: QQ.text,
+          delayMs: QQ.delayMs
         })),
-        blips: Cp
+        blips: hQ
       }
     }
-    var Cp = cp(1201),
-      Ep = cp(1260),
-      Xp = cp(1963);
+    var hQ = XQ(1226),
+      iQ = XQ(1285),
+      cQ = XQ(2010);
 
-    function lp(pp) {
-      if ("string" === typeof pp) return pp;
-      const ip = Ep.g.get().getCurrentLanguageCode();
-      return (0, Cp.w)(ip, pp.translationKey, (0, Cp.t)(pp.params, Xp.d.shown))
+    function AQ(QQ) {
+      if ("string" === typeof QQ) return QQ;
+      const WQ = iQ.h.get().getCurrentLanguageCode();
+      return (0, hQ.t)(WQ, QQ.translationKey, (0, hQ.r)(QQ.params, cQ.e.shown))
     }
 
-    function Qp(pp) {
-      const ip = void 0 === pp.voice ? null : (0, Op.o)(pp.voice),
-        cp = ip && (0, Op.m)(ip);
+    function RQ(QQ) {
+      const WQ = void 0 === QQ.voice ? null : (0, wQ.p)(QQ.voice),
+        XQ = WQ && (0, wQ.l)(WQ);
       return {
-        plan: Mp(lp(pp.line), cp),
-        synth: cp
+        plan: lQ(AQ(QQ.line), XQ),
+        synth: XQ
       }
     }
 
-    function Jp(pp) {
-      const ip = [];
-      let cp = [];
-      for (const [op, Ip] of pp.entries()) {
-        var Op;
-        "space" === Ip.kind && (" " !== Ip.text || "icon" !== (null === (Op = pp[op + 1]) || void 0 === Op ? void 0 : Op.kind)) ? (cp.length > 0 && ip.push(cp), ip.push([Ip]), cp = []) : cp.push(Ip)
+    function EQ(QQ) {
+      const WQ = [];
+      let XQ = [];
+      for (const [qQ, TQ] of QQ.entries()) {
+        var wQ;
+        "space" === TQ.kind && (" " !== TQ.text || "icon" !== (null === (wQ = QQ[qQ + 1]) || void 0 === wQ ? void 0 : wQ.kind)) ? (XQ.length > 0 && WQ.push(XQ), WQ.push([TQ]), XQ = []) : XQ.push(TQ)
       }
-      return cp.length > 0 && ip.push(cp), ip
+      return XQ.length > 0 && WQ.push(XQ), WQ
     }
   },
-  4972: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Dp,
-      f: () => Ap
+  5205: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      e: () => gQ,
+      g: () => JQ
     });
-    var Op = cp(4974),
-      op = cp(25);
-    const Ip = .25,
-      Sp = .85,
-      xp = .02,
-      Lp = .01;
+    var wQ = XQ(5212),
+      qQ = XQ(26);
+    const TQ = .25,
+      zQ = .85,
+      sQ = .02,
+      FQ = .01;
 
-    function Yp(pp, ip, cp, Op, op, Ip, xp) {
+    function PQ(QQ, WQ, XQ, wQ, qQ, TQ, sQ) {
       const {
-        waveform: Lp,
-        pitchHz: Yp,
-        attackMs: Dp,
-        releaseMs: Ap,
-        lowpassHz: Pp
-      } = cp, Wp = op + Op.durationMs / 1e3, yp = Yp * 2 ** (Op.semitones / 12), Up = pp.createOscillator();
-      Up.type = Lp, Up.frequency.setValueAtTime(yp, op), Up.frequency.exponentialRampToValueAtTime(yp * 2 ** (Op.glideSemitones / 12), Wp);
-      const wp = op + Math.min(Dp, Op.durationMs) / 1e3,
-        vp = pp.createGain();
-      vp.gain.setValueAtTime(0, op), vp.gain.linearRampToValueAtTime(Ip, wp), vp.gain.linearRampToValueAtTime(Ip * Sp, Math.max(wp, Wp - Ap / 1e3)), vp.gain.linearRampToValueAtTime(0, Wp);
-      const tp = [Up];
-      if (null !== Pp) {
-        const ip = pp.createBiquadFilter();
-        ip.type = "lowpass", ip.frequency.value = Pp, tp.push(ip)
+        waveform: FQ,
+        pitchHz: PQ,
+        attackMs: gQ,
+        releaseMs: JQ,
+        lowpassHz: rQ
+      } = XQ, IQ = qQ + wQ.durationMs / 1e3, jQ = PQ * 2 ** (wQ.semitones / 12), BQ = QQ.createOscillator();
+      BQ.type = FQ, BQ.frequency.setValueAtTime(jQ, qQ), BQ.frequency.exponentialRampToValueAtTime(jQ * 2 ** (wQ.glideSemitones / 12), IQ);
+      const yQ = qQ + Math.min(gQ, wQ.durationMs) / 1e3,
+        VQ = QQ.createGain();
+      VQ.gain.setValueAtTime(0, qQ), VQ.gain.linearRampToValueAtTime(TQ, yQ), VQ.gain.linearRampToValueAtTime(TQ * zQ, Math.max(yQ, IQ - JQ / 1e3)), VQ.gain.linearRampToValueAtTime(0, IQ);
+      const DQ = [BQ];
+      if (null !== rQ) {
+        const WQ = QQ.createBiquadFilter();
+        WQ.type = "lowpass", WQ.frequency.value = rQ, DQ.push(WQ)
       }
-      tp.push(vp, ip);
-      for (let Sp = 1; Sp < tp.length; Sp++) tp[Sp - 1].connect(tp[Sp]);
-      return Up.onended = () => {
-        for (const pp of tp.slice(0, -1)) pp.disconnect();
-        xp()
-      }, Up.start(op), Up.stop(Wp), Up
+      DQ.push(VQ, WQ);
+      for (let zQ = 1; zQ < DQ.length; zQ++) DQ[zQ - 1].connect(DQ[zQ]);
+      return BQ.onended = () => {
+        for (const QQ of DQ.slice(0, -1)) QQ.disconnect();
+        sQ()
+      }, BQ.start(qQ), BQ.stop(IQ), BQ
     }
 
-    function Dp(pp, ip, cp, Op, op, Sp) {
-      if (0 === Op.length) return Sp(), () => {};
-      const Dp = Ip * cp.volume * op,
-        Ap = pp.createGain();
-      Ap.connect(ip);
-      const Pp = pp.currentTime + xp,
-        Wp = new Set;
-      for (const Ip of Op) {
-        const ip = Yp(pp, Ap, cp, Ip, Pp + Ip.atMs / 1e3, Dp * Ip.level, (() => {
-          Wp.delete(ip), 0 === Wp.size && (Ap.disconnect(), Sp())
+    function gQ(QQ, WQ, XQ, wQ, qQ, zQ) {
+      if (0 === wQ.length) return zQ(), () => {};
+      const gQ = TQ * XQ.volume * qQ,
+        JQ = QQ.createGain();
+      JQ.connect(WQ);
+      const rQ = QQ.currentTime + sQ,
+        IQ = new Set;
+      for (const TQ of wQ) {
+        const WQ = PQ(QQ, JQ, XQ, TQ, rQ + TQ.atMs / 1e3, gQ * TQ.level, (() => {
+          IQ.delete(WQ), 0 === IQ.size && (JQ.disconnect(), zQ())
         }));
-        Wp.add(ip)
+        IQ.add(WQ)
       }
       return () => {
-        const ip = pp.currentTime;
-        Ap.gain.setTargetAtTime(0, ip, Lp);
-        for (const pp of Wp) try {
-          pp.stop(ip + 5 * Lp)
+        const WQ = QQ.currentTime;
+        JQ.gain.setTargetAtTime(0, WQ, FQ);
+        for (const QQ of IQ) try {
+          QQ.stop(WQ + 5 * FQ)
         } catch {}
       }
     }
 
-    function Ap(pp, ip) {
-      var cp;
-      const Ip = Op.Howler.ctx,
-        Sp = Op.Howler.masterGain;
-      if (!Ip || !Sp || !op.c.get("soundOnFromAd")) return () => {};
-      const xp = Op.Howler;
-      return null === (cp = xp._autoResume) || void 0 === cp || cp.call(xp), Dp(Ip, Sp, pp, ip, op.c.get("soundVolume"), (() => {
-        var pp;
-        null === (pp = xp._autoSuspend) || void 0 === pp || pp.call(xp)
+    function JQ(QQ, WQ) {
+      var XQ;
+      const TQ = wQ.Howler.ctx,
+        zQ = wQ.Howler.masterGain;
+      if (!TQ || !zQ || !qQ.b.get("soundOnFromAd")) return () => {};
+      const sQ = wQ.Howler;
+      return null === (XQ = sQ._autoResume) || void 0 === XQ || XQ.call(sQ), gQ(TQ, zQ, QQ, WQ, qQ.b.get("soundVolume"), (() => {
+        var QQ;
+        null === (QQ = sQ._autoSuspend) || void 0 === QQ || QQ.call(sQ)
       }))
     }
   },
-  39324: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      closeClientGame: () => Bp,
-      createDefaultClientPlugins: () => Jp
+  39421: (QQ, WQ, XQ) => {
+    XQ.r(WQ), XQ.d(WQ, {
+      closeClientGame: () => uQ,
+      createDefaultClientPlugins: () => CQ
     });
-    var Op = cp(337);
+    var wQ = XQ(402);
 
-    function op() {
-      let pp;
+    function qQ() {
+      let QQ;
       return {
-        onCreate(ip) {
-          pp = ip
+        onCreate(WQ) {
+          QQ = WQ
         },
         altVetoBlocks: ["Iron Chest"],
-        onPlayerAttemptAltAction(ip, cp, op, Ip, Sp, xp) {
-          var Lp, Yp;
-          if ("Iron Chest" !== pp.getMetaInfo(Sp).rootName) return;
-          if (!pp.hasEffect(ip, "Thief")) return;
-          const Dp = pp.getBlockData(cp, op, Ip);
-          return pp.getPlayerDbId(ip) !== (null === Dp || void 0 === Dp || null === (Lp = Dp.persisted) || void 0 === Lp || null === (Yp = Lp.shared) || void 0 === Yp ? void 0 : Yp.ownerDbId) ? (pp.sendMessage(ip, [{
+        onPlayerAttemptAltAction(WQ, XQ, qQ, TQ, zQ, sQ) {
+          var FQ, PQ;
+          if ("Iron Chest" !== QQ.getMetaInfo(zQ).rootName) return;
+          if (!QQ.hasEffect(WQ, "Thief")) return;
+          const gQ = QQ.getBlockData(XQ, qQ, TQ);
+          return QQ.getPlayerDbId(WQ) !== (null === gQ || void 0 === gQ || null === (FQ = gQ.persisted) || void 0 === FQ || null === (PQ = FQ.shared) || void 0 === PQ ? void 0 : PQ.ownerDbId) ? (QQ.sendMessage(WQ, [{
             str: {
               translationKey: "ironChest:thievesCannotOpen"
             },
             style: {
-              color: Op.N.redUiText
+              color: wQ.N.redUiText
             }
           }]), "preventAction") : void 0
         }
       }
     }
-    var Ip = cp(4341),
-      Sp = cp(1251);
-    const xp = 8.4,
-      Lp = 1e-4,
-      Yp = .15,
-      Dp = .04,
-      Ap = [.12, .04, .12],
-      Pp = 26,
-      Wp = {
+    var TQ = XQ(4534),
+      zQ = XQ(1273);
+    const sQ = 8.4,
+      FQ = 1e-4,
+      PQ = .15,
+      gQ = .04,
+      JQ = [.12, .04, .12],
+      rQ = 26,
+      IQ = {
         texture: "fishingFishSilhouette",
         mipmaps: !1,
-        TA: 1,
-        minLifeTime: Lp,
-        maxLifeTime: Lp,
+        yJ: 1,
+        minLifeTime: FQ,
+        maxLifeTime: FQ,
         minSize: .55,
         maxSize: .55,
         minEmitPower: 0,
@@ -310,19 +310,19 @@ export const modules = {
           timeFraction: 1,
           minColor: [0, 0, 0, 1]
         }],
-        blendMode: Ip.g.Standard
+        blendMode: TQ.c.Standard
       },
-      yp = {
+      jQ = {
         texture: "bubble",
         mipmaps: !1,
-        TA: 96,
+        yJ: 96,
         minLifeTime: .3,
         maxLifeTime: .65,
         minSize: .08,
         maxSize: .19,
         minEmitPower: .2,
         maxEmitPower: .55,
-        emitRate: Pp,
+        emitRate: rQ,
         gravity: [0, .3, 0],
         dir1: [-.3, .3, -.3],
         dir2: [.3, .7, .3],
@@ -336,159 +336,159 @@ export const modules = {
           timeFraction: 1,
           minColor: [178.5, 229.5, 255, 0]
         }],
-        blendMode: Ip.g.Standard
+        blendMode: TQ.c.Standard
       },
-      Up = [0, 0, 0],
-      wp = [0, 0, 0];
+      BQ = [0, 0, 0],
+      yQ = [0, 0, 0];
 
-    function vp(pp) {
-      const ip = new Map;
-      let cp = null;
+    function VQ(QQ) {
+      const WQ = new Map;
+      let XQ = null;
 
-      function Op(pp) {
-        var ip, cp;
-        null === (ip = pp.bubbles) || void 0 === ip || ip.stop(), null === (cp = pp.fish) || void 0 === cp || cp.stop()
+      function wQ(QQ) {
+        var WQ, XQ;
+        null === (WQ = QQ.bubbles) || void 0 === WQ || WQ.stop(), null === (XQ = QQ.fish) || void 0 === XQ || XQ.stop()
       }
 
-      function op(cp) {
-        if (!cp.readDrawnPosition(pp, wp)) {
-          for (const pp of ip.values()) {
-            var Op;
-            null === (Op = pp.bubbles) || void 0 === Op || Op.setEmitRate(0)
+      function qQ(XQ) {
+        if (!XQ.readDrawnPosition(QQ, yQ)) {
+          for (const QQ of WQ.values()) {
+            var wQ;
+            null === (wQ = QQ.bubbles) || void 0 === wQ || wQ.setEmitRate(0)
           }
           return
         }
-        const op = performance.now();
-        for (const [pp, Sp] of ip) {
-          var Ip;
-          if (null === (Ip = Sp.bubbles) || void 0 === Ip || Ip.setEmitRate(0), !cp.readDrawnPosition(pp, Up)) continue;
-          if (!((Up[0] - wp[0]) ** 2 + (Up[1] - wp[1]) ** 2 + (Up[2] - wp[2]) ** 2 < 900)) continue;
-          const ip = Math.max(0, Sp.biteAt - op),
-            Op = Sp.approachDurationMs > 0 ? Math.min(1, 1 - ip / Sp.approachDurationMs) : 1,
-            Lp = (Sp.approachDurationMs - ip) / 1e3,
-            vp = Sp.phase + .25 * Math.sin(1.7 * Lp + Sp.phase),
-            tp = Math.min(Sp.approachDurationMs / 3e3 * 2.8, xp) * (1 - Op) * (1 + .15 * Math.sin(2.1 * Lp + Sp.phase)),
-            Hp = Math.min(1, 4 * (1 - Op)),
-            dp = (.45 * Math.sin(4.1 * Lp + Sp.phase) + .18 * Math.sin(9.7 * Lp + 2 * Sp.phase)) * Hp,
-            ep = Up[0] + Math.cos(vp) * tp - Math.sin(vp) * dp,
-            jp = Math.ceil(Sp.surfaceY),
-            kp = Up[2] + Math.sin(vp) * tp + Math.cos(vp) * dp,
+        const qQ = performance.now();
+        for (const [QQ, zQ] of WQ) {
+          var TQ;
+          if (null === (TQ = zQ.bubbles) || void 0 === TQ || TQ.setEmitRate(0), !XQ.readDrawnPosition(QQ, BQ)) continue;
+          if (!((BQ[0] - yQ[0]) ** 2 + (BQ[1] - yQ[1]) ** 2 + (BQ[2] - yQ[2]) ** 2 < 900)) continue;
+          const WQ = Math.max(0, zQ.biteAt - qQ),
+            wQ = zQ.approachDurationMs > 0 ? Math.min(1, 1 - WQ / zQ.approachDurationMs) : 1,
+            FQ = (zQ.approachDurationMs - WQ) / 1e3,
+            VQ = zQ.phase + .25 * Math.sin(1.7 * FQ + zQ.phase),
+            DQ = Math.min(zQ.approachDurationMs / 3e3 * 2.8, sQ) * (1 - wQ) * (1 + .15 * Math.sin(2.1 * FQ + zQ.phase)),
+            pQ = Math.min(1, 4 * (1 - wQ)),
+            GQ = (.45 * Math.sin(4.1 * FQ + zQ.phase) + .18 * Math.sin(9.7 * FQ + 2 * zQ.phase)) * pQ,
+            UQ = BQ[0] + Math.cos(VQ) * DQ - Math.sin(VQ) * GQ,
+            bQ = Math.ceil(zQ.surfaceY),
+            vQ = BQ[2] + Math.sin(VQ) * DQ + Math.cos(VQ) * GQ,
             {
-              fishAt: mp,
-              bubblesAt: Rp
-            } = Sp;
-          mp[0] = Rp[0] = ep, mp[1] = jp + Yp, Rp[1] = jp + Dp, mp[2] = Rp[2] = kp, Sp.fish ??= cp.createParticles(Wp, {
-            pos: mp
-          }), Sp.fish.moveTo(mp), Sp.fish.emit(1), Sp.bubbles ??= cp.createParticles(yp, {
-            pos: Rp,
-            half: Ap
-          }), Sp.bubbles.moveTo(Rp), Sp.bubbles.setEmitRate(Pp + 32 * (.5 + .5 * Math.sin(9 * Lp + Sp.phase)) ** 4 + 13 * Op)
+              fishAt: dQ,
+              bubblesAt: HQ
+            } = zQ;
+          dQ[0] = HQ[0] = UQ, dQ[1] = bQ + PQ, HQ[1] = bQ + gQ, dQ[2] = HQ[2] = vQ, zQ.fish ??= XQ.createParticles(IQ, {
+            pos: dQ
+          }), zQ.fish.moveTo(dQ), zQ.fish.emit(1), zQ.bubbles ??= XQ.createParticles(jQ, {
+            pos: HQ,
+            half: JQ
+          }), zQ.bubbles.moveTo(HQ), zQ.bubbles.setEmitRate(rQ + 32 * (.5 + .5 * Math.sin(9 * FQ + zQ.phase)) ** 4 + 13 * wQ)
         }
       }
       return {
-        onCreate(pp) {
-          cp = pp
+        onCreate(QQ) {
+          XQ = QQ
         },
         onAfterRender() {
-          cp && op(cp)
+          XQ && qQ(XQ)
         },
         onClose() {
-          for (const pp of ip.values()) Op(pp);
-          ip.clear(), cp = null
+          for (const QQ of WQ.values()) wQ(QQ);
+          WQ.clear(), XQ = null
         },
-        onReceivedMessageFromServer(pp, cp) {
-          if (pp !== Sp.z) return;
+        onReceivedMessageFromServer(QQ, XQ) {
+          if (QQ !== zQ.D) return;
           const {
-            hookId: op,
-            waiting: Ip
-          } = cp;
-          if (Ip) ip.has(op) || ip.set(op, {
+            hookId: qQ,
+            waiting: TQ
+          } = XQ;
+          if (TQ) WQ.has(qQ) || WQ.set(qQ, {
             bubbles: null,
             fish: null,
             fishAt: [0, 0, 0],
             bubblesAt: [0, 0, 0],
-            biteAt: performance.now() + Ip.remainingMs,
-            approachDurationMs: Ip.durationMs,
-            surfaceY: Ip.surfaceY,
+            biteAt: performance.now() + TQ.remainingMs,
+            approachDurationMs: TQ.durationMs,
+            surfaceY: TQ.surfaceY,
             phase: Math.random() * Math.PI * 2
           });
           else {
-            const pp = ip.get(op);
-            pp && Op(pp), ip.delete(op)
+            const QQ = WQ.get(qQ);
+            QQ && wQ(QQ), WQ.delete(qQ)
           }
         }
       }
     }
-    var tp = cp(4972),
-      Hp = cp(4964);
+    var DQ = XQ(5205),
+      pQ = XQ(5187);
 
-    function dp(pp) {
-      let ip, cp = null,
-        Op = null;
-      const op = () => {
-        var pp;
-        null === (pp = Op) || void 0 === pp || pp(), Op = null
+    function GQ(QQ) {
+      let WQ, XQ = null,
+        wQ = null;
+      const qQ = () => {
+        var QQ;
+        null === (QQ = wQ) || void 0 === QQ || QQ(), wQ = null
       };
       return {
-        onCreate(Op) {
-          ip = Op, cp = ip.getClientOption(pp, "dialogue")
+        onCreate(wQ) {
+          WQ = wQ, XQ = WQ.getClientOption(QQ, "dialogue")
         },
         onAfterRender() {
-          if (!ip) return;
-          const Ip = ip.getClientOption(pp, "dialogue");
-          if (Ip === cp) return;
-          if (cp = Ip, op(), !Ip || !1 === Ip.animateIn) return;
+          if (!WQ) return;
+          const TQ = WQ.getClientOption(QQ, "dialogue");
+          if (TQ === XQ) return;
+          if (XQ = TQ, qQ(), !TQ || !1 === TQ.animateIn) return;
           const {
-            plan: Sp,
-            synth: xp
-          } = (0, Hp.h)(Ip);
-          xp && (Op = (0, tp.f)(xp, Sp.blips))
+            plan: zQ,
+            synth: sQ
+          } = (0, pQ.f)(TQ);
+          sQ && (wQ = (0, DQ.g)(sQ, zQ.blips))
         },
-        onClose: op
+        onClose: qQ
       }
     }
-    var ep = cp(39330);
-    const jp = [
+    var UQ = XQ(39427);
+    const bQ = [
         [-.3125, -.25],
         [.3125, -.25],
         [.3125, .25],
         [-.3125, .25]
       ],
-      kp = [0, 1 / 3, 1, 1 / 3, 1, 0, 0, 0],
-      mp = [0, 1, 2, 0, 2, 3];
+      vQ = [0, 1 / 3, 1, 1 / 3, 1, 0, 0, 0],
+      dQ = [0, 1, 2, 0, 2, 3];
 
-    function Rp(pp, ip, cp) {
-      var Op;
-      let [op, Ip, Sp] = ip;
-      if (pp.hasPackModel("Furnace")) return null;
-      const xp = ((null !== (Op = pp.getMetaInfo(cp).rot) && void 0 !== Op ? Op : 1) - 1) * Math.PI / 2,
-        Lp = Math.PI + xp,
-        Yp = Math.cos(Lp),
-        Dp = Math.sin(Lp),
-        Ap = [];
-      for (const [yp, Up] of jp) Ap.push(yp * Yp, Up, -yp * Dp);
-      const Pp = {
-          positions: Ap,
-          indices: mp,
-          uvs: kp
+    function HQ(QQ, WQ, XQ) {
+      var wQ;
+      let [qQ, TQ, zQ] = WQ;
+      if (QQ.hasPackModel("Furnace")) return null;
+      const sQ = ((null !== (wQ = QQ.getMetaInfo(XQ).rot) && void 0 !== wQ ? wQ : 1) - 1) * Math.PI / 2,
+        FQ = Math.PI + sQ,
+        PQ = Math.cos(FQ),
+        gQ = Math.sin(FQ),
+        JQ = [];
+      for (const [jQ, BQ] of bQ) JQ.push(jQ * PQ, BQ, -jQ * gQ);
+      const rQ = {
+          positions: JQ,
+          indices: dQ,
+          uvs: vQ
         },
-        Wp = [op + .5 + .51 * Math.sin(xp), Ip + .375, Sp + .5 + .51 * Math.cos(xp)];
-      return pp.createGameMesh(Pp, {
+        IQ = [qQ + .5 + .51 * Math.sin(sQ), TQ + .375, zQ + .5 + .51 * Math.cos(sQ)];
+      return QQ.createGameMesh(rQ, {
         kind: "furnaceFire"
-      }, Wp)
+      }, IQ)
     }
 
-    function qp(pp) {
-      return Math.floor(pp / 200) % 3
+    function aQ(QQ) {
+      return Math.floor(QQ / 200) % 3
     }
 
-    function Mp(pp, ip, cp) {
-      pp.setGameMesh(ip, {
-        uvOffset: [0, cp / 3]
+    function lQ(QQ, WQ, XQ) {
+      QQ.setGameMesh(WQ, {
+        uvOffset: [0, XQ / 3]
       })
     }
-    const Cp = [.12, .025, .12],
-      Ep = [{
+    const hQ = [.12, .025, .12],
+      iQ = [{
         style: {
           colours: [
             [176, 176, 182],
@@ -501,7 +501,7 @@ export const modules = {
           lift: .12,
           spread: .12,
           count: 6,
-          blendMode: Ip.g.Standard,
+          blendMode: TQ.c.Standard,
           soft: !0
         },
         perSecond: 7
@@ -518,196 +518,214 @@ export const modules = {
           lift: -.6,
           spread: .35,
           count: 10,
-          blendMode: Ip.g.Add,
+          blendMode: TQ.c.Add,
           soft: !1
         },
         perSecond: 6
       }];
-    class Xp {
+    class cQ {
       constructor() {
         this.puffers = null, this.smokes = [], this.renderFrame = 0, this.shownFireFrame = -1, this.centre = [0, 0, 0]
       }
-      start(pp, ip) {
-        const cp = pp.getBlockId(ip[0], ip[1], ip[2]);
-        if ("Furnace" !== pp.getMetaInfo(cp).rootName) return;
-        const Op = performance.now();
-        let op = this.smokes.find((pp => pp.pos[0] === ip[0] && pp.pos[1] === ip[1] && pp.pos[2] === ip[2] && pp.tx === cp));
-        if (op || (op = {
-            pos: [ip[0], ip[1], ip[2]],
-            tx: cp,
-            endMs: Op,
+      start(QQ, WQ) {
+        const XQ = QQ.getBlockId(WQ[0], WQ[1], WQ[2]);
+        if ("Furnace" !== QQ.getMetaInfo(XQ).rootName) return;
+        const wQ = performance.now();
+        let qQ = this.smokes.find((QQ => QQ.pos[0] === WQ[0] && QQ.pos[1] === WQ[1] && QQ.pos[2] === WQ[2] && QQ.ez === XQ));
+        if (qQ || (qQ = {
+            pos: [WQ[0], WQ[1], WQ[2]],
+            ez: XQ,
+            endMs: wQ,
             lastBurstMs: -1 / 0,
-            pending: new Array(Ep.length).fill(0),
-            fire: Rp(pp, ip, cp)
-          }, this.smokes.push(op), null !== op.fire && (Mp(pp, op.fire, qp(Op)), this.shownFireFrame = -1)), op.endMs = Op + 6e3, this.smokes.length > 4) {
-          const ip = this.smokes.reduce(((pp, ip) => ip.endMs < pp.endMs ? ip : pp));
-          lp(pp, ip), this.smokes.splice(this.smokes.indexOf(ip), 1)
+            pending: new Array(iQ.length).fill(0),
+            fire: HQ(QQ, WQ, XQ)
+          }, this.smokes.push(qQ), null !== qQ.fire && (lQ(QQ, qQ.fire, aQ(wQ)), this.shownFireFrame = -1)), qQ.endMs = wQ + 6e3, this.smokes.length > 4) {
+          const WQ = this.smokes.reduce(((QQ, WQ) => WQ.endMs < QQ.endMs ? WQ : QQ));
+          AQ(QQ, WQ), this.smokes.splice(this.smokes.indexOf(WQ), 1)
         }
-        Op - op.lastBurstMs >= 300 && (op.lastBurstMs = Op, Ep.forEach(((pp, ip) => {
-          op.pending[ip] += pp.style.count
+        wQ - qQ.lastBurstMs >= 300 && (qQ.lastBurstMs = wQ, iQ.forEach(((QQ, WQ) => {
+          qQ.pending[WQ] += QQ.style.count
         })))
       }
-      onAfterRender(pp, ip) {
+      onAfterRender(QQ, WQ) {
         if (0 === this.smokes.length) return;
         this.renderFrame++;
-        const cp = performance.now();
-        this.smokes = this.smokes.filter((ip => {
-          const [Op, op, Ip] = ip.pos, Sp = cp < ip.endMs && pp.getBlockId(Op, op, Ip) === ip.tx;
-          return Sp || lp(pp, ip), Sp
+        const XQ = performance.now();
+        this.smokes = this.smokes.filter((WQ => {
+          const [wQ, qQ, TQ] = WQ.pos, zQ = XQ < WQ.endMs && QQ.getBlockId(wQ, qQ, TQ) === WQ.ez;
+          return zQ || AQ(QQ, WQ), zQ
         }));
-        const Op = qp(cp);
-        if (Op !== this.shownFireFrame) {
-          this.shownFireFrame = Op;
-          for (const ip of this.smokes) null !== ip.fire && Mp(pp, ip.fire, Op)
+        const wQ = aQ(XQ);
+        if (wQ !== this.shownFireFrame) {
+          this.shownFireFrame = wQ;
+          for (const WQ of this.smokes) null !== WQ.fire && lQ(QQ, WQ.fire, wQ)
         }
-        if (!pp.particlesEnabled()) {
-          for (const pp of this.smokes) pp.pending.fill(0);
+        if (!QQ.particlesEnabled()) {
+          for (const QQ of this.smokes) QQ.pending.fill(0);
           return
         }
-        const op = Math.min(ip, 250) / 1e3;
-        for (const Ip of this.smokes) {
-          const [ip, Op, Sp] = Ip.pos;
-          if (0 !== pp.getBlockId(ip, Op + 1, Sp)) {
-            Ip.pending.fill(0);
+        const qQ = Math.min(WQ, 250) / 1e3;
+        for (const TQ of this.smokes) {
+          const [WQ, wQ, zQ] = TQ.pos;
+          if (0 !== QQ.getBlockId(WQ, wQ + 1, zQ)) {
+            TQ.pending.fill(0);
             continue
           }
-          const xp = (Ip.endMs - cp) / 6e3,
-            Lp = this.centre;
-          Lp[0] = ip + .5, Lp[1] = Op + 1.275, Lp[2] = Sp + .5, Ep.forEach(((ip, cp) => {
-            Ip.pending[cp] += ip.perSecond * xp * op;
-            const Op = Math.floor(Ip.pending[cp]);
-            Op > 0 && this.emit(pp, cp, Lp, Op) && (Ip.pending[cp] -= Op)
+          const sQ = (TQ.endMs - XQ) / 6e3,
+            FQ = this.centre;
+          FQ[0] = WQ + .5, FQ[1] = wQ + 1.275, FQ[2] = zQ + .5, iQ.forEach(((WQ, XQ) => {
+            TQ.pending[XQ] += WQ.perSecond * sQ * qQ;
+            const wQ = Math.floor(TQ.pending[XQ]);
+            wQ > 0 && this.emit(QQ, XQ, FQ, wQ) && (TQ.pending[XQ] -= wQ)
           }))
         }
       }
-      dispose(pp) {
-        for (const cp of this.smokes) lp(pp, cp);
+      dispose(QQ) {
+        for (const XQ of this.smokes) AQ(QQ, XQ);
         this.smokes = [];
-        for (const cp of null !== (ip = this.puffers) && void 0 !== ip ? ip : []) {
-          var ip;
-          cp.dispose()
+        for (const XQ of null !== (WQ = this.puffers) && void 0 !== WQ ? WQ : []) {
+          var WQ;
+          XQ.dispose()
         }
         this.puffers = null
       }
-      emit(pp, ip, cp, Op) {
-        return this.puffers ??= Ep.map((pp => {
+      emit(QQ, WQ, XQ, wQ) {
+        return this.puffers ??= iQ.map((QQ => {
           let {
-            style: ip,
-            perSecond: cp
-          } = pp;
-          const Op = (ip.count / .3 + cp) * ip.life[1];
-          return new ep.i(ip, Math.ceil(4 * Op), Cp)
-        })), this.puffers[ip].emit(pp, cp, this.renderFrame, Op)
+            style: WQ,
+            perSecond: XQ
+          } = QQ;
+          const wQ = (WQ.count / .3 + XQ) * WQ.life[1];
+          return new UQ.e(WQ, Math.ceil(4 * wQ), hQ)
+        })), this.puffers[WQ].emit(QQ, XQ, this.renderFrame, wQ)
       }
     }
 
-    function lp(pp, ip) {
-      null !== ip.fire && (pp.disposeGameMesh(ip.fire), ip.fire = null)
+    function AQ(QQ, WQ) {
+      null !== WQ.fire && (QQ.disposeGameMesh(WQ.fire), WQ.fire = null)
     }
 
-    function Qp() {
-      let pp;
-      const ip = new Xp;
+    function RQ() {
+      let QQ;
+      const WQ = new cQ;
       return {
-        onCreate(ip) {
-          pp = ip
+        onCreate(WQ) {
+          QQ = WQ
         },
-        onReceivedMessageFromServer(cp, Op) {
-          cp === Sp.C && ip.start(pp, Op)
+        onReceivedMessageFromServer(XQ, wQ) {
+          XQ === zQ.F && WQ.start(QQ, wQ)
         },
-        onAfterRender(cp) {
-          ip.onAfterRender(pp, cp)
+        onAfterRender(XQ) {
+          WQ.onAfterRender(QQ, XQ)
         },
         onClose() {
-          ip.dispose(pp)
+          WQ.dispose(QQ)
         }
       }
     }
+    var EQ = XQ(9104);
 
-    function Jp(pp, ip, cp, Op) {
+    function CQ(QQ, WQ, XQ, wQ) {
       return {
-        dialogue: dp(Op.localPlayerId),
-        fishing: vp(Op.localPlayerId),
-        furnaceSmoke: Qp(),
-        ironChest: op()
+        dialogue: GQ(wQ.localPlayerId),
+        fishing: VQ(wQ.localPlayerId),
+        furnaceSmoke: RQ(),
+        ironChest: qQ(),
+        localBlockBroken: (0, EQ.c)()
       }
     }
 
-    function Bp(pp, ip) {
-      for (const op of [pp, ...null !== ip && void 0 !== ip ? ip : []]) try {
-        var cp;
-        null === op || void 0 === op || null === (cp = op.onClose) || void 0 === cp || cp.call(op)
-      } catch (Op) {
-        console.error("Error in client onClose callback", Op)
+    function uQ(QQ, WQ) {
+      for (const qQ of [QQ, ...null !== WQ && void 0 !== WQ ? WQ : []]) try {
+        var XQ;
+        null === qQ || void 0 === qQ || null === (XQ = qQ.onClose) || void 0 === XQ || XQ.call(qQ)
+      } catch (wQ) {
+        console.error("Error in client onClose callback", wQ)
       }
     }
   },
-  39330: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Op,
-      i: () => Ip
+  9104: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      c: () => TQ,
+      g: () => qQ
     });
-    const Op = 1 / .6,
-      op = {
+    var wQ = XQ(31);
+    const qQ = "localBlockBroken";
+
+    function TQ() {
+      return {
+        onPlayerChangeBlock(QQ, WQ, XQ, TQ, zQ, sQ) {
+          "Air" === sQ && wQ.k.mB(qQ)
+        }
+      }
+    }
+  },
+  39427: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      b: () => wQ,
+      e: () => TQ
+    });
+    const wQ = 1 / .6,
+      qQ = {
         kind: "smokePuff"
       };
-    class Ip {
-      constructor(pp, ip, cp) {
-        this.style = pp, this.TA = ip, this.half = cp, this.particles = null, this.lastFrame = -1
+    class TQ {
+      constructor(QQ, WQ, XQ) {
+        this.style = QQ, this.yJ = WQ, this.half = XQ, this.particles = null, this.lastFrame = -1
       }
-      emit(pp, ip, cp) {
-        let Ip = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
-        return cp !== this.lastFrame && (this.lastFrame = cp, this.particles || (this.particles = pp.createParticles(function(pp, ip) {
+      emit(QQ, WQ, XQ) {
+        let TQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
+        return XQ !== this.lastFrame && (this.lastFrame = XQ, this.particles || (this.particles = QQ.createParticles(function(QQ, WQ) {
           const [
-            [cp, Ip, Sp],
-            [xp, Lp, Yp]
-          ] = pp.colours;
+            [XQ, TQ, zQ],
+            [sQ, FQ, PQ]
+          ] = QQ.colours;
           return {
-            texture: pp.soft ? op : "square_particle",
-            TA: ip,
-            minLifeTime: pp.life[0] / Op,
-            maxLifeTime: pp.life[1] / Op,
-            minEmitPower: pp.power[0] * Op,
-            maxEmitPower: pp.power[1] * Op,
-            minSize: pp.size[0],
-            maxSize: pp.size[1],
+            texture: QQ.soft ? qQ : "square_particle",
+            yJ: WQ,
+            minLifeTime: QQ.life[0] / wQ,
+            maxLifeTime: QQ.life[1] / wQ,
+            minEmitPower: QQ.power[0] * wQ,
+            maxEmitPower: QQ.power[1] * wQ,
+            minSize: QQ.size[0],
+            maxSize: QQ.size[1],
             emitRate: 0,
-            gravity: [0, pp.lift * Op * Op, 0],
-            dir1: [-pp.spread, 1, -pp.spread],
-            dir2: [pp.spread, 1, pp.spread],
+            gravity: [0, QQ.lift * wQ * wQ, 0],
+            dir1: [-QQ.spread, 1, -QQ.spread],
+            dir2: [QQ.spread, 1, QQ.spread],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [cp, Ip, Sp, pp.alpha],
-              maxColor: [xp, Lp, Yp, pp.alpha]
+              minColor: [XQ, TQ, zQ, QQ.alpha],
+              maxColor: [sQ, FQ, PQ, QQ.alpha]
             }, {
               timeFraction: 1,
-              minColor: [cp, Ip, Sp, 0],
-              maxColor: [xp, Lp, Yp, 0]
+              minColor: [XQ, TQ, zQ, 0],
+              maxColor: [sQ, FQ, PQ, 0]
             }],
-            blendMode: pp.blendMode
+            blendMode: QQ.blendMode
           }
-        }(this.style, this.TA), {
-          pos: ip,
+        }(this.style, this.yJ), {
+          pos: WQ,
           half: this.half
-        })), this.particles.moveTo(ip, this.half), this.particles.emit(Ip), !0)
+        })), this.particles.moveTo(WQ, this.half), this.particles.emit(TQ), !0)
       }
       dispose() {
-        var pp;
-        null === (pp = this.particles) || void 0 === pp || pp.stop(), this.particles = null
+        var QQ;
+        null === (QQ = this.particles) || void 0 === QQ || QQ.stop(), this.particles = null
       }
     }
   },
-  4970: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => op,
-      f: () => Op,
-      i: () => Ip,
-      m: () => Lp,
-      o: () => Sp
+  5196: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      d: () => qQ,
+      f: () => wQ,
+      h: () => TQ,
+      l: () => FQ,
+      p: () => zQ
     });
-    const Op = ["sine", "triangle", "square", "sawtooth"],
-      op = 55,
-      Ip = {
+    const wQ = ["sine", "triangle", "square", "sawtooth"],
+      qQ = 55,
+      TQ = {
         soft: {
           waveform: "sine",
           pitchHz: 300,
@@ -846,39 +864,39 @@ export const modules = {
         }
       };
 
-    function Sp(pp) {
-      return "string" !== typeof pp ? pp : Object.hasOwn(Ip, pp) ? Ip[pp] : null
+    function zQ(QQ) {
+      return "string" !== typeof QQ ? QQ : Object.hasOwn(TQ, QQ) ? TQ[QQ] : null
     }
 
-    function xp(pp, ip, cp) {
-      return Math.min(cp, Math.max(ip, pp))
+    function sQ(QQ, WQ, XQ) {
+      return Math.min(XQ, Math.max(WQ, QQ))
     }
 
-    function Lp(pp) {
-      const ip = xp(pp.durationMs, 10, 500),
-        cp = xp(pp.attackMs, 0, ip),
+    function FQ(QQ) {
+      const WQ = sQ(QQ.durationMs, 10, 500),
+        XQ = sQ(QQ.attackMs, 0, WQ),
         {
-          intonation: op
-        } = pp;
+          intonation: qQ
+        } = QQ;
       return {
-        waveform: Op.includes(pp.waveform) ? pp.waveform : "sine",
-        pitchHz: xp(pp.pitchHz, 20, 4e3),
-        glideSemitones: xp(pp.glideSemitones, -24, 24),
-        durationMs: ip,
-        attackMs: cp,
-        releaseMs: xp(pp.releaseMs, 0, ip - cp),
-        lowpassHz: null === pp.lowpassHz ? null : xp(pp.lowpassHz, 20, 2e4),
-        volume: xp(pp.volume, 0, 2),
+        waveform: wQ.includes(QQ.waveform) ? QQ.waveform : "sine",
+        pitchHz: sQ(QQ.pitchHz, 20, 4e3),
+        glideSemitones: sQ(QQ.glideSemitones, -24, 24),
+        durationMs: WQ,
+        attackMs: XQ,
+        releaseMs: sQ(QQ.releaseMs, 0, WQ - XQ),
+        lowpassHz: null === QQ.lowpassHz ? null : sQ(QQ.lowpassHz, 20, 2e4),
+        volume: sQ(QQ.volume, 0, 2),
         intonation: {
-          variationSemitones: xp(op.variationSemitones, 0, 6),
-          declineSemitones: xp(op.declineSemitones, 0, 12),
-          questionRiseSemitones: xp(op.questionRiseSemitones, 0, 12),
-          exclaimLiftSemitones: xp(op.exclaimLiftSemitones, 0, 12)
+          variationSemitones: sQ(qQ.variationSemitones, 0, 6),
+          declineSemitones: sQ(qQ.declineSemitones, 0, 12),
+          questionRiseSemitones: sQ(qQ.questionRiseSemitones, 0, 12),
+          exclaimLiftSemitones: sQ(qQ.exclaimLiftSemitones, 0, 12)
         },
-        syllableMs: xp(pp.syllableMs, 25, 200)
+        syllableMs: sQ(QQ.syllableMs, 25, 200)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

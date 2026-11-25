@@ -1,23 +1,23 @@
-export const id = 20;
-export const ids = [20];
+export const id = 21;
+export const ids = [21];
 export const modules = {
-  39642: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      default: () => op
+  39730: (QQ, WQ, XQ) => {
+    XQ.r(WQ), XQ.d(WQ, {
+      default: () => qQ
     });
-    var Op = cp(34);
-    const op = function(pp, ip, cp) {
-      let op;
+    var wQ = XQ(31);
+    const qQ = function(QQ, WQ, XQ) {
+      let qQ;
       return {
-        onCreate: pp => {
-          op = pp
+        onCreate: QQ => {
+          qQ = QQ
         },
-        onPlayerClick: (pp, ip, cp, Ip, Sp, xp) => {
-          ip || "Workbench" !== op.getMetaInfo(xp).rootName || Op.m.GA("toggleMenu", "inventory|Workbench")
+        onPlayerClick: (QQ, WQ, XQ, TQ, zQ, sQ) => {
+          WQ || "Workbench" !== qQ.getMetaInfo(sQ).rootName || wQ.k.mB("toggleMenu", "inventory|Workbench")
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

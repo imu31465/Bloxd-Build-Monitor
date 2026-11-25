@@ -1,46 +1,215 @@
 export const id = 161;
 export const ids = [161];
 export const modules = {
-  9062: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      pageBody: () => Op
+  36906: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      B: () => DQ,
+      b: () => TQ,
+      f: () => BQ,
+      h: () => yQ,
+      j: () => sQ,
+      n: () => rQ,
+      r: () => VQ,
+      t: () => JQ,
+      u: () => pQ,
+      y: () => jQ
     });
-    const Op = {
-      whatIs: ["Protect your bed, destroy theirs. That's the whole idea of Bedwars, the team PvP strategy mode that's free to play online. Every team starts on its own floating island with a bed to protect. Collect resources, buy gear and team upgrades, then bridge across to the other islands and destroy their beds. Once a team's bed is gone they can't respawn. The last team standing wins. Want every item to come from a Lucky Block instead of the shop? Try Lucky Bedwars."],
-      howToPlay: ["Play Bedwars Solos, Duos, Trios, 4v4, 4v4v4v4 or 1v1. Generators on your island drop Coal, Iron Bars and Diamond. Spend them at the Item Shop on blocks, weapons, armour and tools, or at the Upgrades shopkeeper on team upgrades like Protection, Damage, Feather Falling, Health Regeneration and an Alarm. The generators in the centre of the map drop Diamond and Moonstone for the most powerful items.", "As the match goes on, bed defences are unfortified, the Diamond and Moonstone generators level up, and eventually every bed is destroyed. Then the arena shrinks until only one team is left."],
-      features: ["Solos, Duos, Trios, 4v4v4v4 and 4v4", "Ranked Bedwars Lobby", "Team Upgrades: Protection, Damage, Feather Falling, Health Regeneration and Alarm", "Match Modifiers like Lucky Chaos, Weapon Roulette, Treasure Guardians and Specialists", "Dozens of Maps", "Leaderboards"],
-      tips: ["Rush other teams' beds before they can upgrade their defences", "Split up attack and defence with your team", "Upgrade your gear in the shop before leaving your island", "Bridging backwards is faster than ez bridging", "Fight for the centre generators, because Diamond and Moonstone buy the best gear", "Buy an Alarm so you know when enemies reach your base"],
-      similarGames: ["luckyBedwars", "skywars", "luckyTowers"],
-      faq: [{
-        question: "What is Bedwars?",
-        answer: "Bedwars is a team PvP strategy game where you protect your bed and destroy everyone else's. Bloxd's version adds team upgrades, match modifiers and a Ranked lobby."
-      }, {
-        question: "How do you win Bedwars?",
-        answer: "Be the last team standing. Destroy the other teams' beds so they can't respawn, then eliminate them before the arena shrinks."
-      }, {
-        question: "What happens after your bed is destroyed?",
-        answer: "You can't respawn. If you die after your bed is gone, you become a spectator."
-      }, {
-        question: "What do the Bedwars generators do?",
-        answer: "Your island's generators drop Coal, Iron Bars and Diamond for items and upgrades. The generators in the centre drop Diamond and Moonstone for the most powerful items."
-      }, {
-        question: "What modes can I play in Bloxd Bedwars?",
-        answer: "Solos, Duos, Trios, 4v4, 4v4v4v4 and 1v1. There's also a Ranked Bedwars lobby if you want to climb the leaderboards."
-      }, {
-        question: "What are match modifiers?",
-        answer: "Some matches add a twist. In Supercharged, every generator starts at Level 2. In Boom, explosives are half price. Weapon Roulette gives you a new random weapon every respawn, and in Specialists you pick a role with special perks."
-      }, {
-        question: "Can I attack my teammates?",
-        answer: "No, you can't attack players on your own team."
-      }, {
-        question: "How many Bedwars maps are there?",
-        answer: "Dozens, including Scary Hollow, Wood Factory, Ahoy!, Colosseum and Rooftops."
-      }, {
-        question: "What's the difference between Bedwars and Lucky Bedwars?",
-        answer: "In Bedwars you collect Coal, Iron Bars, Diamond and Moonstone from generators and choose what to buy. Lucky Bedwars hands out gear through Lucky Blocks instead, so no two matches play out the same."
-      }]
+    var wQ = XQ(26),
+      qQ = XQ(31);
+    const TQ = "clientGameInventoryButtonsChanged",
+      zQ = new Map;
+
+    function sQ() {
+      return [...zQ.values()].sort(((QQ, WQ) => {
+        var XQ, wQ;
+        return (null !== (XQ = QQ.order) && void 0 !== XQ ? XQ : 0) - (null !== (wQ = WQ.order) && void 0 !== wQ ? wQ : 0)
+      }))
     }
+    let FQ = null;
+
+    function PQ(QQ) {
+      FQ = QQ
+    }
+    let gQ = !1;
+
+    function JQ(QQ) {
+      gQ = !0;
+      try {
+        QQ.onClick()
+      } finally {
+        gQ = !1
+      }
+      QQ.panel && "clientGame" === wQ.b.get("openInGameMenuName") && PQ(QQ.id)
+    }
+
+    function rQ() {
+      return gQ
+    }
+
+    function IQ() {
+      return sQ().filter((QQ => QQ.panel && !QQ.disabled))
+    }
+
+    function jQ(QQ) {
+      const WQ = IQ(),
+        XQ = WQ.findIndex((QQ => QQ.id === FQ));
+      return !(XQ < 0 || WQ.length < 2) && (JQ(WQ[(XQ + QQ + WQ.length) % WQ.length]), !0)
+    }
+
+    function BQ() {
+      return null !== FQ && IQ().length > 1
+    }
+
+    function yQ() {
+      PQ(null)
+    }
+
+    function VQ() {
+      "inventory" !== wQ.b.get("openInGameMenuName") && PQ(null)
+    }
+
+    function DQ() {
+      const QQ = FQ;
+      return PQ(null), QQ
+    }
+
+    function pQ(QQ) {
+      return zQ.set(QQ.id, QQ), qQ.k.mB(TQ, sQ(), !0), () => {
+        zQ.get(QQ.id) === QQ && (zQ.delete(QQ.id), qQ.k.mB(TQ, sQ()))
+      }
+    }
+  },
+  36900: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      A: () => gQ,
+      c: () => sQ,
+      g: () => DQ,
+      j: () => yQ,
+      n: () => VQ,
+      q: () => rQ,
+      s: () => PQ,
+      u: () => BQ,
+      y: () => IQ
+    });
+    var wQ = XQ(26),
+      qQ = XQ(31),
+      TQ = XQ(1335),
+      zQ = XQ(36906);
+    const sQ = "clientGameUiChanged";
+    let FQ = null;
+
+    function PQ() {
+      return FQ
+    }
+
+    function gQ(QQ, WQ) {
+      const XQ = {
+        content: QQ,
+        menu: WQ
+      };
+      return FQ = XQ, qQ.k.mB(sQ, FQ, !0), () => {
+        FQ === XQ && (FQ = null, jQ = !1, yQ(), qQ.k.mB(sQ, null))
+      }
+    }
+    let JQ = null;
+
+    function rQ() {
+      return JQ
+    }
+
+    function IQ(QQ) {
+      return JQ = QQ, () => {
+        JQ === QQ && (JQ = null)
+      }
+    }
+    let jQ = !1;
+
+    function BQ() {
+      const QQ = wQ.b.get("openInGameMenuName");
+      "clientGame" !== QQ && (jQ = "inventory" === QQ), (0, zQ.n)() || (0, zQ.h)(), (0, TQ.z)(TQ.e), wQ.b.set({
+        openInGameMenuName: "clientGame",
+        openEverythingMenuName: null
+      })
+    }
+
+    function yQ() {
+      pQ(!1)
+    }
+
+    function VQ() {
+      pQ(jQ)
+    }
+
+    function DQ() {
+      jQ && pQ(!1)
+    }
+
+    function pQ(QQ) {
+      "clientGame" === wQ.b.get("openInGameMenuName") && wQ.b.set({
+        openInGameMenuName: QQ ? "inventory" : null
+      }), QQ || (0, zQ.h)(), jQ = !1
+    }
+  },
+  9145: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      b: () => zQ
+    });
+    var wQ = XQ(9153),
+      qQ = XQ(663),
+      TQ = XQ(158);
+
+    function zQ(QQ) {
+      var WQ, XQ;
+      if ((0, qQ.G)(QQ)) return !0;
+      const zQ = null !== (WQ = null === (XQ = TQ.siteUsedData[TQ.siteUsed]) || void 0 === XQ ? void 0 : XQ.adConfig.showRewardedAds) && void 0 !== WQ && WQ;
+      for (const qQ in QQ) {
+        const WQ = QQ[qQ];
+        if (null !== WQ && void 0 !== WQ && WQ.items)
+          for (const QQ in WQ.items)
+            if ((0, wQ.k)(WQ.items[QQ], zQ)) return !1
+      }
+      return !0
+    }
+  },
+  60851: (QQ, WQ, XQ) => {
+    XQ.r(WQ), XQ.d(WQ, {
+      getClientGameMapKey: () => wQ.q,
+      shopIsEmpty: () => qQ.b
+    });
+    var wQ = XQ(36900),
+      qQ = XQ(9145)
+  },
+  9153: (QQ, WQ, XQ) => {
+    function wQ(QQ, WQ) {
+      return !QQ.hidden && (WQ || !QQ.isRewardedAd)
+    }
+
+    function qQ(QQ) {
+      return "object" === typeof QQ ? QQ.option : QQ
+    }
+
+    function TQ(QQ, WQ) {
+      var XQ;
+      if ("dropdown" === (null === (XQ = QQ.userInput) || void 0 === XQ ? void 0 : XQ.type) && "object" === typeof QQ.userInput.dropdownOptions[0]) {
+        for (const XQ of QQ.userInput.dropdownOptions)
+          if (qQ(XQ) === WQ) return "object" === typeof XQ ? XQ.cost : QQ.cost;
+        console.error("Didn't find matching option for dropdown item. Item:", QQ, "input:", WQ)
+      }
+      return QQ.cost
+    }
+
+    function zQ(QQ, WQ, XQ) {
+      var wQ;
+      const qQ = null !== (wQ = XQ.excludedPlayers) && void 0 !== wQ ? wQ : [WQ];
+      return QQ.filter((QQ => !qQ.includes(QQ)))
+    }
+    XQ.d(WQ, {
+      c: () => TQ,
+      e: () => qQ,
+      i: () => zQ,
+      k: () => wQ
+    })
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

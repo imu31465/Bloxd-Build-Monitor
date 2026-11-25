@@ -1,286 +1,286 @@
-export const id = 45;
-export const ids = [45, 205];
+export const id = 47;
+export const ids = [47, 211];
 export const modules = {
-  34484: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      packDisplayName: () => yp,
-      packModelMessage: () => Up,
-      packModelSummary: () => vp,
-      refusedPackModels: () => wp
+  34589: (QQ, WQ, XQ) => {
+    XQ.r(WQ), XQ.d(WQ, {
+      packDisplayName: () => jQ,
+      packModelMessage: () => BQ,
+      packModelSummary: () => VQ,
+      refusedPackModels: () => yQ
     });
-    var Op = cp(34493),
-      op = cp(34496);
-    const Ip = "DRACO",
-      Sp = 0,
-      xp = 1,
-      Lp = 0,
-      Yp = 1,
-      Dp = 32768;
+    var wQ = XQ(34591),
+      qQ = XQ(34596);
+    const TQ = "DRACO",
+      zQ = 0,
+      sQ = 1,
+      FQ = 0,
+      PQ = 1,
+      gQ = 32768;
 
-    function Ap(pp) {
-      const ip = new DataView(pp.buffer, pp.byteOffset, pp.byteLength);
-      let cp = 0;
-      const Op = () => {
-          if (cp >= pp.byteLength) throw new RangeError("past the stream");
-          return pp[cp++]
+    function JQ(QQ) {
+      const WQ = new DataView(QQ.buffer, QQ.byteOffset, QQ.byteLength);
+      let XQ = 0;
+      const wQ = () => {
+          if (XQ >= QQ.byteLength) throw new RangeError("past the stream");
+          return QQ[XQ++]
         },
-        op = () => {
-          if (cp + 4 > pp.byteLength) throw new RangeError("past the stream");
-          const Op = ip.getUint32(cp, !0);
-          return cp += 4, Op
+        qQ = () => {
+          if (XQ + 4 > QQ.byteLength) throw new RangeError("past the stream");
+          const wQ = WQ.getUint32(XQ, !0);
+          return XQ += 4, wQ
         },
-        Ap = () => {
-          let pp = 0;
-          for (let ip = 0; ip < 35; ip += 7) {
-            const cp = Op();
-            if (pp += (127 & cp) * 2 ** ip, 0 === (128 & cp)) return pp
+        JQ = () => {
+          let QQ = 0;
+          for (let WQ = 0; WQ < 35; WQ += 7) {
+            const XQ = wQ();
+            if (QQ += (127 & XQ) * 2 ** WQ, 0 === (128 & XQ)) return QQ
           }
           throw new RangeError("varint too long")
         };
       try {
-        for (let pp = 0; pp < Ip.length; pp++)
-          if (Op() !== Ip.charCodeAt(pp)) return null;
-        const ip = Op(),
-          Pp = Op(),
-          Wp = Op(),
-          yp = Op(),
-          Up = Op() | Op() << 8;
-        if (2 !== ip) return null;
-        0 !== (Up & Dp) && function(pp, ip, cp) {
-          const Op = () => {
-              ip(cp())
+        for (let QQ = 0; QQ < TQ.length; QQ++)
+          if (wQ() !== TQ.charCodeAt(QQ)) return null;
+        const WQ = wQ(),
+          rQ = wQ(),
+          IQ = wQ(),
+          jQ = wQ(),
+          BQ = wQ() | wQ() << 8;
+        if (2 !== WQ) return null;
+        0 !== (BQ & gQ) && function(QQ, WQ, XQ) {
+          const wQ = () => {
+              WQ(XQ())
             },
-            op = () => {
-              let cp = 1,
-                op = !0;
-              for (; cp > 0;) {
-                cp--, op || Op(), op = !1;
-                const Ip = pp();
-                for (let cp = 0; cp < Ip; cp++) Op(), ip(pp());
-                cp += pp()
+            qQ = () => {
+              let XQ = 1,
+                qQ = !0;
+              for (; XQ > 0;) {
+                XQ--, qQ || wQ(), qQ = !1;
+                const TQ = QQ();
+                for (let XQ = 0; XQ < TQ; XQ++) wQ(), WQ(QQ());
+                XQ += QQ()
               }
             },
-            Ip = pp();
-          for (let Sp = 0; Sp < Ip; Sp++) pp(), op();
-          op()
-        }(Ap, (ip => {
-          if (cp + ip > pp.byteLength) throw new RangeError("past the stream");
-          cp += ip
-        }), Op);
-        const wp = Pp < 2 ? op : Ap;
-        if (Wp === Sp) return {
+            TQ = QQ();
+          for (let zQ = 0; zQ < TQ; zQ++) QQ(), qQ();
+          qQ()
+        }(JQ, (WQ => {
+          if (XQ + WQ > QQ.byteLength) throw new RangeError("past the stream");
+          XQ += WQ
+        }), wQ);
+        const yQ = rQ < 2 ? qQ : JQ;
+        if (IQ === zQ) return {
           faces: 0,
-          vertices: op()
+          vertices: qQ()
         };
-        if (Wp !== xp) return null;
-        if (yp === Lp) {
+        if (IQ !== sQ) return null;
+        if (jQ === FQ) {
           return {
-            faces: wp(),
-            vertices: wp()
+            faces: yQ(),
+            vertices: yQ()
           }
         }
-        if (yp !== Yp) return null;
-        Op(), Pp < 2 && Ap();
-        const vp = Ap();
+        if (jQ !== PQ) return null;
+        wQ(), rQ < 2 && JQ();
+        const VQ = JQ();
         return {
-          faces: Ap(),
-          vertices: vp
+          faces: JQ(),
+          vertices: VQ
         }
       } catch {
         return null
       }
     }
 
-    function Pp(pp, ip, cp) {
-      var Op, op;
-      if (null === (Op = null === (op = pp.extensionsUsed) || void 0 === op ? void 0 : op.includes("KHR_draco_mesh_compression")) || void 0 === Op || !Op) return null;
-      for (const yp of null !== (Ip = pp.meshes) && void 0 !== Ip ? Ip : []) {
-        var Ip;
-        for (const Op of yp.primitives) {
-          var Sp, xp, Lp, Yp, Dp, Pp;
-          const op = null === (Sp = Op.extensions) || void 0 === Sp ? void 0 : Sp.KHR_draco_mesh_compression;
-          if ("object" !== typeof op || null === op) continue;
-          const Ip = null === (xp = pp.bufferViews) || void 0 === xp ? void 0 : xp[op.bufferView];
-          if (null === ip || void 0 === Ip) return Wp;
-          const yp = null !== (Lp = Ip.byteOffset) && void 0 !== Lp ? Lp : 0,
-            Up = Ap(ip.subarray(yp, yp + Ip.byteLength));
-          if (null === Up && !cp) continue;
-          const wp = null !== (Yp = pp.accessors) && void 0 !== Yp ? Yp : [],
-            vp = null === (Dp = wp[Op.attributes.POSITION]) || void 0 === Dp ? void 0 : Dp.count,
-            tp = void 0 === Op.indices ? 0 : null === (Pp = wp[Op.indices]) || void 0 === Pp ? void 0 : Pp.count;
-          if (null === Up || void 0 === vp || void 0 === tp || 3 * Up.faces !== tp || Up.vertices > vp) return Wp
+    function rQ(QQ, WQ, XQ) {
+      var wQ, qQ;
+      if (null === (wQ = null === (qQ = QQ.extensionsUsed) || void 0 === qQ ? void 0 : qQ.includes("KHR_draco_mesh_compression")) || void 0 === wQ || !wQ) return null;
+      for (const jQ of null !== (TQ = QQ.meshes) && void 0 !== TQ ? TQ : []) {
+        var TQ;
+        for (const wQ of jQ.primitives) {
+          var zQ, sQ, FQ, PQ, gQ, rQ;
+          const qQ = null === (zQ = wQ.extensions) || void 0 === zQ ? void 0 : zQ.KHR_draco_mesh_compression;
+          if ("object" !== typeof qQ || null === qQ) continue;
+          const TQ = null === (sQ = QQ.bufferViews) || void 0 === sQ ? void 0 : sQ[qQ.bufferView];
+          if (null === WQ || void 0 === TQ) return IQ;
+          const jQ = null !== (FQ = TQ.byteOffset) && void 0 !== FQ ? FQ : 0,
+            BQ = JQ(WQ.subarray(jQ, jQ + TQ.byteLength));
+          if (null === BQ && !XQ) continue;
+          const yQ = null !== (PQ = QQ.accessors) && void 0 !== PQ ? PQ : [],
+            VQ = null === (gQ = yQ[wQ.attributes.POSITION]) || void 0 === gQ ? void 0 : gQ.count,
+            DQ = void 0 === wQ.indices ? 0 : null === (rQ = yQ[wQ.indices]) || void 0 === rQ ? void 0 : rQ.count;
+          if (null === BQ || void 0 === VQ || void 0 === DQ || 3 * BQ.faces !== DQ || BQ.vertices > VQ) return IQ
         }
       }
       return null
     }
-    const Wp = "has a Draco stream whose counts don't match its accessors";
+    const IQ = "has a Draco stream whose counts don't match its accessors";
 
-    function yp(pp) {
-      var ip;
-      return null !== (ip = pp.name) && void 0 !== ip ? ip : pp.fromFolderName || pp.id
+    function jQ(QQ) {
+      var WQ;
+      return null !== (WQ = QQ.name) && void 0 !== WQ ? WQ : QQ.fromFolderName || QQ.id
     }
 
-    function Up(pp, ip, cp) {
-      return `Texture pack "${pp}": model "${ip}" was not loaded because it ${cp}. The default model is used instead.`
+    function BQ(QQ, WQ, XQ) {
+      return `Texture pack "${QQ}": model "${WQ}" was not loaded because it ${XQ}. The default model is used instead.`
     }
 
-    function wp(pp, ip, cp) {
+    function yQ(QQ, WQ, XQ) {
       let {
-        strictDraco: Ip = !1
+        strictDraco: TQ = !1
       } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const Sp = {};
-      for (const [xp, Lp] of Object.entries(ip)) {
-        let ip;
-        if (Lp.startsWith("data:")) try {
-          const pp = new Uint8Array((0, op.s)(Lp));
-          if (ip = (0, Op.b)(pp), null === ip) {
+      const zQ = {};
+      for (const [sQ, FQ] of Object.entries(WQ)) {
+        let WQ;
+        if (FQ.startsWith("data:")) try {
+          const QQ = new Uint8Array((0, qQ.l)(FQ));
+          if (WQ = (0, wQ.c)(QQ), null === WQ) {
             const {
-              json: cp,
-              bin: Op
-            } = (0, op.B)(pp);
-            ip = Pp(cp, Op, Ip)
+              json: XQ,
+              bin: wQ
+            } = (0, qQ.u)(QQ);
+            WQ = rQ(XQ, wQ, TQ)
           }
         } catch {
-          ip = "is not a binary glTF 2.0 file"
-        } else ip = "loads data from outside the file";
-        ip && (Sp[xp] = ip, cp && console.warn(Up(pp, xp, ip)))
+          WQ = "is not a binary glTF 2.0 file"
+        } else WQ = "loads data from outside the file";
+        WQ && (zQ[sQ] = WQ, XQ && console.warn(BQ(QQ, sQ, WQ)))
       }
-      return Sp
+      return zQ
     }
 
-    function vp(pp, ip) {
-      const cp = Object.keys(ip);
-      if (0 === cp.length) return null;
-      if (1 === cp.length) return Up(pp, cp[0], ip[cp[0]]);
-      const Op = cp.map((pp => `"${pp}" ${ip[pp]}`)).join("; ");
-      return `Texture pack "${pp}": ${cp.length} models were not loaded (${Op}). The default models are used instead.`
+    function VQ(QQ, WQ) {
+      const XQ = Object.keys(WQ);
+      if (0 === XQ.length) return null;
+      if (1 === XQ.length) return BQ(QQ, XQ[0], WQ[XQ[0]]);
+      const wQ = XQ.map((QQ => `"${QQ}" ${WQ[QQ]}`)).join("; ");
+      return `Texture pack "${QQ}": ${XQ.length} models were not loaded (${wQ}). The default models are used instead.`
     }
   },
-  61592: (pp, ip, cp) => {
-    cp.d(ip, {
-      packAssets: () => vp
+  61761: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      packAssets: () => VQ
     });
-    var Op = cp(2187),
-      op = cp(2174),
-      Ip = cp(34484),
-      Sp = cp(3316),
-      xp = cp(3335);
+    var wQ = XQ(2226),
+      qQ = XQ(2211),
+      TQ = XQ(34589),
+      zQ = XQ(3483),
+      sQ = XQ(3514);
 
-    function Lp(pp, ip, cp, Op) {
-      const op = `${(0,Sp.b)(pp,ip)}|sheets${cp}`;
-      return Op === xp.d ? op : `${op}|layers${Op}`
+    function FQ(QQ, WQ, XQ, wQ) {
+      const qQ = `${(0,zQ.e)(QQ,WQ)}|sheets${XQ}`;
+      return wQ === sQ.c ? qQ : `${qQ}|layers${wQ}`
     }
-    var Yp = cp(3343),
-      Dp = cp(3280),
-      Ap = cp(3267),
-      Pp = cp(3320);
-    var Wp = cp(51220);
-    const yp = 256;
-    let Up = null,
-      wp = null;
+    var PQ = XQ(3517),
+      gQ = XQ(3453),
+      JQ = XQ(3440),
+      rQ = XQ(3492);
+    var IQ = XQ(51248);
+    const jQ = 256;
+    let BQ = null,
+      yQ = null;
 
-    function vp(pp) {
-      var ip;
-      let cp = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : xp.d;
-      if ((null === (ip = Up) || void 0 === ip ? void 0 : ip.pack) === pp.pack && Up.maxLayerWidth === cp) return Up.assets;
-      const vp = (0, Wp.f)(pp.pack, (0, Wp.h)(pp));
-      if (null === vp || !(0, op.f)(vp)) return Promise.resolve(null);
-      const Hp = async function(pp, ip, cp) {
-        var Wp;
-        const Up = null !== (Wp = pp.textureOverrides) && void 0 !== Wp ? Wp : {},
+    function VQ(QQ) {
+      var WQ;
+      let XQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : sQ.c;
+      if ((null === (WQ = BQ) || void 0 === WQ ? void 0 : WQ.pack) === QQ.pack && BQ.maxLayerWidth === XQ) return BQ.assets;
+      const VQ = (0, IQ.f)(QQ.pack, (0, IQ.n)(QQ));
+      if (null === VQ || !(0, qQ.g)(VQ)) return Promise.resolve(null);
+      const pQ = async function(QQ, WQ, XQ) {
+        var IQ;
+        const BQ = null !== (IQ = QQ.textureOverrides) && void 0 !== IQ ? IQ : {},
           {
-            id: vp,
-            version: Hp
-          } = pp.metaData,
-          dp = ip && vp !== Op.q.CUSTOM,
-          ep = {};
-        dp && (wp = ep);
-        let jp, kp, mp = dp ? await async function(pp, ip, cp, Op) {
-          const op = Lp(pp, ip, cp, xp.d),
-            Ip = Lp(pp, ip, cp, Op),
-            Yp = await (0, Sp.f)((pp => pp === op || pp === Ip));
-          return null !== Yp && (Op === xp.d || Yp.blockAtlasWidth <= Op) ? Yp : null
-        }(vp, Hp, yp, cp): null;
-        if (null === mp) {
+            id: VQ,
+            version: pQ
+          } = QQ.metaData,
+          GQ = WQ && VQ !== wQ.i.CUSTOM,
+          UQ = {};
+        GQ && (yQ = UQ);
+        let bQ, vQ, dQ = GQ ? await async function(QQ, WQ, XQ, wQ) {
+          const qQ = FQ(QQ, WQ, XQ, sQ.c),
+            TQ = FQ(QQ, WQ, XQ, wQ),
+            PQ = await (0, zQ.j)((QQ => QQ === qQ || QQ === TQ));
+          return null !== PQ && (wQ === sQ.c || PQ.blockAtlasWidth <= wQ) ? PQ : null
+        }(VQ, pQ, jQ, XQ): null;
+        if (null === dQ) {
           const {
-            blockMetadata: pp,
-            getDefaultTexture: ip,
-            textureNameToIndex: Ip
-          } = await (0, op.n)(), xp = (0, Dp.c)(pp, ((pp, cp) => ({
-            url: tp(Up, ip, pp, "block" === cp ? Ap.i.BLOCK : Ap.i.ITEM)
-          }))), Yp = await
-          function(pp, ip, cp, Op, op, Ip) {
-            return (0, Pp.b)((Sp => Sp.WasmTextureWorker.generateRequired(pp, ip, cp, Op, op, Ip)))
-          }(pp, Ip, xp, vp === Op.b, cp, yp), Wp = Yp.assets;
-          mp = {
-            ...Wp,
+            blockMetadata: QQ,
+            getDefaultTexture: WQ,
+            textureNameToIndex: TQ
+          } = await (0, qQ.k)(), sQ = (0, gQ.d)(QQ, ((QQ, XQ) => ({
+            url: DQ(BQ, WQ, QQ, "block" === XQ ? JQ.d.BLOCK : JQ.d.ITEM)
+          }))), PQ = await
+          function(QQ, WQ, XQ, wQ, qQ, TQ) {
+            return (0, rQ.c)((zQ => zQ.WasmTextureWorker.generateRequired(QQ, WQ, XQ, wQ, qQ, TQ)))
+          }(QQ, TQ, sQ, VQ === wQ.c, XQ, jQ), IQ = PQ.assets;
+          dQ = {
+            ...IQ,
             averageColors: {}
-          }, jp = Yp.averageColors(), dp && (kp = jp.then((async pp => {
-            null !== pp && wp === ep && await
-            function(pp, ip, cp, Op, op) {
-              return (0, Sp.i)(Lp(pp, ip, Op, op), cp)
-            }(vp, Hp, {
-              ...Wp,
-              averageColors: pp
-            }, yp, Yp.layerCap)
+          }, bQ = PQ.averageColors(), GQ && (vQ = bQ.then((async QQ => {
+            null !== QQ && yQ === UQ && await
+            function(QQ, WQ, XQ, wQ, qQ) {
+              return (0, zQ.r)(FQ(QQ, WQ, wQ, qQ), XQ)
+            }(VQ, pQ, {
+              ...IQ,
+              averageColors: QQ
+            }, jQ, PQ.layerCap)
           })))
         }
-        return function(pp, ip) {
-          var cp, Op;
-          let op = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Promise.resolve((xp = pp.averageColors, 0 === Object.keys(null !== xp && void 0 !== xp ? xp : {}).length ? null : pp.averageColors)),
-            Sp = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Promise.resolve();
-          var xp;
-          const Lp = null !== (cp = ip.textureOverrides) && void 0 !== cp ? cp : {},
-            Dp = null !== (Op = ip.modelOverrides) && void 0 !== Op ? Op : {},
-            Ap = 0 === Object.keys(Dp).length ? {} : (0, Ip.refusedPackModels)((0, Ip.packDisplayName)(ip.metaData), Dp, !0, {
+        return function(QQ, WQ) {
+          var XQ, wQ;
+          let qQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Promise.resolve((sQ = QQ.averageColors, 0 === Object.keys(null !== sQ && void 0 !== sQ ? sQ : {}).length ? null : QQ.averageColors)),
+            zQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Promise.resolve();
+          var sQ;
+          const FQ = null !== (XQ = WQ.textureOverrides) && void 0 !== XQ ? XQ : {},
+            gQ = null !== (wQ = WQ.modelOverrides) && void 0 !== wQ ? wQ : {},
+            JQ = 0 === Object.keys(gQ).length ? {} : (0, TQ.refusedPackModels)((0, TQ.packDisplayName)(WQ.metaData), gQ, !0, {
               strictDraco: !0
             }),
             {
-              animatedBlockTextures: Pp,
-              rotatedBlockTextures: Wp
-            } = pp,
-            yp = pp => {
-              var ip, cp;
-              return null !== (ip = null !== (cp = Pp[pp]) && void 0 !== cp ? cp : Wp[pp]) && void 0 !== ip ? ip : null
+              animatedBlockTextures: rQ,
+              rotatedBlockTextures: IQ
+            } = QQ,
+            jQ = QQ => {
+              var WQ, XQ;
+              return null !== (WQ = null !== (XQ = rQ[QQ]) && void 0 !== XQ ? XQ : IQ[QQ]) && void 0 !== WQ ? WQ : null
             };
           return {
             terrain: {
-              atlasSheets: pp.blockAtlasArr,
-              texture: yp
+              atlasSheets: QQ.blockAtlasArr,
+              texture: jQ
             },
-            sheetPixels: [...pp.blockAtlasPixels],
-            heldUntil: Sp,
-            sheetLayout: pp.imagesPerAtlas,
-            sheetWidth: pp.blockAtlasWidth,
-            armourAtlasUrl: pp.armourAtlas,
-            texture: pp => {
-              var ip, cp;
-              return null !== (ip = null !== (cp = yp(pp)) && void 0 !== cp ? cp : (0, Yp.b)(Lp, pp)) && void 0 !== ip ? ip : null
+            sheetPixels: [...QQ.blockAtlasPixels],
+            heldUntil: zQ,
+            sheetLayout: QQ.imagesPerAtlas,
+            sheetWidth: QQ.blockAtlasWidth,
+            armourAtlasUrl: QQ.armourAtlas,
+            texture: QQ => {
+              var WQ, XQ;
+              return null !== (WQ = null !== (XQ = jQ(QQ)) && void 0 !== XQ ? XQ : (0, PQ.e)(FQ, QQ)) && void 0 !== WQ ? WQ : null
             },
-            model: pp => void 0 === Ap[pp] && Dp[pp] || null,
-            averageColours: op
+            model: QQ => void 0 === JQ[QQ] && gQ[QQ] || null,
+            averageColours: qQ
           }
-        }(mp, pp, jp, kp)
-      }(vp, null === pp.gameSource, cp), dp = {
-        pack: pp.pack,
-        maxLayerWidth: cp,
-        assets: Hp
+        }(dQ, QQ, bQ, vQ)
+      }(VQ, null === QQ.gameSource, XQ), GQ = {
+        pack: QQ.pack,
+        maxLayerWidth: XQ,
+        assets: pQ
       };
-      return Up = dp, Hp.catch((() => {
-        Up === dp && (Up = null)
-      })), Hp
+      return BQ = GQ, pQ.catch((() => {
+        BQ === GQ && (BQ = null)
+      })), pQ
     }
 
-    function tp(pp, ip, Op, op) {
-      const Ip = (0, Yp.b)(pp, Op);
-      if (Ip) return Ip;
+    function DQ(QQ, WQ, wQ, qQ) {
+      const TQ = (0, PQ.e)(QQ, wQ);
+      if (TQ) return TQ;
       try {
-        return ip(Op, op).url
+        return WQ(wQ, qQ).url
       } catch {
-        return cp(3425)
+        return XQ(3581)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

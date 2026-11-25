@@ -1,100 +1,108 @@
 export const id = 0;
 export const ids = [0];
 export const modules = {
-  41339: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      CapeMaterialPlugin: () => dp,
-      HueTintMaterialPlugin: () => ep,
-      LifeformMaterialPlugin: () => jp,
-      OverlayMaterialPlugin: () => kp
+  41335: (QQ, WQ, XQ) => {
+    XQ.r(WQ), XQ.d(WQ, {
+      CapeMaterialPlugin: () => GQ,
+      HueTintMaterialPlugin: () => UQ,
+      LifeformMaterialPlugin: () => bQ,
+      OverlayMaterialPlugin: () => vQ
     });
-    var Op = cp(41345),
-      op = cp(38232);
-    class Ip extends((0, Op.d)(op.d)) {}(0, Op.g)(op.d, Ip);
-    var Sp = cp(37411);
-    class xp extends((0, Op.d)(Sp.h)) {}(0, Op.g)(Sp.h, xp);
-    var Lp = cp(38071);
-    class Yp extends((0, Op.d)(Lp.i)) {}(0, Op.g)(Lp.i, Yp);
-    var Dp = cp(37655),
-      Ap = cp(40459),
-      Pp = cp(37646);
-    class Wp extends((0, Op.d)(Pp.i)) {
-      constructor(pp, ip, cp) {
-        super(pp, ip, cp), (0, Dp.g)(pp)
+    var wQ = XQ(41344),
+      qQ = XQ(38293);
+    class TQ extends((0, wQ.i)(qQ.d)) {}(0, wQ.l)(qQ.d, TQ);
+    var zQ = XQ(37456);
+    class sQ extends((0, wQ.i)(zQ.e)) {}(0, wQ.l)(zQ.e, sQ);
+    var FQ = XQ(38129);
+    class PQ extends((0, wQ.i)(FQ.d)) {}(0, wQ.l)(FQ.d, PQ);
+    var gQ = XQ(37698),
+      JQ = XQ(40530),
+      rQ = XQ(37696);
+    class IQ extends((0, wQ.i)(rQ.h)) {
+      constructor(QQ, WQ, XQ) {
+        super(QQ, WQ, XQ), (0, gQ.j)(QQ)
       }
-      dispose(pp) {
-        (0, Dp.i)(this._material), super.dispose(pp)
+      dispose(QQ) {
+        (0, gQ.n)(this._material), super.dispose(QQ)
       }
-    }(0, Op.g)(Pp.i, Wp), (0, Pp.j)({
-      disableUnusedSpecularTerm: Op.c,
-      isLightingDisabled: pp => pp instanceof Ap.StandardMaterial && pp.disableLighting
+    }(0, wQ.l)(rQ.h, IQ), (0, rQ.i)({
+      disableUnusedSpecularTerm: wQ.e,
+      isLightingDisabled: QQ => QQ instanceof JQ.StandardMaterial && QQ.disableLighting
     });
-    var yp = cp(38916);
-    class Up extends((0, Op.d)(yp.g)) {}(0, Op.g)(yp.g, Up);
-    var wp = cp(39014),
-      vp = cp(37496),
-      tp = cp(38352),
-      Hp = cp(37454);
-    class dp extends((0, Op.d)(wp.b)) {}(0, Op.g)(wp.b, dp);
-    class ep extends((0, Op.d)(vp.d)) {}(0, Op.g)(vp.d, ep);
-    class jp extends((0, Op.d)(tp.q)) {}(0, Op.g)(tp.q, jp);
-    class kp extends((0, Op.d)(Hp.d)) {}(0, Op.g)(Hp.d, kp)
+    var jQ = XQ(38966);
+    class BQ extends((0, wQ.i)(jQ.e)) {}(0, wQ.l)(jQ.e, BQ);
+    var yQ = XQ(39081),
+      VQ = XQ(37555),
+      DQ = XQ(38427),
+      pQ = XQ(37500);
+    class GQ extends((0, wQ.i)(yQ.c)) {}(0, wQ.l)(yQ.c, GQ);
+    class UQ extends((0, wQ.i)(VQ.d)) {}(0, wQ.l)(VQ.d, UQ);
+    class bQ extends((0, wQ.i)(DQ.m)) {}(0, wQ.l)(DQ.m, bQ);
+    class vQ extends((0, wQ.i)(pQ.c)) {}(0, wQ.l)(pQ.c, vQ)
   },
-  41801: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      addBabylonLights: () => ji,
-      default: () => Ri
+  41797: (QQ, WQ, XQ) => {
+    XQ.r(WQ), XQ.d(WQ, {
+      addBabylonLights: () => lW,
+      default: () => cW
     });
-    var Op = cp(41806),
-      op = (cp(40182), cp(41333), cp(40663), cp(41814)),
-      Ip = cp(37479),
-      Sp = cp(37313),
-      xp = cp(41826),
-      Lp = cp(41834),
-      Yp = cp(37448),
-      Dp = (cp(41345), cp(41851)),
-      Ap = cp(41843),
-      Pp = cp(38949),
-      Wp = cp(41860),
-      yp = cp(40062),
-      Up = cp(38938);
-    const wp = "gpuParticles",
-      vp = Up.o,
-      tp = pp => pp / 4,
-      Hp = pp => `gpuParticleSystem[${pp>>2}].${"xyzw"[3&pp]}`,
-      dp = `\nprecision highp float;\nprecision highp int;\nprecision highp usampler2D;\n\n#define MAX_STOPS ${Up.d}\n#define COLOR_POSITIONS ${tp(vp.colorPositions)}\n#define COLOR1 ${tp(vp.color1)}\n#define COLOR2 ${tp(vp.color2)}\n#define VELOCITY ${tp(vp.tw)}\n#define REMAP ${tp(vp.remap)}\n#define RECORDS_PER_ROW ${Up.l}\n\nuniform mat4 gpuParticleView;\nuniform mat4 gpuParticleProjection;\nuniform vec4 gpuParticleSystem[${Up.m/4}];\n// The records' frame offset and the system's clock; the slot drawn first (the oldest) and the slots in use.\nuniform vec4 gpuParticleFrame;\nuniform vec2 gpuParticleRange;\nuniform usampler2D gpuParticleRecords;\n\nvarying vec2 vUV;\nvarying vec4 vColor;\nvarying vec4 vRemap;\n\nvec3 gravity() { return vec3(${Hp(vp.gravity)}, ${Hp(vp.gravity+1)}, ${Hp(vp.gravity+2)}); }\nint colorCount() { return int(${Hp(vp.colorCount)}); }\nvec4 colorDead() { return gpuParticleSystem[${tp(vp.colorDead)}]; }\nint velocityCount() { return int(${Hp(vp.velocityCount)}); }\nint remapCount() { return int(${Hp(vp.remapCount)}); }\n\nuint hash(uint v) {\n\tuint state = v * 747796405u + 2891336453u;\n\t// (state >> 28) + 4 as constant shifts: ANGLE's Direct3D 11 on Intel gen 7/7.5/8 shifts by a variable amount wrongly\n\tuint top = state >> 28u;\n\tuint bits0 = state >> 4u;\n\tuint bits1 = (top & 1u) != 0u ? bits0 >> 1u : bits0;\n\tuint bits2 = (top & 2u) != 0u ? bits1 >> 2u : bits1;\n\tuint bits3 = (top & 4u) != 0u ? bits2 >> 4u : bits2;\n\tuint word = (((top & 8u) != 0u ? bits3 >> 8u : bits3) ^ state) * 277803737u;\n\treturn (word >> 22u) ^ word;\n}\n\n// The particle's own random pick for a gradient stop, as Babylon picks one when the particle reaches it.\nfloat random(uint seed, int stop) {\n\treturn float(hash(seed ^ (uint(stop) * 0x9e3779b9u)) >> 8u) / 16777216.0;\n}\n\nfloat colourPosition(int i) {\n\treturn gpuParticleSystem[COLOR_POSITIONS + i / 4][i % 4];\n}\n\nvec4 stopColour(int i, uint seed) {\n\treturn mix(gpuParticleSystem[COLOR1 + i], gpuParticleSystem[COLOR2 + i], random(seed, i));\n}\n\nfloat velocityFactor(int i, uint seed) {\n\tvec4 stop = gpuParticleSystem[VELOCITY + i];\n\treturn mix(stop.y, stop.z, random(seed, MAX_STOPS + i));\n}\n\nvec4 colourAt(vec4 colour0, float age, float ratio, uint seed) {\n\tint n = colorCount();\n\tvec4 colour;\n\tif (n == 0) {\n\t\tcolour = mix(colour0, colorDead(), ratio);\n\t} else if (age == 0.0) {\n\t\treturn stopColour(0, seed);\n\t} else if (ratio < colourPosition(0)) {\n\t\tcolour = stopColour(min(1, n - 1), seed);\n\t} else {\n\t\tcolour = stopColour(n - 1, seed);\n\t\tfor (int i = 0; i + 1 < n; i++) {\n\t\t\tfloat a = colourPosition(i);\n\t\t\tfloat b = colourPosition(i + 1);\n\t\t\tif (ratio >= a && ratio <= b) {\n\t\t\t\tfloat scale = b > a ? (ratio - a) / (b - a) : 0.0;\n\t\t\t\tcolour = mix(stopColour(i, seed), stopColour(i + 1, seed), scale);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\tcolour.a = max(colour.a, 0.0);\n\treturn colour;\n}\n\nvec3 travel(float alpha, float beta, vec3 d, vec3 g, float s0, float s1) {\n\tfloat ds = s1 - s0;\n\tfloat ds2 = (s1 * s1 - s0 * s0) * 0.5;\n\tfloat ds3 = (s1 * s1 * s1 - s0 * s0 * s0) / 3.0;\n\treturn d * (alpha * ds) + (g * alpha + d * beta) * ds2 + g * (beta * ds3);\n}\n\nvec3 displacement(vec3 d, float age, float life, uint seed) {\n\tvec3 g = gravity();\n\tint n = velocityCount();\n\tif (n == 0) {\n\t\treturn d * age + g * (0.5 * age * age);\n\t}\n\tvec3 total = vec3(0.0);\n\tfloat beforeFirst = min(age, gpuParticleSystem[VELOCITY].x * life);\n\tif (beforeFirst > 0.0) {\n\t\ttotal += travel(velocityFactor(min(1, n - 1), seed), 0.0, d, g, 0.0, beforeFirst);\n\t}\n\tfor (int i = 0; i + 1 < n; i++) {\n\t\tfloat a = gpuParticleSystem[VELOCITY + i].x * life;\n\t\tfloat b = gpuParticleSystem[VELOCITY + i + 1].x * life;\n\t\tfloat lo = max(a, 0.0);\n\t\tfloat hi = min(b, age);\n\t\tif (hi > lo) {\n\t\t\tfloat fa = velocityFactor(i, seed);\n\t\t\tfloat beta = (velocityFactor(i + 1, seed) - fa) / (b - a);\n\t\t\ttotal += travel(fa - beta * a, beta, d, g, lo, hi);\n\t\t}\n\t}\n\tfloat afterLast = max(gpuParticleSystem[VELOCITY + n - 1].x * life, 0.0);\n\tif (age > afterLast) {\n\t\ttotal += travel(velocityFactor(n - 1, seed), 0.0, d, g, afterLast, age);\n\t}\n\treturn total;\n}\n\nvec4 remapAt(float age, float ratio) {\n\tint n = remapCount();\n\tif (n == 0 || age == 0.0) {\n\t\treturn vec4(0.0, 1.0, 0.0, 1.0);\n\t}\n\tvec2 stop = gpuParticleSystem[REMAP + n - 1].yz;\n\tif (ratio < gpuParticleSystem[REMAP].x) {\n\t\tstop = gpuParticleSystem[REMAP].yz;\n\t} else {\n\t\tfor (int i = 0; i + 1 < n; i++) {\n\t\t\tvec4 a = gpuParticleSystem[REMAP + i];\n\t\t\tvec4 b = gpuParticleSystem[REMAP + i + 1];\n\t\t\tif (ratio >= a.x && ratio <= b.x) {\n\t\t\t\tstop = mix(a.yz, b.yz, b.x > a.x ? (ratio - a.x) / (b.x - a.x) : 0.0);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\treturn vec4(stop.x, stop.y - stop.x, 0.0, 1.0);\n}\n\nvoid main(void) {\n\t// No division by a variable: ANGLE's Direct3D 11 on Intel gen 7/7.5/8 is suspected of dividing by a uniform wrongly\n\tint count = int(gpuParticleRange.y);\n\tint unwrapped = int(gpuParticleRange.x) + gl_InstanceID;\n\t// One wrap, as start < count and the draw's instances are count (gpuParticleRing.ts)\n\tint slot = unwrapped >= count ? unwrapped - count : unwrapped;\n\tivec2 at = ivec2((slot % RECORDS_PER_ROW) * 4, slot / RECORDS_PER_ROW);\n\tvec4 spawn = uintBitsToFloat(texelFetch(gpuParticleRecords, at, 0));\n\tvec4 velocity = uintBitsToFloat(texelFetch(gpuParticleRecords, at + ivec2(1, 0), 0));\n\tuvec4 sizeSeed = texelFetch(gpuParticleRecords, at + ivec2(2, 0), 0);\n\tvec4 colour0 = uintBitsToFloat(texelFetch(gpuParticleRecords, at + ivec2(3, 0), 0));\n\tfloat age = gpuParticleFrame.w - spawn.w;\n\tfloat life = velocity.w;\n\t// The strip's corners: (0, 0), (1, 0), (0, 1), (1, 1).\n\tvec2 corner = vec2(float(gl_VertexID & 1), float(gl_VertexID >> 1));\n\tvUV = corner;\n\tif (!(age >= 0.0 && age < life)) {\n\t\t// Dead, or not yet written: outside the clip volume.\n\t\tgl_Position = vec4(0.0, 0.0, 2.0, 1.0);\n\t\tvColor = vec4(0.0);\n\t\tvRemap = vec4(0.0, 1.0, 0.0, 1.0);\n\t\treturn;\n\t}\n\tfloat ratio = age / life;\n\tuint seed = sizeSeed.y;\n\tvec3 centre = gpuParticleFrame.xyz + spawn.xyz + displacement(velocity.xyz, age, life, seed);\n\t// particles.vertex's billboard: the corner offset in view space.\n\tvec3 viewPos = (gpuParticleView * vec4(centre, 1.0)).xyz + vec3((corner - 0.5) * uintBitsToFloat(sizeSeed.x), 0.0);\n\tgl_Position = gpuParticleProjection * vec4(viewPos, 1.0);\n\tvColor = colourAt(colour0, age, ratio, seed);\n\tvRemap = remapAt(age, ratio);\n}\n`;
-    yp.b.ShadersStore[`${wp}VertexShader`] = dp, yp.b.ShadersStore[`${wp}PixelShader`] = "\nprecision highp float;\n\nuniform sampler2D gpuParticleTexture;\nuniform sampler2D gpuParticleRampTexture;\nuniform float gpuParticleRamp;\n\nvarying vec2 vUV;\nvarying vec4 vColor;\nvarying vec4 vRemap;\n\nvoid main(void) {\n\tvec4 textureColour = texture2D(gpuParticleTexture, vUV);\n\tvec4 colour = textureColour * vColor;\n\tif (gpuParticleRamp != 0.0) {\n\t\tfloat alpha = colour.a;\n\t\tfloat index = clamp((alpha - vRemap.x) / vRemap.y, 0.0, 1.0);\n\t\tvec4 rampColour = texture2D(gpuParticleRampTexture, vec2(1.0 - index, 0.0));\n\t\tcolour = vec4(colour.rgb * rampColour.rgb, clamp((alpha * rampColour.a - vRemap.z) / vRemap.w, 0.0, 1.0));\n\t}\n#ifdef MULTIPLY_PASS\n\t// The MULTIPLY pass of BLENDMULTIPLYMODE, which MULTIPLYADD draws before its ADD pass.\n\tfloat sourceAlpha = vColor.a * textureColour.a;\n\tcolour.rgb = colour.rgb * sourceAlpha + vec3(1.0 - sourceAlpha);\n#endif\n\tgl_FragColor = colour;\n}\n";
-    const ep = ["gpuParticleView", "gpuParticleProjection", "gpuParticleSystem", "gpuParticleFrame", "gpuParticleRange", "gpuParticleRamp"],
-      jp = ["gpuParticleTexture", "gpuParticleRampTexture", "gpuParticleRecords"];
-    var kp = cp(38930),
-      mp = cp(41864);
-    class Rp extends kp.c {
-      constructor(pp, ip, cp, Op) {
-        super(pp, ip, cp), this.renderer = cp, this.pw = Op, this.id = void 0, this.renderingGroupId = 0, this.layerMask = 268435455, this.records = void 0, this.uniforms = new Float32Array(Up.m), this.uniformBits = new Uint32Array(this.uniforms.buffer), this.ramp = null, this.rampTexels = (0, mp.e)(), this.engine = void 0, this.animatedFrame = -1, this.uploadSlots = (pp, ip) => {
+    var wQ = XQ(41804),
+      qQ = (XQ(40245), XQ(41326), XQ(40732), XQ(41815)),
+      TQ = XQ(37539),
+      zQ = XQ(37367),
+      sQ = XQ(41827),
+      FQ = XQ(41830),
+      PQ = XQ(37492),
+      gQ = (XQ(41344), XQ(41834)),
+      JQ = XQ(41832),
+      rQ = XQ(38991),
+      IQ = XQ(41842),
+      jQ = XQ(40126),
+      BQ = XQ(38979);
+    const yQ = "gpuParticles",
+      VQ = "gpuParticlesSummed",
+      DQ = BQ.u,
+      pQ = QQ => QQ / 4,
+      GQ = (QQ, WQ, XQ, wQ) => Array.from({
+        length: WQ
+      }, ((qQ, TQ) => `(${((QQ,WQ,XQ)=>0===WQ?`${QQ} < 1`:WQ===XQ-1?`${QQ} >= ${WQ}`:`${QQ} == ${WQ}`)(QQ,TQ,WQ)} ? ${XQ(TQ)} : ${wQ})`)).join("\n\t\t+ "),
+      UQ = (QQ, WQ, XQ) => `vec4 ${QQ}(int i) {\n\treturn ${GQ("i",XQ,(QQ=>`gpuParticleSystem[${WQ+QQ}]`),"vec4(0.0)")};\n}\n`,
+      bQ = `\n${UQ("colorPositionsAt",pQ(DQ.colorPositions),BQ.e/4)}\n${UQ("color1At",pQ(DQ.color1),BQ.e)}\n${UQ("color2At",pQ(DQ.color2),BQ.e)}\n${UQ("velocityAt",pQ(DQ.Fy),BQ.e)}\n${UQ("remapStopAt",pQ(DQ.remap),BQ.e)}\nfloat componentAt(vec4 v, int j) {\n\treturn ${GQ("j",4,(QQ=>`v[${QQ}]`),"0.0")};\n}\n`,
+      vQ = (QQ, WQ, XQ, wQ) => QQ ? `${XQ}(${wQ})` : `gpuParticleSystem[${WQ} + ${wQ}]`,
+      dQ = QQ => `gpuParticleSystem[${QQ>>2}].${"xyzw"[3&QQ]}`,
+      HQ = QQ => `\nprecision highp float;\nprecision highp int;\nprecision highp usampler2D;\n\n#define MAX_STOPS ${BQ.e}\n#define COLOR_POSITIONS ${pQ(DQ.colorPositions)}\n#define COLOR1 ${pQ(DQ.color1)}\n#define COLOR2 ${pQ(DQ.color2)}\n#define VELOCITY ${pQ(DQ.Fy)}\n#define REMAP ${pQ(DQ.remap)}\n#define RECORDS_PER_ROW ${BQ.m}\n\nuniform mat4 gpuParticleView;\nuniform mat4 gpuParticleProjection;\nuniform vec4 gpuParticleSystem[${BQ.q/4}];\n// The records' frame offset and the system's clock; the slot drawn first (the oldest) and the slots in use.\nuniform vec4 gpuParticleFrame;\nuniform vec2 gpuParticleRange;\nuniform usampler2D gpuParticleRecords;\n\nvarying vec2 vUV;\nvarying vec4 vColor;\nvarying vec4 vRemap;\n\nvec3 gravity() { return vec3(${dQ(DQ.gravity)}, ${dQ(DQ.gravity+1)}, ${dQ(DQ.gravity+2)}); }\nint colorCount() { return int(${dQ(DQ.colorCount)}); }\nvec4 colorDead() { return gpuParticleSystem[${pQ(DQ.colorDead)}]; }\nint velocityCount() { return int(${dQ(DQ.velocityCount)}); }\nint remapCount() { return int(${dQ(DQ.remapCount)}); }\n${QQ?bQ:""}\nuint hash(uint v) {\n\tuint state = v * 747796405u + 2891336453u;\n\t// (state >> 28) + 4 as constant shifts: ANGLE's Direct3D 11 on Intel gen 7/7.5/8 shifts by a variable amount wrongly\n\tuint top = state >> 28u;\n\tuint bits0 = state >> 4u;\n\tuint bits1 = (top & 1u) != 0u ? bits0 >> 1u : bits0;\n\tuint bits2 = (top & 2u) != 0u ? bits1 >> 2u : bits1;\n\tuint bits3 = (top & 4u) != 0u ? bits2 >> 4u : bits2;\n\tuint word = (((top & 8u) != 0u ? bits3 >> 8u : bits3) ^ state) * 277803737u;\n\treturn (word >> 22u) ^ word;\n}\n\n// The particle's own random pick for a gradient stop, as Babylon picks one when the particle reaches it.\nfloat random(uint seed, int stop) {\n\treturn float(hash(seed ^ (uint(stop) * 0x9e3779b9u)) >> 8u) / 16777216.0;\n}\n\nfloat colourPosition(int i) {\n\treturn ${QQ?"componentAt(colorPositionsAt(i / 4), i % 4)":"gpuParticleSystem[COLOR_POSITIONS + i / 4][i % 4]"};\n}\n\nvec4 stopColour(int i, uint seed) {\n\treturn mix(${vQ(QQ,"COLOR1","color1At","i")}, ${vQ(QQ,"COLOR2","color2At","i")}, random(seed, i));\n}\n\nfloat velocityFactor(int i, uint seed) {\n\tvec4 stop = ${vQ(QQ,"VELOCITY","velocityAt","i")};\n\treturn mix(stop.y, stop.z, random(seed, MAX_STOPS + i));\n}\n\nvec4 colourAt(vec4 colour0, float age, float ratio, uint seed) {\n\tint n = colorCount();\n\tvec4 colour;\n\tif (n == 0) {\n\t\tcolour = mix(colour0, colorDead(), ratio);\n\t} else if (age == 0.0) {\n\t\treturn stopColour(0, seed);\n\t} else if (ratio < colourPosition(0)) {\n\t\tcolour = stopColour(min(1, n - 1), seed);\n\t} else {\n\t\tcolour = stopColour(n - 1, seed);\n\t\tfor (int i = 0; i + 1 < n; i++) {\n\t\t\tfloat a = colourPosition(i);\n\t\t\tfloat b = colourPosition(i + 1);\n\t\t\tif (ratio >= a && ratio <= b) {\n\t\t\t\tfloat scale = b > a ? (ratio - a) / (b - a) : 0.0;\n\t\t\t\tcolour = mix(stopColour(i, seed), stopColour(i + 1, seed), scale);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\tcolour.a = max(colour.a, 0.0);\n\treturn colour;\n}\n\nvec3 travel(float alpha, float beta, vec3 d, vec3 g, float s0, float s1) {\n\tfloat ds = s1 - s0;\n\tfloat ds2 = (s1 * s1 - s0 * s0) * 0.5;\n\tfloat ds3 = (s1 * s1 * s1 - s0 * s0 * s0) / 3.0;\n\treturn d * (alpha * ds) + (g * alpha + d * beta) * ds2 + g * (beta * ds3);\n}\n\nvec3 displacement(vec3 d, float age, float life, uint seed) {\n\tvec3 g = gravity();\n\tint n = velocityCount();\n\tif (n == 0) {\n\t\treturn d * age + g * (0.5 * age * age);\n\t}\n\tvec3 total = vec3(0.0);\n\tfloat beforeFirst = min(age, gpuParticleSystem[VELOCITY].x * life);\n\tif (beforeFirst > 0.0) {\n\t\ttotal += travel(velocityFactor(min(1, n - 1), seed), 0.0, d, g, 0.0, beforeFirst);\n\t}\n\tfor (int i = 0; i + 1 < n; i++) {\n\t\tfloat a = ${vQ(QQ,"VELOCITY","velocityAt","i")}.x * life;\n\t\tfloat b = ${vQ(QQ,"VELOCITY","velocityAt","i + 1")}.x * life;\n\t\tfloat lo = max(a, 0.0);\n\t\tfloat hi = min(b, age);\n\t\tif (hi > lo) {\n\t\t\tfloat fa = velocityFactor(i, seed);\n\t\t\tfloat beta = (velocityFactor(i + 1, seed) - fa) / (b - a);\n\t\t\ttotal += travel(fa - beta * a, beta, d, g, lo, hi);\n\t\t}\n\t}\n\tfloat afterLast = max(${vQ(QQ,"VELOCITY","velocityAt","n - 1")}.x * life, 0.0);\n\tif (age > afterLast) {\n\t\ttotal += travel(velocityFactor(n - 1, seed), 0.0, d, g, afterLast, age);\n\t}\n\treturn total;\n}\n\nvec4 remapAt(float age, float ratio) {\n\tint n = remapCount();\n\tif (n == 0 || age == 0.0) {\n\t\treturn vec4(0.0, 1.0, 0.0, 1.0);\n\t}\n\tvec2 stop = ${vQ(QQ,"REMAP","remapStopAt","n - 1")}.yz;\n\tif (ratio < gpuParticleSystem[REMAP].x) {\n\t\tstop = gpuParticleSystem[REMAP].yz;\n\t} else {\n\t\tfor (int i = 0; i + 1 < n; i++) {\n\t\t\tvec4 a = ${vQ(QQ,"REMAP","remapStopAt","i")};\n\t\t\tvec4 b = ${vQ(QQ,"REMAP","remapStopAt","i + 1")};\n\t\t\tif (ratio >= a.x && ratio <= b.x) {\n\t\t\t\tstop = mix(a.yz, b.yz, b.x > a.x ? (ratio - a.x) / (b.x - a.x) : 0.0);\n\t\t\t\tbreak;\n\t\t\t}\n\t\t}\n\t}\n\treturn vec4(stop.x, stop.y - stop.x, 0.0, 1.0);\n}\n\nvoid main(void) {\n\t// No division by a variable: ANGLE's Direct3D 11 on Intel gen 7/7.5/8 is suspected of dividing by a uniform wrongly\n\tint count = int(gpuParticleRange.y);\n\tint unwrapped = int(gpuParticleRange.x) + gl_InstanceID;\n\t// One wrap, as start < count and the draw's instances are count (gpuParticleRing.ts)\n\tint slot = unwrapped >= count ? unwrapped - count : unwrapped;\n\tivec2 at = ivec2((slot % RECORDS_PER_ROW) * 4, slot / RECORDS_PER_ROW);\n\tvec4 spawn = uintBitsToFloat(texelFetch(gpuParticleRecords, at, 0));\n\tvec4 velocity = uintBitsToFloat(texelFetch(gpuParticleRecords, at + ivec2(1, 0), 0));\n\tuvec4 sizeSeed = texelFetch(gpuParticleRecords, at + ivec2(2, 0), 0);\n\tvec4 colour0 = uintBitsToFloat(texelFetch(gpuParticleRecords, at + ivec2(3, 0), 0));\n\tfloat age = gpuParticleFrame.w - spawn.w;\n\tfloat life = velocity.w;\n\t// The strip's corners: (0, 0), (1, 0), (0, 1), (1, 1).\n\tvec2 corner = vec2(float(gl_VertexID & 1), float(gl_VertexID >> 1));\n\tvUV = corner;\n\tif (!(age >= 0.0 && age < life)) {\n\t\t// Dead, or not yet written: outside the clip volume.\n\t\tgl_Position = vec4(0.0, 0.0, 2.0, 1.0);\n\t\tvColor = vec4(0.0);\n\t\tvRemap = vec4(0.0, 1.0, 0.0, 1.0);\n\t\treturn;\n\t}\n\tfloat ratio = age / life;\n\tuint seed = sizeSeed.y;\n\tvec3 centre = gpuParticleFrame.xyz + spawn.xyz + displacement(velocity.xyz, age, life, seed);\n\t// particles.vertex's billboard: the corner offset in view space.\n\tvec3 viewPos = (gpuParticleView * vec4(centre, 1.0)).xyz + vec3((corner - 0.5) * uintBitsToFloat(sizeSeed.x), 0.0);\n\tgl_Position = gpuParticleProjection * vec4(viewPos, 1.0);\n\tvColor = colourAt(colour0, age, ratio, seed);\n\tvRemap = remapAt(age, ratio);\n}\n`,
+      aQ = "\nprecision highp float;\n\nuniform sampler2D gpuParticleTexture;\nuniform sampler2D gpuParticleRampTexture;\nuniform float gpuParticleRamp;\n\nvarying vec2 vUV;\nvarying vec4 vColor;\nvarying vec4 vRemap;\n\nvoid main(void) {\n\tvec4 textureColour = texture2D(gpuParticleTexture, vUV);\n\tvec4 colour = textureColour * vColor;\n\tif (gpuParticleRamp != 0.0) {\n\t\tfloat alpha = colour.a;\n\t\tfloat index = clamp((alpha - vRemap.x) / vRemap.y, 0.0, 1.0);\n\t\tvec4 rampColour = texture2D(gpuParticleRampTexture, vec2(1.0 - index, 0.0));\n\t\tcolour = vec4(colour.rgb * rampColour.rgb, clamp((alpha * rampColour.a - vRemap.z) / vRemap.w, 0.0, 1.0));\n\t}\n#ifdef MULTIPLY_PASS\n\t// The MULTIPLY pass of BLENDMULTIPLYMODE, which MULTIPLYADD draws before its ADD pass.\n\tfloat sourceAlpha = vColor.a * textureColour.a;\n\tcolour.rgb = colour.rgb * sourceAlpha + vec3(1.0 - sourceAlpha);\n#endif\n\tgl_FragColor = colour;\n}\n";
+    jQ.b.ShadersStore[`${yQ}VertexShader`] = HQ(!1), jQ.b.ShadersStore[`${yQ}PixelShader`] = aQ, jQ.b.ShadersStore[`${VQ}VertexShader`] = HQ(!0), jQ.b.ShadersStore[`${VQ}PixelShader`] = aQ;
+    const lQ = ["gpuParticleView", "gpuParticleProjection", "gpuParticleSystem", "gpuParticleFrame", "gpuParticleRange", "gpuParticleRamp"],
+      hQ = ["gpuParticleTexture", "gpuParticleRampTexture", "gpuParticleRecords"];
+    var iQ = XQ(38972),
+      cQ = XQ(41851);
+    class AQ extends iQ.c {
+      constructor(QQ, WQ, XQ, wQ) {
+        super(QQ, WQ, XQ), this.renderer = XQ, this.cB = wQ, this.id = void 0, this.renderingGroupId = 0, this.layerMask = 268435455, this.records = void 0, this.uniforms = new Float32Array(BQ.q), this.uniformBits = new Uint32Array(this.uniforms.buffer), this.ramp = null, this.rampTexels = (0, cQ.f)(), this.engine = void 0, this.animatedFrame = -1, this.uploadSlots = (QQ, WQ) => {
           const {
-            engine: cp
-          } = this, Op = cp._gl;
-          cp._bindTextureDirectly(Op.TEXTURE_2D, this.records, !0), cp._unpackFlipY(!1);
-          const op = this.ring.recordBits;
-          for (let Ip = pp; Ip < ip;) {
-            const pp = Math.floor(Ip / Up.l),
-              cp = Math.min(ip, (pp + 1) * Up.l);
-            Op.texSubImage2D(Op.TEXTURE_2D, 0, Ip % Up.l * 4, pp, 4 * (cp - Ip), 1, Op.RGBA_INTEGER, Op.UNSIGNED_INT, op, Ip * Up.e), Ip = cp
+            engine: XQ
+          } = this, wQ = XQ._gl;
+          XQ._bindTextureDirectly(wQ.TEXTURE_2D, this.records, !0), XQ._unpackFlipY(!1);
+          const qQ = this.ring.recordBits;
+          for (let TQ = QQ; TQ < WQ;) {
+            const QQ = Math.floor(TQ / BQ.m),
+              XQ = Math.min(WQ, (QQ + 1) * BQ.m);
+            wQ.texSubImage2D(wQ.TEXTURE_2D, 0, TQ % BQ.m * 4, QQ, 4 * (XQ - TQ), 1, wQ.RGBA_INTEGER, wQ.UNSIGNED_INT, qQ, TQ * BQ.h), TQ = XQ
           }
-          cp._bindTextureDirectly(Op.TEXTURE_2D, null)
-        }, this.id = pp;
-        const op = Op.gy();
-        this.engine = op;
-        const Ip = Math.max(1, ip),
-          Sp = Math.min(Ip, Up.l);
-        this.records = op.createRawTexture(null, 4 * Sp, Math.ceil(Ip / Sp), Dp.d.TEXTUREFORMAT_RGBA_INTEGER, !1, !1, Dp.d.TEXTURE_NEAREST_SAMPLINGMODE, null, Dp.d.TEXTURETYPE_UNSIGNED_INTEGER)
+          XQ._bindTextureDirectly(wQ.TEXTURE_2D, null)
+        }, this.id = QQ;
+        const qQ = wQ.Uj();
+        this.engine = qQ;
+        const TQ = Math.max(1, WQ),
+          zQ = Math.min(TQ, BQ.m);
+        this.records = qQ.createRawTexture(null, 4 * zQ, Math.ceil(TQ / zQ), gQ.b.TEXTUREFORMAT_RGBA_INTEGER, !1, !1, gQ.b.TEXTURE_NEAREST_SAMPLINGMODE, null, gQ.b.TEXTURETYPE_UNSIGNED_INTEGER)
       }
       animate() {
-        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.pw.getAnimationRatio() || 1;
-        const ip = this.pw.getFrameId();
-        if (ip === this.animatedFrame) return !1;
-        const cp = super.animate(pp);
-        return cp && (this.animatedFrame = ip, this.ring.takeUploads(this.uploadSlots)), cp
+        let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.cB.getAnimationRatio() || 1;
+        const WQ = this.cB.getFrameId();
+        if (WQ === this.animatedFrame) return !1;
+        const XQ = super.animate(QQ);
+        return XQ && (this.animatedFrame = WQ, this.ring.takeUploads(this.uploadSlots)), XQ
       }
       render() {
         return this.renderer.render(this)
@@ -103,752 +111,766 @@ export const modules = {
       clone() {
         return null
       }
-      prepareDraw(pp) {
-        (0, mp.i)(this, this.uniforms, this.uniformBits, pp);
-        for (const cp of Up.n) this.uniforms[cp] = this.uniformBits[cp];
-        var ip;
-        (0, mp.m)(this, this.rampTexels) && (0 === this.rampTexels.key.length ? (null === (ip = this.ramp) || void 0 === ip || ip.dispose(), this.ramp = null) : this.ramp ? this.ramp.update(this.rampTexels.texels) : this.ramp = Ap.b.CreateRGBATexture(this.rampTexels.texels, Up.k, 1, this.pw, !1, !1, Dp.d.TEXTURE_NEAREST_SAMPLINGMODE))
+      prepareDraw(QQ) {
+        (0, cQ.i)(this, this.uniforms, this.uniformBits, QQ);
+        for (const XQ of BQ.t) this.uniforms[XQ] = this.uniformBits[XQ];
+        var WQ;
+        (0, cQ.j)(this, this.rampTexels) && (0 === this.rampTexels.key.length ? (null === (WQ = this.ramp) || void 0 === WQ || WQ.dispose(), this.ramp = null) : this.ramp ? this.ramp.update(this.rampTexels.texels) : this.ramp = JQ.b.CreateRGBATexture(this.rampTexels.texels, BQ.l, 1, this.cB, !1, !1, gQ.b.TEXTURE_NEAREST_SAMPLINGMODE))
       }
       releaseGl() {
-        var pp;
-        this.records.dispose(), null === (pp = this.ramp) || void 0 === pp || pp.dispose(), this.ramp = null
+        var QQ;
+        this.records.dispose(), null === (QQ = this.ramp) || void 0 === QQ || QQ.dispose(), this.ramp = null
       }
     }
-    const qp = "the context was lost before the programs linked";
-    class Mp {
-      constructor(pp, ip) {
-        this.pw = pp, this.reportFailure = ip, this.failed = !1, this.engine = void 0, this.effect = void 0, this.multiplyEffect = void 0, this.whiteRamp = void 0, this.vertexBuffers = {}, this.frame = new Float32Array(4), this.warnOnce = (0, Wp.c)(), this.engine = pp.gy(), this.effect = this.createEffect(""), this.multiplyEffect = this.createEffect("#define MULTIPLY_PASS"), this.whiteRamp = Ap.b.CreateRGBATexture(new Uint8Array([255, 255, 255, 255]), 1, 1, pp, !1, !1, Dp.d.TEXTURE_NEAREST_SAMPLINGMODE), this.awaitLink(this.effect), this.awaitLink(this.multiplyEffect)
+    const RQ = "the context was lost before the programs linked";
+    class EQ {
+      constructor(QQ, WQ) {
+        this.cB = QQ, this.reportFailure = WQ, this.failed = !1, this.engine = void 0, this.effect = void 0, this.multiplyEffect = void 0, this.linkingPair = !1, this.pairFailure = null, this.shader = yQ, this.whiteRamp = void 0, this.vertexBuffers = {}, this.frame = new Float32Array(4), this.warnOnce = (0, IQ.e)(), this.engine = QQ.Uj(), this.whiteRamp = JQ.b.CreateRGBATexture(new Uint8Array([255, 255, 255, 255]), 1, 1, QQ, !1, !1, gQ.b.TEXTURE_NEAREST_SAMPLINGMODE);
+        const XQ = this.linkPair(yQ),
+          wQ = null !== XQ && XQ !== RQ ? this.linkPair(VQ) : XQ;
+        null === wQ && null !== XQ ? (console.warn(`GPU particles link their fallback here: ${XQ}`), this.reportFailure(XQ, !0)) : null !== wQ && this.fail(wQ === RQ ? RQ : null !== XQ && void 0 !== XQ ? XQ : wQ)
       }
-      eJ(pp, ip) {
-        const cp = Up.l * this.engine.getCaps().maxTextureSize;
-        ip > cp && this.warnOnce(`capacity:${pp}`, `particle system ${pp} holds ${cp} particles, not ${ip}: its records texture's limit`);
-        const Op = new Rp(pp, Math.min(ip, cp), this, this.pw);
-        return this.pw.addParticleSystem(Op), Op
+      rC(QQ, WQ) {
+        const XQ = BQ.m * this.engine.getCaps().maxTextureSize;
+        WQ > XQ && this.warnOnce(`capacity:${QQ}`, `particle system ${QQ} holds ${XQ} particles, not ${WQ}: its records texture's limit`);
+        const wQ = new AQ(QQ, Math.min(WQ, XQ), this, this.cB);
+        return this.cB.addParticleSystem(wQ), wQ
       }
-      canDraw(pp) {
-        var ip, cp;
-        if (this.failed || null === (ip = pp.texture) || void 0 === ip || null === (cp = ip.mirror) || void 0 === cp || !cp.isReady()) return !1;
-        for (const Op of (0, Pp.o)(pp.blendMode))
-          if (!this.effectFor(Op).isReady()) return !1;
+      canDraw(QQ) {
+        var WQ, XQ;
+        if (this.failed || null === (WQ = QQ.texture) || void 0 === WQ || null === (XQ = WQ.mirror) || void 0 === XQ || !XQ.isReady()) return !1;
+        for (const wQ of (0, rQ.l)(QQ.blendMode))
+          if (!this.effectFor(wQ).isReady()) return !1;
         return !0
       }
-      disposeStopped(pp) {
-        this.pw._toBeDisposed.push(pp)
+      disposeStopped(QQ) {
+        this.cB._toBeDisposed.push(QQ)
       }
-      remove(pp) {
-        this.pw.removeParticleSystem(pp), pp.releaseGl()
+      remove(QQ) {
+        this.cB.removeParticleSystem(QQ), QQ.releaseGl()
       }
-      render(pp) {
-        var ip;
-        if (!pp.isReady() || !pp.hasLiveParticles()) return 0;
+      render(QQ) {
+        var WQ;
+        if (!QQ.isReady() || !QQ.hasLiveParticles()) return 0;
         const {
-          engine: cp,
-          pw: Op,
-          frame: op
+          engine: XQ,
+          cB: wQ,
+          frame: qQ
         } = this;
-        pp.prepareDraw(this.warnOnce), pp.drawOffset(op, 0), op[3] = pp.drawTime();
-        const Ip = pp.ring.drawStart(),
-          Sp = pp.ring.drawCount(),
-          xp = null !== (ip = pp.ramp) && void 0 !== ip ? ip : this.whiteRamp;
-        cp.setState(!1);
-        for (const Lp of (0, Pp.o)(pp.blendMode)) {
-          const ip = this.effectFor(Lp);
-          cp.enableEffect(ip), ip.setTexture("gpuParticleTexture", pp.texture.mirror), ip.setTexture("gpuParticleRampTexture", xp), ip._bindTexture("gpuParticleRecords", pp.records), ip.setMatrix("gpuParticleView", Op.getViewMatrix()), ip.setMatrix("gpuParticleProjection", Op.getProjectionMatrix()), ip.setFloatArray4("gpuParticleSystem", pp.uniforms), ip.setFloat4("gpuParticleFrame", op[0], op[1], op[2], op[3]), ip.setFloat2("gpuParticleRange", Ip, Sp), ip.setFloat("gpuParticleRamp", pp.uniforms[Up.o.ramp]), cp.bindBuffers(this.vertexBuffers, null, ip), cp.setAlphaMode((0, Pp.l)(Lp)), cp.drawArraysType(Dp.d.MATERIAL_TriangleStripDrawMode, 0, 4, Sp), ip._bindTexture("gpuParticleRecords", null)
+        QQ.prepareDraw(this.warnOnce), QQ.drawOffset(qQ, 0), qQ[3] = QQ.drawTime();
+        const TQ = QQ.ring.drawStart(),
+          zQ = QQ.ring.drawCount(),
+          sQ = null !== (WQ = QQ.ramp) && void 0 !== WQ ? WQ : this.whiteRamp;
+        XQ.setState(!1);
+        for (const FQ of (0, rQ.l)(QQ.blendMode)) {
+          const WQ = this.effectFor(FQ);
+          XQ.enableEffect(WQ), WQ.setTexture("gpuParticleTexture", QQ.texture.mirror), WQ.setTexture("gpuParticleRampTexture", sQ), WQ._bindTexture("gpuParticleRecords", QQ.records), WQ.setMatrix("gpuParticleView", wQ.getViewMatrix()), WQ.setMatrix("gpuParticleProjection", wQ.getProjectionMatrix()), WQ.setFloatArray4("gpuParticleSystem", QQ.uniforms), WQ.setFloat4("gpuParticleFrame", qQ[0], qQ[1], qQ[2], qQ[3]), WQ.setFloat2("gpuParticleRange", TQ, zQ), WQ.setFloat("gpuParticleRamp", QQ.uniforms[BQ.u.ramp]), XQ.bindBuffers(this.vertexBuffers, null, WQ), XQ.setAlphaMode((0, rQ.i)(FQ)), XQ.drawArraysType(gQ.b.MATERIAL_TriangleStripDrawMode, 0, 4, zQ), WQ._bindTexture("gpuParticleRecords", null)
         }
-        return cp.setAlphaMode(Dp.d.ALPHA_DISABLE), Sp
+        return XQ.setAlphaMode(gQ.b.ALPHA_DISABLE), zQ
       }
-      awaitLink(pp) {
-        const ip = pp.getPipelineContext(),
-          cp = this.gl();
-        !this.failed && cp && (!ip || ip.isParallelCompiled && !ip.program ? this.warnOnce("asyncProgram", "GPU particles: Babylon made a particle program asynchronously, so a failed link shows only after the first systems are made") : ip.isParallelCompiled && ip.program && (cp.getProgramParameter(ip.program, cp.LINK_STATUS) || this.fail(function(pp, ip, cp) {
-          if (pp.isContextLost()) return qp;
-          for (const [Op, op] of [
-              ["VERTEX SHADER", ip.vertexShader],
-              ["FRAGMENT SHADER", ip.fragmentShader]
+      linkPair(QQ) {
+        this.shader = QQ, this.pairFailure = null, this.linkingPair = !0;
+        try {
+          return this.effect = this.createEffect(QQ, ""), this.multiplyEffect = this.createEffect(QQ, "#define MULTIPLY_PASS"), this.awaitLink(this.effect), this.awaitLink(this.multiplyEffect), this.pairFailure
+        } finally {
+          this.linkingPair = !1
+        }
+      }
+      awaitLink(QQ) {
+        const WQ = QQ.getPipelineContext(),
+          XQ = this.gl();
+        XQ && null === this.pairFailure && (!WQ || WQ.isParallelCompiled && !WQ.program ? this.warnOnce("asyncProgram", "GPU particles: Babylon made a particle program asynchronously, so a failed link shows only after the first systems are made") : WQ.isParallelCompiled && WQ.program && (XQ.getProgramParameter(WQ.program, XQ.LINK_STATUS) || this.programFailed(function(QQ, WQ, XQ) {
+          if (QQ.isContextLost()) return RQ;
+          for (const [wQ, qQ] of [
+              ["VERTEX SHADER", WQ.vertexShader],
+              ["FRAGMENT SHADER", WQ.fragmentShader]
             ]) {
-            const ip = op && !pp.getShaderParameter(op, pp.COMPILE_STATUS) ? pp.getShaderInfoLog(op) : null;
-            if (ip) return `${Op} ${ip}`
+            const WQ = qQ && !QQ.getShaderParameter(qQ, QQ.COMPILE_STATUS) ? QQ.getShaderInfoLog(qQ) : null;
+            if (WQ) return `${wQ} ${WQ}`
           }
-          return pp.getProgramInfoLog(cp) || "a program did not link"
-        }(cp, ip, ip.program))))
+          return QQ.getProgramInfoLog(XQ) || "a program did not link"
+        }(XQ, WQ, WQ.program))))
       }
       gl() {
         return this.engine._gl
       }
-      effectFor(pp) {
-        return pp === Pp.d ? this.multiplyEffect : this.effect
+      effectFor(QQ) {
+        return QQ === rQ.c ? this.multiplyEffect : this.effect
       }
-      createEffect(pp) {
-        return this.engine.createEffect(wp, [], ep, jp, pp, void 0, void 0, ((pp, ip) => {
-          var cp;
-          this.fail(null !== (cp = this.gl()) && void 0 !== cp && cp.isContextLost() ? qp : function(pp) {
-            const ip = pp.split("\n    at ")[0];
-            return /^\S*@\S*:\d+:\d+/.test(ip) ? "a program failed, its log not in this browser's stack" : ip.replace(/^Error: /, "")
-          }(ip))
+      createEffect(QQ, WQ) {
+        return this.engine.createEffect(QQ, [], lQ, hQ, WQ, void 0, void 0, ((WQ, XQ) => {
+          var wQ;
+          QQ === this.shader && this.programFailed(null !== (wQ = this.gl()) && void 0 !== wQ && wQ.isContextLost() ? RQ : function(QQ) {
+            const WQ = QQ.split("\n    at ")[0];
+            return /^\S*@\S*:\d+:\d+/.test(WQ) ? "a program failed, its log not in this browser's stack" : WQ.replace(/^Error: /, "")
+          }(XQ))
         }))
       }
-      fail(pp) {
+      programFailed(QQ) {
+        this.linkingPair ? this.pairFailure ??= QQ : this.fail(QQ)
+      }
+      fail(QQ) {
         if (!this.failed) {
-          this.failed = !0, console.warn(`GPU particles cannot compile here, so new particle systems are Babylon's: ${pp}`), this.reportFailure(pp);
-          for (const pp of this.pw.Wm.slice()) pp instanceof Rp && pp.disposeOnStop && pp.dispose()
+          this.failed = !0, console.warn(`GPU particles cannot compile here, so new particle systems are Babylon's: ${QQ}`), this.reportFailure(QQ, !1);
+          for (const QQ of this.cB.KD.slice()) QQ instanceof AQ && QQ.disposeOnStop && QQ.dispose()
         }
       }
     }
-    var Cp = cp(40024);
-    class Ep extends Cp.d {
+    var CQ = XQ(40089);
+    class uQ extends CQ.b {
       createEffect() {
-        const pp = super.createEffect(...arguments);
-        return lp(pp), Xp.has(pp) || (Xp.add(pp), pp.onCompileObservable.add((() => {
-          lp(pp)
-        }))), pp
+        const QQ = super.createEffect(...arguments);
+        return kQ(QQ), LQ.has(QQ) || (LQ.add(QQ), QQ.onCompileObservable.add((() => {
+          kQ(QQ)
+        }))), QQ
       }
     }
-    const Xp = new WeakSet;
+    const LQ = new WeakSet;
 
-    function lp(pp) {
-      pp._vertexSourceCodeBeforeMigration = "", pp._fragmentSourceCodeBeforeMigration = ""
+    function kQ(QQ) {
+      QQ._vertexSourceCodeBeforeMigration = "", QQ._fragmentSourceCodeBeforeMigration = ""
     }
-    var Qp = cp(40405),
-      Jp = cp(41325),
-      Bp = cp(40159),
-      Np = cp(40365),
-      Tp = cp(40358),
-      fp = cp(40289),
-      bp = cp(41391),
-      hp = cp(37815),
-      ap = cp(41869),
-      np = cp(41871),
-      Fp = cp(41879),
-      gp = cp(40314),
-      Gp = cp(2949),
-      rp = cp(37713),
-      Zp = cp(40504),
-      zp = cp(37784),
-      sp = cp(37736);
+    var fQ = XQ(40479),
+      SQ = XQ(41320),
+      tQ = XQ(40221),
+      oQ = XQ(40428),
+      eQ = XQ(40422),
+      nQ = XQ(40349),
+      xQ = XQ(41386),
+      YQ = XQ(37874),
+      NQ = XQ(41855),
+      ZQ = XQ(41858),
+      OQ = XQ(41865),
+      KQ = XQ(40371),
+      mQ = XQ(3091),
+      MQ = XQ(37772),
+      QW = XQ(40564),
+      WW = XQ(37837),
+      XW = XQ(37790);
 
-    function Kp(pp) {
-      if (pp.visibility < 1 || !pp.isVisible || !pp.isEnabled() || pp.metadata[sp.f] || !pp.isReady()) return !0;
-      const ip = pp.Am;
-      if (!ip || 0 === ip.length) return !0;
-      for (let cp = 0; cp < ip.length; cp++) {
-        const Op = ip[cp],
-          op = Op.Ky();
-        if (!op || !op.isReadyForSubMesh(pp, Op, !1)) return !0
+    function wW(QQ) {
+      if (QQ.visibility < 1 || !QQ.isVisible || !QQ.isEnabled() || QQ.metadata[XW.f] || !QQ.isReady()) return !0;
+      const WQ = QQ.ZD;
+      if (!WQ || 0 === WQ.length) return !0;
+      for (let XQ = 0; XQ < WQ.length; XQ++) {
+        const wQ = WQ[XQ],
+          qQ = wQ.lj();
+        if (!qQ || !qQ.isReadyForSubMesh(QQ, wQ, !1)) return !0
       }
       return !1
     }
-    class Vp {
-      constructor(pp, ip) {
-        this.HP = pp, this.culled = 0, this.armed = !1, this.vis = null, this.eye = [0, 0, 0], this.passable = new Set, this.meshes = [], this.cellSlots = new Int32Array(256), this.count = 0, ip.onBeforeActiveMeshesEvaluationObservable.add((() => {
+    class qW {
+      constructor(QQ, WQ) {
+        this.KJ = QQ, this.culled = 0, this.armed = !1, this.vis = null, this.eye = [0, 0, 0], this.passable = new Set, this.meshes = [], this.cellSlots = new Int32Array(256), this.count = 0, WQ.onBeforeActiveMeshesEvaluationObservable.add((() => {
           this.armed = !0
         }))
       }
-      mW(pp) {
-        var ip;
-        const cp = this.armed;
-        if (this.armed = !1, this.vis = null, !cp) return !1;
+      gI(QQ) {
+        var WQ;
+        const XQ = this.armed;
+        if (this.armed = !1, this.vis = null, !XQ) return !1;
         this.culled = 0;
         const {
-          HP: Op
-        } = this, op = null === (ip = Op.Zk) || void 0 === ip ? void 0 : ip.visibility;
-        if (!op || !pp || Op.WU.yU) return !1;
-        if (!(Op.WP.FOp[0] >= zp.i)) return !1;
-        const Ip = pp.getProjectionMatrix().m;
-        if (0 !== Ip[15]) return !1;
-        const Sp = Op.BP,
-          xp = pp.globalPosition,
-          Lp = this.eye;
-        return Lp[0] = xp.x + Sp[0], Lp[1] = xp.y + Sp[1], Lp[2] = xp.z + Sp[2], !!op.eyeClear(Lp[0], Lp[1], Lp[2], pp.minZ, Ip, Op.WP) && (this.vis = op, this.passable.clear(), this.count = 0, !0)
+          KJ: wQ
+        } = this, qQ = null === (WQ = wQ.RD) || void 0 === WQ ? void 0 : WQ.visibility;
+        if (!qQ || !QQ || wQ.nj.xj) return !1;
+        if (!(wQ.nJ.CwQ[0] >= WW.f)) return !1;
+        const TQ = QQ.getProjectionMatrix().m;
+        if (0 !== TQ[15]) return !1;
+        const zQ = wQ.jr,
+          sQ = QQ.globalPosition,
+          FQ = this.eye;
+        return FQ[0] = sQ.x + zQ[0], FQ[1] = sQ.y + zQ[1], FQ[2] = sQ.z + zQ[2], !!qQ.eyeClear(FQ[0], FQ[1], FQ[2], QQ.minZ, TQ, wQ.nJ) && (this.vis = qQ, this.passable.clear(), this.count = 0, !0)
       }
-      see(pp, ip) {
-        const cp = this.count++;
-        if (cp === this.cellSlots.length) {
-          const pp = new Int32Array(2 * cp);
-          pp.set(this.cellSlots), this.cellSlots = pp
+      see(QQ, WQ) {
+        const XQ = this.count++;
+        if (XQ === this.cellSlots.length) {
+          const QQ = new Int32Array(2 * XQ);
+          QQ.set(this.cellSlots), this.cellSlots = QQ
         }
-        this.cellSlots[cp] = ip, this.meshes[cp] = pp
+        this.cellSlots[XQ] = WQ, this.meshes[XQ] = QQ
       }
-      seeThrough(pp) {
-        this.passable.add(pp)
+      seeThrough(QQ) {
+        this.passable.add(QQ)
       }
-      finish(pp, ip) {
+      finish(QQ, WQ) {
         const {
-          vis: cp,
-          eye: Op,
-          meshes: op,
-          count: Ip,
-          cellSlots: Sp
+          vis: XQ,
+          eye: wQ,
+          meshes: qQ,
+          count: TQ,
+          cellSlots: zQ
         } = this, {
-          WP: xp
-        } = this.HP, [Lp, Yp] = xp.FOp, Dp = null !== cp && cp.update(Op[0], Op[1], Op[2], xp.epp, Lp, Yp, this.passable);
-        let Ap = 0;
-        for (let Pp = 0; Pp < Ip; Pp++) {
-          const Op = op[Pp];
-          if (Dp) {
-            const pp = 3 * Sp[Pp];
-            if (pp >= 0 && !cp.isDrawn(ip[pp], ip[pp + 1], ip[pp + 2])) {
-              Ap++;
+          nJ: sQ
+        } = this.KJ, [FQ, PQ] = sQ.CwQ, gQ = null !== XQ && XQ.update(wQ[0], wQ[1], wQ[2], sQ.iQQ, FQ, PQ, this.passable);
+        let JQ = 0;
+        for (let rQ = 0; rQ < TQ; rQ++) {
+          const wQ = qQ[rQ];
+          if (gQ) {
+            const QQ = 3 * zQ[rQ];
+            if (QQ >= 0 && !XQ.isDrawn(WQ[QQ], WQ[QQ + 1], WQ[QQ + 2])) {
+              JQ++;
               continue
             }
           }
-          gp.g.prototype.push.call(pp, Op)
+          KQ.e.prototype.push.call(QQ, wQ)
         }
-        op.fill(null, 0, Ip), this.count = 0, this.vis = null, this.culled = Ap
+        qQ.fill(null, 0, TQ), this.count = 0, this.vis = null, this.culled = JQ
       }
     }
-    var ii = cp(37769),
-      ci = cp(37723),
-      Oi = cp(40476),
-      oi = cp(41884),
-      Ii = cp(40481),
-      Si = cp(40415);
-    let xi = 1;
-    const Li = new WeakSet;
+    var TW = XQ(37820),
+      zW = XQ(37783),
+      sW = XQ(40551),
+      FW = XQ(41870),
+      PW = XQ(40555),
+      gW = XQ(40491);
+    let JW = 1;
+    const rW = new WeakSet;
 
-    function Yi() {
-      return xi
+    function IW() {
+      return JW
     }
 
-    function Di() {
-      xi = xi >= 1073741823 ? 1 : xi + 1
+    function jW() {
+      JW = JW >= 1073741823 ? 1 : JW + 1
     }
 
-    function Ai(pp) {
-      const ip = pp.metadata;
-      if (!ip || !0 !== ip[rp.o]) return;
-      const cp = ip[rp.s],
-        Op = null === cp || void 0 === cp ? void 0 : cp._noaStamps;
-      if (!cp || !Op) return;
-      const op = cp.entries.indexOf(pp);
-      op >= 0 && (Op[op] = 0)
+    function BW(QQ) {
+      const WQ = QQ.metadata;
+      if (!WQ || !0 !== WQ[MQ.m]) return;
+      const XQ = WQ[MQ.u],
+        wQ = null === XQ || void 0 === XQ ? void 0 : XQ._noaStamps;
+      if (!XQ || !wQ) return;
+      const qQ = XQ.entries.indexOf(QQ);
+      qQ >= 0 && (wQ[qQ] = 0)
     }
 
-    function Pi(pp) {
-      const ip = pp.Am;
-      for (let cp = 0; cp < ip.length; cp++) {
-        const pp = ip[cp].Ky();
-        if (pp && !pp.isFrozen) return !1
+    function yW(QQ) {
+      const WQ = QQ.ZD;
+      for (let XQ = 0; XQ < WQ.length; XQ++) {
+        const QQ = WQ[XQ].lj();
+        if (QQ && !QQ.isFrozen) return !1
       }
-      for (let cp = 0; cp < ip.length; cp++) {
-        const pp = ip[cp].Ky();
-        pp && Li.add(pp)
+      for (let XQ = 0; XQ < WQ.length; XQ++) {
+        const QQ = WQ[XQ].lj();
+        QQ && rW.add(QQ)
       }
       return !0
     }
-    let Wi = !1;
-    const yi = new WeakSet;
+    let VW = !1;
+    const DW = new WeakSet;
 
-    function Ui(pp, ip) {
-      const cp = pp[ip];
-      if ("function" !== typeof cp) throw new Error(`terrainDrawState: Babylon has no ${ip} to hook`);
-      return cp
+    function pW(QQ, WQ) {
+      const XQ = QQ[WQ];
+      if ("function" !== typeof XQ) throw new Error(`terrainDrawState: Babylon has no ${WQ} to hook`);
+      return XQ
     }
 
-    function wi(pp, ip, cp, Op, op) {
-      const Ip = cp.WP.epp,
-        Sp = new Map;
-      let xp = 0;
-      const Lp = new Vp(cp, pp),
-        Yp = new ii.d(Ip, pp.gy());
-      ! function(pp) {
-        if (yi.has(pp) || (yi.add(pp), pp.onContextLostObservable.add(Di), pp.Fy.add(Di)), Wi) return;
-        Wi = !0;
-        const ip = oi.e.prototype,
-          cp = Ui(ip, "_markSubMeshesAsDirty");
-        Object.assign(ip, {
-          _markSubMeshesAsDirty(pp) {
-            cp.call(this, pp), Ai(this)
+    function GW(QQ, WQ, XQ, wQ, qQ) {
+      const TQ = XQ.nJ.iQQ,
+        zQ = new Map;
+      let sQ = 0;
+      const FQ = new qW(XQ, QQ),
+        PQ = new TW.c(TQ, QQ.Uj());
+      ! function(QQ) {
+        if (DW.has(QQ) || (DW.add(QQ), QQ.onContextLostObservable.add(jW), QQ.Gj.add(jW)), VW) return;
+        VW = !0;
+        const WQ = FW.c.prototype,
+          XQ = pW(WQ, "_markSubMeshesAsDirty");
+        Object.assign(WQ, {
+          _markSubMeshesAsDirty(QQ) {
+            XQ.call(this, QQ), BW(this)
           }
         });
-        const Op = Ui(Si.b.prototype, "_syncParentEnabledState");
-        Object.assign(Si.b.prototype, {
+        const wQ = pW(gW.e.prototype, "_syncParentEnabledState");
+        Object.assign(gW.e.prototype, {
           _syncParentEnabledState() {
-            Op.call(this), Ai(this)
+            wQ.call(this), BW(this)
           }
         });
-        const op = Ui(Ii.d.prototype, "resetDrawCache");
-        Ii.d.prototype.resetDrawCache = function(pp, ip) {
-          op.call(this, pp, ip), Ai(this.getMesh())
+        const qQ = pW(PW.b.prototype, "resetDrawCache");
+        PW.b.prototype.resetDrawCache = function(QQ, WQ) {
+          qQ.call(this, QQ, WQ), BW(this.getMesh())
         };
-        const Ip = Oi.b.prototype,
-          Sp = Ui(Ip, "markDirty");
-        Ip.markDirty = function(pp) {
-          Sp.call(this, pp), Li.has(this) && Di()
+        const TQ = sW.b.prototype,
+          zQ = pW(TQ, "markDirty");
+        TQ.markDirty = function(QQ) {
+          zQ.call(this, QQ), rW.has(this) && jW()
         };
-        const xp = Ui(Ip, "_markAllSubMeshesAsDirty");
-        Object.assign(Ip, {
-          _markAllSubMeshesAsDirty(pp) {
-            xp.call(this, pp), Li.has(this) && Di()
+        const sQ = pW(TQ, "_markAllSubMeshesAsDirty");
+        Object.assign(TQ, {
+          _markAllSubMeshesAsDirty(QQ) {
+            sQ.call(this, QQ), rW.has(this) && jW()
           }
         })
-      }(pp.gy());
-      let Dp = new Float64Array(384),
-        Ap = new Int32Array(64),
-        Pp = new Uint8Array(64),
-        Wp = new Float64Array(64),
-        yp = new Int32Array(192),
-        Up = 0;
-      const wp = [],
-        vp = new Float64Array(24),
-        tp = () => {
-          const pp = wp.pop();
-          return void 0 !== pp ? (Ap[pp] = 0, pp) : (Up === Ap.length && (Dp = vi(Dp, new Float64Array(2 * Dp.length)), Ap = vi(Ap, new Int32Array(2 * Ap.length)), Pp = vi(Pp, new Uint8Array(2 * Pp.length)), Wp = vi(Wp, new Float64Array(2 * Wp.length)), yp = vi(yp, new Int32Array(2 * yp.length))), Up++)
+      }(QQ.Uj());
+      let gQ = new Float64Array(384),
+        JQ = new Int32Array(64),
+        rQ = new Uint8Array(64),
+        IQ = new Float64Array(64),
+        jQ = new Int32Array(192),
+        BQ = 0;
+      const yQ = [],
+        VQ = new Float64Array(24),
+        DQ = () => {
+          const QQ = yQ.pop();
+          return void 0 !== QQ ? (JQ[QQ] = 0, QQ) : (BQ === JQ.length && (gQ = UW(gQ, new Float64Array(2 * gQ.length)), JQ = UW(JQ, new Int32Array(2 * JQ.length)), rQ = UW(rQ, new Uint8Array(2 * rQ.length)), IQ = UW(IQ, new Float64Array(2 * IQ.length)), jQ = UW(jQ, new Int32Array(2 * jQ.length))), BQ++)
         },
-        Hp = pp => {
-          const ip = 6 * pp._noaSlot,
-            cp = pp.KOp[0],
-            Op = pp.KOp[1];
-          Dp[ip] = cp.x, Dp[ip + 1] = cp.y, Dp[ip + 2] = cp.z, Dp[ip + 3] = Op.x, Dp[ip + 4] = Op.y, Dp[ip + 5] = Op.z
+        pQ = QQ => {
+          const WQ = 6 * QQ._noaSlot,
+            XQ = QQ.owQ[0],
+            wQ = QQ.owQ[1];
+          gQ[WQ] = XQ.x, gQ[WQ + 1] = XQ.y, gQ[WQ + 2] = XQ.z, gQ[WQ + 3] = wQ.x, gQ[WQ + 4] = wQ.y, gQ[WQ + 5] = wQ.z
         },
-        dp = (pp, ip, cp) => {
-          if (!cp) return Lp.see(pp, -1), !1;
-          const Op = Kp(pp);
-          return Op && Lp.seeThrough(Wp[ip]), Lp.see(pp, ip), !Op
+        GQ = (QQ, WQ, XQ) => {
+          if (!XQ) return FQ.see(QQ, -1), !1;
+          const wQ = wW(QQ);
+          return wQ && FQ.seeThrough(IQ[WQ]), FQ.see(QQ, WQ), !wQ
         };
-      let ep = -1;
-      return pp.getActiveMeshCandidates = () => {
-        const cp = pp.frustumPlanes,
-          Op = ip._selectionContent;
-        Op.reset(), (cp => {
-          const Op = pp.frustumPlanes;
-          xp = xp + 1 | 0 || 1;
-          const op = ip.blocks,
-            Ip = Lp.mW(pp.activeCamera),
-            Sp = Ip && !0;
-          if (Sp) {
-            const ip = pp.gy().currentRenderPassId;
-            ip !== ep && (ep = ip, Di())
+      let UQ = -1;
+      return QQ.getActiveMeshCandidates = () => {
+        const XQ = QQ.frustumPlanes,
+          wQ = WQ._selectionContent;
+        wQ.reset(), (XQ => {
+          const wQ = QQ.frustumPlanes;
+          sQ = sQ + 1 | 0 || 1;
+          const qQ = WQ.blocks,
+            TQ = FQ.gI(QQ.activeCamera),
+            zQ = TQ && !0;
+          if (zQ) {
+            const WQ = QQ.Uj().currentRenderPassId;
+            WQ !== UQ && (UQ = WQ, jW())
           }
-          const Yp = Yi(),
-            Wp = Sp && !1;
-          op.length > 0 && function(pp, ip) {
-            for (let cp = 0; cp < 6; cp++) {
-              const Op = pp[cp],
-                op = Op.normal;
-              ip[4 * cp] = op.x, ip[4 * cp + 1] = op.y, ip[4 * cp + 2] = op.z, ip[4 * cp + 3] = Op.d
+          const PQ = IW(),
+            IQ = zQ && !1;
+          qQ.length > 0 && function(QQ, WQ) {
+            for (let XQ = 0; XQ < 6; XQ++) {
+              const wQ = QQ[XQ],
+                qQ = wQ.normal;
+              WQ[4 * XQ] = qQ.x, WQ[4 * XQ + 1] = qQ.y, WQ[4 * XQ + 2] = qQ.z, WQ[4 * XQ + 3] = wQ.d
             }
-          }(Op, vp);
-          const Up = Dp,
-            wp = Ap,
-            tp = Pp;
-          for (let pp = 0; pp < op.length; pp++) {
-            const ip = op[pp];
-            if (!Zp.d.IsInFrustum(ip.KOp, Op)) continue;
-            const Dp = ip.entries;
+          }(wQ, VQ);
+          const BQ = gQ,
+            yQ = JQ,
+            DQ = rQ;
+          for (let QQ = 0; QQ < qQ.length; QQ++) {
+            const WQ = qQ[QQ];
+            if (!QW.b.IsInFrustum(WQ.owQ, wQ)) continue;
+            const gQ = WQ.entries;
             {
-              const pp = ip._noaSlots,
-                Op = ip._noaStamps,
-                op = ip._noaTerrain;
-              for (let ip = 0; ip < Dp.length; ip++) {
-                const Ap = pp[ip];
-                if (wp[Ap] !== xp && (wp[Ap] = xp, tp[Ap] = ti(Up, 6 * Ap, vp) ? 1 : 0), 0 === tp[Ap]) continue;
-                const Pp = Dp[ip];
-                if (Sp && Op[ip] === Yp) Wp && 1 === op[ip] && Kp(Pp) && 0, Lp.see(Pp, 1 === op[ip] ? Ap : -1);
-                else if (Sp) {
-                  Op[ip] = Yp;
-                  const pp = !0 === Pp.metadata[ci.n];
-                  op[ip] = pp ? 1 : 0;
-                  const cp = dp(Pp, Ap, pp);
-                  !pp || cp && Pi(Pp) || (Op[ip] = 0)
-                } else Ip ? dp(Pp, Ap, !0 === Pp.metadata[ci.n]) : gp.g.prototype.push.call(cp, Pp)
+              const QQ = WQ._noaSlots,
+                wQ = WQ._noaStamps,
+                qQ = WQ._noaTerrain;
+              for (let WQ = 0; WQ < gQ.length; WQ++) {
+                const JQ = QQ[WQ];
+                if (yQ[JQ] !== sQ && (yQ[JQ] = sQ, DQ[JQ] = bW(BQ, 6 * JQ, VQ) ? 1 : 0), 0 === DQ[JQ]) continue;
+                const rQ = gQ[WQ];
+                if (zQ && wQ[WQ] === PQ) IQ && 1 === qQ[WQ] && wW(rQ) && 0, FQ.see(rQ, 1 === qQ[WQ] ? JQ : -1);
+                else if (zQ) {
+                  wQ[WQ] = PQ;
+                  const QQ = !0 === rQ.metadata[zW.k];
+                  qQ[WQ] = QQ ? 1 : 0;
+                  const XQ = GQ(rQ, JQ, QQ);
+                  !QQ || XQ && yW(rQ) || (wQ[WQ] = 0)
+                } else TQ ? GQ(rQ, JQ, !0 === rQ.metadata[zW.k]) : KQ.e.prototype.push.call(XQ, rQ)
               }
               continue
             }
           }
-          Ip && Lp.finish(cp, yp)
-        })(Op), Yp.apply(Op, pp.activeCamera);
-        const Ip = ip.sOp;
-        for (let pp = 0; pp < Ip.length; pp++) {
-          const ip = Ip[pp];
-          ip.isEnabled() && gp.g.prototype.push.call(Op, ip)
+          TQ && FQ.finish(XQ, jQ)
+        })(wQ), PQ.apply(wQ, QQ.activeCamera);
+        const TQ = WQ.twQ;
+        for (let QQ = 0; QQ < TQ.length; QQ++) {
+          const WQ = TQ[QQ];
+          WQ.isEnabled() && KQ.e.prototype.push.call(wQ, WQ)
         }
-        return op(Op, cp), Op
+        return qQ(wQ, XQ), wQ
       }, {
-        iop: () => Lp.culled,
-        TOp: (pp, ip) => {
-          const op = Math.floor(ip[0] / Ip),
-            xp = Math.floor(ip[1] / Ip),
-            Lp = Math.floor(ip[2] / Ip),
-            Yp = `${op}|${xp}|${Lp}`;
-          let Dp = Sp.get(Yp);
-          if (!Dp) {
-            const pp = [0, 0, 0];
-            cp.uip([op * Ip - 1, xp * Ip - 1, Lp * Ip - 1], null, pp), Dp = Object.assign(Op(pp, Ip + 2), {
-              Oop: Yp,
-              oop: 0,
+        ewQ: () => FQ.culled,
+        hwQ: (QQ, WQ) => {
+          const qQ = Math.floor(WQ[0] / TQ),
+            sQ = Math.floor(WQ[1] / TQ),
+            FQ = Math.floor(WQ[2] / TQ),
+            PQ = `${qQ}|${sQ}|${FQ}`;
+          let gQ = zQ.get(PQ);
+          if (!gQ) {
+            const QQ = [0, 0, 0];
+            XQ.dWQ([qQ * TQ - 1, sQ * TQ - 1, FQ * TQ - 1], null, QQ), gQ = Object.assign(wQ(QQ, TQ + 2), {
+              nwQ: PQ,
+              xwQ: 0,
               _selectionId: 0,
               _inFrustum: !1,
-              _noaSlot: tp()
-            }), Hp(Dp), Wp[Dp._noaSlot] = (0, Gp.j)(op, xp, Lp), yp[3 * Dp._noaSlot] = op, yp[3 * Dp._noaSlot + 1] = xp, yp[3 * Dp._noaSlot + 2] = Lp, Sp.set(Yp, Dp)
+              _noaSlot: DQ()
+            }), pQ(gQ), IQ[gQ._noaSlot] = (0, mQ.i)(qQ, sQ, FQ), jQ[3 * gQ._noaSlot] = qQ, jQ[3 * gQ._noaSlot + 1] = sQ, jQ[3 * gQ._noaSlot + 2] = FQ, zQ.set(PQ, gQ)
           }
-          Dp.oop++, pp.metadata[rp.w] = Dp
+          gQ.xwQ++, QQ.metadata[MQ.x] = gQ
         },
-        xJ: pp => {
-          const ip = pp.metadata[rp.w];
-          ip && (ip.oop--, ip.oop <= 0 && (Sp.delete(ip.Oop), wp.push(ip._noaSlot)), pp.metadata[rp.w] = null)
+        ZE: QQ => {
+          const WQ = QQ.metadata[MQ.x];
+          WQ && (WQ.xwQ--, WQ.xwQ <= 0 && (zQ.delete(WQ.nwQ), yQ.push(WQ._noaSlot)), QQ.metadata[MQ.x] = null)
         },
-        zOp: (pp, ip) => {
-          const cp = pp,
-            Op = ip.metadata[rp.w];
-          (cp._noaSlots ??= []).push(Op._noaSlot), (cp._noaStamps ??= []).push(0), (cp._noaTerrain ??= []).push(0), cp.entries.push(ip)
+        SwQ: (QQ, WQ) => {
+          const XQ = QQ,
+            wQ = WQ.metadata[MQ.x];
+          (XQ._noaSlots ??= []).push(wQ._noaSlot), (XQ._noaStamps ??= []).push(0), (XQ._noaTerrain ??= []).push(0), XQ.entries.push(WQ)
         },
-        removeEntry: (pp, ip) => {
-          const cp = pp,
-            Op = cp.entries,
-            op = Op.indexOf(ip);
-          if (op < 0) return;
-          const Ip = cp._noaSlots,
-            Sp = cp._noaStamps,
-            xp = cp._noaTerrain,
-            Lp = Op.length - 1;
-          Op[op] = Op[Lp], Ip[op] = Ip[Lp], Sp[op] = Sp[Lp], xp[op] = xp[Lp], Op.pop(), Ip.pop(), Sp.pop(), xp.pop()
+        removeEntry: (QQ, WQ) => {
+          const XQ = QQ,
+            wQ = XQ.entries,
+            qQ = wQ.indexOf(WQ);
+          if (qQ < 0) return;
+          const TQ = XQ._noaSlots,
+            zQ = XQ._noaStamps,
+            sQ = XQ._noaTerrain,
+            FQ = wQ.length - 1;
+          wQ[qQ] = wQ[FQ], TQ[qQ] = TQ[FQ], zQ[qQ] = zQ[FQ], sQ[qQ] = sQ[FQ], wQ.pop(), TQ.pop(), zQ.pop(), sQ.pop()
         },
-        K9: pp => {
-          for (const ip of Sp.values()) {
-            ip.nOp.Iop(pp), ip.aOp.Iop(pp);
-            for (const cp of ip.KOp) cp.Iop(pp);
-            Hp(ip)
+        WQQ: QQ => {
+          for (const WQ of zQ.values()) {
+            WQ.EwQ.YwQ(QQ), WQ.RwQ.YwQ(QQ);
+            for (const XQ of WQ.owQ) XQ.YwQ(QQ);
+            pQ(WQ)
           }
         }
       }
     }
 
-    function vi(pp, ip) {
-      return ip.set(pp), ip
+    function UW(QQ, WQ) {
+      return WQ.set(QQ), WQ
     }
 
-    function ti(pp, ip, cp) {
-      const Op = pp[ip],
-        op = pp[ip + 1],
-        Ip = pp[ip + 2],
-        Sp = pp[ip + 3],
-        xp = pp[ip + 4],
-        Lp = pp[ip + 5];
-      for (let Yp = 0; Yp < 24; Yp += 4) {
-        const pp = cp[Yp],
-          ip = cp[Yp + 1],
-          Dp = cp[Yp + 2];
-        if (!(pp * (pp >= 0 ? Sp : Op) + ip * (ip >= 0 ? xp : op) + Dp * (Dp >= 0 ? Lp : Ip) + cp[Yp + 3] >= 0)) return !1
+    function bW(QQ, WQ, XQ) {
+      const wQ = QQ[WQ],
+        qQ = QQ[WQ + 1],
+        TQ = QQ[WQ + 2],
+        zQ = QQ[WQ + 3],
+        sQ = QQ[WQ + 4],
+        FQ = QQ[WQ + 5];
+      for (let PQ = 0; PQ < 24; PQ += 4) {
+        const QQ = XQ[PQ],
+          WQ = XQ[PQ + 1],
+          gQ = XQ[PQ + 2];
+        if (!(QQ * (QQ >= 0 ? zQ : wQ) + WQ * (WQ >= 0 ? sQ : qQ) + gQ * (gQ >= 0 ? FQ : TQ) + XQ[PQ + 3] >= 0)) return !1
       }
       return !0
     }
-    var Hi = cp(37996);
-    class di {
-      constructor(pp, ip) {
-        var cp = pp.pw;
-        cp.uOp(new Fp.c(cp));
-        var Op = new ap.d(Lp);
-        cp.xop = Op, Op.blocks = [];
-        var op, Ip = {},
-          xp = [];
-        this.textPlanes = xp, this.iop = () => op.iop(), this.K9 = pp => {
-          Dp(Op, pp), op.K9(pp)
-        }, this.TOp = (ip, cp, Sp) => {
-          if (!ip.metadata) throw new Error("Mesh should have mesh.metadata property");
-          if (!ip.metadata[rp.s] && !ip.metadata[rp.l]) {
-            if (!cp) {
-              var Lp = Op.sOp;
-              if (ip.metadata[rp.B] && !ip.parent) {
-                Lp = xp;
-                var Dp = ip.bJ().Yop;
-                ip.metadata[rp.C] = Dp.center.length() + Dp.radius, ip.Gy = !0
+    var vW = XQ(38049);
+    class dW {
+      constructor(QQ, WQ) {
+        var XQ = QQ.cB;
+        XQ.rwQ(new OQ.b(XQ));
+        var wQ = new NQ.d(FQ);
+        XQ.ZwQ = wQ, wQ.blocks = [];
+        var qQ, TQ = {},
+          sQ = [];
+        this.textPlanes = sQ, this.ewQ = () => qQ.ewQ(), this.WQQ = QQ => {
+          gQ(wQ, QQ), qQ.WQQ(QQ)
+        }, this.hwQ = (WQ, XQ, zQ) => {
+          if (!WQ.metadata) throw new Error("Mesh should have mesh.metadata property");
+          if (!WQ.metadata[MQ.u] && !WQ.metadata[MQ.l]) {
+            if (!XQ) {
+              var FQ = wQ.twQ;
+              if (WQ.metadata[MQ.B] && !WQ.parent) {
+                FQ = sQ;
+                var gQ = WQ.uC().mwQ;
+                WQ.metadata[MQ.F] = gQ.center.length() + gQ.radius, WQ.bj = !0
               }
-              return Lp.push(ip), ip.metadata[rp.h] = Lp, void(ip.metadata[rp.l] = !0)
+              return FQ.push(WQ), WQ.metadata[MQ.g] = FQ, void(WQ.metadata[MQ.l] = !0)
             }
-            var Pp = Math.floor(Sp[0] / Yp),
-              Wp = Math.floor(Sp[1] / Yp),
-              yp = Math.floor(Sp[2] / Yp),
-              Up = Pp + "|" + Wp + "|" + yp,
-              wp = Ip[Up];
-            if (!wp) {
-              var vp = [Pp * Yp, Wp * Yp, yp * Yp],
-                tp = [0, 0, 0];
-              pp.HP.uip(vp, null, tp), wp = Ap(tp, Yp), Op.blocks.push(wp), Ip[Up] = wp, wp.Oop = Up
+            var rQ = Math.floor(zQ[0] / PQ),
+              IQ = Math.floor(zQ[1] / PQ),
+              jQ = Math.floor(zQ[2] / PQ),
+              BQ = rQ + "|" + IQ + "|" + jQ,
+              yQ = TQ[BQ];
+            if (!yQ) {
+              var VQ = [rQ * PQ, IQ * PQ, jQ * PQ],
+                DQ = [0, 0, 0];
+              QQ.KJ.dWQ(VQ, null, DQ), yQ = JQ(DQ, PQ), wQ.blocks.push(yQ), TQ[BQ] = yQ, yQ.nwQ = BQ
             }
-            op.TOp(ip, Sp), op.zOp(wp, ip), wp.oop = (wp.oop || 0) + 1, ip.metadata[rp.s] = wp, ip.metadata[rp.o] = !0, ip.Gy = !0
+            qQ.hwQ(WQ, zQ), qQ.SwQ(yQ, WQ), yQ.xwQ = (yQ.xwQ || 0) + 1, WQ.metadata[MQ.u] = yQ, WQ.metadata[MQ.m] = !0, WQ.bj = !0
           }
-        }, this.xJ = pp => {
-          if (pp.metadata) {
-            pp.metadata[rp.l] && ((0, Gp.l)(pp.metadata[rp.h], pp), pp.metadata[rp.l] = !1), pp.metadata[rp.h] === xp && (pp.Gy = !1), pp.metadata[rp.h] = void 0, pp.metadata[rp.C] = void 0;
-            var ip = pp.metadata[rp.s];
-            ip && ip.entries && (pp.metadata[rp.o] && op.removeEntry(ip, pp), ip.oop--, ip.oop <= 0 && (delete Ip[ip.Oop], (0, Gp.l)(Op.blocks, ip))), op.xJ(pp), pp.metadata[rp.s] = null, pp.metadata[rp.o] = !1
+        }, this.ZE = QQ => {
+          if (QQ.metadata) {
+            QQ.metadata[MQ.l] && ((0, mQ.o)(QQ.metadata[MQ.g], QQ), QQ.metadata[MQ.l] = !1), QQ.metadata[MQ.g] === sQ && (QQ.bj = !1), QQ.metadata[MQ.g] = void 0, QQ.metadata[MQ.F] = void 0;
+            var WQ = QQ.metadata[MQ.u];
+            WQ && WQ.entries && (QQ.metadata[MQ.m] && qQ.removeEntry(WQ, QQ), WQ.xwQ--, WQ.xwQ <= 0 && (delete TQ[WQ.nwQ], (0, mQ.o)(wQ.blocks, WQ))), qQ.ZE(QQ), QQ.metadata[MQ.u] = null, QQ.metadata[MQ.m] = !1
           }
-        }, this.h_ = function(pp) {
-          let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          if (pp.metadata[rp.s]) {
-            if (pp.metadata[rp.o] === ip) return;
-            var cp = pp.metadata[rp.s];
-            cp && cp.entries && (ip ? op.zOp(cp, pp) : op.removeEntry(cp, pp)), pp.metadata[rp.o] = ip
+        }, this.o_ = function(QQ) {
+          let WQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          if (QQ.metadata[MQ.u]) {
+            if (QQ.metadata[MQ.m] === WQ) return;
+            var XQ = QQ.metadata[MQ.u];
+            XQ && XQ.entries && (WQ ? qQ.SwQ(XQ, QQ) : qQ.removeEntry(XQ, QQ)), QQ.metadata[MQ.m] = WQ
           } else {
-            if (pp.metadata[rp.l] === ip) return;
-            var Ip = pp.metadata[rp.h] || Op.sOp;
-            ip ? Ip.push(pp) : (0, Gp.l)(Ip, pp), pp.metadata[rp.l] = ip
+            if (QQ.metadata[MQ.l] === WQ) return;
+            var TQ = QQ.metadata[MQ.g] || wQ.twQ;
+            WQ ? TQ.push(QQ) : (0, mQ.o)(TQ, QQ), QQ.metadata[MQ.l] = WQ
           }
         };
-        var Lp = () => {},
-          Yp = ip * pp.HP.WP.epp,
-          Dp = (pp, ip) => {
-            pp.blocks.forEach((pp => {
-              pp.nOp.Iop(ip), pp.aOp.Iop(ip), pp.KOp.forEach((pp => pp.Iop(ip))), pp.blocks && Dp(pp, ip)
+        var FQ = () => {},
+          PQ = WQ * QQ.KJ.nJ.iQQ,
+          gQ = (QQ, WQ) => {
+            QQ.blocks.forEach((QQ => {
+              QQ.EwQ.YwQ(WQ), QQ.RwQ.YwQ(WQ), QQ.owQ.forEach((QQ => QQ.YwQ(WQ))), QQ.blocks && gQ(QQ, WQ)
             }))
           },
-          Ap = (pp, ip) => {
-            var cp = new Sp.Zy(pp[0], pp[1], pp[2]),
-              Op = new Sp.Zy(pp[0] + ip, pp[1] + ip, pp[2] + ip);
-            return new np.b(cp, Op, void 0, void 0, void 0, Lp)
+          JQ = (QQ, WQ) => {
+            var XQ = new zQ.vj(QQ[0], QQ[1], QQ[2]),
+              wQ = new zQ.vj(QQ[0] + WQ, QQ[1] + WQ, QQ[2] + WQ);
+            return new ZQ.b(XQ, wQ, void 0, void 0, void 0, FQ)
           };
-        op = wi(cp, Op, pp.HP, Ap, ((pp, ip) => {
-          for (var cp = 0; cp < xp.length; cp++) {
-            var Op = xp[cp];
-            Op.isEnabled(!1) && ((0, Hi.d)(Op, ip) && gp.g.prototype.push.call(pp, Op))
+        qQ = GW(XQ, wQ, QQ.KJ, JQ, ((QQ, WQ) => {
+          for (var XQ = 0; XQ < sQ.length; XQ++) {
+            var wQ = sQ[XQ];
+            wQ.isEnabled(!1) && ((0, vW.e)(wQ, WQ) && KQ.e.prototype.push.call(QQ, wQ))
           }
         }))
       }
     }
 
-    function ei(pp) {
+    function HW(QQ) {
       const {
-        holderPosition: ip,
-        holderRotation: cp,
-        tV: Op,
-        fov: op,
-        near: Ip,
-        far: Sp
-      } = pp.model.wV, xp = pp.vop;
-      xp.position.i5(ip[0], ip[1], ip[2]), xp.rotation.i5(cp[0], cp[1], cp[2]);
-      const Lp = pp.camera;
-      Lp.position.i5(Op[0], Op[1], Op[2]), Lp.fov = op, Lp.minZ = Ip, Lp.maxZ = Sp
+        holderPosition: WQ,
+        holderRotation: XQ,
+        Km: wQ,
+        fov: qQ,
+        near: TQ,
+        far: zQ
+      } = QQ.model.Zm, sQ = QQ.zqQ;
+      sQ.position.XQQ(WQ[0], WQ[1], WQ[2]), sQ.rotation.XQQ(XQ[0], XQ[1], XQ[2]);
+      const FQ = QQ.camera;
+      FQ.position.XQQ(wQ[0], wQ[1], wQ[2]), FQ.fov = qQ, FQ.minZ = TQ, FQ.maxZ = zQ
     }
 
-    function ui(pp) {
-      const ip = pp.gy(),
-        cp = ip,
-        Op = cp._gl;
-      if (!Op || cp.eU < 2 || ip.lOp || Op.getParameter(Op.DEPTH_BITS) < 24) return !1;
-      const op = pp._renderingManager,
-        Ip = op.getRenderingGroup(-1),
-        Sp = op.getRenderingGroup(0),
-        xp = Np.b.prototype.render;
-      return Ip.render = function(pp, ip, cp, Op, op, Ip, Lp, Yp, Dp) {
-        (pp || Sp._empty) && xp.call(this, pp, ip, cp, Op, op, Ip, Lp, Yp, Dp)
-      }, Sp.render = function(pp, cp, op, Sp) {
-        let Lp = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          Yp = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-          Ap = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
-          Pp = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7],
-          Wp = arguments.length > 8 ? arguments[8] : void 0;
-        pp ? xp.call(this, pp, cp, op, Sp, Lp, Yp, Ap, Pp, Wp) : (ip.setAlphaMode(Dp.d.ALPHA_DISABLE), xp.call(this, null, !1, !1, Sp, Lp, Yp, Ap, !1), Ip._empty || (Op.depthRange(1, 1), xp.call(Ip, null, cp, op, Sp, Lp, Yp, Ap, Pp, Wp), Op.depthRange(0, 1)), xp.call(this, null, cp, op, Sp, !1, !1, !1, Pp, Wp))
+    function aW(QQ) {
+      const WQ = QQ.Uj(),
+        XQ = WQ,
+        wQ = XQ._gl;
+      if (!wQ || XQ.Mj < 2 || WQ.vwQ || wQ.getParameter(wQ.DEPTH_BITS) < 24) return !1;
+      const qQ = QQ._renderingManager,
+        TQ = qQ.getRenderingGroup(-1),
+        zQ = qQ.getRenderingGroup(0),
+        sQ = oQ.e.prototype.render;
+      return TQ.render = function(QQ, WQ, XQ, wQ, qQ, TQ, FQ, PQ, gQ) {
+        (QQ || zQ._empty) && sQ.call(this, QQ, WQ, XQ, wQ, qQ, TQ, FQ, PQ, gQ)
+      }, zQ.render = function(QQ, XQ, qQ, zQ) {
+        let FQ = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          PQ = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+          JQ = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
+          rQ = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7],
+          IQ = arguments.length > 8 ? arguments[8] : void 0;
+        QQ ? sQ.call(this, QQ, XQ, qQ, zQ, FQ, PQ, JQ, rQ, IQ) : (WQ.setAlphaMode(gQ.b.ALPHA_DISABLE), sQ.call(this, null, !1, !1, zQ, FQ, PQ, JQ, !1), TQ._empty || (wQ.depthRange(1, 1), sQ.call(TQ, null, XQ, qQ, zQ, FQ, PQ, JQ, rQ, IQ), wQ.depthRange(0, 1)), sQ.call(this, null, XQ, qQ, zQ, !1, !1, !1, rQ, IQ))
       }, !0
     }
 
-    function ji(pp, ip) {
-      return [ip, hp.f].map(((ip, cp) => {
-        const Op = new op.d("light", Sp.Zy.FromArray(ip), pp);
-        return Op.diffuse = Ip.Color3.FromArray([1, 1, 1]), Op.specular = Ip.Color3.FromArray([1, 1, 1]), Op.intensity = hp.b[cp], Op
+    function lW(QQ, WQ) {
+      return [WQ, YQ.g].map(((WQ, XQ) => {
+        const wQ = new qQ.e("light", zQ.vj.FromArray(WQ), QQ);
+        return wQ.diffuse = TQ.Color3.FromArray([1, 1, 1]), wQ.specular = TQ.Color3.FromArray([1, 1, 1]), wQ.intensity = YQ.d[XQ], wQ
       }))
     }
-    class ki extends Lp.e {
+    class hW extends FQ.c {
       constructor() {
         super(...arguments), this.heldTexture = null
       }
       get texture() {
         return this.heldTexture
       }
-      set texture(pp) {
-        var ip;
-        this.heldTexture = pp, this.particleTexture = null !== (ip = null === pp || void 0 === pp ? void 0 : pp.mirror) && void 0 !== ip ? ip : null
+      set texture(QQ) {
+        var WQ;
+        this.heldTexture = QQ, this.particleTexture = null !== (WQ = null === QQ || void 0 === QQ ? void 0 : QQ.mirror) && void 0 !== WQ ? WQ : null
       }
       isEmitting() {
         return this.isStarted() && !this._stopped
       }
       dispose() {
-        let pp = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
-          ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          cp = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        pp && (this.particleTexture = null, (0, Yp.C)(this.heldTexture), this.heldTexture = null), super.dispose(pp, ip, cp)
+        let QQ = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
+          WQ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          XQ = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        QQ && (this.particleTexture = null, (0, PQ.I)(this.heldTexture), this.heldTexture = null), super.dispose(QQ, WQ, XQ)
       }
     }
-    const mi = Op.c.Zero();
-    const Ri = {
-      Zcp: function(pp, ip) {
-        return new Ep(pp, ip.Fcp, {
-          preserveDrawingBuffer: ip.preserveDrawingBuffer,
+    const iW = wQ.e.Zero();
+    const cW = {
+      fXQ: function(QQ, WQ) {
+        return new uQ(QQ, WQ.CXQ, {
+          preserveDrawingBuffer: WQ.preserveDrawingBuffer,
           powerPreference: "high-performance",
           alpha: !1,
           stencil: !1
         })
       },
-      jop: function(pp, ip) {
-        ! function(pp, ip, cp) {
-          const Op = new fp.c(pp.engine);
-          pp.pw = Op, Op.detachControl(), Op.autoClear = !1, Tp.d.MIN_RENDERINGGROUPS = -1;
-          for (let Ip = Tp.d.MIN_RENDERINGGROUPS; Ip <= 1; Ip++) Op.setRenderingOrder(Ip, Np.b.PainterSortCompare, Np.b.PainterSortCompare, Np.b.PainterSortCompare);
-          Op.setRenderingAutoClearDepthStencil(0, !1), Bp.b.Enabled = !1, pp.yop = new di(pp, Math.round(ip.Uop)), pp.vop = new Jp.b("camHolder", Op), pp.camera = new Qp.b("camera", new Sp.Zy(0, 0, 0), Op), pp.camera.parent = pp.vop, ei(pp), (0, hp.i)(pp, ((pp, ip, cp) => (0, bp.f)(ip, cp, pp.pw))), Op.clearColor = Ip.b.FromArray(ip.clearColor), Op.ambientColor = Ip.Color3.FromArray(ip.ambientColor);
-          const op = cp(Op, ip.uop);
-          Op.onNewLightAddedObservable.add((pp => {
-            op.some((ip => ip === pp)) || console.error(`Light "${pp.name}" was added to the scene after startup; terrain, block models and Lite will ignore it. Add it in addNoaLights (renderingCamera.ts) and addBabylonLights (babylonBackend.ts).`)
-          })), Op.skipPointerMovePicking = !0
-        }(pp, ip, ji), ui(pp.pw)
+      gqQ: function(QQ, WQ) {
+        ! function(QQ, WQ, XQ) {
+          const wQ = new nQ.c(QQ.engine);
+          QQ.cB = wQ, wQ.detachControl(), wQ.autoClear = !1, eQ.e.MIN_RENDERINGGROUPS = -1;
+          for (let TQ = eQ.e.MIN_RENDERINGGROUPS; TQ <= 1; TQ++) wQ.setRenderingOrder(TQ, oQ.e.PainterSortCompare, oQ.e.PainterSortCompare, oQ.e.PainterSortCompare);
+          wQ.setRenderingAutoClearDepthStencil(0, !1), tQ.d.Enabled = !1, QQ.wqQ = new dW(QQ, Math.round(WQ.qqQ)), QQ.zqQ = new SQ.b("camHolder", wQ), QQ.camera = new fQ.c("camera", new zQ.vj(0, 0, 0), wQ), QQ.camera.parent = QQ.zqQ, HW(QQ), (0, YQ.k)(QQ, ((QQ, WQ, XQ) => (0, xQ.h)(WQ, XQ, QQ.cB))), wQ.clearColor = TQ.d.FromArray(WQ.clearColor), wQ.ambientColor = TQ.Color3.FromArray(WQ.ambientColor);
+          const qQ = XQ(wQ, WQ.PqQ);
+          wQ.onNewLightAddedObservable.add((QQ => {
+            qQ.some((WQ => WQ === QQ)) || console.error(`Light "${QQ.name}" was added to the scene after startup; terrain, block models and Lite will ignore it. Add it in addNoaLights (renderingCamera.ts) and addBabylonLights (babylonBackend.ts).`)
+          })), wQ.skipPointerMovePicking = !0
+        }(QQ, WQ, lW), aW(QQ.cB)
       },
-      wop: ei,
-      setBabylonFog: function(pp, ip, cp, Op) {
-        const op = pp.pw;
-        op.fogMode = 3, op.fogStart = ip, op.fogEnd = cp, op.fogColor.set(Op[0], Op[1], Op[2])
+      TqQ: HW,
+      setBabylonFog: function(QQ, WQ, XQ, wQ) {
+        const qQ = QQ.cB;
+        qQ.fogMode = 3, qQ.fogStart = WQ, qQ.fogEnd = XQ, qQ.fogColor.set(wQ[0], wQ[1], wQ[2])
       },
-      Rop: function(pp, ip, cp) {
-        return pp.engine.eU >= 2 && (pp.qop || (pp.qop = new Mp(pp.pw, pp.Mop)), !pp.qop.failed) ? pp.qop.eJ(ip, cp) : new ki(ip, cp, pp.pw)
+      rqQ: function(QQ, WQ, XQ) {
+        return QQ.engine.Mj >= 2 && (QQ.IqQ || (QQ.IqQ = new EQ(QQ.cB, QQ.jqQ)), !QQ.IqQ.failed) ? QQ.IqQ.rC(WQ, XQ) : new hW(WQ, XQ, QQ.cB)
       },
-      Xop: function(pp, ip) {
-        pp.pw.Wm.forEach((cp => {
-          if (cp instanceof Rp) return void cp.K9(ip, pp.HP.BP);
-          const Op = cp;
-          if (Op.emitter.getConnectedParticleSystems)
-            for (const pp of Op._particles) pp.position.set(pp.position.x - ip[0], pp.position.y - ip[1], pp.position.z - ip[2]);
+      yqQ: function(QQ, WQ) {
+        QQ.cB.KD.forEach((XQ => {
+          if (XQ instanceof AQ) return void XQ.WQQ(WQ, QQ.KJ.jr);
+          const wQ = XQ;
+          if (wQ.emitter.getConnectedParticleSystems)
+            for (const QQ of wQ._particles) QQ.position.set(QQ.position.x - WQ[0], QQ.position.y - WQ[1], QQ.position.z - WQ[2]);
           else {
-            if (!Op.worldOffset) throw new Error("Particle system has no world offset");
-            Op.worldOffset.x = -pp.HP.BP[0], Op.worldOffset.y = -pp.HP.BP[1], Op.worldOffset.z = -pp.HP.BP[2]
+            if (!wQ.worldOffset) throw new Error("Particle system has no world offset");
+            wQ.worldOffset.x = -QQ.KJ.jr[0], wQ.worldOffset.y = -QQ.KJ.jr[1], wQ.worldOffset.z = -QQ.KJ.jr[2]
           }
         }))
       },
-      linesFromArrays: function(pp, ip, cp) {
-        const Op = new xp.b(ip, pp.pw, null, void 0, void 0, !1);
-        return (0, bp.e)(ip, cp, pp.pw, Op), Op
+      linesFromArrays: function(QQ, WQ, XQ) {
+        const wQ = new sQ.d(WQ, QQ.cB, null, void 0, void 0, !1);
+        return (0, xQ.f)(WQ, XQ, QQ.cB, wQ), wQ
       },
-      iw: Ai,
-      Eop: function(pp, ip) {
-        return mi.origin.rM(ip.origin), mi.direction.rM(ip.direction), mi.length = ip.length, mi.epsilon = ip.epsilon, mi.Eop(pp, !1, void 0, !1, void 0, !0).pickedPoint
+      AB: BW,
+      BqQ: function(QQ, WQ) {
+        return iW.origin.WH(WQ.origin), iW.direction.WH(WQ.direction), iW.length = WQ.length, iW.epsilon = WQ.epsilon, iW.BqQ(QQ, !1, void 0, !1, void 0, !0).pickedPoint
       }
     }
   },
-  41345: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => ap,
-      d: () => tp,
-      g: () => Zp
+  41344: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      e: () => tQ,
+      i: () => DQ,
+      l: () => NQ
     });
-    var Op = cp(40459),
-      op = cp(41347),
-      Ip = cp(41393),
-      Sp = cp(41353),
-      xp = cp(38045),
-      Lp = cp(38055),
-      Yp = cp(38061),
-      Dp = cp(38064),
-      Ap = cp(37445),
-      Pp = cp(37448),
-      Wp = cp(41359),
-      yp = cp(37433),
-      Up = cp(37436),
-      wp = cp(37421);
+    var wQ = XQ(40530),
+      qQ = XQ(41348),
+      TQ = XQ(41394),
+      zQ = XQ(41354),
+      sQ = XQ(38094),
+      FQ = XQ(38107),
+      PQ = XQ(38114),
+      gQ = XQ(38116),
+      JQ = XQ(37490),
+      rQ = XQ(37492),
+      IQ = XQ(41357),
+      jQ = XQ(37477),
+      BQ = XQ(37480),
+      yQ = XQ(37468);
 
-    function vp(pp, ip) {
-      return Object.assign((function(pp, cp, Op, op) {
-        return ip(this.featureState, pp, cp, Op, op)
+    function VQ(QQ, WQ) {
+      return Object.assign((function(QQ, XQ, wQ, qQ) {
+        return WQ(this.featureState, QQ, XQ, wQ, qQ)
       }), {
-        Py: pp
+        NI: QQ
       })
     }
 
-    function tp(pp) {
-      const ip = class extends Wp.c {
-          constructor(ip, cp) {
-            const Op = (0, Up.$)(ip),
-              op = Op && (0, Up.s)(Op, pp.name);
-            for (var Ip = arguments.length, Sp = new Array(Ip > 2 ? Ip - 2 : 0), xp = 2; xp < Ip; xp++) Sp[xp - 2] = arguments[xp];
-            super(ip, pp.name, pp.priority, op ? op.defines : pp.defines(...Sp), !1), this.featureState = void 0, this.featureState = cp, this._pluginManager._addPlugin(this), this._enable(!0), (0, Up.v)(this._material, pp, this.featureState, this._pluginDefineNames)
+    function DQ(QQ) {
+      const WQ = class extends IQ.b {
+          constructor(WQ, XQ) {
+            const wQ = (0, BQ._)(WQ),
+              qQ = wQ && (0, BQ.u)(wQ, QQ.name);
+            for (var TQ = arguments.length, zQ = new Array(TQ > 2 ? TQ - 2 : 0), sQ = 2; sQ < TQ; sQ++) zQ[sQ - 2] = arguments[sQ];
+            super(WQ, QQ.name, QQ.priority, qQ ? qQ.defines : QQ.defines(...zQ), !1), this.featureState = void 0, this.featureState = XQ, this._pluginManager._addPlugin(this), this._enable(!0), (0, BQ.y)(this._material, QQ, this.featureState, this._pluginDefineNames)
           }
           getClassName() {
-            return pp.className
+            return QQ.className
           }
-          isCompatible(pp) {
-            return pp === wp.b.GLSL || pp === wp.b.WGSL
+          isCompatible(QQ) {
+            return QQ === yQ.b.GLSL || QQ === yQ.b.WGSL
           }
         },
-        cp = (0, yp.l)(pp);
-      for (const [Op, op] of Object.entries(yp.e)) {
-        const Ip = pp[Op];
-        if (Ip) {
-          const pp = cp[Op];
-          Object.defineProperty(ip.prototype, op, {
-            value: vp(Ip, pp),
+        XQ = (0, jQ.g)(QQ);
+      for (const [wQ, qQ] of Object.entries(jQ.d)) {
+        const TQ = QQ[wQ];
+        if (TQ) {
+          const QQ = XQ[wQ];
+          Object.defineProperty(WQ.prototype, qQ, {
+            value: VQ(TQ, QQ),
             writable: !0,
             configurable: !0
           })
         }
       }
-      return ip
+      return WQ
     }
-    class Hp extends(tp(xp.d)) {}
-    var dp = cp(40024),
-      ep = cp(41367),
-      jp = cp(41375);
+    class pQ extends(DQ(sQ.d)) {}
+    var GQ = XQ(40089),
+      UQ = XQ(41364),
+      bQ = XQ(41366);
 
-    function kp(pp, ip, cp) {
-      return (0, jp.h)(cp, ip.urls, (() => async function(pp, ip, cp) {
+    function vQ(QQ, WQ, XQ) {
+      return (0, bQ.f)(XQ, WQ.urls, (() => async function(QQ, WQ, XQ) {
         const {
-          width: Op
-        } = pp[0].getSize(), op = pp.map(((pp, cp) => {
-          var op;
-          const Ip = Math.round(pp.getSize().height / Op),
-            Sp = null === ip || void 0 === ip ? void 0 : ip[cp];
+          width: wQ
+        } = QQ[0].getSize(), qQ = QQ.map(((QQ, XQ) => {
+          var qQ;
+          const TQ = Math.round(QQ.getSize().height / wQ),
+            zQ = null === WQ || void 0 === WQ ? void 0 : WQ[XQ];
           return {
-            pixels: Sp && Sp.byteLength === Op * Op * Ip * 4 ? Sp : null !== (op = mp.get(pp.getInternalTexture())) && void 0 !== op ? op : pp._readPixelsSync(),
-            layers: Ip
+            pixels: zQ && zQ.byteLength === wQ * wQ * TQ * 4 ? zQ : null !== (qQ = dQ.get(QQ.getInternalTexture())) && void 0 !== qQ ? qQ : QQ._readPixelsSync(),
+            layers: TQ
           }
-        })), Ip = cp.gy().getCaps().texture2DArrayMaxLayerCount, xp = (0, jp.d)(op, Op, Ip).map((pp => {
+        })), TQ = XQ.Uj().getCaps().texture2DArrayMaxLayerCount, sQ = (0, bQ.b)(qQ, wQ, TQ).map((QQ => {
           let {
-            pixels: ip,
-            layers: op
-          } = pp;
+            pixels: WQ,
+            layers: qQ
+          } = QQ;
           return {
-            atlas: new ep.c(ip, Op, Op, op, dp.d.TEXTUREFORMAT_RGBA, cp, !0, !1, Sp.d.NEAREST_NEAREST_MIPLINEAR),
-            layers: op
+            atlas: new UQ.d(WQ, wQ, wQ, qQ, GQ.b.TEXTUREFORMAT_RGBA, XQ, !0, !1, zQ.e.NEAREST_NEAREST_MIPLINEAR),
+            layers: qQ
           }
         }));
-        return pp.forEach(((pp, ip) => {
-          const Op = pp.getInternalTexture();
-          mp.has(Op) || (! function(pp, ip) {
-            const cp = ip.createRawTexture(new Uint8Array(4), 1, 1, dp.d.TEXTUREFORMAT_RGBA, !1, !1, Sp.d.NEAREST_SAMPLINGMODE);
-            pp._hardwareTexture.release(), ip.unbindAllTextures(), cp._swapAndDie(pp, !1)
-          }(Op, cp.gy()), mp.set(Op, op[ip].pixels))
-        })), xp
-      }(pp, ip.pixels, cp)))
+        return QQ.forEach(((QQ, WQ) => {
+          const wQ = QQ.getInternalTexture();
+          dQ.has(wQ) || (! function(QQ, WQ) {
+            const XQ = WQ.createRawTexture(new Uint8Array(4), 1, 1, GQ.b.TEXTUREFORMAT_RGBA, !1, !1, zQ.e.NEAREST_SAMPLINGMODE);
+            QQ._hardwareTexture.release(), WQ.unbindAllTextures(), XQ._swapAndDie(QQ, !1)
+          }(wQ, XQ.Uj()), dQ.set(wQ, qQ[WQ].pixels))
+        })), sQ
+      }(QQ, WQ.pixels, XQ)))
     }
-    const mp = new WeakMap;
-    var Rp = cp(38069);
-    class qp extends(tp(Lp.f)) {
-      constructor(pp, ip) {
-        super(pp, ip), this.loaded = new Set, this.mirrors = void 0, this.mirrors = ip.textures.map((pp => pp.mirror)), this.mirrors.forEach(((pp, ip) => {
-          pp.onLoadObservable.add((pp => {
-            this.setTextureArrayData(pp, ip).catch((pp => {
-              console.error(`Failed to build the texture arrays, at atlas ${ip}`, pp)
+    const dQ = new WeakMap;
+    var HQ = XQ(38125);
+    class aQ extends(DQ(FQ.h)) {
+      constructor(QQ, WQ) {
+        super(QQ, WQ), this.loaded = new Set, this.mirrors = void 0, this.mirrors = WQ.textures.map((QQ => QQ.mirror)), this.mirrors.forEach(((QQ, WQ) => {
+          QQ.onLoadObservable.add((QQ => {
+            this.setTextureArrayData(QQ, WQ).catch((QQ => {
+              console.error(`Failed to build the texture arrays, at atlas ${WQ}`, QQ)
             }))
           }))
-        })), (0, Rp.n)(ip, pp.shaderLanguage)
+        })), (0, HQ.j)(WQ, QQ.shaderLanguage)
       }
-      async setTextureArrayData(pp, ip) {
-        const cp = this.featureState,
+      async setTextureArrayData(QQ, WQ) {
+        const XQ = this.featureState,
           {
-            width: Op,
-            height: op
-          } = pp.getSize(),
-          Ip = this._material.shaderLanguage;
-        if (!cp.useWebGL2) return void(0, Rp.f)(this._material, cp, ip, Op, Math.round(op / Op), Ip);
-        if (this.loaded.add(ip), this.loaded.size < this.mirrors.length) return;
-        const Sp = await kp(this.mirrors, cp.sources, this._material.Gl());
-        (0, Rp.b)(this._material, cp, Sp, Op, Ip)
+            width: wQ,
+            height: qQ
+          } = QQ.getSize(),
+          TQ = this._material.shaderLanguage;
+        if (!XQ.useWebGL2) return void(0, HQ.g)(this._material, XQ, WQ, wQ, Math.round(qQ / wQ), TQ);
+        if (this.loaded.add(WQ), this.loaded.size < this.mirrors.length) return;
+        const zQ = await vQ(this.mirrors, XQ.sources, this._material.sE());
+        (0, HQ.d)(this._material, XQ, zQ, wQ, TQ)
       }
     }
-    var Mp = cp(41378),
-      Cp = cp(40498),
-      Ep = cp(37313),
-      Xp = cp(41383),
-      lp = cp(40589),
-      Qp = cp(40481),
-      Jp = cp(41325),
-      Bp = cp(37800),
-      Np = cp(41391);
-    class Tp extends Mp.c {
+    var lQ = XQ(41373),
+      hQ = XQ(40561),
+      iQ = XQ(37367),
+      cQ = XQ(41379),
+      AQ = XQ(40661),
+      RQ = XQ(40555),
+      EQ = XQ(41320),
+      CQ = XQ(37855),
+      uQ = XQ(41386);
+    class LQ extends lQ.b {
       getData() {
         return null
       }
@@ -857,464 +879,464 @@ export const modules = {
         super._rebuild()
       }
     }
-    const fp = {
-      Mesh: Xp.c,
-      TransformNode: Jp.b,
-      my: Mp.c,
-      VertexBuffer: Mp.f,
-      BoundingInfo: Cp.d,
-      Zy: Ep.Zy,
-      ArenaBuffer: Tp,
-      SubMesh: Qp.d,
-      VertexData: lp.d,
-      MirroredGeometry: Np.b,
-      meshFromArrays: Np.e,
-      plainMeshFromArrays: Np.f
+    const kQ = {
+      Mesh: cQ.b,
+      TransformNode: EQ.b,
+      Tj: lQ.b,
+      VertexBuffer: lQ.f,
+      BoundingInfo: hQ.e,
+      vj: iQ.vj,
+      ArenaBuffer: LQ,
+      SubMesh: RQ.b,
+      VertexData: AQ.e,
+      MirroredGeometry: uQ.b,
+      meshFromArrays: uQ.f,
+      plainMeshFromArrays: uQ.h
     };
-    (0, Bp.g)(fp);
-    var bp = cp(37655);
-    class hp extends(tp(Dp.g)) {
-      constructor(pp, ip) {
-        if (super(pp, ip), pp instanceof Op.StandardMaterial && ip.dirLightCount > 0) {
-          const ip = pp,
-            cp = ip._blockDirtyMechanism;
-          ip._blockDirtyMechanism = !0, pp.disableLighting = !0, ip._blockDirtyMechanism = cp;
-          const Op = (0, Up.$)(pp);
-          Op && (Op.disableLighting = !0, (0, Up.Y)(Op))
-        }(0, bp.g)(pp)
+    (0, CQ.f)(kQ);
+    var fQ = XQ(37698);
+    class SQ extends(DQ(gQ.k)) {
+      constructor(QQ, WQ) {
+        if (super(QQ, WQ), QQ instanceof wQ.StandardMaterial && WQ.dirLightCount > 0) {
+          const WQ = QQ,
+            XQ = WQ._blockDirtyMechanism;
+          WQ._blockDirtyMechanism = !0, QQ.disableLighting = !0, WQ._blockDirtyMechanism = XQ;
+          const wQ = (0, BQ._)(QQ);
+          wQ && (wQ.disableLighting = !0, (0, BQ.Z)(wQ))
+        }(0, fQ.j)(QQ)
       }
-      dispose(pp) {
-        (0, bp.i)(this._material), super.dispose(pp)
+      dispose(QQ) {
+        (0, fQ.n)(this._material), super.dispose(QQ)
       }
     }
 
-    function ap(pp, ip) {
-      if (!(ip instanceof Op.StandardMaterial) || ip.specularTexture) return;
+    function tQ(QQ, WQ) {
+      if (!(WQ instanceof wQ.StandardMaterial) || WQ.specularTexture) return;
       const {
-        r: cp,
-        g: op,
-        b: Ip
-      } = ip.specularColor;
-      0 === cp && 0 === op && 0 === Ip && (pp.SPECULARTERM = !1)
-    }(0, Dp.d)({
-      disableUnusedSpecularTerm: ap
+        r: XQ,
+        g: qQ,
+        b: TQ
+      } = WQ.specularColor;
+      0 === XQ && 0 === qQ && 0 === TQ && (QQ.SPECULARTERM = !1)
+    }(0, gQ.i)({
+      disableUnusedSpecularTerm: tQ
     });
-    var np = cp(37519),
-      Fp = cp(37807);
-    const gp = new RegExp(`^#define ${Yp.b}\\s*$`, "m");
-    class Gp extends(tp(Yp.h)) {
-      constructor(pp, ip) {
-        super(pp, ip), this.Ry = !1, ip.ditherOnlyWhileFading && (Fp.d.add(pp), this.prewarmDitherTwins(pp))
+    var oQ = XQ(37582),
+      eQ = XQ(37866);
+    const nQ = new RegExp(`^#define ${PQ.d}\\s*$`, "m");
+    class xQ extends(DQ(PQ.i)) {
+      constructor(QQ, WQ) {
+        super(QQ, WQ), this.zj = !1, WQ.ditherOnlyWhileFading && (eQ.e.add(QQ), this.prewarmDitherTwins(QQ))
       }
-      prewarmDitherTwins(pp) {
-        const ip = new WeakSet;
-        pp.onEffectCreatedObservable.add((cp => {
+      prewarmDitherTwins(QQ) {
+        const WQ = new WeakSet;
+        QQ.onEffectCreatedObservable.add((XQ => {
           let {
-            effect: Op,
-            subMesh: op
-          } = cp;
-          if (this.featureState.prewarmingDither || ip.has(Op)) return;
-          ip.add(Op);
-          const Ip = null === op || void 0 === op ? void 0 : op.getMesh();
-          Ip && !gp.test(Op.defines) && pp.Gl().onAfterRenderObservable.addOnce((() => {
-            this.prewarmDither(Ip) || ip.delete(Op)
+            effect: wQ,
+            subMesh: qQ
+          } = XQ;
+          if (this.featureState.prewarmingDither || WQ.has(wQ)) return;
+          WQ.add(wQ);
+          const TQ = null === qQ || void 0 === qQ ? void 0 : qQ.getMesh();
+          TQ && !nQ.test(wQ.defines) && QQ.sE().onAfterRenderObservable.addOnce((() => {
+            this.prewarmDither(TQ) || WQ.delete(wQ)
           }))
         }))
       }
-      prewarmDither(pp) {
-        if (this.Ry || pp.uR()) return !1;
-        const ip = new Qp.d(0, 0, 0, 0, 0, pp, void 0, !1, !1);
+      prewarmDither(QQ) {
+        if (this.zj || QQ.rG()) return !1;
+        const WQ = new RQ.b(0, 0, 0, 0, 0, QQ, void 0, !1, !1);
         this.featureState.prewarmingDither = !0;
         try {
-          this._material.isReadyForSubMesh(pp, ip)
+          this._material.isReadyForSubMesh(QQ, WQ)
         } finally {
           this.featureState.prewarmingDither = !1
         }
-        return null !== ip.effect
+        return null !== WQ.effect
       }
-      dispose(pp) {
-        this.Ry = !0, super.dispose(pp)
+      dispose(QQ) {
+        this.zj = !0, super.dispose(QQ)
       }
     }
-    const rp = new Map;
+    const YQ = new Map;
 
-    function Zp(pp, ip) {
-      rp.set(pp, ip)
+    function NQ(QQ, WQ) {
+      YQ.set(QQ, WQ)
     }
-    Zp(xp.d, Hp), Zp(Lp.f, qp), Zp(Yp.h, Gp), Zp(Dp.g, hp), (0, Ap.e)({
-      create: (pp, ip) => {
-        const cp = new Op.StandardMaterial(pp.name, ip);
-        return (0, np.p)(pp, cp), cp.detailMap._pluginDefineNames
+    NQ(sQ.d, pQ), NQ(FQ.h, aQ), NQ(PQ.i, xQ), NQ(gQ.k, SQ), (0, JQ.e)({
+      create: (QQ, WQ) => {
+        const XQ = new wQ.StandardMaterial(QQ.name, WQ);
+        return (0, oQ.r)(QQ, XQ), XQ.detailMap._pluginDefineNames
       },
-      write: (pp, ip, cp) => {
-        (0, np.S)(pp.mirror, ip, cp)
+      write: (QQ, WQ, XQ) => {
+        (0, oQ._)(QQ.mirror, WQ, XQ)
       },
-      addFeature: (pp, ip, cp) => {
-        const Op = rp.get(ip.feature);
-        if (!Op) throw new Error(`${ip.feature.name} has no plugin class (registerPluginClass)`);
-        new Op(pp.mirror, ip.state, ...cp)
+      addFeature: (QQ, WQ, XQ) => {
+        const wQ = YQ.get(WQ.feature);
+        if (!wQ) throw new Error(`${WQ.feature.name} has no plugin class (registerPluginClass)`);
+        new wQ(QQ.mirror, WQ.state, ...XQ)
       },
-      texture: (pp, ip, cp) => {
+      texture: (QQ, WQ, XQ) => {
         let {
-          url: Op,
-          noMipmap: op,
-          invertY: Ip,
-          samplingMode: xp,
-          data: Lp,
-          sets: Yp
-        } = cp;
-        if (!Lp) {
-          const cp = new Sp.d(Op, ip, op, Ip, xp);
-          return Object.assign(cp, Yp), void(0, Pp.K)(pp, cp)
+          url: wQ,
+          noMipmap: qQ,
+          invertY: TQ,
+          samplingMode: sQ,
+          data: FQ,
+          sets: PQ
+        } = XQ;
+        if (!FQ) {
+          const XQ = new zQ.e(wQ, WQ, qQ, TQ, sQ);
+          return Object.assign(XQ, PQ), void(0, rQ.N)(QQ, XQ)
         }
-        const Dp = {},
-          Ap = new Promise(((pp, ip) => {
-            Dp.onLoad = pp, Dp.onError = (pp, cp) => {
-              ip(new Error(`${Lp.context}: ${(null===cp||void 0===cp?void 0:cp.message)||pp||"Failed to load texture"}`))
+        const gQ = {},
+          JQ = new Promise(((QQ, WQ) => {
+            gQ.onLoad = QQ, gQ.onError = (QQ, XQ) => {
+              WQ(new Error(`${FQ.context}: ${(null===XQ||void 0===XQ?void 0:XQ.message)||QQ||"Failed to load texture"}`))
             }
           })),
           {
-            mimeType: Wp,
-            bytes: yp,
-            label: Up
-          } = Lp,
-          wp = {
-            noMipmap: op,
+            mimeType: IQ,
+            bytes: jQ,
+            label: BQ
+          } = FQ,
+          yQ = {
+            noMipmap: qQ,
             invertY: !1,
-            samplingMode: xp,
-            ...Dp,
-            mimeType: Wp,
+            samplingMode: sQ,
+            ...gQ,
+            mimeType: IQ,
             loaderOptions: void 0,
             useSRGBBuffer: !1
           },
-          vp = new Sp.d(null, ip, wp);
-        np.t.set(vp, Ap), Object.assign(vp, Yp), vp.updateURL(Op, yp);
-        const tp = vp.getInternalTexture();
-        tp && (tp.label = Up), pp.uvSet = vp.coordinatesIndex, pp.matrix.set((0, np.L)(vp)), (0, Pp.K)(pp, vp)
+          VQ = new zQ.e(null, WQ, yQ);
+        oQ.u.set(VQ, JQ), Object.assign(VQ, PQ), VQ.updateURL(wQ, jQ);
+        const DQ = VQ.getInternalTexture();
+        DQ && (DQ.label = BQ), QQ.uvSet = VQ.coordinatesIndex, QQ.matrix.set((0, oQ.T)(VQ)), (0, rQ.N)(QQ, VQ)
       },
-      cube: (pp, ip, cp) => {
+      cube: (QQ, WQ, XQ) => {
         let {
-          rootUrl: Op,
-          files: Ip,
-          noMipmap: xp,
-          luminance: Lp
-        } = cp;
+          rootUrl: wQ,
+          files: TQ,
+          noMipmap: sQ,
+          luminance: FQ
+        } = XQ;
         const {
-          samplingMode: Yp
-        } = pp.sampler, Dp = Yp === (0, Pp.z)(xp) ? null : () => {
-          (0, np.J)(Ap, Yp)
-        }, Ap = new op.b(Op, ip, null, xp, Ip, Dp, null, (0, Pp.w)(Lp));
-        Ap.coordinatesMode = Sp.d.SKYBOX_MODE, (0, Pp.K)(pp, Ap)
+          samplingMode: PQ
+        } = QQ.sampler, gQ = PQ === (0, rQ.E)(sQ) ? null : () => {
+          (0, oQ.S)(JQ, PQ)
+        }, JQ = new qQ.b(wQ, WQ, null, sQ, TQ, gQ, null, (0, rQ.A)(FQ));
+        JQ.coordinatesMode = zQ.e.SKYBOX_MODE, (0, rQ.N)(QQ, JQ)
       },
-      canvas: (pp, ip, cp) => {
+      canvas: (QQ, WQ, XQ) => {
         let {
-          width: Op,
-          height: op,
-          mipmaps: xp,
-          samplingMode: Lp,
-          hasAlpha: Yp = !1,
-          wrap: Dp = Sp.d.CLAMP_ADDRESSMODE
-        } = cp;
-        const Ap = new Ip.e(ip, {
-          width: Op,
-          height: op
-        }, pp, xp, Lp);
-        Ap.hasAlpha = Yp, Ap.wrapU = Dp, Ap.wrapV = Dp;
-        const Pp = (0, np.B)(Ap);
-        return (0, np.D)(Pp, Ap), Pp
+          width: wQ,
+          height: qQ,
+          mipmaps: sQ,
+          samplingMode: FQ,
+          hasAlpha: PQ = !1,
+          wrap: gQ = zQ.e.CLAMP_ADDRESSMODE
+        } = XQ;
+        const JQ = new TQ.b(WQ, {
+          width: wQ,
+          height: qQ
+        }, QQ, sQ, FQ);
+        JQ.hasAlpha = PQ, JQ.wrapU = gQ, JQ.wrapV = gQ;
+        const rQ = (0, oQ.F)(JQ);
+        return (0, oQ.J)(rQ, JQ), rQ
       }
     })
   },
-  41391: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Dp,
-      e: () => Ap,
-      f: () => Pp
+  41386: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      b: () => gQ,
+      f: () => JQ,
+      h: () => rQ
     });
-    var Op = cp(41378),
-      op = cp(40273),
-      Ip = cp(40498),
-      Sp = cp(40593),
-      xp = cp(41383),
-      Lp = cp(40589),
-      Yp = cp(37698);
-    class Dp extends Sp.b {
+    var wQ = XQ(41373),
+      qQ = XQ(40331),
+      TQ = XQ(40561),
+      zQ = XQ(40670),
+      sQ = XQ(41379),
+      FQ = XQ(40661),
+      PQ = XQ(37762);
+    class gQ extends zQ.d {
       constructor() {
-        super(...arguments), this.model = null, this.onGeometryUpdated = (pp, ip) => {
-          this.releaseUnlessInstanced(ip)
+        super(...arguments), this.model = null, this.onGeometryUpdated = (QQ, WQ) => {
+          this.releaseUnlessInstanced(WQ)
         }, this.onLinked = null
       }
-      link(pp) {
-        var ip;
-        (0, Yp.m)(pp), this.model = pp, null === (ip = this.onLinked) || void 0 === ip || ip.call(this, pp)
+      link(QQ) {
+        var WQ;
+        (0, PQ.o)(QQ), this.model = QQ, null === (WQ = this.onLinked) || void 0 === WQ || WQ.call(this, QQ)
       }
       relink() {
         this.release();
-        const pp = [];
-        for (const op of Object.values(this._vertexBuffers))
-          if (!op.getIsInstanced()) {
+        const QQ = [];
+        for (const qQ of Object.values(this._vertexBuffers))
+          if (!qQ.getIsInstanced()) {
             const {
-              byteOffset: ip,
-              byteStride: cp,
-              type: Op,
-              normalized: Ip
-            } = op;
-            pp.push({
-              kind: op.getKind(),
-              data: op.getData(),
-              offset: ip,
-              stride: cp,
-              components: op.getSize(),
-              glType: Op,
-              isNormalized: Ip
+              byteOffset: WQ,
+              byteStride: XQ,
+              type: wQ,
+              normalized: TQ
+            } = qQ;
+            QQ.push({
+              kind: qQ.getKind(),
+              data: qQ.getData(),
+              offset: WQ,
+              stride: XQ,
+              components: qQ.getSize(),
+              glType: wQ,
+              isNormalized: TQ
             })
-          } const ip = this._indices.length ? this._indices : null,
+          } const WQ = this._indices.length ? this._indices : null,
           {
-            minimum: cp,
-            maximum: Op
+            minimum: XQ,
+            maximum: wQ
           } = this.extend;
-        this.link(new Yp.f(pp, ip, this.getTotalVertices(), new Float64Array(cp.BOp()), new Float64Array(Op.BOp())))
+        this.link(new PQ.g(QQ, WQ, this.getTotalVertices(), new Float64Array(XQ.awQ()), new Float64Array(wQ.awQ())))
       }
-      copy(pp) {
-        if (!this.model) return super.copy(pp);
-        const ip = new Dp(pp, this.Gl()),
-          cp = this.NOp(void 0, !0);
-        cp && ip.setIndices(cp);
-        let Sp = !1;
-        for (const Ip in this._vertexBuffers) {
-          const pp = this._vertexBuffers[Ip],
-            cp = pp.getData();
-          if (!cp) continue;
-          const xp = pp.getSize(),
+      copy(QQ) {
+        if (!this.model) return super.copy(QQ);
+        const WQ = new gQ(QQ, this.sE()),
+          XQ = this.lwQ(void 0, !0);
+        XQ && WQ.setIndices(XQ);
+        let zQ = !1;
+        for (const TQ in this._vertexBuffers) {
+          const QQ = this._vertexBuffers[TQ],
+            XQ = QQ.getData();
+          if (!XQ) continue;
+          const sQ = QQ.getSize(),
             {
-              type: Lp,
-              byteOffset: Yp,
-              byteStride: Dp,
-              normalized: Ap
-            } = pp;
-          Sp ||= pp.isUpdatable();
-          const Pp = pp.getIsInstanced() ? (cp instanceof Array ? 4 * cp.length : cp.byteLength) / Dp : this.getTotalVertices(),
-            Wp = (0, op.s)(cp, xp, Lp, Yp, Dp, Pp, !0),
-            yp = {
-              updatable: pp.isUpdatable(),
-              stride: xp,
-              type: Lp,
-              normalized: Ap,
+              type: FQ,
+              byteOffset: PQ,
+              byteStride: gQ,
+              normalized: JQ
+            } = QQ;
+          zQ ||= QQ.isUpdatable();
+          const rQ = QQ.getIsInstanced() ? (XQ instanceof Array ? 4 * XQ.length : XQ.byteLength) / gQ : this.getTotalVertices(),
+            IQ = (0, qQ.w)(XQ, sQ, FQ, PQ, gQ, rQ, !0),
+            jQ = {
+              updatable: QQ.isUpdatable(),
+              stride: sQ,
+              type: FQ,
+              normalized: JQ,
               takeBufferOwnership: !0,
-              instanced: pp.getIsInstanced()
+              instanced: QQ.getIsInstanced()
             };
-          ip.setVerticesBuffer(new Op.f(this.gy(), Wp, Ip, yp), Pp)
+          WQ.setVerticesBuffer(new wQ.f(this.Uj(), IQ, TQ, jQ), rQ)
         }
-        return ip._updatable = Sp, ip._boundingInfo = new Ip.d(this.extend.minimum, this.extend.maximum), ip.relink(), ip
+        return WQ._updatable = zQ, WQ._boundingInfo = new TQ.e(this.extend.minimum, this.extend.maximum), WQ.relink(), WQ
       }
-      static mergeMeshes(pp, ip, cp, Op, op, Ip) {
-        const Lp = pp[0].Gl(),
-          Yp = new xp.c(pp[0].name + "_merged", Lp),
-          Ap = new Dp(Sp.b.RandomId(), Lp, void 0, !1, Yp);
+      static mergeMeshes(QQ, WQ, XQ, wQ, qQ, TQ) {
+        const FQ = QQ[0].sE(),
+          PQ = new sQ.b(QQ[0].name + "_merged", FQ),
+          JQ = new gQ(zQ.d.RandomId(), FQ, void 0, !1, PQ);
         try {
-          if (!xp.c.MergeMeshes(pp, ip, cp, Yp, op, Ip)) return Yp.dispose(), null
-        } catch (Pp) {
-          throw Yp.dispose(), Pp
+          if (!sQ.b.MergeMeshes(QQ, WQ, XQ, PQ, qQ, TQ)) return PQ.dispose(), null
+        } catch (rQ) {
+          throw PQ.dispose(), rQ
         }
-        return Ap.relink(), Yp
+        return JQ.relink(), PQ
       }
-      removeVerticesData(pp) {
-        this.releaseUnlessInstanced(pp), super.removeVerticesData(pp)
+      removeVerticesData(QQ) {
+        this.releaseUnlessInstanced(QQ), super.removeVerticesData(QQ)
       }
       dispose() {
         this.release(), super.dispose()
       }
-      releaseUnlessInstanced(pp) {
-        var ip;
-        pp && null !== (ip = this.getVertexBuffer(pp)) && void 0 !== ip && ip.getIsInstanced() || this.release()
+      releaseUnlessInstanced(QQ) {
+        var WQ;
+        QQ && null !== (WQ = this.getVertexBuffer(QQ)) && void 0 !== WQ && WQ.getIsInstanced() || this.release()
       }
       release() {
-        this.model && ((0, Yp.v)(this.model), this.model = null)
+        this.model && ((0, PQ.u)(this.model), this.model = null)
       }
     }
 
-    function Ap(pp, ip, cp) {
-      let Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new xp.c(pp, cp);
-      const op = (0, Yp.j)(ip),
+    function JQ(QQ, WQ, XQ) {
+      let wQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new sQ.b(QQ, XQ);
+      const qQ = (0, PQ.m)(WQ),
         {
-          positions: Ip,
-          normals: Ap,
-          uvs: Pp,
-          indices: Wp,
-          named: yp = {}
-        } = ip,
-        Up = new Lp.d;
-      Up.positions = Ip, Up.normals = null !== Ap && void 0 !== Ap ? Ap : null, Up.uvs = null !== Pp && void 0 !== Pp ? Pp : null, Up.indices = Wp;
-      const wp = new Dp(Sp.b.RandomId(), cp, Up, !1, Op);
+          positions: TQ,
+          normals: JQ,
+          uvs: rQ,
+          indices: IQ,
+          named: jQ = {}
+        } = WQ,
+        BQ = new FQ.e;
+      BQ.positions = TQ, BQ.normals = null !== JQ && void 0 !== JQ ? JQ : null, BQ.uvs = null !== rQ && void 0 !== rQ ? rQ : null, BQ.indices = IQ;
+      const yQ = new gQ(zQ.d.RandomId(), XQ, BQ, !1, wQ);
       for (const {
-          kind: Sp,
-          components: xp
+          kind: zQ,
+          components: sQ
         }
-        of op.vertexAttributes) Sp in yp && Op.setVerticesData(Sp, yp[Sp], !1, xp);
-      return wp.link(op), Op
+        of qQ.vertexAttributes) zQ in jQ && wQ.setVerticesData(zQ, jQ[zQ], !1, sQ);
+      return yQ.link(qQ), wQ
     }
 
-    function Pp(pp, ip, cp) {
-      let Op = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      const op = new xp.c(pp, cp),
+    function rQ(QQ, WQ, XQ) {
+      let wQ = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      const qQ = new sQ.b(QQ, XQ),
         {
-          positions: Ip,
-          normals: Sp,
-          uvs: Yp,
-          indices: Dp
-        } = ip;
-      return Object.assign(new Lp.d, {
-        positions: Ip,
-        normals: Sp,
-        uvs: Yp,
-        indices: Dp
-      }).applyToMesh(op, Op), op
+          positions: TQ,
+          normals: zQ,
+          uvs: PQ,
+          indices: gQ
+        } = WQ;
+      return Object.assign(new FQ.e, {
+        positions: TQ,
+        normals: zQ,
+        uvs: PQ,
+        indices: gQ
+      }).applyToMesh(qQ, wQ), qQ
     }
   },
-  41864: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => wp,
-      e: () => xp,
-      i: () => Sp,
-      m: () => Yp
+  41851: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      b: () => yQ,
+      f: () => sQ,
+      i: () => zQ,
+      j: () => PQ
     });
-    var Op = cp(37479),
-      op = cp(38942),
-      Ip = cp(38938);
+    var wQ = XQ(37539),
+      qQ = XQ(38986),
+      TQ = XQ(38979);
 
-    function Sp(pp, ip, cp, Op) {
-      const op = Ip.o;
-      ip.fill(0), pp.gravity.toArray(ip, op.gravity), pp.colorDead.toArray(ip, op.colorDead), cp[op.ramp] = pp.useRampGradients ? 1 : 0;
-      const Sp = pp.getColorGradients(),
-        xp = Pp(pp, Sp, "colour", Op);
-      cp[op.colorCount] = xp;
-      for (let Ip = 0; Ip < xp; Ip++) {
-        var Lp;
-        const pp = Sp[Wp(Sp, Ip)];
-        ip[op.colorPositions + Ip] = pp.gradient, pp.color1.toArray(ip, op.color1 + 4 * Ip), (null !== (Lp = pp.color2) && void 0 !== Lp ? Lp : pp.color1).toArray(ip, op.color2 + 4 * Ip)
+    function zQ(QQ, WQ, XQ, wQ) {
+      const qQ = TQ.u;
+      WQ.fill(0), QQ.gravity.toArray(WQ, qQ.gravity), QQ.colorDead.toArray(WQ, qQ.colorDead), XQ[qQ.ramp] = QQ.useRampGradients ? 1 : 0;
+      const zQ = QQ.getColorGradients(),
+        sQ = rQ(QQ, zQ, "colour", wQ);
+      XQ[qQ.colorCount] = sQ;
+      for (let TQ = 0; TQ < sQ; TQ++) {
+        var FQ;
+        const QQ = zQ[IQ(zQ, TQ)];
+        WQ[qQ.colorPositions + TQ] = QQ.gradient, QQ.color1.toArray(WQ, qQ.color1 + 4 * TQ), (null !== (FQ = QQ.color2) && void 0 !== FQ ? FQ : QQ.color1).toArray(WQ, qQ.color2 + 4 * TQ)
       }
-      const Yp = pp.getVelocityGradients(),
-        Dp = Pp(pp, Yp, "tw", Op);
-      cp[op.velocityCount] = Dp;
-      for (let Ip = 0; Ip < Dp; Ip++) tp(ip, op.tw + 4 * Ip, Yp[Wp(Yp, Ip)]);
-      const Ap = pp.useRampGradients ? pp.getColorRemapGradients() : null,
-        yp = Pp(pp, Ap, "colour remap", Op);
-      cp[op.remapCount] = yp;
-      for (let Ip = 0; Ip < yp; Ip++) tp(ip, op.remap + 4 * Ip, Ap[Wp(Ap, Ip)])
+      const PQ = QQ.getVelocityGradients(),
+        gQ = rQ(QQ, PQ, "Fy", wQ);
+      XQ[qQ.velocityCount] = gQ;
+      for (let TQ = 0; TQ < gQ; TQ++) DQ(WQ, qQ.Fy + 4 * TQ, PQ[IQ(PQ, TQ)]);
+      const JQ = QQ.useRampGradients ? QQ.getColorRemapGradients() : null,
+        jQ = rQ(QQ, JQ, "colour remap", wQ);
+      XQ[qQ.remapCount] = jQ;
+      for (let TQ = 0; TQ < jQ; TQ++) DQ(WQ, qQ.remap + 4 * TQ, JQ[IQ(JQ, TQ)])
     }
 
-    function xp() {
+    function sQ() {
       return {
         key: [],
-        texels: new Uint8Array(4 * Ip.k)
+        texels: new Uint8Array(4 * TQ.l)
       }
     }
-    const Lp = [];
+    const FQ = [];
 
-    function Yp(pp, ip) {
-      return Dp(pp, Lp), !vp(Lp, ip.key) && (ip.key.length = 0, ip.key.push(...Lp), ip.key.length > 0 && function(pp, ip) {
-        for (let cp = 0; cp < Ip.k; cp++) op.l.GetCurrentGradient(cp / Ip.k, pp, ((pp, ip, cp) => {
-          Op.Color3.LerpToRef(pp.color, ip.color, cp, Ap)
-        })), ip[4 * cp] = 255 * Ap.r, ip[4 * cp + 1] = 255 * Ap.g, ip[4 * cp + 2] = 255 * Ap.b, ip[4 * cp + 3] = 255
-      }(pp.getRampGradients(), ip.texels), !0)
+    function PQ(QQ, WQ) {
+      return gQ(QQ, FQ), !VQ(FQ, WQ.key) && (WQ.key.length = 0, WQ.key.push(...FQ), WQ.key.length > 0 && function(QQ, WQ) {
+        for (let XQ = 0; XQ < TQ.l; XQ++) qQ.l.GetCurrentGradient(XQ / TQ.l, QQ, ((QQ, WQ, XQ) => {
+          wQ.Color3.LerpToRef(QQ.color, WQ.color, XQ, JQ)
+        })), WQ[4 * XQ] = 255 * JQ.r, WQ[4 * XQ + 1] = 255 * JQ.g, WQ[4 * XQ + 2] = 255 * JQ.b, WQ[4 * XQ + 3] = 255
+      }(QQ.getRampGradients(), WQ.texels), !0)
     }
 
-    function Dp(pp, ip) {
-      ip.length = 0;
-      const cp = pp.useRampGradients ? pp.getRampGradients() : null;
-      if (null !== cp && void 0 !== cp && cp.length) {
-        ip.push(cp.length);
-        for (const pp of cp) ip.push(pp.gradient, pp.color.r, pp.color.g, pp.color.b)
+    function gQ(QQ, WQ) {
+      WQ.length = 0;
+      const XQ = QQ.useRampGradients ? QQ.getRampGradients() : null;
+      if (null !== XQ && void 0 !== XQ && XQ.length) {
+        WQ.push(XQ.length);
+        for (const QQ of XQ) WQ.push(QQ.gradient, QQ.color.r, QQ.color.g, QQ.color.b)
       }
     }
-    const Ap = new Op.Color3;
+    const JQ = new wQ.Color3;
 
-    function Pp(pp, ip, cp, Op) {
-      return ip ? ip.length > Ip.d ? (Op(`particleStops:${cp}`, `GPU particles use the first 2 and last ${Ip.d-2} of more than ${Ip.d} ${cp} gradient stops (${pp.name})`), Ip.d) : ip.length : 0
+    function rQ(QQ, WQ, XQ, wQ) {
+      return WQ ? WQ.length > TQ.e ? (wQ(`particleStops:${XQ}`, `GPU particles use the first 2 and last ${TQ.e-2} of more than ${TQ.e} ${XQ} gradient stops (${QQ.name})`), TQ.e) : WQ.length : 0
     }
 
-    function Wp(pp, ip) {
-      return ip < 2 || pp.length <= Ip.d ? ip : pp.length - Ip.d + ip
+    function IQ(QQ, WQ) {
+      return WQ < 2 || QQ.length <= TQ.e ? WQ : QQ.length - TQ.e + WQ
     }
-    const yp = new Float32Array(Ip.m),
-      Up = new Uint32Array(yp.buffer);
+    const jQ = new Float32Array(TQ.q),
+      BQ = new Uint32Array(jQ.buffer);
 
-    function wp(pp, ip, cp) {
-      return Sp(pp, yp, Up, cp), ip && vp(Up, ip) ? null : Up.slice()
+    function yQ(QQ, WQ, XQ) {
+      return zQ(QQ, jQ, BQ, XQ), WQ && VQ(BQ, WQ) ? null : BQ.slice()
     }
 
-    function vp(pp, ip) {
-      if (pp.length !== ip.length) return !1;
-      for (let cp = 0; cp < pp.length; cp++)
-        if (pp[cp] !== ip[cp]) return !1;
+    function VQ(QQ, WQ) {
+      if (QQ.length !== WQ.length) return !1;
+      for (let XQ = 0; XQ < QQ.length; XQ++)
+        if (QQ[XQ] !== WQ[XQ]) return !1;
       return !0
     }
 
-    function tp(pp, ip, cp) {
-      var Op;
-      pp[ip] = cp.gradient, pp[ip + 1] = cp.factor1, pp[ip + 2] = null !== (Op = cp.factor2) && void 0 !== Op ? Op : cp.factor1
+    function DQ(QQ, WQ, XQ) {
+      var wQ;
+      QQ[WQ] = XQ.gradient, QQ[WQ + 1] = XQ.factor1, QQ[WQ + 2] = null !== (wQ = XQ.factor2) && void 0 !== wQ ? wQ : XQ.factor1
     }
   },
-  41375: (pp, ip, cp) => {
-    function Op(pp, ip, cp) {
-      const Op = ip * ip * 4,
-        op = pp[0].layers,
-        Ip = op * (pp.length - 1) + pp[pp.length - 1].layers,
-        Sp = new Uint8Array(Ip * Op);
-      pp.forEach(((ip, cp) => {
-        const Ip = cp + 1 < pp.length ? Math.min(ip.layers, op) : ip.layers;
-        Sp.set(new Uint8Array(ip.pixels.buffer, ip.pixels.byteOffset, Ip * Op), cp * op * Op)
+  41366: (QQ, WQ, XQ) => {
+    function wQ(QQ, WQ, XQ) {
+      const wQ = WQ * WQ * 4,
+        qQ = QQ[0].layers,
+        TQ = qQ * (QQ.length - 1) + QQ[QQ.length - 1].layers,
+        zQ = new Uint8Array(TQ * wQ);
+      QQ.forEach(((WQ, XQ) => {
+        const TQ = XQ + 1 < QQ.length ? Math.min(WQ.layers, qQ) : WQ.layers;
+        zQ.set(new Uint8Array(WQ.pixels.buffer, WQ.pixels.byteOffset, TQ * wQ), XQ * qQ * wQ)
       }));
-      const xp = Math.max(1, Math.min(Ip, cp || Ip));
-      if (xp === Ip) return [{
-        pixels: Sp,
-        layers: Ip
+      const sQ = Math.max(1, Math.min(TQ, XQ || TQ));
+      if (sQ === TQ) return [{
+        pixels: zQ,
+        layers: TQ
       }];
-      const Lp = [];
-      for (let Yp = 0; Yp < Ip; Yp += xp) {
-        const pp = Math.min(Ip, Yp + xp);
-        Lp.push({
-          pixels: Sp.slice(Yp * Op, pp * Op),
-          layers: pp - Yp
+      const FQ = [];
+      for (let PQ = 0; PQ < TQ; PQ += sQ) {
+        const QQ = Math.min(TQ, PQ + sQ);
+        FQ.push({
+          pixels: zQ.slice(PQ * wQ, QQ * wQ),
+          layers: QQ - PQ
         })
       }
-      return Lp
+      return FQ
     }
-    cp.d(ip, {
-      d: () => Op,
-      h: () => Ip
+    XQ.d(WQ, {
+      b: () => wQ,
+      f: () => TQ
     });
-    const op = new WeakMap;
+    const qQ = new WeakMap;
 
-    function Ip(pp, ip, cp) {
-      var Op, Ip;
-      const Sp = null !== (Op = op.get(pp)) && void 0 !== Op ? Op : new Map;
-      op.set(pp, Sp);
-      const xp = null !== (Ip = Sp.get(ip[0])) && void 0 !== Ip ? Ip : [];
-      Sp.set(ip[0], xp);
-      const Lp = xp.find((pp => pp.urls.length === ip.length && pp.urls.every(((pp, cp) => pp === ip[cp]))));
-      if (Lp) return Lp.built;
-      const Yp = {
-        urls: [...ip],
-        built: cp()
+    function TQ(QQ, WQ, XQ) {
+      var wQ, TQ;
+      const zQ = null !== (wQ = qQ.get(QQ)) && void 0 !== wQ ? wQ : new Map;
+      qQ.set(QQ, zQ);
+      const sQ = null !== (TQ = zQ.get(WQ[0])) && void 0 !== TQ ? TQ : [];
+      zQ.set(WQ[0], sQ);
+      const FQ = sQ.find((QQ => QQ.urls.length === WQ.length && QQ.urls.every(((QQ, XQ) => QQ === WQ[XQ]))));
+      if (FQ) return FQ.built;
+      const PQ = {
+        urls: [...WQ],
+        built: XQ()
       };
-      return xp.push(Yp), Yp.built.catch((() => {
-        xp.splice(xp.indexOf(Yp), 1)
-      })), Yp.built
+      return sQ.push(PQ), PQ.built.catch((() => {
+        sQ.splice(sQ.indexOf(PQ), 1)
+      })), PQ.built
     }
   },
-  41860: (pp, ip, cp) => {
-    function Op() {
-      let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-      const ip = new Set;
-      return (cp, Op) => {
-        ip.has(cp) || (ip.add(cp), console.warn(pp + Op))
+  41842: (QQ, WQ, XQ) => {
+    function wQ() {
+      let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+      const WQ = new Set;
+      return (XQ, wQ) => {
+        WQ.has(XQ) || (WQ.add(XQ), console.warn(QQ + wQ))
       }
     }
-    cp.d(ip, {
-      c: () => Op
+    XQ.d(WQ, {
+      e: () => wQ
     })
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

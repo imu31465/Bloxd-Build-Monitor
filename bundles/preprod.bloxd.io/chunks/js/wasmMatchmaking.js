@@ -1,30 +1,30 @@
-/*! For license information please see sn3sfj.wasmMatchmaking.6f5d7650.chunk.js.LICENSE.txt */
-export const id = 63;
-export const ids = [63];
+/*! For license information please see 8104he.wasmMatchmaking.7266f9d3.chunk.js.LICENSE.txt */
+export const id = 65;
+export const ids = [65];
 export const modules = {
-  36730: (pp, ip) => {
-    function cp(pp) {
-      if (pp && "object" === typeof pp) {
-        var ip = pp.which || pp.keyCode || pp.charCode;
-        ip && (pp = ip)
+  36833: (QQ, WQ) => {
+    function XQ(QQ) {
+      if (QQ && "object" === typeof QQ) {
+        var WQ = QQ.which || QQ.keyCode || QQ.charCode;
+        WQ && (QQ = WQ)
       }
-      if ("number" === typeof pp) return Sp[pp];
-      var cp, Ip = String(pp);
-      return (cp = Op[Ip.toLowerCase()]) ? cp : (cp = op[Ip.toLowerCase()]) || (1 === Ip.length ? Ip.charCodeAt(0) : void 0)
+      if ("number" === typeof QQ) return zQ[QQ];
+      var XQ, TQ = String(QQ);
+      return (XQ = wQ[TQ.toLowerCase()]) ? XQ : (XQ = qQ[TQ.toLowerCase()]) || (1 === TQ.length ? TQ.charCodeAt(0) : void 0)
     }
-    cp.isEventKey = function(pp, ip) {
-      if (pp && "object" === typeof pp) {
-        var cp = pp.which || pp.keyCode || pp.charCode;
-        if (null === cp || void 0 === cp) return !1;
-        if ("string" === typeof ip) {
-          var Ip;
-          if (Ip = Op[ip.toLowerCase()]) return Ip === cp;
-          if (Ip = op[ip.toLowerCase()]) return Ip === cp
-        } else if ("number" === typeof ip) return ip === cp;
+    XQ.isEventKey = function(QQ, WQ) {
+      if (QQ && "object" === typeof QQ) {
+        var XQ = QQ.which || QQ.keyCode || QQ.charCode;
+        if (null === XQ || void 0 === XQ) return !1;
+        if ("string" === typeof WQ) {
+          var TQ;
+          if (TQ = wQ[WQ.toLowerCase()]) return TQ === XQ;
+          if (TQ = qQ[WQ.toLowerCase()]) return TQ === XQ
+        } else if ("number" === typeof WQ) return WQ === XQ;
         return !1
       }
     };
-    var Op = (ip = pp.exports = cp).code = ip.codes = {
+    var wQ = (WQ = QQ.exports = XQ).code = WQ.codes = {
         backspace: 8,
         tab: 9,
         enter: 13,
@@ -69,7 +69,7 @@ export const modules = {
         "]": 221,
         "'": 222
       },
-      op = ip.aliases = {
+      qQ = WQ.aliases = {
         windows: 91,
         "\u21e7": 16,
         "\u2325": 18,
@@ -91,47 +91,47 @@ export const modules = {
         del: 46,
         cmd: 91
       };
-    for (Ip = 97; Ip < 123; Ip++) Op[String.fromCharCode(Ip)] = Ip - 32;
-    for (var Ip = 48; Ip < 58; Ip++) Op[Ip - 48] = Ip;
-    for (Ip = 1; Ip < 13; Ip++) Op["f" + Ip] = Ip + 111;
-    for (Ip = 0; Ip < 10; Ip++) Op["numpad " + Ip] = Ip + 96;
-    var Sp = ip.names = ip.title = {};
-    for (Ip in Op) Sp[Op[Ip]] = Ip;
-    for (var xp in op) Op[xp] = op[xp]
+    for (TQ = 97; TQ < 123; TQ++) wQ[String.fromCharCode(TQ)] = TQ - 32;
+    for (var TQ = 48; TQ < 58; TQ++) wQ[TQ - 48] = TQ;
+    for (TQ = 1; TQ < 13; TQ++) wQ["f" + TQ] = TQ + 111;
+    for (TQ = 0; TQ < 10; TQ++) wQ["numpad " + TQ] = TQ + 96;
+    var zQ = WQ.names = WQ.title = {};
+    for (TQ in wQ) zQ[wQ[TQ]] = TQ;
+    for (var sQ in qQ) wQ[sQ] = qQ[sQ]
   },
-  36887: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Sp
+  36999: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      d: () => zQ
     });
-    var Op = cp(62);
-    const op = Op.useLayoutEffect;
-    const Ip = function(pp) {
-      var ip = (0, Op.useRef)(pp);
-      return op((function() {
-        ip.current = pp
-      })), ip
+    var wQ = XQ(61);
+    const qQ = wQ.useLayoutEffect;
+    const TQ = function(QQ) {
+      var WQ = (0, wQ.useRef)(QQ);
+      return qQ((function() {
+        WQ.current = QQ
+      })), WQ
     };
-    var Sp = function(pp) {
-      var ip = Ip(pp);
-      (0, Op.useEffect)((function() {
-        var pp = function(pp) {
-          var cp;
-          if (null != ip.current && (cp = ip.current(pp)), pp.defaultPrevented && (pp.returnValue = ""), "string" === typeof cp) return pp.returnValue = cp, cp
+    var zQ = function(QQ) {
+      var WQ = TQ(QQ);
+      (0, wQ.useEffect)((function() {
+        var QQ = function(QQ) {
+          var XQ;
+          if (null != WQ.current && (XQ = WQ.current(QQ)), QQ.defaultPrevented && (QQ.returnValue = ""), "string" === typeof XQ) return QQ.returnValue = XQ, XQ
         };
-        return window.addEventListener("beforeunload", pp),
+        return window.addEventListener("beforeunload", QQ),
           function() {
-            window.removeEventListener("beforeunload", pp)
+            window.removeEventListener("beforeunload", QQ)
           }
       }), [])
     }
   },
-  36772: pp => {
-    var ip, cp = "undefined" !== typeof window ? window.navigator.userAgent : "",
-      Op = /OS X/.test(cp),
-      op = /Opera/.test(cp),
-      Ip = !/like Gecko/.test(cp) && !op,
-      Sp = pp.exports = {
-        0: Op ? "<menu>" : "<UNK>",
+  36875: QQ => {
+    var WQ, XQ = "undefined" !== typeof window ? window.navigator.userAgent : "",
+      wQ = /OS X/.test(XQ),
+      qQ = /Opera/.test(XQ),
+      TQ = !/like Gecko/.test(XQ) && !qQ,
+      zQ = QQ.exports = {
+        0: wQ ? "<menu>" : "<UNK>",
         1: "<mouse 1>",
         2: "<mouse 2>",
         3: "<break>",
@@ -174,7 +174,7 @@ export const modules = {
         47: "<help>",
         91: "<meta>",
         92: "<meta>",
-        93: Op ? "<meta>" : "<menu>",
+        93: wQ ? "<meta>" : "<menu>",
         95: "<sleep>",
         106: "<num-*>",
         107: "<num-+>",
@@ -197,7 +197,7 @@ export const modules = {
         170: "<browser-search>",
         171: "<browser-favorites>",
         172: "<browser-home>",
-        173: Op && Ip ? "-" : "<volume-mute>",
+        173: wQ && TQ ? "-" : "<volume-mute>",
         174: "<volume-down>",
         175: "<volume-up>",
         176: "<next-track>",
@@ -223,7 +223,7 @@ export const modules = {
         224: "<meta>",
         226: "<alt-gr>",
         229: "<ime-process>",
-        231: op ? "`" : "<unicode>",
+        231: qQ ? "`" : "<unicode>",
         246: "<attention>",
         247: "<crsel>",
         248: "<exsel>",
@@ -234,322 +234,326 @@ export const modules = {
         253: "<pa-1>",
         254: "<clear>"
       };
-    for (ip = 58; ip < 65; ++ip) Sp[ip] = String.fromCharCode(ip);
-    for (ip = 48; ip < 58; ++ip) Sp[ip] = ip - 48 + "";
-    for (ip = 65; ip < 91; ++ip) Sp[ip] = String.fromCharCode(ip);
-    for (ip = 96; ip < 106; ++ip) Sp[ip] = "<num-" + (ip - 96) + ">";
-    for (ip = 112; ip < 136; ++ip) Sp[ip] = "F" + (ip - 111)
+    for (WQ = 58; WQ < 65; ++WQ) zQ[WQ] = String.fromCharCode(WQ);
+    for (WQ = 48; WQ < 58; ++WQ) zQ[WQ] = WQ - 48 + "";
+    for (WQ = 65; WQ < 91; ++WQ) zQ[WQ] = String.fromCharCode(WQ);
+    for (WQ = 96; WQ < 106; ++WQ) zQ[WQ] = "<num-" + (WQ - 96) + ">";
+    for (WQ = 112; WQ < 136; ++WQ) zQ[WQ] = "F" + (WQ - 111)
   },
-  9046: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Ip,
-      g: () => op
+  9295: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      b: () => TQ,
+      f: () => qQ
     });
-    let Op = !1;
+    let wQ = !1;
 
-    function op() {
-      Op = !0
+    function qQ() {
+      wQ = !0
     }
 
-    function Ip() {
-      return Op
+    function TQ() {
+      return wQ
     }
   },
-  36658: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      InGameUi: () => ep.d,
-      LobbyLeaderboard: () => jp.c,
-      loadCharacterCustomisationUI: () => kp,
-      loadCharacterPreview: () => mp,
-      matchmakeAndPlay: () => Cp,
-      matchmakeForAhead: () => xp.e,
-      setUpGame: () => Rp
+  36752: (QQ, WQ, XQ) => {
+    XQ.r(WQ), XQ.d(WQ, {
+      InGameUi: () => UQ.d,
+      LobbyLeaderboard: () => bQ.d,
+      loadCharacterCustomisationUI: () => vQ,
+      loadCharacterPreview: () => dQ,
+      matchmakeAndPlay: () => hQ,
+      matchmakeForAhead: () => sQ.f,
+      setUpGame: () => HQ
     });
-    var Op = cp(1255),
-      op = cp(156),
-      Ip = cp(25),
-      Sp = cp(36663),
-      xp = cp(36669),
-      Lp = cp(1982),
-      Yp = cp(36691);
+    var wQ = XQ(1280),
+      qQ = XQ(193),
+      TQ = XQ(26),
+      zQ = XQ(36757),
+      sQ = XQ(36763),
+      FQ = XQ(2036),
+      PQ = XQ(36800);
 
-    function Dp() {
-      return !1 !== Lp.c.get("canCustomiseChar")
+    function gQ() {
+      return !1 !== FQ.e.get("canCustomiseChar")
     }
-    let Ap = !1;
-    var Pp = cp(1349),
-      Wp = cp(1260),
-      yp = cp(249),
-      Up = cp(3668),
-      wp = cp(9046),
-      vp = cp(9041);
+    let JQ = !1;
+    var rQ = XQ(1376),
+      IQ = XQ(1285),
+      jQ = XQ(291),
+      BQ = XQ(3819),
+      yQ = XQ(9295),
+      VQ = XQ(9293);
 
-    function tp() {
-      (0, wp.c)() || (0, vp.e)().catch((pp => {
-        console.warn("[bloxd-wasm-client] the play chunk did not load ahead of a join: the join loads it itself", pp)
+    function DQ() {
+      (0, yQ.b)() || (0, VQ.d)().catch((QQ => {
+        console.warn("[bloxd-wasm-client] the play chunk did not load ahead of a join: the join loads it itself", QQ)
       }))
     }
-    var Hp = cp(3546),
-      dp = cp(1786);
-    var ep = cp(36695),
-      jp = cp(37220);
+    var pQ = XQ(3699),
+      GQ = XQ(1821);
+    var UQ = XQ(36811),
+      bQ = XQ(37278);
 
-    function kp() {
-      return cp.e(220).then((() => cp(41517)))
+    function vQ() {
+      return XQ.e(224).then((() => XQ(41519)))
     }
 
-    function mp() {
-      return cp.e(296).then((() => cp(41524)))
+    function dQ() {
+      return XQ.e(300).then((() => XQ(41521)))
     }
 
-    function Rp() {
-      return (0, vp.j)()
+    function HQ() {
+      return (0, VQ.i)()
     }
-    Ap || (Ap = !0, document.addEventListener("keydown", (pp => {
-        (0, Yp.b)(pp, Dp)
+    JQ || (JQ = !0, document.addEventListener("keydown", (QQ => {
+        (0, PQ.c)(QQ, gQ)
       }))),
-      function(pp) {
-        var ip;
-        return !0 !== (null === pp || void 0 === pp ? void 0 : pp.saveData) && !/2g$/.test(null !== (ip = null === pp || void 0 === pp ? void 0 : pp.effectiveType) && void 0 !== ip ? ip : "")
-      }(navigator.connection) && (0, Up.b)((() => {
-        (0, wp.c)() || Promise.all([cp.e(78), cp.e(90), cp.e(215), cp.e(214), cp.e(137), cp.e(140), cp.e(59)]).then((() => cp(41270))).then((async pp => {
-          (0, wp.c)() || (await pp.startLoadAheadOfJoin({
-            joinStarted: wp.c,
-            language: Wp.g.get().getCurrentLanguageCode()
-          }), (0, yp.b)(tp))
-        }), (pp => {
-          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", pp)
+      function(QQ) {
+        var WQ;
+        return !0 !== (null === QQ || void 0 === QQ ? void 0 : QQ.saveData) && !/2g$/.test(null !== (WQ = null === QQ || void 0 === QQ ? void 0 : QQ.effectiveType) && void 0 !== WQ ? WQ : "")
+      }(navigator.connection) && (0, BQ.d)((() => {
+        (0, yQ.b)() || Promise.all([XQ.e(80), XQ.e(93), XQ.e(219), XQ.e(218), XQ.e(139), XQ.e(142), XQ.e(61)]).then((() => XQ(41257))).then((async QQ => {
+          if ((0, yQ.b)()) return;
+          const WQ = QQ.startLoadAheadOfJoin({
+            joinStarted: yQ.b,
+            language: IQ.h.get().getCurrentLanguageCode()
+          });
+          (0, jQ.e)((() => {
+            (0, yQ.b)() || QQ.probeWebgl2AheadOfJoin()
+          })), await WQ, (0, jQ.e)(DQ)
+        }), (QQ => {
+          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", QQ)
         }))
       }));
-    const qp = Ip.c.get("router");
-    null === qp ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function pp(ip) {
-      if ((0, dp.d)(ip.state.location.pathname)) return void(0, vp.f)().catch((() => {}));
-      const cp = ip.subscribe((Op => {
-        (0, dp.d)(Op.location.pathname) && (cp(), (0, Hp.h)().then((() => {
-          pp(ip)
+    const aQ = TQ.b.get("router");
+    null === aQ ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function QQ(WQ) {
+      if ((0, GQ.d)(WQ.state.location.pathname)) return void(0, VQ.g)().catch((() => {}));
+      const XQ = WQ.subscribe((wQ => {
+        (0, GQ.d)(wQ.location.pathname) && (XQ(), (0, pQ.e)().then((() => {
+          QQ(WQ)
         })))
       }))
-    }(qp), (0, Sp.c)();
-    const Mp = (0, xp.d)((async function(pp, ip) {
+    }(aQ), (0, zQ.c)();
+    const lQ = (0, sQ.d)((async function(QQ, WQ) {
       let {
-        place: cp,
-        userContext: Ip,
-        direct: Sp,
-        matchedAt: xp,
-        rematch: Lp
-      } = pp;
-      const Yp = Sp ? 1 / 0 : xp;
-      let Dp;
+        place: XQ,
+        userContext: TQ,
+        direct: zQ,
+        matchedAt: sQ,
+        rematch: FQ
+      } = QQ;
+      const PQ = zQ ? 1 / 0 : sQ;
+      let gQ;
       try {
-        Dp = await (0, vp.f)()
-      } catch (Ap) {
-        return console.error("The wasm client did not load:", Ap), (0, Pp.p)({
+        gQ = await (0, VQ.g)()
+      } catch (JQ) {
+        return console.error("The wasm client did not load:", JQ), (0, rQ.t)({
           websocketUrl: null
-        }), Op.d.errorWithCode(String(Ap), op.k.CONNECT_TO_GAME_SERVER, {
-          error: Ap,
-          severity: ip.aborted ? "low" : "medium",
-          OO: ip.aborted
+        }), wQ.e.errorWithCode(String(JQ), qQ.h.CONNECT_TO_GAME_SERVER, {
+          error: JQ,
+          severity: WQ.aborted ? "low" : "medium",
+          fX: WQ.aborted
         })
       }
-      return Dp.playWasmGame({
-        userContext: Ip,
-        place: cp,
-        matchedAt: Yp,
-        rematch: Lp
-      }, ip)
+      return gQ.playWasmGame({
+        userContext: TQ,
+        place: XQ,
+        matchedAt: PQ,
+        rematch: FQ
+      }, WQ)
     }));
 
-    function Cp() {
-      return (0, vp.f)().catch((() => {})), Mp(...arguments)
+    function hQ() {
+      return (0, VQ.g)().catch((() => {})), lQ(...arguments)
     }
   },
-  9041: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Wp,
-      f: () => Pp,
-      j: () => yp
+  9293: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      d: () => IQ,
+      g: () => rQ,
+      i: () => jQ
     });
-    var Op = cp(3246),
-      op = cp(2343),
-      Ip = cp(2174),
-      Sp = cp(4739),
-      xp = cp(3607),
-      Lp = cp(9046);
-    let Yp = null;
+    var wQ = XQ(3424),
+      qQ = XQ(2370),
+      TQ = XQ(2211),
+      zQ = XQ(4967),
+      sQ = XQ(3751),
+      FQ = XQ(9295);
+    let PQ = null;
 
-    function Dp() {
-      return Promise.all([cp.e(75), cp.e(78), cp.e(90), cp.e(215), cp.e(214), cp.e(160), cp.e(137), cp.e(198), cp.e(140), cp.e(88), cp.e(275), cp.e(64)]).then((() => cp(40873)))
+    function gQ() {
+      return Promise.all([XQ.e(77), XQ.e(80), XQ.e(93), XQ.e(219), XQ.e(218), XQ.e(162), XQ.e(203), XQ.e(139), XQ.e(142), XQ.e(91), XQ.e(279), XQ.e(66)]).then((() => XQ(40897)))
     }
 
-    function Ap() {
-      Promise.all([cp.e(73), cp.e(76), cp.e(75), cp.e(74), cp.e(90), cp.e(87), cp.e(273), cp.e(191), cp.e(228), cp.e(252), cp.e(275), cp.e(47)]).then((() => cp(41212))).catch((() => {}))
+    function JQ() {
+      Promise.all([XQ.e(75), XQ.e(78), XQ.e(77), XQ.e(76), XQ.e(93), XQ.e(90), XQ.e(277), XQ.e(193), XQ.e(232), XQ.e(256), XQ.e(279), XQ.e(49)]).then((() => XQ(41206))).catch((() => {}))
     }
 
-    function Pp() {
-      return Sp.b.cancelDownloadForJoin(), (0, xp.c)(), (0, op.e)(), (0, Lp.g)(), (0, Ip.j)(), Ap(), Promise.all([cp.e(78), cp.e(90), cp.e(215), cp.e(214), cp.e(137), cp.e(140), cp.e(59)]).then((() => cp(41270))).then((pp => {
+    function rQ() {
+      return zQ.c.cancelDownloadForJoin(), (0, sQ.d)(), (0, qQ.c)(), (0, FQ.f)(), (0, TQ.i)(), JQ(), Promise.all([XQ.e(80), XQ.e(93), XQ.e(219), XQ.e(218), XQ.e(139), XQ.e(142), XQ.e(61)]).then((() => XQ(41257))).then((QQ => {
         let {
-          startJoinLoad: ip
-        } = pp;
-        ip()
-      }), (() => {})), Yp ??= Dp().then((pp => (pp.startWasmPlay(), pp.followPageUiPack((pp => {
-        Op.d.showGamePack(pp)
-      })), pp)), (pp => {
-        throw Yp = null, pp
-      })), Yp
+          startJoinLoad: WQ
+        } = QQ;
+        WQ()
+      }), (() => {})), PQ ??= gQ().then((QQ => (QQ.startWasmPlay(), QQ.followPageUiPack((QQ => {
+        wQ.d.showGamePack(QQ)
+      })), QQ)), (QQ => {
+        throw PQ = null, QQ
+      })), PQ
     }
 
-    function Wp() {
-      return Ap(), cp.e(276).then((() => cp(41273))).catch((() => {})), Dp().then((() => {}))
+    function IQ() {
+      return JQ(), XQ.e(280).then((() => XQ(41265))).catch((() => {})), gQ().then((() => {}))
     }
 
-    function yp() {
-      return Dp().then((pp => {
-        pp.startWasmPreviews(), pp.prefetchWasmPreviews()
+    function jQ() {
+      return gQ().then((QQ => {
+        QQ.startWasmPreviews(), QQ.prefetchWasmPreviews()
       }))
     }
   },
-  36677: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Pp,
-      e: () => Dp,
-      g: () => Wp,
-      j: () => Ap
+  36775: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      e: () => rQ,
+      h: () => gQ,
+      k: () => IQ,
+      n: () => JQ
     });
-    var Op = cp(337),
-      op = cp(667),
-      Ip = cp(676),
-      Sp = cp(44);
-    const xp = {
+    var wQ = XQ(402),
+      qQ = XQ(695),
+      TQ = XQ(702),
+      zQ = XQ(43);
+    const sQ = {
         idStorageKey: "playSessionId",
         lastActivityStorageKey: "playSessionLastActivityMs",
         expiryMs: 3e5
       },
-      Lp = "playSessionGameNameWithVariation",
-      Yp = "wasMatchmakePlayer";
+      FQ = "playSessionGameNameWithVariation",
+      PQ = "wasMatchmakePlayer";
 
-    function Dp() {
-      let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Sp.l;
-      (0, Ip.h)(pp, xp)
+    function gQ() {
+      let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : zQ.m;
+      (0, TQ.j)(QQ, sQ)
     }
 
-    function Ap() {
-      (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Sp.l).setItem(Yp, !0)
+    function JQ() {
+      (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : zQ.m).setItem(PQ, !0)
     }
 
-    function Pp() {
-      let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Sp.l;
-      return (0, Ip.c)(pp, xp)
+    function rQ() {
+      let QQ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : zQ.m;
+      return (0, TQ.e)(QQ, sQ)
     }
 
-    function Wp(pp) {
-      let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Sp.l;
-      const cp = (0, Ip.c)(ip, xp),
-        Dp = function(pp) {
-          const ip = pp.getItem(Lp);
-          return "string" !== typeof ip ? null : ip
-        }(ip),
-        Ap = function() {
-          return !0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Sp.l).getItem(Yp)
-        }(ip);
-      let Pp;
-      return Pp = null !== cp && null !== Dp && (0, Ip.f)(ip, xp) && function(pp, ip, cp) {
-          const op = (0, Op.Mb)(pp),
-            Ip = (0, Op.Mb)(ip),
-            Sp = (0, Op.Ib)(pp),
-            xp = (0, Op.Ib)(ip);
-          return !(op !== Ip || !cp) || op === Ip && Sp === xp
-        }(Dp, pp, Ap) ? cp : (0, op.e)(), (0, Ip.k)(ip, xp, Pp), ip.setItem(Lp, pp),
+    function IQ(QQ) {
+      let WQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : zQ.m;
+      const XQ = (0, TQ.e)(WQ, sQ),
+        gQ = function(QQ) {
+          const WQ = QQ.getItem(FQ);
+          return "string" !== typeof WQ ? null : WQ
+        }(WQ),
+        JQ = function() {
+          return !0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : zQ.m).getItem(PQ)
+        }(WQ);
+      let rQ;
+      return rQ = null !== XQ && null !== gQ && (0, TQ.f)(WQ, sQ) && function(QQ, WQ, XQ) {
+          const qQ = (0, wQ.Mb)(QQ),
+            TQ = (0, wQ.Mb)(WQ),
+            zQ = (0, wQ.Fb)(QQ),
+            sQ = (0, wQ.Fb)(WQ);
+          return !(qQ !== TQ || !XQ) || qQ === TQ && zQ === sQ
+        }(gQ, QQ, JQ) ? XQ : (0, qQ.e)(), (0, TQ.n)(WQ, sQ, rQ), WQ.setItem(FQ, QQ),
         function() {
-          (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Sp.l).removeItem(Yp)
-        }(ip), Pp
+          (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : zQ.m).removeItem(PQ)
+        }(WQ), rQ
     }
   },
-  36674: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => ep,
-      d: () => jp
+  36766: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      c: () => UQ,
+      e: () => bQ
     });
-    var Op = cp(1014),
-      op = cp(209),
-      Ip = cp(335),
-      Sp = cp(643),
-      xp = cp(337),
-      Lp = cp(1021),
-      Yp = cp(657),
-      Dp = cp(681),
-      Ap = cp(4609),
-      Pp = cp(104),
-      Wp = cp(131),
-      yp = cp(1765),
-      Up = cp(116),
-      wp = cp(36677),
-      vp = cp(44),
-      tp = cp(670),
-      Hp = cp(645),
-      dp = cp(36679);
+    var wQ = XQ(1049),
+      qQ = XQ(243),
+      TQ = XQ(400),
+      zQ = XQ(670),
+      sQ = XQ(402),
+      FQ = XQ(1055),
+      PQ = XQ(691),
+      gQ = XQ(714),
+      JQ = XQ(4836),
+      rQ = XQ(105),
+      IQ = XQ(158),
+      jQ = XQ(1802),
+      BQ = XQ(129),
+      yQ = XQ(36775),
+      VQ = XQ(43),
+      DQ = XQ(698),
+      pQ = XQ(675),
+      GQ = XQ(36777);
 
-    function ep() {
-      var pp, ip;
-      return [...null !== (pp = navigator.languages) && void 0 !== pp ? pp : [null !== (ip = navigator.language) && void 0 !== ip ? ip : "none"], "en-Gb"]
+    function UQ() {
+      var QQ, WQ;
+      return [...null !== (QQ = navigator.languages) && void 0 !== QQ ? QQ : [null !== (WQ = navigator.language) && void 0 !== WQ ? WQ : "none"], "en-Gb"]
     }
 
-    function jp(pp, ip, cp, jp, kp) {
-      const mp = (0, Op.j)(ip) ? (0, Op.o)(ip) : null,
-        Rp = pp.isLoggedIn() && void 0 !== (0, op.e)(Ip.k, Wp.siteUsed) ? (0, Hp.f)() : null,
-        qp = {
-          cookies: (0, yp.getAllCookiesForGameNameWithVariation)(ip),
-          isMobile: (0, Pp.isMobile)(),
-          isUsingCustomGameTexturePack: null !== mp && kp(mp),
+    function bQ(QQ, WQ, XQ, bQ, vQ) {
+      const dQ = (0, wQ.k)(WQ) ? (0, wQ.n)(WQ) : null,
+        HQ = QQ.isLoggedIn() && void 0 !== (0, qQ.e)(TQ.j, IQ.siteUsed) ? (0, pQ.e)() : null,
+        aQ = {
+          cookies: (0, jQ.getAllCookiesForGameNameWithVariation)(WQ),
+          isMobile: (0, rQ.isMobile)(),
+          isUsingCustomGameTexturePack: null !== dQ && vQ(dQ),
           generalCookies: {
-            joinDiscord: !!vp.h.getItem("DiscordPressed"),
-            newGo: Ap.c,
-            ...pp.getMetricsCookies(),
-            trafficCode: jp,
-            compliance: Pp.compliance
+            joinDiscord: !!VQ.i.getItem("DiscordPressed"),
+            newGo: JQ.e,
+            ...QQ.getMetricsCookies(),
+            trafficCode: bQ,
+            compliance: rQ.compliance
           },
           browserInfo: {
             ua: window.navigator.userAgent,
-            name: (0, Pp.getBrowserName)(),
-            version: (0, Pp.getBrowserVersion)(),
+            name: (0, rQ.getBrowserName)(),
+            version: (0, rQ.getBrowserVersion)(),
             platform: navigator.platform,
-            platformType: (0, Pp.getPlatformType)(),
-            deviceType: (0, Up.c)()
+            platformType: (0, rQ.getPlatformType)(),
+            deviceType: (0, BQ.c)()
           },
-          isLoggedIn: pp.isLoggedIn(),
-          lobbyName: cp,
-          languages: ep(),
-          version: Sp.c,
-          siteUsed: Wp.siteUsed,
-          subsiteUsed: Wp.subsiteUsed,
-          playSessionId: (0, wp.g)(ip),
-          visitSessionId: (0, tp.g)(),
-          clientReason: Yp.p.reason,
-          budgetBasis: (0, dp.j)(),
-          ...null !== Dp.n && {
-            diagClaim: Dp.n.claimId
+          isLoggedIn: QQ.isLoggedIn(),
+          lobbyName: XQ,
+          languages: UQ(),
+          version: zQ.c,
+          siteUsed: IQ.siteUsed,
+          subsiteUsed: IQ.subsiteUsed,
+          playSessionId: (0, yQ.k)(WQ),
+          visitSessionId: (0, DQ.d)(),
+          clientReason: PQ.l.reason,
+          budgetBasis: (0, GQ.i)(),
+          ...null !== gQ.t && {
+            diagClaim: gQ.t.claimId
           },
-          ...null !== Rp && {
-            webGpuLoss: Rp
+          ...null !== HQ && {
+            webGpuLoss: HQ
           }
         };
-      return null !== mp && (0, xp.vc)(mp) ? (qp.lobbyName = (0, Op.h)(mp, (0, Op.n)(ip), cp), {
-        roomName: `classic_${Lp.d}`,
-        joinOptions: qp
+      return null !== dQ && (0, sQ.Bc)(dQ) ? (aQ.lobbyName = (0, wQ.i)(dQ, (0, wQ.m)(WQ), XQ), {
+        roomName: `classic_${FQ.c}`,
+        joinOptions: aQ
       }) : {
-        roomName: ip,
-        joinOptions: qp
+        roomName: WQ,
+        joinOptions: aQ
       }
     }
   },
-  9436: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => op,
-      h: () => Ip
+  9679: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      b: () => qQ,
+      c: () => TQ
     });
-    var Op = cp(9385);
-    const op = "Air",
-      Ip = Object.freeze(new Op.e(op, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var wQ = XQ(9634);
+    const qQ = "Air",
+      TQ = Object.freeze(new wQ.d(qQ, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

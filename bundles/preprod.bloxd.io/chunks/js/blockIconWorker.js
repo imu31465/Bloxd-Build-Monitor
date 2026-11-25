@@ -1,329 +1,329 @@
 (() => {
   (() => {
     if ("undefined" !== typeof __webpack_require__) {
-      var pp = __webpack_require__.u,
-        ip = __webpack_require__.e,
-        cp = {},
-        Op = {};
-      __webpack_require__.u = function(ip) {
-        return pp(ip) + (cp.hasOwnProperty(ip) ? "?" + cp[ip] : "")
-      }, __webpack_require__.e = function(op) {
-        return ip(op).catch((function(ip) {
-          var Ip = Op.hasOwnProperty(op) ? Op[op] : 4;
-          if (Ip < 1) {
-            var Sp = pp(op);
-            if (ip.message = "Loading chunk " + op + " failed after 4 retries.\n(" + Sp + ")", ip.request = Sp, cp[op] = "cache-bust=" + Date.now(), setTimeout((function() {
-                delete Op[op]
-              }), 0), "CSS_CHUNK_LOAD_FAILED" === ip.code) {
-              var xp = __webpack_require__.miniCssF(op);
-              ip.message = ip.message.replace("Loading chunk", "Loading CSS chunk").replace(Sp, xp), ip.request = xp
+      var QQ = __webpack_require__.u,
+        WQ = __webpack_require__.e,
+        XQ = {},
+        wQ = {};
+      __webpack_require__.u = function(WQ) {
+        return QQ(WQ) + (XQ.hasOwnProperty(WQ) ? "?" + XQ[WQ] : "")
+      }, __webpack_require__.e = function(qQ) {
+        return WQ(qQ).catch((function(WQ) {
+          var TQ = wQ.hasOwnProperty(qQ) ? wQ[qQ] : 4;
+          if (TQ < 1) {
+            var zQ = QQ(qQ);
+            if (WQ.message = "Loading chunk " + qQ + " failed after 4 retries.\n(" + zQ + ")", WQ.request = zQ, XQ[qQ] = "cache-bust=" + Date.now(), setTimeout((function() {
+                delete wQ[qQ]
+              }), 0), "CSS_CHUNK_LOAD_FAILED" === WQ.code) {
+              var sQ = __webpack_require__.miniCssF(qQ);
+              WQ.message = WQ.message.replace("Loading chunk", "Loading CSS chunk").replace(zQ, sQ), WQ.request = sQ
             }
-            throw ip
+            throw WQ
           }
-          return new Promise((function(pp) {
-            var ip = 4 - Ip + 1;
+          return new Promise((function(QQ) {
+            var WQ = 4 - TQ + 1;
             setTimeout((function() {
-              var ip = "cache-bust=" + Date.now();
-              cp[op] = ip, Op[op] = Ip - 1, pp(__webpack_require__.e(op))
-            }), function(pp) {
-              return 500 * Math.pow(2, pp)
-            }(ip))
+              var WQ = "cache-bust=" + Date.now();
+              XQ[qQ] = WQ, wQ[qQ] = TQ - 1, QQ(__webpack_require__.e(qQ))
+            }), function(QQ) {
+              return 500 * Math.pow(2, QQ)
+            }(WQ))
           }))
         }))
       }
     }
   })();
-  const pp = Math.SQRT1_2,
-    ip = Math.SQRT1_2 / 2,
-    cp = Math.sqrt(3) / 2,
-    Op = 2 * pp,
-    op = 2 * ip + cp;
+  const QQ = Math.SQRT1_2,
+    WQ = Math.SQRT1_2 / 2,
+    XQ = Math.sqrt(3) / 2,
+    wQ = 2 * QQ,
+    qQ = 2 * WQ + XQ;
 
-  function Ip(ip, cp) {
-    const Op = cp > 0 ? cp + 1 : 0,
-      Ip = .6 * ip - cp / pp;
-    return Math.max(0, Math.min(Ip, (ip - 2 * Op) / op))
+  function TQ(WQ, XQ) {
+    const wQ = XQ > 0 ? XQ + 1 : 0,
+      TQ = .6 * WQ - XQ / QQ;
+    return Math.max(0, Math.min(TQ, (WQ - 2 * wQ) / qQ))
   }
-  const Sp = [15, 15, 15],
-    xp = {
+  const zQ = [15, 15, 15],
+    sQ = {
       top: 1,
       left: .85,
       right: .7
     };
 
-  function Lp(pp, ip, cp, Sp) {
+  function FQ(QQ, WQ, XQ, zQ) {
     const {
-      vertices: xp,
-      uvs: Lp,
-      indices: Yp,
-      shades: Dp
-    } = pp, Pp = function(pp, ip) {
-      const cp = Ip(pp, ip),
-        Sp = Op * cp,
-        xp = op * cp;
+      vertices: sQ,
+      uvs: FQ,
+      indices: PQ,
+      shades: gQ
+    } = QQ, rQ = function(QQ, WQ) {
+      const XQ = TQ(QQ, WQ),
+        zQ = wQ * XQ,
+        sQ = qQ * XQ;
       return {
-        left: (pp - Sp) / 2,
-        top: (pp - xp) / 2,
-        width: Sp,
-        height: xp
+        left: (QQ - zQ) / 2,
+        top: (QQ - sQ) / 2,
+        width: zQ,
+        height: sQ
       }
-    }(cp, Sp), Wp = new Float32Array(xp.length);
-    for (let Op = 0; Op < xp.length; Op += 3) Wp[Op] = Pp.left + xp[Op] * Pp.width, Wp[Op + 1] = Pp.top + xp[Op + 1] * Pp.height, Wp[Op + 2] = xp[Op + 2];
-    const yp = new Float32Array(cp * cp).fill(-1 / 0),
-      Up = new Uint8ClampedArray(cp * cp * 4),
-      wp = 255 * pp.alphaCutoff;
-    for (let Op = 0; Op < Yp.length; Op += 3) {
-      const [pp, op, Ip] = [Yp[Op], Yp[Op + 1], Yp[Op + 2]], [Sp, xp, Ap] = [3 * pp, 3 * op, 3 * Ip], [Pp, vp, tp, Hp, dp, ep] = [Wp[Sp], Wp[Sp + 1], Wp[xp], Wp[xp + 1], Wp[Ap], Wp[Ap + 1]], jp = (tp - Pp) * (ep - vp) - (dp - Pp) * (Hp - vp);
-      if (Math.abs(jp) < 1e-9) continue;
-      const kp = Dp[Op / 3],
-        [mp, Rp, qp, Mp, Cp, Ep] = [Lp[2 * pp], Lp[2 * pp + 1], Lp[2 * op], Lp[2 * op + 1], Lp[2 * Ip], Lp[2 * Ip + 1]],
-        Xp = Math.max(0, Math.floor(Math.min(Pp, tp, dp))),
-        lp = Math.min(cp - 1, Math.ceil(Math.max(Pp, tp, dp))),
-        Qp = Math.max(0, Math.floor(Math.min(vp, Hp, ep))),
-        Jp = Math.min(cp - 1, Math.ceil(Math.max(vp, Hp, ep)));
-      for (let Op = Qp; Op <= Jp; Op++)
-        for (let pp = Xp; pp <= lp; pp++) {
-          const [op, Ip] = [pp + .5, Op + .5], Lp = ((op - Pp) * (ep - vp) - (dp - Pp) * (Ip - vp)) / jp, Yp = ((tp - Pp) * (Ip - vp) - (op - Pp) * (Hp - vp)) / jp, Dp = 1 - Lp - Yp;
-          if (Dp < 0 || Lp < 0 || Yp < 0) continue;
-          const Xp = Dp * Wp[Sp + 2] + Lp * Wp[xp + 2] + Yp * Wp[Ap + 2],
-            lp = Op * cp + pp;
-          if (Xp <= yp[lp]) continue;
-          const Qp = Math.max(0, Math.min(ip.width - 1, Math.floor((Dp * mp + Lp * qp + Yp * Cp) * ip.width))),
-            Jp = 4 * (Math.max(0, Math.min(ip.height - 1, Math.floor((Dp * Rp + Lp * Mp + Yp * Ep) * ip.height))) * ip.width + Qp);
-          ip.pixels[Jp + 3] < wp || (yp[lp] = Xp, Up[4 * lp] = ip.pixels[Jp] * kp, Up[4 * lp + 1] = ip.pixels[Jp + 1] * kp, Up[4 * lp + 2] = ip.pixels[Jp + 2] * kp, Up[4 * lp + 3] = 255)
+    }(XQ, zQ), IQ = new Float32Array(sQ.length);
+    for (let wQ = 0; wQ < sQ.length; wQ += 3) IQ[wQ] = rQ.left + sQ[wQ] * rQ.width, IQ[wQ + 1] = rQ.top + sQ[wQ + 1] * rQ.height, IQ[wQ + 2] = sQ[wQ + 2];
+    const jQ = new Float32Array(XQ * XQ).fill(-1 / 0),
+      BQ = new Uint8ClampedArray(XQ * XQ * 4),
+      yQ = 255 * QQ.alphaCutoff;
+    for (let wQ = 0; wQ < PQ.length; wQ += 3) {
+      const [QQ, qQ, TQ] = [PQ[wQ], PQ[wQ + 1], PQ[wQ + 2]], [zQ, sQ, JQ] = [3 * QQ, 3 * qQ, 3 * TQ], [rQ, VQ, DQ, pQ, GQ, UQ] = [IQ[zQ], IQ[zQ + 1], IQ[sQ], IQ[sQ + 1], IQ[JQ], IQ[JQ + 1]], bQ = (DQ - rQ) * (UQ - VQ) - (GQ - rQ) * (pQ - VQ);
+      if (Math.abs(bQ) < 1e-9) continue;
+      const vQ = gQ[wQ / 3],
+        [dQ, HQ, aQ, lQ, hQ, iQ] = [FQ[2 * QQ], FQ[2 * QQ + 1], FQ[2 * qQ], FQ[2 * qQ + 1], FQ[2 * TQ], FQ[2 * TQ + 1]],
+        cQ = Math.max(0, Math.floor(Math.min(rQ, DQ, GQ))),
+        AQ = Math.min(XQ - 1, Math.ceil(Math.max(rQ, DQ, GQ))),
+        RQ = Math.max(0, Math.floor(Math.min(VQ, pQ, UQ))),
+        EQ = Math.min(XQ - 1, Math.ceil(Math.max(VQ, pQ, UQ)));
+      for (let wQ = RQ; wQ <= EQ; wQ++)
+        for (let QQ = cQ; QQ <= AQ; QQ++) {
+          const [qQ, TQ] = [QQ + .5, wQ + .5], FQ = ((qQ - rQ) * (UQ - VQ) - (GQ - rQ) * (TQ - VQ)) / bQ, PQ = ((DQ - rQ) * (TQ - VQ) - (qQ - rQ) * (pQ - VQ)) / bQ, gQ = 1 - FQ - PQ;
+          if (gQ < 0 || FQ < 0 || PQ < 0) continue;
+          const cQ = gQ * IQ[zQ + 2] + FQ * IQ[sQ + 2] + PQ * IQ[JQ + 2],
+            AQ = wQ * XQ + QQ;
+          if (cQ <= jQ[AQ]) continue;
+          const RQ = Math.max(0, Math.min(WQ.width - 1, Math.floor((gQ * dQ + FQ * aQ + PQ * hQ) * WQ.width))),
+            EQ = 4 * (Math.max(0, Math.min(WQ.height - 1, Math.floor((gQ * HQ + FQ * lQ + PQ * iQ) * WQ.height))) * WQ.width + RQ);
+          WQ.pixels[EQ + 3] < yQ || (jQ[AQ] = cQ, BQ[4 * AQ] = WQ.pixels[EQ] * vQ, BQ[4 * AQ + 1] = WQ.pixels[EQ + 1] * vQ, BQ[4 * AQ + 2] = WQ.pixels[EQ + 2] * vQ, BQ[4 * AQ + 3] = 255)
         }
     }
-    return Ap(Up, cp, Sp), Up
+    return JQ(BQ, XQ, zQ), BQ
   }
-  let Yp = NaN,
-    Dp = new Int32Array(0);
+  let PQ = NaN,
+    gQ = new Int32Array(0);
 
-  function Ap(pp, ip, cp) {
-    let Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : ip => 0 !== pp[4 * ip + 3];
-    const op = new Uint8Array(ip * ip);
-    for (let Sp = 0; Sp < ip * ip; Sp++) op[Sp] = Op(Sp) ? 1 : 0;
-    const Ip = (pp, cp) => pp >= 0 && cp >= 0 && pp < ip && cp < ip && 0 === op[cp * ip + pp],
-      xp = new Float32Array(ip * ip).fill(1 / 0),
-      Lp = function(pp) {
-        if (pp !== Yp) {
-          const ip = Math.ceil(pp + 1),
-            cp = [];
-          for (let Op = -ip; Op <= ip; Op++)
-            for (let op = -ip; op <= ip; op++) {
-              const ip = op * op + Op * Op;
-              ip > 0 && ip < (pp + 1) ** 2 && cp.push(op, Op, ip)
+  function JQ(QQ, WQ, XQ) {
+    let wQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : WQ => 0 !== QQ[4 * WQ + 3];
+    const qQ = new Uint8Array(WQ * WQ);
+    for (let zQ = 0; zQ < WQ * WQ; zQ++) qQ[zQ] = wQ(zQ) ? 1 : 0;
+    const TQ = (QQ, XQ) => QQ >= 0 && XQ >= 0 && QQ < WQ && XQ < WQ && 0 === qQ[XQ * WQ + QQ],
+      sQ = new Float32Array(WQ * WQ).fill(1 / 0),
+      FQ = function(QQ) {
+        if (QQ !== PQ) {
+          const WQ = Math.ceil(QQ + 1),
+            XQ = [];
+          for (let wQ = -WQ; wQ <= WQ; wQ++)
+            for (let qQ = -WQ; qQ <= WQ; qQ++) {
+              const WQ = qQ * qQ + wQ * wQ;
+              WQ > 0 && WQ < (QQ + 1) ** 2 && XQ.push(qQ, wQ, WQ)
             }
-          Yp = pp, Dp = Int32Array.from(cp)
+          PQ = QQ, gQ = Int32Array.from(XQ)
         }
-        return Dp
-      }(cp);
-    for (let Sp = 0; Sp < ip; Sp++)
-      for (let pp = 0; pp < ip; pp++) {
-        if (1 === op[Sp * ip + pp] && (Ip(pp - 1, Sp) || Ip(pp + 1, Sp) || Ip(pp, Sp - 1) || Ip(pp, Sp + 1)))
-          for (let cp = 0; cp < Lp.length; cp += 3) {
-            const Op = pp + Lp[cp],
-              op = Sp + Lp[cp + 1];
-            if (Op >= 0 && op >= 0 && Op < ip && op < ip) {
-              const pp = op * ip + Op;
-              xp[pp] = Math.min(xp[pp], Lp[cp + 2])
+        return gQ
+      }(XQ);
+    for (let zQ = 0; zQ < WQ; zQ++)
+      for (let QQ = 0; QQ < WQ; QQ++) {
+        if (1 === qQ[zQ * WQ + QQ] && (TQ(QQ - 1, zQ) || TQ(QQ + 1, zQ) || TQ(QQ, zQ - 1) || TQ(QQ, zQ + 1)))
+          for (let XQ = 0; XQ < FQ.length; XQ += 3) {
+            const wQ = QQ + FQ[XQ],
+              qQ = zQ + FQ[XQ + 1];
+            if (wQ >= 0 && qQ >= 0 && wQ < WQ && qQ < WQ) {
+              const QQ = qQ * WQ + wQ;
+              sQ[QQ] = Math.min(sQ[QQ], FQ[XQ + 2])
             }
           }
       }
-    for (let Yp = 0; Yp < ip * ip; Yp++) 1 !== op[Yp] && xp[Yp] !== 1 / 0 && (pp.set(Sp, 4 * Yp), pp[4 * Yp + 3] = Math.round(255 * Math.min(1, cp + 1 - Math.sqrt(xp[Yp]))))
+    for (let PQ = 0; PQ < WQ * WQ; PQ++) 1 !== qQ[PQ] && sQ[PQ] !== 1 / 0 && (QQ.set(zQ, 4 * PQ), QQ[4 * PQ + 3] = Math.round(255 * Math.min(1, XQ + 1 - Math.sqrt(sQ[PQ]))))
   }
-  const Pp = {
+  const rQ = {
       boxes: [
         [0, 0, 0, 1, 1, 1]
       ],
       cropFaces: !1
     },
-    Wp = {
+    IQ = {
       boxes: [
         [0, 0, 0, 1, .5, 1]
       ],
       cropFaces: !1
     },
-    yp = {
+    jQ = {
       boxes: [
         [0, 0, 0, 1, .5, 1],
         [0, .5, 0, .5, 1, 1]
       ],
       cropFaces: !0
     };
-  const Up = 1e-6;
+  const BQ = 1e-6;
 
-  function wp(pp, ip, cp, Op) {
+  function yQ(QQ, WQ, XQ, wQ) {
     let {
-      origin: op,
-      across: Ip,
-      down: Sp,
-      texture: xp,
-      rect: [Lp, Yp, Dp, Ap],
-      shade: Pp
-    } = Op;
-    const Wp = Ip.x * Sp.y - Ip.y * Sp.x;
-    if (Math.abs(Wp) < 1e-9) return;
-    const yp = [op.x, op.x + Ip.x, op.x + Sp.x, op.x + Ip.x + Sp.x],
-      wp = [op.y, op.y + Ip.y, op.y + Sp.y, op.y + Ip.y + Sp.y],
-      vp = Math.max(0, Math.floor(Math.min(...yp))),
-      tp = Math.min(cp - 1, Math.ceil(Math.max(...yp))),
-      Hp = Math.max(0, Math.floor(Math.min(...wp))),
-      dp = Math.min(cp - 1, Math.ceil(Math.max(...wp)));
-    for (let ep = Hp; ep <= dp; ep++)
-      for (let Op = vp; Op <= tp; Op++) {
-        const yp = Op + .5 - op.x,
-          wp = ep + .5 - op.y,
-          vp = (yp * Sp.y - wp * Sp.x) / Wp,
-          tp = (Ip.x * wp - Ip.y * yp) / Wp;
-        if (vp < -Up || vp > 1 + Up || tp < -Up || tp > 1 + Up) continue;
-        const Hp = ep * cp + Op;
-        ip[Hp] = 1;
-        const dp = Lp + Math.min(Math.max(vp, 0), 1) * (Dp - Lp),
-          jp = Yp + Math.min(Math.max(tp, 0), 1) * (Ap - Yp),
-          kp = Math.min(xp.width - 1, Math.floor(dp * xp.width)),
-          mp = 4 * (Math.min(xp.height - 1, Math.floor(jp * xp.height)) * xp.width + kp),
-          Rp = xp.pixels[mp + 3] / 255;
-        if (0 === Rp) continue;
-        const qp = 4 * Hp,
-          Mp = pp[qp + 3] / 255 * (1 - Rp),
-          Cp = Rp + Mp;
-        for (let ip = 0; ip < 3; ip++) pp[qp + ip] = (xp.pixels[mp + ip] * Pp * Rp + pp[qp + ip] * Mp) / Cp;
-        pp[qp + 3] = 255 * Cp
+      origin: qQ,
+      across: TQ,
+      down: zQ,
+      texture: sQ,
+      rect: [FQ, PQ, gQ, JQ],
+      shade: rQ
+    } = wQ;
+    const IQ = TQ.x * zQ.y - TQ.y * zQ.x;
+    if (Math.abs(IQ) < 1e-9) return;
+    const jQ = [qQ.x, qQ.x + TQ.x, qQ.x + zQ.x, qQ.x + TQ.x + zQ.x],
+      yQ = [qQ.y, qQ.y + TQ.y, qQ.y + zQ.y, qQ.y + TQ.y + zQ.y],
+      VQ = Math.max(0, Math.floor(Math.min(...jQ))),
+      DQ = Math.min(XQ - 1, Math.ceil(Math.max(...jQ))),
+      pQ = Math.max(0, Math.floor(Math.min(...yQ))),
+      GQ = Math.min(XQ - 1, Math.ceil(Math.max(...yQ)));
+    for (let UQ = pQ; UQ <= GQ; UQ++)
+      for (let wQ = VQ; wQ <= DQ; wQ++) {
+        const jQ = wQ + .5 - qQ.x,
+          yQ = UQ + .5 - qQ.y,
+          VQ = (jQ * zQ.y - yQ * zQ.x) / IQ,
+          DQ = (TQ.x * yQ - TQ.y * jQ) / IQ;
+        if (VQ < -BQ || VQ > 1 + BQ || DQ < -BQ || DQ > 1 + BQ) continue;
+        const pQ = UQ * XQ + wQ;
+        WQ[pQ] = 1;
+        const GQ = FQ + Math.min(Math.max(VQ, 0), 1) * (gQ - FQ),
+          bQ = PQ + Math.min(Math.max(DQ, 0), 1) * (JQ - PQ),
+          vQ = Math.min(sQ.width - 1, Math.floor(GQ * sQ.width)),
+          dQ = 4 * (Math.min(sQ.height - 1, Math.floor(bQ * sQ.height)) * sQ.width + vQ),
+          HQ = sQ.pixels[dQ + 3] / 255;
+        if (0 === HQ) continue;
+        const aQ = 4 * pQ,
+          lQ = QQ[aQ + 3] / 255 * (1 - HQ),
+          hQ = HQ + lQ;
+        for (let WQ = 0; WQ < 3; WQ++) QQ[aQ + WQ] = (sQ.pixels[dQ + WQ] * rQ * HQ + QQ[aQ + WQ] * lQ) / hQ;
+        QQ[aQ + 3] = 255 * hQ
       }
   }
 
-  function vp(pp, ip, cp) {
-    const Op = pp.get(ip);
-    if (void 0 === Op) throw new Error(`no ${cp} was sent for ${ip.slice(0,100)}`);
-    return Op
+  function VQ(QQ, WQ, XQ) {
+    const wQ = QQ.get(WQ);
+    if (void 0 === wQ) throw new Error(`no ${XQ} was sent for ${WQ.slice(0,100)}`);
+    return wQ
   }
-  const tp = {
-      pixelsOf(pp) {
-        const ip = new OffscreenCanvas(pp.width, pp.height),
-          cp = ip.getContext("2d");
-        if (!cp) throw new Error("no 2D context");
-        return cp.drawImage(pp, 0, 0), pp.close(), {
-          width: ip.width,
-          height: ip.height,
-          pixels: cp.getImageData(0, 0, ip.width, ip.height).data
+  const DQ = {
+      pixelsOf(QQ) {
+        const WQ = new OffscreenCanvas(QQ.width, QQ.height),
+          XQ = WQ.getContext("2d");
+        if (!XQ) throw new Error("no 2D context");
+        return XQ.drawImage(QQ, 0, 0), QQ.close(), {
+          width: WQ.width,
+          height: WQ.height,
+          pixels: XQ.getImageData(0, 0, WQ.width, WQ.height).data
         }
       },
-      async encode(pp, ip) {
-        const cp = new OffscreenCanvas(ip, ip),
-          Op = cp.getContext("2d");
-        if (!Op) throw new Error("no 2D context");
-        Op.putImageData(new ImageData(pp, ip, ip), 0, 0);
-        const op = await cp.convertToBlob();
-        return new Promise(((pp, ip) => {
-          const cp = new FileReader;
-          cp.onload = () => {
-            pp(cp.result)
-          }, cp.onerror = () => {
-            var pp;
-            ip(null !== (pp = cp.error) && void 0 !== pp ? pp : new Error("the icon did not encode"))
-          }, cp.readAsDataURL(op)
+      async encode(QQ, WQ) {
+        const XQ = new OffscreenCanvas(WQ, WQ),
+          wQ = XQ.getContext("2d");
+        if (!wQ) throw new Error("no 2D context");
+        wQ.putImageData(new ImageData(QQ, WQ, WQ), 0, 0);
+        const qQ = await XQ.convertToBlob();
+        return new Promise(((QQ, WQ) => {
+          const XQ = new FileReader;
+          XQ.onload = () => {
+            QQ(XQ.result)
+          }, XQ.onerror = () => {
+            var QQ;
+            WQ(null !== (QQ = XQ.error) && void 0 !== QQ ? QQ : new Error("the icon did not encode"))
+          }, XQ.readAsDataURL(qQ)
         }))
       }
     },
-    Hp = globalThis.WorkerGlobalScope;
-  void 0 !== Hp && globalThis instanceof Hp && function(Op, op) {
-    const Sp = new Map,
-      Yp = new Map,
-      Dp = (pp, ip, cp) => {
+    pQ = globalThis.WorkerGlobalScope;
+  void 0 !== pQ && globalThis instanceof pQ && function(wQ, qQ) {
+    const zQ = new Map,
+      PQ = new Map,
+      gQ = (QQ, WQ, XQ) => {
         (async () => {
           try {
-            Op.postMessage({
+            wQ.postMessage({
               type: "drawn",
-              id: pp,
-              url: await op.encode(cp(), ip)
+              id: QQ,
+              url: await qQ.encode(XQ(), WQ)
             })
-          } catch (Ip) {
-            Op.postMessage({
+          } catch (TQ) {
+            wQ.postMessage({
               type: "failed",
-              message: String(Ip)
+              message: String(TQ)
             })
           }
         })()
       };
-    Op.onmessage = Op => {
+    wQ.onmessage = wQ => {
       let {
-        data: Up
-      } = Op;
-      if ("texture" === Up.type) Sp.set(Up.url, op.pixelsOf(Up.bitmap));
-      else if ("model" === Up.type) Yp.set(Up.name, {
-        geometry: Up.geometry,
-        texture: op.pixelsOf(Up.bitmap)
+        data: BQ
+      } = wQ;
+      if ("texture" === BQ.type) zQ.set(BQ.url, qQ.pixelsOf(BQ.bitmap));
+      else if ("model" === BQ.type) PQ.set(BQ.name, {
+        geometry: BQ.geometry,
+        texture: qQ.pixelsOf(BQ.bitmap)
       });
-      else if ("draw" === Up.type) {
+      else if ("draw" === BQ.type) {
         const {
-          id: Op,
-          top: op,
-          left: Lp,
-          right: Yp,
-          itemType: tp,
-          size: Hp,
-          outlineWidth: dp
-        } = Up;
-        Dp(Op, Hp, (() => function(Op, op, Sp, Lp) {
-          const Yp = Ip(Sp, Lp),
-            Dp = Yp * pp,
-            Pp = Yp * ip,
-            Wp = Yp * cp,
-            yp = Math.max(...op.boxes.map((pp => pp[4]))),
-            Up = Sp / 2,
-            vp = Pp + (Sp - Pp - Pp - yp * Wp) / 2,
-            tp = (pp, ip, cp) => ({
-              x: Up + (pp - cp) * Dp,
-              y: vp - Pp + (pp + cp) * Pp + (yp - ip) * Wp
+          id: wQ,
+          top: qQ,
+          left: FQ,
+          right: PQ,
+          itemType: DQ,
+          size: pQ,
+          outlineWidth: GQ
+        } = BQ;
+        gQ(wQ, pQ, (() => function(wQ, qQ, zQ, FQ) {
+          const PQ = TQ(zQ, FQ),
+            gQ = PQ * QQ,
+            rQ = PQ * WQ,
+            IQ = PQ * XQ,
+            jQ = Math.max(...qQ.boxes.map((QQ => QQ[4]))),
+            BQ = zQ / 2,
+            VQ = rQ + (zQ - rQ - rQ - jQ * IQ) / 2,
+            DQ = (QQ, WQ, XQ) => ({
+              x: BQ + (QQ - XQ) * gQ,
+              y: VQ - rQ + (QQ + XQ) * rQ + (jQ - WQ) * IQ
             }),
-            Hp = (pp, ip, cp, Op, Ip, Sp) => ({
-              origin: pp,
+            pQ = (QQ, WQ, XQ, wQ, TQ, zQ) => ({
+              origin: QQ,
               across: {
-                x: ip.x - pp.x,
-                y: ip.y - pp.y
+                x: WQ.x - QQ.x,
+                y: WQ.y - QQ.y
               },
               down: {
-                x: cp.x - pp.x,
-                y: cp.y - pp.y
+                x: XQ.x - QQ.x,
+                y: XQ.y - QQ.y
               },
-              texture: Op,
-              rect: op.cropFaces ? Ip : [0, 0, 1, 1],
-              shade: Sp
+              texture: wQ,
+              rect: qQ.cropFaces ? TQ : [0, 0, 1, 1],
+              shade: zQ
             }),
-            dp = new Uint8ClampedArray(Sp * Sp * 4),
-            ep = new Uint8Array(Sp * Sp),
-            jp = xp;
-          for (const [pp, ip, cp, Ip, xp, Ap] of op.boxes) {
-            const op = Hp(tp(Ip, xp, Ap), tp(Ip, xp, cp), tp(Ip, ip, Ap), Op.right, [1 - Ap, 1 - xp, 1 - cp, 1 - ip], jp.right),
-              Lp = Hp(tp(pp, xp, Ap), tp(Ip, xp, Ap), tp(pp, ip, Ap), Op.left, [pp, 1 - xp, Ip, 1 - ip], jp.left),
-              Yp = Hp(tp(pp, xp, cp), tp(Ip, xp, cp), tp(pp, xp, Ap), Op.top, [pp, cp, Ip, Ap], jp.top);
-            for (const pp of [op, Lp, Yp]) wp(dp, ep, Sp, pp)
+            GQ = new Uint8ClampedArray(zQ * zQ * 4),
+            UQ = new Uint8Array(zQ * zQ),
+            bQ = sQ;
+          for (const [QQ, WQ, XQ, TQ, sQ, JQ] of qQ.boxes) {
+            const qQ = pQ(DQ(TQ, sQ, JQ), DQ(TQ, sQ, XQ), DQ(TQ, WQ, JQ), wQ.right, [1 - JQ, 1 - sQ, 1 - XQ, 1 - WQ], bQ.right),
+              FQ = pQ(DQ(QQ, sQ, JQ), DQ(TQ, sQ, JQ), DQ(QQ, WQ, JQ), wQ.left, [QQ, 1 - sQ, TQ, 1 - WQ], bQ.left),
+              PQ = pQ(DQ(QQ, sQ, XQ), DQ(TQ, sQ, XQ), DQ(QQ, sQ, JQ), wQ.top, [QQ, XQ, TQ, JQ], bQ.top);
+            for (const QQ of [qQ, FQ, PQ]) yQ(GQ, UQ, zQ, QQ)
           }
-          return Ap(dp, Sp, Lp, (pp => 1 === ep[pp])), dp
+          return JQ(GQ, zQ, FQ, (QQ => 1 === UQ[QQ])), GQ
         }({
-          top: vp(Sp, op, "texture"),
-          left: vp(Sp, Lp, "texture"),
-          right: vp(Sp, Yp, "texture")
-        }, function(pp) {
-          return "SlabBlock" === pp ? Wp : "StairsBlock" === pp ? yp : Pp
-        }(tp), Hp, dp)))
+          top: VQ(zQ, qQ, "texture"),
+          left: VQ(zQ, FQ, "texture"),
+          right: VQ(zQ, PQ, "texture")
+        }, function(QQ) {
+          return "SlabBlock" === QQ ? IQ : "StairsBlock" === QQ ? jQ : rQ
+        }(DQ), pQ, GQ)))
       } else {
         const {
-          id: pp,
-          name: ip,
-          size: cp,
-          outlineWidth: Op
-        } = Up;
-        Dp(pp, cp, (() => {
+          id: QQ,
+          name: WQ,
+          size: XQ,
+          outlineWidth: wQ
+        } = BQ;
+        gQ(QQ, XQ, (() => {
           const {
-            geometry: pp,
-            texture: op
-          } = vp(Yp, ip, "model");
-          return Lp(pp, op, cp, Op)
+            geometry: QQ,
+            texture: qQ
+          } = VQ(PQ, WQ, "model");
+          return FQ(QQ, qQ, XQ, wQ)
         }))
       }
-    }, Op.postMessage({
+    }, wQ.postMessage({
       type: "started"
     })
-  }(globalThis, tp)
+  }(globalThis, DQ)
 })();

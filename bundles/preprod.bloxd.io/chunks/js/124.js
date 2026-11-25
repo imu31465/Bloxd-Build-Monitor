@@ -1,1243 +1,171 @@
 export const id = 124;
-export const ids = [124, 125];
+export const ids = [124];
 export const modules = {
-  6666: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => op
+  6880: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      b: () => wQ
     });
-    var Op = cp(1112);
-
-    function op(pp) {
-      let {
-        href: ip,
-        children: cp
-      } = pp;
-      return (0, Op.jsxs)("a", {
-        className: "WorldCodeAiExternalLink",
-        href: ip,
-        target: "_blank",
-        rel: "noreferrer noopener",
-        children: [cp, " ", (0, Op.jsx)("span", {
-          "aria-hidden": "true",
-          children: "\u2197"
-        })]
-      })
-    }
-  },
-  6660: (pp, ip, cp) => {
-    cp.d(ip, {
-      WorldCodeAiChatGptNotice: () => Dp,
-      WorldCodeAiDeepSeekNotice: () => Yp,
-      c: () => Sp,
-      f: () => Lp,
-      i: () => xp
-    });
-    var Op = cp(1201),
-      op = cp(6666),
-      Ip = cp(1112);
-    const Sp = "https://cdn.deepseek.com/policies/en-US/deepseek-privacy-policy.html",
-      xp = "https://openai.com/policies/terms-of-use/",
-      Lp = "https://openai.com/policies/privacy-policy/";
-
-    function Yp() {
-      const {
-        t: pp
-      } = (0, Op.H)();
-      return (0, Ip.jsxs)(Ip.Fragment, {
-        children: [pp("superBotXd:deepSeekNotice"), " ", (0, Ip.jsx)(op.c, {
-          href: Sp,
-          children: pp("superBotXd:deepSeekPrivacyPolicy")
-        })]
-      })
-    }
-
-    function Dp() {
-      const {
-        t: pp
-      } = (0, Op.H)();
-      return (0, Ip.jsxs)(Ip.Fragment, {
-        children: [pp("aiHelperChatGpt:notice"), " ", (0, Ip.jsx)(op.c, {
-          href: xp,
-          children: pp("aiHelperChatGpt:terms")
-        }), " ", (0, Ip.jsx)(op.c, {
-          href: Lp,
-          children: pp("aiHelperChatGpt:privacyPolicy")
-        })]
-      })
-    }
-  },
-  6658: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      default: () => wp
-    });
-    var Op = cp(1201),
-      op = cp(131),
-      Ip = cp(226),
-      Sp = cp(1480),
-      xp = cp(1334),
-      Lp = cp(25),
-      Yp = cp(1705),
-      Dp = cp(3505),
-      Ap = cp(3221),
-      Pp = cp(6660),
-      Wp = cp(1112);
-
-    function yp() {
-      const {
-        t: pp
-      } = (0, Op.H)(), ip = !(0, Ip.shouldUseUkPrivacyPolicy)();
-      return (0, Wp.jsxs)("div", {
-        className: "LegalText",
-        children: [(0, Wp.jsx)("div", {
-          className: "BloxdInformationHeader FullyFancyText",
-          children: pp("homePage:privacyPolicy")
-        }), (0, Wp.jsx)("p", {
-          children: (0, Wp.jsxs)("em", {
-            children: ["Last updated: ", Dp.h.toLocaleDateString()]
-          })
-        }), (0, Wp.jsx)("p", {
-          children: "This Privacy Policy outlines how Bloxd LTD collects, uses, and protects your information when you visit and interact with Bloxd.io. This document is intended to provide clarity on our practices and your rights concerning your data."
-        }), (0, Wp.jsx)("h2", {
-          children: "1. Who We Are"
-        }), (0, Wp.jsx)("p", {
-          children: "At Bloxd.io, we take your privacy\u2014and the privacy of your children\u2014very seriously. This Privacy Policy explains how we collect, use, and protect the information of both you and your child when you use our website. Our goal is to make sure you understand what information we collect, why we collect it, and how we keep it safe. We also want to ensure that you know your rights and how you can exercise them."
-        }), (0, Wp.jsx)("p", {
-          children: "Whether you\u2019re a parent, guardian, or player, this document is designed to provide you with clear and straightforward information about our privacy practices. We\u2019re committed to providing a safe and enjoyable environment for our younger players while respecting the privacy and concerns of parents and guardians."
-        }), (0, Wp.jsx)("h2", {
-          children: "2. Information We Collect, Why We Collect It, and How It Is Used"
-        }), (0, Wp.jsx)("h3", {
-          children: "2.1 Visitors"
-        }), (0, Wp.jsx)("h4", {
-          children: "2.1.1 Data Collection and Usage"
-        }), (0, Wp.jsxs)("p", {
-          children: ["When you interact with Bloxd.io, certain data is collected to ensure the website operates correctly and securely. By default, we apply the highest level of privacy protection for all visitors. This means that we collect only the minimal amount of information necessary to operate the website and ensure its functionality. The following types of information may be collected:", " "]
-        }), (0, Wp.jsxs)("table", {
-          children: [(0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Type of Information"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "What We Collect"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Why We Collect It"
-              })
-            })]
-          }), (0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Technical Info"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "IP address, browser type, device type, screen resolution, language selection"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "To ensure the website functions correctly and displays in your preferred language."
-              })
-            })]
-          }), (0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Usage Info"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Pages visited, time spent on pages, clicks, and interactions"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "To analyze how the website is used and to improve player experience."
-              })
-            })]
-          }), (0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Cookie Info"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsxs)("p", {
-                children: ["Cookies that store settings, advert frequency, fraud prevention", ip ? ", and with your consent, enable personalized advertising" : ""]
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsxs)("p", {
-                children: ["To enhance your experience by remembering your preferences, save your game progress, and ensure ads are displayed an appropriate number of times and to prevent fraudulent activity.", ip ? " With your consent, cookies may also be used to enable personalized advertising based on your interests." : ""]
-              })
-            })]
-          }), (0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Moderation Info"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Anonymized IP address, Chat logs, username, reports"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "To maintain a safe environment in chat rooms and enforce community guidelines."
-              })
-            })]
-          })]
-        }), (0, Wp.jsx)("p", {
-          children: "Data Retention:\xa0Data related to visitors is retained as long as the account is active, or 14 months after your last play session. If a user requests account deletion, the associated data will be deleted promptly, typically within 30 days after the request is processed."
-        }), (0, Wp.jsx)("h3", {
-          children: "2.2 Chat Rooms"
-        }), (0, Wp.jsx)("p", {
-          children: "Bloxd.io includes online social features, such as chat rooms, where players can interact. We implement several measures to ensure chat safety:"
-        }), (0, Wp.jsxs)("ul", {
-          children: [(0, Wp.jsx)("li", {
-            children: "Automated Moderation: Tools are used to automatically detect and filter inappropriate content."
-          }), (0, Wp.jsx)("li", {
-            children: "Manual Moderation: Human moderators review flagged content to ensure compliance with our chat safety rules."
-          }), (0, Wp.jsx)("li", {
-            children: "User Reports: players can report content they believe violates guidelines, and it will be reviewed by moderators."
-          })]
-        }), (0, Wp.jsx)("p", {
-          children: "Before participating in chat rooms, players and their guardians are encouraged to review our Community Conduct."
-        }), (0, Wp.jsx)("h3", {
-          children: "2.3 Registered players"
-        }), (0, Wp.jsx)("h4", {
-          children: "2.3.1 Age Requirements and Parental Consent"
-        }), (0, Wp.jsxs)("p", {
-          children: ["Accounts on Bloxd.io can only be created by players aged 13 or older, or by younger players with parental consent. For those registering through Google, Google will verify the user\u2019s age and obtain parental consent if required. For more details, refer to", " ", (0, Wp.jsx)("a", {
-            href: "https://families.google.com/familylink/privacy/child-policy",
-            children: "Google\u2019s Child Privacy Policy"
-          }), "."]
-        }), (0, Wp.jsx)("h4", {
-          children: "2.3.2 Data Collection for Registered Players"
-        }), (0, Wp.jsx)("p", {
-          children: "When creating an account, the following data is collected to provide personalized services and enhance user experience:"
-        }), (0, Wp.jsxs)("table", {
-          children: [(0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Type of Information"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "What We Collect"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Why We Collect It"
-              })
-            })]
-          }), (0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Account Info"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Username, email address"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "To create and manage user accounts."
-              })
-            })]
-          }), (0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Profile Info"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Optional profile details (e.g., avatar)"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "To personalize the user experience."
-              })
-            })]
-          }), (0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Technical Info"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "IP address, device type, browser type"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "To secure accounts and ensure the website functions correctly."
-              })
-            })]
-          }), (0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Usage Info"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Pages visited, site interactions"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "To improve the user experience and offer tailored features."
-              })
-            })]
-          })]
-        }), (0, Wp.jsx)("p", {
-          children: "Data Retention: Data related to registered players is retained for as long as the account is active, 14 months after your last play session or If a user requests account deletion, the associated data will be deleted promptly, typically within 30 days after the request is processed."
-        }), (0, Wp.jsx)("h3", {
-          children: "2.3.3 Data Collection for Store Purchases"
-        }), (0, Wp.jsx)("p", {
-          children: "When making a store purchase as a registered player, the following data is collected by us or our payment partners listed in section 3.3 to provide a compliant checkout experience and access to their purchase:"
-        }), (0, Wp.jsxs)("table", {
-          children: [(0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Type of Information"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "What We Collect"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Why We Collect It"
-              })
-            })]
-          }), (0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Account Info"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "User ID, email address"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "To attach any purchase made to your account."
-              })
-            })]
-          }), (0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Technical Info"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Transaction ID, IP address, device type, browser type"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Combat fraud and reporting."
-              })
-            })]
-          }), (0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Usage Info"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Pages visited, site interactions, purchase history"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "To secure accounts and ensure the website functions correctly."
-              })
-            })]
-          }), (0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Usage Info"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Pages visited, site interactions"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "To improve the user experience and offer tailored features after purchase."
-              })
-            })]
-          }), (0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Payment Info"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Payment Information, Billing address "
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "To complete and validate your purchase"
-              })
-            })]
-          })]
-        }), (0, Wp.jsx)("p", {
-          children: "Our payment providers, who act as our merchant of record, securely collect payment information and handle it according to the required security & law. Payment information is not shared with or processed by bloxd."
-        }), (0, Wp.jsx)("p", {
-          children: "Data Retention: Data related to purchases can be stored for up to 5 years after fulfilling the purposes for which the data were collected to combat fraud and for reporting purposes."
-        }), (0, Wp.jsx)("h3", {
-          children: "2.4 When You Contact Us"
-        }), (0, Wp.jsx)("p", {
-          children: "When you reach out to us, we collect information to help us respond to you effectively:"
-        }), (0, Wp.jsxs)("table", {
-          children: [(0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Type of Information"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "What We Collect"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Why We Collect It"
-              })
-            })]
-          }), (0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Contact Info"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Your email address or phone number"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "To get back to you about your questions or concerns."
-              })
-            })]
-          }), (0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Message Content"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "What you say in your message"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "To understand and address your issue or feedback."
-              })
-            })]
-          }), (0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Technical Info"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Date, time, and details of how you contacted us"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "For security and to ensure we respond appropriately."
-              })
-            })]
-          })]
-        }), (0, Wp.jsx)("p", {
-          children: "Data Retention:\xa0We will retain the personal data collected from your inquiries for up to\xa0three months after your query is resolved or closed. This extended period allows us to ensure that any follow-up questions can be addressed. If the inquiry is from a child under the age of 13, any data collected will be deleted as soon as possible."
-        }), (0, Wp.jsx)("h3", {
-          children: "2.5 The AI Helper in the Code Editor"
-        }), (0, Wp.jsx)("p", {
-          children: "The Code Editor\u2019s AI Helper answers questions about the code of games made in Bloxd.io. To answer, the AI is sent your question, your game\u2019s code, the recent messages in that chat, errors your game showed and the AI notes you kept. When the AI looks it up, it is also sent what is in your game: its blocks, your position, health and inventory, and the names and positions of players near you. Where this goes depends on the AI you use:"
-        }), (0, Wp.jsxs)("ul", {
-          children: [(0, Wp.jsx)("li", {
-            children: "Bot.xd: your browser sends them to OVHcloud, a company in France, whose AI models answer."
-          }), (0, Wp.jsx)("li", {
-            children: "Super Bot.xd: our game servers send them to DeepSeek, a company in China, or to OVHcloud when Super Bot.xd runs on its models. We ask for your consent before you first use DeepSeek."
-          }), (0, Wp.jsxs)("li", {
-            children: ["ChatGPT: when Bot.xd isn\u2019t working on our website, you can ask ChatGPT instead. We open it in a new tab that sends OpenAI, a company in the United States, your question, the code of the file you have open, the names and line counts of your other files and the names of the functions in your main file; a question too long for that is copied for you to paste in yourself. We ask for your consent first, ChatGPT is for ages 13 and up, and OpenAI\u2019s ", (0, Wp.jsx)("a", {
-              href: Pp.i,
-              children: "terms"
-            }), " and ", (0, Wp.jsx)("a", {
-              href: Pp.f,
-              children: "privacy policy"
-            }), " apply. If you paste its answer back, the code it puts in your files goes with your later questions as part of your files; its words don\u2019t, except to your own keys while their safety check is off. We count how many answers are pasted."]
-          }), (0, Wp.jsx)("li", {
-            children: "Your own API key: if you add a key from another AI company, your browser sends your questions straight to that company, and its terms and privacy policy apply. Your key is kept only in your browser."
-          })]
-        }), (0, Wp.jsx)("p", {
-          children: "Bot.xd\u2019s and Super Bot.xd\u2019s questions and answers are also sent to a safety model run by OVHcloud to check them, and so is the code sent with Super Bot.xd\u2019s questions. So are your own keys\u2019 questions and answers, unless you turn off the safety check for your own keys. A ChatGPT answer you paste back isn\u2019t checked. Where we ask for your consent, that consent is our basis for sending this data; otherwise our basis is providing the AI Helper you asked to use."
-        }), (0, Wp.jsx)("p", {
-          children: "If you agree when asked, we keep what the AI was sent for each question, as listed above, and its answers, linked to your account or guest account, to improve the AI Helper. You can change this in the AI Helper\u2019s AI settings. To stop sending anything to DeepSeek or ChatGPT, stop using Super Bot.xd or ChatGPT."
-        }), (0, Wp.jsx)("p", {
-          children: "Data Retention: AI Helper chats you agreed to share are deleted after 30 days."
-        }), (0, Wp.jsx)("h2", {
-          children: "3. Third-Party Data Use"
-        }), (0, Wp.jsx)("h3", {
-          children: "3.1 Scope of This Privacy Policy"
-        }), (0, Wp.jsxs)("p", {
-          children: ["This Privacy Policy applies only to the Bloxd.io game and its related services when accessed through the official Bloxd.io website or our mobile apps (such as those on iOS and Android).", " "]
-        }), (0, Wp.jsx)("p", {
-          children: "If you use Bloxd.io through a third-party platform or website, this Privacy Policy does not cover those environments. We recommend checking the privacy policies of those sites or platforms and making sure you understand how your data is used before engaging with them."
-        }), (0, Wp.jsx)("p", {
-          children: "We may also work with third-party services for some features in our game. These third parties have their own privacy policies, which apply in addition to ours. We encourage you to review those policies as well."
-        }), (0, Wp.jsx)("h3", {
-          children: "3.2 Advertisers"
-        }), (0, Wp.jsx)("p", {
-          children: "Bloxd.io displays ads from selected partners. On our website, ads are managed and delivered by our web advertising partners; within our mobile apps (available on iOS and Android), ads are delivered through Google AdMob."
-        }), ip && (0, Wp.jsx)("p", {
-          children: "With your consent, we may display personalized ads tailored to your interests based on information such as your browsing history, device information, your device\u2019s advertising identifier, and your interactions with our site and apps. Where you do not provide consent, you will only be shown non-personalized ads."
-        }), !ip && (0, Wp.jsx)("p", {
-          children: "These ads are non-personalized, meaning they are not based on your personal data or browsing behavior, but rather on general context. We do not collect personal data from children under 13 for advertising purposes."
-        }), (0, Wp.jsx)("p", {
-          children: "Where the EU or UK General Data Protection Regulation (GDPR) applies, our website asks for your advertising and cookie choices through a consent prompt registered with the IAB Transparency and Consent Framework when you first visit. You can review, change or withdraw your consent at any time through the consent settings link shown in the footer of our home page and at the top of this Privacy Policy, or by contacting us. Withdrawing consent does not affect processing carried out before you withdrew it."
-        }), (0, Wp.jsx)("h3", {
-          children: "3.3 Service Providers"
-        }), (0, Wp.jsx)("p", {
-          children: "We work with trusted third-party service providers to help operate the website and deliver services effectively. These providers only receive the data necessary to perform their functions and are required to maintain the confidentiality and security of your information. The key service providers we work with are categorized as follows:"
-        }), (0, Wp.jsx)("h4", {
-          children: "Hosting and Data Storage"
-        }), (0, Wp.jsxs)("table", {
-          children: [(0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Service Provider"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "What They Collect"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "What They Do"
-              })
-            })]
-          }), (0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "AWS Cloud"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Data storage and processing"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Hosts our servers and stores backup, data securely."
-              })
-            })]
-          }), (0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Digital Ocean"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Data storage and processing"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Hosts our servers and stores data securely."
-              })
-            })]
-          }), (0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Google Firebase"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Email, User data, app usage data, device information"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Provides backend services including database for registered users"
-              })
-            })]
-          })]
-        }), (0, Wp.jsx)("h4", {
-          children: "Website Security and Performance"
-        }), (0, Wp.jsxs)("table", {
-          children: [(0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Service Provider"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "What They Collect"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "What They Do"
-              })
-            })]
-          }), (0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: (0, Wp.jsx)("a", {
-                  href: "https://www.cloudflare.com/en-gb/privacypolicy/",
-                  children: "Cloudflare"
-                })
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "IP addresses, browser types, device information"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Provides\xa0website security, performance optimization, and protection against malicious attacks."
-              })
-            })]
-          }), (0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: (0, Wp.jsx)("a", {
-                  href: "https://policies.google.com/privacy",
-                  children: "Google reCAPTCHA"
-                })
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "IP addresses, browser types, device information"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Protection against malicious attacks."
-              })
-            })]
-          })]
-        }), (0, Wp.jsx)("h4", {
-          children: "Advertising Management"
-        }), (0, Wp.jsxs)("table", {
-          children: [(0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Service Provider"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "What They Collect"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "What They Do"
-              })
-            })]
-          }), (0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: (0, Wp.jsx)("a", {
-                  href: "https://adinplay.com/privacy-policy",
-                  children: "Adinplay"
-                })
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsxs)("p", {
-                children: ["Advertiser data, ad performance data", ip ? ", personalized with your consent" : ""]
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Manages and delivers in-game advertisements on our website."
-              })
-            })]
-          }), (0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: (0, Wp.jsx)("a", {
-                  href: "https://aditude.com/privacy",
-                  children: "Aditude"
-                })
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsxs)("p", {
-                children: ["Advertiser data, ad performance data", ip ? ", personalized with your consent" : ""]
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Manages and delivers in-game advertisements on our website."
-              })
-            })]
-          }), (0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: (0, Wp.jsx)("a", {
-                  href: "https://policies.google.com/privacy",
-                  children: "Google Ads Manager"
-                })
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsxs)("p", {
-                children: ["Advertiser data, ad performance data", ip ? ", personalized with your consent" : ""]
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Manages and optimizes the display of advertisements on our website."
-              })
-            })]
-          }), (0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: (0, Wp.jsx)("a", {
-                  href: "https://nitropay.com/privacy",
-                  children: "Nitro (NitroPay)"
-                })
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsxs)("p", {
-                children: ["Advertiser data, ad performance data", ip ? ", personalized with your consent" : ""]
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Manages and delivers in-game advertisements on our website, and manages advertising consent and opt-out choices."
-              })
-            })]
-          }), (0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: (0, Wp.jsx)("a", {
-                  href: "https://policies.google.com/privacy",
-                  children: "Google AdMob"
-                })
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsxs)("p", {
-                children: ["Device advertising identifier, IP address, app usage and ad interaction data", ip ? ", personalized with your consent" : ""]
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Delivers banner, interstitial, and rewarded ads within our iOS and Android mobile apps."
-              })
-            })]
-          })]
-        }), (0, Wp.jsx)("h4", {
-          children: "Analytics"
-        }), (0, Wp.jsxs)("table", {
-          children: [(0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Service Provider"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "What They Collect"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "What They Do"
-              })
-            })]
-          }), (0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: (0, Wp.jsx)("a", {
-                  href: "https://policies.google.com/technologies/partner-sites",
-                  children: "Google Analytics"
-                })
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Usage data, pages visited, interactions on the site"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Analyzes website usage to help us understand how the site is used and improve user experience."
-              })
-            })]
-          }), (0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: (0, Wp.jsx)("a", {
-                  href: "https://docs.bytebrew.io/BBSettings/privacypolicy",
-                  children: "ByteBrew"
-                })
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Usage data, device data, interactions on the site"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Analyzes website usage to help us understand how the site is used and improve user experience."
-              })
-            })]
-          })]
-        }), (0, Wp.jsx)("h4", {
-          children: "Content Moderation"
-        }), (0, Wp.jsxs)("table", {
-          children: [(0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Service Provider"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "What They Collect"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "What They Do"
-              })
-            })]
-          }), (0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: (0, Wp.jsx)("a", {
-                  href: "https://www.lassomoderation.com/privacy-policy/",
-                  children: "Lasso Moderation"
-                })
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Anonymized IP addresses, chat logs, usernames, reports, custom lobby metadata, custom game metadata, thumbnail uploads"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Provides automated and manual moderation services to ensure chat safety and compliance with guidelines."
-              })
-            })]
-          }), (0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: (0, Wp.jsx)("a", {
-                  href: "https://www.purgomalum.com/",
-                  children: "PurgoMalum"
-                })
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Chat logs"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Provides profanity filtering for moderating chat messages."
-              })
-            })]
-          })]
-        }), (0, Wp.jsx)("h4", {
-          children: "Payment Providers"
-        }), (0, Wp.jsxs)("table", {
-          children: [(0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Service Provider"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "What They Collect"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "What They Do"
-              })
-            })]
-          }), (0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: (0, Wp.jsx)("a", {
-                  href: "https://xsolla.com/privacypolicy",
-                  children: "Xsolla"
-                })
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "User ID, Email Address, IP addresses, Purchase History, Purchase Request"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Act as our merchant of record, handling all our secure payment protection insurance and checkout experience to complete your purchase and handle payment support."
-              })
-            })]
-          })]
-        }), (0, Wp.jsx)("h4", {
-          children: "Platform Integrations"
-        }), (0, Wp.jsxs)("table", {
-          children: [(0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Service Provider"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Information Processed"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "What They Do"
-              })
-            })]
-          }), (0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: (0, Wp.jsx)("a", {
-                  href: "http://www.google.com/policies/privacy",
-                  children: "YouTube API Services"
-                })
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Public YouTube channel identifiers submitted by creators"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Retrieves and displays publicly available YouTube content."
-              })
-            })]
-          })]
-        }), (0, Wp.jsx)("h4", {
-          children: "AI Helper"
-        }), (0, Wp.jsxs)("table", {
-          children: [(0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Service Provider"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "What They Collect"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "What They Do"
-              })
-            })]
-          }), (0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "OVHcloud"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "AI Helper questions, game code and chats, as section 2.5 describes"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Runs the AI models that answer Bot.xd and some Super Bot.xd questions, and the safety check."
-              })
-            })]
-          }), (0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: (0, Wp.jsx)("a", {
-                  href: Pp.c,
-                  children: "DeepSeek"
-                })
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "AI Helper questions, game code and chats, as section 2.5 describes"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Runs the AI model that answers Super Bot.xd questions."
-              })
-            })]
-          })]
-        }), (0, Wp.jsx)("h3", {
-          children: "3.4 YouTube API Services"
-        }), (0, Wp.jsxs)("p", {
-          children: ["Bloxd.io uses YouTube API Services to show YouTube videos, livestreams and Shorts from Bloxd creators on our homepage, and to find the YouTube channel that a creator links to their Bloxd profile. By using these features, you agree to be bound by the", " ", (0, Wp.jsx)("a", {
-            href: "https://www.youtube.com/t/terms",
-            children: "YouTube Terms of Service"
-          }), "."]
-        }), (0, Wp.jsxs)("p", {
-          children: ["YouTube API Services are provided by Google. Google\u2019s use of information is described in the Google Privacy Policy at", " ", (0, Wp.jsx)("a", {
-            href: "http://www.google.com/policies/privacy",
-            children: "http://www.google.com/policies/privacy"
-          }), "."]
-        }), (0, Wp.jsx)("p", {
-          children: "We only retrieve publicly available YouTube data: video titles, thumbnails, publish dates, view and live viewer counts and live status, and the channel ID for a YouTube handle a creator adds to their profile. We do not ask you to sign in with YouTube or Google for these features, and we do not access your YouTube account. Creators can remove their linked YouTube handle from their profile, or contact us to remove it, at any time; this deletes the stored channel ID straight away, and deleting an account removes it too."
-        }), (0, Wp.jsx)("h2", {
-          children: "4. Cookies and Tracking Technologies"
-        }), (0, Wp.jsx)("h3", {
-          children: "4.1 What Are Cookies?"
-        }), (0, Wp.jsx)("p", {
-          children: "Cookies are small data files stored on your device that help identify you when you visit a website. They allow the site to remember your preferences and provide a smoother experience."
-        }), (0, Wp.jsx)("h3", {
-          children: "4.2 Types of Cookies We Use"
-        }), (0, Wp.jsx)("p", {
-          children: "We use different types of cookies to enhance your experience and ensure that Bloxd.io\xa0functions properly. Here\u2019s what each type of cookie does:"
-        }), (0, Wp.jsxs)("table", {
-          children: [(0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Type of Cookie"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Purpose"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Example"
-              })
-            })]
-          }), (0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Functional Cookies"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Ensure the website works properly by enabling basic functions like navigation and settings."
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Remembering your game settings, progress or language preferences."
-              })
-            })]
-          }), (0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Analytical Cookies"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Help us understand how players use the site by collecting anonymized data (e.g., pages visited)."
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Tracking the number of visitors or identifying popular game features."
-              })
-            })]
-          }), (0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Ad Cookies"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsxs)("p", {
-                children: ["Manage ad display frequency, prevent repetitive ads, and help detect fraudulent activity", ip ? ", and with your consent, enable personalized advertising based on your interests and browsing behavior." : "."]
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsxs)("p", {
-                children: ["Ensuring the same ad doesn\u2019t appear too frequently or detecting fraudulent ad interactions", ip ? ", and when you consent, showing you ads that are more relevant to your interests." : "."]
-              })
-            })]
-          }), (0, Wp.jsxs)("tr", {
-            children: [(0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Notice Acceptance Cookies"
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Record whether you have acknowledged or accepted notices, such as our cookie policy."
-              })
-            }), (0, Wp.jsx)("td", {
-              children: (0, Wp.jsx)("p", {
-                children: "Storing your acceptance of our cookie banner or other notifications."
-              })
-            })]
-          })]
-        }), (0, Wp.jsx)("h3", {
-          children: "4.3 Managing Cookies"
-        }), (0, Wp.jsx)("p", {
-          children: "You can control cookie settings through your browser. Below are links to guides on how to manage cookies for common browsers:"
-        }), (0, Wp.jsxs)("ul", {
-          children: [(0, Wp.jsx)("li", {
-            children: "Google Chrome: Go to Settings > Privacy and Security > Clear browsing data > Cookies and other site data."
-          }), (0, Wp.jsx)("li", {
-            children: "Mozilla Firefox: Go to Options > Privacy & Security > Cookies and Site Data > Clear Data."
-          }), (0, Wp.jsx)("li", {
-            children: "Safari: Go to Preferences > Privacy > Manage Website Data > Remove All."
-          }), (0, Wp.jsx)("li", {
-            children: "Microsoft Edge: Go to Settings > Cookies and site permissions > Manage and delete cookies and site data."
-          })]
-        }), (0, Wp.jsx)("h2", {
-          children: "5. Security Measures"
-        }), (0, Wp.jsx)("p", {
-          children: "We take the security of your data seriously. We implement various measures to ensure your personal information is protected and manage it according to applicable data protection laws."
-        }), (0, Wp.jsx)("h3", {
-          children: "5.1 Technologies and Procedures"
-        }), (0, Wp.jsxs)("ul", {
-          children: [(0, Wp.jsx)("li", {
-            children: "We use encryption\xa0and other security technologies to safeguard your personal information during transmission and storage."
-          }), (0, Wp.jsx)("li", {
-            children: "Our servers are hosted by trusted partners who apply high security standards to protect the data we store."
-          }), (0, Wp.jsx)("li", {
-            children: "We regularly monitor our systems for potential vulnerabilities and use firewalls and anti-virus software to prevent unauthorized access."
-          })]
-        }), (0, Wp.jsx)("h3", {
-          children: "5.2 Staff Training and Compliance"
-        }), (0, Wp.jsxs)("ul", {
-          children: [(0, Wp.jsx)("li", {
-            children: "Our team is trained to manage your data securely and in accordance with data protection laws like GDPR\xa0and COPPA."
-          }), (0, Wp.jsx)("li", {
-            children: "Internal procedures are in place to ensure that only authorized personnel can access sensitive data."
-          })]
-        }), (0, Wp.jsx)("h3", {
-          children: "5.3 Data Breach Notification"
-        }), (0, Wp.jsx)("p", {
-          children: "In the unlikely event of a data breach that affects your personal information:"
-        }), (0, Wp.jsxs)("ul", {
-          children: [(0, Wp.jsx)("li", {
-            children: "We will promptly notify\xa0affected users, as required by law."
-          }), (0, Wp.jsx)("li", {
-            children: "The notification will include:"
-          })]
-        }), (0, Wp.jsxs)("ul", {
-          children: [(0, Wp.jsx)("li", {
-            children: "What data was compromised."
-          }), (0, Wp.jsx)("li", {
-            children: "The steps we are taking to resolve the issue and protect your data."
-          }), (0, Wp.jsx)("li", {
-            children: "Recommendations for what you can do to protect yourself (e.g., change passwords)."
-          })]
-        }), (0, Wp.jsx)("p", {
-          children: "We take all necessary steps to ensure that breaches are addressed swiftly to minimize any potential harm."
-        }), (0, Wp.jsx)("h2", {
-          children: "6. International Data Transfers"
-        }), (0, Wp.jsx)("p", {
-          children: "Your data may be transferred to servers in other countries. All international transfers comply with relevant data protection regulations, ensuring that your information is safeguarded. The AI Helper sends data to France and China, and ChatGPT to the United States, as section 2.5 describes. With your own API key, your questions go to the company you chose, wherever it is."
-        }), (0, Wp.jsx)("h2", {
-          children: "7. Data Retention"
-        }), (0, Wp.jsx)("p", {
-          children: "We retain your data only for as long as necessary to fulfil the purposes outlined in this policy:"
-        }), (0, Wp.jsxs)("ul", {
-          children: [(0, Wp.jsx)("li", {
-            children: "Technical and Usage Data:\xa0Retained for 14 months after your last visit to the site or until you request removal and the removal is verified."
-          }), (0, Wp.jsx)("li", {
-            children: "Personal Data for Registered players:\xa0Retained for as long as the account is active. Upon request for account deletion, data will be removed promptly, typically within 30 days after the request is processed."
-          }), (0, Wp.jsx)("li", {
-            children: "Contact Information:\xa0Retained for three months after the query is resolved or closed. If personal data from children is collected, it will be deleted as soon as possible."
-          }), (0, Wp.jsx)("li", {
-            children: "Cookies:\xa0Cookies are retained for varying periods, depending on their purpose. Functional cookies are typically retained for as long as they are needed to operate the site, while analytical cookies may be retained for a shorter period to analyze site performance."
-          }), (0, Wp.jsx)("li", {
-            children: "YouTube API Data:\xa0Public video metadata retrieved from YouTube API Services is refreshed every hour and is never kept for more than 24 hours. Creator-linked YouTube handles and channel IDs are retained while the link remains on the account and deleted as soon as it is removed."
-          }), (0, Wp.jsx)("li", {
-            children: "AI Helper Chats:\xa0Kept only if you agree to share them, and deleted after 30 days."
-          })]
-        }), (0, Wp.jsx)("p", {
-          children: "If we collect personal data beyond what is outlined above, we will remove it as soon as possible once it is no longer needed."
-        }), (0, Wp.jsx)("h2", {
-          children: "8. Your Rights"
-        }), (0, Wp.jsx)("h3", {
-          children: "8.1 Your Choices and Control"
-        }), (0, Wp.jsx)("p", {
-          children: "As a user of Bloxd.io, you have the right to:"
-        }), (0, Wp.jsxs)("ul", {
-          children: [(0, Wp.jsx)("li", {
-            children: "Access Your Data: Request a copy of the personal information we hold about you."
-          }), (0, Wp.jsx)("li", {
-            children: "Correct Your Data: Ask us to correct any inaccurate or incomplete information."
-          }), (0, Wp.jsx)("li", {
-            children: "Delete Your Data: Request the deletion of your personal information when it is no longer needed."
-          }), (0, Wp.jsx)("li", {
-            children: "Limit Data Collection: Request that we limit the collection or use of your data."
-          }), (0, Wp.jsx)("li", {
-            children: "Object to Data Processing: Object to certain types of data processing, such as for marketing purposes."
-          }), (0, Wp.jsx)("li", {
-            children: "Withdraw Consent: Where we rely on your consent, withdraw it at any time, as described in section 3.2, or for the AI Helper in section 2.5."
-          })]
-        }), (0, Wp.jsx)("h3", {
-          children: "8.2 Parental Choices and Control "
-        }), (0, Wp.jsx)("p", {
-          children: "As a verified parent or guardian of a child using Bloxd.io, you have the right to:"
-        }), (0, Wp.jsxs)("ul", {
-          children: [(0, Wp.jsx)("li", {
-            children: "Access Your Child\u2019s Data: Request a copy of the personal information we\u2019ve collected about your child, including details like username, email address, and chat logs."
-          }), (0, Wp.jsx)("li", {
-            children: "Correct Your Child\u2019s Data: Ask us to correct any inaccurate or incomplete information about your child."
-          }), (0, Wp.jsx)("li", {
-            children: "Delete Your Child\u2019s Data: Request the deletion of your child\u2019s account and all associated data. Once verified, we will delete this data promptly, typically within 30 days. This will also remove any saved progress in the game."
-          }), (0, Wp.jsx)("li", {
-            children: "Limit Data Collection for Your Child: Request that we limit the collection or use of certain types of data, such as usage information, from your child."
-          })]
-        }), (0, Wp.jsx)("h3", {
-          children: "8.3 How to Exercise Your Rights"
-        }), (0, Wp.jsx)("p", {
-          children: "To exercise any of these rights, contact us using the information provided below. We may require proof of identity before proceeding with your request. Responses will typically be provided within 30 days."
-        }), (0, Wp.jsx)("h3", {
-          children: "8.4 Your California Privacy Rights"
-        }), (0, Wp.jsx)("p", {
-          children: "If you are a California resident, the California Consumer Privacy Act, as amended by the California Privacy Rights Act (together, the \u201cCCPA\u201d), gives you the rights below. This section supplements the rest of this Privacy Policy."
-        }), (0, Wp.jsx)("p", {
-          children: "Personal Information We Collect: In the past 12 months we have collected the following categories of personal information, from you, from your device, and from the service providers listed in section 3.3, for the purposes described in sections 2 and 3:"
-        }), (0, Wp.jsxs)("ul", {
-          children: [(0, Wp.jsx)("li", {
-            children: "Identifiers, such as your username, email address, user ID, IP address and device advertising identifiers."
-          }), (0, Wp.jsx)("li", {
-            children: "Internet or other electronic network activity information, such as pages visited, interactions with our website and ad interactions."
-          }), (0, Wp.jsx)("li", {
-            children: "Commercial information, such as your purchase history."
-          })]
-        }), (0, Wp.jsx)("p", {
-          children: "Sale and Sharing of Personal Information: Our advertising partners listed in section 3.3 may collect identifiers and internet or other electronic network activity information through cookies and similar technologies on our website to deliver and measure ads. This may be considered a \u201csale\u201d or \u201csharing\u201d of personal information under the CCPA."
-        }), (0, Wp.jsx)("p", {
-          children: "Under the CCPA, you have the right to:"
-        }), (0, Wp.jsxs)("ul", {
-          children: [(0, Wp.jsx)("li", {
-            children: "Know: Request the categories and specific pieces of personal information we have collected about you, and how we use and disclose it."
-          }), (0, Wp.jsx)("li", {
-            children: "Delete: Request the deletion of personal information we have collected from you."
-          }), (0, Wp.jsx)("li", {
-            children: "Correct: Ask us to correct inaccurate personal information we hold about you."
-          }), (0, Wp.jsx)("li", {
-            children: "Opt Out of Sale or Sharing: Opt out of the sale or sharing of your personal information."
-          }), (0, Wp.jsx)("li", {
-            children: "Non-Discrimination: Exercise any of these rights without being treated differently by us."
-          })]
-        }), (0, Wp.jsxs)("p", {
-          children: ["To opt out of the sale or sharing of your personal information, use the \u201cDo Not Sell My Personal Information\u201d link shown to California visitors in the footer of our home page and at the top of this Privacy Policy, or email us at", " ", (0, Wp.jsx)("a", {
-            href: "mailto:privacy@bloxd.io",
-            children: "privacy@bloxd.io"
-          }), ". To exercise your other rights, contact us as described in section 8.3. You may also ask an authorized agent to make a request on your behalf; we may ask the agent for proof of your permission and ask you to verify your identity with us."]
-        }), (0, Wp.jsx)("h2", {
-          children: "9. Contact Us"
-        }), (0, Wp.jsx)("p", {
-          children: "Got questions or concerns? We\u2019re here to help. Reach out to us at:"
-        }), (0, Wp.jsxs)("ul", {
-          children: [(0, Wp.jsxs)("li", {
-            children: ["Email: ", (0, Wp.jsx)("a", {
-              href: "mailto:privacy@bloxd.io",
-              children: "privacy@bloxd.io"
-            })]
-          }), (0, Wp.jsx)("li", {
-            children: "Address: Bloxd LTD, 86-90 Paul Street, London, England, United Kingdom, EC2A 4NE"
-          })]
-        }), (0, Wp.jsx)("h2", {
-          children: "10. Updates to This Policy"
-        }), (0, Wp.jsx)("p", {
-          children: "We may update this policy occasionally to reflect changes in our practices or the law. When we do, we\u2019ll update the \u201cLast updated\u201d date at the top. Please check back occasionally to stay informed."
-        })]
-      })
-    }
-
-    function Up() {
-      const {
-        adMobPrivacyOptionsRequired: pp
-      } = (0, Lp.o)(["adMobPrivacyOptionsRequired"]);
-      if (!pp) return null;
-      return (0, Wp.jsx)(Sp.f, {
-        className: "PrivacyChoicesButton",
-        onClick: () => {
-          (async () => {
-            try {
-              await Yp.b.request("ads.showPrivacyOptions", {})
-            } catch (pp) {
-              console.error("Failed to open AdMob privacy options:", pp)
-            }
-          })()
-        },
-        children: "Manage Privacy Choices"
-      })
-    }
-
-    function wp() {
-      return (0, Wp.jsxs)(Wp.Fragment, {
-        children: [(0, op.isDiscordClient)() && (0, Wp.jsx)(Wp.Fragment, {
-          children: (0, Wp.jsx)(Sp.f, {
-            className: "PrivacyChoicesButton",
-            onClick: () => {
-              (0, xp.q)()
-            },
-            children: "Adjust Discord Privacy Choices"
-          })
-        }), (0, Wp.jsx)(Up, {}), (0, Wp.jsx)(Ap.e, {
-          className: "PrivacyPolicyLinks"
-        }), (0, Wp.jsx)(yp, {})]
-      })
+    const wQ = {
+      canChange: !0,
+      blockReach: 6,
+      ezBridging: !0,
+      ezBridgingGrowMs: null,
+      ezTowering: !0,
+      ezToweringGrowMs: null,
+      speedMultiplier: 1,
+      crouchingSpeed: 2,
+      walkingSpeed: 4,
+      runningSpeed: 7,
+      jumpAmount: 8,
+      airJumpCount: 0,
+      jumpHoldThrust: null,
+      bunnyhopMaxMultiplier: 1.3,
+      music: null,
+      musicVolumeLevel: .6,
+      skyBox: "default",
+      minChunkAddDist: [2, 2],
+      showPlayersInUnloadedChunks: !1,
+      useInventory: !0,
+      useFullInventory: !0,
+      inventoryColourOverride: null,
+      highlightedHotbarSlots: [],
+      canCraft: !0,
+      canFish: !0,
+      canPickUpItems: !0,
+      predictDroppedItems: !1,
+      playerZoom: 0,
+      zoomOutDistance: 3,
+      maxPlayerZoom: 15,
+      currencyAmounts: null,
+      shopInfo: null,
+      lobbyManage: null,
+      lobbyLeaderboardInfo: {
+        name: {
+          displayName: "Name",
+          sortPriority: 0
+        }
+      },
+      canCustomiseChar: !0,
+      defaultBlock: "Block of Gold",
+      cantChangeError: "You cannot modify this block",
+      cantBreakError: null,
+      cantBuildError: null,
+      touchscreenActionButton: null,
+      strictFluidBuckets: !0,
+      preserveProtectedFluidSources: !1,
+      fillBrokenBlocksWithWater: !1,
+      canUseZoomKey: !0,
+      canAltAction: !0,
+      canSeeNametagsThroughWalls: !0,
+      showBasicMovementControls: !0,
+      middleTextTop: "",
+      middleTextUpper: "",
+      middleTextLower: "",
+      headerChips: [],
+      customVariationTitle: "",
+      RightInfoText: "",
+      crosshairText: "",
+      numClosestPlayersVisible: null,
+      showProgressBar: !1,
+      showKillfeed: !0,
+      showChatBubbles: !1,
+      dialogue: null,
+      chatChannels: null,
+      creative: !1,
+      flySpeedMultiplier: 1.5,
+      canPickBlocks: !0,
+      compassTarget: [0, 0, 0],
+      ttbMultiplier: 1,
+      inventoryItemsMoveable: !0,
+      invincible: !1,
+      maxShield: 100,
+      initialShield: 0,
+      maxHealth: 100,
+      initialHealth: 100,
+      healthRegenAmount: .05,
+      healthRegenInterval: 4e3,
+      healthRegenStartAfter: 5e3,
+      effectDamageDuration: 8e3,
+      effectSpeedDuration: 8e3,
+      effectDamageReductionDuration: 13e3,
+      effectHealthRegenDuration: 5e3,
+      potionEffectDuration: 12e3,
+      splashPotionEffectDuration: 8e3,
+      arrowPotionEffectDuration: 6e3,
+      cameraTint: null,
+      fogChunkDistanceOverride: null,
+      fogBlockDistanceOverride: null,
+      fogColourOverride: null,
+      fogOnSkybox: !1,
+      secsToRespawn: 5,
+      usePlayAgainButton: !1,
+      autoRespawn: !1,
+      respawnButtonText: "general:respawn",
+      useRespawnButton: !0,
+      killstreakDuration: 2e8,
+      dealingDamageMultiplier: 1,
+      dealingDamageHeadMultiplier: 1.75,
+      dealingDamageLegMultiplier: 1,
+      dealingDamageDefaultMultiplier: 1,
+      gunshotOrigin: "default",
+      receivingDamageMultiplier: 1,
+      isReceivingDamageCooldownGlobal: !0,
+      horizontalKnockbackMultiplier: 1,
+      verticalKnockbackMultiplier: 1,
+      stompDamageMultiplier: 0,
+      stompDamageRadius: 0,
+      crouchMobDetectionRadiusMultiplier: 2,
+      droppedItemScale: 1,
+      movementBasedFovScale: 1,
+      airFrictionScale: 1,
+      groundFrictionScale: 1,
+      airAccScale: 1,
+      airMomentumConservation: !1,
+      gravityMultiplier: 1,
+      bounciness: 0,
+      canClimbWalls: !1,
+      canCrouch: !0,
+      fallDamage: !1,
+      canEditCode: !1,
+      canUseDevCreativeItems: !1,
+      auraPerLevel: 100,
+      maxAuraLevel: 0,
+      proximityFadeDistance: .625,
+      proximityFadeMinOpacity: .5,
+      forcedCameraDirection: null,
+      forcedCameraDirectionTransitionMs: 0,
+      cameraRoll: 0,
+      cameraRollTransitionMs: 0,
+      cameraRotationOffset: [0, 0, 0],
+      cameraPositionOffset: [0, 0, 0],
+      gameCamera: {
+        mode: "default"
+      },
+      lightingOverride: null,
+      skyLightColourOverride: null,
+      ambientLightColourOverride: null,
+      visionMinLightColour: null,
+      heldLightColourOverride: null,
+      heldLightRangeOverride: null,
+      heldLightConeAngleOverride: null,
+      dayNightSunOpacity: null,
+      dayNightMoonOpacity: null,
+      dayNightStarOpacity: null,
+      hideCoordinates: !1,
+      canRecordReplays: !0,
+      groundArrowPath: null,
+      _aura: 0,
+      _shield: 0,
+      _health: null,
+      _tasks: null,
+      _availableLeaderboards: null,
+      _shopVersion: XQ(2043).c,
+      _pendingSpawn: null,
+      _totalMaxHealth: null,
+      _ignoreBasicBoards: !0,
+      customButtons: null
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

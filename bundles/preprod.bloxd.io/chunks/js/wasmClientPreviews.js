@@ -1,38 +1,38 @@
-export const id = 60;
-export const ids = [60];
+export const id = 62;
+export const ids = [62];
 export const modules = {
-  38856: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => op,
-      c: () => Ip
+  38918: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      e: () => qQ,
+      f: () => TQ
     });
-    const Op = new WeakMap;
+    const wQ = new WeakMap;
 
-    function op(pp, ip) {
-      return Op.set(pp, ip), pp
+    function qQ(QQ, WQ) {
+      return wQ.set(QQ, WQ), QQ
     }
 
-    function Ip(pp) {
-      var ip;
-      return null !== (ip = Op.get(pp)) && void 0 !== ip ? ip : null
+    function TQ(QQ) {
+      var WQ;
+      return null !== (WQ = wQ.get(QQ)) && void 0 !== WQ ? WQ : null
     }
   },
-  38883: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => xp
+  38936: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      b: () => sQ
     });
-    var Op = cp(1234);
+    var wQ = XQ(1257);
 
-    function op(pp) {
-      const ip = /(\d*\.?\d+)px/.exec(pp);
-      return ip ? Number(ip[1]) : null
+    function qQ(QQ) {
+      const WQ = /(\d*\.?\d+)px/.exec(QQ);
+      return WQ ? Number(WQ[1]) : null
     }
 
-    function Ip(pp) {
-      return pp.split(/[\s,]+/).pop()
+    function TQ(QQ) {
+      return QQ.split(/[\s,]+/).pop()
     }
-    let Sp = !1;
-    const xp = {
+    let zQ = !1;
+    const sQ = {
       debug: !1,
       align: "center",
       vAlign: "middle",
@@ -43,605 +43,612 @@ export const modules = {
       font: "Arial",
       lineHeight: null,
       justify: !1,
-      drawText: function(pp, ip, Op, xp, Lp, Yp) {
-        if (Lp <= 0 || Yp <= 0 || this.fontSize <= 0) return {
+      drawText: function(QQ, WQ, wQ, sQ, FQ, PQ) {
+        if (FQ <= 0 || PQ <= 0 || this.fontSize <= 0) return {
           height: 0
         };
         const {
-          fontStyle: Dp,
-          fontVariant: Ap,
-          fontWeight: Pp,
-          fontSize: Wp,
-          font: yp
-        } = this, Up = [Dp, Ap, Pp, `${Wp}px`, yp].filter(Boolean).join(" "), wp = [
-          [Pp, `${Wp}px`, Ip(yp)].filter(Boolean).join(" "), `${Wp}px sans-serif`
-        ], vp = pp.font, tp = function(pp, ip, cp) {
-          for (const Op of ip) {
-            pp.font = Op;
-            const ip = op(pp.font),
-              Sp = Ip(Op);
-            if (null !== ip && Math.abs(ip - cp) <= .5 && pp.font.toLowerCase().includes(Sp.toLowerCase())) return Op
+          fontStyle: gQ,
+          fontVariant: JQ,
+          fontWeight: rQ,
+          fontSize: IQ,
+          font: jQ
+        } = this, BQ = [gQ, JQ, rQ, `${IQ}px`, jQ].filter(Boolean).join(" "), yQ = [
+          [rQ, `${IQ}px`, TQ(jQ)].filter(Boolean).join(" "), `${IQ}px sans-serif`
+        ], VQ = QQ.font, DQ = function(QQ, WQ, XQ) {
+          for (const wQ of WQ) {
+            QQ.font = wQ;
+            const WQ = qQ(QQ.font),
+              zQ = TQ(wQ);
+            if (null !== WQ && Math.abs(WQ - XQ) <= .5 && QQ.font.toLowerCase().includes(zQ.toLowerCase())) return wQ
           }
           return null
-        }(pp, [Up, ...wp], Wp);
-        tp !== Up && function(pp, ip, Op) {
-          Sp || (Sp = !0, Promise.resolve().then((() => cp(1080))).then((cp => {
+        }(QQ, [BQ, ...yQ], IQ);
+        DQ !== BQ && function(QQ, WQ, wQ) {
+          zQ || (zQ = !0, Promise.resolve().then((() => XQ(1109))).then((XQ => {
             let {
-              NU: op
-            } = cp;
-            op(new Error("A canvas didn't take canvasTxt's font"), {
-              font: pp,
-              aW: ip,
-              drawnWith: null !== Op && void 0 !== Op ? Op : "the kept font, scaled"
+              jB: qQ
+            } = XQ;
+            qQ(new Error("A canvas didn't take canvasTxt's font"), {
+              font: QQ,
+              HI: WQ,
+              drawnWith: null !== wQ && void 0 !== wQ ? wQ : "the kept font, scaled"
             })
           })).catch((() => {})))
-        }(Up, vp, tp);
-        const Hp = op(pp.font);
-        if (null === tp && null !== Hp && Hp > 0) {
-          const cp = Wp / Hp;
-          pp.save();
+        }(BQ, VQ, DQ);
+        const pQ = qQ(QQ.font);
+        if (null === DQ && null !== pQ && pQ > 0) {
+          const XQ = IQ / pQ;
+          QQ.save();
           try {
-            return pp.scale(cp, cp), {
-              height: this.drawLines(pp, ip, Op / cp, xp / cp, Lp / cp, Yp / cp, Hp).height * cp
+            return QQ.scale(XQ, XQ), {
+              height: this.drawLines(QQ, WQ, wQ / XQ, sQ / XQ, FQ / XQ, PQ / XQ, pQ).height * XQ
             }
           } finally {
-            pp.restore()
+            QQ.restore()
           }
         }
-        return this.drawLines(pp, ip, Op, xp, Lp, Yp, Wp)
+        return this.drawLines(QQ, WQ, wQ, sQ, FQ, PQ, IQ)
       },
-      drawLines: function(pp, ip, cp, op, Ip, Sp, xp) {
-        const Lp = cp + Ip,
-          Yp = op + Sp;
-        let Dp, Ap = op + Sp / 2 + xp / 2;
-        "right" === this.align ? (Dp = Lp, pp.textAlign = "right") : "left" === this.align ? (Dp = cp, pp.textAlign = "left") : (Dp = cp + Ip / 2, pp.textAlign = "center");
-        for (const Op of ip) {
-          pp.measureText(Op).width >= Ip && (ip = ip.replace(Op, ""))
+      drawLines: function(QQ, WQ, XQ, qQ, TQ, zQ, sQ) {
+        const FQ = XQ + TQ,
+          PQ = qQ + zQ;
+        let gQ, JQ = qQ + zQ / 2 + sQ / 2;
+        "right" === this.align ? (gQ = FQ, QQ.textAlign = "right") : "left" === this.align ? (gQ = XQ, QQ.textAlign = "left") : (gQ = XQ + TQ / 2, QQ.textAlign = "center");
+        for (const wQ of WQ) {
+          QQ.measureText(wQ).width >= TQ && (WQ = WQ.replace(wQ, ""))
         }
-        ip = (0, Op.P)(ip);
-        const Pp = [],
-          Wp = ip.split("\n"),
-          yp = this.justify ? pp.measureText("\u200a").width : 0;
-        Wp.forEach((ip => {
-          let cp = pp.measureText(ip).width;
-          if (cp <= Ip) Pp.push(ip);
+        WQ = (0, wQ.P)(WQ);
+        const rQ = [],
+          IQ = WQ.split("\n"),
+          jQ = this.justify ? QQ.measureText("\u200a").width : 0;
+        IQ.forEach((WQ => {
+          let XQ = QQ.measureText(WQ).width;
+          if (XQ <= TQ) rQ.push(WQ);
           else {
-            let Op = ip;
-            const op = Ip;
-            let Sp, xp, Lp;
-            for (cp = pp.measureText(Op).width; cp > op;) {
-              for (Sp = 0, xp = 0, Lp = ""; xp < op;) Sp++, Lp = Op.substr(0, Sp), xp = pp.measureText(Lp).width;
-              Sp--, Lp = Lp.substr(0, Sp);
-              const ip = Sp;
-              if (" " !== Op.substr(Sp, 1)) {
+            let wQ = WQ;
+            const qQ = TQ;
+            let zQ, sQ, FQ;
+            for (XQ = QQ.measureText(wQ).width; XQ > qQ;) {
+              for (zQ = 0, sQ = 0, FQ = ""; sQ < qQ;) zQ++, FQ = wQ.substr(0, zQ), sQ = QQ.measureText(FQ).width;
+              zQ--, FQ = FQ.substr(0, zQ);
+              const WQ = zQ;
+              if (" " !== wQ.substr(zQ, 1)) {
                 for (;
-                  " " !== Op.substr(Sp, 1) && 0 !== Sp;) Sp--;
-                0 === Sp && (Sp = ip), Lp = Op.substr(0, Sp)
+                  " " !== wQ.substr(zQ, 1) && 0 !== zQ;) zQ--;
+                0 === zQ && (zQ = WQ), FQ = wQ.substr(0, zQ)
               }
-              Lp = this.justify ? this.justifyLine(pp, Lp, yp, "\u200a", Ip) : Lp, Op = Op.substr(Sp), cp = pp.measureText(Op).width, Pp.push(Lp)
+              FQ = this.justify ? this.justifyLine(QQ, FQ, jQ, "\u200a", TQ) : FQ, wQ = wQ.substr(zQ), XQ = QQ.measureText(wQ).width, rQ.push(FQ)
             }
-            cp > 0 && Pp.push(Op)
+            XQ > 0 && rQ.push(wQ)
           }
         }));
-        const Up = this.lineHeight ? this.lineHeight : this.getTextHeight(pp, ip),
-          wp = Up * (Pp.length - 1),
-          vp = wp / 2;
-        let tp = op;
-        "top" === this.vAlign ? Ap = op + xp : "bottom" === this.vAlign ? (Ap = Yp - wp, tp = Yp) : (tp = op + Sp / 2, Ap -= vp), Pp.forEach((ip => {
-          ip = ip.trim(), pp.fillText(ip, Dp, Ap), Ap += Up
-        })), this.debug && (pp.lineWidth = 3, pp.strokeStyle = "#00909e", pp.strokeRect(cp, op, Ip, Sp), pp.lineWidth = 2, pp.strokeStyle = "#f6d743", pp.beginPath(), pp.moveTo(Dp, op), pp.lineTo(Dp, Yp), pp.stroke(), pp.strokeStyle = "#ff6363", pp.beginPath(), pp.moveTo(cp, tp), pp.lineTo(Lp, tp), pp.stroke());
+        const BQ = this.lineHeight ? this.lineHeight : this.getTextHeight(QQ, WQ),
+          yQ = BQ * (rQ.length - 1),
+          VQ = yQ / 2;
+        let DQ = qQ;
+        "top" === this.vAlign ? JQ = qQ + sQ : "bottom" === this.vAlign ? (JQ = PQ - yQ, DQ = PQ) : (DQ = qQ + zQ / 2, JQ -= VQ), rQ.forEach((WQ => {
+          WQ = WQ.trim(), QQ.fillText(WQ, gQ, JQ), JQ += BQ
+        })), this.debug && (QQ.lineWidth = 3, QQ.strokeStyle = "#00909e", QQ.strokeRect(XQ, qQ, TQ, zQ), QQ.lineWidth = 2, QQ.strokeStyle = "#f6d743", QQ.beginPath(), QQ.moveTo(gQ, qQ), QQ.lineTo(gQ, PQ), QQ.stroke(), QQ.strokeStyle = "#ff6363", QQ.beginPath(), QQ.moveTo(XQ, DQ), QQ.lineTo(FQ, DQ), QQ.stroke());
         return {
-          height: wp + Up
+          height: yQ + BQ
         }
       },
-      getTextHeight: function(pp, ip) {
-        const cp = pp.textBaseline;
-        pp.textBaseline = "bottom";
+      getTextHeight: function(QQ, WQ) {
+        const XQ = QQ.textBaseline;
+        QQ.textBaseline = "bottom";
         const {
-          actualBoundingBoxAscent: Op
-        } = pp.measureText(ip);
-        return pp.textBaseline = cp, Op
+          actualBoundingBoxAscent: wQ
+        } = QQ.measureText(WQ);
+        return QQ.textBaseline = XQ, wQ
       },
-      justifyLine: function(pp, ip, cp, Op, op) {
-        const Ip = ip.trim(),
-          Sp = pp.measureText(Ip).width,
-          xp = Ip.split(/\s+/).length - 1,
-          Lp = Math.floor((op - Sp) / cp);
-        if (xp <= 0 || Lp <= 0) return Ip;
-        const Yp = Math.floor(Lp / xp);
-        let Dp = Lp - xp * Yp,
-          Ap = [];
-        for (let Pp = 0; Pp < Yp; Pp++) Ap.push(Op);
-        Ap = Ap.join("");
-        return Ip.replace(/\s+/g, (pp => {
-          const ip = Dp > 0 ? Ap + Op : Ap;
-          return Dp--, pp + ip
+      justifyLine: function(QQ, WQ, XQ, wQ, qQ) {
+        const TQ = WQ.trim(),
+          zQ = QQ.measureText(TQ).width,
+          sQ = TQ.split(/\s+/).length - 1,
+          FQ = Math.floor((qQ - zQ) / XQ);
+        if (sQ <= 0 || FQ <= 0) return TQ;
+        const PQ = Math.floor(FQ / sQ);
+        let gQ = FQ - sQ * PQ,
+          JQ = [];
+        for (let rQ = 0; rQ < PQ; rQ++) JQ.push(wQ);
+        JQ = JQ.join("");
+        return TQ.replace(/\s+/g, (QQ => {
+          const WQ = gQ > 0 ? JQ + wQ : JQ;
+          return gQ--, QQ + WQ
         }))
       }
     }
   },
-  38890: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Up,
-      f: () => yp,
-      i: () => Pp,
-      l: () => Dp,
-      n: () => Ap
+  38942: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      b: () => BQ,
+      d: () => jQ,
+      e: () => rQ,
+      i: () => gQ,
+      l: () => JQ
     });
-    var Op = cp(4341),
-      op = cp(337);
-    const Ip = 1024,
-      Sp = 1536,
-      xp = 2 * Op.l + 1,
-      Lp = new Intl.NumberFormat("en", {
+    var wQ = XQ(4534),
+      qQ = XQ(402);
+    const TQ = 1024,
+      zQ = 1536,
+      sQ = 2 * wQ.i + 1,
+      FQ = new Intl.NumberFormat("en", {
         maximumSignificantDigits: 15
       }),
-      Yp = 1.5;
+      PQ = 1.5;
 
-    function Dp(pp, ip, cp) {
-      if ("string" !== typeof pp) return ip;
+    function gQ(QQ, WQ, XQ) {
+      if ("string" !== typeof QQ) return WQ;
       try {
-        const cp = JSON.parse(pp);
-        return cp && "object" === typeof cp ? cp : ip
-      } catch (Op) {
-        return void 0 !== cp && console.error(`Couldn't parse ${cp}`, Op), ip
+        const XQ = JSON.parse(QQ);
+        return XQ && "object" === typeof XQ ? XQ : WQ
+      } catch (wQ) {
+        return void 0 !== XQ && console.error(`Couldn't parse ${XQ}`, wQ), WQ
       }
     }
 
-    function Ap(pp) {
-      return Dp(pp, null, "a leaderboard's rows")
+    function JQ(QQ) {
+      return gQ(QQ, null, "a leaderboard's rows")
     }
 
-    function Pp(pp, ip) {
-      var cp, Op;
-      return null !== ip && void 0 !== ip ? ip : {
-        status: null !== (cp = pp.status) && void 0 !== cp ? cp : "loading",
-        entries: null !== (Op = pp.entries) && void 0 !== Op ? Op : []
+    function rQ(QQ, WQ) {
+      var XQ, wQ;
+      return null !== WQ && void 0 !== WQ ? WQ : {
+        status: null !== (XQ = QQ.status) && void 0 !== XQ ? XQ : "loading",
+        entries: null !== (wQ = QQ.entries) && void 0 !== wQ ? wQ : []
       }
     }
 
-    function Wp(pp, ip) {
-      return "number" === typeof pp && Number.isFinite(pp) && pp > 0 ? pp : ip
+    function IQ(QQ, WQ) {
+      return "number" === typeof QQ && Number.isFinite(QQ) && QQ > 0 ? QQ : WQ
     }
 
-    function yp(pp, ip) {
-      const cp = Wp(pp.size, 1);
-      let Op = Wp(pp.width, Wp(2.5 * cp, 2.5)),
-        op = Wp(pp.height, Wp(3.75 * cp, 3.75));
-      Number.isFinite(Ip * op / Op) && Number.isFinite(Sp * Op / op) || (Op = 2.5, op = 3.75);
-      const xp = op / Op,
-        Lp = Math.max(1, Math.min(Ip, ip / xp));
+    function jQ(QQ, WQ) {
+      const XQ = IQ(QQ.size, 1);
+      let wQ = IQ(QQ.width, IQ(2.5 * XQ, 2.5)),
+        qQ = IQ(QQ.height, IQ(3.75 * XQ, 3.75));
+      Number.isFinite(TQ * qQ / wQ) && Number.isFinite(zQ * wQ / qQ) || (wQ = 2.5, qQ = 3.75);
+      const sQ = qQ / wQ,
+        FQ = Math.max(1, Math.min(TQ, WQ / sQ));
       return {
-        width: Op,
-        height: op,
-        layoutWidth: Math.max(Ip, Sp / xp),
-        layoutHeight: Math.max(Sp, Ip * xp),
-        pixelWidth: Math.round(Lp),
-        pixelHeight: Math.round(Math.max(1, Math.min(ip, Lp * xp)))
+        width: wQ,
+        height: qQ,
+        layoutWidth: Math.max(TQ, zQ / sQ),
+        layoutHeight: Math.max(zQ, TQ * sQ),
+        pixelWidth: Math.round(FQ),
+        pixelHeight: Math.round(Math.max(1, Math.min(WQ, FQ * sQ)))
       }
     }
 
-    function Up(pp, ip, cp, Sp, Dp, Ap) {
-      pp.setTransform(1, 0, 0, 1, 0, 0), pp.fillStyle = op.N.defaultNameTagBackground, pp.fillRect(0, 0, ip, cp), pp.scale(ip / Sp.layoutWidth, cp / Sp.layoutHeight), pp.translate((Sp.layoutWidth - Ip) / 2, 0),
-        function(pp, ip, cp, Ip) {
-          var Sp, Dp, Ap, Pp;
+    function BQ(QQ, WQ, XQ, zQ, gQ, JQ) {
+      QQ.setTransform(1, 0, 0, 1, 0, 0), QQ.fillStyle = qQ.N.defaultNameTagBackground, QQ.fillRect(0, 0, WQ, XQ), QQ.scale(WQ / zQ.layoutWidth, XQ / zQ.layoutHeight), QQ.translate((zQ.layoutWidth - TQ) / 2, 0),
+        function(QQ, WQ, XQ, TQ) {
+          var zQ, gQ, JQ, rQ;
           const {
-            top: Wp,
-            around: yp,
-            showPlayerText: Up,
-            localPlayerDbId: tp
-          } = cp, {
-            whiteUiText: Hp,
-            grayUiText: dp,
-            yellowUiText: ep
-          } = op.N;
-          pp.textBaseline = "middle";
-          const jp = function(ip, cp, Op, op, Ip, Sp) {
-              let xp = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
-              pp.font = `bold ${op}px 'Jetbrains Mono', monospace`, pp.fillStyle = Ip, pp.textAlign = xp;
-              let Lp = ip.replace(/[\r\n\t]/g, " ");
-              if (pp.measureText(Lp).width > Sp) {
-                for (; Lp.length > 0 && pp.measureText(`${Lp}\u2026`).width > Sp;) Lp = Lp.slice(0, -1);
-                Lp += "\u2026"
+            top: IQ,
+            around: jQ,
+            showPlayerText: BQ,
+            localPlayerDbId: DQ
+          } = XQ, {
+            whiteUiText: pQ,
+            grayUiText: GQ,
+            yellowUiText: UQ
+          } = qQ.N;
+          QQ.textBaseline = "middle";
+          const bQ = function(WQ, XQ, wQ, qQ, TQ, zQ) {
+              let sQ = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
+              QQ.font = `bold ${qQ}px 'Jetbrains Mono', monospace`, QQ.fillStyle = TQ, QQ.textAlign = sQ;
+              let FQ = WQ.replace(/[\r\n\t]/g, " ");
+              if (QQ.measureText(FQ).width > zQ) {
+                for (; FQ.length > 0 && QQ.measureText(`${FQ}\u2026`).width > zQ;) FQ = FQ.slice(0, -1);
+                FQ += "\u2026"
               }
-              pp.fillText(Lp, cp, Op)
+              QQ.fillText(FQ, XQ, wQ)
             },
-            kp = ip => {
-              pp.fillStyle = Hp, pp.globalAlpha = .15, pp.fillRect(24, ip, 976, 2), pp.globalAlpha = 1
+            vQ = WQ => {
+              QQ.fillStyle = pQ, QQ.globalAlpha = .15, QQ.fillRect(24, WQ, 976, 2), QQ.globalAlpha = 1
             },
-            mp = null === tp ? null : (0, op.gc)(tp),
-            Rp = pp => null !== mp && pp.playerHash === mp,
-            qp = wp(Wp.entries, Op.n),
-            Mp = "ready" === Wp.status && qp.length > 0,
-            Cp = null === yp ? [] : wp(yp.entries, xp),
-            Ep = qp.some(Rp),
-            Xp = null === yp ? null : function(pp) {
-              const ip = pp;
-              if (!ip || !Number.isFinite(ip.rank) || !Number.isFinite(ip.tied) || !Number.isFinite(ip.total)) return null;
-              return ip
-            }(yp.standing),
-            lp = Cp.find(Rp),
-            Qp = qp.find(Rp),
-            Jp = null === Xp || void 0 === lp ? null : {
-              value: lp.value,
-              rank: Xp.rank
+            dQ = null === DQ ? null : (0, qQ.kc)(DQ),
+            HQ = QQ => null !== dQ && QQ.playerHash === dQ,
+            aQ = yQ(IQ.entries, wQ.j),
+            lQ = "ready" === IQ.status && aQ.length > 0,
+            hQ = null === jQ ? [] : yQ(jQ.entries, sQ),
+            iQ = aQ.some(HQ),
+            cQ = null === jQ ? null : function(QQ) {
+              const WQ = QQ;
+              if (!WQ || !Number.isFinite(WQ.rank) || !Number.isFinite(WQ.tied) || !Number.isFinite(WQ.total)) return null;
+              return WQ
+            }(jQ.standing),
+            AQ = hQ.find(HQ),
+            RQ = aQ.find(HQ),
+            EQ = null === cQ || void 0 === AQ ? null : {
+              value: AQ.value,
+              rank: cQ.rank
             },
-            Bp = vp(qp, void 0 === Qp || Qp.value === (null === Jp || void 0 === Jp ? void 0 : Jp.value) ? Jp : null),
-            Np = vp(Cp, Jp),
-            Tp = (pp, ip) => {
-              const cp = pp.findIndex(Rp);
-              return cp >= 0 ? ip[cp] : null
+            CQ = VQ(aQ, void 0 === RQ || RQ.value === (null === EQ || void 0 === EQ ? void 0 : EQ.value) ? EQ : null),
+            uQ = VQ(hQ, EQ),
+            LQ = (QQ, WQ) => {
+              const XQ = QQ.findIndex(HQ);
+              return XQ >= 0 ? WQ[XQ] : null
             },
-            fp = null !== (Sp = null !== (Dp = null === Xp || void 0 === Xp ? void 0 : Xp.rank) && void 0 !== Dp ? Dp : Tp(Cp, Np)) && void 0 !== Sp ? Sp : Tp(qp, Bp);
-          pp.font = "bold 34px 'Jetbrains Mono', monospace";
-          const bp = [...Mp ? Bp : [], ...Ep ? [] : Np],
-            hp = Math.min(280, Math.max(0, ...bp.map((ip => pp.measureText(Lp.format(ip)).width)))),
-            ap = hp <= 80,
-            np = ap ? 80 : 32 + hp,
-            Fp = ap ? 148 : np + 28,
-            gp = 660 - Fp;
-          jp(`TOP ${Op.n}  /  ALL TIME`, 24, 52, 28, dp, 976), jp(Up ? String(null !== (Ap = ip.title) && void 0 !== Ap ? Ap : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, Hp, 976), jp("RANK", 32, 174, 28, dp, Fp - 40), jp("PLAYER", Fp, 174, 28, dp, gp), jp(Up ? String(null !== (Pp = ip.scoreLabel) && void 0 !== Pp ? Pp : "Score").slice(0, 24) : "Score", 992, 174, 28, dp, 304, "right"), kp(202);
-          const Gp = (Ip - 232) / (Op.n + Yp + xp),
-            rp = 208 + Op.n * Gp,
-            Zp = rp + Yp * Gp,
-            zp = (ip, cp, Op, op) => {
-              const Ip = Rp(ip);
-              pp.fillStyle = Ip ? ep : Hp, pp.globalAlpha = Ip ? .15 : op ? .035 : 0, pp.fillRect(24, Op - Gp / 2 + 1, 976, Gp - 2), pp.globalAlpha = 1;
-              const Sp = Ip ? ep : Hp;
-              jp(Lp.format(cp), np, Op, 34, Sp, ap ? 80 : hp, ap ? "center" : "right"), jp(Up ? String(ip.name).slice(0, 64) : "Player", Fp, Op, 34, Sp, gp);
-              const xp = Lp.format(ip.value);
-              jp(pp.measureText(xp).width > 304 ? ip.value.toExponential(6) : xp, 992, Op, 34, Sp, 304, "right")
+            kQ = null !== (zQ = null !== (gQ = null === cQ || void 0 === cQ ? void 0 : cQ.rank) && void 0 !== gQ ? gQ : LQ(hQ, uQ)) && void 0 !== zQ ? zQ : LQ(aQ, CQ);
+          QQ.font = "bold 34px 'Jetbrains Mono', monospace";
+          const fQ = [...lQ ? CQ : [], ...iQ ? [] : uQ],
+            SQ = Math.min(280, Math.max(0, ...fQ.map((WQ => QQ.measureText(FQ.format(WQ)).width)))),
+            tQ = SQ <= 80,
+            oQ = tQ ? 80 : 32 + SQ,
+            eQ = tQ ? 148 : oQ + 28,
+            nQ = 660 - eQ;
+          bQ(`TOP ${wQ.j}  /  ALL TIME`, 24, 52, 28, GQ, 976), bQ(BQ ? String(null !== (JQ = WQ.title) && void 0 !== JQ ? JQ : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, pQ, 976), bQ("RANK", 32, 174, 28, GQ, eQ - 40), bQ("PLAYER", eQ, 174, 28, GQ, nQ), bQ(BQ ? String(null !== (rQ = WQ.scoreLabel) && void 0 !== rQ ? rQ : "Score").slice(0, 24) : "Score", 992, 174, 28, GQ, 304, "right"), vQ(202);
+          const xQ = (TQ - 232) / (wQ.j + PQ + sQ),
+            YQ = 208 + wQ.j * xQ,
+            NQ = YQ + PQ * xQ,
+            ZQ = (WQ, XQ, wQ, qQ) => {
+              const TQ = HQ(WQ);
+              QQ.fillStyle = TQ ? UQ : pQ, QQ.globalAlpha = TQ ? .15 : qQ ? .035 : 0, QQ.fillRect(24, wQ - xQ / 2 + 1, 976, xQ - 2), QQ.globalAlpha = 1;
+              const zQ = TQ ? UQ : pQ;
+              bQ(FQ.format(XQ), oQ, wQ, 34, zQ, tQ ? 80 : SQ, tQ ? "center" : "right"), bQ(BQ ? String(WQ.name).slice(0, 64) : "Player", eQ, wQ, 34, zQ, nQ);
+              const sQ = FQ.format(WQ.value);
+              bQ(QQ.measureText(sQ).width > 304 ? WQ.value.toExponential(6) : sQ, 992, wQ, 34, zQ, 304, "right")
             };
-          if (Mp)
-            for (const [Op, op] of qp.entries()) zp(op, Bp[Op], 208 + (Op + .5) * Gp, Op % 2 === 0);
+          if (lQ)
+            for (const [wQ, qQ] of aQ.entries()) ZQ(qQ, CQ[wQ], 208 + (wQ + .5) * xQ, wQ % 2 === 0);
           else {
-            const pp = "error" === Wp.status,
-              ip = pp ? "Couldn't load leaderboard" : "ready" === Wp.status ? "No scores yet" : "Loading leaderboard\u2026",
-              cp = pp ? "Trying again shortly" : "ready" === Wp.status ? "Be the first on the board!" : "Fetching the top players",
-              Op = (208 + rp) / 2;
-            jp(ip, 512, Op - 28, 40, pp ? op.N.redUiText : Hp, 960, "center"), jp(cp, 512, Op + 27, 30, dp, 960, "center")
+            const QQ = "error" === IQ.status,
+              WQ = QQ ? "Couldn't load leaderboard" : "ready" === IQ.status ? "No scores yet" : "Loading leaderboard\u2026",
+              XQ = QQ ? "Trying again shortly" : "ready" === IQ.status ? "Be the first on the board!" : "Fetching the top players",
+              wQ = (208 + YQ) / 2;
+            bQ(WQ, 512, wQ - 28, 40, QQ ? qQ.N.redUiText : pQ, 960, "center"), bQ(XQ, 512, wQ + 27, 30, GQ, 960, "center")
           }
-          const sp = rp + Yp * Gp / 2;
-          if (null === fp) kp(sp);
+          const OQ = YQ + PQ * xQ / 2;
+          if (null === kQ) vQ(OQ);
           else {
-            const ip = null === Xp ? 0 : Xp.tied - 1,
-              cp = `YOUR RANK #${Lp.format(fp)}${null===Xp?"":` of ${Lp.format(Xp.total)}`}`;
-            pp.font = "bold 36px 'Jetbrains Mono', monospace";
-            const Op = Math.max(20, Math.min(36, Math.floor(34560 / pp.measureText(cp).width)));
-            jp(cp, 512, sp - (ip > 0 ? 15 : 0), Op, ep, 960, "center"), ip > 0 && jp(`Tied with ${Lp.format(ip)} other${1===ip?"":"s"}`, 512, sp + 24, 24, dp, 960, "center")
+            const WQ = null === cQ ? 0 : cQ.tied - 1,
+              XQ = `YOUR RANK #${FQ.format(kQ)}${null===cQ?"":` of ${FQ.format(cQ.total)}`}`;
+            QQ.font = "bold 36px 'Jetbrains Mono', monospace";
+            const wQ = Math.max(20, Math.min(36, Math.floor(34560 / QQ.measureText(XQ).width)));
+            bQ(XQ, 512, OQ - (WQ > 0 ? 15 : 0), wQ, UQ, 960, "center"), WQ > 0 && bQ(`Tied with ${FQ.format(WQ)} other${1===WQ?"":"s"}`, 512, OQ + 24, 24, GQ, 960, "center")
           }
-          if (null === yp) return;
-          const Kp = Zp + xp * Gp / 2;
-          if (Ep) jp(`You're in the top ${Op.n}!`, 512, Kp, 40, ep, 960, "center");
-          else if (0 === Cp.length) jp("You're not on this board yet", 512, Kp, 34, dp, 960, "center");
+          if (null === jQ) return;
+          const KQ = NQ + sQ * xQ / 2;
+          if (iQ) bQ(`You're in the top ${wQ.j}!`, 512, KQ, 40, UQ, 960, "center");
+          else if (0 === hQ.length) bQ("You're not on this board yet", 512, KQ, 34, GQ, 960, "center");
           else
-            for (const [Op, op] of Cp.entries()) zp(op, Np[Op], Zp + (Op + .5) * Gp, Op % 2 === 0)
-        }(pp, Dp, Ap, Sp.layoutHeight)
+            for (const [wQ, qQ] of hQ.entries()) ZQ(qQ, uQ[wQ], NQ + (wQ + .5) * xQ, wQ % 2 === 0)
+        }(QQ, gQ, JQ, zQ.layoutHeight)
     }
 
-    function wp(pp, ip) {
-      return Array.isArray(pp) ? pp.slice(0, ip).filter((pp => pp && Number.isFinite(pp.rank) && Number.isFinite(pp.value))) : []
+    function yQ(QQ, WQ) {
+      return Array.isArray(QQ) ? QQ.slice(0, WQ).filter((QQ => QQ && Number.isFinite(QQ.rank) && Number.isFinite(QQ.value))) : []
     }
 
-    function vp(pp, ip) {
-      const cp = [];
-      let Op = !1;
-      return pp.forEach(((op, Ip) => {
-        if (null !== ip && op.value === ip.value) return void cp.push(ip.rank);
-        const Sp = Ip > 0 && op.value === pp[Ip - 1].value;
-        Sp || (Op = 0 === Ip && 1 !== op.rank), cp.push(Sp && !Op ? cp[Ip - 1] : op.rank)
-      })), cp
+    function VQ(QQ, WQ) {
+      const XQ = [];
+      let wQ = !1;
+      return QQ.forEach(((qQ, TQ) => {
+        if (null !== WQ && qQ.value === WQ.value) return void XQ.push(WQ.rank);
+        const zQ = TQ > 0 && qQ.value === QQ[TQ - 1].value;
+        zQ || (wQ = 0 === TQ && 1 !== qQ.rank), XQ.push(zQ && !wQ ? XQ[TQ - 1] : qQ.rank)
+      })), XQ
     }
   },
-  39076: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => op,
-      e: () => Ip
+  39143: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      b: () => qQ,
+      e: () => TQ
     });
-    const Op = 32;
+    const wQ = 32;
 
-    function op(pp) {
-      return Array.from(pp).length
+    function qQ(QQ) {
+      return Array.from(QQ).length
     }
 
-    function Ip(pp) {
-      const ip = [""];
-      let cp = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        op = "";
-      const Ip = () => {
-        ip.push(""), cp = 0, op = ""
+    function TQ(QQ) {
+      const WQ = [""];
+      let XQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        qQ = "";
+      const TQ = () => {
+        WQ.push(""), XQ = 0, qQ = ""
       };
-      for (const Sp of pp.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
-        if (/^\r?\n$/.test(Sp)) Ip();
-        else if (/^\s+$/.test(Sp)) op += Sp;
-      else if (Sp.length > 0) {
-        const pp = Array.from(Sp);
-        cp > 0 && cp + op.length + pp.length > Op && Ip(), ip[ip.length - 1] += op, cp += op.length, op = "";
-        for (const op of pp) cp >= Op && Ip(), ip[ip.length - 1] += op, cp++
+      for (const zQ of QQ.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
+        if (/^\r?\n$/.test(zQ)) TQ();
+        else if (/^\s+$/.test(zQ)) qQ += zQ;
+      else if (zQ.length > 0) {
+        const QQ = Array.from(zQ);
+        XQ > 0 && XQ + qQ.length + QQ.length > wQ && TQ(), WQ[WQ.length - 1] += qQ, XQ += qQ.length, qQ = "";
+        for (const qQ of QQ) XQ >= wQ && TQ(), WQ[WQ.length - 1] += qQ, XQ++
       }
-      return ip[ip.length - 1] += op, ip
+      return WQ[WQ.length - 1] += qQ, WQ
     }
   },
-  51184: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      WasmPreviewHost: () => Ci,
-      pageBuiltInAnimationPack: () => Pp,
-      pagePreviews: () => Li,
-      previewModule: () => Kp
+  41409: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      e: () => TQ
     });
-    var Op = cp(2970),
-      op = cp(643);
-    const Ip = "[bloxd-wasm-client]";
+    const wQ = 4e5,
+      qQ = 2;
 
-    function Sp(pp) {
-      const ip = {
+    function TQ(QQ, WQ, XQ) {
+      let [TQ, zQ] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [QQ, WQ], sQ = Math.min(Number.isFinite(XQ) && XQ > 0 ? XQ : 1, qQ);
+      const FQ = Math.max(0, TQ, QQ) * Math.max(0, zQ, WQ) * sQ * sQ;
+      return FQ > wQ && (sQ *= Math.sqrt(wQ / FQ)), [Math.max(1, Math.floor(Math.max(0, QQ) * sQ)), Math.max(1, Math.floor(Math.max(0, WQ) * sQ))]
+    }
+  },
+  51202: (QQ, WQ, XQ) => {
+    XQ.r(WQ), XQ.d(WQ, {
+      WasmPreviewHost: () => aW,
+      pageBuiltInAnimationPack: () => rQ,
+      pagePreviews: () => TW,
+      previewModule: () => KQ
+    });
+    var wQ = XQ(3110),
+      qQ = XQ(670);
+    const TQ = "[bloxd-wasm-client]";
+
+    function zQ(QQ) {
+      const WQ = {
         wasm: "unknown",
-        client: String(op.c)
+        client: String(qQ.c)
       };
       try {
-        var cp;
-        ip.wasm = null !== (cp = null === pp || void 0 === pp ? void 0 : pp.JA()) && void 0 !== cp ? cp : ip.wasm
+        var XQ;
+        WQ.wasm = null !== (XQ = null === QQ || void 0 === QQ ? void 0 : QQ.IJ()) && void 0 !== XQ ? XQ : WQ.wasm
       } catch {}
-      return ip
+      return WQ
     }
-    async function xp(pp) {
-      if (pp.length < 2 || 31 !== pp[0] || 139 !== pp[1]) return pp;
+    async function sQ(QQ) {
+      if (QQ.length < 2 || 31 !== QQ[0] || 139 !== QQ[1]) return QQ;
       if ("undefined" === typeof DecompressionStream) {
         const {
-          ungzip: ip
-        } = await Promise.resolve().then((() => cp(2918)));
-        return ip(pp)
+          ungzip: WQ
+        } = await Promise.resolve().then((() => XQ(3059)));
+        return WQ(QQ)
       }
-      const ip = new Blob([pp]).stream().pipeThrough(new DecompressionStream("gzip"));
-      return new Uint8Array(await new Response(ip).arrayBuffer())
+      const WQ = new Blob([QQ]).stream().pipeThrough(new DecompressionStream("gzip"));
+      return new Uint8Array(await new Response(WQ).arrayBuffer())
     }
 
-    function Lp(pp, ip, Op, op) {
-      Promise.resolve().then((() => cp(40945))).then((cp => {
+    function FQ(QQ, WQ, wQ, qQ) {
+      Promise.resolve().then((() => XQ(40963))).then((XQ => {
         let {
-          reportDataLoadFailure: Ip
-        } = cp;
-        Ip(pp, ip, Op, op)
-      }), (ip => {
-        console.warn(`${Ip} ${pp} didn't load, and the report couldn't be sent`, Op.error, ip)
+          reportDataLoadFailure: TQ
+        } = XQ;
+        TQ(QQ, WQ, wQ, qQ)
+      }), (WQ => {
+        console.warn(`${TQ} ${QQ} didn't load, and the report couldn't be sent`, wQ.error, WQ)
       }))
     }
-    const Yp = [3e4, 12e4, 3e5];
-    class Dp {
-      constructor(pp) {
-        this.deps = pp, this.loading = null, this.reported = !1, this.retries = 0, this.resolveSet = () => {}, this.set = new Promise((pp => {
-          this.resolveSet = pp
+    const PQ = [3e4, 12e4, 3e5];
+    class gQ {
+      constructor(QQ) {
+        this.deps = QQ, this.loading = null, this.reported = !1, this.retries = 0, this.resolveSet = () => {}, this.set = new Promise((QQ => {
+          this.resolveSet = QQ
         }))
       }
-      provide(pp) {
-        return this.loading ??= this.load(pp), this.loading
+      provide(QQ) {
+        return this.loading ??= this.load(QQ), this.loading
       }
       whenSet() {
         return this.set
       }
-      async load(pp) {
-        const ip = Sp(pp),
-          cp = await async function(pp, ip) {
-            let cp;
+      async load(QQ) {
+        const WQ = zQ(QQ),
+          XQ = await async function(QQ, WQ) {
+            let XQ;
             try {
-              cp = await pp()
-            } catch (Op) {
+              XQ = await QQ()
+            } catch (wQ) {
               return {
                 stage: "fetch",
-                error: Op
+                error: wQ
               }
             }
             try {
-              return ip(cp) ? null : {
+              return WQ(XQ) ? null : {
                 stage: "decode",
                 error: null
               }
-            } catch (Op) {
+            } catch (wQ) {
               return {
                 stage: "decode",
-                error: Op
+                error: wQ
               }
             }
-          }((() => this.deps.fetch()), (ip => {
-            const cp = pp.iSp(ip);
-            return cp && this.resolveSet(ip), cp
+          }((() => this.deps.fetch()), (WQ => {
+            const XQ = QQ.fTQ(WQ);
+            return XQ && this.resolveSet(WQ), XQ
           }));
-        if (null !== cp) {
-          if ("fetch" === cp.stage) {
+        if (null !== XQ) {
+          if ("fetch" === XQ.stage) {
             this.loading = null;
-            const ip = Yp[this.retries++];
-            void 0 !== ip && this.deps.later((() => {
-              this.provide(pp)
-            }), ip)
+            const WQ = PQ[this.retries++];
+            void 0 !== WQ && this.deps.later((() => {
+              this.provide(QQ)
+            }), WQ)
           }
-          this.reported || (this.reported = !0, this.deps.onFailed(cp, ip))
+          this.reported || (this.reported = !0, this.deps.onFailed(XQ, WQ))
         }
       }
     }
-    let Ap = null;
+    let JQ = null;
 
-    function Pp() {
-      return Ap ??= new Dp({
-        fetch: async () => xp(await (0, Op.F)(Wp(), {
+    function rQ() {
+      return JQ ??= new gQ({
+        fetch: async () => sQ(await (0, wQ.K)(IQ(), {
           priority: "low"
         })),
-        onFailed: (pp, ip) => {
-          Lp("builtInAnimations", Wp(), pp, ip)
+        onFailed: (QQ, WQ) => {
+          FQ("builtInAnimations", IQ(), QQ, WQ)
         },
-        later: (pp, ip) => {
-          setTimeout(pp, ip)
+        later: (QQ, WQ) => {
+          setTimeout(QQ, WQ)
         }
-      }), Ap
+      }), JQ
     }
 
-    function Wp() {
-      return cp(51187)
+    function IQ() {
+      return XQ(51207)
     }
-    var yp = cp(2963),
-      Up = cp(1211),
-      wp = cp(316),
-      vp = cp(314),
-      tp = cp(657),
-      Hp = cp(4903),
-      dp = cp(40911),
-      ep = cp(40930),
-      jp = cp(41133),
-      kp = (cp(40976), cp(40988)),
-      mp = cp(40997),
-      Rp = cp(41001),
-      qp = cp(40923),
-      Mp = cp(41158),
-      Cp = cp(41165),
-      Ep = cp(40902),
-      Xp = cp(41185),
-      lp = cp(41038),
-      Qp = cp(41025),
-      Jp = cp(41087),
-      Bp = cp(41147),
-      Np = cp(42879),
-      Tp = cp(36484),
-      fp = cp(3801);
-    const bp = "[bloxd-previews]",
-      hp = 4e5,
-      ap = 0,
-      np = 1,
-      Fp = 2,
-      gp = 1,
-      Gp = 2,
-      rp = 3,
-      Zp = 0,
-      zp = 1,
-      sp = 2;
+    var jQ = XQ(3107),
+      BQ = XQ(1238),
+      yQ = XQ(374),
+      VQ = XQ(367),
+      DQ = XQ(691),
+      pQ = XQ(5134),
+      GQ = XQ(40930),
+      UQ = XQ(40954),
+      bQ = XQ(41150),
+      vQ = (XQ(40991), XQ(41002)),
+      dQ = XQ(41010),
+      HQ = XQ(41012),
+      aQ = XQ(40943),
+      lQ = XQ(41172),
+      hQ = XQ(41175),
+      iQ = XQ(40928),
+      cQ = XQ(41186),
+      AQ = XQ(41054),
+      RQ = XQ(41039),
+      EQ = XQ(41102),
+      CQ = XQ(41164),
+      uQ = XQ(42871),
+      LQ = XQ(36568),
+      kQ = XQ(3933),
+      fQ = XQ(41409);
+    const SQ = "[bloxd-previews]",
+      tQ = 0,
+      oQ = 1,
+      eQ = 2,
+      nQ = 1,
+      xQ = 2,
+      YQ = 3,
+      NQ = 0,
+      ZQ = 1,
+      OQ = 2;
 
-    function Kp(pp) {
-      const ip = pp,
-        cp = (0, dp.Y)(pp),
-        Op = (0, dp.o)(pp);
-      return null !== cp && null !== Op && "function" === typeof ip.KIp && "function" === typeof ip.VIp && "function" === typeof ip.pSp ? ip : null
-    }
-
-    function Vp(pp, ip, cp) {
-      let [Op, op] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [pp, ip], Ip = Math.min(Number.isFinite(cp) && cp > 0 ? cp : 1, 2);
-      const Sp = Math.max(0, Op, pp) * Math.max(0, op, ip) * Ip * Ip;
-      return Sp > hp && (Ip *= Math.sqrt(hp / Sp)), [Math.max(1, Math.floor(Math.max(0, pp) * Ip)), Math.max(1, Math.floor(Math.max(0, ip) * Ip))]
+    function KQ(QQ) {
+      const WQ = QQ,
+        XQ = (0, GQ.P)(QQ),
+        wQ = (0, GQ.k)(QQ);
+      return null !== XQ && null !== wQ && "function" === typeof WQ.CTQ && "function" === typeof WQ.uTQ && "function" === typeof WQ.kTQ ? WQ : null
     }
 
-    function ii() {
-      return cp(51194)
+    function mQ() {
+      return XQ(51209)
     }
-    async function ci(pp, ip, Op) {
-      var op;
-      let Ip = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      "lost" === pp && (0, Ep.u)();
-      const xp = await (0, Ep.L)();
-      if (null === xp || (0, dp.s)(xp) || (0, Ep.b)()) return;
-      const Lp = "webgpu" === xp.backend;
-      if (!Lp && "lost" !== pp) return;
-      const Yp = Lp && (0, vp.m)(xp.adapter, null !== Op && void 0 !== Op ? Op : null, "lost" === pp, Ip),
-        Dp = null !== (op = "lost" === pp ? (0, ep.o)((0, yp.X)() ? (0, dp.Y)((0, yp.H)()) : null) : void 0) && void 0 !== op ? op : ip,
-        Ap = Lp ? (0, dp.gb)(pp, void 0, (0, ep.d)(Dp)) : null;
-      if (null === Ap) {
-        Lp || (0, tp.q)(), (0, Ep.l)();
+    async function MQ(QQ, WQ, wQ) {
+      var qQ;
+      let TQ = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      "lost" === QQ && (0, iQ.w)();
+      const sQ = await (0, iQ.J)();
+      if (null === sQ || (0, GQ.n)(sQ) || (0, iQ.b)()) return;
+      const FQ = "webgpu" === sQ.backend;
+      if (!FQ && "lost" !== QQ) return;
+      const PQ = FQ && (0, VQ.p)(sQ.adapter, null !== wQ && void 0 !== wQ ? wQ : null, "lost" === QQ, TQ),
+        gQ = null !== (qQ = "lost" === QQ ? (0, UQ.j)((0, jQ.O)() ? (0, GQ.P)((0, jQ.B)()) : null) : void 0) && void 0 !== qQ ? qQ : WQ,
+        JQ = FQ ? (0, GQ.$)(QQ, void 0, (0, UQ.d)(gQ)) : null;
+      if (null === JQ) {
+        FQ || (0, DQ.o)(), (0, iQ.q)();
         try {
-          await async function(pp, ip, Op, op, Ip) {
+          await async function(QQ, WQ, wQ, qQ, TQ) {
             let {
-              restoreLost: xp,
-              adapterRemembered: Lp
-            } = Ip;
-            const Yp = (0, yp.X)(),
+              restoreLost: sQ,
+              adapterRemembered: FQ
+            } = TQ;
+            const PQ = (0, jQ.O)(),
               {
-                flushCrashReports: Dp,
-                reportRenderReload: Ap
-              } = await Promise.resolve().then((() => cp(40945)));
-            Ap(pp.backend, op, Sp(Yp ? (0, yp.H)() : null), {
+                flushCrashReports: gQ,
+                reportRenderReload: JQ
+              } = await Promise.resolve().then((() => XQ(40963)));
+            JQ(QQ.backend, qQ, zQ(PQ ? (0, jQ.B)() : null), {
               from: "home",
-              cause: ip,
-              restoreLost: xp,
-              adapterRemembered: Lp,
-              ...Oi(pp, ip, Op)
-            }), await Dp(lp.b)
-          }(xp, pp, Dp, null !== Op && void 0 !== Op ? Op : "start_failed" === pp ? 0 : 1, {
-            restoreLost: Ip,
-            adapterRemembered: Yp
+              cause: WQ,
+              restoreLost: sQ,
+              adapterRemembered: FQ,
+              ...QW(QQ, WQ, wQ)
+            }), await gQ(AQ.c)
+          }(sQ, QQ, gQ, null !== wQ && void 0 !== wQ ? wQ : "start_failed" === QQ ? 0 : 1, {
+            restoreLost: TQ,
+            adapterRemembered: PQ
           })
-        } catch (Wp) {
-          console.warn(`${bp} ${xp.backend} failed at home (${pp}), and its report couldn't be sent`, Wp)
-        }(0, lp.i)()
+        } catch (IQ) {
+          console.warn(`${SQ} ${sQ.backend} failed at home (${QQ}), and its report couldn't be sent`, IQ)
+        }(0, AQ.j)()
       } else {
-        var Pp;
-        const ip = Oi(xp, pp, Dp),
-          Op = `WebGPU failed at home (${pp}${void 0===ip.error?"":`: ${ip.error instanceof Error?ip.error.message:(0,Tp.h)(ip.error)}`}) and ${Ap}`;
-        console.warn(`${bp} ${Op}: the previews stop`, null !== (Pp = ip.error) && void 0 !== Pp ? Pp : ""), (0, Ep.m)(Op);
+        var rQ;
+        const WQ = QW(sQ, QQ, gQ),
+          wQ = `WebGPU failed at home (${QQ}${void 0===WQ.error?"":`: ${WQ.error instanceof Error?WQ.error.message:(0,LQ.j)(WQ.error)}`}) and ${JQ}`;
+        console.warn(`${SQ} ${wQ}: the previews stop`, null !== (rQ = WQ.error) && void 0 !== rQ ? rQ : ""), (0, iQ.s)(wQ);
         try {
           const {
-            countRenderLost: Op
-          } = await Promise.resolve().then((() => cp(40945)));
-          Op(pp, ip.error, ip.context)
-        } catch (Up) {
-          console.warn(`${bp} WebGPU failed at home (${pp}), and its count couldn't be sent`, Up)
+            countRenderLost: wQ
+          } = await Promise.resolve().then((() => XQ(40963)));
+          wQ(QQ, WQ.error, WQ.context)
+        } catch (BQ) {
+          console.warn(`${SQ} WebGPU failed at home (${QQ}), and its count couldn't be sent`, BQ)
         }
       }
     }
 
-    function Oi(pp, ip, cp) {
+    function QW(QQ, WQ, XQ) {
       let {
-        adapter: Op
-      } = pp;
+        adapter: wQ
+      } = QQ;
       return {
-        error: cp,
+        error: XQ,
         context: {
-          adapter: Op,
-          boundAtMs: "start_failed" === ip ? null : (0, Ep.J)(),
-          indirectHangs: (0, Ep.x)(),
-          restoresSkipped: (0, Ep.K)()
+          adapter: wQ,
+          boundAtMs: "start_failed" === WQ ? null : (0, iQ.G)(),
+          indirectHangs: (0, iQ.y)(),
+          restoresSkipped: (0, iQ.I)()
         }
       }
     }
-    async function oi() {
-      if (!(0, yp.X)()) {
-        const pp = await (0, Ep.L)();
-        if (null === pp || (0, dp.s)(pp)) return null;
-        if (await (0, Xp.e)(await pp.load()), !(0, yp.X)()) return null
+    async function WW() {
+      if (!(0, jQ.O)()) {
+        const QQ = await (0, iQ.J)();
+        if (null === QQ || (0, GQ.n)(QQ)) return null;
+        if (await (0, cQ.e)(await QQ.load()), !(0, jQ.O)()) return null
       }
-      return Kp((0, yp.H)())
+      return KQ((0, jQ.B)())
     }
-    class Ii {
-      constructor(pp, ip, cp, Op, op, Ip) {
-        this.page = pp, this.host = ip, this.id = cp, this.canvas = Op, this.size = op, this.models = void 0, this.images = void 0, this.write = void 0, this.outcomes = [], this.closed = !1, this.quiet = 0, this.settled = [];
-        const Sp = {
-            ...Ip.images,
-            glbUrl: pp => {
-              var ip;
-              return null !== (ip = this.models.drawnUrl(pp)) && void 0 !== ip ? ip : Ip.images.glbUrl(pp)
+    class XW {
+      constructor(QQ, WQ, XQ, wQ, qQ, TQ) {
+        this.page = QQ, this.host = WQ, this.id = XQ, this.canvas = wQ, this.size = qQ, this.models = void 0, this.images = void 0, this.write = void 0, this.outcomes = [], this.closed = !1, this.quiet = 0, this.settled = [];
+        const zQ = {
+            ...TQ.images,
+            glbUrl: QQ => {
+              var WQ;
+              return null !== (WQ = this.models.drawnUrl(QQ)) && void 0 !== WQ ? WQ : TQ.images.glbUrl(QQ)
             }
           },
-          xp = ip => pp.modelFile(ip);
-        this.images = new jp.e(Sp, (pp => {
-          console.warn(`${bp} image ${pp.key.kind}:${pp.key.index}:${pp.key.word} failed`, pp.error)
+          sQ = WQ => QQ.modelFile(WQ);
+        this.images = new bQ.h(zQ, (QQ => {
+          console.warn(`${SQ} image ${QQ.key.kind}:${QQ.key.index}:${QQ.key.word} failed`, QQ.error)
         }), {
-          fetchFile: xp,
-          fetchImage: ip => pp.imageFile(ip)
-        }), pp.startModels(), this.models = new kp.f(Ip.files, ((ip, cp) => pp.buildModel(ip, cp)), (pp => {
-          console.warn(`${bp} model file ${pp.file} (${pp.url}) failed`, pp.error)
+          fetchFile: sQ,
+          fetchImage: WQ => QQ.imageFile(WQ)
+        }), QQ.startModels(), this.models = new vQ.i(TQ.files, ((WQ, XQ) => QQ.buildModel(WQ, XQ)), (QQ => {
+          console.warn(`${SQ} model file ${QQ.file} (${QQ.url}) failed`, QQ.error)
         }), {
-          fetchFile: xp,
-          onWritten: (pp, ip) => {
-            this.images.glbWritten(pp, ip)
+          fetchFile: sQ,
+          onWritten: (QQ, WQ) => {
+            this.images.glbWritten(QQ, WQ)
           },
-          onTaken: (pp, ip) => {
-            this.images.glbTaken(pp, ip)
+          onTaken: (QQ, WQ) => {
+            this.images.glbTaken(QQ, WQ)
           }
-        }), this.write = (pp, ip, cp) => {
+        }), this.write = (QQ, WQ, XQ) => {
           if (this.closed) return !0;
-          if (pp === kp.b) {
-            const pp = new DataView(cp.buffer, cp.byteOffset, Rp.d),
-              Op = pp.getUint32(0, !0),
-              op = pp.getUint32(Rp.g, !0),
-              Ip = this.page.hostCall(sp, (() => this.host.Sxp(this.id, Op, ip, cp.subarray(Rp.d))));
-            return this.outcomes.push([op, Ip]), !0
+          if (QQ === vQ.e) {
+            const QQ = new DataView(XQ.buffer, XQ.byteOffset, HQ.e),
+              wQ = QQ.getUint32(0, !0),
+              qQ = QQ.getUint32(HQ.g, !0),
+              TQ = this.page.hostCall(OQ, (() => this.host.YzQ(this.id, wQ, WQ, XQ.subarray(HQ.e))));
+            return this.outcomes.push([qQ, TQ]), !0
           }
-          return pp === jp.c && (this.page.hostCall(void 0, (() => {
-            this.host.Lxp(this.id, cp)
+          return QQ === bQ.d && (this.page.hostCall(void 0, (() => {
+            this.host.ZzQ(this.id, XQ)
           })), !0)
         }
       }
@@ -651,74 +658,74 @@ export const modules = {
       get isStopped() {
         return this.page.isStopped
       }
-      resize(pp, ip, cp) {
+      resize(QQ, WQ, XQ) {
         if (this.closed) return;
-        const [Op, op] = Vp(pp, ip, this.page.dpr(), cp);
-        Op === this.size[0] && op === this.size[1] || (this.size = [Op, op], this.page.hostCall(void 0, (() => {
-          this.host.resize(this.id, Op, op)
+        const [wQ, qQ] = (0, fQ.e)(QQ, WQ, this.page.dpr(), XQ);
+        wQ === this.size[0] && qQ === this.size[1] || (this.size = [wQ, qQ], this.page.hostCall(void 0, (() => {
+          this.host.resize(this.id, wQ, qQ)
         })))
       }
-      setMob(pp, ip, cp, Op) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.Wxp(this.id, pp, ip, cp, Op))))
+      setMob(QQ, WQ, XQ, wQ) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.QsQ(this.id, QQ, WQ, XQ, wQ))))
       }
-      setPet(pp, ip, cp, Op) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.Uxp(this.id, pp, ip, cp, Op))))
+      setPet(QQ, WQ, XQ, wQ) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.XsQ(this.id, QQ, WQ, XQ, wQ))))
       }
-      setPlayer(pp, ip, cp) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.Dxp(this.id, pp, ip, cp))))
+      setPlayer(QQ, WQ, XQ) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.KzQ(this.id, QQ, WQ, XQ))))
       }
-      setFigure(pp, ip, cp, Op) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.Axp(this.id, pp, ip, cp, Op))))
+      setFigure(QQ, WQ, XQ, wQ) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.mzQ(this.id, QQ, WQ, XQ, wQ))))
       }
       replay() {
         return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.replay(this.id))))
       }
       get orbit() {
         if (this.closed) return null;
-        const pp = this.page.hostCall(null, (() => this.host.orbit(this.id)));
-        return null === pp || pp.length < 3 ? null : {
-          alpha: pp[0],
-          beta: pp[1],
-          radius: pp[2]
+        const QQ = this.page.hostCall(null, (() => this.host.orbit(this.id)));
+        return null === QQ || QQ.length < 3 ? null : {
+          alpha: QQ[0],
+          beta: QQ[1],
+          radius: QQ[2]
         }
       }
-      setOrbit(pp) {
+      setOrbit(QQ) {
         let {
-          alpha: ip,
-          beta: cp,
-          radius: Op
-        } = pp;
+          alpha: WQ,
+          beta: XQ,
+          radius: wQ
+        } = QQ;
         this.closed || this.page.hostCall(void 0, (() => {
-          this.host.yxp(this.id, ip, cp, Op)
+          this.host.WsQ(this.id, WQ, XQ, wQ)
         }))
       }
       untilSettled() {
-        return this.closed || this.page.isStopped ? Promise.resolve() : (this.quiet = 0, new Promise((pp => {
-          this.settled.push(pp)
+        return this.closed || this.page.isStopped ? Promise.resolve() : (this.quiet = 0, new Promise((QQ => {
+          this.settled.push(QQ)
         })))
       }
       packChanged() {
-        this.quiet = 0, this.models.refresh(), (0, Mp.g)(this.images)
+        this.quiet = 0, this.models.refresh(), (0, lQ.h)(this.images)
       }
       feed() {
         this.models.drain(this.write);
-        for (const [pp, ip] of this.outcomes) {
-          const cp = ip === Zp ? [] : [ip === zp ? pp : (pp | kp.e) >>> 0];
-          this.models.taken(pp, cp)
+        for (const [QQ, WQ] of this.outcomes) {
+          const XQ = WQ === NQ ? [] : [WQ === ZQ ? QQ : (QQ | vQ.h) >>> 0];
+          this.models.taken(QQ, XQ)
         }
         this.outcomes.length = 0, this.images.drain(this.write)
       }
-      collect(pp) {
-        let ip = !1;
-        if (pp) {
-          const pp = this.host.txp(this.id);
-          for (const ip of pp) this.models.request(ip);
-          const cp = this.host.vxp(this.id);
-          cp.length > 0 && this.images.onEvent(cp), ip = pp.length > 0 || cp.length > 0
+      collect(QQ) {
+        let WQ = !1;
+        if (QQ) {
+          const QQ = this.host.TsQ(this.id);
+          for (const WQ of QQ) this.models.request(WQ);
+          const XQ = this.host.qsQ(this.id);
+          XQ.length > 0 && this.images.onEvent(XQ), WQ = QQ.length > 0 || XQ.length > 0
         }
-        const cp = this.page.modelsUnavailable ? 0 : this.models.asking + this.models.unanswered,
-          Op = ip || cp > 0 || this.images.waiting > 0 || this.images.inFlight > 0;
-        this.quiet = Op ? 0 : this.quiet + 1, this.quiet >= 3 && this.resolveSettled()
+        const XQ = this.page.modelsUnavailable ? 0 : this.models.asking + this.models.unanswered,
+          wQ = WQ || XQ > 0 || this.images.waiting > 0 || this.images.inFlight > 0;
+        this.quiet = wQ ? 0 : this.quiet + 1, this.quiet >= 3 && this.resolveSettled()
       }
       close() {
         this.closed || (this.closed = !0, this.page.closePreview(this), this.resolveSettled())
@@ -726,314 +733,314 @@ export const modules = {
       abandon() {
         this.resolveSettled()
       }
-      dispose(pp) {
+      dispose(QQ) {
         this.page.hostCall(void 0, (() => {
-          const ip = this.host.close(this.id);
-          ip.length > 0 && this.images.onEvent(ip), this.page.isTrapped || pp.pSp(this.id)
+          const WQ = this.host.close(this.id);
+          WQ.length > 0 && this.images.onEvent(WQ), this.page.isTrapped || QQ.kTQ(this.id)
         })), this.images.dispose(), this.canvas.remove()
       }
       resolveSettled() {
-        const pp = this.settled;
+        const QQ = this.settled;
         this.settled = [];
-        for (const ip of pp) ip()
+        for (const WQ of QQ) WQ()
       }
     }
-    class Si {
-      constructor(pp) {
-        this.deps = pp, this.module = null, this.host = null, this.opening = null, this.pageCanvas = null, this.samples = 1, this.binding = null, this.sessionEnds = 0, this.lastEndReturned = !0, this.previews = new Map, this.nextId = 1, this.frameId = null, this.stopped = !1, this.loggedErrors = new Set, this.modelsListener = {
-          onUnavailable: pp => {
-            this.modelsFailed(pp)
+    class wW {
+      constructor(QQ) {
+        this.deps = QQ, this.module = null, this.host = null, this.opening = null, this.pageCanvas = null, this.samples = 1, this.binding = null, this.sessionEnds = 0, this.lastEndReturned = !0, this.previews = new Map, this.nextId = 1, this.frameId = null, this.stopped = !1, this.loggedErrors = new Set, this.modelsListener = {
+          onUnavailable: QQ => {
+            this.modelsFailed(QQ)
           },
-          onDecoderFailed: pp => {
-            this.loggedErrors.has("modelDecoder") || (this.loggedErrors.add("modelDecoder"), console.warn(`${bp} the Draco decoder didn't load: models waiting on it won't draw`, pp))
+          onDecoderFailed: QQ => {
+            this.loggedErrors.has("modelDecoder") || (this.loggedErrors.add("modelDecoder"), console.warn(`${SQ} the Draco decoder didn't load: models waiting on it won't draw`, QQ))
           },
-          onWorkerLost: pp => {
-            this.loggedErrors.has("modelWorker") || (this.loggedErrors.add("modelWorker"), console.warn(`${bp} a model worker was lost: ${pp}`))
+          onWorkerLost: QQ => {
+            this.loggedErrors.has("modelWorker") || (this.loggedErrors.add("modelWorker"), console.warn(`${SQ} a model worker was lost: ${QQ}`))
           },
           onModuleRetry: () => {}
-        }, this.modelsRestarted = !1, this.costs = [], this.models = null, this.unavailable = !1, this.animations = null, this.animationTable = null, this.moduleLoad = null, this.prefetched = !1, this.prefetchedFiles = new Map, this.shaderPackArgs = null, this.Dy = {
-          setShaderPack: (pp, ip, cp, Op, op) => (this.shaderPackArgs = [pp, ip, cp, Op, op], this.handOverShaderPack(), !0)
-        }, this.frame = pp => {
+        }, this.modelsRestarted = !1, this.costs = [], this.models = null, this.unavailable = !1, this.animations = null, this.animationTable = null, this.moduleLoad = null, this.prefetched = !1, this.prefetchedFiles = new Map, this.shaderPackArgs = null, this.xI = {
+          setShaderPack: (QQ, WQ, XQ, wQ, qQ) => (this.shaderPackArgs = [QQ, WQ, XQ, wQ, qQ], this.handOverShaderPack(), !0)
+        }, this.frame = QQ => {
           this.frameId = null;
-          const ip = this.host;
-          if (null !== ip && 0 !== this.previews.size && !this.settleIfTrapped() && !this.stopped) try {
-            this.drawFrame(ip, pp)
-          } catch (cp) {
-            if (!this.stopIfTrapped(cp) && (this.stop(), (0, dp.w)(cp))) return void this.deps.onRenderFailed("frames_refused", cp);
-            console.warn(`${bp} the previews stopped: their frame threw`, cp)
+          const WQ = this.host;
+          if (null !== WQ && 0 !== this.previews.size && !this.settleIfTrapped() && !this.stopped) try {
+            this.drawFrame(WQ, QQ)
+          } catch (XQ) {
+            if (!this.stopIfTrapped(XQ) && (this.stop(), (0, GQ.o)(XQ))) return void this.deps.onRenderFailed("frames_refused", XQ);
+            console.warn(`${SQ} the previews stopped: their frame threw`, XQ)
           }
-        }, pp.pack.onChange((() => {
+        }, QQ.pack.onChange((() => {
           this.packChanged()
-        })), pp.game.onGameChange((() => {
+        })), QQ.game.onGameChange((() => {
           this.tellInGame()
         }))
       }
       packChanged() {
         if (!this.stopped)
-          for (const pp of this.previews.values()) pp.packChanged()
+          for (const QQ of this.previews.values()) QQ.packChanged()
       }
       dpr() {
         return this.deps.dpr()
       }
       get sessionBound() {
-        var pp, ip;
-        return null !== (pp = null === (ip = this.host) || void 0 === ip ? void 0 : ip.attached()) && void 0 !== pp && pp
+        var QQ, WQ;
+        return null !== (QQ = null === (WQ = this.host) || void 0 === WQ ? void 0 : WQ.attached()) && void 0 !== QQ && QQ
       }
       get open() {
         return this.previews.size
       }
       get frameCostMs() {
-        return 0 === this.costs.length ? 0 : this.costs.reduce(((pp, ip) => pp + ip), 0) / this.costs.length
+        return 0 === this.costs.length ? 0 : this.costs.reduce(((QQ, WQ) => QQ + WQ), 0) / this.costs.length
       }
-      async bindSession(pp, ip, cp) {
-        const Op = this.binding,
-          op = this.sessionEnds;
+      async bindSession(QQ, WQ, XQ) {
+        const wQ = this.binding,
+          qQ = this.sessionEnds;
         try {
-          const Ip = this.hostOf(pp);
-          if (!Ip.xxp()) {
-            const ip = (0, Jp.g)().sampleCount,
-              Sp = await cp(ip);
-            if (this.sessionEnds !== op) return this.keepRendererOfEndedSession(pp, Ip, Sp, ip, Op), ip;
-            if (!Ip.FSp(Sp)) throw new Error("the page has a renderer already");
-            (0, Ep.q)(performance.now()), this.samples = ip, (0, Bp.h)((0, dp.o)(pp))
+          const TQ = this.hostOf(QQ);
+          if (!TQ.NzQ()) {
+            const WQ = (0, EQ.f)().sampleCount,
+              zQ = await XQ(WQ);
+            if (this.sessionEnds !== qQ) return this.keepRendererOfEndedSession(QQ, TQ, zQ, WQ, wQ), WQ;
+            if (!TQ.hzQ(zQ)) throw new Error("the page has a renderer already");
+            (0, iQ.u)(performance.now()), this.samples = WQ, (0, CQ.g)((0, GQ.k)(QQ))
           }
-          if (!Ip.attach(ip)) throw new Error("the page's renderer is lent to another session");
+          if (!TQ.attach(WQ)) throw new Error("the page's renderer is lent to another session");
           return this.samples
         } finally {
-          this.binding === Op && this.endBinding()
+          this.binding === wQ && this.endBinding()
         }
       }
-      keepRendererOfEndedSession(pp, ip, cp, Op, op) {
-        if (!this.lastEndReturned || null !== this.binding && this.binding !== op) try {
-          cp.free()
-        } catch (Ip) {
-          console.warn(`${bp} an ended session's renderer didn't free`, Ip)
-        } else ip.FSp(cp) && ((0, Ep.q)(performance.now()), this.samples = Op, (0, Bp.h)(this.registryOf(pp)))
+      keepRendererOfEndedSession(QQ, WQ, XQ, wQ, qQ) {
+        if (!this.lastEndReturned || null !== this.binding && this.binding !== qQ) try {
+          XQ.free()
+        } catch (TQ) {
+          console.warn(`${SQ} an ended session's renderer didn't free`, TQ)
+        } else WQ.hzQ(XQ) && ((0, iQ.u)(performance.now()), this.samples = wQ, (0, CQ.g)(this.registryOf(QQ)))
       }
       async beginSession() {
-        var pp;
-        let ip = () => {};
-        const cp = new Promise((pp => {
-          ip = pp
+        var QQ;
+        let WQ = () => {};
+        const XQ = new Promise((QQ => {
+          WQ = QQ
         }));
         this.binding = {
-          done: cp,
-          release: ip
-        }, await (null === (pp = this.opening) || void 0 === pp ? void 0 : pp.catch((() => null)));
-        const Op = this.pageCanvas;
-        return this.pageCanvas = null, Op
+          done: XQ,
+          release: WQ
+        }, await (null === (QQ = this.opening) || void 0 === QQ ? void 0 : QQ.catch((() => null)));
+        const wQ = this.pageCanvas;
+        return this.pageCanvas = null, wQ
       }
-      endSession(pp) {
-        var ip, cp;
-        if (this.sessionEnds++, this.lastEndReturned = pp, this.endBinding(), pp) {
+      endSession(QQ) {
+        var WQ, XQ;
+        if (this.sessionEnds++, this.lastEndReturned = QQ, this.endBinding(), QQ) {
           try {
-            var Op;
-            null === (Op = this.host) || void 0 === Op || Op.detach()
-          } catch (op) {
-            return void console.warn(`${bp} the session's core kept the page's renderer`, op)
-          }!0 === (null === (ip = this.host) || void 0 === ip ? void 0 : ip.attached()) && console.warn(`${bp} the session's core kept the page's renderer: it ended inside its frame`), null !== this.module && !0 === (null === (cp = this.host) || void 0 === cp ? void 0 : cp.xxp()) && (0, Bp.h)(this.registryOf(this.module))
+            var wQ;
+            null === (wQ = this.host) || void 0 === wQ || wQ.detach()
+          } catch (qQ) {
+            return void console.warn(`${SQ} the session's core kept the page's renderer`, qQ)
+          }!0 === (null === (WQ = this.host) || void 0 === WQ ? void 0 : WQ.attached()) && console.warn(`${SQ} the session's core kept the page's renderer: it ended inside its frame`), null !== this.module && !0 === (null === (XQ = this.host) || void 0 === XQ ? void 0 : XQ.NzQ()) && (0, CQ.g)(this.registryOf(this.module))
         }
       }
       endBinding() {
-        var pp;
-        null === (pp = this.binding) || void 0 === pp || pp.release(), this.binding = null
+        var QQ;
+        null === (QQ = this.binding) || void 0 === QQ || QQ.release(), this.binding = null
       }
-      async openPreview(pp, ip, cp, Op) {
-        const op = await this.renderingHost(),
-          Ip = this.module;
-        if (null === op || null === Ip) throw new Error("this page can't draw previews: it has no renderer build");
-        if (this.animations ??= this.loadAnimations(op), this.deps.pack.wanted(), this.isStopped) throw new Error("the previews stopped");
+      async openPreview(QQ, WQ, XQ, wQ) {
+        const qQ = await this.renderingHost(),
+          TQ = this.module;
+        if (null === qQ || null === TQ) throw new Error("this page can't draw previews: it has no renderer build");
+        if (this.animations ??= this.loadAnimations(qQ), this.deps.pack.wanted(), this.isStopped) throw new Error("the previews stopped");
         this.guarded((() => {
-          this.deps.provideBuiltInAnimationPack(Ip)
+          this.deps.provideBuiltInAnimationPack(TQ)
         }));
-        const Sp = this.nextId++,
-          xp = this.deps.createCanvas(),
-          [Lp, Yp] = Vp(ip, cp, this.deps.dpr(), Op);
-        xp.width = Lp, xp.height = Yp;
-        if (!this.guarded((() => (Ip.VIp(Sp, xp), op.open(Sp, Lp, Yp, pp))))) throw this.hostCall(void 0, (() => {
-          Ip.pSp(Sp)
+        const zQ = this.nextId++,
+          sQ = this.deps.createCanvas(),
+          [FQ, PQ] = (0, fQ.e)(WQ, XQ, this.deps.dpr(), wQ);
+        sQ.width = FQ, sQ.height = PQ;
+        if (!this.guarded((() => (TQ.uTQ(zQ, sQ), qQ.open(zQ, FQ, PQ, QQ))))) throw this.hostCall(void 0, (() => {
+          TQ.kTQ(zQ)
         })), new Error("the page's renderer is lent to a session that is running");
         this.restartModelsIfFailed();
-        const Dp = new Ii(this, op, Sp, xp, [Lp, Yp], this.deps);
-        return this.previews.set(Sp, Dp), this.startFrames(), Dp
+        const gQ = new XW(this, qQ, zQ, sQ, [FQ, PQ], this.deps);
+        return this.previews.set(zQ, gQ), this.startFrames(), gQ
       }
       prefetch() {
-        if (this.prefetched || this.isStopped || (0, Ep.b)() || null !== (0, Ep.G)()) return;
+        if (this.prefetched || this.isStopped || (0, iQ.b)() || null !== (0, iQ.D)()) return;
         this.prefetched = !0;
-        (null === this.module ? this.loadModule() : Promise.resolve(this.module)).then((pp => {
-          null === pp || this.isStopped || (this.startModels(), this.fetchAnimationTable().catch((() => {})), this.prefetchPlayerFiles())
+        (null === this.module ? this.loadModule() : Promise.resolve(this.module)).then((QQ => {
+          null === QQ || this.isStopped || (this.startModels(), this.fetchAnimationTable().catch((() => {})), this.prefetchPlayerFiles())
         }), (() => {}))
       }
-      modelFile(pp) {
-        return this.prefetchedOr(pp, this.deps.fetchModel)
+      modelFile(QQ) {
+        return this.prefetchedOr(QQ, this.deps.fetchModel)
       }
-      imageFile(pp) {
-        return this.prefetchedOr(pp, Op.F)
+      imageFile(QQ) {
+        return this.prefetchedOr(QQ, wQ.K)
       }
-      prefetchedOr(pp, ip) {
-        const cp = this.prefetchedFiles.get(pp);
-        return void 0 === cp ? ip(pp) : cp.catch((() => ip(pp)))
+      prefetchedOr(QQ, WQ) {
+        const XQ = this.prefetchedFiles.get(QQ);
+        return void 0 === XQ ? WQ(QQ) : XQ.catch((() => WQ(QQ)))
       }
       async prefetchPlayerFiles() {
-        const pp = this.deps.playerFile().then((pp => this.deps.files.url(pp))),
-          ip = await Promise.all([pp, this.deps.images.lifeformAtlasUrl(Mp.b)]).catch((() => null));
-        if (null === ip) return;
-        const [cp, Op] = ip, op = (pp, ip) => {
-          if (null === pp) return;
-          const cp = ip(pp);
-          this.prefetchedFiles.set(pp, cp), cp.catch((() => {
-            this.prefetchedFiles.delete(pp)
+        const QQ = this.deps.playerFile().then((QQ => this.deps.files.url(QQ))),
+          WQ = await Promise.all([QQ, this.deps.images.lifeformAtlasUrl(lQ.c)]).catch((() => null));
+        if (null === WQ) return;
+        const [XQ, wQ] = WQ, qQ = (QQ, WQ) => {
+          if (null === QQ) return;
+          const XQ = WQ(QQ);
+          this.prefetchedFiles.set(QQ, XQ), XQ.catch((() => {
+            this.prefetchedFiles.delete(QQ)
           }))
         };
-        op(cp, (pp => this.modelFile(pp))), op(Op, (pp => this.imageFile(pp)))
+        qQ(XQ, (QQ => this.modelFile(QQ))), qQ(wQ, (QQ => this.imageFile(QQ)))
       }
       loadModule() {
-        return this.moduleLoad ??= this.deps.loadModule().then((pp => (null === pp && (this.moduleLoad = null), pp)), (pp => {
-          throw this.moduleLoad = null, pp
+        return this.moduleLoad ??= this.deps.loadModule().then((QQ => (null === QQ && (this.moduleLoad = null), QQ)), (QQ => {
+          throw this.moduleLoad = null, QQ
         })), this.moduleLoad
       }
       fetchAnimationTable() {
-        return this.animationTable ??= this.deps.fetchAnimations().catch((pp => {
-          throw this.animationTable = null, pp
+        return this.animationTable ??= this.deps.fetchAnimations().catch((QQ => {
+          throw this.animationTable = null, QQ
         })), this.animationTable
       }
       get modelsUnavailable() {
         return this.unavailable
       }
       startModels() {
-        this.models ??= this.deps.startModels(this.modelsListener).catch((pp => (this.modelsFailed(pp), () => new Promise((() => {})))))
+        this.models ??= this.deps.startModels(this.modelsListener).catch((QQ => (this.modelsFailed(QQ), () => new Promise((() => {})))))
       }
-      buildModel(pp, ip) {
-        return this.startModels(), this.models.then((cp => cp(pp, ip))).then((pp => this.unavailable ? new Promise((() => {})) : pp))
+      buildModel(QQ, WQ) {
+        return this.startModels(), this.models.then((XQ => XQ(QQ, WQ))).then((QQ => this.unavailable ? new Promise((() => {})) : QQ))
       }
       restartModelsIfFailed() {
         this.unavailable && !this.modelsRestarted && 0 === this.previews.size && (this.modelsRestarted = !0, this.models = null, this.unavailable = !1, this.startModels())
       }
-      modelsFailed(pp) {
-        this.unavailable = !0, this.loggedErrors.has("models") || (this.loggedErrors.add("models"), console.warn(`${bp} the model workers didn't start: models won't draw in the previews`, pp))
+      modelsFailed(QQ) {
+        this.unavailable = !0, this.loggedErrors.has("models") || (this.loggedErrors.add("models"), console.warn(`${SQ} the model workers didn't start: models won't draw in the previews`, QQ))
       }
-      called(pp) {
-        return 0 !== pp && this.logError(pp, 0), pp
+      called(QQ) {
+        return 0 !== QQ && this.logError(QQ, 0), QQ
       }
-      closePreview(pp) {
-        this.previews.delete(pp.id), null !== this.module && pp.dispose(this.module), 0 === this.previews.size && null !== this.frameId && (this.deps.cancelFrame(this.frameId), this.frameId = null)
+      closePreview(QQ) {
+        this.previews.delete(QQ.id), null !== this.module && QQ.dispose(this.module), 0 === this.previews.size && null !== this.frameId && (this.deps.cancelFrame(this.frameId), this.frameId = null)
       }
-      hostOf(pp) {
-        if (null !== this.module && this.module !== pp) throw new Error("a second renderer module on one page");
-        return this.module = pp, null === this.host && (this.host = this.guarded((() => new pp.KIp)), this.tellInGame(), this.handOverShaderPack()), this.host
+      hostOf(QQ) {
+        if (null !== this.module && this.module !== QQ) throw new Error("a second renderer module on one page");
+        return this.module = QQ, null === this.host && (this.host = this.guarded((() => new QQ.CTQ)), this.tellInGame(), this.handOverShaderPack()), this.host
       }
       tellInGame() {
         const {
-          host: pp
+          host: QQ
         } = this;
-        null !== pp && this.outsideCall("the game's start or end", (() => {
-          pp.Pxp(this.deps.game.inGame())
+        null !== QQ && this.outsideCall("the game's start or end", (() => {
+          QQ.MzQ(this.deps.game.inGame())
         }))
       }
       handOverShaderPack() {
         const {
-          host: pp,
-          shaderPackArgs: ip
+          host: QQ,
+          shaderPackArgs: WQ
         } = this;
-        null !== pp && null !== ip && this.outsideCall("the shader pack's hand-over", (() => {
-          pp.fOp(...ip) || console.warn(`${bp} the host refused the shader pack: previews draw without it at home`)
+        null !== QQ && null !== WQ && this.outsideCall("the shader pack's hand-over", (() => {
+          QQ.iwQ(...WQ) || console.warn(`${SQ} the host refused the shader pack: previews draw without it at home`)
         }))
       }
-      outsideCall(pp, ip) {
+      outsideCall(QQ, WQ) {
         try {
-          this.hostCall(void 0, ip)
-        } catch (cp) {
-          this.stop(), console.warn(`${bp} the previews stopped: ${pp} threw`, cp)
+          this.hostCall(void 0, WQ)
+        } catch (XQ) {
+          this.stop(), console.warn(`${SQ} the previews stopped: ${QQ} threw`, XQ)
         }
       }
-      async loadAnimations(pp) {
-        const ip = Sp(null),
-          cp = this.module;
+      async loadAnimations(QQ) {
+        const WQ = zQ(null),
+          XQ = this.module;
         try {
-          ip.wasm = null === cp ? ip.wasm : this.hostCall(ip.wasm, (() => cp.JA()))
+          WQ.wasm = null === XQ ? WQ.wasm : this.hostCall(WQ.wasm, (() => XQ.IJ()))
         } catch {}
-        let Op, op;
+        let wQ, qQ;
         try {
-          Op = await this.fetchAnimationTable()
-        } catch (Ip) {
+          wQ = await this.fetchAnimationTable()
+        } catch (TQ) {
           return void this.deps.onAnimationsFailed({
             stage: "fetch",
-            error: Ip
-          }, ip)
+            error: TQ
+          }, WQ)
         }
         if (!this.settleIfTrapped()) {
           try {
-            op = pp.Yxp(Op)
-          } catch (Ip) {
-            if (this.stopIfTrapped(Ip)) return;
+            qQ = QQ.OzQ(wQ)
+          } catch (TQ) {
+            if (this.stopIfTrapped(TQ)) return;
             return void this.deps.onAnimationsFailed({
               stage: "decode",
-              error: Ip
-            }, ip)
+              error: TQ
+            }, WQ)
           }
-          op || this.deps.onAnimationsFailed({
+          qQ || this.deps.onAnimationsFailed({
             stage: "decode",
             error: null
-          }, ip)
+          }, WQ)
         }
       }
       async renderingHost() {
         if (null !== this.binding && await this.binding.done, this.settleIfTrapped()) return null;
-        const pp = this.host;
-        return null !== pp && this.guarded((() => pp.xxp())) ? pp : (this.opening ??= this.openAtHome().finally((() => {
+        const QQ = this.host;
+        return null !== QQ && this.guarded((() => QQ.NzQ())) ? QQ : (this.opening ??= this.openAtHome().finally((() => {
           this.opening = null
         })), this.opening)
       }
       async openAtHome() {
-        var pp;
-        const ip = null !== (pp = this.module) && void 0 !== pp ? pp : await this.loadModule();
-        if (null === ip) return null;
-        const cp = this.hostOf(ip),
-          Op = () => this.guarded((() => cp.xxp()));
-        if (Op()) return cp;
-        if (null !== (0, Ep.G)() || (0, Ep.b)()) return null;
-        const op = this.deps.createCanvas();
-        op.width = 1, op.height = 1;
-        const Ip = await this.deps.openExtras();
+        var QQ;
+        const WQ = null !== (QQ = this.module) && void 0 !== QQ ? QQ : await this.loadModule();
+        if (null === WQ) return null;
+        const XQ = this.hostOf(WQ),
+          wQ = () => this.guarded((() => XQ.NzQ()));
+        if (wQ()) return XQ;
+        if (null !== (0, iQ.D)() || (0, iQ.b)()) return null;
+        const qQ = this.deps.createCanvas();
+        qQ.width = 1, qQ.height = 1;
+        const TQ = await this.deps.openExtras();
         if (this.settleIfTrapped()) return null;
-        const Sp = (0, Jp.g)().sampleCount;
-        let xp;
+        const zQ = (0, EQ.f)().sampleCount;
+        let sQ;
         try {
-          xp = await (0, dp.A)(ip, "previewRenderer", op, Sp, Np.d, Ip)
-        } catch (Lp) {
-          throw Lp instanceof qp.b ? this.stopForTrap(Lp) : (0, dp.z)(Lp) && await this.deps.onRenderFailed("start_failed", Lp), Lp
+          sQ = await (0, GQ.r)(WQ, "previewRenderer", qQ, zQ, uQ.d, TQ)
+        } catch (FQ) {
+          throw FQ instanceof aQ.e ? this.stopForTrap(FQ) : (0, GQ.p)(FQ) && await this.deps.onRenderFailed("start_failed", FQ), FQ
         }
-        return this.guarded((() => cp.FSp(xp))) ? ((0, Ep.q)(performance.now()), this.samples = Sp, this.pageCanvas = op, (0, Bp.h)(this.registryOf(ip)), cp) : Op() ? cp : null
+        return this.guarded((() => XQ.hzQ(sQ))) ? ((0, iQ.u)(performance.now()), this.samples = zQ, this.pageCanvas = qQ, (0, CQ.g)(this.registryOf(WQ)), XQ) : wQ() ? XQ : null
       }
       startFrames() {
         null !== this.frameId || this.isStopped || (this.frameId = this.deps.requestFrame(this.frame))
       }
-      drawFrame(pp, ip) {
-        for (const Sp of this.previews.values()) Sp.feed();
+      drawFrame(QQ, WQ) {
+        for (const zQ of this.previews.values()) zQ.feed();
         if (this.stopped) return;
-        const cp = this.deps.now(),
-          Op = pp.frame(ip);
-        this.costs.push(this.deps.now() - cp), this.costs.length > 120 && this.costs.shift();
-        const op = 0 !== (256 & Op),
-          Ip = 255 & Op;
-        for (const Sp of this.previews.values()) {
+        const XQ = this.deps.now(),
+          wQ = QQ.frame(WQ);
+        this.costs.push(this.deps.now() - XQ), this.costs.length > 120 && this.costs.shift();
+        const qQ = 0 !== (256 & wQ),
+          TQ = 255 & wQ;
+        for (const zQ of this.previews.values()) {
           if (this.stopped) return;
-          Sp.collect(op)
+          zQ.collect(qQ)
         }
         if (!this.stopped) {
-          if (0 !== (512 & Op) && this.deps.onDrew(), op) {
-            const ip = pp.wxp();
-            for (let pp = 0; pp + 1 < ip.length; pp += 2) ip[pp] === Hp.M.RenderDeviceLost && this.deps.onDeviceLost(), this.logError(ip[pp], ip[pp + 1])
+          if (0 !== (512 & wQ) && this.deps.onDrew(), qQ) {
+            const WQ = QQ.wsQ();
+            for (let QQ = 0; QQ + 1 < WQ.length; QQ += 2) WQ[QQ] === pQ.K.RenderDeviceLost && this.deps.onDeviceLost(), this.logError(WQ[QQ], WQ[QQ + 1])
           }
-          if (Ip !== gp) {
-            if (Ip === Gp) return this.stop(), void this.deps.onFatal(pp.Oxp(), pp.oxp());
-            if (Ip === rp) return this.stop(), void console.warn(`${bp} the previews stopped: the page's renderer went with its session`);
-            (0, wp.e)(ip), this.startFrames()
+          if (TQ !== nQ) {
+            if (TQ === xQ) return this.stop(), void this.deps.onFatal(QQ.ozQ(), QQ.ezQ());
+            if (TQ === YQ) return this.stop(), void console.warn(`${SQ} the previews stopped: the page's renderer went with its session`);
+            (0, yQ.d)(WQ), this.startFrames()
           } else {
-            const ip = pp.Ixp();
+            const WQ = QQ.xzQ();
             this.stop();
-            const cp = ip[2] === Hp.Yc.PIPELINE_FAILED ? "pipeline_failed" : "lost";
-            this.deps.onRenderFailed(cp, void 0, ip[1], ip[2] === Hp.Yc.RESTORE_LOST)
+            const XQ = WQ[2] === pQ.cd.PIPELINE_FAILED ? "pipeline_failed" : "lost";
+            this.deps.onRenderFailed(XQ, void 0, WQ[1], WQ[2] === pQ.cd.RESTORE_LOST)
           }
         }
       }
@@ -1041,115 +1048,115 @@ export const modules = {
         return this.stopped || this.isTrapped
       }
       get isTrapped() {
-        return null !== this.module && ((0, qp.g)(this.module) || "failed" === (0, yp.E)())
+        return null !== this.module && ((0, aQ.m)(this.module) || "failed" === (0, jQ.z)())
       }
-      hostCall(pp, ip) {
-        if (this.settleIfTrapped()) return pp;
+      hostCall(QQ, WQ) {
+        if (this.settleIfTrapped()) return QQ;
         try {
-          return ip()
-        } catch (cp) {
-          if (this.stopIfTrapped(cp)) return pp;
-          throw cp
+          return WQ()
+        } catch (XQ) {
+          if (this.stopIfTrapped(XQ)) return QQ;
+          throw XQ
         }
       }
-      guarded(pp) {
+      guarded(QQ) {
         if (this.settleIfTrapped()) throw new Error("the previews stopped: their module trapped");
         try {
-          return pp()
-        } catch (ip) {
-          throw this.stopIfTrapped(ip), ip
+          return QQ()
+        } catch (WQ) {
+          throw this.stopIfTrapped(WQ), WQ
         }
       }
-      registryOf(pp) {
+      registryOf(QQ) {
         return {
-          kOp: (ip, cp) => {
+          jwQ: (WQ, XQ) => {
             this.hostCall(void 0, (() => {
-              pp.kOp(ip, cp)
+              QQ.jwQ(WQ, XQ)
             }))
           },
-          mOp: ip => {
+          BwQ: WQ => {
             this.hostCall(void 0, (() => {
-              pp.mOp(ip)
+              QQ.BwQ(WQ)
             }))
           }
         }
       }
       settleIfTrapped() {
-        return !!this.isTrapped && (this.stopped || (this.stop(), (0, Bp.h)(null)), !0)
+        return !!this.isTrapped && (this.stopped || (this.stop(), (0, CQ.g)(null)), !0)
       }
-      stopIfTrapped(pp) {
-        return !(null === this.module || !(0, qp.h)(this.module, pp)) && (this.stopForTrap(pp), !0)
+      stopIfTrapped(QQ) {
+        return !(null === this.module || !(0, aQ.q)(this.module, QQ)) && (this.stopForTrap(QQ), !0)
       }
-      stopForTrap(pp) {
-        this.stop(), (0, Bp.h)(null), (0, fp.e)("previews", pp)
+      stopForTrap(QQ) {
+        this.stop(), (0, CQ.g)(null), (0, kQ.e)("previews", QQ)
       }
       stop() {
         this.stopped = !0;
-        for (const pp of this.previews.values()) pp.abandon()
+        for (const QQ of this.previews.values()) QQ.abandon()
       }
-      logError(pp, ip) {
-        const cp = `${pp}:${ip}`;
-        this.loggedErrors.has(cp) || (this.loggedErrors.add(cp), console.warn(`${bp} error ${pp} (detail ${ip})`))
+      logError(QQ, WQ) {
+        const XQ = `${QQ}:${WQ}`;
+        this.loggedErrors.has(XQ) || (this.loggedErrors.add(XQ), console.warn(`${SQ} error ${QQ} (detail ${WQ})`))
       }
     }
-    let xi = null;
+    let qW = null;
 
-    function Li() {
-      return xi ??= new Si(function() {
-        const pp = (0, mp.r)(Up.clientSideServerUrls.staticUrl, {
-          packUrl: pp => {
-            var ip, cp;
-            return null !== (ip = null === (cp = Mp.e.current) || void 0 === cp ? void 0 : cp.modelUrl(pp)) && void 0 !== ip ? ip : null
+    function TW() {
+      return qW ??= new wW(function() {
+        const QQ = (0, dQ.p)(BQ.clientSideServerUrls.staticUrl, {
+          packUrl: QQ => {
+            var WQ, XQ;
+            return null !== (WQ = null === (XQ = lQ.d.current) || void 0 === XQ ? void 0 : XQ.modelUrl(QQ)) && void 0 !== WQ ? WQ : null
           }
         });
         return {
-          loadModule: oi,
-          startModels: async pp => {
+          loadModule: WW,
+          startModels: async QQ => {
             const {
-              pageModelPool: ip
-            } = await cp.e(43).then((() => cp(51251))), {
-              pool: Op
-            } = ip(pp);
-            return (pp, ip) => Op.build(pp, ip)
+              pageModelPool: WQ
+            } = await XQ.e(45).then((() => XQ(51279))), {
+              pool: wQ
+            } = WQ(QQ);
+            return (QQ, WQ) => wQ.build(QQ, WQ)
           },
-          fetchAnimations: async () => xp(await (0, Op.F)(ii())),
-          playerFile: async () => (await (0, mp.o)()).PLAYER_FILE,
-          onAnimationsFailed: (pp, ip) => {
-            Lp("previewAnimations", ii(), pp, ip)
+          fetchAnimations: async () => sQ(await (0, wQ.K)(mQ())),
+          playerFile: async () => (await (0, dQ.o)()).PLAYER_FILE,
+          onAnimationsFailed: (QQ, WQ) => {
+            FQ("previewAnimations", mQ(), QQ, WQ)
           },
-          provideBuiltInAnimationPack: pp => {
-            Pp().provide(pp)
+          provideBuiltInAnimationPack: QQ => {
+            rQ().provide(QQ)
           },
-          openExtras: Ep.A,
-          files: pp,
-          images: (0, Mp.i)((0, jp.k)(pp.url), (() => Mp.e.current)),
-          pack: Mp.e,
-          game: Cp.d,
-          fetchModel: pp => (0, mp.j)(pp),
+          openExtras: iQ.z,
+          files: QQ,
+          images: (0, lQ.i)((0, bQ.r)(QQ.url), (() => lQ.d.current)),
+          pack: lQ.d,
+          game: hQ.b,
+          fetchModel: QQ => (0, dQ.i)(QQ),
           createCanvas: () => document.createElement("canvas"),
           dpr: () => window.devicePixelRatio,
           now: () => performance.now(),
-          requestFrame: pp => requestAnimationFrame(pp),
-          cancelFrame: pp => {
-            cancelAnimationFrame(pp)
+          requestFrame: QQ => requestAnimationFrame(QQ),
+          cancelFrame: QQ => {
+            cancelAnimationFrame(QQ)
           },
-          onRenderFailed: ci,
-          onFatal: (pp, ip) => {
-            console.error(`${bp} the previews stopped: renderer error ${pp} (detail ${ip})`)
+          onRenderFailed: MQ,
+          onFatal: (QQ, WQ) => {
+            console.error(`${SQ} the previews stopped: renderer error ${QQ} (detail ${WQ})`)
           },
           onDeviceLost: () => {
-            (0, Ep.C)() === Qp.b.webgpu && ((0, ep.h)((0, yp.X)() ? (0, dp.Y)((0, yp.H)()) : null), vp.D.lost())
+            (0, iQ.B)() === RQ.e.webgpu && ((0, UQ.h)((0, jQ.O)() ? (0, GQ.P)((0, jQ.B)()) : null), VQ.C.lost())
           },
           onDrew: () => {
-            vp.D.drew()
+            VQ.C.drew()
           }
         }
-      }()), xi
+      }()), qW
     }
-    var Yi = cp(629),
-      Di = cp(38856),
-      Ai = cp(3400);
-    const Pi = {
+    var zW = XQ(651),
+      sW = XQ(38918),
+      FW = XQ(3555);
+    const PW = {
       wave: 0,
       clap: 1,
       point: 2,
@@ -1167,320 +1174,320 @@ export const modules = {
       gunReady: 14,
       gunAimed: 15
     };
-    const Wi = "[bloxd-previews]",
-      yi = new Uint32Array(5);
+    const gW = "[bloxd-previews]",
+      JW = new Uint32Array(5);
 
-    function Ui(pp) {
-      return Yi.i.indexOf(pp)
+    function rW(QQ) {
+      return zW.i.indexOf(QQ)
     }
-    const wi = new WeakSet;
+    const IW = new WeakSet;
 
-    function vi(pp) {
-      const ip = (0, Di.c)(pp),
-        cp = null === ip ? -1 : ti(ip);
-      return -1 !== cp ? cp : (wi.has(pp) || (wi.add(pp), console.warn(`${Wi} an animation the previews' table lacks: the mob idles instead`)), -1)
-    }
-
-    function ti(pp) {
-      var ip;
-      return null !== (ip = Pi[pp]) && void 0 !== ip ? ip : -1
+    function jW(QQ) {
+      const WQ = (0, sW.f)(QQ),
+        XQ = null === WQ ? -1 : BW(WQ);
+      return -1 !== XQ ? XQ : (IW.has(QQ) || (IW.add(QQ), console.warn(`${gW} an animation the previews' table lacks: the mob idles instead`)), -1)
     }
 
-    function Hi(pp, ip) {
+    function BW(QQ) {
+      var WQ;
+      return null !== (WQ = PW[QQ]) && void 0 !== WQ ? WQ : -1
+    }
+
+    function yW(QQ, WQ) {
       const {
-        canvas: cp
-      } = ip;
-      cp.style.width = "100%", cp.style.height = "100%", cp.style.display = "block", pp.appendChild(cp)
+        canvas: XQ
+      } = WQ;
+      XQ.style.width = "100%", XQ.style.height = "100%", XQ.style.display = "block", QQ.appendChild(XQ)
     }
 
-    function di(pp) {
-      const ip = pp.getBoundingClientRect();
-      return [ip.width, ip.height]
+    function VW(QQ) {
+      const WQ = QQ.getBoundingClientRect();
+      return [WQ.width, WQ.height]
     }
-    class ei {
-      constructor(pp, ip) {
-        this.preview = pp, this.showView = ip
+    class DW {
+      constructor(QQ, WQ) {
+        this.preview = QQ, this.showView = WQ
       }
-      show(pp) {
-        this.showView(this.preview, pp)
+      show(QQ) {
+        this.showView(this.preview, QQ)
       }
-      resize(pp, ip) {
-        this.preview.resize(pp, ip)
+      resize(QQ, WQ) {
+        this.preview.resize(QQ, WQ)
       }
       close() {
         this.preview.close()
       }
     }
-    class ui {
-      constructor(pp) {
-        this.preview = pp, this.ready = void 0, this.dev = void 0, this.built = !1, this.cosmetics = {}, this.emote = null, this.detachControls = void 0, this.detachControls = function(pp) {
+    class pW {
+      constructor(QQ) {
+        this.preview = QQ, this.ready = void 0, this.dev = void 0, this.built = !1, this.cosmetics = {}, this.emote = null, this.detachControls = void 0, this.detachControls = function(QQ) {
           const {
-            canvas: ip
-          } = pp;
-          let cp = null;
-          const Op = pp => {
-              var Op;
-              cp = {
-                pointer: pp.pointerId,
-                x: pp.clientX,
-                y: pp.clientY
-              }, null === (Op = ip.setPointerCapture) || void 0 === Op || Op.call(ip, pp.pointerId)
+            canvas: WQ
+          } = QQ;
+          let XQ = null;
+          const wQ = QQ => {
+              var wQ;
+              XQ = {
+                pointer: QQ.pointerId,
+                x: QQ.clientX,
+                y: QQ.clientY
+              }, null === (wQ = WQ.setPointerCapture) || void 0 === wQ || wQ.call(WQ, QQ.pointerId)
             },
-            op = ip => {
-              var Op;
-              const op = pp.orbit;
-              if ((null === (Op = cp) || void 0 === Op ? void 0 : Op.pointer) !== ip.pointerId || null === op) return;
-              const Ip = ip.clientX - cp.x,
-                Sp = ip.clientY - cp.y;
-              cp = {
-                ...cp,
-                x: ip.clientX,
-                y: ip.clientY
-              }, pp.setOrbit({
-                alpha: op.alpha - .01 * Ip,
-                beta: Math.min(Math.PI - .01, Math.max(.01, op.beta - .01 * Sp)),
-                radius: op.radius
+            qQ = WQ => {
+              var wQ;
+              const qQ = QQ.orbit;
+              if ((null === (wQ = XQ) || void 0 === wQ ? void 0 : wQ.pointer) !== WQ.pointerId || null === qQ) return;
+              const TQ = WQ.clientX - XQ.x,
+                zQ = WQ.clientY - XQ.y;
+              XQ = {
+                ...XQ,
+                x: WQ.clientX,
+                y: WQ.clientY
+              }, QQ.setOrbit({
+                alpha: qQ.alpha - .01 * TQ,
+                beta: Math.min(Math.PI - .01, Math.max(.01, qQ.beta - .01 * zQ)),
+                radius: qQ.radius
               })
             },
-            Ip = pp => {
-              var ip;
-              (null === (ip = cp) || void 0 === ip ? void 0 : ip.pointer) === pp.pointerId && (cp = null)
+            TQ = QQ => {
+              var WQ;
+              (null === (WQ = XQ) || void 0 === WQ ? void 0 : WQ.pointer) === QQ.pointerId && (XQ = null)
             },
-            Sp = ip => {
-              const cp = pp.orbit;
-              if (null === cp) return;
-              ip.preventDefault();
-              const Op = ip.deltaY * (ip.deltaMode === WheelEvent.DOM_DELTA_LINE ? 40 : ip.deltaMode === WheelEvent.DOM_DELTA_PAGE ? 800 : 1),
-                op = Math.min(100, Math.max(5, cp.radius + .08 * Op));
-              pp.setOrbit({
-                ...cp,
-                radius: op
+            zQ = WQ => {
+              const XQ = QQ.orbit;
+              if (null === XQ) return;
+              WQ.preventDefault();
+              const wQ = WQ.deltaY * (WQ.deltaMode === WheelEvent.DOM_DELTA_LINE ? 40 : WQ.deltaMode === WheelEvent.DOM_DELTA_PAGE ? 800 : 1),
+                qQ = Math.min(100, Math.max(5, XQ.radius + .08 * wQ));
+              QQ.setOrbit({
+                ...XQ,
+                radius: qQ
               })
             };
-          return ip.style.touchAction = "none", ip.addEventListener("pointerdown", Op), ip.addEventListener("pointermove", op), ip.addEventListener("pointerup", Ip), ip.addEventListener("pointercancel", Ip), ip.addEventListener("wheel", Sp, {
+          return WQ.style.touchAction = "none", WQ.addEventListener("pointerdown", wQ), WQ.addEventListener("pointermove", qQ), WQ.addEventListener("pointerup", TQ), WQ.addEventListener("pointercancel", TQ), WQ.addEventListener("wheel", zQ, {
             passive: !1
           }), () => {
-            ip.removeEventListener("pointerdown", Op), ip.removeEventListener("pointermove", op), ip.removeEventListener("pointerup", Ip), ip.removeEventListener("pointercancel", Ip), ip.removeEventListener("wheel", Sp)
+            WQ.removeEventListener("pointerdown", wQ), WQ.removeEventListener("pointermove", qQ), WQ.removeEventListener("pointerup", TQ), WQ.removeEventListener("pointercancel", TQ), WQ.removeEventListener("wheel", zQ)
           }
-        }(pp), this.dev = {
-          canvas: () => pp.canvas,
+        }(QQ), this.dev = {
+          canvas: () => QQ.canvas,
           isolateHead: () => {
-            console.warn(`${Wi} isolateHead: noa's character preview only`)
+            console.warn(`${gW} isolateHead: noa's character preview only`)
           }
-        }, this.apply(), this.ready = pp.untilSettled().then((() => {
-          if (pp.isStopped) throw new Error(`${Wi} the previews stopped before the character drew`);
+        }, this.apply(), this.ready = QQ.untilSettled().then((() => {
+          if (QQ.isStopped) throw new Error(`${gW} the previews stopped before the character drew`);
           this.built = !0
         }))
       }
       isReady() {
         return this.built && !this.preview.isClosed
       }
-      setCosmetic(pp, ip) {
-        this.cosmetics[pp] = ip, this.apply()
+      setCosmetic(QQ, WQ) {
+        this.cosmetics[QQ] = WQ, this.apply()
       }
-      playEmote(pp) {
-        null === pp || pp !== this.emote ? (this.emote = pp, this.apply()) : this.preview.replay()
+      playEmote(QQ) {
+        null === QQ || QQ !== this.emote ? (this.emote = QQ, this.apply()) : this.preview.replay()
       }
-      untilDrawn(pp) {
+      untilDrawn(QQ) {
         return this.preview.untilSettled()
       }
-      setOrbit(pp) {
+      setOrbit(QQ) {
         let {
-          yaw: ip,
-          pitch: cp,
-          radius: Op
-        } = pp;
-        const op = this.preview.orbit;
-        null !== op && this.preview.setOrbit({
-          alpha: ip,
-          beta: cp,
-          radius: null !== Op && void 0 !== Op ? Op : op.radius
+          yaw: WQ,
+          pitch: XQ,
+          radius: wQ
+        } = QQ;
+        const qQ = this.preview.orbit;
+        null !== qQ && this.preview.setOrbit({
+          alpha: WQ,
+          beta: XQ,
+          radius: null !== wQ && void 0 !== wQ ? wQ : qQ.radius
         })
       }
       resetCamera() {}
-      resize(pp, ip) {
-        this.preview.resize(pp, ip)
+      resize(QQ, WQ) {
+        this.preview.resize(QQ, WQ)
       }
       close() {
         this.detachControls(), this.preview.close()
       }
       apply() {
-        var pp;
-        this.preview.setPlayer(JSON.stringify(this.cosmetics), yi, null === (pp = this.emote) ? -1 : ti(pp))
+        var QQ;
+        this.preview.setPlayer(JSON.stringify(this.cosmetics), JW, null === (QQ = this.emote) ? -1 : BW(QQ))
       }
     }
 
-    function ji(pp, ip) {
+    function GW(QQ, WQ) {
       let {
-        mobType: cp,
-        variation: Op,
-        animation: op
-      } = ip;
-      pp.setMob(Ui(cp), null !== Op && void 0 !== Op ? Op : "", 1, vi(op))
+        mobType: XQ,
+        variation: wQ,
+        animation: qQ
+      } = WQ;
+      QQ.setMob(rW(XQ), null !== wQ && void 0 !== wQ ? wQ : "", 1, jW(qQ))
     }
 
-    function ki(pp, ip) {
+    function UW(QQ, WQ) {
       let {
-        mobType: cp,
-        variation: Op,
-        metaInfo: op,
-        tamed: Ip
-      } = ip;
-      pp.setPet(Ui(cp), Op, op, Ip)
+        mobType: XQ,
+        variation: wQ,
+        metaInfo: qQ,
+        tamed: TQ
+      } = WQ;
+      QQ.setPet(rW(XQ), wQ, qQ, TQ)
     }
-    const mi = {
+    const bW = {
       aimed: .533 / 1.15 * 1.1,
       ready: .16 / .85 * 1.1
     };
-    class Ri {
-      constructor(pp, ip, cp, Op) {
+    class vW {
+      constructor(QQ, WQ, XQ, wQ) {
         this.preview = null, this.closed = !1, this.figure = null, this.shown = !1, this.order = "", this.span = {
           left: 0,
           width: 0
-        }, this.lineup = [0, 0], this.given = null, this.loaded = !1, pp(cp.width, Op[1], Op).then((pp => {
-          if (this.closed) return void pp.close();
+        }, this.lineup = [0, 0], this.given = null, this.loaded = !1, QQ(XQ.width, wQ[1], wQ).then((QQ => {
+          if (this.closed) return void QQ.close();
           const {
-            style: cp
-          } = pp.canvas;
-          cp.position = "absolute", cp.top = "0", cp.visibility = "hidden", Hi(ip, pp), this.preview = pp, this.apply()
-        })).catch((pp => {
-          console.error(`${Wi} couldn't open a lineup figure`, pp)
+            style: XQ
+          } = QQ.canvas;
+          XQ.position = "absolute", XQ.top = "0", XQ.visibility = "hidden", yW(WQ, QQ), this.preview = QQ, this.apply()
+        })).catch((QQ => {
+          console.error(`${gW} couldn't open a lineup figure`, QQ)
         }))
       }
-      update(pp, ip, cp, Op, op) {
-        this.figure = pp, this.shown = ip, this.order = cp, this.span = Op, this.lineup = op, this.apply()
+      update(QQ, WQ, XQ, wQ, qQ) {
+        this.figure = QQ, this.shown = WQ, this.order = XQ, this.span = wQ, this.lineup = qQ, this.apply()
       }
       close() {
-        var pp;
-        this.closed = !0, null === (pp = this.preview) || void 0 === pp || pp.close(), this.preview = null
+        var QQ;
+        this.closed = !0, null === (QQ = this.preview) || void 0 === QQ || QQ.close(), this.preview = null
       }
       apply() {
         const {
-          preview: pp,
-          figure: ip,
-          lineup: cp
+          preview: QQ,
+          figure: WQ,
+          lineup: XQ
         } = this;
-        if (null === pp || null === ip) return;
-        if (this.given !== ip) {
-          var Op;
-          this.given = ip, this.loaded = !1;
-          const cp = null === ip.qm ? 0 : null !== (Op = (0, Ai.c)(ip.qm)) && void 0 !== Op ? Op : 0;
-          pp.setFigure(function(pp) {
-            return JSON.stringify(Object.fromEntries(pp.cosmetics))
-          }(ip), cp, vi(ip.animation), ip.size), pp.untilSettled().then((() => {
-            this.given === ip && (this.loaded = !0, this.apply())
+        if (null === QQ || null === WQ) return;
+        if (this.given !== WQ) {
+          var wQ;
+          this.given = WQ, this.loaded = !1;
+          const XQ = null === WQ.Qp ? 0 : null !== (wQ = (0, FW.c)(WQ.Qp)) && void 0 !== wQ ? wQ : 0;
+          QQ.setFigure(function(QQ) {
+            return JSON.stringify(Object.fromEntries(QQ.cosmetics))
+          }(WQ), XQ, jW(WQ.animation), WQ.size), QQ.untilSettled().then((() => {
+            this.given === WQ && (this.loaded = !0, this.apply())
           }))
         }
         const {
-          left: op,
-          width: Ip
+          left: qQ,
+          width: TQ
         } = this.span;
-        pp.resize(Ip, cp[1], cp);
+        QQ.resize(TQ, XQ[1], XQ);
         const {
-          style: Sp
-        } = pp.canvas;
-        Sp.left = `${op}px`, Sp.width = `${Ip}px`, Sp.zIndex = this.order, Sp.visibility = this.shown && this.loaded ? "visible" : "hidden"
+          style: zQ
+        } = QQ.canvas;
+        zQ.left = `${qQ}px`, zQ.width = `${TQ}px`, zQ.zIndex = this.order, zQ.visibility = this.shown && this.loaded ? "visible" : "hidden"
       }
     }
-    class qi {
-      constructor(pp, ip) {
-        this.open = ip, this.layer = void 0, this.figures = [], this.view = {
+    class dW {
+      constructor(QQ, WQ) {
+        this.open = WQ, this.layer = void 0, this.figures = [], this.view = {
           figures: [],
           shown: []
-        }, this.size = void 0, this.size = di(pp), this.layer = document.createElement("div");
+        }, this.size = void 0, this.size = VW(QQ), this.layer = document.createElement("div");
         const {
-          style: cp
+          style: XQ
         } = this.layer;
-        cp.position = "relative", cp.isolation = "isolate", cp.overflow = "hidden", cp.width = "100%", cp.height = "100%", cp.pointerEvents = "none", pp.appendChild(this.layer)
+        XQ.position = "relative", XQ.isolation = "isolate", XQ.overflow = "hidden", XQ.width = "100%", XQ.height = "100%", XQ.pointerEvents = "none", QQ.appendChild(this.layer)
       }
-      show(pp) {
-        this.view = pp, this.place()
+      show(QQ) {
+        this.view = QQ, this.place()
       }
-      resize(pp, ip) {
-        this.size = [pp, ip], this.place()
+      resize(QQ, WQ) {
+        this.size = [QQ, WQ], this.place()
       }
       close() {
-        for (const pp of this.figures) pp.close();
+        for (const QQ of this.figures) QQ.close();
         this.figures = [], this.layer.remove()
       }
       place() {
         const {
-          figures: pp,
-          shown: ip
+          figures: QQ,
+          shown: WQ
         } = this.view;
-        for (const Op of this.figures.splice(pp.length)) Op.close();
+        for (const wQ of this.figures.splice(QQ.length)) wQ.close();
         const {
-          size: cp
+          size: XQ
         } = this;
-        pp.forEach(((Op, op) => {
-          var Ip;
-          const Sp = function(pp, ip, cp, Op) {
-            let [op, Ip] = Op;
-            const Sp = (pp + .5) * op / ip,
-              xp = Math.min(Math.max(op / ip, 2 * cp * Ip), 2 * Math.max(Sp, op - Sp));
+        QQ.forEach(((wQ, qQ) => {
+          var TQ;
+          const zQ = function(QQ, WQ, XQ, wQ) {
+            let [qQ, TQ] = wQ;
+            const zQ = (QQ + .5) * qQ / WQ,
+              sQ = Math.min(Math.max(qQ / WQ, 2 * XQ * TQ), 2 * Math.max(zQ, qQ - zQ));
             return {
-              left: Sp - xp / 2,
-              width: xp
+              left: zQ - sQ / 2,
+              width: sQ
             }
-          }(op, pp.length, function(pp) {
+          }(qQ, QQ.length, function(QQ) {
             let {
-              animation: ip,
-              size: cp
-            } = pp;
+              animation: WQ,
+              size: XQ
+            } = QQ;
             const {
-              aimed: Op,
-              ready: op
-            } = mi;
-            return (vi(ip) === Pi.gunAimed ? Op : op) * cp
-          }(Op), cp);
-          this.figures[op] ??= new Ri(this.open, this.layer, Sp, cp), this.figures[op].update(Op, null !== (Ip = ip[op]) && void 0 !== Ip && Ip, function(pp, ip) {
-            return String(Math.round(1e3 * pp) + ip)
-          }(Op.size, op), Sp, cp)
+              aimed: wQ,
+              ready: qQ
+            } = bW;
+            return (jW(WQ) === PW.gunAimed ? wQ : qQ) * XQ
+          }(wQ), XQ);
+          this.figures[qQ] ??= new vW(this.open, this.layer, zQ, XQ), this.figures[qQ].update(wQ, null !== (TQ = WQ[qQ]) && void 0 !== TQ && TQ, function(QQ, WQ) {
+            return String(Math.round(1e3 * QQ) + WQ)
+          }(wQ.size, qQ), zQ, XQ)
         }))
       }
     }
-    const Mi = {
-      player: np,
-      store: Fp
+    const HW = {
+      player: oQ,
+      store: eQ
     };
-    class Ci {
-      constructor(pp) {
-        this.page = pp
+    class aW {
+      constructor(QQ) {
+        this.page = QQ
       }
-      async openMob(pp) {
-        return new ei(await this.open(pp, ap), ji)
+      async openMob(QQ) {
+        return new DW(await this.open(QQ, tQ), GW)
       }
-      async openPet(pp) {
-        return new ei(await this.open(pp, ap), ki)
+      async openPet(QQ) {
+        return new DW(await this.open(QQ, tQ), UW)
       }
-      openMobLineup(pp) {
-        return new qi(pp, ((pp, ip, cp) => this.page.openPreview(ap, pp, ip, cp)))
+      openMobLineup(QQ) {
+        return new dW(QQ, ((QQ, WQ, XQ) => this.page.openPreview(tQ, QQ, WQ, XQ)))
       }
-      async openCharacter(pp, ip) {
-        return new ui(await this.open(pp, Mi[ip]))
+      async openCharacter(QQ, WQ) {
+        return new pW(await this.open(QQ, HW[WQ]))
       }
-      async open(pp, ip) {
-        const [cp, Op] = di(pp), op = await this.page.openPreview(ip, cp, Op);
-        return Hi(pp, op), op
+      async open(QQ, WQ) {
+        const [XQ, wQ] = VW(QQ), qQ = await this.page.openPreview(WQ, XQ, wQ);
+        return yW(QQ, qQ), qQ
       }
     }
   },
-  36939: (pp, ip, cp) => {
-    cp.d(ip, {
-      A: () => yp,
-      E: () => Up,
-      H: () => vp,
-      e: () => Op,
-      h: () => op,
-      i: () => Pp,
-      j: () => wp,
-      l: () => Dp,
-      p: () => tp,
-      t: () => Lp,
-      v: () => Yp,
-      y: () => Wp
+  37041: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      C: () => IQ,
+      D: () => jQ,
+      E: () => BQ,
+      I: () => VQ,
+      e: () => wQ,
+      g: () => qQ,
+      j: () => rQ,
+      m: () => yQ,
+      q: () => gQ,
+      u: () => DQ,
+      v: () => FQ,
+      z: () => PQ
     });
-    const Op = [{
+    const wQ = [{
       numLines: 7,
       charsPerLine: 16,
       uiFontSize: 3.3,
@@ -1497,64 +1504,64 @@ export const modules = {
       ingameFontSize: 58
     }];
 
-    function op(pp, ip) {
+    function qQ(QQ, WQ) {
       const {
-        numLines: cp,
-        charsPerLine: op
-      } = Op[ip];
-      return Hp(pp, cp, op, !1)
+        numLines: XQ,
+        charsPerLine: qQ
+      } = wQ[WQ];
+      return pQ(QQ, XQ, qQ, !1)
     }
-    const Ip = 7 / 8,
-      Sp = .25,
-      xp = 8;
+    const TQ = 7 / 8,
+      zQ = .25,
+      sQ = 8;
 
-    function Lp(pp, ip) {
+    function FQ(QQ, WQ) {
       return {
-        width: Math.min(pp, xp) - 2 * Sp,
-        height: Math.min(ip, xp) - 2 * Sp
+        width: Math.min(QQ, sQ) - 2 * zQ,
+        height: Math.min(WQ, sQ) - 2 * zQ
       }
     }
 
-    function Yp(pp, ip, cp) {
-      const op = Lp(pp, ip),
+    function PQ(QQ, WQ, XQ) {
+      const qQ = FQ(QQ, WQ),
         {
-          numLines: Sp,
-          charsPerLine: xp
-        } = Op[cp];
+          numLines: zQ,
+          charsPerLine: sQ
+        } = wQ[XQ];
       return {
-        numLines: Math.max(1, Math.floor(Sp / Ip * op.height)),
-        charsPerLine: Math.max(1, Math.floor(xp * op.width))
+        numLines: Math.max(1, Math.floor(zQ / TQ * qQ.height)),
+        charsPerLine: Math.max(1, Math.floor(sQ * qQ.width))
       }
     }
 
-    function Dp(pp, ip, cp, Op) {
+    function gQ(QQ, WQ, XQ, wQ) {
       const {
-        numLines: op,
-        charsPerLine: Ip
-      } = Yp(cp, Op, ip);
-      return Hp(pp, op, Ip, !1)
+        numLines: qQ,
+        charsPerLine: TQ
+      } = PQ(XQ, wQ, WQ);
+      return pQ(QQ, qQ, TQ, !1)
     }
-    const Ap = 32e3;
+    const JQ = 32e3;
 
-    function Pp(pp) {
-      return pp.slice(0, Ap)
+    function rQ(QQ) {
+      return QQ.slice(0, JQ)
     }
-    const Wp = 512e3,
-      yp = 64,
-      Up = Wp;
+    const IQ = 512e3,
+      jQ = 64,
+      BQ = IQ;
 
-    function wp(pp, ip) {
-      const cp = Math.max(0, Up - ip),
-        Op = Math.min(Wp, cp);
-      return pp.slice(0, Op)
+    function yQ(QQ, WQ) {
+      const XQ = Math.max(0, BQ - WQ),
+        wQ = Math.min(IQ, XQ);
+      return QQ.slice(0, wQ)
     }
-    const vp = {
+    const VQ = {
       book: {
         numLines: 13,
         charsPerLine: 19,
         uiFontSize: 1.95
       },
-      Ux: {
+      fz: {
         numLines: 1,
         charsPerLine: 19,
         uiFontSize: 1.95
@@ -1566,31 +1573,31 @@ export const modules = {
       }
     };
 
-    function tp(pp, ip) {
+    function DQ(QQ, WQ) {
       const {
-        numLines: cp,
-        charsPerLine: Op
-      } = vp[ip];
-      return Hp(pp, cp, Op, !1)
+        numLines: XQ,
+        charsPerLine: wQ
+      } = VQ[WQ];
+      return pQ(QQ, XQ, wQ, !1)
     }
 
-    function Hp(pp, ip, cp, Op, op) {
-      (op || Op) && (pp = pp.slice(0, null !== op && void 0 !== op ? op : ip * cp));
-      const Ip = pp.split("\n");
-      if (Ip.length > ip && Ip.splice(ip, Ip.length - ip), !Op)
-        for (let Sp = 0; Sp < Ip.length; Sp++) {
-          const pp = Ip[Sp];
-          pp.length > cp && (Ip[Sp] = pp.substring(0, cp), Ip.length < ip && Ip.splice(Sp + 1, 0, pp.substring(cp)))
+    function pQ(QQ, WQ, XQ, wQ, qQ) {
+      (qQ || wQ) && (QQ = QQ.slice(0, null !== qQ && void 0 !== qQ ? qQ : WQ * XQ));
+      const TQ = QQ.split("\n");
+      if (TQ.length > WQ && TQ.splice(WQ, TQ.length - WQ), !wQ)
+        for (let zQ = 0; zQ < TQ.length; zQ++) {
+          const QQ = TQ[zQ];
+          QQ.length > XQ && (TQ[zQ] = QQ.substring(0, XQ), TQ.length < WQ && TQ.splice(zQ + 1, 0, QQ.substring(XQ)))
         }
-      return Ip.join("\n")
+      return TQ.join("\n")
     }
   },
-  51187: (pp, ip, cp) => {
-    pp.exports = cp.p + "static/media/builtInAnimations.anim.38e056f49512e10b7206.gz"
+  51207: (QQ, WQ, XQ) => {
+    QQ.exports = XQ.p + "static/media/builtInAnimations.anim.38e056f49512e10b7206.gz"
   },
-  51194: (pp, ip, cp) => {
-    pp.exports = cp.p + "static/media/previewAnimations.dat.24d2343c38c8f9b3fb85.gz"
+  51209: (QQ, WQ, XQ) => {
+    QQ.exports = XQ.p + "static/media/previewAnimations.dat.24d2343c38c8f9b3fb85.gz"
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

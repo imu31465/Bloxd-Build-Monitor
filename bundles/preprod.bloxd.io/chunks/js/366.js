@@ -1,79 +1,62 @@
 export const id = 366;
 export const ids = [366];
 export const modules = {
-  61466: (pp, ip, cp) => {
-    cp.d(ip, {
-      createShadowTask: () => Ip
+  61618: (QQ, WQ, XQ) => {
+    XQ.r(WQ), XQ.d(WQ, {
+      applyLightFoOffset: () => zQ,
+      getFloatingOriginOffset: () => qQ,
+      lightFoVersion: () => TQ,
+      wrapRenderableForFO: () => sQ
     });
-    var Op = null;
+    var wQ = XQ(41977);
 
-    function op(pp) {
-      return Op?.get(pp)
-    }
-
-    function Ip(pp, ip) {
-      const cp = new Set;
-      0;
-      const Op = {
-        name: "Ay",
-        engine: pp,
-        pw: ip,
-        _passes: [],
-        async _preload() {
-          const pp = [];
-          for (const cp of ip.lights) {
-            const ip = cp.shadowGenerator,
-              Op = ip ? op(ip) : null;
-            ip?._preloadShadowTask && Op && pp.push(Sp(ip, Op))
-          }
-          await Promise.all(pp)
-        },
-        record() {
-          Op._passes.length = 0;
-          for (const Op of ip.lights) {
-            const Ip = Op.shadowGenerator,
-              Sp = Ip ? op(Ip) : null;
-            if (Ip?._ensureShadowTaskState && Sp && !Ip._preloadPending) {
-              cp.add(Ip);
-              const Op = Ip._ensureShadowTaskState(pp, ip, Sp),
-                op = ip._renderableVersion;
-              Op._task.record(), Op._recordedVersion = op
-            }
-          }
-        },
-        execute() {
-          let Op = 0;
-          for (const Ip of ip.lights) {
-            const Sp = Ip.shadowGenerator,
-              xp = Sp ? op(Sp) : null;
-            if (Sp?._ensureShadowTaskState && Sp._renderShadowMap && xp && !Sp._preloadPending) {
-              cp.add(Sp);
-              const op = Sp._shadowTaskState ?? null,
-                Ip = Sp._ensureShadowTaskState(pp, ip, xp);
-              if (Ip !== op || Ip._recordedVersion !== ip._renderableVersion) {
-                const pp = ip._renderableVersion;
-                Ip._task.record(), Ip._recordedVersion = pp
-              }
-              Op += Sp._renderShadowMap(pp, Ip)
-            }
-          }
-          return Op
-        },
-        dispose() {
-          Op._passes.length = 0;
-          for (const pp of cp) {
-            const ip = pp._shadowTaskState;
-            ip && (ip._task.dispose(), pp._shadowTaskState = void 0)
-          }
-          cp.clear()
-        }
+    function qQ(QQ) {
+      const WQ = QQ.camera;
+      if (!WQ) return {
+        x: 0,
+        y: 0,
+        z: 0
       };
-      return Op
+      const XQ = WQ.worldMatrix;
+      return {
+        x: XQ[12],
+        y: XQ[13],
+        z: XQ[14]
+      }
     }
-    async function Sp(pp, ip) {
-      pp._preloadPending = ip, await (pp._preloadShadowTask?.(ip)), pp._preloadPending === ip && (pp._preloadPending = void 0)
+
+    function TQ(QQ) {
+      return QQ.camera ? QQ.camera.worldMatrixVersion : 0
+    }
+
+    function zQ(QQ, WQ) {
+      const XQ = WQ.camera?.worldMatrix;
+      if (!XQ) return;
+      const qQ = XQ[12],
+        TQ = XQ[13],
+        zQ = XQ[14];
+      let sQ = 0;
+      for (const FQ of WQ.lights) {
+        if (sQ >= wQ.c) break;
+        if (!FQ._writeLightUbo) continue;
+        const WQ = 4 + 16 * sQ,
+          XQ = QQ[WQ + 3];
+        if (0 === XQ || 2 === XQ) {
+          const XQ = FQ.worldMatrix;
+          QQ[WQ] = XQ[12] - qQ, QQ[WQ + 1] = XQ[13] - TQ, QQ[WQ + 2] = XQ[14] - zQ
+        }
+        sQ++
+      }
+    }
+
+    function sQ(QQ, WQ, XQ) {
+      let wQ = -1;
+      return () => {
+        const qQ = WQ.camera ? WQ.camera.worldMatrixVersion : -1;
+        qQ !== wQ && (XQ(), wQ = qQ), QQ()
+      }
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

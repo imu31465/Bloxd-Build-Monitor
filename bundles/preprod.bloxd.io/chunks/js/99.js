@@ -1,547 +1,199 @@
 export const id = 99;
-export const ids = [99];
+export const ids = [98, 99];
 export const modules = {
-  4988: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      default: () => Fp
+  36750: (QQ, WQ, XQ) => {
+    XQ.r(WQ), XQ.d(WQ, {
+      countDecodesAs: () => JQ,
+      decodedAudio: () => rQ
     });
-    var Op = cp(62),
-      op = cp(1543),
-      Ip = cp(337),
-      Sp = cp(1244),
-      xp = cp(1626),
-      Lp = cp(1284),
-      Yp = cp(1569),
-      Dp = cp(1520),
-      Ap = cp(2749);
-    const Pp = {
-      retries: 2,
-      minTimeout: 2e3
-    };
-    var Wp = cp(1133),
-      yp = cp(1623),
-      Up = cp(1141),
-      wp = cp(1929),
-      vp = cp(1201),
-      tp = cp(1234),
-      Hp = cp(3581),
-      dp = cp(1361),
-      ep = cp(1480),
-      jp = cp(1538),
-      kp = cp(2690),
-      mp = cp(2700),
-      Rp = cp(4994),
-      qp = cp(2210),
-      Mp = cp(1049),
-      Cp = cp.n(Mp),
-      Ep = cp(1060),
-      Xp = cp(5e3),
-      lp = cp(25),
-      Qp = cp(1956),
-      Jp = cp(3740),
-      Bp = cp(2057),
-      Np = cp(3680),
-      Tp = cp(104),
-      fp = cp(4648),
-      bp = cp(1112);
-    const hp = [Rp];
+    var wQ = XQ(3196),
+      qQ = XQ(5212);
+    const TQ = qQ.Howler,
+      zQ = new Map;
+    let sQ = 0;
+    const FQ = {
+        song: 0,
+        sheet: 0
+      },
+      PQ = new WeakMap,
+      gQ = new WeakSet;
 
-    function ap(pp) {
-      let {
-        icon: ip,
-        label: cp,
-        value: Op
-      } = pp;
-      return (0, bp.jsxs)("div", {
-        className: "PlayerProfileStat",
-        children: [(0, bp.jsx)(Ep.d, {
-          name: ip,
-          className: "PlayerProfileStatIcon"
-        }), (0, bp.jsxs)("div", {
-          className: "PlayerProfileStatText",
-          children: [(0, bp.jsx)("div", {
-            className: "PlayerProfileStatLabel SmallTextLight",
-            children: cp
-          }), (0, bp.jsx)("div", {
-            className: "PlayerProfileStatValue",
-            children: Op
-          })]
-        })]
-      })
+    function JQ(QQ, WQ) {
+      return PQ.set(QQ, WQ), QQ
     }
 
-    function np(pp) {
-      let {
-        profile: ip
-      } = pp;
-      const {
-        t: cp,
-        selectedLanguage: Op
-      } = (0, vp.H)();
-      let op = cp("homePage:profileUnknown");
-      if (ip.lastOnline) {
-        const pp = (0, vp.p)(Op.code, "homePage:profileTimeAgo");
-        op = cp("homePage:profileTimeAgo", {
-          time: (0, Ip.cb)(pp, ip.lastOnline, Date.now())
-        })
+    function rQ() {
+      return {
+        bytes: sQ,
+        songsDecoded: FQ.song,
+        sheetsDecoded: FQ.sheet
       }
-      let Sp = cp("homePage:profileUnknown");
-      return ip.accountCreatedAt && (Sp = new Date(ip.accountCreatedAt).toLocaleDateString(void 0, {
-        year: "numeric",
-        month: "short",
-        day: "numeric"
-      })), (0, bp.jsxs)("div", {
-        className: "PlayerProfileStats",
-        children: [(0, bp.jsx)(ap, {
-          icon: "hourglass",
-          label: cp("homePage:profileTimePlayed"),
-          value: (0, Jp.b)(ip.totalPlayMinutes)
-        }), (0, bp.jsx)(ap, {
-          icon: "wifi",
-          label: cp("homePage:profileLastOnline"),
-          value: op
-        }), (0, bp.jsx)(ap, {
-          icon: "calendar",
-          label: cp("homePage:profileJoined"),
-          value: Sp
-        })]
-      })
     }
 
-    function Fp() {
-      const {
-        t: pp
-      } = (0, vp.H)(), ip = (0, jp.useNavigatePreserveSearch)(), cp = (0, Wp.h)(), {
-        playerName: Rp,
-        playerUrlName: Mp
-      } = (0, op.A)(), Jp = (0, op.r)(), ap = (0, Sp.f)(Jp.pathname), Fp = ap && ("urlId" in ap ? `urlId:${ap.urlId}` : `name:${ap.lowerCaseName}`), gp = (0, Op.useRef)(Fp);
-      gp.current = Fp;
-      const {
-        userContext: Gp,
-        isUserContextUpdating: rp
-      } = (0, Up.b)(), Zp = (0, Op.useRef)(null), zp = (0, Op.useRef)(null), sp = (0, Op.useRef)(null), Kp = (0, Op.useRef)(!1), Vp = (0, Op.useRef)((0, Ip.Ub)(hp)), [ii, ci] = (0, Op.useState)((() => {
-        const pp = ap && mp.c.peek(Gp, ap);
-        return pp ? {
-          status: "loaded",
-          profile: pp,
-          playerKey: Fp
-        } : {
-          status: "loading"
-        }
-      })), [Oi, oi] = (0, Op.useState)(0);
-      (0, Op.useEffect)(kp.g, []), (0, Op.useEffect)((() => {
-        Qp.gameBridge.send("leaveGame", {
-          reloadPath: null
-        }), lp.c.set({
-          gameState: "landingPage",
-          openEverythingMenuName: null,
-          openInGameMenuName: null
-        })
-      }), [Jp.key]);
-      const Ii = () => {
-        const pp = (0, jp.getPreviousLocation)();
-        null === pp || pp.startsWith("/play") ? (0, jp.navigateToHomePage)() : ip(-1)
-      };
-      (0, fp.e)(Ii), (0, Op.useEffect)((() => {
-        var pp;
-        if (rp) return;
-        if (!ap) return void ci({
-          status: "notFound",
-          playerKey: Fp
-        });
-        const ip = "urlId" in ap && (null === (pp = zp.current) || void 0 === pp ? void 0 : pp.urlId) === ap.urlId && sp.current === Gp;
-        if (ip && Kp.current) return;
-        const cp = ip ? null : mp.c.peek(Gp, ap);
-        let Op = !1;
-        const op = pp => "loaded" === pp.status && (pp.playerKey === Fp || "urlId" in ap && pp.profile.urlId === ap.urlId);
-        return cp ? (sp.current = Gp, Kp.current = !1, ci({
-          status: "loaded",
-          profile: cp,
-          playerKey: Fp
-        }), mp.c.invalidate(ap)) : ci((pp => op(pp) ? pp : {
-          status: "loading"
-        })), async function(pp, ip) {
-          if ("lowerCaseName" in ip && ip.lowerCaseName.length > Lp.i) return {
-            status: "notFound"
-          };
+    function IQ(QQ) {
+      if (gQ.has(QQ)) return;
+      gQ.add(QQ);
+      const WQ = 1 === QQ.decodeAudioData.length,
+        XQ = QQ.decodeAudioData.bind(QQ);
+      QQ.decodeAudioData = (QQ, wQ, qQ) => {
+        const gQ = QQ => {
+          const WQ = TQ._howls.filter((QQ => "loaded" !== QQ._state));
           try {
-            return {
-              status: "loaded",
-              profile: await Dp.b.getPlayerProfile(pp, ip, Pp)
-            }
-          } catch (cp) {
-            return (0, Ap.c)(cp) ? {
-              status: "notFound"
-            } : (console.error("Failed to load user profile", cp), {
-              status: "failed"
-            })
+            null === wQ || void 0 === wQ || wQ(QQ)
+          } finally {
+            const XQ = WQ.find((QQ => "loaded" === QQ._state));
+            void 0 !== XQ && "string" === typeof XQ._src && function(QQ, WQ, XQ) {
+              var wQ;
+              sQ += XQ - (null !== (wQ = zQ.get(WQ)) && void 0 !== wQ ? wQ : 0), zQ.set(WQ, XQ);
+              const qQ = PQ.get(QQ);
+              void 0 !== qQ && FQ[qQ]++
+            }(XQ, XQ._src, QQ.length * QQ.numberOfChannels * Float32Array.BYTES_PER_ELEMENT)
           }
-        }(Gp, ap).then((pp => {
-          Op || ("loaded" === pp.status && (sp.current = Gp, Kp.current = !0), ci((ip => "failed" === pp.status && op(ip) ? ip : {
-            ...pp,
-            playerKey: Fp
-          })))
-        })), () => {
-          Op = !0
-        }
-      }), [rp, Fp, Gp, Oi]);
-      const Si = "loading" === ii.status || ii.playerKey === Fp || "loaded" === ii.status && !!ap && "urlId" in ap && ii.profile.urlId === ap.urlId ? ii : {
-          status: "loading"
-        },
-        xi = "loaded" === Si.status ? Si.profile : null,
-        Li = "loading" === Si.status ? null : function(pp) {
-          if ("loaded" === pp.status) {
-            const {
-              profile: ip
-            } = pp;
-            return (0, Yp.T)({
-              urlId: ip.urlId,
-              name: ip.player.name,
-              ranks: ip.player.ranks,
-              socialLinks: ip.socialLinks
-            })
-          }
-          return "notFound" === pp.status ? (0, Yp.Y)() : null
-        }(Si),
-        Yi = null !== xi && void 0 !== xi && xi.urlId ? (0, Sp.g)({
-          urlId: xi.urlId,
-          name: xi.player.name
-        }) : null;
-      (0, yp.e)(Yi);
-      const Di = null !== xi && void 0 !== xi && xi.player.cosmetics.profileEffect ? qp.f[xi.player.cosmetics.profileEffect] : void 0,
-        Ai = null !== xi && !rp && Gp.getPlayerName().toLowerCase() === xi.player.name.toLowerCase(),
-        Pi = (0, Bp.d)(null === xi || void 0 === xi ? void 0 : xi.player.name),
-        Wi = Ai && Gp.playerHasRank("youtuber");
-      zp.current = xi;
-      const yi = (0, Op.useCallback)((() => {
-          ap && (mp.c.invalidate(ap), mp.c.get(Gp, ap).then((pp => {
-            gp.current === Fp && (Kp.current = !0, ci({
-              status: "loaded",
-              profile: pp,
-              playerKey: Fp
-            }))
-          })).catch((pp => {
-            console.error("Failed to refresh user profile", pp)
-          })))
-        }), [Fp, Gp]),
-        Ui = (0, Op.useCallback)((() => {
-          var pp;
-          const ip = zp.current;
-          return !(!ip || null === (pp = Zp.current) || void 0 === pp || !pp.isReady()) && (Zp.current.setAllCosmetics(ip.player.cosmetics), !0)
-        }), []);
-      return (0, Op.useEffect)((() => {
-        if (!xi) return;
-        let pp, ip = !1;
-        const cp = () => {
-          ip || Ui() || (pp = setTimeout(cp, 100))
+          return QQ
         };
-        return cp(), () => {
-          ip = !0, clearTimeout(pp)
-        }
-      }), [xi, Ui]), (0, bp.jsxs)("div", {
-        className: Cp()("PlayerProfile", {
-          PlayerProfilePortrait: cp
-        }),
-        children: [Li && (0, bp.jsx)(xp.c, {
-          meta: Li
-        }), (0, bp.jsxs)("div", {
-          className: "PlayerProfileBackgroundContainer",
-          children: [Di && (0, bp.jsx)(Di, {}), !Di && (0, bp.jsx)("div", {
-            className: "PlayerProfileBackground",
-            style: {
-              backgroundImage: `url(${Vp.current})`
-            }
-          })]
-        }), (0, bp.jsxs)("div", {
-          className: "PlayerProfileHeader",
-          children: [(0, bp.jsx)(ep.d, {
-            onClick: Ii,
-            children: pp("general:back")
-          }), xi && !rp && !Ai && Tp.featureFlags.useSocialFeatures && (0, bp.jsx)("div", {
-            className: "PlayerProfileExclusionActions",
-            children: (0, bp.jsx)(Np.d, {
-              playerName: xi.player.name,
-              className: "SmallTextLight"
-            })
-          })]
-        }), "loading" === Si.status && (0, bp.jsx)("div", {
-          className: "PlayerProfileCentredMessage",
-          children: (0, bp.jsx)(dp.c, {})
-        }), ("notFound" === Si.status || "failed" === Si.status) && (0, bp.jsxs)("div", {
-          className: "PlayerProfileCentredMessage PlayerProfileError",
-          children: [(0, bp.jsx)(Ep.d, {
-            name: "face-dizzy"
-          }), (0, bp.jsx)("div", {
-            className: "PlayerProfileErrorText",
-            children: "notFound" === Si.status ? pp("socialBar:playerNotFound", {
-              playerName: null !== Mp && void 0 !== Mp ? Mp : Rp
-            }) : pp("playerProfile:loadFailed")
-          }), "failed" === Si.status && (0, bp.jsx)(ep.f, {
-            onClick: () => {
-              oi((pp => pp + 1))
-            },
-            children: pp("general:tryAgain")
-          })]
-        }), xi && (0, bp.jsxs)("div", {
-          className: "PlayerProfileContent",
-          children: [(0, bp.jsxs)("div", {
-            className: "PlayerProfileLeft",
-            children: [(0, bp.jsx)("div", {
-              className: "PlayerProfileName FullyFancyText",
-              children: (0, bp.jsx)(wp.e, {
-                text: (0, tp.z)(xi.player.ranks, xi.player.name, xi.player.nameColour),
-                friendBadgeFor: Pi ? xi.player.name : void 0
-              })
-            }), (0, bp.jsx)("div", {
-              className: "PlayerProfileModel",
-              children: (0, bp.jsx)(Op.Suspense, {
-                fallback: (0, bp.jsx)("div", {
-                  className: "PlayerProfileModelLoading",
-                  children: (0, bp.jsx)(dp.c, {})
-                }),
-                children: (0, bp.jsx)(kp.e, {
-                  ref: Zp,
-                  onReady: () => {
-                    Ui()
-                  }
-                })
-              })
-            })]
-          }), (0, bp.jsxs)("div", {
-            className: "PlayerProfileRight",
-            children: [(0, bp.jsx)(np, {
-              profile: xi
-            }), (xi.socialLinks.length > 0 || Wi) && (0, bp.jsx)(Xp.d, {
-              socialLinks: xi.socialLinks,
-              editable: Wi,
-              userContext: Gp,
-              onLinksUpdated: yi
-            }), (0, bp.jsxs)("div", {
-              className: "PlayerProfileGames",
-              children: [(0, bp.jsx)("div", {
-                className: "PlayerProfileGamesTitle SmallTextBold",
-                children: pp("homePage:profileReleasedGames")
-              }), 0 === xi.releasedGames.length && (0, bp.jsx)("div", {
-                className: "PlayerProfileNoGames",
-                children: pp("homePage:profileNoReleasedGames")
-              }), xi.releasedGames.length > 0 && (0, bp.jsx)("div", {
-                className: "PlayerProfileGamesGrid",
-                children: xi.releasedGames.map((pp => (0, bp.jsx)(Hp.g, {
-                  source: {
-                    type: "preview",
-                    preview: pp
-                  },
-                  gameWidth: "100%",
-                  useLongRatio: !0,
-                  hideFavourites: !0,
-                  entrySource: "other"
-                }, pp.schematicId)))
-              })]
-            })]
-          })]
-        })]
-      })
-    }
-  },
-  5e3: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => wp
-    });
-    var Op = cp(1049),
-      op = cp.n(Op),
-      Ip = cp(4735),
-      Sp = cp(1201),
-      xp = cp(1060),
-      Lp = cp(1480),
-      Yp = cp(1520),
-      Dp = cp(1372),
-      Ap = cp(2568),
-      Pp = cp(1112);
-    const Wp = {
-      youtube: {
-        icon: "youtube",
-        color: "#FF0033",
-        name: "YouTube"
-      },
-      tiktok: {
-        icon: "tiktok",
-        color: "#0F0F0F",
-        name: "TikTok"
-      },
-      instagram: {
-        icon: "instagram",
-        color: "#E1306C",
-        name: "Instagram"
-      },
-      twitter: {
-        icon: "x-twitter",
-        color: "#0F0F0F",
-        name: "X"
-      },
-      twitch: {
-        icon: "twitch",
-        color: "#9146FF",
-        name: "Twitch"
+        if (!WQ) return XQ(QQ, gQ, qQ);
+        const JQ = XQ(QQ).then(gQ);
+        return JQ.catch((QQ => {
+          null === qQ || void 0 === qQ || qQ(QQ)
+        })), JQ
       }
+    }(0, wQ.f)(rQ);
+    const jQ = qQ.Howl.prototype,
+      BQ = jQ.init;
+    jQ.init = function(QQ) {
+      return qQ.Howler.volume(), TQ.ctx && IQ(TQ.ctx), BQ.call(this, QQ)
     };
-
-    function yp(pp) {
-      let {
-        platform: ip
-      } = pp;
-      const cp = "youtube" === ip;
-      return (0, Pp.jsxs)("span", {
-        className: op()("PlayerProfileSocialLinkIcon", {
-          PlayerProfileSocialLinkIconYoutube: cp
-        }),
-        children: [cp && (0, Pp.jsx)(Ap.d, {
-          variant: "white"
-        }), !cp && (0, Pp.jsx)(xp.d, {
-          name: Wp[ip].icon,
-          kit: "brands"
-        })]
-      })
-    }
-
-    function Up(pp) {
-      let {
-        platform: ip,
-        link: cp,
-        editable: Op,
-        userContext: op,
-        onLinksUpdated: Ap
-      } = pp;
-      const {
-        t: Up
-      } = (0, Sp.H)(), wp = Wp[ip];
-      if (!cp && !Op) return null;
-
-      function vp() {
-        var pp;
-        if (!op || !Ap) return;
-        Dp.NotificationProvider.showInputPopup({
-          title: "homePage:profileSocialLinkEditTitle",
-          textOpts: {
-            title: {
-              platform: wp.name
-            }
-          },
-          prefixText: Ip.u[ip],
-          placeholderText: "playBloxd",
-          initialValue: null !== (pp = null === cp || void 0 === cp ? void 0 : cp.handle) && void 0 !== pp ? pp : "",
-          maxLength: 30,
-          submitText: "general:save",
-          secondaryButtonText: cp ? "general:remove" : void 0
-        }).getResult().then((async pp => {
-          if ("notificationTornDown" !== pp && null !== pp) try {
-            "submit" === pp.type ? await Yp.b.setSocialLink(op, ip, pp.value) : await Yp.b.clearSocialLink(op, ip), Ap()
-          } catch (cp) {
-            console.error("Failed to update social link", cp), Dp.NotificationProvider.showAlertPopup({
-              title: cp.errorMessageForUser,
-              confirmText: "general:ok"
-            })
-          }
-        }))
-      }
-      if (cp) {
-        const pp = `@${cp.handle}`;
-        return (0, Pp.jsxs)("a", {
-          className: "PlayerProfileSocialLink",
-          style: {
-            background: wp.color
-          },
-          href: cp.profileUrl,
-          target: "_blank",
-          rel: "noopener noreferrer",
-          children: [(0, Pp.jsxs)("div", {
-            className: "PlayerProfileSocialLinkMain",
-            children: [(0, Pp.jsx)(yp, {
-              platform: ip
-            }), (0, Pp.jsx)("span", {
-              className: "PlayerProfileSocialLinkText",
-              children: (0, Pp.jsx)("span", {
-                className: "PlayerProfileSocialLinkName SmallTextBold",
-                children: pp
-              })
-            })]
-          }), Op && (0, Pp.jsx)("button", {
-            type: "button",
-            className: "PlayerProfileSocialLinkEditButton",
-            ...(0, Lp.bb)({
-              stopPropagation: !0
-            }),
-            onClick: pp => {
-              pp.stopPropagation(), pp.preventDefault(), vp()
-            },
-            children: (0, Pp.jsx)(xp.d, {
-              name: "pen-to-square"
-            })
-          }), !Op && (0, Pp.jsx)("span", {
-            className: "PlayerProfileSocialLinkArrow",
-            children: (0, Pp.jsx)(xp.d, {
-              name: "arrow-up-right-from-square"
-            })
-          })]
-        })
-      }
-      return (0, Pp.jsxs)("button", {
-        type: "button",
-        className: "PlayerProfileSocialLink PlayerProfileSocialLinkUnlinked",
-        style: {
-          background: wp.color
-        },
-        ...(0, Lp.bb)(),
-        onClick: () => {
-          vp()
-        },
-        children: [(0, Pp.jsx)(yp, {
-          platform: ip
-        }), (0, Pp.jsxs)("span", {
-          className: "PlayerProfileSocialLinkText",
-          children: [(0, Pp.jsx)("span", {
-            className: "PlayerProfileSocialLinkName SmallTextBold",
-            children: wp.name
-          }), (0, Pp.jsx)("span", {
-            className: "PlayerProfileSocialLinkCount SmallTextLight",
-            children: Up("homePage:profileSocialLinkAdd")
-          })]
-        }), (0, Pp.jsx)("span", {
-          className: "PlayerProfileSocialLinkEditButton",
-          children: (0, Pp.jsx)(xp.d, {
-            name: "pen-to-square"
-          })
-        })]
-      })
-    }
-
-    function wp(pp) {
-      let {
-        socialLinks: ip,
-        editable: cp = !1,
-        userContext: Op,
-        onLinksUpdated: op
-      } = pp;
-      if (!cp && 0 === ip.length) return null;
-      const Sp = new Map(ip.map((pp => [pp.platform, pp]))),
-        xp = cp ? Ip.q : ip.map((pp => pp.platform));
-      return (0, Pp.jsx)("div", {
-        className: "PlayerProfileSocialLinks",
-        children: (0, Pp.jsx)("div", {
-          className: "PlayerProfileSocialLinksList",
-          children: xp.map((pp => (0, Pp.jsx)(Up, {
-            platform: pp,
-            link: Sp.get(pp),
-            editable: cp,
-            userContext: Op,
-            onLinksUpdated: op
-          }, pp)))
-        })
-      })
+    const yQ = jQ.unload;
+    jQ.unload = function() {
+      const QQ = this._src,
+        WQ = yQ.call(this);
+      if ("string" !== typeof QQ) return WQ;
+      const XQ = zQ.get(QQ);
+      return void 0 !== XQ && function(QQ) {
+        return !TQ._howls.some((WQ => WQ._src === QQ || "string" === typeof WQ._src && QQ.indexOf(WQ._src) >= 0))
+      }(QQ) && (zQ.delete(QQ), sQ -= XQ), WQ
     }
   },
-  4994: pp => {
-    pp.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQ0lEQVR4nGOws7P7D8Kmpqb/NTU1wTQymwGbAhANwwzIOmAYxQRkCXNzczBGtgrFBGQFKFZgsxtuAi67YY5HMQGbAgCIxWSBYHJzHAAAAABJRU5ErkJggg=="
+  5212: (QQ, WQ, XQ) => {
+    XQ.r(WQ), XQ.d(WQ, {
+      Howl: () => qQ.Howl,
+      Howler: () => qQ.Howler,
+      musicOutput: () => yQ,
+      readyAudioContext: () => VQ
+    });
+    var wQ, qQ = XQ(5216),
+      TQ = XQ(3699),
+      zQ = XQ(4969);
+    const sQ = qQ.Howler;
+
+    function FQ() {
+      var QQ, WQ;
+      if (sQ.ctx || !sQ.usingWebAudio || "undefined" === typeof AudioContext || !(0, zQ.f)()) return;
+      const XQ = navigator.audioSession;
+      let wQ;
+      "auto" === (null === XQ || void 0 === XQ ? void 0 : XQ.type) && (XQ.type = "ambient");
+      try {
+        wQ = new AudioContext({
+          sampleRate: 44100
+        })
+      } catch {
+        return
+      }
+      const qQ = wQ.createGain();
+      qQ.gain.setValueAtTime(sQ._muted ? 0 : null !== (QQ = sQ._volume) && void 0 !== QQ ? QQ : 1, wQ.currentTime), qQ.connect(wQ.destination), sQ.ctx = wQ, sQ.masterGain = qQ, null === (WQ = sQ._setup) || void 0 === WQ || WQ.call(sQ)
+    }
+    sQ._mobileUnloaded = !0;
+    const PQ = sQ.volume.bind(qQ.Howler);
+    sQ.volume = function() {
+      return FQ(), PQ(...arguments)
+    };
+    const gQ = sQ.mute.bind(qQ.Howler);
+    sQ.mute = QQ => (FQ(), gQ(QQ));
+    const JQ = qQ.Howl.prototype,
+      rQ = JQ.init;
+
+    function IQ() {
+      for (; sQ._html5AudioPool.length < sQ.html5PoolSize;) {
+        const QQ = new Audio;
+        QQ._unlocked = !0, sQ._releaseHtml5Audio(QQ)
+      }
+      for (const WQ of sQ._howls)
+        if (!WQ._webAudio)
+          for (const XQ of WQ._getSoundIds()) {
+            var QQ;
+            const wQ = null === (QQ = WQ._soundById(XQ)) || void 0 === QQ ? void 0 : QQ._node;
+            wQ && !wQ._unlocked && (wQ._unlocked = !0, wQ.load())
+          }
+    }
+    JQ.init = function(QQ) {
+      return FQ(), rQ.call(this, QQ)
+    }, (0, zQ.f)() && (sQ._unlockAudio = () => {
+      const QQ = sQ.ctx;
+      if (sQ._audioUnlocked || !QQ) return;
+      sQ.autoUnlock = !1;
+      const WQ = QQ.createBuffer(1, 1, 22050);
+      sQ._scratchBuffer = WQ;
+      const XQ = new AbortController;
+      let wQ = "afterPaint";
+      const qQ = () => {
+          var wQ;
+          if (sQ._audioUnlocked) return;
+          null === (wQ = sQ._autoResume) || void 0 === wQ || wQ.call(sQ);
+          const qQ = QQ.createBufferSource();
+          qQ.buffer = WQ, qQ.connect(QQ.destination), qQ.start(0), QQ.resume().catch((() => {})), qQ.onended = () => {
+            qQ.disconnect(0), sQ._audioUnlocked = !0, XQ.abort();
+            for (const QQ of sQ._howls) QQ._emit("unlock")
+          }
+        },
+        FQ = () => {
+          IQ(), qQ()
+        },
+        PQ = WQ => {
+          if (IQ(), "inTap" === wQ) {
+            if ("running" === QQ.state) return;
+            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), qQ()
+          } else "afterPaint" === wQ && (wQ = "queued", (0, TQ.c)(WQ.timeStamp, (() => {
+            wQ = "inTap", qQ()
+          })))
+        };
+      for (const TQ of ["touchstart", "touchend"]) document.addEventListener(TQ, FQ, {
+        capture: !0,
+        signal: XQ.signal
+      });
+      for (const TQ of zQ.d) document.addEventListener(TQ, PQ, {
+        capture: !0,
+        signal: XQ.signal
+      })
+    });
+    let jQ = 0;
+    const BQ = null === (wQ = sQ._autoSuspend) || void 0 === wQ ? void 0 : wQ.bind(qQ.Howler);
+
+    function yQ() {
+      VQ();
+      const {
+        ctx: QQ,
+        masterGain: WQ
+      } = sQ;
+      return QQ && WQ ? {
+        ctx: QQ,
+        destination: WQ,
+        holdAwake: QQ => {
+          var WQ, XQ;
+          (jQ += QQ ? 1 : -1, QQ) ? null === (WQ = sQ._autoResume) || void 0 === WQ || WQ.call(sQ): null === (XQ = sQ._autoSuspend) || void 0 === XQ || XQ.call(sQ)
+        },
+        wake: () => {
+          var WQ;
+          "running" !== QQ.state && (null === (WQ = sQ._autoResume) || void 0 === WQ || WQ.call(sQ), QQ.resume().catch((() => {})))
+        }
+      } : null
+    }
+
+    function VQ() {
+      var QQ;
+      (sQ.volume(), sQ.ctx && sQ.autoUnlock) && (null === (QQ = sQ._unlockAudio) || void 0 === QQ || QQ.call(sQ))
+    }
+    BQ && (sQ._autoSuspend = () => jQ > 0 ? qQ.Howler : BQ())
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

@@ -1,509 +1,344 @@
 export const id = 78;
 export const ids = [78];
 export const modules = {
-  4791: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Fi,
-      f: () => yc,
-      g: () => pc,
-      i: () => oc,
-      j: () => si,
-      m: () => ic,
-      p: () => fi,
-      q: () => ri,
-      u: () => Ei,
-      v: () => Wc,
-      x: () => Pc,
-      A: () => Zi,
-      C: () => Ti
-    });
-    var Op = cp(2963);
-    const op = Function.prototype.toString,
-      Ip = RegExp.prototype.exec,
-      Sp = Reflect.apply,
-      xp = Function.prototype.call,
-      Lp = Function.prototype.apply,
-      Yp = Function.prototype.bind,
-      Dp = Object.defineProperty,
-      Ap = Uint8Array;
-    let Pp, Wp;
-    try {
-      Pp = globalThis.crypto, Wp = void 0 === Pp || null === Pp ? void 0 : Pp.getRandomValues
-    } catch {}
-    const yp = "bloxdBindApply";
-    let Up;
-    try {
-      const pp = xp;
-      Dp(pp, yp, {
-        __proto__: null,
-        value: Yp,
-        configurable: !0
-      });
-      try {
-        Up = pp[yp](Lp)
-      } finally {
-        delete pp[yp]
-      }
-    } catch {}
-    const wp = 16,
-      vp = 256,
-      tp = 0,
-      Hp = 1,
-      dp = 2,
-      ep = 3;
-    let jp, kp = tp,
-      mp = Sp,
-      Rp = 0;
-
-    function qp(pp, ip) {
-      return pp === `function ${ip}() { [native code] }` || pp === `function ${ip}() {\n    [native code]\n}`
-    }
-    const Mp = 0,
-      Cp = 1,
-      Ep = 2;
-    let Xp = Mp;
-
-    function lp(pp, ip, cp) {
-      if (Xp === Ep && kp === Hp && ! function() {
-          const pp = jp;
-          return Rp >= vp && (mp(Wp, Pp, [pp]), Rp = 0), pp[Rp++] < 256 / wp
-        }()) return function(pp, ip, cp) {
-        return mp(pp, ip, cp ?? 0)
-      }(...arguments);
-      if (Xp === Mp || kp === dp) return Sp(pp, ip, cp);
-      let Op;
-      Xp = Mp;
-      try {
-        kp === tp && (kp = ep, kp = function() {
-          const pp = Sp(op, Sp, []);
-          if (qp(pp, "apply")) return dp;
-          if (null === Sp(Ip, /\(\.\.\.arguments\)/, [pp]) && null === Sp(Ip, /^function\s*\(\.\.\.[\w$]+\)/, [pp])) return dp;
-          if ("function" !== typeof Up || "function" !== typeof xp || "function" !== typeof Lp || "function" !== typeof Yp || "function" !== typeof Dp || "function" !== typeof Wp || "function" !== typeof Ap || !qp(Sp(op, xp, []), "call") || !qp(Sp(op, Lp, []), "apply") || !qp(Sp(op, Yp, []), "bind") || !qp(Sp(op, Dp, []), "defineProperty") || !qp(Sp(op, Wp, []), "getRandomValues") || !qp(Sp(op, Ap, []), "Uint8Array")) return dp;
-          const ip = Up,
-            cp = {},
-            Op = function(pp) {
-              return this === cp && pp === cp
-            };
-          try {
-            if (!0 !== ip(Op, cp, [cp])) return dp;
-            const pp = new Ap(vp);
-            ip(Wp, Pp, [pp]), jp = pp
-          } catch {
-            return dp
-          }
-          return mp = ip, Hp
-        }()), Op = Sp(pp, ip, cp)
-      } catch (yp) {
-        throw kp = dp, yp
-      }
-      return Xp = Ep, Op
-    }
-    let Qp = Sp;
-
-    function Jp() {
-      return (Qp === Sp ? 0 : 3) + Xp
-    }
-
-    function Bp() {
-      const pp = Jp();
-      return Qp = Sp, pp
-    }
-
-    function Np(pp) {
-      Qp = pp >= 3 ? lp : Sp, Xp = pp % 3
-    }
-    const Tp = Function.prototype.toString,
-      fp = Object.getOwnPropertyDescriptor,
-      bp = Object.prototype.hasOwnProperty,
-      hp = RegExp.prototype.exec,
-      ap = TextEncoder.prototype.encodeInto,
-      np = String.prototype.startsWith,
-      Fp = Number.prototype.toString,
-      gp = WeakMap.prototype.get,
-      Gp = WeakMap.prototype.set,
-      rp = /^function ([\w$ ]*)\(\) \{\s*\[native code\]\s*\}$/,
-      Zp = new TextEncoder,
-      zp = new Uint8Array(1024),
-      sp = 9999999,
-      Kp = /^(wh:[^#]+)#[abnps]\d{1,7}\.[0-9a-z]{1,7}$/,
-      Vp = new WeakMap;
-
-    function ii(pp) {
-      if ("function" !== typeof pp) return "#a0.0";
-      const ip = Qp(gp, Vp, [pp]);
-      if (void 0 !== ip) return ip;
-      const cp = Qp(Tp, pp, []),
-        Op = cp.length > sp ? sp : cp.length,
-        op = `#${function(pp,ip){const cp=Qp(hp,rp,[ip]);if(null===cp)return"s";const Op=cp[1];if("ProxyObject"===Op)return"p";if(""!==Op)return Qp(np,Op,["bound "])?"b":"n";try{const ip=fp(pp,"name"),cp=void 0!==ip&&Qp(bp,ip,["value"])?ip.value:void 0;return"string"===typeof cp&&Qp(np,cp,["bound "])?"b":"p"}catch{return"p"}}(pp,cp)}${Op}.${function(pp){const{written:ip}=Qp(ap,Zp,[pp,zp]);let cp=2166136261;for(let Op=0;Op<ip;Op++)cp=(cp^zp[Op])>>>0,cp=cp+(cp<<1)+(cp<<4)+(cp<<7)+(cp<<8)+(cp<<24)>>>0;return Qp(Fp,cp,[36])}(cp)}`;
-      return Qp(Gp, Vp, [pp, op]), op
-    }
-
-    function ci(pp) {
-      const ip = Qp(hp, Kp, [pp]);
-      return null === ip ? pp : ip[1]
-    }
-    var Oi = cp(2980);
-    const oi = Function.prototype.toString,
-      Ii = Object.getOwnPropertyDescriptor,
-      Si = RegExp.prototype.exec,
-      xi = Object.prototype.hasOwnProperty,
-      Li = Set.prototype.has,
-      Yi = WeakMap.prototype.get,
-      Di = WeakMap.prototype.set,
-      Ai = Reflect.get,
-      Pi = Object.getPrototypeOf,
-      Wi = "undefined" === typeof WebAssembly ? void 0 : WebAssembly;
-
-    function yi(pp, ip, cp) {
-      return {
-        code: pp,
-        holder: ip,
-        key: cp,
-        ...arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-        native: new RegExp(`^function (get )?${cp}\\(\\) \\{\\s*\\[native code\\]\\s*\\}$`)
-      }
-    }
-
-    function Ui() {
-      return Wi
-    }
-    const wi = Wi?.Instance.prototype,
-      vi = Wi?.Memory.prototype;
-
-    function ti() {
-      return vi
-    }
-    let Hi, di;
-    try {
-      const pp = globalThis.crypto,
-        ip = pp?.subtle;
-      Hi = pp ? Pi(pp) : void 0, di = ip ? Pi(ip) : void 0
-    } catch {}
-
-    function ei(pp, ip) {
-      for (let cp = pp; void 0 !== cp && null !== cp; cp = Pi(cp)) {
-        const pp = Ii(cp, ip);
-        if (pp) return pp
-      }
-    }
-    const ui = [yi("in", Ui, "instantiate", {
-      tier: "weighted",
-      onNamespace: !0
-    }), yi("is", Ui, "instantiateStreaming", {
-      tier: "weighted",
-      onNamespace: !0
-    }), yi("co", Ui, "compile", {
-      tier: "weighted",
-      onNamespace: !0
-    }), yi("cs", Ui, "compileStreaming", {
-      tier: "weighted",
-      onNamespace: !0
-    }), yi("mo", Ui, "Module", {
-      isConstructor: !0,
-      tier: "punished",
-      onNamespace: !0
-    }), yi("it", Ui, "Instance", {
-      isConstructor: !0,
-      tier: "punished",
-      onNamespace: !0
-    }), yi("me", Ui, "Memory", {
-      isConstructor: !0,
-      tier: "punished",
-      onNamespace: !0
-    }), yi("ex", (function() {
-      return wi
-    }), "exports", {
-      isGetter: !0,
-      tier: "punished"
-    }), yi("bu", ti, "buffer", {
-      isGetter: !0,
-      tier: "punished"
-    }), yi("gr", ti, "grow", {
-      tier: "punished"
-    }), yi("rc", (function() {
-      return "undefined" === typeof Response ? void 0 : Response.prototype
-    }), "clone"), yi("cr", (function() {
-      return globalThis
-    }), "crypto", {
-      isGetter: !0,
-      tier: "punished",
-      inSecureContext: !0
-    }), yi("su", (function() {
-      return Hi
-    }), "subtle", {
-      isGetter: !0,
-      tier: "punished",
-      inSecureContext: !0
-    }), yi("dg", (function() {
-      return di
-    }), "digest", {
-      tier: "punished",
-      inSecureContext: !0
-    })];
-
-    function ji(pp) {
-      let ip;
-      try {
-        const cp = Ai(globalThis, pp);
-        ip = "function" === typeof cp ? cp.prototype : void 0
-      } catch {}
-      return () => ip
-    }
-
-    function ki(pp, ip, cp) {
-      return cp.map((cp => yi(pp, ip, cp)))
-    }
-    const mi = yi("rx", ji("HTMLCanvasElement"), "getContext"),
-      Ri = ["createShader", "shaderSource", "compileShader", "createProgram", "linkProgram", "useProgram", "drawArrays", "drawElements", "depthFunc", "depthMask", "enable", "disable", "blendFuncSeparate", "colorMask"],
-      qi = {
-        webgpu: [...ki("gd", ji("GPUDevice"), ["createShaderModule", "createRenderPipeline", "createCommandEncoder"]), ...ki("gq", ji("GPUQueue"), ["submit", "writeBuffer"]), ...ki("ge", ji("GPUCommandEncoder"), ["beginRenderPass", "finish"]), ...ki("gp", ji("GPURenderPassEncoder"), ["setPipeline", "setBindGroup", "draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect", "executeBundles"]), mi],
-        webgl: [...ki("g2", ji("WebGL2RenderingContext"), [...Ri, "drawArraysInstanced", "drawElementsInstanced"]), mi],
-        webgl1: [...ki("g1", ji("WebGLRenderingContext"), Ri), mi]
-      };
-    let Mi = [];
-    const Ci = new WeakMap;
-
-    function Ei(pp, ip) {
-      const cp = Bp();
-      try {
-        Qp(Di, Ci, [pp, ip])
-      } finally {
-        Np(cp)
-      }
-    }
-
-    function Xi(pp) {
-      try {
-        const ip = Dc(pp),
-          cp = Qp(Yi, Ci, [ip]);
-        return Oc(cp, pp) ? li(pp, !0) : `${li(pp,!1)}${ii(cp??ip)}`
-      } catch {
-        return `${li(pp,!1)}${ii(void 0)}`
-      }
-    }
-
-    function li(pp, ip) {
-      let {
-        code: cp,
-        key: Op
-      } = pp;
-      return `wh:${cp}${ip?"-dbg":""}:${Op}`
-    }
-
-    function Qi(pp) {
-      return Object.values(qi).flatMap((ip => ip.map((ip => li(ip, pp)))))
-    }
-    const Ji = new Set(Qi(!0)),
-      Bi = new Set([...Qi(!1), ...Ji]),
-      Ni = li(mi, !1);
-
-    function Ti(pp) {
-      Mi = qi[pp]
-    }
-
-    function fi(pp) {
-      const ip = Bp();
-      try {
-        return bi(pp) || bi(ci(pp))
-      } finally {
-        Np(ip)
-      }
-    }
-
-    function bi(pp) {
-      return Qp(Li, Bi, [pp])
-    }
-
-    function ai(pp) {
-      return new Set(ui.filter((ip => ip.tier === pp)).map((pp => `wh:${pp.code}`)))
-    }
-    const ni = ai("punished"),
-      Fi = !1,
-      gi = new Set(Oi.e),
-      Gi = ai("weighted");
-
-    function ri(pp) {
-      const ip = Bp();
-      try {
-        return zi(ci(pp))
-      } finally {
-        Np(ip)
-      }
-    }
-
-    function Zi(pp) {
-      const ip = Bp();
-      try {
-        return ci(pp)
-      } finally {
-        Np(ip)
-      }
-    }
-
-    function zi(pp) {
-      return Qp(Li, Gi, [pp])
-    }
-
-    function si(pp) {
-      const ip = Bp();
-      try {
-        return Ki(pp)
-      } finally {
-        Np(ip)
-      }
-    }
-
-    function Ki(pp) {
-      return Qp(Li, gi, [pp])
-    }
-
-    function Vi(pp) {
-      return "wb" === pp || Qp(Li, ni, [pp])
-    }
-
-    function pc(pp) {
-      const ip = Bp();
-      try {
-        return Vi(pp) || Ki(pp)
-      } finally {
-        Np(ip)
-      }
-    }
-
-    function ic(pp) {
-      const ip = Bp();
-      try {
-        return "wb" === pp || Fi && Vi(pp)
-      } finally {
-        Np(ip)
-      }
-    }
-
-    function cc(pp, ip) {
-      let {
-        isGetter: cp
-      } = ip;
-      const Op = Ii(pp, cp ? "get" : "value");
-      return void 0 === Op ? void 0 : Op.value
-    }
-
-    function Oc(pp, ip) {
-      let {
-        isConstructor: cp,
-        native: Op
-      } = ip;
-      return "function" === typeof pp && (!(!cp && Qp(xi, pp, ["prototype"])) && null !== Qp(Si, Op, [Qp(oi, pp, [])]))
-    }
-
-    function oc(pp, ip) {
-      return Oc(pp, yi("", (() => {}), ip, arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? {
-        isConstructor: !0
-      } : {}))
-    }
-    let Ic = null,
-      Sc = !1;
-
-    function xc() {
-      try {
-        return globalThis.WebAssembly === Wi
-      } catch {
-        return !1
-      }
-    }
-
-    function Lc(pp) {
-      try {
-        return function(pp) {
-          const {
-            holder: ip,
-            key: cp,
-            onNamespace: Op,
-            inSecureContext: op
-          } = pp, Ip = ip(), Sp = ei(Ip, cp);
-          if (!Sp) return !(op && !0 === globalThis.isSecureContext);
-          const xp = cc(Sp, pp);
-          if (!Oc(xp, pp)) return !1;
-          if (Op) {
-            const ip = globalThis.WebAssembly;
-            if (ip !== Ip && null !== ip && ("object" === typeof ip || "function" === typeof ip)) {
-              const Op = Ai(ip, cp);
-              return Op === xp || void 0 === Op || Oc(Op, pp)
-            }
-          }
-          return !0
-        }(pp)
-      } catch {
-        return !1
-      }
-    }
-
-    function Yc(pp) {
-      const ip = `wh:${pp.code}`;
-      if ("punished" === pp.tier) return ip;
-      try {
-        return `${ip}${ii(Dc(pp))}`
-      } catch {
-        return `${ip}${ii(void 0)}`
-      }
-    }
-
-    function Dc(pp) {
-      const ip = ei(pp.holder(), pp.key),
-        cp = void 0 === ip ? void 0 : cc(ip, pp);
-      return pp.onNamespace && !xc() && Oc(cp, pp) ? Ai(globalThis.WebAssembly, pp.key) : cp
-    }
-
-    function Ac(pp) {
-      if (Vi(pp)) return 5;
-      const ip = ci(pp);
-      return zi(ip) ? 4 : Ki(pp) ? 3 : bi(ip) ? function(pp) {
-        return Qp(Li, Ji, [pp])
-      }(ip) ? -1 : ip === Ni ? 0 : 1 : 2
-    }
-
-    function Pc() {
-      const pp = function() {
-        const pp = Jp();
-        return kp === tp || kp === Hp ? (Qp = lp, Xp = Cp) : Qp = Sp, pp
-      }();
-      try {
-        if (null === Ic || !Vi(Ic)) {
-          const pp = function() {
-            if (void 0 === Wi) return null;
-            let pp = xc() ? null : "wh:wa";
-            const ip = ip => {
-              null !== ip && (null === pp || Ac(ip) > Ac(pp)) && (pp = ip)
-            };
-            for (let cp = 0; cp < ui.length; cp++) {
-              const pp = ui[cp];
-              void 0 === pp || Lc(pp) || ip(Yc(pp))
-            }
-            ip((0, Oi.p)());
-            for (let cp = 0; cp < Mi.length; cp++) {
-              const pp = Mi[cp];
-              void 0 === pp || Lc(pp) || ip(Xi(pp))
-            }
-            return pp
-          }();
-          (null === Ic || null !== pp && Ac(pp) > Ac(Ic)) && (Ic = pp)
+  37334: (QQ, WQ, XQ) => {
+    if (XQ.d(WQ, {
+        c: () => FQ,
+        e: () => qQ,
+        h: () => zQ,
+        i: () => TQ,
+        l: () => UQ,
+        m: () => VQ
+      }), 41 == XQ.j) var wQ = XQ(37343);
+    const qQ = ["Wood", "Stone", "Iron", "Gold", "Diamond", "Moonstone", "Magmasteel", "Sanguine", "Astral"],
+      TQ = ["Blade", "Guard", "Handle"],
+      zQ = {
+        Wood: {
+          material: "Wood",
+          baseSword: "Wood Sword",
+          value: 1,
+          epithet: "Timber",
+          palette: ["#b88a52", "#7d5a32", "#3d2a14"],
+          trait: null,
+          bladeDamage: 0,
+          guardReduction: 0,
+          handleCooldown: 1,
+          handleKnockback: 0,
+          handleReach: 0
+        },
+        Stone: {
+          material: "Stone",
+          baseSword: "Stone Sword",
+          value: 1,
+          epithet: "Flint",
+          palette: ["#a3a3a3", "#6e6e6e", "#333333"],
+          trait: null,
+          bladeDamage: .03,
+          guardReduction: .02,
+          handleCooldown: .98,
+          handleKnockback: .05,
+          handleReach: 0
+        },
+        Iron: {
+          material: "Iron",
+          baseSword: "Iron Sword",
+          value: 2,
+          epithet: "Ironclad",
+          palette: ["#e6e6e6", "#a8a8a8", "#444444"],
+          trait: "defence",
+          bladeDamage: .06,
+          guardReduction: .05,
+          handleCooldown: .95,
+          handleKnockback: .1,
+          handleReach: 0
+        },
+        Gold: {
+          material: "Gold",
+          baseSword: "Gold Sword",
+          value: 2,
+          epithet: "Gilded",
+          palette: ["#ffe766", "#e0a91d", "#6b4a07"],
+          trait: "coins",
+          bladeDamage: .07,
+          guardReduction: .04,
+          handleCooldown: .94,
+          handleKnockback: .05,
+          handleReach: 0
+        },
+        Diamond: {
+          material: "Diamond",
+          baseSword: "Diamond Sword",
+          value: 4,
+          epithet: "Brilliant",
+          palette: ["#8ff5ec", "#2fbcb0", "#0d4f4a"],
+          trait: "crit",
+          bladeDamage: .12,
+          guardReduction: .07,
+          handleCooldown: .92,
+          handleKnockback: .1,
+          handleReach: 0
+        },
+        Moonstone: {
+          material: "Moonstone",
+          baseSword: "Moonstone Sword",
+          value: 4,
+          epithet: "Moonlit",
+          palette: ["#d9d2ff", "#8f7fe0", "#352a73"],
+          trait: "bossBane",
+          bladeDamage: .15,
+          guardReduction: .08,
+          handleCooldown: .9,
+          handleKnockback: .1,
+          handleReach: .25
+        },
+        Magmasteel: {
+          material: "Magmasteel",
+          baseSword: "Magmasteel Sword",
+          value: 8,
+          epithet: "Molten",
+          palette: ["#ffb347", "#e0461b", "#4f1208"],
+          trait: "firePool",
+          bladeDamage: .29,
+          guardReduction: .1,
+          handleCooldown: .88,
+          handleKnockback: .2,
+          handleReach: .35
+        },
+        Sanguine: {
+          material: "Sanguine",
+          baseSword: "Sanguine Sword",
+          value: 8,
+          epithet: "Crimson",
+          palette: ["#ff6b7a", "#b0172f", "#45040f"],
+          trait: "lifesteal",
+          bladeDamage: .29,
+          guardReduction: .1,
+          handleCooldown: .87,
+          handleKnockback: .15,
+          handleReach: .35
+        },
+        Astral: {
+          material: "Astral",
+          baseSword: "Astral Sword",
+          value: 10,
+          epithet: "Starforged",
+          palette: ["#9fd8ff", "#5a6bff", "#1c1550"],
+          trait: "starfall",
+          bladeDamage: .4,
+          guardReduction: .12,
+          handleCooldown: .83,
+          handleKnockback: .2,
+          handleReach: .5
         }
-      } finally {
-        Np(pp)
+      },
+      sQ = 4,
+      FQ = "Coal",
+      PQ = {
+        Blade: 1,
+        Guard: .6,
+        Handle: .4
+      },
+      gQ = 1.15,
+      JQ = 1.35,
+      rQ = .06,
+      IQ = {
+        defence: {
+          name: "Bulwark",
+          amount: .06,
+          describe: QQ => `${dQ(.06*QQ)} less damage taken`
+        },
+        coins: {
+          name: "Midas",
+          amount: 4,
+          describe: QQ => `Mobs you slay drop ${Math.round(4*QQ)}+ extra coins`
+        },
+        crit: {
+          name: "Keen Edge",
+          chance: .12,
+          amount: .6,
+          describe: QQ => `${dQ(.12*QQ)} chance to strike for +60% damage`
+        },
+        bossBane: {
+          name: "Bossbane",
+          amount: .2,
+          describe: QQ => `+${dQ(.2*QQ)} damage to bosses`
+        },
+        firePool: {
+          name: "Magma Pool",
+          chance: .15,
+          amount: .12,
+          cooldownMs: 3e3,
+          describe: QQ => `${dQ(.15*QQ)} chance to leave a fire pool under the mob that burns for 3s`
+        },
+        lifesteal: {
+          name: "Bloodthirst",
+          amount: .06,
+          describe: QQ => `Heal ${dQ(.06*QQ)} of the damage you deal`
+        },
+        starfall: {
+          name: "Starfall",
+          chance: .1,
+          amount: .6,
+          cooldownMs: 4e3,
+          describe: QQ => `${dQ(.1*QQ)} chance to call a falling star that hits nearby mobs and slows them`
+        }
+      },
+      jQ = {
+        eclipseField: {
+          name: "Eclipse Field",
+          description: "Right-click: slow every mob within 6 blocks for 3s",
+          cooldownMs: 25e3
+        },
+        starfall: {
+          name: "Meteor Shower",
+          description: "Right-click: call five falling stars around you",
+          cooldownMs: 3e4
+        },
+        magmaWave: {
+          name: "Magma Wave",
+          description: "Right-click: lay a line of fire pools ahead of you",
+          cooldownMs: 2e4
+        },
+        bloodPact: {
+          name: "Blood Pact",
+          description: "Right-click: heal 30% of your health",
+          cooldownMs: 4e4
+        },
+        moonDash: {
+          name: "Moon Dash",
+          description: "Right-click: dash forward, striking mobs you pass",
+          cooldownMs: 12e3
+        },
+        warcry: {
+          name: "Warcry",
+          description: "Right-click: deal 30% more damage for 8s",
+          cooldownMs: 35e3
+        },
+        quake: {
+          name: "Quake",
+          description: "Right-click: slam the ground, hurling mobs within 5 blocks",
+          cooldownMs: 18e3
+        },
+        gildedEdge: {
+          name: "Gilded Edge",
+          description: "Right-click: your next 5 hits deal 50% more damage",
+          cooldownMs: 25e3
+        }
+      },
+      BQ = 41 == XQ.j ? wQ.d : null,
+      yQ = "skyblock:forged:";
+
+    function VQ(QQ, WQ) {
+      return `${QQ} ${WQ}`
+    }
+    qQ.flatMap((QQ => TQ.map((WQ => VQ(QQ, WQ)))));
+
+    function DQ(QQ) {
+      let {
+        blade: WQ,
+        guard: XQ,
+        handle: wQ
+      } = QQ;
+      return `${yQ}${WQ.toLowerCase()}-${XQ.toLowerCase()}-${wQ.toLowerCase()}`
+    }
+
+    function pQ(QQ) {
+      if (! function(QQ) {
+          return "string" === typeof QQ && QQ.startsWith(yQ)
+        }(QQ)) return null;
+      const WQ = QQ.slice(yQ.length).split("-").map((QQ => qQ.find((WQ => WQ.toLowerCase() === QQ))));
+      return 3 !== WQ.length || WQ.includes(void 0) ? null : {
+        blade: WQ[0],
+        guard: WQ[1],
+        handle: WQ[2]
       }
     }
+    const GQ = new Map;
 
-    function Wc() {
-      Sc = !0
+    function UQ(QQ) {
+      var WQ;
+      let XQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : BQ;
+      const wQ = "string" === typeof QQ ? pQ(QQ) : QQ;
+      if (null === wQ) return null;
+      const qQ = DQ(wQ),
+        FQ = XQ === BQ ? GQ.get(qQ) : void 0;
+      if (void 0 !== FQ) return FQ;
+      const yQ = function(QQ, WQ) {
+        var XQ, wQ, qQ, FQ, BQ, yQ, VQ, pQ, GQ;
+        const {
+          blade: UQ,
+          guard: aQ,
+          handle: lQ
+        } = QQ, hQ = zQ, iQ = UQ === aQ && aQ === lQ, cQ = vQ((1 + hQ[UQ].bladeDamage) * (iQ ? 1 + rQ : 1)), AQ = null !== (XQ = WQ.damageMultiplier) && void 0 !== XQ ? XQ : cQ, RQ = null !== (wQ = WQ.cooldownMultiplier) && void 0 !== wQ ? wQ : hQ[lQ].handleCooldown, EQ = null !== (qQ = WQ.knockbackMultiplier) && void 0 !== qQ ? qQ : vQ(1 + hQ[lQ].handleKnockback), CQ = null !== (FQ = WQ.reachBonus) && void 0 !== FQ ? FQ : hQ[lQ].handleReach, uQ = null !== (BQ = WQ.damageReduction) && void 0 !== BQ ? BQ : hQ[aQ].guardReduction, LQ = null !== (yQ = WQ.traits) && void 0 !== yQ ? yQ : function(QQ) {
+          const WQ = {},
+            XQ = {};
+          for (const sQ of TQ) {
+            var wQ, qQ;
+            const TQ = zQ[bQ(QQ, sQ)].trait;
+            null !== TQ && (WQ[TQ] = (null !== (wQ = WQ[TQ]) && void 0 !== wQ ? wQ : 0) + PQ[sQ], XQ[TQ] = (null !== (qQ = XQ[TQ]) && void 0 !== qQ ? qQ : 0) + 1)
+          }
+          for (const TQ of Object.keys(WQ)) {
+            const QQ = 3 === XQ[TQ] ? JQ : 2 === XQ[TQ] ? gQ : 1;
+            WQ[TQ] = vQ(WQ[TQ] * QQ)
+          }
+          return WQ
+        }(QQ), kQ = null !== (VQ = WQ.ability) && void 0 !== VQ ? VQ : null, fQ = void 0 !== WQ.name, SQ = null !== (pQ = WQ.name) && void 0 !== pQ ? pQ : iQ ? `Pure ${UQ} Sword` : `${hQ[aQ].epithet} ${UQ} Sword`, tQ = null !== (GQ = WQ.lore) && void 0 !== GQ ? GQ : `Forged by the Forge Mother from a ${UQ.toLowerCase()} blade, ${aQ.toLowerCase()} guard and ${lQ.toLowerCase()} handle.`, oQ = function(QQ) {
+          let {
+            blade: WQ,
+            guard: XQ,
+            handle: wQ
+          } = QQ;
+          const qQ = zQ;
+          return sQ * (qQ[WQ].value + qQ[XQ].value + qQ[wQ].value)
+        }(QQ), eQ = hQ[UQ].value + hQ[aQ].value + hQ[lQ].value, nQ = fQ ? "Tier 5" : eQ <= 4 ? "Tier 1" : eQ <= 8 ? "Tier 2" : eQ <= 14 ? "Tier 3" : eQ <= 22 ? "Tier 4" : "Tier 5", xQ = [];
+        1 !== AQ && xQ.push(`${HQ(AQ-1)} damage`);
+        1 !== RQ && xQ.push(`${dQ(1/RQ-1)} faster strikes`);
+        1 !== EQ && xQ.push(`${HQ(EQ-1)} knockback`);
+        CQ > 0 && xQ.push(`+${CQ} reach`);
+        uQ > 0 && xQ.push(`${dQ(uQ)} less damage taken while held`);
+        const YQ = [];
+        for (const TQ of Object.keys(LQ)) YQ.push(`${IQ[TQ].name}: ${IQ[TQ].describe(LQ[TQ])}`);
+        null !== kQ && YQ.push(`${jQ[kQ].name}: ${jQ[kQ].description}`);
+        return xQ.push(...YQ), {
+          id: DQ(QQ),
+          parts: QQ,
+          baseSword: hQ[UQ].baseSword,
+          displayName: SQ,
+          lore: tQ,
+          properties: xQ,
+          effects: YQ,
+          named: fQ,
+          damageMultiplier: AQ,
+          cooldownMultiplier: RQ,
+          knockbackMultiplier: EQ,
+          reachBonus: CQ,
+          damageReduction: uQ,
+          traits: LQ,
+          ability: kQ,
+          coalCost: oQ,
+          enchantmentTier: nQ,
+          powerMultiplier: vQ(AQ / RQ)
+        }
+      }(wQ, null !== (WQ = XQ[qQ]) && void 0 !== WQ ? WQ : {});
+      return XQ === BQ && GQ.set(qQ, yQ), yQ
     }
 
-    function yc() {
-      if (Sc) return "wb";
-      if ((!(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0]) && Pc(), null !== Ic) return Ic;
-      if (void 0 === Wi) return "wn:unsupported";
-      const pp = (0, Op.r)();
-      return null === pp ? null : `wn:${pp}`
+    function bQ(QQ, WQ) {
+      return "Blade" === WQ ? QQ.blade : "Guard" === WQ ? QQ.guard : QQ.handle
+    }
+
+    function vQ(QQ) {
+      return Math.round(100 * QQ) / 100
+    }
+
+    function dQ(QQ) {
+      return `${Math.round(100*QQ)}%`
+    }
+
+    function HQ(QQ) {
+      return `${QQ>=0?"+":""}${dQ(QQ)}`
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

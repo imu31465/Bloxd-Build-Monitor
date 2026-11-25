@@ -1,786 +1,803 @@
 export const id = 112;
 export const ids = [112];
 export const modules = {
-  9030: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      default: () => ei
-    });
-    var Op = cp(1543),
-      op = cp(25),
-      Ip = cp(4747),
-      Sp = cp(62),
-      xp = cp(1476);
-    var Lp = cp(1956),
-      Yp = cp(1538),
-      Dp = cp(1372),
-      Ap = cp(1201),
-      Pp = cp(156),
-      Wp = cp(195),
-      yp = cp(1014),
-      Up = cp(1024),
-      wp = cp(1234),
-      vp = cp(2420),
-      tp = cp(1520),
-      Hp = cp(1149),
-      dp = cp(9034),
-      ep = cp(1563);
+  5359: (QQ, WQ, XQ) => {
+    function wQ(QQ) {
+      return wQ = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(QQ) {
+        return typeof QQ
+      } : function(QQ) {
+        return QQ && "function" == typeof Symbol && QQ.constructor === Symbol && QQ !== Symbol.prototype ? "symbol" : typeof QQ
+      }, wQ(QQ)
+    }
+    Object.defineProperty(WQ, "__esModule", {
+      value: !0
+    }), WQ.default = void 0;
+    var qQ = JQ(XQ(1081)),
+      TQ = function(QQ, WQ) {
+        if (!WQ && QQ && QQ.__esModule) return QQ;
+        if (null === QQ || "object" !== wQ(QQ) && "function" !== typeof QQ) return {
+          default: QQ
+        };
+        var XQ = gQ(WQ);
+        if (XQ && XQ.has(QQ)) return XQ.get(QQ);
+        var qQ = {},
+          TQ = Object.defineProperty && Object.getOwnPropertyDescriptor;
+        for (var zQ in QQ)
+          if ("default" !== zQ && Object.prototype.hasOwnProperty.call(QQ, zQ)) {
+            var sQ = TQ ? Object.getOwnPropertyDescriptor(QQ, zQ) : null;
+            sQ && (sQ.get || sQ.set) ? Object.defineProperty(qQ, zQ, sQ) : qQ[zQ] = QQ[zQ]
+          } qQ.default = QQ, XQ && XQ.set(QQ, qQ);
+        return qQ
+      }(XQ(61)),
+      zQ = JQ(XQ(5318)),
+      sQ = JQ(XQ(5368)),
+      FQ = XQ(5373),
+      PQ = XQ(1145);
 
-    function jp(pp, ip) {
-      const cp = !0 === ip.debugResult.gameRefused,
-        Op = cp || ip.code === Pp.k.REQUEST_TO_MATCHMAKING ? (0, dp.h)(ip.message) : null;
-      if (null !== Op) return kp(pp, pp((0, dp.o)(Op)), pp(dp.l[Op])), !0;
-      if (cp) return async function(pp) {
-        const {
-          gameNameWithVariation: ip,
-          lobbyName: cp,
-          shownLobbyName: Op
-        } = Lp.gameBridge.latest("connectedGame"), op = "classic" === ip && (0, wp.G)(cp) ? Op : await (0, vp.b)(pp, ip, cp);
-        return "" !== op ? pp("general:cantJoinGame", {
-          game: op
-        }) : pp("general:cantJoinThisGame")
-      }(pp).then((cp => {
-        kp(pp, cp, ip.message)
-      })), !0;
-      const {
-        joinFailure: op
-      } = ip.debugResult, Ip = "refused" === (null === op || void 0 === op ? void 0 : op.at) ? op.code : null;
-      return Ip === Wp.e.schematicNotPublished.code ? (async function(pp, ip) {
-        const cp = (0, yp.o)(Lp.gameBridge.latest("connectedGame").gameNameWithVariation),
-          Op = await async function(pp) {
-            try {
-              const ip = await tp.b.getGame(await Hp.userContextManager.getCurrentUserContext(), pp, !0);
-              return ip.gamePublished ? null : ip.name
-            } catch (ip) {
-              return ip instanceof Pp.e && 435 === ip.httpCode || console.error(`Failed to get unpublished game ${pp}`, ip), null
-            }
-          }(cp);
-        if (null === Op) return void kp(pp, pp("general:cantJoinThisGame"), ip);
-        const op = await Dp.NotificationProvider.showPromptPopup({
-          icon: "rocket-launch",
-          title: pp("studio:gameNotPublishedTitle", {
-            game: Op
-          }),
-          confirmText: pp("studio:publishInStudio"),
-          cancelText: pp("general:cancel")
-        }).getResult();
-        !0 === op && (0, Yp.navigatePreserveSearch)((0, ep.n)((0, Up.e)(cp), "manage"))
-      }(pp, ip.message), !0) : Ip === Wp.e.schematicBanned.code && (kp(pp, pp("general:cantJoinThisGame"), ip.message), !0)
+    function gQ(QQ) {
+      if ("function" !== typeof WeakMap) return null;
+      var WQ = new WeakMap,
+        XQ = new WeakMap;
+      return (gQ = function(QQ) {
+        return QQ ? XQ : WQ
+      })(QQ)
     }
 
-    function kp(pp, ip, cp) {
-      Dp.NotificationProvider.showPromptPopup({
-        icon: "lock",
-        title: ip,
-        subtitle: cp,
-        confirmText: pp("general:ok"),
-        cancelText: ""
-      })
-    }
-    var mp = cp(4677),
-      Rp = cp(34),
-      qp = cp(1255),
-      Mp = cp(1765),
-      Cp = cp(104),
-      Ep = cp(1334),
-      Xp = cp(1466),
-      lp = cp(4615),
-      Qp = cp(4456),
-      Jp = cp(4407),
-      Bp = cp(3335),
-      Np = cp(1356),
-      Tp = cp(768),
-      fp = cp(1236),
-      bp = cp(3412),
-      hp = cp(3246),
-      ap = cp(1380),
-      np = cp(1361),
-      Fp = cp(5103),
-      gp = cp(9041),
-      Gp = cp(3050),
-      rp = cp(1112);
-
-    function Zp(pp) {
-      let {
-        onApply: ip,
-        onSkip: cp
-      } = pp;
-      const {
-        t: Op
-      } = (0, Ap.H)();
-      return (0, Sp.useEffect)((() => {
-        Gp.e.skipPlayWait()
-      }), []), (0, rp.jsx)(ap.j, {
-        icon: "download",
-        title: "customTexturePack:downloadTitle",
-        subtitle: (0, rp.jsxs)("div", {
-          className: "CustomTexturePackDownloaderSubtitleText",
-          children: [Op("customTexturePack:downloadPrompt"), (0, rp.jsx)("div", {
-            className: "CustomTexturePackDownloaderWarningText",
-            children: Op("customTexturePack:authorWarning")
-          }), (0, rp.jsx)("div", {
-            className: "CustomTexturePackDownloaderSecondaryText",
-            children: Op("customTexturePack:existingPackSaved")
-          })]
-        }),
-        confirm: {
-          text: "general:apply",
-          onClick: ip
-        },
-        cancel: {
-          text: "customTexturePack:skip",
-          onClick: cp
-        }
-      })
-    }
-    async function zp() {
-      let pp = !1;
-      const ip = Dp.NotificationProvider.showCustomPopup({
-        body: ip => (0, rp.jsx)(Zp, {
-          onApply: () => {
-            pp = !0, ip()
-          },
-          onSkip: ip
-        }),
-        disableExitButton: !0,
-        disablePressBackgroundToClose: !0
-      });
-      return await ip.getResult(), pp
-    }
-    let sp = {
-      wanted: !1
-    };
-    let Kp = null;
-
-    function Vp(pp) {
-      pp.setGamePackConfirm(zp), Kp = pp
-    }
-    var ii = cp(3587);
-
-    function ci(pp) {
-      let {
-        schematicId: ip,
-        texturePackKey: cp,
-        onClose: Op
-      } = pp;
-      const [op, Ip] = (0, Sp.useState)("prompt"), [xp, Lp] = (0, Sp.useState)(null), Yp = (0, ii.b)();
-
-      function Dp() {
-        Op()
+    function JQ(QQ) {
+      return QQ && QQ.__esModule ? QQ : {
+        default: QQ
       }
-      return "prompt" === op ? (0, rp.jsx)(Zp, {
-        onApply: async function() {
-          Ip("downloading");
-          try {
-            const pp = await async function(pp, ip) {
-              const cp = await (0, Fp.d)(ip);
-              if (cp) return {
-                pack: cp,
-                key: ip
-              };
-              const Op = await Hp.userContextManager.getCurrentUserContext(),
-                op = (await tp.b.getGame(Op, pp, !0)).customTexturePackKey;
-              if (!op) return null;
-              const Ip = await (0, Fp.d)(op);
-              if (!Ip) throw new Error("The texture pack could not be found");
-              return {
-                pack: Ip,
-                key: op
+    }
+
+    function rQ(QQ, WQ) {
+      var XQ = "undefined" !== typeof Symbol && QQ[Symbol.iterator] || QQ["@@iterator"];
+      if (!XQ) {
+        if (Array.isArray(QQ) || (XQ = function(QQ, WQ) {
+            if (!QQ) return;
+            if ("string" === typeof QQ) return IQ(QQ, WQ);
+            var XQ = Object.prototype.toString.call(QQ).slice(8, -1);
+            "Object" === XQ && QQ.constructor && (XQ = QQ.constructor.name);
+            if ("Map" === XQ || "Set" === XQ) return Array.from(QQ);
+            if ("Arguments" === XQ || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(XQ)) return IQ(QQ, WQ)
+          }(QQ)) || WQ && QQ && "number" === typeof QQ.length) {
+          XQ && (QQ = XQ);
+          var wQ = 0,
+            qQ = function() {};
+          return {
+            s: qQ,
+            n: function() {
+              return wQ >= QQ.length ? {
+                done: !0
+              } : {
+                done: !1,
+                value: QQ[wQ++]
               }
-            }(ip, cp);
-            if (!Yp.current) return;
-            if (!pp) return void Op();
-            if ((0, bp.m)(pp.pack)) return void Ip("refused");
-            hp.d.setFromJson(pp.pack, "customGame"), await hp.d.saveTemporaryTexturePack(pp.key), Yp.current && (0, Mp.reloadBloxd)()
-          } catch (pp) {
-            Lp(pp instanceof Error ? pp.message : String(pp)), Ip("error")
+            },
+            e: function(QQ) {
+              throw QQ
+            },
+            f: qQ
           }
-        },
-        onSkip: Dp
-      }) : "downloading" === op ? (0, rp.jsx)(ap.j, {
-        icon: "download",
-        title: "customTexturePack:downloading",
-        subtitle: (0, rp.jsx)("div", {
-          className: "CustomTexturePackDownloaderLogoLoaderContainer",
-          children: (0, rp.jsx)(np.c, {
-            showFace: !0
-          })
-        })
-      }) : "error" === op ? (0, rp.jsx)(ap.j, {
-        icon: "face-worried",
-        title: "customTexturePack:errorTitle",
-        subtitle: xp,
-        confirm: {
-          text: "customTexturePack:refreshPage",
-          onClick: () => {
-            window.location.reload()
-          }
-        },
-        cancel: {
-          text: "customTexturePack:skip",
-          onClick: Dp
         }
-      }) : "refused" === op ? (0, rp.jsx)(ap.j, {
-        icon: "face-worried",
-        title: "customTexturePack:cantApplyTitle",
-        subtitle: "customTexturePack:gamePackHasExternalUrls",
-        confirm: {
-          text: "general:continue",
-          onClick: Dp
-        }
-      }) : null
-    }
-    var Oi = cp(9049),
-      oi = cp(4389),
-      Ii = cp(1803),
-      Si = cp(3025),
-      xi = cp(4398),
-      Li = cp(2169),
-      Yi = cp(9056);
-    var Di = cp(4770),
-      Ai = cp(1317),
-      Pi = cp(1758),
-      Wi = cp(657),
-      yi = cp(732),
-      Ui = cp(1819);
-
-    function wi() {
-      const pp = op.c.get("clientEscMenuOptions");
-      Lp.gameBridge.send("setLookSensitivity", op.c.get("isTouchScreen") ? (0, yi.n)(pp) : pp.mouseSensitivity)
-    }
-    const vi = 45e3;
-
-    function ti(pp) {
-      const ip = pp.asError();
-      if (ip.debugResult.OO || (0, Pi.e)(ip.debugResult.error)) return;
-      console.log("Failed to join lobby:", ip.message);
-      const cp = "timedOut" === ip.debugResult.gameServerUnreachable;
-      (0, Si.reportClientError)("matchmake_failed", ip.message, cp ? "CONNECT_TO_GAME_SERVER_TIMEOUT" : Pp.k[ip.code]);
-      const {
-        error: Op
-      } = ip.debugResult;
-      if (Op instanceof Bp.l && "default" !== Op.packSource) {
-        const pp = (0, xi.f)("js", "game" === Op.packSource ? "game" : "page", (0, xi.g)(Op));
-        (0, Si.reportClientError)("texture_pack", Op, pp)
+        throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
       }
-    }
-
-    function Hi(pp) {
-      if (null === pp || void 0 === pp || !pp.isError()) return !1;
-      const ip = pp.asError();
-      return ip.code === Pp.k.REQUEST_TO_MATCHMAKING && !(0, Pi.e)(ip.debugResult.error)
-    }
-    async function di(pp, ip, cp) {
-      const Op = (0, Di.M)(ip);
-      async function Sp(pp, ip, cp, Op) {
-        var Sp;
-        if (Op.aborted) return null;
-        null === op.c.get("gameEntrySource") && (0, op.k)("directPlayUrl"), Wi.z && (0, gp.f)().catch((() => {})), op.c.set({
-          gameState: "findingLobby"
-        }), Rp.m.GA("loadingScreenState", "loadingPage:findingLobby");
-        const xp = await Hp.userContextManager.getCurrentUserContext();
-        Lp.gameBridge.send("setRequestedGame", {
-          gameNameWithVariation: ip,
-          discordContext: pp instanceof fp.e ? pp.getSerialisableParams() : null
-        }), (0, Ii.i)(null !== (Sp = Gp.e.playInputAt()) && void 0 !== Sp ? Sp : performance.now());
-        const Yp = await async function(pp, ip, cp, Op, op) {
+      var TQ, zQ = !0,
+        sQ = !1;
+      return {
+        s: function() {
+          XQ = XQ.call(QQ)
+        },
+        n: function() {
+          var QQ = XQ.next();
+          return zQ = QQ.done, QQ
+        },
+        e: function(QQ) {
+          sQ = !0, TQ = QQ
+        },
+        f: function() {
           try {
-            await (0, Ui.k)(Ip.reqLibsLoadedPromise, vi, "Required libraries timed out")
-          } catch (Sp) {
-            const pp = Sp instanceof Ui.h ? `Required libraries still loading after ${vi/1e3} s: ${(0,Ip.requiredLibsPending)().join(", ")}` : Sp.toString();
-            return qp.d.errorWithCode(pp, Pp.k.LOAD_REQUIRED_LIBS, {
-              error: Sp,
-              severity: "medium"
-            })
+            zQ || null == XQ.return || XQ.return()
+          } finally {
+            if (sQ) throw TQ
           }
-          return Rp.m.GA("matchmakeAndPlayStepCompleted", {
-            step: Pp.k.LOAD_REQUIRED_LIBS,
-            totalSubSteps: 1
-          }), (0, Ip.matchmakeAndPlayMaybeUnloaded)(pp, ip, cp, Op, op)
-        }(pp, ip, cp, xp, Op), Dp = Yp.isError() ? Yp.asError() : null;
-        if (Op.aborted) return Dp && ti(Yp), Lp.gameBridge.send("leaveGame", {
-          reloadPath: null
-        }), null;
-        if (null !== Dp && void 0 !== Dp && Dp.debugResult.OO) return console.log("Join cancelled:", Dp.message), null;
-        if (Dp) return Yp;
-        const {
-          gameNameWithVariation: Ap,
-          lobbyName: Wp
-        } = Yp.getValue();
-        return wi(), (0, Ai.I)().setGameViewShown(!0), xp.recordJoin(Ap, Wp), (0, Ep.E)(), Yp
+        }
       }
-      return Op && (0, op.k)("updateRejoin"), (0, Li.l)((async op => {
+    }
+
+    function IQ(QQ, WQ) {
+      (null == WQ || WQ > QQ.length) && (WQ = QQ.length);
+      for (var XQ = 0, wQ = new Array(WQ); XQ < WQ; XQ++) wQ[XQ] = QQ[XQ];
+      return wQ
+    }
+
+    function jQ(QQ, WQ) {
+      for (var XQ = 0; XQ < WQ.length; XQ++) {
+        var wQ = WQ[XQ];
+        wQ.enumerable = wQ.enumerable || !1, wQ.configurable = !0, "value" in wQ && (wQ.writable = !0), Object.defineProperty(QQ, wQ.key, wQ)
+      }
+    }
+
+    function BQ(QQ, WQ) {
+      return BQ = Object.setPrototypeOf || function(QQ, WQ) {
+        return QQ.__proto__ = WQ, QQ
+      }, BQ(QQ, WQ)
+    }
+
+    function yQ(QQ) {
+      var WQ = function() {
+        if ("undefined" === typeof Reflect || !Reflect.construct) return !1;
+        if (Reflect.construct.sham) return !1;
+        if ("function" === typeof Proxy) return !0;
         try {
-          var Ip;
-          let xp = pp,
-            Lp = await Sp(xp, ip, cp, op);
-          for (let pp = 0; Op && pp < Di.l && (Hi(Lp) && await (0, Di.N)((0, Di.x)(pp), op)); pp++) xp = (0, Di.z)(xp, pp + 1, "string" === typeof xp && (0, wp.I)(xp)), Lp = await Sp(xp, ip, cp, op);
-          return null !== (Ip = Lp) && void 0 !== Ip && Ip.isError() && ti(Lp), Lp
-        } catch (xp) {
-          if ((0, Si.reportClientError)("matchmake_failed", xp, "unexpected"), Lp.gameBridge.send("leaveGame", {
-              reloadPath: op.aborted ? null : "/"
-            }), op.aborted) return null;
-          throw xp
+          return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], (function() {}))), !0
+        } catch (QQ) {
+          return !1
         }
-      }), (async pp => {
-        var cp;
-        if (Op) return;
-        const op = (0, Ep.z)();
-        null !== op && (await op, pp.aborted) || (null !== (cp = Tp.c[ip]) && void 0 !== cp && cp.playAdBeforeMatchmaking ? (Gp.e.skipPlayWait(), await new Promise((pp => {
-          (0, Ep.Z)((() => {
-            pp(!0)
-          }), "video_start")
-        }))) : (0, Ep.Z)((() => {}), "video_start"))
-      }))
+      }();
+      return function() {
+        var XQ, qQ = DQ(QQ);
+        if (WQ) {
+          var TQ = DQ(this).constructor;
+          XQ = Reflect.construct(qQ, arguments, TQ)
+        } else XQ = qQ.apply(this, arguments);
+        return function(QQ, WQ) {
+          if (WQ && ("object" === wQ(WQ) || "function" === typeof WQ)) return WQ;
+          if (void 0 !== WQ) throw new TypeError("Derived constructors may only return object or undefined");
+          return VQ(QQ)
+        }(this, XQ)
+      }
     }
 
-    function ei() {
-      const {
-        t: pp
-      } = (0, Ap.H)(), ip = (0, Yp.useNavigatePreserveSearch)(), cp = (0, Op.r)(), Wp = (0, Op.A)(), Up = (0, Sp.useRef)({
-        t: pp,
-        navigate: ip
-      });
-      Up.current = {
-        t: pp,
-        navigate: ip
-      };
-      const dp = (0, Sp.useRef)("");
-      dp.current = cp.pathname + cp.search;
-      const {
-        gameState: ep,
-        clientEscMenuOptions: kp
-      } = (0, op.o)(["gameState", "clientEscMenuOptions"]), Rp = (0, Sp.useRef)(null), fp = (0, Sp.useRef)(!1);
-      var bp;
-      (0, Li.p)(), (0, Li.r)(), bp = Wi.z, (0, Sp.useEffect)((() => {
-        if (!bp) return;
-        let pp = !0;
-        return (0, gp.f)().then((ip => {
-          pp && Vp(ip)
-        })).catch((() => {})), () => {
-          var ip;
-          pp = !1, sp.wanted = !1, null === (ip = Kp) || void 0 === ip || ip.setGamePackConfirm(null), Kp = null
+    function VQ(QQ) {
+      if (void 0 === QQ) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+      return QQ
+    }
+
+    function DQ(QQ) {
+      return DQ = Object.setPrototypeOf ? Object.getPrototypeOf : function(QQ) {
+        return QQ.__proto__ || Object.getPrototypeOf(QQ)
+      }, DQ(QQ)
+    }
+
+    function pQ(QQ, WQ, XQ) {
+      return WQ in QQ ? Object.defineProperty(QQ, WQ, {
+        value: XQ,
+        enumerable: !0,
+        configurable: !0,
+        writable: !0
+      }) : QQ[WQ] = XQ, QQ
+    }
+    var GQ = {
+        orientation: {
+          horizontal: {
+            dimension: "width",
+            direction: "left",
+            reverseDirection: "right",
+            coordinate: "x"
+          },
+          vertical: {
+            dimension: "height",
+            direction: "top",
+            reverseDirection: "bottom",
+            coordinate: "y"
+          }
         }
-      }), [bp]), (0, Sp.useEffect)((() => {
-        var pp, ip, Op;
-        (0, Ip.needGameClientNow)();
-        const {
-          t: Sp,
-          navigate: xp
-        } = Up.current, Ap = (0, Oi.c)(Wp, cp.search);
-        if (Wp.lobbyName && !new URLSearchParams(cp.search).has("lobby")) return void xp((0, Np.c)(Ap.gameNameWithVariation, Ap.lobbyName), {
-          replace: !0
-        });
-        let ep = Promise.resolve({
-          shouldMatchmake: !0
-        });
-        if ("/play/discord-custom-lobby" === cp.pathname) {
-          const pp = op.c.get("discordContext");
-          if (!pp) return void xp("/");
-          ep = mp.b.setupDiscordLobby(pp, "classic").then((() => ({
-            shouldMatchmake: !0,
-            discordContext: pp
-          }))).catch((ip => (console.error("Failed to setup discord lobby", ip), {
-            shouldMatchmake: !1,
-            discordContext: pp
-          })))
-        } else if (!Ap.gameNameWithVariation || !(0, wp.H)(Ap.gameNameWithVariation)) return console.error(`Valid game name with variation is required. Received ${Ap.gameNameWithVariation}`), void xp(-1);
-        const kp = Rp.current;
-        if (null !== kp && Ap.gameNameWithVariation === kp.gameNameWithVariation && Ap.lobbyName === kp.lobbyName) return;
-        if (Lp.gameBridge.latest("connectedGame").replay) return void(0, Li.i)(null);
-        if ("releaseCountdown" === (null === (pp = (0, vp.c)(Ap.gameNameWithVariation)) || void 0 === pp ? void 0 : pp.type)) return console.error(`Game hasn't been released yet: ${Ap.gameNameWithVariation}`), void xp(-1);
-        const Xp = fp.current;
-        fp.current = !1, (0, Ep.B)(), op.c.set({
-          gameState: "loadingScreen"
-        });
-        const bp = function() {
-            sp.wanted = !1;
-            const pp = {
-              wanted: !0
-            };
-            return sp = pp, () => pp.wanted
-          }(),
-          ap = Ap.gameNameWithVariation;
-        if (ap && (Wi.z || (0, yp.j)(ap))) {
-          const pp = Wi.z ? Promise.all([(0, gp.f)(), Hp.userContextManager.getCurrentUserContext()]).then((pp => {
-            let [ip, cp] = pp;
-            if (bp()) return Vp(ip), ip.packForGame(ap, cp, bp)
-          })) : async function(pp) {
-            await hp.d.indexedDbValuesAreLoaded();
-            const ip = await Hp.userContextManager.getCurrentUserContext(),
-              cp = (0, yp.o)(pp);
-            let Op;
-            try {
-              Op = await tp.b.getGame(ip, cp, !0)
-            } catch (Sp) {
-              return void console.error("Failed to get game", Sp)
-            }
-            const op = Op.customTexturePackKey;
-            if (!op) return void(hp.d.isUsingTemporaryTexturePack() && ((0, Mp.reloadBloxd)(), await new Promise((() => {}))));
-            if (hp.d.isUsingTemporaryTexturePack() && hp.d.getTemporaryTexturePackSource() === op) return;
-            const Ip = Dp.NotificationProvider.showCustomPopup({
-              body: pp => (0, rp.jsx)(ci, {
-                schematicId: cp,
-                texturePackKey: op,
-                onClose: pp
-              }),
-              disableExitButton: !0,
-              disablePressBackgroundToClose: !0
-            });
-            await Ip.getResult()
-          }(ap), ip = ep;
-          ep = pp.catch((pp => {
-            console.error("Failed to check for custom texture pack", pp)
-          })).then((() => ip))
-        }
-        const np = {
-          wasm: Wi.z,
-          game: Ap.gameNameWithVariation,
-          custom: void 0 !== ap && (0, yp.j)(ap),
-          lobbyName: null !== (ip = Ap.lobbyName) && void 0 !== ip ? ip : null,
-          direct: null !== Ap.directJoinVmUrl && void 0 !== Ap.directJoinVmUrl,
-          discord: "/play/discord-custom-lobby" === cp.pathname,
-          adBeforeMatchmaking: void 0 !== ap && !0 === (null === (Op = Tp.c[ap]) || void 0 === Op ? void 0 : Op.playAdBeforeMatchmaking),
-          afterAnother: null !== Rp.current || (0, Li.d)()
-        };
-        (0, Yi.f)(null);
-        const Fp = !(Gp = np).wasm || void 0 === Gp.game || Gp.custom || Gp.direct || Gp.discord || Gp.adBeforeMatchmaking || Gp.afterAnother ? null : () => {
-          ! function(pp, ip) {
-            (0, Yi.f)({
-              key: (0, Yi.c)(pp, ip),
-              settled: Promise.all([Ip.matchmakingLibrariesPromise, Hp.userContextManager.getCurrentUserContext()]).then((cp => {
-                let [Op, op] = cp;
-                if (void 0 === Op.matchmakeForAhead) throw new Error("the matchmaking chunk has no matchmaking ahead");
-                return Op.matchmakeForAhead(pp, ip, op)
-              })).catch((pp => ({
-                result: qp.d.errorWithCode(String(pp), Pp.k.REQUEST_TO_MATCHMAKING, {
-                  error: pp,
-                  severity: "medium"
-                }),
-                at: performance.now()
-              })))
-            })
-          }(np.lobbyName, np.game)
-        };
-        var Gp;
-        const Zp = null !== Rp.current;
-        Rp.current = null, (0, Li.i)(null);
-        const zp = () => {
-          Xp ? (0, Yp.navigateToHomePage)() : (fp.current = Zp, xp(-1))
-        };
-        let Kp = !1;
-        const ii = cp.pathname + cp.search,
-          Ii = () => !Kp && dp.current === ii;
-        return (0, Yi.b)(ep, Fp, (pp => {
-          let {
-            shouldMatchmake: ip,
-            discordContext: cp
-          } = pp;
-          Ii() && (ip ? di(null !== cp && void 0 !== cp ? cp : Ap.lobbyName, cp ? "classic" : Ap.gameNameWithVariation, Ap.directJoinVmUrl).then((pp => {
-            if (null !== pp && Ii())
-              if (pp.isError()) {
-                var ip;
-                const cp = pp.asError(),
-                  Op = null !== (ip = cp.debugResult.severity) && void 0 !== ip ? ip : "high";
-                if ((0, Pi.e)(cp.debugResult.error)) return void Pi.f.reload();
-                if (cp.code === Pp.k.SHADER_PACK) return void(0, oi.d)(cp.message, xp);
-                const Ip = op.c.get("gameEntrySource"),
-                  Yp = cp.code === Pp.k.INITIALISE_WEBGL ? (0, Qp.d)() : null,
-                  {
-                    error: Wp
-                  } = cp.debugResult;
-                let yp;
-                if (jp(Sp, cp)) yp = Promise.resolve(!1);
-                else if (null !== Yp) yp = (0, Qp.i)(Yp);
-                else if (Wp instanceof Bp.l) yp = (0, Jp.h)(Wp);
-                else {
-                  let pp;
-                  switch (Op) {
-                    case "low":
-                      pp = "face-diagonal-mouth";
-                      break;
-                    case "medium":
-                      pp = "face-worried";
-                      break;
-                    case "high":
-                      pp = "face-dizzy"
-                  }
-                  const ip = Wp instanceof Ui.h;
-                  let op = cp.message;
-                  ip ? op = Sp("general:gameFilesStalled") : cp.debugResult.gameServerUnreachable && (op = Sp((0, Cp.isMobile)() ? "general:gameServerUnreachableMobile" : "general:gameServerUnreachable"));
-                  yp = Dp.NotificationProvider.showPromptPopup({
-                    icon: pp,
-                    title: Pp.C[cp.code],
-                    subtitle: (0, rp.jsxs)(rp.Fragment, {
-                      children: [op, Wp instanceof Error && !ip && (0, rp.jsx)("div", {
-                        style: {
-                          fontSize: "0.9rem",
-                          paddingTop: "1rem"
-                        },
-                        children: (0, rp.jsx)(lp.c, {
-                          errorString: Wp.stack
-                        })
-                      })]
-                    }),
-                    confirmText: Sp("general:tryAgain"),
-                    cancelText: Sp("general:cancel")
-                  }).getResult().then((pp => !0 === pp))
-                }
-                yp.then((pp => {
-                  if (pp) {
-                    (0, op.k)(Ip);
-                    const pp = (0, Np.c)(Ap.gameNameWithVariation, Ap.lobbyName);
-                    "low" === Op ? xp(pp) : (0, Mp.reloadBloxd)(pp)
-                  }
-                })), Lp.gameBridge.send("leaveGame", {
-                  reloadPath: "/"
-                }), zp()
-              } else {
-                const {
-                  gameNameWithVariation: ip,
-                  lobbyName: cp
-                } = pp.getValue();
-                Rp.current = {
-                  gameNameWithVariation: ip,
-                  lobbyName: cp
-                };
-                const Op = (0, Np.c)(ip, cp);
-                xp(Op, {
-                  replace: !0
-                })
+      },
+      UQ = function(QQ) {
+        ! function(QQ, WQ) {
+          if ("function" !== typeof WQ && null !== WQ) throw new TypeError("Super expression must either be null or a function");
+          Object.defineProperty(QQ, "prototype", {
+            value: Object.create(WQ && WQ.prototype, {
+              constructor: {
+                value: QQ,
+                writable: !0,
+                configurable: !0
               }
-          })).catch((pp => {
-            if (!Ii()) return;
-            Dp.NotificationProvider.showPromptPopup({
-              icon: "face-dizzy",
-              title: "Unexpected Error",
-              subtitle: (0, rp.jsxs)(rp.Fragment, {
-                children: [Sp("homePage:pleaseCopyError"), (0, rp.jsx)("div", {
-                  style: {
-                    fontSize: "0.9rem",
-                    paddingTop: "1rem"
+            }),
+            writable: !1
+          }), WQ && BQ(QQ, WQ)
+        }(zQ, QQ);
+        var WQ, XQ, wQ, TQ = yQ(zQ);
+
+        function zQ(QQ, WQ) {
+          var XQ;
+          return function(QQ, WQ) {
+            if (!(QQ instanceof WQ)) throw new TypeError("Cannot call a class as a function")
+          }(this, zQ), pQ(VQ(XQ = TQ.call(this, QQ, WQ)), "handleFormat", (function(QQ) {
+            var WQ = XQ.props.format;
+            return WQ ? WQ(QQ) : QQ
+          })), pQ(VQ(XQ), "handleUpdate", (function() {
+            if (XQ.slider) {
+              var QQ = XQ.props.orientation,
+                WQ = (0, FQ.capitalize)(GQ.orientation[QQ].dimension),
+                wQ = XQ.slider["offset".concat(WQ)],
+                qQ = XQ.handle["offset".concat(WQ)];
+              XQ.setState({
+                limit: wQ - qQ,
+                grab: qQ / 2
+              })
+            }
+          })), pQ(VQ(XQ), "handleStart", (function(QQ) {
+            var WQ = XQ.props.onChangeStart;
+            document.addEventListener("mousemove", XQ.handleDrag), document.addEventListener("mouseup", XQ.handleEnd), XQ.setState({
+              active: !0
+            }, (function() {
+              WQ && WQ(QQ)
+            }))
+          })), pQ(VQ(XQ), "handleDrag", (function(QQ) {
+            QQ.stopPropagation();
+            var WQ = XQ.props.onChange,
+              wQ = QQ.target,
+              qQ = wQ.className,
+              TQ = wQ.classList,
+              zQ = wQ.dataset;
+            if (WQ && "rangeslider__labels" !== qQ) {
+              var sQ = XQ.position(QQ);
+              TQ && TQ.contains("rangeslider__label-item") && zQ.value && (sQ = parseFloat(zQ.value)), WQ && WQ(sQ, QQ)
+            }
+          })), pQ(VQ(XQ), "handleEnd", (function(QQ) {
+            var WQ = XQ.props.onChangeComplete;
+            XQ.setState({
+              active: !1
+            }, (function() {
+              WQ && WQ(QQ)
+            })), document.removeEventListener("mousemove", XQ.handleDrag), document.removeEventListener("mouseup", XQ.handleEnd)
+          })), pQ(VQ(XQ), "handleKeyDown", (function(QQ) {
+            QQ.preventDefault();
+            var WQ, wQ = QQ.keyCode,
+              qQ = XQ.props,
+              TQ = qQ.value,
+              zQ = qQ.min,
+              sQ = qQ.max,
+              FQ = qQ.step,
+              PQ = qQ.onChange;
+            switch (wQ) {
+              case 38:
+              case 39:
+                WQ = TQ + FQ > sQ ? sQ : TQ + FQ, PQ && PQ(WQ, QQ);
+                break;
+              case 37:
+              case 40:
+                WQ = TQ - FQ < zQ ? zQ : TQ - FQ, PQ && PQ(WQ, QQ)
+            }
+          })), pQ(VQ(XQ), "getPositionFromValue", (function(QQ) {
+            var WQ = XQ.state.limit,
+              wQ = XQ.props,
+              qQ = wQ.min,
+              TQ = (QQ - qQ) / (wQ.max - qQ);
+            return Math.round(TQ * WQ)
+          })), pQ(VQ(XQ), "getValueFromPosition", (function(QQ) {
+            var WQ = XQ.state.limit,
+              wQ = XQ.props,
+              qQ = wQ.orientation,
+              TQ = wQ.min,
+              zQ = wQ.max,
+              sQ = wQ.step,
+              PQ = (0, FQ.clamp)(QQ, 0, WQ) / (WQ || 1),
+              gQ = sQ * Math.round(PQ * (zQ - TQ) / sQ),
+              JQ = "horizontal" === qQ ? gQ + TQ : zQ - gQ;
+            return (0, FQ.clamp)(JQ, TQ, zQ)
+          })), pQ(VQ(XQ), "position", (function(QQ) {
+            var WQ = XQ.state.grab,
+              wQ = XQ.props,
+              qQ = wQ.orientation,
+              TQ = wQ.reverse,
+              zQ = XQ.slider,
+              sQ = GQ.orientation[qQ].coordinate,
+              PQ = TQ ? GQ.orientation[qQ].reverseDirection : GQ.orientation[qQ].direction,
+              gQ = "client".concat((0, FQ.capitalize)(sQ)),
+              JQ = QQ.touches ? QQ.touches[0][gQ] : QQ[gQ],
+              rQ = zQ.getBoundingClientRect()[PQ],
+              IQ = TQ ? rQ - JQ - WQ : JQ - rQ - WQ;
+            return XQ.getValueFromPosition(IQ)
+          })), pQ(VQ(XQ), "coordinates", (function(QQ) {
+            var WQ = XQ.state,
+              wQ = WQ.limit,
+              qQ = WQ.grab,
+              TQ = XQ.props.orientation,
+              zQ = XQ.getValueFromPosition(QQ),
+              sQ = XQ.getPositionFromValue(zQ),
+              FQ = "horizontal" === TQ ? sQ + qQ : sQ;
+            return {
+              fill: "horizontal" === TQ ? FQ : wQ - FQ,
+              handle: FQ,
+              label: FQ
+            }
+          })), pQ(VQ(XQ), "renderLabels", (function(QQ) {
+            return (0, PQ.jsx)("ul", {
+              ref: function(QQ) {
+                XQ.labels = QQ
+              },
+              className: (0, qQ.default)("rangeslider__labels"),
+              children: QQ
+            })
+          })), XQ.state = {
+            active: !1,
+            limit: 0,
+            grab: 0
+          }, XQ
+        }
+        return WQ = zQ, (XQ = [{
+          key: "componentDidMount",
+          value: function() {
+            this.handleUpdate(), new sQ.default(this.handleUpdate).observe(this.slider)
+          }
+        }, {
+          key: "render",
+          value: function() {
+            var QQ = this,
+              WQ = this.props,
+              XQ = WQ.value,
+              wQ = WQ.orientation,
+              TQ = WQ.className,
+              zQ = WQ.tooltip,
+              sQ = WQ.reverse,
+              FQ = WQ.labels,
+              gQ = WQ.min,
+              JQ = WQ.max,
+              IQ = WQ.handleLabel,
+              jQ = this.state.active,
+              BQ = GQ.orientation[wQ].dimension,
+              yQ = sQ ? GQ.orientation[wQ].reverseDirection : GQ.orientation[wQ].direction,
+              VQ = this.getPositionFromValue(XQ),
+              DQ = this.coordinates(VQ),
+              UQ = pQ({}, BQ, "".concat(DQ.fill, "px")),
+              bQ = pQ({}, yQ, "".concat(DQ.handle, "px")),
+              vQ = zQ && jQ,
+              dQ = [],
+              HQ = Object.keys(FQ);
+            if (HQ.length > 0) {
+              var aQ, lQ = rQ(HQ = HQ.sort((function(QQ, WQ) {
+                return sQ ? QQ - WQ : WQ - QQ
+              })));
+              try {
+                for (lQ.s(); !(aQ = lQ.n()).done;) {
+                  var hQ = aQ.value,
+                    iQ = this.getPositionFromValue(hQ),
+                    cQ = this.coordinates(iQ),
+                    AQ = pQ({}, yQ, "".concat(cQ.label, "px"));
+                  dQ.push((0, PQ.jsx)("li", {
+                    className: (0, qQ.default)("rangeslider__label-item"),
+                    "data-value": hQ,
+                    onMouseDown: this.handleDrag,
+                    onTouchStart: this.handleStart,
+                    onTouchEnd: this.handleEnd,
+                    style: AQ,
+                    children: this.props.labels[hQ]
+                  }, hQ))
+                }
+              } catch (RQ) {
+                lQ.e(RQ)
+              } finally {
+                lQ.f()
+              }
+            }
+            return (0, PQ.jsxs)("div", {
+              ref: function(WQ) {
+                QQ.slider = WQ
+              },
+              className: (0, qQ.default)("rangeslider", "rangeslider-".concat(wQ), {
+                "rangeslider-reverse": sQ
+              }, TQ),
+              onMouseDown: this.handleDrag,
+              onMouseUp: this.handleEnd,
+              onTouchStart: this.handleStart,
+              onTouchEnd: this.handleEnd,
+              "aria-valuemin": gQ,
+              "aria-valuemax": JQ,
+              "aria-valuenow": XQ,
+              "aria-orientation": wQ,
+              children: [(0, PQ.jsx)("div", {
+                className: "rangeslider__fill",
+                style: UQ
+              }), (0, PQ.jsxs)("div", {
+                ref: function(WQ) {
+                  QQ.handle = WQ
+                },
+                className: "rangeslider__handle",
+                onMouseDown: this.handleStart,
+                onTouchMove: this.handleDrag,
+                onTouchEnd: this.handleEnd,
+                onKeyDown: this.handleKeyDown,
+                style: bQ,
+                tabIndex: 0,
+                children: [vQ && (0, PQ.jsx)("div", {
+                  ref: function(WQ) {
+                    QQ.tooltip = WQ
                   },
-                  children: (0, rp.jsx)(lp.c, {
-                    errorString: pp.stack
+                  className: "rangeslider__handle-tooltip",
+                  children: (0, PQ.jsx)("span", {
+                    children: this.handleFormat(XQ)
                   })
+                }), (0, PQ.jsx)("div", {
+                  className: "rangeslider__handle-label",
+                  children: IQ
                 })]
-              }),
-              confirmText: Sp("general:tryAgain"),
-              cancelText: Sp("general:cancel")
-            }).getResult().then((pp => {
-              !0 === pp && (0, Mp.reloadBloxd)((0, Np.c)(Ap.gameNameWithVariation, Ap.lobbyName))
-            })), zp()
-          })) : xp(-1))
-        }), Ii), () => {
-          Kp = !0
+              }), FQ && this.renderLabels(dQ)]
+            })
+          }
+        }]) && jQ(WQ.prototype, XQ), wQ && jQ(WQ, wQ), Object.defineProperty(WQ, "prototype", {
+          writable: !1
+        }), zQ
+      }(TQ.Component);
+    pQ(UQ, "propTypes", {
+      min: zQ.default.number,
+      max: zQ.default.number,
+      step: zQ.default.number,
+      value: zQ.default.number,
+      orientation: zQ.default.string,
+      tooltip: zQ.default.bool,
+      reverse: zQ.default.bool,
+      labels: zQ.default.object,
+      handleLabel: zQ.default.string,
+      format: zQ.default.func,
+      onChangeStart: zQ.default.func,
+      onChange: zQ.default.func,
+      onChangeComplete: zQ.default.func
+    }), pQ(UQ, "defaultProps", {
+      min: 0,
+      max: 100,
+      step: 1,
+      value: 0,
+      orientation: "horizontal",
+      tooltip: !0,
+      reverse: !1,
+      labels: {},
+      handleLabel: ""
+    });
+    var bQ = UQ;
+    WQ.default = bQ
+  },
+  5351: (QQ, WQ, XQ) => {
+    var wQ;
+    WQ.c = void 0;
+    var qQ = ((wQ = XQ(5359)) && wQ.__esModule ? wQ : {
+      default: wQ
+    }).default;
+    WQ.c = qQ
+  },
+  5373: (QQ, WQ) => {
+    Object.defineProperty(WQ, "__esModule", {
+      value: !0
+    }), WQ.capitalize = function(QQ) {
+      return QQ.charAt(0).toUpperCase() + QQ.substr(1)
+    }, WQ.clamp = function(QQ, WQ, XQ) {
+      return Math.min(Math.max(QQ, WQ), XQ)
+    }
+  },
+  5320: (QQ, WQ, XQ) => {
+    var wQ = XQ(5328);
+
+    function qQ() {}
+
+    function TQ() {}
+    TQ.resetWarningCache = qQ, QQ.exports = function() {
+      function QQ(QQ, WQ, XQ, qQ, TQ, zQ) {
+        if (zQ !== wQ) {
+          var sQ = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
+          throw sQ.name = "Invariant Violation", sQ
         }
-      }), [Wp, cp.search, cp.pathname]), (0, Sp.useEffect)((() => {
-        kp.disableFullscreen && (0, Xp.f)() ? (0, Xp.l)() : !kp.disableFullscreen && (0, Xp.j)() && (0, Xp.s)({
-          automatic: !0
+      }
+
+      function WQ() {
+        return QQ
+      }
+      QQ.isRequired = QQ;
+      var XQ = {
+        array: QQ,
+        bigint: QQ,
+        bool: QQ,
+        func: QQ,
+        number: QQ,
+        object: QQ,
+        string: QQ,
+        symbol: QQ,
+        any: QQ,
+        arrayOf: WQ,
+        element: QQ,
+        elementType: QQ,
+        instanceOf: WQ,
+        node: QQ,
+        objectOf: WQ,
+        oneOf: WQ,
+        oneOfType: WQ,
+        shape: WQ,
+        exact: WQ,
+        checkPropTypes: TQ,
+        resetWarningCache: qQ
+      };
+      return XQ.PropTypes = XQ, XQ
+    }
+  },
+  5318: (QQ, WQ, XQ) => {
+    QQ.exports = XQ(5320)()
+  },
+  5328: QQ => {
+    QQ.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
+  },
+  5368: (QQ, WQ, XQ) => {
+    XQ.r(WQ), XQ.d(WQ, {
+      default: () => dQ
+    });
+    var wQ = function() {
+        if ("undefined" !== typeof Map) return Map;
+
+        function QQ(QQ, WQ) {
+          var XQ = -1;
+          return QQ.some((function(QQ, wQ) {
+            return QQ[0] === WQ && (XQ = wQ, !0)
+          })), XQ
+        }
+        return function() {
+          function WQ() {
+            this.__entries__ = []
+          }
+          return Object.defineProperty(WQ.prototype, "size", {
+            get: function() {
+              return this.__entries__.length
+            },
+            enumerable: !0,
+            configurable: !0
+          }), WQ.prototype.get = function(WQ) {
+            var XQ = QQ(this.__entries__, WQ),
+              wQ = this.__entries__[XQ];
+            return wQ && wQ[1]
+          }, WQ.prototype.set = function(WQ, XQ) {
+            var wQ = QQ(this.__entries__, WQ);
+            ~wQ ? this.__entries__[wQ][1] = XQ : this.__entries__.push([WQ, XQ])
+          }, WQ.prototype.delete = function(WQ) {
+            var XQ = this.__entries__,
+              wQ = QQ(XQ, WQ);
+            ~wQ && XQ.splice(wQ, 1)
+          }, WQ.prototype.has = function(WQ) {
+            return !!~QQ(this.__entries__, WQ)
+          }, WQ.prototype.clear = function() {
+            this.__entries__.splice(0)
+          }, WQ.prototype.forEach = function(QQ, WQ) {
+            void 0 === WQ && (WQ = null);
+            for (var XQ = 0, wQ = this.__entries__; XQ < wQ.length; XQ++) {
+              var qQ = wQ[XQ];
+              QQ.call(WQ, qQ[1], qQ[0])
+            }
+          }, WQ
+        }()
+      }(),
+      qQ = "undefined" !== typeof window && "undefined" !== typeof document && window.document === document,
+      TQ = "undefined" !== typeof XQ.g && XQ.g.Math === Math ? XQ.g : "undefined" !== typeof self && self.Math === Math ? self : "undefined" !== typeof window && window.Math === Math ? window : Function("return this")(),
+      zQ = "function" === typeof requestAnimationFrame ? requestAnimationFrame.bind(TQ) : function(QQ) {
+        return setTimeout((function() {
+          return QQ(Date.now())
+        }), 1e3 / 60)
+      };
+    var sQ = ["top", "right", "bottom", "left", "width", "height", "size", "weight"],
+      FQ = "undefined" !== typeof MutationObserver,
+      PQ = function() {
+        function QQ() {
+          this.connected_ = !1, this.mutationEventsAdded_ = !1, this.mutationsObserver_ = null, this.observers_ = [], this.onTransitionEnd_ = this.onTransitionEnd_.bind(this), this.refresh = function(QQ, WQ) {
+            var XQ = !1,
+              wQ = !1,
+              qQ = 0;
+
+            function TQ() {
+              XQ && (XQ = !1, QQ()), wQ && FQ()
+            }
+
+            function sQ() {
+              zQ(TQ)
+            }
+
+            function FQ() {
+              var QQ = Date.now();
+              if (XQ) {
+                if (QQ - qQ < 2) return;
+                wQ = !0
+              } else XQ = !0, wQ = !1, setTimeout(sQ, WQ);
+              qQ = QQ
+            }
+            return FQ
+          }(this.refresh.bind(this), 20)
+        }
+        return QQ.prototype.addObserver = function(QQ) {
+          ~this.observers_.indexOf(QQ) || this.observers_.push(QQ), this.connected_ || this.connect_()
+        }, QQ.prototype.removeObserver = function(QQ) {
+          var WQ = this.observers_,
+            XQ = WQ.indexOf(QQ);
+          ~XQ && WQ.splice(XQ, 1), !WQ.length && this.connected_ && this.disconnect_()
+        }, QQ.prototype.refresh = function() {
+          this.updateObservers_() && this.refresh()
+        }, QQ.prototype.updateObservers_ = function() {
+          var QQ = this.observers_.filter((function(QQ) {
+            return QQ.gatherActive(), QQ.hasActive()
+          }));
+          return QQ.forEach((function(QQ) {
+            return QQ.broadcastActive()
+          })), QQ.length > 0
+        }, QQ.prototype.connect_ = function() {
+          qQ && !this.connected_ && (document.addEventListener("transitionend", this.onTransitionEnd_), window.addEventListener("resize", this.refresh), FQ ? (this.mutationsObserver_ = new MutationObserver(this.refresh), this.mutationsObserver_.observe(document, {
+            attributes: !0,
+            childList: !0,
+            characterData: !0,
+            subtree: !0
+          })) : (document.addEventListener("DOMSubtreeModified", this.refresh), this.mutationEventsAdded_ = !0), this.connected_ = !0)
+        }, QQ.prototype.disconnect_ = function() {
+          qQ && this.connected_ && (document.removeEventListener("transitionend", this.onTransitionEnd_), window.removeEventListener("resize", this.refresh), this.mutationsObserver_ && this.mutationsObserver_.disconnect(), this.mutationEventsAdded_ && document.removeEventListener("DOMSubtreeModified", this.refresh), this.mutationsObserver_ = null, this.mutationEventsAdded_ = !1, this.connected_ = !1)
+        }, QQ.prototype.onTransitionEnd_ = function(QQ) {
+          var WQ = QQ.propertyName,
+            XQ = void 0 === WQ ? "" : WQ;
+          sQ.some((function(QQ) {
+            return !!~XQ.indexOf(QQ)
+          })) && this.refresh()
+        }, QQ.getInstance = function() {
+          return this.instance_ || (this.instance_ = new QQ), this.instance_
+        }, QQ.instance_ = null, QQ
+      }(),
+      gQ = function(QQ, WQ) {
+        for (var XQ = 0, wQ = Object.keys(WQ); XQ < wQ.length; XQ++) {
+          var qQ = wQ[XQ];
+          Object.defineProperty(QQ, qQ, {
+            value: WQ[qQ],
+            enumerable: !1,
+            writable: !1,
+            configurable: !0
+          })
+        }
+        return QQ
+      },
+      JQ = function(QQ) {
+        return QQ && QQ.ownerDocument && QQ.ownerDocument.defaultView || TQ
+      },
+      rQ = DQ(0, 0, 0, 0);
+
+    function IQ(QQ) {
+      return parseFloat(QQ) || 0
+    }
+
+    function jQ(QQ) {
+      for (var WQ = [], XQ = 1; XQ < arguments.length; XQ++) WQ[XQ - 1] = arguments[XQ];
+      return WQ.reduce((function(WQ, XQ) {
+        return WQ + IQ(QQ["border-" + XQ + "-width"])
+      }), 0)
+    }
+
+    function BQ(QQ) {
+      var WQ = QQ.clientWidth,
+        XQ = QQ.clientHeight;
+      if (!WQ && !XQ) return rQ;
+      var wQ = JQ(QQ).getComputedStyle(QQ),
+        qQ = function(QQ) {
+          for (var WQ = {}, XQ = 0, wQ = ["top", "right", "bottom", "left"]; XQ < wQ.length; XQ++) {
+            var qQ = wQ[XQ],
+              TQ = QQ["padding-" + qQ];
+            WQ[qQ] = IQ(TQ)
+          }
+          return WQ
+        }(wQ),
+        TQ = qQ.left + qQ.right,
+        zQ = qQ.top + qQ.bottom,
+        sQ = IQ(wQ.width),
+        FQ = IQ(wQ.height);
+      if ("border-box" === wQ.boxSizing && (Math.round(sQ + TQ) !== WQ && (sQ -= jQ(wQ, "left", "right") + TQ), Math.round(FQ + zQ) !== XQ && (FQ -= jQ(wQ, "top", "bottom") + zQ)), ! function(QQ) {
+          return QQ === JQ(QQ).document.documentElement
+        }(QQ)) {
+        var PQ = Math.round(sQ + TQ) - WQ,
+          gQ = Math.round(FQ + zQ) - XQ;
+        1 !== Math.abs(PQ) && (sQ -= PQ), 1 !== Math.abs(gQ) && (FQ -= gQ)
+      }
+      return DQ(qQ.left, qQ.top, sQ, FQ)
+    }
+    var yQ = "undefined" !== typeof SVGGraphicsElement ? function(QQ) {
+      return QQ instanceof JQ(QQ).SVGGraphicsElement
+    } : function(QQ) {
+      return QQ instanceof JQ(QQ).SVGElement && "function" === typeof QQ.getBBox
+    };
+
+    function VQ(QQ) {
+      return qQ ? yQ(QQ) ? function(QQ) {
+        var WQ = QQ.getBBox();
+        return DQ(0, 0, WQ.width, WQ.height)
+      }(QQ) : BQ(QQ) : rQ
+    }
+
+    function DQ(QQ, WQ, XQ, wQ) {
+      return {
+        x: QQ,
+        y: WQ,
+        width: XQ,
+        height: wQ
+      }
+    }
+    var pQ = function() {
+        function QQ(QQ) {
+          this.broadcastWidth = 0, this.broadcastHeight = 0, this.contentRect_ = DQ(0, 0, 0, 0), this.target = QQ
+        }
+        return QQ.prototype.isActive = function() {
+          var QQ = VQ(this.target);
+          return this.contentRect_ = QQ, QQ.width !== this.broadcastWidth || QQ.height !== this.broadcastHeight
+        }, QQ.prototype.broadcastRect = function() {
+          var QQ = this.contentRect_;
+          return this.broadcastWidth = QQ.width, this.broadcastHeight = QQ.height, QQ
+        }, QQ
+      }(),
+      GQ = function(QQ, WQ) {
+        var XQ = function(QQ) {
+          var WQ = QQ.x,
+            XQ = QQ.y,
+            wQ = QQ.width,
+            qQ = QQ.height,
+            TQ = "undefined" !== typeof DOMRectReadOnly ? DOMRectReadOnly : Object,
+            zQ = Object.create(TQ.prototype);
+          return gQ(zQ, {
+            x: WQ,
+            y: XQ,
+            width: wQ,
+            height: qQ,
+            top: XQ,
+            right: WQ + wQ,
+            bottom: qQ + XQ,
+            left: WQ
+          }), zQ
+        }(WQ);
+        gQ(this, {
+          target: QQ,
+          contentRect: XQ
         })
-      }), [ep, kp]), (0, Sp.useEffect)((() => {
-        "inGame" === ep && wi()
-      }), [ep, kp]), (0, Sp.useEffect)((() => {
-        "inGame" !== ep && op.c.set({
-          openInGameMenuName: null
-        })
-      }), [ep]);
-      const ap = function(pp) {
-        const ip = (0, op.j)(pp),
-          [cp, Op] = (0, Sp.useState)(0),
-          [Ip, Lp] = (0, Sp.useState)(!1);
-        (0, xp.f)("gameJoined", (() => {
-          (0, op.j)(op.c.get("gameState")) && (Op((pp => pp + 1)), Lp(!0))
-        })), (0, Sp.useEffect)((() => {
-          ip || Lp(!1)
-        }), [ip]);
-        const Yp = "inGame" === pp;
-        return {
-          mounted: Yp || ip && Ip,
-          shown: Yp,
-          key: cp
+      },
+      UQ = function() {
+        function QQ(QQ, WQ, XQ) {
+          if (this.activeObservations_ = [], this.observations_ = new wQ, "function" !== typeof QQ) throw new TypeError("The callback provided as parameter 1 is not a function.");
+          this.callback_ = QQ, this.controller_ = WQ, this.callbackCtx_ = XQ
         }
-      }(ep);
-      return (0, rp.jsx)(rp.Fragment, {
-        children: ap.mounted && (0, rp.jsx)(Ip.InGameUi, {
-          shown: ap.shown
-        }, ap.key)
-      })
-    }
-  },
-  5103: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => op
-    });
-    var Op = cp(1211);
-    async function op(pp) {
-      const ip = await fetch(`${Op.clientSideServerUrls.s3Url}/${pp}`, {
-        headers: {
-          Accept: "application/json"
-        }
-      });
-      if (404 === ip.status || 403 === ip.status) return null;
-      if (!ip.ok) throw new Error(`Failed to download the texture pack (${ip.status})`);
-      return await ip.json()
-    }
-  },
-  9049: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Sp
-    });
-    var Op = cp(1356),
-      op = cp(1234),
-      Ip = cp(640);
-
-    function Sp(pp) {
-      return pp = function(pp, ip) {
-        var cp;
-        const Op = new URLSearchParams(ip),
-          op = Op.get("lobby"),
-          Ip = Op.get("vm"),
-          Sp = null !== (cp = op) && void 0 !== cp ? cp : pp.lobbyName,
-          xp = null !== Ip && void 0 !== Ip ? Ip : pp.directJoinVmUrl;
-        if (Sp === pp.lobbyName && xp === pp.directJoinVmUrl) return pp;
-        return {
-          ...pp,
-          lobbyName: Sp,
-          directJoinVmUrl: xp
-        }
-      }(pp, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ""), pp = function(pp) {
-        if ((0, Ip.G)(pp.directJoinVmUrl)) return pp;
-        const ip = (0, op.Z)(pp.directJoinVmUrl);
-        null === ip && (pp.directJoinVmUrl = void 0);
-        return pp
-      }(pp = function(pp) {
-        if ((0, Ip.G)(pp.gameNameWithVariation)) return pp;
-        return pp.gameNameWithVariation = (0, Op.m)(pp.gameNameWithVariation), pp
-      }(pp))
-    }
-  },
-  9046: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Ip,
-      g: () => op
-    });
-    let Op = !1;
-
-    function op() {
-      Op = !0
-    }
-
-    function Ip() {
-      return Op
-    }
-  },
-  9056: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => xp,
-      c: () => op,
-      f: () => Ip,
-      i: () => Sp
-    });
-    let Op = null;
-
-    function op(pp, ip) {
-      return `${ip}\n${null!==pp&&void 0!==pp?pp:""}`
-    }
-
-    function Ip(pp) {
-      Op = pp
-    }
-
-    function Sp(pp) {
-      const ip = Op;
-      return Op = null, null !== ip && ip.key === pp ? ip.settled : null
-    }
-
-    function xp(pp, ip, cp, Op) {
-      let op = !1;
-      null !== ip && setTimeout((() => {
-        Op() && !op && ip()
-      }), 0), pp.then((pp => {
-        op = !0, cp(pp)
-      }))
-    }
-  },
-  9041: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Wp,
-      f: () => Pp,
-      j: () => yp
-    });
-    var Op = cp(3246),
-      op = cp(2343),
-      Ip = cp(2174),
-      Sp = cp(4739),
-      xp = cp(3607),
-      Lp = cp(9046);
-    let Yp = null;
-
-    function Dp() {
-      return Promise.all([cp.e(75), cp.e(78), cp.e(90), cp.e(215), cp.e(214), cp.e(160), cp.e(137), cp.e(198), cp.e(140), cp.e(88), cp.e(275), cp.e(64)]).then((() => cp(40873)))
-    }
-
-    function Ap() {
-      Promise.all([cp.e(73), cp.e(76), cp.e(75), cp.e(74), cp.e(90), cp.e(87), cp.e(273), cp.e(191), cp.e(228), cp.e(252), cp.e(275), cp.e(47)]).then((() => cp(41212))).catch((() => {}))
-    }
-
-    function Pp() {
-      return Sp.b.cancelDownloadForJoin(), (0, xp.c)(), (0, op.e)(), (0, Lp.g)(), (0, Ip.j)(), Ap(), Promise.all([cp.e(78), cp.e(90), cp.e(215), cp.e(214), cp.e(137), cp.e(140), cp.e(59)]).then((() => cp(41270))).then((pp => {
-        let {
-          startJoinLoad: ip
-        } = pp;
-        ip()
-      }), (() => {})), Yp ??= Dp().then((pp => (pp.startWasmPlay(), pp.followPageUiPack((pp => {
-        Op.d.showGamePack(pp)
-      })), pp)), (pp => {
-        throw Yp = null, pp
-      })), Yp
-    }
-
-    function Wp() {
-      return Ap(), cp.e(276).then((() => cp(41273))).catch((() => {})), Dp().then((() => {}))
-    }
-
-    function yp() {
-      return Dp().then((pp => {
-        pp.startWasmPreviews(), pp.prefetchWasmPreviews()
-      }))
-    }
-  },
-  9034: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Ip,
-      f: () => Sp,
-      h: () => xp,
-      l: () => Yp,
-      o: () => Lp
-    });
-    var Op = cp(195),
-      op = cp(4719);
-
-    function Ip(pp) {
-      return Sp(pp) === Op.e.gameOrPluginOnPlayerAuthRejected.code
-    }
-
-    function Sp(pp) {
-      return "object" === typeof pp && null !== pp ? pp.code : void 0
-    }
-
-    function xp(pp) {
-      var ip;
-      return null !== (ip = Object.keys(op.c).find((ip => op.c[ip] === pp))) && void 0 !== ip ? ip : null
-    }
-
-    function Lp(pp) {
-      return "notWhitelisted" === pp ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
-    }
-    const Yp = {
-      private: "customLobby:cantJoinPrivate",
-      notWhitelisted: "customLobby:cantJoinNotWhitelisted",
-      banned: "customLobby:cantJoinBanned",
-      adminLocked: "customLobby:cantJoinAdminLocked"
-    }
+        return QQ.prototype.observe = function(QQ) {
+          if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
+          if ("undefined" !== typeof Element && Element instanceof Object) {
+            if (!(QQ instanceof JQ(QQ).Element)) throw new TypeError('parameter 1 is not of type "Element".');
+            var WQ = this.observations_;
+            WQ.has(QQ) || (WQ.set(QQ, new pQ(QQ)), this.controller_.addObserver(this), this.controller_.refresh())
+          }
+        }, QQ.prototype.unobserve = function(QQ) {
+          if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
+          if ("undefined" !== typeof Element && Element instanceof Object) {
+            if (!(QQ instanceof JQ(QQ).Element)) throw new TypeError('parameter 1 is not of type "Element".');
+            var WQ = this.observations_;
+            WQ.has(QQ) && (WQ.delete(QQ), WQ.size || this.controller_.removeObserver(this))
+          }
+        }, QQ.prototype.disconnect = function() {
+          this.clearActive(), this.observations_.clear(), this.controller_.removeObserver(this)
+        }, QQ.prototype.gatherActive = function() {
+          var QQ = this;
+          this.clearActive(), this.observations_.forEach((function(WQ) {
+            WQ.isActive() && QQ.activeObservations_.push(WQ)
+          }))
+        }, QQ.prototype.broadcastActive = function() {
+          if (this.hasActive()) {
+            var QQ = this.callbackCtx_,
+              WQ = this.activeObservations_.map((function(QQ) {
+                return new GQ(QQ.target, QQ.broadcastRect())
+              }));
+            this.callback_.call(QQ, WQ, QQ), this.clearActive()
+          }
+        }, QQ.prototype.clearActive = function() {
+          this.activeObservations_.splice(0)
+        }, QQ.prototype.hasActive = function() {
+          return this.activeObservations_.length > 0
+        }, QQ
+      }(),
+      bQ = "undefined" !== typeof WeakMap ? new WeakMap : new wQ,
+      vQ = function QQ(WQ) {
+        if (!(this instanceof QQ)) throw new TypeError("Cannot call a class as a function.");
+        if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
+        var XQ = PQ.getInstance(),
+          wQ = new UQ(WQ, XQ, this);
+        bQ.set(this, wQ)
+      };
+    ["observe", "unobserve", "disconnect"].forEach((function(QQ) {
+      vQ.prototype[QQ] = function() {
+        var WQ;
+        return (WQ = bQ.get(this))[QQ].apply(WQ, arguments)
+      }
+    }));
+    const dQ = "undefined" !== typeof TQ.ResizeObserver ? TQ.ResizeObserver : vQ
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

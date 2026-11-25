@@ -1,224 +1,224 @@
-export const id = 22;
-export const ids = [22];
+export const id = 23;
+export const ids = [23];
 export const modules = {
-  36791: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Wp,
-      h: () => yp,
-      i: () => Pp,
-      k: () => Ap
+  36891: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      c: () => IQ,
+      g: () => jQ,
+      k: () => rQ,
+      o: () => JQ
     });
-    var Op = cp(34430),
-      op = cp(36799),
-      Ip = cp(36804),
-      Sp = cp(8852),
-      xp = cp(1476),
-      Lp = cp(62),
-      Yp = cp(82),
-      Dp = cp(1112);
+    var wQ = XQ(34500),
+      qQ = XQ(36900),
+      TQ = XQ(36906),
+      zQ = XQ(9099),
+      sQ = XQ(1498),
+      FQ = XQ(61),
+      PQ = XQ(78),
+      gQ = XQ(1145);
 
-    function Ap() {
-      var pp;
-      return (0, xp.i)(op.d, (0, op.s)()), (0, Dp.jsx)(Dp.Fragment, {
-        children: null === (pp = (0, op.s)()) || void 0 === pp ? void 0 : pp.content
+    function JQ() {
+      var QQ;
+      return (0, sQ.j)(qQ.c, (0, qQ.s)()), (0, gQ.jsx)(gQ.Fragment, {
+        children: null === (QQ = (0, qQ.s)()) || void 0 === QQ ? void 0 : QQ.content
       })
     }
 
-    function Pp(pp) {
-      var ip;
+    function rQ(QQ) {
+      var WQ;
       let {
-        show: cp
-      } = pp;
-      (0, xp.i)(op.d, (0, op.s)());
-      const Yp = null === (ip = (0, op.s)()) || void 0 === ip ? void 0 : ip.menu;
-      return (0, Lp.useEffect)((() => {
-        var pp;
-        cp || (null === Yp || void 0 === Yp || null === (pp = Yp.onClose) || void 0 === pp || pp.call(Yp), (0, Ip.q)())
-      }), [cp, Yp]), (0, Lp.useEffect)((() => cp ? (0, Sp.e)(Ip.A, Ip.d) : void 0), [cp]), (0, Dp.jsx)(Op.b, {
-        showing: cp,
+        show: XQ
+      } = QQ;
+      (0, sQ.j)(qQ.c, (0, qQ.s)());
+      const PQ = null === (WQ = (0, qQ.s)()) || void 0 === WQ ? void 0 : WQ.menu;
+      return (0, FQ.useEffect)((() => {
+        var QQ;
+        XQ || (null === PQ || void 0 === PQ || null === (QQ = PQ.onClose) || void 0 === QQ || QQ.call(PQ), (0, TQ.r)())
+      }), [XQ, PQ]), (0, FQ.useEffect)((() => XQ ? (0, zQ.e)(TQ.y, TQ.f) : void 0), [XQ]), (0, gQ.jsx)(wQ.c, {
+        showing: XQ,
         globallyUniqueKey: "clientGameMenu",
-        children: null === Yp || void 0 === Yp ? void 0 : Yp.content
+        children: null === PQ || void 0 === PQ ? void 0 : PQ.content
       })
     }
 
-    function Wp(pp) {
+    function IQ(QQ) {
       let {
-        placement: ip = "bottom"
-      } = pp;
-      return (0, Dp.jsx)("div", {
-        id: `clientGameHud-${ip}`,
+        placement: WQ = "bottom"
+      } = QQ;
+      return (0, gQ.jsx)("div", {
+        id: `clientGameHud-${WQ}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function yp(pp) {
+    function jQ(QQ) {
       let {
-        children: ip,
-        placement: cp = "bottom"
-      } = pp;
-      const [Op, op] = (0, Lp.useState)(null);
-      return (0, Lp.useEffect)((() => {
-        op(document.getElementById(`clientGameHud-${cp}`))
-      }), [cp]), Op ? (0, Yp.createPortal)(ip, Op) : null
+        children: WQ,
+        placement: XQ = "bottom"
+      } = QQ;
+      const [wQ, qQ] = (0, FQ.useState)(null);
+      return (0, FQ.useEffect)((() => {
+        qQ(document.getElementById(`clientGameHud-${XQ}`))
+      }), [XQ]), wQ ? (0, PQ.createPortal)(WQ, wQ) : null
     }
   },
-  34430: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Ip
+  34500: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      c: () => TQ
     });
-    var Op = cp(4628),
-      op = cp(4635);
+    var wQ = XQ(4859),
+      qQ = XQ(4863);
 
-    function Ip(pp) {
+    function TQ(QQ) {
       let {
-        children: ip,
-        showing: cp,
-        globallyUniqueKey: Ip,
-        alwaysMountChildren: Sp = !1,
-        doGameplayStartStopOnShow: xp = !0,
-        keepsMovement: Lp = !1
-      } = pp;
-      return (0, op.e)(!0, cp, Ip, Lp), (0, Op.d)(xp, cp), cp || Sp ? ip : null
+        children: WQ,
+        showing: XQ,
+        globallyUniqueKey: TQ,
+        alwaysMountChildren: zQ = !1,
+        doGameplayStartStopOnShow: sQ = !0,
+        keepsMovement: FQ = !1
+      } = QQ;
+      return (0, qQ.c)(!0, XQ, TQ, FQ), (0, wQ.c)(sQ, XQ), XQ || zQ ? WQ : null
     }
   },
-  36879: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Ip,
-      h: () => Sp,
-      l: () => xp,
-      m: () => Lp
+  36987: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      e: () => TQ,
+      h: () => zQ,
+      i: () => sQ,
+      k: () => FQ
     });
-    var Op = cp(62),
-      op = cp(3209);
-    const Ip = 8,
-      Sp = "InGameHeaderContainer",
-      xp = "TopRightElements";
+    var wQ = XQ(61),
+      qQ = XQ(3379);
+    const TQ = 8,
+      zQ = "InGameHeaderContainer",
+      sQ = "TopRightElements";
 
-    function Lp(pp) {
-      const [ip] = (0, op.b)(), [cp, Lp] = (0, Op.useState)(!1);
-      return (0, Op.useLayoutEffect)((() => {
-        if (!pp) return;
-        const ip = document.querySelector(`.${Sp}`),
-          cp = document.querySelector(`.${xp}`),
-          Op = () => {
-            const Op = pp.getBoundingClientRect(),
-              op = ip ? ip.getBoundingClientRect().right : 0,
-              Sp = cp ? cp.getBoundingClientRect().left : window.innerWidth,
-              xp = Op.left < op + Ip,
-              Yp = Op.right > Sp - Ip;
-            Lp(xp || Yp)
+    function FQ(QQ) {
+      const [WQ] = (0, qQ.d)(), [XQ, FQ] = (0, wQ.useState)(!1);
+      return (0, wQ.useLayoutEffect)((() => {
+        if (!QQ) return;
+        const WQ = document.querySelector(`.${zQ}`),
+          XQ = document.querySelector(`.${sQ}`),
+          wQ = () => {
+            const wQ = QQ.getBoundingClientRect(),
+              qQ = WQ ? WQ.getBoundingClientRect().right : 0,
+              zQ = XQ ? XQ.getBoundingClientRect().left : window.innerWidth,
+              sQ = wQ.left < qQ + TQ,
+              PQ = wQ.right > zQ - TQ;
+            FQ(sQ || PQ)
           };
-        Op();
-        const op = new ResizeObserver(Op);
-        return op.observe(pp), ip && op.observe(ip), cp && op.observe(cp), () => {
-          op.disconnect()
+        wQ();
+        const qQ = new ResizeObserver(wQ);
+        return qQ.observe(QQ), WQ && qQ.observe(WQ), XQ && qQ.observe(XQ), () => {
+          qQ.disconnect()
         }
-      }), [pp, ip]), cp
+      }), [QQ, WQ]), XQ
     }
   },
-  8852: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Ip,
-      e: () => op
+  9099: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      d: () => TQ,
+      e: () => qQ
     });
-    let Op = null;
-    const op = function(pp) {
-        const ip = {
-          cycle: pp,
+    let wQ = null;
+    const qQ = function(QQ) {
+        const WQ = {
+          cycle: QQ,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return Op = ip, () => {
-          Op === ip && (Op = null)
+        return wQ = WQ, () => {
+          wQ === WQ && (wQ = null)
         }
       },
-      Ip = () => {
-        var pp;
-        return null !== (pp = Op) && void 0 !== pp && pp.canCycle() ? Op.cycle : null
+      TQ = () => {
+        var QQ;
+        return null !== (QQ = wQ) && void 0 !== QQ && QQ.canCycle() ? wQ.cycle : null
       }
   },
-  38736: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Sp,
-      e: () => xp,
-      i: () => Lp
+  38801: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      e: () => zQ,
+      f: () => sQ,
+      i: () => FQ
     });
-    const Op = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1],
-      op = [0, 1, 2, 0, 2, 3],
-      Ip = [4, 5];
+    const wQ = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1],
+      qQ = [0, 1, 2, 0, 2, 3],
+      TQ = [4, 5];
 
-    function Sp(pp, ip, cp, Op, op) {
-      for (let Sp = 0; Sp < 6; Sp++) Ip.includes(Sp) === op && Yp(pp, ip, cp, Op, Sp)
+    function zQ(QQ, WQ, XQ, wQ, qQ) {
+      for (let zQ = 0; zQ < 6; zQ++) TQ.includes(zQ) === qQ && PQ(QQ, WQ, XQ, wQ, zQ)
     }
 
-    function xp(pp, ip, cp, Op) {
-      for (let op = 0; op < 6; op++) Yp(pp, ip, cp, Op, op)
+    function sQ(QQ, WQ, XQ, wQ) {
+      for (let qQ = 0; qQ < 6; qQ++) PQ(QQ, WQ, XQ, wQ, qQ)
     }
 
-    function Lp(pp, ip, cp, Ip, Sp) {
-      for (let xp = 0; xp < 6; xp++)
-        for (const Lp of [0, 1]) {
-          const [Yp, Dp, Ap] = [Lp + 2, Lp + 1, (Lp + 3) % 4], Pp = pp.length / 3;
-          for (const [ip, op] of [
-              [Lp, Dp],
-              [Yp, Dp],
-              [Yp, Ap],
-              [Lp, Ap]
+    function FQ(QQ, WQ, XQ, TQ, zQ) {
+      for (let sQ = 0; sQ < 6; sQ++)
+        for (const FQ of [0, 1]) {
+          const [PQ, gQ, JQ] = [FQ + 2, FQ + 1, (FQ + 3) % 4], rQ = QQ.length / 3;
+          for (const [WQ, qQ] of [
+              [FQ, gQ],
+              [PQ, gQ],
+              [PQ, JQ],
+              [FQ, JQ]
             ])
-            for (let Lp = 0; Lp < 3; Lp++) {
-              const Yp = Op[3 * (4 * xp + ip) + Lp],
-                Dp = Op[3 * (4 * xp + op) + Lp];
-              pp.push((Yp + (Dp - Yp) * Sp) * Ip / 2 + cp[Lp])
+            for (let FQ = 0; FQ < 3; FQ++) {
+              const PQ = wQ[3 * (4 * sQ + WQ) + FQ],
+                gQ = wQ[3 * (4 * sQ + qQ) + FQ];
+              QQ.push((PQ + (gQ - PQ) * zQ) * TQ / 2 + XQ[FQ])
             }
-          for (const pp of op) ip.push(Pp + pp)
+          for (const QQ of qQ) WQ.push(rQ + QQ)
         }
     }
 
-    function Yp(pp, ip, cp, Ip, Sp) {
-      let [xp, Lp, Yp] = cp, [Dp, Ap, Pp] = Ip;
-      const Wp = pp.length / 3;
-      for (let op = 4 * Sp; op < 4 * Sp + 4; op++) pp.push(Op[3 * op] * Dp / 2 + xp, Op[3 * op + 1] * Ap / 2 + Lp, Op[3 * op + 2] * Pp / 2 + Yp);
-      for (const Op of op) ip.push(Wp + Op)
+    function PQ(QQ, WQ, XQ, TQ, zQ) {
+      let [sQ, FQ, PQ] = XQ, [gQ, JQ, rQ] = TQ;
+      const IQ = QQ.length / 3;
+      for (let qQ = 4 * zQ; qQ < 4 * zQ + 4; qQ++) QQ.push(wQ[3 * qQ] * gQ / 2 + sQ, wQ[3 * qQ + 1] * JQ / 2 + FQ, wQ[3 * qQ + 2] * rQ / 2 + PQ);
+      for (const wQ of qQ) WQ.push(IQ + wQ)
     }
   },
-  39655: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      default: () => MO
+  39738: (QQ, WQ, XQ) => {
+    XQ.r(WQ), XQ.d(WQ, {
+      default: () => Hw
     });
-    const Op = [0, 90, 180, 270],
-      op = "plotsblueprint";
-    var Ip = cp(62),
-      Sp = cp(36799),
-      xp = cp(25),
-      Lp = cp(1476),
-      Yp = cp(2012),
-      Dp = cp(1201),
-      Ap = cp(1049),
-      Pp = cp.n(Ap),
-      Wp = cp(1650),
-      yp = cp(36791),
-      Up = cp(1060),
-      wp = cp(1941),
-      vp = cp(2007),
-      tp = cp(3523),
-      Hp = cp(1765);
+    const wQ = [0, 90, 180, 270],
+      qQ = "plotsblueprint";
+    var TQ = XQ(61),
+      zQ = XQ(36900),
+      sQ = XQ(26),
+      FQ = XQ(1498),
+      PQ = XQ(2061),
+      gQ = XQ(1226),
+      JQ = XQ(1081),
+      rQ = XQ.n(JQ),
+      IQ = XQ(1698),
+      jQ = XQ(36891),
+      BQ = XQ(1094),
+      yQ = XQ(1988),
+      VQ = XQ(2058),
+      DQ = XQ(3681),
+      pQ = XQ(1802);
 
-    function dp() {}
-    const ep = (0, Ip.createContext)({
+    function GQ() {}
+    const UQ = (0, TQ.createContext)({
       hint: null,
-      journalRef: dp,
-      placementCardRef: dp,
-      buildRef: dp
+      journalRef: GQ,
+      placementCardRef: GQ,
+      buildRef: GQ
     });
-    var jp = cp(34);
-    const kp = [
+    var bQ = XQ(31);
+    const vQ = [
         ["farm_hut", "farm_house", "farm_barn"],
         ["rusticHome_tent", "rusticHome_cabin", "rusticHome_house"],
         ["market_stand", "market_stall", "market_shop"],
         ["castle_wall", "castle_gate", "castle_tower"]
       ],
-      mp = {
+      dQ = {
         farm_hut: {
           displayName: {
             translationKey: "plotsGame:blueprintFarmHut"
@@ -292,18 +292,18 @@ export const modules = {
           tier: "large"
         }
       },
-      Rp = ["small", "medium", "large"].flatMap((pp => kp.flat().filter((ip => mp[ip].tier === pp))));
+      HQ = ["small", "medium", "large"].flatMap((QQ => vQ.flat().filter((WQ => dQ[WQ].tier === QQ))));
 
-    function qp(pp) {
-      return mp[pp]
+    function aQ(QQ) {
+      return dQ[QQ]
     }
-    const Mp = new Map(kp.flatMap((pp => pp.slice(1).map(((ip, cp) => [ip, pp[cp]])))));
+    const lQ = new Map(vQ.flatMap((QQ => QQ.slice(1).map(((WQ, XQ) => [WQ, QQ[XQ]])))));
 
-    function Cp(pp) {
-      var ip;
-      return null !== (ip = Mp.get(pp)) && void 0 !== ip ? ip : null
+    function hQ(QQ) {
+      var WQ;
+      return null !== (WQ = lQ.get(QQ)) && void 0 !== WQ ? WQ : null
     }
-    const Ep = {
+    const iQ = {
       farm_hut: {
         key: "plotsGame:journalNoteFarmHut",
         firstBuild: !0
@@ -326,109 +326,109 @@ export const modules = {
       }
     };
 
-    function Xp(pp, ip) {
-      const cp = new Set(pp),
-        Op = function(pp) {
-          const ip = new Set(pp);
-          return new Set(Rp.filter((pp => {
-            const cp = Cp(pp);
-            return null === cp || ip.has(cp)
+    function cQ(QQ, WQ) {
+      const XQ = new Set(QQ),
+        wQ = function(QQ) {
+          const WQ = new Set(QQ);
+          return new Set(HQ.filter((QQ => {
+            const XQ = hQ(QQ);
+            return null === XQ || WQ.has(XQ)
           })))
-        }(cp);
-      return Rp.map((pp => {
-        const op = pp === ip;
-        if (cp.has(pp)) return {
-          id: pp,
-          active: op,
+        }(XQ);
+      return HQ.map((QQ => {
+        const qQ = QQ === WQ;
+        if (XQ.has(QQ)) return {
+          id: QQ,
+          active: qQ,
           note: null,
           state: "completed",
           unlockedBy: null
         };
-        const Ip = Ep[pp],
-          Sp = void 0 === Ip || Ip.firstBuild && cp.size > 0 ? null : Ip.key;
-        return Op.has(pp) ? {
-          id: pp,
-          active: op,
-          note: Sp,
+        const TQ = iQ[QQ],
+          zQ = void 0 === TQ || TQ.firstBuild && XQ.size > 0 ? null : TQ.key;
+        return wQ.has(QQ) ? {
+          id: QQ,
+          active: qQ,
+          note: zQ,
           state: "open",
           unlockedBy: null
         } : {
-          id: pp,
-          active: op,
-          note: Sp,
+          id: QQ,
+          active: qQ,
+          note: zQ,
           state: "locked",
-          unlockedBy: Cp(pp)
+          unlockedBy: hQ(QQ)
         }
       }))
     }
-    const lp = "plotsJournalChanged";
-    class Qp {
-      constructor(pp, ip) {
-        this.api = pp, this.placement = ip, this.pages = null, this.openRequested = null, this.openedOffered = !1, this.reported = new Set, this.onOpened = () => {
-          this.placement.stop(), this.Yy(this.openedOffered ? "journal_offered" : "journal_opened"), this.openedOffered = !1
-        }, this.build = pp => {
-          this.placement.start(pp), (0, Sp.h)()
+    const AQ = "plotsJournalChanged";
+    class RQ {
+      constructor(QQ, WQ) {
+        this.api = QQ, this.placement = WQ, this.pages = null, this.openRequested = null, this.openedOffered = !1, this.reported = new Set, this.onOpened = () => {
+          this.placement.stop(), this.nI(this.openedOffered ? "journal_offered" : "journal_opened"), this.openedOffered = !1
+        }, this.build = QQ => {
+          this.placement.start(QQ), (0, zQ.j)()
         }, this.putAway = () => {
-          this.api.sendCommand(`${op} cancel`)
+          this.api.sendCommand(`${qQ} cancel`)
         }
       }
       getPages() {
         return this.pages
       }
-      Ey(pp) {
-        let [, ip, cp] = pp;
-        this.pages = Xp(ip, cp), jp.m.GA(lp, this.pages, !0)
+      gj(QQ) {
+        let [, WQ, XQ] = QQ;
+        this.pages = cQ(WQ, XQ), bQ.k.mB(AQ, this.pages, !0)
       }
-      openFromServer(pp) {
-        let [, ip] = pp;
-        this.openRequested = ip, this.LP()
+      openFromServer(QQ) {
+        let [, WQ] = QQ;
+        this.openRequested = WQ, this.fJ()
       }
-      LP() {
-        const pp = this.openRequested;
-        null === pp || xp.c.get("loadingOverlayVisible") || (this.openRequested = null, null === this.pages || (0, Wp.l)() || (0, Hp.isTypingInInput)() || null !== this.placement.getView() || (this.openedOffered = pp, (0, Sp.t)()))
+      fJ() {
+        const QQ = this.openRequested;
+        null === QQ || sQ.b.get("loadingOverlayVisible") || (this.openRequested = null, null === this.pages || (0, IQ.r)() || (0, pQ.isTypingInInput)() || null !== this.placement.getView() || (this.openedOffered = QQ, (0, zQ.u)()))
       }
-      Yy(pp) {
-        this.reported.has(pp) || (this.reported.add(pp), this.api.sendCommand(`${op} report ${pp}`))
+      nI(QQ) {
+        this.reported.has(QQ) || (this.reported.add(QQ), this.api.sendCommand(`${qQ} report ${QQ}`))
       }
     }
-    var Jp = cp(1112);
-    const Bp = "KeyJ";
+    var EQ = XQ(1145);
+    const CQ = "KeyJ";
 
-    function Np(pp) {
+    function uQ(QQ) {
       let {
-        journal: ip
-      } = pp;
-      const cp = (0, Lp.i)(lp, ip.getPages()),
+        journal: WQ
+      } = QQ;
+      const XQ = (0, FQ.j)(AQ, WQ.getPages()),
         {
-          isTouchScreen: Op
-        } = (0, xp.o)(["isTouchScreen"]),
+          isTouchScreen: wQ
+        } = (0, sQ.n)(["isTouchScreen"]),
         {
-          t: op
-        } = (0, Dp.H)(),
-        Yp = (0, Ip.useContext)(ep);
-      return (0, tp.b)((pp => null !== cp && pp.code === Bp && !pp.repeat && !(0, Hp.isTypingInInput)()), (pp => {
-        (0, Wp.v)(pp, !0, Sp.t)
-      })), null === cp ? null : (0, Jp.jsx)(yp.h, {
+          t: qQ
+        } = (0, gQ.C)(),
+        PQ = (0, TQ.useContext)(UQ);
+      return (0, DQ.c)((QQ => null !== XQ && QQ.code === CQ && !QQ.repeat && !(0, pQ.isTypingInInput)()), (QQ => {
+        (0, IQ.C)(QQ, !0, zQ.u)
+      })), null === XQ ? null : (0, EQ.jsx)(jQ.g, {
         placement: "topRight",
-        children: (0, Jp.jsx)("div", {
+        children: (0, EQ.jsx)("div", {
           className: "PlotsJournalButtonContainer",
-          children: (0, Jp.jsxs)("button", {
-            ref: Yp.journalRef,
+          children: (0, EQ.jsxs)("button", {
+            ref: PQ.journalRef,
             type: "button",
-            className: Pp()("PlotsJournalButton SmallTextBold", {
-              Touch: Op
+            className: rQ()("PlotsJournalButton SmallTextBold", {
+              Touch: wQ
             }),
-            onClick: Sp.t,
-            children: [(0, Jp.jsx)("span", {
+            onClick: zQ.u,
+            children: [(0, EQ.jsx)("span", {
               className: "PlotsJournalButtonIcon",
-              children: (0, Jp.jsx)(wp.d, {
+              children: (0, EQ.jsx)(yQ.d, {
                 itemName: "Book",
                 amount: 0
               })
-            }), op("plotsGame:journalButton"), !Op && (0, Jp.jsx)(vp.d, {
+            }), qQ("plotsGame:journalButton"), !wQ && (0, EQ.jsx)(VQ.b, {
               className: "PlotsJournalButtonKey",
-              keyCode: Bp
-            }), "openJournal" === Yp.hint && (0, Jp.jsx)(Up.d, {
+              keyCode: CQ
+            }), "openJournal" === PQ.hint && (0, EQ.jsx)(BQ.d, {
               name: "hand-point-left",
               className: "SmallTextBold TouchTutorialIcon HandLeftAnim PlotsJournalButtonHand"
             })]
@@ -436,114 +436,114 @@ export const modules = {
         })
       })
     }
-    var Tp = cp(9338);
-    const fp = [0, 90, 180, 270],
-      bp = /^(meta\|rot\d)\|([lrud]+)$/,
-      hp = "nesw",
-      ap = /^meta\|([nesw]*)\|?(Stacked)?$/,
-      np = function(pp) {
-        const ip = new WeakMap;
-        return (cp, Op) => {
-          let op = ip.get(cp);
-          return void 0 === op && (op = pp(cp, Op), ip.set(cp, op)), op
+    var LQ = XQ(9580);
+    const kQ = [0, 90, 180, 270],
+      fQ = /^(meta\|rot\d)\|([lrud]+)$/,
+      SQ = "nesw",
+      tQ = /^meta\|([nesw]*)\|?(Stacked)?$/,
+      oQ = function(QQ) {
+        const WQ = new WeakMap;
+        return (XQ, wQ) => {
+          let qQ = WQ.get(XQ);
+          return void 0 === qQ && (qQ = QQ(XQ, wQ), WQ.set(XQ, qQ)), qQ
         }
-      }((pp => new Fp(pp)));
-    class Fp {
-      constructor(pp) {
-        this.blockMetadata = pp, this.blockIdMappings = new Map, this.maxBlockId = void 0;
-        const ip = new Set(Object.keys(pp).map((ip => pp[ip].id)));
-        ip.add(0), this.maxBlockId = Math.max(...ip)
+      }((QQ => new eQ(QQ)));
+    class eQ {
+      constructor(QQ) {
+        this.blockMetadata = QQ, this.blockIdMappings = new Map, this.maxBlockId = void 0;
+        const WQ = new Set(Object.keys(QQ).map((WQ => QQ[WQ].id)));
+        WQ.add(0), this.maxBlockId = Math.max(...WQ)
       }
       static
-      for (pp) {
-        return np(pp)
+      for (QQ) {
+        return oQ(QQ)
       }
-      getBlockIdMapping(pp, ip) {
-        const cp = this.getBlockIdMappingKey(pp, ip);
-        let Op = this.blockIdMappings.get(cp);
-        return void 0 === Op && fp.includes(pp) && (Op = this.createBlockIdMapping(this.blockMetadata, this.maxBlockId, pp, ip), this.blockIdMappings.set(cp, Op)), Op
+      getBlockIdMapping(QQ, WQ) {
+        const XQ = this.getBlockIdMappingKey(QQ, WQ);
+        let wQ = this.blockIdMappings.get(XQ);
+        return void 0 === wQ && kQ.includes(QQ) && (wQ = this.createBlockIdMapping(this.blockMetadata, this.maxBlockId, QQ, WQ), this.blockIdMappings.set(XQ, wQ)), wQ
       }
-      turnBlockId(pp, ip, cp) {
-        return this.mapBlockId(this.blockMetadata[pp], ip, this.getRotationMapping(ip, cp), cp)
+      turnBlockId(QQ, WQ, XQ) {
+        return this.mapBlockId(this.blockMetadata[QQ], WQ, this.getRotationMapping(WQ, XQ), XQ)
       }
-      getBlockIdMappingKey(pp, ip) {
-        return `r${pp}|m${Number(ip)}`
+      getBlockIdMappingKey(QQ, WQ) {
+        return `r${QQ}|m${Number(WQ)}`
       }
-      createBlockIdMapping(pp, ip, cp, Op) {
-        const op = new Uint16Array(ip + 1),
-          Ip = this.getRotationMapping(cp, Op);
-        for (const Sp in pp) {
-          const ip = pp[Sp];
-          op[ip.id] = this.mapBlockId(ip, cp, Ip, Op)
+      createBlockIdMapping(QQ, WQ, XQ, wQ) {
+        const qQ = new Uint16Array(WQ + 1),
+          TQ = this.getRotationMapping(XQ, wQ);
+        for (const zQ in QQ) {
+          const WQ = QQ[zQ];
+          qQ[WQ.id] = this.mapBlockId(WQ, XQ, TQ, wQ)
         }
-        return op
+        return qQ
       }
-      getRotationMapping(pp, ip) {
-        const cp = Math.round(pp / 90),
-          Op = new Uint8Array(4);
-        for (let op = 0; op < 4; op++) Op[op] = (4 + op - cp) % 4;
-        if (ip) {
-          let pp = Op[0];
-          Op[0] = Op[1], Op[1] = pp, pp = Op[2], Op[2] = Op[3], Op[3] = pp
+      getRotationMapping(QQ, WQ) {
+        const XQ = Math.round(QQ / 90),
+          wQ = new Uint8Array(4);
+        for (let qQ = 0; qQ < 4; qQ++) wQ[qQ] = (4 + qQ - XQ) % 4;
+        if (WQ) {
+          let QQ = wQ[0];
+          wQ[0] = wQ[1], wQ[1] = QQ, QQ = wQ[2], wQ[2] = wQ[3], wQ[3] = QQ
         }
-        return Op
+        return wQ
       }
-      mapBlockId(pp, ip, cp, Op) {
-        var op;
+      mapBlockId(QQ, WQ, XQ, wQ) {
+        var qQ;
         const {
-          blockMetadata: Ip
-        } = this, Sp = Math.round(ip / 90), {
-          id: xp,
-          meta: Lp
-        } = pp, {
-          rot: Yp,
-          rootName: Dp,
-          metaStr: Ap
-        } = Lp;
-        let Pp;
-        const [, Wp, yp] = null !== (op = ap.exec(Ap)) && void 0 !== op ? op : [];
-        if (void 0 !== Wp) {
-          var Up, wp;
-          Pp = null !== (Up = null === (wp = Ip[`${Dp}|meta|${[hp.split("").filter(((pp,ip)=>Wp.split("").some((pp=>{const cp=hp.indexOf(pp);return((Op?3-cp:cp)+Sp)%4===ip})))).join(""),yp].filter(Boolean).join("|")}`]) || void 0 === wp ? void 0 : wp.id) && void 0 !== Up ? Up : xp
-        } else if (null === Yp) Pp = xp;
+          blockMetadata: TQ
+        } = this, zQ = Math.round(WQ / 90), {
+          id: sQ,
+          meta: FQ
+        } = QQ, {
+          rot: PQ,
+          rootName: gQ,
+          metaStr: JQ
+        } = FQ;
+        let rQ;
+        const [, IQ, jQ] = null !== (qQ = tQ.exec(JQ)) && void 0 !== qQ ? qQ : [];
+        if (void 0 !== IQ) {
+          var BQ, yQ;
+          rQ = null !== (BQ = null === (yQ = TQ[`${gQ}|meta|${[SQ.split("").filter(((QQ,WQ)=>IQ.split("").some((QQ=>{const XQ=SQ.indexOf(QQ);return((wQ?3-XQ:XQ)+zQ)%4===WQ})))).join(""),jQ].filter(Boolean).join("|")}`]) || void 0 === yQ ? void 0 : yQ.id) && void 0 !== BQ ? BQ : sQ
+        } else if (null === PQ) rQ = sQ;
         else {
-          var vp, tp;
-          const pp = cp[Yp - 1] + 1;
-          let ip = Ap.replace(`rot${Yp}`, `rot${pp}`);
-          Op && Lp.stairsCorner && (ip = ip.replace(/(Left|Right)$/, (pp => "Left" === pp ? "Right" : "Left"))), Op && "Chest" === Dp && (ip = ip.replace(/\|(left|right)$/, ((pp, ip) => "left" === ip ? "|right" : "|left")));
-          const op = bp.exec(ip);
-          if (Op && null !== op) {
-            const pp = "lrud".split("").filter((pp => op[2].includes("l" === pp ? "r" : "r" === pp ? "l" : pp)));
-            ip = `${op[1]}|${pp.join("")}`
+          var VQ, DQ;
+          const QQ = XQ[PQ - 1] + 1;
+          let WQ = JQ.replace(`rot${PQ}`, `rot${QQ}`);
+          wQ && FQ.stairsCorner && (WQ = WQ.replace(/(Left|Right)$/, (QQ => "Left" === QQ ? "Right" : "Left"))), wQ && "Chest" === gQ && (WQ = WQ.replace(/\|(left|right)$/, ((QQ, WQ) => "left" === WQ ? "|right" : "|left")));
+          const qQ = fQ.exec(WQ);
+          if (wQ && null !== qQ) {
+            const QQ = "lrud".split("").filter((QQ => qQ[2].includes("l" === QQ ? "r" : "r" === QQ ? "l" : QQ)));
+            WQ = `${qQ[1]}|${QQ.join("")}`
           }
-          const Sp = `${Dp}|${ip}`;
-          if (Pp = null !== (vp = null === (tp = Ip[Sp]) || void 0 === tp ? void 0 : tp.id) && void 0 !== vp ? vp : null, null === Pp) {
-            const pp = Ip[Dp];
-            Pp = pp.rootMetaDesc === Sp ? pp.id : xp
+          const zQ = `${gQ}|${WQ}`;
+          if (rQ = null !== (VQ = null === (DQ = TQ[zQ]) || void 0 === DQ ? void 0 : DQ.id) && void 0 !== VQ ? VQ : null, null === rQ) {
+            const QQ = TQ[gQ];
+            rQ = QQ.rootMetaDesc === zQ ? QQ.id : sQ
           }
         }
-        return Pp
+        return rQ
       }
     }
 
-    function gp(pp, ip, cp) {
+    function nQ(QQ, WQ, XQ) {
       let {
-        xRotationMappedOrigin: Op,
-        shouldSwapXZ: op
-      } = cp;
-      const Ip = op ? ip : pp;
-      return null === Op ? Ip : Op - Ip
+        xRotationMappedOrigin: wQ,
+        shouldSwapXZ: qQ
+      } = XQ;
+      const TQ = qQ ? WQ : QQ;
+      return null === wQ ? TQ : wQ - TQ
     }
 
-    function Gp(pp, ip, cp) {
+    function xQ(QQ, WQ, XQ) {
       let {
-        zRotationMappedOrigin: Op,
-        shouldSwapXZ: op
-      } = cp;
-      const Ip = op ? pp : ip;
-      return null === Op ? Ip : Op - Ip
+        zRotationMappedOrigin: wQ,
+        shouldSwapXZ: qQ
+      } = XQ;
+      const TQ = qQ ? QQ : WQ;
+      return null === wQ ? TQ : wQ - TQ
     }
-    const rp = {
+    const YQ = {
         farm_hut: {
           size: [7, 7, 7],
           palette: ["Aspen Wood Planks", "Messy Stone", "Barkless Aspen Log", "Red Planks", "Glass", "Barkless Pine Log", "Maple Wood Planks", "Smooth Stone"],
@@ -605,304 +605,304 @@ export const modules = {
           layers: ["aaaaaaaaa accccccca accccccca accccccca accccccca accccccca accccccca accccccca aaaaaaaaa", "bbbb.bbbb b.......b b.......b b.......b b.......b b.......b b.......b b.....f.b bbbbbbbbb", "abbb.bbba b.......b b.......b b.......b b.......b b.......b b.......b b.....f.b abbbbbbba", "bbbbabbbb b.......b b.......b b.......b b.......b b.......b b.......b b.....f.b bbbbbbbbb", "abbbbbbba bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccfcb abbbbbbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbb.bbba b.......b b.......b b.......b ......... b.......b b.......b b.....f.b abbb.bbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbbbbbba bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccfcb abbbbbbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbb.bbba b.......b b.......b b.......b ......... b.......b b.......b b.....f.b abbb.bbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbbbbbba bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccfcb abbbbbbba", "bbbbbbbbb b.......b b.......b b.......b b...d...b b.......b b.......b b.......b bbbbbbbbb", "ab.bbb.ba b.......b ......... b.......b b...d...b b.......b ......... b.......b ab.bbb.ba", "......... ......... ......... ......... ....d.... ......... ......... ......... .........", "......... ......... ......... ......... ....d.... ......... ......... ......... .........", "......... ......... ......... ......... ....deee. ......... ......... ......... .........", "......... ......... ......... ......... ....deee. ......... ......... ......... .........", "......... ......... ......... ......... ....a.... ......... ......... ......... ........."]
         }
       },
-      Zp = new Map;
+      NQ = new Map;
 
-    function zp(pp, ip) {
-      const cp = `${pp}|${ip}`;
-      let Op = Zp.get(cp);
-      if (void 0 === Op) {
+    function ZQ(QQ, WQ) {
+      const XQ = `${QQ}|${WQ}`;
+      let wQ = NQ.get(XQ);
+      if (void 0 === wQ) {
         const {
-          size: op,
-          palette: Ip,
-          layers: Sp
-        } = rp[pp], xp = 90 === ip || 270 === ip, [Lp, Yp] = xp ? [op[2], op[0]] : [op[0], op[2]], Dp = function(pp, ip, cp) {
-          let Op = null,
-            op = null,
-            Ip = !1;
-          switch (pp) {
+          size: qQ,
+          palette: TQ,
+          layers: zQ
+        } = YQ[QQ], sQ = 90 === WQ || 270 === WQ, [FQ, PQ] = sQ ? [qQ[2], qQ[0]] : [qQ[0], qQ[2]], gQ = function(QQ, WQ, XQ) {
+          let wQ = null,
+            qQ = null,
+            TQ = !1;
+          switch (QQ) {
             case 0:
               break;
             case 90:
-              Op = ip - 1, Ip = !0;
+              wQ = WQ - 1, TQ = !0;
               break;
             case 180:
-              Op = ip - 1, op = cp - 1;
+              wQ = WQ - 1, qQ = XQ - 1;
               break;
             case 270:
-              op = cp - 1, Ip = !0;
+              qQ = XQ - 1, TQ = !0;
               break;
             default:
-              throw new Error(`Invalid rotation: ${pp}`)
+              throw new Error(`Invalid rotation: ${QQ}`)
           }
           return {
-            xRotationMappedOrigin: Op,
-            zRotationMappedOrigin: op,
-            shouldSwapXZ: Ip
+            xRotationMappedOrigin: wQ,
+            zRotationMappedOrigin: qQ,
+            shouldSwapXZ: TQ
           }
-        }(ip, Lp, Yp), Ap = Fp.for(Tp.e), Pp = Ip.map((pp => (0, Tp.d)(Ap.turnBlockId((0, Tp.f)(pp), ip, !1)))), Wp = [];
-        Sp.forEach(((pp, ip) => {
-          pp.split(" ").forEach(((pp, cp) => {
-            for (let Op = 0; Op < pp.length; Op++)
-              if ("." !== pp[Op]) {
-                const op = [gp(Op, cp, Dp), ip, Gp(Op, cp, Dp)];
-                Wp.push({
-                  offset: op,
-                  block: Pp[pp.charCodeAt(Op) - "a".charCodeAt(0)]
+        }(WQ, FQ, PQ), JQ = eQ.for(LQ.h), rQ = TQ.map((QQ => (0, LQ.f)(JQ.turnBlockId((0, LQ.k)(QQ), WQ, !1)))), IQ = [];
+        zQ.forEach(((QQ, WQ) => {
+          QQ.split(" ").forEach(((QQ, XQ) => {
+            for (let wQ = 0; wQ < QQ.length; wQ++)
+              if ("." !== QQ[wQ]) {
+                const qQ = [nQ(wQ, XQ, gQ), WQ, xQ(wQ, XQ, gQ)];
+                IQ.push({
+                  offset: qQ,
+                  block: rQ[QQ.charCodeAt(wQ) - "a".charCodeAt(0)]
                 })
               }
           }))
-        })), Op = {
-          size: [Lp, op[1], Yp],
-          cells: Wp
-        }, Zp.set(cp, Op)
+        })), wQ = {
+          size: [FQ, qQ[1], PQ],
+          cells: IQ
+        }, NQ.set(XQ, wQ)
       }
-      return Op
+      return wQ
     }
-    const sp = "plotsBuildProgressChanged",
-      Kp = new Map;
+    const OQ = "plotsBuildProgressChanged",
+      KQ = new Map;
 
-    function Vp(pp, ip, cp) {
-      let Op = 0,
-        op = 0;
-      return function(pp) {
-        let ip = Kp.get(pp);
-        if (void 0 === ip) {
-          const Op = [];
+    function mQ(QQ, WQ, XQ) {
+      let wQ = 0,
+        qQ = 0;
+      return function(QQ) {
+        let WQ = KQ.get(QQ);
+        if (void 0 === WQ) {
+          const wQ = [];
           for (const {
-              offset: ip
+              offset: WQ
             }
-            of zp(pp, 0).cells) {
-            var cp;
-            Op[ip[1]] = (null !== (cp = Op[ip[1]]) && void 0 !== cp ? cp : 0) + 1
+            of ZQ(QQ, 0).cells) {
+            var XQ;
+            wQ[WQ[1]] = (null !== (XQ = wQ[WQ[1]]) && void 0 !== XQ ? XQ : 0) + 1
           }
-          ip = Op, Kp.set(pp, ip)
+          WQ = wQ, KQ.set(QQ, WQ)
         }
-        return ip
-      }(pp).forEach(((pp, cp) => {
-        Op += pp, cp > ip && (op += pp)
+        return WQ
+      }(QQ).forEach(((QQ, XQ) => {
+        wQ += QQ, XQ > WQ && (qQ += QQ)
       })), {
-        id: pp,
-        filled: Op - op - cp,
-        total: Op
+        id: QQ,
+        filled: wQ - qQ - XQ,
+        total: wQ
       }
     }
-    class ii {
+    class MQ {
       constructor() {
         this.shown = null, this.topOpen = 0, this.progress = null
       }
       get() {
         return this.progress
       }
-      show(pp) {
-        this.shown = pp, this.topOpen = 0, null === pp && this.GA(null)
+      show(QQ) {
+        this.shown = QQ, this.topOpen = 0, null === QQ && this.mB(null)
       }
-      update(pp, ip, cp) {
-        const Op = this.shown;
-        null !== Op && (pp >= ip && (this.topOpen = cp), this.GA(Vp(Op.id, ip - Op.y, pp >= ip ? cp : this.topOpen + cp)))
+      update(QQ, WQ, XQ) {
+        const wQ = this.shown;
+        null !== wQ && (QQ >= WQ && (this.topOpen = XQ), this.mB(mQ(wQ.id, WQ - wQ.y, QQ >= WQ ? XQ : this.topOpen + XQ)))
       }
-      GA(pp) {
-        const ip = this.progress;
-        (null === pp || void 0 === pp ? void 0 : pp.id) === (null === ip || void 0 === ip ? void 0 : ip.id) && (null === pp || void 0 === pp ? void 0 : pp.filled) === (null === ip || void 0 === ip ? void 0 : ip.filled) && (null === pp || void 0 === pp ? void 0 : pp.total) === (null === ip || void 0 === ip ? void 0 : ip.total) || (this.progress = pp, jp.m.GA(sp, pp, !0))
+      mB(QQ) {
+        const WQ = this.progress;
+        (null === QQ || void 0 === QQ ? void 0 : QQ.id) === (null === WQ || void 0 === WQ ? void 0 : WQ.id) && (null === QQ || void 0 === QQ ? void 0 : QQ.filled) === (null === WQ || void 0 === WQ ? void 0 : WQ.filled) && (null === QQ || void 0 === QQ ? void 0 : QQ.total) === (null === WQ || void 0 === WQ ? void 0 : WQ.total) || (this.progress = QQ, bQ.k.mB(OQ, QQ, !0))
       }
     }
-    const ci = "plotsPlotChanged",
-      Oi = "plotsGuideChanged",
-      oi = "plotsGuideDone";
-    class Ii {
+    const QW = "plotsPlotChanged",
+      WW = "plotsGuideChanged",
+      XW = "plotsGuideDone";
+    class wW {
       constructor() {
         this.plot = ["none"], this.guide = ["none"]
       }
       getPlot() {
         return this.plot
       }
-      receivePlot(pp) {
-        this.plot = pp, jp.m.GA(ci, pp, !0)
+      receivePlot(QQ) {
+        this.plot = QQ, bQ.k.mB(QW, QQ, !0)
       }
       getGuide() {
         return this.guide
       }
-      receiveGuide(pp) {
-        this.guide = pp, jp.m.GA(Oi, pp, !0)
+      receiveGuide(QQ) {
+        this.guide = QQ, bQ.k.mB(WW, QQ, !0)
       }
       receiveGuideDone() {
-        jp.m.GA(oi, void 0, !0)
+        bQ.k.mB(XW, void 0, !0)
       }
     }
-    var Si = cp(1295),
-      xi = cp(38756),
-      Li = cp(37084),
-      Yi = cp(1502);
+    var qW = XQ(1318),
+      TW = XQ(38821),
+      zW = XQ(37169),
+      sW = XQ(1527);
 
-    function Di(pp) {
+    function FW(QQ) {
       let {
-        onSkip: ip,
-        className: cp
-      } = pp;
+        onSkip: WQ,
+        className: XQ
+      } = QQ;
       const {
-        t: Op
-      } = (0, Dp.H)();
-      return (0, Jp.jsx)("button", {
+        t: wQ
+      } = (0, gQ.C)();
+      return (0, EQ.jsx)("button", {
         type: "button",
-        className: Pp()("PlotsGuideSkipButton", cp),
-        ...(0, Yi.h)(ip, "pointerup"),
-        children: Op("tutorial:skip")
+        className: rQ()("PlotsGuideSkipButton", XQ),
+        ...(0, sW.g)(WQ, "pointerup"),
+        children: wQ("tutorial:skip")
       })
     }
 
-    function Ai(pp) {
+    function PW(QQ) {
       let {
-        target: ip,
-        placement: cp,
-        spotlight: Op = null,
-        children: op
-      } = pp;
+        target: WQ,
+        placement: XQ,
+        spotlight: wQ = null,
+        children: qQ
+      } = QQ;
       const {
-        t: Sp
-      } = (0, Dp.H)(), xp = (0, Ip.useRef)(ip);
-      return xp.current = ip, (0, Si.x)("popup", xp, null === Op ? null : Op.onSkip, null !== Op, null, "controller:menusSkipTutorial"), (0, Jp.jsxs)(Li.h, {
-        target: ip,
-        placement: cp,
-        className: Pp()("PlotsGuideBubble", {
-          Passive: null === Op
+        t: zQ
+      } = (0, gQ.C)(), sQ = (0, TQ.useRef)(WQ);
+      return sQ.current = WQ, (0, qW.k)("popup", sQ, null === wQ ? null : wQ.onSkip, null !== wQ, null, "controller:menusSkipTutorial"), (0, EQ.jsxs)(zW.g, {
+        target: WQ,
+        placement: XQ,
+        className: rQ()("PlotsGuideBubble", {
+          Passive: null === wQ
         }),
-        spotlight: null !== Op,
+        spotlight: null !== wQ,
         spotlightMargin: 30,
-        children: [(0, Jp.jsxs)("div", {
+        children: [(0, EQ.jsxs)("div", {
           className: "PlotsGuideBubbleHeader",
-          children: [(0, Jp.jsx)("img", {
+          children: [(0, EQ.jsx)("img", {
             className: "PlotsGuideBubblePortrait",
-            src: xi,
+            src: TW,
             alt: "",
             draggable: !1
-          }), (0, Jp.jsx)("span", {
+          }), (0, EQ.jsx)("span", {
             className: "PlotsGuideBubbleSpeaker",
-            children: Sp("plotsGame:maverickName")
-          }), null !== Op && (0, Jp.jsx)(Di, {
-            onSkip: Op.onSkip
+            children: zQ("plotsGame:maverickName")
+          }), null !== wQ && (0, EQ.jsx)(FW, {
+            onSkip: wQ.onSkip
           })]
-        }), (0, Jp.jsx)("p", {
+        }), (0, EQ.jsx)("p", {
           className: "PlotsGuideBubbleText",
-          children: op
+          children: qQ
         })]
       })
     }
 
-    function Pi(pp) {
+    function gW(QQ) {
       let {
-        className: ip,
-        icon: cp,
-        title: Op,
-        children: op
-      } = pp;
-      return (0, Jp.jsxs)("div", {
-        className: Pp()("PlotsCard", ip),
+        className: WQ,
+        icon: XQ,
+        title: wQ,
+        children: qQ
+      } = QQ;
+      return (0, EQ.jsxs)("div", {
+        className: rQ()("PlotsCard", WQ),
         role: "status",
-        children: [(0, Jp.jsx)("span", {
+        children: [(0, EQ.jsx)("span", {
           className: "PlotsCardIcon",
-          children: (0, Jp.jsx)(Up.d, {
-            name: cp
+          children: (0, EQ.jsx)(BQ.d, {
+            name: XQ
           })
-        }), (0, Jp.jsxs)("div", {
+        }), (0, EQ.jsxs)("div", {
           className: "PlotsCardBody",
-          children: [(0, Jp.jsx)("div", {
+          children: [(0, EQ.jsx)("div", {
             className: "PlotsCardTitle SmallTextBold",
-            children: Op
-          }), op]
+            children: wQ
+          }), qQ]
         })]
       })
     }
 
-    function Wi(pp) {
+    function JW(QQ) {
       let {
-        progress: ip,
-        goal: cp
-      } = pp;
-      const Op = Math.min(ip, cp);
-      return (0, Jp.jsxs)("div", {
+        progress: WQ,
+        goal: XQ
+      } = QQ;
+      const wQ = Math.min(WQ, XQ);
+      return (0, EQ.jsxs)("div", {
         className: "PlotsProgress",
-        children: [(0, Jp.jsx)("div", {
+        children: [(0, EQ.jsx)("div", {
           className: "PlotsProgressBar",
           role: "progressbar",
           "aria-valuemin": 0,
-          "aria-valuemax": cp,
-          "aria-valuenow": Op,
-          children: (0, Jp.jsx)("div", {
+          "aria-valuemax": XQ,
+          "aria-valuenow": wQ,
+          children: (0, EQ.jsx)("div", {
             className: "PlotsProgressBarFill",
             style: {
-              transform: `scaleX(${Op/cp})`
+              transform: `scaleX(${wQ/XQ})`
             }
           })
-        }), (0, Jp.jsxs)("span", {
+        }), (0, EQ.jsxs)("span", {
           className: "PlotsProgressCount",
-          children: [Op, "/", cp]
+          children: [wQ, "/", XQ]
         })]
       })
     }
 
-    function yi(pp) {
+    function rW(QQ) {
       let {
-        progress: ip,
-        guide: cp
-      } = pp;
+        progress: WQ,
+        guide: XQ
+      } = QQ;
       const {
-        t: Op
-      } = (0, Dp.H)(), {
-        isTouchScreen: op
-      } = (0, xp.o)(["isTouchScreen"]), Ip = ip.filled < 5;
-      return (0, Jp.jsxs)(Jp.Fragment, {
-        children: [(Ip || ip.total - ip.filled <= 5) && (0, Jp.jsx)("div", {
+        t: wQ
+      } = (0, gQ.C)(), {
+        isTouchScreen: qQ
+      } = (0, sQ.n)(["isTouchScreen"]), TQ = WQ.filled < 5;
+      return (0, EQ.jsxs)(EQ.Fragment, {
+        children: [(TQ || WQ.total - WQ.filled <= 5) && (0, EQ.jsx)("div", {
           className: "PlotsGuideHandLayer",
-          children: (0, Jp.jsx)("div", {
-            ref: cp.bindHand,
+          children: (0, EQ.jsx)("div", {
+            ref: XQ.bindHand,
             className: "PlotsGuideHand",
-            children: (0, Jp.jsx)(Up.d, {
+            children: (0, EQ.jsx)(BQ.d, {
               name: "hand-point-left",
               className: "SmallTextBold TouchTutorialIcon"
             })
           })
-        }), (0, Jp.jsx)(yp.h, {
+        }), (0, EQ.jsx)(jQ.g, {
           placement: "bottom",
-          children: (0, Jp.jsxs)(Pi, {
+          children: (0, EQ.jsxs)(gW, {
             icon: "hammer",
-            title: Op(qp(ip.id).displayName.translationKey),
-            children: [Ip && (0, Jp.jsx)("div", {
+            title: wQ(aQ(WQ.id).displayName.translationKey),
+            children: [TQ && (0, EQ.jsx)("div", {
               className: "PlotsCardHint SmallTextLight",
-              children: op ? Op("plotsGame:guideBuildTouch") : Ui(Op)
-            }), (0, Jp.jsx)(Wi, {
-              progress: ip.filled,
-              goal: ip.total
+              children: qQ ? wQ("plotsGame:guideBuildTouch") : IW(wQ)
+            }), (0, EQ.jsx)(JW, {
+              progress: WQ.filled,
+              goal: WQ.total
             })]
           })
         })]
       })
     }
 
-    function Ui(pp) {
-      const ip = Yp.t["alt-fire"][0];
-      return "Mouse3" === ip ? pp("plotsGame:guideBuildRightClick") : pp("plotsGame:guideBuildKeys", {
-        key: (0, Yp.l)(ip)
+    function IW(QQ) {
+      const WQ = PQ.s["alt-fire"][0];
+      return "Mouse3" === WQ ? QQ("plotsGame:guideBuildRightClick") : QQ("plotsGame:guideBuildKeys", {
+        key: (0, PQ.n)(WQ)
       })
     }
 
-    function wi() {
-      return (0, Jp.jsx)("div", {
+    function jW() {
+      return (0, EQ.jsx)("div", {
         className: "PlotsGuideDragHand",
-        children: (0, Jp.jsx)(Up.d, {
+        children: (0, EQ.jsx)(BQ.d, {
           name: "hand-back-point-up",
           className: "SmallTextBold TouchTutorialIcon"
         })
       })
     }
-    var vi = cp(1308),
-      ti = cp(2657),
-      Hi = cp(38624),
-      di = cp(38399),
-      ei = cp(37142),
-      ui = cp(9375),
-      ji = cp(9392),
-      ki = cp(337),
-      mi = cp(38033);
-    const Ri = new Map([
+    var BW = XQ(1335),
+      yW = XQ(2737),
+      VW = XQ(38698),
+      DW = XQ(38473),
+      pW = XQ(37212),
+      GW = XQ(9616),
+      UW = XQ(9637),
+      bW = XQ(402),
+      vW = XQ(38084);
+    const dW = new Map([
         ["Aspen Wood Planks", [.78, .706, .502]],
         ["Barkless Aspen Log", [.792, .718, .518]],
         ["Barkless Pine Log", [.49, .353, .275]],
@@ -922,450 +922,450 @@ export const modules = {
         ["Stone Bricks", [.522, .545, .573]],
         ["White Wool", [.98, .98, .98]]
       ]),
-      qi = [...ei.c.blockRemoveActionRoots, ...di.b, ...ui.i, "Board", "Code Block", "Custom Lobby Block"],
-      Mi = /^(open|closed|(inner|outer)(Left|Right)|Stacked|books\d+|Roots|\w*GrassRoots|Growing|FreshlyGrown|empty|full)$/;
-    let Ci = null;
+      HW = [...pW.e.blockRemoveActionRoots, ...DW.d, ...GW.f, "Board", "Code Block", "Custom Lobby Block"],
+      aW = /^(open|closed|(inner|outer)(Left|Right)|Stacked|books\d+|Roots|\w*GrassRoots|Growing|FreshlyGrown|empty|full)$/;
+    let lW = null;
 
-    function Ei() {
-      return Ci ??= function() {
-        const pp = Xi(),
-          ip = Math.max(...pp.map((pp => Tp.e[pp].id))) + 1,
-          cp = new Int32Array(ip),
-          Op = new Int32Array(ip),
-          op = new Uint8Array(ip).fill(1),
-          Ip = new Uint8Array(ip),
-          Sp = new Uint8Array(ip),
-          xp = new Array(ip).fill("Air"),
-          Lp = new Map,
-          Yp = pp => {
-            let ip = Lp.get(pp);
-            return void 0 === ip && (ip = Lp.size + 1, Lp.set(pp, ip)), ip
+    function hW() {
+      return lW ??= function() {
+        const QQ = iW(),
+          WQ = Math.max(...QQ.map((QQ => LQ.h[QQ].id))) + 1,
+          XQ = new Int32Array(WQ),
+          wQ = new Int32Array(WQ),
+          qQ = new Uint8Array(WQ).fill(1),
+          TQ = new Uint8Array(WQ),
+          zQ = new Uint8Array(WQ),
+          sQ = new Array(WQ).fill("Air"),
+          FQ = new Map,
+          PQ = QQ => {
+            let WQ = FQ.get(QQ);
+            return void 0 === WQ && (WQ = FQ.size + 1, FQ.set(QQ, WQ)), WQ
           },
-          Dp = new Set(qi);
-        for (const Pp of pp) {
-          var Ap;
+          gQ = new Set(HW);
+        for (const rQ of QQ) {
+          var JQ;
           const {
-            id: pp,
-            meta: ip,
-            altActionable: Lp,
-            canBePlacedOver: Wp
-          } = Tp.e[Pp];
-          cp[pp] = Yp(li(Pp));
-          const yp = ip.stairsCorner;
-          if (null === yp) Op[pp] = cp[pp];
+            id: QQ,
+            meta: WQ,
+            altActionable: FQ,
+            canBePlacedOver: IQ
+          } = LQ.h[rQ];
+          XQ[QQ] = PQ(cW(rQ));
+          const jQ = WQ.stairsCorner;
+          if (null === jQ) wQ[QQ] = XQ[QQ];
           else {
-            const cp = yp.endsWith("Right");
-            Op[pp] = Yp(`${ip.rootName}|rot${cp?ip.rot%4+1:ip.rot}|${ip.halfblockPlacement}|${yp.replace("Right","Left")}`)
+            const XQ = jQ.endsWith("Right");
+            wQ[QQ] = PQ(`${WQ.rootName}|rot${XQ?WQ.rot%4+1:WQ.rot}|${WQ.halfblockPlacement}|${jQ.replace("Right","Left")}`)
           }
-          op[pp] = Wp ? 1 : 0, Ip[pp] = Lp || null !== ip.open || Pp in mi.d || Dp.has(ip.rootName) || void 0 !== (0, di.e)(ip.rootName) ? 1 : 0;
+          qQ[QQ] = IQ ? 1 : 0, TQ[QQ] = FQ || null !== WQ.open || rQ in vW.d || gQ.has(WQ.rootName) || void 0 !== (0, DW.h)(WQ.rootName) ? 1 : 0;
           const {
-            rootName: Up
-          } = ip;
-          Sp[pp] = null !== ip.open || di.b.includes(Up) || Up.includes("Bookshelf") || Up.includes("Mailbox") ? 1 : 0, xp[pp] = null !== (Ap = (0, Hi.e)(pp)) && void 0 !== Ap ? Ap : Up
+            rootName: BQ
+          } = WQ;
+          zQ[QQ] = null !== WQ.open || DW.d.includes(BQ) || BQ.includes("Bookshelf") || BQ.includes("Mailbox") ? 1 : 0, sQ[QQ] = null !== (JQ = (0, VW.d)(QQ)) && void 0 !== JQ ? JQ : BQ
         }
         return {
-          kinds: cp,
-          shapes: Op,
-          empty: op,
-          inUse: Ip,
-          ownAltActionMessage: Sp,
-          placingItems: xp
+          kinds: XQ,
+          shapes: wQ,
+          empty: qQ,
+          inUse: TQ,
+          ownAltActionMessage: zQ,
+          placingItems: sQ
         }
-      }(), Ci
+      }(), lW
     }
 
-    function Xi() {
-      return Object.keys(Tp.e).filter((pp => Tp.e[pp].name === pp))
+    function iW() {
+      return Object.keys(LQ.h).filter((QQ => LQ.h[QQ].name === QQ))
     }
 
-    function li(pp) {
-      var ip;
-      const cp = Tp.e[pp],
+    function cW(QQ) {
+      var WQ;
+      const XQ = LQ.h[QQ],
         {
-          rootName: Op,
-          rot: op
-        } = cp.meta,
-        [, ...Ip] = (null !== (ip = cp.rootMetaDesc) && void 0 !== ip ? ip : pp).split("|"),
-        Sp = Ip.filter((pp => !("meta" === pp || Mi.test(pp) || (0, ji.C)(cp) && /^[nesw]+$/.test(pp) || ui.i.includes(Op) && /^[lrud]+$/.test(pp) || ki.M.includes(Op) && /^(left|right)$/.test(pp))));
-      return [Op, ...Sp].map((pp => "fenceGate" === cp.model && pp === `rot${op}` ? "rot" + ((op - 1) % 2 + 1) : pp)).join("|")
+          rootName: wQ,
+          rot: qQ
+        } = XQ.meta,
+        [, ...TQ] = (null !== (WQ = XQ.rootMetaDesc) && void 0 !== WQ ? WQ : QQ).split("|"),
+        zQ = TQ.filter((QQ => !("meta" === QQ || aW.test(QQ) || (0, UW.G)(XQ) && /^[nesw]+$/.test(QQ) || GW.f.includes(wQ) && /^[lrud]+$/.test(QQ) || bW.J.includes(wQ) && /^(left|right)$/.test(QQ))));
+      return [wQ, ...zQ].map((QQ => "fenceGate" === XQ.model && QQ === `rot${qQ}` ? "rot" + ((qQ - 1) % 2 + 1) : QQ)).join("|")
     }
 
-    function Qi(pp, ip) {
+    function AW(QQ, WQ) {
       const {
-        kinds: cp,
-        shapes: Op
-      } = Ei();
-      return cp[pp] === cp[ip] || Op[pp] === Op[ip]
+        kinds: XQ,
+        shapes: wQ
+      } = hW();
+      return XQ[QQ] === XQ[WQ] || wQ[QQ] === wQ[WQ]
     }
 
-    function Ji(pp) {
-      return 1 === Ei().empty[pp]
+    function RW(QQ) {
+      return 1 === hW().empty[QQ]
     }
 
-    function Bi(pp) {
-      return Ei().placingItems[pp]
+    function EW(QQ) {
+      return hW().placingItems[QQ]
     }
 
-    function Ni(pp) {
-      return Ri.get(Tp.e[pp].meta.rootName)
+    function CW(QQ) {
+      return dW.get(LQ.h[QQ].meta.rootName)
     }
-    var Ti = cp(9368),
-      fi = cp(9385);
-    const bi = [0, 0, 0, 1, 1, 1],
-      ai = (0, Ti.e)([
+    var uW = XQ(9613),
+      LW = XQ(9634);
+    const kW = [0, 0, 0, 1, 1, 1],
+      fW = (0, uW.c)([
         [2, 0, 2, 6, 6, 6]
       ]),
-      ni = (0, Ti.e)([
+      SW = (0, uW.c)([
         [3, 0, 3, 5, 5, 5]
       ]),
-      Fi = (0, Ti.e)([
+      tW = (0, uW.c)([
         [3, 3, 3, 5, 8, 5]
       ]),
-      gi = [0, 1, 2, 3].map((pp => (0, Ti.e)((0, Ti.t)([
+      oW = [0, 1, 2, 3].map((QQ => (0, uW.c)((0, uW.h)([
         [3, 2, 0, 5, 7, 3]
-      ], pp))));
+      ], QQ))));
 
-    function Gi(pp) {
+    function eW(QQ) {
       const {
-        Ww: ip,
-        model: cp,
-        blockModel: Op,
-        meta: op
-      } = Tp.e[pp];
-      return void 0 !== ip ? ip : "CentreCross" === cp ? ai : null !== Op && void 0 !== Op && Op.startsWith("torch") ? op.halfblockPlacement === fi.c.side ? gi[op.rot - 1] : op.halfblockPlacement === fi.c.top ? Fi : ni : bi
+        Xy: WQ,
+        model: XQ,
+        blockModel: wQ,
+        meta: qQ
+      } = LQ.h[QQ];
+      return void 0 !== WQ ? WQ : "CentreCross" === XQ ? fW : null !== wQ && void 0 !== wQ && wQ.startsWith("torch") ? qQ.halfblockPlacement === LW.b.side ? oW[qQ.rot - 1] : qQ.halfblockPlacement === LW.b.top ? tW : SW : kW
     }
-    var ri = cp(195);
-    class Zi {
-      constructor(pp) {
-        this.api = pp, this.chunks = [], this.versions = [], this.lastCheckMs = -1 / 0
+    var nW = XQ(231);
+    class xW {
+      constructor(QQ) {
+        this.api = QQ, this.chunks = [], this.versions = [], this.lastCheckMs = -1 / 0
       }
-      watch(pp) {
-        const ip = ri.g.Qy;
+      watch(QQ) {
+        const WQ = nW.h.Ij;
         this.chunks = [];
-        for (let cp = 0; cp < pp.length; cp += 3) {
-          const Op = Math.floor(pp[cp] / ip),
-            op = Math.floor(pp[cp + 1] / ip),
-            Ip = Math.floor(pp[cp + 2] / ip);
-          this.watches(Op, op, Ip) || this.chunks.push(Op, op, Ip)
+        for (let XQ = 0; XQ < QQ.length; XQ += 3) {
+          const wQ = Math.floor(QQ[XQ] / WQ),
+            qQ = Math.floor(QQ[XQ + 1] / WQ),
+            TQ = Math.floor(QQ[XQ + 2] / WQ);
+          this.watches(wQ, qQ, TQ) || this.chunks.push(wQ, qQ, TQ)
         }
         this.versions = [], this.lastCheckMs = -1 / 0, this.changed()
       }
       changed() {
-        const pp = performance.now();
-        if (pp - this.lastCheckMs < 100) return !1;
-        this.lastCheckMs = pp;
-        let ip = !1;
-        for (let cp = 0; cp < this.chunks.length; cp += 3) {
-          const pp = this.api.getChunkVersion(this.chunks[cp], this.chunks[cp + 1], this.chunks[cp + 2]);
-          this.versions[cp / 3] !== pp && (this.versions[cp / 3] = pp, ip = !0)
+        const QQ = performance.now();
+        if (QQ - this.lastCheckMs < 100) return !1;
+        this.lastCheckMs = QQ;
+        let WQ = !1;
+        for (let XQ = 0; XQ < this.chunks.length; XQ += 3) {
+          const QQ = this.api.getChunkVersion(this.chunks[XQ], this.chunks[XQ + 1], this.chunks[XQ + 2]);
+          this.versions[XQ / 3] !== QQ && (this.versions[XQ / 3] = QQ, WQ = !0)
         }
-        return ip
+        return WQ
       }
-      watches(pp, ip, cp) {
-        for (let Op = 0; Op < this.chunks.length; Op += 3)
-          if (this.chunks[Op] === pp && this.chunks[Op + 1] === ip && this.chunks[Op + 2] === cp) return !0;
+      watches(QQ, WQ, XQ) {
+        for (let wQ = 0; wQ < this.chunks.length; wQ += 3)
+          if (this.chunks[wQ] === QQ && this.chunks[wQ + 1] === WQ && this.chunks[wQ + 2] === XQ) return !0;
         return !1
       }
     }
-    var zi = cp(38736);
-    const si = .35,
-      Ki = {
+    var YW = XQ(38801);
+    const NW = .35,
+      ZW = {
         size: .9,
         alpha: .35,
         crossed: !1
       },
-      Vi = {
+      OW = {
         size: 1.04,
         alpha: .45,
         crossed: !0
       },
-      pc = [.95, .2, .15];
-    class ic {
+      KW = [.95, .2, .15];
+    class mW {
       constructor() {
         this.groups = []
       }
-      add(pp, ip, cp, Op, op) {
-        let Ip = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : bi;
-        for (const Sp of this.groups)
-          if (oc(Sp, Op, op)) return Sp.cells.push(pp, ip, cp), void Sp.boxes.push(Ip);
+      add(QQ, WQ, XQ, wQ, qQ) {
+        let TQ = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : kW;
+        for (const zQ of this.groups)
+          if (WX(zQ, wQ, qQ)) return zQ.cells.push(QQ, WQ, XQ), void zQ.boxes.push(TQ);
         this.groups.push({
-          rgb: Op,
-          look: op,
-          cells: [pp, ip, cp],
-          boxes: [Ip]
+          rgb: wQ,
+          look: qQ,
+          cells: [QQ, WQ, XQ],
+          boxes: [TQ]
         })
       }
       toArray() {
         return this.groups
       }
     }
-    class cc {
-      constructor(pp) {
-        this.api = pp, this.shown = []
+    class MW {
+      constructor(QQ) {
+        this.api = QQ, this.shown = []
       }
-      show(pp) {
-        const ip = [];
-        for (const cp of pp) {
-          const pp = this.shown.findIndex((pp => {
+      show(QQ) {
+        const WQ = [];
+        for (const XQ of QQ) {
+          const QQ = this.shown.findIndex((QQ => {
             let {
-              group: ip
-            } = pp;
-            return oc(ip, cp.rgb, cp.look) && Ic(ip, cp)
-          })); - 1 === pp ? ip.push(this.build(cp)) : (ip.push(this.shown[pp]), this.shown.splice(pp, 1))
+              group: WQ
+            } = QQ;
+            return WX(WQ, XQ.rgb, XQ.look) && XX(WQ, XQ)
+          })); - 1 === QQ ? WQ.push(this.build(XQ)) : (WQ.push(this.shown[QQ]), this.shown.splice(QQ, 1))
         }
-        this.dispose(), this.shown = ip
+        this.dispose(), this.shown = WQ
       }
       dispose() {
         for (const {
-            meshes: pp
+            meshes: QQ
           }
           of this.shown)
-          for (const ip of pp) this.api.disposeGameMesh(ip);
+          for (const WQ of QQ) this.api.disposeGameMesh(WQ);
         this.shown = []
       }
-      build(pp) {
+      build(QQ) {
         const {
-          rgb: ip,
-          look: cp,
-          boxes: Op
-        } = pp, op = [ip[0] + (1 - ip[0]) * si, ip[1] + (1 - ip[1]) * si, ip[2] + (1 - ip[2]) * si], Ip = [this.buildMesh(pp.cells, ip, cp.alpha, ((pp, ip, op, Ip) => {
-          Oc(pp, ip, op, Op[Ip], cp.size, !1)
-        })), this.buildMesh(pp.cells, op, cp.alpha, ((pp, ip, op, Ip) => {
-          Oc(pp, ip, op, Op[Ip], cp.size, !0)
+          rgb: WQ,
+          look: XQ,
+          boxes: wQ
+        } = QQ, qQ = [WQ[0] + (1 - WQ[0]) * NW, WQ[1] + (1 - WQ[1]) * NW, WQ[2] + (1 - WQ[2]) * NW], TQ = [this.buildMesh(QQ.cells, WQ, XQ.alpha, ((QQ, WQ, qQ, TQ) => {
+          QX(QQ, WQ, qQ, wQ[TQ], XQ.size, !1)
+        })), this.buildMesh(QQ.cells, qQ, XQ.alpha, ((QQ, WQ, qQ, TQ) => {
+          QX(QQ, WQ, qQ, wQ[TQ], XQ.size, !0)
         }))];
-        return cp.crossed && Ip.push(this.buildMesh(pp.cells, ip, .9, ((pp, ip, Op) => {
-          (0, zi.i)(pp, ip, Op, cp.size + .01, .12)
+        return XQ.crossed && TQ.push(this.buildMesh(QQ.cells, WQ, .9, ((QQ, WQ, wQ) => {
+          (0, YW.i)(QQ, WQ, wQ, XQ.size + .01, .12)
         }))), {
-          group: pp,
-          meshes: Ip
+          group: QQ,
+          meshes: TQ
         }
       }
-      buildMesh(pp, ip, cp, Op) {
-        const op = [pp[0], pp[1], pp[2]],
-          Ip = [],
-          Sp = [];
-        for (let xp = 0; xp < pp.length; xp += 3) Op(Ip, Sp, [pp[xp] - op[0] + .5, pp[xp + 1] - op[1] + .5, pp[xp + 2] - op[2] + .5], xp / 3);
+      buildMesh(QQ, WQ, XQ, wQ) {
+        const qQ = [QQ[0], QQ[1], QQ[2]],
+          TQ = [],
+          zQ = [];
+        for (let sQ = 0; sQ < QQ.length; sQ += 3) wQ(TQ, zQ, [QQ[sQ] - qQ[0] + .5, QQ[sQ + 1] - qQ[1] + .5, QQ[sQ + 2] - qQ[2] + .5], sQ / 3);
         return this.api.createGameMesh({
-          positions: Ip,
-          indices: Sp
+          positions: TQ,
+          indices: zQ
         }, {
-          rgb: [ip[0], ip[1], ip[2]],
-          alpha: cp
-        }, op)
+          rgb: [WQ[0], WQ[1], WQ[2]],
+          alpha: XQ
+        }, qQ)
       }
     }
 
-    function Oc(pp, ip, cp, Op, op, Ip) {
-      for (let Sp = 0; Sp < Op.length; Sp += 6) {
-        const xp = [0, 0, 0],
-          Lp = [0, 0, 0];
-        for (let pp = 0; pp < 3; pp++) xp[pp] = cp[pp] + ((Op[Sp + pp] + Op[Sp + pp + 3]) / 2 - .5) * op, Lp[pp] = (Op[Sp + pp + 3] - Op[Sp + pp]) * op;
-        (0, zi.b)(pp, ip, xp, Lp, Ip)
+    function QX(QQ, WQ, XQ, wQ, qQ, TQ) {
+      for (let zQ = 0; zQ < wQ.length; zQ += 6) {
+        const sQ = [0, 0, 0],
+          FQ = [0, 0, 0];
+        for (let QQ = 0; QQ < 3; QQ++) sQ[QQ] = XQ[QQ] + ((wQ[zQ + QQ] + wQ[zQ + QQ + 3]) / 2 - .5) * qQ, FQ[QQ] = (wQ[zQ + QQ + 3] - wQ[zQ + QQ]) * qQ;
+        (0, YW.e)(QQ, WQ, sQ, FQ, TQ)
       }
     }
 
-    function oc(pp, ip, cp) {
-      return pp.rgb[0] === ip[0] && pp.rgb[1] === ip[1] && pp.rgb[2] === ip[2] && pp.look === cp
+    function WX(QQ, WQ, XQ) {
+      return QQ.rgb[0] === WQ[0] && QQ.rgb[1] === WQ[1] && QQ.rgb[2] === WQ[2] && QQ.look === XQ
     }
 
-    function Ic(pp, ip) {
-      if (pp.cells.length !== ip.cells.length) return !1;
-      for (let cp = 0; cp < pp.cells.length; cp++)
-        if (pp.cells[cp] !== ip.cells[cp]) return !1;
-      return pp.boxes.every(((pp, cp) => pp === ip.boxes[cp]))
+    function XX(QQ, WQ) {
+      if (QQ.cells.length !== WQ.cells.length) return !1;
+      for (let XQ = 0; XQ < QQ.cells.length; XQ++)
+        if (QQ.cells[XQ] !== WQ.cells[XQ]) return !1;
+      return QQ.boxes.every(((QQ, XQ) => QQ === WQ.boxes[XQ]))
     }
 
-    function Sc(pp, ip, cp, Op, op) {
-      if (!pp.isBlockInLoadedChunk(ip, Op - 6, cp) || !pp.isBlockInLoadedChunk(ip, Op + 6 + op, cp) || !pp.canModifyBlockAt(ip, Op, cp)) return NaN;
-      let Ip = Op - 1;
-      if (0 !== pp.getBlockId(ip, Ip, cp)) {
-        for (; Ip < Op + 6 && 0 !== pp.getBlockId(ip, Ip + 1, cp);) Ip++;
-        return Ip
+    function wX(QQ, WQ, XQ, wQ, qQ) {
+      if (!QQ.isBlockInLoadedChunk(WQ, wQ - 6, XQ) || !QQ.isBlockInLoadedChunk(WQ, wQ + 6 + qQ, XQ) || !QQ.canModifyBlockAt(WQ, wQ, XQ)) return NaN;
+      let TQ = wQ - 1;
+      if (0 !== QQ.getBlockId(WQ, TQ, XQ)) {
+        for (; TQ < wQ + 6 && 0 !== QQ.getBlockId(WQ, TQ + 1, XQ);) TQ++;
+        return TQ
       }
-      for (; Ip > Op - 6;)
-        if (Ip--, 0 !== pp.getBlockId(ip, Ip, cp)) return Ip;
+      for (; TQ > wQ - 6;)
+        if (TQ--, 0 !== QQ.getBlockId(WQ, TQ, XQ)) return TQ;
       return NaN
     }
 
-    function xc(pp, ip, cp, Op, op) {
-      let Ip = 0;
-      for (let Sp = Op + 1; Sp <= Op + op; Sp++) 0 !== pp.getBlockId(ip, Sp, cp) && Ip++;
-      return Ip
+    function qX(QQ, WQ, XQ, wQ, qQ) {
+      let TQ = 0;
+      for (let zQ = wQ + 1; zQ <= wQ + qQ; zQ++) 0 !== QQ.getBlockId(WQ, zQ, XQ) && TQ++;
+      return TQ
     }
 
-    function Lc(pp) {
-      const ip = new Map;
-      for (const Sp of pp) {
-        var cp;
-        if (Number.isNaN(Sp)) return null;
-        ip.set(Sp, (null !== (cp = ip.get(Sp)) && void 0 !== cp ? cp : 0) + 1)
+    function TX(QQ) {
+      const WQ = new Map;
+      for (const zQ of QQ) {
+        var XQ;
+        if (Number.isNaN(zQ)) return null;
+        WQ.set(zQ, (null !== (XQ = WQ.get(zQ)) && void 0 !== XQ ? XQ : 0) + 1)
       }
-      let Op = NaN,
-        op = 0;
-      for (const [Sp, xp] of ip)(xp > op || xp === op && Sp < Op) && (Op = Sp, op = xp);
-      let Ip = 0;
-      for (const Sp of pp) Ip += Math.abs(Sp - Op);
-      return Ip
+      let wQ = NaN,
+        qQ = 0;
+      for (const [zQ, sQ] of WQ)(sQ > qQ || sQ === qQ && zQ < wQ) && (wQ = zQ, qQ = sQ);
+      let TQ = 0;
+      for (const zQ of QQ) TQ += Math.abs(zQ - wQ);
+      return TQ
     }
 
-    function Yc(pp, ip, cp, Op) {
+    function zX(QQ, WQ, XQ, wQ) {
       const {
-        eye: op,
-        forward: Ip,
-        tanHalfFovX: Sp,
-        tanHalfFovY: xp
-      } = pp, [Lp, Yp] = function(pp) {
-        let [ip, cp, Op] = pp;
-        const op = Math.hypot(ip, Op),
-          [Ip, Sp] = [Op / op, -ip / op];
+        eye: qQ,
+        forward: TQ,
+        tanHalfFovX: zQ,
+        tanHalfFovY: sQ
+      } = QQ, [FQ, PQ] = function(QQ) {
+        let [WQ, XQ, wQ] = QQ;
+        const qQ = Math.hypot(WQ, wQ),
+          [TQ, zQ] = [wQ / qQ, -WQ / qQ];
         return [
-          [Ip, 0, Sp],
-          [cp * Sp, Op * Ip - ip * Sp, -cp * Ip]
+          [TQ, 0, zQ],
+          [XQ * zQ, wQ * TQ - WQ * zQ, -XQ * TQ]
         ]
-      }(Ip), [Dp, Ap] = [ip * Sp, cp * xp], Pp = Ip[0] + Dp * Lp[0] + Ap * Yp[0], Wp = Ip[1] + Ap * Yp[1], yp = Ip[2] + Dp * Lp[2] + Ap * Yp[2], Up = (Op - op[1]) / Wp;
-      return Up > 0 && Up < 1 / 0 ? [op[0] + Up * Pp, op[2] + Up * yp] : null
+      }(TQ), [gQ, JQ] = [WQ * zQ, XQ * sQ], rQ = TQ[0] + gQ * FQ[0] + JQ * PQ[0], IQ = TQ[1] + JQ * PQ[1], jQ = TQ[2] + gQ * FQ[2] + JQ * PQ[2], BQ = (wQ - qQ[1]) / IQ;
+      return BQ > 0 && BQ < 1 / 0 ? [qQ[0] + BQ * rQ, qQ[2] + BQ * jQ] : null
     }
-    const Dc = "plotsBlueprintPlacementChanged",
-      Ac = {
+    const sX = "plotsBlueprintPlacementChanged",
+      FX = {
         size: .9,
         alpha: .2,
         crossed: !1
       };
-    class Pc {
-      constructor(pp, ip) {
-        this.api = pp, this.localPlayerId = ip, this.placing = null, this.view = null, this.camera = {
+    class PX {
+      constructor(QQ, WQ) {
+        this.api = QQ, this.localPlayerId = WQ, this.placing = null, this.view = null, this.camera = {
           eye: [0, 0, 0],
           forward: [0, 0, 1],
           tanHalfFovX: 1,
           tanHalfFovY: 1
-        }, this.chunkWatch = void 0, this.meshes = void 0, this.start = pp => {
-          var ip, cp, Op, Ip;
-          const Sp = null !== (ip = null === (cp = this.placing) || void 0 === cp ? void 0 : cp.rotation) && void 0 !== ip ? ip : 0,
+        }, this.chunkWatch = void 0, this.meshes = void 0, this.start = QQ => {
+          var WQ, XQ, wQ, TQ;
+          const zQ = null !== (WQ = null === (XQ = this.placing) || void 0 === XQ ? void 0 : XQ.rotation) && void 0 !== WQ ? WQ : 0,
             {
-              size: xp
-            } = zp(pp, Sp),
-            Lp = this.api.sH(this.localPlayerId),
-            [Yp, Dp] = null !== (Op = null !== (Ip = function(pp, ip, cp, Op) {
-              const [op, Ip, Sp] = ip, [xp, Lp, Yp] = [Math.floor(cp[0]), Math.floor(cp[1]), Math.floor(cp[2])], Dp = 6 + Math.max(op, Sp) / 2, [Ap, Pp] = [Math.ceil(Dp + op / 2), Math.ceil(Dp + Sp / 2)], [Wp, yp] = [xp - Ap, Yp - Pp], [Up, wp] = [2 * Ap + 1, 2 * Pp + 1], vp = new Float64Array(Up * wp), tp = new Uint16Array(Up * wp);
-              for (let kp = 0; kp < Up; kp++)
-                for (let ip = 0; ip < wp; ip++) {
-                  const cp = Sc(pp, Wp + kp, yp + ip, Lp, Ip);
-                  vp[kp * wp + ip] = cp, Number.isNaN(cp) || (tp[kp * wp + ip] = xc(pp, Wp + kp, yp + ip, cp, Ip))
+              size: sQ
+            } = ZQ(QQ, zQ),
+            FQ = this.api.xV(this.localPlayerId),
+            [PQ, gQ] = null !== (wQ = null !== (TQ = function(QQ, WQ, XQ, wQ) {
+              const [qQ, TQ, zQ] = WQ, [sQ, FQ, PQ] = [Math.floor(XQ[0]), Math.floor(XQ[1]), Math.floor(XQ[2])], gQ = 6 + Math.max(qQ, zQ) / 2, [JQ, rQ] = [Math.ceil(gQ + qQ / 2), Math.ceil(gQ + zQ / 2)], [IQ, jQ] = [sQ - JQ, PQ - rQ], [BQ, yQ] = [2 * JQ + 1, 2 * rQ + 1], VQ = new Float64Array(BQ * yQ), DQ = new Uint16Array(BQ * yQ);
+              for (let vQ = 0; vQ < BQ; vQ++)
+                for (let WQ = 0; WQ < yQ; WQ++) {
+                  const XQ = wX(QQ, IQ + vQ, jQ + WQ, FQ, TQ);
+                  VQ[vQ * yQ + WQ] = XQ, Number.isNaN(XQ) || (DQ[vQ * yQ + WQ] = qX(QQ, IQ + vQ, jQ + WQ, XQ, TQ))
                 }
-              const Hp = Math.hypot(Op[0], Op[2]),
-                dp = [];
-              let ep = null,
-                jp = 1 / 0;
-              for (let kp = 0; kp + op <= Up; kp++)
-                for (let pp = 0; pp + Sp <= wp; pp++) {
-                  const [ip, Ip] = [Wp + kp, yp + pp], [Lp, Ap] = [ip + op / 2 - cp[0], Ip + Sp / 2 - cp[2]], Pp = Math.hypot(Lp, Ap);
-                  if (Pp > Dp || xp >= ip - 2 && xp < ip + op + 2 && Yp >= Ip - 2 && Yp < Ip + Sp + 2) continue;
-                  dp.length = 0;
-                  let Up = 0;
-                  for (let cp = 0; cp < op; cp++)
-                    for (let ip = 0; ip < Sp; ip++) dp.push(vp[(kp + cp) * wp + pp + ip]), Up += tp[(kp + cp) * wp + pp + ip];
-                  const mp = Lc(dp);
-                  if (null === mp) continue;
-                  const Rp = Pp + 3 * (mp + Up) + (1 - (0 === Hp ? 1 : (Lp * Op[0] + Ap * Op[2]) / (Pp * Hp))) / 2 * 6;
-                  Rp < jp && (jp = Rp, ep = [ip, Ip])
+              const pQ = Math.hypot(wQ[0], wQ[2]),
+                GQ = [];
+              let UQ = null,
+                bQ = 1 / 0;
+              for (let vQ = 0; vQ + qQ <= BQ; vQ++)
+                for (let QQ = 0; QQ + zQ <= yQ; QQ++) {
+                  const [WQ, TQ] = [IQ + vQ, jQ + QQ], [FQ, JQ] = [WQ + qQ / 2 - XQ[0], TQ + zQ / 2 - XQ[2]], rQ = Math.hypot(FQ, JQ);
+                  if (rQ > gQ || sQ >= WQ - 2 && sQ < WQ + qQ + 2 && PQ >= TQ - 2 && PQ < TQ + zQ + 2) continue;
+                  GQ.length = 0;
+                  let BQ = 0;
+                  for (let XQ = 0; XQ < qQ; XQ++)
+                    for (let WQ = 0; WQ < zQ; WQ++) GQ.push(VQ[(vQ + XQ) * yQ + QQ + WQ]), BQ += DQ[(vQ + XQ) * yQ + QQ + WQ];
+                  const dQ = TX(GQ);
+                  if (null === dQ) continue;
+                  const HQ = rQ + 3 * (dQ + BQ) + (1 - (0 === pQ ? 1 : (FQ * wQ[0] + JQ * wQ[2]) / (rQ * pQ))) / 2 * 6;
+                  HQ < bQ && (bQ = HQ, UQ = [WQ, TQ])
                 }
-              return ep
-            }(this.api, xp, Lp, this.camera.forward)) && void 0 !== Ip ? Ip : this.cornerOnTarget(xp)) && void 0 !== Op ? Op : [Math.floor(Lp[0]) + 2, Math.floor(Lp[2])];
+              return UQ
+            }(this.api, sQ, FQ, this.camera.forward)) && void 0 !== TQ ? TQ : this.cornerOnTarget(sQ)) && void 0 !== wQ ? wQ : [Math.floor(FQ[0]) + 2, Math.floor(FQ[2])];
           this.placing = {
-            id: pp,
-            rotation: Sp,
-            corner: [Yp, this.playerLevel(), Dp],
+            id: QQ,
+            rotation: zQ,
+            corner: [PQ, this.playerLevel(), gQ],
             sent: null,
             refusals: 0,
             hover: null,
             drag: null,
             moved: !1,
             stillSinceMs: performance.now()
-          }, this.update(), this.api.sendCommand(`${op} preview`)
+          }, this.update(), this.api.sendCommand(`${qQ} preview`)
         }, this.rotate = () => {
           const {
-            id: pp,
-            rotation: ip,
-            corner: cp
-          } = this.placing, op = Op[(Op.indexOf(ip) + 1) % Op.length], [Ip, , Sp] = zp(pp, ip).size, [xp, , Lp] = zp(pp, op).size;
-          this.moveTo(cp[0] + Math.floor(Ip / 2) - Math.floor(xp / 2), cp[2] + Math.floor(Sp / 2) - Math.floor(Lp / 2), op)
-        }, this.hoverAt = (pp, ip) => {
-          this.placing.hover = [pp, ip], this.moveCentreTo(this.camera, pp, ip)
+            id: QQ,
+            rotation: WQ,
+            corner: XQ
+          } = this.placing, qQ = wQ[(wQ.indexOf(WQ) + 1) % wQ.length], [TQ, , zQ] = ZQ(QQ, WQ).size, [sQ, , FQ] = ZQ(QQ, qQ).size;
+          this.moveTo(XQ[0] + Math.floor(TQ / 2) - Math.floor(sQ / 2), XQ[2] + Math.floor(zQ / 2) - Math.floor(FQ / 2), qQ)
+        }, this.hoverAt = (QQ, WQ) => {
+          this.placing.hover = [QQ, WQ], this.moveCentreTo(this.camera, QQ, WQ)
         }, this.endHover = () => {
           this.placing.hover = null
-        }, this.beginDrag = (pp, ip) => {
-          const cp = this.placing,
+        }, this.beginDrag = (QQ, WQ) => {
+          const XQ = this.placing,
             {
-              eye: Op,
-              forward: op,
-              tanHalfFovX: Ip,
-              tanHalfFovY: Sp
+              eye: wQ,
+              forward: qQ,
+              tanHalfFovX: TQ,
+              tanHalfFovY: zQ
             } = this.camera,
-            xp = {
-              eye: [Op[0], Op[1], Op[2]],
-              forward: [op[0], op[1], op[2]],
-              tanHalfFovX: Ip,
-              tanHalfFovY: Sp
+            sQ = {
+              eye: [wQ[0], wQ[1], wQ[2]],
+              forward: [qQ[0], qQ[1], qQ[2]],
+              tanHalfFovX: TQ,
+              tanHalfFovY: zQ
             },
-            Lp = cp.corner[1],
-            Yp = Yc(xp, pp, ip, Lp);
-          cp.hover = null, cp.drag = Yp && {
-            view: xp,
-            ground: Yp,
-            corner: [cp.corner[0], cp.corner[2]],
-            level: Lp
+            FQ = XQ.corner[1],
+            PQ = zX(sQ, QQ, WQ, FQ);
+          XQ.hover = null, XQ.drag = PQ && {
+            view: sQ,
+            ground: PQ,
+            corner: [XQ.corner[0], XQ.corner[2]],
+            level: FQ
           }
-        }, this.dragTo = (pp, ip) => {
-          const cp = this.placing.drag,
-            Op = cp && Yc(cp.view, pp, ip, cp.level);
-          null !== cp && null !== Op && this.moveTo(cp.corner[0] + Math.round(Op[0] - cp.ground[0]), cp.corner[1] + Math.round(Op[1] - cp.ground[1]))
+        }, this.dragTo = (QQ, WQ) => {
+          const XQ = this.placing.drag,
+            wQ = XQ && zX(XQ.view, QQ, WQ, XQ.level);
+          null !== XQ && null !== wQ && this.moveTo(XQ.corner[0] + Math.round(wQ[0] - XQ.ground[0]), XQ.corner[1] + Math.round(wQ[1] - XQ.ground[1]))
         }, this.endDrag = () => {
           this.placing.drag = null
         }, this.tap = () => {
-          const pp = this.view;
-          pp.waiting || (pp.blocked ? this.GA({
-            ...pp,
+          const QQ = this.view;
+          QQ.waiting || (QQ.blocked ? this.mB({
+            ...QQ,
             refusals: ++this.placing.refusals
           }) : this.build())
         }, this.build = () => {
-          const pp = this.placing,
+          const QQ = this.placing,
             {
-              id: ip,
-              rotation: cp,
-              corner: Op
-            } = pp;
-          this.api.sendCommand(`${op} place ${ip} ${Op.join(" ")} ${cp}`), pp.sent = {
+              id: WQ,
+              rotation: XQ,
+              corner: wQ
+            } = QQ;
+          this.api.sendCommand(`${qQ} place ${WQ} ${wQ.join(" ")} ${XQ}`), QQ.sent = {
             atMs: performance.now(),
-            corner: [...Op],
-            rotation: cp,
+            corner: [...wQ],
+            rotation: XQ,
             timedOut: !1
           }, this.update()
         }, this.stop = () => {
-          null !== this.placing && (this.close(), this.api.sendCommand(`${op} preview off`))
-        }, this.chunkWatch = new Zi(pp), this.meshes = new cc(pp)
+          null !== this.placing && (this.close(), this.api.sendCommand(`${qQ} preview off`))
+        }, this.chunkWatch = new xW(QQ), this.meshes = new MW(QQ)
       }
       getView() {
         return this.view
       }
-      LP() {
-        const pp = this.placing;
-        null !== pp && (null !== pp.sent && !pp.sent.timedOut && performance.now() - pp.sent.atMs > 3e3 ? (pp.sent.timedOut = !0, this.update()) : (this.followPlayerLevel(pp) || this.chunkWatch.changed() || this.view.settled !== Wc(pp, this.view.blocked)) && this.update())
+      fJ() {
+        const QQ = this.placing;
+        null !== QQ && (null !== QQ.sent && !QQ.sent.timedOut && performance.now() - QQ.sent.atMs > 3e3 ? (QQ.sent.timedOut = !0, this.update()) : (this.followPlayerLevel(QQ) || this.chunkWatch.changed() || this.view.settled !== gX(QQ, this.view.blocked)) && this.update())
       }
-      afterRender(pp) {
-        ! function(pp, ip) {
-          for (let cp = 0; cp < 3; cp++) ip.eye[cp] = pp.cameraPosition[cp], ip.forward[cp] = pp.cameraDirection[cp];
-          ip.tanHalfFovX = pp.tanHalfFovX, ip.tanHalfFovY = pp.tanHalfFovY
-        }(pp, this.camera);
-        const ip = this.placing;
-        null !== ip && null !== ip.hover && this.moveCentreTo(this.camera, ip.hover[0], ip.hover[1])
+      afterRender(QQ) {
+        ! function(QQ, WQ) {
+          for (let XQ = 0; XQ < 3; XQ++) WQ.eye[XQ] = QQ.cameraPosition[XQ], WQ.forward[XQ] = QQ.cameraDirection[XQ];
+          WQ.tanHalfFovX = QQ.tanHalfFovX, WQ.tanHalfFovY = QQ.tanHalfFovY
+        }(QQ, this.camera);
+        const WQ = this.placing;
+        null !== WQ && null !== WQ.hover && this.moveCentreTo(this.camera, WQ.hover[0], WQ.hover[1])
       }
-      Ey(pp) {
-        const ip = this.placing;
-        if (null === ip || null === ip.sent || "active" !== pp[0]) return;
+      gj(QQ) {
+        const WQ = this.placing;
+        if (null === WQ || null === WQ.sent || "active" !== QQ[0]) return;
         const {
-          sent: cp
-        } = ip, [, Op, op, Ip, Sp, xp, Lp] = pp;
-        op && Op === ip.id && Lp === cp.rotation && Ip === cp.corner[0] && Sp === cp.corner[1] && xp === cp.corner[2] && this.close()
+          sent: XQ
+        } = WQ, [, wQ, qQ, TQ, zQ, sQ, FQ] = QQ;
+        qQ && wQ === WQ.id && FQ === XQ.rotation && TQ === XQ.corner[0] && zQ === XQ.corner[1] && sQ === XQ.corner[2] && this.close()
       }
       endFromServer() {
         null !== this.placing && this.close()
@@ -1373,1237 +1373,1237 @@ export const modules = {
       dispose() {
         this.meshes.dispose()
       }
-      cornerOnTarget(pp) {
-        let [ip, , cp] = pp;
-        const Op = this.api.getTargetedBlock();
-        if (null === Op) return null;
-        const [op, , Ip] = Op.position;
-        return [op - Math.floor(ip / 2), Ip - Math.floor(cp / 2)]
+      cornerOnTarget(QQ) {
+        let [WQ, , XQ] = QQ;
+        const wQ = this.api.getTargetedBlock();
+        if (null === wQ) return null;
+        const [qQ, , TQ] = wQ.position;
+        return [qQ - Math.floor(WQ / 2), TQ - Math.floor(XQ / 2)]
       }
       playerLevel() {
-        var pp;
-        const [ip, cp, Op] = this.api.sH(this.localPlayerId);
-        if (null !== (pp = this.api.getLocalPlayerMovement()) && void 0 !== pp && pp.onGround) return Math.ceil(cp - .01);
-        const [op, Ip, Sp] = [Math.floor(ip), Math.floor(cp), Math.floor(Op)];
-        for (let xp = Ip; xp >= Ip - 2; xp--)
-          if (this.api.isSolidToPlayerBlockId(this.api.getBlockId(op, xp, Sp))) return xp + 1;
-        return Ip
+        var QQ;
+        const [WQ, XQ, wQ] = this.api.xV(this.localPlayerId);
+        if (null !== (QQ = this.api.getLocalPlayerMovement()) && void 0 !== QQ && QQ.onGround) return Math.ceil(XQ - .01);
+        const [qQ, TQ, zQ] = [Math.floor(WQ), Math.floor(XQ), Math.floor(wQ)];
+        for (let sQ = TQ; sQ >= TQ - 2; sQ--)
+          if (this.api.isSolidToPlayerBlockId(this.api.getBlockId(qQ, sQ, zQ))) return sQ + 1;
+        return TQ
       }
-      followPlayerLevel(pp) {
-        if (yc(pp)) return !1;
-        const ip = this.playerLevel();
-        return ip !== pp.corner[1] && (pp.corner[1] = ip, !0)
+      followPlayerLevel(QQ) {
+        if (JX(QQ)) return !1;
+        const WQ = this.playerLevel();
+        return WQ !== QQ.corner[1] && (QQ.corner[1] = WQ, !0)
       }
-      moveCentreTo(pp, ip, cp) {
-        const Op = this.placing,
-          op = Yc(pp, ip, cp, Op.corner[1]);
-        if (null !== op) {
-          const [pp, , ip] = zp(Op.id, Op.rotation).size;
-          this.moveTo(Math.round(op[0] - pp / 2), Math.round(op[1] - ip / 2))
+      moveCentreTo(QQ, WQ, XQ) {
+        const wQ = this.placing,
+          qQ = zX(QQ, WQ, XQ, wQ.corner[1]);
+        if (null !== qQ) {
+          const [QQ, , WQ] = ZQ(wQ.id, wQ.rotation).size;
+          this.moveTo(Math.round(qQ[0] - QQ / 2), Math.round(qQ[1] - WQ / 2))
         }
       }
-      moveTo(pp, ip) {
-        let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
-        const Op = this.placing;
-        if (yc(Op)) return;
-        const [op, Ip, Sp] = Op.corner;
-        if (this.centreOnPlot(op, Sp) && !this.centreOnPlot(pp, ip, cp))
-          if (this.centreOnPlot(pp, Sp, cp)) ip = Sp;
+      moveTo(QQ, WQ) {
+        let XQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
+        const wQ = this.placing;
+        if (JX(wQ)) return;
+        const [qQ, TQ, zQ] = wQ.corner;
+        if (this.centreOnPlot(qQ, zQ) && !this.centreOnPlot(QQ, WQ, XQ))
+          if (this.centreOnPlot(QQ, zQ, XQ)) WQ = zQ;
           else {
-            if (!this.centreOnPlot(op, ip, cp)) return;
-            pp = op
-          } pp === op && ip === Sp && cp === Op.rotation || (Op.rotation = cp, Op.corner = [pp, Ip, ip], Op.moved = !0, Op.stillSinceMs = performance.now(), this.update())
+            if (!this.centreOnPlot(qQ, WQ, XQ)) return;
+            QQ = qQ
+          } QQ === qQ && WQ === zQ && XQ === wQ.rotation || (wQ.rotation = XQ, wQ.corner = [QQ, TQ, WQ], wQ.moved = !0, wQ.stillSinceMs = performance.now(), this.update())
       }
-      centreOnPlot(pp, ip) {
-        let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
+      centreOnPlot(QQ, WQ) {
+        let XQ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
         const {
-          id: Op,
-          corner: op
-        } = this.placing, [Ip, , Sp] = zp(Op, cp).size;
-        return this.api.canModifyBlockAt(pp + Math.floor(Ip / 2), op[1], ip + Math.floor(Sp / 2))
+          id: wQ,
+          corner: qQ
+        } = this.placing, [TQ, , zQ] = ZQ(wQ, XQ).size;
+        return this.api.canModifyBlockAt(QQ + Math.floor(TQ / 2), qQ[1], WQ + Math.floor(zQ / 2))
       }
       close() {
-        this.placing = null, this.meshes.dispose(), this.GA(null)
+        this.placing = null, this.meshes.dispose(), this.mB(null)
       }
       update() {
         const {
-          id: pp,
-          rotation: ip,
-          corner: cp,
-          refusals: Op
-        } = this.placing, op = new ic, Ip = [];
-        let Sp = !1,
-          xp = 0;
+          id: QQ,
+          rotation: WQ,
+          corner: XQ,
+          refusals: wQ
+        } = this.placing, qQ = new mW, TQ = [];
+        let zQ = !1,
+          sQ = 0;
         for (const {
-            offset: Ap,
-            block: Pp
+            offset: JQ,
+            block: rQ
           }
-          of zp(pp, ip).cells) {
-          const [pp, ip, Op] = [cp[0] + Ap[0], cp[1] + Ap[1], cp[2] + Ap[2]];
-          Ip.push(pp, ip, Op);
-          const Lp = !this.api.canModifyBlockAt(pp, ip, Op),
-            Yp = this.api.getBlockId(pp, ip, Op),
-            Dp = !Ji(Yp) && !Qi(this.api.blockNameToBlockId(Pp), Yp);
-          Sp ||= Lp, xp += Dp ? 1 : 0, Lp || Dp ? op.add(pp, ip, Op, pc, Vi) : op.add(pp, ip, Op, Ni(Pp), Ac, Gi(Pp))
+          of ZQ(QQ, WQ).cells) {
+          const [QQ, WQ, wQ] = [XQ[0] + JQ[0], XQ[1] + JQ[1], XQ[2] + JQ[2]];
+          TQ.push(QQ, WQ, wQ);
+          const FQ = !this.api.canModifyBlockAt(QQ, WQ, wQ),
+            PQ = this.api.getBlockId(QQ, WQ, wQ),
+            gQ = !RW(PQ) && !AW(this.api.blockNameToBlockId(rQ), PQ);
+          zQ ||= FQ, sQ += gQ ? 1 : 0, FQ || gQ ? qQ.add(QQ, WQ, wQ, KW, OW) : qQ.add(QQ, WQ, wQ, CW(rQ), FX, eW(rQ))
         }
-        this.chunkWatch.watch(Ip), this.meshes.show(op.toArray());
-        const Lp = this.view,
-          Yp = yc(this.placing),
-          Dp = Wc(this.placing, Sp);
-        (null === Lp || void 0 === Lp ? void 0 : Lp.id) === pp && Lp.blocked === Sp && Lp.toClear === xp && Lp.waiting === Yp && Lp.refusals === Op && Lp.settled === Dp || this.GA({
-          id: pp,
-          blocked: Sp,
-          toClear: xp,
-          waiting: Yp,
-          refusals: Op,
-          settled: Dp
+        this.chunkWatch.watch(TQ), this.meshes.show(qQ.toArray());
+        const FQ = this.view,
+          PQ = JX(this.placing),
+          gQ = gX(this.placing, zQ);
+        (null === FQ || void 0 === FQ ? void 0 : FQ.id) === QQ && FQ.blocked === zQ && FQ.toClear === sQ && FQ.waiting === PQ && FQ.refusals === wQ && FQ.settled === gQ || this.mB({
+          id: QQ,
+          blocked: zQ,
+          toClear: sQ,
+          waiting: PQ,
+          refusals: wQ,
+          settled: gQ
         })
       }
-      GA(pp) {
-        this.view = pp, jp.m.GA(Dc, pp, !0)
+      mB(QQ) {
+        this.view = QQ, bQ.k.mB(sX, QQ, !0)
       }
     }
 
-    function Wc(pp, ip) {
+    function gX(QQ, WQ) {
       let {
-        moved: cp,
-        stillSinceMs: Op
-      } = pp;
-      return !ip && performance.now() - Op >= (cp ? 1500 : 6e3)
+        moved: XQ,
+        stillSinceMs: wQ
+      } = QQ;
+      return !WQ && performance.now() - wQ >= (XQ ? 1500 : 6e3)
     }
 
-    function yc(pp) {
+    function JX(QQ) {
       let {
-        sent: ip
-      } = pp;
-      return null !== ip && !ip.timedOut
+        sent: WQ
+      } = QQ;
+      return null !== WQ && !WQ.timedOut
     }
-    var Uc = cp(4635);
-    class wc {
-      constructor(pp) {
-        this.placement = pp, this.press = null
+    var rX = XQ(4863);
+    class IX {
+      constructor(QQ) {
+        this.placement = QQ, this.press = null
       }
-      down(pp) {
+      down(QQ) {
         if (null !== this.press) return !1;
         const {
-          id: ip,
-          mouse: cp,
-          x: Op,
-          y: op,
-          atMs: Ip
-        } = pp;
+          id: WQ,
+          mouse: XQ,
+          x: wQ,
+          y: qQ,
+          atMs: TQ
+        } = QQ;
         return this.press = {
-          id: ip,
-          mouse: cp,
-          x: Op,
-          y: op,
-          atMs: Ip,
+          id: WQ,
+          mouse: XQ,
+          x: wQ,
+          y: qQ,
+          atMs: TQ,
           moved: !1
-        }, cp || this.placement.beginDrag(pp.ndcX, pp.ndcY), !0
+        }, XQ || this.placement.beginDrag(QQ.ndcX, QQ.ndcY), !0
       }
-      move(pp) {
-        const ip = this.press;
-        null !== ip && ip.id === pp.id && (ip.moved ||= Math.hypot(pp.x - ip.x, pp.y - ip.y) > 8), pp.mouse ? this.placement.hoverAt(pp.ndcX, pp.ndcY) : (null === ip || void 0 === ip ? void 0 : ip.id) === pp.id && this.placement.dragTo(pp.ndcX, pp.ndcY)
+      move(QQ) {
+        const WQ = this.press;
+        null !== WQ && WQ.id === QQ.id && (WQ.moved ||= Math.hypot(QQ.x - WQ.x, QQ.y - WQ.y) > 8), QQ.mouse ? this.placement.hoverAt(QQ.ndcX, QQ.ndcY) : (null === WQ || void 0 === WQ ? void 0 : WQ.id) === QQ.id && this.placement.dragTo(QQ.ndcX, QQ.ndcY)
       }
-      up(pp) {
-        const ip = this.press;
-        (null === ip || void 0 === ip ? void 0 : ip.id) === pp.id && (this.move(pp), this.end(), !ip.moved && (ip.mouse || pp.atMs - ip.atMs <= 250) && this.placement.tap())
+      up(QQ) {
+        const WQ = this.press;
+        (null === WQ || void 0 === WQ ? void 0 : WQ.id) === QQ.id && (this.move(QQ), this.end(), !WQ.moved && (WQ.mouse || QQ.atMs - WQ.atMs <= 250) && this.placement.tap())
       }
-      cancel(pp) {
-        var ip;
-        (null === (ip = this.press) || void 0 === ip ? void 0 : ip.id) === pp && this.end()
+      cancel(QQ) {
+        var WQ;
+        (null === (WQ = this.press) || void 0 === WQ ? void 0 : WQ.id) === QQ && this.end()
       }
-      leave(pp) {
+      leave(QQ) {
         let {
-          id: ip,
-          mouse: cp
-        } = pp;
-        cp && this.placement.endHover(), this.cancel(ip)
+          id: WQ,
+          mouse: XQ
+        } = QQ;
+        XQ && this.placement.endHover(), this.cancel(WQ)
       }
       end() {
         this.press.mouse || this.placement.endDrag(), this.press = null
       }
     }
-    const vc = "PlotsPlacementLayer";
+    const jX = "PlotsPlacementLayer";
 
-    function tc(pp) {
+    function BX(QQ) {
       let {
-        placement: ip
-      } = pp;
-      return null === (0, Lp.i)(Dc, ip.getView()) ? null : (0, Jp.jsx)(Hc, {
-        placement: ip
+        placement: WQ
+      } = QQ;
+      return null === (0, FQ.j)(sX, WQ.getView()) ? null : (0, EQ.jsx)(yX, {
+        placement: WQ
       })
     }
 
-    function Hc(pp) {
+    function yX(QQ) {
       let {
-        placement: ip
-      } = pp;
-      (0, Uc.e)(!0, !0, vc);
-      const cp = (0, Ip.useMemo)((() => new wc(ip)), [ip]);
-      return (0, Jp.jsx)("div", {
+        placement: WQ
+      } = QQ;
+      (0, rX.c)(!0, !0, jX);
+      const XQ = (0, TQ.useMemo)((() => new IX(WQ)), [WQ]);
+      return (0, EQ.jsx)("div", {
         className: "PlotsPlacementLayer",
-        onPointerDown: pp => {
-          "mouse" === pp.pointerType && 0 !== pp.button || !cp.down(dc(pp)) || pp.currentTarget.setPointerCapture(pp.pointerId)
+        onPointerDown: QQ => {
+          "mouse" === QQ.pointerType && 0 !== QQ.button || !XQ.down(VX(QQ)) || QQ.currentTarget.setPointerCapture(QQ.pointerId)
         },
-        onPointerMove: pp => {
-          cp.move(dc(pp))
+        onPointerMove: QQ => {
+          XQ.move(VX(QQ))
         },
-        onPointerUp: pp => {
-          cp.up(dc(pp))
+        onPointerUp: QQ => {
+          XQ.up(VX(QQ))
         },
-        onPointerCancel: pp => {
-          cp.cancel(pp.pointerId)
+        onPointerCancel: QQ => {
+          XQ.cancel(QQ.pointerId)
         },
-        onLostPointerCapture: pp => {
-          cp.cancel(pp.pointerId)
+        onLostPointerCapture: QQ => {
+          XQ.cancel(QQ.pointerId)
         },
-        onPointerLeave: pp => {
-          cp.leave(dc(pp))
+        onPointerLeave: QQ => {
+          XQ.leave(VX(QQ))
         },
         "aria-hidden": !0
       })
     }
 
-    function dc(pp) {
+    function VX(QQ) {
       const {
-        left: ip,
-        top: cp,
-        width: Op,
-        height: op
-      } = pp.currentTarget.getBoundingClientRect();
+        left: WQ,
+        top: XQ,
+        width: wQ,
+        height: qQ
+      } = QQ.currentTarget.getBoundingClientRect();
       return {
-        id: pp.pointerId,
-        mouse: "mouse" === pp.pointerType,
-        x: pp.clientX,
-        y: pp.clientY,
-        ndcX: (pp.clientX - ip) / Op * 2 - 1,
-        ndcY: 1 - (pp.clientY - cp) / op * 2,
-        atMs: pp.timeStamp
+        id: QQ.pointerId,
+        mouse: "mouse" === QQ.pointerType,
+        x: QQ.clientX,
+        y: QQ.clientY,
+        ndcX: (QQ.clientX - WQ) / wQ * 2 - 1,
+        ndcY: 1 - (QQ.clientY - XQ) / qQ * 2,
+        atMs: QQ.timeStamp
       }
     }
 
-    function ec() {
-      return (0, vi.q)().some((pp => pp !== vi.c && pp !== vc))
+    function DX() {
+      return (0, BW.u)().some((QQ => QQ !== BW.e && QQ !== jX))
     }
-    const uc = 2500;
+    const pX = 2500;
 
-    function jc(pp) {
+    function GX(QQ) {
       let {
-        hud: ip,
-        guide: cp,
-        tracker: Op,
-        placement: op,
-        children: Sp
-      } = pp;
+        hud: WQ,
+        guide: XQ,
+        tracker: wQ,
+        placement: qQ,
+        children: zQ
+      } = QQ;
       const {
-        t: Ap
-      } = (0, Dp.H)(), {
-        isTouchScreen: Pp
-      } = (0, xp.o)(["isTouchScreen"]), Wp = (0, Lp.i)(Oi, ip.getGuide()), yp = (0, Lp.i)(ci, ip.getPlot()), Up = (0, Lp.i)(sp, Op.get()), wp = function(pp) {
+        t: JQ
+      } = (0, gQ.C)(), {
+        isTouchScreen: rQ
+      } = (0, sQ.n)(["isTouchScreen"]), IQ = (0, FQ.j)(WW, WQ.getGuide()), jQ = (0, FQ.j)(QW, WQ.getPlot()), BQ = (0, FQ.j)(OQ, wQ.get()), yQ = function(QQ) {
         const {
-          openInGameMenuName: ip,
-          openEverythingMenuName: cp,
-          loadingOverlayVisible: Op
-        } = (0, xp.o)(["openInGameMenuName", "openEverythingMenuName", "loadingOverlayVisible"]), op = (0, ti.b)(), [Sp, Yp] = (0, Ip.useState)(ec);
-        (0, Ip.useEffect)((() => {
-          const pp = () => {
-            Yp(ec())
+          openInGameMenuName: WQ,
+          openEverythingMenuName: XQ,
+          loadingOverlayVisible: wQ
+        } = (0, sQ.n)(["openInGameMenuName", "openEverythingMenuName", "loadingOverlayVisible"]), qQ = (0, yW.e)(), [zQ, PQ] = (0, TQ.useState)(DX);
+        (0, TQ.useEffect)((() => {
+          const QQ = () => {
+            PQ(DX())
           };
-          pp();
-          const ip = (0, vi.p)(pp),
-            cp = (0, vi.l)(pp);
+          QQ();
+          const WQ = (0, BW.s)(QQ),
+            XQ = (0, BW.o)(QQ);
           return () => {
-            ip(), cp()
+            WQ(), XQ()
           }
         }), []);
-        const Dp = (0, Lp.i)(Dc, pp.getView()),
-          Ap = "clientGame" === ip;
+        const gQ = (0, FQ.j)(sX, QQ.getView()),
+          JQ = "clientGame" === WQ;
         return {
-          hudHidden: op || Op,
-          journalOpen: Ap,
-          covered: Sp || null !== cp || null !== ip && !Ap,
-          placing: null === Dp ? null : Dp.settled ? "placeBuild" : "placeSpot"
+          hudHidden: qQ || wQ,
+          journalOpen: JQ,
+          covered: zQ || null !== XQ || null !== WQ && !JQ,
+          placing: null === gQ ? null : gQ.settled ? "placeBuild" : "placeSpot"
         }
-      }(op), vp = function(pp, ip, cp) {
-        return "none" === pp[0] || cp.hudHidden || cp.journalOpen || cp.covered ? null : null !== cp.placing ? cp.placing : null !== ip ? "build" : "choose" === pp[1] ? "openJournal" : null
-      }(Wp, null === Up ? null : Up.id, wp), tp = function() {
-        const [pp, ip] = (0, Ip.useState)(null), [cp, Op] = (0, Ip.useState)(!1);
-        return (0, Lp.f)(oi, (() => {
-          ip(performance.now())
-        })), (0, Ip.useEffect)((() => {
-          if (null === pp) return;
-          const ip = window.setTimeout((() => {
-              Op(!0)
-            }), uc),
-            cp = window.setTimeout((() => {
-              Op(!1)
+      }(qQ), VQ = function(QQ, WQ, XQ) {
+        return "none" === QQ[0] || XQ.hudHidden || XQ.journalOpen || XQ.covered ? null : null !== XQ.placing ? XQ.placing : null !== WQ ? "build" : "choose" === QQ[1] ? "openJournal" : null
+      }(IQ, null === BQ ? null : BQ.id, yQ), DQ = function() {
+        const [QQ, WQ] = (0, TQ.useState)(null), [XQ, wQ] = (0, TQ.useState)(!1);
+        return (0, FQ.f)(XW, (() => {
+          WQ(performance.now())
+        })), (0, TQ.useEffect)((() => {
+          if (null === QQ) return;
+          const WQ = window.setTimeout((() => {
+              wQ(!0)
+            }), pX),
+            XQ = window.setTimeout((() => {
+              wQ(!1)
             }), 7500);
           return () => {
-            window.clearTimeout(ip), window.clearTimeout(cp)
+            window.clearTimeout(WQ), window.clearTimeout(XQ)
           }
-        }), [pp]), cp
-      }() && !wp.hudHidden && !wp.covered && !wp.journalOpen && null === wp.placing, [Hp, dp] = (0, Ip.useState)(!1);
-      (0, Ip.useEffect)((() => {
-        wp.journalOpen && dp(!0)
-      }), [wp.journalOpen]);
-      const [jp, kp] = (0, Ip.useState)(null), [mp, Rp] = (0, Ip.useState)(null), [qp, Mp] = (0, Ip.useState)(null), Cp = (0, Ip.useMemo)((() => ({
-        hint: vp,
-        journalRef: kp,
-        placementCardRef: Rp,
-        buildRef: Mp
-      })), [vp]), Ep = "plot" === yp[0] && "own" === yp[5], Xp = Pp && !Hp && Ep ? {
-        onSkip: cp.skip
+        }), [QQ]), XQ
+      }() && !yQ.hudHidden && !yQ.covered && !yQ.journalOpen && null === yQ.placing, [pQ, GQ] = (0, TQ.useState)(!1);
+      (0, TQ.useEffect)((() => {
+        yQ.journalOpen && GQ(!0)
+      }), [yQ.journalOpen]);
+      const [bQ, vQ] = (0, TQ.useState)(null), [dQ, HQ] = (0, TQ.useState)(null), [aQ, lQ] = (0, TQ.useState)(null), hQ = (0, TQ.useMemo)((() => ({
+        hint: VQ,
+        journalRef: vQ,
+        placementCardRef: HQ,
+        buildRef: lQ
+      })), [VQ]), iQ = "plot" === jQ[0] && "own" === jQ[5], cQ = rQ && !pQ && iQ ? {
+        onSkip: XQ.skip
       } : null;
-      return (0, Jp.jsxs)(ep.Provider, {
-        value: Cp,
-        children: [Sp, "openJournal" === vp && null !== jp && (0, Jp.jsx)(Ai, {
-          target: jp,
+      return (0, EQ.jsxs)(UQ.Provider, {
+        value: hQ,
+        children: [zQ, "openJournal" === VQ && null !== bQ && (0, EQ.jsx)(PW, {
+          target: bQ,
           placement: "left",
-          spotlight: Xp,
-          children: Pp ? Ap("plotsGame:guideOpenJournal") : Ap("plotsGame:guideOpenJournalKeys", {
-            key: (0, Yp.l)(Bp)
+          spotlight: cQ,
+          children: rQ ? JQ("plotsGame:guideOpenJournal") : JQ("plotsGame:guideOpenJournalKeys", {
+            key: (0, PQ.n)(CQ)
           })
-        }), "placeSpot" === vp && null !== mp && (0, Jp.jsxs)(Jp.Fragment, {
-          children: [Pp && (0, Jp.jsx)(wi, {}), (0, Jp.jsx)(Ai, {
-            target: mp,
+        }), "placeSpot" === VQ && null !== dQ && (0, EQ.jsxs)(EQ.Fragment, {
+          children: [rQ && (0, EQ.jsx)(jW, {}), (0, EQ.jsx)(PW, {
+            target: dQ,
             placement: "top",
-            children: Ap(Pp ? "plotsGame:guidePlaceSpotTouch" : "plotsGame:guidePlaceSpotMouse")
+            children: JQ(rQ ? "plotsGame:guidePlaceSpotTouch" : "plotsGame:guidePlaceSpotMouse")
           })]
-        }), "placeBuild" === vp && null !== qp && null !== mp && (0, Jp.jsx)(Ai, {
-          target: Pp ? qp : mp,
+        }), "placeBuild" === VQ && null !== aQ && null !== dQ && (0, EQ.jsx)(PW, {
+          target: rQ ? aQ : dQ,
           placement: "top",
-          children: Ap(Pp ? "plotsGame:guidePlaceBuildTouch" : "plotsGame:guidePlaceBuildMouse")
-        }), "build" === vp && null !== Up && (0, Jp.jsx)(yi, {
-          progress: Up,
-          guide: cp
-        }), tp && null !== jp && (0, Jp.jsx)(Ai, {
-          target: jp,
+          children: JQ(rQ ? "plotsGame:guidePlaceBuildTouch" : "plotsGame:guidePlaceBuildMouse")
+        }), "build" === VQ && null !== BQ && (0, EQ.jsx)(rW, {
+          progress: BQ,
+          guide: XQ
+        }), DQ && null !== bQ && (0, EQ.jsx)(PW, {
+          target: bQ,
           placement: "left",
-          children: Ap("plotsGame:guideMoreBuilds")
+          children: JQ("plotsGame:guideMoreBuilds")
         })]
       })
     }
-    var kc = cp(38712),
-      mc = cp(38719);
-    class Rc {
-      constructor(pp, ip, cp) {
-        this.api = pp, this.localPlayerId = ip, this.nextCell = cp, this.hand = null, this.skip = () => {
+    var UX = XQ(38777),
+      bX = XQ(38782);
+    class vX {
+      constructor(QQ, WQ, XQ) {
+        this.api = QQ, this.localPlayerId = WQ, this.nextCell = XQ, this.hand = null, this.skip = () => {
           this.api.sendCommand("plotsguide skip")
-        }, this.bindHand = pp => {
-          this.hand = pp
+        }, this.bindHand = QQ => {
+          this.hand = QQ
         }
       }
-      afterRender(pp) {
-        const ip = this.hand;
-        if (null === ip) return;
-        const cp = this.nextCell.get();
-        if (null === cp) return void(0, kc.d)(ip, !0);
-        const Op = (0, mc.e)(ip, pp, this.api.getPositionView(this.localPlayerId), cp, 1, 40);
-        null !== Op && (0, kc.b)(ip, Math.round(100 * Op.x) / 100, Math.round(100 * Op.y) / 100)
+      afterRender(QQ) {
+        const WQ = this.hand;
+        if (null === WQ) return;
+        const XQ = this.nextCell.get();
+        if (null === XQ) return void(0, UX.h)(WQ, !0);
+        const wQ = (0, bX.b)(WQ, QQ, this.api.getPositionView(this.localPlayerId), XQ, 1, 40);
+        null !== wQ && (0, UX.d)(WQ, Math.round(100 * wQ.x) / 100, Math.round(100 * wQ.y) / 100)
       }
     }
-    var qc = cp(1480),
-      Mc = cp(4621),
-      Cc = cp(1139);
-    const Ec = {
-        farm_hut: cp.p + "static/media/farm_hut.6896d8a2c96c4aa7f2fd.webp",
-        farm_house: cp.p + "static/media/farm_house.cec7df65d0fe7e2bda7f.webp",
-        farm_barn: cp.p + "static/media/farm_barn.be0d2b53d8dee46c2a20.webp",
-        rusticHome_tent: cp.p + "static/media/rusticHome_tent.e0c857b94eb15660ffce.webp",
-        rusticHome_cabin: cp.p + "static/media/rusticHome_cabin.d6d2030fc12c0f2f3bdd.webp",
-        rusticHome_house: cp.p + "static/media/rusticHome_house.4e3af79cf97326dfd0f6.webp",
-        market_stand: cp.p + "static/media/market_stand.945ed55a5fced389f3f2.webp",
-        market_stall: cp.p + "static/media/market_stall.9a562807f9dff591618a.webp",
-        market_shop: cp.p + "static/media/market_shop.190d8a0a0ea37a0db19e.webp",
-        castle_wall: cp.p + "static/media/castle_wall.a836dd2c0361ad566caa.webp",
-        castle_gate: cp.p + "static/media/castle_gate.84f01ebbd69b2fa991ce.webp",
-        castle_tower: cp.p + "static/media/castle_tower.f93382e3a0eeb3089817.webp"
+    var dX = XQ(1507),
+      HX = XQ(4851),
+      aX = XQ(1157);
+    const lX = {
+        farm_hut: XQ.p + "static/media/farm_hut.6896d8a2c96c4aa7f2fd.webp",
+        farm_house: XQ.p + "static/media/farm_house.cec7df65d0fe7e2bda7f.webp",
+        farm_barn: XQ.p + "static/media/farm_barn.be0d2b53d8dee46c2a20.webp",
+        rusticHome_tent: XQ.p + "static/media/rusticHome_tent.e0c857b94eb15660ffce.webp",
+        rusticHome_cabin: XQ.p + "static/media/rusticHome_cabin.d6d2030fc12c0f2f3bdd.webp",
+        rusticHome_house: XQ.p + "static/media/rusticHome_house.4e3af79cf97326dfd0f6.webp",
+        market_stand: XQ.p + "static/media/market_stand.945ed55a5fced389f3f2.webp",
+        market_stall: XQ.p + "static/media/market_stall.9a562807f9dff591618a.webp",
+        market_shop: XQ.p + "static/media/market_shop.190d8a0a0ea37a0db19e.webp",
+        castle_wall: XQ.p + "static/media/castle_wall.a836dd2c0361ad566caa.webp",
+        castle_gate: XQ.p + "static/media/castle_gate.84f01ebbd69b2fa991ce.webp",
+        castle_tower: XQ.p + "static/media/castle_tower.f93382e3a0eeb3089817.webp"
       },
-      Xc = ["plotsGame:guideEffortQuick", "plotsGame:guideEffortMedium", "plotsGame:guideEffortBigger"],
-      lc = ["market_stand", "rusticHome_tent", "farm_hut"].map((pp => ({
-        id: pp,
-        blocks: zp(pp, 0).cells.length
-      }))).sort(((pp, ip) => pp.blocks - ip.blocks)).map(((pp, ip) => ({
-        ...pp,
-        effortKey: Xc[ip]
+      hX = ["plotsGame:guideEffortQuick", "plotsGame:guideEffortMedium", "plotsGame:guideEffortBigger"],
+      iX = ["market_stand", "rusticHome_tent", "farm_hut"].map((QQ => ({
+        id: QQ,
+        blocks: ZQ(QQ, 0).cells.length
+      }))).sort(((QQ, WQ) => QQ.blocks - WQ.blocks)).map(((QQ, WQ) => ({
+        ...QQ,
+        effortKey: hX[WQ]
       })));
 
-    function Qc(pp) {
+    function cX(QQ) {
       let {
-        onBuild: ip
-      } = pp;
+        onBuild: WQ
+      } = QQ;
       const {
-        t: cp
-      } = (0, Dp.H)();
-      return (0, Jp.jsx)("div", {
+        t: XQ
+      } = (0, gQ.C)();
+      return (0, EQ.jsx)("div", {
         className: "PlotsJournalBookPages PlotsGuideChooserCover",
-        children: (0, Jp.jsxs)("div", {
+        children: (0, EQ.jsxs)("div", {
           className: "PlotsGuideChooser",
-          children: [(0, Jp.jsx)("h3", {
+          children: [(0, EQ.jsx)("h3", {
             className: "PlotsGuideChooserTitle",
-            children: cp("plotsGame:guidePickTitle")
-          }), (0, Jp.jsxs)("p", {
+            children: XQ("plotsGame:guidePickTitle")
+          }), (0, EQ.jsxs)("p", {
             className: "PlotsGuideChooserNote",
-            children: [(0, Jp.jsx)("img", {
-              src: xi,
+            children: [(0, EQ.jsx)("img", {
+              src: TW,
               alt: "",
               draggable: !1
-            }), cp("plotsGame:guidePickNote")]
-          }), (0, Jp.jsx)("div", {
+            }), XQ("plotsGame:guidePickNote")]
+          }), (0, EQ.jsx)("div", {
             className: "PlotsGuideChooserStarters",
-            children: lc.map((pp => {
+            children: iX.map((QQ => {
               let {
-                id: Op,
-                blocks: op,
-                effortKey: Ip
-              } = pp;
-              return (0, Jp.jsxs)("article", {
+                id: wQ,
+                blocks: qQ,
+                effortKey: TQ
+              } = QQ;
+              return (0, EQ.jsxs)("article", {
                 className: "PlotsGuideStarter",
-                children: [(0, Jp.jsx)("button", {
+                children: [(0, EQ.jsx)("button", {
                   type: "button",
                   className: "PlotsGuideStarterSketch",
                   tabIndex: -1,
                   "aria-hidden": !0,
                   "data-pad-ignore": !0,
                   onClick: () => {
-                    ip(Op)
+                    WQ(wQ)
                   },
-                  children: (0, Jp.jsx)("img", {
-                    src: Ec[Op],
+                  children: (0, EQ.jsx)("img", {
+                    src: lX[wQ],
                     alt: "",
                     draggable: !1
                   })
-                }), (0, Jp.jsxs)("div", {
+                }), (0, EQ.jsxs)("div", {
                   className: "PlotsGuideStarterInfo",
-                  children: [(0, Jp.jsxs)("span", {
+                  children: [(0, EQ.jsxs)("span", {
                     className: "PlotsGuideStarterText",
-                    children: [(0, Jp.jsx)("span", {
+                    children: [(0, EQ.jsx)("span", {
                       className: "PlotsGuideStarterName",
-                      children: cp(qp(Op).displayName.translationKey)
-                    }), (0, Jp.jsx)("span", {
+                      children: XQ(aQ(wQ).displayName.translationKey)
+                    }), (0, EQ.jsx)("span", {
                       className: "PlotsGuideStarterEffort",
-                      children: cp(Ip)
-                    }), (0, Jp.jsx)("span", {
+                      children: XQ(TQ)
+                    }), (0, EQ.jsx)("span", {
                       className: "PlotsGuideStarterBlocks",
-                      children: cp("plotsGame:journalBlocks", {
-                        blocks: String(op)
+                      children: XQ("plotsGame:journalBlocks", {
+                        blocks: String(qQ)
                       })
                     })]
-                  }), (0, Jp.jsx)(qc.o, {
+                  }), (0, EQ.jsx)(dX.s, {
                     onClick: () => {
-                      ip(Op)
+                      WQ(wQ)
                     },
-                    children: cp("plotsGame:placementBuild")
+                    children: XQ("plotsGame:placementBuild")
                   })]
                 })]
-              }, Op)
+              }, wQ)
             }))
           })]
         })
       })
     }
 
-    function Jc(pp) {
+    function AX(QQ) {
       let {
-        direction: ip,
-        disabled: cp,
-        onTurn: Op
-      } = pp;
+        direction: WQ,
+        disabled: XQ,
+        onTurn: wQ
+      } = QQ;
       const {
-        t: op
-      } = (0, Dp.H)();
-      return (0, Jp.jsx)("div", {
-        className: Pp()("PlotsJournalArrow", ip),
-        children: (0, Jp.jsx)(qc.f, {
-          disabled: cp,
-          ariaLabel: op("Forward" === ip ? "plotsGame:journalNextPage" : "plotsGame:journalPreviousPage"),
+        t: qQ
+      } = (0, gQ.C)();
+      return (0, EQ.jsx)("div", {
+        className: rQ()("PlotsJournalArrow", WQ),
+        children: (0, EQ.jsx)(dX.h, {
+          disabled: XQ,
+          ariaLabel: qQ("Forward" === WQ ? "plotsGame:journalNextPage" : "plotsGame:journalPreviousPage"),
           onClick: () => {
-            Op(ip)
+            wQ(WQ)
           },
-          children: (0, Jp.jsx)(Up.d, {
+          children: (0, EQ.jsx)(BQ.d, {
             name: "angle-up"
           })
         })
       })
     }
-    const Bc = {
+    const RX = {
       small: "plotsGame:journalTierSmall",
       medium: "plotsGame:journalTierMedium",
       large: "plotsGame:journalTierLarge"
     };
 
-    function Nc(pp) {
+    function EX(QQ) {
       let {
-        page: ip,
-        building: cp,
-        onBuild: Op,
-        onPutAway: op
-      } = pp;
+        page: WQ,
+        building: XQ,
+        onBuild: wQ,
+        onPutAway: qQ
+      } = QQ;
       const {
-        t: Ip
-      } = (0, Dp.H)(), {
-        displayName: Sp,
-        tier: xp
-      } = qp(ip.id), Lp = zp(ip.id, 0).cells.length, Yp = "locked" === ip.state, Ap = cp ? qc.f : qc.o;
-      return (0, Jp.jsxs)("article", {
-        className: Pp()("PlotsJournalPage", {
-          Locked: Yp
+        t: TQ
+      } = (0, gQ.C)(), {
+        displayName: zQ,
+        tier: sQ
+      } = aQ(WQ.id), FQ = ZQ(WQ.id, 0).cells.length, PQ = "locked" === WQ.state, JQ = XQ ? dX.h : dX.s;
+      return (0, EQ.jsxs)("article", {
+        className: rQ()("PlotsJournalPage", {
+          Locked: PQ
         }),
-        children: [(0, Jp.jsx)("h3", {
+        children: [(0, EQ.jsx)("h3", {
           className: "PlotsJournalPageName",
-          children: Ip(Sp.translationKey)
-        }), (0, Jp.jsxs)("div", {
+          children: TQ(zQ.translationKey)
+        }), (0, EQ.jsxs)("div", {
           className: "PlotsJournalPageMeta",
-          children: [Ip(Bc[xp]), " \xb7 ", Ip("plotsGame:journalBlocks", {
-            blocks: String(Lp)
+          children: [TQ(RX[sQ]), " \xb7 ", TQ("plotsGame:journalBlocks", {
+            blocks: String(FQ)
           })]
-        }), (0, Jp.jsxs)("div", {
+        }), (0, EQ.jsxs)("div", {
           className: "PlotsJournalSketch",
-          children: [Rp.map((pp => (0, Jp.jsx)("img", {
-            className: Pp()({
-              Shown: pp === ip.id
+          children: [HQ.map((QQ => (0, EQ.jsx)("img", {
+            className: rQ()({
+              Shown: QQ === WQ.id
             }),
-            src: Ec[pp],
+            src: lX[QQ],
             alt: "",
             draggable: !1
-          }, pp))), "completed" === ip.state && (0, Jp.jsx)("span", {
+          }, QQ))), "completed" === WQ.state && (0, EQ.jsx)("span", {
             className: "PlotsJournalStamp",
-            children: Ip("plotsGame:journalBuilt")
-          }), Yp && (0, Jp.jsx)("span", {
+            children: TQ("plotsGame:journalBuilt")
+          }), PQ && (0, EQ.jsx)("span", {
             className: "PlotsJournalLock",
-            children: (0, Jp.jsx)(Up.d, {
+            children: (0, EQ.jsx)(BQ.d, {
               name: "lock"
             })
           })]
-        }), null !== ip.note && (0, Jp.jsx)("p", {
+        }), null !== WQ.note && (0, EQ.jsx)("p", {
           className: "PlotsJournalNote",
-          children: Ip(ip.note)
-        }), (0, Jp.jsxs)("div", {
+          children: TQ(WQ.note)
+        }), (0, EQ.jsxs)("div", {
           className: "PlotsJournalPageAction",
-          children: ["locked" === ip.state && (0, Jp.jsx)("p", {
+          children: ["locked" === WQ.state && (0, EQ.jsx)("p", {
             className: "PlotsJournalHint",
-            children: Ip("plotsGame:journalLocked", {
-              name: Ip(qp(ip.unlockedBy).displayName.translationKey)
+            children: TQ("plotsGame:journalLocked", {
+              name: TQ(aQ(WQ.unlockedBy).displayName.translationKey)
             })
-          }), ip.active && (0, Jp.jsxs)(Jp.Fragment, {
-            children: [(0, Jp.jsx)("p", {
+          }), WQ.active && (0, EQ.jsxs)(EQ.Fragment, {
+            children: [(0, EQ.jsx)("p", {
               className: "PlotsJournalHint Building",
-              children: Ip("plotsGame:journalBuilding")
-            }), (0, Jp.jsx)(qc.j, {
-              onClick: op,
-              children: Ip("plotsGame:journalPutAway")
+              children: TQ("plotsGame:journalBuilding")
+            }), (0, EQ.jsx)(dX.l, {
+              onClick: qQ,
+              children: TQ("plotsGame:journalPutAway")
             })]
-          }), !Yp && !ip.active && (0, Jp.jsx)(Ap, {
+          }), !PQ && !WQ.active && (0, EQ.jsx)(JQ, {
             onClick: () => {
-              Op(ip.id)
+              wQ(WQ.id)
             },
-            children: Ip("plotsGame:placementBuild")
+            children: TQ("plotsGame:placementBuild")
           })]
         })]
       })
     }
 
-    function Tc(pp) {
+    function CX(QQ) {
       let {
-        className: ip,
-        page: cp,
-        hidden: Op,
-        building: op,
-        journal: Ip
-      } = pp;
-      return (0, Jp.jsxs)("div", {
-        ref: pp => {
-          null !== pp && (pp.inert = Op)
+        className: WQ,
+        page: XQ,
+        hidden: wQ,
+        building: qQ,
+        journal: TQ
+      } = QQ;
+      return (0, EQ.jsxs)("div", {
+        ref: QQ => {
+          null !== QQ && (QQ.inert = wQ)
         },
-        className: Pp()("PlotsJournalSide", ip),
-        children: [void 0 !== cp && (0, Jp.jsx)(Nc, {
-          page: cp,
-          building: op,
-          onBuild: Ip.build,
-          onPutAway: Ip.putAway
-        }), void 0 === cp && (0, Jp.jsx)("div", {
+        className: rQ()("PlotsJournalSide", WQ),
+        children: [void 0 !== XQ && (0, EQ.jsx)(EX, {
+          page: XQ,
+          building: qQ,
+          onBuild: TQ.build,
+          onPutAway: TQ.putAway
+        }), void 0 === XQ && (0, EQ.jsx)("div", {
           className: "PlotsJournalPage"
         })]
       })
     }
-    var fc = cp(1927);
+    var uX = XQ(1972);
 
-    function bc(pp) {
-      return Math.cos((0, fc.o)(pp))
+    function LX(QQ) {
+      return Math.cos((0, uX.j)(QQ))
     }
 
-    function hc(pp) {
-      return (0, fc.C)(Math.acos(ki.d.clamp(pp, -1, 1)))
+    function kX(QQ) {
+      return (0, uX.y)(Math.acos(bW.b.clamp(QQ, -1, 1)))
     }
 
-    function ac(pp, ip, cp, Op, op) {
-      const Ip = Math.abs(ip - pp),
-        Sp = (0, fc.C)(op / (cp * Math.abs(Math.sin((0, fc.o)(pp))))),
-        xp = 450 * Math.min(1, Ip / Op),
-        Lp = Sp > 0 ? 3 * Ip / Sp : 1 / 0;
-      return Math.round(Math.max(120, Math.min(xp, Lp)))
+    function fX(QQ, WQ, XQ, wQ, qQ) {
+      const TQ = Math.abs(WQ - QQ),
+        zQ = (0, uX.y)(qQ / (XQ * Math.abs(Math.sin((0, uX.j)(QQ))))),
+        sQ = 450 * Math.min(1, TQ / wQ),
+        FQ = zQ > 0 ? 3 * TQ / zQ : 1 / 0;
+      return Math.round(Math.max(120, Math.min(sQ, FQ)))
     }
-    class nc {
+    class SX {
       constructor() {
         this.samples = []
       }
-      add(pp, ip) {
+      add(QQ, WQ) {
         for (this.samples.push({
-            x: pp,
-            at: ip
-          }); ip - this.samples[0].at > 100;) this.samples.shift()
+            x: QQ,
+            at: WQ
+          }); WQ - this.samples[0].at > 100;) this.samples.shift()
       }
       get() {
-        const pp = this.samples[0],
-          ip = this.samples[this.samples.length - 1];
-        return ip.at > pp.at ? (ip.x - pp.x) / (ip.at - pp.at) : 0
+        const QQ = this.samples[0],
+          WQ = this.samples[this.samples.length - 1];
+        return WQ.at > QQ.at ? (WQ.x - QQ.x) / (WQ.at - QQ.at) : 0
       }
     }
 
-    function Fc(pp) {
-      return hc(new DOMMatrixReadOnly(getComputedStyle(pp).transform).m11)
+    function tX(QQ) {
+      return kX(new DOMMatrixReadOnly(getComputedStyle(QQ).transform).m11)
     }
 
-    function gc(pp, ip) {
-      pp.style.transform = `rotateY(${-ip}deg)`, pp.classList.add("Turning")
+    function oX(QQ, WQ) {
+      QQ.style.transform = `rotateY(${-WQ}deg)`, QQ.classList.add("Turning")
     }
 
-    function Gc(pp, ip, cp) {
-      const [Op, op] = (0, Ip.useState)(cp), Sp = (0, Ip.useRef)(null), xp = (0, Ip.useRef)(null), Lp = (0, Ip.useRef)({
+    function eX(QQ, WQ, XQ) {
+      const [wQ, qQ] = (0, TQ.useState)(XQ), zQ = (0, TQ.useRef)(null), sQ = (0, TQ.useRef)(null), FQ = (0, TQ.useRef)({
         Forward: null,
         Back: null
-      }), Yp = ip ? 2 : 1, Dp = ip ? 180 : 90, Ap = Op - Op % Yp, Pp = Ap > 0, Wp = Ap + Yp < pp, yp = (0, Ip.useCallback)((() => {
-        const pp = xp.current;
-        return null === pp ? Ap : (xp.current = null, pp.animation.cancel(), (ip = Lp.current[pp.direction]).style.transform = "", ip.classList.remove("Turning"), null === pp.next ? Ap : (op(pp.next), pp.next));
-        var ip
-      }), [Ap]), Up = (0, Ip.useCallback)(((pp, ip, cp, Op) => {
-        const op = Lp.current[pp],
-          Ip = Fc(op),
-          Sp = ip === ("Forward" === pp) ? Dp : 0;
-        gc(op, Sp);
-        const Ap = op.animate([{
-          transform: `rotateY(${-Ip}deg)`
+      }), PQ = WQ ? 2 : 1, gQ = WQ ? 180 : 90, JQ = wQ - wQ % PQ, rQ = JQ > 0, IQ = JQ + PQ < QQ, jQ = (0, TQ.useCallback)((() => {
+        const QQ = sQ.current;
+        return null === QQ ? JQ : (sQ.current = null, QQ.animation.cancel(), (WQ = FQ.current[QQ.direction]).style.transform = "", WQ.classList.remove("Turning"), null === QQ.next ? JQ : (qQ(QQ.next), QQ.next));
+        var WQ
+      }), [JQ]), BQ = (0, TQ.useCallback)(((QQ, WQ, XQ, wQ) => {
+        const qQ = FQ.current[QQ],
+          TQ = tX(qQ),
+          zQ = WQ === ("Forward" === QQ) ? gQ : 0;
+        oX(qQ, zQ);
+        const JQ = qQ.animate([{
+          transform: `rotateY(${-TQ}deg)`
         }, {
-          transform: `rotateY(${-Sp}deg)`
+          transform: `rotateY(${-zQ}deg)`
         }], {
-          duration: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : ac(Ip, Sp, op.offsetWidth, Dp, Sp > Ip ? -cp : cp),
+          duration: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : fX(TQ, zQ, qQ.offsetWidth, gQ, zQ > TQ ? -XQ : XQ),
           easing: "cubic-bezier(0.25, 0.75, 0.5, 1)"
         });
-        xp.current = {
-          direction: pp,
-          animation: Ap,
-          next: ip ? Op + ("Forward" === pp ? Yp : -Yp) : null
-        }, Ap.onfinish = () => {
-          var pp;
-          (null === (pp = xp.current) || void 0 === pp ? void 0 : pp.animation) === Ap && yp()
+        sQ.current = {
+          direction: QQ,
+          animation: JQ,
+          next: WQ ? wQ + ("Forward" === QQ ? PQ : -PQ) : null
+        }, JQ.onfinish = () => {
+          var QQ;
+          (null === (QQ = sQ.current) || void 0 === QQ ? void 0 : QQ.animation) === JQ && jQ()
         }
-      }), [Yp, Dp, yp]), wp = (0, Ip.useCallback)((ip => {
-        if (null !== Sp.current) return;
-        const cp = yp();
-        ("Forward" === ip ? cp + Yp < pp : cp > 0) && Up(ip, !0, 0, cp)
-      }), [yp, Up, Yp, pp]);
-      (0, Ip.useEffect)((() => () => {
-        var pp;
-        null === (pp = xp.current) || void 0 === pp || pp.animation.cancel()
-      }), []), (0, Ip.useEffect)((() => {
-        const pp = pp => {
-          var ip;
-          pp.pointerId !== (null === (ip = Sp.current) || void 0 === ip ? void 0 : ip.pointerId) || Sp.current.following || (Sp.current = null)
+      }), [PQ, gQ, jQ]), yQ = (0, TQ.useCallback)((WQ => {
+        if (null !== zQ.current) return;
+        const XQ = jQ();
+        ("Forward" === WQ ? XQ + PQ < QQ : XQ > 0) && BQ(WQ, !0, 0, XQ)
+      }), [jQ, BQ, PQ, QQ]);
+      (0, TQ.useEffect)((() => () => {
+        var QQ;
+        null === (QQ = sQ.current) || void 0 === QQ || QQ.animation.cancel()
+      }), []), (0, TQ.useEffect)((() => {
+        const QQ = QQ => {
+          var WQ;
+          QQ.pointerId !== (null === (WQ = zQ.current) || void 0 === WQ ? void 0 : WQ.pointerId) || zQ.current.following || (zQ.current = null)
         };
-        return window.addEventListener("pointerup", pp), () => {
-          window.removeEventListener("pointerup", pp)
+        return window.addEventListener("pointerup", QQ), () => {
+          window.removeEventListener("pointerup", QQ)
         }
       }), []);
-      const vp = (pp, ip, cp) => {
-          const Op = function(pp, ip, cp, Op) {
-            return (pp < 0 ? cp : Op) ? ki.d.clampAbs(pp, ip) : Math.sign(pp) * ip * (1 - 1 / (.55 * Math.abs(pp) / ip + 1))
-          }(pp.base + cp, Yp * pp.width, Wp, Pp);
-          return "Forward" === ip ? Math.min(Op, 0) : Math.max(Op, 0)
+      const VQ = (QQ, WQ, XQ) => {
+          const wQ = function(QQ, WQ, XQ, wQ) {
+            return (QQ < 0 ? XQ : wQ) ? bW.b.clampAbs(QQ, WQ) : Math.sign(QQ) * WQ * (1 - 1 / (.55 * Math.abs(QQ) / WQ + 1))
+          }(QQ.base + XQ, PQ * QQ.width, IQ, rQ);
+          return "Forward" === WQ ? Math.min(wQ, 0) : Math.max(wQ, 0)
         },
-        tp = (pp, ip) => {
-          const cp = Sp.current;
-          if (Sp.current = null, null === cp.direction) return;
-          cp.speed.add(pp, ip);
-          const Op = cp.speed.get(),
-            op = vp(cp, cp.direction, pp - cp.x);
-          Up(cp.direction, null !== function(pp, ip, cp, Op, op) {
-            if (Math.abs(ip) >= .3 ? Math.sign(ip) !== Math.sign(pp) : Math.abs(pp) < .5 * cp) return null;
-            const Ip = pp < 0 ? "Forward" : "Back";
-            return ("Forward" === Ip ? Op : op) ? Ip : null
-          }(op, Op, Yp * cp.width, Wp, Pp), Op, Ap)
+        DQ = (QQ, WQ) => {
+          const XQ = zQ.current;
+          if (zQ.current = null, null === XQ.direction) return;
+          XQ.speed.add(QQ, WQ);
+          const wQ = XQ.speed.get(),
+            qQ = VQ(XQ, XQ.direction, QQ - XQ.x);
+          BQ(XQ.direction, null !== function(QQ, WQ, XQ, wQ, qQ) {
+            if (Math.abs(WQ) >= .3 ? Math.sign(WQ) !== Math.sign(QQ) : Math.abs(QQ) < .5 * XQ) return null;
+            const TQ = QQ < 0 ? "Forward" : "Back";
+            return ("Forward" === TQ ? wQ : qQ) ? TQ : null
+          }(qQ, wQ, PQ * XQ.width, IQ, rQ), wQ, JQ)
         },
-        Hp = {
-          onPointerDown: pp => {
-            var ip;
-            if (!pp.isPrimary || 0 !== pp.button || null !== xp.current && null !== pp.target.closest("button")) return;
-            const cp = new nc;
-            cp.add(pp.clientX, pp.timeStamp);
-            const Op = Lp.current.Forward.offsetWidth,
-              op = xp.current;
-            xp.current = null;
-            let Ip = 0;
-            if (null !== op) {
-              const ip = Lp.current[op.direction],
-                cp = Fc(ip);
-              op.animation.cancel(), gc(ip, cp), Ip = function(pp, ip, cp, Op) {
-                return (pp < 0 ? cp : Op) ? pp : Math.sign(pp) * ip * (1 / (1 - Math.min(Math.abs(pp) / ip, .99)) - 1) / .55
-              }(function(pp, ip, cp, Op) {
-                return cp * (bc(ip) - bc("Forward" === pp ? 0 : Op))
-              }(op.direction, cp, Op, Dp), Yp * Op, Wp, Pp), pp.currentTarget.setPointerCapture(pp.pointerId)
+        pQ = {
+          onPointerDown: QQ => {
+            var WQ;
+            if (!QQ.isPrimary || 0 !== QQ.button || null !== sQ.current && null !== QQ.target.closest("button")) return;
+            const XQ = new SX;
+            XQ.add(QQ.clientX, QQ.timeStamp);
+            const wQ = FQ.current.Forward.offsetWidth,
+              qQ = sQ.current;
+            sQ.current = null;
+            let TQ = 0;
+            if (null !== qQ) {
+              const WQ = FQ.current[qQ.direction],
+                XQ = tX(WQ);
+              qQ.animation.cancel(), oX(WQ, XQ), TQ = function(QQ, WQ, XQ, wQ) {
+                return (QQ < 0 ? XQ : wQ) ? QQ : Math.sign(QQ) * WQ * (1 / (1 - Math.min(Math.abs(QQ) / WQ, .99)) - 1) / .55
+              }(function(QQ, WQ, XQ, wQ) {
+                return XQ * (LX(WQ) - LX("Forward" === QQ ? 0 : wQ))
+              }(qQ.direction, XQ, wQ, gQ), PQ * wQ, IQ, rQ), QQ.currentTarget.setPointerCapture(QQ.pointerId)
             }
-            Sp.current = {
-              pointerId: pp.pointerId,
-              x: pp.clientX,
-              y: pp.clientY,
-              base: Ip,
-              width: Op,
-              following: null !== op,
-              direction: null !== (ip = null === op || void 0 === op ? void 0 : op.direction) && void 0 !== ip ? ip : null,
-              speed: cp
+            zQ.current = {
+              pointerId: QQ.pointerId,
+              x: QQ.clientX,
+              y: QQ.clientY,
+              base: TQ,
+              width: wQ,
+              following: null !== qQ,
+              direction: null !== (WQ = null === qQ || void 0 === qQ ? void 0 : qQ.direction) && void 0 !== WQ ? WQ : null,
+              speed: XQ
             }
           },
-          onPointerMove: pp => {
-            const ip = Sp.current;
-            if (null === ip || pp.pointerId !== ip.pointerId) return;
-            if (0 === pp.buttons) return void tp(pp.clientX, pp.timeStamp);
-            const cp = pp.clientX - ip.x;
-            !ip.following && function(pp, ip) {
-              return Math.abs(pp) > 8 && Math.abs(pp) > Math.abs(ip)
-            }(cp, pp.clientY - ip.y) && (ip.following = !0, ip.direction = cp < 0 ? "Forward" : "Back", pp.currentTarget.setPointerCapture(pp.pointerId)), null !== ip.direction && (ip.speed.add(pp.clientX, pp.timeStamp), gc(Lp.current[ip.direction], function(pp, ip, cp, Op) {
-              const op = cp * bc("Forward" === pp ? 0 : Op) + ip;
-              return ki.d.clamp(hc(op / cp), 0, Op)
-            }(ip.direction, vp(ip, ip.direction, cp), ip.width, Dp)))
+          onPointerMove: QQ => {
+            const WQ = zQ.current;
+            if (null === WQ || QQ.pointerId !== WQ.pointerId) return;
+            if (0 === QQ.buttons) return void DQ(QQ.clientX, QQ.timeStamp);
+            const XQ = QQ.clientX - WQ.x;
+            !WQ.following && function(QQ, WQ) {
+              return Math.abs(QQ) > 8 && Math.abs(QQ) > Math.abs(WQ)
+            }(XQ, QQ.clientY - WQ.y) && (WQ.following = !0, WQ.direction = XQ < 0 ? "Forward" : "Back", QQ.currentTarget.setPointerCapture(QQ.pointerId)), null !== WQ.direction && (WQ.speed.add(QQ.clientX, QQ.timeStamp), oX(FQ.current[WQ.direction], function(QQ, WQ, XQ, wQ) {
+              const qQ = XQ * LX("Forward" === QQ ? 0 : wQ) + WQ;
+              return bW.b.clamp(kX(qQ / XQ), 0, wQ)
+            }(WQ.direction, VQ(WQ, WQ.direction, XQ), WQ.width, gQ)))
           },
-          onPointerUp: pp => {
-            var ip;
-            pp.pointerId === (null === (ip = Sp.current) || void 0 === ip ? void 0 : ip.pointerId) && tp(pp.clientX, pp.timeStamp)
+          onPointerUp: QQ => {
+            var WQ;
+            QQ.pointerId === (null === (WQ = zQ.current) || void 0 === WQ ? void 0 : WQ.pointerId) && DQ(QQ.clientX, QQ.timeStamp)
           },
-          onPointerCancel: pp => {
-            const ip = Sp.current;
-            pp.pointerId === (null === ip || void 0 === ip ? void 0 : ip.pointerId) && (Sp.current = null, null !== ip.direction && Up(ip.direction, !1, 0, Ap))
+          onPointerCancel: QQ => {
+            const WQ = zQ.current;
+            QQ.pointerId === (null === WQ || void 0 === WQ ? void 0 : WQ.pointerId) && (zQ.current = null, null !== WQ.direction && BQ(WQ.direction, !1, 0, JQ))
           }
         };
       return {
-        first: Ap,
-        step: Yp,
-        canGoBack: Pp,
-        canGoForward: Wp,
-        turnPage: wp,
-        leaves: Lp,
-        pagesHandlers: Hp
+        first: JQ,
+        step: PQ,
+        canGoBack: rQ,
+        canGoForward: IQ,
+        turnPage: yQ,
+        leaves: FQ,
+        pagesHandlers: pQ
       }
     }
 
-    function rc(pp, ip) {
-      return pp > ip && pp >= 600
+    function nX(QQ, WQ) {
+      return QQ > WQ && QQ >= 600
     }
 
-    function Zc(pp) {
+    function xX(QQ) {
       let {
-        journal: ip,
-        hud: cp,
-        guide: Op
-      } = pp;
+        journal: WQ,
+        hud: XQ,
+        guide: wQ
+      } = QQ;
       const {
-        t: op
-      } = (0, Dp.H)(), xp = (0, Lp.i)(lp, ip.getPages()), Yp = (0, Lp.i)(Oi, cp.getGuide()), Ap = xp.find((pp => pp.active)), Wp = (yp = Yp, Up = void 0 === Ap ? null : Ap.id, "active" === yp[0] && null === Up);
-      var yp, Up;
-      const wp = (0, Cc.m)(rc),
+        t: qQ
+      } = (0, gQ.C)(), sQ = (0, FQ.j)(AQ, WQ.getPages()), PQ = (0, FQ.j)(WW, XQ.getGuide()), JQ = sQ.find((QQ => QQ.active)), IQ = (jQ = PQ, BQ = void 0 === JQ ? null : JQ.id, "active" === jQ[0] && null === BQ);
+      var jQ, BQ;
+      const yQ = (0, aX.p)(nX),
         {
-          first: vp,
-          step: dp,
-          canGoBack: ep,
-          canGoForward: jp,
-          turnPage: kp,
-          leaves: mp,
-          pagesHandlers: Rp
-        } = Gc(xp.length, wp, (() => function(pp) {
-          const ip = pp.findIndex((pp => pp.active));
-          return -1 !== ip ? ip : Math.max(0, pp.findIndex((pp => "open" === pp.state)))
-        }(xp)));
-      (0, Ip.useEffect)((() => {
-        ip.onOpened()
-      }), [ip]), (0, tp.b)((pp => !Wp && ("ArrowLeft" === pp.code || "ArrowRight" === pp.code) && !(0, Hp.isTypingInInput)()), (pp => {
-        pp.stopPropagation(), kp("ArrowLeft" === pp.code ? "Back" : "Forward")
+          first: VQ,
+          step: GQ,
+          canGoBack: UQ,
+          canGoForward: bQ,
+          turnPage: vQ,
+          leaves: dQ,
+          pagesHandlers: HQ
+        } = eX(sQ.length, yQ, (() => function(QQ) {
+          const WQ = QQ.findIndex((QQ => QQ.active));
+          return -1 !== WQ ? WQ : Math.max(0, QQ.findIndex((QQ => "open" === QQ.state)))
+        }(sQ)));
+      (0, TQ.useEffect)((() => {
+        WQ.onOpened()
+      }), [WQ]), (0, DQ.c)((QQ => !IQ && ("ArrowLeft" === QQ.code || "ArrowRight" === QQ.code) && !(0, pQ.isTypingInInput)()), (QQ => {
+        QQ.stopPropagation(), vQ("ArrowLeft" === QQ.code ? "Back" : "Forward")
       }));
-      const qp = void 0 !== Ap,
-        Mp = (pp, cp, Op) => (0, Jp.jsx)(Tc, {
-          className: pp,
-          page: cp >= 0 && cp < xp.length ? xp[cp] : void 0,
-          hidden: Op,
-          building: qp,
-          journal: ip
+      const aQ = void 0 !== JQ,
+        lQ = (QQ, XQ, wQ) => (0, EQ.jsx)(CX, {
+          className: QQ,
+          page: XQ >= 0 && XQ < sQ.length ? sQ[XQ] : void 0,
+          hidden: wQ,
+          building: aQ,
+          journal: WQ
         });
-      return (0, Jp.jsx)(Mc.c, {
-        close: Sp.l,
+      return (0, EQ.jsx)(HX.b, {
+        close: zQ.n,
         togglePointerLock: !1,
         className: "PlotsJournalOverlay",
-        children: (0, Jp.jsxs)("section", {
-          className: Pp()("PlotsJournal", {
-            Spread: wp
+        children: (0, EQ.jsxs)("section", {
+          className: rQ()("PlotsJournal", {
+            Spread: yQ
           }),
           role: "dialog",
           "aria-modal": "true",
-          "aria-label": op("plotsGame:journalTitle"),
-          children: [(0, Jp.jsx)(qc.l, {
+          "aria-label": qQ("plotsGame:journalTitle"),
+          children: [(0, EQ.jsx)(dX.o, {
             className: "PlotsJournalClose",
-            onClick: Sp.l
-          }), "active" === Yp[0] && (0, Jp.jsx)(Di, {
+            onClick: zQ.n
+          }), "active" === PQ[0] && (0, EQ.jsx)(FW, {
             className: "PlotsJournalGuideSkip",
-            onSkip: Op.skip
-          }), Wp && (0, Jp.jsx)(Qc, {
-            onBuild: ip.build
-          }), !Wp && (0, Jp.jsx)(Jc, {
+            onSkip: wQ.skip
+          }), IQ && (0, EQ.jsx)(cX, {
+            onBuild: WQ.build
+          }), !IQ && (0, EQ.jsx)(AX, {
             direction: "Back",
-            disabled: !ep,
-            onTurn: kp
-          }), (0, Jp.jsx)("div", {
-            hidden: Wp,
+            disabled: !UQ,
+            onTurn: vQ
+          }), (0, EQ.jsx)("div", {
+            hidden: IQ,
             className: "PlotsJournalBookPages",
-            ...Rp,
-            children: (0, Jp.jsxs)("div", {
+            ...HQ,
+            children: (0, EQ.jsxs)("div", {
               className: "PlotsJournalSheet",
-              children: [wp && Mp("Left", vp - 2, !0), Mp("Right", vp + 2 * dp - 1, !0), (0, Jp.jsxs)("div", {
-                ref: pp => {
-                  mp.current.Back = pp
+              children: [yQ && lQ("Left", VQ - 2, !0), lQ("Right", VQ + 2 * GQ - 1, !0), (0, EQ.jsxs)("div", {
+                ref: QQ => {
+                  dQ.current.Back = QQ
                 },
                 className: "PlotsJournalLeaf Back",
-                children: [Mp("Recto", vp - 1, !0), wp && Mp("Verso", vp, !1)]
-              }), (0, Jp.jsxs)("div", {
-                ref: pp => {
-                  mp.current.Forward = pp
+                children: [lQ("Recto", VQ - 1, !0), yQ && lQ("Verso", VQ, !1)]
+              }), (0, EQ.jsxs)("div", {
+                ref: QQ => {
+                  dQ.current.Forward = QQ
                 },
                 className: "PlotsJournalLeaf Forward",
-                children: [Mp("Recto", vp + dp - 1, !1), wp && Mp("Verso", vp + dp, !0)]
+                children: [lQ("Recto", VQ + GQ - 1, !1), yQ && lQ("Verso", VQ + GQ, !0)]
               })]
             })
-          }), !Wp && (0, Jp.jsx)(Jc, {
+          }), !IQ && (0, EQ.jsx)(AX, {
             direction: "Forward",
-            disabled: !jp,
-            onTurn: kp
+            disabled: !bQ,
+            onTurn: vQ
           })]
         })
       })
     }
 
-    function zc(pp, ip, cp, Op, op) {
-      const Ip = Math.hypot(...ip.dir);
-      if (!Number.isFinite(Ip) || 0 === Ip) return -1;
+    function YX(QQ, WQ, XQ, wQ, qQ) {
+      const TQ = Math.hypot(...WQ.dir);
+      if (!Number.isFinite(TQ) || 0 === TQ) return -1;
       const {
-        from: Sp,
-        reach: xp,
-        solid: Lp
-      } = ip, Yp = [ip.dir[0] / Ip, ip.dir[1] / Ip, ip.dir[2] / Ip], Dp = null === Lp ? xp : Math.min(xp, function(pp, ip, cp) {
-        const Op = sc(pp, ip, cp);
-        if (Op !== 1 / 0) return Op;
-        return (cp[0] + .5 - pp[0]) * ip[0] + (cp[1] + .5 - pp[1]) * ip[1] + (cp[2] + .5 - pp[2]) * ip[2]
-      }(Sp, Yp, Lp) + .75);
-      let Ap = -1,
-        Pp = 1 / 0,
-        Wp = 1 / 0;
-      for (let yp = 0; yp < pp.length; yp += 4) {
-        const ip = [pp[yp], pp[yp + 1], pp[yp + 2]],
-          Ip = op(yp) ? xp : Dp;
-        let Lp = -1,
-          Up = sc(Sp, Yp, ip);
-        if (Up > Ip) {
-          const pp = [ip[0] + .5 - Sp[0], ip[1] + .5 - Sp[1], ip[2] + .5 - Sp[2]];
-          if (Up = pp[0] * Yp[0] + pp[1] * Yp[1] + pp[2] * Yp[2], Up <= 0 || Up > Ip) continue;
-          if (Lp = Math.hypot(pp[0] - Up * Yp[0], pp[1] - Up * Yp[1], pp[2] - Up * Yp[2]), Lp > .7 || !Op(yp)) continue
-        }(Lp < Pp || Lp === Pp && Up < Wp) && cp(yp) && (Ap = yp, Pp = Lp, Wp = Up)
+        from: zQ,
+        reach: sQ,
+        solid: FQ
+      } = WQ, PQ = [WQ.dir[0] / TQ, WQ.dir[1] / TQ, WQ.dir[2] / TQ], gQ = null === FQ ? sQ : Math.min(sQ, function(QQ, WQ, XQ) {
+        const wQ = NX(QQ, WQ, XQ);
+        if (wQ !== 1 / 0) return wQ;
+        return (XQ[0] + .5 - QQ[0]) * WQ[0] + (XQ[1] + .5 - QQ[1]) * WQ[1] + (XQ[2] + .5 - QQ[2]) * WQ[2]
+      }(zQ, PQ, FQ) + .75);
+      let JQ = -1,
+        rQ = 1 / 0,
+        IQ = 1 / 0;
+      for (let jQ = 0; jQ < QQ.length; jQ += 4) {
+        const WQ = [QQ[jQ], QQ[jQ + 1], QQ[jQ + 2]],
+          TQ = qQ(jQ) ? sQ : gQ;
+        let FQ = -1,
+          BQ = NX(zQ, PQ, WQ);
+        if (BQ > TQ) {
+          const QQ = [WQ[0] + .5 - zQ[0], WQ[1] + .5 - zQ[1], WQ[2] + .5 - zQ[2]];
+          if (BQ = QQ[0] * PQ[0] + QQ[1] * PQ[1] + QQ[2] * PQ[2], BQ <= 0 || BQ > TQ) continue;
+          if (FQ = Math.hypot(QQ[0] - BQ * PQ[0], QQ[1] - BQ * PQ[1], QQ[2] - BQ * PQ[2]), FQ > .7 || !wQ(jQ)) continue
+        }(FQ < rQ || FQ === rQ && BQ < IQ) && XQ(jQ) && (JQ = jQ, rQ = FQ, IQ = BQ)
       }
-      return Ap
+      return JQ
     }
 
-    function sc(pp, ip, cp) {
-      let Op = 0,
-        op = 1 / 0;
-      for (let Ip = 0; Ip < 3; Ip++) {
-        const Sp = cp[Ip] - pp[Ip];
-        if (0 === ip[Ip]) {
-          if (Sp > 0 || Sp + 1 < 0) return 1 / 0;
+    function NX(QQ, WQ, XQ) {
+      let wQ = 0,
+        qQ = 1 / 0;
+      for (let TQ = 0; TQ < 3; TQ++) {
+        const zQ = XQ[TQ] - QQ[TQ];
+        if (0 === WQ[TQ]) {
+          if (zQ > 0 || zQ + 1 < 0) return 1 / 0;
           continue
         }
-        const xp = Sp / ip[Ip],
-          Lp = (Sp + 1) / ip[Ip];
-        Op = Math.max(Op, Math.min(xp, Lp)), op = Math.min(op, Math.max(xp, Lp))
+        const sQ = zQ / WQ[TQ],
+          FQ = (zQ + 1) / WQ[TQ];
+        wQ = Math.max(wQ, Math.min(sQ, FQ)), qQ = Math.min(qQ, Math.max(sQ, FQ))
       }
-      return Op <= op ? Op : 1 / 0
+      return wQ <= qQ ? wQ : 1 / 0
     }
-    var Kc = cp(37099),
-      Vc = cp(38281);
-    const pO = [1, 1, 1];
-    class iO {
-      constructor(pp) {
-        this.api = pp, this.meshes = null, this.shown = null
+    var ZX = XQ(37183),
+      OX = XQ(38344);
+    const KX = [1, 1, 1];
+    class mX {
+      constructor(QQ) {
+        this.api = QQ, this.meshes = null, this.shown = null
       }
-      show(pp) {
-        if (!(0, Kc.i)(pp, this.shown))
-          if (this.shown = null === pp ? null : [pp[0], pp[1], pp[2]], null !== this.meshes)
-            for (const ip of this.meshes) this.api.setGameMesh(ip, null === pp ? {
+      show(QQ) {
+        if (!(0, ZX.e)(QQ, this.shown))
+          if (this.shown = null === QQ ? null : [QQ[0], QQ[1], QQ[2]], null !== this.meshes)
+            for (const WQ of this.meshes) this.api.setGameMesh(WQ, null === QQ ? {
               visible: !1
             } : {
-              anchor: pp,
+              anchor: QQ,
               visible: !0
             });
-          else if (null !== pp) {
-          const ip = [Vc.h, Vc.h, Vc.h, 0, 0, 0];
-          this.meshes = [this.build([ip], Vc.i, pp), this.build((0, Vc.e)(), Vc.o, pp)]
+          else if (null !== QQ) {
+          const WQ = [OX.h, OX.h, OX.h, 0, 0, 0];
+          this.meshes = [this.build([WQ], OX.i, QQ), this.build((0, OX.d)(), OX.q, QQ)]
         }
       }
       dispose() {
-        for (const ip of null !== (pp = this.meshes) && void 0 !== pp ? pp : []) {
-          var pp;
-          this.api.disposeGameMesh(ip)
+        for (const WQ of null !== (QQ = this.meshes) && void 0 !== QQ ? QQ : []) {
+          var QQ;
+          this.api.disposeGameMesh(WQ)
         }
         this.meshes = null, this.shown = null
       }
-      build(pp, ip, cp) {
-        const Op = [],
-          op = [];
-        for (const [Ip, Sp, xp, Lp, Yp, Dp] of pp)(0, zi.e)(Op, op, [Lp + .5, Yp + .5, Dp + .5], [Ip, Sp, xp]);
+      build(QQ, WQ, XQ) {
+        const wQ = [],
+          qQ = [];
+        for (const [TQ, zQ, sQ, FQ, PQ, gQ] of QQ)(0, YW.f)(wQ, qQ, [FQ + .5, PQ + .5, gQ + .5], [TQ, zQ, sQ]);
         return this.api.createGameMesh({
-          positions: Op,
-          indices: op
+          positions: wQ,
+          indices: qQ
         }, {
-          rgb: pO,
-          alpha: ip,
+          rgb: KX,
+          alpha: WQ,
           onTop: !0
-        }, cp)
+        }, XQ)
       }
     }
 
-    function cO(pp, ip) {
-      const cp = ri.g.Kw / 2;
-      return pp[0] < ip[0] + cp && pp[0] + 1 > ip[0] - cp && pp[1] < ip[1] + ri.g.Vw && pp[1] + 1 > ip[1] && pp[2] < ip[2] + cp && pp[2] + 1 > ip[2] - cp
+    function MX(QQ, WQ) {
+      const XQ = nW.h.ny / 2;
+      return QQ[0] < WQ[0] + XQ && QQ[0] + 1 > WQ[0] - XQ && QQ[1] < WQ[1] + nW.h.xy && QQ[1] + 1 > WQ[1] && QQ[2] < WQ[2] + XQ && QQ[2] + 1 > WQ[2] - XQ
     }
 
-    function OO(pp, ip) {
-      return pp.getClientOption(ip, "blockReach") + 1
+    function Qw(QQ, WQ) {
+      return QQ.getClientOption(WQ, "blockReach") + 1
     }
-    class oO {
-      constructor(pp, ip, cp) {
-        this.api = pp, this.localPlayerId = ip, this.foreseen = cp, this.cells = [], this.playerCells = [], this.next = null
+    class Ww {
+      constructor(QQ, WQ, XQ) {
+        this.api = QQ, this.localPlayerId = WQ, this.foreseen = XQ, this.cells = [], this.playerCells = [], this.next = null
       }
       get() {
         return this.next
       }
-      setCells(pp) {
-        this.cells = pp
+      setCells(QQ) {
+        this.cells = QQ
       }
       playerMoved() {
-        return IO(this.api.getPositionView(this.localPlayerId)).some(((pp, ip) => pp !== this.playerCells[ip]))
+        return Xw(this.api.getPositionView(this.localPlayerId)).some(((QQ, WQ) => QQ !== this.playerCells[WQ]))
       }
-      SW(pp) {
-        const ip = this.api.getPositionView(this.localPlayerId);
-        return this.playerCells.splice(0, 1 / 0, ...IO(ip)), this.next = this.pickFrom(null === pp ? [ip[0], ip[1] + 1, ip[2]] : (0, Kc.e)(pp), (() => !1)), this.next
+      tr(QQ) {
+        const WQ = this.api.getPositionView(this.localPlayerId);
+        return this.playerCells.splice(0, 1 / 0, ...Xw(WQ)), this.next = this.pickFrom(null === QQ ? [WQ[0], WQ[1] + 1, WQ[2]] : (0, ZX.c)(QQ), (() => !1)), this.next
       }
-      pickFrom(pp, ip) {
-        const cp = this.api.getPositionView(this.localPlayerId),
-          Op = [cp[0], cp[1] + ri.g.Vw * ri.g.playerEyeToHeightRatio, cp[2]],
-          op = OO(this.api, this.localPlayerId),
+      pickFrom(QQ, WQ) {
+        const XQ = this.api.getPositionView(this.localPlayerId),
+          wQ = [XQ[0], XQ[1] + nW.h.xy * nW.h.playerEyeToHeightRatio, XQ[2]],
+          qQ = Qw(this.api, this.localPlayerId),
           {
-            cells: Ip
+            cells: TQ
           } = this,
-          Sp = pp => [Ip[pp], Ip[pp + 1], Ip[pp + 2]],
-          xp = function(pp, ip, cp, Op, op, Ip) {
-            let Sp = -1,
-              xp = -1,
-              Lp = 1 / 0;
-            for (let Yp = 0; Yp < pp.length; Yp += ip) {
-              const ip = (Ip(Yp) ? 2 : 0) + (Op(Yp) ? 1 : 0);
-              if (ip < xp || op(Yp)) continue;
-              const Dp = (pp[Yp] + .5 - cp[0]) ** 2 + (pp[Yp + 1] + .5 - cp[1]) ** 2 + (pp[Yp + 2] + .5 - cp[2]) ** 2;
-              (ip > xp || Dp < Lp) && (Sp = Yp, xp = ip, Lp = Dp)
+          zQ = QQ => [TQ[QQ], TQ[QQ + 1], TQ[QQ + 2]],
+          sQ = function(QQ, WQ, XQ, wQ, qQ, TQ) {
+            let zQ = -1,
+              sQ = -1,
+              FQ = 1 / 0;
+            for (let PQ = 0; PQ < QQ.length; PQ += WQ) {
+              const WQ = (TQ(PQ) ? 2 : 0) + (wQ(PQ) ? 1 : 0);
+              if (WQ < sQ || qQ(PQ)) continue;
+              const gQ = (QQ[PQ] + .5 - XQ[0]) ** 2 + (QQ[PQ + 1] + .5 - XQ[1]) ** 2 + (QQ[PQ + 2] + .5 - XQ[2]) ** 2;
+              (WQ > sQ || gQ < FQ) && (zQ = PQ, sQ = WQ, FQ = gQ)
             }
-            return Sp
-          }(Ip, 4, pp, (pp => 1 === Ip[pp + 3]), (pp => {
-            const Op = Sp(pp);
-            return cO(Op, cp) || this.foreseen.has(Op.join()) || ip(Op)
-          }), (pp => function(pp, ip, cp) {
-            return (ip[0] + .5 - pp[0]) ** 2 + (ip[1] + .5 - pp[1]) ** 2 + (ip[2] + .5 - pp[2]) ** 2 <= cp ** 2
-          }(Op, Sp(pp), op)));
-        return -1 === xp ? null : Sp(xp)
+            return zQ
+          }(TQ, 4, QQ, (QQ => 1 === TQ[QQ + 3]), (QQ => {
+            const wQ = zQ(QQ);
+            return MX(wQ, XQ) || this.foreseen.has(wQ.join()) || WQ(wQ)
+          }), (QQ => function(QQ, WQ, XQ) {
+            return (WQ[0] + .5 - QQ[0]) ** 2 + (WQ[1] + .5 - QQ[1]) ** 2 + (WQ[2] + .5 - QQ[2]) ** 2 <= XQ ** 2
+          }(wQ, zQ(QQ), qQ)));
+        return -1 === sQ ? null : zQ(sQ)
       }
     }
 
-    function IO(pp) {
-      let [ip, cp, Op] = pp;
-      const op = ri.g.Kw / 2;
-      return [Math.floor(ip), Math.floor(cp), Math.floor(Op), Math.floor(ip - op), Math.floor(ip + op), Math.floor(cp + ri.g.Vw), Math.floor(Op - op), Math.floor(Op + op)]
+    function Xw(QQ) {
+      let [WQ, XQ, wQ] = QQ;
+      const qQ = nW.h.ny / 2;
+      return [Math.floor(WQ), Math.floor(XQ), Math.floor(wQ), Math.floor(WQ - qQ), Math.floor(WQ + qQ), Math.floor(XQ + nW.h.xy), Math.floor(wQ - qQ), Math.floor(wQ + qQ)]
     }
-    class SO {
-      constructor(pp, ip, cp) {
-        this.api = pp, this.localPlayerId = ip, this.pickNext = cp, this.turning = null, this.pending = null, this.lastFillMs = -1 / 0, this.tap = null, this.heading = [0, 1]
+    class ww {
+      constructor(QQ, WQ, XQ) {
+        this.api = QQ, this.localPlayerId = WQ, this.pickNext = XQ, this.turning = null, this.pending = null, this.lastFillMs = -1 / 0, this.tap = null, this.heading = [0, 1]
       }
-      look(pp) {
-        const [ip, , cp] = pp.cameraDirection, Op = Math.hypot(ip, cp);
-        Op > .001 && (this.heading = [ip / Op, cp / Op])
+      look(QQ) {
+        const [WQ, , XQ] = QQ.cameraDirection, wQ = Math.hypot(WQ, XQ);
+        wQ > .001 && (this.heading = [WQ / wQ, XQ / wQ])
       }
-      tapped(pp, ip, cp) {
-        const Op = OO(this.api, this.localPlayerId),
+      tapped(QQ, WQ, XQ) {
+        const wQ = Qw(this.api, this.localPlayerId),
           {
-            origin: op,
-            direction: Ip
+            origin: qQ,
+            direction: TQ
           } = this.api.getActionRay(),
-          Sp = [...op],
-          xp = [
-            [Sp, [Sp[0] + Ip[0] * Op, Sp[1] + Ip[1] * Op, Sp[2] + Ip[2] * Op]]
+          zQ = [...qQ],
+          sQ = [
+            [zQ, [zQ[0] + TQ[0] * wQ, zQ[1] + TQ[1] * wQ, zQ[2] + TQ[2] * wQ]]
           ];
-        null !== pp && xp.push([Sp, (0, Kc.e)(pp)]), this.tap = {
-          lines: xp,
-          next: ip,
-          ms: cp
+        null !== QQ && sQ.push([zQ, (0, ZX.c)(QQ)]), this.tap = {
+          lines: sQ,
+          next: WQ,
+          ms: XQ
         }
       }
-      filled(pp, ip) {
-        this.tap = null, this.turnFrom(pp, ip), this.retry(ip)
+      filled(QQ, WQ) {
+        this.tap = null, this.turnFrom(QQ, WQ), this.retry(WQ)
       }
-      arrived(pp, ip) {
+      arrived(QQ, WQ) {
         const {
-          tap: cp
+          tap: XQ
         } = this;
-        if (null === cp || ip - cp.ms > 1500) return null;
-        const Op = (0, Kc.e)(pp);
-        return (0, Kc.i)(cp.next, pp) || cp.lines.some((pp => {
-          let [ip, cp] = pp;
-          return function(pp, ip, cp) {
-            const Op = [cp[0] - ip[0], cp[1] - ip[1], cp[2] - ip[2]],
-              op = [pp[0] - ip[0], pp[1] - ip[1], pp[2] - ip[2]],
-              Ip = Op[0] ** 2 + Op[1] ** 2 + Op[2] ** 2,
-              Sp = 0 === Ip ? 0 : Math.min(1, Math.max(0, (op[0] * Op[0] + op[1] * Op[1] + op[2] * Op[2]) / Ip));
-            return Math.hypot(op[0] - Op[0] * Sp, op[1] - Op[1] * Sp, op[2] - Op[2] * Sp)
-          }(Op, ip, cp) <= .9
-        })) ? (this.tap = null, this.turnFrom(pp, ip), cp.ms) : null
+        if (null === XQ || WQ - XQ.ms > 1500) return null;
+        const wQ = (0, ZX.c)(QQ);
+        return (0, ZX.e)(XQ.next, QQ) || XQ.lines.some((QQ => {
+          let [WQ, XQ] = QQ;
+          return function(QQ, WQ, XQ) {
+            const wQ = [XQ[0] - WQ[0], XQ[1] - WQ[1], XQ[2] - WQ[2]],
+              qQ = [QQ[0] - WQ[0], QQ[1] - WQ[1], QQ[2] - WQ[2]],
+              TQ = wQ[0] ** 2 + wQ[1] ** 2 + wQ[2] ** 2,
+              zQ = 0 === TQ ? 0 : Math.min(1, Math.max(0, (qQ[0] * wQ[0] + qQ[1] * wQ[1] + qQ[2] * wQ[2]) / TQ));
+            return Math.hypot(qQ[0] - wQ[0] * zQ, qQ[1] - wQ[1] * zQ, qQ[2] - wQ[2] * zQ)
+          }(wQ, WQ, XQ) <= .9
+        })) ? (this.tap = null, this.turnFrom(QQ, WQ), XQ.ms) : null
       }
-      turnFrom(pp, ip) {
+      turnFrom(QQ, WQ) {
         this.pending = {
-          from: pp,
-          ms: ip,
-          turnMs: Math.max(50, Math.min(250, ip - this.lastFillMs))
-        }, this.lastFillMs = ip
+          from: QQ,
+          ms: WQ,
+          turnMs: Math.max(50, Math.min(250, WQ - this.lastFillMs))
+        }, this.lastFillMs = WQ
       }
-      retry(pp) {
+      retry(QQ) {
         const {
-          pending: ip
+          pending: WQ
         } = this;
-        if (null === ip) return;
-        if (pp - ip.ms > 1500) return void(this.pending = null);
-        const cp = this.pickNext((0, Kc.e)(ip.from), (pp => (0, Kc.i)(pp, ip.from)));
-        if (null === cp) return;
+        if (null === WQ) return;
+        if (QQ - WQ.ms > 1500) return void(this.pending = null);
+        const XQ = this.pickNext((0, ZX.c)(WQ.from), (QQ => (0, ZX.e)(QQ, WQ.from)));
+        if (null === XQ) return;
         this.pending = null;
         const {
-          turning: Op
+          turning: wQ
         } = this;
-        if (null !== Op && pp < Op.endMs && (0, Kc.i)(Op.to, cp)) return;
-        const op = this.api.getActionRay().origin,
-          Ip = [cp[0] + .5 - op[0], cp[1] + .5 - op[1], cp[2] + .5 - op[2]],
-          Sp = Math.hypot(Ip[0], Ip[2]);
-        if (Sp < .3) {
-          const pp = Math.max(Sp, .001);
-          Ip[0] = this.heading[0] * pp, Ip[2] = this.heading[1] * pp
+        if (null !== wQ && QQ < wQ.endMs && (0, ZX.e)(wQ.to, XQ)) return;
+        const qQ = this.api.getActionRay().origin,
+          TQ = [XQ[0] + .5 - qQ[0], XQ[1] + .5 - qQ[1], XQ[2] + .5 - qQ[2]],
+          zQ = Math.hypot(TQ[0], TQ[2]);
+        if (zQ < .3) {
+          const QQ = Math.max(zQ, .001);
+          TQ[0] = this.heading[0] * QQ, TQ[2] = this.heading[1] * QQ
         }
-        this.api.turnCamera(Ip, ip.turnMs), this.turning = {
-          to: cp,
-          endMs: pp + ip.turnMs
+        this.api.turnCamera(TQ, WQ.turnMs), this.turning = {
+          to: XQ,
+          endMs: QQ + WQ.turnMs
         }
       }
     }
-    class xO {
-      constructor(pp, ip, cp, Op) {
-        this.api = pp, this.localPlayerId = ip, this.juice = cp, this.tracker = Op, this.ghostCells = [], this.palette = [], this.blockIds = [], this.occupiedCells = [], this.blueprint = "", this.layerY = 0, this.topLayerY = 0, this.layerCells = new Map, this.open = new Set, this.lastFilled = null, this.lastSeenFilled = null, this.aimed = null, this.altMs = null, this.pressFilled = !1, this.foreseen = new Map, this.turn = void 0, this.nextCell = void 0, this.chunkWatch = void 0, this.meshes = void 0, this.outline = void 0, this.chunkWatch = new Zi(pp), this.meshes = new cc(pp), this.outline = new iO(pp), this.nextCell = new oO(pp, ip, this.foreseen), this.turn = new SO(pp, ip, ((pp, ip) => this.nextCell.pickFrom(pp, ip)))
+    class qw {
+      constructor(QQ, WQ, XQ, wQ) {
+        this.api = QQ, this.localPlayerId = WQ, this.juice = XQ, this.tracker = wQ, this.ghostCells = [], this.palette = [], this.blockIds = [], this.occupiedCells = [], this.blueprint = "", this.layerY = 0, this.topLayerY = 0, this.layerCells = new Map, this.open = new Set, this.lastFilled = null, this.lastSeenFilled = null, this.aimed = null, this.altMs = null, this.pressFilled = !1, this.foreseen = new Map, this.turn = void 0, this.nextCell = void 0, this.chunkWatch = void 0, this.meshes = void 0, this.outline = void 0, this.chunkWatch = new xW(QQ), this.meshes = new MW(QQ), this.outline = new mX(QQ), this.nextCell = new Ww(QQ, WQ, this.foreseen), this.turn = new ww(QQ, WQ, ((QQ, WQ) => this.nextCell.pickFrom(QQ, WQ)))
       }
-      Ey(pp) {
-        const ip = "active" === pp[0] ? `${pp[1]}|${pp[3]}|${pp[4]}|${pp[5]}|${pp[6]}` : "";
-        if ("active" !== pp[0]) "built" === pp[0] && "" !== this.blueprint && this.finishLayer(1 / 0), this.ghostCells = [], this.palette = [], this.occupiedCells = [];
+      gj(QQ) {
+        const WQ = "active" === QQ[0] ? `${QQ[1]}|${QQ[3]}|${QQ[4]}|${QQ[5]}|${QQ[6]}` : "";
+        if ("active" !== QQ[0]) "built" === QQ[0] && "" !== this.blueprint && this.finishLayer(1 / 0), this.ghostCells = [], this.palette = [], this.occupiedCells = [];
         else {
-          const [, , , , , , , cp, Op, op, Ip] = pp;
-          ip !== this.blueprint ? (this.layerCells.clear(), this.topLayerY = cp) : cp === this.layerY ? this.burstUnlisted(Op) : cp > this.layerY && this.finishLayer(cp), this.layerY = cp, this.layerCells.has(cp) || this.layerCells.set(cp, Op.filter(LO)), this.ghostCells = Op, this.palette = op, this.occupiedCells = Ip
+          const [, , , , , , , XQ, wQ, qQ, TQ] = QQ;
+          WQ !== this.blueprint ? (this.layerCells.clear(), this.topLayerY = XQ) : XQ === this.layerY ? this.burstUnlisted(wQ) : XQ > this.layerY && this.finishLayer(XQ), this.layerY = XQ, this.layerCells.has(XQ) || this.layerCells.set(XQ, wQ.filter(Tw)), this.ghostCells = wQ, this.palette = qQ, this.occupiedCells = TQ
         }
-        ip !== this.blueprint && (this.tracker.show("active" === pp[0] && pp[2] ? {
-          id: pp[1],
-          y: pp[4]
-        } : null), this.blueprint = ip, this.open.clear(), this.foreseen.clear(), this.lastFilled = null, this.lastSeenFilled = null), this.blockIds = this.palette.map((pp => this.api.blockNameToBlockId(pp))), this.chunkWatch.watch([...this.ghostCells.filter(LO), ...this.occupiedCells]), this.refresh()
+        WQ !== this.blueprint && (this.tracker.show("active" === QQ[0] && QQ[2] ? {
+          id: QQ[1],
+          y: QQ[4]
+        } : null), this.blueprint = WQ, this.open.clear(), this.foreseen.clear(), this.lastFilled = null, this.lastSeenFilled = null), this.blockIds = this.palette.map((QQ => this.api.blockNameToBlockId(QQ))), this.chunkWatch.watch([...this.ghostCells.filter(Tw), ...this.occupiedCells]), this.refresh()
       }
-      finishLayer(pp) {
-        this.burstUnlisted([]), pp > this.topLayerY && (this.juice.layerDone(this.layerCells.get(this.topLayerY)), this.topLayerY = pp)
+      finishLayer(QQ) {
+        this.burstUnlisted([]), QQ > this.topLayerY && (this.juice.layerDone(this.layerCells.get(this.topLayerY)), this.topLayerY = QQ)
       }
-      LP() {
+      fJ() {
         if (this.chunkWatch.changed()) return void this.refresh();
-        const pp = performance.now();
-        let ip = !1;
-        for (const [Op, op] of this.foreseen) {
-          var cp;
-          if (pp - op > 1e3) this.foreseen.delete(Op), ip = !0, (null === (cp = this.lastFilled) || void 0 === cp ? void 0 : cp.join()) === Op && (this.lastFilled = this.lastSeenFilled)
-        }(ip || this.nextCell.playerMoved()) && this.showNext()
+        const QQ = performance.now();
+        let WQ = !1;
+        for (const [wQ, qQ] of this.foreseen) {
+          var XQ;
+          if (QQ - qQ > 1e3) this.foreseen.delete(wQ), WQ = !0, (null === (XQ = this.lastFilled) || void 0 === XQ ? void 0 : XQ.join()) === wQ && (this.lastFilled = this.lastSeenFilled)
+        }(WQ || this.nextCell.playerMoved()) && this.showNext()
       }
       dispose() {
         this.meshes.dispose(), this.outline.dispose()
       }
-      burstUnlisted(pp) {
-        const ip = new Set;
-        for (let op = 0; op < pp.length; op += 4) ip.add(`${pp[op]},${pp[op+1]},${pp[op+2]}`);
-        const cp = [],
+      burstUnlisted(QQ) {
+        const WQ = new Set;
+        for (let qQ = 0; qQ < QQ.length; qQ += 4) WQ.add(`${QQ[qQ]},${QQ[qQ+1]},${QQ[qQ+2]}`);
+        const XQ = [],
           {
-            ghostCells: Op
+            ghostCells: wQ
           } = this;
-        for (let op = 0; op < Op.length; op += 4) {
-          const pp = `${Op[op]},${Op[op+1]},${Op[op+2]}`;
-          !ip.has(pp) && this.open.delete(pp) && cp.push(this.filledCell(op))
+        for (let qQ = 0; qQ < wQ.length; qQ += 4) {
+          const QQ = `${wQ[qQ]},${wQ[qQ+1]},${wQ[qQ+2]}`;
+          !WQ.has(QQ) && this.open.delete(QQ) && XQ.push(this.filledCell(qQ))
         }
-        this.burst(cp)
+        this.burst(XQ)
       }
       refresh() {
         const {
-          ghostCells: pp,
-          palette: ip,
-          occupiedCells: cp
-        } = this, Op = new ic, op = new Set, Ip = [], Sp = [];
-        let xp = 0;
-        for (let Lp = 0; Lp < pp.length; Lp += 4) {
-          const [cp, Yp, Dp, Ap] = [pp[Lp], pp[Lp + 1], pp[Lp + 2], pp[Lp + 3]], Pp = this.api.getBlockId(cp, Yp, Dp), Wp = `${cp},${Yp},${Dp}`, yp = Qi(this.blockIds[Ap], Pp);
-          !yp && Ji(Pp) ? Op.add(cp, Yp, Dp, Ni(ip[Ap]), Ki, Gi(ip[Ap])) : yp ? this.open.has(Wp) && Ip.push(this.filledCell(Lp)) : Op.add(cp, Yp, Dp, pc, Vi), yp || xp++, !yp && this.api.isBlockInLoadedChunk(cp, Yp, Dp) && (op.add(Wp), Sp.push(cp, Yp, Dp, Ji(Pp) ? 0 : 1))
+          ghostCells: QQ,
+          palette: WQ,
+          occupiedCells: XQ
+        } = this, wQ = new mW, qQ = new Set, TQ = [], zQ = [];
+        let sQ = 0;
+        for (let FQ = 0; FQ < QQ.length; FQ += 4) {
+          const [XQ, PQ, gQ, JQ] = [QQ[FQ], QQ[FQ + 1], QQ[FQ + 2], QQ[FQ + 3]], rQ = this.api.getBlockId(XQ, PQ, gQ), IQ = `${XQ},${PQ},${gQ}`, jQ = AW(this.blockIds[JQ], rQ);
+          !jQ && RW(rQ) ? wQ.add(XQ, PQ, gQ, CW(WQ[JQ]), ZW, eW(WQ[JQ])) : jQ ? this.open.has(IQ) && TQ.push(this.filledCell(FQ)) : wQ.add(XQ, PQ, gQ, KW, OW), jQ || sQ++, !jQ && this.api.isBlockInLoadedChunk(XQ, PQ, gQ) && (qQ.add(IQ), zQ.push(XQ, PQ, gQ, RW(rQ) ? 0 : 1))
         }
-        this.open = op, this.nextCell.setCells(Sp), this.tracker.update(this.layerY, this.topLayerY, xp);
-        for (let Lp = 0; Lp < cp.length; Lp += 3) {
-          const [pp, ip, op] = [cp[Lp], cp[Lp + 1], cp[Lp + 2]];
-          Ji(this.api.getBlockId(pp, ip, op)) || Op.add(pp, ip, op, pc, Vi)
+        this.open = qQ, this.nextCell.setCells(zQ), this.tracker.update(this.layerY, this.topLayerY, sQ);
+        for (let FQ = 0; FQ < XQ.length; FQ += 3) {
+          const [QQ, WQ, qQ] = [XQ[FQ], XQ[FQ + 1], XQ[FQ + 2]];
+          RW(this.api.getBlockId(QQ, WQ, qQ)) || wQ.add(QQ, WQ, qQ, KW, OW)
         }
-        this.meshes.show(Op.toArray()), this.burst(Ip), this.showNext(), this.turn.retry(performance.now())
+        this.meshes.show(wQ.toArray()), this.burst(TQ), this.showNext(), this.turn.retry(performance.now())
       }
-      burst(pp) {
-        const ip = performance.now(),
-          cp = [];
-        for (const [op, Ip, Sp] of pp) {
-          const pp = [op, Ip, Sp];
-          this.lastSeenFilled = pp, this.foreseen.delete(pp.join()) || cp.push(pp)
+      burst(QQ) {
+        const WQ = performance.now(),
+          XQ = [];
+        for (const [qQ, TQ, zQ] of QQ) {
+          const QQ = [qQ, TQ, zQ];
+          this.lastSeenFilled = QQ, this.foreseen.delete(QQ.join()) || XQ.push(QQ)
         }
-        const Op = this.isHolding(ip);
-        for (const op of cp) {
-          if (this.lastFilled = op, Op && this.pressFilled) {
-            this.turn.filled(op, ip);
+        const wQ = this.isHolding(WQ);
+        for (const qQ of XQ) {
+          if (this.lastFilled = qQ, wQ && this.pressFilled) {
+            this.turn.filled(qQ, WQ);
             continue
           }
-          const pp = this.turn.arrived(op, ip);
-          if (null !== pp) {
-            this.pressFilled = Op;
-            for (const [ip, cp] of this.foreseen) cp <= pp && this.foreseen.delete(ip)
+          const QQ = this.turn.arrived(qQ, WQ);
+          if (null !== QQ) {
+            this.pressFilled = wQ;
+            for (const [WQ, XQ] of this.foreseen) XQ <= QQ && this.foreseen.delete(WQ)
           }
         }
-        this.juice.filled(pp)
+        this.juice.filled(QQ)
       }
       showNext() {
-        var pp;
-        this.outline.show(null !== (pp = this.aimed) && void 0 !== pp ? pp : this.nextCell.SW(this.lastFilled))
+        var QQ;
+        this.outline.show(null !== (QQ = this.aimed) && void 0 !== QQ ? QQ : this.nextCell.tr(this.lastFilled))
       }
-      afterRender(pp) {
-        var ip;
-        this.turn.look(pp);
-        const cp = this.api.getTargetedBlock();
-        this.aimed = this.pressFilled && this.isHolding(performance.now()) ? null : this.findAimed(null === cp ? null : cp.position), this.outline.show(null !== (ip = this.aimed) && void 0 !== ip ? ip : this.nextCell.get())
+      afterRender(QQ) {
+        var WQ;
+        this.turn.look(QQ);
+        const XQ = this.api.getTargetedBlock();
+        this.aimed = this.pressFilled && this.isHolding(performance.now()) ? null : this.findAimed(null === XQ ? null : XQ.position), this.outline.show(null !== (WQ = this.aimed) && void 0 !== WQ ? WQ : this.nextCell.get())
       }
-      isHolding(pp) {
-        return null !== this.altMs && pp - this.altMs <= 500
+      isHolding(QQ) {
+        return null !== this.altMs && QQ - this.altMs <= 500
       }
-      attemptAltAction(pp) {
-        const ip = performance.now();
-        if (this.isHolding(ip) || (this.pressFilled = !1), this.altMs = ip, this.pressFilled) return "preventPlacement";
-        const cp = this.findAimed(pp);
-        if (null !== cp) return this.foreseen.set(cp.join(), ip), this.lastFilled = cp, this.aimed = null, this.showNext(), this.turn.filled(cp, ip), this.pressFilled = !0, "preventPlacement";
+      attemptAltAction(QQ) {
+        const WQ = performance.now();
+        if (this.isHolding(WQ) || (this.pressFilled = !1), this.altMs = WQ, this.pressFilled) return "preventPlacement";
+        const XQ = this.findAimed(QQ);
+        if (null !== XQ) return this.foreseen.set(XQ.join(), WQ), this.lastFilled = XQ, this.aimed = null, this.showNext(), this.turn.filled(XQ, WQ), this.pressFilled = !0, "preventPlacement";
         {
-          const cp = this.nextCell.get();
-          null !== cp && this.turn.tapped(pp, cp, ip)
+          const XQ = this.nextCell.get();
+          null !== XQ && this.turn.tapped(QQ, XQ, WQ)
         }
       }
       holdPressOnEntity() {
-        const pp = performance.now();
-        this.pressFilled && this.isHolding(pp) && (this.altMs = pp)
+        const QQ = performance.now();
+        this.pressFilled && this.isHolding(QQ) && (this.altMs = QQ)
       }
-      findAimed(pp) {
-        return function(pp, ip, cp, Op, op, Ip, Sp) {
-          const xp = pp.Acp(ip),
-            Lp = null === xp || null === pp.blockNameToBlockId(xp.name, !0) ? null : xp.name,
-            Yp = pp.getPositionView(ip),
+      findAimed(QQ) {
+        return function(QQ, WQ, XQ, wQ, qQ, TQ, zQ) {
+          const sQ = QQ.wXQ(WQ),
+            FQ = null === sQ || null === QQ.blockNameToBlockId(sQ.name, !0) ? null : sQ.name,
+            PQ = QQ.getPositionView(WQ),
             {
-              origin: Dp,
-              direction: Ap
-            } = pp.getActionRay(),
-            Pp = zc(Op, {
-              from: Dp,
-              dir: Ap,
-              reach: OO(pp, ip),
-              solid: cp
-            }, (ip => {
-              const cp = [Op[ip], Op[ip + 1], Op[ip + 2]];
-              return !Qi(op[Op[ip + 3]], pp.getBlockId(...cp)) && !Sp.has(cp.join()) && pp.isBlockInLoadedChunk(...cp) && !cO(cp, Yp)
-            }), (pp => null === Lp || Lp === Bi(op[Op[pp + 3]])), (pp => null !== Ip && Op[pp] === Ip[0] && Op[pp + 1] === Ip[1] && Op[pp + 2] === Ip[2]));
-          return -1 === Pp ? null : [Op[Pp], Op[Pp + 1], Op[Pp + 2]]
-        }(this.api, this.localPlayerId, pp, this.ghostCells, this.blockIds, this.nextCell.get(), this.foreseen)
+              origin: gQ,
+              direction: JQ
+            } = QQ.getActionRay(),
+            rQ = YX(wQ, {
+              from: gQ,
+              dir: JQ,
+              reach: Qw(QQ, WQ),
+              solid: XQ
+            }, (WQ => {
+              const XQ = [wQ[WQ], wQ[WQ + 1], wQ[WQ + 2]];
+              return !AW(qQ[wQ[WQ + 3]], QQ.getBlockId(...XQ)) && !zQ.has(XQ.join()) && QQ.isBlockInLoadedChunk(...XQ) && !MX(XQ, PQ)
+            }), (QQ => null === FQ || FQ === EW(qQ[wQ[QQ + 3]])), (QQ => null !== TQ && wQ[QQ] === TQ[0] && wQ[QQ + 1] === TQ[1] && wQ[QQ + 2] === TQ[2]));
+          return -1 === rQ ? null : [wQ[rQ], wQ[rQ + 1], wQ[rQ + 2]]
+        }(this.api, this.localPlayerId, QQ, this.ghostCells, this.blockIds, this.nextCell.get(), this.foreseen)
       }
       endPress() {
         this.altMs = null, this.pressFilled = !1
       }
-      filledCell(pp) {
+      filledCell(QQ) {
         const {
-          ghostCells: ip
-        } = this, [cp, Op, op] = Ni(this.palette[ip[pp + 3]]);
-        return [ip[pp], ip[pp + 1], ip[pp + 2], cp, Op, op]
+          ghostCells: WQ
+        } = this, [XQ, wQ, qQ] = CW(this.palette[WQ[QQ + 3]]);
+        return [WQ[QQ], WQ[QQ + 1], WQ[QQ + 2], XQ, wQ, qQ]
       }
     }
 
-    function LO(pp, ip) {
-      return ip % 4 !== 3
+    function Tw(QQ, WQ) {
+      return WQ % 4 !== 3
     }
-    class YO {
-      constructor(pp) {
-        this.api = pp, this.sent = !1
+    class zw {
+      constructor(QQ) {
+        this.api = QQ, this.sent = !1
       }
-      LP() {
-        this.sent || xp.c.get("loadingOverlayVisible") || (this.sent = !0, this.api.sendCommand("plotsentered"))
+      fJ() {
+        this.sent || sQ.b.get("loadingOverlayVisible") || (this.sent = !0, this.api.sendCommand("plotsentered"))
       }
     }
-    var DO = cp(4341),
-      AO = cp(39330);
+    var sw = XQ(4534),
+      Fw = XQ(39427);
 
-    function PO(pp, ip, cp) {
-      const Op = [255 * pp, 255 * ip, 255 * cp],
-        [op, Ip, Sp] = Op.map((pp => pp + .4 * (255 - pp)));
+    function Pw(QQ, WQ, XQ) {
+      const wQ = [255 * QQ, 255 * WQ, 255 * XQ],
+        [qQ, TQ, zQ] = wQ.map((QQ => QQ + .4 * (255 - QQ)));
       return {
         texture: "square_particle",
-        TA: 48,
-        minLifeTime: .3 / AO.e,
-        maxLifeTime: .55 / AO.e,
+        yJ: 48,
+        minLifeTime: .3 / Fw.b,
+        maxLifeTime: .55 / Fw.b,
         minSize: .07,
         maxSize: .14,
         minEmitPower: 1,
         maxEmitPower: 1,
         emitRate: 0,
-        gravity: [0, -14 * AO.e * AO.e, 0],
+        gravity: [0, -14 * Fw.b * Fw.b, 0],
         colorGradients: [{
           timeFraction: 0,
-          minColor: [...Op, 1],
-          maxColor: [op, Ip, Sp, 1]
+          minColor: [...wQ, 1],
+          maxColor: [qQ, TQ, zQ, 1]
         }, {
           timeFraction: 1,
-          minColor: [...Op, 0],
-          maxColor: [op, Ip, Sp, 0]
+          minColor: [...wQ, 0],
+          maxColor: [qQ, TQ, zQ, 0]
         }],
-        blendMode: DO.g.Standard
+        blendMode: sw.c.Standard
       }
     }
-    const WO = {
+    const gw = {
       texture: "glint",
       mipmaps: !1,
-      TA: 96,
-      minLifeTime: .5 / AO.e,
-      maxLifeTime: .9 / AO.e,
+      yJ: 96,
+      minLifeTime: .5 / Fw.b,
+      maxLifeTime: .9 / Fw.b,
       minSize: .15,
       maxSize: .3,
       minEmitPower: 1,
       maxEmitPower: 1,
       emitRate: 0,
-      gravity: [0, 2 * AO.e * AO.e, 0],
+      gravity: [0, 2 * Fw.b * Fw.b, 0],
       colorGradients: [{
         timeFraction: 0,
         minColor: [255, 224, 97, 1],
@@ -2612,112 +2612,112 @@ export const modules = {
         timeFraction: 1,
         minColor: [0, 0, 0, 1]
       }],
-      blendMode: DO.g.OneOne
+      blendMode: sw.c.OneOne
     };
-    class yO {
-      constructor(pp, ip) {
-        this.api = pp, this.localPlayerId = ip, this.chips = new Map, this.sparkles = null, this.points = new Float32Array(384)
+    class Jw {
+      constructor(QQ, WQ) {
+        this.api = QQ, this.localPlayerId = WQ, this.chips = new Map, this.sparkles = null, this.points = new Float32Array(384)
       }
-      filled(pp) {
+      filled(QQ) {
         if (this.api.particlesEnabled())
-          for (const [ip, cp, Op, op, Ip, Sp] of pp.slice(0, 3)) {
-            const pp = `${op},${Ip},${Sp}`;
-            let xp = this.chips.get(pp);
-            void 0 === xp && (xp = this.api.createParticles(PO(op, Ip, Sp), {
-              pos: [ip + .5, cp + .5, Op + .5]
-            }), this.chips.set(pp, xp));
-            for (let ip = 0; ip < 8; ip++) this.setPoint(ip, .9 * (Math.random() - .5), .9 * (Math.random() - .5), .9 * (Math.random() - .5), 1.5 + 1.5 * Math.random());
-            xp.emitPoints([ip + .5, cp + .5, Op + .5], this.points, 8)
+          for (const [WQ, XQ, wQ, qQ, TQ, zQ] of QQ.slice(0, 3)) {
+            const QQ = `${qQ},${TQ},${zQ}`;
+            let sQ = this.chips.get(QQ);
+            void 0 === sQ && (sQ = this.api.createParticles(Pw(qQ, TQ, zQ), {
+              pos: [WQ + .5, XQ + .5, wQ + .5]
+            }), this.chips.set(QQ, sQ));
+            for (let WQ = 0; WQ < 8; WQ++) this.setPoint(WQ, .9 * (Math.random() - .5), .9 * (Math.random() - .5), .9 * (Math.random() - .5), 1.5 + 1.5 * Math.random());
+            sQ.emitPoints([WQ + .5, XQ + .5, wQ + .5], this.points, 8)
           }
       }
-      layerDone(pp) {
+      layerDone(QQ) {
         this.api.playSound(this.localPlayerId, "magicAccent2", .7, 1.1);
-        const ip = pp.length / 3;
-        if (0 === ip || !this.api.particlesEnabled()) return;
-        const cp = Math.min(ip, 48),
-          [Op, op, Ip] = [pp[0] + .5, pp[1] + 1, pp[2] + .5];
-        let Sp = 0;
-        for (let xp = 0; xp < cp; xp++) {
-          const Lp = 3 * Math.floor(xp * ip / cp);
-          for (let ip = 0; ip < 2; ip++) this.setPoint(Sp++, pp[Lp] + Math.random() - Op, pp[Lp + 1] + 1 - op, pp[Lp + 2] + Math.random() - Ip, .6 + .8 * Math.random())
+        const WQ = QQ.length / 3;
+        if (0 === WQ || !this.api.particlesEnabled()) return;
+        const XQ = Math.min(WQ, 48),
+          [wQ, qQ, TQ] = [QQ[0] + .5, QQ[1] + 1, QQ[2] + .5];
+        let zQ = 0;
+        for (let sQ = 0; sQ < XQ; sQ++) {
+          const FQ = 3 * Math.floor(sQ * WQ / XQ);
+          for (let WQ = 0; WQ < 2; WQ++) this.setPoint(zQ++, QQ[FQ] + Math.random() - wQ, QQ[FQ + 1] + 1 - qQ, QQ[FQ + 2] + Math.random() - TQ, .6 + .8 * Math.random())
         }
-        this.sparkles ??= this.api.createParticles(WO, {
-          pos: [Op, op, Ip]
-        }), this.sparkles.emitPoints([Op, op, Ip], this.points, Sp)
+        this.sparkles ??= this.api.createParticles(gw, {
+          pos: [wQ, qQ, TQ]
+        }), this.sparkles.emitPoints([wQ, qQ, TQ], this.points, zQ)
       }
       dispose() {
-        var pp;
-        for (const ip of this.chips.values()) ip.stop();
-        this.chips.clear(), null === (pp = this.sparkles) || void 0 === pp || pp.stop(), this.sparkles = null
+        var QQ;
+        for (const WQ of this.chips.values()) WQ.stop();
+        this.chips.clear(), null === (QQ = this.sparkles) || void 0 === QQ || QQ.stop(), this.sparkles = null
       }
-      setPoint(pp, ip, cp, Op, op) {
-        const Ip = 4 * pp;
-        this.points[Ip] = ip, this.points[Ip + 1] = cp, this.points[Ip + 2] = Op, this.points[Ip + 3] = op
+      setPoint(QQ, WQ, XQ, wQ, qQ) {
+        const TQ = 4 * QQ;
+        this.points[TQ] = WQ, this.points[TQ + 1] = XQ, this.points[TQ + 2] = wQ, this.points[TQ + 3] = qQ
       }
     }
-    const UO = "SpecialAction1",
-      wO = "KeyY",
-      vO = "KeyX";
+    const rw = "SpecialAction1",
+      Iw = "KeyY",
+      jw = "KeyX";
 
-    function tO(pp) {
+    function Bw(QQ) {
       let {
-        placement: ip
-      } = pp;
-      const cp = (0, Lp.i)(Dc, ip.getView()),
+        placement: WQ
+      } = QQ;
+      const XQ = (0, FQ.j)(sX, WQ.getView()),
         {
-          t: Op
-        } = (0, Dp.H)(),
+          t: wQ
+        } = (0, gQ.C)(),
         {
-          isTouchScreen: op
-        } = (0, xp.o)(["isTouchScreen"]),
-        Sp = (0, Ip.useContext)(ep),
-        Ap = null !== cp,
-        Up = Ap && !cp.blocked && !cp.waiting;
-      if ((0, tp.b)((pp => Ap && !pp.repeat && !(0, Hp.isTypingInInput)() && !(0, Wp.l)() && !op), (pp => {
-          const cp = function(pp, ip, cp) {
-            if (pp === vO) return ip.stop;
-            if (pp === wO) return cp ? ip.build : dO;
-            return Yp.t[UO].includes(pp) ? ip.rotate : null
-          }(pp.code, ip, Up);
-          null !== cp && (pp.stopPropagation(), cp())
-        })), !Ap) return null;
-      let wp = op ? "plotsGame:placementHintTouch" : "plotsGame:placementHint";
-      return cp.blocked ? wp = "plotsGame:placementOffPlot" : cp.toClear > 0 ? wp = "plotsGame:placementClear" : "placeSpot" !== Sp.hint && "placeBuild" !== Sp.hint || (wp = null), (0, Jp.jsx)(yp.h, {
+          isTouchScreen: qQ
+        } = (0, sQ.n)(["isTouchScreen"]),
+        zQ = (0, TQ.useContext)(UQ),
+        JQ = null !== XQ,
+        BQ = JQ && !XQ.blocked && !XQ.waiting;
+      if ((0, DQ.c)((QQ => JQ && !QQ.repeat && !(0, pQ.isTypingInInput)() && !(0, IQ.r)() && !qQ), (QQ => {
+          const XQ = function(QQ, WQ, XQ) {
+            if (QQ === jw) return WQ.stop;
+            if (QQ === Iw) return XQ ? WQ.build : Vw;
+            return PQ.s[rw].includes(QQ) ? WQ.rotate : null
+          }(QQ.code, WQ, BQ);
+          null !== XQ && (QQ.stopPropagation(), XQ())
+        })), !JQ) return null;
+      let yQ = qQ ? "plotsGame:placementHintTouch" : "plotsGame:placementHint";
+      return XQ.blocked ? yQ = "plotsGame:placementOffPlot" : XQ.toClear > 0 ? yQ = "plotsGame:placementClear" : "placeSpot" !== zQ.hint && "placeBuild" !== zQ.hint || (yQ = null), (0, EQ.jsx)(jQ.g, {
         placement: "bottom",
-        children: (0, Jp.jsxs)("div", {
-          ref: Sp.placementCardRef,
+        children: (0, EQ.jsxs)("div", {
+          ref: zQ.placementCardRef,
           className: "PlotsPlacementCard",
-          children: [(0, Jp.jsx)("div", {
+          children: [(0, EQ.jsx)("div", {
             className: "PlotsPlacementCardTitle SmallTextBold",
-            children: Op(qp(cp.id).displayName.translationKey)
-          }), null !== wp && (0, Jp.jsx)("div", {
-            className: Pp()("PlotsPlacementCardHint SmallTextLight", {
-              Nudge: cp.refusals > 0
+            children: wQ(aQ(XQ.id).displayName.translationKey)
+          }), null !== yQ && (0, EQ.jsx)("div", {
+            className: rQ()("PlotsPlacementCardHint SmallTextLight", {
+              Nudge: XQ.refusals > 0
             }),
-            children: Op(wp)
-          }, cp.refusals), (0, Jp.jsxs)("div", {
+            children: wQ(yQ)
+          }, XQ.refusals), (0, EQ.jsxs)("div", {
             className: "PlotsPlacementCardButtons",
-            children: [(0, Jp.jsxs)(qc.f, {
-              onClick: ip.rotate,
-              children: [(0, Jp.jsx)(HO, {
-                noaAction: UO
-              }), Op("plotsGame:placementRotate")]
-            }), (0, Jp.jsxs)(qc.K, {
-              onClick: ip.stop,
-              children: [(0, Jp.jsx)(HO, {
-                keyCode: vO
-              }), Op("general:cancel")]
-            }), (0, Jp.jsx)("span", {
-              ref: Sp.buildRef,
-              className: Pp()("PlotsPlacementBuild", {
-                Pulse: "placeBuild" === Sp.hint && Up && op
+            children: [(0, EQ.jsxs)(dX.h, {
+              onClick: WQ.rotate,
+              children: [(0, EQ.jsx)(yw, {
+                noaAction: rw
+              }), wQ("plotsGame:placementRotate")]
+            }), (0, EQ.jsxs)(dX.P, {
+              onClick: WQ.stop,
+              children: [(0, EQ.jsx)(yw, {
+                keyCode: jw
+              }), wQ("general:cancel")]
+            }), (0, EQ.jsx)("span", {
+              ref: zQ.buildRef,
+              className: rQ()("PlotsPlacementBuild", {
+                Pulse: "placeBuild" === zQ.hint && BQ && qQ
               }),
-              children: (0, Jp.jsxs)(qc.o, {
-                disabled: !Up,
-                onClick: ip.build,
-                children: [(0, Jp.jsx)(HO, {
-                  keyCode: wO
-                }), Op("plotsGame:placementBuild")]
+              children: (0, EQ.jsxs)(dX.s, {
+                disabled: !BQ,
+                onClick: WQ.build,
+                children: [(0, EQ.jsx)(yw, {
+                  keyCode: Iw
+                }), wQ("plotsGame:placementBuild")]
               })
             })]
           })]
@@ -2725,324 +2725,324 @@ export const modules = {
       })
     }
 
-    function HO(pp) {
-      return (0, Jp.jsx)(vp.d, {
+    function yw(QQ) {
+      return (0, EQ.jsx)(VQ.b, {
         className: "PlotsPlacementKey",
-        ...pp
+        ...QQ
       })
     }
 
-    function dO() {}
-    var eO = cp(2429),
-      uO = cp(36879),
-      jO = cp(2004),
-      kO = cp(1276);
-    const mO = {
+    function Vw() {}
+    var Dw = XQ(2451),
+      pw = XQ(36987),
+      Gw = XQ(2052),
+      Uw = XQ(1296);
+    const bw = {
       own: "crown",
       shared: "user-group",
       other: "house"
     };
 
-    function RO(pp) {
+    function vw(QQ) {
       let {
-        hud: ip
-      } = pp;
-      const cp = (0, Lp.i)(ci, ip.getPlot()),
-        [Op, op] = (0, Ip.useState)(null),
-        Sp = (0, uO.m)(Op);
-      if ("none" === cp[0]) return null;
-      const [, xp, Yp, Dp, Ap, Wp] = cp;
-      return (0, Jp.jsx)("div", {
-        className: Pp()("PlotsPlotBannerContainer", {
-          Below: Sp
+        hud: WQ
+      } = QQ;
+      const XQ = (0, FQ.j)(QW, WQ.getPlot()),
+        [wQ, qQ] = (0, TQ.useState)(null),
+        zQ = (0, pw.k)(wQ);
+      if ("none" === XQ[0]) return null;
+      const [, sQ, PQ, gQ, JQ, IQ] = XQ;
+      return (0, EQ.jsx)("div", {
+        className: rQ()("PlotsPlotBannerContainer", {
+          Below: zQ
         }),
-        children: (0, Jp.jsx)(qO, {
-          plotX: xp,
-          plotZ: Yp,
-          ownerName: Dp,
-          ownerId: Ap,
-          relation: Wp,
-          plaqueRef: op
-        }, `${xp},${Yp}`)
+        children: (0, EQ.jsx)(dw, {
+          plotX: sQ,
+          plotZ: PQ,
+          ownerName: gQ,
+          ownerId: JQ,
+          relation: IQ,
+          plaqueRef: qQ
+        }, `${sQ},${PQ}`)
       })
     }
 
-    function qO(pp) {
-      var ip, cp;
+    function dw(QQ) {
+      var WQ, XQ;
       let {
-        plotX: Op,
-        plotZ: op,
-        ownerName: Ip,
-        ownerId: Sp,
-        relation: xp,
-        plaqueRef: Lp
-      } = pp;
+        plotX: wQ,
+        plotZ: qQ,
+        ownerName: TQ,
+        ownerId: zQ,
+        relation: sQ,
+        plaqueRef: FQ
+      } = QQ;
       const {
-        t: Yp
-      } = (0, Dp.H)(), Ap = (0, jO.g)("hiddenPlayerNames"), Wp = (0, jO.g)("players"), yp = null === Sp ? null : null !== (ip = null === (cp = Wp.byId[Sp]) || void 0 === cp ? void 0 : cp.cosmetics) && void 0 !== ip ? ip : null, wp = Yp("plotsGame:plotBannerCoords", {
-        x: Op,
-        z: op
-      }), vp = "own" === xp || null !== Ip;
-      return (0, Jp.jsxs)("div", {
-        ref: Lp,
-        className: Pp()("PlotsPlotBanner", {
-          Own: "own" === xp,
-          Shared: "shared" === xp
+        t: PQ
+      } = (0, gQ.C)(), JQ = (0, Gw.e)("hiddenPlayerNames"), IQ = (0, Gw.e)("players"), jQ = null === zQ ? null : null !== (WQ = null === (XQ = IQ.byId[zQ]) || void 0 === XQ ? void 0 : XQ.cosmetics) && void 0 !== WQ ? WQ : null, yQ = PQ("plotsGame:plotBannerCoords", {
+        x: wQ,
+        z: qQ
+      }), VQ = "own" === sQ || null !== TQ;
+      return (0, EQ.jsxs)("div", {
+        ref: FQ,
+        className: rQ()("PlotsPlotBanner", {
+          Own: "own" === sQ,
+          Shared: "shared" === sQ
         }),
         role: "status",
-        children: [(0, Jp.jsxs)("span", {
-          className: Pp()("PlotsPlotBannerSeal", {
-            Face: null !== yp
+        children: [(0, EQ.jsxs)("span", {
+          className: rQ()("PlotsPlotBannerSeal", {
+            Face: null !== jQ
           }),
-          children: [null !== yp && (0, Jp.jsx)(eO.c, {
-            cosmetics: yp
-          }), null === yp && (0, Jp.jsx)(Up.d, {
-            name: mO[xp]
+          children: [null !== jQ && (0, EQ.jsx)(Dw.d, {
+            cosmetics: jQ
+          }), null === jQ && (0, EQ.jsx)(BQ.d, {
+            name: bw[sQ]
           })]
-        }), (0, Jp.jsxs)("div", {
+        }), (0, EQ.jsxs)("div", {
           className: "PlotsPlotBannerText",
-          children: [(0, Jp.jsxs)("div", {
+          children: [(0, EQ.jsxs)("div", {
             className: "PlotsPlotBannerTitle SmallTextBold",
-            children: ["own" === xp && Yp("plotsGame:plotBannerYours"), "own" !== xp && null !== Ip && Yp("plotsGame:plotBannerOwner", {
-              name: (0, kO.e)(Ip, Ap)
-            }), !vp && wp]
-          }), vp && (0, Jp.jsxs)("div", {
+            children: ["own" === sQ && PQ("plotsGame:plotBannerYours"), "own" !== sQ && null !== TQ && PQ("plotsGame:plotBannerOwner", {
+              name: (0, Uw.f)(TQ, JQ)
+            }), !VQ && yQ]
+          }), VQ && (0, EQ.jsxs)("div", {
             className: "PlotsPlotBannerCoords SmallTextLight",
-            children: [wp, "shared" === xp && (0, Jp.jsx)("span", {
+            children: [yQ, "shared" === sQ && (0, EQ.jsx)("span", {
               className: "PlotsPlotBannerBadge",
-              children: Yp("plotsGame:plotBannerShared")
+              children: PQ("plotsGame:plotBannerShared")
             })]
           })]
         })]
       })
     }
-    const MO = function(pp, ip, cp, Op) {
+    const Hw = function(QQ, WQ, XQ, wQ) {
       let {
-        localPlayerId: op
-      } = Op;
-      const xp = new Ii;
-      let Lp = null,
-        Yp = null,
-        Dp = null,
-        Ap = null,
-        Pp = null,
-        Wp = null;
-      const yp = [];
+        localPlayerId: qQ
+      } = wQ;
+      const sQ = new wW;
+      let FQ = null,
+        PQ = null,
+        gQ = null,
+        JQ = null,
+        rQ = null,
+        IQ = null;
+      const jQ = [];
       return {
-        onCreate: pp => {
-          Lp = new yO(pp, op);
-          const ip = new ii;
-          Yp = new xO(pp, op, Lp, ip), Dp = new Pc(pp, op), Ap = new Qp(pp, Dp), Pp = new Rc(pp, op, Yp.nextCell), Wp = new YO(pp), yp.push((0, Sp.A)((0, Ip.createElement)(jc, {
-            hud: xp,
-            guide: Pp,
-            tracker: ip,
-            placement: Dp
-          }, (0, Ip.createElement)(RO, {
-            hud: xp
-          }), (0, Ip.createElement)(Np, {
-            journal: Ap
-          }), (0, Ip.createElement)(tc, {
-            placement: Dp
-          }), (0, Ip.createElement)(tO, {
-            placement: Dp
+        onCreate: QQ => {
+          FQ = new Jw(QQ, qQ);
+          const WQ = new MQ;
+          PQ = new qw(QQ, qQ, FQ, WQ), gQ = new PX(QQ, qQ), JQ = new RQ(QQ, gQ), rQ = new vX(QQ, qQ, PQ.nextCell), IQ = new zw(QQ), jQ.push((0, zQ.A)((0, TQ.createElement)(GX, {
+            hud: sQ,
+            guide: rQ,
+            tracker: WQ,
+            placement: gQ
+          }, (0, TQ.createElement)(vw, {
+            hud: sQ
+          }), (0, TQ.createElement)(uQ, {
+            journal: JQ
+          }), (0, TQ.createElement)(BX, {
+            placement: gQ
+          }), (0, TQ.createElement)(Bw, {
+            placement: gQ
           })), {
-            content: (0, Ip.createElement)(Zc, {
-              journal: Ap,
-              hud: xp,
-              guide: Pp
+            content: (0, TQ.createElement)(xX, {
+              journal: JQ,
+              hud: sQ,
+              guide: rQ
             })
           }))
         },
-        LP: () => {
-          Wp.LP(), Yp.LP(), Dp.LP(), Ap.LP()
+        fJ: () => {
+          IQ.fJ(), PQ.fJ(), gQ.fJ(), JQ.fJ()
         },
-        onPlayerAttemptAltAction: (pp, ip, cp, Op, op, Ip) => {
-          if (null !== Ip) return void Yp.holdPressOnEntity();
-          const Sp = void 0 === ip ? null : [ip, cp, Op];
-          return Yp.attemptAltAction(Sp)
+        onPlayerAttemptAltAction: (QQ, WQ, XQ, wQ, qQ, TQ) => {
+          if (null !== TQ) return void PQ.holdPressOnEntity();
+          const zQ = void 0 === WQ ? null : [WQ, XQ, wQ];
+          return PQ.attemptAltAction(zQ)
         },
         onPlayerClickUp: () => {
-          Yp.endPress()
+          PQ.endPress()
         },
-        onAfterRender: (pp, ip) => {
-          Dp.afterRender(ip), Yp.afterRender(ip), Pp.afterRender(ip)
+        onAfterRender: (QQ, WQ) => {
+          gQ.afterRender(WQ), PQ.afterRender(WQ), rQ.afterRender(WQ)
         },
         onClose: () => {
-          for (const pp of yp) pp();
-          Lp.dispose(), Yp.dispose(), Dp.dispose(), Lp = null, Yp = null, Dp = null, Ap = null, Pp = null, Wp = null
+          for (const QQ of jQ) QQ();
+          FQ.dispose(), PQ.dispose(), gQ.dispose(), FQ = null, PQ = null, gQ = null, JQ = null, rQ = null, IQ = null
         },
-        onReceivedMessageFromServer: (pp, ip) => {
-          if ("plotsPlot" === pp) xp.receivePlot(ip);
-          else if ("plotsBlueprint" === pp) {
-            const pp = ip;
-            Yp.Ey(pp), Dp.Ey(pp)
-          } else "plotsJournal" === pp ? Ap.Ey(ip) : "plotsJournalOpen" === pp ? Ap.openFromServer(ip) : "plotsPreviewEnd" === pp ? Dp.endFromServer() : "plotsGuide" === pp ? xp.receiveGuide(ip) : "plotsGuideDone" === pp && xp.receiveGuideDone()
+        onReceivedMessageFromServer: (QQ, WQ) => {
+          if ("plotsPlot" === QQ) sQ.receivePlot(WQ);
+          else if ("plotsBlueprint" === QQ) {
+            const QQ = WQ;
+            PQ.gj(QQ), gQ.gj(QQ)
+          } else "plotsJournal" === QQ ? JQ.gj(WQ) : "plotsJournalOpen" === QQ ? JQ.openFromServer(WQ) : "plotsPreviewEnd" === QQ ? gQ.endFromServer() : "plotsGuide" === QQ ? sQ.receiveGuide(WQ) : "plotsGuideDone" === QQ && sQ.receiveGuideDone()
         }
       }
     }
   },
-  38719: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => xp
+  38782: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      b: () => sQ
     });
-    var Op = cp(38712);
-    const op = 5,
-      Ip = [0, 0, 0],
-      Sp = {
+    var wQ = XQ(38777);
+    const qQ = 5,
+      TQ = [0, 0, 0],
+      zQ = {
         x: 0,
         y: 0,
         distSq: 0
       };
 
-    function xp(pp, ip, cp, xp, Lp, Yp) {
-      let [Dp, Ap, Pp] = xp;
-      const Wp = (Dp + .5 - cp[0]) ** 2 + (Ap - cp[1]) ** 2 + (Pp + .5 - cp[2]) ** 2;
-      let yp = null;
-      Wp <= Yp ** 2 && (Ip[0] = Dp + .5, Ip[1] = Ap + Lp, Ip[2] = Pp + .5, yp = ip.projectWorldPosToViewport(Ip));
-      const Up = null !== yp && yp.x > -op && yp.x < 100 + op && yp.y > -op && yp.y < 100 + op;
-      return (0, Op.d)(pp, !Up), Up ? (Sp.x = yp.x, Sp.y = yp.y, Sp.distSq = Wp, Sp) : null
+    function sQ(QQ, WQ, XQ, sQ, FQ, PQ) {
+      let [gQ, JQ, rQ] = sQ;
+      const IQ = (gQ + .5 - XQ[0]) ** 2 + (JQ - XQ[1]) ** 2 + (rQ + .5 - XQ[2]) ** 2;
+      let jQ = null;
+      IQ <= PQ ** 2 && (TQ[0] = gQ + .5, TQ[1] = JQ + FQ, TQ[2] = rQ + .5, jQ = WQ.projectWorldPosToViewport(TQ));
+      const BQ = null !== jQ && jQ.x > -qQ && jQ.x < 100 + qQ && jQ.y > -qQ && jQ.y < 100 + qQ;
+      return (0, wQ.h)(QQ, !BQ), BQ ? (zQ.x = jQ.x, zQ.y = jQ.y, zQ.distSq = IQ, zQ) : null
     }
   },
-  39330: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Op,
-      i: () => Ip
+  39427: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      b: () => wQ,
+      e: () => TQ
     });
-    const Op = 1 / .6,
-      op = {
+    const wQ = 1 / .6,
+      qQ = {
         kind: "smokePuff"
       };
-    class Ip {
-      constructor(pp, ip, cp) {
-        this.style = pp, this.TA = ip, this.half = cp, this.particles = null, this.lastFrame = -1
+    class TQ {
+      constructor(QQ, WQ, XQ) {
+        this.style = QQ, this.yJ = WQ, this.half = XQ, this.particles = null, this.lastFrame = -1
       }
-      emit(pp, ip, cp) {
-        let Ip = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
-        return cp !== this.lastFrame && (this.lastFrame = cp, this.particles || (this.particles = pp.createParticles(function(pp, ip) {
+      emit(QQ, WQ, XQ) {
+        let TQ = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
+        return XQ !== this.lastFrame && (this.lastFrame = XQ, this.particles || (this.particles = QQ.createParticles(function(QQ, WQ) {
           const [
-            [cp, Ip, Sp],
-            [xp, Lp, Yp]
-          ] = pp.colours;
+            [XQ, TQ, zQ],
+            [sQ, FQ, PQ]
+          ] = QQ.colours;
           return {
-            texture: pp.soft ? op : "square_particle",
-            TA: ip,
-            minLifeTime: pp.life[0] / Op,
-            maxLifeTime: pp.life[1] / Op,
-            minEmitPower: pp.power[0] * Op,
-            maxEmitPower: pp.power[1] * Op,
-            minSize: pp.size[0],
-            maxSize: pp.size[1],
+            texture: QQ.soft ? qQ : "square_particle",
+            yJ: WQ,
+            minLifeTime: QQ.life[0] / wQ,
+            maxLifeTime: QQ.life[1] / wQ,
+            minEmitPower: QQ.power[0] * wQ,
+            maxEmitPower: QQ.power[1] * wQ,
+            minSize: QQ.size[0],
+            maxSize: QQ.size[1],
             emitRate: 0,
-            gravity: [0, pp.lift * Op * Op, 0],
-            dir1: [-pp.spread, 1, -pp.spread],
-            dir2: [pp.spread, 1, pp.spread],
+            gravity: [0, QQ.lift * wQ * wQ, 0],
+            dir1: [-QQ.spread, 1, -QQ.spread],
+            dir2: [QQ.spread, 1, QQ.spread],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [cp, Ip, Sp, pp.alpha],
-              maxColor: [xp, Lp, Yp, pp.alpha]
+              minColor: [XQ, TQ, zQ, QQ.alpha],
+              maxColor: [sQ, FQ, PQ, QQ.alpha]
             }, {
               timeFraction: 1,
-              minColor: [cp, Ip, Sp, 0],
-              maxColor: [xp, Lp, Yp, 0]
+              minColor: [XQ, TQ, zQ, 0],
+              maxColor: [sQ, FQ, PQ, 0]
             }],
-            blendMode: pp.blendMode
+            blendMode: QQ.blendMode
           }
-        }(this.style, this.TA), {
-          pos: ip,
+        }(this.style, this.yJ), {
+          pos: WQ,
           half: this.half
-        })), this.particles.moveTo(ip, this.half), this.particles.emit(Ip), !0)
+        })), this.particles.moveTo(WQ, this.half), this.particles.emit(TQ), !0)
       }
       dispose() {
-        var pp;
-        null === (pp = this.particles) || void 0 === pp || pp.stop(), this.particles = null
+        var QQ;
+        null === (QQ = this.particles) || void 0 === QQ || QQ.stop(), this.particles = null
       }
     }
   },
-  38712: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Sp,
-      d: () => Ip
+  38777: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      d: () => zQ,
+      h: () => TQ
     });
-    const Op = new WeakMap;
+    const wQ = new WeakMap;
 
-    function op(pp) {
-      let ip = Op.get(pp);
-      return ip || (ip = {
-        hidden: pp.hidden,
+    function qQ(QQ) {
+      let WQ = wQ.get(QQ);
+      return WQ || (WQ = {
+        hidden: QQ.hidden,
         x: NaN,
         y: NaN
-      }, Op.set(pp, ip)), ip
+      }, wQ.set(QQ, WQ)), WQ
     }
 
-    function Ip(pp, ip) {
-      const cp = op(pp);
-      cp.hidden !== ip && (cp.hidden = ip, pp.hidden = ip)
+    function TQ(QQ, WQ) {
+      const XQ = qQ(QQ);
+      XQ.hidden !== WQ && (XQ.hidden = WQ, QQ.hidden = WQ)
     }
 
-    function Sp(pp, ip, cp) {
-      const Op = op(pp);
-      Op.x === ip && Op.y === cp || (Op.x = ip, Op.y = cp, pp.style.translate = `${ip}vw ${cp}vh`)
+    function zQ(QQ, WQ, XQ) {
+      const wQ = qQ(QQ);
+      wQ.x === WQ && wQ.y === XQ || (wQ.x = WQ, wQ.y = XQ, QQ.style.translate = `${WQ}vw ${XQ}vh`)
     }
   },
-  37099: (pp, ip, cp) => {
-    function Op(pp, ip) {
-      return null === pp || null === ip ? pp === ip : pp[0] === ip[0] && pp[1] === ip[1] && pp[2] === ip[2]
+  37183: (QQ, WQ, XQ) => {
+    function wQ(QQ, WQ) {
+      return null === QQ || null === WQ ? QQ === WQ : QQ[0] === WQ[0] && QQ[1] === WQ[1] && QQ[2] === WQ[2]
     }
 
-    function op(pp) {
-      return [pp[0] + .5, pp[1] + .5, pp[2] + .5]
+    function qQ(QQ) {
+      return [QQ[0] + .5, QQ[1] + .5, QQ[2] + .5]
     }
-    cp.d(ip, {
-      e: () => op,
-      i: () => Op
+    XQ.d(WQ, {
+      c: () => qQ,
+      e: () => wQ
     })
   },
-  37146: (pp, ip, cp) => {
-    function Op(pp) {
-      return pp.includes("Leaf Bed")
+  37217: (QQ, WQ, XQ) => {
+    function wQ(QQ) {
+      return QQ.includes("Leaf Bed")
     }
 
-    function op(pp) {
-      return / Bed(?: Head)?(?:\||$)/.test(pp) && !Op(pp)
+    function qQ(QQ) {
+      return / Bed(?: Head)?(?:\||$)/.test(QQ) && !wQ(QQ)
     }
 
-    function Ip(pp) {
-      return pp.includes(" Strongbed")
+    function TQ(QQ) {
+      return QQ.includes(" Strongbed")
     }
 
-    function Sp(pp) {
-      return Op(pp) || op(pp) || Ip(pp)
+    function zQ(QQ) {
+      return wQ(QQ) || qQ(QQ) || TQ(QQ)
     }
-    cp.d(ip, {
-      b: () => Sp,
-      f: () => Op,
-      g: () => Ip,
-      h: () => op
+    XQ.d(WQ, {
+      e: () => zQ,
+      f: () => wQ,
+      h: () => TQ,
+      l: () => qQ
     })
   },
-  37142: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Yp
+  37212: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      e: () => PQ
     });
-    var Op = cp(37146),
-      op = cp(9338);
-    const Ip = [],
-      Sp = [],
-      xp = [],
-      Lp = [];
-    for (const Dp of Object.keys(op.h))(0, Op.f)(Dp) ? Ip.push(Dp) : (0, Op.h)(Dp) && Sp.push(Dp), (0, Op.g)(Dp) && xp.push(Dp), (Dp.includes(" Bed Head") || Dp.includes(" Strongbed Head")) && Lp.push(Dp);
-    const Yp = {
-      leafBeds: Ip,
-      woolBeds: Sp,
-      strongBeds: xp,
-      beds: [...Ip, ...Sp, ...xp],
-      bedHeads: Lp,
+    var wQ = XQ(37217),
+      qQ = XQ(9580);
+    const TQ = [],
+      zQ = [],
+      sQ = [],
+      FQ = [];
+    for (const gQ of Object.keys(qQ.o))(0, wQ.f)(gQ) ? TQ.push(gQ) : (0, wQ.l)(gQ) && zQ.push(gQ), (0, wQ.h)(gQ) && sQ.push(gQ), (gQ.includes(" Bed Head") || gQ.includes(" Strongbed Head")) && FQ.push(gQ);
+    const PQ = {
+      leafBeds: TQ,
+      woolBeds: zQ,
+      strongBeds: sQ,
+      beds: [...TQ, ...zQ, ...sQ],
+      bedHeads: FQ,
       blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
     }
   },
-  38756: pp => {
-    pp.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAYUlEQVR4nGNgIBP8R8NYwX+GDVNRMQOm4v8MC9qxYwZUxf//b+T4//8A+///51khGMTeyIGp8Nz0gv8MDoFgGsbeUB2BXeHESHcUjFNhR4Dj/zp3OzAGsbEphHgIOyYNAACzzGY5JF2GbAAAAABJRU5ErkJggg=="
+  38821: QQ => {
+    QQ.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAYUlEQVR4nGNgIBP8R8NYwX+GDVNRMQOm4v8MC9qxYwZUxf//b+T4//8A+///51khGMTeyIGp8Nz0gv8MDoFgGsbeUB2BXeHESHcUjFNhR4Dj/zp3OzAGsbEphHgIOyYNAACzzGY5JF2GbAAAAABJRU5ErkJggg=="
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

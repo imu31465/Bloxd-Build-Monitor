@@ -1,17 +1,17 @@
-export const id = 51;
-export const ids = [51];
+export const id = 53;
+export const ids = [53];
 export const modules = {
-  51210: (pp, ip, cp) => {
-    cp.d(ip, {
-      startRenderProbe: () => Ap
+  51238: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      startRenderProbe: () => JQ
     });
-    var Op = cp(643),
-      op = cp(4483),
-      Ip = cp(2908),
-      Sp = cp(4596);
-    const xp = 1e3,
-      Lp = 36e5,
-      Yp = [{
+    var wQ = XQ(670),
+      qQ = XQ(4699),
+      TQ = XQ(3045),
+      zQ = XQ(4821);
+    const sQ = 1e3,
+      FQ = 36e5,
+      PQ = [{
         field: "decodeProbe",
         name: "decode probe"
       }, {
@@ -19,32 +19,32 @@ export const modules = {
         name: "particle probe"
       }];
 
-    function Dp(pp, ip, cp) {
-      var op, Ip;
-      return `${pp}; ${cp?`os ${cp.os}, gpu ${null!==(op=cp.gpuFamily)&&void 0!==op?op:"unknown"} ${null!==(Ip=cp.gpuModel)&&void 0!==Ip?Ip:"unknown"}`:"device unknown"}, version ${Op.c}; ${ip}`
+    function gQ(QQ, WQ, XQ) {
+      var qQ, TQ;
+      return `${QQ}; ${XQ?`os ${XQ.os}, gpu ${null!==(qQ=XQ.gpuFamily)&&void 0!==qQ?qQ:"unknown"} ${null!==(TQ=XQ.gpuModel)&&void 0!==TQ?TQ:"unknown"}`:"device unknown"}, version ${wQ.c}; ${WQ}`
     }
 
-    function Ap(pp) {
-      var ip;
-      const cp = null !== (ip = null === pp || void 0 === pp ? void 0 : pp.backend) && void 0 !== ip ? ip : "none";
-      if ("webgl" !== cp) {
-        const pp = (0, Sp.f)();
+    function JQ(QQ) {
+      var WQ;
+      const XQ = null !== (WQ = null === QQ || void 0 === QQ ? void 0 : QQ.backend) && void 0 !== WQ ? WQ : "none";
+      if ("webgl" !== XQ) {
+        const QQ = (0, zQ.f)();
         for (const {
-            field: ip
+            field: WQ
           }
-          of Yp) delete pp[ip];
-        return void(0, Ip.n)("renderprobe", `decode and particle probes not run: the renderer is ${cp}, and they read WebGL2's draws`)
+          of PQ) delete QQ[WQ];
+        return void(0, TQ.j)("renderprobe", `decode and particle probes not run: the renderer is ${XQ}, and they read WebGL2's draws`)
       }
-      const Op = (0, Sp.f)();
+      const wQ = (0, zQ.f)();
       for (const {
-          field: Ap,
-          name: Pp
+          field: JQ,
+          name: rQ
         }
-        of Yp)(0, Sp.i)(Op, Ap, ["1", "pending"], Lp, xp).then((pp => {
-        void 0 !== pp && (0, Ip.n)("renderprobe", Dp(Pp, pp, (0, op.d)(!1)))
+        of PQ)(0, zQ.h)(wQ, JQ, ["1", "pending"], FQ, sQ).then((QQ => {
+        void 0 !== QQ && (0, TQ.j)("renderprobe", gQ(rQ, QQ, (0, qQ.d)(!1)))
       }))
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

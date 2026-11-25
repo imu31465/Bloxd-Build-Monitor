@@ -1,35 +1,35 @@
 export const id = 12;
-export const ids = [12];
+export const ids = [12, 13];
 export const modules = {
-  38724: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Sp
+  38785: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      e: () => zQ
     });
-    var Op = cp(38726);
-    const op = [0, 0, 0];
-    class Ip {
-      constructor(pp) {
-        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : op;
-        this.pool = pp, this.origin = ip, this.count = 0, this.free = []
+    var wQ = XQ(38792);
+    const qQ = [0, 0, 0];
+    class TQ {
+      constructor(QQ) {
+        let WQ = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : qQ;
+        this.pool = QQ, this.origin = WQ, this.count = 0, this.free = []
       }
       take() {
-        var pp;
-        const ip = null !== (pp = this.free.pop()) && void 0 !== pp ? pp : this.count++;
-        return ip >= this.pool.TA && this.pool.grow(Math.max(2 * this.pool.TA, ip + 1)), this.hide(ip), ip
+        var QQ;
+        const WQ = null !== (QQ = this.free.pop()) && void 0 !== QQ ? QQ : this.count++;
+        return WQ >= this.pool.yJ && this.pool.grow(Math.max(2 * this.pool.yJ, WQ + 1)), this.hide(WQ), WQ
       }
-      release(pp) {
-        this.hide(pp), this.free.push(pp)
+      release(QQ) {
+        this.hide(QQ), this.free.push(QQ)
       }
-      write(pp, ip, cp, op) {
+      write(QQ, WQ, XQ, qQ) {
         const {
-          records: Ip
+          records: TQ
         } = this.pool, {
-          origin: Sp
-        } = this, xp = pp * Op.e;
-        Ip[xp] = ip - Sp[0], Ip[xp + 1] = cp - Sp[1], Ip[xp + 2] = op - Sp[2], Ip[xp + Op.h] = 0, this.pool.markDirty(pp)
+          origin: zQ
+        } = this, sQ = QQ * wQ.b;
+        TQ[sQ] = WQ - zQ[0], TQ[sQ + 1] = XQ - zQ[1], TQ[sQ + 2] = qQ - zQ[2], TQ[sQ + wQ.c] = 0, this.pool.markDirty(QQ)
       }
-      hide(pp) {
-        this.pool.records[pp * Op.e + Op.h] = 1, this.pool.markDirty(pp)
+      hide(QQ) {
+        this.pool.records[QQ * wQ.b + wQ.c] = 1, this.pool.markDirty(QQ)
       }
       commit() {
         this.pool.commit(this.count)
@@ -38,159 +38,179 @@ export const modules = {
         this.pool.dispose()
       }
     }
-    class Sp {
-      constructor(pp, ip, cp) {
-        this.api = pp, this.model = ip, this.initialCapacity = cp, this.kinds = new Map, this.origin = [0, 0, 0]
+    class zQ {
+      constructor(QQ, WQ, XQ) {
+        this.api = QQ, this.model = WQ, this.initialCapacity = XQ, this.kinds = new Map, this.origin = [0, 0, 0]
       }
-      kindOf(pp) {
-        let ip = this.kinds.get(pp);
-        if (void 0 === ip) {
-          const cp = this.api.createInstancePool({
+      kindOf(QQ) {
+        let WQ = this.kinds.get(QQ);
+        if (void 0 === WQ) {
+          const XQ = this.api.createInstancePool({
             ...this.model,
-            item: pp
+            item: QQ
           }, this.initialCapacity);
-          null === cp || void 0 === cp || cp.setOrigin(this.origin[0], this.origin[1], this.origin[2]), ip = cp && new Ip(cp, this.origin), this.kinds.set(pp, ip)
+          null === XQ || void 0 === XQ || XQ.setOrigin(this.origin[0], this.origin[1], this.origin[2]), WQ = XQ && new TQ(XQ, this.origin), this.kinds.set(QQ, WQ)
         }
-        return ip
+        return WQ
       }
-      follow(pp) {
+      follow(QQ) {
         const {
-          origin: ip
+          origin: WQ
         } = this;
-        if (Math.abs(pp[0] - ip[0]) <= 512 && Math.abs(pp[1] - ip[1]) <= 512 && Math.abs(pp[2] - ip[2]) <= 512) return !1;
-        ip[0] = Math.floor(pp[0]), ip[1] = Math.floor(pp[1]), ip[2] = Math.floor(pp[2]);
-        for (const cp of this.kinds.values()) null === cp || void 0 === cp || cp.pool.setOrigin(ip[0], ip[1], ip[2]);
+        if (Math.abs(QQ[0] - WQ[0]) <= 512 && Math.abs(QQ[1] - WQ[1]) <= 512 && Math.abs(QQ[2] - WQ[2]) <= 512) return !1;
+        WQ[0] = Math.floor(QQ[0]), WQ[1] = Math.floor(QQ[1]), WQ[2] = Math.floor(QQ[2]);
+        for (const XQ of this.kinds.values()) null === XQ || void 0 === XQ || XQ.pool.setOrigin(WQ[0], WQ[1], WQ[2]);
         return !0
       }
       commit() {
-        for (const pp of this.kinds.values()) null === pp || void 0 === pp || pp.commit()
+        for (const QQ of this.kinds.values()) null === QQ || void 0 === QQ || QQ.commit()
       }
       dispose() {
-        for (const pp of this.kinds.values()) null === pp || void 0 === pp || pp.dispose();
+        for (const QQ of this.kinds.values()) null === QQ || void 0 === QQ || QQ.dispose();
         this.kinds.clear()
       }
     }
   },
-  39464: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      default: () => Ap
+  39571: (QQ, WQ, XQ) => {
+    XQ.r(WQ), XQ.d(WQ, {
+      default: () => rQ
     });
-    const Op = "Pipe",
-      op = "Extractor Pipe",
-      Ip = (new Set([Op, op]), new Set([Op, op, "Splitter Pipe", "Filter Pipe", "Merger Pipe", "Wire"]));
-    var Sp = cp(38724);
-    class xp {
-      constructor(pp) {
-        this.api = pp, this.items = new Map, this.unshown = new Set, this.kinds = void 0, this.kinds = new Sp.b(pp, {
+    const wQ = "Pipe",
+      qQ = "Extractor Pipe",
+      TQ = (new Set([wQ, qQ]), new Set([wQ, qQ, "Splitter Pipe", "Filter Pipe", "Merger Pipe", "Wire"]));
+    var zQ = XQ(38785);
+    class sQ {
+      constructor(QQ) {
+        this.api = QQ, this.items = new Map, this.unshown = new Set, this.kinds = void 0, this.kinds = new zQ.e(QQ, {
           scale: .3,
           yaw: 0
         }, 16)
       }
-      onSpawn(pp) {
-        if (pp.waypoints.length < 2) return void console.warn(`[PipeItemVisualizer] Ignoring pipe item ${pp.id} with < 2 waypoints`);
-        const ip = this.kinds.kindOf(pp.itemName);
-        if (!ip) return void(this.unshown.has(pp.itemName) || (this.unshown.add(pp.itemName), console.warn(`[PipeItemVisualizer] No model for pipe item "${pp.itemName}"`)));
-        this.remove(pp.id);
-        const cp = function(pp) {
-          return (pp.waypoints.length - 1) / 2 * 1e3
-        }(pp);
-        if (Date.now() - pp.startTimeMs > cp + 2e3) return;
-        const Op = ip.take();
-        this.items.set(pp.id, {
-          kind: ip,
-          slot: Op,
-          waypoints: pp.waypoints,
-          startTimeMs: pp.startTimeMs,
-          durationMs: cp
+      onSpawn(QQ) {
+        if (QQ.waypoints.length < 2) return void console.warn(`[PipeItemVisualizer] Ignoring pipe item ${QQ.id} with < 2 waypoints`);
+        const WQ = this.kinds.kindOf(QQ.itemName);
+        if (!WQ) return void(this.unshown.has(QQ.itemName) || (this.unshown.add(QQ.itemName), console.warn(`[PipeItemVisualizer] No model for pipe item "${QQ.itemName}"`)));
+        this.remove(QQ.id);
+        const XQ = function(QQ) {
+          return (QQ.waypoints.length - 1) / 2 * 1e3
+        }(QQ);
+        if (Date.now() - QQ.startTimeMs > XQ + 2e3) return;
+        const wQ = WQ.take();
+        this.items.set(QQ.id, {
+          kind: WQ,
+          slot: wQ,
+          waypoints: QQ.waypoints,
+          startTimeMs: QQ.startTimeMs,
+          durationMs: XQ
         })
       }
-      onEnd(pp) {
-        this.remove(pp.id)
+      onEnd(QQ) {
+        this.remove(QQ.id)
       }
-      gH() {
+      tV() {
         if (0 === this.items.size) return void this.kinds.commit();
-        const pp = Date.now();
+        const QQ = Date.now();
         this.kinds.follow(this.api.getCameraPosition());
-        for (const [ip, cp] of this.items) pp - cp.startTimeMs > cp.durationMs + 2e3 ? this.remove(ip) : this.write(cp, pp);
+        for (const [WQ, XQ] of this.items) QQ - XQ.startTimeMs > XQ.durationMs + 2e3 ? this.remove(WQ) : this.write(XQ, QQ);
         this.kinds.commit()
       }
       dispose() {
         this.kinds.dispose(), this.items.clear()
       }
-      remove(pp) {
-        const ip = this.items.get(pp);
-        ip && (ip.kind.release(ip.slot), this.items.delete(pp))
+      remove(QQ) {
+        const WQ = this.items.get(QQ);
+        WQ && (WQ.kind.release(WQ.slot), this.items.delete(QQ))
       }
-      write(pp, ip) {
-        const cp = pp.waypoints.length - 1;
-        let Op = (ip - pp.startTimeMs) / pp.durationMs;
-        Op < 0 ? Op = 0 : Op > 1 && (Op = 1);
-        const op = Op * cp;
-        let Ip = Math.floor(op);
-        Ip >= cp && (Ip = cp - 1);
-        const Sp = op - Ip,
-          [xp, Lp, Yp] = pp.waypoints[Ip],
-          [Dp, Ap, Pp] = pp.waypoints[Ip + 1];
-        pp.kind.write(pp.slot, xp + (Dp - xp) * Sp + .5, Lp + (Ap - Lp) * Sp + .5, Yp + (Pp - Yp) * Sp + .5)
+      write(QQ, WQ) {
+        const XQ = QQ.waypoints.length - 1;
+        let wQ = (WQ - QQ.startTimeMs) / QQ.durationMs;
+        wQ < 0 ? wQ = 0 : wQ > 1 && (wQ = 1);
+        const qQ = wQ * XQ;
+        let TQ = Math.floor(qQ);
+        TQ >= XQ && (TQ = XQ - 1);
+        const zQ = qQ - TQ,
+          [sQ, FQ, PQ] = QQ.waypoints[TQ],
+          [gQ, JQ, rQ] = QQ.waypoints[TQ + 1];
+        QQ.kind.write(QQ.slot, sQ + (gQ - sQ) * zQ + .5, FQ + (JQ - FQ) * zQ + .5, PQ + (rQ - PQ) * zQ + .5)
       }
     }
-    const Lp = ["Auto Crafter", "Lunite Auto Crafter", "Auto Harvester", "Lunite Auto Harvester", "Filter Pipe", "Merger Pipe", "Auto Miner", "_Auto Miner Body", "_Auto Miner Drill Front", "_Auto Miner Drill Back", "_Auto Miner Foot Front", "Lunite Auto Miner", "_Lunite Auto Miner Body", "_Lunite Auto Miner Drill Front", "_Lunite Auto Miner Drill Back", "_Lunite Auto Miner Foot Front"],
-      Yp = new Set(Lp);
-    class Dp {
+    const FQ = ["Auto Crafter", "Lunite Auto Crafter", "Auto Harvester", "Lunite Auto Harvester", "Filter Pipe", "Merger Pipe", "Auto Miner", "_Auto Miner Body", "_Auto Miner Drill Front", "_Auto Miner Drill Back", "_Auto Miner Foot Front", "Lunite Auto Miner", "_Lunite Auto Miner Body", "_Lunite Auto Miner Drill Front", "_Lunite Auto Miner Drill Back", "_Lunite Auto Miner Foot Front"],
+      PQ = new Set(FQ);
+    class gQ {
       constructor() {
         this.pipeVisualizer = null, this.api = void 0
       }
-      onCreate(pp) {
-        this.api = pp, this.pipeVisualizer = new xp(pp)
+      onCreate(QQ) {
+        this.api = QQ, this.pipeVisualizer = new sQ(QQ)
       }
       onClose() {
-        var pp;
-        null === (pp = this.pipeVisualizer) || void 0 === pp || pp.dispose(), this.pipeVisualizer = null
+        var QQ;
+        null === (QQ = this.pipeVisualizer) || void 0 === QQ || QQ.dispose(), this.pipeVisualizer = null
       }
-      onReceivedMessageFromServer(pp, ip) {
+      onReceivedMessageFromServer(QQ, WQ) {
         const {
-          pipeVisualizer: cp
+          pipeVisualizer: XQ
         } = this;
-        if (cp)
-          if ("pipeItemSpawnBatch" === pp)
-            for (const Op of ip.items) cp.onSpawn(Op);
-          else if ("pipeItemEndBatch" === pp)
-          for (const Op of ip.items) cp.onEnd(Op)
+        if (XQ)
+          if ("pipeItemSpawnBatch" === QQ)
+            for (const wQ of WQ.items) XQ.onSpawn(wQ);
+          else if ("pipeItemEndBatch" === QQ)
+          for (const wQ of WQ.items) XQ.onEnd(wQ)
       }
-      gH() {
-        var pp;
-        null === (pp = this.pipeVisualizer) || void 0 === pp || pp.gH()
+      tV() {
+        var QQ;
+        null === (QQ = this.pipeVisualizer) || void 0 === QQ || QQ.tV()
       }
-      onPlayerAttemptAltAction(pp, ip, cp, Op, op, Sp) {
-        var xp;
-        if (!Yp.has(this.api.getMetaInfo(op).rootName)) return;
-        const Lp = null === (xp = this.api.Acp(pp)) || void 0 === xp ? void 0 : xp.name;
-        return void 0 !== Lp && Ip.has(Lp) ? "preventAction" : void 0
+      onPlayerAttemptAltAction(QQ, WQ, XQ, wQ, qQ, zQ) {
+        var sQ;
+        if (!PQ.has(this.api.getMetaInfo(qQ).rootName)) return;
+        const FQ = null === (sQ = this.api.wXQ(QQ)) || void 0 === sQ ? void 0 : sQ.name;
+        return void 0 !== FQ && TQ.has(FQ) ? "preventAction" : void 0
       }
     }
-    const Ap = function(pp, ip, cp) {
-      if ("survivalFactory" !== cp && "survivalFactoryPersistent" !== cp) {
+    var JQ = XQ(39578);
+    const rQ = function(QQ, WQ, XQ) {
+      if ("smp2" === XQ) return (0, JQ.makeSmp2ClientGame)();
+      if ("survivalFactory" !== XQ && "survivalFactoryPersistent" !== XQ) {
         return {}
       }
-      const Op = new Dp;
+      const wQ = new gQ;
       return {
-        onCreate: pp => {
-          Op.onCreate(pp)
+        onCreate: QQ => {
+          wQ.onCreate(QQ)
         },
         onClose: () => {
-          Op.onClose()
+          wQ.onClose()
         },
-        onReceivedMessageFromServer: (pp, ip) => {
-          Op.onReceivedMessageFromServer(pp, ip)
+        onReceivedMessageFromServer: (QQ, WQ) => {
+          wQ.onReceivedMessageFromServer(QQ, WQ)
         },
-        LP: () => {
-          Op.gH()
+        fJ: () => {
+          wQ.tV()
         },
-        altVetoBlocks: Lp,
-        onPlayerAttemptAltAction: (pp, ip, cp, op, Ip, Sp) => Op.onPlayerAttemptAltAction(pp, ip, cp, op, Ip, Sp)
+        altVetoBlocks: FQ,
+        onPlayerAttemptAltAction: (QQ, WQ, XQ, qQ, TQ, zQ) => wQ.onPlayerAttemptAltAction(QQ, WQ, XQ, qQ, TQ, zQ)
+      }
+    }
+  },
+  39578: (QQ, WQ, XQ) => {
+    XQ.r(WQ), XQ.d(WQ, {
+      makeSmp2ClientGame: () => TQ
+    });
+    const wQ = "smp2FirstSpawn";
+    var qQ = XQ(1722);
+
+    function TQ() {
+      let QQ = !1;
+      return {
+        onReceivedMessageFromServer: WQ => {
+          WQ !== wQ || QQ || (QQ = !0, (0, qQ.d)({
+            id: "smp2.first_spawn"
+          }))
+        }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

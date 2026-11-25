@@ -1,860 +1,590 @@
 export const id = 228;
 export const ids = [228];
 export const modules = {
-  39842: (pp, ip, cp) => {
-    cp.d(ip, {
-      c: () => Op,
-      g: () => op
+  37169: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      c: () => dQ,
+      g: () => bQ,
+      h: () => vQ,
+      i: () => jQ
     });
-    const Op = "The world isn't loaded, so no blocks can be seen.",
-      op = "The world isn't loaded, so nothing in it can be seen."
-  },
-  39281: (pp, ip, cp) => {
-    function Op(pp) {
-      return !(!pp.lobbyLeaderboardInfo && !pp.lobbyManage)
-    }
-    cp.d(ip, {
-      d: () => Op
-    })
-  },
-  37019: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Ip,
-      f: () => op
-    });
-    let Op = () => null;
+    var wQ = XQ(1081),
+      qQ = XQ.n(wQ),
+      TQ = XQ(61),
+      zQ = XQ(78),
+      sQ = XQ(1421),
+      FQ = XQ(1507),
+      PQ = XQ(1416),
+      gQ = XQ(1318),
+      JQ = XQ(1226),
+      rQ = XQ(37172),
+      IQ = XQ(1145);
 
-    function op(pp) {
-      Op = pp
+    function jQ(QQ) {
+      const [WQ, XQ] = (0, TQ.useState)((() => (0, rQ.p)(QQ)));
+      return (0, TQ.useEffect)((() => (XQ((0, rQ.p)(QQ)), (0, rQ.G)((() => {
+        XQ((0, rQ.p)(QQ))
+      })))), [QQ]), WQ
     }
 
-    function Ip(pp, ip) {
-      return Op(pp, ip)
-    }
-  },
-  40798: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Up,
-      c: () => Hp,
-      g: () => tp,
-      h: () => wp
-    });
-    var Op = cp(34),
-      op = cp(40806),
-      Ip = cp(40783),
-      Sp = cp(40813),
-      xp = cp(40792),
-      Lp = cp(40818),
-      Yp = cp(40837);
-
-    function Dp(pp) {
-      var ip, cp;
-      const Op = (0, Ip.k)();
-      return Op ? null === (ip = (0, op.d)(Op.api, pp[0], pp[1], pp[2])) || void 0 === ip || null === (cp = ip.persisted) || void 0 === cp ? void 0 : cp.shared : void 0
+    function BQ(QQ, WQ) {
+      "function" === typeof QQ ? QQ(WQ) : QQ && (QQ.current = WQ)
     }
 
-    function Ap(pp) {
-      return `${pp[0]},${pp[1]},${pp[2]}`
-    }
-    const Pp = new Map;
-    let Wp = null,
-      yp = 0;
-
-    function Up() {
-      return yp
-    }
-
-    function wp(pp) {
-      const ip = null !== Wp && Wp.key === Ap(pp.pos) ? Wp.type : null;
-      if (null === ip) return pp;
-      let cp = null;
-      if ("Iron" === ip) {
-        const {
-          cachedPasskey: ip,
-          ...Op
-        } = vp(pp.pos);
-        cp = {
-          Zx: null !== ip && void 0 !== ip ? ip : [0, 0, 0, 0],
-          ...Op
-        }
-      }
-      return {
-        ...pp,
-        type: ip,
-        ironChest: cp
-      }
+    function yQ(QQ) {
+      let {
+        tutorial: WQ,
+        step: XQ,
+        enabled: wQ = !0
+      } = QQ;
+      const qQ = jQ(WQ);
+      return wQ && qQ === XQ
     }
 
-    function vp(pp) {
-      const ip = Dp(pp),
-        cp = null === ip || void 0 === ip ? void 0 : ip.ownerDbId,
-        Op = function(pp) {
-          var ip;
-          let cp = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Dp(pp);
-          const Op = Ap(pp),
-            op = Pp.get(Op);
-          return op ? op.lastOpened < (null !== (ip = null === cp || void 0 === cp ? void 0 : cp.passkeyLastUpdated) && void 0 !== ip ? ip : 0) ? (Pp.delete(Op), null) : [...op.Zx] : null
-        }(pp, ip);
-      return void 0 === cp ? {
-        cachedPasskey: Op
-      } : {
-        ownerDbId: cp,
-        cachedPasskey: Op
-      }
-    }(0, Yp.h)(Sp.d, (pp => {
-      const ip = (0, Lp.f)(Sp.d, pp);
-      if (!(0, Lp.b)(ip) || ip.UI) return;
-      if (yp++, !ip.YI || null === ip.WI) return void(Wp = null);
-      const cp = Ap(ip.WI);
-      Wp = {
-        key: cp,
-        type: ip.AI
-      }, null !== ip.yI && Pp.set(cp, {
-        Zx: [...ip.yI],
-        lastOpened: Date.now()
-      })
-    })), (0, Yp.d)((() => {
-      Pp.clear(), Wp = null, yp++
-    })), (0, Yp.e)((() => {
-      null !== Wp && (Wp = null, yp++, Op.m.GA("chestToggleFromServer", !1, !0))
-    }));
-    const tp = {
-        boardEditRequested: {
-          watch: pp => (0, Op.n)("EditBoard", (ip => {
-            let {
-              pos: cp
-            } = ip;
-            if (null === cp) return void pp(null);
-            const Op = (0, Ip.k)(),
-              op = (0, Ip.u)();
-            Op && op && pp(op.readBoardToEdit(Op.api, Op.chunks, cp))
-          }))
-        },
-        ironChestOpenRequested: {
-          watch: pp => (0, Op.n)("OpenIronChest", (ip => {
-            let {
-              pos: cp
-            } = ip;
-            pp(function(pp) {
-              return {
-                pos: pp,
-                ...vp(pp)
-              }
-            }(cp))
-          }))
-        }
-      },
-      Hp = {
-        writeOnBoard(pp) {
-          var ip;
-          let {
-            pos: cp,
-            text: Op,
-            textSize: op
-          } = pp;
-          null === (ip = (0, Ip.k)()) || void 0 === ip || ip.send(xp.c.UpdateBoard, (0, xp.S)({
-            nL: cp,
-            FL: Op,
-            gL: op
-          }))
-        },
-        writeBook(pp) {
-          var ip;
-          let {
-            pages: cp,
-            title: Op,
-            published: op
-          } = pp;
-          null === (ip = (0, Ip.k)()) || void 0 === ip || ip.send(xp.c.UpdateBook, (0, xp.W)({
-            yx: cp,
-            Ux: Op,
-            wx: op
-          }))
-        },
-        writeNameTag(pp) {
-          var ip;
-          null === (ip = (0, Ip.k)()) || void 0 === ip || ip.send(xp.c.UpdateNameTag, pp)
-        },
-        setCustomLobbyBlock(pp) {
-          let {
-            pos: ip,
-            blockName: cp
-          } = pp;
-          const Op = (0, Ip.u)(),
-            op = (0, Ip.k)();
-          Op && op && op.send(xp.c.SetCustomLobbyBlock, (0, xp.H)({
-            tx: Op.blockIdOf(cp),
-            vx: ip
-          }))
-        }
-      }
-  },
-  40857: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Lp,
-      f: () => Sp,
-      i: () => xp
-    });
-    var Op = cp(40769),
-      op = cp(4886),
-      Ip = cp(40783);
-
-    function Sp() {
-      var pp;
-      const ip = null === (pp = (0, Ip.k)()) || void 0 === pp ? void 0 : pp.api.localId;
-      return void 0 === ip || ip === Op.Nc ? null : String(ip)
+    function VQ(QQ, WQ) {
+      const XQ = (0, rQ.t)(QQ),
+        wQ = XQ.indexOf(WQ);
+      return !XQ.slice(wQ + 1).some((WQ => (0, rQ.B)(QQ, WQ)))
     }
 
-    function xp(pp) {
-      const ip = (0, Ip.k)();
-      if (null !== ip) return pp(ip);
-      let cp = null;
-      const Op = (0, op.p)((() => {
-        const ip = (0, Ip.k)();
-        null !== ip && null === cp && (Op(), cp = pp(ip))
-      }));
-      return () => {
-        var pp;
-        Op(), null === (pp = cp) || void 0 === pp || pp()
-      }
+    function DQ(QQ, WQ, XQ, wQ) {
+      let {
+        tutorial: qQ,
+        step: TQ,
+        waitForClick: zQ = !1,
+        onPrevious: sQ
+      } = QQ;
+      const FQ = WQ && (0, rQ.z)(qQ, TQ),
+        PQ = WQ && !VQ(qQ, TQ),
+        JQ = zQ ? wQ : XQ;
+      let IQ = null;
+      FQ ? IQ = () => {
+        null === sQ || void 0 === sQ || sQ(), (0, rQ.v)(qQ, TQ)
+      } : PQ && (IQ = () => {
+        (0, rQ.l)(qQ)
+      }), (0, gQ.k)("popup", null !== JQ && void 0 !== JQ ? JQ : XQ, IQ, WQ && null !== JQ, null, FQ ? void 0 : "controller:menusSkipTutorial")
     }
 
-    function Lp(pp, ip, cp) {
-      return {
-        current: () => {
-          const cp = (0, Ip.k)();
-          return null === cp ? ip : pp(cp)()
-        },
-        watch: ip => xp((Op => {
-          const op = pp(Op);
-          let Ip = op();
-          return ip(Ip), cp((() => {
-            const pp = op();
-            pp !== Ip && (Ip = pp, ip(pp))
-          }))
-        }))
-      }
-    }
-  },
-  40849: (pp, ip, cp) => {
-    cp.d(ip, {
-      e: () => Yp
-    });
-    var Op = cp(40783),
-      op = cp(40857),
-      Ip = cp(40865);
-
-    function Sp() {
-      var pp, ip;
-      return null !== (pp = null === (ip = (0, Op.k)()) || void 0 === ip ? void 0 : ip.itemBridgeSources) && void 0 !== pp ? pp : Ip.d
-    }
-
-    function xp(pp) {
-      return {
-        current: () => Sp().states[pp].current(),
-        watch: ip => (0, op.i)((cp => {
-          const Op = cp.itemBridgeSources.states[pp];
-          return ip(Op.current()), Op.watch(ip)
-        }))
-      }
-    }
-
-    function Lp(pp) {
-      return {
-        watch: ip => (0, op.i)((cp => cp.itemBridgeSources.events[pp].watch(ip)))
-      }
-    }
-    const Yp = {
-      states: {
-        inventory: xp("inventory"),
-        hotbar: xp("hotbar"),
-        crafting: xp("crafting"),
-        heldItemAim: xp("heldItemAim")
-      },
-      events: {
-        hotbarSlotRequested: Lp("hotbarSlotRequested"),
-        hotbarScrolled: Lp("hotbarScrolled"),
-        numberKeyPressed: Lp("numberKeyPressed"),
-        inventoryDropRequested: Lp("inventoryDropRequested"),
-        chestToggled: Lp("chestToggled"),
-        chestRefreshed: Lp("chestRefreshed"),
-        inventorySynced: Lp("inventorySynced"),
-        enchantingTableOpened: Lp("enchantingTableOpened")
-      },
-      commands: {
-        selectHotbarSlot: pp => Sp().commands.selectHotbarSlot(pp),
-        removeInventoryItem: pp => Sp().commands.removeInventoryItem(pp),
-        swapInventorySlots: pp => Sp().commands.swapInventorySlots(pp),
-        moveInventoryItem: pp => Sp().commands.moveInventoryItem(pp),
-        quickMoveInventoryItem: pp => Sp().commands.quickMoveInventoryItem(pp),
-        closeChest: pp => Sp().commands.closeChest(pp),
-        focusCrafting: pp => Sp().commands.focusCrafting(pp),
-        craftRecipe: pp => Sp().commands.craftRecipe(pp),
-        salvageItem: pp => Sp().commands.salvageItem(pp),
-        enchantItem: pp => Sp().commands.enchantItem(pp)
-      },
-      queries: {
-        enchantingOffer: pp => Sp().queries.enchantingOffer(pp)
-      }
-    }
-  },
-  40865: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => xp
-    });
-    var Op = cp(39842);
-
-    function op(pp) {
-      return {
-        current: () => pp,
-        watch: () => () => {}
-      }
-    }
-
-    function Ip() {}
-    const Sp = Object.freeze([0, 0, 0]),
-      xp = {
-        states: {
-          health: op({
-            health: null,
-            maxHealth: null,
-            shield: null,
-            maxShield: null
-          }),
-          inventory: op({
-            player: [],
-            chestOrCreative: [],
-            chest: null,
-            creative: !1,
-            selectedSlot: 0,
-            freeSlots: 0
-          }),
-          hotbar: op({
-            items: [],
-            ammo: 0,
-            selectedSlot: null
-          }),
-          stationItems: op({
-            enchantable: {},
-            salvageable: {}
-          }),
-          itemInfo: op({}),
-          creativeVisibility: op({
-            publicLobby: !1,
-            shownInGame: {}
-          }),
-          aura: op(null),
-          heldItemAim: op({
-            gun: !1,
-            aimable: !1,
-            chargeName: null
-          }),
-          crouching: op(!1),
-          gliderBoostFuel: op(0),
-          flight: op({
-            canFly: !1,
-            flying: !1
-          }),
-          crafting: op({
-            focus: null,
-            recipes: [],
-            detail: null
-          }),
-          players: op({
-            ids: [],
-            byId: {},
-            localId: null
-          }),
-          lobbyLeaderboardRows: op({}),
-          fullInventory: op(!1),
-          crosshairTarget: op({
-            interactPrompt: null,
-            blockText: null,
-            neededTool: null
-          }),
-          localPlayerAlive: op(!0),
-          freeCamera: op({
-            allowed: !1,
-            movesFly: !1
-          }),
-          replay: op(null),
-          replayEdits: op(null),
-          replayRecorder: op({
-            recording: !1,
-            clipping: !1,
-            hasClipBuffer: !1,
-            seconds: 0
-          }),
-          replayVideoExporting: op(!1)
-        },
-        events: {
-          hotbarSlotRequested: {
-            watch: () => () => {}
-          },
-          hotbarScrolled: {
-            watch: () => () => {}
-          },
-          hotbarDropRequested: {
-            watch: () => () => {}
-          },
-          inventoryDropRequested: {
-            watch: () => () => {}
-          },
-          numberKeyPressed: {
-            watch: () => () => {}
-          },
-          chestToggled: {
-            watch: () => () => {}
-          },
-          chestRefreshed: {
-            watch: () => () => {}
-          },
-          inventorySynced: {
-            watch: () => () => {}
-          },
-          enchantingTableOpened: {
-            watch: () => () => {}
-          },
-          cosmeticsUpdated: {
-            watch: () => () => {}
-          },
-          shotDamageToShow: {
-            watch: () => () => {}
-          },
-          boardEditRequested: {
-            watch: () => () => {}
-          },
-          kill: {
-            watch: () => () => {}
-          },
-          chatReceived: {
-            watch: () => () => {}
-          },
-          ironChestOpenRequested: {
-            watch: () => () => {}
-          },
-          localEffectUpdated: {
-            watch: () => () => {}
-          },
-          localPlayerAliveSet: {
-            watch: () => () => {}
-          },
-          replayUiActionRequested: {
-            watch: () => () => {}
-          },
-          replayViewerRequested: {
-            watch: () => () => {}
-          }
-        },
-        commands: {
-          selectHotbarSlot: Ip,
-          removeInventoryItem: () => !1,
-          swapInventorySlots: () => !1,
-          moveInventoryItem: () => !1,
-          quickMoveInventoryItem: () => null,
-          closeChest: Ip,
-          setInventoryOpen: Ip,
-          changeIronChestPasskey: Ip,
-          dragReplayCamera: Ip,
-          applyTemporaryThirdPerson: Ip,
-          holdEmoteWheel: Ip,
-          recordFlyingMiddleText: Ip,
-          focusCrafting: Ip,
-          craftRecipe: () => ({
-            gD: 0,
-            eL: null,
-            amountAddedToSlot: 0
-          }),
-          salvageItem: () => !1,
-          enchantItem: Ip,
-          setShopOpen: Ip,
-          buyShopItem: Ip,
-          lobbyManage: Ip,
-          sendChatMessage: Ip,
-          ignorePlayer: Ip,
-          reportPlayer: Ip,
-          reportWorldCodeChat: Ip,
-          requestDiscordReportKey: Ip,
-          reportLobbyOrGame: Ip,
-          playEmote: Ip,
-          updateMyCosmetic: Ip,
-          writeOnBoard: Ip,
-          writeBook: Ip,
-          writeNameTag: Ip,
-          setCustomLobbyBlock: Ip,
-          openIronChest: Ip,
-          sendCodeCollab: Ip,
-          clickCodeBlock: Ip,
-          bindCustomButtonKeys: Ip,
-          pressCustomButton: Ip,
-          moveReplayFreecam: Ip,
-          holdReplayFreecamVertical: Ip,
-          respawn: Ip,
-          wakeUp: Ip,
-          requestLeaderboard: Ip,
-          completeTask: Ip,
-          setServerCookie: Ip,
-          answerUiRequest: Ip,
-          chooseRewardedAd: Ip,
-          setCameraZoom: Ip,
-          setFreeCameraMovesFly: Ip,
-          setBlockHighlight: Ip,
-          setCrosshairInteractPrompt: Ip,
-          setLookSensitivity: Ip,
-          replayAction: Ip,
-          setReplayPlaying: Ip,
-          seekReplay: Ip,
-          setReplayCameraMode: Ip,
-          syncReplayCameraMode: Ip,
-          setReplayCameraKeyframe: Ip,
-          moveReplayCameraKeyframe: Ip,
-          deleteReplayCameraKeyframes: Ip,
-          setReplayPlaybackMark: Ip,
-          cropReplay: () => !1,
-          holdReplayForShaderPackFailure: Ip,
-          exportReplayVideo: Ip,
-          toggleRecording: Ip,
-          saveClip: Ip,
-          setRecorderPrefs: Ip,
-          setReplayViewerOpen: Ip
-        },
-        queries: {
-          enchantingOffer: () => ({
-            perks: [],
-            options: []
-          }),
-          worldCodeAiChunk: () => Op.c,
-          worldCodeAiGameState: () => Op.g
-        },
-        lookups: {
-          localPos: () => Sp,
-          targetedBlockPos: () => null,
-          blockAtViewPoint: () => null,
-          momentumFrac: () => 0,
-          screenPos: () => ({
-            x: 0,
-            y: 0
-          }),
-          cameraZoom: () => 0,
-          freeCameraPos: () => null,
-          blocksStandingOn: () => [],
-          dropAhead: () => !1,
-          replayCamera: () => null,
-          leaveGameReloadsPage: () => !1,
-          codeBlockClickable: () => !1
-        }
-      }
-  },
-  40778: (pp, ip, cp) => {
-    cp.d(ip, {
-      d: () => Rp,
-      g: () => mp,
-      j: () => qp,
-      m: () => kp,
-      o: () => ep
-    });
-    var Op = cp(39425),
-      op = cp(1234),
-      Ip = cp(1982),
-      Sp = cp(1996),
-      xp = cp(3400),
-      Lp = cp(37019),
-      Yp = cp(1349),
-      Dp = cp(40783),
-      Ap = cp(4927),
-      Pp = cp(2457),
-      Wp = cp(40792),
-      yp = cp(40798),
-      Up = cp(40849);
-    let wp = null;
-
-    function vp(pp) {
-      const ip = new Map,
-        cp = cp => {
-          if ("string" !== typeof cp) return;
-          let Op = ip.get(cp);
-          return void 0 === Op && (Op = pp(cp), void 0 !== Op && ip.set(cp, Op)), Op
-        };
-      return new Proxy({}, {
-        get: (pp, ip) => cp(ip),
-        has: (pp, ip) => void 0 !== cp(ip)
-      })
-    }
-
-    function tp(pp) {
-      const ip = (0, xp.c)(pp);
-      return void 0 !== ip && (0, xp.d)(ip) === pp
-    }
-
-    function Hp(pp) {
-      var ip;
-      const cp = null === (ip = (0, Dp.k)()) || void 0 === ip ? void 0 : ip.tables;
-      if (void 0 === cp || !tp(pp)) return;
-      const Op = {
-          displayName: cp.getDisplayName(pp)
-        },
-        op = cp.getItemStat(pp, "description");
-      void 0 !== op && null !== op && (Op.description = op);
+    function pQ(QQ) {
+      let {
+        tutorial: WQ,
+        step: XQ,
+        text: wQ,
+        waitForClick: qQ = !1,
+        onPrevious: TQ
+      } = QQ;
       const {
-        rootName: Ip
-      } = cp.getMetaInfo(pp);
-      Ip !== pp && (Op.rootName = Ip);
-      const Sp = cp.getItemStat(pp, "armourReduction");
-      return void 0 !== Sp && null !== Sp && (Op.armourReduction = Sp), Op
-    }(0, Dp.y)((pp => {
-      wp = pp
-    }));
-    const dp = (0, Sp.i)("DisplayName", "Description");
-
-    function ep() {
-      return Boolean(Ip.c.get("useInventory") && Ip.c.get("useFullInventory"))
+        t: zQ
+      } = (0, JQ.C)(), sQ = VQ(WQ, XQ);
+      return (0, IQ.jsxs)(IQ.Fragment, {
+        children: [(0, IQ.jsx)("div", {
+          className: "TutorialStepText",
+          children: wQ
+        }), (0, IQ.jsxs)("div", {
+          className: "TutorialStepButtons",
+          children: [(0, rQ.z)(WQ, XQ) && (0, IQ.jsx)(FQ.l, {
+            className: "TutorialStepButton",
+            onClick: () => {
+              null === TQ || void 0 === TQ || TQ(), (0, rQ.v)(WQ, XQ)
+            },
+            children: zQ("tutorial:back")
+          }), !qQ && (0, IQ.jsx)(FQ.h, {
+            className: "TutorialStepButton",
+            onClick: () => {
+              (0, rQ.e)(XQ)
+            },
+            padDefaultFocus: !0,
+            children: zQ(sQ ? "tutorial:done" : "tutorial:next")
+          }), !sQ && (0, IQ.jsx)(FQ.l, {
+            className: "TutorialStepButton",
+            onClick: () => {
+              (0, rQ.l)(WQ)
+            },
+            children: zQ("tutorial:skip")
+          })]
+        })]
+      })
     }
-    let jp = null;
-    const kp = {
-        inventory: function() {
-          const pp = Up.e.states.inventory;
-          let ip = null;
-          const cp = pp => {
-            var cp;
-            return null === pp.chest ? pp : ((null === (cp = ip) || void 0 === cp ? void 0 : cp.from) === pp && ip.chestVersion === (0, yp.b)() || (ip = {
-              from: pp,
-              chestVersion: (0, yp.b)(),
-              view: {
-                ...pp,
-                chest: (0, yp.h)(pp.chest)
-              }
-            }), ip.view)
+    const GQ = 6;
+
+    function UQ(QQ) {
+      let {
+        rect: WQ,
+        margin: XQ
+      } = QQ;
+      const wQ = Math.max(0, WQ.top - XQ),
+        qQ = WQ.bottom + XQ,
+        TQ = Math.max(0, WQ.left - XQ),
+        zQ = WQ.right + XQ;
+      return (0, IQ.jsxs)(IQ.Fragment, {
+        children: [(0, IQ.jsx)("div", {
+          className: "TutorialSpotlightBackdrop",
+          style: {
+            top: 0,
+            left: 0,
+            right: 0,
+            height: wQ
+          }
+        }), (0, IQ.jsx)("div", {
+          className: "TutorialSpotlightBackdrop",
+          style: {
+            top: qQ,
+            left: 0,
+            right: 0,
+            bottom: 0
+          }
+        }), (0, IQ.jsx)("div", {
+          className: "TutorialSpotlightBackdrop",
+          style: {
+            top: wQ,
+            left: 0,
+            width: TQ,
+            height: qQ - wQ
+          }
+        }), (0, IQ.jsx)("div", {
+          className: "TutorialSpotlightBackdrop",
+          style: {
+            top: wQ,
+            left: zQ,
+            right: 0,
+            height: qQ - wQ
+          }
+        })]
+      })
+    }
+
+    function bQ(QQ) {
+      let {
+        target: WQ,
+        placement: XQ,
+        boxRef: wQ,
+        className: FQ,
+        spotlight: gQ = !0,
+        spotlightMargin: JQ = GQ,
+        children: rQ
+      } = QQ;
+      const {
+        getArrowProps: jQ,
+        getTooltipProps: BQ,
+        setTooltipRef: yQ,
+        setTriggerRef: VQ,
+        update: DQ
+      } = (0, sQ.b)({
+        placement: XQ,
+        trigger: null,
+        visible: !0,
+        interactive: !0,
+        closeOnOutsideClick: !1,
+        offset: [0, JQ]
+      });
+      (0, TQ.useLayoutEffect)((() => {
+        VQ(WQ)
+      }), [WQ, VQ]);
+      const pQ = function(QQ, WQ) {
+        const [XQ, wQ] = (0, TQ.useState)(null);
+        return (0, TQ.useEffect)((() => {
+          if (!WQ || !QQ) return void wQ(null);
+          let XQ = 0,
+            qQ = null;
+          const TQ = () => {
+            const WQ = QQ.getBoundingClientRect();
+            qQ && WQ.left === qQ.left && WQ.top === qQ.top && WQ.width === qQ.width && WQ.height === qQ.height || (qQ = WQ, wQ(WQ)), XQ = requestAnimationFrame(TQ)
           };
-          return {
-            current: () => cp(pp.current()),
-            watch: ip => pp.watch((pp => {
-              ip(cp(pp))
-            }))
+          return TQ(), () => {
+            cancelAnimationFrame(XQ)
           }
-        }(),
-        crafting: Up.e.states.crafting,
-        stationItems: {
-          current() {
-            var pp;
-            return (null === (pp = jp) || void 0 === pp ? void 0 : pp.namesVersion) !== (0, xp.g)() && (jp = {
-              namesVersion: (0, xp.g)(),
-              items: {
-                enchantable: vp((pp => {
-                  const ip = (0, xp.c)(pp);
-                  return void 0 !== ip && null !== wp && wp.enchantmentPerksOf(ip).length > 0 || void 0
-                })),
-                salvageable: vp((pp => !(!tp(pp) || null === (0, Lp.b)(pp)) || void 0))
-              }
-            }), jp.items
-          },
-          watch: () => () => {}
-        },
-        itemInfo: function() {
-          let pp = null;
-          const ip = () => {
-            var ip;
-            return (null === (ip = pp) || void 0 === ip ? void 0 : ip.namesVersion) !== (0, xp.g)() && (pp = {
-              namesVersion: (0, xp.g)(),
-              infos: vp(Hp)
-            }), pp.infos
-          };
-          return {
-            current: ip,
-            watch: cp => (0, Sp.v)((Op => {
-              Op.some(dp) && (pp = null, cp(ip()))
-            }))
-          }
-        }(),
-        creativeVisibility: (0, Sp.p)((function() {
-          const pp = {};
-          for (const op of null !== (ip = null === (cp = wp) || void 0 === cp ? void 0 : cp.creativeItemIds()) && void 0 !== ip ? ip : []) {
-            var ip, cp, Sp, Lp;
-            const Yp = (0, xp.d)(op);
-            if (void 0 === Yp) continue;
-            const Dp = null !== (Sp = Ip.c.get((0, Op.d)(Yp, "showInCreativeInven"))) && void 0 !== Sp ? Sp : null === (Lp = wp) || void 0 === Lp ? void 0 : Lp.showInCreativeInvenOf(op);
-            "boolean" === typeof Dp && (pp[Yp] = Dp)
-          }
-          return {
-            publicLobby: (0, op.I)((0, Yp.d)().lobbyName),
-            shownInGame: pp
-          }
-        }), ["connectedGameChanged"], (0, Sp.i)("ShowInCreativeInven")),
-        fullInventory: (0, Sp.p)(ep, [], (0, Sp.l)("useInventory", "useFullInventory"))
-      },
-      mp = {
-        inventoryDropRequested: Up.e.events.inventoryDropRequested,
-        chestToggled: Up.e.events.chestToggled,
-        chestRefreshed: Up.e.events.chestRefreshed,
-        inventorySynced: Up.e.events.inventorySynced,
-        enchantingTableOpened: Up.e.events.enchantingTableOpened
-      },
-      Rp = {
-        removeInventoryItem: Up.e.commands.removeInventoryItem,
-        swapInventorySlots: Up.e.commands.swapInventorySlots,
-        moveInventoryItem: Up.e.commands.moveInventoryItem,
-        quickMoveInventoryItem: Up.e.commands.quickMoveInventoryItem,
-        closeChest: Up.e.commands.closeChest,
-        setInventoryOpen(pp) {
-          (0, Ap.g)(Pp.C.InventoryOpen, pp ? Pp.C.InventoryOpen : 0)
-        },
-        focusCrafting: Up.e.commands.focusCrafting,
-        craftRecipe: Up.e.commands.craftRecipe,
-        salvageItem: Up.e.commands.salvageItem,
-        enchantItem: Up.e.commands.enchantItem,
-        changeIronChestPasskey(pp) {
-          var ip;
-          let {
-            pos: cp,
-            Zx: Op
-          } = pp;
-          null === (ip = (0, Dp.k)()) || void 0 === ip || ip.send(Wp.c.ChangeIronChestPasskey, (0, Wp.h)({
-            WI: cp,
-            Zx: Op
-          }))
-        },
-        openIronChest(pp) {
-          var ip;
-          let {
-            pos: cp,
-            Zx: Op
-          } = pp;
-          null === (ip = (0, Dp.k)()) || void 0 === ip || ip.send(Wp.c.OpenIronChest, (0, Wp.A)({
-            WI: cp,
-            Zx: Op
-          }))
+        }), [QQ, WQ]), XQ
+      }(WQ, gQ);
+      (0, TQ.useEffect)((() => {
+        null === DQ || void 0 === DQ || DQ()
+      }), [pQ, DQ]), (0, TQ.useEffect)((() => {
+        if (gQ || !WQ || !DQ) return;
+        const QQ = new ResizeObserver((() => {
+          DQ()
+        }));
+        return QQ.observe(WQ), WQ.parentElement && QQ.observe(WQ.parentElement), () => {
+          QQ.disconnect()
         }
+      }), [WQ, gQ, DQ]), (0, TQ.useEffect)((() => {
+        gQ && (null === WQ || void 0 === WQ || WQ.scrollIntoView({
+          block: "nearest",
+          inline: "nearest"
+        }))
+      }), [WQ, gQ]);
+      const bQ = (0, TQ.useCallback)((QQ => {
+        yQ(QQ), wQ && (wQ.current = QQ)
+      }), [yQ, wQ]);
+      return (0, zQ.createPortal)((0, IQ.jsxs)(IQ.Fragment, {
+        children: [pQ && (0, IQ.jsx)(UQ, {
+          rect: pQ,
+          margin: JQ
+        }), (0, IQ.jsxs)("div", {
+          ref: bQ,
+          ...BQ({
+            className: qQ()("tooltip-container SmallTextLight TutorialStep", FQ)
+          }),
+          children: [rQ, (0, IQ.jsx)("div", {
+            ...jQ({
+              className: "tooltip-arrow"
+            })
+          })]
+        })]
+      }), (0, PQ.g)())
+    }
+    const vQ = (0, TQ.forwardRef)((function(QQ, WQ) {
+      let {
+        placement: XQ = "right",
+        children: wQ,
+        ...qQ
+      } = QQ;
+      const zQ = yQ(qQ),
+        sQ = (0, TQ.useRef)(null),
+        FQ = (0, TQ.useRef)(null);
+      DQ(qQ, zQ, sQ, FQ);
+      const [PQ, gQ] = (0, TQ.useState)(null), JQ = wQ.ref, rQ = (0, TQ.useCallback)((QQ => {
+        FQ.current = QQ, gQ(QQ), BQ(WQ, QQ), BQ(JQ, QQ)
+      }), [WQ, JQ]);
+      return (0, IQ.jsxs)(IQ.Fragment, {
+        children: [(0, TQ.cloneElement)(wQ, {
+          ref: rQ
+        }), zQ && (0, IQ.jsx)(bQ, {
+          target: PQ,
+          placement: XQ,
+          boxRef: sQ,
+          children: (0, IQ.jsx)(pQ, {
+            ...qQ
+          })
+        })]
+      })
+    }));
+
+    function dQ(QQ) {
+      const WQ = yQ(QQ),
+        XQ = (0, TQ.useRef)(null);
+      return DQ(QQ, WQ, XQ, null), WQ ? (0, zQ.createPortal)((0, IQ.jsx)("div", {
+        className: "TutorialCentreBackdrop",
+        children: (0, IQ.jsx)("div", {
+          ref: XQ,
+          className: "tooltip-container SmallTextLight TutorialStep TutorialCentreStep",
+          children: (0, IQ.jsx)(pQ, {
+            ...QQ
+          })
+        })
+      }), (0, PQ.g)()) : null
+    }
+  },
+  36906: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      B: () => DQ,
+      b: () => TQ,
+      f: () => BQ,
+      h: () => yQ,
+      j: () => sQ,
+      n: () => rQ,
+      r: () => VQ,
+      t: () => JQ,
+      u: () => pQ,
+      y: () => jQ
+    });
+    var wQ = XQ(26),
+      qQ = XQ(31);
+    const TQ = "clientGameInventoryButtonsChanged",
+      zQ = new Map;
+
+    function sQ() {
+      return [...zQ.values()].sort(((QQ, WQ) => {
+        var XQ, wQ;
+        return (null !== (XQ = QQ.order) && void 0 !== XQ ? XQ : 0) - (null !== (wQ = WQ.order) && void 0 !== wQ ? wQ : 0)
+      }))
+    }
+    let FQ = null;
+
+    function PQ(QQ) {
+      FQ = QQ
+    }
+    let gQ = !1;
+
+    function JQ(QQ) {
+      gQ = !0;
+      try {
+        QQ.onClick()
+      } finally {
+        gQ = !1
+      }
+      QQ.panel && "clientGame" === wQ.b.get("openInGameMenuName") && PQ(QQ.id)
+    }
+
+    function rQ() {
+      return gQ
+    }
+
+    function IQ() {
+      return sQ().filter((QQ => QQ.panel && !QQ.disabled))
+    }
+
+    function jQ(QQ) {
+      const WQ = IQ(),
+        XQ = WQ.findIndex((QQ => QQ.id === FQ));
+      return !(XQ < 0 || WQ.length < 2) && (JQ(WQ[(XQ + QQ + WQ.length) % WQ.length]), !0)
+    }
+
+    function BQ() {
+      return null !== FQ && IQ().length > 1
+    }
+
+    function yQ() {
+      PQ(null)
+    }
+
+    function VQ() {
+      "inventory" !== wQ.b.get("openInGameMenuName") && PQ(null)
+    }
+
+    function DQ() {
+      const QQ = FQ;
+      return PQ(null), QQ
+    }
+
+    function pQ(QQ) {
+      return zQ.set(QQ.id, QQ), qQ.k.mB(TQ, sQ(), !0), () => {
+        zQ.get(QQ.id) === QQ && (zQ.delete(QQ.id), qQ.k.mB(TQ, sQ()))
+      }
+    }
+  },
+  36900: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      A: () => gQ,
+      c: () => sQ,
+      g: () => DQ,
+      j: () => yQ,
+      n: () => VQ,
+      q: () => rQ,
+      s: () => PQ,
+      u: () => BQ,
+      y: () => IQ
+    });
+    var wQ = XQ(26),
+      qQ = XQ(31),
+      TQ = XQ(1335),
+      zQ = XQ(36906);
+    const sQ = "clientGameUiChanged";
+    let FQ = null;
+
+    function PQ() {
+      return FQ
+    }
+
+    function gQ(QQ, WQ) {
+      const XQ = {
+        content: QQ,
+        menu: WQ
+      };
+      return FQ = XQ, qQ.k.mB(sQ, FQ, !0), () => {
+        FQ === XQ && (FQ = null, jQ = !1, yQ(), qQ.k.mB(sQ, null))
+      }
+    }
+    let JQ = null;
+
+    function rQ() {
+      return JQ
+    }
+
+    function IQ(QQ) {
+      return JQ = QQ, () => {
+        JQ === QQ && (JQ = null)
+      }
+    }
+    let jQ = !1;
+
+    function BQ() {
+      const QQ = wQ.b.get("openInGameMenuName");
+      "clientGame" !== QQ && (jQ = "inventory" === QQ), (0, zQ.n)() || (0, zQ.h)(), (0, TQ.z)(TQ.e), wQ.b.set({
+        openInGameMenuName: "clientGame",
+        openEverythingMenuName: null
+      })
+    }
+
+    function yQ() {
+      pQ(!1)
+    }
+
+    function VQ() {
+      pQ(jQ)
+    }
+
+    function DQ() {
+      jQ && pQ(!1)
+    }
+
+    function pQ(QQ) {
+      "clientGame" === wQ.b.get("openInGameMenuName") && wQ.b.set({
+        openInGameMenuName: QQ ? "inventory" : null
+      }), QQ || (0, zQ.h)(), jQ = !1
+    }
+  },
+  37172: (QQ, WQ, XQ) => {
+    XQ.d(WQ, {
+      B: () => HQ,
+      C: () => CQ,
+      D: () => uQ,
+      E: () => LQ,
+      F: () => EQ,
+      G: () => kQ,
+      d: () => FQ,
+      e: () => hQ,
+      i: () => sQ,
+      l: () => RQ,
+      p: () => aQ,
+      t: () => bQ,
+      v: () => AQ,
+      z: () => cQ
+    });
+    var wQ = XQ(43);
+    const qQ = {
+        codeBlock: ["codeBlockIntro", "docsButton", "hideDocsButton", "aiHelperButton", "hideAiHelperButton", "worldCodeButton", "exportButton", "helpButton"],
+        worldCode: ["worldCodeIntro", "docsButton", "hideDocsButton", "aiHelperButton", "hideAiHelperButton", "exportButton", "helpButton"]
       },
-      qp = {
-        enchantingOffer: Up.e.queries.enchantingOffer
+      TQ = ["docsButton", "docsPanel", "docsClientOptionsTab", "docsClientOptions", "docsApiReferenceTab", "docsApiReference", "docsCallbacksTab", "docsCallbacks", "hideDocsButton"],
+      zQ = ["aiHelperButton", "aiPanel", "aiAskBox", "aiModelChip", "aiAnswer", "aiEdits", "aiGear", "aiNotes", "aiGameSettings", "hideAiHelperButton"],
+      sQ = TQ.filter((QQ => "docsButton" !== QQ)),
+      FQ = zQ.filter((QQ => "aiHelperButton" !== QQ)),
+      PQ = "codeEditorTutorials",
+      gQ = {
+        codeBlockIntro: "codeBlockIntroShown",
+        worldCodeIntro: "worldCodeIntroShown"
+      },
+      JQ = {
+        welcome: "welcomeComplete",
+        docsOverview: "docsOverviewComplete",
+        aiHelperOverview: "aiHelperOverviewComplete"
+      };
+    let rQ = null,
+      IQ = null;
+    const jQ = new Set,
+      BQ = new Set;
+    let yQ = null;
+    const VQ = new Set,
+      DQ = new Set;
+
+    function pQ() {
+      DQ.forEach((QQ => {
+        QQ()
+      }))
+    }
+
+    function GQ() {
+      if (!rQ) {
+        const QQ = wQ.i.getItem(PQ);
+        rQ = {
+          codeBlockIntroShown: !1,
+          worldCodeIntroShown: !1,
+          welcomeComplete: !1,
+          docsOverviewComplete: !1,
+          aiHelperOverviewComplete: !1,
+          ..."object" === typeof QQ && null !== QQ ? QQ : {}
+        }
       }
-  },
-  40842: (pp, ip, cp) => {
-    cp.d(ip, {
-      b: () => Op,
-      d: () => Dp,
-      f: () => Sp,
-      g: () => op,
-      i: () => xp,
-      l: () => Yp
-    });
-    class Op extends Error {
-      constructor() {
-        super(...arguments), this.name = "CoreCorruption"
+      return rQ
+    }
+
+    function UQ(QQ) {
+      const WQ = GQ();
+      WQ[QQ] || (rQ = {
+        ...WQ,
+        [QQ]: !0
+      }, wQ.i.setItem(PQ, rQ))
+    }
+
+    function bQ(QQ) {
+      return "docsOverview" === QQ ? TQ : "aiHelperOverview" === QQ ? zQ : IQ ? qQ[IQ] : []
+    }
+
+    function vQ(QQ) {
+      return ("worldCodeButton" !== QQ || !GQ().worldCodeIntroShown) && !VQ.has(QQ)
+    }
+
+    function dQ(QQ) {
+      var WQ;
+      return (null === (WQ = yQ) || void 0 === WQ ? void 0 : WQ.name) === QQ ? yQ.stepsDone : jQ
+    }
+
+    function HQ(QQ, WQ) {
+      if (! function(QQ) {
+          return yQ ? yQ.name === QQ : "welcome" === QQ
+        }(QQ) || !vQ(WQ) || dQ(QQ).has(WQ)) return !1;
+      if (yQ) return !0;
+      const XQ = gQ[WQ];
+      return XQ ? !GQ()[XQ] || BQ.has(WQ) : !GQ()[JQ[QQ]]
+    }
+
+    function aQ(QQ) {
+      var WQ;
+      return null !== (WQ = bQ(QQ).find((WQ => HQ(QQ, WQ)))) && void 0 !== WQ ? WQ : null
+    }
+
+    function lQ(QQ) {
+      var WQ;
+      UQ(JQ[QQ]), (null === (WQ = yQ) || void 0 === WQ ? void 0 : WQ.name) === QQ && (yQ = null)
+    }
+
+    function hQ(QQ) {
+      const WQ = (yQ ? [yQ.name] : ["welcome", "docsOverview"]).find((WQ => aQ(WQ) === QQ));
+      if (!WQ) return;
+      dQ(WQ).add(QQ);
+      const XQ = gQ[QQ];
+      XQ && (UQ(XQ), yQ || BQ.add(QQ)), null === aQ(WQ) && lQ(WQ), pQ()
+    }
+
+    function iQ(QQ, WQ) {
+      const XQ = bQ(QQ),
+        wQ = dQ(QQ);
+      for (let qQ = XQ.indexOf(WQ) - 1; qQ >= 0; qQ--)
+        if (wQ.has(XQ[qQ]) && vQ(XQ[qQ])) return XQ[qQ];
+      return null
+    }
+
+    function cQ(QQ, WQ) {
+      return null !== iQ(QQ, WQ)
+    }
+
+    function AQ(QQ, WQ) {
+      const XQ = iQ(QQ, WQ);
+      XQ && (dQ(QQ).delete(XQ), pQ())
+    }
+
+    function RQ(QQ) {
+      lQ(QQ), "welcome" === QQ && bQ("welcome").forEach((QQ => {
+        const WQ = gQ[QQ];
+        WQ && UQ(WQ)
+      })), pQ()
+    }
+
+    function EQ(QQ) {
+      yQ = {
+        name: QQ,
+        stepsDone: new Set
+      }, pQ()
+    }
+
+    function CQ() {
+      (yQ || 0 !== jQ.size || 0 !== BQ.size) && (yQ = null, jQ.clear(), BQ.clear(), pQ())
+    }
+
+    function uQ(QQ, WQ) {
+      const XQ = WQ ? QQ : IQ === QQ ? null : IQ;
+      XQ !== IQ && (IQ = XQ, pQ())
+    }
+
+    function LQ(QQ, WQ) {
+      VQ.has(QQ) === WQ && (WQ ? VQ.delete(QQ) : VQ.add(QQ), pQ())
+    }
+
+    function kQ(QQ) {
+      return DQ.add(QQ), () => {
+        DQ.delete(QQ)
       }
-    }
-
-    function op(pp) {
-      return pp instanceof RangeError && /call stack/i.test(pp.message) || pp instanceof Error && "InternalError" === pp.name && /recursion/i.test(pp.message)
-    }
-    const Ip = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
-
-    function Sp(pp) {
-      var ip;
-      return pp instanceof WebAssembly.RuntimeError || pp instanceof Op || op(pp) && Ip.test(null !== (ip = pp.stack) && void 0 !== ip ? ip : "")
-    }
-
-    function xp(pp, ip) {
-      if (Sp(pp)) throw pp;
-      console.error(ip, pp)
-    }
-
-    function Lp(pp, ip, cp, op, Ip) {
-      if (ip % op !== 0 || ip + cp > pp.byteLength) throw new Op(`${Ip}: ${cp} bytes at ${ip}, ${op}-aligned, outside ${pp.byteLength} bytes of memory`)
-    }
-
-    function Yp(pp, ip, cp, Op, op) {
-      return 0 === cp ? null : (Lp(ip, cp, Op * pp.BYTES_PER_ELEMENT, pp.BYTES_PER_ELEMENT, op), new pp(ip, cp, Op))
-    }
-
-    function Dp(pp, ip, cp, Op, op) {
-      return 0 === ip ? null : (Lp(pp, ip, cp, Op, op), new DataView(pp, ip, cp))
-    }
-  },
-  40783: (pp, ip, cp) => {
-    cp.d(ip, {
-      C: () => yp,
-      e: () => Op,
-      i: () => vp,
-      k: () => Up,
-      n: () => wp,
-      o: () => Pp,
-      q: () => Wp,
-      u: () => Dp,
-      y: () => Ap
-    });
-    class Op extends Error {
-      constructor(pp) {
-        super(`the join's code did not load: ${pp instanceof Error?pp.message:String(pp)}`, {
-          cause: pp
-        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === pp || void 0 === pp ? void 0 : pp.request
-      }
-    }
-    let op = null,
-      Ip = null,
-      Sp = null;
-    const xp = [];
-    let Lp = null;
-
-    function Yp(pp, ip) {
-      try {
-        pp(ip)
-      } catch (cp) {
-        console.error("[bloxd-wasm-client] the game chunk's listener failed", cp)
-      }
-    }
-
-    function Dp() {
-      return Lp
-    }
-
-    function Ap(pp) {
-      xp.push(pp), null !== Lp && Yp(pp, Lp)
-    }
-
-    function Pp(pp) {
-      return op ??= Promise.all([cp.e(73), cp.e(98), cp.e(226), cp.e(78), cp.e(227), cp.e(201), cp.e(97), cp.e(246), cp.e(273), cp.e(199), cp.e(214), cp.e(191), cp.e(198), cp.e(193), cp.e(144), cp.e(88), cp.e(122), cp.e(252), cp.e(57)]).then((() => cp(42870))).then((ip => {
-        ip.loadAudio(pp), Lp = ip;
-        for (const pp of xp) Yp(pp, ip);
-        return ip
-      })).catch((pp => {
-        throw op = null, pp
-      })), op
-    }
-    async function Wp(pp, ip) {
-      try {
-        const cp = await Pp(pp);
-        await cp.loadClientGame(ip)
-      } catch (cp) {
-        throw new Op(cp)
-      }
-    }
-
-    function yp(pp, ip) {
-      Ip = {
-        running: pp,
-        shell: ip
-      }
-    }
-
-    function Up() {
-      return Sp
-    }
-    async function wp(pp) {
-      const ip = Ip;
-      if ((null === ip || void 0 === ip ? void 0 : ip.running) !== pp) throw new Error("the core's session has ended");
-      const cp = await Pp(ip.shell.audio).catch((pp => {
-        throw new Op(pp)
-      }));
-      if (null !== Sp) return Sp;
-      if (Ip !== ip || pp.isStopped) throw new Error("the core stopped while the game code loaded");
-      if (Sp = cp.startGameHost(pp, ip.shell), null === Sp) throw new Error("the core's shared tables didn't read, so the game can't start");
-      return Sp
-    }
-
-    function vp() {
-      null !== Sp && (null !== Lp ? Lp.endGameHost(Sp) : Sp.closeGame()), Sp = null, Ip = null
     }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const QQ in modules) Object.freeze(modules[QQ]);

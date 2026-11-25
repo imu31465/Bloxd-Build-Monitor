@@ -946,6 +946,14 @@
   inset: -.3rem
 }
 
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderStoreButton .HomeHeaderStoreDealChip {
+  left: 50%;
+  pointer-events: none;
+  position: absolute;
+  top: calc(100% + .25rem);
+  transform: translateX(-50%)
+}
+
 .HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderStoreButton[data-pressing] {
   box-shadow: none;
   filter: brightness(75%);
@@ -6942,6 +6950,41 @@ html[data-app-covered] .WholeAppWrapper .DailyDropBubble .DailyDropBubbleBlock {
   }
 }
 
+.NewPlayerDealChip {
+  align-items: center;
+  background-color: #1a1f2e;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  color: #fcd373;
+  display: inline-flex;
+  font-size: max(.8rem, 11px);
+  font-weight: 900;
+  gap: .25rem;
+  padding: .1rem .45rem;
+  white-space: nowrap
+}
+
+.NewPlayerDealChip svg {
+  height: .85em;
+  width: .85em
+}
+
+.CountdownTime {
+  display: inline-flex;
+  justify-content: flex-start
+}
+
+.CountdownTime .CountdownTimePart {
+  background-color: rgba(0, 0, 0, .2);
+  padding: 0 .1rem
+}
+
+.DaysClockCountdown {
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap
+}
+
 .SocialBarContainer {
   --collapsed-width: 5rem;
   --docked-width: 19rem;
@@ -7526,6 +7569,27 @@ html[data-app-covered] .WholeAppWrapper .DailyDropBubble .DailyDropBubbleBlock {
   right: .3rem;
   top: .3rem;
   width: .6rem
+}
+
+.SocialBarContainer.Docked .SocialBarOuter .SocialBar .SocialBarInner .SocialBarFooter .SocialBarActions .SocialBarActionsInner .SocialBarDealChipRow {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: .3rem
+}
+
+.SocialBarContainer.Docked .SocialBarOuter .SocialBar .SocialBarInner .SocialBarFooter .SocialBarActions .SocialBarActionsInner .SocialBarDealChipRow .SocialBarDealChipButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0
+}
+
+@media(pointer:coarse) {
+  .SocialBarContainer.Docked .SocialBarOuter .SocialBar .SocialBarInner .SocialBarFooter .SocialBarActions .SocialBarActionsInner .SocialBarDealChipRow .SocialBarDealChipButton {
+    box-sizing: border-box;
+    min-height: 44px;
+    min-width: 44px
+  }
 }
 
 .SocialBarContainer.Docked .SocialBarOuter .SocialBar .SocialBarInner .SocialBarFooter .HomeLinkButtons {
@@ -8628,6 +8692,139 @@ html[data-app-covered] .WholeAppWrapper .DailyDropBubble .DailyDropBubbleBlock {
 .LeftGamePromptCard.LeftGamePromptCardInFlow .PlayerRows {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr))
+}
+
+.GameBackgroundScreen.ReportBackgroundScreen {
+  background-color: rgba(26, 31, 46, .6);
+  z-index: 17
+}
+
+.GameBackgroundScreen.ReportBackgroundScreen .ReportPanel {
+  background-color: #303a59;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  color: #fff;
+  max-width: 80vw;
+  padding: 1.5rem;
+  text-align: center
+}
+
+.PromptGenericPopup.ReportCard {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.25rem;
+  max-height: calc(100vh - 5rem);
+  max-height: calc(100dvh - 5rem);
+  max-width: none;
+  width: min(50rem, 80vw)
+}
+
+.PromptGenericPopup.ReportCard>* {
+  flex-shrink: 0
+}
+
+.PromptGenericPopup.ReportCard .PromptGenericPopupSubtitle {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  padding-bottom: 0
+}
+
+.PromptGenericPopup.ReportCard .ReportCardReasons {
+  flex-shrink: 1;
+  min-height: 0;
+  overflow-y: auto
+}
+
+.PromptGenericPopup.ReportCard .ReportCardReasons .ReportCardReasonColumns {
+  column-count: 2;
+  column-gap: 1.5rem;
+  margin: 0 auto;
+  max-width: 100%;
+  text-align: left;
+  width: -moz-fit-content;
+  width: fit-content
+}
+
+.PromptGenericPopup.ReportCard .ReportCardReasons .ReportCardReasonColumns.OneColumn {
+  columns: auto
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+  .PromptGenericPopup.ReportCard .ReportCardReasons .ReportCardReasonColumns {
+    columns: auto
+  }
+}
+
+.PromptGenericPopup.ReportCard .ReportCardReasons .ReportCardReason {
+  align-items: flex-start;
+  break-inside: avoid;
+  cursor: pointer;
+  display: flex;
+  gap: .75rem;
+  line-height: 1.3;
+  padding: .375rem 0;
+  page-break-inside: avoid
+}
+
+.PromptGenericPopup.ReportCard .ReportCardReasons .ReportCardReason input {
+  accent-color: #ffb914;
+  flex-shrink: 0;
+  font-size: inherit;
+  height: 1em;
+  margin: .15em 0 0;
+  width: 1em
+}
+
+.PromptGenericPopup.ReportCard .ReportCardDetails {
+  box-sizing: border-box;
+  font-size: inherit;
+  height: calc(4.5em + 1rem + 2px);
+  line-height: 1.5;
+  margin-top: 1rem;
+  padding: .5rem;
+  resize: none;
+  text-align: left;
+  width: 100%
+}
+
+@media(orientation:landscape)and (max-height:500px) {
+  .PromptGenericPopup.ReportCard .ReportCardDetails {
+    height: calc(3em + 1rem + 2px)
+  }
+}
+
+.PromptGenericPopup.ReportCard .ReportCardNote,
+.PromptGenericPopup.ReportKeyBox .ReportCardNote {
+  color: #fcd373;
+  padding-top: 1rem
+}
+
+.PromptGenericPopup.ReportKeyBox .ReportKeyRow {
+  align-items: center;
+  display: flex;
+  font-size: 1.25rem;
+  gap: 1.5rem;
+  justify-content: center
+}
+
+.PromptGenericPopup.ReportKeyBox .ReportKeyRow .ReportKeyInner {
+  background-color: #303a59;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  overflow-x: auto;
+  padding: .5rem;
+  -webkit-user-select: all;
+  user-select: all;
+  white-space: nowrap
+}
+
+.PromptGenericPopup.ReportKeyBox .ReportKeyRow .ReportKeyCopyButton .ButtonBody {
+  padding: .75rem 1.5rem
 }
 
 .LiveStreamPromotion {
@@ -10469,6 +10666,12 @@ html[data-app-covered] .WholeAppWrapper .CosmeticShopDetail .CosmeticShopPurchas
   }
 }
 
+.MiddleScreenPopupBackground .MiddleScreenPopup.PremiumCurrencyPurchasePopup {
+  box-sizing: border-box;
+  max-height: 100%;
+  overflow-y: auto
+}
+
 @media(orientation:portrait)and (max-width:600px) {
   .MiddleScreenPopupBackground .MiddleScreenPopup.PremiumCurrencyPurchasePopup {
     box-sizing: border-box;
@@ -10561,6 +10764,10 @@ html[data-app-covered] .WholeAppWrapper .CosmeticShopDetail .CosmeticShopPurchas
   white-space: nowrap
 }
 
+.PremiumCurrencyPurchase .PremiumCurrencyPurchasePerks {
+  justify-content: flex-start
+}
+
 .PremiumCurrencyPurchase .PremiumCurrencyPurchaseBanner {
   font-size: 1.5rem;
   font-weight: 800;
@@ -10651,6 +10858,7 @@ html[data-app-covered] .WholeAppWrapper .CosmeticShopDetail .CosmeticShopPurchas
 
 .PremiumCurrencyBundles .PremiumCurrencyBundleGrid {
   grid-gap: 1rem;
+  container: bundleGrid/inline-size;
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
@@ -10659,6 +10867,18 @@ html[data-app-covered] .WholeAppWrapper .CosmeticShopDetail .CosmeticShopPurchas
 
 .PremiumCurrencyBundles .PremiumCurrencyBundleGrid.PremiumCurrencyBundleGridTileOnly {
   grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr))
+}
+
+.PremiumCurrencyBundles .PremiumCurrencyBundleGrid .PremiumCurrencyBundleGridAfterTile {
+  container: dealBannerSlot/inline-size;
+  grid-column: 1/-1;
+  min-width: 0
+}
+
+@container bundleGrid (min-width: 42rem) {
+  .PremiumCurrencyBundles .PremiumCurrencyBundleGrid .PremiumCurrencyBundleGridAfterTile {
+    grid-column: 2/-1
+  }
 }
 
 .PremiumCurrencyBundles .PremiumCurrencyBundleGrid[data-off-screen] .PremiumCurrencyBundle:before,
@@ -10876,6 +11096,125 @@ html[data-app-covered] .WholeAppWrapper .PremiumCurrencyBundles .PremiumCurrency
   display: flex;
   flex-direction: column;
   gap: 1rem
+}
+
+.PackPerkChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  justify-content: center
+}
+
+.PackPerkChips .PackPerkChip {
+  align-items: center;
+  background-color: #394980;
+  border: .2rem solid #0f0f0f;
+  color: #f2f2f2;
+  display: inline-flex;
+  font-size: 1.3rem;
+  font-weight: 800;
+  gap: .4rem;
+  padding: .3rem .7rem;
+  white-space: nowrap
+}
+
+.PackPerkChips .PackPerkChipTop {
+  color: #fff
+}
+
+.PackPerkChips.PackPerkChips-rare .PackPerkChipTop {
+  background-color: rgba(133, 186, 255, .15);
+  border-color: #85baff
+}
+
+.PackPerkChips.PackPerkChips-epic .PackPerkChipTop {
+  background-color: rgba(212, 156, 249, .15);
+  border-color: #d49cf9
+}
+
+.PackPerkChips.PackPerkChips-legendary .PackPerkChipTop {
+  background-color: hsla(42, 96%, 72%, .15);
+  border-color: #fcd373
+}
+
+.PackPerkChips.PackPerkChips-mythic .PackPerkChipTop {
+  background-color: rgba(243, 138, 182, .15);
+  border-color: #f38ab6
+}
+
+.PackPerkChips.CosmeticShopDetailPerks {
+  background-color: rgba(57, 73, 128, .4);
+  flex-shrink: 0;
+  padding: .5rem 1rem;
+  position: relative
+}
+
+@media(orientation:landscape)and (max-height:500px) {
+  .PackPerkChips.CosmeticShopDetailPerks {
+    gap: .3rem;
+    padding: .3rem 1rem
+  }
+
+  .PackPerkChips.CosmeticShopDetailPerks .PackPerkChip {
+    font-size: 1.1rem;
+    padding: .1rem .5rem
+  }
+}
+
+.PackAnimatedBadge {
+  align-items: center;
+  background-color: #b6830e;
+  border: .15rem solid #0f0f0f;
+  color: #fff;
+  display: inline-flex;
+  font-size: 1rem;
+  font-weight: 900;
+  gap: .3rem;
+  line-height: 1;
+  padding: .2rem .4rem;
+  pointer-events: none;
+  position: absolute;
+  right: .4rem;
+  text-shadow: -1px -1px 0 #0f0f0f, -1px 0 0 #0f0f0f, -1px 1px 0 #0f0f0f, 0 -1px 0 #0f0f0f, 0 0 0 #0f0f0f, 0 1px 0 #0f0f0f, 1px -1px 0 #0f0f0f, 1px 0 0 #0f0f0f, 1px 1px 0 #0f0f0f;
+  text-transform: uppercase;
+  top: .4rem;
+  z-index: 3
+}
+
+.PackAnimatedBadge .svg-inline--fa,
+.PackAnimatedBadge.svg-inline--fa {
+  paint-order: stroke fill
+}
+
+.PackAnimatedBadge .svg-inline--fa path:only-of-type,
+.PackAnimatedBadge.svg-inline--fa path:only-of-type {
+  stroke: #0f0f0f;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 2px;
+  stroke-linejoin: round
+}
+
+.PackAnimatedBadge.PackAnimatedBadgeBesideRibbon {
+  right: 4.8rem
+}
+
+.PackAnimatedBadge.PackAnimatedBadgeIcon {
+  box-sizing: border-box;
+  font-size: 1.3rem;
+  height: 2.4rem;
+  justify-content: center;
+  padding: 0;
+  width: 2.4rem
+}
+
+@media(hover:hover) {
+  .PackAnimatedBadge.PackAnimatedBadgeIcon {
+    pointer-events: auto
+  }
+}
+
+.PackAnimatedBadge.PackAnimatedBadgeBelowOwned {
+  top: 3.2rem
 }
 
 .StoreTierLabel {
@@ -11615,6 +11954,16 @@ html[data-app-covered=skipped] .WholeAppWrapper {
   z-index: 17
 }
 
+.ForceRotatePromptEntering {
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  background-color: #22283b
+}
+
+.ForceRotatePromptEntering>* {
+  visibility: hidden
+}
+
 .RotateScreenPrompt {
   font-size: min(10rem, 13vw)
 }
@@ -11639,6 +11988,10 @@ html[data-app-covered=skipped] .WholeAppWrapper {
 
 .ForceRotateEnterFullscreenButton {
   font-size: 5rem
+}
+
+.ForceRotateEnterFullscreenButton.NewButton {
+  transition: none
 }
 
 .ForceRotateEnterFullscreenButton .ButtonBody {
@@ -12390,16 +12743,6 @@ html[data-app-covered] .WholeAppWrapper .GameThumbnailPlaceholderContainer .Game
   background-image: none
 }
 
-.CountdownTime {
-  display: inline-flex;
-  justify-content: flex-start
-}
-
-.CountdownTime .CountdownTimePart {
-  background-color: rgba(0, 0, 0, .2);
-  padding: 0 .1rem
-}
-
 .GameBadgeLiveDot {
   animation: GameBadgeLivePulse 1.6s ease-in-out infinite;
   background-color: #fff;
@@ -13070,139 +13413,6 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
   .PlayerExclusionButton.PlayerExclusionButton-block:active {
     color: #ff8a80
   }
-}
-
-.GameBackgroundScreen.ReportBackgroundScreen {
-  background-color: rgba(26, 31, 46, .6);
-  z-index: 17
-}
-
-.GameBackgroundScreen.ReportBackgroundScreen .ReportPanel {
-  background-color: #303a59;
-  border: 1px solid #0f0f0f;
-  border-radius: 0;
-  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
-  color: #fff;
-  max-width: 80vw;
-  padding: 1.5rem;
-  text-align: center
-}
-
-.PromptGenericPopup.ReportCard {
-  display: flex;
-  flex-direction: column;
-  font-size: 1.25rem;
-  max-height: calc(100vh - 5rem);
-  max-height: calc(100dvh - 5rem);
-  max-width: none;
-  width: min(50rem, 80vw)
-}
-
-.PromptGenericPopup.ReportCard>* {
-  flex-shrink: 0
-}
-
-.PromptGenericPopup.ReportCard .PromptGenericPopupSubtitle {
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  display: -webkit-box;
-  margin-bottom: 1rem;
-  overflow: hidden;
-  overflow-wrap: anywhere;
-  padding-bottom: 0
-}
-
-.PromptGenericPopup.ReportCard .ReportCardReasons {
-  flex-shrink: 1;
-  min-height: 0;
-  overflow-y: auto
-}
-
-.PromptGenericPopup.ReportCard .ReportCardReasons .ReportCardReasonColumns {
-  column-count: 2;
-  column-gap: 1.5rem;
-  margin: 0 auto;
-  max-width: 100%;
-  text-align: left;
-  width: -moz-fit-content;
-  width: fit-content
-}
-
-.PromptGenericPopup.ReportCard .ReportCardReasons .ReportCardReasonColumns.OneColumn {
-  columns: auto
-}
-
-@media(orientation:portrait)and (max-width:600px) {
-  .PromptGenericPopup.ReportCard .ReportCardReasons .ReportCardReasonColumns {
-    columns: auto
-  }
-}
-
-.PromptGenericPopup.ReportCard .ReportCardReasons .ReportCardReason {
-  align-items: flex-start;
-  break-inside: avoid;
-  cursor: pointer;
-  display: flex;
-  gap: .75rem;
-  line-height: 1.3;
-  padding: .375rem 0;
-  page-break-inside: avoid
-}
-
-.PromptGenericPopup.ReportCard .ReportCardReasons .ReportCardReason input {
-  accent-color: #ffb914;
-  flex-shrink: 0;
-  font-size: inherit;
-  height: 1em;
-  margin: .15em 0 0;
-  width: 1em
-}
-
-.PromptGenericPopup.ReportCard .ReportCardDetails {
-  box-sizing: border-box;
-  font-size: inherit;
-  height: calc(4.5em + 1rem + 2px);
-  line-height: 1.5;
-  margin-top: 1rem;
-  padding: .5rem;
-  resize: none;
-  text-align: left;
-  width: 100%
-}
-
-@media(orientation:landscape)and (max-height:500px) {
-  .PromptGenericPopup.ReportCard .ReportCardDetails {
-    height: calc(3em + 1rem + 2px)
-  }
-}
-
-.PromptGenericPopup.ReportCard .ReportCardNote,
-.PromptGenericPopup.ReportKeyBox .ReportCardNote {
-  color: #fcd373;
-  padding-top: 1rem
-}
-
-.PromptGenericPopup.ReportKeyBox .ReportKeyRow {
-  align-items: center;
-  display: flex;
-  font-size: 1.25rem;
-  gap: 1.5rem;
-  justify-content: center
-}
-
-.PromptGenericPopup.ReportKeyBox .ReportKeyRow .ReportKeyInner {
-  background-color: #303a59;
-  border: 1px solid #0f0f0f;
-  border-radius: 0;
-  overflow-x: auto;
-  padding: .5rem;
-  -webkit-user-select: all;
-  user-select: all;
-  white-space: nowrap
-}
-
-.PromptGenericPopup.ReportKeyBox .ReportKeyRow .ReportKeyCopyButton .ButtonBody {
-  padding: .75rem 1.5rem
 }
 
 .DebugOverlay {
@@ -14384,6 +14594,25 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
   justify-content: flex-start
 }
 
+.CenteredDiv .CenteredDivMiddle .GameListCarousel .GameListCarouselPage .HomeLineLead10>:nth-child(-n+10),
+.CenteredDiv .CenteredDivMiddle .GameListCarousel .GameListCarouselPage .HomeLineLead11>:nth-child(-n+11),
+.CenteredDiv .CenteredDivMiddle .GameListCarousel .GameListCarouselPage .HomeLineLead12>:nth-child(-n+12),
+.CenteredDiv .CenteredDivMiddle .GameListCarousel .GameListCarouselPage .HomeLineLead13>:nth-child(-n+13),
+.CenteredDiv .CenteredDivMiddle .GameListCarousel .GameListCarouselPage .HomeLineLead14>:nth-child(-n+14),
+.CenteredDiv .CenteredDivMiddle .GameListCarousel .GameListCarouselPage .HomeLineLead15>:nth-child(-n+15),
+.CenteredDiv .CenteredDivMiddle .GameListCarousel .GameListCarouselPage .HomeLineLead16>:nth-child(-n+16),
+.CenteredDiv .CenteredDivMiddle .GameListCarousel .GameListCarouselPage .HomeLineLead1>:nth-child(-n+1),
+.CenteredDiv .CenteredDivMiddle .GameListCarousel .GameListCarouselPage .HomeLineLead2>:nth-child(-n+2),
+.CenteredDiv .CenteredDivMiddle .GameListCarousel .GameListCarouselPage .HomeLineLead3>:nth-child(-n+3),
+.CenteredDiv .CenteredDivMiddle .GameListCarousel .GameListCarouselPage .HomeLineLead4>:nth-child(-n+4),
+.CenteredDiv .CenteredDivMiddle .GameListCarousel .GameListCarouselPage .HomeLineLead5>:nth-child(-n+5),
+.CenteredDiv .CenteredDivMiddle .GameListCarousel .GameListCarouselPage .HomeLineLead6>:nth-child(-n+6),
+.CenteredDiv .CenteredDivMiddle .GameListCarousel .GameListCarouselPage .HomeLineLead7>:nth-child(-n+7),
+.CenteredDiv .CenteredDivMiddle .GameListCarousel .GameListCarouselPage .HomeLineLead8>:nth-child(-n+8),
+.CenteredDiv .CenteredDivMiddle .GameListCarousel .GameListCarouselPage .HomeLineLead9>:nth-child(-n+9) {
+  --home-card-columns: var(--home-lead-columns)
+}
+
 .CenteredDiv .CenteredDivMiddle .GameListCarousel .GameListCarouselPage.GameListCarouselPagePortrait {
   align-items: flex-start;
   flex-direction: row;
@@ -15521,7 +15750,7 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
   aspect-ratio: 1/1;
   box-sizing: border-box;
   padding: .35rem;
-  width: calc(100%/var(--homeRowSize))
+  width: calc(100%/var(--home-card-columns, var(--homeRowSize)))
 }
 
 .MyWorldButton.MyWorldButtonPad:not(.pad-focused) .MyWorldButtonInner {

@@ -1,26 +1,26 @@
-export const id = 15;
-export const ids = [15];
+export const id = 16;
+export const ids = [16];
 export const modules = {
-  39608: (pp, ip, cp) => {
-    cp.r(ip), cp.d(ip, {
-      default: () => op
+  39702: (QQ, WQ, XQ) => {
+    XQ.r(WQ), XQ.d(WQ, {
+      default: () => qQ
     });
-    const Op = [
+    const wQ = [
         [25, 8, 56],
         [25, 8, 54]
       ],
-      op = function(pp, ip, cp) {
-        let op;
+      qQ = function(QQ, WQ, XQ) {
+        let qQ;
         return {
-          onCreate: pp => {
-            op = pp
+          onCreate: QQ => {
+            qQ = QQ
           },
-          onPlayerAltAction: (pp, ip, cp, Ip, Sp, xp) => {
-            Op.some((pp => pp[0] === ip && pp[2] === Ip)) && op.openShop(pp, !1)
+          onPlayerAltAction: (QQ, WQ, XQ, TQ, zQ, sQ) => {
+            wQ.some((QQ => QQ[0] === WQ && QQ[2] === TQ)) && qQ.openShop(QQ, !1)
           }
         }
       }
   }
 };
 Object.freeze(modules);
-for (const pp in modules) Object.freeze(modules[pp]);
+for (const QQ in modules) Object.freeze(modules[QQ]);
