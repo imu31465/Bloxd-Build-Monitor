@@ -1,75 +1,75 @@
 export const id = 158;
 export const ids = [158];
 export const modules = {
-  8979: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      c: () => vB
+  9093: (tt, et, Vt) => {
+    Vt.d(et, {
+      d: () => dt
     });
-    var TB = ZB(20),
-      JB = ZB(1248),
-      oB = ZB(5143),
-      GB = ZB(1153);
+    var Ot = Vt(26),
+      qt = Vt(1286),
+      Dt = Vt(5155),
+      mt = Vt(1188);
 
-    function vB(BB) {
+    function dt(tt) {
       let {
-        note: IB
-      } = BB;
+        note: et
+      } = tt;
       const {
-        t: ZB
-      } = (0, JB.G)(), {
-        clientEscMenuOptions: vB
-      } = (0, TB.o)(["clientEscMenuOptions"]);
-      return (0, GB.jsx)(oB.e, {
-        label: ZB("touchSettings:actionButtons"),
-        checked: vB.touchActionButtons,
-        onClick: BB => {
-          TB.d.setClientEscMenuOptions({
-            touchActionButtons: BB
+        t: Vt
+      } = (0, qt.H)(), {
+        clientEscMenuOptions: dt
+      } = (0, Ot.k)(["clientEscMenuOptions"]);
+      return (0, mt.jsx)(Dt.c, {
+        label: Vt("touchSettings:actionButtons"),
+        checked: dt.touchActionButtons,
+        onClick: tt => {
+          Ot.b.setClientEscMenuOptions({
+            touchActionButtons: tt
           })
         },
-        circleInfoText: ZB("touchSettings:actionButtonsInfo"),
-        note: IB
+        circleInfoText: Vt("touchSettings:actionButtonsInfo"),
+        note: et
       })
     }
   },
-  8969: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      e: () => AZ,
-      h: () => lZ
+  9082: (tt, et, Vt) => {
+    Vt.d(et, {
+      c: () => YV,
+      f: () => iV
     });
-    var TB = ZB(1248),
-      JB = ZB(63),
-      oB = ZB(2066),
-      GB = ZB(2074),
-      vB = ZB(1091),
-      kB = ZB.n(vB),
-      cB = ZB(1516),
-      nB = ZB(20),
-      hB = ZB(105),
-      zB = ZB(121),
-      FB = ZB(5143),
-      NB = ZB(2526),
-      gB = ZB(282),
-      qB = ZB(2079),
-      yB = ZB(2083),
-      UB = ZB(8976),
-      WB = ZB(8979),
-      dB = ZB(342),
-      CB = ZB(1153);
-    const QB = {
+    var Ot = Vt(1286),
+      qt = Vt(63),
+      Dt = Vt(2074),
+      mt = Vt(2082),
+      dt = Vt(1140),
+      jt = Vt.n(dt),
+      Ht = Vt(1556),
+      Xt = Vt(26),
+      Qt = Vt(106),
+      lt = Vt(129),
+      Et = Vt(5155),
+      ft = Vt(2498),
+      wt = Vt(318),
+      yt = Vt(2084),
+      Nt = Vt(2088),
+      Mt = Vt(9091),
+      bt = Vt(9093),
+      Jt = Vt(377),
+      Ct = Vt(1188);
+    const ut = {
       floating: "settingsMenu:joystickFloating",
       fixed_shown: "settingsMenu:joystickFixed",
       fixed_hidden: "settingsMenu:joystickHidden"
     };
-    var sB = ZB(8985);
-    var wB = ZB(1542),
-      OB = ZB(1403),
-      YB = ZB(8991),
-      iB = ZB(1469),
-      pB = ZB(1102),
-      aB = ZB(8997),
-      HB = ZB(2555);
-    const MB = {
+    var Kt = Vt(9101);
+    var ht = Vt(1583),
+      vt = Vt(1450),
+      Wt = Vt(9109),
+      St = Vt(1513),
+      ct = Vt(1152),
+      Rt = Vt(9114),
+      It = Vt(2537);
+    const Pt = {
         sprint: "joystick",
         jump: "cluster",
         crouch: "cluster",
@@ -81,313 +81,313 @@ export const modules = {
         inventory: "hotbar",
         shop: "inventory",
         bag: "inventory",
-        ...Object.fromEntries(HB.A.map((BB => [BB, "menu"])))
+        ...Object.fromEntries(It.y.map((tt => [tt, "menu"])))
       },
-      jB = BB => HB.t.filter((IB => MB[IB] === BB)),
-      PB = new Set(jB("cluster")),
-      RB = new Set(jB("inventory")),
-      rB = BB => "inventory" === BB || RB.has(BB),
-      mB = BB => {
-        const IB = MB[BB];
-        return void 0 === IB ? [] : [IB, ...mB(IB)]
+      Zt = tt => It.v.filter((et => Pt[et] === tt)),
+      Lt = new Set(Zt("cluster")),
+      Ft = new Set(Zt("inventory")),
+      kt = tt => "inventory" === tt || Ft.has(tt),
+      Gt = tt => {
+        const et = Pt[tt];
+        return void 0 === et ? [] : [et, ...Gt(et)]
       },
-      XB = BB => [BB, ...mB(BB)],
-      LB = (BB, IB, ZB) => "shop" === BB && IB ? ZB("inventory") ? ["inventory"] : ZB("bag") ? [BB, "bag"] : [BB] : [BB],
-      eB = new Map([
-        ["cluster", PB],
-        ["inventory", RB]
+      zt = tt => [tt, ...Gt(tt)],
+      ot = (tt, et, Vt) => "shop" === tt && et ? Vt("inventory") ? ["inventory"] : Vt("bag") ? [tt, "bag"] : [tt] : [tt],
+      rt = new Map([
+        ["cluster", Lt],
+        ["inventory", Ft]
       ]),
-      uB = ["cluster"],
-      fB = [...uB, ...HB.t.filter((BB => !uB.includes(BB) && !MB[BB]))],
-      lB = BB => [BB, ...jB(BB).flatMap(lB)],
-      AB = fB.flatMap(lB).map((BB => ({
-        id: BB,
-        label: `hudLayout:${BB}`,
-        ...HB.r[BB],
-        parent: MB[BB]
+      Ut = ["cluster"],
+      At = [...Ut, ...It.v.filter((tt => !Ut.includes(tt) && !Pt[tt]))],
+      it = tt => [tt, ...Zt(tt).flatMap(it)],
+      Yt = At.flatMap(it).map((tt => ({
+        id: tt,
+        label: `hudLayout:${tt}`,
+        ...It.u[tt],
+        parent: Pt[tt]
       }))),
-      tB = Object.fromEntries(AB.map((BB => [BB.id, BB]))),
-      bB = "data-hud-el";
+      Bt = Object.fromEntries(Yt.map((tt => [tt.id, tt]))),
+      pt = "data-hud-el";
 
-    function xB(BB, IB, ZB, TB) {
-      const JB = ZB(function(BB, IB) {
-          return "attack" !== BB || IB ? tB[BB].label : "hudLayout:attackContext"
-        }(BB, IB)),
-        oB = TB[BB];
-      return oB ? ZB("hudLayout:slotWithKey", {
-        slot: JB,
-        key: oB
-      }) : JB
+    function xt(tt, et, Vt, Ot) {
+      const qt = Vt(function(tt, et) {
+          return "attack" !== tt || et ? Bt[tt].label : "hudLayout:attackContext"
+        }(tt, et)),
+        Dt = Ot[tt];
+      return Dt ? Vt("hudLayout:slotWithKey", {
+        slot: qt,
+        key: Dt
+      }) : qt
     }
 
-    function EB(BB, IB, ZB, TB) {
-      return BB.map((BB => xB(BB, IB, ZB, TB))).join(", ")
+    function Tt(tt, et, Vt, Ot) {
+      return tt.map((tt => xt(tt, et, Vt, Ot))).join(", ")
     }
 
-    function DB(BB) {
+    function gt(tt) {
       let {
-        className: IB,
-        keepPlace: ZB
-      } = BB;
-      return ZB ? (0, CB.jsx)("div", {
-        className: kB()(IB, "Placeholder")
+        className: et,
+        keepPlace: Vt
+      } = tt;
+      return Vt ? (0, Ct.jsx)("div", {
+        className: jt()(et, "Placeholder")
       }) : null
     }
 
-    function KB(BB) {
+    function st(tt) {
       let {
-        id: IB,
-        elements: ZB,
-        actionButtons: JB,
-        keyNames: oB,
-        className: GB,
-        keepPlace: vB,
-        onHidden: kB
-      } = BB;
+        id: et,
+        elements: Vt,
+        actionButtons: qt,
+        keyNames: Dt,
+        className: mt,
+        keepPlace: dt,
+        onHidden: jt
+      } = tt;
       const {
-        t: nB
-      } = (0, TB.G)();
-      if (!tB[IB].hide) return (0, CB.jsx)(DB, {
-        className: GB,
-        keepPlace: vB
+        t: Xt
+      } = (0, Ot.H)();
+      if (!Bt[et].hide) return (0, Ct.jsx)(gt, {
+        className: mt,
+        keepPlace: dt
       });
-      const hB = (0, HB.p)(ZB, IB);
-      return (0, CB.jsx)(cB.V, {
-        className: GB,
-        ariaLabel: nB(hB ? "hudLayout:showElement" : "hudLayout:hideElement", {
-          name: xB(IB, JB, nB, oB)
+      const Qt = (0, It.q)(Vt, et);
+      return (0, Ct.jsx)(Ht.Q, {
+        className: mt,
+        ariaLabel: Xt(Qt ? "hudLayout:showElement" : "hudLayout:hideElement", {
+          name: xt(et, qt, Xt, Dt)
         }),
-        pressed: !hB,
+        pressed: !Qt,
         onClick: () => {
-          kB(IB, !hB)
+          jt(et, !Qt)
         },
-        children: (0, CB.jsx)(pB.d, {
-          name: hB ? "eye-slash" : "eye"
+        children: (0, Ct.jsx)(ct.b, {
+          name: Qt ? "eye-slash" : "eye"
         })
       })
     }
 
-    function VB(BB) {
+    function nt(tt) {
       let {
-        id: IB,
-        elements: ZB,
-        actionButtons: JB,
-        keyNames: oB,
-        className: GB,
-        keepPlace: vB,
-        onlyWhenMoved: kB,
-        locked: nB,
-        onReset: hB
-      } = BB;
+        id: et,
+        elements: Vt,
+        actionButtons: qt,
+        keyNames: Dt,
+        className: mt,
+        keepPlace: dt,
+        onlyWhenMoved: jt,
+        locked: Xt,
+        onReset: Qt
+      } = tt;
       const {
-        t: zB
-      } = (0, TB.G)(), FB = tB[IB], NB = (0, HB.I)(ZB[IB]);
-      return !FB.move && !FB.scale || kB && NB ? (0, CB.jsx)(DB, {
-        className: GB,
-        keepPlace: vB
-      }) : (0, CB.jsx)(cB.V, {
-        className: GB,
-        disabled: NB || nB,
-        ariaLabel: zB("hudLayout:resetElement", {
-          name: xB(IB, JB, zB, oB)
+        t: lt
+      } = (0, Ot.H)(), Et = Bt[et], ft = (0, It.H)(Vt[et]);
+      return !Et.move && !Et.scale || jt && ft ? (0, Ct.jsx)(gt, {
+        className: mt,
+        keepPlace: dt
+      }) : (0, Ct.jsx)(Ht.Q, {
+        className: mt,
+        disabled: ft || Xt,
+        ariaLabel: lt("hudLayout:resetElement", {
+          name: xt(et, qt, lt, Dt)
         }),
         analyticsClick: {
           id: "hud_layout.reset_element",
-          value: IB
+          value: et
         },
-        onClick: BB => {
-          kB && ZI(BB.currentTarget), hB(IB)
+        onClick: tt => {
+          jt && Oe(tt.currentTarget), Qt(et)
         },
-        children: (0, CB.jsx)(pB.d, {
+        children: (0, Ct.jsx)(ct.b, {
           name: "rotate-left"
         })
       })
     }
 
-    function SB(BB) {
+    function te(tt) {
       let {
-        id: IB,
-        actionButtons: ZB,
-        keyNames: JB,
-        className: oB,
-        keepPlace: GB,
-        locked: vB,
-        lockable: kB,
-        onLocked: nB
-      } = BB;
+        id: et,
+        actionButtons: Vt,
+        keyNames: qt,
+        className: Dt,
+        keepPlace: mt,
+        locked: dt,
+        lockable: jt,
+        onLocked: Xt
+      } = tt;
       const {
-        t: hB
-      } = (0, TB.G)();
-      return kB || vB ? (0, CB.jsx)(cB.V, {
-        className: oB,
-        ariaLabel: hB(vB ? "hudLayout:unlockElement" : "hudLayout:lockElement", {
-          name: xB(IB, ZB, hB, JB)
+        t: Qt
+      } = (0, Ot.H)();
+      return jt || dt ? (0, Ct.jsx)(Ht.Q, {
+        className: Dt,
+        ariaLabel: Qt(dt ? "hudLayout:unlockElement" : "hudLayout:lockElement", {
+          name: xt(et, Vt, Qt, qt)
         }),
-        pressed: vB,
-        active: vB,
+        pressed: dt,
+        active: dt,
         analyticsClick: {
           id: "hud_layout.edit",
-          value: `${vB?"unlock":"lock"}:${IB}`
+          value: `${dt?"unlock":"lock"}:${et}`
         },
         onClick: () => {
-          nB(IB, !vB)
+          Xt(et, !dt)
         },
-        children: (0, CB.jsx)(pB.d, {
-          name: vB ? "lock" : "lock-open"
+        children: (0, Ct.jsx)(ct.b, {
+          name: dt ? "lock" : "lock-open"
         })
-      }) : (0, CB.jsx)(DB, {
-        className: oB,
-        keepPlace: GB
+      }) : (0, Ct.jsx)(gt, {
+        className: Dt,
+        keepPlace: mt
       })
     }
 
-    function BI(BB) {
+    function ee(tt) {
       let {
-        className: IB,
-        open: ZB,
-        name: JB,
-        onToggle: oB
-      } = BB;
+        className: et,
+        open: Vt,
+        name: qt,
+        onToggle: Dt
+      } = tt;
       const {
-        t: GB
-      } = (0, TB.G)();
-      return (0, CB.jsx)(cB.V, {
-        className: IB,
-        ariaLabel: GB(ZB ? "hudLayout:hideChildren" : "hudLayout:showChildren", {
-          name: JB
+        t: mt
+      } = (0, Ot.H)();
+      return (0, Ct.jsx)(Ht.Q, {
+        className: et,
+        ariaLabel: mt(Vt ? "hudLayout:hideChildren" : "hudLayout:showChildren", {
+          name: qt
         }),
-        pressed: ZB,
+        pressed: Vt,
         analyticsClick: {
           id: "hud_layout.children",
-          value: ZB ? "close" : "open"
+          value: Vt ? "close" : "open"
         },
         onClick: () => {
-          oB(!ZB)
+          Dt(!Vt)
         },
-        children: (0, CB.jsx)(pB.d, {
-          name: ZB ? "angle-up" : "angle-down"
+        children: (0, Ct.jsx)(ct.b, {
+          name: Vt ? "angle-up" : "angle-down"
         })
       })
     }
 
-    function II(BB, IB) {
-      var ZB;
-      BB.contains(document.activeElement) && IB.focus({
+    function Ve(tt, et) {
+      var Vt;
+      tt.contains(document.activeElement) && et.focus({
         preventScroll: !0
-      }), null === (ZB = (0, iB.d)()) || void 0 === ZB || ZB.handOverPadFocus(BB, IB)
+      }), null === (Vt = (0, St.g)()) || void 0 === Vt || Vt.handOverPadFocus(tt, et)
     }
 
-    function ZI(BB) {
-      const IB = BB.closest("[data-hud-row]"),
-        ZB = null === IB || void 0 === IB ? void 0 : IB.querySelector(".HudElementRowName");
-      return !(!IB || !ZB) && (II(IB, ZB), !0)
+    function Oe(tt) {
+      const et = tt.closest("[data-hud-row]"),
+        Vt = null === et || void 0 === et ? void 0 : et.querySelector(".HudElementRowName");
+      return !(!et || !Vt) && (Ve(et, Vt), !0)
     }
-    const TI = "button:not(:disabled), [role=button]:not([aria-disabled='true'])";
+    const qe = "button:not(:disabled), [role=button]:not([aria-disabled='true'])";
 
-    function JI(BB, IB) {
-      return "joystick" === BB && !IB
+    function De(tt, et) {
+      return "joystick" === tt && !et
     }
 
-    function oI() {
+    function me() {
       const {
-        t: BB
-      } = (0, TB.G)();
-      return (0, CB.jsx)(cB.V, {
+        t: tt
+      } = (0, Ot.H)();
+      return (0, Ct.jsx)(Ht.Q, {
         className: "HudFixJoystickButton",
         analyticsClick: {
           id: "hud_layout.fix_joystick"
         },
-        onClick: BB => {
-          const IB = BB.currentTarget;
-          if (!ZI(IB)) {
-            const BB = function(BB) {
-              var IB, ZB;
-              const TB = [BB.previousElementSibling, BB.nextElementSibling].find((BB => BB instanceof HTMLElement && BB.matches(TI)));
-              return null !== (IB = null !== TB && void 0 !== TB ? TB : null === (ZB = BB.closest(".HudLayoutSidePanel, .HudFullScreenToolbar")) || void 0 === ZB ? void 0 : ZB.querySelector(`:is(${TI}):not(.HudFixJoystickButton)`)) && void 0 !== IB ? IB : null
-            }(IB);
-            BB && II(IB, BB)
+        onClick: tt => {
+          const et = tt.currentTarget;
+          if (!Oe(et)) {
+            const tt = function(tt) {
+              var et, Vt;
+              const Ot = [tt.previousElementSibling, tt.nextElementSibling].find((tt => tt instanceof HTMLElement && tt.matches(qe)));
+              return null !== (et = null !== Ot && void 0 !== Ot ? Ot : null === (Vt = tt.closest(".HudLayoutSidePanel, .HudFullScreenToolbar")) || void 0 === Vt ? void 0 : Vt.querySelector(`:is(${qe}):not(.HudFixJoystickButton)`)) && void 0 !== et ? et : null
+            }(et);
+            tt && Ve(et, tt)
           }
-          nB.d.setClientEscMenuOptions({
+          Xt.b.setClientEscMenuOptions({
             joystickMode: "fixed_shown"
           })
         },
-        children: BB("hudLayout:fixJoystick")
+        children: tt("hudLayout:fixJoystick")
       })
     }
-    var GI = ZB(82),
-      vI = ZB(1343),
-      kI = ZB(3272),
-      cI = ZB(2896),
-      nI = ZB(2562);
-    const hI = (BB, IB, ZB) => {
-      const TB = mB(IB).includes(BB) ? BB : mB(BB).includes(IB) ? IB : null;
-      if (null === TB || "joystick" === TB) return !1;
-      const JB = TB === BB ? IB : BB;
-      if ("menu" === TB) return (0, nI.y)(JB, ZB.hudElements[JB]);
-      if ("hotbar" !== TB || !rB(JB)) return !0;
-      if ((0, HB.M)(ZB.hudElements[JB]) || (0, HB.M)(ZB.hudElements.inventory)) return !1;
-      return !(ZB.hudLocked.includes(JB) || ZB.hudLocked.includes("inventory")) || (0, HB.I)(ZB.hudElements.hotbar)
+    var de = Vt(83),
+      je = Vt(1371),
+      He = Vt(3176),
+      Xe = Vt(2821),
+      Qe = Vt(2546);
+    const le = (tt, et, Vt) => {
+      const Ot = Gt(et).includes(tt) ? tt : Gt(tt).includes(et) ? et : null;
+      if (null === Ot || "joystick" === Ot) return !1;
+      const qt = Ot === tt ? et : tt;
+      if ("menu" === Ot) return (0, Qe.t)(qt, Vt.hudElements[qt]);
+      if ("hotbar" !== Ot || !kt(qt)) return !0;
+      if ((0, It.L)(Vt.hudElements[qt]) || (0, It.L)(Vt.hudElements.inventory)) return !1;
+      return !(Vt.hudLocked.includes(qt) || Vt.hudLocked.includes("inventory")) || (0, It.H)(Vt.hudElements.hotbar)
     };
-    var zI = ZB(2590),
-      FI = ZB(3316),
-      NI = ZB(8999);
-    const gI = BB => ({
-      [bB]: BB
+    var Ee = Vt(2569),
+      fe = Vt(3217),
+      we = Vt(9120);
+    const ye = tt => ({
+      [pt]: tt
     });
 
-    function qI(BB) {
+    function Ne(tt) {
       let {
-        id: IB,
-        slot: ZB,
-        icon: TB,
-        label: oB,
-        hidden: GB,
-        className: vB,
-        face: cB
-      } = BB;
-      const nB = (0, JB.useRef)(null);
-      return (0, JB.useLayoutEffect)((() => {
-        cB && nB.current && (0, NI.q)(nB.current, cB)
-      }), [cB]), (0, CB.jsxs)("div", {
-        className: kB()("TouchKeyHit", `TouchSlot${ZB}`, vB, {
-          HudPreviewGhost: GB.has(IB)
+        id: et,
+        slot: Vt,
+        icon: Ot,
+        label: Dt,
+        hidden: mt,
+        className: dt,
+        face: Ht
+      } = tt;
+      const Xt = (0, qt.useRef)(null);
+      return (0, qt.useLayoutEffect)((() => {
+        Ht && Xt.current && (0, we.m)(Xt.current, Ht)
+      }), [Ht]), (0, Ct.jsxs)("div", {
+        className: jt()("TouchKeyHit", `TouchSlot${Vt}`, dt, {
+          HudPreviewGhost: mt.has(et)
         }),
-        ...gI(IB),
-        children: [cB && (0, CB.jsx)("div", {
-          ref: nB,
-          className: kB()("TouchKey", {
-            Labelled: cB.classList.contains("Labelled")
+        ...ye(et),
+        children: [Ht && (0, Ct.jsx)("div", {
+          ref: Xt,
+          className: jt()("TouchKey", {
+            Labelled: Ht.classList.contains("Labelled")
           })
-        }), !cB && (0, CB.jsxs)("div", {
-          className: kB()("TouchKey", {
-            Labelled: void 0 !== oB
+        }), !Ht && (0, Ct.jsxs)("div", {
+          className: jt()("TouchKey", {
+            Labelled: void 0 !== Dt
           }),
-          children: [TB && (0, CB.jsx)(pB.d, {
-            name: TB
-          }), void 0 !== oB && (0, CB.jsx)("span", {
+          children: [Ot && (0, Ct.jsx)(ct.b, {
+            name: Ot
+          }), void 0 !== Dt && (0, Ct.jsx)("span", {
             className: "TouchKeyLabel",
-            children: oB
+            children: Dt
           })]
         })]
       })
     }
 
-    function yI(BB) {
+    function ae(tt) {
       let {
-        item: IB,
-        selected: ZB
-      } = BB;
-      const TB = (0, JB.useRef)(null);
-      return (0, JB.useLayoutEffect)((() => {
-        TB.current && (0, NI.q)(TB.current, IB)
-      }), [IB]), (0, CB.jsx)("div", {
-        ref: TB,
-        className: kB()("InvenItem", {
-          Selected: ZB
+        item: et,
+        selected: Vt
+      } = tt;
+      const Ot = (0, qt.useRef)(null);
+      return (0, qt.useLayoutEffect)((() => {
+        Ot.current && (0, we.m)(Ot.current, et)
+      }), [et]), (0, Ct.jsx)("div", {
+        ref: Ot,
+        className: jt()("InvenItem", {
+          Selected: Vt
         })
       })
     }
-    const UI = {
+    const Me = {
         emotes: "face-smile",
         perspective: "video",
         scoreboard: "list",
@@ -396,173 +396,173 @@ export const modules = {
         invite: "user-plus",
         settings: "gear"
       },
-      WI = BB => void 0 === BB ? {} : {
+      be = tt => void 0 === tt ? {} : {
         style: {
-          "--parked": BB
+          "--parked": tt
         }
       };
 
-    function dI(BB) {
+    function Je(tt) {
       let {
-        id: IB,
-        hidden: ZB,
-        parked: TB,
-        unslotted: JB = !1
-      } = BB;
-      return (0, CB.jsx)("div", {
-        className: kB()("TopRightIcon", zI.l[IB], {
-          HudPreviewGhost: ZB.has(IB),
-          [nI.c]: void 0 !== TB,
-          [nI.g]: JB
+        id: et,
+        hidden: Vt,
+        parked: Ot,
+        unslotted: qt = !1
+      } = tt;
+      return (0, Ct.jsx)("div", {
+        className: jt()("TopRightIcon", Ee.p[et], {
+          HudPreviewGhost: Vt.has(et),
+          [Qe.c]: void 0 !== Ot,
+          [Qe.e]: qt
         }),
-        ...WI(TB),
-        children: (0, CB.jsx)("div", {
+        ...be(Ot),
+        children: (0, Ct.jsx)("div", {
           className: "UiItemIcon SmallTextBold",
-          ...gI(IB),
-          children: (0, CB.jsx)("div", {
+          ...ye(et),
+          children: (0, Ct.jsx)("div", {
             className: "ScaleOnHover",
-            children: (0, CB.jsx)(pB.d, {
-              name: UI[IB]
+            children: (0, Ct.jsx)(ct.b, {
+              name: Me[et]
             })
           })
         })
       })
     }
 
-    function CI(BB) {
+    function Ce(tt) {
       let {
-        portraitPhone: IB,
-        icons: ZB,
-        pinnedIcons: TB,
-        hidden: oB,
-        moved: GB,
-        trayState: vB
-      } = BB;
-      const cB = IB ? (0, nI.H)(ZB) : [],
-        nB = ZB.filter((BB => "settings" === BB)),
-        hB = ZB.filter((BB => "settings" !== BB && !cB.includes(BB))).reverse(),
-        zB = cB.length > 0 && "gone" === vB,
-        FB = [...nB, ...zB ? ["tray"] : [], ...hB].filter((BB => "tray" === BB || oB.has(BB) && !GB.has(BB))),
-        NB = BB => {
-          const IB = FB.indexOf(BB);
-          return IB < 0 ? void 0 : IB
+        portraitPhone: et,
+        icons: Vt,
+        pinnedIcons: Ot,
+        hidden: Dt,
+        moved: mt,
+        trayState: dt
+      } = tt;
+      const Ht = et ? (0, Qe.y)(Vt) : [],
+        Xt = Vt.filter((tt => "settings" === tt)),
+        Qt = Vt.filter((tt => "settings" !== tt && !Ht.includes(tt))).reverse(),
+        lt = Ht.length > 0 && "gone" === dt,
+        Et = [...Xt, ...lt ? ["tray"] : [], ...Qt].filter((tt => "tray" === tt || Dt.has(tt) && !mt.has(tt))),
+        ft = tt => {
+          const et = Et.indexOf(tt);
+          return et < 0 ? void 0 : et
         },
-        gB = (BB, IB) => (0, CB.jsx)(dI, {
-          id: BB,
-          hidden: oB,
-          parked: IB ? NB(BB) : void 0,
-          unslotted: IB && oB.has(BB) && GB.has(BB)
-        }, BB);
-      return (0, CB.jsxs)("div", {
-        className: kB()("TopRightIcons TouchInGame", {
-          Column: IB
+        wt = (tt, et) => (0, Ct.jsx)(Je, {
+          id: tt,
+          hidden: Dt,
+          parked: et ? ft(tt) : void 0,
+          unslotted: et && Dt.has(tt) && mt.has(tt)
+        }, tt);
+      return (0, Ct.jsxs)("div", {
+        className: jt()("TopRightIcons TouchInGame", {
+          Column: et
         }),
-        children: [nB.map((BB => gB(BB, !0))), cB.length > 0 && (0, CB.jsxs)("div", {
-          className: kB()("TopRightIcon TopRightTrayToggle Open", {
-            [nI.c]: zB
+        children: [Xt.map((tt => wt(tt, !0))), Ht.length > 0 && (0, Ct.jsxs)("div", {
+          className: jt()("TopRightIcon TopRightTrayToggle Open", {
+            [Qe.c]: lt
           }),
-          ...WI(NB("tray")),
-          children: [(0, CB.jsx)("div", {
-            className: kB()("UiItemIcon SmallTextBold", {
-              HudPreviewGhost: "filled" !== vB
+          ...be(ft("tray")),
+          children: [(0, Ct.jsx)("div", {
+            className: jt()("UiItemIcon SmallTextBold", {
+              HudPreviewGhost: "filled" !== dt
             }),
-            children: (0, CB.jsx)("div", {
+            children: (0, Ct.jsx)("div", {
               className: "ScaleOnHover",
-              children: (0, CB.jsx)(pB.d, {
+              children: (0, Ct.jsx)(ct.b, {
                 name: "ellipsis"
               })
             })
-          }), (0, CB.jsx)("div", {
+          }), (0, Ct.jsx)("div", {
             className: "TopRightTray",
-            children: cB.map((BB => gB(BB, !1)))
+            children: Ht.map((tt => wt(tt, !1)))
           })]
-        }), hB.map((BB => (0, CB.jsxs)(JB.Fragment, {
-          children: ["perspective" === BB && null !== TB.rightOfCamera && (0, CB.jsx)(QI, {
-            icon: TB.rightOfCamera
-          }), gB(BB, !0)]
-        }, BB))), null !== TB.leftEnd && (0, CB.jsx)(QI, {
-          icon: TB.leftEnd
+        }), Qt.map((tt => (0, Ct.jsxs)(qt.Fragment, {
+          children: ["perspective" === tt && null !== Ot.rightOfCamera && (0, Ct.jsx)(ue, {
+            icon: Ot.rightOfCamera
+          }), wt(tt, !0)]
+        }, tt))), null !== Ot.leftEnd && (0, Ct.jsx)(ue, {
+          icon: Ot.leftEnd
         })]
       })
     }
 
-    function QI(BB) {
+    function ue(tt) {
       let {
-        icon: IB
-      } = BB;
-      return (0, CB.jsx)("div", {
+        icon: et
+      } = tt;
+      return (0, Ct.jsx)("div", {
         className: "TopRightIcon",
-        children: (0, CB.jsx)("div", {
+        children: (0, Ct.jsx)("div", {
           className: "UiItemIcon SmallTextBold",
-          children: (0, CB.jsx)("div", {
+          children: (0, Ct.jsx)("div", {
             className: "ScaleOnHover",
-            children: (0, CB.jsx)(pB.d, {
-              name: IB
+            children: (0, Ct.jsx)(ct.b, {
+              name: et
             })
           })
         })
       })
     }
 
-    function sI(BB) {
+    function Ke(tt) {
       let {
-        next: IB,
-        hidden: ZB
-      } = BB;
-      return (0, CB.jsx)("div", {
-        className: kB()("HotBarArrow", IB ? "Next" : "Previous", {
-          HudPreviewGhost: ZB
+        next: et,
+        hidden: Vt
+      } = tt;
+      return (0, Ct.jsx)("div", {
+        className: jt()("HotBarArrow", et ? "Next" : "Previous", {
+          HudPreviewGhost: Vt
         }),
-        ...gI("arrows"),
-        children: (0, CB.jsx)("div", {
+        ...ye("arrows"),
+        children: (0, Ct.jsx)("div", {
           className: "UiItemIcon SmallTextBold",
-          children: (0, CB.jsx)("div", {
+          children: (0, Ct.jsx)("div", {
             className: "ScaleOnHover",
-            children: (0, CB.jsx)(pB.d, {
-              name: IB ? "caret-right" : "caret-left"
+            children: (0, Ct.jsx)(ct.b, {
+              name: et ? "caret-right" : "caret-left"
             })
           })
         })
       })
     }
 
-    function wI() {
-      return (0, CB.jsx)("div", {
+    function he() {
+      return (0, Ct.jsx)("div", {
         className: "SocialBarContainer",
-        children: (0, CB.jsx)("div", {
+        children: (0, Ct.jsx)("div", {
           className: "SocialBarOuter",
-          children: (0, CB.jsx)("div", {
+          children: (0, Ct.jsx)("div", {
             className: "SocialBar",
-            children: (0, CB.jsx)("div", {
+            children: (0, Ct.jsx)("div", {
               className: "CondensedSocialBarInner",
-              children: (0, CB.jsx)("div", {
+              children: (0, Ct.jsx)("div", {
                 className: "CondensedSectionsContainer",
-                children: (0, CB.jsxs)("div", {
+                children: (0, Ct.jsxs)("div", {
                   className: "CondensedSections",
-                  children: [(0, CB.jsxs)("div", {
+                  children: [(0, Ct.jsxs)("div", {
                     className: "CondensedSection CondensedSectionFriendRequests",
-                    children: [(0, CB.jsx)("div", {
+                    children: [(0, Ct.jsx)("div", {
                       className: "CondensedSectionValue",
                       children: "0"
-                    }), (0, CB.jsx)("div", {
+                    }), (0, Ct.jsx)("div", {
                       className: "CondensedSectionIcon",
-                      children: (0, CB.jsx)(pB.d, {
+                      children: (0, Ct.jsx)(ct.b, {
                         name: "user-clock"
                       })
                     })]
-                  }), (0, CB.jsx)("div", {
+                  }), (0, Ct.jsx)("div", {
                     className: "SocialBarDividerContainer",
-                    children: (0, CB.jsx)("div", {
+                    children: (0, Ct.jsx)("div", {
                       className: "SocialBarDivider"
                     })
-                  }), (0, CB.jsxs)("div", {
+                  }), (0, Ct.jsxs)("div", {
                     className: "CondensedSection CondensedSectionOnlineFriends",
-                    children: [(0, CB.jsx)("div", {
+                    children: [(0, Ct.jsx)("div", {
                       className: "CondensedSectionValue",
                       children: "0"
-                    }), (0, CB.jsx)("div", {
+                    }), (0, Ct.jsx)("div", {
                       className: "CondensedSectionIcon",
-                      children: (0, CB.jsx)(pB.d, {
+                      children: (0, Ct.jsx)(ct.b, {
                         name: "user"
                       })
                     })]
@@ -574,11 +574,11 @@ export const modules = {
         })
       })
     }
-    const OI = {
+    const ve = {
         J: "JumpKey",
         C: "CrouchKey"
       },
-      YI = {
+      We = {
         P: {
           icon: "crosshairs",
           labelKey: "touchKeys:scope"
@@ -588,8 +588,8 @@ export const modules = {
           labelKey: "touchKeys:fly"
         }
       },
-      iI = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
-      pI = {
+      Se = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+      ce = {
         0: "swords",
         1: "hammer",
         2: "cube",
@@ -597,320 +597,320 @@ export const modules = {
         5: "cookie"
       };
 
-    function aI(BB) {
+    function Re(tt) {
       let {
-        presence: IB,
-        portraitPhone: ZB,
-        hidden: JB,
-        actionButtons: oB,
-        joystickFixed: GB,
-        keysAbove: vB,
-        auraBar: cB,
-        trayState: nB,
-        moved: zB
-      } = BB;
+        presence: et,
+        portraitPhone: Vt,
+        hidden: qt,
+        actionButtons: Dt,
+        joystickFixed: mt,
+        keysAbove: dt,
+        auraBar: Ht,
+        trayState: Xt,
+        moved: lt
+      } = tt;
       const {
-        t: FB
-      } = (0, TB.G)(), {
-        faces: NB,
-        items: gB
-      } = IB, qB = BB => ({
-        HudPreviewGhost: XB(BB).some((BB => JB.has(BB)))
+        t: Et
+      } = (0, Ot.H)(), {
+        faces: ft,
+        items: wt
+      } = et, yt = tt => ({
+        HudPreviewGhost: zt(tt).some((tt => qt.has(tt)))
       });
-      return (0, CB.jsxs)("div", {
+      return (0, Ct.jsxs)("div", {
         className: "InGameUi HudPreviewInGameUi",
-        children: [(0, CB.jsx)("div", {
+        children: [(0, Ct.jsx)("div", {
           className: "InGameHeaderContainer Touchscreen",
-          children: (0, CB.jsxs)("div", {
+          children: (0, Ct.jsxs)("div", {
             className: "InGameHeader",
-            children: [(0, CB.jsx)("div", {
+            children: [(0, Ct.jsx)("div", {
               className: "InGameHeaderLogo",
               children: "bloxd.io"
-            }), (0, CB.jsx)("div", {
+            }), (0, Ct.jsx)("div", {
               className: "InGameHeaderSpacer"
-            }), (0, CB.jsx)("div", {
+            }), (0, Ct.jsx)("div", {
               className: "InGameHeaderGameName",
-              children: FB("hudLayout:previewGameName")
+              children: Et("hudLayout:previewGameName")
             })]
           })
-        }), (0, CB.jsx)("div", {
+        }), (0, Ct.jsx)("div", {
           className: "TopLeftElements",
-          children: (0, CB.jsx)("div", {
+          children: (0, Ct.jsx)("div", {
             className: "InGameHeaderAndChat",
-            children: (0, CB.jsxs)("div", {
+            children: (0, Ct.jsxs)("div", {
               className: "Chat",
-              children: [(0, CB.jsx)("div", {
+              children: [(0, Ct.jsx)("div", {
                 className: "ChatMessages HideScrollbar",
-                children: [FB("hudLayout:previewChatLine"), FB("hudLayout:previewChatJoined", {
+                children: [Et("hudLayout:previewChatLine"), Et("hudLayout:previewChatJoined", {
                   name: "Steve"
-                }), FB("hudLayout:previewChatJoined", {
+                }), Et("hudLayout:previewChatJoined", {
                   name: "Alex"
-                })].map((BB => (0, CB.jsx)("div", {
+                })].map((tt => (0, Ct.jsx)("div", {
                   className: "MessageWrapper",
-                  children: (0, CB.jsx)("div", {
+                  children: (0, Ct.jsx)("div", {
                     className: "TextFromServer",
-                    children: (0, CB.jsx)("div", {
+                    children: (0, Ct.jsx)("div", {
                       className: "IndividualText",
-                      children: BB
+                      children: tt
                     })
                   })
-                }, BB)))
-              }), (0, CB.jsx)("button", {
+                }, tt)))
+              }), (0, Ct.jsx)("button", {
                 type: "button",
                 tabIndex: -1,
-                className: kB()("ChatIconWrapper SmallTextLight", qB("chat")),
-                ...gI("chat"),
-                children: (0, CB.jsx)(pB.d, {
+                className: jt()("ChatIconWrapper SmallTextLight", yt("chat")),
+                ...ye("chat"),
+                children: (0, Ct.jsx)(ct.b, {
                   name: "comment-dots",
                   className: "ChatIcon"
                 })
               })]
             })
           })
-        }), (0, CB.jsx)("div", {
+        }), (0, Ct.jsx)("div", {
           className: "RightElements RightElementsTouchscreen",
-          children: (0, CB.jsxs)("div", {
+          children: (0, Ct.jsxs)("div", {
             className: "TopRightElements",
-            children: [(0, CB.jsx)("div", {
+            children: [(0, Ct.jsx)("div", {
               className: "TopRightElementsLeft",
-              children: (0, CB.jsx)("div", {
+              children: (0, Ct.jsx)("div", {
                 className: "TopRightIconsContainer",
-                ...gI("menu"),
-                children: (0, CB.jsx)(CI, {
-                  portraitPhone: ZB,
-                  icons: IB.rowIcons,
-                  pinnedIcons: IB.pinnedIcons,
-                  hidden: JB,
-                  trayState: nB,
-                  moved: zB
+                ...ye("menu"),
+                children: (0, Ct.jsx)(Ce, {
+                  portraitPhone: Vt,
+                  icons: et.rowIcons,
+                  pinnedIcons: et.pinnedIcons,
+                  hidden: qt,
+                  trayState: Xt,
+                  moved: lt
                 })
               })
-            }), hB.featureFlags.useSocialFeatures && (0, CB.jsx)("div", {
+            }), Qt.featureFlags.useSocialFeatures && (0, Ct.jsx)("div", {
               className: "TopRightElementsRight",
-              children: (0, CB.jsx)(wI, {})
+              children: (0, Ct.jsx)(he, {})
             })]
           })
-        }), (0, CB.jsx)("div", {
+        }), (0, Ct.jsx)("div", {
           className: "HudPreviewCrosshair"
-        }), (0, CB.jsx)("div", {
+        }), (0, Ct.jsx)("div", {
           className: "TouchInteractHit HudPreviewInteract",
-          children: (0, CB.jsxs)("div", {
+          children: (0, Ct.jsxs)("div", {
             className: "TouchInteractKey",
-            ...gI("interact"),
-            children: [(0, CB.jsx)("div", {
+            ...ye("interact"),
+            children: [(0, Ct.jsx)("div", {
               className: "TouchInteractIcon",
-              children: (0, CB.jsx)(pB.d, {
+              children: (0, Ct.jsx)(ct.b, {
                 name: "hand-back-point-up"
               })
-            }), (0, CB.jsx)("div", {
-              children: FB("hudLayout:previewInteract")
+            }), (0, Ct.jsx)("div", {
+              children: Et("hudLayout:previewInteract")
             })]
           })
-        }), (0, CB.jsx)("div", {
+        }), (0, Ct.jsx)("div", {
           className: "BottomCentre",
-          children: (0, CB.jsxs)("div", {
+          children: (0, Ct.jsxs)("div", {
             className: "BottomElements",
-            children: [(0, CB.jsx)("div", {
+            children: [(0, Ct.jsx)("div", {
               className: "BottomLeftElements Touch"
-            }), (0, CB.jsxs)("div", {
+            }), (0, Ct.jsxs)("div", {
               className: "BottomMiddleElements",
-              children: [(0, CB.jsx)("div", {
+              children: [(0, Ct.jsx)("div", {
                 className: "BottomScreenStatBarList",
-                ...gI("hotbar"),
-                children: (0, CB.jsx)("div", {
+                ...ye("hotbar"),
+                children: (0, Ct.jsx)("div", {
                   className: "BottomScreenStatBarWrapper",
-                  children: (0, CB.jsxs)("div", {
+                  children: (0, Ct.jsxs)("div", {
                     className: "BottomScreenStatBarBackground",
-                    children: [(0, CB.jsx)("div", {
+                    children: [(0, Ct.jsx)("div", {
                       className: "BottomScreenStatBar HealthBar",
                       style: {
                         transform: "scaleX(0.8)",
                         transformOrigin: "left center"
                       }
-                    }), (0, CB.jsxs)("div", {
+                    }), (0, Ct.jsxs)("div", {
                       className: "BottomScreenStatBarText SmallTextBold",
-                      children: [(0, CB.jsx)(pB.d, {
+                      children: [(0, Ct.jsx)(ct.b, {
                         name: "heart"
                       }), " 80/100"]
                     })]
                   })
                 })
-              }), cB && (0, CB.jsxs)("div", {
+              }), Ht && (0, Ct.jsxs)("div", {
                 className: "AuraBarWrapper",
-                children: [(0, CB.jsxs)("div", {
+                children: [(0, Ct.jsxs)("div", {
                   className: "AuraBarLabel SmallTextBold",
-                  children: [(0, CB.jsx)("img", {
+                  children: [(0, Ct.jsx)("img", {
                     className: "AuraBarLabelImage",
-                    src: (0, FI.f)("glint"),
+                    src: (0, fe.g)("glint"),
                     alt: ""
-                  }), (0, CB.jsx)("div", {
+                  }), (0, Ct.jsx)("div", {
                     className: "AuraBarLabelText",
                     children: "0"
                   })]
-                }), (0, CB.jsx)("div", {
+                }), (0, Ct.jsx)("div", {
                   className: "AuraBar",
-                  children: (0, CB.jsx)("div", {
+                  children: (0, Ct.jsx)("div", {
                     className: "AuraBarBackground",
                     style: {
                       width: "40%"
                     }
                   })
                 })]
-              }), (0, CB.jsx)("div", {
+              }), (0, Ct.jsx)("div", {
                 className: "HotBarRow",
-                children: (0, CB.jsx)("div", {
-                  className: kB()("HotBarContainer Touch", {
-                    KeysAbove: vB
+                children: (0, Ct.jsx)("div", {
+                  className: jt()("HotBarContainer Touch", {
+                    KeysAbove: dt
                   }),
-                  children: (0, CB.jsxs)("div", {
+                  children: (0, Ct.jsxs)("div", {
                     className: "HotBar",
-                    ...gI("hotbar"),
-                    children: [(0, CB.jsxs)("div", {
-                      className: kB()("TouchInventoryKeys", {
-                        NoAuraBar: !cB
+                    ...ye("hotbar"),
+                    children: [(0, Ct.jsxs)("div", {
+                      className: jt()("TouchInventoryKeys", {
+                        NoAuraBar: !Ht
                       }),
-                      children: [(0, CB.jsx)("div", {
-                        className: kB()("TouchInventoryKey ShopKey", qB("shop"), {
-                          Hidden: !IB.shop
+                      children: [(0, Ct.jsx)("div", {
+                        className: jt()("TouchInventoryKey ShopKey", yt("shop"), {
+                          Hidden: !et.shop
                         }),
-                        ...gI("shop"),
-                        children: (0, CB.jsx)("div", {
+                        ...ye("shop"),
+                        children: (0, Ct.jsx)("div", {
                           className: "UiItemIcon SmallTextBold",
-                          children: (0, CB.jsx)("div", {
+                          children: (0, Ct.jsx)("div", {
                             className: "ScaleOnHover",
-                            children: (0, CB.jsx)(pB.d, {
+                            children: (0, Ct.jsx)(ct.b, {
                               name: "cart-shopping"
                             })
                           })
                         })
-                      }), (0, CB.jsx)("div", {
-                        className: kB()("TouchInventoryKey BagKey", qB("bag"), {
-                          Hidden: !IB.bag
+                      }), (0, Ct.jsx)("div", {
+                        className: jt()("TouchInventoryKey BagKey", yt("bag"), {
+                          Hidden: !et.bag
                         }),
-                        ...gI("bag"),
-                        children: (0, CB.jsx)("div", {
+                        ...ye("bag"),
+                        children: (0, Ct.jsx)("div", {
                           className: "UiItemIcon SmallTextBold",
-                          children: (0, CB.jsx)("div", {
+                          children: (0, Ct.jsx)("div", {
                             className: "ScaleOnHover",
-                            children: (0, CB.jsx)(pB.d, {
+                            children: (0, Ct.jsx)(ct.b, {
                               name: "backpack"
                             })
                           })
                         })
                       })]
-                    }), (0, CB.jsx)(sI, {
+                    }), (0, Ct.jsx)(Ke, {
                       next: !1,
-                      hidden: JB.has("arrows")
-                    }), (0, CB.jsxs)("div", {
+                      hidden: qt.has("arrows")
+                    }), (0, Ct.jsxs)("div", {
                       className: "HotBarGameItemsContainer",
-                      children: [null !== gB && gB.map(((BB, IB) => (0, CB.jsx)(yI, {
-                        item: BB,
-                        selected: BB.classList.contains("Selected")
-                      }, IB))), null === gB && iI.map((BB => {
-                        const IB = pI[BB];
-                        return (0, CB.jsx)("div", {
-                          className: kB()("InvenItem", {
-                            Selected: 0 === BB
+                      children: [null !== wt && wt.map(((tt, et) => (0, Ct.jsx)(ae, {
+                        item: tt,
+                        selected: tt.classList.contains("Selected")
+                      }, et))), null === wt && Se.map((tt => {
+                        const et = ce[tt];
+                        return (0, Ct.jsx)("div", {
+                          className: jt()("InvenItem", {
+                            Selected: 0 === tt
                           }),
-                          children: IB && (0, CB.jsx)("div", {
+                          children: et && (0, Ct.jsx)("div", {
                             className: "HudPreviewItem",
-                            children: (0, CB.jsx)(pB.d, {
-                              name: IB
+                            children: (0, Ct.jsx)(ct.b, {
+                              name: et
                             })
                           })
-                        }, BB)
+                        }, tt)
                       }))]
-                    }), (0, CB.jsx)(sI, {
+                    }), (0, Ct.jsx)(Ke, {
                       next: !0,
-                      hidden: JB.has("arrows")
+                      hidden: qt.has("arrows")
                     })]
                   })
                 })
               })]
-            }), (0, CB.jsx)("div", {
+            }), (0, Ct.jsx)("div", {
               className: "BottomRightElements",
-              children: (0, CB.jsxs)("div", {
+              children: (0, Ct.jsxs)("div", {
                 className: "TouchComponentsButtons",
-                children: [null !== NB && NI.m.map((BB => {
-                  const IB = NB[BB];
-                  return IB && (0, CB.jsx)(qI, {
-                    id: NI.i[BB],
-                    slot: BB,
-                    face: IB,
-                    className: OI[BB],
-                    hidden: JB
-                  }, BB)
-                })), (0, NI.u)(IB, oB).map((BB => (0, CB.jsx)(qI, {
-                  id: NI.i[BB],
-                  slot: BB,
-                  icon: YI[BB].icon,
-                  label: FB(YI[BB].labelKey),
+                children: [null !== ft && we.g.map((tt => {
+                  const et = ft[tt];
+                  return et && (0, Ct.jsx)(Ne, {
+                    id: we.f[tt],
+                    slot: tt,
+                    face: et,
+                    className: ve[tt],
+                    hidden: qt
+                  }, tt)
+                })), (0, we.n)(et, Dt).map((tt => (0, Ct.jsx)(Ne, {
+                  id: we.f[tt],
+                  slot: tt,
+                  icon: We[tt].icon,
+                  label: Et(We[tt].labelKey),
                   className: "HudPreviewContextSlot",
-                  hidden: JB
-                }, BB))), null === NB && (0, CB.jsxs)(CB.Fragment, {
-                  children: [(0, CB.jsx)(qI, {
+                  hidden: qt
+                }, tt))), null === ft && (0, Ct.jsxs)(Ct.Fragment, {
+                  children: [(0, Ct.jsx)(Ne, {
                     id: "jump",
                     slot: "J",
                     icon: "arrow-up-from-line",
                     className: "JumpKey",
-                    hidden: JB
-                  }), (0, CB.jsx)(qI, {
+                    hidden: qt
+                  }), (0, Ct.jsx)(Ne, {
                     id: "crouch",
                     slot: "C",
                     icon: "arrow-down-to-line",
                     className: "CrouchKey",
-                    hidden: JB
-                  }), oB && (0, CB.jsxs)(CB.Fragment, {
-                    children: [(0, CB.jsx)(qI, {
+                    hidden: qt
+                  }), Dt && (0, Ct.jsxs)(Ct.Fragment, {
+                    children: [(0, Ct.jsx)(Ne, {
                       id: "attack",
                       slot: "A",
                       icon: "swords",
-                      hidden: JB
-                    }), (0, CB.jsx)(qI, {
+                      hidden: qt
+                    }), (0, Ct.jsx)(Ne, {
                       id: "use",
                       slot: "U",
                       icon: "hand-back-point-up",
-                      hidden: JB
+                      hidden: qt
                     })]
-                  }), (0, NI.o)(oB).map((BB => (0, CB.jsx)(qI, {
-                    id: NI.i[BB],
-                    slot: BB,
-                    icon: YI[BB].icon,
-                    label: FB(YI[BB].labelKey),
-                    hidden: JB
-                  }, BB))), (0, CB.jsx)(qI, {
+                  }), (0, we.i)(Dt).map((tt => (0, Ct.jsx)(Ne, {
+                    id: we.f[tt],
+                    slot: tt,
+                    icon: We[tt].icon,
+                    label: Et(We[tt].labelKey),
+                    hidden: qt
+                  }, tt))), (0, Ct.jsx)(Ne, {
                     id: "game",
                     slot: "G",
                     icon: "bolt",
-                    hidden: JB
+                    hidden: qt
                   })]
                 })]
               })
             })]
           })
-        }), (0, CB.jsxs)("div", {
+        }), (0, Ct.jsxs)("div", {
           className: "TouchMovementWrapper",
-          children: [(0, CB.jsx)("div", {
+          children: [(0, Ct.jsx)("div", {
             className: "JoystickZone HudPreviewJoystickZone",
-            children: (0, CB.jsxs)("div", {
-              className: kB()("Joystick Resting HudPreviewJoystick", {
-                Floating: !GB
+            children: (0, Ct.jsxs)("div", {
+              className: jt()("Joystick Resting HudPreviewJoystick", {
+                Floating: !mt
               }),
-              ...gI("joystick"),
-              children: [(0, CB.jsx)("div", {
+              ...ye("joystick"),
+              children: [(0, Ct.jsx)("div", {
                 className: "JoystickBase"
-              }), (0, CB.jsx)("div", {
+              }), (0, Ct.jsx)("div", {
                 className: "JoystickKnob"
               })]
             })
-          }), IB.sprint && (0, CB.jsx)("div", {
-            className: kB()("TouchSprintHit", qB("sprint"), {
-              AtHome: !GB
+          }), et.sprint && (0, Ct.jsx)("div", {
+            className: jt()("TouchSprintHit", yt("sprint"), {
+              AtHome: !mt
             }),
-            ...gI("sprint"),
-            children: (0, CB.jsx)("div", {
+            ...ye("sprint"),
+            children: (0, Ct.jsx)("div", {
               className: "TouchKey TouchSprintKey Lit",
-              children: (0, CB.jsx)(pB.d, {
+              children: (0, Ct.jsx)(ct.b, {
                 name: "person-running"
               })
             })
@@ -919,1096 +919,1096 @@ export const modules = {
       })
     }
 
-    function HI() {
-      const [BB, IB] = (0, JB.useState)({}), ZB = (0, JB.useCallback)((BB => {
-        IB((IB => [...new Set([...Object.keys(IB), ...Object.keys(BB)])].every((ZB => IB[ZB] === BB[ZB])) ? IB : BB))
+    function Ie() {
+      const [tt, et] = (0, qt.useState)({}), Vt = (0, qt.useCallback)((tt => {
+        et((et => [...new Set([...Object.keys(et), ...Object.keys(tt)])].every((Vt => et[Vt] === tt[Vt])) ? et : tt))
       }), []);
-      return [BB, ZB]
+      return [tt, Vt]
     }
-    const MI = .05;
+    const Pe = .05;
 
-    function jI(BB) {
-      var IB;
+    function Ze(tt) {
+      var et;
       let {
-        selected: ZB,
-        layout: JB,
-        actionButtons: oB,
-        keyNames: GB,
-        overlaps: vB,
-        scaleCaps: nB,
-        joystickFixed: hB,
-        onScale: zB,
-        onHidden: FB,
-        onReset: NB,
-        locked: gB,
-        lockable: qB,
-        onLocked: yB,
-        extra: UB
-      } = BB;
+        selected: Vt,
+        layout: qt,
+        actionButtons: Dt,
+        keyNames: mt,
+        overlaps: dt,
+        scaleCaps: Xt,
+        joystickFixed: Qt,
+        onScale: lt,
+        onHidden: Et,
+        onReset: ft,
+        locked: wt,
+        lockable: yt,
+        onLocked: Nt,
+        extra: Mt
+      } = tt;
       const {
-        t: WB
-      } = (0, TB.G)(), dB = ZB ? tB[ZB] : null, QB = null !== ZB && gB.has(ZB), sB = (ZB && JB.hudElements[ZB] || HB.k)[2], wB = null !== (IB = ZB && nB[ZB]) && void 0 !== IB ? IB : HB.g, OB = BB => {
-        ZB && zB(ZB, Math.min(wB, Math.round(100 * (sB + .1 * BB)) / 100))
+        t: bt
+      } = (0, Ot.H)(), Jt = Vt ? Bt[Vt] : null, ut = null !== Vt && wt.has(Vt), Kt = (Vt && qt.hudElements[Vt] || It.l)[2], ht = null !== (et = Vt && Xt[Vt]) && void 0 !== et ? et : It.g, vt = tt => {
+        Vt && lt(Vt, Math.min(ht, Math.round(100 * (Kt + .1 * tt)) / 100))
       };
-      return (0, CB.jsxs)(CB.Fragment, {
-        children: [(0, CB.jsxs)("div", {
-          className: kB()("HudQuickName SmallTextBold", {
-            Overlap: vB.length > 0
+      return (0, Ct.jsxs)(Ct.Fragment, {
+        children: [(0, Ct.jsxs)("div", {
+          className: jt()("HudQuickName SmallTextBold", {
+            Overlap: dt.length > 0
           }),
-          children: [vB.length > 0 && (0, CB.jsx)(pB.d, {
+          children: [dt.length > 0 && (0, Ct.jsx)(ct.b, {
             name: "triangle-exclamation"
-          }), dB ? xB(dB.id, oB, WB, GB) : WB("hudLayout:fullScreenHint"), vB.length > 0 && (0, CB.jsx)("span", {
+          }), Jt ? xt(Jt.id, Dt, bt, mt) : bt("hudLayout:fullScreenHint"), dt.length > 0 && (0, Ct.jsx)("span", {
             className: "HudQuickOverlap",
-            children: WB("hudLayout:overlapsShort", {
-              names: EB(vB, oB, WB, GB)
+            children: bt("hudLayout:overlapsShort", {
+              names: Tt(dt, Dt, bt, mt)
             })
           })]
-        }), (null === dB || void 0 === dB ? void 0 : dB.scale) && (0, CB.jsxs)("div", {
+        }), (null === Jt || void 0 === Jt ? void 0 : Jt.scale) && (0, Ct.jsxs)("div", {
           className: "HudQuickSize",
-          children: [(0, CB.jsx)(cB.V, {
-            disabled: QB || sB <= HB.i,
-            ariaLabel: WB("hudLayout:smaller"),
+          children: [(0, Ct.jsx)(Ht.Q, {
+            disabled: ut || Kt <= It.h,
+            ariaLabel: bt("hudLayout:smaller"),
             onClick: () => {
-              OB(-1)
+              vt(-1)
             },
-            children: (0, CB.jsx)(pB.d, {
+            children: (0, Ct.jsx)(ct.b, {
               name: "minus"
             })
-          }), (0, CB.jsx)("span", {
+          }), (0, Ct.jsx)("span", {
             className: "HudQuickSizeValue",
-            children: `${Math.round(100*sB)}%`
-          }), (0, CB.jsx)(cB.V, {
-            disabled: QB || sB >= wB,
-            ariaLabel: WB("hudLayout:larger"),
+            children: `${Math.round(100*Kt)}%`
+          }), (0, Ct.jsx)(Ht.Q, {
+            disabled: ut || Kt >= ht,
+            ariaLabel: bt("hudLayout:larger"),
             onClick: () => {
-              OB(1)
+              vt(1)
             },
-            children: (0, CB.jsx)(pB.d, {
+            children: (0, Ct.jsx)(ct.b, {
               name: "plus"
             })
           })]
-        }), (dB || UB) && (0, CB.jsxs)("div", {
+        }), (Jt || Mt) && (0, Ct.jsxs)("div", {
           className: "HudQuickActions",
-          children: [dB && (0, CB.jsxs)(CB.Fragment, {
-            children: [(0, CB.jsx)(SB, {
-              id: dB.id,
-              actionButtons: oB,
-              keyNames: GB,
-              locked: QB,
-              lockable: qB(dB.id),
-              onLocked: yB
-            }), (0, CB.jsx)(KB, {
-              id: dB.id,
-              elements: JB.hudElements,
-              actionButtons: oB,
-              keyNames: GB,
-              onHidden: FB
-            }), (0, CB.jsx)(VB, {
-              id: dB.id,
-              elements: JB.hudElements,
-              actionButtons: oB,
-              keyNames: GB,
-              locked: QB,
-              onReset: NB
-            }), JI(dB.id, hB) && (0, CB.jsx)(oI, {})]
-          }), UB]
+          children: [Jt && (0, Ct.jsxs)(Ct.Fragment, {
+            children: [(0, Ct.jsx)(te, {
+              id: Jt.id,
+              actionButtons: Dt,
+              keyNames: mt,
+              locked: ut,
+              lockable: yt(Jt.id),
+              onLocked: Nt
+            }), (0, Ct.jsx)(st, {
+              id: Jt.id,
+              elements: qt.hudElements,
+              actionButtons: Dt,
+              keyNames: mt,
+              onHidden: Et
+            }), (0, Ct.jsx)(nt, {
+              id: Jt.id,
+              elements: qt.hudElements,
+              actionButtons: Dt,
+              keyNames: mt,
+              locked: ut,
+              onReset: ft
+            }), De(Jt.id, Qt) && (0, Ct.jsx)(me, {})]
+          }), Mt]
         })]
       })
     }
-    var PI = ZB(1165),
-      RI = ZB(4602);
-    const rI = "HudPreviewDoc",
-      mI = {
+    var Le = Vt(1204),
+      Fe = Vt(4545);
+    const ke = "HudPreviewDoc",
+      Ge = {
         hotbar: "TouchHotbar",
         keysAbove: "TouchHotbarKeysAbove",
         hasShop: "TouchHotbarHasShop",
         hasBag: "TouchHotbarHasBag"
       },
-      XI = new Set([rI, ...Object.values(mI)]),
-      LI = new Set(HB.t.map(zI.B)),
-      eI = new Set(zI.g),
-      uI = 'style, link[rel="stylesheet"]';
+      ze = new Set([ke, ...Object.values(Ge)]),
+      oe = new Set(It.v.map(Ee.A)),
+      re = new Set(Ee.k),
+      Ue = 'style, link[rel="stylesheet"]';
 
-    function fI(BB, IB, ZB, TB) {
-      const JB = new Map,
-        oB = new Set,
-        GB = new URL(BB.baseURI).origin,
-        vB = IB => {
-          var ZB;
-          if ("LINK" !== IB.nodeName) return !0;
-          const TB = null === (ZB = IB.getAttribute("href")) || void 0 === ZB ? void 0 : ZB.trim();
-          if (!TB) return !1;
+    function Ae(tt, et, Vt, Ot) {
+      const qt = new Map,
+        Dt = new Set,
+        mt = new URL(tt.baseURI).origin,
+        dt = et => {
+          var Vt;
+          if ("LINK" !== et.nodeName) return !0;
+          const Ot = null === (Vt = et.getAttribute("href")) || void 0 === Vt ? void 0 : Vt.trim();
+          if (!Ot) return !1;
           try {
-            return new URL(TB, BB.baseURI).origin === GB
+            return new URL(Ot, tt.baseURI).origin === mt
           } catch {
             return !1
           }
         };
-      let kB = null;
-      const cB = () => {
-          kB !== (0 === oB.size) && (kB = 0 === oB.size, null === TB || void 0 === TB || TB(kB))
+      let jt = null;
+      const Ht = () => {
+          jt !== (0 === Dt.size) && (jt = 0 === Dt.size, null === Ot || void 0 === Ot || Ot(jt))
         },
-        nB = BB => {
-          const IB = BB.cloneNode(!0);
-          if ("LINK" === IB.tagName) {
-            oB.add(IB);
-            const BB = () => {
-              oB.delete(IB), cB()
+        Xt = tt => {
+          const et = tt.cloneNode(!0);
+          if ("LINK" === et.tagName) {
+            Dt.add(et);
+            const tt = () => {
+              Dt.delete(et), Ht()
             };
-            IB.addEventListener("load", BB), IB.addEventListener("error", BB), ZB && IB.addEventListener("load", ZB)
+            et.addEventListener("load", tt), et.addEventListener("error", tt), Vt && et.addEventListener("load", Vt)
           }
-          return IB
+          return et
         },
-        hB = () => {
-          const TB = function(BB) {
-              const IB = [...BB.body.children].filter((BB => BB.matches(uI)));
-              return [...BB.head.querySelectorAll(uI), ...IB]
-            }(BB).filter(vB),
-            GB = new Set(TB);
-          for (const [BB, IB] of JB) GB.has(BB) || (IB.remove(), JB.delete(BB), oB.delete(IB));
-          let kB = null;
-          for (let BB = TB.length - 1; BB >= 0; BB--) {
-            const oB = TB[BB];
-            let GB = JB.get(oB);
-            GB ? "STYLE" === oB.tagName && GB.textContent !== oB.textContent && (GB.textContent = oB.textContent, null === ZB || void 0 === ZB || ZB()) : (GB = nB(oB), JB.set(oB, GB), IB.head.insertBefore(GB, kB)), kB = GB
+        Qt = () => {
+          const Ot = function(tt) {
+              const et = [...tt.body.children].filter((tt => tt.matches(Ue)));
+              return [...tt.head.querySelectorAll(Ue), ...et]
+            }(tt).filter(dt),
+            mt = new Set(Ot);
+          for (const [tt, et] of qt) mt.has(tt) || (et.remove(), qt.delete(tt), Dt.delete(et));
+          let jt = null;
+          for (let tt = Ot.length - 1; tt >= 0; tt--) {
+            const Dt = Ot[tt];
+            let mt = qt.get(Dt);
+            mt ? "STYLE" === Dt.tagName && mt.textContent !== Dt.textContent && (mt.textContent = Dt.textContent, null === Vt || void 0 === Vt || Vt()) : (mt = Xt(Dt), qt.set(Dt, mt), et.head.insertBefore(mt, jt)), jt = mt
           }
-          cB()
+          Ht()
         };
-      hB();
-      const zB = new MutationObserver(hB);
-      return zB.observe(BB.head, {
+      Qt();
+      const lt = new MutationObserver(Qt);
+      return lt.observe(tt.head, {
         childList: !0,
         subtree: !0,
         characterData: !0
-      }), zB.observe(BB.body, {
+      }), lt.observe(tt.body, {
         childList: !0
       }), () => {
-        zB.disconnect()
+        lt.disconnect()
       }
     }
 
-    function lI(BB, IB, ZB) {
+    function ie(tt, et, Vt) {
       let {
-        keysAbove: TB
-      } = ZB;
-      const JB = [...BB.documentElement.classList].filter((BB => !XI.has(BB) && !eI.has(BB))),
-        oB = [...IB.documentElement.classList].filter((BB => eI.has(BB))),
-        GB = [rI, mI.hotbar, mI.hasShop, mI.hasBag];
-      TB && GB.push(mI.keysAbove), IB.documentElement.className = [...JB, ...GB, ...oB].join(" ")
+        keysAbove: Ot
+      } = Vt;
+      const qt = [...tt.documentElement.classList].filter((tt => !ze.has(tt) && !re.has(tt))),
+        Dt = [...et.documentElement.classList].filter((tt => re.has(tt))),
+        mt = [ke, Ge.hotbar, Ge.hasShop, Ge.hasBag];
+      Ot && mt.push(Ge.keysAbove), et.documentElement.className = [...qt, ...mt, ...Dt].join(" ")
     }
-    const AI = ["--notchTop", "--notchRight", "--notchBottom", "--notchLeft"];
+    const Ye = ["--notchTop", "--notchRight", "--notchBottom", "--notchLeft"];
 
-    function tI(BB, IB, ZB, TB, JB) {
-      const oB = (0, HB.x)(ZB, TB, "joystick"),
-        GB = (0, zI.C)((0, zI.L)(ZB, TB, JB), TB),
-        vB = GB.classes.filter((BB => !LI.has(BB))),
-        kB = IB.documentElement,
-        cB = ZB.hudLayouts[TB].hudSafe,
-        nB = (0, zI.F)(cB, window.innerWidth, window.innerHeight, bI(), cB ? (0, zI.O)(IB) : 0);
-      (0, zI.R)({
-        ...GB,
-        classes: vB
+    function Be(tt, et, Vt, Ot, qt) {
+      const Dt = (0, It.w)(Vt, Ot, "joystick"),
+        mt = (0, Ee.D)((0, Ee.K)(Vt, Ot, qt), Ot),
+        dt = mt.classes.filter((tt => !oe.has(tt))),
+        jt = et.documentElement,
+        Ht = Vt.hudLayouts[Ot].hudSafe,
+        Xt = (0, Ee.H)(Ht, window.innerWidth, window.innerHeight, pe(), Ht ? (0, Ee.N)(et) : 0);
+      (0, Ee.Q)({
+        ...mt,
+        classes: dt
       }, {
-        vars: kB,
-        safe: kB,
-        classes: kB
-      }), kB.style.setProperty("--preview-joystick-shift-left", `${nB[3]}px`), kB.style.setProperty("--preview-joystick-shift-bottom", `${nB[2]}px`), kB.style.setProperty("--preview-joystick-scale", String(oB[2])), (0, RI.e)(kB, IB, ZB, TB);
-      for (const hB of AI) kB.style.setProperty(hB, BB.documentElement.style.getPropertyValue(hB) || "0px")
+        vars: jt,
+        safe: jt,
+        classes: jt
+      }), jt.style.setProperty("--preview-joystick-shift-left", `${Xt[3]}px`), jt.style.setProperty("--preview-joystick-shift-bottom", `${Xt[2]}px`), jt.style.setProperty("--preview-joystick-scale", String(Dt[2])), (0, Fe.f)(jt, et, Vt, Ot);
+      for (const Qt of Ye) jt.style.setProperty(Qt, tt.documentElement.style.getPropertyValue(Qt) || "0px")
     }
 
-    function bI() {
-      return (0, zI.J)(nB.d.get("notchSize"), window.innerWidth, window.innerHeight)
+    function pe() {
+      return (0, Ee.J)(Xt.b.get("notchSize"), window.innerWidth, window.innerHeight)
     }
 
-    function xI(BB) {
-      return (0, zI.v)(bI(), (0, zI.O)(BB))
+    function xe(tt) {
+      return (0, Ee.v)(pe(), (0, Ee.N)(tt))
     }
 
-    function EI(BB, IB, ZB) {
-      const TB = BB.documentElement.style,
-        JB = (0, zI.I)(IB),
-        oB = TB.getPropertyValue(JB);
+    function Te(tt, et, Vt) {
+      const Ot = tt.documentElement.style,
+        qt = (0, Ee.I)(et),
+        Dt = Ot.getPropertyValue(qt);
       try {
-        return ZB((BB => {
-          TB.setProperty(JB, String(BB))
+        return Vt((tt => {
+          Ot.setProperty(qt, String(tt))
         }))
       } finally {
-        "" === oB ? TB.removeProperty(JB) : TB.setProperty(JB, oB)
+        "" === Dt ? Ot.removeProperty(qt) : Ot.setProperty(qt, Dt)
       }
     }
 
-    function DI(BB, IB) {
-      const [ZB, TB] = EI(BB, "hotbar", (IB => {
-        const ZB = ZB => {
-          var TB, JB;
-          return IB(ZB), null !== (TB = null === (JB = BB.querySelector(".HotBarGameItemsContainer")) || void 0 === JB ? void 0 : JB.getBoundingClientRect().width) && void 0 !== TB ? TB : 0
+    function ge(tt, et) {
+      const [Vt, Ot] = Te(tt, "hotbar", (et => {
+        const Vt = Vt => {
+          var Ot, qt;
+          return et(Vt), null !== (Ot = null === (qt = tt.querySelector(".HotBarGameItemsContainer")) || void 0 === qt ? void 0 : qt.getBoundingClientRect().width) && void 0 !== Ot ? Ot : 0
         };
-        return [ZB(1), ZB(HB.g)]
+        return [Vt(1), Vt(It.g)]
       }));
-      return ZB <= 0 ? HB.g : Math.min(HB.g, Math.max(1, Math.floor(TB / ZB / IB + 1e-6) * IB))
+      return Vt <= 0 ? It.g : Math.min(It.g, Math.max(1, Math.floor(Ot / Vt / et + 1e-6) * et))
     }
-    const KI = 3,
-      VI = .5,
-      SI = BB => BB.right - BB.left;
-    const BZ = (BB, IB) => Math.abs((0, aB.c)(BB).x - (0, aB.c)(IB).x) + Math.abs((0, aB.c)(BB).y - (0, aB.c)(IB).y) + Math.abs(SI(BB) - SI(IB));
+    const se = 3,
+      ne = .5,
+      tV = tt => tt.right - tt.left;
+    const eV = (tt, et) => Math.abs((0, Rt.d)(tt).x - (0, Rt.d)(et).x) + Math.abs((0, Rt.d)(tt).y - (0, Rt.d)(et).y) + Math.abs(tV(tt) - tV(et));
 
-    function IZ(BB, IB, ZB, TB, JB) {
+    function VV(tt, et, Vt, Ot, qt) {
       let {
-        canKeep: oB = () => !0,
-        passes: GB = KI,
-        before: vB
+        canKeep: Dt = () => !0,
+        passes: mt = se,
+        before: dt
       } = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : {};
-      const kB = IB.hudLayouts[ZB].hudLocked.filter(oB);
-      if (0 === kB.length) return IB;
-      const cB = [...PB].filter((TB => !kB.includes(TB) && (0, HB.x)(BB, ZB, TB).join() === (0, HB.x)(IB, ZB, TB).join())),
-        nB = BB => {
-          const IB = (0, aB.F)(cB.flatMap((IB => BB[IB] ? [BB[IB]] : [])));
+      const jt = et.hudLayouts[Vt].hudLocked.filter(Dt);
+      if (0 === jt.length) return et;
+      const Ht = [...Lt].filter((Ot => !jt.includes(Ot) && (0, It.w)(tt, Vt, Ot).join() === (0, It.w)(et, Vt, Ot).join())),
+        Xt = tt => {
+          const et = (0, Rt.G)(Ht.flatMap((et => tt[et] ? [tt[et]] : [])));
           return {
-            ...BB,
-            cluster: null !== IB && void 0 !== IB ? IB : void 0
+            ...tt,
+            cluster: null !== et && void 0 !== et ? et : void 0
           }
         };
-      let hB = null;
-      const zB = BB => {
-          hB = BB;
-          const IB = JB(BB);
-          return IB && {
-            ...IB,
-            boxes: nB(IB.boxes)
+      let Qt = null;
+      const lt = tt => {
+          Qt = tt;
+          const et = qt(tt);
+          return et && {
+            ...et,
+            boxes: Xt(et.boxes)
           }
         },
-        FB = vB ? {
-          ...vB,
-          boxes: nB(vB.boxes)
-        } : zB(BB),
-        NB = FB && zB(IB);
-      if (!FB || !NB) return IB;
-      const gB = FB.boxes;
-      let qB = NB.boxes;
-      const yB = FB.keysAbove !== NB.keysAbove,
-        UB = yB || Boolean(FB.shopAlone) !== Boolean(NB.shopAlone),
-        WB = new Set(kB.filter((BB => !rB(BB) || !("bag" === BB ? yB : UB))));
-      let dB = IB;
-      for (let sB = 0; sB < GB && WB.size > 0; sB++) {
-        var CB, QB;
-        const BB = new Map;
-        for (const IB of WB) {
-          const JB = gB[IB],
-            oB = qB[IB],
-            GB = JB && oB ? ZZ(IB, (0, HB.x)(dB, ZB, IB), JB, oB, TB) : null;
-          GB ? BB.set(IB, GB) : WB.delete(IB)
+        Et = dt ? {
+          ...dt,
+          boxes: Xt(dt.boxes)
+        } : lt(tt),
+        ft = Et && lt(et);
+      if (!Et || !ft) return et;
+      const wt = Et.boxes;
+      let yt = ft.boxes;
+      const Nt = Et.keysAbove !== ft.keysAbove,
+        Mt = Nt || Boolean(Et.shopAlone) !== Boolean(ft.shopAlone),
+        bt = new Set(jt.filter((tt => !kt(tt) || !("bag" === tt ? Nt : Mt))));
+      let Jt = et;
+      for (let Kt = 0; Kt < mt && bt.size > 0; Kt++) {
+        var Ct, ut;
+        const tt = new Map;
+        for (const et of bt) {
+          const qt = wt[et],
+            Dt = yt[et],
+            mt = qt && Dt ? OV(et, (0, It.w)(Jt, Vt, et), qt, Dt, Ot) : null;
+          mt ? tt.set(et, mt) : bt.delete(et)
         }
-        if (0 === BB.size) break;
-        let JB = dB;
-        for (const [IB, TB] of BB) JB = (0, HB.gb)(JB, ZB, IB, TB);
-        const oB = null === (CB = zB(JB)) || void 0 === CB ? void 0 : CB.boxes;
-        if (!oB) return IB;
-        let GB = dB;
-        for (const [IB, TB] of BB) {
-          const BB = oB[IB];
-          BB && BZ(gB[IB], BB) < BZ(gB[IB], qB[IB]) - VI ? GB = (0, HB.gb)(GB, ZB, IB, TB) : WB.delete(IB)
+        if (0 === tt.size) break;
+        let qt = Jt;
+        for (const [et, Ot] of tt) qt = (0, It.db)(qt, Vt, et, Ot);
+        const Dt = null === (Ct = lt(qt)) || void 0 === Ct ? void 0 : Ct.boxes;
+        if (!Dt) return et;
+        let mt = Jt;
+        for (const [et, Ot] of tt) {
+          const tt = Dt[et];
+          tt && eV(wt[et], tt) < eV(wt[et], yt[et]) - ne ? mt = (0, It.db)(mt, Vt, et, Ot) : bt.delete(et)
         }
-        if (GB === dB) break;
-        const vB = [...BB.keys()].every((BB => WB.has(BB)));
-        dB = vB ? JB : GB;
-        const kB = vB ? oB : null === (QB = zB(dB)) || void 0 === QB ? void 0 : QB.boxes;
-        if (!kB) return IB;
-        qB = kB
+        if (mt === Jt) break;
+        const dt = [...tt.keys()].every((tt => bt.has(tt)));
+        Jt = dt ? qt : mt;
+        const jt = dt ? Dt : null === (ut = lt(Jt)) || void 0 === ut ? void 0 : ut.boxes;
+        if (!jt) return et;
+        yt = jt
       }
-      return hB !== dB && JB(dB), dB
+      return Qt !== Jt && qt(Jt), Jt
     }
 
-    function ZZ(BB, IB, ZB, TB, JB) {
-      let [oB, GB, vB] = IB;
-      const kB = HB.r[BB],
-        cB = {};
-      kB.scale && SI(TB) > 0 && Math.abs(SI(ZB) - SI(TB)) > VI && (cB.scale = Math.max(HB.i, Math.min(HB.g, vB * SI(ZB) / SI(TB))));
-      const nB = (0, aB.c)(ZB).x - (0, aB.c)(TB).x,
-        hB = (0, aB.c)(ZB).y - (0, aB.c)(TB).y;
-      return kB.move && (Math.abs(nB) > VI || Math.abs(hB) > VI) && (cB.dx = oB + nB / JB.width, cB.dy = GB + hB / JB.height), void 0 === cB.scale && void 0 === cB.dx ? null : cB
+    function OV(tt, et, Vt, Ot, qt) {
+      let [Dt, mt, dt] = et;
+      const jt = It.u[tt],
+        Ht = {};
+      jt.scale && tV(Ot) > 0 && Math.abs(tV(Vt) - tV(Ot)) > ne && (Ht.scale = Math.max(It.h, Math.min(It.g, dt * tV(Vt) / tV(Ot))));
+      const Xt = (0, Rt.d)(Vt).x - (0, Rt.d)(Ot).x,
+        Qt = (0, Rt.d)(Vt).y - (0, Rt.d)(Ot).y;
+      return jt.move && (Math.abs(Xt) > ne || Math.abs(Qt) > ne) && (Ht.dx = Dt + Xt / qt.width, Ht.dy = mt + Qt / qt.height), void 0 === Ht.scale && void 0 === Ht.dx ? null : Ht
     }
-    let TZ = 0;
+    let qV = 0;
 
-    function JZ() {
-      return TZ > 0
+    function DV() {
+      return qV > 0
     }
-    const oZ = BB => 0 === BB.dx && 0 === BB.dy,
-      GZ = .001,
-      vZ = BB => Math.abs(BB.dx) >= 5e-4 || Math.abs(BB.dy) >= 5e-4 ? BB : {
-        dx: BB.dx,
-        dy: BB.dy < 0 ? -.001 : GZ
+    const mV = tt => 0 === tt.dx && 0 === tt.dy,
+      dV = .001,
+      jV = tt => Math.abs(tt.dx) >= 5e-4 || Math.abs(tt.dy) >= 5e-4 ? tt : {
+        dx: tt.dx,
+        dy: tt.dy < 0 ? -.001 : dV
       };
 
-    function kZ(BB) {
+    function HV(tt) {
       let {
-        preview: IB,
-        stageRef: ZB,
-        ringRef: TB,
-        centreLineRef: oB,
-        snapCentre: GB,
-        ready: vB,
-        measure: kB,
-        k: cB,
-        viewport: nB,
-        boxes: hB,
-        pieces: zB,
-        selected: FB,
-        insets: NB,
-        layout: gB,
-        canMove: qB,
-        onSelect: yB,
-        onMove: UB
-      } = BB;
-      const WB = (0, JB.useRef)(null),
-        dB = (0, JB.useCallback)((() => null !== WB.current), []),
-        CB = (BB, IB) => {
-          if (!IB) return null;
-          const ZB = (0, aB.c)(BB.origin),
-            TB = (0, aB.c)(IB),
-            JB = (BB.to.dx - BB.from.dx) * nB.width,
-            oB = (BB.to.dy - BB.from.dy) * nB.height,
-            GB = IB.right - IB.left,
-            vB = IB.bottom - IB.top;
+        preview: et,
+        stageRef: Vt,
+        ringRef: Ot,
+        centreLineRef: Dt,
+        snapCentre: mt,
+        ready: dt,
+        measure: jt,
+        k: Ht,
+        viewport: Xt,
+        boxes: Qt,
+        pieces: lt,
+        selected: Et,
+        insets: ft,
+        layout: wt,
+        canMove: yt,
+        onSelect: Nt,
+        onMove: Mt
+      } = tt;
+      const bt = (0, qt.useRef)(null),
+        Jt = (0, qt.useCallback)((() => null !== bt.current), []),
+        Ct = (tt, et) => {
+          if (!et) return null;
+          const Vt = (0, Rt.d)(tt.origin),
+            Ot = (0, Rt.d)(et),
+            qt = (tt.to.dx - tt.from.dx) * Xt.width,
+            Dt = (tt.to.dy - tt.from.dy) * Xt.height,
+            mt = et.right - et.left,
+            dt = et.bottom - et.top;
           return {
             skew: {
-              x: TB.x - ZB.x - JB,
-              y: TB.y - ZB.y - oB
+              x: Ot.x - Vt.x - qt,
+              y: Ot.y - Vt.y - Dt
             },
             box: {
-              left: ZB.x - GB / 2,
-              top: ZB.y - vB / 2,
-              right: ZB.x + GB / 2,
-              bottom: ZB.y + vB / 2
+              left: Vt.x - mt / 2,
+              top: Vt.y - dt / 2,
+              right: Vt.x + mt / 2,
+              bottom: Vt.y + dt / 2
             }
           }
         },
-        QB = (BB, ZB) => {
-          var JB;
-          const GB = WB.current;
-          if (!GB || GB.pointerId !== BB.pointerId) return;
-          WB.current = null, null === (JB = oB.current) || void 0 === JB || JB.classList.remove("Shown", "Snapped");
-          const vB = TB.current;
-          if (vB && null !== GB.ringStyle && vB.setAttribute("style", GB.ringStyle), ZB && GB.moved) {
-            const BB = oZ(GB.to) ? null : kB(GB.id),
-              IB = BB ? (0, aB.D)(BB, (0, aB.B)(nB.width, nB.height, NB)) : {
+        ut = (tt, Vt) => {
+          var qt;
+          const mt = bt.current;
+          if (!mt || mt.pointerId !== tt.pointerId) return;
+          bt.current = null, null === (qt = Dt.current) || void 0 === qt || qt.classList.remove("Shown", "Snapped");
+          const dt = Ot.current;
+          if (dt && null !== mt.ringStyle && dt.setAttribute("style", mt.ringStyle), Vt && mt.moved) {
+            const tt = mV(mt.to) ? null : jt(mt.id),
+              et = tt ? (0, Rt.C)(tt, (0, Rt.B)(Xt.width, Xt.height, ft)) : {
                 x: 0,
                 y: 0
               },
-              ZB = {
-                dx: GB.to.dx + IB.x / nB.width,
-                dy: GB.to.dy + IB.y / nB.height
+              Vt = {
+                dx: mt.to.dx + et.x / Xt.width,
+                dy: mt.to.dy + et.y / Xt.height
               },
-              TB = oZ(GB.to) ? ZB : vZ(ZB);
-            UB(GB.id, TB.dx, TB.dy)
-          } else IB(GB.id, null), ZB && GB.tapPick && yB(GB.tapPick)
+              Ot = mV(mt.to) ? Vt : jV(Vt);
+            Mt(mt.id, Ot.dx, Ot.dy)
+          } else et(mt.id, null), Vt && mt.tapPick && Nt(mt.tapPick)
         };
       return {
-        busy: dB,
+        busy: Jt,
         handlers: {
-          onPointerDown: BB => {
-            var IB;
-            if (!vB || WB.current || !BB.target.closest(".HudPreviewHandle")) return;
-            const TB = ZB.current.getBoundingClientRect(),
-              JB = {
-                x: (BB.clientX - TB.left) / cB,
-                y: (BB.clientY - TB.top) / cB
+          onPointerDown: tt => {
+            var et;
+            if (!dt || bt.current || !tt.target.closest(".HudPreviewHandle")) return;
+            const Ot = Vt.current.getBoundingClientRect(),
+              qt = {
+                x: (tt.clientX - Ot.left) / Ht,
+                y: (tt.clientY - Ot.top) / Ht
               },
-              oB = (0, aB.z)(JB, zB, 40 / cB),
-              GB = null !== FB ? eB.get(FB) : void 0,
-              kB = void 0 !== GB && null !== (0, aB.z)(JB, zB.filter((BB => {
+              Dt = (0, Rt.v)(qt, lt, 40 / Ht),
+              mt = null !== Et ? rt.get(Et) : void 0,
+              jt = void 0 !== mt && null !== (0, Rt.v)(qt, lt.filter((tt => {
                 let {
-                  id: IB
-                } = BB;
-                return GB.has(IB)
-              })), 40 / cB),
-              nB = "menu" === FB && void 0 !== hB.menu && (0, aB.d)(hB.menu, JB) && ("menu" === oB || null !== oB && (0, nI.y)(oB, gB.hudElements[oB])),
-              NB = kB ? FB : nB ? "menu" : null,
-              UB = null !== NB,
-              dB = null !== NB && void 0 !== NB ? NB : oB;
-            if (!dB) return;
-            if (function(BB) {
-                TZ++;
-                const IB = ZB => {
-                  ZB.pointerId === BB && (TZ = Math.max(0, TZ - 1), window.removeEventListener("pointerup", IB, !0), window.removeEventListener("pointercancel", IB, !0))
+                  id: et
+                } = tt;
+                return mt.has(et)
+              })), 40 / Ht),
+              Xt = "menu" === Et && void 0 !== Qt.menu && (0, Rt.e)(Qt.menu, qt) && ("menu" === Dt || null !== Dt && (0, Qe.t)(Dt, wt.hudElements[Dt])),
+              ft = jt ? Et : Xt ? "menu" : null,
+              Mt = null !== ft,
+              Jt = null !== ft && void 0 !== ft ? ft : Dt;
+            if (!Jt) return;
+            if (function(tt) {
+                qV++;
+                const et = Vt => {
+                  Vt.pointerId === tt && (qV = Math.max(0, qV - 1), window.removeEventListener("pointerup", et, !0), window.removeEventListener("pointercancel", et, !0))
                 };
-                window.addEventListener("pointerup", IB, !0), window.addEventListener("pointercancel", IB, !0)
-              }(BB.pointerId), !qB(dB)) return void yB(UB && oB ? oB : dB);
-            yB(dB);
-            const [CB, QB] = null !== (IB = gB.hudElements[dB]) && void 0 !== IB ? IB : [0, 0], sB = {
-              dx: CB,
-              dy: QB
-            }, wB = {
+                window.addEventListener("pointerup", et, !0), window.addEventListener("pointercancel", et, !0)
+              }(tt.pointerId), !yt(Jt)) return void Nt(Mt && Dt ? Dt : Jt);
+            Nt(Jt);
+            const [Ct, ut] = null !== (et = wt.hudElements[Jt]) && void 0 !== et ? et : [0, 0], Kt = {
+              dx: Ct,
+              dy: ut
+            }, ht = {
               skew: {
                 x: 0,
                 y: 0
               },
-              box: hB[dB]
+              box: Qt[Jt]
             };
-            WB.current = {
-              id: dB,
-              pointerId: BB.pointerId,
-              startX: BB.clientX,
-              startY: BB.clientY,
-              origin: hB[dB],
-              from: sB,
-              to: sB,
+            bt.current = {
+              id: Jt,
+              pointerId: tt.pointerId,
+              startX: tt.clientX,
+              startY: tt.clientY,
+              origin: Qt[Jt],
+              from: Kt,
+              to: Kt,
               moved: !1,
-              home: oZ(sB) ? {
-                centre: (0, aB.c)(hB[dB]),
-                anchor: wB
+              home: mV(Kt) ? {
+                centre: (0, Rt.d)(Qt[Jt]),
+                anchor: ht
               } : null,
-              away: oZ(sB) ? null : wB,
-              anchor: wB,
+              away: mV(Kt) ? null : ht,
+              anchor: ht,
               ringStyle: null,
-              tapPick: UB ? oB : null
-            }, BB.currentTarget.setPointerCapture(BB.pointerId)
+              tapPick: Mt ? Dt : null
+            }, tt.currentTarget.setPointerCapture(tt.pointerId)
           },
-          onPointerMove: BB => {
-            const ZB = WB.current;
-            if (!ZB || ZB.pointerId !== BB.pointerId) return;
-            const JB = BB.clientX - ZB.startX,
-              vB = BB.clientY - ZB.startY;
-            if (!ZB.moved && Math.hypot(JB, vB) < 5) return;
-            const hB = !ZB.moved;
-            var zB, FB;
-            (ZB.moved = !0, hB) && (ZB.ringStyle = null !== (zB = null === (FB = TB.current) || void 0 === FB ? void 0 : FB.getAttribute("style")) && void 0 !== zB ? zB : null);
-            const gB = (0, aB.B)(nB.width, nB.height, NB);
-            if (!ZB.home) {
-              var qB;
-              ZB.to = {
+          onPointerMove: tt => {
+            const Vt = bt.current;
+            if (!Vt || Vt.pointerId !== tt.pointerId) return;
+            const qt = tt.clientX - Vt.startX,
+              dt = tt.clientY - Vt.startY;
+            if (!Vt.moved && Math.hypot(qt, dt) < 5) return;
+            const Qt = !Vt.moved;
+            var lt, Et;
+            (Vt.moved = !0, Qt) && (Vt.ringStyle = null !== (lt = null === (Et = Ot.current) || void 0 === Et ? void 0 : Et.getAttribute("style")) && void 0 !== lt ? lt : null);
+            const wt = (0, Rt.B)(Xt.width, Xt.height, ft);
+            if (!Vt.home) {
+              var yt;
+              Vt.to = {
                 dx: 0,
                 dy: 0
-              }, IB(ZB.id, ZB.to);
-              const BB = kB(ZB.id),
-                TB = null !== (qB = CB(ZB, BB)) && void 0 !== qB ? qB : {
+              }, et(Vt.id, Vt.to);
+              const tt = jt(Vt.id),
+                Ot = null !== (yt = Ct(Vt, tt)) && void 0 !== yt ? yt : {
                   skew: {
                     x: 0,
                     y: 0
                   },
-                  box: ZB.origin
+                  box: Vt.origin
                 },
-                JB = (0, aB.c)(ZB.origin);
-              ZB.home = {
-                centre: BB ? (0, aB.c)(BB) : {
-                  x: JB.x - ZB.from.dx * nB.width,
-                  y: JB.y - ZB.from.dy * nB.height
+                qt = (0, Rt.d)(Vt.origin);
+              Vt.home = {
+                centre: tt ? (0, Rt.d)(tt) : {
+                  x: qt.x - Vt.from.dx * Xt.width,
+                  y: qt.y - Vt.from.dy * Xt.height
                 },
-                anchor: TB
+                anchor: Ot
               }
             }
-            const yB = ZB.home;
-            let UB = !1;
-            const dB = BB => {
-                UB = !1;
-                let TB = (0, aB.n)(BB.box, JB / cB, vB / cB, gB);
-                const oB = nB.width / 2;
-                if (GB && Math.abs((0, aB.c)(ZB.origin).x + TB.x - oB) <= 8 / cB) {
-                  const IB = oB - (0, aB.c)(ZB.origin).x,
-                    JB = (0, aB.n)(BB.box, IB, TB.y, gB);
-                  UB = Math.abs(JB.x - IB) < .01, UB && (TB = JB)
+            const Nt = Vt.home;
+            let Mt = !1;
+            const Jt = tt => {
+                Mt = !1;
+                let Ot = (0, Rt.n)(tt.box, qt / Ht, dt / Ht, wt);
+                const Dt = Xt.width / 2;
+                if (mt && Math.abs((0, Rt.d)(Vt.origin).x + Ot.x - Dt) <= 8 / Ht) {
+                  const et = Dt - (0, Rt.d)(Vt.origin).x,
+                    qt = (0, Rt.n)(tt.box, et, Ot.y, wt);
+                  Mt = Math.abs(qt.x - et) < .01, Mt && (Ot = qt)
                 }
-                const kB = (0, aB.v)(ZB.from, TB.x - BB.skew.x, TB.y - BB.skew.y, nB.width, nB.height);
-                ZB.to = vZ(kB), ZB.anchor = BB, IB(ZB.id, ZB.to)
+                const jt = (0, Rt.r)(Vt.from, Ot.x - tt.skew.x, Ot.y - tt.skew.y, Xt.width, Xt.height);
+                Vt.to = jV(jt), Vt.anchor = tt, et(Vt.id, Vt.to)
               },
-              QB = (0, aB.n)(yB.anchor.box, JB / cB, vB / cB, gB),
-              sB = oB.current,
-              wB = (0, aB.c)(ZB.origin),
-              OB = ((0, HB.P)(ZB.id) ? 20 : 6) / cB;
-            if (Math.abs(wB.x + QB.x - yB.centre.x) <= OB && Math.abs(wB.y + QB.y - yB.centre.y) <= OB) ZB.to = {
+              ut = (0, Rt.n)(Nt.anchor.box, qt / Ht, dt / Ht, wt),
+              Kt = Dt.current,
+              ht = (0, Rt.d)(Vt.origin),
+              vt = ((0, It.P)(Vt.id) ? 20 : 6) / Ht;
+            if (Math.abs(ht.x + ut.x - Nt.centre.x) <= vt && Math.abs(ht.y + ut.y - Nt.centre.y) <= vt) Vt.to = {
               dx: 0,
               dy: 0
-            }, ZB.anchor = yB.anchor, UB = GB && Math.abs(yB.centre.x - nB.width / 2) < 1, IB(ZB.id, ZB.to);
-            else if (ZB.away) dB(ZB.away);
+            }, Vt.anchor = Nt.anchor, Mt = mt && Math.abs(Nt.centre.x - Xt.width / 2) < 1, et(Vt.id, Vt.to);
+            else if (Vt.away) Jt(Vt.away);
             else {
-              var YB;
-              dB(yB.anchor), ZB.away = null !== (YB = CB(ZB, kB(ZB.id))) && void 0 !== YB ? YB : yB.anchor, dB(ZB.away)
+              var Wt;
+              Jt(Nt.anchor), Vt.away = null !== (Wt = Ct(Vt, jt(Vt.id))) && void 0 !== Wt ? Wt : Nt.anchor, Jt(Vt.away)
             }
-            null === sB || void 0 === sB || sB.classList.add("Shown"), null === sB || void 0 === sB || sB.classList.toggle("Snapped", UB), (BB => {
-              const IB = TB.current;
-              if (IB) {
+            null === Kt || void 0 === Kt || Kt.classList.add("Shown"), null === Kt || void 0 === Kt || Kt.classList.toggle("Snapped", Mt), (tt => {
+              const et = Ot.current;
+              if (et) {
                 const {
-                  skew: ZB,
-                  box: TB
-                } = BB.anchor;
-                IB.style.left = TB.left * cB + "px", IB.style.top = TB.top * cB + "px", IB.style.width = (TB.right - TB.left) * cB + "px", IB.style.height = (TB.bottom - TB.top) * cB + "px", IB.style.translate = `${((BB.to.dx-BB.from.dx)*nB.width+ZB.x)*cB}px ${((BB.to.dy-BB.from.dy)*nB.height+ZB.y)*cB}px`
+                  skew: Vt,
+                  box: Ot
+                } = tt.anchor;
+                et.style.left = Ot.left * Ht + "px", et.style.top = Ot.top * Ht + "px", et.style.width = (Ot.right - Ot.left) * Ht + "px", et.style.height = (Ot.bottom - Ot.top) * Ht + "px", et.style.translate = `${((tt.to.dx-tt.from.dx)*Xt.width+Vt.x)*Ht}px ${((tt.to.dy-tt.from.dy)*Xt.height+Vt.y)*Ht}px`
               }
-            })(ZB)
+            })(Vt)
           },
-          onPointerUp: BB => {
-            QB(BB, !0)
+          onPointerUp: tt => {
+            ut(tt, !0)
           },
-          onPointerCancel: BB => {
-            QB(BB, !1)
+          onPointerCancel: tt => {
+            ut(tt, !1)
           }
         }
       }
     }
-    var cZ = ZB(9001);
+    var XV = Vt(9126);
 
-    function nZ(BB, IB) {
-      return Object.keys(BB).filter((BB => BB !== IB)).map((IB => BB[IB]))
+    function QV(tt, et) {
+      return Object.keys(tt).filter((tt => tt !== et)).map((et => tt[et]))
     }
 
-    function hZ(BB) {
-      return BB.map((BB => {
+    function lV(tt) {
+      return tt.map((tt => {
         let {
-          id: IB,
-          box: ZB
-        } = BB;
-        return `${IB}:${ZB.left},${ZB.top},${ZB.right},${ZB.bottom}`
+          id: et,
+          box: Vt
+        } = tt;
+        return `${et}:${Vt.left},${Vt.top},${Vt.right},${Vt.bottom}`
       })).join(";")
     }
 
-    function zZ(BB) {
-      const IB = [],
-        ZB = IB => (0, HB.P)(IB) && !BB.documentElement.classList.contains((0, zI.D)(IB));
-      for (const vB of BB.querySelectorAll(`[${bB}]`)) {
-        const BB = ZB(vB.getAttribute(bB)) ? vB.querySelector(".ScaleOnHover") : null,
-          TB = (null !== BB && void 0 !== BB ? BB : vB).getBoundingClientRect();
-        (TB.width > 0 || TB.height > 0) && IB.push({
-          id: vB.getAttribute(bB),
-          box: (0, aB.g)(TB)
+    function EV(tt) {
+      const et = [],
+        Vt = et => (0, It.P)(et) && !tt.documentElement.classList.contains((0, Ee.E)(et));
+      for (const dt of tt.querySelectorAll(`[${pt}]`)) {
+        const tt = Vt(dt.getAttribute(pt)) ? dt.querySelector(".ScaleOnHover") : null,
+          Ot = (null !== tt && void 0 !== tt ? tt : dt).getBoundingClientRect();
+        (Ot.width > 0 || Ot.height > 0) && et.push({
+          id: dt.getAttribute(pt),
+          box: (0, Rt.f)(Ot)
         })
       }
-      const TB = BB => (0, aB.F)(IB.filter((IB => {
+      const Ot = tt => (0, Rt.G)(et.filter((et => {
           let {
-            id: ZB
-          } = IB;
-          return BB(ZB)
-        })).map((BB => {
+            id: Vt
+          } = et;
+          return tt(Vt)
+        })).map((tt => {
           let {
-            box: IB
-          } = BB;
-          return IB
+            box: et
+          } = tt;
+          return et
         }))),
-        JB = {};
-      for (const vB of new Set(IB.map((BB => BB.id)))) JB[vB] = TB((BB => BB === vB));
-      for (const [vB, kB] of eB) {
-        const BB = TB((BB => kB.has(BB)));
-        BB && (JB[vB] = BB)
+        qt = {};
+      for (const dt of new Set(et.map((tt => tt.id)))) qt[dt] = Ot((tt => tt === dt));
+      for (const [dt, jt] of rt) {
+        const tt = Ot((tt => jt.has(tt)));
+        tt && (qt[dt] = tt)
       }
-      const oB = BB.querySelector(".TouchInventoryKeys"),
-        GB = oB ? (0, aB.g)(oB.getBoundingClientRect()) : null;
+      const Dt = tt.querySelector(".TouchInventoryKeys"),
+        mt = Dt ? (0, Rt.f)(Dt.getBoundingClientRect()) : null;
       return {
-        boxes: JB,
-        pieces: IB,
-        pairHome: GB
+        boxes: qt,
+        pieces: et,
+        pairHome: mt
       }
     }
 
-    function FZ(BB, IB, ZB) {
-      const TB = IB.right - IB.left,
-        JB = IB.bottom - IB.top;
-      return EI(BB, "cluster", (IB => {
-        const oB = ZB => {
-            IB(ZB);
-            const TB = [...BB.querySelectorAll(`[${bB}]:not(.HudPreviewGhost)`)].filter((BB => PB.has(BB.getAttribute(bB)))).map((BB => (0, aB.g)(BB.getBoundingClientRect()))),
-              JB = (0, aB.F)(TB);
-            return JB ? {
-              w: JB.right - JB.left,
-              h: JB.bottom - JB.top
+    function fV(tt, et, Vt) {
+      const Ot = et.right - et.left,
+        qt = et.bottom - et.top;
+      return Te(tt, "cluster", (et => {
+        const Dt = Vt => {
+            et(Vt);
+            const Ot = [...tt.querySelectorAll(`[${pt}]:not(.HudPreviewGhost)`)].filter((tt => Lt.has(tt.getAttribute(pt)))).map((tt => (0, Rt.f)(tt.getBoundingClientRect()))),
+              qt = (0, Rt.G)(Ot);
+            return qt ? {
+              w: qt.right - qt.left,
+              h: qt.bottom - qt.top
             } : null
           },
-          GB = BB => !BB || BB.w <= TB && BB.h <= JB,
-          vB = oB(1),
-          kB = oB(HB.g);
-        if (!vB || GB(kB)) return HB.g;
-        const cB = (BB, IB, ZB) => IB > BB ? 1 + (ZB - BB) * (HB.g - 1) / (IB - BB) : HB.g;
-        let nB = Math.floor(Math.min(HB.g, cB(vB.w, kB.w, TB), cB(vB.h, kB.h, JB)) / ZB + 1e-6) * ZB;
-        for (; nB > 1 && !GB(oB(nB));) nB = Math.round(100 * (nB - ZB)) / 100;
-        return Math.max(1, nB)
+          mt = tt => !tt || tt.w <= Ot && tt.h <= qt,
+          dt = Dt(1),
+          jt = Dt(It.g);
+        if (!dt || mt(jt)) return It.g;
+        const Ht = (tt, et, Vt) => et > tt ? 1 + (Vt - tt) * (It.g - 1) / (et - tt) : It.g;
+        let Xt = Math.floor(Math.min(It.g, Ht(dt.w, jt.w, Ot), Ht(dt.h, jt.h, qt)) / Vt + 1e-6) * Vt;
+        for (; Xt > 1 && !mt(Dt(Xt));) Xt = Math.round(100 * (Xt - Vt)) / 100;
+        return Math.max(1, Xt)
       }))
     }
 
-    function NZ(BB) {
-      lI(document, BB, {
+    function wV(tt) {
+      ie(document, tt, {
         keysAbove: !1
       });
-      const IB = parseFloat(getComputedStyle(BB.documentElement).getPropertyValue("--touch-hotbar-ends-spare")),
-        ZB = Number.isFinite(IB) && IB < 0;
-      return lI(document, BB, {
-        keysAbove: ZB
-      }), (0, cZ.d)(BB), ZB
+      const et = parseFloat(getComputedStyle(tt.documentElement).getPropertyValue("--touch-hotbar-ends-spare")),
+        Vt = Number.isFinite(et) && et < 0;
+      return ie(document, tt, {
+        keysAbove: Vt
+      }), (0, XV.b)(tt), Vt
     }
 
-    function gZ(BB) {
-      const IB = BB.querySelector(".TouchInventoryKey.ShopKey");
-      return null !== IB && "1" === getComputedStyle(IB).getPropertyValue("--touch-shop-above").trim()
+    function yV(tt) {
+      const et = tt.querySelector(".TouchInventoryKey.ShopKey");
+      return null !== et && "1" === getComputedStyle(et).getPropertyValue("--touch-shop-above").trim()
     }
 
-    function qZ(BB, IB) {
+    function NV(tt, et) {
       let {
-        layout: ZB,
-        orientation: TB,
-        viewport: oB,
-        replicaKey: GB,
-        joystickFixed: vB,
-        busy: kB
-      } = IB;
-      const [cB, nB] = (0, JB.useState)(null), [hB, zB] = (0, JB.useState)({
+        layout: Vt,
+        orientation: Ot,
+        viewport: Dt,
+        replicaKey: mt,
+        joystickFixed: dt,
+        busy: jt
+      } = et;
+      const [Ht, Xt] = (0, qt.useState)(null), [Qt, lt] = (0, qt.useState)({
         boxes: {},
         pieces: []
-      }), [FB, NB] = (0, JB.useState)({
+      }), [Et, ft] = (0, qt.useState)({
         top: 0,
         right: 0,
         bottom: 0,
         left: 0
-      }), [gB, qB] = (0, JB.useState)(!1), [yB, UB] = (0, JB.useState)(!1), [WB, dB] = (0, JB.useState)(!1), CB = (0, JB.useCallback)((BB => {
-        UB(BB), BB && dB(!0)
-      }), []), QB = ZB.hudLayouts[TB].hudSafe;
-      (0, JB.useLayoutEffect)((() => {
-        const IB = BB.current.contentDocument;
-        IB.open(), IB.write("<!DOCTYPE html><html><head></head><body></body></html>"), IB.close(), nB(IB)
-      }), [BB]);
-      const sB = (0, JB.useCallback)((() => {
-          cB && ((0, nI.B)(cB), zB(zZ(cB)), NB(function(BB, IB) {
-            const ZB = xI(BB),
-              [TB, JB, oB, GB] = IB ? (0, zI.x)(IB, window.innerWidth, window.innerHeight, ZB) : ZB;
+      }), [wt, yt] = (0, qt.useState)(!1), [Nt, Mt] = (0, qt.useState)(!1), [bt, Jt] = (0, qt.useState)(!1), Ct = (0, qt.useCallback)((tt => {
+        Mt(tt), tt && Jt(!0)
+      }), []), ut = Vt.hudLayouts[Ot].hudSafe;
+      (0, qt.useLayoutEffect)((() => {
+        const et = tt.current.contentDocument;
+        et.open(), et.write("<!DOCTYPE html><html><head></head><body></body></html>"), et.close(), Xt(et)
+      }), [tt]);
+      const Kt = (0, qt.useCallback)((() => {
+          Ht && ((0, Qe.u)(Ht), lt(EV(Ht)), ft(function(tt, et) {
+            const Vt = xe(tt),
+              [Ot, qt, Dt, mt] = et ? (0, Ee.w)(et, window.innerWidth, window.innerHeight, Vt) : Vt;
             return {
-              top: TB,
-              right: JB,
-              bottom: oB,
-              left: GB
+              top: Ot,
+              right: qt,
+              bottom: Dt,
+              left: mt
             }
-          }(cB, QB)))
-        }), [cB, QB]),
-        wB = (0, JB.useCallback)((() => {
-          cB && qB(NZ(cB))
-        }), [cB]),
-        OB = (0, JB.useRef)((() => {}));
-      return OB.current = () => {
-        wB(), kB() || sB()
-      }, (0, JB.useLayoutEffect)((() => {
-        if (cB) return fI(document, cB, (() => {
-          OB.current()
-        }), CB)
-      }), [cB, CB]), (0, JB.useLayoutEffect)(wB, [wB, oB]), (0, JB.useLayoutEffect)((() => {
-        cB && (lI(document, cB, {
-          keysAbove: gB
-        }), tI(document, cB, ZB, TB, vB), wB(), sB())
-      }), [cB, ZB, TB, gB, GB, vB, oB, sB, wB]), (0, JB.useEffect)((() => {
-        var BB;
-        if (!cB) return;
-        const IB = new ResizeObserver((() => {
-          kB() || sB()
+          }(Ht, ut)))
+        }), [Ht, ut]),
+        ht = (0, qt.useCallback)((() => {
+          Ht && yt(wV(Ht))
+        }), [Ht]),
+        vt = (0, qt.useRef)((() => {}));
+      return vt.current = () => {
+        ht(), jt() || Kt()
+      }, (0, qt.useLayoutEffect)((() => {
+        if (Ht) return Ae(document, Ht, (() => {
+          vt.current()
+        }), Ct)
+      }), [Ht, Ct]), (0, qt.useLayoutEffect)(ht, [ht, Dt]), (0, qt.useLayoutEffect)((() => {
+        Ht && (ie(document, Ht, {
+          keysAbove: wt
+        }), Be(document, Ht, Vt, Ot, dt), ht(), Kt())
+      }), [Ht, Vt, Ot, wt, mt, dt, Dt, Kt, ht]), (0, qt.useEffect)((() => {
+        var tt;
+        if (!Ht) return;
+        const et = new ResizeObserver((() => {
+          jt() || Kt()
         }));
-        for (const ZB of cB.querySelectorAll(`[${bB}]`)) IB.observe(ZB);
-        return null === (BB = cB.fonts) || void 0 === BB || BB.ready.then(sB), () => {
-          IB.disconnect()
+        for (const Vt of Ht.querySelectorAll(`[${pt}]`)) et.observe(Vt);
+        return null === (tt = Ht.fonts) || void 0 === tt || tt.ready.then(Kt), () => {
+          et.disconnect()
         }
-      }), [cB, sB, kB, GB]), {
-        doc: cB,
-        boxes: hB.boxes,
-        pieces: hB.pieces,
-        insets: FB,
-        keysAbove: gB,
-        ready: yB,
-        settled: WB
+      }), [Ht, Kt, jt, mt]), {
+        doc: Ht,
+        boxes: Qt.boxes,
+        pieces: Qt.pieces,
+        insets: Et,
+        keysAbove: wt,
+        ready: Nt,
+        settled: bt
       }
     }
-    const yZ = ["Above", "Below", "Left", "Right"];
+    const aV = ["Above", "Below", "Left", "Right"];
 
-    function UZ(BB, IB, ZB, TB, JB) {
-      const oB = ZB[BB],
-        GB = (oB.left + oB.right) / 2,
-        vB = (oB.top + oB.bottom) / 2,
-        kB = (7.5 * IB.length + 14) / TB,
-        cB = 18 / TB,
-        nB = {
+    function MV(tt, et, Vt, Ot, qt) {
+      const Dt = Vt[tt],
+        mt = (Dt.left + Dt.right) / 2,
+        dt = (Dt.top + Dt.bottom) / 2,
+        jt = (7.5 * et.length + 14) / Ot,
+        Ht = 18 / Ot,
+        Xt = {
           Above: {
-            left: GB - kB / 2,
-            top: oB.top - cB,
-            right: GB + kB / 2,
-            bottom: oB.top
+            left: mt - jt / 2,
+            top: Dt.top - Ht,
+            right: mt + jt / 2,
+            bottom: Dt.top
           },
           Below: {
-            left: GB - kB / 2,
-            top: oB.bottom,
-            right: GB + kB / 2,
-            bottom: oB.bottom + cB
+            left: mt - jt / 2,
+            top: Dt.bottom,
+            right: mt + jt / 2,
+            bottom: Dt.bottom + Ht
           },
           Left: {
-            left: oB.left - kB,
-            top: vB - cB / 2,
-            right: oB.left,
-            bottom: vB + cB / 2
+            left: Dt.left - jt,
+            top: dt - Ht / 2,
+            right: Dt.left,
+            bottom: dt + Ht / 2
           },
           Right: {
-            left: oB.right,
-            top: vB - cB / 2,
-            right: oB.right + kB,
-            bottom: vB + cB / 2
+            left: Dt.right,
+            top: dt - Ht / 2,
+            right: Dt.right + jt,
+            bottom: dt + Ht / 2
           }
         },
-        hB = nZ(ZB, BB),
-        zB = {
+        Qt = QV(Vt, tt),
+        lt = {
           left: 0,
           top: 0,
-          right: JB.width,
-          bottom: JB.height
+          right: qt.width,
+          bottom: qt.height
         };
-      return yZ[(0, aB.s)(yZ.map((BB => nB[BB])), hB, {
-        bounds: zB
+      return aV[(0, Rt.q)(aV.map((tt => Xt[tt])), Qt, {
+        bounds: lt
       })]
     }
 
-    function WZ() {
-      const [BB, IB] = (0, kI.b)();
-      return (0, JB.useMemo)((() => ({
-        width: BB,
-        height: IB
-      })), [BB, IB])
+    function bV() {
+      const [tt, et] = (0, He.c)();
+      return (0, qt.useMemo)((() => ({
+        width: tt,
+        height: et
+      })), [tt, et])
     }
 
-    function dZ(BB) {
-      var IB;
+    function JV(tt) {
+      var et;
       const {
-        layout: ZB,
-        orientation: oB,
-        selected: GB,
-        onSelect: vB,
-        onMove: cB,
-        canMove: nB,
-        actionButtons: hB,
-        joystickFixed: zB,
-        presence: FB,
-        keyNames: gB,
-        maxHeight: qB,
-        fill: yB = !1,
-        apiRef: UB
-      } = BB, {
-        t: WB
-      } = (0, TB.G)(), dB = WZ(), QB = (null !== (IB = (0, NB.d)("maxAuraLevel")) && void 0 !== IB ? IB : 0) > 0, sB = ZB.hudLayouts[oB], wB = (0, JB.useRef)(null), OB = (0, JB.useRef)(null), YB = (0, JB.useRef)(null), iB = (0, JB.useRef)(null), MB = (0, JB.useRef)(null), jB = (0, JB.useRef)(null), PB = (0, cI.e)(wB).width, rB = yB ? 1 : PB > 0 ? (0, aB.A)(PB, dB.width, dB.height, qB) : 0, mB = (0, JB.useRef)((() => !1)), uB = (0, JB.useCallback)((() => mB.current()), []), fB = `${hB}:${zB}:${QB}`, {
-        doc: lB,
-        boxes: AB,
-        pieces: tB,
-        insets: bB,
-        keysAbove: EB,
-        ready: DB,
-        settled: KB
-      } = qZ(YB, {
-        layout: ZB,
-        orientation: oB,
-        viewport: dB,
-        replicaKey: fB,
-        joystickFixed: zB,
-        busy: uB
-      }), VB = (0, JB.useCallback)((BB => {
-        lB && tI(document, lB, BB, oB, zB)
-      }), [lB, oB, zB]), SB = (0, JB.useCallback)((BB => {
-        if (!lB || !KB) return null;
-        VB(BB);
-        const IB = NZ(lB),
-          ZB = function(BB, IB) {
+        layout: Vt,
+        orientation: Dt,
+        selected: mt,
+        onSelect: dt,
+        onMove: Ht,
+        canMove: Xt,
+        actionButtons: Qt,
+        joystickFixed: lt,
+        presence: Et,
+        keyNames: wt,
+        maxHeight: yt,
+        fill: Nt = !1,
+        apiRef: Mt
+      } = tt, {
+        t: bt
+      } = (0, Ot.H)(), Jt = bV(), ut = (null !== (et = (0, ft.i)("maxAuraLevel")) && void 0 !== et ? et : 0) > 0, Kt = Vt.hudLayouts[Dt], ht = (0, qt.useRef)(null), vt = (0, qt.useRef)(null), Wt = (0, qt.useRef)(null), St = (0, qt.useRef)(null), Pt = (0, qt.useRef)(null), Zt = (0, qt.useRef)(null), Lt = (0, Xe.d)(ht).width, kt = Nt ? 1 : Lt > 0 ? (0, Rt.x)(Lt, Jt.width, Jt.height, yt) : 0, Gt = (0, qt.useRef)((() => !1)), Ut = (0, qt.useCallback)((() => Gt.current()), []), At = `${Qt}:${lt}:${ut}`, {
+        doc: it,
+        boxes: Yt,
+        pieces: Bt,
+        insets: pt,
+        keysAbove: Tt,
+        ready: gt,
+        settled: st
+      } = NV(Wt, {
+        layout: Vt,
+        orientation: Dt,
+        viewport: Jt,
+        replicaKey: At,
+        joystickFixed: lt,
+        busy: Ut
+      }), nt = (0, qt.useCallback)((tt => {
+        it && Be(document, it, tt, Dt, lt)
+      }), [it, Dt, lt]), te = (0, qt.useCallback)((tt => {
+        if (!it || !st) return null;
+        nt(tt);
+        const et = wV(it),
+          Vt = function(tt, et) {
             let {
-              boxes: ZB,
-              pieces: TB,
-              pairHome: JB
-            } = BB;
-            const oB = TB.find((BB => RB.has(BB.id)));
-            if (!oB || !JB) return ZB;
-            const GB = (0, aB.c)(JB),
-              vB = IB(oB.id),
-              kB = SI(oB.box) / vB / 2,
-              cB = (oB.box.bottom - oB.box.top) / vB / 2;
+              boxes: Vt,
+              pieces: Ot,
+              pairHome: qt
+            } = tt;
+            const Dt = Ot.find((tt => Ft.has(tt.id)));
+            if (!Dt || !qt) return Vt;
+            const mt = (0, Rt.d)(qt),
+              dt = et(Dt.id),
+              jt = tV(Dt.box) / dt / 2,
+              Ht = (Dt.box.bottom - Dt.box.top) / dt / 2;
             return {
-              ...ZB,
+              ...Vt,
               inventory: {
-                left: GB.x - kB,
-                top: GB.y - cB,
-                right: GB.x + kB,
-                bottom: GB.y + cB
+                left: mt.x - jt,
+                top: mt.y - Ht,
+                right: mt.x + jt,
+                bottom: mt.y + Ht
               }
             }
-          }(zZ(lB), (IB => (0, HB.x)(BB, oB, IB)[2]));
+          }(EV(it), (et => (0, It.w)(tt, Dt, et)[2]));
         return {
-          boxes: ZB,
-          keysAbove: IB,
-          shopAlone: gZ(lB)
+          boxes: Vt,
+          keysAbove: et,
+          shopAlone: yV(it)
         }
-      }), [lB, KB, VB, oB]), BI = (0, JB.useRef)(null), II = (0, JB.useRef)(null), ZI = (0, JB.useRef)(ZB);
-      ZI.current = ZB;
-      const TI = (0, JB.useCallback)((() => {
-        null !== BI.current && (cancelAnimationFrame(BI.current), BI.current = null)
+      }), [it, st, nt, Dt]), ee = (0, qt.useRef)(null), Ve = (0, qt.useRef)(null), Oe = (0, qt.useRef)(Vt);
+      Oe.current = Vt;
+      const qe = (0, qt.useCallback)((() => {
+        null !== ee.current && (cancelAnimationFrame(ee.current), ee.current = null)
       }), []);
-      (0, JB.useEffect)((() => TI), [ZB, TI]);
-      const JI = (0, JB.useRef)(-1 / 0),
+      (0, qt.useEffect)((() => qe), [Vt, qe]);
+      const De = (0, qt.useRef)(-1 / 0),
         {
-          lockable: oI
-        } = BB,
-        vI = (0, JB.useCallback)((BB => {
-          if (VB(BB), JI.current = performance.now(), !KB || 0 === ZB.hudLayouts[oB].hudLocked.length) return;
-          const IB = ZB;
-          TI(), BI.current = requestAnimationFrame((() => {
-            var ZB;
-            if (BI.current = null, ZI.current !== IB) return;
-            const TB = (null === (ZB = II.current) || void 0 === ZB ? void 0 : ZB.from) === IB ? II.current.measured : SB(IB);
-            TB && (II.current = {
-              from: IB,
-              measured: TB
-            }), VB(TB ? IZ(IB, BB, oB, dB, SB, {
-              canKeep: oI,
+          lockable: me
+        } = tt,
+        je = (0, qt.useCallback)((tt => {
+          if (nt(tt), De.current = performance.now(), !st || 0 === Vt.hudLayouts[Dt].hudLocked.length) return;
+          const et = Vt;
+          qe(), ee.current = requestAnimationFrame((() => {
+            var Vt;
+            if (ee.current = null, Oe.current !== et) return;
+            const Ot = (null === (Vt = Ve.current) || void 0 === Vt ? void 0 : Vt.from) === et ? Ve.current.measured : te(et);
+            Ot && (Ve.current = {
+              from: et,
+              measured: Ot
+            }), nt(Ot ? VV(et, tt, Dt, Jt, te, {
+              canKeep: me,
               passes: 1,
-              before: TB
-            }) : BB)
+              before: Ot
+            }) : tt)
           }))
-        }), [VB, KB, ZB, oB, dB, SB, oI, TI]),
-        kI = kZ({
-          preview: (BB, IB) => {
-            IB ? vI((0, HB.gb)(ZB, oB, BB, IB)) : (TI(), VB(ZB))
+        }), [nt, st, Vt, Dt, Jt, te, me, qe]),
+        He = HV({
+          preview: (tt, et) => {
+            et ? je((0, It.db)(Vt, Dt, tt, et)) : (qe(), nt(Vt))
           },
-          stageRef: OB,
-          ringRef: iB,
-          centreLineRef: MB,
-          snapCentre: ZB.hudSnapCentre,
-          ready: KB,
-          measure: BB => {
-            const IB = lB && DB ? zZ(lB).boxes[BB] : void 0;
-            return IB && (0, aB.k)(IB, dB.width, dB.height) ? IB : null
+          stageRef: vt,
+          ringRef: St,
+          centreLineRef: Pt,
+          snapCentre: Vt.hudSnapCentre,
+          ready: st,
+          measure: tt => {
+            const et = it && gt ? EV(it).boxes[tt] : void 0;
+            return et && (0, Rt.h)(et, Jt.width, Jt.height) ? et : null
           },
-          k: rB,
-          viewport: dB,
-          boxes: AB,
-          pieces: tB,
-          selected: GB,
-          insets: bB,
-          layout: sB,
-          canMove: nB,
-          onSelect: vB,
-          onMove: (BB, IB, ZB) => {
-            TI(), cB(BB, IB, ZB)
+          k: kt,
+          viewport: Jt,
+          boxes: Yt,
+          pieces: Bt,
+          selected: mt,
+          insets: pt,
+          layout: Kt,
+          canMove: Xt,
+          onSelect: dt,
+          onMove: (tt, et, Vt) => {
+            qe(), Ht(tt, et, Vt)
           }
         });
-      (0, JB.useLayoutEffect)((() => {
-        mB.current = kI.busy
-      }), [kI.busy]);
-      const FI = (0, JB.useRef)([]),
-        NI = (0, JB.useRef)(sB.hudElements);
-      (0, JB.useEffect)((() => {
-        for (const JB of Object.keys(sB.hudElements)) {
-          var BB, IB, ZB, TB;
-          (null !== (BB = null === (IB = sB.hudElements[JB]) || void 0 === IB ? void 0 : IB[2]) && void 0 !== BB ? BB : 1) > (null !== (ZB = null === (TB = NI.current[JB]) || void 0 === TB ? void 0 : TB[2]) && void 0 !== ZB ? ZB : 1) && nB(JB) && !(0, nI.y)(JB, sB.hudElements[JB]) && FI.current.push(...LB(JB, EB, nB))
+      (0, qt.useLayoutEffect)((() => {
+        Gt.current = He.busy
+      }), [He.busy]);
+      const fe = (0, qt.useRef)([]),
+        we = (0, qt.useRef)(Kt.hudElements);
+      (0, qt.useEffect)((() => {
+        for (const qt of Object.keys(Kt.hudElements)) {
+          var tt, et, Vt, Ot;
+          (null !== (tt = null === (et = Kt.hudElements[qt]) || void 0 === et ? void 0 : et[2]) && void 0 !== tt ? tt : 1) > (null !== (Vt = null === (Ot = we.current[qt]) || void 0 === Ot ? void 0 : Ot[2]) && void 0 !== Vt ? Vt : 1) && Xt(qt) && !(0, Qe.t)(qt, Kt.hudElements[qt]) && fe.current.push(...ot(qt, Tt, Xt))
         }
-        NI.current = sB.hudElements
-      }), [sB.hudElements, nB, EB]), (0, JB.useEffect)((() => {
-        if (!DB) return;
-        const BB = (0, aB.B)(dB.width, dB.height, bB);
-        for (const ZB of ((BB, IB, ZB, TB) => {
-            const JB = BB => {
-              const JB = IB[BB],
+        we.current = Kt.hudElements
+      }), [Kt.hudElements, Xt, Tt]), (0, qt.useEffect)((() => {
+        if (!gt) return;
+        const tt = (0, Rt.B)(Jt.width, Jt.height, pt);
+        for (const Vt of ((tt, et, Vt, Ot) => {
+            const qt = tt => {
+              const qt = et[tt],
                 {
-                  x: oB,
-                  y: GB
-                } = JB && TB(BB) ? (0, aB.D)(JB, ZB) : {
+                  x: Dt,
+                  y: mt
+                } = qt && Ot(tt) ? (0, Rt.C)(qt, Vt) : {
                   x: 0,
                   y: 0
                 };
-              return JB && {
-                left: JB.left + oB,
-                top: JB.top + GB,
-                right: JB.right + oB,
-                bottom: JB.bottom + GB
+              return qt && {
+                left: qt.left + Dt,
+                top: qt.top + mt,
+                right: qt.right + Dt,
+                bottom: qt.bottom + mt
               }
             };
-            return BB.flatMap((BB => {
-              const oB = IB[BB];
-              if ("inventory" !== BB || !oB || oB.right - oB.left <= ZB.right - ZB.left && oB.bottom - oB.top <= ZB.bottom - ZB.top) return [BB];
-              const [GB, vB] = [JB("shop"), JB("bag")];
-              return GB && vB && !(0, aB.l)(GB, vB, 0) ? ["shop", "bag"].filter(TB) : [BB]
+            return tt.flatMap((tt => {
+              const Dt = et[tt];
+              if ("inventory" !== tt || !Dt || Dt.right - Dt.left <= Vt.right - Vt.left && Dt.bottom - Dt.top <= Vt.bottom - Vt.top) return [tt];
+              const [mt, dt] = [qt("shop"), qt("bag")];
+              return mt && dt && !(0, Rt.k)(mt, dt, 0) ? ["shop", "bag"].filter(Ot) : [tt]
             }))
-          })(FI.current.splice(0), AB, BB, nB)) {
-          const TB = AB[ZB];
-          if (!TB || kI.busy() || !(0, aB.k)(TB, dB.width, dB.height)) continue;
-          const JB = (0, aB.D)(TB, BB);
-          if (0 !== JB.x || 0 !== JB.y) {
-            var IB;
-            const [BB, TB] = null !== (IB = sB.hudElements[ZB]) && void 0 !== IB ? IB : [0, 0];
-            cB(ZB, BB + JB.x / dB.width, TB + JB.y / dB.height)
+          })(fe.current.splice(0), Yt, tt, Xt)) {
+          const Ot = Yt[Vt];
+          if (!Ot || He.busy() || !(0, Rt.h)(Ot, Jt.width, Jt.height)) continue;
+          const qt = (0, Rt.C)(Ot, tt);
+          if (0 !== qt.x || 0 !== qt.y) {
+            var et;
+            const [tt, Ot] = null !== (et = Kt.hudElements[Vt]) && void 0 !== et ? et : [0, 0];
+            Ht(Vt, tt + qt.x / Jt.width, Ot + qt.y / Jt.height)
           }
         }
-      }), [AB, DB]), (0, JB.useImperativeHandle)(UB, (() => ({
-        setScale: (BB, IB) => {
-          vI((0, HB.gb)(ZB, oB, BB, {
-            scale: IB
+      }), [Yt, gt]), (0, qt.useImperativeHandle)(Mt, (() => ({
+        setScale: (tt, et) => {
+          je((0, It.db)(Vt, Dt, tt, {
+            scale: et
           }))
         },
-        setOpacity: BB => {
-          VB({
-            ...ZB,
-            hudKeyOpacity: BB
+        setOpacity: tt => {
+          nt({
+            ...Vt,
+            hudKeyOpacity: tt
           })
         },
-        keepLocks: (BB, IB) => (TI(), IZ(BB, IB, oB, dB, SB, {
-          canKeep: oI
+        keepLocks: (tt, et) => (qe(), VV(tt, et, Dt, Jt, te, {
+          canKeep: me
         })),
-        setSafe: BB => {
-          const IB = (0, zI.x)(BB, dB.width, dB.height, xI(null !== lB && void 0 !== lB ? lB : document));
-          vI((0, HB.lb)(ZB, oB, BB)), jB.current && (jB.current.style.inset = IB.map((BB => BB * rB + "px")).join(" "))
+        setSafe: tt => {
+          const et = (0, Ee.w)(tt, Jt.width, Jt.height, xe(null !== it && void 0 !== it ? it : document));
+          je((0, It.hb)(Vt, Dt, tt)), Zt.current && (Zt.current.style.inset = et.map((tt => tt * kt + "px")).join(" "))
         }
-      })), [VB, vI, SB, TI, oI, lB, ZB, oB, dB, rB]);
-      const gI = new Set(Object.keys(sB.hudElements).filter((BB => (0, HB.p)(sB.hudElements, BB)))),
-        qI = GB ? AB[GB] : void 0,
-        yI = GB ? xB(GB, hB, WB, gB) : "",
-        UI = (0, PI.f)(dB.width, dB.height),
-        WI = GB ? function(BB, IB, ZB, TB) {
-          const JB = BB => XB(BB).some((BB => (0, HB.p)(ZB.hudElements, BB) || (0, nI.w)(BB, ZB, TB)));
-          if (JB(BB)) return [];
-          const oB = BB => {
-              var IB, TB;
-              return "bag" === BB && 1 !== (null !== (IB = null === (TB = ZB.hudElements.shop) || void 0 === TB ? void 0 : TB[2]) && void 0 !== IB ? IB : 1) || XB(BB).some((BB => void 0 !== ZB.hudElements[BB]))
+      })), [nt, je, te, qe, me, it, Vt, Dt, Jt, kt]);
+      const ye = new Set(Object.keys(Kt.hudElements).filter((tt => (0, It.q)(Kt.hudElements, tt)))),
+        Ne = mt ? Yt[mt] : void 0,
+        ae = mt ? xt(mt, Qt, bt, wt) : "",
+        Me = (0, Le.g)(Jt.width, Jt.height),
+        be = mt ? function(tt, et, Vt, Ot) {
+          const qt = tt => zt(tt).some((tt => (0, It.q)(Vt.hudElements, tt) || (0, Qe.s)(tt, Vt, Ot)));
+          if (qt(tt)) return [];
+          const Dt = tt => {
+              var et, Ot;
+              return "bag" === tt && 1 !== (null !== (et = null === (Ot = Vt.hudElements.shop) || void 0 === Ot ? void 0 : Ot[2]) && void 0 !== et ? et : 1) || zt(tt).some((tt => void 0 !== Vt.hudElements[tt]))
             },
-            GB = eB.get(BB),
-            vB = IB.filter((IB => {
+            mt = rt.get(tt),
+            dt = et.filter((et => {
               let {
-                id: ZB
-              } = IB;
-              return GB ? GB.has(ZB) && !JB(ZB) : ZB === BB
+                id: Vt
+              } = et;
+              return mt ? mt.has(Vt) && !qt(Vt) : Vt === tt
             })),
-            kB = new Set;
-          for (const cB of IB) cB.id === BB || null !== GB && void 0 !== GB && GB.has(cB.id) || kB.has(cB.id) || JB(cB.id) || vB.some((BB => {
+            jt = new Set;
+          for (const Ht of et) Ht.id === tt || null !== mt && void 0 !== mt && mt.has(Ht.id) || jt.has(Ht.id) || qt(Ht.id) || dt.some((tt => {
             let {
-              id: IB,
-              box: TB
-            } = BB;
-            return !hI(IB, cB.id, ZB) && (oB(IB) || oB(cB.id)) && (0, aB.l)(TB, cB.box, 2)
-          })) && kB.add(cB.id);
-          return [...kB]
-        }(GB, tB, sB, UI) : [],
-        dI = new Set((0, nI.u)(sB.hudElements)),
-        CI = (0, nI.J)(sB, (0, nI.H)(FB.rowIcons)).state,
-        QI = WI.join(),
-        sI = (0, JB.useRef)(BB.onReady);
-      sI.current = BB.onReady, (0, JB.useEffect)((() => {
-        var BB;
-        null === (BB = sI.current) || void 0 === BB || BB.call(sI, KB)
-      }), [KB]);
-      const wI = (0, JB.useRef)(BB.onMeasured);
-      (0, JB.useLayoutEffect)((() => {
-        wI.current = BB.onMeasured
+              id: et,
+              box: Ot
+            } = tt;
+            return !le(et, Ht.id, Vt) && (Dt(et) || Dt(Ht.id)) && (0, Rt.k)(Ot, Ht.box, 2)
+          })) && jt.add(Ht.id);
+          return [...jt]
+        }(mt, Bt, Kt, Me) : [],
+        Je = new Set((0, Qe.r)(Kt.hudElements)),
+        Ce = (0, Qe.z)(Kt, (0, Qe.y)(Et.rowIcons)).state,
+        ue = be.join(),
+        Ke = (0, qt.useRef)(tt.onReady);
+      Ke.current = tt.onReady, (0, qt.useEffect)((() => {
+        var tt;
+        null === (tt = Ke.current) || void 0 === tt || tt.call(Ke, st)
+      }), [st]);
+      const he = (0, qt.useRef)(tt.onMeasured);
+      (0, qt.useLayoutEffect)((() => {
+        he.current = tt.onMeasured
       }));
-      const OI = (0, JB.useRef)({
+      const ve = (0, qt.useRef)({
           layout: null,
           input: "",
           caps: {}
         }),
-        YI = [hZ(tB), dB.width, dB.height, bB.top, bB.right, bB.bottom, bB.left, DB, fB].join("|");
-      (0, JB.useEffect)((() => {
-        const BB = QI ? QI.split(",") : [],
-          IB = () => {
-            var IB;
-            null === (IB = wI.current) || void 0 === IB || IB.call(wI, AB, BB, OI.current.caps)
+        We = [lV(Bt), Jt.width, Jt.height, pt.top, pt.right, pt.bottom, pt.left, gt, At].join("|");
+      (0, qt.useEffect)((() => {
+        const tt = ue ? ue.split(",") : [],
+          et = () => {
+            var et;
+            null === (et = he.current) || void 0 === et || et.call(he, Yt, tt, ve.current.caps)
           };
-        let ZB;
-        const TB = () => {
-          const BB = ZI.current;
-          if (!lB || BB === OI.current.layout && YI === OI.current.input) return !1;
-          const JB = JI.current + 250 - performance.now();
-          return BB === OI.current.layout && (JB > 0 || uB()) ? (ZB = setTimeout((() => {
-            TB() && IB()
-          }), Math.max(JB, 62.5)), !1) : (OI.current = {
-            layout: BB,
-            input: YI,
+        let Vt;
+        const Ot = () => {
+          const tt = Oe.current;
+          if (!it || tt === ve.current.layout && We === ve.current.input) return !1;
+          const qt = De.current + 250 - performance.now();
+          return tt === ve.current.layout && (qt > 0 || Ut()) ? (Vt = setTimeout((() => {
+            Ot() && et()
+          }), Math.max(qt, 62.5)), !1) : (ve.current = {
+            layout: tt,
+            input: We,
             caps: {
-              hotbar: DI(lB, MI),
-              cluster: FZ(lB, (0, aB.B)(dB.width, dB.height, bB), MI)
+              hotbar: ge(it, Pe),
+              cluster: fV(it, (0, Rt.B)(Jt.width, Jt.height, pt), Pe)
             }
           }, !0)
         };
-        return TB(), IB(), () => {
-          clearTimeout(ZB)
+        return Ot(), et(), () => {
+          clearTimeout(Vt)
         }
-      }), [AB, QI, lB, dB, bB, YI, uB]);
-      const iI = BB => ({
-        left: BB.left * rB,
-        top: BB.top * rB,
-        width: (BB.right - BB.left) * rB,
-        height: (BB.bottom - BB.top) * rB
+      }), [Yt, ue, it, Jt, pt, We, Ut]);
+      const Se = tt => ({
+        left: tt.left * kt,
+        top: tt.top * kt,
+        width: (tt.right - tt.left) * kt,
+        height: (tt.bottom - tt.top) * kt
       });
-      return (0, CB.jsx)("div", {
-        ref: wB,
-        className: kB()("HudPreviewBox", {
-          Fill: yB
+      return (0, Ct.jsx)("div", {
+        ref: ht,
+        className: jt()("HudPreviewBox", {
+          Fill: Nt
         }),
         style: {
-          height: dB.height * rB
+          height: Jt.height * kt
         },
-        children: (0, CB.jsxs)("div", {
-          ref: OB,
+        children: (0, Ct.jsxs)("div", {
+          ref: vt,
           className: "HudPreviewStage",
           style: {
-            width: dB.width * rB,
-            height: dB.height * rB
+            width: Jt.width * kt,
+            height: Jt.height * kt
           },
-          children: [(0, CB.jsx)("iframe", {
-            ref: YB,
+          children: [(0, Ct.jsx)("iframe", {
+            ref: Wt,
             className: "HudPreviewFrame",
-            title: WB("hudLayout:preview"),
+            title: bt("hudLayout:preview"),
             "aria-hidden": !0,
             tabIndex: -1,
             style: {
-              width: dB.width,
-              height: dB.height,
-              transform: `scale(${rB})`
+              width: Jt.width,
+              height: Jt.height,
+              transform: `scale(${kt})`
             }
-          }), lB && (0, GI.createPortal)((0, CB.jsx)(aI, {
-            presence: FB,
-            portraitPhone: UI,
-            hidden: gI,
-            actionButtons: hB,
-            joystickFixed: zB,
-            keysAbove: EB,
-            auraBar: QB,
-            trayState: CI,
-            moved: dI
-          }), lB.body), (0, CB.jsxs)("div", {
+          }), it && (0, de.createPortal)((0, Ct.jsx)(Re, {
+            presence: Et,
+            portraitPhone: Me,
+            hidden: ye,
+            actionButtons: Qt,
+            joystickFixed: lt,
+            keysAbove: Tt,
+            auraBar: ut,
+            trayState: Ce,
+            moved: Je
+          }), it.body), (0, Ct.jsxs)("div", {
             className: "HudPreviewOverlay",
-            ...kI.handlers,
-            children: [(0, CB.jsx)("div", {
-              ref: jB,
+            ...He.handlers,
+            children: [(0, Ct.jsx)("div", {
+              ref: Zt,
               className: "HudPreviewSafeZone",
               style: {
-                top: bB.top * rB,
-                right: bB.right * rB,
-                bottom: bB.bottom * rB,
-                left: bB.left * rB
+                top: pt.top * kt,
+                right: pt.right * kt,
+                bottom: pt.bottom * kt,
+                left: pt.left * kt
               }
-            }), tB.map(((BB, IB) => {
+            }), Bt.map(((tt, et) => {
               let {
-                id: ZB,
-                box: TB
-              } = BB;
-              return (0, CB.jsx)("div", {
+                id: Vt,
+                box: Ot
+              } = tt;
+              return (0, Ct.jsx)("div", {
                 className: "HudPreviewHandle",
-                style: iI((0, aB.r)(TB, 40 / rB))
-              }, `${ZB}:${IB}`)
-            })), sB.hudLocked.map((BB => {
-              const IB = AB[BB];
-              return IB && (0, CB.jsx)("span", {
+                style: Se((0, Rt.o)(Ot, 40 / kt))
+              }, `${Vt}:${et}`)
+            })), Kt.hudLocked.map((tt => {
+              const et = Yt[tt];
+              return et && (0, Ct.jsx)("span", {
                 className: "HudPreviewLockBadge",
                 style: {
-                  left: IB.right * rB,
-                  top: IB.top * rB
+                  left: et.right * kt,
+                  top: et.top * kt
                 },
-                children: (0, CB.jsx)(pB.d, {
+                children: (0, Ct.jsx)(ct.b, {
                   name: "lock"
                 })
-              }, BB)
-            })), (0, CB.jsx)("div", {
-              ref: MB,
+              }, tt)
+            })), (0, Ct.jsx)("div", {
+              ref: Pt,
               className: "HudPreviewCentreLine",
               style: {
-                left: dB.width / 2 * rB
+                left: Jt.width / 2 * kt
               }
-            }), GB && qI && (0, CB.jsx)("div", {
-              ref: iB,
-              className: kB()("HudPreviewRing", {
-                Fixed: !nB(GB),
-                Overlap: WI.length > 0
+            }), mt && Ne && (0, Ct.jsx)("div", {
+              ref: St,
+              className: jt()("HudPreviewRing", {
+                Fixed: !Xt(mt),
+                Overlap: be.length > 0
               }),
-              style: iI(qI),
-              children: (0, CB.jsx)("span", {
-                className: kB()("HudPreviewRingLabel", UZ(GB, yI, AB, rB, dB)),
-                children: yI
+              style: Se(Ne),
+              children: (0, Ct.jsx)("span", {
+                className: jt()("HudPreviewRingLabel", MV(mt, ae, Yt, kt, Jt)),
+                children: ae
               })
             })]
           })]
@@ -2016,1509 +2016,1509 @@ export const modules = {
       })
     }
 
-    function CZ(BB, IB) {
-      (0, JB.useEffect)((() => {
-        var ZB;
-        null === (ZB = BB.current) || void 0 === ZB || ZB.toggleAttribute("inert", IB)
-      }), [BB, IB])
+    function CV(tt, et) {
+      (0, qt.useEffect)((() => {
+        var Vt;
+        null === (Vt = tt.current) || void 0 === Vt || Vt.toggleAttribute("inert", et)
+      }), [tt, et])
     }
-    const QZ = "hudFullScreen";
+    const uV = "hudFullScreen";
 
-    function sZ(BB) {
+    function KV(tt) {
       let {
-        onScale: IB,
-        onHidden: ZB,
-        onReset: oB,
-        locked: GB,
-        lockable: vB,
-        onLocked: kB,
-        onClose: nB,
-        ...hB
-      } = BB;
+        onScale: et,
+        onHidden: Vt,
+        onReset: Dt,
+        locked: mt,
+        lockable: dt,
+        onLocked: jt,
+        onClose: Xt,
+        ...Qt
+      } = tt;
       const {
-        t: zB
-      } = (0, TB.G)(), FB = (0, JB.useRef)(null);
-      (0, vI.t)("popup", FB, nB),
-      function(BB) {
-        const IB = (0, JB.useRef)(BB);
-        IB.current = BB, (0, JB.useEffect)((() => {
+        t: lt
+      } = (0, Ot.H)(), Et = (0, qt.useRef)(null);
+      (0, je.w)("popup", Et, Xt),
+      function(tt) {
+        const et = (0, qt.useRef)(tt);
+        et.current = tt, (0, qt.useEffect)((() => {
           window.history.pushState({
             ...window.history.state,
-            [QZ]: !0
+            [uV]: !0
           }, "");
-          let BB = !1;
-          const ZB = () => {
-            BB = !0, IB.current()
+          let tt = !1;
+          const Vt = () => {
+            tt = !0, et.current()
           };
-          return window.addEventListener("popstate", ZB), () => {
-            var IB;
-            window.removeEventListener("popstate", ZB), !BB && null !== (IB = window.history.state) && void 0 !== IB && IB[QZ] && window.history.back()
+          return window.addEventListener("popstate", Vt), () => {
+            var et;
+            window.removeEventListener("popstate", Vt), !tt && null !== (et = window.history.state) && void 0 !== et && et[uV] && window.history.back()
           }
         }), [])
-      }(nB), (0, JB.useEffect)((() => {
-        function BB(BB) {
-          "Escape" === BB.key && (BB.stopPropagation(), nB())
+      }(Xt), (0, qt.useEffect)((() => {
+        function tt(tt) {
+          "Escape" === tt.key && (tt.stopPropagation(), Xt())
         }
-        return window.addEventListener("keydown", BB, !0), () => {
-          window.removeEventListener("keydown", BB, !0)
+        return window.addEventListener("keydown", tt, !0), () => {
+          window.removeEventListener("keydown", tt, !0)
         }
-      }), [nB]);
+      }), [Xt]);
       const {
-        selected: NB
-      } = hB, gB = (0, JB.useRef)(null), qB = (0, JB.useRef)(null), [yB, UB] = (0, JB.useState)(!1);
-      CZ(qB, !yB);
-      const [WB, dB] = (0, JB.useState)(null), [QB, sB] = (0, JB.useState)([]), [wB, OB] = HI(), YB = (0, JB.useRef)(hB.selected);
-      YB.current = hB.selected;
-      const iB = (0, JB.useRef)({}),
-        pB = (0, JB.useCallback)((() => {
-          const BB = gB.current;
-          BB && dB(function(BB, IB, ZB) {
-            var TB;
+        selected: ft
+      } = Qt, wt = (0, qt.useRef)(null), yt = (0, qt.useRef)(null), [Nt, Mt] = (0, qt.useState)(!1);
+      CV(yt, !Nt);
+      const [bt, Jt] = (0, qt.useState)(null), [ut, Kt] = (0, qt.useState)([]), [ht, vt] = Ie(), Wt = (0, qt.useRef)(Qt.selected);
+      Wt.current = Qt.selected;
+      const St = (0, qt.useRef)({}),
+        ct = (0, qt.useCallback)((() => {
+          const tt = wt.current;
+          tt && Jt(function(tt, et, Vt) {
+            var Ot;
             const {
-              innerWidth: JB,
-              innerHeight: oB
-            } = window, GB = BB.offsetWidth, vB = BB.offsetHeight, kB = Math.max(bI()[0], 6), cB = [];
-            for (const zB of [kB, .2 * oB, .5 * oB - vB / 2, .33 * oB])
-              for (const BB of [.5, .3, .7]) cB.push({
-                left: Math.max(0, Math.min(JB - GB - 6, Math.max(6, JB * BB - GB / 2))),
-                top: zB
+              innerWidth: qt,
+              innerHeight: Dt
+            } = window, mt = tt.offsetWidth, dt = tt.offsetHeight, jt = Math.max(pe()[0], 6), Ht = [];
+            for (const lt of [jt, .2 * Dt, .5 * Dt - dt / 2, .33 * Dt])
+              for (const tt of [.5, .3, .7]) Ht.push({
+                left: Math.max(0, Math.min(qt - mt - 6, Math.max(6, qt * tt - mt / 2))),
+                top: lt
               });
-            const nB = cB.map((BB => ({
-                left: BB.left - 6,
-                top: BB.top - 6,
-                right: BB.left + GB + 6,
-                bottom: BB.top + vB + 6
+            const Xt = Ht.map((tt => ({
+                left: tt.left - 6,
+                top: tt.top - 6,
+                right: tt.left + mt + 6,
+                bottom: tt.top + dt + 6
               }))),
-              hB = nZ(IB, ZB);
-            return cB[(0, aB.s)(nB, hB, {
-              avoid: ZB && null !== (TB = IB[ZB]) && void 0 !== TB ? TB : null
+              Qt = QV(et, Vt);
+            return Ht[(0, Rt.q)(Xt, Qt, {
+              avoid: Vt && null !== (Ot = et[Vt]) && void 0 !== Ot ? Ot : null
             })]
-          }(BB, iB.current, YB.current))
+          }(tt, St.current, Wt.current))
         }), []),
-        HB = (0, JB.useCallback)(((BB, IB, ZB) => {
-          sB(IB), OB(ZB), iB.current = BB, pB()
-        }), [pB, OB]);
-      return (0, JB.useLayoutEffect)(pB, [hB.selected, pB]), (0, GI.createPortal)((0, CB.jsxs)("div", {
-        ref: FB,
+        It = (0, qt.useCallback)(((tt, et, Vt) => {
+          Kt(et), vt(Vt), St.current = tt, ct()
+        }), [ct, vt]);
+      return (0, qt.useLayoutEffect)(ct, [Qt.selected, ct]), (0, de.createPortal)((0, Ct.jsxs)("div", {
+        ref: Et,
         className: "HudFullScreenEditor",
-        children: [(0, CB.jsx)(dZ, {
-          ...hB,
+        children: [(0, Ct.jsx)(JV, {
+          ...Qt,
           maxHeight: window.innerHeight,
           fill: !0,
-          onMeasured: HB,
-          onReady: UB,
-          lockable: vB
-        }), (0, CB.jsxs)("div", {
-          ref: gB,
+          onMeasured: It,
+          onReady: Mt,
+          lockable: dt
+        }), (0, Ct.jsxs)("div", {
+          ref: wt,
           className: "HudFullScreenToolbar",
-          style: null === WB ? void 0 : {
-            left: WB.left,
-            top: WB.top,
+          style: null === bt ? void 0 : {
+            left: bt.left,
+            top: bt.top,
             transform: "none"
           },
-          children: [(0, CB.jsx)("div", {
-            ref: qB,
+          children: [(0, Ct.jsx)("div", {
+            ref: yt,
             className: "HudFullScreenControls",
-            children: (0, CB.jsx)(jI, {
-              selected: NB,
-              layout: hB.layout.hudLayouts[hB.orientation],
-              actionButtons: hB.actionButtons,
-              keyNames: hB.keyNames,
-              overlaps: QB,
-              scaleCaps: wB,
-              onScale: IB,
-              onHidden: ZB,
-              onReset: oB,
-              locked: GB,
-              lockable: vB,
-              onLocked: kB,
-              joystickFixed: hB.joystickFixed
+            children: (0, Ct.jsx)(Ze, {
+              selected: ft,
+              layout: Qt.layout.hudLayouts[Qt.orientation],
+              actionButtons: Qt.actionButtons,
+              keyNames: Qt.keyNames,
+              overlaps: ut,
+              scaleCaps: ht,
+              onScale: et,
+              onHidden: Vt,
+              onReset: Dt,
+              locked: mt,
+              lockable: dt,
+              onLocked: jt,
+              joystickFixed: Qt.joystickFixed
             })
-          }), (0, CB.jsx)(cB.g, {
+          }), (0, Ct.jsx)(Ht.f, {
             className: "HudFullScreenDone",
-            onClick: nB,
+            onClick: Xt,
             padDefaultFocus: !0,
-            children: zB("hudLayout:done")
+            children: lt("hudLayout:done")
           })]
         })]
       }), document.body)
     }
-    const wZ = BB => `${Math.round(100*BB)}%`;
+    const hV = tt => `${Math.round(100*tt)}%`;
 
-    function OZ(BB) {
+    function vV(tt) {
       let {
-        info: IB,
-        tuple: ZB,
-        props: JB
-      } = BB;
+        info: et,
+        tuple: Vt,
+        props: qt
+      } = tt;
       const {
-        t: oB
-      } = (0, TB.G)();
-      return (0, CB.jsx)(FB.j, {
-        name: oB("hudLayout:size"),
-        min: HB.i,
-        max: HB.g,
-        step: MI,
-        initValue: ZB[2],
-        disabled: JB.locked.has(IB.id),
-        selectableMax: JB.scaleCaps[IB.id],
-        cappedNote: oB("hudLayout:sizeCapped"),
-        format: wZ,
-        onChange: BB => {
-          JB.onScalePreview(IB.id, BB)
+        t: Dt
+      } = (0, Ot.H)();
+      return (0, Ct.jsx)(Et.f, {
+        name: Dt("hudLayout:size"),
+        min: It.h,
+        max: It.g,
+        step: Pe,
+        initValue: Vt[2],
+        disabled: qt.locked.has(et.id),
+        selectableMax: qt.scaleCaps[et.id],
+        cappedNote: Dt("hudLayout:sizeCapped"),
+        format: hV,
+        onChange: tt => {
+          qt.onScalePreview(et.id, tt)
         },
-        onChangeComplete: BB => {
-          JB.onScale(IB.id, BB)
+        onChangeComplete: tt => {
+          qt.onScale(et.id, tt)
         }
       })
     }
 
-    function YZ(BB) {
+    function WV(tt) {
       const {
-        t: IB
-      } = (0, TB.G)(), {
-        present: ZB,
-        elements: oB,
-        selected: GB,
-        onSelect: vB,
-        onHidden: cB,
-        onReset: nB,
-        note: hB,
-        actionButtons: zB,
-        keyNames: FB,
-        sizeBesidePreview: NB,
-        locked: gB,
-        lockable: qB,
-        onLocked: yB
-      } = BB, {
-        rowIconsOpen: UB,
-        onRowIconsOpen: WB
-      } = BB, dB = (0, JB.useRef)(null), QB = null !== GB && (UB || !(0, HB.P)(GB));
-      return (0, JB.useEffect)((() => {
-        var BB;
-        const IB = GB ? null === (BB = dB.current) || void 0 === BB ? void 0 : BB.querySelector(`[data-hud-row="${GB}"]`) : null;
-        if (!IB) return;
-        const ZB = IB.closest(".SettingsMenuRight"),
-          TB = performance.now();
-        let JB = null;
-        const oB = () => {
-            clearInterval(kB), null === ZB || void 0 === ZB || ZB.removeEventListener("scroll", vB)
+        t: et
+      } = (0, Ot.H)(), {
+        present: Vt,
+        elements: Dt,
+        selected: mt,
+        onSelect: dt,
+        onHidden: Ht,
+        onReset: Xt,
+        note: Qt,
+        actionButtons: lt,
+        keyNames: Et,
+        sizeBesidePreview: ft,
+        locked: wt,
+        lockable: yt,
+        onLocked: Nt
+      } = tt, {
+        rowIconsOpen: Mt,
+        onRowIconsOpen: bt
+      } = tt, Jt = (0, qt.useRef)(null), ut = null !== mt && (Mt || !(0, It.P)(mt));
+      return (0, qt.useEffect)((() => {
+        var tt;
+        const et = mt ? null === (tt = Jt.current) || void 0 === tt ? void 0 : tt.querySelector(`[data-hud-row="${mt}"]`) : null;
+        if (!et) return;
+        const Vt = et.closest(".SettingsMenuRight"),
+          Ot = performance.now();
+        let qt = null;
+        const Dt = () => {
+            clearInterval(jt), null === Vt || void 0 === Vt || Vt.removeEventListener("scroll", dt)
           },
-          vB = () => {
-            JZ() || oB()
+          dt = () => {
+            DV() || Dt()
           },
-          kB = setInterval((() => {
-            const BB = performance.now();
-            BB - TB > 1500 ? oB() : JZ() ? JB = null : null === JB ? JB = BB : BB - JB >= 150 && (oB(), function(BB) {
-              var IB;
-              const ZB = BB.closest(".SettingsMenuRight"),
-                TB = null === (IB = BB.closest(".HudLayoutSettings")) || void 0 === IB ? void 0 : IB.querySelector(".HudLayoutPreviewBox");
-              if (!ZB || !TB) return;
-              const JB = TB.getBoundingClientRect().bottom + 8,
-                oB = ZB.getBoundingClientRect().bottom - 8,
-                GB = BB.getBoundingClientRect();
-              GB.top < JB ? ZB.scrollBy({
-                top: GB.top - JB,
+          jt = setInterval((() => {
+            const tt = performance.now();
+            tt - Ot > 1500 ? Dt() : DV() ? qt = null : null === qt ? qt = tt : tt - qt >= 150 && (Dt(), function(tt) {
+              var et;
+              const Vt = tt.closest(".SettingsMenuRight"),
+                Ot = null === (et = tt.closest(".HudLayoutSettings")) || void 0 === et ? void 0 : et.querySelector(".HudLayoutPreviewBox");
+              if (!Vt || !Ot) return;
+              const qt = Ot.getBoundingClientRect().bottom + 8,
+                Dt = Vt.getBoundingClientRect().bottom - 8,
+                mt = tt.getBoundingClientRect();
+              mt.top < qt ? Vt.scrollBy({
+                top: mt.top - qt,
                 behavior: "smooth"
-              }) : GB.bottom > oB && ZB.scrollBy({
-                top: Math.min(GB.bottom - oB, GB.top - JB),
+              }) : mt.bottom > Dt && Vt.scrollBy({
+                top: Math.min(mt.bottom - Dt, mt.top - qt),
                 behavior: "smooth"
               })
-            }(IB))
+            }(et))
           }), 50);
-        return null === ZB || void 0 === ZB || ZB.addEventListener("scroll", vB, {
+        return null === Vt || void 0 === Vt || Vt.addEventListener("scroll", dt, {
           passive: !0
-        }), oB
-      }), [GB, QB]), (0, CB.jsx)("div", {
-        ref: dB,
+        }), Dt
+      }), [mt, ut]), (0, Ct.jsx)("div", {
+        ref: Jt,
         className: "SettingBoxGroup HudElementList",
-        children: AB.filter((BB => ZB.has(BB.id) && (UB || !(0, HB.P)(BB.id)))).map((ZB => {
-          const TB = ((BB, IB) => {
-              var ZB;
-              return null !== (ZB = BB[IB]) && void 0 !== ZB ? ZB : HB.k
-            })(oB, ZB.id),
-            JB = (0, HB.p)(oB, ZB.id),
-            dB = ZB.id === GB,
-            QB = ZB.scale && !NB,
-            sB = hB(ZB.id, dB);
-          return (0, CB.jsxs)("div", {
-            "data-hud-row": ZB.id,
-            className: kB()("SettingBox HudElementRow", {
-              Open: dB,
-              Hidden: JB,
-              Child: void 0 !== ZB.parent,
-              Grandchild: mB(ZB.id).length > 1
+        children: Yt.filter((tt => Vt.has(tt.id) && (Mt || !(0, It.P)(tt.id)))).map((Vt => {
+          const Ot = ((tt, et) => {
+              var Vt;
+              return null !== (Vt = tt[et]) && void 0 !== Vt ? Vt : It.l
+            })(Dt, Vt.id),
+            qt = (0, It.q)(Dt, Vt.id),
+            Jt = Vt.id === mt,
+            ut = Vt.scale && !ft,
+            Kt = Qt(Vt.id, Jt);
+          return (0, Ct.jsxs)("div", {
+            "data-hud-row": Vt.id,
+            className: jt()("SettingBox HudElementRow", {
+              Open: Jt,
+              Hidden: qt,
+              Child: void 0 !== Vt.parent,
+              Grandchild: Gt(Vt.id).length > 1
             }),
-            children: [(0, CB.jsxs)("div", {
+            children: [(0, Ct.jsxs)("div", {
               className: "HudElementRowHead",
-              children: [(0, CB.jsx)("button", {
+              children: [(0, Ct.jsx)("button", {
                 type: "button",
                 className: "HudElementRowName",
-                "aria-expanded": QB ? dB : void 0,
+                "aria-expanded": ut ? Jt : void 0,
                 onClick: () => {
-                  vB(ZB.id)
+                  dt(Vt.id)
                 },
-                children: (0, CB.jsxs)("span", {
+                children: (0, Ct.jsxs)("span", {
                   className: "HudElementRowLabel",
-                  children: [xB(ZB.id, zB, IB, FB), ZB.scale && 1 !== TB[2] && !(dB && QB) && (0, CB.jsxs)(CB.Fragment, {
-                    children: [" ", (0, CB.jsx)("span", {
+                  children: [xt(Vt.id, lt, et, Et), Vt.scale && 1 !== Ot[2] && !(Jt && ut) && (0, Ct.jsxs)(Ct.Fragment, {
+                    children: [" ", (0, Ct.jsx)("span", {
                       className: "HudElementRowSize",
-                      children: wZ(TB[2])
+                      children: hV(Ot[2])
                     })]
-                  }), QB && (0, CB.jsxs)(CB.Fragment, {
-                    children: [" ", (0, CB.jsx)("span", {
+                  }), ut && (0, Ct.jsxs)(Ct.Fragment, {
+                    children: [" ", (0, Ct.jsx)("span", {
                       className: "HudElementRowChevron",
                       children: "\u25be"
                     })]
                   })]
                 })
-              }), (0, CB.jsx)(SB, {
+              }), (0, Ct.jsx)(te, {
                 className: "HudElementRowIcon",
                 keepPlace: !0,
-                id: ZB.id,
-                actionButtons: zB,
-                keyNames: FB,
-                locked: gB.has(ZB.id),
-                lockable: qB(ZB.id),
-                onLocked: yB
-              }), "menu" === ZB.id && (0, CB.jsx)(BI, {
+                id: Vt.id,
+                actionButtons: lt,
+                keyNames: Et,
+                locked: wt.has(Vt.id),
+                lockable: yt(Vt.id),
+                onLocked: Nt
+              }), "menu" === Vt.id && (0, Ct.jsx)(ee, {
                 className: "HudElementRowIcon",
-                open: UB,
-                name: xB(ZB.id, zB, IB, FB),
-                onToggle: WB
-              }), "menu" !== ZB.id && (0, CB.jsx)(KB, {
+                open: Mt,
+                name: xt(Vt.id, lt, et, Et),
+                onToggle: bt
+              }), "menu" !== Vt.id && (0, Ct.jsx)(st, {
                 className: "HudElementRowIcon",
                 keepPlace: !0,
-                id: ZB.id,
-                elements: oB,
-                actionButtons: zB,
-                keyNames: FB,
-                onHidden: cB
-              }), (0, CB.jsx)(VB, {
+                id: Vt.id,
+                elements: Dt,
+                actionButtons: lt,
+                keyNames: Et,
+                onHidden: Ht
+              }), (0, Ct.jsx)(nt, {
                 className: "HudElementRowIcon",
                 keepPlace: !0,
                 onlyWhenMoved: !0,
-                locked: gB.has(ZB.id),
-                id: ZB.id,
-                elements: oB,
-                actionButtons: zB,
-                keyNames: FB,
-                onReset: nB
+                locked: wt.has(Vt.id),
+                id: Vt.id,
+                elements: Dt,
+                actionButtons: lt,
+                keyNames: Et,
+                onReset: Xt
               })]
-            }), dB && QB && (0, CB.jsx)(OZ, {
-              info: ZB,
-              tuple: TB,
-              props: BB
-            }), sB && (0, CB.jsx)("div", {
+            }), Jt && ut && (0, Ct.jsx)(vV, {
+              info: Vt,
+              tuple: Ot,
+              props: tt
+            }), Kt && (0, Ct.jsx)("div", {
               className: "HudElementNote",
-              children: sB
+              children: Kt
             })]
-          }, ZB.id)
+          }, Vt.id)
         }))
       })
     }
 
-    function iZ(BB) {
+    function SV(tt) {
       let {
-        preview: IB,
-        quick: ZB,
-        onFullScreen: oB,
-        resting: GB,
-        onSidePanel: vB
-      } = BB;
+        preview: et,
+        quick: Vt,
+        onFullScreen: Dt,
+        resting: mt,
+        onSidePanel: dt
+      } = tt;
       const {
-        t: kB
-      } = (0, TB.G)(), nB = WZ(), hB = (0, JB.useRef)(null), {
-        width: zB
-      } = (0, cI.e)(hB), FB = Math.floor(nB.width * Math.min(1, IB.maxHeight / nB.height)), NB = zB - FB - 12, gB = NB >= 130, qB = zB > 0;
-      (0, JB.useEffect)((() => {
-        qB && vB(gB)
-      }), [qB, gB, vB]);
-      const yB = (0, aB.A)(gB ? FB : zB, nB.width, nB.height, IB.maxHeight),
-        UB = GB ? (0, CB.jsx)("div", {
+        t: jt
+      } = (0, Ot.H)(), Xt = bV(), Qt = (0, qt.useRef)(null), {
+        width: lt
+      } = (0, Xe.d)(Qt), Et = Math.floor(Xt.width * Math.min(1, et.maxHeight / Xt.height)), ft = lt - Et - 12, wt = ft >= 130, yt = lt > 0;
+      (0, qt.useEffect)((() => {
+        yt && dt(wt)
+      }), [yt, wt, dt]);
+      const Nt = (0, Rt.x)(wt ? Et : lt, Xt.width, Xt.height, et.maxHeight),
+        Mt = mt ? (0, Ct.jsx)("div", {
           className: "HudPreviewResting",
           style: {
-            height: nB.height * yB
+            height: Xt.height * Nt
           }
-        }) : (0, CB.jsx)(dZ, {
-          ...IB
+        }) : (0, Ct.jsx)(JV, {
+          ...et
         }),
-        WB = BB => (0, CB.jsxs)(cB.V, {
+        bt = tt => (0, Ct.jsxs)(Ht.Q, {
           className: "HudLayoutFullScreenButton",
-          ariaLabel: kB("hudLayout:fullScreen"),
+          ariaLabel: jt("hudLayout:fullScreen"),
           analyticsClick: {
             id: "hud_layout.full_screen"
           },
-          onClick: oB,
-          children: [(0, CB.jsx)(pB.d, {
+          onClick: Dt,
+          children: [(0, Ct.jsx)(ct.b, {
             name: "expand"
-          }), BB && (0, CB.jsx)("span", {
-            children: kB("hudLayout:fullScreen")
+          }), tt && (0, Ct.jsx)("span", {
+            children: jt("hudLayout:fullScreen")
           })]
         });
-      return (0, CB.jsxs)("div", {
-        ref: hB,
+      return (0, Ct.jsxs)("div", {
+        ref: Qt,
         className: "SettingBox HudLayoutPreviewBox",
-        children: [zB > 0 && gB && (0, CB.jsxs)("div", {
+        children: [lt > 0 && wt && (0, Ct.jsxs)("div", {
           className: "HudLayoutPreviewRow",
-          children: [(0, CB.jsx)("div", {
+          children: [(0, Ct.jsx)("div", {
             style: {
-              width: FB
+              width: Et
             },
-            children: UB
-          }), (0, CB.jsx)("div", {
+            children: Mt
+          }), (0, Ct.jsx)("div", {
             className: "HudLayoutSidePanel",
-            children: (0, CB.jsx)(jI, {
-              selected: IB.selected,
-              ...ZB,
-              joystickFixed: IB.joystickFixed,
-              extra: WB(!IB.selected || NB >= 278)
+            children: (0, Ct.jsx)(Ze, {
+              selected: et.selected,
+              ...Vt,
+              joystickFixed: et.joystickFixed,
+              extra: bt(!et.selected || ft >= 278)
             })
           })]
-        }), zB > 0 && !gB && (0, CB.jsxs)(CB.Fragment, {
-          children: [UB, (0, CB.jsx)("div", {
+        }), lt > 0 && !wt && (0, Ct.jsxs)(Ct.Fragment, {
+          children: [Mt, (0, Ct.jsx)("div", {
             className: "HudLayoutCornerButton",
-            children: WB(!1)
+            children: bt(!1)
           })]
         })]
       })
     }
-    var pZ = ZB(2576),
-      aZ = ZB(4597),
-      HZ = ZB(2551),
-      MZ = ZB(2504);
-    const jZ = BB => {
-      const IB = zI.p * ("sides" === BB ? window.innerWidth : window.innerHeight);
-      return Math.min(64, 2 * Math.floor(IB / 2))
+    var cV = Vt(2559),
+      RV = Vt(4537),
+      IV = Vt(2528),
+      PV = Vt(2478);
+    const ZV = tt => {
+      const et = Ee.s * ("sides" === tt ? window.innerWidth : window.innerHeight);
+      return Math.min(64, 2 * Math.floor(et / 2))
     };
 
-    function PZ(BB, IB, ZB) {
-      const [TB, JB, oB, GB] = BB;
-      return "sides" === IB ? [TB, ZB, oB, ZB] : [ZB, JB, ZB, GB]
+    function LV(tt, et, Vt) {
+      const [Ot, qt, Dt, mt] = tt;
+      return "sides" === et ? [Ot, Vt, Dt, Vt] : [Vt, qt, Vt, mt]
     }
-    const RZ = [null, null, null, null],
-      rZ = BB => `${BB}px`;
+    const FV = [null, null, null, null],
+      kV = tt => `${tt}px`;
 
-    function mZ(BB) {
+    function GV(tt) {
       let {
-        safe: IB,
-        onPreview: ZB,
-        onCommit: oB
-      } = BB;
+        safe: et,
+        onPreview: Vt,
+        onCommit: Dt
+      } = tt;
       const {
-        t: GB
-      } = (0, TB.G)(), vB = (0, zI.x)(null !== IB && void 0 !== IB ? IB : RZ, window.innerWidth, window.innerHeight, xI(document).map(Math.round)), kB = (0, JB.useRef)(null !== IB && void 0 !== IB ? IB : RZ);
-      kB.current = null !== IB && void 0 !== IB ? IB : RZ;
-      const nB = BB => {
-        const IB = Math.min(jZ(BB), "sides" === BB ? Math.max(vB[1], vB[3]) : Math.max(vB[0], vB[2]));
-        return (0, CB.jsx)(FB.j, {
-          name: GB("sides" === BB ? "hudLayout:safeSides" : "hudLayout:safeEnds"),
+        t: mt
+      } = (0, Ot.H)(), dt = (0, Ee.w)(null !== et && void 0 !== et ? et : FV, window.innerWidth, window.innerHeight, xe(document).map(Math.round)), jt = (0, qt.useRef)(null !== et && void 0 !== et ? et : FV);
+      jt.current = null !== et && void 0 !== et ? et : FV;
+      const Xt = tt => {
+        const et = Math.min(ZV(tt), "sides" === tt ? Math.max(dt[1], dt[3]) : Math.max(dt[0], dt[2]));
+        return (0, Ct.jsx)(Et.f, {
+          name: mt("sides" === tt ? "hudLayout:safeSides" : "hudLayout:safeEnds"),
           min: 0,
-          max: jZ(BB),
+          max: ZV(tt),
           step: 2,
-          initValue: IB,
-          format: rZ,
-          onChange: IB => {
-            ZB(PZ(kB.current, BB, IB))
+          initValue: et,
+          format: kV,
+          onChange: et => {
+            Vt(LV(jt.current, tt, et))
           },
-          onChangeComplete: TB => {
-            if (TB === IB) return void ZB(kB.current);
-            const JB = PZ(kB.current, BB, TB);
-            kB.current = JB, oB(JB), (0, wB.reportAnalyticsClick)({
+          onChangeComplete: Ot => {
+            if (Ot === et) return void Vt(jt.current);
+            const qt = LV(jt.current, tt, Ot);
+            jt.current = qt, Dt(qt), (0, ht.reportAnalyticsClick)({
               id: "hud_layout.safe_zone",
-              value: BB
+              value: tt
             })
           }
         })
       };
-      return (0, CB.jsxs)("div", {
+      return (0, Ct.jsxs)("div", {
         className: "SettingBoxGroup HudSafeZone",
-        children: [(0, CB.jsxs)("div", {
+        children: [(0, Ct.jsxs)("div", {
           className: "SettingBox HudSafeZoneHeader",
-          children: [(0, CB.jsx)("div", {
-            children: GB("hudLayout:safeZone")
-          }), (0, CB.jsx)(cB.V, {
-            active: null === IB,
-            pressed: null === IB,
+          children: [(0, Ct.jsx)("div", {
+            children: mt("hudLayout:safeZone")
+          }), (0, Ct.jsx)(Ht.Q, {
+            active: null === et,
+            pressed: null === et,
             onClick: () => {
-              oB(null)
+              Dt(null)
             },
-            children: GB("hudLayout:safeZoneAuto")
+            children: mt("hudLayout:safeZoneAuto")
           })]
-        }), nB("sides"), nB("ends")]
+        }), Xt("sides"), Xt("ends")]
       })
     }
 
-    function XZ() {
+    function zV() {
       const {
-        t: BB
-      } = (0, TB.G)(), IB = (0, HB.db)(), {
-        clientEscMenuOptions: ZB
-      } = (0, nB.o)(["clientEscMenuOptions"]), oB = (0, pZ.h)(), GB = IB.hudLayouts[oB], [vB, kB] = (0, JB.useState)(null), {
-        rowIconsOpen: hB,
-        onRowIconsOpen: zB,
-        select: NB
-      } = function(BB, IB) {
-        const [ZB, TB] = (0, JB.useState)((() => HB.A.some((IB => void 0 !== BB.hudElements[IB] || BB.hudLocked.includes(IB))))), oB = (0, JB.useCallback)((BB => {
-          IB(BB), (0, HB.P)(BB) && TB(!0)
-        }), [IB]);
+        t: tt
+      } = (0, Ot.H)(), et = (0, It.$)(), {
+        clientEscMenuOptions: Vt
+      } = (0, Xt.k)(["clientEscMenuOptions"]), Dt = (0, cV.k)(), mt = et.hudLayouts[Dt], [dt, jt] = (0, qt.useState)(null), {
+        rowIconsOpen: Qt,
+        onRowIconsOpen: lt,
+        select: ft
+      } = function(tt, et) {
+        const [Vt, Ot] = (0, qt.useState)((() => It.y.some((et => void 0 !== tt.hudElements[et] || tt.hudLocked.includes(et))))), Dt = (0, qt.useCallback)((tt => {
+          et(tt), (0, It.P)(tt) && Ot(!0)
+        }), [et]);
         return {
-          rowIconsOpen: ZB,
-          onRowIconsOpen: TB,
-          select: oB
+          rowIconsOpen: Vt,
+          onRowIconsOpen: Ot,
+          select: Dt
         }
-      }(GB, kB), [gB, qB] = (0, JB.useState)([]), [yB, UB] = (0, JB.useState)(null), [WB, dB] = HI(), QB = (0, JB.useCallback)(((BB, IB, ZB) => {
-        qB(IB), dB(ZB);
-        const TB = Object.keys(BB);
-        UB((BB => (null === BB || void 0 === BB ? void 0 : BB.size) === TB.length && TB.every((IB => BB.has(IB))) ? BB : new Set(TB)))
-      }), [dB]), {
-        gameState: sB
-      } = (0, nB.o)(["gameState"]), YB = (0, HZ.i)(), iB = (0, MZ.o)(), [pB] = (0, JB.useState)((() => {
-        var BB, IB, ZB, TB;
-        return "inGame" === sB ? (0, NI.A)(document, YB, {
-          rightOfCamera: null !== (BB = null === (IB = iB.rightOfCamera) || void 0 === IB ? void 0 : IB.icon) && void 0 !== BB ? BB : null,
-          leftEnd: null !== (ZB = null === (TB = iB.leftEnd) || void 0 === TB ? void 0 : TB.icon) && void 0 !== ZB ? ZB : null
-        }) : NI.e
-      })), aB = (0, JB.useRef)(null), MB = (0, JB.useRef)(null), jB = function(BB) {
-        const [IB, ZB] = (0, JB.useState)((() => .4 * window.innerHeight));
-        return (0, JB.useLayoutEffect)((() => {
-          var IB;
-          const TB = null === (IB = BB.current) || void 0 === IB ? void 0 : IB.closest(".SettingsMenuRight");
-          if (!TB) return;
-          const JB = () => {
-            const BB = TB.clientHeight < LZ ? .4 : .5;
-            ZB(Math.max(80, TB.clientHeight * BB - 24))
+      }(mt, jt), [wt, yt] = (0, qt.useState)([]), [Nt, Mt] = (0, qt.useState)(null), [bt, Jt] = Ie(), ut = (0, qt.useCallback)(((tt, et, Vt) => {
+        yt(et), Jt(Vt);
+        const Ot = Object.keys(tt);
+        Mt((tt => (null === tt || void 0 === tt ? void 0 : tt.size) === Ot.length && Ot.every((et => tt.has(et))) ? tt : new Set(Ot)))
+      }), [Jt]), {
+        gameState: Kt
+      } = (0, Xt.k)(["gameState"]), Wt = (0, IV.j)(), St = (0, PV.o)(), [ct] = (0, qt.useState)((() => {
+        var tt, et, Vt, Ot;
+        return "inGame" === Kt ? (0, we.t)(document, Wt, {
+          rightOfCamera: null !== (tt = null === (et = St.rightOfCamera) || void 0 === et ? void 0 : et.icon) && void 0 !== tt ? tt : null,
+          leftEnd: null !== (Vt = null === (Ot = St.leftEnd) || void 0 === Ot ? void 0 : Ot.icon) && void 0 !== Vt ? Vt : null
+        }) : we.d
+      })), Rt = (0, qt.useRef)(null), Pt = (0, qt.useRef)(null), Zt = function(tt) {
+        const [et, Vt] = (0, qt.useState)((() => .4 * window.innerHeight));
+        return (0, qt.useLayoutEffect)((() => {
+          var et;
+          const Ot = null === (et = tt.current) || void 0 === et ? void 0 : et.closest(".SettingsMenuRight");
+          if (!Ot) return;
+          const qt = () => {
+            const tt = Ot.clientHeight < oV ? .4 : .5;
+            Vt(Math.max(80, Ot.clientHeight * tt - 24))
           };
-          JB();
-          const oB = new ResizeObserver(JB);
-          return oB.observe(TB), () => {
-            oB.disconnect()
+          qt();
+          const Dt = new ResizeObserver(qt);
+          return Dt.observe(Ot), () => {
+            Dt.disconnect()
           }
-        }), [BB]), IB
-      }(MB), PB = (0, aZ.t)(ZB.joystickMode), RB = ZB.touchActionButtons, mB = (0, JB.useMemo)((() => (0, NI.w)(pB, RB)), [pB, RB]), XB = (0, JB.useMemo)((() => new Set((0, NI.u)(pB, RB).map((BB => NI.i[BB])))), [pB, RB]);
-      (0, JB.useEffect)((() => {
-        (0, wB.reportAnalyticsClick)({
+        }), [tt]), et
+      }(Pt), Lt = (0, RV.t)(Vt.joystickMode), Ft = Vt.touchActionButtons, Gt = (0, qt.useMemo)((() => (0, we.r)(ct, Ft)), [ct, Ft]), zt = (0, qt.useMemo)((() => new Set((0, we.n)(ct, Ft).map((tt => we.f[tt])))), [ct, Ft]);
+      (0, qt.useEffect)((() => {
+        (0, ht.reportAnalyticsClick)({
           id: "hud_layout.open"
         })
       }), []);
-      const [LB, eB] = (0, JB.useState)(!1), [uB, fB] = (0, JB.useState)(!1), lB = (0, JB.useRef)(null);
-      CZ(lB, !uB);
-      const [bB, DB] = (0, JB.useState)(!1), KB = (0, JB.useCallback)((() => {
-        DB(!1)
-      }), []), VB = (0, JB.useMemo)((() => new Set(GB.hudLocked)), [GB.hudLocked]), SB = BB => {
-        var IB, ZB;
-        const TB = (0, HB.n)(),
-          JB = BB(TB);
-        (0, HB.ab)(null !== (IB = null === (ZB = aB.current) || void 0 === ZB ? void 0 : ZB.keepLocks(TB, JB)) && void 0 !== IB ? IB : JB)
-      }, BI = (BB, IB) => {
-        SB((ZB => (0, HB.gb)(ZB, oB, BB, IB)))
-      }, II = (BB, IB, ZB) => {
-        BI(BB, {
-          dx: IB,
-          dy: ZB
-        }), (0, wB.reportAnalyticsClick)({
+      const [ot, rt] = (0, qt.useState)(!1), [Ut, At] = (0, qt.useState)(!1), it = (0, qt.useRef)(null);
+      CV(it, !Ut);
+      const [pt, gt] = (0, qt.useState)(!1), st = (0, qt.useCallback)((() => {
+        gt(!1)
+      }), []), nt = (0, qt.useMemo)((() => new Set(mt.hudLocked)), [mt.hudLocked]), te = tt => {
+        var et, Vt;
+        const Ot = (0, It.o)(),
+          qt = tt(Ot);
+        (0, It.W)(null !== (et = null === (Vt = Rt.current) || void 0 === Vt ? void 0 : Vt.keepLocks(Ot, qt)) && void 0 !== et ? et : qt)
+      }, ee = (tt, et) => {
+        te((Vt => (0, It.db)(Vt, Dt, tt, et)))
+      }, Ve = (tt, et, Vt) => {
+        ee(tt, {
+          dx: et,
+          dy: Vt
+        }), (0, ht.reportAnalyticsClick)({
           id: "hud_layout.edit",
-          value: `move:${BB}`
+          value: `move:${tt}`
         })
-      }, ZI = (BB, IB) => {
-        SB((ZB => (0, HB.jb)(ZB, oB, BB, IB)))
-      }, TI = BB => {
-        const IB = tB[BB];
-        return (IB.move || IB.scale) && ("joystick" !== BB || PB) && !(0, nI.y)(BB, GB.hudElements[BB])
-      }, GI = BB => tB[BB].move && ("joystick" !== BB || PB) && !VB.has(BB), vI = new Set(AB.map((BB => BB.id)).filter((BB => {
-        const IB = (0, HB.P)(BB) && !pB.rowIcons.includes(BB);
-        return null === yB || yB.has(BB) || (0, HB.p)(GB.hudElements, BB) && !IB
-      }))), kI = {
-        present: vI,
-        actionButtons: RB,
-        keyNames: mB,
-        scaleCaps: WB,
-        sizeBesidePreview: LB,
-        elements: GB.hudElements,
-        selected: vB,
-        onSelect: NB,
-        rowIconsOpen: hB,
-        onRowIconsOpen: zB,
-        onScalePreview: (BB, IB) => {
-          var ZB;
-          null === (ZB = aB.current) || void 0 === ZB || ZB.setScale(BB, IB)
+      }, Oe = (tt, et) => {
+        te((Vt => (0, It.fb)(Vt, Dt, tt, et)))
+      }, qe = tt => {
+        const et = Bt[tt];
+        return (et.move || et.scale) && ("joystick" !== tt || Lt) && !(0, Qe.t)(tt, mt.hudElements[tt])
+      }, de = tt => Bt[tt].move && ("joystick" !== tt || Lt) && !nt.has(tt), je = new Set(Yt.map((tt => tt.id)).filter((tt => {
+        const et = (0, It.P)(tt) && !ct.rowIcons.includes(tt);
+        return null === Nt || Nt.has(tt) || (0, It.q)(mt.hudElements, tt) && !et
+      }))), He = {
+        present: je,
+        actionButtons: Ft,
+        keyNames: Gt,
+        scaleCaps: bt,
+        sizeBesidePreview: ot,
+        elements: mt.hudElements,
+        selected: dt,
+        onSelect: ft,
+        rowIconsOpen: Qt,
+        onRowIconsOpen: lt,
+        onScalePreview: (tt, et) => {
+          var Vt;
+          null === (Vt = Rt.current) || void 0 === Vt || Vt.setScale(tt, et)
         },
-        onScale: (BB, IB) => {
-          BI(BB, {
-            scale: IB
-          }), (0, wB.reportAnalyticsClick)({
+        onScale: (tt, et) => {
+          ee(tt, {
+            scale: et
+          }), (0, ht.reportAnalyticsClick)({
             id: "hud_layout.edit",
-            value: `size:${BB}`
+            value: `size:${tt}`
           })
         },
-        onHidden: (BB, IB) => {
-          BI(BB, {
-            hidden: IB
-          }), (0, wB.reportAnalyticsClick)({
+        onHidden: (tt, et) => {
+          ee(tt, {
+            hidden: et
+          }), (0, ht.reportAnalyticsClick)({
             id: "hud_layout.edit",
-            value: `${IB?"hide":"show"}:${BB}`
+            value: `${et?"hide":"show"}:${tt}`
           })
         },
-        onReset: BB => {
-          BI(BB, HB.b)
+        onReset: tt => {
+          ee(tt, It.b)
         },
-        locked: VB,
-        lockable: TI,
-        onLocked: ZI,
-        note: (IB, ZB) => {
-          const TB = ZB && gB.length > 0 ? BB("hudLayout:overlapsNote", {
-            names: EB(gB, RB, BB, mB)
+        locked: nt,
+        lockable: qe,
+        onLocked: Oe,
+        note: (et, Vt) => {
+          const Ot = Vt && wt.length > 0 ? tt("hudLayout:overlapsNote", {
+            names: Tt(wt, Ft, tt, Gt)
           }) : null;
-          if (ZB && JI(IB, PB)) return (0, CB.jsxs)(CB.Fragment, {
-            children: [TB && (0, CB.jsx)("span", {
-              children: TB
-            }), (0, CB.jsx)("span", {
-              children: BB("hudLayout:floatingJoystickNote")
-            }), !LB && (0, CB.jsx)(oI, {})]
+          if (Vt && De(et, Lt)) return (0, Ct.jsxs)(Ct.Fragment, {
+            children: [Ot && (0, Ct.jsx)("span", {
+              children: Ot
+            }), (0, Ct.jsx)("span", {
+              children: tt("hudLayout:floatingJoystickNote")
+            }), !ot && (0, Ct.jsx)(me, {})]
           });
-          if (TB) return TB;
-          const JB = ZB && VB.has(IB) ? BB("hudLayout:lockedNote") : null,
-            oB = ZB && XB.has(IB) ? BB("hudLayout:contextSlotNote") : null;
-          return JB || oB ? (0, CB.jsxs)(CB.Fragment, {
-            children: [JB && (0, CB.jsx)("span", {
-              children: JB
-            }), oB && (0, CB.jsx)("span", {
-              children: oB
+          if (Ot) return Ot;
+          const qt = Vt && nt.has(et) ? tt("hudLayout:lockedNote") : null,
+            Dt = Vt && zt.has(et) ? tt("hudLayout:contextSlotNote") : null;
+          return qt || Dt ? (0, Ct.jsxs)(Ct.Fragment, {
+            children: [qt && (0, Ct.jsx)("span", {
+              children: qt
+            }), Dt && (0, Ct.jsx)("span", {
+              children: Dt
             })]
-          }) : ZB && "cluster" === IB ? BB("hudLayout:clusterNote") : ZB && "inventory" === IB ? BB("hudLayout:inventoryNote") : ZB && "menu" === IB ? BB("hudLayout:menuNote") : ZB && (0, nI.y)(IB, GB.hudElements[IB]) && GI(IB) ? BB("hudLayout:rowIconNote") : ZB && "arrows" === IB ? BB("hudLayout:arrowsNote") : ZB && "sprint" === IB ? BB("hudLayout:sprintNote") : rB(IB) && (0, HB.p)(GB.hudElements, IB) ? BB("hudLayout:inventoryHiddenNote", {
-            name: xB(IB, RB, BB, mB)
+          }) : Vt && "cluster" === et ? tt("hudLayout:clusterNote") : Vt && "inventory" === et ? tt("hudLayout:inventoryNote") : Vt && "menu" === et ? tt("hudLayout:menuNote") : Vt && (0, Qe.t)(et, mt.hudElements[et]) && de(et) ? tt("hudLayout:rowIconNote") : Vt && "arrows" === et ? tt("hudLayout:arrowsNote") : Vt && "sprint" === et ? tt("hudLayout:sprintNote") : kt(et) && (0, It.q)(mt.hudElements, et) ? tt("hudLayout:inventoryHiddenNote", {
+            name: xt(et, Ft, tt, Gt)
           }) : null
         }
       };
-      return (0, CB.jsxs)("div", {
-        ref: MB,
+      return (0, Ct.jsxs)("div", {
+        ref: Pt,
         className: "HudLayoutSettings",
-        children: [(0, CB.jsxs)("div", {
-          ref: lB,
+        children: [(0, Ct.jsxs)("div", {
+          ref: it,
           className: "HudLayoutBody",
-          children: [(0, CB.jsx)("div", {
+          children: [(0, Ct.jsx)("div", {
             className: "HudLayoutOrientation",
-            children: BB("landscape" === oB ? "hudLayout:editingLandscape" : "hudLayout:editingPortrait")
-          }), (0, CB.jsx)(iZ, {
+            children: tt("landscape" === Dt ? "hudLayout:editingLandscape" : "hudLayout:editingPortrait")
+          }), (0, Ct.jsx)(SV, {
             preview: {
-              layout: IB,
-              orientation: oB,
-              selected: vB,
-              onSelect: NB,
-              onMove: II,
-              canMove: GI,
-              actionButtons: RB,
-              joystickFixed: PB,
-              presence: pB,
-              keyNames: mB,
-              maxHeight: jB,
-              apiRef: aB,
-              onMeasured: QB,
-              onReady: fB,
-              lockable: TI
+              layout: et,
+              orientation: Dt,
+              selected: dt,
+              onSelect: ft,
+              onMove: Ve,
+              canMove: de,
+              actionButtons: Ft,
+              joystickFixed: Lt,
+              presence: ct,
+              keyNames: Gt,
+              maxHeight: Zt,
+              apiRef: Rt,
+              onMeasured: ut,
+              onReady: At,
+              lockable: qe
             },
             quick: {
-              layout: GB,
-              actionButtons: RB,
-              keyNames: mB,
-              scaleCaps: WB,
-              overlaps: gB,
-              onScale: kI.onScale,
-              onHidden: kI.onHidden,
-              onReset: kI.onReset,
-              locked: VB,
-              lockable: TI,
-              onLocked: ZI
+              layout: mt,
+              actionButtons: Ft,
+              keyNames: Gt,
+              scaleCaps: bt,
+              overlaps: wt,
+              onScale: He.onScale,
+              onHidden: He.onHidden,
+              onReset: He.onReset,
+              locked: nt,
+              lockable: qe,
+              onLocked: Oe
             },
             onFullScreen: () => {
-              DB(!0)
+              gt(!0)
             },
-            resting: bB,
-            onSidePanel: eB
-          }), bB && (0, CB.jsx)(sZ, {
-            layout: IB,
-            orientation: oB,
-            selected: vB,
-            onSelect: NB,
-            onMove: II,
-            canMove: GI,
-            actionButtons: RB,
-            joystickFixed: PB,
-            presence: pB,
-            keyNames: mB,
-            onScale: kI.onScale,
-            onHidden: kI.onHidden,
-            onReset: kI.onReset,
-            locked: VB,
-            lockable: TI,
-            onLocked: ZI,
-            apiRef: aB,
-            onClose: KB
-          }), (0, CB.jsx)(mZ, {
-            safe: GB.hudSafe,
-            onCommit: BB => {
-              SB((IB => (0, HB.lb)(IB, oB, BB)))
+            resting: pt,
+            onSidePanel: rt
+          }), pt && (0, Ct.jsx)(KV, {
+            layout: et,
+            orientation: Dt,
+            selected: dt,
+            onSelect: ft,
+            onMove: Ve,
+            canMove: de,
+            actionButtons: Ft,
+            joystickFixed: Lt,
+            presence: ct,
+            keyNames: Gt,
+            onScale: He.onScale,
+            onHidden: He.onHidden,
+            onReset: He.onReset,
+            locked: nt,
+            lockable: qe,
+            onLocked: Oe,
+            apiRef: Rt,
+            onClose: st
+          }), (0, Ct.jsx)(GV, {
+            safe: mt.hudSafe,
+            onCommit: tt => {
+              te((et => (0, It.hb)(et, Dt, tt)))
             },
-            onPreview: BB => {
-              var IB;
-              null === (IB = aB.current) || void 0 === IB || IB.setSafe(BB)
+            onPreview: tt => {
+              var et;
+              null === (et = Rt.current) || void 0 === et || et.setSafe(tt)
             }
-          }), (0, CB.jsx)(FB.e, {
-            label: BB("hudLayout:snapCentre"),
-            checked: IB.hudSnapCentre,
-            onClick: BB => {
-              (0, HB.Z)(BB)
+          }), (0, Ct.jsx)(Et.c, {
+            label: tt("hudLayout:snapCentre"),
+            checked: et.hudSnapCentre,
+            onClick: tt => {
+              (0, It.U)(tt)
             },
-            circleInfoText: BB("hudLayout:snapCentreInfo")
-          }), (0, CB.jsx)(YZ, {
-            ...kI
-          }), (0, CB.jsx)(FB.h, {
-            label: BB("hudLayout:shape"),
-            options: HB.D.map((IB => ({
-              value: IB,
-              label: BB(`hudLayout:shape_${IB}`)
+            circleInfoText: tt("hudLayout:snapCentreInfo")
+          }), (0, Ct.jsx)(WV, {
+            ...He
+          }), (0, Ct.jsx)(Et.e, {
+            label: tt("hudLayout:shape"),
+            options: It.A.map((et => ({
+              value: et,
+              label: tt(`hudLayout:shape_${et}`)
             }))),
-            value: IB.hudShape,
-            onChange: BB => {
-              SB((IB => ({
-                ...IB,
-                hudShape: BB
-              }))), (0, wB.reportAnalyticsClick)({
+            value: et.hudShape,
+            onChange: tt => {
+              te((et => ({
+                ...et,
+                hudShape: tt
+              }))), (0, ht.reportAnalyticsClick)({
                 id: "hud_layout.shape",
-                value: BB
+                value: tt
               })
             }
-          }), (0, CB.jsx)(FB.j, {
-            name: BB("hudLayout:opacity"),
-            min: HB.d,
+          }), (0, Ct.jsx)(Et.f, {
+            name: tt("hudLayout:opacity"),
+            min: It.e,
             max: 1,
             step: .05,
-            initValue: IB.hudKeyOpacity,
-            format: BB => `${Math.round(100*BB)}%`,
-            circleInfoText: BB("hudLayout:opacityInfo"),
-            onChange: BB => {
-              var IB;
-              null === (IB = aB.current) || void 0 === IB || IB.setOpacity(BB)
+            initValue: et.hudKeyOpacity,
+            format: tt => `${Math.round(100*tt)}%`,
+            circleInfoText: tt("hudLayout:opacityInfo"),
+            onChange: tt => {
+              var et;
+              null === (et = Rt.current) || void 0 === et || et.setOpacity(tt)
             },
-            onChangeComplete: BB => {
-              (0, HB.W)(BB), (0, wB.reportAnalyticsClick)({
+            onChangeComplete: tt => {
+              (0, It.S)(tt), (0, ht.reportAnalyticsClick)({
                 id: "hud_layout.edit",
                 value: "opacity"
               })
             }
           })]
-        }), (0, CB.jsx)(cB.M, {
+        }), (0, Ct.jsx)(Ht.G, {
           className: "HudLayoutResetAll",
           analyticsClick: {
             id: "hud_layout.reset_all"
           },
           onClick: () => {
             !async function() {
-              const BB = OB.NotificationProvider.showPromptPopup({
+              const tt = vt.NotificationProvider.showPromptPopup({
                 title: "hudLayout:resetAllTitle",
                 subtitle: "hudLayout:resetAllSubtitle",
                 confirmText: "hudLayout:resetAllConfirm",
                 cancelText: "general:cancel",
                 destructive: !0
               });
-              !0 === await BB.getResult() && (0, HB.S)()
+              !0 === await tt.getResult() && (0, It.Q)()
             }()
           },
-          children: BB("hudLayout:resetAll")
+          children: tt("hudLayout:resetAll")
         })]
       })
     }
-    const LZ = 350;
-    const eZ = [function() {
+    const oV = 350;
+    const rV = [function() {
       const {
-        t: BB
-      } = (0, TB.G)(), [IB, ZB] = (0, JB.useState)(!1), oB = (0, JB.useRef)(null);
-      return (0, JB.useEffect)((() => {
-        var BB;
-        IB && (null === (BB = oB.current) || void 0 === BB || BB.scrollIntoView({
+        t: tt
+      } = (0, Ot.H)(), [et, Vt] = (0, qt.useState)(!1), Dt = (0, qt.useRef)(null);
+      return (0, qt.useEffect)((() => {
+        var tt;
+        et && (null === (tt = Dt.current) || void 0 === tt || tt.scrollIntoView({
           block: "start",
           behavior: "smooth"
         }))
-      }), [IB]), (0, CB.jsxs)("div", {
+      }), [et]), (0, Ct.jsxs)("div", {
         className: "HudLayoutSection",
-        children: [(0, CB.jsx)(YB.e, {
-          ref: oB,
+        children: [(0, Ct.jsx)(Wt.d, {
+          ref: Dt,
           icon: "arrows-up-down-left-right",
-          title: BB("hudLayout:title"),
-          sub: BB("hudLayout:entrySub"),
-          expanded: IB,
+          title: tt("hudLayout:title"),
+          sub: tt("hudLayout:entrySub"),
+          expanded: et,
           onClick: () => {
-            ZB(!IB)
+            Vt(!et)
           }
-        }), IB && (0, CB.jsx)(XZ, {})]
+        }), et && (0, Ct.jsx)(zV, {})]
       })
     }, function() {
       const {
-        t: BB
-      } = (0, TB.G)(), {
-        joystickMode: IB,
-        touchSpeedCurve: ZB,
-        autorun: JB,
-        jumpLock: oB,
-        touchEdgeGuard: GB
-      } = (0, nB.o)(["clientEscMenuOptions"]).clientEscMenuOptions;
-      return (0, CB.jsxs)(CB.Fragment, {
-        children: [(0, CB.jsx)(FB.h, {
-          label: BB("settingsMenu:joystick"),
-          options: dB.Eb.map((IB => ({
-            value: IB,
-            label: BB(QB[IB])
+        t: tt
+      } = (0, Ot.H)(), {
+        joystickMode: et,
+        touchSpeedCurve: Vt,
+        autorun: qt,
+        jumpLock: Dt,
+        touchEdgeGuard: mt
+      } = (0, Xt.k)(["clientEscMenuOptions"]).clientEscMenuOptions;
+      return (0, Ct.jsxs)(Ct.Fragment, {
+        children: [(0, Ct.jsx)(Et.e, {
+          label: tt("settingsMenu:joystick"),
+          options: Jt.ob.map((et => ({
+            value: et,
+            label: tt(ut[et])
           }))),
-          value: IB,
-          onChange: BB => {
-            nB.d.setClientEscMenuOptions({
-              joystickMode: BB
+          value: et,
+          onChange: tt => {
+            Xt.b.setClientEscMenuOptions({
+              joystickMode: tt
             })
           },
-          circleInfoText: BB("settingsMenu:joystickInfo")
-        }), (0, CB.jsx)(FB.e, {
-          label: BB("settingsMenu:preciseWalking"),
-          checked: ZB,
-          onClick: BB => {
-            nB.d.setClientEscMenuOptions({
-              touchSpeedCurve: BB
+          circleInfoText: tt("settingsMenu:joystickInfo")
+        }), (0, Ct.jsx)(Et.c, {
+          label: tt("settingsMenu:preciseWalking"),
+          checked: Vt,
+          onClick: tt => {
+            Xt.b.setClientEscMenuOptions({
+              touchSpeedCurve: tt
             })
           },
-          circleInfoText: BB("settingsMenu:preciseWalkingInfo")
-        }), (0, CB.jsx)(FB.e, {
-          label: BB("settingsMenu:autoRun"),
-          checked: JB,
-          onClick: BB => {
-            nB.d.setClientEscMenuOptions({
-              autorun: BB
+          circleInfoText: tt("settingsMenu:preciseWalkingInfo")
+        }), (0, Ct.jsx)(Et.c, {
+          label: tt("settingsMenu:autoRun"),
+          checked: qt,
+          onClick: tt => {
+            Xt.b.setClientEscMenuOptions({
+              autorun: tt
             })
           },
-          circleInfoText: BB("settingsMenu:autoRunInfo")
-        }), (0, CB.jsx)(FB.e, {
-          label: BB("settingsMenu:jumpLock"),
-          checked: oB,
-          onClick: BB => {
-            nB.d.setClientEscMenuOptions({
-              jumpLock: BB
+          circleInfoText: tt("settingsMenu:autoRunInfo")
+        }), (0, Ct.jsx)(Et.c, {
+          label: tt("settingsMenu:jumpLock"),
+          checked: Dt,
+          onClick: tt => {
+            Xt.b.setClientEscMenuOptions({
+              jumpLock: tt
             })
           },
-          circleInfoText: BB("settingsMenu:jumpLockInfo")
-        }), (0, CB.jsx)(FB.e, {
-          label: BB("touchSettings:stopAtEdges"),
-          checked: GB,
-          onClick: BB => {
-            nB.d.setClientEscMenuOptions({
-              touchEdgeGuard: BB
+          circleInfoText: tt("settingsMenu:jumpLockInfo")
+        }), (0, Ct.jsx)(Et.c, {
+          label: tt("touchSettings:stopAtEdges"),
+          checked: mt,
+          onClick: tt => {
+            Xt.b.setClientEscMenuOptions({
+              touchEdgeGuard: tt
             })
           },
-          circleInfoText: BB("touchSettings:stopAtEdgesInfo")
+          circleInfoText: tt("touchSettings:stopAtEdgesInfo")
         })]
       })
     }, function() {
-      return (0, CB.jsx)(WB.c, {})
+      return (0, Ct.jsx)(bt.d, {})
     }, function() {
       const {
-        t: BB
-      } = (0, TB.G)(), {
-        clientEscMenuOptions: IB
-      } = (0, nB.o)(["clientEscMenuOptions"]);
-      return (0, sB.c)() ? (0, CB.jsx)(FB.e, {
-        label: BB("settingsMenu:vibration"),
-        checked: IB.vibration,
-        onClick: BB => {
-          nB.d.setClientEscMenuOptions({
-            vibration: BB
+        t: tt
+      } = (0, Ot.H)(), {
+        clientEscMenuOptions: et
+      } = (0, Xt.k)(["clientEscMenuOptions"]);
+      return (0, Kt.b)() ? (0, Ct.jsx)(Et.c, {
+        label: tt("settingsMenu:vibration"),
+        checked: et.vibration,
+        onClick: tt => {
+          Xt.b.setClientEscMenuOptions({
+            vibration: tt
           })
         },
-        circleInfoText: BB("settingsMenu:vibrationInfo")
+        circleInfoText: tt("settingsMenu:vibrationInfo")
       }) : null
     }];
 
-    function uZ() {
-      return (0, CB.jsx)(CB.Fragment, {
-        children: eZ.map(((BB, IB) => (0, CB.jsx)(BB, {}, IB)))
+    function UV() {
+      return (0, Ct.jsx)(Ct.Fragment, {
+        children: rV.map(((tt, et) => (0, Ct.jsx)(tt, {}, et)))
       })
     }
-    var fZ = ZB(4553);
+    var AV = Vt(4482);
 
-    function lZ() {
+    function iV() {
       const {
-        t: BB
-      } = (0, TB.G)(), {
-        isTouchScreen: IB,
-        clientEscMenuOptions: ZB,
-        gameState: GB
-      } = (0, nB.o)(["isTouchScreen", "clientEscMenuOptions", "gameState"]), vB = (0, NB.d)("ezBridging"), kB = (0, NB.d)("ezTowering"), qB = "inGame" !== GB || !0 === vB, yB = (0, gB.g)(), WB = null !== yB && ("inGame" !== GB || !0 === kB), [, dB] = (0, JB.useReducer)((BB => BB + 1), 0), QB = (0, UB.f)(), [sB, wB] = (0, JB.useState)(fZ.i);
-      return (0, CB.jsxs)("div", {
+        t: tt
+      } = (0, Ot.H)(), {
+        isTouchScreen: et,
+        clientEscMenuOptions: Vt,
+        gameState: mt
+      } = (0, Xt.k)(["isTouchScreen", "clientEscMenuOptions", "gameState"]), dt = (0, ft.i)("ezBridging"), jt = (0, ft.i)("ezTowering"), yt = "inGame" !== mt || !0 === dt, Nt = (0, wt.e)(), bt = null !== Nt && ("inGame" !== mt || !0 === jt), [, Jt] = (0, qt.useReducer)((tt => tt + 1), 0), ut = (0, Mt.g)(), [Kt, ht] = (0, qt.useState)(AV.g);
+      return (0, Ct.jsxs)("div", {
         className: "SettingsMenuRightInner",
-        children: [QB && (0, CB.jsxs)("div", {
+        children: [ut && (0, Ct.jsxs)("div", {
           className: "SettingBox SettingBoxWithButton",
-          children: [(0, CB.jsx)("div", {
-            children: BB("controller:settingsControlsNote")
-          }), (0, CB.jsx)(cB.V, {
+          children: [(0, Ct.jsx)("div", {
+            children: tt("controller:settingsControlsNote")
+          }), (0, Ct.jsx)(Ht.Q, {
             onClick: () => {
-              nB.d.set({
+              Xt.b.set({
                 openSettingsCategory: "controller"
               })
             },
-            children: BB("controller:settingsOpenController")
+            children: tt("controller:settingsOpenController")
           })]
-        }), (0, hB.isTouchscreen)() && !(0, hB.isMobile)() ? (0, CB.jsx)(CB.Fragment, {
-          children: (0, CB.jsx)(FB.e, {
-            label: BB("settingsMenu:useTouchControls"),
-            checked: sB,
-            onClick: BB => {
-              (0, fZ.e)(BB), wB(BB)
+        }), (0, Qt.isTouchscreen)() && !(0, Qt.isMobile)() ? (0, Ct.jsx)(Ct.Fragment, {
+          children: (0, Ct.jsx)(Et.c, {
+            label: tt("settingsMenu:useTouchControls"),
+            checked: Kt,
+            onClick: tt => {
+              (0, AV.d)(tt), ht(tt)
             }
           })
-        }) : null, IB && (0, CB.jsx)(uZ, {}), qB && (0, CB.jsx)(FB.e, {
-          label: BB("settingsMenu:ezBridging"),
-          checked: ZB.ezBridging,
-          onClick: BB => {
-            nB.d.setClientEscMenuOptions({
-              ezBridging: BB
+        }) : null, et && (0, Ct.jsx)(UV, {}), yt && (0, Ct.jsx)(Et.c, {
+          label: tt("settingsMenu:ezBridging"),
+          checked: Vt.ezBridging,
+          onClick: tt => {
+            Xt.b.setClientEscMenuOptions({
+              ezBridging: tt
             })
           },
-          circleInfoText: BB("settingsMenu:ezBridgingInfo")
-        }), WB && (0, CB.jsx)(FB.e, {
-          label: BB("settingsMenu:ezTowering"),
-          checked: ZB.ezTowering,
-          onClick: BB => {
-            nB.d.setClientEscMenuOptions({
-              ezTowering: BB
+          circleInfoText: tt("settingsMenu:ezBridgingInfo")
+        }), bt && (0, Ct.jsx)(Et.c, {
+          label: tt("settingsMenu:ezTowering"),
+          checked: Vt.ezTowering,
+          onClick: tt => {
+            Xt.b.setClientEscMenuOptions({
+              ezTowering: tt
             })
           },
-          circleInfoText: BB("jump" === yB ? "ezTowering:jumpInfo" : "settingsMenu:ezToweringInfo")
-        }), (0, CB.jsx)(FB.e, {
-          label: BB("settingsMenu:crouchToggle"),
-          checked: ZB.crouchIsToggle,
-          onClick: BB => {
-            nB.d.setClientEscMenuOptions({
-              crouchIsToggle: BB
+          circleInfoText: tt("jump" === Nt ? "ezTowering:jumpInfo" : "settingsMenu:ezToweringInfo")
+        }), (0, Ct.jsx)(Et.c, {
+          label: tt("settingsMenu:crouchToggle"),
+          checked: Vt.crouchIsToggle,
+          onClick: tt => {
+            Xt.b.setClientEscMenuOptions({
+              crouchIsToggle: tt
             })
           },
-          circleInfoText: BB("settingsMenu:crouchToggleInfo")
-        }), (0, CB.jsx)(FB.e, {
-          label: BB("settingsMenu:hideUiToggle"),
-          checked: ZB.hideUiIsToggle,
-          onClick: BB => {
-            nB.d.setClientEscMenuOptions({
-              hideUiIsToggle: BB
+          circleInfoText: tt("settingsMenu:crouchToggleInfo")
+        }), (0, Ct.jsx)(Et.c, {
+          label: tt("settingsMenu:hideUiToggle"),
+          checked: Vt.hideUiIsToggle,
+          onClick: tt => {
+            Xt.b.setClientEscMenuOptions({
+              hideUiIsToggle: tt
             })
           },
-          circleInfoText: BB("settingsMenu:hideUiToggleInfo")
-        }), "mouseOnly" !== (0, zB.e)() && (0, CB.jsx)(FB.j, {
-          name: BB("settingsMenu:touchscreenSensitivity"),
+          circleInfoText: tt("settingsMenu:hideUiToggleInfo")
+        }), "mouseOnly" !== (0, lt.d)() && (0, Ct.jsx)(Et.f, {
+          name: tt("settingsMenu:touchscreenSensitivity"),
           min: 1,
           max: 900,
           step: 1,
-          initValue: ZB.touchscreenSensitivity,
-          onChange: BB => {
-            nB.d.setClientEscMenuOptions({
-              touchscreenSensitivity: BB
+          initValue: Vt.touchscreenSensitivity,
+          onChange: tt => {
+            Xt.b.setClientEscMenuOptions({
+              touchscreenSensitivity: tt
             })
           }
-        }), !(0, hB.isMobile)() && (0, CB.jsx)(FB.j, {
-          name: BB("settingsMenu:mouseSensitivity"),
+        }), !(0, Qt.isMobile)() && (0, Ct.jsx)(Et.f, {
+          name: tt("settingsMenu:mouseSensitivity"),
           min: 1,
           max: 200,
           step: 1,
-          initValue: ZB.mouseSensitivity,
-          onChange: BB => {
-            nB.d.setClientEscMenuOptions({
-              mouseSensitivity: BB
+          initValue: Vt.mouseSensitivity,
+          onChange: tt => {
+            Xt.b.setClientEscMenuOptions({
+              mouseSensitivity: tt
             })
           }
-        }), !(0, hB.isMobile)() && (0, CB.jsxs)("div", {
+        }), !(0, Qt.isMobile)() && (0, Ct.jsxs)("div", {
           className: "ControlsContainer",
-          children: [(0, CB.jsx)("div", {
+          children: [(0, Ct.jsx)("div", {
             className: "SliderText",
-            children: BB("settingsMenu:keyBindings")
-          }), oB.h.map((IB => (0, CB.jsx)(AZ, {
-            title: BB(IB.name.translationKey, IB.name.params),
-            defaultOpen: oB.l.has(IB.id),
-            children: IB.actions.map((BB => (0, CB.jsx)(tZ, {
-              noaAction: BB,
-              forceUpdate: dB,
-              clashesWith: IB.clashesWith,
-              showPadGlyph: QB
-            }, BB)))
-          }, IB.name.translationKey))), (0, CB.jsx)(cB.M, {
+            children: tt("settingsMenu:keyBindings")
+          }), Dt.e.map((et => (0, Ct.jsx)(YV, {
+            title: tt(et.name.translationKey, et.name.params),
+            defaultOpen: Dt.g.has(et.id),
+            children: et.actions.map((tt => (0, Ct.jsx)(BV, {
+              noaAction: tt,
+              forceUpdate: Jt,
+              clashesWith: et.clashesWith,
+              showPadGlyph: ut
+            }, tt)))
+          }, et.name.translationKey))), (0, Ct.jsx)(Ht.G, {
             className: "ResetBindingsButton",
             onClick: () => {
-              (0, oB.D)(), dB()
+              (0, Dt.D)(), Jt()
             },
-            children: BB("controls:resetBindings")
+            children: tt("controls:resetBindings")
           })]
         })]
       })
     }
 
-    function AZ(BB) {
+    function YV(tt) {
       let {
-        title: IB,
-        defaultOpen: ZB,
-        children: TB
-      } = BB;
-      const [oB, GB] = (0, JB.useState)(ZB);
-      return (0, CB.jsxs)("div", {
-        className: kB()("ControlsSection", {
-          Collapsed: !oB
+        title: et,
+        defaultOpen: Vt,
+        children: Ot
+      } = tt;
+      const [Dt, mt] = (0, qt.useState)(Vt);
+      return (0, Ct.jsxs)("div", {
+        className: jt()("ControlsSection", {
+          Collapsed: !Dt
         }),
-        children: [(0, CB.jsxs)("div", {
+        children: [(0, Ct.jsxs)("div", {
           className: "ControlsSectionHeader",
           "data-pad-focusable": !0,
           onClick: () => {
-            GB(!oB)
+            mt(!Dt)
           },
-          children: [(0, CB.jsx)("div", {
+          children: [(0, Ct.jsx)("div", {
             className: "ControlsSectionTitle",
-            children: IB
-          }), (0, CB.jsx)("div", {
+            children: et
+          }), (0, Ct.jsx)("div", {
             className: "ControlsSectionChevron",
             children: "\u25be"
           })]
-        }), oB && (0, CB.jsx)("div", {
+        }), Dt && (0, Ct.jsx)("div", {
           className: "ControlsSectionRows",
-          children: TB
+          children: Ot
         })]
       })
     }
 
-    function tZ(BB) {
+    function BV(tt) {
       let {
-        noaAction: IB,
-        forceUpdate: ZB,
-        clashesWith: vB,
-        showPadGlyph: nB
-      } = BB;
+        noaAction: et,
+        forceUpdate: Vt,
+        clashesWith: dt,
+        showPadGlyph: Xt
+      } = tt;
       const {
-        t: hB
-      } = (0, TB.G)(), zB = (0, yB.e)(IB), [FB, NB] = (0, JB.useState)(!1), [gB, UB] = (0, JB.useState)("controls:clickToEnterNewBinding"), [WB, dB] = (0, JB.useState)(null), [QB, sB] = (0, JB.useState)(null), wB = (0, JB.useRef)(null);
-      (0, JB.useEffect)((() => {
-        FB && wB.current && wB.current.focus()
-      }), [FB]);
-      const OB = oB.u[IB].filter((BB => GB.h[BB]));
-      let YB = null;
-      const iB = [],
-        pB = vB.flatMap((BB => {
-          var IB, ZB;
-          return null !== (IB = null === (ZB = oB.h.find((IB => IB.id === BB))) || void 0 === ZB ? void 0 : ZB.actions) && void 0 !== IB ? IB : []
+        t: Qt
+      } = (0, Ot.H)(), lt = (0, Nt.e)(et), [Et, ft] = (0, qt.useState)(!1), [wt, Mt] = (0, qt.useState)("controls:clickToEnterNewBinding"), [bt, Jt] = (0, qt.useState)(null), [ut, Kt] = (0, qt.useState)(null), ht = (0, qt.useRef)(null);
+      (0, qt.useEffect)((() => {
+        Et && ht.current && ht.current.focus()
+      }), [Et]);
+      const vt = Dt.r[et].filter((tt => mt.j[tt]));
+      let Wt = null;
+      const St = [],
+        ct = dt.flatMap((tt => {
+          var et, Vt;
+          return null !== (et = null === (Vt = Dt.e.find((et => et.id === tt))) || void 0 === Vt ? void 0 : Vt.actions) && void 0 !== et ? et : []
         }));
-      for (const TB of pB) {
-        if (TB === IB) continue;
-        const BB = oB.u[TB];
-        for (const IB of BB) OB.includes(IB) && iB.push(hB(oB.y[TB].translationKey, oB.y[TB].params))
+      for (const Ot of ct) {
+        if (Ot === et) continue;
+        const tt = Dt.r[Ot];
+        for (const et of tt) vt.includes(et) && St.push(Qt(Dt.v[Ot].translationKey, Dt.v[Ot].params))
       }
-      iB.length > 0 && (YB = hB("controls:sharedBindingsWarning") + " ", YB += iB.join(", "));
-      const aB = () => {
-          NB(!1), dB(null), UB("controls:clickToEnterNewBinding"), sB(null)
+      St.length > 0 && (Wt = Qt("controls:sharedBindingsWarning") + " ", Wt += St.join(", "));
+      const Rt = () => {
+          ft(!1), Jt(null), Mt("controls:clickToEnterNewBinding"), Kt(null)
         },
-        HB = () => "BindingInput_" + IB;
-      return (0, CB.jsxs)("div", {
-        className: kB()("ControlRow", {
-          WarningBorder: null !== YB
+        It = () => "BindingInput_" + et;
+      return (0, Ct.jsxs)("div", {
+        className: jt()("ControlRow", {
+          WarningBorder: null !== Wt
         }),
-        children: [(0, CB.jsxs)("div", {
+        children: [(0, Ct.jsxs)("div", {
           className: "ControlRowInner",
-          children: [(0, CB.jsxs)("div", {
+          children: [(0, Ct.jsxs)("div", {
             className: "ControlName",
-            children: [hB(oB.y[IB].translationKey, oB.y[IB].params), nB && zB && (0, CB.jsx)(qB.b, {
-              glyph: zB,
+            children: [Qt(Dt.v[et].translationKey, Dt.v[et].params), Xt && lt && (0, Ct.jsx)(yt.d, {
+              glyph: lt,
               className: "ControlPadGlyph"
             })]
-          }), (0, CB.jsxs)("div", {
+          }), (0, Ct.jsxs)("div", {
             className: "ControlBindingsContainer",
-            children: [(0, CB.jsxs)("div", {
+            children: [(0, Ct.jsxs)("div", {
               className: "ControlBindingsList",
-              children: [OB.map((BB => (0, CB.jsxs)("div", {
+              children: [vt.map((tt => (0, Ct.jsxs)("div", {
                 className: "ControlBinding",
-                children: [(0, CB.jsx)("div", {
-                  children: (0, oB.n)(BB)
-                }), (0, CB.jsx)("div", {
+                children: [(0, Ct.jsx)("div", {
+                  children: (0, Dt.k)(tt)
+                }), (0, Ct.jsx)("div", {
                   className: "ControlBindingRemoveIcon",
                   "data-pad-focusable": !0,
                   onClick: () => {
-                    const TB = (0, oB.A)(IB, BB);
-                    TB.isError() ? sB(TB.asError().message) : sB(null), ZB()
+                    const Ot = (0, Dt.z)(et, tt);
+                    Ot.isError() ? Kt(Ot.asError().message) : Kt(null), Vt()
                   },
                   children: "\xd7"
                 })]
-              }, BB))), !FB && (0, CB.jsx)("div", {
+              }, tt))), !Et && (0, Ct.jsx)("div", {
                 className: "ControlBinding ControlBindingAdd",
                 onClick: () => {
-                  NB(!0), sB(null)
+                  ft(!0), Kt(null)
                 },
-                children: (0, CB.jsx)("div", {
+                children: (0, Ct.jsx)("div", {
                   className: "ControlBindingAddIcon",
                   children: "+"
                 })
               })]
-            }), FB && (0, CB.jsxs)("div", {
+            }), Et && (0, Ct.jsxs)("div", {
               className: "ControlBindingAddInput",
-              children: [(0, CB.jsxs)("div", {
+              children: [(0, Ct.jsxs)("div", {
                 className: "InputContainer",
-                children: [(0, CB.jsx)("div", {
+                children: [(0, Ct.jsx)("div", {
                   className: "InputOverlay",
-                  children: WB ? (0, oB.n)(WB) : (0, CB.jsx)("div", {
+                  children: bt ? (0, Dt.k)(bt) : (0, Ct.jsx)("div", {
                     className: "InputOverlayPlaceholder",
-                    children: hB(gB)
+                    children: Qt(wt)
                   })
-                }), (0, CB.jsx)("input", {
-                  ref: wB,
-                  id: HB(),
+                }), (0, Ct.jsx)("input", {
+                  ref: ht,
+                  id: It(),
                   "data-pad-no-osk": !0,
                   defaultValue: "",
-                  onKeyDown: BB => {
-                    if ("Escape" === BB.code) return aB(), BB.preventDefault(), void BB.stopPropagation();
-                    const IB = BB.code;
-                    GB.b.includes(IB) ? (sB(null), dB(IB)) : (sB("controls:keyIsReserved"), dB(null)), BB.preventDefault(), BB.stopPropagation()
+                  onKeyDown: tt => {
+                    if ("Escape" === tt.code) return Rt(), tt.preventDefault(), void tt.stopPropagation();
+                    const et = tt.code;
+                    mt.e.includes(et) ? (Kt(null), Jt(et)) : (Kt("controls:keyIsReserved"), Jt(null)), tt.preventDefault(), tt.stopPropagation()
                   },
-                  onMouseDown: BB => {
-                    const IB = "Mouse" + (BB.button + 1);
-                    document.activeElement && document.activeElement.id === HB() ? GB.b.includes(IB) ? (sB(null), dB(IB)) : (sB("controls:keyIsReserved"), dB(null)) : UB("controls:enterNewBinding"), BB.stopPropagation()
+                  onMouseDown: tt => {
+                    const et = "Mouse" + (tt.button + 1);
+                    document.activeElement && document.activeElement.id === It() ? mt.e.includes(et) ? (Kt(null), Jt(et)) : (Kt("controls:keyIsReserved"), Jt(null)) : Mt("controls:enterNewBinding"), tt.stopPropagation()
                   },
                   onBlur: () => {
-                    UB("controls:clickToEnterNewBinding")
+                    Mt("controls:clickToEnterNewBinding")
                   }
                 })]
-              }), (0, CB.jsx)(cB.g, {
-                onPointerDown: BB => {
-                  BB.preventDefault()
+              }), (0, Ct.jsx)(Ht.f, {
+                onPointerDown: tt => {
+                  tt.preventDefault()
                 },
                 onClick: () => {
-                  (0, oB.d)(IB, WB), ZB(), aB()
+                  (0, Dt.d)(et, bt), Vt(), Rt()
                 },
                 className: "ControlBindingAddButton",
-                disabled: null === WB,
-                children: hB("general:add")
-              }), (0, CB.jsx)("div", {
+                disabled: null === bt,
+                children: Qt("general:add")
+              }), (0, Ct.jsx)("div", {
                 className: "ControlBindingAddCancel",
                 onClick: () => {
-                  aB()
+                  Rt()
                 },
                 children: "\xd7"
               })]
-            }), QB && (0, CB.jsx)("div", {
+            }), ut && (0, Ct.jsx)("div", {
               className: "ControlBindingError",
-              children: hB(QB)
+              children: Qt(ut)
             })]
           })]
-        }), YB && (0, CB.jsx)("div", {
+        }), Wt && (0, Ct.jsx)("div", {
           className: "ControlRowWarning",
-          children: YB
+          children: Wt
         })]
       })
     }
   },
-  8991: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      e: () => GB
+  9109: (tt, et, Vt) => {
+    Vt.d(et, {
+      d: () => mt
     });
-    var TB = ZB(63),
-      JB = ZB(1102),
-      oB = ZB(1153);
-    const GB = (0, TB.forwardRef)((function(BB, IB) {
+    var Ot = Vt(63),
+      qt = Vt(1152),
+      Dt = Vt(1188);
+    const mt = (0, Ot.forwardRef)((function(tt, et) {
       let {
-        icon: ZB,
-        title: TB,
-        sub: GB,
-        expanded: vB,
-        onClick: kB
-      } = BB;
-      return (0, oB.jsxs)("button", {
-        ref: IB,
+        icon: Vt,
+        title: Ot,
+        sub: mt,
+        expanded: dt,
+        onClick: jt
+      } = tt;
+      return (0, Dt.jsxs)("button", {
+        ref: et,
         type: "button",
         className: "SettingBox SettingBoxFeatured FeaturedSettingsEntry",
-        "aria-expanded": vB,
-        onClick: kB,
-        children: [(0, oB.jsx)(JB.d, {
-          name: ZB,
+        "aria-expanded": dt,
+        onClick: jt,
+        children: [(0, Dt.jsx)(qt.b, {
+          name: Vt,
           className: "FeaturedSettingsEntryIcon"
-        }), (0, oB.jsxs)("span", {
+        }), (0, Dt.jsxs)("span", {
           className: "FeaturedSettingsEntryText",
-          children: [(0, oB.jsx)("span", {
+          children: [(0, Dt.jsx)("span", {
             className: "FeaturedSettingsEntryTitle",
-            children: TB
-          }), (0, oB.jsx)("span", {
+            children: Ot
+          }), (0, Dt.jsx)("span", {
             className: "FeaturedSettingsEntrySub",
-            children: GB
+            children: mt
           })]
-        }), (0, oB.jsx)("span", {
+        }), (0, Dt.jsx)("span", {
           className: "FeaturedSettingsEntryChevron",
           children: "\u25be"
         })]
       })
     }))
   },
-  8792: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      c: () => yB,
-      f: () => qB,
-      g: () => nB,
-      j: () => UB,
-      m: () => WB,
-      q: () => zB
+  8888: (tt, et, Vt) => {
+    Vt.d(et, {
+      b: () => Nt,
+      c: () => yt,
+      g: () => Xt,
+      j: () => Mt,
+      l: () => bt,
+      n: () => lt
     });
-    var TB = ZB(1738),
-      JB = ZB(1814);
-    const oB = BB => BB >= 56320 && BB <= 57343,
-      GB = BB => BB >= 55296 && BB <= 56319,
-      vB = (BB, IB) => IB >= 2 && oB(BB.charCodeAt(IB - 1)) && GB(BB.charCodeAt(IB - 2)) ? IB - 2 : Math.max(0, IB - 1),
-      kB = (BB, IB) => {
-        let ZB;
-        var TB, JB;
-        return ZB = BB.start !== BB.end ? IB < 0 ? BB.start : BB.end : IB < 0 ? vB(BB.value, BB.start) : (TB = BB.value, (JB = BB.start) + 1 < TB.length && GB(TB.charCodeAt(JB)) && oB(TB.charCodeAt(JB + 1)) ? JB + 2 : Math.min(TB.length, JB + 1)), {
-          value: BB.value,
-          start: ZB,
-          end: ZB
+    var Ot = Vt(1764),
+      qt = Vt(1832);
+    const Dt = tt => tt >= 56320 && tt <= 57343,
+      mt = tt => tt >= 55296 && tt <= 56319,
+      dt = (tt, et) => et >= 2 && Dt(tt.charCodeAt(et - 1)) && mt(tt.charCodeAt(et - 2)) ? et - 2 : Math.max(0, et - 1),
+      jt = (tt, et) => {
+        let Vt;
+        var Ot, qt;
+        return Vt = tt.start !== tt.end ? et < 0 ? tt.start : tt.end : et < 0 ? dt(tt.value, tt.start) : (Ot = tt.value, (qt = tt.start) + 1 < Ot.length && mt(Ot.charCodeAt(qt)) && Dt(Ot.charCodeAt(qt + 1)) ? qt + 2 : Math.min(Ot.length, qt + 1)), {
+          value: tt.value,
+          start: Vt,
+          end: Vt
         }
       },
-      cB = ["text", "search", "url", "email", "tel", "password", "number"],
-      nB = BB => !(!(0, JB.d)(BB) || BB.isContentEditable || BB.hasAttribute("data-pad-no-osk")) && (BB instanceof HTMLTextAreaElement || BB instanceof HTMLInputElement && cB.includes(BB.type)),
-      hB = BB => null !== BB.selectionStart,
-      zB = BB => {
-        var IB, ZB;
+      Ht = ["text", "search", "url", "email", "tel", "password", "number"],
+      Xt = tt => !(!(0, qt.c)(tt) || tt.isContentEditable || tt.hasAttribute("data-pad-no-osk")) && (tt instanceof HTMLTextAreaElement || tt instanceof HTMLInputElement && Ht.includes(tt.type)),
+      Qt = tt => null !== tt.selectionStart,
+      lt = tt => {
+        var et, Vt;
         const {
-          value: TB
-        } = BB;
+          value: Ot
+        } = tt;
         return {
-          value: TB,
-          start: null !== (IB = BB.selectionStart) && void 0 !== IB ? IB : TB.length,
-          end: null !== (ZB = BB.selectionEnd) && void 0 !== ZB ? ZB : TB.length
+          value: Ot,
+          start: null !== (et = tt.selectionStart) && void 0 !== et ? et : Ot.length,
+          end: null !== (Vt = tt.selectionEnd) && void 0 !== Vt ? Vt : Ot.length
         }
       },
-      FB = (BB, IB, ZB) => {
-        if (BB.readOnly) return;
-        const JB = BB instanceof HTMLTextAreaElement ? HTMLTextAreaElement.prototype : HTMLInputElement.prototype;
-        Object.getOwnPropertyDescriptor(JB, "value").set.call(BB, IB.value), hB(BB) && BB.setSelectionRange(IB.start, IB.end), (0, TB.h)(BB, new InputEvent("input", {
+      Et = (tt, et, Vt) => {
+        if (tt.readOnly) return;
+        const qt = tt instanceof HTMLTextAreaElement ? HTMLTextAreaElement.prototype : HTMLInputElement.prototype;
+        Object.getOwnPropertyDescriptor(qt, "value").set.call(tt, et.value), Qt(tt) && tt.setSelectionRange(et.start, et.end), (0, Ot.c)(tt, new InputEvent("input", {
           bubbles: !0,
-          inputType: ZB
+          inputType: Vt
         }))
       };
-    let NB = !1;
-    const gB = (BB, IB) => !!document.execCommand(BB, !1, IB) || (NB || (NB = !0, console.warn(`execCommand("${BB}") failed; the on-screen keyboard is setting the value directly`)), !1),
-      qB = (BB, IB) => {
-        gB("insertText", IB) || FB(BB, function(BB, IB) {
-          let ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
-          const TB = BB.value.slice(0, BB.start),
-            JB = BB.value.slice(BB.end);
-          let oB = ZB < 0 ? IB.length : Math.max(0, ZB - TB.length - JB.length);
-          oB > 0 && oB < IB.length && GB(IB.charCodeAt(oB - 1)) && oB--;
-          const vB = IB.slice(0, oB),
-            kB = TB.length + vB.length;
+    let ft = !1;
+    const wt = (tt, et) => !!document.execCommand(tt, !1, et) || (ft || (ft = !0, console.warn(`execCommand("${tt}") failed; the on-screen keyboard is setting the value directly`)), !1),
+      yt = (tt, et) => {
+        wt("insertText", et) || Et(tt, function(tt, et) {
+          let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
+          const Ot = tt.value.slice(0, tt.start),
+            qt = tt.value.slice(tt.end);
+          let Dt = Vt < 0 ? et.length : Math.max(0, Vt - Ot.length - qt.length);
+          Dt > 0 && Dt < et.length && mt(et.charCodeAt(Dt - 1)) && Dt--;
+          const dt = et.slice(0, Dt),
+            jt = Ot.length + dt.length;
           return {
-            value: TB + vB + JB,
-            start: kB,
-            end: kB
+            value: Ot + dt + qt,
+            start: jt,
+            end: jt
           }
-        }(zB(BB), IB, BB.maxLength), "insertText")
+        }(lt(tt), et, tt.maxLength), "insertText")
       },
-      yB = BB => {
-        gB("delete") || FB(BB, (BB => {
-          const IB = BB.start === BB.end ? vB(BB.value, BB.start) : BB.start;
+      Nt = tt => {
+        wt("delete") || Et(tt, (tt => {
+          const et = tt.start === tt.end ? dt(tt.value, tt.start) : tt.start;
           return {
-            value: BB.value.slice(0, IB) + BB.value.slice(BB.end),
-            start: IB,
-            end: IB
+            value: tt.value.slice(0, et) + tt.value.slice(tt.end),
+            start: et,
+            end: et
           }
-        })(zB(BB)), "deleteContentBackward")
+        })(lt(tt)), "deleteContentBackward")
       },
-      UB = (BB, IB) => {
-        if (!hB(BB)) return;
-        const ZB = kB(zB(BB), IB);
-        BB.setSelectionRange(ZB.start, ZB.end)
+      Mt = (tt, et) => {
+        if (!Qt(tt)) return;
+        const Vt = jt(lt(tt), et);
+        tt.setSelectionRange(Vt.start, Vt.end)
       },
-      WB = BB => {
-        hB(BB) && 0 === BB.selectionStart && 0 === BB.selectionEnd && BB.setSelectionRange(BB.value.length, BB.value.length)
+      bt = tt => {
+        Qt(tt) && 0 === tt.selectionStart && 0 === tt.selectionEnd && tt.setSelectionRange(tt.value.length, tt.value.length)
       }
   },
-  8946: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      b: () => vB
+  9063: (tt, et, Vt) => {
+    Vt.d(et, {
+      b: () => dt
     });
-    var TB = ZB(20),
-      JB = ZB(2220),
-      oB = ZB(1403),
-      GB = ZB(1454);
-    const vB = async () => {
-      if ((0, GB.j)()) {
-        if (!0 !== await oB.NotificationProvider.showPromptPopup({
+    var Ot = Vt(26),
+      qt = Vt(2203),
+      Dt = Vt(1450),
+      mt = Vt(1492);
+    const dt = async () => {
+      if ((0, mt.j)()) {
+        if (!0 !== await Dt.NotificationProvider.showPromptPopup({
             title: "controller:menusLeaveGameTitle",
             confirmText: "controller:menusLeaveGameLeave",
             cancelText: "controller:menusLeaveGameStay",
             destructive: !0
-          }).getResult() || "inGame" !== TB.d.get("gameState")) return
-      }(0, JB.g)()
+          }).getResult() || "inGame" !== Ot.b.get("gameState")) return
+      }(0, qt.e)()
     }
   },
-  8951: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      c: () => kB,
-      e: () => oB,
-      h: () => GB,
-      k: () => JB,
-      o: () => vB
+  9065: (tt, et, Vt) => {
+    Vt.d(et, {
+      b: () => jt,
+      d: () => Dt,
+      g: () => mt,
+      j: () => qt,
+      n: () => dt
     });
-    var TB = ZB(2038);
-    const JB = "controllerPadShopOpen",
-      oB = BB => TB.i.includes(BB),
-      GB = BB => Object.values(BB).some((BB => !1 !== BB.canBuy && !BB.isRewardedAd)),
-      vB = (BB, IB, ZB) => {
-        var TB, JB, GB, vB;
-        const kB = BB.filter((BB => !oB(BB))),
-          cB = null !== IB && BB.includes(IB) ? IB : null;
-        return null !== cB && !oB(cB) && ZB(cB) ? cB : null !== (TB = null !== (JB = null !== (GB = null !== (vB = kB.find(ZB)) && void 0 !== vB ? vB : kB[0]) && void 0 !== GB ? GB : cB) && void 0 !== JB ? JB : BB[0]) && void 0 !== TB ? TB : null
+    var Ot = Vt(2047);
+    const qt = "controllerPadShopOpen",
+      Dt = tt => Ot.j.includes(tt),
+      mt = tt => Object.values(tt).some((tt => !1 !== tt.canBuy && !tt.isRewardedAd)),
+      dt = (tt, et, Vt) => {
+        var Ot, qt, mt, dt;
+        const jt = tt.filter((tt => !Dt(tt))),
+          Ht = null !== et && tt.includes(et) ? et : null;
+        return null !== Ht && !Dt(Ht) && Vt(Ht) ? Ht : null !== (Ot = null !== (qt = null !== (mt = null !== (dt = jt.find(Vt)) && void 0 !== dt ? dt : jt[0]) && void 0 !== mt ? mt : Ht) && void 0 !== qt ? qt : tt[0]) && void 0 !== Ot ? Ot : null
       },
-      kB = BB => BB.userInput || BB.isRewardedAd || "boolean" === typeof BB.isSelected ? null : JSON.stringify([BB.image, BB.cost, BB.currency, BB.amount, BB.customTitle, BB.buyButtonText, BB.description, BB.canBuy])
+      jt = tt => tt.userInput || tt.isRewardedAd || "boolean" === typeof tt.isSelected ? null : JSON.stringify([tt.image, tt.cost, tt.currency, tt.amount, tt.customTitle, tt.buyButtonText, tt.description, tt.canBuy])
   },
-  8976: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      c: () => cB,
-      f: () => nB
+  9091: (tt, et, Vt) => {
+    Vt.d(et, {
+      d: () => Ht,
+      g: () => Xt
     });
-    var TB = ZB(63),
-      JB = ZB(1507),
-      oB = ZB(2089),
-      GB = ZB(1469),
-      vB = ZB(1492),
-      kB = ZB(1153);
-    const cB = () => {
-        const BB = (0, GB.o)();
-        if ((0, TB.useEffect)((() => {
-            (0, GB.i)()
-          }), []), !BB) return null;
+    var Ot = Vt(63),
+      qt = Vt(1554),
+      Dt = Vt(2096),
+      mt = Vt(1513),
+      dt = Vt(1540),
+      jt = Vt(1188);
+    const Ht = () => {
+        const tt = (0, mt.p)();
+        if ((0, Ot.useEffect)((() => {
+            (0, mt.j)()
+          }), []), !tt) return null;
         const {
-          ControllerCategory: IB
-        } = BB;
-        return (0, kB.jsx)(vB.e, {
-          children: (0, kB.jsx)(IB, {})
+          ControllerCategory: et
+        } = tt;
+        return (0, jt.jsx)(dt.e, {
+          children: (0, jt.jsx)(et, {})
         })
       },
-      nB = () => {
-        var BB;
-        const IB = (0, GB.o)(),
-          [, ZB] = (0, TB.useReducer)((BB => BB + 1), 0);
-        return (0, JB.d)(oB.e, ZB), null !== (BB = null === IB || void 0 === IB ? void 0 : IB.hasActivePad()) && void 0 !== BB && BB
+      Xt = () => {
+        var tt;
+        const et = (0, mt.p)(),
+          [, Vt] = (0, Ot.useReducer)((tt => tt + 1), 0);
+        return (0, qt.f)(Dt.e, Vt), null !== (tt = null === et || void 0 === et ? void 0 : et.hasActivePad()) && void 0 !== tt && tt
       }
   },
-  8797: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      b: () => TB,
-      e: () => cB,
-      i: () => gB,
-      m: () => hB,
-      o: () => NB,
-      r: () => oB,
-      u: () => FB,
-      x: () => GB,
-      y: () => zB
+  8893: (tt, et, Vt) => {
+    Vt.d(et, {
+      C: () => lt,
+      d: () => Ot,
+      h: () => Ht,
+      i: () => wt,
+      l: () => Qt,
+      o: () => ft,
+      r: () => Dt,
+      v: () => Et,
+      z: () => mt
     });
-    const TB = ["button", "a[href]", "input:not([type=hidden])", "textarea", "select", "[role=button]", "[role=tab]", "[role=switch]", "[role=checkbox]", "[role=option]", "[role=menuitem]", "[data-pad-focusable]", "[data-pad-tab]", ".Dropdown-control", ".Dropdown-option"].join(","),
-      JB = (BB, IB) => {
-        if ("function" === typeof BB.checkVisibility) return !BB.checkVisibility({
+    const Ot = ["button", "a[href]", "input:not([type=hidden])", "textarea", "select", "[role=button]", "[role=tab]", "[role=switch]", "[role=checkbox]", "[role=option]", "[role=menuitem]", "[data-pad-focusable]", "[data-pad-tab]", ".Dropdown-control", ".Dropdown-option"].join(","),
+      qt = (tt, et) => {
+        if ("function" === typeof tt.checkVisibility) return !tt.checkVisibility({
           visibilityProperty: !0,
           checkVisibilityCSS: !0,
-          opacityProperty: IB,
-          checkOpacity: IB
+          opacityProperty: et,
+          checkOpacity: et
         });
         const {
-          visibility: ZB
-        } = getComputedStyle(BB);
-        if ("hidden" === ZB || "collapse" === ZB) return !0;
-        if (!IB) return !1;
-        for (let TB = BB; TB; TB = TB.parentElement)
-          if ("0" === getComputedStyle(TB).opacity) return !0;
+          visibility: Vt
+        } = getComputedStyle(tt);
+        if ("hidden" === Vt || "collapse" === Vt) return !0;
+        if (!et) return !1;
+        for (let Ot = tt; Ot; Ot = Ot.parentElement)
+          if ("0" === getComputedStyle(Ot).opacity) return !0;
         return !1
       },
-      oB = BB => {
-        if (!BB.isConnected || JB(BB, !0)) return !1;
-        const IB = BB.getBoundingClientRect();
-        return IB.width > 0 && IB.height > 0
+      Dt = tt => {
+        if (!tt.isConnected || qt(tt, !0)) return !1;
+        const et = tt.getBoundingClientRect();
+        return et.width > 0 && et.height > 0
       },
-      GB = BB => !!BB.matches(":disabled, [aria-disabled='true']") || "button" === BB.getAttribute("role") && "-1" === BB.getAttribute("tabindex"),
-      vB = BB => {
-        var IB;
-        if (BB.closest("[data-pad-ignore]")) return !0;
-        return !!(null === (IB = BB.parentElement) || void 0 === IB ? void 0 : IB.closest("[data-pad-focusable]"))
+      mt = tt => !!tt.matches(":disabled, [aria-disabled='true']") || "button" === tt.getAttribute("role") && "-1" === tt.getAttribute("tabindex"),
+      dt = tt => {
+        var et;
+        if (tt.closest("[data-pad-ignore]")) return !0;
+        return !!(null === (et = tt.parentElement) || void 0 === et ? void 0 : et.closest("[data-pad-focusable]"))
       },
-      kB = BB => {
-        const IB = BB.querySelectorAll(TB);
-        return BB.matches(TB) ? [BB, ...IB] : IB
+      jt = tt => {
+        const et = tt.querySelectorAll(Ot);
+        return tt.matches(Ot) ? [tt, ...et] : et
       },
-      cB = BB => {
-        const IB = [];
-        for (const ZB of kB(BB)) !vB(ZB) && oB(ZB) && IB.push(ZB);
-        return IB
+      Ht = tt => {
+        const et = [];
+        for (const Vt of jt(tt)) !dt(Vt) && Dt(Vt) && et.push(Vt);
+        return et
       },
-      nB = new WeakMap,
-      hB = BB => {
-        const IB = nB.get(BB);
-        if (IB && zB(IB, BB)) return !0;
-        for (const ZB of kB(BB))
-          if (!vB(ZB) && oB(ZB)) return nB.set(BB, ZB), !0;
-        return nB.delete(BB), !1
+      Xt = new WeakMap,
+      Qt = tt => {
+        const et = Xt.get(tt);
+        if (et && lt(et, tt)) return !0;
+        for (const Vt of jt(tt))
+          if (!dt(Vt) && Dt(Vt)) return Xt.set(tt, Vt), !0;
+        return Xt.delete(tt), !1
       },
-      zB = (BB, IB) => IB.contains(BB) && BB.matches(TB) && !vB(BB) && oB(BB),
-      FB = (BB, IB) => zB(BB, IB) && !GB(BB),
-      NB = BB => {
-        for (const IB of BB.querySelectorAll("[data-pad-initial-area]"))
-          if (!JB(IB, !1)) return !0;
+      lt = (tt, et) => et.contains(tt) && tt.matches(Ot) && !dt(tt) && Dt(tt),
+      Et = (tt, et) => lt(tt, et) && !mt(tt),
+      ft = tt => {
+        for (const et of tt.querySelectorAll("[data-pad-initial-area]"))
+          if (!qt(et, !1)) return !0;
         return !1
       },
-      gB = BB => {
-        const IB = IB => {
-          let ZB = 0;
-          for (let TB = IB.parentElement; TB && TB !== BB; TB = TB.parentElement) ZB++;
-          return ZB
+      wt = tt => {
+        const et = et => {
+          let Vt = 0;
+          for (let Ot = et.parentElement; Ot && Ot !== tt; Ot = Ot.parentElement) Vt++;
+          return Vt
         };
-        return [...BB.querySelectorAll("[data-pad-initial-area]")].filter(oB).sort(((BB, ZB) => IB(ZB) - IB(BB)))
+        return [...tt.querySelectorAll("[data-pad-initial-area]")].filter(Dt).sort(((tt, Vt) => et(Vt) - et(tt)))
       }
   },
-  8779: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      B: () => FB,
-      E: () => wB,
-      H: () => cB,
-      K: () => YB,
-      L: () => QB,
-      N: () => sB,
-      R: () => qB,
-      T: () => kB,
-      V: () => nB,
-      e: () => yB,
-      h: () => OB,
-      j: () => CB,
-      n: () => dB,
-      q: () => NB,
-      u: () => gB,
-      x: () => zB
+  8874: (tt, et, Vt) => {
+    Vt.d(et, {
+      C: () => Kt,
+      F: () => yt,
+      H: () => jt,
+      K: () => Xt,
+      b: () => Nt,
+      c: () => vt,
+      d: () => Ct,
+      e: () => Jt,
+      h: () => ft,
+      j: () => wt,
+      k: () => lt,
+      m: () => Et,
+      q: () => ht,
+      t: () => Ht,
+      x: () => Wt,
+      y: () => ut
     });
-    var TB = ZB(24),
-      JB = ZB(1738),
-      oB = ZB(8785),
-      GB = ZB(8792),
-      vB = ZB(8797);
-    const kB = BB => (0, GB.g)(BB),
-      cB = BB => {
-        const IB = BB.getBoundingClientRect();
+    var Ot = Vt(31),
+      qt = Vt(1764),
+      Dt = Vt(8880),
+      mt = Vt(8888),
+      dt = Vt(8893);
+    const jt = tt => (0, mt.g)(tt),
+      Ht = tt => {
+        const et = tt.getBoundingClientRect();
         return {
-          x: IB.left + IB.width / 2,
-          y: IB.top + IB.height / 2
+          x: et.left + et.width / 2,
+          y: et.top + et.height / 2
         }
       },
-      nB = (BB, IB, ZB) => ({
+      Xt = (tt, et, Vt) => ({
         bubbles: !0,
         cancelable: !0,
         composed: !0,
         view: window,
-        clientX: BB.x,
-        clientY: BB.y,
-        screenX: BB.x,
-        screenY: BB.y,
-        button: IB,
-        buttons: ZB,
+        clientX: tt.x,
+        clientY: tt.y,
+        screenX: tt.x,
+        screenY: tt.y,
+        button: et,
+        buttons: Vt,
         pointerId: 1,
         pointerType: "mouse",
         isPrimary: !0
       }),
-      hB = (BB, IB) => {
-        (0, JB.h)(BB, IB)
+      Qt = (tt, et) => {
+        (0, qt.c)(tt, et)
       },
-      zB = function(BB, IB) {
-        let ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        const TB = 0 === ZB ? 1 : 2;
-        hB(BB, new PointerEvent("pointerdown", nB(IB, ZB, TB))), hB(BB, new MouseEvent("mousedown", nB(IB, ZB, TB)))
+      lt = function(tt, et) {
+        let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        const Ot = 0 === Vt ? 1 : 2;
+        Qt(tt, new PointerEvent("pointerdown", Xt(et, Vt, Ot))), Qt(tt, new MouseEvent("mousedown", Xt(et, Vt, Ot)))
       },
-      FB = function(BB, IB) {
-        let ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        hB(BB, new PointerEvent("pointerup", nB(IB, ZB, 0))), hB(BB, new MouseEvent("mouseup", nB(IB, ZB, 0)))
+      Et = function(tt, et) {
+        let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        Qt(tt, new PointerEvent("pointerup", Xt(et, Vt, 0))), Qt(tt, new MouseEvent("mouseup", Xt(et, Vt, 0)))
       },
-      NB = function(BB, IB) {
-        let ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        zB(BB, IB, ZB), FB(BB, IB, ZB), hB(BB, 0 === ZB ? new MouseEvent("click", nB(IB, 0, 0)) : new MouseEvent("contextmenu", nB(IB, 2, 0)))
+      ft = function(tt, et) {
+        let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        lt(tt, et, Vt), Et(tt, et, Vt), Qt(tt, 0 === Vt ? new MouseEvent("click", Xt(et, 0, 0)) : new MouseEvent("contextmenu", Xt(et, 2, 0)))
       },
-      gB = function(BB, IB, ZB) {
+      wt = function(tt, et, Vt) {
         let {
-          leaveBelow: TB = null,
-          enterBelow: JB = null
+          leaveBelow: Ot = null,
+          enterBelow: qt = null
         } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-        if (BB !== IB) {
-          if (null !== BB && void 0 !== BB && BB.isConnected) {
-            const JB = {
-              ...nB(ZB, 0, 0),
-              relatedTarget: IB
+        if (tt !== et) {
+          if (null !== tt && void 0 !== tt && tt.isConnected) {
+            const qt = {
+              ...Xt(Vt, 0, 0),
+              relatedTarget: et
             };
-            hB(BB, new PointerEvent("pointerout", JB)), hB(BB, new MouseEvent("mouseout", JB));
-            const oB = BB => !!IB && BB.contains(IB) || !!TB && BB.contains(TB);
-            for (let IB = BB; IB && !oB(IB); IB = IB.parentElement) hB(IB, new PointerEvent("pointerleave", {
-              ...JB,
+            Qt(tt, new PointerEvent("pointerout", qt)), Qt(tt, new MouseEvent("mouseout", qt));
+            const Dt = tt => !!et && tt.contains(et) || !!Ot && tt.contains(Ot);
+            for (let et = tt; et && !Dt(et); et = et.parentElement) Qt(et, new PointerEvent("pointerleave", {
+              ...qt,
               bubbles: !1
-            })), hB(IB, new MouseEvent("mouseleave", {
-              ...JB,
+            })), Qt(et, new MouseEvent("mouseleave", {
+              ...qt,
               bubbles: !1
             }))
           }
-          if (IB) {
-            const TB = {
-              ...nB(ZB, 0, 0),
-              relatedTarget: BB
+          if (et) {
+            const Ot = {
+              ...Xt(Vt, 0, 0),
+              relatedTarget: tt
             };
-            hB(IB, new PointerEvent("pointerover", TB)), hB(IB, new MouseEvent("mouseover", TB));
-            const oB = [],
-              GB = IB => !(null === BB || void 0 === BB || !BB.isConnected) && IB.contains(BB) || !!JB && IB.contains(JB);
-            for (let BB = IB; BB && !GB(BB); BB = BB.parentElement) oB.push(BB);
-            for (const BB of oB.reverse()) hB(BB, new PointerEvent("pointerenter", {
-              ...TB,
+            Qt(et, new PointerEvent("pointerover", Ot)), Qt(et, new MouseEvent("mouseover", Ot));
+            const Dt = [],
+              mt = et => !(null === tt || void 0 === tt || !tt.isConnected) && et.contains(tt) || !!qt && et.contains(qt);
+            for (let tt = et; tt && !mt(tt); tt = tt.parentElement) Dt.push(tt);
+            for (const tt of Dt.reverse()) Qt(tt, new PointerEvent("pointerenter", {
+              ...Ot,
               bubbles: !1
-            })), hB(BB, new MouseEvent("mouseenter", {
-              ...TB,
+            })), Qt(tt, new MouseEvent("mouseenter", {
+              ...Ot,
               bubbles: !1
             }));
-            hB(IB, new PointerEvent("pointermove", nB(ZB, 0, 0))), hB(IB, new MouseEvent("mousemove", nB(ZB, 0, 0)))
+            Qt(et, new PointerEvent("pointermove", Xt(Vt, 0, 0))), Qt(et, new MouseEvent("mousemove", Xt(Vt, 0, 0)))
           }
-        } else IB && (hB(IB, new PointerEvent("pointermove", nB(ZB, 0, 0))), hB(IB, new MouseEvent("mousemove", nB(ZB, 0, 0))))
+        } else et && (Qt(et, new PointerEvent("pointermove", Xt(Vt, 0, 0))), Qt(et, new MouseEvent("mousemove", Xt(Vt, 0, 0))))
       },
-      qB = BB => {
-        TB.l.Gq(oB.d, BB)
+      yt = tt => {
+        Ot.j.sw(Dt.i, tt)
       },
-      yB = BB => {
-        if (kB(BB)) return void qB(BB);
-        const IB = BB.hasAttribute("data-pad-focusable") ? BB.querySelector("a[href]") : null,
-          ZB = null !== IB && void 0 !== IB ? IB : BB;
-        NB(ZB, cB(ZB))
+      Nt = tt => {
+        if (jt(tt)) return void yt(tt);
+        const et = tt.hasAttribute("data-pad-focusable") ? tt.querySelector("a[href]") : null,
+          Vt = null !== et && void 0 !== et ? et : tt;
+        ft(Vt, Ht(Vt))
       },
-      UB = ".Dropdown-root.is-open",
-      WB = BB => {
-        const IB = BB.querySelector(".Dropdown-control");
-        return yB(IB), IB
+      Mt = ".Dropdown-root.is-open",
+      bt = tt => {
+        const et = tt.querySelector(".Dropdown-control");
+        return Nt(et), et
       },
-      dB = BB => {
-        var IB;
-        const ZB = null !== (IB = BB.closest(UB)) && void 0 !== IB ? IB : BB.querySelector(UB);
-        return ZB ? WB(ZB) : null
+      Jt = tt => {
+        var et;
+        const Vt = null !== (et = tt.closest(Mt)) && void 0 !== et ? et : tt.querySelector(Mt);
+        return Vt ? bt(Vt) : null
       },
-      CB = BB => {
-        for (const IB of document.querySelectorAll(UB)) IB.contains(BB) || WB(IB)
+      Ct = tt => {
+        for (const et of document.querySelectorAll(Mt)) et.contains(tt) || bt(et)
       },
-      QB = BB => null !== BB.closest("input[type=color], input[type=file], [data-pad-mouse-only]"),
-      sB = BB => {
-        const IB = BB ? document.elementFromPoint(BB.x, BB.y) : null;
-        return !(null === IB || void 0 === IB || !IB.closest("[data-pad-repeat]"))
+      ut = tt => null !== tt.closest("input[type=color], input[type=file], [data-pad-mouse-only]"),
+      Kt = tt => {
+        const et = tt ? document.elementFromPoint(tt.x, tt.y) : null;
+        return !(null === et || void 0 === et || !et.closest("[data-pad-repeat]"))
       },
-      wB = BB => {
-        var IB;
-        return null !== (IB = [...BB.querySelectorAll("[data-pad-back]")].find(vB.r)) && void 0 !== IB ? IB : null
+      ht = tt => {
+        var et;
+        return null !== (et = [...tt.querySelectorAll("[data-pad-back]")].find(dt.r)) && void 0 !== et ? et : null
       },
-      OB = BB => {
-        const IB = wB(BB);
-        return !!IB && (yB(IB), !0)
+      vt = tt => {
+        const et = ht(tt);
+        return !!et && (Nt(et), !0)
       },
-      YB = BB => {
-        var IB, ZB, TB, JB;
-        return null !== (IB = null !== (ZB = null !== (TB = BB.getAttribute("data-pad-key")) && void 0 !== TB ? TB : BB.getAttribute("href")) && void 0 !== ZB ? ZB : null === (JB = BB.querySelector("a[href]")) || void 0 === JB ? void 0 : JB.getAttribute("href")) && void 0 !== IB ? IB : null
+      Wt = tt => {
+        var et, Vt, Ot, qt;
+        return null !== (et = null !== (Vt = null !== (Ot = tt.getAttribute("data-pad-key")) && void 0 !== Ot ? Ot : tt.getAttribute("href")) && void 0 !== Vt ? Vt : null === (qt = tt.querySelector("a[href]")) || void 0 === qt ? void 0 : qt.getAttribute("href")) && void 0 !== et ? et : null
       }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const tt in modules) Object.freeze(modules[tt]);

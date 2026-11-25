@@ -1,97 +1,97 @@
 export const id = 277;
 export const ids = [276, 277];
 export const modules = {
-  41082: (BB, IB, ZB) => {
-    ZB.r(IB), ZB.d(IB, {
-      gamePackSource: () => oB
+  41257: (tt, et, Vt) => {
+    Vt.r(et), Vt.d(et, {
+      gamePackSource: () => Dt
     });
-    var TB = ZB(5134),
-      JB = ZB(1561);
+    var Ot = Vt(5145),
+      qt = Vt(1600);
 
-    function oB(BB) {
+    function Dt(tt) {
       return {
-        packKey: async IB => (await JB.c.getGame(BB, IB, !0)).customTexturePackKey,
-        fetchPack: TB.c
+        packKey: async et => (await qt.e.getGame(tt, et, !0)).customTexturePackKey,
+        fetchPack: Ot.e
       }
     }
   },
-  51065: (BB, IB, ZB) => {
-    ZB.r(IB), ZB.d(IB, {
-      fetchGuestContext: () => zB,
-      guestJoinTarget: () => WB,
-      guestJoinWithPack: () => NB,
-      guestPackForGame: () => FB,
-      invalidateGuestTrafficCode: () => UB
+  51285: (tt, et, Vt) => {
+    Vt.r(et), Vt.d(et, {
+      fetchGuestContext: () => lt,
+      guestJoinTarget: () => bt,
+      guestJoinWithPack: () => ft,
+      guestPackForGame: () => Et,
+      invalidateGuestTrafficCode: () => Mt
     });
-    var TB = ZB(1258),
-      JB = ZB(1561),
-      oB = ZB(105),
-      GB = ZB(36485),
-      vB = ZB(1186),
-      kB = ZB(40784),
-      cB = ZB(41082),
-      nB = ZB(40746);
+    var Ot = Vt(1293),
+      qt = Vt(1600),
+      Dt = Vt(106),
+      mt = Vt(36701),
+      dt = Vt(1223),
+      jt = Vt(40933),
+      Ht = Vt(41257),
+      Xt = Vt(40895);
 
-    function hB() {
-      if (oB.featureFlags.useTurnstile) throw new kB.TurnstilePageError
+    function Qt() {
+      if (Dt.featureFlags.useTurnstile) throw new jt.TurnstilePageError
     }
 
-    function zB() {
-      return (0, vB.fetchAnonymousUserContext)().catch((BB => (console.warn("the guest context didn't load", BB), null)))
+    function lt() {
+      return (0, dt.fetchAnonymousUserContext)().catch((tt => (console.warn("the guest context didn't load", tt), null)))
     }
-    async function FB(BB, IB, ZB, TB) {
+    async function Et(tt, et, Vt, Ot) {
       try {
-        const JB = await ZB;
-        if (null === JB) return void console.warn(`the texture pack step for ${BB} has no guest context: the pack in play stays`);
-        await IB.packForGame(BB, (0, cB.gamePackSource)(JB), TB)
-      } catch (JB) {
-        console.warn(`the texture pack step for ${BB} failed: the pack in play stays`, JB)
+        const qt = await Vt;
+        if (null === qt) return void console.warn(`the texture pack step for ${tt} has no guest context: the pack in play stays`);
+        await et.packForGame(tt, (0, Ht.gamePackSource)(qt), Ot)
+      } catch (qt) {
+        console.warn(`the texture pack step for ${tt} failed: the pack in play stays`, qt)
       }
     }
-    async function NB(BB, IB, ZB, TB) {
-      hB();
-      const JB = zB();
-      return await ZB(((IB, ZB) => FB(BB, IB, JB, ZB))), WB(BB, IB, TB(), await JB)
+    async function ft(tt, et, Vt, Ot) {
+      Qt();
+      const qt = lt();
+      return await Vt(((et, Vt) => Et(tt, et, qt, Vt))), bt(tt, et, Ot(), await qt)
     }
-    let gB = null,
-      qB = null;
-    async function yB() {
-      if ((null === gB || gB.hasExpired()) && (qB ??= (0, vB.fetchAnonymousUserContext)().then((BB => {
-          gB = BB
+    let wt = null,
+      yt = null;
+    async function Nt() {
+      if ((null === wt || wt.hasExpired()) && (yt ??= (0, dt.fetchAnonymousUserContext)().then((tt => {
+          wt = tt
         })).finally((() => {
-          qB = null
-        })), await qB), null === gB) throw new Error("no guest context to post as");
-      return gB.getMetricsCookies()
+          yt = null
+        })), await yt), null === wt) throw new Error("no guest context to post as");
+      return wt.getMetricsCookies()
     }
-    async function UB() {
-      var BB;
-      await (null === (BB = gB) || void 0 === BB ? void 0 : BB.invalidateTrafficCode())
+    async function Mt() {
+      var tt;
+      await (null === (tt = wt) || void 0 === tt ? void 0 : tt.invalidateTrafficCode())
     }
-    async function WB(BB, IB, ZB) {
-      let oB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-      hB();
-      const kB = null !== oB && void 0 !== oB ? oB : await (0, vB.fetchAnonymousUserContext)();
-      if (gB = kB, kB.isLoggedIn()) throw new Error("the shell's page joins as a guest only");
-      const cB = await JB.c.matchmakePlayer(kB, IB, BB, (0, GB.b)()),
-        zB = performance.now();
-      if (!("gameServerHost" in cB)) throw new Error(`matchmaking refused: ${cB.failReason}`);
-      const FB = TB.clientSideServerUrls.getServerWebSocketUrlFromServerUrl(cB.gameServerHost);
-      if (FB.isError()) throw new Error(`no socket URL for ${cB.gameServerHost}: ${FB.asError().message}`);
-      const NB = {
-        endpoint: FB.getValue(),
-        gameNameWithVariation: cB.gameNameWithVariation,
-        lobbyName: cB.lobbyName
+    async function bt(tt, et, Vt) {
+      let Dt = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+      Qt();
+      const jt = null !== Dt && void 0 !== Dt ? Dt : await (0, dt.fetchAnonymousUserContext)();
+      if (wt = jt, jt.isLoggedIn()) throw new Error("the shell's page joins as a guest only");
+      const Ht = await qt.e.matchmakePlayer(jt, et, tt, (0, mt.d)()),
+        lt = performance.now();
+      if (!("gameServerHost" in Ht)) throw new Error(`matchmaking refused: ${Ht.failReason}`);
+      const Et = Ot.clientSideServerUrls.getServerWebSocketUrlFromServerUrl(Ht.gameServerHost);
+      if (Et.isError()) throw new Error(`no socket URL for ${Ht.gameServerHost}: ${Et.asError().message}`);
+      const ft = {
+        endpoint: Et.getValue(),
+        gameNameWithVariation: Ht.gameNameWithVariation,
+        lobbyName: Ht.lobbyName
       };
       return {
         target: {
-          ...await (0, nB.e)(kB, NB, ZB, !1),
-          postCookies: yB
+          ...await (0, Xt.d)(jt, ft, Vt, !1),
+          postCookies: Nt
         },
-        matchedAt: zB,
-        freshMs: nB.c
+        matchedAt: lt,
+        freshMs: Xt.c
       }
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const tt in modules) Object.freeze(modules[tt]);

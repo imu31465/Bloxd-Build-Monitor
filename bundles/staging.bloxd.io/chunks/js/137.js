@@ -1,60 +1,60 @@
 export const id = 137;
 export const ids = [137];
 export const modules = {
-  36330: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      b: () => EB,
-      c: () => SB,
-      e: () => KB,
-      h: () => xB
+  36535: (tt, et, Vt) => {
+    Vt.d(et, {
+      d: () => Tt,
+      h: () => te,
+      k: () => st,
+      o: () => xt
     });
-    var TB = ZB(3036),
-      JB = ZB(3059),
-      oB = ZB(6771),
-      GB = ZB(4874),
-      vB = ZB(3052),
-      kB = ZB(3043);
-    const cB = "bloxd-wasmDownloaded",
-      nB = 12;
+    var Ot = Vt(2961),
+      qt = Vt(2972),
+      Dt = Vt(6820),
+      mt = Vt(4851),
+      dt = Vt(2970),
+      jt = Vt(2965);
+    const Ht = "bloxd-wasmDownloaded",
+      Xt = 12;
 
-    function hB(BB) {
-      return BB.pathname.slice(BB.pathname.lastIndexOf("/") + 1)
+    function Qt(tt) {
+      return tt.pathname.slice(tt.pathname.lastIndexOf("/") + 1)
     }
 
-    function zB() {
+    function lt() {
       try {
         if ("undefined" === typeof localStorage) return null;
-        const BB = JSON.parse(localStorage.getItem(cB) ?? "[]");
-        return Array.isArray(BB) ? BB.filter((BB => "string" === typeof BB)) : []
-      } catch (BB) {
-        return console.warn("Bloxd wasm: the record of downloaded modules could not be read: asking the HTTP cache for none", BB), null
+        const tt = JSON.parse(localStorage.getItem(Ht) ?? "[]");
+        return Array.isArray(tt) ? tt.filter((tt => "string" === typeof tt)) : []
+      } catch (tt) {
+        return console.warn("Bloxd wasm: the record of downloaded modules could not be read: asking the HTTP cache for none", tt), null
       }
     }
-    const FB = Reflect.apply,
-      NB = "undefined" === typeof Worker ? void 0 : Worker,
-      gB = NB?.prototype.postMessage,
-      qB = NB?.prototype.terminate,
-      yB = "undefined" === typeof EventTarget ? void 0 : EventTarget.prototype.addEventListener,
-      UB = "undefined" === typeof MessageEvent ? void 0 : Object.getOwnPropertyDescriptor(MessageEvent.prototype, "data")?.get,
-      WB = Object.getOwnPropertyDescriptor(Object.getPrototypeOf(Uint8Array.prototype), "buffer").get,
-      dB = function() {
+    const Et = Reflect.apply,
+      ft = "undefined" === typeof Worker ? void 0 : Worker,
+      wt = ft?.prototype.postMessage,
+      yt = ft?.prototype.terminate,
+      Nt = "undefined" === typeof EventTarget ? void 0 : EventTarget.prototype.addEventListener,
+      Mt = "undefined" === typeof MessageEvent ? void 0 : Object.getOwnPropertyDescriptor(MessageEvent.prototype, "data")?.get,
+      bt = Object.getOwnPropertyDescriptor(Object.getPrototypeOf(Uint8Array.prototype), "buffer").get,
+      Jt = function() {
         try {
-          return (0, GB.p)(NB, "Worker", !0) && (0, GB.p)(gB, "postMessage") && (0, GB.p)(qB, "terminate") && (0, GB.p)(WB, "buffer") && void 0 !== yB && void 0 !== UB
+          return (0, mt.l)(ft, "Worker", !0) && (0, mt.l)(wt, "postMessage") && (0, mt.l)(yt, "terminate") && (0, mt.l)(bt, "buffer") && void 0 !== Nt && void 0 !== Mt
         } catch {
           return !1
         }
       }();
-    let CB = !1;
+    let Ct = !1;
 
-    function QB() {
-      return dB && !CB
+    function ut() {
+      return Jt && !Ct
     }
-    class sB {
+    class Kt {
       worker = null;
       failed = !1;
       constructor() {
-        if (QB()) try {
-          this.worker = OB(), FB(yB, this.worker, ["error", () => {
+        if (ut()) try {
+          this.worker = vt(), Et(Nt, this.worker, ["error", () => {
             this.failed = !0
           }])
         } catch {
@@ -62,125 +62,125 @@ export const modules = {
         }
       }
       take() {
-        const BB = this.worker;
-        if (this.worker = null, null !== BB && this.failed) throw FB(qB, BB, []), new Error("it did not run");
-        return BB
+        const tt = this.worker;
+        if (this.worker = null, null !== tt && this.failed) throw Et(yt, tt, []), new Error("it did not run");
+        return tt
       }
       stop() {
-        const BB = this.worker;
-        this.worker = null, null !== BB && FB(qB, BB, [])
+        const tt = this.worker;
+        this.worker = null, null !== tt && Et(yt, tt, [])
       }
     }
-    class wB {
+    class ht {
       decoded;
       worker;
       reject;
-      constructor(BB, IB, ZB, TB, oB) {
+      constructor(tt, et, Vt, Ot, Dt) {
         try {
-          this.worker = oB?.take() ?? OB()
-        } catch (cB) {
-          throw CB = !0, new Error(`The zstd decoder's worker did not start: ${(0,vB.i)(cB)}`)
+          this.worker = Dt?.take() ?? vt()
+        } catch (Ht) {
+          throw Ct = !0, new Error(`The zstd decoder's worker did not start: ${(0,dt.d)(Ht)}`)
         }
-        const GB = this.worker;
-        this.decoded = (0, JB.g)(((IB, JB) => {
-          this.reject = JB;
-          const oB = (BB, IB) => {
-            FB(yB, GB, [BB, IB])
+        const mt = this.worker;
+        this.decoded = (0, qt.i)(((et, qt) => {
+          this.reject = qt;
+          const Dt = (tt, et) => {
+            Et(Nt, mt, [tt, et])
           };
-          oB("message", (BB => {
-            TB();
+          Dt("message", (tt => {
+            Ot();
             try {
-              const TB = FB(UB, BB, []);
-              if (!0 === TB) IB();
+              const Ot = Et(Mt, tt, []);
+              if (!0 === Ot) et();
               else {
-                if ("string" === typeof TB) throw TB.startsWith(vB.e) && (CB = !0), new Error(TB);
-                ZB(TB, FB(kB.x, TB, []))
+                if ("string" === typeof Ot) throw Ot.startsWith(dt.b) && (Ct = !0), new Error(Ot);
+                Vt(Ot, Et(jt.v, Ot, []))
               }
-            } catch (cB) {
-              JB(cB)
+            } catch (Ht) {
+              qt(Ht)
             }
-          })), oB("error", (() => {
-            CB = !0, JB(new Error("The zstd decoder's worker did not run"))
-          })), oB("messageerror", (() => {
-            JB(new Error(`${BB}'s decoder sent a piece that could not be read`))
+          })), Dt("error", (() => {
+            Ct = !0, qt(new Error("The zstd decoder's worker did not run"))
+          })), Dt("messageerror", (() => {
+            qt(new Error(`${tt}'s decoder sent a piece that could not be read`))
           }))
-        })), (0, kB.V)(this.decoded), FB(gB, GB, [
-          [BB, IB]
+        })), (0, jt.Q)(this.decoded), Et(wt, mt, [
+          [tt, et]
         ])
       }
-      push(BB) {
-        FB(gB, this.worker, [BB, [FB(WB, BB, [])]])
+      push(tt) {
+        Et(wt, this.worker, [tt, [Et(bt, tt, [])]])
       }
       end() {
-        FB(gB, this.worker, [null])
+        Et(wt, this.worker, [null])
       }
       markWorkerFailed() {
-        CB = !0
+        Ct = !0
       }
-      fail(BB) {
-        this.reject(BB), this.terminate()
+      fail(tt) {
+        this.reject(tt), this.terminate()
       }
       terminate() {
-        FB(qB, this.worker, [])
+        Et(yt, this.worker, [])
       }
     }
 
-    function OB() {
-      if (globalThis.Worker !== NB) throw new Error("Worker is not the one the page loaded with");
-      return new Worker(new URL(ZB.p + ZB.u(68), ZB.b), {
+    function vt() {
+      if (globalThis.Worker !== ft) throw new Error("Worker is not the one the page loaded with");
+      return new Worker(new URL(Vt.p + Vt.u(68), Vt.b), {
         name: "wasmZstdDecoder",
         type: "module"
       })
     }
-    const YB = Reflect.apply,
-      iB = ArrayBuffer,
-      pB = "undefined" === typeof Response ? void 0 : Response,
-      aB = "undefined" === typeof ReadableStream ? void 0 : ReadableStream,
-      HB = function() {
-        let BB;
-        void 0 !== aB && new aB({
+    const Wt = Reflect.apply,
+      St = ArrayBuffer,
+      ct = "undefined" === typeof Response ? void 0 : Response,
+      Rt = "undefined" === typeof ReadableStream ? void 0 : ReadableStream,
+      It = function() {
+        let tt;
+        void 0 !== Rt && new Rt({
           __proto__: null,
-          start(IB) {
+          start(et) {
             const {
-              enqueue: ZB,
-              close: TB,
-              error: JB
-            } = Object.getPrototypeOf(IB);
-            BB = {
-              enqueue: ZB,
-              close: TB,
-              error: JB
+              enqueue: Vt,
+              close: Ot,
+              error: qt
+            } = Object.getPrototypeOf(et);
+            tt = {
+              enqueue: Vt,
+              close: Ot,
+              error: qt
             }
           }
         }, {
           __proto__: null
         });
-        return BB
+        return tt
       }(),
-      MB = function() {
+      Pt = function() {
         try {
-          return "undefined" !== typeof WebAssembly && "function" === typeof WebAssembly.compileStreaming && void 0 !== HB && (0, GB.p)(pB, "Response", !0) && (0, GB.p)(aB, "ReadableStream", !0) && (0, GB.p)(HB.enqueue, "enqueue") && (0, GB.p)(HB.close, "close") && (0, GB.p)(HB.error, "error") && (0, GB.p)(kB.Y, "body") && (0, GB.p)(kB.P, "getReader") && (0, GB.p)(kB.X, "read")
+          return "undefined" !== typeof WebAssembly && "function" === typeof WebAssembly.compileStreaming && void 0 !== It && (0, mt.l)(ct, "Response", !0) && (0, mt.l)(Rt, "ReadableStream", !0) && (0, mt.l)(It.enqueue, "enqueue") && (0, mt.l)(It.close, "close") && (0, mt.l)(It.error, "error") && (0, mt.l)(jt.Y, "body") && (0, mt.l)(jt.L, "getReader") && (0, mt.l)(jt.U, "read")
         } catch {
           return !1
         }
       }();
-    async function jB(BB, IB, ZB, TB, oB, GB, cB) {
-      const nB = new iB(IB),
+    async function Zt(tt, et, Vt, Ot, Dt, mt, Ht) {
+      const Xt = new St(et),
         {
-          controller: hB,
-          compiled: zB
-        } = function(BB) {
+          controller: Qt,
+          compiled: lt
+        } = function(tt) {
           try {
-            let BB;
-            const IB = new aB({
+            let tt;
+            const et = new Rt({
                 __proto__: null,
-                start(IB) {
-                  BB = IB
+                start(et) {
+                  tt = et
                 }
               }, {
                 __proto__: null
               }),
-              ZB = new pB(IB, {
+              Vt = new ct(et, {
                 __proto__: null,
                 headers: {
                   __proto__: null,
@@ -188,355 +188,355 @@ export const modules = {
                 }
               });
             return {
-              controller: BB,
-              compiled: (0, kB.V)((0, kB.C)((0, kB.db)(ZB)))
+              controller: tt,
+              compiled: (0, jt.Q)((0, jt.C)((0, jt.gb)(Vt)))
             }
-          } catch (IB) {
-            throw new Error(`${BB} could not be streamed into a compile: ${(0,vB.i)(IB)}`)
+          } catch (et) {
+            throw new Error(`${tt} could not be streamed into a compile: ${(0,dt.d)(et)}`)
           }
-        }(BB),
+        }(tt),
         {
-          enqueue: FB,
-          close: NB,
-          error: gB
-        } = HB,
-        qB = BB => {
+          enqueue: Et,
+          close: ft,
+          error: wt
+        } = It,
+        yt = tt => {
           try {
-            YB(gB, hB, [BB])
+            Wt(wt, Qt, [tt])
           } catch {}
         };
-      let yB = 0;
-      const UB = (ZB, TB) => {
-        if (yB + TB > IB) throw new Error(`${BB} decoded past its module's ${IB} bytes`);
-        YB(kB._, new kB.o(nB), [new kB.o(ZB), yB]);
+      let Nt = 0;
+      const Mt = (Vt, Ot) => {
+        if (Nt + Ot > et) throw new Error(`${tt} decoded past its module's ${et} bytes`);
+        Wt(jt.ab, new jt.k(Xt), [new jt.k(Vt), Nt]);
         try {
-          YB(FB, hB, [new kB.o(nB, yB, TB)])
+          Wt(Et, Qt, [new jt.k(Xt, Nt, Ot)])
         } catch {}
-        yB += TB
+        Nt += Ot
       };
-      let WB, dB;
+      let bt, Jt;
       try {
-        WB = new wB(BB, IB, UB, TB, cB)
-      } catch (OB) {
-        throw qB(OB), OB
+        bt = new ht(tt, et, Mt, Ot, Ht)
+      } catch (vt) {
+        throw yt(vt), vt
       }
-      const CB = BB => {
-        WB.fail(BB), void 0 !== dB && PB(dB)
+      const Ct = tt => {
+        bt.fail(tt), void 0 !== Jt && Lt(Jt)
       };
-      let QB = !1;
-      ZB.addEventListener("abort", (() => {
-        QB && WB.markWorkerFailed(), CB(new Error(`${BB} stalled`))
+      let ut = !1;
+      Vt.addEventListener("abort", (() => {
+        ut && bt.markWorkerFailed(), Ct(new Error(`${tt} stalled`))
       }), {
         once: !0
-      }), (0, JB.p)(zB, (() => {}), CB);
+      }), (0, qt.s)(lt, (() => {}), Ct);
       try {
-        let GB;
+        let mt;
         try {
-          GB = await fetch(BB, {
-            signal: ZB
+          mt = await fetch(tt, {
+            signal: Vt
           })
-        } catch (OB) {
-          throw new Error(`Fetching ${BB} failed: ${(0,vB.i)(OB)}`)
+        } catch (vt) {
+          throw new Error(`Fetching ${tt} failed: ${(0,dt.d)(vt)}`)
         }
         const {
-          ok: cB,
-          status: nB,
-          body: hB
-        } = function(BB, IB) {
+          ok: Ht,
+          status: Xt,
+          body: Qt
+        } = function(tt, et) {
           try {
             const {
-              ok: BB,
-              status: ZB
-            } = IB;
+              ok: tt,
+              status: Vt
+            } = et;
             return {
-              ok: BB,
-              status: ZB,
-              body: YB(kB.Y, IB, [])
+              ok: tt,
+              status: Vt,
+              body: Wt(jt.Y, et, [])
             }
           } catch {
-            throw new Error(`${BB} came in a response a page script made`)
+            throw new Error(`${tt} came in a response a page script made`)
           }
-        }(BB, GB);
-        if (!cB) throw new Error(`Fetching ${BB} failed: HTTP ${nB}`);
-        TB();
-        const zB = YB(kB.P, hB, []);
-        dB = zB;
-        const FB = () => {
-          PB(zB)
+        }(tt, mt);
+        if (!Ht) throw new Error(`Fetching ${tt} failed: HTTP ${Xt}`);
+        Ot();
+        const lt = Wt(jt.L, Qt, []);
+        Jt = lt;
+        const Et = () => {
+          Lt(lt)
         };
-        for ((0, JB.p)(WB.decoded, FB, FB);;) {
-          let IB;
+        for ((0, qt.s)(bt.decoded, Et, Et);;) {
+          let et;
           try {
-            IB = await YB(kB.X, zB, [])
-          } catch (OB) {
-            throw new Error(`Downloading ${BB} failed: ${(0,vB.i)(OB)}`)
+            et = await Wt(jt.U, lt, [])
+          } catch (vt) {
+            throw new Error(`Downloading ${tt} failed: ${(0,dt.d)(vt)}`)
           }
-          if (IB.done) break;
-          TB(), WB.push(IB.value)
+          if (et.done) break;
+          Ot(), bt.push(et.value)
         }
-        if (QB = !0, WB.end(), await WB.decoded, oB(), yB !== IB) throw new Error(`${BB} ended before its module did`)
-      } catch (OB) {
-        throw qB(OB), CB(OB), OB
+        if (ut = !0, bt.end(), await bt.decoded, Dt(), Nt !== et) throw new Error(`${tt} ended before its module did`)
+      } catch (vt) {
+        throw yt(vt), Ct(vt), vt
       }
-      WB.terminate();
+      bt.terminate();
       try {
-        YB(NB, hB, [])
+        Wt(ft, Qt, [])
       } catch {}
-      const sB = await zB;
-      return void 0 !== GB && await (0, kB.B)(BB, new kB.o(nB), {
-        sha256: GB.sha256,
+      const Kt = await lt;
+      return void 0 !== mt && await (0, jt.z)(tt, new jt.k(Xt), {
+        sha256: mt.sha256,
         onMismatch: () => {}
-      }), sB
+      }), Kt
     }
 
-    function PB(BB) {
+    function Lt(tt) {
       try {
-        (0, kB.V)(BB.cancel())
+        (0, jt.Q)(tt.cancel())
       } catch {}
     }
-    const RB = ".zst.bin",
-      rB = 1e3;
-    let mB = null;
+    const Ft = ".zst.bin",
+      kt = 1e3;
+    let Gt = null;
 
-    function XB(BB) {
-      return mB ??= function() {
-        const BB = new Map,
-          IB = "bloxd_wasm_webgpu:5136471,bloxd_wasm_webgl:5516365,bloxd_wasm_webgl1:4851467,bloxd_wasm_workers:201241,bloxd_wasm_models:311531,bloxd_wasm_client:3712496";
-        for (const ZB of IB?.split(",") ?? []) {
-          const [IB = "", TB] = ZB.split(":"), JB = Number(TB);
-          Number.isInteger(JB) && JB > 0 && BB.set(IB, JB)
+    function zt(tt) {
+      return Gt ??= function() {
+        const tt = new Map,
+          et = "bloxd_wasm_webgpu:5136982,bloxd_wasm_webgl:5516365,bloxd_wasm_webgl1:4851467,bloxd_wasm_workers:201241,bloxd_wasm_models:311531,bloxd_wasm_client:3712496";
+        for (const Vt of et?.split(",") ?? []) {
+          const [et = "", Ot] = Vt.split(":"), qt = Number(Ot);
+          Number.isInteger(qt) && qt > 0 && tt.set(et, qt)
         }
-        return BB
-      }(), mB.get(BB)
+        return tt
+      }(), Gt.get(tt)
     }
-    async function LB(BB, IB) {
-      let ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const TB = XB(BB.name);
-      if (void 0 === TB) return eB(await uB(BB, IB, ZB), "cold-wasm");
-      const oB = MB ? new sB : null;
-      let GB;
+    async function ot(tt, et) {
+      let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const Ot = zt(tt.name);
+      if (void 0 === Ot) return rt(await Ut(tt, et, Vt), "cold-wasm");
+      const Dt = Pt ? new Kt : null;
+      let mt;
       try {
-        if (cB = BB.url(), zB()?.includes(hB(cB)) && await async function(BB) {
-            const IB = new AbortController;
-            let ZB;
-            const TB = (0, JB.g)((BB => {
-              ZB = setTimeout((() => {
-                IB.abort(), BB(null)
-              }), rB)
+        if (Ht = tt.url(), lt()?.includes(Qt(Ht)) && await async function(tt) {
+            const et = new AbortController;
+            let Vt;
+            const Ot = (0, qt.i)((tt => {
+              Vt = setTimeout((() => {
+                et.abort(), tt(null)
+              }), kt)
             }));
             try {
-              const ZB = fetch(BB.href, {
+              const Vt = fetch(tt.href, {
                   cache: "only-if-cached",
                   mode: "same-origin",
-                  signal: IB.signal
+                  signal: et.signal
                 }),
-                oB = await (0, JB.m)([ZB, TB]);
-              return !!oB?.ok && ((0, kB.V)(oB.body.cancel()), !0)
+                Dt = await (0, qt.r)([Vt, Ot]);
+              return !!Dt?.ok && ((0, jt.Q)(Dt.body.cancel()), !0)
             } catch {
               return !1
             } finally {
-              clearTimeout(ZB)
+              clearTimeout(Vt)
             }
-          }(BB.url())) return oB?.stop(), await async function(BB, IB, ZB, TB) {
-          let JB = !1;
-          const oB = ZB && {
-            sha256: ZB.sha256,
+          }(tt.url())) return Dt?.stop(), await async function(tt, et, Vt, Ot) {
+          let qt = !1;
+          const Dt = Vt && {
+            sha256: Vt.sha256,
             onMismatch: () => {
-              JB = !0
+              qt = !0
             }
           };
           try {
-            return eB(await uB(BB, oB, TB), "warm")
-          } catch (GB) {
-            const TB = await fB(BB, IB, ZB, null);
-            if (null === TB) throw JB && ZB.onMismatch(), GB;
-            return console.warn(`${BB.url().href} from the HTTP cache failed: ${(0,vB.i)(GB)}: loaded its copy instead`), eB(TB, JB ? "warm-refused" : "warm-broken")
+            return rt(await Ut(tt, Dt, Ot), "warm")
+          } catch (mt) {
+            const Ot = await At(tt, et, Vt, null);
+            if (null === Ot) throw qt && Vt.onMismatch(), mt;
+            return console.warn(`${tt.url().href} from the HTTP cache failed: ${(0,dt.d)(mt)}: loaded its copy instead`), rt(Ot, qt ? "warm-refused" : "warm-broken")
           }
-        }(BB, TB, IB, ZB);
-        GB = await fB(BB, TB, IB, oB)
+        }(tt, Ot, et, Vt);
+        mt = await At(tt, Ot, et, Dt)
       } finally {
-        oB?.stop()
+        Dt?.stop()
       }
-      var cB;
-      return null !== GB ? eB(GB, "cold-worker") : eB(await uB(BB, IB, ZB), "cold-wasm")
+      var Ht;
+      return null !== mt ? rt(mt, "cold-worker") : rt(await Ut(tt, et, Vt), "cold-wasm")
     }
 
-    function eB(BB, IB) {
+    function rt(tt, et) {
       return {
         __proto__: null,
-        module: BB,
-        path: IB
+        module: tt,
+        path: et
       }
     }
 
-    function uB(BB, IB, ZB) {
-      return void 0 === XB(BB.name) ? (0, kB.J)(BB.url(), IB, ZB) : (0, kB.J)(BB.url(), IB, {
-        ...ZB,
+    function Ut(tt, et, Vt) {
+      return void 0 === zt(tt.name) ? (0, jt.G)(tt.url(), et, Vt) : (0, jt.G)(tt.url(), et, {
+        ...Vt,
         hideThen: !0,
         onDownloaded: () => {
-          ! function(BB) {
-            const IB = zB();
-            if (null === IB) return;
-            const ZB = hB(BB),
-              TB = IB.filter((BB => BB !== ZB));
-            TB.push(ZB);
+          ! function(tt) {
+            const et = lt();
+            if (null === et) return;
+            const Vt = Qt(tt),
+              Ot = et.filter((tt => tt !== Vt));
+            Ot.push(Vt);
             try {
-              localStorage.setItem(cB, JSON.stringify(TB.slice(-nB)))
-            } catch (JB) {
-              console.warn(`Bloxd wasm: ${ZB} could not be recorded as downloaded: a later join asks the HTTP cache nothing for it`, JB)
+              localStorage.setItem(Ht, JSON.stringify(Ot.slice(-Xt)))
+            } catch (qt) {
+              console.warn(`Bloxd wasm: ${Vt} could not be recorded as downloaded: a later join asks the HTTP cache nothing for it`, qt)
             }
-          }(BB.url()), ZB.onDownloaded?.()
+          }(tt.url()), Vt.onDownloaded?.()
         }
       })
     }
-    async function fB(BB, IB, ZB, TB) {
-      if (!MB || !QB()) return null;
-      const JB = BB.url(),
-        oB = `${JB.href}${RB}`;
+    async function At(tt, et, Vt, Ot) {
+      if (!Pt || !ut()) return null;
+      const qt = tt.url(),
+        Dt = `${qt.href}${Ft}`;
       try {
-        return await (0, kB.ab)(oB, ((BB, JB, GB) => jB(oB, IB, BB, JB, GB, ZB, TB)))
-      } catch (GB) {
-        return console.warn(`${(0,vB.i)(GB)}: loading ${JB.href} instead`), null
+        return await (0, jt.eb)(Dt, ((tt, qt, mt) => Zt(Dt, et, tt, qt, mt, Vt, Ot)))
+      } catch (mt) {
+        return console.warn(`${(0,dt.d)(mt)}: loading ${qt.href} instead`), null
       }
     }
-    let lB = null,
-      AB = !1;
-    const tB = new Map,
-      bB = new Map;
+    let it = null,
+      Yt = !1;
+    const Bt = new Map,
+      pt = new Map;
 
-    function xB(BB, IB, ZB) {
-      return null === lB ? lB = DB(BB, IB, ZB?.memoryMaximumBytes) : BB !== lB.build ? console.warn(`Bloxd wasm: ${BB.name} was asked for after ${lB.build.name} started loading, which this thread keeps`) : IB.name !== lB.workers.name && console.warn(`Bloxd wasm: ${IB.name} was asked for workers after ${lB.workers.name}, which this thread keeps`), ZB?.reloadFailedDownload && !AB && (0, TB.Y)() && (AB = !0, lB = DB(lB.build, lB.workers, lB.memoryMaximumBytes)), lB.loaded
+    function xt(tt, et, Vt) {
+      return null === it ? it = gt(tt, et, Vt?.memoryMaximumBytes) : tt !== it.build ? console.warn(`Bloxd wasm: ${tt.name} was asked for after ${it.build.name} started loading, which this thread keeps`) : et.name !== it.workers.name && console.warn(`Bloxd wasm: ${et.name} was asked for workers after ${it.workers.name}, which this thread keeps`), Vt?.reloadFailedDownload && !Yt && (0, Ot.fb)() && (Yt = !0, it = gt(it.build, it.workers, it.memoryMaximumBytes)), it.loaded
     }
 
-    function EB(BB, IB) {
-      if (null !== lB) return (0, JB.e)([]);
-      const ZB = BB.filter((BB => !tB.has(BB.name))).map((BB => {
-        const ZB = new AbortController,
-          TB = {
-            compiled: uB(BB, (0, oB.e)(BB.name), {
-              priority: IB,
-              fZ: ZB.signal,
+    function Tt(tt, et) {
+      if (null !== it) return (0, qt.e)([]);
+      const Vt = tt.filter((tt => !Bt.has(tt.name))).map((tt => {
+        const Vt = new AbortController,
+          Ot = {
+            compiled: Ut(tt, (0, Dt.c)(tt.name), {
+              priority: et,
+              nV: Vt.signal,
               onDownloaded: () => {
-                TB.downloaded = !0
+                Ot.downloaded = !0
               },
               retries: {
                 onRetry: () => {
-                  TB.downloaded = !1, null !== lB && ZB.abort()
+                  Ot.downloaded = !1, null !== it && Vt.abort()
                 }
               }
             }),
-            cancel: ZB,
+            cancel: Vt,
             downloaded: !1
           };
-        return tB.set(BB.name, TB), (0, JB.g)((IB => {
-          (0, JB.p)(TB.compiled, (() => {
-            TB.downloaded = !0, IB()
-          }), (TB => {
-            ZB.signal.aborted || console.warn(`Bloxd wasm: ${BB.name}'s compile ahead of the load failed: the load compiles it afresh`, TB), IB()
+        return Bt.set(tt.name, Ot), (0, qt.i)((et => {
+          (0, qt.s)(Ot.compiled, (() => {
+            Ot.downloaded = !0, et()
+          }), (Ot => {
+            Vt.signal.aborted || console.warn(`Bloxd wasm: ${tt.name}'s compile ahead of the load failed: the load compiles it afresh`, Ot), et()
           }))
         }))
       }));
-      return (0, JB.e)(ZB)
+      return (0, qt.e)(Vt)
     }
 
-    function DB(BB, IB, ZB) {
-      const oB = (0, TB.F)((async () => {
-        (0, GB.F)(), bB.clear();
-        const ZB = VB(BB),
-          TB = IB.name === BB.name ? ZB : VB(IB);
+    function gt(tt, et, Vt) {
+      const Dt = (0, Ot.M)((async () => {
+        (0, mt.z)(), pt.clear();
+        const Vt = nt(tt),
+          Ot = et.name === tt.name ? Vt : nt(et);
         for (const {
-            cancel: BB
+            cancel: tt
           }
-          of tB.values()) BB.abort();
-        tB.clear(), await (0, JB.e)([ZB, TB]);
-        const oB = await ZB,
-          vB = await TB;
-        return (0, GB.F)(), {
-          module: oB,
-          workerModule: vB
+          of Bt.values()) tt.abort();
+        Bt.clear(), await (0, qt.e)([Vt, Ot]);
+        const Dt = await Vt,
+          dt = await Ot;
+        return (0, mt.z)(), {
+          module: Dt,
+          workerModule: dt
         }
-      }), BB, ZB);
+      }), tt, Vt);
       return {
-        build: BB,
-        workers: IB,
-        memoryMaximumBytes: ZB,
-        loaded: oB
+        build: tt,
+        workers: et,
+        memoryMaximumBytes: Vt,
+        loaded: Dt
       }
     }
 
-    function KB(BB) {
-      return bB.get(BB)
+    function st(tt) {
+      return pt.get(tt)
     }
 
-    function VB(BB) {
-      const IB = performance.now(),
-        ZB = tB.get(BB.name);
-      tB.delete(BB.name);
-      const TB = !0 === ZB?.downloaded ? ZB : void 0;
-      return void 0 !== ZB && void 0 === TB && ZB.cancel.abort(), (0, JB.g)(((ZB, oB) => {
-        const GB = (TB, JB) => {
-            bB.set(BB.name, {
-              path: JB,
-              ms: performance.now() - IB
-            }), ZB(TB)
+    function nt(tt) {
+      const et = performance.now(),
+        Vt = Bt.get(tt.name);
+      Bt.delete(tt.name);
+      const Ot = !0 === Vt?.downloaded ? Vt : void 0;
+      return void 0 !== Vt && void 0 === Ot && Vt.cancel.abort(), (0, qt.i)(((Vt, Dt) => {
+        const mt = (Ot, qt) => {
+            pt.set(tt.name, {
+              path: qt,
+              ms: performance.now() - et
+            }), Vt(Ot)
           },
-          vB = () => {
-            (0, JB.p)(BI(BB), (BB => {
+          dt = () => {
+            (0, qt.s)(ee(tt), (tt => {
               let {
-                module: IB,
-                path: ZB
-              } = BB;
-              GB(IB, ZB)
-            }), oB)
+                module: et,
+                path: Vt
+              } = tt;
+              mt(et, Vt)
+            }), Dt)
           };
-        void 0 === TB ? vB() : (0, JB.p)(TB.compiled, (BB => {
-          GB(BB, "ahead")
-        }), vB)
+        void 0 === Ot ? dt() : (0, qt.s)(Ot.compiled, (tt => {
+          mt(tt, "ahead")
+        }), dt)
       }))
     }
-    async function SB(BB, IB) {
+    async function te(tt, et) {
       const {
-        module: ZB
-      } = await BI(BB, {
-        retries: IB
+        module: Vt
+      } = await ee(tt, {
+        retries: et
       });
-      return ZB
+      return Vt
     }
-    async function BI(BB) {
-      let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      return await LB(BB, (0, oB.e)(BB.name), IB)
+    async function ee(tt) {
+      let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      return await ot(tt, (0, Dt.c)(tt.name), et)
     }
   },
-  6771: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      e: () => GB
+  6820: (tt, et, Vt) => {
+    Vt.d(et, {
+      c: () => mt
     });
-    var TB = ZB(3043);
-    const JB = {
-      bloxd_wasm: () => "3929318ab85efbe7fbf015b7202f97f9213e396225d80b3db1d6eea98607e192",
-      bloxd_wasm_client: () => "de8797e7a2073a4b84142d0cdd231107132c281529510d44e15de2b324a3a30f",
-      bloxd_wasm_workers: () => "e392be22de1540260052c3350081c85739d1c5bc24a5222edf6de5771f9d53cc",
-      bloxd_wasm_models: () => "18f455c31b6430161028848ff988084c6b16d32d8fa12d4af984837abfc3144f",
-      bloxd_wasm_webgpu: () => "5526ae404536156accd26af71c2bbbeb37703fbb83da322278378d23a1e1d759",
-      bloxd_wasm_webgl: () => "cbc2e38eabd8d787bc137c7584b67ac7d90d219065d8b2cfc013c2b7b96e44bf",
-      bloxd_wasm_webgl1: () => "729c4755d993e2a2b24848672562e1cfcebc5f2cf7acaf33d9fc9440993d6ec7",
-      bloxd_wasm_replay: () => "42d3e76b4bdf858378fb0fb477290e11c66f2e51aa3947bbbd34ee4a53e1e6c0",
-      bloxd_wasm_recorder: () => "d9158108e4a445accd8d7aa1bf531832e077768eae0055f5cadb78f130f5884f",
-      bloxd_wasm_anim: () => "1aac61a86d6f89bb60de30b43c299b746d630e8811ba65a52be7c2f8e04ccd3d",
-      bloxd_wasm_textures: () => "24c39accf0c81e5ab4e85e999b876eef419c50c2e0b92783b293de227d550aeb",
-      bloxd_wasm_shader_pack: () => "6ef135dd10de9c09f7158eff62c3ec8671e1706d2e1ff29eeda717db01789bd3"
+    var Ot = Vt(2965);
+    const qt = {
+      bloxd_wasm: () => "79e619b054ae905a5b8f4bf459846802c4d04f9c338bac0e93fb2e786ccb47d7",
+      bloxd_wasm_client: () => "3e9d9c92e80b558e2418153f6d2a1a0bf080851fa9da2f3eac7b5d131fa1208b",
+      bloxd_wasm_workers: () => "d6180b50b2f3a41f4cc9ec709c702b403d5c3c14c69a32a117a286fccc1c4cae",
+      bloxd_wasm_models: () => "b0007ea7fdbd7aac2fc56ace41940bb9419c473b2c4e22ae586bd9617e961e50",
+      bloxd_wasm_webgpu: () => "38c1dcbfb4bbcbb44a23823fffa818ded30864cfa8888b894791e58c09e2b45b",
+      bloxd_wasm_webgl: () => "8bc9810de446335f886bb8ec7aec0faad1cf86d215d2899bc364d09bd9e8c969",
+      bloxd_wasm_webgl1: () => "67ad9c6dce37796a8d5cd66908a5f05307a9f76718f363441e62f7df779cec5f",
+      bloxd_wasm_replay: () => "d4cc807eadefc7c5a5335e66f0d7d03918d890434d43b5338a42fea1e7c35a35",
+      bloxd_wasm_recorder: () => "cc2e46ae4efc8d6af5a399e7423d94f6da0332d05b530d991d7a4ca5439ac99d",
+      bloxd_wasm_anim: () => "47a23fc87ecc8906f1edafe7d9d71bf5aac49598c5aefc455978f2bcc55551ff",
+      bloxd_wasm_textures: () => "4becc450031cb7888091452fd459d969999d55161fb0d00265048d3df8dc21dd",
+      bloxd_wasm_shader_pack: () => "9e65c9a3b97efeac864ceaa9c5b11bf65594610d8ff8caa0e62e9a1c70e7968d"
     };
-    var oB = ZB(4874);
+    var Dt = Vt(4851);
 
-    function GB(BB) {
-      const IB = Object.prototype.hasOwnProperty.call(JB, BB) ? JB[BB]() : void 0;
-      if (void 0 !== IB) return {
-        sha256: IB,
-        onMismatch: oB.D
+    function mt(tt) {
+      const et = Object.prototype.hasOwnProperty.call(qt, tt) ? qt[tt]() : void 0;
+      if (void 0 !== et) return {
+        sha256: et,
+        onMismatch: Dt.y
       };
-      throw new TB.g(`${BB} has no release digest, so this build refuses it`)
+      throw new Ot.g(`${tt} has no release digest, so this build refuses it`)
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const tt in modules) Object.freeze(modules[tt]);

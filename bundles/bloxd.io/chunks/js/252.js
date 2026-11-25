@@ -1,502 +1,502 @@
 export const id = 252;
 export const ids = [252];
 export const modules = {
-  41058: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      b: () => oB,
-      e: () => GB
+  41229: (tt, et, Vt) => {
+    Vt.d(et, {
+      c: () => Dt,
+      d: () => mt
     });
-    var TB = ZB(2012);
-    let JB = !1;
+    var Ot = Vt(2034);
+    let qt = !1;
 
-    function oB() {
-      JB = !0
+    function Dt() {
+      qt = !0
     }
 
-    function GB() {
-      JB && (JB = !1, (0, TB.d)())
+    function mt() {
+      qt && (qt = !1, (0, Ot.e)())
     }
   },
-  41052: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      d: () => GB,
-      e: () => oB,
-      h: () => vB
+  41222: (tt, et, Vt) => {
+    Vt.d(et, {
+      d: () => mt,
+      h: () => Dt,
+      k: () => dt
     });
-    var TB = ZB(40633),
-      JB = ZB(40643);
+    var Ot = Vt(40761),
+      qt = Vt(40769);
 
-    function oB(BB) {
-      if (BB.queries.drawCensus() < TB.qb.BYTES) return null;
-      const IB = BB.memoryData(BB.scratch(), TB.qb.BYTES, 4, "the draw census");
-      return null === IB ? null : {
-        terrainOpaque: TB.qb.terrainOpaque(IB, 0),
-        terrainTransparent: TB.qb.terrainTransparent(IB, 0),
-        terrainPack: TB.qb.terrainPack(IB, 0),
-        earthSky: TB.qb.earthSky(IB, 0),
-        skyMeshes: TB.qb.skyMeshes(IB, 0),
-        regular: TB.qb.regular(IB, 0),
-        thin: TB.qb.thin(IB, 0),
-        line: TB.qb.line(IB, 0),
-        text: TB.qb.text(IB, 0),
-        particles: TB.qb.particles(IB, 0),
-        terrainParts: TB.qb.terrainParts(IB, 0),
-        terrainCompiling: TB.qb.terrainCompiling(IB, 0),
-        ringCopiesMax: TB.qb.ringCopiesMax(IB, 0),
-        ringBusyWrites: TB.qb.ringBusyWrites(IB, 0)
+    function Dt(tt) {
+      if (tt.queries.drawCensus() < Ot.Cb.BYTES) return null;
+      const et = tt.memoryData(tt.scratch(), Ot.Cb.BYTES, 4, "the draw census");
+      return null === et ? null : {
+        terrainOpaque: Ot.Cb.terrainOpaque(et, 0),
+        terrainTransparent: Ot.Cb.terrainTransparent(et, 0),
+        terrainPack: Ot.Cb.terrainPack(et, 0),
+        earthSky: Ot.Cb.earthSky(et, 0),
+        skyMeshes: Ot.Cb.skyMeshes(et, 0),
+        regular: Ot.Cb.regular(et, 0),
+        thin: Ot.Cb.thin(et, 0),
+        line: Ot.Cb.line(et, 0),
+        text: Ot.Cb.text(et, 0),
+        particles: Ot.Cb.particles(et, 0),
+        terrainParts: Ot.Cb.terrainParts(et, 0),
+        terrainCompiling: Ot.Cb.terrainCompiling(et, 0),
+        ringCopiesMax: Ot.Cb.ringCopiesMax(et, 0),
+        ringBusyWrites: Ot.Cb.ringBusyWrites(et, 0)
       }
     }
 
-    function GB(BB) {
+    function mt(tt) {
       const {
-        terrainOpaque: IB,
-        terrainTransparent: ZB,
-        earthSky: TB,
-        skyMeshes: JB,
-        regular: oB,
-        thin: GB,
-        line: vB,
-        text: kB,
-        particles: cB
-      } = BB;
-      return IB + ZB + TB + JB + oB + GB + vB + kB + cB
+        terrainOpaque: et,
+        terrainTransparent: Vt,
+        earthSky: Ot,
+        skyMeshes: qt,
+        regular: Dt,
+        thin: mt,
+        line: dt,
+        text: jt,
+        particles: Ht
+      } = tt;
+      return et + Vt + Ot + qt + Dt + mt + dt + jt + Ht
     }
 
-    function vB() {
-      const BB = (0, JB.j)();
-      return !0 === (null === BB || void 0 === BB ? void 0 : BB.isCoreRunning) ? function(BB) {
-        const IB = oB(BB);
-        if (null === IB) return [];
+    function dt() {
+      const tt = (0, qt.g)();
+      return !0 === (null === tt || void 0 === tt ? void 0 : tt.isCoreRunning) ? function(tt) {
+        const et = Dt(tt);
+        if (null === et) return [];
         const {
-          terrainOpaque: ZB,
-          terrainTransparent: TB,
-          terrainPack: JB,
-          earthSky: vB,
-          skyMeshes: kB,
-          regular: cB,
-          thin: nB,
-          line: hB,
-          text: zB,
-          particles: FB
-        } = IB;
+          terrainOpaque: Vt,
+          terrainTransparent: Ot,
+          terrainPack: qt,
+          earthSky: dt,
+          skyMeshes: jt,
+          regular: Ht,
+          thin: Xt,
+          line: Qt,
+          text: lt,
+          particles: Et
+        } = et;
         return [{
           label: "Drawn",
-          value: `${GB(IB)}`
+          value: `${mt(et)}`
         }, {
           label: "Terrain",
-          value: `${ZB} opaque / ${TB} transparent (${JB} shader pack)`
+          value: `${Vt} opaque / ${Ot} transparent (${qt} shader pack)`
         }, {
           label: "Meshes / Thin bases",
-          value: `${cB} / ${nB}`
+          value: `${Ht} / ${Xt}`
         }, {
           label: "Text / Lines",
-          value: `${zB} / ${hB}`
+          value: `${lt} / ${Qt}`
         }, {
           label: "Sky / Particles",
-          value: `${vB+kB} / ${FB}`
+          value: `${dt+jt} / ${Et}`
         }]
-      }(BB.api) : []
+      }(tt.api) : []
     }
   },
-  41045: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      d: () => NB,
-      e: () => zB,
-      i: () => FB
+  41206: (tt, et, Vt) => {
+    Vt.d(et, {
+      d: () => ft,
+      e: () => lt,
+      g: () => Et
     });
-    var TB = ZB(2020),
-      JB = ZB(1358),
-      oB = ZB(40643),
-      GB = ZB(40666),
-      vB = ZB(40675),
-      kB = ZB(40692);
-    const cB = new JB.e;
-    let nB = !1;
+    var Ot = Vt(2037),
+      qt = Vt(1391),
+      Dt = Vt(40769),
+      mt = Vt(40797),
+      dt = Vt(40804),
+      jt = Vt(40824);
+    const Ht = new qt.b;
+    let Xt = !1;
 
-    function hB(BB) {
-      const IB = (0, oB.j)();
-      return null !== IB && +BB === IB.api.localId
+    function Qt(tt) {
+      const et = (0, Dt.g)();
+      return null !== et && +tt === et.api.localId
     }
 
-    function zB() {
-      nB || (nB = !0, (0, kB.l)(GB.n, (BB => {
-        var IB, ZB;
-        const TB = (0, vB.e)(GB.n, BB);
-        if (!(0, vB.d)(TB)) return;
-        const JB = TB;
-        hB(JB.PB) && FB(JB.RB, {
-          icon: JB.fI,
-          level: JB.AI,
-          displayName: null !== (IB = JB.rB) && void 0 !== IB ? IB : null,
-          durationMs: null !== (ZB = JB.lI) && void 0 !== ZB ? ZB : null
+    function lt() {
+      Xt || (Xt = !0, (0, jt.j)(mt.l, (tt => {
+        var et, Vt;
+        const Ot = (0, dt.h)(mt.l, tt);
+        if (!(0, dt.d)(Ot)) return;
+        const qt = Ot;
+        Qt(qt.Ft) && Et(qt.kt, {
+          icon: qt.tV,
+          level: qt.VV,
+          displayName: null !== (et = qt.Gt) && void 0 !== et ? et : null,
+          durationMs: null !== (Vt = qt.eV) && void 0 !== Vt ? Vt : null
         })
-      })), (0, kB.l)(GB.H, (BB => {
-        const IB = (0, vB.e)(GB.H, BB);
-        if (!(0, vB.d)(IB)) return;
-        const ZB = IB;
-        hB(ZB.PB) && TB.c.remove(ZB.RB)
-      })), (0, kB.g)((() => {
-        TB.c.clear()
+      })), (0, jt.j)(mt.O, (tt => {
+        const et = (0, dt.h)(mt.O, tt);
+        if (!(0, dt.d)(et)) return;
+        const Vt = et;
+        Qt(Vt.Ft) && Ot.d.remove(Vt.kt)
+      })), (0, jt.f)((() => {
+        Ot.d.clear()
       })))
     }
 
-    function FB(BB, IB) {
-      TB.c.update(BB, IB), cB.forEach((IB => {
-        IB(BB)
+    function Et(tt, et) {
+      Ot.d.update(tt, et), Ht.forEach((et => {
+        et(tt)
       }))
     }
-    const NB = {
+    const ft = {
       localEffectUpdated: {
-        watch: BB => cB.add(BB)
+        watch: tt => Ht.add(tt)
       }
     }
   },
-  41047: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      b: () => nB
+  41215: (tt, et, Vt) => {
+    Vt.d(et, {
+      b: () => Xt
     });
-    var TB = ZB(4975),
-      JB = ZB(4969),
-      oB = ZB(40682),
-      GB = ZB(40692);
-    const vB = new Set(TB.N),
-      kB = TB.N.map((BB => (new TextEncoder).encode(BB))),
-      cB = new Map;
+    var Ot = Vt(4963),
+      qt = Vt(4960),
+      Dt = Vt(40812),
+      mt = Vt(40824);
+    const dt = new Set(Ot.M),
+      jt = Ot.M.map((tt => (new TextEncoder).encode(tt))),
+      Ht = new Map;
 
-    function nB(BB, IB) {
-      var ZB;
-      return null === (ZB = cB.get(BB)) || void 0 === ZB ? void 0 : ZB[IB]
-    }(0, GB.l)(TB.nc.NewOtherEntitySettings, (BB => {
-      BB.payloadKind === JB.nc.Msgpack && kB.some((IB => function(BB, IB) {
-        const ZB = IB[0];
-        for (let TB = BB.indexOf(ZB); - 1 !== TB && TB + IB.length <= BB.length; TB = BB.indexOf(ZB, TB + 1)) {
-          let ZB = 1;
-          for (; ZB < IB.length && BB[TB + ZB] === IB[ZB];) ZB++;
-          if (ZB === IB.length) return !0
+    function Xt(tt, et) {
+      var Vt;
+      return null === (Vt = Ht.get(tt)) || void 0 === Vt ? void 0 : Vt[et]
+    }(0, mt.j)(Ot.gc.NewOtherEntitySettings, (tt => {
+      tt.payloadKind === qt.wc.Msgpack && jt.some((et => function(tt, et) {
+        const Vt = et[0];
+        for (let Ot = tt.indexOf(Vt); - 1 !== Ot && Ot + et.length <= tt.length; Ot = tt.indexOf(Vt, Ot + 1)) {
+          let Vt = 1;
+          for (; Vt < et.length && tt[Ot + Vt] === et[Vt];) Vt++;
+          if (Vt === et.length) return !0
         }
         return !1
-      }(BB.payload, IB))) && function(BB) {
-        if (null === BB || "object" !== typeof BB || null === BB.settings || "object" !== typeof BB.settings) return;
-        const IB = String(BB.eId),
-          ZB = BB.settings;
-        let TB = cB.get(IB);
-        for (const JB in ZB) {
-          if (!vB.has(JB)) continue;
-          const BB = ZB[JB];
-          null === BB || void 0 === BB ? TB && delete TB[JB] : (TB ??= {}, TB[JB] = BB)
+      }(tt.payload, et))) && function(tt) {
+        if (null === tt || "object" !== typeof tt || null === tt.settings || "object" !== typeof tt.settings) return;
+        const et = String(tt.eId),
+          Vt = tt.settings;
+        let Ot = Ht.get(et);
+        for (const qt in Vt) {
+          if (!dt.has(qt)) continue;
+          const tt = Vt[qt];
+          null === tt || void 0 === tt ? Ot && delete Ot[qt] : (Ot ??= {}, Ot[qt] = tt)
         }
-        TB && cB.set(IB, TB)
-      }((0, oB.e)(BB.payload))
-    })), (0, GB.g)((() => {
-      cB.clear()
+        Ot && Ht.set(et, Ot)
+      }((0, Dt.c)(tt.payload))
+    })), (0, mt.f)((() => {
+      Ht.clear()
     }))
   },
-  41037: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      d: () => FB,
-      f: () => cB,
-      j: () => hB
+  41201: (tt, et, Vt) => {
+    Vt.d(et, {
+      b: () => Et,
+      c: () => Ht,
+      d: () => Qt
     });
-    var TB = ZB(39061),
-      JB = ZB(2003),
-      oB = ZB(1358),
-      GB = ZB(40666),
-      vB = ZB(40675),
-      kB = ZB(40692);
-    const cB = new TB.c;
-    let nB = {};
+    var Ot = Vt(39196),
+      qt = Vt(2026),
+      Dt = Vt(1391),
+      mt = Vt(40797),
+      dt = Vt(40804),
+      jt = Vt(40824);
+    const Ht = new Ot.b;
+    let Xt = {};
 
-    function hB(BB) {
-      return nB[BB]
+    function Qt(tt) {
+      return Xt[tt]
     }
-    const zB = new oB.e;
+    const lt = new Dt.b;
 
-    function FB(BB) {
-      return zB.add(BB)
+    function Et(tt) {
+      return lt.add(tt)
     }
 
-    function NB(BB) {
-      zB.callEach(BB, "a roster listener")
-    }(0, kB.l)(GB.O, (BB => {
-      const IB = (0, vB.e)(GB.O, BB);
-      if (void 0 === IB) return;
-      const ZB = IB.mB.some((BB => {
+    function ft(tt) {
+      lt.callEach(tt, "a roster listener")
+    }(0, jt.j)(mt.X, (tt => {
+      const et = (0, dt.h)(mt.X, tt);
+      if (void 0 === et) return;
+      const Vt = et.zt.some((tt => {
           let {
-            XB: IB,
-            LB: ZB
-          } = BB;
-          return null !== ZB && cB.has(IB) && cB.getName(IB) !== ZB
+            ot: et,
+            rt: Vt
+          } = tt;
+          return null !== Vt && Ht.has(et) && Ht.getName(et) !== Vt
         })),
         {
-          added: TB,
-          removed: oB,
-          settingChanges: kB
-        } = cB.apply(IB),
-        nB = new Set;
-      for (const JB of kB)
-        for (const BB in JB.settings) nB.add(BB);
-      const hB = ZB || TB.length > 0 || oB.length > 0;
-      (hB || nB.has("hideNameSeed")) && function() {
-        const BB = new Map;
-        for (const IB of cB.ids()) {
-          const ZB = cB.getName(IB),
-            TB = cB.getSetting(IB, "hideNameSeed");
-          void 0 !== ZB && void 0 !== TB && null !== TB && BB.set(ZB, TB)
+          added: Ot,
+          removed: Dt,
+          settingChanges: jt
+        } = Ht.apply(et),
+        Xt = new Set;
+      for (const qt of jt)
+        for (const tt in qt.settings) Xt.add(tt);
+      const Qt = Vt || Ot.length > 0 || Dt.length > 0;
+      (Qt || Xt.has("hideNameSeed")) && function() {
+        const tt = new Map;
+        for (const et of Ht.ids()) {
+          const Vt = Ht.getName(et),
+            Ot = Ht.getSetting(et, "hideNameSeed");
+          void 0 !== Vt && void 0 !== Ot && null !== Ot && tt.set(Vt, Ot)
         }
-        JB.b.replaceAll(BB)
-      }(), NB({
+        qt.d.replaceAll(tt)
+      }(), ft({
         kind: "roster",
-        members: hB,
-        settings: nB
+        members: Qt,
+        settings: Xt
       })
-    })), (0, kB.l)(GB.F, (BB => {
-      const IB = (0, vB.e)(GB.F, BB);
-      if (void 0 !== IB) {
+    })), (0, jt.j)(mt.K, (tt => {
+      const et = (0, dt.h)(mt.K, tt);
+      if (void 0 !== et) {
         for (const {
-            ao: BB,
-            Ho: ZB,
-            Mo: TB
+            FD: tt,
+            kD: Vt,
+            GD: Ot
           }
-          of IB) nB[BB] = {
-          ...nB[BB],
-          [ZB]: TB
+          of et) Xt[tt] = {
+          ...Xt[tt],
+          [Vt]: Ot
         };
-        NB({
+        ft({
           kind: "cosmetics",
-          updates: IB
+          updates: et
         })
       }
-    })), (0, kB.g)((() => {
-      cB.clear(), nB = {}, JB.b.clear(), NB({
+    })), (0, jt.f)((() => {
+      Ht.clear(), Xt = {}, qt.d.clear(), ft({
         kind: "reset"
       })
-    })), (0, kB.j)((() => {
-      cB.clear(), NB({
+    })), (0, jt.g)((() => {
+      Ht.clear(), ft({
         kind: "reset"
       })
     }))
   },
-  41049: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      b: () => iB,
-      c: () => qB,
-      f: () => MB,
-      g: () => jB
+  41219: (tt, et, Vt) => {
+    Vt.d(et, {
+      d: () => St,
+      e: () => yt,
+      g: () => Pt,
+      h: () => Zt
     });
-    var TB = ZB(1333),
-      JB = ZB(655),
-      oB = ZB(105),
-      GB = ZB(4975),
-      vB = ZB(40633),
-      kB = ZB(40664),
-      cB = ZB(40643),
-      nB = ZB(41047),
-      hB = ZB(41037),
-      zB = ZB(40675),
-      FB = ZB(40692);
+    var Ot = Vt(1363),
+      qt = Vt(705),
+      Dt = Vt(106),
+      mt = Vt(4963),
+      dt = Vt(40761),
+      jt = Vt(40792),
+      Ht = Vt(40769),
+      Xt = Vt(41215),
+      Qt = Vt(41201),
+      lt = Vt(40804),
+      Et = Vt(40824);
 
-    function NB(BB) {
+    function ft(tt) {
       let {
-        deadEId: IB,
-        killerEId: ZB,
-        killerLifeformType: TB,
-        withItem: JB,
-        killstreak: oB
-      } = BB;
+        deadEId: et,
+        killerEId: Vt,
+        killerLifeformType: Ot,
+        withItem: qt,
+        killstreak: Dt
+      } = tt;
       return {
-        killer: dB({
-          eId: ZB,
-          lifeformType: TB
+        killer: Jt({
+          eId: Vt,
+          lifeformType: Ot
         }),
-        victim: dB({
-          eId: IB
+        victim: Jt({
+          eId: et
         }),
-        withItem: JB,
-        killstreak: oB
+        withItem: qt,
+        killstreak: Dt
       }
     }
 
-    function gB(BB) {
+    function wt(tt) {
       let {
-        killer: IB,
-        victim: ZB,
-        withItem: TB
-      } = BB;
+        killer: et,
+        victim: Vt,
+        withItem: Ot
+      } = tt;
       return {
-        killer: dB(IB),
-        victim: dB(ZB),
-        withItem: TB,
+        killer: Jt(et),
+        victim: Jt(Vt),
+        withItem: Ot,
         killstreak: 0
       }
     }
 
-    function qB(BB) {
-      wB && YB((() => "killed" === BB.kind ? NB(BB.body) : gB(BB.body)))
+    function yt(tt) {
+      ht && Wt((() => "killed" === tt.kind ? ft(tt.body) : wt(tt.body)))
     }
-    const yB = "#2727f1",
-      UB = "#912c2c";
+    const Nt = "#2727f1",
+      Mt = "#912c2c";
 
-    function WB(BB, IB) {
-      var ZB;
-      return hB.f.has(BB) ? null === (ZB = hB.f.getSettings(BB)) || void 0 === ZB ? void 0 : ZB[IB] : (0, nB.b)(BB, IB)
+    function bt(tt, et) {
+      var Vt;
+      return Qt.c.has(tt) ? null === (Vt = Qt.c.getSettings(tt)) || void 0 === Vt ? void 0 : Vt[et] : (0, Xt.b)(tt, et)
     }
 
-    function dB(BB) {
-      var IB, ZB, GB, vB, nB;
+    function Jt(tt) {
+      var et, Vt, mt, dt, Xt;
       let {
-        eId: zB,
-        name: FB,
-        colour: NB,
-        lifeformType: gB
-      } = BB;
-      if (void 0 === zB || null === zB || "" === zB) {
-        const BB = FB || null;
+        eId: lt,
+        name: Et,
+        colour: ft,
+        lifeformType: wt
+      } = tt;
+      if (void 0 === lt || null === lt || "" === lt) {
+        const tt = Et || null;
         return {
           id: null,
-          shownName: BB,
-          lifeformType: null === BB && null !== gB && void 0 !== gB ? gB : null,
-          colour: NB || null,
+          shownName: tt,
+          lifeformType: null === tt && null !== wt && void 0 !== wt ? wt : null,
+          colour: ft || null,
           local: !1,
           realName: null
         }
       }
-      const qB = String(zB),
-        dB = null === (IB = (0, cB.j)()) || void 0 === IB ? void 0 : IB.api,
-        CB = void 0 !== dB && String(dB.localId) === qB,
-        QB = null !== (ZB = hB.f.getName(qB)) && void 0 !== ZB ? ZB : null,
-        sB = null !== (GB = WB(qB, "hideNameSeed")) && void 0 !== GB ? GB : null;
-      let wB = null === QB ? null : (0, TB.c)(QB, !oB.featureFlags.canSeeRealPlayerNames, sB) || null,
-        OB = null;
-      if (null === wB && void 0 !== dB) {
-        const BB = dB.getEntityType(qB);
-        "Player" !== BB && (wB = (0, kB.k)(dB, +qB) || null), OB = JB.i.includes(BB) ? BB : null
+      const yt = String(lt),
+        Jt = null === (et = (0, Ht.g)()) || void 0 === et ? void 0 : et.api,
+        Ct = void 0 !== Jt && String(Jt.localId) === yt,
+        ut = null !== (Vt = Qt.c.getName(yt)) && void 0 !== Vt ? Vt : null,
+        Kt = null !== (mt = bt(yt, "hideNameSeed")) && void 0 !== mt ? mt : null;
+      let ht = null === ut ? null : (0, Ot.e)(ut, !Dt.featureFlags.canSeeRealPlayerNames, Kt) || null,
+        vt = null;
+      if (null === ht && void 0 !== Jt) {
+        const tt = Jt.getEntityType(yt);
+        "Player" !== tt && (ht = (0, jt.h)(Jt, +yt) || null), vt = qt.f.includes(tt) ? tt : null
       }
       return {
-        id: qB,
-        shownName: wB,
-        lifeformType: null === wB && null !== (vB = null !== (nB = OB) && void 0 !== nB ? nB : gB) && void 0 !== vB ? vB : null,
-        colour: NB || WB(qB, "killfeedColour") || (CB ? yB : UB),
-        local: CB,
-        realName: QB
+        id: yt,
+        shownName: ht,
+        lifeformType: null === ht && null !== (dt = null !== (Xt = vt) && void 0 !== Xt ? Xt : wt) && void 0 !== dt ? dt : null,
+        colour: ft || bt(yt, "killfeedColour") || (Ct ? Nt : Mt),
+        local: Ct,
+        realName: ut
       }
     }
-    const CB = 32;
-    let QB = [],
-      sB = null,
-      wB = !1,
-      OB = !1;
+    const Ct = 32;
+    let ut = [],
+      Kt = null,
+      ht = !1,
+      vt = !1;
 
-    function YB(BB) {
-      null === sB ? (QB.length === CB && QB.shift(), QB.push(BB)) : sB(BB())
+    function Wt(tt) {
+      null === Kt ? (ut.length === Ct && ut.shift(), ut.push(tt)) : Kt(tt())
     }
 
-    function iB() {
-      OB || (OB = !0, (0, FB.l)(GB.nc.PlayerKilled, (BB => {
-        const IB = (0, zB.f)(BB);
-        (0, zB.d)(IB) && YB((() => NB(IB)))
-      })), (0, FB.l)(GB.nc.CustomKillfeed, (BB => {
-        const IB = (0, zB.f)(BB);
-        (0, zB.d)(IB) && (0, zB.d)(IB.killer) && (0, zB.d)(IB.victim) && YB((() => gB(IB)))
-      })), (0, FB.g)((() => {
-        QB = []
+    function St() {
+      vt || (vt = !0, (0, Et.j)(mt.gc.PlayerKilled, (tt => {
+        const et = (0, lt.k)(tt);
+        (0, lt.d)(et) && Wt((() => ft(et)))
+      })), (0, Et.j)(mt.gc.CustomKillfeed, (tt => {
+        const et = (0, lt.k)(tt);
+        (0, lt.d)(et) && (0, lt.d)(et.killer) && (0, lt.d)(et.victim) && Wt((() => wt(et)))
+      })), (0, Et.f)((() => {
+        ut = []
       })))
     }
-    const pB = Object.freeze([0, 0, 0]),
-      aB = [0, 0, 0],
-      HB = [0, 0, 0],
-      MB = {
+    const ct = Object.freeze([0, 0, 0]),
+      Rt = [0, 0, 0],
+      It = [0, 0, 0],
+      Pt = {
         kill: {
-          watch(BB) {
-            if (wB = !0, 0 === QB.length) return sB = BB, () => {
-              wB = !1, sB = null
+          watch(tt) {
+            if (ht = !0, 0 === ut.length) return Kt = tt, () => {
+              ht = !1, Kt = null
             };
-            const IB = setTimeout((() => {
-              const IB = QB;
-              QB = [], sB = BB;
-              for (const TB of IB) try {
-                BB(TB())
-              } catch (ZB) {
-                console.error("[bloxd-wasm-client] a kept kill couldn't be handed on", ZB)
+            const et = setTimeout((() => {
+              const et = ut;
+              ut = [], Kt = tt;
+              for (const Ot of et) try {
+                tt(Ot())
+              } catch (Vt) {
+                console.error("[bloxd-wasm-client] a kept kill couldn't be handed on", Vt)
               }
             }), 0);
             return () => {
-              clearTimeout(IB), wB = !1, sB = null
+              clearTimeout(et), ht = !1, Kt = null
             }
           }
         }
       },
-      jB = {
+      Zt = {
         localPos() {
-          const BB = (0, cB.j)();
-          if (null === BB) return pB;
-          const IB = BB.api.apiView;
-          for (let ZB = 0; ZB < 3; ZB++) aB[ZB] = vB.p.localPos(IB, 0, ZB);
-          return aB
+          const tt = (0, Ht.g)();
+          if (null === tt) return ct;
+          const et = tt.api.apiView;
+          for (let Vt = 0; Vt < 3; Vt++) Rt[Vt] = dt.x.localPos(et, 0, Vt);
+          return Rt
         },
         targetedBlockPos() {
-          const BB = (0, cB.j)();
-          if (null === BB || vB.p.targetBlockId(BB.api.apiView, 0) === vB.Tc) return null;
-          for (let IB = 0; IB < 3; IB++) HB[IB] = vB.p.targetBlock(BB.api.apiView, 0, IB);
-          return HB
+          const tt = (0, Ht.g)();
+          if (null === tt || dt.x.targetBlockId(tt.api.apiView, 0) === dt.ld) return null;
+          for (let et = 0; et < 3; et++) It[et] = dt.x.targetBlock(tt.api.apiView, 0, et);
+          return It
         }
       }
   },
-  39061: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      c: () => TB
+  39196: (tt, et, Vt) => {
+    Vt.d(et, {
+      b: () => Ot
     });
-    class TB {
+    class Ot {
       constructor() {
         this.members = new Map
       }
-      apply(BB) {
-        const IB = {
+      apply(tt) {
+        const et = {
           added: [],
           removed: [],
           settingChanges: []
         };
-        for (const TB of BB.mB) {
-          let BB = this.members.get(TB.XB);
-          if (BB || (BB = {
+        for (const Ot of tt.zt) {
+          let tt = this.members.get(Ot.ot);
+          if (tt || (tt = {
               name: null,
               settings: {}
-            }, this.members.set(TB.XB, BB), IB.added.push(TB.XB)), null !== TB.LB && (BB.name = TB.LB), null !== TB.eB || TB.uB.length > 0) {
-            const ZB = null === TB.eB ? {} : JSON.parse(TB.eB);
-            Object.assign(BB.settings, ZB);
-            for (const IB of TB.uB) delete BB.settings[IB], ZB[IB] = void 0;
-            IB.settingChanges.push({
-              playerId: TB.XB,
-              settings: ZB
+            }, this.members.set(Ot.ot, tt), et.added.push(Ot.ot)), null !== Ot.rt && (tt.name = Ot.rt), null !== Ot.Ut || Ot.Yt.length > 0) {
+            const Vt = null === Ot.Ut ? {} : JSON.parse(Ot.Ut);
+            Object.assign(tt.settings, Vt);
+            for (const et of Ot.Yt) delete tt.settings[et], Vt[et] = void 0;
+            et.settingChanges.push({
+              playerId: Ot.ot,
+              settings: Vt
             })
           }
         }
-        for (const TB of BB.fB) {
-          const BB = this.members.get(TB);
-          var ZB;
-          if (BB) this.members.delete(TB), IB.removed.push({
-            playerId: TB,
-            name: null !== (ZB = BB.name) && void 0 !== ZB ? ZB : void 0
+        for (const Ot of tt.Bt) {
+          const tt = this.members.get(Ot);
+          var Vt;
+          if (tt) this.members.delete(Ot), et.removed.push({
+            playerId: Ot,
+            name: null !== (Vt = tt.name) && void 0 !== Vt ? Vt : void 0
           })
         }
-        return IB
+        return et
       }
-      has(BB) {
-        return this.members.has(BB)
+      has(tt) {
+        return this.members.has(tt)
       }
       ids() {
         return [...this.members.keys()]
       }
-      getName(BB) {
-        var IB, ZB;
-        return null !== (IB = null === (ZB = this.members.get(BB)) || void 0 === ZB ? void 0 : ZB.name) && void 0 !== IB ? IB : void 0
+      getName(tt) {
+        var et, Vt;
+        return null !== (et = null === (Vt = this.members.get(tt)) || void 0 === Vt ? void 0 : Vt.name) && void 0 !== et ? et : void 0
       }
-      getSettings(BB) {
-        var IB;
-        return null === (IB = this.members.get(BB)) || void 0 === IB ? void 0 : IB.settings
+      getSettings(tt) {
+        var et;
+        return null === (et = this.members.get(tt)) || void 0 === et ? void 0 : et.settings
       }
-      getSetting(BB, IB) {
-        var ZB;
-        return null === (ZB = this.members.get(BB)) || void 0 === ZB ? void 0 : ZB.settings[IB]
+      getSetting(tt, et) {
+        var Vt;
+        return null === (Vt = this.members.get(tt)) || void 0 === Vt ? void 0 : Vt.settings[et]
       }
       clear() {
         this.members.clear()
@@ -505,4 +505,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const tt in modules) Object.freeze(modules[tt]);

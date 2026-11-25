@@ -1,583 +1,583 @@
 export const id = 259;
 export const ids = [259];
 export const modules = {
-  40154: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      d: () => oB
+  40307: (tt, et, Vt) => {
+    Vt.d(et, {
+      d: () => Dt
     });
-    var TB = ZB(38718),
-      JB = ZB(37170);
-    class oB {
-      static Instantiate(BB) {
-        if (this.RegisteredExternalClasses && this.RegisteredExternalClasses[BB]) return this.RegisteredExternalClasses[BB];
-        const IB = (0, JB.e)(BB);
-        if (IB) return IB;
-        TB.d.Warn(BB + " not found, you may have missed an import.");
-        const ZB = BB.split(".");
-        let oB = "undefined" !== typeof window ? window : "undefined" !== typeof globalThis ? globalThis : this;
-        for (let TB = 0, JB = ZB.length; TB < JB; TB++) oB = oB[ZB[TB]];
-        return "function" !== typeof oB ? null : oB
+    var Ot = Vt(38899),
+      qt = Vt(37390);
+    class Dt {
+      static Instantiate(tt) {
+        if (this.RegisteredExternalClasses && this.RegisteredExternalClasses[tt]) return this.RegisteredExternalClasses[tt];
+        const et = (0, qt.e)(tt);
+        if (et) return et;
+        Ot.d.Warn(tt + " not found, you may have missed an import.");
+        const Vt = tt.split(".");
+        let Dt = "undefined" !== typeof window ? window : "undefined" !== typeof globalThis ? globalThis : this;
+        for (let Ot = 0, qt = Vt.length; Ot < qt; Ot++) Dt = Dt[Vt[Ot]];
+        return "function" !== typeof Dt ? null : Dt
       }
     }
-    oB.RegisteredExternalClasses = {}
+    Dt.RegisteredExternalClasses = {}
   },
-  39959: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      c: () => JB
+  40098: (tt, et, Vt) => {
+    Vt.d(et, {
+      b: () => qt
     });
-    var TB = ZB(39912);
-    class JB {
+    var Ot = Vt(40068);
+    class qt {
       static get Now() {
-        return (0, TB.l)() && window.performance && window.performance.now ? window.performance.now() : Date.now()
+        return (0, Ot.j)() && window.performance && window.performance.now ? window.performance.now() : Date.now()
       }
     }
   },
-  39993: (BB, IB, ZB) => {
-    function TB(BB) {
-      let IB = 1;
+  40131: (tt, et, Vt) => {
+    function Ot(tt) {
+      let et = 1;
       do {
-        IB *= 2
-      } while (IB < BB);
-      return IB === BB
+        et *= 2
+      } while (et < tt);
+      return et === tt
     }
 
-    function JB(BB, IB, ZB) {
-      return BB * (1 - ZB) + IB * ZB
+    function qt(tt, et, Vt) {
+      return tt * (1 - Vt) + et * Vt
     }
 
-    function oB(BB) {
-      const IB = GB(BB),
-        ZB = vB(BB);
-      return IB - BB > BB - ZB ? ZB : IB
+    function Dt(tt) {
+      const et = mt(tt),
+        Vt = dt(tt);
+      return et - tt > tt - Vt ? Vt : et
     }
 
-    function GB(BB) {
-      return BB--, BB |= BB >> 1, BB |= BB >> 2, BB |= BB >> 4, BB |= BB >> 8, BB |= BB >> 16, ++BB
+    function mt(tt) {
+      return tt--, tt |= tt >> 1, tt |= tt >> 2, tt |= tt >> 4, tt |= tt >> 8, tt |= tt >> 16, ++tt
     }
 
-    function vB(BB) {
-      return BB |= BB >> 1, BB |= BB >> 2, BB |= BB >> 4, BB |= BB >> 8, (BB |= BB >> 16) - (BB >> 1)
+    function dt(tt) {
+      return tt |= tt >> 1, tt |= tt >> 2, tt |= tt >> 4, tt |= tt >> 8, (tt |= tt >> 16) - (tt >> 1)
     }
 
-    function kB(BB, IB) {
-      let ZB;
+    function jt(tt, et) {
+      let Vt;
       switch (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 2) {
         case 1:
-          ZB = vB(BB);
+          Vt = dt(tt);
           break;
         case 2:
-          ZB = oB(BB);
+          Vt = Dt(tt);
           break;
         default:
-          ZB = GB(BB)
+          Vt = mt(tt)
       }
-      return Math.min(ZB, IB)
+      return Math.min(Vt, et)
     }
-    ZB.d(IB, {
-      d: () => vB,
-      f: () => kB,
-      i: () => TB,
-      m: () => JB,
-      p: () => oB
+    Vt.d(et, {
+      e: () => dt,
+      g: () => jt,
+      h: () => Ot,
+      l: () => qt,
+      n: () => Dt
     })
   },
-  40152: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      d: () => WB,
-      f: () => CB,
-      j: () => yB,
-      k: () => UB
+  40300: (tt, et, Vt) => {
+    Vt.d(et, {
+      d: () => bt,
+      h: () => Ct,
+      l: () => Nt,
+      o: () => Mt
     });
-    var TB, JB = ZB(37153),
-      oB = ZB(39912),
-      GB = ZB(38718),
-      vB = ZB(38714),
-      kB = ZB(39959),
-      cB = ZB(39931),
-      nB = ZB(40118),
-      hB = ZB(37147),
-      zB = ZB(40110),
-      FB = ZB(39943),
-      NB = ZB(40154),
-      gB = ZB(37964),
-      qB = ZB(39993);
-    class yB {
+    var Ot, qt = Vt(37367),
+      Dt = Vt(40068),
+      mt = Vt(38899),
+      dt = Vt(38897),
+      jt = Vt(40098),
+      Ht = Vt(40080),
+      Xt = Vt(40255),
+      Qt = Vt(37359),
+      lt = Vt(40249),
+      Et = Vt(40085),
+      ft = Vt(40307),
+      wt = Vt(38159),
+      yt = Vt(40131);
+    class Nt {
       static get BaseUrl() {
-        return zB.d.BaseUrl
+        return lt.f.BaseUrl
       }
-      static set BaseUrl(BB) {
-        zB.d.BaseUrl = BB
+      static set BaseUrl(tt) {
+        lt.f.BaseUrl = tt
       }
       static get CleanUrl() {
-        return zB.d.CleanUrl
+        return lt.f.CleanUrl
       }
-      static set CleanUrl(BB) {
-        zB.d.CleanUrl = BB
+      static set CleanUrl(tt) {
+        lt.f.CleanUrl = tt
       }
-      static IsAbsoluteUrl(BB) {
-        return 0 === BB.indexOf("//") || -1 !== BB.indexOf("://") && (-1 !== BB.indexOf(".") && (-1 !== BB.indexOf("/") && (!(BB.indexOf(":") > BB.indexOf("/")) && (BB.indexOf("://") < BB.indexOf(".") || (0 === BB.indexOf("data:") || 0 === BB.indexOf("blob:"))))))
+      static IsAbsoluteUrl(tt) {
+        return 0 === tt.indexOf("//") || -1 !== tt.indexOf("://") && (-1 !== tt.indexOf(".") && (-1 !== tt.indexOf("/") && (!(tt.indexOf(":") > tt.indexOf("/")) && (tt.indexOf("://") < tt.indexOf(".") || (0 === tt.indexOf("data:") || 0 === tt.indexOf("blob:"))))))
       }
-      static set ScriptBaseUrl(BB) {
-        zB.d.ScriptBaseUrl = BB
+      static set ScriptBaseUrl(tt) {
+        lt.f.ScriptBaseUrl = tt
       }
       static get ScriptBaseUrl() {
-        return zB.d.ScriptBaseUrl
+        return lt.f.ScriptBaseUrl
       }
-      static set CDNBaseUrl(BB) {
-        TB.ScriptBaseUrl = BB, TB.AssetBaseUrl = BB
+      static set CDNBaseUrl(tt) {
+        Ot.ScriptBaseUrl = tt, Ot.AssetBaseUrl = tt
       }
-      static set ScriptPreprocessUrl(BB) {
-        zB.d.ScriptPreprocessUrl = BB
+      static set ScriptPreprocessUrl(tt) {
+        lt.f.ScriptPreprocessUrl = tt
       }
       static get ScriptPreprocessUrl() {
-        return zB.d.ScriptPreprocessUrl
+        return lt.f.ScriptPreprocessUrl
       }
       static get DefaultRetryStrategy() {
-        return zB.d.DefaultRetryStrategy
+        return lt.f.DefaultRetryStrategy
       }
-      static set DefaultRetryStrategy(BB) {
-        zB.d.DefaultRetryStrategy = BB
+      static set DefaultRetryStrategy(tt) {
+        lt.f.DefaultRetryStrategy = tt
       }
       static get CorsBehavior() {
-        return zB.d.CorsBehavior
+        return lt.f.CorsBehavior
       }
-      static set CorsBehavior(BB) {
-        zB.d.CorsBehavior = BB
+      static set CorsBehavior(tt) {
+        lt.f.CorsBehavior = tt
       }
       static get UseFallbackTexture() {
-        return hB.e.UseFallbackTexture
+        return Qt.d.UseFallbackTexture
       }
-      static set UseFallbackTexture(BB) {
-        hB.e.UseFallbackTexture = BB
+      static set UseFallbackTexture(tt) {
+        Qt.d.UseFallbackTexture = tt
       }
       static get RegisteredExternalClasses() {
-        return NB.d.RegisteredExternalClasses
+        return ft.d.RegisteredExternalClasses
       }
-      static set RegisteredExternalClasses(BB) {
-        NB.d.RegisteredExternalClasses = BB
+      static set RegisteredExternalClasses(tt) {
+        ft.d.RegisteredExternalClasses = tt
       }
       static get fallbackTexture() {
-        return hB.e.FallbackTexture
+        return Qt.d.FallbackTexture
       }
-      static set fallbackTexture(BB) {
-        hB.e.FallbackTexture = BB
+      static set fallbackTexture(tt) {
+        Qt.d.FallbackTexture = tt
       }
-      static FetchToRef(BB, IB, ZB, TB, JB, oB) {
-        const GB = 4 * ((Math.abs(BB) * ZB % ZB | 0) + (Math.abs(IB) * TB % TB | 0) * ZB);
-        oB.r = JB[GB] / 255, oB.g = JB[GB + 1] / 255, oB.b = JB[GB + 2] / 255, oB.a = JB[GB + 3] / 255
+      static FetchToRef(tt, et, Vt, Ot, qt, Dt) {
+        const mt = 4 * ((Math.abs(tt) * Vt % Vt | 0) + (Math.abs(et) * Ot % Ot | 0) * Vt);
+        Dt.r = qt[mt] / 255, Dt.g = qt[mt + 1] / 255, Dt.b = qt[mt + 2] / 255, Dt.a = qt[mt + 3] / 255
       }
-      static Mix(BB, IB, ZB) {
+      static Mix(tt, et, Vt) {
         return 0
       }
-      static Instantiate(BB) {
-        return NB.d.Instantiate(BB)
+      static Instantiate(tt) {
+        return ft.d.Instantiate(tt)
       }
-      static SetImmediate(BB) {
-        FB.b.SetImmediate(BB)
+      static SetImmediate(tt) {
+        Et.c.SetImmediate(tt)
       }
-      static IsExponentOfTwo(BB) {
+      static IsExponentOfTwo(tt) {
         return !0
       }
-      static FloatRound(BB) {
-        return Math.fround(BB)
+      static FloatRound(tt) {
+        return Math.fround(tt)
       }
-      static GetFilename(BB) {
-        const IB = BB.lastIndexOf("/");
-        return IB < 0 ? BB : BB.substring(IB + 1)
+      static GetFilename(tt) {
+        const et = tt.lastIndexOf("/");
+        return et < 0 ? tt : tt.substring(et + 1)
       }
-      static GetFolderPath(BB) {
-        let IB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const ZB = BB.lastIndexOf("/");
-        return ZB < 0 ? IB ? BB : "" : BB.substring(0, ZB + 1)
+      static GetFolderPath(tt) {
+        let et = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const Vt = tt.lastIndexOf("/");
+        return Vt < 0 ? et ? tt : "" : tt.substring(0, Vt + 1)
       }
-      static ToDegrees(BB) {
-        return 180 * BB / Math.PI
+      static ToDegrees(tt) {
+        return 180 * tt / Math.PI
       }
-      static ToRadians(BB) {
-        return BB * Math.PI / 180
+      static ToRadians(tt) {
+        return tt * Math.PI / 180
       }
-      static SmoothAngleChange(BB, IB) {
-        let ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : .9;
-        const TB = this.ToRadians(BB),
-          JB = this.ToRadians(IB);
-        return this.ToDegrees(Math.atan2((1 - ZB) * Math.sin(JB) + ZB * Math.sin(TB), (1 - ZB) * Math.cos(JB) + ZB * Math.cos(TB)))
+      static SmoothAngleChange(tt, et) {
+        let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : .9;
+        const Ot = this.ToRadians(tt),
+          qt = this.ToRadians(et);
+        return this.ToDegrees(Math.atan2((1 - Vt) * Math.sin(qt) + Vt * Math.sin(Ot), (1 - Vt) * Math.cos(qt) + Vt * Math.cos(Ot)))
       }
-      static MakeArray(BB, IB) {
-        return !0 === IB || void 0 !== BB && null != BB ? Array.isArray(BB) ? BB : [BB] : null
+      static MakeArray(tt, et) {
+        return !0 === et || void 0 !== tt && null != tt ? Array.isArray(tt) ? tt : [tt] : null
       }
-      static GetPointerPrefix(BB) {
-        return (0, oB.l)() && !window.PointerEvent ? "mouse" : "pointer"
+      static GetPointerPrefix(tt) {
+        return (0, Dt.j)() && !window.PointerEvent ? "mouse" : "pointer"
       }
-      static SetCorsBehavior(BB, IB) {
-        (0, zB.s)(BB, IB)
+      static SetCorsBehavior(tt, et) {
+        (0, lt.z)(tt, et)
       }
-      static SetReferrerPolicyBehavior(BB, IB) {
-        IB.referrerPolicy = BB
+      static SetReferrerPolicyBehavior(tt, et) {
+        et.referrerPolicy = tt
       }
       static get PreprocessUrl() {
-        return zB.d.PreprocessUrl
+        return lt.f.PreprocessUrl
       }
-      static set PreprocessUrl(BB) {
-        zB.d.PreprocessUrl = BB
+      static set PreprocessUrl(tt) {
+        lt.f.PreprocessUrl = tt
       }
-      static LoadImage(BB, IB, ZB, TB, JB, oB) {
-        return (0, zB.l)(BB, IB, ZB, TB, JB, oB)
+      static LoadImage(tt, et, Vt, Ot, qt, Dt) {
+        return (0, lt.p)(tt, et, Vt, Ot, qt, Dt)
       }
-      static LoadFile(BB, IB, ZB, TB, JB, oB) {
-        return (0, zB.j)(BB, IB, ZB, TB, JB, oB)
+      static LoadFile(tt, et, Vt, Ot, qt, Dt) {
+        return (0, lt.o)(tt, et, Vt, Ot, qt, Dt)
       }
-      static async LoadFileAsync(BB) {
-        let IB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        return await new Promise(((ZB, TB) => {
-          (0, zB.j)(BB, (BB => {
-            ZB(BB)
-          }), void 0, void 0, IB, ((BB, IB) => {
-            TB(IB)
+      static async LoadFileAsync(tt) {
+        let et = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        return await new Promise(((Vt, Ot) => {
+          (0, lt.o)(tt, (tt => {
+            Vt(tt)
+          }), void 0, void 0, et, ((tt, et) => {
+            Ot(et)
           }))
         }))
       }
-      static GetAssetUrl(BB) {
-        if (!BB) return "";
-        if (TB.AssetBaseUrl && BB.startsWith(TB._DefaultAssetsUrl)) {
-          const IB = TB.AssetBaseUrl.endsWith("/") ? TB.AssetBaseUrl.slice(0, -1) : TB.AssetBaseUrl;
-          return BB.replace(TB._DefaultAssetsUrl, IB)
+      static GetAssetUrl(tt) {
+        if (!tt) return "";
+        if (Ot.AssetBaseUrl && tt.startsWith(Ot._DefaultAssetsUrl)) {
+          const et = Ot.AssetBaseUrl.endsWith("/") ? Ot.AssetBaseUrl.slice(0, -1) : Ot.AssetBaseUrl;
+          return tt.replace(Ot._DefaultAssetsUrl, et)
         }
-        return BB
+        return tt
       }
-      static GetBabylonScriptURL(BB, IB) {
-        if (!BB) return "";
-        if (BB.startsWith(TB._DefaultCdnUrl))
-          if (TB.ScriptBaseUrl) {
-            const IB = TB.ScriptBaseUrl.endsWith("/") ? TB.ScriptBaseUrl.slice(0, -1) : TB.ScriptBaseUrl;
-            BB = BB.replace(TB._DefaultCdnUrl, IB)
-          } else if (TB._CdnVersion) {
-          const IB = `${TB._DefaultCdnUrl}/v${TB._CdnVersion}`;
-          BB.startsWith(IB) || (BB = BB.replace(TB._DefaultCdnUrl, IB))
+      static GetBabylonScriptURL(tt, et) {
+        if (!tt) return "";
+        if (tt.startsWith(Ot._DefaultCdnUrl))
+          if (Ot.ScriptBaseUrl) {
+            const et = Ot.ScriptBaseUrl.endsWith("/") ? Ot.ScriptBaseUrl.slice(0, -1) : Ot.ScriptBaseUrl;
+            tt = tt.replace(Ot._DefaultCdnUrl, et)
+          } else if (Ot._CdnVersion) {
+          const et = `${Ot._DefaultCdnUrl}/v${Ot._CdnVersion}`;
+          tt.startsWith(et) || (tt = tt.replace(Ot._DefaultCdnUrl, et))
         }
-        return BB = TB.ScriptPreprocessUrl(BB), IB && !TB.IsAbsoluteUrl(BB) && (BB = TB.GetAbsoluteUrl(BB)), BB
+        return tt = Ot.ScriptPreprocessUrl(tt), et && !Ot.IsAbsoluteUrl(tt) && (tt = Ot.GetAbsoluteUrl(tt)), tt
       }
-      static LoadBabylonScript(BB, IB, ZB, JB) {
-        BB = TB.GetBabylonScriptURL(BB), TB.LoadScript(BB, IB, ZB)
+      static LoadBabylonScript(tt, et, Vt, qt) {
+        tt = Ot.GetBabylonScriptURL(tt), Ot.LoadScript(tt, et, Vt)
       }
-      static async LoadBabylonScriptAsync(BB) {
-        return BB = TB.GetBabylonScriptURL(BB), await TB.LoadScriptAsync(BB)
+      static async LoadBabylonScriptAsync(tt) {
+        return tt = Ot.GetBabylonScriptURL(tt), await Ot.LoadScriptAsync(tt)
       }
-      static _LoadScriptNative(BB, IB, ZB, JB) {
+      static _LoadScriptNative(tt, et, Vt, qt) {
         if (_native) {
           if (arguments.length > 4 && void 0 !== arguments[4] && arguments[4]) {
-            const BB = "Loading a script as an ES module is not supported in Babylon Native";
-            return void ZB?.(BB, new Error(BB))
+            const tt = "Loading a script as an ES module is not supported in Babylon Native";
+            return void Vt?.(tt, new Error(tt))
           }
-          TB.LoadFile(BB, (BB => {
+          Ot.LoadFile(tt, (tt => {
             try {
-              Function(BB).apply(null), IB && IB()
-            } catch (TB) {
-              ZB && ZB("LoadScript Error", TB)
+              Function(tt).apply(null), et && et()
+            } catch (Ot) {
+              Vt && Vt("LoadScript Error", Ot)
             }
-          }), void 0, void 0, !1, ((BB, IB) => {
-            ZB && ZB("LoadScript Error", IB)
+          }), void 0, void 0, !1, ((tt, et) => {
+            Vt && Vt("LoadScript Error", et)
           }))
         }
       }
-      static _LoadScriptWeb(BB, IB, ZB, TB) {
-        let JB = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+      static _LoadScriptWeb(tt, et, Vt, Ot) {
+        let qt = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
         if ("function" === typeof importScripts) {
           try {
-            importScripts(BB), IB && IB()
-          } catch (kB) {
-            ZB?.(`Unable to load script '${BB}' in worker`, kB)
+            importScripts(tt), et && et()
+          } catch (jt) {
+            Vt?.(`Unable to load script '${tt}' in worker`, jt)
           }
           return
         }
-        if (!(0, oB.l)()) return void ZB?.(`Cannot load script '${BB}' outside of a window or a worker`);
-        const GB = document.getElementsByTagName("head")[0],
-          vB = document.createElement("script");
-        JB ? (vB.setAttribute("type", "module"), vB.innerText = BB) : (vB.setAttribute("type", "text/javascript"), vB.setAttribute("src", BB)), TB && (vB.id = TB), vB.onload = () => {
-          IB && IB()
-        }, vB.onerror = IB => {
-          ZB && ZB(`Unable to load script '${BB}'`, IB)
-        }, GB.appendChild(vB)
+        if (!(0, Dt.j)()) return void Vt?.(`Cannot load script '${tt}' outside of a window or a worker`);
+        const mt = document.getElementsByTagName("head")[0],
+          dt = document.createElement("script");
+        qt ? (dt.setAttribute("type", "module"), dt.innerText = tt) : (dt.setAttribute("type", "text/javascript"), dt.setAttribute("src", tt)), Ot && (dt.id = Ot), dt.onload = () => {
+          et && et()
+        }, dt.onerror = et => {
+          Vt && Vt(`Unable to load script '${tt}'`, et)
+        }, mt.appendChild(dt)
       }
-      static async LoadScriptAsync(BB, IB) {
-        return await new Promise(((ZB, TB) => {
-          this.LoadScript(BB, (() => {
-            ZB()
-          }), ((BB, IB) => {
-            TB(IB || new Error(BB))
-          }), IB)
+      static async LoadScriptAsync(tt, et) {
+        return await new Promise(((Vt, Ot) => {
+          this.LoadScript(tt, (() => {
+            Vt()
+          }), ((tt, et) => {
+            Ot(et || new Error(tt))
+          }), et)
         }))
       }
-      static ReadFileAsDataURL(BB, IB, ZB) {
-        const TB = new FileReader,
-          oB = {
-            onCompleteObservable: new JB.b,
-            abort: () => TB.abort()
+      static ReadFileAsDataURL(tt, et, Vt) {
+        const Ot = new FileReader,
+          Dt = {
+            onCompleteObservable: new qt.c,
+            abort: () => Ot.abort()
           };
-        return TB.onloadend = () => {
-          oB.onCompleteObservable.notifyObservers(oB)
-        }, TB.onload = BB => {
-          IB(BB.target.result)
-        }, TB.onprogress = ZB, TB.readAsDataURL(BB), oB
+        return Ot.onloadend = () => {
+          Dt.onCompleteObservable.notifyObservers(Dt)
+        }, Ot.onload = tt => {
+          et(tt.target.result)
+        }, Ot.onprogress = Vt, Ot.readAsDataURL(tt), Dt
       }
-      static ReadFile(BB, IB, ZB, TB, JB) {
-        return (0, zB.m)(BB, IB, ZB, TB, JB)
+      static ReadFile(tt, et, Vt, Ot, qt) {
+        return (0, lt.r)(tt, et, Vt, Ot, qt)
       }
-      static FileAsURL(BB) {
-        const IB = new Blob([BB]);
-        return window.URL.createObjectURL(IB)
+      static FileAsURL(tt) {
+        const et = new Blob([tt]);
+        return window.URL.createObjectURL(et)
       }
-      static Format(BB) {
-        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-        return BB.toFixed(IB)
+      static Format(tt) {
+        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+        return tt.toFixed(et)
       }
-      static DeepCopy(BB, IB, ZB, TB) {
-        vB.b.DeepCopy(BB, IB, ZB, TB)
+      static DeepCopy(tt, et, Vt, Ot) {
+        dt.d.DeepCopy(tt, et, Vt, Ot)
       }
-      static IsEmpty(BB) {
-        for (const IB in BB)
-          if (Object.prototype.hasOwnProperty.call(BB, IB)) return !1;
+      static IsEmpty(tt) {
+        for (const et in tt)
+          if (Object.prototype.hasOwnProperty.call(tt, et)) return !1;
         return !0
       }
-      static RegisterTopRootEvents(BB, IB) {
-        for (let TB = 0; TB < IB.length; TB++) {
-          const JB = IB[TB];
-          BB.addEventListener(JB.name, JB.handler, !1);
+      static RegisterTopRootEvents(tt, et) {
+        for (let Ot = 0; Ot < et.length; Ot++) {
+          const qt = et[Ot];
+          tt.addEventListener(qt.name, qt.handler, !1);
           try {
-            window.parent && window.parent.addEventListener(JB.name, JB.handler, !1)
-          } catch (ZB) {}
+            window.parent && window.parent.addEventListener(qt.name, qt.handler, !1)
+          } catch (Vt) {}
         }
       }
-      static UnregisterTopRootEvents(BB, IB) {
-        for (let TB = 0; TB < IB.length; TB++) {
-          const JB = IB[TB];
-          BB.removeEventListener(JB.name, JB.handler);
+      static UnregisterTopRootEvents(tt, et) {
+        for (let Ot = 0; Ot < et.length; Ot++) {
+          const qt = et[Ot];
+          tt.removeEventListener(qt.name, qt.handler);
           try {
-            BB.parent && BB.parent.removeEventListener(JB.name, JB.handler)
-          } catch (ZB) {}
+            tt.parent && tt.parent.removeEventListener(qt.name, qt.handler)
+          } catch (Vt) {}
         }
       }
-      static async DumpFramebuffer(BB, IB, ZB, TB) {
-        throw (0, cB.m)("DumpTools")
+      static async DumpFramebuffer(tt, et, Vt, Ot) {
+        throw (0, Ht.e)("DumpTools")
       }
-      static DumpData(BB, IB, ZB, TB) {
-        throw (0, cB.m)("DumpTools")
+      static DumpData(tt, et, Vt, Ot) {
+        throw (0, Ht.e)("DumpTools")
       }
-      static async DumpDataAsync(BB, IB, ZB) {
-        throw (0, cB.m)("DumpTools")
+      static async DumpDataAsync(tt, et, Vt) {
+        throw (0, Ht.e)("DumpTools")
       }
-      static _IsOffScreenCanvas(BB) {
-        return void 0 !== BB.convertToBlob
+      static _IsOffScreenCanvas(tt) {
+        return void 0 !== tt.convertToBlob
       }
-      static ToBlob(BB, IB) {
-        let ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "image/png",
-          JB = arguments.length > 3 ? arguments[3] : void 0;
-        TB._IsOffScreenCanvas(BB) || BB.toBlob || (BB.toBlob = function(BB, IB, ZB) {
+      static ToBlob(tt, et) {
+        let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "image/png",
+          qt = arguments.length > 3 ? arguments[3] : void 0;
+        Ot._IsOffScreenCanvas(tt) || tt.toBlob || (tt.toBlob = function(tt, et, Vt) {
           setTimeout((() => {
-            const TB = atob(this.toDataURL(IB, ZB).split(",")[1]),
-              JB = TB.length,
-              oB = new Uint8Array(JB);
-            for (let BB = 0; BB < JB; BB++) oB[BB] = TB.charCodeAt(BB);
-            BB(new Blob([oB]))
+            const Ot = atob(this.toDataURL(et, Vt).split(",")[1]),
+              qt = Ot.length,
+              Dt = new Uint8Array(qt);
+            for (let tt = 0; tt < qt; tt++) Dt[tt] = Ot.charCodeAt(tt);
+            tt(new Blob([Dt]))
           }))
-        }), TB._IsOffScreenCanvas(BB) ? BB.convertToBlob({
-          type: ZB,
-          quality: JB
-        }).then((BB => IB(BB))) : BB.toBlob((function(BB) {
-          IB(BB)
-        }), ZB, JB)
+        }), Ot._IsOffScreenCanvas(tt) ? tt.convertToBlob({
+          type: Vt,
+          quality: qt
+        }).then((tt => et(tt))) : tt.toBlob((function(tt) {
+          et(tt)
+        }), Vt, qt)
       }
-      static DownloadBlob(BB, IB) {
+      static DownloadBlob(tt, et) {
         if ("download" in document.createElement("a")) {
-          if (!IB) {
-            const BB = new Date;
-            IB = "screenshot_" + ((BB.getFullYear() + "-" + (BB.getMonth() + 1)).slice(2) + "-" + BB.getDate() + "_" + BB.getHours() + "-" + ("0" + BB.getMinutes()).slice(-2)) + ".png"
+          if (!et) {
+            const tt = new Date;
+            et = "screenshot_" + ((tt.getFullYear() + "-" + (tt.getMonth() + 1)).slice(2) + "-" + tt.getDate() + "_" + tt.getHours() + "-" + ("0" + tt.getMinutes()).slice(-2)) + ".png"
           }
-          TB.Download(BB, IB)
-        } else if (BB && "undefined" !== typeof URL) {
-          const IB = URL.createObjectURL(BB),
-            ZB = window.open("");
-          if (!ZB) return;
-          const TB = ZB.document.createElement("img");
-          TB.onload = function() {
-            URL.revokeObjectURL(IB)
-          }, TB.src = IB, ZB.document.body.appendChild(TB)
+          Ot.Download(tt, et)
+        } else if (tt && "undefined" !== typeof URL) {
+          const et = URL.createObjectURL(tt),
+            Vt = window.open("");
+          if (!Vt) return;
+          const Ot = Vt.document.createElement("img");
+          Ot.onload = function() {
+            URL.revokeObjectURL(et)
+          }, Ot.src = et, Vt.document.body.appendChild(Ot)
         }
       }
-      static EncodeScreenshotCanvasData(BB, IB) {
-        let ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "image/png",
-          JB = arguments.length > 3 ? arguments[3] : void 0,
-          oB = arguments.length > 4 ? arguments[4] : void 0;
-        if ("string" !== typeof JB && IB) {
-          if (IB) {
-            if (TB._IsOffScreenCanvas(BB)) return void BB.convertToBlob({
-              type: ZB,
-              quality: oB
-            }).then((BB => {
-              const ZB = new FileReader;
-              ZB.readAsDataURL(BB), ZB.onloadend = () => {
-                const BB = ZB.result;
-                IB(BB)
+      static EncodeScreenshotCanvasData(tt, et) {
+        let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "image/png",
+          qt = arguments.length > 3 ? arguments[3] : void 0,
+          Dt = arguments.length > 4 ? arguments[4] : void 0;
+        if ("string" !== typeof qt && et) {
+          if (et) {
+            if (Ot._IsOffScreenCanvas(tt)) return void tt.convertToBlob({
+              type: Vt,
+              quality: Dt
+            }).then((tt => {
+              const Vt = new FileReader;
+              Vt.readAsDataURL(tt), Vt.onloadend = () => {
+                const tt = Vt.result;
+                et(tt)
               }
             }));
-            const JB = BB.toDataURL(ZB, oB);
-            IB(JB)
+            const qt = tt.toDataURL(Vt, Dt);
+            et(qt)
           }
-        } else this.ToBlob(BB, (function(BB) {
-          BB && TB.DownloadBlob(BB, JB), IB && IB("")
-        }), ZB, oB)
+        } else this.ToBlob(tt, (function(tt) {
+          tt && Ot.DownloadBlob(tt, qt), et && et("")
+        }), Vt, Dt)
       }
-      static Download(BB, IB) {
+      static Download(tt, et) {
         if ("undefined" === typeof URL) return;
-        const ZB = window.URL.createObjectURL(BB),
-          TB = document.createElement("a");
-        document.body.appendChild(TB), TB.style.display = "none", TB.href = ZB, TB.download = IB, TB.addEventListener("click", (() => {
-          TB.parentElement && TB.parentElement.removeChild(TB)
-        })), TB.click(), window.URL.revokeObjectURL(ZB)
+        const Vt = window.URL.createObjectURL(tt),
+          Ot = document.createElement("a");
+        document.body.appendChild(Ot), Ot.style.display = "none", Ot.href = Vt, Ot.download = et, Ot.addEventListener("click", (() => {
+          Ot.parentElement && Ot.parentElement.removeChild(Ot)
+        })), Ot.click(), window.URL.revokeObjectURL(Vt)
       }
-      static BackCompatCameraNoPreventDefault(BB) {
-        return "boolean" === typeof BB[0] ? BB[0] : "boolean" === typeof BB[1] && BB[1]
+      static BackCompatCameraNoPreventDefault(tt) {
+        return "boolean" === typeof tt[0] ? tt[0] : "boolean" === typeof tt[1] && tt[1]
       }
-      static CreateScreenshot(BB, IB, ZB, TB) {
-        throw (0, cB.m)("ScreenshotTools")
+      static CreateScreenshot(tt, et, Vt, Ot) {
+        throw (0, Ht.e)("ScreenshotTools")
       }
-      static async CreateScreenshotAsync(BB, IB, ZB) {
-        throw (0, cB.m)("ScreenshotTools")
+      static async CreateScreenshotAsync(tt, et, Vt) {
+        throw (0, Ht.e)("ScreenshotTools")
       }
-      static CreateScreenshotUsingRenderTarget(BB, IB, ZB, TB) {
-        throw (0, cB.m)("ScreenshotTools")
+      static CreateScreenshotUsingRenderTarget(tt, et, Vt, Ot) {
+        throw (0, Ht.e)("ScreenshotTools")
       }
-      static async CreateScreenshotUsingRenderTargetAsync(BB, IB, ZB) {
-        throw (0, cB.m)("ScreenshotTools")
+      static async CreateScreenshotUsingRenderTargetAsync(tt, et, Vt) {
+        throw (0, Ht.e)("ScreenshotTools")
       }
       static RandomId() {
-        return (0, gB.d)()
+        return (0, wt.b)()
       }
-      static IsBase64(BB) {
-        return (0, zB.g)(BB)
+      static IsBase64(tt) {
+        return (0, lt.k)(tt)
       }
-      static DecodeBase64(BB) {
-        return (0, zB.c)(BB)
+      static DecodeBase64(tt) {
+        return (0, lt.b)(tt)
       }
       static get errorsCount() {
-        return GB.d.errorsCount
+        return mt.d.errorsCount
       }
-      static Log(BB) {
-        GB.d.Log(BB)
+      static Log(tt) {
+        mt.d.Log(tt)
       }
-      static Warn(BB) {
-        GB.d.Warn(BB)
+      static Warn(tt) {
+        mt.d.Warn(tt)
       }
-      static Error(BB) {
-        GB.d.Error(BB)
+      static Error(tt) {
+        mt.d.Error(tt)
       }
       static get LogCache() {
-        return GB.d.LogCache
+        return mt.d.LogCache
       }
       static ClearLogCache() {
-        GB.d.ClearLogCache()
+        mt.d.ClearLogCache()
       }
-      static set LogLevels(BB) {
-        GB.d.LogLevels = BB
+      static set LogLevels(tt) {
+        mt.d.LogLevels = tt
       }
-      static set PerformanceLogLevel(BB) {
-        (BB & TB.PerformanceUserMarkLogLevel) !== TB.PerformanceUserMarkLogLevel ? (BB & TB.PerformanceConsoleLogLevel) !== TB.PerformanceConsoleLogLevel ? (TB.StartPerformanceCounter = TB._StartPerformanceCounterDisabled, TB.EndPerformanceCounter = TB._EndPerformanceCounterDisabled, _native?.disablePerformanceLogging?.()) : _native?.enablePerformanceLogging ? (_native.enablePerformanceLogging(2), TB.StartPerformanceCounter = TB._StartMarkNative, TB.EndPerformanceCounter = TB._EndMarkNative) : (TB.StartPerformanceCounter = TB._StartPerformanceConsole, TB.EndPerformanceCounter = TB._EndPerformanceConsole) : _native?.enablePerformanceLogging ? (_native.enablePerformanceLogging(1), TB.StartPerformanceCounter = TB._StartMarkNative, TB.EndPerformanceCounter = TB._EndMarkNative) : (TB.StartPerformanceCounter = TB._StartUserMark, TB.EndPerformanceCounter = TB._EndUserMark)
+      static set PerformanceLogLevel(tt) {
+        (tt & Ot.PerformanceUserMarkLogLevel) !== Ot.PerformanceUserMarkLogLevel ? (tt & Ot.PerformanceConsoleLogLevel) !== Ot.PerformanceConsoleLogLevel ? (Ot.StartPerformanceCounter = Ot._StartPerformanceCounterDisabled, Ot.EndPerformanceCounter = Ot._EndPerformanceCounterDisabled, _native?.disablePerformanceLogging?.()) : _native?.enablePerformanceLogging ? (_native.enablePerformanceLogging(2), Ot.StartPerformanceCounter = Ot._StartMarkNative, Ot.EndPerformanceCounter = Ot._EndMarkNative) : (Ot.StartPerformanceCounter = Ot._StartPerformanceConsole, Ot.EndPerformanceCounter = Ot._EndPerformanceConsole) : _native?.enablePerformanceLogging ? (_native.enablePerformanceLogging(1), Ot.StartPerformanceCounter = Ot._StartMarkNative, Ot.EndPerformanceCounter = Ot._EndMarkNative) : (Ot.StartPerformanceCounter = Ot._StartUserMark, Ot.EndPerformanceCounter = Ot._EndUserMark)
       }
-      static _StartPerformanceCounterDisabled(BB, IB) {}
-      static _EndPerformanceCounterDisabled(BB, IB) {}
-      static _StartUserMark(BB) {
-        let IB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        if (!TB._Performance) {
-          if (!(0, oB.l)()) return;
-          TB._Performance = window.performance
+      static _StartPerformanceCounterDisabled(tt, et) {}
+      static _EndPerformanceCounterDisabled(tt, et) {}
+      static _StartUserMark(tt) {
+        let et = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        if (!Ot._Performance) {
+          if (!(0, Dt.j)()) return;
+          Ot._Performance = window.performance
         }
-        IB && TB._Performance.mark && TB._Performance.mark(BB + "-Begin")
+        et && Ot._Performance.mark && Ot._Performance.mark(tt + "-Begin")
       }
-      static _EndUserMark(BB) {
-        (!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && TB._Performance.mark && (TB._Performance.mark(BB + "-End"), TB._Performance.measure(BB, BB + "-Begin", BB + "-End"))
+      static _EndUserMark(tt) {
+        (!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && Ot._Performance.mark && (Ot._Performance.mark(tt + "-End"), Ot._Performance.measure(tt, tt + "-Begin", tt + "-End"))
       }
-      static _StartPerformanceConsole(BB) {
-        let IB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        IB && (TB._StartUserMark(BB, IB), console.time && console.time(BB))
+      static _StartPerformanceConsole(tt) {
+        let et = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        et && (Ot._StartUserMark(tt, et), console.time && console.time(tt))
       }
-      static _EndPerformanceConsole(BB) {
-        let IB = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        IB && (TB._EndUserMark(BB, IB), console.timeEnd(BB))
+      static _EndPerformanceConsole(tt) {
+        let et = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        et && (Ot._EndUserMark(tt, et), console.timeEnd(tt))
       }
-      static _StartMarkNative(BB) {
+      static _StartMarkNative(tt) {
         if ((!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && _native?.startPerformanceCounter)
-          if (TB._NativePerformanceCounterHandles.has(BB)) TB.Warn(`Performance counter with name ${BB} is already started.`);
+          if (Ot._NativePerformanceCounterHandles.has(tt)) Ot.Warn(`Performance counter with name ${tt} is already started.`);
           else {
-            const IB = _native.startPerformanceCounter(BB);
-            TB._NativePerformanceCounterHandles.set(BB, IB)
+            const et = _native.startPerformanceCounter(tt);
+            Ot._NativePerformanceCounterHandles.set(tt, et)
           }
       }
-      static _EndMarkNative(BB) {
+      static _EndMarkNative(tt) {
         if ((!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && _native?.endPerformanceCounter) {
-          const IB = TB._NativePerformanceCounterHandles.get(BB);
-          IB ? (_native.endPerformanceCounter(IB), TB._NativePerformanceCounterHandles.delete(BB)) : TB.Warn(`Performance counter with name ${BB} was not started.`)
+          const et = Ot._NativePerformanceCounterHandles.get(tt);
+          et ? (_native.endPerformanceCounter(et), Ot._NativePerformanceCounterHandles.delete(tt)) : Ot.Warn(`Performance counter with name ${tt} was not started.`)
         }
       }
       static get Now() {
-        return kB.c.Now
+        return jt.b.Now
       }
-      static GetClassName(BB) {
-        let IB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          ZB = null;
-        if (!IB && BB.getClassName) ZB = BB.getClassName();
+      static GetClassName(tt) {
+        let et = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          Vt = null;
+        if (!et && tt.getClassName) Vt = tt.getClassName();
         else {
-          if (BB instanceof Object) {
-            ZB = (IB ? BB : Object.getPrototypeOf(BB)).constructor.__bjsclassName__
+          if (tt instanceof Object) {
+            Vt = (et ? tt : Object.getPrototypeOf(tt)).constructor.__bjsclassName__
           }
-          ZB || (ZB = typeof BB)
+          Vt || (Vt = typeof tt)
         }
-        return ZB
+        return Vt
       }
-      static First(BB, IB) {
-        for (const ZB of BB)
-          if (IB(ZB)) return ZB;
+      static First(tt, et) {
+        for (const Vt of tt)
+          if (et(Vt)) return Vt;
         return null
       }
-      static getFullClassName(BB) {
-        let IB = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          ZB = null,
-          TB = null;
-        if (!IB && BB.getClassName) ZB = BB.getClassName();
+      static getFullClassName(tt) {
+        let et = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          Vt = null,
+          Ot = null;
+        if (!et && tt.getClassName) Vt = tt.getClassName();
         else {
-          if (BB instanceof Object) {
-            const JB = IB ? BB : Object.getPrototypeOf(BB);
-            ZB = JB.constructor.__bjsclassName__, TB = JB.constructor.__bjsmoduleName__
+          if (tt instanceof Object) {
+            const qt = et ? tt : Object.getPrototypeOf(tt);
+            Vt = qt.constructor.__bjsclassName__, Ot = qt.constructor.__bjsmoduleName__
           }
-          ZB || (ZB = typeof BB)
+          Vt || (Vt = typeof tt)
         }
-        return ZB ? (null != TB ? TB + "." : "") + ZB : null
+        return Vt ? (null != Ot ? Ot + "." : "") + Vt : null
       }
-      static async DelayAsync(BB) {
-        await new Promise((IB => {
+      static async DelayAsync(tt) {
+        await new Promise((et => {
           setTimeout((() => {
-            IB()
-          }), BB)
+            et()
+          }), tt)
         }))
       }
       static IsSafari() {
-        return !!(0, oB.h)() && /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
+        return !!(0, Dt.h)() && /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
       }
     }
 
-    function UB(BB, IB) {
-      return ZB => {
-        ZB.__bjsclassName__ = BB, ZB.__bjsmoduleName__ = null != IB ? IB : null
+    function Mt(tt, et) {
+      return Vt => {
+        Vt.__bjsclassName__ = tt, Vt.__bjsmoduleName__ = null != et ? et : null
       }
     }
-    TB = yB, yB.AssetBaseUrl = "", yB.UseCustomRequestHeaders = !1, yB.CustomRequestHeaders = nB.d.CustomRequestHeaders, yB.GetDOMTextContent = oB.c, yB._DefaultCdnUrl = "https://cdn.babylonjs.com", yB._CdnVersion = "9.28.0", yB._DefaultAssetsUrl = "https://assets.babylonjs.com/core", yB.LoadScript = "undefined" === typeof _native ? TB._LoadScriptWeb : TB._LoadScriptNative, yB.GetAbsoluteUrl = "object" === typeof document ? BB => {
-      const IB = document.createElement("a");
-      return IB.href = BB, IB.href
-    } : "function" === typeof URL && "object" === typeof location ? BB => new URL(BB, location.origin).href : () => {
+    Ot = Nt, Nt.AssetBaseUrl = "", Nt.UseCustomRequestHeaders = !1, Nt.CustomRequestHeaders = Xt.e.CustomRequestHeaders, Nt.GetDOMTextContent = Dt.c, Nt._DefaultCdnUrl = "https://cdn.babylonjs.com", Nt._CdnVersion = "9.28.0", Nt._DefaultAssetsUrl = "https://assets.babylonjs.com/core", Nt.LoadScript = "undefined" === typeof _native ? Ot._LoadScriptWeb : Ot._LoadScriptNative, Nt.GetAbsoluteUrl = "object" === typeof document ? tt => {
+      const et = document.createElement("a");
+      return et.href = tt, et.href
+    } : "function" === typeof URL && "object" === typeof location ? tt => new URL(tt, location.origin).href : () => {
       throw new Error("Unable to get absolute URL. Override BABYLON.Tools.GetAbsoluteUrl to a custom implementation for the current context.")
-    }, yB.NoneLogLevel = GB.d.NoneLogLevel, yB.MessageLogLevel = GB.d.MessageLogLevel, yB.WarningLogLevel = GB.d.WarningLogLevel, yB.ErrorLogLevel = GB.d.ErrorLogLevel, yB.AllLogLevel = GB.d.AllLogLevel, yB.IsWindowObjectExist = oB.l, yB.PerformanceNoneLogLevel = 0, yB.PerformanceUserMarkLogLevel = 1, yB.PerformanceConsoleLogLevel = 2, yB._NativePerformanceCounterHandles = new Map, yB.StartPerformanceCounter = TB._StartPerformanceCounterDisabled, yB.EndPerformanceCounter = TB._EndPerformanceCounterDisabled;
-    class WB {
-      constructor(BB, IB, ZB) {
-        let TB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        this.iterations = BB, this.index = TB - 1, this._done = !1, this._fn = IB, this._successCallback = ZB
+    }, Nt.NoneLogLevel = mt.d.NoneLogLevel, Nt.MessageLogLevel = mt.d.MessageLogLevel, Nt.WarningLogLevel = mt.d.WarningLogLevel, Nt.ErrorLogLevel = mt.d.ErrorLogLevel, Nt.AllLogLevel = mt.d.AllLogLevel, Nt.IsWindowObjectExist = Dt.j, Nt.PerformanceNoneLogLevel = 0, Nt.PerformanceUserMarkLogLevel = 1, Nt.PerformanceConsoleLogLevel = 2, Nt._NativePerformanceCounterHandles = new Map, Nt.StartPerformanceCounter = Ot._StartPerformanceCounterDisabled, Nt.EndPerformanceCounter = Ot._EndPerformanceCounterDisabled;
+    class bt {
+      constructor(tt, et, Vt) {
+        let Ot = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        this.iterations = tt, this.index = Ot - 1, this._done = !1, this._fn = et, this._successCallback = Vt
       }
       executeNext() {
         this._done || (this.index + 1 < this.iterations ? (++this.index, this._fn(this)) : this.breakLoop())
@@ -585,33 +585,33 @@ export const modules = {
       breakLoop() {
         this._done = !0, this._successCallback()
       }
-      static Run(BB, IB, ZB) {
-        const TB = new WB(BB, IB, ZB, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0);
-        return TB.executeNext(), TB
+      static Run(tt, et, Vt) {
+        const Ot = new bt(tt, et, Vt, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0);
+        return Ot.executeNext(), Ot
       }
-      static SyncAsyncForLoop(BB, IB, ZB, TB, JB) {
-        let oB = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
-        return WB.Run(Math.ceil(BB / IB), (TB => {
-          JB && JB() ? TB.breakLoop() : setTimeout((() => {
-            for (let oB = 0; oB < IB; ++oB) {
-              const GB = TB.index * IB + oB;
-              if (GB >= BB) break;
-              if (ZB(GB), JB && JB()) {
-                TB.breakLoop();
+      static SyncAsyncForLoop(tt, et, Vt, Ot, qt) {
+        let Dt = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
+        return bt.Run(Math.ceil(tt / et), (Ot => {
+          qt && qt() ? Ot.breakLoop() : setTimeout((() => {
+            for (let Dt = 0; Dt < et; ++Dt) {
+              const mt = Ot.index * et + Dt;
+              if (mt >= tt) break;
+              if (Vt(mt), qt && qt()) {
+                Ot.breakLoop();
                 break
               }
             }
-            TB.executeNext()
-          }), oB)
-        }), TB)
+            Ot.executeNext()
+          }), Dt)
+        }), Ot)
       }
     }
-    let dB = !1;
+    let Jt = !1;
 
-    function CB() {
-      dB || (dB = !0, yB.Mix = qB.m, yB.IsExponentOfTwo = qB.i, hB.e.FallbackTexture = "data:image/jpg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QBmRXhpZgAATU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAAExAAIAAAAQAAAATgAAAAAAAABgAAAAAQAAAGAAAAABcGFpbnQubmV0IDQuMC41AP/bAEMABAIDAwMCBAMDAwQEBAQFCQYFBQUFCwgIBgkNCw0NDQsMDA4QFBEODxMPDAwSGBITFRYXFxcOERkbGRYaFBYXFv/bAEMBBAQEBQUFCgYGChYPDA8WFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFv/AABEIAQABAAMBIgACEQEDEQH/xAAfAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgv/xAC1EAACAQMDAgQDBQUEBAAAAX0BAgMABBEFEiExQQYTUWEHInEUMoGRoQgjQrHBFVLR8CQzYnKCCQoWFxgZGiUmJygpKjQ1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4eLj5OXm5+jp6vHy8/T19vf4+fr/xAAfAQADAQEBAQEBAQEBAAAAAAAAAQIDBAUGBwgJCgv/xAC1EQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APH6KKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76CiiigD5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BQooooA+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/voKKKKAPl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76CiiigD5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BQooooA+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/voKKKKAPl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76P//Z")
+    function Ct() {
+      Jt || (Jt = !0, Nt.Mix = yt.l, Nt.IsExponentOfTwo = yt.h, Qt.d.FallbackTexture = "data:image/jpg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QBmRXhpZgAATU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAAExAAIAAAAQAAAATgAAAAAAAABgAAAAAQAAAGAAAAABcGFpbnQubmV0IDQuMC41AP/bAEMABAIDAwMCBAMDAwQEBAQFCQYFBQUFCwgIBgkNCw0NDQsMDA4QFBEODxMPDAwSGBITFRYXFxcOERkbGRYaFBYXFv/bAEMBBAQEBQUFCgYGChYPDA8WFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFv/AABEIAQABAAMBIgACEQEDEQH/xAAfAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgv/xAC1EAACAQMDAgQDBQUEBAAAAX0BAgMABBEFEiExQQYTUWEHInEUMoGRoQgjQrHBFVLR8CQzYnKCCQoWFxgZGiUmJygpKjQ1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4eLj5OXm5+jp6vHy8/T19vf4+fr/xAAfAQADAQEBAQEBAQEBAAAAAAAAAQIDBAUGBwgJCgv/xAC1EQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APH6KKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76CiiigD5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BQooooA+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/voKKKKAPl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76CiiigD5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BQooooA+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/voKKKKAPl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76P//Z")
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const tt in modules) Object.freeze(modules[tt]);

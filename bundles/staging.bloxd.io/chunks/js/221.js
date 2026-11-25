@@ -1,311 +1,311 @@
 export const id = 221;
 export const ids = [221];
 export const modules = {
-  36422: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      e: () => YB,
-      g: () => iB,
-      h: () => WB
+  36635: (tt, et, Vt) => {
+    Vt.d(et, {
+      d: () => Wt,
+      e: () => St,
+      g: () => bt
     });
-    var TB = ZB(282),
-      JB = ZB(105);
-    const oB = new(ZB(36430).d)(new URL(ZB.p + ZB.u(3), ZB.b), {
+    var Ot = Vt(318),
+      qt = Vt(106);
+    const Dt = new(Vt(36637).b)(new URL(Vt.p + Vt.u(3), Vt.b), {
       name: "blockIconWorker",
       type: "module"
     });
-    var GB = ZB(1860),
-      vB = ZB(2227);
-    const kB = 1e4,
-      cB = 3e4;
-    let nB = null,
-      hB = null,
-      zB = null,
-      FB = !1,
-      NB = 0;
-    const gB = new Map;
-    let qB = null;
-    const yB = new Map,
-      UB = new Map;
+    var mt = Vt(1883),
+      dt = Vt(2214);
+    const jt = 1e4,
+      Ht = 3e4;
+    let Xt = null,
+      Qt = null,
+      lt = null,
+      Et = !1,
+      ft = 0;
+    const wt = new Map;
+    let yt = null;
+    const Nt = new Map,
+      Mt = new Map;
 
-    function WB(BB) {
-      const IB = new Promise(((IB, ZB) => {
-        const TB = new Image;
-        TB.crossOrigin = "anonymous", TB.fetchPriority = "high", TB.onload = () => {
-          IB(TB)
-        }, TB.onerror = () => {
-          ZB(new Error(`A block icon's texture did not load: ${BB.slice(0,100)}`))
-        }, TB.src = BB
+    function bt(tt) {
+      const et = new Promise(((et, Vt) => {
+        const Ot = new Image;
+        Ot.crossOrigin = "anonymous", Ot.fetchPriority = "high", Ot.onload = () => {
+          et(Ot)
+        }, Ot.onerror = () => {
+          Vt(new Error(`A block icon's texture did not load: ${tt.slice(0,100)}`))
+        }, Ot.src = tt
       }));
-      return (0, vB.h)(IB)
+      return (0, dt.f)(et)
     }
 
-    function dB(BB) {
-      var IB, ZB;
-      FB || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${BB}`), FB = !0, null === (IB = nB) || void 0 === IB || IB.terminate(), nB = null, hB = null, yB.clear(), UB.clear();
-      for (const TB of gB.values()) TB(null);
-      gB.clear(), null === (ZB = qB) || void 0 === ZB || ZB()
+    function Jt(tt) {
+      var et, Vt;
+      Et || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${tt}`), Et = !0, null === (et = Xt) || void 0 === et || et.terminate(), Xt = null, Qt = null, Nt.clear(), Mt.clear();
+      for (const Ot of wt.values()) Ot(null);
+      wt.clear(), null === (Vt = yt) || void 0 === Vt || Vt()
     }
 
-    function CB() {
-      return zB ??= async function() {
+    function Ct() {
+      return lt ??= async function() {
         if ("undefined" === typeof Worker || "undefined" === typeof OffscreenCanvas || "undefined" === typeof createImageBitmap) return;
-        if ("page" === TB.d.ios_icon_worker_v1 && (0, JB.isWebKit)()) return;
+        if ("page" === Ot.c.ios_icon_worker_v1 && (0, qt.isWebKit)()) return;
         try {
-          nB = await async function() {
-            return await oB.ready(), oB.start()
+          Xt = await async function() {
+            return await Dt.ready(), Dt.start()
           }()
-        } catch (vB) {
-          return void dB(`did not start (${String(vB)})`)
+        } catch (dt) {
+          return void Jt(`did not start (${String(dt)})`)
         }
-        let BB = () => {};
-        const IB = new Promise((IB => {
-          BB = IB
+        let tt = () => {};
+        const et = new Promise((et => {
+          tt = et
         }));
-        nB.onmessage = IB => {
+        Xt.onmessage = et => {
           let {
-            data: ZB
-          } = IB;
-          if ("started" === ZB.type) hB = nB, BB();
-          else if ("failed" === ZB.type) dB(`failed a draw (${ZB.message})`);
+            data: Vt
+          } = et;
+          if ("started" === Vt.type) Qt = Xt, tt();
+          else if ("failed" === Vt.type) Jt(`failed a draw (${Vt.message})`);
           else {
-            var TB, JB;
-            null === (TB = gB.get(ZB.id)) || void 0 === TB || TB(ZB.url), gB.delete(ZB.id), null === (JB = qB) || void 0 === JB || JB()
+            var Ot, qt;
+            null === (Ot = wt.get(Vt.id)) || void 0 === Ot || Ot(Vt.url), wt.delete(Vt.id), null === (qt = yt) || void 0 === qt || qt()
           }
-        }, nB.onerror = IB => {
-          IB.preventDefault(), dB(`stopped (${IB.message||"its script did not load or run"})`), BB()
+        }, Xt.onerror = et => {
+          et.preventDefault(), Jt(`stopped (${et.message||"its script did not load or run"})`), tt()
         };
-        const ZB = `did not start in ${cB/1e3} s`;
-        await (0, GB.j)(IB, cB, ZB).catch((() => {
-          dB(ZB)
+        const Vt = `did not start in ${Ht/1e3} s`;
+        await (0, mt.h)(et, Ht, Vt).catch((() => {
+          Jt(Vt)
         }))
-      }(), zB
+      }(), lt
     }
 
-    function QB() {
-      if (null !== qB || 0 === gB.size) return;
-      const BB = new Promise((BB => {
-          qB = BB
+    function ut() {
+      if (null !== yt || 0 === wt.size) return;
+      const tt = new Promise((tt => {
+          yt = tt
         })),
-        IB = `did not answer in ${kB/1e3} s`;
-      (0, GB.j)(BB, kB, IB).then((() => {
-        qB = null, QB()
+        et = `did not answer in ${jt/1e3} s`;
+      (0, mt.h)(tt, jt, et).then((() => {
+        yt = null, ut()
       }), (() => {
-        qB = null, dB(IB)
+        yt = null, Jt(et)
       }))
     }
 
-    function sB(BB, IB) {
-      let ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      BB.postMessage(IB, ZB)
+    function Kt(tt, et) {
+      let Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      tt.postMessage(et, Vt)
     }
 
-    function wB(BB, IB, ZB, TB) {
-      let JB = IB.get(ZB);
-      return void 0 === JB && (JB = TB().then((async IB => {
+    function ht(tt, et, Vt, Ot) {
+      let qt = et.get(Vt);
+      return void 0 === qt && (qt = Ot().then((async et => {
         let {
-          image: ZB,
-          request: TB
-        } = IB;
+          image: Vt,
+          request: Ot
+        } = et;
         try {
-          const IB = await createImageBitmap(ZB);
-          sB(BB, TB(IB), [IB])
-        } catch (JB) {
-          dB(`could not take an image (${String(JB)})`)
+          const et = await createImageBitmap(Vt);
+          Kt(tt, Ot(et), [et])
+        } catch (qt) {
+          Jt(`could not take an image (${String(qt)})`)
         }
-      })), JB.catch((() => {
-        IB.get(ZB) === JB && IB.delete(ZB)
-      })), IB.set(ZB, JB)), JB
+      })), qt.catch((() => {
+        et.get(Vt) === qt && et.delete(Vt)
+      })), et.set(Vt, qt)), qt
     }
-    async function OB(BB, IB) {
-      CB();
-      const ZB = hB;
-      if (null === ZB) return null;
-      if (await BB(ZB), hB !== ZB) return null;
-      const TB = ++NB;
-      return new Promise((BB => {
-        gB.set(TB, BB), sB(ZB, IB(TB)), QB()
+    async function vt(tt, et) {
+      Ct();
+      const Vt = Qt;
+      if (null === Vt) return null;
+      if (await tt(Vt), Qt !== Vt) return null;
+      const Ot = ++ft;
+      return new Promise((tt => {
+        wt.set(Ot, tt), Kt(Vt, et(Ot)), ut()
       }))
     }
 
-    function YB(BB, IB, ZB) {
-      return OB((IB => Promise.all([BB.top, BB.left, BB.right].map((BB => function(BB, IB) {
-        return wB(BB, yB, IB, (async () => ({
-          image: await WB(IB),
-          request: BB => ({
+    function Wt(tt, et, Vt) {
+      return vt((et => Promise.all([tt.top, tt.left, tt.right].map((tt => function(tt, et) {
+        return ht(tt, Nt, et, (async () => ({
+          image: await bt(et),
+          request: tt => ({
             type: "texture",
-            url: IB,
-            bitmap: BB
+            url: et,
+            bitmap: tt
           })
         })))
-      }(IB, BB))))), (TB => ({
+      }(et, tt))))), (Ot => ({
         type: "draw",
-        id: TB,
-        ...BB,
-        size: IB,
-        outlineWidth: ZB
+        id: Ot,
+        ...tt,
+        size: et,
+        outlineWidth: Vt
       })))
     }
 
-    function iB(BB, IB, ZB, TB) {
-      return OB((ZB => function(BB, IB, ZB) {
-        return wB(BB, UB, IB, (async () => {
+    function St(tt, et, Vt, Ot) {
+      return vt((Vt => function(tt, et, Vt) {
+        return ht(tt, Mt, et, (async () => {
           const {
-            texture: BB,
-            ...TB
-          } = await ZB();
+            texture: tt,
+            ...Ot
+          } = await Vt();
           return {
-            image: await WB(BB),
-            request: BB => ({
+            image: await bt(tt),
+            request: tt => ({
               type: "model",
-              name: IB,
-              bitmap: BB,
-              geometry: TB
+              name: et,
+              bitmap: tt,
+              geometry: Ot
             })
           }
         }))
-      }(ZB, BB, IB)), (IB => ({
+      }(Vt, tt, et)), (et => ({
         type: "drawModel",
-        id: IB,
-        name: BB,
-        size: ZB,
-        outlineWidth: TB
+        id: et,
+        name: tt,
+        size: Vt,
+        outlineWidth: Ot
       })))
     }
   },
-  36416: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      d: () => TB,
-      h: () => kB,
-      j: () => GB,
-      n: () => zB,
-      o: () => cB
+  36632: (tt, et, Vt) => {
+    Vt.d(et, {
+      d: () => Ot,
+      h: () => jt,
+      l: () => mt,
+      o: () => lt,
+      s: () => Ht
     });
-    const TB = {
+    const Ot = {
         across: Math.SQRT1_2,
         down: Math.SQRT1_2 / 2,
         up: Math.sqrt(3) / 2
       },
-      JB = .6,
-      oB = {
-        width: 2 * TB.across,
-        height: 2 * TB.down + TB.up
+      qt = .6,
+      Dt = {
+        width: 2 * Ot.across,
+        height: 2 * Ot.down + Ot.up
       };
 
-    function GB(BB, IB) {
-      const ZB = IB > 0 ? IB + 1 : 0,
-        GB = BB * JB - IB / TB.across;
-      return Math.max(0, Math.min(GB, (BB - 2 * ZB) / oB.height))
+    function mt(tt, et) {
+      const Vt = et > 0 ? et + 1 : 0,
+        mt = tt * qt - et / Ot.across;
+      return Math.max(0, Math.min(mt, (tt - 2 * Vt) / Dt.height))
     }
-    const vB = [15, 15, 15],
-      kB = {
+    const dt = [15, 15, 15],
+      jt = {
         top: 1,
         left: .85,
         right: .7
       };
 
-    function cB(BB, IB, ZB, TB) {
+    function Ht(tt, et, Vt, Ot) {
       const {
-        vertices: JB,
-        uvs: vB,
-        indices: kB,
-        shades: cB
-      } = BB, nB = function(BB, IB) {
-        const ZB = GB(BB, IB),
-          TB = oB.width * ZB,
-          JB = oB.height * ZB;
+        vertices: qt,
+        uvs: dt,
+        indices: jt,
+        shades: Ht
+      } = tt, Xt = function(tt, et) {
+        const Vt = mt(tt, et),
+          Ot = Dt.width * Vt,
+          qt = Dt.height * Vt;
         return {
-          left: (BB - TB) / 2,
-          top: (BB - JB) / 2,
-          width: TB,
-          height: JB
+          left: (tt - Ot) / 2,
+          top: (tt - qt) / 2,
+          width: Ot,
+          height: qt
         }
-      }(ZB, TB), hB = new Float32Array(JB.length);
-      for (let oB = 0; oB < JB.length; oB += 3) hB[oB] = nB.left + JB[oB] * nB.width, hB[oB + 1] = nB.top + JB[oB + 1] * nB.height, hB[oB + 2] = JB[oB + 2];
-      const FB = new Float32Array(ZB * ZB).fill(-1 / 0),
-        NB = new Uint8ClampedArray(ZB * ZB * 4),
-        gB = 255 * BB.alphaCutoff;
-      for (let oB = 0; oB < kB.length; oB += 3) {
-        const [BB, TB, JB] = [kB[oB], kB[oB + 1], kB[oB + 2]], [GB, nB, zB] = [3 * BB, 3 * TB, 3 * JB], [qB, yB, UB, WB, dB, CB] = [hB[GB], hB[GB + 1], hB[nB], hB[nB + 1], hB[zB], hB[zB + 1]], QB = (UB - qB) * (CB - yB) - (dB - qB) * (WB - yB);
-        if (Math.abs(QB) < 1e-9) continue;
-        const sB = cB[oB / 3],
-          [wB, OB, YB, iB, pB, aB] = [vB[2 * BB], vB[2 * BB + 1], vB[2 * TB], vB[2 * TB + 1], vB[2 * JB], vB[2 * JB + 1]],
-          HB = Math.max(0, Math.floor(Math.min(qB, UB, dB))),
-          MB = Math.min(ZB - 1, Math.ceil(Math.max(qB, UB, dB))),
-          jB = Math.max(0, Math.floor(Math.min(yB, WB, CB))),
-          PB = Math.min(ZB - 1, Math.ceil(Math.max(yB, WB, CB)));
-        for (let oB = jB; oB <= PB; oB++)
-          for (let BB = HB; BB <= MB; BB++) {
-            const [TB, JB] = [BB + .5, oB + .5], vB = ((TB - qB) * (CB - yB) - (dB - qB) * (JB - yB)) / QB, kB = ((UB - qB) * (JB - yB) - (TB - qB) * (WB - yB)) / QB, cB = 1 - vB - kB;
-            if (cB < 0 || vB < 0 || kB < 0) continue;
-            const HB = cB * hB[GB + 2] + vB * hB[nB + 2] + kB * hB[zB + 2],
-              MB = oB * ZB + BB;
-            if (HB <= FB[MB]) continue;
-            const jB = Math.max(0, Math.min(IB.width - 1, Math.floor((cB * wB + vB * YB + kB * pB) * IB.width))),
-              PB = 4 * (Math.max(0, Math.min(IB.height - 1, Math.floor((cB * OB + vB * iB + kB * aB) * IB.height))) * IB.width + jB);
-            IB.pixels[PB + 3] < gB || (FB[MB] = HB, NB[4 * MB] = IB.pixels[PB] * sB, NB[4 * MB + 1] = IB.pixels[PB + 1] * sB, NB[4 * MB + 2] = IB.pixels[PB + 2] * sB, NB[4 * MB + 3] = 255)
+      }(Vt, Ot), Qt = new Float32Array(qt.length);
+      for (let Dt = 0; Dt < qt.length; Dt += 3) Qt[Dt] = Xt.left + qt[Dt] * Xt.width, Qt[Dt + 1] = Xt.top + qt[Dt + 1] * Xt.height, Qt[Dt + 2] = qt[Dt + 2];
+      const Et = new Float32Array(Vt * Vt).fill(-1 / 0),
+        ft = new Uint8ClampedArray(Vt * Vt * 4),
+        wt = 255 * tt.alphaCutoff;
+      for (let Dt = 0; Dt < jt.length; Dt += 3) {
+        const [tt, Ot, qt] = [jt[Dt], jt[Dt + 1], jt[Dt + 2]], [mt, Xt, lt] = [3 * tt, 3 * Ot, 3 * qt], [yt, Nt, Mt, bt, Jt, Ct] = [Qt[mt], Qt[mt + 1], Qt[Xt], Qt[Xt + 1], Qt[lt], Qt[lt + 1]], ut = (Mt - yt) * (Ct - Nt) - (Jt - yt) * (bt - Nt);
+        if (Math.abs(ut) < 1e-9) continue;
+        const Kt = Ht[Dt / 3],
+          [ht, vt, Wt, St, ct, Rt] = [dt[2 * tt], dt[2 * tt + 1], dt[2 * Ot], dt[2 * Ot + 1], dt[2 * qt], dt[2 * qt + 1]],
+          It = Math.max(0, Math.floor(Math.min(yt, Mt, Jt))),
+          Pt = Math.min(Vt - 1, Math.ceil(Math.max(yt, Mt, Jt))),
+          Zt = Math.max(0, Math.floor(Math.min(Nt, bt, Ct))),
+          Lt = Math.min(Vt - 1, Math.ceil(Math.max(Nt, bt, Ct)));
+        for (let Dt = Zt; Dt <= Lt; Dt++)
+          for (let tt = It; tt <= Pt; tt++) {
+            const [Ot, qt] = [tt + .5, Dt + .5], dt = ((Ot - yt) * (Ct - Nt) - (Jt - yt) * (qt - Nt)) / ut, jt = ((Mt - yt) * (qt - Nt) - (Ot - yt) * (bt - Nt)) / ut, Ht = 1 - dt - jt;
+            if (Ht < 0 || dt < 0 || jt < 0) continue;
+            const It = Ht * Qt[mt + 2] + dt * Qt[Xt + 2] + jt * Qt[lt + 2],
+              Pt = Dt * Vt + tt;
+            if (It <= Et[Pt]) continue;
+            const Zt = Math.max(0, Math.min(et.width - 1, Math.floor((Ht * ht + dt * Wt + jt * ct) * et.width))),
+              Lt = 4 * (Math.max(0, Math.min(et.height - 1, Math.floor((Ht * vt + dt * St + jt * Rt) * et.height))) * et.width + Zt);
+            et.pixels[Lt + 3] < wt || (Et[Pt] = It, ft[4 * Pt] = et.pixels[Lt] * Kt, ft[4 * Pt + 1] = et.pixels[Lt + 1] * Kt, ft[4 * Pt + 2] = et.pixels[Lt + 2] * Kt, ft[4 * Pt + 3] = 255)
           }
       }
-      return zB(NB, ZB, TB), NB
+      return lt(ft, Vt, Ot), ft
     }
-    let nB = NaN,
-      hB = new Int32Array(0);
+    let Xt = NaN,
+      Qt = new Int32Array(0);
 
-    function zB(BB, IB, ZB) {
-      let TB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : IB => 0 !== BB[4 * IB + 3];
-      const JB = new Uint8Array(IB * IB);
-      for (let vB = 0; vB < IB * IB; vB++) JB[vB] = TB(vB) ? 1 : 0;
-      const oB = (BB, ZB) => BB >= 0 && ZB >= 0 && BB < IB && ZB < IB && 0 === JB[ZB * IB + BB],
-        GB = new Float32Array(IB * IB).fill(1 / 0),
-        kB = function(BB) {
-          if (BB !== nB) {
-            const IB = Math.ceil(BB + 1),
-              ZB = [];
-            for (let TB = -IB; TB <= IB; TB++)
-              for (let JB = -IB; JB <= IB; JB++) {
-                const IB = JB * JB + TB * TB;
-                IB > 0 && IB < (BB + 1) ** 2 && ZB.push(JB, TB, IB)
+    function lt(tt, et, Vt) {
+      let Ot = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : et => 0 !== tt[4 * et + 3];
+      const qt = new Uint8Array(et * et);
+      for (let dt = 0; dt < et * et; dt++) qt[dt] = Ot(dt) ? 1 : 0;
+      const Dt = (tt, Vt) => tt >= 0 && Vt >= 0 && tt < et && Vt < et && 0 === qt[Vt * et + tt],
+        mt = new Float32Array(et * et).fill(1 / 0),
+        jt = function(tt) {
+          if (tt !== Xt) {
+            const et = Math.ceil(tt + 1),
+              Vt = [];
+            for (let Ot = -et; Ot <= et; Ot++)
+              for (let qt = -et; qt <= et; qt++) {
+                const et = qt * qt + Ot * Ot;
+                et > 0 && et < (tt + 1) ** 2 && Vt.push(qt, Ot, et)
               }
-            nB = BB, hB = Int32Array.from(ZB)
+            Xt = tt, Qt = Int32Array.from(Vt)
           }
-          return hB
-        }(ZB);
-      for (let vB = 0; vB < IB; vB++)
-        for (let BB = 0; BB < IB; BB++) {
-          if (1 === JB[vB * IB + BB] && (oB(BB - 1, vB) || oB(BB + 1, vB) || oB(BB, vB - 1) || oB(BB, vB + 1)))
-            for (let ZB = 0; ZB < kB.length; ZB += 3) {
-              const TB = BB + kB[ZB],
-                JB = vB + kB[ZB + 1];
-              if (TB >= 0 && JB >= 0 && TB < IB && JB < IB) {
-                const BB = JB * IB + TB;
-                GB[BB] = Math.min(GB[BB], kB[ZB + 2])
+          return Qt
+        }(Vt);
+      for (let dt = 0; dt < et; dt++)
+        for (let tt = 0; tt < et; tt++) {
+          if (1 === qt[dt * et + tt] && (Dt(tt - 1, dt) || Dt(tt + 1, dt) || Dt(tt, dt - 1) || Dt(tt, dt + 1)))
+            for (let Vt = 0; Vt < jt.length; Vt += 3) {
+              const Ot = tt + jt[Vt],
+                qt = dt + jt[Vt + 1];
+              if (Ot >= 0 && qt >= 0 && Ot < et && qt < et) {
+                const tt = qt * et + Ot;
+                mt[tt] = Math.min(mt[tt], jt[Vt + 2])
               }
             }
         }
-      for (let cB = 0; cB < IB * IB; cB++) 1 !== JB[cB] && GB[cB] !== 1 / 0 && (BB.set(vB, 4 * cB), BB[4 * cB + 3] = Math.round(255 * Math.min(1, ZB + 1 - Math.sqrt(GB[cB]))))
+      for (let Ht = 0; Ht < et * et; Ht++) 1 !== qt[Ht] && mt[Ht] !== 1 / 0 && (tt.set(dt, 4 * Ht), tt[4 * Ht + 3] = Math.round(255 * Math.min(1, Vt + 1 - Math.sqrt(mt[Ht]))))
     }
   },
-  36430: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      d: () => JB
+  36637: (tt, et, Vt) => {
+    Vt.d(et, {
+      b: () => qt
     });
-    const TB = {
-      wait: function(BB) {
-        return new Promise((IB => {
-          setTimeout(IB, BB)
+    const Ot = {
+      wait: function(tt) {
+        return new Promise((et => {
+          setTimeout(et, tt)
         }))
       },
       stallMs: 2e4
     };
-    class JB {
-      constructor(BB) {
-        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : TB;
-        this.url = BB, this.options = IB, this.timing = ZB, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = BB
+    class qt {
+      constructor(tt) {
+        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Ot;
+        this.url = tt, this.options = et, this.timing = Vt, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = tt
       }
       ready() {
         if (null === this.fetched) {
-          const BB = new AbortController;
-          this.fetchAbort = BB, this.fetched = this.fetchWithRetries(BB.signal).then((IB => (this.fetchAbort === BB && (this.fetchAbort = null), IB)))
+          const tt = new AbortController;
+          this.fetchAbort = tt, this.fetched = this.fetchWithRetries(tt.signal).then((et => (this.fetchAbort === tt && (this.fetchAbort = null), et)))
         }
         return this.fetched
       }
@@ -318,51 +318,51 @@ export const modules = {
       start() {
         return new Worker(this.scriptUrl, this.options)
       }
-      async fetchWithRetries(BB) {
-        for (let IB = 0;; IB++) {
-          const ZB = new URL(this.url);
-          if (IB > 0 && ZB.searchParams.set("cache-bust", `${Date.now()}-${IB}`), await this.fetchWhole(ZB, BB)) return this.scriptUrl = ZB, !0;
-          if (IB >= 3 || BB.aborted) return !1;
-          if (await this.timing.wait(500 * 2 ** IB), BB.aborted) return !1
+      async fetchWithRetries(tt) {
+        for (let et = 0;; et++) {
+          const Vt = new URL(this.url);
+          if (et > 0 && Vt.searchParams.set("cache-bust", `${Date.now()}-${et}`), await this.fetchWhole(Vt, tt)) return this.scriptUrl = Vt, !0;
+          if (et >= 3 || tt.aborted) return !1;
+          if (await this.timing.wait(500 * 2 ** et), tt.aborted) return !1
         }
       }
-      async fetchWhole(BB, IB) {
-        const ZB = new AbortController;
-        let TB;
-        const JB = () => {
-            clearTimeout(TB), TB = setTimeout((() => {
-              ZB.abort()
+      async fetchWhole(tt, et) {
+        const Vt = new AbortController;
+        let Ot;
+        const qt = () => {
+            clearTimeout(Ot), Ot = setTimeout((() => {
+              Vt.abort()
             }), this.timing.stallMs)
           },
-          oB = () => {
-            ZB.abort()
+          Dt = () => {
+            Vt.abort()
           };
-        IB.addEventListener("abort", oB, {
+        et.addEventListener("abort", Dt, {
           once: !0
-        }), JB();
+        }), qt();
         try {
-          var GB;
-          const IB = await fetch(BB, {
-            signal: ZB.signal
+          var mt;
+          const et = await fetch(tt, {
+            signal: Vt.signal
           });
-          if (!IB.ok) return !1;
-          const TB = null === (GB = IB.body) || void 0 === GB ? void 0 : GB.getReader();
-          if (!TB) return !1;
+          if (!et.ok) return !1;
+          const Ot = null === (mt = et.body) || void 0 === mt ? void 0 : mt.getReader();
+          if (!Ot) return !1;
           for (;;) {
             const {
-              done: BB
-            } = await TB.read();
-            if (BB) return !0;
-            JB()
+              done: tt
+            } = await Ot.read();
+            if (tt) return !0;
+            qt()
           }
         } catch {
           return !1
         } finally {
-          clearTimeout(TB), IB.removeEventListener("abort", oB)
+          clearTimeout(Ot), et.removeEventListener("abort", Dt)
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const tt in modules) Object.freeze(modules[tt]);
